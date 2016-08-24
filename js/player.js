@@ -81,7 +81,7 @@
                 var e = (0, d["default"])(t) ? y.parse(t) : t;
                 return (0, b.isTwitchEmbed)() || (e = (0, p["default"])(e, S.embedParameters)), e.flash ? e.backend = "flash" : e.html5 ? e.backend = "player-core" : e.hls && (e.backend = "hls"), e.html5 && B.BackendHls.canPlay() ? e.backend = "hls" : e.html5 && U.BackendPlayerCore.canPlay() && (e.backend = "player-core"), e.allowfullscreen = e.allowfullscreen === !1 ? !1 : !0, e = (0, o["default"])(e, {
                     time: e.t
-                }), e = (0, o["default"])(e, {
+                }), (0, u["default"])(["mse", "mseDev"], C.localStore.get("backend")) && C.localStore.set("backend", "player-core"), e = (0, o["default"])(e, {
                     volume: C.localStore.get("volume"),
                     muted: C.localStore.get("muted"),
                     quality: C.localStore.get("quality"),
@@ -8662,11 +8662,11 @@
                     a && (e = "hls")
                 } else ! function() {
                     (0, h.krakenUserInfo)().then(function(e) {
-                        "staff" === e.type && !g.localStore.get("staff-html5-forced") && u.BackendPlayerCore.canPlay() && (g.localStore.set("staff-html5-forced", !0), me.setBackend("player-core"))
+                        "staff" === e.type && !g.localStore.get("staff-html5-forced-in") && u.BackendPlayerCore.canPlay() && (g.localStore.set("staff-html5-forced-in", !0), me.setBackend("player-core"))
                     });
                     var e = ["default_in", "player-core-0.6.8"];
                     n.getState().experiments.get(U.HTML5_TOGGLE).then(function(t) {
-                        (0, z["default"])(e, t) && !g.localStore.get("html5-forced") && u.BackendPlayerCore.canPlay() && (g.localStore.set("html5-forced", !0), me.setBackend("player-core"))
+                        (0, z["default"])(e, t) && !g.localStore.get("html5-forced-in") && u.BackendPlayerCore.canPlay() && (g.localStore.set("html5-forced-in", !0), me.setBackend("player-core"))
                     })
                 }();
                 n.dispatch((0, N.setVODTransitionFn)(function(e) {
