@@ -4,10 +4,12 @@ import requests
 import jsbeautifier
 
 files = [
-    "https://player.twitch.tv/js/player.js"
+    {'url': 'https://player.twitch.tv/js/player.js',
+     'filename': 'player.js'}
 ]
 
 for jsfile in files:
-    src = requests.get(jsfile).content
+    print "Downloading", jsfile['url'], "to file", jsfile['filename']
+    src = requests.get(jsfile['url']).content
     beatuified = jsbeautifier.beautify(src)
-    open('js/%s' % jsfile.split('/')[-1], 'wb').write(beatuified)
+    open('js/%s' % jsfile['filename'], 'wb').write(beatuified)
