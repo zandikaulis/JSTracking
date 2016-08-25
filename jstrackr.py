@@ -19,7 +19,7 @@ if __name__ == '__main__':
         {'url': get_url_from_page("https://www.twitch.tv", r'"(.*/global-[a-zA-Z0-9]+.js)'),
          'filename': 'global.js'},
         {'url': get_url_from_page("https://www.twitch.tv", r'"(.*/application-[a-zA-Z0-9]+.js)'),
-         'filename': 'global.js'}
+         'filename': 'application.js'}
     ]
 
     for jsfile in files:
