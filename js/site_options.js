@@ -453,8 +453,11 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes"
             }, {
-                "weight": 92,
+                "weight": 87,
                 "value": "no"
+            }, {
+                "weight": 5,
+                "value": "pc-0.6.9"
             }, {
                 "weight": 3,
                 "value": "player-core-0.6.8"

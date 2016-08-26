@@ -29,7 +29,7 @@
                 var i = document.getElementsByTagName("head")[0],
                     r = document.createElement("script");
                 r.type = "text/javascript", r.charset = "utf-8", r.async = !0, r.src = t.p + "" + e + ".js/" + ({}[e] || e) + "." + {
-                    1: "d2ba2d64653838398aef"
+                    1: "3b97b1cb80f386a11d46"
                 }[e] + ".js", i.appendChild(r)
             }
         }, t.m = e, t.c = i, t.p = "", t(0)
@@ -8664,7 +8664,7 @@
                     (0, h.krakenUserInfo)().then(function(e) {
                         "staff" === e.type && !g.localStore.get("staff-html5-forced-in") && u.BackendPlayerCore.canPlay() && (g.localStore.set("staff-html5-forced-in", !0), me.setBackend("player-core"))
                     });
-                    var e = ["default_in", "player-core-0.6.8"];
+                    var e = ["default_in", "player-core-0.6.8", "pc-0.6.9"];
                     n.getState().experiments.get(U.HTML5_TOGGLE).then(function(t) {
                         (0, Y["default"])(e, t) && !g.localStore.get("html5-forced-in") && u.BackendPlayerCore.canPlay() && (g.localStore.set("html5-forced-in", !0), me.setBackend("player-core"))
                     })
@@ -10447,7 +10447,7 @@
                 }, {
                     key: "getVersion",
                     value: function() {
-                        return "0.6.8"
+                        return "0.6.9"
                     }
                 }, {
                     key: "getBackend",
