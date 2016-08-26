@@ -686,6 +686,16 @@ window.SiteOptions = {
                 "value": "experiment"
             }]
         },
+        "f398cefc-009d-4487-8c9d-5fe2e963110f": {
+            "name": "rollout_ios_clips",
+            "groups": [{
+                "weight": 0,
+                "value": "on"
+            }, {
+                "weight": 1,
+                "value": "off"
+            }]
+        },
         "f60b889e-0327-46a8-ad7b-0d402717da45": {
             "name": "CREATIVE_SIDEBAR_NAVIGATION",
             "groups": [{
