@@ -17906,7 +17906,8 @@ function(e, t) {
             CLIPS_ENABLED: "yes",
             ESL_CSGO_STEAM_LINK: "show-cta",
             SIMILAR_CHANNELS: "d,hs,f,2r,a",
-            VIDEO_UPLOADS: "yes"
+            VIDEO_UPLOADS: "yes",
+            WEB_CLIENT_FRONT_PAGE: "new_front_page"
         };
     _.each(Object.keys(u), function(t) {
         o[r[t]] = e.user().then(function(e) {
@@ -18170,14 +18171,15 @@ function(e, t) {
             }), this._readyDeferred = RSVP.defer(), this._id = t.id, this._hostChannel = t.hostChannel, e.playerType !== "live" && (this._videoType = "hls");
             var n = this,
                 r = ["//" + SiteOptions.twitch_cdn_hostport + "/swflibs/TwitchPlayer.swf", t.id, "100%", "100%", "11", null, t, {
-                    allowScriptAccess: "always",
-                    allowFullScreen: !0,
-                    wmode: "opaque",
-                    bgcolor: "000000"
-                }, null, function(e) {
-                    e.success || n._readyDeferred
-                        .reject(n)
-                }];
+                        allowScriptAccess: "always",
+                        allowFullScreen: !0,
+                        wmode: "opaque",
+                        bgcolor: "000000"
+                    }, null,
+                    function(e) {
+                        e.success || n._readyDeferred.reject(n)
+                    }
+                ];
             swfobject.embedSWF.apply(swfobject, r)
         };
     RSVP.EventTarget.mixin(o.prototype), o.prototype._onPlayerInit = function() {
