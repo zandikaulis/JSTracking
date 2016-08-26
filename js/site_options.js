@@ -297,10 +297,10 @@ window.SiteOptions = {
         "53f683bb-5dd9-48df-bc88-7706ed78d8a3": {
             "name": "Transcode_Quality_Experiment",
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "regular"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "plus"
             }]
         },
