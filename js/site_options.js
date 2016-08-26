@@ -473,6 +473,16 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
+        "8ce5b50b-429b-4c20-a0f3-1b22eb577673": {
+            "name": "rollout_ios_vod_uploads",
+            "groups": [{
+                "weight": 0,
+                "value": "on"
+            }, {
+                "weight": 1,
+                "value": "off"
+            }]
+        },
         "906c9e2f-ac8a-43f3-9f7f-78668e292d4f": {
             "name": "android_aa",
             "groups": [{
