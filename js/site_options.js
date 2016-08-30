@@ -142,6 +142,16 @@ window.SiteOptions = {
                 "value": "variant"
             }]
         },
+        "15dde59b-96ad-4040-beba-4c73039d16ff": {
+            "name": "Transcode_Quality_Experiment_2",
+            "groups": [{
+                "weight": 50,
+                "value": "regular"
+            }, {
+                "weight": 50,
+                "value": "plus"
+            }]
+        },
         "2352d0b6-7692-49f1-9f8d-88e6cc47994b": {
             "name": "android_view_uploads",
             "groups": [{
@@ -234,10 +244,10 @@ window.SiteOptions = {
         "3701dbf7-dcc6-45db-963e-aabc4653dea3": {
             "name": "ios_native_chat",
             "groups": [{
-                "weight": 80,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 20,
+                "weight": 1,
                 "value": "native_chat"
             }]
         },
