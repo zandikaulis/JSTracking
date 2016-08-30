@@ -81,6 +81,7 @@ window.SiteOptions = {
     "disable_theatre": false,
     "is_bits_enabled": true,
     "is_bits_staffonly_beta": false,
+    "ads_for_bits": false,
     "purchase_bits_url": "https://twitch.amazon.com",
     "bits_products": [{
         "amount": 100,
