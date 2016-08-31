@@ -282,6 +282,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "474db509-7fb8-403e-97da-66dae8954e6d": {
+            "name": "android_home_games_carousel",
+            "groups": [{
+                "weight": 50,
+                "value": "treatment"
+            }, {
+                "weight": 50,
+                "value": "control"
+            }]
+        },
         "4afcc1d7-b6f4-489a-beb3-0a32eb780592": {
             "name": "Closed Captions",
             "groups": [{
