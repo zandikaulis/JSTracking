@@ -17290,18 +17290,19 @@ googletag.cmd = googletag.cmd || [],
         var s = 2;
         n.init = function(e) {
             var n = this,
-                r = function(e) {
+                i = function(e) {
                     n.config.iframe = t("<iframe>").attr("src", n.config.receiverUrl).appendTo(e).get(0)
                 };
             this.config = {
+                clientID: r,
                 baseUrl: e.baseUrl,
                 baseUrlSecure: e.baseUrlSecure,
                 streamsBaseUrl: e.streamsBaseUrl,
                 streamsBaseUrlSecure: e.streamsBaseUrlSecure,
                 receiverUrl: e.receiverUrl,
                 login: e.login
-            }, navigator.userAgent.indexOf("Prerender") === -1 ? r("head") : t(document).ready(function() {
-                r("body")
+            }, navigator.userAgent.indexOf("Prerender") === -1 ? i("head") : t(document).ready(function() {
+                i("body")
             }), document.domain = "twitch.tv"
         }, n._ajax = function(u, a, f, l) {
             var c = new t.Deferred,
@@ -18171,15 +18172,13 @@ function(e, t) {
             }), this._readyDeferred = RSVP.defer(), this._id = t.id, this._hostChannel = t.hostChannel, e.playerType !== "live" && (this._videoType = "hls");
             var n = this,
                 r = ["//" + SiteOptions.twitch_cdn_hostport + "/swflibs/TwitchPlayer.swf", t.id, "100%", "100%", "11", null, t, {
-                        allowScriptAccess: "always",
-                        allowFullScreen: !0,
-                        wmode: "opaque",
-                        bgcolor: "000000"
-                    }, null,
-                    function(e) {
-                        e.success || n._readyDeferred.reject(n)
-                    }
-                ];
+                    allowScriptAccess: "always",
+                    allowFullScreen: !0,
+                    wmode: "opaque",
+                    bgcolor: "000000"
+                }, null, function(e) {
+                    e.success || n._readyDeferred.reject(n)
+                }];
             swfobject.embedSWF.apply(swfobject, r)
         };
     RSVP.EventTarget.mixin(o.prototype), o.prototype._onPlayerInit = function() {
