@@ -355,6 +355,16 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
+        "621a95a8-8b75-4f13-ae93-56fa51b82252": {
+            "name": "ios_uploads_top_videos_time",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "month"
+            }]
+        },
         "653cc0db-d332-4df6-b224-15c5c481f7e7": {
             "name": "language_directory_filter",
             "groups": [{
@@ -525,6 +535,16 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "live"
+            }]
+        },
+        "9326b2a6-4d2c-4835-95c3-52e3cb567d54": {
+            "name": "android_uploads_top_videos_time",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "month"
             }]
         },
         "93883758-3d7d-414b-9975-df688165726b": {
