@@ -519,6 +519,16 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
+        "8ace0f50-8afd-424a-a086-3e61b3e66da0": {
+            "name": "MESSAGE_HISTORY",
+            "groups": [{
+                "weight": 0,
+                "value": "on"
+            }, {
+                "weight": 100,
+                "value": "off"
+            }]
+        },
         "8ce5b50b-429b-4c20-a0f3-1b22eb577673": {
             "name": "ios_rollout_vod_uploads",
             "groups": [{
