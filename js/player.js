@@ -61,9 +61,11 @@
                     login: k.get("login") || null,
                     deviceID: A.get(!1),
                     devrecommendations: n.devrecommendations
-                })), v.dispatch(Q.setUsherParams(n)), v.dispatch(X.loadDefaultLang(n.lang)), v.dispatch((0, ee.setPlayerType)(n.player)), r().then(function(e) {
+                })), v.dispatch(Q.setUsherParams(n)), v.dispatch(X.loadDefaultLang(n.lang)), v.dispatch((0, ee.setPlayerType)(n.player)), O.push(new F.PubSub(v, n)), l = new g.AnalyticsTracker(v, n), v.dispatch((0, re.setAnalyticsTracker)(l)), v.dispatch((0, ae.initializeQuality)()), c = n.allowfullscreen ? new V.FullScreen(t) : new G.NoFullScreen(t), E = new D.Video(t, l, v, n), _ = new N.State(E, c, v, l, n), n.debug && (window.state = _), (0, R.forwardProperties)(s, E), T = new h.Analytics(E, l, _, v, n), a(n), P = new M.EmbedHost(E, _, v), new j.PlayerHotkeys(E, t, v, n), v.dispatch((0, ie.setAutoplay)(n.autoplay)), n.quality && v.dispatch((0, ae.selectQuality)(n.quality)), n.controls && (f = new x.PlayerUI(E, t, l, _, c, v, n), w = new ce.ClipGenerator(t, _, v)), r().then(function(e) {
                     return v.dispatch((0, Y.setAdblockDetected)(e))
-                }), O.push(new F.PubSub(v, n)), l = new g.AnalyticsTracker(v, n), v.dispatch((0, re.setAnalyticsTracker)(l)), v.dispatch((0, ae.initializeQuality)()), c = n.allowfullscreen ? new V.FullScreen(t) : new G.NoFullScreen(t), E = new D.Video(t, l, v, n), _ = new N.State(E, c, v, l, n), n.debug && (window.state = _), (0, R.forwardProperties)(s, E), T = new h.Analytics(E, l, _, v, n), a(n), P = new M.EmbedHost(E, _, v), new j.PlayerHotkeys(E, t, v, n), v.dispatch((0, ie.setAutoplay)(n.autoplay)), n.quality && v.dispatch((0, ae.selectQuality)(n.quality)), n.controls && (f = new x.PlayerUI(E, t, l, _, c, v, n), w = new ce.ClipGenerator(t, _, v)), n.channel ? v.dispatch(W.setChannel(n.channel)) : n.video && v.dispatch(W.setVideo(n.video)), v.dispatch((0, ne.initVodResume)()), (0, ue.krakenUserInfo)().then(function(e) {
+                }).then(function() {
+                    n.channel ? v.dispatch(W.setChannel(n.channel)) : n.video && v.dispatch(W.setVideo(n.video))
+                }), v.dispatch((0, ne.initVodResume)()), (0, ue.krakenUserInfo)().then(function(e) {
                     return v.dispatch((0, ne.setUser)(e._id))
                 }), C.localStore.get(pe, !1) || (0, ue.krakenUserInfo)().then(function(e) {
                     return "staff" === e.type ? v.getState().experiments.get(le.ABS_V2) : Promise.reject()
@@ -4456,14 +4458,16 @@
             }
             return (0, u["default"])(t, function(e, t, n) {
                 return e.push(n + "=" + String(t).toLowerCase()), e
-            }, []).join("&").replace(/[=&,]/g, function(e) {
+            }, []).join("&").replace(/[=&, ]/g, function(e) {
                 switch (e) {
                     case "=":
                         return "%3D";
                     case "&":
                         return "%26";
                     case ",":
-                        return "%2C"
+                        return "%2C";
+                    case " ":
+                        return "_"
                 }
             })
         }
@@ -5404,8 +5408,8 @@
                     p = function() {
                         function e() {
                             function e() {
-                                n = new f, r = {}, r.ns_st_bp = "0", r.ns_st_pa = "0", r.ns_st_pp = "0", r.ns_st_sp = "1",
-                                    r.ns_st_id = String(+new Date), i = NaN, a = NaN, o = {}, l = 0, s = !1, u = !1, c = 0
+                                n = new f, r = {}, r.ns_st_bp = "0", r.ns_st_pa = "0",
+                                    r.ns_st_pp = "0", r.ns_st_sp = "1", r.ns_st_id = String(+new Date), i = NaN, a = NaN, o = {}, l = 0, s = !1, u = !1, c = 0
                             }
                             var n, i, a, r, s, o, l, u, c, d = this;
                             t.extend(this, {
@@ -6006,8 +6010,8 @@
                                 },
                                 onPlay: function(t, n) {
                                     var i = parseInt(n.ns_st_po);
-                                    e.getPlaylist().getClip().isSeeking() && (e.getPlaylist().getClip().addSeekingAmount(i), e.getPlaylist().getClip().setSeeking(!1)), e.getPlaylist().isPlaylistStarted() || (e.getPlaylist().setPlaylistStarted(!0),
-                                        e.getPlaylist().incrementPlaybackCounter()), e.getPlaylist().getClip().setClipStarted(!0), e.getPlaylist().getClip().setPlaybackStarted(!0), e.getPlaylist().getClip().incrementSegmentPlaybackCounter(), (0 == e.getPlaylist().getClip().getLowestPartNumberPlayed() || parseInt(e.getPlaylist().getClip().getLabels().ns_st_pn) <= e.getPlaylist().getClip().getLowestPartNumberPlayed()) && (e.getPlaylist().getClip().setLowestPartNumberPlayed(parseInt(e.getPlaylist().getClip().getLabels().ns_st_pn)), e.getPlaylist().getClip().incrementAssetPlaybackCounter(), e.getPlaylist().getClip().resetAssetPlaybackCounters()), e.getPlaylist().getClip().incrementPlayCounter(), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t), e.getPlaylist().getClip().setElapsedTimestamp(t), e.getPlaylist().getClip().setPlaybackStartPosition(i), e.getSSECore().isLoadingTimeSent() || (n.ns_st_lt = String(e.getSSECore().getLoadTimeOffset() + t - e.getSSECore().getInitTimestamp()), e.getSSECore().setLoadingTimeSent(!0)), e.getHeartbeat().resume(), e.getKeepAlive().resume();
+                                    e.getPlaylist().getClip().isSeeking() && (e.getPlaylist().getClip().addSeekingAmount(i), e.getPlaylist().getClip().setSeeking(!1)),
+                                        e.getPlaylist().isPlaylistStarted() || (e.getPlaylist().setPlaylistStarted(!0), e.getPlaylist().incrementPlaybackCounter()), e.getPlaylist().getClip().setClipStarted(!0), e.getPlaylist().getClip().setPlaybackStarted(!0), e.getPlaylist().getClip().incrementSegmentPlaybackCounter(), (0 == e.getPlaylist().getClip().getLowestPartNumberPlayed() || parseInt(e.getPlaylist().getClip().getLabels().ns_st_pn) <= e.getPlaylist().getClip().getLowestPartNumberPlayed()) && (e.getPlaylist().getClip().setLowestPartNumberPlayed(parseInt(e.getPlaylist().getClip().getLabels().ns_st_pn)), e.getPlaylist().getClip().incrementAssetPlaybackCounter(), e.getPlaylist().getClip().resetAssetPlaybackCounters()), e.getPlaylist().getClip().incrementPlayCounter(), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t), e.getPlaylist().getClip().setElapsedTimestamp(t), e.getPlaylist().getClip().setPlaybackStartPosition(i), e.getSSECore().isLoadingTimeSent() || (n.ns_st_lt = String(e.getSSECore().getLoadTimeOffset() + t - e.getSSECore().getInitTimestamp()), e.getSSECore().setLoadingTimeSent(!0)), e.getHeartbeat().resume(), e.getKeepAlive().resume();
                                     var a = e.getSSECore().createLabels(l.PLAY, n, t);
                                     e.getEventManager().newEvent(a)
                                 }
@@ -6850,7 +6854,8 @@
                             }
 
                             function f(e, t) {
-                                e = o(e), b == v.None && (b = t), g && b == t && l(e) ? (_.getClip().setLabels(e), _.getState() != i.PLAYING && _.play()) : c(e), g = !0, b = t
+                                e = o(e), b == v.None && (b = t), g && b == t && l(e) ? (_.getClip().setLabels(e),
+                                    _.getState() != i.PLAYING && _.play()) : c(e), g = !0, b = t
                             }
                             var p = 0,
                                 h = null,
@@ -8440,15 +8445,22 @@
                 t = void 0,
                 n = void 0,
                 r = new Promise(function(e, i) {
-                    Promise.resolve($.getScript(a)).then(null, i), t = function() {
+                    Promise.resolve($.ajax({
+                        url: a,
+                        dataType: "script",
+                        timeout: 2e3,
+                        cache: !0
+                    })).then(null, i), t = function() {
                         return e(!0)
                     }, n = function() {
                         return e(!1)
                     }, document.addEventListener("sp.blocking", t), document.addEventListener("sp.not_blocking", n)
                 });
-            return r.then(function(i) {
-                return e.detect._result = i, document.removeEventListener("sp.blocking", t), document.removeEventListener("sp.not_blocking", n), i
-            }), window.Twitch.sentinel = e, r
+            return r.then(null, function() {
+                return "unknown"
+            }).then(function(i) {
+                return e.detect._result = i, window.Twitch.sentinel = e, document.removeEventListener("sp.blocking", t), document.removeEventListener("sp.not_blocking", n), i
+            })
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -8869,7 +8881,7 @@
                 }), be.addEventListener(Z.QUALITY_CHANGE, function(e) {
                     n.dispatch((0, M.setCurrentQuality)(e)), n.dispatch((0, w.incrementQualityChangeCount)())
                 }), be.addEventListener(Z.MANIFEST_EXTRA_INFO, function(e) {
-                    e.abs = "true" === e.abs, n.dispatch((0, A.setManifestInfo)(e))
+                    e.abs = "true" === e.abs, e.suppress = "true" === e.suppress, n.dispatch((0, A.setManifestInfo)(e))
                 })
             }
 
@@ -9423,7 +9435,8 @@
 
             function Ce(e, t) {
                 var n = E.getFlashPlayerType();
-                "" === n && i.dispatch((0, R.setError)(B));
+                "" === n && i.dispatch((0,
+                    R.setError)(B));
                 var a = "10.2",
                     r = "playerProductInstall.swf",
                     s = "100%",
@@ -10099,7 +10112,7 @@
             S = t.ACTION_SET_VOLUME = "set player volume",
             C = t.ACTION_SET_PLAYLIST = "set playlist"
     }, function(e, t, n) {
-        e.exports = n.p + "vendor/TwitchPlayer.3ea953566cb5857041f94e39336ab570.swf"
+        e.exports = n.p + "vendor/TwitchPlayer.72fe7915e0200f15afa9e32012fd9ee2.swf"
     }, function(e, t, n) {
         "use strict";
 
@@ -10925,11 +10938,10 @@
                             i = new chrome.cast.media.MediaInfo(R, "application/x-mpegurl");
                         i.streamType = chrome.cast.media.StreamType.LIVE;
                         var a = new chrome.cast.media.GenericMediaMetadata;
-                        a.subtitle = e.game, a.title = e.display_name, a.images = [new chrome.cast.Image(e.logo)],
-                            i.metadata = a, i.customData = {
-                                channel: k,
-                                is_spectre: Boolean(n.active)
-                            };
+                        a.subtitle = e.game, a.title = e.display_name, a.images = [new chrome.cast.Image(e.logo)], i.metadata = a, i.customData = {
+                            channel: k,
+                            is_spectre: Boolean(n.active)
+                        };
                         var r = new chrome.cast.media.LoadRequest(i);
                         r.autoplay = !0, I.loadMedia(r, l)
                     })
@@ -11717,7 +11729,7 @@
                 var a = i(),
                     r = a.adsManager;
                 return u(e, t, i()).then(function(e) {
-                    r.requestAds(e)
+                    i().manifestInfo.suppress || r.requestAds(e)
                 })
             }
         }
@@ -12376,8 +12388,7 @@
             i(this, s);
             var p = o.ads,
                 h = o.window;
-            this.adSessionId = (0, a.generate)(r), this.adblock = p.adblock, this.adType = t,
-                this.channel = c.name, this.chansubToken = f.chansub, this.duration = n, this.game = c.game, this.hasAdFreeSubscription = Boolean(f.has_ad_free_subscription), this.kruxId = h.Krux ? h.Krux.user || "" : null, this.lastAdDisplay = l, this.mature = c.mature, this.partner = c.partner, this.playerType = o.env.playerType, this.postrollsEnabled = Boolean(d.postrolls), this.prerollsEnabled = Boolean(d.prerolls), this.referrer = h.document.referrer, this.requestTime = Date.now(), this.turboToken = u.turbo, this.url = h.location.href
+            this.adSessionId = (0, a.generate)(r), this.adblock = p.adblock, this.adType = t, this.channel = c.name, this.chansubToken = f.chansub, this.duration = n, this.game = c.game, this.hasAdFreeSubscription = Boolean(f.has_ad_free_subscription), this.kruxId = h.Krux ? h.Krux.user || "" : null, this.lastAdDisplay = l, this.mature = c.mature, this.partner = c.partner, this.playerType = o.env.playerType, this.postrollsEnabled = Boolean(d.postrolls), this.prerollsEnabled = Boolean(d.prerolls), this.referrer = h.document.referrer, this.requestTime = Date.now(), this.turboToken = u.turbo, this.url = h.location.href
         }
     }, function(module, exports, __webpack_require__) {
         var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;
@@ -13431,7 +13442,8 @@
                         var n;
                         n = 0 > e ? -e : e;
                         var i = Math.floor(Math.log(n) / .6931471805599453);
-                        n = Math.round(4503599627370496 * (n / Math.pow(2, i) - 1)), t.low = 0 | n, t.high = (0 > e ? -2147483648 : 0) | i + 1023 << 20 | n / 4294967296 | 0
+                        n = Math.round(4503599627370496 * (n / Math.pow(2, i) - 1)),
+                            t.low = 0 | n, t.high = (0 > e ? -2147483648 : 0) | i + 1023 << 20 | n / 4294967296 | 0
                     }
                     return t
                 };
@@ -14466,16 +14478,17 @@
                     __class__: Na
                 });
                 var ob = function() {};
-                g["secretmedia.asbridge.FlashLoader"] = ob, ob.__name__ = ["secretmedia", "asbridge", "FlashLoader"], ob.prototype = {
-                    createSwfObject: function(e, t, n, i, a) {
-                        for (var r = "", s = a.keys(); s.hasNext();) var o = s.next(),
-                            r = r + (o + "=" + u.urlEncode(null != D[o] ? a.getReserved(o) : a.h[o]) + "&");
-                        for (a = c.unmangle("_245"), null != D[a] ? n.setReserved(a, r) : n.h[a] = r, a = c.unmangle("_245"), null != D[a] ? i.setReserved(a, r) : i.h[a] = r, r = c.unmangle("_176"), a = c.unmangle("_246"), null != D[r] ? n.setReserved(r, a) : n.h[r] = a, A.hasField(window, c.unmangle("_247")) ? (r = c.unmangle("_248"), a = c.unmangle("_249"), null != D[r] ? n.setReserved(r, a) : n.h[r] = a, r = c.unmangle("_63"), null != D[r] ? i.setReserved(r, e) : i.h[r] = e) : (r = c.unmangle("_1"), null != D[r] ? n.setReserved(r, e) : n.h[r] = e), e = window.document.createElement("object"), e.id = t, t = n.keys(); t.hasNext();) r = t.next(), e.setAttribute(r, null != D[r] ? n.getReserved(r) : n.h[r]);
-                        for (n = i.keys(); n.hasNext();) t = n.next(), r = window.document.createElement("param"), r.name = t, r.value = null != D[t] ? i.getReserved(t) : i.h[t], e.appendChild(r);
-                        return e
-                    },
-                    __class__: ob
-                };
+                g["secretmedia.asbridge.FlashLoader"] = ob, ob.__name__ = ["secretmedia", "asbridge", "FlashLoader"],
+                    ob.prototype = {
+                        createSwfObject: function(e, t, n, i, a) {
+                            for (var r = "", s = a.keys(); s.hasNext();) var o = s.next(),
+                                r = r + (o + "=" + u.urlEncode(null != D[o] ? a.getReserved(o) : a.h[o]) + "&");
+                            for (a = c.unmangle("_245"), null != D[a] ? n.setReserved(a, r) : n.h[a] = r, a = c.unmangle("_245"), null != D[a] ? i.setReserved(a, r) : i.h[a] = r, r = c.unmangle("_176"), a = c.unmangle("_246"), null != D[r] ? n.setReserved(r, a) : n.h[r] = a, A.hasField(window, c.unmangle("_247")) ? (r = c.unmangle("_248"), a = c.unmangle("_249"), null != D[r] ? n.setReserved(r, a) : n.h[r] = a, r = c.unmangle("_63"), null != D[r] ? i.setReserved(r, e) : i.h[r] = e) : (r = c.unmangle("_1"), null != D[r] ? n.setReserved(r, e) : n.h[r] = e), e = window.document.createElement("object"), e.id = t, t = n.keys(); t.hasNext();) r = t.next(), e.setAttribute(r, null != D[r] ? n.getReserved(r) : n.h[r]);
+                            for (n = i.keys(); n.hasNext();) t = n.next(), r = window.document.createElement("param"), r.name = t, r.value = null != D[t] ? i.getReserved(t) : i.h[t], e.appendChild(r);
+                            return e
+                        },
+                        __class__: ob
+                    };
                 var kb = function() {};
                 g["secretmedia.core.AppKey"] = kb, kb.__name__ = ["secretmedia", "core", "AppKey"], kb.encode = function(e) {
                     return e = JSON.stringify(e), R.encode(J.ofString(e))
@@ -17730,10 +17743,10 @@
             function w() {
                 var n = e.getBackend();
                 if ("flash" === n) {
-                    var i = e.getSupportedBackends();
-                    n = i.filter(function(e) {
+                    var a = e.getSupportedBackends();
+                    n = a.filter(function(e) {
                         return "player-core" === e
-                    })[0], e.setBackend(n), O()
+                    })[0], i.getState().analyticsTracker.trackEvent("html5_opt_in", {}), e.setBackend(n), O()
                 } else $(".js-menu-html5-optout", t).attr("data-enabled", !0), $(".js-main-menu", t).attr("data-disabled", !0)
             }
 
@@ -23388,7 +23401,7 @@
                 case u.ACTION_SET_ADBLOCK_DETECTED:
                     return (0, s["default"])({}, e, {
                         params: (0, s["default"])({}, e.params, {
-                            adblock: t.adblock
+                            adblock: t.detected
                         })
                     });
                 default:
@@ -23405,7 +23418,8 @@
             u = n(435),
             c = t.DEFAULT_ACCESS_TOKEN = {
                 params: {
-                    need_https: !1
+                    need_https: !1,
+                    adblock: !1
                 }
             }
     }, function(e, t) {
@@ -25645,7 +25659,8 @@
                 server_time: 0,
                 serving_id: "",
                 stream_time: 0,
-                user_ip: ""
+                user_ip: "",
+                suppress: !1
             }
     }, function(e, t, n) {
         "use strict";
