@@ -18903,9 +18903,14 @@ function(e, t) {
             })
         }
     }, n.resetGoogletag = function() {
-        return window.googletag && delete window.googletag, window.googletag = {
-            cmd: []
-        }, t.getScript("//www.googletagservices.com/tag/js/gpt.js")
+        if (googletag) {
+            googletag.destroySlots();
+            var e = googletag.pubads();
+            e.getTargetingKeys().forEach(function(t) {
+                e.clearTargeting(t)
+            })
+        }
+        return RSVP.resolve()
     }, n.prepareCompanionAds = function(t) {
         return new RSVP.Promise(function(i, s) {
             e.ads.ready(function(e) {
