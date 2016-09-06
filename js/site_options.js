@@ -772,10 +772,10 @@ window.SiteOptions = {
         "f60b889e-0327-46a8-ad7b-0d402717da45": {
             "name": "CREATIVE_SIDEBAR_NAVIGATION",
             "groups": [{
-                "weight": 5,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 95,
+                "weight": 0,
                 "value": "no"
             }]
         },
