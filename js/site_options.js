@@ -165,16 +165,6 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
-        "23eb19cd-61b1-4691-8ba3-59397db057e0": {
-            "name": "android_host_mode",
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 1,
-                "value": "variant"
-            }]
-        },
         "2b4d2ad3-f7e5-422b-be2b-9bd99975b57c": {
             "name": "coview remove recs",
             "groups": [{
