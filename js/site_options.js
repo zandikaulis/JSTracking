@@ -8,7 +8,7 @@ window.SiteOptions = {
     "secure_www_hostport": "secure.twitch.tv",
     "cdn_hostport": "www-cdn.jtvnw.net",
     "api_hostport": "api.twitch.tv",
-    "streams_api_hostport": "streams.twitch.tv",
+    "streams_api_hostport": "api.twitch.tv",
     "webclient_hostport": "web-cdn.ttvnw.net",
     "webclient_uri": "//web-cdn.ttvnw.net/emberapp.js",
     "secure_login_hostport": "secure-login.twitch.tv",
