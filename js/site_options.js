@@ -782,10 +782,10 @@ window.SiteOptions = {
         "f67a2dd3-fc9e-4e10-8aaf-929e1e0f484a": {
             "name": "web_client_front_page",
             "groups": [{
-                "weight": 100,
+                "weight": 99,
                 "value": "ignore"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "new_front_page"
             }, {
                 "weight": 0,
