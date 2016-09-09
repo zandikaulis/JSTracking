@@ -467,6 +467,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "7a320341-89f7-4a7a-897e-522e8b455608": {
+            "name": "ad_stitching",
+            "groups": [{
+                "weight": 100,
+                "value": "false"
+            }, {
+                "weight": 0,
+                "value": "true"
+            }]
+        },
         "7c804f58-cae5-4d51-9d0f-b2dd44cd8baa": {
             "name": "Flash Playback Optimization",
             "groups": [{
