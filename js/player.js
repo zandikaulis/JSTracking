@@ -23703,7 +23703,11 @@
         }
 
         function s(e) {
-            return Boolean(e.parent) && e.parent.location.hostname === g && e.parent.location.protocol === _
+            try {
+                return Boolean(e.parent) && e.parent.location.hostname === g && e.parent.location.protocol === _
+            } catch (t) {
+                return !1
+            }
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
