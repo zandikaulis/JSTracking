@@ -81,7 +81,7 @@
 
             function i() {
                 var e = (0, d["default"])(t) ? y.parse(t) : t;
-                return (0, b.isTwitchEmbed)() || (e = (0, p["default"])(e, S.embedParameters)), e.flash ? e.backend = "flash" : e.html5 ? e.backend = "player-core" : e.hls && (e.backend = "hls"), e.html5 && B.BackendHls.canPlay() ? e.backend = "hls" : e.html5 && U.BackendPlayerCore.canPlay() && (e.backend = "player-core"), e.allowfullscreen = e.allowfullscreen === !1 || e.player === C.PLAYER_HIGHLIGHTER ? !1 : !0, e = (0, o["default"])(e, {
+                return (0, b.isTwitchEmbed)() || (e = (0, p["default"])(e, S.embedParameters)), e.flash ? e.backend = "flash" : e.html5 ? e.backend = "player-core" : e.hls && (e.backend = "hls"), e.html5 && U.BackendPlayerCore.canPlay() ? e.backend = "player-core" : e.html5 && B.BackendHls.canPlay() && (e.backend = "hls"), e.allowfullscreen = e.allowfullscreen === !1 || e.player === C.PLAYER_HIGHLIGHTER ? !1 : !0, e = (0, o["default"])(e, {
                     time: e.t
                 }), (0, u["default"])(["mse", "mseDev"], w.localStore.get("backend")) && w.localStore.set("backend", "player-core"), e = (0, o["default"])(e, {
                     volume: w.localStore.get("volume"),
@@ -7687,7 +7687,7 @@
                     S = g.get(!1),
                     w = g.get(!0);
                 h = {
-                    app_version: "3.1.4",
+                    app_version: "3.1.5",
                     flash_version: _,
                     url: v.href,
                     host: v.host,
@@ -10120,7 +10120,7 @@
             S = t.ACTION_SET_VOLUME = "set player volume",
             w = t.ACTION_SET_PLAYLIST = "set playlist"
     }, function(e, t, n) {
-        e.exports = n.p + "vendor/TwitchPlayer.d13cc131478ddf1ed103c3d68094f1c8.swf"
+        e.exports = n.p + "vendor/TwitchPlayer.0cbb65e62b95a3eb6bbb44e6f4e5c197.swf"
     }, function(e, t, n) {
         "use strict";
 
@@ -12220,21 +12220,25 @@
         function s(e, t) {
             return {
                 reason_turbo: Boolean(e.turboToken),
-                reason_ratelimit: e.adType === f.PREROLL && e.requestTime - e.lastAdDisplay < g,
+                reason_ratelimit: e.adType === p.PREROLL && e.requestTime - e.lastAdDisplay < _,
                 reason_channelsub: Boolean(e.chansubToken) && e.hasAdFreeSubscription,
-                reason_channeladfree: e.adType === f.PREROLL && !e.prerollsEnabled || e.adType === f.POSTROLL && !e.postrollsEnabled,
-                reason_frontpage: e.playerType === p.PLAYER_FRONTPAGE,
-                reason_creative_player: e.playerType === p.PLAYER_CREATIVE,
-                reason_facebook: e.playerType === p.PLAYER_FACEBOOK,
-                reason_highlighter: e.playerType === p.PLAYER_HIGHLIGHTER,
-                reason_already_seen_rolltype: Boolean(t[e.adType]) && (e.adType === f.PREROLL || e.adType === f.POSTROLL),
+                reason_channeladfree: e.adType === p.PREROLL && !e.prerollsEnabled || e.adType === p.POSTROLL && !e.postrollsEnabled,
+                reason_frontpage: e.playerType === h.PLAYER_FRONTPAGE,
+                reason_creative_player: e.playerType === h.PLAYER_CREATIVE,
+                reason_facebook: e.playerType === h.PLAYER_FACEBOOK,
+                reason_highlighter: e.playerType === h.PLAYER_HIGHLIGHTER,
+                reason_already_seen_rolltype: Boolean(t[e.adType]) && (e.adType === p.PREROLL || e.adType === p.POSTROLL),
                 reason_mobile_web_upsell: Boolean(e.isMobileLocation) && "mobile_web" === e.platform
             }
+        }
+
+        function o(e) {
+            return "unknown" === e.adblock ? null : e.adblock
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.DecliningAdsManager = void 0;
-        var o = function() {
+        var l = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var i = t[n];
@@ -12245,19 +12249,19 @@
                     return n && e(t.prototype, n), i && e(t, i), t
                 }
             }(),
-            l = n(158),
-            u = i(l),
-            c = n(187),
-            d = i(c),
-            f = n(199),
-            p = n(200),
-            h = n(142),
-            g = 3e5;
+            u = n(158),
+            c = i(u),
+            d = n(187),
+            f = i(d),
+            p = n(199),
+            h = n(200),
+            g = n(142),
+            _ = 3e5;
         t.DecliningAdsManager = function() {
             function e(t, n) {
                 r(this, e), this._stateStore = t, this._adManager = n, this._streamRollTypes = {}
             }
-            return o(e, [{
+            return l(e, [{
                 key: "destroy",
                 value: function() {
                     this._adManager.destroy()
@@ -12269,22 +12273,22 @@
                         n = t.window;
                     if (!this._streamRollTypes.hasOwnProperty(e.channel)) {
                         var i;
-                        this._streamRollTypes[e.channel] = (i = {}, a(i, f.PREROLL, !1), a(i, f.MIDROLL, !1), a(i, f.POSTROLL, !1), i)
+                        this._streamRollTypes[e.channel] = (i = {}, a(i, p.PREROLL, !1), a(i, p.MIDROLL, !1), a(i, p.POSTROLL, !1), i)
                     }
                     var r = s(e, this._streamRollTypes[e.channel]),
-                        o = (0, d["default"])(r, function(e, t) {
+                        l = (0, f["default"])(r, function(e, t) {
                             return e || t
                         }, !1),
-                        l = (0, h.parseUri)(n.location.href);
-                    if ((l.queryKey.hasOwnProperty("force_preroll") || l.queryKey.hasOwnProperty("force_midroll")) && (o = !1), o) {
-                        var c = this._stateStore.getState(),
-                            p = c.analyticsTracker;
-                        p.trackEvent("video_ad_request_declined", (0, u["default"])({
+                        u = (0, g.parseUri)(n.location.href);
+                    if ((u.queryKey.hasOwnProperty("force_preroll") || u.queryKey.hasOwnProperty("force_midroll")) && (l = !1), l) {
+                        var d = this._stateStore.getState(),
+                            h = d.analyticsTracker;
+                        h.trackEvent("video_ad_request_declined", (0, c["default"])({
                             ad_session_id: e.adSessionId,
                             roll_type: e.adType,
                             time_break: e.duration,
                             provider: "ima",
-                            adblock: e.adblock
+                            adblock: o(e)
                         }, r))
                     } else this._adManager.requestAds(e), this._streamRollTypes[e.channel][e.adType] = !0
                 }
@@ -19082,19 +19086,14 @@
         }
 
         function a() {
-            return function(e, t) {
-                var n = t(),
-                    i = n.stream,
-                    a = {
-                        type: k,
-                        times: v.localStore.get(j, {}),
-                        watch: v.localStore.get(x, {}),
-                        streamTimes: v.localStore.get(U, {}),
-                        lastTimeStamp: 0,
-                        userId: null,
-                        isSeeked: !1
-                    };
-                i instanceof b.VODContentStream ? (a.initUpdateOffset = R, a.updateInterval = L) : i instanceof E.LiveContentStream && (a.initUpdateOffset = Math.ceil(Math.random() * M), a.updateInterval = D), e(a)
+            return {
+                type: k,
+                times: v.localStore.get(L, {}),
+                watch: v.localStore.get(D, {}),
+                streamTimes: v.localStore.get(R, {}),
+                lastTimeStamp: 0,
+                userId: null,
+                isSeeked: !1
             }
         }
 
@@ -19232,11 +19231,11 @@
         }
 
         function m(e) {
-            v.localStore.set(j, e.resumeWatch.times), v.localStore.set(x, e.resumeWatch.watch), v.localStore.set(U, e.resumeWatch.streamTimes)
+            v.localStore.set(L, e.resumeWatch.times), v.localStore.set(D, e.resumeWatch.watch), v.localStore.set(R, e.resumeWatch.streamTimes)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.MAX_INIT_UPDATE_OFFSET_LIVESTREAM = t.INIT_UPDATE_OFFSET_VOD = t.UPDATE_INTERVAL_LIVESTREAM = t.UPDATE_INTERVAL_VOD = t.ACTION_VOD_SET_IS_SEEKED = t.ACTION_VOD_SET_USER = t.ACTION_VOD_POST_BACKEND_TIME = t.ACTION_LIVESTREAM_SET_RESUME_TIME = t.ACTION_LIVESTREAM_CANCEL_RESUME = t.ACTION_VOD_SET_RESUME_TIME = t.ACTION_VOD_CANCEL_RESUME = t.ACTION_VOD_INIT_RESUME = void 0, t.initVodResume = a, t.setUser = r, t.setIsSeeked = s, t.getResumeTimes = l, t.setVodResumeTime = p, t.cancelVodResumeTime = h, t.setLivestreamResumeTime = g, t.cancelLivestreamResumeTime = _;
+        }), t.ACTION_VOD_SET_IS_SEEKED = t.ACTION_VOD_SET_USER = t.ACTION_VOD_POST_BACKEND_TIME = t.ACTION_LIVESTREAM_SET_RESUME_TIME = t.ACTION_LIVESTREAM_CANCEL_RESUME = t.ACTION_VOD_SET_RESUME_TIME = t.ACTION_VOD_CANCEL_RESUME = t.ACTION_VOD_INIT_RESUME = void 0, t.initVodResume = a, t.setUser = r, t.setIsSeeked = s, t.getResumeTimes = l, t.setVodResumeTime = p, t.cancelVodResumeTime = h, t.setLivestreamResumeTime = g, t.cancelLivestreamResumeTime = _;
         var v = n(229),
             y = n(132),
             b = n(189),
@@ -19251,13 +19250,9 @@
             A = t.ACTION_VOD_POST_BACKEND_TIME = "post vod backend time",
             N = t.ACTION_VOD_SET_USER = "set user",
             O = t.ACTION_VOD_SET_IS_SEEKED = "set isSeeked",
-            L = t.UPDATE_INTERVAL_VOD = 20,
-            D = t.UPDATE_INTERVAL_LIVESTREAM = 300,
-            R = t.INIT_UPDATE_OFFSET_VOD = 2e4,
-            M = t.MAX_INIT_UPDATE_OFFSET_LIVESTREAM = 24e4,
-            j = "vodResumeTimes",
-            x = "vodResumeWatcheds",
-            U = "livestreamResumeTimes"
+            L = "vodResumeTimes",
+            D = "vodResumeWatcheds",
+            R = "livestreamResumeTimes"
     }, function(e, t, n) {
         "use strict";
 
@@ -19644,7 +19639,7 @@
                     var o = m.calculateRGBA(m.backgroundColorMap[e.windowColorName].backgroundColorValue, m.opacityMap[e.windowOpacity].opacityValue);
                     $(".js-player-captions-window").css({
                         backgroundColor: o
-                    }), this.setFontSizeStatus(e.fontSize)
+                    }), this.setFontSizeStatus(e.fontSize);
                 }
             }, {
                 key: "setFontSizeStatus",
@@ -25958,43 +25953,43 @@
         }
 
         function r() {
-            var e = arguments.length <= 0 || void 0 === arguments[0] ? _ : arguments[0],
+            var e = arguments.length <= 0 || void 0 === arguments[0] ? w : arguments[0],
                 t = arguments[1];
             switch (t.type) {
-                case h.ACTION_VOD_INIT_RESUME:
-                    return (0, p["default"])(t, Object.keys(_));
-                case h.ACTION_VOD_SET_USER:
-                    return (0, o["default"])({}, e, {
+                case g.ACTION_VOD_INIT_RESUME:
+                    return (0, h["default"])(t, Object.keys(w));
+                case g.ACTION_VOD_SET_USER:
+                    return (0, l["default"])({}, e, {
                         userId: t.userId
                     });
-                case h.ACTION_VOD_SET_RESUME_TIME:
-                    return (0, d["default"])({}, e, {
+                case g.ACTION_VOD_SET_RESUME_TIME:
+                    return (0, f["default"])({}, e, {
                         times: a({}, t.videoID, t.time),
                         watch: a({}, t.videoID, !0)
                     });
-                case h.ACTION_VOD_CANCEL_RESUME:
-                    return (0, o["default"])({}, e, {
-                        times: (0, u["default"])(e.times, t.videoID),
-                        watch: (0, u["default"])(e.watch, t.videoID)
+                case g.ACTION_VOD_CANCEL_RESUME:
+                    return (0, l["default"])({}, e, {
+                        times: (0, c["default"])(e.times, t.videoID),
+                        watch: (0, c["default"])(e.watch, t.videoID)
                     });
-                case h.ACTION_LIVESTREAM_SET_RESUME_TIME:
-                    return (0, d["default"])({}, e, {
+                case g.ACTION_LIVESTREAM_SET_RESUME_TIME:
+                    return (0, f["default"])({}, e, {
                         streamTimes: a({}, t.broadcastID, t.time)
                     });
-                case h.ACTION_LIVESTREAM_CANCEL_RESUME:
-                    return (0, o["default"])({}, e, {
-                        streamTimes: (0, u["default"])(e.streamTimes, t.broadcastID)
+                case g.ACTION_LIVESTREAM_CANCEL_RESUME:
+                    return (0, l["default"])({}, e, {
+                        streamTimes: (0, c["default"])(e.streamTimes, t.broadcastID)
                     });
-                case h.ACTION_VOD_POST_BACKEND_TIME:
-                    return (0, o["default"])({}, e, {
+                case g.ACTION_VOD_POST_BACKEND_TIME:
+                    return (0, l["default"])({}, e, {
                         lastTimeStamp: t.lastTimeStamp
                     });
-                case h.ACTION_VOD_SET_IS_SEEKED:
-                    return (0, o["default"])({}, e, {
+                case g.ACTION_VOD_SET_IS_SEEKED:
+                    return (0, l["default"])({}, e, {
                         isSeeked: t.isSeeked
                     });
-                case g.ACTION_SET_STREAM:
-                    return (0, o["default"])({}, e, {
+                case _.ACTION_SET_STREAM:
+                    return (0, l["default"])({}, e, s(t.stream), {
                         isSeeked: !1,
                         lastTimeStamp: 0
                     });
@@ -26002,20 +25997,34 @@
                     return e
             }
         }
+
+        function s(e) {
+            var t = {
+                updateInterval: w.updateInterval,
+                initUpdateOffset: w.initUpdateOffset
+            };
+            return e instanceof m.VODContentStream ? (t.updateInterval = y, t.initUpdateOffset = E) : e instanceof v.LiveContentStream && (t.updateInterval = b, t.initUpdateOffset = Math.ceil(Math.random() * S)), t
+        }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.resumeWatch = r;
-        var s = n(158),
-            o = i(s),
-            l = n(453),
-            u = i(l),
-            c = n(160),
-            d = i(c),
-            f = n(44),
-            p = i(f),
-            h = n(475),
-            g = n(444),
-            _ = {
+        }), t.MAX_INIT_UPDATE_OFFSET_LIVESTREAM = t.INIT_UPDATE_OFFSET_VOD = t.UPDATE_INTERVAL_LIVESTREAM = t.UPDATE_INTERVAL_VOD = void 0, t.resumeWatch = r;
+        var o = n(158),
+            l = i(o),
+            u = n(453),
+            c = i(u),
+            d = n(160),
+            f = i(d),
+            p = n(44),
+            h = i(p),
+            g = n(475),
+            _ = n(444),
+            m = n(189),
+            v = n(131),
+            y = t.UPDATE_INTERVAL_VOD = 20,
+            b = t.UPDATE_INTERVAL_LIVESTREAM = 300,
+            E = t.INIT_UPDATE_OFFSET_VOD = 2e4,
+            S = t.MAX_INIT_UPDATE_OFFSET_LIVESTREAM = 24e4,
+            w = {
                 times: {},
                 watch: {},
                 streamTimes: {},
