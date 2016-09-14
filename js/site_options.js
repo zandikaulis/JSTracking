@@ -155,6 +155,16 @@ window.SiteOptions = {
                 "value": "plus"
             }]
         },
+        "213678cc-be7d-4aa6-a938-8baac01a442a": {
+            "name": "android_spade_batching",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "live"
+            }]
+        },
         "2352d0b6-7692-49f1-9f8d-88e6cc47994b": {
             "name": "android_rollout_vod_uploads",
             "groups": [{

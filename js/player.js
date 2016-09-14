@@ -7068,8 +7068,7 @@
                 })), a(n, v, (0, d.userInfo)().then(function(e) {
                     return "US" !== e.geo ? "no" : r("yes")
                 })), a(n, y, (0, d.userInfo)().then(function(e) {
-                    var t = ["GB", "FR", "DE", "SE"];
-                    return -1 === t.indexOf(e.geo) ? "no" : r("yes")
+                    return "GB" !== e.geo ? "no" : r("yes")
                 })), a(n, b, (0, d.userInfo)().then(function(e) {
                     var t = ["AU", "NZ"];
                     return -1 === t.indexOf(e.geo) ? "no" : r("yes")
@@ -17925,40 +17924,40 @@
                 $(t).attr("data-showinfo", i.showInfo);
                 var a = i.player;
                 $(t).attr("data-playertype", a), a === s.PLAYER_FRONTPAGE && $(t).on("click", ".js-control-fullscreen-overlay", function() {
-                    A.then(function(e) {
+                    P.then(function(e) {
                         window.top.location.href = e
                     })
                 }), $(t).on("click", ".js-watch-twitch", function(t) {
-                    t.preventDefault(), A.then(function(t) {
+                    t.preventDefault(), P.then(function(t) {
                         var n = e.getCurrentTime(),
                             i = t;
                         e.video && n && (i += "?t=" + p.toURLString(Math.round(n))), window.open(i, "_blank"), e.pause()
                     })
-                }), e.addEventListener(y.ENDED, k), e.addEventListener(y.LOADED_DATA, r), e.addEventListener(y.PLAYING, l), e.addEventListener(E.AD_START, c), N.push((0, m.subscribe)(n, ["viewercount"], function(e) {
+                }), e.addEventListener(y.LOADED_DATA, r), e.addEventListener(y.PLAYING, l), e.addEventListener(E.AD_START, c), A.push((0, m.subscribe)(n, ["viewercount"], function(e) {
                     var n = e.viewercount;
                     $(t).attr("data-viewers", n)
-                })), N.push((0, m.subscribe)(n, ["stream"], function(e) {
+                })), A.push((0, m.subscribe)(n, ["stream"], function(e) {
                     var i = e.stream;
                     switch (i.contentType) {
                         case g.CONTENT_MODE_LIVE:
-                            (0, o.channelInfo)(i.channel).then(C), n.dispatch((0, S.setOfflineContentType)(i.channel)), A = Promise.resolve((0, o.channelUrl)(i.channel));
+                            (0, o.channelInfo)(i.channel).then(k), n.dispatch((0, S.setOfflineContentType)(i.channel)), P = Promise.resolve((0, o.channelUrl)(i.channel));
                             break;
                         case _.CONTENT_MODE_VOD:
                             (0, o.videoInfo)(i.videoId).then(function(e) {
-                                (0, o.channelInfo)(e.channel.name).then(C), e.preview && (L = e.preview.replace("320x240", w), I()), $(".js-meta-title", t).text(e.title)
-                            }), A = (0, o.videoInfo)(i.videoId).then(function(e) {
+                                (0, o.channelInfo)(e.channel.name).then(k), e.preview && (O = e.preview.replace("320x240", w), T()), $(".js-meta-title", t).text(e.title)
+                            }), P = (0, o.videoInfo)(i.videoId).then(function(e) {
                                 return (0, o.videoUrl)(e.channel.name, i.videoId)
                             })
                     }
-                    A.then(function(e) {
+                    P.then(function(e) {
                         $(".js-meta-url", t).attr("href", e)
                     })
-                })), N.push((0, m.subscribe)(n, ["screen"], function(e) {
+                })), A.push((0, m.subscribe)(n, ["screen"], function(e) {
                     var n = e.screen;
                     $(t).attr("data-screen", n[0])
-                })), N.push((0, m.subscribe)(n, ["playback.playlist"], f)), N.push((0, m.subscribe)(n, ["online"], v)), N.push((0, m.subscribe)(n, ["error", "lang"], b)), N.push((0, m.subscribe)(n, ["streamMetadata"], function(e) {
+                })), A.push((0, m.subscribe)(n, ["playback.playlist"], f)), A.push((0, m.subscribe)(n, ["online"], v)), A.push((0, m.subscribe)(n, ["error", "lang"], b)), A.push((0, m.subscribe)(n, ["streamMetadata"], function(e) {
                     var t = e.streamMetadata;
-                    t.preview && (L = t.preview.template.replace("{width}x{height}", w), I())
+                    t.preview && (O = t.preview.template.replace("{width}x{height}", w), T())
                 })), b(n.getState())
             }
 
@@ -17968,21 +17967,25 @@
             }
 
             function l() {
-                P()
+                I()
             }
 
             function c() {
-                P()
+                I()
             }
 
             function f(e) {
                 var i = e.playback.playlist;
-                n.getState().online && i ? $(t).attr("data-playlist", "pending") : i ? $(t).attr("data-playlist", !0) : ($(t).attr("data-playlist", !1), T(), $(t).attr("data-loading", !1))
+                n.getState().online && i ? $(t).attr("data-playlist", "pending") : i ? $(t).attr("data-playlist", !0) : ($(t).attr("data-playlist", !1), C(), $(t).attr("data-loading", !1))
             }
 
-            function v(e) {
-                var n = e.online;
-                $(t).attr("data-online", n)
+            function v(i) {
+                var a = i.online;
+                if ($(t).attr("data-online", a), !a) {
+                    var r = e.getChannel();
+                    if (!r) return;
+                    f(n.getState()), n.dispatch((0, S.setOfflineContentType)(r))
+                }
             }
 
             function b(e) {
@@ -17991,50 +17994,45 @@
                 n.hasError && ($(t).attr("data-error", n.hasError), $(".js-player-error", t).text(i.translate(n.error.message)))
             }
 
-            function k() {
-                var t = e.getChannel();
-                t && (f(n.getState()), n.dispatch((0, S.setOfflineContentType)(t)))
-            }
-
-            function C(n) {
-                var i = e.getChannel();
-                O = n.video_banner;
-                var a = e.getEnded();
-                if (a && T(), $(".js-meta-name", t).text(n.display_name), $(".js-meta-picture", t).attr("src", n.logo || null), $(t).attr({
-                        "data-channel": i || null,
+            function k(i) {
+                var a = e.getChannel();
+                N = i.video_banner;
+                var r = e.getEnded();
+                if ((r || !n.getState().online) && C(), $(".js-meta-name", t).text(i.display_name), $(".js-meta-picture", t).attr("src", i.logo || null), $(t).attr({
+                        "data-channel": a || null,
                         "data-video": e.getVideo() || null,
-                        "data-game": i ? n.game : null
-                    }), i) {
-                    $(".js-meta-title", t).text(n.status);
-                    var r = d.gamePath + "/" + encodeURIComponent(n.game);
-                    $(".js-meta-game", t).text(n.game).attr("href", r)
+                        "data-game": a ? i.game : null
+                    }), a) {
+                    $(".js-meta-title", t).text(i.status);
+                    var s = d.gamePath + "/" + encodeURIComponent(i.game);
+                    $(".js-meta-game", t).text(i.game).attr("href", s)
                 }
             }
 
-            function T() {
+            function C() {
                 var n = e.getChannel();
-                O && n && $(".js-offline-banner", t).css("background-image", "url('" + O + "')")
+                N && n && $(".js-offline-banner", t).css("background-image", "url('" + N + "')")
+            }
+
+            function T() {
+                var i = e.getPaused() || e.getReadyState() === u.HAVE_NOTHING;
+                (n.getState().stream === h.NullContentStream || !e.getAutoplay() && i) && ($(t).attr("data-background", !0), $(".js-video-background-banner", t).css("background-image", "url('" + O + "')"))
             }
 
             function I() {
-                var i = e.getPaused() || e.getReadyState() === u.HAVE_NOTHING;
-                (n.getState().stream === h.NullContentStream || !e.getAutoplay() && i) && ($(t).attr("data-background", !0), $(".js-video-background-banner", t).css("background-image", "url('" + L + "')"))
-            }
-
-            function P() {
                 $(t).attr("data-background", !1)
             }
-            var A = Promise.reject();
-            A.then(null, function() {
+            var P = Promise.reject();
+            P.then(null, function() {
                 return null
             });
-            var N = [],
-                O = void 0,
-                L = void 0;
+            var A = [],
+                N = void 0,
+                O = void 0;
             this.destroy = function() {
-                $(t).off("click"), N.forEach(function(e) {
+                $(t).off("click"), A.forEach(function(e) {
                     return e()
-                }), N = null
+                }), A = null
             }, a()
         }
         Object.defineProperty(t, "__esModule", {
