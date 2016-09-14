@@ -320,10 +320,10 @@ window.SiteOptions = {
         "4df8c7e5-6173-45d0-bc3b-4ece0b89af11": {
             "name": "secret media eu",
             "groups": [{
-                "weight": 0,
+                "weight": 20,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 80,
                 "value": "no"
             }]
         },
@@ -506,8 +506,11 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes"
             }, {
-                "weight": 82,
+                "weight": 75,
                 "value": "no"
+            }, {
+                "weight": 7,
+                "value": "pc-0.6.14"
             }, {
                 "weight": 5,
                 "value": "pc-0.6.12"
