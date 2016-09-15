@@ -210,13 +210,14 @@ Twitch.action("user#delete_account_form", function(e) {
                     })
                 }), t("#nav_related_streams").hide()
             },
-            i = function(e) {
-                t(e).on("click", function(n) {
-                    n.stopPropagation(), n.preventDefault(), t.ajax({
-                        url: t(e).attr("href"),
+            i = function(n) {
+                t(n).on("click", function(r) {
+                    r.stopPropagation(), r.preventDefault(), t.ajax({
+                        url: t(n).attr("href"),
                         type: "POST",
                         headers: {
-                            "X-Http-Method-Override": t(e).data("methodOverride"),
+                            "Client-ID": e.api.config.clientID,
+                            "X-Http-Method-Override": t(n).data("methodOverride"),
                             "X-CSRF-Token": t("meta[name='csrf-token']").attr("content")
                         }
                     }).done(function(e) {

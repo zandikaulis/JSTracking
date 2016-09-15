@@ -17088,6 +17088,7 @@ googletag.cmd = googletag.cmd || [],
                     url: s,
                     type: "POST",
                     headers: {
+                        "Client-ID": Twitch.api.config.clientID,
                         "X-Http-Method-Override": i,
                         "X-CSRF-Token": e('meta[name="csrf-token"]').attr("content")
                     }
@@ -18174,14 +18175,18 @@ function(e, t) {
                 n._onEvents(e)
             }), this._readyDeferred = RSVP.defer(), this._id = t.id, this._hostChannel = t.hostChannel, e.playerType !== "live" && (this._videoType = "hls");
             var n = this,
-                r = ["//" + SiteOptions.twitch_cdn_hostport + "/swflibs/TwitchPlayer.swf", t.id, "100%", "100%", "11", null, t, {
-                    allowScriptAccess: "always",
-                    allowFullScreen: !0,
-                    wmode: "opaque",
-                    bgcolor: "000000"
-                }, null, function(e) {
-                    e.success || n._readyDeferred.reject(n)
-                }];
+                r = ["//" +
+                    SiteOptions.twitch_cdn_hostport + "/swflibs/TwitchPlayer.swf", t.id, "100%", "100%", "11", null, t, {
+                        allowScriptAccess: "always",
+                        allowFullScreen: !0,
+                        wmode: "opaque",
+                        bgcolor: "000000"
+                    },
+                    null,
+                    function(e) {
+                        e.success || n._readyDeferred.reject(n)
+                    }
+                ];
             swfobject.embedSWF.apply(swfobject, r)
         };
     RSVP.EventTarget.mixin(o.prototype), o.prototype._onPlayerInit = function() {
@@ -18464,24 +18469,27 @@ function(e, t) {
                 }
             })
         },
-        a = function(e) {
-            return new RSVP.Promise(function(n, r) {
+        a = function(n) {
+            return new RSVP.Promise(function(r, i) {
                 t.ajax({
                     method: "GET",
-                    url: e,
+                    url: n,
                     cache: !1,
+                    headers: {
+                        "Client-ID": e.api.config.clientID
+                    },
                     success: function(e) {
                         var t = e.match(/nname=([^,&]+)[,&]/);
                         if (t.length > 1) {
-                            var r = t[1].split(".");
-                            r.length > 1 && n({
+                            var n = t[1].split(".");
+                            n.length > 1 && r({
                                 node: t[1],
-                                cluster: r[1]
+                                cluster: n[1]
                             })
-                        } else console.warn("no match found for clusterPattern."), n({})
+                        } else console.warn("no match found for clusterPattern."), r({})
                     },
                     error: function() {
-                        console.warn("error in fetching stream data"), n({})
+                        console.warn("error in fetching stream data"), r({})
                     }
                 })
             })
@@ -19297,7 +19305,8 @@ function(e, t) {
         return r._dispatch("alert", e, t, n)
     }, r.notice = function(e, t, n) {
         return r._dispatch("notice", e, t, n)
-    }, r.success = function(e, t, n) {
+    }, r.success = function(
+        e, t, n) {
         return r._dispatch("success", e, t, n)
     }, r.error = function(e, t, n) {
         return r._dispatch("error", e, t, n)
