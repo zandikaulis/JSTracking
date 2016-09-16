@@ -115,6 +115,7 @@ window.SiteOptions = {
     "chat_sticky_experiment": "{\"viewing_parties_experiment\":{\"footer\":{\"leadup\":\"Or check out\",\"text\":\" the other PAX theatres\",\"link\":\"https://www.twitch.tv/event/pax\"},\"title\":\"PAX Viewing Parties\",\"text\":\"Twitch communities are watching this theatre's most anticipated reveals and panels together, and you can join them. Not actually though, like on the Internet.\",\"streams\":{\"twitch\":{\"display_name\": \"Twitch\"},\"pax\":{\"display_name\":\"PAX\"},\"pax2\":{\"display_name\":\"PAX2\"},\"pax3\":{\"display_name\":\"PAX3\"},\"paxarena\":{\"display_name\":\"PAXArena\"}},\"whitelist\":[],\"channel_cap\":5,\"start_date\":{\"year\":2016,\"month\":8,\"day\":2,\"hour\":17,\"minute\":0, \"second\":0},\"end_date\":{\"year\":2016,\"month\":8,\"day\":5,\"hour\":3,\"minute\":30, \"second\":0}},\"native_broadcasts_experiment\":{\"twitch\":{\"close_count\": 5,\"start_date\":{\"year\": 2016,\"month\":7,\"day\":31,\"hour\":22,\"minute\":30, \"second\":0},\"end_date\":{\"year\": 2016,\"month\":8,\"day\":2,\"hour\":0,\"minute\":0, \"second\":0},\"streams\":[{\"url\":\"http://link.twitch.tv/AIVpilotsurvey\",\"name\":\"Stream then review!\",\"lang\":\"en\"}],\"lang_mappings\":{\"en\":{\"title\":\"Make Your Voice Heard\",\"text\":\"You help determine the fate of these new shows.\"}}}},\"alt_roles_experiment\":{\"title\":\"Check Out Other WoW Roles!\",\"text\":\"Play a different role in World of Warcraft? Check out our other Legion Launch Celebration streamers!\",\"streams\":{\"sco\":{\"name\":\"Sco\",\"description\":\" - <Method> Tank\"},\"xyronic\":{\"name\":\"Xyronic\",\"description\":\" - <Limit> Warlock\"},\"azortharion\":{\"name\":\"Azortharion\",\"description\":\" - <Vanguard> PvE Hunter\"},\"finalbosstv\":{\"name\":\"FinalBossTV\",\"description\":\" - Mythic Prep\"},\"anniefuchsia\":{\"name\":\"AnnieFuchsia\",\"description\":\" - Legion's Hidden Gems\"}},\"start_date\":{\"year\": 2016,\"month\":7,\"day\":30,\"hour\":7,\"minute\":0,\"second\":0},\"end_date\":{\"year\": 2016,\"month\":8,\"day\":14,\"hour\":7,\"minute\":0,\"second\":0}}}",
     "is_fl_enabled": false,
     "is_bk_enabled": null,
+    "bits_promo_enabled": false,
     "experiments": {
         "0173154a-7fa4-4a76-b8e1-0575eb3a7fcd": {
             "name": "android_live_preview",
@@ -567,7 +568,7 @@ window.SiteOptions = {
             }]
         },
         "91ae05e9-bd13-44ff-bc97-eebfee7193c8": {
-            "name": "android_clips",
+            "name": "android_rollout_clips",
             "groups": [{
                 "weight": 100,
                 "value": "control"
