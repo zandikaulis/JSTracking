@@ -780,10 +780,10 @@ window.SiteOptions = {
         "f398cefc-009d-4487-8c9d-5fe2e963110f": {
             "name": "ios_rollout_clips",
             "groups": [{
-                "weight": 1,
+                "weight": 0,
                 "value": "on"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "off"
             }]
         },
