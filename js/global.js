@@ -17816,31 +17816,6 @@ function(e, t) {
     })
 }(Twitch, jQuery),
 function(e, t) {
-    function w() {
-        return window.location.pathname === "/"
-    }
-
-    function E() {
-        return w() && window.location.search.indexOf("newfp") !== -1
-    }
-
-    function S(t) {
-        var n = e.storage.get(b);
-        n && e.tracking.spadeAndMixpanel.trackEvent("front_page_experiment_land", {
-            redirected_at: n,
-            source_url: window.location.href,
-            new_front_page: E(),
-            platform: "web",
-            experiment_group: t.group
-        }), e.storage.del(b)
-    }
-
-    function x(t) {
-        var n = (new Date).getTime();
-        t = t || "";
-        var r = window.location.protocol + "//" + window.location.host + window.location.pathname + t;
-        e.storage.set(b, n), window.location = r
-    }
     var n = SiteOptions.experiments || {},
         r = {
             SIMILAR_CHANNELS: "df008233-c0f2-46dc-92a2-61396ae402e3",
@@ -17911,7 +17886,6 @@ function(e, t) {
             ESL_CSGO_STEAM_LINK: "show-cta",
             SIMILAR_CHANNELS: "d,hs,f,2r,a",
             VIDEO_UPLOADS: "yes",
-            WEB_CLIENT_FRONT_PAGE: "new_front_page",
             CHANNEL_PAGE_REDESIGN: "new"
         };
     _.each(Object.keys(u), function(t) {
@@ -17975,18 +17949,6 @@ function(e, t) {
         };
     e.mixin({
         experiments: y
-    });
-    var b = "Twitch.experiments.fpRedirectTimestamp";
-    w() && d.then(function() {
-        return p.get(r.WEB_CLIENT_FRONT_PAGE, {
-            mustTrack: !0
-        })
-    }).then(function(t) {
-        t === "new_front_page" ? E() ? S({
-            group: t
-        }) : x("?newfp") : t === "old_front_page" && (e.storage.get(b) ? S({
-            group: t
-        }) : x())
     })
 }(Twitch, jQuery),
 function(e, t) {
@@ -18175,18 +18137,14 @@ function(e, t) {
                 n._onEvents(e)
             }), this._readyDeferred = RSVP.defer(), this._id = t.id, this._hostChannel = t.hostChannel, e.playerType !== "live" && (this._videoType = "hls");
             var n = this,
-                r = ["//" +
-                    SiteOptions.twitch_cdn_hostport + "/swflibs/TwitchPlayer.swf", t.id, "100%", "100%", "11", null, t, {
-                        allowScriptAccess: "always",
-                        allowFullScreen: !0,
-                        wmode: "opaque",
-                        bgcolor: "000000"
-                    },
-                    null,
-                    function(e) {
-                        e.success || n._readyDeferred.reject(n)
-                    }
-                ];
+                r = ["//" + SiteOptions.twitch_cdn_hostport + "/swflibs/TwitchPlayer.swf", t.id, "100%", "100%", "11", null, t, {
+                    allowScriptAccess: "always",
+                    allowFullScreen: !0,
+                    wmode: "opaque",
+                    bgcolor: "000000"
+                }, null, function(e) {
+                    e.success || n._readyDeferred.reject(n)
+                }];
             swfobject.embedSWF.apply(swfobject, r)
         };
     RSVP.EventTarget.mixin(o.prototype), o.prototype._onPlayerInit = function() {
@@ -19305,8 +19263,7 @@ function(e, t) {
         return r._dispatch("alert", e, t, n)
     }, r.notice = function(e, t, n) {
         return r._dispatch("notice", e, t, n)
-    }, r.success = function(
-        e, t, n) {
+    }, r.success = function(e, t, n) {
         return r._dispatch("success", e, t, n)
     }, r.error = function(e, t, n) {
         return r._dispatch("error", e, t, n)
