@@ -6,8 +6,8 @@ import re
 
 
 def get_url_from_page(url, pat):
-    # Why not, easy as fuck
-    name = re.search(pat, requests.get(url).content).group(1)
+    content = requests.get(url).content
+    name = re.search(pat, content).group(1)
     return url + name
 
 if __name__ == '__main__':
@@ -18,8 +18,10 @@ if __name__ == '__main__':
          'filename': 'site_options.js'},
         {'url': get_url_from_page("https://www.twitch.tv", r'"(.*/global-[a-zA-Z0-9]+.js)'),
          'filename': 'global.js'},
-        {'url': get_url_from_page("https://www.twitch.tv", r'"(.*/application-[a-zA-Z0-9]+.js)'),
-         'filename': 'application.js'}
+        {'url': get_url_from_page("https://www.twitch.tv", r'"(.*/emberhelper-[a-zA-Z0-9]+.js)'),
+         'filename': 'emberhelper.js'},
+        {'url': 'https://web-cdn.ttvnw.net/emberapp.js',
+         'filename': 'emberapp.js'}
     ]
 
     for jsfile in files:
