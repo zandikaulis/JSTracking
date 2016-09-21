@@ -16694,7 +16694,7 @@ googletag.cmd = googletag.cmd || [],
                         height: n.height + 10
                     }), e("#passport_modal").css({
                         visibility: "visible"
-                    }), r = e('iframe[name="passport"]').contents()[0], e(r).find("#username").focus();
+                    }), r = e('iframe[name="passport"]').contents()[0], n.focus && e(r).find("#username").focus();
                     return
             }
         });
@@ -16962,10 +16962,10 @@ googletag.cmd = googletag.cmd || [],
                 r = e('<div style="display:none">'), r.appendTo(s), r._contentFn = o
             }
             var u;
-            if (u = n[t]) return this
-                .each(function() {
-                    u.call(this, r, i)
-                });
+            if (
+                u = n[t]) return this.each(function() {
+                u.call(this, r, i)
+            });
             throw "No method with name: " + t
         }
     }(jQuery),
@@ -17115,7 +17115,11 @@ googletag.cmd = googletag.cmd || [],
                 }
             }];
             e.forEach(function(e) {
-                navigator.userAgent.match(e.userAgentMatchingPattern) && !navigator.userAgent.match(/IEMobile|Windows Phone/) && !Twitch.storage.legacy.get("mobile_pushover") && (Twitch.storage.legacy.set("mobile_pushover", "true", 86400), confirm(e.message) && e.onconfirm())
+                navigator.userAgent.match(e.userAgentMatchingPattern) && !navigator.userAgent.match(/IEMobile|Windows Phone/) && !Twitch.storage.get("mobile_pushover", {
+                    storage: "sessionStorage"
+                }) && (Twitch.storage.set("mobile_pushover", "true", {
+                    storage: "sessionStorage"
+                }), confirm(e.message) && e.onconfirm())
             })
         }
     }(jQuery),
@@ -19293,7 +19297,8 @@ function(e, t) {
             i = {
                 detect: r,
                 pageTransition: function() {
-                    window._sp_ && window._sp_.pageChange && window._sp_.pageChange()
+                    window._sp_ && window._sp_.pageChange &&
+                        window._sp_.pageChange()
                 }
             };
         e.mixin({
