@@ -590,10 +590,10 @@ window.SiteOptions = {
         "93883758-3d7d-414b-9975-df688165726b": {
             "name": "secret media",
             "groups": [{
-                "weight": 0,
+                "weight": 10,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 90,
                 "value": "no"
             }]
         },
