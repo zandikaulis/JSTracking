@@ -17312,7 +17312,7 @@ googletag.cmd = googletag.cmd || [],
         }, n._ajax = function(u, a, f, l) {
             var c = new t.Deferred,
                 h, p;
-            l = t.extend({}, l), l.headers = l.headers || {}, l.headers["Client-ID"] = l.headers["Client-ID"] || r, l.headers["X-CSRF-Token"] = l.headers["X-CSRF-Token"] || cookie.get("csrf_token"), f || (f = {}), f.on_site = "1", o() && u !== "GET" && u !== "POST" ? (l.type = "POST", l.headers["X-Http-Method-Override"] = u) : l.type = u;
+            l = t.extend({}, l), l.headers = l.headers || {}, l.headers["Client-ID"] = l.headers["Client-ID"] || r, l.headers["X-CSRF-Token"] = l.headers["X-CSRF-Token"] || e.storage.get("csrf_token"), f || (f = {}), f.on_site = "1", o() && u !== "GET" && u !== "POST" ? (l.type = "POST", l.headers["X-Http-Method-Override"] = u) : l.type = u;
             var d = l.version || l.v || s;
             l.headers.Accept = "application/vnd.twitchtv.v" + d + "+json", l.headers.Authorization ? (l.secure = !0, l.allow_cookie = !1, delete f.on_site) : (h = e.storage.legacy.get("api_token"), h && (l.headers["Twitch-Api-Token"] = h), l.allow_cookie = !0), /^(\/kraken\/)?streams(?!\/summary\/*$|\/recommended\/*$|\/recommended\/available\/*$|\/featured\/*$|\/communities\/)/.test(a) && (l.use_streams_api = !0, l.allow_cookie = !1), l.success && c.done(l.success), l.error && c.fail(l.error), p = t.extend({}, l, {
                 url: this._constructUrl(a, l),
@@ -19924,17 +19924,10 @@ var Base64 = {
         }
     }(window.Twitch),
     function(e) {
-        var t = 14;
         Twitch.user(function(e) {
-            cookie.set("csrf_token", e.csrf_token, {
-                domain: ".twitch.tv",
-                expires: t
-            })
-        }, function(e) {
-            e.status === 401 && cookie.remove("csrf_token")
+            Twitch.storage.set("csrf_token", e.csrf_token)
         }), e.ajaxPrefilter(function(e, t, n) {
-            var r = cookie.get("csrf_token");
-            !e.crossDomain && r && n.setRequestHeader("X-CSRF-Token", r)
+            csrf_token = Twitch.storage.get("csrf_token"), !e.crossDomain && csrf_token && n.setRequestHeader("X-CSRF-Token", csrf_token)
         })
     }(jQuery),
     function(e, t) {
