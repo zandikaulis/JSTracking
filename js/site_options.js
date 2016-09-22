@@ -508,8 +508,14 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes"
             }, {
-                "weight": 75,
+                "weight": 50,
                 "value": "no"
+            }, {
+                "weight": 5,
+                "value": "rc-no-ftux"
+            }, {
+                "weight": 20,
+                "value": "rc-ftux"
             }, {
                 "weight": 7,
                 "value": "pc-0.6.14"
