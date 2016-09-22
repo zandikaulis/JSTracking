@@ -8685,7 +8685,7 @@
                     (0, h.krakenUserInfo)().then(function(e) {
                         "staff" === e.type && !g.localStore.get("staff-html5-forced-in") && u.BackendPlayerCore.canPlay() && (g.localStore.set("staff-html5-forced-in", !0), ye.setBackend("player-core"))
                     });
-                    var e = ["default_in", "player-core-0.6.8", "pc-0.6.9", "pc-0.6.12", "pc-0.6.14"];
+                    var e = ["default_in", "player-core-0.6.8", "pc-0.6.9", "pc-0.6.12", "pc-0.6.14", "rc-ftux", "rc-no-ftux"];
                     n.getState().experiments.get(F.HTML5_TOGGLE).then(function(t) {
                         (0, W["default"])(e, t) && !g.localStore.get("html5-forced-in") && u.BackendPlayerCore.canPlay() && (g.localStore.set("html5-forced-in", !0), ye.setBackend("player-core"))
                     })
@@ -9422,8 +9422,7 @@
             }
 
             function me(e) {
-                Le.setCurrentTimeStamp(e),
-                    Ne.emit(w.TIME_UPDATE, Le.extrapolateTimeStamp())
+                Le.setCurrentTimeStamp(e), Ne.emit(w.TIME_UPDATE, Le.extrapolateTimeStamp())
             }
 
             function ve() {
@@ -19771,12 +19770,12 @@
                     return n && e(t.prototype, n), i && e(t, i), t
                 }
             }(),
-            c = function B(e, t, n) {
+            c = function V(e, t, n) {
                 null === e && (e = Function.prototype);
                 var i = Object.getOwnPropertyDescriptor(e, t);
                 if (void 0 === i) {
                     var a = Object.getPrototypeOf(e);
-                    return null === a ? void 0 : B(a, t, n)
+                    return null === a ? void 0 : V(a, t, n)
                 }
                 if ("value" in i) return i.value;
                 var r = i.get;
@@ -19786,30 +19785,32 @@
             f = a(d),
             p = n(53),
             h = a(p),
-            g = n(132),
-            _ = i(g),
-            m = n(382),
-            v = a(m),
-            y = n(230),
-            b = i(y),
-            E = n(244),
-            S = n(326),
-            w = n(330),
-            k = n(362),
-            C = n(205),
-            T = n(247),
-            I = n(144),
-            P = i(I),
-            A = n(145),
+            g = n(35),
+            _ = a(g),
+            m = n(132),
+            v = i(m),
+            y = n(382),
+            b = a(y),
+            E = n(230),
+            S = i(E),
+            w = n(244),
+            k = n(326),
+            C = n(330),
+            T = n(362),
+            I = n(205),
+            P = n(247),
+            A = n(144),
             N = i(A),
-            O = n(229),
-            L = "This video quality is only available to subscribers. Subscribe now to watch and support %s.",
-            D = "custom",
-            R = ["font", "fontOpacity", "alignment", "verticalPosition", "backgroundOpacity", "windowOpacity"],
-            M = ["fontColorName", "edge", "backgroundColorName", "windowColorName"],
-            j = ["fontUnderline", "fontBold", "fontItalic"],
-            x = t.HTML5_BETA_POPUP_SEEN_KEY = "html5-beta-popup-seen",
-            U = t.CC_INTRO_POPUP_SEEN_KEY = "cc-intro-popup-seen";
+            O = n(145),
+            L = i(O),
+            D = n(229),
+            R = "This video quality is only available to subscribers. Subscribe now to watch and support %s.",
+            M = "custom",
+            j = ["font", "fontOpacity", "alignment", "verticalPosition", "backgroundOpacity", "windowOpacity"],
+            x = ["fontColorName", "edge", "backgroundColorName", "windowColorName"],
+            U = ["fontUnderline", "fontBold", "fontItalic"],
+            B = t.HTML5_BETA_POPUP_SEEN_KEY = "html5-beta-popup-seen",
+            F = t.CC_INTRO_POPUP_SEEN_KEY = "cc-intro-popup-seen";
         t.PlayerUISettings = function(e) {
             function t(e, n, i, a, r, l, u) {
                 s(this, t);
@@ -19819,7 +19820,7 @@
             return l(t, e), u(t, [{
                 key: "_initEvents",
                 value: function() {
-                    this._player.addEventListener(N.LOADSTART, this.onLoadStart.bind(this)), this._player.addEventListener(N.LOADED_METADATA, this.onLoadedMetadata.bind(this)), this._player.addEventListener(N.SEEKED, this.onSeeked.bind(this)), this._player.addEventListener(P.QUALITIES_CHANGE, this.onQualitiesChange.bind(this)), this._player.addEventListener(P.RESTRICTED, this.onRestricted.bind(this))
+                    this._player.addEventListener(L.LOADSTART, this.onLoadStart.bind(this)), this._player.addEventListener(L.LOADED_METADATA, this.onLoadedMetadata.bind(this)), this._player.addEventListener(L.SEEKED, this.onSeeked.bind(this)), this._player.addEventListener(N.QUALITIES_CHANGE, this.onQualitiesChange.bind(this)), this._player.addEventListener(N.RESTRICTED, this.onRestricted.bind(this))
                 }
             }, {
                 key: "_initDom",
@@ -19832,10 +19833,10 @@
                             r = (0, h["default"])(i.available, function(e) {
                                 return e.group === a
                             });
-                        e._stateStore.dispatch((0, E.selectQuality)(a)), e._stateStore.dispatch((0, E.setPreferredQuality)(r)), e.hideMenu()
-                    }), $(this._root).on("click", ".js-menu-button", this.toggleMenu.bind(this)), new v["default"](".js-copy-url", {
+                        e._stateStore.dispatch((0, w.selectQuality)(a)), e._stateStore.dispatch((0, w.setPreferredQuality)(r)), e.hideMenu()
+                    }), $(this._root).on("click", ".js-menu-button", this.toggleMenu.bind(this)), new b["default"](".js-copy-url", {
                         text: function() {
-                            var t = b.toURLString(e._player.getCurrentTime()),
+                            var t = S.toURLString(e._player.getCurrentTime()),
                                 n = e._player.getVideoURL() + "?t=" + t;
                             return e.hideMenu(), n
                         }
@@ -19886,9 +19887,10 @@
                 value: function(e) {
                     var t = this,
                         n = e.backend,
-                        i = e.experiments;
-                    i.get(C.HTML5_TOGGLE).then(function(e) {
-                        "no" === e || n.getBackend() !== T.PLAYER_CORE_BACKEND_TYPE || O.localStore.get(x) || (t._showHTML5BetaPopup(), O.localStore.set(x, !0))
+                        i = e.experiments,
+                        a = ["no", "rc-no-ftux"];
+                    i.get(I.HTML5_TOGGLE).then(function(e) {
+                        (0, _["default"])(a, e) || n.getBackend() !== P.PLAYER_CORE_BACKEND_TYPE || D.localStore.get(B) || (t._showHTML5BetaPopup(), D.localStore.set(B, !0))
                     })
                 }
             }, {
@@ -19896,26 +19898,26 @@
                 value: function() {
                     var e = this,
                         t = this._stateStore.getState().captions.style;
-                    M.forEach(function(n) {
+                    x.forEach(function(n) {
                         e._setRadioAttribute(n, t)
-                    }), R.forEach(function(n) {
-                        e._setDropdownAttribute(n, t)
                     }), j.forEach(function(n) {
+                        e._setDropdownAttribute(n, t)
+                    }), U.forEach(function(n) {
                         e._setCheckboxAttribute(n, t)
                     }), $(".js-cc-modal", this._root).on("change", ".js-cc-dropdown", function(t) {
                         var n = $(t.target);
-                        e._stateStore.dispatch((0, S.setCaptionsPreset)(D, r({}, n.attr("name"), n.val())))
+                        e._stateStore.dispatch((0, k.setCaptionsPreset)(M, r({}, n.attr("name"), n.val())))
                     }), $(".js-cc-modal", this._root).on("click", ".js-cc-radio", function(t) {
                         var n = $(t.target);
-                        e._stateStore.dispatch((0, S.setCaptionsPreset)(D, r({}, n.attr("name"), n.val())))
+                        e._stateStore.dispatch((0, k.setCaptionsPreset)(M, r({}, n.attr("name"), n.val())))
                     }), $(".js-cc-modal", this._root).on("click", ".js-cc-checkbox", function(t) {
                         var n = $(t.target);
-                        e._stateStore.dispatch((0, S.setCaptionsPreset)(D, r({}, n.attr("name"), n.prop("checked") ? n.val() : w.presetMap["white-on-black"][n.attr("name")])))
+                        e._stateStore.dispatch((0, k.setCaptionsPreset)(M, r({}, n.attr("name"), n.prop("checked") ? n.val() : C.presetMap["white-on-black"][n.attr("name")])))
                     }), $(".js-cc-font-size", this._root).on("click", function(t) {
-                        var n = w.fontSizeMap[$(t.target).val()],
+                        var n = C.fontSizeMap[$(t.target).val()],
                             i = e._stateStore.getState().captions.style.fontSize,
                             a = i + parseInt(n, 10);
-                        e._stateStore.dispatch((0, S.setCaptionsPreset)(D, {
+                        e._stateStore.dispatch((0, k.setCaptionsPreset)(M, {
                             fontSize: a
                         }))
                     })
@@ -19954,11 +19956,11 @@
                 value: function() {
                     var e = this,
                         t = this._stateStore.getState().captions.style;
-                    R.forEach(function(n) {
+                    j.forEach(function(n) {
                         e._setDropdownAttribute(n, t)
-                    }), M.forEach(function(n) {
+                    }), x.forEach(function(n) {
                         e._setRadioAttribute(n, t)
-                    }), j.forEach(function(n) {
+                    }), U.forEach(function(n) {
                         e._setCheckboxAttribute(n, t)
                     })
                 }
@@ -20006,7 +20008,7 @@
                         var i = $(".js-quality-display-contain", this._root);
                         i.attr("data-q", "show"), setTimeout(function() {
                             i.attr("data-q", "hide")
-                        }, _.qualityChangeDuration), this._controlsDisplay.showControls(_.qualityChangeDuration), this._qualityChangeExpected = !1
+                        }, v.qualityChangeDuration), this._controlsDisplay.showControls(v.qualityChangeDuration), this._qualityChangeExpected = !1
                     }
                 }
             }, {
@@ -20034,7 +20036,7 @@
             }, {
                 key: "onHoverClosedCaptionIcon",
                 value: function() {
-                    O.localStore.get(U) || ($(".js-cc-info-modal").attr("data-state", "open"), O.localStore.set(U, !0))
+                    D.localStore.get(F) || ($(".js-cc-info-modal").attr("data-state", "open"), D.localStore.set(F, !0))
                 }
             }, {
                 key: "toggleMenu",
@@ -20056,7 +20058,7 @@
                 key: "selectPreset",
                 value: function(e) {
                     var t = $(e.target).closest(".js-cc-preset").attr("data-preset");
-                    this._stateStore.dispatch((0, S.setCaptionsPreset)(t, w.presetMap[t]))
+                    this._stateStore.dispatch((0, k.setCaptionsPreset)(t, C.presetMap[t]))
                 }
             }, {
                 key: "submitVideoIssueReport",
@@ -20070,7 +20072,7 @@
                         var i = {
                             issue: n.issue
                         };
-                        i = (0, f["default"])(i, this._player.getVideoInfo()), this._analytics.trackEvent("vid_issue_report", i), $(".js-video-issue", this._root).attr("data-complete", !0), setTimeout(this.hideMenu.bind(this), _.reportHideDelay), setTimeout(this.resetVideoIssueReport.bind(this), _.reportHideDelay + 200)
+                        i = (0, f["default"])(i, this._player.getVideoInfo()), this._analytics.trackEvent("vid_issue_report", i), $(".js-video-issue", this._root).attr("data-complete", !0), setTimeout(this.hideMenu.bind(this), v.reportHideDelay), setTimeout(this.resetVideoIssueReport.bind(this), v.reportHideDelay + 200)
                     }
                 }
             }, {
@@ -20087,7 +20089,7 @@
                 key: "showLiveQualityChansubOverlay",
                 value: function() {
                     $(".js-player-product-overlay", this._root).attr("data-active", !0), $(".js-player-product-close", this._root).attr("data-active", !0);
-                    var e = this._stateStore.getState().lang.translate(L);
+                    var e = this._stateStore.getState().lang.translate(R);
                     e = e.replace("%s", this._options.channel), $(".js-player-product p", this._root).text(e), $(".js-player-product .purchase_button", this._root).attr("href", "http://www.twitch.tv/" + this._options.channel + "/subscribe?ref=chansub_overlay_subscribe")
                 }
             }, {
@@ -20096,7 +20098,7 @@
                     c(Object.getPrototypeOf(t.prototype), "destroy", this).call(this), $(this._root).off("click"), $(this._root).off("change"), $(this._root).off("submit"), $(".js-html5-beta-popup-close", this._root).off("click"), $(window).off("blur")
                 }
             }]), t
-        }(k.UIStateSubscriber)
+        }(T.UIStateSubscriber)
     }, function(e, t, n) {
         var i, i;
         /*!
