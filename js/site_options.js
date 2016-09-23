@@ -787,22 +787,6 @@ window.SiteOptions = {
                 "value": "d,hs,c"
             }]
         },
-        "e2751aa3-d277-4454-91c3-6e32b64980bf": {
-            "name": "new sort orders for friend list",
-            "groups": [{
-                "weight": 25,
-                "value": "control"
-            }, {
-                "weight": 25,
-                "value": "recency"
-            }, {
-                "weight": 25,
-                "value": "prioritize_broadcasting"
-            }, {
-                "weight": 25,
-                "value": "prioritize_watching"
-            }]
-        },
         "e7516730-b94f-4d46-894e-c18612aab270": {
             "name": "coview recommendations a/b testing",
             "groups": [{
