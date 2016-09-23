@@ -20,7 +20,7 @@ if __name__ == '__main__':
          'filename': 'global.js'},
         {'url': get_url_from_page("https://www.twitch.tv", r'"(.*/emberhelper-[a-zA-Z0-9]+.js)'),
          'filename': 'emberhelper.js'},
-        {'url': get_url_from_page("https://player.twitch.tv", r'"([a-z0-9]+/vendor.[a-zA-Z0-9]+.js)'),
+        {'url': get_url_from_page("https://player.twitch.tv/", r'"([a-z0-9]+/vendor.[a-zA-Z0-9]+.js)'),
          'filename': 'vendor.js'},
         {'url': 'https://web-cdn.ttvnw.net/emberapp.js',
          'filename': 'emberapp.js'}
