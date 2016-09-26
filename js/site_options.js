@@ -791,10 +791,10 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "control"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "d,nhs,f,c,a"
             }, {
-                "weight": 16,
+                "weight": 0,
                 "value": "d,nhs,f,c,b"
             }, {
                 "weight": 16,
@@ -803,7 +803,7 @@ window.SiteOptions = {
                 "weight": 16,
                 "value": "d,hs,2r"
             }, {
-                "weight": 47,
+                "weight": 68,
                 "value": "d,hs,c"
             }]
         },
