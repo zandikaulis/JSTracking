@@ -762,6 +762,16 @@ window.SiteOptions = {
                 "value": "no_prerolls"
             }]
         },
+        "d24f182c-e36f-498e-9e49-113e02a83bad": {
+            "name": "passport_redesign",
+            "groups": [{
+                "weight": 5,
+                "value": "control"
+            }, {
+                "weight": 5,
+                "value": "new"
+            }]
+        },
         "df008233-c0f2-46dc-92a2-61396ae402e3": {
             "name": "Similar Channels",
             "groups": [{
