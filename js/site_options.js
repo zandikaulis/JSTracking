@@ -158,6 +158,19 @@ window.SiteOptions = {
                 "value": "plus"
             }]
         },
+        "171906a2-6e34-4d0e-879c-a76a19f19097": {
+            "name": "vod_page_recommendations_ordering",
+            "groups": [{
+                "weight": 10,
+                "value": "control"
+            }, {
+                "weight": 95,
+                "value": "related_first"
+            }, {
+                "weight": 95,
+                "value": "recent_first"
+            }]
+        },
         "213678cc-be7d-4aa6-a938-8baac01a442a": {
             "name": "android_spade_batching",
             "groups": [{
@@ -775,7 +788,7 @@ window.SiteOptions = {
         "df008233-c0f2-46dc-92a2-61396ae402e3": {
             "name": "Similar Channels",
             "groups": [{
-                "weight": 31,
+                "weight": 0,
                 "value": "control"
             }, {
                 "weight": 5,
@@ -790,7 +803,7 @@ window.SiteOptions = {
                 "weight": 16,
                 "value": "d,hs,2r"
             }, {
-                "weight": 16,
+                "weight": 47,
                 "value": "d,hs,c"
             }]
         },
