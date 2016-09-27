@@ -29,7 +29,7 @@
                 var i = document.getElementsByTagName("head")[0],
                     r = document.createElement("script");
                 r.type = "text/javascript", r.charset = "utf-8", r.async = !0, r.src = t.p + "" + e + ".js/" + ({}[e] || e) + "." + {
-                    1: "c9d84de2cec605ea5c7e"
+                    1: "7f19baddff3230fe4bed"
                 }[e] + ".js", i.appendChild(r)
             }
         }, t.m = e, t.c = i, t.p = "", t(0)
@@ -8685,7 +8685,7 @@
                     (0, h.krakenUserInfo)().then(function(e) {
                         "staff" === e.type && !g.localStore.get("staff-html5-forced-in") && u.BackendPlayerCore.canPlay() && (g.localStore.set("staff-html5-forced-in", !0), be.setBackend("player-core"))
                     });
-                    var e = ["default_in", "player-core-0.6.8", "pc-0.6.9", "pc-0.6.12", "pc-0.6.14", "rc-ftux", "rc-no-ftux"];
+                    var e = ["default_in", "player-core-0.6.8", "pc-0.6.9", "pc-0.6.12", "pc-0.6.14", "rc-ftux", "rc-no-ftux", "rc-no-ftux-decl"];
                     n.getState().experiments.get(F.HTML5_TOGGLE).then(function(t) {
                         (0, W["default"])(e, t) && !g.localStore.get("html5-forced-in") && u.BackendPlayerCore.canPlay() && (g.localStore.set("html5-forced-in", !0), be.setBackend("player-core"))
                     })
@@ -9416,7 +9416,7 @@
             }
 
             function ge(e) {
-                Ne.emit(C.MIDROLL_REQUESTED, e);
+                Ne.emit(C.MIDROLL_REQUESTED, e)
             }
 
             function _e() {
@@ -10443,7 +10443,7 @@
                 }, {
                     key: "getVersion",
                     value: function() {
-                        return "0.6.14"
+                        return "0.6.15"
                     }
                 }, {
                     key: "getBackend",
@@ -11791,16 +11791,18 @@
 
         function u(e, t, n) {
             return c(n.stream).then(function(e) {
-                return Promise.all([(0, E.userInfo)(), (0, E.channelInfo)(e), (0, E.channelAPIInfo)(e), (0, E.channelViewerInfo)(e)])
+                return Promise.all([(0, E.userInfo)(), (0, E.channelInfo)(e), (0, E.channelAPIInfo)(e), (0, E.channelViewerInfo)(e), n.experiments.get(v.HTML5_TOGGLE)])
             }).then(function(i) {
-                var a = d(i, 4),
+                var a = d(i, 5),
                     r = a[0],
                     s = a[1],
                     o = a[2],
-                    l = a[3];
+                    l = a[3],
+                    u = a[4];
                 return new m.AdsRequestContext({
                     adType: e,
                     lastAdDisplay: S.localStore.get("lastAdDisplay", 0),
+                    disableSeenRollType: "rc-no-ftux-decl" === u,
                     state: n,
                     duration: t,
                     userInfo: r,
@@ -11993,21 +11995,20 @@
                         });
                         var a = new n.ima.AdsRenderingSettings;
                         a.restoreCustomPlaybackStateOnAdBreakComplete = !0, this._currentAdsManager = e.getAdsManager(new _(this._backend), a), this._currentAdsManager.addEventListener(n.ima.AdErrorEvent.Type.AD_ERROR, function(e) {
-                                return t._onAdError(e)
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.CONTENT_PAUSE_REQUESTED, function(e) {
-                                return t._onContentPauseRequested(e)
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.CONTENT_RESUME_REQUESTED, function(e) {
-                                return t._onContentResumeRequested(e)
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.LOADED, function(e) {
-                                return t._onAdLoaded(e)
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.STARTED, function(e) {
-                                return t._onAdStarted(e)
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.IMPRESSION, function(e) {
-                                return t._onAdImpression(e, i)
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.COMPLETE, function(e) {
-                                return t._onAdEnded(e, i)
-                            }), this._currentAdsManager.init(this._videoContainer.offsetParent.offsetWidth, this._videoContainer.offsetParent.offsetHeight, n.ima.ViewMode.NORMAL),
-                            this._currentAdsManager.start()
+                            return t._onAdError(e)
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.CONTENT_PAUSE_REQUESTED, function(e) {
+                            return t._onContentPauseRequested(e)
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.CONTENT_RESUME_REQUESTED, function(e) {
+                            return t._onContentResumeRequested(e)
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.LOADED, function(e) {
+                            return t._onAdLoaded(e)
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.STARTED, function(e) {
+                            return t._onAdStarted(e)
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.IMPRESSION, function(e) {
+                            return t._onAdImpression(e, i)
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.COMPLETE, function(e) {
+                            return t._onAdEnded(e, i);
+                        }), this._currentAdsManager.init(this._videoContainer.offsetParent.offsetWidth, this._videoContainer.offsetParent.offsetHeight, n.ima.ViewMode.NORMAL), this._currentAdsManager.start()
                     }
                 }, {
                     key: "_onAdError",
@@ -12191,7 +12192,7 @@
         }
 
         function s(e, t) {
-            return {
+            var n = {
                 reason_turbo: Boolean(e.turboToken),
                 reason_ratelimit: e.adType === p.PREROLL && e.requestTime - e.lastAdDisplay < _,
                 reason_channelsub: Boolean(e.chansubToken) && e.hasAdFreeSubscription,
@@ -12200,9 +12201,9 @@
                 reason_creative_player: e.playerType === h.PLAYER_CREATIVE,
                 reason_facebook: e.playerType === h.PLAYER_FACEBOOK,
                 reason_highlighter: e.playerType === h.PLAYER_HIGHLIGHTER,
-                reason_already_seen_rolltype: Boolean(t[e.adType]) && (e.adType === p.PREROLL || e.adType === p.POSTROLL),
                 reason_mobile_web_upsell: Boolean(e.isMobileLocation) && "mobile_web" === e.platform
-            }
+            };
+            return e.disableSeenRollType || (n.reason_already_seen_rolltype = Boolean(t[e.adType]) && (e.adType === p.PREROLL || e.adType === p.POSTROLL)), n
         }
 
         function o(e) {
@@ -12384,11 +12385,12 @@
                 u = e.userInfo,
                 c = e.channelInfo,
                 d = e.channelAPIInfo,
-                f = e.viewerInfo;
+                f = e.viewerInfo,
+                p = e.disableSeenRollType;
             i(this, s);
-            var p = o.ads,
-                h = o.window;
-            this.adSessionId = (0, a.generate)(r), this.adblock = p.adblock, this.adType = t, this.channel = c.name, this.chansubToken = f.chansub, this.duration = n, this.game = c.game, this.hasAdFreeSubscription = Boolean(f.has_ad_free_subscription), this.isMobileLocation = o.env.isMobileLocation, this.kruxId = h.Krux ? h.Krux.user || "" : null, this.lastAdDisplay = l, this.mature = c.mature, this.partner = c.partner, this.platform = o.env.platform, this.playerType = o.env.playerType, this.postrollsEnabled = Boolean(d.postrolls), this.prerollsEnabled = Boolean(d.prerolls), this.referrer = h.document.referrer, this.requestTime = Date.now(), this.turboToken = u.turbo, this.url = h.location.href
+            var h = o.ads,
+                g = o.window;
+            this.adSessionId = (0, a.generate)(r), this.adblock = h.adblock, this.adType = t, this.channel = c.name, this.chansubToken = f.chansub, this.duration = n, this.game = c.game, this.hasAdFreeSubscription = Boolean(f.has_ad_free_subscription), this.isMobileLocation = o.env.isMobileLocation, this.kruxId = g.Krux ? g.Krux.user || "" : null, this.lastAdDisplay = l, this.mature = c.mature, this.partner = c.partner, this.platform = o.env.platform, this.playerType = o.env.playerType, this.postrollsEnabled = Boolean(d.postrolls), this.prerollsEnabled = Boolean(d.prerolls), this.referrer = g.document.referrer, this.requestTime = Date.now(), this.turboToken = u.turbo, this.url = g.location.href, this.disableSeenRollType = p
         }
     }, function(module, exports, __webpack_require__) {
         var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;
@@ -14226,7 +14228,8 @@
                         o = q.substr(o, s.length + 1, null),
                         l = o.indexOf("?"),
                         o = (null != (l >= 0 ? q.substr(o, l, null) : null) ? q.substr(o, 0, l) : o).split("/");
-                    for (o.pop(), r = r.split("/"), null != i && (l = r.pop(), r.push(l + i)), i = "" == r[0] ? [] : o.slice(0), o = 0; o < r.length;) switch (l = r[o], ++o, l) {
+                    for (o.pop(), r = r.split("/"), null != i && (l = r.pop(),
+                            r.push(l + i)), i = "" == r[0] ? [] : o.slice(0), o = 0; o < r.length;) switch (l = r[o], ++o, l) {
                         case "..":
                             i.pop();
                             break;
@@ -15255,7 +15258,7 @@
                                 lineNumber: 262,
                                 className: "secretmedia.pptjs.Detector",
                                 methodName: "testUrlsInFlash"
-                            }), i(p.BLOCKED_IN_FLASH_URL_BLOCKED)
+                            }), i(p.BLOCKED_IN_FLASH_URL_BLOCKED);
                         }, function() {
                             k.trace(c.unmangle("_306"), {
                                 fileName: "Detector.hx",
@@ -19874,7 +19877,7 @@
                     var t = this,
                         n = e.backend,
                         i = e.experiments,
-                        a = ["no", "rc-no-ftux"];
+                        a = ["no", "rc-no-ftux", "rc-no-ftux-decl"];
                     i.get(I.HTML5_TOGGLE).then(function(e) {
                         (0, _["default"])(a, e) || n.getBackend() !== P.PLAYER_CORE_BACKEND_TYPE || D.localStore.get(B) || (t._showHTML5BetaPopup(), D.localStore.set(B, !0))
                     })
