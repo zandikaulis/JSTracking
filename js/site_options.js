@@ -336,10 +336,10 @@ window.SiteOptions = {
         "4df8c7e5-6173-45d0-bc3b-4ece0b89af11": {
             "name": "secret media eu",
             "groups": [{
-                "weight": 20,
+                "weight": 0,
                 "value": "yes"
             }, {
-                "weight": 80,
+                "weight": 100,
                 "value": "no"
             }]
         },
@@ -797,13 +797,13 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "d,nhs,f,c,b"
             }, {
-                "weight": 16,
+                "weight": 0,
                 "value": "d,nhs,c"
             }, {
-                "weight": 16,
+                "weight": 0,
                 "value": "d,hs,2r"
             }, {
-                "weight": 68,
+                "weight": 100,
                 "value": "d,hs,c"
             }]
         },

@@ -17836,6 +17836,7 @@ function(e, t) {
             CREATIVE_DIRECTORY_CVS: "36a0e500-f117-41dd-8421-3e3db7d567dd",
             CREATIVE_SIDEBAR_NAVIGATION: "f60b889e-0327-46a8-ad7b-0d402717da45",
             CSGO_LANGUAGE_SAMPLE: "b86f6c73-d333-4d80-ab45-07cfff39aede",
+            VOD_PAGE_RECOMMENDATION_ORDER: "171906a2-6e34-4d0e-879c-a76a19f19097",
             REMOVE_CSGO_DIRECTORY: "355ff3e2-38b5-449a-8ab8-a52b5d3ab817",
             LANGUAGE_DIRECTORY_FILTER: "653cc0db-d332-4df6-b224-15c5c481f7e7",
             CHANNEL_VIDEOS_TAB: "852b3485-a831-4580-b7bf-acf819977704",
@@ -17866,6 +17867,7 @@ function(e, t) {
             "36a0e500-f117-41dd-8421-3e3db7d567dd": "communities",
             "f60b889e-0327-46a8-ad7b-0d402717da45": "no",
             "b86f6c73-d333-4d80-ab45-07cfff39aede": "control",
+            "171906a2-6e34-4d0e-879c-a76a19f19097": "related_first",
             "355ff3e2-38b5-449a-8ab8-a52b5d3ab817": "control",
             "653cc0db-d332-4df6-b224-15c5c481f7e7": "control",
             "852b3485-a831-4580-b7bf-acf819977704": "control",
@@ -19287,18 +19289,18 @@ function(e, t) {
         var n = "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
             r = new RSVP.Promise(function(e, r) {
                 t.getScript(n).fail(function(e, t, n) {
-                    r()
-                }), document.addEventListener("sp.blocking", function() {
-                    e(!0)
-                }), document.addEventListener("sp.not_blocking", function() {
-                    e(!1)
-                })
+                        r()
+                    }), document.addEventListener("sp.blocking", function() {
+                        e(!0)
+                    }), document
+                    .addEventListener("sp.not_blocking", function() {
+                        e(!1)
+                    })
             }),
             i = {
                 detect: r,
                 pageTransition: function() {
-                    window._sp_ && window._sp_.pageChange &&
-                        window._sp_.pageChange()
+                    window._sp_ && window._sp_.pageChange && window._sp_.pageChange()
                 }
             };
         e.mixin({
