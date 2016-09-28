@@ -8728,7 +8728,7 @@
                     (0, h.krakenUserInfo)().then(function(e) {
                         "staff" === e.type && !g.localStore.get("staff-html5-forced-in") && u.BackendPlayerCore.canPlay() && (g.localStore.set("staff-html5-forced-in", !0), Ee.setBackend("player-core"))
                     });
-                    var e = ["default_in", "player-core-0.6.8", "pc-0.6.9", "pc-0.6.12", "pc-0.6.14", "rc-ftux", "rc-no-ftux", "rc-no-ftux-decl"];
+                    var e = ["default_in", "player-core-0.6.8", "pc-0.6.9", "pc-0.6.12", "pc-0.6.14", "rc-ftux", "rc-no-ftux", "rc-no-ftux-decl", "rc-no-ftux-2"];
                     n.getState().experiments.get(F.HTML5_TOGGLE).then(function(t) {
                         (0, W["default"])(e, t) && !g.localStore.get("html5-forced-in") && u.BackendPlayerCore.canPlay() && (g.localStore.set("html5-forced-in", !0), Ee.setBackend("player-core"))
                     })
@@ -9452,7 +9452,7 @@
             }
 
             function de() {
-                Ne.emit(k.RESTRICTED);
+                Ne.emit(k.RESTRICTED)
             }
 
             function fe() {
@@ -20014,7 +20014,7 @@
                     var t = this,
                         n = e.backend,
                         i = e.experiments,
-                        a = ["no", "rc-no-ftux", "rc-no-ftux-decl"];
+                        a = ["no", "rc-no-ftux", "rc-no-ftux-decl", "rc-no-ftux-2"];
                     i.get(I.HTML5_TOGGLE).then(function(e) {
                         (0, _["default"])(a, e) || n.getBackend() !== P.PLAYER_CORE_BACKEND_TYPE || D.localStore.get(B) || (t._showHTML5BetaPopup(), D.localStore.set(B, !0))
                     })
