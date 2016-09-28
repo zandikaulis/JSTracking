@@ -23,7 +23,9 @@ if __name__ == '__main__':
         {'url': get_url_from_page("https://player.twitch.tv/", r'"([a-z0-9]+/vendor.[a-zA-Z0-9]+.js)'),
          'filename': 'vendor.js'},
         {'url': 'https://web-cdn.ttvnw.net/emberapp.js',
-         'filename': 'emberapp.js'}
+         'filename': 'emberapp.js'},
+        {'url': 'https://www.twitch.tv/tmilibs/tmi-v3.js',
+         'filename': 'tmi-v3.js'}
     ]
 
     for jsfile in files:
