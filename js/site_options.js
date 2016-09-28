@@ -820,6 +820,16 @@ window.SiteOptions = {
                 "value": "d,hs,c"
             }]
         },
+        "e39a1b4d-51ef-4b49-9378-91a7eb35c3da": {
+            "name": "TIME_SPENT_EXPERIMENT",
+            "groups": [{
+                "weight": 20,
+                "value": "yes"
+            }, {
+                "weight": 80,
+                "value": "no"
+            }]
+        },
         "e7516730-b94f-4d46-894e-c18612aab270": {
             "name": "coview recommendations a/b testing",
             "groups": [{
