@@ -17850,7 +17850,8 @@ function(e, t) {
             WEB_CLIENT_FRONT_PAGE: "f67a2dd3-fc9e-4e10-8aaf-929e1e0f484a",
             CHANNEL_PAGE_REDESIGN: "3ae835b6-3015-440c-8177-755bdbbbf29e",
             VIDEO_EMBED_EXPERIMENT: "696cc3ee-d8b9-4918-8d53-910f93ae1c9a",
-            MESSAGE_HISTORY: "8ace0f50-8afd-424a-a086-3e61b3e66da0"
+            MESSAGE_HISTORY: "8ace0f50-8afd-424a-a086-3e61b3e66da0",
+            BITS_FOR_ADS: "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2"
         },
         i = {
             "df008233-c0f2-46dc-92a2-61396ae402e3": "control",
@@ -17881,7 +17882,8 @@ function(e, t) {
             "f67a2dd3-fc9e-4e10-8aaf-929e1e0f484a": "ignore",
             "3ae835b6-3015-440c-8177-755bdbbbf29e": "old",
             "696cc3ee-d8b9-4918-8d53-910f93ae1c9a": "embed",
-            "8ace0f50-8afd-424a-a086-3e61b3e66da0": "off"
+            "8ace0f50-8afd-424a-a086-3e61b3e66da0": "off",
+            "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": "off"
         },
         s = "experiment_overrides",
         o = {},
@@ -18157,7 +18159,8 @@ function(e, t) {
             this.adFeedbackMenu = new e.player.AdFeedbackMenu(t(".js-ad-feedback-menu").first(), this), this.ready(this._id)
         }, o.prototype.destroy = function() {
             clearInterval(this.swfTrackingInterval)
-        }, o.prototype.ready = function(n) {
+        }, o.prototype.ready =
+        function(n) {
             var r = this;
             this.ref = document.getElementById(n), this.$el = t(this.ref);
             var i = {
@@ -19289,13 +19292,12 @@ function(e, t) {
         var n = "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
             r = new RSVP.Promise(function(e, r) {
                 t.getScript(n).fail(function(e, t, n) {
-                        r()
-                    }), document.addEventListener("sp.blocking", function() {
-                        e(!0)
-                    }), document
-                    .addEventListener("sp.not_blocking", function() {
-                        e(!1)
-                    })
+                    r()
+                }), document.addEventListener("sp.blocking", function() {
+                    e(!0)
+                }), document.addEventListener("sp.not_blocking", function() {
+                    e(!1)
+                })
             }),
             i = {
                 detect: r,
