@@ -310,6 +310,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "428d3b07-cc7a-424f-aad0-971f5415879a": {
+            "name": "NEXUS_ROLLOUT",
+            "groups": [{
+                "weight": 100,
+                "value": "disabled"
+            }, {
+                "weight": 0,
+                "value": ""
+            }]
+        },
         "474db509-7fb8-403e-97da-66dae8954e6d": {
             "name": "android_home_games_carousel",
             "groups": [{
