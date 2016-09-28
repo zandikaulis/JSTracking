@@ -16757,15 +16757,20 @@ googletag.cmd = googletag.cmd || [],
                         o = e(s).addClass("twitch_subwindow");
                     typeof t == "object" ? t.appendTo(o) : o.html(t), r.id && o.attr("id", r.id), o.css("width", r.width);
                     var u = e("<div></div>").addClass("twitch_subwindow_container");
-                    i.prepend(u).show(), u.prepend(o).show(), i.scrollTop(0), r.focusOnLoad && e(r.focusOnLoad).focus(), r.closeOnEsc && i.bind("keyup", function(e) {
+                    i.prepend(u).show(), u.prepend(o).show(), i.scrollTop(0), r.focusOnLoad && e(r.focusOnLoad).focus(), r.closeOnEsc && i.on("keyup.overlay", function(e) {
                         e.keyCode === 27 && i.trigger("overlay.hide")
-                    }), r.closeOnExteriorClick && e("body").click(function(t) {
+                    }), r.closeOnExteriorClick && e("body.overlay").on("click.overlay", function(t) {
                         e(t.target).hasClass("twitch_subwindow_container") && i.trigger("overlay.hide")
-                    }), i.bind("overlay.hide", function(e) {
+                    }), i.on("overlay.hide", function(e) {
                         e.stopPropagation(), r.destroyOnHide ? (o.remove(), u.remove()) : (o.hide(), u.hide())
                     }), typeof n == "function" && n(o, u)
                 };
                 typeof t == "string" ? e.get(t).success(s) : s(t)
+            })
+        }, e.fn.teardownOverlay = function() {
+            return this.each(function() {
+                var t = e(this);
+                t.off("keyup.overlay"), e("body.overlay").off("click.overlay"), t.off("overlay.hide")
             })
         }
     }(jQuery),
@@ -16954,7 +16959,8 @@ googletag.cmd = googletag.cmd || [],
                 })
             }
         };
-        e.fn.popup = function(t, r, i) {
+        e.fn.popup = function(
+            t, r, i) {
             typeof t != "string" && (i = r, r = t, t = "close_on_outside_click");
             if (typeof r == "function") {
                 var s = e("body"),
@@ -16962,8 +16968,7 @@ googletag.cmd = googletag.cmd || [],
                 r = e('<div style="display:none">'), r.appendTo(s), r._contentFn = o
             }
             var u;
-            if (
-                u = n[t]) return this.each(function() {
+            if (u = n[t]) return this.each(function() {
                 u.call(this, r, i)
             });
             throw "No method with name: " + t
@@ -18156,11 +18161,11 @@ function(e, t) {
             swfobject.embedSWF.apply(swfobject, r)
         };
     RSVP.EventTarget.mixin(o.prototype), o.prototype._onPlayerInit = function() {
-            this.adFeedbackMenu = new e.player.AdFeedbackMenu(t(".js-ad-feedback-menu").first(), this), this.ready(this._id)
+            this.adFeedbackMenu = new
+            e.player.AdFeedbackMenu(t(".js-ad-feedback-menu").first(), this), this.ready(this._id)
         }, o.prototype.destroy = function() {
             clearInterval(this.swfTrackingInterval)
-        }, o.prototype.ready =
-        function(n) {
+        }, o.prototype.ready = function(n) {
             var r = this;
             this.ref = document.getElementById(n), this.$el = t(this.ref);
             var i = {
@@ -19283,7 +19288,8 @@ function(e, t) {
             u = i.find(".flash-notice");
         if (s.length) return r.error(s.text(), e, n);
         if (o.length) return r.success(o.text(), e, n);
-        if (u.length) return r.alert(u.text(), e, n)
+        if (u.length) return r.alert(u.text(), e,
+            n)
     }, e.mixin({
         notify: r
     })
