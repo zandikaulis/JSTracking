@@ -9646,10 +9646,20 @@ function(e, t) {
             });
             if (t.trigger != "manual") {
                 var u = t.trigger == "hover" ? "mouseenter" : "focus",
-                    a = t.trigger == "hover" ? "mouseleave" : "blur";
-                t.live ? e("body").on(u, this.selector, s).on(a, this.selector, o) : this.bind(u, s).bind(a, o)
+                    a = t.trigger == "hover" ? "mouseleave" : "blur",
+                    f = this;
+                if (t.live) {
+                    var l = e("body");
+                    l.on(u, f.selector, s), l.on(a, f.selector, o), f._teardown = function() {
+                        l.off(u, f.selector, s), l.off(a, f.selector, o)
+                    }
+                } else f.bind(u, s), f.bind(a, o), f._teardown = function() {
+                    f.unbind(u, s), f.unbind(a, o)
+                }
             }
             return this
+        }, e.fn.teardownTipsy = function() {
+            e(this).tipsy.revalidate(), this._teardown && this._teardown()
         }, e.fn.tipsy.defaults = {
             className: null,
             delayIn: 0,
@@ -9877,8 +9887,7 @@ function(e, t) {
                 t = document.getElementById("global-zeroclipboard-html-bridge");
             if (!t) {
                 var n = '      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" width="100%" height="100%">         <param name="movie" value="' + e.options.moviePath + u(e.options.moviePath) + '"/>         <param name="allowScriptAccess" value="' + e.options.allowScriptAccess + '"/>         <param name="scale" value="exactfit"/>         <param name="loop" value="false"/>         <param name="menu" value="false"/>         <param name="quality" value="best" />         <param name="bgcolor" value="#ffffff"/>         <param name="wmode" value="transparent"/>         <param name="flashvars" value="' + a(e.options) + '"/>         <embed src="' + e.options.moviePath + u(e.options.moviePath) + '"           loop="false" menu="false"           quality="best" bgcolor="#ffffff"           width="100%" height="100%"           name="global-zeroclipboard-flash-bridge"           allowScriptAccess="always"           allowFullScreen="false"           type="application/x-shockwave-flash"           wmode="transparent"           pluginspage="http://www.macromedia.com/go/getflashplayer"           flashvars="' + a(e.options) + '"           scale="exactfit">         </embed>       </object>';
-                t = document.createElement("div"), t.id = "global-zeroclipboard-html-bridge", t.setAttribute("class", "global-zeroclipboard-container"), t.setAttribute("data-clipboard-ready", !1), t.style.position = "absolute", t.style.left = "-9999px",
-                    t.style.top = "-9999px", t.style.width = "15px", t.style.height = "15px", t.style.zIndex = "9999", t.innerHTML = n, document.body.appendChild(t)
+                t = document.createElement("div"), t.id = "global-zeroclipboard-html-bridge", t.setAttribute("class", "global-zeroclipboard-container"), t.setAttribute("data-clipboard-ready", !1), t.style.position = "absolute", t.style.left = "-9999px", t.style.top = "-9999px", t.style.width = "15px", t.style.height = "15px", t.style.zIndex = "9999", t.innerHTML = n, document.body.appendChild(t)
             }
             e.htmlBridge = t, e.flashBridge = document["global-zeroclipboard-flash-bridge"] || t.children[0].lastElementChild
         };
@@ -11150,13 +11159,13 @@ function(e, t) {
                 var g = t.options.compact ? t.options.compactLabels : t.options.labels,
                     y = t.options.whichLabels || this._normalLabels,
                     b = function(e) {
-                        var n = t.options["compactLabels" + y(t._periods[e])];
+                        var n =
+                            t.options["compactLabels" + y(t._periods[e])];
                         return d[e] ? f._translateDigits(t, t._periods[e]) + (n ? n[e] : g[e]) + " " : ""
                     },
                     w = function(e) {
                         var n = t.options["labels" + y(t._periods[e])];
-                        return !t.options.significant && d[e] || t.options.significant &&
-                            m[e] ? '<span class="' + c._sectionClass + '">' + '<span class="' + c._amountClass + '">' + f._translateDigits(t, t._periods[e]) + "</span><br/>" + (n ? n[e] : g[e]) + "</span>" : ""
+                        return !t.options.significant && d[e] || t.options.significant && m[e] ? '<span class="' + c._sectionClass + '">' + '<span class="' + c._amountClass + '">' + f._translateDigits(t, t._periods[e]) + "</span><br/>" + (n ? n[e] : g[e]) + "</span>" : ""
                     };
                 return t.options.layout ? this._buildLayout(t, d, t.options.layout, t.options.compact, t.options.significant, m) : (t.options.compact ? '<span class="' + this._rowClass + " " + this._amountClass + (t._hold ? " " + this._holdingClass : "") + '">' + b(n) + b(r) + b(i) + b(s) + (d[o] ? this._minDigits(t, t._periods[o], 2) : "") + (d[u] ? (d[o] ? t.options.timeSeparator : "") + this._minDigits(t, t._periods[u], 2) : "") + (d[a] ? (d[o] || d[u] ? t.options.timeSeparator : "") + this._minDigits(t, t._periods[a], 2) : "") : '<span class="' + this._rowClass + " " + this._showClass + (t.options.significant || h) + (t._hold ? " " + this._holdingClass : "") + '">' + w(n) + w(r) + w(i) + w(s) + w(o) + w(u) + w(a)) + "</span>" + (t.options.description ? '<span class="' + this._rowClass + " " + this._descrClass + '">' + t.options.description + "</span>" : "")
             },
@@ -13439,8 +13448,7 @@ Date.CultureInfo = {
             return this.addMilliseconds(e * 1e3)
         }, t.addMinutes = function(e) {
             return this.addMilliseconds(e * 6e4)
-        }, t.addHours = function(
-            e) {
+        }, t.addHours = function(e) {
             return this.addMilliseconds(e * 36e5)
         }, t.addDays = function(e) {
             return this.setDate(this.getDate() + e), this
@@ -15929,7 +15937,8 @@ Date.CultureInfo = {
         function Or(e, t, n, r, i) {
             var s = wt(e, t, n, r, i),
                 o = yt(s.year, 0, s.dayOfYear);
-            return this.year(o.getUTCFullYear()), this.month(o.getUTCMonth()), this.date(o.getUTCDate()), this
+            return this
+                .year(o.getUTCFullYear()), this.month(o.getUTCMonth()), this.date(o.getUTCDate()), this
         }
 
         function Mr(e) {
@@ -16959,8 +16968,7 @@ googletag.cmd = googletag.cmd || [],
                 })
             }
         };
-        e.fn.popup = function(
-            t, r, i) {
+        e.fn.popup = function(t, r, i) {
             typeof t != "string" && (i = r, r = t, t = "close_on_outside_click");
             if (typeof r == "function") {
                 var s = e("body"),
@@ -18161,8 +18169,7 @@ function(e, t) {
             swfobject.embedSWF.apply(swfobject, r)
         };
     RSVP.EventTarget.mixin(o.prototype), o.prototype._onPlayerInit = function() {
-            this.adFeedbackMenu = new
-            e.player.AdFeedbackMenu(t(".js-ad-feedback-menu").first(), this), this.ready(this._id)
+            this.adFeedbackMenu = new e.player.AdFeedbackMenu(t(".js-ad-feedback-menu").first(), this), this.ready(this._id)
         }, o.prototype.destroy = function() {
             clearInterval(this.swfTrackingInterval)
         }, o.prototype.ready = function(n) {
@@ -19282,14 +19289,14 @@ function(e, t) {
     }, r.error = function(e, t, n) {
         return r._dispatch("error", e, t, n)
     }, r.flash = function(e, n) {
-        var i = t("#header_notification"),
+        var i =
+            t("#header_notification"),
             s = i.find(".flash-error"),
             o = i.find(".flash-success"),
             u = i.find(".flash-notice");
         if (s.length) return r.error(s.text(), e, n);
         if (o.length) return r.success(o.text(), e, n);
-        if (u.length) return r.alert(u.text(), e,
-            n)
+        if (u.length) return r.alert(u.text(), e, n)
     }, e.mixin({
         notify: r
     })
