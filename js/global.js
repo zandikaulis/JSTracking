@@ -19650,6 +19650,7 @@ var Base64 = {
             addProperties: function(e) {
                 f = _.extend(f, e)
             },
+            pageviewProperties: {},
             trackPageView: function(r) {
                 r = r || {};
                 var i = new URI,
@@ -19683,8 +19684,14 @@ var Base64 = {
                         adblock: undefined,
                         sentinel_ab: a.sentinel,
                         browser: navigator.userAgent,
+                        page_session_id: e.idsForMixpanel.createUniqueId(),
                         referrer: s || undefined
-                    }), u = {}, f = {}, e.tracking.funnel.debugEnabled() && (console.group("Twitch.tracking.funnel.trackPageView"), console.log("event:", "pageview"), console.log("properties:", r), console.groupEnd()), n.spadeAndMixpanel.trackEvent("pageview", r)
+                    }), u = {}, f = {}, e.tracking.funnel.pageviewProperties = {
+                        location: r.location,
+                        content: r.content,
+                        medium: r.medium,
+                        page_session_id: r.page_session_id
+                    }, e.tracking.funnel.debugEnabled() && (console.group("Twitch.tracking.funnel.trackPageView"), console.log("event:", "pageview"), console.log("properties:", r), console.groupEnd()), n.spadeAndMixpanel.trackEvent("pageview", r)
                 }), l()
             },
             debugEnabled: function(t) {
