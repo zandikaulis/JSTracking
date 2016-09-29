@@ -270,16 +270,6 @@ window.SiteOptions = {
                 "value": "communities-tab"
             }]
         },
-        "36a9f289-f5da-45ad-8b1a-df06bddba96d": {
-            "name": "VOD Thumbnail Previews Dark Launch",
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
-            }]
-        },
         "3701dbf7-dcc6-45db-963e-aabc4653dea3": {
             "name": "ios_native_chat",
             "groups": [{
@@ -491,19 +481,6 @@ window.SiteOptions = {
             }, {
                 "weight": 80,
                 "value": "no"
-            }]
-        },
-        "7c804f58-cae5-4d51-9d0f-b2dd44cd8baa": {
-            "name": "Flash Playback Optimization",
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "updated-swf"
-            }, {
-                "weight": 100,
-                "value": "stagevideo"
             }]
         },
         "84d81180-6faa-4c58-98d7-48bbff5035c7": {
@@ -732,16 +709,6 @@ window.SiteOptions = {
                 "value": "3"
             }]
         },
-        "c0168c60-b0f7-4766-aac6-b6edf7555302": {
-            "name": "VOD Lantern CDN selection",
-            "groups": [{
-                "weight": 99,
-                "value": "yes"
-            }, {
-                "weight": 1,
-                "value": "no"
-            }]
-        },
         "c48ae3e6-1356-4ccc-8fbe-12c6909f9e98": {
             "name": "coviews_vod_recommendation",
             "groups": [{
@@ -874,16 +841,6 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "old_front_page"
-            }]
-        },
-        "f725b4b2-bd4c-4cc9-a354-d0db1e762955": {
-            "name": "VOD Marker Rollout ",
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
             }]
         },
         "fe36f15d-a487-421b-92f5-ace71242062e": {
