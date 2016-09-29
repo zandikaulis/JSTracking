@@ -7099,7 +7099,7 @@
                 defaults: (t = {}, a(t, f, "no"), a(t, p, "no"), a(t, h, "no"), a(t, g, "off"), a(t, _, "no"), a(t, m, "no"), a(t, v, "no"), a(t, y, "no"), a(t, b, "no"), a(t, E, "regular"), a(t, S, "no"), a(t, w, "no"), t),
                 deviceID: e.deviceID,
                 overrides: (n = {}, a(n, g, r("v2")), a(n, p, r("yes")), a(n, _, r("yes")), a(n, m, r("yes")), a(n, h, (0, d.userInfo)().then(function(e) {
-                    return e.turbo ? "yes" : r("yes")
+                    return e.turbo ? "rc-no-ftux-t" : r("yes")
                 })), a(n, v, (0, d.userInfo)().then(function(e) {
                     return "US" !== e.geo ? "no" : r("yes")
                 })), a(n, y, (0, d.userInfo)().then(function(e) {
@@ -8728,7 +8728,7 @@
                     (0, h.krakenUserInfo)().then(function(e) {
                         "staff" === e.type && !g.localStore.get("staff-html5-forced-in") && u.BackendPlayerCore.canPlay() && (g.localStore.set("staff-html5-forced-in", !0), Ee.setBackend("player-core"))
                     });
-                    var e = ["default_in", "player-core-0.6.8", "pc-0.6.9", "pc-0.6.12", "pc-0.6.14", "rc-ftux", "rc-no-ftux", "rc-no-ftux-decl", "rc-no-ftux-2"];
+                    var e = ["default_in", "player-core-0.6.8", "pc-0.6.9", "pc-0.6.12", "pc-0.6.14", "rc-ftux", "rc-no-ftux", "rc-no-ftux-decl", "rc-no-ftux-2", "rc-no-ftux-t"];
                     n.getState().experiments.get(F.HTML5_TOGGLE).then(function(t) {
                         (0, W["default"])(e, t) && !g.localStore.get("html5-forced-in") && u.BackendPlayerCore.canPlay() && (g.localStore.set("html5-forced-in", !0), Ee.setBackend("player-core"))
                     })
@@ -9448,7 +9448,7 @@
             }
 
             function ce(e) {
-                Ne.emit(I.AD_IMPRESSION_COMPLETE, e)
+                Ne.emit(I.AD_IMPRESSION_COMPLETE, e);
             }
 
             function de() {
@@ -20014,7 +20014,7 @@
                     var t = this,
                         n = e.backend,
                         i = e.experiments,
-                        a = ["no", "rc-no-ftux", "rc-no-ftux-decl", "rc-no-ftux-2"];
+                        a = ["no", "rc-no-ftux", "rc-no-ftux-decl", "rc-no-ftux-2", "rc-no-ftux-t"];
                     i.get(I.HTML5_TOGGLE).then(function(e) {
                         (0, _["default"])(a, e) || n.getBackend() !== P.PLAYER_CORE_BACKEND_TYPE || D.localStore.get(B) || (t._showHTML5BetaPopup(), D.localStore.set(B, !0))
                     })

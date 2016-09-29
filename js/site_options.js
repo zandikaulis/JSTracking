@@ -512,6 +512,9 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "no"
             }, {
+                "weight": 0,
+                "value": "rc-no-ftux-t"
+            }, {
                 "weight": 40,
                 "value": "rc-no-ftux-2"
             }, {
