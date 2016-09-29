@@ -10298,7 +10298,7 @@
                             };
                             this.events.emit(l.SEGMENT_CHANGE, i)
                         }
-                        if (n) {
+                        if (n && "content" !== n.desc) {
                             var a = JSON.parse(n.info[0]);
                             "commercial" === a.cmd && this.events.emit(l.MIDROLL_REQUESTED, {
                                 duration: a.length
