@@ -186,10 +186,10 @@ window.SiteOptions = {
         "2352d0b6-7692-49f1-9f8d-88e6cc47994b": {
             "name": "android_rollout_vod_uploads",
             "groups": [{
-                "weight": 1,
+                "weight": 5,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 95,
                 "value": "treatment"
             }]
         },
@@ -578,10 +578,10 @@ window.SiteOptions = {
         "8ce5b50b-429b-4c20-a0f3-1b22eb577673": {
             "name": "ios_rollout_vod_uploads",
             "groups": [{
-                "weight": 0,
+                "weight": 95,
                 "value": "treatment"
             }, {
-                "weight": 1,
+                "weight": 5,
                 "value": "control"
             }]
         },
@@ -598,10 +598,10 @@ window.SiteOptions = {
         "91ae05e9-bd13-44ff-bc97-eebfee7193c8": {
             "name": "android_rollout_clips",
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "live"
             }]
         },
@@ -818,10 +818,10 @@ window.SiteOptions = {
         "f398cefc-009d-4487-8c9d-5fe2e963110f": {
             "name": "ios_rollout_clips",
             "groups": [{
-                "weight": 0,
+                "weight": 1,
                 "value": "on"
             }, {
-                "weight": 1,
+                "weight": 0,
                 "value": "off"
             }]
         },
