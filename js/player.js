@@ -9065,9 +9065,15 @@
             }, Ee.setLoop = function(e) {
                 Ce.setLoop(e)
             }, Ee.play = function() {
-                n.getState().playback.hasPlayed || n.dispatch((0, T.requestAds)(k.PREROLL, T.DEFAULT_AD_DURATION)), Ce.getNetworkState === Ce.NETWORK_EMPTY ? Ce.load() : n.getState().adsManager.adShowing ? n.dispatch((0, T.playAd)()) : (n.getState().stream.contentType === E.CONTENT_MODE_VOD && Ee.getEnded() && Ee.setCurrentTime(0), Ce.play())
+                n.getState().playback.hasPlayed || n.dispatch((0, T.requestAds)(k.PREROLL, T.DEFAULT_AD_DURATION)), Ce.getNetworkState === Ce.NETWORK_EMPTY ? Ce.load() : n.getState().adsManager.adShowing ? n.dispatch((0, T.playAd)()) : (n.getState().stream.contentType === E.CONTENT_MODE_VOD && Ee.getEnded() && Ee.setCurrentTime(0), Ce.play()), t.trackEvent("video_pause", {
+                    action: "play",
+                    in_ad: n.getState().adsManager.adShowing
+                })
             }, Ee.pause = function() {
-                n.getState().adsManager.adShowing ? n.dispatch((0, T.pauseAd)()) : Ce.pause()
+                n.getState().adsManager.adShowing ? n.dispatch((0, T.pauseAd)()) : Ce.pause(), t.trackEvent("video_pause", {
+                    action: "pause",
+                    in_ad: n.getState().adsManager.adShowing
+                })
             }, Ee.getControls = function() {
                 return !0
             }, Ee.setControls = function() {}, Ee.getVolume = function() {
@@ -9448,7 +9454,7 @@
             }
 
             function ce(e) {
-                Ne.emit(I.AD_IMPRESSION_COMPLETE, e);
+                Ne.emit(I.AD_IMPRESSION_COMPLETE, e)
             }
 
             function de() {
