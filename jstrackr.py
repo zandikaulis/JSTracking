@@ -24,10 +24,10 @@ if __name__ == '__main__':
          'filename': 'vendor.js'},
         {'url': 'https://web-cdn.ttvnw.net/emberapp.js',
          'filename': 'emberapp.js'},
-        {'url': 'https://web-cdn.ttvnw.net/game-details.js',
-         'filename': 'game-details.js'},
-        {'url': 'https://web-cdn.ttvnw.net/premium.js',
-         'filename': 'premium.js'},
+        # {'url': 'https://web-cdn.ttvnw.net/game-details.js',
+        #  'filename': 'game-details.js'},
+        # {'url': 'https://web-cdn.ttvnw.net/premium.js',
+        #  'filename': 'premium.js'},
         {'url': 'https://www.twitch.tv/tmilibs/tmi-v3.js',
          'filename': 'tmi-v3.js'}
     ]
