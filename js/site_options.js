@@ -753,6 +753,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "cc164e1e-1361-4730-8d9b-0091a0f9cb8f": {
+            "name": "PERSISTENT_PLAYER",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "cda5757e-2229-4d3c-9427-5ad3aa18b72f": {
             "name": "ios_nux_preroll_test",
             "groups": [{
