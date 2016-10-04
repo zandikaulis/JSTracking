@@ -754,7 +754,7 @@ window.SiteOptions = {
             }]
         },
         "cc164e1e-1361-4730-8d9b-0091a0f9cb8f": {
-            "name": "PERSISTENT_PLAYER",
+            "name": "DETERMINATION",
             "groups": [{
                 "weight": 0,
                 "value": "yes"
