@@ -17865,7 +17865,8 @@ function(e, t) {
             VIDEO_EMBED_EXPERIMENT: "696cc3ee-d8b9-4918-8d53-910f93ae1c9a",
             MESSAGE_HISTORY: "8ace0f50-8afd-424a-a086-3e61b3e66da0",
             BITS_FOR_ADS: "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2",
-            NEXUS_ROLLOUT: "428d3b07-cc7a-424f-aad0-971f5415879a"
+            NEXUS_ROLLOUT: "428d3b07-cc7a-424f-aad0-971f5415879a",
+            DETERMINATION: "cc164e1e-1361-4730-8d9b-0091a0f9cb8f"
         },
         i = {
             "df008233-c0f2-46dc-92a2-61396ae402e3": "control",
@@ -17898,7 +17899,8 @@ function(e, t) {
             "696cc3ee-d8b9-4918-8d53-910f93ae1c9a": "embed",
             "8ace0f50-8afd-424a-a086-3e61b3e66da0": "off",
             "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": "off",
-            "428d3b07-cc7a-424f-aad0-971f5415879a": "disabled"
+            "428d3b07-cc7a-424f-aad0-971f5415879a": "disabled",
+            "cc164e1e-1361-4730-8d9b-0091a0f9cb8f": "no"
         },
         s = "experiment_overrides",
         o = {},
@@ -19284,12 +19286,12 @@ function(e, t) {
             return o.escape && (o.text = e.display.escape(r)), noty(o)
         }, r.alert = function(e, t, n) {
             return r._dispatch("alert", e, t, n)
-        }, r.notice = function(e, t, n) {
+        }, r.notice =
+        function(e, t, n) {
             return r._dispatch("notice", e, t, n)
         }, r.success = function(e, t, n) {
             return r._dispatch("success", e, t, n)
-        }, r.error =
-        function(e, t, n) {
+        }, r.error = function(e, t, n) {
             return r._dispatch("error", e, t, n)
         }, r.flash = function(e, n) {
             var i = t("#header_notification"),
