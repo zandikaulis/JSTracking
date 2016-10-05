@@ -119,5 +119,754 @@ window.SiteOptions = {
     "bits_promo_enabled": false,
     "is_sm_enabled": true,
     "is_sm_enabled_frontend": true,
-    "experiments": null
+    "experiments": {
+        "0173154a-7fa4-4a76-b8e1-0575eb3a7fcd": {
+            "name": "android_live_preview",
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "live"
+            }]
+        },
+        "04165981-17be-4593-afbd-762a380f6838": {
+            "name": "MESSAGE_DELETED_EXPERIMENT",
+            "groups": [{
+                "weight": 0,
+                "value": "true"
+            }, {
+                "weight": 100,
+                "value": "false"
+            }]
+        },
+        "143da2f9-bf80-4555-a661-76c378fcd5c8": {
+            "name": "ios_aa",
+            "groups": [{
+                "weight": 5,
+                "value": "control"
+            }, {
+                "weight": 5,
+                "value": "variant"
+            }]
+        },
+        "15dde59b-96ad-4040-beba-4c73039d16ff": {
+            "name": "Transcode_Quality_Experiment_2",
+            "groups": [{
+                "weight": 100,
+                "value": "regular"
+            }, {
+                "weight": 0,
+                "value": "plus"
+            }]
+        },
+        "171906a2-6e34-4d0e-879c-a76a19f19097": {
+            "name": "vod_page_recommendations_ordering",
+            "groups": [{
+                "weight": 10,
+                "value": "control"
+            }, {
+                "weight": 95,
+                "value": "related_first"
+            }, {
+                "weight": 95,
+                "value": "recent_first"
+            }]
+        },
+        "213678cc-be7d-4aa6-a938-8baac01a442a": {
+            "name": "android_spade_batching",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "live"
+            }]
+        },
+        "2352d0b6-7692-49f1-9f8d-88e6cc47994b": {
+            "name": "android_rollout_vod_uploads",
+            "groups": [{
+                "weight": 5,
+                "value": "control"
+            }, {
+                "weight": 95,
+                "value": "treatment"
+            }]
+        },
+        "23eb19cd-61b1-4691-8ba3-59397db057e0": {
+            "name": "android_host_mode",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "variant"
+            }]
+        },
+        "2b4d2ad3-f7e5-422b-be2b-9bd99975b57c": {
+            "name": "coview remove recs",
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "dismissable"
+            }]
+        },
+        "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": {
+            "name": "bits_for_ads",
+            "groups": [{
+                "weight": 20,
+                "value": "on"
+            }, {
+                "weight": 80,
+                "value": "off"
+            }]
+        },
+        "2f8210be-a6c6-43b1-9f6a-4b7cc7ef93c0": {
+            "name": "coview forced variety",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "channel"
+            }, {
+                "weight": 0,
+                "value": "game"
+            }, {
+                "weight": 100,
+                "value": "max_two_channels"
+            }]
+        },
+        "33a4ec99-5100-4831-b04a-f6a725c334f5": {
+            "name": "android_recently_watched",
+            "groups": [{
+                "weight": 95,
+                "value": "treatment"
+            }, {
+                "weight": 5,
+                "value": "control"
+            }]
+        },
+        "355ff3e2-38b5-449a-8ab8-a52b5d3ab817": {
+            "name": "remove csgo directory",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "remove"
+            }]
+        },
+        "36a0e500-f117-41dd-8421-3e3db7d567dd": {
+            "name": "CREATIVE_DIRECTORY_CVS",
+            "groups": [{
+                "weight": 90,
+                "value": "communities"
+            }, {
+                "weight": 5,
+                "value": "streams"
+            }, {
+                "weight": 5,
+                "value": "communities-tab"
+            }]
+        },
+        "3701dbf7-dcc6-45db-963e-aabc4653dea3": {
+            "name": "ios_native_chat",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "native_chat"
+            }]
+        },
+        "3ae835b6-3015-440c-8177-755bdbbbf29e": {
+            "name": "Channel Page Redesign",
+            "groups": [{
+                "weight": 95,
+                "value": "new"
+            }, {
+                "weight": 5,
+                "value": "old"
+            }]
+        },
+        "403707e6-abb9-401c-a2ca-dd643293dbdd": {
+            "name": "VOD_COVIEWS_SHUFFLE",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "shuffle"
+            }]
+        },
+        "4167131b-6078-4c64-95a0-40853065a927": {
+            "name": "secret media asia",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
+        "428d3b07-cc7a-424f-aad0-971f5415879a": {
+            "name": "NEXUS_ROLLOUT",
+            "groups": [{
+                "weight": 100,
+                "value": "disabled"
+            }, {
+                "weight": 0,
+                "value": ""
+            }]
+        },
+        "474db509-7fb8-403e-97da-66dae8954e6d": {
+            "name": "android_home_games_carousel",
+            "groups": [{
+                "weight": 50,
+                "value": "treatment"
+            }, {
+                "weight": 50,
+                "value": "control"
+            }]
+        },
+        "4afcc1d7-b6f4-489a-beb3-0a32eb780592": {
+            "name": "Closed Captions",
+            "groups": [{
+                "weight": 0,
+                "value": "off"
+            }, {
+                "weight": 0,
+                "value": "v1"
+            }, {
+                "weight": 100,
+                "value": "v2"
+            }]
+        },
+        "4df8c7e5-6173-45d0-bc3b-4ece0b89af11": {
+            "name": "secret media eu",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
+        "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2": {
+            "name": "Resume Watching Banner",
+            "groups": [{
+                "weight": 50,
+                "value": "yes"
+            }, {
+                "weight": 50,
+                "value": "no"
+            }]
+        },
+        "58a07c08-c495-4f64-96ae-d29bc623a58b": {
+            "name": "coview user based recs",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "user"
+            }]
+        },
+        "5fbb67a0-b4ff-4775-b836-e9a348a87481": {
+            "name": "Network Profile Collection",
+            "groups": [{
+                "weight": 999,
+                "value": "no"
+            }, {
+                "weight": 1,
+                "value": "yes"
+            }]
+        },
+        "61b169ff-bc62-4725-a40e-1be627197c6f": {
+            "name": "Recommended Games",
+            "groups": [{
+                "weight": 100,
+                "value": "no"
+            }, {
+                "weight": 0,
+                "value": "yes"
+            }]
+        },
+        "621a95a8-8b75-4f13-ae93-56fa51b82252": {
+            "name": "ios_uploads_top_videos_time",
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "month"
+            }]
+        },
+        "653cc0db-d332-4df6-b224-15c5c481f7e7": {
+            "name": "language_directory_filter",
+            "groups": [{
+                "weight": 34,
+                "value": "control"
+            }, {
+                "weight": 33,
+                "value": "full"
+            }, {
+                "weight": 33,
+                "value": "scroll"
+            }, {
+                "weight": 0,
+                "value": "scroll_new"
+            }]
+        },
+        "66235fc6-1972-421c-ab6b-9137ddaacdaf": {
+            "name": "Comments Reaction Type",
+            "groups": [{
+                "weight": 1,
+                "value": "1"
+            }, {
+                "weight": 1,
+                "value": "2"
+            }, {
+                "weight": 1,
+                "value": "3"
+            }, {
+                "weight": 1,
+                "value": "4"
+            }, {
+                "weight": 1,
+                "value": "5"
+            }, {
+                "weight": 1,
+                "value": "6"
+            }, {
+                "weight": 1,
+                "value": "7"
+            }, {
+                "weight": 1,
+                "value": "8"
+            }, {
+                "weight": 92,
+                "value": "9"
+            }]
+        },
+        "696cc3ee-d8b9-4918-8d53-910f93ae1c9a": {
+            "name": "Video Embed Experiment",
+            "groups": [{
+                "weight": 10,
+                "value": "control"
+            }, {
+                "weight": 90,
+                "value": "embed"
+            }]
+        },
+        "6f1bb0b8-05bb-4bee-9008-5cee5b1732c9": {
+            "name": "android_show_following_on_launch",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "no_carousel"
+            }, {
+                "weight": 0,
+                "value": "with_carousel"
+            }]
+        },
+        "75025ac0-54d8-48fc-a634-1b30a3d3939b": {
+            "name": "Use JS ads layer for flash backend",
+            "groups": [{
+                "weight": 20,
+                "value": "yes"
+            }, {
+                "weight": 80,
+                "value": "no"
+            }]
+        },
+        "84d81180-6faa-4c58-98d7-48bbff5035c7": {
+            "name": "baking_bread_us",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
+        "852b3485-a831-4580-b7bf-acf819977704": {
+            "name": "Add videos tab to channel page",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "mixed"
+            }]
+        },
+        "865ce2f3-52be-4a8c-87fe-d8ad580f4679": {
+            "name": "HTML5 Toggle",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 0,
+                "value": "no"
+            }, {
+                "weight": 0,
+                "value": "rc-no-ftux-t"
+            }, {
+                "weight": 40,
+                "value": "rc-no-ftux-2"
+            }, {
+                "weight": 10,
+                "value": "rc-no-ftux-decl"
+            }, {
+                "weight": 5,
+                "value": "rc-no-ftux"
+            }, {
+                "weight": 20,
+                "value": "rc-ftux"
+            }, {
+                "weight": 7,
+                "value": "pc-0.6.14"
+            }, {
+                "weight": 5,
+                "value": "pc-0.6.12"
+            }, {
+                "weight": 5,
+                "value": "pc-0.6.9"
+            }, {
+                "weight": 3,
+                "value": "player-core-0.6.8"
+            }, {
+                "weight": 5,
+                "value": "default_in"
+            }]
+        },
+        "87adafb9-d360-4c0a-ace5-93e636c8e79c": {
+            "name": "Player Core Version control",
+            "groups": [{
+                "weight": 5,
+                "value": "develop"
+            }, {
+                "weight": 5,
+                "value": "loader_changes"
+            }]
+        },
+        "882cbe15-90c9-4aa3-9b1b-cef4cccf4f49": {
+            "name": "VIDEO_UPLOADS",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "yes"
+            }]
+        },
+        "8ace0f50-8afd-424a-a086-3e61b3e66da0": {
+            "name": "MESSAGE_HISTORY",
+            "groups": [{
+                "weight": 50,
+                "value": "on"
+            }, {
+                "weight": 50,
+                "value": "off"
+            }]
+        },
+        "8ce5b50b-429b-4c20-a0f3-1b22eb577673": {
+            "name": "ios_rollout_vod_uploads",
+            "groups": [{
+                "weight": 95,
+                "value": "treatment"
+            }, {
+                "weight": 5,
+                "value": "control"
+            }]
+        },
+        "906c9e2f-ac8a-43f3-9f7f-78668e292d4f": {
+            "name": "android_aa",
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "variant"
+            }]
+        },
+        "91ae05e9-bd13-44ff-bc97-eebfee7193c8": {
+            "name": "android_rollout_clips",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "live"
+            }]
+        },
+        "9326b2a6-4d2c-4835-95c3-52e3cb567d54": {
+            "name": "android_uploads_top_videos_time",
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "month"
+            }]
+        },
+        "93883758-3d7d-414b-9975-df688165726b": {
+            "name": "secret media",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
+        "98f3f2a5-9e4e-4ba8-aabe-2ff85e7309ee": {
+            "name": "CHAT_RULES_EXPERIMENT",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "rules_v1"
+            }, {
+                "weight": 100,
+                "value": "rules_v2"
+            }]
+        },
+        "a1ce3d24-076a-4664-be4c-f9046fdce18c": {
+            "name": "baking_bread_uk",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
+        "aaac75ea-c969-4826-b32d-ceefac620a79": {
+            "name": "Recommended Channels",
+            "groups": [{
+                "weight": 0,
+                "value": "no"
+            }, {
+                "weight": 100,
+                "value": "yes"
+            }]
+        },
+        "ac39b897-d41d-4255-90b6-3a59027e12e0": {
+            "name": "vods_game_info",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "boxart_unwatched"
+            }, {
+                "weight": 0,
+                "value": "text_no_desc"
+            }]
+        },
+        "ad39c35b-c6af-4687-b791-9ab408f825ef": {
+            "name": "VOD Thumbnail Previews Rollout",
+            "groups": [{
+                "weight": 100,
+                "value": "yes"
+            }, {
+                "weight": 0,
+                "value": "no"
+            }]
+        },
+        "b29d055f-74f2-40b9-9383-9c4b79b30360": {
+            "name": "cloudfront web-cdn",
+            "groups": [{
+                "weight": 1,
+                "value": "level3"
+            }, {
+                "weight": 1,
+                "value": "cloudfront"
+            }, {
+                "weight": 198,
+                "value": "control"
+            }]
+        },
+        "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7": {
+            "name": "urgent_pie",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "placeholder"
+            }]
+        },
+        "b9063610-cdfd-43c3-8479-59a6ab82d831": {
+            "name": "Visible Post Reactions",
+            "groups": [{
+                "weight": 1,
+                "value": "0"
+            }, {
+                "weight": 99,
+                "value": "3"
+            }]
+        },
+        "c48ae3e6-1356-4ccc-8fbe-12c6909f9e98": {
+            "name": "coviews_vod_recommendation",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "following"
+            }, {
+                "weight": 0,
+                "value": "videos"
+            }, {
+                "weight": 100,
+                "value": "both"
+            }, {
+                "weight": 0,
+                "value": "following_above_host"
+            }]
+        },
+        "c5824f4a-ecb8-4ef1-9d49-18885bf8bba5": {
+            "name": "ABS V2",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
+        "c926728f-d1d3-4b09-b868-db3e2aa000cc": {
+            "name": "In-Player Recommendations",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
+        "cc164e1e-1361-4730-8d9b-0091a0f9cb8f": {
+            "name": "DETERMINATION",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
+        "cda5757e-2229-4d3c-9427-5ad3aa18b72f": {
+            "name": "ios_nux_preroll_test",
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "no_prerolls"
+            }]
+        },
+        "d24f182c-e36f-498e-9e49-113e02a83bad": {
+            "name": "passport_redesign",
+            "groups": [{
+                "weight": 5,
+                "value": "control"
+            }, {
+                "weight": 5,
+                "value": "new"
+            }]
+        },
+        "df008233-c0f2-46dc-92a2-61396ae402e3": {
+            "name": "Similar Channels",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "d,nhs,f,c,a"
+            }, {
+                "weight": 0,
+                "value": "d,nhs,f,c,b"
+            }, {
+                "weight": 0,
+                "value": "d,nhs,c"
+            }, {
+                "weight": 0,
+                "value": "d,hs,2r"
+            }, {
+                "weight": 100,
+                "value": "d,hs,c"
+            }]
+        },
+        "e39a1b4d-51ef-4b49-9378-91a7eb35c3da": {
+            "name": "TIME_SPENT_EXPERIMENT",
+            "groups": [{
+                "weight": 20,
+                "value": "on"
+            }, {
+                "weight": 80,
+                "value": "off"
+            }]
+        },
+        "e7516730-b94f-4d46-894e-c18612aab270": {
+            "name": "coview recommendations a/b testing",
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "experiment"
+            }]
+        },
+        "f398cefc-009d-4487-8c9d-5fe2e963110f": {
+            "name": "ios_rollout_clips",
+            "groups": [{
+                "weight": 1,
+                "value": "on"
+            }, {
+                "weight": 0,
+                "value": "off"
+            }]
+        },
+        "f60b889e-0327-46a8-ad7b-0d402717da45": {
+            "name": "CREATIVE_SIDEBAR_NAVIGATION",
+            "groups": [{
+                "weight": 100,
+                "value": "yes"
+            }, {
+                "weight": 0,
+                "value": "no"
+            }]
+        },
+        "f67a2dd3-fc9e-4e10-8aaf-929e1e0f484a": {
+            "name": "web_client_front_page",
+            "groups": [{
+                "weight": 100,
+                "value": "ignore"
+            }, {
+                "weight": 0,
+                "value": "new_front_page"
+            }, {
+                "weight": 0,
+                "value": "old_front_page"
+            }]
+        },
+        "fe36f15d-a487-421b-92f5-ace71242062e": {
+            "name": "ios_recent_emotes",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "recent_emotes"
+            }]
+        }
+    }
 };
