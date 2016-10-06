@@ -26201,7 +26201,11 @@
                         numVideosVisible: t.numVids
                     });
                 case s.ACTION_SET_STREAM:
-                    return u;
+                    return (0, l["default"])({}, e, {
+                        videos: [],
+                        numVideosVisible: 0,
+                        status: r.UNFETCHED
+                    });
                 default:
                     return e
             }
