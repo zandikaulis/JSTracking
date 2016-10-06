@@ -2206,7 +2206,6 @@
                 this.ircChannel = _ircJs2["default"].channel(opts.name);
                 this.name = opts.name;
                 this._hasJoinedIrcChannel = false;
-                this._hasFetchedHistory = false;
                 this.room = opts.room;
                 this._session = opts.session;
                 this._resetActiveState();
@@ -2428,7 +2427,6 @@
                 this.displayName = opts.displayName;
                 this.name = opts.name;
                 this.isGroupRoom = Room.isGroupRoomName(this.name);
-                this.fetchHistory = !!opts.fetchHistory;
                 this.ownerId = opts.ownerId;
                 this.publicInvitesEnabled = opts.publicInvitesEnabled;
                 this._chattersListUrl = opts.chattersListUrl;
@@ -2582,8 +2580,7 @@
                 }
                 return deferred
             };
-            Room.prototype.recentMessages = function(options) {
-                options = options || {};
+            Room.prototype.recentMessages = function() {
                 var deferred = $.Deferred();
                 this.session._tmiApi.get("/api/rooms/" + this.ownerId + "/recent_messages").done(function(response) {
                     deferred.resolve(response.messages)
@@ -2981,6 +2978,13 @@
                     }, RECONNECT_TIMEOUT / 2)
                 }, RECONNECT_TIMEOUT / 2)
             };
+            Room.prototype.fetchHistory = function() {
+                var _this = this;
+                return this.recentMessages().then(function(messages) {
+                    _this._addHistoricalMessages(messages);
+                    return messages.length
+                })
+            };
             Room.prototype._onRoomBan = function(ircChannel) {
                 if (ircChannel != this.ircChannel) return;
                 this.exit();
@@ -3077,19 +3081,7 @@
                 })
             };
             Room.prototype._onEntered = function() {
-                var _this = this;
-                this._showAdminMessage("Welcome to the chat room!");
-                if (this.fetchHistory && !this._hasFetchedHistory) {
-                    this.recentMessages().then(function(messages) {
-                        _this._hasFetchedHistory = true;
-                        _this._addHistoricalMessages(messages);
-                        _this._trigger("history-retrieved", messages.length)
-                    }).fail(function(e) {
-                        logger.error("An error occurred retrieving recent messages.")
-                    })
-                } else {
-                    this._trigger("history-retrieved", 0)
-                }
+                this._showAdminMessage("Welcome to the chat room!")
             };
             exports["default"] = Room;
             module.exports = exports["default"]
@@ -3579,8 +3571,7 @@
                         ownerId: roomData.ownerId,
                         chattersListUrl: this._buildChattersListUrl(roomData.name, roomData.connection._opts.cluster),
                         connection: roomData.connection,
-                        whisperConn: this._connections.group,
-                        fetchHistory: true
+                        whisperConn: this._connections.group
                     })
                 }
                 return room
@@ -3767,7 +3758,7 @@
                 return this._emoticonImagesResponse
             };
             SessionManager.prototype.updateChannel = function(channelId, data) {
-                return this._tmiApi.put("/api/channels/" + channelId, data);
+                return this._tmiApi.put("/api/channels/" + channelId, data)
             };
             SessionManager.prototype.sendWhisper = function(username, message) {
                 var conn = this._getOrNewConnection({
