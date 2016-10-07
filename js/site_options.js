@@ -821,10 +821,10 @@ window.SiteOptions = {
         "e7516730-b94f-4d46-894e-c18612aab270": {
             "name": "coview recommendations a/b testing",
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "experiment"
             }]
         },
