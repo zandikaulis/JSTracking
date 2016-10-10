@@ -153,13 +153,13 @@ window.SiteOptions = {
         "15dde59b-96ad-4040-beba-4c73039d16ff": {
             "name": "Transcode_Quality_Experiment_2",
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "regular"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "plus"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "nonplus"
             }]
         },
@@ -453,6 +453,13 @@ window.SiteOptions = {
             }, {
                 "weight": 92,
                 "value": "9"
+            }]
+        },
+        "67fd8802-f683-42a3-8527-99fbc87c77ba": {
+            "name": "Transcode_Quality_Experiment_3",
+            "groups": [{
+                "weight": 100,
+                "value": "regular"
             }]
         },
         "696cc3ee-d8b9-4918-8d53-910f93ae1c9a": {
