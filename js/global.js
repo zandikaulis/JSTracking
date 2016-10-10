@@ -18966,7 +18966,9 @@ function(e, t) {
                                 s(_.map(u.slots, function(e) {
                                     return e.el.css("display") !== "none"
                                 }))
-                            })), googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", window.location.protocol === "https:" ? "true" : "false"), googletag.pubads().enableSingleRequest(), googletag.pubads().collapseEmptyDivs(), googletag.enableServices(), googletag.display(i.slots[0])
+                            })), googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", window.location.protocol === "https:" ? "true" : "false"), googletag.pubads().enableSingleRequest(), googletag.pubads().collapseEmptyDivs(), googletag.enableServices(), _.each(i.slots, function(e) {
+                                googletag.display(e)
+                            })
                         })
                     }), f)
                 })
@@ -19285,8 +19287,7 @@ function(e, t) {
                 onClose: s || !1
             }
         }, i, n);
-        return o.escape &&
-            (o.text = e.display.escape(r)), noty(o)
+        return o.escape && (o.text = e.display.escape(r)), noty(o)
     }, r.alert = function(e, t, n) {
         return r._dispatch("alert", e, t, n)
     }, r.notice = function(e, t, n) {
