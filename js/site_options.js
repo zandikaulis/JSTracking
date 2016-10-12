@@ -338,13 +338,13 @@ window.SiteOptions = {
         "4aa9ee11-136c-4521-a139-e2abb718ec07": {
             "name": "Gabriel",
             "groups": [{
-                "weight": 5,
+                "weight": 0,
                 "value": "yes-forced"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "yes-ft-only"
             }, {
-                "weight": 90,
+                "weight": 100,
                 "value": "no"
             }]
         },
