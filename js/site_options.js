@@ -507,10 +507,10 @@ window.SiteOptions = {
         "75025ac0-54d8-48fc-a634-1b30a3d3939b": {
             "name": "Use JS ads layer for flash backend",
             "groups": [{
-                "weight": 20,
+                "weight": 0,
                 "value": "yes"
             }, {
-                "weight": 80,
+                "weight": 100,
                 "value": "no"
             }]
         },
