@@ -17835,7 +17835,6 @@ function(e, t) {
 function(e, t) {
     var n = SiteOptions.experiments || {},
         r = {
-            SIMILAR_CHANNELS: "df008233-c0f2-46dc-92a2-61396ae402e3",
             RECOMMENDED_CHANNELS: "aaac75ea-c969-4826-b32d-ceefac620a79",
             RECOMMENDED_GAMES: "61b169ff-bc62-4725-a40e-1be627197c6f",
             VODS_GAME_INFO: "ac39b897-d41d-4255-90b6-3a59027e12e0",
@@ -17870,7 +17869,6 @@ function(e, t) {
             TIME_SPENT_EXPERIMENT: "e39a1b4d-51ef-4b49-9378-91a7eb35c3da"
         },
         i = {
-            "df008233-c0f2-46dc-92a2-61396ae402e3": "control",
             "aaac75ea-c969-4826-b32d-ceefac620a79": "no",
             "61b169ff-bc62-4725-a40e-1be627197c6f": "no",
             "ac39b897-d41d-4255-90b6-3a59027e12e0": "control",
@@ -17911,7 +17909,6 @@ function(e, t) {
             LANGUAGE_DIRECTORY_FILTER: "full",
             CLIPS_ENABLED: "yes",
             ESL_CSGO_STEAM_LINK: "show-cta",
-            SIMILAR_CHANNELS: "d,hs,f,2r,a",
             VIDEO_UPLOADS: "yes",
             CHANNEL_PAGE_REDESIGN: "new"
         };
@@ -18161,8 +18158,9 @@ function(e, t) {
         o = function(e) {
             var t = i(e);
             t.eventsCallback = u.register(function(e) {
-                n._onEvents(e)
-            }), this._readyDeferred = RSVP.defer(), this._id = t.id, this._hostChannel = t.hostChannel, e.playerType !== "live" && (this._videoType = "hls");
+                    n._onEvents(e)
+                }), this._readyDeferred = RSVP.defer(), this._id = t.id, this._hostChannel = t.hostChannel, e.playerType !== "live" &&
+                (this._videoType = "hls");
             var n = this,
                 r = ["//" + SiteOptions.twitch_cdn_hostport + "/swflibs/TwitchPlayer.swf", t.id, "100%", "100%", "11", null, t, {
                     allowScriptAccess: "always",
@@ -19290,7 +19288,8 @@ function(e, t) {
         return o.escape && (o.text = e.display.escape(r)), noty(o)
     }, r.alert = function(e, t, n) {
         return r._dispatch("alert", e, t, n)
-    }, r.notice = function(e, t, n) {
+    }, r.notice = function(
+        e, t, n) {
         return r._dispatch("notice", e, t, n)
     }, r.success = function(e, t, n) {
         return r._dispatch("success", e, t, n)
