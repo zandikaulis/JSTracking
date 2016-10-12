@@ -335,6 +335,19 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "4aa9ee11-136c-4521-a139-e2abb718ec07": {
+            "name": "Gabriel",
+            "groups": [{
+                "weight": 5,
+                "value": "yes-forced"
+            }, {
+                "weight": 5,
+                "value": "yes-ft-only"
+            }, {
+                "weight": 90,
+                "value": "no"
+            }]
+        },
         "4afcc1d7-b6f4-489a-beb3-0a32eb780592": {
             "name": "Closed Captions",
             "groups": [{
