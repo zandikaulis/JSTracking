@@ -12033,11 +12033,11 @@
             var i = n.getState(),
                 a = i.experiments;
             switch (t.getBackend()) {
-                case E.BACKEND_HLS:
                 case b.BACKEND_FLASH:
                     return a.get(T.USE_JS_ADS_IN_FLASH).then(function(i) {
                         return "yes" === i ? f(e, t, n) : p(t, n)
                     });
+                case E.BACKEND_HLS:
                 case y.BACKEND_PLAYER_CORE:
                     return f(e, t, n);
                 default:
