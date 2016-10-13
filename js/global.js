@@ -17857,7 +17857,6 @@ function(e, t) {
             MESSAGE_DELETED_EXPERIMENT: "04165981-17be-4593-afbd-762a380f6838",
             RESUME_WATCHING_BANNER: "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2",
             CHAT_RULES_EXPERIMENT: "98f3f2a5-9e4e-4ba8-aabe-2ff85e7309ee",
-            VIDEO_UPLOADS: "882cbe15-90c9-4aa3-9b1b-cef4cccf4f49",
             ESL_CSGO_STEAM_LINK: "6a857f53-de28-4025-8983-3cada70538cd",
             WEB_CLIENT_FRONT_PAGE: "f67a2dd3-fc9e-4e10-8aaf-929e1e0f484a",
             CHANNEL_PAGE_REDESIGN: "3ae835b6-3015-440c-8177-755bdbbbf29e",
@@ -17891,7 +17890,6 @@ function(e, t) {
             "04165981-17be-4593-afbd-762a380f6838": "false",
             "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2": "no",
             "98f3f2a5-9e4e-4ba8-aabe-2ff85e7309ee": "control",
-            "882cbe15-90c9-4aa3-9b1b-cef4cccf4f49": "control",
             "6a857f53-de28-4025-8983-3cada70538cd": "control",
             "f67a2dd3-fc9e-4e10-8aaf-929e1e0f484a": "ignore",
             "3ae835b6-3015-440c-8177-755bdbbbf29e": "old",
@@ -17909,7 +17907,6 @@ function(e, t) {
             LANGUAGE_DIRECTORY_FILTER: "full",
             CLIPS_ENABLED: "yes",
             ESL_CSGO_STEAM_LINK: "show-cta",
-            VIDEO_UPLOADS: "yes",
             CHANNEL_PAGE_REDESIGN: "new"
         };
     _.each(Object.keys(u), function(t) {
@@ -18158,9 +18155,8 @@ function(e, t) {
         o = function(e) {
             var t = i(e);
             t.eventsCallback = u.register(function(e) {
-                    n._onEvents(e)
-                }), this._readyDeferred = RSVP.defer(), this._id = t.id, this._hostChannel = t.hostChannel, e.playerType !== "live" &&
-                (this._videoType = "hls");
+                n._onEvents(e)
+            }), this._readyDeferred = RSVP.defer(), this._id = t.id, this._hostChannel = t.hostChannel, e.playerType !== "live" && (this._videoType = "hls");
             var n = this,
                 r = ["//" + SiteOptions.twitch_cdn_hostport + "/swflibs/TwitchPlayer.swf", t.id, "100%", "100%", "11", null, t, {
                     allowScriptAccess: "always",
@@ -19277,35 +19273,35 @@ function(e, t) {
             r.alert.apply(r, arguments)
         };
     r._dispatch = function(t, r, i, s) {
-        i = i || {}, typeof i == "function" && (s = i, i = {});
-        var o = e.defaults({
-            type: t,
-            text: r,
-            callback: {
-                onClose: s || !1
-            }
-        }, i, n);
-        return o.escape && (o.text = e.display.escape(r)), noty(o)
-    }, r.alert = function(e, t, n) {
-        return r._dispatch("alert", e, t, n)
-    }, r.notice = function(
-        e, t, n) {
-        return r._dispatch("notice", e, t, n)
-    }, r.success = function(e, t, n) {
-        return r._dispatch("success", e, t, n)
-    }, r.error = function(e, t, n) {
-        return r._dispatch("error", e, t, n)
-    }, r.flash = function(e, n) {
-        var i = t("#header_notification"),
-            s = i.find(".flash-error"),
-            o = i.find(".flash-success"),
-            u = i.find(".flash-notice");
-        if (s.length) return r.error(s.text(), e, n);
-        if (o.length) return r.success(o.text(), e, n);
-        if (u.length) return r.alert(u.text(), e, n)
-    }, e.mixin({
-        notify: r
-    })
+            i = i || {}, typeof i == "function" && (s = i, i = {});
+            var o = e.defaults({
+                type: t,
+                text: r,
+                callback: {
+                    onClose: s || !1
+                }
+            }, i, n);
+            return o.escape && (o.text = e.display.escape(r)), noty(o)
+        }, r.alert = function(e, t, n) {
+            return r._dispatch("alert", e, t, n)
+        }, r.notice = function(e, t, n) {
+            return r._dispatch("notice", e, t, n)
+        }, r.success = function(e, t, n) {
+            return r._dispatch("success", e, t, n)
+        }, r.error =
+        function(e, t, n) {
+            return r._dispatch("error", e, t, n)
+        }, r.flash = function(e, n) {
+            var i = t("#header_notification"),
+                s = i.find(".flash-error"),
+                o = i.find(".flash-success"),
+                u = i.find(".flash-notice");
+            if (s.length) return r.error(s.text(), e, n);
+            if (o.length) return r.success(o.text(), e, n);
+            if (u.length) return r.alert(u.text(), e, n)
+        }, e.mixin({
+            notify: r
+        })
 }(Twitch, jQuery), window.sp_cid = "qFEaZsFQnwEdUIs",
     function(e, t) {
         var n = "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
