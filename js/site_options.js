@@ -481,6 +481,16 @@ window.SiteOptions = {
                 "value": "nonplus"
             }]
         },
+        "68cde3a8-d4a6-44ae-af4a-22dbc5a0393c": {
+            "name": "passport_redesign_test",
+            "groups": [{
+                "weight": 50,
+                "value": "new"
+            }, {
+                "weight": 50,
+                "value": "control"
+            }]
+        },
         "696cc3ee-d8b9-4918-8d53-910f93ae1c9a": {
             "name": "Video Embed Experiment",
             "groups": [{
