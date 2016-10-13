@@ -275,10 +275,10 @@ window.SiteOptions = {
         "3ae835b6-3015-440c-8177-755bdbbbf29e": {
             "name": "Channel Page Redesign",
             "groups": [{
-                "weight": 95,
+                "weight": 100,
                 "value": "new"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "old"
             }]
         },
