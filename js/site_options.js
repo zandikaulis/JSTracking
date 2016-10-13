@@ -150,19 +150,6 @@ window.SiteOptions = {
                 "value": "variant"
             }]
         },
-        "15dde59b-96ad-4040-beba-4c73039d16ff": {
-            "name": "Transcode_Quality_Experiment_2",
-            "groups": [{
-                "weight": 100,
-                "value": "regular"
-            }, {
-                "weight": 0,
-                "value": "plus"
-            }, {
-                "weight": 0,
-                "value": "nonplus"
-            }]
-        },
         "171906a2-6e34-4d0e-879c-a76a19f19097": {
             "name": "vod_page_recommendations_ordering",
             "groups": [{
