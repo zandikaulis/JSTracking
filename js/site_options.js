@@ -348,16 +348,6 @@ window.SiteOptions = {
                 "value": "v2"
             }]
         },
-        "4d3a3cc1-817c-4325-b9d8-51114e648bec": {
-            "name": "VOD Markers Test",
-            "groups": [{
-                "weight": 50,
-                "value": "yes"
-            }, {
-                "weight": 50,
-                "value": "no"
-            }]
-        },
         "4df8c7e5-6173-45d0-bc3b-4ece0b89af11": {
             "name": "secret media eu",
             "groups": [{
@@ -589,6 +579,16 @@ window.SiteOptions = {
             }, {
                 "weight": 50,
                 "value": "off"
+            }]
+        },
+        "8bc4faaa-b4df-4862-b249-ac153de6294a": {
+            "name": "Seaweed",
+            "groups": [{
+                "weight": 50,
+                "value": "yes"
+            }, {
+                "weight": 50,
+                "value": "no"
             }]
         },
         "8ce5b50b-429b-4c20-a0f3-1b22eb577673": {
