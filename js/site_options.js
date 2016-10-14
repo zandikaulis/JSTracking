@@ -501,16 +501,6 @@ window.SiteOptions = {
                 "value": "with_carousel"
             }]
         },
-        "75025ac0-54d8-48fc-a634-1b30a3d3939b": {
-            "name": "Use JS ads layer for flash backend",
-            "groups": [{
-                "weight": 0,
-                "value": "yes"
-            }, {
-                "weight": 100,
-                "value": "no"
-            }]
-        },
         "84d81180-6faa-4c58-98d7-48bbff5035c7": {
             "name": "baking_bread_us",
             "groups": [{
