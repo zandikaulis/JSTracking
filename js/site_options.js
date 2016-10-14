@@ -348,6 +348,16 @@ window.SiteOptions = {
                 "value": "v2"
             }]
         },
+        "4d3a3cc1-817c-4325-b9d8-51114e648bec": {
+            "name": "VOD Markers Test",
+            "groups": [{
+                "weight": 50,
+                "value": "yes"
+            }, {
+                "weight": 50,
+                "value": "no"
+            }]
+        },
         "4df8c7e5-6173-45d0-bc3b-4ece0b89af11": {
             "name": "secret media eu",
             "groups": [{
