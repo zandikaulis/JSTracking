@@ -565,10 +565,10 @@ window.SiteOptions = {
             "name": "Player Core Version control",
             "groups": [{
                 "weight": 5,
-                "value": "develop"
+                "value": "1.0"
             }, {
                 "weight": 5,
-                "value": "loader_changes"
+                "value": "1.1"
             }]
         },
         "8ace0f50-8afd-424a-a086-3e61b3e66da0": {
