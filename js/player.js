@@ -7838,7 +7838,7 @@
                     S = _.get(!1),
                     w = _.get(!0);
                 h = {
-                    app_version: "3.2.2",
+                    app_version: "2016.10.17-212121+f3ab053ab9aa826d26072dd4e6808062574c3c9a",
                     flash_version: g,
                     url: v.href,
                     host: v.host,
