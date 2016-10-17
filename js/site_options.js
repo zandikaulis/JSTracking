@@ -824,10 +824,10 @@ window.SiteOptions = {
         "e39a1b4d-51ef-4b49-9378-91a7eb35c3da": {
             "name": "TIME_SPENT_EXPERIMENT",
             "groups": [{
-                "weight": 20,
+                "weight": 100,
                 "value": "on"
             }, {
-                "weight": 80,
+                "weight": 0,
                 "value": "off"
             }]
         },
