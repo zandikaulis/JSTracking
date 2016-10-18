@@ -567,7 +567,7 @@ window.SiteOptions = {
                 "weight": 5,
                 "value": "1.0"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "1.1"
             }]
         },
