@@ -7838,7 +7838,7 @@
                     S = _.get(!1),
                     w = _.get(!0);
                 h = {
-                    app_version: "2016.10.19-025744+54a26731345e835af3918b5e251211fd2586e8ee",
+                    app_version: "2016.10.19-180754+3f6d4c692dd3d4f533f8e40cb7113cec017088f8",
                     flash_version: g,
                     url: v.href,
                     host: v.host,
@@ -10386,12 +10386,17 @@
                         var e = this;
                         this.video.addEventListener("playing", this.onVideoTagPlaying.bind(this)), this.video.addEventListener(u.ENDED, function() {
                             e.ended = !0
-                        }), this.video.addEventListener(u.PAUSE, this.onVideoTagPause.bind(this))
+                        }), this.video.addEventListener(u.SEEKING, this.onSeeking.bind(this)), this.video.addEventListener(u.PAUSE, this.onVideoTagPause.bind(this))
                     }
                 }, {
                     key: "_initPlayerCore",
                     value: function(e) {
                         this.events.emit(l.PLAYER_INIT), this.playerCoreEvents = e.Event, this.core = new e, this.core.attachMedia(this.video), this.core.addEventListener(this.playerCoreEvents.HLS_MASTER_PARSED, this.onHLSMasterParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.HLS_VARIANT_PARSED, this.onHLSVariantParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.VARIANT_SWITCH_REQUESTED, this.onVariantSwitchRequested.bind(this)), this.core.addEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this.onID3Tag.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEOUT, this.onSpliceOut.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEIN, this.onSpliceIn.bind(this)), this.core.addEventListener(this.playerCoreEvents.CAPTION, this.onCaption.bind(this)), this.core.addEventListener(this.playerCoreEvents.AUTH_ERROR, this.onAuthError.bind(this)), this.core.addEventListener(this.playerCoreEvents.CORE_ANALYTICS, this.onCoreAnalytics.bind(this)), this.core.addEventListener(this.playerCoreEvents.OFFLINE, this.onOfflineError.bind(this)), this.core.addEventListener(this.playerCoreEvents.BUFFERING, this.onBuffering.bind(this)), this.video.autoplay && this.load()
+                    }
+                }, {
+                    key: "onSeeking",
+                    value: function() {
+                        this.video.paused || (this.isBuffering = !0)
                     }
                 }, {
                     key: "onBuffering",
@@ -10535,7 +10540,7 @@
                 }, {
                     key: "load",
                     value: function() {
-                        this.core && this.src && (this.core.loadURL(this.src), this.video.autoplay && this.video.play())
+                        this.core && this.src && (this.core.loadURL(this.src), this.video.autoplay && (this.video.play(), this.isBuffering = !0))
                     }
                 }, {
                     key: "getSrc",
