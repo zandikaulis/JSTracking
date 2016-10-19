@@ -792,10 +792,10 @@ window.SiteOptions = {
         "d24f182c-e36f-498e-9e49-113e02a83bad": {
             "name": "passport_redesign",
             "groups": [{
-                "weight": 5,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 5,
+                "weight": 10,
                 "value": "new"
             }]
         },
