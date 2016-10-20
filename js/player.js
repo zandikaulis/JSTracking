@@ -7838,7 +7838,7 @@
                     S = _.get(!1),
                     w = _.get(!0);
                 h = {
-                    app_version: "2016.10.19-223527+4609352d8eaa00ce55dea2c8b506d43d4000ec78",
+                    app_version: "2016.10.20-185108+efa4ec4f22130f5542f884654d85d43681a3a093",
                     flash_version: g,
                     url: v.href,
                     host: v.host,
@@ -10385,7 +10385,7 @@
                     value: function() {
                         var e = this;
                         this.video.addEventListener("playing", this.onVideoTagPlaying.bind(this)), this.video.addEventListener(u.ENDED, function() {
-                            e.ended = !0
+                            e.ended = !0, e.isBuffering = !1
                         }), this.video.addEventListener(u.SEEKING, this.onSeeking.bind(this)), this.video.addEventListener(u.PAUSE, this.onVideoTagPause.bind(this))
                     }
                 }, {
@@ -10425,7 +10425,7 @@
                 }, {
                     key: "onOfflineError",
                     value: function() {
-                        this.ended = !0, this.events.emit(u.ENDED)
+                        this.ended = !0, this.isBuffering = !1, this.events.emit(u.ENDED)
                     }
                 }, {
                     key: "onHLSVariantParsed",
