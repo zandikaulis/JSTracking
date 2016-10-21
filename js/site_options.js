@@ -606,10 +606,10 @@ window.SiteOptions = {
         "906c9e2f-ac8a-43f3-9f7f-78668e292d4f": {
             "name": "android_aa",
             "groups": [{
-                "weight": 50,
+                "weight": 5,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 95,
                 "value": "variant"
             }]
         },
