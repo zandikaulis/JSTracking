@@ -503,6 +503,16 @@ window.SiteOptions = {
                 "value": "with_carousel"
             }]
         },
+        "758cbec2-80ad-478f-806e-fd3a7db9742f": {
+            "name": "i18n_missing_trans",
+            "groups": [{
+                "weight": 1,
+                "value": "enabled"
+            }, {
+                "weight": 0,
+                "value": ""
+            }]
+        },
         "84d81180-6faa-4c58-98d7-48bbff5035c7": {
             "name": "baking_bread_us",
             "groups": [{
