@@ -510,7 +510,7 @@ window.SiteOptions = {
                 "value": "enabled"
             }, {
                 "weight": 0,
-                "value": ""
+                "value": "control"
             }]
         },
         "84d81180-6faa-4c58-98d7-48bbff5035c7": {
