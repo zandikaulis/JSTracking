@@ -284,16 +284,6 @@ window.SiteOptions = {
                 "value": "shuffle"
             }]
         },
-        "4167131b-6078-4c64-95a0-40853065a927": {
-            "name": "secret media asia",
-            "groups": [{
-                "weight": 0,
-                "value": "yes"
-            }, {
-                "weight": 100,
-                "value": "no"
-            }]
-        },
         "428d3b07-cc7a-424f-aad0-971f5415879a": {
             "name": "NEXUS_ROLLOUT",
             "groups": [{
@@ -511,16 +501,6 @@ window.SiteOptions = {
             }, {
                 "weight": 80,
                 "value": "no"
-            }]
-        },
-        "852b3485-a831-4580-b7bf-acf819977704": {
-            "name": "Add videos tab to channel page",
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "mixed"
             }]
         },
         "865ce2f3-52be-4a8c-87fe-d8ad580f4679": {
