@@ -516,10 +516,10 @@ window.SiteOptions = {
         "84d81180-6faa-4c58-98d7-48bbff5035c7": {
             "name": "baking_bread_us",
             "groups": [{
-                "weight": 10,
+                "weight": 20,
                 "value": "yes"
             }, {
-                "weight": 90,
+                "weight": 80,
                 "value": "no"
             }]
         },
@@ -685,10 +685,10 @@ window.SiteOptions = {
         "a1ce3d24-076a-4664-be4c-f9046fdce18c": {
             "name": "baking_bread_uk",
             "groups": [{
-                "weight": 10,
+                "weight": 20,
                 "value": "yes"
             }, {
-                "weight": 90,
+                "weight": 80,
                 "value": "no"
             }]
         },
