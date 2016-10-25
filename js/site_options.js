@@ -264,16 +264,6 @@ window.SiteOptions = {
                 "value": "communities-tab"
             }]
         },
-        "3701dbf7-dcc6-45db-963e-aabc4653dea3": {
-            "name": "ios_native_chat",
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 1,
-                "value": "native_chat"
-            }]
-        },
         "3ae835b6-3015-440c-8177-755bdbbbf29e": {
             "name": "Channel Page Redesign",
             "groups": [{
@@ -601,16 +591,6 @@ window.SiteOptions = {
             }, {
                 "weight": 50,
                 "value": "no"
-            }]
-        },
-        "8ce5b50b-429b-4c20-a0f3-1b22eb577673": {
-            "name": "ios_rollout_vod_uploads",
-            "groups": [{
-                "weight": 95,
-                "value": "treatment"
-            }, {
-                "weight": 5,
-                "value": "control"
             }]
         },
         "8fe5705b-1c85-4d6f-bba0-d99c36b0d7d4": {
