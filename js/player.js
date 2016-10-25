@@ -4198,7 +4198,7 @@
             return new l["default"]({
                 defaults: (t = {}, r(t, f, "no"), r(t, p, "no"), r(t, h, "off"), r(t, _, "no"), r(t, g, "no"), r(t, m, "no"), r(t, v, "no"), r(t, y, "regular"), r(t, b, "no"), r(t, E, "no"), r(t, S, "no"), r(t, C, "1.0"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, r(n, h, a("v2")), r(n, C, a("1.1")), r(n, p, a("yes")), r(n, _, a("yes")), r(n, g, (0, d.userInfo)().then(function(e) {
+                overrides: (n = {}, r(n, h, a("v2")), r(n, p, a("yes")), r(n, _, a("yes")), r(n, g, (0, d.userInfo)().then(function(e) {
                     return "US" !== e.geo ? "no" : a("yes")
                 })), r(n, m, (0, d.userInfo)().then(function(e) {
                     return "GB" !== e.geo ? "no" : a("yes")
@@ -8020,7 +8020,7 @@
                     S = _.get(!1),
                     C = _.get(!0);
                 h = {
-                    app_version: "2016.10.24-202436+320c7ef0eb9c9873ea73a9d99a6245eeb5693e3e",
+                    app_version: "2016.10.24-215648+608ed80de96dacc988afc42155a0af4c7fcd7468",
                     flash_version: g,
                     url: v.href,
                     host: v.host,
