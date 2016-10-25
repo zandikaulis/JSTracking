@@ -614,7 +614,7 @@ window.SiteOptions = {
             }]
         },
         "8fe5705b-1c85-4d6f-bba0-d99c36b0d7d4": {
-            "name": "channel_follow_cta",
+            "name": "CHANNEL_FOLLOW_CTA",
             "groups": [{
                 "weight": 1,
                 "value": "5min"
