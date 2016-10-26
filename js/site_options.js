@@ -208,10 +208,10 @@ window.SiteOptions = {
         "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": {
             "name": "bits_for_ads",
             "groups": [{
-                "weight": 30,
+                "weight": 50,
                 "value": "on"
             }, {
-                "weight": 70,
+                "weight": 50,
                 "value": "off"
             }]
         },
