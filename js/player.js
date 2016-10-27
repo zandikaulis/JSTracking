@@ -8014,7 +8014,7 @@
                     S = _.get(!1),
                     C = _.get(!0);
                 h = {
-                    app_version: "2016.10.27-175906+0e949ca5f7e04c05e606135c8e4a92191dcb0259",
+                    app_version: "2016.10.27-185917+c357fcf6f870ac2afe054da29a2b7204a932eb63",
                     flash_version: g,
                     url: v.href,
                     host: v.host,
@@ -10402,7 +10402,7 @@
                     value: function() {
                         var e = this;
                         this.events = new c["default"], this.isBuffering = !1, this.ended = !1, this.currentCaptionData = {}, this.loadPlayerCore().then(function(t) {
-                            e._initPlayerCore(t), e._initVideoEvents()
+                            e._initPlayerCore(t), e._initVideoEvents(), e.load()
                         }, function(t) {
                             e.onCoreAnalytics(t)
                         })
@@ -10420,7 +10420,7 @@
                     value: function(e) {
                         this.playerCoreEvents = e.Event, this.core = new e({
                             analyticsTracker: this.stateStore.getState().analyticsTracker
-                        }), this.core.attachMedia(this.video), this.core.addEventListener(this.playerCoreEvents.HLS_MASTER_PARSED, this.onHLSMasterParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.HLS_VARIANT_PARSED, this.onHLSVariantParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.VARIANT_SWITCH_REQUESTED, this.onVariantSwitchRequested.bind(this)), this.core.addEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this.onID3Tag.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEOUT, this.onSpliceOut.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEIN, this.onSpliceIn.bind(this)), this.core.addEventListener(this.playerCoreEvents.CAPTION, this.onCaption.bind(this)), this.core.addEventListener(this.playerCoreEvents.AUTH_ERROR, this.onAuthError.bind(this)), this.core.addEventListener(this.playerCoreEvents.CORE_ANALYTICS, this.onCoreAnalytics.bind(this)), this.core.addEventListener(this.playerCoreEvents.OFFLINE, this.onOfflineError.bind(this)), this.core.addEventListener(this.playerCoreEvents.BUFFERING, this.onBuffering.bind(this)), this.video.autoplay && this.load(), this.events.emit(f.PLAYER_INIT)
+                        }), this.core.attachMedia(this.video), this.core.addEventListener(this.playerCoreEvents.HLS_MASTER_PARSED, this.onHLSMasterParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.HLS_VARIANT_PARSED, this.onHLSVariantParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.VARIANT_SWITCH_REQUESTED, this.onVariantSwitchRequested.bind(this)), this.core.addEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this.onID3Tag.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEOUT, this.onSpliceOut.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEIN, this.onSpliceIn.bind(this)), this.core.addEventListener(this.playerCoreEvents.CAPTION, this.onCaption.bind(this)), this.core.addEventListener(this.playerCoreEvents.AUTH_ERROR, this.onAuthError.bind(this)), this.core.addEventListener(this.playerCoreEvents.CORE_ANALYTICS, this.onCoreAnalytics.bind(this)), this.core.addEventListener(this.playerCoreEvents.OFFLINE, this.onOfflineError.bind(this)), this.core.addEventListener(this.playerCoreEvents.BUFFERING, this.onBuffering.bind(this)), this.events.emit(f.PLAYER_INIT)
                     }
                 }, {
                     key: "onBuffering",
