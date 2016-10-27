@@ -573,6 +573,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "8ce5b50b-429b-4c20-a0f3-1b22eb577673": {
+            "name": "ios_rollout_vod_uploads",
+            "groups": [{
+                "weight": 95,
+                "value": "treatment"
+            }, {
+                "weight": 5,
+                "value": "control"
+            }]
+        },
         "8fe5705b-1c85-4d6f-bba0-d99c36b0d7d4": {
             "name": "CHANNEL_FOLLOW_CTA",
             "groups": [{

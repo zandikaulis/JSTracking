@@ -17865,7 +17865,6 @@ function(e, t) {
             BITS_FOR_ADS: "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2",
             NEXUS_ROLLOUT: "428d3b07-cc7a-424f-aad0-971f5415879a",
             DETERMINATION: "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
-            TIME_SPENT_EXPERIMENT: "e39a1b4d-51ef-4b49-9378-91a7eb35c3da",
             CHANNEL_FOLLOW_CTA: "8fe5705b-1c85-4d6f-bba0-d99c36b0d7d4"
         },
         i = {
@@ -17899,7 +17898,6 @@ function(e, t) {
             "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": "off",
             "428d3b07-cc7a-424f-aad0-971f5415879a": "disabled",
             "cc164e1e-1361-4730-8d9b-0091a0f9cb8f": "no",
-            "e39a1b4d-51ef-4b49-9378-91a7eb35c3da": "off",
             "8fe5705b-1c85-4d6f-bba0-d99c36b0d7d4": "control"
         },
         s = "experiment_overrides",
@@ -19275,35 +19273,35 @@ function(e, t) {
             r.alert.apply(r, arguments)
         };
     r._dispatch = function(t, r, i, s) {
-        i = i || {}, typeof i == "function" && (s = i, i = {});
-        var o = e.defaults({
-            type: t,
-            text: r,
-            callback: {
-                onClose: s || !1
-            }
-        }, i, n);
-        return o.escape && (o.text = e.display.escape(r)), noty(o)
-    }, r.alert = function(e, t, n) {
-        return r._dispatch("alert", e, t, n)
-    }, r.notice = function(e, t, n) {
-        return r
-            ._dispatch("notice", e, t, n)
-    }, r.success = function(e, t, n) {
-        return r._dispatch("success", e, t, n)
-    }, r.error = function(e, t, n) {
-        return r._dispatch("error", e, t, n)
-    }, r.flash = function(e, n) {
-        var i = t("#header_notification"),
-            s = i.find(".flash-error"),
-            o = i.find(".flash-success"),
-            u = i.find(".flash-notice");
-        if (s.length) return r.error(s.text(), e, n);
-        if (o.length) return r.success(o.text(), e, n);
-        if (u.length) return r.alert(u.text(), e, n)
-    }, e.mixin({
-        notify: r
-    })
+            i = i || {}, typeof i == "function" && (s = i, i = {});
+            var o = e.defaults({
+                type: t,
+                text: r,
+                callback: {
+                    onClose: s || !1
+                }
+            }, i, n);
+            return o.escape && (o.text = e.display.escape(r)), noty(o)
+        }, r.alert = function(e, t, n) {
+            return r._dispatch("alert", e, t, n)
+        }, r.notice = function(e, t, n) {
+            return r._dispatch("notice", e, t, n)
+        }, r.success = function(e, t, n) {
+            return r._dispatch("success", e, t, n)
+        }, r.error =
+        function(e, t, n) {
+            return r._dispatch("error", e, t, n)
+        }, r.flash = function(e, n) {
+            var i = t("#header_notification"),
+                s = i.find(".flash-error"),
+                o = i.find(".flash-success"),
+                u = i.find(".flash-notice");
+            if (s.length) return r.error(s.text(), e, n);
+            if (o.length) return r.success(o.text(), e, n);
+            if (u.length) return r.alert(u.text(), e, n)
+        }, e.mixin({
+            notify: r
+        })
 }(Twitch, jQuery), window.sp_cid = "qFEaZsFQnwEdUIs",
     function(e, t) {
         var n = "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
