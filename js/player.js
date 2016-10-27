@@ -8020,7 +8020,7 @@
                     S = _.get(!1),
                     C = _.get(!0);
                 h = {
-                    app_version: "2016.10.27-004330+211ef3ac8722d4befb6704122066b42e0ebc713b",
+                    app_version: "2016.10.27-004820+6811c23fd27e5f1f04fdee5a50436e8ecbd0b984",
                     flash_version: g,
                     url: v.href,
                     host: v.host,
@@ -26453,7 +26453,7 @@
             "Hit the clip button to get started.": "Hit the clip button to get started.",
             "Learn More": "Learn More",
             Auto: "Auto",
-            "HTML5 Player Beta": "HTML5 Player Beta",
+            "HTML5 Player": "HTML5 Player",
             "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback.": "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback.",
             "Give Feedback": "Give Feedback",
             "No supported video backend available; Flash is not installed": "No supported video backend available; Flash is not installed",
