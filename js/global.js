@@ -19173,7 +19173,11 @@ function(e) {
             e.api.get("/api/viewer/info.json").done(function(n) {
                 e.preferredLanguage = n.preferred_language, e.receivedLanguage = n.received_language;
                 var r = cookie.get("language");
-                r === undefined ? e.language.setCookieAndReload(e.receivedLanguage) : n.login && r !== n.user_language && e.language.setByAsyncPut(r), n.eu && window.euCookieNotification(), t(n)
+                r === undefined ? e.language.setCookieAndReload(e.receivedLanguage) : n.login && r !== n.user_language && e.language.setByAsyncPut(r), n.eu && window.euCookieNotification(), e.tracking.spadeAndMixpanel.trackEvent("prime_web_geo_data", {
+                    platform: "web",
+                    geo: n.geo,
+                    ip: n.ip
+                }), t(n)
             }).fail(function(e) {
                 n({
                     status: e.status
@@ -19273,35 +19277,34 @@ function(e, t) {
             r.alert.apply(r, arguments)
         };
     r._dispatch = function(t, r, i, s) {
-            i = i || {}, typeof i == "function" && (s = i, i = {});
-            var o = e.defaults({
-                type: t,
-                text: r,
-                callback: {
-                    onClose: s || !1
-                }
-            }, i, n);
-            return o.escape && (o.text = e.display.escape(r)), noty(o)
-        }, r.alert = function(e, t, n) {
-            return r._dispatch("alert", e, t, n)
-        }, r.notice = function(e, t, n) {
-            return r._dispatch("notice", e, t, n)
-        }, r.success = function(e, t, n) {
-            return r._dispatch("success", e, t, n)
-        }, r.error =
-        function(e, t, n) {
-            return r._dispatch("error", e, t, n)
-        }, r.flash = function(e, n) {
-            var i = t("#header_notification"),
-                s = i.find(".flash-error"),
-                o = i.find(".flash-success"),
-                u = i.find(".flash-notice");
-            if (s.length) return r.error(s.text(), e, n);
-            if (o.length) return r.success(o.text(), e, n);
-            if (u.length) return r.alert(u.text(), e, n)
-        }, e.mixin({
-            notify: r
-        })
+        i = i || {}, typeof i == "function" && (s = i, i = {});
+        var o = e.defaults({
+            type: t,
+            text: r,
+            callback: {
+                onClose: s || !1
+            }
+        }, i, n);
+        return o.escape && (o.text = e.display.escape(r)), noty(o)
+    }, r.alert = function(e, t, n) {
+        return r._dispatch("alert", e, t, n)
+    }, r.notice = function(e, t, n) {
+        return r._dispatch("notice", e, t, n)
+    }, r.success = function(e, t, n) {
+        return r._dispatch("success", e, t, n)
+    }, r.error = function(e, t, n) {
+        return r._dispatch("error", e, t, n)
+    }, r.flash = function(e, n) {
+        var i = t("#header_notification"),
+            s = i.find(".flash-error"),
+            o = i.find(".flash-success"),
+            u = i.find(".flash-notice");
+        if (s.length) return r.error(s.text(), e, n);
+        if (o.length) return r.success(o.text(), e, n);
+        if (u.length) return r.alert(u.text(), e, n)
+    }, e.mixin({
+        notify: r
+    })
 }(Twitch, jQuery), window.sp_cid = "qFEaZsFQnwEdUIs",
     function(e, t) {
         var n = "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
