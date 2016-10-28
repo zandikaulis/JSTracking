@@ -8014,7 +8014,7 @@
                     S = _.get(!1),
                     C = _.get(!0);
                 h = {
-                    app_version: "2016.10.27-185917+c357fcf6f870ac2afe054da29a2b7204a932eb63",
+                    app_version: "2016.10.28-000537+a2f03d1a370deec97fd59e14f82a7f078b67958e",
                     flash_version: g,
                     url: v.href,
                     host: v.host,
@@ -18387,7 +18387,9 @@
                     e.preventDefault(), B()
                 }), $(t).on("click", ".js-player-product-close", function(e) {
                     e.preventDefault(), F()
-                }), k.BackendPlayerCore.canPlay() && _()
+                });
+                var r = i.getState().env.playerType === f.PLAYER_CURSE;
+                k.BackendPlayerCore.canPlay() && !r && _()
             }
 
             function _() {
@@ -19618,8 +19620,8 @@
                 return function(t, n) {
                     if (Array.isArray(t)) return t;
                     if (Symbol.iterator in Object(t)) return e(t, n);
-                    throw new TypeError("Invalid attempt to destructure non-iterable instance")
-                };
+                    throw new TypeError("Invalid attempt to destructure non-iterable instance");
+                }
             }(),
             c = function() {
                 function e(e, t) {
