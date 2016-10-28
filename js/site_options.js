@@ -822,6 +822,16 @@ window.SiteOptions = {
                 "value": "d,hs,c"
             }]
         },
+        "e00bfb61-dd13-4cd6-8401-ea2bb0b1dd1f": {
+            "name": "clips_dummy",
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "variant"
+            }]
+        },
         "e39a1b4d-51ef-4b49-9378-91a7eb35c3da": {
             "name": "TIME_SPENT_EXPERIMENT",
             "groups": [{
