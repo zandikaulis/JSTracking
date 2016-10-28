@@ -823,7 +823,7 @@ window.SiteOptions = {
             }]
         },
         "e00bfb61-dd13-4cd6-8401-ea2bb0b1dd1f": {
-            "name": "CLIPS_DUMMY",
+            "name": "clips_view_aa",
             "groups": [{
                 "weight": 50,
                 "value": "control"
