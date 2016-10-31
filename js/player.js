@@ -8019,7 +8019,7 @@
                     S = _.get(!1),
                     C = _.get(!0);
                 h = {
-                    app_version: "2016.10.28-224944+5244cdb6e5dc054fa6dd4a895fb983f905ea4f29",
+                    app_version: "2016.10.31-183950+4b678a6fa006a24dd4730632499f84ce0bf84be5",
                     flash_version: g,
                     url: v.href,
                     host: v.host,
@@ -21981,10 +21981,11 @@
                         i = e.online,
                         a = e.env.playerType,
                         r = a === p.PLAYER_HIGHLIGHTER,
-                        s = n === l.CONTENT_MODE_LIVE && !i,
-                        o = n !== l.CONTENT_MODE_LIVE && n !== c.CONTENT_MODE_VOD,
-                        u = !(s || o || r);
-                    this._toggle(u)
+                        s = a === p.PLAYER_CURSE,
+                        o = n === l.CONTENT_MODE_LIVE && !i,
+                        u = n !== l.CONTENT_MODE_LIVE && n !== c.CONTENT_MODE_VOD,
+                        d = !(o || u || r || s);
+                    this._toggle(d)
                 }
             }, {
                 key: "_toggle",
