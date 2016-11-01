@@ -968,18 +968,19 @@
             T = n(238),
             w = n(203),
             k = n(241),
-            I = n(167),
-            P = i(I),
-            A = n(168),
-            N = i(A),
-            O = (t.VIDEO_PLAY_LOAD_START = "video_play_load_start", "video_init"),
-            L = "video-play",
-            D = "minute-watched",
-            R = "buffer-empty",
-            M = "buffer-refill",
-            j = "vod_seek",
-            x = "player_caption_preset",
-            U = 500;
+            I = n(205),
+            P = n(167),
+            A = i(P),
+            N = n(168),
+            O = i(N),
+            L = (t.VIDEO_PLAY_LOAD_START = "video_play_load_start", "video_init"),
+            D = "video-play",
+            R = "minute-watched",
+            M = "buffer-empty",
+            j = "buffer-refill",
+            x = "vod_seek",
+            U = "player_caption_preset",
+            B = 500;
         t.Analytics = function() {
             function e(t, n, i, r, s) {
                 a(this, e), this.player = t, this.tracker = n, this.state = i, this.stateStore = r, this.options = s, this.minutesWatchedTimer = new p.MinutesWatched, this.hasPlayed = !1, this.bufferEmptyStartTime = null, this.bufferEmptyCount = 0, this.lastNetworkProfile = -(1 / 0), this.lastSeekTime = null, this.timeStampBeforeSeek = 0, this.isSeekInProgress = !1, this.trackNetworkProfile = this.stateStore.getState().experiments.get(C.NETWORK_PROFILE_COLLECTION), this.countessTracker = new h.CountessTracker({
@@ -993,7 +994,7 @@
                     return (0, T.subscribe)(e, ["captions"], function(e, n) {
                         var i = e.captions,
                             r = n.captions;
-                        i.preset !== r.preset && t.trackEvent(x, {
+                        i.preset !== r.preset && t.trackEvent(U, {
                             captions_preset: i.preset
                         })
                     })
@@ -1024,7 +1025,7 @@
             }, {
                 key: "initEvents",
                 value: function() {
-                    this.minutesWatchedTimer.on(p.EVENT_MINUTE, this.onMinuteWatched.bind(this)), this.player.addEventListener(P.PLAYER_INIT, this.onBackendInit.bind(this)), this.player.addEventListener(N.LOADSTART, this.onLoadStart.bind(this)), this.player.addEventListener(N.PAUSE, this.onPause.bind(this)), this.player.addEventListener(N.WAITING, this.onWaiting.bind(this)), this.player.addEventListener(N.PLAYING, this.onPlaying.bind(this)), this.player.addEventListener(N.PLAYING, this.onQualityChange.bind(this)), this.player.addEventListener(N.ENDED, this.onEnded.bind(this)), this.player.addEventListener(P.CASTING_CHANGE, this.onCastingChange.bind(this)), this.player.addEventListener(N.SEEKING, this.onSeeking.bind(this)), this.player.addEventListener(N.TIME_UPDATE, this.onTimeUpdate.bind(this)), this.player.addEventListener(N.CAN_PLAY, this.onCanPlay.bind(this)), this.player.addEventListener(P.IS_SPECTRE, this.onSpectre.bind(this))
+                    this.minutesWatchedTimer.on(p.EVENT_MINUTE, this.onMinuteWatched.bind(this)), this.player.addEventListener(A.PLAYER_INIT, this.onBackendInit.bind(this)), this.player.addEventListener(O.LOADSTART, this.onLoadStart.bind(this)), this.player.addEventListener(O.PAUSE, this.onPause.bind(this)), this.player.addEventListener(O.WAITING, this.onWaiting.bind(this)), this.player.addEventListener(O.PLAYING, this.onPlaying.bind(this)), this.player.addEventListener(O.PLAYING, this.onQualityChange.bind(this)), this.player.addEventListener(O.ENDED, this.onEnded.bind(this)), this.player.addEventListener(A.CASTING_CHANGE, this.onCastingChange.bind(this)), this.player.addEventListener(O.SEEKING, this.onSeeking.bind(this)), this.player.addEventListener(O.TIME_UPDATE, this.onTimeUpdate.bind(this)), this.player.addEventListener(O.CAN_PLAY, this.onCanPlay.bind(this)), this.player.addEventListener(A.IS_SPECTRE, this.onSpectre.bind(this))
                 }
             }, {
                 key: "getNetworkProfileStats",
@@ -1077,7 +1078,7 @@
                     var n = this.getNetworkProfileStats(t);
                     this.player.video && (0, l["default"])(n, {
                         vod_timestamp: this.player.getCurrentTime()
-                    }), this.trackEvent(D, (0, l["default"])(n, {
+                    }), this.trackEvent(R, (0, l["default"])(n, {
                         seconds_offset: this.minutesWatchedTimer.initialDelay / 1e3,
                         minutes_logged: this.minutesWatchedTimer.totalMinutes,
                         captions_enabled: this.stateStore.getState().captions.enabled,
@@ -1102,7 +1103,7 @@
             }, {
                 key: "onBackendInit",
                 value: function() {
-                    this.tracker.setProperty("backend", this.player.getBackend()), this.tracker.setProperty("backend_version", this.player.getVersion()), this.tracker.trackEvent(O)
+                    this.tracker.setProperty("backend", this.player.getBackend()), this.tracker.setProperty("backend_version", this.player.getVersion()), this.tracker.trackEvent(L)
                 }
             }, {
                 key: "onLoadStart",
@@ -1138,9 +1139,7 @@
                         return (0, y.channelInfo)(e.channel.name)
                     }).then(function(e) {
                         return (0, u["default"])(e, "partner")
-                    })), t.then(function(e) {
-                        this.countessTracker.trackVODView(e)
-                    }.bind(this));
+                    }));
                     var n = t.then(function(e) {
                         return {
                             channel: e.channel.name,
@@ -1157,27 +1156,32 @@
             }, {
                 key: "onWaiting",
                 value: function() {
-                    this.player.getSeeking() || (this.bufferEmptyStartTime = (new Date).getTime(), this.bufferEmptyCount++, this.trackEvent(R, {
+                    this.player.getSeeking() || (this.bufferEmptyStartTime = (new Date).getTime(), this.bufferEmptyCount++, this.trackEvent(M, {
                         buffer_empty_count: this.bufferEmptyCount
                     }))
                 }
             }, {
                 key: "onPlaying",
                 value: function() {
+                    var e = this,
+                        t = this.stateStore.getState(),
+                        n = t.stream;
                     if (null !== this.bufferEmptyStartTime) {
-                        var e = (new Date).getTime();
-                        this.trackEvent(M, {
-                            buffering_time: (e - this.bufferEmptyStartTime) / 1e3
+                        var i = (new Date).getTime();
+                        this.trackEvent(j, {
+                            buffering_time: (i - this.bufferEmptyStartTime) / 1e3
                         }), this.bufferEmptyStartTime = null
                     }
-                    this.hasPlayed || (this.trackEvent(L, {
+                    this.hasPlayed || (n instanceof I.VODContentStream && (0, y.videoInfo)(n.videoId).then(function(t) {
+                        e.countessTracker.trackVODView(t)
+                    }), this.trackEvent(D, {
                         time_since_load_start: Date.now() - this.stateStore.getState().analytics.playSessionStartTime
                     }), this.hasPlayed = !0, this.valveClient.notify(), this.stateStore.dispatch(E.sendPlayerBeacon()), this.stateStore.dispatch(E.sendVideoBeacon())), this.minutesWatchedTimer.start()
                 }
             }, {
                 key: "onCanPlay",
                 value: function() {
-                    this.isSeekInProgress && (this.isSeekInProgress = !1, this.trackEvent(j, {
+                    this.isSeekInProgress && (this.isSeekInProgress = !1, this.trackEvent(x, {
                         timestamp_departed: this.timeStampBeforeSeek,
                         timestamp_target: this.player.getCurrentTime(),
                         time_spent_seeking: (Date.now() - this.lastSeekTime) / 1e3
@@ -1193,7 +1197,7 @@
                 value: function() {
                     if (!this.isSeekInProgress) {
                         var e = this.player.getCurrentTime();
-                        e - this.timeStampBeforeSeek < U && this.timeStampBeforeSeek < e && (this.timeStampBeforeSeek = e)
+                        e - this.timeStampBeforeSeek < B && this.timeStampBeforeSeek < e && (this.timeStampBeforeSeek = e)
                     }
                 }
             }, {
@@ -8019,7 +8023,7 @@
                     S = _.get(!1),
                     C = _.get(!0);
                 h = {
-                    app_version: "2016.11.01-035044+06c2339099295fab3a288b8c6e99a92ee47f82c2",
+                    app_version: "2016.11.01-210210+b4820fb98d7099054d4fc1259591a5f8b1fac0bd",
                     flash_version: g,
                     url: v.href,
                     host: v.host,
