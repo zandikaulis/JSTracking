@@ -17907,7 +17907,8 @@ function(e, t) {
             LANGUAGE_DIRECTORY_FILTER: "full",
             CLIPS_ENABLED: "yes",
             ESL_CSGO_STEAM_LINK: "show-cta",
-            CHANNEL_PAGE_REDESIGN: "new"
+            CHANNEL_PAGE_REDESIGN: "new",
+            DETERMINATION: "yes"
         };
     _.each(Object.keys(u), function(t) {
         o[r[t]] = e.user().then(function(e) {
@@ -19288,7 +19289,8 @@ function(e, t) {
         return o.escape && (o.text = e.display.escape(r)), noty(o)
     }, r.alert = function(e, t, n) {
         return r._dispatch("alert", e, t, n)
-    }, r.notice = function(e, t, n) {
+    }, r.notice = function(
+        e, t, n) {
         return r._dispatch("notice", e, t, n)
     }, r.success = function(e, t, n) {
         return r._dispatch("success", e, t, n)
