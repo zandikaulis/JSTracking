@@ -165,6 +165,16 @@ window.SiteOptions = {
                 "value": "recent_first"
             }]
         },
+        "1e406d0d-c293-4c4e-812f-049db8c7e3ec": {
+            "name": "vod_upload_units",
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "experiment"
+            }]
+        },
         "213678cc-be7d-4aa6-a938-8baac01a442a": {
             "name": "android_spade_batching",
             "groups": [{
