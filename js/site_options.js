@@ -546,10 +546,10 @@ window.SiteOptions = {
         "87adafb9-d360-4c0a-ace5-93e636c8e79c": {
             "name": "Player Core Version control",
             "groups": [{
-                "weight": 95,
+                "weight": 92,
                 "value": "1.0"
             }, {
-                "weight": 5,
+                "weight": 8,
                 "value": "1.1"
             }]
         },
