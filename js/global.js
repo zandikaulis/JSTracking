@@ -17842,6 +17842,7 @@ function(e, t) {
             VOD_COVIEWS_AB: "e7516730-b94f-4d46-894e-c18612aab270",
             VOD_COVIEWS_FORCED_VARIETY: "2f8210be-a6c6-43b1-9f6a-4b7cc7ef93c0",
             VOD_COVIEWS_SHUFFLE: "403707e6-abb9-401c-a2ca-dd643293dbdd",
+            VOD_UPLOAD_UNITS: "1e406d0d-c293-4c4e-812f-049db8c7e3ec",
             SIMILAR_VODS: "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7",
             CDN_EXPERIMENT: "b29d055f-74f2-40b9-9383-9c4b79b30360",
             CREATIVE_UNLIKELY_HERO: "dd2d60cd-b76b-4beb-a38c-ea60df88b3cc",
@@ -17852,7 +17853,6 @@ function(e, t) {
             REMOVE_CSGO_DIRECTORY: "355ff3e2-38b5-449a-8ab8-a52b5d3ab817",
             LANGUAGE_DIRECTORY_FILTER: "653cc0db-d332-4df6-b224-15c5c481f7e7",
             CHANNEL_VIDEOS_TAB: "852b3485-a831-4580-b7bf-acf819977704",
-            COMMENTS_REACTION_EXPERIMENT: "66235fc6-1972-421c-ab6b-9137ddaacdaf",
             CLIPS_ENABLED: "b4d61bdb-c174-47e6-a2f9-a46a4088ac26",
             MESSAGE_DELETED_EXPERIMENT: "04165981-17be-4593-afbd-762a380f6838",
             RESUME_WATCHING_BANNER: "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2",
@@ -17860,7 +17860,6 @@ function(e, t) {
             ESL_CSGO_STEAM_LINK: "6a857f53-de28-4025-8983-3cada70538cd",
             WEB_CLIENT_FRONT_PAGE: "f67a2dd3-fc9e-4e10-8aaf-929e1e0f484a",
             CHANNEL_PAGE_REDESIGN: "3ae835b6-3015-440c-8177-755bdbbbf29e",
-            VIDEO_EMBED_EXPERIMENT: "696cc3ee-d8b9-4918-8d53-910f93ae1c9a",
             MESSAGE_HISTORY: "8ace0f50-8afd-424a-a086-3e61b3e66da0",
             BITS_FOR_ADS: "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2",
             NEXUS_ROLLOUT: "428d3b07-cc7a-424f-aad0-971f5415879a",
@@ -17875,6 +17874,7 @@ function(e, t) {
             "e7516730-b94f-4d46-894e-c18612aab270": "control",
             "2f8210be-a6c6-43b1-9f6a-4b7cc7ef93c0": "control",
             "403707e6-abb9-401c-a2ca-dd643293dbdd": "control",
+            "1e406d0d-c293-4c4e-812f-049db8c7e3ec": "control",
             "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7": "control",
             "b29d055f-74f2-40b9-9383-9c4b79b30360": "control",
             "dd2d60cd-b76b-4beb-a38c-ea60df88b3cc": "no",
@@ -17885,7 +17885,6 @@ function(e, t) {
             "355ff3e2-38b5-449a-8ab8-a52b5d3ab817": "control",
             "653cc0db-d332-4df6-b224-15c5c481f7e7": "control",
             "852b3485-a831-4580-b7bf-acf819977704": "control",
-            "66235fc6-1972-421c-ab6b-9137ddaacdaf": "1",
             "b4d61bdb-c174-47e6-a2f9-a46a4088ac26": "no",
             "04165981-17be-4593-afbd-762a380f6838": "false",
             "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2": "no",
@@ -17893,7 +17892,6 @@ function(e, t) {
             "6a857f53-de28-4025-8983-3cada70538cd": "control",
             "f67a2dd3-fc9e-4e10-8aaf-929e1e0f484a": "ignore",
             "3ae835b6-3015-440c-8177-755bdbbbf29e": "old",
-            "696cc3ee-d8b9-4918-8d53-910f93ae1c9a": "embed",
             "8ace0f50-8afd-424a-a086-3e61b3e66da0": "off",
             "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": "off",
             "428d3b07-cc7a-424f-aad0-971f5415879a": "disabled",
@@ -19278,35 +19276,35 @@ function(e, t) {
             r.alert.apply(r, arguments)
         };
     r._dispatch = function(t, r, i, s) {
-        i = i || {}, typeof i == "function" && (s = i, i = {});
-        var o = e.defaults({
-            type: t,
-            text: r,
-            callback: {
-                onClose: s || !1
-            }
-        }, i, n);
-        return o.escape && (o.text = e.display.escape(r)), noty(o)
-    }, r.alert = function(e, t, n) {
-        return r._dispatch("alert", e, t, n)
-    }, r.notice = function(
-        e, t, n) {
-        return r._dispatch("notice", e, t, n)
-    }, r.success = function(e, t, n) {
-        return r._dispatch("success", e, t, n)
-    }, r.error = function(e, t, n) {
-        return r._dispatch("error", e, t, n)
-    }, r.flash = function(e, n) {
-        var i = t("#header_notification"),
-            s = i.find(".flash-error"),
-            o = i.find(".flash-success"),
-            u = i.find(".flash-notice");
-        if (s.length) return r.error(s.text(), e, n);
-        if (o.length) return r.success(o.text(), e, n);
-        if (u.length) return r.alert(u.text(), e, n)
-    }, e.mixin({
-        notify: r
-    })
+            i = i || {}, typeof i == "function" && (s = i, i = {});
+            var o = e.defaults({
+                type: t,
+                text: r,
+                callback: {
+                    onClose: s || !1
+                }
+            }, i, n);
+            return o.escape && (o.text = e.display.escape(r)), noty(o)
+        }, r.alert = function(e, t, n) {
+            return r._dispatch("alert", e, t, n)
+        }, r.notice = function(e, t, n) {
+            return r._dispatch("notice", e, t, n)
+        }, r.success = function(e, t, n) {
+            return r._dispatch("success", e, t, n)
+        }, r.error =
+        function(e, t, n) {
+            return r._dispatch("error", e, t, n)
+        }, r.flash = function(e, n) {
+            var i = t("#header_notification"),
+                s = i.find(".flash-error"),
+                o = i.find(".flash-success"),
+                u = i.find(".flash-notice");
+            if (s.length) return r.error(s.text(), e, n);
+            if (o.length) return r.success(o.text(), e, n);
+            if (u.length) return r.alert(u.text(), e, n)
+        }, e.mixin({
+            notify: r
+        })
 }(Twitch, jQuery), window.sp_cid = "qFEaZsFQnwEdUIs",
     function(e, t) {
         var n = "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
