@@ -439,16 +439,6 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
-        "696cc3ee-d8b9-4918-8d53-910f93ae1c9a": {
-            "name": "Video Embed Experiment",
-            "groups": [{
-                "weight": 10,
-                "value": "control"
-            }, {
-                "weight": 90,
-                "value": "embed"
-            }]
-        },
         "6f1bb0b8-05bb-4bee-9008-5cee5b1732c9": {
             "name": "android_show_following_on_launch",
             "groups": [{
