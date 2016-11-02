@@ -8023,7 +8023,7 @@
                     S = _.get(!1),
                     C = _.get(!0);
                 h = {
-                    app_version: "2016.11.01-235515+a0eba50d463af922d1a4464e8f50040b1d1dd3f6",
+                    app_version: "2016.11.02-194353+7d17428b329ada10468565e6a09c42f700b22f77",
                     flash_version: g,
                     url: v.href,
                     host: v.host,
