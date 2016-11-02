@@ -416,37 +416,6 @@ window.SiteOptions = {
                 "value": "scroll_new"
             }]
         },
-        "66235fc6-1972-421c-ab6b-9137ddaacdaf": {
-            "name": "Comments Reaction Type",
-            "groups": [{
-                "weight": 1,
-                "value": "1"
-            }, {
-                "weight": 1,
-                "value": "2"
-            }, {
-                "weight": 1,
-                "value": "3"
-            }, {
-                "weight": 1,
-                "value": "4"
-            }, {
-                "weight": 1,
-                "value": "5"
-            }, {
-                "weight": 1,
-                "value": "6"
-            }, {
-                "weight": 1,
-                "value": "7"
-            }, {
-                "weight": 1,
-                "value": "8"
-            }, {
-                "weight": 92,
-                "value": "9"
-            }]
-        },
         "67fd8802-f683-42a3-8527-99fbc87c77ba": {
             "name": "Transcode_Quality_Experiment_3",
             "groups": [{
