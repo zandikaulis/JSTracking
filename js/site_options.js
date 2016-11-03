@@ -455,7 +455,7 @@ window.SiteOptions = {
         "758cbec2-80ad-478f-806e-fd3a7db9742f": {
             "name": "i18n_missing_trans",
             "groups": [{
-                "weight": 1,
+                "weight": 100,
                 "value": "enabled"
             }, {
                 "weight": 0,
