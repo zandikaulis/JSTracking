@@ -8023,7 +8023,7 @@
                     S = _.get(!1),
                     C = _.get(!0);
                 h = {
-                    app_version: "2016.11.02-194353+7d17428b329ada10468565e6a09c42f700b22f77",
+                    app_version: "2016.11.02-233949+92fe71eaca4fc0fcd849baad7e330978864b5fb5",
                     flash_version: g,
                     url: v.href,
                     host: v.host,
@@ -10557,7 +10557,13 @@
                 }, {
                     key: "onAuthError",
                     value: function() {
-                        this.destroy(), this.initialize()
+                        var e = this;
+                        this.destroy(), this.initialize();
+                        var t = this.stateStore.getState(),
+                            n = t.stream;
+                        return n.streamUrl.then(function(t) {
+                            e.setSrc(t), e.video.play()
+                        })
                     }
                 }, {
                     key: "onCoreAnalytics",
