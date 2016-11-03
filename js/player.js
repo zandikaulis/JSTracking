@@ -8023,7 +8023,7 @@
                     S = _.get(!1),
                     C = _.get(!0);
                 h = {
-                    app_version: "2016.11.03-174440+d95538b7d167fdd53a49f3dbbe971f6660caf19a",
+                    app_version: "2016.11.03-220014+30e0855ac928df5c2b53647130dfda651d814789",
                     flash_version: g,
                     url: v.href,
                     host: v.host,
@@ -22005,7 +22005,7 @@
             function t(e, n, r, s) {
                 i(this, t);
                 var o = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return o._clipsControls = new d.PlayerUIClipsControls(e, r, s), o.subscribe(n, ["stream", "online", "backend", "env"], o._subscriptionHandler.bind(o)), o
+                return o._clipsControls = new d.PlayerUIClipsControls(e, r, s), o.subscribe(n, ["stream", "online", "backend", "env", "playback"], o._subscriptionHandler.bind(o)), o
             }
             return r(t, e), s(t, [{
                 key: "_subscriptionHandler",
@@ -22014,13 +22014,14 @@
                         n = t.contentType,
                         i = e.online,
                         a = e.env.playerType,
-                        r = a === p.PLAYER_HIGHLIGHTER,
-                        s = a === p.PLAYER_CURSE,
-                        o = n === l.CONTENT_MODE_LIVE && !i,
-                        u = n !== l.CONTENT_MODE_LIVE && n !== c.CONTENT_MODE_VOD,
-                        d = !(o || u || r || s),
-                        f = n === c.CONTENT_MODE_VOD;
-                    this._toggle(d, f)
+                        r = e.playback.hasPlayed,
+                        s = a === p.PLAYER_HIGHLIGHTER,
+                        o = a === p.PLAYER_CURSE,
+                        u = n === l.CONTENT_MODE_LIVE && !i,
+                        d = n !== l.CONTENT_MODE_LIVE && n !== c.CONTENT_MODE_VOD,
+                        f = r && !(u || d || s || o),
+                        h = n === c.CONTENT_MODE_VOD;
+                    this._toggle(f, h)
                 }
             }, {
                 key: "_toggle",
