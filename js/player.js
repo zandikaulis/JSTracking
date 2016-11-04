@@ -8023,7 +8023,7 @@
                     C = g.get(!1),
                     T = g.get(!0);
                 _ = {
-                    app_version: "2016.11.04-200409+a0b57993ebdba5e2904cc18d8c179fb192b1750b",
+                    app_version: "2016.11.04-222618+c22883471caa97890a24eca1c943b032a3cac152",
                     flash_version: m,
                     url: (0, h.sanitizeQuery)(y.href),
                     host: y.host,
@@ -22049,7 +22049,7 @@
             function t(e, n, a, s) {
                 i(this, t);
                 var o = r(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return o._clipsControls = new d.PlayerUIClipsControls(e, a, s), o.subscribe(n, ["stream", "online", "backend", "env"], o._subscriptionHandler.bind(o)), o
+                return o._clipsControls = new d.PlayerUIClipsControls(e, a, s), o.subscribe(n, ["stream", "online", "backend", "env", "playback"], o._subscriptionHandler.bind(o)), o
             }
             return a(t, e), s(t, [{
                 key: "_subscriptionHandler",
@@ -22058,13 +22058,14 @@
                         n = t.contentType,
                         i = e.online,
                         r = e.env.playerType,
-                        a = r === p.PLAYER_HIGHLIGHTER,
-                        s = r === p.PLAYER_CURSE,
-                        o = n === l.CONTENT_MODE_LIVE && !i,
-                        u = n !== l.CONTENT_MODE_LIVE && n !== c.CONTENT_MODE_VOD,
-                        d = !(o || u || a || s),
-                        f = n === c.CONTENT_MODE_VOD;
-                    this._toggle(d, f)
+                        a = e.playback.hasPlayed,
+                        s = r === p.PLAYER_HIGHLIGHTER,
+                        o = r === p.PLAYER_CURSE,
+                        u = n === l.CONTENT_MODE_LIVE && !i,
+                        d = n !== l.CONTENT_MODE_LIVE && n !== c.CONTENT_MODE_VOD,
+                        f = a && !(u || d || s || o),
+                        h = n === c.CONTENT_MODE_VOD;
+                    this._toggle(f, h)
                 }
             }, {
                 key: "_toggle",
@@ -22107,15 +22108,13 @@
             r = t.HAS_SEEN_CLIPS_VOD_ANNOUNCE = "has-seen-clips-vod-announce";
         t.PlayerUIClipsControls = function() {
             function e(t, i, r) {
-                n(this, e), this.root = t, this.localStore = i, this.clipGenerator = r
+                n(this, e), this.root = t, this.localStore = i, this.clipGenerator = r, this.clipButtonEnabled = !1, this.clipButton.on("click", this.recordClipIfAble.bind(this))
             }
             return i(e, [{
                 key: "enableClipsButton",
                 value: function(e) {
                     var t = this;
-                    this.clipButton.show(), this.clipButton.on("click", function() {
-                        t.clipGenerator.recordClip()
-                    });
+                    this.clipButtonEnabled = !0, this.clipButton.show();
                     var n = this.localStore.get(r);
                     n || !e ? this.removeClipsVodAnnounce() : (this.showClipsVodAnnounce(), $(this.clipButton).on("click", function() {
                         t.dismissClipsVodAnnounce()
@@ -22126,14 +22125,19 @@
                     }))
                 }
             }, {
-                key: "disableClipsButton",
+                key: "recordClipIfAble",
                 value: function() {
-                    this.disableClickListeners(), this.clipButton.hide(), this.hideClipsVodAnnounce()
+                    this.clipButtonEnabled && this.clipGenerator.recordClip()
                 }
             }, {
-                key: "disableClickListeners",
+                key: "disableClipsButton",
                 value: function() {
-                    this.clipButton.off("click"), this.clipsVodAnnounceCloseButton.off("click"), this.settingsButton.off("click")
+                    this.clipButtonEnabled = !1, this.disableClipsAnnouncementListeners(), this.clipButton.hide(), this.hideClipsVodAnnounce()
+                }
+            }, {
+                key: "disableClipsAnnouncementListeners",
+                value: function() {
+                    this.clipsVodAnnounceCloseButton.off("click"), this.settingsButton.off("click")
                 }
             }, {
                 key: "showClipsVodAnnounce",
@@ -22158,7 +22162,7 @@
             }, {
                 key: "destroy",
                 value: function() {
-                    this.disableClickListeners()
+                    this.clipButton.off("click"), this.disableClipsAnnouncementListeners()
                 }
             }, {
                 key: "clipButton",
