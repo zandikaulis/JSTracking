@@ -17858,7 +17858,6 @@ function(e, t) {
             RESUME_WATCHING_BANNER: "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2",
             CHAT_RULES_EXPERIMENT: "98f3f2a5-9e4e-4ba8-aabe-2ff85e7309ee",
             ESL_CSGO_STEAM_LINK: "6a857f53-de28-4025-8983-3cada70538cd",
-            WEB_CLIENT_FRONT_PAGE: "f67a2dd3-fc9e-4e10-8aaf-929e1e0f484a",
             CHANNEL_PAGE_REDESIGN: "3ae835b6-3015-440c-8177-755bdbbbf29e",
             MESSAGE_HISTORY: "8ace0f50-8afd-424a-a086-3e61b3e66da0",
             BITS_FOR_ADS: "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2",
@@ -17890,7 +17889,6 @@ function(e, t) {
             "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2": "no",
             "98f3f2a5-9e4e-4ba8-aabe-2ff85e7309ee": "control",
             "6a857f53-de28-4025-8983-3cada70538cd": "control",
-            "f67a2dd3-fc9e-4e10-8aaf-929e1e0f484a": "ignore",
             "3ae835b6-3015-440c-8177-755bdbbbf29e": "old",
             "8ace0f50-8afd-424a-a086-3e61b3e66da0": "off",
             "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": "off",
@@ -18167,7 +18165,8 @@ function(e, t) {
                 }];
             swfobject.embedSWF.apply(swfobject, r)
         };
-    RSVP.EventTarget.mixin(o.prototype), o.prototype._onPlayerInit = function() {
+    RSVP.EventTarget
+        .mixin(o.prototype), o.prototype._onPlayerInit = function() {
             this.adFeedbackMenu = new e.player.AdFeedbackMenu(t(".js-ad-feedback-menu").first(), this), this.ready(this._id)
         }, o.prototype.destroy = function() {
             clearInterval(this.swfTrackingInterval)
@@ -19276,35 +19275,35 @@ function(e, t) {
             r.alert.apply(r, arguments)
         };
     r._dispatch = function(t, r, i, s) {
-            i = i || {}, typeof i == "function" && (s = i, i = {});
-            var o = e.defaults({
-                type: t,
-                text: r,
-                callback: {
-                    onClose: s || !1
-                }
-            }, i, n);
-            return o.escape && (o.text = e.display.escape(r)), noty(o)
-        }, r.alert = function(e, t, n) {
-            return r._dispatch("alert", e, t, n)
-        }, r.notice = function(e, t, n) {
-            return r._dispatch("notice", e, t, n)
-        }, r.success = function(e, t, n) {
-            return r._dispatch("success", e, t, n)
-        }, r.error =
-        function(e, t, n) {
-            return r._dispatch("error", e, t, n)
-        }, r.flash = function(e, n) {
-            var i = t("#header_notification"),
-                s = i.find(".flash-error"),
-                o = i.find(".flash-success"),
-                u = i.find(".flash-notice");
-            if (s.length) return r.error(s.text(), e, n);
-            if (o.length) return r.success(o.text(), e, n);
-            if (u.length) return r.alert(u.text(), e, n)
-        }, e.mixin({
-            notify: r
-        })
+        i = i || {}, typeof i == "function" && (s = i, i = {});
+        var o = e.defaults({
+            type: t,
+            text: r,
+            callback: {
+                onClose: s || !1
+            }
+        }, i, n);
+        return o.escape && (o.text = e.display.escape(r)), noty(o)
+    }, r.alert = function(e, t, n) {
+        return r._dispatch("alert", e, t, n)
+    }, r.notice = function(e, t, n) {
+        return r._dispatch("notice", e, t, n)
+    }, r.success = function(e, t, n) {
+        return r._dispatch("success", e, t, n)
+    }, r.error = function(e, t, n) {
+        return r._dispatch("error", e, t, n)
+    }, r.flash = function(e, n) {
+        var i = t("#header_notification"),
+            s = i
+            .find(".flash-error"),
+            o = i.find(".flash-success"),
+            u = i.find(".flash-notice");
+        if (s.length) return r.error(s.text(), e, n);
+        if (o.length) return r.success(o.text(), e, n);
+        if (u.length) return r.alert(u.text(), e, n)
+    }, e.mixin({
+        notify: r
+    })
 }(Twitch, jQuery), window.sp_cid = "qFEaZsFQnwEdUIs",
     function(e, t) {
         var n = "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
