@@ -453,7 +453,7 @@ window.SiteOptions = {
             }]
         },
         "758cbec2-80ad-478f-806e-fd3a7db9742f": {
-            "name": "i18n_missing_trans",
+            "name": "I18N_MISSING_TRANS",
             "groups": [{
                 "weight": 100,
                 "value": "enabled"
