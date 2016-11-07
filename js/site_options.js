@@ -307,10 +307,10 @@ window.SiteOptions = {
         "474db509-7fb8-403e-97da-66dae8954e6d": {
             "name": "android_home_games_carousel",
             "groups": [{
-                "weight": 50,
+                "weight": 1,
                 "value": "treatment"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }]
         },
