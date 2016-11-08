@@ -4193,7 +4193,7 @@
             return new l["default"]({
                 defaults: (t = {}, a(t, f, "no"), a(t, p, "off"), a(t, h, "no"), a(t, _, "no"), a(t, g, "no"), a(t, m, "no"), a(t, v, "regular"), a(t, y, "no"), a(t, b, "no"), a(t, E, "no"), a(t, S, "1.0"), a(t, C, "no"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, a(n, p, r("v2")), a(n, S, r("1.1")), a(n, h, r("yes")), a(n, _, (0, d.userInfo)().then(function(e) {
+                overrides: (n = {}, a(n, C, r("yes-forced")), a(n, p, r("v2")), a(n, S, r("1.2")), a(n, h, r("yes")), a(n, _, (0, d.userInfo)().then(function(e) {
                     return "US" !== e.geo ? "no" : r("yes")
                 })), a(n, g, (0, d.userInfo)().then(function(e) {
                     return "GB" !== e.geo ? "no" : r("yes")
@@ -8023,7 +8023,7 @@
                     C = g.get(!1),
                     T = g.get(!0);
                 _ = {
-                    app_version: "2016.11.08-184536+36128f5539d6d107ef6d6a2d11224f2e021e45f7",
+                    app_version: "2016.11.08-223043+a8600e77c6a2e942cab93974bde1149c8fb7d897",
                     flash_version: m,
                     url: (0, h.sanitizeQuery)(y.href),
                     host: y.host,
@@ -10943,7 +10943,7 @@
                             t = this.stateStore.getState(),
                             n = t.experiments;
                         n.get(d.PLAYER_CORE_VER_CONTROL).then(function(t) {
-                            e.core && "1.1" === t && e.core.enableABS()
+                            e.core && "1.2" === t && e.core.enableABS()
                         })
                     }
                 }, {
