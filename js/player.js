@@ -8023,7 +8023,7 @@
                     C = g.get(!1),
                     T = g.get(!0);
                 _ = {
-                    app_version: "2016.11.08-164620+3a92294f04ffa3bda7272f9fd33cce0e23f158cc",
+                    app_version: "2016.11.08-184536+36128f5539d6d107ef6d6a2d11224f2e021e45f7",
                     flash_version: m,
                     url: (0, h.sanitizeQuery)(y.href),
                     host: y.host,
@@ -22283,12 +22283,12 @@
                     return n && e(t.prototype, n), i && e(t, i), t
                 }
             }(),
-            o = function h(e, t, n) {
+            o = function _(e, t, n) {
                 null === e && (e = Function.prototype);
                 var i = Object.getOwnPropertyDescriptor(e, t);
                 if (void 0 === i) {
                     var a = Object.getPrototypeOf(e);
-                    return null === a ? void 0 : h(a, t, n)
+                    return null === a ? void 0 : _(a, t, n)
                 }
                 if ("value" in i) return i.value;
                 var r = i.get;
@@ -22299,7 +22299,8 @@
             c = n(185),
             d = n(353),
             f = n(322),
-            p = n(203);
+            p = n(203),
+            h = n(276);
         t.PlayerUIClipsEnabler = function(e) {
             function t(e, n, r, s) {
                 i(this, t);
@@ -22314,13 +22315,14 @@
                         i = e.online,
                         a = e.env.playerType,
                         r = e.playback.hasPlayed,
-                        s = a === p.PLAYER_HIGHLIGHTER,
-                        o = a === p.PLAYER_CURSE,
-                        c = n === l.CONTENT_MODE_LIVE && !i,
-                        d = n !== l.CONTENT_MODE_LIVE && n !== u.CONTENT_MODE_VOD,
-                        f = r && !(c || d || s || o),
-                        h = n === u.CONTENT_MODE_VOD;
-                    this._toggle(f, h)
+                        s = e.backend.getBackend() === h.BACKEND_HLS,
+                        o = a === p.PLAYER_HIGHLIGHTER,
+                        c = a === p.PLAYER_CURSE,
+                        d = n === l.CONTENT_MODE_LIVE && !i,
+                        f = n !== l.CONTENT_MODE_LIVE && n !== u.CONTENT_MODE_VOD,
+                        _ = r && !(d || f || o || c || s),
+                        g = n === u.CONTENT_MODE_VOD;
+                    this._toggle(_, g)
                 }
             }, {
                 key: "_toggle",
