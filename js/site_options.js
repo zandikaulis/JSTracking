@@ -284,6 +284,16 @@ window.SiteOptions = {
                 "value": "old"
             }]
         },
+        "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": {
+            "name": "DISCOVER_SHOW_COVIEWS",
+            "groups": [{
+                "weight": 0,
+                "value": "show"
+            }, {
+                "weight": 100,
+                "value": "no_show"
+            }]
+        },
         "403707e6-abb9-401c-a2ca-dd643293dbdd": {
             "name": "VOD_COVIEWS_SHUFFLE",
             "groups": [{
