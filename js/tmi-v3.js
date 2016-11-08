@@ -2580,9 +2580,13 @@
                 }
                 return deferred
             };
-            Room.prototype.recentMessages = function() {
+            Room.prototype.recentMessages = function(messageCount) {
                 var deferred = $.Deferred();
-                this.session._tmiApi.get("/api/rooms/" + this.ownerId + "/recent_messages").done(function(response) {
+                var params = {};
+                if (messageCount) {
+                    params.count = messageCount
+                }
+                this.session._tmiApi.get("/api/rooms/" + this.ownerId + "/recent_messages", params).done(function(response) {
                     deferred.resolve(response.messages)
                 }, {
                     cache: false
@@ -2978,9 +2982,9 @@
                     }, RECONNECT_TIMEOUT / 2)
                 }, RECONNECT_TIMEOUT / 2)
             };
-            Room.prototype.fetchHistory = function() {
+            Room.prototype.fetchHistory = function(messageCount) {
                 var _this = this;
-                return this.recentMessages().then(function(messages) {
+                return this.recentMessages(messageCount).then(function(messages) {
                     _this._addHistoricalMessages(messages);
                     return messages.length
                 })
