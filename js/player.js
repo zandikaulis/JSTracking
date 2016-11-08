@@ -8023,7 +8023,7 @@
                     C = g.get(!1),
                     T = g.get(!0);
                 _ = {
-                    app_version: "2016.11.07-225652+4cf08199b784cc5738b20a5f5932d9e29b48f988",
+                    app_version: "2016.11.08-005532+b5091622ff5e7b6813bfb7c741505b17f9dbcb84",
                     flash_version: m,
                     url: (0, h.sanitizeQuery)(y.href),
                     host: y.host,
@@ -9236,7 +9236,7 @@
             ke._setABS = function(e) {
                 var t = n.getState(),
                     i = t.stream;
-                i.contentType === S.CONTENT_MODE_LIVE && (0, q["default"])(le, e) && (ke._enableABS(), "yes-forced" === le ? n.dispatch((0, U.selectQuality)(U.QUALITY_AUTO)) : "yes-ft-only" !== le || m.localStore.get(U.KEY_AUTO_QUALITY_FORCED, !1) || (n.dispatch((0, U.selectQuality)(U.QUALITY_AUTO)), m.localStore.set(U.KEY_AUTO_QUALITY_FORCED, !0)))
+                i.contentType === S.CONTENT_MODE_LIVE && (0, q["default"])(le, e) && (ke._enableABS(), "yes-forced" === e ? n.dispatch((0, U.selectQuality)(U.QUALITY_AUTO)) : "yes-ft-only" !== e || m.localStore.get(U.KEY_AUTO_QUALITY_FORCED, !1) || (n.dispatch((0, U.selectQuality)(U.QUALITY_AUTO)), m.localStore.set(U.KEY_AUTO_QUALITY_FORCED, !0)))
             }, ke._enableABS = function() {
                 n.getState().backend.enableABS()
             }, ke.destroy = function() {
