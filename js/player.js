@@ -1009,7 +1009,8 @@
                             }
                         })), this.tracker.setProperties((0, y.krakenUserInfo)().then(function(e) {
                             return {
-                                user_id: e._id
+                                user_id: e._id,
+                                staff: "staff" === e.type
                             }
                         })), this.options.channel) {
                         var e = (0, y.channelAPIInfo)(this.options.channel);
@@ -1570,7 +1571,7 @@
         e.exports = n
     }, function(e, t, n) {
         function i(e) {
-            return a(this, e).get(e)
+            return a(this, e).get(e);
         }
         var a = n(108);
         e.exports = i
@@ -8023,7 +8024,7 @@
                     C = g.get(!1),
                     T = g.get(!0);
                 _ = {
-                    app_version: "2016.11.08-223043+a8600e77c6a2e942cab93974bde1149c8fb7d897",
+                    app_version: "2016.11.09-220257+affed63e47913ca887e480af7fba2c245e20dfd0",
                     flash_version: m,
                     url: (0, h.sanitizeQuery)(y.href),
                     host: y.host,
