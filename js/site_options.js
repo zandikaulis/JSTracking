@@ -118,7 +118,7 @@ window.SiteOptions = {
     "fl_details_link_enabled": true,
     "is_bk_enabled": true,
     "bits_promo_enabled": false,
-    "p_cheer_enabled": false,
+    "p_cheer_enabled": true,
     "is_sm_enabled": true,
     "is_sm_enabled_frontend": true,
     "experiments": {
