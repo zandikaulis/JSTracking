@@ -8031,7 +8031,7 @@
                     C = g.get(!1),
                     T = g.get(!0);
                 _ = {
-                    app_version: "2016.11.11-023317+619dc4d7bbaa40b5855d637579c9ac50d01f0e00",
+                    app_version: "2016.11.11-183146+b2daf05199d2bb194c97844080eccb052778824f",
                     flash_version: m,
                     url: (0, h.sanitizeQuery)(y.href),
                     host: y.host,
@@ -9017,10 +9017,9 @@
             }
 
             function l(e) {
-                n.dispatch((0, U.setABSQualities)(Ie.getQualities(), e.stream_format_current));
-                var i = e.stream_format_current,
-                    r = e.stream_format_previous;
-                r !== i && t.trackEvent("abs_stream_format_change", e)
+                var n = e.stream_format_current,
+                    i = e.stream_format_previous;
+                i !== n && t.trackEvent("abs_stream_format_change", e)
             }
 
             function v(e) {
@@ -9189,7 +9188,7 @@
                     var t = n.getState(),
                         i = t.quality,
                         r = i.selected;
-                    r !== U.QUALITY_AUTO && n.dispatch((0, U.setQualities)(Ie.getQualities()))
+                    r === U.QUALITY_AUTO ? n.dispatch((0, U.setABSQualities)(Ie.getQualities(), e)) : n.dispatch((0, U.setQualities)(Ie.getQualities()))
                 }), Ne.addEventListener(re.MANIFEST_EXTRA_INFO, function(e) {
                     e.abs = "true" === e.abs, e.suppress = "true" === e.suppress, e.spectre = "true" === e.spectre, n.dispatch((0, O.setManifestInfo)(e)), n.dispatch((0, x.setLoading)(!0))
                 })
