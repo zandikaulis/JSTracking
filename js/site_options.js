@@ -472,6 +472,19 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "81ecf0db-9eec-44a2-97da-ce5d479a6414": {
+            "name": "making_the_doughnuts",
+            "groups": [{
+                "weight": 5,
+                "value": "higher_button"
+            }, {
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 5,
+                "value": "on_player"
+            }]
+        },
         "84d81180-6faa-4c58-98d7-48bbff5035c7": {
             "name": "baking_bread_us",
             "groups": [{
