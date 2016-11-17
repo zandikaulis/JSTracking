@@ -475,9 +475,6 @@ window.SiteOptions = {
         "81ecf0db-9eec-44a2-97da-ce5d479a6414": {
             "name": "android_making_the_doughnuts",
             "groups": [{
-                "weight": 0,
-                "value": "higher_button"
-            }, {
                 "weight": 50,
                 "value": "control"
             }, {
