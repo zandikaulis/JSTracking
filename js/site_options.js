@@ -473,15 +473,15 @@ window.SiteOptions = {
             }]
         },
         "81ecf0db-9eec-44a2-97da-ce5d479a6414": {
-            "name": "making_the_doughnuts",
+            "name": "android_making_the_doughnuts",
             "groups": [{
-                "weight": 5,
+                "weight": 0,
                 "value": "higher_button"
             }, {
-                "weight": 90,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 5,
+                "weight": 50,
                 "value": "on_player"
             }]
         },
@@ -706,7 +706,7 @@ window.SiteOptions = {
             "name": "PERPETUA",
             "groups": [{
                 "weight": 100,
-                "value": "no"
+                "value": "control"
             }, {
                 "weight": 0,
                 "value": "yes"
