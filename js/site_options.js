@@ -287,10 +287,10 @@ window.SiteOptions = {
         "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": {
             "name": "DISCOVER_SHOW_COVIEWS",
             "groups": [{
-                "weight": 0,
+                "weight": 50,
                 "value": "show"
             }, {
-                "weight": 100,
+                "weight": 50,
                 "value": "no_show"
             }]
         },
