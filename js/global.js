@@ -18981,17 +18981,17 @@ function(e, t) {
                         s.hide(), e.storage.set(r.dismissKey, !0)
                     })
                 },
-                s = function(n, r, s, o, u, a, f, l) {
-                    var c = {},
-                        h = "",
-                        p = !1,
-                        d = !1,
+                s = function(n, r, s, o, u, a, f, l, c, h) {
+                    var p = {},
+                        d = "",
                         v = !1,
                         m = !1,
-                        g = r[s];
-                    u.actionRequired && (d = u.actionRequired.indexOf(g) > -1), u.success && (v = u.success.indexOf(g) > -1), u.pending && (m = u.pending.indexOf(g) > -1), v ? (h = f.success, p = !e.storage.get(h), c.showDismissButton = !0, c.showActionButton = !0) : m ? (h = f.pending, p = !e.storage.get(h), c.showDismissButton = !0) : d && (c.actionRequired = d, c.showActionButton = !0, p = !0), p && a && t.each(a, function(e, n) {
-                        t.inArray(r[n.attribute], n.states) < 0 && (p = !1)
-                    }), p && (e.storage.del(h), c[r.partner_state] = !0, c[g] = !0, c.login = n, c.dismissKey = h, i(o, f, c, l))
+                        g = !1,
+                        y = !1,
+                        b = r[o];
+                    a.actionRequired && (m = a.actionRequired.indexOf(b) > -1), a.success && (g = a.success.indexOf(b) > -1), a.pending && (y = a.pending.indexOf(b) > -1), g ? (d = l.success, v = !e.storage.get(d), p.showDismissButton = !0, p.showActionButton = !0) : y ? (d = l.pending, v = !e.storage.get(d), p.showDismissButton = !0) : m && (p.actionRequired = m, p.showActionButton = !0, v = !0), !v && c && !s.payable && (v = !0), v && f && t.each(f, function(e, n) {
+                        t.inArray(r[n.attribute], n.states) < 0 && (v = !1)
+                    }), v && (e.storage.del(d), p[r.partner_state] = !0, p[b] = !0, p.login = n, p.dismissKey = d, i(u, l, p, h))
                 };
             e.user().then(function(e) {
                 return e.login
@@ -19000,11 +19000,13 @@ function(e, t) {
                     payoutEntity: e.api.get("/api/channels/" + t + "/payout_entity"),
                     login: t
                 }, n.activeProductOnly && (results.product = e.api.get("/api/channels/" + t + "/product")), RSVP.hash(results)
+            }).then(function(t) {
+                return t.payoutEntity && n.shouldCheckPayable && (t.isPayable = e.api.get("/api/payouts/is_payee_payable")), RSVP.hash(t)
             }).then(function(e) {
                 var t = e.payoutEntity;
                 if (!t.partner_state || t.caller_id !== t.owner_id) return;
                 if (n.activeProductOnly && !e.product) return;
-                s(e.login, t, n.attribute, n.bannerName, n.states, n.requiredStates, n.dismissKeys, r)
+                s(e.login, t, e.isPayable, n.attribute, n.bannerName, n.states, n.requiredStates, n.dismissKeys, n.shouldCheckPayable, r)
             }, function(e) {
                 if (e && e.status === 401) return;
                 throw e
@@ -19034,14 +19036,13 @@ function(e, t) {
                 optionName: "tax_notifications_enabled",
                 attribute: "royalty_tax_state",
                 states: {
-                    actionRequired: r,
-                    pending: i,
-                    success: s
+                    actionRequired: r
                 },
-                dismissKeys: {
-                    pending: "Twitch.tax.pendingRoyaltyBannerDismissed",
-                    success: "Twitch.tax.successRoyaltyBannerDismissed"
-                }
+                requiredStates: [{
+                    attribute: "individual_partner",
+                    states: [!0]
+                }],
+                shouldCheckPayable: !0
             },
             paymentAmendmentOptions: {
                 bannerName: "payment_amendment_banner",
@@ -19286,7 +19287,8 @@ function(e, t) {
             }
         }, i, n);
         return o.escape && (o.text = e.display.escape(r)), noty(o)
-    }, r.alert = function(e, t, n) {
+    }, r.alert = function(
+        e, t, n) {
         return r._dispatch("alert", e, t, n)
     }, r.notice = function(e, t, n) {
         return r._dispatch("notice", e, t, n)
