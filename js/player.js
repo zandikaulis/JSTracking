@@ -200,9 +200,9 @@
             ue = n(238),
             ce = n(265),
             de = n(205),
-            fe = n(437),
-            pe = n(439);
-        n(271).polyfill(), n.p = S.playerHost + "/", n(443), n(448), window.google || $.getScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = a, window.Twitch.Player = a
+            fe = n(439),
+            pe = n(441);
+        n(271).polyfill(), n.p = S.playerHost + "/", n(445), n(450), window.google || $.getScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = a, window.Twitch.Player = a
     }, function(e, t, n) {
         var i = n(2),
             r = n(3),
@@ -8022,7 +8022,7 @@
                     T = g.get(!1),
                     k = g.get(!0);
                 _ = {
-                    app_version: "2016.11.17-223835+50d056bfbcd1fbfb0552fd539bc05b3b7b7afd39",
+                    app_version: "2016.11.17-233348+fd1011124f3fec29fbed221d76aa1bfef6e9cfcc",
                     flash_version: v,
                     url: (0, h.sanitizeQuery)(m.href),
                     host: m.host,
@@ -20426,7 +20426,7 @@
         }
 
         function r() {
-            return (0, a.createStore)(x, (0, a.compose)((0, a.applyMiddleware)(s["default"]), (window.devToolsExtension, function(e) {
+            return (0, a.createStore)(U, (0, a.compose)((0, a.applyMiddleware)(s["default"]), (window.devToolsExtension, function(e) {
                 return e
             })))
         }
@@ -20463,9 +20463,10 @@
             N = n(436),
             R = n(438),
             D = n(440),
-            M = n(441),
-            j = n(442),
-            x = (n(399), n(337), (0, a.combineReducers)({
+            M = n(442),
+            j = n(443),
+            x = n(444),
+            U = (n(399), n(337), (0, a.combineReducers)({
                 accessToken: l.accessToken,
                 ads: u.ads,
                 adsManager: c.adsManager,
@@ -20489,12 +20490,13 @@
                 stats: O.stats,
                 stream: I.stream,
                 streamMetadata: L.streamMetadata,
-                tracking: N.tracking,
-                ui: R.ui,
-                usher: D.usher,
-                viewercount: M.viewercount,
+                timelineMetadata: N.timelineMetadata,
+                tracking: R.tracking,
+                ui: D.ui,
+                usher: M.usher,
+                viewercount: j.viewercount,
                 screen: w.screen,
-                window: j.windowReducer
+                window: x.windowReducer
             }))
     }, function(e, t, n) {
         "use strict";
@@ -21547,7 +21549,7 @@
                 }, t.prototype.t = function() {
                     return this.translator && this.translator.translate.apply(this.translator, arguments)
                 }, t.prototype.exists = function() {
-                    return this.translator && this.translator.exists.apply(this.translator, arguments);
+                    return this.translator && this.translator.exists.apply(this.translator, arguments)
                 }, t.prototype.setDefaultNamespace = function(e) {
                     this.options.defaultNS = e
                 }, t.prototype.loadNamespaces = function(e, t) {
@@ -23670,6 +23672,52 @@
         }
 
         function r() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u,
+                t = arguments[1];
+            switch (t.type) {
+                case a.ACTION_SET_MUTED_SEGMENTS:
+                    return (0, l["default"])({}, e, {
+                        mutedSegments: t.mutedSegments
+                    });
+                case o.ACTION_SET_STREAM:
+                    return u;
+                default:
+                    return e
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.timelineMetadata = r;
+        var a = n(437),
+            o = n(299),
+            s = n(186),
+            l = i(s),
+            u = {
+                mutedSegments: []
+            }
+    }, function(e, t) {
+        "use strict";
+
+        function n(e) {
+            return {
+                type: i,
+                mutedSegments: e
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.setMutedSegments = n;
+        var i = t.ACTION_SET_MUTED_SEGMENTS = "setMutedSegments"
+    }, function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return e && e.__esModule ? e : {
+                "default": e
+            }
+        }
+
+        function r() {
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                 t = arguments[1];
             switch (t.type) {
@@ -23686,7 +23734,7 @@
             o = i(a),
             s = n(66),
             l = i(s),
-            u = n(437),
+            u = n(439),
             c = ["host_channel"]
     }, function(e, t) {
         "use strict";
@@ -23727,7 +23775,7 @@
         }), t.ui = r;
         var a = n(186),
             o = i(a),
-            s = n(439),
+            s = n(441),
             l = {
                 isMini: !1
             }
@@ -23809,7 +23857,7 @@
          * http://jquery.org/license
          */
         ! function(o) {
-            r = [n(449), n(450), n(454), n(452), n(453)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
+            r = [n(451), n(452), n(456), n(454), n(455)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
         }(function(e) {
             return e.widget("ui.slider", e.ui.mouse, {
                 version: "1.12.0-beta.1",
@@ -24110,7 +24158,7 @@
          * http://jquery.org/license
          */
         ! function(o) {
-            r = [n(449), n(451), n(452), n(453)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
+            r = [n(451), n(453), n(454), n(455)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
         }(function(e) {
             var t = !1;
             return e(document).on("mouseup", function() {
@@ -24177,14 +24225,14 @@
     }, function(e, t, n) {
         var i, r, a;
         ! function(o) {
-            r = [n(449), n(452)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
+            r = [n(451), n(454)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
         }(function(e) {
             return e.ui.ie = !!/msie [\w.]+/.exec(navigator.userAgent.toLowerCase())
         })
     }, function(e, t, n) {
         var i, r, a;
         ! function(o) {
-            r = [n(449)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
+            r = [n(451)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
         }(function(e) {
             return e.ui = e.ui || {}, e.ui.version = "1.12.0-beta.1"
         })
@@ -24199,7 +24247,7 @@
          * http://jquery.org/license
          */
         ! function(o) {
-            r = [n(449), n(452)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
+            r = [n(451), n(454)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
         }(function(e) {
             var t = 0,
                 n = Array.prototype.slice;
@@ -24450,7 +24498,7 @@
          * http://jquery.org/license
          */
         ! function(o) {
-            r = [n(449), n(452)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
+            r = [n(451), n(454)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
         }(function(e) {
             return e.ui.keyCode = {
                 BACKSPACE: 8,
