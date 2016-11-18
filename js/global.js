@@ -17864,7 +17864,8 @@ function(e, t) {
             NEXUS_ROLLOUT: "428d3b07-cc7a-424f-aad0-971f5415879a",
             DETERMINATION: "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
             CHANNEL_FOLLOW_CTA: "8fe5705b-1c85-4d6f-bba0-d99c36b0d7d4",
-            DISCOVER_SHOW_COVIEWS: "3e011e23-ef29-46a5-af4b-a86e15d8c9e6"
+            DISCOVER_SHOW_COVIEWS: "3e011e23-ef29-46a5-af4b-a86e15d8c9e6",
+            PERPETUA: "af8f152a-f618-416e-8b79-d6ac30479018"
         },
         i = {
             "aaac75ea-c969-4826-b32d-ceefac620a79": "no",
@@ -17896,7 +17897,8 @@ function(e, t) {
             "428d3b07-cc7a-424f-aad0-971f5415879a": "disabled",
             "cc164e1e-1361-4730-8d9b-0091a0f9cb8f": "no",
             "8fe5705b-1c85-4d6f-bba0-d99c36b0d7d4": "control",
-            "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": "no_show"
+            "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": "no_show",
+            "af8f152a-f618-416e-8b79-d6ac30479018": "control"
         },
         s = "experiment_overrides",
         o = {},
@@ -17907,7 +17909,8 @@ function(e, t) {
             ESL_CSGO_STEAM_LINK: "show-cta",
             CHANNEL_PAGE_REDESIGN: "new",
             DETERMINATION: "yes",
-            DISCOVER_SHOW_COVIEWS: "show"
+            DISCOVER_SHOW_COVIEWS: "show",
+            PERPETUA: "yes"
         };
     _.each(Object.keys(u), function(t) {
         o[r[t]] = e.user().then(function(e) {
@@ -19287,8 +19290,7 @@ function(e, t) {
             }
         }, i, n);
         return o.escape && (o.text = e.display.escape(r)), noty(o)
-    }, r.alert = function(
-        e, t, n) {
+    }, r.alert = function(e, t, n) {
         return r._dispatch("alert", e, t, n)
     }, r.notice = function(e, t, n) {
         return r._dispatch("notice", e, t, n)
