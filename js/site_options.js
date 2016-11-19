@@ -725,6 +725,16 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
+        "b0033638-a84e-4f57-8952-7115be4dc3b6": {
+            "name": "also_known_as",
+            "groups": [{
+                "weight": 50,
+                "value": "aliases"
+            }, {
+                "weight": 50,
+                "value": "no_aliases"
+            }]
+        },
         "b29d055f-74f2-40b9-9383-9c4b79b30360": {
             "name": "cloudfront web-cdn",
             "groups": [{
