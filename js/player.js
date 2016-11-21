@@ -41,7 +41,7 @@
                     login: P.cookie.get("login") || null,
                     deviceID: w.get(!1),
                     devrecommendations: s.devrecommendations
-                })), y.dispatch(X.loadDefaultLang(s.lang)), y.dispatch((0, J.setPlayerType)(s.player)), $.push(new V.PubSub(y, s)), l = new _.AnalyticsTracker(y, s), y.dispatch((0, ie.setAnalyticsTracker)(l)), y.dispatch((0, ne.initializeQuality)()), c = s.allowfullscreen ? new F.FullScreen(n) : new H.NoFullScreen(n), E = new N.Video(n, l, y, s, c), g = new O.State(E, c, y, l, s), s.debug && (window.state = g), (0, R.forwardProperties)(o, E), k = new h.Analytics(E, l, g, y, s), r(s), A = new D.EmbedHost(E, g, y), new M.PlayerHotkeys(E, n, y, s), y.dispatch((0, te.setAutoplay)(s.autoplay)), s.quality && y.dispatch((0, ne.selectQuality)(s.quality)), s.controls && (f = new j.PlayerUI(E, n, l, g, c, y, s), I = new se.ClipGenerator(n, g, y)), a().then(function(e) {
+                })), y.dispatch(X.loadDefaultLang(s.lang)), y.dispatch((0, J.setPlayerType)(s.player)), K.push(new V.PubSub(y, s)), l = new _.AnalyticsTracker(y, s), y.dispatch((0, ie.setAnalyticsTracker)(l)), y.dispatch((0, ne.initializeQuality)()), c = s.allowfullscreen ? new F.FullScreen(n) : new H.NoFullScreen(n), $ = new he.TimelineMetadataManager(y), E = new N.Video(n, l, y, s, c), g = new O.State(E, c, y, l, s), s.debug && (window.state = g), (0, R.forwardProperties)(o, E), k = new h.Analytics(E, l, g, y, s), r(s), A = new D.EmbedHost(E, g, y), new M.PlayerHotkeys(E, n, y, s), y.dispatch((0, te.setAutoplay)(s.autoplay)), s.quality && y.dispatch((0, ne.selectQuality)(s.quality)), s.controls && (f = new j.PlayerUI(E, n, l, g, c, y, s), I = new se.ClipGenerator(n, g, y)), a().then(function(e) {
                     return y.dispatch((0, q.setAdblockDetected)(e))
                 }).then(function() {
                     s.channel ? y.dispatch(Y.setStream(Y.TYPE_CHANNEL, s.channel)) : s.video && y.dispatch(Y.setStream(Y.TYPE_VIDEO, s.video))
@@ -116,7 +116,8 @@
                 k = void 0,
                 A = void 0,
                 I = void 0,
-                $ = [];
+                $ = void 0,
+                K = [];
             o.setChannel = function(e) {
                 y.dispatch(Y.setStream(Y.TYPE_CHANNEL, e))
             }, o.setVideo = function(e) {
@@ -133,9 +134,9 @@
             }, o.setTrackingProperties = function(e) {
                 y.dispatch((0, fe.setTrackingProperties)(e))
             }, n(), o.destroy = function() {
-                f.destroy(), E.destroy(), g.destroy(), c.destroy(), k.destroy(), A.destroy(), $.forEach(function(e) {
+                f.destroy(), E.destroy(), g.destroy(), c.destroy(), k.destroy(), A.destroy(), K.forEach(function(e) {
                     return e.destroy()
-                })
+                }), $.destroy()
             }
         }
         Object.defineProperty(t, "__esModule", {
@@ -201,8 +202,9 @@
             ce = n(265),
             de = n(205),
             fe = n(439),
-            pe = n(441);
-        n(271).polyfill(), n.p = S.playerHost + "/", n(445), n(450), window.google || $.getScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = a, window.Twitch.Player = a
+            pe = n(441),
+            he = n(445);
+        n(271).polyfill(), n.p = S.playerHost + "/", n(446), n(451), window.google || $.getScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = a, window.Twitch.Player = a
     }, function(e, t, n) {
         var i = n(2),
             r = n(3),
@@ -1566,7 +1568,7 @@
     }, function(e, t, n) {
         function i(e, t) {
             var n = e.__data__;
-            return r(t) ? n["string" == typeof t ? "string" : "hash"] : n.map
+            return r(t) ? n["string" == typeof t ? "string" : "hash"] : n.map;
         }
         var r = n(109);
         e.exports = i
@@ -8022,7 +8024,7 @@
                     T = g.get(!1),
                     k = g.get(!0);
                 _ = {
-                    app_version: "2016.11.18-212827+5b340733571a5e4c95666fe7a1ec9c1eb6d32f6a",
+                    app_version: "2016.11.21-210812+3cc23f2689a839ba1e09928f461afcb922a7daf9",
                     flash_version: v,
                     url: (0, h.sanitizeQuery)(m.href),
                     host: m.host,
@@ -14637,7 +14639,7 @@
                 }, {
                     showInfo: !0
                 });
-                $(t).addClass("player"), $(t).append(n(357)), o.dispatch((0, O.initializeCaptionsSettings)()), o.dispatch((0, I.initializePlaybackSettings)()), U = new u.PlayerUIState(t, r, o), B = new d.PlayerUIInfo(e, t, o, S), V = new f.PlayerUISeek(e, t, o), F = new p.PlayerUIStats(t, o), H = new h.PlayerUIUpnext(e, t, o), re = new _.PlayerUIRecommendations(e, t, o), ae = new A.PlayerUIError(t, o), G = new g.PlayerUILeaveDialog(e, t, i, o, S), q = new E.PlayerUILang(t, o), K = new v.PlayerUISubscribeOverlay(t, r), Y = new y.PlayerUIResume(e, r, o, S), z = new C.PlayerUISeekBarPopup(t), W = new m.PlayerUISeekBarMarkers(e, t, r, o, z), Q = new P.PlayerUIThumbnailPreviews(t, r, o, z), X = new b.PlayerUIMutedSegments(t, r, o), Z = new w.AgeRestrictionOverlay(t, e, o), ee = new k.PlayerUIControlsDisplay(e, t, o), te = new c.PlayerUIControls(e, t, r, o, ee, a, S), ie = new T.PlayerUISettings(e, t, r, o, i, ee, S);
+                $(t).addClass("player"), $(t).append(n(357)), o.dispatch((0, O.initializeCaptionsSettings)()), o.dispatch((0, I.initializePlaybackSettings)()), U = new u.PlayerUIState(t, r, o), B = new d.PlayerUIInfo(e, t, o, S), V = new f.PlayerUISeek(e, t, o), F = new p.PlayerUIStats(t, o), H = new h.PlayerUIUpnext(e, t, o), re = new _.PlayerUIRecommendations(e, t, o), ae = new A.PlayerUIError(t, o), G = new g.PlayerUILeaveDialog(e, t, i, o, S), q = new E.PlayerUILang(t, o), K = new v.PlayerUISubscribeOverlay(t, r), Y = new y.PlayerUIResume(e, r, o, S), z = new C.PlayerUISeekBarPopup(t), W = new m.PlayerUISeekBarMarkers(e, t, r, o, z), Q = new P.PlayerUIThumbnailPreviews(t, r, o, z), X = new b.PlayerUIMutedSegments(t, o), Z = new w.AgeRestrictionOverlay(t, e, o), ee = new k.PlayerUIControlsDisplay(e, t, o), te = new c.PlayerUIControls(e, t, r, o, ee, a, S), ie = new T.PlayerUISettings(e, t, r, o, i, ee, S);
                 var R = new N.ClipGenerator(t, r, o);
                 ne = new L.PlayerUIClipsEnabler(t, o, l.localStore, R), x(S), $(t).attr("data-initializing", !0), e.addEventListener(M.PLAYER_INIT, function() {
                     $(t).attr("data-initializing", !1)
@@ -16574,43 +16576,56 @@
                     return n && e(t.prototype, n), i && e(t, i), t
                 }
             }(),
-            s = n(171),
-            l = n(157),
-            u = n(324),
-            c = $("<span></span>").addClass("player-slider__muted");
+            s = n(157),
+            l = n(324),
+            u = $("<span></span>").addClass("player-slider__muted");
         t.PlayerUIMutedSegments = function(e) {
-            function t(e, n, a) {
+            function t(e, n) {
                 i(this, t);
-                var o = r(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return o._root = e, o._state = n, o._stateStore = a, o._segmentsContainer = $(".js-seek-slider .js-muted-segments-container", o._root), o._alertElement = $(".js-player-alert", o._root), o._state.addEventListener(s.EVENT_STATE_UPDATE, o.handleEvent.bind(o)), o.subscribe(a, ["playback"], function(e, t) {
-                    e.playback.duration !== t.playback.duration && o._displayMutedSegments()
-                }), o
+                var a = r(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+                return a._root = e, a._stateStore = n, a._segmentsContainer = $(".js-seek-slider .js-muted-segments-container", a._root), a._alertElement = $(".js-player-alert", a._root), a.subscribe(n, ["playback.duration"], a._onDuration.bind(a)), a.subscribe(n, ["timelineMetadata.mutedSegments"], a._onMutedSegments.bind(a)), a._alertElement.attr("data-active", !1), a._onDuration(a._stateStore.getState()), a._onMutedSegments(a._stateStore.getState()), a
             }
             return a(t, e), o(t, [{
-                key: "handleEvent",
+                key: "_onDuration",
                 value: function() {
-                    0 !== this._state.getMutedSegments().length && 0 !== this._stateStore.getState().duration && 0 === this._segmentsContainer.children().length && (this._displayMutedSegments(), this._showAlert())
+                    this._displayMutedSegments()
+                }
+            }, {
+                key: "_onMutedSegments",
+                value: function(e) {
+                    var t = e.timelineMetadata;
+                    0 !== t.mutedSegments.length ? this._showAlert() : this._hideAlert(), this._displayMutedSegments()
                 }
             }, {
                 key: "_displayMutedSegments",
                 value: function() {
-                    var e = this,
-                        t = this._state.getMutedSegments().map(function(t) {
-                            var n = e._stateStore.getState().playback.duration;
-                            return c.clone().css({
-                                width: 100 * t.duration / n + "%",
-                                left: 100 * t.offset / n + "%"
+                    var e = this._stateStore.getState(),
+                        t = e.playback,
+                        n = e.timelineMetadata,
+                        i = t.duration,
+                        r = n.mutedSegments;
+                    if (this._segmentsContainer.empty(), !(i <= 0) && isFinite(i)) {
+                        var a = r.map(function(e) {
+                            return u.clone().css({
+                                width: 100 * e.duration / i + "%",
+                                left: 100 * e.offset / i + "%"
                             })
                         });
-                    this._segmentsContainer.empty().append(t)
+                        this._segmentsContainer.append(a)
+                    }
                 }
             }, {
                 key: "_showAlert",
                 value: function() {
-                    this._alertElement.find(".js-player-alert__message").text(l.mutedSegmentsMessage), this._alertElement.attr("data-active", !0)
+                    this._alertElement.find(".js-player-alert__message").text(s.mutedSegmentsMessage), this._alertElement.attr("data-active", !0)
+                }
+            }, {
+                key: "_hideAlert",
+                value: function() {
+                    this._alertElement.attr("data-active", !1)
                 }
             }]), t
-        }(u.UIStateSubscriber)
+        }(l.UIStateSubscriber)
     }, function(e, t, n) {
         "use strict";
 
@@ -23846,6 +23861,97 @@
             value: !0
         }), t.windowReducer = i;
         var r = n(399)
+    }, function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return e && e.__esModule ? e : {
+                "default": e
+            }
+        }
+
+        function r(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.TimelineMetadataManager = void 0;
+        var a = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var i = t[n];
+                        i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                    }
+                }
+                return function(t, n, i) {
+                    return n && e(t.prototype, n), i && e(t, i), t
+                }
+            }(),
+            o = n(238),
+            s = n(205),
+            l = n(185),
+            u = n(437),
+            c = n(256),
+            d = i(c);
+        t.TimelineMetadataManager = function() {
+            function e(t) {
+                r(this, e), this._stateStore = t, this._subscribeStream(this._stateStore.getState()), this.unsub = (0, o.subscribe)(this._stateStore, ["stream"], this._subscribeStream.bind(this))
+            }
+            return a(e, [{
+                key: "_subscribeStream",
+                value: function(e) {
+                    var t = this,
+                        n = e.stream;
+                    n.contentType === s.CONTENT_MODE_VOD && this._getMutedSegments(n.videoId).then(function(e) {
+                        t._stateStore.dispatch((0, u.setMutedSegments)(e))
+                    })
+                }
+            }, {
+                key: "_getMutedSegments",
+                value: function(e) {
+                    var t = this;
+                    return (0, l.videoInfo)(e).then(function(e) {
+                        return t._normalizedMutedSegments(e.muted_segments)
+                    })["catch"](function() {
+                        return []
+                    })
+                }
+            }, {
+                key: "_normalizedMutedSegments",
+                value: function() {
+                    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+                    if (!this._isSegmentsFormatted(e)) return [];
+                    if (e.length <= 1) return e;
+                    var t = e.slice(0).sort(function(e, t) {
+                        return e.offset - t.offset
+                    });
+                    return this._combineOverlappingSegments(t)
+                }
+            }, {
+                key: "_isSegmentsFormatted",
+                value: function(e) {
+                    var t = !0;
+                    return e.forEach(function(e) {
+                        e.hasOwnProperty("offset") && e.hasOwnProperty("duration") && (0, d["default"])(e.offset) && (0, d["default"])(e.duration) || (t = !1)
+                    }), t
+                }
+            }, {
+                key: "_combineOverlappingSegments",
+                value: function(e) {
+                    return e.reduce(function(e, t) {
+                        var n = e[e.length - 1],
+                            i = n.offset + n.duration,
+                            r = t.offset + t.duration;
+                        return i < t.offset ? e.push(t) : i < r && (n.duration = r - n.offset), e
+                    }, [e[0]])
+                }
+            }, {
+                key: "destroy",
+                value: function() {
+                    this.unsub()
+                }
+            }]), e
+        }()
     }, function(e, t) {}, , , , , function(e, t, n) {
         var i, r, a;
         /*!
@@ -23857,7 +23963,7 @@
          * http://jquery.org/license
          */
         ! function(o) {
-            r = [n(451), n(452), n(456), n(454), n(455)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
+            r = [n(452), n(453), n(457), n(455), n(456)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
         }(function(e) {
             return e.widget("ui.slider", e.ui.mouse, {
                 version: "1.12.0-beta.1",
@@ -24158,7 +24264,7 @@
          * http://jquery.org/license
          */
         ! function(o) {
-            r = [n(451), n(453), n(454), n(455)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
+            r = [n(452), n(454), n(455), n(456)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
         }(function(e) {
             var t = !1;
             return e(document).on("mouseup", function() {
@@ -24225,14 +24331,14 @@
     }, function(e, t, n) {
         var i, r, a;
         ! function(o) {
-            r = [n(451), n(454)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
+            r = [n(452), n(455)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
         }(function(e) {
             return e.ui.ie = !!/msie [\w.]+/.exec(navigator.userAgent.toLowerCase())
         })
     }, function(e, t, n) {
         var i, r, a;
         ! function(o) {
-            r = [n(451)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
+            r = [n(452)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
         }(function(e) {
             return e.ui = e.ui || {}, e.ui.version = "1.12.0-beta.1"
         })
@@ -24247,7 +24353,7 @@
          * http://jquery.org/license
          */
         ! function(o) {
-            r = [n(451), n(454)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
+            r = [n(452), n(455)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
         }(function(e) {
             var t = 0,
                 n = Array.prototype.slice;
@@ -24498,7 +24604,7 @@
          * http://jquery.org/license
          */
         ! function(o) {
-            r = [n(451), n(454)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
+            r = [n(452), n(455)], i = o, a = "function" == typeof i ? i.apply(t, r) : i, !(void 0 !== a && (e.exports = a))
         }(function(e) {
             return e.ui.keyCode = {
                 BACKSPACE: 8,
