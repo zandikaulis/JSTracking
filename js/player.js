@@ -8024,7 +8024,7 @@
                     T = g.get(!1),
                     k = g.get(!0);
                 _ = {
-                    app_version: "2016.11.21-221349+8f047359205fd13baebd8765829a3d1ff9150531",
+                    app_version: "2016.11.22-220750+027de689c9f5192078105483d46c58add1c12da4",
                     flash_version: v,
                     url: (0, h.sanitizeQuery)(m.href),
                     host: m.host,
@@ -13908,6 +13908,7 @@
                 channel: {
                     displayName: e.channel.display_name,
                     name: e.channel.name,
+                    id: e.channel._id,
                     partner: e.channel.partner,
                     status: e.status
                 },
@@ -13929,6 +13930,7 @@
                 channel: {
                     displayName: e.channel.display_name,
                     name: e.channel.name,
+                    id: e.channel._id,
                     partner: e.channel.partner,
                     status: e.channel.status
                 },
@@ -16232,14 +16234,15 @@
             }, {
                 key: "_onTimeUpdate",
                 value: function() {
-                    var e = void 0;
+                    var e = void 0,
+                        t = this._stateStore.getState().streamMetadata.channel.id;
                     if (this._stateStore.getState().stream instanceof y.LiveContentStream) {
-                        var t = this._stateStore.getState().streamMetadata.broadcastID;
-                        e = this._stateStore.getState().online ? (0, g.setLivestreamResumeTime)(t, this._streamTimeOffset + this._state.currentTime) : (0, g.cancelLivestreamResumeTime)(t)
+                        var n = this._stateStore.getState().streamMetadata.broadcastID;
+                        e = this._stateStore.getState().online ? (0, g.setLivestreamResumeTime)(n, t, this._streamTimeOffset + this._state.currentTime) : (0, g.cancelLivestreamResumeTime)(n, t)
                     } else {
-                        var n = this._stateStore.getState().playback.duration;
-                        if (0 === n) return;
-                        e = n - this._state.currentTime > f.cancelResumeAmount ? (0, g.setVodResumeTime)(this._state.videoID, this._state.currentTime) : (0, g.cancelVodResumeTime)(this._state.videoID)
+                        var i = this._stateStore.getState().playback.duration;
+                        if (0 === i) return;
+                        e = i - this._state.currentTime > f.cancelResumeAmount ? (0, g.setVodResumeTime)(this._state.videoID, t, this._state.currentTime) : (0, g.cancelVodResumeTime)(this._state.videoID, t)
                     }
                     this._stateStore.dispatch(e)
                 }
@@ -16285,8 +16288,8 @@
             }
         }
 
-        function o(e, t, n, i) {
-            var r = $.ajax({
+        function o(e, t, n, i, r) {
+            var a = $.ajax({
                 method: "PUT",
                 url: m.resumewatchingHost + "user-video?id=" + e,
                 xhrFields: {
@@ -16294,12 +16297,13 @@
                 },
                 data: {
                     video_id: t,
-                    position: Math.floor(n),
-                    type: i
+                    channel_user_id: n,
+                    position: Math.floor(i),
+                    type: r
                 },
                 timeout: m.apiTimeout
             });
-            return Promise.resolve(r)
+            return Promise.resolve(a)
         }
 
         function s(e) {
@@ -16331,75 +16335,75 @@
             return 0 === t && 0 !== e || Math.abs(e - t) > n
         }
 
-        function d(e, t) {
-            return function(n, i) {
-                var r = i(),
-                    a = r.resumeWatch,
-                    s = r.window,
-                    l = r.analytics;
-                a.userId && u(l.playSessionStartTime, s.Date.now(), a.initUpdateOffset) && c(t, a.lastTimeStamp, a.updateInterval) && (o(a.userId, e, t, b.CONTENT_MODE_VOD), n({
+        function d(e, t, n) {
+            return function(i, r) {
+                var a = r(),
+                    s = a.resumeWatch,
+                    l = a.window,
+                    d = a.analytics;
+                s.userId && u(d.playSessionStartTime, l.Date.now(), s.initUpdateOffset) && c(n, s.lastTimeStamp, s.updateInterval) && (o(s.userId, e, t, n, b.CONTENT_MODE_VOD), i({
                     type: w,
-                    lastTimeStamp: Math.floor(t)
+                    lastTimeStamp: Math.floor(n)
                 }))
             }
         }
 
-        function f(e, t) {
-            return function(n, i) {
-                var r = i(),
-                    a = r.resumeWatch,
-                    s = r.window,
-                    l = r.analytics;
-                a.userId && u(l.playSessionStartTime, s.Date.now(), a.initUpdateOffset) && c(t, a.lastTimeStamp, a.updateInterval) && (o(a.userId, e, t, E.CONTENT_MODE_LIVE), n({
+        function f(e, t, n) {
+            return function(i, r) {
+                var a = r(),
+                    s = a.resumeWatch,
+                    l = a.window,
+                    d = a.analytics;
+                s.userId && u(d.playSessionStartTime, l.Date.now(), s.initUpdateOffset) && c(n, s.lastTimeStamp, s.updateInterval) && (o(s.userId, e, t, n, E.CONTENT_MODE_LIVE), i({
                     type: w,
-                    lastTimeStamp: Math.floor(t)
+                    lastTimeStamp: Math.floor(n)
                 }))
             }
         }
 
-        function p(e, t) {
-            return function(n, i) {
-                var r = i(),
-                    a = r.resumeWatch;
-                a.userId ? n(d(e, t)) : (n({
+        function p(e, t, n) {
+            return function(i, r) {
+                var a = r(),
+                    o = a.resumeWatch;
+                o.userId ? i(d(e, t, n)) : (i({
                     type: C,
                     videoID: e,
-                    time: t
-                }), v(i()))
+                    time: n
+                }), v(r()))
             }
         }
 
-        function h(e) {
-            return function(t, n) {
-                var i = n(),
-                    r = i.resumeWatch;
-                r.userId ? t(d(e, 0)) : (t({
-                    type: k,
-                    videoID: e
-                }), v(n()))
-            }
-        }
-
-        function _(e, t) {
+        function h(e, t) {
             return function(n, i) {
                 var r = i(),
                     a = r.resumeWatch;
-                a.userId ? n(f(e, t)) : (n({
-                    type: A,
-                    broadcastID: e,
-                    time: t
+                a.userId ? n(d(e, t, 0)) : (n({
+                    type: k,
+                    videoID: e
                 }), v(i()))
             }
         }
 
-        function g(e) {
-            return function(t, n) {
-                var i = n(),
-                    r = i.resumeWatch;
-                r.userId ? t(f(e, 0)) : (t({
+        function _(e, t, n) {
+            return function(i, r) {
+                var a = r(),
+                    o = a.resumeWatch;
+                o.userId ? i(f(e, t, n)) : (i({
+                    type: A,
+                    broadcastID: e,
+                    time: n
+                }), v(r()))
+            }
+        }
+
+        function g(e, t) {
+            return function(n, i) {
+                var r = i(),
+                    a = r.resumeWatch;
+                a.userId ? n(f(e, t, 0)) : (n({
                     type: P,
                     broadcastID: e
-                }), v(n()))
+                }), v(i()))
             }
         }
 
