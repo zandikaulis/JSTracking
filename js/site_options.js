@@ -119,7 +119,7 @@ window.SiteOptions = {
     "is_bk_enabled": true,
     "bits_promo_enabled": false,
     "p_cheer_enabled": true,
-    "prime_blackfriday_promo_enabled": false,
+    "prime_blackfriday_promo_enabled": true,
     "experiments": {
         "0173154a-7fa4-4a76-b8e1-0575eb3a7fcd": {
             "name": "android_live_preview",
