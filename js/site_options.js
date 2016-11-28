@@ -152,7 +152,7 @@ window.SiteOptions = {
             }]
         },
         "0d199578-56fd-4c70-bd46-ee433ccbc3cf": {
-            "name": "CPR Sub Nav",
+            "name": "cpr_sub_nav",
             "groups": [{
                 "weight": 95,
                 "value": "control"
@@ -169,6 +169,28 @@ window.SiteOptions = {
             }, {
                 "weight": 5,
                 "value": "variant"
+            }]
+        },
+        "17133457-67a2-41f8-8961-235020959018": {
+            "name": "baking_bread_b",
+            "groups": [{
+                "weight": 0,
+                "value": "yes_10"
+            }, {
+                "weight": 0,
+                "value": "yes_30"
+            }, {
+                "weight": 0,
+                "value": "yes_50"
+            }, {
+                "weight": 0,
+                "value": "yes_80"
+            }, {
+                "weight": 0,
+                "value": "yes_95"
+            }, {
+                "weight": 100,
+                "value": "no"
             }]
         },
         "171906a2-6e34-4d0e-879c-a76a19f19097": {
@@ -377,6 +399,28 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "v2"
+            }]
+        },
+        "4d081a33-0d0f-4b44-bfde-cf07c358915f": {
+            "name": "baking_bread_d",
+            "groups": [{
+                "weight": 0,
+                "value": "yes_10"
+            }, {
+                "weight": 0,
+                "value": "yes_30"
+            }, {
+                "weight": 0,
+                "value": "yes_50"
+            }, {
+                "weight": 0,
+                "value": "yes_80"
+            }, {
+                "weight": 0,
+                "value": "yes_95"
+            }, {
+                "weight": 100,
+                "value": "no"
             }]
         },
         "4df8c7e5-6173-45d0-bc3b-4ece0b89af11": {
@@ -831,6 +875,28 @@ window.SiteOptions = {
                 "value": "following_above_host"
             }]
         },
+        "c51b6c01-3155-4314-bd33-a63870349c1f": {
+            "name": "baking_bread_c",
+            "groups": [{
+                "weight": 0,
+                "value": "yes_10"
+            }, {
+                "weight": 0,
+                "value": "yes_30"
+            }, {
+                "weight": 0,
+                "value": "yes_50"
+            }, {
+                "weight": 0,
+                "value": "yes_80"
+            }, {
+                "weight": 0,
+                "value": "yes_95"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "c5824f4a-ecb8-4ef1-9d49-18885bf8bba5": {
             "name": "ABS V2",
             "groups": [{
@@ -941,6 +1007,28 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "off"
+            }]
+        },
+        "f51271fc-b922-43c5-a801-d5b44219b31f": {
+            "name": "baking_bread_a",
+            "groups": [{
+                "weight": 0,
+                "value": "yes_10"
+            }, {
+                "weight": 0,
+                "value": "yes_30"
+            }, {
+                "weight": 0,
+                "value": "yes_50"
+            }, {
+                "weight": 0,
+                "value": "yes_80"
+            }, {
+                "weight": 0,
+                "value": "yes_95"
+            }, {
+                "weight": 100,
+                "value": "no"
             }]
         },
         "f60b889e-0327-46a8-ad7b-0d402717da45": {
