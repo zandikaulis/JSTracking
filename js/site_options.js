@@ -151,6 +151,16 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "0d199578-56fd-4c70-bd46-ee433ccbc3cf": {
+            "name": "CPR Sub Nav",
+            "groups": [{
+                "weight": 95,
+                "value": "control"
+            }, {
+                "weight": 5,
+                "value": "new"
+            }]
+        },
         "143da2f9-bf80-4555-a661-76c378fcd5c8": {
             "name": "ios_aa",
             "groups": [{
