@@ -707,10 +707,13 @@ window.SiteOptions = {
                 "value": "Control - 5 recommendations"
             }, {
                 "weight": 0,
-                "value": "Variant 1 - 3 recommendations"
+                "value": "Variant 1 - 3 recommendations (equal weighting)"
             }, {
                 "weight": 0,
                 "value": "Variant 2 - 1 recommendation"
+            }, {
+                "weight": 0,
+                "value": "Variant 3 - 3 recommendation (first recommendation spotlight)"
             }]
         },
         "aaac75ea-c969-4826-b32d-ceefac620a79": {
