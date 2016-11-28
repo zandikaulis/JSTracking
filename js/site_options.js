@@ -141,6 +141,16 @@ window.SiteOptions = {
                 "value": "false"
             }]
         },
+        "0670f0ea-3b5c-41a8-946d-114ef4a42540": {
+            "name": "Intl_I18n",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "enabled"
+            }]
+        },
         "143da2f9-bf80-4555-a661-76c378fcd5c8": {
             "name": "ios_aa",
             "groups": [{
