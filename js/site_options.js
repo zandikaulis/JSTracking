@@ -214,6 +214,16 @@ window.SiteOptions = {
                 "value": "variant"
             }]
         },
+        "264f75af-a787-4a40-8654-40d78b4d8b41": {
+            "name": "extensions",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "2b4d2ad3-f7e5-422b-be2b-9bd99975b57c": {
             "name": "coview remove recs",
             "groups": [{
