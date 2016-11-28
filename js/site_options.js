@@ -152,7 +152,7 @@ window.SiteOptions = {
             }]
         },
         "0d199578-56fd-4c70-bd46-ee433ccbc3cf": {
-            "name": "cpr_sub_nav",
+            "name": "CPR_SUB_NAV",
             "groups": [{
                 "weight": 95,
                 "value": "control"
