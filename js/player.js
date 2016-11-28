@@ -988,12 +988,16 @@
             x = "buffer-refill",
             U = "vod_seek",
             B = "player_caption_preset",
-            V = 500;
+            V = "theatre mode",
+            F = "fullscreen",
+            H = "popout",
+            G = "mini",
+            $ = 500;
         t.Analytics = function() {
             function e(t, n, i, r, o) {
                 a(this, e), this.player = t, this.tracker = n, this.state = i, this.stateStore = r, this.options = o, this.minutesWatchedTimer = new h.MinutesWatched, this.hasPlayed = !1, this.bufferEmptyStartTime = null, this.bufferEmptyCount = 0, this.lastNetworkProfile = -(1 / 0), this.lastSeekTime = null, this.timeStampBeforeSeek = 0, this.isSeekInProgress = !1, this.trackNetworkProfile = this.stateStore.getState().experiments.get(k.NETWORK_PROFILE_COLLECTION), this.countessTracker = new _.CountessTracker({
                     host: y.countessHost
-                }), this.comscore = new v.ComscoreAnalytics(this, this.player, this.stateStore), this.latencyTracker = new g.LatencyTracker(this, .001, this.player, this.stateStore), this.valveClient = new T.ValveClient, this.initProperties(), this.initEvents(), this.unsubscribes = [], this.unsubscribes.push(this._subscribeCaptions(this.stateStore)), this.unsubscribes.push((0, C.subscribe)(this.stateStore, ["quality.current", "quality.selected"], this.onQualityChange.bind(this)))
+                }), this.comscore = new v.ComscoreAnalytics(this, this.player, this.stateStore), this.latencyTracker = new g.LatencyTracker(this, .001, this.player, this.stateStore), this.valveClient = new T.ValveClient, this.initProperties(), this.initEvents(), this.unsubscribes = [], this.unsubscribes.push(this._subscribeCaptions(this.stateStore)), this.unsubscribes.push((0, C.subscribe)(this.stateStore, ["quality.current", "quality.selected"], this.onQualityChange.bind(this))), this.unsubscribes.push((0, C.subscribe)(this.stateStore, ["ui.isMini"], this.onMiniChange.bind(this)))
             }
             return s(e, [{
                 key: "_subscribeCaptions",
@@ -1206,7 +1210,7 @@
                 value: function() {
                     if (!this.isSeekInProgress) {
                         var e = this.player.getCurrentTime();
-                        e - this.timeStampBeforeSeek < V && this.timeStampBeforeSeek < e && (this.timeStampBeforeSeek = e)
+                        e - this.timeStampBeforeSeek < $ && this.timeStampBeforeSeek < e && (this.timeStampBeforeSeek = e)
                     }
                 }
             }, {
@@ -1254,9 +1258,19 @@
                     })
                 }
             }, {
+                key: "onMiniChange",
+                value: function() {
+                    var e = this.stateStore.getState(),
+                        t = e.env,
+                        n = e.ui;
+                    t.playerType === P.PLAYER_SITE && this.tracker.setProperty("player", n.isMini ? P.PLAYER_SITE_MINI : P.PLAYER_SITE)
+                }
+            }, {
                 key: "_getPlayerDisplayMode",
                 value: function() {
-                    return this.state.isFullScreen() ? "fullscreen" : this.options.player === P.PLAYER_POPOUT ? "popout" : this.player.getTheatre() ? "theatre mode" : ""
+                    var e = this.stateStore.getState(),
+                        t = e.ui;
+                    return this.state.isFullScreen() ? F : this.options.player === P.PLAYER_POPOUT ? H : this.player.getTheatre() ? V : t.isMini ? G : ""
                 }
             }, {
                 key: "destroy",
@@ -1552,7 +1566,8 @@
     }, function(e, t, n) {
         function i(e, t) {
             var n = this.__data__;
-            return this.size += this.has(e) ? 0 : 1, n[e] = r && void 0 === t ? a : t, this
+            return this.size += this.has(e) ? 0 : 1,
+                n[e] = r && void 0 === t ? a : t, this
         }
         var r = n(102),
             a = "__lodash_hash_undefined__";
@@ -3901,10 +3916,10 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.PLAYER_HIGHLIGHTER = t.PLAYER_FACEBOOK = t.PLAYER_CURSE = t.PLAYER_CREATIVE = t.PLAYER_DASHBOARD = t.PLAYER_FRONTPAGE = t.PLAYER_POPOUT = t.PLAYER_EMBED = t.PLAYER_SITE = void 0, t.getPlayerType = i;
+        }), t.PLAYER_HIGHLIGHTER = t.PLAYER_FACEBOOK = t.PLAYER_CURSE = t.PLAYER_CREATIVE = t.PLAYER_DASHBOARD = t.PLAYER_FRONTPAGE = t.PLAYER_POPOUT = t.PLAYER_EMBED = t.PLAYER_SITE_MINI = t.PLAYER_SITE = void 0, t.getPlayerType = i;
         var r = n(204),
             a = t.PLAYER_SITE = "site",
-            o = t.PLAYER_EMBED = "embed",
+            o = (t.PLAYER_SITE_MINI = "site_mini", t.PLAYER_EMBED = "embed"),
             s = t.PLAYER_POPOUT = "popout";
         t.PLAYER_FRONTPAGE = "frontpage", t.PLAYER_DASHBOARD = "dashboard", t.PLAYER_CREATIVE = "creative", t.PLAYER_CURSE = "curse", t.PLAYER_FACEBOOK = "facebook", t.PLAYER_HIGHLIGHTER = "highlighter"
     }, function(e, t, n) {
@@ -4322,8 +4337,7 @@
         }
     }, function(e, t, n) {
         function i(e, t, n) {
-            this.name = "InvalidExperimentConfigurationError",
-                this.message = 'Invalid configuration for experiment "' + e + '": ' + n, this.stack = (new Error).stack
+            this.name = "InvalidExperimentConfigurationError", this.message = 'Invalid configuration for experiment "' + e + '": ' + n, this.stack = (new Error).stack
         }
 
         function r(e, t) {
@@ -8011,31 +8025,27 @@
                         host: f.mixpanelHost,
                         token: f.mixpanelToken
                     }),
-                    s = new u.SpadeClient({
+                    r = new u.SpadeClient({
                         host: f.spadeHost
                     });
-                e.dispatch((0, c.setTrackingClients)([n, s]));
-                var d = b.getFlashPlayerVersion(),
-                    v = d.major + "," + d.minor + "," + d.release,
-                    y = r(),
-                    E = a(),
-                    S = (0, p.parseUri)(E),
-                    T = g.get(!1),
-                    k = g.get(!0);
+                e.dispatch((0, c.setTrackingClients)([n, r]));
+                var s = b.getFlashPlayerVersion(),
+                    d = s.major + "," + s.minor + "," + s.release,
+                    h = a(),
+                    v = (0, p.parseUri)(h),
+                    y = g.get(!1),
+                    E = g.get(!0);
                 _ = {
-                    app_version: "2016.11.23-225922+d5741ae1354c6e2271c5ab9c83b4e85281c4ecae",
-                    flash_version: v,
-                    url: (0, h.sanitizeQuery)(y.href),
-                    host: y.host,
-                    domain: i(y.host),
-                    referrer_url: E,
-                    referrer_host: S.host,
-                    referrer_domain: i(S.host),
+                    app_version: "2016.11.28-175313+a8f394779e43c2c46b6d4a0254e720a240007d44",
+                    flash_version: d,
+                    referrer_url: h,
+                    referrer_host: v.host,
+                    referrer_domain: i(v.host),
                     browser: navigator.appVersion || "",
                     user_agent: navigator.userAgent || "",
-                    device_id: T,
-                    distinct_id: T,
-                    session_device_id: k
+                    device_id: y,
+                    distinct_id: y,
+                    session_device_id: E
                 }, o.setProperties(t.tracking), o.setProperties({
                     channel: t.channel,
                     vod: t.video,
@@ -8069,26 +8079,30 @@
                 d = [],
                 _ = void 0;
             o.trackEvents = function(n) {
-                var i = (new Date).getTime() / 1e3;
-                Promise.all(d).then(function(r) {
-                    var a = s["default"].apply(null, r),
-                        o = e.getState(),
-                        l = n.map(function(e) {
-                            var t = (0, s["default"])({}, _, a, e.properties, o.tracking, {
-                                platform: o.env.platform,
-                                play_session_id: o.analytics.playSessionId
+                var a = (new Date).getTime() / 1e3;
+                Promise.all(d).then(function(o) {
+                    var l = s["default"].apply(null, o),
+                        u = e.getState(),
+                        c = r(),
+                        d = n.map(function(e) {
+                            var t = (0, s["default"])({}, _, l, e.properties, u.tracking, {
+                                platform: u.env.platform,
+                                play_session_id: u.analytics.playSessionId,
+                                url: (0, h.sanitizeQuery)(c.href),
+                                host: c.host,
+                                domain: i(c.host)
                             });
-                            return t.time || (t.time = i), {
+                            return t.time || (t.time = a), {
                                 event: e.event,
                                 properties: t
                             }
                         });
-                    t.debug && l.forEach(function(e) {
+                    t.debug && d.forEach(function(e) {
                         console.log("track event:", e.event, e.properties)
                     });
-                    var u = e.getState().analytics.trackingClients;
-                    u.forEach(function(e) {
-                        e.trackEvents(l)
+                    var f = e.getState().analytics.trackingClients;
+                    f.forEach(function(e) {
+                        e.trackEvents(d)
                     })
                 })
             }, o.trackEvent = function(e, t) {
