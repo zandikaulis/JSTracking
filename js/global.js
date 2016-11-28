@@ -17865,7 +17865,8 @@ function(e, t) {
             DETERMINATION: "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
             CHANNEL_FOLLOW_CTA: "8fe5705b-1c85-4d6f-bba0-d99c36b0d7d4",
             DISCOVER_SHOW_COVIEWS: "3e011e23-ef29-46a5-af4b-a86e15d8c9e6",
-            PERPETUA: "af8f152a-f618-416e-8b79-d6ac30479018"
+            PERPETUA: "af8f152a-f618-416e-8b79-d6ac30479018",
+            CPR_SUB_NAV: "0d199578-56fd-4c70-bd46-ee433ccbc3cf"
         },
         i = {
             "aaac75ea-c969-4826-b32d-ceefac620a79": "no",
@@ -17898,7 +17899,8 @@ function(e, t) {
             "cc164e1e-1361-4730-8d9b-0091a0f9cb8f": "no",
             "8fe5705b-1c85-4d6f-bba0-d99c36b0d7d4": "control",
             "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": "no_show",
-            "af8f152a-f618-416e-8b79-d6ac30479018": "control"
+            "af8f152a-f618-416e-8b79-d6ac30479018": "control",
+            "0d199578-56fd-4c70-bd46-ee433ccbc3cf": "control"
         },
         s = "experiment_overrides",
         o = {},
