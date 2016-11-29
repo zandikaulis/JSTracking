@@ -7991,7 +7991,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.11.28-235141+e239a2dd7b691027c622a6c541b3278e6a0f36fd",
+                    app_version: "2016.11.29-003350+c75acadb5f7fae0525f26092e8cd642ac282f36b",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -9357,6 +9357,11 @@
                 return Le.getCaption()
             }, we.getEventEmitter = function() {
                 return Oe
+            }, we.trackMiniPlayerAction = function(e, n) {
+                t.trackEvent("site_mini_player_action", {
+                    action: e,
+                    reason: n
+                })
             }, Ae("error", {
                 get: we.getError
             }), Ae("src", {
@@ -14826,7 +14831,7 @@
                 var e = o;
                 (0, c.isTwitchEmbed)() || (e = (0, s["default"])(e, {
                     branding: !0
-                })), d(), p(e), r.showControls(h.initialControlsDelay), $(t).attr("data-branding", e.branding), $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showtheatre", e.showtheatre), D(i.getState().playback), U(), N(), G.push(R()), n.addEventListener(m.EVENT_STATE_UPDATE, v)
+                })), d(), p(e), r.showControls(h.initialControlsDelay), $(t).attr("data-branding", e.branding), $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showtheatre", e.showtheatre), $(t).attr("data-showinfo", e.showInfo), D(i.getState().playback), U(), N(), G.push(R()), n.addEventListener(m.EVENT_STATE_UPDATE, v)
             }
 
             function d() {
@@ -16113,8 +16118,7 @@
                     }
                 }
                 return function(t, n, i) {
-                    return n && e(t.prototype, n), i && e(t, i),
-                        t
+                    return n && e(t.prototype, n), i && e(t, i), t
                 }
             }(),
             c = n(336),
@@ -17137,8 +17141,9 @@
                         $(".js-quality-display", this._root).text(n);
                         var i = $(".js-quality-display-contain", this._root);
                         i.attr("data-q", "show"), setTimeout(function() {
-                            i.attr("data-q", "hide")
-                        }, g.qualityChangeDuration), this._controlsDisplay.showControls(g.qualityChangeDuration), this._qualityChangeExpected = !1;
+                                i.attr("data-q", "hide")
+                            }, g.qualityChangeDuration), this._controlsDisplay.showControls(g.qualityChangeDuration),
+                            this._qualityChangeExpected = !1
                     }
                 }
             }, {
