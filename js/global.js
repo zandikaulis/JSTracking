@@ -17866,6 +17866,7 @@ function(e, t) {
             CHANNEL_FOLLOW_CTA: "8fe5705b-1c85-4d6f-bba0-d99c36b0d7d4",
             DISCOVER_SHOW_COVIEWS: "3e011e23-ef29-46a5-af4b-a86e15d8c9e6",
             PERPETUA: "af8f152a-f618-416e-8b79-d6ac30479018",
+            EXTENSIONS: "264f75af-a787-4a40-8654-40d78b4d8b41",
             CPR_SUB_NAV: "0d199578-56fd-4c70-bd46-ee433ccbc3cf"
         },
         i = {
@@ -17900,6 +17901,7 @@ function(e, t) {
             "8fe5705b-1c85-4d6f-bba0-d99c36b0d7d4": "control",
             "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": "no_show",
             "af8f152a-f618-416e-8b79-d6ac30479018": "control",
+            "264f75af-a787-4a40-8654-40d78b4d8b41": "no",
             "0d199578-56fd-4c70-bd46-ee433ccbc3cf": "control"
         },
         s = "experiment_overrides",
@@ -18999,18 +19001,23 @@ function(e, t) {
                     }), v && (e.storage.del(d), p[r.partner_state] = !0, p[b] = !0, p.login = n, p.dismissKey = d, i(u, l, p, h))
                 };
             e.user().then(function(e) {
-                return e.login
+                return data = {
+                    login: e.login,
+                    isStaff: e.is_staff
+                }, RSVP.hash(data)
             }).then(function(t) {
                 return results = {
-                    payoutEntity: e.api.get("/api/channels/" + t + "/payout_entity"),
-                    login: t
-                }, n.activeProductOnly && (results.product = e.api.get("/api/channels/" + t + "/product")), RSVP.hash(results)
+                    payoutEntity: e.api.get("/api/channels/" + t.login + "/payout_entity"),
+                    login: t.login,
+                    isStaff: t.isStaff
+                }, n.activeProductOnly && (results.product = e.api.get("/api/channels/" + t.login + "/product")), RSVP.hash(results)
             }).then(function(t) {
-                return t.payoutEntity && n.shouldCheckPayable && (t.isPayable = e.api.get("/api/payouts/is_payee_payable")), RSVP.hash(t)
+                return t.payoutEntity && n.shouldCheckPayable && !t.isStaff && (t.isPayable = e.api.get("/api/payouts/is_payee_payable")), RSVP.hash(t)
             }).then(function(e) {
                 var t = e.payoutEntity;
                 if (!t.partner_state || t.caller_id !== t.owner_id) return;
                 if (n.activeProductOnly && !e.product) return;
+                if (e.isStaff) return;
                 s(e.login, t, e.isPayable, n.attribute, n.bannerName, n.states, n.requiredStates, n.dismissKeys, n.shouldCheckPayable, r)
             }, function(e) {
                 if (e && e.status === 401) return;
