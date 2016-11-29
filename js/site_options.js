@@ -608,7 +608,7 @@ window.SiteOptions = {
         "87adafb9-d360-4c0a-ace5-93e636c8e79c": {
             "name": "Player Core Version control",
             "groups": [{
-                "weight": 40,
+                "weight": 42,
                 "value": "1.0"
             }, {
                 "weight": 48,
@@ -628,9 +628,6 @@ window.SiteOptions = {
             }, {
                 "weight": 2,
                 "value": "1.1.105"
-            }, {
-                "weight": 2,
-                "value": "1.1.106"
             }]
         },
         "8ace0f50-8afd-424a-a086-3e61b3e66da0": {
