@@ -4246,7 +4246,7 @@
             return new l["default"]({
                 defaults: (t = {}, r(t, f, "no"), r(t, p, "off"), r(t, h, "no"), r(t, _, "regular"), r(t, g, "no"), r(t, v, "no"), r(t, y, "no"), r(t, m, "1.0"), r(t, b, "no"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, r(n, b, a("yes-forced")), r(n, p, a("v2")), r(n, m, a("1.2")), r(n, h, a("yes")), r(n, _, a("plus")), r(n, g, (0, d.userInfo)().then(function(e) {
+                overrides: (n = {}, r(n, b, a("yes-ft-only")), r(n, p, a("v2")), r(n, m, a("1.2")), r(n, h, a("yes")), r(n, _, a("plus")), r(n, g, (0, d.userInfo)().then(function(e) {
                     return "US" !== e.geo ? "no" : Promise.reject()
                 })), r(n, v, (0, d.userInfo)().then(function(e) {
                     return "GB" !== e.geo ? "no" : Promise.reject()
@@ -8065,7 +8065,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.11.29-214024+79cc2db6c4b5826f31d7f2801b5b923c54a37055",
+                    app_version: "2016.11.29-233051+51512e53fa03312ec3fefd15e3a0721ffdd5de5f",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
