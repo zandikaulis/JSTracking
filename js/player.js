@@ -8071,7 +8071,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.11.30-183241+323fe826e4dec1b5ceff36e80520abe53b132434",
+                    app_version: "2016.11.30-204956+603034eb3c616dad6b50607c06152be1cdf4d763",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -23173,6 +23173,8 @@
             "Clip (Alt+X)": "Clip (Alt+X)",
             Clip: "Clip",
             "Learn More": "Learn More",
+            "Make an impact with Clip Titles": "Make an impact with Clip Titles",
+            "Give your clips the perfect title to share more about your favorite moments.": "Give your clips the perfect title to share more about your favorite moments.",
             "Clip Trimming is Here": "Clip Trimming is Here",
             "It just got a lot easier to share the perfect moment with Clips.": "It just got a lot easier to share the perfect moment with Clips.",
             Auto: "Auto",
