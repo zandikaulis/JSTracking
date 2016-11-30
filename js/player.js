@@ -8065,7 +8065,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.11.29-233051+51512e53fa03312ec3fefd15e3a0721ffdd5de5f",
+                    app_version: "2016.11.30-000528+5e154c9dabbe6194c49945b8c1ca9eb0a721c52d",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -23166,9 +23166,6 @@
             "Audio for portions of this video has been muted as it appears to contain copyrighted content owned or controlled by a third party.": "Audio for portions of this video has been muted as it appears to contain copyrighted content owned or controlled by a third party.",
             "Clip (Alt+X)": "Clip (Alt+X)",
             Clip: "Clip",
-            "Share with Clips": "Share with Clips",
-            "Share the best moments from this video with a single click.": "Share the best moments from this video with a single click.",
-            "Hit the clip button to get started.": "Hit the clip button to get started.",
             "Learn More": "Learn More",
             "Clip Trimming is Here": "Clip Trimming is Here",
             "It just got a lot easier to share the perfect moment with Clips.": "It just got a lot easier to share the perfect moment with Clips.",
