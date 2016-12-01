@@ -142,12 +142,12 @@ window.SiteOptions = {
             }]
         },
         "0670f0ea-3b5c-41a8-946d-114ef4a42540": {
-            "name": "Intl_I18n",
+            "name": "INTL_I18N",
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 1,
+                "weight": 0,
                 "value": "enabled"
             }]
         },
@@ -626,17 +626,11 @@ window.SiteOptions = {
                 "weight": 2,
                 "value": "1.1.104"
             }, {
-                "weight": 2,
+                "weight": 6,
                 "value": "1.1.105"
             }, {
                 "weight": 2,
-                "value": "1.1.106"
-            }, {
-                "weight": 2,
-                "value": "1.1.107"
-            }, {
-                "weight": 2,
-                "value": "1.1.108"
+                "value": "1.1.109"
             }]
         },
         "8ace0f50-8afd-424a-a086-3e61b3e66da0": {
