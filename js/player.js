@@ -8071,7 +8071,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.11.30-204956+603034eb3c616dad6b50607c06152be1cdf4d763",
+                    app_version: "2016.12.01-201536+095db7a06839e2529ffb92617b4ef6846f9c8a49",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -9287,9 +9287,11 @@
                     r = i.contentType === S.CONTENT_MODE_LIVE,
                     a = e === ce,
                     o = e === de && !v.localStore.get(U.KEY_AUTO_QUALITY_FORCED, !1);
-                return r ? (r && (0, W["default"])(fe, e) && (we._enableABS(), v.localStore.set(U.KEY_AUTO_QUALITY_FORCED, !0)), r && (a || o) && n.dispatch((0, U.selectQuality)(U.QUALITY_AUTO)), void Oe.emit(re.LOADED_CHANNEL)) : void Oe.emit(re.LOADED_VIDEO)
+                return r ? (r && (0, W["default"])(fe, e) && (we._enableABS(), v.localStore.set(U.KEY_AUTO_QUALITY_FORCED, !0)), r && (a || o) && n.dispatch((0, U.selectQuality)(U.QUALITY_AUTO)), void Oe.emit(re.LOADED_CHANNEL)) : (Oe.emit(re.LOADED_VIDEO), void we._disableABS())
             }, we._enableABS = function() {
-                n.getState().backend.enableABS()
+                Le.enableABS()
+            }, we._disableABS = function() {
+                Le.disableABS()
             }, we.destroy = function() {
                 Le.destroy(), Ie.forEach(function(e) {
                     return e()
@@ -10022,6 +10024,8 @@
                 return ot
             }, Be.enableABS = function() {
                 xe("setABSV2Enabled", [!0])
+            }, Be.disableABS = function() {
+                xe("setABSV2Enabled", [!1])
             }, Be.requestAdFill = function(e, t, n) {
                 xe("requestFlashAd", [e, t, n])
             }, Be.destroy = function() {
@@ -11025,6 +11029,11 @@
                         })
                     }
                 }, {
+                    key: "disableABS",
+                    value: function() {
+                        this.core && this.core.disableABS && this.core.disableABS()
+                    }
+                }, {
                     key: "destroy",
                     value: function() {
                         this.video.pause(), this.core && this.core.destroy(), this.stateStore.getState().window.clearInterval(this.statsUpdateLoop), this.events.removeAllListeners()
@@ -11773,7 +11782,7 @@
                 return v
             }, i.getVersion = function() {}, i.elapsedTime = function() {}, i.isSpectre = function() {
                 return !1
-            }, i.enableABS = function() {}, i.forceQualityToAuto = function() {}, n()
+            }, i.enableABS = function() {}, i.disableABS = function() {}, i.forceQualityToAuto = function() {}, n()
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -11900,8 +11909,8 @@
             }
 
             function d() {
-                k.currentTime !== C.currentTime && (k.currentTime = C.currentTime, T.emit(f.TIME_UPDATE)),
-                    k.volume !== C.volume.level && (k.volume = C.volume.level, T.emit(f.VOLUME_CHANGE)), k.muted !== C.volume.muted && (k.muted = C.volume.muted, T.emit(f.VOLUME_CHANGE)), k.playbackRate !== C.playbackRate && (k.playbackRate = C.playbackRate, T.emit(f.RATE_CHANGE));
+                k.currentTime !== C.currentTime && (k.currentTime = C.currentTime,
+                    T.emit(f.TIME_UPDATE)), k.volume !== C.volume.level && (k.volume = C.volume.level, T.emit(f.VOLUME_CHANGE)), k.muted !== C.volume.muted && (k.muted = C.volume.muted, T.emit(f.VOLUME_CHANGE)), k.playbackRate !== C.playbackRate && (k.playbackRate = C.playbackRate, T.emit(f.RATE_CHANGE));
                 var e = C.playerState;
                 k.playerState !== C.playerState && (e === chrome.cast.media.PlayerState.PLAYING ? T.emit(f.PLAYING) : e === chrome.cast.media.PlayerState.PAUSED ? T.emit(f.PAUSE) : e === chrome.cast.media.PlayerState.BUFFERING, k.playerState = C.playerState)
             }
@@ -12113,6 +12122,10 @@
                 return l.getError()
             }, c.getSrc = function() {
                 return l.getSrc()
+            }, c.enableABS = function() {
+                l.enableABS()
+            }, c.disableABS = function() {
+                l.disableABS()
             }, c.setSrc = function(e) {
                 g.forEach(function(t) {
                     t.setSrc(e)
@@ -12298,7 +12311,7 @@
                 return []
             }, e.getChannel = function() {}, e.setChannel = function(e, t) {}, e.elapsedTime = function() {}, e.getVideo = function() {}, e.setVideo = function(e, t) {}, e.getVideoInfo = function() {}, e.getCaption = function() {}, e.getBackend = function() {
                 return "blank"
-            }, e.enableABS = function() {}, e.forceQualityToAuto = function() {}
+            }, e.enableABS = function() {}, e.disableABS = function() {}, e.forceQualityToAuto = function() {}
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -14816,8 +14829,8 @@
                 function t(e, n, a) {
                     i(this, t);
                     var o = r(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                    return o._root = e, o._store = a, o._state = n, o._state.addEventListener(s.EVENT_STATE_UPDATE, o.handleEvent.bind(o)), o.subscribe(a, ["online"], o.handleEvent.bind(o)), o.subscribe(a, ["ui"], o.onUiUpdate.bind(o)), o.subscribe(a, ["playback.isLoading"], o.isLoading.bind(o)),
-                        o
+                    return o._root = e, o._store = a, o._state = n, o._state.addEventListener(s.EVENT_STATE_UPDATE, o.handleEvent.bind(o)), o.subscribe(a, ["online"], o.handleEvent.bind(o)), o.subscribe(a, ["ui"], o.onUiUpdate.bind(o)),
+                        o.subscribe(a, ["playback.isLoading"], o.isLoading.bind(o)), o
                 }
                 return a(t, e), o(t, [{
                     key: "isLoading",
@@ -16194,7 +16207,8 @@
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var i = t[n];
-                        i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                        i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0),
+                            Object.defineProperty(e, i.key, i)
                     }
                 }
                 return function(t, n, i) {
@@ -17222,8 +17236,8 @@
                         var i = $(".js-quality-display-contain", this._root);
                         i.attr("data-q", "show"), setTimeout(function() {
                                 i.attr("data-q", "hide")
-                            }, g.qualityChangeDuration), this._controlsDisplay.showControls(g.qualityChangeDuration),
-                            this._qualityChangeExpected = !1
+                            }, g.qualityChangeDuration),
+                            this._controlsDisplay.showControls(g.qualityChangeDuration), this._qualityChangeExpected = !1
                     }
                 }
             }, {
