@@ -8071,7 +8071,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.12.02-023902+3e07a89d0877fee85fd3d53364679a14a735fedd",
+                    app_version: "2016.12.02-182328+28e0c5dacac0ec03d36b1a32324dce935fb282f5",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -23239,7 +23239,8 @@
             "Up Next": "Up Next",
             Cancel: "Cancel",
             "Playing in {{timeRemaining}} second": "Playing in {{timeRemaining}} second",
-            "Playing in {{timeRemaining}} second_plural": "Playing in {{timeRemaining}} seconds"
+            "Playing in {{timeRemaining}} second_plural": "Playing in {{timeRemaining}} seconds",
+            "Mini Player": "Mini Player"
         }
     }, function(e, t, n) {
         "use strict";
