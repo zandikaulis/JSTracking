@@ -943,7 +943,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.Analytics = t.VIDEO_PLAY_LOAD_START = void 0;
+        }), t.Analytics = t.VIDEO_PLAY_OAUTH = t.VIDEO_PLAY_LOAD_START = void 0;
         var s = function() {
             function e(e, t) {
                 for (var n = 0; n < t.length; n++) {
@@ -981,7 +981,7 @@
             I = i(O),
             L = n(168),
             N = i(L),
-            R = (t.VIDEO_PLAY_LOAD_START = "video_play_load_start", "video_init"),
+            R = (t.VIDEO_PLAY_LOAD_START = "video_play_load_start", t.VIDEO_PLAY_OAUTH = "video_play_oauth", "video_init"),
             D = "video-play",
             M = "minute-watched",
             j = "buffer-empty",
@@ -1566,8 +1566,7 @@
     }, function(e, t, n) {
         function i(e, t) {
             var n = this.__data__;
-            return this.size += this.has(e) ? 0 : 1,
-                n[e] = r && void 0 === t ? a : t, this
+            return this.size += this.has(e) ? 0 : 1, n[e] = r && void 0 === t ? a : t, this
         }
         var r = n(102),
             a = "__lodash_hash_undefined__";
@@ -8071,7 +8070,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.12.02-222611+3657c2acab384ff2e5426bbfbc0e08964605f4dc",
+                    app_version: "2016.12.02-224943+eafddd962804156e8b0d758e6a29b5b1b8f621ba",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -13887,28 +13886,34 @@
                 n((0, f.resetPlaySession)());
                 var c = i(),
                     v = c.accessToken,
-                    y = c.analyticsTracker,
-                    m = c.experiments,
-                    b = c.playback,
-                    E = c.usher,
-                    S = e === _ ? r(t) : null,
-                    T = e === g ? a(t) : null;
-                y.trackEvent(d.VIDEO_PLAY_LOAD_START, {
-                    autoplay: b.autoplay,
-                    channel: S,
-                    vod_id: T
+                    y = c.analytics,
+                    m = c.analyticsTracker,
+                    b = c.experiments,
+                    E = c.playback,
+                    S = c.usher,
+                    T = e === _ ? r(t) : null,
+                    k = e === g ? a(t) : null;
+                m.trackEvent(d.VIDEO_PLAY_LOAD_START, {
+                    autoplay: E.autoplay,
+                    channel: T,
+                    vod_id: k
                 });
-                var k = o(),
-                    P = {
-                        transcode: m.get(s.TRANSCODE_QUALITY_EXPERIMENT),
-                        adStitchingUS: m.get(s.BAKING_BREAD_US),
-                        adStitchingUK: m.get(s.BAKING_BREAD_UK)
+                var P = o();
+                P.then(function() {
+                    m.trackEvent(d.VIDEO_PLAY_OAUTH, {
+                        time_since_load_start: Date.now() - y.playSessionStartTime
+                    })
+                });
+                var C = {
+                        transcode: b.get(s.TRANSCODE_QUALITY_EXPERIMENT),
+                        adStitchingUS: b.get(s.BAKING_BREAD_US),
+                        adStitchingUK: b.get(s.BAKING_BREAD_UK)
                     },
-                    C = void 0;
-                e === _ ? C = new l.LiveContentStream(S, k, E, v.params, P) : e === g && (C = new u.VODContentStream(T, k, E, v.params, P)), n({
+                    A = void 0;
+                e === _ ? A = new l.LiveContentStream(T, P, S, v.params, C) : e === g && (A = new u.VODContentStream(k, P, S, v.params, C)), n({
                     type: h,
-                    stream: C
-                }), n((0, p.fetchAndSetStreamMetadata)(C))
+                    stream: A
+                }), n((0, p.fetchAndSetStreamMetadata)(A))
             }
         }
 
