@@ -588,10 +588,10 @@ window.SiteOptions = {
                 "weight": 2,
                 "value": "1.1.103"
             }, {
-                "weight": 2,
+                "weight": 90,
                 "value": "1.1.104"
             }, {
-                "weight": 90,
+                "weight": 2,
                 "value": "1.1.105"
             }, {
                 "weight": 6,
