@@ -3,6 +3,7 @@
 import requests
 import jsbeautifier
 import re
+import random
 
 
 def get_url_from_page(url, pat):
@@ -33,6 +34,8 @@ if __name__ == '__main__':
     ]
 
     for jsfile in files:
+        cachebuster = random.getrandbits(100)
+        jsfile['url'] += "?%x" % cachebuster
         print "Downloading", jsfile['url'], "to file", jsfile['filename']
         src = requests.get(jsfile['url']).content
         beatuified = jsbeautifier.beautify(src)
