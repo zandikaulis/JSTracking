@@ -151,16 +151,6 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
-        "0d199578-56fd-4c70-bd46-ee433ccbc3cf": {
-            "name": "CPR_SUB_NAV",
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "new"
-            }]
-        },
         "143da2f9-bf80-4555-a661-76c378fcd5c8": {
             "name": "ios_aa",
             "groups": [{
@@ -376,6 +366,9 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "no"
+            }, {
+                "weight": 0,
+                "value": "no-with-1.2"
             }]
         },
         "4d081a33-0d0f-4b44-bfde-cf07c358915f": {
@@ -795,6 +788,16 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "placeholder"
+            }]
+        },
+        "b451a3d9-79f4-4743-89c1-719335c2c974": {
+            "name": "CPR_SUB_NAV_V2",
+            "groups": [{
+                "weight": 95,
+                "value": "control"
+            }, {
+                "weight": 5,
+                "value": "new"
             }]
         },
         "b9063610-cdfd-43c3-8479-59a6ab82d831": {
