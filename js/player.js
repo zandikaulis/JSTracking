@@ -2543,7 +2543,7 @@
                 auto: "Auto"
             }, t.qualityChangeDuration = 6e3, t.initialControlsDelay = 8e3, t.hoverControlsDelay = 5e3, t.reportHideDelay = 2e3, t.mediaEvents = [p.LOADSTART, p.PROGRESS, p.SUSPEND, p.ABORT, p.ERROR, p.EMPTIED, p.STALLED, p.LOADED_METADATA, p.LOADED_DATA, p.CAN_PLAY, p.CAN_PLAY_THROUGH, p.PLAYING, p.WAITING, p.SEEKING, p.SEEKED, p.ENDED, p.DURATION_CHANGE, p.TIME_UPDATE, p.PLAY, p.PAUSE, p.VOLUME_CHANGE, p.RATE_CHANGE]),
             b = t.customEvents = ["usherfail", u.AD_END, u.AD_START, u.COMPANION_RENDERED, u.AD_IMPRESSION, u.AD_IMPRESSION_COMPLETE, h.FULLSCREEN_CHANGE, d.BUFFER_CHANGE, d.CAPTION_UPDATE, d.CASTING_CHANGE, d.IS_SPECTRE, d.LOADED_CHANNEL, d.LOADED_VIDEO, d.MANIFEST_EXTRA_INFO, d.OFFLINE, d.ONLINE, d.PLAYER_INIT, d.QUALITIES_CHANGE, d.QUALITY_CHANGE, d.RESTRICTED, d.SEGMENT_CHANGE, d.THEATRE_CHANGE, d.TRANSITION_TO_VOD, d.VIEWERS_CHANGE];
-        t.allEvents = (0, o["default"])(m, b), t.debugIgnoreEvents = [p.TIME_UPDATE, d.BUFFER_CHANGE], t.chromecastStates = [_.CHROMECAST_UNAVAILABLE, _.CHROMECAST_AVAILABLE, _.CHROMECAST_CONNECTING, _.CHROMECAST_CONNECTED, p.ERROR], t.mutedSegmentsMessage = "Audio for portions of this video has been muted as it appears to contain copyrighted content owned or controlled by a third party.", t.embedParameters = Object.freeze(["channel", "video", "muted", "autoplay", "time", "t", "debug", "debug_ads", "html5", "flash", "quality", "controls", "devcaptions", "devrecommendations", "playsinline"]), t.volumeStepAmount = .1, t.flashTimeout = 5e3, t.doubleClickUrl = "//pubads.g.doubleclick.net/gampad/ads", t.imaNetworkID = "3576121", t.leaveDialog = {
+        t.allEvents = (0, o["default"])(m, b), t.debugIgnoreEvents = [p.TIME_UPDATE, d.BUFFER_CHANGE], t.chromecastStates = [_.CHROMECAST_UNAVAILABLE, _.CHROMECAST_AVAILABLE, _.CHROMECAST_CONNECTING, _.CHROMECAST_CONNECTED, p.ERROR], t.mutedSegmentsMessage = "Audio for portions of this video has been muted as it appears to contain copyrighted content owned or controlled by a third party.", t.embedParameters = Object.freeze(["channel", "video", "muted", "autoplay", "time", "t", "debug", "debug_ads", "html5", "flash", "quality", "controls", "devrecommendations", "playsinline"]), t.volumeStepAmount = .1, t.flashTimeout = 5e3, t.doubleClickUrl = "//pubads.g.doubleclick.net/gampad/ads", t.imaNetworkID = "3576121", t.leaveDialog = {
             enabled: !1,
             sinceEnded: 45,
             viewerThreshold: 5e4,
@@ -4249,11 +4249,11 @@
         function o(e) {
             var t, n;
             return new l["default"]({
-                defaults: (t = {}, r(t, f, "no"), r(t, p, "off"), r(t, h, "no"), r(t, _, "regular"), r(t, g, "no"), r(t, v, "no"), r(t, y, "no"), r(t, m, "1.0"), r(t, b, "no"), t),
+                defaults: (t = {}, r(t, f, "no"), r(t, p, "no"), r(t, h, "regular"), r(t, _, "no"), r(t, g, "no"), r(t, v, "no"), r(t, y, "1.0"), r(t, m, "no"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, r(n, b, a("yes-ft-only")), r(n, p, a("v2")), r(n, m, a("1.2")), r(n, h, a("yes")), r(n, _, a("plus")), r(n, g, (0, d.userInfo)().then(function(e) {
+                overrides: (n = {}, r(n, m, a("yes-ft-only")), r(n, y, a("1.2")), r(n, p, a("yes")), r(n, h, a("plus")), r(n, _, (0, d.userInfo)().then(function(e) {
                     return "US" !== e.geo ? "no" : Promise.reject()
-                })), r(n, v, (0, d.userInfo)().then(function(e) {
+                })), r(n, g, (0, d.userInfo)().then(function(e) {
                     return "GB" !== e.geo ? "no" : Promise.reject()
                 })), n),
                 platform: "web",
@@ -4264,21 +4264,20 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.TRANSCODE_QUALITY_EXPERIMENT = t.IN_PLAYER_RECOMMENDATIONS = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.createClient = o;
+        }), t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.TRANSCODE_QUALITY_EXPERIMENT = t.IN_PLAYER_RECOMMENDATIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.createClient = o;
         var s = n(210),
             l = i(s),
             u = n(218),
             c = i(u),
             d = n(185),
             f = t.NETWORK_PROFILE_COLLECTION = "5fbb67a0-b4ff-4775-b836-e9a348a87481",
-            p = t.CAPTIONS = "4afcc1d7-b6f4-489a-beb3-0a32eb780592",
-            h = t.IN_PLAYER_RECOMMENDATIONS = "c926728f-d1d3-4b09-b868-db3e2aa000cc",
-            _ = t.TRANSCODE_QUALITY_EXPERIMENT = "67fd8802-f683-42a3-8527-99fbc87c77ba",
-            g = t.BAKING_BREAD_US = "84d81180-6faa-4c58-98d7-48bbff5035c7",
-            v = t.BAKING_BREAD_UK = "a1ce3d24-076a-4664-be4c-f9046fdce18c",
-            y = t.MARKERS = "8bc4faaa-b4df-4862-b249-ac153de6294a",
-            m = t.PLAYER_CORE_VER_CONTROL = "87adafb9-d360-4c0a-ace5-93e636c8e79c",
-            b = t.GABRIEL = "4aa9ee11-136c-4521-a139-e2abb718ec07"
+            p = t.IN_PLAYER_RECOMMENDATIONS = "c926728f-d1d3-4b09-b868-db3e2aa000cc",
+            h = t.TRANSCODE_QUALITY_EXPERIMENT = "67fd8802-f683-42a3-8527-99fbc87c77ba",
+            _ = t.BAKING_BREAD_US = "84d81180-6faa-4c58-98d7-48bbff5035c7",
+            g = t.BAKING_BREAD_UK = "a1ce3d24-076a-4664-be4c-f9046fdce18c",
+            v = t.MARKERS = "8bc4faaa-b4df-4862-b249-ac153de6294a",
+            y = t.PLAYER_CORE_VER_CONTROL = "87adafb9-d360-4c0a-ace5-93e636c8e79c",
+            m = t.GABRIEL = "4aa9ee11-136c-4521-a139-e2abb718ec07"
     }, function(e, t, n) {
         function i(e) {
             var t = r(e);
@@ -4317,7 +4316,7 @@
             for (var o in n) n.hasOwnProperty(o) && (a[o] = function(a) {
                 return t.then(function(e) {
                     if (!e.hasOwnProperty(a)) throw new Error("Experiment `" + a + "` is deprecated");
-                    return u.selectTreatment(a, e[a], r);
+                    return u.selectTreatment(a, e[a], r)
                 }, function(e) {
                     return n[a]
                 }).then(function(t) {
@@ -8070,7 +8069,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.12.02-224943+eafddd962804156e8b0d758e6a29b5b1b8f621ba",
+                    app_version: "2016.12.05-183400+d55f734b48820378f75df4888e4f40541ccb3740",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -14772,29 +14771,23 @@
             }
         }
 
-        function a(e, t, i, r, a, o, D) {
-            function j() {
-                var S = (0, s["default"])(D, {
-                    showInfo: D.channelInfo,
-                    branding: !0,
-                    devcaptions: !1
+        function a(e, t, i, r, a, o, R) {
+            function M() {
+                var M = (0, s["default"])(R, {
+                    showInfo: R.channelInfo,
+                    branding: !0
                 }, {
                     showInfo: !0
                 });
-                $(t).addClass("player"), $(t).append(n(360)), o.dispatch((0, O.initializeCaptionsSettings)()), o.dispatch((0, I.initializePlaybackSettings)()), U = new u.PlayerUIState(t, r, o), B = new d.PlayerUIInfo(e, t, o, S), V = new f.PlayerUISeek(e, t, o), F = new p.PlayerUIStats(t, o), H = new h.PlayerUIUpnext(e, t, o), re = new _.PlayerUIRecommendations(e, t, o), ae = new A.PlayerUIError(t, o), G = new g.PlayerUILeaveDialog(e, t, i, o, S), q = new E.PlayerUILang(t, o), K = new v.PlayerUISubscribeOverlay(t, r), Y = new y.PlayerUIResume(e, r, o, S), z = new P.PlayerUISeekBarPopup(t), W = new m.PlayerUISeekBarMarkers(e, t, r, o, z), Q = new C.PlayerUIThumbnailPreviews(t, r, o, z), X = new b.PlayerUIMutedSegments(t, o), Z = new w.AgeRestrictionOverlay(t, e, o), ee = new k.PlayerUIControlsDisplay(e, t, o), te = new c.PlayerUIControls(e, t, r, o, ee, a, S), ie = new T.PlayerUISettings(e, t, r, o, i, ee, S);
-                var R = new N.ClipGenerator(t, r, o);
-                ne = new L.PlayerUIClipsEnabler(t, o, l.localStore, R), x(S), $(t).attr("data-initializing", !0), e.addEventListener(M.PLAYER_INIT, function() {
+                $(t).addClass("player"), $(t).append(n(360)), o.dispatch((0, O.initializeCaptionsSettings)()), o.dispatch((0, I.initializePlaybackSettings)()), j = new u.PlayerUIState(t, r, o), x = new d.PlayerUIInfo(e, t, o, M), U = new f.PlayerUISeek(e, t, o), B = new p.PlayerUIStats(t, o), V = new h.PlayerUIUpnext(e, t, o), ne = new _.PlayerUIRecommendations(e, t, o), ie = new A.PlayerUIError(t, o), F = new g.PlayerUILeaveDialog(e, t, i, o, M), H = new E.PlayerUILang(t, o), G = new v.PlayerUISubscribeOverlay(t, r), q = new y.PlayerUIResume(e, r, o, M), Y = new P.PlayerUISeekBarPopup(t), K = new m.PlayerUISeekBarMarkers(e, t, r, o, Y), W = new C.PlayerUIThumbnailPreviews(t, r, o, Y), z = new b.PlayerUIMutedSegments(t, o), X = new w.AgeRestrictionOverlay(t, e, o), J = new k.PlayerUIControlsDisplay(e, t, o), Z = new c.PlayerUIControls(e, t, r, o, J, a, M), te = new T.PlayerUISettings(e, t, r, o, i, J, M);
+                var re = new N.ClipGenerator(t, r, o);
+                ee = new L.PlayerUIClipsEnabler(t, o, l.localStore, re), Q = new S.PlayerUIClosedCaption(o, t), $(t).attr("data-initializing", !0), e.addEventListener(D.PLAYER_INIT, function() {
                     $(t).attr("data-initializing", !1)
                 })
             }
-
-            function x(e) {
-                var n = void 0;
-                n = e.devcaptions ? Promise.resolve("v2") : o.getState().experiments.get(R.CAPTIONS), n.then(function(e) {
-                    "v2" === e && (J = new S.PlayerUIClosedCaption(o, t)), $(t).attr("data-captions", e)
-                })
-            }
-            var U = void 0,
+            var j = void 0,
+                x = void 0,
+                U = void 0,
                 B = void 0,
                 V = void 0,
                 F = void 0,
@@ -14812,12 +14805,10 @@
                 ee = void 0,
                 te = void 0,
                 ne = void 0,
-                ie = void 0,
-                re = void 0,
-                ae = void 0;
+                ie = void 0;
             this.destroy = function() {
-                U.destroy(), B.destroy(), V.destroy(), F.destroy(), H.destroy(), re.destroy(), ae.destroy(), G.destroy(), q.destroy(), K.destroy(), Y.destroy(), W.destroy(), z.destroy(), Q.destroy(), X.destroy(), ee.destroy(), te.destroy(), Z.destroy(), ie.destroy(), ne.destroy(), J && J.destroy(), re.destroy()
-            }, j()
+                j.destroy(), x.destroy(), U.destroy(), B.destroy(), V.destroy(), ne.destroy(), ie.destroy(), F.destroy(), H.destroy(), G.destroy(), q.destroy(), K.destroy(), Y.destroy(), W.destroy(), z.destroy(), J.destroy(), Z.destroy(), X.destroy(), te.destroy(), ee.destroy(), Q.destroy(), ne.destroy()
+            }, M()
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -14849,9 +14840,8 @@
             I = n(236),
             L = n(357),
             N = n(359),
-            R = n(209),
-            D = n(167),
-            M = i(D)
+            R = n(167),
+            D = i(R)
     }, function(e, t, n) {
         "use strict";
 
@@ -14873,7 +14863,7 @@
                     writable: !0,
                     configurable: !0
                 }
-            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t);
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -16232,13 +16222,14 @@
         function s(e, t) {
             if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
             e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+                    constructor: {
+                        value: e,
+                        enumerable: !1,
+                        writable: !0,
+                        configurable: !0
+                    }
+                }),
+                t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -17271,7 +17262,7 @@
                 value: function(e, t) {
                     var n = $(".js-cc-checkbox", this._root).filter('[name="' + e + '"]'),
                         i = t[e] === n.val();
-                    n.prop("checked", i)
+                    n.prop("checked", i);
                 }
             }, {
                 key: "onLoadStart",
