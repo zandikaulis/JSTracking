@@ -2501,7 +2501,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.resumewatchingHost = t.httpsQualityCarryover = t.livestreamResumePushback = t.cancelResumeAmount = t.hotkeySeekAmount = t.defaultLanguage = t.leaveDialog = t.imaNetworkID = t.doubleClickUrl = t.flashTimeout = t.volumeStepAmount = t.embedParameters = t.mutedSegmentsMessage = t.chromecastStates = t.debugIgnoreEvents = t.allEvents = t.customEvents = t.mediaEvents = t.reportHideDelay = t.hoverControlsDelay = t.initialControlsDelay = t.qualityChangeDuration = t.qualityText = t.bufferPollDelay = t.chromecastId = t.popoutSize = t.gamePath = t.countessHost = t.spadeIgnore = t.spadeHost = t.mixpanelIgnore = t.mixpanelToken = t.mixpanelHost = t.apiTimeout = t.playerHost = t.valveApiHost = t.usherHost = t.spectreHost = t.apiHost = t.twitchHost = t.domain = void 0;
+        }), t.resumewatchingHost = t.httpsQualityCarryover = t.livestreamResumePushback = t.cancelResumeAmount = t.hotkeySeekAmount = t.defaultLanguage = t.leaveDialog = t.imaNetworkID = t.doubleClickLiveUrl = t.doubleClickVODUrl = t.flashTimeout = t.volumeStepAmount = t.embedParameters = t.mutedSegmentsMessage = t.chromecastStates = t.debugIgnoreEvents = t.allEvents = t.customEvents = t.mediaEvents = t.reportHideDelay = t.hoverControlsDelay = t.initialControlsDelay = t.qualityChangeDuration = t.qualityText = t.bufferPollDelay = t.chromecastId = t.popoutSize = t.gamePath = t.countessHost = t.spadeIgnore = t.spadeHost = t.mixpanelIgnore = t.mixpanelToken = t.mixpanelHost = t.apiTimeout = t.playerHost = t.valveApiHost = t.usherHost = t.spectreHost = t.apiHost = t.twitchHost = t.domain = void 0;
         var a = n(158),
             o = r(a),
             s = n(165),
@@ -2543,7 +2543,7 @@
                 auto: "Auto"
             }, t.qualityChangeDuration = 6e3, t.initialControlsDelay = 8e3, t.hoverControlsDelay = 5e3, t.reportHideDelay = 2e3, t.mediaEvents = [p.LOADSTART, p.PROGRESS, p.SUSPEND, p.ABORT, p.ERROR, p.EMPTIED, p.STALLED, p.LOADED_METADATA, p.LOADED_DATA, p.CAN_PLAY, p.CAN_PLAY_THROUGH, p.PLAYING, p.WAITING, p.SEEKING, p.SEEKED, p.ENDED, p.DURATION_CHANGE, p.TIME_UPDATE, p.PLAY, p.PAUSE, p.VOLUME_CHANGE, p.RATE_CHANGE]),
             b = t.customEvents = ["usherfail", u.AD_END, u.AD_START, u.COMPANION_RENDERED, u.AD_IMPRESSION, u.AD_IMPRESSION_COMPLETE, h.FULLSCREEN_CHANGE, d.BUFFER_CHANGE, d.CAPTION_UPDATE, d.CASTING_CHANGE, d.IS_SPECTRE, d.LOADED_CHANNEL, d.LOADED_VIDEO, d.MANIFEST_EXTRA_INFO, d.OFFLINE, d.ONLINE, d.PLAYER_INIT, d.QUALITIES_CHANGE, d.QUALITY_CHANGE, d.RESTRICTED, d.SEGMENT_CHANGE, d.THEATRE_CHANGE, d.TRANSITION_TO_VOD, d.VIEWERS_CHANGE];
-        t.allEvents = (0, o["default"])(m, b), t.debugIgnoreEvents = [p.TIME_UPDATE, d.BUFFER_CHANGE], t.chromecastStates = [_.CHROMECAST_UNAVAILABLE, _.CHROMECAST_AVAILABLE, _.CHROMECAST_CONNECTING, _.CHROMECAST_CONNECTED, p.ERROR], t.mutedSegmentsMessage = "Audio for portions of this video has been muted as it appears to contain copyrighted content owned or controlled by a third party.", t.embedParameters = Object.freeze(["channel", "video", "muted", "autoplay", "time", "t", "debug", "debug_ads", "html5", "flash", "quality", "controls", "devrecommendations", "playsinline"]), t.volumeStepAmount = .1, t.flashTimeout = 5e3, t.doubleClickUrl = "//pubads.g.doubleclick.net/gampad/ads", t.imaNetworkID = "3576121", t.leaveDialog = {
+        t.allEvents = (0, o["default"])(m, b), t.debugIgnoreEvents = [p.TIME_UPDATE, d.BUFFER_CHANGE], t.chromecastStates = [_.CHROMECAST_UNAVAILABLE, _.CHROMECAST_AVAILABLE, _.CHROMECAST_CONNECTING, _.CHROMECAST_CONNECTED, p.ERROR], t.mutedSegmentsMessage = "Audio for portions of this video has been muted as it appears to contain copyrighted content owned or controlled by a third party.", t.embedParameters = Object.freeze(["channel", "video", "muted", "autoplay", "time", "t", "debug", "debug_ads", "html5", "flash", "quality", "controls", "devrecommendations", "playsinline"]), t.volumeStepAmount = .1, t.flashTimeout = 5e3, t.doubleClickVODUrl = "//pubads.g.doubleclick.net/gampad/ads", t.doubleClickLiveUrl = "//pubads.g.doubleclick.net/gampad/live/ads", t.imaNetworkID = "3576121", t.leaveDialog = {
             enabled: !1,
             sinceEnded: 45,
             viewerThreshold: 5e4,
@@ -5189,7 +5189,7 @@
                 i = (0, u["default"])(n, function(e, t, n) {
                     return e.push(n + "=" + t), e
                 }, []).join("&");
-            return c.doubleClickUrl + "?" + i
+            return e.contentType === p.CONTENT_MODE_VOD ? c.doubleClickVODUrl + "?" + i : c.doubleClickLiveUrl + "?" + i
         }
 
         function o(e) {
@@ -8072,7 +8072,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.12.05-215255+c00c0e4fe525911bd5103c3bc463f902f4a0650c",
+                    app_version: "2016.12.05-230449+148f9d23c6210ced4bd04c4fe17f7a76ceb4b53b",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
