@@ -17835,6 +17835,7 @@ function(e, t) {
 function(e, t) {
     var n = SiteOptions.experiments || {},
         r = {
+            BROWSE_EXPERIMENT: "99494f77-1c7c-46c5-9b9c-a117db47d3c5",
             RECOMMENDED_CHANNELS: "aaac75ea-c969-4826-b32d-ceefac620a79",
             RECOMMENDED_GAMES: "61b169ff-bc62-4725-a40e-1be627197c6f",
             VODS_GAME_INFO: "ac39b897-d41d-4255-90b6-3a59027e12e0",
@@ -17872,6 +17873,7 @@ function(e, t) {
             DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS: "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2"
         },
         i = {
+            "99494f77-1c7c-46c5-9b9c-a117db47d3c5": "control",
             "aaac75ea-c969-4826-b32d-ceefac620a79": "no",
             "61b169ff-bc62-4725-a40e-1be627197c6f": "no",
             "ac39b897-d41d-4255-90b6-3a59027e12e0": "control",
@@ -18148,7 +18150,8 @@ function(e, t) {
                 auto_play: !0,
                 playOffset: s()
             }), n.device_id = e.idsForMixpanel.getOrCreateUniqueId(), n.session_device_id = e.idsForMixpanel.getOrCreateSessionUniqueId(), n.localstorage_device_id = e.idsForMixpanel.getOrCreateLocalStorageUniqueId(), n.test_environment_url = "http://" + SiteOptions.www_hostport, _.each(n, function(e, t) {
-                e === undefined && delete n[t]
+                e === undefined && delete
+                n[t]
             }), n
         },
         s = function() {
