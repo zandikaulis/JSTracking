@@ -361,13 +361,13 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes-forced"
             }, {
-                "weight": 0,
+                "weight": 2,
                 "value": "yes-ft-only"
             }, {
-                "weight": 100,
+                "weight": 96,
                 "value": "no"
             }, {
-                "weight": 0,
+                "weight": 2,
                 "value": "no-with-1.2"
             }]
         },
