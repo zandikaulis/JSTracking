@@ -793,10 +793,10 @@ window.SiteOptions = {
         "b451a3d9-79f4-4743-89c1-719335c2c974": {
             "name": "CPR_SUB_NAV_V2",
             "groups": [{
-                "weight": 100,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "new"
             }]
         },
