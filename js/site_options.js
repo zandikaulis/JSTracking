@@ -701,16 +701,16 @@ window.SiteOptions = {
         "a95aaca9-125f-416f-9a8a-1d344854919c": {
             "name": "clips_fresh_eyes",
             "groups": [{
-                "weight": 25,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 25,
+                "weight": 0,
                 "value": "variant1"
             }, {
-                "weight": 25,
+                "weight": 0,
                 "value": "variant2"
             }, {
-                "weight": 25,
+                "weight": 0,
                 "value": "variant3"
             }]
         },
