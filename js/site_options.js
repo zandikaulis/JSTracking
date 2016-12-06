@@ -800,6 +800,19 @@ window.SiteOptions = {
                 "value": "new"
             }]
         },
+        "b660b196-deb7-4542-81e1-b35e61d7c79d": {
+            "name": "New Player Core version control",
+            "groups": [{
+                "weight": 5,
+                "value": "1.0"
+            }, {
+                "weight": 90,
+                "value": "1.1.104"
+            }, {
+                "weight": 5,
+                "value": "1.1.110"
+            }]
+        },
         "b9063610-cdfd-43c3-8479-59a6ab82d831": {
             "name": "Visible Post Reactions",
             "groups": [{

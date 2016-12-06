@@ -17867,7 +17867,7 @@ function(e, t) {
             DISCOVER_SHOW_COVIEWS: "3e011e23-ef29-46a5-af4b-a86e15d8c9e6",
             PERPETUA: "af8f152a-f618-416e-8b79-d6ac30479018",
             EXTENSIONS: "264f75af-a787-4a40-8654-40d78b4d8b41",
-            CPR_SUB_NAV: "0d199578-56fd-4c70-bd46-ee433ccbc3cf",
+            CPR_SUB_NAV_V2: "b451a3d9-79f4-4743-89c1-719335c2c974",
             INTL_I18N: "0670f0ea-3b5c-41a8-946d-114ef4a42540",
             DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS: "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2"
         },
@@ -17904,7 +17904,7 @@ function(e, t) {
             "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": "no_show",
             "af8f152a-f618-416e-8b79-d6ac30479018": "control",
             "264f75af-a787-4a40-8654-40d78b4d8b41": "no",
-            "0d199578-56fd-4c70-bd46-ee433ccbc3cf": "control",
+            "b451a3d9-79f4-4743-89c1-719335c2c974": "control",
             "0670f0ea-3b5c-41a8-946d-114ef4a42540": "control",
             "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": "hide"
         },
