@@ -701,16 +701,16 @@ window.SiteOptions = {
         "a95aaca9-125f-416f-9a8a-1d344854919c": {
             "name": "clips_fresh_eyes",
             "groups": [{
-                "weight": 100,
+                "weight": 25,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 25,
                 "value": "variant1"
             }, {
-                "weight": 0,
+                "weight": 25,
                 "value": "variant2"
             }, {
-                "weight": 0,
+                "weight": 25,
                 "value": "variant3"
             }]
         },
@@ -924,16 +924,6 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "d,hs,c"
-            }]
-        },
-        "e00bfb61-dd13-4cd6-8401-ea2bb0b1dd1f": {
-            "name": "clips_view_aa",
-            "groups": [{
-                "weight": 50,
-                "value": "control"
-            }, {
-                "weight": 50,
-                "value": "variant"
             }]
         },
         "e39a1b4d-51ef-4b49-9378-91a7eb35c3da": {
