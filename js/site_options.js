@@ -345,6 +345,16 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "42f5eea6-c548-4791-b767-9c7e29b73ef6": {
+            "name": "CLIENT_BATCH_MIXPANEL",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "474db509-7fb8-403e-97da-66dae8954e6d": {
             "name": "android_home_games_carousel",
             "groups": [{
