@@ -17920,7 +17920,8 @@ function(e, t) {
             CHANNEL_PAGE_REDESIGN: "new",
             DETERMINATION: "yes",
             DISCOVER_SHOW_COVIEWS: "show",
-            PERPETUA: "yes"
+            PERPETUA: "yes",
+            CPR_SUB_NAV_V2: "new"
         };
     _.each(Object.keys(u), function(t) {
         o[r[t]] = e.user().then(function(e) {
@@ -18149,9 +18150,9 @@ function(e, t) {
                 hostname: SiteOptions.twitch_cdn_hostport,
                 auto_play: !0,
                 playOffset: s()
-            }), n.device_id = e.idsForMixpanel.getOrCreateUniqueId(), n.session_device_id = e.idsForMixpanel.getOrCreateSessionUniqueId(), n.localstorage_device_id = e.idsForMixpanel.getOrCreateLocalStorageUniqueId(), n.test_environment_url = "http://" + SiteOptions.www_hostport, _.each(n, function(e, t) {
-                e === undefined && delete
-                n[t]
+            }), n.device_id = e.idsForMixpanel.getOrCreateUniqueId(), n.session_device_id = e.idsForMixpanel.getOrCreateSessionUniqueId(), n.localstorage_device_id = e.idsForMixpanel.getOrCreateLocalStorageUniqueId(), n.test_environment_url = "http://" + SiteOptions.www_hostport, _.each(n, function(
+                e, t) {
+                e === undefined && delete n[t]
             }), n
         },
         s = function() {
