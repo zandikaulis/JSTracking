@@ -196,6 +196,16 @@ window.SiteOptions = {
                 "value": "recent_first"
             }]
         },
+        "1b905261-e257-4703-ac84-12a6a9099935": {
+            "name": "CLIENT_BATCH_SPADE",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "1e406d0d-c293-4c4e-812f-049db8c7e3ec": {
             "name": "vod_upload_units",
             "groups": [{
