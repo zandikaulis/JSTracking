@@ -8303,7 +8303,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.12.07-185711+9185ba853d32649242a027ab6fc092cc3a34d6c5",
+                    app_version: "2016.12.07-195743+9a8838536ca8d022e9e6e852858038c1590487c0",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -13183,7 +13183,7 @@
                     var o = this._stateStore.getState(),
                         s = o.window,
                         u = s.google;
-                    u && (u.ima.settings.setVpaidMode(u.ima.ImaSdkSettings.VpaidMode.INSECURE), this._adContainer = b.clone().appendTo(this._videoContainer).get(0), this._adDisplayContainer = new u.ima.AdDisplayContainer(this._adContainer, $(this._videoContainer).find("video, object").get(0)), this._adDisplayContainer.initialize(), this._moat = new m.MoatAnalytics(this._adContainer), this._adsLoader = new u.ima.AdsLoader(this._adDisplayContainer), this._adsLoader.addEventListener(u.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED, function(e) {
+                    u && (u.ima.settings.setVpaidMode(u.ima.ImaSdkSettings.VpaidMode.INSECURE), this._adContainer = b.clone().appendTo(this._videoContainer).get(0), this._adDisplayContainer = new u.ima.AdDisplayContainer(this._adContainer, $(this._videoContainer).find("video, object").get(0)), this._adDisplayContainer.initialize(), this._moat = new m.MoatAnalytics(this._adContainer, this._stateStore), this._adsLoader = new u.ima.AdsLoader(this._adDisplayContainer), this._adsLoader.addEventListener(u.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED, function(e) {
                         return r._onAdsManagerLoaded(e)
                     }), this._adsLoader.addEventListener(u.ima.AdErrorEvent.Type.AD_ERROR, function(e) {
                         return r._onAdError(e)
@@ -13476,8 +13476,8 @@
             }(),
             a = n(297);
         t.MoatAnalytics = function() {
-            function e(t) {
-                i(this, e), this._adContainer = t, this._moatTracking = a.initMoatTracking
+            function e(t, n) {
+                i(this, e), this._adContainer = t, this._moatTracking = a.initMoatTracking, this._google = n.getState().window.google
             }
             return r(e, [{
                 key: "trackAd",
@@ -13485,7 +13485,7 @@
                     var i = e.buildSlicer(n),
                         r = {
                             partnerCode: "twitchvpaid2756206246",
-                            viewMode: google.ima.ViewMode.NORMAL,
+                            viewMode: this._google.ima.ViewMode.NORMAL,
                             slicer1: "www.twitch.tv",
                             slicer2: i
                         };
@@ -23341,7 +23341,9 @@
             Cancel: "Cancel",
             "Playing in {{timeRemaining}} second": "Playing in {{timeRemaining}} second",
             "Playing in {{timeRemaining}} second_plural": "Playing in {{timeRemaining}} seconds",
-            "Mini Player": "Mini Player"
+            "Mini Player": "Mini Player",
+            ON: "ON",
+            OFF: "OFF"
         }
     }, function(e, t, n) {
         "use strict";
