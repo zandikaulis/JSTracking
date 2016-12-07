@@ -17051,7 +17051,17 @@ googletag.cmd = googletag.cmd || [],
                     o = t.autocomplete({
                         minLength: 3,
                         delay: 0,
-                        source: "/discovery/search",
+                        source: function(e, t) {
+                            Twitch.api.get("/kraken/search/games", {
+                                query: e.term
+                            }, {
+                                version: 5
+                            }).done(function(e) {
+                                t(e.games)
+                            }).fail(function(e) {
+                                t([])
+                            })
+                        },
                         focus: function(e, t) {
                             return i(t.item.name), !1
                         },
@@ -17072,8 +17082,9 @@ googletag.cmd = googletag.cmd || [],
                         }
                     };
                 o.data("gameselector", u), o.data("ui-autocomplete")._renderItem = function(e, n) {
+                    n.boxArt = n.box;
                     var r = t.data("games");
-                    return r[n.name] = !0, t.data("games", r), n.images = Twitch.defaults(n.images, {
+                    return r[n.name] = !0, t.data("games", r), n.images = n.images || {}, n.images = Twitch.defaults(n.images, {
                         tiny: "https://www-cdn.jtvnw.net/images/xarth/gamefilter_all.png"
                     }), ich["gameselector-game"](n).data("item.autocomplete", n).appendTo(e)
                 }, o.data("ui-autocomplete")._cancelSearch = function() {
@@ -17381,7 +17392,9 @@ googletag.cmd = googletag.cmd || [],
         }), n._constructUrl = function(e, t) {
             this.config.login && (e = e.replace(/:login([^\w])/, this.config.login + "$1")), e[0] !== "/" && (e = "/kraken/" + e);
             var n = t.use_streams_api ? "streamsBaseUrl" : "baseUrl";
-            return t.secure && (n += "Secure"), this.config[n] + e
+            t.secure && (n += "Secure");
+            var r = t.host || this.config[n];
+            return r + e
         }, n._createXHR = function() {
             return new this.config.iframe.contentWindow.XMLHttpRequest
         }, n._beforeSend = function(e, t) {
