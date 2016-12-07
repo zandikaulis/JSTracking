@@ -927,6 +927,28 @@ window.SiteOptions = {
                 "value": "no_prerolls"
             }]
         },
+        "cf2033c8-5313-4abe-8142-61b9072c9d26": {
+            "name": "baking_bread_e",
+            "groups": [{
+                "weight": 0,
+                "value": "yes_10"
+            }, {
+                "weight": 0,
+                "value": "yes_30"
+            }, {
+                "weight": 0,
+                "value": "yes_50"
+            }, {
+                "weight": 0,
+                "value": "yes_80"
+            }, {
+                "weight": 0,
+                "value": "yes_95"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "d24f182c-e36f-498e-9e49-113e02a83bad": {
             "name": "passport_redesign",
             "groups": [{
@@ -967,6 +989,28 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "off"
+            }]
+        },
+        "e6a95194-9540-46e0-858f-f47e5d5e3a5d": {
+            "name": "baking_bread_f",
+            "groups": [{
+                "weight": 0,
+                "value": "yes_10"
+            }, {
+                "weight": 0,
+                "value": "yes_30"
+            }, {
+                "weight": 0,
+                "value": "yes_50"
+            }, {
+                "weight": 0,
+                "value": "yes_80"
+            }, {
+                "weight": 0,
+                "value": "yes_95"
+            }, {
+                "weight": 100,
+                "value": "no"
             }]
         },
         "e7516730-b94f-4d46-894e-c18612aab270": {
