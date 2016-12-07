@@ -8303,7 +8303,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.12.07-180554+47310e99e872d70f7afb969dce9c319b7b673e68",
+                    app_version: "2016.12.07-185711+9185ba853d32649242a027ab6fc092cc3a34d6c5",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -9533,7 +9533,7 @@
                     a = i.contentType === S.CONTENT_MODE_LIVE,
                     o = e === $.ABS_FORCED_GROUP,
                     s = e === $.ABS_FIRST_TIME_GROUP && !v.localStore.get(B.KEY_AUTO_QUALITY_FORCED, !1);
-                return a || r.selected !== B.QUALITY_AUTO || n.dispatch((0, B.selectQuality)(V.DEFAULT_STREAM_FORMAT)), a ? (a && (0, Q["default"])($.ENABLE_ABS_GROUP, e) && (Ce._enableABS(), v.localStore.set(B.KEY_AUTO_QUALITY_FORCED, !0)), a && (o || s) && n.dispatch((0, B.selectQuality)(B.QUALITY_AUTO)), void we.emit(oe.LOADED_CHANNEL)) : (we.emit(oe.LOADED_VIDEO), void Ce._disableABS())
+                return a || r.selected !== B.QUALITY_AUTO || n.dispatch((0, B.selectQuality)(V.DEFAULT_STREAM_FORMAT)), a ? (a && (0, Q["default"])($.ENABLE_ABS_GROUP, e) && (Ce._enableABS(), v.localStore.set(B.KEY_AUTO_QUALITY_FORCED, !0)), a && (o || s) && (n.dispatch((0, B.selectQuality)(B.QUALITY_AUTO)), n.dispatch((0, B.setPreferredQuality)(B.QUALITY_AUTO_OBJECT))), void we.emit(oe.LOADED_CHANNEL)) : (we.emit(oe.LOADED_VIDEO), void Ce._disableABS())
             }, Ce._enableABS = function() {
                 Ie.enableABS()
             }, Ce._disableABS = function() {
@@ -10097,7 +10097,7 @@
                 Ge.promise.then(function() {
                     setTimeout(function() {
                         var i = je(e, n);
-                        i && t.debug && console.log("flash return:", e, "=", i);
+                        i && t.debug && console.log("flash return:", e, "=", i)
                     }, 0)
                 })
             }
@@ -10680,7 +10680,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.QUALITY_AUTO = t.KEY_AUTO_QUALITY_FORCED = t.ABS_HOSE_OPTED_OUT_LOCALSTORE_KEY = t.ACTION_SET_QUALITIES = t.ACTION_SET_CURRENT_QUALITY = t.ACTION_SELECT_QUALITY = void 0, t.setABSQualities = r, t.getVariantName = a, t.createABSQualities = o, t.initializeQuality = s, t.selectQuality = l, t.setPreferredQuality = u, t.setCurrentQuality = c, t.setQualities = d;
+        }), t.QUALITY_AUTO_OBJECT = t.QUALITY_AUTO = t.KEY_AUTO_QUALITY_FORCED = t.ABS_HOSE_OPTED_OUT_LOCALSTORE_KEY = t.ACTION_SET_QUALITIES = t.ACTION_SET_CURRENT_QUALITY = t.ACTION_SELECT_QUALITY = void 0, t.setABSQualities = r, t.getVariantName = a, t.createABSQualities = o, t.initializeQuality = s, t.selectQuality = l, t.setPreferredQuality = u, t.setCurrentQuality = c, t.setQualities = d;
         var f = n(49),
             p = i(f),
             h = n(238),
@@ -10691,7 +10691,13 @@
             m = t.ACTION_SET_CURRENT_QUALITY = "set current quality",
             b = t.ACTION_SET_QUALITIES = "set qualities",
             E = t.ABS_HOSE_OPTED_OUT_LOCALSTORE_KEY = "abs-hose-opted-out",
-            S = (t.KEY_AUTO_QUALITY_FORCED = "auto-quality-forced", t.QUALITY_AUTO = "auto")
+            S = (t.KEY_AUTO_QUALITY_FORCED = "auto-quality-forced-v2", t.QUALITY_AUTO = "auto");
+        t.QUALITY_AUTO_OBJECT = Object.freeze({
+            bandwidth: 0,
+            resolution: "0x0",
+            group: "auto",
+            name: "Auto"
+        })
     }, function(e, t, n) {
         e.exports = n.p + "vendor/TwitchPlayer.7cfe0f2e9d071ac72c5a539139bcedd4.swf"
     }, function(e, t, n) {
