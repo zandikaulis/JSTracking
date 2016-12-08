@@ -17051,17 +17051,7 @@ googletag.cmd = googletag.cmd || [],
                     o = t.autocomplete({
                         minLength: 3,
                         delay: 0,
-                        source: function(e, t) {
-                            Twitch.api.get("/kraken/search/games", {
-                                query: e.term
-                            }, {
-                                version: 5
-                            }).done(function(e) {
-                                t(e.games)
-                            }).fail(function(e) {
-                                t([])
-                            })
-                        },
+                        source: "/discovery/search",
                         focus: function(e, t) {
                             return i(t.item.name), !1
                         },
@@ -17082,9 +17072,8 @@ googletag.cmd = googletag.cmd || [],
                         }
                     };
                 o.data("gameselector", u), o.data("ui-autocomplete")._renderItem = function(e, n) {
-                    n.boxArt = n.box;
                     var r = t.data("games");
-                    return r[n.name] = !0, t.data("games", r), n.images = n.images || {}, n.images = Twitch.defaults(n.images, {
+                    return r[n.name] = !0, t.data("games", r), n.images = Twitch.defaults(n.images, {
                         tiny: "https://www-cdn.jtvnw.net/images/xarth/gamefilter_all.png"
                     }), ich["gameselector-game"](n).data("item.autocomplete", n).appendTo(e)
                 }, o.data("ui-autocomplete")._cancelSearch = function() {
@@ -19271,8 +19260,7 @@ function(e, t) {
         },
         i = function(e) {
             if (this._actions[e])
-                for (var n = 0, r = this._actions[e].length; n < r; n++) this
-                    ._actions[e][n](t);
+                for (var n = 0, r = this._actions[e].length; n < r; n++) this._actions[e][n](t);
             return this
         };
     e.mixin({
