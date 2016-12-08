@@ -4281,7 +4281,7 @@
             m = t.BAKING_BREAD_US = "84d81180-6faa-4c58-98d7-48bbff5035c7",
             b = t.BAKING_BREAD_UK = "a1ce3d24-076a-4664-be4c-f9046fdce18c",
             E = t.MARKERS = "8bc4faaa-b4df-4862-b249-ac153de6294a",
-            S = t.PLAYER_CORE_VER_CONTROL = "b660b196-deb7-4542-81e1-b35e61d7c79d",
+            S = t.PLAYER_CORE_VER_CONTROL = "33ad61d9-3433-4073-b091-83251b29ea46",
             T = t.GABRIEL = "4aa9ee11-136c-4521-a139-e2abb718ec07",
             k = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
             P = t.ABS_FORCED_GROUP = "yes-forced",
@@ -8305,7 +8305,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.12.07-214601+7e8b91b39d4541ded97d5217dc3563dd0ed6a856",
+                    app_version: "2016.12.08-022149+dba4f9796d14578765b47ec3b013b4d6feefde55",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
