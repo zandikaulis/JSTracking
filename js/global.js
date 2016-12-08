@@ -17885,7 +17885,8 @@ function(e, t) {
             INTL_I18N: "0670f0ea-3b5c-41a8-946d-114ef4a42540",
             DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS: "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2",
             CLIENT_BATCH_SPADE: "1b905261-e257-4703-ac84-12a6a9099935",
-            CLIENT_BATCH_MIXPANEL: "42f5eea6-c548-4791-b767-9c7e29b73ef6"
+            CLIENT_BATCH_MIXPANEL: "42f5eea6-c548-4791-b767-9c7e29b73ef6",
+            CLIPS_FEEL_IT_COMING: "2858bc04-3f98-4808-a2dd-86555885ca90"
         },
         i = {
             "99494f77-1c7c-46c5-9b9c-a117db47d3c5": "control",
@@ -17925,7 +17926,8 @@ function(e, t) {
             "0670f0ea-3b5c-41a8-946d-114ef4a42540": "control",
             "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": "hide",
             "1b905261-e257-4703-ac84-12a6a9099935": "control",
-            "42f5eea6-c548-4791-b767-9c7e29b73ef6": "control"
+            "42f5eea6-c548-4791-b767-9c7e29b73ef6": "control",
+            "2858bc04-3f98-4808-a2dd-86555885ca90": "control"
         },
         s = "experiment_overrides",
         o = {},
@@ -19269,7 +19271,8 @@ function(e, t) {
         },
         i = function(e) {
             if (this._actions[e])
-                for (var n = 0, r = this._actions[e].length; n < r; n++) this._actions[e][n](t);
+                for (var n = 0, r = this._actions[e].length; n < r; n++) this
+                    ._actions[e][n](t);
             return this
         };
     e.mixin({
