@@ -414,6 +414,19 @@ window.SiteOptions = {
                 "value": "no-with-1.2"
             }]
         },
+        "4afcc1d7-b6f4-489a-beb3-0a32eb780592": {
+            "name": "Closed Captions",
+            "groups": [{
+                "weight": 0,
+                "value": "off"
+            }, {
+                "weight": 0,
+                "value": "v1"
+            }, {
+                "weight": 100,
+                "value": "v2"
+            }]
+        },
         "4d081a33-0d0f-4b44-bfde-cf07c358915f": {
             "name": "baking_bread_d",
             "groups": [{
