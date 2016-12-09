@@ -9737,22 +9737,6 @@ function(e, t) {
             })
         }
     }(jQuery),
-    function(e) {
-        e.fn.fitText = function(t, n) {
-            var r = t || 1,
-                i = e.extend({
-                    minFontSize: Number.NEGATIVE_INFINITY,
-                    maxFontSize: Number.POSITIVE_INFINITY
-                }, n);
-            return this.each(function() {
-                var t = e(this),
-                    n = function() {
-                        t.css("font-size", Math.max(Math.min(t.width() / (r * 10), parseFloat(i.maxFontSize)), parseFloat(i.minFontSize)))
-                    };
-                n(), e(window).on("resize.fittext orientationchange.fittext", n)
-            })
-        }
-    }(jQuery),
     function() {
         "use strict";
         var e = function(e, t) {
@@ -9889,7 +9873,8 @@ function(e, t) {
                 var n = '      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" width="100%" height="100%">         <param name="movie" value="' + e.options.moviePath + u(e.options.moviePath) + '"/>         <param name="allowScriptAccess" value="' + e.options.allowScriptAccess + '"/>         <param name="scale" value="exactfit"/>         <param name="loop" value="false"/>         <param name="menu" value="false"/>         <param name="quality" value="best" />         <param name="bgcolor" value="#ffffff"/>         <param name="wmode" value="transparent"/>         <param name="flashvars" value="' + a(e.options) + '"/>         <embed src="' + e.options.moviePath + u(e.options.moviePath) + '"           loop="false" menu="false"           quality="best" bgcolor="#ffffff"           width="100%" height="100%"           name="global-zeroclipboard-flash-bridge"           allowScriptAccess="always"           allowFullScreen="false"           type="application/x-shockwave-flash"           wmode="transparent"           pluginspage="http://www.macromedia.com/go/getflashplayer"           flashvars="' + a(e.options) + '"           scale="exactfit">         </embed>       </object>';
                 t = document.createElement("div"), t.id = "global-zeroclipboard-html-bridge", t.setAttribute("class", "global-zeroclipboard-container"), t.setAttribute("data-clipboard-ready", !1), t.style.position = "absolute", t.style.left = "-9999px", t.style.top = "-9999px", t.style.width = "15px", t.style.height = "15px", t.style.zIndex = "9999", t.innerHTML = n, document.body.appendChild(t)
             }
-            e.htmlBridge = t, e.flashBridge = document["global-zeroclipboard-flash-bridge"] || t.children[0].lastElementChild
+            e.htmlBridge = t, e.flashBridge =
+                document["global-zeroclipboard-flash-bridge"] || t.children[0].lastElementChild
         };
         c.prototype.resetBridge = function() {
             this.htmlBridge.style.left = "-9999px", this.htmlBridge.style.top = "-9999px", this.htmlBridge.removeAttribute("title"), this.htmlBridge.removeAttribute("data-clipboard-text"), s(h, this.options.activeClass), h = null, this.options.text = null
@@ -11159,13 +11144,13 @@ function(e, t) {
                 var g = t.options.compact ? t.options.compactLabels : t.options.labels,
                     y = t.options.whichLabels || this._normalLabels,
                     b = function(e) {
-                        var n =
-                            t.options["compactLabels" + y(t._periods[e])];
+                        var n = t.options["compactLabels" + y(t._periods[e])];
                         return d[e] ? f._translateDigits(t, t._periods[e]) + (n ? n[e] : g[e]) + " " : ""
                     },
                     w = function(e) {
                         var n = t.options["labels" + y(t._periods[e])];
-                        return !t.options.significant && d[e] || t.options.significant && m[e] ? '<span class="' + c._sectionClass + '">' + '<span class="' + c._amountClass + '">' + f._translateDigits(t, t._periods[e]) + "</span><br/>" + (n ? n[e] : g[e]) + "</span>" : ""
+                        return !t.options.significant && d[e] || t.options.significant && m[e] ? '<span class="' + c._sectionClass + '">' + '<span class="' + c._amountClass + '">' + f._translateDigits(t, t._periods[e]) + "</span><br/>" + (n ? n[e] : g[e]) + "</span>" :
+                            ""
                     };
                 return t.options.layout ? this._buildLayout(t, d, t.options.layout, t.options.compact, t.options.significant, m) : (t.options.compact ? '<span class="' + this._rowClass + " " + this._amountClass + (t._hold ? " " + this._holdingClass : "") + '">' + b(n) + b(r) + b(i) + b(s) + (d[o] ? this._minDigits(t, t._periods[o], 2) : "") + (d[u] ? (d[o] ? t.options.timeSeparator : "") + this._minDigits(t, t._periods[u], 2) : "") + (d[a] ? (d[o] || d[u] ? t.options.timeSeparator : "") + this._minDigits(t, t._periods[a], 2) : "") : '<span class="' + this._rowClass + " " + this._showClass + (t.options.significant || h) + (t._hold ? " " + this._holdingClass : "") + '">' + w(n) + w(r) + w(i) + w(s) + w(o) + w(u) + w(a)) + "</span>" + (t.options.description ? '<span class="' + this._rowClass + " " + this._descrClass + '">' + t.options.description + "</span>" : "")
             },
@@ -12346,7 +12331,8 @@ function(e, t) {
     for (c in l) r[c + "PathSegment"] = h("pathname", l[c]);
     r.encodeReserved = h("reserved", "encode"), r.parse = function(e, t) {
         var n, i;
-        return t || (t = {}), n = e.indexOf("#"), n > -1 && (t.fragment = e.substring(n + 1) || null, e = e.substring(0, n)), n = e.indexOf("?"), n > -1 && (t.query = e.substring(n + 1) || null, e = e.substring(0, n)), e.substring(0, 2) === "//" ? (t.protocol = "", e = e.substring(2), e = r.parseAuthority(e, t)) : (n = e.indexOf(":"), n > -1 && (t.protocol = e.substring(0, n), t.protocol && !t.protocol.match(r.protocol_expression) ? t.protocol = undefined : t.protocol === "file" ? e = e.substring(n + 3) : e.substring(n + 1, n + 3) === "//" ? (e = e.substring(n + 3), e = r.parseAuthority(e, t)) : (e = e.substring(n + 1), t.urn = !0))), t.path = e, t
+        return t || (t = {}), n = e.indexOf("#"), n > -1 && (t.fragment = e.substring(n + 1) || null, e = e.substring(0, n)), n = e.indexOf("?"), n > -1 && (t.query = e.substring(n + 1) || null, e = e.substring(0, n)), e.substring(0, 2) === "//" ? (t.protocol = "", e = e.substring(2), e = r.parseAuthority(e, t)) : (n = e.indexOf(":"), n > -1 &&
+            (t.protocol = e.substring(0, n), t.protocol && !t.protocol.match(r.protocol_expression) ? t.protocol = undefined : t.protocol === "file" ? e = e.substring(n + 3) : e.substring(n + 1, n + 3) === "//" ? (e = e.substring(n + 3), e = r.parseAuthority(e, t)) : (e = e.substring(n + 1), t.urn = !0))), t.path = e, t
     }, r.parseHost = function(e, t) {
         var n = e.indexOf("/"),
             r, i;
@@ -13453,7 +13439,8 @@ Date.CultureInfo = {
         }, t.addDays = function(e) {
             return this.setDate(this.getDate() + e), this
         }, t.addWeeks = function(e) {
-            return this.addDays(e * 7)
+            return this.addDays(
+                e * 7)
         }, t.addMonths = function(t) {
             var n = this.getDate();
             return this.setDate(1), this.setMonth(this.getMonth() + t), this.setDate(Math.min(n, e.getDaysInMonth(this.getFullYear(), this.getMonth()))), this
@@ -15937,8 +15924,7 @@ Date.CultureInfo = {
         function Or(e, t, n, r, i) {
             var s = wt(e, t, n, r, i),
                 o = yt(s.year, 0, s.dayOfYear);
-            return this
-                .year(o.getUTCFullYear()), this.month(o.getUTCMonth()), this.date(o.getUTCDate()), this
+            return this.year(o.getUTCFullYear()), this.month(o.getUTCMonth()), this.date(o.getUTCDate()), this
         }
 
         function Mr(e) {
@@ -16973,7 +16959,8 @@ googletag.cmd = googletag.cmd || [],
             if (typeof r == "function") {
                 var s = e("body"),
                     o = r;
-                r = e('<div style="display:none">'), r.appendTo(s), r._contentFn = o
+                r = e('<div style="display:none">'), r.appendTo(s), r._contentFn =
+                    o
             }
             var u;
             if (u = n[t]) return this.each(function() {
@@ -18163,7 +18150,8 @@ function(e, t) {
             }), n
         },
         s = function() {
-            var e = URI().query(!0).t;
+            var e =
+                URI().query(!0).t;
             if (!e) return 0;
             var t = e.match(/^(\d+[Hh])?(\d+[Mm])?(\d+[Ss])?$/);
             if (t) {
