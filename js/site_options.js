@@ -821,7 +821,7 @@ window.SiteOptions = {
                 "value": "control"
             }, {
                 "weight": 50,
-                "value": "synonyms"
+                "value": "enabled"
             }]
         },
         "b29d055f-74f2-40b9-9383-9c4b79b30360": {
