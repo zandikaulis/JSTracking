@@ -808,10 +808,10 @@ window.SiteOptions = {
             "name": "also_known_as",
             "groups": [{
                 "weight": 50,
-                "value": "aliases"
+                "value": "control"
             }, {
                 "weight": 50,
-                "value": "no_aliases"
+                "value": "synonyms"
             }]
         },
         "b29d055f-74f2-40b9-9383-9c4b79b30360": {
