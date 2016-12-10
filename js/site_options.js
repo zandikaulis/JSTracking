@@ -325,6 +325,16 @@ window.SiteOptions = {
                 "value": "1.1.104"
             }]
         },
+        "34fca29d-6914-412f-8ce2-fb65f792d386": {
+            "name": "CLIPS_ANNOUNCEMENT_SHOW",
+            "groups": [{
+                "weight": 0,
+                "value": "show"
+            }, {
+                "weight": 100,
+                "value": "hide"
+            }]
+        },
         "355ff3e2-38b5-449a-8ab8-a52b5d3ab817": {
             "name": "remove csgo directory",
             "groups": [{
