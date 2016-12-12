@@ -164,7 +164,7 @@ window.SiteOptions = {
         "17133457-67a2-41f8-8961-235020959018": {
             "name": "baking_bread_b",
             "groups": [{
-                "weight": 0,
+                "weight": 10,
                 "value": "yes_10"
             }, {
                 "weight": 0,
@@ -179,7 +179,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_95"
             }, {
-                "weight": 100,
+                "weight": 90,
                 "value": "no"
             }]
         },
@@ -437,7 +437,7 @@ window.SiteOptions = {
         "4d081a33-0d0f-4b44-bfde-cf07c358915f": {
             "name": "baking_bread_d",
             "groups": [{
-                "weight": 0,
+                "weight": 10,
                 "value": "yes_10"
             }, {
                 "weight": 0,
@@ -452,7 +452,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_95"
             }, {
-                "weight": 100,
+                "weight": 90,
                 "value": "no"
             }]
         },
@@ -902,7 +902,7 @@ window.SiteOptions = {
         "c51b6c01-3155-4314-bd33-a63870349c1f": {
             "name": "baking_bread_c",
             "groups": [{
-                "weight": 0,
+                "weight": 10,
                 "value": "yes_10"
             }, {
                 "weight": 0,
@@ -917,7 +917,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_95"
             }, {
-                "weight": 100,
+                "weight": 90,
                 "value": "no"
             }]
         },
@@ -954,7 +954,7 @@ window.SiteOptions = {
         "cf2033c8-5313-4abe-8142-61b9072c9d26": {
             "name": "baking_bread_e",
             "groups": [{
-                "weight": 0,
+                "weight": 10,
                 "value": "yes_10"
             }, {
                 "weight": 0,
@@ -969,7 +969,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_95"
             }, {
-                "weight": 100,
+                "weight": 90,
                 "value": "no"
             }]
         },
@@ -1031,7 +1031,7 @@ window.SiteOptions = {
         "e6a95194-9540-46e0-858f-f47e5d5e3a5d": {
             "name": "baking_bread_f",
             "groups": [{
-                "weight": 0,
+                "weight": 10,
                 "value": "yes_10"
             }, {
                 "weight": 0,
@@ -1046,7 +1046,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_95"
             }, {
-                "weight": 100,
+                "weight": 90,
                 "value": "no"
             }]
         },
@@ -1073,7 +1073,7 @@ window.SiteOptions = {
         "f51271fc-b922-43c5-a801-d5b44219b31f": {
             "name": "baking_bread_a",
             "groups": [{
-                "weight": 0,
+                "weight": 10,
                 "value": "yes_10"
             }, {
                 "weight": 0,
@@ -1088,7 +1088,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_95"
             }, {
-                "weight": 100,
+                "weight": 90,
                 "value": "no"
             }]
         },
