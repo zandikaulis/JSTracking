@@ -8422,7 +8422,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.12.08-222943+983b618a24e1316dd5ea32fd76d7f051ffe42e82",
+                    app_version: "2016.12.12-170747+6a7cb468f587fdbb65d86291a768db7f7c85cf1a",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -18920,7 +18920,8 @@
                     return n && e(t.prototype, n), i && e(t, i), t
                 }
             }(),
-            r = t.HAS_SEEN_CLIPS_TRIMMING_ANNOUNCE = "has-seen-clips-trimming-announce";
+            r = t.HAS_SEEN_CLIPS_TRIMMING_ANNOUNCE = "has-seen-clips-trimming-announce",
+            a = t.ENABLE_ANNOUNCEMENT_MESSAGE = !1;
         t.PlayerUIClipsControls = function() {
             function e(t, i, r) {
                 n(this, e), this.root = t, this.localStore = i, this.clipGenerator = r, this.clipButtonEnabled = !1, this.clipButton.on("click", this.recordClipIfAble.bind(this))
@@ -18931,7 +18932,7 @@
                     var e = this;
                     this.clipButtonEnabled = !0, this.clipButton.show();
                     var t = this.localStore.get(r);
-                    t ? this.removeClipsTrimmingAnnounce() : (this.showClipsTrimmingAnnounce(), $(this.clipButton).on("click", function() {
+                    !this._enabledAnnouncement() || t ? this.removeClipsTrimmingAnnounce() : (this.showClipsTrimmingAnnounce(), $(this.clipButton).on("click", function() {
                         e.dismissClipsTrimmingAnnounce()
                     }), $(this.clipsTrimmingAnnounceCloseButton).on("click", function() {
                         e.dismissClipsTrimmingAnnounce()
@@ -18973,6 +18974,11 @@
                 key: "removeClipsTrimmingAnnounce",
                 value: function() {
                     this.clipsTrimmingAnnouncePopup.remove(), this.clipButton.attr("data-state", null)
+                }
+            }, {
+                key: "_enabledAnnouncement",
+                value: function() {
+                    return a
                 }
             }, {
                 key: "destroy",
