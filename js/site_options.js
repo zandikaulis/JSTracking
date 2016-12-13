@@ -739,7 +739,7 @@ window.SiteOptions = {
                 "value": "variant1"
             }, {
                 "weight": 0,
-                "value": "variant1,variant2"
+                "value": "variant2"
             }]
         },
         "a1ce3d24-076a-4664-be4c-f9046fdce18c": {
