@@ -17870,6 +17870,7 @@ function(e, t) {
             EXTENSIONS: "264f75af-a787-4a40-8654-40d78b4d8b41",
             CPR_SUB_NAV_V2: "b451a3d9-79f4-4743-89c1-719335c2c974",
             INTL_I18N: "0670f0ea-3b5c-41a8-946d-114ef4a42540",
+            INTERNATIONAL_SEARCH: "b0033638-a84e-4f57-8952-7115be4dc3b6",
             DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS: "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2",
             CLIENT_BATCH_SPADE: "1b905261-e257-4703-ac84-12a6a9099935",
             CLIENT_BATCH_MIXPANEL: "42f5eea6-c548-4791-b767-9c7e29b73ef6",
@@ -17911,6 +17912,7 @@ function(e, t) {
             "264f75af-a787-4a40-8654-40d78b4d8b41": "no",
             "b451a3d9-79f4-4743-89c1-719335c2c974": "control",
             "0670f0ea-3b5c-41a8-946d-114ef4a42540": "control",
+            "b0033638-a84e-4f57-8952-7115be4dc3b6": "control",
             "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": "hide",
             "1b905261-e257-4703-ac84-12a6a9099935": "control",
             "42f5eea6-c548-4791-b767-9c7e29b73ef6": "control",
@@ -18137,28 +18139,29 @@ function(e, t) {
         i = function(t) {
             var n;
             return t.playerType === "live" ? n = {
-                id: t.id,
-                hide_chat: !0,
-                channel: t.channel,
-                host_channel: t.hostChannel,
-                embed: t.embed ? "1" : "0",
-                auto_play: !0
-            } : t.playerType === "highlighter" ? n = {
-                id: t.id,
-                videoId: t.archiveId,
-                playerType: t.playerType,
-                hostname: SiteOptions.twitch_cdn_hostport,
-                auto_play: !0
-            } : t.playerType === "archive" && (n = {
-                id: t.id,
-                videoId: t.archiveId,
-                playerType: t.playerType,
-                hostname: SiteOptions.twitch_cdn_hostport,
-                auto_play: !0,
-                playOffset: s()
-            }), n.device_id = e.idsForMixpanel.getOrCreateUniqueId(), n.session_device_id = e.idsForMixpanel.getOrCreateSessionUniqueId(), n.localstorage_device_id = e.idsForMixpanel.getOrCreateLocalStorageUniqueId(), n.test_environment_url = "http://" + SiteOptions.www_hostport, _.each(n, function(e, t) {
-                e === undefined && delete n[t]
-            }), n
+                    id: t.id,
+                    hide_chat: !0,
+                    channel: t.channel,
+                    host_channel: t.hostChannel,
+                    embed: t.embed ? "1" : "0",
+                    auto_play: !0
+                } : t.playerType === "highlighter" ? n = {
+                    id: t.id,
+                    videoId: t.archiveId,
+                    playerType: t.playerType,
+                    hostname: SiteOptions.twitch_cdn_hostport,
+                    auto_play: !0
+                } : t.playerType === "archive" && (n = {
+                    id: t.id,
+                    videoId: t.archiveId,
+                    playerType: t.playerType,
+                    hostname: SiteOptions.twitch_cdn_hostport,
+                    auto_play: !0,
+                    playOffset: s()
+                }), n.device_id = e.idsForMixpanel.getOrCreateUniqueId(), n.session_device_id =
+                e.idsForMixpanel.getOrCreateSessionUniqueId(), n.localstorage_device_id = e.idsForMixpanel.getOrCreateLocalStorageUniqueId(), n.test_environment_url = "http://" + SiteOptions.www_hostport, _.each(n, function(e, t) {
+                    e === undefined && delete n[t]
+                }), n
         },
         s = function() {
             var e = URI().query(!0).t;
@@ -19275,7 +19278,8 @@ function(e, t) {
                 name: "authenticity_token",
                 value: e.csrf_token
             });
-            t("#logout_form").append(n).submit()
+            t("#logout_form").append(n)
+                .submit()
         }, function() {
             t("#logout_form").submit()
         })

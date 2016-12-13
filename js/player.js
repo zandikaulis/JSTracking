@@ -2559,7 +2559,7 @@
             h = n(171),
             _ = n(173),
             g = "testplayer.twitch.tv",
-            v = (t.domain = "twitch.tv", t.twitchHost = "//twitch.tv"),
+            v = (t.domain = "twitch.tv", t.twitchHost = "//www.twitch.tv"),
             y = t.apiHost = "https://api.twitch.tv",
             m = (t.spectreHost = "//spectre.twitch.tv", t.usherHost = "https://usher.ttvnw.net", t.valveApiHost = y + "/steam/watching", t.playerHost = function() {
                 var e = document.currentScript,
@@ -8422,7 +8422,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.12.12-214352+9c5c5075f676e24e7f39452722d3a2a479836146",
+                    app_version: "2016.12.13-003020+86adc8b8a78cc8dd9e67a0a11efbd25cf6ca407a",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
