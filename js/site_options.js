@@ -243,16 +243,6 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
-        "23eb19cd-61b1-4691-8ba3-59397db057e0": {
-            "name": "android_host_mode",
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 1,
-                "value": "variant"
-            }]
-        },
         "264f75af-a787-4a40-8654-40d78b4d8b41": {
             "name": "extensions",
             "groups": [{
@@ -560,19 +550,6 @@ window.SiteOptions = {
             }, {
                 "weight": 50,
                 "value": "control"
-            }]
-        },
-        "6f1bb0b8-05bb-4bee-9008-5cee5b1732c9": {
-            "name": "android_show_following_on_launch",
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 1,
-                "value": "no_carousel"
-            }, {
-                "weight": 0,
-                "value": "with_carousel"
             }]
         },
         "740f3ab5-0558-4c23-b05c-de254ce2cf07": {
