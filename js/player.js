@@ -8422,7 +8422,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.12.13-003020+86adc8b8a78cc8dd9e67a0a11efbd25cf6ca407a",
+                    app_version: "2016.12.14-191616+ee5fcbaaf5da32ab27f7d61373bc5db570cac7d3",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -9446,7 +9446,15 @@
             }
 
             function Z(e) {
-                e.hasOwnProperty("URL") && (0, J["default"])(e.URL) && n.dispatch((0, w.setAdClickThrough)((0, te.parseUri)(e.URL).queryKey.adurl)), n.dispatch((0, U.setAdContent)(U.AdContentTypes.STITCHED))
+                if (e.hasOwnProperty("URL") && (0, J["default"])(e.URL)) {
+                    var t = (0, te.parseUri)(e.URL).queryKey.adurl;
+                    try {
+                        n.dispatch((0, w.setAdClickThrough)(decodeURIComponent(t)))
+                    } catch (i) {
+                        console.warn("Failed to decode click-through URL: ", t)
+                    }
+                }
+                n.dispatch((0, U.setAdContent)(U.AdContentTypes.STITCHED))
             }
 
             function ne() {
