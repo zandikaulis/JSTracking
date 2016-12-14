@@ -1078,16 +1078,6 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "old_front_page"
             }]
-        },
-        "fe36f15d-a487-421b-92f5-ace71242062e": {
-            "name": "ios_recent_emotes",
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 100,
-                "value": "recent_emotes"
-            }]
         }
     }
 };
