@@ -145,7 +145,10 @@ window.SiteOptions = {
             "name": "NEWS_FEED_REDESIGN",
             "groups": [{
                 "weight": 50,
-                "value": "has_redesign"
+                "value": "yes"
+            }, {
+                "weight": 50,
+                "value": "no"
             }]
         },
         "0670f0ea-3b5c-41a8-946d-114ef4a42540": {
