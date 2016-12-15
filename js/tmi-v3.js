@@ -1760,6 +1760,7 @@
                     case "historical":
                         return value === "1" ? true : false;
                     case "slow":
+                    case "followers-only":
                         return +value;
                     default:
                         try {
@@ -2751,6 +2752,16 @@
             };
             Room.prototype.stopSubscribersMode = function() {
                 this.sendMessage("/subscribersoff")
+            };
+            Room.prototype.setFollowersMode = function(duration) {
+                if (duration !== undefined) {
+                    this.sendMessage("/followers " + duration)
+                } else {
+                    this.sendMessage("/followers")
+                }
+            };
+            Room.prototype.stopFollowersMode = function() {
+                this.sendMessage("/followersoff")
             };
             Room.prototype._setRoomConn = function(roomConn) {
                 if (this._roomConn) {
@@ -3759,7 +3770,7 @@
                 this._emoticonImagesResponse = response
             };
             SessionManager.prototype.getEmotes = function() {
-                return this._emoticonImagesResponse
+                return this._emoticonImagesResponse;
             };
             SessionManager.prototype.updateChannel = function(channelId, data) {
                 return this._tmiApi.put("/api/channels/" + channelId, data)

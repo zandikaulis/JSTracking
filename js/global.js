@@ -17257,7 +17257,6 @@ function(e, t) {
             REMOVE_CSGO_DIRECTORY: "355ff3e2-38b5-449a-8ab8-a52b5d3ab817",
             LANGUAGE_DIRECTORY_FILTER: "653cc0db-d332-4df6-b224-15c5c481f7e7",
             CHANNEL_VIDEOS_TAB: "852b3485-a831-4580-b7bf-acf819977704",
-            CLIPS_ENABLED: "b4d61bdb-c174-47e6-a2f9-a46a4088ac26",
             MESSAGE_DELETED_EXPERIMENT: "04165981-17be-4593-afbd-762a380f6838",
             RESUME_WATCHING_BANNER: "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2",
             CHAT_RULES_EXPERIMENT: "98f3f2a5-9e4e-4ba8-aabe-2ff85e7309ee",
@@ -17300,7 +17299,6 @@ function(e, t) {
             "355ff3e2-38b5-449a-8ab8-a52b5d3ab817": "control",
             "653cc0db-d332-4df6-b224-15c5c481f7e7": "control",
             "852b3485-a831-4580-b7bf-acf819977704": "control",
-            "b4d61bdb-c174-47e6-a2f9-a46a4088ac26": "no",
             "04165981-17be-4593-afbd-762a380f6838": "false",
             "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2": "no",
             "98f3f2a5-9e4e-4ba8-aabe-2ff85e7309ee": "control",
@@ -18013,20 +18011,20 @@ function(e, t) {
                     fullscreen: undefined
                 };
             i && (s.exp_name = "mwcc", s.exp_grp = i);
-            var u = o.eventController = new e.player.EventController(o.options.channel, n, s),
-                a = function(e) {
-                    t.ajax({
-                        type: "GET",
-                        url: "http://fan.twitch.tv/" + e,
-                        cache: !1,
-                        data: {
-                            channel: o.options.channel,
-                            context: "preroll",
-                            turbo_token: o.options.turboToken,
-                            chansub_token: o.options.channelSubscriptionToken
-                        }
-                    })
-                };
+            var u = o.eventController = new
+            e.player.EventController(o.options.channel, n, s), a = function(e) {
+                t.ajax({
+                    type: "GET",
+                    url: "http://fan.twitch.tv/" + e,
+                    cache: !1,
+                    data: {
+                        channel: o.options.channel,
+                        context: "preroll",
+                        turbo_token: o.options.turboToken,
+                        chansub_token: o.options.channelSubscriptionToken
+                    }
+                })
+            };
             if (o.options.ads === !1) {
                 a("ad"), setTimeout(a, 3e4, "adcompleted"), o.setSrc(n), console.info("HTML5Player.init success (no ads)"), r();
                 return
@@ -19173,8 +19171,7 @@ var Base64 = {
                 e.tracking.log.debugEnabled() && (console.group("Twitch.tracking.log.trackEvent"), console.log("library:", r), console.log("event:", t), console.log("properties:", n), console.groupEnd())
             },
             setTrackingLogLength: function(t) {
-                e.
-                storage.setObject("trackingLogLength", t)
+                e.storage.setObject("trackingLogLength", t)
             },
             getTrackingLogLength: function() {
                 return e.storage.getObject("trackingLogLength") || 5
