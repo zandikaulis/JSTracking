@@ -911,10 +911,10 @@ window.SiteOptions = {
         "cc164e1e-1361-4730-8d9b-0091a0f9cb8f": {
             "name": "DETERMINATION",
             "groups": [{
-                "weight": 50,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "no"
             }]
         },
