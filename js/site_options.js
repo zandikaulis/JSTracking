@@ -316,13 +316,10 @@ window.SiteOptions = {
             "name": "CVP-50",
             "groups": [{
                 "weight": 2,
-                "value": "1.1.112"
+                "value": "1.1.114"
             }, {
-                "weight": 96,
+                "weight": 98,
                 "value": "1.1.111"
-            }, {
-                "weight": 2,
-                "value": "1.1.113"
             }]
         },
         "34fca29d-6914-412f-8ce2-fb65f792d386": {
