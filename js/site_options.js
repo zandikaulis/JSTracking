@@ -325,10 +325,10 @@ window.SiteOptions = {
         "34fca29d-6914-412f-8ce2-fb65f792d386": {
             "name": "CLIPS_ANNOUNCEMENT_SHOW",
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "show"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "hide"
             }]
         },
