@@ -171,6 +171,16 @@ window.SiteOptions = {
                 "value": "variant"
             }]
         },
+        "1710cf57-352c-4d09-b2c1-3d40bdf79b30": {
+            "name": "vod_upload_units_v3",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "experiment"
+            }]
+        },
         "17133457-67a2-41f8-8961-235020959018": {
             "name": "baking_bread_b",
             "groups": [{
