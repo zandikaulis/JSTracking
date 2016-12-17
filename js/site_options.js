@@ -532,19 +532,6 @@ window.SiteOptions = {
                 "value": "scroll_new"
             }]
         },
-        "67fd8802-f683-42a3-8527-99fbc87c77ba": {
-            "name": "Transcode_Quality_Experiment_3",
-            "groups": [{
-                "weight": 100,
-                "value": "regular"
-            }, {
-                "weight": 0,
-                "value": "plus"
-            }, {
-                "weight": 0,
-                "value": "nonplus"
-            }]
-        },
         "68cde3a8-d4a6-44ae-af4a-22dbc5a0393c": {
             "name": "passport_redesign_test",
             "groups": [{
