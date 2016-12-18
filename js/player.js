@@ -43,7 +43,9 @@
                     userAgent: y.getState().window.navigator.userAgent
                 })), y.dispatch(X.loadDefaultLang(s.lang)), y.dispatch((0, Z.setPlayerType)(s.player)), K.push(new V.PubSub(y, s)), l = new _.AnalyticsTracker(y, s), y.dispatch((0, ie.setAnalyticsTracker)(l)), y.dispatch((0, J.initializeQuality)()), c = s.allowfullscreen ? new F.FullScreen(n) : new H.NoFullScreen(n), $ = new he.TimelineMetadataManager(y), E = new L.Video(n, l, y, s, c), g = new O.State(E, c, y, l, s), s.debug && (window.state = g), (0, R.forwardProperties)(o, E), k = new h.Analytics(E, l, g, y, s), r(s), C = new D.EmbedHost(E, g, y), new M.PlayerHotkeys(E, n, y, s), y.dispatch((0, ne.setAutoplay)(s.autoplay)), s.controls && (f = new j.PlayerUI(E, n, l, g, c, y, s), I = new se.ClipGenerator(n, g, y)), a().then(function(e) {
                     return y.dispatch((0, q.setAdblockDetected)(e))
-                }, function() {}).then(function() {
+                }, function() {
+                    return y.dispatch((0, q.setAdblockDetected)(!0))
+                }).then(function() {
                     s.channel ? y.dispatch(Y.setStream(Y.TYPE_CHANNEL, s.channel)) : s.video && y.dispatch(Y.setStream(Y.TYPE_VIDEO, s.video))
                 }), y.dispatch((0, te.initVodResume)()), (0, oe.krakenUserInfo)().then(function(e) {
                     return y.dispatch((0, te.setUser)(e._id))
@@ -1555,8 +1557,8 @@
             o = n(105),
             s = n(106),
             l = n(107);
-        i.prototype.clear = r, i.prototype["delete"] = a, i.prototype.get = o, i.prototype.has = s, i.prototype.set = l,
-            e.exports = i
+        i.prototype.clear = r, i.prototype["delete"] = a,
+            i.prototype.get = o, i.prototype.has = s, i.prototype.set = l, e.exports = i
     }, function(e, t, n) {
         function i() {
             this.__data__ = r ? r(null) : {}, this.size = 0
@@ -8422,7 +8424,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.12.17-235836+a35f772863b5f9f3aeea25a0f971d1244d064ef0",
+                    app_version: "2016.12.18-014719+9dce3deafe2e7b7c2fb29cf59ed357e565b3bf63",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
