@@ -18740,12 +18740,7 @@ function(e, t) {
     function(e, t) {
         var n = "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
             r = new RSVP.Promise(function(e, r) {
-                t.ajax({
-                    url: n,
-                    dataType: "script",
-                    timeout: 2e3,
-                    cache: !0
-                }).fail(function(e, t, n) {
+                t.getScript(n).fail(function(e, t, n) {
                     r()
                 }), document.addEventListener("sp.blocking", function() {
                     e(!0)
