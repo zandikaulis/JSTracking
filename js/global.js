@@ -17270,7 +17270,6 @@ function(e, t) {
             DISCOVER_SHOW_COVIEWS: "3e011e23-ef29-46a5-af4b-a86e15d8c9e6",
             PERPETUA: "af8f152a-f618-416e-8b79-d6ac30479018",
             EXTENSIONS: "264f75af-a787-4a40-8654-40d78b4d8b41",
-            CPR_SUB_NAV_V2: "b451a3d9-79f4-4743-89c1-719335c2c974",
             INTL_I18N: "0670f0ea-3b5c-41a8-946d-114ef4a42540",
             INTERNATIONAL_SEARCH: "b0033638-a84e-4f57-8952-7115be4dc3b6",
             DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS: "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2",
@@ -17314,7 +17313,6 @@ function(e, t) {
             "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": "no_show",
             "af8f152a-f618-416e-8b79-d6ac30479018": "control",
             "264f75af-a787-4a40-8654-40d78b4d8b41": "no",
-            "b451a3d9-79f4-4743-89c1-719335c2c974": "control",
             "0670f0ea-3b5c-41a8-946d-114ef4a42540": "control",
             "b0033638-a84e-4f57-8952-7115be4dc3b6": "control",
             "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": "hide",
@@ -17336,7 +17334,6 @@ function(e, t) {
             DETERMINATION: "yes",
             DISCOVER_SHOW_COVIEWS: "show",
             PERPETUA: "yes",
-            CPR_SUB_NAV_V2: "new",
             FINAL_DESTINATION: "videos"
         };
     _.each(Object.keys(u), function(t) {
@@ -19178,8 +19175,7 @@ var Base64 = {
                 }), this.consoleLogging(t, n, r), e.storage.setObject("trackingLog", i)
             },
             consoleLogging: function(t, n, r) {
-                e.tracking.log.debugEnabled() &&
-                    (console.group("Twitch.tracking.log.trackEvent"), console.log("library:", r), console.log("event:", t), console.log("properties:", n), console.groupEnd())
+                e.tracking.log.debugEnabled() && (console.group("Twitch.tracking.log.trackEvent"), console.log("library:", r), console.log("event:", t), console.log("properties:", n), console.groupEnd())
             },
             setTrackingLogLength: function(t) {
                 e.storage.setObject("trackingLogLength", t)
