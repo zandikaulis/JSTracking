@@ -831,6 +831,16 @@ window.SiteOptions = {
                 "value": "new"
             }]
         },
+        "b542e7a6-6fc9-4380-a5cd-95301706904f": {
+            "name": "FINAL_DESTINATION",
+            "groups": [{
+                "weight": 100,
+                "value": "channel"
+            }, {
+                "weight": 0,
+                "value": "videos"
+            }]
+        },
         "b660b196-deb7-4542-81e1-b35e61d7c79d": {
             "name": "CVP control",
             "groups": [{
