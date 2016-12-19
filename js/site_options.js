@@ -963,13 +963,13 @@ window.SiteOptions = {
         "d2382c4d-c239-4290-b614-f1797f946980": {
             "name": "Transcode_Quality_Experiment_HQ_1",
             "groups": [{
-                "weight": 60,
+                "weight": 100,
                 "value": "regular"
             }, {
-                "weight": 20,
+                "weight": 0,
                 "value": "plus"
             }, {
-                "weight": 20,
+                "weight": 0,
                 "value": "nonplus"
             }]
         },
