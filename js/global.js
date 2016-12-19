@@ -17278,7 +17278,8 @@ function(e, t) {
             CLIENT_BATCH_MIXPANEL: "42f5eea6-c548-4791-b767-9c7e29b73ef6",
             CLIPS_FEEL_IT_COMING: "2858bc04-3f98-4808-a2dd-86555885ca90",
             NEWS_FEED_REDESIGN: "05d8869f-e037-4955-b80a-7c361f9ddffb",
-            VOD_UPLOAD_UNITS_V3: "1710cf57-352c-4d09-b2c1-3d40bdf79b30"
+            VOD_UPLOAD_UNITS_V3: "1710cf57-352c-4d09-b2c1-3d40bdf79b30",
+            FINAL_DESTINATION: "b542e7a6-6fc9-4380-a5cd-95301706904f"
         },
         i = {
             "99494f77-1c7c-46c5-9b9c-a117db47d3c5": "control",
@@ -17321,7 +17322,8 @@ function(e, t) {
             "42f5eea6-c548-4791-b767-9c7e29b73ef6": "control",
             "2858bc04-3f98-4808-a2dd-86555885ca90": "control",
             "05d8869f-e037-4955-b80a-7c361f9ddffb": "no",
-            "1710cf57-352c-4d09-b2c1-3d40bdf79b30": "control"
+            "1710cf57-352c-4d09-b2c1-3d40bdf79b30": "control",
+            "b542e7a6-6fc9-4380-a5cd-95301706904f": "channel"
         },
         s = "experiment_overrides",
         o = {},
@@ -17334,7 +17336,8 @@ function(e, t) {
             DETERMINATION: "yes",
             DISCOVER_SHOW_COVIEWS: "show",
             PERPETUA: "yes",
-            CPR_SUB_NAV_V2: "new"
+            CPR_SUB_NAV_V2: "new",
+            FINAL_DESTINATION: "videos"
         };
     _.each(Object.keys(u), function(t) {
         o[r[t]] = e.user().then(function(e) {
@@ -19175,7 +19178,8 @@ var Base64 = {
                 }), this.consoleLogging(t, n, r), e.storage.setObject("trackingLog", i)
             },
             consoleLogging: function(t, n, r) {
-                e.tracking.log.debugEnabled() && (console.group("Twitch.tracking.log.trackEvent"), console.log("library:", r), console.log("event:", t), console.log("properties:", n), console.groupEnd())
+                e.tracking.log.debugEnabled() &&
+                    (console.group("Twitch.tracking.log.trackEvent"), console.log("library:", r), console.log("event:", t), console.log("properties:", n), console.groupEnd())
             },
             setTrackingLogLength: function(t) {
                 e.storage.setObject("trackingLogLength", t)
