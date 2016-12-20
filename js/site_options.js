@@ -151,6 +151,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "05f51b55-9ce2-4d95-9896-8fdfb83b0b04": {
+            "name": "test1",
+            "groups": [{
+                "weight": 10,
+                "value": ""
+            }, {
+                "weight": 0,
+                "value": ""
+            }]
+        },
         "0670f0ea-3b5c-41a8-946d-114ef4a42540": {
             "name": "INTL_I18N",
             "groups": [{
