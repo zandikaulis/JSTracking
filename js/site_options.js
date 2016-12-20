@@ -804,7 +804,7 @@ window.SiteOptions = {
                 "weight": 1,
                 "value": "cloudfront"
             }, {
-                "weight": 198,
+                "weight": 98,
                 "value": "control"
             }]
         },
