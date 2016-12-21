@@ -432,13 +432,16 @@ window.SiteOptions = {
                 "value": "yes-forced"
             }, {
                 "weight": 2,
-                "value": "yes-ft-only"
+                "value": "yes-ft-a"
             }, {
-                "weight": 96,
+                "weight": 94,
                 "value": "no"
             }, {
                 "weight": 2,
                 "value": "no-with-1.2"
+            }, {
+                "weight": 2,
+                "value": "yes-ft-b"
             }]
         },
         "4afcc1d7-b6f4-489a-beb3-0a32eb780592": {
