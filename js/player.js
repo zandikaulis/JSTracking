@@ -78,7 +78,8 @@
                     leaveDialogEnabled: S.leaveDialog.enabled,
                     leaveDialogViewerThreshold: S.leaveDialog.viewerThreshold,
                     refreshWarningEnabled: S.leaveDialog.enabled,
-                    lang: S.defaultLanguage
+                    lang: S.defaultLanguage,
+                    abs: !1
                 }), t.tracking = (0, s["default"])({}, t.tracking, {
                     player: t.player
                 }), t
@@ -4369,7 +4370,7 @@
             return new c["default"]({
                 defaults: (t = {}, r(t, g, "no"), r(t, v, "off"), r(t, y, "no"), r(t, m, "no"), r(t, b, "no"), r(t, E, "no"), r(t, S, "no"), r(t, T, "no"), r(t, k, "no"), r(t, A, "no"), r(t, P, "no"), r(t, C, "no"), r(t, w, "1.0"), r(t, O, "no"), r(t, I, "no"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, r(n, O, a(L)), r(n, v, a("v2")), r(n, w, a("1.2")), r(n, y, a("yes")), r(n, m, o(["US"])), r(n, b, o(["GB"])), r(n, E, o(["DE"])), r(n, S, o(["FR"])), r(n, T, o(["SE"])), r(n, k, o(["BE", "DK", "FI", "NL", "NO", "PL"])), r(n, A, o(["CA"])), r(n, P, o(["AU", "NZ"])), r(n, I, a("yes")), n),
+                overrides: (n = {}, r(n, v, a("v2")), r(n, y, a("yes")), r(n, m, o(["US"])), r(n, b, o(["GB"])), r(n, E, o(["DE"])), r(n, S, o(["FR"])), r(n, T, o(["SE"])), r(n, k, o(["BE", "DK", "FI", "NL", "NO", "PL"])), r(n, A, o(["CA"])), r(n, P, o(["AU", "NZ"])), r(n, I, a("yes")), n),
                 platform: "web",
                 login: e.login,
                 provider: new f["default"](f["default"].SERVICE_URL),
@@ -8554,7 +8555,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.12.21-012954+f602b7125bc96149831842b310e8a6ceece5372c",
+                    app_version: "2016.12.21-014544+785378767425b9afec2f9b7a706237a57b8bae69",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -9733,12 +9734,13 @@
                 Ue = !1;
             Re._setABS = function(e) {
                 var t = n.getState(),
-                    i = t.stream,
-                    r = t.quality,
-                    a = i.contentType === S.CONTENT_MODE_LIVE,
-                    o = e === q.ABS_FORCED_GROUP,
-                    s = e === q.ABS_FIRST_TIME_GROUP && !v.localStore.get(V.KEY_AUTO_QUALITY_FORCED, !1);
-                return a || r.selected !== V.QUALITY_AUTO || n.dispatch((0, V.selectQuality)(F.DEFAULT_STREAM_FORMAT)), a ? (a && (0, J["default"])(q.ENABLE_ABS_GROUP, e) && (Re._enableABS(), v.localStore.set(V.KEY_AUTO_QUALITY_FORCED, !0)), void(a && (o || s) && (n.dispatch((0, V.selectQuality)(V.QUALITY_AUTO)), n.dispatch((0, V.setPreferredQuality)(V.QUALITY_AUTO_OBJECT))))) : void Re._disableABS()
+                    r = t.stream,
+                    a = t.quality,
+                    o = r.contentType === S.CONTENT_MODE_LIVE,
+                    s = i.abs,
+                    l = e === q.ABS_FORCED_GROUP,
+                    u = e === q.ABS_FIRST_TIME_GROUP && !v.localStore.get(V.KEY_AUTO_QUALITY_FORCED, !1);
+                return o || a.selected !== V.QUALITY_AUTO || n.dispatch((0, V.selectQuality)(F.DEFAULT_STREAM_FORMAT)), o ? (o && ((0, J["default"])(q.ENABLE_ABS_GROUP, e) || s) && (Re._enableABS(), v.localStore.set(V.KEY_AUTO_QUALITY_FORCED, !0)), void(o && (l || u || s) && (n.dispatch((0, V.selectQuality)(V.QUALITY_AUTO)), n.dispatch((0, V.setPreferredQuality)(V.QUALITY_AUTO_OBJECT))))) : void Re._disableABS()
             }, Re._enableABS = function() {
                 je.enableABS()
             }, Re._disableABS = function() {
@@ -11106,7 +11108,7 @@
                 function e(t) {
                     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         i = arguments[2];
-                    a(this, e), this.stateStore = i, this.video = document.createElement("video"), this.video.autoplay = n.autoplay, this.retries = 0, this.playerCoreLogLevel = n["cvp-log"] || "error", n.playsinline && this.video.setAttribute("webkit-playsinline", ""), this.initialize()
+                    a(this, e), this.stateStore = i, this.video = document.createElement("video"), this.video.autoplay = n.autoplay, this.retries = 0, this.playerCoreLogLevel = n["cvp-log"] || "error", this._forceABS = n.abs, n.playsinline && this.video.setAttribute("webkit-playsinline", ""), this.initialize()
                 }
                 return l(e, [{
                     key: "initialize",
@@ -11572,12 +11574,7 @@
                 }, {
                     key: "enableABS",
                     value: function() {
-                        var e = this,
-                            t = this.stateStore.getState(),
-                            n = t.experiments;
-                        n.get(f.PLAYER_CORE_VER_CONTROL).then(function(t) {
-                            e.core && "1.2" === t && e.core.enableABS()
-                        })
+                        this.core && this.core.enableABS && this.core.enableABS()
                     }
                 }, {
                     key: "disableABS",
@@ -11592,18 +11589,20 @@
                 }, {
                     key: "loadPlayerCore",
                     value: function() {
-                        var e = this.stateStore.getState(),
-                            t = e.experiments,
-                            n = t.get(f.PLAYER_CORE_VER_CONTROL),
-                            i = t.get(f.GABRIEL);
-                        return Promise.all([n, i]).then(function(e) {
-                            var t = s(e, 2),
-                                n = t[0],
-                                i = t[1];
-                            return (0, C["default"])([].concat(r(f.ENABLE_ABS_GROUP), [f.NO_ABS_WITH_V12]), i) ? E["default"].load({
+                        var e = this,
+                            t = this.stateStore.getState(),
+                            n = t.experiments,
+                            i = n.get(f.PLAYER_CORE_VER_CONTROL),
+                            a = n.get(f.GABRIEL);
+                        return Promise.all([i, a]).then(function(t) {
+                            var n = s(t, 2),
+                                i = n[0],
+                                a = n[1],
+                                o = (0, C["default"])([].concat(r(f.ENABLE_ABS_GROUP), [f.NO_ABS_WITH_V12]), a) || e._forceABS;
+                            return o ? E["default"].load({
                                 version: "1.2"
                             }) : E["default"].load({
-                                version: n
+                                version: i
                             })
                         })
                     }
