@@ -496,6 +496,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "5380a8cf-e5cf-497e-9c6c-16cb1c881e0c": {
+            "name": "WATCH_NOW_RIGHTBAR",
+            "groups": [{
+                "weight": 80,
+                "value": "control"
+            }, {
+                "weight": 5,
+                "value": "treatment"
+            }]
+        },
         "58a07c08-c495-4f64-96ae-d29bc623a58b": {
             "name": "coview user based recs",
             "groups": [{
