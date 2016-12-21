@@ -502,7 +502,7 @@ window.SiteOptions = {
         "5380a8cf-e5cf-497e-9c6c-16cb1c881e0c": {
             "name": "WATCH_NOW_RIGHTBAR",
             "groups": [{
-                "weight": 80,
+                "weight": 95,
                 "value": "control"
             }, {
                 "weight": 5,
