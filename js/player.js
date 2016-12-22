@@ -8587,7 +8587,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.12.22-011333+005d0384219385c76d00077d95edbd50f96cb161",
+                    app_version: "2016.12.22-014917+c8bc48025b7124c70002b684f11aeef245bd9e86",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -9637,9 +9637,9 @@
                     var i = e.playback,
                         r = t.playback,
                         a = n.getState(),
-                        o = a.playback,
+                        o = a.ads,
                         s = a.adsManager,
-                        l = o.adContent === w.AdContentTypes.IMA ? s : je;
+                        l = o.currentMetadata.contentType === w.AdContentTypes.IMA ? s : je;
                     i.volume !== r.volume && l.setVolume(i.volume), i.muted !== r.muted && l.setMuted(i.muted)
                 })
             }
@@ -9823,9 +9823,9 @@
                 return je.getStartOffsetTime()
             }, Re.getPaused = function() {
                 var e = n.getState(),
-                    t = e.playback,
+                    t = e.ads,
                     i = e.adsManager;
-                return t.adContent === w.AdContentTypes.IMA ? i.paused : je.getPaused()
+                return t.currentMetadata.contentType === w.AdContentTypes.IMA ? i.paused : je.getPaused()
             }, Re.getDefaultPlaybackRate = function() {
                 return je.getDefaultPlaybackRate()
             }, Re.setDefaultPlaybackRate = function(e) {
@@ -9848,17 +9848,18 @@
                 je.setLoop(e)
             }, Re.play = function() {
                 var e = n.getState(),
-                    i = e.playback;
-                n.getState().playback.hasPlayed || n.dispatch((0, w.requestAds)(O.PREROLL, w.DEFAULT_AD_DURATION)), je.getNetworkState === je.NETWORK_EMPTY ? je.load() : i.adContent === w.AdContentTypes.IMA ? n.dispatch((0, w.playAd)()) : (n.getState().stream.contentType === T.CONTENT_MODE_VOD && Re.getEnded() && Re.setCurrentTime(0), je.play()), t.trackEvent("video_pause", {
+                    i = e.playback,
+                    r = e.ads;
+                i.hasPlayed || n.dispatch((0, w.requestAds)(O.PREROLL, w.DEFAULT_AD_DURATION)), je.getNetworkState === je.NETWORK_EMPTY ? je.load() : r.currentMetadata.contentType === w.AdContentTypes.IMA ? n.dispatch((0, w.playAd)()) : (n.getState().stream.contentType === T.CONTENT_MODE_VOD && Re.getEnded() && Re.setCurrentTime(0), je.play()), t.trackEvent("video_pause", {
                     action: "play",
-                    in_ad: n.getState().playback.adContent !== w.AdContentTypes.NONE
+                    in_ad: n.getState().ads.currentMetadata.contentType !== w.AdContentTypes.NONE
                 })
             }, Re.pause = function() {
                 var e = n.getState(),
-                    i = e.playback;
-                i.adContent === w.AdContentTypes.IMA ? n.dispatch((0, w.pauseAd)()) : je.pause(), t.trackEvent("video_pause", {
+                    i = e.ads;
+                i.currentMetadata.contentType === w.AdContentTypes.IMA ? n.dispatch((0, w.pauseAd)()) : je.pause(), t.trackEvent("video_pause", {
                     action: "pause",
-                    in_ad: n.getState().playback.adContent !== w.AdContentTypes.NONE
+                    in_ad: n.getState().ads.currentMetadata.contentType !== w.AdContentTypes.NONE
                 })
             }, Re.getControls = function() {
                 return !0
@@ -10320,10 +10321,9 @@
                         align: "middle"
                     },
                     d = document.createElement("div");
-                $(t).prepend(d),
-                    ct = "swfobject-" + Ve, d.setAttribute("id", ct), E.embedSWF(e, ct, o, s, r, a, l, u, c, function(e) {
-                        lt = e.ref
-                    })
+                $(t).prepend(d), ct = "swfobject-" + Ve, d.setAttribute("id", ct), E.embedSWF(e, ct, o, s, r, a, l, u, c, function(e) {
+                    lt = e.ref
+                })
             }
 
             function je(e) {
