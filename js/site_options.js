@@ -931,10 +931,10 @@ window.SiteOptions = {
         "c926728f-d1d3-4b09-b868-db3e2aa000cc": {
             "name": "In-Player Recommendations",
             "groups": [{
-                "weight": 10,
+                "weight": 50,
                 "value": "yes"
             }, {
-                "weight": 90,
+                "weight": 50,
                 "value": "no"
             }]
         },
