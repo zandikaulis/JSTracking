@@ -618,10 +618,10 @@ window.SiteOptions = {
         "8ace0f50-8afd-424a-a086-3e61b3e66da0": {
             "name": "MESSAGE_HISTORY",
             "groups": [{
-                "weight": 50,
+                "weight": 100,
                 "value": "off"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "10-styled"
             }]
         },
