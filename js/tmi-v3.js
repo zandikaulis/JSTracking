@@ -1002,7 +1002,7 @@
                         on_site: "1"
                     },
                     headers: {
-                        Accept: "application/vnd.twitchtv.v2+json",
+                        Accept: "application/vnd.twitchtv.v4+json",
                         "Twitch-Api-Token": _utilJs2["default"].readCookie("api_token"),
                         "Client-ID": "jzkbprff40iqj646a697cyrvl0zt2m6"
                     }
