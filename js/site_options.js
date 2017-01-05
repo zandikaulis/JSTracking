@@ -897,6 +897,16 @@ window.SiteOptions = {
                 "value": "3"
             }]
         },
+        "baddf9d7-496a-4507-a0b4-6357b95d3ca8": {
+            "name": "CLIPS_PRE_EDIT_AA",
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "variant"
+            }]
+        },
         "c48ae3e6-1356-4ccc-8fbe-12c6909f9e98": {
             "name": "coviews_vod_recommendation",
             "groups": [{
