@@ -578,10 +578,10 @@ window.SiteOptions = {
         "711aaaf6-61c0-4cc4-9469-0dfc9908785a": {
             "name": "VP_QOS_TEST",
             "groups": [{
-                "weight": 2,
+                "weight": 20,
                 "value": "yes"
             }, {
-                "weight": 98,
+                "weight": 80,
                 "value": "no"
             }]
         },
