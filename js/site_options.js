@@ -120,6 +120,7 @@ window.SiteOptions = {
     "bits_promo_enabled": false,
     "p_cheer_enabled": true,
     "prime_blackfriday_promo_enabled": false,
+    "use_v4_api": false,
     "experiments": {
         "0173154a-7fa4-4a76-b8e1-0575eb3a7fcd": {
             "name": "android_live_preview",
@@ -898,13 +899,13 @@ window.SiteOptions = {
             }]
         },
         "baddf9d7-496a-4507-a0b4-6357b95d3ca8": {
-            "name": "CLIPS_PRE_EDIT_AA",
+            "name": "CLIPS_STARBOY",
             "groups": [{
                 "weight": 50,
                 "value": "control"
             }, {
                 "weight": 50,
-                "value": "variant"
+                "value": "variant1"
             }]
         },
         "c48ae3e6-1356-4ccc-8fbe-12c6909f9e98": {

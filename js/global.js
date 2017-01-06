@@ -16706,7 +16706,7 @@ googletag.cmd = googletag.cmd || [],
         RSVP.EventTarget.mixin(n);
         var i = [];
         n.isIframeReady = !1;
-        var s = 2;
+        var s = SiteOptions.use_v4_api ? 4 : 2;
         n.init = function(e) {
             var n = this,
                 i = function(e) {
@@ -19175,7 +19175,8 @@ var Base64 = {
                 }), this.consoleLogging(t, n, r), e.storage.setObject("trackingLog", i)
             },
             consoleLogging: function(t, n, r) {
-                e.tracking.log.debugEnabled() && (console.group("Twitch.tracking.log.trackEvent"), console.log("library:", r), console.log("event:", t), console.log("properties:", n), console.groupEnd())
+                e.tracking.log.debugEnabled() && (console.group("Twitch.tracking.log.trackEvent"), console.log("library:", r), console.log("event:", t),
+                    console.log("properties:", n), console.groupEnd())
             },
             setTrackingLogLength: function(t) {
                 e.storage.setObject("trackingLogLength", t)
