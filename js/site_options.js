@@ -120,7 +120,7 @@ window.SiteOptions = {
     "bits_promo_enabled": false,
     "p_cheer_enabled": true,
     "prime_blackfriday_promo_enabled": false,
-    "use_v4_api": false,
+    "use_v4_api": true,
     "experiments": {
         "0173154a-7fa4-4a76-b8e1-0575eb3a7fcd": {
             "name": "android_live_preview",
@@ -807,6 +807,16 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "no"
+            }]
+        },
+        "aece7525-dceb-49ba-af1b-242c1ae45831": {
+            "name": "CHANNEL_LOGIN_CTA",
+            "groups": [{
+                "weight": 50,
+                "value": "no"
+            }, {
+                "weight": 50,
+                "value": "yes"
             }]
         },
         "af8f152a-f618-416e-8b79-d6ac30479018": {
