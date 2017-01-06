@@ -120,7 +120,6 @@ window.SiteOptions = {
     "bits_promo_enabled": false,
     "p_cheer_enabled": true,
     "prime_blackfriday_promo_enabled": false,
-    "use_v4_api": true,
     "experiments": {
         "0173154a-7fa4-4a76-b8e1-0575eb3a7fcd": {
             "name": "android_live_preview",
