@@ -911,10 +911,10 @@ window.SiteOptions = {
         "baddf9d7-496a-4507-a0b4-6357b95d3ca8": {
             "name": "CLIPS_STARBOY",
             "groups": [{
-                "weight": 50,
+                "weight": 75,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 25,
                 "value": "variant1"
             }]
         },
