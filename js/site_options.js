@@ -502,11 +502,11 @@ window.SiteOptions = {
         "5380a8cf-e5cf-497e-9c6c-16cb1c881e0c": {
             "name": "WATCH_NOW_RIGHTBAR",
             "groups": [{
-                "weight": 90,
-                "value": "control"
-            }, {
                 "weight": 10,
                 "value": "treatment"
+            }, {
+                "weight": 90,
+                "value": "control"
             }]
         },
         "58a07c08-c495-4f64-96ae-d29bc623a58b": {
@@ -874,10 +874,10 @@ window.SiteOptions = {
         "b542e7a6-6fc9-4380-a5cd-95301706904f": {
             "name": "FINAL_DESTINATION",
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "channel"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "videos"
             }]
         },
