@@ -16921,1824 +16921,1540 @@ googletag.cmd = googletag.cmd || [],
             canonicalUrl: o,
             url_params: a
         })
-    }(Twitch, jQuery);
-var CryptoJS = CryptoJS || function(e, t) {
-    var n = {},
-        r = n.lib = {},
-        i = function() {},
-        s = r.Base = {
-            extend: function(e) {
-                i.prototype = this;
-                var t = new i;
-                return e && t.mixIn(e), t.hasOwnProperty("init") || (t.init = function() {
-                    t.$super.init.apply(this, arguments)
-                }), t.init.prototype = t, t.$super = this, t
-            },
-            create: function() {
-                var e = this.extend();
-                return e.init.apply(e, arguments), e
-            },
-            init: function() {},
-            mixIn: function(e) {
-                for (var t in e) e.hasOwnProperty(t) && (this[t] = e[t]);
-                e.hasOwnProperty("toString") && (this.toString = e.toString)
-            },
-            clone: function() {
-                return this.init.prototype.extend(this)
-            }
-        },
-        o = r.WordArray = s.extend({
-            init: function(e, n) {
-                e = this.words = e || [], this.sigBytes = n != t ? n : 4 * e.length
-            },
-            toString: function(e) {
-                return (e || a).stringify(this)
-            },
-            concat: function(e) {
-                var t = this.words,
-                    n = e.words,
-                    r = this.sigBytes;
-                e = e.sigBytes, this.clamp();
-                if (r % 4)
-                    for (var i = 0; i < e; i++) t[r + i >>> 2] |= (n[i >>> 2] >>> 24 - 8 * (i % 4) & 255) << 24 - 8 * ((r + i) % 4);
-                else if (65535 < n.length)
-                    for (i = 0; i < e; i += 4) t[r + i >>> 2] = n[i >>> 2];
-                else t.push.apply(t, n);
-                return this.sigBytes += e, this
-            },
-            clamp: function() {
-                var t = this.words,
-                    n = this.sigBytes;
-                t[n >>> 2] &= 4294967295 << 32 - 8 * (n % 4), t.length = e.ceil(n / 4)
-            },
-            clone: function() {
-                var e = s.clone.call(this);
-                return e.words = this.words.slice(0), e
-            },
-            random: function(t) {
-                for (var n = [], r = 0; r < t; r += 4) n.push(4294967296 * e.random() | 0);
-                return new o.init(n, t)
-            }
-        }),
-        u = n.enc = {},
-        a = u.Hex = {
-            stringify: function(e) {
-                var t = e.words;
-                e = e.sigBytes;
-                for (var n = [], r = 0; r < e; r++) {
-                    var i = t[r >>> 2] >>> 24 - 8 * (r % 4) & 255;
-                    n.push((i >>> 4).toString(16)), n.push((i & 15).toString(16))
-                }
-                return n.join("")
-            },
-            parse: function(e) {
-                for (var t = e.length, n = [], r = 0; r < t; r += 2) n[r >>> 3] |= parseInt(e.substr(r, 2), 16) << 24 - 4 * (r % 8);
-                return new o.init(n, t / 2)
-            }
-        },
-        f = u.Latin1 = {
-            stringify: function(e) {
-                var t = e.words;
-                e = e.sigBytes;
-                for (var n = [], r = 0; r < e; r++) n.push(String.fromCharCode(t[r >>> 2] >>> 24 - 8 * (r % 4) & 255));
-                return n.join("")
-            },
-            parse: function(e) {
-                for (var t = e.length, n = [], r = 0; r < t; r++) n[r >>> 2] |= (e.charCodeAt(r) & 255) << 24 - 8 * (r % 4);
-                return new o.init(n, t)
-            }
-        },
-        l = u.Utf8 = {
-            stringify: function(e) {
-                try {
-                    return decodeURIComponent(escape(f.stringify(e)))
-                } catch (t) {
-                    throw Error("Malformed UTF-8 data")
-                }
-            },
-            parse: function(e) {
-                return f.parse(unescape(encodeURIComponent(e)))
-            }
-        },
-        c = r.BufferedBlockAlgorithm = s.extend({
-            reset: function() {
-                this._data = new o.init, this._nDataBytes = 0
-            },
-            _append: function(e) {
-                "string" == typeof e && (e = l.parse(e)), this._data.concat(e), this._nDataBytes += e.sigBytes
-            },
-            _process: function(t) {
-                var n = this._data,
-                    r = n.words,
-                    i = n.sigBytes,
-                    s = this.blockSize,
-                    u = i / (4 * s),
-                    u = t ? e.ceil(u) : e.max((u | 0) - this._minBufferSize, 0);
-                t = u * s, i = e.min(4 * t, i);
-                if (t) {
-                    for (var a = 0; a < t; a += s) this._doProcessBlock(r, a);
-                    a = r.splice(0, t), n.sigBytes -= i
-                }
-                return new o.init(a, i)
-            },
-            clone: function() {
-                var e = s.clone.call(this);
-                return e._data = this._data.clone(), e
-            },
-            _minBufferSize: 0
-        });
-    r.Hasher = c.extend({
-        cfg: s.extend(),
-        init: function(e) {
-            this.cfg = this.cfg.extend(e), this.reset()
-        },
-        reset: function() {
-            c.reset.call(this), this._doReset()
-        },
-        update: function(e) {
-            return this._append(e), this._process(), this
-        },
-        finalize: function(e) {
-            return e && this._append(e), this._doFinalize()
-        },
-        blockSize: 16,
-        _createHelper: function(e) {
-            return function(t, n) {
-                return (new e.init(n)).finalize(t)
-            }
-        },
-        _createHmacHelper: function(e) {
-            return function(t, n) {
-                return (new h.HMAC.init(e, n)).finalize(t)
-            }
-        }
-    });
-    var h = n.algo = {};
-    return n
-}(Math);
-(function(e) {
-    function t(e, t, n, r, i, s, o) {
-        return e = e + (t & n | ~t & r) + i + o, (e << s | e >>> 32 - s) + t
-    }
-
-    function n(e, t, n, r, i, s, o) {
-        return e = e + (t & r | n & ~r) + i + o, (e << s | e >>> 32 - s) + t
-    }
-
-    function r(e, t, n, r, i, s, o) {
-        return e = e + (t ^ n ^ r) + i + o, (e << s | e >>> 32 - s) + t
-    }
-
-    function i(e, t, n, r, i, s, o) {
-        return e = e + (n ^ (t | ~r)) + i + o, (e << s | e >>> 32 - s) + t
-    }
-    for (var s = CryptoJS, o = s.lib, u = o.WordArray, a = o.Hasher, o = s.algo, f = [], l = 0; 64 > l; l++) f[l] = 4294967296 * e.abs(e.sin(l + 1)) | 0;
-    o = o.MD5 = a.extend({
-        _doReset: function() {
-            this._hash = new u.init([1732584193, 4023233417, 2562383102, 271733878])
-        },
-        _doProcessBlock: function(e, s) {
-            for (var o = 0; 16 > o; o++) {
-                var u = s + o,
-                    a = e[u];
-                e[u] = (a << 8 | a >>> 24) & 16711935 | (a << 24 | a >>> 8) & 4278255360
-            }
-            var o = this._hash.words,
-                u = e[s + 0],
-                a = e[s + 1],
-                l = e[s + 2],
-                c = e[s + 3],
-                h = e[s + 4],
-                d = e[s + 5],
-                v = e[s + 6],
-                g = e[s + 7],
-                y = e[s + 8],
-                b = e[s + 9],
-                w = e[s + 10],
-                E = e[s + 11],
-                S = e[s + 12],
-                x = e[s + 13],
-                T = e[s + 14],
-                N = e[s + 15],
-                C = o[0],
-                k = o[1],
-                L = o[2],
-                A = o[3],
-                C = t(C, k, L, A, u, 7, f[0]),
-                A = t(A, C, k, L, a, 12, f[1]),
-                L = t(L, A, C, k, l, 17, f[2]),
-                k = t(k, L, A, C, c, 22, f[3]),
-                C = t(C, k, L, A, h, 7, f[4]),
-                A = t(A, C, k, L, d, 12, f[5]),
-                L = t(L, A, C, k, v, 17, f[6]),
-                k = t(k, L, A, C, g, 22, f[7]),
-                C = t(C, k, L, A, y, 7, f[8]),
-                A = t(A, C, k, L, b, 12, f[9]),
-                L = t(L, A, C, k, w, 17, f[10]),
-                k = t(k, L, A, C, E, 22, f[11]),
-                C = t(C, k, L, A, S, 7, f[12]),
-                A = t(A, C, k, L, x, 12, f[13]),
-                L = t(L, A, C, k, T, 17, f[14]),
-                k = t(k, L, A, C, N, 22, f[15]),
-                C = n(C, k, L, A, a, 5, f[16]),
-                A = n(A, C, k, L, v, 9, f[17]),
-                L = n(L, A, C, k, E, 14, f[18]),
-                k = n(k, L, A, C, u, 20, f[19]),
-                C = n(C, k, L, A, d, 5, f[20]),
-                A = n(A, C, k, L, w, 9, f[21]),
-                L = n(L, A, C, k, N, 14, f[22]),
-                k = n(k, L, A, C, h, 20, f[23]),
-                C = n(C, k, L, A, b, 5, f[24]),
-                A = n(A, C, k, L, T, 9, f[25]),
-                L = n(L, A, C, k, c, 14, f[26]),
-                k = n(k, L, A, C, y, 20, f[27]),
-                C = n(C, k, L, A, x, 5, f[28]),
-                A = n(A, C, k, L, l, 9, f[29]),
-                L = n(L, A, C, k, g, 14, f[30]),
-                k = n(k, L, A, C, S, 20, f[31]),
-                C = r(C, k, L, A, d, 4, f[32]),
-                A = r(A, C, k, L, y, 11, f[33]),
-                L = r(L, A, C, k, E, 16, f[34]),
-                k = r(k, L, A, C, T, 23, f[35]),
-                C = r(C, k, L, A, a, 4, f[36]),
-                A = r(A, C, k, L, h, 11, f[37]),
-                L = r(L, A, C, k, g, 16, f[38]),
-                k = r(k, L, A, C, w, 23, f[39]),
-                C = r(C, k, L, A, x, 4, f[40]),
-                A = r(A, C, k, L, u, 11, f[41]),
-                L = r(L, A, C, k, c, 16, f[42]),
-                k = r(k, L, A, C, v, 23, f[43]),
-                C = r(C, k, L, A, b, 4, f[44]),
-                A = r(A, C, k, L, S, 11, f[45]),
-                L = r(L, A, C, k, N, 16, f[46]),
-                k = r(k, L, A, C, l, 23, f[47]),
-                C = i(C, k, L, A, u, 6, f[48]),
-                A = i(A, C, k, L, g, 10, f[49]),
-                L = i(L, A, C, k, T, 15, f[50]),
-                k = i(k, L, A, C, d, 21, f[51]),
-                C = i(C, k, L, A, S, 6, f[52]),
-                A = i(A, C, k, L, c, 10, f[53]),
-                L = i(L, A, C, k, w, 15, f[54]),
-                k = i(k, L, A, C, a, 21, f[55]),
-                C = i(C, k, L, A, y, 6, f[56]),
-                A = i(A, C, k, L, N, 10, f[57]),
-                L = i(L, A, C, k, v, 15, f[58]),
-                k = i(k, L, A, C, x, 21, f[59]),
-                C = i(C, k, L, A, h, 6, f[60]),
-                A = i(A, C, k, L, E, 10, f[61]),
-                L = i(L, A, C, k, l, 15, f[62]),
-                k = i(k, L, A, C, b, 21, f[63]);
-            o[0] = o[0] + C | 0, o[1] = o[1] + k | 0, o[2] = o[2] + L | 0, o[3] = o[3] + A | 0
-        },
-        _doFinalize: function() {
-            var t = this._data,
-                n = t.words,
-                r = 8 * this._nDataBytes,
-                i = 8 * t.sigBytes;
-            n[i >>> 5] |= 128 << 24 - i % 32;
-            var s = e.floor(r / 4294967296);
-            n[(i + 64 >>> 9 << 4) + 15] = (s << 8 | s >>> 24) & 16711935 | (s << 24 | s >>> 8) & 4278255360, n[(i + 64 >>> 9 << 4) + 14] = (r << 8 | r >>> 24) & 16711935 | (r << 24 | r >>> 8) & 4278255360, t.sigBytes = 4 * (n.length + 1), this._process(), t = this._hash, n = t.words;
-            for (r = 0; 4 > r; r++) i = n[r], n[r] = (i << 8 | i >>> 24) & 16711935 | (i << 24 | i >>> 8) & 4278255360;
-            return t
-        },
-        clone: function() {
-            var e = a.clone.call(this);
-            return e._hash = this._hash.clone(), e
-        }
-    }), s.MD5 = a._createHelper(o), s.HmacMD5 = a._createHmacHelper(o)
-})(Math),
-function(e, t) {
-    var n = {};
-    n._generateRandomString = function(e) {
-        var t = new Array(e);
-        for (var n = 0; n < e; n++) t[n] = String.fromCharCode(Math.floor(Math.random() * 27) + 65);
-        return t.join("")
-    }, n.createUniqueId = function(e) {
-        var t = e || "";
-        return t += this._generateRandomString(32) + (new Date).toLocaleTimeString(), Crypto.SHA1(t).substring(0, 16)
-    }, n.getOrCreateUniqueId = function() {
-        return cookie.get("unique_id") || cookie.set("unique_id", this.createUniqueId(), {
-            expires: 3650
-        }), cookie.get("unique_id")
-    }, n.getOrCreateSessionUniqueId = function() {
-        return cookie.get("session_unique_id") || cookie.set("session_unique_id", this.createUniqueId()), cookie.get("session_unique_id")
-    }, n.getOrCreateLocalStorageUniqueId = function() {
-        return e.storage.get("localstorage_unique_id") || e.storage.set("localstorage_unique_id", this.createUniqueId()), e.storage.get("localstorage_unique_id")
-    }, n.getOrCreateSessionStorageUniqueId = function() {
-        var t = e.storage.get("sessionstorage_unique_id", {
-            storage: "sessionStorage"
-        });
-        return t || (t = this.createUniqueId(), e.storage.set("sessionstorage_unique_id", t, {
-            storage: "sessionStorage"
-        })), t
-    }, e.mixin({
-        idsForMixpanel: n
-    })
-}(Twitch, jQuery),
-function(e, t) {
-    var n = SiteOptions.experiments || {},
-        r = {
-            BROWSE_EXPERIMENT: "99494f77-1c7c-46c5-9b9c-a117db47d3c5",
-            RECOMMENDED_CHANNELS: "aaac75ea-c969-4826-b32d-ceefac620a79",
-            RECOMMENDED_GAMES: "61b169ff-bc62-4725-a40e-1be627197c6f",
-            VODS_GAME_INFO: "ac39b897-d41d-4255-90b6-3a59027e12e0",
-            VOD_COVIEWS: "c48ae3e6-1356-4ccc-8fbe-12c6909f9e98",
-            VOD_COVIEWS_AB: "e7516730-b94f-4d46-894e-c18612aab270",
-            VOD_COVIEWS_FORCED_VARIETY: "2f8210be-a6c6-43b1-9f6a-4b7cc7ef93c0",
-            VOD_COVIEWS_SHUFFLE: "403707e6-abb9-401c-a2ca-dd643293dbdd",
-            VOD_UPLOAD_UNITS: "1e406d0d-c293-4c4e-812f-049db8c7e3ec",
-            SIMILAR_VODS: "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7",
-            CDN_EXPERIMENT: "b29d055f-74f2-40b9-9383-9c4b79b30360",
-            CREATIVE_UNLIKELY_HERO: "dd2d60cd-b76b-4beb-a38c-ea60df88b3cc",
-            CREATIVE_DIRECTORY_CVS: "36a0e500-f117-41dd-8421-3e3db7d567dd",
-            CREATIVE_SIDEBAR_NAVIGATION: "f60b889e-0327-46a8-ad7b-0d402717da45",
-            CSGO_LANGUAGE_SAMPLE: "b86f6c73-d333-4d80-ab45-07cfff39aede",
-            VOD_PAGE_RECOMMENDATION_ORDER: "171906a2-6e34-4d0e-879c-a76a19f19097",
-            REMOVE_CSGO_DIRECTORY: "355ff3e2-38b5-449a-8ab8-a52b5d3ab817",
-            LANGUAGE_DIRECTORY_FILTER: "653cc0db-d332-4df6-b224-15c5c481f7e7",
-            CHANNEL_VIDEOS_TAB: "852b3485-a831-4580-b7bf-acf819977704",
-            MESSAGE_DELETED_EXPERIMENT: "04165981-17be-4593-afbd-762a380f6838",
-            RESUME_WATCHING_BANNER: "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2",
-            CHAT_RULES_EXPERIMENT: "98f3f2a5-9e4e-4ba8-aabe-2ff85e7309ee",
-            ESL_CSGO_STEAM_LINK: "6a857f53-de28-4025-8983-3cada70538cd",
-            CHANNEL_PAGE_REDESIGN: "3ae835b6-3015-440c-8177-755bdbbbf29e",
-            MESSAGE_HISTORY: "8ace0f50-8afd-424a-a086-3e61b3e66da0",
-            BITS_FOR_ADS: "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2",
-            NEXUS_ROLLOUT: "428d3b07-cc7a-424f-aad0-971f5415879a",
-            DETERMINATION: "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
-            WATCH_NOW_RIGHTBAR: "5380a8cf-e5cf-497e-9c6c-16cb1c881e0c",
-            DISCOVER_SHOW_COVIEWS: "3e011e23-ef29-46a5-af4b-a86e15d8c9e6",
-            PERPETUA: "af8f152a-f618-416e-8b79-d6ac30479018",
-            EXTENSIONS: "264f75af-a787-4a40-8654-40d78b4d8b41",
-            INTL_I18N: "0670f0ea-3b5c-41a8-946d-114ef4a42540",
-            INTERNATIONAL_SEARCH: "b0033638-a84e-4f57-8952-7115be4dc3b6",
-            DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS: "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2",
-            CLIENT_BATCH_SPADE: "1b905261-e257-4703-ac84-12a6a9099935",
-            CLIENT_BATCH_MIXPANEL: "42f5eea6-c548-4791-b767-9c7e29b73ef6",
-            CLIPS_FEEL_IT_COMING: "2858bc04-3f98-4808-a2dd-86555885ca90",
-            NEWS_FEED_REDESIGN: "05d8869f-e037-4955-b80a-7c361f9ddffb",
-            VOD_UPLOAD_UNITS_V3: "1710cf57-352c-4d09-b2c1-3d40bdf79b30",
-            FINAL_DESTINATION: "b542e7a6-6fc9-4380-a5cd-95301706904f"
-        },
-        i = {
-            "99494f77-1c7c-46c5-9b9c-a117db47d3c5": "control",
-            "aaac75ea-c969-4826-b32d-ceefac620a79": "no",
-            "61b169ff-bc62-4725-a40e-1be627197c6f": "no",
-            "ac39b897-d41d-4255-90b6-3a59027e12e0": "control",
-            "c48ae3e6-1356-4ccc-8fbe-12c6909f9e98": "control",
-            "e7516730-b94f-4d46-894e-c18612aab270": "control",
-            "2f8210be-a6c6-43b1-9f6a-4b7cc7ef93c0": "control",
-            "403707e6-abb9-401c-a2ca-dd643293dbdd": "control",
-            "1e406d0d-c293-4c4e-812f-049db8c7e3ec": "control",
-            "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7": "control",
-            "b29d055f-74f2-40b9-9383-9c4b79b30360": "control",
-            "dd2d60cd-b76b-4beb-a38c-ea60df88b3cc": "no",
-            "36a0e500-f117-41dd-8421-3e3db7d567dd": "communities",
-            "f60b889e-0327-46a8-ad7b-0d402717da45": "no",
-            "b86f6c73-d333-4d80-ab45-07cfff39aede": "control",
-            "171906a2-6e34-4d0e-879c-a76a19f19097": "related_first",
-            "355ff3e2-38b5-449a-8ab8-a52b5d3ab817": "control",
-            "653cc0db-d332-4df6-b224-15c5c481f7e7": "control",
-            "852b3485-a831-4580-b7bf-acf819977704": "control",
-            "04165981-17be-4593-afbd-762a380f6838": "false",
-            "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2": "no",
-            "98f3f2a5-9e4e-4ba8-aabe-2ff85e7309ee": "control",
-            "6a857f53-de28-4025-8983-3cada70538cd": "control",
-            "3ae835b6-3015-440c-8177-755bdbbbf29e": "old",
-            "8ace0f50-8afd-424a-a086-3e61b3e66da0": "off",
-            "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": "off",
-            "428d3b07-cc7a-424f-aad0-971f5415879a": "disabled",
-            "cc164e1e-1361-4730-8d9b-0091a0f9cb8f": "no",
-            "5380a8cf-e5cf-497e-9c6c-16cb1c881e0c": "control",
-            "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": "no_show",
-            "af8f152a-f618-416e-8b79-d6ac30479018": "control",
-            "264f75af-a787-4a40-8654-40d78b4d8b41": "no",
-            "0670f0ea-3b5c-41a8-946d-114ef4a42540": "control",
-            "b0033638-a84e-4f57-8952-7115be4dc3b6": "control",
-            "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": "hide",
-            "1b905261-e257-4703-ac84-12a6a9099935": "control",
-            "42f5eea6-c548-4791-b767-9c7e29b73ef6": "control",
-            "2858bc04-3f98-4808-a2dd-86555885ca90": "control",
-            "05d8869f-e037-4955-b80a-7c361f9ddffb": "no",
-            "1710cf57-352c-4d09-b2c1-3d40bdf79b30": "control",
-            "b542e7a6-6fc9-4380-a5cd-95301706904f": "channel"
-        },
-        s = "experiment_overrides",
-        o = {},
-        u = {
-            CSGO_LANGUAGE_SAMPLE: "localized",
-            LANGUAGE_DIRECTORY_FILTER: "full",
-            CLIPS_ENABLED: "yes",
-            ESL_CSGO_STEAM_LINK: "show-cta",
-            CHANNEL_PAGE_REDESIGN: "new",
-            DETERMINATION: "yes",
-            DISCOVER_SHOW_COVIEWS: "show",
-            PERPETUA: "yes",
-            FINAL_DESTINATION: "videos"
-        };
-    _.each(Object.keys(u), function(t) {
-        o[r[t]] = e.user().then(function(e) {
-            return e && e.is_staff ? u[t] : RSVP.Promise.reject()
-        }, function(e) {
-            if (e && e.status === 401) return;
-            throw e
-        })
-    });
-    var a = e.url_params().experiments,
-        f = cookie.get(s),
-        l = {};
-    try {
-        f && (l = JSON.parse(f))
-    } catch (c) {
-        console.warn("Failed to parse experiment overrides", c)
-    }
-    _.extend(o, l, a);
-    var h = {
-            defaults: i,
-            deviceID: e.idsForMixpanel.getOrCreateUniqueId(),
-            overrides: o,
-            provider: new Minixperiment.providers.local(n),
-            Promise: RSVP.Promise,
-            platform: "web",
-            login: null
-        },
-        p, d = e.user().then(function(e) {
-            return e.login
-        }, function() {
-            return null
-        }).then(function(e) {
-            h.login = e, p = new Minixperiment.Client(h)
-        }),
-        v = function(e) {
-            return d.then(function() {
-                var t = r[e];
-                return p.get(t)
-            })
-        },
-        m = function(e, t) {
-            if (!e || !t) return;
-            var n = {},
-                i = cookie.get(s),
-                o = r[e];
-            try {
-                i && (n = JSON.parse(i))
-            } catch (u) {
-                console.warn("Failed to parse experiment overrides", u)
-            }
-            o && (n[o] = t), cookie.set(s, JSON.stringify(n)), console.warn("Experiment overrides require a page refresh to take effect.")
-        },
-        g = function() {
-            cookie.remove(s), console.warn("Clearing experiment overrides require a page refresh to take effect.")
-        },
-        y = {
-            getExperimentValue: v,
-            overrideExperimentValue: m,
-            clearOverrides: g
-        };
-    e.mixin({
-        experiments: y
-    })
-}(Twitch, jQuery),
-function(e, t) {
-    var n = {
-            hlsId: null
-        },
-        r;
-    n.init = function(i) {
-        i.type === "html5" ? (r = new n.HTML5Player(i.html5Options), r.init(function() {
-            t(e.player).triggerHandler("ready")
-        })) : (r = new n.FlashPlayer(i.flashOptions), r.init(function() {
-            t(e.player).triggerHandler("ready")
-        }, function() {
-            i.type !== "flash" && (r = new n.HTML5Player(i.html5Options), r.init(function() {
-                t(e.player).triggerHandler("ready")
-            }, function(e) {
-                r.$el.find(".js-html5-player").hide(), r.$el.siblings(".js-flash-required").show()
-            }))
-        }))
-    };
-    var i = !1;
-    t(n).on("ready", function() {
-        i = !0
-    }), n.ready = function(n) {
-        i ? n(r) : t(e.player).on("ready", function() {
-            n(r)
-        })
-    }, n.getPlayer = function() {
-        return console.warn("Twitch.player.getPlayer is deprecated for the new player."), r || console.error("Twitch.player.getPlayer called before player is ready."), r
-    }, n.parseTimeOffset = function(e) {
-        var t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "");
-        if (!t) return 0;
-        try {
-            var n = parseInt(t[2], 10) || 0,
-                r = parseInt(t[4], 10) || 0,
-                i = parseInt(t[6], 10) || 0;
-            return n * 3600 + r * 60 + i
-        } catch (s) {
-            return 0
-        }
-    }, n.setSteamInfo = function(e, t) {
-        console.warn("Twitch.player.setSteamInfo is deprecated")
-    }, n.getSpecialOverlay = function() {
-        return e.storage.get("adblock_enabled", {
-            storage: "sessionStorage"
-        }) === "true"
-    }, n.onTwitchPlayerInit = n.onTwitchPlayerLoaded = function(e) {
-        console.warn("Twitch.player.onTwitchPlayer(Init/Loaded) is deprecated! Use Twitch.ready instead."), n.ready(e)
-    }, e.mixin({
-        player: n
-    })
-}(Twitch, jQuery),
-function(e, t) {
-    var n = ["streamLoaded", "videoLoaded", "online", "offline", "adCompanionRendered", "viewerCount", "videoLoading", "videoPlaying", "tosViolation", "popout", "loginRequest", "adFeedbackShow", "mouseScroll"],
-        r = function(e) {
-            this.options = e, r.instantiationCounter++
-        };
-    r.instantiationCounter = 0, t.extend(r.prototype, {
-        _proxy: function() {
-            var e = this;
-            t.each(["fullscreen", "getVideoTime", "loadStream", "loadVideo", "mute", "isPaused", "pauseVideo", "playVideo", "setOauthToken", "onlineStatus", "unmute", "videoSeek", "adFeedbackDone"], function(t, n) {
-                e[n] = e.el[n].bind(e.el)
-            })
-        },
-        init: function(e, n) {
-            console.info("FlashPlayer.init"), this._initSuccess = e || function() {}, n = n || function() {};
-            var r = this,
-                s = this.options;
-            s.flashVars.eventsCallback = i.register(function(e) {
-                r._onEvents(e)
-            }), swfobject.embedSWF(s.url, s.swfId, s.width, s.height, s.version, "/widgets/expressinstall.swf", s.flashVars, s.params, s.attrs, function(e) {
-                e.success ? (r.$el = t("#" + r.options.swfId), r.el = r.$el[0]) : (console.info("FlashPlayer.init error"), n("error embedding flash player"))
-            })
-        },
-        _onPlayerInit: function() {
-            this._proxy(), this.adFeedbackMenu = new e.player.AdFeedbackMenu(t(".js-ad-feedback-menu").first(), this), console.info("FlashPlayer.init success"), this._initSuccess(this)
-        },
-        destroy: function() {},
-        _onEvents: function(e) {
-            var t;
-            for (var n = 0; n < e.length; n++) {
-                t = e[n];
-                try {
-                    this._onEvent(t)
-                } catch (r) {
-                    console.warn("Error handling FlashPlayer event " + t.event + ": " + r)
-                }
-            }
-        },
-        _onEvent: function(e) {
-            switch (e.event) {
-                case "playerInit":
-                    this._onPlayerInit();
-                    break;
-                default:
-                    this.trigger(e.event, e.data)
-            }
-        }
-    }), RSVP.EventTarget.mixin(r.prototype);
-    var i = {
-        callbackId: 0,
-        register: function(t) {
-            e.player.FlashPlayer.callbacks = e.player.FlashPlayer.callbacks || {};
-            var n = "callback" + this.callbackId++;
-            return e.player.FlashPlayer.callbacks[n] = t, "Twitch.player.FlashPlayer.callbacks." + n
-        }
-    };
-    e.player.FlashPlayer = r
-}(Twitch, jQuery),
-function() {
-    try {
-        var e = window.chrome || {};
-        e.cast = e.cast || {}, e.cast.media = e.cast.media || {}, e.cast.ApiBootstrap_ = function() {}, e.cast.ApiBootstrap_.EXTENSION_IDS = ["boadgeojelhgndaghljhdicfkmllpafd", "dliochdbjfkdbacpmhlcpmleaejidimm", "hfaagokkkhdbgiakmmlclaapfelnkoah", "fmfcbgogabcbclcofgocippekhfcmgfj", "enhhojjnijigcajfphajepfemndkmdlo"], e.cast.ApiBootstrap_.findInstalledExtension_ = function(t) {
-            e.cast.ApiBootstrap_.findInstalledExtensionHelper_(0, t)
-        }, e.cast.ApiBootstrap_.findInstalledExtensionHelper_ = function(t, n) {
-            t == e.cast.ApiBootstrap_.EXTENSION_IDS.length ? n(null) : e.cast.ApiBootstrap_.isExtensionInstalled_(e.cast.ApiBootstrap_.EXTENSION_IDS[t], function(r) {
-                r ? n(e.cast.ApiBootstrap_.EXTENSION_IDS[t]) : e.cast.ApiBootstrap_.findInstalledExtensionHelper_(t + 1, n)
-            })
-        }, e.cast.ApiBootstrap_.getCastSenderUrl_ = function(e) {
-            return "chrome-extension://" + e + "/cast_sender.js"
-        }, e.cast.ApiBootstrap_.isExtensionInstalled_ = function(t, n) {
-            var r = new XMLHttpRequest;
-            r.onreadystatechange = function() {
-                4 == r.readyState && 200 == r.status && n(!0)
-            }, r.onerror = function() {
-                n(!1)
-            }, r.open("GET", e.cast.ApiBootstrap_.getCastSenderUrl_(t), !0), r.send()
-        }, e.cast.ApiBootstrap_.findInstalledExtension_(function(t) {
-            if (t) {
-                console.log("Found cast extension: " + t), e.cast.extensionId = t;
-                var n = document.createElement("script");
-                n.src = e.cast.ApiBootstrap_.getCastSenderUrl_(t), (document.head || document.documentElement).appendChild(n)
-            } else {
-                var r = "No cast extension found";
-                console.log(r);
-                var i = window.__onGCastApiAvailable;
-                i && "function" == typeof i && i(!1, r)
-            }
-        })
-    } catch (t) {}
-}(),
-function(e, t) {
-    var n = ["streamLoaded", "online", "offline", "adCompanionRendered", "viewerCount", "videoLoading", "videoPlaying", "tosViolation", "popout", "loginRequest", "adFeedbackShow", "mouseScroll", "chromecastMediaSet", "chromecastSessionRequested", "chromecastVolumeUpdated", "pauseChromecastSession"],
-        r = ["playVideo", "pauseVideo", "mute", "unmute", "loadStream", "fullscreen", "adFeedbackDone", "setTrackingData", "getVideoTime", "videoSeek", "isPaused", "playVideo", "showChromecast", "setChromecastConnected", "togglePlayPause", "isChatWebSockets"],
-        i = function(t) {
-            var n;
-            return t.playerType === "live" ? n = {
-                id: t.id,
-                hide_chat: !0,
-                channel: t.channel,
-                host_channel: t.hostChannel,
-                embed: t.embed ? "1" : "0",
-                auto_play: !0
-            } : t.playerType === "highlighter" ? n = {
-                id: t.id,
-                videoId: t.archiveId,
-                playerType: t.playerType,
-                hostname: SiteOptions.twitch_cdn_hostport,
-                auto_play: !0
-            } : t.playerType === "archive" && (n = {
-                id: t.id,
-                videoId: t.archiveId,
-                playerType: t.playerType,
-                hostname: SiteOptions.twitch_cdn_hostport,
-                auto_play: !0,
-                playOffset: s()
-            }), n.device_id = e.idsForMixpanel.getOrCreateUniqueId(), n.session_device_id = e.idsForMixpanel.getOrCreateSessionUniqueId(), n.localstorage_device_id = e.idsForMixpanel.getOrCreateLocalStorageUniqueId(), n.test_environment_url = "http://" + SiteOptions.www_hostport, _.each(n, function(e, t) {
-                e === undefined && delete n[t]
-            }), n
-        },
-        s = function() {
-            var e = URI().query(!0).t;
-            if (!e) return 0;
-            var t = e.match(/^(\d+[Hh])?(\d+[Mm])?(\d+[Ss])?$/);
-            if (t) {
-                var n = parseInt(t[1], 10) || 0,
-                    r = parseInt(t[2], 10) || 0,
-                    i = parseInt(t[3], 10) || 0;
-                return n * 60 * 60 + r * 60 + i
-            }
-            return e.match(/^\d+$/) ? parseInt(e, 10) : 0
-        },
-        o = function(e) {
-            var t = i(e);
-            t.eventsCallback = u.register(function(e) {
-                n._onEvents(e)
-            }), this._readyDeferred = RSVP.defer(), this._id = t.id, this._hostChannel = t.hostChannel, e.playerType !== "live" && (this._videoType = "hls");
-            var n = this,
-                r = ["//" + SiteOptions.twitch_cdn_hostport + "/swflibs/TwitchPlayer.swf", t.id, "100%", "100%", "11", null, t, {
-                    allowScriptAccess: "always",
-                    allowFullScreen: !0,
-                    wmode: "opaque",
-                    bgcolor: "000000"
-                }, null, function(e) {
-                    e.success || n._readyDeferred.reject(n)
-                }];
-            swfobject.embedSWF.apply(swfobject, r)
-        };
-    RSVP.EventTarget.mixin(o.prototype), o.prototype._onPlayerInit = function() {
-            this.adFeedbackMenu = new e.player.AdFeedbackMenu(t(".js-ad-feedback-menu").first(), this), this.ready(this._id)
-        }, o.prototype.destroy = function() {
-            clearInterval(this.swfTrackingInterval)
-        }, o.prototype.ready = function(n) {
-            var r = this;
-            this.ref = document.getElementById(n), this.$el = t(this.ref);
-            var i = {
-                host_channel: this._hostChannel
-            };
-            this.setTrackingData("video-play", i), this._videoType && this.setTrackingData("video-type", this._videoType);
-            var s, o;
-            this.swfTrackingInterval = setInterval(function() {
-                if (TMI) {
-                    var e = TMI.usingWebSockets();
-                    e !== o && (r.isChatWebSockets(e), o = e);
-                    var t = TMI.getMessageRate();
-                    if (t !== s) {
-                        s = t;
-                        var n = {
-                            chat_msg_rate: t
-                        };
-                        r.setTrackingData("minute-watched", _.extend(n, i)), r.setTrackingData("buffer-empty", n)
-                    }
-                }
-            }, 1e3), e.chromecast.initialize(this), this.isReady = !0, this._readyDeferred.resolve(this)
-        }, o.prototype.promise = function(e, t) {
-            return this._readyDeferred.promise.then(e, t)
-        }, o.prototype._onEvents = function(e) {
-            var t;
-            for (var n = 0; n < e.length; n++) {
-                t = e[n];
-                try {
-                    this._onEvent(t)
-                } catch (r) {
-                    console.warn("Error handling FlashPlayer2 event " + t.event + ": " + r)
-                }
-            }
-        }, o.prototype._onEvent = function(e) {
-            switch (e.event) {
-                case "playerInit":
-                    this._onPlayerInit();
-                    break;
-                default:
-                    this.trigger(e.event, e.data)
-            }
-        },
-        function() {
-            _.each(r, function(e) {
-                o.prototype[e] = function() {
-                    if (this.isReady && this.ref[e]) return this.ref[e].apply(this.ref, arguments)
-                }
-            })
-        }(), e.player.FlashPlayer2 = o;
-    var u = {
-        callbackId: 0,
-        register: function(t) {
-            e.player.FlashPlayer2.callbacks = e.player.FlashPlayer2.callbacks || {};
-            var n = "callback" + this.callbackId++;
-            return e.player.FlashPlayer2.callbacks[n] = t, "Twitch.player.FlashPlayer2.callbacks." + n
-        }
-    }
-}(Twitch, jQuery),
-function(e, t) {
-    var n = function(e, n) {
-        var r = this,
-            i = null;
-        r.player = n, r.$playerEl = n.$el, n.on("adFeedbackShow", function(e) {
-            i = e.adId, r.show()
-        }), r.$el = t(e), r.$el.find(".close-btn").click(function() {
-            r.$el.hide()
-        }), r.$el.find("a").each(function(e, s) {
-            var o = t(s);
-            o.click(function(e) {
-                e.preventDefault(), r.$el.hide(), n.adFeedbackDone({
-                    ad_id: i,
-                    ad_feedback: o.attr("name")
-                })
-            })
-        })
-    };
-    t.extend(n.prototype, {
-        show: function() {
-            this.$el.show()
-        }
-    }), e.player.AdFeedbackMenu = n
-}(Twitch, jQuery),
-function(e, t) {
-    var n = function(e) {
-        this.googlePromise = t.getScript("//s0.2mdn.net/instream/html5/ima3.js"), this.options = e, this.$clickTracker = t(".js-clicktracker"), this.$player = t(e.player)
-    };
-    n.prototype.showClickTracker = function() {
-        this.$clickTracker.show(), this.$player.attr("controls", !1)
-    }, n.prototype.hideClickTracker = function() {
-        this.$clickTracker.hide(), this.$player.attr("controls", !0)
-    }, n.prototype.initialize = function() {
-        var e = this;
-        return new RSVP.Promise(function(n, r) {
-            e.googlePromise.then(function() {
-                e.adDisplayContainer = new google.ima.AdDisplayContainer(e.options.container, e.options.player, e.$clickTracker[0]), e.adsLoader = new google.ima.AdsLoader(e.adDisplayContainer), e.adsManager = null, e.adsLoader.addEventListener(google.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED, e.onAdsManagerLoaded, !1, e), e.adsLoader.addEventListener(google.ima.AdErrorEvent.Type.AD_ERROR, e.onAdError, !1, e), e.adDisplayContainer.initialize(), n()
-            }).fail(function() {
-                t(e).trigger("error"), r()
-            })
-        })
-    }, n.prototype.requestAds = function(e) {
-        var n = new google.ima.AdsRequest;
-        n.adTagUrl = e;
-        var r = t(this.options.player).width(),
-            i = t(this.options.player).height();
-        n.linearAdSlotWidth = r, n.linearAdSlotHeight = r, n.nonLinearAdSlotWidth = i, n.nonLinearAdSlotHeight = i, this.adsLoader.requestAds(n)
-    }, n.prototype.onAdsManagerLoaded = function(e) {
-        console.debug("Ads Manager loaded."), this.adsManager = e.getAdsManager(this.options.player), this.processAdsManager(this.adsManager)
-    }, n.prototype.processAdsManager = function(e) {
-        e.addEventListener(google.ima.AdEvent.Type.CONTENT_PAUSE_REQUESTED, this.onContentPauseRequested, !1, this), e.addEventListener(google.ima.AdEvent.Type.CONTENT_RESUME_REQUESTED, this.onContentResumeRequested, !1, this), e.addEventListener(google.ima.AdErrorEvent.Type.AD_ERROR, this.onAdError, !1, this);
-        var t = [google.ima.AdEvent.Type.ALL_ADS_COMPLETED, google.ima.AdEvent.Type.CLICK, google.ima.AdEvent.Type.COMPLETE, google.ima.AdEvent.Type.FIRST_QUARTILE, google.ima.AdEvent.Type.LOADED, google.ima.AdEvent.Type.MIDPOINT, google.ima.AdEvent.Type.PAUSED, google.ima.AdEvent.Type.RESUMED, google.ima.AdEvent.Type.STARTED, google.ima.AdEvent.Type.THIRD_QUARTILE];
-        for (var n = 0; n < t.length; n++) e.addEventListener(t[n], this.onAdEvent, !1, this);
-        e.init(1, 1, google.ima.ViewMode.NORMAL), e.start()
-    }, n.prototype.onContentPauseRequested = function(e) {}, n.prototype.onContentResumeRequested = function(e) {
-        this.hideClickTracker(), t(this).trigger("contentResumeRequested")
-    }, n.prototype.onAdEvent = function(e) {
-        console.debug("Ad event: " + e.type);
-        switch (e.type) {
-            case google.ima.AdEvent.Type.STARTED:
-                this.showClickTracker(), this.options.player.load();
-                break;
-            case google.ima.AdEvent.Type.RESUMED:
-                this.showClickTracker();
-                break;
-            case google.ima.AdEvent.Type.CLICK:
-                this.hideClickTracker();
-                break;
-            case google.ima.AdEvent.Type.ALL_ADS_COMPLETED:
-                this.hideClickTracker()
-        }
-        t(this).trigger(e.type)
-    }, n.prototype.onAdError = function(e) {
-        console.error("Ad error: " + e.getError().toString()), this.adsManager && this.adsManager.destroy(), this.hideClickTracker(), t(this).trigger("adError")
-    }, e.player.AdsController = n
-}(Twitch, jQuery),
-function(e, t) {
-    var n = {};
-    n.player = null;
-    var r = null,
-        i = null,
-        s = null,
-        o = !1,
-        u = !1,
-        a = function() {
-            if (o && u && s) n.player.showChromecast(!0), n.player.setChromecastConnected(!0, s.receiver.friendlyName);
-            else {
-                var e = new chrome.cast.SessionRequest("358E83DC"),
-                    t = new chrome.cast.ApiConfig(e, c, h, chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED);
-                chrome.cast.initialize(t, f, l)
-            }
-        },
-        f = function() {
-            o = !0, o && u && n.player.showChromecast(!0)
-        },
-        l = function(e) {
-            e.code === "session_error" && d()
-        },
-        c = function(e) {
-            s = e, s.addUpdateListener(p), s.media.length !== 0 && m("sessionListener", s.media[0]), n.player.setChromecastConnected(!0, s.receiver.friendlyName)
-        },
-        h = function(e) {
-            e === chrome.cast.ReceiverAvailability.AVAILABLE ? (u = !0, o && u && n.player.showChromecast(!0)) : (u = !1, n.player.showChromecast(!1))
-        },
-        p = function(e) {
-            e || d()
-        },
-        d = function() {
-            s && s.removeUpdateListener(p), i && i.removeUpdateListener(g), s = null, i = null, n.player.setChromecastConnected(!1)
-        },
-        v = function(e) {
-            s = e, s.addUpdateListener(p), n.player.setChromecastConnected(!0, s.receiver.friendlyName)
-        },
-        m = function(e, t) {
-            i = t, i.addUpdateListener(g.bind(this, t))
-        },
-        g = function(e, t) {
-            t ? s.media.length && e === s.media[0] && (e.playerState === chrome.cast.media.PlayerState.PAUSED ? (r = e.media.customData.channel, n.player.togglePlayPause(!0)) : e.playerState === chrome.cast.media.PlayerState.PLAYING && n.player.togglePlayPause(!1)) : (e.removeUpdateListener(g), e.media.customData.channel.toUpperCase() === window.location.pathname.substring(1).toUpperCase() && (r && r === e.media.customData.channel ? (r = "", n.player.togglePlayPause(!1)) : n.player.setChromecastConnected(!1)))
-        };
-    n.initialize = function(t) {
-        t.on("videoPlaying", _.once(function() {
-            typeof chrome != "undefined" && chrome.cast && chrome.cast.isAvailable && (n.player = t, a())
-        })), t.on("chromecastSessionRequested", function() {
-            chrome.cast.requestSession(v, l)
-        }), t.on("chromecastMediaSet", function(t) {
-            if (s.media.length !== 0 && i && i.media.customData.channel && i.media.customData.channel.toUpperCase() === t.channel.toUpperCase()) return;
-            var n = new chrome.cast.media.MediaInfo(t.url, "application/x-mpegurl");
-            n.streamType = chrome.cast.media.StreamType.LIVE;
-            var r = new chrome.cast.media.GenericMediaMetadata;
-            e.api.get("streams/" + t.channel).then(function(e) {
-                if (e.stream) {
-                    var i = e.stream;
-                    i.game && (r.subtitle = i.game), i.channel && (i.channel.display_name && (r.title = i.channel.display_name), i.channel.logo ? r.images = [new chrome.cast.Image(i.channel.logo)] : r.images = [new chrome.cast.Image(i.preview.medium)]), n.metadata = r, n.customData = {
-                        channel: t.channel,
-                        analytics: t.analytics
-                    };
-                    var o = new chrome.cast.media.LoadRequest(n);
-                    o.autoplay = !0, s.loadMedia(o, m.bind(this, "loadMedia"), l)
-                }
-            })
-        }), t.on("chromecastVolumeUpdated", function(e) {
-            s && s.setReceiverVolumeLevel(e.volume, null, l)
-        }), t.on("pauseChromecastSession", function() {
-            i && (r = i.media.customData.channel, i.pause(new chrome.cast.media.PauseRequest, null, null), i = null)
-        })
-    }, e.mixin({
-        chromecast: n
-    })
-}(Twitch, jQuery),
-function(e, t) {
-    var n = function(e, t) {
-            this.channel = e, this.stream = t
-        },
-        r = function(t, n) {
-            return new RSVP.Promise(function(r, i) {
-                e.api.get(t).done(function(e) {
-                    r(_.reduce(n, function(t, n, r) {
-                        if (typeof n == "function") {
-                            var i = n(e[r] || "");
-                            i && (t[i.key] = i.val)
-                        } else _.has(e, r) && (t[n] = e[r]);
-                        return t
-                    }, {}))
-                }).fail(function(e) {
-                    r({})
-                })
-            })
-        },
-        i = function(e) {
-            return r("/api/channels/" + e, {
-                partner: "partner",
-                name: "channel",
-                broadcaster_software: "broadcaster_software",
-                game: function(e) {
-                    return {
-                        key: "game",
-                        val: e || "None"
-                    }
-                }
-            })
-        },
-        s = function(e) {
-            return r("channels/" + e, {
-                teams: function(e) {
-                    if (_.isArray(e) && e.length > 0 && _.has(e[0], "name")) return {
-                        key: "team",
-                        val: e[0].name
-                    }
-                }
-            })
-        },
-        o = function() {
-            return r("/api/viewer/info.json", {
-                login: function(e) {
-                    return {
-                        key: "login",
-                        val: e
-                    }
-                },
-                turbo: function(e) {
-                    return {
-                        key: "turbo",
-                        val: !!e
-                    }
-                }
-            })
-        },
-        u = function(e) {
-            return r("/api/channels/" + e + "/viewer", {
-                chansub: function(e) {
-                    return {
-                        key: "subscriber",
-                        val: !!e
-                    }
-                }
-            })
-        },
-        a = function(n) {
-            return new RSVP.Promise(function(r, i) {
-                t.ajax({
-                    method: "GET",
-                    url: n,
-                    cache: !1,
-                    headers: {
-                        "Client-ID": e.api.config.clientID
-                    },
-                    success: function(e) {
-                        var t = e.match(/nname=([^,&]+)[,&]/);
-                        if (t.length > 1) {
-                            var n = t[1].split(".");
-                            n.length > 1 && r({
-                                node: t[1],
-                                cluster: n[1]
-                            })
-                        } else console.warn("no match found for clusterPattern."), r({})
-                    },
-                    error: function() {
-                        console.warn("error in fetching stream data"), r({})
-                    }
-                })
-            })
-        };
-    n.prototype.load = function(e) {
-        var t = [],
-            n = this.channel,
-            r = this.stream;
-        return console.info("pulling Context info"), t.push(i(n)), t.push(s(n)), t.push(o()), t.push(u(n)), t.push(a(r)), RSVP.all(t).then(function(t) {
-            var n = e || {};
-            return console.info("Combining properties..."), _.each(t, function(e) {
-                _.extend(n, e)
-            }), n
-        }, function(e) {
-            console.error(e)
-        })
-    }, e.player.ContextLoader = n
-}(Twitch, jQuery),
-function(e, t) {
-    var n = function(t, n) {
-        var r = this;
-        this.queue = [], RSVP.EventTarget.mixin(this.queue), this.basicProperties = {
-            b: e.storage.get("b", {
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = {};
+        n._generateRandomString = function(e) {
+            var t = new Array(e);
+            for (var n = 0; n < e; n++) t[n] = String.fromCharCode(Math.floor(Math.random() * 27) + 65);
+            return t.join("")
+        }, n.createUniqueId = function(e) {
+            var t = e || "";
+            return t += this._generateRandomString(32) + (new Date).toLocaleTimeString(), Crypto.SHA1(t).substring(0, 16)
+        }, n.getOrCreateUniqueId = function() {
+            return cookie.get("unique_id") || cookie.set("unique_id", this.createUniqueId(), {
+                expires: 3650
+            }), cookie.get("unique_id")
+        }, n.getOrCreateSessionUniqueId = function() {
+            return cookie.get("session_unique_id") || cookie.set("session_unique_id", this.createUniqueId()), cookie.get("session_unique_id")
+        }, n.getOrCreateLocalStorageUniqueId = function() {
+            return e.storage.get("localstorage_unique_id") || e.storage.set("localstorage_unique_id", this.createUniqueId()), e.storage.get("localstorage_unique_id")
+        }, n.getOrCreateSessionStorageUniqueId = function() {
+            var t = e.storage.get("sessionstorage_unique_id", {
                 storage: "sessionStorage"
-            }) === "true"
-        }, t.load(n).then(function(t) {
-            r.basicProperties = t, r.queue.on("eventInQueue", function(t) {
-                var n = r.queue.pop();
-                e.tracking.spadeAndMixpanel.trackEvent(n.event, _.extend({}, r.basicProperties, n.properties)), r.queue.length > 0 && r.queue.trigger("eventInQueue")
-            }), r.queue.length > 0 && r.queue.trigger("eventInQueue")
-        })
-    };
-    n.prototype.handle = function(e, t) {
-        t = t || {}, this.queue.push({
-            event: e,
-            properties: t
-        }), this.queue.trigger("eventInQueue")
-    }, e.player.EventHandler = n
-}(Twitch, jQuery),
-function(e, t) {
-    var n = function(t, n, r) {
-        this.context = new e.player.ContextLoader(t, n), this.handler = new e.player.EventHandler(this.context, r), this.trackingMinutesWatched = !1
-    };
-    n.prototype.trackVideoPlaying = function(e) {
-        if (!this.trackingMinutesWatched) {
-            var t = 1,
-                n = this;
-            this.trackingMinutesWatched = !0, this.sendVideoPlay(), setInterval(function() {
-                e.contentPlayer.paused || (console.info("logging a minute watched " + (new Date).toTimeString()), n.sendMinuteWatched(t++))
-            }, 6e4)
-        }
-    }, n.prototype.sendMinuteWatched = function(t) {
-        this.handler.handle("minute-watched", {
-            minutes_logged: t,
-            distinct_id: e.idsForMixpanel.createUniqueId()
-        })
-    }, n.prototype.sendVideoPlay = function() {
-        this.handler.handle("video-play")
-    }, n.prototype.sendVideoAdOpportunity = function(e, t) {
-        this.handler.handle("video_ad_opportunity", {
-            provider: t,
-            roll_type: e
-        })
-    }, n.prototype.sendVideoAdImpression = function(e, t) {
-        this.handler.handle("video_ad_impression", {
-            provider: t,
-            roll_type: e
-        })
-    }, e.player.EventController = n
-}(Twitch, jQuery),
-function(e, t) {
-    var n = function(e) {
-        this.options = e, this.$el = t("#" + e.id), this.el = this.$el[0], this.$contentPlayer = this.$el.find(".js-video_player video"), this.contentPlayer = this.$contentPlayer[0], this.contentPlayer.load(), this.adContainer = this.$el.find(".js-ad_container").show()[0], this.videoPlayerContainer = this.$el.find(".js-video_player")[0], this._onlineStatus = "unknown", this.bufferEmpties = 0
-    };
-    n.canPlayHLS = function() {
-        var e = navigator.userAgent,
-            t = document.createElement("video");
-        if (e.match(/iPhone|iPod|iPad/)) return !0;
-        try {
-            return t && t.canPlayType && !!t.canPlayType('application/x-mpegURL; codecs="avc1.42E01E, mp4a.40.2"')
-        } catch (n) {
-            return !1
-        }
-    }, n.prototype.init = function(r, i) {
-        console.info("HTML5Player.init"), r = r || function() {}, i = i || function() {};
-        if (this.options.videoId) {
-            console.info("HTML5Player.init error"), i("HTML5 player doesn't support archives");
-            return
-        }
-        var s = navigator.userAgent.match(/Android/i);
-        if (!n.canPlayHLS() && !s) {
-            this.$el.find(".js-message").show().text("Unsupported player."), console.info("HTML5Player.init error"), i("Browser doesn't support HLS");
-            return
-        }
-        this.$el.show();
-        var o = this;
-        e.hls.getPlaylist(this.options.channel).then(function(n) {
-            o._onlineStatus = "online", t(o).triggerHandler("online");
-            var i = URI.parseQuery(window.location.search).mwcc,
-                s = {
-                    vid_width: o.$contentPlayer.width(),
-                    vid_height: o.$contentPlayer.height(),
-                    player: o.options.player,
-                    video_renderer: "html5",
-                    platform: o.options.platform,
-                    adblock: e.storage.get("adblock_enabled", {
-                        storage: "sessionStorage"
-                    }) === "true",
-                    app_version: "HTML5 0.1",
-                    browser: navigator.userAgent,
-                    orientation: window.innerHeight >= window.innerWidth ? "portrait" : "landscape",
-                    live: !0,
-                    buffer_empty_count: undefined,
-                    quality: undefined,
-                    fullscreen: undefined
-                };
-            i && (s.exp_name = "mwcc", s.exp_grp = i);
-            var u = o.eventController = new e.player.EventController(o.options.channel, n, s),
-                a = function(e) {
-                    t.ajax({
-                        type: "GET",
-                        url: "http://fan.twitch.tv/" + e,
-                        cache: !1,
-                        data: {
-                            channel: o.options.channel,
-                            context: "preroll",
-                            turbo_token: o.options.turboToken,
-                            chansub_token: o.options.channelSubscriptionToken
-                        }
-                    })
-                };
-            if (o.options.ads === !1) {
-                a("ad"), setTimeout(a, 3e4, "adcompleted"), o.setSrc(n), console.info("HTML5Player.init success (no ads)"), r();
-                return
-            }
-            var f = new e.player.AdsController({
-                container: o.adContainer,
-                player: o.contentPlayer
             });
-            t(f).on("start", function(e) {
-                a("ad"), u.sendVideoAdImpression("preroll", e.currentTarget.adsLoader.provider)
-            }), t(f).on("contentResumeRequested adError", function() {
-                a("adcompleted"), o.setSrc(n), o.preloadContent(function() {
-                    try {
-                        o.play()
-                    } catch (e) {}
-                })
-            }), f.initialize().then(function() {
-                ~window.location.href.indexOf("errortest") && e.deployFlavor !== "production" && e.deployFlavor !== "beta" ? f.requestAds("invalid_ad_url") : ~window.location.href.indexOf("twitchtest") ? (f.requestAds(e.ads.hls.getAdTagUrl({
-                    provider: "test"
-                }), "test"), u.sendVideoAdOpportunity("preroll", "test")) : (f.requestAds(e.ads.hls.getAdTagUrl({
-                    provider: "twitch",
-                    platform: "html5",
-                    channel: o.options.channel || "",
-                    game: o.options.game || "",
-                    referrer: document.referrer
-                }), "twitch"), u.sendVideoAdOpportunity("preroll", "twitch"))
-            }), console.info("HTML5Player.init success"), r()
-        }, function() {
-            o._onlineStatus = "offline", t(".js-message").show().text("OFFLINE"), o.$contentPlayer.removeAttr("poster"), console.info("HTML5Player.init success (offline)"), r()
+            return t || (t = this.createUniqueId(), e.storage.set("sessionstorage_unique_id", t, {
+                storage: "sessionStorage"
+            })), t
+        }, e.mixin({
+            idsForMixpanel: n
         })
-    }, n.prototype.destroy = function() {}, n.prototype.preloadContent = function(e) {
-        this.isMobilePlatform() ? (this.contentPlayer.addEventListener("loadedmetadata", e, !1), this.contentPlayer.load()) : (this.contentPlayer.load(), e())
-    }, n.prototype.play = function() {
-        this.contentPlayer.play(), this.eventController.trackVideoPlaying(this)
-    }, n.prototype.pause = function() {
-        this.contentPlayer.pause()
-    }, n.prototype.isMobilePlatform = function() {
-        return this.contentPlayer.paused && (navigator.userAgent.match(/(iPod|iPhone|iPad)/) || navigator.userAgent.toLowerCase().indexOf("android") > -1)
-    }, n.prototype.getVideoPlayer = function() {
-        return this.contentPlayer
-    }, n.prototype.registerVideoEndedCallback = function(e) {
-        this.contentPlayer.addEventListener("ended", e, !1)
-    }, n.prototype.unregisterVideoEndedCallback = function(e) {
-        this.contentPlayer.removeEventListener("ended", e, !1)
-    }, n.prototype.onlineStatus = function() {
-        return this._onlineStatus
-    }, n.prototype.on = function(e, n) {
-        t(this).on(e, n)
-    }, n.prototype.off = function(e, n) {
-        t(this).off(e, n)
-    }, n.prototype.mute = function() {
-        this.$contentPlayer.prop("muted", !0)
-    }, n.prototype.unmute = function() {
-        this.$contentPlayer.prop("muted", !1)
-    }, n.prototype.setSrc = function(e) {
-        this.contentPlayer.src = e
-    }, e.player.HTML5Player = n
-}(Twitch, jQuery),
-function(e, t) {
-    var n = {},
-        r = "3576121",
-        i = window.location.toString(),
-        s = "Deprecation warning: use the asynchronous Twitch.asyncAds.ready(..)",
-        o = function() {
-            console.debug(s)
-        },
-        u = function(e, t) {
-            var n, r = Object.keys(t);
-            for (var i = 0, s = r.length; i < s; i++) n = r[i], e = e.replace("{{" + n + "}}", encodeURIComponent(t[n]));
-            return e
-        };
-    n.ready = function(t) {
-        var r = new RSVP.Promise(function(t) {
-            e.user(function(e) {
-                t(_.pick(e, "has_turbo"))
-            }, function() {
-                t(!1)
-            })
-        });
-        RSVP.all([r, e.geo]).then(function(e) {
-            var r = e[0],
-                i = e[1].geo,
-                s = !r || !r.has_turbo;
-            t(n._readyData = {
-                geo: i,
-                enabled: s
-            })
-        })
-    }, n.enabled = function() {
-        return n._readyData ? n._readyData.enabled : (o(), !PP.turbo)
-    }, n.fetchAll = function() {
-        e.ads.enabled() && googletag.cmd.push(function() {
-            googletag.pubads().refresh()
-        })
-    };
-    var a = [];
-    n.pushGoogleTag = function(r, i, s) {
-        a.push(function() {
-            var o = e.ads.dfpSlotPath(n.dfpSlotName()),
-                u = r + "_holder";
-            googletag.pubads().setTargeting("pagetype", n.dfpPageType()), googletag.defineSlot(o, i, u).addService(googletag.pubads()), googletag.cmd.push(function() {
-                googletag.pubads().setTargeting("salt", window.location.protocol === "https:" ? "true" : "false"), googletag.display(r + "_holder")
-            }), s && t("#" + r + "_holder").hide()
-        })
-    }, n.registerGoogleTags = function() {
-        a.forEach(function(e) {
-            googletag.cmd.push(e)
-        })
-    }, n.slotName = function(e) {
-        return "Twitch_" + e
-    };
-    var f = {};
-    f.leader = function(n) {
-        if (!e.ads.enabled()) return;
-        e.ads.enabled() && e.ads.pushGoogleTag(n, [
-            [970, 66],
-            [728, 90]
-        ]), e.asyncAds.ready(function() {
-            t(".ad_leader").addClass("dfp")
-        })
-    }, f.pushdown = function(n) {
-        e.ads.enabled() && e.ads.pushGoogleTag(n, [
-            [970, 418],
-            [970, 67],
-            [970, 250],
-            [970, 150],
-            [980, 250]
-        ], !0), e.asyncAds.ready(function() {
-            t(".fp_opa_pushdown").addClass("dfp")
-        })
-    }, f.rectangle = function(n) {
-        if (!e.ads.enabled()) {
-            t(".advertisement").hide(), t(".ad_contain").hide();
-            return
-        }
-        var r = function() {
-            window.SitePageType === "directory" && (t(".ad_contain .advertisement").show(), t("#" + n + "_holder .adFrame").css("height", "250px"), t(".ad_contain").show())
-        };
-        e.ads.enabled() && e.ads.pushGoogleTag(n, [
-            [300, 250],
-            [300, 600],
-            [250, 600]
-        ])
-    }, f.siteskin = function(t) {
-        e.ads.enabled() && e.ads.pushGoogleTag(t, [1, 1], !0)
-    }, n.prepareAd = function(t, n) {
-        var r = e.ads.slotName(t);
-        f[n] && f[n](r)
-    }, n.hls = {
-        formatGame: function(e) {
-            return (e || "").toLowerCase().replace(/[^a-z0-9]+/g, "_")
-        },
-        stripAmpEq: function(e) {
-            return e.replace(/[&=]/g, "")
-        },
-        getAdTagUrl: function(t) {
-            var n, i;
-            switch (t.provider) {
-                case "twitch":
-                    return n = "http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&ad_rule=0&gdfp_req=1&iu=/{{dfpNetworkCode}}/twitch/channels/{{channel}}&ciu_szs=300x250&url={{referrer}}&correlator={{timestamp}}&env=vp&unviewed_position_start=1&output=xml_vast3&cust_params={{custom}}", i = "chan={{channel}}&timebreak=30&game={{game}}&platform={{platform}}&mature=true&pos=pre", u(n, {
-                        channel: t.channel,
-                        referrer: t.referrer,
-                        timestamp: (new Date).getTime(),
-                        dfpNetworkCode: r,
-                        custom: u(i, {
-                            channel: e.ads.hls.stripAmpEq(t.channel),
-                            game: e.ads.hls.formatGame(t.game),
-                            platform: t.platform ? e.ads.hls.stripAmpEq(t.platform) : "html5"
-                        })
-                    });
-                case "test":
-                    return "http://pubads.g.doubleclick.net/gampad/ads?sz=400x300&iu=%2F6062%2Fiab_vast_samples&ciu_szs=300x250%2C728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast3&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]&cust_params=iab_vast_samples%3Dlinear"
-            }
-        }
-    }, n.dfpPageType = function() {
-        switch (window.SitePageType) {
-            case "front_page":
-                return "homepage";
-            case "search":
-                return "search";
-            default:
-                return console.error("TWITCH: Set a DFP page type"), ""
-        }
-    }, n.dfpSlotPath = function(e) {
-        return "/" + r + "/twitch/" + e
-    }, n.dfpSlotName = function() {
-        switch (window.SitePageType) {
-            case "front_page":
-                return "homepage";
-            case "search":
-                return "directory";
-            default:
-                return console.error("TWITCH: Set a DFP page type"), ""
-        }
-    }, n.dfpNetworkCode = r, e.mixin({
-        ads: n
-    })
-}(Twitch, jQuery),
-function(e, t) {
-    var n = {};
-    n.mutePlayer = function() {
-        e.player.ready(function(e) {
-            e.mute()
-        })
-    }, n.unmutePlayer = function() {
-        e.player.ready(function(e) {
-            e.unmute()
-        })
-    }, e.ads.ext = n
-}(Twitch, jQuery),
-function(e, t) {
-    var n = {
-        enabled: !1
-    };
-    n.ready = e.ads.ready, n.enable = function() {
-        this.enabled = !0
-    }, n.megatag = function() {
-        return this._megatagPromise || (this._megatagPromise = new RSVP.Promise(function(e) {
-            t.getScript("/javascripts/libs/megatag.js", function() {
-                typeof adnxs != "undefined" && e(adnxs.megatag)
-            })
-        })), this._megatagPromise
-    }, n.metadata = {
-        game: "",
-        dfpPageType: "",
-        campaign: "",
-        kuid: ""
-    }, n.setMetadata = function(t, n) {
-        switch (t) {
-            case "game":
-                n = (n || "").replace(/[^A-Za-z0-9]+/g, "_"), e.asyncAds.metadata.game = n;
-                break;
-            case "chan":
-                e.asyncAds.metadata.chan = n;
-                break;
-            case "dfpPageType":
-                e.asyncAds.metadata.pagetype = n;
-                break;
-            case "campaign":
-                e.asyncAds.metadata.campaign = n;
-                break;
-            case "kuid":
-                e.asyncAds.metadata.kuid = n
-        }
-    };
-    var r = _.memoize(function() {
-        return {
-            "dfp-directory-banner": {
-                sizes: [
-                    [970, 66],
-                    [728, 90],
-                    [970, 250]
-                ],
-                unitName: "/" + e.ads.dfpNetworkCode + "/twitch/directory"
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = SiteOptions.experiments || {},
+            r = {
+                BROWSE_EXPERIMENT: "99494f77-1c7c-46c5-9b9c-a117db47d3c5",
+                RECOMMENDED_CHANNELS: "aaac75ea-c969-4826-b32d-ceefac620a79",
+                RECOMMENDED_GAMES: "61b169ff-bc62-4725-a40e-1be627197c6f",
+                VODS_GAME_INFO: "ac39b897-d41d-4255-90b6-3a59027e12e0",
+                VOD_COVIEWS: "c48ae3e6-1356-4ccc-8fbe-12c6909f9e98",
+                VOD_COVIEWS_AB: "e7516730-b94f-4d46-894e-c18612aab270",
+                VOD_COVIEWS_FORCED_VARIETY: "2f8210be-a6c6-43b1-9f6a-4b7cc7ef93c0",
+                VOD_COVIEWS_SHUFFLE: "403707e6-abb9-401c-a2ca-dd643293dbdd",
+                VOD_UPLOAD_UNITS: "1e406d0d-c293-4c4e-812f-049db8c7e3ec",
+                SIMILAR_VODS: "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7",
+                CDN_EXPERIMENT: "b29d055f-74f2-40b9-9383-9c4b79b30360",
+                CREATIVE_UNLIKELY_HERO: "dd2d60cd-b76b-4beb-a38c-ea60df88b3cc",
+                CREATIVE_DIRECTORY_CVS: "36a0e500-f117-41dd-8421-3e3db7d567dd",
+                CREATIVE_SIDEBAR_NAVIGATION: "f60b889e-0327-46a8-ad7b-0d402717da45",
+                CSGO_LANGUAGE_SAMPLE: "b86f6c73-d333-4d80-ab45-07cfff39aede",
+                VOD_PAGE_RECOMMENDATION_ORDER: "171906a2-6e34-4d0e-879c-a76a19f19097",
+                REMOVE_CSGO_DIRECTORY: "355ff3e2-38b5-449a-8ab8-a52b5d3ab817",
+                LANGUAGE_DIRECTORY_FILTER: "653cc0db-d332-4df6-b224-15c5c481f7e7",
+                CHANNEL_VIDEOS_TAB: "852b3485-a831-4580-b7bf-acf819977704",
+                MESSAGE_DELETED_EXPERIMENT: "04165981-17be-4593-afbd-762a380f6838",
+                RESUME_WATCHING_BANNER: "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2",
+                CHAT_RULES_EXPERIMENT: "98f3f2a5-9e4e-4ba8-aabe-2ff85e7309ee",
+                ESL_CSGO_STEAM_LINK: "6a857f53-de28-4025-8983-3cada70538cd",
+                CHANNEL_PAGE_REDESIGN: "3ae835b6-3015-440c-8177-755bdbbbf29e",
+                MESSAGE_HISTORY: "8ace0f50-8afd-424a-a086-3e61b3e66da0",
+                BITS_FOR_ADS: "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2",
+                NEXUS_ROLLOUT: "428d3b07-cc7a-424f-aad0-971f5415879a",
+                DETERMINATION: "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
+                WATCH_NOW_RIGHTBAR: "5380a8cf-e5cf-497e-9c6c-16cb1c881e0c",
+                DISCOVER_SHOW_COVIEWS: "3e011e23-ef29-46a5-af4b-a86e15d8c9e6",
+                PERPETUA: "af8f152a-f618-416e-8b79-d6ac30479018",
+                EXTENSIONS: "264f75af-a787-4a40-8654-40d78b4d8b41",
+                INTL_I18N: "0670f0ea-3b5c-41a8-946d-114ef4a42540",
+                INTERNATIONAL_SEARCH: "b0033638-a84e-4f57-8952-7115be4dc3b6",
+                DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS: "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2",
+                CLIENT_BATCH_SPADE: "1b905261-e257-4703-ac84-12a6a9099935",
+                CLIENT_BATCH_MIXPANEL: "42f5eea6-c548-4791-b767-9c7e29b73ef6",
+                CLIPS_FEEL_IT_COMING: "2858bc04-3f98-4808-a2dd-86555885ca90",
+                NEWS_FEED_REDESIGN: "05d8869f-e037-4955-b80a-7c361f9ddffb",
+                VOD_UPLOAD_UNITS_V3: "1710cf57-352c-4d09-b2c1-3d40bdf79b30",
+                FINAL_DESTINATION: "b542e7a6-6fc9-4380-a5cd-95301706904f"
             },
-            "dfp-directory-rectangle": {
-                sizes: [
-                    [300, 250]
-                ],
-                unitName: "/" + e.ads.dfpNetworkCode + "/twitch/directory"
+            i = {
+                "99494f77-1c7c-46c5-9b9c-a117db47d3c5": "control",
+                "aaac75ea-c969-4826-b32d-ceefac620a79": "no",
+                "61b169ff-bc62-4725-a40e-1be627197c6f": "no",
+                "ac39b897-d41d-4255-90b6-3a59027e12e0": "control",
+                "c48ae3e6-1356-4ccc-8fbe-12c6909f9e98": "control",
+                "e7516730-b94f-4d46-894e-c18612aab270": "control",
+                "2f8210be-a6c6-43b1-9f6a-4b7cc7ef93c0": "control",
+                "403707e6-abb9-401c-a2ca-dd643293dbdd": "control",
+                "1e406d0d-c293-4c4e-812f-049db8c7e3ec": "control",
+                "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7": "control",
+                "b29d055f-74f2-40b9-9383-9c4b79b30360": "control",
+                "dd2d60cd-b76b-4beb-a38c-ea60df88b3cc": "no",
+                "36a0e500-f117-41dd-8421-3e3db7d567dd": "communities",
+                "f60b889e-0327-46a8-ad7b-0d402717da45": "no",
+                "b86f6c73-d333-4d80-ab45-07cfff39aede": "control",
+                "171906a2-6e34-4d0e-879c-a76a19f19097": "related_first",
+                "355ff3e2-38b5-449a-8ab8-a52b5d3ab817": "control",
+                "653cc0db-d332-4df6-b224-15c5c481f7e7": "control",
+                "852b3485-a831-4580-b7bf-acf819977704": "control",
+                "04165981-17be-4593-afbd-762a380f6838": "false",
+                "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2": "no",
+                "98f3f2a5-9e4e-4ba8-aabe-2ff85e7309ee": "control",
+                "6a857f53-de28-4025-8983-3cada70538cd": "control",
+                "3ae835b6-3015-440c-8177-755bdbbbf29e": "old",
+                "8ace0f50-8afd-424a-a086-3e61b3e66da0": "off",
+                "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": "off",
+                "428d3b07-cc7a-424f-aad0-971f5415879a": "disabled",
+                "cc164e1e-1361-4730-8d9b-0091a0f9cb8f": "no",
+                "5380a8cf-e5cf-497e-9c6c-16cb1c881e0c": "control",
+                "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": "no_show",
+                "af8f152a-f618-416e-8b79-d6ac30479018": "control",
+                "264f75af-a787-4a40-8654-40d78b4d8b41": "no",
+                "0670f0ea-3b5c-41a8-946d-114ef4a42540": "control",
+                "b0033638-a84e-4f57-8952-7115be4dc3b6": "control",
+                "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": "hide",
+                "1b905261-e257-4703-ac84-12a6a9099935": "control",
+                "42f5eea6-c548-4791-b767-9c7e29b73ef6": "control",
+                "2858bc04-3f98-4808-a2dd-86555885ca90": "control",
+                "05d8869f-e037-4955-b80a-7c361f9ddffb": "no",
+                "1710cf57-352c-4d09-b2c1-3d40bdf79b30": "control",
+                "b542e7a6-6fc9-4380-a5cd-95301706904f": "channel"
             },
-            google_companion_300x60: {
-                sizes: [
-                    [300, 60]
-                ],
-                unitName: "/" + e.ads.dfpNetworkCode + "/twitch/channels"
-            },
-            google_companion_300x250: {
-                sizes: [
-                    [300, 250]
-                ],
-                unitName: "/" + e.ads.dfpNetworkCode + "/twitch/channels"
-            },
-            "dfp-channel-adlight": {
-                sizes: [
-                    [239, 80]
-                ],
-                unitName: "/" + e.ads.dfpNetworkCode + "/twitch/ad_light"
-            }
-        }
-    });
-    n.fetchAds = function(n) {
-        var r = e.ads._readyData;
-        if (this.enabled && r && r.enabled) {
-            t("#dfp-directory-banner, .ad_contain").hide();
-            var i = ["dfp-directory-banner"];
-            (!n || !n.singleOnly) && i.push("dfp-directory-rectangle"), e.asyncAds.sra({
-                slots: i
-            }).then(function(e) {
-                e[0] && t("#dfp-directory-banner").show(), e[1] && t(".ad_contain").show().attr("style", "display: block !important")
-            })
-        }
-    }, n.resetGoogletag = function() {
-        if (googletag) {
-            googletag.destroySlots();
-            var e = googletag.pubads();
-            e.getTargetingKeys().forEach(function(t) {
-                e.clearTargeting(t)
-            })
-        }
-        return RSVP.resolve()
-    }, n.prepareCompanionAds = function(t) {
-        return new RSVP.Promise(function(i, s) {
-            e.ads.ready(function(e) {
-                n.enabled && e && e.enabled ? n.resetGoogletag().then(function() {
-                    var e = r();
-                    googletag.cmd.push(function() {
-                        t.slots.forEach(function(t) {
-                            googletag.defineSlot(e[t].unitName, e[t].sizes, t).addService(googletag.companionAds())
-                        }), SiteOptions.dfp_sidebar_channel_ad && googletag.defineSlot(e["dfp-channel-adlight"].unitName, e["dfp-channel-adlight"].sizes, "dfp-channel-adlight").addService(googletag.pubads()), googletag.pubads().collapseEmptyDivs(), googletag.enableServices()
-                    }), i()
-                }, i) : i()
-            })
-        })
-    }, n.displayAdLight = function() {
-        googletag.cmd.push(function() {
-            googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("chan", e.asyncAds.metadata.chan), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", window.location.protocol === "https:" ? "true" : "false"), googletag.display("dfp-channel-adlight")
-        })
-    }, n.afterCompanionAdsRendered = function(e) {
-        t(".js-new-channel-ad").length && (e === "google" && (t(".new_advertisement").hide(), t("#lr_comp_300x250").hide(), t("#google_companion_300x60").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") ? t("#google_companion_300x60").show() : t("#google_companion_300x250").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(), setTimeout(function() {
-            var e = t(".js-new-channel-ad").outerHeight();
-            t(".js-rightcol-content").css("top", e)
-        }))
-    }, n.sra = function(i) {
-        var s = function() {
-                this.slots && this.slots.forEach(function(e) {
-                    e.el && e.el.empty()
-                });
-                var e = this,
-                    t = this.slots = [];
-                return function(n) {
-                    return function() {
-                        if (t === e.slots) return n.apply(this, arguments)
-                    }
-                }
-            },
-            o = function() {
-                if (googletag.debug_log._events) return googletag.debug_log._events;
-                var e = googletag.debug_log.log,
-                    t = RSVP.EventTarget.mixin({});
-                return googletag.debug_log.log = function(n, r, i, s, o) {
-                    return r.getMessageId() === 6 && t.trigger("gpt-slot_rendered"), e.apply(this, arguments)
-                }, googletag.debug_log._events = t, t
-            },
-            u = function(i) {
-                var u = this,
-                    a = s();
-                return new RSVP.Promise(function(s, f) {
-                    n.resetGoogletag().then(a(function() {
-                        var n = r();
-                        googletag.cmd.push(function() {
-                            i.slots.forEach(function(e) {
-                                u.slots.push({
-                                    id: e,
-                                    el: t("#" + e)
-                                }), googletag.defineSlot(n[e].unitName, n[e].sizes, e).addService(googletag.pubads())
-                            }), o().on("gpt-slot_rendered", _.after(i.slots.length, function() {
-                                s(_.map(u.slots, function(e) {
-                                    return e.el.css("display") !== "none"
-                                }))
-                            })), googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", window.location.protocol === "https:" ? "true" : "false"), googletag.pubads().enableSingleRequest(), googletag.pubads().collapseEmptyDivs(), googletag.enableServices(), _.each(i.slots, function(e) {
-                                googletag.display(e)
-                            })
-                        })
-                    }), f)
-                })
+            s = "experiment_overrides",
+            o = {},
+            u = {
+                CSGO_LANGUAGE_SAMPLE: "localized",
+                LANGUAGE_DIRECTORY_FILTER: "full",
+                CLIPS_ENABLED: "yes",
+                ESL_CSGO_STEAM_LINK: "show-cta",
+                CHANNEL_PAGE_REDESIGN: "new",
+                DETERMINATION: "yes",
+                DISCOVER_SHOW_COVIEWS: "show",
+                PERPETUA: "yes",
+                FINAL_DESTINATION: "videos"
             };
-        return u(i)
-    }, e.mixin({
-        asyncAds: n
-    })
-}(Twitch, jQuery),
-function(e, t) {
-    var n = function(n, r) {
-            if (!SiteOptions[n.optionName]) return;
-            var i = function(t, n, r, i) {
-                    var s = ich[t](r);
-                    i.prepend(s), !n || s.find(".js-dismiss-banner#" + t).on("click", function() {
-                        s.hide(), e.storage.set(r.dismissKey, !0)
-                    })
-                },
-                s = function(n, r, s, o, u, a, f, l, c, h) {
-                    var p = {},
-                        d = "",
-                        v = !1,
-                        m = !1,
-                        g = !1,
-                        y = !1,
-                        b = r[o];
-                    a.actionRequired && (m = a.actionRequired.indexOf(b) > -1), a.success && (g = a.success.indexOf(b) > -1), a.pending && (y = a.pending.indexOf(b) > -1), g ? (d = l.success, v = !e.storage.get(d), p.showDismissButton = !0, p.showActionButton = !0) : y ? (d = l.pending, v = !e.storage.get(d), p.showDismissButton = !0) : m && (p.actionRequired = m, p.showActionButton = !0, v = !0), !v && c && !s.payable && (v = !0), v && f && t.each(f, function(e, n) {
-                        t.inArray(r[n.attribute], n.states) < 0 && (v = !1)
-                    }), v && (e.storage.del(d), p[r.partner_state] = !0, p[b] = !0, p.login = n, p.dismissKey = d, i(u, l, p, h))
-                };
-            e.user().then(function(e) {
-                return data = {
-                    login: e.login,
-                    isStaff: e.is_staff
-                }, RSVP.hash(data)
-            }).then(function(t) {
-                return results = {
-                    payoutEntity: e.api.get("/api/channels/" + t.login + "/payout_entity"),
-                    login: t.login,
-                    isStaff: t.isStaff
-                }, n.activeProductOnly && (results.product = e.api.get("/api/channels/" + t.login + "/product")), RSVP.hash(results)
-            }).then(function(t) {
-                return t.payoutEntity && n.shouldCheckPayable && !t.isStaff && (t.isPayable = e.api.get("/api/payouts/is_payee_payable")), RSVP.hash(t)
-            }).then(function(e) {
-                var t = e.payoutEntity;
-                if (!t.partner_state || t.caller_id !== t.owner_id) return;
-                if (n.activeProductOnly && !e.product) return;
-                if (e.isStaff) return;
-                s(e.login, t, e.isPayable, n.attribute, n.bannerName, n.states, n.requiredStates, n.dismissKeys, n.shouldCheckPayable, r)
+        _.each(Object.keys(u), function(t) {
+            o[r[t]] = e.user().then(function(e) {
+                return e && e.is_staff ? u[t] : RSVP.Promise.reject()
             }, function(e) {
                 if (e && e.status === 401) return;
                 throw e
             })
-        },
-        r = ["start", "failed", "missing", "no_form", "requires_substantiation"],
-        i = ["pending", "substantiation_pending"],
-        s = ["success"],
-        o = {
-            newBanner: n,
-            serviceTaxOptions: {
-                bannerName: "service_tax_banner",
-                optionName: "tax_notifications_enabled",
-                attribute: "service_tax_state",
-                states: {
-                    actionRequired: r,
-                    pending: i,
-                    success: s
-                },
-                dismissKeys: {
-                    pending: "Twitch.tax.pendingServiceBannerDismissed",
-                    success: "Twitch.tax.successServiceBannerDismissed"
-                }
-            },
-            royaltyTaxOptions: {
-                bannerName: "royalty_tax_banner",
-                optionName: "tax_notifications_enabled",
-                attribute: "royalty_tax_state",
-                states: {
-                    actionRequired: r
-                },
-                requiredStates: [{
-                    attribute: "individual_partner",
-                    states: [!0]
-                }],
-                shouldCheckPayable: !0
-            },
-            paymentAmendmentOptions: {
-                bannerName: "payment_amendment_banner",
-                optionName: "payment_amendment_notifications_enabled",
-                activeProductOnly: !0,
-                attribute: "net_payment_amendment",
-                states: {
-                    actionRequired: ["unsigned"]
-                }
-            },
-            internationalPaymentsOptions: {
-                bannerName: "international_payments_banner",
-                optionName: "international_payments_notifications_enabled",
-                activeProductOnly: !0,
-                attribute: "accept_international_payments",
-                states: {
-                    actionRequired: [!1]
-                },
-                requiredStates: [{
-                    attribute: "net_payment_amendment",
-                    states: ["accepted_by_default", "signed"]
-                }]
-            }
-        };
-    e.mixin({
-        banners: o
-    })
-}(Twitch, jQuery),
-function(e, t) {
-    var n = {};
-    n.write = function(t, n, r) {
-        r = r || {};
-        var t = "TwitchCache:" + t;
-        e.storage.setObject(t, {
-            resource: n,
-            expiration: r.milliseconds,
-            time: (new Date).getTime(),
-            version: r.version,
-            restrict: r.restrict
-        }, _.pick(r, "storage"))
-    }, n.read = function(t, n) {
-        n = n || {};
-        var t = "TwitchCache:" + t,
-            r = e.storage.getObject(t, _.pick(n, "storage"));
-        return r ? r.expiration && (new Date).getTime() - r.time > r.expiration || n.version !== r.version || !_.isEqual(n.restrict, r.restrict) ? (e.storage.del(t, _.pick(n, "storage")), null) : r.resource : null
-    }, e.mixin({
-        cache: n
-    })
-}(window.Twitch, window.jQuery),
-function(e, t) {
-    var n = {};
-    n.infoModal = function(n, r, i, s) {
-        s = typeof s != "undefined" ? s : {}, t(r).overlay(n, function() {
-            t(i).click(function(e) {
-                e.preventDefault(), t(this).trigger("overlay.hide")
-            })
-        }, e.defaults(s, {
-            width: "420px"
-        }))
-    }, e.mixin({
-        dashboard: n
-    })
-}(Twitch, jQuery),
-function(e, t) {
-    var n = function(e, t) {
-            return t -= e.toString().length, t > 0 ? (new Array(t + (/\./.test(e) ? 2 : 1))).join("0") + e : e + ""
-        },
-        r = {
-            capitalize: function(e) {
-                return e = e || "", e.charAt(0).toUpperCase() + e.slice(1)
-            },
-            commatize: function(e) {
-                return e = e || 0, isNaN(e) ? e : e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-            },
-            getTime: function(e) {
-                var t = n(e.getMinutes(), 2),
-                    r = e.getHours();
-                return r > 12 ? r -= 12 : r === 0 && (r = 12), r + ":" + t
-            },
-            lengthAsClock: function(e) {
-                var t = Math.floor(e % 60),
-                    r = Math.floor(e % 3600 / 60),
-                    i = Math.floor(e / 3600);
-                return i ? i + ":" + n(r, 2) + ":" + n(t, 2) : r + ":" + n(t, 2)
-            },
-            clockAsLength: function(e) {
-                var t = e.split(":"),
-                    n = parseInt(t[t.length - 1], 10),
-                    r = parseInt(t[t.length - 2], 10),
-                    i = 0;
-                return t.length > 2 && (i = parseInt(t[t.length - 3], 10)), n + 60 * r + 3600 * i
-            },
-            escape: function(e) {
-                return t("<div/>").text(e).html()
-            }
-        };
-    e.mixin({
-        display: r
-    })
-}(Twitch, jQuery),
-function(e, t) {
-    var n = {};
-    n.init = function(t) {
-        this.config = e.defaults(t, {
-            forgetDuration: t.forgetDuration,
-            delay: t.delay
         });
-        var n = Number.POSITIVE_INFINITY,
-            r = parseInt(e.storage.get("requestUserEmail"), 10);
-        isNaN(r) || (n = +(new Date) - r), n > this.config.forgetDuration * 1e3 && setTimeout(e.emailNotifier.requestUserEmail, this.config.delay * 1e3)
-    }, n.requestUserEmail = function() {
-        var t = {
-            timeout: 2e4,
-            escape: !1
-        };
-        e.storage.set("requestUserEmail", +(new Date)), e.api.get("user").done(function(n) {
-            var r = URI(window.location.href).path();
-            !n.email && r !== "/settings" && (e.tracking.mixpanel.trackEvent("email_notice", {
-                type: "display"
-            }), e.notify('Welcome to Twitch! <a href="/settings?type=email_notice">Please click here to verify your email! </a>', t))
+        var a = e.url_params().experiments,
+            f = cookie.get(s),
+            l = {};
+        try {
+            f && (l = JSON.parse(f))
+        } catch (c) {
+            console.warn("Failed to parse experiment overrides", c)
+        }
+        _.extend(o, l, a);
+        var h = {
+                defaults: i,
+                deviceID: e.idsForMixpanel.getOrCreateUniqueId(),
+                overrides: o,
+                provider: new Minixperiment.providers.local(n),
+                Promise: RSVP.Promise,
+                platform: "web",
+                login: null
+            },
+            p, d = e.user().then(function(e) {
+                return e.login
+            }, function() {
+                return null
+            }).then(function(e) {
+                h.login = e, p = new Minixperiment.Client(h)
+            }),
+            v = function(e) {
+                return d.then(function() {
+                    var t = r[e];
+                    return p.get(t)
+                })
+            },
+            m = function(e, t) {
+                if (!e || !t) return;
+                var n = {},
+                    i = cookie.get(s),
+                    o = r[e];
+                try {
+                    i && (n = JSON.parse(i))
+                } catch (u) {
+                    console.warn("Failed to parse experiment overrides", u)
+                }
+                o && (n[o] = t), cookie.set(s, JSON.stringify(n)), console.warn("Experiment overrides require a page refresh to take effect.")
+            },
+            g = function() {
+                cookie.remove(s), console.warn("Clearing experiment overrides require a page refresh to take effect.")
+            },
+            y = {
+                getExperimentValue: v,
+                overrideExperimentValue: m,
+                clearOverrides: g
+            };
+        e.mixin({
+            experiments: y
         })
-    }, e.mixin({
-        emailNotifier: n
-    })
-}(Twitch, jQuery),
-function(e) {
-    var t, n, r = new RSVP.Promise(function(t, n) {
-        e.api.on("ready", function() {
-            e.api.get("/api/viewer/info.json").done(function(n) {
-                e.preferredLanguage = n.preferred_language, e.receivedLanguage = n.received_language;
-                var r = cookie.get("language");
-                r === undefined ? e.language.setCookieAndReload(e.receivedLanguage) : n.login && r !== n.user_language && e.language.setByAsyncPut(r), n.eu && window.euCookieNotification(), e.tracking.spadeAndMixpanel.trackEvent("prime_web_geo_data", {
-                    platform: "web",
-                    geo: n.geo,
-                    ip: n.ip
-                }), t(n)
-            }).fail(function(e) {
-                n({
-                    status: e.status
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = {
+                hlsId: null
+            },
+            r;
+        n.init = function(i) {
+            i.type === "html5" ? (r = new n.HTML5Player(i.html5Options), r.init(function() {
+                t(e.player).triggerHandler("ready")
+            })) : (r = new n.FlashPlayer(i.flashOptions), r.init(function() {
+                t(e.player).triggerHandler("ready")
+            }, function() {
+                i.type !== "flash" && (r = new n.HTML5Player(i.html5Options), r.init(function() {
+                    t(e.player).triggerHandler("ready")
+                }, function(e) {
+                    r.$el.find(".js-html5-player").hide(), r.$el.siblings(".js-flash-required").show()
+                }))
+            }))
+        };
+        var i = !1;
+        t(n).on("ready", function() {
+            i = !0
+        }), n.ready = function(n) {
+            i ? n(r) : t(e.player).on("ready", function() {
+                n(r)
+            })
+        }, n.getPlayer = function() {
+            return console.warn("Twitch.player.getPlayer is deprecated for the new player."), r || console.error("Twitch.player.getPlayer called before player is ready."), r
+        }, n.parseTimeOffset = function(e) {
+            var t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "");
+            if (!t) return 0;
+            try {
+                var n = parseInt(t[2], 10) || 0,
+                    r = parseInt(t[4], 10) || 0,
+                    i = parseInt(t[6], 10) || 0;
+                return n * 3600 + r * 60 + i
+            } catch (s) {
+                return 0
+            }
+        }, n.setSteamInfo = function(e, t) {
+            console.warn("Twitch.player.setSteamInfo is deprecated")
+        }, n.getSpecialOverlay = function() {
+            return e.storage.get("adblock_enabled", {
+                storage: "sessionStorage"
+            }) === "true"
+        }, n.onTwitchPlayerInit = n.onTwitchPlayerLoaded = function(e) {
+            console.warn("Twitch.player.onTwitchPlayer(Init/Loaded) is deprecated! Use Twitch.ready instead."), n.ready(e)
+        }, e.mixin({
+            player: n
+        })
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = ["streamLoaded", "videoLoaded", "online", "offline", "adCompanionRendered", "viewerCount", "videoLoading", "videoPlaying", "tosViolation", "popout", "loginRequest", "adFeedbackShow", "mouseScroll"],
+            r = function(e) {
+                this.options = e, r.instantiationCounter++
+            };
+        r.instantiationCounter = 0, t.extend(r.prototype, {
+            _proxy: function() {
+                var e = this;
+                t.each(["fullscreen", "getVideoTime", "loadStream", "loadVideo", "mute", "isPaused", "pauseVideo", "playVideo", "setOauthToken", "onlineStatus", "unmute", "videoSeek", "adFeedbackDone"], function(t, n) {
+                    e[n] = e.el[n].bind(e.el)
+                })
+            },
+            init: function(e, n) {
+                console.info("FlashPlayer.init"), this._initSuccess = e || function() {}, n = n || function() {};
+                var r = this,
+                    s = this.options;
+                s.flashVars.eventsCallback = i.register(function(e) {
+                    r._onEvents(e)
+                }), swfobject.embedSWF(s.url, s.swfId, s.width, s.height, s.version, "/widgets/expressinstall.swf", s.flashVars, s.params, s.attrs, function(e) {
+                    e.success ? (r.$el = t("#" + r.options.swfId), r.el = r.$el[0]) : (console.info("FlashPlayer.init error"), n("error embedding flash player"))
+                })
+            },
+            _onPlayerInit: function() {
+                this._proxy(), this.adFeedbackMenu = new e.player.AdFeedbackMenu(t(".js-ad-feedback-menu").first(), this), console.info("FlashPlayer.init success"), this._initSuccess(this)
+            },
+            destroy: function() {},
+            _onEvents: function(e) {
+                var t;
+                for (var n = 0; n < e.length; n++) {
+                    t = e[n];
+                    try {
+                        this._onEvent(t)
+                    } catch (r) {
+                        console.warn("Error handling FlashPlayer event " + t.event + ": " + r)
+                    }
+                }
+            },
+            _onEvent: function(e) {
+                switch (e.event) {
+                    case "playerInit":
+                        this._onPlayerInit();
+                        break;
+                    default:
+                        this.trigger(e.event, e.data)
+                }
+            }
+        }), RSVP.EventTarget.mixin(r.prototype);
+        var i = {
+            callbackId: 0,
+            register: function(t) {
+                e.player.FlashPlayer.callbacks = e.player.FlashPlayer.callbacks || {};
+                var n = "callback" + this.callbackId++;
+                return e.player.FlashPlayer.callbacks[n] = t, "Twitch.player.FlashPlayer.callbacks." + n
+            }
+        };
+        e.player.FlashPlayer = r
+    }(Twitch, jQuery),
+    function() {
+        try {
+            var e = window.chrome || {};
+            e.cast = e.cast || {}, e.cast.media = e.cast.media || {}, e.cast.ApiBootstrap_ = function() {}, e.cast.ApiBootstrap_.EXTENSION_IDS = ["boadgeojelhgndaghljhdicfkmllpafd", "dliochdbjfkdbacpmhlcpmleaejidimm", "hfaagokkkhdbgiakmmlclaapfelnkoah", "fmfcbgogabcbclcofgocippekhfcmgfj", "enhhojjnijigcajfphajepfemndkmdlo"], e.cast.ApiBootstrap_.findInstalledExtension_ = function(t) {
+                e.cast.ApiBootstrap_.findInstalledExtensionHelper_(0, t)
+            }, e.cast.ApiBootstrap_.findInstalledExtensionHelper_ = function(t, n) {
+                t == e.cast.ApiBootstrap_.EXTENSION_IDS.length ? n(null) : e.cast.ApiBootstrap_.isExtensionInstalled_(e.cast.ApiBootstrap_.EXTENSION_IDS[t], function(r) {
+                    r ? n(e.cast.ApiBootstrap_.EXTENSION_IDS[t]) : e.cast.ApiBootstrap_.findInstalledExtensionHelper_(t + 1, n)
+                })
+            }, e.cast.ApiBootstrap_.getCastSenderUrl_ = function(e) {
+                return "chrome-extension://" + e + "/cast_sender.js"
+            }, e.cast.ApiBootstrap_.isExtensionInstalled_ = function(t, n) {
+                var r = new XMLHttpRequest;
+                r.onreadystatechange = function() {
+                    4 == r.readyState && 200 == r.status && n(!0)
+                }, r.onerror = function() {
+                    n(!1)
+                }, r.open("GET", e.cast.ApiBootstrap_.getCastSenderUrl_(t), !0), r.send()
+            }, e.cast.ApiBootstrap_.findInstalledExtension_(function(t) {
+                if (t) {
+                    console.log("Found cast extension: " + t), e.cast.extensionId = t;
+                    var n = document.createElement("script");
+                    n.src = e.cast.ApiBootstrap_.getCastSenderUrl_(t), (document.head || document.documentElement).appendChild(n)
+                } else {
+                    var r = "No cast extension found";
+                    console.log(r);
+                    var i = window.__onGCastApiAvailable;
+                    i && "function" == typeof i && i(!1, r)
+                }
+            })
+        } catch (t) {}
+    }(),
+    function(e, t) {
+        var n = ["streamLoaded", "online", "offline", "adCompanionRendered", "viewerCount", "videoLoading", "videoPlaying", "tosViolation", "popout", "loginRequest", "adFeedbackShow", "mouseScroll", "chromecastMediaSet", "chromecastSessionRequested", "chromecastVolumeUpdated", "pauseChromecastSession"],
+            r = ["playVideo", "pauseVideo", "mute", "unmute", "loadStream", "fullscreen", "adFeedbackDone", "setTrackingData", "getVideoTime", "videoSeek", "isPaused", "playVideo", "showChromecast", "setChromecastConnected", "togglePlayPause", "isChatWebSockets"],
+            i = function(t) {
+                var n;
+                return t.playerType === "live" ? n = {
+                    id: t.id,
+                    hide_chat: !0,
+                    channel: t.channel,
+                    host_channel: t.hostChannel,
+                    embed: t.embed ? "1" : "0",
+                    auto_play: !0
+                } : t.playerType === "highlighter" ? n = {
+                    id: t.id,
+                    videoId: t.archiveId,
+                    playerType: t.playerType,
+                    hostname: SiteOptions.twitch_cdn_hostport,
+                    auto_play: !0
+                } : t.playerType === "archive" && (n = {
+                    id: t.id,
+                    videoId: t.archiveId,
+                    playerType: t.playerType,
+                    hostname: SiteOptions.twitch_cdn_hostport,
+                    auto_play: !0,
+                    playOffset: s()
+                }), n.device_id = e.idsForMixpanel.getOrCreateUniqueId(), n.session_device_id = e.idsForMixpanel.getOrCreateSessionUniqueId(), n.localstorage_device_id = e.idsForMixpanel.getOrCreateLocalStorageUniqueId(), n.test_environment_url = "http://" + SiteOptions.www_hostport, _.each(n, function(e, t) {
+                    e === undefined && delete n[t]
+                }), n
+            },
+            s = function() {
+                var e = URI().query(!0).t;
+                if (!e) return 0;
+                var t = e.match(/^(\d+[Hh])?(\d+[Mm])?(\d+[Ss])?$/);
+                if (t) {
+                    var n = parseInt(t[1], 10) || 0,
+                        r = parseInt(t[2], 10) || 0,
+                        i = parseInt(t[3], 10) || 0;
+                    return n * 60 * 60 + r * 60 + i
+                }
+                return e.match(/^\d+$/) ? parseInt(e, 10) : 0
+            },
+            o = function(e) {
+                var t = i(e);
+                t.eventsCallback = u.register(function(e) {
+                    n._onEvents(e)
+                }), this._readyDeferred = RSVP.defer(), this._id = t.id, this._hostChannel = t.hostChannel, e.playerType !== "live" && (this._videoType = "hls");
+                var n = this,
+                    r = ["//" + SiteOptions.twitch_cdn_hostport + "/swflibs/TwitchPlayer.swf", t.id, "100%", "100%", "11", null, t, {
+                        allowScriptAccess: "always",
+                        allowFullScreen: !0,
+                        wmode: "opaque",
+                        bgcolor: "000000"
+                    }, null, function(e) {
+                        e.success || n._readyDeferred.reject(n)
+                    }];
+                swfobject.embedSWF.apply(swfobject, r)
+            };
+        RSVP.EventTarget.mixin(o.prototype), o.prototype._onPlayerInit = function() {
+                this.adFeedbackMenu = new e.player.AdFeedbackMenu(t(".js-ad-feedback-menu").first(), this), this.ready(this._id)
+            }, o.prototype.destroy = function() {
+                clearInterval(this.swfTrackingInterval)
+            }, o.prototype.ready = function(n) {
+                var r = this;
+                this.ref = document.getElementById(n), this.$el = t(this.ref);
+                var i = {
+                    host_channel: this._hostChannel
+                };
+                this.setTrackingData("video-play", i), this._videoType && this.setTrackingData("video-type", this._videoType);
+                var s, o;
+                this.swfTrackingInterval = setInterval(function() {
+                    if (TMI) {
+                        var e = TMI.usingWebSockets();
+                        e !== o && (r.isChatWebSockets(e), o = e);
+                        var t = TMI.getMessageRate();
+                        if (t !== s) {
+                            s = t;
+                            var n = {
+                                chat_msg_rate: t
+                            };
+                            r.setTrackingData("minute-watched", _.extend(n, i)), r.setTrackingData("buffer-empty", n)
+                        }
+                    }
+                }, 1e3), e.chromecast.initialize(this), this.isReady = !0, this._readyDeferred.resolve(this)
+            }, o.prototype.promise = function(e, t) {
+                return this._readyDeferred.promise.then(e, t)
+            }, o.prototype._onEvents = function(e) {
+                var t;
+                for (var n = 0; n < e.length; n++) {
+                    t = e[n];
+                    try {
+                        this._onEvent(t)
+                    } catch (r) {
+                        console.warn("Error handling FlashPlayer2 event " + t.event + ": " + r)
+                    }
+                }
+            }, o.prototype._onEvent = function(e) {
+                switch (e.event) {
+                    case "playerInit":
+                        this._onPlayerInit();
+                        break;
+                    default:
+                        this.trigger(e.event, e.data)
+                }
+            },
+            function() {
+                _.each(r, function(e) {
+                    o.prototype[e] = function() {
+                        if (this.isReady && this.ref[e]) return this.ref[e].apply(this.ref, arguments)
+                    }
+                })
+            }(), e.player.FlashPlayer2 = o;
+        var u = {
+            callbackId: 0,
+            register: function(t) {
+                e.player.FlashPlayer2.callbacks = e.player.FlashPlayer2.callbacks || {};
+                var n = "callback" + this.callbackId++;
+                return e.player.FlashPlayer2.callbacks[n] = t, "Twitch.player.FlashPlayer2.callbacks." + n
+            }
+        }
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = function(e, n) {
+            var r = this,
+                i = null;
+            r.player = n, r.$playerEl = n.$el, n.on("adFeedbackShow", function(e) {
+                i = e.adId, r.show()
+            }), r.$el = t(e), r.$el.find(".close-btn").click(function() {
+                r.$el.hide()
+            }), r.$el.find("a").each(function(e, s) {
+                var o = t(s);
+                o.click(function(e) {
+                    e.preventDefault(), r.$el.hide(), n.adFeedbackDone({
+                        ad_id: i,
+                        ad_feedback: o.attr("name")
+                    })
                 })
             })
-        })
-    });
-    e.mixin({
-        geo: r,
-        receivedLanguage: n,
-        preferredLanguage: t
-    })
-}(window.Twitch),
-function(e, t) {
-    var n = "/api/channels/{{channel}}/access_token",
-        r = "//usher.ttvnw.net/api/channel/hls/{{channel}}.m3u8?token={{{token}}}&sig={{{sig}}}",
-        i = {};
-    i.getPlaylist = function(t) {
-        return new RSVP.Promise(function(i, s) {
-            if (!t || !t.length) return s();
-            e.api.get(n.replace("{{channel}}", encodeURIComponent(t))).then(function(e) {
-                e.token && e.sig ? i(r.replace("{{channel}}", encodeURIComponent(t)).replace("{{{token}}}", e.token).replace("{{{sig}}}", e.sig)) : s()
-            }, s)
-        })
-    }, e.mixin({
-        hls: i
-    })
-}(Twitch, jQuery),
-function(e, t) {
-    var n = {};
-    n.setCookieAndReload = function(t) {
-        var n = cookie.get("language") || "en",
-            r;
-        e.language.setCookie(t), r = !!cookie.get("language"), n !== t && r && location.reload()
-    }, n.setCookie = function(e) {
-        cookie.set("language", e, {
-            domain: "." + document.domain,
-            expires: 3650
-        })
-    }, n.setByAsyncPut = function(t) {
-        if (e.user.isLoggedIn()) return e.api.put("/api/users/" + e.user.login() + "/language", {
-            lang: t
-        })
-    }, e.mixin({
-        language: n
-    })
-}(Twitch, jQuery),
-function(e, t) {
-    var n = [],
-        r = function(e, t) {
-            return this._actions[e] = this._actions[e] || [], this._actions[e].push(t), this
-        },
-        i = function(e) {
-            if (this._actions[e])
-                for (var n = 0, r = this._actions[e].length; n < r; n++) this._actions[e][n](t);
-            return this
         };
-    e.mixin({
-        _actions: n,
-        action: r,
-        run: i
-    })
-}(Twitch, jQuery),
-function(e, t) {
-    t(document).on("click", "a.js-logout_link", function(n) {
-        n.preventDefault(), e.user(function(e) {
-            var n = t("<input>").attr({
-                type: "hidden",
-                name: "authenticity_token",
-                value: e.csrf_token
-            });
-            t("#logout_form").append(n).submit()
-        }, function() {
-            t("#logout_form").submit()
-        })
-    })
-}(Twitch, jQuery),
-function(e, t) {
-    var n = {
-            layout: "top",
-            template: '<div class="noty_message"><div class="text-container"><div class="glitch"></div><div class="noty_text"></div></div><div class="noty_close"><svg class="svg-close_small" height="16px" version="1.1" viewbox="0 0 16 16" width="16px" x="0px" y="0px"><path clip-rule="evenodd" d="M12.657,4.757L9.414,8l3.243,3.242l-1.415,1.415L8,9.414l-3.243,3.243l-1.414-1.415L6.586,8L3.343,4.757l1.414-1.414L8,6.586l3.242-3.243L12.657,4.757z" fill-rule="evenodd"></path></svg></div></div>',
-            dismissQueue: !0,
-            animation: {
-                open: {
-                    height: "toggle"
-                },
-                close: {
-                    height: "toggle"
-                },
-                easing: "linear",
-                speed: 200
-            },
-            timeout: 4e3,
-            closeWith: ["button"]
-        },
-        r = function(e, t, n) {
-            r.alert.apply(r, arguments)
-        };
-    r._dispatch = function(t, r, i, s) {
-        i = i || {}, typeof i == "function" && (s = i, i = {});
-        var o = e.defaults({
-            type: t,
-            text: r,
-            callback: {
-                onClose: s || !1
+        t.extend(n.prototype, {
+            show: function() {
+                this.$el.show()
             }
-        }, i, n);
-        return o.escape && (o.text = e.display.escape(r)), noty(o)
-    }, r.alert = function(e, t, n) {
-        return r._dispatch("alert", e, t, n)
-    }, r.notice = function(e, t, n) {
-        return r._dispatch("notice", e, t, n)
-    }, r.success = function(e, t, n) {
-        return r._dispatch("success", e, t, n)
-    }, r.error = function(e, t, n) {
-        return r._dispatch("error", e, t, n)
-    }, r.flash = function(e, n) {
-        var i = t("#header_notification"),
-            s = i.find(".flash-error"),
-            o = i.find(".flash-success"),
-            u = i.find(".flash-notice");
-        if (s.length) return r.error(s.text(), e, n);
-        if (o.length) return r.success(o.text(), e, n);
-        if (u.length) return r.alert(u.text(), e, n)
-    }, e.mixin({
-        notify: r
-    })
-}(Twitch, jQuery), window.sp_cid = "qFEaZsFQnwEdUIs",
+        }), e.player.AdFeedbackMenu = n
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = function(e) {
+            this.googlePromise = t.getScript("//s0.2mdn.net/instream/html5/ima3.js"), this.options = e, this.$clickTracker = t(".js-clicktracker"), this.$player = t(e.player)
+        };
+        n.prototype.showClickTracker = function() {
+            this.$clickTracker.show(), this.$player.attr("controls", !1)
+        }, n.prototype.hideClickTracker = function() {
+            this.$clickTracker.hide(), this.$player.attr("controls", !0)
+        }, n.prototype.initialize = function() {
+            var e = this;
+            return new RSVP.Promise(function(n, r) {
+                e.googlePromise.then(function() {
+                    e.adDisplayContainer = new google.ima.AdDisplayContainer(e.options.container, e.options.player, e.$clickTracker[0]), e.adsLoader = new google.ima.AdsLoader(e.adDisplayContainer), e.adsManager = null, e.adsLoader.addEventListener(google.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED, e.onAdsManagerLoaded, !1, e), e.adsLoader.addEventListener(google.ima.AdErrorEvent.Type.AD_ERROR, e.onAdError, !1, e), e.adDisplayContainer.initialize(), n()
+                }).fail(function() {
+                    t(e).trigger("error"), r()
+                })
+            })
+        }, n.prototype.requestAds = function(e) {
+            var n = new google.ima.AdsRequest;
+            n.adTagUrl = e;
+            var r = t(this.options.player).width(),
+                i = t(this.options.player).height();
+            n.linearAdSlotWidth = r, n.linearAdSlotHeight = r, n.nonLinearAdSlotWidth = i, n.nonLinearAdSlotHeight = i, this.adsLoader.requestAds(n)
+        }, n.prototype.onAdsManagerLoaded = function(e) {
+            console.debug("Ads Manager loaded."), this.adsManager = e.getAdsManager(this.options.player), this.processAdsManager(this.adsManager)
+        }, n.prototype.processAdsManager = function(e) {
+            e.addEventListener(google.ima.AdEvent.Type.CONTENT_PAUSE_REQUESTED, this.onContentPauseRequested, !1, this), e.addEventListener(google.ima.AdEvent.Type.CONTENT_RESUME_REQUESTED, this.onContentResumeRequested, !1, this), e.addEventListener(google.ima.AdErrorEvent.Type.AD_ERROR, this.onAdError, !1, this);
+            var t = [google.ima.AdEvent.Type.ALL_ADS_COMPLETED, google.ima.AdEvent.Type.CLICK, google.ima.AdEvent.Type.COMPLETE, google.ima.AdEvent.Type.FIRST_QUARTILE, google.ima.AdEvent.Type.LOADED, google.ima.AdEvent.Type.MIDPOINT, google.ima.AdEvent.Type.PAUSED, google.ima.AdEvent.Type.RESUMED, google.ima.AdEvent.Type.STARTED, google.ima.AdEvent.Type.THIRD_QUARTILE];
+            for (var n = 0; n < t.length; n++) e.addEventListener(t[n], this.onAdEvent, !1, this);
+            e.init(1, 1, google.ima.ViewMode.NORMAL), e.start()
+        }, n.prototype.onContentPauseRequested = function(e) {}, n.prototype.onContentResumeRequested = function(e) {
+            this.hideClickTracker(), t(this).trigger("contentResumeRequested")
+        }, n.prototype.onAdEvent = function(e) {
+            console.debug("Ad event: " + e.type);
+            switch (e.type) {
+                case google.ima.AdEvent.Type.STARTED:
+                    this.showClickTracker(), this.options.player.load();
+                    break;
+                case google.ima.AdEvent.Type.RESUMED:
+                    this.showClickTracker();
+                    break;
+                case google.ima.AdEvent.Type.CLICK:
+                    this.hideClickTracker();
+                    break;
+                case google.ima.AdEvent.Type.ALL_ADS_COMPLETED:
+                    this.hideClickTracker()
+            }
+            t(this).trigger(e.type)
+        }, n.prototype.onAdError = function(e) {
+            console.error("Ad error: " + e.getError().toString()), this.adsManager && this.adsManager.destroy(), this.hideClickTracker(), t(this).trigger("adError")
+        }, e.player.AdsController = n
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = {};
+        n.player = null;
+        var r = null,
+            i = null,
+            s = null,
+            o = !1,
+            u = !1,
+            a = function() {
+                if (o && u && s) n.player.showChromecast(!0), n.player.setChromecastConnected(!0, s.receiver.friendlyName);
+                else {
+                    var e = new chrome.cast.SessionRequest("358E83DC"),
+                        t = new chrome.cast.ApiConfig(e, c, h, chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED);
+                    chrome.cast.initialize(t, f, l)
+                }
+            },
+            f = function() {
+                o = !0, o && u && n.player.showChromecast(!0)
+            },
+            l = function(e) {
+                e.code === "session_error" && d()
+            },
+            c = function(e) {
+                s = e, s.addUpdateListener(p), s.media.length !== 0 && m("sessionListener", s.media[0]), n.player.setChromecastConnected(!0, s.receiver.friendlyName)
+            },
+            h = function(e) {
+                e === chrome.cast.ReceiverAvailability.AVAILABLE ? (u = !0, o && u && n.player.showChromecast(!0)) : (u = !1, n.player.showChromecast(!1))
+            },
+            p = function(e) {
+                e || d()
+            },
+            d = function() {
+                s && s.removeUpdateListener(p), i && i.removeUpdateListener(g), s = null, i = null, n.player.setChromecastConnected(!1)
+            },
+            v = function(e) {
+                s = e, s.addUpdateListener(p), n.player.setChromecastConnected(!0, s.receiver.friendlyName)
+            },
+            m = function(e, t) {
+                i = t, i.addUpdateListener(g.bind(this, t))
+            },
+            g = function(e, t) {
+                t ? s.media.length && e === s.media[0] && (e.playerState === chrome.cast.media.PlayerState.PAUSED ? (r = e.media.customData.channel, n.player.togglePlayPause(!0)) : e.playerState === chrome.cast.media.PlayerState.PLAYING && n.player.togglePlayPause(!1)) : (e.removeUpdateListener(g), e.media.customData.channel.toUpperCase() === window.location.pathname.substring(1).toUpperCase() && (r && r === e.media.customData.channel ? (r = "", n.player.togglePlayPause(!1)) : n.player.setChromecastConnected(!1)))
+            };
+        n.initialize = function(t) {
+            t.on("videoPlaying", _.once(function() {
+                typeof chrome != "undefined" && chrome.cast && chrome.cast.isAvailable && (n.player = t, a())
+            })), t.on("chromecastSessionRequested", function() {
+                chrome.cast.requestSession(v, l)
+            }), t.on("chromecastMediaSet", function(t) {
+                if (s.media.length !== 0 && i && i.media.customData.channel && i.media.customData.channel.toUpperCase() === t.channel.toUpperCase()) return;
+                var n = new chrome.cast.media.MediaInfo(t.url, "application/x-mpegurl");
+                n.streamType = chrome.cast.media.StreamType.LIVE;
+                var r = new chrome.cast.media.GenericMediaMetadata;
+                e.api.get("streams/" + t.channel).then(function(e) {
+                    if (e.stream) {
+                        var i = e.stream;
+                        i.game && (r.subtitle = i.game), i.channel && (i.channel.display_name && (r.title = i.channel.display_name), i.channel.logo ? r.images = [new chrome.cast.Image(i.channel.logo)] : r.images = [new chrome.cast.Image(i.preview.medium)]), n.metadata = r, n.customData = {
+                            channel: t.channel,
+                            analytics: t.analytics
+                        };
+                        var o = new chrome.cast.media.LoadRequest(n);
+                        o.autoplay = !0, s.loadMedia(o, m.bind(this, "loadMedia"), l)
+                    }
+                })
+            }), t.on("chromecastVolumeUpdated", function(e) {
+                s && s.setReceiverVolumeLevel(e.volume, null, l)
+            }), t.on("pauseChromecastSession", function() {
+                i && (r = i.media.customData.channel, i.pause(new chrome.cast.media.PauseRequest, null, null), i = null)
+            })
+        }, e.mixin({
+            chromecast: n
+        })
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = function(e, t) {
+                this.channel = e, this.stream = t
+            },
+            r = function(t, n) {
+                return new RSVP.Promise(function(r, i) {
+                    e.api.get(t).done(function(e) {
+                        r(_.reduce(n, function(t, n, r) {
+                            if (typeof n == "function") {
+                                var i = n(e[r] || "");
+                                i && (t[i.key] = i.val)
+                            } else _.has(e, r) && (t[n] = e[r]);
+                            return t
+                        }, {}))
+                    }).fail(function(e) {
+                        r({})
+                    })
+                })
+            },
+            i = function(e) {
+                return r("/api/channels/" + e, {
+                    partner: "partner",
+                    name: "channel",
+                    broadcaster_software: "broadcaster_software",
+                    game: function(e) {
+                        return {
+                            key: "game",
+                            val: e || "None"
+                        }
+                    }
+                })
+            },
+            s = function(e) {
+                return r("channels/" + e, {
+                    teams: function(e) {
+                        if (_.isArray(e) && e.length > 0 && _.has(e[0], "name")) return {
+                            key: "team",
+                            val: e[0].name
+                        }
+                    }
+                })
+            },
+            o = function() {
+                return r("/api/viewer/info.json", {
+                    login: function(e) {
+                        return {
+                            key: "login",
+                            val: e
+                        }
+                    },
+                    turbo: function(e) {
+                        return {
+                            key: "turbo",
+                            val: !!e
+                        }
+                    }
+                })
+            },
+            u = function(e) {
+                return r("/api/channels/" + e + "/viewer", {
+                    chansub: function(e) {
+                        return {
+                            key: "subscriber",
+                            val: !!e
+                        }
+                    }
+                })
+            },
+            a = function(n) {
+                return new RSVP.Promise(function(r, i) {
+                    t.ajax({
+                        method: "GET",
+                        url: n,
+                        cache: !1,
+                        headers: {
+                            "Client-ID": e.api.config.clientID
+                        },
+                        success: function(e) {
+                            var t = e.match(/nname=([^,&]+)[,&]/);
+                            if (t.length > 1) {
+                                var n = t[1].split(".");
+                                n.length > 1 && r({
+                                    node: t[1],
+                                    cluster: n[1]
+                                })
+                            } else console.warn("no match found for clusterPattern."), r({})
+                        },
+                        error: function() {
+                            console.warn("error in fetching stream data"), r({})
+                        }
+                    })
+                })
+            };
+        n.prototype.load = function(e) {
+            var t = [],
+                n = this.channel,
+                r = this.stream;
+            return console.info("pulling Context info"), t.push(i(n)), t.push(s(n)), t.push(o()), t.push(u(n)), t.push(a(r)), RSVP.all(t).then(function(t) {
+                var n = e || {};
+                return console.info("Combining properties..."), _.each(t, function(e) {
+                    _.extend(n, e)
+                }), n
+            }, function(e) {
+                console.error(e)
+            })
+        }, e.player.ContextLoader = n
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = function(t, n) {
+            var r = this;
+            this.queue = [], RSVP.EventTarget.mixin(this.queue), this.basicProperties = {
+                b: e.storage.get("b", {
+                    storage: "sessionStorage"
+                }) === "true"
+            }, t.load(n).then(function(t) {
+                r.basicProperties = t, r.queue.on("eventInQueue", function(t) {
+                    var n = r.queue.pop();
+                    e.tracking.spadeAndMixpanel.trackEvent(n.event, _.extend({}, r.basicProperties, n.properties)), r.queue.length > 0 && r.queue.trigger("eventInQueue")
+                }), r.queue.length > 0 && r.queue.trigger("eventInQueue")
+            })
+        };
+        n.prototype.handle = function(e, t) {
+            t = t || {}, this.queue.push({
+                event: e,
+                properties: t
+            }), this.queue.trigger("eventInQueue")
+        }, e.player.EventHandler = n
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = function(t, n, r) {
+            this.context = new e.player.ContextLoader(t, n), this.handler = new e.player.EventHandler(this.context, r), this.trackingMinutesWatched = !1
+        };
+        n.prototype.trackVideoPlaying = function(e) {
+            if (!this.trackingMinutesWatched) {
+                var t = 1,
+                    n = this;
+                this.trackingMinutesWatched = !0, this.sendVideoPlay(), setInterval(function() {
+                    e.contentPlayer.paused || (console.info("logging a minute watched " + (new Date).toTimeString()), n.sendMinuteWatched(t++))
+                }, 6e4)
+            }
+        }, n.prototype.sendMinuteWatched = function(t) {
+            this.handler.handle("minute-watched", {
+                minutes_logged: t,
+                distinct_id: e.idsForMixpanel.createUniqueId()
+            })
+        }, n.prototype.sendVideoPlay = function() {
+            this.handler.handle("video-play")
+        }, n.prototype.sendVideoAdOpportunity = function(e, t) {
+            this.handler.handle("video_ad_opportunity", {
+                provider: t,
+                roll_type: e
+            })
+        }, n.prototype.sendVideoAdImpression = function(e, t) {
+            this.handler.handle("video_ad_impression", {
+                provider: t,
+                roll_type: e
+            })
+        }, e.player.EventController = n
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = function(e) {
+            this.options = e, this.$el = t("#" + e.id), this.el = this.$el[0], this.$contentPlayer = this.$el.find(".js-video_player video"), this.contentPlayer = this.$contentPlayer[0], this.contentPlayer.load(), this.adContainer = this.$el.find(".js-ad_container").show()[0], this.videoPlayerContainer = this.$el.find(".js-video_player")[0], this._onlineStatus = "unknown", this.bufferEmpties = 0
+        };
+        n.canPlayHLS = function() {
+            var e = navigator.userAgent,
+                t = document.createElement("video");
+            if (e.match(/iPhone|iPod|iPad/)) return !0;
+            try {
+                return t && t.canPlayType && !!t.canPlayType('application/x-mpegURL; codecs="avc1.42E01E, mp4a.40.2"')
+            } catch (n) {
+                return !1
+            }
+        }, n.prototype.init = function(r, i) {
+            console.info("HTML5Player.init"), r = r || function() {}, i = i || function() {};
+            if (this.options.videoId) {
+                console.info("HTML5Player.init error"), i("HTML5 player doesn't support archives");
+                return
+            }
+            var s = navigator.userAgent.match(/Android/i);
+            if (!n.canPlayHLS() && !s) {
+                this.$el.find(".js-message").show().text("Unsupported player."), console.info("HTML5Player.init error"), i("Browser doesn't support HLS");
+                return
+            }
+            this.$el.show();
+            var o = this;
+            e.hls.getPlaylist(this.options.channel).then(function(n) {
+                o._onlineStatus = "online", t(o).triggerHandler("online");
+                var i = URI.parseQuery(window.location.search).mwcc,
+                    s = {
+                        vid_width: o.$contentPlayer.width(),
+                        vid_height: o.$contentPlayer.height(),
+                        player: o.options.player,
+                        video_renderer: "html5",
+                        platform: o.options.platform,
+                        adblock: e.storage.get("adblock_enabled", {
+                            storage: "sessionStorage"
+                        }) === "true",
+                        app_version: "HTML5 0.1",
+                        browser: navigator.userAgent,
+                        orientation: window.innerHeight >= window.innerWidth ? "portrait" : "landscape",
+                        live: !0,
+                        buffer_empty_count: undefined,
+                        quality: undefined,
+                        fullscreen: undefined
+                    };
+                i && (s.exp_name = "mwcc", s.exp_grp = i);
+                var u = o.eventController = new e.player.EventController(o.options.channel, n, s),
+                    a = function(e) {
+                        t.ajax({
+                            type: "GET",
+                            url: "http://fan.twitch.tv/" + e,
+                            cache: !1,
+                            data: {
+                                channel: o.options.channel,
+                                context: "preroll",
+                                turbo_token: o.options.turboToken,
+                                chansub_token: o.options.channelSubscriptionToken
+                            }
+                        })
+                    };
+                if (o.options.ads === !1) {
+                    a("ad"), setTimeout(a, 3e4, "adcompleted"), o.setSrc(n), console.info("HTML5Player.init success (no ads)"), r();
+                    return
+                }
+                var f = new e.player.AdsController({
+                    container: o.adContainer,
+                    player: o.contentPlayer
+                });
+                t(f).on("start", function(e) {
+                    a("ad"), u.sendVideoAdImpression("preroll", e.currentTarget.adsLoader.provider)
+                }), t(f).on("contentResumeRequested adError", function() {
+                    a("adcompleted"), o.setSrc(n), o.preloadContent(function() {
+                        try {
+                            o.play()
+                        } catch (e) {}
+                    })
+                }), f.initialize().then(function() {
+                    ~window.location.href.indexOf("errortest") && e.deployFlavor !== "production" && e.deployFlavor !== "beta" ? f.requestAds("invalid_ad_url") : ~window.location.href.indexOf("twitchtest") ? (f.requestAds(e.ads.hls.getAdTagUrl({
+                        provider: "test"
+                    }), "test"), u.sendVideoAdOpportunity("preroll", "test")) : (f.requestAds(e.ads.hls.getAdTagUrl({
+                        provider: "twitch",
+                        platform: "html5",
+                        channel: o.options.channel || "",
+                        game: o.options.game || "",
+                        referrer: document.referrer
+                    }), "twitch"), u.sendVideoAdOpportunity("preroll", "twitch"))
+                }), console.info("HTML5Player.init success"), r()
+            }, function() {
+                o._onlineStatus = "offline", t(".js-message").show().text("OFFLINE"), o.$contentPlayer.removeAttr("poster"), console.info("HTML5Player.init success (offline)"), r()
+            })
+        }, n.prototype.destroy = function() {}, n.prototype.preloadContent = function(e) {
+            this.isMobilePlatform() ? (this.contentPlayer.addEventListener("loadedmetadata", e, !1), this.contentPlayer.load()) : (this.contentPlayer.load(), e())
+        }, n.prototype.play = function() {
+            this.contentPlayer.play(), this.eventController.trackVideoPlaying(this)
+        }, n.prototype.pause = function() {
+            this.contentPlayer.pause()
+        }, n.prototype.isMobilePlatform = function() {
+            return this.contentPlayer.paused && (navigator.userAgent.match(/(iPod|iPhone|iPad)/) || navigator.userAgent.toLowerCase().indexOf("android") > -1)
+        }, n.prototype.getVideoPlayer = function() {
+            return this.contentPlayer
+        }, n.prototype.registerVideoEndedCallback = function(e) {
+            this.contentPlayer.addEventListener("ended", e, !1)
+        }, n.prototype.unregisterVideoEndedCallback = function(e) {
+            this.contentPlayer.removeEventListener("ended", e, !1)
+        }, n.prototype.onlineStatus = function() {
+            return this._onlineStatus
+        }, n.prototype.on = function(e, n) {
+            t(this).on(e, n)
+        }, n.prototype.off = function(e, n) {
+            t(this).off(e, n)
+        }, n.prototype.mute = function() {
+            this.$contentPlayer.prop("muted", !0)
+        }, n.prototype.unmute = function() {
+            this.$contentPlayer.prop("muted", !1)
+        }, n.prototype.setSrc = function(e) {
+            this.contentPlayer.src = e
+        }, e.player.HTML5Player = n
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = {},
+            r = "3576121",
+            i = window.location.toString(),
+            s = "Deprecation warning: use the asynchronous Twitch.asyncAds.ready(..)",
+            o = function() {
+                console.debug(s)
+            },
+            u = function(e, t) {
+                var n, r = Object.keys(t);
+                for (var i = 0, s = r.length; i < s; i++) n = r[i], e = e.replace("{{" + n + "}}", encodeURIComponent(t[n]));
+                return e
+            };
+        n.ready = function(t) {
+            var r = new RSVP.Promise(function(t) {
+                e.user(function(e) {
+                    t(_.pick(e, "has_turbo"))
+                }, function() {
+                    t(!1)
+                })
+            });
+            RSVP.all([r, e.geo]).then(function(e) {
+                var r = e[0],
+                    i = e[1].geo,
+                    s = !r || !r.has_turbo;
+                t(n._readyData = {
+                    geo: i,
+                    enabled: s
+                })
+            })
+        }, n.enabled = function() {
+            return n._readyData ? n._readyData.enabled : (o(), !PP.turbo)
+        }, n.fetchAll = function() {
+            e.ads.enabled() && googletag.cmd.push(function() {
+                googletag.pubads().refresh()
+            })
+        };
+        var a = [];
+        n.pushGoogleTag = function(r, i, s) {
+            a.push(function() {
+                var o = e.ads.dfpSlotPath(n.dfpSlotName()),
+                    u = r + "_holder";
+                googletag.pubads().setTargeting("pagetype", n.dfpPageType()), googletag.defineSlot(o, i, u).addService(googletag.pubads()), googletag.cmd.push(function() {
+                    googletag.pubads().setTargeting("salt", window.location.protocol === "https:" ? "true" : "false"), googletag.display(r + "_holder")
+                }), s && t("#" + r + "_holder").hide()
+            })
+        }, n.registerGoogleTags = function() {
+            a.forEach(function(e) {
+                googletag.cmd.push(e)
+            })
+        }, n.slotName = function(e) {
+            return "Twitch_" + e
+        };
+        var f = {};
+        f.leader = function(n) {
+            if (!e.ads.enabled()) return;
+            e.ads.enabled() && e.ads.pushGoogleTag(n, [
+                [970, 66],
+                [728, 90]
+            ]), e.asyncAds.ready(function() {
+                t(".ad_leader").addClass("dfp")
+            })
+        }, f.pushdown = function(n) {
+            e.ads.enabled() && e.ads.pushGoogleTag(n, [
+                [970, 418],
+                [970, 67],
+                [970, 250],
+                [970, 150],
+                [980, 250]
+            ], !0), e.asyncAds.ready(function() {
+                t(".fp_opa_pushdown").addClass("dfp")
+            })
+        }, f.rectangle = function(n) {
+            if (!e.ads.enabled()) {
+                t(".advertisement").hide(), t(".ad_contain").hide();
+                return
+            }
+            var r = function() {
+                window.SitePageType === "directory" && (t(".ad_contain .advertisement").show(), t("#" + n + "_holder .adFrame").css("height", "250px"), t(".ad_contain").show())
+            };
+            e.ads.enabled() && e.ads.pushGoogleTag(n, [
+                [300, 250],
+                [300, 600],
+                [250, 600]
+            ])
+        }, f.siteskin = function(t) {
+            e.ads.enabled() && e.ads.pushGoogleTag(t, [1, 1], !0)
+        }, n.prepareAd = function(t, n) {
+            var r = e.ads.slotName(t);
+            f[n] && f[n](r)
+        }, n.hls = {
+            formatGame: function(e) {
+                return (e || "").toLowerCase().replace(/[^a-z0-9]+/g, "_")
+            },
+            stripAmpEq: function(e) {
+                return e.replace(/[&=]/g, "")
+            },
+            getAdTagUrl: function(t) {
+                var n, i;
+                switch (t.provider) {
+                    case "twitch":
+                        return n = "http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&ad_rule=0&gdfp_req=1&iu=/{{dfpNetworkCode}}/twitch/channels/{{channel}}&ciu_szs=300x250&url={{referrer}}&correlator={{timestamp}}&env=vp&unviewed_position_start=1&output=xml_vast3&cust_params={{custom}}", i = "chan={{channel}}&timebreak=30&game={{game}}&platform={{platform}}&mature=true&pos=pre", u(n, {
+                            channel: t.channel,
+                            referrer: t.referrer,
+                            timestamp: (new Date).getTime(),
+                            dfpNetworkCode: r,
+                            custom: u(i, {
+                                channel: e.ads.hls.stripAmpEq(t.channel),
+                                game: e.ads.hls.formatGame(t.game),
+                                platform: t.platform ? e.ads.hls.stripAmpEq(t.platform) : "html5"
+                            })
+                        });
+                    case "test":
+                        return "http://pubads.g.doubleclick.net/gampad/ads?sz=400x300&iu=%2F6062%2Fiab_vast_samples&ciu_szs=300x250%2C728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast3&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]&cust_params=iab_vast_samples%3Dlinear"
+                }
+            }
+        }, n.dfpPageType = function() {
+            switch (window.SitePageType) {
+                case "front_page":
+                    return "homepage";
+                case "search":
+                    return "search";
+                default:
+                    return console
+                        .error("TWITCH: Set a DFP page type"), ""
+            }
+        }, n.dfpSlotPath = function(e) {
+            return "/" + r + "/twitch/" + e
+        }, n.dfpSlotName = function() {
+            switch (window.SitePageType) {
+                case "front_page":
+                    return "homepage";
+                case "search":
+                    return "directory";
+                default:
+                    return console.error("TWITCH: Set a DFP page type"), ""
+            }
+        }, n.dfpNetworkCode = r, e.mixin({
+            ads: n
+        })
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = {};
+        n.mutePlayer = function() {
+            e.player.ready(function(e) {
+                e.mute()
+            })
+        }, n.unmutePlayer = function() {
+            e.player.ready(function(e) {
+                e.unmute()
+            })
+        }, e.ads.ext = n
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = {
+            enabled: !1
+        };
+        n.ready = e.ads.ready, n.enable = function() {
+            this.enabled = !0
+        }, n.megatag = function() {
+            return this._megatagPromise || (this._megatagPromise = new RSVP.Promise(function(e) {
+                t.getScript("/javascripts/libs/megatag.js", function() {
+                    typeof adnxs != "undefined" && e(adnxs.megatag)
+                })
+            })), this._megatagPromise
+        }, n.metadata = {
+            game: "",
+            dfpPageType: "",
+            campaign: "",
+            kuid: ""
+        }, n.setMetadata = function(t, n) {
+            switch (t) {
+                case "game":
+                    n = (n || "").replace(/[^A-Za-z0-9]+/g, "_"), e.asyncAds.metadata.game = n;
+                    break;
+                case "chan":
+                    e.asyncAds.metadata.chan = n;
+                    break;
+                case "dfpPageType":
+                    e.asyncAds.metadata.pagetype = n;
+                    break;
+                case "campaign":
+                    e.asyncAds.metadata.campaign = n;
+                    break;
+                case "kuid":
+                    e.asyncAds.metadata.kuid = n
+            }
+        };
+        var r = _.memoize(function() {
+            return {
+                "dfp-directory-banner": {
+                    sizes: [
+                        [970, 66],
+                        [728, 90],
+                        [970, 250]
+                    ],
+                    unitName: "/" + e.ads.dfpNetworkCode + "/twitch/directory"
+                },
+                "dfp-directory-rectangle": {
+                    sizes: [
+                        [300, 250]
+                    ],
+                    unitName: "/" + e.ads.dfpNetworkCode + "/twitch/directory"
+                },
+                google_companion_300x60: {
+                    sizes: [
+                        [300, 60]
+                    ],
+                    unitName: "/" + e.ads.dfpNetworkCode + "/twitch/channels"
+                },
+                google_companion_300x250: {
+                    sizes: [
+                        [300, 250]
+                    ],
+                    unitName: "/" + e.ads.dfpNetworkCode + "/twitch/channels"
+                },
+                "dfp-channel-adlight": {
+                    sizes: [
+                        [239, 80]
+                    ],
+                    unitName: "/" + e.ads.dfpNetworkCode + "/twitch/ad_light"
+                }
+            }
+        });
+        n.fetchAds = function(n) {
+            var r = e.ads._readyData;
+            if (this.enabled && r && r.enabled) {
+                t("#dfp-directory-banner, .ad_contain").hide();
+                var i = ["dfp-directory-banner"];
+                (!n || !n.singleOnly) && i.push("dfp-directory-rectangle"), e.asyncAds.sra({
+                    slots: i
+                }).then(function(e) {
+                    e[0] && t("#dfp-directory-banner").show(), e[1] && t(".ad_contain").show().attr("style", "display: block !important")
+                })
+            }
+        }, n.resetGoogletag = function() {
+            if (googletag) {
+                googletag.destroySlots();
+                var e = googletag.pubads();
+                e.getTargetingKeys().forEach(function(t) {
+                    e.clearTargeting(t)
+                })
+            }
+            return RSVP.resolve()
+        }, n.prepareCompanionAds = function(t) {
+            return new RSVP.Promise(function(i, s) {
+                e.ads.ready(function(e) {
+                    n.enabled && e && e.enabled ? n.resetGoogletag().then(function() {
+                        var e = r();
+                        googletag.cmd.push(function() {
+                            t.slots.forEach(function(t) {
+                                googletag.defineSlot(e[t].unitName, e[t].sizes, t).addService(googletag.companionAds())
+                            }), SiteOptions.dfp_sidebar_channel_ad && googletag.defineSlot(e["dfp-channel-adlight"].unitName, e["dfp-channel-adlight"].sizes, "dfp-channel-adlight").addService(googletag.pubads()), googletag.pubads().collapseEmptyDivs(), googletag.enableServices()
+                        }), i()
+                    }, i) : i()
+                })
+            })
+        }, n.displayAdLight = function() {
+            googletag.cmd.push(function() {
+                googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("chan", e.asyncAds.metadata.chan), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", window.location.protocol === "https:" ? "true" : "false"), googletag.display("dfp-channel-adlight")
+            })
+        }, n.afterCompanionAdsRendered = function(e) {
+            t(".js-new-channel-ad").length && (e === "google" && (t(".new_advertisement").hide(), t("#lr_comp_300x250").hide(), t("#google_companion_300x60").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") ? t("#google_companion_300x60").show() : t("#google_companion_300x250").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(), setTimeout(function() {
+                var e = t(".js-new-channel-ad").outerHeight();
+                t(".js-rightcol-content").css("top", e)
+            }))
+        }, n.sra = function(i) {
+            var s = function() {
+                    this.slots && this.slots.forEach(function(e) {
+                        e.el && e.el.empty()
+                    });
+                    var e = this,
+                        t = this.slots = [];
+                    return function(n) {
+                        return function() {
+                            if (t === e.slots) return n.apply(this, arguments)
+                        }
+                    }
+                },
+                o = function() {
+                    if (googletag.debug_log._events) return googletag.debug_log._events;
+                    var e = googletag.debug_log.log,
+                        t = RSVP.EventTarget.mixin({});
+                    return googletag.debug_log.log = function(n, r, i, s, o) {
+                        return r.getMessageId() === 6 && t.trigger("gpt-slot_rendered"), e.apply(this, arguments)
+                    }, googletag.debug_log._events = t, t
+                },
+                u = function(i) {
+                    var u = this,
+                        a = s();
+                    return new RSVP.Promise(function(s, f) {
+                        n.resetGoogletag().then(a(function() {
+                            var n = r();
+                            googletag.cmd.push(function() {
+                                i.slots.forEach(function(e) {
+                                    u.slots.push({
+                                        id: e,
+                                        el: t("#" + e)
+                                    }), googletag.defineSlot(n[e].unitName, n[e].sizes, e).addService(googletag.pubads())
+                                }), o().on("gpt-slot_rendered", _.after(i.slots.length, function() {
+                                    s(_.map(u.slots, function(e) {
+                                        return e.el.css("display") !== "none"
+                                    }))
+                                })), googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", window.location.protocol === "https:" ? "true" : "false"), googletag.pubads().enableSingleRequest(), googletag.pubads().collapseEmptyDivs(), googletag.enableServices(), _.each(i.slots, function(e) {
+                                    googletag.display(e)
+                                })
+                            })
+                        }), f)
+                    })
+                };
+            return u(i)
+        }, e.mixin({
+            asyncAds: n
+        })
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = function(n, r) {
+                if (!SiteOptions[n.optionName]) return;
+                var i = function(t, n, r, i) {
+                        var s = ich[t](r);
+                        i.prepend(s), !n || s.find(".js-dismiss-banner#" + t).on("click", function() {
+                            s.hide(), e.storage.set(r.dismissKey, !0)
+                        })
+                    },
+                    s = function(n, r, s, o, u, a, f, l, c, h) {
+                        var p = {},
+                            d = "",
+                            v = !1,
+                            m = !1,
+                            g = !1,
+                            y = !1,
+                            b = r[o];
+                        a.actionRequired && (m = a.actionRequired.indexOf(b) > -1), a.success && (g = a.success.indexOf(b) > -1), a.pending && (y = a.pending.indexOf(b) > -1), g ? (d = l.success, v = !e.storage.get(d), p.showDismissButton = !0, p.showActionButton = !0) : y ? (d = l.pending, v = !e.storage.get(d), p.showDismissButton = !0) : m && (p.actionRequired = m, p.showActionButton = !0, v = !0), !v && c && !s.payable && (v = !0), v && f && t.each(f, function(e, n) {
+                            t.inArray(r[n.attribute], n.states) < 0 && (v = !1)
+                        }), v && (e.storage.del(d), p[r.partner_state] = !0, p[b] = !0, p.login = n, p.dismissKey = d, i(u, l, p, h))
+                    };
+                e.user().then(function(e) {
+                    return data = {
+                        login: e.login,
+                        isStaff: e.is_staff
+                    }, RSVP.hash(data)
+                }).then(function(t) {
+                    return results = {
+                        payoutEntity: e.api.get("/api/channels/" + t.login + "/payout_entity"),
+                        login: t.login,
+                        isStaff: t.isStaff
+                    }, n.activeProductOnly && (results.product = e.api.get("/api/channels/" + t.login + "/product")), RSVP.hash(results)
+                }).then(function(t) {
+                    return t.payoutEntity && n.shouldCheckPayable && !t.isStaff && (t.isPayable = e.api.get("/api/payouts/is_payee_payable")), RSVP.hash(t)
+                }).then(function(e) {
+                    var t = e.payoutEntity;
+                    if (!t.partner_state || t.caller_id !== t.owner_id) return;
+                    if (n.activeProductOnly && !e.product) return;
+                    if (e.isStaff) return;
+                    s(e.login, t, e.isPayable, n.attribute, n.bannerName, n.states, n.requiredStates, n.dismissKeys, n.shouldCheckPayable, r)
+                }, function(e) {
+                    if (e && e.status === 401) return;
+                    throw e
+                })
+            },
+            r = ["start", "failed", "missing", "no_form", "requires_substantiation"],
+            i = ["pending", "substantiation_pending"],
+            s = ["success"],
+            o = {
+                newBanner: n,
+                serviceTaxOptions: {
+                    bannerName: "service_tax_banner",
+                    optionName: "tax_notifications_enabled",
+                    attribute: "service_tax_state",
+                    states: {
+                        actionRequired: r,
+                        pending: i,
+                        success: s
+                    },
+                    dismissKeys: {
+                        pending: "Twitch.tax.pendingServiceBannerDismissed",
+                        success: "Twitch.tax.successServiceBannerDismissed"
+                    }
+                },
+                royaltyTaxOptions: {
+                    bannerName: "royalty_tax_banner",
+                    optionName: "tax_notifications_enabled",
+                    attribute: "royalty_tax_state",
+                    states: {
+                        actionRequired: r
+                    },
+                    requiredStates: [{
+                        attribute: "individual_partner",
+                        states: [!0]
+                    }],
+                    shouldCheckPayable: !0
+                },
+                paymentAmendmentOptions: {
+                    bannerName: "payment_amendment_banner",
+                    optionName: "payment_amendment_notifications_enabled",
+                    activeProductOnly: !0,
+                    attribute: "net_payment_amendment",
+                    states: {
+                        actionRequired: ["unsigned"]
+                    }
+                },
+                internationalPaymentsOptions: {
+                    bannerName: "international_payments_banner",
+                    optionName: "international_payments_notifications_enabled",
+                    activeProductOnly: !0,
+                    attribute: "accept_international_payments",
+                    states: {
+                        actionRequired: [!1]
+                    },
+                    requiredStates: [{
+                        attribute: "net_payment_amendment",
+                        states: ["accepted_by_default", "signed"]
+                    }]
+                }
+            };
+        e.mixin({
+            banners: o
+        })
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = {};
+        n.write = function(t, n, r) {
+            r = r || {};
+            var t = "TwitchCache:" + t;
+            e.storage.setObject(t, {
+                resource: n,
+                expiration: r.milliseconds,
+                time: (new Date).getTime(),
+                version: r.version,
+                restrict: r.restrict
+            }, _.pick(r, "storage"))
+        }, n.read = function(t, n) {
+            n = n || {};
+            var t = "TwitchCache:" + t,
+                r = e.storage.getObject(t, _.pick(n, "storage"));
+            return r ? r.expiration && (new Date).getTime() - r.time > r.expiration || n.version !== r.version || !_.isEqual(n.restrict, r.restrict) ? (e.storage.del(t, _.pick(n, "storage")), null) : r.resource : null
+        }, e.mixin({
+            cache: n
+        })
+    }(window.Twitch, window.jQuery),
+    function(e, t) {
+        var n = {};
+        n.infoModal = function(n, r, i, s) {
+            s = typeof s != "undefined" ? s : {}, t(r).overlay(n, function() {
+                t(i).click(function(e) {
+                    e.preventDefault(), t(this).trigger("overlay.hide")
+                })
+            }, e.defaults(s, {
+                width: "420px"
+            }))
+        }, e.mixin({
+            dashboard: n
+        })
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = function(e, t) {
+                return t -= e.toString().length, t > 0 ? (new Array(t + (/\./.test(e) ? 2 : 1))).join("0") + e : e + ""
+            },
+            r = {
+                capitalize: function(e) {
+                    return e = e || "", e.charAt(0).toUpperCase() + e.slice(1)
+                },
+                commatize: function(e) {
+                    return e = e || 0, isNaN(e) ? e : e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                },
+                getTime: function(e) {
+                    var t = n(e.getMinutes(), 2),
+                        r = e.getHours();
+                    return r > 12 ? r -= 12 : r === 0 && (r = 12), r + ":" + t
+                },
+                lengthAsClock: function(e) {
+                    var t = Math.floor(e % 60),
+                        r = Math.floor(e % 3600 / 60),
+                        i = Math.floor(e / 3600);
+                    return i ? i + ":" + n(r, 2) + ":" + n(t, 2) : r + ":" + n(t, 2)
+                },
+                clockAsLength: function(e) {
+                    var t = e.split(":"),
+                        n = parseInt(t[t.length - 1], 10),
+                        r = parseInt(t[t.length - 2], 10),
+                        i = 0;
+                    return t.length > 2 && (i = parseInt(t[t.length - 3], 10)), n + 60 * r + 3600 * i
+                },
+                escape: function(e) {
+                    return t("<div/>").text(e).html()
+                }
+            };
+        e.mixin({
+            display: r
+        })
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = {};
+        n.init = function(t) {
+            this.config = e.defaults(t, {
+                forgetDuration: t.forgetDuration,
+                delay: t.delay
+            });
+            var n = Number.POSITIVE_INFINITY,
+                r = parseInt(e.storage.get("requestUserEmail"), 10);
+            isNaN(r) || (n = +(new Date) - r), n > this.config.forgetDuration * 1e3 && setTimeout(e.emailNotifier.requestUserEmail, this.config.delay * 1e3)
+        }, n.requestUserEmail = function() {
+            var t = {
+                timeout: 2e4,
+                escape: !1
+            };
+            e.storage.set("requestUserEmail", +(new Date)), e.api.get("user").done(function(n) {
+                var r = URI(window.location.href).path();
+                !n.email && r !== "/settings" && (e.tracking.mixpanel.trackEvent("email_notice", {
+                    type: "display"
+                }), e.notify('Welcome to Twitch! <a href="/settings?type=email_notice">Please click here to verify your email! </a>', t))
+            })
+        }, e.mixin({
+            emailNotifier: n
+        })
+    }(Twitch, jQuery),
+    function(e) {
+        var t, n, r = new RSVP.Promise(function(t, n) {
+            e.api.on("ready", function() {
+                e.api.get("/api/viewer/info.json").done(function(n) {
+                    e.preferredLanguage = n.preferred_language, e.receivedLanguage = n.received_language;
+                    var r = cookie.get("language");
+                    r === undefined ? e.language.setCookieAndReload(e.receivedLanguage) : n.login && r !== n.user_language && e.language.setByAsyncPut(r), n.eu && window.euCookieNotification(), e.tracking.spadeAndMixpanel.trackEvent("prime_web_geo_data", {
+                        platform: "web",
+                        geo: n.geo,
+                        ip: n.ip
+                    }), t(n)
+                }).fail(function(e) {
+                    n({
+                        status: e.status
+                    })
+                })
+            })
+        });
+        e.mixin({
+            geo: r,
+            receivedLanguage: n,
+            preferredLanguage: t
+        })
+    }(window.Twitch),
+    function(e, t) {
+        var n = "/api/channels/{{channel}}/access_token",
+            r = "//usher.ttvnw.net/api/channel/hls/{{channel}}.m3u8?token={{{token}}}&sig={{{sig}}}",
+            i = {};
+        i.getPlaylist = function(t) {
+            return new RSVP.Promise(function(i, s) {
+                if (!t || !t.length) return s();
+                e.api.get(n.replace("{{channel}}", encodeURIComponent(t))).then(function(e) {
+                    e.token && e.sig ? i(r.replace("{{channel}}", encodeURIComponent(t)).replace("{{{token}}}", e.token).replace("{{{sig}}}", e.sig)) : s()
+                }, s)
+            })
+        }, e.mixin({
+            hls: i
+        })
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = {};
+        n.setCookieAndReload = function(t) {
+            var n = cookie.get("language") || "en",
+                r;
+            e.language.setCookie(t), r = !!cookie.get("language"), n !== t && r && location.reload()
+        }, n.setCookie = function(e) {
+            cookie.set("language", e, {
+                domain: "." + document.domain,
+                expires: 3650
+            })
+        }, n.setByAsyncPut = function(t) {
+            if (e.user.isLoggedIn()) return e.api.put("/api/users/" + e.user.login() + "/language", {
+                lang: t
+            })
+        }, e.mixin({
+            language: n
+        })
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = [],
+            r = function(e, t) {
+                return this._actions[e] = this._actions[e] || [], this._actions[e].push(t), this
+            },
+            i = function(e) {
+                if (this._actions[e])
+                    for (var n = 0, r = this._actions[e].length; n < r; n++) this._actions[e][n](t);
+                return this
+            };
+        e.mixin({
+            _actions: n,
+            action: r,
+            run: i
+        })
+    }(Twitch, jQuery),
+    function(e, t) {
+        t(document).on("click", "a.js-logout_link", function(n) {
+            n.preventDefault(), e.user(function(e) {
+                var n = t("<input>").attr({
+                    type: "hidden",
+                    name: "authenticity_token",
+                    value: e.csrf_token
+                });
+                t("#logout_form").append(n).submit()
+            }, function() {
+                t("#logout_form").submit()
+            })
+        })
+    }(Twitch, jQuery),
+    function(e, t) {
+        var n = {
+                layout: "top",
+                template: '<div class="noty_message"><div class="text-container"><div class="glitch"></div><div class="noty_text"></div></div><div class="noty_close"><svg class="svg-close_small" height="16px" version="1.1" viewbox="0 0 16 16" width="16px" x="0px" y="0px"><path clip-rule="evenodd" d="M12.657,4.757L9.414,8l3.243,3.242l-1.415,1.415L8,9.414l-3.243,3.243l-1.414-1.415L6.586,8L3.343,4.757l1.414-1.414L8,6.586l3.242-3.243L12.657,4.757z" fill-rule="evenodd"></path></svg></div></div>',
+                dismissQueue: !0,
+                animation: {
+                    open: {
+                        height: "toggle"
+                    },
+                    close: {
+                        height: "toggle"
+                    },
+                    easing: "linear",
+                    speed: 200
+                },
+                timeout: 4e3,
+                closeWith: ["button"]
+            },
+            r = function(e, t, n) {
+                r.alert.apply(r, arguments)
+            };
+        r._dispatch = function(t, r, i, s) {
+            i = i || {}, typeof i == "function" && (s = i, i = {});
+            var o = e.defaults({
+                type: t,
+                text: r,
+                callback: {
+                    onClose: s || !1
+                }
+            }, i, n);
+            return o.escape && (o.text = e.display.escape(r)), noty(o)
+        }, r.alert = function(e, t, n) {
+            return r._dispatch("alert", e, t, n)
+        }, r.notice = function(e, t, n) {
+            return r._dispatch("notice", e, t, n)
+        }, r.success = function(e, t, n) {
+            return r._dispatch("success", e, t, n)
+        }, r.error = function(e, t, n) {
+            return r._dispatch("error", e, t, n)
+        }, r.flash = function(e, n) {
+            var i = t("#header_notification"),
+                s = i.find(".flash-error"),
+                o = i.find(".flash-success"),
+                u = i.find(".flash-notice");
+            if (s.length) return r.error(s.text(), e, n);
+            if (o.length) return r.success(o.text(), e, n);
+            if (u.length) return r.alert(u.text(), e, n)
+        }, e.mixin({
+            notify: r
+        })
+    }(Twitch, jQuery), window.sp_cid = "qFEaZsFQnwEdUIs",
     function(e, t) {
         var n = "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
             r = new RSVP.Promise(function(e, r) {
