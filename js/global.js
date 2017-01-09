@@ -11087,27 +11087,6 @@ function(e, t) {
             }
             return [o, u, f, l, c]
         }, s._blocksize = 16
-    }(),
-    function() {
-        var e = Crypto,
-            t = e.util,
-            n = e.charenc,
-            r = n.UTF8,
-            i = n.Binary;
-        e.HMAC = function(e, n, s, o) {
-            n.constructor == String && (n = r.stringToBytes(n)), s.constructor == String && (s = r.stringToBytes(s)), s.length > e._blocksize * 4 && (s = e(s, {
-                asBytes: !0
-            }));
-            var u = s.slice(0),
-                f = s.slice(0);
-            for (var l = 0; l < e._blocksize * 4; l++) u[l] ^= 92, f[l] ^= 54;
-            var h = e(u.concat(e(f.concat(n), {
-                asBytes: !0
-            })), {
-                asBytes: !0
-            });
-            return o && o.asBytes ? h : o && o.asString ? i.bytesToString(h) : t.bytesToHex(h)
-        }
     }();
 var Mustache = typeof module != "undefined" && module.exports || {};
 (function(e) {
@@ -13436,8 +13415,7 @@ Date.CultureInfo = {
                     this.minute = Number(e)
                 }
             },
-            second: function(
-                e) {
+            second: function(e) {
                 return function() {
                     this.second = Number(e)
                 }
@@ -13461,7 +13439,8 @@ Date.CultureInfo = {
             },
             month: function(e) {
                 return function() {
-                    this.month = e.length == 3 ? "jan feb mar apr may jun jul aug sep oct nov dec".indexOf(e) / 4 : Number(e) - 1
+                    this.month = e.length == 3 ? "jan feb mar apr may jun jul aug sep oct nov dec"
+                        .indexOf(e) / 4 : Number(e) - 1
                 }
             },
             year: function(e) {
@@ -14674,13 +14653,13 @@ Date.CultureInfo = {
             var r, i, s, o = e.toLocaleLowerCase();
             if (!this._weekdaysParse)
                 for (this._weekdaysParse = [], this._shortWeekdaysParse = [], this._minWeekdaysParse = [], r = 0; 7 > r; ++r) s = f([2e3, 1]).day(r), this._minWeekdaysParse[r] = this.weekdaysMin(s, "").toLocaleLowerCase(), this._shortWeekdaysParse[r] = this.weekdaysShort(s, "").toLocaleLowerCase(), this._weekdaysParse[r] = this.weekdays(s, "").toLocaleLowerCase();
-            return n ? "dddd" === t ? (i = bi.call(this._weekdaysParse, o), -1 !== i ? i : null) : "ddd" === t ? (i = bi.call(this._shortWeekdaysParse, o), -1 !== i ? i : null) : (i = bi.call(this._minWeekdaysParse, o), -1 !== i ? i : null) : "dddd" === t ? (i = bi.call(this._weekdaysParse, o), -1 !== i ? i : (i =
-                bi.call(this._shortWeekdaysParse, o), -1 !== i ? i : (i = bi.call(this._minWeekdaysParse, o), -1 !== i ? i : null))) : "ddd" === t ? (i = bi.call(this._shortWeekdaysParse, o), -1 !== i ? i : (i = bi.call(this._weekdaysParse, o), -1 !== i ? i : (i = bi.call(this._minWeekdaysParse, o), -1 !== i ? i : null))) : (i = bi.call(this._minWeekdaysParse, o), -1 !== i ? i : (i = bi.call(this._weekdaysParse, o), -1 !== i ? i : (i = bi.call(this._shortWeekdaysParse, o), -1 !== i ? i : null)))
+            return n ? "dddd" === t ? (i = bi.call(this._weekdaysParse, o), -1 !== i ? i : null) : "ddd" === t ? (i = bi.call(this._shortWeekdaysParse, o), -1 !== i ? i : null) : (i = bi.call(this._minWeekdaysParse, o), -1 !== i ? i : null) : "dddd" === t ? (i = bi.call(this._weekdaysParse, o), -1 !== i ? i : (i = bi.call(this._shortWeekdaysParse, o), -1 !== i ? i : (i = bi.call(this._minWeekdaysParse, o), -1 !== i ? i : null))) : "ddd" === t ? (i = bi.call(this._shortWeekdaysParse, o), -1 !== i ? i : (i = bi.call(this._weekdaysParse, o), -1 !== i ? i : (i = bi.call(this._minWeekdaysParse, o), -1 !== i ? i : null))) : (i = bi.call(this._minWeekdaysParse, o), -1 !== i ? i : (i = bi.call(this._weekdaysParse, o), -1 !== i ? i : (i = bi.call(this._shortWeekdaysParse, o), -1 !== i ? i : null)))
         }
 
         function Pt(e, t, n) {
             var r, i, s;
-            if (this._weekdaysParseExact) return Dt.call(this, e, t, n);
+            if (this._weekdaysParseExact) return Dt
+                .call(this, e, t, n);
             for (this._weekdaysParse || (this._weekdaysParse = [], this._minWeekdaysParse = [], this._shortWeekdaysParse = [], this._fullWeekdaysParse = []), r = 0; 7 > r; r++) {
                 if (i = f([2e3, 1]).day(r), n && !this._fullWeekdaysParse[r] && (this._fullWeekdaysParse[r] = new RegExp("^" + this.weekdays(i, "").replace(".", ".?") + "$", "i"), this._shortWeekdaysParse[r] = new RegExp("^" + this.weekdaysShort(i, "").replace(".", ".?") + "$", "i"), this._minWeekdaysParse[r] = new RegExp("^" + this.weekdaysMin(i, "").replace(".", ".?") + "$", "i")), this._weekdaysParse[r] || (s = "^" + this.weekdays(i, "") + "|^" + this.weekdaysShort(i, "") + "|^" + this.weekdaysMin(i, ""), this._weekdaysParse[r] = new RegExp(s.replace(".", ""), "i")), n && "dddd" === t && this._fullWeekdaysParse[r].test(e)) return r;
                 if (n && "ddd" === t && this._shortWeekdaysParse[r].test(e)) return r;
@@ -15835,8 +15814,7 @@ Date.CultureInfo = {
         var zs = I("Milliseconds", !1);
         X("z", 0, 0, "zoneAbbr"), X("zz", 0, 0, "zoneName");
         var Ws = m.prototype;
-        Ws.add = Bs, Ws.calendar = $n, Ws.clone = Jn, Ws.diff = tr, Ws.endOf = pr, Ws.format = sr, Ws.from = or, Ws.fromNow = ur, Ws.to = ar, Ws.toNow = fr, Ws.get = U, Ws.invalidAt = Sr, Ws.isAfter = Kn, Ws.isBefore = Qn, Ws.isBetween = Gn, Ws.isSame = Yn, Ws.isSameOrAfter = Zn, Ws.isSameOrBefore = er, Ws.isValid = wr, Ws.lang = Fs, Ws.locale = lr, Ws.localeData = cr, Ws.max =
-            Ms, Ws.min = Os, Ws.parsingFlags = Er, Ws.set = z, Ws.startOf = hr, Ws.subtract = js, Ws.toArray = gr, Ws.toObject = yr, Ws.toDate = mr, Ws.toISOString = ir, Ws.toJSON = br, Ws.toString = rr, Ws.unix = vr, Ws.valueOf = dr, Ws.creationData = xr, Ws.year = cs, Ws.isLeapYear = mt, Ws.weekYear = Nr, Ws.isoWeekYear = Cr, Ws.quarter = Ws.quarters = Mr, Ws.month = ft, Ws.daysInMonth = lt, Ws.week = Ws.weeks = Ct, Ws.isoWeek = Ws.isoWeeks = kt, Ws.weeksInYear = Lr, Ws.isoWeeksInYear = kr, Ws.date = Is, Ws.day = Ws.days = Ht, Ws.weekday = Bt, Ws.isoWeekday = jt, Ws.dayOfYear = _r, Ws.hour = Ws.hours = Es, Ws.minute = Ws.minutes = qs, Ws.second = Ws.seconds = Rs, Ws.millisecond = Ws.milliseconds = zs, Ws.utcOffset = Ln, Ws.utc = On, Ws.local = Mn, Ws.parseZone = _n, Ws.hasAlignedHourOffset = Dn, Ws.isDST = Pn, Ws.isLocal = Bn, Ws.isUtcOffset = jn, Ws.isUtc = Fn, Ws.isUTC = Fn, Ws.zoneAbbr = Pr, Ws.zoneName = Hr, Ws.dates = S("dates accessor is deprecated. Use date instead.", Is), Ws.months = S("months accessor is deprecated. Use month instead", ft), Ws.years = S("years accessor is deprecated. Use year instead", cs), Ws.zone = S("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", An), Ws.isDSTShifted = S("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", Hn);
+        Ws.add = Bs, Ws.calendar = $n, Ws.clone = Jn, Ws.diff = tr, Ws.endOf = pr, Ws.format = sr, Ws.from = or, Ws.fromNow = ur, Ws.to = ar, Ws.toNow = fr, Ws.get = U, Ws.invalidAt = Sr, Ws.isAfter = Kn, Ws.isBefore = Qn, Ws.isBetween = Gn, Ws.isSame = Yn, Ws.isSameOrAfter = Zn, Ws.isSameOrBefore = er, Ws.isValid = wr, Ws.lang = Fs, Ws.locale = lr, Ws.localeData = cr, Ws.max = Ms, Ws.min = Os, Ws.parsingFlags = Er, Ws.set = z, Ws.startOf = hr, Ws.subtract = js, Ws.toArray = gr, Ws.toObject = yr, Ws.toDate = mr, Ws.toISOString = ir, Ws.toJSON = br, Ws.toString = rr, Ws.unix = vr, Ws.valueOf = dr, Ws.creationData = xr, Ws.year = cs, Ws.isLeapYear = mt, Ws.weekYear = Nr, Ws.isoWeekYear = Cr, Ws.quarter = Ws.quarters = Mr, Ws.month = ft, Ws.daysInMonth = lt, Ws.week = Ws.weeks = Ct, Ws.isoWeek = Ws.isoWeeks = kt, Ws.weeksInYear = Lr, Ws.isoWeeksInYear = kr, Ws.date = Is, Ws.day = Ws.days = Ht, Ws.weekday = Bt, Ws.isoWeekday = jt, Ws.dayOfYear = _r, Ws.hour = Ws.hours = Es, Ws.minute = Ws.minutes = qs, Ws.second = Ws.seconds = Rs, Ws.millisecond = Ws.milliseconds = zs, Ws.utcOffset = Ln, Ws.utc = On, Ws.local = Mn, Ws.parseZone = _n, Ws.hasAlignedHourOffset = Dn, Ws.isDST = Pn, Ws.isLocal = Bn, Ws.isUtcOffset = jn, Ws.isUtc = Fn, Ws.isUTC = Fn, Ws.zoneAbbr = Pr, Ws.zoneName = Hr, Ws.dates = S("dates accessor is deprecated. Use date instead.", Is), Ws.months = S("months accessor is deprecated. Use month instead", ft), Ws.years = S("years accessor is deprecated. Use year instead", cs), Ws.zone = S("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", An), Ws.isDSTShifted = S("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", Hn);
         var Xs = Ws,
             Vs = k.prototype;
         Vs.calendar = L, Vs.longDateFormat = A, Vs.invalidDate = O, Vs.ordinal = M, Vs.preparse = Fr, Vs.postformat = Fr, Vs.relativeTime = _, Vs.pastFuture = D, Vs.set = N, Vs.months = it, Vs.monthsShort = st, Vs.monthsParse = ut, Vs.monthsRegex = ht, Vs.monthsShortRegex = ct, Vs.week = xt, Vs.firstDayOfYear = Nt, Vs.firstDayOfWeek = Tt, Vs.weekdays = Ot, Vs.weekdaysMin = _t, Vs.weekdaysShort = Mt, Vs.weekdaysParse = Pt, Vs.weekdaysRegex = Ft, Vs.weekdaysShortRegex = It, Vs.weekdaysMinRegex = qt, Vs.isPM = Vt, Vs.meridiem = $t, Gt("en", {
@@ -16932,9 +16910,10 @@ googletag.cmd = googletag.cmd || [],
             var t = e || "";
             return t += this._generateRandomString(32) + (new Date).toLocaleTimeString(), Crypto.SHA1(t).substring(0, 16)
         }, n.getOrCreateUniqueId = function() {
-            return cookie.get("unique_id") || cookie.set("unique_id", this.createUniqueId(), {
-                expires: 3650
-            }), cookie.get("unique_id")
+            return cookie.get("unique_id") || cookie
+                .set("unique_id", this.createUniqueId(), {
+                    expires: 3650
+                }), cookie.get("unique_id")
         }, n.getOrCreateSessionUniqueId = function() {
             return cookie.get("session_unique_id") || cookie.set("session_unique_id", this.createUniqueId()), cookie.get("session_unique_id")
         }, n.getOrCreateLocalStorageUniqueId = function() {
@@ -17923,8 +17902,7 @@ googletag.cmd = googletag.cmd || [],
                 case "search":
                     return "search";
                 default:
-                    return console
-                        .error("TWITCH: Set a DFP page type"), ""
+                    return console.error("TWITCH: Set a DFP page type"), ""
             }
         }, n.dfpSlotPath = function(e) {
             return "/" + r + "/twitch/" + e
@@ -19120,7 +19098,8 @@ var Base64 = {
             typeof n == "undefined" ? (n = t, t = null) : n.url = t;
             var r = n.error,
                 i = function(t, n, i) {
-                    t.status === 403 && e.forceLogIn(), r && r.apply(this, arguments)
+                    t.status === 403 && e.forceLogIn(), r && r.apply(
+                        this, arguments)
                 };
             return n.error = i, e.ajax(n)
         }, window.BoxartImage = {
