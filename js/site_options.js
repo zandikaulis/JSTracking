@@ -166,10 +166,10 @@ window.SiteOptions = {
         "0670f0ea-3b5c-41a8-946d-114ef4a42540": {
             "name": "INTL_I18N",
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "enabled"
             }]
         },
