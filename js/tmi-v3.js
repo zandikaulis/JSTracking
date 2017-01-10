@@ -3337,7 +3337,17 @@
             SessionManager.prototype.runCommercial = function(channel, time) {
                 var deferred = $.Deferred(),
                     self = this;
-                this._twitchApi.post("/kraken/channels/" + channel + "/commercial?length=" + time).done(function(response) {
+                this._twitchApi.post("/kraken/channels/" + channel + "/commercial?length=" + time, null, {
+                    headers: {
+                        Accept: "application/vnd.twitchtv.v3+json"
+                    }
+                }).done(function(response) {
+                    var properties = {
+                        trigger: "chat",
+                        length: time,
+                        channel: channel
+                    };
+                    Twitch.tracking.spadeAndMixpanel.trackEvent("commercial", properties);
                     deferred.resolve()
                 }).fail(function(response) {
                     deferred.reject()
@@ -3770,7 +3780,7 @@
                 this._emoticonImagesResponse = response
             };
             SessionManager.prototype.getEmotes = function() {
-                return this._emoticonImagesResponse;
+                return this._emoticonImagesResponse
             };
             SessionManager.prototype.updateChannel = function(channelId, data) {
                 return this._tmiApi.put("/api/channels/" + channelId, data)
