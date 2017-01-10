@@ -16961,6 +16961,7 @@ googletag.cmd = googletag.cmd || [],
                 NEXUS_ROLLOUT: "428d3b07-cc7a-424f-aad0-971f5415879a",
                 DETERMINATION: "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
                 WATCH_NOW_RIGHTBAR: "5380a8cf-e5cf-497e-9c6c-16cb1c881e0c",
+                CHANNEL_LOGIN_CTA: "aece7525-dceb-49ba-af1b-242c1ae45831",
                 DISCOVER_SHOW_COVIEWS: "3e011e23-ef29-46a5-af4b-a86e15d8c9e6",
                 PERPETUA: "af8f152a-f618-416e-8b79-d6ac30479018",
                 EXTENSIONS: "264f75af-a787-4a40-8654-40d78b4d8b41",
@@ -17004,6 +17005,7 @@ googletag.cmd = googletag.cmd || [],
                 "428d3b07-cc7a-424f-aad0-971f5415879a": "disabled",
                 "cc164e1e-1361-4730-8d9b-0091a0f9cb8f": "no",
                 "5380a8cf-e5cf-497e-9c6c-16cb1c881e0c": "control",
+                "aece7525-dceb-49ba-af1b-242c1ae45831": "yes",
                 "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": "no_show",
                 "af8f152a-f618-416e-8b79-d6ac30479018": "control",
                 "264f75af-a787-4a40-8654-40d78b4d8b41": "no",
@@ -17921,15 +17923,16 @@ googletag.cmd = googletag.cmd || [],
     }(Twitch, jQuery),
     function(e, t) {
         var n = {};
-        n.mutePlayer = function() {
-            e.player.ready(function(e) {
-                e.mute()
-            })
-        }, n.unmutePlayer = function() {
-            e.player.ready(function(e) {
-                e.unmute()
-            })
-        }, e.ads.ext = n
+        n
+            .mutePlayer = function() {
+                e.player.ready(function(e) {
+                    e.mute()
+                })
+            }, n.unmutePlayer = function() {
+                e.player.ready(function(e) {
+                    e.unmute()
+                })
+            }, e.ads.ext = n
     }(Twitch, jQuery),
     function(e, t) {
         var n = {
@@ -19095,11 +19098,11 @@ var Base64 = {
         e.forceLogIn = function() {
             window.location = "/user/login?redirect_on_login=" + window.location.pathname + window.location.search
         }, e.loggedInAjax = function(t, n) {
-            typeof n == "undefined" ? (n = t, t = null) : n.url = t;
+            typeof n == "undefined" ?
+                (n = t, t = null) : n.url = t;
             var r = n.error,
                 i = function(t, n, i) {
-                    t.status === 403 && e.forceLogIn(), r && r.apply(
-                        this, arguments)
+                    t.status === 403 && e.forceLogIn(), r && r.apply(this, arguments)
                 };
             return n.error = i, e.ajax(n)
         }, window.BoxartImage = {
