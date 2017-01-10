@@ -8587,7 +8587,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2016.12.22-014917+c8bc48025b7124c70002b684f11aeef245bd9e86",
+                    app_version: "2017.01.06-223201+cbf1630d3f4059b60fbf45dc9c7caaab256c5285",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -11156,7 +11156,7 @@
                 function e(t) {
                     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         i = arguments[2];
-                    a(this, e), this.stateStore = i, this.video = document.createElement("video"), this.video.autoplay = n.autoplay, this.retries = 0, this.playerCoreLogLevel = n["cvp-log"] || "error", this._forceABS = n.abs, n.playsinline && this.video.setAttribute("webkit-playsinline", ""), this.initialize()
+                    a(this, e), this.stateStore = i, this.video = document.createElement("video"), this.video.autoplay = n.autoplay, this.retries = 0, this.playerCoreLogLevel = n["cvp-log"] || "error", this._forceABS = n.abs, n.playsinline && (this.video.setAttribute("webkit-playsinline", ""), this.video.setAttribute("playsinline", "")), this.initialize()
                 }
                 return c(e, [{
                     key: "initialize",
@@ -12265,7 +12265,7 @@
 
         function a(e, t) {
             function n() {
-                r = new u["default"], a = document.createElement("video"), a.autoplay = t.autoplay, t.playsinline && a.setAttribute("webkit-playsinline", ""), setTimeout(function() {
+                r = new u["default"], a = document.createElement("video"), a.autoplay = t.autoplay, t.playsinline && (a.setAttribute("webkit-playsinline", ""), a.setAttribute("playsinline", "")), setTimeout(function() {
                     r.emit(p.PLAYER_INIT)
                 }, 0)
             }
@@ -12518,8 +12518,8 @@
             }
 
             function d() {
-                k.currentTime !== P.currentTime && (k.currentTime = P.currentTime, T.emit(f.TIME_UPDATE)),
-                    k.volume !== P.volume.level && (k.volume = P.volume.level, T.emit(f.VOLUME_CHANGE)), k.muted !== P.volume.muted && (k.muted = P.volume.muted, T.emit(f.VOLUME_CHANGE)), k.playbackRate !== P.playbackRate && (k.playbackRate = P.playbackRate, T.emit(f.RATE_CHANGE));
+                k.currentTime !== P.currentTime && (k.currentTime = P.currentTime,
+                    T.emit(f.TIME_UPDATE)), k.volume !== P.volume.level && (k.volume = P.volume.level, T.emit(f.VOLUME_CHANGE)), k.muted !== P.volume.muted && (k.muted = P.volume.muted, T.emit(f.VOLUME_CHANGE)), k.playbackRate !== P.playbackRate && (k.playbackRate = P.playbackRate, T.emit(f.RATE_CHANGE));
                 var e = P.playerState;
                 k.playerState !== P.playerState && (e === chrome.cast.media.PlayerState.PLAYING ? T.emit(f.PLAYING) : e === chrome.cast.media.PlayerState.PAUSED ? T.emit(f.PAUSE) : e === chrome.cast.media.PlayerState.BUFFERING, k.playerState = P.playerState)
             }
@@ -13887,8 +13887,8 @@
                         n = t.window;
                     if (!this._streamRollTypes.hasOwnProperty(e.channel)) {
                         var i;
-                        this._streamRollTypes[e.channel] = (i = {}, r(i, p.PREROLL, !1), r(i, p.MIDROLL, !1),
-                            r(i, p.POSTROLL, !1), i)
+                        this._streamRollTypes[e.channel] = (i = {},
+                            r(i, p.PREROLL, !1), r(i, p.MIDROLL, !1), r(i, p.POSTROLL, !1), i)
                     }
                     var a = o(e, this._streamRollTypes[e.channel]),
                         l = (0, f["default"])(a, function(e, t) {
@@ -15503,8 +15503,8 @@
                 }, {
                     showInfo: !0
                 });
-                $(t).addClass("player"), $(t).append(n(380)), o.dispatch((0, O.initializeCaptionsSettings)()), o.dispatch((0, I.initializePlaybackSettings)()), o.dispatch((0, N.initializeSettings)()), V = new u.PlayerUIState(t, r, o), F = new d.PlayerUIInfo(e, t, o, S), H = new f.PlayerUISeek(e, t, o), G = new p.PlayerUIStats(t, o), q = new h.PlayerUIUpnext(e, t, o), oe = new _.PlayerUIRecommendations(e, t, o), se = new C.PlayerUIError(t, o), K = new g.PlayerUILeaveDialog(e, t, i, o, S), Y = new E.PlayerUILang(t, o), z = new v.PlayerUISubscribeOverlay(t, r), W = new y.PlayerUIResume(e, r, o, S), J = new A.PlayerUISeekBarPopup(t), Q = new m.PlayerUISeekBarMarkers(e, t, r, o, J), X = new P.PlayerUIThumbnailPreviews(t, r, o, J), Z = new b.PlayerUIMutedSegments(t, o), te = new w.AgeRestrictionOverlay(t, e, o), ne = new k.PlayerUIControlsDisplay(e, t, o),
-                    ie = new c.PlayerUIControls(e, t, r, o, ne, a, S), ae = new T.PlayerUISettings(e, t, r, o, i, ne, S), le = new M.AdOverlay(t, o);
+                $(t).addClass("player"), $(t).append(n(380)), o.dispatch((0, O.initializeCaptionsSettings)()), o.dispatch((0, I.initializePlaybackSettings)()), o.dispatch((0, N.initializeSettings)()), V = new u.PlayerUIState(t, r, o), F = new d.PlayerUIInfo(e, t, o, S), H = new f.PlayerUISeek(e, t, o), G = new p.PlayerUIStats(t, o), q = new h.PlayerUIUpnext(e, t, o), oe = new _.PlayerUIRecommendations(e, t, o), se = new C.PlayerUIError(t, o), K = new g.PlayerUILeaveDialog(e, t, i, o, S), Y = new E.PlayerUILang(t, o), z = new v.PlayerUISubscribeOverlay(t, r), W = new y.PlayerUIResume(e, r, o, S), J = new A.PlayerUISeekBarPopup(t), Q = new m.PlayerUISeekBarMarkers(e, t, r, o, J), X = new P.PlayerUIThumbnailPreviews(t, r, o, J), Z = new b.PlayerUIMutedSegments(t, o), te = new w.AgeRestrictionOverlay(t, e, o),
+                    ne = new k.PlayerUIControlsDisplay(e, t, o), ie = new c.PlayerUIControls(e, t, r, o, ne, a, S), ae = new T.PlayerUISettings(e, t, r, o, i, ne, S), le = new M.AdOverlay(t, o);
                 var D = new R.ClipGenerator(t, r, o);
                 re = new L.PlayerUIClipsEnabler(t, o, l.localStore, D), B(S), $(t).attr("data-initializing", !0), e.addEventListener(x.PLAYER_INIT, function() {
                     $(t).attr("data-initializing", !1)
@@ -15715,7 +15715,7 @@
                 var e = o;
                 (0, c.isTwitchEmbed)() || (e = (0, s["default"])(e, {
                     branding: !0
-                })), d(), p(e), r.showControls(h.initialControlsDelay), $(t).attr("data-branding", e.branding), $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showtheatre", e.showtheatre), $(t).attr("data-showinfo", e.showInfo), H(i.getState().playback), Y(), U(), X.push(V()), X.push(F()), n.addEventListener(m.EVENT_STATE_UPDATE, A)
+                })), d(), p(e), r.showControls(h.initialControlsDelay), $(t).attr("data-branding", e.branding), $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showtheatre", e.showtheatre), $(t).attr("data-showinfo", e.showInfo), $(t).attr("data-issettingsopen", !1), H(i.getState().playback), Y(), U(), X.push(V()), X.push(F()), n.addEventListener(m.EVENT_STATE_UPDATE, A)
             }
 
             function d() {
@@ -16096,7 +16096,7 @@
                 if (r && T(), $(".js-meta-name", t).text(n.display_name), $(".js-meta-picture", t).attr("src", n.logo || null), $(t).attr({
                         "data-channel": i || null,
                         "data-video": e.getVideo() || null,
-                        "data-game": i ? n.game : null
+                        "data-game": n.game || ""
                     }), i) {
                     $(".js-meta-title", t).text(n.status);
                     var a = d.gamePath + "/" + encodeURIComponent(n.game);
@@ -16869,7 +16869,7 @@
 
             function l(e, t) {
                 var n = s["default"].getItem("leaveData");
-                n || (n = {}), n[e] = t, s["default"].setItem("leaveData", n)
+                n || (n = {}), n[e] = t, s["default"].setItem("leaveData", n);
             }
 
             function d() {
@@ -18172,12 +18172,12 @@
             }, {
                 key: "showMenu",
                 value: function() {
-                    $(".js-menu", this._root).attr("data-state", "open"), $(".js-menu-button", this._root).attr("data-state", "menu-open")
+                    $(".js-menu", this._root).attr("data-state", "open"), $(".js-menu-button", this._root).attr("data-state", "menu-open"), $(this._root).attr("data-issettingsopen", !0)
                 }
             }, {
                 key: "hideMenu",
                 value: function() {
-                    $(".js-menu", this._root).attr("data-state", "closed"), $(".js-menu-button", this._root).attr("data-state", "menu-closed")
+                    $(".js-menu", this._root).attr("data-state", "closed"), $(".js-menu-button", this._root).attr("data-state", "menu-closed"), $(this._root).attr("data-issettingsopen", !1)
                 }
             }, {
                 key: "selectPreset",
