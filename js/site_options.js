@@ -66,7 +66,7 @@ window.SiteOptions = {
     "dfp_fp_sizzlestrip": true,
     "chat_darklaunch_pct": 1.0,
     "dfp_esl": true,
-    "disable_youtube_exporter": true,
+    "disable_youtube_exporter": false,
     "aws_artificial_load_factor": "0",
     "tax_notifications_enabled": true,
     "payment_amendment_notifications_enabled": true,
