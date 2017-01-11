@@ -187,10 +187,10 @@ window.SiteOptions = {
         "1710cf57-352c-4d09-b2c1-3d40bdf79b30": {
             "name": "vod_upload_units_v3",
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "experiment"
             }]
         },
