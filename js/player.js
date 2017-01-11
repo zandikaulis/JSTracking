@@ -4407,7 +4407,7 @@
         function l(e) {
             var t, n;
             return new c["default"]({
-                defaults: (t = {}, r(t, g, "no"), r(t, v, "off"), r(t, y, "no"), r(t, m, "no"), r(t, b, "no"), r(t, E, "no"), r(t, S, "no"), r(t, T, "no"), r(t, k, "no"), r(t, A, "no"), r(t, P, "no"), r(t, C, "no"), r(t, w, "1.0"), r(t, O, "no"), r(t, I, "no"), r(t, N, "control"), t),
+                defaults: (t = {}, r(t, g, "no"), r(t, v, "off"), r(t, y, "no"), r(t, m, "no"), r(t, b, "no"), r(t, E, "no"), r(t, S, "no"), r(t, T, "no"), r(t, k, "no"), r(t, A, "no"), r(t, P, "no"), r(t, C, "no"), r(t, w, "1.0"), r(t, O, "no"), r(t, I, "no"), r(t, N, "control"), r(t, L, "no"), t),
                 deviceID: e.deviceID,
                 overrides: (n = {}, r(n, v, a("v2")), r(n, y, a("yes")), r(n, m, o(["US"])), r(n, b, o(["GB"])), r(n, E, o(["DE"])), r(n, S, o(["FR"])), r(n, T, o(["SE"])), r(n, k, o(["BE", "DK", "FI", "NL", "NO", "PL"])), r(n, A, o(["CA"])), r(n, P, o(["AU", "NZ"])), r(n, I, a("yes")), n),
                 platform: "web",
@@ -4418,7 +4418,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.ENABLE_ABS_GROUP = t.NO_ABS_WITH_V12 = t.ABS_FIRST_TIME_GROUP_B = t.ABS_FIRST_TIME_GROUP_A = t.ABS_FORCED_GROUP = t.PERPETUA = t.DETERMINATION = t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.IN_PLAYER_RECOMMENDATIONS = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
+        }), t.ENABLE_ABS_GROUP = t.NO_ABS_WITH_V12 = t.ABS_FIRST_TIME_GROUP_B = t.ABS_FIRST_TIME_GROUP_A = t.ABS_FORCED_GROUP = t.VP_QOS_TEST = t.PERPETUA = t.DETERMINATION = t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.IN_PLAYER_RECOMMENDATIONS = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
         var u = n(213),
             c = i(u),
             d = n(221),
@@ -4442,10 +4442,11 @@
             O = t.GABRIEL = "4aa9ee11-136c-4521-a139-e2abb718ec07",
             I = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
             N = t.PERPETUA = "af8f152a-f618-416e-8b79-d6ac30479018",
-            L = t.ABS_FORCED_GROUP = "yes-forced",
-            R = t.ABS_FIRST_TIME_GROUP_A = "yes-ft-a",
-            M = t.ABS_FIRST_TIME_GROUP_B = "yes-ft-b";
-        t.NO_ABS_WITH_V12 = "no-with-1.2", t.ENABLE_ABS_GROUP = Object.freeze([L, R, M])
+            L = t.VP_QOS_TEST = "711aaaf6-61c0-4cc4-9469-0dfc9908785a",
+            R = t.ABS_FORCED_GROUP = "yes-forced",
+            M = t.ABS_FIRST_TIME_GROUP_A = "yes-ft-a",
+            D = t.ABS_FIRST_TIME_GROUP_B = "yes-ft-b";
+        t.NO_ABS_WITH_V12 = "no-with-1.2", t.ENABLE_ABS_GROUP = Object.freeze([R, M, D])
     }, function(e, t, n) {
         function i(e) {
             var t = r(e);
@@ -8596,7 +8597,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.01.10-231324+a1f8821c3660b6ac2551114d5304751876f247ae",
+                    app_version: "2017.01.11-194832+971d3d5d10526fbf256a7907a04d6d11b8f84e6e",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -11669,7 +11670,17 @@
                 }, {
                     key: "destroy",
                     value: function() {
-                        this.video.pause(), this.core && this.core.destroy(), this.stateStore.getState().window.clearInterval(this.statsUpdateLoop)
+                        this.video.pause(), this.core && this.core.destroy(), this.stateStore.getState().window.clearInterval(this.statsUpdateLoop), this.checkQOSExperiment()
+                    }
+                }, {
+                    key: "checkQOSExperiment",
+                    value: function() {
+                        var e = this,
+                            t = this.stateStore.getState(),
+                            n = t.experiments;
+                        n.get(h.VP_QOS_TEST).then(function(t) {
+                            "yes" === t && e.events.removeAllListeners()
+                        })
                     }
                 }, {
                     key: "loadPlayerCore",
