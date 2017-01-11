@@ -8596,7 +8596,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.01.10-215433+d9f2ab99ba5311c48b79b67c5cb890fd341e434c",
+                    app_version: "2017.01.10-231324+a1f8821c3660b6ac2551114d5304751876f247ae",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -16744,33 +16744,41 @@
             }, {
                 key: "startRecommendationTimeout",
                 value: function() {
-                    var e = this;
-                    clearTimeout(this.recommendationsTimeout), this.recommendationsTimeout = setTimeout(function() {
+                    var e = this,
+                        t = this._stateStore.getState(),
+                        n = t.window;
+                    n.clearTimeout(this.recommendationsTimeout), this.recommendationsTimeout = n.setTimeout(function() {
                         e._stateStore.dispatch((0, f.popScreen)())
                     }, A)
                 }
             }, {
                 key: "stopRecommendationTimeout",
                 value: function() {
-                    clearTimeout(this.recommendationsTimeout)
+                    var e = this._stateStore.getState(),
+                        t = e.window;
+                    t.clearTimeout(this.recommendationsTimeout)
                 }
             }, {
                 key: "startCheckingForResize",
                 value: function() {
-                    var e = this;
-                    clearInterval(this.resizeCheckInterval);
-                    var t = 0,
-                        n = 0;
-                    this.resizeCheckInterval = setInterval(function() {
-                        var i = $(e.$root).width(),
-                            r = $(e.$root).height();
-                        i === t && r === n || e.calculateNumVODsVisible(), t = i, n = r
+                    var e = this,
+                        t = this._stateStore.getState(),
+                        n = t.window;
+                    n.clearInterval(this.resizeCheckInterval);
+                    var i = 0,
+                        r = 0;
+                    this.resizeCheckInterval = n.setInterval(function() {
+                        var t = $(e.$root).width(),
+                            n = $(e.$root).height();
+                        t === i && n === r || e.calculateNumVODsVisible(), i = t, r = n
                     }, 100)
                 }
             }, {
                 key: "stopCheckingForResize",
                 value: function() {
-                    clearInterval(this.resizeCheckInterval)
+                    var e = this._stateStore.getState(),
+                        t = e.window;
+                    t.clearInterval(this.resizeCheckInterval)
                 }
             }, {
                 key: "calculateNumVODsVisible",
@@ -18010,32 +18018,33 @@
                 value: function() {
                     var e = this;
                     $(this._root).on("change", ".js-quality", function(t) {
-                        var n = e._stateStore.getState(),
-                            i = n.quality,
-                            r = $(t.currentTarget).val(),
-                            a = (0, h["default"])(i.available, function(e) {
-                                return e.group === r
-                            });
-                        e._stateStore.dispatch((0, E.selectQuality)(r)), e._stateStore.dispatch((0, E.setPreferredQuality)(a)), e.hideMenu()
-                    }), $(this._root).on("click", ".js-menu-button", this.toggleMenu.bind(this)), new y["default"](".js-copy-url", {
-                        text: function() {
-                            var t = b.toURLString(e._player.getCurrentTime()),
-                                n = e._stateStore.getState().streamMetadata.url + "?t=" + t;
-                            return e.hideMenu(), n
-                        }
-                    }), $(this._root).on("click", function(t) {
-                        $(t.target).closest(".js-menu, .js-menu-button").length || e.hideMenu()
-                    }), $(window).on("blur", this.hideMenu.bind(this)), $(this._root).on("submit", ".js-video-issue-form", this.onSubmitVideoIssueReport.bind(this)), $(".js-cc-preset", this._root).on("click", this.selectPreset.bind(this)), $(".js-control-cc", this._root).on("mouseenter", this.onHoverClosedCaptionIcon.bind(this)), $(".js-control-cc", this._root).on("click", this.closeCCIntroModal.bind(this)), $(".js-menu-button-settings", this._root).on("click", this.closeCCIntroModal.bind(this)), $(".js-cc-info-modal-dismiss", this._root).on("click", this.closeCCIntroModal.bind(this)), $(".js-feedback-cancel", this._root).on("click", this.hideLeaveFeedbackMenu.bind(this)), $(".js-cc-open-modal", this._root).on("click", this.openCCModal.bind(this)), $(".js-cc-modal-container", this._root).on("click", function(e) {
-                        e.target === this && $(this).attr("data-state", "closed")
-                    }), $(".js-cc-custom-modal-dismiss", this._root).on("click", function() {
-                        $(this).closest(".js-cc-modal-container").attr("data-state", "closed")
-                    }), $(".player-tabs__item", this._root).on("click", function(e) {
-                        $(".player-tabs__item--active").removeClass("player-tabs__item--active");
-                        var t = $(e.target).closest(".player-tabs__item");
-                        t.addClass("player-tabs__item--active");
-                        var n = t.attr("data-tab");
-                        t.closest(".js-cc-modal").attr("data-tab-selected", n)
-                    }), this.setCurrentPreset(), this._subscribeCaptions()
+                            var n = e._stateStore.getState(),
+                                i = n.quality,
+                                r = $(t.currentTarget).val(),
+                                a = (0, h["default"])(i.available, function(e) {
+                                    return e.group === r
+                                });
+                            e._stateStore.dispatch((0, E.selectQuality)(r)), e._stateStore.dispatch((0, E.setPreferredQuality)(a)), e.hideMenu()
+                        }), $(this._root).on("click", ".js-menu-button", this.toggleMenu.bind(this)),
+                        new y["default"](".js-copy-url", {
+                            text: function() {
+                                var t = b.toURLString(e._player.getCurrentTime()),
+                                    n = e._stateStore.getState().streamMetadata.url + "?t=" + t;
+                                return e.hideMenu(), n
+                            }
+                        }), $(this._root).on("click", function(t) {
+                            $(t.target).closest(".js-menu, .js-menu-button").length || e.hideMenu()
+                        }), $(window).on("blur", this.hideMenu.bind(this)), $(this._root).on("submit", ".js-video-issue-form", this.onSubmitVideoIssueReport.bind(this)), $(".js-cc-preset", this._root).on("click", this.selectPreset.bind(this)), $(".js-control-cc", this._root).on("mouseenter", this.onHoverClosedCaptionIcon.bind(this)), $(".js-control-cc", this._root).on("click", this.closeCCIntroModal.bind(this)), $(".js-menu-button-settings", this._root).on("click", this.closeCCIntroModal.bind(this)), $(".js-cc-info-modal-dismiss", this._root).on("click", this.closeCCIntroModal.bind(this)), $(".js-feedback-cancel", this._root).on("click", this.hideLeaveFeedbackMenu.bind(this)), $(".js-cc-open-modal", this._root).on("click", this.openCCModal.bind(this)), $(".js-cc-modal-container", this._root).on("click", function(e) {
+                            e.target === this && $(this).attr("data-state", "closed")
+                        }), $(".js-cc-custom-modal-dismiss", this._root).on("click", function() {
+                            $(this).closest(".js-cc-modal-container").attr("data-state", "closed")
+                        }), $(".player-tabs__item", this._root).on("click", function(e) {
+                            $(".player-tabs__item--active").removeClass("player-tabs__item--active");
+                            var t = $(e.target).closest(".player-tabs__item");
+                            t.addClass("player-tabs__item--active");
+                            var n = t.attr("data-tab");
+                            t.closest(".js-cc-modal").attr("data-tab-selected", n)
+                        }), this.setCurrentPreset(), this._subscribeCaptions()
                 }
             }, {
                 key: "_subscribePlayback",
