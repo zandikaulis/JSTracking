@@ -760,7 +760,7 @@ window.SiteOptions = {
             }]
         },
         "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57": {
-            "name": "VOD_TIMED_COMMENTS",
+            "name": "CHOMPY",
             "groups": [{
                 "weight": 100,
                 "value": "control"
