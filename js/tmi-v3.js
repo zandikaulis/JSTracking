@@ -949,6 +949,10 @@
                         if (this.data && this.data.oauth_token) {
                             options.headers.Authorization = "OAuth " + this.data.oauth_token
                         }
+                        var contentType = options.headers["Content-Type"];
+                        if (contentType && contentType.includes("application/json")) {
+                            options.data = JSON.stringify(options.data)
+                        }
                         options.type = options.type || method;
                         options = $.extend({
                             url: this.baseUrl + path,
@@ -999,7 +1003,7 @@
                 var api = new Api({
                     baseUrl: baseUrl,
                     data: {
-                        on_site: "1"
+                        oauth_token: opts.oauthToken
                     },
                     headers: {
                         Accept: "application/vnd.twitchtv.v4+json",
@@ -3149,7 +3153,8 @@
                 this._depotApi = _apiJs2["default"].chatdepot.init(opts.oauthToken);
                 this._tmiApi = _apiJs2["default"].tmi.init(opts.oauthToken);
                 this._twitchApi = _apiJs2["default"].twitch.init({
-                    hostport: opts.apiHostport
+                    hostport: opts.apiHostport,
+                    oauthToken: opts.oauthToken
                 });
                 this._emotesParser = new _twitchJs2["default"]({
                     twitchApi: this._twitchApi
@@ -3337,11 +3342,15 @@
             SessionManager.prototype.runCommercial = function(channel, time) {
                 var deferred = $.Deferred(),
                     self = this;
-                this._twitchApi.post("/kraken/channels/" + channel + "/commercial?length=" + time, null, {
+                var options = {
                     headers: {
-                        Accept: "application/vnd.twitchtv.v3+json"
+                        Accept: "application/vnd.twitchtv.v3+json",
+                        "Content-Type": "application/json; charset=utf-8"
                     }
-                }).done(function(response) {
+                };
+                this._twitchApi.post("/kraken/channels/" + channel + "/commercial", {
+                    length: time
+                }, options).done(function(response) {
                     var properties = {
                         trigger: "chat",
                         length: time,
