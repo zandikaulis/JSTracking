@@ -759,6 +759,16 @@ window.SiteOptions = {
                 "value": "variant2"
             }]
         },
+        "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57": {
+            "name": "VOD_TIMED_COMMENTS",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "experiment"
+            }]
+        },
         "a1ce3d24-076a-4664-be4c-f9046fdce18c": {
             "name": "baking_bread_uk",
             "groups": [{
