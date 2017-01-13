@@ -665,34 +665,6 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
-        "8fe5705b-1c85-4d6f-bba0-d99c36b0d7d4": {
-            "name": "CHANNEL_FOLLOW_CTA",
-            "groups": [{
-                "weight": 1,
-                "value": "5min"
-            }, {
-                "weight": 1,
-                "value": "10min"
-            }, {
-                "weight": 1,
-                "value": "15min"
-            }, {
-                "weight": 10,
-                "value": "20min"
-            }, {
-                "weight": 9,
-                "value": "5min"
-            }, {
-                "weight": 9,
-                "value": "10min"
-            }, {
-                "weight": 9,
-                "value": "15min"
-            }, {
-                "weight": 60,
-                "value": "control"
-            }]
-        },
         "906c9e2f-ac8a-43f3-9f7f-78668e292d4f": {
             "name": "android_aa",
             "groups": [{
