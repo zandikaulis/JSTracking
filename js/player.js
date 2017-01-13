@@ -8607,7 +8607,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.01.13-005843+c955233c49dc8c0991ab4028d0a7d2d7026f2548",
+                    app_version: "2017.01.13-003041+35ebd7fd19cdc6c971a32a4234cc846ae1eb0476",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -11200,18 +11200,18 @@
                 3: B,
                 4: V
             },
-            H = [v.PAUSE, v.PLAYING, v.WAITING, v.ERROR],
+            H = [v.PAUSE, v.WAITING, v.ERROR],
             G = t.BackendPlayerCore = function() {
                 function e(t) {
                     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         i = arguments[2];
-                    a(this, e), this.stateStore = i, this.video = document.createElement("video"), this.video.autoplay = n.autoplay, this.playerCoreLogLevel = n["cvp-log"] || "error", this._forceABS = n.abs, this.offline = !1, n.playsinline && (this.video.setAttribute("webkit-playsinline", ""), this.video.setAttribute("playsinline", "")), this.initialize()
+                    a(this, e), this.stateStore = i, this.video = document.createElement("video"), this.video.autoplay = n.autoplay, this.retries = 0, this.playerCoreLogLevel = n["cvp-log"] || "error", this._forceABS = n.abs, n.playsinline && (this.video.setAttribute("webkit-playsinline", ""), this.video.setAttribute("playsinline", "")), this.initialize()
                 }
                 return c(e, [{
                     key: "initialize",
                     value: function() {
                         var e = this;
-                        this.events = this.events instanceof p["default"] ? this.events : new p["default"], this.currentCaptionData = {}, this.loadPlayerCore().then(function(t) {
+                        this.events = this.events instanceof p["default"] ? this.events : new p["default"], this.isBuffering = !1, this.ended = !1, this.currentCaptionData = {}, this.loadPlayerCore().then(function(t) {
                             e._initPlayerCore(t), e._initVideoEvents(), e.load()
                         }, function(t) {
                             e.onCoreAnalytics(t)
@@ -11220,7 +11220,10 @@
                 }, {
                     key: "_initVideoEvents",
                     value: function() {
-                        this.video.addEventListener(v.PLAYING, this.onVideoTagPlaying.bind(this)), this.video.addEventListener(v.PAUSE, this.onVideoTagPause.bind(this)), this.video.addEventListener(v.ERROR, this.onVideoTagError.bind(this))
+                        var e = this;
+                        this.video.addEventListener("playing", this.onVideoTagPlaying.bind(this)), this.video.addEventListener(v.ENDED, function() {
+                            e.ended = !0
+                        }), this.video.addEventListener(v.PAUSE, this.onVideoTagPause.bind(this)), this.video.addEventListener(v.ERROR, this.onVideoTagError.bind(this))
                     }
                 }, {
                     key: "_initPlayerCore",
@@ -11233,17 +11236,17 @@
                 }, {
                     key: "onBuffering",
                     value: function() {
-                        this.events.emitEvent(v.WAITING)
+                        this.isBuffering = !0, this.events.emitEvent(v.WAITING)
                     }
                 }, {
                     key: "onVideoTagPlaying",
                     value: function() {
-                        this.events.emitEvent(v.PLAYING)
+                        this.ended = !1, this.isBuffering = !1
                     }
                 }, {
                     key: "onVideoTagPause",
                     value: function() {
-                        this.events.emitEvent(v.PAUSE)
+                        this.isBuffering || this.events.emitEvent(v.PAUSE)
                     }
                 }, {
                     key: "onVideoTagError",
@@ -11269,7 +11272,7 @@
                 }, {
                     key: "onOfflineError",
                     value: function() {
-                        this.offline = !0, this.events.emit(v.ENDED)
+                        this.ended = !0, this.events.emit(v.ENDED)
                     }
                 }, {
                     key: "onHLSVariantParsed",
@@ -11409,7 +11412,7 @@
                 }, {
                     key: "load",
                     value: function() {
-                        this.core && this.src && (this.offline = !1, this.core.loadURL(this.src), this.video.autoplay && this.video.play())
+                        this.core && this.src && (this.core.loadURL(this.src), this.video.autoplay && this.video.play())
                     }
                 }, {
                     key: "getSrc",
@@ -11419,7 +11422,7 @@
                 }, {
                     key: "setSrc",
                     value: function(e) {
-                        this.src = e, this.src && this.load()
+                        this.ended = !1, this.src = e, this.src && this.load()
                     }
                 }, {
                     key: "getCurrentSrc",
@@ -11536,7 +11539,7 @@
                 }, {
                     key: "getEnded",
                     value: function() {
-                        return this.offline || this.core && this.core.ended()
+                        return this.ended || this.video.ended
                     }
                 }, {
                     key: "getError",
@@ -11575,12 +11578,12 @@
                         var e = this.stateStore.getState(),
                             t = e.ads,
                             n = e.stream;
-                        this.video.pause(), t.currentMetadata.contentType === m.AdContentTypes.STITCHED ? this.core.pause() : n instanceof y.LiveContentStream && this.core.stop()
+                        this.video.pause(), this.isBuffering && (this.isBuffering = !1, this.events.emitEvent(v.PAUSE)), t.currentMetadata.contentType === m.AdContentTypes.STITCHED ? this.core.pause() : n instanceof y.LiveContentStream && this.core.stop()
                     }
                 }, {
                     key: "getPaused",
                     value: function() {
-                        return this.core ? this.core.paused() : this.video.paused
+                        return !this.isBuffering && this.video.paused
                     }
                 }, {
                     key: "getSeeking",
