@@ -441,16 +441,16 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes-forced"
             }, {
-                "weight": 2,
+                "weight": 0,
                 "value": "yes-ft-a"
             }, {
-                "weight": 2,
+                "weight": 0,
                 "value": "yes-ft-b"
             }, {
-                "weight": 94,
+                "weight": 100,
                 "value": "no"
             }, {
-                "weight": 2,
+                "weight": 0,
                 "value": "no-with-1.2"
             }]
         },
