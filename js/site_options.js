@@ -1076,6 +1076,16 @@ window.SiteOptions = {
                 "value": "2"
             }]
         },
+        "e8c5cf6c-5259-446b-aef1-4e33747b3b93": {
+            "name": "Game Changes",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "f51271fc-b922-43c5-a801-d5b44219b31f": {
             "name": "baking_bread_a",
             "groups": [{
