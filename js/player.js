@@ -8616,7 +8616,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.01.17-195455+0ec0b856196b40ff27bbdd32d91d3552433f87e9",
+                    app_version: "2017.01.18-191937+48277110c0df2de5984148f219e373f06df85c98",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -14568,14 +14568,19 @@
             return function(t, n) {
                 var i = n().streamMetadata.channel.name;
                 if (n().recommendations.status !== T || "" === i) return Promise.resolve();
-                var r = {
-                    limit: e + 1,
-                    broadcasts: "true"
-                };
+                var r = Math.floor(Math.random() * C),
+                    s = {
+                        limit: e + 1,
+                        broadcasts: "true"
+                    };
                 return t({
                     type: S,
                     status: k
-                }), (0, _.krakenRequest)("channels/" + i + "/videos?" + $.param(r)).then(function(i) {
+                }), new Promise(function(e) {
+                    n().window.setTimeout(e, r)
+                }).then(function() {
+                    return (0, _.krakenRequest)("channels/" + i + "/videos?" + $.param(s))
+                }).then(function(i) {
                     var r = n(),
                         s = r.resumeWatch,
                         l = r.streamMetadata,
@@ -14676,7 +14681,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.TEN_PERCENT = t.FETCH_VODS_THRESHOLD = t.MINIMUM_WATCHED_LENGTH = t.MAX_RECOMMENDED_VODS_VISIBLE = t.FETCHED = t.FETCHING = t.UNFETCHED = t.ACTION_SET_FETCHING_STATUS = t.ACTION_SET_NUM_VODS_VISIBLE = t.ACTION_SET_TRANSITION_FUNCTION = t.ACTION_SET_RECOMMENDED_VODS_WATCHED = t.ACTION_SET_RECOMMENDED_VODS = void 0, t.fetchRecommendedVODs = r, t.isWatched = a, t.clearRecommendedVODs = s, t.setVODTransitionFn = l, t.setVODVisibility = u, t.selectRecommendedVOD = c, t.sendVODsDisplayedEvent = f;
+        }), t.MAX_JITTER_DELAY = t.TEN_PERCENT = t.FETCH_VODS_THRESHOLD = t.MINIMUM_WATCHED_LENGTH = t.MAX_RECOMMENDED_VODS_VISIBLE = t.FETCHED = t.FETCHING = t.UNFETCHED = t.ACTION_SET_FETCHING_STATUS = t.ACTION_SET_NUM_VODS_VISIBLE = t.ACTION_SET_TRANSITION_FUNCTION = t.ACTION_SET_RECOMMENDED_VODS_WATCHED = t.ACTION_SET_RECOMMENDED_VODS = void 0, t.fetchRecommendedVODs = r, t.isWatched = a, t.clearRecommendedVODs = s, t.setVODTransitionFn = l, t.setVODVisibility = u, t.selectRecommendedVOD = c, t.sendVODsDisplayedEvent = f;
         var p = n(79),
             h = i(p),
             _ = n(187),
@@ -14690,7 +14695,8 @@
             T = t.UNFETCHED = "unfetched",
             k = t.FETCHING = "fetching",
             A = (t.FETCHED = "fetched", t.MAX_RECOMMENDED_VODS_VISIBLE = 24, t.MINIMUM_WATCHED_LENGTH = 300),
-            P = (t.FETCH_VODS_THRESHOLD = 12e3, t.TEN_PERCENT = .1)
+            P = (t.FETCH_VODS_THRESHOLD = 12e3, t.TEN_PERCENT = .1),
+            C = t.MAX_JITTER_DELAY = 5e3
     }, function(e, t, n) {
         "use strict";
 
@@ -15577,8 +15583,8 @@
                 }, {
                     showInfo: !0
                 });
-                $(t).addClass("player"), $(t).append(n(380)), o.dispatch((0, O.initializeCaptionsSettings)()), o.dispatch((0, I.initializePlaybackSettings)()), o.dispatch((0, N.initializeSettings)()), V = new u.PlayerUIState(t, o), F = new d.PlayerUIInfo(e, t, o, S), H = new f.PlayerUISeek(e, t, o), G = new p.PlayerUIStats(t, o), q = new h.PlayerUIUpnext(e, t, o), oe = new _.PlayerUIRecommendations(e, t, o), se = new C.PlayerUIError(t, o), Y = new g.PlayerUILeaveDialog(e, t, i, o, S), K = new E.PlayerUILang(t, o), W = new v.PlayerUISubscribeOverlay(t, r), z = new y.PlayerUIResume(e, r, o, S), J = new A.PlayerUISeekBarPopup(t), Q = new m.PlayerUISeekBarMarkers(e, t, r, o, J), X = new P.PlayerUIThumbnailPreviews(t, r, o, J), Z = new b.PlayerUIMutedSegments(t, o), te = new w.AgeRestrictionOverlay(t, e, o),
-                    ne = new k.PlayerUIControlsDisplay(e, t, o), ie = new c.PlayerUIControls(e, t, r, o, ne, a, S), ae = new T.PlayerUISettings(e, t, r, o, i, ne, S), le = new M.AdOverlay(t, o);
+                $(t).addClass("player"), $(t).append(n(380)), o.dispatch((0, O.initializeCaptionsSettings)()), o.dispatch((0, I.initializePlaybackSettings)()), o.dispatch((0, N.initializeSettings)()), V = new u.PlayerUIState(t, o), F = new d.PlayerUIInfo(e, t, o, S), H = new f.PlayerUISeek(e, t, o), G = new p.PlayerUIStats(t, o), q = new h.PlayerUIUpnext(e, t, o), oe = new _.PlayerUIRecommendations(e, t, o), se = new C.PlayerUIError(t, o), Y = new g.PlayerUILeaveDialog(e, t, i, o, S), K = new E.PlayerUILang(t, o), W = new v.PlayerUISubscribeOverlay(t, r), z = new y.PlayerUIResume(e, r, o, S), J = new A.PlayerUISeekBarPopup(t), Q = new m.PlayerUISeekBarMarkers(e, t, r, o, J),
+                    X = new P.PlayerUIThumbnailPreviews(t, r, o, J), Z = new b.PlayerUIMutedSegments(t, o), te = new w.AgeRestrictionOverlay(t, e, o), ne = new k.PlayerUIControlsDisplay(e, t, o), ie = new c.PlayerUIControls(e, t, r, o, ne, a, S), ae = new T.PlayerUISettings(e, t, r, o, i, ne, S), le = new M.AdOverlay(t, o);
                 var D = new R.ClipGenerator(t, r, o);
                 re = new L.PlayerUIClipsEnabler(t, o, l.localStore, D), B(S), $(t).attr("data-initializing", !0), e.addEventListener(x.PLAYER_INIT, function() {
                     $(t).attr("data-initializing", !1)
@@ -16942,7 +16948,8 @@
 
         function a(e, t, n, i, r) {
             function a() {
-                e.addEventListener(f.LOADSTART, h), e.addEventListener(f.ENDED, _), window.addEventListener("beforeunload", g), e.getChannel() && h()
+                e.addEventListener(f.LOADSTART, h), e.addEventListener(f.ENDED, _),
+                    window.addEventListener("beforeunload", g), e.getChannel() && h()
             }
 
             function o(e) {
@@ -18055,33 +18062,33 @@
                 value: function() {
                     var e = this;
                     $(this._root).on("change", ".js-quality", function(t) {
-                            var n = e._stateStore.getState(),
-                                i = n.quality,
-                                r = $(t.currentTarget).val(),
-                                a = (0, h["default"])(i.available, function(e) {
-                                    return e.group === r
-                                });
-                            e._stateStore.dispatch((0, E.selectQuality)(r)), e._stateStore.dispatch((0, E.setPreferredQuality)(a)), e.hideMenu()
-                        }), $(this._root).on("click", ".js-menu-button", this.toggleMenu.bind(this)),
-                        new y["default"](".js-copy-url", {
-                            text: function() {
-                                var t = b.toURLString(e._player.getCurrentTime()),
-                                    n = e._stateStore.getState().streamMetadata.url + "?t=" + t;
-                                return e.hideMenu(), n
-                            }
-                        }), $(this._root).on("click", function(t) {
-                            $(t.target).closest(".js-menu, .js-menu-button").length || e.hideMenu()
-                        }), $(window).on("blur", this.hideMenu.bind(this)), $(this._root).on("submit", ".js-video-issue-form", this.onSubmitVideoIssueReport.bind(this)), $(".js-cc-preset", this._root).on("click", this.selectPreset.bind(this)), $(".js-control-cc", this._root).on("mouseenter", this.onHoverClosedCaptionIcon.bind(this)), $(".js-control-cc", this._root).on("click", this.closeCCIntroModal.bind(this)), $(".js-menu-button-settings", this._root).on("click", this.closeCCIntroModal.bind(this)), $(".js-cc-info-modal-dismiss", this._root).on("click", this.closeCCIntroModal.bind(this)), $(".js-feedback-cancel", this._root).on("click", this.hideLeaveFeedbackMenu.bind(this)), $(".js-cc-open-modal", this._root).on("click", this.openCCModal.bind(this)), $(".js-cc-modal-container", this._root).on("click", function(e) {
-                            e.target === this && $(this).attr("data-state", "closed")
-                        }), $(".js-cc-custom-modal-dismiss", this._root).on("click", function() {
-                            $(this).closest(".js-cc-modal-container").attr("data-state", "closed")
-                        }), $(".player-tabs__item", this._root).on("click", function(e) {
-                            $(".player-tabs__item--active").removeClass("player-tabs__item--active");
-                            var t = $(e.target).closest(".player-tabs__item");
-                            t.addClass("player-tabs__item--active");
-                            var n = t.attr("data-tab");
-                            t.closest(".js-cc-modal").attr("data-tab-selected", n)
-                        }), this.setCurrentPreset(), this._subscribeCaptions()
+                        var n = e._stateStore.getState(),
+                            i = n.quality,
+                            r = $(t.currentTarget).val(),
+                            a = (0, h["default"])(i.available, function(e) {
+                                return e.group === r
+                            });
+                        e._stateStore.dispatch((0, E.selectQuality)(r)), e._stateStore.dispatch((0,
+                            E.setPreferredQuality)(a)), e.hideMenu()
+                    }), $(this._root).on("click", ".js-menu-button", this.toggleMenu.bind(this)), new y["default"](".js-copy-url", {
+                        text: function() {
+                            var t = b.toURLString(e._player.getCurrentTime()),
+                                n = e._stateStore.getState().streamMetadata.url + "?t=" + t;
+                            return e.hideMenu(), n
+                        }
+                    }), $(this._root).on("click", function(t) {
+                        $(t.target).closest(".js-menu, .js-menu-button").length || e.hideMenu()
+                    }), $(window).on("blur", this.hideMenu.bind(this)), $(this._root).on("submit", ".js-video-issue-form", this.onSubmitVideoIssueReport.bind(this)), $(".js-cc-preset", this._root).on("click", this.selectPreset.bind(this)), $(".js-control-cc", this._root).on("mouseenter", this.onHoverClosedCaptionIcon.bind(this)), $(".js-control-cc", this._root).on("click", this.closeCCIntroModal.bind(this)), $(".js-menu-button-settings", this._root).on("click", this.closeCCIntroModal.bind(this)), $(".js-cc-info-modal-dismiss", this._root).on("click", this.closeCCIntroModal.bind(this)), $(".js-feedback-cancel", this._root).on("click", this.hideLeaveFeedbackMenu.bind(this)), $(".js-cc-open-modal", this._root).on("click", this.openCCModal.bind(this)), $(".js-cc-modal-container", this._root).on("click", function(e) {
+                        e.target === this && $(this).attr("data-state", "closed")
+                    }), $(".js-cc-custom-modal-dismiss", this._root).on("click", function() {
+                        $(this).closest(".js-cc-modal-container").attr("data-state", "closed")
+                    }), $(".player-tabs__item", this._root).on("click", function(e) {
+                        $(".player-tabs__item--active").removeClass("player-tabs__item--active");
+                        var t = $(e.target).closest(".player-tabs__item");
+                        t.addClass("player-tabs__item--active");
+                        var n = t.attr("data-tab");
+                        t.closest(".js-cc-modal").attr("data-tab-selected", n)
+                    }), this.setCurrentPreset(), this._subscribeCaptions()
                 }
             }, {
                 key: "_subscribePlayback",
