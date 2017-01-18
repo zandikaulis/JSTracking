@@ -11,6 +11,7 @@ window.SiteOptions = {
     "streams_api_hostport": "api.twitch.tv",
     "webclient_hostport": "web-cdn.ttvnw.net",
     "webclient_uri": "//web-cdn.ttvnw.net/emberapp.js",
+    "benchmark_uri": "//web-cdn.ttvnw.net/benchmark.js",
     "secure_login_hostport": "secure-login.twitch.tv",
     "mixpanel_token": "809576468572134f909dffa6bd0dcfcf",
     "following_hosts_experiment": true,
