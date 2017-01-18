@@ -168,10 +168,10 @@ window.SiteOptions = {
         "0670f0ea-3b5c-41a8-946d-114ef4a42540": {
             "name": "INTL_I18N",
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "enabled"
             }]
         },
@@ -1117,19 +1117,6 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "no"
-            }]
-        },
-        "f67a2dd3-fc9e-4e10-8aaf-929e1e0f484a": {
-            "name": "web_client_front_page",
-            "groups": [{
-                "weight": 100,
-                "value": "ignore"
-            }, {
-                "weight": 0,
-                "value": "new_front_page"
-            }, {
-                "weight": 0,
-                "value": "old_front_page"
             }]
         }
     }
