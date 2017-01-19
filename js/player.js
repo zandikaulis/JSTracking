@@ -4428,7 +4428,7 @@
         function l(e) {
             var t, n;
             return new c["default"]({
-                defaults: (t = {}, r(t, g, "no"), r(t, v, "off"), r(t, y, "no"), r(t, m, "no"), r(t, b, "no"), r(t, E, "no"), r(t, S, "no"), r(t, T, "no"), r(t, k, "no"), r(t, A, "no"), r(t, P, "no"), r(t, C, "no"), r(t, w, "1.0"), r(t, O, "no"), r(t, I, "no"), r(t, N, L), r(t, R, "control"), r(t, M, "no"), t),
+                defaults: (t = {}, r(t, g, "no"), r(t, v, "off"), r(t, y, "no"), r(t, m, "no"), r(t, b, "no"), r(t, E, "no"), r(t, S, "no"), r(t, T, "no"), r(t, k, "no"), r(t, A, "no"), r(t, P, "no"), r(t, C, "no"), r(t, w, "1.0"), r(t, O, "no"), r(t, I, "no"), r(t, N, "control"), r(t, L, "no"), t),
                 deviceID: e.deviceID,
                 overrides: (n = {}, r(n, v, a("v2")), r(n, y, a("yes")), r(n, m, o(["US"])), r(n, b, o(["GB"])), r(n, E, o(["DE"])), r(n, S, o(["FR"])), r(n, T, o(["SE"])), r(n, k, o(["BE", "DK", "FI", "NL", "NO", "PL"])), r(n, A, o(["CA"])), r(n, P, o(["AU", "NZ"])), r(n, I, a("yes")), n),
                 platform: "web",
@@ -4439,7 +4439,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.ENABLE_ABS_GROUP = t.NO_ABS_WITH_V12 = t.ABS_FIRST_TIME_GROUP_B = t.ABS_FIRST_TIME_GROUP_A = t.ABS_FORCED_GROUP = t.VP_QOS_TEST = t.PERPETUA = t.CLIPS_ANNOUNCEMENT_GROUP_HIDE = t.CLIPS_ANNOUNCEMENT_GROUP_SHOW = t.CLIPS_ANNOUNCEMENT = t.DETERMINATION = t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.IN_PLAYER_RECOMMENDATIONS = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
+        }), t.ENABLE_ABS_GROUP = t.NO_ABS_WITH_V12 = t.ABS_FIRST_TIME_GROUP_B = t.ABS_FIRST_TIME_GROUP_A = t.ABS_FORCED_GROUP = t.VP_QOS_TEST = t.PERPETUA = t.DETERMINATION = t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.IN_PLAYER_RECOMMENDATIONS = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
         var u = n(213),
             c = i(u),
             d = n(221),
@@ -4462,15 +4462,12 @@
             w = t.PLAYER_CORE_VER_CONTROL = "33ad61d9-3433-4073-b091-83251b29ea46",
             O = t.GABRIEL = "4aa9ee11-136c-4521-a139-e2abb718ec07",
             I = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
-            N = t.CLIPS_ANNOUNCEMENT = "34fca29d-6914-412f-8ce2-fb65f792d386",
-            L = (t.CLIPS_ANNOUNCEMENT_GROUP_SHOW = "show",
-                t.CLIPS_ANNOUNCEMENT_GROUP_HIDE = "hide"),
-            R = t.PERPETUA = "af8f152a-f618-416e-8b79-d6ac30479018",
-            M = t.VP_QOS_TEST = "711aaaf6-61c0-4cc4-9469-0dfc9908785a",
-            D = t.ABS_FORCED_GROUP = "yes-forced",
-            j = t.ABS_FIRST_TIME_GROUP_A = "yes-ft-a",
-            x = t.ABS_FIRST_TIME_GROUP_B = "yes-ft-b";
-        t.NO_ABS_WITH_V12 = "no-with-1.2", t.ENABLE_ABS_GROUP = Object.freeze([D, j, x])
+            N = t.PERPETUA = "af8f152a-f618-416e-8b79-d6ac30479018",
+            L = t.VP_QOS_TEST = "711aaaf6-61c0-4cc4-9469-0dfc9908785a",
+            R = t.ABS_FORCED_GROUP = "yes-forced",
+            M = t.ABS_FIRST_TIME_GROUP_A = "yes-ft-a",
+            D = t.ABS_FIRST_TIME_GROUP_B = "yes-ft-b";
+        t.NO_ABS_WITH_V12 = "no-with-1.2", t.ENABLE_ABS_GROUP = Object.freeze([R, M, D])
     }, function(e, t, n) {
         function i(e) {
             var t = r(e);
@@ -8621,7 +8618,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.01.19-010058+0826cfc9e42802362845b863d21e88fc328da998",
+                    app_version: "2017.01.19-005809+88c506e72805ee4748b3ad08e6684b85b8aa7194",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -19264,12 +19261,12 @@
                     return n && e(t.prototype, n), i && e(t, i), t
                 }
             }(),
-            s = function g(e, t, n) {
+            s = function _(e, t, n) {
                 null === e && (e = Function.prototype);
                 var i = Object.getOwnPropertyDescriptor(e, t);
                 if (void 0 === i) {
                     var r = Object.getPrototypeOf(e);
-                    return null === r ? void 0 : g(r, t, n)
+                    return null === r ? void 0 : _(r, t, n)
                 }
                 if ("value" in i) return i.value;
                 var a = i.get;
@@ -19281,13 +19278,12 @@
             d = n(377),
             f = n(347),
             p = n(204),
-            h = n(284),
-            _ = n(212);
+            h = n(284);
         t.PlayerUIClipsEnabler = function(e) {
             function t(e, n, a, o) {
                 i(this, t);
                 var s = r(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return s._clipsControls = new d.PlayerUIClipsControls(e, a, o), s.subscribe(n, ["stream", "online", "backend", "env", "playback", "experiments"], s._subscriptionHandler.bind(s)), s
+                return s._clipsControls = new d.PlayerUIClipsControls(e, a, o), s.subscribe(n, ["stream", "online", "backend", "env", "playback"], s._subscriptionHandler.bind(s)), s
             }
             return a(t, e), o(t, [{
                 key: "_subscriptionHandler",
@@ -19303,22 +19299,17 @@
                         d = n === l.CONTENT_MODE_LIVE && !i,
                         f = n !== l.CONTENT_MODE_LIVE && n !== u.CONTENT_MODE_VOD,
                         _ = a && !(d || f || s || c || o);
-                    this._toggle(_, e.experiments)
+                    this._toggle(_)
                 }
             }, {
                 key: "_toggle",
-                value: function(e, t) {
-                    var n = this;
+                value: function(e) {
+                    var t = this;
                     return e ? void(0, c.oauthToken)().then(function(e) {
-                        var i = e.token,
-                            r = Boolean(i);
-                        return r ? void t.get(_.CLIPS_ANNOUNCEMENT).then(function(e) {
-                            n._clipsControls.enableClipsButton(e === _.CLIPS_ANNOUNCEMENT_GROUP_SHOW)
-                        })["catch"](function() {
-                            n._clipsControls.enableClipsButton(!1)
-                        }) : Promise.reject()
+                        var n = e.token;
+                        return n ? t._clipsControls.enableClipsButton() : Promise.reject("Viewer is not logged in.")
                     })["catch"](function() {
-                        n._clipsControls.disableClipsButton()
+                        t._clipsControls.disableClipsButton()
                     }) : void this._clipsControls.disableClipsButton()
                 }
             }, {
@@ -19348,23 +19339,24 @@
                     return n && e(t.prototype, n), i && e(t, i), t
                 }
             }(),
-            r = t.HAS_SEEN_CLIPS_TRIMMING_ANNOUNCE = "has-seen-clips-titles-announce";
+            r = t.HAS_SEEN_CLIPS_TRIMMING_ANNOUNCE = "has-seen-clips-titles-announce",
+            a = t.ENABLE_ANNOUNCEMENT_MESSAGE = !0;
         t.PlayerUIClipsControls = function() {
             function e(t, i, r) {
                 n(this, e), this.root = t, this.localStore = i, this.clipGenerator = r, this.clipButtonEnabled = !1, this.clipButton.on("click", this.recordClipIfAble.bind(this))
             }
             return i(e, [{
                 key: "enableClipsButton",
-                value: function(e) {
-                    var t = this;
+                value: function() {
+                    var e = this;
                     this.clipButtonEnabled = !0, this._toggleClipState(!0);
-                    var n = this.localStore.get(r);
-                    !e || n ? this.removeClipsTrimmingAnnounce() : (this.showClipsTrimmingAnnounce(), $(this.clipButton).on("click", function() {
-                        t.dismissClipsTrimmingAnnounce()
+                    var t = this.localStore.get(r);
+                    !this._enabledAnnouncement() || t ? this.removeClipsTrimmingAnnounce() : (this.showClipsTrimmingAnnounce(), $(this.clipButton).on("click", function() {
+                        e.dismissClipsTrimmingAnnounce()
                     }), $(this.clipsTrimmingAnnounceCloseButton).on("click", function() {
-                        t.dismissClipsTrimmingAnnounce()
+                        e.dismissClipsTrimmingAnnounce()
                     }), $(this.settingsButton).on("click", function() {
-                        t.dismissClipsTrimmingAnnounce()
+                        e.dismissClipsTrimmingAnnounce()
                     }))
                 }
             }, {
@@ -19406,6 +19398,11 @@
                 key: "removeClipsTrimmingAnnounce",
                 value: function() {
                     this.clipsTrimmingAnnouncePopup.remove(), this.clipButton.attr("data-state", null)
+                }
+            }, {
+                key: "_enabledAnnouncement",
+                value: function() {
+                    return a
                 }
             }, {
                 key: "destroy",
