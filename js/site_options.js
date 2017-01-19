@@ -389,16 +389,6 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
-        "3ceb81fc-c115-4f62-8ac3-8983bb76cd41": {
-            "name": "Test max length",
-            "groups": [{
-                "weight": 10,
-                "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-            }, {
-                "weight": 10,
-                "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-            }]
-        },
         "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": {
             "name": "DISCOVER_SHOW_COVIEWS",
             "groups": [{
