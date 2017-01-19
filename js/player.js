@@ -8618,7 +8618,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.01.18-221957+73233c6ed5e5c2497581e2a80e13831da3b74dda",
+                    app_version: "2017.01.19-002538+21f5b4b1496396a5d6145a178453441517b987dc",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -9628,8 +9628,9 @@
             }
 
             function ue() {
-                var e = De.getCurrentTime(),
-                    t = n.getState(),
+                var e = De.getCurrentTime();
+                n.dispatch((0, B.updateCurrentTime)(e));
+                var t = n.getState(),
                     i = t.playback,
                     r = t.stream;
                 r instanceof T.VODContentStream && 1e3 * (i.duration - e) < M.FETCH_VODS_THRESHOLD && n.getState().recommendations.status === M.UNFETCHED && n.dispatch((0, M.fetchRecommendedVODs)(M.MAX_RECOMMENDED_VODS_VISIBLE))
@@ -10325,7 +10326,7 @@
             }
 
             function Oe() {
-                He.emit(T.TIME_UPDATE, $e.extrapolateTimeStamp())
+                He.emit(T.TIME_UPDATE, $e.extrapolateTimeStamp());
             }
 
             function Ie(e) {
@@ -10995,10 +10996,10 @@
                 var n = t(),
                     i = n.playback;
                 e({
-                    type: p,
+                    type: g,
                     playback: {
-                        muted: d.localStore.get("muted", i.muted),
-                        volume: d.localStore.get("volume", i.volume)
+                        muted: f.localStore.get("muted", i.muted),
+                        volume: f.localStore.get("volume", i.volume)
                     }
                 })
             }
@@ -11006,13 +11007,13 @@
 
         function r() {
             return {
-                type: _
+                type: h
             }
         }
 
         function a(e) {
             return {
-                type: h,
+                type: k,
                 playback: {
                     duration: e
                 }
@@ -11021,28 +11022,28 @@
 
         function o(e) {
             switch (e) {
-                case f.PLAYING:
+                case p.PLAYING:
                     return {
-                        type: b
+                        type: y
                     };
-                case f.WAITING:
+                case p.WAITING:
                     return {
-                        type: S
+                        type: A
                     };
-                case f.PAUSE:
+                case p.PAUSE:
                     return {
-                        type: E
+                        type: v
                     };
-                case f.ENDED:
+                case p.ENDED:
                     return {
-                        type: T
+                        type: _
                     }
             }
         }
 
         function s(e) {
             return {
-                type: g,
+                type: m,
                 playback: {
                     autoplay: e
                 }
@@ -11051,40 +11052,48 @@
 
         function l(e) {
             return {
-                type: v,
+                type: E,
                 muted: e
             }
         }
 
         function u(e) {
             return {
-                type: y,
+                type: S,
                 volume: Math.max(0, Math.min(1, e))
             }
         }
 
         function c(e) {
             return {
-                type: m,
+                type: b,
                 isLoading: e
+            }
+        }
+
+        function d(e) {
+            return {
+                type: T,
+                currentTime: e
             }
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.ACTION_ENDED = t.ACTION_WAITING = t.ACTION_PAUSE = t.ACTION_PLAYING = t.ACTION_SET_LOADING = t.ACTION_SET_VOLUME = t.ACTION_SET_MUTED = t.ACTION_SET_AUTOPLAY_STATE = t.ACTION_CLEAR_QUALITY_RESTRICTED_ERROR = t.ACTION_QUALITY_RESTRICTED_ERROR = t.ACTION_UPDATE_PLAYBACK_DURATION = t.ACTION_INITIALIZE_PLAYBACK_SETTINGS = void 0, t.initializePlaybackSettings = i, t.clearQualityRestrictedError = r, t.updateDuration = a, t.updatePlaybackState = o, t.setAutoplay = s, t.setMuted = l, t.setVolume = u, t.setLoading = c;
-        var d = n(245),
-            f = n(170),
-            p = t.ACTION_INITIALIZE_PLAYBACK_SETTINGS = "initialize playback settings",
-            h = t.ACTION_UPDATE_PLAYBACK_DURATION = "update playback duration",
-            _ = (t.ACTION_QUALITY_RESTRICTED_ERROR = "error quality restricted", t.ACTION_CLEAR_QUALITY_RESTRICTED_ERROR = "clear error quality restricted"),
-            g = t.ACTION_SET_AUTOPLAY_STATE = "set autoplay state",
-            v = t.ACTION_SET_MUTED = "set player muted",
-            y = t.ACTION_SET_VOLUME = "set player volume",
-            m = t.ACTION_SET_LOADING = "set loading state",
-            b = t.ACTION_PLAYING = "set player playing",
-            E = t.ACTION_PAUSE = "set player pause",
-            S = t.ACTION_WAITING = "set player waiting",
-            T = t.ACTION_ENDED = "set player ended"
+        }), t.ACTION_WAITING = t.ACTION_UPDATE_PLAYBACK_DURATION = t.ACTION_UPDATE_CURRENT_TIME = t.ACTION_SET_VOLUME = t.ACTION_SET_MUTED = t.ACTION_SET_LOADING = t.ACTION_SET_AUTOPLAY_STATE = t.ACTION_QUALITY_RESTRICTED_ERROR = t.ACTION_PLAYING = t.ACTION_PAUSE = t.ACTION_INITIALIZE_PLAYBACK_SETTINGS = t.ACTION_ENDED = t.ACTION_CLEAR_QUALITY_RESTRICTED_ERROR = void 0, t.initializePlaybackSettings = i, t.clearQualityRestrictedError = r, t.updateDuration = a, t.updatePlaybackState = o, t.setAutoplay = s, t.setMuted = l, t.setVolume = u, t.setLoading = c, t.updateCurrentTime = d;
+        var f = n(245),
+            p = n(170),
+            h = t.ACTION_CLEAR_QUALITY_RESTRICTED_ERROR = "clear error quality restricted",
+            _ = t.ACTION_ENDED = "set player ended",
+            g = t.ACTION_INITIALIZE_PLAYBACK_SETTINGS = "initialize playback settings",
+            v = t.ACTION_PAUSE = "set player pause",
+            y = t.ACTION_PLAYING = "set player playing",
+            m = (t.ACTION_QUALITY_RESTRICTED_ERROR = "error quality restricted", t.ACTION_SET_AUTOPLAY_STATE = "set autoplay state"),
+            b = t.ACTION_SET_LOADING = "set loading state",
+            E = t.ACTION_SET_MUTED = "set player muted",
+            S = t.ACTION_SET_VOLUME = "set player volume",
+            T = t.ACTION_UPDATE_CURRENT_TIME = "update current time",
+            k = t.ACTION_UPDATE_PLAYBACK_DURATION = "update playback duration",
+            A = t.ACTION_WAITING = "set player waiting"
     }, function(e, t, n) {
         e.exports = n.p + "vendor/TwitchPlayer.7cfe0f2e9d071ac72c5a539139bcedd4.swf"
     }, function(e, t, n) {
@@ -24462,6 +24471,10 @@
                     return (0, s["default"])({}, e, {
                         isLoading: t.isLoading
                     });
+                case d.ACTION_UPDATE_CURRENT_TIME:
+                    return (0, s["default"])({}, e, {
+                        currentTime: t.currentTime
+                    });
                 default:
                     return e
             }
@@ -24477,14 +24490,15 @@
             d = i(c),
             f = n(325),
             p = {
+                autoplay: !0,
+                currentTime: 0,
                 duration: 0,
+                ended: !1,
                 hasPlayed: !1,
                 muted: !1,
-                restrictedQualityError: !1,
-                autoplay: !0,
-                volume: .5,
                 paused: !0,
-                ended: !1
+                restrictedQualityError: !1,
+                volume: .5
             },
             h = {
                 hasPlayed: !0,
