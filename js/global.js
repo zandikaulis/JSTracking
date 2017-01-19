@@ -16973,7 +16973,8 @@ googletag.cmd = googletag.cmd || [],
                 CLIPS_FEEL_IT_COMING: "2858bc04-3f98-4808-a2dd-86555885ca90",
                 NEWS_FEED_REDESIGN: "05d8869f-e037-4955-b80a-7c361f9ddffb",
                 VOD_UPLOAD_UNITS_V3: "1710cf57-352c-4d09-b2c1-3d40bdf79b30",
-                FINAL_DESTINATION: "b542e7a6-6fc9-4380-a5cd-95301706904f"
+                FINAL_DESTINATION: "b542e7a6-6fc9-4380-a5cd-95301706904f",
+                CHOMPY: "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57"
             },
             i = {
                 "99494f77-1c7c-46c5-9b9c-a117db47d3c5": "control",
@@ -17017,7 +17018,8 @@ googletag.cmd = googletag.cmd || [],
                 "2858bc04-3f98-4808-a2dd-86555885ca90": "control",
                 "05d8869f-e037-4955-b80a-7c361f9ddffb": "no",
                 "1710cf57-352c-4d09-b2c1-3d40bdf79b30": "control",
-                "b542e7a6-6fc9-4380-a5cd-95301706904f": "channel"
+                "b542e7a6-6fc9-4380-a5cd-95301706904f": "channel",
+                "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57": "control"
             },
             s = "experiment_overrides",
             o = {},
@@ -17030,7 +17032,8 @@ googletag.cmd = googletag.cmd || [],
                 DETERMINATION: "yes",
                 DISCOVER_SHOW_COVIEWS: "show",
                 PERPETUA: "yes",
-                FINAL_DESTINATION: "videos"
+                FINAL_DESTINATION: "videos",
+                CHOMPY: "experiment"
             };
         _.each(Object.keys(u), function(t) {
             o[r[t]] = e.user().then(function(e) {
@@ -17923,16 +17926,15 @@ googletag.cmd = googletag.cmd || [],
     }(Twitch, jQuery),
     function(e, t) {
         var n = {};
-        n
-            .mutePlayer = function() {
-                e.player.ready(function(e) {
-                    e.mute()
-                })
-            }, n.unmutePlayer = function() {
-                e.player.ready(function(e) {
-                    e.unmute()
-                })
-            }, e.ads.ext = n
+        n.mutePlayer = function() {
+            e.player.ready(function(e) {
+                e.mute()
+            })
+        }, n.unmutePlayer = function() {
+            e.player.ready(function(e) {
+                e.unmute()
+            })
+        }, e.ads.ext = n
     }(Twitch, jQuery),
     function(e, t) {
         var n = {
@@ -19096,10 +19098,10 @@ var Base64 = {
     }(jQuery),
     function(e, t) {
         e.forceLogIn = function() {
-            window.location = "/user/login?redirect_on_login=" + window.location.pathname + window.location.search
+            window.location = "/user/login?redirect_on_login=" +
+                window.location.pathname + window.location.search
         }, e.loggedInAjax = function(t, n) {
-            typeof n == "undefined" ?
-                (n = t, t = null) : n.url = t;
+            typeof n == "undefined" ? (n = t, t = null) : n.url = t;
             var r = n.error,
                 i = function(t, n, i) {
                     t.status === 403 && e.forceLogIn(), r && r.apply(this, arguments)
