@@ -343,7 +343,7 @@ window.SiteOptions = {
                 "value": "1.3.0"
             }, {
                 "weight": 95,
-                "value": "1.1.116"
+                "value": "1.1.117"
             }]
         },
         "34fca29d-6914-412f-8ce2-fb65f792d386": {
