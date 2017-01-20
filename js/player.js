@@ -8618,7 +8618,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.01.19-233348+1235f9c9c15045418a989d71b31c346284bf14d2",
+                    app_version: "2017.01.20-212601+6b0a3d23e3a4a372d5ee52c14bfae6e7746338c2",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -11176,18 +11176,18 @@
                 3: R,
                 4: M
             },
-            j = [p.PAUSE, p.WAITING, p.ERROR],
+            j = [p.PAUSE, p.PLAYING, p.WAITING, p.ERROR],
             x = t.BackendPlayerCore = function() {
                 function e(t) {
                     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         i = arguments[2];
-                    r(this, e), this.stateStore = i, this.video = document.createElement("video"), this.video.autoplay = n.autoplay, this.retries = 0, this.playerCoreLogLevel = n["cvp-log"] || "error", n.playsinline && (this.video.setAttribute("webkit-playsinline", ""), this.video.setAttribute("playsinline", "")), this.initialize()
+                    r(this, e), this.stateStore = i, this.video = document.createElement("video"), this.video.autoplay = n.autoplay, this.playerCoreLogLevel = n["cvp-log"] || "error", this.offline = !1, n.playsinline && (this.video.setAttribute("webkit-playsinline", ""), this.video.setAttribute("playsinline", "")), this.initialize()
                 }
                 return o(e, [{
                     key: "initialize",
                     value: function() {
                         var e = this;
-                        this.events = this.events instanceof u["default"] ? this.events : new u["default"], this.isBuffering = !1, this.ended = !1, this.currentCaptionData = {}, this.loadPlayerCore().then(function(t) {
+                        this.events = this.events instanceof u["default"] ? this.events : new u["default"], this.currentCaptionData = {}, this.loadPlayerCore().then(function(t) {
                             e._initPlayerCore(t), e._initVideoEvents(), e.load()
                         }, function(t) {
                             e.onCoreAnalytics(t)
@@ -11196,10 +11196,7 @@
                 }, {
                     key: "_initVideoEvents",
                     value: function() {
-                        var e = this;
-                        this.video.addEventListener("playing", this.onVideoTagPlaying.bind(this)), this.video.addEventListener(p.ENDED, function() {
-                            e.ended = !0
-                        }), this.video.addEventListener(p.PAUSE, this.onVideoTagPause.bind(this)), this.video.addEventListener(p.ERROR, this.onVideoTagError.bind(this))
+                        this.video.addEventListener(p.PLAYING, this.onVideoTagPlaying.bind(this)), this.video.addEventListener(p.PAUSE, this.onVideoTagPause.bind(this)), this.video.addEventListener(p.ERROR, this.onVideoTagError.bind(this))
                     }
                 }, {
                     key: "_initPlayerCore",
@@ -11212,17 +11209,17 @@
                 }, {
                     key: "onBuffering",
                     value: function() {
-                        this.isBuffering = !0, this.events.emitEvent(p.WAITING)
+                        this.events.emitEvent(p.WAITING)
                     }
                 }, {
                     key: "onVideoTagPlaying",
                     value: function() {
-                        this.ended = !1, this.isBuffering = !1
+                        this.events.emitEvent(p.PLAYING)
                     }
                 }, {
                     key: "onVideoTagPause",
                     value: function() {
-                        this.isBuffering || this.events.emitEvent(p.PAUSE)
+                        this.events.emitEvent(p.PAUSE)
                     }
                 }, {
                     key: "onVideoTagError",
@@ -11248,7 +11245,7 @@
                 }, {
                     key: "onOfflineError",
                     value: function() {
-                        this.ended = !0, this.events.emit(p.ENDED)
+                        this.offline = !0, this.events.emit(p.ENDED)
                     }
                 }, {
                     key: "onHLSVariantParsed",
@@ -11385,7 +11382,7 @@
                 }, {
                     key: "load",
                     value: function() {
-                        this.core && this.src && (this.core.loadURL(this.src), this.video.autoplay && this.video.play())
+                        this.core && this.src && (this.offline = !1, this.core.loadURL(this.src), this.video.autoplay && this.video.play())
                     }
                 }, {
                     key: "getSrc",
@@ -11395,7 +11392,7 @@
                 }, {
                     key: "setSrc",
                     value: function(e) {
-                        this.ended = !1, this.src = e, this.src && this.load()
+                        this.src = e, this.src && this.load()
                     }
                 }, {
                     key: "getCurrentSrc",
@@ -11506,7 +11503,7 @@
                 }, {
                     key: "getEnded",
                     value: function() {
-                        return this.ended || this.video.ended
+                        return this.offline || this.core && this.core.ended()
                     }
                 }, {
                     key: "getError",
@@ -11545,12 +11542,12 @@
                         var e = this.stateStore.getState(),
                             t = e.ads,
                             n = e.stream;
-                        this.video.pause(), this.isBuffering && (this.isBuffering = !1, this.events.emitEvent(p.PAUSE)), t.currentMetadata.contentType === _.AdContentTypes.STITCHED ? this.core.pause() : n instanceof h.LiveContentStream && this.core.stop()
+                        this.video.pause(), t.currentMetadata.contentType === _.AdContentTypes.STITCHED ? this.core.pause() : n instanceof h.LiveContentStream && this.core.stop()
                     }
                 }, {
                     key: "getPaused",
                     value: function() {
-                        return !this.isBuffering && this.video.paused
+                        return this.core ? this.core.paused() : this.video.paused
                     }
                 }, {
                     key: "getSeeking",
@@ -14516,7 +14513,7 @@
                 var r = Math.floor(Math.random() * C),
                     s = {
                         limit: e + 1,
-                        broadcasts: "true"
+                        broadcast_type: "archive"
                     };
                 return t({
                     type: S,
@@ -15528,8 +15525,8 @@
                 }, {
                     showInfo: !0
                 });
-                $(t).addClass("player"), $(t).append(n(382)), o.dispatch((0, O.initializeCaptionsSettings)()), o.dispatch((0, I.initializePlaybackSettings)()), o.dispatch((0, N.initializeSettings)()), F = new u.PlayerUIState(t, o), H = new d.PlayerUIInfo(e, t, o, S), G = new f.PlayerUISeek(e, t, o), q = new p.PlayerUIStats(t, o), Y = new h.PlayerUIUpnext(e, t, o), se = new _.PlayerUIRecommendations(e, t, o), le = new C.PlayerUIError(t, o), K = new g.PlayerUILeaveDialog(e, t, i, o, S), W = new E.PlayerUILang(t, o), z = new v.PlayerUISubscribeOverlay(t, r), Q = new y.PlayerUIResume(e, r, o, S), J = new A.PlayerUISeekBarPopup(t), X = new m.PlayerUISeekBarMarkers(e, t, r, o, J),
-                    Z = new P.PlayerUIThumbnailPreviews(t, o, J), ee = new b.PlayerUIMutedSegments(t, o), ne = new w.AgeRestrictionOverlay(t, e, o), ie = new k.PlayerUIControlsDisplay(e, t, o), re = new c.PlayerUIControls(e, t, r, o, ie, a, S), oe = new T.PlayerUISettings(e, t, r, o, i, ie, S), ue = new M.AdOverlay(t, o);
+                $(t).addClass("player"), $(t).append(n(382)), o.dispatch((0, O.initializeCaptionsSettings)()), o.dispatch((0, I.initializePlaybackSettings)()), o.dispatch((0, N.initializeSettings)()), F = new u.PlayerUIState(t, o), H = new d.PlayerUIInfo(e, t, o, S), G = new f.PlayerUISeek(e, t, o), q = new p.PlayerUIStats(t, o), Y = new h.PlayerUIUpnext(e, t, o), se = new _.PlayerUIRecommendations(e, t, o), le = new C.PlayerUIError(t, o), K = new g.PlayerUILeaveDialog(e, t, i, o, S), W = new E.PlayerUILang(t, o), z = new v.PlayerUISubscribeOverlay(t, r), Q = new y.PlayerUIResume(e, r, o, S), J = new A.PlayerUISeekBarPopup(t),
+                    X = new m.PlayerUISeekBarMarkers(e, t, r, o, J), Z = new P.PlayerUIThumbnailPreviews(t, o, J), ee = new b.PlayerUIMutedSegments(t, o), ne = new w.AgeRestrictionOverlay(t, e, o), ie = new k.PlayerUIControlsDisplay(e, t, o), re = new c.PlayerUIControls(e, t, r, o, ie, a, S), oe = new T.PlayerUISettings(e, t, r, o, i, ie, S), ue = new M.AdOverlay(t, o);
                 var B = o.getState(),
                     te = B.experiments;
                 te.get(j.PERPETUA).then(function(e) {
@@ -16889,8 +16886,7 @@
             var t = {};
             if (null != e)
                 for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-            return t["default"] = e,
-                t
+            return t["default"] = e, t
         }
 
         function r(e) {
