@@ -659,10 +659,10 @@ window.SiteOptions = {
         "8bc4faaa-b4df-4862-b249-ac153de6294a": {
             "name": "Seaweed",
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "yes"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "no"
             }]
         },
