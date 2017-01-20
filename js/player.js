@@ -8618,7 +8618,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.01.19-073901+3ec12c7bb3d23a963fa2bb6924ea4d2fe94a6b9e",
+                    app_version: "2017.01.19-233348+1235f9c9c15045418a989d71b31c346284bf14d2",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -15529,7 +15529,7 @@
                     showInfo: !0
                 });
                 $(t).addClass("player"), $(t).append(n(382)), o.dispatch((0, O.initializeCaptionsSettings)()), o.dispatch((0, I.initializePlaybackSettings)()), o.dispatch((0, N.initializeSettings)()), F = new u.PlayerUIState(t, o), H = new d.PlayerUIInfo(e, t, o, S), G = new f.PlayerUISeek(e, t, o), q = new p.PlayerUIStats(t, o), Y = new h.PlayerUIUpnext(e, t, o), se = new _.PlayerUIRecommendations(e, t, o), le = new C.PlayerUIError(t, o), K = new g.PlayerUILeaveDialog(e, t, i, o, S), W = new E.PlayerUILang(t, o), z = new v.PlayerUISubscribeOverlay(t, r), Q = new y.PlayerUIResume(e, r, o, S), J = new A.PlayerUISeekBarPopup(t), X = new m.PlayerUISeekBarMarkers(e, t, r, o, J),
-                    Z = new P.PlayerUIThumbnailPreviews(t, r, o, J), ee = new b.PlayerUIMutedSegments(t, o), ne = new w.AgeRestrictionOverlay(t, e, o), ie = new k.PlayerUIControlsDisplay(e, t, o), re = new c.PlayerUIControls(e, t, r, o, ie, a, S), oe = new T.PlayerUISettings(e, t, r, o, i, ie, S), ue = new M.AdOverlay(t, o);
+                    Z = new P.PlayerUIThumbnailPreviews(t, o, J), ee = new b.PlayerUIMutedSegments(t, o), ne = new w.AgeRestrictionOverlay(t, e, o), ie = new k.PlayerUIControlsDisplay(e, t, o), re = new c.PlayerUIControls(e, t, r, o, ie, a, S), oe = new T.PlayerUISettings(e, t, r, o, i, ie, S), ue = new M.AdOverlay(t, o);
                 var B = o.getState(),
                     te = B.experiments;
                 te.get(j.PERPETUA).then(function(e) {
@@ -18844,10 +18844,27 @@
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
 
-        function o(e, t, n) {
+        function o(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function s(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+        }
+
+        function l(e, t, n) {
             var i = Math.floor(e.count * (t / n)),
                 r = i % (e.hq.cols * e.hq.rows),
-                a = g / e.hq.width;
+                a = y / e.hq.width;
             return {
                 thumbOver: {
                     url: e.hq.URLs[Math.floor(i / (e.hq.cols * e.hq.rows))],
@@ -18867,14 +18884,14 @@
                 },
                 title: "",
                 info: "",
-                timestamp: h.toString(t, !1),
-                width: g
+                timestamp: g.toString(t, !1),
+                width: y
             }
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.PlayerUIThumbnailPreviews = void 0;
-        var s = function() {
+        var u = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var i = t[n];
@@ -18885,52 +18902,65 @@
                     return n && e(t.prototype, n), i && e(t, i), t
                 }
             }(),
-            l = n(173),
-            u = n(264),
-            c = r(u),
-            d = n(222),
+            c = n(347),
+            d = n(264),
             f = r(d),
-            p = n(260),
-            h = i(p),
-            _ = 50,
-            g = 148;
-        t.PlayerUIThumbnailPreviews = function() {
-            function e(t, n, i, r) {
-                var o = this;
-                a(this, e), this._root = t, this._state = n, this._stateStore = i, this._image = new Image, this._popup = r, this._seekSlider = $(".js-seek-slider", this._root), this._controlsBottom = $(".js-controls-bottom", this._root), this._lastPreviews = this._state.getPreviews(), this._preloadLowQualityThumbnail(), this._controlsBottom.on("mousemove", ".js-seek-slider", (0, c["default"])(this._onSeekBarMouseMoveHandler.bind(this), _)), this._controlsBottom.on("mouseout", ".js-seek-slider", function() {
-                    return o._popup.hide()
-                }), this._state.addEventListener(l.EVENT_STATE_UPDATE, this.handleEvent.bind(this))
+            p = n(222),
+            h = r(p),
+            _ = n(260),
+            g = i(_),
+            v = 50,
+            y = 148;
+        t.PlayerUIThumbnailPreviews = function(e) {
+            function t(e, n, i) {
+                a(this, t);
+                var r = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+                return r._root = e, r._stateStore = n, r._image = new Image, r._popup = i, r._seekSlider = $(".js-seek-slider", r._root), r._controlsBottom = $(".js-controls-bottom", r._root), r._preloadLowQualityThumbnail(), r._controlsBottom.on("mousemove", ".js-seek-slider", (0, f["default"])(r._onSeekBarMouseMoveHandler.bind(r), v)), r._controlsBottom.on("mouseout", ".js-seek-slider", function() {
+                    return r._popup.hide()
+                }), r.subscribe(n, ["timelineMetadata.previews"], r.onPreviews.bind(r)), r
             }
-            return s(e, [{
-                key: "handleEvent",
+            return s(t, e), u(t, [{
+                key: "onPreviews",
                 value: function() {
-                    this._lastPreviews !== this._state.getPreviews() && (this._lastPreviews = this._state.getPreviews(), this._preloadLowQualityThumbnail())
+                    this._preloadLowQualityThumbnail()
                 }
             }, {
                 key: "_onSeekBarMouseMoveHandler",
                 value: function(e) {
-                    if (!$(e.target).hasClass("js-marker-dot")) {
-                        var t = this._stateStore.getState().playback.duration;
-                        if (!(t <= 0) && this._state.getPreviews().count > 0 && !f["default"].msedge && !f["default"].msie) {
-                            var n = e.clientX - this._seekSlider.offset().left,
-                                i = t * (n / this._seekSlider.width()),
-                                r = o(this._state.getPreviews(), i, t);
-                            this._popup.show(r, n)
-                        }
+                    if (this._shouldDisplayPreviews(e)) {
+                        var t = this._stateStore.getState(),
+                            n = t.playback,
+                            i = t.timelineMetadata,
+                            r = e.clientX - this._seekSlider.offset().left,
+                            a = n.duration * (r / this._seekSlider.width()),
+                            o = l(i.previews, a, n.duration);
+                        this._popup.show(o, r)
                     }
+                }
+            }, {
+                key: "_shouldDisplayPreviews",
+                value: function(e) {
+                    var t = this._stateStore.getState(),
+                        n = t.playback,
+                        i = t.timelineMetadata,
+                        r = $(e.target).hasClass("js-marker-dot"),
+                        a = h["default"].msedge || h["default"].msie;
+                    return !r && n.duration > 0 && i.previews.count > 0 && !a
                 }
             }, {
                 key: "_preloadLowQualityThumbnail",
                 value: function() {
-                    this._image.src = this._state.getPreviews().lq.URLs[0]
+                    var e = this._stateStore.getState(),
+                        t = e.timelineMetadata;
+                    this._image.src = t.previews.lq.URLs[0]
                 }
             }, {
                 key: "destroy",
                 value: function() {
                     this._controlsBottom.off("mousemove"), this._controlsBottom.off("mouseout")
                 }
-            }]), e
-        }()
+            }]), t
+        }(c.UIStateSubscriber)
     }, function(e, t, n) {
         "use strict";
 
@@ -19479,7 +19509,7 @@
                         n = e.streamMetadata,
                         i = t.contentType,
                         r = n.channel.name;
-                    i === s.CONTENT_MODE_VOD ? this._recordVodClip(r) : i === o.CONTENT_MODE_LIVE && this._recordLiveClip(r)
+                    i === s.CONTENT_MODE_VOD ? this._recordVodClip(r) : i === o.CONTENT_MODE_LIVE && this._recordLiveClip(r);
                 }
             }, {
                 key: "_recordVodClip",
