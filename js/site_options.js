@@ -240,6 +240,16 @@ window.SiteOptions = {
                 "value": "recent_first"
             }]
         },
+        "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3": {
+            "name": "Pineapple",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "1b905261-e257-4703-ac84-12a6a9099935": {
             "name": "CLIENT_BATCH_SPADE",
             "groups": [{
