@@ -60,7 +60,7 @@
                     return E.dispatch((0, K.setAdblockDetected)(!0))
                 }).then(function() {
                     e.channel ? E.dispatch(z.setStream(z.TYPE_CHANNEL, e.channel)) : e.video && E.dispatch(z.setStream(z.TYPE_VIDEO, e.video)), n.get(Y.PERPETUA).then(function(t) {
-                        "yes" === t && e.playlist && l.activatePlaylist(e.playlist)
+                        "yes" === t && e.playlist && l.setPlaylist(e.playlist)
                     })
                 })
             }
@@ -125,11 +125,11 @@
                 W = void 0,
                 X = [];
             l.setChannel = function(e) {
-                E.dispatch(z.setStream(z.TYPE_CHANNEL, e)), E.dispatch((0, Q.unsetPlaylist)())
+                E.dispatch(z.setStream(z.TYPE_CHANNEL, e)), E.dispatch((0, Q.resetPlaylist)())
             }, l.setVideo = function(e) {
-                E.dispatch(z.setStream(z.TYPE_VIDEO, e)), E.dispatch((0, Q.unsetPlaylist)())
-            }, l.activatePlaylist = function(e) {
-                E.dispatch((0, Q.activatePlaylist)(e))
+                E.dispatch(z.setStream(z.TYPE_VIDEO, e)), E.dispatch((0, Q.resetPlaylist)())
+            }, l.setPlaylist = function(e) {
+                E.dispatch((0, Q.setPlaylist)(e))
             }, l.setLanguage = function(e) {
                 E.dispatch(ee.loadLanguage(e))
             }, l.setMiniPlayerMode = function(e) {
@@ -8632,7 +8632,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.01.23-214758+f7cb4cf75d2a1547fff8b38badd2cc8b31832276",
+                    app_version: "2017.01.23-230342+555f025de9e1ddd1040e94729b2eaf6267cfa8aa",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -19890,7 +19890,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.ACTION_CLOSE_PLAYLIST = t.ACTION_OPEN_PLAYLIST = t.ACTION_UNSET_PLAYLIST = t.ACTION_SET_PLAYLIST = void 0, t.setPlaylist = a, t.activatePlaylist = o, t.unsetPlaylist = s, t.openPlaylist = u, t.closePlaylist = c;
+        }), t.ACTION_CLOSE_PLAYLIST = t.ACTION_OPEN_PLAYLIST = t.ACTION_UNSET_PLAYLIST = t.ACTION_SET_PLAYLIST = void 0, t.setPlaylistInfo = a, t.setPlaylist = o, t.resetPlaylist = s, t.openPlaylist = u, t.closePlaylist = c;
         var d = n(187),
             f = n(78),
             p = r(f),
