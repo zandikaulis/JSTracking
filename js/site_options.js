@@ -283,14 +283,14 @@ window.SiteOptions = {
         "2232da8a-775e-4a95-b006-19964b59ab4c": {
             "name": "FOLLOW_CTA_V2",
             "groups": [{
-                "weight": 80,
+                "weight": 70,
                 "value": "control"
             }, {
-                "weight": 10,
-                "value": "channel"
+                "weight": 15,
+                "value": "10s"
             }, {
-                "weight": 10,
-                "value": "player"
+                "weight": 15,
+                "value": "20s"
             }]
         },
         "2352d0b6-7692-49f1-9f8d-88e6cc47994b": {
