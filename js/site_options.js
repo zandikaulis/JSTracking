@@ -286,11 +286,14 @@ window.SiteOptions = {
                 "weight": 70,
                 "value": "control"
             }, {
-                "weight": 15,
+                "weight": 10,
                 "value": "10s"
             }, {
-                "weight": 15,
+                "weight": 10,
                 "value": "20s"
+            }, {
+                "weight": 10,
+                "value": "30s"
             }]
         },
         "2352d0b6-7692-49f1-9f8d-88e6cc47994b": {
