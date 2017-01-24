@@ -1091,7 +1091,7 @@ window.SiteOptions = {
             }]
         },
         "e20747aa-a503-436e-b104-27f974b3eecd": {
-            "name": "clips_paris",
+            "name": "android_clips_paris",
             "groups": [{
                 "weight": 10,
                 "value": "control"
