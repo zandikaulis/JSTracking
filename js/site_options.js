@@ -562,6 +562,16 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "5397de92-0538-42d1-977c-11842e03c9e5": {
+            "name": "adopt",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "58a07c08-c495-4f64-96ae-d29bc623a58b": {
             "name": "coview user based recs",
             "groups": [{
@@ -856,11 +866,14 @@ window.SiteOptions = {
         "af8f152a-f618-416e-8b79-d6ac30479018": {
             "name": "PERPETUA",
             "groups": [{
-                "weight": 100,
-                "value": "control"
+                "weight": 0,
+                "value": "early"
             }, {
                 "weight": 0,
-                "value": "yes"
+                "value": "mid"
+            }, {
+                "weight": 100,
+                "value": "control"
             }]
         },
         "b0033638-a84e-4f57-8952-7115be4dc3b6": {
