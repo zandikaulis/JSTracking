@@ -1090,6 +1090,16 @@ window.SiteOptions = {
                 "value": "d,hs,c"
             }]
         },
+        "e20747aa-a503-436e-b104-27f974b3eecd": {
+            "name": "clips_paris",
+            "groups": [{
+                "weight": 10,
+                "value": "control"
+            }, {
+                "weight": 90,
+                "value": "variant1"
+            }]
+        },
         "e39a1b4d-51ef-4b49-9378-91a7eb35c3da": {
             "name": "TIME_SPENT_EXPERIMENT",
             "groups": [{
