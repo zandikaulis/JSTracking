@@ -60,7 +60,7 @@
                     return E.dispatch((0, K.setAdblockDetected)(!0))
                 }).then(function() {
                     e.channel ? E.dispatch(z.setStream(z.TYPE_CHANNEL, e.channel)) : e.video && E.dispatch(z.setStream(z.TYPE_VIDEO, e.video)), n.get(Y.PERPETUA).then(function(t) {
-                        "yes" === t && e.playlist && l.setPlaylist(e.playlist)
+                        (0, u["default"])(Y.ENABLE_PERPETUA_GROUP, t) && e.playlist && l.setPlaylist(e.playlist)
                     })
                 })
             }
@@ -4349,71 +4349,72 @@
         }
 
         function a(e) {
-            return (0, p.krakenUserInfo)().then(function(t) {
+            return (0, _.krakenUserInfo)().then(function(t) {
                 return "staff" === t.type ? e : Promise.reject()
             })
         }
 
         function o(e) {
-            return (0, p.userInfo)().then(function(t) {
-                return e.includes(t.geo) ? Promise.reject() : "no"
+            return (0, _.userInfo)().then(function(t) {
+                return (0, c["default"])(e, t.geo) ? Promise.reject() : "no"
             })
         }
 
         function s(e) {
-            var t = _["default"]._detect(e);
+            var t = v["default"]._detect(e);
             return !t.firefox || !!t.version && parseInt(t.version.slice(0, 2), 10) > 45
         }
 
         function l(e) {
             var t, n;
-            return new c["default"]({
-                defaults: (t = {}, r(t, g, "no"), r(t, v, "off"), r(t, y, "no"), r(t, m, "no"), r(t, b, "no"), r(t, E, "no"), r(t, S, "no"), r(t, T, "no"), r(t, k, "no"), r(t, A, "no"), r(t, P, "no"), r(t, C, "no"), r(t, w, "1.0"), r(t, O, "no"), r(t, I, "no"), r(t, N, "control"), r(t, L, "no"), t),
+            return new f["default"]({
+                defaults: (t = {}, r(t, y, "no"), r(t, m, "off"), r(t, b, "no"), r(t, E, "no"), r(t, S, "no"), r(t, T, "no"), r(t, k, "no"), r(t, A, "no"), r(t, P, "no"), r(t, C, "no"), r(t, w, "no"), r(t, O, "no"), r(t, I, "1.0"), r(t, N, "no"), r(t, L, "no"), r(t, R, "control"), r(t, M, "no"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, r(n, v, a("v2")), r(n, y, a("yes")), r(n, m, o(["US"])), r(n, b, o(["GB"])), r(n, E, o(["DE"])), r(n, S, o(["FR"])), r(n, T, o(["SE"])), r(n, k, o(["BE", "DK", "FI", "NL", "NO", "PL"])), r(n, A, o(["CA"])), r(n, P, o(["AU", "NZ"])), r(n, I, a("yes")), n),
+                overrides: (n = {}, r(n, m, a("v2")), r(n, b, a("yes")), r(n, E, o(["US"])), r(n, S, o(["GB"])), r(n, T, o(["DE"])), r(n, k, o(["FR"])), r(n, A, o(["SE"])), r(n, P, o(["BE", "DK", "FI", "NL", "NO", "PL"])), r(n, C, o(["CA"])), r(n, w, o(["AU", "NZ"])), r(n, L, a("yes")), n),
                 platform: "web",
                 login: e.login,
-                provider: new f["default"](f["default"].SERVICE_URL),
+                provider: new h["default"](h["default"].SERVICE_URL),
                 Promise: Promise
             })
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.ENABLE_ABS_GROUP = t.NO_ABS_WITH_V12 = t.ABS_FIRST_TIME_GROUP_B = t.ABS_FIRST_TIME_GROUP_A = t.ABS_FORCED_GROUP = t.VP_QOS_TEST = t.PERPETUA = t.DETERMINATION = t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.IN_PLAYER_RECOMMENDATIONS = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
-        var u = n(213),
+        }), t.ENABLE_PERPETUA_GROUP = t.ENABLE_ABS_GROUP = t.NO_ABS_WITH_V12 = t.ABS_FIRST_TIME_GROUP_B = t.ABS_FIRST_TIME_GROUP_A = t.ABS_FORCED_GROUP = t.VP_QOS_TEST = t.PERPETUA = t.DETERMINATION = t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.IN_PLAYER_RECOMMENDATIONS = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
+        var u = n(49),
             c = i(u),
-            d = n(221),
+            d = n(213),
             f = i(d),
-            p = n(187),
-            h = n(222),
-            _ = i(h),
-            g = t.NETWORK_PROFILE_COLLECTION = "5fbb67a0-b4ff-4775-b836-e9a348a87481",
-            v = t.CAPTIONS = "4afcc1d7-b6f4-489a-beb3-0a32eb780592",
-            y = t.IN_PLAYER_RECOMMENDATIONS = "c926728f-d1d3-4b09-b868-db3e2aa000cc",
-            m = t.BAKING_BREAD_US = "84d81180-6faa-4c58-98d7-48bbff5035c7",
-            b = t.BAKING_BREAD_UK = "a1ce3d24-076a-4664-be4c-f9046fdce18c",
-            E = t.BAKING_BREAD_A = "f51271fc-b922-43c5-a801-d5b44219b31f",
-            S = t.BAKING_BREAD_B = "17133457-67a2-41f8-8961-235020959018",
-            T = t.BAKING_BREAD_C = "c51b6c01-3155-4314-bd33-a63870349c1f",
-            k = t.BAKING_BREAD_D = "4d081a33-0d0f-4b44-bfde-cf07c358915f",
-            A = t.BAKING_BREAD_E = "cf2033c8-5313-4abe-8142-61b9072c9d26",
-            P = t.BAKING_BREAD_F = "e6a95194-9540-46e0-858f-f47e5d5e3a5d",
-            C = t.MARKERS = "8bc4faaa-b4df-4862-b249-ac153de6294a",
-            w = t.PLAYER_CORE_VER_CONTROL = "33ad61d9-3433-4073-b091-83251b29ea46",
-            O = t.GABRIEL = "4aa9ee11-136c-4521-a139-e2abb718ec07",
-            I = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
-            N = t.PERPETUA = "af8f152a-f618-416e-8b79-d6ac30479018",
-            L = t.VP_QOS_TEST = "711aaaf6-61c0-4cc4-9469-0dfc9908785a",
-            R = t.ABS_FORCED_GROUP = "yes-forced",
-            M = t.ABS_FIRST_TIME_GROUP_A = "yes-ft-a",
-            D = t.ABS_FIRST_TIME_GROUP_B = "yes-ft-b";
-        t.NO_ABS_WITH_V12 = "no-with-1.2", t.ENABLE_ABS_GROUP = Object.freeze([R, M, D])
+            p = n(221),
+            h = i(p),
+            _ = n(187),
+            g = n(222),
+            v = i(g),
+            y = t.NETWORK_PROFILE_COLLECTION = "5fbb67a0-b4ff-4775-b836-e9a348a87481",
+            m = t.CAPTIONS = "4afcc1d7-b6f4-489a-beb3-0a32eb780592",
+            b = t.IN_PLAYER_RECOMMENDATIONS = "c926728f-d1d3-4b09-b868-db3e2aa000cc",
+            E = t.BAKING_BREAD_US = "84d81180-6faa-4c58-98d7-48bbff5035c7",
+            S = t.BAKING_BREAD_UK = "a1ce3d24-076a-4664-be4c-f9046fdce18c",
+            T = t.BAKING_BREAD_A = "f51271fc-b922-43c5-a801-d5b44219b31f",
+            k = t.BAKING_BREAD_B = "17133457-67a2-41f8-8961-235020959018",
+            A = t.BAKING_BREAD_C = "c51b6c01-3155-4314-bd33-a63870349c1f",
+            P = t.BAKING_BREAD_D = "4d081a33-0d0f-4b44-bfde-cf07c358915f",
+            C = t.BAKING_BREAD_E = "cf2033c8-5313-4abe-8142-61b9072c9d26",
+            w = t.BAKING_BREAD_F = "e6a95194-9540-46e0-858f-f47e5d5e3a5d",
+            O = t.MARKERS = "8bc4faaa-b4df-4862-b249-ac153de6294a",
+            I = t.PLAYER_CORE_VER_CONTROL = "33ad61d9-3433-4073-b091-83251b29ea46",
+            N = t.GABRIEL = "4aa9ee11-136c-4521-a139-e2abb718ec07",
+            L = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
+            R = t.PERPETUA = "af8f152a-f618-416e-8b79-d6ac30479018",
+            M = t.VP_QOS_TEST = "711aaaf6-61c0-4cc4-9469-0dfc9908785a",
+            D = t.ABS_FORCED_GROUP = "yes-forced",
+            j = t.ABS_FIRST_TIME_GROUP_A = "yes-ft-a",
+            x = t.ABS_FIRST_TIME_GROUP_B = "yes-ft-b";
+        t.NO_ABS_WITH_V12 = "no-with-1.2", t.ENABLE_ABS_GROUP = Object.freeze([D, j, x]), t.ENABLE_PERPETUA_GROUP = Object.freeze(["early", "mid"])
     }, function(e, t, n) {
         function i(e) {
             var t = r(e);
             if (null !== t) throw t;
-            this._config = a(e), this._Promise = e.Promise, this._deviceID = e.deviceID, this._platform = e.platform,
-                this._username = e.login || null, this._defaults = o(e.Promise, e.defaults, e.overrides || {}), this._assignments = s(e.Promise, this._config, this._defaults, e.overrides || {}, this._deviceID)
+            this._config = a(e), this._Promise = e.Promise, this._deviceID = e.deviceID, this._platform = e.platform, this._username = e.login || null, this._defaults = o(e.Promise, e.defaults, e.overrides || {}), this._assignments = s(e.Promise, this._config, this._defaults, e.overrides || {}, this._deviceID)
         }
 
         function r(e) {
@@ -8559,7 +8560,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.01.27-184522+ea5fcdbe38ac5d7b0e71c56bbdcd7b6b794bb40e",
+                    app_version: "2017.01.27-211826+309daea03b6fc533f2e0e6edb872d865b2aa17bd",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -15042,23 +15043,25 @@
                     return n && e(t.prototype, n), i && e(t, i), t
                 }
             }(),
-            s = n(13),
+            s = n(49),
             l = r(s),
-            u = n(173),
-            c = n(212),
-            d = n(325),
-            f = i(d),
-            p = n(339),
-            h = n(274),
-            _ = n(336),
-            g = n(247),
-            v = n(340),
-            y = i(v),
-            m = n(169),
-            b = i(m);
+            u = n(13),
+            c = r(u),
+            d = n(173),
+            f = n(212),
+            p = n(325),
+            h = i(p),
+            _ = n(339),
+            g = n(274),
+            v = n(336),
+            y = n(247),
+            m = n(340),
+            b = i(m),
+            E = n(169),
+            S = i(E);
         t.EmbedHost = function() {
             function e(t, n, i) {
-                a(this, e), this._player = t, this._stateStore = i, this._clients = [], this._unsubscribes = [], this._window = this._stateStore.getState().window, n.addEventListener(u.EVENT_STATE_UPDATE, this._sendPlayerState.bind(this)), n.addEventListener(u.EVENT_PLAYER_UPDATE, this._sendPlayerEvent.bind(this)), this._window.addEventListener("message", this);
+                a(this, e), this._player = t, this._stateStore = i, this._clients = [], this._unsubscribes = [], this._window = this._stateStore.getState().window, n.addEventListener(d.EVENT_STATE_UPDATE, this._sendPlayerState.bind(this)), n.addEventListener(d.EVENT_PLAYER_UPDATE, this._sendPlayerEvent.bind(this)), this._window.addEventListener("message", this);
                 var r = this._window.opener || this._window.parent;
                 r && r !== this._window && this._addClient(r), this._initSubscriptions(), this._sendStoreState()
             }
@@ -15066,16 +15069,16 @@
                 key: "_initSubscriptions",
                 value: function() {
                     var e = this;
-                    this._unsubscribes.push((0, g.subscribe)(this._stateStore, ["stats.videoStats"], function() {
+                    this._unsubscribes.push((0, y.subscribe)(this._stateStore, ["stats.videoStats"], function() {
                         e._sendStoreState()
-                    })), this._unsubscribes.push((0, g.subscribe)(this._stateStore, ["viewercount"], function() {
-                        e._sendStoreState(), e._sendPlayerEvent(b.VIEWERS_CHANGE)
+                    })), this._unsubscribes.push((0, y.subscribe)(this._stateStore, ["viewercount"], function() {
+                        e._sendStoreState(), e._sendPlayerEvent(S.VIEWERS_CHANGE)
                     }))
                 }
             }, {
                 key: "_addClient",
                 value: function(e) {
-                    this._clients.push(e), this._send(e, y.BRIDGE_HOST_READY), this._stateStore.dispatch((0, _.requestStatsEnabled)(this))
+                    this._clients.push(e), this._send(e, b.BRIDGE_HOST_READY), this._stateStore.dispatch((0, v.requestStatsEnabled)(this))
                 }
             }, {
                 key: "_send",
@@ -15083,7 +15086,7 @@
                     var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
                         i = Array.isArray(n) ? n : [n],
                         r = {
-                            namespace: y.BRIDGE_CLIENT_NAMESPACE,
+                            namespace: b.BRIDGE_CLIENT_NAMESPACE,
                             method: t,
                             args: i
                         };
@@ -15101,52 +15104,52 @@
                 key: "handleEvent",
                 value: function(e) {
                     var t = this;
-                    if ((0, l["default"])(e.data) && e.data.namespace === y.BRIDGE_HOST_NAMESPACE) switch (e.data.method) {
-                        case y.BRIDGE_REQ_SUBSCRIBE:
+                    if ((0, c["default"])(e.data) && e.data.namespace === b.BRIDGE_HOST_NAMESPACE) switch (e.data.method) {
+                        case b.BRIDGE_REQ_SUBSCRIBE:
                             this._addClient(e.source);
                             break;
-                        case y.METHOD_PLAY:
+                        case b.METHOD_PLAY:
                             this._player.play();
                             break;
-                        case y.METHOD_PAUSE:
+                        case b.METHOD_PAUSE:
                             this._player.pause();
                             break;
-                        case y.METHOD_SET_CHANNEL:
-                            this._stateStore.dispatch(f.setStream(f.TYPE_CHANNEL, e.data.args[0]));
+                        case b.METHOD_SET_CHANNEL:
+                            this._stateStore.dispatch(h.setStream(h.TYPE_CHANNEL, e.data.args[0]));
                             break;
-                        case y.METHOD_SET_VIDEO:
-                            this._stateStore.dispatch(f.setStream(f.TYPE_VIDEO, e.data.args[0]));
+                        case b.METHOD_SET_VIDEO:
+                            this._stateStore.dispatch(h.setStream(h.TYPE_VIDEO, e.data.args[0]));
                             break;
-                        case y.METHOD_SET_PLAYLIST:
-                            this._stateStore.getState().experiments.get(c.PERPETUA).then(function(n) {
-                                "yes" === n && t._stateStore.dispatch((0, p.setPlaylist)(e.data.args[0]))
+                        case b.METHOD_SET_PLAYLIST:
+                            this._stateStore.getState().experiments.get(f.PERPETUA).then(function(n) {
+                                (0, l["default"])(f.ENABLE_PERPETUA_GROUP, n) && t._stateStore.dispatch((0, _.setPlaylist)(e.data.args[0]))
                             });
                             break;
-                        case y.METHOD_SEEK:
+                        case b.METHOD_SEEK:
                             this._player.setCurrentTime(parseFloat(e.data.args[0]));
                             break;
-                        case y.METHOD_SET_QUALITY:
-                            this._stateStore.dispatch((0, h.selectQuality)(e.data.args[0]));
+                        case b.METHOD_SET_QUALITY:
+                            this._stateStore.dispatch((0, g.selectQuality)(e.data.args[0]));
                             break;
-                        case y.METHOD_SET_MUTE:
+                        case b.METHOD_SET_MUTE:
                             this._player.setMuted(!!e.data.args[0]);
                             break;
-                        case y.METHOD_SET_VOLUME:
+                        case b.METHOD_SET_VOLUME:
                             this._player.setVolume(parseFloat(e.data.args[0]));
                             break;
-                        case y.METHOD_DESTROY:
+                        case b.METHOD_DESTROY:
                             this._player.destroy()
                     }
                 }
             }, {
                 key: "_sendPlayerState",
                 value: function(e) {
-                    this._sendAll(y.BRIDGE_STATE_UPDATE, e.toJSON())
+                    this._sendAll(b.BRIDGE_STATE_UPDATE, e.toJSON())
                 }
             }, {
                 key: "_sendPlayerEvent",
                 value: function(e) {
-                    this._sendAll(y.BRIDGE_PLAYER_EVENT, e)
+                    this._sendAll(b.BRIDGE_PLAYER_EVENT, e)
                 }
             }, {
                 key: "_sendStoreState",
@@ -15160,12 +15163,12 @@
                                 videoStats: n
                             }
                         };
-                    this._sendAll(y.BRIDGE_STORE_STATE_UPDATE, i)
+                    this._sendAll(b.BRIDGE_STORE_STATE_UPDATE, i)
                 }
             }, {
                 key: "destroy",
                 value: function() {
-                    this._stateStore.dispatch((0, _.requestStatsDisabled)(this)), this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
+                    this._stateStore.dispatch((0, v.requestStatsDisabled)(this)), this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
                         return e()
                     })
                 }
@@ -15587,35 +15590,34 @@
             }
         }
 
-        function a(e, t, i, r, a, o, x) {
+        function a(e, t, i, r, a, o, l) {
             function B() {
-                var S = (0, s["default"])(x, {
-                    showInfo: x.channelInfo,
+                var k = (0, s["default"])(l, {
+                    showInfo: l.channelInfo,
                     branding: !0,
                     devcaptions: !1
                 }, {
                     showInfo: !0
                 });
-                $(t).addClass("player"), $(t).append(n(382)), o.dispatch((0, O.initializeCaptionsSettings)()), o.dispatch((0, I.initializePlaybackSettings)()), o.dispatch((0, N.initializeSettings)()), F = new u.PlayerUIState(t, o), H = new d.PlayerUIInfo(e, t, o, S), G = new f.PlayerUISeek(e, t, o), Y = new p.PlayerUIStats(t, o), q = new h.PlayerUIUpnext(e, t, o), se = new _.PlayerUIRecommendations(e, t, o), le = new C.PlayerUIError(t, o), K = new g.PlayerUILeaveDialog(e, t, i, o, S), W = new E.PlayerUILang(t, o), z = new v.PlayerUISubscribeOverlay(t, o), Q = new y.PlayerUIResume(e, r, o, S), X = new A.PlayerUISeekBarPopup(t), J = new m.PlayerUISeekBarMarkers(e, t, o, X), Z = new P.PlayerUIThumbnailPreviews(t, o, X), ee = new b.PlayerUIMutedSegments(t, o), ne = new w.AgeRestrictionOverlay(t, e, o), ie = new k.PlayerUIControlsDisplay(e, t, o), re = new c.PlayerUIControls(e, t, r, o, ie, a, S), oe = new T.PlayerUISettings(e, t, r, o, i, ie, S), ue = new M.AdOverlay(t, o);
+                $(t).addClass("player"), $(t).append(n(382)), o.dispatch((0, N.initializeCaptionsSettings)()), o.dispatch((0, L.initializePlaybackSettings)()), o.dispatch((0, R.initializeSettings)()), H = new d.PlayerUIState(t, o), G = new p.PlayerUIInfo(e, t, o, k), Y = new h.PlayerUISeek(e, t, o), q = new _.PlayerUIStats(t, o), K = new g.PlayerUIUpnext(e, t, o), le = new v.PlayerUIRecommendations(e, t, o), ue = new O.PlayerUIError(t, o), W = new y.PlayerUILeaveDialog(e, t, i, o, k), z = new T.PlayerUILang(t, o), Q = new m.PlayerUISubscribeOverlay(t, o), J = new b.PlayerUIResume(e, r, o, k), Z = new C.PlayerUISeekBarPopup(t), X = new E.PlayerUISeekBarMarkers(e, t, o, Z), ee = new w.PlayerUIThumbnailPreviews(t, o, Z), te = new S.PlayerUIMutedSegments(t, o), ie = new I.AgeRestrictionOverlay(t, e, o), re = new P.PlayerUIControlsDisplay(e, t, o), ae = new f.PlayerUIControls(e, t, r, o, re, a, k), se = new A.PlayerUISettings(e, t, r, o, i, re, k), ce = new j.AdOverlay(t, o);
                 var B = o.getState(),
-                    te = B.experiments;
-                te.get(j.PERPETUA).then(function(e) {
-                    "yes" === e && (ce = new D.PlaylistOverlay(t, o))
+                    ne = B.experiments;
+                ne.get(U.PERPETUA).then(function(e) {
+                    (0, u["default"])(U.ENABLE_PERPETUA_GROUP, e) && (de = new x.PlaylistOverlay(t, o))
                 });
-                var de = new R.ClipGenerator(t, r, o);
-                ae = new L.PlayerUIClipsEnabler(t, o, l.localStore, de), V(S), $(t).attr("data-initializing", !0), e.addEventListener(U.PLAYER_INIT, function() {
+                var fe = new D.ClipGenerator(t, r, o);
+                oe = new M.PlayerUIClipsEnabler(t, o, c.localStore, fe), F(k), $(t).attr("data-initializing", !0), e.addEventListener(V.PLAYER_INIT, function() {
                     $(t).attr("data-initializing", !1)
                 })
             }
 
-            function V(e) {
+            function F(e) {
                 var n = void 0;
-                n = e.devcaptions ? Promise.resolve("v2") : o.getState().experiments.get(j.CAPTIONS), n.then(function(e) {
-                    "v2" === e && (te = new S.PlayerUIClosedCaption(o, t)), $(t).attr("data-captions", e)
+                n = e.devcaptions ? Promise.resolve("v2") : o.getState().experiments.get(U.CAPTIONS), n.then(function(e) {
+                    "v2" === e && (ne = new k.PlayerUIClosedCaption(o, t)), $(t).attr("data-captions", e)
                 })
             }
-            var F = void 0,
-                H = void 0,
+            var H = void 0,
                 G = void 0,
                 Y = void 0,
                 q = void 0,
@@ -15636,9 +15638,10 @@
                 se = void 0,
                 le = void 0,
                 ue = void 0,
-                ce = void 0;
+                ce = void 0,
+                de = void 0;
             this.destroy = function() {
-                F.destroy(), H.destroy(), G.destroy(), Y.destroy(), q.destroy(), se.destroy(), le.destroy(), K.destroy(), W.destroy(), z.destroy(), Q.destroy(), J.destroy(), X.destroy(), Z.destroy(), ee.destroy(), ie.destroy(), re.destroy(), ne.destroy(), oe.destroy(), ae.destroy(), te && te.destroy(), se.destroy(), ue.destroy(), ce && ce.destroy()
+                H.destroy(), G.destroy(), Y.destroy(), q.destroy(), K.destroy(), le.destroy(), ue.destroy(), W.destroy(), z.destroy(), Q.destroy(), J.destroy(), X.destroy(), Z.destroy(), ee.destroy(), te.destroy(), re.destroy(), ae.destroy(), ie.destroy(), se.destroy(), oe.destroy(), ne && ne.destroy(), le.destroy(), ce.destroy(), de && de.destroy()
             }, B()
         }
         Object.defineProperty(t, "__esModule", {
@@ -15646,37 +15649,39 @@
         }), t.PlayerUI = a;
         var o = n(1),
             s = r(o),
-            l = n(245),
-            u = n(347),
-            c = n(349),
-            d = n(352),
-            f = n(353),
-            p = n(354),
-            h = n(355),
-            _ = n(356),
-            g = n(357),
-            v = n(359),
-            y = n(360),
-            m = n(363),
-            b = n(364),
-            E = n(365),
-            S = n(366),
-            T = n(368),
-            k = n(370),
-            A = n(373),
-            P = n(374),
-            C = n(375),
-            w = n(376),
-            O = n(290),
-            I = n(275),
-            N = n(351),
-            L = n(377),
-            R = n(379),
-            M = n(380),
-            D = n(381),
-            j = n(212),
-            x = n(169),
-            U = i(x)
+            l = n(49),
+            u = r(l),
+            c = n(245),
+            d = n(347),
+            f = n(349),
+            p = n(352),
+            h = n(353),
+            _ = n(354),
+            g = n(355),
+            v = n(356),
+            y = n(357),
+            m = n(359),
+            b = n(360),
+            E = n(363),
+            S = n(364),
+            T = n(365),
+            k = n(366),
+            A = n(368),
+            P = n(370),
+            C = n(373),
+            w = n(374),
+            O = n(375),
+            I = n(376),
+            N = n(290),
+            L = n(275),
+            R = n(351),
+            M = n(377),
+            D = n(379),
+            j = n(380),
+            x = n(381),
+            U = n(212),
+            B = n(169),
+            V = i(B)
     }, function(e, t, n) {
         "use strict";
 
@@ -16864,12 +16869,12 @@
                     $(".js-recommended-stream", this.$root).each(function(e, n) {
                         var i = parseInt($(n).attr("data-index"), 10) < t.numVideosVisible;
                         $(n).attr("data-visible", i)
-                    }), 1 === t.numVideosVisible ? $(".js-featured-recommendations__more-videos").attr("data-hide", !0) : $(".js-featured-recommendations__more-videos").attr("data-hide", !1)
+                    }), 1 === t.numVideosVisible ? $(".js-featured-recommendations__more-videos").attr("data-hide", !0) : $(".js-featured-recommendations__more-videos").attr("data-hide", !1);
                 }
             }, {
                 key: "transitionToMoreVideos",
                 value: function() {
-                    this.stopAutoplayCountdown(), this.hideAutoplay(), this.showView(k);
+                    this.stopAutoplayCountdown(), this.hideAutoplay(), this.showView(k)
                 }
             }, {
                 key: "destroy",
