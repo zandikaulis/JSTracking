@@ -78,7 +78,7 @@ window.SiteOptions = {
     "video_experiments": false,
     "playlist_more_info": "http://blog.twitch.tv/2015/09/vod-playlist/",
     "default_avatar_url": "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png",
-    "chat_replay_more_info": "http://blog.twitch.tv/2016/03/introducing-chat-replay/",
+    "chat_replay_more_info": null,
     "disable_theatre": false,
     "is_bits_enabled": true,
     "is_bits_staffonly_beta": false,
