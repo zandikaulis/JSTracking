@@ -17,7 +17,7 @@ if __name__ == '__main__':
          'filename': 'player.js'},
         {'url': 'https://www.twitch.tv/site_options.js',
          'filename': 'site_options.js'},
-        {'url': get_url_from_page("https://www.twitch.tv", r'"(.*/global-[a-zA-Z0-9]+.js)'),
+        {'url': 'https://web-cdn.ttvnw.net/global.js',
          'filename': 'global.js'},
         {'url': get_url_from_page("https://www.twitch.tv", r'"(.*/emberhelper-[a-zA-Z0-9]+.js)'),
          'filename': 'emberhelper.js'},
@@ -37,6 +37,11 @@ if __name__ == '__main__':
         cachebuster = random.getrandbits(100)
         jsfile['url'] += "?%x" % cachebuster
         print "Downloading", jsfile['url'], "to file", jsfile['filename']
-        src = requests.get(jsfile['url']).content
+        r = requests.get(jsfile['url'])
+        if 'last-modified' in r.headers:
+            print "Last Modified:", r.headers['last-modified']
+        else:
+            print "No Last-Modified header!"
+        src = r.content
         beatuified = jsbeautifier.beautify(src)
         open('js/%s' % jsfile['filename'], 'wb').write(beatuified)

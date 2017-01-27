@@ -3448,7 +3448,8 @@
                     var addrs = opts.addrs,
                         wsAddrs = opts.wsAddrs || [],
                         forceHost = _utilJs2["default"].urlParams.tmi_host,
-                        forcePort = parseInt(_utilJs2["default"].urlParams.tmi_port);
+                        forcePort = parseInt(_utilJs2["default"].urlParams.tmi_port),
+                        forceSecure = _utilJs2["default"].urlParams.tmi_secure === "true";
                     if (forceHost) {
                         var HOST_WHITELIST = [/^localhost$/, /\.twitch\.tv$/, /\.justin\.tv$/];
                         var rejected = true;
@@ -3462,7 +3463,7 @@
                                 wsAddrs = [{
                                     host: forceHost,
                                     port: forcePort,
-                                    protocol: this._secureWebsocketsEnabled ? "wss" : "ws"
+                                    protocol: forceSecure ? "wss" : "ws"
                                 }];
                                 break
                             }
