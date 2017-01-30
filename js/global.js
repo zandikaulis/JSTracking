@@ -16138,7 +16138,8 @@ googletag.cmd = googletag.cmd || [],
                 NEWS_FEED_REDESIGN: "05d8869f-e037-4955-b80a-7c361f9ddffb",
                 VOD_UPLOAD_UNITS_V3: "1710cf57-352c-4d09-b2c1-3d40bdf79b30",
                 FINAL_DESTINATION: "b542e7a6-6fc9-4380-a5cd-95301706904f",
-                CHOMPY: "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57"
+                CHOMPY: "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57",
+                ADOPT: "5397de92-0538-42d1-977c-11842e03c9e5"
             },
             o = {
                 "99494f77-1c7c-46c5-9b9c-a117db47d3c5": "control",
@@ -16183,6 +16184,7 @@ googletag.cmd = googletag.cmd || [],
                 "05d8869f-e037-4955-b80a-7c361f9ddffb": "no",
                 "1710cf57-352c-4d09-b2c1-3d40bdf79b30": "control",
                 "b542e7a6-6fc9-4380-a5cd-95301706904f": "channel",
+                "5397de92-0538-42d1-977c-11842e03c9e5": "no",
                 "b2925d54-cebb-4e1d-a50d-9dd2b1ea850e": "control",
                 "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57": "control"
             },
@@ -16198,6 +16200,7 @@ googletag.cmd = googletag.cmd || [],
                 DISCOVER_SHOW_COVIEWS: "show",
                 FINAL_DESTINATION: "videos",
                 CHOMPY: "experiment",
+                ADOPT: "yes",
                 ONSITE_NOTIFICATIONS: "variant1",
                 CLIPS_FEEL_IT_COMING: "variant1"
             };
@@ -16547,10 +16550,10 @@ googletag.cmd = googletag.cmd || [],
             this.googlePromise = t.getScript("//s0.2mdn.net/instream/html5/ima3.js"), this.options = e, this.$clickTracker = t(".js-clicktracker"), this.$player = t(e.player)
         };
         n.prototype.showClickTracker = function() {
-            this.$clickTracker.show(), this.$player.attr("controls", !1)
+            this.$clickTracker.show(),
+                this.$player.attr("controls", !1)
         }, n.prototype.hideClickTracker = function() {
-            this.$clickTracker.hide(),
-                this.$player.attr("controls", !0)
+            this.$clickTracker.hide(), this.$player.attr("controls", !0)
         }, n.prototype.initialize = function() {
             var e = this;
             return new RSVP.Promise(function(n, i) {
