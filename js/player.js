@@ -8550,7 +8550,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.01.30-210742+87017e772eafe7894ba8689efa9da1b8023ae165",
+                    app_version: "2017.01.30-223813+9c78fa259103ad2c4eb77873a0512cc641d686ce",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -13805,7 +13805,7 @@
         }
 
         function o(e, t) {
-            var n = "true" === m.localStore.get("ad-whitelist-" + e);
+            var n = m.localStore.get("ad-whitelist-" + e);
             return !!n && (0, h["default"])(t, function(e, t, n) {
                 return "reason_turbo" === n || "reason_channelsub" === n ? e : e && !t
             }, n)
@@ -13853,8 +13853,7 @@
                     }
                 }
                 return function(t, n, i) {
-                    return n && e(t.prototype, n), i && e(t, i),
-                        t
+                    return n && e(t.prototype, n), i && e(t, i), t
                 }
             }(),
             d = n(78),
@@ -15504,7 +15503,8 @@
             var t = {};
             if (null != e)
                 for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-            return t["default"] = e, t
+            return t["default"] = e,
+                t
         }
 
         function r(e) {
@@ -16868,12 +16868,13 @@
                     $(".js-recommended-stream", this.$root).each(function(e, n) {
                         var i = parseInt($(n).attr("data-index"), 10) < t.numVideosVisible;
                         $(n).attr("data-visible", i)
-                    }), 1 === t.numVideosVisible ? $(".js-featured-recommendations__more-videos").attr("data-hide", !0) : $(".js-featured-recommendations__more-videos").attr("data-hide", !1);
+                    }), 1 === t.numVideosVisible ? $(".js-featured-recommendations__more-videos").attr("data-hide", !0) : $(".js-featured-recommendations__more-videos").attr("data-hide", !1)
                 }
             }, {
                 key: "transitionToMoreVideos",
                 value: function() {
-                    this.stopAutoplayCountdown(), this.hideAutoplay(), this.showView(k)
+                    this.stopAutoplayCountdown(),
+                        this.hideAutoplay(), this.showView(k)
                 }
             }, {
                 key: "destroy",
