@@ -955,7 +955,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.Analytics = t.SITE_MINIPLAYER_ACTION = t.VIDEO_PLAY_MASTER_MANIFEST = t.VIDEO_PLAY_NAUTH = t.VIDEO_PLAY_OAUTH = t.VIDEO_PLAY_LOAD_START = t.REBROADCAST_TYPE = void 0;
+        }), t.Analytics = t.SITE_MINIPLAYER_ACTION = t.VIDEO_PLAY_VARIANT_MANIFEST = t.VIDEO_PLAY_MASTER_MANIFEST = t.VIDEO_PLAY_NAUTH = t.VIDEO_PLAY_OAUTH = t.VIDEO_PLAY_LOAD_START = t.REBROADCAST_TYPE = void 0;
         var s = function() {
                 function e(e, t) {
                     var n = [],
@@ -1022,7 +1022,7 @@
             D = n(170),
             j = i(D),
             x = t.REBROADCAST_TYPE = "rebroadcast",
-            U = (t.VIDEO_PLAY_LOAD_START = "video_play_load_start", t.VIDEO_PLAY_OAUTH = "video_play_oauth", t.VIDEO_PLAY_NAUTH = "video_play_nauth", t.VIDEO_PLAY_MASTER_MANIFEST = "video_play_master_manifest", t.SITE_MINIPLAYER_ACTION = "site_mini_player_action", "video_init"),
+            U = (t.VIDEO_PLAY_LOAD_START = "video_play_load_start", t.VIDEO_PLAY_OAUTH = "video_play_oauth", t.VIDEO_PLAY_NAUTH = "video_play_nauth", t.VIDEO_PLAY_MASTER_MANIFEST = "video_play_master_manifest", t.VIDEO_PLAY_VARIANT_MANIFEST = "video_play_variant_manifest", t.SITE_MINIPLAYER_ACTION = "site_mini_player_action", "video_init"),
             B = "video-play",
             V = "minute-watched",
             F = "buffer-empty",
@@ -8550,7 +8550,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.01.27-223233+1f41304eaa80d455aaeea75bb99722bd7bbad475",
+                    app_version: "2017.01.30-210742+87017e772eafe7894ba8689efa9da1b8023ae165",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -11115,7 +11115,7 @@
                 function e(t) {
                     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         i = arguments[2];
-                    r(this, e), this.stateStore = i, this.video = document.createElement("video"), this.video.autoplay = n.autoplay, this._retryCount = 0, this._retryTimeoutID = null, this.playerCoreLogLevel = n["cvp-log"] || "error", this.offline = !1, n.playsinline && (this.video.setAttribute("webkit-playsinline", ""), this.video.setAttribute("playsinline", "")), this.initialize()
+                    r(this, e), this.stateStore = i, this.video = document.createElement("video"), this.video.autoplay = n.autoplay, this._retryCount = 0, this._retryTimeoutID = null, this.playerCoreLogLevel = n["cvp-log"] || "error", this._emitVariantManifestTracking = !0, this.offline = !1, n.playsinline && (this.video.setAttribute("webkit-playsinline", ""), this.video.setAttribute("playsinline", "")), this.initialize()
                 }
                 return o(e, [{
                     key: "initialize",
@@ -11164,7 +11164,7 @@
                 }, {
                     key: "onHLSMasterParsed",
                     value: function(e) {
-                        this._retryCount = 0;
+                        this._retryCount = 0, this._emitVariantManifestTracking = !0;
                         var t = this.stateStore.getState(),
                             n = t.analytics,
                             i = t.analyticsTracker;
@@ -11184,7 +11184,16 @@
                     }
                 }, {
                     key: "onHLSVariantParsed",
-                    value: function() {}
+                    value: function() {
+                        if (this._emitVariantManifestTracking) {
+                            var e = this.stateStore.getState(),
+                                t = e.analytics,
+                                n = e.analyticsTracker;
+                            n.trackEvent(g.VIDEO_PLAY_VARIANT_MANIFEST, {
+                                time_since_load_start: Date.now() - t.playSessionStartTime
+                            }), this._emitVariantManifestTracking = !1
+                        }
+                    }
                 }, {
                     key: "_onABSFormatChange",
                     value: function(e) {
