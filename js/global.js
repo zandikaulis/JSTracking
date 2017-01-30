@@ -8451,140 +8451,6 @@ function(e, t) {
             }
         })
     }),
-    function(e) {
-        function t(t, i) {
-            function o() {
-                C.hasClass("horizontal") && (E = "horiz", A = "scrollLeft", P = "width", I = "left"), C.prepend('<div class="tse-scrollbar"><div class="drag-handle"></div></div>'), b = C.find(".tse-scrollbar:first"), x = C.find(".drag-handle:first"), i.wrapContent && D.wrap('<div class="tse-scroll-content" />'), w = C.find(".tse-scroll-content:first"), p(), i.autoHide && C.on("mouseenter", h), x.on("mousedown", r), b.on("mousedown", l), w.on("scroll", u), c(), e(window).on("resize.trackpadScollEmulator", g), i.autoHide || d()
-            }
-
-            function r(t) {
-                t.preventDefault();
-                var n = t.pageY;
-                "horiz" === E && (n = t.pageX), k = n - x.offset()[I], e(document).on("mousemove", s), e(document).on("mouseup", a)
-            }
-
-            function s(e) {
-                e.preventDefault();
-                var t = e.pageY;
-                "horiz" === E && (t = e.pageX);
-                var n = t - b.offset()[I] - k,
-                    i = n / b[P](),
-                    o = i * D[P]();
-                w[A](o)
-            }
-
-            function a() {
-                e(document).off("mousemove", s), e(document).off("mouseup", a)
-            }
-
-            function l(e) {
-                if (e.target !== x[0]) {
-                    var t = M * w[P](),
-                        n = "vert" === E ? e.originalEvent.layerY : e.originalEvent.layerX,
-                        i = x.position()[I],
-                        o = n < i ? w[A]() - t : w[A]() + t;
-                    w[A](o)
-                }
-            }
-
-            function u(e) {
-                h()
-            }
-
-            function c() {
-                var e = "height" === P ? D.outerHeight() : D.outerWidth(),
-                    t = w[A](),
-                    n = b[P](),
-                    i = n / e,
-                    o = Math.round(i * t) + 2,
-                    r = Math.floor(i * (n - 2)) - 2;
-                n < e ? ("vert" === E ? x.css({
-                    top: o,
-                    height: r
-                }) : x.css({
-                    left: o,
-                    width: r
-                }), b.show()) : b.hide()
-            }
-
-            function h() {
-                c(), d()
-            }
-
-            function d() {
-                x.addClass("visible"), i.autoHide && ("number" == typeof S && window.clearTimeout(S), S = window.setTimeout(function() {
-                    f()
-                }, 1e3))
-            }
-
-            function f() {
-                x.removeClass("visible"), "number" == typeof S && window.clearTimeout(S)
-            }
-
-            function p() {
-                "vert" === E ? (w.width(C.width() + m()), w.height(C.height())) : (w.width(C.width()), w.height(C.height() + m()), D.height(C.height()))
-            }
-
-            function m() {
-                var t = e('<div class="scrollbar-width-tester" style="width:50px;height:50px;overflow-y:scroll;position:absolute;top:-200px;left:-200px;"><div style="height:100px;"></div>');
-                e("body").append(t);
-                var n = e(t).innerWidth(),
-                    i = e("div", t).innerWidth();
-                return t.remove(), n === i && navigator.userAgent.toLowerCase().indexOf("firefox") > -1 ? 17 : n - i
-            }
-
-            function g() {
-                p(), c()
-            }
-
-            function y(e, t) {
-                return t ? void(i[e] = t) : i[e]
-            }
-
-            function v() {
-                D.insertBefore(b), b.remove(), w.remove(), D.css({
-                    height: C.height() + "px",
-                    "overflow-y": "scroll"
-                }), e(window).off("resize.trackpadScollEmulator"), _("onDestroy"), C.removeData("plugin_" + n)
-            }
-
-            function _(e) {
-                void 0 !== i[e] && i[e].call(T)
-            }
-            var w, b, x, k, S, T = t,
-                C = e(t),
-                D = C.find(".tse-content:first"),
-                M = 7 / 8,
-                E = "vert",
-                A = "scrollTop",
-                P = "height",
-                I = "top";
-            return i = e.extend({}, e.fn[n].defaults, i), o(), {
-                option: y,
-                destroy: v,
-                recalculate: g
-            }
-        }
-        var n = "TrackpadScrollEmulator";
-        e.fn[n] = function(i) {
-            if ("string" == typeof arguments[0]) {
-                var o, r = arguments[0],
-                    s = Array.prototype.slice.call(arguments, 1);
-                return this.each(function() {
-                    if (!e.data(this, "plugin_" + n) || "function" != typeof e.data(this, "plugin_" + n)[r]) throw new Error("Method " + r + " does not exist on jQuery." + n);
-                    o = e.data(this, "plugin_" + n)[r].apply(this, s)
-                }), void 0 !== o ? o : this
-            }
-            if ("object" == typeof i || !i) return this.each(function() {
-                e.data(this, "plugin_" + n) || e.data(this, "plugin_" + n, new t(this, i))
-            })
-        }, e.fn[n].defaults = {
-            onInit: function() {},
-            onDestroy: function() {},
-            wrapContent: !0,
-            autoHide: !0
-        }
-    }(jQuery),
     function(e, t, n) {
         "$:nomunge";
 
@@ -8980,7 +8846,7 @@ function(e, t) {
             this.htmlBridge.style.left = "-9999px", this.htmlBridge.style.top = "-9999px", this.htmlBridge.removeAttribute("title"), this.htmlBridge.removeAttribute("data-clipboard-text"), s(e, this.options.activeClass), e = null, this.options.text = null
         }, d.prototype.ready = function() {
             var e = this.htmlBridge.getAttribute("data-clipboard-ready");
-            return "true" === e || e === !0
+            return "true" === e || e === !0;
         }, d.prototype.reposition = function() {
             if (!e) return !1;
             var t = a(e);
@@ -9834,47 +9700,46 @@ var NotyObject = {
     showing: !1,
     shown: !1
 };
-$.notyRenderer = {},
-    $.notyRenderer.init = function(e) {
-        var t = Object.create(NotyObject).init(e);
-        return t.options.killer && $.noty.closeAll(), t.options.force ? $.noty.queue.unshift(t) : $.noty.queue.push(t), $.notyRenderer.render(), "object" == $.noty.returns ? t : t.options.id
-    }, $.notyRenderer.render = function() {
-        var e = $.noty.queue[0];
-        "object" === $.type(e) ? e.options.dismissQueue ? e.options.maxVisible > 0 ? $(e.options.layout.container.selector + " li").length < e.options.maxVisible && $.notyRenderer.show($.noty.queue.shift()) : $.notyRenderer.show($.noty.queue.shift()) : $.noty.ontap && ($.notyRenderer.show($.noty.queue.shift()), $.noty.ontap = !1) : $.noty.ontap = !0
-    }, $.notyRenderer.show = function(e) {
-        e.options.modal && ($.notyRenderer.createModalFor(e), $.notyRenderer.setModalCount(1)), e.options.custom ? 0 == e.options.custom.find(e.options.layout.container.selector).length ? e.options.custom.append($(e.options.layout.container.object).addClass("i-am-new")) : e.options.custom.find(e.options.layout.container.selector).removeClass("i-am-new") : 0 == $(e.options.layout.container.selector).length ? $("body").append($(e.options.layout.container.object).addClass("i-am-new")) : $(e.options.layout.container.selector).removeClass("i-am-new"), $.notyRenderer.setLayoutCountFor(e, 1), e.show()
-    }, $.notyRenderer.createModalFor = function(e) {
-        if (0 == $(".noty_modal").length) {
-            var t = $("<div/>").addClass("noty_modal").addClass(e.options.theme).data("noty_modal_count", 0);
-            e.options.theme.modal && e.options.theme.modal.css && t.css(e.options.theme.modal.css), t.prependTo($("body")).fadeIn("fast"), $.inArray("backdrop", e.options.closeWith) > -1 && t.on("click", function(e) {
-                $.noty.closeAll()
-            })
-        }
-    }, $.notyRenderer.getLayoutCountFor = function(e) {
-        return $(e.options.layout.container.selector).data("noty_layout_count") || 0
-    }, $.notyRenderer.setLayoutCountFor = function(e, t) {
-        return $(e.options.layout.container.selector).data("noty_layout_count", $.notyRenderer.getLayoutCountFor(e) + t)
-    }, $.notyRenderer.getModalCount = function() {
-        return $(".noty_modal").data("noty_modal_count") || 0
-    }, $.notyRenderer.setModalCount = function(e) {
-        return $(".noty_modal").data("noty_modal_count", $.notyRenderer.getModalCount() + e)
-    }, $.fn.noty = function(e) {
-        return e.custom = $(this), $.notyRenderer.init(e)
-    }, $.noty = {}, $.noty.queue = [], $.noty.ontap = !0, $.noty.layouts = {}, $.noty.themes = {}, $.noty.returns = "object", $.noty.store = {}, $.noty.get = function(e) {
-        return !!$.noty.store.hasOwnProperty(e) && $.noty.store[e]
-    }, $.noty.close = function(e) {
-        return !!$.noty.get(e) && $.noty.get(e).close()
-    }, $.noty.setText = function(e, t) {
-        return !!$.noty.get(e) && $.noty.get(e).setText(t)
-    }, $.noty.setType = function(e, t) {
-        return !!$.noty.get(e) && $.noty.get(e).setType(t)
-    }, $.noty.clearQueue = function() {
-        $.noty.queue = []
-    }, $.noty.closeAll = function() {
-        $.noty.clearQueue(), $.each($.noty.store, function(e, t) {
-            t.close()
+$.notyRenderer = {}, $.notyRenderer.init = function(e) {
+    var t = Object.create(NotyObject).init(e);
+    return t.options.killer && $.noty.closeAll(), t.options.force ? $.noty.queue.unshift(t) : $.noty.queue.push(t), $.notyRenderer.render(), "object" == $.noty.returns ? t : t.options.id
+}, $.notyRenderer.render = function() {
+    var e = $.noty.queue[0];
+    "object" === $.type(e) ? e.options.dismissQueue ? e.options.maxVisible > 0 ? $(e.options.layout.container.selector + " li").length < e.options.maxVisible && $.notyRenderer.show($.noty.queue.shift()) : $.notyRenderer.show($.noty.queue.shift()) : $.noty.ontap && ($.notyRenderer.show($.noty.queue.shift()), $.noty.ontap = !1) : $.noty.ontap = !0
+}, $.notyRenderer.show = function(e) {
+    e.options.modal && ($.notyRenderer.createModalFor(e), $.notyRenderer.setModalCount(1)), e.options.custom ? 0 == e.options.custom.find(e.options.layout.container.selector).length ? e.options.custom.append($(e.options.layout.container.object).addClass("i-am-new")) : e.options.custom.find(e.options.layout.container.selector).removeClass("i-am-new") : 0 == $(e.options.layout.container.selector).length ? $("body").append($(e.options.layout.container.object).addClass("i-am-new")) : $(e.options.layout.container.selector).removeClass("i-am-new"), $.notyRenderer.setLayoutCountFor(e, 1), e.show()
+}, $.notyRenderer.createModalFor = function(e) {
+    if (0 == $(".noty_modal").length) {
+        var t = $("<div/>").addClass("noty_modal").addClass(e.options.theme).data("noty_modal_count", 0);
+        e.options.theme.modal && e.options.theme.modal.css && t.css(e.options.theme.modal.css), t.prependTo($("body")).fadeIn("fast"), $.inArray("backdrop", e.options.closeWith) > -1 && t.on("click", function(e) {
+            $.noty.closeAll()
         })
-    };
+    }
+}, $.notyRenderer.getLayoutCountFor = function(e) {
+    return $(e.options.layout.container.selector).data("noty_layout_count") || 0
+}, $.notyRenderer.setLayoutCountFor = function(e, t) {
+    return $(e.options.layout.container.selector).data("noty_layout_count", $.notyRenderer.getLayoutCountFor(e) + t)
+}, $.notyRenderer.getModalCount = function() {
+    return $(".noty_modal").data("noty_modal_count") || 0
+}, $.notyRenderer.setModalCount = function(e) {
+    return $(".noty_modal").data("noty_modal_count", $.notyRenderer.getModalCount() + e)
+}, $.fn.noty = function(e) {
+    return e.custom = $(this), $.notyRenderer.init(e)
+}, $.noty = {}, $.noty.queue = [], $.noty.ontap = !0, $.noty.layouts = {}, $.noty.themes = {}, $.noty.returns = "object", $.noty.store = {}, $.noty.get = function(e) {
+    return !!$.noty.store.hasOwnProperty(e) && $.noty.store[e]
+}, $.noty.close = function(e) {
+    return !!$.noty.get(e) && $.noty.get(e).close()
+}, $.noty.setText = function(e, t) {
+    return !!$.noty.get(e) && $.noty.get(e).setText(t)
+}, $.noty.setType = function(e, t) {
+    return !!$.noty.get(e) && $.noty.get(e).setType(t)
+}, $.noty.clearQueue = function() {
+    $.noty.queue = []
+}, $.noty.closeAll = function() {
+    $.noty.clearQueue(), $.each($.noty.store, function(e, t) {
+        t.close()
+    })
+};
 var windowAlert = window.alert;
 $.noty.consumeAlert = function(e) {
         window.alert = function(t) {
@@ -12092,8 +11957,7 @@ function(e) {
         }, e.validateYear = function(t) {
             return e._validate(t, 0, 9999, "year")
         }, t.set = function(t) {
-            return e.validateMillisecond(t.millisecond) && this.addMilliseconds(t.millisecond - this.getMilliseconds()), e.validateSecond(t.second) && this.addSeconds(t.second - this.getSeconds()), e.validateMinute(t.minute) && this.addMinutes(t.minute - this.getMinutes()), e.validateHour(t.hour) && this.addHours(t.hour - this.getHours()), e.validateMonth(t.month) && this.addMonths(t.month - this.getMonth()), e.validateYear(t.year) && this.addYears(t.year - this.getFullYear()), e.validateDay(t.day, this.getFullYear(), this.getMonth()) && this.addDays(t.day - this.getDate()), t.timezone && this.setTimezone(t.timezone), t.timezoneOffset && this.setTimezoneOffset(t.timezoneOffset), t.week && e._validate(t.week, 0, 53, "week") && this.setWeek(t.week),
-                this
+            return e.validateMillisecond(t.millisecond) && this.addMilliseconds(t.millisecond - this.getMilliseconds()), e.validateSecond(t.second) && this.addSeconds(t.second - this.getSeconds()), e.validateMinute(t.minute) && this.addMinutes(t.minute - this.getMinutes()), e.validateHour(t.hour) && this.addHours(t.hour - this.getHours()), e.validateMonth(t.month) && this.addMonths(t.month - this.getMonth()), e.validateYear(t.year) && this.addYears(t.year - this.getFullYear()), e.validateDay(t.day, this.getFullYear(), this.getMonth()) && this.addDays(t.day - this.getDate()), t.timezone && this.setTimezone(t.timezone), t.timezoneOffset && this.setTimezoneOffset(t.timezoneOffset), t.week && e._validate(t.week, 0, 53, "week") && this.setWeek(t.week), this
         }, t.moveToFirstDayOfMonth = function() {
             return this.set({
                 day: 1
@@ -13442,7 +13306,7 @@ function(e) {
         function T(e) {
             var t, n;
             for (n in e) t = e[n], S(t) ? this[n] = t : this["_" + n] = t;
-            this._config = e, this._ordinalParseLenient = new RegExp(this._ordinalParse.source + "|" + /\d{1,2}/.source)
+            this._config = e, this._ordinalParseLenient = new RegExp(this._ordinalParse.source + "|" + /\d{1,2}/.source);
         }
 
         function C(e, t) {
@@ -14529,7 +14393,7 @@ function(e) {
 
         function Qn(e, t, n, i) {
             var o = Ft(t, n);
-            return e._milliseconds += i * o._milliseconds, e._days += i * o._days, e._months += i * o._months, e._bubble();
+            return e._milliseconds += i * o._milliseconds, e._days += i * o._days, e._months += i * o._months, e._bubble()
         }
 
         function Gn(e, t) {
@@ -16550,8 +16414,7 @@ googletag.cmd = googletag.cmd || [],
             this.googlePromise = t.getScript("//s0.2mdn.net/instream/html5/ima3.js"), this.options = e, this.$clickTracker = t(".js-clicktracker"), this.$player = t(e.player)
         };
         n.prototype.showClickTracker = function() {
-            this.$clickTracker.show(),
-                this.$player.attr("controls", !1)
+            this.$clickTracker.show(), this.$player.attr("controls", !1)
         }, n.prototype.hideClickTracker = function() {
             this.$clickTracker.hide(), this.$player.attr("controls", !0)
         }, n.prototype.initialize = function() {
@@ -16634,7 +16497,7 @@ googletag.cmd = googletag.cmd || [],
                 r = e, r.addUpdateListener(f), n.player.setChromecastConnected(!0, r.receiver.friendlyName)
             },
             g = function(e, t) {
-                o = t, o.addUpdateListener(y.bind(this, t))
+                o = t, o.addUpdateListener(y.bind(this, t));
             },
             y = function(e, t) {
                 t ? r.media.length && e === r.media[0] && (e.playerState === chrome.cast.media.PlayerState.PAUSED ? (i = e.media.customData.channel, n.player.togglePlayPause(!0)) : e.playerState === chrome.cast.media.PlayerState.PLAYING && n.player.togglePlayPause(!1)) : (e.removeUpdateListener(y), e.media.customData.channel.toUpperCase() === window.location.pathname.substring(1).toUpperCase() && (i && i === e.media.customData.channel ? (i = "", n.player.togglePlayPause(!1)) : n.player.setChromecastConnected(!1)))
@@ -17761,7 +17624,8 @@ var Base64 = {
         return t
     },
     _utf8_decode: function(e) {
-        for (var t = "", n = 0, i = c1 = c2 = 0; n < e.length;) i = e.charCodeAt(n), i < 128 ? (t += String.fromCharCode(i), n++) : i > 191 && i < 224 ? (c2 = e.charCodeAt(n + 1), t += String.fromCharCode((31 & i) << 6 | 63 & c2), n += 2) : (c2 = e.charCodeAt(n + 1), c3 = e.charCodeAt(n + 2), t += String.fromCharCode((15 & i) << 12 | (63 & c2) << 6 | 63 & c3), n += 3);
+        for (var t = "", n = 0, i = c1 = c2 = 0; n < e.length;) i = e.charCodeAt(n), i < 128 ? (t += String.fromCharCode(i), n++) : i > 191 && i < 224 ? (c2 = e.charCodeAt(n + 1), t += String.fromCharCode((31 & i) << 6 | 63 & c2), n += 2) : (c2 = e.charCodeAt(n + 1), c3 = e.charCodeAt(n + 2), t += String.fromCharCode((15 & i) << 12 | (63 & c2) << 6 | 63 & c3),
+            n += 3);
         return t
     }
 };
@@ -18259,5 +18123,136 @@ var Base64 = {
                 if (!e || 401 !== e.status) throw e
             }), t.user.isLoggedIn() || (e("#user_display_name").hide(), e("#user_login").show()), "undefined" != typeof PP && "directory" !== window.SitePageType && (["channel", "video"].indexOf(window.SitePageType) === -1 && t.tracking.gaq.trackPageView(), t.tracking.mixpanel.trackDiscovery())
         })
-    }(jQuery, Twitch);
+    }(jQuery, Twitch),
+    function(e) {
+        function t(t, i) {
+            function o() {
+                C.hasClass("horizontal") && (M = "horiz", E = "scrollLeft", A = "width", P = "left"), C.prepend('<div class="tse-scrollbar"><div class="drag-handle"></div></div>'), b = C.find(".tse-scrollbar"), x = C.find(".drag-handle"), i.wrapContent && D.wrap('<div class="tse-scroll-content" />'), w = C.find(".tse-scroll-content"), f(), p(), C.on("mouseenter", c), x.on("mousedown", r), w.on("scroll", l), u()
+            }
+
+            function r(t) {
+                t.preventDefault();
+                var n = t.pageY;
+                "horiz" === M && (n = t.pageX), k = n - x.offset()[P], e(document).on("mousemove", s), e(document).on("mouseup", a)
+            }
+
+            function s(e) {
+                e.preventDefault();
+                var t = e.pageY;
+                "horiz" === M && (t = e.pageX);
+                var n = t - b.offset()[P] - k,
+                    i = n / b[A](),
+                    o = i * D[A]();
+                w[E](o)
+            }
+
+            function a() {
+                e(document).off("mousemove", s), e(document).off("mouseup", a)
+            }
+
+            function l(e) {
+                c()
+            }
+
+            function u() {
+                var e = D[A](),
+                    t = w[E](),
+                    n = b[A](),
+                    i = n / e,
+                    o = Math.round(i * t) + 2,
+                    r = Math.floor(i * (n - 2)) - 2;
+                n < e ? ("vert" === M ? x.css({
+                    top: o,
+                    height: r
+                }) : x.css({
+                    left: o,
+                    width: r
+                }), b.show()) : b.hide()
+            }
+
+            function c() {
+                u(), h()
+            }
+
+            function h() {
+                x.addClass("visible"), "number" == typeof S && window.clearTimeout(S), S = window.setTimeout(function() {
+                    d()
+                }, 1e3)
+            }
+
+            function d() {
+                x.removeClass("visible"), "number" == typeof S && window.clearTimeout(S)
+            }
+
+            function f() {
+                "rightAndBottom" === i.scrollbarHideStrategy && ("vert" === M ? w.css({
+                    right: "-" + m() + "px"
+                }) : w.css({
+                    bottom: "-" + m() + "px"
+                }))
+            }
+
+            function p() {
+                "vert" === M ? (w.width(C.width() + m()), w.height(C.height())) : (w.width(C.width()), w.height(C.height() + m()), D.height(C.height()))
+            }
+
+            function m() {
+                var t = e('<div class="scrollbar-width-tester" style="width:50px;height:50px;overflow-y:scroll;position:absolute;top:-200px;left:-200px;"><div style="height:100px;"></div>');
+                e("body").append(t);
+                var n = e(t).innerWidth(),
+                    i = e("div", t).innerWidth();
+                return t.remove(), n - i
+            }
+
+            function g() {
+                p(), u()
+            }
+
+            function y(e, t) {
+                return t ? void(i[e] = t) : i[e]
+            }
+
+            function v() {
+                D.insertBefore(b), b.remove(), w.remove(), D.css({
+                    height: C.height() + "px",
+                    "overflow-y": "scroll"
+                }), _("onDestroy"), C.removeData("plugin_" + n)
+            }
+
+            function _(e) {
+                void 0 !== i[e] && i[e].call(T)
+            }
+            var w, b, x, k, S, T = t,
+                C = e(t),
+                D = C.find(".tse-content"),
+                M = "vert",
+                E = "scrollTop",
+                A = "height",
+                P = "top";
+            return i = e.extend({}, e.fn[n].defaults, i), o(), {
+                option: y,
+                destroy: v,
+                recalculate: g
+            }
+        }
+        var n = "TrackpadScrollEmulator";
+        e.fn[n] = function(i) {
+            if ("string" == typeof arguments[0]) {
+                var o, r = arguments[0],
+                    s = Array.prototype.slice.call(arguments, 1);
+                return this.each(function() {
+                    if (!e.data(this, "plugin_" + n) || "function" != typeof e.data(this, "plugin_" + n)[r]) throw new Error("Method " + r + " does not exist on jQuery." + n);
+                    o = e.data(this, "plugin_" + n)[r].apply(this, s)
+                }), void 0 !== o ? o : this
+            }
+            if ("object" == typeof i || !i) return this.each(function() {
+                e.data(this, "plugin_" + n) || e.data(this, "plugin_" + n, new t(this, i))
+            })
+        }, e.fn[n].defaults = {
+            onInit: function() {},
+            onDestroy: function() {},
+            wrapContent: !0,
+            scrollbarHideStrategy: "widthAndHeight"
+        }
+    }(jQuery);
 //# sourceMappingURL=global.map
