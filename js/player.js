@@ -8543,7 +8543,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.01.31-212347+3ded50f6685201af91e1c0f96d3e5ed8a79f0b76",
+                    app_version: "2017.01.31-224644+c5c6e7c03e1281825d50b5c7056f5fc1533e9d6d",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -24415,6 +24415,7 @@
             "Decrease Size": "Decrease Size",
             Select: "Select",
             "Audio and video stutter": "Audio and video stutter",
+            "Leave feedback?": "Leave feedback?",
             "Video stutters, but audio is fine": "Video stutters, but audio is fine",
             "Video is completely black or doesn't load": "Video is completely black or doesn't load",
             "Audio and video aren't synced": "Audio and video aren't synced",
@@ -24470,7 +24471,18 @@
             "Playing in {{timeRemaining}} second_plural": "Playing in {{timeRemaining}} seconds",
             "Mini Player": "Mini Player",
             ON: "ON",
-            OFF: "OFF"
+            OFF: "OFF",
+            "By {{author}}": "By {{author}}",
+            "{{count}} video": "{{count}} video",
+            "{{count}} video_plural": "{{count}} videos",
+            "{{count}} minute": "{{count}} minute",
+            "{{count}} minute_plural": "{{count}} minutes",
+            "{{count}} hour": "{{count}} hour",
+            "{{count}} hour_plural": "{{count}} hours",
+            "{{hoursText}} and {{minutesText}}": "{{hoursText}} and {{minutesText}}",
+            "{{currentPosition}}/{{totalVideos}} video": "{{currentPosition}}/{{totalVideos}} video",
+            "{{currentPosition}}/{{totalVideos}} video_plural": "{{currentPosition}}/{{totalVideos}} videos",
+            "Video unavailable": "Video unavailable"
         }
     }, function(e, t, n) {
         "use strict";
