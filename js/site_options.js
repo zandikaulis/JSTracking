@@ -348,6 +348,16 @@ window.SiteOptions = {
                 "value": "off"
             }]
         },
+        "2f6b028c-c2a5-462c-8daf-3bcb394839bb": {
+            "name": "android_playercore",
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "active"
+            }]
+        },
         "2f8210be-a6c6-43b1-9f6a-4b7cc7ef93c0": {
             "name": "coview forced variety",
             "groups": [{
