@@ -8567,7 +8567,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.02.01-013507+66e90387cfc3f20578d98689bcb10fa464301d1c",
+                    app_version: "2017.02.01-014923+91cac3cc5b7c6dc384efdc65b1b0940719ad9d41",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -25743,16 +25743,16 @@
         }
 
         function a(e) {
-            var t = (0, c.fetch)({
-                url: y + "channels.json",
+            var t = (0, f.fetch)({
+                url: S + "channels.json",
                 dataType: "json"
             });
-            return Promise.all([t, (0, d.videoInfo)(e)]).then(function(t) {
-                var n = u(t, 2),
+            return Promise.all([t, (0, p.videoInfo)(e)]).then(function(t) {
+                var n = d(t, 2),
                     i = n[0],
                     r = n[1];
-                return i.indexOf(r.channel.name) === -1 ? Promise.reject("Current channel does not have VCA marker") : (0, c.fetch)({
-                    url: "" + y + e + ".json",
+                return i.indexOf(r.channel.name) === -1 ? Promise.reject("Current channel does not have VCA marker") : (0, f.fetch)({
+                    url: "" + S + e + ".json",
                     dataType: "json"
                 })
             }).then(o)
@@ -25760,23 +25760,12 @@
 
         function o(e) {
             if (null === e) return Promise.reject(new Error("Raw VCA marker data not available"));
-            var t = (0, p["default"])(e.data.tags, function(e) {
-                    switch (e.game_type) {
-                        case m:
-                            return E;
-                        case b:
-                            switch (e.game_data.type) {
-                                case 0:
-                                    return T;
-                                case 1:
-                                    return S
-                            }
-                    }
-                    return k
-                }),
-                n = (0, v["default"])((0, _["default"])(t, function(t, n) {
-                    return t.map(function(t, i) {
-                        var r = A[n] || P;
+            var t = (0, _["default"])(e.data.tags, s),
+                n = (0, E["default"])((0, m["default"])(t, function(t, n) {
+                    return t.sort(function(e, t) {
+                        return e.start_sec - t.start_sec
+                    }).map(function(t, i) {
+                        var r = L[n];
                         return r(t, i, e.data)
                     })
                 }));
@@ -25787,20 +25776,47 @@
             })
         }
 
-        function s(e, t, n) {
-            return null === e.thumbnail_index ? C : {
-                imageURL: "" + y + n.thumbnail_sheet,
-                x: e.thumbnail_index[1] * n.thumbnail_size[0],
-                y: e.thumbnail_index[0] * n.thumbnail_size[1],
-                width: n.thumbnail_size[0],
-                height: n.thumbnail_size[1],
-                cols: n.sheet_dimensions[1]
+        function s(e) {
+            switch (e.game_type) {
+                case T:
+                    if (0 === e.game_data.type) return C;
+                    break;
+                case P:
+                    if (0 === e.game_data.type) return I;
+                    break;
+                case A:
+                    if (0 === e.game_data.type) return O;
+                    break;
+                case k:
+                    if (0 === e.game_data.type) return w
+            }
+            return N
+        }
+
+        function l(e, t, n) {
+            var i = {
+                title: "Match " + (t + 1),
+                info: "",
+                startTime: e.start_sec,
+                thumbnail: u(e, n)
+            };
+            return i
+        }
+
+        function u(e, t) {
+            return null === e.thumbnail_index ? R : {
+                imageURL: "" + S + t.thumbnail_sheet,
+                x: e.thumbnail_index[1] * t.thumbnail_size[0],
+                y: e.thumbnail_index[0] * t.thumbnail_size[1],
+                width: t.thumbnail_size[0],
+                height: t.thumbnail_size[1],
+                cols: t.sheet_dimensions[1]
             }
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var l, u = function() {
+        var c, d = function() {
             function e(e, t) {
                 var n = [],
                     i = !0,
@@ -25826,42 +25842,34 @@
             }
         }();
         t.getVCAMarkers = a;
-        var c = n(190),
-            d = n(191),
-            f = n(179),
-            p = i(f),
-            h = n(188),
+        var f = n(190),
+            p = n(191),
+            h = n(179),
             _ = i(h),
-            g = n(70),
+            g = n(78),
             v = i(g),
-            y = "https://clipmn.twitch.tv/prod/",
-            m = "lol",
-            b = "hs",
-            E = "leagueOfLegendTags",
-            S = "hearthStoneOpeningTags",
-            T = "hearthStoneMatchTags",
-            k = "nonTypedTags",
-            A = (l = {}, r(l, E, function(e, t, n) {
-                var i = {
-                    title: "Match " + (t + 1),
-                    info: "",
-                    startTime: e.start_sec,
-                    thumbnail: s(e, t, n)
-                };
-                return i
-            }), r(l, T, function(e, t, n) {
-                var i = {
-                    title: "Match " + (t + 1),
-                    info: "<strong>" + e.game_data.characters[0] + "</strong> vs " + e.game_data.characters[1],
-                    startTime: e.start_sec,
-                    thumbnail: s(e, t, n)
-                };
-                return i
-            }), l),
-            P = function() {
+            y = n(188),
+            m = i(y),
+            b = n(70),
+            E = i(b),
+            S = "https://clipmn.twitch.tv/prod/",
+            T = "lol",
+            k = "hs",
+            A = "csgo",
+            P = "rl",
+            C = "leagueOfLegendTags",
+            w = "hearthStoneMatchTags",
+            O = "counterStrikeMatchTags",
+            I = "rocketLeagueMatchTags",
+            N = "nonTypedTags",
+            L = (c = {}, r(c, C, l), r(c, I, l), r(c, O, l), r(c, w, function(e, t, n) {
+                return (0, v["default"])(l(e, t, n), {
+                    info: "<strong>" + e.game_data.characters[0] + "</strong> vs " + e.game_data.characters[1]
+                })
+            }), r(c, N, function() {
                 return null
-            },
-            C = {
+            }), c),
+            R = {
                 imageURL: "",
                 x: 0,
                 y: 0,
