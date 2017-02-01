@@ -583,10 +583,10 @@ window.SiteOptions = {
         "5397de92-0538-42d1-977c-11842e03c9e5": {
             "name": "adopt",
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "yes"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "no"
             }]
         },
