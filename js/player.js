@@ -8568,7 +8568,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.02.01-020224+745e5a8549e6aa63e6d2874f41e3c9e0d983ba10",
+                    app_version: "2017.02.01-181230+aeac1e4f6d062caf4c6b5652ccd11f5c2cde9897",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -19698,29 +19698,35 @@
         }
 
         function r(e) {
-            return /\/\/(www|player)\.twitch\.tv/.test(e) ? u : /\/\/betaplayer\.twitch\.tv/.test(e) ? d : c
+            if (/\/\/(www|player)\.twitch\.tv/.test(e)) return c;
+            if (/\/\/betaplayer\.twitch\.tv/.test(e)) return f;
+            var t = u.cookie.get(p);
+            return t ? t : d
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.ClipGenerator = t.CLIPS_FIXED_OFFSET = void 0;
+        }), t.ClipGenerator = t.CLIPS_FIXED_OFFSET = t.CLIPS_URL_COOKIE_KEY = t.ALPHA_CLIPS_URL = t.STAGING_CLIPS_URL = t.PRODUCTION_CLIPS_URL = void 0;
         var a = function() {
-                function e(e, t) {
-                    for (var n = 0; n < t.length; n++) {
-                        var i = t[n];
-                        i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
-                    }
+            function e(e, t) {
+                for (var n = 0; n < t.length; n++) {
+                    var i = t[n];
+                    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
                 }
-                return function(t, n, i) {
-                    return n && e(t.prototype, n), i && e(t, i), t
-                }
-            }(),
-            o = n(158),
+            }
+            return function(t, n, i) {
+                return n && e(t.prototype, n), i && e(t, i), t
+            }
+        }();
+        t.getClipsUrl = r;
+        var o = n(158),
             s = n(210),
             l = n(278),
-            u = "https://clips.twitch.tv",
-            c = "https://clips-staging.twitch.tv",
-            d = "https://clips-alpha.twitch.tv",
-            f = t.CLIPS_FIXED_OFFSET = 8;
+            u = n(257),
+            c = t.PRODUCTION_CLIPS_URL = "https://clips.twitch.tv",
+            d = t.STAGING_CLIPS_URL = "https://clips-staging.twitch.tv",
+            f = t.ALPHA_CLIPS_URL = "https://clips-alpha.twitch.tv",
+            p = t.CLIPS_URL_COOKIE_KEY = "clips-staging",
+            h = t.CLIPS_FIXED_OFFSET = 8;
         t.ClipGenerator = function() {
             function e(t, n, a) {
                 i(this, e), this._state = n, this._stateStore = a, this._$createClipPlayerBackendType = $(".js-create-clip-player-backend-type", t), this._$createClipChannel = $(".js-create-clip-channel", t), this._$createClipSegment = $(".js-create-clip-segment", t), this._$createClipOffset = $(".js-create-clip-offset", t), this._$createClipBroadcastId = $(".js-create-clip-broadcast_id", t), this._$createClipVodId = $(".js-create-clip-vod_id", t), this._$createClipPlaySessionId = $(".js-create-clip-play_session_id", t), this._$createClipForm = $(".js-create-clip-form", t);
@@ -19735,7 +19741,7 @@
                         n = e.streamMetadata,
                         i = t.contentType,
                         r = n.channel.name;
-                    i === s.CONTENT_MODE_VOD ? this._recordVodClip(r) : i === o.CONTENT_MODE_LIVE && this._recordLiveClip(r);
+                    i === s.CONTENT_MODE_VOD ? this._recordVodClip(r) : i === o.CONTENT_MODE_LIVE && this._recordLiveClip(r)
                 }
             }, {
                 key: "_recordVodClip",
@@ -19770,8 +19776,8 @@
                         d = void 0;
                     if (s === l.BACKEND_PLAYER_CORE) d = o.elapsedTime();
                     else {
-                        var p = i.stream_time;
-                        d = p + this._state.currentTime - f
+                        var f = i.stream_time;
+                        d = f + this._state.currentTime - h
                     }
                     this._submitFormWithValues({
                         playerBackendType: s,
