@@ -7777,9 +7777,9 @@
         function l(e) {
             var t, n;
             return new f["default"]({
-                defaults: (t = {}, r(t, y, "no"), r(t, m, "off"), r(t, b, "no"), r(t, E, "no"), r(t, S, "no"), r(t, T, "no"), r(t, k, "no"), r(t, A, "no"), r(t, P, "no"), r(t, C, "no"), r(t, w, "no"), r(t, I, "1.0"), r(t, N, "no"), r(t, L, "no"), r(t, R, "control"), r(t, M, "no"), r(t, D, "no"), r(t, O, "no"), t),
+                defaults: (t = {}, r(t, y, "no"), r(t, m, "off"), r(t, b, "no"), r(t, E, "no"), r(t, S, "no"), r(t, T, "no"), r(t, k, "no"), r(t, A, "no"), r(t, P, "no"), r(t, C, "no"), r(t, w, "no"), r(t, I, "1.0"), r(t, N, "no"), r(t, L, "no"), r(t, R, "control"), r(t, M, "no"), r(t, D, "no"), r(t, j, "no"), r(t, O, "no"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, r(n, m, a("v2")), r(n, b, a("yes")), r(n, E, o(["US"])), r(n, S, o(["GB"])), r(n, T, o(["DE"])), r(n, k, o(["FR"])), r(n, A, o(["SE"])), r(n, P, o(["BE", "DK", "FI", "NL", "NO", "PL"])), r(n, C, o(["CA"])), r(n, w, o(["AU", "NZ"])), r(n, L, a("yes")), r(n, D, a("yes")), r(n, O, a("yes")), n),
+                overrides: (n = {}, r(n, m, a("v2")), r(n, b, a("yes")), r(n, E, o(["US"])), r(n, S, o(["GB"])), r(n, T, o(["DE"])), r(n, k, o(["FR"])), r(n, A, o(["SE"])), r(n, P, o(["BE", "DK", "FI", "NL", "NO", "PL"])), r(n, C, o(["CA"])), r(n, w, o(["AU", "NZ"])), r(n, L, a("yes")), r(n, D, a("yes")), r(n, j, a("yes")), r(n, O, a("yes")), n),
                 platform: "web",
                 login: e.login,
                 provider: new h["default"](h["default"].SERVICE_URL),
@@ -7788,7 +7788,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.ENABLE_PERPETUA_GROUP = t.ENABLE_ABS_GROUP = t.NO_ABS_WITH_V12 = t.ABS_FIRST_TIME_GROUP_B = t.ABS_FIRST_TIME_GROUP_A = t.ABS_FORCED_GROUP = t.GAME_CHANGE_MARKERS = t.VP_QOS_TEST = t.PERPETUA = t.DETERMINATION = t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.VCA_MARKERS = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.IN_PLAYER_RECOMMENDATIONS = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
+        }), t.ENABLE_PERPETUA_GROUP = t.ENABLE_ABS_GROUP = t.NO_ABS_WITH_V12 = t.ABS_FIRST_TIME_GROUP_B = t.ABS_FIRST_TIME_GROUP_A = t.ABS_FORCED_GROUP = t.GAME_CHANGE_MARKERS = t.ADOPT = t.VP_QOS_TEST = t.PERPETUA = t.DETERMINATION = t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.VCA_MARKERS = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.IN_PLAYER_RECOMMENDATIONS = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
         var u = n(49),
             c = i(u),
             d = n(240),
@@ -7815,11 +7815,12 @@
             L = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
             R = t.PERPETUA = "af8f152a-f618-416e-8b79-d6ac30479018",
             M = t.VP_QOS_TEST = "711aaaf6-61c0-4cc4-9469-0dfc9908785a",
-            D = t.GAME_CHANGE_MARKERS = "e8c5cf6c-5259-446b-aef1-4e33747b3b93",
-            j = t.ABS_FORCED_GROUP = "yes-forced",
-            x = t.ABS_FIRST_TIME_GROUP_A = "yes-ft-a",
-            U = t.ABS_FIRST_TIME_GROUP_B = "yes-ft-b";
-        t.NO_ABS_WITH_V12 = "no-with-1.2", t.ENABLE_ABS_GROUP = Object.freeze([j, x, U]), t.ENABLE_PERPETUA_GROUP = Object.freeze(["early", "mid"])
+            D = t.ADOPT = "5397de92-0538-42d1-977c-11842e03c9e5",
+            j = t.GAME_CHANGE_MARKERS = "e8c5cf6c-5259-446b-aef1-4e33747b3b93",
+            x = t.ABS_FORCED_GROUP = "yes-forced",
+            U = t.ABS_FIRST_TIME_GROUP_A = "yes-ft-a",
+            B = t.ABS_FIRST_TIME_GROUP_B = "yes-ft-b";
+        t.NO_ABS_WITH_V12 = "no-with-1.2", t.ENABLE_ABS_GROUP = Object.freeze([x, U, B]), t.ENABLE_PERPETUA_GROUP = Object.freeze(["early", "mid"])
     }, function(e, t, n) {
         function i(e) {
             var t = r(e);
@@ -8567,7 +8568,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.02.01-014923+91cac3cc5b7c6dc384efdc65b1b0940719ad9d41",
+                    app_version: "2017.02.01-020224+745e5a8549e6aa63e6d2874f41e3c9e0d983ba10",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -13855,10 +13856,10 @@
 
         function l(e) {
             var t = {
-                reason_short_vod: e.adType === _.PREROLL && e.contentType === y.CONTENT_MODE_VOD && e.vod.duration >= 0 && e.vod.duration < E,
+                reason_short_vod: e.adType === _.PREROLL && e.contentType === y.CONTENT_MODE_VOD && e.vod.duration >= 0 && e.vod.duration < S,
                 reason_vod_creator: e.adType === _.PREROLL && e.contentType === y.CONTENT_MODE_VOD && e.login === e.channel,
                 reason_turbo: Boolean(e.turboToken),
-                reason_ratelimit: e.adType === _.PREROLL && e.requestTime - e.lastAdDisplay < b,
+                reason_ratelimit: e.adType === _.PREROLL && e.requestTime - e.lastAdDisplay < E,
                 reason_channelsub: Boolean(e.chansubToken) && e.hasAdFreeSubscription,
                 reason_channeladfree: e.adType === _.PREROLL && !e.prerollsEnabled || e.adType === _.POSTROLL && !e.postrollsEnabled,
                 reason_frontpage: e.playerType === g.PLAYER_FRONTPAGE,
@@ -13896,8 +13897,9 @@
             v = n(167),
             y = n(210),
             m = n(237),
-            b = 3e5,
-            E = 60;
+            b = n(239),
+            E = 3e5,
+            S = 60;
         t.DecliningAdsManager = function() {
             function e(t, n) {
                 a(this, e), this._stateStore = t, this._adManager = n, this._streamRollTypes = {}
@@ -13910,20 +13912,24 @@
             }, {
                 key: "requestAds",
                 value: function(e) {
-                    var t = this._stateStore.getState(),
-                        n = t.window;
+                    var t = this,
+                        n = this._stateStore.getState(),
+                        i = n.window;
                     if (!this._streamRollTypes.hasOwnProperty(e.channel)) {
-                        var i;
-                        this._streamRollTypes[e.channel] = (i = {}, r(i, _.PREROLL, !1), r(i, _.MIDROLL, !1), r(i, _.POSTROLL, !1), i)
+                        var a;
+                        this._streamRollTypes[e.channel] = (a = {}, r(a, _.PREROLL, !1), r(a, _.MIDROLL, !1), r(a, _.POSTROLL, !1), a)
                     }
-                    var a = l(e, this._streamRollTypes[e.channel]),
-                        u = (0, h["default"])(a, function(e, t) {
+                    var u = l(e, this._streamRollTypes[e.channel]),
+                        c = (0, h["default"])(u, function(e, t) {
                             return e || t
                         }, !1),
-                        c = (0, v.parseUri)(n.location.href);
-                    (c.queryKey.hasOwnProperty("force_preroll") || c.queryKey.hasOwnProperty("force_midroll")) && (u = !1);
-                    var d = o(e.channel, a);
-                    d ? (a.reason_turbo && (a.reason_channelsub = !1, s(this._stateStore.getState(), e, a)), e.onAdWhitelist = !0, this._adManager.requestAds(e), this._streamRollTypes[e.channel][e.adType] = !0) : u ? s(this._stateStore.getState(), e, a) : (this._adManager.requestAds(e), this._streamRollTypes[e.channel][e.adType] = !0)
+                        d = (0, v.parseUri)(i.location.href);
+                    (d.queryKey.hasOwnProperty("force_preroll") || d.queryKey.hasOwnProperty("force_midroll")) && (c = !1);
+                    var f = o(e.channel, u),
+                        p = this._stateStore.getState().experiments.get(b.ADOPT);
+                    return p.then(function(n) {
+                        f && "yes" === n ? (u.reason_turbo && (u.reason_channelsub = !1, s(t._stateStore.getState(), e, u)), e.onAdWhitelist = !0, t._adManager.requestAds(e), t._streamRollTypes[e.channel][e.adType] = !0) : c ? s(t._stateStore.getState(), e, u) : (t._adManager.requestAds(e), t._streamRollTypes[e.channel][e.adType] = !0)
+                    })
                 }
             }, {
                 key: "addEventListener",
@@ -16913,8 +16919,8 @@
                     var t = e.recommendations;
                     $(".js-recommended-stream", this.$root).each(function(e, n) {
                         var i = parseInt($(n).attr("data-index"), 10) < t.numVideosVisible;
-                        $(n).attr("data-visible", i)
-                    }), 1 === t.numVideosVisible ? $(".js-featured-recommendations__more-videos").attr("data-hide", !0) : $(".js-featured-recommendations__more-videos").attr("data-hide", !1);
+                        $(n).attr("data-visible", i);
+                    }), 1 === t.numVideosVisible ? $(".js-featured-recommendations__more-videos").attr("data-hide", !0) : $(".js-featured-recommendations__more-videos").attr("data-hide", !1)
                 }
             }, {
                 key: "transitionToMoreVideos",
