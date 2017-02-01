@@ -245,10 +245,10 @@ window.SiteOptions = {
         "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3": {
             "name": "Pineapple",
             "groups": [{
-                "weight": 0,
+                "weight": 50,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 50,
                 "value": "no"
             }]
         },
