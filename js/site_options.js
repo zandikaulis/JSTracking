@@ -583,10 +583,10 @@ window.SiteOptions = {
         "5397de92-0538-42d1-977c-11842e03c9e5": {
             "name": "adopt",
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "yes"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "no"
             }]
         },
@@ -1123,6 +1123,16 @@ window.SiteOptions = {
             }, {
                 "weight": 10,
                 "value": "new"
+            }]
+        },
+        "d4d938f7-bdc2-42cd-afd0-f434e4192c29": {
+            "name": "ORC",
+            "groups": [{
+                "weight": 100,
+                "value": "no"
+            }, {
+                "weight": 0,
+                "value": "yes"
             }]
         },
         "df008233-c0f2-46dc-92a2-61396ae402e3": {
