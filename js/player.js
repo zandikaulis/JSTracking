@@ -7777,9 +7777,9 @@
         function l(e) {
             var t, n;
             return new f["default"]({
-                defaults: (t = {}, r(t, y, "no"), r(t, m, "off"), r(t, b, "no"), r(t, E, "no"), r(t, S, "no"), r(t, T, "no"), r(t, k, "no"), r(t, A, "no"), r(t, P, "no"), r(t, C, "no"), r(t, w, "no"), r(t, I, "1.0"), r(t, N, "no"), r(t, L, "no"), r(t, R, "control"), r(t, M, "no"), r(t, D, "no"), r(t, j, "no"), r(t, O, "no"), t),
+                defaults: (t = {}, r(t, y, "no"), r(t, m, "off"), r(t, b, "no"), r(t, E, "no"), r(t, S, "no"), r(t, T, "no"), r(t, k, "no"), r(t, A, "no"), r(t, P, "no"), r(t, C, "no"), r(t, w, "no"), r(t, I, "1.0"), r(t, N, "no"), r(t, L, "no"), r(t, R, "control"), r(t, M, "no"), r(t, D, "no,"), r(t, j, "no"), r(t, x, "no"), r(t, O, "no"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, r(n, m, a("v2")), r(n, b, a("yes")), r(n, E, o(["US"])), r(n, S, o(["GB"])), r(n, T, o(["DE"])), r(n, k, o(["FR"])), r(n, A, o(["SE"])), r(n, P, o(["BE", "DK", "FI", "NL", "NO", "PL"])), r(n, C, o(["CA"])), r(n, w, o(["AU", "NZ"])), r(n, L, a("yes")), r(n, D, a("yes")), r(n, j, a("yes")), r(n, O, a("yes")), n),
+                overrides: (n = {}, r(n, m, a("v2")), r(n, b, a("yes")), r(n, E, o(["US"])), r(n, S, o(["GB"])), r(n, T, o(["DE"])), r(n, k, o(["FR"])), r(n, A, o(["SE"])), r(n, P, o(["BE", "DK", "FI", "NL", "NO", "PL"])), r(n, C, o(["CA"])), r(n, w, o(["AU", "NZ"])), r(n, L, a("yes")), r(n, D, a("yes")), r(n, j, a("yes")), r(n, x, a("yes")), r(n, O, a("yes")), n),
                 platform: "web",
                 login: e.login,
                 provider: new h["default"](h["default"].SERVICE_URL),
@@ -7788,7 +7788,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.ENABLE_PERPETUA_GROUP = t.ENABLE_ABS_GROUP = t.NO_ABS_WITH_V12 = t.ABS_FIRST_TIME_GROUP_B = t.ABS_FIRST_TIME_GROUP_A = t.ABS_FORCED_GROUP = t.GAME_CHANGE_MARKERS = t.ADOPT = t.VP_QOS_TEST = t.PERPETUA = t.DETERMINATION = t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.VCA_MARKERS = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.IN_PLAYER_RECOMMENDATIONS = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
+        }), t.ENABLE_PERPETUA_GROUP = t.ENABLE_ABS_GROUP = t.NO_ABS_WITH_V12 = t.ABS_FIRST_TIME_GROUP_B = t.ABS_FIRST_TIME_GROUP_A = t.ABS_FORCED_GROUP = t.GAME_CHANGE_MARKERS = t.ADOPT = t.PINEAPPLE = t.VP_QOS_TEST = t.PERPETUA = t.DETERMINATION = t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.VCA_MARKERS = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.IN_PLAYER_RECOMMENDATIONS = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
         var u = n(49),
             c = i(u),
             d = n(240),
@@ -7815,12 +7815,13 @@
             L = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
             R = t.PERPETUA = "af8f152a-f618-416e-8b79-d6ac30479018",
             M = t.VP_QOS_TEST = "711aaaf6-61c0-4cc4-9469-0dfc9908785a",
-            D = t.ADOPT = "5397de92-0538-42d1-977c-11842e03c9e5",
-            j = t.GAME_CHANGE_MARKERS = "e8c5cf6c-5259-446b-aef1-4e33747b3b93",
-            x = t.ABS_FORCED_GROUP = "yes-forced",
-            U = t.ABS_FIRST_TIME_GROUP_A = "yes-ft-a",
-            B = t.ABS_FIRST_TIME_GROUP_B = "yes-ft-b";
-        t.NO_ABS_WITH_V12 = "no-with-1.2", t.ENABLE_ABS_GROUP = Object.freeze([x, U, B]), t.ENABLE_PERPETUA_GROUP = Object.freeze(["early", "mid"])
+            D = t.PINEAPPLE = "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3",
+            j = t.ADOPT = "5397de92-0538-42d1-977c-11842e03c9e5",
+            x = t.GAME_CHANGE_MARKERS = "e8c5cf6c-5259-446b-aef1-4e33747b3b93",
+            U = t.ABS_FORCED_GROUP = "yes-forced",
+            B = t.ABS_FIRST_TIME_GROUP_A = "yes-ft-a",
+            V = t.ABS_FIRST_TIME_GROUP_B = "yes-ft-b";
+        t.NO_ABS_WITH_V12 = "no-with-1.2", t.ENABLE_ABS_GROUP = Object.freeze([U, B, V]), t.ENABLE_PERPETUA_GROUP = Object.freeze(["early", "mid"])
     }, function(e, t, n) {
         function i(e) {
             var t = r(e);
@@ -8568,7 +8569,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 _ = {
-                    app_version: "2017.02.01-181230+aeac1e4f6d062caf4c6b5652ccd11f5c2cde9897",
+                    app_version: "2017.02.01-184109+e10b6db9544bb734ca773ae6ae84696a2a972523",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: v.host,
@@ -14517,69 +14518,83 @@
         function r(e) {
             return function(t, n) {
                 var i = n().streamMetadata.channel.name;
-                if (n().recommendations.status !== T || "" === i) return Promise.resolve();
-                var r = Math.floor(Math.random() * C),
-                    s = {
-                        limit: e + 1,
-                        broadcast_type: "archive"
-                    };
+                if (n().recommendations.status !== P || "" === i) return Promise.resolve();
+                var r = Math.floor(Math.random() * I);
                 return t({
-                    type: S,
-                    status: k
+                    type: A,
+                    status: C
                 }), new Promise(function(e) {
                     n().window.setTimeout(e, r)
                 }).then(function() {
-                    return (0, _.krakenRequest)("channels/" + i + "/videos?" + $.param(s))
+                    return n().experiments.get(E.PINEAPPLE)
+                }).then(function(t) {
+                    return "yes" === t ? o(n().stream.videoId) : a(i, e + 1)
                 }).then(function(i) {
                     var r = n(),
-                        s = r.resumeWatch,
-                        l = r.streamMetadata,
-                        u = i.videos.filter(function(e) {
-                            return e.broadcast_id !== l.broadcastID
+                        a = r.resumeWatch,
+                        o = r.streamMetadata,
+                        u = i.filter(function(e) {
+                            return e.broadcast_id !== o.broadcastID
                         }).sort(function(e, t) {
-                            var n = a(e, s.times),
-                                i = a(t, s.times);
+                            var n = s(e, a.times),
+                                i = s(t, a.times);
                             return !n && i ? -1 : n && !i ? 1 : new Date(t.created_at).getTime() - new Date(e.created_at).getTime()
                         });
-                    t(o(u.slice(0, e)))
+                    t(l(u.slice(0, e)))
                 })
             }
         }
 
         function a(e, t) {
-            if (!t.hasOwnProperty(e._id)) return !1;
-            var n = t[e._id];
-            if (0 === n) return !0;
-            var i = Math.max(A, P * e.length);
-            return e.length > A && n > i
+            var n = {
+                limit: t,
+                broadcast_type: "archive"
+            };
+            return (0, v.krakenRequest)("channels/" + e + "/videos?" + $.param(n)).then(function(e) {
+                return e.videos
+            })
         }
 
         function o(e) {
-            return {
-                type: m,
-                videos: e
-            }
+            return (0, v.krakenRequest)("videos/similar/" + e).then(function(e) {
+                return e.similar_videos
+            })
         }
 
-        function s() {
-            return o([])
+        function s(e, t) {
+            if (!t.hasOwnProperty(e._id)) return !1;
+            var n = t[e._id];
+            if (0 === n) return !0;
+            var i = Math.max(w, O * e.length);
+            return e.length > w && n > i
         }
 
         function l(e) {
             return {
-                type: b,
+                type: S,
+                videos: e
+            }
+        }
+
+        function u() {
+            return l([])
+        }
+
+        function c(e) {
+            return {
+                type: T,
                 transitionFn: e
             }
         }
 
-        function u(e) {
+        function d(e) {
             return {
-                type: E,
+                type: k,
                 numVids: e
             }
         }
 
-        function c(e) {
+        function f(e) {
             return function(t, n) {
                 var i = n(),
                     r = i.recommendations,
@@ -14591,28 +14606,28 @@
                     recommendation_position: e,
                     recommendation_content: "recent"
                 }), a.playerType) {
-                    case g.PLAYER_SITE:
+                    case y.PLAYER_SITE:
                         r.transitionFn(s);
                         break;
-                    case g.PLAYER_POPOUT:
-                        d(s._id, n);
+                    case y.PLAYER_POPOUT:
+                        p(s._id, n);
                         break;
                     default:
-                        t((0, v.setStream)(v.TYPE_VIDEO, s._id))
+                        t((0, m.setStream)(m.TYPE_VIDEO, s._id))
                 }
             }
         }
 
-        function d(e, t) {
-            var n = (0, y.parse)(t().window.location.search.slice(1));
+        function p(e, t) {
+            var n = (0, b.parse)(t().window.location.search.slice(1));
             delete n.channel, delete n.video;
-            var i = (0, h["default"])({}, {
+            var i = (0, g["default"])({}, {
                 video: e
             }, n);
             t().window.location.search = "?" + $.param(i)
         }
 
-        function f() {
+        function h() {
             return function(e, t) {
                 var n = t(),
                     i = n.recommendations,
@@ -14631,22 +14646,23 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.MAX_JITTER_DELAY = t.TEN_PERCENT = t.FETCH_VODS_THRESHOLD = t.MINIMUM_WATCHED_LENGTH = t.MAX_RECOMMENDED_VODS_VISIBLE = t.FETCHED = t.FETCHING = t.UNFETCHED = t.ACTION_SET_FETCHING_STATUS = t.ACTION_SET_NUM_VODS_VISIBLE = t.ACTION_SET_TRANSITION_FUNCTION = t.ACTION_SET_RECOMMENDED_VODS_WATCHED = t.ACTION_SET_RECOMMENDED_VODS = void 0, t.fetchRecommendedVODs = r, t.isWatched = a, t.clearRecommendedVODs = s, t.setVODTransitionFn = l, t.setVODVisibility = u, t.selectRecommendedVOD = c, t.sendVODsDisplayedEvent = f;
-        var p = n(79),
-            h = i(p),
-            _ = n(191),
-            g = n(208),
-            v = n(326),
-            y = n(77),
-            m = t.ACTION_SET_RECOMMENDED_VODS = "set VOD recommendations",
-            b = (t.ACTION_SET_RECOMMENDED_VODS_WATCHED = "set VOD recommendations watched", t.ACTION_SET_TRANSITION_FUNCTION = "set recommendation transition function"),
-            E = t.ACTION_SET_NUM_VODS_VISIBLE = "set number of VOD recommendations visible",
-            S = t.ACTION_SET_FETCHING_STATUS = "set fetching recommendations status",
-            T = t.UNFETCHED = "unfetched",
-            k = t.FETCHING = "fetching",
-            A = (t.FETCHED = "fetched", t.MAX_RECOMMENDED_VODS_VISIBLE = 24, t.MINIMUM_WATCHED_LENGTH = 300),
-            P = (t.FETCH_VODS_THRESHOLD = 12e3, t.TEN_PERCENT = .1),
-            C = t.MAX_JITTER_DELAY = 5e3
+        }), t.MAX_JITTER_DELAY = t.TEN_PERCENT = t.FETCH_VODS_THRESHOLD = t.MINIMUM_WATCHED_LENGTH = t.MAX_RECOMMENDED_VODS_VISIBLE = t.FETCHED = t.FETCHING = t.UNFETCHED = t.ACTION_SET_FETCHING_STATUS = t.ACTION_SET_NUM_VODS_VISIBLE = t.ACTION_SET_TRANSITION_FUNCTION = t.ACTION_SET_RECOMMENDED_VODS_WATCHED = t.ACTION_SET_RECOMMENDED_VODS = void 0, t.fetchRecommendedVODs = r, t.isWatched = s, t.clearRecommendedVODs = u, t.setVODTransitionFn = c, t.setVODVisibility = d, t.selectRecommendedVOD = f, t.sendVODsDisplayedEvent = h;
+        var _ = n(79),
+            g = i(_),
+            v = n(191),
+            y = n(208),
+            m = n(326),
+            b = n(77),
+            E = n(239),
+            S = t.ACTION_SET_RECOMMENDED_VODS = "set VOD recommendations",
+            T = (t.ACTION_SET_RECOMMENDED_VODS_WATCHED = "set VOD recommendations watched", t.ACTION_SET_TRANSITION_FUNCTION = "set recommendation transition function"),
+            k = t.ACTION_SET_NUM_VODS_VISIBLE = "set number of VOD recommendations visible",
+            A = t.ACTION_SET_FETCHING_STATUS = "set fetching recommendations status",
+            P = t.UNFETCHED = "unfetched",
+            C = t.FETCHING = "fetching",
+            w = (t.FETCHED = "fetched", t.MAX_RECOMMENDED_VODS_VISIBLE = 24, t.MINIMUM_WATCHED_LENGTH = 300),
+            O = (t.FETCH_VODS_THRESHOLD = 12e3, t.TEN_PERCENT = .1),
+            I = t.MAX_JITTER_DELAY = 5e3
     }, function(e, t, n) {
         "use strict";
 
@@ -16911,7 +16927,8 @@
                             return t >= e.minHeight
                         }),
                         a = i.columns * r.rows;
-                    a !== n && this._stateStore.dispatch((0, d.setVODVisibility)(a)), $(".js-recommended-stream").attr("data-columns", i.columnWidth), $(".js-featured-rec-header").attr("data-columns", i.columnWidth)
+                    a !== n && this._stateStore.dispatch((0, d.setVODVisibility)(a)), $(".js-recommended-stream").attr("data-columns", i.columnWidth),
+                        $(".js-featured-rec-header").attr("data-columns", i.columnWidth)
                 }
             }, {
                 key: "onVODVisibility",
@@ -16919,7 +16936,7 @@
                     var t = e.recommendations;
                     $(".js-recommended-stream", this.$root).each(function(e, n) {
                         var i = parseInt($(n).attr("data-index"), 10) < t.numVideosVisible;
-                        $(n).attr("data-visible", i);
+                        $(n).attr("data-visible", i)
                     }), 1 === t.numVideosVisible ? $(".js-featured-recommendations__more-videos").attr("data-hide", !0) : $(".js-featured-recommendations__more-videos").attr("data-hide", !1)
                 }
             }, {
