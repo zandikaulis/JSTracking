@@ -573,10 +573,10 @@ window.SiteOptions = {
         "5380a8cf-e5cf-497e-9c6c-16cb1c881e0c": {
             "name": "WATCH_NOW_RIGHTBAR",
             "groups": [{
-                "weight": 10,
+                "weight": 0,
                 "value": "treatment"
             }, {
-                "weight": 90,
+                "weight": 100,
                 "value": "control"
             }]
         },
