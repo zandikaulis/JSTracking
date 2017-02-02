@@ -16066,7 +16066,6 @@ googletag.cmd = googletag.cmd || [],
                 DISCOVER_SHOW_COVIEWS: "show",
                 FINAL_DESTINATION: "videos",
                 CHOMPY: "experiment",
-                ADOPT: "yes",
                 ONSITE_NOTIFICATIONS: "variant1",
                 CLIPS_FEEL_IT_COMING: "variant1",
                 SNAIL: "early"
@@ -16497,8 +16496,8 @@ googletag.cmd = googletag.cmd || [],
                 r && r.removeUpdateListener(f), o && o.removeUpdateListener(y), r = null, o = null, n.player.setChromecastConnected(!1)
             },
             m = function(e) {
-                r = e,
-                    r.addUpdateListener(f), n.player.setChromecastConnected(!0, r.receiver.friendlyName)
+                r = e, r.addUpdateListener(f),
+                    n.player.setChromecastConnected(!0, r.receiver.friendlyName)
             },
             g = function(e, t) {
                 o = t, o.addUpdateListener(y.bind(this, t))
