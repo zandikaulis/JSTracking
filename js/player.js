@@ -8571,7 +8571,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.02-184607+13f8e90303166416536ba7935b999590310d24e5",
+                    app_version: "2017.02.02-190903+19884080cf6dd67c49e33783c0250c330337c83c",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -9492,7 +9492,7 @@
                 n.dispatch((0, P.setBackend)(b)), n.dispatch((0, C.setPlayerBackendType)(b.getBackend())), b.addEventListener(ne.ERROR, y), b.attach(a), Be = f.BackendChromecast, Be.init(), Ue = new h.BackendMulti(Be, b), je.push(ke()), n.dispatch((0, A.createAdsManager)(a, b, n, t)), b.addEventListener(ne.LOADED_METADATA, Q), b.addEventListener(ne.DURATION_CHANGE, Y), b.addEventListener(le.BUFFER_CHANGE, J), b.addEventListener(le.MIDROLL_REQUESTED, te), b.addEventListener(le.STITCHED_AD_START, re), b.addEventListener(le.STITCHED_AD_END, ae), b.addEventListener(le.ABS_STREAM_FORMAT_CHANGE, s), b.addEventListener(ne.ENDED, ye), b.addEventListener(ne.PLAYING, se), b.addEventListener(ne.TIME_UPDATE, ge), b.addEventListener(ne.PLAYBACK_STATISTICS, l), b.addEventListener(ne.SEEKED, _e), b.addEventListener(ne.SEEKING, W), b.addEventListener(ne.WAITING, W), b.addEventListener(ne.PLAY, W), b.addEventListener(ne.CAN_PLAY, K), b.addEventListener(ne.PAUSE, ue);
                 var E = n.getState(),
                     S = E.playback;
-                b.setVolume(S.volume), b.setMuted(S.muted), Le(), Ne()
+                b.setVolume(S.volume), b.setMuted(S.muted), Le(), Ne(), De._propagateBackendMutliEvents()
             }
 
             function s(e) {
@@ -9763,7 +9763,14 @@
                 Ue = void 0,
                 Be = void 0,
                 Ve = !1;
-            De._setABS = function() {
+            De._propagateBackendMutliEvents = function() {
+                var e = [ne.DURATION_CHANGE, le.PLAYER_INIT, ne.LOADSTART, ne.LOADED_METADATA, ne.PLAY, ne.PAUSE, ne.WAITING, ne.PLAYING, ne.ENDED, ne.ERROR, ne.SEEKING, ne.TIME_UPDATE, ne.CAN_PLAY, le.IS_SPECTRE, le.SEGMENT_CHANGE, le.BUFFER_CHANGE, le.QUALITIES_CHANGE, le.RESTRICTED, ne.SEEKED];
+                e.forEach(function(e) {
+                    Ue.addEventListener(e, function(t) {
+                        xe.emit(e, t)
+                    })
+                })
+            }, De._setABS = function() {
                 var e = r.abs,
                     t = !_.localStore.get(U.KEY_AUTO_QUALITY_FORCED, !1),
                     i = n.getState().quality.selected === U.QUALITY_AUTO;
@@ -9784,9 +9791,9 @@
                     Ue.setSrc(e)
                 })
             }, De.addEventListener = function(e, t) {
-                (0, z["default"])(m.allEvents, e) || console.error("subscribing to unknown event: ", e), Ue.addEventListener(e, t), xe.on(e, t)
+                (0, z["default"])(m.allEvents, e) || console.error("subscribing to unknown event: ", e), xe.on(e, t)
             }, De.removeEventListener = function(e, t) {
-                Ue.removeEventListener(e, t), xe.off(e, t)
+                xe.off(e, t)
             }, De.getNetworkProfile = function() {
                 return n.getState().backend.getNetworkProfile()
             }, De.getError = function() {
@@ -10241,7 +10248,7 @@
             }
 
             function Ee(e) {
-                He.emit(te.COMPANION_RENDERED, e)
+                He.emit(te.COMPANION_RENDERED, e);
             }
 
             function Se(e) {
@@ -10273,7 +10280,7 @@
             }
 
             function Oe() {
-                He.emit(T.TIME_UPDATE, Ye.extrapolateTimeStamp());
+                He.emit(T.TIME_UPDATE, Ye.extrapolateTimeStamp())
             }
 
             function Ie(e) {
