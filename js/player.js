@@ -1163,7 +1163,10 @@
                                     duration: e.segmentDuration,
                                     time: e.startTime + e.firstByteLatency + e.downloadDuration,
                                     time_to_first_byte: e.firstByteLatency,
-                                    download_duration: e.downloadDuration
+                                    download_duration: e.downloadDuration,
+                                    curr_buffer_length: e.currBufferLength,
+                                    reason_code: e.reasonCode,
+                                    curr_quality: e.currQuality
                                 }
                             }
                         }))
@@ -8571,7 +8574,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.02-204854+3b0ca41ff6133179be900a219b97074ca38caf6b",
+                    app_version: "2017.02.02-211212+26121939f68ecc75ec2ad78ba2e8a3d83369fc37",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -29512,7 +29515,7 @@
                 }
             }(),
             i = t.HAS_SEEN_CLIPS_TRIMMING_ANNOUNCE = "has-seen-clips-titles-announce",
-            a = t.ENABLE_ANNOUNCEMENT_MESSAGE = !0;
+            a = t.ENABLE_ANNOUNCEMENT_MESSAGE = !1;
         t.PlayerUIClipsControls = function() {
             function e(t, r, i) {
                 n(this, e), this.root = t, this.localStore = r, this.clipGenerator = i, this.clipButtonEnabled = !1, this.clipButton.on("click", this.recordClipIfAble.bind(this))
