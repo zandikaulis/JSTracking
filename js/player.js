@@ -8574,7 +8574,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.02-211212+26121939f68ecc75ec2ad78ba2e8a3d83369fc37",
+                    app_version: "2017.02.03-002733+74950e902d8dc98b157ef27d868b8f0177b4df2c",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -19371,58 +19371,60 @@
                             p = s.isLoading,
                             v = s.isPaused,
                             _ = (s.isSeekableStream, s.mutedSegments),
-                            y = (s.seekbarMarkers, s.thumbnailPreviews),
-                            E = p ? a : c,
-                            S = !t && !v && !o,
-                            T = t ? null : u["default"].createElement(h.SeekbarBuffer, {
-                                animate: S,
+                            y = s.seekbarMarkers,
+                            E = s.thumbnailPreviews,
+                            S = p ? a : c,
+                            T = !t && !v && !o,
+                            C = t ? null : u["default"].createElement(h.SeekbarBuffer, {
+                                animate: T,
                                 bufferLength: l,
                                 max: d,
                                 min: 0,
-                                value: E
+                                value: S
                             }),
-                            C = u["default"].createElement(f.MutedSegments, {
+                            k = u["default"].createElement(f.MutedSegments, {
                                 duration: d,
                                 mutedSegments: _
                             }),
-                            k = null,
-                            w = 0,
-                            A = 0;
+                            w = null,
+                            A = 0,
+                            O = 0;
                         if (this.$seekbar) {
-                            var O = this.$seekbar.getBoundingClientRect();
-                            w = O.width, A = O.left
+                            var I = this.$seekbar.getBoundingClientRect();
+                            A = I.width, O = I.left
                         }
-                        i && (k = u["default"].createElement(m.ThumbnailPreviews, {
+                        i && (w = u["default"].createElement(m.ThumbnailPreviews, {
                             duration: d,
                             isDisplayingMarkerPreview: n,
-                            previews: y,
+                            previews: E,
                             mouseMoveClientX: r,
-                            seekbarLeftOffset: A,
-                            seekbarWidth: w
+                            seekbarLeftOffset: O,
+                            seekbarWidth: A
                         }));
-                        var I = u["default"].createElement(b.SeekbarMarkers, {
+                        var N = u["default"].createElement(b.SeekbarMarkers, {
                             currentTime: c,
                             duration: d,
-                            onShowingMarkerPreview: this.handleShowingMarkerPreview,
+                            markers: y,
                             onHidingMarkerPreview: this.handleHidingMarkerPreview,
-                            seekbarWidth: w,
-                            onMarkerSeek: this.seekToPosition
+                            onMarkerSeek: this.seekToPosition,
+                            onShowingMarkerPreview: this.handleShowingMarkerPreview,
+                            seekbarWidth: A
                         });
                         return u["default"].createElement(g.Slider, {
                             classNames: P,
                             max: d,
                             min: 0,
-                            value: E,
+                            value: S,
                             onClick: this.handleClick,
                             onMouseMove: this.handleMouseMove,
                             onMouseOut: this.handleMouseOut,
-                            skipAnimation: !S,
+                            skipAnimation: !T,
                             ref: this.seekbarRefHandler,
                             dragHandlers: {
                                 onStart: this.handleDragStart,
                                 onStop: this.handleDragStop
                             }
-                        }, T, C, k, I)
+                        }, C, k, w, N)
                     }
                 }, {
                     key: "componentDidUpdate",
