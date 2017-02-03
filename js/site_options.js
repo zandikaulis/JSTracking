@@ -388,22 +388,22 @@ window.SiteOptions = {
             "name": "CVP-50",
             "groups": [{
                 "weight": 90,
-                "value": "1.1.118"
+                "value": "1.1.119"
             }, {
                 "weight": 2,
-                "value": "1.3.4"
+                "value": "1.3.5"
             }, {
                 "weight": 2,
-                "value": "1.3.4+abs0"
+                "value": "1.3.5+abs0"
             }, {
                 "weight": 2,
-                "value": "1.3.4+absagg"
+                "value": "1.3.5+absagg"
             }, {
                 "weight": 2,
-                "value": "1.3.4+absnom"
+                "value": "1.3.5+absnom"
             }, {
                 "weight": 2,
-                "value": "1.3.4+absnop"
+                "value": "1.3.5+absnop"
             }]
         },
         "34fca29d-6914-412f-8ce2-fb65f792d386": {
