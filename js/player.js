@@ -4193,8 +4193,7 @@
             s = n(49),
             l = r(s),
             u = n(213),
-            c = r(u),
-            d = n(191);
+            c = r(u);
         t.AbstractStream = function() {
             function e(t, n, r, a, o) {
                 i(this, e), this._contentId = t, this._oAuthToken = n, this._usherParams = r, this._accessTokenParams = a, this._experimentSettings = o, this._restrictedBitrates = []
@@ -4231,20 +4230,11 @@
                     return this._handleInvalidOp("_buildUsherParams"), {}
                 }
             }, {
-                key: "_staffOverride",
-                value: function() {
-                    return (0, d.krakenUserInfo)().then(function(e) {
-                        return "staff" === e.type
-                    })["catch"](function() {
-                        return !1
-                    })
-                }
-            }, {
                 key: "_commonExperimentParams",
                 value: function() {
                     var e = this;
-                    return Promise.all([this.accessToken, this._experimentSettings.adStitchingUS, this._experimentSettings.adStitchingUK, this._experimentSettings.adStitchingA, this._experimentSettings.adStitchingB, this._experimentSettings.adStitchingC, this._experimentSettings.adStitchingD, this._experimentSettings.adStitchingE, this._experimentSettings.adStitchingF, this._staffOverride()]).then(function(t) {
-                        var n = a(t, 10),
+                    return Promise.all([this.accessToken, this._experimentSettings.adStitchingUS, this._experimentSettings.adStitchingUK, this._experimentSettings.adStitchingA, this._experimentSettings.adStitchingB, this._experimentSettings.adStitchingC, this._experimentSettings.adStitchingD, this._experimentSettings.adStitchingE, this._experimentSettings.adStitchingF]).then(function(t) {
+                        var n = a(t, 9),
                             r = n[0],
                             i = n[1],
                             o = n[2],
@@ -4254,11 +4244,10 @@
                             p = n[6],
                             f = n[7],
                             h = n[8],
-                            v = n[9],
-                            g = {};
-                        return v && (g.baking_bread_override = !0), g.baking_bread = (0, c["default"])([i, o, s, u, d, p, f, h], function(e) {
+                            v = {};
+                        return v.baking_bread = (0, c["default"])([i, o, s, u, d, p, f, h], function(e) {
                             return (0, l["default"])(e, "yes")
-                        }), e._restrictedBitrates = JSON.parse(r.token).chansub.restricted_bitrates, g
+                        }), e._restrictedBitrates = JSON.parse(r.token).chansub.restricted_bitrates, v
                     })
                 }
             }, {
@@ -4466,7 +4455,7 @@
                     ns_st_ddt: p(new Date(e.recorded_at), !0),
                     ns_st_ce: "archive" === e.broadcast_type
                 })
-            }) : Promise.reject(new Error("No stream is currently playing; no metadata is available."))
+            }) : Promise.reject(new Error("No stream is currently playing; no metadata is available."));
         }
 
         function s(e) {
@@ -6375,7 +6364,8 @@
                             var n = this;
                             t.extend(n, {
                                 onEndOrAdSkip: function(n, r) {
-                                    e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && (e.getPlaylist().getClip().setSeekingTimeBeforeEnd(n - e.getPlaylist().getClip().getSeekingTimestamp()), e.getPlaylist().getClip().setCollectingSeekingTime(!1)), e.getPlaylist().storeClipPlaybackCounters(), e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1), r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist()
+                                    e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && (e.getPlaylist().getClip().setSeekingTimeBeforeEnd(n - e.getPlaylist().getClip().getSeekingTimestamp()), e.getPlaylist().getClip().setCollectingSeekingTime(!1)),
+                                        e.getPlaylist().storeClipPlaybackCounters(), e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1), r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist()
                                 },
                                 onSeekStart: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
@@ -7175,12 +7165,12 @@
                         s = function(e) {
                             function o() {
                                 if (a)
-                                    if (t.getNamespace().comScore) g = new n,
-                                        g.setImplementationType(i.REDUCED);
+                                    if (t.getNamespace().comScore) g = new n, g.setImplementationType(i.REDUCED);
                                     else if (t.exists(e))
                                     if (_ = t.isTrue(e.debug), t.exists(e.customerC2) && e.customerC2.length > 0) {
                                         var r = e.secure ? "https://sb" : "http" + ("s" == document.location.href.charAt(4) ? "s://sb" : "://b");
-                                        g = new n, g.setPixelURL(r + ".scorecardresearch.com/p?c1=2"), g.setLabel("c2", e.customerC2), g.setImplementationType(i.REDUCED)
+                                        g = new n, g.setPixelURL(r + ".scorecardresearch.com/p?c1=2"), g.setLabel("c2", e.customerC2),
+                                            g.setImplementationType(i.REDUCED)
                                     } else _ && console && console.log("Warning: customerC2 is not provided (or incorrect) in the StreamingTag configuration.")
                             }
 
@@ -8574,7 +8564,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.03-002733+74950e902d8dc98b157ef27d868b8f0177b4df2c",
+                    app_version: "2017.02.03-014109+6242a3d971a7d7b2037d3514246f1b34bec727b3",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
