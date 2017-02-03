@@ -8564,7 +8564,7 @@
                     m = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.03-193640+5c8358e321dc21acb923a728dec535dfe5bacdc8",
+                    app_version: "2017.02.03-214349+8499b5bde14ecbd7c8f1b3160afe8a01a5be0ad3",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -19365,7 +19365,7 @@
                             d = s.duration,
                             p = s.isLoading,
                             v = s.isPaused,
-                            _ = (s.isSeekableStream, s.mutedSegments),
+                            _ = s.mutedSegments,
                             y = s.seekbarMarkers,
                             E = s.thumbnailPreviews,
                             S = p ? a : c,
@@ -19413,6 +19413,7 @@
                             onClick: this.handleClick,
                             onMouseMove: this.handleMouseMove,
                             onMouseOut: this.handleMouseOut,
+                            onBlur: this.handleMouseOut,
                             skipAnimation: !T,
                             ref: this.seekbarRefHandler,
                             dragHandlers: {
@@ -19456,7 +19457,7 @@
                     }
                 }, {
                     key: "handleMouseOut",
-                    value: function(e) {
+                    value: function() {
                         this.setState({
                             mouseMoveOnSeekbar: !1,
                             mouseMoveClientX: 0
@@ -27152,7 +27153,7 @@
                     n = e.mutedSegments;
                 if (!(0, a["default"])(t) || t <= 0) return null;
                 if (!Array.isArray(n) || n.length <= 0) return null;
-                var r = n.map(function(e, n) {
+                var r = n.map(function(e) {
                     return s["default"].createElement("span", {
                         className: "player-slider__muted",
                         style: {
@@ -27319,6 +27320,7 @@
                 }),
                 max: l.PropTypes.number.isRequired,
                 min: l.PropTypes.number.isRequired,
+                onBlur: l.PropTypes.func,
                 onClick: l.PropTypes.func,
                 onKeyDown: l.PropTypes.func,
                 onMouseMove: l.PropTypes.func,
@@ -27350,22 +27352,23 @@
                             n = e.classNames,
                             r = e.max,
                             i = e.min,
-                            a = e.onKeyDown,
-                            o = e.onMouseMove,
-                            s = e.onMouseOut,
-                            l = e.skipAnimation,
-                            c = e.sliderTabIndex,
-                            d = e.value,
-                            h = this.state.isDragging ? this.state.dragStartValue : d,
-                            v = u["default"].createElement(p.SliderLeft, {
+                            a = e.onBlur,
+                            o = e.onKeyDown,
+                            s = e.onMouseMove,
+                            l = e.onMouseOut,
+                            c = e.skipAnimation,
+                            d = e.sliderTabIndex,
+                            h = e.value,
+                            v = this.state.isDragging ? this.state.dragStartValue : h,
+                            g = u["default"].createElement(p.SliderLeft, {
                                 className: n.sliderLeft,
                                 deltaX: this.state.deltaX,
                                 max: r,
                                 min: i,
-                                skipAnimation: l,
-                                value: h
+                                skipAnimation: c,
+                                value: v
                             }),
-                            g = u["default"].createElement(f.SliderThumb, {
+                            _ = u["default"].createElement(f.SliderThumb, {
                                 className: n.sliderThumb,
                                 max: r,
                                 min: i,
@@ -27373,26 +27376,27 @@
                                 onStart: this.handleDragStart,
                                 onStop: this.handleDragStop,
                                 resetDragTransform: !this.state.isDragging,
-                                skipAnimation: l,
-                                value: h,
+                                skipAnimation: c,
+                                value: v,
                                 deltaX: this.state.deltaX
                             });
                         return u["default"].createElement("div", {
                             "aria-valuemax": r,
                             "aria-valuemin": i,
-                            "aria-valuenow": d,
+                            "aria-valuenow": h,
                             className: n.slider,
                             "data-isDragging": this.state.isDragging,
                             "data-whatInput": this.state["data-whatInput"],
+                            onBlur: a,
                             onClick: this.handleClick,
                             onFocus: this.handleFocus,
-                            onKeyDown: a,
-                            onMouseMove: o,
-                            onMouseOut: s,
+                            onKeyDown: o,
+                            onMouseMove: s,
+                            onMouseOut: l,
                             ref: this._sliderRefHandler,
                             role: "slider",
-                            tabIndex: c
-                        }, v, t, g)
+                            tabIndex: d
+                        }, g, t, _)
                     }
                 }, {
                     key: "_sliderRefHandler",
@@ -28924,7 +28928,7 @@
                             s = a.targetDot;
                         if (!this.shouldDisplayMarkers()) return null;
                         var l = i.map(function(t, i) {
-                                return p["default"].createElement("span", {
+                                return p["default"].createElement("button", {
                                     className: "player-slider__marker-dot",
                                     key: t.title + "_" + t.startTime + "_" + t.type,
                                     "data-time": t.startTime,
@@ -28933,9 +28937,12 @@
                                     onMouseEnter: e.handleMouseEnter,
                                     onMouseLeave: e.handleMouseLeave,
                                     onClick: e.handleClick,
+                                    onKeyDown: e.handleClick,
+                                    role: "button",
                                     style: {
                                         left: (0, g.getPercentage)(t.startTime, r) + "%"
-                                    }
+                                    },
+                                    tabIndex: 0
                                 })
                             }),
                             u = null;
@@ -28953,7 +28960,7 @@
                     }
                 }, {
                     key: "handleMouseLeave",
-                    value: function(e) {
+                    value: function() {
                         this.setState({
                             showMarkerPopup: !1,
                             targetDot: null
@@ -28977,9 +28984,9 @@
                 }, {
                     key: "preloadMarkerSprites",
                     value: function() {
-                        this.props.markers.forEach(function(e, t) {
-                            var n = new Image;
-                            n.src = e.thumbnail.imageUrl
+                        this.props.markers.forEach(function(e) {
+                            var t = new Image;
+                            t.src = e.thumbnail.imageUrl
                         })
                     }
                 }, {
