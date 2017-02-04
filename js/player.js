@@ -8572,7 +8572,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.03-234052+858b97c05a58f5bcb03c7b9f75a0149e78557e39",
+                    app_version: "2017.02.04-003122+b068f5ad509b0dc6a6b0b7f09b74a114769fb3dd",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -35023,9 +35023,9 @@
             _ = n(210),
             m = n(158),
             y = t.UPDATE_INTERVAL_VOD = 20,
-            b = t.UPDATE_INTERVAL_LIVESTREAM = 100,
+            b = t.UPDATE_INTERVAL_LIVESTREAM = 600,
             E = t.INIT_UPDATE_OFFSET_VOD = 2e4,
-            S = t.MAX_INIT_UPDATE_OFFSET_LIVESTREAM = 24e4,
+            S = t.MAX_INIT_UPDATE_OFFSET_LIVESTREAM = 48e4,
             T = {
                 times: {},
                 watch: {},
