@@ -864,13 +864,13 @@ window.SiteOptions = {
         "9e5fffd0-9693-412b-913d-7da332fdeea4": {
             "name": "Marker Experiment",
             "groups": [{
-                "weight": 0,
+                "weight": 30,
                 "value": "vca"
             }, {
-                "weight": 0,
+                "weight": 30,
                 "value": "vod"
             }, {
-                "weight": 100,
+                "weight": 40,
                 "value": "none"
             }]
         },
