@@ -398,7 +398,7 @@ window.SiteOptions = {
             "name": "CVP-50",
             "groups": [{
                 "weight": 90,
-                "value": "1.1.119"
+                "value": "1.3.5"
             }, {
                 "weight": 2,
                 "value": "1.3.5"
