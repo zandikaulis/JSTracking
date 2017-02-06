@@ -7783,7 +7783,7 @@
             return new p["default"]({
                 defaults: (t = {}, i(t, m, "no"), i(t, y, "off"), i(t, b, "no"), i(t, E, "no"), i(t, S, "no"), i(t, T, "no"), i(t, P, "no"), i(t, C, "no"), i(t, k, "no"), i(t, w, "no"), i(t, A, "no"), i(t, I, "1.1.118"), i(t, N, "no"), i(t, L, "no"), i(t, M, "control"), i(t, R, "no"), i(t, O, "no"), i(t, D, "no,"), i(t, x, "no"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, i(n, y, a("v2")), i(n, b, a("yes")), i(n, E, o(["US"])), i(n, S, o(["GB"])), i(n, T, o(["DE"])), i(n, P, o(["FR"])), i(n, C, o(["SE"])), i(n, k, o(["BE", "DK", "FI", "NL", "NO", "PL"])), i(n, w, o(["CA"])), i(n, A, o(["AU", "NZ"])), i(n, L, a("yes")), i(n, O, a("vca")), i(n, D, a("yes")), i(n, x, a("yes")), i(n, M, a("early")), i(n, I, a("1.3.4+abs0")), n),
+                overrides: (n = {}, i(n, y, a("v2")), i(n, b, a("yes")), i(n, E, o(["US"])), i(n, S, o(["GB"])), i(n, T, o(["DE"])), i(n, P, o(["FR"])), i(n, C, o(["SE"])), i(n, k, o(["BE", "DK", "FI", "NL", "NO", "PL"])), i(n, w, o(["CA"])), i(n, A, o(["AU", "NZ"])), i(n, L, a("yes")), i(n, O, a("vca")), i(n, D, a("yes")), i(n, x, a("yes")), i(n, M, a("early")), i(n, I, a("1.3.5+absagg")), n),
                 platform: "web",
                 login: e.login,
                 provider: new h["default"](h["default"].SERVICE_URL),
@@ -8572,7 +8572,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.04-003122+b068f5ad509b0dc6a6b0b7f09b74a114769fb3dd",
+                    app_version: "2017.02.06-204045+b7fd240ecd3727e17cb5511baebb06f3dfa9a352",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -11346,7 +11346,7 @@
                             t = this.stateStore.getState(),
                             n = t.stream;
                         return this._retryTimeoutID = null, this.destroy(), delete this.src, this.initialize(), n.resetNAuthToken(), n.streamUrl.then(function(t) {
-                            e.setSrc(t), e.video.play()
+                            e.setSrc(t), e.core.play()
                         })
                     }
                 }, {
@@ -11383,7 +11383,7 @@
                 }, {
                     key: "load",
                     value: function() {
-                        this.core && this.src && (this.offline = !1, this.core.loadURL(this.src), this.video.autoplay && this.video.play())
+                        this.core && this.src && (this.offline = !1, this.core.loadURL(this.src), this.video.autoplay && this.core.play())
                     }
                 }, {
                     key: "getSrc",
@@ -11534,16 +11534,16 @@
                             n = t.ads,
                             r = t.stream;
                         n.currentMetadata.contentType !== v.AdContentTypes.STITCHED && r instanceof h.LiveContentStream ? this.setChannel(r.channel, r).then(function() {
-                            e.video.play()
-                        }) : this.video.play()
+                            e.core.play()
+                        }) : this.core.play()
                     }
                 }, {
                     key: "pause",
                     value: function() {
+                        this.core.pause();
                         var e = this.stateStore.getState(),
-                            t = e.ads,
-                            n = e.stream;
-                        this.video.pause(), t.currentMetadata.contentType === v.AdContentTypes.STITCHED ? this.core.pause() : n instanceof h.LiveContentStream && this.core.stop()
+                            t = e.stream;
+                        t instanceof h.LiveContentStream && this.core.stop()
                     }
                 }, {
                     key: "getPaused",
@@ -11647,7 +11647,7 @@
                 }, {
                     key: "destroy",
                     value: function() {
-                        this.video.pause(), this.core && this.core.destroy(), this.stateStore.getState().window.clearInterval(this.statsUpdateLoop), this.stateStore.getState().window.clearTimeout(this._retryTimeoutID), this.checkQOSExperiment()
+                        this.core && (this.core.pause(), this.core.destroy()), this.stateStore.getState().window.clearInterval(this.statsUpdateLoop), this.stateStore.getState().window.clearTimeout(this._retryTimeoutID), this.checkQOSExperiment()
                     }
                 }, {
                     key: "checkQOSExperiment",
