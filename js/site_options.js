@@ -815,6 +815,16 @@ window.SiteOptions = {
                 "value": "show"
             }]
         },
+        "9649684c-6d3f-423d-9d3c-f4296efee975": {
+            "name": "clips_hear_me_now",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "98f3f2a5-9e4e-4ba8-aabe-2ff85e7309ee": {
             "name": "CHAT_RULES_EXPERIMENT",
             "groups": [{
