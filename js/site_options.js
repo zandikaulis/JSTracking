@@ -242,6 +242,25 @@ window.SiteOptions = {
                 "value": "recent_first"
             }]
         },
+        "19017d2c-4473-4914-a10f-82152c8b2bd9": {
+            "name": "CVP-Feb-2017",
+            "groups": [{
+                "weight": 92,
+                "value": "1.3.5"
+            }, {
+                "weight": 2,
+                "value": "1.3.5+abs0"
+            }, {
+                "weight": 2,
+                "value": "1.3.5+absagg"
+            }, {
+                "weight": 2,
+                "value": "1.3.5+absnom"
+            }, {
+                "weight": 2,
+                "value": "1.3.5+absnop"
+            }]
+        },
         "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3": {
             "name": "Pineapple",
             "groups": [{
