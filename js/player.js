@@ -8587,7 +8587,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.07-045559+0c9098be983a2ce105c72a2bd861c7497ac377f2",
+                    app_version: "2017.02.07-054247+f26b2734fd37938d5ad8cafb2c7f53aaeb124b19",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -34619,6 +34619,9 @@
             "This video quality is only available to subscribers. Subscribe now to watch and support %s.": "This video quality is only available to subscribers. Subscribe now to watch and support %s.",
             "Playing on {{device}}": "Playing on {{device}}",
             " has started a playlist.": " has started a playlist.",
+            "Introducing Auto Quality!": "Introducing Auto Quality!",
+            "You can enable automatic video quality selection by clicking on the gear menu and selecting “Auto” under Video Quality.": "You can enable automatic video quality selection by clicking on the gear menu and selecting “Auto” under Video Quality.",
+            "Submit feedback by selecting Report Playback Issue from the gear menu.": "Submit feedback by selecting Report Playback Issue from the gear menu.",
             Offline: "Offline",
             Playlist: "Playlist",
             Subscribe: "Subscribe",
