@@ -8264,7 +8264,7 @@
             this._url = e
         }
         var i = n(247);
-        e.exports = r, r.SERVICE_URL = "//minixperiment.twitch.tv/experiments.json", r.prototype.getExperimentConfiguration = function(e, t) {
+        e.exports = r, r.SERVICE_URL = "//www.twitch.tv/experiments.json", r.prototype.getExperimentConfiguration = function(e, t) {
             i.fetch(this._url, {}, function(n, r) {
                 if (null !== n) return void t(n);
                 try {
@@ -8572,7 +8572,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.07-200552+dd9924228ccc5f1d19a5882360bf75f9a8a82ebb",
+                    app_version: "2017.02.07-203149+18ab670e74efaa5da4941139672c0832b08bd9ea",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
