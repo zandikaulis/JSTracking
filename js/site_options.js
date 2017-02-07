@@ -350,10 +350,10 @@ window.SiteOptions = {
         "2858bc04-3f98-4808-a2dd-86555885ca90": {
             "name": "clips_feel_it_coming",
             "groups": [{
-                "weight": 90,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 50,
                 "value": "variant1"
             }]
         },
