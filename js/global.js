@@ -16061,6 +16061,7 @@ googletag.cmd = googletag.cmd || [],
             r = "experiment_overrides",
             s = {},
             a = {
+                BROWSE_EXPERIMENT: "variant2",
                 CSGO_LANGUAGE_SAMPLE: "localized",
                 LANGUAGE_DIRECTORY_FILTER: "full",
                 CLIPS_ENABLED: "yes",
@@ -16491,7 +16492,8 @@ googletag.cmd = googletag.cmd || [],
                 r = e, r.addUpdateListener(f), 0 !== r.media.length && g("sessionListener", r.media[0]), n.player.setChromecastConnected(!0, r.receiver.friendlyName)
             },
             d = function(e) {
-                e === chrome.cast.ReceiverAvailability.AVAILABLE ? (a = !0, s && a && n.player.showChromecast(!0)) : (a = !1, n.player.showChromecast(!1));
+                e === chrome.cast.ReceiverAvailability.AVAILABLE ? (a = !0, s && a && n.player.showChromecast(!0)) : (a = !1,
+                    n.player.showChromecast(!1))
             },
             f = function(e) {
                 e || p()
@@ -17625,7 +17627,8 @@ var Base64 = {
         e = e.replace(/\r\n/g, "\n");
         for (var t = "", n = 0; n < e.length; n++) {
             var i = e.charCodeAt(n);
-            i < 128 ? t += String.fromCharCode(i) : i > 127 && i < 2048 ? (t += String.fromCharCode(i >> 6 | 192), t += String.fromCharCode(63 & i | 128)) : (t += String.fromCharCode(i >> 12 | 224), t += String.fromCharCode(i >> 6 & 63 | 128), t += String.fromCharCode(63 & i | 128));
+            i < 128 ? t += String.fromCharCode(i) : i > 127 && i < 2048 ? (t += String.fromCharCode(i >> 6 | 192), t += String.fromCharCode(63 & i | 128)) : (t += String.fromCharCode(i >> 12 | 224), t += String.fromCharCode(i >> 6 & 63 | 128),
+                t += String.fromCharCode(63 & i | 128))
         }
         return t
     },
