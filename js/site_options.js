@@ -127,16 +127,6 @@ window.SiteOptions = {
     "is_onsite_notifs_enabled": false,
     "is_onsite_notifs_staffonly_beta": false,
     "experiments": {
-        "0122262e-971b-4c5d-87ed-6361a703aced": {
-            "name": "test cvp-config",
-            "groups": [{
-                "weight": 50,
-                "value": "1.1.116"
-            }, {
-                "weight": 50,
-                "value": "1.3.0+abs1"
-            }]
-        },
         "0173154a-7fa4-4a76-b8e1-0575eb3a7fcd": {
             "name": "android_live_preview",
             "groups": [{
