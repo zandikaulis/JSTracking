@@ -17772,7 +17772,7 @@ var Base64 = {
                             content: o.attr("data-tt_content"),
                             content_index: r
                         };
-                    if (o.attr("data-ember-action")) e.tracking.funnel.addProperties(s);
+                    if (o[0].hasAttribute("data-ember-action")) e.tracking.funnel.addProperties(s);
                     else if ("a" === o.prop("tagName").toLowerCase()) {
                         var a = o.attr("href") || "";
                         o.attr("href", URI(a).addSearch({
