@@ -245,8 +245,17 @@ window.SiteOptions = {
         "19017d2c-4473-4914-a10f-82152c8b2bd9": {
             "name": "CVP-Feb-2017",
             "groups": [{
-                "weight": 92,
+                "weight": 86,
                 "value": "1.3.5"
+            }, {
+                "weight": 2,
+                "value": "1.3.6+speed"
+            }, {
+                "weight": 2,
+                "value": "1.3.6+fxf"
+            }, {
+                "weight": 2,
+                "value": "1.3.6+fxfll"
             }, {
                 "weight": 2,
                 "value": "1.3.5+abs0"
@@ -411,28 +420,6 @@ window.SiteOptions = {
             }, {
                 "weight": 5,
                 "value": "control"
-            }]
-        },
-        "33ad61d9-3433-4073-b091-83251b29ea46": {
-            "name": "CVP-50",
-            "groups": [{
-                "weight": 90,
-                "value": "1.3.5"
-            }, {
-                "weight": 2,
-                "value": "1.3.5"
-            }, {
-                "weight": 2,
-                "value": "1.3.5+abs0"
-            }, {
-                "weight": 2,
-                "value": "1.3.5+absagg"
-            }, {
-                "weight": 2,
-                "value": "1.3.5+absnom"
-            }, {
-                "weight": 2,
-                "value": "1.3.5+absnop"
             }]
         },
         "34fca29d-6914-412f-8ce2-fb65f792d386": {
@@ -1068,22 +1055,6 @@ window.SiteOptions = {
             }, {
                 "weight": 50,
                 "value": "videos"
-            }]
-        },
-        "b660b196-deb7-4542-81e1-b35e61d7c79d": {
-            "name": "CVP control",
-            "groups": [{
-                "weight": 5,
-                "value": "1.0"
-            }, {
-                "weight": 88,
-                "value": "1.1.104"
-            }, {
-                "weight": 2,
-                "value": "1.1.111"
-            }, {
-                "weight": 5,
-                "value": "1.1.110"
             }]
         },
         "b9063610-cdfd-43c3-8479-59a6ab82d831": {
