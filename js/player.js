@@ -7826,7 +7826,7 @@
             return new p["default"]({
                 defaults: (t = {}, i(t, m, "no"), i(t, y, "off"), i(t, b, "no"), i(t, E, "no"), i(t, S, "no"), i(t, T, "no"), i(t, P, "no"), i(t, C, "no"), i(t, k, "no"), i(t, w, "no"), i(t, A, "no"), i(t, I, "1.3.5"), i(t, N, "no"), i(t, L, "no"), i(t, M, "control"), i(t, R, "no"), i(t, O, "no"), i(t, D, "no,"), i(t, x, "no"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, i(n, y, a("v2")), i(n, b, a("yes")), i(n, E, o(["US"])), i(n, S, o(["GB"])), i(n, T, o(["DE"])), i(n, P, o(["FR"])), i(n, C, o(["SE"])), i(n, k, o(["BE", "DK", "FI", "NL", "NO", "PL"])), i(n, w, o(["CA"])), i(n, A, o(["AU", "NZ"])), i(n, L, a("yes")), i(n, O, a("vca")), i(n, D, a("yes")), i(n, x, a("yes")), i(n, M, a("early")), i(n, I, a("1.3.5+absagg")), n),
+                overrides: (n = {}, i(n, y, a("v2")), i(n, b, a("yes")), i(n, E, o(["US"])), i(n, S, o(["GB"])), i(n, T, o(["DE"])), i(n, P, o(["FR"])), i(n, C, o(["SE"])), i(n, k, o(["BE", "DK", "FI", "NL", "NO", "PL"])), i(n, w, o(["CA"])), i(n, A, o(["AU", "NZ"])), i(n, L, a("yes")), i(n, O, a("vca")), i(n, D, a("yes")), i(n, M, a("early")), i(n, I, a("1.3.5+absagg")), n),
                 platform: "web",
                 login: e.login,
                 provider: new h["default"](h["default"].SERVICE_URL),
@@ -8630,7 +8630,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.09-001514+c9a550886639e70fd27327cb385dcbfebdd9b965",
+                    app_version: "2017.02.09-002953+bc453cd0b3d1172e1005a1c7792bb20634f7fcc8",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
