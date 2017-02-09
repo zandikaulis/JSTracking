@@ -8630,7 +8630,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.08-230205+6495d91cc3341a1f3744553f4ebc3cb699cb9a62",
+                    app_version: "2017.02.09-001514+c9a550886639e70fd27327cb385dcbfebdd9b965",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -10927,7 +10927,7 @@
 
         function i(e, t) {
             var n = a(e, t);
-            return d("" !== n ? o(e, n) : e)
+            return d("" !== n && t !== E ? o(e, n) : e)
         }
 
         function a(e, t) {
