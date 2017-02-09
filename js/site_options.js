@@ -859,13 +859,13 @@ window.SiteOptions = {
         "99494f77-1c7c-46c5-9b9c-a117db47d3c5": {
             "name": "BROWSE_EXPERIMENT",
             "groups": [{
-                "weight": 80,
+                "weight": 70,
                 "value": "control"
             }, {
                 "weight": 10,
                 "value": "variant1"
             }, {
-                "weight": 10,
+                "weight": 20,
                 "value": "variant2"
             }]
         },
