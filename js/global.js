@@ -15999,6 +15999,7 @@ googletag.cmd = googletag.cmd || [],
                 CLIENT_BATCH_SPADE: "1b905261-e257-4703-ac84-12a6a9099935",
                 CLIENT_BATCH_MIXPANEL: "42f5eea6-c548-4791-b767-9c7e29b73ef6",
                 CLIPS_FEEL_IT_COMING: "2858bc04-3f98-4808-a2dd-86555885ca90",
+                CLIPS_HEAR_ME_NOW: "9649684c-6d3f-423d-9d3c-f4296efee975",
                 ONSITE_NOTIFICATIONS: "b2925d54-cebb-4e1d-a50d-9dd2b1ea850e",
                 NEWS_FEED_REDESIGN: "05d8869f-e037-4955-b80a-7c361f9ddffb",
                 VOD_UPLOAD_UNITS_V3: "1710cf57-352c-4d09-b2c1-3d40bdf79b30",
@@ -16048,6 +16049,7 @@ googletag.cmd = googletag.cmd || [],
                 "1b905261-e257-4703-ac84-12a6a9099935": "control",
                 "42f5eea6-c548-4791-b767-9c7e29b73ef6": "control",
                 "2858bc04-3f98-4808-a2dd-86555885ca90": "control",
+                "9649684c-6d3f-423d-9d3c-f4296efee975": "control",
                 "05d8869f-e037-4955-b80a-7c361f9ddffb": "no",
                 "1710cf57-352c-4d09-b2c1-3d40bdf79b30": "control",
                 "5397de92-0538-42d1-977c-11842e03c9e5": "no",
@@ -16489,14 +16491,13 @@ googletag.cmd = googletag.cmd || [],
                 r = e, r.addUpdateListener(f), 0 !== r.media.length && g("sessionListener", r.media[0]), n.player.setChromecastConnected(!0, r.receiver.friendlyName)
             },
             d = function(e) {
-                e === chrome.cast.ReceiverAvailability.AVAILABLE ? (a = !0, s && a && n.player.showChromecast(!0)) : (a = !1, n.player.showChromecast(!1))
+                e === chrome.cast.ReceiverAvailability.AVAILABLE ? (a = !0, s && a && n.player.showChromecast(!0)) : (a = !1, n.player.showChromecast(!1));
             },
             f = function(e) {
                 e || p()
             },
             p = function() {
-                r && r.removeUpdateListener(f), o && o.removeUpdateListener(y),
-                    r = null, o = null, n.player.setChromecastConnected(!1)
+                r && r.removeUpdateListener(f), o && o.removeUpdateListener(y), r = null, o = null, n.player.setChromecastConnected(!1)
             },
             m = function(e) {
                 r = e, r.addUpdateListener(f), n.player.setChromecastConnected(!0, r.receiver.friendlyName)
@@ -17624,13 +17625,12 @@ var Base64 = {
         e = e.replace(/\r\n/g, "\n");
         for (var t = "", n = 0; n < e.length; n++) {
             var i = e.charCodeAt(n);
-            i < 128 ? t += String.fromCharCode(i) : i > 127 && i < 2048 ? (t += String.fromCharCode(i >> 6 | 192), t += String.fromCharCode(63 & i | 128)) : (t += String.fromCharCode(i >> 12 | 224), t += String.fromCharCode(i >> 6 & 63 | 128), t += String.fromCharCode(63 & i | 128))
+            i < 128 ? t += String.fromCharCode(i) : i > 127 && i < 2048 ? (t += String.fromCharCode(i >> 6 | 192), t += String.fromCharCode(63 & i | 128)) : (t += String.fromCharCode(i >> 12 | 224), t += String.fromCharCode(i >> 6 & 63 | 128), t += String.fromCharCode(63 & i | 128));
         }
         return t
     },
     _utf8_decode: function(e) {
-        for (var t = "", n = 0, i = c1 = c2 = 0; n < e.length;) i = e.charCodeAt(n),
-            i < 128 ? (t += String.fromCharCode(i), n++) : i > 191 && i < 224 ? (c2 = e.charCodeAt(n + 1), t += String.fromCharCode((31 & i) << 6 | 63 & c2), n += 2) : (c2 = e.charCodeAt(n + 1), c3 = e.charCodeAt(n + 2), t += String.fromCharCode((15 & i) << 12 | (63 & c2) << 6 | 63 & c3), n += 3);
+        for (var t = "", n = 0, i = c1 = c2 = 0; n < e.length;) i = e.charCodeAt(n), i < 128 ? (t += String.fromCharCode(i), n++) : i > 191 && i < 224 ? (c2 = e.charCodeAt(n + 1), t += String.fromCharCode((31 & i) << 6 | 63 & c2), n += 2) : (c2 = e.charCodeAt(n + 1), c3 = e.charCodeAt(n + 2), t += String.fromCharCode((15 & i) << 12 | (63 & c2) << 6 | 63 & c3), n += 3);
         return t
     }
 };
