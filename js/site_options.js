@@ -1037,16 +1037,6 @@ window.SiteOptions = {
                 "value": "new"
             }]
         },
-        "b542e7a6-6fc9-4380-a5cd-95301706904f": {
-            "name": "FINAL_DESTINATION",
-            "groups": [{
-                "weight": 50,
-                "value": "channel"
-            }, {
-                "weight": 50,
-                "value": "videos"
-            }]
-        },
         "b9063610-cdfd-43c3-8479-59a6ab82d831": {
             "name": "Visible Post Reactions",
             "groups": [{
