@@ -448,10 +448,10 @@ window.SiteOptions = {
         "3c2fb8a5-7914-4f4d-8f13-1cd3b4250919": {
             "name": "ios_moat",
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "active"
             }]
         },
