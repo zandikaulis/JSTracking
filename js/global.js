@@ -15132,7 +15132,7 @@ googletag.cmd = googletag.cmd || [],
                     return void i.contentWindow.postMessage(JSON.stringify(o), "*");
                 case "height":
                     return e("#passport_iframe_container").css({
-                        height: n.height + 10
+                        height: n.height + 25
                     }), e("#passport_modal").css({
                         visibility: "visible"
                     }), i = e('iframe[name="passport"]').contents()[0], void(n.focus && e(i).find("#username").focus());
