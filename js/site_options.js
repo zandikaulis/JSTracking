@@ -938,6 +938,28 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
+        "ac2acc22-f0ef-4162-b9a3-7357249165ca": {
+            "name": "baking_bread_i",
+            "groups": [{
+                "weight": 10,
+                "value": "yes_10"
+            }, {
+                "weight": 0,
+                "value": "yes_30"
+            }, {
+                "weight": 0,
+                "value": "yes_50"
+            }, {
+                "weight": 0,
+                "value": "yes_80"
+            }, {
+                "weight": 0,
+                "value": "yes_95"
+            }, {
+                "weight": 90,
+                "value": "no"
+            }]
+        },
         "ac39b897-d41d-4255-90b6-3a59027e12e0": {
             "name": "vods_game_info",
             "groups": [{
