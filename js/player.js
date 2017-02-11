@@ -55,11 +55,7 @@
             }
 
             function i(e) {
-                var t = w.getState(),
-                    n = t.experiments;
-                return n.get(Y.PERPETUA).then(function(t) {
-                    (0, u["default"])(Y.ENABLE_PERPETUA_GROUP, t) && e.playlist && p.setPlaylist(e.playlist)
-                })
+                e.playlist && p.setPlaylist(e.playlist)
             }
 
             function a() {
@@ -139,7 +135,11 @@
                     w.dispatch(z.setStream(z.TYPE_VIDEO, e)), w.dispatch((0, Q.setVideoId)(e)), w.dispatch((0, X.resetPlaylist)())
                 })
             }, p.setPlaylist = function(e) {
-                w.dispatch((0, X.setPlaylist)(e))
+                var t = w.getState(),
+                    n = t.experiments;
+                return n.get(Y.PERPETUA).then(function(t) {
+                    (0, u["default"])(Y.ENABLE_PERPETUA_GROUP, t) && w.dispatch((0, X.setPlaylist)(e))
+                })
             }, p.setLanguage = function(e) {
                 w.dispatch(te.loadLanguage(e))
             }, p.setMiniPlayerMode = function(e) {
@@ -8633,7 +8633,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.09-193605+5e680f978553eb93433a78496c481368bc8fc8cf",
+                    app_version: "2017.02.10-232845+5fdc868ea56f5233adefa8c933cad11c9abc2e4f",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
