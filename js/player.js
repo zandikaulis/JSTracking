@@ -35,14 +35,14 @@
                 var n = void 0;
                 n = "string" == typeof e || e instanceof String ? document.getElementById(e) : e;
                 var i = a(t);
-                (0, ce.setOAuthToken)(i), w = (0, G.init)(), w.dispatch((0, q.setPlayerOptions)(i)), i.debug && i.verbose && w.subscribe(function() {
+                (0, ue.setOAuthToken)(i), w = (0, G.init)(), w.dispatch((0, q.setPlayerOptions)(i)), i.debug && i.verbose && w.subscribe(function() {
                     console.debug("state change: %o", w.getState())
-                }), w.dispatch((0, ie.setWindow)(window)), w.dispatch(Z.loadExperiments({
+                }), w.dispatch((0, re.setWindow)(window)), w.dispatch(J.loadExperiments({
                     login: k.cookie.get("login") || null,
                     deviceID: A.get(!1),
                     userAgent: w.getState().window.navigator.userAgent
-                })), w.dispatch(te.loadDefaultLang(i.lang)), w.dispatch((0, re.setPlayerType)(i.player)), me.push(new V.PubSub(w, i)), g = new v.AnalyticsTracker(w, i), w.dispatch((0, se.setAnalyticsTracker)(g)), w.dispatch((0, ne.initializeQuality)()), m = i.allowfullscreen ? new F.FullScreen(n, w) : new H.NoFullScreen(n, w), ee = new _e.TimelineMetadataManager(w), le = new ge.PlaylistManager(w), I = new L.Video(n, g, w, i, m), P = new O.State(I, w, g, i), i.debug && (window.state = P), (0, M.forwardProperties)(p, I), $ = new h.Analytics(I, g, P, w, i), o(i), W = new R.EmbedHost(I, P, w), new D.PlayerHotkeys(I, n, w, i), w.dispatch((0, oe.setAutoplay)(i.autoplay)), i.controls && (E = new x.PlayerUI(I, n, g, P, w, i), J = new de.ClipGenerator(n, P, w)), r(i), w.dispatch((0, ae.initVodResume)()), (0, ce.krakenUserInfo)().then(function(e) {
-                    return w.dispatch((0, ae.setUser)(e._id))
+                })), w.dispatch(ee.loadDefaultLang(i.lang)), w.dispatch((0, ne.setPlayerType)(i.player)), _e.push(new V.PubSub(w, i)), g = new v.AnalyticsTracker(w, i), w.dispatch((0, oe.setAnalyticsTracker)(g)), w.dispatch((0, te.initializeQuality)()), m = i.allowfullscreen ? new F.FullScreen(n, w) : new H.NoFullScreen(n, w), Z = new ge.TimelineMetadataManager(w), se = new ve.PlaylistManager(w), I = new L.Video(n, g, w, i, m), P = new O.State(I, w, g, i), i.debug && (window.state = P), (0, M.forwardProperties)(p, I), $ = new h.Analytics(I, g, P, w, i), o(i), W = new R.EmbedHost(I, P, w), new D.PlayerHotkeys(I, n, w, i), w.dispatch((0, ae.setAutoplay)(i.autoplay)), i.controls && (E = new x.PlayerUI(I, n, g, P, w, i), X = new ce.ClipGenerator(n, P, w)), r(i), w.dispatch((0, ie.initVodResume)()), (0, ue.krakenUserInfo)().then(function(e) {
+                    return w.dispatch((0, ie.setUser)(e._id))
                 })
             }
 
@@ -89,7 +89,7 @@
             function o(e) {
                 if (I.setVolume(e.volume), I.setMuted(e.muted), e.time) {
                     var t = N.parse(e.time);
-                    I.readyState > I.HAVE_NOTHING ? I.setCurrentTime(t) : I.addEventListener(ue.LOADED_METADATA, function() {
+                    I.readyState > I.HAVE_NOTHING ? I.setCurrentTime(t) : I.addEventListener(le.LOADED_METADATA, function() {
                         I.setCurrentTime(t)
                     })
                 }
@@ -97,7 +97,7 @@
                     (0, u["default"])(S.debugIgnoreEvents, e) || I.addEventListener(e, function() {
                         console.log("video event: ", e)
                     })
-                }), I.addEventListener(ue.ERROR, function() {
+                }), I.addEventListener(le.ERROR, function() {
                     console.error("video error:", I.getError())
                 })
             }
@@ -122,39 +122,39 @@
                 I = void 0,
                 $ = void 0,
                 W = void 0,
-                J = void 0,
-                ee = void 0,
-                le = void 0,
-                me = [];
+                X = void 0,
+                Z = void 0,
+                se = void 0,
+                _e = [];
             p.setChannel = function(e) {
                 return c().then(function() {
-                    w.dispatch(z.setStream(z.TYPE_CHANNEL, e)), w.dispatch((0, Q.setChannelId)(e)), w.dispatch((0, X.resetPlaylist)())
+                    w.dispatch(z.setStream(z.TYPE_CHANNEL, e)), w.dispatch((0, Q.resetPlaylist)())
                 })
             }, p.setVideo = function(e) {
                 return c().then(function() {
-                    w.dispatch(z.setStream(z.TYPE_VIDEO, e)), w.dispatch((0, Q.setVideoId)(e)), w.dispatch((0, X.resetPlaylist)())
+                    w.dispatch(z.setStream(z.TYPE_VIDEO, e)), w.dispatch((0, Q.resetPlaylist)())
                 })
             }, p.setPlaylist = function(e) {
                 var t = w.getState(),
                     n = t.experiments;
                 return n.get(Y.PERPETUA).then(function(t) {
-                    (0, u["default"])(Y.ENABLE_PERPETUA_GROUP, t) && w.dispatch((0, X.setPlaylist)(e))
+                    (0, u["default"])(Y.ENABLE_PERPETUA_GROUP, t) && w.dispatch((0, Q.setPlaylist)(e))
                 })
             }, p.setLanguage = function(e) {
-                w.dispatch(te.loadLanguage(e))
+                w.dispatch(ee.loadLanguage(e))
             }, p.setMiniPlayerMode = function(e) {
-                w.dispatch((0, ve.setMiniPlayerMode)(e))
+                w.dispatch((0, he.setMiniPlayerMode)(e))
             }, p.recordClip = function() {
-                J && J.recordClip()
+                X && X.recordClip()
             }, p.isPlaying = function() {
-                var e = w.getState().stream instanceof fe.VODContentStream;
-                return !I.getPaused() && !I.getEnded() && (w.getState().online || e) && I.getReadyState() > pe.HAVE_CURRENT_DATA
+                var e = w.getState().stream instanceof pe.VODContentStream;
+                return !I.getPaused() && !I.getEnded() && (w.getState().online || e) && I.getReadyState() > de.HAVE_CURRENT_DATA
             }, p.setTrackingProperties = function(e) {
-                w.dispatch((0, he.setTrackingProperties)(e))
+                w.dispatch((0, fe.setTrackingProperties)(e))
             }, n(), p.destroy = function() {
-                E.destroy(), I.destroy(), P.destroy(), m.destroy(), $.destroy(), W.destroy(), me.forEach(function(e) {
+                E.destroy(), I.destroy(), P.destroy(), m.destroy(), $.destroy(), W.destroy(), _e.forEach(function(e) {
                     return e.destroy()
-                }), ee.destroy(), le.destroy()
+                }), Z.destroy(), se.destroy()
             }
         }
         Object.defineProperty(t, "__esModule", {
@@ -203,28 +203,27 @@
             K = n(233),
             W = n(336),
             z = r(W),
-            Q = n(337),
-            X = n(349),
-            J = n(628),
-            Z = r(J),
-            ee = n(630),
-            te = r(ee),
-            ne = n(276),
-            re = n(614),
-            ie = n(626),
-            ae = n(372),
-            oe = n(277),
-            se = n(619),
-            le = n(170),
-            ue = r(le),
-            ce = n(191),
-            de = n(588),
-            pe = n(274),
-            fe = n(210),
-            he = n(668),
-            ve = n(670),
-            ge = n(675),
-            _e = n(577);
+            Q = n(349),
+            X = n(628),
+            J = r(X),
+            Z = n(630),
+            ee = r(Z),
+            te = n(276),
+            ne = n(614),
+            re = n(626),
+            ie = n(372),
+            ae = n(277),
+            oe = n(619),
+            se = n(170),
+            le = r(se),
+            ue = n(191),
+            ce = n(588),
+            de = n(274),
+            pe = n(210),
+            fe = n(668),
+            he = n(670),
+            ve = n(675),
+            ge = n(577);
         n(281).polyfill(), n.p = S.playerHost + "/", n(676), n(681), window.google || $.getScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = a, window.Twitch.Player = a
     }, function(e, t, n) {
         var r = n(2),
@@ -8633,7 +8632,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.10-232845+5fdc868ea56f5233adefa8c933cad11c9abc2e4f",
+                    app_version: "2017.02.11-015104+5bf911ca4fab9555552f47bdaf755adc5ea4f47e",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -15339,82 +15338,57 @@
         "use strict";
 
         function r(e) {
-            return function(t) {
-                t(a({
-                    channelId: p(e),
-                    videoId: null
-                }))
+            return {
+                type: f,
+                streamMetadata: s(e)
             }
         }
 
         function i(e) {
-            return function(t) {
-                t(a({
-                    channelId: null,
-                    videoId: f(e)
-                }))
+            return {
+                type: f,
+                streamMetadata: l(e)
             }
         }
 
         function a(e) {
-            return {
-                type: b,
-                streamIds: e
+            return function(t, n) {
+                if (n().stream.contentType === c.CONTENT_MODE_LIVE && n().streamMetadata.broadcastID !== e) {
+                    t({
+                        type: h
+                    });
+                    var r = n().window,
+                        a = n().stream.channel,
+                        o = 0;
+                    return new Promise(function(s, l) {
+                        function c() {
+                            return a !== n().stream.channel ? void l() : void(0, u.streamInfo)(a).then(function(n) {
+                                n.stream && n.stream._id === e ? (t((0, p.updateViewerCount)(n.stream.viewers)), t(i(n.stream)), s(n)) : o < g.length ? (r.setTimeout(c, g[o]), o += 1) : l()
+                            })
+                        }
+                        c()
+                    })
+                }
             }
         }
 
         function o(e) {
-            return {
-                type: m,
-                streamMetadata: c(e)
+            return function(t, n) {
+                if (e.contentType === c.CONTENT_MODE_LIVE) {
+                    var a = (0, u.streamInfo)(e.channel);
+                    a.then(function(e) {
+                        e.stream && t(i(e.stream))
+                    })
+                } else if (e.contentType === d.CONTENT_MODE_VOD) {
+                    var o = (0, u.videoInfo)(e.videoId);
+                    o.then(function(e) {
+                        t(r(e))
+                    })
+                }
             }
         }
 
         function s(e) {
-            return {
-                type: m,
-                streamMetadata: d(e)
-            }
-        }
-
-        function l(e) {
-            return function(t, n) {
-                if (n().stream.contentType === v.CONTENT_MODE_LIVE && n().streamMetadata.broadcastID !== e) {
-                    t({
-                        type: y
-                    });
-                    var r = n().window,
-                        i = n().stream.channel,
-                        a = 0;
-                    return new Promise(function(o, l) {
-                        function u() {
-                            return i !== n().stream.channel ? void l() : void(0, h.streamInfo)(i).then(function(n) {
-                                n.stream && n.stream._id === e ? (t((0, _.updateViewerCount)(n.stream.viewers)), t(s(n.stream)), o(n)) : a < S.length ? (r.setTimeout(u, S[a]), a += 1) : l()
-                            })
-                        }
-                        u()
-                    })
-                }
-            }
-        }
-
-        function u(e) {
-            return function(t, n) {
-                if (e.contentType === v.CONTENT_MODE_LIVE) {
-                    var r = (0, h.streamInfo)(e.channel);
-                    r.then(function(e) {
-                        e.stream && t(s(e.stream))
-                    })
-                } else if (e.contentType === g.CONTENT_MODE_VOD) {
-                    var i = (0, h.videoInfo)(e.videoId);
-                    i.then(function(e) {
-                        t(o(e))
-                    })
-                }
-            }
-        }
-
-        function c(e) {
             return {
                 broadcastID: e.broadcast_id,
                 type: e.broadcast_type,
@@ -15432,11 +15406,11 @@
                     template: e.preview
                 },
                 url: e.url,
-                viewers: E
+                viewers: v
             }
         }
 
-        function d(e) {
+        function l(e) {
             return {
                 broadcastID: e._id,
                 type: "live",
@@ -15457,26 +15431,17 @@
                 viewers: e.viewers
             }
         }
-
-        function p(e) {
-            return String(e).replace(/[^A-Za-z0-9_]/g, "")
-        }
-
-        function f(e) {
-            return String(e).replace(/[^A-Za-z0-9_]/g, "")
-        }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.FETCH_METADATA_TIMEOUT = t.VIEWERS_NOT_SET = t.ACTION_SET_REQUESTED_STREAM = t.ACTION_CLEAR_STREAMMETADATA = t.ACTION_SET_STREAMMETADATA = void 0, t.setChannelId = r, t.setVideoId = i, t.setRequestedStream = a, t.setVODStreamMetadata = o, t.setLiveStreamMetadata = s, t.fetchLiveStreamMetadata = l, t.fetchAndSetStreamMetadata = u;
-        var h = n(191),
-            v = n(158),
-            g = n(210),
-            _ = n(338),
-            m = t.ACTION_SET_STREAMMETADATA = "set streammetadata",
-            y = t.ACTION_CLEAR_STREAMMETADATA = "clear streammetadata",
-            b = t.ACTION_SET_REQUESTED_STREAM = "set requested stream",
-            E = t.VIEWERS_NOT_SET = 0,
-            S = t.FETCH_METADATA_TIMEOUT = [15e3, 3e4, 6e4, 12e4, 3e5, 6e5]
+        }), t.FETCH_METADATA_TIMEOUT = t.VIEWERS_NOT_SET = t.ACTION_CLEAR_STREAMMETADATA = t.ACTION_SET_STREAMMETADATA = void 0, t.setVODStreamMetadata = r, t.setLiveStreamMetadata = i, t.fetchLiveStreamMetadata = a, t.fetchAndSetStreamMetadata = o;
+        var u = n(191),
+            c = n(158),
+            d = n(210),
+            p = n(338),
+            f = t.ACTION_SET_STREAMMETADATA = "set streammetadata",
+            h = t.ACTION_CLEAR_STREAMMETADATA = "clear streammetadata",
+            v = t.VIEWERS_NOT_SET = 0,
+            g = t.FETCH_METADATA_TIMEOUT = [15e3, 3e4, 6e4, 12e4, 3e5, 6e5]
     }, function(e, t) {
         "use strict";
 
@@ -15692,15 +15657,14 @@
             p = n(239),
             f = n(336),
             h = r(f),
-            v = n(337),
-            g = n(349),
-            _ = n(276),
-            m = n(346),
-            y = n(174),
-            b = n(350),
-            E = r(b),
-            S = n(169),
-            T = r(S);
+            v = n(349),
+            g = n(276),
+            _ = n(346),
+            m = n(174),
+            y = n(350),
+            b = r(y),
+            E = n(169),
+            S = r(E);
         t.EmbedHost = function() {
             function e(t, n, r) {
                 a(this, e), this._player = t, this._stateStore = r, this._clients = [], this._unsubscribes = [], this._window = this._stateStore.getState().window, n.addEventListener(d.EVENT_STATE_UPDATE, this._sendPlayerState.bind(this)), n.addEventListener(d.EVENT_PLAYER_UPDATE, this._sendPlayerEvent.bind(this)), this._window.addEventListener("message", this);
@@ -15711,16 +15675,16 @@
                 key: "_initSubscriptions",
                 value: function() {
                     var e = this;
-                    this._unsubscribes.push((0, y.subscribe)(this._stateStore, ["stats.videoStats"], function() {
+                    this._unsubscribes.push((0, m.subscribe)(this._stateStore, ["stats.videoStats"], function() {
                         e._sendStoreState()
-                    })), this._unsubscribes.push((0, y.subscribe)(this._stateStore, ["viewercount"], function() {
-                        e._sendStoreState(), e._sendPlayerEvent(T.VIEWERS_CHANGE)
+                    })), this._unsubscribes.push((0, m.subscribe)(this._stateStore, ["viewercount"], function() {
+                        e._sendStoreState(), e._sendPlayerEvent(S.VIEWERS_CHANGE)
                     }))
                 }
             }, {
                 key: "_addClient",
                 value: function(e) {
-                    this._clients.push(e), this._send(e, E.BRIDGE_HOST_READY), this._stateStore.dispatch((0, m.requestStatsEnabled)(this))
+                    this._clients.push(e), this._send(e, b.BRIDGE_HOST_READY), this._stateStore.dispatch((0, _.requestStatsEnabled)(this))
                 }
             }, {
                 key: "_send",
@@ -15728,7 +15692,7 @@
                     var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
                         r = Array.isArray(n) ? n : [n],
                         i = {
-                            namespace: E.BRIDGE_CLIENT_NAMESPACE,
+                            namespace: b.BRIDGE_CLIENT_NAMESPACE,
                             method: t,
                             args: r
                         };
@@ -15746,54 +15710,54 @@
                 key: "handleEvent",
                 value: function(e) {
                     var t = this;
-                    if ((0, c["default"])(e.data) && e.data.namespace === E.BRIDGE_HOST_NAMESPACE) switch (e.data.method) {
-                        case E.BRIDGE_REQ_SUBSCRIBE:
+                    if ((0, c["default"])(e.data) && e.data.namespace === b.BRIDGE_HOST_NAMESPACE) switch (e.data.method) {
+                        case b.BRIDGE_REQ_SUBSCRIBE:
                             this._addClient(e.source);
                             break;
-                        case E.METHOD_PLAY:
+                        case b.METHOD_PLAY:
                             this._player.play();
                             break;
-                        case E.METHOD_PAUSE:
+                        case b.METHOD_PAUSE:
                             this._player.pause();
                             break;
-                        case E.METHOD_SET_CHANNEL:
+                        case b.METHOD_SET_CHANNEL:
                             var n = e.data.args[0];
-                            this._stateStore.dispatch(h.setStream(h.TYPE_CHANNEL, n)), this._stateStore.dispatch((0, v.setChannelId)(n)), this._stateStore.dispatch((0, g.resetPlaylist)());
+                            this._stateStore.dispatch(h.setStream(h.TYPE_CHANNEL, n)), this._stateStore.dispatch((0, v.resetPlaylist)());
                             break;
-                        case E.METHOD_SET_VIDEO:
+                        case b.METHOD_SET_VIDEO:
                             var r = e.data.args[0];
-                            this._stateStore.dispatch(h.setStream(h.TYPE_VIDEO, r)), this._stateStore.dispatch((0, v.setVideoId)(r)), this._stateStore.dispatch((0, g.resetPlaylist)());
+                            this._stateStore.dispatch(h.setStream(h.TYPE_VIDEO, r)), this._stateStore.dispatch((0, v.resetPlaylist)());
                             break;
-                        case E.METHOD_SET_PLAYLIST:
+                        case b.METHOD_SET_PLAYLIST:
                             this._stateStore.getState().experiments.get(p.PERPETUA).then(function(n) {
-                                (0, l["default"])(p.ENABLE_PERPETUA_GROUP, n) && t._stateStore.dispatch((0, g.setPlaylist)(e.data.args[0]))
+                                (0, l["default"])(p.ENABLE_PERPETUA_GROUP, n) && t._stateStore.dispatch((0, v.setPlaylist)(e.data.args[0]))
                             });
                             break;
-                        case E.METHOD_SEEK:
+                        case b.METHOD_SEEK:
                             this._player.setCurrentTime(parseFloat(e.data.args[0]));
                             break;
-                        case E.METHOD_SET_QUALITY:
-                            this._stateStore.dispatch((0, _.selectQuality)(e.data.args[0]));
+                        case b.METHOD_SET_QUALITY:
+                            this._stateStore.dispatch((0, g.selectQuality)(e.data.args[0]));
                             break;
-                        case E.METHOD_SET_MUTE:
+                        case b.METHOD_SET_MUTE:
                             this._player.setMuted(!!e.data.args[0]);
                             break;
-                        case E.METHOD_SET_VOLUME:
+                        case b.METHOD_SET_VOLUME:
                             this._player.setVolume(parseFloat(e.data.args[0]));
                             break;
-                        case E.METHOD_DESTROY:
+                        case b.METHOD_DESTROY:
                             this._player.destroy()
                     }
                 }
             }, {
                 key: "_sendPlayerState",
                 value: function(e) {
-                    this._sendAll(E.BRIDGE_STATE_UPDATE, e.toJSON())
+                    this._sendAll(b.BRIDGE_STATE_UPDATE, e.toJSON())
                 }
             }, {
                 key: "_sendPlayerEvent",
                 value: function(e) {
-                    this._sendAll(E.BRIDGE_PLAYER_EVENT, e)
+                    this._sendAll(b.BRIDGE_PLAYER_EVENT, e)
                 }
             }, {
                 key: "_sendStoreState",
@@ -15807,12 +15771,12 @@
                                 videoStats: n
                             }
                         };
-                    this._sendAll(E.BRIDGE_STORE_STATE_UPDATE, r)
+                    this._sendAll(b.BRIDGE_STORE_STATE_UPDATE, r)
                 }
             }, {
                 key: "destroy",
                 value: function() {
-                    this._stateStore.dispatch((0, m.requestStatsDisabled)(this)), this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
+                    this._stateStore.dispatch((0, _.requestStatsDisabled)(this)), this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
                         return e()
                     })
                 }
@@ -16986,8 +16950,7 @@
                 key: "updateStats",
                 value: function(e) {
                     var t = e.stats.videoStats;
-                    $(".js-stat-buffer-size", this._root).text(t.bufferSize), $(".js-stat-display-resolution", this._root).text(t.displayResolution), $(".js-stat-skipped-frames", this._root).text(t.skippedFrames), $(".js-stat-fps", this._root).text(t.fps), $(".js-stat-hls-latency-broadcaster", this._root).text(t.hlsLatencyBroadcaster), $(".js-stat-hls-latency-encoder", this._root).text(t.hlsLatencyEncoder), $(".js-stat-memory-usage", this._root).text(t.memoryUsage),
-                        $(".js-stat-playback-rate", this._root).text(t.playbackRate), $(".js-stat-video-resolution", this._root).text(t.videoResolution), $(".js-stat-video-backend-version", this._root).text(t.backendVersion)
+                    $(".js-stat-buffer-size", this._root).text(t.bufferSize), $(".js-stat-display-resolution", this._root).text(t.displayResolution), $(".js-stat-skipped-frames", this._root).text(t.skippedFrames), $(".js-stat-fps", this._root).text(t.fps), $(".js-stat-hls-latency-broadcaster", this._root).text(t.hlsLatencyBroadcaster), $(".js-stat-hls-latency-encoder", this._root).text(t.hlsLatencyEncoder), $(".js-stat-memory-usage", this._root).text(t.memoryUsage), $(".js-stat-playback-rate", this._root).text(t.playbackRate), $(".js-stat-video-resolution", this._root).text(t.videoResolution), $(".js-stat-video-backend-version", this._root).text(t.backendVersion)
                 }
             }, {
                 key: "_toggleStatsPopup",
@@ -18306,8 +18269,8 @@
                             var i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
                             $(e, t.$root).html(r.translate(n, i))
                         };
-                    i(".js-live-label", "Live"), i(".js-offline-label", "Offline"), i(".js-playlist-label", "Playlist"), i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-playlist-started-label", " has started a playlist."), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"), i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-advertisement-label", "Advertisement"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."),
-                        i(".js-age-gate-submit", "Submit"), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"), i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel"), i(".js-clips-menu-title", "Make an impact with Clip Titles"), i(".js-clips-menu-content-share", "Give your clips the perfect title to share more about your favorite moments."), i(".js-clips-learn-more", "Learn More");
+                    i(".js-live-label", "Live"), i(".js-offline-label", "Offline"), i(".js-playlist-label", "Playlist"), i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-playlist-started-label", " has started a playlist."), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"), i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-advertisement-label", "Advertisement"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-submit", "Submit"), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"),
+                        i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel"), i(".js-clips-menu-title", "Make an impact with Clip Titles"), i(".js-clips-menu-content-share", "Give your clips the perfect title to share more about your favorite moments."), i(".js-clips-learn-more", "Learn More");
                     var a = function(e, n, i) {
                         $(e, t.$root).attr(n, r.translate(i))
                     };
@@ -35388,17 +35351,18 @@
         }
 
         function i() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d,
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f,
                 t = arguments[1];
             switch (t.type) {
                 case a.ACTION_SET_STREAMMETADATA:
-                    return (0, l["default"])({}, e, t.streamMetadata);
-                case a.ACTION_SET_REQUESTED_STREAM:
-                    return (0, c["default"])({}, e, t.streamIds);
+                    return (0, c["default"])({}, e, t.streamMetadata);
                 case o.ACTION_SET_STREAM:
-                    return d;
+                    return (0, p["default"])(f, {
+                        channelId: t.stream.contentType === s.CONTENT_MODE_LIVE ? t.stream.channel : null,
+                        videoId: t.stream.contentType === l.CONTENT_MODE_VOD ? t.stream.videoId : null
+                    });
                 case a.ACTION_CLEAR_STREAMMETADATA:
-                    return d;
+                    return f;
                 default:
                     return e
             }
@@ -35408,11 +35372,13 @@
         }), t.DEFAULT_STREAM_METADATA = void 0, t.streamMetadata = i;
         var a = n(337),
             o = n(336),
-            s = n(192),
-            l = r(s),
-            u = n(78),
+            s = n(158),
+            l = n(210),
+            u = n(192),
             c = r(u),
-            d = t.DEFAULT_STREAM_METADATA = {
+            d = n(78),
+            p = r(d),
+            f = t.DEFAULT_STREAM_METADATA = {
                 broadcastID: 0,
                 channelId: null,
                 videoId: null,
