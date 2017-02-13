@@ -17059,7 +17059,7 @@ googletag.cmd = googletag.cmd || [],
                 googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("chan", e.asyncAds.metadata.chan), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", "https:" === window.location.protocol ? "true" : "false"), googletag.pubads().setTargeting("loggedin", e.user.isLoggedIn() ? "true" : "false"), googletag.display("dfp-channel-adlight")
             })
         }, n.afterCompanionAdsRendered = function(e) {
-            t(".js-new-channel-ad").length && ("google" === e && (t(".new_advertisement").hide(), t("#lr_comp_300x250").hide(), t("#google_companion_300x60").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") ? t("#google_companion_300x60").show() : t("#google_companion_300x250").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(), setTimeout(function() {
+            t(".js-new-channel-ad").length && ("google" === e && (t(".new_advertisement").hide(), t("#lr_comp_300x250").hide(), t("#google_companion_300x60").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") || t("#google_companion_300x250").show(), t("#google_companion_300x60").is(":empty") || t("#google_companion_300x60").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(), setTimeout(function() {
                 var e = t(".js-new-channel-ad").outerHeight();
                 t(".js-rightcol-content").css("top", e)
             }))
@@ -17625,8 +17625,7 @@ var Base64 = {
         e = e.replace(/\r\n/g, "\n");
         for (var t = "", n = 0; n < e.length; n++) {
             var i = e.charCodeAt(n);
-            i < 128 ? t += String.fromCharCode(i) : i > 127 && i < 2048 ? (t += String.fromCharCode(i >> 6 | 192),
-                t += String.fromCharCode(63 & i | 128)) : (t += String.fromCharCode(i >> 12 | 224), t += String.fromCharCode(i >> 6 & 63 | 128), t += String.fromCharCode(63 & i | 128))
+            i < 128 ? t += String.fromCharCode(i) : i > 127 && i < 2048 ? (t += String.fromCharCode(i >> 6 | 192), t += String.fromCharCode(63 & i | 128)) : (t += String.fromCharCode(i >> 12 | 224), t += String.fromCharCode(i >> 6 & 63 | 128), t += String.fromCharCode(63 & i | 128))
         }
         return t
     },
