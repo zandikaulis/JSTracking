@@ -4285,8 +4285,8 @@
                 key: "_commonExperimentParams",
                 value: function() {
                     var e = this;
-                    return Promise.all([this.accessToken, this._experimentSettings.adStitchingUS, this._experimentSettings.adStitchingUK, this._experimentSettings.adStitchingA, this._experimentSettings.adStitchingB, this._experimentSettings.adStitchingC, this._experimentSettings.adStitchingD, this._experimentSettings.adStitchingE, this._experimentSettings.adStitchingF]).then(function(t) {
-                        var n = a(t, 9),
+                    return Promise.all([this.accessToken, this._experimentSettings.adStitchingUS, this._experimentSettings.adStitchingUK, this._experimentSettings.adStitchingA, this._experimentSettings.adStitchingB, this._experimentSettings.adStitchingC, this._experimentSettings.adStitchingD, this._experimentSettings.adStitchingE, this._experimentSettings.adStitchingF, this._experimentSettings.adStitchingG, this._experimentSettings.adStitchingH, this._experimentSettings.adStitchingI]).then(function(t) {
+                        var n = a(t, 12),
                             r = n[0],
                             i = n[1],
                             o = n[2],
@@ -4296,10 +4296,13 @@
                             p = n[6],
                             f = n[7],
                             h = n[8],
-                            v = {};
-                        return v.baking_bread = (0, c["default"])([i, o, s, u, d, p, f, h], function(e) {
+                            v = n[9],
+                            g = n[10],
+                            _ = n[11],
+                            m = {};
+                        return m.baking_bread = (0, c["default"])([i, o, s, u, d, p, f, h, v, g, _], function(e) {
                             return (0, l["default"])(e, "yes")
-                        }), e._restrictedBitrates = JSON.parse(r.token).chansub.restricted_bitrates, v
+                        }), e._restrictedBitrates = JSON.parse(r.token).chansub.restricted_bitrates, m
                     })
                 }
             }, {
@@ -4497,7 +4500,8 @@
                 ns_st_ge: M[e.streamMetadata.game] || R,
                 ns_st_ddt: p(new Date(e.streamMetadata.createdAt), !0),
                 ns_st_ce: !0
-            })) : e.stream instanceof I.VODContentStream ? (0, A.videoInfo)(e.stream.videoId).then(function(e) {
+            })) : e.stream instanceof I.VODContentStream ? (0,
+                A.videoInfo)(e.stream.videoId).then(function(e) {
                 return (0, g["default"])({}, x, {
                     ns_st_ci: e.broadcast_id,
                     ns_st_cl: 1e3 * e.length,
@@ -5763,7 +5767,7 @@
                                     U++
                                 },
                                 incrementClipLoadCounter: function() {
-                                    V.setLabel("ns_st_sc", String(V.getClipLoadCounter() + 1))
+                                    V.setLabel("ns_st_sc", String(V.getClipLoadCounter() + 1));
                                 },
                                 incrementAssetPlaybackCounter: function() {
                                     B++
@@ -7218,8 +7222,7 @@
                                 if (a)
                                     if (t.getNamespace().comScore) g = new n, g.setImplementationType(i.REDUCED);
                                     else if (t.exists(e))
-                                    if (_ = t.isTrue(e.debug),
-                                        t.exists(e.customerC2) && e.customerC2.length > 0) {
+                                    if (_ = t.isTrue(e.debug), t.exists(e.customerC2) && e.customerC2.length > 0) {
                                         var r = e.secure ? "https://sb" : "http" + ("s" == document.location.href.charAt(4) ? "s://sb" : "://b");
                                         g = new n, g.setPixelURL(r + ".scorecardresearch.com/p?c1=2"), g.setLabel("c2", e.customerC2), g.setImplementationType(i.REDUCED)
                                     } else _ && console && console.log("Warning: customerC2 is not provided (or incorrect) in the StreamingTag configuration.")
@@ -7823,9 +7826,9 @@
         function l(e) {
             var t, n;
             return new p["default"]({
-                defaults: (t = {}, i(t, m, "no"), i(t, y, "off"), i(t, b, "no"), i(t, E, "no"), i(t, S, "no"), i(t, T, "no"), i(t, P, "no"), i(t, C, "no"), i(t, k, "no"), i(t, w, "no"), i(t, A, "no"), i(t, I, "1.3.5"), i(t, N, "no"), i(t, L, "no"), i(t, M, "control"), i(t, R, "no"), i(t, O, "no"), i(t, D, "no,"), i(t, x, "no"), t),
+                defaults: (t = {}, i(t, m, "no"), i(t, y, "off"), i(t, b, "no"), i(t, E, "no"), i(t, S, "no"), i(t, T, "no"), i(t, P, "no"), i(t, C, "no"), i(t, k, "no"), i(t, w, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, N, "no"), i(t, M, "1.3.5"), i(t, R, "no"), i(t, D, "no"), i(t, x, "control"), i(t, j, "no"), i(t, L, "no"), i(t, U, "no,"), i(t, B, "no"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, i(n, y, a("v2")), i(n, b, a("yes")), i(n, E, o(["US"])), i(n, S, o(["GB"])), i(n, T, o(["DE"])), i(n, P, o(["FR"])), i(n, C, o(["SE"])), i(n, k, o(["BE", "DK", "FI", "NL", "NO", "PL"])), i(n, w, o(["CA"])), i(n, A, o(["AU", "NZ"])), i(n, L, a("yes")), i(n, O, a("vca")), i(n, D, a("yes")), i(n, M, a("early")), i(n, I, a("1.3.5+absagg")), n),
+                overrides: (n = {}, i(n, y, a("v2")), i(n, b, a("yes")), i(n, E, o(["US"])), i(n, S, o(["GB"])), i(n, T, o(["DE"])), i(n, P, o(["FR"])), i(n, C, o(["SE"])), i(n, k, o(["DK", "FI", "NL", "NO"])), i(n, w, o(["CA"])), i(n, A, o(["AU", "NZ"])), i(n, O, o(["BE"])), i(n, I, o(["PL"])), i(n, N, o(["AT", "CH", "ES", "IT", "PT"])), i(n, D, a("yes")), i(n, L, a("vca")), i(n, U, a("yes")), i(n, x, a("early")), i(n, M, a("1.3.5+absagg")), n),
                 platform: "web",
                 login: e.login,
                 provider: new h["default"](h["default"].SERVICE_URL),
@@ -7834,7 +7837,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.ENABLE_PERPETUA_GROUP = t.ENABLE_ABS_GROUP = t.NO_ABS_WITH_V12 = t.ABS_FIRST_TIME_GROUP_B = t.ABS_FIRST_TIME_GROUP_A = t.ABS_FORCED_GROUP = t.ADOPT = t.PINEAPPLE = t.VP_QOS_TEST = t.PERPETUA = t.DETERMINATION = t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.IN_PLAYER_RECOMMENDATIONS = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
+        }), t.ENABLE_PERPETUA_GROUP = t.ENABLE_ABS_GROUP = t.NO_ABS_WITH_V12 = t.ABS_FIRST_TIME_GROUP_B = t.ABS_FIRST_TIME_GROUP_A = t.ABS_FORCED_GROUP = t.ADOPT = t.PINEAPPLE = t.VP_QOS_TEST = t.PERPETUA = t.DETERMINATION = t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.IN_PLAYER_RECOMMENDATIONS = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
         var u = n(49),
             c = r(u),
             d = n(240),
@@ -7855,18 +7858,21 @@
             k = t.BAKING_BREAD_D = "4d081a33-0d0f-4b44-bfde-cf07c358915f",
             w = t.BAKING_BREAD_E = "cf2033c8-5313-4abe-8142-61b9072c9d26",
             A = t.BAKING_BREAD_F = "e6a95194-9540-46e0-858f-f47e5d5e3a5d",
-            O = t.MARKERS = "9e5fffd0-9693-412b-913d-7da332fdeea4",
-            I = t.PLAYER_CORE_VER_CONTROL = "19017d2c-4473-4914-a10f-82152c8b2bd9",
-            N = t.GABRIEL = "4aa9ee11-136c-4521-a139-e2abb718ec07",
-            L = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
-            M = t.PERPETUA = "af8f152a-f618-416e-8b79-d6ac30479018",
-            R = t.VP_QOS_TEST = "711aaaf6-61c0-4cc4-9469-0dfc9908785a",
-            D = t.PINEAPPLE = "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3",
-            x = t.ADOPT = "5397de92-0538-42d1-977c-11842e03c9e5",
-            j = t.ABS_FORCED_GROUP = "yes-forced",
-            U = t.ABS_FIRST_TIME_GROUP_A = "yes-ft-a",
-            B = t.ABS_FIRST_TIME_GROUP_B = "yes-ft-b";
-        t.NO_ABS_WITH_V12 = "no-with-1.2", t.ENABLE_ABS_GROUP = Object.freeze([j, U, B]), t.ENABLE_PERPETUA_GROUP = Object.freeze(["early", "mid"])
+            O = t.BAKING_BREAD_G = "c65ae62f-82dc-4394-ad75-df5f641e22d4",
+            I = t.BAKING_BREAD_H = "51e3d33c-157b-422d-9a15-b0f9e9c055b2",
+            N = t.BAKING_BREAD_I = "ac2acc22-f0ef-4162-b9a3-7357249165ca",
+            L = t.MARKERS = "9e5fffd0-9693-412b-913d-7da332fdeea4",
+            M = t.PLAYER_CORE_VER_CONTROL = "19017d2c-4473-4914-a10f-82152c8b2bd9",
+            R = t.GABRIEL = "4aa9ee11-136c-4521-a139-e2abb718ec07",
+            D = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
+            x = t.PERPETUA = "af8f152a-f618-416e-8b79-d6ac30479018",
+            j = t.VP_QOS_TEST = "711aaaf6-61c0-4cc4-9469-0dfc9908785a",
+            U = t.PINEAPPLE = "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3",
+            B = t.ADOPT = "5397de92-0538-42d1-977c-11842e03c9e5",
+            V = t.ABS_FORCED_GROUP = "yes-forced",
+            F = t.ABS_FIRST_TIME_GROUP_A = "yes-ft-a",
+            H = t.ABS_FIRST_TIME_GROUP_B = "yes-ft-b";
+        t.NO_ABS_WITH_V12 = "no-with-1.2", t.ENABLE_ABS_GROUP = Object.freeze([V, F, H]), t.ENABLE_PERPETUA_GROUP = Object.freeze(["early", "mid"])
     }, function(e, t, n) {
         function r(e) {
             var t = i(e);
@@ -8632,7 +8638,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.14-011428+e728a88595646f1a3ef0c90d3723f31215ce9889",
+                    app_version: "2017.02.14-011957+52b5f15dc7de3e4550a1b286e0719451725231e5",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -15292,7 +15298,10 @@
                         adStitchingC: b.get(s.BAKING_BREAD_C),
                         adStitchingD: b.get(s.BAKING_BREAD_D),
                         adStitchingE: b.get(s.BAKING_BREAD_E),
-                        adStitchingF: b.get(s.BAKING_BREAD_F)
+                        adStitchingF: b.get(s.BAKING_BREAD_F),
+                        adStitchingG: b.get(s.BAKING_BREAD_G),
+                        adStitchingH: b.get(s.BAKING_BREAD_H),
+                        adStitchingI: b.get(s.BAKING_BREAD_I)
                     },
                     w = void 0;
                 e === v ? w = new l.LiveContentStream(T, C, S, _.params, k) : e === g && (w = new u.VODContentStream(P, C, S, _.params, k)), w.accessToken.then(function() {
@@ -15541,7 +15550,7 @@
         var a = n(343),
             o = r(a),
             s = t.ACTION_SET_USHER_PARAMS = "set usher params",
-            l = t.USHER_PREFIX = "usher_"
+            l = t.USHER_PREFIX = "usher_";
     }, function(e, t, n) {
         function r(e, t) {
             return null == e ? e : i(e, a(t, 3), o)
@@ -16956,7 +16965,7 @@
                 key: "_toggleStatsPopup",
                 value: function() {
                     var e = this._stateStore.getState().stats.displayed;
-                    this._stateStore.dispatch(e ? (0, s.requestStatsDisabled)(this) : (0, s.requestStatsEnabled)(this)), this._stateStore.dispatch((0, s.displayStats)(!e))
+                    this._stateStore.dispatch(e ? (0, s.requestStatsDisabled)(this) : (0, s.requestStatsEnabled)(this)), this._stateStore.dispatch((0, s.displayStats)(!e));
                 }
             }]), t
         }(l.UIStateSubscriber)
@@ -18269,8 +18278,8 @@
                             var i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
                             $(e, t.$root).html(r.translate(n, i))
                         };
-                    i(".js-live-label", "Live"), i(".js-offline-label", "Offline"), i(".js-playlist-label", "Playlist"), i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-playlist-started-label", " has started a playlist."), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"), i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-advertisement-label", "Advertisement"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-submit", "Submit"), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"),
-                        i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel"), i(".js-clips-menu-title", "Make an impact with Clip Titles"), i(".js-clips-menu-content-share", "Give your clips the perfect title to share more about your favorite moments."), i(".js-clips-learn-more", "Learn More");
+                    i(".js-live-label", "Live"), i(".js-offline-label", "Offline"), i(".js-playlist-label", "Playlist"), i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-playlist-started-label", " has started a playlist."), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"), i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-advertisement-label", "Advertisement"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-submit", "Submit"), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"),
+                        i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"), i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel"), i(".js-clips-menu-title", "Make an impact with Clip Titles"), i(".js-clips-menu-content-share", "Give your clips the perfect title to share more about your favorite moments."), i(".js-clips-learn-more", "Learn More");
                     var a = function(e, n, i) {
                         $(e, t.$root).attr(n, r.translate(i))
                     };
