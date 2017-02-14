@@ -8632,7 +8632,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.11-015104+5bf911ca4fab9555552f47bdaf755adc5ea4f47e",
+                    app_version: "2017.02.14-011428+e728a88595646f1a3ef0c90d3723f31215ce9889",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -34750,11 +34750,13 @@
         }
 
         function i() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d,
                 t = arguments[1];
             switch (t.type) {
+                case o.ACTION_SET_STREAM:
+                    return d;
                 case a.ACTION_SET_MANIFEST_INFO:
-                    return (0, s["default"])({}, e, (0, u["default"])(t.info, Object.keys(c)), {
+                    return (0, l["default"])({}, e, (0, c["default"])(t.info, Object.keys(d)), {
                         stream_time: parseFloat(t.info.stream_time, 10) || 0
                     });
                 default:
@@ -34765,11 +34767,12 @@
             value: !0
         }), t.DEFAULT_MANIFEST_INFO = void 0, t.manifestInfo = i;
         var a = n(316),
-            o = n(78),
-            s = r(o),
-            l = n(66),
-            u = r(l),
-            c = t.DEFAULT_MANIFEST_INFO = {
+            o = n(336),
+            s = n(78),
+            l = r(s),
+            u = n(66),
+            c = r(u),
+            d = t.DEFAULT_MANIFEST_INFO = {
                 abs: !1,
                 broadcast_id: 0,
                 cluster: "",
