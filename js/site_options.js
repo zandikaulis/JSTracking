@@ -1175,10 +1175,10 @@ window.SiteOptions = {
         "cda5757e-2229-4d3c-9427-5ad3aa18b72f": {
             "name": "ios_nux_preroll_test",
             "groups": [{
-                "weight": 50,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "no_prerolls"
             }]
         },
