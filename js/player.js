@@ -3694,10 +3694,10 @@
 
         function d(e) {
             var t = o({
-                    url: w.apiHost + "/v5/playlists/" + e
+                    url: w.apiHost + "/v5/collections/" + e
                 }),
                 n = o({
-                    url: w.apiHost + "/v5/playlists/" + e + "/items"
+                    url: w.apiHost + "/v5/collections/" + e + "/items"
                 });
             return Promise.all([t, n])
         }
@@ -8638,7 +8638,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.14-011957+52b5f15dc7de3e4550a1b286e0719451725231e5",
+                    app_version: "2017.02.14-013019+10ac645b7fd4b5affea86d35536d2d74be2132be",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
