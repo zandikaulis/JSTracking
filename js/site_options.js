@@ -601,6 +601,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "533f9d45-9152-45a2-8ec7-dc44d40cce6f": {
+            "name": "ios_moat_3",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "active"
+            }]
+        },
         "5380a8cf-e5cf-497e-9c6c-16cb1c881e0c": {
             "name": "WATCH_NOW_RIGHTBAR",
             "groups": [{
