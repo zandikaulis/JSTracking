@@ -1134,7 +1134,7 @@
                 key: "trackEvent",
                 value: function(e, t) {
                     var n = this.player.getVideoInfo(),
-                        r = (0, f["default"])({}, (0, v["default"])(n, ["bandwidth", "cluster", "current_bitrate", "current_fps", "dropped_frames", "hls_latency_broadcaster", "hls_latency_encoder", "hls_latency_broadcaster_send_time", "hls_latency_ingest_receive_time", "hls_latency_ingest_send_time", "hls_latency_transcode_receive_time", "hls_latency_transcode_send_time", "hls_target_duration", "manifest_cluster", "manifest_node", "manifest_node_type", "serving_id", "node", "origin", "user_ip", "vid_display_height", "vid_display_width", "vid_height", "vid_width", "video_buffer_size"]), {
+                        r = (0, f["default"])({}, (0, v["default"])(n, ["bandwidth", "cluster", "current_bitrate", "current_fps", "dropped_frames", "hls_latency_broadcaster", "hls_latency_encoder", "hls_latency_broadcaster_send_time", "hls_latency_ingest_receive_time", "hls_latency_ingest_send_time", "hls_latency_transcode_receive_time", "hls_latency_transcode_send_time", "hls_target_duration", "manifest_cluster", "manifest_node", "manifest_node_type", "serving_id", "node", "user_ip", "vid_display_height", "vid_display_width", "vid_height", "vid_width", "video_buffer_size", "vod_cdn_origin", "vod_cdn_region"]), {
                             volume: this.player.getVolume(),
                             muted: this.player.getMuted(),
                             is_https: "https" === n.segment_protocol
@@ -1530,7 +1530,7 @@
                 n = e ? e.length : 0;
             for (this.clear(); ++t < n;) {
                 var r = e[t];
-                this.set(r[0], r[1]);
+                this.set(r[0], r[1])
             }
         }
         var i = n(88),
@@ -8638,7 +8638,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.14-213047+14a3e0d7febab3f74b87deffa77c97fe92eec5b7",
+                    app_version: "2017.02.14-213604+ba7b1dc51735d91e98cfba885526ced9b0eeb24b",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -11675,7 +11675,9 @@
                                 vid_height: e.videoHeight,
                                 vid_width: e.videoWidth,
                                 video_buffer_size: e.bufferSize,
-                                volume: this.getVolume()
+                                volume: this.getVolume(),
+                                vod_cdn_origin: n.origin,
+                                vod_cdn_region: n.region
                             };
                         return i
                     }
@@ -34748,7 +34750,10 @@
             "{{hoursText}} and {{minutesText}}": "{{hoursText}} and {{minutesText}}",
             "{{currentPosition}}/{{totalVideos}} video": "{{currentPosition}}/{{totalVideos}} video",
             "{{currentPosition}}/{{totalVideos}} video_plural": "{{currentPosition}}/{{totalVideos}} videos",
-            "Video unavailable": "Video unavailable"
+            "Video unavailable": "Video unavailable",
+            "Start watching": "Start watching",
+            "Skip this video": "Skip this video",
+            "This collection is empty.": "This collection is empty."
         }
     }, function(e, t, n) {
         "use strict";
@@ -34790,6 +34795,8 @@
                 manifest_node: "",
                 manifest_node_type: "",
                 node: "",
+                origin: "",
+                region: "",
                 segment_protocol: "",
                 server_time: 0,
                 serving_id: "",

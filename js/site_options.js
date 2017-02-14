@@ -495,6 +495,16 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "44dbd670-63e6-4f7f-aa47-417f3eccd939": {
+            "name": "bashful_bandit",
+            "groups": [{
+                "weight": 10,
+                "value": "yes"
+            }, {
+                "weight": 50,
+                "value": "no"
+            }]
+        },
         "474db509-7fb8-403e-97da-66dae8954e6d": {
             "name": "android_home_games_carousel",
             "groups": [{
