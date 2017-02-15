@@ -8638,7 +8638,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.15-005437+3054e4f8e311af32cd5902daee21f2d045edb0f7",
+                    app_version: "2017.02.15-010758+5de820e4261e9b557accc233f2f7cb71fd4ba76a",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -35386,7 +35386,7 @@
                 case a.ACTION_SET_STREAMMETADATA:
                     return (0, c["default"])({}, e, t.streamMetadata);
                 case o.ACTION_SET_STREAM:
-                    return (0, p["default"])(f, {
+                    return (0, p["default"])({}, f, {
                         channelId: t.stream.contentType === s.CONTENT_MODE_LIVE ? t.stream.channel : null,
                         videoId: t.stream.contentType === l.CONTENT_MODE_VOD ? t.stream.videoId : null
                     });
@@ -35398,7 +35398,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.DEFAULT_STREAM_METADATA = void 0, t.streamMetadata = i;
+        }), t.streamMetadata = i;
         var a = n(337),
             o = n(336),
             s = n(158),
@@ -35407,7 +35407,7 @@
             c = r(u),
             d = n(78),
             p = r(d),
-            f = t.DEFAULT_STREAM_METADATA = {
+            f = Object.freeze({
                 broadcastID: 0,
                 channelId: null,
                 videoId: null,
@@ -35424,7 +35424,7 @@
                 },
                 url: "",
                 viewers: a.VIEWERS_NOT_SET
-            }
+            })
     }, function(e, t, n) {
         "use strict";
 
