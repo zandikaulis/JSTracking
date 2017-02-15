@@ -8638,7 +8638,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.14-213604+ba7b1dc51735d91e98cfba885526ced9b0eeb24b",
+                    app_version: "2017.02.15-005437+3054e4f8e311af32cd5902daee21f2d045edb0f7",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -19271,19 +19271,26 @@
             s = r(o),
             l = n(379),
             u = n(380),
-            c = n(208);
+            c = n(208),
+            d = n(174);
         t.PlayerUIControlsDisplay = function() {
             function e(t, n, r) {
                 var a = this;
-                i(this, e), this._player = t, this._root = n, this._stateStore = r, this._hovering = !1, this._hideControlsTimeout = null, this._mouseX = 0, this._mouseY = 0, $(this._root).on("mouseenter", ".js-controls-top, .js-controls-bottom", function() {
+                i(this, e), this._player = t, this._root = n, this._stateStore = r, this.unsubs = [], this.unsubs.push((0, d.subscribe)(this._stateStore, ["playlist.sidebarVisible"], this.onSideBarVisibility.bind(this))), this._hovering = !1, this._hideControlsTimeout = null, this._mouseX = 0, this._mouseY = 0, $(this._root).on("mouseenter", ".js-controls-top, .js-controls-bottom", function() {
                     a.setHovering(!0)
                 }), $(this._root).on("mouseleave", this.hideControls.bind(this)), $(this._root).on("mouseleave", ".js-controls-top, .js-controls-bottom", function() {
                     a.setHovering(!1)
                 }), $(this._root).on("mousemove", function(e) {
-                    a._mouseX === e.screenX && a._mouseY === e.screenY || (a._mouseX = e.screenX, a._mouseY = e.screenY, a.showControls(s.hoverControlsDelay))
+                    a._stateStore.getState().playlist.sidebarVisible || a._mouseX === e.screenX && a._mouseY === e.screenY || (a._mouseX = e.screenX, a._mouseY = e.screenY, a.showControls(s.hoverControlsDelay))
                 })
             }
             return a(e, [{
+                key: "onSideBarVisibility",
+                value: function(e) {
+                    var t = e.playlist;
+                    t.sidebarVisible ? this.hideControls() : this.showControls(s.hoverControlsDelay)
+                }
+            }, {
                 key: "setHovering",
                 value: function(e) {
                     (0, u.isTouchDevice)() || (this._hovering = e)
@@ -19304,7 +19311,9 @@
             }, {
                 key: "destroy",
                 value: function() {
-                    $(this._root).off("mouseleave"), $(this._root).off("mouseenter"), $(this._root).off("mousemove")
+                    $(this._root).off("mouseleave"), $(this._root).off("mouseenter"), $(this._root).off("mousemove"), this.unsubs.forEach(function(e) {
+                        return e()
+                    })
                 }
             }]), e
         }()
@@ -21941,7 +21950,7 @@
                     if (e && t) {
                         e.length !== t.length ? i("24") : void 0, this._callbacks = null, this._contexts = null;
                         for (var r = 0; r < e.length; r++) e[r].call(t[r], n);
-                        e.length = 0, t.length = 0
+                        e.length = 0, t.length = 0;
                     }
                 }, e.prototype.checkpoint = function() {
                     return this._callbacks ? this._callbacks.length : 0
@@ -30426,12 +30435,12 @@
             }, {
                 key: "_enablePlaylists",
                 value: function() {
-                    this.$playlist.attr("data-show-playlist", !0), this.$playlistNav.attr("data-show-nav", !0)
+                    this.$root.attr("data-collections", !0), this.$playlist.attr("data-show-playlist", !0), this.$playlistNav.attr("data-show-nav", !0)
                 }
             }, {
                 key: "_disablePlaylists",
                 value: function() {
-                    this.$playlist.attr("data-show-playlist", !1), this.$playlistNav.attr("data-show-nav", !1)
+                    this.$root.attr("data-collections", !1), this.$playlist.attr("data-show-playlist", !1), this.$playlistNav.attr("data-show-nav", !1)
                 }
             }, {
                 key: "onShowInfoChange",
