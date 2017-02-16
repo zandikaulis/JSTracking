@@ -8637,7 +8637,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.15-230243+9b6e5f17725d64ecd1f52befe82fec69a523fa62",
+                    app_version: "2017.02.16-214312+61a1bbccfa56873246d1be32739869bd973f4309",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -15843,13 +15843,13 @@
 
         function l(e) {
             return {
-                id: e.id,
+                id: e._id,
                 createdAt: new Date(e.created_at),
                 updatedAt: new Date(e.updated_at),
                 owner: {
-                    id: e.owner.id,
+                    id: e.owner._id,
                     displayName: e.owner.display_name,
-                    login: e.owner.login
+                    name: e.owner.name
                 },
                 state: e.state,
                 thumbnails: e.thumbnails,
@@ -30455,7 +30455,7 @@
                     var t = e.playlist,
                         n = e.lang;
                     this.$playlistCollapsedTitle.text(t.title), this.$playlistTitle.text(t.title), this.$playlistAuthor.html(n.translate("By {{author}}", {
-                        author: '<a href="https://twitch.tv/' + t.owner.login + '">' + t.owner.displayName + "</a>",
+                        author: '<a href="https://twitch.tv/' + t.owner.name + '">' + t.owner.displayName + "</a>",
                         interpolation: {
                             escape: !1
                         }
@@ -34892,7 +34892,7 @@
                 owner: {
                     displayName: "",
                     id: "",
-                    login: ""
+                    name: ""
                 },
                 state: "public",
                 thumbnails: {
