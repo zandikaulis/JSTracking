@@ -3356,7 +3356,7 @@
                         length: time,
                         channel: channel
                     };
-                    Twitch.tracking.spadeAndMixpanel.trackEvent("commercial", properties);
+                    Twitch.tracking.spadeAndMixpanel.trackEvent("commercial_request", properties);
                     deferred.resolve()
                 }).fail(function(response) {
                     deferred.reject()
