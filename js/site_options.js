@@ -1036,10 +1036,10 @@ window.SiteOptions = {
         "b2925d54-cebb-4e1d-a50d-9dd2b1ea850e": {
             "name": "onsite_notifications",
             "groups": [{
-                "weight": 90,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "variant1"
             }]
         },
