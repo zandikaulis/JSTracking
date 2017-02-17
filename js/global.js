@@ -16073,7 +16073,8 @@ googletag.cmd = googletag.cmd || [],
                 ONSITE_NOTIFICATIONS: "variant1",
                 CLIPS_FEEL_IT_COMING: "variant1",
                 CLIPS_HEAR_ME_NOW: "variant1",
-                SNAIL: "early"
+                SNAIL: "early",
+                PERPETUA: "early"
             };
         _.each(Object.keys(a), function(t) {
             s[i[t]] = e.user().then(function(e) {
@@ -16492,8 +16493,8 @@ googletag.cmd = googletag.cmd || [],
                 r = e, r.addUpdateListener(f), 0 !== r.media.length && g("sessionListener", r.media[0]), n.player.setChromecastConnected(!0, r.receiver.friendlyName)
             },
             d = function(e) {
-                e === chrome.cast.ReceiverAvailability.AVAILABLE ? (a = !0, s && a && n.player.showChromecast(!0)) : (a = !1,
-                    n.player.showChromecast(!1))
+                e === chrome.cast.ReceiverAvailability.AVAILABLE ? (a = !0,
+                    s && a && n.player.showChromecast(!0)) : (a = !1, n.player.showChromecast(!1))
             },
             f = function(e) {
                 e || p()
@@ -17622,7 +17623,8 @@ var Base64 = {
     decode: function(e) {
         var t, n, i, o, r, s, a, l = "",
             u = 0;
-        for (e = e.replace(/[^A-Za-z0-9\+\/\=]/g, ""); u < e.length;) o = Base64._keyStr.indexOf(e.charAt(u++)), r = Base64._keyStr.indexOf(e.charAt(u++)), s = Base64._keyStr.indexOf(e.charAt(u++)), a = Base64._keyStr.indexOf(e.charAt(u++)), t = o << 2 | r >> 4, n = (15 & r) << 4 | s >> 2, i = (3 & s) << 6 | a, l += String.fromCharCode(t), 64 != s && (l += String.fromCharCode(n)), 64 != a && (l += String.fromCharCode(i));
+        for (e = e.replace(/[^A-Za-z0-9\+\/\=]/g, ""); u < e.length;) o = Base64._keyStr.indexOf(e.charAt(u++)), r = Base64._keyStr.indexOf(e.charAt(u++)), s = Base64._keyStr.indexOf(e.charAt(u++)), a = Base64._keyStr.indexOf(e.charAt(u++)), t = o << 2 | r >> 4, n = (15 & r) << 4 | s >> 2, i = (3 & s) << 6 | a, l += String.fromCharCode(t), 64 != s && (l += String.fromCharCode(n)),
+            64 != a && (l += String.fromCharCode(i));
         return l = Base64._utf8_decode(l)
     },
     _utf8_encode: function(e) {
