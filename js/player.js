@@ -8637,7 +8637,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.17-234807+4342154ae78cc1fbcfe377cfb867987eda401082",
+                    app_version: "2017.02.18-010555+c5f9bb886d28d1106ad5c8c5ceb410875b332fa1",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -11001,12 +11001,16 @@
                     o = e.filter(function(e) {
                         return !(0, f["default"])(a.restrictedBitrates, e.group)
                     });
-                o.length > 0 && !o.some(function(e) {
-                    return e.group === i.selected
-                }) && i.selected !== E && t({
-                    type: m,
-                    quality: o[0].group
-                }), t({
+                if (o.length > 0 && !o.some(function(e) {
+                        return e.group === i.selected
+                    }) && i.selected !== E) {
+                    var s = Math.ceil(o.length / 2) - o.length % 2;
+                    t({
+                        type: m,
+                        quality: o[s].group
+                    })
+                }
+                t({
                     type: b,
                     qualities: e
                 })
