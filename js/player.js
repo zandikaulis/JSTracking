@@ -8637,7 +8637,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.18-010555+c5f9bb886d28d1106ad5c8c5ceb410875b332fa1",
+                    app_version: "2017.02.18-172113+2a82345c6d568f63bb499d3eac51735de1bacbfb",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
