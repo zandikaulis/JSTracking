@@ -18071,7 +18071,7 @@ var Base64 = {
             h = CryptoJS.SHA1(c),
             d = h.words[0] >>> 0,
             f = d / Math.pow(2, 32),
-            p = f < l && "production" === SiteOptions.develop_flavor;
+            p = f < l && "production" === SiteOptions.deploy_flavor;
         Twitch.api.init({
             baseUrl: p ? r : t,
             baseUrlSecure: p ? s : n,
