@@ -124,7 +124,7 @@ window.SiteOptions = {
     "bits_promo_enabled": false,
     "p_cheer_enabled": true,
     "prime_blackfriday_promo_enabled": false,
-    "is_onsite_notifs_enabled": false,
+    "is_onsite_notifs_enabled": true,
     "is_onsite_notifs_staffonly_beta": false,
     "experiments": {
         "0173154a-7fa4-4a76-b8e1-0575eb3a7fcd": {
@@ -1036,10 +1036,10 @@ window.SiteOptions = {
         "b2925d54-cebb-4e1d-a50d-9dd2b1ea850e": {
             "name": "onsite_notifications",
             "groups": [{
-                "weight": 100,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "variant1"
             }]
         },
