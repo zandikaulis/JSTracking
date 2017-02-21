@@ -15994,7 +15994,6 @@ googletag.cmd = googletag.cmd || [],
                 PERPETUA: "af8f152a-f618-416e-8b79-d6ac30479018",
                 EXTENSIONS: "264f75af-a787-4a40-8654-40d78b4d8b41",
                 INTL_I18N: "0670f0ea-3b5c-41a8-946d-114ef4a42540",
-                INTERNATIONAL_SEARCH: "b0033638-a84e-4f57-8952-7115be4dc3b6",
                 DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS: "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2",
                 CLIENT_BATCH_SPADE: "1b905261-e257-4703-ac84-12a6a9099935",
                 CLIENT_BATCH_MIXPANEL: "42f5eea6-c548-4791-b767-9c7e29b73ef6",
@@ -16044,7 +16043,6 @@ googletag.cmd = googletag.cmd || [],
                 "af8f152a-f618-416e-8b79-d6ac30479018": "control",
                 "264f75af-a787-4a40-8654-40d78b4d8b41": "no",
                 "0670f0ea-3b5c-41a8-946d-114ef4a42540": "control",
-                "b0033638-a84e-4f57-8952-7115be4dc3b6": "control",
                 "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": "hide",
                 "1b905261-e257-4703-ac84-12a6a9099935": "control",
                 "42f5eea6-c548-4791-b767-9c7e29b73ef6": "control",
@@ -16493,14 +16491,14 @@ googletag.cmd = googletag.cmd || [],
                 r = e, r.addUpdateListener(f), 0 !== r.media.length && g("sessionListener", r.media[0]), n.player.setChromecastConnected(!0, r.receiver.friendlyName)
             },
             d = function(e) {
-                e === chrome.cast.ReceiverAvailability.AVAILABLE ? (a = !0,
-                    s && a && n.player.showChromecast(!0)) : (a = !1, n.player.showChromecast(!1))
+                e === chrome.cast.ReceiverAvailability.AVAILABLE ? (a = !0, s && a && n.player.showChromecast(!0)) : (a = !1, n.player.showChromecast(!1))
             },
             f = function(e) {
                 e || p()
             },
             p = function() {
-                r && r.removeUpdateListener(f), o && o.removeUpdateListener(y), r = null, o = null, n.player.setChromecastConnected(!1)
+                r && r.removeUpdateListener(f),
+                    o && o.removeUpdateListener(y), r = null, o = null, n.player.setChromecastConnected(!1)
             },
             m = function(e) {
                 r = e, r.addUpdateListener(f), n.player.setChromecastConnected(!0, r.receiver.friendlyName)
@@ -17004,12 +17002,6 @@ googletag.cmd = googletag.cmd || [],
                     ],
                     unitName: "/" + e.ads.dfpNetworkCode + "/twitch/directory"
                 },
-                google_companion_300x60: {
-                    sizes: [
-                        [300, 60]
-                    ],
-                    unitName: "/" + e.ads.dfpNetworkCode + "/twitch/channels"
-                },
                 google_companion_300x250: {
                     sizes: [
                         [300, 250]
@@ -17062,7 +17054,7 @@ googletag.cmd = googletag.cmd || [],
                 googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("chan", e.asyncAds.metadata.chan), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", "https:" === window.location.protocol ? "true" : "false"), googletag.pubads().setTargeting("loggedin", e.user.isLoggedIn() ? "true" : "false"), googletag.display("dfp-channel-adlight")
             })
         }, n.afterCompanionAdsRendered = function(n) {
-            t(".js-new-channel-ad").length && ("google" === n && (t(".new_advertisement").hide(), t("#lr_comp_300x250").hide(), t("#google_companion_300x60").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") || t("#google_companion_300x250").show(), t("#google_companion_300x60").is(":empty") || t("#google_companion_300x60").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(), e.asyncAds.resizeForCompanionAds(10))
+            t(".js-new-channel-ad").length && ("google" === n && (t(".new_advertisement").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") || t("#google_companion_300x250").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(), e.asyncAds.resizeForCompanionAds(10))
         }, n.resizeForCompanionAds = function(n) {
             setTimeout(function() {
                 var i = t(".js-new-channel-ad").outerHeight();
@@ -17623,15 +17615,15 @@ var Base64 = {
     decode: function(e) {
         var t, n, i, o, r, s, a, l = "",
             u = 0;
-        for (e = e.replace(/[^A-Za-z0-9\+\/\=]/g, ""); u < e.length;) o = Base64._keyStr.indexOf(e.charAt(u++)), r = Base64._keyStr.indexOf(e.charAt(u++)), s = Base64._keyStr.indexOf(e.charAt(u++)), a = Base64._keyStr.indexOf(e.charAt(u++)), t = o << 2 | r >> 4, n = (15 & r) << 4 | s >> 2, i = (3 & s) << 6 | a, l += String.fromCharCode(t), 64 != s && (l += String.fromCharCode(n)),
-            64 != a && (l += String.fromCharCode(i));
+        for (e = e.replace(/[^A-Za-z0-9\+\/\=]/g, ""); u < e.length;) o = Base64._keyStr.indexOf(e.charAt(u++)), r = Base64._keyStr.indexOf(e.charAt(u++)), s = Base64._keyStr.indexOf(e.charAt(u++)), a = Base64._keyStr.indexOf(e.charAt(u++)), t = o << 2 | r >> 4, n = (15 & r) << 4 | s >> 2, i = (3 & s) << 6 | a, l += String.fromCharCode(t), 64 != s && (l += String.fromCharCode(n)), 64 != a && (l += String.fromCharCode(i));
         return l = Base64._utf8_decode(l)
     },
     _utf8_encode: function(e) {
         e = e.replace(/\r\n/g, "\n");
         for (var t = "", n = 0; n < e.length; n++) {
             var i = e.charCodeAt(n);
-            i < 128 ? t += String.fromCharCode(i) : i > 127 && i < 2048 ? (t += String.fromCharCode(i >> 6 | 192), t += String.fromCharCode(63 & i | 128)) : (t += String.fromCharCode(i >> 12 | 224), t += String.fromCharCode(i >> 6 & 63 | 128), t += String.fromCharCode(63 & i | 128))
+            i < 128 ? t += String.fromCharCode(i) : i > 127 && i < 2048 ? (t += String.fromCharCode(i >> 6 | 192), t += String.fromCharCode(63 & i | 128)) : (t += String.fromCharCode(i >> 12 | 224), t += String.fromCharCode(i >> 6 & 63 | 128),
+                t += String.fromCharCode(63 & i | 128))
         }
         return t
     },
