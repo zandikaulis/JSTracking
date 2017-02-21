@@ -8637,7 +8637,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.18-172113+2a82345c6d568f63bb499d3eac51735de1bacbfb",
+                    app_version: "2017.02.21-183208+f64fe1fb8fd37cc67f58a829cb81d91e031288e9",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -30407,7 +30407,7 @@
                     l = o.playerOptions;
                 a.$playlist.attr("data-playlist-side", l.showInfo ? "right" : "left"), s.id && a._enablePlaylists();
                 var u = ["playlist.title", "playlist.owner", "playlist.totalDuration"];
-                return a.subscribe(a._stateStore, ["playlist.id"], a.onPlaylistChange.bind(a)), a.subscribe(a._stateStore, ["playerOptions.showInfo"], a.onShowInfoChange.bind(a)), a.subscribe(a._stateStore, ["playlist.sidebarVisible"], a.onVisibilityChange.bind(a)), a.subscribe(a._stateStore, u.concat(["lang"]), a.onMetadataChange.bind(a)), a.subscribe(a._stateStore, ["playlist.items", "stream", "lang"], a.onItemsChange.bind(a)), a
+                return a.subscribe(a._stateStore, ["playlist.id"], a.onPlaylistChange.bind(a)), a.subscribe(a._stateStore, ["ui.isMini"], a.onMiniChange.bind(a)), a.subscribe(a._stateStore, ["playerOptions.showInfo"], a.onShowInfoChange.bind(a)), a.subscribe(a._stateStore, ["playlist.sidebarVisible"], a.onVisibilityChange.bind(a)), a.subscribe(a._stateStore, u.concat(["lang"]), a.onMetadataChange.bind(a)), a.subscribe(a._stateStore, ["playlist.items", "stream", "lang"], a.onItemsChange.bind(a)), a
             }
             return a(t, e), o(t, [{
                 key: "handleItemSelect",
@@ -30421,6 +30421,19 @@
                 value: function(e) {
                     var t = e.playlist;
                     t.id ? this._enablePlaylists() : this._disablePlaylists()
+                }
+            }, {
+                key: "_hideAllElements",
+                value: function() {
+                    this.$playlist.attr("data-show-playlist", !1), this.$playlistNav.attr("data-show-nav", !1), this.$playlistSidebar.attr("data-show-sidebar", !1)
+                }
+            }, {
+                key: "onMiniChange",
+                value: function() {
+                    var e = this._stateStore.getState(),
+                        t = e.ui,
+                        n = e.playlist;
+                    n.id && (t.isMini ? this._hideAllElements() : (this.$playlist.attr("data-show-playlist", !0), this.$playlistSidebar.attr("data-show-sidebar", n.sidebarVisible), this.$playlistNav.attr("data-show-nav", !n.sidebarVisible)))
                 }
             }, {
                 key: "_enablePlaylists",
