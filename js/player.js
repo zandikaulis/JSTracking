@@ -8637,7 +8637,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.21-213701+fb368ba160f2edd48abdd723219e4c32aed0a2fe",
+                    app_version: "2017.02.22-204816+97395e8b0cd1273e27c52492702e5a4199e197e9",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -18053,11 +18053,9 @@
         }
 
         function i(e) {
-            return function(t) {
-                t({
-                    type: O,
-                    userId: e
-                })
+            return {
+                type: O,
+                userId: e
             }
         }
 
