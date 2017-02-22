@@ -17020,8 +17020,7 @@ googletag.cmd = googletag.cmd || [],
         });
         n.fetchAds = function(n) {
             var i = e.ads._readyData;
-            if (this.enabled && i && i.enabled) {
-                t("#dfp-directory-banner, .ad_contain").hide();
+            if (t("#dfp-directory-banner, .ad_contain").hide(), this.enabled && i && i.enabled) {
                 var o = ["dfp-directory-banner"];
                 n && n.singleOnly || o.push("dfp-directory-rectangle"), e.asyncAds.sra({
                     slots: o
