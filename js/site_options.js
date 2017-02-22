@@ -238,11 +238,14 @@ window.SiteOptions = {
         "19017d2c-4473-4914-a10f-82152c8b2bd9": {
             "name": "CVP-Feb-2017",
             "groups": [{
-                "weight": 90,
+                "weight": 80,
                 "value": "1.3.5"
             }, {
-                "weight": 2,
+                "weight": 10,
                 "value": "1.4.0"
+            }, {
+                "weight": 2,
+                "value": "1.4.0+speed"
             }, {
                 "weight": 2,
                 "value": "1.3.5+abs0"
@@ -1323,6 +1326,16 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "no"
+            }]
+        },
+        "ee02392c-ef7a-4a35-a680-ae69f3c910a8": {
+            "name": "dobbin_rollout",
+            "groups": [{
+                "weight": 100,
+                "value": "disabled"
+            }, {
+                "weight": 0,
+                "value": "enabled"
             }]
         },
         "f51271fc-b922-43c5-a801-d5b44219b31f": {
