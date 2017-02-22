@@ -771,22 +771,6 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
-        "8a557906-5bfd-4790-b26c-cda8209567a7": {
-            "name": "LANGUAGE_DIRECTORY_ROWCOUNT",
-            "groups": [{
-                "weight": 25,
-                "value": "2"
-            }, {
-                "weight": 25,
-                "value": "4"
-            }, {
-                "weight": 25,
-                "value": "8"
-            }, {
-                "weight": 25,
-                "value": "16"
-            }]
-        },
         "8ace0f50-8afd-424a-a086-3e61b3e66da0": {
             "name": "MESSAGE_HISTORY",
             "groups": [{
