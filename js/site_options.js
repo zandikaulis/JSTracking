@@ -442,6 +442,16 @@ window.SiteOptions = {
                 "value": "communities-tab"
             }]
         },
+        "3ba26ac2-a5db-4318-83c5-dcbe11e2774f": {
+            "name": "CLIPS_CLIPPY_PATENT_PENDING",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "3c2fb8a5-7914-4f4d-8f13-1cd3b4250919": {
             "name": "ios_moat",
             "groups": [{
