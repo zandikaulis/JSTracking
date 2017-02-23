@@ -4883,9 +4883,9 @@
         }
 
         function a(e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "twitch",
+            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "twitch.web",
                 n = {
-                    iu: "/" + c.imaNetworkID + "/" + t + "/channels/" + e.channel,
+                    iu: "/" + c.imaNetworkID + "/" + t + "/client/desktop/live/" + e.channelId,
                     ius_szs: "300x250",
                     sz: "640x480",
                     impl: "s",
@@ -4908,6 +4908,7 @@
                 partner: e.partner,
                 game: e.game,
                 chan: e.channel,
+                chanid: e.channelId,
                 embed: e.playerType === d.PLAYER_EMBED,
                 platform: e.platform,
                 playerType: e.playerType,
@@ -7566,7 +7567,7 @@
                 g = u.adsManager,
                 _ = u.playback,
                 m = u.window;
-            this.contentType = u.stream.contentType, this.login = d.login, this.adSessionId = (0, i.generate)(s), this.adblock = v.adblock, this.adType = t, this.channel = p.name, this.chansubToken = h.chansub, this.duration = n, this.game = p.game, this.hasAdFreeSubscription = Boolean(h.has_ad_free_subscription), this.isMobileLocation = u.env.isMobileLocation, this.kruxId = m.Krux ? m.Krux.user || "" : null, this.lastAdDisplay = c, this.mature = p.mature, this.partner = p.partner, this.platform = u.env.platform, this.playerType = u.env.playerType, this.postrollsEnabled = Boolean(f.postrolls), this.prerollsEnabled = Boolean(f.prerolls), this.referrer = m.document.referrer, this.requestTime = Date.now(), this.turboToken = d.turbo, this.url = (0, a.sanitizeQuery)(m.location.href), this.sdk = g.sdk, this.vod = {
+            this.contentType = u.stream.contentType, this.login = d.login, this.adSessionId = (0, i.generate)(s), this.adblock = v.adblock, this.adType = t, this.channel = p.name, this.channelId = p._id, this.chansubToken = h.chansub, this.duration = n, this.game = p.game, this.hasAdFreeSubscription = Boolean(h.has_ad_free_subscription), this.isMobileLocation = u.env.isMobileLocation, this.kruxId = m.Krux ? m.Krux.user || "" : null, this.lastAdDisplay = c, this.mature = p.mature, this.partner = p.partner, this.platform = u.env.platform, this.playerType = u.env.playerType, this.postrollsEnabled = Boolean(f.postrolls), this.prerollsEnabled = Boolean(f.prerolls), this.referrer = m.document.referrer, this.requestTime = Date.now(), this.turboToken = d.turbo, this.url = (0, a.sanitizeQuery)(m.location.href), this.sdk = g.sdk, this.vod = {
                 id: "",
                 name: "",
                 type: "",
@@ -8638,7 +8639,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.23-000435+dd6246379613978f49cc6548e5692a7044e720c3",
+                    app_version: "2017.02.23-194849+ce9e747ee3e8d791a89f641f88ff7a96ce977f65",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
