@@ -67,7 +67,7 @@
                     volume: T.localStore.get("volume"),
                     muted: T.localStore.get("muted"),
                     backend: T.localStore.get("backend"),
-                    player: C.getPlayerType()
+                    player: t.player === C.IMDB ? C.IMDB : C.getPlayerType()
                 }), t = (0, s["default"])(t, {
                     volume: .5,
                     muted: !1,
@@ -3996,12 +3996,12 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.PLAYER_HIGHLIGHTER = t.PLAYER_FACEBOOK = t.PLAYER_CURSE = t.PLAYER_CREATIVE = t.PLAYER_DASHBOARD = t.PLAYER_FRONTPAGE = t.PLAYER_POPOUT = t.PLAYER_EMBED = t.PLAYER_SITE_MINI = t.PLAYER_SITE = void 0, t.getPlayerType = r;
+        }), t.PLAYER_IMDB = t.PLAYER_HIGHLIGHTER = t.PLAYER_FACEBOOK = t.PLAYER_CURSE = t.PLAYER_CREATIVE = t.PLAYER_DASHBOARD = t.PLAYER_FRONTPAGE = t.PLAYER_POPOUT = t.PLAYER_EMBED = t.PLAYER_SITE_MINI = t.PLAYER_SITE = void 0, t.getPlayerType = r;
         var i = n(209),
             a = t.PLAYER_SITE = "site",
             o = (t.PLAYER_SITE_MINI = "site_mini", t.PLAYER_EMBED = "embed"),
             s = t.PLAYER_POPOUT = "popout";
-        t.PLAYER_FRONTPAGE = "frontpage", t.PLAYER_DASHBOARD = "dashboard", t.PLAYER_CREATIVE = "creative", t.PLAYER_CURSE = "curse", t.PLAYER_FACEBOOK = "facebook", t.PLAYER_HIGHLIGHTER = "highlighter"
+        t.PLAYER_FRONTPAGE = "frontpage", t.PLAYER_DASHBOARD = "dashboard", t.PLAYER_CREATIVE = "creative", t.PLAYER_CURSE = "curse", t.PLAYER_FACEBOOK = "facebook", t.PLAYER_HIGHLIGHTER = "highlighter", t.PLAYER_IMDB = "imdb"
     }, function(e, t, n) {
         "use strict";
 
@@ -8639,7 +8639,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.23-194849+ce9e747ee3e8d791a89f641f88ff7a96ce977f65",
+                    app_version: "2017.02.23-213855+2818b7eda56f23005620679abe21c21178c401d2",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -16217,42 +16217,43 @@
             }
         }
 
-        function a(e, t, r, i, a, o) {
-            function l() {
-                var l = (0, s["default"])(o, {
-                    showInfo: o.channelInfo,
-                    branding: !0,
-                    devcaptions: !1
-                }, {
-                    showInfo: !0
-                });
-                $(t).addClass("player"), $(t).append(n(591)), a.dispatch((0, A.initializeCaptionsSettings)()), a.dispatch((0, O.initializePlaybackSettings)()), a.dispatch((0, I.initializeSettings)()), F["default"].render(B["default"].createElement(P.Seekbar, {
+        function a(e, t, r, i, a) {
+            function o() {
+                var o = d.player,
+                    T = (0, s["default"])(d, {
+                        showInfo: o !== p.PLAYER_IMDB && d.channelInfo,
+                        branding: o !== p.PLAYER_IMDB,
+                        devcaptions: !1
+                    }, {
+                        showInfo: !0
+                    });
+                $(t).addClass("player"), $(t).append(n(591)), a.dispatch((0, I.initializeCaptionsSettings)()), a.dispatch((0, N.initializePlaybackSettings)()), a.dispatch((0, L.initializeSettings)()), G["default"].render(F["default"].createElement(k.Seekbar, {
                     store: a,
                     seek: e.setCurrentTime.bind(e)
-                }), document.getElementById("js-player-seek")), F["default"].render(B["default"].createElement(C.MutedSegmentsAlert, {
+                }), document.getElementById("js-player-seek")), G["default"].render(F["default"].createElement(w.MutedSegmentsAlert, {
                     store: a
-                }), document.getElementById("js-player-alert-container")), U = new d.PlayerUIState(t, a), V = new f.PlayerUIInfo(e, t, a, l), H = new h.PlayerUIStats(t, a), G = new v.PlayerUIUpnext(e, t, a), te = new g.PlayerUIRecommendations(t, a), ne = new k.PlayerUIError(t, a), Y = new _.PlayerUILeaveDialog(e, t, r, a, l), q = new b.PlayerUILang(t, a), K = new m.PlayerUISubscribeOverlay(t, a), W = new y.PlayerUIResume(e, i, a, l), Q = new w.AgeRestrictionOverlay(t, e, a), X = new T.PlayerUIControlsDisplay(e, t, a), J = new p.PlayerUIControls(e, t, a, X, l), ee = new S.PlayerUISettings(e, t, a, r, X, l), re = new M.AdOverlay(t, a);
-                var E = a.getState(),
-                    z = E.experiments;
-                z.get(D.PERPETUA).then(function(e) {
-                    (0, u["default"])(D.ENABLE_PERPETUA_GROUP, e) && (ie = new R.PlaylistOverlay(t, a))
+                }), document.getElementById("js-player-alert-container")), U = new f.PlayerUIState(t, a), V = new v.PlayerUIInfo(e, t, a, T), H = new g.PlayerUIStats(t, a), Y = new _.PlayerUIUpnext(e, t, a), ne = new m.PlayerUIRecommendations(t, a), re = new A.PlayerUIError(t, a), q = new y.PlayerUILeaveDialog(e, t, r, a, T), K = new S.PlayerUILang(t, a), W = new b.PlayerUISubscribeOverlay(t, a), z = new E.PlayerUIResume(e, i, a, T), X = new O.AgeRestrictionOverlay(t, e, a), J = new C.PlayerUIControlsDisplay(e, t, a), Z = new h.PlayerUIControls(e, t, a, J, T), te = new P.PlayerUISettings(e, t, a, r, J, T), ie = new D.AdOverlay(t, a);
+                var Q = a.getState(),
+                    oe = Q.experiments;
+                oe.get(j.PERPETUA).then(function(e) {
+                    (0, u["default"])(j.ENABLE_PERPETUA_GROUP, e) && (ae = new x.PlaylistOverlay(t, a))
                 });
-                var ae = new L.ClipGenerator(t, i, a);
-                Z = new N.PlayerUIClipsEnabler(t, a, c.localStore, ae), x(l), $(t).attr("data-initializing", !0), e.addEventListener(j.PLAYER_INIT, function() {
+                var se = new R.ClipGenerator(t, i, a);
+                ee = new M.PlayerUIClipsEnabler(t, a, c.localStore, se), l(T), $(t).attr("data-initializing", !0), e.addEventListener(B.PLAYER_INIT, function() {
                     $(t).attr("data-initializing", !1)
                 })
             }
 
-            function x(e) {
+            function l(e) {
                 var n = void 0;
-                n = e.devcaptions ? Promise.resolve("v2") : a.getState().experiments.get(D.CAPTIONS), n.then(function(e) {
-                    "v2" === e && (z = new E.PlayerUIClosedCaption(a, t)), $(t).attr("data-captions", e)
+                n = e.devcaptions ? Promise.resolve("v2") : a.getState().experiments.get(j.CAPTIONS), n.then(function(e) {
+                    "v2" === e && (Q = new T.PlayerUIClosedCaption(a, t)), $(t).attr("data-captions", e)
                 })
             }
-            var U = void 0,
+            var d = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {},
+                U = void 0,
                 V = void 0,
                 H = void 0,
-                G = void 0,
                 Y = void 0,
                 q = void 0,
                 K = void 0,
@@ -16266,10 +16267,11 @@
                 te = void 0,
                 ne = void 0,
                 re = void 0,
-                ie = void 0;
+                ie = void 0,
+                ae = void 0;
             this.destroy = function() {
-                U.destroy(), V.destroy(), H.destroy(), G.destroy(), te.destroy(), ne.destroy(), Y.destroy(), q.destroy(), K.destroy(), W.destroy(), X.destroy(), J.destroy(), Q.destroy(), ee.destroy(), Z.destroy(), z && z.destroy(), te.destroy(), re.destroy(), ie && ie.destroy()
-            }, l()
+                U.destroy(), V.destroy(), H.destroy(), Y.destroy(), ne.destroy(), re.destroy(), q.destroy(), K.destroy(), W.destroy(), z.destroy(), J.destroy(), Z.destroy(), X.destroy(), te.destroy(), ee.destroy(), Q && Q.destroy(), ne.destroy(), ie.destroy(), ae && ae.destroy()
+            }, o()
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -16279,37 +16281,39 @@
             l = n(49),
             u = i(l),
             c = n(237),
-            d = n(357),
-            p = n(359),
-            f = n(362),
-            h = n(363),
-            v = n(364),
-            g = n(365),
-            _ = n(366),
-            m = n(368),
-            y = n(369),
-            b = n(372),
-            E = n(373),
-            S = n(375),
-            T = n(377),
-            P = n(380),
-            C = n(582),
-            k = n(583),
-            w = n(584),
-            A = n(301),
-            O = n(277),
-            I = n(361),
-            N = n(585),
-            L = n(587),
-            M = n(588),
-            R = n(589),
-            D = n(239),
-            x = n(169),
-            j = r(x),
-            U = n(381),
-            B = i(U),
-            V = n(408),
-            F = i(V)
+            d = n(208),
+            p = r(d),
+            f = n(357),
+            h = n(359),
+            v = n(362),
+            g = n(363),
+            _ = n(364),
+            m = n(365),
+            y = n(366),
+            b = n(368),
+            E = n(369),
+            S = n(372),
+            T = n(373),
+            P = n(375),
+            C = n(377),
+            k = n(380),
+            w = n(582),
+            A = n(583),
+            O = n(584),
+            I = n(301),
+            N = n(277),
+            L = n(361),
+            M = n(585),
+            R = n(587),
+            D = n(588),
+            x = n(589),
+            j = n(239),
+            U = n(169),
+            B = r(U),
+            V = n(381),
+            F = i(V),
+            H = n(408),
+            G = i(H)
     }, function(e, t, n) {
         "use strict";
 
@@ -16966,8 +16970,7 @@
                 key: "updateStats",
                 value: function(e) {
                     var t = e.stats.videoStats;
-                    $(".js-stat-buffer-size", this._root).text(t.bufferSize), $(".js-stat-display-resolution", this._root).text(t.displayResolution),
-                        $(".js-stat-skipped-frames", this._root).text(t.skippedFrames), $(".js-stat-fps", this._root).text(t.fps), $(".js-stat-hls-latency-broadcaster", this._root).text(t.hlsLatencyBroadcaster), $(".js-stat-hls-latency-encoder", this._root).text(t.hlsLatencyEncoder), $(".js-stat-memory-usage", this._root).text(t.memoryUsage), $(".js-stat-playback-rate", this._root).text(t.playbackRate), $(".js-stat-video-resolution", this._root).text(t.videoResolution), $(".js-stat-video-backend-version", this._root).text(t.backendVersion)
+                    $(".js-stat-buffer-size", this._root).text(t.bufferSize), $(".js-stat-display-resolution", this._root).text(t.displayResolution), $(".js-stat-skipped-frames", this._root).text(t.skippedFrames), $(".js-stat-fps", this._root).text(t.fps), $(".js-stat-hls-latency-broadcaster", this._root).text(t.hlsLatencyBroadcaster), $(".js-stat-hls-latency-encoder", this._root).text(t.hlsLatencyEncoder), $(".js-stat-memory-usage", this._root).text(t.memoryUsage), $(".js-stat-playback-rate", this._root).text(t.playbackRate), $(".js-stat-video-resolution", this._root).text(t.videoResolution), $(".js-stat-video-backend-version", this._root).text(t.backendVersion)
                 }
             }, {
                 key: "_toggleStatsPopup",
@@ -18128,7 +18131,7 @@
         }
 
         function a(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
