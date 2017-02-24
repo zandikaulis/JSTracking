@@ -668,13 +668,13 @@ window.SiteOptions = {
             "name": "aws_roundtrip_latency_test_endpoint",
             "groups": [{
                 "weight": 33,
-                "value": "https://us-west-2.roundtrip.twitch.tv/west"
+                "value": "control"
             }, {
                 "weight": 33,
-                "value": "https://ingest.roundtrip.twitch.tv/west"
+                "value": "edges_only"
             }, {
                 "weight": 34,
-                "value": "https://ingest.roundtrip.twitch.tv/local"
+                "value": "localized"
             }]
         },
         "5fbb67a0-b4ff-4775-b836-e9a348a87481": {
