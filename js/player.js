@@ -41,7 +41,7 @@
                     login: k.cookie.get("login") || null,
                     deviceID: A.get(!1),
                     userAgent: w.getState().window.navigator.userAgent
-                })), w.dispatch(ee.loadDefaultLang(i.lang)), w.dispatch((0, ne.setPlayerType)(i.player)), me.push(new V.PubSub(w, i)), me.push(new _e.RecommendationsManager(w)), g = new v.AnalyticsTracker(w, i), w.dispatch((0, oe.setAnalyticsTracker)(g)), w.dispatch((0, te.initializeQuality)()), m = i.allowfullscreen ? new F.FullScreen(n, w) : new H.NoFullScreen(n, w), Z = new ge.TimelineMetadataManager(w), se = new ve.PlaylistManager(w), I = new L.Video(n, g, w, i, m), P = new O.State(I, w, g, i), i.debug && (window.state = P), (0, M.forwardProperties)(p, I), $ = new h.Analytics(I, g, P, w, i), o(i), W = new R.EmbedHost(I, P, w), new D.PlayerHotkeys(I, n, w, i), w.dispatch((0, ae.setAutoplay)(i.autoplay)), i.controls && (E = new x.PlayerUI(I, n, g, P, w, i), X = new ce.ClipGenerator(n, P, w)), r(i), w.dispatch((0, ie.initVodResume)()), (0, ue.krakenUserInfo)().then(function(e) {
+                })), w.dispatch(ee.loadDefaultLang(i.lang)), w.dispatch((0, ne.setPlayerType)(i.player)), ye.push(new V.PubSub(w, i)), ye.push(new _e.RecommendationsManager(w)), g = new v.AnalyticsTracker(w, i), w.dispatch((0, oe.setAnalyticsTracker)(g)), w.dispatch((0, te.initializeQuality)()), m = i.allowfullscreen ? new F.FullScreen(n, w) : new H.NoFullScreen(n, w), Z = new ge.TimelineMetadataManager(w), se = new ve.PlaylistManager(w), I = new L.Video(n, g, w, i, m), P = new O.State(I, w, g, i), i.debug && (window.state = P), (0, M.forwardProperties)(p, I), $ = new h.Analytics(I, g, P, w, i), o(i), W = new R.EmbedHost(I, P, w), new D.PlayerHotkeys(I, n, w, i), w.dispatch((0, ae.setAutoplay)(i.autoplay)), i.controls && (E = new x.PlayerUI(I, n, g, P, w, i), X = new ce.ClipGenerator(n, P, w)), r(i), w.dispatch((0, ie.initVodResume)()), (0, ue.krakenUserInfo)().then(function(e) {
                     return w.dispatch((0, ie.setUser)(e._id))
                 })
             }
@@ -61,13 +61,13 @@
             function a() {
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                     t = (0, d["default"])(e) ? y.parse(e) : e;
-                return (0, b.isTwitchEmbed)() || t.player !== C.PLAYER_CURSE && (t = (0, f["default"])(t, S.embedParameters)), t.flash ? t.backend = B.BACKEND_FLASH : t.html5 ? t.backend = j.BACKEND_PLAYER_CORE : t.hls && (t.backend = U.BACKEND_HLS), t.html5 && j.BackendPlayerCore.canPlay() ? t.backend = j.BACKEND_PLAYER_CORE : t.html5 && U.BackendHls.canPlay() && (t.backend = U.BACKEND_HLS), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== C.PLAYER_HIGHLIGHTER, t = (0, s["default"])(t, {
+                return (0, b.isTwitchEmbed)() || (0, u["default"])(me, t.player) || (t = (0, f["default"])(t, S.embedParameters)), t.flash ? t.backend = B.BACKEND_FLASH : t.html5 ? t.backend = j.BACKEND_PLAYER_CORE : t.hls && (t.backend = U.BACKEND_HLS), t.html5 && j.BackendPlayerCore.canPlay() ? t.backend = j.BACKEND_PLAYER_CORE : t.html5 && U.BackendHls.canPlay() && (t.backend = U.BACKEND_HLS), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== C.PLAYER_HIGHLIGHTER, t = (0, s["default"])(t, {
                     time: t.t
                 }), (0, u["default"])(["mse", "mseDev"], T.localStore.get("backend")) && T.localStore.set("backend", j.BACKEND_PLAYER_CORE), t = (0, s["default"])(t, {
                     volume: T.localStore.get("volume"),
                     muted: T.localStore.get("muted"),
                     backend: T.localStore.get("backend"),
-                    player: t.player === C.IMDB ? C.IMDB : C.getPlayerType()
+                    player: t.player === C.PLAYER_IMDB ? C.PLAYER_IMDB : C.getPlayerType()
                 }), t = (0, s["default"])(t, {
                     volume: .5,
                     muted: !1,
@@ -125,7 +125,7 @@
                 X = void 0,
                 Z = void 0,
                 se = void 0,
-                me = [];
+                ye = [];
             p.setChannel = function(e) {
                 return c().then(function() {
                     w.dispatch(z.setStream(z.TYPE_CHANNEL, e)), w.dispatch((0, Q.resetPlaylist)())
@@ -152,7 +152,7 @@
             }, p.setTrackingProperties = function(e) {
                 w.dispatch((0, fe.setTrackingProperties)(e))
             }, n(), p.destroy = function() {
-                E.destroy(), I.destroy(), P.destroy(), m.destroy(), $.destroy(), W.destroy(), me.forEach(function(e) {
+                E.destroy(), I.destroy(), P.destroy(), m.destroy(), $.destroy(), W.destroy(), ye.forEach(function(e) {
                     return e.destroy()
                 }), Z.destroy(), se.destroy()
             }
@@ -225,7 +225,9 @@
             ve = n(675),
             ge = n(576),
             _e = n(676);
-        n(281).polyfill(), n.p = S.playerHost + "/", n(677), n(682), window.google || $.getScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = a, window.Twitch.Player = a
+        n(281).polyfill(), n.p = S.playerHost + "/", n(677), n(682), window.google || $.getScript("//imasdk.googleapis.com/js/sdkloader/ima3.js");
+        var me = Object.freeze([C.PLAYER_IMDB, C.PLAYER_CURSE]);
+        window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = a, window.Twitch.Player = a
     }, function(e, t, n) {
         var r = n(2),
             i = n(3),
@@ -1524,7 +1526,8 @@
             s = n(96),
             l = n(97),
             u = n(98);
-        r.prototype.clear = a, r.prototype["delete"] = o, r.prototype.get = s, r.prototype.has = l, r.prototype.set = u, e.exports = r
+        r.prototype.clear = a, r.prototype["delete"] = o, r.prototype.get = s,
+            r.prototype.has = l, r.prototype.set = u, e.exports = r
     }, function(e, t, n) {
         function r(e) {
             var t = -1,
@@ -8639,7 +8642,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.24-184423+a54039f2dfaf8fd701cc5b8f746bed7eb4668a25",
+                    app_version: "2017.02.24-192913+39399e64d13bcd018fcd918fbb8026c9a405c9e4",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
