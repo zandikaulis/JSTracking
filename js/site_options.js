@@ -1194,13 +1194,13 @@ window.SiteOptions = {
                 "weight": 20,
                 "value": "yes_50"
             }, {
-                "weight": 0,
+                "weight": 30,
                 "value": "yes_80"
             }, {
-                "weight": 0,
+                "weight": 15,
                 "value": "yes_95"
             }, {
-                "weight": 50,
+                "weight": 5,
                 "value": "no"
             }]
         },
@@ -1278,13 +1278,13 @@ window.SiteOptions = {
                 "weight": 20,
                 "value": "yes_50"
             }, {
-                "weight": 0,
+                "weight": 30,
                 "value": "yes_80"
             }, {
-                "weight": 0,
+                "weight": 15,
                 "value": "yes_95"
             }, {
-                "weight": 50,
+                "weight": 5,
                 "value": "no"
             }]
         },
