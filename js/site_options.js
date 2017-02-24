@@ -465,6 +465,22 @@ window.SiteOptions = {
                 "value": "no_show"
             }]
         },
+        "3f983cb9-25be-41cd-814d-22eaa23fdd27": {
+            "name": "communities_site_search",
+            "groups": [{
+                "weight": 25,
+                "value": "below_videos"
+            }, {
+                "weight": 25,
+                "value": "below_channels"
+            }, {
+                "weight": 25,
+                "value": "below_live"
+            }, {
+                "weight": 25,
+                "value": "control"
+            }]
+        },
         "403707e6-abb9-401c-a2ca-dd643293dbdd": {
             "name": "VOD_COVIEWS_SHUFFLE",
             "groups": [{
