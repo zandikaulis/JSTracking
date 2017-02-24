@@ -8639,7 +8639,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.24-030953+a550842f2c4de37f81b5a5049d986c9e60643b3a",
+                    app_version: "2017.02.24-184423+a54039f2dfaf8fd701cc5b8f746bed7eb4668a25",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -17760,15 +17760,12 @@
             function t(e, n, r, i) {
                 a(this, t);
                 var s = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return s._state = n, s._stateStore = r, s._player = e, s._options = i, s._streamTimeOffset = 0, s._state.addEventListener(f.EVENT_PLAYER_UPDATE, s.handleEvent.bind(s)), s
+                return s._state = n, s._stateStore = r, s._player = e, s._options = i, s._streamTimeOffset = 0, s._state.addEventListener(f.EVENT_PLAYER_UPDATE, s.handleEvent.bind(s)), s.subscribe(s._stateStore, ["playback.currentTime"], s._onTimeUpdate.bind(s)), s
             }
             return s(t, e), u(t, [{
                 key: "handleEvent",
                 value: function(e) {
                     switch (e) {
-                        case v.TIME_UPDATE:
-                            this._stateStore.getState().playback.isLoading || this._onTimeUpdate();
-                            break;
                         case v.LOADED_METADATA:
                             this._onLoadedMetadata()
                     }
@@ -17820,15 +17817,16 @@
                     var e = this,
                         t = this._stateStore.getState(),
                         n = t.stream,
-                        r = t.resumeWatch;
-                    if (n instanceof m.LiveContentStream) return void(this._streamTimeOffset = this._player.getVideoInfo().stream_time_offset);
-                    if (!this._options.time && n instanceof y.VODContentStream && !r.isSeeked) {
-                        var i = (0, _.videoInfo)(this._state.videoID);
-                        if (!r.userId) return i.then(function(t) {
+                        r = t.resumeWatch,
+                        i = t.playlist;
+                    if (n.contentType === m.CONTENT_MODE_LIVE) return void(this._streamTimeOffset = this._player.getVideoInfo().stream_time_offset);
+                    if (!(this._options.time || i.id || n.contentType !== y.CONTENT_MODE_VOD || r.isSeeked)) {
+                        var a = (0, _.videoInfo)(n.videoId);
+                        if (!r.userId) return a.then(function(t) {
                             e._seekToResumeTimeLocal(t)
                         });
-                        var a = (0, g.getResumeTimes)(r.userId);
-                        return Promise.all([i, a]).then(function(t) {
+                        var o = (0, g.getResumeTimes)(r.userId);
+                        return Promise.all([a, o]).then(function(t) {
                             var n = l(t, 2),
                                 r = n[0],
                                 i = n[1],
@@ -17841,16 +17839,22 @@
                 key: "_onTimeUpdate",
                 value: function() {
                     var e = void 0,
-                        t = this._stateStore.getState().streamMetadata.channel.id;
-                    if (this._stateStore.getState().stream instanceof m.LiveContentStream) {
-                        var n = this._stateStore.getState().streamMetadata.broadcastID;
-                        e = this._stateStore.getState().online ? (0, g.setLivestreamResumeTime)(n, t, this._streamTimeOffset + this._state.currentTime) : (0, g.cancelLivestreamResumeTime)(n, t)
-                    } else {
-                        var r = this._stateStore.getState().playback.duration;
-                        if (0 === r) return;
-                        e = r - this._state.currentTime > p.cancelResumeAmount ? (0, g.setVodResumeTime)(this._state.videoID, t, this._state.currentTime) : (0, g.cancelVodResumeTime)(this._state.videoID, t)
+                        t = this._stateStore.getState(),
+                        n = t.stream,
+                        r = t.streamMetadata,
+                        i = t.online,
+                        a = t.playback;
+                    if (!a.isLoading) {
+                        var o = r.channel.id;
+                        if (n.contentType === m.CONTENT_MODE_LIVE) {
+                            var s = r.broadcastID;
+                            e = i ? (0, g.setLivestreamResumeTime)(s, o, this._streamTimeOffset + a.currentTime) : (0, g.cancelLivestreamResumeTime)(s, o)
+                        } else if (n.contentType === y.CONTENT_MODE_VOD) {
+                            if (0 === a.duration) return;
+                            e = a.duration - a.currentTime > p.cancelResumeAmount ? (0, g.setVodResumeTime)(n.videoId, o, a.currentTime) : (0, g.cancelVodResumeTime)(n.videoId, o)
+                        }
+                        this._stateStore.dispatch(e)
                     }
-                    this._stateStore.dispatch(e)
                 }
             }]), t
         }(b.UIStateSubscriber)
