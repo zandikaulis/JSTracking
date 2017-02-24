@@ -8639,7 +8639,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.24-012936+b96f6641e95fb59775c608cf8577133d23ff440c",
+                    app_version: "2017.02.24-030953+a550842f2c4de37f81b5a5049d986c9e60643b3a",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -15349,34 +15349,34 @@
 
         function r(e) {
             return {
-                type: f,
+                type: h,
                 streamMetadata: s(e)
             }
         }
 
         function i(e) {
             return {
-                type: f,
+                type: h,
                 streamMetadata: l(e)
             }
         }
 
         function a(e) {
             return function(t, n) {
-                if (n().stream.contentType === c.CONTENT_MODE_LIVE && n().streamMetadata.broadcastID !== e) {
+                if (n().stream.contentType === d.CONTENT_MODE_LIVE && n().streamMetadata.broadcastID !== e) {
                     t({
-                        type: h
+                        type: v
                     });
                     var r = n().window,
                         a = n().stream.channel,
                         o = 0;
                     return new Promise(function(s, l) {
-                        function c() {
-                            return a !== n().stream.channel ? void l() : void(0, u.streamInfo)(a).then(function(n) {
-                                n.stream && n.stream._id === e ? (t((0, p.updateViewerCount)(n.stream.viewers)), t(i(n.stream)), s(n)) : o < g.length ? (r.setTimeout(c, g[o]), o += 1) : l()
+                        function u() {
+                            return a !== n().stream.channel ? void l() : void(0, c.streamInfo)(a).then(function(n) {
+                                n.stream && n.stream._id === e ? (t((0, f.updateViewerCount)(n.stream.viewers)), t(i(n.stream)), s(n)) : o < _.length ? (r.setTimeout(u, _[o]), o += 1) : l()
                             })
                         }
-                        c()
+                        u()
                     })
                 }
             }
@@ -15384,17 +15384,16 @@
 
         function o(e) {
             return function(t, n) {
-                if (e.contentType === c.CONTENT_MODE_LIVE) {
-                    var a = (0, u.streamInfo)(e.channel);
-                    a.then(function(e) {
-                        e.stream && t(i(e.stream))
+                e.contentType === d.CONTENT_MODE_LIVE ? (0, c.streamInfo)(e.channel).then(function(n) {
+                    n.stream ? t(i(n.stream)) : (0, c.channelInfo)(e.channel).then(function(e) {
+                        t({
+                            type: h,
+                            streamMetadata: u(e)
+                        })
                     })
-                } else if (e.contentType === d.CONTENT_MODE_VOD) {
-                    var o = (0, u.videoInfo)(e.videoId);
-                    o.then(function(e) {
-                        t(r(e))
-                    })
-                }
+                }) : e.contentType === p.CONTENT_MODE_VOD && (0, c.videoInfo)(e.videoId).then(function(e) {
+                    t(r(e))
+                })
             }
         }
 
@@ -15408,7 +15407,9 @@
                     name: e.channel.name,
                     id: e.channel._id,
                     partner: e.channel.partner,
-                    status: e.status
+                    status: e.status,
+                    videoBanner: e.channel.video_banner,
+                    logo: e.channel.logo
                 },
                 createdAt: e.created_at,
                 game: e.game,
@@ -15416,7 +15417,7 @@
                     template: e.preview
                 },
                 url: e.url,
-                viewers: v
+                viewers: g
             }
         }
 
@@ -15430,7 +15431,9 @@
                     name: e.channel.name,
                     id: e.channel._id,
                     partner: e.channel.partner,
-                    status: e.channel.status
+                    status: e.channel.status,
+                    videoBanner: e.channel.video_banner,
+                    logo: e.channel.logo
                 },
                 createdAt: e.created_at,
                 game: e.game,
@@ -15441,17 +15444,33 @@
                 viewers: e.viewers
             }
         }
+
+        function u(e) {
+            return {
+                channel: {
+                    displayName: e.display_name,
+                    name: e.name,
+                    id: e._id,
+                    partner: e.partner,
+                    status: e.status,
+                    videoBanner: e.video_banner,
+                    logo: e.logo
+                },
+                game: e.game,
+                url: e.url
+            }
+        }
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.FETCH_METADATA_TIMEOUT = t.VIEWERS_NOT_SET = t.ACTION_CLEAR_STREAMMETADATA = t.ACTION_SET_STREAMMETADATA = void 0, t.setVODStreamMetadata = r, t.setLiveStreamMetadata = i, t.fetchLiveStreamMetadata = a, t.fetchAndSetStreamMetadata = o;
-        var u = n(191),
-            c = n(158),
-            d = n(210),
-            p = n(338),
-            f = t.ACTION_SET_STREAMMETADATA = "set streammetadata",
-            h = t.ACTION_CLEAR_STREAMMETADATA = "clear streammetadata",
-            v = t.VIEWERS_NOT_SET = 0,
-            g = t.FETCH_METADATA_TIMEOUT = [15e3, 3e4, 6e4, 12e4, 3e5, 6e5]
+        var c = n(191),
+            d = n(158),
+            p = n(210),
+            f = n(338),
+            h = t.ACTION_SET_STREAMMETADATA = "set streammetadata",
+            v = t.ACTION_CLEAR_STREAMMETADATA = "clear streammetadata",
+            g = t.VIEWERS_NOT_SET = 0,
+            _ = t.FETCH_METADATA_TIMEOUT = [15e3, 3e4, 6e4, 12e4, 3e5, 6e5]
     }, function(e, t) {
         "use strict";
 
@@ -15535,7 +15554,8 @@
             var n = {
                 player_backend: e
             };
-            return (0, o["default"])(t, function(e, t) {
+            return (0,
+                o["default"])(t, function(e, t) {
                 if (0 === t.indexOf(l)) {
                     var r = t.substring(l.length);
                     n[r] = e
@@ -15551,7 +15571,7 @@
         var a = n(343),
             o = r(a),
             s = t.ACTION_SET_USHER_PARAMS = "set usher params",
-            l = t.USHER_PREFIX = "usher_";
+            l = t.USHER_PREFIX = "usher_"
     }, function(e, t, n) {
         function r(e, t) {
             return null == e ? e : i(e, a(t, 3), o)
@@ -18131,7 +18151,7 @@
         }
 
         function a(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -35359,7 +35379,9 @@
                     displayName: "",
                     name: "",
                     partner: !1,
-                    status: ""
+                    status: "",
+                    videoBanner: "",
+                    logo: ""
                 },
                 createdAt: "",
                 game: "",
