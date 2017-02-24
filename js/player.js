@@ -8642,7 +8642,7 @@
                     y = g.get(!1),
                     E = g.get(!0);
                 v = {
-                    app_version: "2017.02.24-222052+305a4c4e871fb78716f986898fc4d9a08cbc2822",
+                    app_version: "2017.02.24-225702+13ad1843f2150080ff4c7e9e1674ecb7faa914b5",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: _.host,
@@ -16483,7 +16483,7 @@
             function a() {
                 var e = i;
                 (0, c.isTwitchEmbed)() || (e = (0, s["default"])(e, {
-                    branding: !0
+                    branding: e.player !== p.PLAYER_IMDB
                 })), l(), d(e), o(), r.showControls(h.initialControlsDelay), $(t).attr("data-branding", e.branding), $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showtheatre", e.showtheatre), $(t).attr("data-showinfo", e.showInfo), $(t).attr("data-issettingsopen", !1), H(n.getState().playback), K(), j(), J.push(V()), J.push(F()), J.push(B())
             }
 
