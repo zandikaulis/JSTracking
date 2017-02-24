@@ -664,6 +664,19 @@ window.SiteOptions = {
                 "value": "live"
             }]
         },
+        "5daee224-4c99-499f-b6e0-e308a5fa54f1": {
+            "name": "aws_roundtrip_latency_test_endpoint",
+            "groups": [{
+                "weight": 33,
+                "value": "https://us-west-2.roundtrip.twitch.tv/west"
+            }, {
+                "weight": 33,
+                "value": "https://ingest.roundtrip.twitch.tv/west"
+            }, {
+                "weight": 34,
+                "value": "https://ingest.roundtrip.twitch.tv/local"
+            }]
+        },
         "5fbb67a0-b4ff-4775-b836-e9a348a87481": {
             "name": "Network Profile Collection",
             "groups": [{
@@ -1332,6 +1345,16 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "enabled"
+            }]
+        },
+        "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef": {
+            "name": "aws_roundtrip_latency_test_opt_in",
+            "groups": [{
+                "weight": 1,
+                "value": "true"
+            }, {
+                "weight": 99,
+                "value": "false"
             }]
         },
         "f51271fc-b922-43c5-a801-d5b44219b31f": {
