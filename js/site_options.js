@@ -541,6 +541,16 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "479d9473-bf6e-4d74-8f9b-dd85d6f98921": {
+            "name": "LOL_METADATA_EXPERIMENT",
+            "groups": [{
+                "weight": 90,
+                "value": "treatment"
+            }, {
+                "weight": 10,
+                "value": "control"
+            }]
+        },
         "4aa9ee11-136c-4521-a139-e2abb718ec07": {
             "name": "Gabriel",
             "groups": [{
