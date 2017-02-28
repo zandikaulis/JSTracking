@@ -219,10 +219,10 @@ window.SiteOptions = {
                 "weight": 10,
                 "value": "yes_10"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "yes_30"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "yes_50"
             }, {
                 "weight": 0,
@@ -231,7 +231,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_95"
             }, {
-                "weight": 90,
+                "weight": 50,
                 "value": "no"
             }]
         },
@@ -589,10 +589,10 @@ window.SiteOptions = {
                 "weight": 10,
                 "value": "yes_10"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "yes_30"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "yes_50"
             }, {
                 "weight": 0,
@@ -601,7 +601,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_95"
             }, {
-                "weight": 90,
+                "weight": 50,
                 "value": "no"
             }]
         },
@@ -631,10 +631,10 @@ window.SiteOptions = {
                 "weight": 10,
                 "value": "yes_10"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "yes_30"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "yes_50"
             }, {
                 "weight": 0,
@@ -643,7 +643,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_95"
             }, {
-                "weight": 90,
+                "weight": 50,
                 "value": "no"
             }]
         },
@@ -1006,10 +1006,10 @@ window.SiteOptions = {
                 "weight": 10,
                 "value": "yes_10"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "yes_30"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "yes_50"
             }, {
                 "weight": 0,
@@ -1018,7 +1018,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_95"
             }, {
-                "weight": 90,
+                "weight": 50,
                 "value": "no"
             }]
         },
@@ -1166,10 +1166,10 @@ window.SiteOptions = {
                 "weight": 10,
                 "value": "yes_10"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "yes_30"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "yes_50"
             }, {
                 "weight": 0,
@@ -1178,7 +1178,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_95"
             }, {
-                "weight": 90,
+                "weight": 50,
                 "value": "no"
             }]
         },
@@ -1188,10 +1188,10 @@ window.SiteOptions = {
                 "weight": 10,
                 "value": "yes_10"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "yes_30"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "yes_50"
             }, {
                 "weight": 0,
@@ -1200,7 +1200,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_95"
             }, {
-                "weight": 90,
+                "weight": 50,
                 "value": "no"
             }]
         },
@@ -1386,10 +1386,10 @@ window.SiteOptions = {
                 "weight": 10,
                 "value": "yes_10"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "yes_30"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "yes_50"
             }, {
                 "weight": 0,
@@ -1398,7 +1398,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_95"
             }, {
-                "weight": 90,
+                "weight": 50,
                 "value": "no"
             }]
         },
