@@ -140,6 +140,19 @@ window.SiteOptions = {
                 "value": "live"
             }]
         },
+        "039bcc41-baa9-4351-8a76-3bcece6aec44": {
+            "name": "Transcode_Quality_Experiment_4",
+            "groups": [{
+                "weight": 100,
+                "value": "regular"
+            }, {
+                "weight": 0,
+                "value": "plus"
+            }, {
+                "weight": 0,
+                "value": "nonplus"
+            }]
+        },
         "04165981-17be-4593-afbd-762a380f6838": {
             "name": "MESSAGE_DELETED_EXPERIMENT",
             "groups": [{
@@ -1350,10 +1363,10 @@ window.SiteOptions = {
         "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef": {
             "name": "aws_roundtrip_latency_test_opt_in",
             "groups": [{
-                "weight": 100,
+                "weight": 1,
                 "value": "true"
             }, {
-                "weight": 0,
+                "weight": 99,
                 "value": "false"
             }]
         },

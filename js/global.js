@@ -15962,7 +15962,6 @@ googletag.cmd = googletag.cmd || [],
                 BROWSE_EXPERIMENT: "99494f77-1c7c-46c5-9b9c-a117db47d3c5",
                 RECOMMENDED_CHANNELS: "aaac75ea-c969-4826-b32d-ceefac620a79",
                 RECOMMENDED_GAMES: "61b169ff-bc62-4725-a40e-1be627197c6f",
-                VODS_GAME_INFO: "ac39b897-d41d-4255-90b6-3a59027e12e0",
                 VOD_COVIEWS: "c48ae3e6-1356-4ccc-8fbe-12c6909f9e98",
                 VOD_COVIEWS_AB: "e7516730-b94f-4d46-894e-c18612aab270",
                 VOD_COVIEWS_FORCED_VARIETY: "2f8210be-a6c6-43b1-9f6a-4b7cc7ef93c0",
@@ -16012,7 +16011,6 @@ googletag.cmd = googletag.cmd || [],
                 "99494f77-1c7c-46c5-9b9c-a117db47d3c5": "control",
                 "aaac75ea-c969-4826-b32d-ceefac620a79": "no",
                 "61b169ff-bc62-4725-a40e-1be627197c6f": "no",
-                "ac39b897-d41d-4255-90b6-3a59027e12e0": "control",
                 "c48ae3e6-1356-4ccc-8fbe-12c6909f9e98": "control",
                 "e7516730-b94f-4d46-894e-c18612aab270": "control",
                 "2f8210be-a6c6-43b1-9f6a-4b7cc7ef93c0": "control",
@@ -16493,8 +16491,7 @@ googletag.cmd = googletag.cmd || [],
                 r = e, r.addUpdateListener(f), 0 !== r.media.length && g("sessionListener", r.media[0]), n.player.setChromecastConnected(!0, r.receiver.friendlyName)
             },
             d = function(e) {
-                e === chrome.cast.ReceiverAvailability.AVAILABLE ? (a = !0,
-                    s && a && n.player.showChromecast(!0)) : (a = !1, n.player.showChromecast(!1))
+                e === chrome.cast.ReceiverAvailability.AVAILABLE ? (a = !0, s && a && n.player.showChromecast(!0)) : (a = !1, n.player.showChromecast(!1))
             },
             f = function(e) {
                 e || p()
@@ -17623,8 +17620,8 @@ var Base64 = {
         e = e.replace(/\r\n/g, "\n");
         for (var t = "", n = 0; n < e.length; n++) {
             var i = e.charCodeAt(n);
-            i < 128 ? t += String.fromCharCode(i) : i > 127 && i < 2048 ? (t += String.fromCharCode(i >> 6 | 192),
-                t += String.fromCharCode(63 & i | 128)) : (t += String.fromCharCode(i >> 12 | 224), t += String.fromCharCode(i >> 6 & 63 | 128), t += String.fromCharCode(63 & i | 128))
+            i < 128 ? t += String.fromCharCode(i) : i > 127 && i < 2048 ? (t += String.fromCharCode(i >> 6 | 192), t += String.fromCharCode(63 & i | 128)) : (t += String.fromCharCode(i >> 12 | 224),
+                t += String.fromCharCode(i >> 6 & 63 | 128), t += String.fromCharCode(63 & i | 128))
         }
         return t
     },
