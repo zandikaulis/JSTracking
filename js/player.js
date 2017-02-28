@@ -196,27 +196,27 @@
             j = n(282),
             U = n(298),
             B = n(264),
-            V = n(597),
+            V = n(598),
             F = n(171),
-            H = n(614),
-            G = n(615),
+            H = n(615),
+            G = n(616),
             Y = n(239),
-            q = n(660),
+            q = n(661),
             K = n(233),
             W = n(278),
             z = r(W),
             Q = n(348),
-            X = n(632),
+            X = n(633),
             J = r(X),
-            Z = n(634),
+            Z = n(635),
             ee = r(Z),
             te = n(276),
-            ne = n(618),
-            re = n(630),
+            ne = n(619),
+            re = n(631),
             ie = n(173),
             ae = n(371),
             oe = n(277),
-            se = n(623),
+            se = n(624),
             le = n(170),
             ue = r(le),
             ce = n(191),
@@ -8650,7 +8650,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.02.27-222037+1ff6ffe60d8a53f0d30b4ad4bf5ed8590d6737e4",
+                    app_version: "2017.02.28-215610+4f6c6263c9dda9960e0f4711d25b02224064a5cb",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -16162,7 +16162,7 @@
                     }, {
                         showInfo: !0
                     });
-                $(t).addClass("player"), $(t).append(n(596)), a.dispatch((0, L.initializeCaptionsSettings)()), a.dispatch((0, M.initializePlaybackSettings)()), a.dispatch((0, R.initializeSettings)()), K["default"].render(Y["default"].createElement(k.Seekbar, {
+                $(t).addClass("player"), $(t).append(n(597)), a.dispatch((0, L.initializeCaptionsSettings)()), a.dispatch((0, M.initializePlaybackSettings)()), a.dispatch((0, R.initializeSettings)()), K["default"].render(Y["default"].createElement(k.Seekbar, {
                     store: a,
                     seek: e.setCurrentTime.bind(e)
                 }), document.getElementById("js-player-seek")), K["default"].render(Y["default"].createElement(w.MutedSegmentsAlert, {
@@ -30583,16 +30583,22 @@
     }, function(e, t, n) {
         "use strict";
 
-        function r(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        function r(e) {
+            return e && e.__esModule ? e : {
+                "default": e
+            }
         }
 
         function i(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function a(e, t) {
             if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
             return !t || "object" != typeof t && "function" != typeof t ? e : t
         }
 
-        function a(e, t) {
+        function o(e, t) {
             if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
             e.prototype = Object.create(t && t.prototype, {
                 constructor: {
@@ -30606,7 +30612,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.PlaylistOverlay = t.NO_COLLECTION_VIEW_ATTR = t.SIDEBAR_VIEW_ATTR = t.COLLAPSED_VIEW_ATTR = t.DEFAULT_THUMBNAIL_URL = void 0;
-        var o = function() {
+        var s = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -30617,51 +30623,55 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            s = function m(e, t, n) {
+            l = function T(e, t, n) {
                 null === e && (e = Function.prototype);
                 var r = Object.getOwnPropertyDescriptor(e, t);
                 if (void 0 === r) {
                     var i = Object.getPrototypeOf(e);
-                    return null === i ? void 0 : m(i, t, n)
+                    return null === i ? void 0 : T(i, t, n)
                 }
                 if ("value" in r) return r.value;
                 var a = r.get;
                 if (void 0 !== a) return a.call(n)
             },
-            l = n(357),
-            u = n(210),
-            c = n(348),
-            d = n(595),
-            p = n(277),
-            f = "350",
-            h = t.DEFAULT_THUMBNAIL_URL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/no-thumbnail-sm.png",
-            v = t.COLLAPSED_VIEW_ATTR = "view-collapsed",
-            _ = t.SIDEBAR_VIEW_ATTR = "view-sidebar",
-            g = t.NO_COLLECTION_VIEW_ATTR = "none";
+            u = n(49),
+            c = r(u),
+            d = n(357),
+            p = n(210),
+            f = n(348),
+            h = n(340),
+            v = n(595),
+            _ = n(596),
+            g = n(277),
+            m = "350",
+            y = t.DEFAULT_THUMBNAIL_URL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/no-thumbnail-sm.png",
+            b = t.COLLAPSED_VIEW_ATTR = "view-collapsed",
+            E = t.SIDEBAR_VIEW_ATTR = "view-sidebar",
+            S = t.NO_COLLECTION_VIEW_ATTR = "none";
         t.PlaylistOverlay = function(e) {
             function t(e, n) {
-                r(this, t);
-                var a = i(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                a._stateStore = n, a.window = a._stateStore.getState().window, a.timeoutId = null, a.$root = $(e), a.$root.attr("data-collection-view", g), a.$sidebarItemTemplate = $(".js-collection-item", a.$root), a.$playlist = $(".js-collection-container", a.$root), a.$playlistNav = $(".js-collection-nav", a.$root), a.$playlistSidebar = $(".js-collection-sidebar", a.$root), a.$playlistOpenButton = $(".js-collection-collapsed__layout", a.$root), a.$playlistCloseButton = $(".js-icon-close-collection", a.$root), a.$playlistOpenButton.on("click", function() {
-                    return a.setSidebarVisible(!0)
-                }), a.$playlistCloseButton.on("click", function() {
-                    a.setSidebarVisible(!1), a.$playlistSidebar.addClass("collection-sidebar-close"), a.timeoutId = a.window.setTimeout(function() {
-                        a.$playlistSidebar.removeClass("collection-sidebar-close")
-                    }, f)
-                }), a.$playlistCollapsedTitle = $(".js-collection-collapsed-title", a.$root), a.$playlistCollapsedNumber = $(".js-collection-collapsed-number", a.$root), a.$playlistTitle = $(".js-collection-title", a.$root), a.$playlistAuthor = $(".js-collection-author", a.$root), a.$playlistItemsCount = $(".js-collection-items-count", a.$root), a.$playlistTimeLength = $(".js-collection-time-length", a.$root), a.$playlistItemContainer = $(".js-collection-item-container", a.$root), a.$playlistItemContainer.on("click", ".js-collection-item", a.handleItemSelect.bind(a));
-                var o = a._stateStore.getState(),
+                i(this, t);
+                var r = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+                r._stateStore = n, r.window = r._stateStore.getState().window, r.timeoutId = null, r.$root = $(e), r.$root.attr("data-collection-view", S), r.$sidebarItemTemplate = $(".js-collection-item", r.$root), r.$playlist = $(".js-collection-container", r.$root), r.$playlistNav = $(".js-collection-nav", r.$root), r.$playlistSidebar = $(".js-collection-sidebar", r.$root), r.$playlistOpenButton = $(".js-collection-collapsed__layout", r.$root), r.$playlistCloseButton = $(".js-icon-close-collection", r.$root), r.$playlistOpenButton.on("click", function() {
+                    return r.setSidebarVisible(!0)
+                }), r.$playlistCloseButton.on("click", function() {
+                    r.setSidebarVisible(!1), r.$playlistSidebar.addClass("collection-sidebar-close"), r.timeoutId = r.window.setTimeout(function() {
+                        r.$playlistSidebar.removeClass("collection-sidebar-close")
+                    }, m)
+                }), r.$playlistCollapsedTitle = $(".js-collection-collapsed-title", r.$root), r.$playlistCollapsedNumber = $(".js-collection-collapsed-number", r.$root), r.$playlistTitle = $(".js-collection-title", r.$root), r.$playlistAuthor = $(".js-collection-author", r.$root), r.$playlistItemsCount = $(".js-collection-items-count", r.$root), r.$playlistTimeLength = $(".js-collection-time-length", r.$root), r.$playlistItemContainer = $(".js-collection-item-container", r.$root), r.$playlistItemContainer.on("click", ".js-collection-item", r.handleItemSelect.bind(r));
+                var o = r._stateStore.getState(),
                     s = o.playlist,
                     l = o.playerOptions;
-                a.$playlist.attr("data-collection-side", l.showInfo ? "right" : "left"), s.id && a._enablePlaylists();
+                r.$playlist.attr("data-collection-side", l.showInfo ? "right" : "left"), s.id && r._enablePlaylists();
                 var u = ["playlist.title", "playlist.owner", "playlist.totalDuration"];
-                return a.subscribe(a._stateStore, ["playlist.id"], a.onPlaylistChange.bind(a)), a.subscribe(a._stateStore, ["ui.isMini"], a.onMiniChange.bind(a)), a.subscribe(a._stateStore, ["playerOptions.showInfo"], a.onShowInfoChange.bind(a)), a.subscribe(a._stateStore, ["playlist.sidebarVisible"], a.onVisibilityChange.bind(a)), a.subscribe(a._stateStore, u.concat(["lang"]), a.onMetadataChange.bind(a)), a.subscribe(a._stateStore, ["playlist.items", "stream", "lang"], a.onItemsChange.bind(a)), a
+                return r.subscribe(r._stateStore, ["playlist.id"], r.onPlaylistChange.bind(r)), r.subscribe(r._stateStore, ["ui.isMini"], r.onMiniChange.bind(r)), r.subscribe(r._stateStore, ["playerOptions.showInfo"], r.onShowInfoChange.bind(r)), r.subscribe(r._stateStore, ["playlist.sidebarVisible"], r.onVisibilityChange.bind(r)), r.subscribe(r._stateStore, u.concat(["lang"]), r.onMetadataChange.bind(r)), r.subscribe(r._stateStore, ["playlist.items", "stream", "lang"], r.onItemsChange.bind(r)), r.subscribe(r._stateStore, ["screen"], r.onScreenChange.bind(r)), r
             }
-            return a(t, e), o(t, [{
+            return o(t, e), s(t, [{
                 key: "handleItemSelect",
                 value: function(e) {
                     e.stopPropagation();
                     var t = $(e.currentTarget).attr("data-vod-id");
-                    t && (this._stateStore.dispatch((0, p.selectVOD)("v" + t)), this.setSidebarVisible(!1))
+                    t && (this._stateStore.dispatch((0, g.selectVOD)("v" + t)), this.setSidebarVisible(!1))
                 }
             }, {
                 key: "onPlaylistChange",
@@ -30670,9 +30680,24 @@
                     t.id ? this._enablePlaylists() : this._disablePlaylists()
                 }
             }, {
+                key: "onScreenChange",
+                value: function() {
+                    var e = this._stateStore.getState(),
+                        t = e.screen,
+                        n = e.playback;
+                    !n.transitionScheme !== v.TRANSITION_TYPE_PLAYLIST && ((0, c["default"])([h.ADVERTISEMENT_SCREEN, h.STITCHED_ADVERTISEMENT_SCREEN], t[0]) ? this._hideAllElements() : this._showElements())
+                }
+            }, {
                 key: "_hideAllElements",
                 value: function() {
                     this.$playlist.attr("data-show-collection-container", !1), this.$playlistNav.attr("data-show-nav", !1), this.$playlistSidebar.attr("data-show-sidebar", !1)
+                }
+            }, {
+                key: "_showElements",
+                value: function() {
+                    var e = this._stateStore.getState(),
+                        t = e.playlist;
+                    this.$playlist.attr("data-show-collection-container", !0), this.$playlistSidebar.attr("data-show-sidebar", t.sidebarVisible), this.$playlistNav.attr("data-show-nav", !t.sidebarVisible)
                 }
             }, {
                 key: "onMiniChange",
@@ -30680,17 +30705,17 @@
                     var e = this._stateStore.getState(),
                         t = e.ui,
                         n = e.playlist;
-                    n.id && (t.isMini ? this._hideAllElements() : (this.$playlist.attr("data-show-collection-container", !0), this.$playlistSidebar.attr("data-show-sidebar", n.sidebarVisible), this.$playlistNav.attr("data-show-nav", !n.sidebarVisible)))
+                    n.id && (t.isMini ? this._hideAllElements() : this._showElements())
                 }
             }, {
                 key: "_enablePlaylists",
                 value: function() {
-                    this.$playlist.attr("data-show-collection-container", !0), this.$playlistNav.attr("data-show-nav", !0), this.$root.attr("data-collection-view", v)
+                    this.$playlist.attr("data-show-collection-container", !0), this.$playlistNav.attr("data-show-nav", !0), this.$root.attr("data-collection-view", b)
                 }
             }, {
                 key: "_disablePlaylists",
                 value: function() {
-                    this.$playlist.attr("data-show-collection-container", !1), this.$playlistNav.attr("data-show-nav", !1), this.$root.attr("data-collection-view", g)
+                    this.$playlist.attr("data-show-collection-container", !1), this.$playlistNav.attr("data-show-nav", !1), this.$root.attr("data-collection-view", S)
                 }
             }, {
                 key: "onShowInfoChange",
@@ -30702,7 +30727,7 @@
                 key: "setSidebarVisible",
                 value: function(e) {
                     var t = this._stateStore.getState().playlist.sidebarVisible;
-                    t !== e && (e ? (this._stateStore.dispatch((0, c.openPlaylist)()), this.$root.attr("data-collection-view", _)) : (this._stateStore.dispatch((0, c.closePlaylist)()), this.$root.attr("data-collection-view", v)))
+                    t !== e && (e ? (this._stateStore.dispatch((0, f.openPlaylist)()), this.$root.attr("data-collection-view", E)) : (this._stateStore.dispatch((0, f.closePlaylist)()), this.$root.attr("data-collection-view", b)))
                 }
             }, {
                 key: "onVisibilityChange",
@@ -30727,7 +30752,7 @@
             }, {
                 key: "_toHumanTime",
                 value: function(e, t) {
-                    var n = (0, d.toHumanReadable)(1e3 * e),
+                    var n = (0, _.toHumanReadable)(1e3 * e),
                         r = t.translate("{{count}} minute", {
                             count: n.minutes
                         }),
@@ -30758,11 +30783,11 @@
                     return e.map(function(i, a) {
                         var o = r.$sidebarItemTemplate.clone(),
                             s = a + 1;
-                        if (o.find(".js-collection-item-number").text(s), !r._isValidVod(i)) return o.find(".js-collection-item-title").text(n.translate("Video unavailable")), o.find(".js-collection-item-thumbnail").attr("src", h), o.find(".js-collection-item-meta").empty(), o;
-                        var l = i.thumbnails ? i.thumbnails.small : h;
+                        if (o.find(".js-collection-item-number").text(s), !r._isValidVod(i)) return o.find(".js-collection-item-title").text(n.translate("Video unavailable")), o.find(".js-collection-item-thumbnail").attr("src", y), o.find(".js-collection-item-meta").empty(), o;
+                        var l = i.thumbnails ? i.thumbnails.small : y;
                         o.attr("data-vod-id", i.item_id), o.find(".js-collection-item-thumbnail").attr("src", l), o.find(".js-collection-item-title").text(i.title), o.find(".js-collection-item-detail-channel").text(i.owner.display_name);
-                        var c = t.contentType === u.CONTENT_MODE_VOD && t.videoId === "v" + i.item_id;
-                        return o.attr("data-currentvod", c), c && r.$playlistCollapsedNumber.text(n.translate("{{currentPosition}}/{{totalVideos}} video", {
+                        var u = t.contentType === p.CONTENT_MODE_VOD && t.videoId === "v" + i.item_id;
+                        return o.attr("data-currentvod", u), u && r.$playlistCollapsedNumber.text(n.translate("{{currentPosition}}/{{totalVideos}} video", {
                             count: e.length,
                             currentPosition: a + 1,
                             totalVideos: e.length
@@ -30777,10 +30802,153 @@
             }, {
                 key: "destroy",
                 value: function() {
-                    s(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "destroy", this).call(this), this.$playlistOpenButton.off("click"), this.$playlistCloseButton.off("click"), this.$playlistItemContainer.off("click"), this.timeoutId && this.window.clearTimeout(this.timeoutId)
+                    l(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "destroy", this).call(this), this.$playlistOpenButton.off("click"), this.$playlistCloseButton.off("click"), this.$playlistItemContainer.off("click"), this.timeoutId && this.window.clearTimeout(this.timeoutId)
                 }
             }]), t
-        }(l.UIStateSubscriber)
+        }(d.UIStateSubscriber)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            if (e && e.__esModule) return e;
+            var t = {};
+            if (null != e)
+                for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+            return t["default"] = e, t
+        }
+
+        function i(e) {
+            return e && e.__esModule ? e : {
+                "default": e
+            }
+        }
+
+        function a() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _,
+                t = arguments[1];
+            switch (t.type) {
+                case d.ACTION_INITIALIZE_PLAYBACK_SETTINGS:
+                    return (0, s["default"])({}, e, (0, u["default"])(t.playback, S));
+                case p.ACTION_SET_STREAM:
+                    return (0, s["default"])({}, e, {
+                        hasPlayed: !1,
+                        contentShowing: !1
+                    });
+                case d.ACTION_PLAYING:
+                    return (0, s["default"])({}, e, g, E);
+                case d.ACTION_WAITING:
+                    return (0, s["default"])({}, e, m);
+                case d.ACTION_PAUSE:
+                    return (0, s["default"])({}, e, y);
+                case d.ACTION_ENDED:
+                    return (0, s["default"])({}, e, b);
+                case d.ACTION_SET_MUTED:
+                    return (0, s["default"])({}, e, {
+                        muted: t.muted
+                    });
+                case d.ACTION_SET_VOLUME:
+                    return (0, s["default"])({}, e, {
+                        volume: t.volume
+                    });
+                case d.ACTION_UPDATE_PLAYBACK_DURATION:
+                    return (0, s["default"])({}, e, (0, u["default"])(t.playback, S));
+                case d.ACTION_QUALITY_RESTRICTED_ERROR:
+                    return (0, s["default"])({}, e, {
+                        restrictedQualityError: !0
+                    });
+                case d.ACTION_CLEAR_QUALITY_RESTRICTED_ERROR:
+                    return (0, s["default"])({}, e, {
+                        restrictedQualityError: !1
+                    });
+                case d.ACTION_SET_AUTOPLAY_STATE:
+                    return (0, s["default"])({}, e, {
+                        autoplay: t.playback.autoplay
+                    });
+                case d.ACTION_SET_LOADING:
+                    return (0, s["default"])({}, e, {
+                        isLoading: t.isLoading
+                    });
+                case d.ACTION_UPDATE_CURRENT_TIME:
+                    return (0, s["default"])({}, e, {
+                        currentTime: t.currentTime
+                    });
+                case d.ACTION_UPDATE_BUFFER_VALUES:
+                    return (0, s["default"])({}, e, {
+                        buffer: {
+                            start: t.start,
+                            end: t.end
+                        }
+                    });
+                case d.ACTION_CONTENT_IS_SHOWING:
+                    return (0, s["default"])({}, e, E);
+                case d.ACTION_SET_TRANSITION_FUNCTION:
+                    return (0, s["default"])({}, e, {
+                        transitionFn: t.transitionFn
+                    });
+                case f.ACTION_SET_PLAYLIST:
+                    return (0, s["default"])({}, e, {
+                        transitionScheme: h
+                    });
+                case f.ACTION_UNSET_PLAYLIST:
+                    return (0, s["default"])({}, e, {
+                        transitionScheme: v
+                    });
+                default:
+                    return e
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.TRANSITION_TYPE_RECOMMENDATIONS = t.TRANSITION_TYPE_PLAYLIST = void 0, t.playback = a;
+        var o = n(78),
+            s = i(o),
+            l = n(66),
+            u = i(l),
+            c = n(277),
+            d = r(c),
+            p = n(278),
+            f = n(348),
+            h = t.TRANSITION_TYPE_PLAYLIST = "transition playlist",
+            v = t.TRANSITION_TYPE_RECOMMENDATIONS = "transition recommendations",
+            _ = {
+                autoplay: !0,
+                buffer: {
+                    start: 0,
+                    end: 0
+                },
+                currentTime: 0,
+                duration: 0,
+                ended: !1,
+                hasPlayed: !1,
+                isLoading: !1,
+                muted: !1,
+                paused: !0,
+                restrictedQualityError: !1,
+                volume: .5,
+                transitionScheme: v,
+                contentShowing: !1,
+                transitionFn: function() {}
+            },
+            g = {
+                hasPlayed: !0,
+                paused: !1,
+                ended: !1
+            },
+            m = {
+                ended: !1
+            },
+            y = {
+                paused: !0,
+                ended: !1
+            },
+            b = {
+                paused: !0,
+                ended: !0
+            },
+            E = {
+                contentShowing: !0
+            },
+            S = Object.keys(_)
     }, function(e, t) {
         "use strict";
 
@@ -30829,9 +30997,9 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            s = n(598),
+            s = n(599),
             l = r(s),
-            u = n(602),
+            u = n(603),
             c = r(u),
             d = n(174),
             p = n(280),
@@ -30920,14 +31088,14 @@
         }()
     }, function(e, t, n) {
         var r = n(21),
-            i = n(599),
+            i = n(600),
             a = r(i);
         e.exports = a
     }, function(e, t, n) {
         function r(e, t) {
             return e && e.length && t && t.length ? i(e, t) : e
         }
-        var i = n(600);
+        var i = n(601);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n, r) {
@@ -30942,7 +31110,7 @@
         }
         var i = n(61),
             a = n(50),
-            o = n(601),
+            o = n(602),
             s = n(44),
             l = n(199),
             u = Array.prototype,
@@ -31003,20 +31171,20 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            u = n(603),
+            u = n(604),
             c = r(u),
-            d = n(604),
+            d = n(605),
             p = r(d),
-            f = n(605),
+            f = n(606),
             h = r(f),
-            v = n(606),
+            v = n(607),
             _ = r(v),
-            g = n(608),
+            g = n(609),
             m = r(g),
-            y = n(609),
+            y = n(610),
             b = r(y),
-            E = n(611),
-            S = n(613),
+            E = n(612),
+            S = n(614),
             T = r(S),
             P = p["default"]._getLogger("PubsubDriver"),
             C = /^https?:\/\/([\w-]+\.)*twitch\.tv(:\d+)?\/.*$/,
@@ -31187,7 +31355,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            o = n(605),
+            o = n(606),
             s = r(o),
             l = function() {},
             u = l,
@@ -31343,13 +31511,13 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(603),
+            l = n(604),
             u = r(l),
-            c = n(604),
+            c = n(605),
             d = r(c),
-            p = n(605),
+            p = n(606),
             f = r(p),
-            h = n(607),
+            h = n(608),
             v = r(h),
             _ = 30,
             g = 3e4,
@@ -31573,7 +31741,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            o = n(604),
+            o = n(605),
             s = r(o),
             l = "pubsub",
             u = s["default"]._getLogger("IframeHost"),
@@ -31731,15 +31899,15 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(603),
+            l = n(604),
             u = r(l),
-            c = n(604),
+            c = n(605),
             d = r(c),
-            p = n(605),
+            p = n(606),
             f = r(p),
-            h = n(610),
+            h = n(611),
             v = r(h),
-            _ = n(607),
+            _ = n(608),
             g = r(_),
             m = d["default"]._getLogger("WebsocketClient"),
             y = 3e4,
@@ -32009,11 +32177,11 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(603),
+            l = n(604),
             u = r(l),
-            c = n(604),
+            c = n(605),
             d = r(c),
-            p = n(605),
+            p = n(606),
             f = r(p),
             h = d["default"]._getLogger("PubsubSocket"),
             v = 120,
@@ -32142,7 +32310,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.Stats = void 0;
-        var i = n(612),
+        var i = n(613),
             a = r(i);
         t.Stats = a["default"], t["default"] = {
             Stats: a["default"]
@@ -32337,9 +32505,9 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            o = n(605),
+            o = n(606),
             s = r(o),
-            l = n(604),
+            l = n(605),
             u = r(l),
             c = "https://pubster.twitch.tv/publish",
             d = "https://pubster-darklaunch.twitch.tv/publish",
@@ -32555,29 +32723,29 @@
             value: !0
         }), t.init = i;
         var a = n(552),
-            o = n(616),
+            o = n(617),
             s = r(o),
-            l = n(617),
-            u = n(619),
-            c = n(620),
-            d = n(621),
-            p = n(622),
-            f = n(624),
-            h = n(625),
+            l = n(618),
+            u = n(620),
+            c = n(621),
+            d = n(622),
+            p = n(623),
+            f = n(625),
+            h = n(626),
             v = n(307),
-            _ = n(626),
-            g = n(627),
-            m = n(628),
-            y = n(629),
-            b = n(631),
-            E = n(633),
-            S = n(654),
-            T = n(655),
-            P = n(657),
-            C = n(658),
-            k = n(659),
-            w = n(661),
-            A = n(662),
+            _ = n(627),
+            g = n(628),
+            m = n(629),
+            y = n(630),
+            b = n(632),
+            E = n(634),
+            S = n(655),
+            T = n(656),
+            P = n(658),
+            C = n(659),
+            k = n(660),
+            w = n(662),
+            A = n(595),
             O = n(663),
             I = n(664),
             N = n(665),
@@ -32593,7 +32761,7 @@
             F = n(677),
             H = n(678),
             G = n(679),
-            Y = (n(630), n(371), (0, a.combineReducers)({
+            Y = (n(631), n(371), (0, a.combineReducers)({
                 accessToken: l.accessToken,
                 ads: u.ads,
                 adsManager: c.adsManager,
@@ -32687,7 +32855,7 @@
         var a = n(78),
             o = r(a),
             s = n(338),
-            l = n(618),
+            l = n(619),
             u = n(233),
             c = t.DEFAULT_ACCESS_TOKEN = {
                 params: {
@@ -32833,7 +33001,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.analyticsTracker = r;
-        var i = n(623),
+        var i = n(624),
             a = new Error("Attempting to use tracker too early"),
             o = {
                 trackEvent: function() {
@@ -33058,8 +33226,8 @@
             c = r(u),
             d = n(167),
             p = n(208),
-            f = n(618),
-            h = n(630),
+            f = n(619),
+            h = n(631),
             v = {
                 playerType: p.PLAYER_POPOUT,
                 platform: "web",
@@ -33096,7 +33264,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.experiments = r;
-        var i = n(632),
+        var i = n(633),
             a = new Error("Attempting to use experiments too early"),
             o = {
                 get: function() {
@@ -33137,8 +33305,8 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.lang = r;
-        var i = n(634),
-            a = n(635)
+        var i = n(635),
+            a = n(636)
     }, function(e, t, n) {
         "use strict";
 
@@ -33177,7 +33345,7 @@
         }), t.LAST_KNOWN_LANG = t.ACTION_SET_LANGUAGE = void 0, t.setLanguage = r, t.loadLanguage = i, t.loadDefaultLang = a;
         var o = n(258),
             s = n(237),
-            l = n(635),
+            l = n(636),
             u = n(191),
             c = t.ACTION_SET_LANGUAGE = "set language",
             d = t.LAST_KNOWN_LANG = "playerLanguage"
@@ -33222,9 +33390,9 @@
             }
         }();
         t.missingKeyHandler = a, t.getI18N = o;
-        var l = n(636),
+        var l = n(637),
             u = r(l),
-            c = n(652),
+            c = n(653),
             d = r(c),
             p = n(159),
             f = n(205),
@@ -33252,7 +33420,7 @@
             keySeparator: !1,
             missingKeyHandler: a,
             saveMissing: !0
-        }), u["default"].addResourceBundle("en-US", u["default"].options.ns[0], n(653));
+        }), u["default"].addResourceBundle("en-US", u["default"].options.ns[0], n(654));
         var b = function() {
             function e(t, n, r) {
                 i(this, e), this.shortCode = t, this.langCode = n, this._translate = r
@@ -33270,7 +33438,7 @@
         }();
         t.DEFAULT_LANGUAGE = new b("en", "en-US", u["default"].getFixedT("en-US"))
     }, function(e, t, n) {
-        e.exports = n(637)["default"]
+        e.exports = n(638)["default"]
     }, function(e, t, n) {
         "use strict";
 
@@ -33282,7 +33450,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var i = n(638),
+        var i = n(639),
             a = r(i);
         t["default"] = a["default"]
     }, function(e, t, n) {
@@ -33346,28 +33514,28 @@
                 }
                 return e
             },
-            d = n(639),
+            d = n(640),
             p = i(d),
-            f = n(640),
+            f = n(641),
             h = i(f),
-            v = n(641),
+            v = n(642),
             _ = i(v),
-            g = n(643),
+            g = n(644),
             m = i(g),
-            y = n(646),
+            y = n(647),
             b = i(y),
-            E = n(647),
+            E = n(648),
             S = i(E),
-            T = n(648),
+            T = n(649),
             P = i(T),
-            C = n(649),
+            C = n(650),
             k = i(C),
-            w = n(650),
+            w = n(651),
             A = i(w),
-            O = n(651),
-            I = n(644),
+            O = n(652),
+            I = n(645),
             N = i(I),
-            L = n(645),
+            L = n(646),
             M = r(L),
             R = function(e) {
                 function t() {
@@ -33653,9 +33821,9 @@
                 }
                 return e
             },
-            c = n(640),
+            c = n(641),
             d = i(c),
-            p = n(642),
+            p = n(643),
             f = r(p),
             h = function(e) {
                 function t() {
@@ -33843,15 +34011,15 @@
             } : function(e) {
                 return e && "function" == typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e
             },
-            d = n(639),
+            d = n(640),
             p = i(d),
-            f = n(640),
+            f = n(641),
             h = i(f),
-            v = n(644),
+            v = n(645),
             _ = i(v),
-            g = n(645),
+            g = n(646),
             m = r(g),
-            y = n(642),
+            y = n(643),
             b = r(y),
             E = function(e) {
                 function t(n) {
@@ -34028,7 +34196,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.convertAPIOptions = a, t.convertJSONOptions = o, t.convertTOptions = s, t.appendBackwardsAPI = l;
-        var u = n(639),
+        var u = n(640),
             c = r(u)
     }, function(e, t, n) {
         "use strict";
@@ -34049,7 +34217,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var o = n(639),
+        var o = n(640),
             s = r(o),
             l = function() {
                 function e(t) {
@@ -34111,7 +34279,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var o = n(639),
+        var o = n(640),
             s = r(o),
             l = [{
                 lngs: ["ach", "ak", "am", "arn", "br", "fil", "gun", "ln", "mfe", "mg", "mi", "oc", "tg", "ti", "tr", "uz", "wa"],
@@ -34318,9 +34486,9 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var o = n(642),
+        var o = n(643),
             s = i(o),
-            l = n(639),
+            l = n(640),
             u = r(l),
             c = function() {
                 function e() {
@@ -34465,11 +34633,11 @@
                     throw new TypeError("Invalid attempt to destructure non-iterable instance")
                 }
             }(),
-            p = n(642),
+            p = n(643),
             f = i(p),
-            h = n(639),
+            h = n(640),
             v = r(h),
-            _ = n(640),
+            _ = n(641),
             g = r(_),
             m = function(e) {
                 function t(n, r, i) {
@@ -34614,10 +34782,10 @@
                 }
                 return e
             },
-            c = n(642),
-            d = (i(c), n(639)),
+            c = n(643),
+            d = (i(c), n(640)),
             p = r(d),
-            f = n(640),
+            f = n(641),
             h = r(f),
             v = function(e) {
                 function t(n, r, i) {
@@ -35077,7 +35245,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.navigatorReducer = r;
-        var i = n(656)
+        var i = n(657)
     }, function(e, t) {
         "use strict";
 
@@ -35192,7 +35360,7 @@
         }), t.playerOptions = i;
         var a = n(192),
             o = r(a),
-            s = n(660),
+            s = n(661),
             l = {
                 showInfo: !0
             }
@@ -35244,149 +35412,6 @@
                 hasError: !1,
                 error: new Error("Error")
             }
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            if (e && e.__esModule) return e;
-            var t = {};
-            if (null != e)
-                for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-            return t["default"] = e, t
-        }
-
-        function i(e) {
-            return e && e.__esModule ? e : {
-                "default": e
-            }
-        }
-
-        function a() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _,
-                t = arguments[1];
-            switch (t.type) {
-                case d.ACTION_INITIALIZE_PLAYBACK_SETTINGS:
-                    return (0, s["default"])({}, e, (0, u["default"])(t.playback, S));
-                case p.ACTION_SET_STREAM:
-                    return (0, s["default"])({}, e, {
-                        hasPlayed: !1,
-                        contentShowing: !1
-                    });
-                case d.ACTION_PLAYING:
-                    return (0, s["default"])({}, e, g, E);
-                case d.ACTION_WAITING:
-                    return (0, s["default"])({}, e, m);
-                case d.ACTION_PAUSE:
-                    return (0, s["default"])({}, e, y);
-                case d.ACTION_ENDED:
-                    return (0, s["default"])({}, e, b);
-                case d.ACTION_SET_MUTED:
-                    return (0, s["default"])({}, e, {
-                        muted: t.muted
-                    });
-                case d.ACTION_SET_VOLUME:
-                    return (0, s["default"])({}, e, {
-                        volume: t.volume
-                    });
-                case d.ACTION_UPDATE_PLAYBACK_DURATION:
-                    return (0, s["default"])({}, e, (0, u["default"])(t.playback, S));
-                case d.ACTION_QUALITY_RESTRICTED_ERROR:
-                    return (0, s["default"])({}, e, {
-                        restrictedQualityError: !0
-                    });
-                case d.ACTION_CLEAR_QUALITY_RESTRICTED_ERROR:
-                    return (0, s["default"])({}, e, {
-                        restrictedQualityError: !1
-                    });
-                case d.ACTION_SET_AUTOPLAY_STATE:
-                    return (0, s["default"])({}, e, {
-                        autoplay: t.playback.autoplay
-                    });
-                case d.ACTION_SET_LOADING:
-                    return (0, s["default"])({}, e, {
-                        isLoading: t.isLoading
-                    });
-                case d.ACTION_UPDATE_CURRENT_TIME:
-                    return (0, s["default"])({}, e, {
-                        currentTime: t.currentTime
-                    });
-                case d.ACTION_UPDATE_BUFFER_VALUES:
-                    return (0, s["default"])({}, e, {
-                        buffer: {
-                            start: t.start,
-                            end: t.end
-                        }
-                    });
-                case d.ACTION_CONTENT_IS_SHOWING:
-                    return (0, s["default"])({}, e, E);
-                case d.ACTION_SET_TRANSITION_FUNCTION:
-                    return (0, s["default"])({}, e, {
-                        transitionFn: t.transitionFn
-                    });
-                case f.ACTION_SET_PLAYLIST:
-                    return (0, s["default"])({}, e, {
-                        transitionScheme: h
-                    });
-                case f.ACTION_UNSET_PLAYLIST:
-                    return (0, s["default"])({}, e, {
-                        transitionScheme: v
-                    });
-                default:
-                    return e
-            }
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.TRANSITION_TYPE_RECOMMENDATIONS = t.TRANSITION_TYPE_PLAYLIST = void 0, t.playback = a;
-        var o = n(78),
-            s = i(o),
-            l = n(66),
-            u = i(l),
-            c = n(277),
-            d = r(c),
-            p = n(278),
-            f = n(348),
-            h = t.TRANSITION_TYPE_PLAYLIST = "transition playlist",
-            v = t.TRANSITION_TYPE_RECOMMENDATIONS = "transition recommendations",
-            _ = {
-                autoplay: !0,
-                buffer: {
-                    start: 0,
-                    end: 0
-                },
-                currentTime: 0,
-                duration: 0,
-                ended: !1,
-                hasPlayed: !1,
-                isLoading: !1,
-                muted: !1,
-                paused: !0,
-                restrictedQualityError: !1,
-                volume: .5,
-                transitionScheme: v,
-                contentShowing: !1,
-                transitionFn: function() {}
-            },
-            g = {
-                hasPlayed: !0,
-                paused: !1,
-                ended: !1
-            },
-            m = {
-                ended: !1
-            },
-            y = {
-                paused: !0,
-                ended: !1
-            },
-            b = {
-                paused: !0,
-                ended: !0
-            },
-            E = {
-                contentShowing: !0
-            },
-            S = Object.keys(_)
     }, function(e, t, n) {
         "use strict";
 
@@ -36014,7 +36039,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.windowReducer = r;
-        var i = n(630)
+        var i = n(631)
     }, function(e, t, n) {
         "use strict";
 
@@ -36085,7 +36110,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            o = n(662),
+            o = n(595),
             s = n(210),
             l = n(174),
             u = n(153),
@@ -36165,7 +36190,7 @@
             u = n(208),
             c = n(210),
             d = n(158),
-            p = n(662),
+            p = n(595),
             f = n(174),
             h = n(49),
             v = r(h),
