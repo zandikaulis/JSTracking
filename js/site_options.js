@@ -1350,10 +1350,10 @@ window.SiteOptions = {
         "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef": {
             "name": "aws_roundtrip_latency_test_opt_in",
             "groups": [{
-                "weight": 1,
+                "weight": 100,
                 "value": "true"
             }, {
-                "weight": 99,
+                "weight": 0,
                 "value": "false"
             }]
         },
