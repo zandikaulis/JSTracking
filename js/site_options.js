@@ -251,10 +251,7 @@ window.SiteOptions = {
         "19017d2c-4473-4914-a10f-82152c8b2bd9": {
             "name": "CVP-Feb-2017",
             "groups": [{
-                "weight": 40,
-                "value": "1.3.5"
-            }, {
-                "weight": 50,
+                "weight": 90,
                 "value": "1.4.0"
             }, {
                 "weight": 2,
@@ -908,10 +905,10 @@ window.SiteOptions = {
         "9649684c-6d3f-423d-9d3c-f4296efee975": {
             "name": "clips_hear_me_now",
             "groups": [{
-                "weight": 90,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 50,
                 "value": "variant1"
             }]
         },
