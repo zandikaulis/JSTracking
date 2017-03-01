@@ -15211,7 +15211,7 @@ googletag.cmd = googletag.cmd || [],
         }, e.fn.teardownOverlay = function() {
             return this.each(function() {
                 var t = e(this);
-                t.off("keyup.overlay"), e("body.overlay").off("click.overlay"), t.off("overlay.hide")
+                t.off("keyup.overlay"), e("body.overlay").off("click.overlay"), t.off("overlay.hide"), e(".twitch_subwindow_container").remove()
             })
         }
     }(jQuery),
@@ -16485,11 +16485,11 @@ googletag.cmd = googletag.cmd || [],
                 else {
                     var e = new chrome.cast.SessionRequest("358E83DC"),
                         t = new chrome.cast.ApiConfig(e, h, d, chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED);
-                    chrome.cast.initialize(t, u, c)
+                    chrome.cast.initialize(t, u, c);
                 }
             },
             u = function() {
-                s = !0, s && a && n.player.showChromecast(!0);
+                s = !0, s && a && n.player.showChromecast(!0)
             },
             c = function(e) {
                 "session_error" === e.code && p()
@@ -17620,8 +17620,8 @@ var Base64 = {
     decode: function(e) {
         var t, n, i, o, r, s, a, l = "",
             u = 0;
-        for (e = e.replace(/[^A-Za-z0-9\+\/\=]/g, ""); u < e.length;) o = Base64._keyStr.indexOf(e.charAt(u++)), r = Base64._keyStr.indexOf(e.charAt(u++)), s = Base64._keyStr.indexOf(e.charAt(u++)), a = Base64._keyStr.indexOf(e.charAt(u++)), t = o << 2 | r >> 4, n = (15 & r) << 4 | s >> 2, i = (3 & s) << 6 | a, l += String.fromCharCode(t),
-            64 != s && (l += String.fromCharCode(n)), 64 != a && (l += String.fromCharCode(i));
+        for (e = e.replace(/[^A-Za-z0-9\+\/\=]/g, ""); u < e.length;) o = Base64._keyStr.indexOf(e.charAt(u++)), r = Base64._keyStr.indexOf(e.charAt(u++)), s = Base64._keyStr.indexOf(e.charAt(u++)), a = Base64._keyStr.indexOf(e.charAt(u++)),
+            t = o << 2 | r >> 4, n = (15 & r) << 4 | s >> 2, i = (3 & s) << 6 | a, l += String.fromCharCode(t), 64 != s && (l += String.fromCharCode(n)), 64 != a && (l += String.fromCharCode(i));
         return l = Base64._utf8_decode(l)
     },
     _utf8_encode: function(e) {
