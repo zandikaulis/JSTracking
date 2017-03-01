@@ -786,6 +786,16 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "819aed52-3cc1-4747-a840-476a39487a2e": {
+            "name": "SOCIAL_RECOMMENDATIONS",
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "variant1"
+            }]
+        },
         "81ecf0db-9eec-44a2-97da-ce5d479a6414": {
             "name": "android_making_the_doughnuts",
             "groups": [{
