@@ -252,6 +252,9 @@ window.SiteOptions = {
             "name": "CVP-Feb-2017",
             "groups": [{
                 "weight": 90,
+                "value": "1.3.5"
+            }, {
+                "weight": 2,
                 "value": "1.4.0"
             }, {
                 "weight": 2,
