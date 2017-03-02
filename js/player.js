@@ -8647,7 +8647,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.02-000444+a2c1b58eacc87c85838649acfed84600f5bcf888",
+                    app_version: "2017.03.02-230355+cf34f362b2f0f6a9be816b2bc08d8f561ee28476",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -13841,10 +13841,12 @@
         }
 
         function i() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+                t = e || v.localStore.get(_, f.DEFAULT_CAPTION.enabled);
             return {
                 type: y,
                 captions: {
-                    enabled: v.localStore.get(_, f.DEFAULT_CAPTION.enabled),
+                    enabled: t,
                     preset: v.localStore.get(g, f.DEFAULT_CAPTION.preset),
                     style: v.localStore.get(m, f.DEFAULT_CAPTION.style)
                 }
@@ -13930,9 +13932,13 @@
         }
 
         function i() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u,
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
                 t = arguments[1];
             switch (t.type) {
+                case u.ACTION_SET_MUTED:
+                    return (0, o["default"])({}, e, {
+                        enabled: t.muted
+                    });
                 case l.ACTION_INITIALIZE_CAPTIONS_SETTINGS:
                 case l.ACTION_SET_CAPTIONS_PRESET:
                 case l.ACTION_TOGGLE_CAPTIONS:
@@ -13953,7 +13959,8 @@
             o = r(a),
             s = n(308),
             l = n(304),
-            u = t.DEFAULT_CAPTION = {
+            u = n(277),
+            c = t.DEFAULT_CAPTION = {
                 enabled: !1,
                 available: !1,
                 preset: "white-on-black",
@@ -14330,16 +14337,16 @@
             k = (t.IMAManager = function() {
                 function e(t, n, r) {
                     var i = this;
-                    a(this, e), this._videoContainer = t, this._backend = n, this._stateStore = r, this._paused = !1, this._eventEmitter = new l["default"], this._currentAdsManager = A;
+                    a(this, e), this._videoContainer = t, this._backend = n, this._stateStore = r, this._paused = !1, this._eventEmitter = new l["default"],
+                        this._currentAdsManager = A;
                     var o = this._stateStore.getState(),
                         s = o.window,
                         u = s.google;
-                    u && (u.ima.settings.setVpaidMode(u.ima.ImaSdkSettings.VpaidMode.INSECURE),
-                        this._adContainer = b.clone().appendTo(this._videoContainer).get(0), this._adDisplayContainer = new u.ima.AdDisplayContainer(this._adContainer, $(this._videoContainer).find("video, object").get(0)), this._adDisplayContainer.initialize(), this._moat = new y.MoatAnalytics(this._adContainer, this._stateStore), this._adsLoader = new u.ima.AdsLoader(this._adDisplayContainer), this._adsLoader.addEventListener(u.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED, function(e) {
-                            return i._onAdsManagerLoaded(e)
-                        }), this._adsLoader.addEventListener(u.ima.AdErrorEvent.Type.AD_ERROR, function(e) {
-                            return i._onAdError(e)
-                        }))
+                    u && (u.ima.settings.setVpaidMode(u.ima.ImaSdkSettings.VpaidMode.INSECURE), this._adContainer = b.clone().appendTo(this._videoContainer).get(0), this._adDisplayContainer = new u.ima.AdDisplayContainer(this._adContainer, $(this._videoContainer).find("video, object").get(0)), this._adDisplayContainer.initialize(), this._moat = new y.MoatAnalytics(this._adContainer, this._stateStore), this._adsLoader = new u.ima.AdsLoader(this._adDisplayContainer), this._adsLoader.addEventListener(u.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED, function(e) {
+                        return i._onAdsManagerLoaded(e)
+                    }), this._adsLoader.addEventListener(u.ima.AdErrorEvent.Type.AD_ERROR, function(e) {
+                        return i._onAdError(e)
+                    }))
                 }
                 return o(e, [{
                     key: "destroy",
@@ -15818,7 +15825,8 @@
             var t = (0, h.toString)((0, c["default"])(e, "width", "height")),
                 n = _ + "/?" + t,
                 r = document.createElement("iframe");
-            return r.setAttribute("src", n), e.allowfullscreen !== !1 && r.setAttribute("allowfullscreen", ""), e.width && r.setAttribute("width", e.width), e.height && r.setAttribute("height", e.height), r.setAttribute("frameBorder", "0"), r.setAttribute("scrolling", "no"), r
+            return r.setAttribute("src", n), e.allowfullscreen !== !1 && r.setAttribute("allowfullscreen", ""), e.width && r.setAttribute("width", e.width), e.height && r.setAttribute("height", e.height),
+                r.setAttribute("frameBorder", "0"), r.setAttribute("scrolling", "no"), r
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -16136,19 +16144,21 @@
                     }, {
                         showInfo: !0
                     });
-                $(t).addClass("player"), $(t).append(n(597)), a.dispatch((0, L.initializeCaptionsSettings)()), a.dispatch((0, M.initializePlaybackSettings)()), a.dispatch((0, R.initializeSettings)()), K["default"].render(q["default"].createElement(k.Seekbar, {
+                $(t).addClass("player"), $(t).append(n(597));
+                var A = a.getState().playback.muted;
+                a.dispatch((0, L.initializeCaptionsSettings)(A)), a.dispatch((0, M.initializePlaybackSettings)()), a.dispatch((0, R.initializeSettings)()), K["default"].render(q["default"].createElement(k.Seekbar, {
                     store: a,
                     seek: e.setCurrentTime.bind(e)
                 }), document.getElementById("js-player-seek")), K["default"].render(q["default"].createElement(w.MutedSegmentsAlert, {
                     store: a
                 }), document.getElementById("js-player-alert-container")), l(a), G = new f.PlayerUIState(t, a), Y = new v.PlayerUIInfo(e, t, a, T), W = new _.PlayerUIStats(t, a), z = new g.PlayerUIUpnext(e, t, a), oe = new m.PlayerUIRecommendations(t, a), se = new I.PlayerUIError(t, a), Q = new y.PlayerUILeaveDialog(e, t, r, a, T), X = new S.PlayerUILang(t, a), J = new b.PlayerUISubscribeOverlay(t, a), Z = new E.PlayerUIResume(e, i, a, T), te = new N.AgeRestrictionOverlay(t, e, a), ne = new C.PlayerUIControlsDisplay(e, t, a), re = new h.PlayerUIControls(e, t, a, ne, T), ae = new P.PlayerUISettings(e, t, a, r, ne, T), le = new U.AdOverlay(t, a);
-                var A = a.getState(),
-                    O = A.experiments;
-                O.get(V.PERPETUA).then(function(e) {
+                var O = a.getState(),
+                    D = O.experiments;
+                D.get(V.PERPETUA).then(function(e) {
                     (0, u["default"])(V.ENABLE_PERPETUA_GROUP, e) && (ue = new B.PlaylistOverlay(t, a))
                 });
-                var D = new j.ClipGenerator(t, i, a);
-                ie = new x.PlayerUIClipsEnabler(t, a, c.localStore, D), d(T), $(t).attr("data-initializing", !0), e.addEventListener(H.PLAYER_INIT, function() {
+                var ee = new j.ClipGenerator(t, i, a);
+                ie = new x.PlayerUIClipsEnabler(t, a, c.localStore, ee), d(T), $(t).attr("data-initializing", !0), e.addEventListener(H.PLAYER_INIT, function() {
                     $(t).attr("data-initializing", !1)
                 })
             }
@@ -18382,7 +18392,7 @@
                 }
                 if ("value" in r) return r.value;
                 var a = r.get;
-                if (void 0 !== a) return a.call(n);
+                if (void 0 !== a) return a.call(n)
             },
             d = n(79),
             p = i(d),
@@ -30659,7 +30669,7 @@
                     var e = this._stateStore.getState(),
                         t = e.screen,
                         n = e.playback;
-                    !n.transitionScheme !== v.TRANSITION_TYPE_PLAYLIST && ((0, c["default"])([h.ADVERTISEMENT_SCREEN, h.STITCHED_ADVERTISEMENT_SCREEN], t[0]) ? this._hideAllElements() : this._showElements())
+                    n.transitionScheme === v.TRANSITION_TYPE_PLAYLIST && ((0, c["default"])([h.ADVERTISEMENT_SCREEN, h.STITCHED_ADVERTISEMENT_SCREEN], t[0]) ? this._hideAllElements() : this._showElements())
                 }
             }, {
                 key: "_hideAllElements",
