@@ -143,13 +143,13 @@ window.SiteOptions = {
         "039bcc41-baa9-4351-8a76-3bcece6aec44": {
             "name": "Transcode_Quality_Experiment_4",
             "groups": [{
-                "weight": 100,
-                "value": "regular"
-            }, {
-                "weight": 0,
+                "weight": 3,
                 "value": "plus"
             }, {
-                "weight": 0,
+                "weight": 94,
+                "value": "regular"
+            }, {
+                "weight": 3,
                 "value": "nonplus"
             }]
         },
