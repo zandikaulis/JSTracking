@@ -16469,7 +16469,8 @@ googletag.cmd = googletag.cmd || [],
                 AWS_ROUNDTRIP_LATENCY_TEST_OPT_IN: "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef",
                 AWS_ROUNDTRIP_LATENCY_TEST_ENDPOINT: "5daee224-4c99-499f-b6e0-e308a5fa54f1",
                 LANGUAGE_DIRECTORY_ROWCOUNT_V2: "8d2e5bd8-c305-455f-b7ff-ca6fc2ea8710",
-                LOL_METADATA_EXPERIMENT: "479d9473-bf6e-4d74-8f9b-dd85d6f98921"
+                LOL_METADATA_EXPERIMENT: "479d9473-bf6e-4d74-8f9b-dd85d6f98921",
+                SOCIAL_RECOMMENDATIONS: "819aed52-3cc1-4747-a840-476a39487a2e"
             },
             r = {
                 "99494f77-1c7c-46c5-9b9c-a117db47d3c5": "control",
@@ -16519,7 +16520,8 @@ googletag.cmd = googletag.cmd || [],
                 "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef": "false",
                 "5daee224-4c99-499f-b6e0-e308a5fa54f1": "control",
                 "8d2e5bd8-c305-455f-b7ff-ca6fc2ea8710": "2",
-                "479d9473-bf6e-4d74-8f9b-dd85d6f98921": "control"
+                "479d9473-bf6e-4d74-8f9b-dd85d6f98921": "control",
+                "819aed52-3cc1-4747-a840-476a39487a2e": "control"
             },
             o = "experiment_overrides",
             s = {},
@@ -16537,7 +16539,8 @@ googletag.cmd = googletag.cmd || [],
                 CLIPS_FEEL_IT_COMING: "variant1",
                 CLIPS_HEAR_ME_NOW: "variant1",
                 SNAIL: "early",
-                PERPETUA: "early"
+                PERPETUA: "early",
+                SOCIAL_RECOMMENDATIONS: "variant1"
             };
         _.each(Object.keys(a), function(t) {
             s[i[t]] = e.user().then(function(e) {
@@ -16709,8 +16712,8 @@ googletag.cmd = googletag.cmd || [],
     function() {
         try {
             var e = window.chrome || {};
-            e.cast = e.cast || {}, e.cast.media = e.cast.media || {}, e.cast.ApiBootstrap_ = function() {}, e.cast.ApiBootstrap_.EXTENSION_IDS = ["boadgeojelhgndaghljhdicfkmllpafd", "dliochdbjfkdbacpmhlcpmleaejidimm", "hfaagokkkhdbgiakmmlclaapfelnkoah", "fmfcbgogabcbclcofgocippekhfcmgfj", "enhhojjnijigcajfphajepfemndkmdlo"],
-                e.cast.ApiBootstrap_.findInstalledExtension_ = function(t) {
+            e.cast = e.cast || {}, e.cast.media = e.cast.media || {}, e.cast.ApiBootstrap_ = function() {},
+                e.cast.ApiBootstrap_.EXTENSION_IDS = ["boadgeojelhgndaghljhdicfkmllpafd", "dliochdbjfkdbacpmhlcpmleaejidimm", "hfaagokkkhdbgiakmmlclaapfelnkoah", "fmfcbgogabcbclcofgocippekhfcmgfj", "enhhojjnijigcajfphajepfemndkmdlo"], e.cast.ApiBootstrap_.findInstalledExtension_ = function(t) {
                     e.cast.ApiBootstrap_.findInstalledExtensionHelper_(0, t)
                 }, e.cast.ApiBootstrap_.findInstalledExtensionHelper_ = function(t, n) {
                     t == e.cast.ApiBootstrap_.EXTENSION_IDS.length ? n(null) : e.cast.ApiBootstrap_.isExtensionInstalled_(e.cast.ApiBootstrap_.EXTENSION_IDS[t], function(i) {
@@ -17755,8 +17758,7 @@ googletag.cmd = googletag.cmd || [],
             });
             var n = Number.POSITIVE_INFINITY,
                 i = parseInt(e.storage.get("requestUserEmail"), 10);
-            isNaN(i) || (n = +new Date - i),
-                n > 1e3 * this.config.forgetDuration && setTimeout(e.emailNotifier.requestUserEmail, 1e3 * this.config.delay)
+            isNaN(i) || (n = +new Date - i), n > 1e3 * this.config.forgetDuration && setTimeout(e.emailNotifier.requestUserEmail, 1e3 * this.config.delay)
         }, n.requestUserEmail = function() {
             var t = {
                 timeout: 2e4,
