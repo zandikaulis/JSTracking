@@ -822,6 +822,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "88ad36bd-f5ba-4c8c-8d06-30e486cd5d07": {
+            "name": "clips_scared_to_be_lonely",
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "8ace0f50-8afd-424a-a086-3e61b3e66da0": {
             "name": "MESSAGE_HISTORY",
             "groups": [{
