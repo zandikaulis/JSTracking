@@ -1035,21 +1035,22 @@
             U = t.REBROADCAST_TYPE = "rebroadcast",
             B = (t.VIDEO_PLAY_LOAD_START = "video_play_load_start", t.VIDEO_PLAY_OAUTH = "video_play_oauth", t.VIDEO_PLAY_NAUTH = "video_play_nauth", t.VIDEO_PLAY_MASTER_MANIFEST = "video_play_master_manifest", t.VIDEO_PLAY_VARIANT_MANIFEST = "video_play_variant_manifest", t.SITE_MINIPLAYER_ACTION = "site_mini_player_action", "video_init"),
             V = "video-play",
-            F = "minute-watched",
-            H = "buffer-empty",
-            G = "buffer-refill",
-            q = "vod_seek",
-            Y = "player_caption_preset",
-            K = "theatre mode",
-            $ = "fullscreen",
-            W = "popout",
-            z = "mini",
-            Q = 500;
+            F = "video_end",
+            H = "minute-watched",
+            G = "buffer-empty",
+            q = "buffer-refill",
+            Y = "vod_seek",
+            K = "player_caption_preset",
+            $ = "theatre mode",
+            W = "fullscreen",
+            z = "popout",
+            Q = "mini",
+            X = 500;
         t.Analytics = function() {
             function e(t, n, r, i, o) {
                 a(this, e), this.player = t, this.tracker = n, this.state = r, this.stateStore = i, this.options = o, this.hasPlayed = !1, this.bufferEmptyStartTime = null, this.bufferEmptyCount = 0, this.lastNetworkProfile = -(1 / 0), this.lastSeekTime = null, this.timeStampBeforeSeek = 0, this.isSeekInProgress = !1, this.trackNetworkProfile = this.stateStore.getState().experiments.get(A.NETWORK_PROFILE_COLLECTION), this.countessTracker = new y.CountessTracker({
                     host: T.countessHost
-                }), this.comscore = new E.ComscoreAnalytics(this, this.player, this.stateStore), this.latencyTracker = new b.LatencyTracker(this, .001, this.player, this.stateStore), this.valveClient = new w.ValveClient, this.initProperties(), this.initEvents(), this.unsubscribes = [], this.unsubscribes.push(this._subscribeCaptions(this.stateStore)), this.unsubscribes.push((0, O.subscribe)(this.stateStore, ["quality.current", "quality.selected"], this.onQualityChange.bind(this))), this.unsubscribes.push((0, O.subscribe)(this.stateStore, ["ui.isMini"], this.onMiniChange.bind(this)))
+                }), this.comscore = new E.ComscoreAnalytics(this, this.player, this.stateStore), this.latencyTracker = new b.LatencyTracker(this, .001, this.player, this.stateStore), this.valveClient = new w.ValveClient, this.initProperties(), this.initEvents(), this.unsubscribes = [], this.unsubscribes.push(this._subscribeCaptions(this.stateStore)), this.unsubscribes.push((0, O.subscribe)(this.stateStore, ["quality.current", "quality.selected"], this.onQualityChange.bind(this))), this.unsubscribes.push((0, O.subscribe)(this.stateStore, ["ui.isMini"], this.onMiniChange.bind(this))), this.unsubscribes.push((0, O.subscribe)(this.stateStore, ["playback.ended"], this.onPlaybackEnded.bind(this)))
             }
             return l(e, [{
                 key: "_subscribeCaptions",
@@ -1058,7 +1059,7 @@
                     return (0, O.subscribe)(e, ["captions"], function(e, n) {
                         var r = e.captions,
                             i = n.captions;
-                        r.preset !== i.preset && t.trackEvent(Y, {
+                        r.preset !== i.preset && t.trackEvent(K, {
                             captions_preset: r.preset
                         })
                     })
@@ -1167,7 +1168,7 @@
                         p = void 0 === d ? "" : d,
                         h = c.tt_content,
                         v = void 0 === h ? "" : h;
-                    this.trackEvent(F, (0, f["default"])(l, {
+                    this.trackEvent(H, (0, f["default"])(l, {
                         seconds_offset: this.minutesWatchedTimer.initialDelay / 1e3,
                         minutes_logged: this.minutesWatchedTimer.totalMinutes,
                         captions_enabled: r.enabled,
@@ -1267,7 +1268,7 @@
                 value: function() {
                     var e = this.stateStore.getState(),
                         t = e.communities;
-                    this.player.getSeeking() || (this.bufferEmptyStartTime = (new Date).getTime(), this.bufferEmptyCount++, this.trackEvent(H, {
+                    this.player.getSeeking() || (this.bufferEmptyStartTime = (new Date).getTime(), this.bufferEmptyCount++, this.trackEvent(G, {
                         buffer_empty_count: this.bufferEmptyCount,
                         community_id: t.data._id,
                         community_name: t.data.name
@@ -1283,7 +1284,7 @@
                         i = t.stream;
                     if (null !== this.bufferEmptyStartTime) {
                         var a = (new Date).getTime();
-                        this.trackEvent(G, {
+                        this.trackEvent(q, {
                             buffering_time: (a - this.bufferEmptyStartTime) / 1e3,
                             community_id: r.data._id,
                             community_name: r.data.name
@@ -1300,7 +1301,7 @@
             }, {
                 key: "onCanPlay",
                 value: function() {
-                    this.isSeekInProgress && (this.isSeekInProgress = !1, this.trackEvent(q, {
+                    this.isSeekInProgress && (this.isSeekInProgress = !1, this.trackEvent(Y, {
                         timestamp_departed: this.timeStampBeforeSeek,
                         timestamp_target: this.player.getCurrentTime(),
                         time_spent_seeking: (Date.now() - this.lastSeekTime) / 1e3
@@ -1316,13 +1317,20 @@
                 value: function() {
                     if (!this.isSeekInProgress) {
                         var e = this.player.getCurrentTime();
-                        e - this.timeStampBeforeSeek < Q && this.timeStampBeforeSeek < e && (this.timeStampBeforeSeek = e)
+                        e - this.timeStampBeforeSeek < X && this.timeStampBeforeSeek < e && (this.timeStampBeforeSeek = e)
                     }
                 }
             }, {
                 key: "onPause",
                 value: function() {
                     this.minutesWatchedTimer.reset()
+                }
+            }, {
+                key: "onPlaybackEnded",
+                value: function() {
+                    var e = this.stateStore.getState(),
+                        t = e.playback;
+                    t.ended && this.trackEvent(F, {})
                 }
             }, {
                 key: "onEnded",
@@ -1377,7 +1385,7 @@
                     var e = this.stateStore.getState(),
                         t = e.ui,
                         n = e.screenMode;
-                    return n.isFullScreen ? $ : this.options.player === I.PLAYER_POPOUT ? W : this.player.getTheatre() ? K : t.isMini ? z : ""
+                    return n.isFullScreen ? W : this.options.player === I.PLAYER_POPOUT ? z : this.player.getTheatre() ? $ : t.isMini ? Q : ""
                 }
             }, {
                 key: "destroy",
@@ -1499,7 +1507,7 @@
                     f = e[p],
                     h = d[1];
                 if (c && d[2]) {
-                    if (void 0 === f && !(p in e)) return !1
+                    if (void 0 === f && !(p in e)) return !1;
                 } else {
                     var v = new i;
                     if (r) var _ = r(f, h, p, e, t, v);
@@ -8647,7 +8655,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.02-230355+cf34f362b2f0f6a9be816b2bc08d8f561ee28476",
+                    app_version: "2017.03.03-160303+79082217490489ec3cb41d279f4969194c5362ed",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
