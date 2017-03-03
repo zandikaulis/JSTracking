@@ -1016,6 +1016,16 @@ window.SiteOptions = {
                 "value": "variant3"
             }]
         },
+        "a9f7f84a-76fd-44f0-80b1-9421e714a1b7": {
+            "name": "ios_clips_paris",
+            "groups": [{
+                "weight": 10,
+                "value": "control"
+            }, {
+                "weight": 90,
+                "value": "variant1"
+            }]
+        },
         "aaac75ea-c969-4826-b32d-ceefac620a79": {
             "name": "Recommended Channels",
             "groups": [{
