@@ -17754,13 +17754,15 @@ googletag.cmd = googletag.cmd || [],
     function(e, t) {
         var n = {};
         n.init = function(t) {
-            this.config = e.defaults(t, {
-                forgetDuration: t.forgetDuration,
-                delay: t.delay
-            });
-            var n = Number.POSITIVE_INFINITY,
-                i = parseInt(e.storage.get("requestUserEmail"), 10);
-            isNaN(i) || (n = +new Date - i), n > 1e3 * this.config.forgetDuration && setTimeout(e.emailNotifier.requestUserEmail, 1e3 * this.config.delay)
+            if (!window.skipEmailNotifier) {
+                this.config = e.defaults(t, {
+                    forgetDuration: t.forgetDuration,
+                    delay: t.delay
+                });
+                var n = Number.POSITIVE_INFINITY,
+                    i = parseInt(e.storage.get("requestUserEmail"), 10);
+                isNaN(i) || (n = +new Date - i), n > 1e3 * this.config.forgetDuration && setTimeout(e.emailNotifier.requestUserEmail, 1e3 * this.config.delay)
+            }
         }, n.requestUserEmail = function() {
             var t = {
                 timeout: 2e4,
