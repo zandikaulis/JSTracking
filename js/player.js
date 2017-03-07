@@ -8653,7 +8653,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.06-211619+ec6fda5cdd097820a4e783b667636e9c9c1bc548",
+                    app_version: "2017.03.07-000110+d72f24f5501dabf436bb35c082f985d3c76eac1a",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -16170,8 +16170,9 @@
 
             function B(e) {
                 var t = [],
-                    n = c.localStore.get(M.KEY_SEEN_AUTO_QUALITY_NOTIFICATION, !1);
-                n || (t = [w.ABSNotification]), q["default"].render(H["default"].createElement(k.NotificationPopUpsWrapper, {
+                    n = c.localStore.get(M.KEY_SEEN_AUTO_QUALITY_NOTIFICATION, !1),
+                    r = "mobile_web" === e.getState().env.platform;
+                n || r || (t = [w.ABSNotification]), q["default"].render(H["default"].createElement(k.NotificationPopUpsWrapper, {
                     store: e,
                     notifications: t
                 }), document.getElementById("js-notification-popup-container"))
@@ -17193,7 +17194,8 @@
                             l = ("0" + Math.floor(e.length % 3600 / 60)).slice(-2),
                             u = ("0" + Math.floor(e.length % 60)).slice(-2),
                             c = s + ":" + l + ":" + u;
-                        return r.find(".js-recommended-stream__length").text(c), r
+                        return r.find(".js-recommended-stream__length").text(c),
+                            r
                     })), this.calculateNumVODsVisible())
                 }
             }, {

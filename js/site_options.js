@@ -255,16 +255,16 @@ window.SiteOptions = {
                 "value": "1.3.5"
             }, {
                 "weight": 2,
-                "value": "1.4.0"
+                "value": "1.5.0"
             }, {
                 "weight": 2,
-                "value": "1.4.0+speed"
+                "value": "1.5.0+gops"
             }, {
                 "weight": 5,
-                "value": "1.4.1"
+                "value": "1.3.5"
             }, {
                 "weight": 5,
-                "value": "1.4.1+vodbf3"
+                "value": "1.3.5"
             }, {
                 "weight": 2,
                 "value": "1.3.5+abs0"
