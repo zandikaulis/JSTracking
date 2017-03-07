@@ -693,6 +693,16 @@ window.SiteOptions = {
                 "value": "live"
             }]
         },
+        "5d03cd48-d664-4bd9-95de-c1ca5fb9e77b": {
+            "name": "PERPETUA_CRSL",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "experiment"
+            }]
+        },
         "5daee224-4c99-499f-b6e0-e308a5fa54f1": {
             "name": "aws_roundtrip_latency_test_endpoint",
             "groups": [{
