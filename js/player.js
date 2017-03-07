@@ -1198,7 +1198,8 @@
                                     download_duration: e.downloadDuration,
                                     curr_buffer_length: e.currBufferLength,
                                     reason_code: e.reasonCode,
-                                    curr_quality: e.currQuality
+                                    curr_quality: e.currQuality,
+                                    rendition: e.rendition
                                 }
                             }
                         }))
@@ -9276,7 +9277,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.07-194325+8ceded8bfd81cd1091de6a7cf8ee5aa804eea39f",
+                    app_version: "2017.03.07-231014+702cd770ca29421dd630859c5047c18286c138fd",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
