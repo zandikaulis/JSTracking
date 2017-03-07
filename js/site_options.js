@@ -395,22 +395,6 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
-        "2f8210be-a6c6-43b1-9f6a-4b7cc7ef93c0": {
-            "name": "coview forced variety",
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "channel"
-            }, {
-                "weight": 0,
-                "value": "game"
-            }, {
-                "weight": 100,
-                "value": "max_two_channels"
-            }]
-        },
         "33a4ec99-5100-4831-b04a-f6a725c334f5": {
             "name": "android_recently_watched",
             "groups": [{
@@ -498,16 +482,6 @@ window.SiteOptions = {
             }, {
                 "weight": 25,
                 "value": "control"
-            }]
-        },
-        "403707e6-abb9-401c-a2ca-dd643293dbdd": {
-            "name": "VOD_COVIEWS_SHUFFLE",
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "shuffle"
             }]
         },
         "428d3b07-cc7a-424f-aad0-971f5415879a": {
@@ -1068,19 +1042,6 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
-        "ac39b897-d41d-4255-90b6-3a59027e12e0": {
-            "name": "vods_game_info",
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 100,
-                "value": "boxart_unwatched"
-            }, {
-                "weight": 0,
-                "value": "text_no_desc"
-            }]
-        },
         "ad39c35b-c6af-4687-b791-9ab408f825ef": {
             "name": "VOD Thumbnail Previews Rollout",
             "groups": [{
@@ -1185,25 +1146,6 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "variant1"
-            }]
-        },
-        "c48ae3e6-1356-4ccc-8fbe-12c6909f9e98": {
-            "name": "coviews_vod_recommendation",
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "following"
-            }, {
-                "weight": 0,
-                "value": "videos"
-            }, {
-                "weight": 100,
-                "value": "both"
-            }, {
-                "weight": 0,
-                "value": "following_above_host"
             }]
         },
         "c51b6c01-3155-4314-bd33-a63870349c1f": {
