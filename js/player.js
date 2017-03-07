@@ -4923,7 +4923,7 @@
         function a(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "twitch.web",
                 n = {
-                    iu: "/" + c.imaNetworkID + "/" + t + "/client/desktop/live/" + e.channelId,
+                    iu: "/" + d.imaNetworkID + "/" + t + "/client/desktop/live/" + e.channelId,
                     ius_szs: "300x250",
                     sz: "640x480",
                     impl: "s",
@@ -4932,35 +4932,39 @@
                     output: "xml_vast3",
                     url: e.url,
                     correlator: Date.now(),
-                    cust_params: o(e),
+                    cust_params: s(e),
                     unviewed_position_start: "1"
                 },
-                r = (0, u["default"])(n, function(e, t, n) {
+                r = (0, c["default"])(n, function(e, t, n) {
                     return e.push(n + "=" + t), e
                 }, []).join("&");
-            return e.contentType === f.CONTENT_MODE_VOD ? c.doubleClickVODUrl + "?" + r : c.doubleClickLiveUrl + "?" + r
+            return e.contentType === h.CONTENT_MODE_VOD ? d.doubleClickVODUrl + "?" + r : d.doubleClickLiveUrl + "?" + r
         }
 
         function o(e) {
+            return e.toLowerCase().replace(/[^a-z0-9]+/g, "_")
+        }
+
+        function s(e) {
             var t = {
                 partner: e.partner,
                 game: e.game,
                 chan: e.channel,
                 chanid: e.channelId,
-                embed: e.playerType === d.PLAYER_EMBED,
+                embed: e.playerType === p.PLAYER_EMBED,
                 platform: e.platform,
                 playerType: e.playerType,
                 mature: e.mature,
-                pos: g[e.adType],
+                pos: m[e.adType],
                 timebreak: e.duration,
                 adblock: void 0 === e.adblock ? "unknown" : e.adblock,
                 sdk: e.sdk
             };
-            if (null !== e.kruxId && (t.kuid = e.kruxId), e.contentType === f.CONTENT_MODE_VOD && (t.vod_id = e.vod.id, t.vod_name = e.vod.name, t.vod_type = e.vod.type), t.embed) {
-                var n = (0, p.parseUri)(e.referrer);
+            if (null !== e.kruxId && (t.kuid = e.kruxId), e.contentType === h.CONTENT_MODE_VOD && (t.vod_id = e.vod.id, t.vod_name = e.vod.name, t.vod_type = e.vod.type), t.embed) {
+                var n = (0, f.parseUri)(e.referrer);
                 t.embed_url = n.host.split(".").slice(-2).join(".")
             }
-            return (0, u["default"])(t, function(e, t, n) {
+            return (0, c["default"])(t, function(e, t, n) {
                 return e.push(n + "=" + String(t).toLowerCase()), e
             }, []).join("&").replace(/[=&, ]/g, function(e) {
                 switch (e) {
@@ -4978,18 +4982,18 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.POSTROLL = t.MIDROLL = t.PREROLL = void 0;
-        var s;
-        t.buildIMATags = a;
-        var l = n(205),
-            u = r(l),
-            c = n(159),
-            d = n(208),
-            p = n(167),
-            f = n(210),
-            h = t.PREROLL = "preroll",
-            v = t.MIDROLL = "midroll",
-            _ = t.POSTROLL = "postroll",
-            g = (s = {}, i(s, h, "1"), i(s, v, "2"), i(s, _, "3"), s)
+        var l;
+        t.buildIMATags = a, t.formatGame = o;
+        var u = n(205),
+            c = r(u),
+            d = n(159),
+            p = n(208),
+            f = n(167),
+            h = n(210),
+            v = t.PREROLL = "preroll",
+            _ = t.MIDROLL = "midroll",
+            g = t.POSTROLL = "postroll",
+            m = (l = {}, i(l, v, "1"), i(l, _, "2"), i(l, g, "3"), l)
     }, function(e, t, n) {
         var r, i;
         ! function(n, a) {
@@ -5807,7 +5811,7 @@
                                     U++
                                 },
                                 incrementClipLoadCounter: function() {
-                                    V.setLabel("ns_st_sc", String(V.getClipLoadCounter() + 1));
+                                    V.setLabel("ns_st_sc", String(V.getClipLoadCounter() + 1))
                                 },
                                 incrementAssetPlaybackCounter: function() {
                                     B++
@@ -6448,7 +6452,8 @@
                                 },
                                 onPlay: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
-                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().incrementPlayCounter(), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t), e.getPlaylist().getClip().addElapsedTime(t), e.getPlaylist().getClip().setElapsedTimestamp(t), e.getPlaylist().getClip().setPlaybackStartPosition(r), e.getHeartbeat().resume(), e.getKeepAlive().resume();
+                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().incrementPlayCounter(), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t), e.getPlaylist().getClip().addElapsedTime(t), e.getPlaylist().getClip().setElapsedTimestamp(t),
+                                        e.getPlaylist().getClip().setPlaybackStartPosition(r), e.getHeartbeat().resume(), e.getKeepAlive().resume();
                                     var i = e.getSSECore().createLabels(l.PLAY, n, t);
                                     e.getEventManager().newEvent(i)
                                 }
@@ -7590,27 +7595,28 @@
         var i = n(235),
             a = n(236),
             o = n(210),
-            s = 30;
-        t.AdsRequestContext = function l(e) {
+            s = n(230),
+            l = 30;
+        t.AdsRequestContext = function u(e) {
             var t = e.adType,
                 n = e.duration,
-                u = e.state,
-                c = e.lastAdDisplay,
-                d = e.userInfo,
-                p = e.channelInfo,
-                f = e.channelAPIInfo,
-                h = e.viewerInfo;
-            r(this, l);
-            var v = u.ads,
-                _ = u.adsManager,
-                g = u.playback,
-                m = u.window;
-            this.contentType = u.stream.contentType, this.login = d.login, this.adSessionId = (0, i.generate)(s), this.adblock = v.adblock, this.adType = t, this.channel = p.name, this.channelId = p._id, this.chansubToken = h.chansub, this.duration = n, this.game = p.game, this.hasAdFreeSubscription = Boolean(h.has_ad_free_subscription), this.isMobileLocation = u.env.isMobileLocation, this.kruxId = m.Krux ? m.Krux.user || "" : null, this.lastAdDisplay = c, this.mature = p.mature, this.partner = p.partner, this.platform = u.env.platform, this.playerType = u.env.playerType, this.postrollsEnabled = Boolean(f.postrolls), this.prerollsEnabled = Boolean(f.prerolls), this.referrer = m.document.referrer, this.requestTime = Date.now(), this.turboToken = d.turbo, this.url = (0, a.sanitizeQuery)(m.location.href), this.sdk = _.sdk, this.vod = {
+                c = e.state,
+                d = e.lastAdDisplay,
+                p = e.userInfo,
+                f = e.channelInfo,
+                h = e.channelAPIInfo,
+                v = e.viewerInfo;
+            r(this, u);
+            var _ = c.ads,
+                g = c.adsManager,
+                m = c.playback,
+                y = c.window;
+            this.contentType = c.stream.contentType, this.login = p.login, this.adSessionId = (0, i.generate)(l), this.adblock = _.adblock, this.adType = t, this.channel = f.name, this.channelId = f._id, this.chansubToken = v.chansub, this.duration = n, f.game && (this.game = (0, s.formatGame)(f.game)), this.hasAdFreeSubscription = Boolean(v.has_ad_free_subscription), this.isMobileLocation = c.env.isMobileLocation, this.kruxId = y.Krux ? y.Krux.user || "" : null, this.lastAdDisplay = d, this.mature = f.mature, this.partner = f.partner, this.platform = c.env.platform, this.playerType = c.env.playerType, this.postrollsEnabled = Boolean(h.postrolls), this.prerollsEnabled = Boolean(h.prerolls), this.referrer = y.document.referrer, this.requestTime = Date.now(), this.turboToken = p.turbo, this.url = (0, a.sanitizeQuery)(y.location.href), this.sdk = g.sdk, this.vod = {
                 id: "",
                 name: "",
                 type: "",
                 duration: -1
-            }, u.stream.contentType === o.CONTENT_MODE_VOD && (this.vod.id = u.stream.videoId, this.vod.name = u.streamMetadata.name, this.vod.type = u.streamMetadata.type, this.vod.duration = g.duration)
+            }, c.stream.contentType === o.CONTENT_MODE_VOD && (this.vod.id = c.stream.videoId, this.vod.name = c.streamMetadata.name, this.vod.type = c.streamMetadata.type, this.vod.duration = m.duration)
         }
     }, function(e, t) {
         "use strict";
@@ -9270,7 +9276,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.07-193455+52a8987c994973f85765415138fa402a0e7d8fb7",
+                    app_version: "2017.03.07-194325+8ceded8bfd81cd1091de6a7cf8ee5aa804eea39f",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
