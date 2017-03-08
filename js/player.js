@@ -9283,7 +9283,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.08-213252+6ec73d1b3081acc413e07dfad4fa69695b2a46e4",
+                    app_version: "2017.03.08-223743+fee53878615b8845fdf04681814fca04d95b15dd",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -14605,15 +14605,16 @@
                 }, {
                     key: "requestAds",
                     value: function(e) {
-                        this._sendAdSpadeEvent(f.AD_REQUEST, this._initializeAdSpadeEvent(e));
+                        var t = this._stateStore.getState().window.Date;
+                        this._adRequestTime = t.now(), this._sendAdSpadeEvent(f.AD_REQUEST, this._initializeAdSpadeEvent(e));
                         try {
-                            var t = this._stateStore.getState().window.google,
-                                n = this._videoContainer.offsetParent,
-                                r = new t.ima.AdsRequest;
-                            r.adTagUrl = (0, u.buildIMATags)(e), r.linearAdSlotWidth = n.offsetWidth, r.linearAdSlotHeight = n.offsetHeight, r.nonLinearAdSlotWidth = n.offsetWidth, r.nonLinearAdSlotHeight = n.offsetHeight, this._adsLoader.requestAds(r, e)
-                        } catch (i) {
-                            var a = this._initializeAdSpadeEvent(e);
-                            a.reason = i.message, this._sendAdSpadeEvent(f.AD_REQUEST_ERROR, a)
+                            var n = this._stateStore.getState().window.google,
+                                r = this._videoContainer.offsetParent,
+                                i = new n.ima.AdsRequest;
+                            i.adTagUrl = (0, u.buildIMATags)(e), i.linearAdSlotWidth = r.offsetWidth, i.linearAdSlotHeight = r.offsetHeight, i.nonLinearAdSlotWidth = r.offsetWidth, i.nonLinearAdSlotHeight = r.offsetHeight, this._adsLoader.requestAds(i, e)
+                        } catch (a) {
+                            var o = this._initializeAdSpadeEvent(e);
+                            o.reason = a.message, this._sendAdSpadeEvent(f.AD_REQUEST_ERROR, o)
                         }
                     }
                 }, {
@@ -14734,7 +14735,9 @@
                     value: function(e, t) {
                         var n = e.getAd(),
                             r = this._initializeAdSpadeEvent(t);
-                        r.ad_id = n.getAdId(), this._sendAdSpadeEvent(f.AD_IMPRESSION, r), this._eventEmitter.emit(g.AD_IMPRESSION, {
+                        r.ad_id = n.getAdId();
+                        var i = this._stateStore.getState().window.Date;
+                        r.request_to_impression_latency = i.now() - this._adRequestTime, this._sendAdSpadeEvent(f.AD_IMPRESSION, r), this._eventEmitter.emit(g.AD_IMPRESSION, {
                             time_break: t.duration
                         })
                     }
@@ -17407,8 +17410,7 @@
                         r = n.stream,
                         i = n.recommendations,
                         a = n.resumeWatch;
-                    return t[0] !== d.VOD_RECOMMENDATION_SCREEN ? (this.stopAutoplayCountdown(),
-                        void this.stopCheckingForResize()) : ((0, c.isWatched)(i.videos[0], a.times) ? this.showView(m) : r.contentType === p.CONTENT_MODE_VOD ? (this.showView(_), this.showAutoplay(), this.startAutoplayCountdown()) : this.showView(g), void this.startCheckingForResize())
+                    return t[0] !== d.VOD_RECOMMENDATION_SCREEN ? (this.stopAutoplayCountdown(), void this.stopCheckingForResize()) : ((0, c.isWatched)(i.videos[0], a.times) ? this.showView(m) : r.contentType === p.CONTENT_MODE_VOD ? (this.showView(_), this.showAutoplay(), this.startAutoplayCountdown()) : this.showView(g), void this.startCheckingForResize())
                 }
             }, {
                 key: "startCheckingForResize",
@@ -18575,11 +18577,11 @@
                 var r = Object.getOwnPropertyDescriptor(e, t);
                 if (void 0 === r) {
                     var i = Object.getPrototypeOf(e);
-                    return null === i ? void 0 : x(i, t, n)
+                    return null === i ? void 0 : x(i, t, n);
                 }
                 if ("value" in r) return r.value;
                 var a = r.get;
-                if (void 0 !== a) return a.call(n);
+                if (void 0 !== a) return a.call(n)
             },
             d = n(79),
             p = i(d),
