@@ -8939,9 +8939,9 @@
                     video: e
                 }, a),
                 s = i.pendingRequest.playlistId || i.id;
-            s && (0, T["default"])(o, {
+            s && (delete o.time, (0, T["default"])(o, {
                 collection: s
-            }), r.location.search = "?" + $.param(o)
+            })), r.location.search = "?" + $.param(o)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -9283,7 +9283,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.08-192213+e7fda0c0b7b99e8201f8921d5294b4945a9228ca",
+                    app_version: "2017.03.08-213252+6ec73d1b3081acc413e07dfad4fa69695b2a46e4",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
