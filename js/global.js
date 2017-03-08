@@ -16334,6 +16334,7 @@ googletag.cmd = googletag.cmd || [],
     function(e, t) {
         var n = {
                 channel: "/:1",
+                collection: "/collections/:1",
                 team: "/team/:1",
                 profile: "/:1/profile",
                 vod: "/:1/v/:2",
@@ -16709,7 +16710,7 @@ googletag.cmd = googletag.cmd || [],
                 return e.player.FlashPlayer.callbacks[n] = t, "Twitch.player.FlashPlayer.callbacks." + n
             }
         };
-        e.player.FlashPlayer = n
+        e.player.FlashPlayer = n;
     }(Twitch, jQuery),
     function() {
         try {
@@ -17735,7 +17736,7 @@ googletag.cmd = googletag.cmd || [],
                     var t = Math.floor(e % 60),
                         i = Math.floor(e % 3600 / 60),
                         r = Math.floor(e / 3600);
-                    return r ? r + ":" + n(i, 2) + ":" + n(t, 2) : i + ":" + n(t, 2);
+                    return r ? r + ":" + n(i, 2) + ":" + n(t, 2) : i + ":" + n(t, 2)
                 },
                 clockAsLength: function(e) {
                     var t = e.split(":"),
