@@ -16451,6 +16451,7 @@ googletag.cmd = googletag.cmd || [],
                 CHANNEL_LOGIN_CTA: "aece7525-dceb-49ba-af1b-242c1ae45831",
                 DISCOVER_SHOW_COVIEWS: "3e011e23-ef29-46a5-af4b-a86e15d8c9e6",
                 PERPETUA: "af8f152a-f618-416e-8b79-d6ac30479018",
+                PERPETUA_CRSL: "5d03cd48-d664-4bd9-95de-c1ca5fb9e77b",
                 EXTENSIONS: "264f75af-a787-4a40-8654-40d78b4d8b41",
                 INTL_I18N: "0670f0ea-3b5c-41a8-946d-114ef4a42540",
                 DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS: "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2",
@@ -16502,6 +16503,7 @@ googletag.cmd = googletag.cmd || [],
                 "aece7525-dceb-49ba-af1b-242c1ae45831": "yes",
                 "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": "no_show",
                 "af8f152a-f618-416e-8b79-d6ac30479018": "control",
+                "5d03cd48-d664-4bd9-95de-c1ca5fb9e77b": "control",
                 "264f75af-a787-4a40-8654-40d78b4d8b41": "no",
                 "0670f0ea-3b5c-41a8-946d-114ef4a42540": "control",
                 "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": "hide",
@@ -16712,34 +16714,33 @@ googletag.cmd = googletag.cmd || [],
     function() {
         try {
             var e = window.chrome || {};
-            e.cast = e.cast || {}, e.cast.media = e.cast.media || {}, e.cast.ApiBootstrap_ = function() {},
-                e.cast.ApiBootstrap_.EXTENSION_IDS = ["boadgeojelhgndaghljhdicfkmllpafd", "dliochdbjfkdbacpmhlcpmleaejidimm", "hfaagokkkhdbgiakmmlclaapfelnkoah", "fmfcbgogabcbclcofgocippekhfcmgfj", "enhhojjnijigcajfphajepfemndkmdlo"], e.cast.ApiBootstrap_.findInstalledExtension_ = function(t) {
-                    e.cast.ApiBootstrap_.findInstalledExtensionHelper_(0, t)
-                }, e.cast.ApiBootstrap_.findInstalledExtensionHelper_ = function(t, n) {
-                    t == e.cast.ApiBootstrap_.EXTENSION_IDS.length ? n(null) : e.cast.ApiBootstrap_.isExtensionInstalled_(e.cast.ApiBootstrap_.EXTENSION_IDS[t], function(i) {
-                        i ? n(e.cast.ApiBootstrap_.EXTENSION_IDS[t]) : e.cast.ApiBootstrap_.findInstalledExtensionHelper_(t + 1, n)
-                    })
-                }, e.cast.ApiBootstrap_.getCastSenderUrl_ = function(e) {
-                    return "chrome-extension://" + e + "/cast_sender.js"
-                }, e.cast.ApiBootstrap_.isExtensionInstalled_ = function(t, n) {
-                    var i = new XMLHttpRequest;
-                    i.onreadystatechange = function() {
-                        4 == i.readyState && 200 == i.status && n(!0)
-                    }, i.onerror = function() {
-                        n(!1)
-                    }, i.open("GET", e.cast.ApiBootstrap_.getCastSenderUrl_(t), !0), i.send()
-                }, e.cast.ApiBootstrap_.findInstalledExtension_(function(t) {
-                    if (t) {
-                        console.log("Found cast extension: " + t), e.cast.extensionId = t;
-                        var n = document.createElement("script");
-                        n.src = e.cast.ApiBootstrap_.getCastSenderUrl_(t), (document.head || document.documentElement).appendChild(n)
-                    } else {
-                        var i = "No cast extension found";
-                        console.log(i);
-                        var r = window.__onGCastApiAvailable;
-                        r && "function" == typeof r && r(!1, i)
-                    }
+            e.cast = e.cast || {}, e.cast.media = e.cast.media || {}, e.cast.ApiBootstrap_ = function() {}, e.cast.ApiBootstrap_.EXTENSION_IDS = ["boadgeojelhgndaghljhdicfkmllpafd", "dliochdbjfkdbacpmhlcpmleaejidimm", "hfaagokkkhdbgiakmmlclaapfelnkoah", "fmfcbgogabcbclcofgocippekhfcmgfj", "enhhojjnijigcajfphajepfemndkmdlo"], e.cast.ApiBootstrap_.findInstalledExtension_ = function(t) {
+                e.cast.ApiBootstrap_.findInstalledExtensionHelper_(0, t)
+            }, e.cast.ApiBootstrap_.findInstalledExtensionHelper_ = function(t, n) {
+                t == e.cast.ApiBootstrap_.EXTENSION_IDS.length ? n(null) : e.cast.ApiBootstrap_.isExtensionInstalled_(e.cast.ApiBootstrap_.EXTENSION_IDS[t], function(i) {
+                    i ? n(e.cast.ApiBootstrap_.EXTENSION_IDS[t]) : e.cast.ApiBootstrap_.findInstalledExtensionHelper_(t + 1, n)
                 })
+            }, e.cast.ApiBootstrap_.getCastSenderUrl_ = function(e) {
+                return "chrome-extension://" + e + "/cast_sender.js"
+            }, e.cast.ApiBootstrap_.isExtensionInstalled_ = function(t, n) {
+                var i = new XMLHttpRequest;
+                i.onreadystatechange = function() {
+                    4 == i.readyState && 200 == i.status && n(!0)
+                }, i.onerror = function() {
+                    n(!1)
+                }, i.open("GET", e.cast.ApiBootstrap_.getCastSenderUrl_(t), !0), i.send()
+            }, e.cast.ApiBootstrap_.findInstalledExtension_(function(t) {
+                if (t) {
+                    console.log("Found cast extension: " + t), e.cast.extensionId = t;
+                    var n = document.createElement("script");
+                    n.src = e.cast.ApiBootstrap_.getCastSenderUrl_(t), (document.head || document.documentElement).appendChild(n)
+                } else {
+                    var i = "No cast extension found";
+                    console.log(i);
+                    var r = window.__onGCastApiAvailable;
+                    r && "function" == typeof r && r(!1, i)
+                }
+            })
         } catch (e) {}
     }(),
     function(e, t) {
@@ -17734,7 +17735,7 @@ googletag.cmd = googletag.cmd || [],
                     var t = Math.floor(e % 60),
                         i = Math.floor(e % 3600 / 60),
                         r = Math.floor(e / 3600);
-                    return r ? r + ":" + n(i, 2) + ":" + n(t, 2) : i + ":" + n(t, 2)
+                    return r ? r + ":" + n(i, 2) + ":" + n(t, 2) : i + ":" + n(t, 2);
                 },
                 clockAsLength: function(e) {
                     var t = e.split(":"),
