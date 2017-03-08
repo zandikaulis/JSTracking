@@ -346,6 +346,16 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
+        "237bee24-0366-4712-9a80-dad0cefabdcc": {
+            "name": "featured_communities",
+            "groups": [{
+                "weight": 80,
+                "value": "experiment"
+            }, {
+                "weight": 20,
+                "value": "control"
+            }]
+        },
         "264f75af-a787-4a40-8654-40d78b4d8b41": {
             "name": "extensions",
             "groups": [{
