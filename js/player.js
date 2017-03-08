@@ -9283,7 +9283,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.08-191045+5591a1bf5fddffe23769cf14e5a0c3bc4643d410",
+                    app_version: "2017.03.08-192213+e7fda0c0b7b99e8201f8921d5294b4945a9228ca",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -36255,9 +36255,12 @@
                         r = t.videoId;
                     n && this._fetchPlaylistInfo(n).then(function(t) {
                         if (0 === t.items.length) return e._stateStore.dispatch((0, m.setPlaylistInfo)(t)), void e._stateStore.dispatch((0, b.pushScreen)(b.COLLECTION_EMPTY_SCREEN));
-                        var n = "v" + t.items[0].item_id,
-                            i = r && e._playlistHasVideo(t.items, r) ? r : n;
-                        e._stateStore.dispatch((0, y.selectVOD)(i)), e._stateStore.dispatch((0, m.setPlaylistInfo)(t))
+                        if (r && e._playlistHasVideo(t.items, r)) e._stateStore.dispatch((0, E.setStream)(E.TYPE_VIDEO, r));
+                        else {
+                            var n = "v" + t.items[0].item_id;
+                            e._stateStore.dispatch((0, y.selectVOD)(n))
+                        }
+                        e._stateStore.dispatch((0, m.setPlaylistInfo)(t))
                     })
                 }
             }, {
