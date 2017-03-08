@@ -8930,12 +8930,18 @@
         }
 
         function g(e, t) {
-            var n = (0, E.parse)(t().window.location.search.slice(1));
-            delete n.channel, delete n.video;
-            var r = (0, T["default"])({}, {
-                video: e
-            }, n);
-            t().window.location.search = "?" + $.param(r)
+            var n = t(),
+                r = n.window,
+                i = n.playlist,
+                a = (0, E.parse)(r.location.search.slice(1));
+            delete a.channel, delete a.video, delete a.collection;
+            var o = (0, T["default"])({}, {
+                    video: e
+                }, a),
+                s = i.pendingRequest.playlistId || i.id;
+            s && (0, T["default"])(o, {
+                collection: s
+            }), r.location.search = "?" + $.param(o)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -9277,7 +9283,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.08-000804+e103636fa3b2337c22ff5d00d1f08c1a4ef04d86",
+                    app_version: "2017.03.08-011452+36a615d3e56c3217d0e6d1b1ebfe68510f0bda41",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -16754,20 +16760,23 @@
             function W() {
                 var t = {};
                 t.volume = e.getVolume();
-                var n = e.getChannel(),
-                    r = e.getVideo();
-                if (n) t.channel = n;
+                var r = e.getChannel(),
+                    i = e.getVideo();
+                if (r) t.channel = r;
                 else {
-                    t.video = r;
-                    var i = e.getCurrentTime();
-                    t.time = m.toURLString(i)
+                    t.video = i;
+                    var a = n.getState(),
+                        o = a.playlist;
+                    o.id && (t.collection = o.id);
+                    var s = e.getCurrentTime();
+                    t.time = m.toURLString(s)
                 }
                 e.pause();
-                var a = h.popoutSize.width,
-                    o = h.popoutSize.height,
-                    s = h.playerHost + "/?" + _.toString(t),
-                    l = "width=" + a + ",height=" + o;
-                l += ",toolbar=no,menubar=no,scrollbars=no,location=no,status=no", window.open(s, "_blank", l)
+                var l = h.popoutSize.width,
+                    u = h.popoutSize.height,
+                    c = h.playerHost + "/?" + _.toString(t),
+                    d = "width=" + l + ",height=" + u;
+                d += ",toolbar=no,menubar=no,scrollbars=no,location=no,status=no", window.open(c, "_blank", d)
             }
 
             function z() {
@@ -17398,8 +17407,8 @@
                         r = n.stream,
                         i = n.recommendations,
                         a = n.resumeWatch;
-                    return t[0] !== d.VOD_RECOMMENDATION_SCREEN ? (this.stopAutoplayCountdown(), void this.stopCheckingForResize()) : ((0,
-                        c.isWatched)(i.videos[0], a.times) ? this.showView(m) : r.contentType === p.CONTENT_MODE_VOD ? (this.showView(_), this.showAutoplay(), this.startAutoplayCountdown()) : this.showView(g), void this.startCheckingForResize())
+                    return t[0] !== d.VOD_RECOMMENDATION_SCREEN ? (this.stopAutoplayCountdown(),
+                        void this.stopCheckingForResize()) : ((0, c.isWatched)(i.videos[0], a.times) ? this.showView(m) : r.contentType === p.CONTENT_MODE_VOD ? (this.showView(_), this.showAutoplay(), this.startAutoplayCountdown()) : this.showView(g), void this.startCheckingForResize())
                 }
             }, {
                 key: "startCheckingForResize",
@@ -18570,7 +18579,7 @@
                 }
                 if ("value" in r) return r.value;
                 var a = r.get;
-                if (void 0 !== a) return a.call(n)
+                if (void 0 !== a) return a.call(n);
             },
             d = n(79),
             p = i(d),
@@ -36193,7 +36202,8 @@
             g = r(_),
             m = n(258),
             y = n(254),
-            b = n(342);
+            b = n(342),
+            E = n(255);
         t.PlaylistManager = function() {
             function e(t) {
                 i(this, e), this._stateStore = t, this.unsubs = [], this.unsubs.push((0, v.subscribe)(this._stateStore, ["playerOptions.channel", "playerOptions.collection", "playerOptions.video"], this.onOptionsChange.bind(this))), this.unsubs.push((0, v.subscribe)(this._stateStore, ["playlist.pendingRequest"], this.onPendingRequestChange.bind(this))), this.unsubs.push((0, v.subscribe)(this._stateStore, ["playback.ended"], this._streamEnded.bind(this)))
@@ -36231,7 +36241,7 @@
                             if (n.video) e._playlistHasVideo(t.items, n.video) && e._stateStore.dispatch((0, m.setPlaylistInfo)(t));
                             else {
                                 var r = "v" + t.items[0].item_id;
-                                e._stateStore.dispatch((0, y.selectVOD)(r)), e._stateStore.dispatch((0, m.setPlaylistInfo)(t))
+                                e._stateStore.dispatch((0, E.setStream)(E.TYPE_VIDEO, r)), e._stateStore.dispatch((0, m.setPlaylistInfo)(t))
                             }
                         })
                     })
