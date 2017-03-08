@@ -9277,7 +9277,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.07-231014+702cd770ca29421dd630859c5047c18286c138fd",
+                    app_version: "2017.03.08-000804+e103636fa3b2337c22ff5d00d1f08c1a4ef04d86",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -16333,8 +16333,8 @@
                 }), document.getElementById("js-player-alert-container")), B(a), G = new d.PlayerUIState(t, a), Y = new f.PlayerUIInfo(e, t, a, l), K = new h.PlayerUIStats(t, a), W = new v.PlayerUIUpnext(e, t, a), ae = new _.PlayerUIRecommendations(t, a), oe = new A.PlayerUIError(t, a), z = new g.PlayerUILeaveDialog(e, t, r, a, l), Q = new b.PlayerUILang(t, a), X = new m.PlayerUISubscribeOverlay(t, a), J = new y.PlayerUIResume(e, i, a, l), ee = new O.AgeRestrictionOverlay(t, e, a), te = new T.PlayerUIControlsDisplay(e, t, a), ne = new p.PlayerUIControls(e, t, a, te, l), ie = new S.PlayerUISettings(e, t, a, r, te, l), se = new x.AdOverlay(t, a);
                 var k = a.getState(),
                     w = k.experiments;
-                w.get(U.PERPETUA).then(function(e) {
-                    (0, u["default"])(U.ENABLE_PERPETUA_GROUP, e) && (le = new j.PlaylistOverlay(t, a))
+                w.get(U.PERPETUA).then(function(n) {
+                    (0, u["default"])(U.ENABLE_PERPETUA_GROUP, n) && (le = new j.PlaylistOverlay(t, e, a))
                 });
                 var M = new D.ClipGenerator(t, i, a);
                 re = new R.PlayerUIClipsEnabler(t, a, c.localStore, M), F(l), $(t).attr("data-initializing", !0), e.addEventListener(V.PLAYER_INIT, function() {
@@ -30884,18 +30884,18 @@
             y = t.SIDEBAR_VIEW_ATTR = "view-sidebar",
             b = t.NO_COLLECTION_VIEW_ATTR = "none";
         t.PlaylistOverlay = function(e) {
-            function t(e, n) {
+            function t(e, n, a) {
                 r(this, t);
-                var a = i(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                a._stateStore = n, a.window = a._stateStore.getState().window, a.timeoutId = null, a.$root = $(e), a.$root.attr("data-collection-view", b), a.$sidebarItemTemplate = $(".js-collection-item", a.$root), a.$playlist = $(".js-collection-container", a.$root), a.$playlistNav = $(".js-collection-nav", a.$root), a.$playlistSidebar = $(".js-collection-sidebar", a.$root), a.$playlistOpenButton = $(".js-collection-collapsed__layout", a.$root), a.$playlistCloseButton = $(".js-icon-close-collection", a.$root), a.$playlistOpenButton.on("click", function() {
-                    return a.setSidebarVisible(!0)
-                }), a.$playlistCloseButton.on("click", function() {
-                    a.setSidebarVisible(!1), a.$playlistSidebar.addClass("collection-sidebar-close"), a.timeoutId = a.window.setTimeout(function() {
-                        a.$playlistSidebar.removeClass("collection-sidebar-close")
+                var o = i(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+                o._stateStore = a, o.player = n, o.window = o._stateStore.getState().window, o.timeoutId = null, o.$root = $(e), o.$root.attr("data-collection-view", b), o.$sidebarItemTemplate = $(".js-collection-item", o.$root), o.$playlist = $(".js-collection-container", o.$root), o.$playlistNav = $(".js-collection-nav", o.$root), o.$playlistSidebar = $(".js-collection-sidebar", o.$root), o.$playlistOpenButton = $(".js-collection-collapsed__layout", o.$root), o.$playlistCloseButton = $(".js-icon-close-collection", o.$root), o.$playlistOpenButton.on("click", function() {
+                    return o.setSidebarVisible(!0)
+                }), o.$playlistCloseButton.on("click", function() {
+                    o.setSidebarVisible(!1), o.$playlistSidebar.addClass("collection-sidebar-close"), o.timeoutId = o.window.setTimeout(function() {
+                        o.$playlistSidebar.removeClass("collection-sidebar-close")
                     }, _)
-                }), a.$playlistCollapsedTitle = $(".js-collection-collapsed-title", a.$root), a.$playlistCollapsedNumber = $(".js-collection-collapsed-number", a.$root), a.$collectionDivider = $(".js-collection-divider", a.$root), a.$playlistTitle = $(".js-collection-title", a.$root), a.$playlistAuthor = $(".js-collection-author", a.$root), a.$playlistItemsCount = $(".js-collection-items-count", a.$root), a.$playlistTimeLength = $(".js-collection-time-length", a.$root), a.$playlistItemContainer = $(".js-collection-item-container", a.$root), a.$playlistItemContainer.on("click", ".js-collection-item", a.handleItemSelect.bind(a)), a.$emptyCollectionOverlay = $(".js-empty-collection-overlay", a.$root);
-                var o = ["playlist.title", "playlist.owner", "playlist.totalDuration"];
-                return a.subscribe(a._stateStore, ["playerOptions.showInfo", "playlist.id"], a.onCollectionDetected.bind(a)), a.subscribe(a._stateStore, ["ui.isMini"], a.onMiniChange.bind(a)), a.subscribe(a._stateStore, ["playlist.currentView"], a.onViewChange.bind(a)), a.subscribe(a._stateStore, o.concat(["lang"]), a.onMetadataChange.bind(a)), a.subscribe(a._stateStore, ["playlist.items", "stream", "lang"], a.onItemsChange.bind(a)), a.subscribe(a._stateStore, ["screen"], a.onScreenChange.bind(a)), a
+                }), o.$playlistCollapsedTitle = $(".js-collection-collapsed-title", o.$root), o.$playlistCollapsedNumber = $(".js-collection-collapsed-number", o.$root), o.$collectionDivider = $(".js-collection-divider", o.$root), o.$playlistTitle = $(".js-collection-title", o.$root), o.$playlistAuthor = $(".js-collection-author", o.$root), o.$playlistItemsCount = $(".js-collection-items-count", o.$root), o.$playlistTimeLength = $(".js-collection-time-length", o.$root), o.$playlistItemContainer = $(".js-collection-item-container", o.$root), o.$playlistItemContainer.on("click", ".js-collection-item", o.handleItemSelect.bind(o)), o.$emptyCollectionOverlay = $(".js-empty-collection-overlay", o.$root);
+                var s = ["playlist.title", "playlist.owner", "playlist.totalDuration"];
+                return o.subscribe(o._stateStore, ["playerOptions.showInfo", "playlist.id"], o.onCollectionDetected.bind(o)), o.subscribe(o._stateStore, ["ui.isMini"], o.onMiniChange.bind(o)), o.subscribe(o._stateStore, ["playlist.currentView"], o.onViewChange.bind(o)), o.subscribe(o._stateStore, s.concat(["lang"]), o.onMetadataChange.bind(o)), o.subscribe(o._stateStore, ["playlist.items", "stream", "lang"], o.onItemsChange.bind(o)), o.subscribe(o._stateStore, ["screen"], o.onScreenChange.bind(o)), o
             }
             return a(t, e), o(t, [{
                 key: "handleItemSelect",
@@ -30934,7 +30934,7 @@
                             this._hideAllElements();
                             break;
                         case p.COLLECTION_EMPTY_SCREEN:
-                            this._hideAllElements(), this.$emptyCollectionOverlay.attr("data-active", !0);
+                            this._hideAllElements(), this.player.pause(), this.$emptyCollectionOverlay.attr("data-active", !0);
                             break;
                         default:
                             this.onViewChange(), this.$emptyCollectionOverlay.attr("data-active", !1)
