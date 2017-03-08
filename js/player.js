@@ -9283,7 +9283,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.08-012608+89508b3e814e265ed1d39ba539a75890dc6b99cf",
+                    app_version: "2017.03.08-191045+5591a1bf5fddffe23769cf14e5a0c3bc4643d410",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -29193,9 +29193,9 @@
                                 })
                             }),
                             u = null;
-                        return o && s && (u = this.getSeekbarPopupForMarker(s)), h["default"].createElement("div", {
+                        return o && s && (u = this.getSeekbarPopupForMarker(s)), h["default"].createElement("div", null, u, h["default"].createElement("div", {
                             className: "player-slider__marker-dots"
-                        }, l, u)
+                        }, l))
                     }
                 }, {
                     key: "handleMouseEnter",
