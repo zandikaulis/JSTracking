@@ -263,17 +263,11 @@ window.SiteOptions = {
                 "weight": 5,
                 "value": "1.3.5"
             }, {
-                "weight": 2,
-                "value": "1.3.5+abs0"
+                "weight": 4,
+                "value": "1.5.1+abs0"
             }, {
-                "weight": 2,
-                "value": "1.3.5+absagg"
-            }, {
-                "weight": 2,
-                "value": "1.3.5+absnom"
-            }, {
-                "weight": 2,
-                "value": "1.3.5+absnop"
+                "weight": 4,
+                "value": "1.5.1+abs1"
             }]
         },
         "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3": {
