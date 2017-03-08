@@ -661,10 +661,10 @@ window.SiteOptions = {
         "5d03cd48-d664-4bd9-95de-c1ca5fb9e77b": {
             "name": "PERPETUA_CRSL",
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "experiment"
             }]
         },
@@ -1066,13 +1066,13 @@ window.SiteOptions = {
         "af8f152a-f618-416e-8b79-d6ac30479018": {
             "name": "PERPETUA",
             "groups": [{
-                "weight": 10,
+                "weight": 20,
                 "value": "early"
             }, {
                 "weight": 0,
                 "value": "mid"
             }, {
-                "weight": 90,
+                "weight": 80,
                 "value": "control"
             }]
         },
