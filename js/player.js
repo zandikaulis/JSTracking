@@ -9279,7 +9279,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.09-222734+de83745c212b31952432ff8761437347edc87ec5",
+                    app_version: "2017.03.09-223711+e2beb07908e7527497e6c884a38693b99d2c0c1d",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -11573,18 +11573,18 @@
 
         function i(e) {
             return {
-                type: S,
+                type: T,
                 absAvailable: e
             }
         }
 
         function a(e, t) {
             var n = o(e, t);
-            return p("" !== n && t !== T ? s(e, n) : e)
+            return f("" !== n && t !== P ? s(e, n) : e)
         }
 
         function o(e, t) {
-            var n = (0, m["default"])(e, function(e) {
+            var n = (0, y["default"])(e, function(e) {
                 return e.group === t
             });
             return n ? n.name : ""
@@ -11592,7 +11592,7 @@
 
         function s(e, t) {
             return e.map(function(e) {
-                return e.group === T && (e.name = "Auto (" + t + ")"), e
+                return e.group === P && (e.name = "Auto (" + t + ")"), e
             })
         }
 
@@ -11601,15 +11601,15 @@
                 var n = t(),
                     r = n.quality;
                 e({
-                    type: y,
-                    quality: _.localStore.get("quality", r.selected),
-                    bitrate: _.localStore.get("quality-bitrate", r.bitrate)
+                    type: b,
+                    quality: g.localStore.get("quality", r.selected),
+                    bitrate: g.localStore.get("quality-bitrate", r.bitrate)
                 })
             }
         }
 
         function u(e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P;
+            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : C;
             return function(n, r) {
                 var i = r(),
                     a = i.analyticsTracker,
@@ -11617,13 +11617,13 @@
                     s = i.quality,
                     l = i.stream;
                 return l.restrictedBitrates.indexOf(e) !== -1 ? void n({
-                    type: v.ACTION_QUALITY_RESTRICTED_ERROR
+                    type: _.ACTION_QUALITY_RESTRICTED_ERROR
                 }) : (a.trackEvent("quality_change_request", {
                     prev_quality: s.current,
                     new_quality: e,
                     serving_id: o.serving_id
                 }), void n({
-                    type: y,
+                    type: b,
                     quality: e,
                     bitrate: t
                 }))
@@ -11632,64 +11632,71 @@
 
         function c(e) {
             return function() {
-                _.localStore.set("quality", e.group), _.localStore.set("quality-bitrate", e.bandwidth)
+                g.localStore.set("quality", e.group), g.localStore.set("quality-bitrate", e.bandwidth)
             }
         }
 
         function d(e) {
             return {
-                type: b,
+                type: E,
                 quality: e
             }
         }
 
-        function p(e) {
+        function p(e, t) {
+            return (0, y["default"])(t, function(t) {
+                return t.group + "2" === e || e + "2" === t.group
+            })
+        }
+
+        function f(e) {
             return function(t, n) {
                 var r = n(),
                     i = r.quality,
                     a = r.stream,
                     o = e.filter(function(e) {
-                        return !(0, h["default"])(a.restrictedBitrates, e.group)
+                        return !(0, v["default"])(a.restrictedBitrates, e.group)
                     });
                 if (o.length > 0 && !o.some(function(e) {
                         return e.group === i.selected
-                    }) && i.selected !== T) {
+                    }) && i.selected !== P) {
                     var s = o.sort(function(e, t) {
                             return t.bandwidth - e.bandwidth
                         }),
-                        l = (0, m["default"])(s, function(e) {
+                        l = p(i.selected, s),
+                        u = (0, y["default"])(s, function(e) {
                             return e.bandwidth <= i.bitrate
                         }),
-                        u = l || s[s.length - 1],
-                        c = u.group,
-                        d = u.bandwidth;
+                        c = l || u || s[s.length - 1],
+                        d = c.group,
+                        f = c.bandwidth;
                     t({
-                        type: y,
-                        quality: c,
-                        bitrate: d
+                        type: b,
+                        quality: d,
+                        bitrate: f
                     })
                 }
                 t({
-                    type: E,
+                    type: S,
                     qualities: e
                 })
             }
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.DEFAULT_STREAM_BITRATE_IN_BPS = t.DEFAULT_STREAM_FORMAT = t.QUALITY_AUTO_OBJECT = t.QUALITY_AUTO = t.KEY_SEEN_AUTO_QUALITY_NOTIFICATION = t.KEY_AUTO_QUALITY_FORCED = t.ACTION_SET_ABS_AVAILABILITY = t.ACTION_SET_QUALITIES = t.ACTION_SET_CURRENT_QUALITY = t.ACTION_SELECT_QUALITY = void 0, t.setABSAvailability = i, t.setABSQualities = a, t.getVariantName = o, t.createABSQualities = s, t.initializeQuality = l, t.selectQuality = u, t.setPreferredQuality = c, t.setCurrentQuality = d, t.setQualities = p;
-        var f = n(49),
-            h = r(f),
-            v = n(254),
-            _ = n(237),
-            g = n(81),
-            m = r(g),
-            y = t.ACTION_SELECT_QUALITY = "select quality",
-            b = t.ACTION_SET_CURRENT_QUALITY = "set current quality",
-            E = t.ACTION_SET_QUALITIES = "set qualities",
-            S = t.ACTION_SET_ABS_AVAILABILITY = "abs is availabile",
-            T = (t.KEY_AUTO_QUALITY_FORCED = "auto-quality-forced-v2", t.KEY_SEEN_AUTO_QUALITY_NOTIFICATION = "has-seen-abs-notification", t.QUALITY_AUTO = "auto"),
-            P = (t.QUALITY_AUTO_OBJECT = Object.freeze({
+        }), t.DEFAULT_STREAM_BITRATE_IN_BPS = t.DEFAULT_STREAM_FORMAT = t.QUALITY_AUTO_OBJECT = t.QUALITY_AUTO = t.KEY_SEEN_AUTO_QUALITY_NOTIFICATION = t.KEY_AUTO_QUALITY_FORCED = t.ACTION_SET_ABS_AVAILABILITY = t.ACTION_SET_QUALITIES = t.ACTION_SET_CURRENT_QUALITY = t.ACTION_SELECT_QUALITY = void 0, t.setABSAvailability = i, t.setABSQualities = a, t.getVariantName = o, t.createABSQualities = s, t.initializeQuality = l, t.selectQuality = u, t.setPreferredQuality = c, t.setCurrentQuality = d, t._getMatchingTranscodeQuality = p, t.setQualities = f;
+        var h = n(49),
+            v = r(h),
+            _ = n(254),
+            g = n(237),
+            m = n(81),
+            y = r(m),
+            b = t.ACTION_SELECT_QUALITY = "select quality",
+            E = t.ACTION_SET_CURRENT_QUALITY = "set current quality",
+            S = t.ACTION_SET_QUALITIES = "set qualities",
+            T = t.ACTION_SET_ABS_AVAILABILITY = "abs is availabile",
+            P = (t.KEY_AUTO_QUALITY_FORCED = "auto-quality-forced-v2", t.KEY_SEEN_AUTO_QUALITY_NOTIFICATION = "has-seen-abs-notification", t.QUALITY_AUTO = "auto"),
+            C = (t.QUALITY_AUTO_OBJECT = Object.freeze({
                 bitrate: 0,
                 resolution: "0x0",
                 group: "auto",
