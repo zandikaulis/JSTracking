@@ -1076,13 +1076,13 @@ window.SiteOptions = {
         "af8f152a-f618-416e-8b79-d6ac30479018": {
             "name": "PERPETUA",
             "groups": [{
-                "weight": 50,
+                "weight": 100,
                 "value": "early"
             }, {
                 "weight": 0,
                 "value": "mid"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }]
         },
