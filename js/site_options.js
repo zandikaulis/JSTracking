@@ -193,6 +193,22 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "0c22fa7f-9b7d-4c6a-9b63-1f70c0af3df2": {
+            "name": "CVP-Mar-2017",
+            "groups": [{
+                "weight": 78,
+                "value": "1.3.5"
+            }, {
+                "weight": 14,
+                "value": "1.5.1"
+            }, {
+                "weight": 4,
+                "value": "1.5.1+abs0"
+            }, {
+                "weight": 4,
+                "value": "1.5.1+abs1"
+            }]
+        },
         "143da2f9-bf80-4555-a661-76c378fcd5c8": {
             "name": "ios_aa",
             "groups": [{
