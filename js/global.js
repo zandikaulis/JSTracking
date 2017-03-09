@@ -18127,29 +18127,7 @@ var Base64 = {
 }(document, window.mixpanel || []), mixpanel.init(SiteOptions.mixpanel_token),
     function(e) {
         var t = {};
-        t.track = function(e, n) {
-            n._useDobbin ? t._sendDobbinEvent(e, _.omit(n, "_useDobbin")) : t._insertScriptTag(e, n)
-        }, t._insertScriptTag = function(t, n) {
-            var i = function(t) {
-                var n = document.createElement("script");
-                n.type = "text/javascript", n.async = !0;
-                var i = "https:" === document.location.protocol ? "https:" : "http:";
-                n.src = i + "//spade.twitch.tv/?data=" + t;
-                var r = document.getElementsByTagName("script")[0];
-                r.parentNode.insertBefore(n, r);
-                var o = 5e3;
-                setTimeout(function() {
-                    e(n).remove()
-                }, o)
-            };
-            setTimeout(function() {
-                var e = Base64.encode(JSON.stringify({
-                    event: t,
-                    properties: n
-                }));
-                i(e)
-            }, 0)
-        }, t._sendDobbinEvent = function(e, t) {
+        t.track = function(e, t) {
             Dobbin.Dobbin.trackEvent(e, t, ["spade"])
         }, window.spade = t
     }(jQuery), window._gaq = window._gaq || [],
@@ -18301,9 +18279,7 @@ var Base64 = {
                         content: i.content,
                         medium: i.medium,
                         page_session_id: i.page_session_id
-                    }, e.tracking.funnel.debugEnabled() && (console.group("Twitch.tracking.funnel.trackPageView"), console.log("event:", "pageview"), console.log("properties:", i), console.groupEnd()), n.spadeAndMixpanel.trackEvent(Dobbin.Dobbin.events.EVENT_PAGEVIEW, i), n.spadeAndMixpanel.trackEvent(Dobbin.Dobbin.events.UNTRUSTED_EVENT_PAGEVIEW, _.defaults({
-                        _useDobbin: !0
-                    }, i))
+                    }, e.tracking.funnel.debugEnabled() && (console.group("Twitch.tracking.funnel.trackPageView"), console.log("event:", "pageview"), console.log("properties:", i), console.groupEnd()), n.spadeAndMixpanel.trackEvent(Dobbin.Dobbin.events.EVENT_PAGEVIEW, i)
                 }), c()
             },
             debugEnabled: function(t) {
@@ -18429,21 +18405,7 @@ var Base64 = {
                     token: mixpanel.config.token,
                     time: Date.now(),
                     ip: 1
-                }), t._useDobbin ? n.mixpanel._sendDobbinEvent(e, _.omit(t, "_useDobbin")) : n.mixpanel._sendAjaxEvent(e, t)
-            },
-            _sendDobbinEvent: function(e, t) {
-                Dobbin.Dobbin.trackEvent(e, t, ["mixpanel"])
-            },
-            _sendAjaxEvent: function(e, n) {
-                var i = {
-                        event: e,
-                        properties: n
-                    },
-                    r = "//api.mixpanel.com/track?data=" + Base64.encode(JSON.stringify(i));
-                t.ajax({
-                    url: r,
-                    crossDomain: !0
-                })
+                }), Dobbin.Dobbin.trackEvent(e, t, ["mixpanel"])
             }
         }, n.getComscoreScript = _.memoize(function() {
             var e = ("https:" == document.location.protocol ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";

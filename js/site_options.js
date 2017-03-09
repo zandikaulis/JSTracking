@@ -1114,6 +1114,9 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "variant1"
+            }, {
+                "weight": 0,
+                "value": "variant2"
             }]
         },
         "b29d055f-74f2-40b9-9383-9c4b79b30360": {
