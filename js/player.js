@@ -9279,7 +9279,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.09-194731+18682605fd95a66e8b687529ef61555c56b7393a",
+                    app_version: "2017.03.09-222734+de83745c212b31952432ff8761437347edc87ec5",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -10365,6 +10365,8 @@
                     g.localStore.set("lastAdDisplay", (new Date).getTime()), e.roll_type === w.POSTROLL && n.dispatch((0, x.updatePlaybackState)(ee.ENDED))
                 }), t.addEventListener(le.AD_START, function() {
                     n.dispatch((0, x.updatePlaybackState)(ee.PLAYING))
+                }), t.addEventListener(le.AD_ERROR, function(e) {
+                    e.roll_type === w.POSTROLL && n.dispatch((0, x.updatePlaybackState)(ee.ENDED))
                 }), (0, X["default"])(le, function(e) {
                     t.addEventListener(e, function(t) {
                         Ne.emit(e, t)
@@ -10958,7 +10960,7 @@
             }
 
             function Te(e) {
-                Ge.emit(ne.AD_IMPRESSION, e)
+                Ge.emit(ne.AD_IMPRESSION, e);
             }
 
             function Pe(e) {
@@ -10970,7 +10972,7 @@
             }
 
             function ke() {
-                Ge.emit(k.USHER_FAIL_ERROR);
+                Ge.emit(k.USHER_FAIL_ERROR)
             }
 
             function we(e) {
@@ -14582,8 +14584,8 @@
             k = (t.IMAManager = function() {
                 function e(t, n, r) {
                     var i = this;
-                    a(this, e), this._videoContainer = t, this._backend = n, this._stateStore = r, this._paused = !1, this._eventEmitter = new l["default"],
-                        this._currentAdsManager = A;
+                    a(this, e), this._videoContainer = t, this._backend = n, this._stateStore = r, this._paused = !1, this._contentPauseRequested = !1,
+                        this._eventEmitter = new l["default"], this._currentAdsManager = A;
                     var o = this._stateStore.getState(),
                         s = o.window,
                         u = s.google;
@@ -14665,6 +14667,21 @@
                         }), this._currentAdsManager.init(this._videoContainer.offsetParent.offsetWidth, this._videoContainer.offsetParent.offsetHeight, n.ima.ViewMode.NORMAL), this._currentAdsManager.start()
                     }
                 }, {
+                    key: "_interruptContent",
+                    value: function() {
+                        var e = this._stateStore.getState(),
+                            t = e.stream;
+                        t instanceof h.LiveContentStream ? this._backend.setMuted(!0) : t instanceof v.VODContentStream && !this._backend.getEnded() && this._backend.pause()
+                    }
+                }, {
+                    key: "_resumeContent",
+                    value: function() {
+                        var e = this._stateStore.getState(),
+                            t = e.playback,
+                            n = e.stream;
+                        this._backend.setVolume(t.volume), this._backend.setMuted(t.muted), n instanceof v.VODContentStream && !this._backend.getEnded() && this._backend.play()
+                    }
+                }, {
                     key: "_onAdError",
                     value: function(e) {
                         var t = e.getError(),
@@ -14675,23 +14692,24 @@
                                 duration: null
                             },
                             r = this._initializeAdSpadeEvent(n);
-                        r.reason = t.getMessage(), this._sendAdSpadeEvent(f.AD_ERROR, r), this._currentAdsManager.destroy(), this._currentAdsManager = A
+                        r.reason = t.getMessage(), this._sendAdSpadeEvent(f.AD_ERROR, r), this._contentPauseRequested && (this._contentPauseRequested = !1, this._stateStore.dispatch((0, m.clearCurrentAdMetadata)()), this._resumeContent(), this._eventEmitter.emit(g.AD_ERROR, {
+                            roll_type: n.adType
+                        })), this._currentAdsManager.destroy(), this._currentAdsManager = A
                     }
                 }, {
                     key: "_onContentPauseRequested",
                     value: function(e) {
                         var t = this;
-                        if (this._stateStore.getState().ads.currentMetadata.contentType === m.AdContentTypes.NONE) {
+                        if (this._contentPauseRequested = !0, this._stateStore.getState().ads.currentMetadata.contentType === m.AdContentTypes.NONE) {
                             var n = this._stateStore.getState(),
-                                r = n.playback,
-                                i = n.stream;
-                            i instanceof h.LiveContentStream ? this._backend.setMuted(!0) : i instanceof v.VODContentStream && !this._backend.getEnded() && this._backend.pause(), this._currentAdsManager.setVolume(r.muted ? 0 : r.volume), this._stateStore.dispatch((0, m.setCurrentAdMetadata)({
+                                r = n.playback;
+                            this._currentAdsManager.setVolume(r.muted ? 0 : r.volume), this._interruptContent(), this._stateStore.dispatch((0, m.setCurrentAdMetadata)({
                                 contentType: m.AdContentTypes.IMA,
                                 rollType: C[e.adType]
                             })), this._adWidth = this._videoContainer.offsetParent.offsetWidth, this._adHeight = this._videoContainer.offsetParent.offsetHeight;
-                            var a = this._stateStore.getState(),
-                                o = a.window;
-                            this._resizePoller = o.setInterval(function() {
+                            var i = this._stateStore.getState(),
+                                a = i.window;
+                            this._resizePoller = a.setInterval(function() {
                                 t._videoContainer.offsetParent.offsetWidth === t._adWidth && t._videoContainer.offsetParent.offsetHeight === t._adHeight || (t._adWidth = t._videoContainer.offsetParent.offsetWidth, t._adHeight = t._videoContainer.offsetParent.offsetHeight, t._resizeAd())
                             }, T), this._eventEmitter.emit(g.AD_START, {
                                 roll_type: e.adType
@@ -14701,14 +14719,9 @@
                 }, {
                     key: "_onContentResumeRequested",
                     value: function(e) {
-                        if (this._stateStore.getState().ads.currentMetadata.contentType !== m.AdContentTypes.NONE) {
-                            var t = this._stateStore.getState(),
-                                n = t.playback,
-                                r = t.stream;
-                            this._backend.setVolume(n.volume), this._backend.setMuted(n.muted), r instanceof v.VODContentStream && !this._backend.getEnded() && this._backend.play(), this._currentAdsManager = A, this._stateStore.dispatch((0, m.clearCurrentAdMetadata)()), this._eventEmitter.emit(g.AD_END, {
-                                roll_type: e.adType
-                            })
-                        }
+                        this._contentPauseRequested = !1, this._stateStore.getState().ads.currentMetadata.contentType !== m.AdContentTypes.NONE && (this._resumeContent(), this._currentAdsManager = A, this._stateStore.dispatch((0, m.clearCurrentAdMetadata)()), this._eventEmitter.emit(g.AD_END, {
+                            roll_type: e.adType
+                        }))
                     }
                 }, {
                     key: "_onAdLoaded",
