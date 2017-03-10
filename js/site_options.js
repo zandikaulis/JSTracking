@@ -209,8 +209,11 @@ window.SiteOptions = {
                 "weight": 50,
                 "value": "1.3.5"
             }, {
-                "weight": 42,
+                "weight": 40,
                 "value": "1.5.1"
+            }, {
+                "weight": 2,
+                "value": "1.5.1+fxf"
             }, {
                 "weight": 4,
                 "value": "1.5.1+abs0"
