@@ -508,10 +508,10 @@ window.SiteOptions = {
         "428d3b07-cc7a-424f-aad0-971f5415879a": {
             "name": "NEXUS_ROLLOUT",
             "groups": [{
-                "weight": 95,
+                "weight": 80,
                 "value": "disabled"
             }, {
-                "weight": 5,
+                "weight": 20,
                 "value": "enabled"
             }]
         },
