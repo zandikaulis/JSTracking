@@ -143,13 +143,13 @@ window.SiteOptions = {
         "039bcc41-baa9-4351-8a76-3bcece6aec44": {
             "name": "Transcode_Quality_Experiment_4",
             "groups": [{
-                "weight": 20,
+                "weight": 0,
                 "value": "plus"
             }, {
-                "weight": 60,
+                "weight": 100,
                 "value": "regular"
             }, {
-                "weight": 20,
+                "weight": 0,
                 "value": "nonplus"
             }]
         },
@@ -313,10 +313,10 @@ window.SiteOptions = {
         "1c7a531b-462b-4814-820e-5c3f2871cda9": {
             "name": "CHANNEL_SIGNUP_CTA",
             "groups": [{
-                "weight": 90,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 5,
                 "value": "show"
             }]
         },
