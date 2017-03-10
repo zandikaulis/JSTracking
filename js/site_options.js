@@ -193,6 +193,16 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "0a340f6e-772a-4e12-a95e-5a984c071107": {
+            "name": "SOCIAL_COLUMN",
+            "groups": [{
+                "weight": 0,
+                "value": "variant1"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "0c22fa7f-9b7d-4c6a-9b63-1f70c0af3df2": {
             "name": "CVP-Mar-2017",
             "groups": [{
