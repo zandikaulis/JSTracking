@@ -7875,7 +7875,7 @@
             return new p["default"]({
                 defaults: (t = {}, i(t, m, "no"), i(t, y, "off"), i(t, b, "no"), i(t, E, "no"), i(t, S, "no"), i(t, T, "no"), i(t, P, "no"), i(t, C, "no"), i(t, k, "no"), i(t, w, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, L, "1.3.5"), i(t, M, "no"), i(t, R, "no"), i(t, D, "control"), i(t, x, "no"), i(t, N, "no"), i(t, j, "no,"), i(t, U, "no"), i(t, B, "regular"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, i(n, B, a("plus")), i(n, y, a("v2")), i(n, b, o(["US"])), i(n, E, o(["GB"])), i(n, S, o(["DE"])), i(n, T, o(["FR"])), i(n, P, o(["SE"])), i(n, C, o(["DK", "FI", "NL", "NO"])), i(n, k, o(["CA"])), i(n, w, o(["AU", "NZ"])), i(n, A, o(["BE"])), i(n, O, o(["PL"])), i(n, I, o(["AT", "CH", "ES", "IT", "PT"])), i(n, R, a("yes")), i(n, N, a("vca")), i(n, j, a("yes")), i(n, D, a("early")), i(n, L, a("1.4.0+absagg")), n),
+                overrides: (n = {}, i(n, B, a("plus")), i(n, y, a("v2")), i(n, b, o(["US"])), i(n, E, o(["GB"])), i(n, S, o(["DE"])), i(n, T, o(["FR"])), i(n, P, o(["SE"])), i(n, C, o(["DK", "FI", "NL", "NO"])), i(n, k, o(["CA"])), i(n, w, o(["AU", "NZ"])), i(n, A, o(["BE"])), i(n, O, o(["PL"])), i(n, I, o(["AT", "CH", "ES", "IT", "PT"])), i(n, R, a("yes")), i(n, N, a("vca")), i(n, j, a("yes")), i(n, D, a("early")), i(n, L, a("1.5.1+abs0")), n),
                 platform: "web",
                 login: e.login,
                 provider: new h["default"](h["default"].SERVICE_URL),
@@ -7908,7 +7908,7 @@
             O = t.BAKING_BREAD_H = "51e3d33c-157b-422d-9a15-b0f9e9c055b2",
             I = t.BAKING_BREAD_I = "ac2acc22-f0ef-4162-b9a3-7357249165ca",
             N = t.MARKERS = "9e5fffd0-9693-412b-913d-7da332fdeea4",
-            L = t.PLAYER_CORE_VER_CONTROL = "19017d2c-4473-4914-a10f-82152c8b2bd9",
+            L = t.PLAYER_CORE_VER_CONTROL = "0c22fa7f-9b7d-4c6a-9b63-1f70c0af3df2",
             M = t.GABRIEL = "4aa9ee11-136c-4521-a139-e2abb718ec07",
             R = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
             D = t.PERPETUA = "af8f152a-f618-416e-8b79-d6ac30479018",
@@ -9279,7 +9279,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.09-223711+e2beb07908e7527497e6c884a38693b99d2c0c1d",
+                    app_version: "2017.03.10-005525+b635e030eb415b6f9505542937735b6a84bb305f",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -12330,7 +12330,7 @@
             if (e && e.value) return c.resolve(e.value);
             var t = e && e.deviceID || u();
             return _ || (_ = new p({
-                defaults: r({}, d.EXPERIMENT_ID, "1.1.118"),
+                defaults: r({}, d.EXPERIMENT_ID, d.DEFAULT_VERSION),
                 platform: "web",
                 deviceID: t,
                 provider: new f(f.SERVICE_URL),
@@ -12902,7 +12902,8 @@
             PLAYER_CORE_FILE_NAME: "/player-core-min.js",
             PLAYER_CORE_FILE_NAME_DEBUG: "/player-core.js",
             SCRIPT_ID: "TwitchPlayerCoreModule",
-            EXPERIMENT_ID: "19017d2c-4473-4914-a10f-82152c8b2bd9",
+            EXPERIMENT_ID: "0c22fa7f-9b7d-4c6a-9b63-1f70c0af3df2",
+            DEFAULT_VERSION: "1.3.5",
             CAN_LOAD: function() {
                 try {
                     return "undefined" != typeof MediaSource && MediaSource.isTypeSupported('video/mp4; codecs="avc1.42E01E,mp4a.40.2"') && !n()
@@ -13107,7 +13108,8 @@
             return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
         };
         ! function(n, s) {
-            "object" === o(t) ? e.exports = t = s() : (i = [], r = s, a = "function" == typeof r ? r.apply(t, i) : r, !(void 0 !== a && (e.exports = a)))
+            "object" === o(t) ? e.exports = t = s() : (i = [],
+                r = s, a = "function" == typeof r ? r.apply(t, i) : r, !(void 0 !== a && (e.exports = a)))
         }(void 0, function() {
             var e = e || function(e, t) {
                 var n = {},
@@ -13391,7 +13393,7 @@
             this._url = e
         }
         var i = n(297);
-        e.exports = r, r.SERVICE_URL = "//minixperiment.twitch.tv/experiments.json", r.prototype.getExperimentConfiguration = function(e, t) {
+        e.exports = r, r.SERVICE_URL = "//www.twitch.tv/experiments.json", r.prototype.getExperimentConfiguration = function(e, t) {
             i.fetch(this._url, {}, function(n, r) {
                 if (null !== n) return void t(n);
                 try {
@@ -14591,8 +14593,8 @@
             k = (t.IMAManager = function() {
                 function e(t, n, r) {
                     var i = this;
-                    a(this, e), this._videoContainer = t, this._backend = n, this._stateStore = r, this._paused = !1, this._contentPauseRequested = !1,
-                        this._eventEmitter = new l["default"], this._currentAdsManager = A;
+                    a(this, e), this._videoContainer = t, this._backend = n, this._stateStore = r, this._paused = !1,
+                        this._contentPauseRequested = !1, this._eventEmitter = new l["default"], this._currentAdsManager = A;
                     var o = this._stateStore.getState(),
                         s = o.window,
                         u = s.google;
@@ -18593,7 +18595,7 @@
                 var r = Object.getOwnPropertyDescriptor(e, t);
                 if (void 0 === r) {
                     var i = Object.getPrototypeOf(e);
-                    return null === i ? void 0 : x(i, t, n);
+                    return null === i ? void 0 : x(i, t, n)
                 }
                 if ("value" in r) return r.value;
                 var a = r.get;
