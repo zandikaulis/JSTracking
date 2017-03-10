@@ -1054,16 +1054,6 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
-        "aaac75ea-c969-4826-b32d-ceefac620a79": {
-            "name": "Recommended Channels",
-            "groups": [{
-                "weight": 0,
-                "value": "no"
-            }, {
-                "weight": 100,
-                "value": "yes"
-            }]
-        },
         "ac2acc22-f0ef-4162-b9a3-7357249165ca": {
             "name": "baking_bread_i",
             "groups": [{
