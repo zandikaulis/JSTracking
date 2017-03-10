@@ -277,10 +277,10 @@ window.SiteOptions = {
         "19017d2c-4473-4914-a10f-82152c8b2bd9": {
             "name": "CVP-Feb-2017",
             "groups": [{
-                "weight": 78,
+                "weight": 50,
                 "value": "1.3.5"
             }, {
-                "weight": 14,
+                "weight": 42,
                 "value": "1.5.1"
             }, {
                 "weight": 4,
@@ -1132,10 +1132,10 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "variant1"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "variant2"
             }]
         },
