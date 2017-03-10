@@ -310,6 +310,16 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "1c7a531b-462b-4814-820e-5c3f2871cda9": {
+            "name": "CHANNEL_SIGNUP_CTA",
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "show"
+            }]
+        },
         "1e406d0d-c293-4c4e-812f-049db8c7e3ec": {
             "name": "vod_upload_units",
             "groups": [{
