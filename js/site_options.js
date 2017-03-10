@@ -1382,16 +1382,6 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
-        "ee02392c-ef7a-4a35-a680-ae69f3c910a8": {
-            "name": "dobbin_rollout",
-            "groups": [{
-                "weight": 100,
-                "value": "disabled"
-            }, {
-                "weight": 0,
-                "value": "enabled"
-            }]
-        },
         "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef": {
             "name": "aws_roundtrip_latency_test_opt_in",
             "groups": [{

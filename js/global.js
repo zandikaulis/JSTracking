@@ -16472,6 +16472,7 @@ googletag.cmd = googletag.cmd || [],
                 AWS_ROUNDTRIP_LATENCY_TEST_ENDPOINT: "5daee224-4c99-499f-b6e0-e308a5fa54f1",
                 LANGUAGE_DIRECTORY_ROWCOUNT_V2: "8d2e5bd8-c305-455f-b7ff-ca6fc2ea8710",
                 LOL_METADATA_EXPERIMENT: "479d9473-bf6e-4d74-8f9b-dd85d6f98921",
+                FEATURED_COMMUNITIES: "237bee24-0366-4712-9a80-dad0cefabdcc",
                 SOCIAL_RECOMMENDATIONS: "819aed52-3cc1-4747-a840-476a39487a2e"
             },
             r = {
@@ -16524,6 +16525,7 @@ googletag.cmd = googletag.cmd || [],
                 "5daee224-4c99-499f-b6e0-e308a5fa54f1": "control",
                 "8d2e5bd8-c305-455f-b7ff-ca6fc2ea8710": "2",
                 "479d9473-bf6e-4d74-8f9b-dd85d6f98921": "control",
+                "237bee24-0366-4712-9a80-dad0cefabdcc": "control",
                 "819aed52-3cc1-4747-a840-476a39487a2e": "control"
             },
             o = "experiment_overrides",
@@ -16710,7 +16712,7 @@ googletag.cmd = googletag.cmd || [],
                 return e.player.FlashPlayer.callbacks[n] = t, "Twitch.player.FlashPlayer.callbacks." + n
             }
         };
-        e.player.FlashPlayer = n;
+        e.player.FlashPlayer = n
     }(Twitch, jQuery),
     function() {
         try {
@@ -17730,7 +17732,8 @@ googletag.cmd = googletag.cmd || [],
                 getTime: function(e) {
                     var t = n(e.getMinutes(), 2),
                         i = e.getHours();
-                    return i > 12 ? i -= 12 : 0 === i && (i = 12), i + ":" + t
+                    return i > 12 ? i -= 12 : 0 === i && (i = 12),
+                        i + ":" + t
                 },
                 lengthAsClock: function(e) {
                     var t = Math.floor(e % 60),
