@@ -425,10 +425,10 @@ window.SiteOptions = {
         "2f6b028c-c2a5-462c-8daf-3bcb394839bb": {
             "name": "android_playercore",
             "groups": [{
-                "weight": 95,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "active"
             }]
         },
