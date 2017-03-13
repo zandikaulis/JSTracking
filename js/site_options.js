@@ -1388,6 +1388,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "efe4cedd-7ea4-4d78-a9e4-5fad8dd9de79": {
+            "name": "android_playercore_2",
+            "groups": [{
+                "weight": 95,
+                "value": "control"
+            }, {
+                "weight": 5,
+                "value": "active"
+            }]
+        },
         "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef": {
             "name": "aws_roundtrip_latency_test_opt_in",
             "groups": [{
