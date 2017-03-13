@@ -277,6 +277,16 @@ window.SiteOptions = {
                 "value": "recent_first"
             }]
         },
+        "17b33c41-5bf3-40b7-8fc0-ea450d797b0b": {
+            "name": "ios_broadcasting",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "19017d2c-4473-4914-a10f-82152c8b2bd9": {
             "name": "CVP-Feb-2017",
             "groups": [{
