@@ -1446,10 +1446,10 @@ window.SiteOptions = {
                 "weight": 10,
                 "value": "early"
             }, {
-                "weight": 80,
+                "weight": 90,
                 "value": "mid"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "control"
             }]
         }
