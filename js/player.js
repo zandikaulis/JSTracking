@@ -9283,7 +9283,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.14-172733+1e0121dd47c1436b6be46e52b4cbff918f3b8476",
+                    app_version: "2017.03.14-174407+66428f4ab97d8bd89c3abb4fa6fae9cb47c3b262",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -28123,15 +28123,16 @@
         }
 
         function i(e, t, n) {
-            var r = e - .5 * t;
-            return Math.max(0, Math.min(r, n - t))
+            var r = e - .5 * t,
+                i = Math.max(0, Math.min(r, n - t));
+            return isNaN(i) ? 0 : i
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.SeekbarPopup = void 0;
+        }), t.SeekbarPopup = t.ARROW_WIDTH = void 0;
         var a = n(383),
             o = r(a),
-            s = 20,
+            s = t.ARROW_WIDTH = 20,
             l = {
                 popupLeftOffset: a.PropTypes.number,
                 popupObject: a.PropTypes.object,
