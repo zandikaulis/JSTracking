@@ -41,7 +41,7 @@
                     login: k.cookie.get("login") || null,
                     deviceID: A.get(!1),
                     userAgent: C.getState().window.navigator.userAgent
-                })), C.dispatch(ee.loadDefaultLang(o.lang)), C.dispatch((0, ne.setPlayerType)(o.player)), ue.push(new V.PubSub(C, o)), ue.push(new ye.RecommendationsManager(C)), p = new v.AnalyticsTracker(C, o), C.dispatch((0, se.setAnalyticsTracker)(p)), C.dispatch((0, te.initializeQuality)()), _ = o.allowfullscreen ? new F.FullScreen(n, C) : new H.NoFullScreen(n, C), X = new me.TimelineMetadataManager(C), Z = new ge.PlaylistManager(C), w = new L.Video(n, p, C, o, _), E = new O.State(w, C, p, o), o.debug && (window.state = E), (0, M.forwardProperties)(c, w), I = new h.Analytics(w, p, E, C, o), a(o), $ = new R.EmbedHost(w, E, C), new D.PlayerHotkeys(w, n, C, o), C.dispatch((0, oe.setAutoplay)(o.autoplay)), o.controls && (m = new x.PlayerUI(w, n, p, E, C, o), W = new pe.ClipGenerator(n, E, C)), r(o).then(function() {
+                })), C.dispatch(ee.loadDefaultLang(o.lang)), C.dispatch((0, ne.setPlayerType)(o.player)), ue.push(new V.PubSub(C, o)), ue.push(new ye.RecommendationsManager(C)), p = new v.AnalyticsTracker(C, o), C.dispatch((0, se.setAnalyticsTracker)(p)), C.dispatch((0, te.initializeQuality)()), _ = o.allowfullscreen ? new F.FullScreen(n, C) : new H.NoFullScreen(n, C), X = new me.TimelineMetadataManager(C), Z = new ge.CollectionManager(C), w = new L.Video(n, p, C, o, _), E = new O.State(w, C, p, o), o.debug && (window.state = E), (0, M.forwardProperties)(c, w), I = new h.Analytics(w, p, E, C, o), a(o), $ = new R.EmbedHost(w, E, C), new D.PlayerHotkeys(w, n, C, o), C.dispatch((0, oe.setAutoplay)(o.autoplay)), o.controls && (m = new x.PlayerUI(w, n, p, E, C, o), W = new pe.ClipGenerator(n, E, C)), r(o).then(function() {
                     C.dispatch((0, Y.setPlayerOptions)(o))
                 }), C.dispatch((0, ae.initVodResume)()), (0, de.krakenUserInfo)().then(function(e) {
                     C.dispatch((0, ae.setUser)(e._id)), C.dispatch((0, le.krakenUserInfoFetched)(e))
@@ -1155,7 +1155,7 @@
                         i = t.communities,
                         a = t.streamMetadata,
                         o = t.window,
-                        s = t.playlist,
+                        s = t.collection,
                         l = t.stream,
                         c = t.playback,
                         d = this.player.getNetworkProfile().filter(function(e) {
@@ -1185,7 +1185,7 @@
                             medium: _,
                             content: m
                         };
-                    l.contentType === B.CONTENT_MODE_VOD && c.transitionScheme === V.TRANSITION_TYPE_PLAYLIST && (b.collection_item_position = (0, y["default"])(s.items, {
+                    l.contentType === B.CONTENT_MODE_VOD && c.transitionScheme === V.TRANSITION_TYPE_COLLECTION && (b.collection_item_position = (0, y["default"])(s.items, {
                         item_id: l.videoId.substr(1)
                     }), b.collection_id = s.id), this.trackEvent(Y, (0, f["default"])({}, p, b)), this.stateStore.dispatch((0, M.resetQualityChangeCount)()), this.valveClient.notify(), this.trackNetworkProfile.then(function(t) {
                         "yes" === t && d.length > 0 && e.tracker.trackEvents(d.map(function(e) {
@@ -1291,7 +1291,7 @@
                         n = t.analytics,
                         r = t.communities,
                         i = t.stream,
-                        a = t.playlist,
+                        a = t.collection,
                         o = t.playback;
                     if (null !== this.bufferEmptyStartTime) {
                         var s = (new Date).getTime();
@@ -1309,7 +1309,7 @@
                         };
                         i.contentType === B.CONTENT_MODE_VOD && ((0, k.videoInfo)(i.videoId).then(function(t) {
                             e.countessTracker.trackVODView(t)
-                        }), o.transitionScheme === V.TRANSITION_TYPE_PLAYLIST && (l.collection_item_position = (0, y["default"])(a.items, {
+                        }), o.transitionScheme === V.TRANSITION_TYPE_COLLECTION && (l.collection_item_position = (0, y["default"])(a.items, {
                             item_id: i.videoId.substr(1)
                         }), l.collection_id = a.id)), this.trackEvent(G, l), this.hasPlayed = !0, this.valveClient.notify(), this.stateStore.dispatch(A.sendPlayerBeacon()), this.stateStore.dispatch(A.sendVideoBeacon())
                     }
@@ -1354,8 +1354,8 @@
                 value: function() {
                     var e = this.stateStore.getState(),
                         t = e.playback,
-                        n = e.playlist;
-                    t.transitionScheme === V.TRANSITION_TYPE_PLAYLIST && this.countessTracker.trackView("collection", n.id)
+                        n = e.collection;
+                    t.transitionScheme === V.TRANSITION_TYPE_COLLECTION && this.countessTracker.trackView("collection", n.id)
                 }
             }, {
                 key: "onEnded",
@@ -3773,7 +3773,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.oauthToken = t.channelAPIInfo = t.krakenUserInfo = t.userInfo = t.channelViewerInfo = t.videoInfo = t.channelInfo = void 0, t.krakenRequest = s, t.krakenRequestv5 = l, t.streamInfo = u, t.offlinePlaylistInfo = c, t.playlistInfo = d, t.setOAuthToken = p, t.isVODRestricted = f, t.channelUrl = h, t.videoUrl = v;
+        }), t.oauthToken = t.channelAPIInfo = t.krakenUserInfo = t.userInfo = t.channelViewerInfo = t.videoInfo = t.channelInfo = void 0, t.krakenRequest = s, t.krakenRequestv5 = l, t.streamInfo = u, t.offlinePlaylistInfo = c, t.collectionInfo = d, t.setOAuthToken = p, t.isVODRestricted = f, t.channelUrl = h, t.videoUrl = v;
         var _ = n(78),
             g = i(_),
             m = n(143),
@@ -8734,7 +8734,7 @@
                     return (0, s["default"])({}, e, {
                         transitionFn: t.transitionFn
                     });
-                case f.ACTION_SET_PLAYLIST:
+                case f.ACTION_SET_COLLECTION:
                     return (0, s["default"])({}, e, {
                         transitionScheme: h
                     });
@@ -8748,7 +8748,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.TRANSITION_TYPE_RECOMMENDATIONS = t.TRANSITION_TYPE_PLAYLIST = void 0, t.playback = a;
+        }), t.TRANSITION_TYPE_RECOMMENDATIONS = t.TRANSITION_TYPE_COLLECTION = void 0, t.playback = a;
         var o = n(78),
             s = i(o),
             l = n(66),
@@ -8757,7 +8757,7 @@
             d = r(c),
             p = n(255),
             f = n(258),
-            h = t.TRANSITION_TYPE_PLAYLIST = "transition playlist",
+            h = t.TRANSITION_TYPE_COLLECTION = "transition collection",
             v = t.TRANSITION_TYPE_RECOMMENDATIONS = "transition recommendations",
             _ = {
                 autoplay: !0,
@@ -8936,13 +8936,13 @@
         function g(e, t) {
             var n = t(),
                 r = n.window,
-                i = n.playlist,
+                i = n.collection,
                 a = (0, E.parse)(r.location.search.slice(1));
             delete a.channel, delete a.video, delete a.collection;
             var o = (0, T["default"])({}, {
                     video: e
                 }, a),
-                s = i.pendingRequest.playlistId || i.id;
+                s = i.pendingRequest.collectionId || i.id;
             s && (delete o.time, (0, T["default"])(o, {
                 collection: s
             })), r.location.search = "?" + $.param(o)
@@ -9193,7 +9193,7 @@
         function n(e) {
             return {
                 type: u,
-                playlist: a(e)
+                collection: a(e)
             }
         }
 
@@ -9208,7 +9208,7 @@
             return {
                 type: l,
                 request: {
-                    playlistId: e,
+                    collectionId: e,
                     videoId: t
                 }
             }
@@ -9243,12 +9243,12 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.setPlaylistInfo = n, t.clearCollection = r, t.requestCollection = i, t.openPlaylist = o, t.closePlaylist = s;
+        }), t.setCollection = n, t.clearCollection = r, t.requestCollection = i, t.openCollectionSidebar = o, t.closeCollectionSidebar = s;
         var l = t.ACTION_REQUEST_COLLECTION = "request collection",
-            u = t.ACTION_SET_PLAYLIST = "set playlist",
+            u = t.ACTION_SET_COLLECTION = "set collection",
             c = t.ACTION_CLEAR_COLLECTION = "clear collection",
-            d = t.ACTION_OPEN_PLAYLIST = "open playlist",
-            p = t.ACTION_CLOSE_PLAYLIST = "close playlist"
+            d = t.ACTION_OPEN_COLLECTION_SIDEBAR = "open collection sidebar",
+            p = t.ACTION_CLOSE_COLLECTION_SIDEBAR = "close collection sidebar"
     }, function(e, t, n) {
         "use strict";
 
@@ -9283,7 +9283,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.13-214347+e99a5476b82b05adf48761a3c4162c15592aaa10",
+                    app_version: "2017.03.14-172733+1e0121dd47c1436b6be46e52b4cbff918f3b8476",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -16375,7 +16375,7 @@
                 var w = a.getState(),
                     A = w.experiments;
                 A.get(B.PERPETUA).then(function(n) {
-                    (0, u["default"])(B.ENABLE_PERPETUA_GROUP, n) && (ue = new U.PlaylistOverlay(t, e, a))
+                    (0, u["default"])(B.ENABLE_PERPETUA_GROUP, n) && (ue = new U.CollectionOverlay(t, e, a))
                 });
                 var R = new x.ClipGenerator(t, i, a);
                 ie = new D.PlayerUIClipsEnabler(t, a, c.localStore, R), H(l), $(t).attr("data-initializing", !0), e.addEventListener(F.PLAYER_INIT, function() {
@@ -16763,7 +16763,7 @@
                 else {
                     t.video = i;
                     var a = n.getState(),
-                        o = a.playlist;
+                        o = a.collection;
                     o.id && (t.collection = o.id);
                     var s = e.getCurrentTime();
                     t.time = m.toURLString(s)
@@ -18028,7 +18028,7 @@
                         t = this._stateStore.getState(),
                         n = t.stream,
                         r = t.resumeWatch,
-                        i = t.playlist;
+                        i = t.collection;
                     if (n.contentType === m.CONTENT_MODE_LIVE) return void(this._streamTimeOffset = this._player.getVideoInfo().stream_time_offset);
                     if (!(this._options.time || i.id || n.contentType !== y.CONTENT_MODE_VOD || r.isSeeked)) {
                         var a = (0, g.videoInfo)(n.videoId);
@@ -18605,8 +18605,8 @@
             function t(e, n, r, i, a, l) {
                 o(this, t);
                 var u = s(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return u._player = e, u._root = n, u._stateStore = r, u._analytics = i,
-                    u._controlsDisplay = a, u._options = l, u._subscribePlayback(), u._subscribeQuality(), u._subscribeKraken(), u._initEvents(), u._initDom(), u._initCustomCaptionsForm(), u
+                return u._player = e, u._root = n,
+                    u._stateStore = r, u._analytics = i, u._controlsDisplay = a, u._options = l, u._subscribePlayback(), u._subscribeQuality(), u._subscribeKraken(), u._initEvents(), u._initDom(), u._initCustomCaptionsForm(), u
             }
             return l(t, e), u(t, [{
                 key: "_initEvents",
@@ -19329,18 +19329,18 @@
         t.PlayerUIControlsDisplay = function() {
             function e(t, n, r) {
                 var a = this;
-                i(this, e), this._player = t, this._root = n, this._stateStore = r, this.unsubs = [], this.unsubs.push((0, p.subscribe)(this._stateStore, ["playlist.currentView"], this.onCollectionViewChange.bind(this))), this._hovering = !1, this._hideControlsTimeout = null, this._mouseX = 0, this._mouseY = 0, $(this._root).on("mouseenter", ".js-controls-top, .js-controls-bottom", function() {
+                i(this, e), this._player = t, this._root = n, this._stateStore = r, this.unsubs = [], this.unsubs.push((0, p.subscribe)(this._stateStore, ["collection.currentView"], this.onCollectionViewChange.bind(this))), this._hovering = !1, this._hideControlsTimeout = null, this._mouseX = 0, this._mouseY = 0, $(this._root).on("mouseenter", ".js-controls-top, .js-controls-bottom", function() {
                     a.setHovering(!0)
                 }), $(this._root).on("mouseleave", this.hideControls.bind(this)), $(this._root).on("mouseleave", ".js-controls-top, .js-controls-bottom", function() {
                     a.setHovering(!1)
                 }), $(this._root).on("mousemove", function(e) {
-                    a._stateStore.getState().playlist.currentView !== l.SIDEBAR_VIEW && (a._mouseX === e.screenX && a._mouseY === e.screenY || (a._mouseX = e.screenX, a._mouseY = e.screenY, a.showControls(s.hoverControlsDelay)))
+                    a._stateStore.getState().collection.currentView !== l.SIDEBAR_VIEW && (a._mouseX === e.screenX && a._mouseY === e.screenY || (a._mouseX = e.screenX, a._mouseY = e.screenY, a.showControls(s.hoverControlsDelay)))
                 })
             }
             return a(e, [{
                 key: "onCollectionViewChange",
                 value: function(e) {
-                    var t = e.playlist;
+                    var t = e.collection;
                     t.currentView === l.SIDEBAR_VIEW ? this.hideControls() : this.showControls(s.hoverControlsDelay)
                 }
             }, {
@@ -19387,28 +19387,28 @@
                     return (0, l["default"])({}, e, {
                         pendingRequest: t.request
                     });
-                case a.ACTION_SET_PLAYLIST:
-                    return (0, l["default"])({}, e, t.playlist, {
+                case a.ACTION_SET_COLLECTION:
+                    return (0, l["default"])({}, e, t.collection, {
                         pendingRequest: {
-                            playlistId: "",
+                            collectionId: "",
                             videoId: ""
                         },
                         currentView: u
                     });
                 case a.ACTION_CLEAR_COLLECTION:
                     return p;
-                case a.ACTION_OPEN_PLAYLIST:
+                case a.ACTION_OPEN_COLLECTION_SIDEBAR:
                     return (0, l["default"])({}, e, {
                         currentView: c
                     });
-                case a.ACTION_CLOSE_PLAYLIST:
+                case a.ACTION_CLOSE_COLLECTION_SIDEBAR:
                     return (0, l["default"])({}, e, {
                         currentView: u
                     });
                 case o.ACTION_SET_STREAM:
                     return (0, l["default"])({}, e, {
                         pendingRequest: {
-                            playlistId: "",
+                            collectionId: "",
                             videoId: ""
                         }
                     });
@@ -19418,7 +19418,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.DEFAULT_PLAYLIST = t.NO_COLLECTION_VIEW = t.SIDEBAR_VIEW = t.COLLAPSED_VIEW = void 0, t.playlist = i;
+        }), t.NO_COLLECTION_VIEW = t.SIDEBAR_VIEW = t.COLLAPSED_VIEW = void 0, t.collection = i;
         var a = n(258),
             o = n(255),
             s = n(192),
@@ -19426,7 +19426,7 @@
             u = t.COLLAPSED_VIEW = "collapsed",
             c = t.SIDEBAR_VIEW = "sidebar",
             d = t.NO_COLLECTION_VIEW = "none",
-            p = t.DEFAULT_PLAYLIST = {
+            p = {
                 id: "",
                 owner: {
                     displayName: "",
@@ -19445,7 +19445,7 @@
                 items: [],
                 currentView: d,
                 pendingRequest: {
-                    playlistId: "",
+                    collectionId: "",
                     videoId: ""
                 }
             }
@@ -30172,7 +30172,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.PlaylistOverlay = t.NO_COLLECTION_VIEW_ATTR = t.SIDEBAR_VIEW_ATTR = t.COLLAPSED_VIEW_ATTR = t.DEFAULT_THUMBNAIL_URL = void 0;
+        }), t.CollectionOverlay = t.NO_COLLECTION_VIEW_ATTR = t.SIDEBAR_VIEW_ATTR = t.COLLAPSED_VIEW_ATTR = t.DEFAULT_THUMBNAIL_URL = void 0;
         var o = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -30208,19 +30208,19 @@
             m = t.COLLAPSED_VIEW_ATTR = "view-collapsed",
             y = t.SIDEBAR_VIEW_ATTR = "view-sidebar",
             b = t.NO_COLLECTION_VIEW_ATTR = "none";
-        t.PlaylistOverlay = function(e) {
+        t.CollectionOverlay = function(e) {
             function t(e, n, a) {
                 r(this, t);
                 var o = i(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                o._stateStore = a, o.player = n, o.window = o._stateStore.getState().window, o.timeoutId = null, o.$root = $(e), o.$root.attr("data-collection-view", b), o.$sidebarItemTemplate = $(".js-collection-item", o.$root), o.$playlist = $(".js-collection-container", o.$root), o.$playlistNav = $(".js-collection-nav", o.$root), o.$playlistSidebar = $(".js-collection-sidebar", o.$root), o.$playlistOpenButton = $(".js-collection-collapsed__layout", o.$root), o.$playlistCloseButton = $(".js-icon-close-collection", o.$root), o.$playlistOpenButton.on("click", function() {
+                o._stateStore = a, o.player = n, o.window = o._stateStore.getState().window, o.timeoutId = null, o.$root = $(e), o.$root.attr("data-collection-view", b), o.$sidebarItemTemplate = $(".js-collection-item", o.$root), o.$collectionCollapsedNav = $(".js-collection-nav", o.$root), o.$collectionSidebar = $(".js-collection-sidebar", o.$root), o.$collectionOpenButton = $(".js-collection-collapsed__layout", o.$root), o.$collectionCloseButton = $(".js-icon-close-collection", o.$root), o.$collectionOpenButton.on("click", function() {
                     return o.setSidebarVisible(!0)
-                }), o.$playlistCloseButton.on("click", function() {
-                    o.setSidebarVisible(!1), o.$playlistSidebar.addClass("collection-sidebar-close"), o.timeoutId = o.window.setTimeout(function() {
-                        o.$playlistSidebar.removeClass("collection-sidebar-close")
+                }), o.$collectionCloseButton.on("click", function() {
+                    o.setSidebarVisible(!1), o.$collectionSidebar.addClass("collection-sidebar-close"), o.timeoutId = o.window.setTimeout(function() {
+                        o.$collectionSidebar.removeClass("collection-sidebar-close")
                     }, _)
-                }), o.$playlistCollapsedTitle = $(".js-collection-collapsed-title", o.$root), o.$playlistCollapsedNumber = $(".js-collection-collapsed-number", o.$root), o.$collectionDivider = $(".js-collection-divider", o.$root), o.$playlistTitle = $(".js-collection-title", o.$root), o.$playlistAuthor = $(".js-collection-author", o.$root), o.$playlistItemsCount = $(".js-collection-items-count", o.$root), o.$playlistTimeLength = $(".js-collection-time-length", o.$root), o.$playlistItemContainer = $(".js-collection-item-container", o.$root), o.$playlistItemContainer.on("click", ".js-collection-item", o.handleItemSelect.bind(o)), o.$emptyCollectionOverlay = $(".js-empty-collection-overlay", o.$root);
-                var s = ["playlist.title", "playlist.owner", "playlist.totalDuration"];
-                return o.subscribe(o._stateStore, ["playerOptions.showInfo", "playlist.id"], o.onCollectionDetected.bind(o)), o.subscribe(o._stateStore, ["ui.isMini"], o.onMiniChange.bind(o)), o.subscribe(o._stateStore, ["playlist.currentView"], o.onViewChange.bind(o)), o.subscribe(o._stateStore, s.concat(["lang"]), o.onMetadataChange.bind(o)), o.subscribe(o._stateStore, ["playlist.items", "stream", "lang"], o.onItemsChange.bind(o)), o.subscribe(o._stateStore, ["screen"], o.onScreenChange.bind(o)), o
+                }), o.$collectionCollapsedTitle = $(".js-collection-collapsed-title", o.$root), o.$collectionCollapsedNumber = $(".js-collection-collapsed-number", o.$root), o.$collectionDivider = $(".js-collection-divider", o.$root), o.$collectionTitle = $(".js-collection-title", o.$root), o.$collectionAuthor = $(".js-collection-author", o.$root), o.$collectionItemsCount = $(".js-collection-items-count", o.$root), o.$collectionTimeLength = $(".js-collection-time-length", o.$root), o.$collectionItemContainer = $(".js-collection-item-container", o.$root), o.$collectionItemContainer.on("click", ".js-collection-item", o.handleItemSelect.bind(o)), o.$emptyCollectionOverlay = $(".js-empty-collection-overlay", o.$root);
+                var s = ["collection.title", "collection.owner", "collection.totalDuration"];
+                return o.subscribe(o._stateStore, ["playerOptions.showInfo", "collection.id"], o.onCollectionDetected.bind(o)), o.subscribe(o._stateStore, ["ui.isMini"], o.onMiniChange.bind(o)), o.subscribe(o._stateStore, ["collection.currentView"], o.onViewChange.bind(o)), o.subscribe(o._stateStore, s.concat(["lang"]), o.onMetadataChange.bind(o)), o.subscribe(o._stateStore, ["collection.items", "stream", "lang"], o.onItemsChange.bind(o)), o.subscribe(o._stateStore, ["screen"], o.onScreenChange.bind(o)), o
             }
             return a(t, e), o(t, [{
                 key: "handleItemSelect",
@@ -30233,19 +30233,19 @@
                 key: "onCollectionDetected",
                 value: function() {
                     var e = this._stateStore.getState(),
-                        t = e.playlist,
+                        t = e.collection,
                         n = e.playerOptions;
                     t.id && this.$collectionDivider.attr("data-show-divider", n.showInfo)
                 }
             }, {
                 key: "_showCollapsedElements",
                 value: function() {
-                    this.$playlistNav.attr("data-show-nav", !0), this.$playlistSidebar.attr("data-show-sidebar", !1)
+                    this.$collectionCollapsedNav.attr("data-show-nav", !0), this.$collectionSidebar.attr("data-show-sidebar", !1)
                 }
             }, {
                 key: "_showSidebarElements",
                 value: function() {
-                    this.$playlistNav.attr("data-show-nav", !1), this.$playlistSidebar.attr("data-show-sidebar", !0)
+                    this.$collectionCollapsedNav.attr("data-show-nav", !1), this.$collectionSidebar.attr("data-show-sidebar", !0)
                 }
             }, {
                 key: "onScreenChange",
@@ -30253,7 +30253,7 @@
                     var e = this._stateStore.getState(),
                         t = e.screen,
                         n = e.playback;
-                    if (n.transitionScheme === f.TRANSITION_TYPE_PLAYLIST) switch (t[0]) {
+                    if (n.transitionScheme === f.TRANSITION_TYPE_COLLECTION) switch (t[0]) {
                         case p.ADVERTISEMENT_SCREEN:
                         case p.STITCHED_ADVERTISEMENT_SCREEN:
                             this._hideAllElements();
@@ -30268,26 +30268,26 @@
             }, {
                 key: "_hideAllElements",
                 value: function() {
-                    this.$playlistNav.attr("data-show-nav", !1), this.$playlistSidebar.attr("data-show-sidebar", !1)
+                    this.$collectionCollapsedNav.attr("data-show-nav", !1), this.$collectionSidebar.attr("data-show-sidebar", !1)
                 }
             }, {
                 key: "onMiniChange",
                 value: function() {
                     var e = this._stateStore.getState(),
                         t = e.ui,
-                        n = e.playlist;
+                        n = e.collection;
                     n.id && (t.isMini ? this._hideAllElements() : this.onViewChange())
                 }
             }, {
                 key: "setSidebarVisible",
                 value: function(e) {
-                    e ? this._stateStore.dispatch((0, c.openPlaylist)()) : this._stateStore.dispatch((0, c.closePlaylist)())
+                    e ? this._stateStore.dispatch((0, c.openCollectionSidebar)()) : this._stateStore.dispatch((0, c.closeCollectionSidebar)())
                 }
             }, {
                 key: "onViewChange",
                 value: function() {
                     var e = this._stateStore.getState(),
-                        t = e.playlist;
+                        t = e.collection;
                     switch (t.currentView) {
                         case d.NO_COLLECTION_VIEW:
                             this._hideAllElements(), this.$root.attr("data-collection-view", b);
@@ -30305,16 +30305,16 @@
             }, {
                 key: "onMetadataChange",
                 value: function(e) {
-                    var t = e.playlist,
+                    var t = e.collection,
                         n = e.lang;
-                    this.$playlistCollapsedTitle.text(t.title), this.$playlistTitle.text(t.title), this.$playlistAuthor.html(n.translate("By {{author}}", {
+                    this.$collectionCollapsedTitle.text(t.title), this.$collectionTitle.text(t.title), this.$collectionAuthor.html(n.translate("By {{author}}", {
                         author: '<a href="https://twitch.tv/' + t.owner.name + '">' + t.owner.displayName + "</a>",
                         interpolation: {
                             escape: !1
                         }
                     }));
                     var r = this._toHumanTime(t.totalDuration, n);
-                    this.$playlistTimeLength.text(r)
+                    this.$collectionTimeLength.text(r)
                 }
             }, {
                 key: "_toHumanTime",
@@ -30334,17 +30334,17 @@
             }, {
                 key: "onItemsChange",
                 value: function(e) {
-                    var t = e.playlist,
+                    var t = e.collection,
                         n = e.stream,
                         r = e.lang;
-                    this.$playlistItemsCount.text(r.translate("{{count}} video", {
+                    this.$collectionItemsCount.text(r.translate("{{count}} video", {
                         count: t.items.length
                     }));
-                    var i = this._createPlaylistItems(t.items, n, r);
-                    this.$playlistItemContainer.html(i)
+                    var i = this._createCollectionItems(t.items, n, r);
+                    this.$collectionItemContainer.html(i)
                 }
             }, {
-                key: "_createPlaylistItems",
+                key: "_createCollectionItems",
                 value: function(e, t, n) {
                     var r = this;
                     return e.map(function(i, a) {
@@ -30354,7 +30354,7 @@
                         var l = i.thumbnails ? i.thumbnails.small : g;
                         o.attr("data-vod-id", i.item_id), o.find(".js-collection-item-thumbnail").attr("src", l), o.find(".js-collection-item-title").text(i.title), o.find(".js-collection-item-detail-channel").text(i.owner.display_name);
                         var c = t.contentType === u.CONTENT_MODE_VOD && t.videoId === "v" + i.item_id;
-                        return o.attr("data-currentvod", c), c && r.$playlistCollapsedNumber.text(n.translate("{{currentPosition}}/{{totalVideos}} video", {
+                        return o.attr("data-currentvod", c), c && r.$collectionCollapsedNumber.text(n.translate("{{currentPosition}}/{{totalVideos}} video", {
                             count: e.length,
                             currentPosition: a + 1,
                             totalVideos: e.length
@@ -30369,7 +30369,7 @@
             }, {
                 key: "destroy",
                 value: function() {
-                    s(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "destroy", this).call(this), this.$playlistOpenButton.off("click"), this.$playlistCloseButton.off("click"), this.$playlistItemContainer.off("click"), this.timeoutId && this.window.clearTimeout(this.timeoutId)
+                    s(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "destroy", this).call(this), this.$collectionOpenButton.off("click"), this.$collectionCloseButton.off("click"), this.$collectionItemContainer.off("click"), this.timeoutId && this.window.clearTimeout(this.timeoutId)
                 }
             }]), t
         }(l.UIStateSubscriber)
@@ -32209,7 +32209,7 @@
                 manifestInfo: S.manifestInfo,
                 navigator: T.navigatorReducer,
                 online: C.online,
-                playlist: P.playlist,
+                collection: P.collection,
                 playback: A.playback,
                 playerOptions: k.playerOptions,
                 quality: O.quality,
@@ -35516,7 +35516,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.PlaylistManager = void 0;
+        }), t.CollectionManager = void 0;
         var a = function() {
                 function e(e, t) {
                     var n = [],
@@ -35568,14 +35568,14 @@
             y = n(254),
             b = n(342),
             E = n(255);
-        t.PlaylistManager = function() {
+        t.CollectionManager = function() {
             function e(t) {
-                i(this, e), this._stateStore = t, this.unsubs = [], this.unsubs.push((0, v.subscribe)(this._stateStore, ["playerOptions.channel", "playerOptions.collection", "playerOptions.video"], this.onOptionsChange.bind(this))), this.unsubs.push((0, v.subscribe)(this._stateStore, ["playlist.pendingRequest"], this.onPendingRequestChange.bind(this))), this.unsubs.push((0, v.subscribe)(this._stateStore, ["playback.ended"], this._streamEnded.bind(this)))
+                i(this, e), this._stateStore = t, this.unsubs = [], this.unsubs.push((0, v.subscribe)(this._stateStore, ["playerOptions.channel", "playerOptions.collection", "playerOptions.video"], this.onOptionsChange.bind(this))), this.unsubs.push((0, v.subscribe)(this._stateStore, ["collection.pendingRequest"], this.onPendingRequestChange.bind(this))), this.unsubs.push((0, v.subscribe)(this._stateStore, ["playback.ended"], this._streamEnded.bind(this)))
             }
             return o(e, [{
-                key: "_fetchPlaylistInfo",
+                key: "_fetchCollectionInfo",
                 value: function(e) {
-                    return (0, d.playlistInfo)(e).then(function(e) {
+                    return (0, d.collectionInfo)(e).then(function(e) {
                         var t = a(e, 2),
                             n = t[0],
                             r = t[1],
@@ -35586,7 +35586,7 @@
                     })
                 }
             }, {
-                key: "_playlistHasVideo",
+                key: "_collectionHasVideo",
                 value: function(e, t) {
                     return e.some(function(e) {
                         return t === "v" + e.item_id
@@ -35600,12 +35600,12 @@
                         n = t.playerOptions,
                         r = t.experiments;
                     n.collection && !n.channel && r.get(p.PERPETUA).then(function(t) {
-                        (0, c["default"])(p.ENABLE_PERPETUA_GROUP, t) && e._fetchPlaylistInfo(n.collection).then(function(t) {
-                            if (0 === t.items.length) return e._stateStore.dispatch((0, m.setPlaylistInfo)(t)), void e._stateStore.dispatch((0, b.pushScreen)(b.COLLECTION_EMPTY_SCREEN));
-                            if (n.video) e._playlistHasVideo(t.items, n.video) && e._stateStore.dispatch((0, m.setPlaylistInfo)(t));
+                        (0, c["default"])(p.ENABLE_PERPETUA_GROUP, t) && e._fetchCollectionInfo(n.collection).then(function(t) {
+                            if (0 === t.items.length) return e._stateStore.dispatch((0, m.setCollection)(t)), void e._stateStore.dispatch((0, b.pushScreen)(b.COLLECTION_EMPTY_SCREEN));
+                            if (n.video) e._collectionHasVideo(t.items, n.video) && e._stateStore.dispatch((0, m.setCollection)(t));
                             else {
                                 var r = "v" + t.items[0].item_id;
-                                e._stateStore.dispatch((0, E.setStream)(E.TYPE_VIDEO, r)), e._stateStore.dispatch((0, m.setPlaylistInfo)(t))
+                                e._stateStore.dispatch((0, E.setStream)(E.TYPE_VIDEO, r)), e._stateStore.dispatch((0, m.setCollection)(t))
                             }
                         })
                     })
@@ -35614,17 +35614,17 @@
                 key: "onPendingRequestChange",
                 value: function() {
                     var e = this,
-                        t = this._stateStore.getState().playlist.pendingRequest,
-                        n = t.playlistId,
+                        t = this._stateStore.getState().collection.pendingRequest,
+                        n = t.collectionId,
                         r = t.videoId;
-                    n && this._fetchPlaylistInfo(n).then(function(t) {
-                        if (0 === t.items.length) return e._stateStore.dispatch((0, m.setPlaylistInfo)(t)), void e._stateStore.dispatch((0, b.pushScreen)(b.COLLECTION_EMPTY_SCREEN));
-                        if (r && e._playlistHasVideo(t.items, r)) e._stateStore.dispatch((0, E.setStream)(E.TYPE_VIDEO, r));
+                    n && this._fetchCollectionInfo(n).then(function(t) {
+                        if (0 === t.items.length) return e._stateStore.dispatch((0, m.setCollection)(t)), void e._stateStore.dispatch((0, b.pushScreen)(b.COLLECTION_EMPTY_SCREEN));
+                        if (r && e._collectionHasVideo(t.items, r)) e._stateStore.dispatch((0, E.setStream)(E.TYPE_VIDEO, r));
                         else {
                             var n = "v" + t.items[0].item_id;
                             e._stateStore.dispatch((0, y.selectVOD)(n))
                         }
-                        e._stateStore.dispatch((0, m.setPlaylistInfo)(t))
+                        e._stateStore.dispatch((0, m.setCollection)(t))
                     })
                 }
             }, {
@@ -35633,7 +35633,7 @@
                     var e = this._stateStore.getState(),
                         t = e.playback,
                         n = e.stream;
-                    t.ended && t.transitionScheme === f.TRANSITION_TYPE_PLAYLIST && n.contentType === h.CONTENT_MODE_VOD && this._playNextVideo()
+                    t.ended && t.transitionScheme === f.TRANSITION_TYPE_COLLECTION && n.contentType === h.CONTENT_MODE_VOD && this._playNextVideo()
                 }
             }, {
                 key: "_playNextVideo",
@@ -35641,7 +35641,7 @@
                     var e = this,
                         t = this._stateStore.getState(),
                         n = t.stream,
-                        r = t.playlist,
+                        r = t.collection,
                         i = t.window;
                     if (0 !== r.items.length) {
                         var a = n.videoId,
