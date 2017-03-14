@@ -16464,7 +16464,6 @@ googletag.cmd = googletag.cmd || [],
                 VOD_UPLOAD_UNITS_V3: "1710cf57-352c-4d09-b2c1-3d40bdf79b30",
                 CHOMPY: "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57",
                 ADOPT: "5397de92-0538-42d1-977c-11842e03c9e5",
-                SNAIL: "fc494cf9-3a22-448e-b262-ba9e218559e5",
                 ORC: "d4d938f7-bdc2-42cd-afd0-f434e4192c29",
                 COMMUNITIES_SITE_SEARCH: "3f983cb9-25be-41cd-814d-22eaa23fdd27",
                 AWS_ROUNDTRIP_LATENCY_TEST_OPT_IN: "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef",
@@ -16542,7 +16541,6 @@ googletag.cmd = googletag.cmd || [],
                 CHOMPY: "experiment",
                 ONSITE_NOTIFICATIONS: "variant2",
                 CLIPS_HEAR_ME_NOW: "variant1",
-                SNAIL: "early",
                 PERPETUA: "early",
                 SOCIAL_COLUMN: "variant1",
                 SOCIAL_RECOMMENDATIONS: "variant1"
@@ -16709,8 +16707,7 @@ googletag.cmd = googletag.cmd || [],
             register: function(t) {
                 e.player.FlashPlayer.callbacks = e.player.FlashPlayer.callbacks || {};
                 var n = "callback" + this.callbackId++;
-                return e.player.FlashPlayer.callbacks[n] = t,
-                    "Twitch.player.FlashPlayer.callbacks." + n
+                return e.player.FlashPlayer.callbacks[n] = t, "Twitch.player.FlashPlayer.callbacks." + n;
             }
         };
         e.player.FlashPlayer = n
