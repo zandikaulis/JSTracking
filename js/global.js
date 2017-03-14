@@ -16458,7 +16458,6 @@ googletag.cmd = googletag.cmd || [],
                 DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS: "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2",
                 CLIENT_BATCH_SPADE: "1b905261-e257-4703-ac84-12a6a9099935",
                 CLIENT_BATCH_MIXPANEL: "42f5eea6-c548-4791-b767-9c7e29b73ef6",
-                CLIPS_FEEL_IT_COMING: "2858bc04-3f98-4808-a2dd-86555885ca90",
                 CLIPS_HEAR_ME_NOW: "9649684c-6d3f-423d-9d3c-f4296efee975",
                 ONSITE_NOTIFICATIONS: "b2925d54-cebb-4e1d-a50d-9dd2b1ea850e",
                 NEWS_FEED_REDESIGN: "05d8869f-e037-4955-b80a-7c361f9ddffb",
@@ -16512,7 +16511,6 @@ googletag.cmd = googletag.cmd || [],
                 "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": "hide",
                 "1b905261-e257-4703-ac84-12a6a9099935": "control",
                 "42f5eea6-c548-4791-b767-9c7e29b73ef6": "control",
-                "2858bc04-3f98-4808-a2dd-86555885ca90": "control",
                 "9649684c-6d3f-423d-9d3c-f4296efee975": "control",
                 "05d8869f-e037-4955-b80a-7c361f9ddffb": "no",
                 "1710cf57-352c-4d09-b2c1-3d40bdf79b30": "control",
@@ -16543,7 +16541,6 @@ googletag.cmd = googletag.cmd || [],
                 DISCOVER_SHOW_COVIEWS: "show",
                 CHOMPY: "experiment",
                 ONSITE_NOTIFICATIONS: "variant2",
-                CLIPS_FEEL_IT_COMING: "variant1",
                 CLIPS_HEAR_ME_NOW: "variant1",
                 SNAIL: "early",
                 PERPETUA: "early",
@@ -16712,7 +16709,8 @@ googletag.cmd = googletag.cmd || [],
             register: function(t) {
                 e.player.FlashPlayer.callbacks = e.player.FlashPlayer.callbacks || {};
                 var n = "callback" + this.callbackId++;
-                return e.player.FlashPlayer.callbacks[n] = t, "Twitch.player.FlashPlayer.callbacks." + n
+                return e.player.FlashPlayer.callbacks[n] = t,
+                    "Twitch.player.FlashPlayer.callbacks." + n
             }
         };
         e.player.FlashPlayer = n
@@ -17730,8 +17728,7 @@ googletag.cmd = googletag.cmd || [],
                     return e = e || "", e.charAt(0).toUpperCase() + e.slice(1)
                 },
                 commatize: function(e) {
-                    return e = e || 0,
-                        isNaN(e) ? e : e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                    return e = e || 0, isNaN(e) ? e : e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                 },
                 getTime: function(e) {
                     var t = n(e.getMinutes(), 2),
