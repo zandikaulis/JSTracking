@@ -803,16 +803,6 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
-        "740f3ab5-0558-4c23-b05c-de254ce2cf07": {
-            "name": "clips_best_of_2016",
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "variant1"
-            }]
-        },
         "758cbec2-80ad-478f-806e-fd3a7db9742f": {
             "name": "I18N_MISSING_TRANS",
             "groups": [{
