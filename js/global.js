@@ -17781,7 +17781,8 @@ googletag.cmd = googletag.cmd || [],
         })
     }(Twitch, jQuery),
     function(e) {
-        var t, n, i = new RSVP.Promise(function(t, n) {
+        var t, n, i;
+        "test" === e.deployFlavor ? (i = RSVP.resolve(SiteOptions.testGeoData), e.preferredLanguage = t = SiteOptions.testGeoData.preferred_language, e.receivedLanguage = n = SiteOptions.testGeoData.received_language) : i = new RSVP.Promise(function(t, n) {
             e.api.on("ready", function() {
                 e.api.get("/api/viewer/info.json").done(function(n) {
                     e.preferredLanguage = n.preferred_language, e.receivedLanguage = n.received_language;
@@ -17797,8 +17798,7 @@ googletag.cmd = googletag.cmd || [],
                     })
                 })
             })
-        });
-        e.mixin({
+        }), e.mixin({
             geo: i,
             receivedLanguage: n,
             preferredLanguage: t
