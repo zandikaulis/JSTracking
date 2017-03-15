@@ -9283,7 +9283,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.14-213224+ebeda21c9fd52f4918338bfa4b52838f55642c1f",
+                    app_version: "2017.03.15-194352+a18c731be1ec982764b73fcb2ec1e9067a7d7b81",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -35674,8 +35674,9 @@
                 value: function() {
                     var e = this._stateStore.getState(),
                         t = e.playback,
-                        n = e.stream;
-                    t.ended && t.transitionScheme === f.TRANSITION_TYPE_COLLECTION && n.contentType === h.CONTENT_MODE_VOD && this._playNextVideo()
+                        n = e.stream,
+                        r = e.ui;
+                    !r.isMini && t.ended && t.transitionScheme === f.TRANSITION_TYPE_COLLECTION && n.contentType === h.CONTENT_MODE_VOD && this._playNextVideo()
                 }
             }, {
                 key: "_playNextVideo",
