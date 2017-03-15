@@ -3186,9 +3186,10 @@
                 this._createdRoomDeferreds = [];
                 this._roomMembershipsDeferred = null;
                 this._emoticonImagesResponse = null;
+                this.ignoredDeferred = null;
                 this._users = new _usersJs2["default"];
                 if (opts.oauthToken) {
-                    this._fetchIgnored();
+                    this.ignoredDeferred = this._fetchIgnored();
                     this._openGroupsConnection()
                 }
                 this._emotesParser.on("emotes_changed", this._onEmotesResponseReceived, this)
@@ -3772,7 +3773,7 @@
                     oldConn.off("closed", onClosed)
                 };
                 oldConn.on("closed", onClosed);
-                setTimeout(onClosed, RECONNECT_TIMEOUT)
+                setTimeout(onClosed, RECONNECT_TIMEOUT);
             };
             SessionManager.prototype._onConnDisconnected = function(conn) {
                 this._trigger("connection:disconnected", {
