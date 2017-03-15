@@ -1439,19 +1439,6 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "no"
             }]
-        },
-        "fc494cf9-3a22-448e-b262-ba9e218559e5": {
-            "name": "snail",
-            "groups": [{
-                "weight": 10,
-                "value": "early"
-            }, {
-                "weight": 90,
-                "value": "mid"
-            }, {
-                "weight": 0,
-                "value": "control"
-            }]
         }
     }
 };
