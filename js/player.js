@@ -9283,7 +9283,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.15-194352+a18c731be1ec982764b73fcb2ec1e9067a7d7b81",
+                    app_version: "2017.03.16-181118+773d5f710280f67102a11770d907e4a5f733648b",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -10233,7 +10233,13 @@
             }
 
             function q() {
-                n.getState().quality.selected === j.QUALITY_AUTO ? n.dispatch((0, j.setABSQualities)(Le.getQualities(), Le.getVariant())) : n.dispatch((0, j.setQualities)(Le.getQualities()));
+                n.dispatch({
+                    type: T.ACTION_TOGGLE_CAPTIONS,
+                    captions: {
+                        data: null,
+                        available: !1
+                    }
+                }), n.getState().quality.selected === j.QUALITY_AUTO ? n.dispatch((0, j.setABSQualities)(Le.getQualities(), Le.getVariant())) : n.dispatch((0, j.setQualities)(Le.getQualities()));
                 var e = n.getState(),
                     t = e.quality,
                     i = e.stream,
@@ -14204,7 +14210,7 @@
         }
 
         function i() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d,
                 t = arguments[1];
             switch (t.type) {
                 case u.ACTION_SET_MUTED:
@@ -14220,6 +14226,11 @@
                         data: t.captions.data,
                         available: e.available || t.captions.data.data.length > 0
                     });
+                case c.ACTION_SET_STREAM:
+                    return (0, a["default"])({}, e, {
+                        available: d.available,
+                        data: d.data
+                    });
                 default:
                     return e
             }
@@ -14232,7 +14243,8 @@
             s = n(310),
             l = n(306),
             u = n(254),
-            c = t.DEFAULT_CAPTION = {
+            c = n(255),
+            d = t.DEFAULT_CAPTION = {
                 enabled: !1,
                 available: !1,
                 preset: "white-on-black",
@@ -14609,8 +14621,7 @@
             k = (t.IMAManager = function() {
                 function e(t, n, r) {
                     var i = this;
-                    o(this, e), this._videoContainer = t, this._backend = n, this._stateStore = r, this._paused = !1,
-                        this._contentPauseRequested = !1, this._eventEmitter = new l["default"], this._currentAdsManager = w;
+                    o(this, e), this._videoContainer = t, this._backend = n, this._stateStore = r, this._paused = !1, this._contentPauseRequested = !1, this._eventEmitter = new l["default"], this._currentAdsManager = w;
                     var a = this._stateStore.getState(),
                         s = a.window,
                         u = s.google;
@@ -28754,11 +28765,14 @@
                 var n = d(t, 2),
                     r = n[0],
                     i = n[1];
-                return r.indexOf(i.channel.name) === -1 ? Promise.reject("Current channel does not have VCA marker") : (0, p.fetch)({
+                return r.indexOf(i.channel.name) === -1 ? Promise.reject(new Error("Current channel does not have VCA markers")) : (0, p.fetch)({
                     url: "" + T + e + ".json",
                     dataType: "json"
                 })
-            }).then(a)
+            }).then(a)["catch"](function() {
+                var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new Error("Could not retrieve and/or normalize VCA markers");
+                return console.warn(e.message), []
+            })
         }
 
         function a(e) {
@@ -29475,8 +29489,7 @@
                 "player-menu__menu": !0,
                 "player-menu__menu--intro": !0
             }),
-            d = t.CLOSE_BUTTON_CLASS = (0,
-                l["default"])({
+            d = t.CLOSE_BUTTON_CLASS = (0, l["default"])({
                 "player-button": !0,
                 "player-button--noscale": !0,
                 "player-button--introClose": !0
