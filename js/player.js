@@ -9283,7 +9283,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.16-181118+773d5f710280f67102a11770d907e4a5f733648b",
+                    app_version: "2017.03.16-230605+641b438ca267f4aef70e205d497cb509b5e8adf2",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -10505,10 +10505,7 @@
                     i = n.getState().quality.selected === j.QUALITY_AUTO;
                 Le.absAvailable() && (t || e) ? (n.dispatch((0, j.selectQuality)(j.QUALITY_AUTO)), n.dispatch((0, j.setPreferredQuality)(j.QUALITY_AUTO_OBJECT)), g.localStore.set(j.KEY_AUTO_QUALITY_FORCED, !0)) : !Le.absAvailable() && i && n.dispatch((0, j.selectQuality)(j.DEFAULT_STREAM_FORMAT, j.DEFAULT_STREAM_BITRATE_IN_BPS)), n.dispatch((0, j.setABSAvailability)(Le.absAvailable()))
             }, Le.absAvailable = function() {
-                var e = n.getState(),
-                    t = e.stream,
-                    r = t.contentType === b.CONTENT_MODE_LIVE;
-                return r && De.absAvailable()
+                return De.absAvailable()
             }, Le._initQuality = function() {
                 Le._setABS(), Oe()
             }, Le.destroy = function() {
