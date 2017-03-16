@@ -206,7 +206,16 @@ window.SiteOptions = {
         "0c22fa7f-9b7d-4c6a-9b63-1f70c0af3df2": {
             "name": "CVP-Mar-2017",
             "groups": [{
-                "weight": 75,
+                "weight": 10,
+                "value": "1.5.1+def"
+            }, {
+                "weight": 8,
+                "value": "1.5.1+abs1"
+            }, {
+                "weight": 2,
+                "value": "1.5.1+abs3"
+            }, {
+                "weight": 63,
                 "value": "1.5.1"
             }, {
                 "weight": 5,
@@ -217,12 +226,6 @@ window.SiteOptions = {
             }, {
                 "weight": 2,
                 "value": "1.5.2+fxf"
-            }, {
-                "weight": 4,
-                "value": "1.5.1+abs0"
-            }, {
-                "weight": 4,
-                "value": "1.5.1+abs1"
             }]
         },
         "143da2f9-bf80-4555-a661-76c378fcd5c8": {
