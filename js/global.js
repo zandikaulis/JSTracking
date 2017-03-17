@@ -15001,471 +15001,475 @@ function(e) {
         }, e.range.constructor = t, e.fn.range = e.range, e.fn.within = function(e) {
             return e.contains(this._d)
         }, t
-    });
-var Dobbin = function(e) {
-        function t(i) {
-            if (n[i]) return n[i].exports;
-            var r = n[i] = {
-                i: i,
-                l: !1,
-                exports: {}
-            };
-            return e[i].call(r.exports, r, r.exports, t), r.l = !0, r.exports
-        }
-        var n = {};
-        return t.m = e, t.c = n, t.i = function(e) {
-            return e
-        }, t.d = function(e, n, i) {
-            t.o(e, n) || Object.defineProperty(e, n, {
-                configurable: !1,
-                enumerable: !0,
-                get: i
-            })
-        }, t.n = function(e) {
-            var n = e && e.__esModule ? function() {
-                return e.default
-            } : function() {
-                return e
-            };
-            return t.d(n, "a", n), n
-        }, t.o = function(e, t) {
-            return Object.prototype.hasOwnProperty.call(e, t)
-        }, t.p = "/assets/", t(t.s = 10)
-    }([function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            e.Promise && (r = e.Promise), e.serviceUrls && (e.serviceUrls.mixpanel && (a.mixpanel = e.serviceUrls.mixpanel), e.serviceUrls.spade && (a.spade = e.serviceUrls.spade)), e.serviceBatchSizes && (e.serviceBatchSizes.mixpanel && (l.mixpanel = e.serviceBatchSizes.mixpanel), e.serviceBatchSizes.spade && (l.spade = e.serviceBatchSizes.spade))
-        }
-        n.d(t, "e", function() {
-            return o
-        }), n.d(t, "f", function() {
-            return s
-        }), t.b = i, n.d(t, "a", function() {
-            return r
-        }), n.d(t, "c", function() {
-            return a
-        }), n.d(t, "d", function() {
-            return l
-        });
-        var r, o = "mixpanel",
-            s = "spade",
-            a = {
-                spade: {
-                    href: "//spade.twitch.tv/"
-                },
-                mixpanel: {
-                    href: "//api.mixpanel.com/track"
-                }
-            },
-            l = {
-                spade: 100,
-                mixpanel: 50
+    }),
+    function(e, t) {
+        "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? exports.Dobbin = t() : e.Dobbin = t()
+    }(this, function() {
+        return function(e) {
+            function t(i) {
+                if (n[i]) return n[i].exports;
+                var r = n[i] = {
+                    i: i,
+                    l: !1,
+                    exports: {}
+                };
+                return e[i].call(r.exports, r, r.exports, t), r.l = !0, r.exports
             }
-    }, function(e, t, n) {
-        ! function(n, i) {
-            e.exports = t = i()
-        }(this, function() {
-            var e = e || function(e, t) {
-                var n = Object.create || function() {
-                        function e() {}
-                        return function(t) {
-                            var n;
-                            return e.prototype = t, n = new e, e.prototype = null, n
-                        }
-                    }(),
-                    i = {},
-                    r = i.lib = {},
-                    o = r.Base = function() {
-                        return {
-                            extend: function(e) {
-                                var t = n(this);
-                                return e && t.mixIn(e), t.hasOwnProperty("init") && this.init !== t.init || (t.init = function() {
-                                    t.$super.init.apply(this, arguments)
-                                }), t.init.prototype = t, t.$super = this, t
+            var n = {};
+            return t.m = e, t.c = n, t.i = function(e) {
+                return e
+            }, t.d = function(e, n, i) {
+                t.o(e, n) || Object.defineProperty(e, n, {
+                    configurable: !1,
+                    enumerable: !0,
+                    get: i
+                })
+            }, t.n = function(e) {
+                var n = e && e.__esModule ? function() {
+                    return e.default
+                } : function() {
+                    return e
+                };
+                return t.d(n, "a", n), n
+            }, t.o = function(e, t) {
+                return Object.prototype.hasOwnProperty.call(e, t)
+            }, t.p = "", t(t.s = 10)
+        }([function(e, t, n) {
+            "use strict";
+
+            function i(e) {
+                e.Promise && (r = e.Promise), e.serviceUrls && (e.serviceUrls.mixpanel && (a.mixpanel = e.serviceUrls.mixpanel), e.serviceUrls.spade && (a.spade = e.serviceUrls.spade)), e.serviceBatchSizes && (e.serviceBatchSizes.mixpanel && (l.mixpanel = e.serviceBatchSizes.mixpanel), e.serviceBatchSizes.spade && (l.spade = e.serviceBatchSizes.spade))
+            }
+            n.d(t, "e", function() {
+                return o
+            }), n.d(t, "f", function() {
+                return s
+            }), t.b = i, n.d(t, "a", function() {
+                return r
+            }), n.d(t, "c", function() {
+                return a
+            }), n.d(t, "d", function() {
+                return l
+            });
+            var r, o = "mixpanel",
+                s = "spade",
+                a = {
+                    spade: {
+                        href: "//spade.twitch.tv/"
+                    },
+                    mixpanel: {
+                        href: "//api.mixpanel.com/track"
+                    }
+                },
+                l = {
+                    spade: 100,
+                    mixpanel: 50
+                }
+        }, function(e, t, n) {
+            ! function(n, i) {
+                e.exports = t = i()
+            }(this, function() {
+                var e = e || function(e, t) {
+                    var n = Object.create || function() {
+                            function e() {}
+                            return function(t) {
+                                var n;
+                                return e.prototype = t, n = new e, e.prototype = null, n
+                            }
+                        }(),
+                        i = {},
+                        r = i.lib = {},
+                        o = r.Base = function() {
+                            return {
+                                extend: function(e) {
+                                    var t = n(this);
+                                    return e && t.mixIn(e), t.hasOwnProperty("init") && this.init !== t.init || (t.init = function() {
+                                        t.$super.init.apply(this, arguments)
+                                    }), t.init.prototype = t, t.$super = this, t
+                                },
+                                create: function() {
+                                    var e = this.extend();
+                                    return e.init.apply(e, arguments), e
+                                },
+                                init: function() {},
+                                mixIn: function(e) {
+                                    for (var t in e) e.hasOwnProperty(t) && (this[t] = e[t]);
+                                    e.hasOwnProperty("toString") && (this.toString = e.toString)
+                                },
+                                clone: function() {
+                                    return this.init.prototype.extend(this)
+                                }
+                            }
+                        }(),
+                        s = r.WordArray = o.extend({
+                            init: function(e, n) {
+                                e = this.words = e || [], n != t ? this.sigBytes = n : this.sigBytes = 4 * e.length
                             },
-                            create: function() {
-                                var e = this.extend();
-                                return e.init.apply(e, arguments), e
+                            toString: function(e) {
+                                return (e || l).stringify(this)
                             },
-                            init: function() {},
-                            mixIn: function(e) {
-                                for (var t in e) e.hasOwnProperty(t) && (this[t] = e[t]);
-                                e.hasOwnProperty("toString") && (this.toString = e.toString)
+                            concat: function(e) {
+                                var t = this.words,
+                                    n = e.words,
+                                    i = this.sigBytes,
+                                    r = e.sigBytes;
+                                if (this.clamp(), i % 4)
+                                    for (var o = 0; o < r; o++) {
+                                        var s = n[o >>> 2] >>> 24 - o % 4 * 8 & 255;
+                                        t[i + o >>> 2] |= s << 24 - (i + o) % 4 * 8
+                                    } else
+                                        for (var o = 0; o < r; o += 4) t[i + o >>> 2] = n[o >>> 2];
+                                return this.sigBytes += r, this
+                            },
+                            clamp: function() {
+                                var t = this.words,
+                                    n = this.sigBytes;
+                                t[n >>> 2] &= 4294967295 << 32 - n % 4 * 8, t.length = e.ceil(n / 4)
                             },
                             clone: function() {
-                                return this.init.prototype.extend(this)
+                                var e = o.clone.call(this);
+                                return e.words = this.words.slice(0), e
+                            },
+                            random: function(t) {
+                                for (var n, i = [], r = function(t) {
+                                        var t = t,
+                                            n = 987654321,
+                                            i = 4294967295;
+                                        return function() {
+                                            n = 36969 * (65535 & n) + (n >> 16) & i, t = 18e3 * (65535 & t) + (t >> 16) & i;
+                                            var r = (n << 16) + t & i;
+                                            return r /= 4294967296, r += .5, r * (e.random() > .5 ? 1 : -1)
+                                        }
+                                    }, o = 0; o < t; o += 4) {
+                                    var a = r(4294967296 * (n || e.random()));
+                                    n = 987654071 * a(), i.push(4294967296 * a() | 0)
+                                }
+                                return new s.init(i, t)
                             }
-                        }
-                    }(),
-                    s = r.WordArray = o.extend({
-                        init: function(e, n) {
-                            e = this.words = e || [], n != t ? this.sigBytes = n : this.sigBytes = 4 * e.length
-                        },
-                        toString: function(e) {
-                            return (e || l).stringify(this)
-                        },
-                        concat: function(e) {
-                            var t = this.words,
-                                n = e.words,
-                                i = this.sigBytes,
-                                r = e.sigBytes;
-                            if (this.clamp(), i % 4)
-                                for (var o = 0; o < r; o++) {
-                                    var s = n[o >>> 2] >>> 24 - o % 4 * 8 & 255;
-                                    t[i + o >>> 2] |= s << 24 - (i + o) % 4 * 8
-                                } else
-                                    for (var o = 0; o < r; o += 4) t[i + o >>> 2] = n[o >>> 2];
-                            return this.sigBytes += r, this
-                        },
-                        clamp: function() {
-                            var t = this.words,
-                                n = this.sigBytes;
-                            t[n >>> 2] &= 4294967295 << 32 - n % 4 * 8, t.length = e.ceil(n / 4)
-                        },
-                        clone: function() {
-                            var e = o.clone.call(this);
-                            return e.words = this.words.slice(0), e
-                        },
-                        random: function(t) {
-                            for (var n, i = [], r = function(t) {
-                                    var t = t,
-                                        n = 987654321,
-                                        i = 4294967295;
-                                    return function() {
-                                        n = 36969 * (65535 & n) + (n >> 16) & i, t = 18e3 * (65535 & t) + (t >> 16) & i;
-                                        var r = (n << 16) + t & i;
-                                        return r /= 4294967296, r += .5, r * (e.random() > .5 ? 1 : -1)
-                                    }
-                                }, o = 0; o < t; o += 4) {
-                                var a = r(4294967296 * (n || e.random()));
-                                n = 987654071 * a(), i.push(4294967296 * a() | 0)
-                            }
-                            return new s.init(i, t)
-                        }
-                    }),
-                    a = i.enc = {},
-                    l = a.Hex = {
-                        stringify: function(e) {
-                            for (var t = e.words, n = e.sigBytes, i = [], r = 0; r < n; r++) {
-                                var o = t[r >>> 2] >>> 24 - r % 4 * 8 & 255;
-                                i.push((o >>> 4).toString(16)), i.push((15 & o).toString(16))
-                            }
-                            return i.join("")
-                        },
-                        parse: function(e) {
-                            for (var t = e.length, n = [], i = 0; i < t; i += 2) n[i >>> 3] |= parseInt(e.substr(i, 2), 16) << 24 - i % 8 * 4;
-                            return new s.init(n, t / 2)
-                        }
-                    },
-                    u = a.Latin1 = {
-                        stringify: function(e) {
-                            for (var t = e.words, n = e.sigBytes, i = [], r = 0; r < n; r++) {
-                                var o = t[r >>> 2] >>> 24 - r % 4 * 8 & 255;
-                                i.push(String.fromCharCode(o))
-                            }
-                            return i.join("")
-                        },
-                        parse: function(e) {
-                            for (var t = e.length, n = [], i = 0; i < t; i++) n[i >>> 2] |= (255 & e.charCodeAt(i)) << 24 - i % 4 * 8;
-                            return new s.init(n, t)
-                        }
-                    },
-                    c = a.Utf8 = {
-                        stringify: function(e) {
-                            try {
-                                return decodeURIComponent(escape(u.stringify(e)))
-                            } catch (e) {
-                                throw new Error("Malformed UTF-8 data")
+                        }),
+                        a = i.enc = {},
+                        l = a.Hex = {
+                            stringify: function(e) {
+                                for (var t = e.words, n = e.sigBytes, i = [], r = 0; r < n; r++) {
+                                    var o = t[r >>> 2] >>> 24 - r % 4 * 8 & 255;
+                                    i.push((o >>> 4).toString(16)), i.push((15 & o).toString(16))
+                                }
+                                return i.join("")
+                            },
+                            parse: function(e) {
+                                for (var t = e.length, n = [], i = 0; i < t; i += 2) n[i >>> 3] |= parseInt(e.substr(i, 2), 16) << 24 - i % 8 * 4;
+                                return new s.init(n, t / 2)
                             }
                         },
-                        parse: function(e) {
-                            return u.parse(unescape(encodeURIComponent(e)))
-                        }
-                    },
-                    h = r.BufferedBlockAlgorithm = o.extend({
-                        reset: function() {
-                            this._data = new s.init, this._nDataBytes = 0
-                        },
-                        _append: function(e) {
-                            "string" == typeof e && (e = c.parse(e)), this._data.concat(e), this._nDataBytes += e.sigBytes
-                        },
-                        _process: function(t) {
-                            var n = this._data,
-                                i = n.words,
-                                r = n.sigBytes,
-                                o = this.blockSize,
-                                a = 4 * o,
-                                l = r / a;
-                            l = t ? e.ceil(l) : e.max((0 | l) - this._minBufferSize, 0);
-                            var u = l * o,
-                                c = e.min(4 * u, r);
-                            if (u) {
-                                for (var h = 0; h < u; h += o) this._doProcessBlock(i, h);
-                                var d = i.splice(0, u);
-                                n.sigBytes -= c
-                            }
-                            return new s.init(d, c)
-                        },
-                        clone: function() {
-                            var e = o.clone.call(this);
-                            return e._data = this._data.clone(), e
-                        },
-                        _minBufferSize: 0
-                    }),
-                    d = (r.Hasher = h.extend({
-                        cfg: o.extend(),
-                        init: function(e) {
-                            this.cfg = this.cfg.extend(e), this.reset()
-                        },
-                        reset: function() {
-                            h.reset.call(this), this._doReset()
-                        },
-                        update: function(e) {
-                            return this._append(e), this._process(), this
-                        },
-                        finalize: function(e) {
-                            e && this._append(e);
-                            var t = this._doFinalize();
-                            return t
-                        },
-                        blockSize: 16,
-                        _createHelper: function(e) {
-                            return function(t, n) {
-                                return new e.init(n).finalize(t)
+                        u = a.Latin1 = {
+                            stringify: function(e) {
+                                for (var t = e.words, n = e.sigBytes, i = [], r = 0; r < n; r++) {
+                                    var o = t[r >>> 2] >>> 24 - r % 4 * 8 & 255;
+                                    i.push(String.fromCharCode(o))
+                                }
+                                return i.join("")
+                            },
+                            parse: function(e) {
+                                for (var t = e.length, n = [], i = 0; i < t; i++) n[i >>> 2] |= (255 & e.charCodeAt(i)) << 24 - i % 4 * 8;
+                                return new s.init(n, t)
                             }
                         },
-                        _createHmacHelper: function(e) {
-                            return function(t, n) {
-                                return new d.HMAC.init(e, n).finalize(t)
+                        c = a.Utf8 = {
+                            stringify: function(e) {
+                                try {
+                                    return decodeURIComponent(escape(u.stringify(e)))
+                                } catch (e) {
+                                    throw new Error("Malformed UTF-8 data")
+                                }
+                            },
+                            parse: function(e) {
+                                return u.parse(unescape(encodeURIComponent(e)))
                             }
-                        }
-                    }), i.algo = {});
-                return i
-            }(Math);
-            return e
-        })
-    }, function(e, t, n) {
-        "use strict";
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        });
-        var i = n(0),
-            r = n(8),
-            o = n(6),
-            s = n(9);
-        n.d(t, "Dobbin", function() {
-            return a
-        });
-        var a = function() {
-            function e() {}
-            return e.trackEvent = function(e, t, n) {
-                void 0 === n && (n = ["spade", "mixpanel"]);
-                var i = {
-                    event: e,
-                    properties: t
-                };
-                return this.eventBuffer.forEach(function(e, t) {
-                    n.indexOf(t) !== -1 && e.push(i)
-                }), this.queueFlush()
-            }, e.queueFlush = function() {
-                var e = this;
-                return this.queuedFlush || (this.queuedFlush = new i.a(function(t) {
-                    n.i(r.a)(function(n) {
-                        t(e.flush(n))
-                    })
-                })), this.queuedFlush
-            }, e.flush = function(e) {
-                this.queuedFlush = void 0;
-                for (var t = this.eventBuffer.totalSize(), n = t; n > 0;) {
-                    if (e.timeRemaining() <= 0) {
-                        this.queueFlush();
-                        break
-                    }
-                    this.eventBuffer.forEach(function(e) {
-                        n -= e.flushOnce()
-                    })
-                }
-                return {
-                    flushed: t - n,
-                    buffered: n
-                }
-            }, e
-        }();
-        a.events = {
-            EVENT_PAGEVIEW: s.a,
-            UNTRUSTED_EVENT_PAGEVIEW: s.b
-        }, a.configure = i.b, a.eventBuffer = new o.a, a.queuedFlush = void 0
-    }, function(e, t, n) {
-        ! function(i, r) {
-            e.exports = t = r(n(1))
-        }(this, function(e) {
-            return function() {
-                function t(e, t, n) {
-                    for (var i = [], o = 0, s = 0; s < t; s++)
-                        if (s % 4) {
-                            var a = n[e.charCodeAt(s - 1)] << s % 4 * 2,
-                                l = n[e.charCodeAt(s)] >>> 6 - s % 4 * 2;
-                            i[o >>> 2] |= (a | l) << 24 - o % 4 * 8, o++
-                        }
-                    return r.create(i, o)
-                }
-                var n = e,
-                    i = n.lib,
-                    r = i.WordArray,
-                    o = n.enc;
-                o.Base64 = {
-                    stringify: function(e) {
-                        var t = e.words,
-                            n = e.sigBytes,
-                            i = this._map;
-                        e.clamp();
-                        for (var r = [], o = 0; o < n; o += 3)
-                            for (var s = t[o >>> 2] >>> 24 - o % 4 * 8 & 255, a = t[o + 1 >>> 2] >>> 24 - (o + 1) % 4 * 8 & 255, l = t[o + 2 >>> 2] >>> 24 - (o + 2) % 4 * 8 & 255, u = s << 16 | a << 8 | l, c = 0; c < 4 && o + .75 * c < n; c++) r.push(i.charAt(u >>> 6 * (3 - c) & 63));
-                        var h = i.charAt(64);
-                        if (h)
-                            for (; r.length % 4;) r.push(h);
-                        return r.join("")
-                    },
-                    parse: function(e) {
-                        var n = e.length,
-                            i = this._map,
-                            r = this._reverseMap;
-                        if (!r) {
-                            r = this._reverseMap = [];
-                            for (var o = 0; o < i.length; o++) r[i.charCodeAt(o)] = o
-                        }
-                        var s = i.charAt(64);
-                        if (s) {
-                            var a = e.indexOf(s);
-                            a !== -1 && (n = a)
-                        }
-                        return t(e, n, r)
-                    },
-                    _map: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
-                }
-            }(), e.enc.Base64
-        })
-    }, function(e, t, n) {
-        ! function(i, r) {
-            e.exports = t = r(n(1))
-        }(this, function(e) {
-            return e.enc.Utf8
-        })
-    }, function(e, t, n) {
-        "use strict";
-
-        function i(e, t, n, i) {
-            void 0 === n && (n = {}), void 0 === i && (i = "");
-            var r = new XMLHttpRequest;
-            return r.open(e, t, !0), n && Object.keys(n).forEach(function(e) {
-                n.hasOwnProperty(e) && r.setRequestHeader(e, n[e])
-            }), new o.a(function(n, o) {
-                r.onreadystatechange = function() {
-                    r.readyState === s && (r.status >= 200 && r.status < 300 ? n(r.responseText) : o(new Error("dobbin.js " + e + " " + t + " responded " + r.status + "\n" + r.responseText)))
-                }, r.send(i)
+                        },
+                        h = r.BufferedBlockAlgorithm = o.extend({
+                            reset: function() {
+                                this._data = new s.init, this._nDataBytes = 0
+                            },
+                            _append: function(e) {
+                                "string" == typeof e && (e = c.parse(e)), this._data.concat(e), this._nDataBytes += e.sigBytes
+                            },
+                            _process: function(t) {
+                                var n = this._data,
+                                    i = n.words,
+                                    r = n.sigBytes,
+                                    o = this.blockSize,
+                                    a = 4 * o,
+                                    l = r / a;
+                                l = t ? e.ceil(l) : e.max((0 | l) - this._minBufferSize, 0);
+                                var u = l * o,
+                                    c = e.min(4 * u, r);
+                                if (u) {
+                                    for (var h = 0; h < u; h += o) this._doProcessBlock(i, h);
+                                    var d = i.splice(0, u);
+                                    n.sigBytes -= c
+                                }
+                                return new s.init(d, c)
+                            },
+                            clone: function() {
+                                var e = o.clone.call(this);
+                                return e._data = this._data.clone(), e
+                            },
+                            _minBufferSize: 0
+                        }),
+                        d = (r.Hasher = h.extend({
+                            cfg: o.extend(),
+                            init: function(e) {
+                                this.cfg = this.cfg.extend(e), this.reset()
+                            },
+                            reset: function() {
+                                h.reset.call(this), this._doReset()
+                            },
+                            update: function(e) {
+                                return this._append(e), this._process(), this
+                            },
+                            finalize: function(e) {
+                                e && this._append(e);
+                                var t = this._doFinalize();
+                                return t
+                            },
+                            blockSize: 16,
+                            _createHelper: function(e) {
+                                return function(t, n) {
+                                    return new e.init(n).finalize(t)
+                                }
+                            },
+                            _createHmacHelper: function(e) {
+                                return function(t, n) {
+                                    return new d.HMAC.init(e, n).finalize(t)
+                                }
+                            }
+                        }), i.algo = {});
+                    return i
+                }(Math);
+                return e
             })
-        }
-
-        function r(e, t) {
-            return i("POST", e, {
-                "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
-            }, t)
-        }
-        var o = n(0);
-        t.a = r;
-        var s = 4
-    }, function(e, t, n) {
-        "use strict";
-        var i = n(0),
-            r = n(7),
-            o = n(5);
-        n.d(t, "a", function() {
-            return a
-        });
-        var s = function() {
-                function e(e) {
-                    this.service = e, this.events = []
-                }
-                return Object.defineProperty(e.prototype, "length", {
-                    get: function() {
-                        return this.events.length
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), e.prototype.push = function(e) {
-                    return this.events.push(e)
-                }, e.prototype.flushOnce = function() {
-                    if (0 === this.events.length) return 0;
-                    var e = this.getBatch(),
-                        t = n.i(r.a)(e),
-                        s = "data=" + t;
-                    return n.i(o.a)(i.c[this.service].href, s), e.length
-                }, e.prototype.getBatch = function() {
-                    var e = Math.max(i.d[this.service], 1);
-                    return this.events.splice(0, e)
-                }, e
-            }(),
-            a = function() {
-                function e() {
-                    this.services = (e = {}, e[i.e] = new s(i.e), e[i.f] = new s(i.f), e);
-                    var e
-                }
-                return e.prototype.forEach = function(e) {
-                    var t = this;
-                    Object.keys(this.services).forEach(function(n) {
-                        e(t.services[n], n)
-                    })
-                }, e.prototype.totalSize = function() {
-                    var e = 0;
-                    return this.forEach(function(t) {
-                        e += t.length
-                    }), e
-                }, e
-            }()
-    }, function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return r.stringify(o.parse(JSON.stringify(e)))
-        }
-        var r = n(3),
-            o = (n.n(r), n(4));
-        n.n(o);
-        t.a = i
-    }, function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            function t(i) {
-                var r = 24;
-                i - n < r ? e({
-                    didTimeout: !1,
-                    timeRemaining: function() {
-                        return Math.max(0, r - (performance.now() - i))
+        }, function(e, t, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            });
+            var i = n(0),
+                r = n(8),
+                o = n(6),
+                s = n(9);
+            n.d(t, "Dobbin", function() {
+                return a
+            });
+            var a = function() {
+                function e() {}
+                return e.trackEvent = function(e, t, n) {
+                    void 0 === n && (n = ["spade", "mixpanel"]);
+                    var i = {
+                        event: e,
+                        properties: t
+                    };
+                    return this.eventBuffer.forEach(function(e, t) {
+                        n.indexOf(t) !== -1 && e.push(i)
+                    }), this.queueFlush()
+                }, e.queueFlush = function() {
+                    var e = this;
+                    return this.queuedFlush || (this.queuedFlush = new i.a(function(t) {
+                        n.i(r.a)(function(n) {
+                            t(e.flush(n))
+                        })
+                    })), this.queuedFlush
+                }, e.flush = function(e) {
+                    this.queuedFlush = void 0;
+                    for (var t = this.eventBuffer.totalSize(), n = t; n > 0;) {
+                        if (e.timeRemaining() <= 0) {
+                            this.queueFlush();
+                            break
+                        }
+                        this.eventBuffer.forEach(function(e) {
+                            n -= e.flushOnce()
+                        })
                     }
-                }) : (n = i, requestAnimationFrame(t))
+                    return {
+                        flushed: t - n,
+                        buffered: n
+                    }
+                }, e
+            }();
+            a.events = {
+                EVENT_PAGEVIEW: s.a,
+                UNTRUSTED_EVENT_PAGEVIEW: s.b
+            }, a.configure = i.b, a.eventBuffer = new o.a, a.queuedFlush = void 0
+        }, function(e, t, n) {
+            ! function(i, r) {
+                e.exports = t = r(n(1))
+            }(this, function(e) {
+                return function() {
+                    function t(e, t, n) {
+                        for (var i = [], o = 0, s = 0; s < t; s++)
+                            if (s % 4) {
+                                var a = n[e.charCodeAt(s - 1)] << s % 4 * 2,
+                                    l = n[e.charCodeAt(s)] >>> 6 - s % 4 * 2;
+                                i[o >>> 2] |= (a | l) << 24 - o % 4 * 8, o++
+                            }
+                        return r.create(i, o)
+                    }
+                    var n = e,
+                        i = n.lib,
+                        r = i.WordArray,
+                        o = n.enc;
+                    o.Base64 = {
+                        stringify: function(e) {
+                            var t = e.words,
+                                n = e.sigBytes,
+                                i = this._map;
+                            e.clamp();
+                            for (var r = [], o = 0; o < n; o += 3)
+                                for (var s = t[o >>> 2] >>> 24 - o % 4 * 8 & 255, a = t[o + 1 >>> 2] >>> 24 - (o + 1) % 4 * 8 & 255, l = t[o + 2 >>> 2] >>> 24 - (o + 2) % 4 * 8 & 255, u = s << 16 | a << 8 | l, c = 0; c < 4 && o + .75 * c < n; c++) r.push(i.charAt(u >>> 6 * (3 - c) & 63));
+                            var h = i.charAt(64);
+                            if (h)
+                                for (; r.length % 4;) r.push(h);
+                            return r.join("")
+                        },
+                        parse: function(e) {
+                            var n = e.length,
+                                i = this._map,
+                                r = this._reverseMap;
+                            if (!r) {
+                                r = this._reverseMap = [];
+                                for (var o = 0; o < i.length; o++) r[i.charCodeAt(o)] = o
+                            }
+                            var s = i.charAt(64);
+                            if (s) {
+                                var a = e.indexOf(s);
+                                a !== -1 && (n = a)
+                            }
+                            return t(e, n, r)
+                        },
+                        _map: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
+                    }
+                }(), e.enc.Base64
+            })
+        }, function(e, t, n) {
+            ! function(i, r) {
+                e.exports = t = r(n(1))
+            }(this, function(e) {
+                return e.enc.Utf8
+            })
+        }, function(e, t, n) {
+            "use strict";
+
+            function i(e, t, n, i) {
+                void 0 === n && (n = {}), void 0 === i && (i = "");
+                var r = new XMLHttpRequest;
+                return r.open(e, t, !0), n && Object.keys(n).forEach(function(e) {
+                    n.hasOwnProperty(e) && r.setRequestHeader(e, n[e])
+                }), new o.a(function(n, o) {
+                    r.onreadystatechange = function() {
+                        r.readyState === s && (r.status >= 200 && r.status < 300 ? n(r.responseText) : o(new Error("dobbin.js " + e + " " + t + " responded " + r.status + "\n" + r.responseText)))
+                    }, r.send(i)
+                })
             }
-            var n = performance.now();
-            requestAnimationFrame(t)
-        }
-        n.d(t, "a", function() {
-            return r
-        });
-        var r = window.requestIdleCallback || i
-    }, function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return i
-        }), n.d(t, "b", function() {
-            return r
-        });
-        var i = "pageview",
-            r = "x_untrusted_pageview"
-    }, function(e, t, n) {
-        e.exports = n(2)
-    }]),
-    BaseDomain = "justin.tv",
+
+            function r(e, t) {
+                return i("POST", e, {
+                    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+                }, t)
+            }
+            var o = n(0);
+            t.a = r;
+            var s = 4
+        }, function(e, t, n) {
+            "use strict";
+            var i = n(0),
+                r = n(7),
+                o = n(5);
+            n.d(t, "a", function() {
+                return a
+            });
+            var s = function() {
+                    function e(e) {
+                        this.service = e, this.events = []
+                    }
+                    return Object.defineProperty(e.prototype, "length", {
+                        get: function() {
+                            return this.events.length
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), e.prototype.push = function(e) {
+                        return this.events.push(e)
+                    }, e.prototype.flushOnce = function() {
+                        if (0 === this.events.length) return 0;
+                        var e = this.getBatch(),
+                            t = n.i(r.a)(e),
+                            s = "data=" + t;
+                        return n.i(o.a)(i.c[this.service].href, s), e.length
+                    }, e.prototype.getBatch = function() {
+                        var e = Math.max(i.d[this.service], 1);
+                        return this.events.splice(0, e)
+                    }, e
+                }(),
+                a = function() {
+                    function e() {
+                        this.services = (e = {}, e[i.e] = new s(i.e), e[i.f] = new s(i.f), e);
+                        var e
+                    }
+                    return e.prototype.forEach = function(e) {
+                        var t = this;
+                        Object.keys(this.services).forEach(function(n) {
+                            e(t.services[n], n)
+                        })
+                    }, e.prototype.totalSize = function() {
+                        var e = 0;
+                        return this.forEach(function(t) {
+                            e += t.length
+                        }), e
+                    }, e
+                }()
+        }, function(e, t, n) {
+            "use strict";
+
+            function i(e) {
+                return r.stringify(o.parse(JSON.stringify(e)))
+            }
+            var r = n(3),
+                o = (n.n(r), n(4));
+            n.n(o);
+            t.a = i
+        }, function(e, t, n) {
+            "use strict";
+
+            function i(e) {
+                function t(i) {
+                    var r = 24;
+                    i - n < r ? e({
+                        didTimeout: !1,
+                        timeRemaining: function() {
+                            return Math.max(0, r - (performance.now() - i))
+                        }
+                    }) : (n = i, requestAnimationFrame(t))
+                }
+                var n = performance.now();
+                requestAnimationFrame(t)
+            }
+            n.d(t, "a", function() {
+                return r
+            });
+            var r = window.requestIdleCallback || i
+        }, function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return i
+            }), n.d(t, "b", function() {
+                return r
+            });
+            var i = "pageview",
+                r = "x_untrusted_pageview"
+        }, function(e, t, n) {
+            e.exports = n(2)
+        }])
+    });
+var BaseDomain = "justin.tv",
     escapeHtml = function(e, t) {
         return t ? e : e.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\$/g, "&#36;")
     };
@@ -15664,12 +15668,12 @@ googletag.cmd = googletag.cmd || [],
                     r.prepend(a).show(), a.prepend(s).show(), r.scrollTop(0), i.focusOnLoad && e(i.focusOnLoad).focus(), i.closeOnEsc && r.on("keyup.overlay", function(e) {
                         27 === e.keyCode && r.trigger("overlay.hide")
                     }), i.closeOnExteriorClick && e("body.overlay").on("click.overlay", function(t) {
-                        e(t.target).hasClass("twitch_subwindow_container") && r.trigger("overlay.hide")
+                        e(t.target).hasClass("twitch_subwindow_container") && r.trigger("overlay.hide");
                     }), r.on("overlay.hide", function(e) {
                         e.stopPropagation(), i.destroyOnHide ? (s.remove(), a.remove()) : (s.hide(), a.hide())
                     }), "function" == typeof n && n(s, a)
                 };
-                "string" == typeof t ? e.get(t).success(o) : o(t);
+                "string" == typeof t ? e.get(t).success(o) : o(t)
             })
         }, e.fn.teardownOverlay = function() {
             return this.each(function() {
@@ -16706,7 +16710,7 @@ googletag.cmd = googletag.cmd || [],
             register: function(t) {
                 e.player.FlashPlayer.callbacks = e.player.FlashPlayer.callbacks || {};
                 var n = "callback" + this.callbackId++;
-                return e.player.FlashPlayer.callbacks[n] = t, "Twitch.player.FlashPlayer.callbacks." + n;
+                return e.player.FlashPlayer.callbacks[n] = t, "Twitch.player.FlashPlayer.callbacks." + n
             }
         };
         e.player.FlashPlayer = n
@@ -17724,7 +17728,7 @@ googletag.cmd = googletag.cmd || [],
                     return e = e || "", e.charAt(0).toUpperCase() + e.slice(1)
                 },
                 commatize: function(e) {
-                    return e = e || 0, isNaN(e) ? e : e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                    return e = e || 0, isNaN(e) ? e : e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 },
                 getTime: function(e) {
                     var t = n(e.getMinutes(), 2),
