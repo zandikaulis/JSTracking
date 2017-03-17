@@ -8711,7 +8711,8 @@
                     });
                 case d.ACTION_SET_AUTOPLAY_STATE:
                     return (0, s["default"])({}, e, {
-                        autoplay: t.playback.autoplay
+                        autoplay: t.playback.autoplay,
+                        paused: !t.playback.autoplay
                     });
                 case d.ACTION_SET_LOADING:
                     return (0, s["default"])({}, e, {
@@ -8771,7 +8772,7 @@
                 hasPlayed: !1,
                 isLoading: !1,
                 muted: !1,
-                paused: !0,
+                paused: !1,
                 restrictedQualityError: !1,
                 volume: .5,
                 transitionScheme: v,
@@ -9283,7 +9284,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.16-235740+e1f95fa0ee48da6ac8cd0fad8f331fbd034dba40",
+                    app_version: "2017.03.17-010208+e689f0e7f6d716cdc8e90702b7cc9c18503d4f29",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -15925,11 +15926,12 @@
                         e._sendStoreState()
                     })), this._unsubscribes.push((0, y.subscribe)(this._stateStore, ["viewercount"], function() {
                         e._sendStoreState(), e._sendPlayerEvent(E.EVENT_EMBED_VIEWERS_CHANGE)
-                    })), this._unsubscribes.push((0, y.subscribe)(this._stateStore, ["playback.paused", "playback.ended"], function(t) {
+                    })), this._unsubscribes.push((0, y.subscribe)(this._stateStore, ["playback.paused", "playback.ended", "playback.hasPlayed"], function(t) {
                         var n = t.playback,
                             r = n.paused,
-                            i = n.ended;
-                        i ? e._sendPlayerEvent(E.EVENT_EMBED_ENDED) : r ? e._sendPlayerEvent(E.EVENT_EMBED_PAUSE) : e._sendPlayerEvent(E.EVENT_EMBED_PLAY)
+                            i = n.ended,
+                            o = n.hasPlayed;
+                        i ? e._sendPlayerEvent(E.EVENT_EMBED_ENDED) : r ? e._sendPlayerEvent(E.EVENT_EMBED_PAUSE) : o && e._sendPlayerEvent(E.EVENT_EMBED_PLAY)
                     })), this._unsubscribes.push((0, y.subscribe)(this._stateStore, ["online"], function(t) {
                         var n = t.online;
                         n ? e._sendPlayerEvent(E.EVENT_EMBED_ONLINE) : e._sendPlayerEvent(E.EVENT_EMBED_OFFLINE)
