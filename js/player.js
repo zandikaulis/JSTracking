@@ -33,31 +33,32 @@
         function a(e, t) {
             function n() {
                 var n = void 0;
-                n = "string" == typeof e || e instanceof String ? document.getElementById(e) : e;
-                var o = i(t);
-                (0, de.setOAuthToken)(o), C = (0, G.init)(), o.debug && o.verbose && C.subscribe(function() {
-                    console.debug("state change: %o", C.getState())
-                }), C.dispatch((0, re.setWindow)(window)), C.dispatch(J.loadExperiments({
+                n = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, A = (0, G.init)(), A.dispatch((0, re.setWindow)(window));
+                var a = i(t);
+                (0, de.setOAuthToken)(a), a.debug && a.verbose && A.subscribe(function() {
+                    console.debug("state change: %o", A.getState())
+                }), A.dispatch(J.loadExperiments({
                     login: k.cookie.get("login") || null,
                     deviceID: w.get(!1),
-                    userAgent: C.getState().window.navigator.userAgent
-                })), C.dispatch(ee.loadDefaultLang(o.lang)), C.dispatch((0, ne.setPlayerType)(o.player)), ue.push(new V.PubSub(C, o)), ue.push(new ye.RecommendationsManager(C)), p = new v.AnalyticsTracker(C, o), C.dispatch((0, se.setAnalyticsTracker)(p)), C.dispatch((0, te.initializeQuality)()), _ = o.allowfullscreen ? new F.FullScreen(n, C) : new H.NoFullScreen(n, C), X = new me.TimelineMetadataManager(C), Z = new ge.CollectionManager(C), A = new L.Video(n, p, C, o, _), E = new O.State(A, C, p, o), o.debug && (window.state = E), (0, R.forwardProperties)(c, A), I = new h.Analytics(A, p, E, C, o), a(o), $ = new M.EmbedHost(A, E, C), new D.PlayerHotkeys(A, n, C, o), C.dispatch((0, oe.setAutoplay)(o.autoplay)), o.controls && (m = new x.PlayerUI(A, n, p, E, C, o), W = new pe.ClipGenerator(n, E, C)), r(o).then(function() {
-                    C.dispatch((0, Y.setPlayerOptions)(o))
-                }), C.dispatch((0, ae.initVodResume)()), (0, de.krakenUserInfo)().then(function(e) {
-                    C.dispatch((0, ae.setUser)(e._id)), C.dispatch((0, le.krakenUserInfoFetched)(e))
-                }), A.addEventListener(ce.LOADED_METADATA, function() {
-                    C.dispatch((0, ie.setCanFullScreen)(_.canFullScreen()))
+                    userAgent: A.getState().window.navigator.userAgent
+                })), A.dispatch(ee.loadDefaultLang(a.lang)), A.dispatch((0, ne.setPlayerType)(a.player)), Ee.push(new V.PubSub(A, a)), Ee.push(new ye.RecommendationsManager(A)), _ = new v.AnalyticsTracker(A, a), A.dispatch((0, se.setAnalyticsTracker)(_)), A.dispatch((0, te.initializeQuality)()), m = a.allowfullscreen ? new F.FullScreen(n, A) : new H.NoFullScreen(n, A), Z = new me.TimelineMetadataManager(A), ue = new ge.CollectionManager(A), I = new L.Video(n, _, A, a, m), C = new O.State(I, A, _, a), a.debug && (window.state = C), (0, R.forwardProperties)(p, I), $ = new h.Analytics(I, _, C, A, a), o(a), W = new M.EmbedHost(I, C, A), new D.PlayerHotkeys(I, n, A, a), A.dispatch((0, oe.setAutoplay)(a.autoplay)), a.controls && (E = new x.PlayerUI(I, n, _, C, A, a), X = new pe.ClipGenerator(n, C, A)), r(a).then(function() {
+                    A.dispatch((0, Y.setPlayerOptions)(a))
+                }), A.dispatch((0, ae.initVodResume)()), (0, de.krakenUserInfo)().then(function(e) {
+                    A.dispatch((0, ae.setUser)(e._id)), A.dispatch((0, le.krakenUserInfoFetched)(e))
+                }), I.addEventListener(ce.LOADED_METADATA, function() {
+                    A.dispatch((0, ie.setCanFullScreen)(m.canFullScreen()))
                 })
             }
 
             function r(e) {
-                return e.channel ? c.setChannel(e.channel) : e.video ? c.setVideo(e.video) : l()
+                return e.channel ? p.setChannel(e.channel) : e.video ? p.setVideo(e.video) : c()
             }
 
             function i() {
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                    t = (0, d["default"])(e) ? y.parse(e) : e;
-                return (0, b.isTwitchEmbed)() || t.player !== P.PLAYER_CURSE && (t = (0, f["default"])(t, S.embedParameters)), t.flash ? t.backend = B.BACKEND_FLASH : t.html5 ? t.backend = j.BACKEND_PLAYER_CORE : t.hls && (t.backend = U.BACKEND_HLS), t.html5 && j.BackendPlayerCore.canPlay() ? t.backend = j.BACKEND_PLAYER_CORE : t.html5 && U.BackendHls.canPlay() && (t.backend = U.BACKEND_HLS), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== P.PLAYER_HIGHLIGHTER, t = (0, s["default"])(t, {
+                    t = (0, d["default"])(e) ? y.parse(e) : e,
+                    n = (0, be.parseUri)(A.getState().window.location.href);
+                return n.queryKey.hasOwnProperty("force_preroll") && (t.usher_force_preroll = !0), n.queryKey.hasOwnProperty("force_midroll") && (t.usher_force_midroll = !0), (0, b.isTwitchEmbed)() || t.player !== P.PLAYER_CURSE && (t = (0, f["default"])(t, S.embedParameters)), t.backend = a(t), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== P.PLAYER_HIGHLIGHTER, t = (0, s["default"])(t, {
                     time: t.t
                 }), (0, u["default"])(["mse", "mseDev"], T.localStore.get("backend")) && T.localStore.set("backend", j.BACKEND_PLAYER_CORE), t = (0, s["default"])(t, {
                     volume: T.localStore.get("volume"),
@@ -83,34 +84,41 @@
             }
 
             function a(e) {
-                if (A.setVolume(e.volume), A.setMuted(e.muted), e.time) {
+                if (e.flash) return B.BACKEND_FLASH;
+                if (e.hls) return U.BACKEND_HLS;
+                var t = j.BackendPlayerCore.canPlay(),
+                    n = U.BackendHls.canPlay();
+                return e.html5 && t ? j.BACKEND_PLAYER_CORE : e.html5 && n ? U.BACKEND_HLS : void 0
+            }
+
+            function o(e) {
+                if (I.setVolume(e.volume), I.setMuted(e.muted), e.time) {
                     var t = N.parse(e.time);
-                    A.readyState > A.HAVE_NOTHING ? A.setCurrentTime(t) : A.addEventListener(ce.LOADED_METADATA, function() {
-                        A.setCurrentTime(t)
+                    I.readyState > I.HAVE_NOTHING ? I.setCurrentTime(t) : I.addEventListener(ce.LOADED_METADATA, function() {
+                        I.setCurrentTime(t)
                     })
                 }
                 e.debug && S.allEvents.forEach(function(e) {
-                    (0, u["default"])(S.debugIgnoreEvents, e) || A.addEventListener(e, function() {
+                    (0, u["default"])(S.debugIgnoreEvents, e) || I.addEventListener(e, function() {
                         console.log("video event: ", e)
                     })
-                }), A.addEventListener(ce.ERROR, function() {
-                    console.error("video error:", A.getError())
+                }), I.addEventListener(ce.ERROR, function() {
+                    console.error("video error:", I.getError())
                 })
-            }
-
-            function o() {
-                return window.Twitch.sentinel ? Promise.resolve(window.Twitch.sentinel.detect) : g.getSentinel()
             }
 
             function l() {
-                return o().then(function(e) {
-                    return C.dispatch((0, K.setAdblockDetected)(e))
+                return window.Twitch.sentinel ? Promise.resolve(window.Twitch.sentinel.detect) : g.getSentinel()
+            }
+
+            function c() {
+                return l().then(function(e) {
+                    return A.dispatch((0, K.setAdblockDetected)(e))
                 }, function() {
-                    return C.dispatch((0, K.setAdblockDetected)(!0))
+                    return A.dispatch((0, K.setAdblockDetected)(!0))
                 })
             }
-            var c = this,
-                p = void 0,
+            var p = this,
                 _ = void 0,
                 m = void 0,
                 E = void 0,
@@ -121,37 +129,38 @@
                 W = void 0,
                 X = void 0,
                 Z = void 0,
-                ue = [];
-            c.setChannel = function(e) {
-                return l().then(function() {
-                    C.dispatch(z.setStream(z.TYPE_CHANNEL, e)), C.dispatch((0, Q.clearCollection)())
+                ue = void 0,
+                Ee = [];
+            p.setChannel = function(e) {
+                return c().then(function() {
+                    A.dispatch(z.setStream(z.TYPE_CHANNEL, e)), A.dispatch((0, Q.clearCollection)())
                 })
-            }, c.setVideo = function(e) {
-                return l().then(function() {
-                    C.dispatch(z.setStream(z.TYPE_VIDEO, e)), C.dispatch((0, Q.clearCollection)())
+            }, p.setVideo = function(e) {
+                return c().then(function() {
+                    A.dispatch(z.setStream(z.TYPE_VIDEO, e)), A.dispatch((0, Q.clearCollection)())
                 })
-            }, c.setCollection = function(e) {
+            }, p.setCollection = function(e) {
                 var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "",
-                    n = C.getState(),
+                    n = A.getState(),
                     r = n.experiments;
                 return r.get(q.PERPETUA).then(function(n) {
-                    (0, u["default"])(q.ENABLE_PERPETUA_GROUP, n) && C.dispatch((0, Q.requestCollection)(e, t))
+                    (0, u["default"])(q.ENABLE_PERPETUA_GROUP, n) && A.dispatch((0, Q.requestCollection)(e, t))
                 })
-            }, c.setLanguage = function(e) {
-                C.dispatch(ee.loadLanguage(e))
-            }, c.setMiniPlayerMode = function(e) {
-                C.dispatch((0, _e.setMiniPlayerMode)(e))
-            }, c.recordClip = function() {
-                W && W.recordClip()
-            }, c.isPlaying = function() {
-                var e = C.getState().stream instanceof he.VODContentStream;
-                return !A.getPaused() && !A.getEnded() && (C.getState().online || e) && A.getReadyState() > fe.HAVE_CURRENT_DATA
-            }, c.setTrackingProperties = function(e) {
-                C.dispatch((0, ve.setTrackingProperties)(e))
-            }, n(), c.destroy = function() {
-                m.destroy(), A.destroy(), E.destroy(), _.destroy(), I.destroy(), $.destroy(), ue.forEach(function(e) {
+            }, p.setLanguage = function(e) {
+                A.dispatch(ee.loadLanguage(e))
+            }, p.setMiniPlayerMode = function(e) {
+                A.dispatch((0, _e.setMiniPlayerMode)(e))
+            }, p.recordClip = function() {
+                X && X.recordClip()
+            }, p.isPlaying = function() {
+                var e = A.getState().stream instanceof he.VODContentStream;
+                return !I.getPaused() && !I.getEnded() && (A.getState().online || e) && I.getReadyState() > fe.HAVE_CURRENT_DATA
+            }, p.setTrackingProperties = function(e) {
+                A.dispatch((0, ve.setTrackingProperties)(e))
+            }, n(), p.destroy = function() {
+                E.destroy(), I.destroy(), C.destroy(), m.destroy(), $.destroy(), W.destroy(), Ee.forEach(function(e) {
                     return e.destroy()
-                }), X.destroy(), Z.destroy()
+                }), Z.destroy(), ue.destroy()
             }
         }
         Object.defineProperty(t, "__esModule", {
@@ -223,7 +232,8 @@
             _e = n(675),
             ge = n(682),
             me = n(577),
-            ye = n(683);
+            ye = n(683),
+            be = n(167);
         n(286).polyfill(), n.p = S.playerHost + "/", n(684), window.google || $.getScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = a, window.Twitch.Player = a
     }, function(e, t, n) {
         var r = n(2),
@@ -1461,7 +1471,7 @@
                 if (s(t) || o(t)) return void i(t, l(t), e);
                 for (var n in t) c.call(t, n) && r(e, n, t[n])
             });
-        e.exports = d
+        e.exports = d;
     }, function(e, t, n) {
         e.exports = n(80)
     }, function(e, t, n) {
@@ -9284,7 +9294,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.17-214401+514f5aa14449ef6c296abd99805d665fb9dc2d16",
+                    app_version: "2017.03.17-214640+e006ac9beb49326a7ae2ab93fbb43199b01c44a8",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
