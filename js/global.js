@@ -16546,7 +16546,8 @@ googletag.cmd = googletag.cmd || [],
                 CLIPS_HEAR_ME_NOW: "variant1",
                 PERPETUA: "early",
                 SOCIAL_COLUMN: "variant1",
-                SOCIAL_RECOMMENDATIONS: "variant1"
+                SOCIAL_RECOMMENDATIONS: "variant1",
+                LOL_METADATA_EXPERIMENT: "treatment"
             };
         _.each(Object.keys(a), function(t) {
             s[i[t]] = e.user().then(function(e) {
@@ -17728,7 +17729,7 @@ googletag.cmd = googletag.cmd || [],
                     return e = e || "", e.charAt(0).toUpperCase() + e.slice(1)
                 },
                 commatize: function(e) {
-                    return e = e || 0, isNaN(e) ? e : e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    return e = e || 0, isNaN(e) ? e : e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                 },
                 getTime: function(e) {
                     var t = n(e.getMinutes(), 2),
