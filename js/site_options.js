@@ -228,7 +228,7 @@ window.SiteOptions = {
                 "value": "1.3.5"
             }, {
                 "weight": 10,
-                "value": "1.5.2"
+                "value": "1.6.0"
             }, {
                 "weight": 2,
                 "value": "1.5.2+fxf"
