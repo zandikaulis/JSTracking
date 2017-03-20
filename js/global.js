@@ -16544,7 +16544,8 @@ googletag.cmd = googletag.cmd || [],
                 CLIPS_HEAR_ME_NOW: "variant1",
                 SOCIAL_COLUMN: "variant1",
                 SOCIAL_RECOMMENDATIONS: "variant1",
-                LOL_METADATA_EXPERIMENT: "treatment"
+                LOL_METADATA_EXPERIMENT: "treatment",
+                CHOMPY: "experiment"
             };
         _.each(Object.keys(a), function(t) {
             s[i[t]] = e.user().then(function(e) {
@@ -17731,8 +17732,7 @@ googletag.cmd = googletag.cmd || [],
                 getTime: function(e) {
                     var t = n(e.getMinutes(), 2),
                         i = e.getHours();
-                    return i > 12 ? i -= 12 : 0 === i && (i = 12),
-                        i + ":" + t
+                    return i > 12 ? i -= 12 : 0 === i && (i = 12), i + ":" + t
                 },
                 lengthAsClock: function(e) {
                     var t = Math.floor(e % 60),
