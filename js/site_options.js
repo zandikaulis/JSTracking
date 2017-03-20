@@ -140,19 +140,6 @@ window.SiteOptions = {
                 "value": "live"
             }]
         },
-        "039bcc41-baa9-4351-8a76-3bcece6aec44": {
-            "name": "Transcode_Quality_Experiment_4",
-            "groups": [{
-                "weight": 0,
-                "value": "plus"
-            }, {
-                "weight": 100,
-                "value": "regular"
-            }, {
-                "weight": 0,
-                "value": "nonplus"
-            }]
-        },
         "04165981-17be-4593-afbd-762a380f6838": {
             "name": "MESSAGE_DELETED_EXPERIMENT",
             "groups": [{
