@@ -215,10 +215,10 @@ window.SiteOptions = {
                 "weight": 2,
                 "value": "1.5.1+abs3"
             }, {
-                "weight": 51,
+                "weight": 48,
                 "value": "1.5.1"
             }, {
-                "weight": 10,
+                "weight": 13,
                 "value": "1.6.0"
             }, {
                 "weight": 2,
@@ -227,11 +227,8 @@ window.SiteOptions = {
                 "weight": 5,
                 "value": "1.3.5"
             }, {
-                "weight": 10,
+                "weight": 12,
                 "value": "1.6.0"
-            }, {
-                "weight": 2,
-                "value": "1.5.2+fxf"
             }]
         },
         "143da2f9-bf80-4555-a661-76c378fcd5c8": {
