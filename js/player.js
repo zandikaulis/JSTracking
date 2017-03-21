@@ -7882,9 +7882,9 @@
         function l(e) {
             var t, n;
             return new p["default"]({
-                defaults: (t = {}, i(t, m, "no"), i(t, y, "off"), i(t, b, "no"), i(t, E, "no"), i(t, S, "no"), i(t, T, "no"), i(t, C, "no"), i(t, P, "no"), i(t, k, "no"), i(t, A, "no"), i(t, w, "no"), i(t, O, "no"), i(t, I, "no"), i(t, L, "1.3.5"), i(t, R, "no"), i(t, M, "no"), i(t, D, "no"), i(t, N, "no"), i(t, x, "no,"), i(t, j, "no"), i(t, U, "regular"), t),
+                defaults: (t = {}, i(t, m, "no"), i(t, y, "off"), i(t, b, "no"), i(t, E, "no"), i(t, S, "no"), i(t, T, "no"), i(t, C, "no"), i(t, P, "no"), i(t, k, "no"), i(t, A, "no"), i(t, w, "no"), i(t, O, "no"), i(t, I, "no"), i(t, L, "1.6.1"), i(t, R, "no"), i(t, M, "no"), i(t, D, "no"), i(t, N, "no"), i(t, x, "no,"), i(t, j, "no"), i(t, U, "regular"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, i(n, U, a("plus")), i(n, y, a("v2")), i(n, b, o(["US"])), i(n, E, o(["GB"])), i(n, S, o(["DE"])), i(n, T, o(["FR"])), i(n, C, o(["SE"])), i(n, P, o(["DK", "FI", "NL", "NO"])), i(n, k, o(["CA"])), i(n, A, o(["AU", "NZ"])), i(n, w, o(["BE"])), i(n, O, o(["PL"])), i(n, I, o(["AT", "CH", "ES", "IT", "PT"])), i(n, M, a("yes")), i(n, N, a("vca")), i(n, x, a("yes")), i(n, L, a("1.5.1+abs0")), n),
+                overrides: (n = {}, i(n, U, a("plus")), i(n, y, a("v2")), i(n, b, o(["US"])), i(n, E, o(["GB"])), i(n, S, o(["DE"])), i(n, T, o(["FR"])), i(n, C, o(["SE"])), i(n, P, o(["DK", "FI", "NL", "NO"])), i(n, k, o(["CA"])), i(n, A, o(["AU", "NZ"])), i(n, w, o(["BE"])), i(n, O, o(["PL"])), i(n, I, o(["AT", "CH", "ES", "IT", "PT"])), i(n, M, a("yes")), i(n, N, a("vca")), i(n, x, a("yes")), i(n, L, a("1.6.1+abs1")), n),
                 platform: "web",
                 login: e.login,
                 provider: new h["default"](h["default"].SERVICE_URL),
@@ -7917,7 +7917,7 @@
             O = t.BAKING_BREAD_H = "51e3d33c-157b-422d-9a15-b0f9e9c055b2",
             I = t.BAKING_BREAD_I = "ac2acc22-f0ef-4162-b9a3-7357249165ca",
             N = t.MARKERS = "9e5fffd0-9693-412b-913d-7da332fdeea4",
-            L = t.PLAYER_CORE_VER_CONTROL = "0c22fa7f-9b7d-4c6a-9b63-1f70c0af3df2",
+            L = t.PLAYER_CORE_VER_CONTROL = "95003a8e-de0a-4319-9de3-8a0822799298",
             R = t.GABRIEL = "4aa9ee11-136c-4521-a139-e2abb718ec07",
             M = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
             D = t.VP_QOS_TEST = "711aaaf6-61c0-4cc4-9469-0dfc9908785a",
@@ -9288,7 +9288,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.20-233851+2b011cb8854e33d47ab16a033587ab69fa6dbebd",
+                    app_version: "2017.03.21-191053+26e9b45dae63a4bc179202195bcdf5fd0dd7ca1e",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -12937,7 +12937,7 @@
             PLAYER_CORE_FILE_NAME: "/player-core-min.js",
             PLAYER_CORE_FILE_NAME_DEBUG: "/player-core.js",
             SCRIPT_ID: "TwitchPlayerCoreModule",
-            EXPERIMENT_ID: "0c22fa7f-9b7d-4c6a-9b63-1f70c0af3df2",
+            EXPERIMENT_ID: "95003a8e-de0a-4319-9de3-8a0822799298",
             DEFAULT_VERSION: "1.3.5",
             CAN_LOAD: function() {
                 try {
