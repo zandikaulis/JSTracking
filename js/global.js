@@ -15601,7 +15601,7 @@ googletag.cmd = googletag.cmd || [],
         }, e.fn.teardownOverlay = function() {
             return this.each(function() {
                 var t = e(this);
-                t.off("keyup.overlay"), e("body.overlay").off("click.overlay"), t.off("overlay.hide"), e(".twitch_subwindow_container").remove()
+                t.off("keyup.overlay"), e("body.overlay").off("click.overlay"), t.off("overlay.hide")
             })
         }
     }(jQuery),
@@ -16581,10 +16581,11 @@ googletag.cmd = googletag.cmd || [],
                 var r = this,
                     o = this.options;
                 o.flashVars.eventsCallback = i.register(function(e) {
-                    r._onEvents(e)
-                }), swfobject.embedSWF(o.url, o.swfId, o.width, o.height, o.version, "/widgets/expressinstall.swf", o.flashVars, o.params, o.attrs, function(e) {
-                    e.success ? (r.$el = t("#" + r.options.swfId), r.el = r.$el[0]) : (console.info("FlashPlayer.init error"), n("error embedding flash player"))
-                })
+                        r._onEvents(e)
+                    }),
+                    swfobject.embedSWF(o.url, o.swfId, o.width, o.height, o.version, "/widgets/expressinstall.swf", o.flashVars, o.params, o.attrs, function(e) {
+                        e.success ? (r.$el = t("#" + r.options.swfId), r.el = r.$el[0]) : (console.info("FlashPlayer.init error"), n("error embedding flash player"))
+                    })
             },
             _onPlayerInit: function() {
                 this._proxy(), this.adFeedbackMenu = new e.player.AdFeedbackMenu(t(".js-ad-feedback-menu").first(), this), console.info("FlashPlayer.init success"), this._initSuccess(this)
@@ -17586,23 +17587,24 @@ googletag.cmd = googletag.cmd || [],
     function(e, t) {
         var n = {};
         n.write = function(t, n, i) {
-            i = i || {};
-            var t = "TwitchCache:" + t;
-            e.storage.setObject(t, {
-                resource: n,
-                expiration: i.milliseconds,
-                time: (new Date).getTime(),
-                version: i.version,
-                restrict: i.restrict
-            }, _.pick(i, "storage"))
-        }, n.read = function(t, n) {
-            n = n || {};
-            var t = "TwitchCache:" + t,
-                i = e.storage.getObject(t, _.pick(n, "storage"));
-            return i ? i.expiration && (new Date).getTime() - i.time > i.expiration || n.version !== i.version || !_.isEqual(n.restrict, i.restrict) ? (e.storage.del(t, _.pick(n, "storage")), null) : i.resource : null
-        }, e.mixin({
-            cache: n
-        })
+                i = i || {};
+                var t = "TwitchCache:" + t;
+                e.storage.setObject(t, {
+                    resource: n,
+                    expiration: i.milliseconds,
+                    time: (new Date).getTime(),
+                    version: i.version,
+                    restrict: i.restrict
+                }, _.pick(i, "storage"))
+            },
+            n.read = function(t, n) {
+                n = n || {};
+                var t = "TwitchCache:" + t,
+                    i = e.storage.getObject(t, _.pick(n, "storage"));
+                return i ? i.expiration && (new Date).getTime() - i.time > i.expiration || n.version !== i.version || !_.isEqual(n.restrict, i.restrict) ? (e.storage.del(t, _.pick(n, "storage")), null) : i.resource : null
+            }, e.mixin({
+                cache: n
+            })
     }(window.Twitch, window.jQuery),
     function(e, t) {
         var n = {};

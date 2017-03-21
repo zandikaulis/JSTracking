@@ -1162,23 +1162,24 @@
                         o = t.window,
                         s = t.collection,
                         l = t.stream,
-                        c = t.playback,
-                        d = this.player.getNetworkProfile().filter(function(e) {
+                        c = t.manifestInfo,
+                        d = t.playback,
+                        p = this.player.getNetworkProfile().filter(function(e) {
                             return e.startTime > this.lastNetworkProfile
                         }.bind(this));
-                    this.lastNetworkProfile = d.reduce(function(e, t) {
+                    this.lastNetworkProfile = p.reduce(function(e, t) {
                         return Math.max(e, t.startTime)
                     }, this.lastNetworkProfile);
-                    var p = this.getNetworkProfileStats(d);
-                    this.player.video && (0, f["default"])(p, {
+                    var h = this.getNetworkProfileStats(p);
+                    this.player.video && (0, f["default"])(h, {
                         vod_timestamp: this.player.getCurrentTime()
                     });
-                    var h = (0, u.parse)(o.location.search.slice(1)),
-                        v = h.tt_medium,
-                        _ = void 0 === v ? "" : v,
-                        g = h.tt_content,
-                        m = void 0 === g ? "" : g,
-                        b = {
+                    var v = (0, u.parse)(o.location.search.slice(1)),
+                        _ = v.tt_medium,
+                        g = void 0 === _ ? "" : _,
+                        m = v.tt_content,
+                        b = void 0 === m ? "" : m,
+                        E = {
                             seconds_offset: this.minutesWatchedTimer.initialDelay / 1e3,
                             minutes_logged: this.minutesWatchedTimer.totalMinutes,
                             captions_enabled: r.enabled,
@@ -1187,13 +1188,14 @@
                             broadcast_id: a.broadcastID,
                             community_id: i.data._id,
                             community_name: i.data.name,
-                            medium: _,
-                            content: m
+                            medium: g,
+                            content: b,
+                            transcoder_type: c.transcodestack
                         };
-                    l.contentType === B.CONTENT_MODE_VOD && c.transitionScheme === V.TRANSITION_TYPE_COLLECTION && (b.collection_item_position = (0, y["default"])(s.items, {
+                    l.contentType === B.CONTENT_MODE_VOD && d.transitionScheme === V.TRANSITION_TYPE_COLLECTION && (E.collection_item_position = (0, y["default"])(s.items, {
                         item_id: l.videoId.substr(1)
-                    }), b.collection_id = s.id), this.trackEvent(Y, (0, f["default"])({}, p, b)), this.stateStore.dispatch((0, R.resetQualityChangeCount)()), this.valveClient.notify(), this.trackNetworkProfile.then(function(t) {
-                        "yes" === t && d.length > 0 && e.tracker.trackEvents(d.map(function(e) {
+                    }), E.collection_id = s.id), this.trackEvent(Y, (0, f["default"])({}, h, E)), this.stateStore.dispatch((0, R.resetQualityChangeCount)()), this.valveClient.notify(), this.trackNetworkProfile.then(function(t) {
+                        "yes" === t && p.length > 0 && e.tracker.trackEvents(p.map(function(e) {
                             return {
                                 event: "network_profile",
                                 properties: {
@@ -1476,7 +1478,7 @@
             o = i(function(e, t) {
                 r(t, a(t), e)
             });
-        e.exports = o;
+        e.exports = o
     }, function(e, t, n) {
         var r = n(82),
             i = n(153),
@@ -9288,7 +9290,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.21-191053+26e9b45dae63a4bc179202195bcdf5fd0dd7ca1e",
+                    app_version: "2017.03.21-214136+3d28f23fbacc0b93eaea28d89ac1a4d49ca559be",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -34913,7 +34915,8 @@
                 stream_time: 0,
                 user_ip: "",
                 suppress: !1,
-                spectre: !1
+                spectre: !1,
+                transcodestack: "not listed"
             }
     }, function(e, t, n) {
         "use strict";
