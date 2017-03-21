@@ -183,10 +183,10 @@ window.SiteOptions = {
         "0a340f6e-772a-4e12-a95e-5a984c071107": {
             "name": "SOCIAL_COLUMN",
             "groups": [{
-                "weight": 0,
+                "weight": 10,
                 "value": "variant1"
             }, {
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }]
         },
