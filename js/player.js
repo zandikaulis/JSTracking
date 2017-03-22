@@ -9290,7 +9290,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.21-214136+3d28f23fbacc0b93eaea28d89ac1a4d49ca559be",
+                    app_version: "2017.03.22-010818+f9ccfe8e813290dae74b6f4e5e8fc66f32db35ad",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -14767,9 +14767,9 @@
                 }, {
                     key: "_onContentResumeRequested",
                     value: function(e) {
-                        this._contentPauseRequested = !1, this._stateStore.getState().ads.currentMetadata.contentType !== m.AdContentTypes.NONE && (this._resumeContent(), this._currentAdsManager = O, this._stateStore.dispatch((0, m.clearCurrentAdMetadata)()), this._eventEmitter.emit(g.AD_END, {
+                        this._contentPauseRequested = !1, this._stateStore.getState().ads.currentMetadata.contentType !== m.AdContentTypes.NONE && (this._currentAdsManager = O, this._stateStore.dispatch((0, m.clearCurrentAdMetadata)()), this._eventEmitter.emit(g.AD_END, {
                             roll_type: e.adType
-                        }))
+                        }), this._resumeContent())
                     }
                 }, {
                     key: "_onAdLoaded",
