@@ -17772,7 +17772,7 @@ googletag.cmd = googletag.cmd || [],
     function(e, t) {
         var n = {
                 layout: "top",
-                template: '<div class="noty_message"><div class="text-container"><div class="glitch"></div><div class="noty_text"></div></div><div class="noty_close"><svg class="svg-close_small" height="16px" version="1.1" viewbox="0 0 16 16" width="16px" x="0px" y="0px"><path clip-rule="evenodd" d="M12.657,4.757L9.414,8l3.243,3.242l-1.415,1.415L8,9.414l-3.243,3.243l-1.414-1.415L6.586,8L3.343,4.757l1.414-1.414L8,6.586l3.242-3.243L12.657,4.757z" fill-rule="evenodd"></path></svg></div></div>',
+                template: '<div class="noty_message"><div class="text-container"><div class="glitch"></div><div class="noty_text"></div></div><div class="noty_close"></div></div>',
                 dismissQueue: !0,
                 animation: {
                     open: {
