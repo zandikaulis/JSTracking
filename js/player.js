@@ -9433,7 +9433,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.22-215657+ec5ac744ba58c79f2acb64d62f7fe1bbe62f381a",
+                    app_version: "2017.03.23-204731+24d3d81211c3c52cdcb9e7286888b9b9dd73ccdb",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -30468,7 +30468,7 @@
                     var t = e.collection,
                         n = e.lang;
                     this.$collectionCollapsedTitle.text(t.title), this.$collectionTitle.text(t.title), this.$collectionAuthor.html(n.translate("By {{author}}", {
-                        author: '<a href="https://twitch.tv/' + t.owner.name + '">' + t.owner.displayName + "</a>",
+                        author: '<a href="https://twitch.tv/' + t.owner.name + '" target="_blank">' + t.owner.displayName + "</a>",
                         interpolation: {
                             escapeValue: !1
                         }
