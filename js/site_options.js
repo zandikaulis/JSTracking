@@ -190,6 +190,16 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "0a4d513f-0274-4b33-b04f-287521abd51b": {
+            "name": "ZACH_MODE",
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "treatment"
+            }]
+        },
         "0c22fa7f-9b7d-4c6a-9b63-1f70c0af3df2": {
             "name": "CVP-Mar-2017",
             "groups": [{
