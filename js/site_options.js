@@ -940,19 +940,19 @@ window.SiteOptions = {
             "name": "CVP March 21",
             "groups": [{
                 "weight": 10,
-                "value": "1.6.2+def"
+                "value": "1.6.3+def"
             }, {
                 "weight": 18,
-                "value": "1.6.2+abs1"
+                "value": "1.6.3+abs1"
             }, {
                 "weight": 2,
-                "value": "1.6.2+abs3"
+                "value": "1.6.3+abs3"
             }, {
                 "weight": 2,
-                "value": "1.6.2+speed"
+                "value": "1.6.3+speed"
             }, {
                 "weight": 68,
-                "value": "1.6.2"
+                "value": "1.6.3"
             }]
         },
         "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": {
