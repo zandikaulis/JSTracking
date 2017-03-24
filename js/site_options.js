@@ -193,10 +193,10 @@ window.SiteOptions = {
         "0a4d513f-0274-4b33-b04f-287521abd51b": {
             "name": "ZACH_MODE",
             "groups": [{
-                "weight": 50,
+                "weight": 75,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 25,
                 "value": "treatment"
             }]
         },
