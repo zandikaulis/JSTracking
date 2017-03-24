@@ -9433,7 +9433,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.23-204731+24d3d81211c3c52cdcb9e7286888b9b9dd73ccdb",
+                    app_version: "2017.03.24-004427+0b9f7cda8ebdedfd091c0720b71c69c143d70ba7",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -11844,7 +11844,7 @@
                 }, {
                     key: "_initVideoEvents",
                     value: function() {
-                        this.video.addEventListener(f.PLAYING, this.onVideoTagPlaying.bind(this)), this.video.addEventListener(f.PAUSE, this.onVideoTagPause.bind(this)), this.video.addEventListener(f.ERROR, this.onVideoTagError.bind(this))
+                        this.video.addEventListener(f.PLAYING, this.onVideoTagPlaying.bind(this)), this.video.addEventListener(f.PAUSE, this.onVideoTagPause.bind(this))
                     }
                 }, {
                     key: "_initPlayerCore",
@@ -11852,7 +11852,7 @@
                         this.playerCoreEvents = e.Event, this.core = new e((0, I["default"])({}, t, {
                             analyticsTracker: this.stateStore.getState().analyticsTracker,
                             logLevel: this.playerCoreLogLevel
-                        })), this.core.attachMedia(this.video), this.core.addEventListener(this.playerCoreEvents.HLS_MASTER_PARSED, this.onHLSMasterParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.HLS_VARIANT_PARSED, this.onHLSVariantParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.VARIANT_SWITCH_REQUESTED, this.onVariantSwitchRequested.bind(this)), this.core.addEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this.onID3Tag.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEOUT, this.onSpliceOut.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEIN, this.onSpliceIn.bind(this)), this.core.addEventListener(this.playerCoreEvents.CAPTION, this.onCaption.bind(this)), this.core.addEventListener(this.playerCoreEvents.AUTH_ERROR, this.onAuthError.bind(this)), this.core.addEventListener(this.playerCoreEvents.CORE_ANALYTICS, this.onCoreAnalytics.bind(this)), this.core.addEventListener(this.playerCoreEvents.OFFLINE, this.onOfflineError.bind(this)), this.core.addEventListener(this.playerCoreEvents.BUFFERING, this.onBuffering.bind(this)), this.events.emit(p.PLAYER_INIT)
+                        })), this.core.attachMedia(this.video), this.core.addEventListener(this.playerCoreEvents.HLS_MASTER_PARSED, this.onHLSMasterParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.HLS_VARIANT_PARSED, this.onHLSVariantParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.VARIANT_SWITCH_REQUESTED, this.onVariantSwitchRequested.bind(this)), this.core.addEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this.onID3Tag.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEOUT, this.onSpliceOut.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEIN, this.onSpliceIn.bind(this)), this.core.addEventListener(this.playerCoreEvents.CAPTION, this.onCaption.bind(this)), this.core.addEventListener(this.playerCoreEvents.AUTH_ERROR, this.onAuthError.bind(this)), this.core.addEventListener(this.playerCoreEvents.CORE_ANALYTICS, this.onCoreAnalytics.bind(this)), this.core.addEventListener(this.playerCoreEvents.OFFLINE, this.onOfflineError.bind(this)), this.core.addEventListener(this.playerCoreEvents.BUFFERING, this.onBuffering.bind(this)), this.core.addEventListener(this.playerCoreEvents.FATAL_ERROR, this.onFatalError.bind(this)), this.events.emit(p.PLAYER_INIT)
                     }
                 }, {
                     key: "onBuffering",
@@ -11870,10 +11870,11 @@
                         this.events.emitEvent(f.PAUSE)
                     }
                 }, {
-                    key: "onVideoTagError",
-                    value: function() {
-                        var e = void 0;
-                        e = null === this.video.error.code ? new Error("Unknown") : j[this.video.error.code], this.events.emit(f.ERROR, e)
+                    key: "onFatalError",
+                    value: function(e) {
+                        var t = e.code,
+                            n = j[t] || new Error("Unknown");
+                        this.events.emit(f.ERROR, n)
                     }
                 }, {
                     key: "onHLSMasterParsed",
