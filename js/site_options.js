@@ -1185,6 +1185,16 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "c31d337d-4186-465d-9d0b-cb72a5b2aef2": {
+            "name": "newsfeed_recommended_clips",
+            "groups": [{
+                "weight": 95,
+                "value": "control"
+            }, {
+                "weight": 5,
+                "value": "injects"
+            }]
+        },
         "c51b6c01-3155-4314-bd33-a63870349c1f": {
             "name": "baking_bread_c",
             "groups": [{
