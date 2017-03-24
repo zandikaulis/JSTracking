@@ -1762,6 +1762,7 @@
                     case "r9k":
                     case "subs-only":
                     case "historical":
+                    case "noisy":
                         return value === "1" ? true : false;
                     case "slow":
                     case "followers-only":
