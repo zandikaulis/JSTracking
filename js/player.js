@@ -78,7 +78,7 @@
                     refreshWarningEnabled: S.leaveDialog.enabled,
                     lang: S.defaultLanguage,
                     abs: !1
-                }), t.tracking = (0, s["default"])({}, t.tracking, {
+                }), "mobile_web" === A.getState().env.platform && (t.autoplay = !1), t.tracking = (0, s["default"])({}, t.tracking, {
                     player: t.player
                 }), t
             }
@@ -9433,7 +9433,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.24-195604+5c82c0a3eaf2203b979390aa5c894f3953bc1fcb",
+                    app_version: "2017.03.26-045212+f91502114c3d6e6c551bdb10428d6848cb397a28",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
