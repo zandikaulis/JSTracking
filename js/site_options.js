@@ -731,6 +731,16 @@ window.SiteOptions = {
                 "value": "localized"
             }]
         },
+        "5e786a5f-4ad6-4a1a-9fe9-5926ef05f0e7": {
+            "name": "clips_it_aint_me",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "5fbb67a0-b4ff-4775-b836-e9a348a87481": {
             "name": "Network Profile Collection",
             "groups": [{
