@@ -1314,10 +1314,10 @@ window.SiteOptions = {
         "d4d938f7-bdc2-42cd-afd0-f434e4192c29": {
             "name": "ORC",
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }]
         },
