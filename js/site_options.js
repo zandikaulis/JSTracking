@@ -509,22 +509,6 @@ window.SiteOptions = {
                 "value": "no_show"
             }]
         },
-        "3f983cb9-25be-41cd-814d-22eaa23fdd27": {
-            "name": "communities_site_search",
-            "groups": [{
-                "weight": 25,
-                "value": "below_videos"
-            }, {
-                "weight": 25,
-                "value": "below_channels"
-            }, {
-                "weight": 25,
-                "value": "below_live"
-            }, {
-                "weight": 25,
-                "value": "control"
-            }]
-        },
         "428d3b07-cc7a-424f-aad0-971f5415879a": {
             "name": "NEXUS_ROLLOUT",
             "groups": [{
