@@ -519,6 +519,16 @@ window.SiteOptions = {
                 "value": "no_show"
             }]
         },
+        "3f821134-e203-49f0-92a7-4440c22f0f26": {
+            "name": "Console A/B Tracing",
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "active1"
+            }]
+        },
         "428d3b07-cc7a-424f-aad0-971f5415879a": {
             "name": "NEXUS_ROLLOUT",
             "groups": [{
@@ -956,11 +966,8 @@ window.SiteOptions = {
                 "weight": 5,
                 "value": "1.6.3+def"
             }, {
-                "weight": 50,
+                "weight": 93,
                 "value": "1.6.3+abs1"
-            }, {
-                "weight": 43,
-                "value": "1.6.3"
             }, {
                 "weight": 2,
                 "value": "1.6.3+speed"
