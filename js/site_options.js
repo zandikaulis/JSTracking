@@ -150,6 +150,16 @@ window.SiteOptions = {
                 "value": "false"
             }]
         },
+        "04b8f9e1-4849-48fa-8d33-c56ec9f040a0": {
+            "name": "android_video_paint",
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "active"
+            }]
+        },
         "05d8869f-e037-4955-b80a-7c361f9ddffb": {
             "name": "NEWS_FEED_REDESIGN",
             "groups": [{
