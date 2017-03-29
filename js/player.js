@@ -9433,7 +9433,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.28-212753+f6531ed585492dca7a847910adc44c742f3fe0ae",
+                    app_version: "2017.03.29-000843+7905147281cd620c0074518a06cced745c01e799",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -10618,7 +10618,7 @@
             }, Ne.getTheatre = function() {
                 return xe
             }, Ne.setTheatre = function(e) {
-                Ne.getTheatre() !== e && Le.emit(se.THEATRE_CHANGE), xe = e
+                Ne.getTheatre() !== e && (xe = e, Le.emit(se.THEATRE_CHANGE, e))
             }, Ne.getDefaultMuted = function() {
                 return Me.getDefaultMuted()
             }, Ne.setDefaultMuted = function(e) {
@@ -10980,7 +10980,7 @@
             }
 
             function ye(e) {
-                Ge.emit(ne.AD_REQUEST_RESPONSE, e);
+                Ge.emit(ne.AD_REQUEST_RESPONSE, e)
             }
 
             function be(e) {
