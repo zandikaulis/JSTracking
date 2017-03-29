@@ -9433,7 +9433,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.29-001624+5785fc8c11553bbf643423a48c82cf766d0d634b",
+                    app_version: "2017.03.29-175658+1a2f3b662f03c68c48616f3ad90b29518f2439c6",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -28832,14 +28832,14 @@
 
         function o(e) {
             var t = (0, p.fetch)({
-                url: T + "channels.json",
+                url: T + "ids.json",
                 dataType: "json"
             });
             return Promise.all([t, (0, f.videoInfo)(e)]).then(function(t) {
                 var n = d(t, 2),
                     r = n[0],
                     i = n[1];
-                return r.indexOf(i.channel.name) === -1 ? Promise.reject(new Error("Current channel does not have VCA markers")) : (0, p.fetch)({
+                return r.indexOf(i.channel._id) === -1 ? Promise.reject(new Error("Current channel does not have VCA markers")) : (0, p.fetch)({
                     url: "" + T + e + ".json",
                     dataType: "json"
                 })
