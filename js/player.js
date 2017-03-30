@@ -8834,7 +8834,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.29-205823+4e7934fbe4b4aa4cc6cbaf6e591eecda0456278c",
+                    app_version: "2017.03.30-011534+6e867aeca02ecda4b02c70574878eb45f0c862f5",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -17327,21 +17327,18 @@
             }, {
                 key: "onSelect",
                 value: function(e) {
-                    var t = parseInt($(e.currentTarget).attr("data-index"), 10);
-                    this.selectVOD(t)
+                    var t = this._stateStore.getState(),
+                        n = t.recommendations,
+                        r = parseInt($(e.currentTarget).attr("data-index"), 10);
+                    this.trackSelect(n.videos[r]), this.selectVOD(r)
                 }
             }, {
                 key: "selectVOD",
                 value: function(e) {
                     var t = this._stateStore.getState(),
                         n = t.recommendations,
-                        r = t.analyticsTracker,
-                        i = n.videos[e];
-                    this.stopAutoplayCountdown(), this._stateStore.dispatch((0, f.selectRecommendedVideo)(i._id)), this._stateStore.dispatch((0, d.popScreen)()), this._stateStore.dispatch((0, c.clearRecommendedVODs)()), r.trackEvent("content_recommendation_click", {
-                        destination_vod_id: i._id,
-                        recommendation_position: e,
-                        recommendation_content: "recent"
-                    })
+                        r = n.videos[e];
+                    this.stopAutoplayCountdown(), this._stateStore.dispatch((0, f.selectRecommendedVideo)(r._id)), this._stateStore.dispatch((0, d.popScreen)()), this._stateStore.dispatch((0, c.clearRecommendedVODs)())
                 }
             }, {
                 key: "onScreenChange",
@@ -17351,7 +17348,7 @@
                         r = n.stream,
                         i = n.recommendations,
                         o = n.resumeWatch;
-                    return t[0] !== d.VOD_RECOMMENDATION_SCREEN ? (this.stopAutoplayCountdown(), void this.stopCheckingForResize()) : ((0, c.isWatched)(i.videos[0], o.times) ? this.showView(m) : r.contentType === p.CONTENT_MODE_VOD ? (this.showView(_), this.showAutoplay(), this.startAutoplayCountdown()) : this.showView(g), void this.startCheckingForResize())
+                    return t[0] !== d.VOD_RECOMMENDATION_SCREEN ? (this.stopAutoplayCountdown(), void this.stopCheckingForResize()) : (this.trackShowRecs(), (0, c.isWatched)(i.videos[0], o.times) ? (this.showView(m), this.trackShowOtherVODs()) : r.contentType === p.CONTENT_MODE_VOD ? (this.showView(_), this.showAutoplay(), this.startAutoplayCountdown(), this.trackShowFeatured()) : (this.showView(g), this.trackShowFeatured()), void this.startCheckingForResize())
                 }
             }, {
                 key: "startCheckingForResize",
@@ -17402,7 +17399,7 @@
             }, {
                 key: "transitionToMoreVideos",
                 value: function() {
-                    this.stopAutoplayCountdown(), this.hideAutoplay(), this.showView(m)
+                    this.stopAutoplayCountdown(), this.hideAutoplay(), this.showView(m), this.trackShowOtherVODs()
                 }
             }, {
                 key: "destroy",
@@ -17427,7 +17424,7 @@
                     var t = new Date,
                         n = Math.floor(y / 100);
                     this.autoplayHandler = setTimeout(function() {
-                        e.selectVOD(0)
+                        e.trackAutoplay(), e.selectVOD(0)
                     }, y), this.autoplayInterval = setInterval(function() {
                         var n = new Date,
                             r = n.getTime() - t.getTime(),
@@ -17455,117 +17452,182 @@
                 value: function() {
                     $(".js-recommendations-overlay", this.$root).attr("data-display-show-autoplay", "")
                 }
+            }, {
+                key: "trackSelect",
+                value: function(e) {
+                    var t = this._stateStore.getState(),
+                        n = t.analyticsTracker;
+                    n.trackEvent("player_rec_select", {
+                        recommendation: {
+                            vod_id: e._id,
+                            content: e.recommendationType
+                        }
+                    })
+                }
+            }, {
+                key: "trackShowRecs",
+                value: function() {
+                    var e = this._stateStore.getState(),
+                        t = e.stream,
+                        n = e.analyticsTracker;
+                    n.trackEvent("player_rec_show", {
+                        type: t.contentType === p.CONTENT_MODE_VOD ? "vod" : "live"
+                    })
+                }
+            }, {
+                key: "trackAutoplay",
+                value: function() {
+                    var e = this._stateStore.getState(),
+                        t = e.recommendations,
+                        n = e.analyticsTracker;
+                    n.trackEvent("player_rec_autoplay", {
+                        recommendation: {
+                            vod_id: t.videos[0]._id,
+                            content: t.videos[0].recommendationType
+                        }
+                    })
+                }
+            }, {
+                key: "trackShowFeatured",
+                value: function() {
+                    var e = this._stateStore.getState(),
+                        t = e.recommendations,
+                        n = e.analyticsTracker;
+                    n.trackEvent("player_rec_show_featured", {
+                        recommendation: {
+                            vod_id: t.videos[0]._id,
+                            content: t.videos[0].recommendationType
+                        }
+                    })
+                }
+            }, {
+                key: "trackShowOtherVODs",
+                value: function() {
+                    var e = this._stateStore.getState(),
+                        t = e.recommendations,
+                        n = e.analyticsTracker,
+                        r = t.videos,
+                        i = t.numVideosVisible;
+                    n.trackEvent("player_rec_show_others", {
+                        recommendations: r.slice(0, i).map(function(e) {
+                            return {
+                                vod_id: e._id,
+                                content: e.recommendationType
+                            }
+                        })
+                    })
+                }
             }]), t
         }(u.UIStateSubscriber)
     }, function(e, t, n) {
         "use strict";
 
         function r(e) {
+            return e && e.__esModule ? e : {
+                "default": e
+            }
+        }
+
+        function i(e) {
             return function(t, n) {
                 var r = n().streamMetadata.channel.name;
-                if (n().recommendations.status !== _ || "" === r) return Promise.resolve();
-                var l = Math.floor(Math.random() * b);
+                if (n().recommendations.status !== m || "" === r) return Promise.resolve();
+                var i = Math.floor(Math.random() * S);
                 return t({
-                    type: v,
-                    status: g
+                    type: g,
+                    status: y
                 }), new Promise(function(e) {
-                    n().window.setTimeout(e, l)
+                    n().window.setTimeout(e, i)
                 }).then(function() {
                     return n().experiments.get(p.PINEAPPLE)
                 }).then(function(e) {
-                    return "yes" === e ? o(n().stream.videoId) : Promise.reject()
+                    return "yes" === e ? a(n().stream.videoId) : Promise.reject()
                 })["catch"](function() {
-                    return i(r, e + 1)
+                    return o(r, e + 1)
                 }).then(function(r) {
                     var i = n(),
                         o = i.resumeWatch,
-                        l = i.streamMetadata,
+                        a = i.streamMetadata,
                         u = r.filter(function(e) {
-                            return e.broadcast_id !== l.broadcastID
+                            return e.broadcast_id !== a.broadcastID
                         }).sort(function(e, t) {
-                            var n = a(e, o.times),
-                                r = a(t, o.times);
+                            var n = s(e, o.times),
+                                r = s(t, o.times);
                             return !n && r ? -1 : n && !r ? 1 : new Date(t.created_at).getTime() - new Date(e.created_at).getTime()
                         });
-                    t(s(u.slice(0, e)))
+                    t(l(u.slice(0, e)))
                 })
             }
         }
 
-        function i(e, t) {
+        function o(e, t) {
             var n = {
                 limit: t,
                 broadcast_type: "archive"
             };
             return (0, d.krakenRequest)("channels/" + e + "/videos?" + $.param(n)).then(function(e) {
                 var t = e.videos;
-                return t
+                return t.map(function(e) {
+                    return (0, h["default"])(e, {
+                        recommendationType: C
+                    })
+                })
             })
         }
 
-        function o(e) {
+        function a(e) {
             return (0, d.krakenRequest)("videos/similar/" + e).then(function(e) {
                 var t = e.similar_videos;
-                return 0 === t.length ? Promise.reject() : t
+                return 0 === t.length ? Promise.reject() : t.map(function(e) {
+                    return (0, h["default"])(e, {
+                        recommendationType: T
+                    })
+                })
             })
         }
 
-        function a(e, t) {
+        function s(e, t) {
             if (!t.hasOwnProperty(e._id)) return !1;
             var n = t[e._id];
             if (0 === n) return !0;
-            var r = Math.max(m, y * e.length);
-            return e.length > m && n > r
+            var r = Math.max(b, E * e.length);
+            return e.length > b && n > r
         }
 
-        function s(e) {
+        function l(e) {
             return {
-                type: f,
+                type: v,
                 videos: e
             }
         }
 
-        function l() {
-            return s([])
+        function u() {
+            return l([])
         }
 
-        function u(e) {
+        function c(e) {
             return {
-                type: h,
+                type: _,
                 numVids: e
-            }
-        }
-
-        function c() {
-            return function(e, t) {
-                var n = t(),
-                    r = n.recommendations,
-                    i = n.analyticsTracker,
-                    o = r.videos.map(function(e) {
-                        return {
-                            vod_id: e._id,
-                            content: "recent"
-                        }
-                    });
-                i.trackEvent("content_recommendation", {
-                    recommendations: o,
-                    visible: r.numVideosVisible
-                })
             }
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.MAX_JITTER_DELAY = t.TEN_PERCENT = t.FETCH_VODS_THRESHOLD = t.MINIMUM_WATCHED_LENGTH = t.MAX_RECOMMENDED_VODS_VISIBLE = t.FETCHED = t.FETCHING = t.UNFETCHED = t.ACTION_SET_FETCHING_STATUS = t.ACTION_SET_NUM_VODS_VISIBLE = t.ACTION_SET_RECOMMENDED_VODS_WATCHED = t.ACTION_SET_RECOMMENDED_VODS = void 0, t.fetchRecommendedVODs = r, t.isWatched = a, t.clearRecommendedVODs = l, t.setVODVisibility = u, t.sendVODsDisplayedEvent = c;
+        }), t.CHANNEL_VODS = t.SIMILAR_VODS = t.MAX_JITTER_DELAY = t.TEN_PERCENT = t.FETCH_VODS_THRESHOLD = t.MINIMUM_WATCHED_LENGTH = t.MAX_RECOMMENDED_VODS_VISIBLE = t.FETCHED = t.FETCHING = t.UNFETCHED = t.ACTION_SET_FETCHING_STATUS = t.ACTION_SET_NUM_VODS_VISIBLE = t.ACTION_SET_RECOMMENDED_VODS_WATCHED = t.ACTION_SET_RECOMMENDED_VODS = void 0, t.fetchRecommendedVODs = i, t.isWatched = s, t.clearRecommendedVODs = u, t.setVODVisibility = c;
         var d = n(191),
             p = n(241),
-            f = t.ACTION_SET_RECOMMENDED_VODS = "set VOD recommendations",
-            h = (t.ACTION_SET_RECOMMENDED_VODS_WATCHED = "set VOD recommendations watched", t.ACTION_SET_NUM_VODS_VISIBLE = "set number of VOD recommendations visible"),
-            v = t.ACTION_SET_FETCHING_STATUS = "set fetching recommendations status",
-            _ = t.UNFETCHED = "unfetched",
-            g = t.FETCHING = "fetching",
-            m = (t.FETCHED = "fetched", t.MAX_RECOMMENDED_VODS_VISIBLE = 24, t.MINIMUM_WATCHED_LENGTH = 300),
-            y = (t.FETCH_VODS_THRESHOLD = 12e3, t.TEN_PERCENT = .1),
-            b = t.MAX_JITTER_DELAY = 5e3
+            f = n(78),
+            h = r(f),
+            v = t.ACTION_SET_RECOMMENDED_VODS = "set VOD recommendations",
+            _ = (t.ACTION_SET_RECOMMENDED_VODS_WATCHED = "set VOD recommendations watched", t.ACTION_SET_NUM_VODS_VISIBLE = "set number of VOD recommendations visible"),
+            g = t.ACTION_SET_FETCHING_STATUS = "set fetching recommendations status",
+            m = t.UNFETCHED = "unfetched",
+            y = t.FETCHING = "fetching",
+            b = (t.FETCHED = "fetched", t.MAX_RECOMMENDED_VODS_VISIBLE = 24, t.MINIMUM_WATCHED_LENGTH = 300),
+            E = (t.FETCH_VODS_THRESHOLD = 12e3, t.TEN_PERCENT = .1),
+            S = t.MAX_JITTER_DELAY = 5e3,
+            T = t.SIMILAR_VODS = "similar",
+            C = t.CHANNEL_VODS = "channel"
     }, function(e, t, n) {
         "use strict";
 
@@ -18476,7 +18538,8 @@
             }, {
                 key: "showCCAvailability",
                 value: function(e) {
-                    $(".js-control-cc", this._root).toggle(e), $(".js-cc-open-modal", this._root).toggle(e)
+                    $(".js-control-cc", this._root).toggle(e),
+                        $(".js-cc-open-modal", this._root).toggle(e)
                 }
             }, {
                 key: "toggleCCStatus",
@@ -36703,7 +36766,7 @@
             }, {
                 key: "_showRecommendationScreen",
                 value: function() {
-                    this._startRecommendationTimeout(), this._stateStore.dispatch((0, s.pushScreen)(s.VOD_RECOMMENDATION_SCREEN)), this._stateStore.dispatch((0, a.sendVODsDisplayedEvent)())
+                    this._startRecommendationTimeout(), this._stateStore.dispatch((0, s.pushScreen)(s.VOD_RECOMMENDATION_SCREEN))
                 }
             }, {
                 key: "_shouldShowRecs",
