@@ -8834,7 +8834,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.30-181515+c3f9a958447306d44645f9d28e10ff19cdb11950",
+                    app_version: "2017.03.30-184815+0a2d6fdc9bcf3309daaeecf322dc20756f91f3a8",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -36681,7 +36681,7 @@
                         t = e.playback,
                         n = e.stream,
                         r = e.recommendations;
-                    n.contentType === c.CONTENT_MODE_VOD && 1e3 * (t.duration - t.currentTime) < o.FETCH_VODS_THRESHOLD && r.status === o.UNFETCHED && this._stateStore.dispatch((0, o.fetchRecommendedVODs)(o.MAX_RECOMMENDED_VODS_VISIBLE))
+                    t.transitionScheme === p.TRANSITION_TYPE_RECOMMENDATIONS && n.contentType === c.CONTENT_MODE_VOD && 1e3 * (t.duration - t.currentTime) < o.FETCH_VODS_THRESHOLD && r.status === o.UNFETCHED && this._stateStore.dispatch((0, o.fetchRecommendedVODs)(o.MAX_RECOMMENDED_VODS_VISIBLE))
                 }
             }, {
                 key: "onAdsMetadata",
