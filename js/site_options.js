@@ -1384,6 +1384,19 @@ window.SiteOptions = {
                 "value": "d,hs,c"
             }]
         },
+        "e15d2a40-b2bb-4819-af2b-cb7a6f0e31cb": {
+            "name": "CHANNEL_SIGNUP_CTA_V2",
+            "groups": [{
+                "weight": 10,
+                "value": "show"
+            }, {
+                "weight": 40,
+                "value": "show_dismiss"
+            }, {
+                "weight": 50,
+                "value": "control"
+            }]
+        },
         "e20747aa-a503-436e-b104-27f974b3eecd": {
             "name": "android_clips_paris",
             "groups": [{
