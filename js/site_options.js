@@ -672,6 +672,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "52cb0929-0af1-45ba-81ef-79d9ae80b342": {
+            "name": "GROWTH_SKIP_SEEN_FRIENDS_IN_NOTIFICATIONS",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "yes"
+            }]
+        },
         "533f9d45-9152-45a2-8ec7-dc44d40cce6f": {
             "name": "ios_moat_3",
             "groups": [{
