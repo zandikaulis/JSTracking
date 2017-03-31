@@ -8834,7 +8834,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.03.30-202337+562a33e66f70af8a6958556558225ece7e4fd88b",
+                    app_version: "2017.03.31-181818+00caa203bf48c815f0359da3556dff06cf5290c2",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -15981,19 +15981,21 @@
                     var e = this._stateStore.getState(),
                         t = e.viewercount,
                         n = e.stats.videoStats,
-                        r = {
+                        r = e.analytics,
+                        i = {
                             viewercount: t,
                             stats: {
                                 videoStats: n
-                            }
+                            },
+                            playSessionId: r.playSessionId
                         };
-                    this._sendAll(y.BRIDGE_STORE_STATE_UPDATE, r)
+                    this._sendAll(y.BRIDGE_STORE_STATE_UPDATE, i)
                 }
             }, {
                 key: "destroy",
                 value: function() {
-                    this._stateStore.dispatch((0, _.requestStatsDisabled)(this)), this._window.removeEventListener("message", this),
-                        this._unsubscribes.forEach(function(e) {
+                    this._stateStore.dispatch((0, _.requestStatsDisabled)(this)),
+                        this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
                             return e()
                         })
                 }
@@ -16691,9 +16693,8 @@
                 e.setTheatre(!t)
             }
 
-            function H() {
-                var n = e.getTheatre();
-                $(t).attr("data-theatre", !n), r.setHovering(!1), r.showControls(h.hoverControlsDelay)
+            function H(e) {
+                $(t).attr("data-theatre", e), r.setHovering(!1), r.showControls(h.hoverControlsDelay)
             }
 
             function G() {
