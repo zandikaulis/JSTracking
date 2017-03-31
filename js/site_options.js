@@ -748,10 +748,10 @@ window.SiteOptions = {
         "5e786a5f-4ad6-4a1a-9fe9-5926ef05f0e7": {
             "name": "clips_it_aint_me",
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "variant1"
             }]
         },
