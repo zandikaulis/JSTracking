@@ -556,6 +556,16 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
+        "45081886-ec79-4f81-9ed3-603c735b2b0c": {
+            "name": "mario",
+            "groups": [{
+                "weight": 50,
+                "value": "yes"
+            }, {
+                "weight": 51,
+                "value": "no"
+            }]
+        },
         "474db509-7fb8-403e-97da-66dae8954e6d": {
             "name": "android_home_games_carousel",
             "groups": [{
