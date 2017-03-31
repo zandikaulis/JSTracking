@@ -562,7 +562,7 @@ window.SiteOptions = {
                 "weight": 50,
                 "value": "yes"
             }, {
-                "weight": 51,
+                "weight": 50,
                 "value": "no"
             }]
         },
@@ -1400,10 +1400,10 @@ window.SiteOptions = {
                 "weight": 20,
                 "value": "show"
             }, {
-                "weight": 30,
+                "weight": 70,
                 "value": "show_dismiss"
             }, {
-                "weight": 50,
+                "weight": 10,
                 "value": "control"
             }]
         },
