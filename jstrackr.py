@@ -44,4 +44,8 @@ if __name__ == '__main__':
             print "No Last-Modified header!"
         src = r.content
         beatuified = jsbeautifier.beautify(src)
+        if jsfile['filename'] == 'site_options.js':
+            # Avoid spam
+            if '"experiments": null' in beatuified:
+                continue
         open('js/%s' % jsfile['filename'], 'wb').write(beatuified)
