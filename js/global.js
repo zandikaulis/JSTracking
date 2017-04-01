@@ -15956,7 +15956,12 @@ googletag.cmd = googletag.cmd || [],
     function(e) {
         window.onPopoutClose = function(e, t) {
             var n = setInterval(function() {
-                e && (e.closed || e.success) && (t(!!e.success), e.close(), clearInterval(n))
+                if (e) {
+                    var i, r;
+                    try {
+                        i = e.closed, r = e.success
+                    } catch (e) {}(i || r) && (t(!!r), e.close(), clearInterval(n))
+                }
             }, 500)
         }
     }(jQuery), window.Twitch = window.Twitch || {},
