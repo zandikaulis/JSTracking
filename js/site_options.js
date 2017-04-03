@@ -1213,6 +1213,16 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9": {
+            "name": "CHANNEL_CHAT_CTA",
+            "groups": [{
+                "weight": 1,
+                "value": "5min"
+            }, {
+                "weight": 1,
+                "value": "control"
+            }]
+        },
         "b9063610-cdfd-43c3-8479-59a6ab82d831": {
             "name": "Visible Post Reactions",
             "groups": [{
