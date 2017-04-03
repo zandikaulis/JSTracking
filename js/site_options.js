@@ -758,10 +758,10 @@ window.SiteOptions = {
         "5e786a5f-4ad6-4a1a-9fe9-5926ef05f0e7": {
             "name": "clips_it_aint_me",
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "variant1"
             }]
         },
@@ -914,10 +914,10 @@ window.SiteOptions = {
         "8c2302fe-4f40-4c08-89d1-ee438d562da1": {
             "name": "clips_shape_of_you",
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "variant1"
             }]
         },
