@@ -914,10 +914,10 @@ window.SiteOptions = {
         "8c2302fe-4f40-4c08-89d1-ee438d562da1": {
             "name": "clips_shape_of_you",
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "variant1"
             }]
         },
