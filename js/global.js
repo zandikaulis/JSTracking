@@ -16461,7 +16461,8 @@ googletag.cmd = googletag.cmd || [],
                 SOCIAL_COLUMN: "variant1",
                 SOCIAL_RECOMMENDATIONS: "variant1",
                 LOL_METADATA_EXPERIMENT: "treatment",
-                CHOMPY: "experiment"
+                CHOMPY: "experiment",
+                GROWTH_SKIP_SEEN_FRIENDS_IN_NOTIFICATIONS: "yes"
             };
         _.each(Object.keys(s), function(t) {
             o[i[t]] = e.user().then(function(e) {
@@ -16584,8 +16585,7 @@ googletag.cmd = googletag.cmd || [],
                 })
             },
             init: function(e, n) {
-                console.info("FlashPlayer.init"),
-                    this._initSuccess = e || function() {}, n = n || function() {};
+                console.info("FlashPlayer.init"), this._initSuccess = e || function() {}, n = n || function() {};
                 var r = this,
                     o = this.options;
                 o.flashVars.eventsCallback = i.register(function(e) {
