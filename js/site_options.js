@@ -722,16 +722,6 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
-        "57d59cce-c506-470c-80a4-0e02452553a4": {
-            "name": "ios_new_user_signup",
-            "groups": [{
-                "weight": 95,
-                "value": "control"
-            }, {
-                "weight": 5,
-                "value": "live"
-            }]
-        },
         "5d03cd48-d664-4bd9-95de-c1ca5fb9e77b": {
             "name": "PERPETUA_CRSL",
             "groups": [{
