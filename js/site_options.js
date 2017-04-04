@@ -466,6 +466,16 @@ window.SiteOptions = {
                 "value": "hide"
             }]
         },
+        "354aaebd-7643-434f-be37-98fe12c01220": {
+            "name": "HTML5_Toggle_Removal",
+            "groups": [{
+                "weight": 10,
+                "value": "remove"
+            }, {
+                "weight": 90,
+                "value": "keep"
+            }]
+        },
         "355ff3e2-38b5-449a-8ab8-a52b5d3ab817": {
             "name": "remove csgo directory",
             "groups": [{
