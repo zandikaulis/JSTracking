@@ -360,16 +360,6 @@ window.SiteOptions = {
                 "value": "live"
             }]
         },
-        "21b8bf00-cc37-4458-a3c9-87c4aff4945b": {
-            "name": "android_new_user_signup",
-            "groups": [{
-                "weight": 95,
-                "value": "control"
-            }, {
-                "weight": 5,
-                "value": "live"
-            }]
-        },
         "2232da8a-775e-4a95-b006-19964b59ab4c": {
             "name": "FOLLOW_CTA_V2",
             "groups": [{
