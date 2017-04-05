@@ -1397,13 +1397,13 @@ window.SiteOptions = {
         "e15d2a40-b2bb-4819-af2b-cb7a6f0e31cb": {
             "name": "CHANNEL_SIGNUP_CTA_V2",
             "groups": [{
-                "weight": 20,
+                "weight": 15,
                 "value": "show"
             }, {
                 "weight": 70,
                 "value": "show_dismiss"
             }, {
-                "weight": 10,
+                "weight": 15,
                 "value": "control"
             }]
         },
