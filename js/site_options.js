@@ -966,11 +966,14 @@ window.SiteOptions = {
                 "weight": 5,
                 "value": "1.6.3+def"
             }, {
-                "weight": 93,
+                "weight": 91,
                 "value": "1.6.3+abs1"
             }, {
                 "weight": 2,
-                "value": "1.6.3+speed"
+                "value": "1.7.1"
+            }, {
+                "weight": 2,
+                "value": "1.7.1+spdcy"
             }]
         },
         "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": {
