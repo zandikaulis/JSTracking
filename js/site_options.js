@@ -765,16 +765,6 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
-        "60957e4d-2916-4d5f-9405-ef5839afc281": {
-            "name": "android_google_ima",
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 100,
-                "value": "active"
-            }]
-        },
         "61b169ff-bc62-4725-a40e-1be627197c6f": {
             "name": "Recommended Games",
             "groups": [{
