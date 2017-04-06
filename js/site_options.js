@@ -198,6 +198,9 @@ window.SiteOptions = {
             }, {
                 "weight": 90,
                 "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant2"
             }]
         },
         "0a4d513f-0274-4b33-b04f-287521abd51b": {
