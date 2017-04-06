@@ -8050,9 +8050,9 @@
         function l(e) {
             var t, n;
             return new p["default"]({
-                defaults: (t = {}, i(t, m, "no"), i(t, y, "off"), i(t, b, "no"), i(t, E, "no"), i(t, S, "no"), i(t, T, "no"), i(t, C, "no"), i(t, P, "no"), i(t, k, "no"), i(t, w, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, L, "1.6.1"), i(t, R, "no"), i(t, M, "no"), i(t, D, "no"), i(t, N, "no"), i(t, x, "no,"), i(t, j, "no"), i(t, U, "regular"), i(t, B, "keep"), t),
+                defaults: (t = {}, i(t, m, "no"), i(t, y, "off"), i(t, b, "no"), i(t, E, "no"), i(t, S, "no"), i(t, T, "no"), i(t, C, "no"), i(t, P, "no"), i(t, k, "no"), i(t, w, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, L, "1.6.1"), i(t, R, "no"), i(t, M, "no"), i(t, D, "no"), i(t, N, "no"), i(t, x, "no,"), i(t, j, "no"), i(t, U, "keep"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, i(n, U, a("plus")), i(n, y, a("v2")), i(n, b, o(["US"])), i(n, E, o(["GB"])), i(n, S, o(["DE"])), i(n, T, o(["FR"])), i(n, C, o(["SE"])), i(n, P, o(["DK", "FI", "NL", "NO"])), i(n, k, o(["CA"])), i(n, w, o(["AU", "NZ"])), i(n, A, o(["BE"])), i(n, O, o(["PL"])), i(n, I, o(["AT", "CH", "ES", "IT", "PT"])), i(n, M, a("yes")), i(n, N, a("vca")), i(n, x, a("yes")), i(n, L, a("1.6.1+abs1")), n),
+                overrides: (n = {}, i(n, y, a("v2")), i(n, b, o(["US"])), i(n, E, o(["GB"])), i(n, S, o(["DE"])), i(n, T, o(["FR"])), i(n, C, o(["SE"])), i(n, P, o(["DK", "FI", "NL", "NO"])), i(n, k, o(["CA"])), i(n, w, o(["AU", "NZ"])), i(n, A, o(["BE"])), i(n, O, o(["PL"])), i(n, I, o(["AT", "CH", "ES", "IT", "PT"])), i(n, M, a("yes")), i(n, N, a("vca")), i(n, x, a("yes")), i(n, L, a("1.6.1+abs1")), n),
                 platform: "web",
                 login: e.login,
                 provider: new h["default"](h["default"].SERVICE_URL),
@@ -8061,7 +8061,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.ENABLE_ABS_GROUP = t.NO_ABS_WITH_V12 = t.ABS_FIRST_TIME_GROUP_B = t.ABS_FIRST_TIME_GROUP_A = t.ABS_FORCED_GROUP = t.HTML5_TOGGLE_REMOVAL = t.TRANSCODE_QUALITY_EXPERIMENT = t.ADOPT = t.PINEAPPLE = t.VP_QOS_TEST = t.DETERMINATION = t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
+        }), t.ENABLE_ABS_GROUP = t.NO_ABS_WITH_V12 = t.ABS_FIRST_TIME_GROUP_B = t.ABS_FIRST_TIME_GROUP_A = t.ABS_FORCED_GROUP = t.HTML5_TOGGLE_REMOVAL = t.ADOPT = t.PINEAPPLE = t.VP_QOS_TEST = t.DETERMINATION = t.GABRIEL = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
         var u = n(49),
             c = r(u),
             d = n(242),
@@ -8091,12 +8091,11 @@
             D = t.VP_QOS_TEST = "711aaaf6-61c0-4cc4-9469-0dfc9908785a",
             x = t.PINEAPPLE = "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3",
             j = t.ADOPT = "5397de92-0538-42d1-977c-11842e03c9e5",
-            U = t.TRANSCODE_QUALITY_EXPERIMENT = "039bcc41-baa9-4351-8a76-3bcece6aec44",
-            B = t.HTML5_TOGGLE_REMOVAL = "354aaebd-7643-434f-be37-98fe12c01220",
-            V = t.ABS_FORCED_GROUP = "yes-forced",
-            F = t.ABS_FIRST_TIME_GROUP_A = "yes-ft-a",
-            H = t.ABS_FIRST_TIME_GROUP_B = "yes-ft-b";
-        t.NO_ABS_WITH_V12 = "no-with-1.2", t.ENABLE_ABS_GROUP = Object.freeze([V, F, H])
+            U = t.HTML5_TOGGLE_REMOVAL = "354aaebd-7643-434f-be37-98fe12c01220",
+            B = t.ABS_FORCED_GROUP = "yes-forced",
+            V = t.ABS_FIRST_TIME_GROUP_A = "yes-ft-a",
+            F = t.ABS_FIRST_TIME_GROUP_B = "yes-ft-b";
+        t.NO_ABS_WITH_V12 = "no-with-1.2", t.ENABLE_ABS_GROUP = Object.freeze([B, V, F])
     }, function(e, t, n) {
         function r(e) {
             var t = i(e);
@@ -8862,7 +8861,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.05-215944+cc917ab36ce658b73633e1762d6f66b46cf60b71",
+                    app_version: "2017.04.06-061042+04fdaa7d3c272d6b5a67cda6cbacc8f4a45ed008",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -11458,7 +11457,6 @@
                         }), e
                     }),
                     k = {
-                        transcode: b.get(s.TRANSCODE_QUALITY_EXPERIMENT),
                         adStitchingUS: b.get(s.BAKING_BREAD_US),
                         adStitchingUK: b.get(s.BAKING_BREAD_UK),
                         adStitchingA: b.get(s.BAKING_BREAD_A),
@@ -11981,12 +11979,12 @@
                 }, {
                     key: "getCurrentSrc",
                     value: function() {
-                        return this.src;
+                        return this.src
                     }
                 }, {
                     key: "getVolume",
                     value: function() {
-                        return this.video.volume
+                        return this.video.volume;
                     }
                 }, {
                     key: "setVolume",
