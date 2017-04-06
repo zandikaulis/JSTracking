@@ -16381,7 +16381,6 @@ googletag.cmd = googletag.cmd || [],
                 VOD_UPLOAD_UNITS_V3: "1710cf57-352c-4d09-b2c1-3d40bdf79b30",
                 CHOMPY: "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57",
                 ADOPT: "5397de92-0538-42d1-977c-11842e03c9e5",
-                ORC: "d4d938f7-bdc2-42cd-afd0-f434e4192c29",
                 AWS_ROUNDTRIP_LATENCY_TEST_OPT_IN: "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef",
                 AWS_ROUNDTRIP_LATENCY_TEST_ENDPOINT: "5daee224-4c99-499f-b6e0-e308a5fa54f1",
                 LANGUAGE_DIRECTORY_ROWCOUNT_V2: "8d2e5bd8-c305-455f-b7ff-ca6fc2ea8710",
@@ -16433,7 +16432,6 @@ googletag.cmd = googletag.cmd || [],
                 "b2925d54-cebb-4e1d-a50d-9dd2b1ea850e": "control",
                 "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57": "control",
                 "fc494cf9-3a22-448e-b262-ba9e218559e5": "control",
-                "d4d938f7-bdc2-42cd-afd0-f434e4192c29": "no",
                 "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef": "false",
                 "5daee224-4c99-499f-b6e0-e308a5fa54f1": "control",
                 "8d2e5bd8-c305-455f-b7ff-ca6fc2ea8710": "2",
@@ -16587,10 +16585,11 @@ googletag.cmd = googletag.cmd || [],
                 var r = this,
                     o = this.options;
                 o.flashVars.eventsCallback = i.register(function(e) {
-                    r._onEvents(e)
-                }), swfobject.embedSWF(o.url, o.swfId, o.width, o.height, o.version, "/widgets/expressinstall.swf", o.flashVars, o.params, o.attrs, function(e) {
-                    e.success ? (r.$el = t("#" + r.options.swfId), r.el = r.$el[0]) : (console.info("FlashPlayer.init error"), n("error embedding flash player"))
-                })
+                        r._onEvents(e)
+                    }),
+                    swfobject.embedSWF(o.url, o.swfId, o.width, o.height, o.version, "/widgets/expressinstall.swf", o.flashVars, o.params, o.attrs, function(e) {
+                        e.success ? (r.$el = t("#" + r.options.swfId), r.el = r.$el[0]) : (console.info("FlashPlayer.init error"), n("error embedding flash player"))
+                    })
             },
             _onPlayerInit: function() {
                 this._proxy(), this.adFeedbackMenu = new e.player.AdFeedbackMenu(t(".js-ad-feedback-menu").first(), this), console.info("FlashPlayer.init success"), this._initSuccess(this)
@@ -17592,23 +17591,24 @@ googletag.cmd = googletag.cmd || [],
     function(e, t) {
         var n = {};
         n.write = function(t, n, i) {
-            i = i || {};
-            var t = "TwitchCache:" + t;
-            e.storage.setObject(t, {
-                resource: n,
-                expiration: i.milliseconds,
-                time: (new Date).getTime(),
-                version: i.version,
-                restrict: i.restrict
-            }, _.pick(i, "storage"))
-        }, n.read = function(t, n) {
-            n = n || {};
-            var t = "TwitchCache:" + t,
-                i = e.storage.getObject(t, _.pick(n, "storage"));
-            return i ? i.expiration && (new Date).getTime() - i.time > i.expiration || n.version !== i.version || !_.isEqual(n.restrict, i.restrict) ? (e.storage.del(t, _.pick(n, "storage")), null) : i.resource : null
-        }, e.mixin({
-            cache: n
-        })
+                i = i || {};
+                var t = "TwitchCache:" + t;
+                e.storage.setObject(t, {
+                    resource: n,
+                    expiration: i.milliseconds,
+                    time: (new Date).getTime(),
+                    version: i.version,
+                    restrict: i.restrict
+                }, _.pick(i, "storage"))
+            },
+            n.read = function(t, n) {
+                n = n || {};
+                var t = "TwitchCache:" + t,
+                    i = e.storage.getObject(t, _.pick(n, "storage"));
+                return i ? i.expiration && (new Date).getTime() - i.time > i.expiration || n.version !== i.version || !_.isEqual(n.restrict, i.restrict) ? (e.storage.del(t, _.pick(n, "storage")), null) : i.resource : null
+            }, e.mixin({
+                cache: n
+            })
     }(window.Twitch, window.jQuery),
     function(e, t) {
         var n = {};
