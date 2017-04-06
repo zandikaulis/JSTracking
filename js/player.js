@@ -8861,7 +8861,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.06-213538+b67343a5254d443701a4a33d4046b06e98a17ad0",
+                    app_version: "2017.04.06-215550+2d542f407e50a81a2cb794ee3b9320bebfe483cb",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -9575,6 +9575,7 @@
         }
 
         function i(e, t) {
+            if (!isFinite(e)) return "00:00:00";
             var n = r(e, t);
             return n.join(":")
         }
@@ -10420,7 +10421,7 @@
             }
 
             function Se(e) {
-                Ge.emit(ne.COMPANION_RENDERED, e);
+                Ge.emit(ne.COMPANION_RENDERED, e)
             }
 
             function Te(e) {
@@ -11978,7 +11979,7 @@
                 }, {
                     key: "setSrc",
                     value: function(e) {
-                        this.src = e, this.src && this.load();
+                        this.src = e, this.src && this.load()
                     }
                 }, {
                     key: "getCurrentSrc",
