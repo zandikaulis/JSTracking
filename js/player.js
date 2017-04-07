@@ -8861,7 +8861,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.07-023525+9f8f140fcc49899b8cb64184f45840dcc5b17757",
+                    app_version: "2017.04.07-183026+8c0f4bf652336ccbe027a85493203470aaebc75e",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -11289,14 +11289,15 @@
             return function(t, n) {
                 var r = n(),
                     i = r.playback,
-                    a = r.env;
+                    a = r.env,
+                    o = r.screenMode;
                 switch (a.playerType) {
                     case P.PLAYER_SITE:
-                        i.transitionFn(e);
+                        o.isFullScreen ? t((0, O.setStream)(O.TYPE_VIDEO, e)) : i.transitionFn(e);
                         break;
                     case P.PLAYER_POPOUT:
-                        var o = b(e, n);
-                        m(o, n);
+                        var s = b(e, n);
+                        m(s, n);
                         break;
                     default:
                         t((0, O.setStream)(O.TYPE_VIDEO, e))
@@ -11969,7 +11970,7 @@
                 }, {
                     key: "load",
                     value: function() {
-                        this.core && this.src && (this.offline = !1, this.core.loadURL(this.src), this.video.autoplay && this.core.play())
+                        this.core && this.src && (this.offline = !1, this.core.loadURL(this.src), this.video.autoplay && this.core.play());
                     }
                 }, {
                     key: "getSrc",
