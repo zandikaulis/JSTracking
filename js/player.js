@@ -8050,9 +8050,9 @@
         function l(e) {
             var t, n;
             return new p["default"]({
-                defaults: (t = {}, i(t, m, "no"), i(t, y, "off"), i(t, b, "no"), i(t, E, "no"), i(t, S, "no"), i(t, T, "no"), i(t, C, "no"), i(t, P, "no"), i(t, k, "no"), i(t, w, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, L, "1.6.1"), i(t, R, "no"), i(t, M, "no"), i(t, D, "no"), i(t, N, "no"), i(t, x, "no,"), i(t, j, "no"), i(t, U, "keep"), t),
+                defaults: (t = {}, i(t, m, "no"), i(t, y, "off"), i(t, b, "no"), i(t, E, "no"), i(t, S, "no"), i(t, T, "no"), i(t, C, "no"), i(t, P, "no"), i(t, k, "no"), i(t, w, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, L, "1.6.3"), i(t, R, "no"), i(t, M, "no"), i(t, D, "no"), i(t, N, "no"), i(t, x, "no,"), i(t, j, "no"), i(t, U, "keep"), t),
                 deviceID: e.deviceID,
-                overrides: (n = {}, i(n, y, a("v2")), i(n, b, o(["US"])), i(n, E, o(["GB"])), i(n, S, o(["DE"])), i(n, T, o(["FR"])), i(n, C, o(["SE"])), i(n, P, o(["DK", "FI", "NL", "NO"])), i(n, k, o(["CA"])), i(n, w, o(["AU", "NZ"])), i(n, A, o(["BE"])), i(n, O, o(["PL"])), i(n, I, o(["AT", "CH", "ES", "IT", "PT"])), i(n, M, a("yes")), i(n, N, a("vca")), i(n, x, a("yes")), i(n, L, a("1.6.1+abs1")), n),
+                overrides: (n = {}, i(n, y, a("v2")), i(n, b, o(["US"])), i(n, E, o(["GB"])), i(n, S, o(["DE"])), i(n, T, o(["FR"])), i(n, C, o(["SE"])), i(n, P, o(["DK", "FI", "NL", "NO"])), i(n, k, o(["CA"])), i(n, w, o(["AU", "NZ"])), i(n, A, o(["BE"])), i(n, O, o(["PL"])), i(n, I, o(["AT", "CH", "ES", "IT", "PT"])), i(n, M, a("yes")), i(n, N, a("vca")), i(n, x, a("yes")), i(n, L, a("1.7.1+spdcy")), n),
                 platform: "web",
                 login: e.login,
                 provider: new h["default"](h["default"].SERVICE_URL),
@@ -8861,7 +8861,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.06-215550+2d542f407e50a81a2cb794ee3b9320bebfe483cb",
+                    app_version: "2017.04.07-023525+9f8f140fcc49899b8cb64184f45840dcc5b17757",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -12828,7 +12828,7 @@
             var e = (navigator.appVersion || "").toLowerCase();
             return i.some(function(t) {
                 return e.indexOf(t) > -1
-            }) || e.indexOf("rv:11.0") > -1 && e.indexOf("trident") > -1
+            })
         }
 
         function r() {
@@ -13057,8 +13057,7 @@
             return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
         };
         ! function(n, s) {
-            "object" === o(t) ? e.exports = t = s() : (i = [],
-                r = s, a = "function" == typeof r ? r.apply(t, i) : r, !(void 0 !== a && (e.exports = a)))
+            "object" === o(t) ? e.exports = t = s() : (i = [], r = s, a = "function" == typeof r ? r.apply(t, i) : r, !(void 0 !== a && (e.exports = a)))
         }(void 0, function() {
             var e = e || function(e, t) {
                 var n = {},
@@ -14544,8 +14543,8 @@
             w = (t.IMAManager = function() {
                 function e(t, n, r) {
                     var i = this;
-                    a(this, e), this._videoContainer = t, this._backend = n, this._stateStore = r,
-                        this._paused = !1, this._contentPauseRequested = !1, this._eventEmitter = new l["default"], this._currentAdsManager = O;
+                    a(this, e), this._videoContainer = t, this._backend = n, this._stateStore = r, this._paused = !1, this._contentPauseRequested = !1,
+                        this._eventEmitter = new l["default"], this._currentAdsManager = O;
                     var o = this._stateStore.getState(),
                         s = o.window,
                         u = s.google;
@@ -16003,10 +16002,10 @@
             }, {
                 key: "destroy",
                 value: function() {
-                    this._stateStore.dispatch((0,
-                        _.requestStatsDisabled)(this)), this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
-                        return e()
-                    })
+                    this._stateStore.dispatch((0, _.requestStatsDisabled)(this)),
+                        this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
+                            return e()
+                        })
                 }
             }]), e
         }()
@@ -17349,7 +17348,7 @@
                     var t = this._stateStore.getState(),
                         n = t.recommendations,
                         r = parseInt($(e.currentTarget).attr("data-index"), 10);
-                    this.trackSelect(n.videos[r]), this.selectVOD(r);
+                    this.trackSelect(n.videos[r]), this.selectVOD(r)
                 }
             }, {
                 key: "selectVOD",
