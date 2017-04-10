@@ -1219,6 +1219,16 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "b88f3829-e1ac-471a-912a-264cac2587b3": {
+            "name": "FAIRFAX",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 1000,
+                "value": "no"
+            }]
+        },
         "b9063610-cdfd-43c3-8479-59a6ab82d831": {
             "name": "Visible Post Reactions",
             "groups": [{
