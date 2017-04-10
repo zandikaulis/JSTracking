@@ -1349,13 +1349,13 @@ window.SiteOptions = {
             "name": "chomperz",
             "groups": [{
                 "weight": 0,
-                "value": "five"
+                "value": "skip"
             }, {
                 "weight": 100,
                 "value": "control"
             }, {
                 "weight": 0,
-                "value": "fifteen"
+                "value": "skip15"
             }]
         },
         "d4d938f7-bdc2-42cd-afd0-f434e4192c29": {
