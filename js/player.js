@@ -1188,7 +1188,8 @@
                             community_name: i.data.name,
                             medium: _,
                             content: m,
-                            transcoder_type: c.transcodestack
+                            transcoder_type: c.transcodestack,
+                            autoplayed: this.options.autoplay
                         };
                     l.contentType === B.CONTENT_MODE_VOD && s.id && (b.collection_item_position = (0, y["default"])(s.items, {
                         item_id: l.videoId.substr(1)
@@ -1309,7 +1310,8 @@
                         var s = {
                             time_since_load_start: Date.now() - n.playSessionStartTime,
                             community_id: r.data._id,
-                            community_name: r.data.name
+                            community_name: r.data.name,
+                            autoplayed: this.options.autoplay
                         };
                         i.contentType === B.CONTENT_MODE_VOD && ((0, k.videoInfo)(i.videoId).then(function(t) {
                             e.countessTracker.trackVODView(t)
@@ -8861,7 +8863,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.07-225140+113f1dc7abb1f0d62ec11380f5ee7bfdd914d5b8",
+                    app_version: "2017.04.10-214436+9d9cef3fa3f8dd3f52aa19e2ce18fba4c4b44e51",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,

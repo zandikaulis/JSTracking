@@ -402,10 +402,10 @@ window.SiteOptions = {
         "237bee24-0366-4712-9a80-dad0cefabdcc": {
             "name": "featured_communities",
             "groups": [{
-                "weight": 80,
+                "weight": 100,
                 "value": "experiment"
             }, {
-                "weight": 20,
+                "weight": 0,
                 "value": "control"
             }]
         },
