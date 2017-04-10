@@ -1222,10 +1222,10 @@ window.SiteOptions = {
         "b88f3829-e1ac-471a-912a-264cac2587b3": {
             "name": "FAIRFAX",
             "groups": [{
-                "weight": 0,
+                "weight": 1000,
                 "value": "yes"
             }, {
-                "weight": 1000,
+                "weight": 0,
                 "value": "no"
             }]
         },
