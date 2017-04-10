@@ -1222,10 +1222,10 @@ window.SiteOptions = {
         "b88f3829-e1ac-471a-912a-264cac2587b3": {
             "name": "FAIRFAX",
             "groups": [{
-                "weight": 1000,
+                "weight": 0,
                 "value": "yes"
             }, {
-                "weight": 0,
+                "weight": 1000,
                 "value": "no"
             }]
         },
@@ -1368,10 +1368,10 @@ window.SiteOptions = {
         "d48fe249-fd73-4c8f-bd17-415b70dc3708": {
             "name": "chomperz",
             "groups": [{
-                "weight": 0,
-                "value": "skip"
-            }, {
                 "weight": 100,
+                "value": "skip5"
+            }, {
+                "weight": 0,
                 "value": "control"
             }, {
                 "weight": 0,
