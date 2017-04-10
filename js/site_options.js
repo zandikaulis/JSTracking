@@ -297,6 +297,16 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "18f90f1f-3954-4c30-a93f-ac37e96c8136": {
+            "name": "android_clips_all_night",
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "variant1"
+            }]
+        },
         "19017d2c-4473-4914-a10f-82152c8b2bd9": {
             "name": "CVP-Feb-2017",
             "groups": [{
@@ -1356,16 +1366,6 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "skip15"
-            }]
-        },
-        "d4d938f7-bdc2-42cd-afd0-f434e4192c29": {
-            "name": "ORC",
-            "groups": [{
-                "weight": 0,
-                "value": "no"
-            }, {
-                "weight": 100,
-                "value": "yes"
             }]
         },
         "df008233-c0f2-46dc-92a2-61396ae402e3": {
