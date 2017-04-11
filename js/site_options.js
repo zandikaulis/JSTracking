@@ -1363,6 +1363,16 @@ window.SiteOptions = {
                 "value": "skip15"
             }]
         },
+        "d91cbc6b-1d6f-42ef-89b4-049176164067": {
+            "name": "coview_with_predictions",
+            "groups": [{
+                "weight": 100,
+                "value": "original_coview"
+            }, {
+                "weight": 0,
+                "value": "unsupervised_coview"
+            }]
+        },
         "df008233-c0f2-46dc-92a2-61396ae402e3": {
             "name": "Similar Channels",
             "groups": [{
