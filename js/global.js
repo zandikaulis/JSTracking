@@ -16388,7 +16388,8 @@ googletag.cmd = googletag.cmd || [],
                 SOCIAL_COLUMN: "0a340f6e-772a-4e12-a95e-5a984c071107",
                 SOCIAL_RECOMMENDATIONS: "819aed52-3cc1-4747-a840-476a39487a2e",
                 ZACH_MODE: "0a4d513f-0274-4b33-b04f-287521abd51b",
-                GROWTH_SKIP_SEEN_FRIENDS_IN_NOTIFICATIONS: "52cb0929-0af1-45ba-81ef-79d9ae80b342"
+                GROWTH_SKIP_SEEN_FRIENDS_IN_NOTIFICATIONS: "52cb0929-0af1-45ba-81ef-79d9ae80b342",
+                WT_P: "e5d2a724-5506-4f7d-986a-be8cda8ed742"
             },
             r = {
                 "99494f77-1c7c-46c5-9b9c-a117db47d3c5": "control",
@@ -16438,7 +16439,8 @@ googletag.cmd = googletag.cmd || [],
                 "0a340f6e-772a-4e12-a95e-5a984c071107": "control",
                 "819aed52-3cc1-4747-a840-476a39487a2e": "control",
                 "0a4d513f-0274-4b33-b04f-287521abd51b": "control",
-                "52cb0929-0af1-45ba-81ef-79d9ae80b342": "control"
+                "52cb0929-0af1-45ba-81ef-79d9ae80b342": "control",
+                "e5d2a724-5506-4f7d-986a-be8cda8ed742": "no"
             },
             o = {},
             s = {
@@ -16456,7 +16458,8 @@ googletag.cmd = googletag.cmd || [],
                 SOCIAL_RECOMMENDATIONS: "variant1",
                 LOL_METADATA_EXPERIMENT: "treatment",
                 CHOMPY: "experiment",
-                GROWTH_SKIP_SEEN_FRIENDS_IN_NOTIFICATIONS: "yes"
+                GROWTH_SKIP_SEEN_FRIENDS_IN_NOTIFICATIONS: "yes",
+                WT_P: "dev"
             };
         _.each(Object.keys(s), function(t) {
             o[i[t]] = e.user().then(function(e) {
