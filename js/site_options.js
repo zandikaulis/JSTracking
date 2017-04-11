@@ -308,22 +308,6 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
-        "19017d2c-4473-4914-a10f-82152c8b2bd9": {
-            "name": "CVP-Feb-2017",
-            "groups": [{
-                "weight": 50,
-                "value": "1.3.5"
-            }, {
-                "weight": 42,
-                "value": "1.5.1"
-            }, {
-                "weight": 4,
-                "value": "1.5.1+abs0"
-            }, {
-                "weight": 4,
-                "value": "1.5.1+abs1"
-            }]
-        },
         "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3": {
             "name": "Pineapple",
             "groups": [{
@@ -980,13 +964,13 @@ window.SiteOptions = {
                 "weight": 5,
                 "value": "1.6.3+def"
             }, {
-                "weight": 91,
+                "weight": 80,
                 "value": "1.6.3+abs1"
             }, {
-                "weight": 2,
+                "weight": 10,
                 "value": "1.7.1"
             }, {
-                "weight": 2,
+                "weight": 5,
                 "value": "1.7.1+spdcy"
             }]
         },
