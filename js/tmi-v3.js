@@ -3614,10 +3614,9 @@
                 return room
             };
             SessionManager.prototype._buildChattersListUrl = function(roomName, cluster) {
-                var forceBaseURL = _utilJs2["default"].urlParams.tmi_http_base_url;
-                if (!forceBaseURL || !forceBaseURL.match(/\.twitch\.tv(:\d+)?/)) {
-                    forceBaseURL = "tmi.twitch.tv"
-                }
+                var forceBaseURL = "tmi.twitch.tv";
+                var m = /^[a-z]+\.twitch\.tv(?::\d+)?$/.exec(_utilJs2["default"].urlParams.tmi_http_base_url);
+                if (m) forceBaseURL = m[0];
                 return "//" + forceBaseURL + "/group/user/" + roomName + "/chatters"
             };
             SessionManager.prototype._fetchIgnored = function() {
