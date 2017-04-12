@@ -197,10 +197,10 @@ window.SiteOptions = {
                 "weight": 10,
                 "value": "variant1"
             }, {
-                "weight": 90,
+                "weight": 40,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "variant2"
             }]
         },
@@ -954,8 +954,17 @@ window.SiteOptions = {
                 "weight": 5,
                 "value": "1.6.3+def"
             }, {
-                "weight": 80,
+                "weight": 74,
                 "value": "1.6.3+abs1"
+            }, {
+                "weight": 2,
+                "value": "1.7.2+speed"
+            }, {
+                "weight": 2,
+                "value": "1.7.2+spd24"
+            }, {
+                "weight": 2,
+                "value": "1.7.2+spd35"
             }, {
                 "weight": 10,
                 "value": "1.7.1"
