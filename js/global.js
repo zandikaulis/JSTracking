@@ -18275,15 +18275,14 @@ var Base64 = {
                 if (t) {
                     var n = {
                         game: t,
-                        promoted: e.storage.get("mp:game-promoted"),
                         location: e.storage.get("mp:game-click-location"),
                         index: e.storage.set("mp:game-click-index")
                     };
-                    e.tracking.mixpanel.trackEvent("game-directory-click", n), e.storage.del("mp:game-click-name"), e.storage.del("mp:game-promoted"), e.storage.del("mp:game-click-location"), e.storage.del("mp:game-click-index")
+                    e.tracking.mixpanel.trackEvent("game-directory-click", n), e.storage.del("mp:game-click-name"), e.storage.del("mp:game-click-location"), e.storage.del("mp:game-click-index")
                 }
             },
             setGameClickVars: function(t) {
-                e.storage.set("mp:game-click-name", t.game), e.storage.set("mp:game-click-index", t.index), e.storage.set("mp:game-click-location", t.location), e.storage.set("mp:game-promoted", t.promoted)
+                e.storage.set("mp:game-click-name", t.game), e.storage.set("mp:game-click-index", t.index), e.storage.set("mp:game-click-location", t.location)
             },
             trackEvent: function(t, n) {
                 var i;
