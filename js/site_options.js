@@ -358,6 +358,16 @@ window.SiteOptions = {
                 "value": "live"
             }]
         },
+        "21eae6bf-b120-4cd0-a513-5612ea0fb51c": {
+            "name": "ps4_playercore",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "2232da8a-775e-4a95-b006-19964b59ab4c": {
             "name": "FOLLOW_CTA_V2",
             "groups": [{
