@@ -17405,7 +17405,7 @@ googletag.cmd = googletag.cmd || [],
                 n && n.singleOnly || r.push("dfp-directory-rectangle"), e.asyncAds.sra({
                     slots: r
                 }).then(function(e) {
-                    e[0] && 1 != t("#google_ads_iframe_\\/3576121\\/twitch\\/directory_0").width() ? t("#dfp-directory-banner").show() : t("#dfp-directory-banner").hide(), e[1] && 1 != t("#google_ads_iframe_\\/3576121\\/twitch\\/directory_1").width() ? t(".ad_contain").show().attr("style", "display: block !important") : t(".ad_contain").hide()
+                    e[0] && 1 != t("#google_ads_iframe_\\/3576121\\/twitch\\/directory_0").width() ? t("#dfp-directory-banner").show() : t("#dfp-directory-banner").hide(), e[1] && 1 != t("#google_ads_iframe_\\/3576121\\/twitch\\/directory_1").width() ? t(".ad_contain").show().css("display", "block !important") : t(".ad_contain").hide()
                 })
             }
         }, n.resetGoogletag = function() {
