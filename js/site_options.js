@@ -1376,10 +1376,10 @@ window.SiteOptions = {
             "name": "coview_with_predictions",
             "groups": [{
                 "weight": 100,
-                "value": "original_coview"
+                "value": "control"
             }, {
                 "weight": 0,
-                "value": "supervised_coview"
+                "value": "experiment"
             }]
         },
         "df008233-c0f2-46dc-92a2-61396ae402e3": {
