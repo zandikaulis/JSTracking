@@ -964,23 +964,26 @@ window.SiteOptions = {
                 "weight": 5,
                 "value": "1.6.3+def"
             }, {
-                "weight": 74,
+                "weight": 64,
                 "value": "1.6.3+abs1"
             }, {
-                "weight": 2,
-                "value": "1.7.2+speed"
+                "weight": 10,
+                "value": "1.7.3"
             }, {
                 "weight": 2,
-                "value": "1.7.2+spd24"
+                "value": "1.7.3+speed"
             }, {
                 "weight": 2,
-                "value": "1.7.2+spd35"
+                "value": "1.7.3+spd24"
+            }, {
+                "weight": 2,
+                "value": "1.7.3+spd35"
             }, {
                 "weight": 10,
-                "value": "1.7.1"
+                "value": "1.7.3"
             }, {
                 "weight": 5,
-                "value": "1.7.1+spdcy"
+                "value": "1.7.3+spdcy"
             }]
         },
         "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": {
