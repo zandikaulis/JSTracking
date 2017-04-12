@@ -1039,6 +1039,16 @@ window.SiteOptions = {
                 "value": "live"
             }]
         },
+        "9d1ee56c-22dc-4d5c-96dd-5ee393c6cd4b": {
+            "name": "xboxone_playercore",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "9e5fffd0-9693-412b-913d-7da332fdeea4": {
             "name": "Marker Experiment",
             "groups": [{
