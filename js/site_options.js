@@ -1389,11 +1389,17 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "skip5"
             }, {
+                "weight": 0,
+                "value": "control5"
+            }, {
                 "weight": 100,
-                "value": "control"
+                "value": "holdout"
             }, {
                 "weight": 0,
                 "value": "skip15"
+            }, {
+                "weight": 0,
+                "value": "control15"
             }]
         },
         "d91cbc6b-1d6f-42ef-89b4-049176164067": {
