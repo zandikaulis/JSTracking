@@ -8877,7 +8877,7 @@
                     y = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.13-003640+cd36c5b6e960d0a5f6755104bf72d6a12f7ff995",
+                    app_version: "2017.04.14-181907+3454e46f7ce8dd722683591ad5c0bb80258dbfb3",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -14639,7 +14639,7 @@
                         }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.CONTENT_RESUME_REQUESTED, function() {
                             return t._onContentResumeRequested(r)
                         }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.LOADED, function(e) {
-                            return t._onAdLoaded(e)
+                            return t._onAdLoaded(e, r)
                         }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.STARTED, function(e) {
                             return t._onAdStarted(e)
                         }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.IMPRESSION, function(e) {
@@ -14673,8 +14673,8 @@
                                 adType: null,
                                 duration: null
                             },
-                            r = this._initializeAdSpadeEvent(n);
-                        r.reason = t.getMessage(), this._sendAdSpadeEvent(f.AD_ERROR, r), this._contentPauseRequested && (this._contentPauseRequested = !1, this._stateStore.dispatch((0, m.clearCurrentAdMetadata)()), this._resumeContent(), this._eventEmitter.emit(g.AD_ERROR, {
+                            r = this._initializeAdSpadeEvent(n, e.getAd());
+                        r.reason = t.getMessage(), r.error_code = t.getErrorCode(), r.error_type = t.getType(), this._sendAdSpadeEvent(f.AD_ERROR, r), this._contentPauseRequested && (this._contentPauseRequested = !1, this._stateStore.dispatch((0, m.clearCurrentAdMetadata)()), this._resumeContent(), this._eventEmitter.emit(g.AD_ERROR, {
                             roll_type: n.adType
                         })), this._currentAdsManager.destroy(), this._currentAdsManager = O
                     }
@@ -14707,8 +14707,8 @@
                     }
                 }, {
                     key: "_onAdLoaded",
-                    value: function() {
-                        this._sendAdSpadeEvent(f.AD_LOADED)
+                    value: function(e, t) {
+                        this._sendAdSpadeEvent(f.AD_LOADED, this._initializeAdSpadeEvent(t, e.getAd()))
                     }
                 }, {
                     key: "_onAdStarted",
@@ -14724,32 +14724,30 @@
                 }, {
                     key: "_onAdImpression",
                     value: function(e, t) {
-                        var n = e.getAd(),
-                            r = this._initializeAdSpadeEvent(t);
-                        r.ad_id = n.getAdId();
-                        var i = this._stateStore.getState().window.Date;
-                        r.request_to_impression_latency = i.now() - this._adRequestTime, this._sendAdSpadeEvent(f.AD_IMPRESSION, r), this._eventEmitter.emit(g.AD_IMPRESSION, {
+                        var n = this._initializeAdSpadeEvent(t, e.getAd()),
+                            r = this._stateStore.getState().window.Date;
+                        n.request_to_impression_latency = r.now() - this._adRequestTime, this._sendAdSpadeEvent(f.AD_IMPRESSION, n), this._eventEmitter.emit(g.AD_IMPRESSION, {
                             time_break: t.duration
                         })
                     }
                 }, {
                     key: "_onAdEnded",
                     value: function(e, t) {
-                        var n = e.getAd(),
-                            r = this._initializeAdSpadeEvent(t);
-                        r.ad_id = n.getAdId(), r.duration = n.getDuration(), this._sendAdSpadeEvent(f.AD_IMPRESSION_COMPLETE, r), this._clearResizePoller(), this._eventEmitter.emit(g.AD_IMPRESSION_COMPLETE)
+                        var n = this._initializeAdSpadeEvent(t, e.getAd());
+                        this._sendAdSpadeEvent(f.AD_IMPRESSION_COMPLETE, n), this._clearResizePoller(), this._eventEmitter.emit(g.AD_IMPRESSION_COMPLETE)
                     }
                 }, {
                     key: "_initializeAdSpadeEvent",
                     value: function(e) {
-                        var t = {
-                            ad_session_id: e.adSessionId,
-                            adblock: e.adblock,
-                            roll_type: e.adType,
-                            time_break: e.duration,
-                            twitch_correlator: e.twitchCorrelator
-                        };
-                        return e.adWhitelist && (t.ads_opt_in = e.adWhitelist), t
+                        var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                            n = {
+                                ad_session_id: e.adSessionId,
+                                adblock: e.adblock,
+                                roll_type: e.adType,
+                                time_break: e.duration,
+                                twitch_correlator: e.twitchCorrelator
+                            };
+                        return e.adWhitelist && (n.ads_opt_in = e.adWhitelist), null !== t && (n.ad_system = t.getAdSystem(), n.ad_id = t.getAdId(), n.creative_id = t.getCreativeId(), n.title = t.getTitle(), n.duration = t.getDuration(), t.getWrapperAdIds().length > 0 && (n.wrapper_ad_id = t.getWrapperAdIds()[0], n.wrapper_ad_system = t.getWrapperAdSystems()[0], n.wrapper_creative_id = t.getWrapperCreativeIds()[0])), n
                     }
                 }, {
                     key: "_sendAdSpadeEvent",
@@ -16025,10 +16023,9 @@
             }, {
                 key: "destroy",
                 value: function() {
-                    this._stateStore.dispatch((0, _.requestStatsDisabled)(this)),
-                        this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
-                            return e()
-                        })
+                    this._stateStore.dispatch((0, _.requestStatsDisabled)(this)), this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
+                        return e()
+                    })
                 }
             }]), e
         }()
