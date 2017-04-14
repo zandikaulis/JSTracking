@@ -1219,10 +1219,10 @@ window.SiteOptions = {
         "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9": {
             "name": "CHANNEL_CHAT_CTA",
             "groups": [{
-                "weight": 1,
+                "weight": 0,
                 "value": "5min"
             }, {
-                "weight": 1,
+                "weight": 100,
                 "value": "control"
             }]
         },
