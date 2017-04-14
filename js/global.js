@@ -16387,7 +16387,8 @@ googletag.cmd = googletag.cmd || [],
                 SOCIAL_RECOMMENDATIONS: "819aed52-3cc1-4747-a840-476a39487a2e",
                 ZACH_MODE: "0a4d513f-0274-4b33-b04f-287521abd51b",
                 GROWTH_SKIP_SEEN_FRIENDS_IN_NOTIFICATIONS: "52cb0929-0af1-45ba-81ef-79d9ae80b342",
-                WT_P: "e5d2a724-5506-4f7d-986a-be8cda8ed742"
+                WT_P: "e5d2a724-5506-4f7d-986a-be8cda8ed742",
+                CHANNEL_CHAT_CTA: "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9"
             },
             r = {
                 "99494f77-1c7c-46c5-9b9c-a117db47d3c5": "control",
@@ -16435,7 +16436,8 @@ googletag.cmd = googletag.cmd || [],
                 "819aed52-3cc1-4747-a840-476a39487a2e": "control",
                 "0a4d513f-0274-4b33-b04f-287521abd51b": "control",
                 "52cb0929-0af1-45ba-81ef-79d9ae80b342": "control",
-                "e5d2a724-5506-4f7d-986a-be8cda8ed742": "no"
+                "e5d2a724-5506-4f7d-986a-be8cda8ed742": "no",
+                "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9": "control"
             },
             o = {},
             s = {
@@ -16581,12 +16583,12 @@ googletag.cmd = googletag.cmd || [],
                 o.flashVars.eventsCallback = i.register(function(e) {
                     r._onEvents(e)
                 }), swfobject.embedSWF(o.url, o.swfId, o.width, o.height, o.version, "/widgets/expressinstall.swf", o.flashVars, o.params, o.attrs, function(e) {
-                    e.success ? (r.$el = t("#" + r.options.swfId), r.el = r.$el[0]) : (console.info("FlashPlayer.init error"), n("error embedding flash player"))
+                    e.success ? (r.$el = t("#" + r.options.swfId), r.el = r.$el[0]) : (console.info("FlashPlayer.init error"),
+                        n("error embedding flash player"))
                 })
             },
             _onPlayerInit: function() {
-                this._proxy(),
-                    this.adFeedbackMenu = new e.player.AdFeedbackMenu(t(".js-ad-feedback-menu").first(), this), console.info("FlashPlayer.init success"), this._initSuccess(this)
+                this._proxy(), this.adFeedbackMenu = new e.player.AdFeedbackMenu(t(".js-ad-feedback-menu").first(), this), console.info("FlashPlayer.init success"), this._initSuccess(this)
             },
             destroy: function() {},
             _onEvents: function(e) {
