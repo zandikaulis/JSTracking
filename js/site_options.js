@@ -959,6 +959,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "93a3ce11-6fce-46d3-b108-c394ac28b499": {
+            "name": "ios_clips_paris_2",
+            "groups": [{
+                "weight": 10,
+                "value": "control"
+            }, {
+                "weight": 90,
+                "value": "variant1"
+            }]
+        },
         "95003a8e-de0a-4319-9de3-8a0822799298": {
             "name": "CVP March 21",
             "groups": [{
@@ -1089,10 +1099,10 @@ window.SiteOptions = {
         "a9f7f84a-76fd-44f0-80b1-9421e714a1b7": {
             "name": "ios_clips_paris",
             "groups": [{
-                "weight": 10,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 90,
+                "weight": 0,
                 "value": "variant1"
             }]
         },
