@@ -56,7 +56,7 @@
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                     t = (0, d["default"])(e) ? m.parse(e) : e,
                     n = (0, Ee.parseUri)(k.getState().window.location.href);
-                return n.queryKey.hasOwnProperty("force_preroll") && (t.usher_force_preroll = !0), n.queryKey.hasOwnProperty("force_midroll") && (t.usher_force_midroll = !0), (0, b.isTwitchEmbed)() || t.player !== P.PLAYER_CURSE && (t = (0, p["default"])(t, S.embedParameters)), t.backend = o(t), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== P.PLAYER_HIGHLIGHTER, t = (0, s["default"])(t, {
+                return n.queryKey.hasOwnProperty("force_preroll") && (t.usher_force_preroll = !0, t.force_preroll = !0), n.queryKey.hasOwnProperty("force_midroll") && (t.usher_force_midroll = !0, t.force_midroll = !0), (0, b.isTwitchEmbed)() || t.player !== P.PLAYER_CURSE && (t = (0, p["default"])(t, S.embedParameters)), t.backend = o(t), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== P.PLAYER_HIGHLIGHTER, t = (0, s["default"])(t, {
                     time: t.t
                 }), (0, u["default"])(["mse", "mseDev"], T.localStore.get("backend")) && T.localStore.set("backend", j.BACKEND_PLAYER_CORE), t = (0, s["default"])(t, {
                     volume: T.localStore.get("volume"),
@@ -8875,7 +8875,7 @@
                     _ = v.get(!1),
                     y = v.get(!0);
                 h = {
-                    app_version: "2017.04.17-163526+acc86854b03e83502727a1eaa696e29f54ced3cb",
+                    app_version: "2017.04.17-205336+b04a7b458cf5436da6295e153e84e8f7632d3c41",
                     flash_version: s,
                     referrer_url: c,
                     referrer_host: p.host,
