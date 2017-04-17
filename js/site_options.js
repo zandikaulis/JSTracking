@@ -1557,6 +1557,16 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "no"
             }]
+        },
+        "f8dc77dd-c5a9-41ed-bcac-b7d1dbb728f2": {
+            "name": "component_latency_instrumentation",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enable"
+            }]
         }
     }
 };
