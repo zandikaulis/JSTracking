@@ -722,6 +722,22 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "54e455b2-9854-4c55-b926-cfadbff49324": {
+            "name": "LOGGED_OUT_HOMEPAGE_EXPERIMENTS",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "removeCarouselOnly"
+            }, {
+                "weight": 0,
+                "value": "localizeTopChannelsOnly"
+            }, {
+                "weight": 0,
+                "value": "removeCarouselAndLocalizeTopChannels"
+            }]
+        },
         "5d03cd48-d664-4bd9-95de-c1ca5fb9e77b": {
             "name": "PERPETUA_CRSL",
             "groups": [{
