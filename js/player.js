@@ -2731,7 +2731,7 @@
                 mobile: "Mobile",
                 auto: "Auto"
             }, t.qualityChangeDuration = 6e3, t.initialControlsDelay = 8e3, t.hoverControlsDelay = 5e3, t.reportHideDelay = 2e3, t.mediaEvents = [p.LOADSTART, p.PROGRESS, p.SUSPEND, p.ABORT, p.ERROR, p.EMPTIED, p.STALLED, p.LOADED_METADATA, p.LOADED_DATA, p.CAN_PLAY, p.CAN_PLAY_THROUGH, p.PLAYING, p.WAITING, p.SEEKING, p.SEEKED, p.ENDED, p.DURATION_CHANGE, p.TIME_UPDATE, p.PLAY, p.PAUSE, p.VOLUME_CHANGE, p.RATE_CHANGE]),
-            b = t.customEvents = ["usherfail", u.AD_END, u.AD_START, u.COMPANION_RENDERED, u.AD_IMPRESSION, u.AD_IMPRESSION_COMPLETE, h.FULLSCREEN_CHANGE, d.BUFFER_CHANGE, d.CAPTION_UPDATE, d.CASTING_CHANGE, d.IS_SPECTRE, d.MANIFEST_EXTRA_INFO, d.OFFLINE, d.ONLINE, d.PLAYER_INIT, d.CONTENT_SHOWING, d.QUALITIES_CHANGE, d.QUALITY_CHANGE, d.RESTRICTED, d.SEGMENT_CHANGE, d.THEATRE_CHANGE, d.TRANSITION_TO_VOD, d.VIEWERS_CHANGE, d.ABS_STREAM_FORMAT_CHANGE];
+            b = t.customEvents = ["usherfail", u.AD_END, u.AD_START, u.COMPANION_RENDERED, u.AD_IMPRESSION, u.AD_IMPRESSION_COMPLETE, h.FULLSCREEN_CHANGE, d.BUFFER_CHANGE, d.CAPTION_UPDATE, d.CASTING_CHANGE, d.IS_SPECTRE, d.MANIFEST_EXTRA_INFO, d.OFFLINE, d.ONLINE, d.PLAYER_INIT, d.CONTENT_SHOWING, d.QUALITIES_CHANGE, d.QUALITY_CHANGE, d.RESTRICTED, d.SEGMENT_CHANGE, d.THEATRE_CHANGE, d.TRANSITION_TO_VOD, d.VIEWERS_CHANGE, d.ABS_STREAM_FORMAT_CHANGE, d.STATS_UPDATE];
         t.allEvents = (0, a["default"])(m, b), t.debugIgnoreEvents = [p.TIME_UPDATE, d.BUFFER_CHANGE], t.chromecastStates = [v.CHROMECAST_UNAVAILABLE, v.CHROMECAST_AVAILABLE, v.CHROMECAST_CONNECTING, v.CHROMECAST_CONNECTED, p.ERROR], t.mutedSegmentsMessage = "Audio for portions of this video has been muted as it appears to contain copyrighted content owned or controlled by a third party.", t.embedParameters = Object.freeze(["channel", "video", "collection", "muted", "autoplay", "time", "t", "debug", "debug_ads", "html5", "flash", "quality", "controls", "devcaptions", "playsinline"]), t.volumeStepAmount = .1, t.flashTimeout = 5e3, t.doubleClickVODUrl = "//pubads.g.doubleclick.net/gampad/ads", t.doubleClickLiveUrl = "//pubads.g.doubleclick.net/gampad/live/ads", t.imaNetworkID = "3576121", t.leaveDialog = {
             enabled: !1,
             sinceEnded: 45,
@@ -2849,7 +2849,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.PLAYER_INIT = "init", t.CONTENT_SHOWING = "contentShowing", t.PLAYBACK_STATISTICS = "playbackStatistics", t.SPECTRE_PLAYLIST = "spectrePlaylist", t.CHANSUB_REQUIRED = "chansubRequired", t.VIDEO_FAILURE = "videoFailure", t.FORMATS = "videoFormats", t.ABS_STREAM_FORMAT_CHANGE = "abs_stream_format_change", t.FORMAT_CHANGED = "videoFormatChanged", t.TIME_CHANGE = "timeChange", t.BUFFER_CHANGE = "bufferChange", t.SEGMENT_CHANGE = "segmentchange", t.USHER_FAIL_ERROR = "usherFail", t.CAPTION_UPDATE = "captions", t.SEEK_FAILED = "seekfailed", t.VARIANT_SWITCH_REQUESTED = "variantSwitchRequested", t.VIEWER_COUNT = "viewerCount", t.VIEWERS_CHANGE = "viewerschange", t.STREAM_LOADED = "streamLoaded", t.VIDEO_LOADED = "videoLoaded", t.VIDEO_PAUSED = "videoPaused", t.QUALITIES_CHANGE = "qualitieschange", t.QUALITY_CHANGE = "qualitychange", t.ONLINE = "online", t.OFFLINE = "offline", t.RESTRICTED = "restricted", t.IS_SPECTRE = "isspectre", t.CASTING_CHANGE = "castingchange", t.THEATRE_CHANGE = "theatrechange", t.MIDROLL_REQUESTED = "midrollrequested", t.MANIFEST_EXTRA_INFO = "manifestExtraInfo", t.TRANSITION_TO_VOD = "transitiontovod", t.STITCHED_AD_START = "stitchedadstart", t.STITCHED_AD_END = "stitchedadend", t.PERSISTENT_PLAYER_TOGGLE = "persistentPlayerEnableToggle"
+        t.PLAYER_INIT = "init", t.CONTENT_SHOWING = "contentShowing", t.PLAYBACK_STATISTICS = "playbackStatistics", t.SPECTRE_PLAYLIST = "spectrePlaylist", t.CHANSUB_REQUIRED = "chansubRequired", t.VIDEO_FAILURE = "videoFailure", t.FORMATS = "videoFormats", t.ABS_STREAM_FORMAT_CHANGE = "abs_stream_format_change", t.FORMAT_CHANGED = "videoFormatChanged", t.TIME_CHANGE = "timeChange", t.BUFFER_CHANGE = "bufferChange", t.SEGMENT_CHANGE = "segmentchange", t.USHER_FAIL_ERROR = "usherFail", t.CAPTION_UPDATE = "captions", t.SEEK_FAILED = "seekfailed", t.VARIANT_SWITCH_REQUESTED = "variantSwitchRequested", t.VIEWER_COUNT = "viewerCount", t.VIEWERS_CHANGE = "viewerschange", t.STREAM_LOADED = "streamLoaded", t.VIDEO_LOADED = "videoLoaded", t.VIDEO_PAUSED = "videoPaused", t.QUALITIES_CHANGE = "qualitieschange", t.QUALITY_CHANGE = "qualitychange", t.ONLINE = "online", t.OFFLINE = "offline", t.RESTRICTED = "restricted", t.IS_SPECTRE = "isspectre", t.CASTING_CHANGE = "castingchange", t.THEATRE_CHANGE = "theatrechange", t.MIDROLL_REQUESTED = "midrollrequested", t.MANIFEST_EXTRA_INFO = "manifestExtraInfo", t.TRANSITION_TO_VOD = "transitiontovod", t.STITCHED_AD_START = "stitchedadstart", t.STITCHED_AD_END = "stitchedadend", t.PERSISTENT_PLAYER_TOGGLE = "persistentPlayerEnableToggle", t.STATS_UPDATE = "statsupdate"
     }, function(e, t) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -8875,7 +8875,7 @@
                     _ = v.get(!1),
                     y = v.get(!0);
                 h = {
-                    app_version: "2017.04.17-205336+b04a7b458cf5436da6295e153e84e8f7632d3c41",
+                    app_version: "2017.04.17-220309+0c5182ecd3fa940d17454a593678cd46ae7c9fc4",
                     flash_version: s,
                     referrer_url: c,
                     referrer_host: p.host,
@@ -9803,7 +9803,7 @@
 
             function we() {
                 var e = xe.getStats();
-                n.dispatch((0, ce.updateStats)(e))
+                n.dispatch((0, ce.updateStats)(e)), Re.emit(se.STATS_UPDATE)
             }
 
             function ke() {
@@ -10053,6 +10053,12 @@
                 var e = n.getState(),
                     t = e.screenMode;
                 return t.canFullScreen
+            }, Me.getStatsEnabled = function() {
+                return n.getState().stats.enabled
+            }, Me.setStatsEnabled = function(e) {
+                return n.dispatch(e ? (0, ce.requestStatsEnabled)(this) : (0, ce.requestStatsDisabled)(this))
+            }, Me.getStats = function() {
+                return n.getState().stats.videoStats
             }, Me.getVideoInfo = function() {
                 return xe.getVideoInfo()
             }, Me.getBackend = function() {
@@ -10350,7 +10356,7 @@
             }
 
             function pe(e) {
-                lt = e, Ge.emit(w.BUFFER_CHANGE, e)
+                lt = e, Ge.emit(w.BUFFER_CHANGE, e);
             }
 
             function he() {
@@ -10370,7 +10376,7 @@
             }
 
             function ye(e) {
-                Ge.emit(ne.AD_REQUEST_DECLINED, e);
+                Ge.emit(ne.AD_REQUEST_DECLINED, e)
             }
 
             function me(e) {
@@ -11910,7 +11916,7 @@
                 }, {
                     key: "addEventListener",
                     value: function(e, t) {
-                        this.events.on(e, t), (0, w["default"])(U, e) || this.video.addEventListener(e, t)
+                        this.events.on(e, t), (0, w["default"])(U, e) || this.video.addEventListener(e, t);
                     }
                 }, {
                     key: "removeEventListener",
@@ -17019,8 +17025,10 @@
             }, {
                 key: "updateStats",
                 value: function(e) {
-                    var t = e.stats.videoStats;
-                    $(".js-stat-buffer-size", this._root).text(t.bufferSize), $(".js-stat-display-resolution", this._root).text(t.displayResolution), $(".js-stat-skipped-frames", this._root).text(t.skippedFrames), $(".js-stat-fps", this._root).text(t.fps), $(".js-stat-hls-latency-broadcaster", this._root).text(t.hlsLatencyBroadcaster), $(".js-stat-hls-latency-encoder", this._root).text(t.hlsLatencyEncoder), $(".js-stat-memory-usage", this._root).text(t.memoryUsage), $(".js-stat-playback-rate", this._root).text(t.playbackRate), $(".js-stat-video-resolution", this._root).text(t.videoResolution), $(".js-stat-video-backend-version", this._root).text(t.backendVersion)
+                    var t = e.stats.videoStats,
+                        n = this._stateStore.getState(),
+                        r = n.stats.displayed;
+                    r && ($(".js-stat-buffer-size", this._root).text(t.bufferSize), $(".js-stat-display-resolution", this._root).text(t.displayResolution), $(".js-stat-skipped-frames", this._root).text(t.skippedFrames), $(".js-stat-fps", this._root).text(t.fps), $(".js-stat-hls-latency-broadcaster", this._root).text(t.hlsLatencyBroadcaster), $(".js-stat-hls-latency-encoder", this._root).text(t.hlsLatencyEncoder), $(".js-stat-memory-usage", this._root).text(t.memoryUsage), $(".js-stat-playback-rate", this._root).text(t.playbackRate), $(".js-stat-video-resolution", this._root).text(t.videoResolution), $(".js-stat-video-backend-version", this._root).text(t.backendVersion))
                 }
             }, {
                 key: "_toggleStatsPopup",
