@@ -969,31 +969,6 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
-        "95003a8e-de0a-4319-9de3-8a0822799298": {
-            "name": "CVP March 21",
-            "groups": [{
-                "weight": 5,
-                "value": "1.6.3+def"
-            }, {
-                "weight": 74,
-                "value": "1.7.3"
-            }, {
-                "weight": 2,
-                "value": "1.7.3+speed"
-            }, {
-                "weight": 2,
-                "value": "1.7.3+spd24"
-            }, {
-                "weight": 2,
-                "value": "1.7.3+spd35"
-            }, {
-                "weight": 10,
-                "value": "1.7.3"
-            }, {
-                "weight": 5,
-                "value": "1.7.3+spdcy"
-            }]
-        },
         "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": {
             "name": "DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS",
             "groups": [{
