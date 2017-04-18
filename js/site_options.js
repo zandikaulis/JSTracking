@@ -1260,7 +1260,7 @@ window.SiteOptions = {
                 "weight": 1,
                 "value": "yes"
             }, {
-                "weight": 9,
+                "weight": 4,
                 "value": "no"
             }]
         },
