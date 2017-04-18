@@ -16156,7 +16156,7 @@ googletag.cmd = googletag.cmd || [],
                             h.reject.apply(h, e)
                         })
                     }
-                }), l.use_streams_api || l.secure && "https" !== window.location.protocol.slice(0, 5)) {
+                }), l.isCors || l.use_streams_api || l.secure && "https" !== window.location.protocol.slice(0, 5)) {
                 if (this._canCORS()) c.xhrFields.withCredentials = l.allow_cookie;
                 else if (c.dataType = "jsonp", c.headers && c.headers["Client-ID"] && (c.data.client_id = c.headers["Client-ID"], delete c.headers["Client-ID"]), c.headers && c.headers.Authorization) {
                     var f = /^OAuth:?\s+(\w+)$/.exec(c.headers.Authorization);
