@@ -956,6 +956,16 @@ window.SiteOptions = {
                 "value": "6"
             }]
         },
+        "903fb381-dbeb-466b-9c88-7b4da328fb2d": {
+            "name": "android_autoplay_pulse",
+            "groups": [{
+                "weight": 5,
+                "value": "control"
+            }, {
+                "weight": 95,
+                "value": "treatment"
+            }]
+        },
         "906c9e2f-ac8a-43f3-9f7f-78668e292d4f": {
             "name": "android_aa",
             "groups": [{
