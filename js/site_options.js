@@ -728,10 +728,10 @@ window.SiteOptions = {
                 "weight": 34,
                 "value": "control"
             }, {
-                "weight": 33,
+                "weight": 0,
                 "value": "removeCarouselOnly"
             }, {
-                "weight": 0,
+                "weight": 33,
                 "value": "localizeTopChannelsOnly"
             }, {
                 "weight": 33,
