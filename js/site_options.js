@@ -1462,10 +1462,10 @@ window.SiteOptions = {
         "d91cbc6b-1d6f-42ef-89b4-049176164067": {
             "name": "coview_with_predictions",
             "groups": [{
-                "weight": 95,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 5,
+                "weight": 50,
                 "value": "experiment"
             }]
         },
