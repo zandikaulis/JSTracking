@@ -579,10 +579,10 @@ window.SiteOptions = {
         "479d9473-bf6e-4d74-8f9b-dd85d6f98921": {
             "name": "LOL_METADATA_EXPERIMENT",
             "groups": [{
-                "weight": 50,
+                "weight": 95,
                 "value": "treatment"
             }, {
-                "weight": 50,
+                "weight": 5,
                 "value": "control"
             }]
         },
