@@ -15272,8 +15272,15 @@ function(e, t) {
                 }, e.hookUnload = function() {
                     var e = this;
                     this.unloadHooked || (this.unloadHooked = !0, navigator && navigator.sendBeacon && window.addEventListener("unload", function() {
-                        r.e && e.eventBuffer.forEach(function(e) {
-                            for (var t = 1; t;) t = e.flushOnce()
+                        r.e && e.eventBuffer.forEach(function(t, n) {
+                            if (n === r.a) {
+                                var i = {
+                                    event: "unload-events-debug",
+                                    properties: t.getEventsCounts()
+                                };
+                                e.trackUrgentEvent(i, [r.a])
+                            }
+                            for (var o = 1; o;) o = t.flushOnce()
                         })
                     }))
                 }, e
@@ -15364,6 +15371,12 @@ function(e, t) {
                             t = n.i(r.a)(e),
                             s = "data=" + t;
                         return n.i(o.a)(i.c[this.service].href, s), e.length
+                    }, e.prototype.getEventsCounts = function() {
+                        var e = {};
+                        return this.events.forEach(function(t) {
+                            var n = t.event;
+                            e[n] = e[n] || 0, e[n]++
+                        }), e
                     }, e.prototype.getBatch = function() {
                         var e = Math.max(i.g[this.service], 1);
                         return this.events.splice(0, e)
@@ -15418,7 +15431,7 @@ function(e, t) {
             }), t.a = i;
             var r = "pageview",
                 o = "x_untrusted_pageview",
-                s = [r]
+                s = [r, "benchmark_fetch_start", "benchmark_validate_transition", "benchmark_complete_transition"]
         }, function(e, t, n) {
             e.exports = n(4)
         }])
@@ -16418,6 +16431,7 @@ googletag.cmd = googletag.cmd || [],
                 GROWTH_SKIP_SEEN_FRIENDS_IN_NOTIFICATIONS: "52cb0929-0af1-45ba-81ef-79d9ae80b342",
                 WT_P: "e5d2a724-5506-4f7d-986a-be8cda8ed742",
                 CHANNEL_CHAT_CTA: "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9",
+                SUB_OPTIONS: "86ad7a91-bf36-46c5-adef-6006a09720a8",
                 LOGGED_OUT_FRONT_PAGE_EXPERIMENT: "54e455b2-9854-4c55-b926-cfadbff49324"
             },
             r = {
@@ -16468,6 +16482,7 @@ googletag.cmd = googletag.cmd || [],
                 "52cb0929-0af1-45ba-81ef-79d9ae80b342": "control",
                 "e5d2a724-5506-4f7d-986a-be8cda8ed742": "no",
                 "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9": "control",
+                "86ad7a91-bf36-46c5-adef-6006a09720a8": "two_page",
                 "54e455b2-9854-4c55-b926-cfadbff49324": "control"
             },
             o = {},
