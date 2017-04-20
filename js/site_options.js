@@ -863,6 +863,22 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "79accd86-e77e-4eae-8979-d19ab2bc4521": {
+            "name": "ios_skippable_ads",
+            "groups": [{
+                "weight": 5,
+                "value": "skipcontrol"
+            }, {
+                "weight": 5,
+                "value": "skip15"
+            }, {
+                "weight": 0,
+                "value": "skip5"
+            }, {
+                "weight": 90,
+                "value": "holdout"
+            }]
+        },
         "819aed52-3cc1-4747-a840-476a39487a2e": {
             "name": "SOCIAL_RECOMMENDATIONS",
             "groups": [{
