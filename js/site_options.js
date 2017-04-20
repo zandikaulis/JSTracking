@@ -406,6 +406,19 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "274f6835-a41d-417c-ad58-f1321e2aac39": {
+            "name": "android_skippable_ads",
+            "groups": [{
+                "weight": 20,
+                "value": "control"
+            }, {
+                "weight": 40,
+                "value": "skip15"
+            }, {
+                "weight": 40,
+                "value": "skip5"
+            }]
+        },
         "2858bc04-3f98-4808-a2dd-86555885ca90": {
             "name": "clips_feel_it_coming",
             "groups": [{
