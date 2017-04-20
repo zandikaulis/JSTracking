@@ -890,10 +890,10 @@ window.SiteOptions = {
         "88ad36bd-f5ba-4c8c-8d06-30e486cd5d07": {
             "name": "clips_scared_to_be_lonely",
             "groups": [{
-                "weight": 1,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "variant1"
             }]
         },
