@@ -8900,7 +8900,7 @@
                     _ = v.get(!1),
                     y = v.get(!0);
                 h = {
-                    app_version: "2017.04.20-011702+990f4018c6cb229de4875e165d4bf0a53b1df9a6",
+                    app_version: "2017.04.20-184451+6c1eca9eac907bad6a9d87bf26992148718cfe2a",
                     flash_version: s,
                     referrer_url: c,
                     referrer_host: p.host,
@@ -17667,7 +17667,8 @@
                 title: e.title,
                 channelName: e.channel.display_name,
                 duration: e.length,
-                id: e._id
+                id: e._id,
+                game: e.game
             }
         }
 
@@ -18572,7 +18573,7 @@
                     var t = e.data,
                         n = e.text,
                         r = n && n.length > 0 ? n.trim() : null;
-                    return r ? r : Array.isArray(t) && t.length > 0 ? t : null;
+                    return r ? r : Array.isArray(t) && t.length > 0 ? t : null
                 }
             }, {
                 key: "getCaptionsFromData",
