@@ -409,14 +409,17 @@ window.SiteOptions = {
         "274f6835-a41d-417c-ad58-f1321e2aac39": {
             "name": "android_skippable_ads",
             "groups": [{
-                "weight": 20,
-                "value": "control"
+                "weight": 5,
+                "value": "skipcontrol"
             }, {
-                "weight": 40,
+                "weight": 5,
                 "value": "skip15"
             }, {
-                "weight": 40,
+                "weight": 0,
                 "value": "skip5"
+            }, {
+                "weight": 90,
+                "value": "holdout"
             }]
         },
         "2858bc04-3f98-4808-a2dd-86555885ca90": {
