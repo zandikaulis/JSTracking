@@ -442,6 +442,16 @@ window.SiteOptions = {
                 "value": "off"
             }]
         },
+        "2e0cb30b-7aaa-4e01-9fdd-b7046605b41f": {
+            "name": "Mobile Web Chat Experiment",
+            "groups": [{
+                "weight": 99,
+                "value": "Gets chat"
+            }, {
+                "weight": 1,
+                "value": "Doesn't get chat"
+            }]
+        },
         "2f6b028c-c2a5-462c-8daf-3bcb394839bb": {
             "name": "android_playercore",
             "groups": [{
