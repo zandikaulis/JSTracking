@@ -445,10 +445,10 @@ window.SiteOptions = {
         "2e0cb30b-7aaa-4e01-9fdd-b7046605b41f": {
             "name": "Mobile Web Chat Experiment",
             "groups": [{
-                "weight": 99,
+                "weight": 90,
                 "value": "Gets chat"
             }, {
-                "weight": 1,
+                "weight": 10,
                 "value": "Doesn't get chat"
             }]
         },
