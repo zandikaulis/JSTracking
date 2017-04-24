@@ -8906,7 +8906,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.24-211423+23052129183c6040a200f72a56b83a285f6ce56e",
+                    app_version: "2017.04.24-225837+44299dea053147b0f6e516f8ac4befa6b680ab5a",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -14607,7 +14607,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.IMAManager = t.RESIZE_POLLING_PERIOD = void 0;
+        }), t.IMAManager = void 0;
         var a = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -14633,10 +14633,10 @@
             y = n(233),
             m = n(316),
             b = n(318),
-            E = $('<div class="js-ima-ads-container ima-ads-container"></div>'),
-            S = "html5",
-            T = "ima",
-            C = t.RESIZE_POLLING_PERIOD = 150,
+            E = n(174),
+            S = $('<div class="js-ima-ads-container ima-ads-container"></div>'),
+            T = "html5",
+            C = "ima",
             P = [{
                 width: 300,
                 height: 250
@@ -14651,22 +14651,19 @@
             },
             w = (t.IMAManager = function() {
                 function e(t, n, r) {
-                    var i = this;
-                    o(this, e), this._videoContainer = t, this._backend = n, this._stateStore = r, this._paused = !1, this._contentPauseRequested = !1,
-                        this._eventEmitter = new l["default"], this._currentAdsManager = O;
-                    var a = this._stateStore.getState(),
-                        s = a.window,
-                        u = s.google;
-                    u && (u.ima.settings.setVpaidMode(u.ima.ImaSdkSettings.VpaidMode.INSECURE), this._adContainer = E.clone().appendTo(this._videoContainer).get(0), this._adDisplayContainer = new u.ima.AdDisplayContainer(this._adContainer, $(this._videoContainer).find("video, object").get(0)), this._adDisplayContainer.initialize(), this._moat = new m.MoatAnalytics(this._adContainer, this._stateStore), this._adsLoader = new u.ima.AdsLoader(this._adDisplayContainer), this._adsLoader.addEventListener(u.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED, function(e) {
-                        return i._onAdsManagerLoaded(e)
-                    }), this._adsLoader.addEventListener(u.ima.AdErrorEvent.Type.AD_ERROR, function(e) {
-                        return i._onAdError(e)
-                    }))
+                    o(this, e), this._videoContainer = t, this._backend = n, this._stateStore = r, this._unsubs = [], this._paused = !1, this._contentPauseRequested = !1, this._eventEmitter = new l["default"],
+                        this._currentAdsManager = O;
+                    var i = this._stateStore.getState(),
+                        a = i.window,
+                        s = a.google;
+                    s && (s.ima.settings.setVpaidMode(s.ima.ImaSdkSettings.VpaidMode.INSECURE), this._unsubs.push((0, E.subscribe)(this._stateStore, ["playerDimensions"], this._resizeAd.bind(this))), this._adContainer = S.clone().appendTo(this._videoContainer).get(0), this._adDisplayContainer = new s.ima.AdDisplayContainer(this._adContainer, $(this._videoContainer).find("video, object").get(0)), this._adDisplayContainer.initialize(), this._moat = new m.MoatAnalytics(this._adContainer, this._stateStore), this._setupAdsLoader())
                 }
                 return a(e, [{
                     key: "destroy",
                     value: function() {
-                        this._adsLoader.destroy(), this._adDisplayContainer.destroy(), this._clearResizePoller()
+                        this._adsLoader.destroy(), this._adDisplayContainer.destroy(), this._unsubs.forEach(function(e) {
+                            return e()
+                        })
                     }
                 }, {
                     key: "requestAds",
@@ -14709,6 +14706,17 @@
                     key: "addEventListener",
                     value: function(e, t) {
                         this._eventEmitter.on(e, t)
+                    }
+                }, {
+                    key: "_setupAdsLoader",
+                    value: function() {
+                        var e = this,
+                            t = this._stateStore.getState().window.google;
+                        this._adsLoader = new t.ima.AdsLoader(this._adDisplayContainer), this._adsLoader.addEventListener(t.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED, function(t) {
+                            return e._onAdsManagerLoaded(t)
+                        }), this._adsLoader.addEventListener(t.ima.AdErrorEvent.Type.AD_ERROR, function(t) {
+                            return e._onAdError(t)
+                        })
                     }
                 }, {
                     key: "_onAdsManagerLoaded",
@@ -14767,19 +14775,13 @@
                 }, {
                     key: "_onContentPauseRequested",
                     value: function(e) {
-                        var t = this;
                         if (this._contentPauseRequested = !0, this._stateStore.getState().ads.currentMetadata.contentType === y.AdContentTypes.NONE) {
-                            var n = this._stateStore.getState(),
-                                r = n.playback;
-                            this._currentAdsManager.setVolume(r.muted ? 0 : r.volume), this._interruptContent(), this._stateStore.dispatch((0, y.setCurrentAdMetadata)({
+                            var t = this._stateStore.getState(),
+                                n = t.playback;
+                            this._currentAdsManager.setVolume(n.muted ? 0 : n.volume), this._interruptContent(), this._stateStore.dispatch((0, y.setCurrentAdMetadata)({
                                 contentType: y.AdContentTypes.IMA,
                                 rollType: k[e.adType]
-                            })), this._adWidth = this._videoContainer.offsetParent.offsetWidth, this._adHeight = this._videoContainer.offsetParent.offsetHeight;
-                            var i = this._stateStore.getState(),
-                                o = i.window;
-                            this._resizePoller = o.setInterval(function() {
-                                t._videoContainer.offsetParent.offsetWidth === t._adWidth && t._videoContainer.offsetParent.offsetHeight === t._adHeight || (t._adWidth = t._videoContainer.offsetParent.offsetWidth, t._adHeight = t._videoContainer.offsetParent.offsetHeight, t._resizeAd())
-                            }, C), this._eventEmitter.emit(g.AD_START, {
+                            })), this._eventEmitter.emit(g.AD_START, {
                                 roll_type: e.adType
                             })
                         }
@@ -14804,7 +14806,7 @@
                                 return e + t.getCompanionAds(n.width, n.height).length
                             }, 0);
                         n > 0 && this._eventEmitter.emit(g.COMPANION_RENDERED, {
-                            provider: T
+                            provider: C
                         })
                     }
                 }, {
@@ -14820,7 +14822,7 @@
                     key: "_onAdEnded",
                     value: function(e, t) {
                         var n = this._initializeAdSpadeEvent(t, e.getAd());
-                        this._sendAdSpadeEvent(f.AD_IMPRESSION_COMPLETE, n), this._clearResizePoller(), this._eventEmitter.emit(g.AD_IMPRESSION_COMPLETE)
+                        this._sendAdSpadeEvent(f.AD_IMPRESSION_COMPLETE, n), this._eventEmitter.emit(g.AD_IMPRESSION_COMPLETE)
                     }
                 }, {
                     key: "_initializeAdSpadeEvent",
@@ -14846,26 +14848,18 @@
                             o = n.streamMetadata,
                             a = t;
                         (0, d["default"])(a, {
-                            provider: T
+                            provider: C
                         }), i instanceof v.VODContentStream && (0, d["default"])(a, {
                             vod_id: i.videoId,
                             vod_type: o.type
                         }), r.trackEvent(e, a)
                     }
                 }, {
-                    key: "_clearResizePoller",
-                    value: function() {
-                        if (this._resizePoller) {
-                            var e = this._stateStore.getState(),
-                                t = e.window;
-                            t.clearInterval(this._resizePoller)
-                        }
-                    }
-                }, {
                     key: "_resizeAd",
-                    value: function() {
-                        var e = this._stateStore.getState().window.google;
-                        this._currentAdsManager.resize(this._videoContainer.offsetParent.offsetWidth, this._videoContainer.offsetParent.offsetHeight, e.ima.ViewMode.NORMAL)
+                    value: function(e) {
+                        var t = e.playerDimensions,
+                            n = this._stateStore.getState().window.google;
+                        this._currentAdsManager.resize(t.width, t.height, n.ima.ViewMode.NORMAL)
                     }
                 }, {
                     key: "paused",
@@ -14875,7 +14869,7 @@
                 }, {
                     key: "sdk",
                     get: function() {
-                        return S
+                        return T
                     }
                 }]), e
             }(), function() {
@@ -17446,8 +17440,7 @@
                         n = e.recommendations;
                     0 !== n.videos.length && ($(".js-video-recommendations", this.$root).html(n.videos.map(function(e, n) {
                         var r = t.$template.clone();
-                        0 === n && (t.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")), t.updateAutoplayProgress(100, Math.round(m / 1e3))),
-                            t.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")), r.attr("data-index", n), r.find(".js-recommended-stream__thumbnail").attr("src", e.thumbnailURL), r.find(".js-recommended-stream__channel").text(e.channelName), r.find(".js-recommended-stream__title").text(e.title);
+                        0 === n && (t.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")), t.updateAutoplayProgress(100, Math.round(m / 1e3))), t.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")), r.attr("data-index", n), r.find(".js-recommended-stream__thumbnail").attr("src", e.thumbnailURL), r.find(".js-recommended-stream__channel").text(e.channelName), r.find(".js-recommended-stream__title").text(e.title);
                         var i = t._stateStore.getState().lang.langCode,
                             o = {
                                 year: "numeric",
