@@ -442,6 +442,16 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "2884161f-6094-4189-b1aa-fd256468f96e": {
+            "name": "PLAYER_NOTIFICATION_BUTTON",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "treatment"
+            }]
+        },
         "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": {
             "name": "bits_for_ads",
             "groups": [{
