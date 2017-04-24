@@ -2849,7 +2849,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.PLAYER_INIT = "init", t.CONTENT_SHOWING = "contentShowing", t.PLAYBACK_STATISTICS = "playbackStatistics", t.SPECTRE_PLAYLIST = "spectrePlaylist", t.CHANSUB_REQUIRED = "chansubRequired", t.VIDEO_FAILURE = "videoFailure", t.FORMATS = "videoFormats", t.ABS_STREAM_FORMAT_CHANGE = "abs_stream_format_change", t.FORMAT_CHANGED = "videoFormatChanged", t.TIME_CHANGE = "timeChange", t.BUFFER_CHANGE = "bufferChange", t.SEGMENT_CHANGE = "segmentchange", t.USHER_FAIL_ERROR = "usherFail", t.CAPTION_UPDATE = "captions", t.SEEK_FAILED = "seekfailed", t.VARIANT_SWITCH_REQUESTED = "variantSwitchRequested", t.VIEWER_COUNT = "viewerCount", t.VIEWERS_CHANGE = "viewerschange", t.STREAM_LOADED = "streamLoaded", t.VIDEO_LOADED = "videoLoaded", t.VIDEO_PAUSED = "videoPaused", t.QUALITIES_CHANGE = "qualitieschange", t.QUALITY_CHANGE = "qualitychange", t.ONLINE = "online", t.OFFLINE = "offline", t.RESTRICTED = "restricted", t.IS_SPECTRE = "isspectre", t.CASTING_CHANGE = "castingchange", t.THEATRE_CHANGE = "theatrechange", t.MIDROLL_REQUESTED = "midrollrequested", t.MANIFEST_EXTRA_INFO = "manifestExtraInfo", t.TRANSITION_TO_VOD = "transitiontovod", t.STITCHED_AD_START = "stitchedadstart", t.STITCHED_AD_END = "stitchedadend", t.PERSISTENT_PLAYER_TOGGLE = "persistentPlayerEnableToggle", t.STATS_UPDATE = "statsupdate"
+        t.PLAYER_INIT = "init", t.CONTENT_SHOWING = "contentShowing", t.PLAYBACK_STATISTICS = "playbackStatistics", t.SPECTRE_PLAYLIST = "spectrePlaylist", t.CHANSUB_REQUIRED = "chansubRequired", t.VIDEO_FAILURE = "videoFailure", t.FORMATS = "videoFormats", t.ABS_STREAM_FORMAT_CHANGE = "abs_stream_format_change", t.FORMAT_CHANGED = "videoFormatChanged", t.TIME_CHANGE = "timeChange", t.BUFFER_CHANGE = "bufferChange", t.SEGMENT_CHANGE = "segmentchange", t.USHER_FAIL_ERROR = "usherFail", t.CAPTION_UPDATE = "captions", t.SEEK_FAILED = "seekfailed", t.VARIANT_SWITCH_REQUESTED = "variantSwitchRequested", t.VIEWER_COUNT = "viewerCount", t.VIEWERS_CHANGE = "viewerschange", t.STREAM_LOADED = "streamLoaded", t.VIDEO_LOADED = "videoLoaded", t.VIDEO_PAUSED = "videoPaused", t.QUALITIES_CHANGE = "qualitieschange", t.QUALITY_CHANGE = "qualitychange", t.ONLINE = "online", t.OFFLINE = "offline", t.RESTRICTED = "restricted", t.IS_SPECTRE = "isspectre", t.CASTING_CHANGE = "castingchange", t.THEATRE_CHANGE = "theatrechange", t.MIDROLL_REQUESTED = "midrollrequested", t.MANIFEST_EXTRA_INFO = "manifestExtraInfo", t.TRANSITION_TO_VOD = "transitiontovod", t.STITCHED_AD_START = "stitchedadstart", t.STITCHED_AD_END = "stitchedadend", t.PERSISTENT_PLAYER_TOGGLE = "persistentPlayerEnableToggle", t.STATS_UPDATE = "statsupdate", t.PROMPT_LOGIN_MODAL = "prompt login modal"
     }, function(e, t) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -8906,7 +8906,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.24-185704+0e3246ac7fb07b93c0218a5f97664ff78c9f7eeb",
+                    app_version: "2017.04.24-204347+6f8ad59d4d6b7a37823496cffb27d270049e1555",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -10004,6 +10004,10 @@
                 e.contentType === b.CONTENT_MODE_LIVE ? (xe.setChannel(e.channel, e), Ne()) : e.contentType === E.CONTENT_MODE_VOD ? (xe.setVideo(e.videoId, e), Ne()) : e.streamUrl.then(function(e) {
                     xe.setSrc(e)
                 })
+            }, Me._promptLoginModal = function(e) {
+                Re.emit(se.PROMPT_LOGIN_MODAL, {
+                    channelDisplayName: e
+                })
             }, Me.addEventListener = function(e, t) {
                 (0, W["default"])(m.allEvents, e) || console.error("subscribing to unknown event: ", e), Re.on(e, t)
             }, Me.removeEventListener = function(e, t) {
@@ -10430,7 +10434,7 @@
             }
 
             function ce() {
-                tt = !1, Ge.emit(C.SEEKED)
+                tt = !1, Ge.emit(C.SEEKED);
             }
 
             function de() {
@@ -10442,7 +10446,7 @@
             }
 
             function fe(e) {
-                lt = e, Ge.emit(k.BUFFER_CHANGE, e);
+                lt = e, Ge.emit(k.BUFFER_CHANGE, e)
             }
 
             function he() {
@@ -12006,7 +12010,7 @@
                 }, {
                     key: "onCaption",
                     value: function(e) {
-                        this.currentCaptionData = e, this.events.emit(p.CAPTION_UPDATE)
+                        this.currentCaptionData = e, this.events.emit(p.CAPTION_UPDATE);
                     }
                 }, {
                     key: "getCaption",
@@ -36170,7 +36174,7 @@
 
         function r(e, t) {
             return function(n) {
-                (0, d.getFollowChannel)(e, t).then(function(e) {
+                (0, p.getFollowChannel)(e, t).then(function(e) {
                     return u(n, e)
                 })["catch"](function(e) {
                     return c(n, e)
@@ -36180,7 +36184,7 @@
 
         function i(e, t) {
             return function(n) {
-                (0, d.setFollowChannel)(e, t, !0).then(function(e) {
+                (0, p.setFollowChannel)(e, t, !0).then(function(e) {
                     return u(n, e)
                 })["catch"](function() {})
             }
@@ -36188,7 +36192,7 @@
 
         function o(e, t) {
             return function(n) {
-                (0, d.setFollowChannel)(e, t, !1).then(function() {
+                (0, p.setFollowChannel)(e, t, !1).then(function() {
                     return n(l({
                         following: !1,
                         notificationsEnabled: !1
@@ -36199,7 +36203,7 @@
 
         function a(e, t) {
             return function(n) {
-                (0, d.setFollowNotifications)(e, t, !0).then(function(e) {
+                (0, p.setFollowNotifications)(e, t, !0).then(function(e) {
                     return u(n, e)
                 })["catch"](function() {})
             }
@@ -36207,7 +36211,7 @@
 
         function s(e, t) {
             return function(n) {
-                (0, d.setFollowNotifications)(e, t, !1).then(function(e) {
+                (0, p.setFollowNotifications)(e, t, !1).then(function(e) {
                     return u(n, e)
                 })["catch"](function() {})
             }
@@ -36216,7 +36220,7 @@
         function l() {
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
             return {
-                type: p,
+                type: f,
                 followInfo: e
             }
         }
@@ -36232,17 +36236,25 @@
 
         function c(e, t) {
             var n = t.responseJSON;
-            n.message === f && e(l({
+            n.message === h && e(l({
                 following: !1,
                 notificationsEnabled: !1
             }))
         }
+
+        function d(e) {
+            return {
+                type: v,
+                channelName: e
+            }
+        }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.FOLLOW_NOT_FOUND = t.ACTION_FOLLOW_INFO_FETCHED = void 0, t.fetchFollowInfo = r, t.followChannel = i, t.unfollowChannel = o, t.enableNotifications = a, t.disableNotifications = s, t.followInfoFetched = l, t.dispatchFollowSuccess = u, t.dispatchFollowFail = c;
-        var d = n(191),
-            p = t.ACTION_FOLLOW_INFO_FETCHED = "follow info fetched",
-            f = t.FOLLOW_NOT_FOUND = "Follow not found"
+        }), t.ACTION_PROMPT_LOGIN_MODAL = t.FOLLOW_NOT_FOUND = t.ACTION_FOLLOW_INFO_FETCHED = void 0, t.fetchFollowInfo = r, t.followChannel = i, t.unfollowChannel = o, t.enableNotifications = a, t.disableNotifications = s, t.followInfoFetched = l, t.dispatchFollowSuccess = u, t.dispatchFollowFail = c, t.promptLoginModal = d;
+        var p = n(191),
+            f = t.ACTION_FOLLOW_INFO_FETCHED = "follow info fetched",
+            h = t.FOLLOW_NOT_FOUND = "Follow not found",
+            v = t.ACTION_PROMPT_LOGIN_MODAL = "prompt login modal"
     }, function(e, t, n) {
         "use strict";
 
@@ -36574,12 +36586,12 @@
                 updateInterval: C.updateInterval,
                 initUpdateOffset: C.initUpdateOffset
             };
-            return e instanceof g.VODContentStream ? (t.updateInterval = b, t.initUpdateOffset = S) : e instanceof y.LiveContentStream && (t.updateInterval = E, t.initUpdateOffset = Math.ceil(Math.random() * T)), t
+            return e instanceof g.VODContentStream ? (t.updateInterval = b, t.initUpdateOffset = S) : e instanceof y.LiveContentStream && (t.updateInterval = E,
+                t.initUpdateOffset = Math.ceil(Math.random() * T)), t
         }
         Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.MAX_INIT_UPDATE_OFFSET_LIVESTREAM = t.INIT_UPDATE_OFFSET_VOD = t.UPDATE_INTERVAL_LIVESTREAM = t.UPDATE_INTERVAL_VOD = void 0,
-            t.resumeWatch = o;
+            value: !0
+        }), t.MAX_INIT_UPDATE_OFFSET_LIVESTREAM = t.INIT_UPDATE_OFFSET_VOD = t.UPDATE_INTERVAL_LIVESTREAM = t.UPDATE_INTERVAL_VOD = void 0, t.resumeWatch = o;
         var s = n(78),
             l = r(s),
             u = n(352),
@@ -37116,26 +37128,29 @@
         "use strict";
 
         function r() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a;
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s;
             return function(t) {
                 return function(t) {
                     var n = e;
                     return function(e) {
                         switch (e.type) {
-                            case i.ACTION_LOAD_VIDEO_API:
+                            case o.ACTION_LOAD_VIDEO_API:
                                 n = e.video;
                                 break;
-                            case i.ACTION_VIDEO_API_PLAY:
+                            case o.ACTION_VIDEO_API_PLAY:
                                 n.play();
                                 break;
-                            case i.ACTION_VIDEO_API_PAUSE:
+                            case o.ACTION_VIDEO_API_PAUSE:
                                 n.pause();
                                 break;
-                            case i.ACTION_VIDEO_API_MUTE_PLAYER:
+                            case o.ACTION_VIDEO_API_MUTE_PLAYER:
                                 n.setMuted(e.muted, e.automated);
                                 break;
-                            case i.ACTION_VIDEO_API_CHANGE_VOLUME:
-                                n.setVolume(e.volume)
+                            case o.ACTION_VIDEO_API_CHANGE_VOLUME:
+                                n.setVolume(e.volume);
+                                break;
+                            case i.ACTION_PROMPT_LOGIN_MODAL:
+                                n._promptLoginModal(e.channelName)
                         }
                         t(e)
                     }
@@ -37145,9 +37160,10 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.createVideoApiMiddleware = r;
-        var i = n(318),
-            o = n(700),
-            a = new o.NullVideoAPI
+        var i = n(679),
+            o = n(318),
+            a = n(700),
+            s = new a.NullVideoAPI
     }, function(e, t) {
         "use strict";
 
@@ -37196,6 +37212,11 @@
                 key: "setVolume",
                 value: function() {
                     this._error("setVolume")
+                }
+            }, {
+                key: "_promptLoginModal",
+                value: function() {
+                    this._error("_promptLoginModal")
                 }
             }]), e
         }()

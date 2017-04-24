@@ -777,10 +777,10 @@ window.SiteOptions = {
         "5d03cd48-d664-4bd9-95de-c1ca5fb9e77b": {
             "name": "PERPETUA_CRSL",
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "experiment"
             }]
         },
