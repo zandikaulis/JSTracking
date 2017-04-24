@@ -133,6 +133,16 @@ window.SiteOptions = {
     "tsubs_enabled": false,
     "release_subs_tsubs": "staff",
     "experiments": {
+        "00683bde-a79d-4b9d-a7cc-b0549f854d36": {
+            "name": "offline_recs",
+            "groups": [{
+                "weight": 100,
+                "value": "no"
+            }, {
+                "weight": 0,
+                "value": "yes"
+            }]
+        },
         "0173154a-7fa4-4a76-b8e1-0575eb3a7fcd": {
             "name": "android_live_preview",
             "groups": [{
