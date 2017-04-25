@@ -8906,7 +8906,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.24-225837+44299dea053147b0f6e516f8ac4befa6b680ab5a",
+                    app_version: "2017.04.25-171606+c745cc2ebe2a92c5f8f78cf7d671cee913515913",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -14726,7 +14726,7 @@
                             r = e.getUserRequestContext();
                         this._sendAdSpadeEvent(f.AD_REQUEST_RESPONSE, this._initializeAdSpadeEvent(r));
                         var i = new n.ima.AdsRenderingSettings;
-                        i.restoreCustomPlaybackStateOnAdBreakComplete = !0, this._currentAdsManager = e.getAdsManager(new w(this._backend), i), this._moat.trackAd(this._currentAdsManager, r), this._currentAdsManager.addEventListener(n.ima.AdErrorEvent.Type.AD_ERROR, function(e) {
+                        i.restoreCustomPlaybackStateOnAdBreakComplete = !0, this._currentAdsManager = e.getAdsManager(new w(this._backend), i), this._currentAdsManager.addEventListener(n.ima.AdErrorEvent.Type.AD_ERROR, function(e) {
                             return t._onAdError(e)
                         }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.CONTENT_PAUSE_REQUESTED, function() {
                             return t._onContentPauseRequested(r)
@@ -14796,7 +14796,7 @@
                 }, {
                     key: "_onAdLoaded",
                     value: function(e, t) {
-                        this._sendAdSpadeEvent(f.AD_LOADED, this._initializeAdSpadeEvent(t, e.getAd()))
+                        this._moat.trackAd(this._currentAdsManager, t), this._sendAdSpadeEvent(f.AD_LOADED, this._initializeAdSpadeEvent(t, e.getAd()))
                     }
                 }, {
                     key: "_onAdStarted",
