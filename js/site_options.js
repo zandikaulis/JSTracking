@@ -731,10 +731,10 @@ window.SiteOptions = {
         "52cb0929-0af1-45ba-81ef-79d9ae80b342": {
             "name": "GROWTH_SKIP_SEEN_FRIENDS_IN_NOTIFICATIONS",
             "groups": [{
-                "weight": 90,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 100,
                 "value": "yes"
             }]
         },
