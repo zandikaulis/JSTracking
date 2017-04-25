@@ -406,6 +406,16 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
+        "23edd834-27d9-4bae-bcde-1e59b25aff51": {
+            "name": "android_big_goku",
+            "groups": [{
+                "weight": 10,
+                "value": "control"
+            }, {
+                "weight": 90,
+                "value": "treatment"
+            }]
+        },
         "264f75af-a787-4a40-8654-40d78b4d8b41": {
             "name": "extensions",
             "groups": [{
@@ -1497,6 +1507,16 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "no_prerolls"
+            }]
+        },
+        "cedb939e-3bea-49aa-a666-a6f2f599664d": {
+            "name": "ios_big_goku",
+            "groups": [{
+                "weight": 10,
+                "value": "control"
+            }, {
+                "weight": 90,
+                "value": "treatment"
             }]
         },
         "cf2033c8-5313-4abe-8142-61b9072c9d26": {
