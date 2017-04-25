@@ -1099,8 +1099,17 @@ window.SiteOptions = {
                 "weight": 2,
                 "value": "1.7.3+spd35"
             }, {
-                "weight": 10,
-                "value": "1.7.3"
+                "weight": 2,
+                "value": "1.7.4+speed"
+            }, {
+                "weight": 2,
+                "value": "1.7.4+spd35"
+            }, {
+                "weight": 2,
+                "value": "1.7.4+spd45"
+            }, {
+                "weight": 4,
+                "value": "1.7.4+spdcy"
             }, {
                 "weight": 5,
                 "value": "1.7.3+spdcy"
