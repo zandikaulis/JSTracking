@@ -412,8 +412,11 @@ window.SiteOptions = {
                 "weight": 10,
                 "value": "control"
             }, {
-                "weight": 90,
+                "weight": 45,
                 "value": "treatment"
+            }, {
+                "weight": 45,
+                "value": "collection"
             }]
         },
         "264f75af-a787-4a40-8654-40d78b4d8b41": {
