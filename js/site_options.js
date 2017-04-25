@@ -893,6 +893,16 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "78360f5d-4ace-420d-8bca-df0d146ffdee": {
+            "name": "CHANNEL_SIGNUP_COLUMN",
+            "groups": [{
+                "weight": 10,
+                "value": "treatment"
+            }, {
+                "weight": 90,
+                "value": "control"
+            }]
+        },
         "79accd86-e77e-4eae-8979-d19ab2bc4521": {
             "name": "ios_skippable_ads",
             "groups": [{
