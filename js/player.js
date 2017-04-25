@@ -3829,15 +3829,20 @@
                 return e.installed_extensions.reduce(function(t, n) {
                     var r = n.extension,
                         i = n.installation_status;
-                    return "video_overlay" !== r.anchor ? t : t.concat({
-                        id: r.id,
-                        isActive: i.is_active,
-                        token: e.tokens.filter(function(e) {
-                            return r.id === e.extension_id
-                        })[0].token,
-                        config: JSON.parse(i.config),
-                        viewerUrl: r.viewer_url
-                    })
+                    if ("video_overlay" !== r.anchor) return t;
+                    try {
+                        return t.concat({
+                            id: r.id,
+                            isActive: i.is_active,
+                            token: e.tokens.filter(function(e) {
+                                return r.id === e.extension_id
+                            })[0].token,
+                            config: JSON.parse(i.config),
+                            viewerUrl: r.viewer_url
+                        })
+                    } catch (o) {
+                        return console.error("Error parsing configuration for extension %s: %o", r.name, o), t
+                    }
                 }, [])
             })["catch"](function() {
                 return []
@@ -4569,8 +4574,8 @@
 
             function n(e, t) {
                 var n, r, i, o, a, s, l, u;
-                for (n = 3 & e.length, r = e.length - n, i = t, a = 3432918353, s = 461845907, u = 0; u < r;) l = 255 & e.charCodeAt(u) | (255 & e.charCodeAt(++u)) << 8 | (255 & e.charCodeAt(++u)) << 16 | (255 & e.charCodeAt(++u)) << 24, ++u, l = (65535 & l) * a + (((l >>> 16) * a & 65535) << 16) & 4294967295, l = l << 15 | l >>> 17, l = (65535 & l) * s + (((l >>> 16) * s & 65535) << 16) & 4294967295, i ^= l, i = i << 13 | i >>> 19, o = 5 * (65535 & i) + ((5 * (i >>> 16) & 65535) << 16) & 4294967295,
-                    i = (65535 & o) + 27492 + (((o >>> 16) + 58964 & 65535) << 16);
+                for (n = 3 & e.length, r = e.length - n, i = t, a = 3432918353, s = 461845907, u = 0; u < r;) l = 255 & e.charCodeAt(u) | (255 & e.charCodeAt(++u)) << 8 | (255 & e.charCodeAt(++u)) << 16 | (255 & e.charCodeAt(++u)) << 24, ++u, l = (65535 & l) * a + (((l >>> 16) * a & 65535) << 16) & 4294967295, l = l << 15 | l >>> 17, l = (65535 & l) * s + (((l >>> 16) * s & 65535) << 16) & 4294967295,
+                    i ^= l, i = i << 13 | i >>> 19, o = 5 * (65535 & i) + ((5 * (i >>> 16) & 65535) << 16) & 4294967295, i = (65535 & o) + 27492 + (((o >>> 16) + 58964 & 65535) << 16);
                 switch (l = 0, n) {
                     case 3:
                         l ^= (255 & e.charCodeAt(u + 2)) << 16;
@@ -6515,8 +6520,8 @@
                                 },
                                 onBufferStop: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
-                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t), e.getPlaylist().getClip().addElapsedTime(t), e.getPlaylist().getClip().setElapsedTimestamp(t), e.getPlaylist().getClip().setPlaybackStartPosition(r),
-                                        e.getHeartbeat().resume(), e.getKeepAlive().resume();
+                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t), e.getPlaylist().getClip().addElapsedTime(t), e.getPlaylist().getClip().setElapsedTimestamp(t),
+                                        e.getPlaylist().getClip().setPlaybackStartPosition(r), e.getHeartbeat().resume(), e.getKeepAlive().resume();
                                     var i = e.getSSECore().createLabels(l.PLAY, n, t);
                                     e.getEventManager().newEvent(i)
                                 },
@@ -8907,7 +8912,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.25-192430+f4fd18c4553a9de523fbe3298c6f6ef0ecd73449",
+                    app_version: "2017.04.25-194906+e5d599da6b039033710c392d6313b795ee91855f",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
