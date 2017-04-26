@@ -419,6 +419,16 @@ window.SiteOptions = {
                 "value": "collection"
             }]
         },
+        "24790bc9-1beb-4cf1-bc75-fe22c400805d": {
+            "name": "clips_loyalty",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "264f75af-a787-4a40-8654-40d78b4d8b41": {
             "name": "extensions",
             "groups": [{
