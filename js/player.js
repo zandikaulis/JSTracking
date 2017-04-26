@@ -8912,7 +8912,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.26-182557+b11f374bfe208230b6829b4e35a684f2681a32d6",
+                    app_version: "2017.04.26-200642+f298ea5fff88cc4dcb9b6440d430d1d57d408bef",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -18877,7 +18877,7 @@
                     var e = this;
                     this.subscribe(this._stateStore, ["quality.available"], this.onQualitiesChange.bind(this)), this.subscribe(this._stateStore, ["quality.current", "quality.selected"], function(t) {
                         var n = t.quality;
-                        n.selected !== n.current && "auto" !== n.selected ? e._player.getPaused() || (e._spinSettingsCog(!0), e._qualityChangeExpected = !0) : e._qualityChangeExpected && e.onQualityChange()
+                        n.selected !== n.current && "auto" !== n.selected ? e._player.getPaused() || (e._spinSettingsCog(!0), e._qualityChangeExpected = !0) : e._qualityChangeExpected && (e._spinSettingsCog(!1), e.onQualityChange())
                     }), this.subscribe(this._stateStore, ["playback.paused"], function(t) {
                         var n = t.playback;
                         n.paused ? e._spinSettingsCog(!1) : !n.paused && e._qualityChangeExpected && e._spinSettingsCog(!0)
@@ -33711,10 +33711,12 @@
                 r = e.disable,
                 i = e.notificationsEnabled,
                 o = e.t,
-                s = (0, c["default"])("pl-pinned-panel");
+                s = (0, c["default"])("pl-pinned-panel", "pl-pinned-panel--animate");
             return a["default"].createElement("div", {
                 className: s
-            }, a["default"].createElement("h2", null, o("{{channelName}} is offline", {
+            }, a["default"].createElement("h2", {
+                className: "pl-pinned-panel__title"
+            }, o("Get notified when {{channelName}} is live", {
                 channelName: t
             })), a["default"].createElement(l.NotificationsButton, {
                 enable: n,
@@ -33844,12 +33846,14 @@
                 l = (0, u["default"])("pl-pinned-panel", "pl-pinned-panel--te");
             return a["default"].createElement("div", {
                 className: l
+            }, a["default"].createElement("figure", {
+                className: "pl-pinned-panel__avatar"
             }, a["default"].createElement("img", {
                 src: t,
-                alt: "Logo",
-                height: 25,
-                width: 25
-            }), a["default"].createElement(s.FollowButton, {
+                alt: "Avatar",
+                height: 30,
+                width: 30
+            })), a["default"].createElement(s.FollowButton, {
                 channelName: n,
                 follow: r,
                 unfollow: i,
@@ -33940,12 +33944,18 @@
                 r = e.disable,
                 i = e.notificationsEnabled,
                 o = e.t,
-                s = (0, c["default"])("pl-pinned-panel", "pl-pinned-panel--embed");
+                s = (0, c["default"])("pl-pinned-panel", "pl-pinned-panel--embed"),
+                u = (0, c["default"])("pl-button--hollow", "mg-t-2");
             return a["default"].createElement("div", {
                 className: s
-            }, a["default"].createElement("h2", null, o("Live Broadcast has ended")), a["default"].createElement("p", null, o("Get notified when {{channelName}} goes live next", {
+            }, a["default"].createElement("h2", {
+                className: "pl-pinned-panel__title"
+            }, o("Live Broadcast has ended")), a["default"].createElement("p", {
+                className: "pl-pinned-panel__subtext"
+            }, o("Get notified when {{channelName}} goes live next", {
                 channelName: t
             })), a["default"].createElement(l.NotificationsButton, {
+                className: u,
                 enable: n,
                 disable: r,
                 notificationsEnabled: i
