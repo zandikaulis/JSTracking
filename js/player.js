@@ -8912,7 +8912,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.26-221517+ecaa1005c24d16e92a65d85217d0d3dd4822c864",
+                    app_version: "2017.04.26-222105+23f2f6d39b424af26c22890479722f996b71d55c",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -33519,52 +33519,65 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(385),
+            l = n(78),
             u = r(l),
-            c = n(549),
-            d = n(630),
-            p = n(633),
-            f = n(635),
-            h = n(636),
-            v = n(378),
-            _ = n(208),
-            g = n(159),
-            y = {
-                fetched: l.PropTypes.bool.isRequired,
-                playerType: l.PropTypes.string.isRequired,
-                win: l.PropTypes.object.isRequired,
-                relationship: l.PropTypes.shape({
-                    following: l.PropTypes.bool,
-                    notificationsEnabled: l.PropTypes.bool
+            c = n(385),
+            d = r(c),
+            p = n(549),
+            f = n(630),
+            h = n(633),
+            v = n(635),
+            _ = n(636),
+            g = n(378),
+            y = n(208),
+            m = n(159),
+            b = "player_notifbutton_clicks",
+            E = "follow_on_notif_on",
+            S = "notif_on",
+            T = "notif_off",
+            C = {
+                fetched: c.PropTypes.bool.isRequired,
+                playerType: c.PropTypes.string.isRequired,
+                win: c.PropTypes.object.isRequired,
+                relationship: c.PropTypes.shape({
+                    following: c.PropTypes.bool,
+                    notificationsEnabled: c.PropTypes.bool
                 }).isRequired,
-                user: l.PropTypes.shape({
-                    id: l.PropTypes.number,
-                    loggedIn: l.PropTypes.bool
+                user: c.PropTypes.shape({
+                    id: c.PropTypes.number,
+                    loggedIn: c.PropTypes.bool
                 }).isRequired,
-                channel: l.PropTypes.shape({
-                    id: l.PropTypes.number,
-                    name: l.PropTypes.string,
-                    avatarUrl: l.PropTypes.string
+                channel: c.PropTypes.shape({
+                    id: c.PropTypes.number,
+                    name: c.PropTypes.string,
+                    avatarUrl: c.PropTypes.string
                 }).isRequired,
-                enableNotifications: l.PropTypes.func.isRequired,
-                disableNotifications: l.PropTypes.func.isRequired,
-                followChannel: l.PropTypes.func.isRequired,
-                unfollowChannel: l.PropTypes.func.isRequired,
-                promptLoginModal: l.PropTypes.func.isRequired
+                enableNotifications: c.PropTypes.func.isRequired,
+                disableNotifications: c.PropTypes.func.isRequired,
+                followChannel: c.PropTypes.func.isRequired,
+                unfollowChannel: c.PropTypes.func.isRequired,
+                promptLoginModal: c.PropTypes.func.isRequired,
+                analytics: c.PropTypes.object
             },
-            m = function(e) {
+            P = {
+                analytics: {
+                    trackEvent: function() {}
+                }
+            },
+            w = function(e) {
                 var t = e.follow,
                     n = e.streamMetadata,
                     r = e.user,
                     i = e.env,
-                    o = e.window;
+                    o = e.window,
+                    a = e.analytics;
                 return {
                     fetched: t.fetched,
                     playerType: i.playerType,
                     win: o,
                     user: {
                         id: r.id,
-                        loggedIn: r.loggedInStatus === v.LOGGED_IN
+                        loggedIn: r.loggedInStatus === g.LOGGED_IN
                     },
                     relationship: {
                         notificationsEnabled: t.notificationsEnabled,
@@ -33574,33 +33587,48 @@
                         id: n.channel.id,
                         avatarUrl: n.channel.logo,
                         name: n.channel.displayName
-                    }
+                    },
+                    analytics: a
                 }
             },
-            b = function(e) {
+            k = function(e) {
                 return {
                     enableNotifications: function(t, n) {
-                        e((0, h.enableNotifications)(t, n))
+                        e((0, _.enableNotifications)(t, n))
                     },
                     disableNotifications: function(t, n) {
-                        e((0, h.disableNotifications)(t, n))
+                        e((0, _.disableNotifications)(t, n))
                     },
                     followChannel: function(t, n) {
-                        e((0, h.followChannel)(t, n))
+                        e((0, _.followChannel)(t, n))
                     },
                     unfollowChannel: function(t, n) {
-                        e((0, h.unfollowChannel)(t, n))
+                        e((0, _.unfollowChannel)(t, n))
                     },
                     promptLoginModal: function() {}
                 }
             },
-            E = t.FollowPanelContainer = function(e) {
+            A = t.FollowPanelContainer = function(e) {
                 function t() {
                     i(this, t);
                     var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.enableNotifications = e.enableNotifications.bind(e), e.disableNotifications = e.disableNotifications.bind(e), e.followChannel = e.followChannel.bind(e), e.unfollowChannel = e.unfollowChannel.bind(e), e.promptLoginModal = e.promptLoginModal.bind(e), e
                 }
                 return a(t, e), s(t, [{
+                    key: "_logInteraction",
+                    value: function(e) {
+                        var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                            n = this.props,
+                            r = n.analytics,
+                            i = n.relationship,
+                            o = n.playerType;
+                        r.trackEvent(e, (0, u["default"])(t, {
+                            follow_state: i.following,
+                            notif_state: i.notificationsEnabled,
+                            src: o
+                        }))
+                    }
+                }, {
                     key: "_invokeIfLoggedIn",
                     value: function(e) {
                         var t = this.props,
@@ -33623,23 +33651,30 @@
                 }, {
                     key: "enableNotifications",
                     value: function l() {
-                        var l = this.props.enableNotifications;
-                        this._invokeIfLoggedIn(l)
+                        var e = this.props,
+                            l = e.enableNotifications,
+                            t = e.relationship,
+                            n = t.following ? S : E;
+                        this._invokeIfLoggedIn(l), this._logInteraction(b, {
+                            action: n
+                        })
                     }
                 }, {
                     key: "disableNotifications",
                     value: function c() {
                         var c = this.props.disableNotifications;
-                        this._invokeIfLoggedIn(c)
+                        this._invokeIfLoggedIn(c), this._logInteraction(b, {
+                            action: T
+                        })
                     }
                 }, {
                     key: "promptLoginModal",
-                    value: function h() {
+                    value: function p() {
                         var e = this.props,
                             t = e.win,
                             n = e.playerType,
-                            h = e.promptLoginModal;
-                        n === _.PLAYER_SITE ? h() : t.open(g.TWITCH_SIGNUP_URL, "_blank")
+                            p = e.promptLoginModal;
+                        n === y.PLAYER_SITE ? p() : t.open(m.TWITCH_SIGNUP_URL, "_blank")
                     }
                 }, {
                     key: "createTwitchEverywherePanel",
@@ -33647,7 +33682,7 @@
                         var e = this.props,
                             t = e.channel,
                             n = e.relationship;
-                        return u["default"].createElement(p.TwitchEverywhereFollowPanel, {
+                        return d["default"].createElement(h.TwitchEverywhereFollowPanel, {
                             channelName: t.name,
                             following: n.following,
                             avatarUrl: t.avatarUrl,
@@ -33661,7 +33696,7 @@
                         var e = this.props,
                             t = e.channel,
                             n = e.relationship;
-                        return u["default"].createElement(d.ChannelPageFollowPanel, {
+                        return d["default"].createElement(f.ChannelPageFollowPanel, {
                             channelName: t.name,
                             notificationsEnabled: n.notificationsEnabled,
                             enable: this.enableNotifications,
@@ -33674,7 +33709,7 @@
                         var e = this.props,
                             t = e.channel,
                             n = e.relationship;
-                        return u["default"].createElement(f.PulseFollowPanel, {
+                        return d["default"].createElement(v.PulseFollowPanel, {
                             channelName: t.name,
                             notificationsEnabled: n.notificationsEnabled,
                             enable: this.enableNotifications,
@@ -33689,22 +33724,22 @@
                             n = e.playerType;
                         if (!t) return null;
                         switch (n) {
-                            case _.PLAYER_POPOUT:
-                            case _.PLAYER_SITE:
-                            case _.PLAYER_EMBED:
+                            case y.PLAYER_POPOUT:
+                            case y.PLAYER_SITE:
+                            case y.PLAYER_EMBED:
                                 return this.createChannelPagePanel();
-                            case _.PLAYER_PULSE:
+                            case y.PLAYER_PULSE:
                                 return this.createPulsePanel();
-                            case _.PLAYER_TWITCH_EVERYWHERE:
+                            case y.PLAYER_TWITCH_EVERYWHERE:
                                 return this.createTwitchEverywherePanel();
                             default:
                                 return null
                         }
                     }
                 }]), t
-            }(u["default"].Component);
-        E.propTypes = y;
-        t.FollowPanel = (0, c.connect)(m, b)(E)
+            }(d["default"].Component);
+        A.propTypes = C, A.defaultProps = P;
+        t.FollowPanel = (0, p.connect)(w, k)(A)
     }, function(e, t, n) {
         "use strict";
 
@@ -33993,7 +34028,7 @@
 
         function r(e, t) {
             return function(n) {
-                (0, p.getFollowChannel)(e, t).then(function(e) {
+                return (0, h.getFollowChannel)(e, t).then(function(e) {
                     return u(n, e)
                 })["catch"](function(e) {
                     return c(n, e)
@@ -34003,7 +34038,7 @@
 
         function i(e, t) {
             return function(n) {
-                (0, p.setFollowChannel)(e, t, !0).then(function(e) {
+                return (0, h.setFollowChannel)(e, t, !0).then(function(e) {
                     return u(n, e)
                 })["catch"](function() {})
             }
@@ -34011,7 +34046,7 @@
 
         function o(e, t) {
             return function(n) {
-                (0, p.setFollowChannel)(e, t, !1).then(function() {
+                return (0, h.setFollowChannel)(e, t, !1).then(function() {
                     return n(l({
                         following: !1,
                         notificationsEnabled: !1
@@ -34021,17 +34056,25 @@
         }
 
         function a(e, t) {
-            return function(n) {
-                (0, p.setFollowNotifications)(e, t, !0).then(function(e) {
+            return function(n, r) {
+                var i = r(),
+                    o = i.analytics;
+                return (0, h.setFollowNotifications)(e, t, !0).then(function(e) {
                     return u(n, e)
+                }).then(function() {
+                    return p(o)
                 })["catch"](function() {})
             }
         }
 
         function s(e, t) {
-            return function(n) {
-                (0, p.setFollowNotifications)(e, t, !1).then(function(e) {
+            return function(n, r) {
+                var i = r(),
+                    o = i.analytics;
+                return (0, h.setFollowNotifications)(e, t, !1).then(function(e) {
                     return u(n, e)
+                }).then(function() {
+                    return f(o)
                 })["catch"](function() {})
             }
         }
@@ -34039,7 +34082,7 @@
         function l() {
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
             return {
-                type: f,
+                type: v,
                 followInfo: e
             }
         }
@@ -34055,7 +34098,7 @@
 
         function c(e, t) {
             var n = t.responseJSON;
-            n.message === h && e(l({
+            n.message === _ && e(l({
                 following: !1,
                 notificationsEnabled: !1
             }))
@@ -34063,17 +34106,33 @@
 
         function d(e) {
             return {
-                type: v,
+                type: g,
                 channelName: e
             }
         }
+
+        function p(e) {
+            e.trackEvent(y, {
+                src: "player"
+            }), e.trackEvent(m, {
+                notifications: !0
+            })
+        }
+
+        function f(e) {
+            e.trackEvent(m, {
+                notifications: !1
+            })
+        }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.ACTION_PROMPT_LOGIN_MODAL = t.FOLLOW_NOT_FOUND = t.ACTION_FOLLOW_INFO_FETCHED = void 0, t.fetchFollowInfo = r, t.followChannel = i, t.unfollowChannel = o, t.enableNotifications = a, t.disableNotifications = s, t.followInfoFetched = l, t.dispatchFollowSuccess = u, t.dispatchFollowFail = c, t.promptLoginModal = d;
-        var p = n(191),
-            f = t.ACTION_FOLLOW_INFO_FETCHED = "follow info fetched",
-            h = t.FOLLOW_NOT_FOUND = "Follow not found",
-            v = t.ACTION_PROMPT_LOGIN_MODAL = "prompt login modal"
+        }), t.ACTION_PROMPT_LOGIN_MODAL = t.FOLLOW_NOT_FOUND = t.ACTION_FOLLOW_INFO_FETCHED = void 0, t.fetchFollowInfo = r, t.followChannel = i, t.unfollowChannel = o, t.enableNotifications = a, t.disableNotifications = s, t.followInfoFetched = l, t.dispatchFollowSuccess = u, t.dispatchFollowFail = c, t.promptLoginModal = d, t.logNotificationsEnabled = p, t.logNotificationsDisabled = f;
+        var h = n(191),
+            v = t.ACTION_FOLLOW_INFO_FETCHED = "follow info fetched",
+            _ = t.FOLLOW_NOT_FOUND = "Follow not found",
+            g = t.ACTION_PROMPT_LOGIN_MODAL = "prompt login modal",
+            y = "follow",
+            m = "notifications_change"
     }, function(e, t, n) {
         "use strict";
 
