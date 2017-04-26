@@ -8912,7 +8912,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.26-222105+23f2f6d39b424af26c22890479722f996b71d55c",
+                    app_version: "2017.04.26-223717+c7a78383e748691e60e083e72120073074ec4baa",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -14674,16 +14674,18 @@
                 }, {
                     key: "requestAds",
                     value: function(e) {
-                        var t = this._stateStore.getState().window.Date;
-                        this._adRequestTime = t.now(), this._sendAdSpadeEvent(f.AD_REQUEST, this._initializeAdSpadeEvent(e));
-                        try {
-                            var n = this._stateStore.getState().window.google,
-                                r = this._videoContainer.offsetParent,
-                                i = new n.ima.AdsRequest;
-                            i.adTagUrl = (0, u.buildIMATags)(e), i.linearAdSlotWidth = r.offsetWidth, i.linearAdSlotHeight = r.offsetHeight, i.nonLinearAdSlotWidth = r.offsetWidth, i.nonLinearAdSlotHeight = r.offsetHeight, this._adsLoader.requestAds(i, e)
-                        } catch (o) {
-                            var a = this._initializeAdSpadeEvent(e);
-                            a.reason = o.message, this._sendAdSpadeEvent(f.AD_REQUEST_ERROR, a)
+                        if (!(this._currentAdsManager.getRemainingTime() > 0)) {
+                            var t = this._stateStore.getState().window.Date;
+                            this._adRequestTime = t.now(), this._sendAdSpadeEvent(f.AD_REQUEST, this._initializeAdSpadeEvent(e));
+                            try {
+                                var n = this._stateStore.getState().window.google,
+                                    r = this._videoContainer.offsetParent,
+                                    i = new n.ima.AdsRequest;
+                                i.adTagUrl = (0, u.buildIMATags)(e), i.linearAdSlotWidth = r.offsetWidth, i.linearAdSlotHeight = r.offsetHeight, i.nonLinearAdSlotWidth = r.offsetWidth, i.nonLinearAdSlotHeight = r.offsetHeight, this._adsLoader.requestAds(i, e)
+                            } catch (o) {
+                                var a = this._initializeAdSpadeEvent(e);
+                                a.reason = o.message, this._sendAdSpadeEvent(f.AD_REQUEST_ERROR, a)
+                            }
                         }
                     }
                 }, {
@@ -14922,6 +14924,11 @@
                 }, {
                     key: "addEventListener",
                     value: function() {}
+                }, {
+                    key: "getRemainingTime",
+                    value: function() {
+                        return -1
+                    }
                 }]), e
             }(),
             O = new A
@@ -16117,8 +16124,7 @@
             }, {
                 key: "destroy",
                 value: function() {
-                    this._stateStore.dispatch((0,
-                        _.requestStatsDisabled)(this)), this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
+                    this._stateStore.dispatch((0, _.requestStatsDisabled)(this)), this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
                         return e()
                     })
                 }
@@ -17456,7 +17462,8 @@
                         n = e.recommendations;
                     0 !== n.videos.length && ($(".js-video-recommendations", this.$root).html(n.videos.map(function(e, n) {
                         var r = t.$template.clone();
-                        0 === n && (t.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")), t.updateAutoplayProgress(100, Math.round(m / 1e3))), t.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")), r.attr("data-index", n), r.find(".js-recommended-stream__thumbnail").attr("src", e.thumbnailURL), r.find(".js-recommended-stream__channel").text(e.channelName), r.find(".js-recommended-stream__title").text(e.title);
+                        0 === n && (t.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")), t.updateAutoplayProgress(100, Math.round(m / 1e3))), t.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")), r.attr("data-index", n), r.find(".js-recommended-stream__thumbnail").attr("src", e.thumbnailURL), r.find(".js-recommended-stream__channel").text(e.channelName),
+                            r.find(".js-recommended-stream__title").text(e.title);
                         var i = t._stateStore.getState().lang.langCode,
                             o = {
                                 year: "numeric",
