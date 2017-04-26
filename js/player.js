@@ -8912,7 +8912,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.26-200642+f298ea5fff88cc4dcb9b6440d430d1d57d408bef",
+                    app_version: "2017.04.26-221517+ecaa1005c24d16e92a65d85217d0d3dd4822c864",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -15047,27 +15047,27 @@
 
         function n(e) {
             return {
-                type: s,
+                type: l,
                 video: e
             }
         }
 
         function r() {
             return {
-                type: l
+                type: u
             }
         }
 
         function i() {
             return {
-                type: u
+                type: c
             }
         }
 
         function o(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             return {
-                type: c,
+                type: d,
                 muted: e,
                 automated: t
             }
@@ -15076,18 +15076,26 @@
         function a() {
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
             return {
-                type: d,
+                type: p,
                 volume: e
+            }
+        }
+
+        function s(e) {
+            return {
+                type: f,
+                backendType: e
             }
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.videoAPILoaded = n, t.play = r, t.pause = i, t.mutePlayer = o, t.changeVolume = a;
-        var s = t.ACTION_LOAD_VIDEO_API = "load video api",
-            l = t.ACTION_VIDEO_API_PLAY = "video api play content",
-            u = t.ACTION_VIDEO_API_PAUSE = "video api pause content",
-            c = t.ACTION_VIDEO_API_MUTE_PLAYER = "video api mute player",
-            d = t.ACTION_VIDEO_API_CHANGE_VOLUME = "video api change volume"
+        }), t.videoAPILoaded = n, t.play = r, t.pause = i, t.mutePlayer = o, t.changeVolume = a, t.changeBackend = s;
+        var l = t.ACTION_LOAD_VIDEO_API = "load video api",
+            u = t.ACTION_VIDEO_API_PLAY = "video api play content",
+            c = t.ACTION_VIDEO_API_PAUSE = "video api pause content",
+            d = t.ACTION_VIDEO_API_MUTE_PLAYER = "video api mute player",
+            p = t.ACTION_VIDEO_API_CHANGE_VOLUME = "video api change volume",
+            f = t.ACTION_VIDEO_API_CHANGE_BACKEND = "video api change backend"
     }, function(e, t, n) {
         "use strict";
 
@@ -16109,7 +16117,8 @@
             }, {
                 key: "destroy",
                 value: function() {
-                    this._stateStore.dispatch((0, _.requestStatsDisabled)(this)), this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
+                    this._stateStore.dispatch((0,
+                        _.requestStatsDisabled)(this)), this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
                         return e()
                     })
                 }
@@ -37758,7 +37767,10 @@
                                 n.setVolume(e.volume);
                                 break;
                             case i.ACTION_PROMPT_LOGIN_MODAL:
-                                n._promptLoginModal(e.channelName)
+                                n._promptLoginModal(e.channelName);
+                                break;
+                            case o.ACTION_VIDEO_API_CHANGE_BACKEND:
+                                n.setBackend(e.backendType)
                         }
                         t(e)
                     }
@@ -37825,6 +37837,11 @@
                 key: "_promptLoginModal",
                 value: function() {
                     this._error("_promptLoginModal")
+                }
+            }, {
+                key: "setBackend",
+                value: function() {
+                    this._error("setBackend")
                 }
             }]), e
         }()
