@@ -14986,7 +14986,7 @@ function(e, t) {
                 a = "spade",
                 l = {
                     spade: {
-                        href: "//spade.twitch.tv/"
+                        href: "//trowel.twitch.tv/"
                     },
                     mixpanel: {
                         href: "//api.mixpanel.com/track"
