@@ -8914,7 +8914,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.27-214910+adf24a9d224d5703b95719b4620207a6614d4265",
+                    app_version: "2017.04.27-221942+65b542f8a48c4c880b097fec62e9284cbe768a95",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -33435,6 +33435,14 @@
             "You can enable automatic video quality selection by clicking on the gear menu and selecting “Auto” under Video Quality.": "You can enable automatic video quality selection by clicking on the gear menu and selecting “Auto” under Video Quality.",
             "Submit feedback by selecting Report Playback Issue from the gear menu.": "Submit feedback by selecting Report Playback Issue from the gear menu.",
             Offline: "Offline",
+            "Get notified when {{channelName}} is live": "Get notified when {{channelName}} is live",
+            "Live Broadcast has ended": "Live Broadcast has ended",
+            "Get notified when {{channelName}} goes live next": "Get notified when {{channelName}} goes live next",
+            "Follow {{channelName}} on Twitch": "Follow {{channelName}} on Twitch",
+            Following: "Following",
+            Unfollow: "Unfollow",
+            Notifications: "Notifications",
+            "Turn On Notifications": "Turn On Notifications",
             Playlist: "Playlist",
             Subscribe: "Subscribe",
             Close: "Close",
