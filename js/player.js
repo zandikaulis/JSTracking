@@ -231,8 +231,9 @@
             ye = n(580),
             me = n(714),
             be = n(715),
-            Ee = n(167);
-        n(286).polyfill(), n.p = S.playerHost + "/", n(716), window.google || $.getScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = o, window.Twitch.Player = o
+            Ee = n(167),
+            Se = n(169);
+        n(286).polyfill(), n.p = S.playerHost + "/", n(716), window.google || $.getScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = o, window.Twitch.Player = o, window.Twitch.Player.PROMPT_LOGIN = Se.PROMPT_LOGIN_MODAL
     }, function(e, t, n) {
         var r = n(2),
             i = n(3),
@@ -1469,7 +1470,7 @@
                 if (s(t) || a(t)) return void i(t, l(t), e);
                 for (var n in t) c.call(t, n) && r(e, n, t[n])
             });
-        e.exports = d
+        e.exports = d;
     }, function(e, t, n) {
         e.exports = n(80)
     }, function(e, t, n) {
@@ -8912,7 +8913,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.27-185231+aba3dfa713d279a5891e3431aba0c7e2f750754a",
+                    app_version: "2017.04.27-200033+1ba2aeff885cbca72da397a7296a4c38126c91bd",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
