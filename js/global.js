@@ -12952,7 +12952,7 @@ function(e, t) {
             var i = n(5),
                 r = n(6),
                 o = n(7);
-            t.SPADE_URL = "//spade.twitch.tv/", t.sendEvent = function(e, n, s) {
+            t.SPADE_URL = "//trowel.twitch.tv/", t.sendEvent = function(e, n, s) {
                 var a = {
                         event: e,
                         properties: n
