@@ -8931,7 +8931,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.28-153317+794c9804481a6c95b03fc93ee7fe6f3fc066ab8c",
+                    app_version: "2017.04.28-161816+39fcc7f3aa629e32959259fa75a3fab058741811",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -33709,10 +33709,11 @@
             y = n(208),
             m = n(159),
             b = "player_notifbutton_clicks",
-            E = "follow_on_notif_on",
-            S = "notif_on",
-            T = "notif_off",
-            C = {
+            E = "player_notifbutton_views",
+            S = "follow_on_notif_on",
+            T = "notif_on",
+            C = "notif_off",
+            P = {
                 fetched: c.PropTypes.bool.isRequired,
                 playerType: c.PropTypes.string.isRequired,
                 win: c.PropTypes.object.isRequired,
@@ -33737,18 +33738,18 @@
                 analytics: c.PropTypes.object,
                 withInfo: c.PropTypes.bool.isRequired
             },
-            P = {
+            w = {
                 analytics: {
                     trackEvent: function() {}
                 }
             },
-            w = function(e) {
+            k = function(e) {
                 var t = e.follow,
                     n = e.streamMetadata,
                     r = e.user,
                     i = e.env,
                     o = e.window,
-                    a = e.analytics,
+                    a = e.analyticsTracker,
                     s = e.playerOptions;
                 return {
                     fetched: t.fetched,
@@ -33767,11 +33768,11 @@
                         avatarUrl: n.channel.logo,
                         name: n.channel.displayName
                     },
-                    analytics: a,
-                    withInfo: s.showInfo
+                    withInfo: s.showInfo,
+                    analytics: a
                 }
             },
-            k = function(e) {
+            A = function(e) {
                 return {
                     enableNotifications: function(t, n) {
                         e((0, _.enableNotifications)(t, n))
@@ -33788,13 +33789,18 @@
                     promptLoginModal: function() {}
                 }
             },
-            A = t.FollowPanelContainer = function(e) {
+            O = t.FollowPanelContainer = function(e) {
                 function t() {
                     i(this, t);
                     var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
-                    return e.enableNotifications = e.enableNotifications.bind(e), e.disableNotifications = e.disableNotifications.bind(e), e.followChannel = e.followChannel.bind(e), e.unfollowChannel = e.unfollowChannel.bind(e), e.promptLoginModal = e.promptLoginModal.bind(e), e
+                    return e.enableNotifications = e.enableNotifications.bind(e), e.disableNotifications = e.disableNotifications.bind(e), e.followChannel = e.followChannel.bind(e), e.unfollowChannel = e.unfollowChannel.bind(e), e.promptLoginModal = e.promptLoginModal.bind(e), e.logView = e.logView.bind(e), e
                 }
                 return a(t, e), s(t, [{
+                    key: "logView",
+                    value: function() {
+                        this._logInteraction(E)
+                    }
+                }, {
                     key: "_logInteraction",
                     value: function(e) {
                         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -33834,7 +33840,7 @@
                         var e = this.props,
                             l = e.enableNotifications,
                             t = e.relationship,
-                            n = t.following ? S : E;
+                            n = t.following ? T : S;
                         this._invokeIfLoggedIn(l), this._logInteraction(b, {
                             action: n
                         })
@@ -33844,7 +33850,7 @@
                     value: function c() {
                         var c = this.props.disableNotifications;
                         this._invokeIfLoggedIn(c), this._logInteraction(b, {
-                            action: T
+                            action: C
                         })
                     }
                 }, {
@@ -33870,7 +33876,8 @@
                             avatarUrl: i,
                             follow: this.followChannel,
                             unfollow: this.unfollowChannel,
-                            withInfo: r
+                            withInfo: r,
+                            logView: this.logView
                         })
                     }
                 }, {
@@ -33885,7 +33892,8 @@
                             notificationsEnabled: n.notificationsEnabled,
                             enable: this.enableNotifications,
                             disable: this.disableNotifications,
-                            withInfo: r
+                            withInfo: r,
+                            logView: this.logView
                         })
                     }
                 }, {
@@ -33898,7 +33906,8 @@
                             channelName: t.name,
                             notificationsEnabled: n.notificationsEnabled,
                             enable: this.enableNotifications,
-                            disable: this.disableNotifications
+                            disable: this.disableNotifications,
+                            logView: this.logView
                         })
                     }
                 }, {
@@ -33923,8 +33932,8 @@
                     }
                 }]), t
             }(d["default"].Component);
-        A.propTypes = C, A.defaultProps = P;
-        t.FollowPanel = (0, p.connect)(w, k)(A)
+        O.propTypes = P, O.defaultProps = w;
+        t.FollowPanel = (0, p.connect)(k, A)(O)
     }, function(e, t, n) {
         "use strict";
 
@@ -33934,49 +33943,98 @@
             }
         }
 
-        function i(e) {
-            var t = e.channelName,
-                n = e.enable,
-                r = e.disable,
-                i = e.notificationsEnabled,
-                o = e.t,
-                s = e.withInfo,
-                u = (0, c["default"])({
-                    "pl-pinned-panel": !0,
-                    "pl-pinned-panel--animate": !0,
-                    "pl-pinned-panel--with-info": s
-                });
-            return a["default"].createElement("div", {
-                className: u
-            }, a["default"].createElement("h2", {
-                className: "pl-pinned-panel__title"
-            }, o("Get notified when {{channelName}} is live", {
-                channelName: t
-            })), a["default"].createElement(l.NotificationsButton, {
-                enable: n,
-                disable: r,
-                notificationsEnabled: i
-            }))
+        function i(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function o(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function a(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.ChannelPageFollowPanel = void 0, t.ChannelPageFollowPanelComponent = i;
-        var o = n(385),
-            a = r(o),
-            s = n(589),
-            l = n(632),
-            u = n(594),
-            c = r(u),
-            d = {
-                channelName: o.PropTypes.string.isRequired,
-                enable: o.PropTypes.func.isRequired,
-                disable: o.PropTypes.func.isRequired,
-                notificationsEnabled: o.PropTypes.bool.isRequired,
-                t: o.PropTypes.func.isRequired,
-                withInfo: o.PropTypes.bool.isRequired
-            };
-        i.propTypes = d;
-        t.ChannelPageFollowPanel = (0, s.translate)()(i)
+        }), t.ChannelPageFollowPanel = t.ChannelPageFollowPanelComponent = void 0;
+        var s = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var r = t[n];
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                    }
+                }
+                return function(t, n, r) {
+                    return n && e(t.prototype, n), r && e(t, r), t
+                }
+            }(),
+            l = n(385),
+            u = r(l),
+            c = n(589),
+            d = n(632),
+            p = n(594),
+            f = r(p),
+            h = {
+                channelName: l.PropTypes.string.isRequired,
+                enable: l.PropTypes.func.isRequired,
+                disable: l.PropTypes.func.isRequired,
+                notificationsEnabled: l.PropTypes.bool.isRequired,
+                t: l.PropTypes.func.isRequired,
+                withInfo: l.PropTypes.bool.isRequired,
+                logView: l.PropTypes.func
+            },
+            v = {
+                logView: function() {}
+            },
+            _ = t.ChannelPageFollowPanelComponent = function(e) {
+                function t() {
+                    return i(this, t), o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments))
+                }
+                return a(t, e), s(t, [{
+                    key: "componentDidMount",
+                    value: function() {
+                        this.props.logView()
+                    }
+                }, {
+                    key: "render",
+                    value: function() {
+                        var e = this.props,
+                            t = e.channelName,
+                            n = e.enable,
+                            r = e.disable,
+                            i = e.notificationsEnabled,
+                            o = e.t,
+                            a = e.withInfo,
+                            s = (0, f["default"])({
+                                "pl-pinned-panel": !0,
+                                "pl-pinned-panel--animate": !0,
+                                "pl-pinned-panel--with-info": a
+                            });
+                        return u["default"].createElement("div", {
+                            className: s
+                        }, u["default"].createElement("h2", {
+                            className: "pl-pinned-panel__title"
+                        }, o("Get notified when {{channelName}} is live", {
+                            channelName: t
+                        })), u["default"].createElement(d.NotificationsButton, {
+                            enable: n,
+                            disable: r,
+                            notificationsEnabled: i
+                        }))
+                    }
+                }]), t
+            }(u["default"].Component);
+        _.propTypes = h, _.defaultProps = v;
+        t.ChannelPageFollowPanel = (0, c.translate)()(_)
     }, function(e, t, n) {
         "use strict";
 
@@ -34033,51 +34091,100 @@
             }
         }
 
-        function i(e) {
-            var t = e.avatarUrl,
-                n = e.channelName,
-                r = e.follow,
-                i = e.unfollow,
-                o = e.following,
-                l = e.withInfo,
-                c = (0, u["default"])({
-                    "pl-pinned-panel": !0,
-                    "pl-pinned-panel--te": !0,
-                    "pl-pinned-panel--with-info": l
-                });
-            return a["default"].createElement("div", {
-                className: c
-            }, a["default"].createElement("figure", {
-                className: "pl-pinned-panel__avatar"
-            }, a["default"].createElement("img", {
-                src: t,
-                alt: "Avatar",
-                height: 30,
-                width: 30
-            })), a["default"].createElement(s.FollowButton, {
-                channelName: n,
-                follow: r,
-                unfollow: i,
-                following: o
-            }))
+        function i(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function o(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function a(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.TwitchEverywhereFollowPanel = i;
-        var o = n(385),
-            a = r(o),
-            s = n(634),
-            l = n(594),
+        }), t.TwitchEverywhereFollowPanel = void 0;
+        var s = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var r = t[n];
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                    }
+                }
+                return function(t, n, r) {
+                    return n && e(t.prototype, n), r && e(t, r), t
+                }
+            }(),
+            l = n(385),
             u = r(l),
-            c = {
-                avatarUrl: o.PropTypes.string.isRequired,
-                channelName: o.PropTypes.string.isRequired,
-                follow: o.PropTypes.func.isRequired,
-                unfollow: o.PropTypes.func.isRequired,
-                following: o.PropTypes.bool.isRequired,
-                withInfo: o.PropTypes.bool.isRequired
-            };
-        i.propTypes = c
+            c = n(634),
+            d = n(594),
+            p = r(d),
+            f = {
+                avatarUrl: l.PropTypes.string.isRequired,
+                channelName: l.PropTypes.string.isRequired,
+                follow: l.PropTypes.func.isRequired,
+                unfollow: l.PropTypes.func.isRequired,
+                following: l.PropTypes.bool.isRequired,
+                logView: l.PropTypes.func,
+                withInfo: l.PropTypes.bool.isRequired
+            },
+            h = {
+                logView: function() {}
+            },
+            v = t.TwitchEverywhereFollowPanel = function(e) {
+                function t() {
+                    return i(this, t), o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments))
+                }
+                return a(t, e), s(t, [{
+                    key: "componentDidMount",
+                    value: function() {
+                        this.props.logView()
+                    }
+                }, {
+                    key: "render",
+                    value: function() {
+                        var e = this.props,
+                            t = e.avatarUrl,
+                            n = e.channelName,
+                            r = e.follow,
+                            i = e.unfollow,
+                            o = e.following,
+                            a = e.withInfo,
+                            s = (0, p["default"])({
+                                "pl-pinned-panel": !0,
+                                "pl-pinned-panel--te": !0,
+                                "pl-pinned-panel--with-info": a
+                            });
+                        return u["default"].createElement("div", {
+                            className: s
+                        }, u["default"].createElement("figure", {
+                            className: "pl-pinned-panel__avatar"
+                        }, u["default"].createElement("img", {
+                            src: t,
+                            alt: "Avatar",
+                            height: 30,
+                            width: 30
+                        })), u["default"].createElement(c.FollowButton, {
+                            channelName: n,
+                            follow: r,
+                            unfollow: i,
+                            following: o
+                        }))
+                    }
+                }]), t
+            }(u["default"].Component);
+        v.propTypes = f, v.defaultProps = h
     }, function(e, t, n) {
         "use strict";
 
@@ -34140,47 +34247,96 @@
             }
         }
 
-        function i(e) {
-            var t = e.channelName,
-                n = e.enable,
-                r = e.disable,
-                i = e.notificationsEnabled,
-                o = e.t,
-                s = (0, c["default"])("pl-pinned-panel", "pl-pinned-panel--embed"),
-                u = (0, c["default"])("pl-button--hollow", "pl-button--white", "mg-t-2");
-            return a["default"].createElement("div", {
-                className: s
-            }, a["default"].createElement("h2", {
-                className: "pl-pinned-panel__title"
-            }, o("Live Broadcast has ended")), a["default"].createElement("p", {
-                className: "pl-pinned-panel__subtext"
-            }, o("Get notified when {{channelName}} goes live next", {
-                channelName: t
-            })), a["default"].createElement(l.NotificationsButton, {
-                className: u,
-                enable: n,
-                disable: r,
-                notificationsEnabled: i
-            }))
+        function i(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function o(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function a(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.PulseFollowPanel = void 0, t.PulseFollowPanelComponent = i;
-        var o = n(385),
-            a = r(o),
-            s = n(589),
-            l = n(632),
-            u = n(594),
-            c = r(u),
-            d = {
-                channelName: o.PropTypes.string.isRequired,
-                enable: o.PropTypes.func.isRequired,
-                disable: o.PropTypes.func.isRequired,
-                notificationsEnabled: o.PropTypes.bool.isRequired,
-                t: o.PropTypes.func.isRequired
-            };
-        i.propTypes = d;
-        t.PulseFollowPanel = (0, s.translate)()(i)
+        }), t.PulseFollowPanel = t.PulseFollowPanelComponent = void 0;
+        var s = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var r = t[n];
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                    }
+                }
+                return function(t, n, r) {
+                    return n && e(t.prototype, n), r && e(t, r), t
+                }
+            }(),
+            l = n(385),
+            u = r(l),
+            c = n(589),
+            d = n(632),
+            p = n(594),
+            f = r(p),
+            h = {
+                channelName: l.PropTypes.string.isRequired,
+                enable: l.PropTypes.func.isRequired,
+                disable: l.PropTypes.func.isRequired,
+                notificationsEnabled: l.PropTypes.bool.isRequired,
+                t: l.PropTypes.func.isRequired,
+                logView: l.PropTypes.func.isRequired
+            },
+            v = {
+                logView: function() {}
+            },
+            _ = t.PulseFollowPanelComponent = function(e) {
+                function t() {
+                    return i(this, t), o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments))
+                }
+                return a(t, e), s(t, [{
+                    key: "componentDidMount",
+                    value: function() {
+                        this.props.logView()
+                    }
+                }, {
+                    key: "render",
+                    value: function() {
+                        var e = this.props,
+                            t = e.channelName,
+                            n = e.enable,
+                            r = e.disable,
+                            i = e.notificationsEnabled,
+                            o = e.t,
+                            a = (0, f["default"])("pl-pinned-panel", "pl-pinned-panel--embed"),
+                            s = (0, f["default"])("pl-button--hollow", "mg-t-2");
+                        return u["default"].createElement("div", {
+                            className: a
+                        }, u["default"].createElement("h2", {
+                            className: "pl-pinned-panel__title"
+                        }, o("Live Broadcast has ended")), u["default"].createElement("p", {
+                            className: "pl-pinned-panel__subtext"
+                        }, o("Get notified when {{channelName}} goes live next", {
+                            channelName: t
+                        })), u["default"].createElement(d.NotificationsButton, {
+                            className: s,
+                            enable: n,
+                            disable: r,
+                            notificationsEnabled: i
+                        }))
+                    }
+                }]), t
+            }(u["default"].Component);
+        _.propTypes = h, _.defaultProps = v;
+        t.PulseFollowPanel = (0, c.translate)()(_)
     }, function(e, t, n) {
         "use strict";
 
@@ -34216,7 +34372,7 @@
         function a(e, t) {
             return function(n, r) {
                 var i = r(),
-                    o = i.analytics;
+                    o = i.analyticsTracker;
                 return (0, h.setFollowNotifications)(e, t, !0).then(function(e) {
                     return u(n, e)
                 }).then(function() {
@@ -34228,7 +34384,7 @@
         function s(e, t) {
             return function(n, r) {
                 var i = r(),
-                    o = i.analytics;
+                    o = i.analyticsTracker;
                 return (0, h.setFollowNotifications)(e, t, !1).then(function(e) {
                     return u(n, e)
                 }).then(function() {
