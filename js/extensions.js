@@ -165,9 +165,9 @@ window.features = window.features || [], window.features.push("extensions"), def
         })];
     e.default = t.default.extend({
         api: (0, l.default)(),
-        allExtensions: [],
-        extensionInstallations: [],
-        extensionPanels: [],
+        allExtensions: null,
+        extensionInstallations: null,
+        extensionPanels: null,
         activeExtensionInstallations: (0, n.default)("extensionInstallations", function() {
             return (this.get("extensionInstallations") || []).filter(function(e) {
                 return e.get("isActive")
@@ -195,7 +195,7 @@ window.features = window.features || [], window.features.push("extensions"), def
         extensionToActivate: null,
         extensionToReplaceBodyText: (0, n.default)("extensionToReplace", function() {
             var e = this.get("extensionToReplace.extension.name"),
-                t = this.get("extensionToReplace.extension.config.slot"),
+                t = this.get("extensionToReplace.config.slot"),
                 n = r.replace("{{extensionName}}", e).replace("{{extensionSlot}}", t);
             return (0, a.htmlSafe)(n)
         }),
@@ -213,7 +213,7 @@ window.features = window.features || [], window.features.push("extensions"), def
             })
         }),
         init: function() {
-            this._super.apply(this, arguments), this.get("allExtensions") || this.set("allExtensions", []), this.get("extensionInstallations") || this.set("extensionInstallations", [])
+            this._super.apply(this, arguments), this.get("allExtensions") || this.set("allExtensions", []), this.get("extensionInstallations") || this.set("extensionInstallations", []), this.get("extensionPanels") || this.set("extensionPanels", [])
         },
         actions: {
             closeExtensionReplaceDialog: function() {
@@ -226,7 +226,7 @@ window.features = window.features || [], window.features.push("extensions"), def
                 var e = this,
                     t = this.get("extensionToActivate"),
                     n = this.get("extensionToReplace"),
-                    l = n.get("extension.config.slot"),
+                    l = n.get("config.slot"),
                     s = this.get("deactivateExtensionInstallation"),
                     a = this.get("activateExtensionInstallation");
                 s(n).then(function() {
@@ -255,7 +255,7 @@ window.features = window.features || [], window.features.push("extensions"), def
                 var n = this;
                 if (t.slot) {
                     var l = this.get("activeExtensionInstallations") || [],
-                        s = l.findBy("extension.config.slot", t.slot);
+                        s = l.findBy("config.slot", t.slot);
                     if (s) return this.set("extensionToActivate", e), void this.set("extensionToReplace", s)
                 }
                 return this.get("activateExtensionInstallation")(e, t).then(function() {
