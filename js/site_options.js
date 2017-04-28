@@ -123,7 +123,7 @@ window.SiteOptions = {
     "fl_details_link_enabled": true,
     "cmrc_game_details_v2_released": true,
     "cmrc_channel_box_released": true,
-    "cmrc_kick_kick_boom_released": true,
+    "cmrc_kick_kick_boom_released": false,
     "is_bk_enabled": true,
     "bits_promo_enabled": true,
     "p_cheer_enabled": true,
