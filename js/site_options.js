@@ -1042,25 +1042,6 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
-        "8d2e5bd8-c305-455f-b7ff-ca6fc2ea8710": {
-            "name": "LANGUAGE_DIRECTORY_ROWCOUNT_V2",
-            "groups": [{
-                "weight": 20,
-                "value": "2"
-            }, {
-                "weight": 20,
-                "value": "3"
-            }, {
-                "weight": 20,
-                "value": "4"
-            }, {
-                "weight": 20,
-                "value": "5"
-            }, {
-                "weight": 20,
-                "value": "6"
-            }]
-        },
         "903fb381-dbeb-466b-9c88-7b4da328fb2d": {
             "name": "android_autoplay_pulse",
             "groups": [{
