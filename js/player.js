@@ -8499,7 +8499,7 @@
         var r = n(247),
             i = n(248),
             o = n(249);
-        t.SPADE_URL = "//spade.twitch.tv/", t.sendEvent = function(e, n, a) {
+        t.SPADE_URL = "//trowel.twitch.tv/", t.sendEvent = function(e, n, a) {
             var s = {
                     event: e,
                     properties: n
@@ -8914,7 +8914,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.27-221942+65b542f8a48c4c880b097fec62e9284cbe768a95",
+                    app_version: "2017.04.27-235031+c94e66f845ca9949677718860144174d1a3f8c3f",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
