@@ -8117,7 +8117,7 @@
             return new v["default"]({
                 defaults: (t = {}, i(t, E, "no"), i(t, S, "off"), i(t, T, "no"), i(t, P, "no"), i(t, C, "no"), i(t, w, "no"), i(t, k, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, N, "no"), i(t, L, "no"), i(t, R, "no"), i(t, D, "1.6.3"), i(t, x, "no"), i(t, j, "no"), i(t, U, "no"), i(t, M, "no"), i(t, B, "no,"), i(t, V, "no"), i(t, F, "keep"), i(t, H, "no"), i(t, G, "control"), t),
                 deviceID: e.deviceID,
-                overrides: (0, d["default"])((n = {}, i(n, S, o("v2")), i(n, T, a(["US"])), i(n, P, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, k, a(["SE"])), i(n, A, a(["DK", "FI", "NL", "NO"])), i(n, O, a(["CA"])), i(n, I, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, L, a(["PL"])), i(n, R, a(["AT", "CH", "ES", "IT", "PT"])), i(n, j, o("yes")), i(n, M, o("vca")), i(n, B, o("yes")), i(n, D, o("1.7.3+spdcy")), n), JSON.parse(u.cookie.get("experiment_overrides", "{}"))),
+                overrides: (0, d["default"])((n = {}, i(n, G, o("treatment")), i(n, S, o("v2")), i(n, T, a(["US"])), i(n, P, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, k, a(["SE"])), i(n, A, a(["DK", "FI", "NL", "NO"])), i(n, O, a(["CA"])), i(n, I, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, L, a(["PL"])), i(n, R, a(["AT", "CH", "ES", "IT", "PT"])), i(n, j, o("yes")), i(n, M, o("vca")), i(n, B, o("yes")), i(n, D, o("1.7.3+spdcy")), n), JSON.parse(u.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
                 login: e.login,
                 provider: new g["default"](g["default"].SERVICE_URL),
@@ -8931,7 +8931,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.28-184720+288df27657df020cbe30ed2c9f032555d143ce8d",
+                    app_version: "2017.04.28-204202+72a0a7f7e114d1bf69a8a2c716c5a669aba67e92",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -16517,8 +16517,8 @@
                 });
                 $(t).addClass("player").addClass("theme--light"), $(t).append(n(638));
                 var j = o.getState().playback.muted;
-                o.dispatch((0, I.initializeCaptionsSettings)(j)), o.dispatch((0, N.initializePlaybackSettings)()), o.dispatch((0, L.initializeSettings)()), G["default"].render(F["default"].createElement(q.I18nextProvider, {
-                    i18n: Y.I18N_INSTANCE
+                o.dispatch((0, I.initializeCaptionsSettings)(j)), o.dispatch((0, N.initializePlaybackSettings)()), o.dispatch((0, L.initializeSettings)()), G["default"].render(F["default"].createElement(Y.I18nextProvider, {
+                    i18n: K.I18N_INSTANCE
                 }, F["default"].createElement(T.StreamInfo, {
                     store: o
                 })), document.getElementById("stream-info")), G["default"].render(F["default"].createElement(P.StreamStatus, {
@@ -16532,24 +16532,31 @@
                     store: o
                 }), document.getElementById("js-player-alert-container")), G["default"].render(F["default"].createElement(k.ExtensionsContainer, {
                     store: o
-                }), document.getElementById("js-player-extension-root")), H = new u.PlayerUIState(t, o), K = new d.PlayerUIInfo(e, t, o, m), W = new p.PlayerUIStats(t, o), z = new f.PlayerUIUpnext(e, t, o), ae = new h.PlayerUIRecommendations(t, o), se = new A.PlayerUIError(t, o), Q = new v.PlayerUILeaveDialog(e, t, r, o, m), X = new y.PlayerUILang(t, o), J = new _.PlayerUISubscribeOverlay(t, o), Z = new g.PlayerUIResume(e, i, o, m), te = new O.AgeRestrictionOverlay(t, e, o), ne = new E.PlayerUIControlsDisplay(e, t, o), re = new c.PlayerUIControls(e, t, o, ne, m), oe = new b.PlayerUISettings(e, t, o, r, ne, m), le = new D.AdOverlay(t, o), ue = new x.CollectionOverlay(t, e, o);
+                }), document.getElementById("js-player-extension-root")), V(o), Q = new u.PlayerUIState(t, o), X = new d.PlayerUIInfo(e, t, o, m), J = new p.PlayerUIStats(t, o), Z = new f.PlayerUIUpnext(e, t, o), ce = new h.PlayerUIRecommendations(t, o), de = new A.PlayerUIError(t, o), ee = new v.PlayerUILeaveDialog(e, t, r, o, m), te = new y.PlayerUILang(t, o), ne = new _.PlayerUISubscribeOverlay(t, o), re = new g.PlayerUIResume(e, i, o, m), oe = new O.AgeRestrictionOverlay(t, e, o), ae = new E.PlayerUIControlsDisplay(e, t, o), se = new c.PlayerUIControls(e, t, o, ae, m), ue = new b.PlayerUISettings(e, t, o, r, ae, m), pe = new D.AdOverlay(t, o), fe = new x.CollectionOverlay(t, e, o);
                 var U = new M.ClipGenerator(t, i, o);
-                ie = new R.PlayerUIClipsEnabler(t, o, l.localStore, U), V(m), $(t).attr("data-initializing", !0), e.addEventListener(B.PLAYER_INIT, function() {
+                le = new R.PlayerUIClipsEnabler(t, o, l.localStore, U), H(m), $(t).attr("data-initializing", !0), e.addEventListener(B.PLAYER_INIT, function() {
                     $(t).attr("data-initializing", !1)
                 })
             }
 
             function V(e) {
+                G["default"].render(F["default"].createElement(q.Provider, {
+                    store: e
+                }, F["default"].createElement(Y.I18nextProvider, {
+                    i18n: K.I18N_INSTANCE
+                }, F["default"].createElement(z.Experiment, {
+                    uuid: j.PLAYER_NOTIFICATION_BUTTON,
+                    renderValue: "treatment"
+                }, F["default"].createElement(W.FollowPanel, null)))), document.getElementById("js-follow-panel"))
+            }
+
+            function H(e) {
                 var n = void 0;
                 n = e.devcaptions ? Promise.resolve("v2") : o.getState().experiments.get(j.CAPTIONS), n.then(function(e) {
-                    "v2" === e && (ee = new m.PlayerUIClosedCaption(o, t)), $(t).attr("data-captions", e)
+                    "v2" === e && (ie = new m.PlayerUIClosedCaption(o, t)), $(t).attr("data-captions", e)
                 })
             }
-            var H = void 0,
-                K = void 0,
-                W = void 0,
-                z = void 0,
-                Q = void 0,
+            var Q = void 0,
                 X = void 0,
                 J = void 0,
                 Z = void 0,
@@ -16562,9 +16569,13 @@
                 ae = void 0,
                 se = void 0,
                 le = void 0,
-                ue = void 0;
+                ue = void 0,
+                ce = void 0,
+                de = void 0,
+                pe = void 0,
+                fe = void 0;
             this.destroy = function() {
-                H.destroy(), K.destroy(), W.destroy(), z.destroy(), ae.destroy(), se.destroy(), Q.destroy(), X.destroy(), J.destroy(), Z.destroy(), ne.destroy(), re.destroy(), te.destroy(), oe.destroy(), ie.destroy(), ee && ee.destroy(), ae.destroy(), le.destroy(), ue && ue.destroy()
+                Q.destroy(), X.destroy(), J.destroy(), Z.destroy(), ce.destroy(), de.destroy(), ee.destroy(), te.destroy(), ne.destroy(), re.destroy(), ae.destroy(), se.destroy(), oe.destroy(), ue.destroy(), le.destroy(), ie && ie.destroy(), ce.destroy(), pe.destroy(), fe && fe.destroy()
             }, U()
         }
         Object.defineProperty(t, "__esModule", {
@@ -16608,9 +16619,11 @@
             F = i(V),
             H = n(412),
             G = i(H),
-            q = (n(549), n(589)),
-            Y = n(611);
-        n(630), n(637)
+            q = n(549),
+            Y = n(589),
+            K = n(611),
+            W = n(630),
+            z = n(637)
     }, function(e, t, n) {
         "use strict";
 
@@ -17508,8 +17521,7 @@
                         n = e.recommendations;
                     0 !== n.videos.length && ($(".js-video-recommendations", this.$root).html(n.videos.map(function(e, n) {
                         var r = t.$template.clone();
-                        0 === n && (t.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")), t.updateAutoplayProgress(100, Math.round(m / 1e3))), t.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")), r.attr("data-index", n), r.find(".js-recommended-stream__thumbnail").attr("src", e.thumbnailURL), r.find(".js-recommended-stream__channel").text(e.channelName),
-                            r.find(".js-recommended-stream__title").text(e.title);
+                        0 === n && (t.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")), t.updateAutoplayProgress(100, Math.round(m / 1e3))), t.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")), r.attr("data-index", n), r.find(".js-recommended-stream__thumbnail").attr("src", e.thumbnailURL), r.find(".js-recommended-stream__channel").text(e.channelName), r.find(".js-recommended-stream__title").text(e.title);
                         var i = t._stateStore.getState().lang.langCode,
                             o = {
                                 year: "numeric",
