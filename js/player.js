@@ -197,43 +197,43 @@
             j = n(284),
             U = n(300),
             B = n(264),
-            V = n(639),
+            V = n(640),
             F = n(171),
-            H = n(656),
-            G = n(657),
-            q = n(685),
+            H = n(657),
+            G = n(658),
+            q = n(686),
             Y = n(233),
             K = n(279),
             W = r(K),
             z = n(278),
-            Q = n(674),
+            Q = n(675),
             X = r(Q),
-            J = n(677),
+            J = n(678),
             Z = r(J),
             ee = n(276),
-            te = n(660),
-            ne = n(672),
+            te = n(661),
+            ne = n(673),
             re = n(173),
-            ie = n(373),
+            ie = n(374),
             oe = n(277),
-            ae = n(665),
+            ae = n(666),
             se = n(170),
             le = r(se),
             ue = n(191),
-            ce = n(607),
+            ce = n(608),
             de = n(274),
             pe = n(210),
-            fe = n(699),
-            he = n(701),
-            ve = n(709),
-            _e = n(710),
-            ge = n(713),
-            ye = n(580),
-            me = n(714),
-            be = n(715),
+            fe = n(700),
+            he = n(702),
+            ve = n(710),
+            _e = n(711),
+            ge = n(714),
+            ye = n(581),
+            me = n(715),
+            be = n(716),
             Ee = n(167),
             Se = n(169);
-        n(286).polyfill(), n.p = S.playerHost + "/", n(716), window.google || $.getScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = o, window.Twitch.Player = o, window.Twitch.Player.PROMPT_LOGIN = Se.PROMPT_LOGIN_MODAL
+        n(286).polyfill(), n.p = S.playerHost + "/", n(717), window.google || $.getScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = o, window.Twitch.Player = o, window.Twitch.Player.PROMPT_LOGIN = Se.PROMPT_LOGIN_MODAL
     }, function(e, t, n) {
         var r = n(2),
             i = n(3),
@@ -8931,7 +8931,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.28-204202+72a0a7f7e114d1bf69a8a2c716c5a669aba67e92",
+                    app_version: "2017.04.28-213203+5fb505686960f1f7b5a61f277681a1c6ecd2f4a3",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -16515,7 +16515,7 @@
                 }, {
                     showInfo: !0
                 });
-                $(t).addClass("player").addClass("theme--light"), $(t).append(n(638));
+                $(t).addClass("player").addClass("theme--light"), $(t).append(n(639));
                 var j = o.getState().playback.muted;
                 o.dispatch((0, I.initializeCaptionsSettings)(j)), o.dispatch((0, N.initializePlaybackSettings)()), o.dispatch((0, L.initializeSettings)()), G["default"].render(F["default"].createElement(Y.I18nextProvider, {
                     i18n: K.I18N_INSTANCE
@@ -16586,44 +16586,44 @@
             l = n(239),
             u = n(358),
             c = n(360),
-            d = n(363),
-            p = n(364),
-            f = n(365),
-            h = n(366),
-            v = n(368),
-            _ = n(370),
-            g = n(371),
-            y = n(374),
-            m = n(375),
-            b = n(376),
-            E = n(380),
-            S = n(384),
-            T = n(586),
-            P = n(595),
-            C = n(596),
-            w = n(597),
-            k = n(598),
-            A = (n(601), n(603)),
-            O = n(604),
+            d = n(364),
+            p = n(365),
+            f = n(366),
+            h = n(367),
+            v = n(369),
+            _ = n(371),
+            g = n(372),
+            y = n(375),
+            m = n(376),
+            b = n(377),
+            E = n(381),
+            S = n(385),
+            T = n(587),
+            P = n(596),
+            C = n(597),
+            w = n(598),
+            k = n(599),
+            A = (n(602), n(604)),
+            O = n(605),
             I = n(306),
             N = n(277),
             L = n(362),
-            R = n(605),
-            M = n(607),
-            D = n(608),
-            x = n(609),
+            R = n(606),
+            M = n(608),
+            D = n(609),
+            x = n(610),
             j = n(241),
             U = n(169),
             B = r(U),
-            V = n(385),
+            V = n(386),
             F = i(V),
-            H = n(412),
+            H = n(413),
             G = i(H),
-            q = n(549),
-            Y = n(589),
-            K = n(611),
-            W = n(630),
-            z = n(637)
+            q = n(550),
+            Y = n(590),
+            K = n(612),
+            W = n(631),
+            z = n(638)
     }, function(e, t, n) {
         "use strict";
 
@@ -16760,29 +16760,29 @@
                 var e = i;
                 (0, c.isTwitchEmbed)() || (e = (0, s["default"])(e, {
                     branding: !0
-                })), l(), d(e), a(), r.showControls(h.initialControlsDelay), $(t).attr("data-branding", e.branding), $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showinfo", e.showInfo), $(t).attr("data-issettingsopen", !1), Y(), j(), z.push(F()), z.push(B()), z.push(V())
+                })), l(), d(e), a(), r.showControls(h.initialControlsDelay), $(t).attr("data-branding", e.branding), $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showinfo", e.showInfo), $(t).attr("data-issettingsopen", !1), q(), x(), W.push(V()), W.push(U()), W.push(B())
             }
 
             function a() {
-                T(n.getState().screenMode)
+                O(n.getState().screenMode)
             }
 
             function l() {
-                e.addEventListener(P.CASTING_CHANGE, Y), e.addEventListener(w.SEEKING, q)
+                e.addEventListener(b.CASTING_CHANGE, q), e.addEventListener(S.SEEKING, G)
             }
 
             function d(r) {
                 r.player !== p.PLAYER_FRONTPAGE && $(t).on("dblclick", ".js-control-fullscreen-overlay", function(e) {
-                    e.preventDefault(), L()
-                }), $(t).on("click", ".js-control-playpause-button", C), $(t).on("click", ".js-control-play-button", C), $(t).on("click", ".js-control-fullscreen", L), $(t).on("click", ".js-control-theatre", H), $(t).on("click", ".js-chromecast-button", function() {
+                    e.preventDefault(), N()
+                }), $(t).on("click", ".js-control-playpause-button", I), $(t).on("click", ".js-control-play-button", I), $(t).on("click", ".js-control-fullscreen", N), $(t).on("click", ".js-control-theatre", F), $(t).on("click", ".js-chromecast-button", function() {
                     var t = e.getCasting();
                     "available" === t ? e.startCast() : e.stopCast()
                 }), $(t).on("click", ".js-player-alert__close", function() {
                     $(this).closest(".js-player-alert").attr("data-active", !1)
                 }), $(t).on("click", ".js-popout-player", function(e) {
-                    e.preventDefault(), K()
+                    e.preventDefault(), Y()
                 }), $(t).on("click", ".js-player-product-close", function(e) {
-                    e.preventDefault(), W()
+                    e.preventDefault(), K()
                 });
                 var i = n.getState(),
                     o = i.env,
@@ -16793,59 +16793,59 @@
             function f(e, t) {
                 var n = e.playerType === p.PLAYER_SITE,
                     r = e.playerType === p.PLAYER_CURSE;
-                t.get(I.HTML5_TOGGLE_REMOVAL).then(function(e) {
-                    "keep" === e ? k.BackendPlayerCore.canPlay() && !r && v() : "remove" === e && O.localStore.remove("backend")
-                }), n && t.get(I.DETERMINATION).then(function(e) {
-                    "yes" === e && g()
+                t.get(w.HTML5_TOGGLE_REMOVAL).then(function(e) {
+                    "keep" === e ? T.BackendPlayerCore.canPlay() && !r && m() : "remove" === e && C.localStore.remove("backend")
+                }), n && t.get(w.DETERMINATION).then(function(e) {
+                    "yes" === e && E()
                 })
             }
 
-            function v() {
-                $(".js-menu-html5", t).attr("data-enabled", !0), $(t).on("click", ".js-html5-slider", R), $(".js-menu-html5-optout", t).attr("data-enabled", !1), $(t).on("click", ".js-optout-html5-submit", D), $(t).on("click", ".js-optout-html5-cancel", x), $(t).on("change", ".js-html5-optout-reason-form", function() {
+            function m() {
+                $(".js-menu-html5", t).attr("data-enabled", !0), $(t).on("click", ".js-html5-slider", L), $(".js-menu-html5-optout", t).attr("data-enabled", !1), $(t).on("click", ".js-optout-html5-submit", M), $(t).on("click", ".js-optout-html5-cancel", D), $(t).on("change", ".js-html5-optout-reason-form", function() {
                     var e = "other" === $(".js-html5-optout-reason-form :selected", t).val();
                     $(".js-html5-optout-othertext", t).attr("data-enabled", e)
                 })
             }
 
-            function g() {
-                var e = O.localStore.get("persistenceEnabled", !0);
-                $(".js-miniplayer-slider", t).attr("data-value", e ? "on" : "off"), $(".js-menu-miniplayer", t).attr("data-enabled", !0), $(t).on("click", ".js-miniplayer-slider", M)
+            function E() {
+                var e = C.localStore.get("persistenceEnabled", !0);
+                $(".js-miniplayer-slider", t).attr("data-value", e ? "on" : "off"), $(".js-menu-miniplayer", t).attr("data-enabled", !0), $(t).on("click", ".js-miniplayer-slider", R)
             }
 
-            function T(e) {
+            function O(e) {
                 var n = e.isFullScreen,
                     r = e.canFullScreen;
                 $(t).attr("data-isfullscreen", n), $(t).attr("data-canfullscreen", r)
             }
 
-            function C() {
+            function I() {
                 var e = n.getState(),
                     t = e.playback,
                     r = e.analyticsTracker;
-                t.paused ? n.dispatch((0, S.play)()) : n.dispatch((0, S.pause)()), r.trackEvent("player_click_playpause")
+                t.paused ? n.dispatch((0, y.play)()) : n.dispatch((0, y.pause)()), r.trackEvent("player_click_playpause")
+            }
+
+            function N() {
+                n.getState().analyticsTracker.trackEvent("player_click_fullscreen"), n.dispatch((0, k.toggleFullScreen)())
             }
 
             function L() {
-                n.getState().analyticsTracker.trackEvent("player_click_fullscreen"), n.dispatch((0, N.toggleFullScreen)())
-            }
-
-            function R() {
                 var r = e.getBackend();
-                if (r === A.BACKEND_FLASH) {
+                if (r === P.BACKEND_FLASH) {
                     var i = e.getSupportedBackends();
                     r = i.filter(function(e) {
-                        return e === k.BACKEND_PLAYER_CORE
-                    })[0], n.getState().analyticsTracker.trackEvent("html5_opt_in"), e.setBackend(r), j()
+                        return e === T.BACKEND_PLAYER_CORE
+                    })[0], n.getState().analyticsTracker.trackEvent("html5_opt_in"), e.setBackend(r), x()
                 } else $(".js-menu-html5-optout", t).attr("data-enabled", !0), $(".js-main-menu", t).attr("data-disabled", !0)
             }
 
-            function M() {
+            function R() {
                 var e = n.getState(),
                     t = e.settings;
-                t.persistenceEnabled ? n.dispatch((0, E.disablePlayerPersistence)()) : n.dispatch((0, E.enablePlayerPersistence)())
+                t.persistenceEnabled ? n.dispatch((0, g.disablePlayerPersistence)()) : n.dispatch((0, g.enablePlayerPersistence)())
             }
 
-            function D() {
+            function M() {
                 var r = $(".js-html5-optout-reason-form :selected", t);
                 if (r.val()) {
                     var i = {
@@ -16856,100 +16856,82 @@
                         var o = $(".js-html5-optout-othertext", t);
                         i.reason = o.val().slice(0, 256)
                     }
-                    n.getState().analyticsTracker.trackEvent("html5_opt_out", i), e.setBackend(A.BACKEND_FLASH), j()
+                    n.getState().analyticsTracker.trackEvent("html5_opt_out", i), e.setBackend(P.BACKEND_FLASH), x()
                 }
             }
 
-            function x() {
+            function D() {
                 $(".js-menu-html5-optout", t).attr("data-enabled", !1), $(".js-main-menu", t).attr("data-disabled", !1)
             }
 
-            function j() {
+            function x() {
                 var n = e.getBackend(),
-                    r = n === A.BACKEND_FLASH ? "off" : "on";
+                    r = n === P.BACKEND_FLASH ? "off" : "on";
                 $(".js-html5-slider", t).attr("data-value", r)
             }
 
-            function U() {
+            function j() {
                 var e = n.getState(),
                     r = e.settings,
                     i = r.persistenceEnabled;
                 $(".js-miniplayer-slider", t).attr("data-value", i ? "on" : "off")
             }
 
-            function B() {
-                return (0, m.subscribe)(n, ["screenMode.isFullScreen", "screenMode.canFullScreen"], function(e) {
+            function U() {
+                return (0, v.subscribe)(n, ["screenMode.isFullScreen", "screenMode.canFullScreen"], function(e) {
                     var t = e.screenMode;
-                    T(t)
+                    O(t)
+                })
+            }
+
+            function B() {
+                return (0, v.subscribe)(n, ["screenMode.isTheatreMode", "screenMode.canTheatreMode"], function(e) {
+                    var t = e.screenMode;
+                    H(t)
                 })
             }
 
             function V() {
-                return (0, m.subscribe)(n, ["screenMode.isTheatreMode", "screenMode.canTheatreMode"], function(e) {
-                    var t = e.screenMode;
-                    G(t)
+                return (0, v.subscribe)(n, ["settings.persistenceEnabled"], function() {
+                    j()
                 })
             }
 
             function F() {
-                return (0, m.subscribe)(n, ["settings.persistenceEnabled"], function() {
-                    U()
-                })
+                n.dispatch((0, k.toggleTheatreMode)()), n.getState().analyticsTracker.trackEvent("player_click_theater")
             }
 
-            function H() {
-                n.dispatch((0, N.toggleTheatreMode)()), n.getState().analyticsTracker.trackEvent("player_click_theater")
-            }
-
-            function G(e) {
+            function H(e) {
                 var n = e.canTheatreMode,
                     i = e.isTheatreMode;
                 $(t).attr("data-showtheatre", n), $(t).attr("data-theatre", i), r.setHovering(!1), r.showControls(h.hoverControlsDelay)
             }
 
-            function q() {
+            function G() {
                 r.showControls(h.hoverControlsDelay)
             }
 
-            function Y() {
+            function q() {
                 if (n.getState().env.playerType !== p.PLAYER_HIGHLIGHTER) {
                     var i = e.getCasting();
                     if ("error" === i && (i = "available"), $(t).attr("data-casting", i), "connected" === i) {
                         var o = e.getCastDevice();
-                        o = (0, u["default"])(o) ? o : "Chromecast", n.dispatch((0, b.setDeviceName)(o))
+                        o = (0, u["default"])(o) ? o : "Chromecast", n.dispatch((0, _.setDeviceName)(o))
                     }
                     "connected" === i || "connecting" === i ? ($(t).attr("data-chromecast", "true"), r.showControls()) : ($(t).attr("data-chromecast", "false"), r.showControls(h.hoverControlsDelay))
                 }
             }
 
-            function K() {
-                var t = {};
-                t.volume = n.getState().playback.volume;
-                var r = e.getChannel(),
-                    i = e.getVideo();
-                if (r) t.channel = r;
-                else {
-                    t.video = i;
-                    var o = n.getState(),
-                        a = o.collection;
-                    a.id && (t.collection = a.id);
-                    var s = e.getCurrentTime();
-                    t.time = y.toURLString(s)
-                }
-                n.dispatch((0, S.pause)());
-                var l = h.popoutSize.width,
-                    u = h.popoutSize.height,
-                    c = h.playerHost + "/?" + _.toString(t),
-                    d = "width=" + l + ",height=" + u;
-                d += ",toolbar=no,menubar=no,scrollbars=no,location=no,status=no", window.open(c, "_blank", d)
+            function Y() {
+                n.dispatch((0, y.pause)()), (0, A.popoutPlayer)(n.getState())
             }
 
-            function W() {
+            function K() {
                 $(".js-player-product-overlay", t).attr("data-active", !1)
             }
-            var z = [];
+            var W = [];
             this.destroy = function() {
-                $(t).off("click"), $(t).off("dblclick"), z.forEach(function(e) {
+                $(t).off("click"), $(t).off("dblclick"), W.forEach(function(e) {
                     return e()
                 })
             }, o()
@@ -16966,23 +16948,20 @@
             p = r(d),
             f = n(159),
             h = r(f),
-            v = n(77),
-            _ = r(v),
-            g = n(262),
-            y = r(g),
-            m = n(174),
-            b = n(361),
-            E = n(362),
-            S = n(318),
-            T = n(169),
-            P = r(T),
-            C = n(170),
-            w = r(C),
-            k = n(284),
-            A = n(264),
-            O = n(239),
-            I = n(241),
-            N = n(173)
+            v = n(174),
+            _ = n(361),
+            g = n(362),
+            y = n(318),
+            m = n(169),
+            b = r(m),
+            E = n(170),
+            S = r(E),
+            T = n(284),
+            P = n(264),
+            C = n(239),
+            w = n(241),
+            k = n(173),
+            A = n(363)
     }, function(e, t) {
         "use strict";
 
@@ -17040,6 +17019,42 @@
             s = n(76),
             l = t.ACTION_INITIALIZE_SETTINGS = "initialize ui settings",
             u = t.ACTION_SET_PERSISTENCE = "set persistence"
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            if (e && e.__esModule) return e;
+            var t = {};
+            if (null != e)
+                for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+            return t["default"] = e, t
+        }
+
+        function i(e) {
+            var t = e.collection,
+                n = e.playback,
+                r = e.stream,
+                i = e.window,
+                l = {
+                    volume: n.volume
+                };
+            r.contentType === a.CONTENT_MODE_VOD ? (l.video = r.videoId, l.collection = t ? t.id : void 0, l.time = d.toURLString(n.currentTime)) : r.contentType === o.CONTENT_MODE_LIVE && (l.channel = r.channel);
+            var c = s.playerHost + "/?" + u.toString(l),
+                p = s.popoutSize.height,
+                f = s.popoutSize.width,
+                h = "width=" + f + ",height=" + p + ",toolbar=no,menubar=no,scrollbars=no,location=no,status=no";
+            i.open(c, "_blank", h)
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.popoutPlayer = i;
+        var o = n(158),
+            a = n(210),
+            s = n(159),
+            l = n(77),
+            u = r(l),
+            c = n(262),
+            d = r(c)
     }, function(e, t, n) {
         "use strict";
 
@@ -17464,7 +17479,7 @@
                 if (void 0 !== o) return o.call(n)
             },
             u = n(359),
-            c = n(367),
+            c = n(368),
             d = n(343),
             p = n(210),
             f = n(277),
@@ -17512,7 +17527,8 @@
             function t(e, n) {
                 i(this, t);
                 var r = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return r.$root = e, r._stateStore = n, r.subscribe(r._stateStore, ["recommendations.videos"], r.onRecommendations.bind(r)), r.subscribe(r._stateStore, ["recommendations.numVideosVisible"], r.onVODVisibility.bind(r)), r.subscribe(r._stateStore, ["screen"], r.onScreenChange.bind(r)), r.$autoplayTemplate = $(".js-autoplay-timer", r.$root), r.$autoplayTemplate.detach(), r.$timeInfoTemplate = $(".js-recommendation-time-info", r.$root), r.$timeInfoTemplate.detach(), r.$template = $(".js-recommended-stream", r.$root), $(".js-video-recommendations", r.$root).empty(), $(".js-recommendations-overlay .js-player-tower", r.$root).on("click", ".js-recommended-stream", r.onSelect.bind(r)), $(".js-recommendations-overlay .js-player-tower", r.$root).on("click", ".js-featured-recommendations__more-videos", r.transitionToMoreVideos.bind(r)), r
+                return r.$root = e, r._stateStore = n, r.subscribe(r._stateStore, ["recommendations.videos"], r.onRecommendations.bind(r)), r.subscribe(r._stateStore, ["recommendations.numVideosVisible"], r.onVODVisibility.bind(r)), r.subscribe(r._stateStore, ["screen"], r.onScreenChange.bind(r)), r.$autoplayTemplate = $(".js-autoplay-timer", r.$root), r.$autoplayTemplate.detach(), r.$timeInfoTemplate = $(".js-recommendation-time-info", r.$root), r.$timeInfoTemplate.detach(), r.$template = $(".js-recommended-stream", r.$root), $(".js-video-recommendations", r.$root).empty(), $(".js-recommendations-overlay .js-player-tower", r.$root).on("click", ".js-recommended-stream", r.onSelect.bind(r)),
+                    $(".js-recommendations-overlay .js-player-tower", r.$root).on("click", ".js-featured-recommendations__more-videos", r.transitionToMoreVideos.bind(r)), r
             }
             return a(t, e), s(t, [{
                 key: "onRecommendations",
@@ -17960,7 +17976,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.PlayerUILeaveDialog = o;
-        var a = n(369),
+        var a = n(370),
             s = i(a),
             l = n(159),
             u = r(l),
@@ -18198,13 +18214,13 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            c = n(372),
+            c = n(373),
             d = i(c),
             p = n(159),
             f = n(177),
             h = n(170),
             v = r(h),
-            _ = n(373),
+            _ = n(374),
             g = n(191),
             y = n(158),
             m = n(210),
@@ -18862,12 +18878,12 @@
             h = i(f),
             v = n(159),
             _ = r(v),
-            g = n(377),
+            g = n(378),
             y = i(g),
             m = n(262),
             b = r(m),
             E = n(276),
-            S = n(378),
+            S = n(379),
             T = n(306),
             P = n(310),
             C = n(359),
@@ -19608,7 +19624,7 @@
         }), t.NOT_LOGGED_IN = t.LOGGED_IN = t.UNKNOWN = void 0, t.user = i;
         var o = n(78),
             a = r(o),
-            s = n(379),
+            s = n(380),
             l = t.UNKNOWN = "unknown",
             u = t.LOGGED_IN = "logged in",
             c = t.NOT_LOGGED_IN = "not logged in",
@@ -19667,9 +19683,9 @@
             }(),
             a = n(159),
             s = r(a),
-            l = n(381),
-            u = n(382),
-            c = n(383),
+            l = n(382),
+            u = n(383),
+            c = n(384),
             d = n(208),
             p = n(174);
         t.PlayerUIControlsDisplay = function() {
@@ -19863,22 +19879,22 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(385),
+            l = n(386),
             u = r(l),
             c = n(251),
             d = r(c),
-            p = n(412),
+            p = n(413),
             f = r(p),
-            h = n(549),
-            v = n(568),
-            _ = n(570),
-            g = n(571),
-            y = n(572),
+            h = n(550),
+            v = n(569),
+            _ = n(571),
+            g = n(572),
+            y = n(573),
             m = n(210),
             b = n(277),
-            E = n(576),
-            S = n(578),
-            T = n(579),
+            E = n(577),
+            S = n(579),
+            T = n(580),
             P = {
                 bufferLength: l.PropTypes.number,
                 currentTime: l.PropTypes.number,
@@ -20139,20 +20155,20 @@
         t.Seekbar = (0, h.connect)(C, w)(A)
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(386)
+        e.exports = n(387)
     }, function(e, t, n) {
         "use strict";
-        var r = n(387),
-            i = n(388),
-            o = n(401),
-            a = n(404),
-            s = n(405),
-            l = n(407),
-            u = n(392),
-            c = n(408),
-            d = n(410),
-            p = n(411),
-            f = (n(394), u.createElement),
+        var r = n(388),
+            i = n(389),
+            o = n(402),
+            a = n(405),
+            s = n(406),
+            l = n(408),
+            u = n(393),
+            c = n(409),
+            d = n(411),
+            p = n(412),
+            f = (n(395), u.createElement),
             h = u.createFactory,
             v = u.cloneElement,
             _ = r,
@@ -20280,10 +20296,10 @@
             var t = [];
             return u(e, t, null, _.thatReturnsArgument), t
         }
-        var h = n(389),
-            v = n(392),
-            _ = n(395),
-            g = n(398),
+        var h = n(390),
+            v = n(393),
+            _ = n(396),
+            g = n(399),
             y = h.twoArgumentPooler,
             m = h.fourArgumentPooler,
             b = /\/+/g;
@@ -20302,8 +20318,8 @@
         e.exports = E
     }, function(e, t, n) {
         "use strict";
-        var r = n(390),
-            i = (n(391), function(e) {
+        var r = n(391),
+            i = (n(392), function(e) {
                 var t = this;
                 if (t.instancePool.length) {
                     var n = t.instancePool.pop();
@@ -20392,10 +20408,10 @@
         function i(e) {
             return void 0 !== e.key
         }
-        var o = n(387),
-            a = n(393),
-            s = (n(394), n(396), Object.prototype.hasOwnProperty),
-            l = n(397),
+        var o = n(388),
+            a = n(394),
+            s = (n(395), n(397), Object.prototype.hasOwnProperty),
+            l = n(398),
             u = {
                 key: !0,
                 ref: !0,
@@ -20471,7 +20487,7 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(395),
+        var r = n(396),
             i = r;
         e.exports = i
     }, function(e, t) {
@@ -20533,11 +20549,11 @@
         function o(e, t, n) {
             return null == e ? 0 : i(e, "", t, n)
         }
-        var a = n(390),
-            s = (n(393), n(397)),
-            l = n(399),
-            u = (n(391), n(400)),
-            c = (n(394), "."),
+        var a = n(391),
+            s = (n(394), n(398)),
+            l = n(400),
+            u = (n(392), n(401)),
+            c = (n(395), "."),
             d = ":";
         e.exports = o
     }, function(e, t) {
@@ -20587,10 +20603,10 @@
         function r(e, t, n) {
             this.props = e, this.context = t, this.refs = a, this.updater = n || o
         }
-        var i = n(390),
-            o = n(402),
-            a = (n(396), n(403));
-        n(391), n(394);
+        var i = n(391),
+            o = n(403),
+            a = (n(397), n(404));
+        n(392), n(395);
         r.prototype.isReactComponent = {}, r.prototype.setState = function(e, t) {
             "object" != typeof e && "function" != typeof e && null != e ? i("85") : void 0, this.updater.enqueueSetState(this, e), t && this.updater.enqueueCallback(this, t, "setState")
         }, r.prototype.forceUpdate = function(e) {
@@ -20601,7 +20617,7 @@
         "use strict";
 
         function r(e, t) {}
-        var i = (n(394), {
+        var i = (n(395), {
             isMounted: function(e) {
                 return !1
             },
@@ -20629,10 +20645,10 @@
         }
 
         function i() {}
-        var o = n(387),
-            a = n(401),
-            s = n(402),
-            l = n(403);
+        var o = n(388),
+            a = n(402),
+            s = n(403),
+            l = n(404);
         i.prototype = a.prototype, r.prototype = new i, r.prototype.constructor = r, o(r.prototype, a.prototype), r.prototype.isPureReactComponent = !0, e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -20719,13 +20735,13 @@
                 e[r] = c(e, i)
             }
         }
-        var p = n(390),
-            f = n(387),
-            h = n(401),
-            v = n(392),
-            _ = (n(406), n(402)),
-            g = n(403),
-            y = (n(391), n(394), "mixins"),
+        var p = n(391),
+            f = n(388),
+            h = n(402),
+            v = n(393),
+            _ = (n(407), n(403)),
+            g = n(404),
+            y = (n(392), n(395), "mixins"),
             m = [],
             b = {
                 mixins: "DEFINE_MANY",
@@ -20805,7 +20821,7 @@
         e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(392),
+        var r = n(393),
             i = r.createFactory,
             o = {
                 a: i("a"),
@@ -21150,12 +21166,12 @@
         function b(e) {
             return e.constructor && e.constructor.name ? e.constructor.name : w
         }
-        var E = n(392),
-            S = n(406),
-            T = n(409),
-            P = n(395),
-            C = n(399),
-            w = (n(394), "<<anonymous>>"),
+        var E = n(393),
+            S = n(407),
+            T = n(410),
+            P = n(396),
+            C = n(400),
+            w = (n(395), "<<anonymous>>"),
             k = {
                 array: a("array"),
                 bool: a("boolean"),
@@ -21188,25 +21204,25 @@
         function r(e) {
             return o.isValidElement(e) ? void 0 : i("143"), e
         }
-        var i = n(390),
-            o = n(392);
-        n(391);
+        var i = n(391),
+            o = n(393);
+        n(392);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(413)
+        e.exports = n(414)
     }, function(e, t, n) {
         "use strict";
-        var r = n(414),
-            i = n(418),
-            o = n(540),
-            a = n(439),
-            s = n(436),
-            l = n(545),
-            u = n(546),
-            c = n(547),
-            d = n(548);
-        n(394);
+        var r = n(415),
+            i = n(419),
+            o = n(541),
+            a = n(440),
+            s = n(437),
+            l = n(546),
+            u = n(547),
+            c = n(548),
+            d = n(549);
+        n(395);
         i.inject();
         var p = {
             findDOMNode: u,
@@ -21287,10 +21303,10 @@
             for (; t.length; e = t.pop()) a(e, e._hostNode);
             return e._hostNode
         }
-        var c = n(415),
-            d = n(416),
-            p = n(417),
-            f = (n(391), d.ID_ATTRIBUTE_NAME),
+        var c = n(416),
+            d = n(417),
+            p = n(418),
+            f = (n(392), d.ID_ATTRIBUTE_NAME),
             h = p,
             v = "__reactInternalInstance$" + Math.random().toString(36).slice(2),
             _ = {
@@ -21318,8 +21334,8 @@
         function r(e, t) {
             return (e & t) === t
         }
-        var i = n(415),
-            o = (n(391), {
+        var i = n(416),
+            o = (n(392), {
                 MUST_USE_PROPERTY: 1,
                 HAS_BOOLEAN_VALUE: 4,
                 HAS_NUMERIC_VALUE: 8,
@@ -21395,25 +21411,25 @@
                 return new f(e)
             }), y.Updates.injectReconcileTransaction(m), y.Updates.injectBatchingStrategy(_), y.Component.injectEnvironment(c))
         }
-        var i = n(419),
-            o = n(420),
-            a = n(435),
-            s = n(447),
-            l = n(448),
-            u = n(453),
-            c = n(454),
-            d = n(467),
-            p = n(414),
-            f = n(511),
-            h = n(512),
-            v = n(513),
-            _ = n(514),
-            g = n(515),
-            y = n(518),
-            m = n(519),
-            b = n(527),
-            E = n(528),
-            S = n(529),
+        var i = n(420),
+            o = n(421),
+            a = n(436),
+            s = n(448),
+            l = n(449),
+            u = n(454),
+            c = n(455),
+            d = n(468),
+            p = n(415),
+            f = n(512),
+            h = n(513),
+            v = n(514),
+            _ = n(515),
+            g = n(516),
+            y = n(519),
+            m = n(520),
+            b = n(528),
+            E = n(529),
+            S = n(530),
             T = !1;
         e.exports = {
             inject: r
@@ -21576,11 +21592,11 @@
             var o = g.getPooled(w.beforeInput, t, n, r);
             return o.data = i, f.accumulateTwoPhaseDispatches(o), o
         }
-        var f = n(421),
-            h = n(428),
-            v = n(429),
-            _ = n(432),
-            g = n(434),
+        var f = n(422),
+            h = n(429),
+            v = n(430),
+            _ = n(433),
+            g = n(435),
             y = [9, 13, 27, 32],
             m = 229,
             b = h.canUseDOM && "CompositionEvent" in window,
@@ -21681,11 +21697,11 @@
         function p(e) {
             _(e, l)
         }
-        var f = n(422),
-            h = n(424),
-            v = n(426),
-            _ = n(427),
-            g = (n(394), f.getListener),
+        var f = n(423),
+            h = n(425),
+            v = n(427),
+            _ = n(428),
+            g = (n(395), f.getListener),
             y = {
                 accumulateTwoPhaseDispatches: u,
                 accumulateTwoPhaseDispatchesSkipTarget: c,
@@ -21717,13 +21733,13 @@
                     return !1
             }
         }
-        var o = n(415),
-            a = n(423),
-            s = n(424),
-            l = n(425),
-            u = n(426),
-            c = n(427),
-            d = (n(391), {}),
+        var o = n(416),
+            a = n(424),
+            s = n(425),
+            l = n(426),
+            u = n(427),
+            c = n(428),
+            d = (n(392), {}),
             p = null,
             f = function(e, t) {
                 e && (s.executeDispatchesInOrder(e, t), e.isPersistent() || e.constructor.release(e))
@@ -21831,8 +21847,8 @@
         function o(e, t, n) {
             u.registrationNameModules[e] ? a("100", e) : void 0, u.registrationNameModules[e] = t, u.registrationNameDependencies[e] = t.eventTypes[n].dependencies
         }
-        var a = n(415),
-            s = (n(391), null),
+        var a = n(416),
+            s = (n(392), null),
             l = {},
             u = {
                 plugins: [],
@@ -21931,9 +21947,9 @@
         function d(e) {
             return !!e._dispatchListeners
         }
-        var p, f, h = n(415),
-            v = n(425),
-            _ = (n(391), n(394), {
+        var p, f, h = n(416),
+            v = n(426),
+            _ = (n(392), n(395), {
                 injectComponentTree: function(e) {
                     p = e
                 },
@@ -22001,8 +22017,8 @@
         function r(e, t) {
             return null == t ? i("30") : void 0, null == e ? t : Array.isArray(e) ? Array.isArray(t) ? (e.push.apply(e, t), e) : (e.push(t), e) : Array.isArray(t) ? [e].concat(t) : [e, t]
         }
-        var i = n(415);
-        n(391);
+        var i = n(416);
+        n(392);
         e.exports = r
     }, function(e, t) {
         "use strict";
@@ -22028,9 +22044,9 @@
         function r(e) {
             this._root = e, this._startText = this.getText(), this._fallbackText = null
         }
-        var i = n(387),
-            o = n(430),
-            a = n(431);
+        var i = n(388),
+            o = n(431),
+            a = n(432);
         i(r.prototype, {
             destructor: function() {
                 this._root = null, this._startText = null, this._fallbackText = null
@@ -22053,8 +22069,8 @@
         }), o.addPoolingTo(r), e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(415),
-            i = (n(391), function(e) {
+        var r = n(416),
+            i = (n(392), function(e) {
                 var t = this;
                 if (t.instancePool.length) {
                     var n = t.instancePool.pop();
@@ -22119,7 +22135,7 @@
         function r() {
             return !o && i.canUseDOM && (o = "textContent" in document.documentElement ? "textContent" : "innerText"), o
         }
-        var i = n(428),
+        var i = n(429),
             o = null;
         e.exports = r
     }, function(e, t, n) {
@@ -22128,7 +22144,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(433),
+        var i = n(434),
             o = {
                 data: null
             };
@@ -22147,10 +22163,10 @@
             var l = null != n.defaultPrevented ? n.defaultPrevented : n.returnValue === !1;
             return l ? this.isDefaultPrevented = a.thatReturnsTrue : this.isDefaultPrevented = a.thatReturnsFalse, this.isPropagationStopped = a.thatReturnsFalse, this
         }
-        var i = n(387),
-            o = n(430),
-            a = n(395),
-            s = (n(394), "function" == typeof Proxy, ["dispatchConfig", "_targetInst", "nativeEvent", "isDefaultPrevented", "isPropagationStopped", "_dispatchListeners", "_dispatchInstances"]),
+        var i = n(388),
+            o = n(431),
+            a = n(396),
+            s = (n(395), "function" == typeof Proxy, ["dispatchConfig", "_targetInst", "nativeEvent", "isDefaultPrevented", "isPropagationStopped", "_dispatchListeners", "_dispatchInstances"]),
             l = {
                 type: null,
                 target: null,
@@ -22196,7 +22212,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(433),
+        var i = n(434),
             o = {
                 data: null
             };
@@ -22268,15 +22284,15 @@
         function g(e, t) {
             if ("topClick" === e) return t
         }
-        var y = n(422),
-            m = n(421),
-            b = n(428),
-            E = n(414),
-            S = n(436),
-            T = n(433),
-            P = n(444),
-            C = n(445),
-            w = n(446),
+        var y = n(423),
+            m = n(422),
+            b = n(429),
+            E = n(415),
+            S = n(437),
+            T = n(434),
+            P = n(445),
+            C = n(446),
+            w = n(447),
             k = {
                 change: {
                     phasedRegistrationNames: {
@@ -22361,14 +22377,14 @@
         function u(e, t) {
             E.isBatchingUpdates ? void 0 : c("125"), m.enqueue(e, t), b = !0
         }
-        var c = n(415),
-            d = n(387),
-            p = n(437),
-            f = n(430),
-            h = n(438),
-            v = n(439),
-            _ = n(443),
-            g = (n(391), []),
+        var c = n(416),
+            d = n(388),
+            p = n(438),
+            f = n(431),
+            h = n(439),
+            v = n(440),
+            _ = n(444),
+            g = (n(392), []),
             y = 0,
             m = p.getPooled(),
             b = !1,
@@ -22437,9 +22453,9 @@
         function r(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
-        var i = n(415),
-            o = n(430),
-            a = (n(391), function() {
+        var i = n(416),
+            o = n(431),
+            a = (n(392), function() {
                 function e(t) {
                     r(this, e), this._callbacks = null, this._contexts = null, this._arg = t
                 }
@@ -22477,8 +22493,8 @@
         function r() {
             i.attachRefs(this, this._currentElement)
         }
-        var i = n(440),
-            o = (n(442), n(394), {
+        var i = n(441),
+            o = (n(443), n(395), {
                 mountComponent: function(e, t, n, i, o, a) {
                     var s = e.mountComponent(t, n, i, o, a);
                     return e._currentElement && null != e._currentElement.ref && t.getReactMountReady().enqueue(r, e), s
@@ -22511,7 +22527,7 @@
         function i(e, t, n) {
             "function" == typeof e ? e(null) : o.removeComponentAsRefFrom(t, e, n)
         }
-        var o = n(441),
+        var o = n(442),
             a = {};
         a.attachRefs = function(e, t) {
             if (null !== t && "object" == typeof t) {
@@ -22537,8 +22553,8 @@
         function r(e) {
             return !(!e || "function" != typeof e.attachRef || "function" != typeof e.detachRef)
         }
-        var i = n(415),
-            o = (n(391), {
+        var i = n(416),
+            o = (n(392), {
                 addComponentAsRefTo: function(e, t, n) {
                     r(n) ? void 0 : i("119"), n.attachRef(t, e)
                 },
@@ -22557,8 +22573,8 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(415),
-            i = (n(391), {}),
+        var r = n(416),
+            i = (n(392), {}),
             o = {
                 reinitializeTransaction: function() {
                     this.transactionWrappers = this.getTransactionWrappers(), this.wrapperInitData ? this.wrapperInitData.length = 0 : this.wrapperInitData = [], this._isInTransaction = !1
@@ -22647,7 +22663,7 @@
             }
             return !r && i && "wheel" === e && (r = document.implementation.hasFeature("Events.wheel", "3.0")), r
         }
-        var i, o = n(428);
+        var i, o = n(429);
         o.canUseDOM && (i = document.implementation && document.implementation.hasFeature && document.implementation.hasFeature("", "") !== !0), e.exports = r
     }, function(e, t) {
         "use strict";
@@ -22680,9 +22696,9 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(421),
-            i = n(414),
-            o = n(449),
+        var r = n(422),
+            i = n(415),
+            o = n(450),
             a = {
                 mouseEnter: {
                     registrationName: "onMouseEnter",
@@ -22726,9 +22742,9 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(450),
-            o = n(451),
-            a = n(452),
+        var i = n(451),
+            o = n(452),
+            a = n(453),
             s = {
                 screenX: null,
                 screenY: null,
@@ -22761,8 +22777,8 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(433),
-            o = n(444),
+        var i = n(434),
+            o = n(445),
             a = {
                 view: function(e) {
                     if (e.view) return e.view;
@@ -22809,7 +22825,7 @@
         e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(416),
+        var r = n(417),
             i = r.injection.MUST_USE_PROPERTY,
             o = r.injection.HAS_BOOLEAN_VALUE,
             a = r.injection.HAS_NUMERIC_VALUE,
@@ -22975,8 +22991,8 @@
         e.exports = u
     }, function(e, t, n) {
         "use strict";
-        var r = n(455),
-            i = n(466),
+        var r = n(456),
+            i = n(467),
             o = {
                 processChildrenUpdates: i.dangerouslyProcessChildrenUpdates,
                 replaceNodeWithMarkup: r.dangerouslyReplaceNodeWithMarkup
@@ -23026,11 +23042,11 @@
                 i = e.nextSibling;
             i === t ? n && v(r, document.createTextNode(n), i) : n ? (h(i, n), l(r, i, t)) : l(r, e, t)
         }
-        var c = n(456),
-            d = n(462),
-            p = (n(414), n(442), n(459)),
-            f = n(458),
-            h = n(460),
+        var c = n(457),
+            d = n(463),
+            p = (n(415), n(443), n(460)),
+            f = n(459),
+            h = n(461),
             v = p(function(e, t, n) {
                 e.insertBefore(t, n)
             }),
@@ -23103,10 +23119,10 @@
                 toString: l
             }
         }
-        var c = n(457),
-            d = n(458),
-            p = n(459),
-            f = n(460),
+        var c = n(458),
+            d = n(459),
+            p = n(460),
+            f = n(461),
             h = 1,
             v = 11,
             _ = "undefined" != typeof document && "number" == typeof document.documentMode || "undefined" != typeof navigator && "string" == typeof navigator.userAgent && /\bEdge\/\d/.test(navigator.userAgent),
@@ -23124,11 +23140,11 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r, i = n(428),
-            o = n(457),
+        var r, i = n(429),
+            o = n(458),
             a = /^[ \r\n\t\f]/,
             s = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/,
-            l = n(459),
+            l = n(460),
             u = l(function(e, t) {
                 if (e.namespaceURI !== o.svg || "innerHTML" in e) e.innerHTML = t;
                 else {
@@ -23159,9 +23175,9 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(428),
-            i = n(461),
-            o = n(458),
+        var r = n(429),
+            i = n(462),
+            o = n(459),
             a = function(e, t) {
                 if (t) {
                     var n = e.firstChild;
@@ -23214,12 +23230,12 @@
         e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(415),
-            i = n(456),
-            o = n(428),
-            a = n(463),
-            s = n(395),
-            l = (n(391), {
+        var r = n(416),
+            i = n(457),
+            o = n(429),
+            a = n(464),
+            s = n(396),
+            l = (n(392), {
                 dangerouslyReplaceNodeWithMarkup: function(e, t) {
                     if (o.canUseDOM ? void 0 : r("56"), t ? void 0 : r("57"), "HTML" === e.nodeName ? r("58") : void 0, "string" == typeof t) {
                         var n = a(t, s)[0];
@@ -23250,10 +23266,10 @@
             for (var p = Array.from(n.childNodes); n.lastChild;) n.removeChild(n.lastChild);
             return p
         }
-        var o = n(428),
-            a = n(464),
-            s = n(465),
-            l = n(391),
+        var o = n(429),
+            a = n(465),
+            s = n(466),
+            l = n(392),
             u = o.canUseDOM ? document.createElement("div") : null,
             c = /^\s*<(\w+)/;
         e.exports = i
@@ -23276,7 +23292,7 @@
         function o(e) {
             return i(e) ? Array.isArray(e) ? e.slice() : r(e) : [e]
         }
-        var a = n(391);
+        var a = n(392);
         e.exports = o
     }, function(e, t, n) {
         "use strict";
@@ -23284,8 +23300,8 @@
         function r(e) {
             return a ? void 0 : o(!1), p.hasOwnProperty(e) || (e = "*"), s.hasOwnProperty(e) || ("*" === e ? a.innerHTML = "<link />" : a.innerHTML = "<" + e + "></" + e + ">", s[e] = !a.firstChild), s[e] ? p[e] : null
         }
-        var i = n(428),
-            o = n(391),
+        var i = n(429),
+            o = n(392),
             a = i.canUseDOM ? document.createElement("div") : null,
             s = {},
             l = [1, '<select multiple="true">', "</select>"],
@@ -23315,8 +23331,8 @@
         }), e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(455),
-            i = n(414),
+        var r = n(456),
+            i = n(415),
             o = {
                 dangerouslyProcessChildrenUpdates: function(e, t) {
                     var n = i.getNodeFromInstance(e);
@@ -23421,27 +23437,27 @@
             var t = e.type;
             p(t), this._currentElement = e, this._tag = t.toLowerCase(), this._namespaceURI = null, this._renderedChildren = null, this._previousStyle = null, this._previousStyleCopy = null, this._hostNode = null, this._hostParent = null, this._rootNodeID = 0, this._domID = 0, this._hostContainerInfo = null, this._wrapperState = null, this._topLevelWrapper = null, this._flags = 0
         }
-        var v = n(415),
-            _ = n(387),
-            g = n(468),
-            y = n(470),
-            m = n(456),
-            b = n(457),
-            E = n(416),
-            S = n(478),
-            T = n(422),
-            P = n(423),
-            C = n(480),
-            w = n(417),
-            k = n(414),
-            A = n(483),
-            O = n(486),
-            I = n(487),
-            N = n(488),
-            L = (n(442), n(489)),
-            R = n(507),
-            M = (n(395), n(461)),
-            D = (n(391), n(445), n(496), n(510), n(394), w),
+        var v = n(416),
+            _ = n(388),
+            g = n(469),
+            y = n(471),
+            m = n(457),
+            b = n(458),
+            E = n(417),
+            S = n(479),
+            T = n(423),
+            P = n(424),
+            C = n(481),
+            w = n(418),
+            k = n(415),
+            A = n(484),
+            O = n(487),
+            I = n(488),
+            N = n(489),
+            L = (n(443), n(490)),
+            R = n(508),
+            M = (n(396), n(462)),
+            D = (n(392), n(446), n(497), n(511), n(395), w),
             x = T.deleteListener,
             j = k.getNodeFromInstance,
             U = C.listenTo,
@@ -23720,8 +23736,8 @@
         }, _(h.prototype, h.Mixin, L.Mixin), e.exports = h
     }, function(e, t, n) {
         "use strict";
-        var r = n(414),
-            i = n(469),
+        var r = n(415),
+            i = n(470),
             o = {
                 focusDOMComponent: function() {
                     i(r.getNodeFromInstance(this))
@@ -23739,12 +23755,12 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(471),
-            i = n(428),
-            o = (n(442), n(472), n(474)),
-            a = n(475),
-            s = n(477),
-            l = (n(394), s(function(e) {
+        var r = n(472),
+            i = n(429),
+            o = (n(443), n(473), n(475)),
+            a = n(476),
+            s = n(478),
+            l = (n(395), s(function(e) {
                 return a(e)
             })),
             u = !1,
@@ -23895,7 +23911,7 @@
         function r(e) {
             return i(e.replace(o, "ms-"))
         }
-        var i = n(473),
+        var i = n(474),
             o = /^-ms-/;
         e.exports = r
     }, function(e, t) {
@@ -23921,8 +23937,8 @@
             }
             return t + "px"
         }
-        var i = n(471),
-            o = (n(394), i.isUnitlessNumber);
+        var i = n(472),
+            o = (n(395), i.isUnitlessNumber);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -23930,7 +23946,7 @@
         function r(e) {
             return i(e).replace(o, "-ms-")
         }
-        var i = n(476),
+        var i = n(477),
             o = /^ms-/;
         e.exports = r
     }, function(e, t) {
@@ -23961,9 +23977,9 @@
         function i(e, t) {
             return null == t || e.hasBooleanValue && !t || e.hasNumericValue && isNaN(t) || e.hasPositiveNumericValue && t < 1 || e.hasOverloadedBooleanValue && t === !1
         }
-        var o = n(416),
-            a = (n(414), n(442), n(479)),
-            s = (n(394), new RegExp("^[" + o.ATTRIBUTE_NAME_START_CHAR + "][" + o.ATTRIBUTE_NAME_CHAR + "]*$")),
+        var o = n(417),
+            a = (n(415), n(443), n(480)),
+            s = (n(395), new RegExp("^[" + o.ATTRIBUTE_NAME_START_CHAR + "][" + o.ATTRIBUTE_NAME_CHAR + "]*$")),
             l = {},
             u = {},
             c = {
@@ -24034,7 +24050,7 @@
         function r(e) {
             return '"' + i(e) + '"'
         }
-        var i = n(461);
+        var i = n(462);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -24042,12 +24058,12 @@
         function r(e) {
             return Object.prototype.hasOwnProperty.call(e, v) || (e[v] = f++, d[e[v]] = {}), d[e[v]]
         }
-        var i, o = n(387),
-            a = n(423),
-            s = n(481),
-            l = n(451),
-            u = n(482),
-            c = n(445),
+        var i, o = n(388),
+            a = n(424),
+            s = n(482),
+            l = n(452),
+            u = n(483),
+            c = n(446),
             d = {},
             p = !1,
             f = 0,
@@ -24162,7 +24178,7 @@
         function r(e) {
             i.enqueueEvents(e), i.processEventQueue(!1)
         }
-        var i = n(422),
+        var i = n(423),
             o = {
                 handleTopLevel: function(e, t, n, o) {
                     var a = i.extractEvents(e, t, n, o);
@@ -24186,7 +24202,7 @@
                 if (t.hasOwnProperty(n) && n in l) return s[e] = t[n];
             return ""
         }
-        var o = n(428),
+        var o = n(429),
             a = {
                 animationend: r("Animation", "AnimationEnd"),
                 animationiteration: r("Animation", "AnimationIteration"),
@@ -24221,13 +24237,13 @@
             }
             return n
         }
-        var o = n(415),
-            a = n(387),
-            s = n(478),
-            l = n(484),
-            u = n(414),
-            c = n(436),
-            d = (n(391), n(394), {
+        var o = n(416),
+            a = n(388),
+            s = n(479),
+            l = n(485),
+            u = n(415),
+            c = n(437),
+            d = (n(392), n(395), {
                 getHostProps: function(e, t) {
                     var n = l.getValue(t),
                         r = l.getChecked(t),
@@ -24311,10 +24327,10 @@
             }
             return ""
         }
-        var s = n(415),
-            l = n(386),
-            u = n(485),
-            c = (n(391), n(394), {
+        var s = n(416),
+            l = n(387),
+            u = n(486),
+            c = (n(392), n(395), {
                 button: !0,
                 checkbox: !0,
                 image: !0,
@@ -24367,11 +24383,11 @@
                 null != e && ("string" == typeof e || "number" == typeof e ? t += e : l || (l = !0))
             }), t
         }
-        var i = n(387),
-            o = n(386),
-            a = n(414),
-            s = n(487),
-            l = (n(394), !1),
+        var i = n(388),
+            o = n(387),
+            a = n(415),
+            s = n(488),
+            l = (n(395), !1),
             u = {
                 mountWrapper: function(e, t, n) {
                     var i = null;
@@ -24444,11 +24460,11 @@
                 n = s.executeOnChange(t, e);
             return this._rootNodeID && (this._wrapperState.pendingUpdate = !0), u.asap(r, this), n
         }
-        var a = n(387),
-            s = n(484),
-            l = n(414),
-            u = n(436),
-            c = (n(394), !1),
+        var a = n(388),
+            s = n(485),
+            l = n(415),
+            u = n(437),
+            c = (n(395), !1),
             d = {
                 getHostProps: function(e, t) {
                     return a({}, t, {
@@ -24491,12 +24507,12 @@
                 n = s.executeOnChange(t, e);
             return u.asap(r, this), n
         }
-        var o = n(415),
-            a = n(387),
-            s = n(484),
-            l = n(414),
-            u = n(436),
-            c = (n(391), n(394), {
+        var o = n(416),
+            a = n(388),
+            s = n(485),
+            l = n(415),
+            u = n(437),
+            c = (n(392), n(395), {
                 getHostProps: function(e, t) {
                     null != t.dangerouslySetInnerHTML ? o("91") : void 0;
                     var n = a({}, t, {
@@ -24602,12 +24618,12 @@
         function u(e, t) {
             d.processChildrenUpdates(e, t)
         }
-        var c = n(415),
-            d = n(490),
-            p = (n(491), n(442), n(393), n(439)),
-            f = n(492),
-            h = (n(395), n(506)),
-            v = (n(391), {
+        var c = n(416),
+            d = n(491),
+            p = (n(492), n(443), n(394), n(440)),
+            f = n(493),
+            h = (n(396), n(507)),
+            v = (n(392), {
                 Mixin: {
                     _reconcilerInstantiateChildren: function(e, t, n) {
                         return f.instantiateChildren(e, t, n)
@@ -24693,8 +24709,8 @@
         e.exports = v
     }, function(e, t, n) {
         "use strict";
-        var r = n(415),
-            i = (n(391), !1),
+        var r = n(416),
+            i = (n(392), !1),
             o = {
                 replaceNodeWithMarkup: null,
                 processChildrenUpdates: null,
@@ -24730,11 +24746,11 @@
                 var i = void 0 === e[n];
                 null != t && i && (e[n] = o(t, !0))
             }
-            var i = n(439),
-                o = n(493),
-                a = (n(501), n(497)),
-                s = n(502);
-            n(394);
+            var i = n(440),
+                o = n(494),
+                a = (n(502), n(498)),
+                s = n(503);
+            n(395);
             "undefined" != typeof t && t.env, 1;
             var l = {
                 instantiateChildren: function(e, t, n, i) {
@@ -24796,12 +24812,12 @@
             } else "string" == typeof e || "number" == typeof e ? n = c.createInstanceForText(e) : a("131", typeof e);
             return n._mountIndex = 0, n._mountImage = null, n
         }
-        var a = n(415),
-            s = n(387),
-            l = n(494),
-            u = n(498),
-            c = n(499),
-            d = (n(500), n(391), n(394), function(e) {
+        var a = n(416),
+            s = n(388),
+            l = n(495),
+            u = n(499),
+            c = n(500),
+            d = (n(501), n(392), n(395), function(e) {
                 this.construct(e)
             });
         s(d.prototype, l, {
@@ -24821,19 +24837,19 @@
         function a(e) {
             return !(!e.prototype || !e.prototype.isPureReactComponent)
         }
-        var s = n(415),
-            l = n(387),
-            u = n(386),
-            c = n(490),
-            d = n(393),
-            p = n(425),
-            f = n(491),
-            h = (n(442), n(495)),
-            v = n(439),
-            _ = n(403),
-            g = (n(391), n(496)),
-            y = n(497),
-            m = (n(394), {
+        var s = n(416),
+            l = n(388),
+            u = n(387),
+            c = n(491),
+            d = n(394),
+            p = n(426),
+            f = n(492),
+            h = (n(443), n(496)),
+            v = n(440),
+            _ = n(404),
+            g = (n(392), n(497)),
+            y = n(498),
+            m = (n(395), {
                 ImpureClass: 0,
                 PureClass: 1,
                 StatelessFunctional: 2
@@ -25025,9 +25041,9 @@
         e.exports = E
     }, function(e, t, n) {
         "use strict";
-        var r = n(415),
-            i = n(386),
-            o = (n(391), {
+        var r = n(416),
+            i = n(387),
+            o = (n(392), {
                 HOST: 0,
                 COMPOSITE: 1,
                 EMPTY: 2,
@@ -25094,9 +25110,9 @@
         function o(e) {
             return e instanceof c
         }
-        var a = n(415),
-            s = n(387),
-            l = (n(391), null),
+        var a = n(416),
+            s = n(388),
+            l = (n(392), null),
             u = {},
             c = null,
             d = {
@@ -25193,11 +25209,11 @@
         function o(e, t, n) {
             return null == e ? 0 : i(e, "", t, n)
         }
-        var a = n(415),
-            s = (n(393), n(503)),
-            l = n(504),
-            u = (n(391), n(501)),
-            c = (n(394), "."),
+        var a = n(416),
+            s = (n(394), n(504)),
+            l = n(505),
+            u = (n(392), n(502)),
+            c = (n(395), "."),
             d = ":";
         e.exports = o
     }, function(e, t) {
@@ -25251,9 +25267,9 @@
                 i = C.getOwnerID(e);
             return i && (t = C.getDisplayName(i)), o(n, r && r._source, t)
         }
-        var l, u, c, d, p, f, h, v = n(390),
-            _ = n(393),
-            g = (n(391), n(394), "function" == typeof Array.from && "function" == typeof Map && r(Map) && null != Map.prototype && "function" == typeof Map.prototype.keys && r(Map.prototype.keys) && "function" == typeof Set && r(Set) && null != Set.prototype && "function" == typeof Set.prototype.keys && r(Set.prototype.keys));
+        var l, u, c, d, p, f, h, v = n(391),
+            _ = n(394),
+            g = (n(392), n(395), "function" == typeof Array.from && "function" == typeof Map && r(Map) && null != Map.prototype && "function" == typeof Map.prototype.keys && r(Map.prototype.keys) && "function" == typeof Set && r(Set) && null != Set.prototype && "function" == typeof Set.prototype.keys && r(Set.prototype.keys));
         if (g) {
             var y = new Map,
                 m = new Set;
@@ -25430,8 +25446,8 @@
                 var n = {};
                 return o(e, r, n), n
             }
-            var o = (n(501), n(502));
-            n(394);
+            var o = (n(502), n(503));
+            n(395);
             "undefined" != typeof t && t.env, 1, e.exports = i
         }).call(t, n(287))
     }, function(e, t, n) {
@@ -25440,10 +25456,10 @@
         function r(e) {
             this.reinitializeTransaction(), this.renderToStaticMarkup = e, this.useCreateElement = !1, this.updateQueue = new s(this)
         }
-        var i = n(387),
-            o = n(430),
-            a = n(443),
-            s = (n(442), n(508)),
+        var i = n(388),
+            o = n(431),
+            a = n(444),
+            s = (n(443), n(509)),
             l = [],
             u = {
                 enqueue: function() {}
@@ -25471,8 +25487,8 @@
         }
 
         function i(e, t) {}
-        var o = n(509),
-            a = (n(394), function() {
+        var o = n(510),
+            a = (n(395), function() {
                 function e(t) {
                     r(this, e), this.transaction = t
                 }
@@ -25511,10 +25527,10 @@
             }
             return n
         }
-        var a = n(415),
-            s = (n(393), n(491)),
-            l = (n(442), n(436)),
-            u = (n(391), n(394), {
+        var a = n(416),
+            s = (n(394), n(492)),
+            l = (n(443), n(437)),
+            u = (n(392), n(395), {
                 isMounted: function(e) {
                     var t = s.get(e);
                     return !!t && !!t._renderedComponent
@@ -25552,14 +25568,14 @@
         e.exports = u
     }, function(e, t, n) {
         "use strict";
-        var r = (n(387), n(395)),
-            i = (n(394), r);
+        var r = (n(388), n(396)),
+            i = (n(395), r);
         e.exports = i
     }, function(e, t, n) {
         "use strict";
-        var r = n(387),
-            i = n(456),
-            o = n(414),
+        var r = n(388),
+            i = n(457),
+            o = n(415),
             a = function(e) {
                 this._currentElement = null, this._hostNode = null, this._hostParent = null, this._hostContainerInfo = null, this._domID = 0
             };
@@ -25626,8 +25642,8 @@
             for (u = 0; u < s.length; u++) n(s[u], "bubbled", i);
             for (u = l.length; u-- > 0;) n(l[u], "captured", o)
         }
-        var l = n(415);
-        n(391);
+        var l = n(416);
+        n(392);
         e.exports = {
             isAncestor: i,
             getLowestCommonAncestor: r,
@@ -25637,13 +25653,13 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(415),
-            i = n(387),
-            o = n(455),
-            a = n(456),
-            s = n(414),
-            l = n(461),
-            u = (n(391), n(510), function(e) {
+        var r = n(416),
+            i = n(388),
+            o = n(456),
+            a = n(457),
+            s = n(415),
+            l = n(462),
+            u = (n(392), n(511), function(e) {
                 this._currentElement = e, this._stringText = "" + e, this._hostNode = null, this._hostParent = null, this._domID = 0, this._mountIndex = 0, this._closingComment = null, this._commentNodes = null
             });
         i(u.prototype, {
@@ -25695,10 +25711,10 @@
         function r() {
             this.reinitializeTransaction()
         }
-        var i = n(387),
-            o = n(436),
-            a = n(443),
-            s = n(395),
+        var i = n(388),
+            o = n(437),
+            a = n(444),
+            s = n(396),
             l = {
                 initialize: s,
                 close: function() {
@@ -25750,14 +25766,14 @@
             var t = h(window);
             e(t)
         }
-        var s = n(387),
-            l = n(516),
-            u = n(428),
-            c = n(430),
-            d = n(414),
-            p = n(436),
-            f = n(444),
-            h = n(517);
+        var s = n(388),
+            l = n(517),
+            u = n(429),
+            c = n(431),
+            d = n(415),
+            p = n(437),
+            f = n(445),
+            h = n(518);
         s(i.prototype, {
             destructor: function() {
                 this.topLevelType = null, this.nativeEvent = null, this.ancestors.length = 0
@@ -25800,7 +25816,7 @@
         e.exports = v
     }, function(e, t, n) {
         "use strict";
-        var r = n(395),
+        var r = n(396),
             i = {
                 listen: function(e, t, n) {
                     return e.addEventListener ? (e.addEventListener(t, n, !1), {
@@ -25840,14 +25856,14 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(416),
-            i = n(422),
-            o = n(424),
-            a = n(490),
-            s = n(498),
-            l = n(480),
-            u = n(499),
-            c = n(436),
+        var r = n(417),
+            i = n(423),
+            o = n(425),
+            a = n(491),
+            s = n(499),
+            l = n(481),
+            u = n(500),
+            c = n(437),
             d = {
                 Component: a.injection,
                 DOMProperty: r.injection,
@@ -25865,13 +25881,13 @@
         function r(e) {
             this.reinitializeTransaction(), this.renderToStaticMarkup = !1, this.reactMountReady = o.getPooled(null), this.useCreateElement = e
         }
-        var i = n(387),
-            o = n(437),
-            a = n(430),
-            s = n(480),
-            l = n(520),
-            u = (n(442), n(443)),
-            c = n(509),
+        var i = n(388),
+            o = n(438),
+            a = n(431),
+            s = n(481),
+            l = n(521),
+            u = (n(443), n(444)),
+            c = n(510),
             d = {
                 initialize: l.getSelectionInformation,
                 close: l.restoreSelection
@@ -25921,10 +25937,10 @@
         function r(e) {
             return o(document.documentElement, e)
         }
-        var i = n(521),
-            o = n(523),
-            a = n(469),
-            s = n(526),
+        var i = n(522),
+            o = n(524),
+            a = n(470),
+            s = n(527),
             l = {
                 hasSelectionCapabilities: function(e) {
                     var t = e && e.nodeName && e.nodeName.toLowerCase();
@@ -26045,9 +26061,9 @@
                 }
             }
         }
-        var l = n(428),
-            u = n(522),
-            c = n(431),
+        var l = n(429),
+            u = n(523),
+            c = n(432),
             d = l.canUseDOM && "selection" in document && !("getSelection" in window),
             p = {
                 getOffsets: d ? i : o,
@@ -26088,7 +26104,7 @@
         function r(e, t) {
             return !(!e || !t) && (e === t || !i(e) && (i(t) ? r(e, t.parentNode) : "contains" in e ? e.contains(t) : !!e.compareDocumentPosition && !!(16 & e.compareDocumentPosition(t))))
         }
-        var i = n(524);
+        var i = n(525);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -26096,7 +26112,7 @@
         function r(e) {
             return i(e) && 3 == e.nodeType
         }
-        var i = n(525);
+        var i = n(526);
         e.exports = r
     }, function(e, t) {
         "use strict";
@@ -26421,14 +26437,14 @@
             }
             return null
         }
-        var o = n(421),
-            a = n(428),
-            s = n(414),
-            l = n(520),
-            u = n(433),
-            c = n(526),
-            d = n(446),
-            p = n(496),
+        var o = n(422),
+            a = n(429),
+            s = n(415),
+            l = n(521),
+            u = n(434),
+            c = n(527),
+            d = n(447),
+            p = n(497),
             f = a.canUseDOM && "documentMode" in document && document.documentMode <= 11,
             h = {
                 select: {
@@ -26485,24 +26501,24 @@
         function i(e) {
             return "button" === e || "input" === e || "select" === e || "textarea" === e
         }
-        var o = n(415),
-            a = n(516),
-            s = n(421),
-            l = n(414),
-            u = n(530),
-            c = n(531),
-            d = n(433),
-            p = n(532),
-            f = n(533),
-            h = n(449),
-            v = n(536),
-            _ = n(537),
-            g = n(538),
-            y = n(450),
-            m = n(539),
-            b = n(395),
-            E = n(534),
-            S = (n(391), {}),
+        var o = n(416),
+            a = n(517),
+            s = n(422),
+            l = n(415),
+            u = n(531),
+            c = n(532),
+            d = n(434),
+            p = n(533),
+            f = n(534),
+            h = n(450),
+            v = n(537),
+            _ = n(538),
+            g = n(539),
+            y = n(451),
+            m = n(540),
+            b = n(396),
+            E = n(535),
+            S = (n(392), {}),
             T = {};
         ["abort", "animationEnd", "animationIteration", "animationStart", "blur", "canPlay", "canPlayThrough", "click", "contextMenu", "copy", "cut", "doubleClick", "drag", "dragEnd", "dragEnter", "dragExit", "dragLeave", "dragOver", "dragStart", "drop", "durationChange", "emptied", "encrypted", "ended", "error", "focus", "input", "invalid", "keyDown", "keyPress", "keyUp", "load", "loadedData", "loadedMetadata", "loadStart", "mouseDown", "mouseMove", "mouseOut", "mouseOver", "mouseUp", "paste", "pause", "play", "playing", "progress", "rateChange", "reset", "scroll", "seeked", "seeking", "stalled", "submit", "suspend", "timeUpdate", "touchCancel", "touchEnd", "touchMove", "touchStart", "transitionEnd", "volumeChange", "waiting", "wheel"].forEach(function(e) {
             var t = e[0].toUpperCase() + e.slice(1),
@@ -26636,7 +26652,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(433),
+        var i = n(434),
             o = {
                 animationName: null,
                 elapsedTime: null,
@@ -26649,7 +26665,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(433),
+        var i = n(434),
             o = {
                 clipboardData: function(e) {
                     return "clipboardData" in e ? e.clipboardData : window.clipboardData
@@ -26662,7 +26678,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(450),
+        var i = n(451),
             o = {
                 relatedTarget: null
             };
@@ -26673,10 +26689,10 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(450),
-            o = n(534),
-            a = n(535),
-            s = n(452),
+        var i = n(451),
+            o = n(535),
+            a = n(536),
+            s = n(453),
             l = {
                 key: a,
                 location: null,
@@ -26720,7 +26736,7 @@
             }
             return "keydown" === e.type || "keyup" === e.type ? a[e.keyCode] || "Unidentified" : ""
         }
-        var i = n(534),
+        var i = n(535),
             o = {
                 Esc: "Escape",
                 Spacebar: " ",
@@ -26780,7 +26796,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(449),
+        var i = n(450),
             o = {
                 dataTransfer: null
             };
@@ -26791,8 +26807,8 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(450),
-            o = n(452),
+        var i = n(451),
+            o = n(453),
             a = {
                 touches: null,
                 targetTouches: null,
@@ -26810,7 +26826,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(433),
+        var i = n(434),
             o = {
                 propertyName: null,
                 elapsedTime: null,
@@ -26823,7 +26839,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(449),
+        var i = n(450),
             o = {
                 deltaX: function(e) {
                     return "deltaX" in e ? e.deltaX : "wheelDeltaX" in e ? -e.wheelDeltaX : 0
@@ -26894,25 +26910,25 @@
             var t = d(e);
             return t ? t._hostContainerInfo._topLevelWrapper : null
         }
-        var f = n(415),
-            h = n(456),
-            v = n(416),
-            _ = n(386),
-            g = n(480),
-            y = (n(393), n(414)),
-            m = n(541),
-            b = n(542),
-            E = n(438),
-            S = n(491),
-            T = (n(442), n(543)),
-            P = n(439),
-            C = n(509),
-            w = n(436),
-            k = n(403),
-            A = n(493),
-            O = (n(391), n(458)),
-            I = n(497),
-            N = (n(394), v.ID_ATTRIBUTE_NAME),
+        var f = n(416),
+            h = n(457),
+            v = n(417),
+            _ = n(387),
+            g = n(481),
+            y = (n(394), n(415)),
+            m = n(542),
+            b = n(543),
+            E = n(439),
+            S = n(492),
+            T = (n(443), n(544)),
+            P = n(440),
+            C = n(510),
+            w = n(437),
+            k = n(404),
+            A = n(494),
+            O = (n(392), n(459)),
+            I = n(498),
+            N = (n(395), v.ID_ATTRIBUTE_NAME),
             L = v.ROOT_ATTRIBUTE_NAME,
             R = 1,
             M = 9,
@@ -27021,7 +27037,7 @@
             };
             return n
         }
-        var i = (n(510), 9);
+        var i = (n(511), 9);
         e.exports = r
     }, function(e, t) {
         "use strict";
@@ -27032,7 +27048,7 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(544),
+        var r = n(545),
             i = /\/?>/,
             o = /^<\!\-\-/,
             a = {
@@ -27074,11 +27090,11 @@
             var t = a.get(e);
             return t ? (t = s(t), t ? o.getNodeFromInstance(t) : null) : void("function" == typeof e.render ? i("44") : i("45", Object.keys(e)))
         }
-        var i = n(415),
-            o = (n(393), n(414)),
-            a = n(491),
-            s = n(547);
-        n(391), n(394);
+        var i = n(416),
+            o = (n(394), n(415)),
+            a = n(492),
+            s = n(548);
+        n(392), n(395);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -27088,11 +27104,11 @@
                 (t = e._renderedNodeType) === i.COMPOSITE;) e = e._renderedComponent;
             return t === i.HOST ? e._renderedComponent : t === i.EMPTY ? null : void 0
         }
-        var i = n(495);
+        var i = n(496);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(540);
+        var r = n(541);
         e.exports = r.renderSubtreeIntoContainer
     }, function(e, t, n) {
         "use strict";
@@ -27103,9 +27119,9 @@
             }
         }
         t.__esModule = !0, t.connect = t.Provider = void 0;
-        var i = n(550),
+        var i = n(551),
             o = r(i),
-            a = n(553),
+            a = n(554),
             s = r(a);
         t.Provider = o["default"], t.connect = s["default"]
     }, function(e, t, n) {
@@ -27138,10 +27154,10 @@
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
         t.__esModule = !0, t["default"] = void 0;
-        var s = n(385),
-            l = n(551),
+        var s = n(386),
+            l = n(552),
             u = r(l),
-            c = n(552),
+            c = n(553),
             d = (r(c), function(e) {
                 function t(n, r) {
                     i(this, t);
@@ -27165,7 +27181,7 @@
     }, function(e, t, n) {
         "use strict";
         t.__esModule = !0;
-        var r = n(385);
+        var r = n(386);
         t["default"] = r.PropTypes.shape({
             subscribe: r.PropTypes.func.isRequired,
             dispatch: r.PropTypes.func.isRequired,
@@ -27347,18 +27363,18 @@
             return e
         };
         t["default"] = u;
-        var d = n(385),
-            p = n(551),
+        var d = n(386),
+            p = n(552),
             f = r(p),
-            h = n(554),
+            h = n(555),
             v = r(h),
-            _ = n(555),
+            _ = n(556),
             g = r(_),
-            y = n(552),
+            y = n(553),
             m = (r(y), n(203)),
-            b = (r(m), n(566)),
+            b = (r(m), n(567)),
             E = r(b),
-            S = n(567),
+            S = n(568),
             T = r(S),
             P = function(e) {
                 return {}
@@ -27397,7 +27413,7 @@
             }
         }
         t.__esModule = !0, t["default"] = r;
-        var i = n(556)
+        var i = n(557)
     }, function(e, t, n) {
         "use strict";
 
@@ -27407,17 +27423,17 @@
             }
         }
         t.__esModule = !0, t.compose = t.applyMiddleware = t.bindActionCreators = t.combineReducers = t.createStore = void 0;
-        var i = n(557),
+        var i = n(558),
             o = r(i),
-            a = n(561),
+            a = n(562),
             s = r(a),
-            l = n(563),
+            l = n(564),
             u = r(l),
-            c = n(564),
+            c = n(565),
             d = r(c),
-            p = n(565),
+            p = n(566),
             f = r(p),
-            h = n(562);
+            h = n(563);
         r(h);
         t.createStore = o["default"], t.combineReducers = s["default"], t.bindActionCreators = u["default"], t.applyMiddleware = d["default"], t.compose = f["default"]
     }, function(e, t, n) {
@@ -27512,13 +27528,13 @@
         t.__esModule = !0, t.ActionTypes = void 0, t["default"] = i;
         var o = n(203),
             a = r(o),
-            s = n(558),
+            s = n(559),
             l = r(s),
             u = t.ActionTypes = {
                 INIT: "@@redux/INIT"
             }
     }, function(e, t, n) {
-        e.exports = n(559)
+        e.exports = n(560)
     }, function(e, t, n) {
         (function(e) {
             "use strict";
@@ -27531,7 +27547,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            var i = n(560),
+            var i = n(561),
                 o = r(i),
                 a = void 0;
             "undefined" != typeof e ? a = e : "undefined" != typeof window && (a = window);
@@ -27609,9 +27625,9 @@
             }
         }
         t.__esModule = !0, t["default"] = a;
-        var s = n(557),
+        var s = n(558),
             l = n(203),
-            u = (r(l), n(562));
+            u = (r(l), n(563));
         r(u)
     }, function(e, t) {
         "use strict";
@@ -27682,7 +27698,7 @@
             return e
         };
         t["default"] = i;
-        var a = n(565),
+        var a = n(566),
             s = r(a)
     }, function(e, t) {
         "use strict";
@@ -27764,9 +27780,9 @@
         }), t.MutedSegments = void 0;
         var i = n(265),
             o = r(i),
-            a = n(385),
+            a = n(386),
             s = r(a),
-            l = n(569),
+            l = n(570),
             u = {
                 duration: a.PropTypes.number,
                 mutedSegments: a.PropTypes.arrayOf(a.PropTypes.shape({
@@ -27814,9 +27830,9 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.SeekbarBuffer = void 0;
-        var i = n(385),
+        var i = n(386),
             o = r(i),
-            a = n(569),
+            a = n(570),
             s = {
                 animate: i.PropTypes.bool,
                 bufferLength: i.PropTypes.number.isRequired,
@@ -27861,7 +27877,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.SeekbarTimeDisplay = void 0;
-        var o = n(385),
+        var o = n(386),
             a = i(o),
             s = n(262),
             l = r(s),
@@ -27926,12 +27942,12 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(385),
+            l = n(386),
             u = r(l),
-            c = n(573),
+            c = n(574),
             d = r(c),
-            p = n(574),
-            f = n(575),
+            p = n(575),
+            f = n(576),
             h = n(81),
             v = r(h),
             _ = {
@@ -28279,7 +28295,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.SliderLeft = void 0;
-        var i = n(385),
+        var i = n(386),
             o = r(i),
             a = {
                 className: i.PropTypes.string,
@@ -28319,9 +28335,9 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.SliderThumb = void 0;
-        var i = n(385),
+        var i = n(386),
             o = r(i),
-            a = n(569),
+            a = n(570),
             s = {
                 className: i.PropTypes.string,
                 max: i.PropTypes.number.isRequired,
@@ -28415,11 +28431,11 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.ThumbnailPreviews = o;
-        var s = n(385),
+        var s = n(386),
             l = i(s),
             u = n(262),
             c = r(u),
-            d = n(577),
+            d = n(578),
             p = 148,
             f = {
                 duration: s.PropTypes.number,
@@ -28451,7 +28467,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.SeekbarPopup = t.ARROW_WIDTH = void 0;
-        var o = n(385),
+        var o = n(386),
             a = r(o),
             s = t.ARROW_WIDTH = 20,
             l = {
@@ -28539,7 +28555,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.TimestampPreview = void 0;
-        var a = n(385),
+        var a = n(386),
             s = i(a),
             l = n(262),
             u = r(l),
@@ -28670,13 +28686,13 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            f = n(385),
+            f = n(386),
             h = i(f),
             v = n(262),
             _ = r(v),
-            g = n(577),
-            y = n(569),
-            m = n(580),
+            g = n(578),
+            y = n(570),
+            m = n(581),
             b = {
                 currentTime: f.PropTypes.number,
                 duration: f.PropTypes.number,
@@ -28823,11 +28839,11 @@
             }(),
             o = n(174),
             a = n(210),
-            s = n(581),
-            l = n(582),
-            u = n(583),
-            c = n(584),
-            d = n(585),
+            s = n(582),
+            l = n(583),
+            u = n(584),
+            c = n(585),
+            d = n(586),
             p = n(241);
         t.MARKER_TYPE_GAME_CHANGE = c.TYPE_GAME_CHANGE, t.MARKER_TYPE_GAME_METADATA = d.TYPE_GAME_METADATA, t.TimelineMetadataManager = function() {
             function e(t) {
@@ -29268,11 +29284,11 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(385),
+            l = n(386),
             u = r(l),
-            c = n(549),
-            d = n(587),
-            p = n(588),
+            c = n(550),
+            d = n(588),
+            p = n(589),
             f = n(159),
             h = n(318),
             v = {
@@ -29383,7 +29399,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.LinkedImage = void 0;
-        var i = n(385),
+        var i = n(386),
             o = r(i),
             a = {
                 alt: i.PropTypes.string,
@@ -29426,10 +29442,10 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.StreamInfoDisplay = t.StreamInfoDisplayComponent = void 0;
-        var i = n(385),
+        var i = n(386),
             o = r(i),
-            a = n(589),
-            s = n(594),
+            a = n(590),
+            s = n(595),
             l = r(s),
             u = {
                 gameName: i.PropTypes.string,
@@ -29503,13 +29519,13 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.I18nextProvider = t.Interpolate = t.translate = t.loadNamespaces = void 0;
-        var i = n(590),
+        var i = n(591),
             o = r(i),
-            a = n(591),
+            a = n(592),
             s = r(a),
-            l = n(592),
+            l = n(593),
             u = r(l),
-            c = n(593),
+            c = n(594),
             d = r(c);
         t.loadNamespaces = d["default"], t.translate = o["default"], t.Interpolate = s["default"], t.I18nextProvider = u["default"]
     }, function(e, t, n) {
@@ -29680,9 +29696,9 @@
                 }
             }();
         t["default"] = u;
-        var p = n(385),
+        var p = n(386),
             f = r(p),
-            h = n(566),
+            h = n(567),
             v = r(h)
     }, function(e, t, n) {
         "use strict";
@@ -29734,7 +29750,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            u = n(385),
+            u = n(386),
             c = r(u),
             d = function(e) {
                 function t(e, n) {
@@ -29831,7 +29847,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            s = n(385),
+            s = n(386),
             l = function(e) {
                 function t(e, n) {
                     r(this, t);
@@ -29982,11 +29998,11 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.StreamStatus = t.StreamStatusComponent = void 0;
-        var i = n(385),
+        var i = n(386),
             o = r(i),
-            a = n(549),
+            a = n(550),
             s = n(158),
-            l = n(594),
+            l = n(595),
             u = r(l),
             c = {
                 streamType: i.PropTypes.string,
@@ -30087,9 +30103,9 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(385),
+            l = n(386),
             u = r(l),
-            c = n(549),
+            c = n(550),
             d = {
                 i18n: l.PropTypes.object,
                 shouldShowMutedSegmentsAlert: l.PropTypes.bool
@@ -30182,10 +30198,10 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(385),
+            l = n(386),
             u = r(l),
-            c = n(549),
-            d = n(572),
+            c = n(550),
+            d = n(573),
             p = n(318),
             f = {
                 i18n: l.PropTypes.object,
@@ -30342,10 +30358,10 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(385),
+            l = n(386),
             u = r(l),
-            c = n(549),
-            d = n(599),
+            c = n(550),
+            d = n(600),
             p = n(158),
             f = n(280),
             h = 16 / 9,
@@ -30491,9 +30507,9 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            u = n(385),
+            u = n(386),
             c = r(u),
-            d = n(600),
+            d = n(601),
             p = t.EXT_OVERLAY_CLASS = "extension-overlay",
             f = t.EXT_IFRAME_CLASS = "extension-overlay__iframe",
             h = t.EXT_ATTRIBUTION_LINK_CLASS = "extension-attribution__link",
@@ -30634,7 +30650,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.Button = o;
-        var a = n(385),
+        var a = n(386),
             s = r(a),
             l = {
                 className: a.PropTypes.string,
@@ -30713,10 +30729,10 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            u = n(385),
+            u = n(386),
             c = r(u),
-            d = n(549),
-            p = n(602),
+            d = n(550),
+            p = n(603),
             f = 250,
             h = "menu-open",
             v = "menu-closed",
@@ -31187,7 +31203,7 @@
             l = n(158),
             u = n(210),
             c = n(191),
-            d = n(606),
+            d = n(607),
             p = n(359),
             f = n(208),
             h = n(300);
@@ -31521,9 +31537,9 @@
             u = n(210),
             c = n(278),
             d = n(318),
-            p = n(381),
+            p = n(382),
             f = n(343),
-            h = n(610),
+            h = n(611),
             v = n(277),
             _ = "350",
             g = t.DEFAULT_THUMBNAIL_URL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/no-thumbnail-sm.png",
@@ -31746,9 +31762,9 @@
             }
         }();
         t.missingKeyHandler = o, t.getI18N = a;
-        var l = n(612),
+        var l = n(613),
             u = r(l),
-            c = n(628),
+            c = n(629),
             d = r(c),
             p = n(159),
             f = n(205),
@@ -31776,7 +31792,7 @@
             keySeparator: !1,
             missingKeyHandler: o,
             saveMissing: !0
-        }), u["default"].addResourceBundle("en-US", u["default"].options.ns[0], n(629));
+        }), u["default"].addResourceBundle("en-US", u["default"].options.ns[0], n(630));
         var b = function() {
             function e(t, n, r) {
                 i(this, e), this.shortCode = t, this.langCode = n, this._translate = r
@@ -31794,7 +31810,7 @@
         }();
         t.I18N_INSTANCE = u["default"], t.DEFAULT_LANGUAGE = new b("en", "en-US", u["default"].getFixedT("en-US"))
     }, function(e, t, n) {
-        e.exports = n(613)["default"]
+        e.exports = n(614)["default"]
     }, function(e, t, n) {
         "use strict";
 
@@ -31806,7 +31822,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.use = t.t = t.setDefaultNamespace = t.on = t.off = t.loadResources = t.loadNamespaces = t.loadLanguages = t.init = t.getFixedT = t.exists = t.dir = t.createInstance = t.cloneInstance = t.changeLanguage = void 0;
-        var i = n(614),
+        var i = n(615),
             o = r(i);
         t["default"] = o["default"];
         t.changeLanguage = o["default"].changeLanguage.bind(o["default"]), t.cloneInstance = o["default"].cloneInstance.bind(o["default"]), t.createInstance = o["default"].createInstance.bind(o["default"]), t.dir = o["default"].dir.bind(o["default"]), t.exists = o["default"].exists.bind(o["default"]), t.getFixedT = o["default"].getFixedT.bind(o["default"]), t.init = o["default"].init.bind(o["default"]), t.loadLanguages = o["default"].loadLanguages.bind(o["default"]), t.loadNamespaces = o["default"].loadNamespaces.bind(o["default"]), t.loadResources = o["default"].loadResources.bind(o["default"]), t.off = o["default"].off.bind(o["default"]), t.on = o["default"].on.bind(o["default"]), t.setDefaultNamespace = o["default"].setDefaultNamespace.bind(o["default"]), t.t = o["default"].t.bind(o["default"]), t.use = o["default"].use.bind(o["default"])
@@ -31873,28 +31889,28 @@
                 }
                 return e
             },
-            p = n(615),
+            p = n(616),
             f = i(p),
-            h = n(616),
+            h = n(617),
             v = i(h),
-            _ = n(617),
+            _ = n(618),
             g = i(_),
-            y = n(619),
+            y = n(620),
             m = i(y),
-            b = n(622),
+            b = n(623),
             E = i(b),
-            S = n(623),
+            S = n(624),
             T = i(S),
-            P = n(624),
+            P = n(625),
             C = i(P),
-            w = n(625),
+            w = n(626),
             k = i(w),
-            A = n(626),
+            A = n(627),
             O = i(A),
-            I = n(627),
-            N = n(620),
+            I = n(628),
+            N = n(621),
             L = i(N),
-            R = n(621),
+            R = n(622),
             M = r(R),
             D = function(e) {
                 function t() {
@@ -32200,9 +32216,9 @@
                 }
                 return e
             },
-            c = n(616),
+            c = n(617),
             d = i(c),
-            p = n(618),
+            p = n(619),
             f = r(p),
             h = function(e) {
                 function t() {
@@ -32390,15 +32406,15 @@
             } : function(e) {
                 return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
             },
-            d = n(615),
+            d = n(616),
             p = i(d),
-            f = n(616),
+            f = n(617),
             h = i(f),
-            v = n(620),
+            v = n(621),
             _ = i(v),
-            g = n(621),
+            g = n(622),
             y = r(g),
-            m = n(618),
+            m = n(619),
             b = r(m),
             E = function(e) {
                 function t(n) {
@@ -32589,7 +32605,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.convertAPIOptions = o, t.convertJSONOptions = a, t.convertTOptions = s, t.appendBackwardsAPI = l;
-        var u = n(615),
+        var u = n(616),
             c = r(u)
     }, function(e, t, n) {
         "use strict";
@@ -32610,7 +32626,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var a = n(615),
+        var a = n(616),
             s = r(a),
             l = function() {
                 function e(t) {
@@ -32687,7 +32703,7 @@
             } : function(e) {
                 return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
             },
-            s = n(615),
+            s = n(616),
             l = r(s),
             u = [{
                 lngs: ["ach", "ak", "am", "arn", "br", "fil", "gun", "ln", "mfe", "mg", "mi", "oc", "tg", "ti", "tr", "uz", "wa"],
@@ -32917,9 +32933,9 @@
                 }
                 return e
             },
-            s = n(618),
+            s = n(619),
             l = i(s),
-            u = n(615),
+            u = n(616),
             c = r(u),
             d = function() {
                 function e() {
@@ -33073,11 +33089,11 @@
                     throw new TypeError("Invalid attempt to destructure non-iterable instance")
                 }
             }(),
-            p = n(618),
+            p = n(619),
             f = i(p),
-            h = n(615),
+            h = n(616),
             v = r(h),
-            _ = n(616),
+            _ = n(617),
             g = r(_),
             y = function(e) {
                 function t(n, r, i) {
@@ -33254,10 +33270,10 @@
                 }
                 return e
             },
-            c = n(618),
-            d = (i(c), n(615)),
+            c = n(619),
+            d = (i(c), n(616)),
             p = r(d),
-            f = n(616),
+            f = n(617),
             h = r(f),
             v = function(e) {
                 function t(n, r, i) {
@@ -33710,14 +33726,14 @@
             }(),
             l = n(78),
             u = r(l),
-            c = n(385),
+            c = n(386),
             d = r(c),
-            p = n(549),
-            f = n(631),
-            h = n(633),
-            v = n(635),
-            _ = n(636),
-            g = n(378),
+            p = n(550),
+            f = n(632),
+            h = n(634),
+            v = n(636),
+            _ = n(637),
+            g = n(379),
             y = n(208),
             m = n(159),
             b = "player_notifbutton_clicks",
@@ -33972,11 +33988,11 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(385),
+            l = n(386),
             u = r(l),
-            c = n(589),
-            d = n(632),
-            p = n(594),
+            c = n(590),
+            d = n(633),
+            p = n(595),
             f = r(p),
             h = {
                 channelName: l.PropTypes.string.isRequired,
@@ -34062,11 +34078,11 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.NotificationsButton = void 0, t.NotificationsButtonComponent = i;
-        var o = n(385),
+        var o = n(386),
             a = r(o),
-            s = n(600),
-            l = n(589),
-            u = n(594),
+            s = n(601),
+            l = n(590),
+            u = n(595),
             c = r(u),
             d = {
                 notificationsEnabled: o.PropTypes.bool.isRequired,
@@ -34120,10 +34136,10 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(385),
+            l = n(386),
             u = r(l),
-            c = n(634),
-            d = n(594),
+            c = n(635),
+            d = n(595),
             p = r(d),
             f = {
                 avatarUrl: l.PropTypes.string.isRequired,
@@ -34217,12 +34233,12 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.FollowButton = void 0, t.FollowButtonComponent = i;
-        var o = n(385),
+        var o = n(386),
             a = r(o),
-            s = n(600),
-            l = n(594),
+            s = n(601),
+            l = n(595),
             u = r(l),
-            c = n(589),
+            c = n(590),
             d = {
                 following: o.PropTypes.bool.isRequired,
                 follow: o.PropTypes.func.isRequired,
@@ -34276,11 +34292,11 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(385),
+            l = n(386),
             u = r(l),
-            c = n(589),
-            d = n(632),
-            p = n(594),
+            c = n(590),
+            d = n(633),
+            p = n(595),
             f = r(p),
             h = {
                 channelName: l.PropTypes.string.isRequired,
@@ -34485,9 +34501,9 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(385),
+            l = n(386),
             u = r(l),
-            c = n(549),
+            c = n(550),
             d = {
                 uuid: l.PropTypes.string.isRequired,
                 renderValue: l.PropTypes.string.isRequired,
@@ -34540,7 +34556,7 @@
         f.propTypes = d;
         t.Experiment = (0, c.connect)(p)(f)
     }, function(e, t) {
-        e.exports = '<div class="player-initializing player-center-content"> <div class=player-loading-spinner></div> </div> <div class="player-overlay player-playlist-transition js-transition" data-stage=0></div> <div class="player-overlay player-overlay--wall player-age-restriction-overlay js-age-restriction-overlay"> <div class=player-center-content> <div class=player-mature-overlay> <p class=js-mature-warning-label>The broadcaster indicated that the channel is intended for mature audiences.</p> <p><button type=button id=mature-link class="player-content-button js-player-mature-accept js-mature-accept-label">Start Watching</button></p> </div> <div class="player-age-gate js-age-gate"> <div class=player-age-gate-warning> <p> <svg class=player-age-gate--icon> <use xlink:href=#age-gate-icon /> </svg> </p> <p class=js-age-gate-warning-label>You must be 21 to view this content. Please enter your date of birth.</p> </div> <div class=player-age-gate-failed-once> <p> <svg class=player-age-gate--fail-icon> <use xlink:href=#age-gate-fail-icon /> </svg> </p> <p class=age-gate-locked-out-label>Sorry, you must be over the age of 21 to view this content.</p> </div> <div class=player-datepicker> <select class="player-datepicker--select js-select-month"> <option class=age-gate-jan value=0 selected=selected>January</option> <option class=age-gate-feb value=1>February</option> <option class=age-gate-mar value=2>March</option> <option class=age-gate-apr value=3>April</option> <option class=age-gate-may value=4>May</option> <option class=age-gate-jun value=5>June</option> <option class=age-gate-jul value=6>July</option> <option class=age-gate-aug value=7>August</option> <option class=age-gate-sept value=8>September</option> <option class=age-gate-oct value=9>October</option> <option class=age-gate-nov value=10>November</option> <option class=age-gate-dec value=11>December</option> </select> <select class="player-datepicker--select js-select-day"></select> <select class="player-datepicker--select js-select-year"></select> <button type=button class="js-age-gate-submit player-content-button">Submit</button> </div> </div> <div class=player-age-gate-locked-out> <p> <svg class=player-age-gate--fail-icon> <use xlink:href=#age-gate-fail-icon /> </svg> </p> <p class=age-gate-locked-out-label>Sorry, you must be over the age of 21 to view this content.</p> </div> </div> </div> <div class="player-offline-banner js-offline-banner"> <img class=js-meta-offline /> </div> <div class="player-overlay player-ad-overlay"> <a class="player-ad-overlay js-player-ad-overlay" target=_blank></a> </div> <div class="player-overlay player-overlay--recommendations js-recommendations-overlay"> <div class="player-tower player-tower--gutter-xs js-player-tower"> <div class="player-tower-columns js-featured-rec-header player-featured-recommendations"> <div class=player-recommendations-header> <h3><span class="js-upnext-label player-featured-recommendations-vod">Up Next</span><span class="js-watchnext-label player-featured-recommendations-live">Watch Next</span></h3> <button class="player-recommendation-button js-featured-recommendations__more-videos"><span class="js-cancelautoplay-label player-featured-recommendations-vod">Cancel</span><span class="js-morevideos-label player-featured-recommendations-live">More Videos</span></button> </div> </div> <div class=player-tower-columns data-columns=12> <div class="player-tower player-tower--gutter-xs js-video-recommendations"> <div class="player-tower-columns player-recommended-stream js-recommended-stream"> <div class=player-card> <a class=player-card__layout> <figure class="player-card__img player-card__img--vod"> <img class=js-recommended-stream__thumbnail /> </figure> <div class=player-card__overlay> <div class="player-card__body js-recommendations-card"> <h4 class="player-card__bread js-recommended-stream__channel"> Channel Name </h4> <h3 class="player-card__title js-recommended-stream__title"> Non-Optional Content Title </h3> <div class="player-card__autoplay-timer js-autoplay-timer"> <h4 class=player-card__info> <span class=js-autoplay-text>Playing in {{timeRemaining}} seconds</span> </h4> <div class="player-card__autoplay js-autoplay"> <div class="autoplay__progress js-autoplay-progress"> </div> </div> </div> <div class="player-card__time-info js-recommendation-time-info"> <h4 class=player-card__info> <time class=js-recommended-stream__date>00:00:00</time> &nbsp;·&nbsp; <time class=js-recommended-stream__length>00:00:00</time> </h4> </div> </div> </div> </a> </div> </div> </div> </div> </div> </div> <div class="player-video-background-banner js-video-background-banner"> <img class=js-meta-video-background /> </div> <div class="player-overlay player-loading js-player-loading"> <div class=player-center-content> <div class=player-loading-spinner></div> </div> </div> <div class="player-overlay player-chromecast-overlay"> <div class=player-center-content> <div class=js-playing-on-label>Playing on {{device}}</div> </div> </div> <div class="player-overlay player-fullscreen-overlay js-control-fullscreen-overlay"> </div> <div class="player-overlay player-extensions" id=js-player-extension-root> </div> <div class="cc-flag player-captions-container js-player-captions-container"> <div class="player-captions-window js-player-captions-window"> <div class="player-captions js-player-captions"></div> </div> </div> <div class="player-overlay player-play-overlay"> <button type=button class="player-button player-button-play js-control-play-button"> <svg class=player-icon-play><use xlink:href=#icon_play /></svg> </button> </div> <div class="player-overlay player-overlay--wall player-product-overlay js-player-product-overlay"> <div class="player-center-content player-product js-player-product"> <p></p> <a href="" target=_blank class="purchase_button js-subscribe-label">Subscribe</a> </div> </div> <div class="player-overlay player-overlay--wall player-overlay--empty-collection js-empty-collection-overlay" data-active=false> <div class=player-center-content> <p class=js-empty-collection-label>This collection is empty.</p> </div> </div> <div class="player-overlay player-playlist-comingup"> <div class=player-center-content> <div class=player-loading-spinner></div> <p> <span class=js-meta-name></span><span class=js-playlist-started-label> has started a playlist.</span> <br/> <span class=js-playlist-comingup></span> </p> </div> </div> <div class="player-hover player-controls-top js-controls-top"> <div class="collection-nav js-collection-nav" data-show-nav=false> <div class="collection-collapsed__layout js-collection-collapsed__layout"> <div class="pl-flex pl-flex--verticalCenter pl-flex--nowrap"> <button type=button class="collection-button pl-flex__item player-icon--open-collection js-icon-open-collection"> <svg> <use xlink:href=#icon_open_collection /> </svg> </button> <div class="collection-collapsed-info pl-flex pl-flex--verticalCenter pl-flex__item"> <div class="collection-collapsed-info__title pl-flex__item js-collection-collapsed-title">Some Fantastic Collection Long Name Long Name Long Name Long Name</div> <span class="middot-divider pl-flex__item"></span> <span class="collection-collapsed-info__number pl-flex__item js-collection-collapsed-number">1/4 videos</span> </div> </div> </div> <div class="collection-divider js-collection-divider" data-show-divider=false></div> </div> <div id=stream-info /> </div> <div id=js-collection-sidebar></div> <div id=js-follow-panel></div> <div class="collection-sidebar js-collection-sidebar" data-show-sidebar=false> <div class=collection-sidebar-header> <div class=collection-sidebar-header__layout> <div class="collection-sidebar-header__title ellipsis js-collection-title">Some Fantastic Collection Long Name Long Name Long Name Long Name</div> <div class=collection-sidebar-header-meta> <span class=js-collection-author>By a_llama_mall</span> <span class=middot-divider></span> <span class=js-collection-items-count>5 videos</span> <span class=middot-divider></span> <span class=js-collection-time-length>2 hours</span> </div> </div> <button type=button class="collection-close-button player-button player-icon--close-collection js-icon-close-collection"> <svg><use xlink:href=#icon_close_md /></svg> </button> </div> <div class="collection-sidebar-item-container js-collection-item-container"> <div class="collection-sidebar-item pl-flex pl-flex--verticalCenter pl-flex--nowrap js-collection-item" data-currentvod=false data-vod-id=""> <div class="collection-sidebar-item__number pl-flex__item js-collection-item-number">155</div> <img class="collection-sidebar-item__thumbnail pl-flex__item js-collection-item-thumbnail"/> <div class="collection-sidebar-item-detail pl-flex__item"> <div class="collection-sidebar-item-detail__title js-collection-item-title">World\'s Most Recent Stream Long Title Haha</div> <div class="collection-sidebar-item-detail__meta js-collection-item-meta"> <span class=js-collection-item-detail-channel>Annemunition</span> <span class="collection-sidebar-item__flag collection-sidebar-item__flag__sub" data-sub=false>Subscriber-only</span> <span class="collection-sidebar-item__flag collection-sidebar-item__flag__mature" data-mature=false>Mature</span> <span class="collection-sidebar-item__flag collection-sidebar-item__flag__21" data-age-gate=false>21+</span> </div> </div> </div> </div> </div> <div class=player-storm-warning> <div class=player-center-content> <div class=player-loading-spinner></div> <p> <span class=js-broadcast-down-label>The broadcast is down.</span><br/> <span class=js-broadcast-reload-label>The player will automatically reload when the broadcast is back.</span> </p> </div> </div> <div class=player-error> <div class=player-center-content> <p class=js-player-error></p> </div> </div> <div id=stream-status /> <div class="js-cc-modal-container player-modal__container" data-state=closed> <div class="js-cc-modal player-modal__content" data-tab-selected=presets> <button type=button class="player-modal__close js-cc-custom-modal-dismiss"> <svg><use xlink:href=#icon_close_modal /></svg> </button> <h2 class="js-cc-modal-header player-modal__header">Closed Caption Settings</h2> <ul class="player-tabs clearfix"> <li class="player-tabs__item player-tabs__item--active" data-tab=presets> <a href=# class=js-cc-presets-tab>Presets</a> </li> <li class="player-tabs__item js-cc-tab-text" data-tab=text> <a href=# class=js-cc-text-tab>Text</a> </li> <li class="player-tabs__item js-cc-tab-text" data-tab=effects> <a href=# class=js-cc-effects-tab>Effects</a> </li> <li class=player-tabs__item data-tab=background> <a href=# class=js-cc-background-tab>Background</a> </li> <li class=player-tabs__item data-tab=window> <a href=# class=js-cc-window-tab>Window</a> </li> </ul> <div class=cc-modal-menu-frame data-tab=presets> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=white-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=lime-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=yellow-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=cyan-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=magenta-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=white-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=lime-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=yellow-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=cyan-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=magenta-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=black-on-white>aA</div> </div> <div class=cc-modal-menu-frame data-tab=text> <div class=cc-customize-field> <label class=js-cc-font-label for=cc-font>Font</label> <select class=js-cc-dropdown name=font id=cc-font> <option value=mono-serif>Mono Serif</option> <option value=prop-serif>Serif</option> <option value=mono-sans-serif>Mono Sans-Serif</option> <option value=prop-sans-serif>Sans-Serif</option> <option value=casual>Casual</option> <option value=cursive>Cursive</option> <option value=small-capitals>Small Capitals</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-justification-label for=cc-font-justification>Alignment</label> <select class=js-cc-dropdown name=alignment id=cc-font-justification> <option value=left>Left</option> <option value=center>Center</option> <option value=right>Right</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <input id=font-color-white type=radio name=fontColorName class=js-cc-radio value=white> <label for=font-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-black type=radio name=fontColorName class=js-cc-radio value=black> <label for=font-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-red type=radio name=fontColorName class=js-cc-radio value=red> <label for=font-color-red class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-green type=radio name=fontColorName class=js-cc-radio value=green> <label for=font-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-cyan type=radio name=fontColorName class=js-cc-radio value=cyan> <label for=font-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-magenta type=radio name=fontColorName class=js-cc-radio value=magenta> <label for=font-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-yellow type=radio name=fontColorName class=js-cc-radio value=yellow> <label for=font-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-blue type=radio name=fontColorName class=js-cc-radio value=blue> <label for=font-color-blue class=cc-color-palette__square></label> </div> </div> </div> <div class=cc-customize-field> <label class=js-cc-position-label for=cc-position>Position</label> <select class=js-cc-dropdown name=verticalPosition id=cc-position> <option value=bottom>Bottom</option> <option value=top>Top</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-font-opacity>Opacity</label> <select class=js-cc-dropdown name=fontOpacity id=cc-font-opacity> <option value=solid>Solid</option> <option value=translucent>Translucent</option> <option value=semiTransparent>Semi-Transparent</option> <option value=flashing>Flashing</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-size-label>Size</label> <button class="js-cc-font-size cc-font-size" value=increment>A <span class="js-font-increment-tip player-tip js-control-tip" data-tip="Increase Size"></span> </button> <button class="js-cc-font-size cc-font-size" value=decrement>A <span class="js-font-decrement-tip player-tip js-control-tip" data-tip="Decrease Size"></span> </button> </div> </div> <div class=cc-modal-menu-frame data-tab=effects> <div class=cc-customize-field> <label class=js-cc-style-label>Style</label> <div class=cc-style-palette> <div class=cc-style-palette__container> <input id=style-underline type=checkbox name=fontUnderline class=js-cc-checkbox value=underline> <label for=style-underline class=cc-style-palette__square>U</label> </div> <div class=cc-style-palette__container> <input id=style-italic type=checkbox name=fontItalic class=js-cc-checkbox value=italic> <label for=style-italic class=cc-style-palette__square>I</label> </div> <div class=cc-style-palette__container> <input id=style-bold type=checkbox name=fontBold class=js-cc-checkbox value=bold> <label for=style-bold class=cc-style-palette__square>B</label> </div> </div> </div> <div class=cc-customize-field> <label class=js-cc-edge-label>Effect</label> <div class=cc-edge-palette> <div class=cc-edge-palette__container> <hr class=cc-edge-disabled /> <input id=edge-effect-none type=radio name=edge class=js-cc-radio value=none> <label for=edge-effect-none class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-raised type=radio name=edge class=js-cc-radio value=raised> <label for=edge-effect-raised class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-drop-shadow type=radio name=edge class=js-cc-radio value=drop> <label for=edge-effect-drop-shadow class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-depressed type=radio name=edge class=js-cc-radio value=depressed> <label for=edge-effect-depressed class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-uniform type=radio name=edge class=js-cc-radio value=uniform> <label for=edge-effect-uniform class=cc-edge-palette__square>aA</label> </div> </div> </div> </div> <div class=cc-modal-menu-frame data-tab=background> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-bg-opacity>Opacity</label> <select class=js-cc-dropdown name=backgroundOpacity id=cc-bg-opacity> <option class=js-cc-opacity-solid value=solid>Solid</option> <option class=js-cc-opacity-translucent value=translucent>Translucent</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <hr class=cc-no-color /> <input id=background-transparent type=radio name=backgroundColorName class=js-cc-radio value=transparent> <label for=background-transparent class="cc-color-palette__square cc-color-palette__square-no-color"></label> </div> <div class=cc-color-palette__container> <input id=background-color-white type=radio name=backgroundColorName class=js-cc-radio value=white> <label for=background-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-lightgray type=radio name=backgroundColorName class=js-cc-radio value=lightgray> <label for=background-color-lightgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-gray type=radio name=backgroundColorName class=js-cc-radio value=gray> <label for=background-color-gray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-darkgray type=radio name=backgroundColorName class=js-cc-radio value=darkgray> <label for=background-color-darkgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-black type=radio name=backgroundColorName class=js-cc-radio value=black> <label for=background-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-green type=radio name=backgroundColorName class=js-cc-radio value=green> <label for=background-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-blue type=radio name=backgroundColorName class=js-cc-radio value=blue> <label for=background-color-blue class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-cyan type=radio name=backgroundColorName class=js-cc-radio value=cyan> <label for=background-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-magenta type=radio name=backgroundColorName class=js-cc-radio value=magenta> <label for=background-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-yellow type=radio name=backgroundColorName class=js-cc-radio value=yellow> <label for=background-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-red type=radio name=backgroundColorName class=js-cc-radio value=red> <label for=background-color-red class=cc-color-palette__square></label> </div> </div> </div> </div> <div class=cc-modal-menu-frame data-tab=window> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-window-opacity>Opacity</label> <select class=js-cc-dropdown name=windowOpacity id=cc-window-opacity> <option class=js-cc-opacity-solid value=solid>Solid</option> <option class=js-cc-opacity-translucent value=translucent>Translucent</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <hr class=cc-no-color /> <input id=window-transparent type=radio name=windowColorName class=js-cc-radio value=transparent> <label for=window-transparent class="cc-color-palette__square cc-color-palette__square-no-color"></label> </div> <div class=cc-color-palette__container> <input id=window-color-white type=radio name=windowColorName class=js-cc-radio value=white> <label for=window-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-lightgray type=radio name=windowColorName class=js-cc-radio value=lightgray> <label for=window-color-lightgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-gray type=radio name=windowColorName class=js-cc-radio value=gray> <label for=window-color-gray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-darkgray type=radio name=windowColorName class=js-cc-radio value=darkgray> <label for=window-color-darkgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-black type=radio name=windowColorName class=js-cc-radio value=black> <label for=window-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-green type=radio name=windowColorName class=js-cc-radio value=green> <label for=window-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-blue type=radio name=windowColorName class=js-cc-radio value=blue> <label for=window-color-blue class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-cyan type=radio name=windowColorName class=js-cc-radio value=cyan> <label for=window-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-magenta type=radio name=windowColorName class=js-cc-radio value=magenta> <label for=window-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-yellow type=radio name=windowColorName class=js-cc-radio value=yellow> <label for=window-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-red type=radio name=windowColorName class=js-cc-radio value=red> <label for=window-color-red class=cc-color-palette__square></label> </div> </div> </div> </div> </div> </div> <div class="player-hover player-controls-bottom pl-flex js-controls-bottom"> <div id=js-player-seek class=player-seek /> <div class=player-buttons-left> <button type=button class="player-button player-button--playpause js-control-playpause-button" tabindex=-1> <span class="pause-button js-pause-button"> <span class="player-tip player-tip--aleft js-tip" data-tip=Pause></span> <svg class=player-icon-pause><use xlink:href=#icon_pause /></svg> </span> <span class="play-button js-play-button"> <span class="player-tip player-tip--aleft js-tip" data-tip=Play></span> <svg class=player-icon-play><use xlink:href=#icon_play /></svg> </span> </button> <div id=js-player-volume class=player-volume /> </div> <div class=player-buttons-right> <div class="player-menu player-settings-contain js-quality-display-contain" data-q=""> <div class=player-quality> <div class=player-quality__display><span class=js-quality-display></span></div> </div> <button type=button class="player-button player-button--settings js-menu-button js-menu-button-settings" data-state=menu-closed tabindex=-1> <span class="player-tip js-tip" data-tip=Options></span> <div class=player-settings-icon><svg><use xlink:href=#icon_settings /></svg></div> </button> <div id=js-notification-popup-container></div> <div class="player-menu__menu js-menu" data-menu=main> <div class="js-main-menu settings-menu--main player-main-menu"> <div class=player-menu__section> <p class="player-menu__header js-video-quality-label">Video Quality</p> <p class=player-menu__item> <select class="pl-form__input player-menu__select player-menu__item-control js-quality" tabindex=-1></select> </p> </div> <div class="player-menu__section player-video-issue js-video-issue"> <p class="player-menu__header js-report-issue-label">Report Playback Issue</p> <form class="player-menu__item player-video-issue__form js-video-issue-form pl-flex pl-flex--nowrap"> <select name=issue class="pl-form__input player-video-issue__select player-menu__select pl-flex__item--grow" tabindex=-1> <option value="" disabled=disabled selected=selected class=js-select-label>Select</option> <option value=stutter-both class=js-audio-video-stutter-label>Audio and video stutter</option> <option value=stutter-video class=js-video-stutter-label>Video stutters, but audio is fine</option> <option value=black-screen class=js-video-black-label>Video is completely black or doesn’t load</option> <option value=av-desync class=js-audio-video-desync-label>Audio and video aren\'t synced</option> <option value=fullscreen-broken class=js-fullscreen-not-working-label>Fullscreen playback doesn\'t work</option> <option value=ad-volume class=js-ad-too-loud-label>Advertisement can\'t be muted or is too loud</option> <option value=ad-repeat class=js-ad-too-often-label>Advertisement has played too many times</option> </select> <button type=submit class="player-video-issue__submit pl-button pl-button--hollow js-submit-label pl-button--small" tabindex=-1>Submit</button> </form> </div> <div class="player-menu__section player-menu-html5 js-menu-html5"> <div class=player-menu__header> <span class=js-menu-header>HTML5 Player</span> <a class=player-what target=_blank href=http://link.twitch.tv/html5-beta-playeroptions-whatisthis>?</a> </div> <div class="player-menu__item pl-flex pl-flex--nowrap"> <a class="player-switch js-html5-slider" data-value=on> <div class=switch-label>ON</div> <div class=switch-toggle></div> <div class=switch-label>OFF</div> </a> </div> </div> <div class="player-menu__section player-menu-miniplayer js-menu-miniplayer"> <div class=player-menu__header> <span class=js-menu-header>Mini Player</span> </div> <div class="player-menu__item pl-flex pl-flex--nowrap"> <a class="player-switch js-miniplayer-slider" data-value=on> <div class=switch-label>ON</div> <div class=switch-toggle></div> <div class=switch-label>OFF</div> </a> </div> </div> <div class="player-menu__section trigger-advertisement" style=display:none> <p class=player-menu__header>Run Local Ad <span class=pl-pill>Staff</span></p> <div class=player-menu__item> <button class="player-ad-trigger__preroll pl-button pl-button--hollow pl-button--small player-ad-trigger__button--active">Preroll</button> <button class="player-ad-trigger__midroll pl-button pl-button--hollow pl-button--small player-ad-trigger__button--active">Midroll</button> <button class="player-ad-trigger__postroll pl-button pl-button--hollow pl-button--small player-ad-trigger__button--active">Postroll</button> </div> </div> <div class="player-menu__section player-menu-options"> <div class="cc-flag player-menu__item js-cc-open-modal"> <a href=# class="player-text-link menu-cc-item pl-small"> <span class=js-cc-label>Closed Captioning</span> </a> </div> <p class="player-menu__item player-menu__item--stats pl-small"> <a href=# class="player-text-link js-stats-toggle js-stats-toggle-text" tabindex=-1>Show Video Stats</a> </p> <p class="player-menu__item player-menu__item--popout pl-small"> <a href=# class="player-text-link js-popout-player" tabindex=-1>Popout Player</a> </p> <p class="player-menu__item player-menu__item--copyurl js-copyurl-contain pl-small"> <a href=# class="player-text-link js-copy-url">Copy Video URL at Current Time</a> </p> </div> </div> <div class="player-menu__section player-menu-leave-feedback js-other-feedback"> <div> <button type=button class="player-menu-html5-optout__cancel js-feedback-cancel js-cancel-label" tabindex=-1><svg class=player-menu-html5-back-icon><use xlink:href=#icon_arrow /></svg>Back</button> </div> <p class="player-menu__item js-report-thanks-label">Thanks for your report</p> <p class=player-menu__item><a class="js-other-feedback-back js-leave-feedback-label" target=_blank href=https://twitch.uservoice.com/forums/310207-video-performance-qos>Leave feedback?</a></p> </div> <div class="player-menu__section player-menu-html5-optout js-menu-html5-optout"> <div> <button type=button class="player-menu-html5-optout__cancel js-optout-html5-cancel js-cancel-label" tabindex=-1><svg class=player-menu-html5-back-icon><use xlink:href=#icon_arrow /></svg>Back</button> </div> <p class=player-menu__item>Why are you opting out of the HTML5 player?</p> <form class="player-menu__item player-html5-optout-form js-html5-optout-reason-form"> <select name=optout_reason class="player-html5-optout-select pl-form__input" tabindex=-1> <option value="" disabled=disabled selected=selected class=js-select-label>Select</option> <option value=av-desync class=js-audio-video-desync-label>Audio and video aren\'t synced</option> <option value=buffer-frequently class=js-video-buffers-freq-label>Video buffers frequently</option> <option value=video-wont-start class=js-video-wont-start-label>Video does not start</option> <option value=high-latency class=js-latency-too-high-label>Latency to broadcaster is too high</option> <option value=washed-out-colors class=js-colors-washed-out-label>Colors look washed out</option> <option value=other class=js-none-of-above-label>None of the above</option> </select> <input class="player-html5-optout-other js-html5-optout-othertext" type=text name=other_reason maxlength=255 placeholder="Tell us why"> <div class=player-html5-optout-form__buttons> <button type=button class="pl-button js-optout-html5-submit js-submit-label" tabindex=-1>Submit</button> </div> </form> </div> </div> </div> <button type=button class="cc-flag player-button player-button--cc js-control-cc" tabindex=-1> <span class="player-tip js-control-tip" data-tip=Captions></span> <svg class=js-player-icon-cc><use xlink:href=#icon_cc_on /></svg> <svg class=js-player-icon-cc-deactivated><use xlink:href=#icon_cc_off /></svg> </button> <div class=player-menu> <button type=button class="player-button player-button--clips js-control-clips" data-canclip=false> <span class="player-tip js-tip" data-tip=Clip></span> <svg class=player-icon-clips><use xlink:href=#icon_clips /></svg> </button> <form class=js-create-clip-form method=post action="" target=""> <input class=js-create-clip-player-backend-type type=hidden name=player_backend_type value=""/> <input class=js-create-clip-channel type=hidden name=channel value=""/> <input class=js-create-clip-offset type=hidden name=offset value=""/> <input class=js-create-clip-broadcast_id type=hidden name=broadcast_id value=""/> <input class=js-create-clip-vod_id type=hidden name=vod_id value=""/> <input class=js-create-clip-play_session_id type=hidden name=play_session_id value=""/> </form> </div> <button type=button class="player-button player-button--chromecast js-chromecast-button"> <span class="player-tip js-tip" data-tip=Chromecast></span> <svg class=player-icon-chromecast-p1><use xlink:href=#icon_chromecast_p1 /></svg> <svg class=player-icon-chromecast-p2><use xlink:href=#icon_chromecast_p2 /></svg> <svg class=player-icon-chromecast-p3><use xlink:href=#icon_chromecast_p3 /></svg> <svg class=player-icon-chromecast-p4><use xlink:href=#icon_chromecast_p4 /></svg> <svg class=player-icon-chromecast-p5><use xlink:href=#icon_chromecast_p5 /></svg> </button> <button type=button class="player-button player-button--theatre js-control-theatre" tabindex=-1> <span class="enter-theatre-button js-theatre-button"> <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Theater Mode"></span> <svg class=player-icon-theatre><use xlink:href=#icon_theatre /></svg> </span> <span class="exit-theatre-button js-exit-theatre-button"> <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Exit Theater Mode"></span> <svg class=player-icon-theatre-deactivate><use xlink:href=#icon_theatre_deactivate /></svg> </span> </button> <button type=button class="player-button player-button--fullscreen js-control-fullscreen" tabindex=-1> <span class="fullscreen-button js-fullscreen"> <span class="player-tip js-control-tip" data-tip=Fullscreen></span> <svg class=player-icon-fullscreen><use xlink:href=#icon_fullscreen /></svg> </span> <span class="exit-fullscreen-button js-exit-fullscreen"> <span class="player-tip js-control-tip" data-tip="Exit Fullscreen"></span> <svg class=player-icon-unfullscreen><use xlink:href=#icon_unfullscreen /></svg> </span> </button> </div> </div> <button type=button class="player-button player-button--twitch js-watch-twitch"> <span class="player-tip player-tip--aright js-tip" data-tip="Watch on Twitch"></span> <svg><use xlink:href=#icon_twitch /></svg> </button> <div class="player-nextvod js-transition" data-stage=0> <div class=player-nextvod-thumb> <img class="player-nextvod-thumb__image js-next-video-thumbnail"/> <div class=player-nextvod-thumb__timer></div> </div> <div class=player-nextvod-meta> <p class="player-nextvod-meta__next js-coming-up-label"><span>Coming Up</span></p> <p class=player-nextvod-meta__title><span class=js-next-video-title></span></p> </div> </div> <div class=player-ad-notice> <p class=js-advertisement-label>Advertisement</p> </div> <div class="player-hover player-playlist-currentvod"> <p class=js-now-playing-label>Now playing: <span class=js-currentvod-title></span></p> </div> <div id=js-player-alert-container /> <ul class="player-playback-stats js-playback-stats" data-state=off> <button type=button class="player-button player-button--noscale player-button--close js-stats-close"> <svg><use xlink:href=#icon_close /></svg> </button> <li>Video Resolution: <div><span class=js-stat-video-resolution></span></div></li> <li>Display Resolution: <div><span class=js-stat-display-resolution></span></div></li> <li>FPS: <div><span class=js-stat-fps></span></div></li> <li>Skipped Frames: <div><span class=js-stat-skipped-frames></span></div></li> <li>Buffer Size: <div><span class=js-stat-buffer-size></span> sec.</div></li> <li class=stats__latency-broadcaster>Latency to Broadcaster: <div><span class=js-stat-hls-latency-broadcaster></span> sec.</div></li> <li class=stats__latency-encoder>Latency to Encoder: <div><span class=js-stat-hls-latency-encoder></span> sec.</div></li> <li>Playback Rate: <div><span class=js-stat-playback-rate></span> Kbps</div></li> <li>Memory Usage: <div><span class=js-stat-memory-usage></span></div></li> <li>Backend Version: <div><span class=js-stat-video-backend-version></span></div></li> </ul> <svg viewBox="0 0 30 30" xmlns=http://www.w3.org/2000/svg style=width:0;height:0;visibility:hidden;display:block> <symbol viewBox="0 0 30 30" id=icon_play><path clip-rule=evenodd d=M10,7l12,8l-12,8V7z fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_pause><path clip-rule=evenodd d="M9,22h4V8H9V22z M17,8v14h4V8H17z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_volumefull><path clip-rule=evenodd d="M22,21.5v-13L23,8v14L22,21.5z M18,10.5l1-0.5v10l-1-0.5V10.5z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_volumemute><path clip-rule=evenodd d="M23,18L23,18h-0.7L20,15.7L17.7,18H17l0,0v-0.7l2.3-2.3L17,12.7V12l0,0h0.7l2.3,2.3l2.3-2.3H23l0,0v0.7L20.7,15l2.3,2.3V18z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_fullscreen><path clip-rule=evenodd d="M7,7 L15.2,7 L12.8,9.4 L15.8,12.4 L12.4,15.8 L9.4,12.8 L7,15.2 L7,7 Z M23,23 L14.8,23 L17.2,20.6 L14.2,17.6 L17.6,14.2 L20.6,17.2 L23,14.8 L23,23 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_unfullscreen><path clip-rule=evenodd d="M15,15 L23.2,15 L20.8,17.4 L23.8,20.4 L20.4,23.8 L17.4,20.8 L15,23.2 L15,15 L15,15 Z M15,15 L6.8,15 L9.2,12.6 L6.2,9.6 L9.6,6.2 L12.6,9.2 L15,6.8 L15,15 L15,15 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_settings><path clip-rule=evenodd d="M13.3589744,7 L16.6410256,7 L18.0769231,9.8 L21.3589744,9.8 L23,12.2 L21.3589744,15 L23,17.8 L21.3589744,20.2 L18.0769231,20.2 L16.6410256,23 L13.3589744,23 L11.9230769,20.2 L8.64102564,20.2 L7,17.8 L8.64102564,15 L7,12.2 L8.64102564,9.8 L11.9230769,9.8 L13.3589744,7 Z M15,17.8 C16.5860485,17.8 17.8717949,16.5463973 17.8717949,15 C17.8717949,13.4536027 16.5860485,12.2 15,12.2 C13.4139515,12.2 12.1282051,13.4536027 12.1282051,15 C12.1282051,16.5463973 13.4139515,17.8 15,17.8 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_theatre><path d="M6 21h11V9H6v12zM19 9v12h5V9h-5z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_theatre_deactivate><path d="M6 9h11v12H6V9zm2 2h9v8H8v-8zm9-2h7v12h-7V9zm2 2h3v8h-3v-8z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 63 30" id=icon_twitch><path clip-rule=evenodd d="M55,19 L52,19 L52,13 L49,13 L49,19 L46,19 L46,8 L49,8 L49,10 L53,10 L55,12 L55,19 L55,19 Z M45,13 L41,13 L41,16 L45,16 L45,19 L40,19 L38,17 L38,12 L40,10 L45,10 L45,13 L45,13 Z M37,13 L34,13 L34,16 L37,16 L37,19 L33,19 L31,17 L31,8 L34,8 L34,10 L37,10 L37,13 L37,13 Z M27,8 L30,8 L30,9 L27,9 L27,8 Z M27,10 L30,10 L30,19 L27,19 L27,10 Z M26,17 L24,19 L15,19 L15,10 L18,10 L18,16 L19,16 L19,10 L22,10 L22,16 L23,16 L23,10 L26,10 L26,17 L26,17 Z M14,13 L11,13 L11,16 L14,16 L14,19 L10,19 L8,17 L8,8 L11,8 L11,10 L14,10 L14,13 L14,13 Z M53.5,9 L50,9 L50,7 L45.5,7 L43,9 L39.5,9 L38,10.5 L38,9 L35,9 L35,7 L26,7 L26,9 L15,9 L12,7 L7,7 L7,17.5 L9.5,20.125 L14,23 L18,23 L18,22.25 L19.5,23 L25.5,23 L26.5,21.5 L27,23 L31,23 L31,21.5 L32.5,23 L37,23 L37.25,21.5 L38.5,23 L43.5,23 L45,21.5 L45,23 L47.5,23 L49,21.5 L49,23 L52.5,23 L56,19.5 L56,11.5 L53.5,9 L53.5,9 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close><path clip-rule=evenodd d="M15.1035534,15.4571068 L11.5303301,19.0303301 L11.3535534,19.2071068 L11,18.8535534 L11.1767767,18.6767767 L14.75,15.1035534 L11.1767767,11.5303301 L11,11.3535534 L11.3535534,11 L11.5303301,11.1767767 L15.1035534,14.75 L18.6767767,11.1767767 L18.8535534,11 L19.2071068,11.3535534 L19.0303301,11.5303301 L15.4571068,15.1035534 L19.0303301,18.6767767 L19.2071068,18.8535534 L18.8535534,19.2071068 L18.6767767,19.0303301 L15.1035534,15.4571068 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close_md><path clip-rule=evenodd d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p1><path fill-rule=evenodd clip-rule=evenodd d=M15,22c0-0.7-0.1-1.4-0.2-2H22V10H8v3.2C7.4,13.1,6.7,13,6,13V8h18v14H15z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p2><path fill-rule=evenodd clip-rule=evenodd d=M10,13.9V12h10v6h-5.9C13.2,16.2,11.8,14.8,10,13.9z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p3><path fill-rule=evenodd clip-rule=evenodd d=M13,22h-1c0-3.3-2.7-6-6-6v-1C9.9,15,13,18.1,13,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p4><path fill-rule=evenodd clip-rule=evenodd d=M10,22H9c0-1.7-1.3-3-3-3v-1C8.2,18,10,19.8,10,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p5><path fill-rule=evenodd clip-rule=evenodd d=M7,22H6v-1C6.6,21,7,21.4,7,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_clips><path d="M14.802 7.804l-3.83 1.026 2.928 2.321 3.83-1.026-2.928-2.321zm2.895-.776l3.981-1.067.777 2.898-1.83.49-2.928-2.321zM7.969 9.635l-1.745.467L7 13l3.898-1.044-2.929-2.321zM7 13h16v9H7v-9zm1.969 3h2.785l2.228-3h-2.785l-2.228 3zm7.018 0h2.785L21 13h-2.785l-2.228 3z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 30 30" id=icon_cc_on><path fill-rule=evenodd clip-rule=evenodd d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol> <symbol viewBox="0 0 30 30" id=icon_cc_off><path fill-rule=evenodd clip-rule=evenodd d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M24,8 L24,22 L6,22 L6,8 L24,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close_modal><path clip-rule=evenodd d="M13.657 3.757l-4.243 4.243 4.243 4.242-1.415 1.415-4.242-4.243-4.243 4.243-1.414-1.415 4.243-4.242-4.243-4.243 1.414-1.414 4.243 4.243 4.242-4.243 1.415 1.414z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 14 14" id=icon_arrow><path d="M6.46765898,5.00010938 L6.46755335,5 L3.08055618,8.27078515 C2.97320936,8.37444877 2.97610632,8.52662201 3.07163118,8.6255409 L3.47144895,9.03956433 C3.56460436,9.13602957 3.72584608,9.14003286 3.82630008,9.04302556 L6.46765898,6.49229492 L9.10901788,9.04302556 C9.20947188,9.14003286 9.3707136,9.13602957 9.46386901,9.03956433 L9.86368678,8.6255409 C9.95921164,8.52662201 9.9621086,8.37444877 9.85476178,8.27078515 L6.46776461,5 L6.46765898,5.00010938 Z" transform="translate(6.467659, 7.056937) scale(-1, 1) rotate(-270.000000) translate(-6.467659, -7.056937) "></path></symbol> <symbol viewBox="0 0 98 86" id=age-gate-icon><path d="M24 8h50v10h12V8h12v78H0V8h12v10h12V8zm52-8h8v16h-8V0zM14 0h8v16h-8V0zm13.356 43.52h3.8c-.03-.954.068-1.9.29-2.84.225-.938.59-1.78 1.097-2.526.506-.745 1.155-1.348 1.945-1.81.79-.463 1.736-.694 2.84-.694.834 0 1.624.135 2.37.403.744.268 1.393.656 1.944 1.162.552.507.99 1.11 1.32 1.81.327.702.49 1.484.49 2.35 0 1.102-.17 2.07-.513 2.905-.344.835-.85 1.61-1.52 2.326-.672.715-1.514 1.423-2.528 2.124-1.013.7-2.19 1.468-3.532 2.303-1.103.655-2.16 1.356-3.175 2.1-1.014.746-1.923 1.61-2.728 2.595-.805.983-1.468 2.14-1.99 3.465-.52 1.327-.857 2.93-1.006 4.807h20.705v-3.354H30.888c.18-.983.56-1.855 1.14-2.616.582-.76 1.282-1.468 2.102-2.123.82-.656 1.722-1.275 2.705-1.856.984-.58 1.968-1.17 2.952-1.765.983-.626 1.937-1.282 2.86-1.968.925-.686 1.745-1.453 2.46-2.303.716-.85 1.29-1.81 1.722-2.884.432-1.073.648-2.31.648-3.71 0-1.492-.26-2.803-.783-3.936-.522-1.133-1.23-2.08-2.124-2.84-.893-.76-1.944-1.34-3.15-1.744-1.21-.402-2.498-.603-3.87-.603-1.67 0-3.16.283-4.47.85-1.312.566-2.408 1.348-3.287 2.347-.88 1-1.528 2.183-1.945 3.555-.418 1.37-.582 2.86-.492 4.47zM65.17 64V32.297H62.26c-.208 1.192-.596 2.176-1.162 2.95-.567.776-1.26 1.387-2.08 1.834-.82.448-1.736.754-2.75.918-1.013.164-2.057.246-3.13.246v3.04h8.228V64h3.8z" fill=#F9F7FC fill-rule=evenodd /></symbol> <symbol id=age-gate-fail-icon viewBox="0 0 92 81"><path d="M0 75.6l3.067-5.4L9.2 59.4l12.267-21.6 12.266-21.6 6.134-10.8L42.933 0h6.134l3.066 5.4 6.134 10.8 12.266 21.6L82.8 59.4l6.133 10.8L92 75.6 89.06 81H3.44L0 75.6zM40 27h12v13l-3 19h-6l-3-19V27zm1 34h10v10H41V61z" fill=#F9F7FC fill-rule=evenodd /></symbol> <symbol viewBox="0 0 19 19" id=icon_open_collection><path fill-rule=evenodd d="M0,6 L19,6 L19,19 L0,19 L0,6 Z M12.25,12.5 L7,9 L7,16 L12.25,12.5 Z M2,3 L17,3 L17,5 L2,5 L2,3 Z M4,0 L15,0 L15,2 L4,2 L4,0 Z"/></symbol> <symbol id=icon_pl-followcheck viewBox="0 0 16 16"><path clip-rule=evenodd d=M6.5,12.75L2,8.25l2-2l2.5,2.5l5.5-5.5l2,2L6.5,12.75z fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 16 16" id=icon_share_identity><path clip-rule=evenodd d="M11,13H5L1,9V8V7l4-4h6l4,4v1v1L11,13z M8,5C6.344,5,5,6.343,5,8c0,1.656,1.344,3,3,3c1.657,0,3-1.344,3-3C11,6.343,9.657,5,8,5z M8,9C7.447,9,7,8.552,7,8s0.447-1,1-1s1,0.448,1,1S8.553,9,8,9z" fill-rule=evenodd /></symbol> </svg> ';
+        e.exports = '<div class="player-initializing player-center-content"> <div class=player-loading-spinner></div> </div> <div class="player-overlay player-playlist-transition js-transition" data-stage=0></div> <div class="player-overlay player-overlay--wall player-age-restriction-overlay js-age-restriction-overlay"> <div class=player-center-content> <div class=player-mature-overlay> <p class=js-mature-warning-label>The broadcaster indicated that the channel is intended for mature audiences.</p> <p><button type=button id=mature-link class="player-content-button js-player-mature-accept js-mature-accept-label">Start Watching</button></p> </div> <div class="player-age-gate js-age-gate"> <div class=player-age-gate-warning> <p> <svg class=player-age-gate--icon> <use xlink:href=#age-gate-icon /> </svg> </p> <p class=js-age-gate-warning-label>You must be 21 to view this content. Please enter your date of birth.</p> </div> <div class=player-age-gate-failed-once> <p> <svg class=player-age-gate--fail-icon> <use xlink:href=#age-gate-fail-icon /> </svg> </p> <p class=age-gate-locked-out-label>Sorry, you must be over the age of 21 to view this content.</p> </div> <div class=player-datepicker> <select class="player-datepicker--select js-select-month"> <option class=age-gate-jan value=0 selected=selected>January</option> <option class=age-gate-feb value=1>February</option> <option class=age-gate-mar value=2>March</option> <option class=age-gate-apr value=3>April</option> <option class=age-gate-may value=4>May</option> <option class=age-gate-jun value=5>June</option> <option class=age-gate-jul value=6>July</option> <option class=age-gate-aug value=7>August</option> <option class=age-gate-sept value=8>September</option> <option class=age-gate-oct value=9>October</option> <option class=age-gate-nov value=10>November</option> <option class=age-gate-dec value=11>December</option> </select> <select class="player-datepicker--select js-select-day"></select> <select class="player-datepicker--select js-select-year"></select> <button type=button class="js-age-gate-submit player-content-button">Submit</button> </div> </div> <div class=player-age-gate-locked-out> <p> <svg class=player-age-gate--fail-icon> <use xlink:href=#age-gate-fail-icon /> </svg> </p> <p class=age-gate-locked-out-label>Sorry, you must be over the age of 21 to view this content.</p> </div> </div> </div> <div class="player-offline-banner js-offline-banner"> <img class=js-meta-offline /> </div> <div class="player-overlay player-ad-overlay"> <a class="player-ad-overlay js-player-ad-overlay" target=_blank></a> </div> <div class="player-overlay player-overlay--recommendations js-recommendations-overlay"> <div class="player-tower player-tower--gutter-xs js-player-tower"> <div class="player-tower-columns js-featured-rec-header player-featured-recommendations"> <div class=player-recommendations-header> <h3><span class="js-upnext-label player-featured-recommendations-vod">Up Next</span><span class="js-watchnext-label player-featured-recommendations-live">Watch Next</span></h3> <button class="player-recommendation-button js-featured-recommendations__more-videos"><span class="js-cancelautoplay-label player-featured-recommendations-vod">Cancel</span><span class="js-morevideos-label player-featured-recommendations-live">More Videos</span></button> </div> </div> <div class=player-tower-columns data-columns=12> <div class="player-tower player-tower--gutter-xs js-video-recommendations"> <div class="player-tower-columns player-recommended-stream js-recommended-stream"> <div class=player-card> <a class=player-card__layout> <figure class="player-card__img player-card__img--vod"> <img class=js-recommended-stream__thumbnail /> </figure> <div class=player-card__overlay> <div class="player-card__body js-recommendations-card"> <h4 class="player-card__bread js-recommended-stream__channel"> Channel Name </h4> <h3 class="player-card__title js-recommended-stream__title"> Non-Optional Content Title </h3> <div class="player-card__autoplay-timer js-autoplay-timer"> <h4 class=player-card__info> <span class=js-autoplay-text>Playing in {{timeRemaining}} seconds</span> </h4> <div class="player-card__autoplay js-autoplay"> <div class="autoplay__progress js-autoplay-progress"> </div> </div> </div> <div class="player-card__time-info js-recommendation-time-info"> <h4 class=player-card__info> <time class=js-recommended-stream__date>00:00:00</time> &nbsp;·&nbsp; <time class=js-recommended-stream__length>00:00:00</time> </h4> </div> </div> </div> </a> </div> </div> </div> </div> </div> </div> <div class="player-video-background-banner js-video-background-banner"> <img class=js-meta-video-background /> </div> <div class="player-overlay player-loading js-player-loading"> <div class=player-center-content> <div class=player-loading-spinner></div> </div> </div> <div class="player-overlay player-chromecast-overlay"> <div class=player-center-content> <div class=js-playing-on-label>Playing on {{device}}</div> </div> </div> <div class="player-overlay player-fullscreen-overlay js-control-fullscreen-overlay"> </div> <div class="player-overlay player-extensions" id=js-player-extension-root> </div> <div class="cc-flag player-captions-container js-player-captions-container"> <div class="player-captions-window js-player-captions-window"> <div class="player-captions js-player-captions"></div> </div> </div> <div class="player-overlay player-play-overlay"> <button type=button class="player-button player-button-play js-control-play-button"> <svg class=player-icon-play><use xlink:href=#icon_play /></svg> </button> </div> <div class="player-overlay player-overlay--wall player-product-overlay js-player-product-overlay"> <div class="player-center-content player-product js-player-product"> <p></p> <a href="" target=_blank class="purchase_button js-subscribe-label">Subscribe</a> </div> </div> <div class="player-overlay player-overlay--wall player-overlay--empty-collection js-empty-collection-overlay" data-active=false> <div class=player-center-content> <p class=js-empty-collection-label>This collection is empty.</p> </div> </div> <div class="player-overlay player-playlist-comingup"> <div class=player-center-content> <div class=player-loading-spinner></div> <p> <span class=js-meta-name></span><span class=js-playlist-started-label> has started a playlist.</span> <br/> <span class=js-playlist-comingup></span> </p> </div> </div> <div class="player-hover player-controls-top js-controls-top"> <div class="collection-nav js-collection-nav" data-show-nav=false> <div class="collection-collapsed__layout js-collection-collapsed__layout"> <div class="pl-flex pl-flex--verticalCenter pl-flex--nowrap"> <button type=button class="collection-button pl-flex__item player-icon--open-collection js-icon-open-collection"> <svg> <use xlink:href=#icon_open_collection /> </svg> </button> <div class="collection-collapsed-info pl-flex pl-flex--verticalCenter pl-flex__item"> <div class="collection-collapsed-info__title pl-flex__item js-collection-collapsed-title">Some Fantastic Collection Long Name Long Name Long Name Long Name</div> <span class="middot-divider pl-flex__item"></span> <span class="collection-collapsed-info__number pl-flex__item js-collection-collapsed-number">1/4 videos</span> </div> </div> </div> <div class="collection-divider js-collection-divider" data-show-divider=false></div> </div> <div id=stream-info /> </div> <div id=js-collection-sidebar></div> <div id=js-follow-panel></div> <div class="collection-sidebar js-collection-sidebar" data-show-sidebar=false> <div class=collection-sidebar-header> <div class=collection-sidebar-header__layout> <div class="collection-sidebar-header__title ellipsis js-collection-title">Some Fantastic Collection Long Name Long Name Long Name Long Name</div> <div class=collection-sidebar-header-meta> <span class=js-collection-author>By a_llama_mall</span> <span class=middot-divider></span> <span class=js-collection-items-count>5 videos</span> <span class=middot-divider></span> <span class=js-collection-time-length>2 hours</span> </div> </div> <button type=button class="collection-close-button player-button player-icon--close-collection js-icon-close-collection"> <svg><use xlink:href=#icon_close_md /></svg> </button> </div> <div class="collection-sidebar-item-container js-collection-item-container"> <div class="collection-sidebar-item pl-flex pl-flex--verticalCenter pl-flex--nowrap js-collection-item" data-currentvod=false data-vod-id=""> <div class="collection-sidebar-item__number pl-flex__item js-collection-item-number">155</div> <img class="collection-sidebar-item__thumbnail pl-flex__item js-collection-item-thumbnail"/> <div class="collection-sidebar-item-detail pl-flex__item"> <div class="collection-sidebar-item-detail__title js-collection-item-title">World\'s Most Recent Stream Long Title Haha</div> <div class="collection-sidebar-item-detail__meta js-collection-item-meta"> <span class=js-collection-item-detail-channel>Annemunition</span> <span class="collection-sidebar-item__flag collection-sidebar-item__flag__sub" data-sub=false>Subscriber-only</span> <span class="collection-sidebar-item__flag collection-sidebar-item__flag__mature" data-mature=false>Mature</span> <span class="collection-sidebar-item__flag collection-sidebar-item__flag__21" data-age-gate=false>21+</span> </div> </div> </div> </div> </div> <div class=player-storm-warning> <div class=player-center-content> <div class=player-loading-spinner></div> <p> <span class=js-broadcast-down-label>The broadcast is down.</span><br/> <span class=js-broadcast-reload-label>The player will automatically reload when the broadcast is back.</span> </p> </div> </div> <div class=player-error> <div class=player-center-content> <p class=js-player-error></p> </div> </div> <div id=stream-status /> <div id=js-cc-options-modal class="js-cc-modal-container player-modal__container" data-state=closed> <div class="js-cc-modal player-modal__content" data-tab-selected=presets> <button type=button class="player-modal__close js-cc-custom-modal-dismiss"> <svg><use xlink:href=#icon_close_modal /></svg> </button> <h2 class="js-cc-modal-header player-modal__header">Closed Caption Settings</h2> <ul class="player-tabs clearfix"> <li class="player-tabs__item player-tabs__item--active" data-tab=presets> <a href=# class=js-cc-presets-tab>Presets</a> </li> <li class="player-tabs__item js-cc-tab-text" data-tab=text> <a href=# class=js-cc-text-tab>Text</a> </li> <li class="player-tabs__item js-cc-tab-text" data-tab=effects> <a href=# class=js-cc-effects-tab>Effects</a> </li> <li class=player-tabs__item data-tab=background> <a href=# class=js-cc-background-tab>Background</a> </li> <li class=player-tabs__item data-tab=window> <a href=# class=js-cc-window-tab>Window</a> </li> </ul> <div class=cc-modal-menu-frame data-tab=presets> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=white-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=lime-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=yellow-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=cyan-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=magenta-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=white-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=lime-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=yellow-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=cyan-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=magenta-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=black-on-white>aA</div> </div> <div class=cc-modal-menu-frame data-tab=text> <div class=cc-customize-field> <label class=js-cc-font-label for=cc-font>Font</label> <select class=js-cc-dropdown name=font id=cc-font> <option value=mono-serif>Mono Serif</option> <option value=prop-serif>Serif</option> <option value=mono-sans-serif>Mono Sans-Serif</option> <option value=prop-sans-serif>Sans-Serif</option> <option value=casual>Casual</option> <option value=cursive>Cursive</option> <option value=small-capitals>Small Capitals</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-justification-label for=cc-font-justification>Alignment</label> <select class=js-cc-dropdown name=alignment id=cc-font-justification> <option value=left>Left</option> <option value=center>Center</option> <option value=right>Right</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <input id=font-color-white type=radio name=fontColorName class=js-cc-radio value=white> <label for=font-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-black type=radio name=fontColorName class=js-cc-radio value=black> <label for=font-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-red type=radio name=fontColorName class=js-cc-radio value=red> <label for=font-color-red class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-green type=radio name=fontColorName class=js-cc-radio value=green> <label for=font-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-cyan type=radio name=fontColorName class=js-cc-radio value=cyan> <label for=font-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-magenta type=radio name=fontColorName class=js-cc-radio value=magenta> <label for=font-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-yellow type=radio name=fontColorName class=js-cc-radio value=yellow> <label for=font-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-blue type=radio name=fontColorName class=js-cc-radio value=blue> <label for=font-color-blue class=cc-color-palette__square></label> </div> </div> </div> <div class=cc-customize-field> <label class=js-cc-position-label for=cc-position>Position</label> <select class=js-cc-dropdown name=verticalPosition id=cc-position> <option value=bottom>Bottom</option> <option value=top>Top</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-font-opacity>Opacity</label> <select class=js-cc-dropdown name=fontOpacity id=cc-font-opacity> <option value=solid>Solid</option> <option value=translucent>Translucent</option> <option value=semiTransparent>Semi-Transparent</option> <option value=flashing>Flashing</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-size-label>Size</label> <button class="js-cc-font-size cc-font-size" value=increment>A <span class="js-font-increment-tip player-tip js-control-tip" data-tip="Increase Size"></span> </button> <button class="js-cc-font-size cc-font-size" value=decrement>A <span class="js-font-decrement-tip player-tip js-control-tip" data-tip="Decrease Size"></span> </button> </div> </div> <div class=cc-modal-menu-frame data-tab=effects> <div class=cc-customize-field> <label class=js-cc-style-label>Style</label> <div class=cc-style-palette> <div class=cc-style-palette__container> <input id=style-underline type=checkbox name=fontUnderline class=js-cc-checkbox value=underline> <label for=style-underline class=cc-style-palette__square>U</label> </div> <div class=cc-style-palette__container> <input id=style-italic type=checkbox name=fontItalic class=js-cc-checkbox value=italic> <label for=style-italic class=cc-style-palette__square>I</label> </div> <div class=cc-style-palette__container> <input id=style-bold type=checkbox name=fontBold class=js-cc-checkbox value=bold> <label for=style-bold class=cc-style-palette__square>B</label> </div> </div> </div> <div class=cc-customize-field> <label class=js-cc-edge-label>Effect</label> <div class=cc-edge-palette> <div class=cc-edge-palette__container> <hr class=cc-edge-disabled /> <input id=edge-effect-none type=radio name=edge class=js-cc-radio value=none> <label for=edge-effect-none class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-raised type=radio name=edge class=js-cc-radio value=raised> <label for=edge-effect-raised class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-drop-shadow type=radio name=edge class=js-cc-radio value=drop> <label for=edge-effect-drop-shadow class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-depressed type=radio name=edge class=js-cc-radio value=depressed> <label for=edge-effect-depressed class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-uniform type=radio name=edge class=js-cc-radio value=uniform> <label for=edge-effect-uniform class=cc-edge-palette__square>aA</label> </div> </div> </div> </div> <div class=cc-modal-menu-frame data-tab=background> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-bg-opacity>Opacity</label> <select class=js-cc-dropdown name=backgroundOpacity id=cc-bg-opacity> <option class=js-cc-opacity-solid value=solid>Solid</option> <option class=js-cc-opacity-translucent value=translucent>Translucent</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <hr class=cc-no-color /> <input id=background-transparent type=radio name=backgroundColorName class=js-cc-radio value=transparent> <label for=background-transparent class="cc-color-palette__square cc-color-palette__square-no-color"></label> </div> <div class=cc-color-palette__container> <input id=background-color-white type=radio name=backgroundColorName class=js-cc-radio value=white> <label for=background-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-lightgray type=radio name=backgroundColorName class=js-cc-radio value=lightgray> <label for=background-color-lightgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-gray type=radio name=backgroundColorName class=js-cc-radio value=gray> <label for=background-color-gray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-darkgray type=radio name=backgroundColorName class=js-cc-radio value=darkgray> <label for=background-color-darkgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-black type=radio name=backgroundColorName class=js-cc-radio value=black> <label for=background-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-green type=radio name=backgroundColorName class=js-cc-radio value=green> <label for=background-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-blue type=radio name=backgroundColorName class=js-cc-radio value=blue> <label for=background-color-blue class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-cyan type=radio name=backgroundColorName class=js-cc-radio value=cyan> <label for=background-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-magenta type=radio name=backgroundColorName class=js-cc-radio value=magenta> <label for=background-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-yellow type=radio name=backgroundColorName class=js-cc-radio value=yellow> <label for=background-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-red type=radio name=backgroundColorName class=js-cc-radio value=red> <label for=background-color-red class=cc-color-palette__square></label> </div> </div> </div> </div> <div class=cc-modal-menu-frame data-tab=window> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-window-opacity>Opacity</label> <select class=js-cc-dropdown name=windowOpacity id=cc-window-opacity> <option class=js-cc-opacity-solid value=solid>Solid</option> <option class=js-cc-opacity-translucent value=translucent>Translucent</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <hr class=cc-no-color /> <input id=window-transparent type=radio name=windowColorName class=js-cc-radio value=transparent> <label for=window-transparent class="cc-color-palette__square cc-color-palette__square-no-color"></label> </div> <div class=cc-color-palette__container> <input id=window-color-white type=radio name=windowColorName class=js-cc-radio value=white> <label for=window-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-lightgray type=radio name=windowColorName class=js-cc-radio value=lightgray> <label for=window-color-lightgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-gray type=radio name=windowColorName class=js-cc-radio value=gray> <label for=window-color-gray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-darkgray type=radio name=windowColorName class=js-cc-radio value=darkgray> <label for=window-color-darkgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-black type=radio name=windowColorName class=js-cc-radio value=black> <label for=window-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-green type=radio name=windowColorName class=js-cc-radio value=green> <label for=window-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-blue type=radio name=windowColorName class=js-cc-radio value=blue> <label for=window-color-blue class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-cyan type=radio name=windowColorName class=js-cc-radio value=cyan> <label for=window-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-magenta type=radio name=windowColorName class=js-cc-radio value=magenta> <label for=window-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-yellow type=radio name=windowColorName class=js-cc-radio value=yellow> <label for=window-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-red type=radio name=windowColorName class=js-cc-radio value=red> <label for=window-color-red class=cc-color-palette__square></label> </div> </div> </div> </div> </div> </div> <div class="player-hover player-controls-bottom pl-flex js-controls-bottom"> <div id=js-player-seek class=player-seek /> <div class=player-buttons-left> <button type=button class="player-button player-button--playpause js-control-playpause-button" tabindex=-1> <span class="pause-button js-pause-button"> <span class="player-tip player-tip--aleft js-tip" data-tip=Pause></span> <svg class=player-icon-pause><use xlink:href=#icon_pause /></svg> </span> <span class="play-button js-play-button"> <span class="player-tip player-tip--aleft js-tip" data-tip=Play></span> <svg class=player-icon-play><use xlink:href=#icon_play /></svg> </span> </button> <div id=js-player-volume class=player-volume /> </div> <div class=player-buttons-right> <div class="player-menu player-settings-contain js-quality-display-contain" data-q=""> <div class=player-quality> <div class=player-quality__display><span class=js-quality-display></span></div> </div> <button type=button class="player-button player-button--settings js-menu-button js-menu-button-settings" data-state=menu-closed tabindex=-1> <span class="player-tip js-tip" data-tip=Options></span> <div class=player-settings-icon><svg><use xlink:href=#icon_settings /></svg></div> </button> <div id=js-notification-popup-container></div> <div class="player-menu__menu js-menu" data-menu=main> <div class="js-main-menu settings-menu--main player-main-menu"> <div class=player-menu__section> <p class="player-menu__header js-video-quality-label">Video Quality</p> <p class=player-menu__item> <select class="pl-form__input player-menu__select player-menu__item-control js-quality" tabindex=-1></select> </p> </div> <div class="player-menu__section player-video-issue js-video-issue"> <p class="player-menu__header js-report-issue-label">Report Playback Issue</p> <form class="player-menu__item player-video-issue__form js-video-issue-form pl-flex pl-flex--nowrap"> <select name=issue class="pl-form__input player-video-issue__select player-menu__select pl-flex__item--grow" tabindex=-1> <option value="" disabled=disabled selected=selected class=js-select-label>Select</option> <option value=stutter-both class=js-audio-video-stutter-label>Audio and video stutter</option> <option value=stutter-video class=js-video-stutter-label>Video stutters, but audio is fine</option> <option value=black-screen class=js-video-black-label>Video is completely black or doesn’t load</option> <option value=av-desync class=js-audio-video-desync-label>Audio and video aren\'t synced</option> <option value=fullscreen-broken class=js-fullscreen-not-working-label>Fullscreen playback doesn\'t work</option> <option value=ad-volume class=js-ad-too-loud-label>Advertisement can\'t be muted or is too loud</option> <option value=ad-repeat class=js-ad-too-often-label>Advertisement has played too many times</option> </select> <button type=submit class="player-video-issue__submit pl-button pl-button--hollow js-submit-label pl-button--small" tabindex=-1>Submit</button> </form> </div> <div class="player-menu__section player-menu-html5 js-menu-html5"> <div class=player-menu__header> <span class=js-menu-header>HTML5 Player</span> <a class=player-what target=_blank href=http://link.twitch.tv/html5-beta-playeroptions-whatisthis>?</a> </div> <div class="player-menu__item pl-flex pl-flex--nowrap"> <a class="player-switch js-html5-slider" data-value=on> <div class=switch-label>ON</div> <div class=switch-toggle></div> <div class=switch-label>OFF</div> </a> </div> </div> <div class="player-menu__section player-menu-miniplayer js-menu-miniplayer"> <div class=player-menu__header> <span class=js-menu-header>Mini Player</span> </div> <div class="player-menu__item pl-flex pl-flex--nowrap"> <a class="player-switch js-miniplayer-slider" data-value=on> <div class=switch-label>ON</div> <div class=switch-toggle></div> <div class=switch-label>OFF</div> </a> </div> </div> <div class="player-menu__section trigger-advertisement" style=display:none> <p class=player-menu__header>Run Local Ad <span class=pl-pill>Staff</span></p> <div class=player-menu__item> <button class="player-ad-trigger__preroll pl-button pl-button--hollow pl-button--small player-ad-trigger__button--active">Preroll</button> <button class="player-ad-trigger__midroll pl-button pl-button--hollow pl-button--small player-ad-trigger__button--active">Midroll</button> <button class="player-ad-trigger__postroll pl-button pl-button--hollow pl-button--small player-ad-trigger__button--active">Postroll</button> </div> </div> <div class="player-menu__section player-menu-options"> <div class="cc-flag player-menu__item js-cc-open-modal"> <a href=# class="player-text-link menu-cc-item pl-small"> <span class=js-cc-label>Closed Captioning</span> </a> </div> <p class="player-menu__item player-menu__item--stats pl-small"> <a href=# class="player-text-link js-stats-toggle js-stats-toggle-text" tabindex=-1>Show Video Stats</a> </p> <p class="player-menu__item player-menu__item--popout pl-small"> <a href=# class="player-text-link js-popout-player" tabindex=-1>Popout Player</a> </p> <p class="player-menu__item player-menu__item--copyurl js-copyurl-contain pl-small"> <a href=# class="player-text-link js-copy-url">Copy Video URL at Current Time</a> </p> </div> </div> <div class="player-menu__section player-menu-leave-feedback js-other-feedback"> <div> <button type=button class="player-menu-html5-optout__cancel js-feedback-cancel js-cancel-label" tabindex=-1><svg class=player-menu-html5-back-icon><use xlink:href=#icon_arrow /></svg>Back</button> </div> <p class="player-menu__item js-report-thanks-label">Thanks for your report</p> <p class=player-menu__item><a class="js-other-feedback-back js-leave-feedback-label" target=_blank href=https://twitch.uservoice.com/forums/310207-video-performance-qos>Leave feedback?</a></p> </div> <div class="player-menu__section player-menu-html5-optout js-menu-html5-optout"> <div> <button type=button class="player-menu-html5-optout__cancel js-optout-html5-cancel js-cancel-label" tabindex=-1><svg class=player-menu-html5-back-icon><use xlink:href=#icon_arrow /></svg>Back</button> </div> <p class=player-menu__item>Why are you opting out of the HTML5 player?</p> <form class="player-menu__item player-html5-optout-form js-html5-optout-reason-form"> <select name=optout_reason class="player-html5-optout-select pl-form__input" tabindex=-1> <option value="" disabled=disabled selected=selected class=js-select-label>Select</option> <option value=av-desync class=js-audio-video-desync-label>Audio and video aren\'t synced</option> <option value=buffer-frequently class=js-video-buffers-freq-label>Video buffers frequently</option> <option value=video-wont-start class=js-video-wont-start-label>Video does not start</option> <option value=high-latency class=js-latency-too-high-label>Latency to broadcaster is too high</option> <option value=washed-out-colors class=js-colors-washed-out-label>Colors look washed out</option> <option value=other class=js-none-of-above-label>None of the above</option> </select> <input class="player-html5-optout-other js-html5-optout-othertext" type=text name=other_reason maxlength=255 placeholder="Tell us why"> <div class=player-html5-optout-form__buttons> <button type=button class="pl-button js-optout-html5-submit js-submit-label" tabindex=-1>Submit</button> </div> </form> </div> </div> </div> <button type=button class="cc-flag player-button player-button--cc js-control-cc" tabindex=-1> <span class="player-tip js-control-tip" data-tip=Captions></span> <svg class=js-player-icon-cc><use xlink:href=#icon_cc_on /></svg> <svg class=js-player-icon-cc-deactivated><use xlink:href=#icon_cc_off /></svg> </button> <div class=player-menu> <button type=button class="player-button player-button--clips js-control-clips" data-canclip=false> <span class="player-tip js-tip" data-tip=Clip></span> <svg class=player-icon-clips><use xlink:href=#icon_clips /></svg> </button> <form class=js-create-clip-form method=post action="" target=""> <input class=js-create-clip-player-backend-type type=hidden name=player_backend_type value=""/> <input class=js-create-clip-channel type=hidden name=channel value=""/> <input class=js-create-clip-offset type=hidden name=offset value=""/> <input class=js-create-clip-broadcast_id type=hidden name=broadcast_id value=""/> <input class=js-create-clip-vod_id type=hidden name=vod_id value=""/> <input class=js-create-clip-play_session_id type=hidden name=play_session_id value=""/> </form> </div> <button type=button class="player-button player-button--chromecast js-chromecast-button"> <span class="player-tip js-tip" data-tip=Chromecast></span> <svg class=player-icon-chromecast-p1><use xlink:href=#icon_chromecast_p1 /></svg> <svg class=player-icon-chromecast-p2><use xlink:href=#icon_chromecast_p2 /></svg> <svg class=player-icon-chromecast-p3><use xlink:href=#icon_chromecast_p3 /></svg> <svg class=player-icon-chromecast-p4><use xlink:href=#icon_chromecast_p4 /></svg> <svg class=player-icon-chromecast-p5><use xlink:href=#icon_chromecast_p5 /></svg> </button> <button type=button class="player-button player-button--theatre js-control-theatre" tabindex=-1> <span class="enter-theatre-button js-theatre-button"> <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Theater Mode"></span> <svg class=player-icon-theatre><use xlink:href=#icon_theatre /></svg> </span> <span class="exit-theatre-button js-exit-theatre-button"> <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Exit Theater Mode"></span> <svg class=player-icon-theatre-deactivate><use xlink:href=#icon_theatre_deactivate /></svg> </span> </button> <button type=button class="player-button player-button--fullscreen js-control-fullscreen" tabindex=-1> <span class="fullscreen-button js-fullscreen"> <span class="player-tip js-control-tip" data-tip=Fullscreen></span> <svg class=player-icon-fullscreen><use xlink:href=#icon_fullscreen /></svg> </span> <span class="exit-fullscreen-button js-exit-fullscreen"> <span class="player-tip js-control-tip" data-tip="Exit Fullscreen"></span> <svg class=player-icon-unfullscreen><use xlink:href=#icon_unfullscreen /></svg> </span> </button> </div> </div> <button type=button class="player-button player-button--twitch js-watch-twitch"> <span class="player-tip player-tip--aright js-tip" data-tip="Watch on Twitch"></span> <svg><use xlink:href=#icon_twitch /></svg> </button> <div class="player-nextvod js-transition" data-stage=0> <div class=player-nextvod-thumb> <img class="player-nextvod-thumb__image js-next-video-thumbnail"/> <div class=player-nextvod-thumb__timer></div> </div> <div class=player-nextvod-meta> <p class="player-nextvod-meta__next js-coming-up-label"><span>Coming Up</span></p> <p class=player-nextvod-meta__title><span class=js-next-video-title></span></p> </div> </div> <div class=player-ad-notice> <p class=js-advertisement-label>Advertisement</p> </div> <div class="player-hover player-playlist-currentvod"> <p class=js-now-playing-label>Now playing: <span class=js-currentvod-title></span></p> </div> <div id=js-player-alert-container /> <ul class="player-playback-stats js-playback-stats" data-state=off> <button type=button class="player-button player-button--noscale player-button--close js-stats-close"> <svg><use xlink:href=#icon_close /></svg> </button> <li>Video Resolution: <div><span class=js-stat-video-resolution></span></div></li> <li>Display Resolution: <div><span class=js-stat-display-resolution></span></div></li> <li>FPS: <div><span class=js-stat-fps></span></div></li> <li>Skipped Frames: <div><span class=js-stat-skipped-frames></span></div></li> <li>Buffer Size: <div><span class=js-stat-buffer-size></span> sec.</div></li> <li class=stats__latency-broadcaster>Latency to Broadcaster: <div><span class=js-stat-hls-latency-broadcaster></span> sec.</div></li> <li class=stats__latency-encoder>Latency to Encoder: <div><span class=js-stat-hls-latency-encoder></span> sec.</div></li> <li>Playback Rate: <div><span class=js-stat-playback-rate></span> Kbps</div></li> <li>Memory Usage: <div><span class=js-stat-memory-usage></span></div></li> <li>Backend Version: <div><span class=js-stat-video-backend-version></span></div></li> </ul> <svg viewBox="0 0 30 30" xmlns=http://www.w3.org/2000/svg style=width:0;height:0;visibility:hidden;display:block> <symbol viewBox="0 0 30 30" id=icon_play><path clip-rule=evenodd d=M10,7l12,8l-12,8V7z fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_pause><path clip-rule=evenodd d="M9,22h4V8H9V22z M17,8v14h4V8H17z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_volumefull><path clip-rule=evenodd d="M22,21.5v-13L23,8v14L22,21.5z M18,10.5l1-0.5v10l-1-0.5V10.5z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_volumemute><path clip-rule=evenodd d="M23,18L23,18h-0.7L20,15.7L17.7,18H17l0,0v-0.7l2.3-2.3L17,12.7V12l0,0h0.7l2.3,2.3l2.3-2.3H23l0,0v0.7L20.7,15l2.3,2.3V18z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_fullscreen><path clip-rule=evenodd d="M7,7 L15.2,7 L12.8,9.4 L15.8,12.4 L12.4,15.8 L9.4,12.8 L7,15.2 L7,7 Z M23,23 L14.8,23 L17.2,20.6 L14.2,17.6 L17.6,14.2 L20.6,17.2 L23,14.8 L23,23 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_unfullscreen><path clip-rule=evenodd d="M15,15 L23.2,15 L20.8,17.4 L23.8,20.4 L20.4,23.8 L17.4,20.8 L15,23.2 L15,15 L15,15 Z M15,15 L6.8,15 L9.2,12.6 L6.2,9.6 L9.6,6.2 L12.6,9.2 L15,6.8 L15,15 L15,15 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_settings><path clip-rule=evenodd d="M13.3589744,7 L16.6410256,7 L18.0769231,9.8 L21.3589744,9.8 L23,12.2 L21.3589744,15 L23,17.8 L21.3589744,20.2 L18.0769231,20.2 L16.6410256,23 L13.3589744,23 L11.9230769,20.2 L8.64102564,20.2 L7,17.8 L8.64102564,15 L7,12.2 L8.64102564,9.8 L11.9230769,9.8 L13.3589744,7 Z M15,17.8 C16.5860485,17.8 17.8717949,16.5463973 17.8717949,15 C17.8717949,13.4536027 16.5860485,12.2 15,12.2 C13.4139515,12.2 12.1282051,13.4536027 12.1282051,15 C12.1282051,16.5463973 13.4139515,17.8 15,17.8 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_theatre><path d="M6 21h11V9H6v12zM19 9v12h5V9h-5z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_theatre_deactivate><path d="M6 9h11v12H6V9zm2 2h9v8H8v-8zm9-2h7v12h-7V9zm2 2h3v8h-3v-8z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 63 30" id=icon_twitch><path clip-rule=evenodd d="M55,19 L52,19 L52,13 L49,13 L49,19 L46,19 L46,8 L49,8 L49,10 L53,10 L55,12 L55,19 L55,19 Z M45,13 L41,13 L41,16 L45,16 L45,19 L40,19 L38,17 L38,12 L40,10 L45,10 L45,13 L45,13 Z M37,13 L34,13 L34,16 L37,16 L37,19 L33,19 L31,17 L31,8 L34,8 L34,10 L37,10 L37,13 L37,13 Z M27,8 L30,8 L30,9 L27,9 L27,8 Z M27,10 L30,10 L30,19 L27,19 L27,10 Z M26,17 L24,19 L15,19 L15,10 L18,10 L18,16 L19,16 L19,10 L22,10 L22,16 L23,16 L23,10 L26,10 L26,17 L26,17 Z M14,13 L11,13 L11,16 L14,16 L14,19 L10,19 L8,17 L8,8 L11,8 L11,10 L14,10 L14,13 L14,13 Z M53.5,9 L50,9 L50,7 L45.5,7 L43,9 L39.5,9 L38,10.5 L38,9 L35,9 L35,7 L26,7 L26,9 L15,9 L12,7 L7,7 L7,17.5 L9.5,20.125 L14,23 L18,23 L18,22.25 L19.5,23 L25.5,23 L26.5,21.5 L27,23 L31,23 L31,21.5 L32.5,23 L37,23 L37.25,21.5 L38.5,23 L43.5,23 L45,21.5 L45,23 L47.5,23 L49,21.5 L49,23 L52.5,23 L56,19.5 L56,11.5 L53.5,9 L53.5,9 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close><path clip-rule=evenodd d="M15.1035534,15.4571068 L11.5303301,19.0303301 L11.3535534,19.2071068 L11,18.8535534 L11.1767767,18.6767767 L14.75,15.1035534 L11.1767767,11.5303301 L11,11.3535534 L11.3535534,11 L11.5303301,11.1767767 L15.1035534,14.75 L18.6767767,11.1767767 L18.8535534,11 L19.2071068,11.3535534 L19.0303301,11.5303301 L15.4571068,15.1035534 L19.0303301,18.6767767 L19.2071068,18.8535534 L18.8535534,19.2071068 L18.6767767,19.0303301 L15.1035534,15.4571068 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close_md><path clip-rule=evenodd d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p1><path fill-rule=evenodd clip-rule=evenodd d=M15,22c0-0.7-0.1-1.4-0.2-2H22V10H8v3.2C7.4,13.1,6.7,13,6,13V8h18v14H15z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p2><path fill-rule=evenodd clip-rule=evenodd d=M10,13.9V12h10v6h-5.9C13.2,16.2,11.8,14.8,10,13.9z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p3><path fill-rule=evenodd clip-rule=evenodd d=M13,22h-1c0-3.3-2.7-6-6-6v-1C9.9,15,13,18.1,13,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p4><path fill-rule=evenodd clip-rule=evenodd d=M10,22H9c0-1.7-1.3-3-3-3v-1C8.2,18,10,19.8,10,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p5><path fill-rule=evenodd clip-rule=evenodd d=M7,22H6v-1C6.6,21,7,21.4,7,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_clips><path d="M14.802 7.804l-3.83 1.026 2.928 2.321 3.83-1.026-2.928-2.321zm2.895-.776l3.981-1.067.777 2.898-1.83.49-2.928-2.321zM7.969 9.635l-1.745.467L7 13l3.898-1.044-2.929-2.321zM7 13h16v9H7v-9zm1.969 3h2.785l2.228-3h-2.785l-2.228 3zm7.018 0h2.785L21 13h-2.785l-2.228 3z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 30 30" id=icon_cc_on><path fill-rule=evenodd clip-rule=evenodd d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol> <symbol viewBox="0 0 30 30" id=icon_cc_off><path fill-rule=evenodd clip-rule=evenodd d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M24,8 L24,22 L6,22 L6,8 L24,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close_modal><path clip-rule=evenodd d="M13.657 3.757l-4.243 4.243 4.243 4.242-1.415 1.415-4.242-4.243-4.243 4.243-1.414-1.415 4.243-4.242-4.243-4.243 1.414-1.414 4.243 4.243 4.242-4.243 1.415 1.414z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 14 14" id=icon_arrow><path d="M6.46765898,5.00010938 L6.46755335,5 L3.08055618,8.27078515 C2.97320936,8.37444877 2.97610632,8.52662201 3.07163118,8.6255409 L3.47144895,9.03956433 C3.56460436,9.13602957 3.72584608,9.14003286 3.82630008,9.04302556 L6.46765898,6.49229492 L9.10901788,9.04302556 C9.20947188,9.14003286 9.3707136,9.13602957 9.46386901,9.03956433 L9.86368678,8.6255409 C9.95921164,8.52662201 9.9621086,8.37444877 9.85476178,8.27078515 L6.46776461,5 L6.46765898,5.00010938 Z" transform="translate(6.467659, 7.056937) scale(-1, 1) rotate(-270.000000) translate(-6.467659, -7.056937) "></path></symbol> <symbol viewBox="0 0 98 86" id=age-gate-icon><path d="M24 8h50v10h12V8h12v78H0V8h12v10h12V8zm52-8h8v16h-8V0zM14 0h8v16h-8V0zm13.356 43.52h3.8c-.03-.954.068-1.9.29-2.84.225-.938.59-1.78 1.097-2.526.506-.745 1.155-1.348 1.945-1.81.79-.463 1.736-.694 2.84-.694.834 0 1.624.135 2.37.403.744.268 1.393.656 1.944 1.162.552.507.99 1.11 1.32 1.81.327.702.49 1.484.49 2.35 0 1.102-.17 2.07-.513 2.905-.344.835-.85 1.61-1.52 2.326-.672.715-1.514 1.423-2.528 2.124-1.013.7-2.19 1.468-3.532 2.303-1.103.655-2.16 1.356-3.175 2.1-1.014.746-1.923 1.61-2.728 2.595-.805.983-1.468 2.14-1.99 3.465-.52 1.327-.857 2.93-1.006 4.807h20.705v-3.354H30.888c.18-.983.56-1.855 1.14-2.616.582-.76 1.282-1.468 2.102-2.123.82-.656 1.722-1.275 2.705-1.856.984-.58 1.968-1.17 2.952-1.765.983-.626 1.937-1.282 2.86-1.968.925-.686 1.745-1.453 2.46-2.303.716-.85 1.29-1.81 1.722-2.884.432-1.073.648-2.31.648-3.71 0-1.492-.26-2.803-.783-3.936-.522-1.133-1.23-2.08-2.124-2.84-.893-.76-1.944-1.34-3.15-1.744-1.21-.402-2.498-.603-3.87-.603-1.67 0-3.16.283-4.47.85-1.312.566-2.408 1.348-3.287 2.347-.88 1-1.528 2.183-1.945 3.555-.418 1.37-.582 2.86-.492 4.47zM65.17 64V32.297H62.26c-.208 1.192-.596 2.176-1.162 2.95-.567.776-1.26 1.387-2.08 1.834-.82.448-1.736.754-2.75.918-1.013.164-2.057.246-3.13.246v3.04h8.228V64h3.8z" fill=#F9F7FC fill-rule=evenodd /></symbol> <symbol id=age-gate-fail-icon viewBox="0 0 92 81"><path d="M0 75.6l3.067-5.4L9.2 59.4l12.267-21.6 12.266-21.6 6.134-10.8L42.933 0h6.134l3.066 5.4 6.134 10.8 12.266 21.6L82.8 59.4l6.133 10.8L92 75.6 89.06 81H3.44L0 75.6zM40 27h12v13l-3 19h-6l-3-19V27zm1 34h10v10H41V61z" fill=#F9F7FC fill-rule=evenodd /></symbol> <symbol viewBox="0 0 19 19" id=icon_open_collection><path fill-rule=evenodd d="M0,6 L19,6 L19,19 L0,19 L0,6 Z M12.25,12.5 L7,9 L7,16 L12.25,12.5 Z M2,3 L17,3 L17,5 L2,5 L2,3 Z M4,0 L15,0 L15,2 L4,2 L4,0 Z"/></symbol> <symbol id=icon_pl-followcheck viewBox="0 0 16 16"><path clip-rule=evenodd d=M6.5,12.75L2,8.25l2-2l2.5,2.5l5.5-5.5l2,2L6.5,12.75z fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 16 16" id=icon_share_identity><path clip-rule=evenodd d="M11,13H5L1,9V8V7l4-4h6l4,4v1v1L11,13z M8,5C6.344,5,5,6.343,5,8c0,1.656,1.344,3,3,3c1.657,0,3-1.344,3-3C11,6.343,9.657,5,8,5z M8,9C7.447,9,7,8.552,7,8s0.447-1,1-1s1,0.448,1,1S8.553,9,8,9z" fill-rule=evenodd /></symbol> </svg> ';
     }, function(e, t, n) {
         "use strict";
 
@@ -34571,9 +34587,9 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            s = n(640),
+            s = n(641),
             l = r(s),
-            u = n(644),
+            u = n(645),
             c = r(u),
             d = n(174),
             p = n(282),
@@ -34666,14 +34682,14 @@
         }()
     }, function(e, t, n) {
         var r = n(21),
-            i = n(641),
+            i = n(642),
             o = r(i);
         e.exports = o
     }, function(e, t, n) {
         function r(e, t) {
             return e && e.length && t && t.length ? i(e, t) : e
         }
-        var i = n(642);
+        var i = n(643);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n, r) {
@@ -34688,7 +34704,7 @@
         }
         var i = n(61),
             o = n(50),
-            a = n(643),
+            a = n(644),
             s = n(44),
             l = n(199),
             u = Array.prototype,
@@ -34749,20 +34765,20 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            u = n(645),
+            u = n(646),
             c = r(u),
-            d = n(646),
+            d = n(647),
             p = r(d),
-            f = n(647),
+            f = n(648),
             h = r(f),
-            v = n(648),
+            v = n(649),
             _ = r(v),
-            g = n(650),
+            g = n(651),
             y = r(g),
-            m = n(651),
+            m = n(652),
             b = r(m),
-            E = n(653),
-            S = n(655),
+            E = n(654),
+            S = n(656),
             T = r(S),
             P = p["default"]._getLogger("PubsubDriver"),
             C = /^https?:\/\/([\w-]+\.)*twitch\.tv(:\d+)?\/.*$/,
@@ -34933,7 +34949,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(647),
+            a = n(648),
             s = r(a),
             l = function() {},
             u = l,
@@ -35089,13 +35105,13 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(645),
+            l = n(646),
             u = r(l),
-            c = n(646),
+            c = n(647),
             d = r(c),
-            p = n(647),
+            p = n(648),
             f = r(p),
-            h = n(649),
+            h = n(650),
             v = r(h),
             _ = 30,
             g = 3e4,
@@ -35319,7 +35335,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(646),
+            a = n(647),
             s = r(a),
             l = "pubsub",
             u = s["default"]._getLogger("IframeHost"),
@@ -35477,15 +35493,15 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(645),
+            l = n(646),
             u = r(l),
-            c = n(646),
+            c = n(647),
             d = r(c),
-            p = n(647),
+            p = n(648),
             f = r(p),
-            h = n(652),
+            h = n(653),
             v = r(h),
-            _ = n(649),
+            _ = n(650),
             g = r(_),
             y = d["default"]._getLogger("WebsocketClient"),
             m = 3e4,
@@ -35755,11 +35771,11 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(645),
+            l = n(646),
             u = r(l),
-            c = n(646),
+            c = n(647),
             d = r(c),
-            p = n(647),
+            p = n(648),
             f = r(p),
             h = d["default"]._getLogger("PubsubSocket"),
             v = 120,
@@ -35888,7 +35904,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.Stats = void 0;
-        var i = n(654),
+        var i = n(655),
             o = r(i);
         t.Stats = o["default"], t["default"] = {
             Stats: o["default"]
@@ -36083,9 +36099,9 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(647),
+            a = n(648),
             s = r(a),
-            l = n(646),
+            l = n(647),
             u = r(l),
             c = "https://pubster.twitch.tv/publish",
             d = "https://pubster-darklaunch.twitch.tv/publish",
@@ -36300,51 +36316,51 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.init = i;
-        var o = n(556),
-            a = n(658),
+        var o = n(557),
+            a = n(659),
             s = r(a),
-            l = n(659),
-            u = n(661),
-            c = n(662),
-            d = n(663),
-            p = n(664),
-            f = n(666),
-            h = n(667),
+            l = n(660),
+            u = n(662),
+            c = n(663),
+            d = n(664),
+            p = n(665),
+            f = n(667),
+            h = n(668),
             v = n(309),
-            _ = n(668),
-            g = n(669),
-            y = n(670),
-            m = n(671),
-            b = n(673),
-            E = n(675),
-            S = n(676),
-            T = n(678),
-            P = n(679),
-            C = n(681),
-            w = n(381),
-            k = n(682),
-            A = n(684),
-            O = n(686),
-            I = n(687),
-            N = n(688),
-            L = n(689),
-            R = n(690),
-            M = n(691),
-            D = n(692),
-            x = n(693),
-            j = n(694),
-            U = n(695),
-            B = n(696),
-            V = n(697),
-            F = n(698),
-            H = n(700),
-            G = n(378),
-            q = n(702),
-            Y = n(703),
-            K = n(704),
-            $ = n(705),
-            W = n(706),
-            z = (n(672), n(373), n(707)),
+            _ = n(669),
+            g = n(670),
+            y = n(671),
+            m = n(672),
+            b = n(674),
+            E = n(676),
+            S = n(677),
+            T = n(679),
+            P = n(680),
+            C = n(682),
+            w = n(382),
+            k = n(683),
+            A = n(685),
+            O = n(687),
+            I = n(688),
+            N = n(689),
+            L = n(690),
+            R = n(691),
+            M = n(692),
+            D = n(693),
+            x = n(694),
+            j = n(695),
+            U = n(696),
+            B = n(697),
+            V = n(698),
+            F = n(699),
+            H = n(701),
+            G = n(379),
+            q = n(703),
+            Y = n(704),
+            K = n(705),
+            $ = n(706),
+            W = n(707),
+            z = (n(673), n(374), n(708)),
             Q = (0, o.combineReducers)({
                 accessToken: l.accessToken,
                 ads: u.ads,
@@ -36444,7 +36460,7 @@
         var o = n(78),
             a = r(o),
             s = n(341),
-            l = n(660),
+            l = n(661),
             u = n(233),
             c = t.DEFAULT_ACCESS_TOKEN = {
                 params: {
@@ -36590,7 +36606,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.analyticsTracker = r;
-        var i = n(665),
+        var i = n(666),
             o = new Error("Attempting to use tracker too early"),
             a = {
                 trackEvent: function() {
@@ -36815,8 +36831,8 @@
             c = r(u),
             d = n(167),
             p = n(208),
-            f = n(660),
-            h = n(672),
+            f = n(661),
+            h = n(673),
             v = t.DEFAULT_ENVIRONMENT = Object.freeze({
                 playerType: p.PLAYER_POPOUT,
                 platform: "web",
@@ -36853,7 +36869,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.experiments = r;
-        var i = n(674),
+        var i = n(675),
             o = new Error("Attempting to use experiments too early"),
             a = {
                 get: function() {
@@ -36944,8 +36960,8 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.lang = r;
-        var i = n(677),
-            o = n(611)
+        var i = n(678),
+            o = n(612)
     }, function(e, t, n) {
         "use strict";
 
@@ -36984,7 +37000,7 @@
         }), t.LAST_KNOWN_LANG = t.ACTION_SET_LANGUAGE = void 0, t.setLanguage = r, t.loadLanguage = i, t.loadDefaultLang = o;
         var a = n(238),
             s = n(239),
-            l = n(611),
+            l = n(612),
             u = n(191),
             c = t.ACTION_SET_LANGUAGE = "set language",
             d = t.LAST_KNOWN_LANG = "playerLanguage"
@@ -37055,7 +37071,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.navigatorReducer = r;
-        var i = n(680)
+        var i = n(681)
     }, function(e, t) {
         "use strict";
 
@@ -37113,7 +37129,7 @@
         }), t.playerDimensions = i;
         var o = n(78),
             a = r(o),
-            s = n(683),
+            s = n(684),
             l = {
                 left: 0,
                 top: 0,
@@ -37157,7 +37173,7 @@
         }), t.playerOptions = i;
         var o = n(192),
             a = r(o),
-            s = n(685),
+            s = n(686),
             l = {
                 showInfo: !0,
                 collection: "",
@@ -37250,7 +37266,7 @@
             s = r(a),
             l = n(66),
             u = r(l),
-            c = n(636),
+            c = n(637),
             d = n(279),
             p = {
                 fetched: !1,
@@ -37495,7 +37511,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.recommendations = i;
-        var o = n(367),
+        var o = n(368),
             a = n(279),
             s = n(78),
             l = r(s),
@@ -37602,11 +37618,11 @@
             p = r(d),
             f = n(66),
             h = r(f),
-            v = n(373),
+            v = n(374),
             _ = n(279),
             g = n(210),
             y = n(158),
-            m = n(379),
+            m = n(380),
             b = t.UPDATE_INTERVAL_VOD = 20,
             E = t.UPDATE_INTERVAL_LIVESTREAM = 600,
             S = t.INIT_UPDATE_OFFSET_VOD = 2e4,
@@ -37715,7 +37731,7 @@
         var o = n(78),
             a = r(o),
             s = n(173),
-            l = n(685),
+            l = n(686),
             u = t.DEFAULT_SCREEN_MODE = Object.freeze({
                 isFullScreen: !1,
                 canFullScreen: !1,
@@ -37893,7 +37909,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.timelineMetadata = i;
-        var o = n(581),
+        var o = n(582),
             a = n(279),
             s = n(78),
             l = r(s),
@@ -37944,7 +37960,7 @@
             a = r(o),
             s = n(66),
             l = r(s),
-            u = n(699),
+            u = n(700),
             c = ["host_channel"]
     }, function(e, t) {
         "use strict";
@@ -37985,7 +38001,7 @@
         }), t.ui = i;
         var o = n(78),
             a = r(o),
-            s = n(701),
+            s = n(702),
             l = {
                 isMini: !1
             }
@@ -38055,7 +38071,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.windowReducer = r;
-        var i = n(672)
+        var i = n(673)
     }, function(e, t, n) {
         "use strict";
 
@@ -38165,9 +38181,9 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.createVideoApiMiddleware = r;
-        var i = n(636),
+        var i = n(637),
             o = n(318),
-            a = n(708),
+            a = n(709),
             s = new a.NullVideoAPI
     }, function(e, t) {
         "use strict";
@@ -38284,7 +38300,7 @@
             s = n(78),
             l = r(s),
             u = n(191),
-            c = n(688),
+            c = n(689),
             d = n(210),
             p = n(174),
             f = n(153),
@@ -38425,10 +38441,10 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(711),
+            a = n(712),
             s = r(a),
-            l = n(683),
-            u = n(712),
+            l = n(684),
+            u = n(713),
             c = r(u);
         t.PlayerResizeManager = function() {
             function e(t) {
@@ -38799,9 +38815,9 @@
                 }
             }(),
             o = n(174),
-            a = n(636),
-            s = n(706),
-            l = n(378);
+            a = n(637),
+            s = n(707),
+            l = n(379);
         t.FollowManager = function() {
             function e(t) {
                 r(this, e), this.stateStore = t, this.unsubs = [], this._initSubscribes()
@@ -38877,13 +38893,13 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(367),
+            a = n(368),
             s = n(343),
             l = n(233),
             u = n(208),
             c = n(210),
             d = n(158),
-            p = n(688),
+            p = n(689),
             f = n(174),
             h = n(49),
             v = r(h),
@@ -38994,7 +39010,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            o = n(379),
+            o = n(380),
             a = n(191),
             s = "staff";
         t.UserManager = function() {
