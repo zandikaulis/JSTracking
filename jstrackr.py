@@ -25,6 +25,8 @@ if __name__ == '__main__':
          'filename': 'vendor.js'},
         {'url': 'https://web-cdn.ttvnw.net/emberapp.js',
          'filename': 'emberapp.js'},
+        {'url': 'https://web-cdn.ttvnw.net/extensions.js',
+         'filename': 'extensions.js'},
         # {'url': 'https://web-cdn.ttvnw.net/game-details.js',
         #  'filename': 'game-details.js'},
         # {'url': 'https://web-cdn.ttvnw.net/premium.js',
@@ -34,18 +36,21 @@ if __name__ == '__main__':
     ]
 
     for jsfile in files:
-        cachebuster = random.getrandbits(100)
-        jsfile['url'] += "?%x" % cachebuster
-        print "Downloading", jsfile['url'], "to file", jsfile['filename']
-        r = requests.get(jsfile['url'])
-        if 'last-modified' in r.headers:
-            print "Last Modified:", r.headers['last-modified']
-        else:
-            print "No Last-Modified header!"
-        src = r.content
-        beatuified = jsbeautifier.beautify(src)
-        if jsfile['filename'] == 'site_options.js':
-            # Avoid spam
-            if '"experiments": null' in beatuified:
-                continue
-        open('js/%s' % jsfile['filename'], 'wb').write(beatuified)
+        try:
+            cachebuster = random.getrandbits(100)
+            jsfile['url'] += "?%x" % cachebuster
+            print "Downloading", jsfile['url'], "to file", jsfile['filename']
+            r = requests.get(jsfile['url'])
+            if 'last-modified' in r.headers:
+                print "Last Modified:", r.headers['last-modified']
+            else:
+                print "No Last-Modified header!"
+            src = r.content
+            beatuified = jsbeautifier.beautify(src)
+            if jsfile['filename'] == 'site_options.js':
+                # Avoid spam
+                if '"experiments": null' in beatuified:
+                    continue
+            open('js/%s' % jsfile['filename'], 'wb').write(beatuified)
+        except:
+            pass
