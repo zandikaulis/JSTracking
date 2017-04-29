@@ -8931,7 +8931,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.04.28-213203+5fb505686960f1f7b5a61f277681a1c6ecd2f4a3",
+                    app_version: "2017.04.28-233004+595931f26a872032bbb7ec15b804f742c944362f",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -17467,12 +17467,12 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = function S(e, t, n) {
+            l = function P(e, t, n) {
                 null === e && (e = Function.prototype);
                 var r = Object.getOwnPropertyDescriptor(e, t);
                 if (void 0 === r) {
                     var i = Object.getPrototypeOf(e);
-                    return null === i ? void 0 : S(i, t, n)
+                    return null === i ? void 0 : P(i, t, n)
                 }
                 if ("value" in r) return r.value;
                 var o = r.get;
@@ -17522,7 +17522,9 @@
             }, {
                 minHeight: 0,
                 rows: 1
-            }];
+            }],
+            S = "featured",
+            T = "other";
         t.PlayerUIRecommendations = function(e) {
             function t(e, n) {
                 i(this, t);
@@ -17685,11 +17687,13 @@
                 key: "trackSelect",
                 value: function(e) {
                     var t = this._stateStore.getState(),
-                        n = t.analyticsTracker;
+                        n = t.analyticsTracker,
+                        r = $(".js-recommendations-overlay", this.$root).attr("data-display-which-vods");
                     n.trackEvent("player_rec_select", {
                         recommendation: {
                             vod_id: e.id,
-                            content: e.recommendationType
+                            content: e.recommendationType,
+                            view: r === y ? T : S
                         }
                     })
                 }
@@ -18706,7 +18710,8 @@
                             animation: _.opacityMap[e.fontOpacity].animation
                         },
                         r = _.calculateRGBA(_.backgroundColorMap[e.backgroundColorName].backgroundColorValue, _.opacityMap[e.backgroundOpacity].opacityValue),
-                        i = (0, u["default"])({}, e, n, _.fontMap[e.font], _.edgeMap[e.edge], _.verticalPositionMap[e.verticalPosition], _.fontUnderlineMap[e.fontUnderline], _.fontItalicMap[e.fontItalic], _.fontBoldMap[e.fontBold], _.alignmentMap[e.alignment], {
+                        i = (0,
+                            u["default"])({}, e, n, _.fontMap[e.font], _.edgeMap[e.edge], _.verticalPositionMap[e.verticalPosition], _.fontUnderlineMap[e.fontUnderline], _.fontItalicMap[e.fontItalic], _.fontBoldMap[e.fontBold], _.alignmentMap[e.alignment], {
                             backgroundColor: r
                         }),
                         o = (0, d["default"])(i, y);
