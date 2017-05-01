@@ -16430,7 +16430,8 @@ googletag.cmd = googletag.cmd || [],
                 WT_P: "e5d2a724-5506-4f7d-986a-be8cda8ed742",
                 CHANNEL_CHAT_CTA: "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9",
                 SUB_OPTIONS: "86ad7a91-bf36-46c5-adef-6006a09720a8",
-                LOGGED_OUT_FRONT_PAGE_EXPERIMENT: "54e455b2-9854-4c55-b926-cfadbff49324"
+                LOGGED_OUT_FRONT_PAGE_EXPERIMENT: "54e455b2-9854-4c55-b926-cfadbff49324",
+                NEW_STATS: "9242cab4-db40-400c-99e1-2faf8f8026f0"
             },
             r = {
                 "99494f77-1c7c-46c5-9b9c-a117db47d3c5": "control",
@@ -16479,7 +16480,8 @@ googletag.cmd = googletag.cmd || [],
                 "e5d2a724-5506-4f7d-986a-be8cda8ed742": "no",
                 "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9": "control",
                 "86ad7a91-bf36-46c5-adef-6006a09720a8": "two_page",
-                "54e455b2-9854-4c55-b926-cfadbff49324": "control"
+                "54e455b2-9854-4c55-b926-cfadbff49324": "control",
+                "9242cab4-db40-400c-99e1-2faf8f8026f0": "no"
             },
             o = {},
             s = {
@@ -16595,10 +16597,10 @@ googletag.cmd = googletag.cmd || [],
                 } catch (e) {
                     return 0
                 }
-            }, i.setSteamInfo = function(e, t) {
-                console.warn("Twitch.player.setSteamInfo is deprecated")
             },
-            i.getSpecialOverlay = function() {
+            i.setSteamInfo = function(e, t) {
+                console.warn("Twitch.player.setSteamInfo is deprecated")
+            }, i.getSpecialOverlay = function() {
                 return "true" === e.storage.get("adblock_enabled", {
                     storage: "sessionStorage"
                 })
