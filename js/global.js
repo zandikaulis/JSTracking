@@ -16498,7 +16498,7 @@ googletag.cmd = googletag.cmd || [],
                 LOL_METADATA_EXPERIMENT: "treatment",
                 CHOMPY: "experiment",
                 GROWTH_SKIP_SEEN_FRIENDS_IN_NOTIFICATIONS: "yes",
-                WT_P: "dev"
+                WT_P: "yes"
             };
         _.each(Object.keys(s), function(t) {
             o[i[t]] = e.user().then(function(e) {
