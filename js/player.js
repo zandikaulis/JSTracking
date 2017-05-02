@@ -8932,7 +8932,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.05.01-184600+daafb8cbdb6b43c64fa65021d48f6646d32417d6",
+                    app_version: "2017.05.02-003721+d31c713b5ccdfc2c14c3d373e085ca39f9f2d73a",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -38841,13 +38841,14 @@
             return i(e, [{
                 key: "_initSubscribes",
                 value: function() {
-                    this.unsubs.push((0, o.subscribe)(this.stateStore, ["onlineStatus"], this.onlineStatusChange.bind(this)))
+                    this.unsubs.push((0, o.subscribe)(this.stateStore, ["onlineStatus", "playback"], this.onStateChange.bind(this)))
                 }
             }, {
-                key: "onlineStatusChange",
+                key: "onStateChange",
                 value: function(e) {
-                    var t = e.onlineStatus;
-                    t === s.OFFLINE_STATUS && this._fetchFollowInfo()
+                    var t = e.onlineStatus,
+                        n = e.playback;
+                    t === s.OFFLINE_STATUS && (n.hasPlayed && !n.ended || this._fetchFollowInfo())
                 }
             }, {
                 key: "_getIDs",
@@ -39038,10 +39039,9 @@
                 value: function() {
                     var e = this;
                     (0, a.oauthToken)().then(a.krakenUserInfo).then(this._normalizeUserInfo).then(function(t) {
-                        return e._stateStore.dispatch((0, o.userLoggedIn)(t))
+                        return e._stateStore.dispatch((0, o.userLoggedIn)(t));
                     })["catch"](function() {
-                        return e._stateStore.dispatch((0,
-                            o.userNotLoggedIn)())
+                        return e._stateStore.dispatch((0, o.userNotLoggedIn)())
                     })
                 }
             }, {
