@@ -8931,7 +8931,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.05.02-175021+1413da30d491ffb5099e91d5657900e205c463d6",
+                    app_version: "2017.05.02-191825+41e09bf65250aceb7d92846796643a57454bb7a0",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -30657,7 +30657,7 @@
             l = {
                 className: a.PropTypes.string,
                 onClick: a.PropTypes.func.isRequired,
-                children: a.PropTypes.oneOfType([a.PropTypes.arrayOf(a.PropTypes.element), a.PropTypes.element])
+                children: a.PropTypes.oneOfType([a.PropTypes.arrayOf(a.PropTypes.element), a.PropTypes.element, a.PropTypes.node])
             },
             u = {
                 className: ""
@@ -31384,7 +31384,7 @@
 
         function i(e, t) {
             if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !t || "object" != typeof t && "function" != typeof t ? e : t;
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
         }
 
         function o(e, t) {
@@ -32398,29 +32398,28 @@
                     var t = this,
                         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         r = void 0;
-                    return "string" == typeof e && (e = [e]),
-                        e.forEach(function(e) {
-                            if (!t.isValidLookup(r)) {
-                                var i = t.extractFromKey(e, n),
-                                    o = i.key,
-                                    a = i.namespaces;
-                                t.options.fallbackNS && (a = a.concat(t.options.fallbackNS));
-                                var s = void 0 !== n.count && "string" != typeof n.count,
-                                    l = void 0 !== n.context && "string" == typeof n.context && "" !== n.context,
-                                    u = n.lngs ? n.lngs : t.languageUtils.toResolveHierarchy(n.lng || t.language);
-                                a.forEach(function(e) {
-                                    t.isValidLookup(r) || u.forEach(function(i) {
-                                        if (!t.isValidLookup(r)) {
-                                            var a = o,
-                                                u = [a],
-                                                c = void 0;
-                                            s && (c = t.pluralResolver.getSuffix(i, n.count)), s && l && u.push(a + c), l && u.push(a += "" + t.options.contextSeparator + n.context), s && u.push(a += c);
-                                            for (var d = void 0; d = u.pop();) t.isValidLookup(r) || (r = t.getResource(i, e, d, n))
-                                        }
-                                    })
+                    return "string" == typeof e && (e = [e]), e.forEach(function(e) {
+                        if (!t.isValidLookup(r)) {
+                            var i = t.extractFromKey(e, n),
+                                o = i.key,
+                                a = i.namespaces;
+                            t.options.fallbackNS && (a = a.concat(t.options.fallbackNS));
+                            var s = void 0 !== n.count && "string" != typeof n.count,
+                                l = void 0 !== n.context && "string" == typeof n.context && "" !== n.context,
+                                u = n.lngs ? n.lngs : t.languageUtils.toResolveHierarchy(n.lng || t.language);
+                            a.forEach(function(e) {
+                                t.isValidLookup(r) || u.forEach(function(i) {
+                                    if (!t.isValidLookup(r)) {
+                                        var a = o,
+                                            u = [a],
+                                            c = void 0;
+                                        s && (c = t.pluralResolver.getSuffix(i, n.count)), s && l && u.push(a + c), l && u.push(a += "" + t.options.contextSeparator + n.context), s && u.push(a += c);
+                                        for (var d = void 0; d = u.pop();) t.isValidLookup(r) || (r = t.getResource(i, e, d, n))
+                                    }
                                 })
-                            }
-                        }), r
+                            })
+                        }
+                    }), r
                 }, t.prototype.isValidLookup = function(e) {
                     return !(void 0 === e || !this.options.returnNull && null === e || !this.options.returnEmptyString && "" === e)
                 }, t.prototype.getResource = function(e, t, n) {
