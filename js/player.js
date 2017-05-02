@@ -8933,7 +8933,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.02-213353+2f723bb6ea4aa32a04d4f869a43956dcb2f3a278",
+                    app_version: "2017.05.02-214521+99bd8c5ca9981e2f7af6230ca5d3c4bc48e3fd34",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -31215,7 +31215,7 @@
             function t(e, n, o, a) {
                 r(this, t);
                 var s = i(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return s._clipsControls = new d.PlayerUIClipsControls(e, o, a, n), s.subscribe(n, ["stream", "online", "backend", "env", "playback"], s._subscriptionHandler.bind(s)), s
+                return s._clipsControls = new d.PlayerUIClipsControls(e, o, a, n), s.subscribe(n, ["stream", "online", "backend", "env", "playback", "streamMetadata"], s._subscriptionHandler.bind(s)), s
             }
             return o(t, e), a(t, [{
                 key: "_subscriptionHandler",
@@ -31225,21 +31225,22 @@
                         r = e.online,
                         i = e.env.playerType,
                         o = e.playback.hasPlayed,
-                        a = e.backend.getBackend() === h.BACKEND_HLS,
-                        s = i === f.PLAYER_HIGHLIGHTER,
-                        c = i === f.PLAYER_CURSE,
+                        a = e.streamMetadata.broadcastID,
+                        s = e.backend.getBackend() === h.BACKEND_HLS,
+                        c = i === f.PLAYER_HIGHLIGHTER || i === f.PLAYER_CURSE,
                         d = n === l.CONTENT_MODE_LIVE && !r,
                         p = n !== l.CONTENT_MODE_LIVE && n !== u.CONTENT_MODE_VOD,
-                        _ = o && !(d || p || s || c || a);
-                    this._toggle(_)
+                        _ = Boolean(a),
+                        v = o && _ && !(d || p || c || s);
+                    this._toggle(v)
                 }
             }, {
                 key: "_toggle",
                 value: function(e) {
                     var t = this;
-                    return e ? void(0, c.oauthToken)().then(function(e) {
+                    return this.lastShouldEnable = e, e ? void(0, c.oauthToken)().then(function(e) {
                         var n = e.token;
-                        return n ? t._clipsControls.enableClipsButton() : Promise.reject("Viewer is not logged in.")
+                        return n && t.lastShouldEnable ? t._clipsControls.enableClipsButton() : Promise.reject("Viewer is not logged in.")
                     })["catch"](function() {
                         t._clipsControls.disableClipsButton()
                     }) : void this._clipsControls.disableClipsButton()
@@ -31381,7 +31382,7 @@
         "use strict";
 
         function r(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
         }
 
         function i(e, t) {
@@ -32395,7 +32396,8 @@
                     }, n), n.interpolation && this.interpolator.reset();
                     var o = n.postProcess || this.options.postProcess,
                         a = "string" == typeof o ? [o] : o;
-                    return void 0 !== e && a && a.length && n.applyPostProcessor !== !1 && (e = v["default"].handle(a, e, t, n, this)), e
+                    return void 0 !== e && a && a.length && n.applyPostProcessor !== !1 && (e = v["default"].handle(a, e, t, n, this)),
+                        e
                 }, t.prototype.resolve = function(e) {
                     var t = this,
                         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
