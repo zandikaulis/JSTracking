@@ -8939,7 +8939,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.02-222417+2f3c3b67e6f4203c3611ce0a920803387768923d",
+                    app_version: "2017.05.02-223257+75e0cd43edaff06ff942216b440608236c8b5f8d",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -9653,7 +9653,7 @@
         }
 
         function i(e, t) {
-            if (!isFinite(e)) return "00:00:00";
+            if (!isFinite(e) || e < 0) return "00:00:00";
             var n = r(e, t);
             return n.join(":")
         }
