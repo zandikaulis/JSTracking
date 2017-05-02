@@ -8931,7 +8931,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.05.02-191825+41e09bf65250aceb7d92846796643a57454bb7a0",
+                    app_version: "2017.05.02-204147+5884c89c5f1d499b22b7720657b75392718b916c",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -37882,6 +37882,10 @@
                     return (0, a["default"])({}, e, {
                         isMini: Boolean(t.value)
                     });
+                case s.ACTION_SHOW_SETTINGS_MENU:
+                    return (0, a["default"])({}, e, {
+                        showSettings: Boolean(t.value)
+                    });
                 default:
                     return e
             }
@@ -37893,21 +37897,31 @@
             a = r(o),
             s = n(701),
             l = {
-                isMini: !1
+                isMini: !1,
+                showSettings: !1
             }
     }, function(e, t) {
         "use strict";
 
         function n(e) {
             return {
-                type: r,
+                type: i,
+                value: e
+            }
+        }
+
+        function r() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            return {
+                type: o,
                 value: e
             }
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.setMiniPlayerMode = n;
-        var r = t.ACTION_SET_MINIPLAYER_MODE = "set miniplayer"
+        }), t.setMiniPlayerMode = n, t.showSettingsMenu = r;
+        var i = t.ACTION_SET_MINIPLAYER_MODE = "set miniplayer",
+            o = t.ACTION_SHOW_SETTINGS_MENU = "show settings menu"
     }, function(e, t, n) {
         "use strict";
 
@@ -39037,7 +39051,7 @@
                 value: function() {
                     var e = this;
                     (0, a.oauthToken)().then(a.krakenUserInfo).then(this._normalizeUserInfo).then(function(t) {
-                        return e._stateStore.dispatch((0, o.userLoggedIn)(t));
+                        return e._stateStore.dispatch((0, o.userLoggedIn)(t))
                     })["catch"](function() {
                         return e._stateStore.dispatch((0, o.userNotLoggedIn)())
                     })
