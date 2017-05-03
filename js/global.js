@@ -16147,16 +16147,11 @@ googletag.cmd = googletag.cmd || [],
         })
     }(window.Twitch, window.jQuery),
     function(e, t) {
-        function n() {
-            var e = window.navigator.userAgent,
-                t = e.indexOf("MSIE ");
-            if (t > 0) return parseInt(e.substring(t + 5, e.indexOf(".", t)), 10) < 10
-        }
-        var i = {};
-        RSVP.EventTarget.mixin(i);
-        var r = [];
-        i.isIframeReady = !1;
-        i.init = function(e) {
+        var n = {};
+        RSVP.EventTarget.mixin(n);
+        var i = [];
+        n.isIframeReady = !1;
+        n.init = function(e) {
             var n = this,
                 i = function(e) {
                     n.config.iframe = t("<iframe>").attr("src", n.config.receiverUrl).appendTo(e).get(0)
@@ -16172,71 +16167,71 @@ googletag.cmd = googletag.cmd || [],
             }, navigator.userAgent.indexOf("Prerender") === -1 ? i("head") : t(document).ready(function() {
                 i("body")
             }), document.domain = "twitch.tv"
-        }, i._ajax = function(o, s, a, l) {
-            var u, c, h = new t.Deferred;
-            l = t.extend({}, l), l.headers = l.headers || {}, l.headers["Client-ID"] = l.headers["Client-ID"] || "jzkbprff40iqj646a697cyrvl0zt2m6", l.headers["X-CSRF-Token"] = l.headers["X-CSRF-Token"] || e.storage.get("csrf_token"), a || (a = {}), a.on_site = "1", n() && "GET" !== o && "POST" !== o ? (l.type = "POST", l.headers["X-Http-Method-Override"] = o) : l.type = o;
-            var d = l.version || l.v || 4;
-            if (l.headers.Accept = "application/vnd.twitchtv.v" + d + "+json", l.headers.Authorization ? (l.secure = !0, l.allow_cookie = !1, delete a.on_site) : (u = e.storage.legacy.get("api_token"), u && (l.headers["Twitch-Api-Token"] = u), l.allow_cookie = !0), /^(\/kraken\/)?streams(?!\/summary\/*$|\/recommended\/*$|\/recommended\/available\/*$|\/featured\/*$|\/communities\/)/.test(s) && (l.use_streams_api = !0, l.allow_cookie = !1), l.success && h.done(l.success), l.error && h.fail(l.error), c = t.extend({}, l, {
-                    url: this._constructUrl(s, l),
+        }, n._ajax = function(r, o, s, a) {
+            var l, u, c = new t.Deferred;
+            a = t.extend({}, a), a.headers = a.headers || {}, a.headers["Client-ID"] = a.headers["Client-ID"] || "jzkbprff40iqj646a697cyrvl0zt2m6", a.headers["X-CSRF-Token"] = a.headers["X-CSRF-Token"] || e.storage.get("csrf_token"), s || (s = {}), s.on_site = "1", a.type = r;
+            var h = a.version || a.v || 4;
+            if (a.headers.Accept = "application/vnd.twitchtv.v" + h + "+json", a.headers.Authorization ? (a.secure = !0, a.allow_cookie = !1, delete s.on_site) : (l = e.storage.legacy.get("api_token"), l && (a.headers["Twitch-Api-Token"] = l), a.allow_cookie = !0), /^(\/kraken\/)?streams(?!\/summary\/*$|\/recommended\/*$|\/recommended\/available\/*$|\/featured\/*$|\/communities\/)/.test(o) && (a.use_streams_api = !0, a.allow_cookie = !1), a.success && c.done(a.success), a.error && c.fail(a.error), u = t.extend({}, a, {
+                    url: this._constructUrl(o, a),
                     dataType: "json",
                     cache: !0,
                     global: !1,
-                    data: a,
+                    data: s,
                     xhr: this._createXHR.bind(this),
                     xhrFields: {
-                        withCredentials: l.secure
+                        withCredentials: a.secure
                     },
                     success: function() {
                         var e = arguments;
                         setTimeout(function() {
-                            h.resolve.apply(h, e)
+                            c.resolve.apply(c, e)
                         })
                     },
                     error: function() {
                         var e = arguments;
                         setTimeout(function() {
-                            h.reject.apply(h, e)
+                            c.reject.apply(c, e)
                         })
                     }
-                }), l.isCors || l.use_streams_api || l.secure && "https" !== window.location.protocol.slice(0, 5)) {
-                if (this._canCORS()) c.xhrFields.withCredentials = l.allow_cookie;
-                else if (c.dataType = "jsonp", c.headers && c.headers["Client-ID"] && (c.data.client_id = c.headers["Client-ID"], delete c.headers["Client-ID"]), c.headers && c.headers.Authorization) {
-                    var f = /^OAuth:?\s+(\w+)$/.exec(c.headers.Authorization);
-                    f && (c.data.oauth_token = f[1], delete c.headers.Authorization)
+                }), a.isCors || a.use_streams_api || a.secure && "https" !== window.location.protocol.slice(0, 5)) {
+                if (this._canCORS()) u.xhrFields.withCredentials = a.allow_cookie;
+                else if (u.dataType = "jsonp", u.headers && u.headers["Client-ID"] && (u.data.client_id = u.headers["Client-ID"], delete u.headers["Client-ID"]), u.headers && u.headers.Authorization) {
+                    var d = /^OAuth:?\s+(\w+)$/.exec(u.headers.Authorization);
+                    d && (u.data.oauth_token = d[1], delete u.headers.Authorization)
                 }
-            } else c.beforeSend = this._beforeSend;
-            return h.fail(function(e, t, n) {
-                i.trigger("fail", {
-                    url: c.url,
+            } else u.beforeSend = this._beforeSend;
+            return c.fail(function(e, t, i) {
+                n.trigger("fail", {
+                    url: u.url,
                     jqXHR: e,
                     textStatus: t,
-                    errorThrown: n
+                    errorThrown: i
                 })
-            }), i.isIframeReady ? t.ajax(c) : r.push(c), h.promise()
-        }, i.get = function(e, t, n) {
-            return i._ajax("GET", e, t, n)
-        }, i.post = function(e, t, n) {
-            return i._ajax("POST", e, t, n)
-        }, i.put = function(e, t, n) {
-            return i._ajax("PUT", e, t, n)
-        }, i.del = function(e, t, n) {
-            return i._ajax("DELETE", e, t, n)
-        }, i._canCORS = _.once(function() {
+            }), n.isIframeReady ? t.ajax(u) : i.push(u), c.promise()
+        }, n.get = function(e, t, i) {
+            return n._ajax("GET", e, t, i)
+        }, n.post = function(e, t, i) {
+            return n._ajax("POST", e, t, i)
+        }, n.put = function(e, t, i) {
+            return n._ajax("PUT", e, t, i)
+        }, n.del = function(e, t, i) {
+            return n._ajax("DELETE", e, t, i)
+        }, n._canCORS = _.once(function() {
             return "XMLHttpRequest" in window && "withCredentials" in new XMLHttpRequest
-        }), i._constructUrl = function(e, t) {
+        }), n._constructUrl = function(e, t) {
             this.config.login && (e = e.replace(/:login([^\w])/, this.config.login + "$1")), "/" !== e[0] && (e = "/kraken/" + e);
             var n = t.use_streams_api ? "streamsBaseUrl" : "baseUrl";
             return t.secure && (n += "Secure"), (t.host || this.config[n]) + e
-        }, i._createXHR = function() {
+        }, n._createXHR = function() {
             return new this.config.iframe.contentWindow.XMLHttpRequest
-        }, i._beforeSend = function(e, t) {
+        }, n._beforeSend = function(e, t) {
             t.crossDomain = !1
-        }, i.iframeReady = function() {
-            i.isIframeReady = !0, this.trigger("ready"), r.forEach(function(e) {
+        }, n.iframeReady = function() {
+            n.isIframeReady = !0, this.trigger("ready"), i.forEach(function(e) {
                 t.ajax(e)
             })
         }, e.mixin({
-            api: i
+            api: n
         })
     }(Twitch, jQuery),
     function(e, t) {
@@ -16597,14 +16592,14 @@ googletag.cmd = googletag.cmd || [],
                 } catch (e) {
                     return 0
                 }
-            },
-            i.setSteamInfo = function(e, t) {
+            }, i.setSteamInfo = function(e, t) {
                 console.warn("Twitch.player.setSteamInfo is deprecated")
             }, i.getSpecialOverlay = function() {
                 return "true" === e.storage.get("adblock_enabled", {
                     storage: "sessionStorage"
                 })
-            }, i.onTwitchPlayerInit = i.onTwitchPlayerLoaded = function(e) {
+            },
+            i.onTwitchPlayerInit = i.onTwitchPlayerLoaded = function(e) {
                 console.warn("Twitch.player.onTwitchPlayer(Init/Loaded) is deprecated! Use Twitch.ready instead."), i.ready(e)
             }, e.mixin({
                 player: i
