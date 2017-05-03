@@ -525,16 +525,6 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
-        "34fca29d-6914-412f-8ce2-fb65f792d386": {
-            "name": "CLIPS_ANNOUNCEMENT_SHOW",
-            "groups": [{
-                "weight": 100,
-                "value": "show"
-            }, {
-                "weight": 0,
-                "value": "hide"
-            }]
-        },
         "354aaebd-7643-434f-be37-98fe12c01220": {
             "name": "HTML5_Toggle_Removal",
             "groups": [{
