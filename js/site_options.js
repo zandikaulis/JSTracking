@@ -259,10 +259,10 @@ window.SiteOptions = {
             "name": "Bismol",
             "groups": [{
                 "weight": 100,
-                "value": "control"
+                "value": "no"
             }, {
                 "weight": 0,
-                "value": "not_control"
+                "value": "yes"
             }]
         },
         "143da2f9-bf80-4555-a661-76c378fcd5c8": {
