@@ -245,6 +245,16 @@ window.SiteOptions = {
                 "value": "1.6.1"
             }]
         },
+        "0fb759af-22ba-415a-9c83-e2dbeb6f8e41": {
+            "name": "Settings Menu Redesign",
+            "groups": [{
+                "weight": 100,
+                "value": "old"
+            }, {
+                "weight": 0,
+                "value": "new"
+            }]
+        },
         "143da2f9-bf80-4555-a661-76c378fcd5c8": {
             "name": "ios_aa",
             "groups": [{
