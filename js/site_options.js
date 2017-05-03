@@ -1372,10 +1372,10 @@ window.SiteOptions = {
         "b6400c92-a229-462e-bfb0-9dcf456b5b61": {
             "name": "ios_google_ima",
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "active"
             }]
         },
