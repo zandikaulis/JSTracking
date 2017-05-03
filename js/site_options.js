@@ -255,6 +255,16 @@ window.SiteOptions = {
                 "value": "new"
             }]
         },
+        "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5": {
+            "name": "Bismol",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "not_control"
+            }]
+        },
         "143da2f9-bf80-4555-a661-76c378fcd5c8": {
             "name": "ios_aa",
             "groups": [{
