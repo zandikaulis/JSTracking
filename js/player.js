@@ -8939,7 +8939,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.03-023749+43510bdabedf5035cefba20be2bca6879044081a",
+                    app_version: "2017.05.03-165035+9975dc9c5c313fae8acdcadb7e85b3ff6e0e6752",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -38923,13 +38923,19 @@
     }, function(e, t, n) {
         "use strict";
 
-        function r(e, t) {
+        function r(e) {
+            return e && e.__esModule ? e : {
+                "default": e
+            }
+        }
+
+        function i(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.FollowManager = void 0;
-        var i = function() {
+        var o = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -38940,25 +38946,28 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            o = n(174),
-            a = n(636),
-            s = n(706),
-            l = n(380);
+            a = n(174),
+            s = n(636),
+            l = n(706),
+            u = n(380),
+            c = n(49),
+            d = r(c),
+            p = ["amazon_livestream"];
         t.FollowManager = function() {
             function e(t) {
-                r(this, e), this.stateStore = t, this.unsubs = [], this._initSubscribes()
+                i(this, e), this.stateStore = t, this.unsubs = [], this._initSubscribes()
             }
-            return i(e, [{
+            return o(e, [{
                 key: "_initSubscribes",
                 value: function() {
-                    this.unsubs.push((0, o.subscribe)(this.stateStore, ["onlineStatus", "playback"], this.onStateChange.bind(this)))
+                    this.unsubs.push((0, a.subscribe)(this.stateStore, ["onlineStatus", "playback"], this.onStateChange.bind(this)))
                 }
             }, {
                 key: "onStateChange",
                 value: function(e) {
                     var t = e.onlineStatus,
                         n = e.playback;
-                    t === s.OFFLINE_STATUS && (n.hasPlayed && !n.ended || this._fetchFollowInfo())
+                    t === l.OFFLINE_STATUS && (n.hasPlayed && !n.ended || this._fetchFollowInfo())
                 }
             }, {
                 key: "_getIDs",
@@ -38969,8 +38978,15 @@
                     return {
                         userId: n.id,
                         channelId: t.channel.id,
-                        loggedIn: n.loggedInStatus === l.LOGGED_IN
+                        loggedIn: n.loggedInStatus === u.LOGGED_IN
                     }
+                }
+            }, {
+                key: "_checkChannelBlackList",
+                value: function() {
+                    var e = this.stateStore.getState(),
+                        t = e.streamMetadata;
+                    return (0, d["default"])(p, t.channelName)
                 }
             }, {
                 key: "_fetchFollowInfo",
@@ -38979,11 +38995,12 @@
                         t = e.userId,
                         n = e.channelId,
                         r = e.loggedIn,
-                        i = t === n;
-                    if (!i && n) return !r && n ? void this.stateStore.dispatch((0, a.followInfoFetched)({
+                        i = t === n,
+                        o = this._checkChannelBlackList();
+                    if (!i && n && !o) return !r && n ? void this.stateStore.dispatch((0, s.followInfoFetched)({
                         following: !1,
                         notificationsEnabled: !1
-                    })) : void this.stateStore.dispatch((0, a.fetchFollowInfo)(t, n))
+                    })) : void this.stateStore.dispatch((0, s.fetchFollowInfo)(t, n))
                 }
             }, {
                 key: "destroy",
