@@ -8939,7 +8939,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.03-165035+9975dc9c5c313fae8acdcadb7e85b3ff6e0e6752",
+                    app_version: "2017.05.03-172703+99ec92e09b63f8444fef5fe150a25b63e732ca85",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -31249,12 +31249,12 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            s = function _(e, t, n) {
+            s = function g(e, t, n) {
                 null === e && (e = Function.prototype);
                 var r = Object.getOwnPropertyDescriptor(e, t);
                 if (void 0 === r) {
                     var i = Object.getPrototypeOf(e);
-                    return null === i ? void 0 : _(i, t, n)
+                    return null === i ? void 0 : g(i, t, n)
                 }
                 if ("value" in r) return r.value;
                 var o = r.get;
@@ -31266,7 +31266,11 @@
             d = n(607),
             p = n(360),
             f = n(208),
-            h = n(300);
+            h = n(300),
+            _ = ["misterrogers"],
+            v = function(e) {
+                return _.indexOf(e) === -1
+            };
         t.PlayerUIClipsEnabler = function(e) {
             function t(e, n, o, a) {
                 r(this, t);
@@ -31281,14 +31285,17 @@
                         r = e.online,
                         i = e.env.playerType,
                         o = e.playback.hasPlayed,
-                        a = e.streamMetadata.broadcastID,
-                        s = e.backend.getBackend() === h.BACKEND_HLS,
-                        c = i === f.PLAYER_HIGHLIGHTER || i === f.PLAYER_CURSE,
-                        d = n === l.CONTENT_MODE_LIVE && !r,
-                        p = n !== l.CONTENT_MODE_LIVE && n !== u.CONTENT_MODE_VOD,
-                        _ = Boolean(a),
-                        v = o && _ && !(d || p || c || s);
-                    this._toggle(v)
+                        a = e.streamMetadata,
+                        s = a.broadcastID,
+                        c = a.channel,
+                        d = v(c.name),
+                        p = e.backend.getBackend() === h.BACKEND_HLS,
+                        _ = i === f.PLAYER_HIGHLIGHTER || i === f.PLAYER_CURSE,
+                        g = n === l.CONTENT_MODE_LIVE && !r,
+                        y = n !== l.CONTENT_MODE_LIVE && n !== u.CONTENT_MODE_VOD,
+                        m = Boolean(s),
+                        b = d && o && m && !(g || y || _ || p);
+                    this._toggle(b)
                 }
             }, {
                 key: "_toggle",
@@ -31438,7 +31445,7 @@
         "use strict";
 
         function r(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
 
         function i(e, t) {
@@ -32467,7 +32474,8 @@
                     else {
                         var m = !1,
                             b = !1;
-                        if (this.isValidLookup(p) || void 0 === t.defaultValue || (m = !0, p = t.defaultValue), this.isValidLookup(p) || (b = !0, p = i), b || m) {
+                        if (this.isValidLookup(p) || void 0 === t.defaultValue || (m = !0, p = t.defaultValue), this.isValidLookup(p) || (b = !0,
+                                p = i), b || m) {
                             this.logger.log("missingKey", s, a, i, p);
                             var E = [],
                                 S = this.languageUtils.getFallbackCodes(this.options.fallbackLng, t.lng || this.language);
