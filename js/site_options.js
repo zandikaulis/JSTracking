@@ -1704,6 +1704,16 @@ window.SiteOptions = {
                 "value": "false"
             }]
         },
+        "f321aa37-e81d-4a81-99d5-303bf9429b7b": {
+            "name": "AKAMAI_IMAGE_MANAGER",
+            "groups": [{
+                "weight": 5,
+                "value": "experiment"
+            }, {
+                "weight": 95,
+                "value": "control"
+            }]
+        },
         "f51271fc-b922-43c5-a801-d5b44219b31f": {
             "name": "baking_bread_a",
             "groups": [{
