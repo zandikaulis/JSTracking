@@ -1664,16 +1664,6 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
-        "e7516730-b94f-4d46-894e-c18612aab270": {
-            "name": "coview recommendations a/b testing",
-            "groups": [{
-                "weight": 50,
-                "value": "1"
-            }, {
-                "weight": 50,
-                "value": "2"
-            }]
-        },
         "e8c5cf6c-5259-446b-aef1-4e33747b3b93": {
             "name": "Game Changes",
             "groups": [{
@@ -1682,6 +1672,16 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "no"
+            }]
+        },
+        "ec27e6fe-dabc-4fd3-ab62-a2cffc8fe316": {
+            "name": "coview_with_regression",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "experiment"
             }]
         },
         "efe4cedd-7ea4-4d78-a9e4-5fad8dd9de79": {
