@@ -8939,7 +8939,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.03-184224+3d7ec866b689fe48fb0dff6b8b2e3c026fec080d",
+                    app_version: "2017.05.03-201529+447aea2ffaeb75020efc837bab82f3c569653628",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -38940,10 +38940,14 @@
         function i(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
+
+        function o(e) {
+            return "string" != typeof e ? "" : e.trim().toLowerCase()
+        }
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.FollowManager = void 0;
-        var o = function() {
+        var a = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -38954,28 +38958,28 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(174),
-            s = n(636),
-            l = n(706),
-            u = n(380),
-            c = n(49),
-            d = r(c),
-            p = ["amazon_livestream"];
+            s = n(174),
+            l = n(636),
+            u = n(706),
+            c = n(380),
+            d = n(49),
+            p = r(d),
+            f = ["amazon_livestream"];
         t.FollowManager = function() {
             function e(t) {
                 i(this, e), this.stateStore = t, this.unsubs = [], this._initSubscribes()
             }
-            return o(e, [{
+            return a(e, [{
                 key: "_initSubscribes",
                 value: function() {
-                    this.unsubs.push((0, a.subscribe)(this.stateStore, ["onlineStatus", "playback"], this.onStateChange.bind(this)))
+                    this.unsubs.push((0, s.subscribe)(this.stateStore, ["onlineStatus", "playback"], this.onStateChange.bind(this)))
                 }
             }, {
                 key: "onStateChange",
                 value: function(e) {
                     var t = e.onlineStatus,
                         n = e.playback;
-                    t === l.OFFLINE_STATUS && (n.hasPlayed && !n.ended || this._fetchFollowInfo())
+                    t === u.OFFLINE_STATUS && (n.hasPlayed && !n.ended || this._fetchFollowInfo())
                 }
             }, {
                 key: "_getIDs",
@@ -38986,7 +38990,7 @@
                     return {
                         userId: n.id,
                         channelId: t.channel.id,
-                        loggedIn: n.loggedInStatus === u.LOGGED_IN
+                        loggedIn: n.loggedInStatus === c.LOGGED_IN
                     }
                 }
             }, {
@@ -38994,7 +38998,7 @@
                 value: function() {
                     var e = this.stateStore.getState(),
                         t = e.streamMetadata;
-                    return (0, d["default"])(p, t.channelName)
+                    return !!t.channelName && (0, p["default"])(f, o(t.channelName))
                 }
             }, {
                 key: "_fetchFollowInfo",
@@ -39005,10 +39009,10 @@
                         r = e.loggedIn,
                         i = t === n,
                         o = this._checkChannelBlackList();
-                    if (!i && n && !o) return !r && n ? void this.stateStore.dispatch((0, s.followInfoFetched)({
+                    if (!i && n && !o) return !r && n ? void this.stateStore.dispatch((0, l.followInfoFetched)({
                         following: !1,
                         notificationsEnabled: !1
-                    })) : void this.stateStore.dispatch((0, s.fetchFollowInfo)(t, n))
+                    })) : void this.stateStore.dispatch((0, l.fetchFollowInfo)(t, n))
                 }
             }, {
                 key: "destroy",
@@ -39152,7 +39156,7 @@
         }
 
         function i(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
         }
         Object.defineProperty(t, "__esModule", {
             value: !0

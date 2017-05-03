@@ -488,10 +488,10 @@ window.SiteOptions = {
         "2884161f-6094-4189-b1aa-fd256468f96e": {
             "name": "PLAYER_NOTIFICATION_BUTTON",
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "treatment"
             }]
         },
