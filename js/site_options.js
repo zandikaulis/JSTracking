@@ -1268,6 +1268,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "a23d9d11-be5e-4e7e-8f32-bc70ca8889c7": {
+            "name": "ios_ingest_test_on_startup",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "a9f7f84a-76fd-44f0-80b1-9421e714a1b7": {
             "name": "ios_clips_paris",
             "groups": [{
