@@ -1697,10 +1697,10 @@ window.SiteOptions = {
         "ec27e6fe-dabc-4fd3-ab62-a2cffc8fe316": {
             "name": "coview_with_regression",
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "experiment"
             }]
         },
