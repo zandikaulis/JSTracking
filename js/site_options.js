@@ -1218,10 +1218,10 @@ window.SiteOptions = {
         "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57": {
             "name": "CHOMPY",
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "experiment"
             }]
         },
