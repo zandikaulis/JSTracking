@@ -1269,7 +1269,7 @@ window.SiteOptions = {
             }]
         },
         "a23d9d11-be5e-4e7e-8f32-bc70ca8889c7": {
-            "name": "ios_ingest_test_on_startup",
+            "name": "ios_ingest_test",
             "groups": [{
                 "weight": 100,
                 "value": "control"
