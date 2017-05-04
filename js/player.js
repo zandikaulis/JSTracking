@@ -8934,7 +8934,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.05.03-221822+6f63011ebff738c300fbc86704d4a037a2de54be",
+                    app_version: "2017.05.04-000722+a03c9e9bb34fb269f36089c12047b9ae7ee2c431",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -16970,7 +16970,12 @@
             }
 
             function N() {
-                n.getState().analyticsTracker.trackEvent("player_click_fullscreen"), n.dispatch((0, k.toggleFullScreen)())
+                var e = n.getState(),
+                    t = e.analyticsTracker,
+                    r = e.screenMode;
+                t.trackEvent("player_click_fullscreen", {
+                    action: !r.isFullScreen
+                }), n.dispatch((0, k.toggleFullScreen)())
             }
 
             function L() {
@@ -39024,8 +39029,9 @@
                         n = e.channelId,
                         r = e.loggedIn,
                         i = t === n,
-                        o = this._checkChannelBlackList();
-                    if (!i && n && !o) return !r && n ? void this.stateStore.dispatch((0, l.followInfoFetched)({
+                        o = this._checkChannelBlackList(),
+                        a = this.stateStore.getState().manifestInfo.spectre;
+                    if (!i && n && !o && !a) return !r && n ? void this.stateStore.dispatch((0, l.followInfoFetched)({
                         following: !1,
                         notificationsEnabled: !1
                     })) : void this.stateStore.dispatch((0, l.fetchFollowInfo)(t, n))
@@ -39156,10 +39162,9 @@
             }, {
                 key: "destroy",
                 value: function() {
-                    this._stopRecommendationTimeout(),
-                        this._unsubs.forEach(function(e) {
-                            return e()
-                        })
+                    this._stopRecommendationTimeout(), this._unsubs.forEach(function(e) {
+                        return e()
+                    })
                 }
             }]), e
         }()
