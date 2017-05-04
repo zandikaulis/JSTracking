@@ -1,11 +1,21 @@
-window.features = window.features || [], window.features.push("extensions"), define("web-client/components/dashboards/extensions/extension-config/component", ["exports", "ember-component"], function(e, t) {
+window.features = window.features || [], window.features.push("extensions"), define("web-client/components/dashboards/extensions/extension-config/component", ["exports", "ember-component", "ember-computed", "ember-service/inject"], function(e, t, n, l) {
     e.default = t.default.extend({
-        extension: null
+        extensions: (0, l.default)(),
+        extensionInstallation: null,
+        extension: n.default.alias("extensionInstallation.extension"),
+        didInsertElement: function() {
+            this._super.apply(this, arguments);
+            var e = this.get("extensions").initExtension({
+                clientId: this.get("extension.clientId"),
+                token: this.get("extensionInstallation.token")
+            }, this.$("iframe")[0], "config");
+            this.set("extensionCoordinator", e)
+        }
     })
 }), define("web-client/components/dashboards/extensions/extension-config/template", ["exports"], function(e) {
     e.default = Ember.HTMLBars.template({
-        id: "LRW1vPba",
-        block: '{"statements":[["open-element","div",[]],["static-attr","class","ext-details"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","brick brick--theme-grey pd-0"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","flex flex--nowrap flex--stretch"],["flush-element"],["text","\\n"],["block",["link-to"],["dashboards.extensions.index"],[["class"],["flex__item pd-x-1 fill-grey-10"]],0],["text","      "],["open-element","div",[]],["static-attr","class","flex__item flex__item--grow pd-1 border-l"],["flush-element"],["text","\\n        "],["open-element","h4",[]],["flush-element"],["append",["helper",["t"],["dashboard.extensions.details.header"],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ext-details__body brick brick--theme-grey brick--pd-lg"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","flex flex--nowrap flex--verticalCenter"],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["extension","iconUrl"]]]]],["static-attr","class","square-5 flex__item flex__item--noShrink"],["static-attr","data-test-selector","ext-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","flex__item flex__item--grow mg-l-1"],["flush-element"],["text","\\n        "],["open-element","h4",[]],["static-attr","class","mg-0 pd-0"],["static-attr","data-test-selector","ext-name"],["flush-element"],["append",["unknown",["extension","name"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ext-details__author ext-author mg-0 pd-0"],["static-attr","data-test-selector","ext-author"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.details.authorAttribution"],[["author"],[["get",["extension","authorName"]]]]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","tower tower--gutter-none pd-t-1"],["flush-element"],["text","\\n      "],["open-element","iframe",[]],["dynamic-attr","src",["concat",[["unknown",["extension","configUrl"]]]]],["static-attr","width","100%"],["static-attr","height","720"],["static-attr","sandbox","allow-forms allow-scripts"],["static-attr","data-test-selector","ext-config-frame"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["svg-icon"],null,[["path","iconModifier"],["svg/close","ext-details__icon"]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+        id: "HvSQg88X",
+        block: '{"statements":[["open-element","div",[]],["static-attr","class","ext-details"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","brick brick--theme-grey pd-0"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","flex flex--nowrap flex--stretch"],["flush-element"],["text","\\n"],["block",["link-to"],["dashboards.extensions.index"],[["class"],["flex__item pd-x-1 fill-grey-10"]],0],["text","      "],["open-element","div",[]],["static-attr","class","flex__item flex__item--grow pd-1 border-l"],["flush-element"],["text","\\n        "],["open-element","h4",[]],["flush-element"],["append",["helper",["t"],["dashboard.extensions.details.header"],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ext-details__body brick brick--theme-grey brick--pd-lg"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","flex flex--nowrap flex--verticalCenter"],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["extension","iconUrl"]]]]],["static-attr","class","square-5 flex__item flex__item--noShrink"],["static-attr","data-test-selector","ext-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","flex__item flex__item--grow mg-l-1"],["flush-element"],["text","\\n        "],["open-element","h4",[]],["static-attr","class","mg-0 pd-0"],["static-attr","data-test-selector","ext-name"],["flush-element"],["append",["unknown",["extension","name"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ext-details__author ext-author mg-0 pd-0"],["static-attr","data-test-selector","ext-author"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.details.authorAttribution"],[["author"],[["get",["extension","authorName"]]]]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","tower tower--gutter-none pd-t-1"],["flush-element"],["text","\\n      "],["open-element","iframe",[]],["dynamic-attr","src",["concat",[["unknown",["extension","configUrl"]]]]],["static-attr","width","100%"],["static-attr","height","720"],["static-attr","sandbox","allow-forms allow-scripts"],["static-attr","data-test-selector","ext-config-frame"],["flush-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["svg-icon"],null,[["path","iconModifier"],["svg/close","ext-details__icon"]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
         meta: {
             moduleName: "web-client/components/dashboards/extensions/extension-config/template.hbs"
         }
@@ -291,6 +301,7 @@ window.features = window.features || [], window.features.push("extensions"), def
         messageReceiveCount: 0,
         extensionInstallation: null,
         extension: s.default.alias("extensionInstallation.extension"),
+        player: s.default.alias("playerRegistry.mainPlayer.player"),
         channel: null,
         testAllowSameOrigin: !1,
         extensionCoordinator: null,
@@ -315,7 +326,7 @@ window.features = window.features || [], window.features.push("extensions"), def
             var e = this.get("extensions").initExtension({
                 clientId: this.get("extension.clientId"),
                 token: this.get("extensionInstallation.token")
-            }, this.$("iframe")[0], this.get("playerRegistry.mainPlayer.player"), this.get("extensionMode"));
+            }, this.$("iframe")[0], this.get("extensionMode"), this.get("player").getExtensionsApi());
             e.setGame(this.get("channel.game")), this.set("extensionCoordinator", e)
         },
         didInsertElement: function() {
