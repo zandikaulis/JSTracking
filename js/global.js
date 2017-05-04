@@ -16414,7 +16414,6 @@ googletag.cmd = googletag.cmd || [],
                 NEWS_FEED_REDESIGN: "05d8869f-e037-4955-b80a-7c361f9ddffb",
                 VOD_UPLOAD_UNITS_V3: "1710cf57-352c-4d09-b2c1-3d40bdf79b30",
                 CHOMPY: "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57",
-                ADOPT: "5397de92-0538-42d1-977c-11842e03c9e5",
                 AWS_ROUNDTRIP_LATENCY_TEST_OPT_IN: "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef",
                 AWS_ROUNDTRIP_LATENCY_TEST_ENDPOINT: "5daee224-4c99-499f-b6e0-e308a5fa54f1",
                 LOL_METADATA_EXPERIMENT: "479d9473-bf6e-4d74-8f9b-dd85d6f98921",
@@ -16462,7 +16461,6 @@ googletag.cmd = googletag.cmd || [],
                 "9649684c-6d3f-423d-9d3c-f4296efee975": "control",
                 "05d8869f-e037-4955-b80a-7c361f9ddffb": "no",
                 "1710cf57-352c-4d09-b2c1-3d40bdf79b30": "control",
-                "5397de92-0538-42d1-977c-11842e03c9e5": "no",
                 "b2925d54-cebb-4e1d-a50d-9dd2b1ea850e": "control",
                 "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57": "control",
                 "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef": "false",
@@ -16577,33 +16575,32 @@ googletag.cmd = googletag.cmd || [],
         };
         var r = !1;
         t(i).on("ready", function() {
-                r = !0
-            }), i.ready = function(i) {
-                r ? i(n) : t(e.player).on("ready", function() {
-                    i(n)
-                })
-            }, i.getPlayer = function() {
-                return console.warn("Twitch.player.getPlayer is deprecated for the new player."), n || console.error("Twitch.player.getPlayer called before player is ready."), n
-            }, i.parseTimeOffset = function(e) {
-                var t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "");
-                if (!t) return 0;
-                try {
-                    return 3600 * (parseInt(t[2], 10) || 0) + 60 * (parseInt(t[4], 10) || 0) + (parseInt(t[6], 10) || 0)
-                } catch (e) {
-                    return 0
-                }
-            }, i.setSteamInfo = function(e, t) {
-                console.warn("Twitch.player.setSteamInfo is deprecated")
-            }, i.getSpecialOverlay = function() {
-                return "true" === e.storage.get("adblock_enabled", {
-                    storage: "sessionStorage"
-                })
-            },
-            i.onTwitchPlayerInit = i.onTwitchPlayerLoaded = function(e) {
-                console.warn("Twitch.player.onTwitchPlayer(Init/Loaded) is deprecated! Use Twitch.ready instead."), i.ready(e)
-            }, e.mixin({
-                player: i
+            r = !0
+        }), i.ready = function(i) {
+            r ? i(n) : t(e.player).on("ready", function() {
+                i(n)
             })
+        }, i.getPlayer = function() {
+            return console.warn("Twitch.player.getPlayer is deprecated for the new player."), n || console.error("Twitch.player.getPlayer called before player is ready."), n
+        }, i.parseTimeOffset = function(e) {
+            var t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "");
+            if (!t) return 0;
+            try {
+                return 3600 * (parseInt(t[2], 10) || 0) + 60 * (parseInt(t[4], 10) || 0) + (parseInt(t[6], 10) || 0)
+            } catch (e) {
+                return 0
+            }
+        }, i.setSteamInfo = function(e, t) {
+            console.warn("Twitch.player.setSteamInfo is deprecated")
+        }, i.getSpecialOverlay = function() {
+            return "true" === e.storage.get("adblock_enabled", {
+                storage: "sessionStorage"
+            })
+        }, i.onTwitchPlayerInit = i.onTwitchPlayerLoaded = function(e) {
+            console.warn("Twitch.player.onTwitchPlayer(Init/Loaded) is deprecated! Use Twitch.ready instead."), i.ready(e)
+        }, e.mixin({
+            player: i
+        })
     }(Twitch, jQuery),
     function(e, t) {
         var n = function(e) {
