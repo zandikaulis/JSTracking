@@ -801,16 +801,6 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
-        "5397de92-0538-42d1-977c-11842e03c9e5": {
-            "name": "adopt",
-            "groups": [{
-                "weight": 0,
-                "value": "yes"
-            }, {
-                "weight": 100,
-                "value": "no"
-            }]
-        },
         "54e455b2-9854-4c55-b926-cfadbff49324": {
             "name": "LOGGED_OUT_HOMEPAGE_EXPERIMENTS",
             "groups": [{
