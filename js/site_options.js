@@ -608,6 +608,13 @@ window.SiteOptions = {
                 "value": "no_show"
             }]
         },
+        "3f76ba9e-58e2-4bf2-b1bd-a3f14be66410": {
+            "name": "Test propagation time",
+            "groups": [{
+                "weight": 1,
+                "value": "a"
+            }]
+        },
         "3f821134-e203-49f0-92a7-4440c22f0f26": {
             "name": "Console A/B Tracing",
             "groups": [{
