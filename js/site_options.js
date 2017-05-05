@@ -1116,25 +1116,25 @@ window.SiteOptions = {
             "name": "CVP March 21",
             "groups": [{
                 "weight": 5,
-                "value": "1.7.3+absoff"
+                "value": "1.7.4+absoff"
             }, {
                 "weight": 5,
-                "value": "1.7.3+absctrl"
+                "value": "1.7.4+absctrl"
             }, {
                 "weight": 69,
-                "value": "1.7.3"
+                "value": "1.7.4"
             }, {
                 "weight": 2,
-                "value": "1.7.3+speed"
+                "value": "1.7.5+spd34"
             }, {
                 "weight": 2,
-                "value": "1.7.3+spd24"
+                "value": "1.7.5+spd45"
             }, {
                 "weight": 2,
-                "value": "1.7.3+spd35"
+                "value": "1.7.5+spd35"
             }, {
                 "weight": 2,
-                "value": "1.7.4+speed"
+                "value": "1.7.4+spd34"
             }, {
                 "weight": 2,
                 "value": "1.7.4+spd35"
@@ -1142,11 +1142,14 @@ window.SiteOptions = {
                 "weight": 2,
                 "value": "1.7.4+spd45"
             }, {
-                "weight": 4,
+                "weight": 2,
                 "value": "1.7.4+spdcy"
             }, {
+                "weight": 2,
+                "value": "1.7.5+spdcy"
+            }, {
                 "weight": 5,
-                "value": "1.7.3+spdcy"
+                "value": "1.7.5"
             }]
         },
         "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": {
