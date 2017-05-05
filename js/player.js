@@ -8938,7 +8938,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.05.04-151329+661c87adf3360988a91be6f86cd65ac4b96adca9",
+                    app_version: "2017.05.05-202229+6c449e967b44546476f715cf3e1c9fc592d6f533",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -34681,7 +34681,7 @@
             _ = t.FOLLOW_NOT_FOUND = "Follow not found",
             g = t.ACTION_PROMPT_LOGIN_MODAL = "prompt login modal",
             y = "follow",
-            m = "notifications_change"
+            m = "notification_change"
     }, function(e, t, n) {
         "use strict";
 
