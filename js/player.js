@@ -8938,7 +8938,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.05.05-202229+6c449e967b44546476f715cf3e1c9fc592d6f533",
+                    app_version: "2017.05.05-222946+54dc24fa338827a8cadfb79e25482e6f289b0e2e",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -17858,11 +17858,9 @@
                         n = t.analyticsTracker,
                         r = $(".js-recommendations-overlay", this.$root).attr("data-display-which-vods");
                     n.trackEvent("player_rec_select", {
-                        recommendation: {
-                            vod_id: e.id,
-                            content: e.recommendationType,
-                            view: r === y ? T : S
-                        }
+                        recommended_vod_id: e.id,
+                        recommended_vod_content: e.recommendationType,
+                        recommended_vod_view: r === y ? T : S
                     })
                 }
             }, {
@@ -17872,7 +17870,7 @@
                         t = e.stream,
                         n = e.analyticsTracker;
                     n.trackEvent("player_rec_show", {
-                        type: t.contentType === p.CONTENT_MODE_VOD ? "vod" : "live"
+                        type: t.contentType === p.CONTENT_MODE_VOD ? "postVOD" : "postLive"
                     })
                 }
             }, {
@@ -17882,10 +17880,8 @@
                         t = e.recommendations,
                         n = e.analyticsTracker;
                     n.trackEvent("player_rec_autoplay", {
-                        recommendation: {
-                            vod_id: t.videos[0].id,
-                            content: t.videos[0].recommendationType
-                        }
+                        recommended_vod_id: t.videos[0].id,
+                        recommended_vod_content: t.videos[0].recommendationType
                     })
                 }
             }, {
@@ -17895,10 +17891,8 @@
                         t = e.recommendations,
                         n = e.analyticsTracker;
                     n.trackEvent("player_rec_show_featured", {
-                        recommendation: {
-                            vod_id: t.videos[0].id,
-                            content: t.videos[0].recommendationType
-                        }
+                        recommended_vod_id: t.videos[0].id,
+                        recommended_vod_content: t.videos[0].recommendationType
                     })
                 }
             }, {
@@ -17908,14 +17902,13 @@
                         t = e.recommendations,
                         n = e.analyticsTracker,
                         r = t.videos,
-                        i = t.numVideosVisible;
+                        i = t.numVideosVisible,
+                        o = r.slice(0, i).map(function(e) {
+                            return e.id
+                        }).join(",");
                     n.trackEvent("player_rec_show_others", {
-                        recommendations: r.slice(0, i).map(function(e) {
-                            return {
-                                vod_id: e.id,
-                                content: e.recommendationType
-                            }
-                        })
+                        recommended_vod_content: t.videos[0].recommendationType,
+                        recommended_vod_ids: o
                     })
                 }
             }]), t
