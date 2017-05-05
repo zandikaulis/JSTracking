@@ -122,19 +122,19 @@ window.features = window.features || [], window.features.push("extensions"), def
             moduleName: "web-client/components/dashboards/extensions/extension-manager/available-card/template.hbs"
         }
     })
-}), define("web-client/components/dashboards/extensions/extension-manager/component", ["exports", "ember-component", "ember-computed", "ember-service/inject", "ember-object", "web-client/models/extension", "web-client/utilities/extensions/constants"], function(e, t, n, l, s, a, o) {
-    function i(e) {
+}), define("web-client/components/dashboards/extensions/extension-manager/component", ["exports", "ember-component", "ember-computed", "ember-service/inject", "ember-object", "web-client/models/extension"], function(e, t, n, l, s, a) {
+    function o(e) {
         if (Array.isArray(e)) {
             for (var t = 0, n = Array(e.length); t < e.length; t++) n[t] = e[t];
             return n
         }
         return Array.from(e)
     }
-    var c = s.default.extend({
+    var i = s.default.extend({
             id: "",
             anchor: ""
         }),
-        r = [c.create({
+        c = [i.create({
             id: "extension-overlay-1",
             anchor: a.EXTENSION_ANCHOR_VIDEO_OVERLAY
         })];
@@ -148,16 +148,15 @@ window.features = window.features || [], window.features.push("extensions"), def
                 return e.get("isActive")
             })
         }),
-        MAX_EXTENSION_SLOTS: o.MAX_EXTENSION_SLOTS,
         availableSlots: (0, n.default)("extensionPanels", function() {
             var e = this.get("extensionPanels"),
                 t = e.map(function(e) {
-                    return c.create({
+                    return i.create({
                         id: e.data.slot,
                         anchor: a.EXTENSION_ANCHOR_PANEL
                     })
                 });
-            return [].concat(i(t), r)
+            return [].concat(o(t), c)
         }),
         installExtension: function() {},
         removeExtensionInstallation: function() {},
@@ -180,29 +179,6 @@ window.features = window.features || [], window.features.push("extensions"), def
             this._super.apply(this, arguments), this.get("allExtensions") || this.set("allExtensions", []), this.get("extensionInstallations") || this.set("extensionInstallations", []), this.get("extensionPanels") || this.set("extensionPanels", [])
         },
         actions: {
-            closeExtensionReplaceDialog: function() {
-                this.set("extensionToActivate", null), this.set("extensionToReplace", null)
-            },
-            closeExtensionActivationDialog: function() {
-                this.set("activatedExtension", null)
-            },
-            replaceExtension: function() {
-                var e = this,
-                    t = this.get("extensionToActivate"),
-                    n = this.get("extensionToReplace"),
-                    l = n.get("activationConfig.slot"),
-                    s = this.get("deactivateExtensionInstallation"),
-                    a = this.get("activateExtensionInstallation");
-                s(n).then(function() {
-                    return a(t, {
-                        slot: l
-                    })
-                }).then(function() {
-                    if (!e.isDestroyed) return e.set("extensionToActivate", null), e.set("extensionToReplace", null), t.reload()
-                }).then(function() {
-                    e.isDestroyed || e.set("activatedExtension", t)
-                })
-            },
             installExtension: function(e) {
                 var t = this;
                 this.get("installExtension")(e).then(function(e) {
@@ -216,15 +192,10 @@ window.features = window.features || [], window.features.push("extensions"), def
                 this.get("configureExtensionInstallation")(e)
             },
             activateExtensionInstallation: function(e, t) {
-                var n = this;
-                if (t.slot) {
-                    var l = this.get("activeExtensionInstallations") || [],
-                        s = l.findBy("activationConfig.slot", t.slot);
-                    if (s) return this.set("extensionToActivate", e), void this.set("extensionToReplace", s)
-                }
-                return this.get("activateExtensionInstallation")(e, t).then(function() {
-                    n.isDestroyed || n.set("activatedExtension", e)
-                })
+                this.set("installationToActivate", e), this.set("configToActivate", t)
+            },
+            closeActivateDialog: function() {
+                this.set("installationToActivate", null), this.set("configToActivate", null)
             },
             deactivateExtensionInstallation: function(e) {
                 this.get("deactivateExtensionInstallation")(e)
@@ -287,8 +258,8 @@ window.features = window.features || [], window.features.push("extensions"), def
     })
 }), define("web-client/components/dashboards/extensions/extension-manager/template", ["exports"], function(e) {
     e.default = Ember.HTMLBars.template({
-        id: "J3zcL6l/",
-        block: '{"statements":[["open-element","div",[]],["static-attr","class","flex flex--nowrap"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ext-installed-list brick brick--pd-sm brick--theme-grey mg-r-1"],["static-attr","data-test-selector","ext-installed-list"],["flush-element"],["text","\\n    "],["open-element","h4",[]],["static-attr","class","mg-b-1"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.installedExtensionsHeader"],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["extensionInstallations"]]],null,14,12],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","brick brick--pd-sm brick--theme-grey mg-0"],["static-attr","data-test-selector","ext-available-list"],["flush-element"],["text","\\n    "],["open-element","h4",[]],["static-attr","class","mg-b-1"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.availableExtensionsHeader"],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["availableExtensions"]]],null,11,9],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["append",["helper",["dashboards/extensions/extension-dialogs"],null,[["extensionInstallation","installationToRemove","onProceed"],[["get",["extensionInstallation"]],["get",["installationToRemove"]],["get",["removeExtensionInstallation"]]]]],false],["text","\\n"],["block",["common/modal-dialog"],null,[["onClose","defaultShowModal","renderInPlace"],[["helper",["action"],[["get",[null]],"closeExtensionReplaceDialog"],null],["get",["extensionToReplace"]],false]],8],["block",["if"],[["get",["activatedExtension","activationConfig","slot"]]],null,5,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["t"],["general.forms.done"],null],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","card pd-2"],["flush-element"],["text","\\n      "],["open-element","h5",[]],["static-attr","data-test-selector","ext-modal-header"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.dialogs.cantAddNewExtensionStatusText"],null],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n      "],["open-element","p",[]],["static-attr","data-test-selector","ext-modal-message"],["flush-element"],["text","\\n        "],["append",["helper",["t"],["dashboard.extensions.dialogs.cantAddNewExtensionErrorMessage"],[["maxExtensionSlots"],[["get",["MAX_EXTENSION_SLOTS"]]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","align-center"],["flush-element"],["text","\\n"],["block",["common/button-element"],null,[["onClick","testSelector"],[["helper",["action"],[["get",[null]],"closeExtensionActivationDialog"],null],"ext-modal-proceed"]],0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["common/modal-dialog"],null,[["onClose","defaultShowModal","renderInPlace"],[["helper",["action"],[["get",[null]],"closeExtensionActivationDialog"],null],["get",["activatedExtension"]],false]],1]],"locals":[]},{"statements":[["text","          "],["append",["helper",["t"],["general.forms.done"],null],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","card pd-2"],["flush-element"],["text","\\n      "],["open-element","h5",[]],["static-attr","data-test-selector","ext-modal-header"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.dialogs.newActivatedExtensionStatusText"],null],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n      "],["open-element","p",[]],["static-attr","data-test-selector","ext-modal-message"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.dialogs.newActivatedExtensionConfiguration"],[["htmlSafe","extensionName","extensionSlot"],[true,["get",["activatedExtension","extension","name"]],["get",["activatedExtension","activationConfig","slot"]]]]],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","align-center"],["flush-element"],["text","\\n"],["block",["common/button-element"],null,[["onClick","testSelector"],[["helper",["action"],[["get",[null]],"closeExtensionActivationDialog"],null],"ext-modal-proceed"]],3],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["common/modal-dialog"],null,[["onClose","defaultShowModal","renderInPlace"],[["helper",["action"],[["get",[null]],"closeExtensionActivationDialog"],null],["get",["activatedExtension"]],false]],4]],"locals":[]},{"statements":[["text","        "],["append",["helper",["t"],["dashboard.extensions.dialogs.replaceConfirm"],null],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["t"],["general.forms.cancel"],null],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","card pd-2"],["flush-element"],["text","\\n    "],["open-element","h5",[]],["static-attr","data-test-selector","ext-modal-header"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.dialogs.replaceHeader"],null],false],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","border-t clearfix mg-y-1"],["flush-element"],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","data-test-selector","ext-modal-message"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.dialogs.replaceActionResultWarning"],null],false],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","mg-t-1 mg-b-2"],["flush-element"],["text","\\n      "],["append",["helper",["t"],["dashboard.extensions.dialogs.replaceExtensionSlotConfiguration"],[["htmlSafe","extensionName","extensionSlot"],[true,["get",["extensionToReplace","extension","name"]],["get",["extensionToReplace","activationConfig","slot"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","data-test-selector","ext-modal-message"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.dialogs.replaceConfirmAction"],null],false],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","border-t clearfix mg-y-1"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","align-center"],["flush-element"],["text","\\n"],["block",["common/button-element"],null,[["onClick","isHollow","testSelector"],[["helper",["action"],[["get",[null]],"closeExtensionReplaceDialog"],null],true,"ext-modal-cancel"]],7],["text","       \\n"],["block",["common/button-element"],null,[["onClick","testSelector"],[["helper",["action"],[["get",[null]],"replaceExtension"],null],"ext-modal-proceed"]],6],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","p",[]],["static-attr","class","mg-b-2"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.noAvailableExtensions"],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["dashboards/extensions/extension-manager/available-card"],null,[["extension","installExtension","testSelector"],[["get",["ext"]],["helper",["action"],[["get",[null]],"installExtension",["get",["ext"]]],null],"ext-available"]]],false],["text","\\n"]],"locals":["ext"]},{"statements":[["block",["each"],[["get",["availableExtensions"]]],null,10]],"locals":[]},{"statements":[["text","      "],["open-element","p",[]],["static-attr","class","mg-b-2"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.noExtensionsInstalled"],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["dashboards/extensions/extension-manager/installed-card"],null,[["extensionInstallation","availableSlots","activateExtensionInstallation","deactivateExtensionInstallation","configureExtensionInstallation","removeExtensionInstallation","testSelector"],[["get",["installation"]],["get",["availableSlots"]],["helper",["action"],[["get",[null]],"activateExtensionInstallation"],null],["helper",["action"],[["get",[null]],"deactivateExtensionInstallation"],null],["helper",["action"],[["get",[null]],"configureExtensionInstallation"],null],["helper",["action"],[["get",[null]],"removeExtensionInstallation"],null],"ext-installed"]]],false],["text","\\n"]],"locals":["installation"]},{"statements":[["block",["each"],[["get",["extensionInstallations"]]],null,13]],"locals":[]}],"hasPartials":false}',
+        id: "S7IGCcVF",
+        block: '{"statements":[["open-element","div",[]],["static-attr","class","flex flex--nowrap"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ext-installed-list brick brick--pd-sm brick--theme-grey mg-r-1"],["static-attr","data-test-selector","ext-installed-list"],["flush-element"],["text","\\n    "],["open-element","h4",[]],["static-attr","class","mg-b-1"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.installedExtensionsHeader"],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["extensionInstallations"]]],null,6,4],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","brick brick--pd-sm brick--theme-grey mg-0"],["static-attr","data-test-selector","ext-available-list"],["flush-element"],["text","\\n    "],["open-element","h4",[]],["static-attr","class","mg-b-1"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.availableExtensionsHeader"],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["availableExtensions"]]],null,3,1],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["append",["helper",["dashboards/extensions/extension-dialogs"],null,[["extensionInstallation","installationToRemove","onProceed"],[["get",["extensionInstallation"]],["get",["installationToRemove"]],["get",["removeExtensionInstallation"]]]]],false],["text","\\n"],["block",["if"],[["get",["installationToActivate"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["dashboards/extensions/activate-workflow"],null,[["installation","config","activeInstallations","activateInstallation","deactivateInstallation","onClose"],[["get",["installationToActivate"]],["get",["configToActivate"]],["get",["activeExtensionInstallations"]],["helper",["route-action"],["activateExtensionInstallation"],null],["helper",["route-action"],["deactivateExtensionInstallation"],null],["helper",["action"],[["get",[null]],"closeActivateDialog"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","p",[]],["static-attr","class","mg-b-2"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.noAvailableExtensions"],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["dashboards/extensions/extension-manager/available-card"],null,[["extension","installExtension","testSelector"],[["get",["ext"]],["helper",["action"],[["get",[null]],"installExtension",["get",["ext"]]],null],"ext-available"]]],false],["text","\\n"]],"locals":["ext"]},{"statements":[["block",["each"],[["get",["availableExtensions"]]],null,2]],"locals":[]},{"statements":[["text","      "],["open-element","p",[]],["static-attr","class","mg-b-2"],["flush-element"],["append",["helper",["t"],["dashboard.extensions.noExtensionsInstalled"],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["dashboards/extensions/extension-manager/installed-card"],null,[["extensionInstallation","availableSlots","activateExtensionInstallation","deactivateExtensionInstallation","configureExtensionInstallation","removeExtensionInstallation","testSelector"],[["get",["installation"]],["get",["availableSlots"]],["helper",["action"],[["get",[null]],"activateExtensionInstallation"],null],["helper",["action"],[["get",[null]],"deactivateExtensionInstallation"],null],["helper",["action"],[["get",[null]],"configureExtensionInstallation"],null],["helper",["action"],[["get",[null]],"removeExtensionInstallation"],null],"ext-installed"]]],false],["text","\\n"]],"locals":["installation"]},{"statements":[["block",["each"],[["get",["extensionInstallations"]]],null,5]],"locals":[]}],"hasPartials":false}',
         meta: {
             moduleName: "web-client/components/dashboards/extensions/extension-manager/template.hbs"
         }
