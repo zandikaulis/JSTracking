@@ -707,6 +707,13 @@ window.SiteOptions = {
                 "value": "v2"
             }]
         },
+        "4badc757-13a7-468c-99b6-e42aef7fc286": {
+            "name": "spade_url",
+            "groups": [{
+                "weight": 1,
+                "value": "//trowel.twitch.tv/"
+            }]
+        },
         "4d081a33-0d0f-4b44-bfde-cf07c358915f": {
             "name": "baking_bread_d",
             "groups": [{
@@ -970,16 +977,6 @@ window.SiteOptions = {
             }, {
                 "weight": 50,
                 "value": "variant1"
-            }]
-        },
-        "81ecf0db-9eec-44a2-97da-ce5d479a6414": {
-            "name": "android_making_the_doughnuts",
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 100,
-                "value": "on_player"
             }]
         },
         "84d81180-6faa-4c58-98d7-48bbff5035c7": {
