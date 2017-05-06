@@ -8938,7 +8938,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.05.06-042130+bb17aad1227c9b85c4cb1c88e1f6a728f0771e58",
+                    app_version: "2017.05.06-052150+25bfcbe0a28157bba4db3a0a27c1ea21d2b94845",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -14878,7 +14878,9 @@
                 }, {
                     key: "_onAdLoaded",
                     value: function(e, t) {
-                        this._moat.trackAd(this._currentAdsManager, t), this._sendAdSpadeEvent(f.AD_LOADED, this._initializeAdSpadeEvent(t, e.getAd()))
+                        var n = this._stateStore.getState(),
+                            r = n.playback;
+                        this._currentAdsManager.setVolume(r.muted ? 0 : r.volume), this._moat.trackAd(this._currentAdsManager, t), this._sendAdSpadeEvent(f.AD_LOADED, this._initializeAdSpadeEvent(t, e.getAd()))
                     }
                 }, {
                     key: "_onAdStarted",
