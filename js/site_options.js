@@ -675,6 +675,16 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "497e1277-7fff-4c16-98f0-6b55c8b59a4f": {
+            "name": "I18N_GAME_NAMES",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "4aa9ee11-136c-4521-a139-e2abb718ec07": {
             "name": "Gabriel",
             "groups": [{
