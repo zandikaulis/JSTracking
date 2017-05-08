@@ -8938,7 +8938,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.05.08-184325+1452dcd59f4800623c2926955ad3507e5329e43b",
+                    app_version: "2017.05.08-211645+704a501c2012d66dbc171fd6cb0c5bf2b7b804a0",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -39470,12 +39470,19 @@
             }, {
                 key: "_fetchChannelVideos",
                 value: function() {
-                    var e = this._stateStore.getState(),
-                        t = e.streamMetadata,
-                        n = "Offline Recommendations: No channel videos";
-                    return (0, _.krakenRequestv5)("channels/" + t.channel.id + "/videos?limit=30").then(function(e) {
+                    var e = this,
+                        t = this._stateStore.getState(),
+                        n = t.streamMetadata,
+                        r = t.stream,
+                        i = r,
+                        o = "Offline Recommendations: No channel videos",
+                        a = "Offline Recommendations: Stale video response";
+                    return (0, _.krakenRequestv5)("channels/" + n.channel.id + "/videos?limit=30").then(function(t) {
+                        var n = e._stateStore.getState().stream;
+                        return i === n ? t : Promise.reject(a)
+                    }).then(function(e) {
                         var t = e.videos;
-                        return t.length > 0 ? t : Promise.reject(n)
+                        return t.length > 0 ? t : Promise.reject(o)
                     })
                 }
             }, {
