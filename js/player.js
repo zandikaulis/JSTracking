@@ -8938,7 +8938,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.05.08-162107+f89b22c08e0903d2989d965e52ef5b672a96151d",
+                    app_version: "2017.05.08-184325+1452dcd59f4800623c2926955ad3507e5329e43b",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -30090,64 +30090,69 @@
             o = r(i),
             a = n(550),
             s = n(158),
-            l = n(595),
-            u = r(l),
-            c = {
+            l = n(343),
+            u = n(595),
+            c = r(u),
+            d = {
                 streamType: i.PropTypes.string,
                 i18n: i.PropTypes.object.isRequired,
                 spectrePlaylist: i.PropTypes.bool,
                 online: i.PropTypes.bool,
-                inCollection: i.PropTypes.bool
+                inCollection: i.PropTypes.bool,
+                showingRecommendations: i.PropTypes.bool
             },
-            d = function(e) {
+            p = function(e) {
                 var t = e.lang,
                     n = e.manifestInfo,
                     r = e.online,
                     i = e.stream,
-                    o = e.collection;
+                    o = e.collection,
+                    a = e.screen;
                 return {
                     streamType: i.contentType,
                     i18n: t,
                     spectrePlaylist: n.spectre,
                     online: r,
-                    inCollection: Boolean(o.id)
+                    inCollection: Boolean(o.id),
+                    showingRecommendations: a[0] === l.VOD_RECOMMENDATION_SCREEN
                 }
             },
-            p = "Live",
-            f = "Offline",
-            h = "Playlist",
-            v = (0, u["default"])("player-hover", "player-streamstatus"),
-            _ = t.StreamStatusComponent = function(e) {
+            f = "Live",
+            h = "Offline",
+            v = "Playlist",
+            _ = (0, c["default"])("player-hover", "player-streamstatus"),
+            g = t.StreamStatusComponent = function(e) {
                 var t = e.streamType,
                     n = e.i18n,
                     r = e.online,
                     i = e.spectrePlaylist,
                     a = e.inCollection,
-                    l = null;
-                if (!a) {
-                    var c = (0, u["default"])("player-streamstatus__type", "player-streamstatus__type--playlist"),
-                        d = (0, u["default"])("player-streamstatus__type", "player-streamstatus__type--live", "qa-live-label"),
-                        _ = (0, u["default"])("player-streamstatus__type", "player-streamstatus__type--offline");
-                    i ? l = o["default"].createElement("span", {
-                        className: c
-                    }, o["default"].createElement("span", {
-                        className: "player-streamstatus__label"
-                    }, n.translate(h))) : t === s.CONTENT_MODE_LIVE && (l = r ? o["default"].createElement("span", {
+                    l = e.showingRecommendations,
+                    u = null;
+                if (!a && !l) {
+                    var d = (0, c["default"])("player-streamstatus__type", "player-streamstatus__type--playlist"),
+                        p = (0, c["default"])("player-streamstatus__type", "player-streamstatus__type--live", "qa-live-label"),
+                        g = (0, c["default"])("player-streamstatus__type", "player-streamstatus__type--offline");
+                    i ? u = o["default"].createElement("span", {
                         className: d
                     }, o["default"].createElement("span", {
                         className: "player-streamstatus__label"
-                    }, n.translate(p))) : o["default"].createElement("span", {
-                        className: _
+                    }, n.translate(v))) : t === s.CONTENT_MODE_LIVE && (u = r ? o["default"].createElement("span", {
+                        className: p
                     }, o["default"].createElement("span", {
                         className: "player-streamstatus__label"
-                    }, n.translate(f))))
+                    }, n.translate(f))) : o["default"].createElement("span", {
+                        className: g
+                    }, o["default"].createElement("span", {
+                        className: "player-streamstatus__label"
+                    }, n.translate(h))))
                 }
                 return o["default"].createElement("div", {
-                    className: v
-                }, l)
+                    className: _
+                }, u)
             };
-        _.propTypes = c;
-        t.StreamStatus = (0, a.connect)(d)(_)
+        g.propTypes = d;
+        t.StreamStatus = (0, a.connect)(p)(g)
     }, function(e, t, n) {
         "use strict";
 
@@ -31465,12 +31470,12 @@
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
-                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                        r.enumerable = r.enumerable || !1,
+                            r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
                     }
                 }
                 return function(t, n, r) {
-                    return n && e(t.prototype, n),
-                        r && e(t, r), t
+                    return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
             s = function g(e, t, n) {
@@ -32510,7 +32515,7 @@
             for (var i = "string" != typeof t ? [].concat(t) : t.split("."); i.length > 1;) {
                 if (!e) return {};
                 var o = r(i.shift());
-                !e[o] && n && (e[o] = new n), e = e[o]
+                !e[o] && n && (e[o] = new n), e = e[o];
             }
             return e ? {
                 obj: e,
