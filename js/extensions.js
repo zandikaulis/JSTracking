@@ -268,11 +268,12 @@ window.features = window.features || [], window.features.push("extensions"), def
             moduleName: "web-client/components/dashboards/extensions/extension-manager/template.hbs"
         }
     })
-}), define("web-client/components/extension-panel", ["exports", "ember-component", "ember-service/inject", "ember-string", "ember-computed", "ember-metal/observer"], function(e, t, n, l, s, a) {
-    e.default = t.default.extend({
+}), define("web-client/components/extension-panel", ["exports", "ember-component", "ember-service/inject", "ember-string", "ember-computed", "ember-metal/observer", "web-client/mixins/partial-impression"], function(e, t, n, l, s, a, o) {
+    e.default = t.default.extend(o.PartialImpression, {
         extensions: (0, n.default)(),
         pubsub: (0, n.default)(),
         playerRegistry: (0, n.default)(),
+        tracking: (0, n.default)(),
         messageReceiveCount: 0,
         extensionInstallation: null,
         extension: s.default.alias("extensionInstallation.extension"),
@@ -328,6 +329,16 @@ window.features = window.features || [], window.features.push("extensions"), def
         isUserLinked: function(e) {
             var t = JSON.parse(atob(e.split(".")[1]));
             return t && t.user_id && !0
+        },
+        partialImpression: function(e) {
+            this.get("tracking").trackEvent({
+                event: "extension_view",
+                data: Object.assign(e, {
+                    anchor: this.get("extension.anchor"),
+                    extension_id: this.get("extension.clientId"),
+                    extension_version: this.get("extension.version")
+                })
+            })
         },
         actions: {
             toggleLinkExtension: function() {
