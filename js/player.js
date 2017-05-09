@@ -8121,7 +8121,7 @@
             G = t.CLIPS_LOYALTY = "24790bc9-1beb-4cf1-bc75-fe22c400805d",
             q = t.PADTIME = "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14",
             Y = t.OFFLINE_RECOMMENDATIONS = "00683bde-a79d-4b9d-a7cc-b0549f854d36",
-            K = t.VIEW_WATCH_TOGETHER = "fc07a4c1-95cd-4503-b35e-2d2571225642"
+            K = t.VIEW_WATCH_TOGETHER = "d0518b75-fbba-418a-9445-ff7c517beb32"
     }, function(e, t, n) {
         function r(e) {
             var t = i(e);
@@ -8939,7 +8939,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.05.09-172052+7c3da1f71c85290ffaa3430f06a1bd89d79bfe68",
+                    app_version: "2017.05.09-181620+100333e05aa0cad7ae587823c1faf67354f5299e",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
