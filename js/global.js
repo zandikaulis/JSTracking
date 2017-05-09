@@ -16379,7 +16379,6 @@ googletag.cmd = googletag.cmd || [],
     function(e, t) {
         var n = SiteOptions.experiments || {},
             i = {
-                BROWSE_EXPERIMENT: "99494f77-1c7c-46c5-9b9c-a117db47d3c5",
                 RECOMMENDED_GAMES: "61b169ff-bc62-4725-a40e-1be627197c6f",
                 VOD_COVIEWS_AB: "ec27e6fe-dabc-4fd3-ab62-a2cffc8fe316",
                 VOD_UPLOAD_UNITS: "1e406d0d-c293-4c4e-812f-049db8c7e3ec",
@@ -16429,7 +16428,6 @@ googletag.cmd = googletag.cmd || [],
                 AKAMAI_IMAGE_MANAGER: "f321aa37-e81d-4a81-99d5-303bf9429b7b"
             },
             r = {
-                "99494f77-1c7c-46c5-9b9c-a117db47d3c5": "control",
                 "61b169ff-bc62-4725-a40e-1be627197c6f": "no",
                 "ec27e6fe-dabc-4fd3-ab62-a2cffc8fe316": "control",
                 "1e406d0d-c293-4c4e-812f-049db8c7e3ec": "control",
@@ -16480,7 +16478,6 @@ googletag.cmd = googletag.cmd || [],
             },
             o = {},
             s = {
-                BROWSE_EXPERIMENT: "variant2",
                 CSGO_LANGUAGE_SAMPLE: "localized",
                 LANGUAGE_DIRECTORY_FILTER: "full",
                 CLIPS_ENABLED: "yes",
