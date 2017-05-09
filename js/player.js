@@ -8939,7 +8939,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.05.09-005443+0768b75e54f313df9c788d3b6d37be51ee1a9539",
+                    app_version: "2017.05.09-010036+b7b90c378779fedcc7219fd1a1c7454df792ef76",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -30757,11 +30757,12 @@
             s = r(a),
             l = {
                 className: a.PropTypes.string,
-                onClick: a.PropTypes.func.isRequired,
-                children: a.PropTypes.oneOfType([a.PropTypes.arrayOf(a.PropTypes.element), a.PropTypes.element, a.PropTypes.node])
+                children: a.PropTypes.oneOfType([a.PropTypes.arrayOf(a.PropTypes.element), a.PropTypes.element, a.PropTypes.node]),
+                onClick: a.PropTypes.func
             },
             u = {
-                className: ""
+                className: "",
+                onClick: function() {}
             };
         o.propTypes = l, o.defaultProps = u
     }, function(e, t, n) {
