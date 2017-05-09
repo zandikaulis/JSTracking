@@ -1462,6 +1462,13 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "c097971e-c5fc-4763-a8fa-de04f3d713a7": {
+            "name": "Watch_Party_Web",
+            "groups": [{
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "c31d337d-4186-465d-9d0b-cb72a5b2aef2": {
             "name": "newsfeed_recommended_clips",
             "groups": [{
@@ -1578,6 +1585,13 @@ window.SiteOptions = {
                 "value": "yes_95"
             }, {
                 "weight": 5,
+                "value": "no"
+            }]
+        },
+        "d0518b75-fbba-418a-9445-ff7c517beb32": {
+            "name": "Watch_Party_Player_UI",
+            "groups": [{
+                "weight": 100,
                 "value": "no"
             }]
         },
