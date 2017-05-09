@@ -3835,22 +3835,15 @@
                 return e.installed_extensions.reduce(function(t, n) {
                     var r = n.extension,
                         i = n.installation_status;
-                    if ("video_overlay" !== r.anchor) return t;
-                    try {
-                        return t.concat({
-                            id: r.id,
-                            name: r.name,
-                            version: r.version,
-                            isActive: i.is_active,
-                            token: e.tokens.filter(function(e) {
-                                return r.id === e.extension_id
-                            })[0].token,
-                            config: JSON.parse(i.config),
-                            viewerUrl: r.viewer_url
-                        })
-                    } catch (o) {
-                        return console.error("Error parsing configuration for extension %s: %o", r.name, o), t
-                    }
+                    return "active" !== i.activation_state || "video_overlay" !== i.activation_config.anchor ? t : t.concat({
+                        id: r.id,
+                        name: r.name,
+                        version: r.version,
+                        token: e.tokens.filter(function(e) {
+                            return r.id === e.extension_id
+                        })[0].token,
+                        viewerUrl: r.viewer_url
+                    })
                 }, [])
             })["catch"](function() {
                 return []
@@ -4592,13 +4585,13 @@
                     case 1:
                         i ^= 255 & e.charCodeAt(o), i = 1540483477 * (65535 & i) + ((1540483477 * (i >>> 16) & 65535) << 16)
                 }
-                return i ^= i >>> 13, i = 1540483477 * (65535 & i) + ((1540483477 * (i >>> 16) & 65535) << 16), i ^= i >>> 15,
-                    i >>> 0
+                return i ^= i >>> 13, i = 1540483477 * (65535 & i) + ((1540483477 * (i >>> 16) & 65535) << 16), i ^= i >>> 15, i >>> 0
             }
 
             function n(e, t) {
                 var n, r, i, o, a, s, l, u;
-                for (n = 3 & e.length, r = e.length - n, i = t, a = 3432918353, s = 461845907, u = 0; u < r;) l = 255 & e.charCodeAt(u) | (255 & e.charCodeAt(++u)) << 8 | (255 & e.charCodeAt(++u)) << 16 | (255 & e.charCodeAt(++u)) << 24, ++u, l = (65535 & l) * a + (((l >>> 16) * a & 65535) << 16) & 4294967295, l = l << 15 | l >>> 17, l = (65535 & l) * s + (((l >>> 16) * s & 65535) << 16) & 4294967295, i ^= l, i = i << 13 | i >>> 19, o = 5 * (65535 & i) + ((5 * (i >>> 16) & 65535) << 16) & 4294967295, i = (65535 & o) + 27492 + (((o >>> 16) + 58964 & 65535) << 16);
+                for (n = 3 & e.length, r = e.length - n, i = t, a = 3432918353, s = 461845907, u = 0; u < r;) l = 255 & e.charCodeAt(u) | (255 & e.charCodeAt(++u)) << 8 | (255 & e.charCodeAt(++u)) << 16 | (255 & e.charCodeAt(++u)) << 24,
+                    ++u, l = (65535 & l) * a + (((l >>> 16) * a & 65535) << 16) & 4294967295, l = l << 15 | l >>> 17, l = (65535 & l) * s + (((l >>> 16) * s & 65535) << 16) & 4294967295, i ^= l, i = i << 13 | i >>> 19, o = 5 * (65535 & i) + ((5 * (i >>> 16) & 65535) << 16) & 4294967295, i = (65535 & o) + 27492 + (((o >>> 16) + 58964 & 65535) << 16);
                 switch (l = 0, n) {
                     case 3:
                         l ^= (255 & e.charCodeAt(u + 2)) << 16;
@@ -5835,7 +5828,7 @@
                                     return parseInt(V.getLabel("ns_st_skc"))
                                 },
                                 setSeeks: function(e) {
-                                    V.setLabel("ns_st_skc", String(e))
+                                    V.setLabel("ns_st_skc", String(e));
                                 },
                                 setSeeking: function(e) {
                                     k = e
@@ -6540,11 +6533,12 @@
                                 onEndOrAdSkip: function(n, r) {
                                     e.getSSECore().resetHeartbeat(), e.getSSECore().resetKeepAlive(), e.getPlaylist().addBufferingTime(n), e.getPlaylist().getClip().addBufferingTime(n), e.getPlaylist().getClip().addElapsedTime(n);
                                     var i = e.getSSECore().createLabels(l.END, r, n);
-                                    e.getEventManager().newEvent(i), e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && (e.getPlaylist().getClip().setSeekingTimeBeforeEnd(n - e.getPlaylist().getClip().getSeekingTimestamp()), e.getPlaylist().getClip().setCollectingSeekingTime(!1)), e.getPlaylist().storeClipPlaybackCounters(), e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1), r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist();
+                                    e.getEventManager().newEvent(i), e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && (e.getPlaylist().getClip().setSeekingTimeBeforeEnd(n - e.getPlaylist().getClip().getSeekingTimestamp()), e.getPlaylist().getClip().setCollectingSeekingTime(!1)), e.getPlaylist().storeClipPlaybackCounters(), e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1), r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist()
                                 },
                                 onBufferStop: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
-                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t), e.getPlaylist().getClip().addElapsedTime(t), e.getPlaylist().getClip().setElapsedTimestamp(t), e.getPlaylist().getClip().setPlaybackStartPosition(r), e.getHeartbeat().resume(), e.getKeepAlive().resume();
+                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().setPlaybackTimestamp(t),
+                                        e.getPlaylist().getClip().setPlaybackTimestamp(t), e.getPlaylist().getClip().addElapsedTime(t), e.getPlaylist().getClip().setElapsedTimestamp(t), e.getPlaylist().getClip().setPlaybackStartPosition(r), e.getHeartbeat().resume(), e.getKeepAlive().resume();
                                     var i = e.getSSECore().createLabels(l.PLAY, n, t);
                                     e.getEventManager().newEvent(i)
                                 },
@@ -7258,8 +7252,7 @@
                     }
 
                     function l(e, t, n) {
-                        return e = e || {}, "number" == typeof t && (e.ns_st_cn = String(t)),
-                            r().setClip(e, n), r().getClip()
+                        return e = e || {}, "number" == typeof t && (e.ns_st_cn = String(t)), r().setClip(e, n), r().getClip()
                     }
 
                     function u(e, t, n) {
@@ -7267,7 +7260,7 @@
                     }
 
                     function c(e) {
-                        "undefined" != typeof e && r().setLabels(e)
+                        "undefined" != typeof e && r().setLabels(e);
                     }
 
                     function d() {
@@ -8939,7 +8932,7 @@
                     m = _.get(!1),
                     E = _.get(!0);
                 v = {
-                    app_version: "2017.05.09-181901+c3132fabc63c6c2c4ebf0a77663c54ad1b5cf701",
+                    app_version: "2017.05.09-193611+cd0b50f97887f1702bde1a0f5240a60b7fb1a7b1",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -30489,10 +30482,7 @@
                         name: l.PropTypes.string.isRequired,
                         version: l.PropTypes.string.isRequired,
                         token: l.PropTypes.string.isRequired,
-                        viewerUrl: l.PropTypes.string.isRequired,
-                        config: l.PropTypes.shape({
-                            slot: l.PropTypes.string.isRequired
-                        }).isRequired
+                        viewerUrl: l.PropTypes.string.isRequired
                     }).isRequired).isRequired
                 }),
                 game: l.PropTypes.string.isRequired,
@@ -30644,10 +30634,7 @@
                     name: l.PropTypes.string.isRequired,
                     version: l.PropTypes.string.isRequired,
                     token: l.PropTypes.string.isRequired,
-                    viewerUrl: l.PropTypes.string.isRequired,
-                    config: l.PropTypes.shape({
-                        slot: l.PropTypes.string.isRequired
-                    }).isRequired
+                    viewerUrl: l.PropTypes.string.isRequired
                 }).isRequired,
                 game: l.PropTypes.string.isRequired,
                 extensionsApi: l.PropTypes.object.isRequired
