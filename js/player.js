@@ -8936,7 +8936,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.09-212949+996b73b008fd45e1a67689456c8b8172eb6c7666",
+                    app_version: "2017.05.09-224250+6e87812cee60de96c913f84d7d80ad9d3f0abd80",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -33942,7 +33942,9 @@
             "{{timeRemaining}} second": "{{timeRemaining}} second",
             "{{timeRemaining}} second_plural": "{{timeRemaining}} seconds",
             "Watch Now": "Watch Now",
-            "Watch Next": "Watch Next"
+            "Watch Next": "Watch Next",
+            "Most Recent Video": "Most Recent Video",
+            Settings: "Settings"
         }
     }, function(e, t, n) {
         "use strict";
