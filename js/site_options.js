@@ -1615,7 +1615,7 @@ window.SiteOptions = {
                 "value": "control5"
             }, {
                 "weight": 100,
-                "value": "holdout"
+                "value": "control"
             }, {
                 "weight": 0,
                 "value": "skip15"
