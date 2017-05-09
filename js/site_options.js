@@ -1122,13 +1122,13 @@ window.SiteOptions = {
                 "value": "1.7.4"
             }, {
                 "weight": 2,
-                "value": "1.7.5+spd34"
+                "value": "1.7.6+spd34"
             }, {
                 "weight": 2,
-                "value": "1.7.5+spd45"
+                "value": "1.7.6+spd45"
             }, {
                 "weight": 2,
-                "value": "1.7.5+spd35"
+                "value": "1.7.6+spd35"
             }, {
                 "weight": 2,
                 "value": "1.7.4+spd34"
@@ -1143,10 +1143,13 @@ window.SiteOptions = {
                 "value": "1.7.4+spdcy"
             }, {
                 "weight": 2,
-                "value": "1.7.5+spdcy"
+                "value": "1.7.6+spdcy"
             }, {
-                "weight": 5,
+                "weight": 2,
                 "value": "1.7.5"
+            }, {
+                "weight": 3,
+                "value": "1.7.6"
             }]
         },
         "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": {
