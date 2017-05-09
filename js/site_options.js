@@ -1198,6 +1198,16 @@ window.SiteOptions = {
                 "value": "variant2"
             }]
         },
+        "9966ac82-62e7-43b2-b6dc-8e8fd03dd1c5": {
+            "name": "android_playercore_3",
+            "groups": [{
+                "weight": 99,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "active"
+            }]
+        },
         "9a3b387e-b6cd-4d2b-80a6-bb14d3ba4512": {
             "name": "GAME_FOLLOW_ONBOARD",
             "groups": [{
