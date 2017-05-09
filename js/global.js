@@ -16425,7 +16425,8 @@ googletag.cmd = googletag.cmd || [],
                 CHANNEL_CHAT_CTA: "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9",
                 SUB_OPTIONS: "86ad7a91-bf36-46c5-adef-6006a09720a8",
                 LOGGED_OUT_FRONT_PAGE_EXPERIMENT: "54e455b2-9854-4c55-b926-cfadbff49324",
-                NEW_STATS: "9242cab4-db40-400c-99e1-2faf8f8026f0"
+                NEW_STATS: "9242cab4-db40-400c-99e1-2faf8f8026f0",
+                AKAMAI_IMAGE_MANAGER: "f321aa37-e81d-4a81-99d5-303bf9429b7b"
             },
             r = {
                 "99494f77-1c7c-46c5-9b9c-a117db47d3c5": "control",
@@ -16474,7 +16475,8 @@ googletag.cmd = googletag.cmd || [],
                 "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9": "control",
                 "86ad7a91-bf36-46c5-adef-6006a09720a8": "two_page",
                 "54e455b2-9854-4c55-b926-cfadbff49324": "control",
-                "9242cab4-db40-400c-99e1-2faf8f8026f0": "no"
+                "9242cab4-db40-400c-99e1-2faf8f8026f0": "no",
+                "f321aa37-e81d-4a81-99d5-303bf9429b7b": "control"
             },
             o = {},
             s = {

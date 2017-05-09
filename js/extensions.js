@@ -291,9 +291,16 @@ window.features = window.features || [], window.features.push("extensions"), def
         extensionInstallationObserver: (0, a.default)("extensionInstallation.token", function() {
             this.get("extensionInstallation.token") && null === this.get("extensionCoordinator") && this._initializeExtensionCoordinator()
         }),
-        iframeUrl: (0, s.default)("extensionMode", "extension.viewerUrl", "extension.configUrl", function() {
-            var e = this.get("extensionMode");
-            return "viewer" === e ? this.get("extension.viewerUrl") : "config" === e ? this.get("extension.configUrl") : void 0
+        iframeUrl: (0, s.default)("extensionMode", "extension.viewerUrl", "extension.configUrl", "extension.liveConfigUrl", function() {
+            switch (this.get("extensionMode")) {
+                case "config":
+                    return this.get("extension.configUrl");
+                case "dashboard":
+                    return this.get("extension.liveConfigUrl");
+                case "viewer":
+                default:
+                    return this.get("extension.viewerUrl")
+            }
         }),
         frameStyle: (0, s.default)("extension.panelHeight", function() {
             var e = this.get("extension.panelHeight") || 300;
