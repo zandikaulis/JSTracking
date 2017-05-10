@@ -505,6 +505,16 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
+        "2c137391-5182-429f-8760-9f71e4d40918": {
+            "name": "CVP MediaPlayer backend control",
+            "groups": [{
+                "weight": 50,
+                "value": "player-core"
+            }, {
+                "weight": 50,
+                "value": "mediaplayer"
+            }]
+        },
         "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": {
             "name": "bits_for_ads",
             "groups": [{
@@ -646,6 +656,16 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "enabled"
+            }]
+        },
+        "44c4bb4e-5580-4f0b-8fc9-a8cd426e4e99": {
+            "name": "CHANNEL_FOLLOW_BUTTON",
+            "groups": [{
+                "weight": 10,
+                "value": "no_sub"
+            }, {
+                "weight": 90,
+                "value": "control"
             }]
         },
         "44dbd670-63e6-4f7f-aa47-417f3eccd939": {
