@@ -8984,7 +8984,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.09-234813+fb55431c3d98da529ec771834e896dcbe0fd771a",
+                    app_version: "2017.05.10-003554+90c5da9a746777697bb6a641a7fc54bd0872f2a1",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -41567,14 +41567,27 @@
             return a(e, [{
                 key: "_initSubscribes",
                 value: function() {
-                    this.unsubs.push((0, s.subscribe)(this.stateStore, ["onlineStatus", "playback"], this.onStateChange.bind(this)))
+                    this.unsubs.push((0, s.subscribe)(this.stateStore, ["onlineStatus"], this.onOnlineStatusChange.bind(this))), this.unsubs.push((0, s.subscribe)(this.stateStore, ["playback.ended", "playback.hasPlayed"], this.onPlaybackStateChange.bind(this)))
                 }
             }, {
-                key: "onStateChange",
+                key: "onOnlineStatusChange",
                 value: function(e) {
-                    var t = e.onlineStatus,
-                        n = e.playback;
-                    t === u.OFFLINE_STATUS && (n.hasPlayed && !n.ended || this._fetchFollowInfo())
+                    var t = e.onlineStatus;
+                    if (t === u.OFFLINE_STATUS) {
+                        var n = this.stateStore.getState(),
+                            r = n.playback;
+                        r.hasPlayed || this._fetchFollowInfo()
+                    }
+                }
+            }, {
+                key: "onPlaybackStateChange",
+                value: function(e) {
+                    var t = e.playback;
+                    if (t.ended) {
+                        var n = this.stateStore.getState(),
+                            r = n.onlineStatus;
+                        r === u.OFFLINE_STATUS && t.hasPlayed && this._fetchFollowInfo()
+                    }
                 }
             }, {
                 key: "_getIDs",
@@ -41752,7 +41765,7 @@
         }
 
         function i(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
