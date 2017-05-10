@@ -1141,22 +1141,22 @@ window.SiteOptions = {
                 "value": "1.7.6+spd35"
             }, {
                 "weight": 2,
-                "value": "1.7.4+spd34"
+                "value": "1.7.7+spd56"
             }, {
                 "weight": 2,
-                "value": "1.7.4+spd35"
+                "value": "1.7.7+spd67"
             }, {
                 "weight": 2,
-                "value": "1.7.4+spd45"
+                "value": "1.7.7+spd78"
             }, {
                 "weight": 2,
-                "value": "1.7.4+spdcy"
+                "value": "1.7.7+spdcy"
             }, {
                 "weight": 2,
-                "value": "1.7.6+spdcy"
+                "value": "1.7.7+spd89"
             }, {
                 "weight": 2,
-                "value": "1.7.5"
+                "value": "1.7.7"
             }, {
                 "weight": 3,
                 "value": "1.7.6"
