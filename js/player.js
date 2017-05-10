@@ -7563,13 +7563,13 @@
 
         function o(e) {
             return f(e) ? {
-                type: w,
+                type: C,
                 currentMetadata: e
-            } : A
+            } : O
         }
 
         function a() {
-            return o(O)
+            return o(I)
         }
 
         function s() {
@@ -7590,29 +7590,33 @@
 
         function u(e) {
             return {
-                type: S,
+                type: P,
                 detected: e
             }
         }
 
         function c(e) {
             return {
-                type: P,
+                type: w,
                 URL: e
             }
         }
 
         function d(e, t, n, r) {
             return p(n.stream).then(function(e) {
-                return Promise.all([(0, y.userInfo)(), (0, y.channelInfo)(e), (0, y.channelAPIInfo)(e), (0, y.channelViewerInfo)(e), n.experiments.get(T.PADTIME), n.experiments.get(T.CHOMPERZ)])
+                return Promise.all([(0, y.userInfo)(), (0, y.channelInfo)(e), (0, y.channelAPIInfo)(e), (0, y.channelViewerInfo)(e), n.experiments.get(T.PADTIME), n.experiments.get(T.CHOMPERZ), n.experiments.get(T.BISMOL)])
             }).then(function(i) {
-                var o = h(i, 6),
+                var o = h(i, 7),
                     a = o[0],
                     s = o[1],
                     l = o[2],
                     u = o[3],
                     c = o[4],
-                    d = o[5];
+                    d = o[5],
+                    p = o[6],
+                    f = (0, S.parseUri)(n.window.location.href),
+                    v = f.queryKey,
+                    g = "digest" === v.referrer;
                 return new _.AdsRequestContext({
                     adType: e,
                     sdk: n.sdk,
@@ -7625,7 +7629,9 @@
                     channelInfo: s,
                     viewerInfo: u,
                     padtimeExpGroup: c,
-                    skippableExpGroup: d
+                    skippableExpGroup: d,
+                    bismolExpGroup: p,
+                    lure: g
                 })
             })
         }
@@ -7637,7 +7643,7 @@
         }
 
         function f(e) {
-            return !(!e.hasOwnProperty("contentType") || !e.hasOwnProperty("rollType")) && (!(!(0, E["default"])(C, e.contentType) || !(0, E["default"])(k, e.rollType)) && ((e.contentType !== C.NONE || e.rollType === k.NONE) && (e.rollType !== k.NONE || e.contentType === C.NONE)))
+            return !(!e.hasOwnProperty("contentType") || !e.hasOwnProperty("rollType")) && (!(!(0, E["default"])(k, e.contentType) || !(0, E["default"])(A, e.rollType)) && ((e.contentType !== k.NONE || e.rollType === A.NONE) && (e.rollType !== A.NONE || e.contentType === k.NONE)))
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -7676,26 +7682,27 @@
             b = n(49),
             E = r(b),
             T = n(240),
-            S = (t.DEFAULT_AD_DURATION = 30, t.ACTION_SET_ADBLOCK_DETECTED = "set adblock detected"),
-            P = t.ACTION_SET_CLICKTHROUGH_URL = "set clickthrough url",
-            w = t.ACTION_SET_AD_METADATA = "set ad metadata",
-            C = t.AdContentTypes = Object.freeze({
+            S = n(167),
+            P = (t.DEFAULT_AD_DURATION = 30, t.ACTION_SET_ADBLOCK_DETECTED = "set adblock detected"),
+            w = t.ACTION_SET_CLICKTHROUGH_URL = "set clickthrough url",
+            C = t.ACTION_SET_AD_METADATA = "set ad metadata",
+            k = t.AdContentTypes = Object.freeze({
                 NONE: "none",
                 IMA: "ima",
                 STITCHED: "stitched"
             }),
-            k = t.AdRollTypes = Object.freeze({
+            A = t.AdRollTypes = Object.freeze({
                 NONE: "none",
                 PREROLL: "preroll",
                 MIDROLL: "midroll",
                 POSTROLL: "postroll"
             }),
-            A = t.INVALID_AD_ACTION = {
+            O = t.INVALID_AD_ACTION = {
                 type: "an invalid ad action"
             },
-            O = {
-                contentType: C.NONE,
-                rollType: k.NONE
+            I = {
+                contentType: k.NONE,
+                rollType: A.NONE
             }
     }, function(e, t, n) {
         "use strict";
@@ -7744,8 +7751,10 @@
                     f = t.channelAPIInfo,
                     h = t.viewerInfo,
                     _ = t.padtimeExpGroup,
-                    v = t.skippableExpGroup;
-                i(this, e), this.adSessionId = (0, a.generate)(p), this.adType = n, this.chansubToken = h.chansub, this.twitchCorrelator = (0, a.generate)(), this.deviceId = d.get(!1), this.duration = r, this.hasAdFreeSubscription = Boolean(h.has_ad_free_subscription), this.lastAdDisplay = s, this.forced = l, this.padtime = _, this.requestTime = Date.now(), this.skippableExpGroup = v, this._initUserInfoFields(u), this._initChannelInfoFields(c, f), this._initStateFields(o), this._initAmazonFields()
+                    v = t.skippableExpGroup,
+                    g = t.bismolExpGroup,
+                    y = t.lure;
+                i(this, e), this.contentType = o.stream.contentType, this.login = u.login, this.adSessionId = (0, a.generate)(p), this.adType = n, this.bismol = g, this.lure = y, this.channel = c.name, this.channelId = c._id, this.chansubToken = h.chansub, this.twitchCorrelator = (0, a.generate)(), this.deviceId = d.get(!1), this.duration = r, this.hasAdFreeSubscription = Boolean(h.has_ad_free_subscription), this.lastAdDisplay = s, this.forced = l, this.padtime = _, this.requestTime = Date.now(), this.skippableExpGroup = v, this._initUserInfoFields(u), this._initChannelInfoFields(c, f), this._initStateFields(o), this._initAmazonFields()
             }
             return o(e, [{
                 key: "_initUserInfoFields",
@@ -8115,7 +8124,7 @@
         function l(e) {
             var t, n;
             return new _["default"]({
-                defaults: (t = {}, i(t, E, "no"), i(t, T, "off"), i(t, S, "no"), i(t, P, "no"), i(t, w, "no"), i(t, C, "no"), i(t, k, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, N, "no"), i(t, M, "no"), i(t, R, "no"), i(t, D, "1.6.3"), i(t, x, "no"), i(t, j, "no"), i(t, L, "no"), i(t, U, "no,"), i(t, B, "no"), i(t, V, "keep"), i(t, F, "no"), i(t, H, "control"), i(t, G, "control"), i(t, q, "pad_control"), i(t, Y, "no"), i(t, K, "no"), i(t, W, "control"), i(t, $, "old"), t),
+                defaults: (t = {}, i(t, E, "no"), i(t, T, "off"), i(t, S, "no"), i(t, P, "no"), i(t, w, "no"), i(t, C, "no"), i(t, k, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, N, "no"), i(t, M, "no"), i(t, R, "no"), i(t, D, "1.6.3"), i(t, x, "no"), i(t, j, "no"), i(t, L, "no"), i(t, U, "no,"), i(t, B, "no"), i(t, V, "keep"), i(t, F, "no"), i(t, H, "control"), i(t, G, "control"), i(t, q, "pad_control"), i(t, Y, "no"), i(t, K, "no"), i(t, W, "control"), i(t, $, "old"), i(t, z, "no"), t),
                 deviceID: e.deviceID,
                 overrides: (0, d["default"])((n = {}, i(n, H, o("treatment")), i(n, T, o("v2")), i(n, S, a(["US"])), i(n, P, a(["GB"])), i(n, w, a(["DE"])), i(n, C, a(["FR"])), i(n, k, a(["SE"])), i(n, A, a(["DK", "FI", "NL", "NO"])), i(n, O, a(["CA"])), i(n, I, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, M, a(["PL"])), i(n, R, a(["AT", "CH", "ES", "IT", "PT"])), i(n, x, o("yes")), i(n, L, o("vca")), i(n, U, o("yes")), i(n, D, o("1.7.3+spdcy")), i(n, K, o("yes")), i(n, $, o("new")), n), JSON.parse(u.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
@@ -8126,7 +8135,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.SETTINGS_MENU_REDESIGN = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.CLIPS_LOYALTY = t.PLAYER_NOTIFICATION_BUTTON = t.EXTENSIONS = t.HTML5_TOGGLE_REMOVAL = t.ADOPT = t.PINEAPPLE = t.VP_QOS_TEST = t.DETERMINATION = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
+        }), t.BISMOL = t.SETTINGS_MENU_REDESIGN = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.CLIPS_LOYALTY = t.PLAYER_NOTIFICATION_BUTTON = t.EXTENSIONS = t.HTML5_TOGGLE_REMOVAL = t.ADOPT = t.PINEAPPLE = t.VP_QOS_TEST = t.DETERMINATION = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
         var u = n(238),
             c = n(78),
             d = r(c),
@@ -8166,7 +8175,8 @@
             Y = t.OFFLINE_RECOMMENDATIONS = "00683bde-a79d-4b9d-a7cc-b0549f854d36",
             K = t.VIEW_WATCH_TOGETHER = "d0518b75-fbba-418a-9445-ff7c517beb32",
             W = t.CHOMPERZ = "d48fe249-fd73-4c8f-bd17-415b70dc3708",
-            $ = t.SETTINGS_MENU_REDESIGN = "0fb759af-22ba-415a-9c83-e2dbeb6f8e41"
+            $ = t.SETTINGS_MENU_REDESIGN = "0fb759af-22ba-415a-9c83-e2dbeb6f8e41",
+            z = t.BISMOL = "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5"
     }, function(e, t, n) {
         function r(e) {
             var t = i(e);
@@ -8984,7 +8994,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.10-003554+90c5da9a746777697bb6a641a7fc54bd0872f2a1",
+                    app_version: "2017.05.10-010731+0fe7b95d3c1062e30ab42dd7296c2bf67eda76d7",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -15495,7 +15505,8 @@
                 reason_creative_player: e.playerType === g.PLAYER_CREATIVE,
                 reason_facebook: e.playerType === g.PLAYER_FACEBOOK,
                 reason_highlighter: e.playerType === g.PLAYER_HIGHLIGHTER,
-                reason_mobile_web_upsell: Boolean(e.isMobileLocation) && "mobile_web" === e.platform
+                reason_mobile_web_upsell: Boolean(e.isMobileLocation) && "mobile_web" === e.platform,
+                reason_digest: e.adType === v.PREROLL && e.lure && "yes" === e.bismol
             };
             return t
         }
