@@ -721,7 +721,7 @@ window.SiteOptions = {
             "name": "spade_url",
             "groups": [{
                 "weight": 1,
-                "value": "//trowel.twitch.tv/"
+                "value": "//spade.twitch.tv"
             }]
         },
         "4d081a33-0d0f-4b44-bfde-cf07c358915f": {
