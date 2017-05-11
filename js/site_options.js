@@ -1098,6 +1098,16 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "8f5277f3-7583-4fd9-ab09-e5a5c432b12b": {
+            "name": "android_autoplay_profile",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "903fb381-dbeb-466b-9c88-7b4da328fb2d": {
             "name": "android_autoplay_pulse",
             "groups": [{
@@ -1509,6 +1519,16 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "variant1"
+            }]
+        },
+        "bb654f3c-166a-49fa-9030-c6f4bcda2ebd": {
+            "name": "android_autoplay_browse",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "c097971e-c5fc-4763-a8fa-de04f3d713a7": {

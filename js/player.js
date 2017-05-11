@@ -9002,7 +9002,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.11-225303+6506f8e993b8d75953ec26f088872d8b8f97b3cd",
+                    app_version: "2017.05.11-230309+461b6d6e33358fd91bb63d2b3ab0f6086c68eed2",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -9954,9 +9954,11 @@
             }
 
             function Se() {
-                return (0, T.subscribe)(n, ["screenMode.isTheatreMode"], function(e) {
-                    var t = e.screenMode;
-                    De.emit(se.THEATRE_CHANGE, t.isTheatreMode)
+                return (0, T.subscribe)(n, ["screenMode.isTheatreMode", "screenMode.isFullScreen"], function(e) {
+                    var t = e.screenMode,
+                        n = t.isTheatreMode,
+                        r = t.isFullScreen;
+                    De.emit(se.THEATRE_CHANGE, !r && n)
                 })
             }
 
@@ -10523,8 +10525,8 @@
             }
 
             function O(e) {
-                et && (et = !1, Ge.emit(P.PLAY)), ft = !1, ot = e.format, Ne(Be("getVideoTime")), Me(), $e < I.HAVE_METADATA && (null !== Ve.getChannel() && (nt = 1 / 0), $e = I.HAVE_METADATA, Ge.emit(P.LOADED_METADATA)), $e < I.HAVE_CURRENT_DATA && ($e = I.HAVE_CURRENT_DATA, Ge.emit(P.LOADED_DATA)),
-                    $e = I.HAVE_FUTURE_DATA, Ge.emit(P.PLAYING)
+                et && (et = !1, Ge.emit(P.PLAY)), ft = !1, ot = e.format, Ne(Be("getVideoTime")), Me(), $e < I.HAVE_METADATA && (null !== Ve.getChannel() && (nt = 1 / 0), $e = I.HAVE_METADATA, Ge.emit(P.LOADED_METADATA)), $e < I.HAVE_CURRENT_DATA && ($e = I.HAVE_CURRENT_DATA,
+                    Ge.emit(P.LOADED_DATA)), $e = I.HAVE_FUTURE_DATA, Ge.emit(P.PLAYING)
             }
 
             function re() {
