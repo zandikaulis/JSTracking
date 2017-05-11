@@ -8999,7 +8999,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.10-213150+f46e34f7973c2ea271d5564d27b00fb6414272ea",
+                    app_version: "2017.05.10-231155+6e29d67aa1af86610bbfcefa9698684ad7ece0dd",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
@@ -41686,17 +41686,21 @@
             }, {
                 key: "_fetchFollowInfo",
                 value: function() {
-                    var e = this._getIDs(),
-                        t = e.userId,
-                        n = e.channelId,
-                        r = e.loggedIn,
-                        i = t === n,
-                        o = this._checkChannelBlackList(),
-                        a = this.stateStore.getState().manifestInfo.spectre;
-                    if (!i && n && !o && !a) return !r && n ? void this.stateStore.dispatch((0, l.followInfoFetched)({
+                    var e = this.stateStore.getState(),
+                        t = e.manifestInfo,
+                        n = e.env,
+                        r = this._getIDs(),
+                        i = r.userId,
+                        o = r.channelId,
+                        a = r.loggedIn,
+                        s = i === o,
+                        u = this._checkChannelBlackList(),
+                        c = t.spectre,
+                        d = "mobile_web" === n.platform;
+                    if (!(s || !o || u || c || d)) return !a && o ? void this.stateStore.dispatch((0, l.followInfoFetched)({
                         following: !1,
                         notificationsEnabled: !1
-                    })) : void this.stateStore.dispatch((0, l.fetchFollowInfo)(t, n))
+                    })) : void this.stateStore.dispatch((0, l.fetchFollowInfo)(i, o))
                 }
             }, {
                 key: "destroy",
@@ -41811,7 +41815,8 @@
                         t = this._stateStore.getState(),
                         n = t.window;
                     n.clearTimeout(this.recommendationsTimeoutID), this.recommendationsTimeoutID = n.setTimeout(function() {
-                        e._stateStore.dispatch((0, s.popScreen)())
+                        e._stateStore.dispatch((0,
+                            s.popScreen)())
                     }, v)
                 }
             }, {
