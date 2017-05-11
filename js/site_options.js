@@ -685,6 +685,19 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "45d73059-3cea-436a-b41f-86bb05f845f2": {
+            "name": "CVP May 11",
+            "groups": [{
+                "weight": 70,
+                "value": "1.7.7"
+            }, {
+                "weight": 20,
+                "value": "1.7.7+spd67"
+            }, {
+                "weight": 10,
+                "value": "1.8.2"
+            }]
+        },
         "474db509-7fb8-403e-97da-66dae8954e6d": {
             "name": "android_home_games_carousel",
             "groups": [{
