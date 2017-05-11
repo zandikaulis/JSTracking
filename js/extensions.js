@@ -169,9 +169,7 @@ window.features = window.features || [], window.features.push("extensions"), def
         extensionInstallations: null,
         extensionPanels: null,
         activeExtensionInstallations: (0, n.default)("extensionInstallations", function() {
-            return (this.get("extensionInstallations") || []).filter(function(e) {
-                return e.get("isActive")
-            })
+            return (this.get("extensionInstallations") || []).filterBy("isActive")
         }),
         availableSlots: (0, n.default)("extensionPanels", function() {
             var e = this.get("extensionPanels"),
