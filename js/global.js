@@ -16398,7 +16398,6 @@ googletag.cmd = googletag.cmd || [],
                 VOD_UPLOAD_UNITS: "1e406d0d-c293-4c4e-812f-049db8c7e3ec",
                 SIMILAR_VODS: "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7",
                 CDN_EXPERIMENT: "b29d055f-74f2-40b9-9383-9c4b79b30360",
-                CREATIVE_DIRECTORY_CVS: "36a0e500-f117-41dd-8421-3e3db7d567dd",
                 CSGO_LANGUAGE_SAMPLE: "b86f6c73-d333-4d80-ab45-07cfff39aede",
                 VOD_PAGE_RECOMMENDATION_ORDER: "171906a2-6e34-4d0e-879c-a76a19f19097",
                 REMOVE_CSGO_DIRECTORY: "355ff3e2-38b5-449a-8ab8-a52b5d3ab817",
@@ -16446,7 +16445,6 @@ googletag.cmd = googletag.cmd || [],
                 "1e406d0d-c293-4c4e-812f-049db8c7e3ec": "control",
                 "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7": "control",
                 "b29d055f-74f2-40b9-9383-9c4b79b30360": "control",
-                "36a0e500-f117-41dd-8421-3e3db7d567dd": "communities",
                 "b86f6c73-d333-4d80-ab45-07cfff39aede": "control",
                 "171906a2-6e34-4d0e-879c-a76a19f19097": "related_first",
                 "355ff3e2-38b5-449a-8ab8-a52b5d3ab817": "control",
@@ -16593,8 +16591,7 @@ googletag.cmd = googletag.cmd || [],
                 i(n)
             })
         }, i.getPlayer = function() {
-            return console.warn("Twitch.player.getPlayer is deprecated for the new player."),
-                n || console.error("Twitch.player.getPlayer called before player is ready."), n
+            return console.warn("Twitch.player.getPlayer is deprecated for the new player."), n || console.error("Twitch.player.getPlayer called before player is ready."), n
         }, i.parseTimeOffset = function(e) {
             var t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "");
             if (!t) return 0;
