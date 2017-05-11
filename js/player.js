@@ -1059,7 +1059,8 @@
             Q = "fullscreen",
             X = "popout",
             J = "mini",
-            Z = 500;
+            Z = "watch_party",
+            ee = 500;
         t.Analytics = function() {
             function e(t, n, r, i, a) {
                 o(this, e), this.player = t, this.tracker = n, this.state = r, this.stateStore = i, this.options = a, this.hasPlayed = !1, this.bufferEmptyStartTime = null, this.bufferEmptyCount = 0, this.lastNetworkProfile = -(1 / 0), this.lastSeekTime = null, this.timeStampBeforeSeek = 0, this.isSeekInProgress = !1, this.trackNetworkProfile = this.stateStore.getState().experiments.get(I.NETWORK_PROFILE_COLLECTION), this.countessTracker = new E.CountessTracker({
@@ -1250,7 +1251,8 @@
                             return i = n, o = r, (0, C.krakenRequestv5)("channels/" + n._id + "/community")
                         }).then(function(t) {
                             e.stateStore.dispatch((0, L.setCommunitiesData)(t));
-                            var n = o.broadcaster_software;
+                            var n = o.broadcaster_software,
+                                r = n === Z ? Z : void 0;
                             return {
                                 broadcaster_software: n,
                                 channel: i.name,
@@ -1258,7 +1260,8 @@
                                 game: i.game,
                                 live: n !== V,
                                 content_mode: n === V ? "vod" : "live",
-                                partner: i.partner
+                                partner: i.partner,
+                                vod_type: r
                             }
                         });
                     this.tracker.setProperties(a)
@@ -1349,7 +1352,7 @@
                 value: function() {
                     if (!this.isSeekInProgress) {
                         var e = this.player.getCurrentTime();
-                        e - this.timeStampBeforeSeek < Z && this.timeStampBeforeSeek < e && (this.timeStampBeforeSeek = e)
+                        e - this.timeStampBeforeSeek < ee && this.timeStampBeforeSeek < e && (this.timeStampBeforeSeek = e)
                     }
                 }
             }, {
@@ -1457,7 +1460,7 @@
                     var r = e[n];
                     n = encodeURIComponent(n), r === !0 ? t.push(n) : r === !1 ? t.push("!" + n) : (r = encodeURIComponent(r), t.push(n + "=" + r))
                 }
-            return t.join("&")
+            return t.join("&");
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -2922,7 +2925,7 @@
                 key: "_checkWebkitFullscreen",
                 value: function() {
                     var e = this._root.getElementsByTagName("video").item(0);
-                    return !!e && (e.webkitSupportsFullscreen || !1);
+                    return !!e && (e.webkitSupportsFullscreen || !1)
                 }
             }, {
                 key: "isFullScreen",
@@ -8999,7 +9002,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.11-031939+3ec92eac935dbc74f7005cbc86b1f94ff70b701c",
+                    app_version: "2017.05.11-205126+0a1758fb4edaa8aa06c3052bb111e020146fcd07",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: g.host,
