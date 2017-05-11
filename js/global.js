@@ -15566,23 +15566,24 @@ googletag.cmd = googletag.cmd || [],
                 }, s)
             }), e("#signup_form .birthday_fields select").dropdownify()
         }), window.addEventListener("message", function(t) {
-            var n;
-            switch (n = t.data && "{" === t.data[0] ? JSON.parse(t.data) : t.data,
-                n.messageType) {
-                case "loaded":
-                    var i = e("iframe[name=passport]")[0],
-                        r = {
-                            width: e("#passport_iframe_container").width()
-                        };
-                    return void i.contentWindow.postMessage(JSON.stringify(r), "*");
-                case "height":
-                    return e("#passport_iframe_container").css({
-                        height: n.height + 25
-                    }), e("#passport_modal").css({
-                        visibility: "visible"
-                    }), i = e('iframe[name="passport"]').contents()[0], void(n.focus && e(i).find("#username").focus());
-                case "passportCallback":
-                    return void window.location.assign(n.redirectURI)
+            if (window && document && ("https://passport.twitch.tv" === t.origin || "https://passport-staging.internal.twitch.tv" === t.origin)) {
+                var n;
+                switch (n = t.data && "{" === t.data[0] ? JSON.parse(t.data) : t.data, n.messageType) {
+                    case "loaded":
+                        var i = e("iframe[name=passport]")[0],
+                            r = {
+                                width: e("#passport_iframe_container").width()
+                            };
+                        return void i.contentWindow.postMessage(JSON.stringify(r), "*");
+                    case "height":
+                        return e("#passport_iframe_container").css({
+                            height: n.height + 25
+                        }), e("#passport_modal").css({
+                            visibility: "visible"
+                        }), i = e('iframe[name="passport"]').contents()[0], void(n.focus && e(i).find("#username").focus());
+                    case "passportCallback":
+                        return void window.location.assign(n.redirectURI)
+                }
             }
         });
         var t = function(e, t) {
@@ -16593,10 +16594,10 @@ googletag.cmd = googletag.cmd || [],
                 r ? i(n) : t(e.player).on("ready", function() {
                     i(n)
                 })
-            }, i.getPlayer = function() {
-                return console.warn("Twitch.player.getPlayer is deprecated for the new player."), n || console.error("Twitch.player.getPlayer called before player is ready."), n
             },
-            i.parseTimeOffset = function(e) {
+            i.getPlayer = function() {
+                return console.warn("Twitch.player.getPlayer is deprecated for the new player."), n || console.error("Twitch.player.getPlayer called before player is ready."), n
+            }, i.parseTimeOffset = function(e) {
                 var t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "");
                 if (!t) return 0;
                 try {
