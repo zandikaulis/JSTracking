@@ -98,21 +98,6 @@ window.features = window.features || [], window.features.push("extensions"), def
             }
         }
     })
-}), define("web-client/components/dashboards/extensions/extension-dialogs/request-permissions", ["exports", "ember-component", "ember-service/inject"], function(e, t, n) {
-    e.default = t.default.extend({
-        extensions: (0, n.default)(),
-        installation: null,
-        onAuthorize: function() {},
-        onReject: function() {},
-        init: function() {
-            var e = this;
-            this._super.apply(this, arguments), this.get("extensions").requestExtensionPermissions(this.get("installation")).then(function(t) {
-                t ? e.get("onAuthorize")() : e.get("onReject")(null)
-            }, function(t) {
-                e.get("onReject")(t)
-            })
-        }
-    })
 }), define("web-client/components/dashboards/extensions/extension-dialogs/template", ["exports"], function(e) {
     e.default = Ember.HTMLBars.template({
         id: "Ka6un62d",
