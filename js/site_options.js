@@ -764,7 +764,7 @@ window.SiteOptions = {
             "name": "spade_url",
             "groups": [{
                 "weight": 1,
-                "value": "//spade.twitch.tv"
+                "value": "//spade.sci.twitch.tv"
             }]
         },
         "4d081a33-0d0f-4b44-bfde-cf07c358915f": {

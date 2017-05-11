@@ -16391,13 +16391,14 @@ googletag.cmd = googletag.cmd || [],
         })
     }(Twitch, jQuery),
     function(e, t) {
-        var n = SiteOptions.experiments || {},
+        const n = SiteOptions.experiments || {},
             i = {
                 RECOMMENDED_GAMES: "61b169ff-bc62-4725-a40e-1be627197c6f",
                 VOD_COVIEWS_AB: "ec27e6fe-dabc-4fd3-ab62-a2cffc8fe316",
                 VOD_UPLOAD_UNITS: "1e406d0d-c293-4c4e-812f-049db8c7e3ec",
                 SIMILAR_VODS: "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7",
                 CDN_EXPERIMENT: "b29d055f-74f2-40b9-9383-9c4b79b30360",
+                CREATIVE_SIDEBAR_NAVIGATION: "f60b889e-0327-46a8-ad7b-0d402717da45",
                 CSGO_LANGUAGE_SAMPLE: "b86f6c73-d333-4d80-ab45-07cfff39aede",
                 VOD_PAGE_RECOMMENDATION_ORDER: "171906a2-6e34-4d0e-879c-a76a19f19097",
                 REMOVE_CSGO_DIRECTORY: "355ff3e2-38b5-449a-8ab8-a52b5d3ab817",
@@ -16437,7 +16438,8 @@ googletag.cmd = googletag.cmd || [],
                 SUB_OPTIONS: "86ad7a91-bf36-46c5-adef-6006a09720a8",
                 LOGGED_OUT_FRONT_PAGE_EXPERIMENT: "54e455b2-9854-4c55-b926-cfadbff49324",
                 NEW_STATS: "9242cab4-db40-400c-99e1-2faf8f8026f0",
-                AKAMAI_IMAGE_MANAGER: "f321aa37-e81d-4a81-99d5-303bf9429b7b"
+                AKAMAI_IMAGE_MANAGER: "f321aa37-e81d-4a81-99d5-303bf9429b7b",
+                SISKO: "31827b23-ea01-48b8-87c6-1503656957fd"
             },
             r = {
                 "61b169ff-bc62-4725-a40e-1be627197c6f": "no",
@@ -16445,6 +16447,7 @@ googletag.cmd = googletag.cmd || [],
                 "1e406d0d-c293-4c4e-812f-049db8c7e3ec": "control",
                 "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7": "control",
                 "b29d055f-74f2-40b9-9383-9c4b79b30360": "control",
+                "f60b889e-0327-46a8-ad7b-0d402717da45": "no",
                 "b86f6c73-d333-4d80-ab45-07cfff39aede": "control",
                 "171906a2-6e34-4d0e-879c-a76a19f19097": "related_first",
                 "355ff3e2-38b5-449a-8ab8-a52b5d3ab817": "control",
@@ -16484,7 +16487,8 @@ googletag.cmd = googletag.cmd || [],
                 "86ad7a91-bf36-46c5-adef-6006a09720a8": "two_page",
                 "54e455b2-9854-4c55-b926-cfadbff49324": "control",
                 "9242cab4-db40-400c-99e1-2faf8f8026f0": "no",
-                "f321aa37-e81d-4a81-99d5-303bf9429b7b": "control"
+                "f321aa37-e81d-4a81-99d5-303bf9429b7b": "control",
+                "31827b23-ea01-48b8-87c6-1503656957fd": "control"
             },
             o = {},
             s = {
@@ -16510,35 +16514,36 @@ googletag.cmd = googletag.cmd || [],
                 if (!e || 401 !== e.status) throw e
             })
         });
-        var a = e.url_params().experiments,
-            l = cookie.get("experiment_overrides"),
-            u = {};
+        const a = e.url_params().experiments,
+            l = cookie.get("experiment_overrides");
+        var u = {};
         try {
             l && (u = JSON.parse(l))
         } catch (e) {
             console.warn("Failed to parse experiment overrides", e)
         }
         _.extend(o, u, a);
-        var c, h = {
-                defaults: r,
-                deviceID: e.idsForMixpanel.getOrCreateUniqueId(),
-                overrides: o,
-                provider: new Minixperiment.providers.local(n),
-                Promise: RSVP.Promise,
-                platform: "web",
-                login: null
-            },
-            d = e.user().then(function(e) {
+        const c = {
+            defaults: r,
+            deviceID: e.idsForMixpanel.getOrCreateUniqueId(),
+            overrides: o,
+            provider: new Minixperiment.providers.local(n),
+            Promise: RSVP.Promise,
+            platform: "web",
+            login: null
+        };
+        var h;
+        const d = e.user().then(function(e) {
                 return e.login
             }, function() {
                 return null
             }).then(function(e) {
-                h.login = e, c = new Minixperiment.Client(h)
+                c.login = e, h = new Minixperiment.Client(c)
             }),
             f = function(e) {
                 return d.then(function() {
-                    var t = i[e];
-                    return c.get(t)
+                    const t = i[e];
+                    return h.get(t)
                 })
             },
             p = function(e, t) {
@@ -16585,32 +16590,33 @@ googletag.cmd = googletag.cmd || [],
         };
         var r = !1;
         t(i).on("ready", function() {
-            r = !0
-        }), i.ready = function(i) {
-            r ? i(n) : t(e.player).on("ready", function() {
-                i(n)
+                r = !0
+            }), i.ready = function(i) {
+                r ? i(n) : t(e.player).on("ready", function() {
+                    i(n)
+                })
+            },
+            i.getPlayer = function() {
+                return console.warn("Twitch.player.getPlayer is deprecated for the new player."), n || console.error("Twitch.player.getPlayer called before player is ready."), n
+            }, i.parseTimeOffset = function(e) {
+                var t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "");
+                if (!t) return 0;
+                try {
+                    return 3600 * (parseInt(t[2], 10) || 0) + 60 * (parseInt(t[4], 10) || 0) + (parseInt(t[6], 10) || 0)
+                } catch (e) {
+                    return 0
+                }
+            }, i.setSteamInfo = function(e, t) {
+                console.warn("Twitch.player.setSteamInfo is deprecated")
+            }, i.getSpecialOverlay = function() {
+                return "true" === e.storage.get("adblock_enabled", {
+                    storage: "sessionStorage"
+                })
+            }, i.onTwitchPlayerInit = i.onTwitchPlayerLoaded = function(e) {
+                console.warn("Twitch.player.onTwitchPlayer(Init/Loaded) is deprecated! Use Twitch.ready instead."), i.ready(e)
+            }, e.mixin({
+                player: i
             })
-        }, i.getPlayer = function() {
-            return console.warn("Twitch.player.getPlayer is deprecated for the new player."), n || console.error("Twitch.player.getPlayer called before player is ready."), n
-        }, i.parseTimeOffset = function(e) {
-            var t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "");
-            if (!t) return 0;
-            try {
-                return 3600 * (parseInt(t[2], 10) || 0) + 60 * (parseInt(t[4], 10) || 0) + (parseInt(t[6], 10) || 0)
-            } catch (e) {
-                return 0
-            }
-        }, i.setSteamInfo = function(e, t) {
-            console.warn("Twitch.player.setSteamInfo is deprecated")
-        }, i.getSpecialOverlay = function() {
-            return "true" === e.storage.get("adblock_enabled", {
-                storage: "sessionStorage"
-            })
-        }, i.onTwitchPlayerInit = i.onTwitchPlayerLoaded = function(e) {
-            console.warn("Twitch.player.onTwitchPlayer(Init/Loaded) is deprecated! Use Twitch.ready instead."), i.ready(e)
-        }, e.mixin({
-            player: i
-        })
     }(Twitch, jQuery),
     function(e, t) {
         var n = function(e) {
