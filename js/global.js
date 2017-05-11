@@ -16399,7 +16399,6 @@ googletag.cmd = googletag.cmd || [],
                 SIMILAR_VODS: "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7",
                 CDN_EXPERIMENT: "b29d055f-74f2-40b9-9383-9c4b79b30360",
                 CREATIVE_DIRECTORY_CVS: "36a0e500-f117-41dd-8421-3e3db7d567dd",
-                CREATIVE_SIDEBAR_NAVIGATION: "f60b889e-0327-46a8-ad7b-0d402717da45",
                 CSGO_LANGUAGE_SAMPLE: "b86f6c73-d333-4d80-ab45-07cfff39aede",
                 VOD_PAGE_RECOMMENDATION_ORDER: "171906a2-6e34-4d0e-879c-a76a19f19097",
                 REMOVE_CSGO_DIRECTORY: "355ff3e2-38b5-449a-8ab8-a52b5d3ab817",
@@ -16448,7 +16447,6 @@ googletag.cmd = googletag.cmd || [],
                 "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7": "control",
                 "b29d055f-74f2-40b9-9383-9c4b79b30360": "control",
                 "36a0e500-f117-41dd-8421-3e3db7d567dd": "communities",
-                "f60b889e-0327-46a8-ad7b-0d402717da45": "no",
                 "b86f6c73-d333-4d80-ab45-07cfff39aede": "control",
                 "171906a2-6e34-4d0e-879c-a76a19f19097": "related_first",
                 "355ff3e2-38b5-449a-8ab8-a52b5d3ab817": "control",
@@ -16589,33 +16587,33 @@ googletag.cmd = googletag.cmd || [],
         };
         var r = !1;
         t(i).on("ready", function() {
-                r = !0
-            }), i.ready = function(i) {
-                r ? i(n) : t(e.player).on("ready", function() {
-                    i(n)
-                })
-            },
-            i.getPlayer = function() {
-                return console.warn("Twitch.player.getPlayer is deprecated for the new player."), n || console.error("Twitch.player.getPlayer called before player is ready."), n
-            }, i.parseTimeOffset = function(e) {
-                var t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "");
-                if (!t) return 0;
-                try {
-                    return 3600 * (parseInt(t[2], 10) || 0) + 60 * (parseInt(t[4], 10) || 0) + (parseInt(t[6], 10) || 0)
-                } catch (e) {
-                    return 0
-                }
-            }, i.setSteamInfo = function(e, t) {
-                console.warn("Twitch.player.setSteamInfo is deprecated")
-            }, i.getSpecialOverlay = function() {
-                return "true" === e.storage.get("adblock_enabled", {
-                    storage: "sessionStorage"
-                })
-            }, i.onTwitchPlayerInit = i.onTwitchPlayerLoaded = function(e) {
-                console.warn("Twitch.player.onTwitchPlayer(Init/Loaded) is deprecated! Use Twitch.ready instead."), i.ready(e)
-            }, e.mixin({
-                player: i
+            r = !0
+        }), i.ready = function(i) {
+            r ? i(n) : t(e.player).on("ready", function() {
+                i(n)
             })
+        }, i.getPlayer = function() {
+            return console.warn("Twitch.player.getPlayer is deprecated for the new player."),
+                n || console.error("Twitch.player.getPlayer called before player is ready."), n
+        }, i.parseTimeOffset = function(e) {
+            var t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "");
+            if (!t) return 0;
+            try {
+                return 3600 * (parseInt(t[2], 10) || 0) + 60 * (parseInt(t[4], 10) || 0) + (parseInt(t[6], 10) || 0)
+            } catch (e) {
+                return 0
+            }
+        }, i.setSteamInfo = function(e, t) {
+            console.warn("Twitch.player.setSteamInfo is deprecated")
+        }, i.getSpecialOverlay = function() {
+            return "true" === e.storage.get("adblock_enabled", {
+                storage: "sessionStorage"
+            })
+        }, i.onTwitchPlayerInit = i.onTwitchPlayerLoaded = function(e) {
+            console.warn("Twitch.player.onTwitchPlayer(Init/Loaded) is deprecated! Use Twitch.ready instead."), i.ready(e)
+        }, e.mixin({
+            player: i
+        })
     }(Twitch, jQuery),
     function(e, t) {
         var n = function(e) {
