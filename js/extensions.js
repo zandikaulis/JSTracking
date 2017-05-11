@@ -150,6 +150,7 @@ window.features = window.features || [], window.features.push("extensions"), def
         })];
     e.default = t.default.extend({
         api: (0, l.default)(),
+        tracking: (0, l.default)(),
         allExtensions: null,
         extensionInstallations: null,
         extensionPanels: null,
@@ -190,7 +191,15 @@ window.features = window.features || [], window.features.push("extensions"), def
             installExtension: function(e) {
                 var t = this;
                 this.get("installExtension")(e).then(function(e) {
-                    t.isDestroyed || t.set("extensionInstallation", e)
+                    t.isDestroyed || (t.set("extensionInstallation", e), t.get("tracking").trackEvent({
+                        event: "extension_ui_interaction_client",
+                        data: {
+                            extension_interaction: "install",
+                            anchor: e.get("extension.anchor"),
+                            extension_id: e.get("extension.clientId"),
+                            extension_version: e.get("extension.version")
+                        }
+                    }))
                 })
             },
             removeExtensionInstallation: function(e) {
@@ -210,10 +219,11 @@ window.features = window.features || [], window.features.push("extensions"), def
             }
         }
     })
-}), define("web-client/components/dashboards/extensions/extension-manager/installed-card/component", ["exports", "ember-component", "ember-computed", "web-client/utilities/urls/static-cdn"], function(e, t, n, l) {
+}), define("web-client/components/dashboards/extensions/extension-manager/installed-card/component", ["exports", "ember-component", "ember-computed", "ember-service/inject", "web-client/utilities/urls/static-cdn"], function(e, t, n, l, s) {
     e.default = t.default.extend({
         classNames: ["mg-b-2"],
         attributeBindings: ["testSelector:data-test-selector"],
+        tracking: (0, l.default)(),
         testSelector: null,
         extensionInstallation: null,
         availableSlots: [],
@@ -230,19 +240,36 @@ window.features = window.features || [], window.features.push("extensions"), def
             })
         }),
         init: function() {
-            this._super.apply(this, arguments), this.fallbackUrl = l.JTV_USER_PICTURES_404_USER_50X50_URL
+            this._super.apply(this, arguments), this.fallbackUrl = s.JTV_USER_PICTURES_404_USER_50X50_URL
+        },
+        getExtensionTrackingProperties: function() {
+            return {
+                anchor: this.get("extension.anchor"),
+                extension_id: this.get("extension.clientId"),
+                extension_version: this.get("extension.version")
+            }
         },
         actions: {
             onActivateClicked: function(e) {
                 var t = this.get("extensionInstallation");
                 this.get("activateExtensionInstallation")(t, {
                     slot: e.get("id")
+                }), this.get("tracking").trackEvent({
+                    event: "extension_ui_interaction_client",
+                    data: Object.assign({
+                        extension_interaction: "activate"
+                    }, this.getExtensionTrackingProperties())
                 })
             },
             onActivateNewClicked: function() {
                 var e = this.get("extensionInstallation");
                 this.get("activateExtensionInstallation")(e, {
                     slot: null
+                }), this.get("tracking").trackEvent({
+                    event: "extension_ui_interaction_client",
+                    data: Object.assign({
+                        extension_interaction: "activate"
+                    }, this.getExtensionTrackingProperties())
                 })
             },
             onConfigClicked: function() {
@@ -251,11 +278,21 @@ window.features = window.features || [], window.features.push("extensions"), def
             },
             onDeactivateClicked: function() {
                 var e = this.get("extensionInstallation");
-                this.get("deactivateExtensionInstallation")(e)
+                this.get("deactivateExtensionInstallation")(e), this.get("tracking").trackEvent({
+                    event: "extension_ui_interaction_client",
+                    data: Object.assign({
+                        extension_interaction: "deactivate"
+                    }, this.getExtensionTrackingProperties())
+                })
             },
             onUninstallClicked: function() {
                 var e = this.get("extensionInstallation");
-                this.get("removeExtensionInstallation")(e)
+                this.get("removeExtensionInstallation")(e), this.get("tracking").trackEvent({
+                    event: "extension_ui_interaction_client",
+                    data: Object.assign({
+                        extension_interaction: "uninstall"
+                    }, this.getExtensionTrackingProperties())
+                })
             }
         }
     })
@@ -344,14 +381,17 @@ window.features = window.features || [], window.features.push("extensions"), def
             var t = JSON.parse(atob(e.split(".")[1]));
             return t && t.user_id && !0
         },
+        getExtensionTrackingProperties: function() {
+            return {
+                anchor: this.get("extension.anchor"),
+                extension_id: this.get("extension.clientId"),
+                extension_version: this.get("extension.version")
+            }
+        },
         partialImpression: function(e) {
             this.get("tracking").trackEvent({
                 event: "extension_view",
-                data: Object.assign(e, {
-                    anchor: this.get("extension.anchor"),
-                    extension_id: this.get("extension.clientId"),
-                    extension_version: this.get("extension.version")
-                })
+                data: Object.assign(e, this.getExtensionTrackingProperties())
             })
         },
         actions: {
@@ -360,12 +400,29 @@ window.features = window.features || [], window.features.push("extensions"), def
                     t = this.get("extensionInstallation.token"),
                     n = this.get("extensionInstallation.extension.clientId");
                 this.isUserLinked(t) ? this.get("extensions").unlinkExtension(n, t).then(function(t) {
-                    e.isDestroyed || (e.set("extensionInstallation.token", t.token), e.get("extensionCoordinator").reloadExtension())
+                    e.isDestroyed || (e.set("extensionInstallation.token", t.token), e.get("extensionCoordinator").reloadExtension(), e.get("tracking").trackEvent({
+                        event: "extension_ui_interaction_client",
+                        data: Object.assign({
+                            extension_interaction: "revoke"
+                        }, e.getExtensionTrackingProperties())
+                    }))
                 }) : this.get("extensions").linkExtension(n, t).then(function(t) {
-                    e.isDestroyed || (e.set("extensionInstallation.token", t.token), e.get("extensionCoordinator").reloadExtension())
+                    e.isDestroyed || (e.set("extensionInstallation.token", t.token), e.get("extensionCoordinator").reloadExtension(), e.get("tracking").trackEvent({
+                        event: "extension_ui_interaction_client",
+                        data: Object.assign({
+                            extension_interaction: "grant"
+                        }, e.getExtensionTrackingProperties())
+                    }))
                 })
             },
-            flagProblem: function() {}
+            flagProblem: function() {
+                this.get("tracking").trackEvent({
+                    event: "extension_ui_interaction_client",
+                    data: Object.assign({
+                        extension_interaction: "report"
+                    }, this.getExtensionTrackingProperties())
+                })
+            }
         }
     })
 }), define("web-client/templates/components/extension-panel", ["exports"], function(e) {
