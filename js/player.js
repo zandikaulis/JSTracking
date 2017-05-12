@@ -2699,7 +2699,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.resumewatchingHost = t.httpsQualityCarryover = t.livestreamResumePushback = t.cancelResumeAmount = t.hotkeySeekAmount = t.defaultLanguage = t.leaveDialog = t.imaNetworkID = t.doubleClickLiveUrl = t.doubleClickVODUrl = t.flashTimeout = t.volumeStepAmount = t.embedParameters = t.mutedSegmentsMessage = t.chromecastStates = t.debugIgnoreEvents = t.allEvents = t.customEvents = t.mediaEvents = t.reportHideDelay = t.hoverControlsDelay = t.initialControlsDelay = t.qualityChangeDuration = t.qualityText = t.bufferPollDelay = t.chromecastId = t.popoutSize = t.gamePath = t.countessHost = t.spadeIgnore = t.spadeHost = t.mixpanelIgnore = t.mixpanelToken = t.mixpanelHost = t.apiTimeout = t.playerHost = t.valveApiHost = t.usherHost = t.spectreHost = t.apiHost = t.twitchHost = t.domain = t.DEFAULT_AVATAR_URL = t.TWITCH_SIGNUP_URL = void 0;
+        }), t.resumewatchingHost = t.httpsQualityCarryover = t.livestreamResumePushback = t.cancelResumeAmount = t.hotkeySeekAmount = t.defaultLanguage = t.leaveDialog = t.imaNetworkID = t.doubleClickLiveUrl = t.doubleClickVODUrl = t.flashTimeout = t.volumeStepAmount = t.embedParameters = t.mutedSegmentsMessage = t.chromecastStates = t.debugIgnoreEvents = t.allEvents = t.customEvents = t.mediaEvents = t.reportHideDelay = t.hoverControlsDelay = t.initialControlsDelay = t.qualityChangeDuration = t.qualityText = t.bufferPollDelay = t.chromecastId = t.popoutSize = t.gamePath = t.countessHost = t.spadeIgnore = t.trowelHost = t.spadeHost = t.mixpanelIgnore = t.mixpanelToken = t.mixpanelHost = t.apiTimeout = t.playerHost = t.valveApiHost = t.usherHost = t.spectreHost = t.apiHost = t.twitchHost = t.domain = t.DEFAULT_AVATAR_URL = t.TWITCH_SIGNUP_URL = void 0;
         var o = n(160),
             a = i(o),
             s = n(167),
@@ -2729,7 +2729,7 @@
                     return r.protocol + "://" + r.authority + "/" + i
                 }
                 return r.protocol + "://" + r.authority
-            }(), t.apiTimeout = 1e4, t.mixpanelHost = "//api.mixpanel.com", t.mixpanelToken = "809576468572134f909dffa6bd0dcfcf", t.mixpanelIgnore = ["abs_stream_format_change", "minute-buffered", "x_untrusted_video_init", "x_untrusted_video-play", "x_untrusted_minute-watched", "x_untrusted_buffer-empty", "x_untrusted_buffer-refill", "network_profile", "video_pause"], t.spadeHost = "//trowel.twitch.tv", t.spadeIgnore = [], t.countessHost = "//countess.twitch.tv", t.gamePath = y + "/directory/game", t.popoutSize = {
+            }(), t.apiTimeout = 1e4, t.mixpanelHost = "//api.mixpanel.com", t.mixpanelToken = "809576468572134f909dffa6bd0dcfcf", t.mixpanelIgnore = ["abs_stream_format_change", "minute-buffered", "x_untrusted_video_init", "x_untrusted_video-play", "x_untrusted_minute-watched", "x_untrusted_buffer-empty", "x_untrusted_buffer-refill", "network_profile", "video_pause"], t.spadeHost = "//spade.twitch.tv", t.trowelHost = "//trowel.twitch.tv", t.spadeIgnore = [], t.countessHost = "//countess.twitch.tv", t.gamePath = y + "/directory/game", t.popoutSize = {
                 width: 853,
                 height: 480
             }, t.chromecastId = "358E83DC", t.bufferPollDelay = 1e3, t.qualityText = {
@@ -2919,7 +2919,7 @@
             }, {
                 key: "canFullScreen",
                 value: function() {
-                    return s["default"].enabled || this._checkWebkitFullscreen();
+                    return s["default"].enabled || this._checkWebkitFullscreen()
                 }
             }, {
                 key: "_checkWebkitFullscreen",
@@ -8991,8 +8991,9 @@
                         host: p.mixpanelHost,
                         token: p.mixpanelToken
                     }),
-                    i = new u.SpadeClient({
-                        host: p.spadeHost
+                    i = new u.TrowelClient({
+                        host: p.trowelHost,
+                        untrustedHost: p.spadeHost
                     });
                 e.dispatch((0, c.setTrackingClients)([n, i]));
                 var s = b.getFlashPlayerVersion(),
@@ -9002,7 +9003,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.12-002139+257cb492df045a53f29d55823c23b6035f90d1af",
+                    app_version: "2017.05.12-004034+0c0f476b877e3a846fa72e9d824b2b7be4ccac22",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -9195,29 +9196,51 @@
         }
 
         function o(e) {
-            this._host = e.host
+            this._host = e.host, this._untrustedHost = e.untrustedHost
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.SpadeClient = o;
+        }), t.TrowelClient = o;
         var a = n(49),
             s = i(a),
             l = n(159),
             u = r(l),
-            c = n(257);
+            c = n(257),
+            d = n(81),
+            p = i(d),
+            f = "x_untrusted_minute-watched_filtered",
+            h = "minute-watched";
         o.prototype.trackEvent = function(e, t) {
-            (0, s["default"])(u.spadeIgnore, e) || this._send({
+            (0, s["default"])(u.spadeIgnore, e) || (this._send({
                 event: e,
                 properties: t
-            })
+            }), e === h && this._sendToUntrustedHost({
+                event: f,
+                properties: t
+            }))
         }, o.prototype.trackEvents = function(e) {
             var t = e.filter(function(e) {
-                return !(0, s["default"])(u.spadeIgnore, e.event)
-            });
-            t.length > 0 && this._send(t)
+                    return !(0, s["default"])(u.spadeIgnore, e.event)
+                }),
+                n = (0, p["default"])(t, function(e) {
+                    var t = e.event;
+                    return t === h
+                });
+            t.length > 0 && this._send(t), n && this._sendToUntrustedHost({
+                event: f,
+                properties: n.properties
+            })
         }, o.prototype._send = function(e) {
             $.ajax({
                 url: this._host,
+                method: "POST",
+                data: {
+                    data: (0, c.b64EncodeUnicode)(JSON.stringify(e))
+                }
+            })
+        }, o.prototype._sendToUntrustedHost = function(e) {
+            $.ajax({
+                url: this._untrustedHost,
                 method: "POST",
                 data: {
                     data: (0, c.b64EncodeUnicode)(JSON.stringify(e))
@@ -31002,7 +31025,8 @@
                                 return e.group === l
                             }),
                             y = _ ? _.name : "",
-                            m = c + "?t=" + (0, v.toURLString)(i);
+                            m = c + "?t=" + (0, v.toURLString)(i),
+                            b = t.length > 0;
                         return u["default"].createElement(f.MainMenu, {
                             canChangePlaybackSpeed: h,
                             captionsAvailable: r,
@@ -31013,6 +31037,7 @@
                             onPopoutPlayer: this.popoutPlayer,
                             onShowCaptionsOptions: this.showCaptionsOptions,
                             selectedQualityName: y,
+                            shouldShowQualityMenu: b,
                             vodUrlWithTimestamp: m,
                             windowObj: p
                         })
@@ -31095,6 +31120,7 @@
                 onPopoutPlayer: u.PropTypes.func,
                 onShowCaptionsOptions: u.PropTypes.func,
                 selectedQualityName: u.PropTypes.string.isRequired,
+                shouldShowQualityMenu: u.PropTypes.bool,
                 t: u.PropTypes.func.isRequired,
                 vodUrlWithTimestamp: u.PropTypes.string,
                 windowObj: u.PropTypes.object.isRequired
@@ -31107,6 +31133,7 @@
                 onMenuTransition: function() {},
                 onPopoutPlayer: function() {},
                 onShowCaptionsOptions: function() {},
+                shouldShowQualityMenu: !0,
                 vodUrlWithTimestamp: ""
             },
             S = "Advanced",
@@ -31126,26 +31153,22 @@
                 "tw-player-menu__item--with-caret": !0
             }),
             M = (0, _["default"])({
-                "tw-player-menu__section": !0,
-                "tw-player-menu__section--with-sep": !0
-            }),
-            R = (0, _["default"])({
                 ellipsis: !0,
                 "qa-advanced-button": !0
             }),
-            L = (0, _["default"])({
+            R = (0, _["default"])({
                 ellipsis: !0,
                 "qa-report-issue-button": !0
             }),
-            D = (0, _["default"])({
+            L = (0, _["default"])({
                 ellipsis: !0,
                 "qa-popout-player-button": !0
             }),
-            x = (0, _["default"])({
+            D = (0, _["default"])({
                 ellipsis: !0,
                 "qa-captions-options-button": !0
             }),
-            j = t.MainMenuComponent = function(e) {
+            x = t.MainMenuComponent = function(e) {
                 function t() {
                     o(this, t);
                     var e = a(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -31193,33 +31216,39 @@
                 }, {
                     key: "render",
                     value: function() {
-                        var e = this._renderQualityButton(),
-                            t = this._renderPlaybackSpeedButton(),
-                            n = this._renderCaptionsOptionsButton(),
-                            r = this._renderAdvancedMenuButton(),
-                            i = this._renderReportIssuesMenuButton(),
-                            o = this._renderPopoutPlayerButton(),
-                            a = this._renderCopyVideoUrlButton();
+                        var e = this.props.shouldShowQualityMenu,
+                            t = this._renderQualityButton(),
+                            n = this._renderPlaybackSpeedButton(),
+                            r = this._renderCaptionsOptionsButton(),
+                            i = this._renderAdvancedMenuButton(),
+                            o = this._renderReportIssuesMenuButton(),
+                            a = this._renderPopoutPlayerButton(),
+                            s = this._renderCopyVideoUrlButton(),
+                            l = (0, _["default"])({
+                                "tw-player-menu__section": !0,
+                                "tw-player-menu__section--with-sep": e
+                            });
                         return c["default"].createElement("div", {
                             className: "tw-player-menu__inner"
-                        }, e, c["default"].createElement("div", {
-                            className: M
-                        }, t, n, r, i, o, a))
+                        }, t, c["default"].createElement("div", {
+                            className: l
+                        }, n, r, i, o, a, s))
                     }
                 }, {
                     key: "_renderQualityButton",
                     value: function() {
                         var e = this.props,
                             t = e.selectedQualityName,
-                            n = e.t;
-                        return c["default"].createElement("div", {
+                            n = e.shouldShowQualityMenu,
+                            r = e.t;
+                        return n ? c["default"].createElement("div", {
                             className: N
                         }, c["default"].createElement(g.Button, {
                             onClick: this.handleQualityClick,
                             className: "qa-quality-button"
-                        }, c["default"].createElement("span", null, n(w)), c["default"].createElement("span", {
+                        }, c["default"].createElement("span", null, r(w)), c["default"].createElement("span", {
                             className: "pl-pill mg-l-05 qa-quality-pill"
-                        }, t)))
+                        }, t))) : null
                     }
                 }, {
                     key: "_renderPlaybackSpeedButton",
@@ -31249,7 +31278,7 @@
                         return t ? c["default"].createElement("div", {
                             className: I
                         }, c["default"].createElement(g.Button, {
-                            className: x,
+                            className: D,
                             onClick: n
                         }, c["default"].createElement("span", null, r(P)))) : null
                     }
@@ -31260,7 +31289,7 @@
                         return c["default"].createElement("div", {
                             className: N
                         }, c["default"].createElement(g.Button, {
-                            className: R,
+                            className: M,
                             onClick: this.handleAdvancedClick
                         }, c["default"].createElement("span", null, e(S))))
                     }
@@ -31271,7 +31300,7 @@
                         return c["default"].createElement("div", {
                             className: N
                         }, c["default"].createElement(g.Button, {
-                            className: L,
+                            className: R,
                             onClick: this.handleReportIssueClick
                         }, c["default"].createElement("span", null, e(k))))
                     }
@@ -31284,7 +31313,7 @@
                         return c["default"].createElement("div", {
                             className: I
                         }, c["default"].createElement(g.Button, {
-                            className: D,
+                            className: L,
                             onClick: t
                         }, c["default"].createElement("span", null, n(C))))
                     }
@@ -31311,8 +31340,8 @@
                     }
                 }]), t
             }(c["default"].Component);
-        j.propTypes = E, j.defaultProps = T;
-        t.MainMenu = (0, v.translate)()(j)
+        x.propTypes = E, x.defaultProps = T;
+        t.MainMenu = (0, v.translate)()(x)
     }, function(e, t, n) {
         "use strict";
         var r = n(607),
@@ -34715,10 +34744,11 @@
                         a.attr("data-vod-id", i.item_id), a.find(".js-collection-item-thumbnail").attr("src", l), a.find(".js-collection-item-title").text(i.title), a.find(".js-collection-item-detail-channel").text(i.owner.display_name);
                         var c = t.contentType === u.CONTENT_MODE_VOD && t.videoId === "v" + i.item_id;
                         return a.attr("data-currentvod", c), c && r.$collectionCollapsedNumber.text(n.translate("{{currentPosition}}/{{totalVideos}} video", {
-                            count: e.length,
-                            currentPosition: o + 1,
-                            totalVideos: e.length
-                        })), a
+                                count: e.length,
+                                currentPosition: o + 1,
+                                totalVideos: e.length
+                            })),
+                            a
                     })
                 }
             }, {
@@ -35705,10 +35735,9 @@
                         i = [],
                         o = function(e) {
                             var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                            e && (n.isWhitelisted(e, t) ? i.push(e) : n.logger.warn("rejecting non-whitelisted language code: " + e))
+                            e && (n.isWhitelisted(e, t) ? i.push(e) : n.logger.warn("rejecting non-whitelisted language code: " + e));
                         };
-                    return "string" == typeof e && e.indexOf("-") > -1 ? ("languageOnly" !== this.options.load && o(this.formatLanguageCode(e), !0),
-                        "languageOnly" !== this.options.load && "currentOnly" !== this.options.load && o(this.getScriptPartFromCode(e), !0), "currentOnly" !== this.options.load && o(this.getLanguagePartFromCode(e))) : "string" == typeof e && o(this.formatLanguageCode(e)), r.forEach(function(e) {
+                    return "string" == typeof e && e.indexOf("-") > -1 ? ("languageOnly" !== this.options.load && o(this.formatLanguageCode(e), !0), "languageOnly" !== this.options.load && "currentOnly" !== this.options.load && o(this.getScriptPartFromCode(e), !0), "currentOnly" !== this.options.load && o(this.getLanguagePartFromCode(e))) : "string" == typeof e && o(this.formatLanguageCode(e)), r.forEach(function(e) {
                         i.indexOf(e) < 0 && o(n.formatLanguageCode(e))
                     }), i
                 }, e
@@ -36909,9 +36938,10 @@
                             n = e.enableNotifications,
                             t = e.relationship,
                             r = t.following ? S : T;
-                        this._invokeIfLoggedIn(n), this._logInteraction(b, {
-                            action: r
-                        })
+                        this._invokeIfLoggedIn(n),
+                            this._logInteraction(b, {
+                                action: r
+                            })
                     }
                 }, {
                     key: "disableNotifications",
