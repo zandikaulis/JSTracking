@@ -16497,7 +16497,6 @@ googletag.cmd = googletag.cmd || [],
                 CSGO_LANGUAGE_SAMPLE: "localized",
                 LANGUAGE_DIRECTORY_FILTER: "full",
                 CLIPS_ENABLED: "yes",
-                CLIPS_YOU_WERE_RIGHT: "variant1",
                 DETERMINATION: "yes",
                 DISCOVER_SHOW_COVIEWS: "show",
                 ONSITE_NOTIFICATIONS: "variant2",
@@ -16587,8 +16586,7 @@ googletag.cmd = googletag.cmd || [],
                 "flash" !== r.type && (n = new i.HTML5Player(r.html5Options), n.init(function() {
                     t(e.player).triggerHandler("ready")
                 }, function(e) {
-                    n.$el.find(".js-html5-player").hide(),
-                        n.$el.siblings(".js-flash-required").show()
+                    n.$el.find(".js-html5-player").hide(), n.$el.siblings(".js-flash-required").show()
                 }))
             }))
         };
