@@ -9003,7 +9003,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.12-203559+4c05f5138dc5f73f6fe1865cbcf2bed6569eeacc",
+                    app_version: "2017.05.12-204513+bc46731113ad84861e8c33671466961b424a3a9d",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -42309,7 +42309,11 @@
             v = n(191),
             y = n(240),
             g = n(378),
-            m = [u.PLAYER_DASHBOARD, u.PLAYER_FRONTPAGE, u.PLAYER_CREATIVE, u.PLAYER_HIGHLIGHTER, u.PLAYER_EMBED];
+            m = [u.PLAYER_DASHBOARD, u.PLAYER_FRONTPAGE, u.PLAYER_CREATIVE, u.PLAYER_HIGHLIGHTER, u.PLAYER_EMBED],
+            b = "Offline Recommendations: No channel videos",
+            E = "Offline Recommendations: All channel videos watched",
+            T = "Offline Recommendations: Stream changed while fetching",
+            S = "Offline Recommendations: In control group";
         t.OfflineRecommendationsManager = function() {
             function e(t) {
                 i(this, e), this._stateStore = t, this._unsubs = [], this._unsubs.push((0, p.subscribe)(this._stateStore, ["onlineStatus", "user.loggedinStatus", "streamMetadata"], this.onStateChange.bind(this))), this.onStateChange()
@@ -42318,17 +42322,23 @@
                 key: "onStateChange",
                 value: function() {
                     var e = this;
-                    this._preConditionsMet() && this._fetchChannelVideos().then(function(t) {
-                        return e._filterOutWatchedVideos(t)
-                    }).then(function(t) {
-                        return e._normalizeChannelVideos(t)
-                    }).then(function(t) {
-                        return e._checkExperimentGroup(t)
-                    }).then(function(t) {
-                        e._stateStore.dispatch((0, _.setRecommendedVODs)(t, _.OFFLINE_RECOMMENDATIONS_TYPE)), e._stateStore.dispatch((0, a.pushScreen)(a.VOD_RECOMMENDATION_SCREEN))
-                    })["catch"](function(e) {
-                        return console.warn(e)
-                    })
+                    if (this._preConditionsMet()) {
+                        var t = this._stateStore.getState(),
+                            n = t.stream;
+                        this._fetchChannelVideos().then(function(t) {
+                            return e._filterOutWatchedVideos(t)
+                        }).then(function(t) {
+                            return e._normalizeChannelVideos(t)
+                        }).then(function(t) {
+                            return e._checkExperimentGroup(t)
+                        }).then(function(t) {
+                            return e._checkIfStreamChanged(n, t)
+                        }).then(function(t) {
+                            e._stateStore.dispatch((0, _.setRecommendedVODs)(t, _.OFFLINE_RECOMMENDATIONS_TYPE)), e._stateStore.dispatch((0, a.pushScreen)(a.VOD_RECOMMENDATION_SCREEN))
+                        })["catch"](function(e) {
+                            return console.warn(e)
+                        })
+                    }
                 }
             }, {
                 key: "_preConditionsMet",
@@ -42352,27 +42362,18 @@
             }, {
                 key: "_fetchChannelVideos",
                 value: function() {
-                    var e = this,
-                        t = this._stateStore.getState(),
-                        n = t.streamMetadata,
-                        r = t.stream,
-                        i = r,
-                        o = "Offline Recommendations: No channel videos",
-                        a = "Offline Recommendations: Stale video response";
-                    return (0, v.krakenRequestv5)("channels/" + n.channel.id + "/videos?limit=30").then(function(t) {
-                        var n = e._stateStore.getState().stream;
-                        return i === n ? t : Promise.reject(a)
-                    }).then(function(e) {
+                    var e = this._stateStore.getState(),
+                        t = e.streamMetadata;
+                    return (0, v.krakenRequestv5)("channels/" + t.channel.id + "/videos?limit=30").then(function(e) {
                         var t = e.videos;
-                        return t.length > 0 ? t : Promise.reject(o)
+                        return t.length > 0 ? t : Promise.reject(b)
                     })
                 }
             }, {
                 key: "_filterOutWatchedVideos",
                 value: function(e) {
                     var t = this._stateStore.getState(),
-                        n = t.user,
-                        r = "Offline Recommendations: All channel videos watched";
+                        n = t.user;
                     return (0, g.getResumeTimes)(n.id)["catch"](function() {
                         return {
                             videos: []
@@ -42381,7 +42382,7 @@
                         var n = e.filter(function(e) {
                             return !(0, _.isWatched)(t, e)
                         });
-                        return n.length > 0 ? n : Promise.reject(r)
+                        return n.length > 0 ? n : Promise.reject(E)
                     })
                 }
             }, {
@@ -42402,13 +42403,19 @@
                     })
                 }
             }, {
+                key: "_checkIfStreamChanged",
+                value: function(e, t) {
+                    var n = this._stateStore.getState(),
+                        r = n.stream;
+                    return r === e ? t : Promise.reject(T)
+                }
+            }, {
                 key: "_checkExperimentGroup",
                 value: function(e) {
                     var t = this._stateStore.getState(),
-                        n = t.experiments,
-                        r = "Offline Recommendations: In control group";
+                        n = t.experiments;
                     return n.get(y.OFFLINE_RECOMMENDATIONS).then(function(t) {
-                        return "yes" === t ? e : Promise.reject(r)
+                        return "yes" === t ? e : Promise.reject(S)
                     })
                 }
             }, {
