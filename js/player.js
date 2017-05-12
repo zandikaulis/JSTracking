@@ -9003,7 +9003,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.12-004034+0c0f476b877e3a846fa72e9d824b2b7be4ccac22",
+                    app_version: "2017.05.12-024745+5bb519079a75e28145a17aa4a7a4ec2157f3b3b4",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -9791,7 +9791,11 @@
         function a(e, t, n, r, i) {
             function o() {
                 var e = "";
-                Le.getSupportedBackends().length < 1 && n.dispatch((0, L.setError)(c.FLASH_ERROR)), e = (0, $["default"])(Le.getSupportedBackends(), r.backend) ? r.backend : Le.getSupportedBackends()[0] || "", i.addEventListener(M.FULLSCREEN_CHANGE, function() {
+                Le.getSupportedBackends().length < 1 && n.dispatch((0, L.setError)(c.FLASH_ERROR)), e = (0, $["default"])(Le.getSupportedBackends(), r.backend) ? r.backend : Le.getSupportedBackends()[0] || "", n.dispatch((0, x.setVODTransitionFn)(function(e) {
+                    De.emit(se.TRANSITION_TO_RECOMMENDED_VOD, {
+                        vodId: e
+                    })
+                })), i.addEventListener(M.FULLSCREEN_CHANGE, function() {
                     De.emit(M.FULLSCREEN_CHANGE)
                 }), a(e)
             }
@@ -10548,8 +10552,8 @@
             }
 
             function O(e) {
-                et && (et = !1, Ge.emit(P.PLAY)), ft = !1, ot = e.format, Ne(Be("getVideoTime")), Me(), $e < I.HAVE_METADATA && (null !== Ve.getChannel() && (nt = 1 / 0), $e = I.HAVE_METADATA, Ge.emit(P.LOADED_METADATA)), $e < I.HAVE_CURRENT_DATA && ($e = I.HAVE_CURRENT_DATA,
-                    Ge.emit(P.LOADED_DATA)), $e = I.HAVE_FUTURE_DATA, Ge.emit(P.PLAYING)
+                et && (et = !1, Ge.emit(P.PLAY)), ft = !1, ot = e.format, Ne(Be("getVideoTime")), Me(), $e < I.HAVE_METADATA && (null !== Ve.getChannel() && (nt = 1 / 0),
+                    $e = I.HAVE_METADATA, Ge.emit(P.LOADED_METADATA)), $e < I.HAVE_CURRENT_DATA && ($e = I.HAVE_CURRENT_DATA, Ge.emit(P.LOADED_DATA)), $e = I.HAVE_FUTURE_DATA, Ge.emit(P.PLAYING)
             }
 
             function re() {
@@ -12145,10 +12149,11 @@
                             i = e.stats,
                             o = this.getQuality(),
                             a = String(o).toLowerCase() === d.QUALITY_AUTO && r && i;
-                        this._onVariantSwitchComplete && this.core.removeEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this._onVariantSwitchComplete), this._onVariantSwitchComplete = function(e) {
-                            var r = e.variant;
-                            (0, A["default"])(n, r) && (t.events.emit(p.QUALITY_CHANGE, r), t.core.removeEventListener(t.playerCoreEvents.SEGMENT_CHANGED, t._onVariantSwitchComplete), t._onVariantSwitchComplete = !1)
-                        }, this.core.addEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this._onVariantSwitchComplete), a && this._onABSFormatChange(e)
+                        this._onVariantSwitchComplete && this.core.removeEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this._onVariantSwitchComplete),
+                            this._onVariantSwitchComplete = function(e) {
+                                var r = e.variant;
+                                (0, A["default"])(n, r) && (t.events.emit(p.QUALITY_CHANGE, r), t.core.removeEventListener(t.playerCoreEvents.SEGMENT_CHANGED, t._onVariantSwitchComplete), t._onVariantSwitchComplete = !1)
+                            }, this.core.addEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this._onVariantSwitchComplete), a && this._onABSFormatChange(e)
                     }
                 }, {
                     key: "onID3Tag",
