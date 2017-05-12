@@ -9003,7 +9003,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.12-174730+79e4d47d0bb00b138afb3b9dfc8006a6732f23e3",
+                    app_version: "2017.05.12-192332+13866cdaa3678121529c144f4caa78599806e7ed",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -29800,6 +29800,7 @@
                 isSettingsShown: l.PropTypes.bool.isRequired,
                 onShowSettings: l.PropTypes.func,
                 playerHeight: l.PropTypes.number.isRequired,
+                qualitiesAvailable: l.PropTypes.bool.isRequired,
                 qualityIsChanging: l.PropTypes.bool.isRequired
             },
             m = {
@@ -29813,6 +29814,7 @@
                     isAutoQuality: t.selected === y.QUALITY_AUTO,
                     isSettingsShown: r.showSettings,
                     playerHeight: n.height,
+                    qualitiesAvailable: t.available.length > 0,
                     qualityIsChanging: t.selected !== t.current
                 }
             },
@@ -29847,17 +29849,18 @@
                             t = e.isAutoQuality,
                             n = e.isSettingsShown,
                             r = e.playerHeight,
-                            i = e.qualityIsChanging,
-                            o = n ? u["default"].createElement(_.MenuManager, {
+                            i = e.qualitiesAvailable,
+                            o = e.qualityIsChanging,
+                            a = n ? u["default"].createElement(_.MenuManager, {
                                 playerHeight: r
                             }) : null,
-                            a = !t && i;
+                            s = !t && o && i;
                         return u["default"].createElement("div", {
                             className: "pl-flex"
                         }, u["default"].createElement(f.QualityChangeBanner, null), u["default"].createElement(h.SettingsButton, {
                             onClick: this.handleSettingsButtonClick,
-                            showSpinningAnimation: a
-                        }), o)
+                            showSpinningAnimation: s
+                        }), a)
                     }
                 }]), t
             }(u["default"].Component);
@@ -30317,7 +30320,7 @@
         }
 
         function i(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
         }
 
         function o(e, t) {
