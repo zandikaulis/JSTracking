@@ -1681,7 +1681,7 @@ window.SiteOptions = {
                 "value": "control"
             }, {
                 "weight": 0,
-                "value": "variant"
+                "value": "variant1"
             }]
         },
         "d48fe249-fd73-4c8f-bd17-415b70dc3708": {
