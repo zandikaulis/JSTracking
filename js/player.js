@@ -9003,7 +9003,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.12-194532+c9fe4c9a3168aa8a2388c15d55fe9d9c19fd806a",
+                    app_version: "2017.05.12-203559+4c05f5138dc5f73f6fe1865cbcf2bed6569eeacc",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -14878,18 +14878,19 @@
                     value: function(e) {
                         var t = this;
                         if (!(this._currentAdsManager.getRemainingTime() > 0)) {
-                            var n = e,
-                                r = this._stateStore.getState().window.Date;
-                            return this._adRequestTime = r.now(), (0, S.sendAdSpadeEvent)(this._stateStore, w, f.AD_REQUEST, (0, S.initializeAdSpadeEvent)(n)), this._aaxManager.fetchBids(e).then(function(e) {
+                            var n = e;
+                            return this._aaxManager.fetchBids(e).then(function(e) {
                                 n = t._aaxManager.getAdRequestContextWithAmazonBids(e, n);
+                                var r = t._stateStore.getState().window.Date;
+                                t._adRequestTime = r.now(), (0, S.sendAdSpadeEvent)(t._stateStore, w, f.AD_REQUEST, (0, S.initializeAdSpadeEvent)(n));
                                 try {
-                                    var r = t._stateStore.getState().window.google,
-                                        i = t._videoContainer.offsetParent,
-                                        o = new r.ima.AdsRequest;
-                                    o.adTagUrl = (0, u.buildIMATags)(n), o.linearAdSlotWidth = i.offsetWidth, o.linearAdSlotHeight = i.offsetHeight, o.nonLinearAdSlotWidth = i.offsetWidth, o.nonLinearAdSlotHeight = i.offsetHeight, t._adsLoader.requestAds(o, n)
-                                } catch (a) {
-                                    var s = t._initializeAdSpadeEvent(n);
-                                    s.reason = a.message, (0, S.sendAdSpadeEvent)(t._stateStore, w, f.AD_REQUEST_ERROR, s)
+                                    var i = t._stateStore.getState().window.google,
+                                        o = t._videoContainer.offsetParent,
+                                        a = new i.ima.AdsRequest;
+                                    a.adTagUrl = (0, u.buildIMATags)(n), a.linearAdSlotWidth = o.offsetWidth, a.linearAdSlotHeight = o.offsetHeight, a.nonLinearAdSlotWidth = o.offsetWidth, a.nonLinearAdSlotHeight = o.offsetHeight, t._adsLoader.requestAds(a, n)
+                                } catch (s) {
+                                    var l = (0, S.initializeAdSpadeEvent)(n);
+                                    l.reason = s.message, (0, S.sendAdSpadeEvent)(t._stateStore, w, f.AD_REQUEST_ERROR, l)
                                 }
                             })
                         }
@@ -15408,6 +15409,8 @@
                                 default:
                                     return Promise.resolve([])
                             }
+                        })["catch"](function() {
+                            return Promise.resolve([])
                         })
                     }
                 }, {
@@ -17701,7 +17704,8 @@
 
             function c(e) {
                 var r = e.manifestInfo.spectre;
-                n.getState().online && r ? $(t).attr("data-playlist", "pending") : r ? $(t).attr("data-playlist", !0) : ($(t).attr("data-playlist", !1), P(), $(t).attr("data-loading", !1));
+                n.getState().online && r ? $(t).attr("data-playlist", "pending") : r ? $(t).attr("data-playlist", !0) : ($(t).attr("data-playlist", !1),
+                    P(), $(t).attr("data-loading", !1))
             }
 
             function v(e) {
