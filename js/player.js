@@ -9003,7 +9003,7 @@
                     m = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.12-024745+5bb519079a75e28145a17aa4a7a4ec2157f3b3b4",
+                    app_version: "2017.05.12-174730+79e4d47d0bb00b138afb3b9dfc8006a6732f23e3",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -15354,16 +15354,15 @@
             f = r(p),
             h = n(322),
             _ = n(240),
-            v = (t.AAX_TWITCH_PUBLISHER_ID = 3036, t.AAX_VIDEO_AD_SERVER = "DFP", !0),
-            y = "video",
-            g = "twitch-preroll",
-            m = "twitch-midroll-",
-            b = "twitch-postroll",
-            E = "treatment",
+            v = (t.AAX_TWITCH_PUBLISHER_ID = 3036, t.AAX_VIDEO_AD_SERVER = "DFP", "video"),
+            y = "twitch-preroll",
+            g = "twitch-midroll-",
+            m = "twitch-postroll",
+            b = "treatment",
+            E = 2e3,
             T = 2e3,
             S = 2e3,
-            P = 2e3,
-            C = (t.AAXManager = function() {
+            P = (t.AAXManager = function() {
                 function e(t, n, r, i) {
                     var a = this;
                     o(this, e), this._stateStore = r, this._preloadedBids = [], this._options = i, this._unsubs = [];
@@ -15374,7 +15373,7 @@
                         videoAdServer: n
                     }, function() {
                         a._apstag = l.apstag
-                    })) : this._apstag = new C, this._unsubs.push((0, u.subscribe)(this._stateStore, ["stream"], this._onStreamChange.bind(this)))
+                    })) : this._apstag = new P, this._unsubs.push((0, u.subscribe)(this._stateStore, ["stream"], this._onStreamChange.bind(this)))
                 }
                 return a(e, [{
                     key: "destroy",
@@ -15389,7 +15388,7 @@
                         var e = this;
                         return this._enabled().then(function(t) {
                             return t ? e._getAdsRequestContextForPreroll().then(function(t) {
-                                if (!e._willDeclineAds(t)) return e._preloadVideoBids([g], t, T)
+                                if (!e._willDeclineAds(t)) return e._preloadVideoBids([y], t, E)
                             }) : Promise.resolve([])
                         })
                     }
@@ -15403,9 +15402,9 @@
                                 case s.AdRollTypes.PREROLL:
                                     return t._fetchPrerollBids();
                                 case s.AdRollTypes.MIDROLL:
-                                    return t._fetchMidrollBids(e, S);
+                                    return t._fetchMidrollBids(e, T);
                                 case s.AdRollTypes.POSTROLL:
-                                    return t._fetchPostrollBids(e, P);
+                                    return t._fetchPostrollBids(e, S);
                                 default:
                                     return Promise.resolve([])
                             }
@@ -15421,15 +15420,9 @@
                 }, {
                     key: "_enabled",
                     value: function() {
-                        return v ? this._checkExperimentGroup() : Promise.resolve(!1)
-                    }
-                }, {
-                    key: "_checkExperimentGroup",
-                    value: function() {
-                        var e = this._stateStore.getState().experiments.get(_.AAX_HEADER_BIDDING);
-                        return e ? e.then(function(e) {
-                            return Promise.resolve(e === E)
-                        }) : Promise.resolve(!1)
+                        return this._stateStore.getState().experiments.get(_.AAX_HEADER_BIDDING).then(function(e) {
+                            return Promise.resolve(e === b)
+                        })
                     }
                 }, {
                     key: "_fetchPrerollBids",
@@ -15445,14 +15438,14 @@
                         var n = 1,
                             r = Array.apply(null, new Array(n)).map(function(e, t) {
                                 var n = t + 1;
-                                return "" + m + n.toString()
+                                return "" + g + n.toString()
                             });
                         return this._fetchVideoBids(r, e, t)
                     }
                 }, {
                     key: "_fetchPostrollBids",
                     value: function(e, t) {
-                        return this._fetchVideoBids([b], e, t)
+                        return this._fetchVideoBids([m], e, t)
                     }
                 }, {
                     key: "_preloadVideoBids",
@@ -15471,7 +15464,7 @@
                         return new Promise(function(n) {
                             r._apstag.fetchBids(i, function(i) {
                                 var o = i.filter(function(t) {
-                                    return t.mediaType === y && (0, d["default"])(e, t.slotID)
+                                    return t.mediaType === v && (0, d["default"])(e, t.slotID)
                                 });
                                 o.length > 0 ? (r._initAndSendAdSpadeEvent(f.AAX_AD_AUCTION_RESPONSE, t, e, o), n(o)) : (r._initAndSendAdSpadeEvent(f.AAX_AD_AUCTION_ERROR, t, e), n([]))
                             })
@@ -15483,7 +15476,7 @@
                         return {
                             slots: e.map(function(e) {
                                 return {
-                                    mediaType: y,
+                                    mediaType: v,
                                     slotID: e
                                 }
                             }),
@@ -15508,27 +15501,16 @@
                         return (0, l.willDeclineAds)(t, e)
                     }
                 }, {
-                    key: "_extractAmazonFieldsFromBids",
-                    value: function(e, t) {
-                        var n = t,
-                            r = e.map(function(e) {
-                                return e.amzniid
-                            }),
-                            i = e.map(function(e) {
-                                return e.amznbid
-                            });
-                        return n.amzniid = r.join(","), n.amznbid = i.join(","), n
-                    }
-                }, {
                     key: "_initAndSendAdSpadeEvent",
                     value: function(e, t) {
-                        var n = this,
-                            r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-                            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [];
-                        this._enabled().then(function() {
-                            var o = (0, h.initializeAdSpadeEvent)(t);
-                            r && r.length > 0 && (o.slot_ids = r.join(",")), i && i.length > 0 && (o = n._extractAmazonFieldsFromBids(i, o)), (0, h.sendAdSpadeEvent)(n._stateStore, null, e, o)
-                        })
+                        var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
+                            r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [],
+                            i = (0, h.initializeAdSpadeEvent)(t);
+                        n && n.length > 0 && (i.slot_ids = n.join(",")), r && r.length > 0 && (i.amzniid = r.map(function(e) {
+                            return e.amzniid
+                        }).join(","), i.amznbid = r.map(function(e) {
+                            return e.amznbid
+                        }).join(",")), (0, h.sendAdSpadeEvent)(this._stateStore, null, e, i)
                     }
                 }]), e
             }(), function() {
@@ -16306,9 +16288,8 @@
             }
         }
         Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.ACTION_SET_ACCESS_TOKEN_PARAMS = void 0,
-            t.setAccessTokenParams = i;
+            value: !0
+        }), t.ACTION_SET_ACCESS_TOKEN_PARAMS = void 0, t.setAccessTokenParams = i;
         var o = n(66),
             a = r(o),
             s = t.ACTION_SET_ACCESS_TOKEN_PARAMS = "set access token params",
@@ -17720,7 +17701,7 @@
 
             function c(e) {
                 var r = e.manifestInfo.spectre;
-                n.getState().online && r ? $(t).attr("data-playlist", "pending") : r ? $(t).attr("data-playlist", !0) : ($(t).attr("data-playlist", !1), P(), $(t).attr("data-loading", !1))
+                n.getState().online && r ? $(t).attr("data-playlist", "pending") : r ? $(t).attr("data-playlist", !0) : ($(t).attr("data-playlist", !1), P(), $(t).attr("data-loading", !1));
             }
 
             function v(e) {
@@ -19103,12 +19084,12 @@
             I = t.ACTION_VOD_SET_IS_SEEKED = "set isSeeked",
             N = "vodResumeTimes",
             M = "vodResumeWatcheds",
-            R = "livestreamResumeTimes";
+            R = "livestreamResumeTimes"
     }, function(e, t, n) {
         "use strict";
 
         function r(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
         }
 
         function i(e, t) {
