@@ -8131,9 +8131,9 @@
         function l(e) {
             var t, n;
             return new _["default"]({
-                defaults: (t = {}, i(t, E, "no"), i(t, T, "off"), i(t, S, "no"), i(t, P, "no"), i(t, w, "no"), i(t, C, "no"), i(t, k, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "no"), i(t, D, "1.6.3"), i(t, x, "no"), i(t, j, "no"), i(t, L, "no"), i(t, U, "no,"), i(t, B, "no"), i(t, V, "keep"), i(t, F, "no"), i(t, H, "control"), i(t, q, "control"), i(t, G, "pad_control"), i(t, Y, "no"), i(t, K, "no"), i(t, W, "control"), i(t, $, "old"), i(t, z, "no"), i(t, Q, "control"), t),
+                defaults: (t = {}, i(t, E, "no"), i(t, T, "off"), i(t, S, "no"), i(t, P, "no"), i(t, w, "no"), i(t, C, "no"), i(t, k, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "no"), i(t, D, "1.6.3"), i(t, x, "no"), i(t, j, "no"), i(t, L, "no"), i(t, U, "no,"), i(t, B, "keep"), i(t, V, "no"), i(t, F, "control"), i(t, H, "control"), i(t, q, "pad_control"), i(t, G, "no"), i(t, Y, "no"), i(t, K, "control"), i(t, W, "old"), i(t, $, "no"), i(t, z, "control"), t),
                 deviceID: e.deviceID,
-                overrides: (0, d["default"])((n = {}, i(n, H, o("treatment")), i(n, T, o("v2")), i(n, S, a(["US"])), i(n, P, a(["GB"])), i(n, w, a(["DE"])), i(n, C, a(["FR"])), i(n, k, a(["SE"])), i(n, A, a(["DK", "FI", "NL", "NO"])), i(n, O, a(["CA"])), i(n, I, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, R, a(["PL"])), i(n, M, a(["AT", "CH", "ES", "IT", "PT"])), i(n, x, o("yes")), i(n, L, o("vca")), i(n, U, o("yes")), i(n, D, o("1.7.3+spdcy")), i(n, K, o("yes")), i(n, $, o("new")), i(n, Y, o("yes")), n), JSON.parse(u.cookie.get("experiment_overrides", "{}"))),
+                overrides: (0, d["default"])((n = {}, i(n, F, o("treatment")), i(n, T, o("v2")), i(n, S, a(["US"])), i(n, P, a(["GB"])), i(n, w, a(["DE"])), i(n, C, a(["FR"])), i(n, k, a(["SE"])), i(n, A, a(["DK", "FI", "NL", "NO"])), i(n, O, a(["CA"])), i(n, I, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, R, a(["PL"])), i(n, M, a(["AT", "CH", "ES", "IT", "PT"])), i(n, x, o("yes")), i(n, L, o("vca")), i(n, U, o("yes")), i(n, D, o("1.7.3+spdcy")), i(n, Y, o("yes")), i(n, W, o("new")), i(n, G, o("yes")), n), JSON.parse(u.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
                 login: e.login,
                 provider: new y["default"](y["default"].SERVICE_URL),
@@ -8142,7 +8142,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.AAX_HEADER_BIDDING = t.BISMOL = t.SETTINGS_MENU_REDESIGN = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.CLIPS_LOYALTY = t.PLAYER_NOTIFICATION_BUTTON = t.EXTENSIONS = t.HTML5_TOGGLE_REMOVAL = t.ADOPT = t.PINEAPPLE = t.VP_QOS_TEST = t.DETERMINATION = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
+        }), t.AAX_HEADER_BIDDING = t.BISMOL = t.SETTINGS_MENU_REDESIGN = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.CLIPS_LOYALTY = t.PLAYER_NOTIFICATION_BUTTON = t.EXTENSIONS = t.HTML5_TOGGLE_REMOVAL = t.PINEAPPLE = t.VP_QOS_TEST = t.DETERMINATION = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
         var u = n(238),
             c = n(78),
             d = r(c),
@@ -8173,18 +8173,17 @@
             x = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
             j = t.VP_QOS_TEST = "711aaaf6-61c0-4cc4-9469-0dfc9908785a",
             U = t.PINEAPPLE = "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3",
-            B = t.ADOPT = "5397de92-0538-42d1-977c-11842e03c9e5",
-            V = t.HTML5_TOGGLE_REMOVAL = "354aaebd-7643-434f-be37-98fe12c01220",
-            F = t.EXTENSIONS = "264f75af-a787-4a40-8654-40d78b4d8b41",
-            H = t.PLAYER_NOTIFICATION_BUTTON = "2884161f-6094-4189-b1aa-fd256468f96e",
-            q = t.CLIPS_LOYALTY = "24790bc9-1beb-4cf1-bc75-fe22c400805d",
-            G = t.PADTIME = "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14",
-            Y = t.OFFLINE_RECOMMENDATIONS = "00683bde-a79d-4b9d-a7cc-b0549f854d36",
-            K = t.VIEW_WATCH_TOGETHER = "d0518b75-fbba-418a-9445-ff7c517beb32",
-            W = t.CHOMPERZ = "d48fe249-fd73-4c8f-bd17-415b70dc3708",
-            $ = t.SETTINGS_MENU_REDESIGN = "0fb759af-22ba-415a-9c83-e2dbeb6f8e41",
-            z = t.BISMOL = "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5",
-            Q = t.AAX_HEADER_BIDDING = "18f450b9-5593-4d66-a5a7-c8b6fccf95c3"
+            B = t.HTML5_TOGGLE_REMOVAL = "354aaebd-7643-434f-be37-98fe12c01220",
+            V = t.EXTENSIONS = "264f75af-a787-4a40-8654-40d78b4d8b41",
+            F = t.PLAYER_NOTIFICATION_BUTTON = "2884161f-6094-4189-b1aa-fd256468f96e",
+            H = t.CLIPS_LOYALTY = "24790bc9-1beb-4cf1-bc75-fe22c400805d",
+            q = t.PADTIME = "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14",
+            G = t.OFFLINE_RECOMMENDATIONS = "00683bde-a79d-4b9d-a7cc-b0549f854d36",
+            Y = t.VIEW_WATCH_TOGETHER = "d0518b75-fbba-418a-9445-ff7c517beb32",
+            K = t.CHOMPERZ = "d48fe249-fd73-4c8f-bd17-415b70dc3708",
+            W = t.SETTINGS_MENU_REDESIGN = "0fb759af-22ba-415a-9c83-e2dbeb6f8e41",
+            $ = t.BISMOL = "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5",
+            z = t.AAX_HEADER_BIDDING = "18f450b9-5593-4d66-a5a7-c8b6fccf95c3"
     }, function(e, t, n) {
         function r(e) {
             var t = i(e);
@@ -9003,7 +9002,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.12-221224+849a3794290dba0d6ced8d48c2d277f12c8b9d86",
+                    app_version: "2017.05.13-010544+49b38d3a4e768f1d663013966225269d946ed9be",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -15555,49 +15554,42 @@
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
 
-        function a(e, t) {
-            var n = g.localStore.get("ad-whitelist-" + e);
-            return !!n && (0, _["default"])(t, function(e, t, n) {
-                return "reason_turbo" === n || "reason_channelsub" === n ? e : e && !t
-            }, n)
-        }
-
-        function s(e, t, n) {
+        function a(e, t, n) {
             var r = e.analyticsTracker;
-            r.trackEvent("video_ad_request_declined", (0, f["default"])({
+            r.trackEvent("video_ad_request_declined", (0, p["default"])({
                 ad_session_id: t.adSessionId,
                 roll_type: t.adType,
                 time_break: t.duration,
                 provider: "ima",
-                adblock: u(t),
+                adblock: l(t),
                 twitch_correlator: t.twitchCorrelator
             }, n))
         }
 
-        function l(e) {
+        function s(e) {
             var t = {
-                reason_short_vod: e.adType === v.PREROLL && e.contentType === m.CONTENT_MODE_VOD && e.vod.duration >= 0 && e.vod.duration < T,
-                reason_vod_creator: e.adType === v.PREROLL && e.contentType === m.CONTENT_MODE_VOD && e.login === e.channel,
+                reason_short_vod: e.adType === _.PREROLL && e.contentType === y.CONTENT_MODE_VOD && e.vod.duration >= 0 && e.vod.duration < g,
+                reason_vod_creator: e.adType === _.PREROLL && e.contentType === y.CONTENT_MODE_VOD && e.login === e.channel,
                 reason_turbo: Boolean(e.turboToken),
-                reason_ratelimit: e.adType === v.PREROLL && e.requestTime - e.lastAdDisplay < E,
+                reason_ratelimit: e.adType === _.PREROLL && e.requestTime - e.lastAdDisplay < m,
                 reason_channelsub: Boolean(e.chansubToken) && e.hasAdFreeSubscription,
-                reason_channeladfree: e.adType === v.PREROLL && !e.prerollsEnabled || e.adType === v.POSTROLL && !e.postrollsEnabled,
-                reason_frontpage: e.playerType === y.PLAYER_FRONTPAGE,
-                reason_creative_player: e.playerType === y.PLAYER_CREATIVE,
-                reason_facebook: e.playerType === y.PLAYER_FACEBOOK,
-                reason_highlighter: e.playerType === y.PLAYER_HIGHLIGHTER,
+                reason_channeladfree: e.adType === _.PREROLL && !e.prerollsEnabled || e.adType === _.POSTROLL && !e.postrollsEnabled,
+                reason_frontpage: e.playerType === v.PLAYER_FRONTPAGE,
+                reason_creative_player: e.playerType === v.PLAYER_CREATIVE,
+                reason_facebook: e.playerType === v.PLAYER_FACEBOOK,
+                reason_highlighter: e.playerType === v.PLAYER_HIGHLIGHTER,
                 reason_mobile_web_upsell: Boolean(e.isMobileLocation) && "mobile_web" === e.platform,
-                reason_digest: e.adType === v.PREROLL && e.lure && "yes" === e.bismol
+                reason_digest: e.adType === _.PREROLL && e.lure && "yes" === e.bismol
             };
             return t
         }
 
-        function u(e) {
+        function l(e) {
             return "unknown" === e.adblock ? null : e.adblock
         }
 
-        function c(e, t) {
-            var n = (0, _["default"])(e, function(e, t) {
+        function u(e, t) {
+            var n = (0, h["default"])(e, function(e, t) {
                 return e || t
             }, !1);
             return t.forced && (n = !1), n
@@ -15605,7 +15597,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.DecliningAdsManager = void 0;
-        var d = function() {
+        var c = function() {
             function e(e, t) {
                 for (var n = 0; n < t.length; n++) {
                     var r = t[n];
@@ -15616,23 +15608,21 @@
                 return n && e(t.prototype, n), r && e(t, r), t
             }
         }();
-        t.getDeclineReasons = l, t.willDeclineAds = c;
-        var p = n(78),
-            f = r(p),
-            h = n(205),
-            _ = r(h),
-            v = n(230),
-            y = n(208),
-            m = n(210),
-            g = n(239),
-            b = n(240),
-            E = 3e5,
-            T = 60;
+        t.getDeclineReasons = s, t.willDeclineAds = u;
+        var d = n(78),
+            p = r(d),
+            f = n(205),
+            h = r(f),
+            _ = n(230),
+            v = n(208),
+            y = n(210),
+            m = 3e5,
+            g = 60;
         t.DecliningAdsManager = function() {
             function e(t, n) {
                 o(this, e), this._stateStore = t, this._adManager = n, this._streamRollTypes = {}
             }
-            return d(e, [{
+            return c(e, [{
                 key: "destroy",
                 value: function() {
                     this._adManager.destroy()
@@ -15640,18 +15630,13 @@
             }, {
                 key: "requestAds",
                 value: function(e) {
-                    var t = this;
                     if (!this._streamRollTypes.hasOwnProperty(e.channel)) {
-                        var n;
-                        this._streamRollTypes[e.channel] = (n = {}, i(n, v.PREROLL, !1), i(n, v.MIDROLL, !1), i(n, v.POSTROLL, !1), n)
+                        var t;
+                        this._streamRollTypes[e.channel] = (t = {}, i(t, _.PREROLL, !1), i(t, _.MIDROLL, !1), i(t, _.POSTROLL, !1), t)
                     }
-                    var r = l(e),
-                        o = c(r, e),
-                        u = a(e.channel, r),
-                        d = this._stateStore.getState().experiments.get(b.ADOPT);
-                    return d.then(function(n) {
-                        u && "yes" === n ? (r.reason_turbo && (r.reason_channelsub = !1, s(t._stateStore.getState(), e, r)), e.onAdWhitelist = !0, t._adManager.requestAds(e), t._streamRollTypes[e.channel][e.adType] = !0) : o ? s(t._stateStore.getState(), e, r) : (t._adManager.requestAds(e), t._streamRollTypes[e.channel][e.adType] = !0)
-                    })
+                    var n = s(e),
+                        r = u(n, e);
+                    r ? a(this._stateStore.getState(), e, n) : (this._adManager.requestAds(e), this._streamRollTypes[e.channel][e.adType] = !0)
                 }
             }, {
                 key: "addEventListener",
@@ -16330,7 +16315,8 @@
         }), t.pushScreen = n, t.popScreen = r;
         var i = t.ACTION_PUSH_SCREEN = "push screen",
             o = t.ACTION_POP_SCREEN = "pop screen";
-        t.CONTENT_SCREEN = "content", t.ADVERTISEMENT_SCREEN = "advertisement", t.STITCHED_ADVERTISEMENT_SCREEN = "advertisement-bb", t.STORM_WARNING_SCREEN = "stormwarning", t.VOD_RECOMMENDATION_SCREEN = "vodrecommendations", t.VOD_RESTRICTED_SCREEN = "vodrestrictedscreen", t.COLLECTION_EMPTY_SCREEN = "collectionemptyscreen", t.ERROR_SCREEN = "error"
+        t.CONTENT_SCREEN = "content", t.ADVERTISEMENT_SCREEN = "advertisement", t.STITCHED_ADVERTISEMENT_SCREEN = "advertisement-bb", t.STORM_WARNING_SCREEN = "stormwarning",
+            t.VOD_RECOMMENDATION_SCREEN = "vodrecommendations", t.VOD_RESTRICTED_SCREEN = "vodrestrictedscreen", t.COLLECTION_EMPTY_SCREEN = "collectionemptyscreen", t.ERROR_SCREEN = "error"
     }, function(e, t, n) {
         "use strict";
 
@@ -17690,8 +17676,7 @@
                     if (t.preview) {
                         var n = "320x240",
                             r = "{width}x{height}";
-                        I = t.preview.template.replace(new RegExp("(" + n + "|" + r + ")", "g"), T),
-                            w()
+                        I = t.preview.template.replace(new RegExp("(" + n + "|" + r + ")", "g"), T), w()
                     }
                 }))
             }
@@ -19089,7 +19074,7 @@
             I = t.ACTION_VOD_SET_IS_SEEKED = "set isSeeked",
             N = "vodResumeTimes",
             R = "vodResumeWatcheds",
-            M = "livestreamResumeTimes";
+            M = "livestreamResumeTimes"
     }, function(e, t, n) {
         "use strict";
 
@@ -19099,7 +19084,7 @@
 
         function i(e, t) {
             if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !t || "object" != typeof t && "function" != typeof t ? e : t
+            return !t || "object" != typeof t && "function" != typeof t ? e : t;
         }
 
         function o(e, t) {
