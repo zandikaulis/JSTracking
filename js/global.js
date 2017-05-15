@@ -14966,28 +14966,41 @@ function(e, t) {
             "use strict";
 
             function i(e) {
-                e.Promise && (r = e.Promise), void 0 !== e.useSendBeacon && (o = e.useSendBeacon), e.serviceUrls && (e.serviceUrls.mixpanel && (u.mixpanel = e.serviceUrls.mixpanel), e.serviceUrls.spade && (u.spade = e.serviceUrls.spade), e.serviceUrls.untrusted_spade && (u.untrusted_spade = e.serviceUrls.untrusted_spade)), e.serviceBatchSizes && (e.serviceBatchSizes.mixpanel && (c.mixpanel = e.serviceBatchSizes.mixpanel), e.serviceBatchSizes.spade && (c.spade = e.serviceBatchSizes.spade), e.serviceBatchSizes.untrusted_spade && (c.untrusted_spade = e.serviceBatchSizes.untrusted_spade))
+                if (e.experiments && e.experiments.hasOwnProperty(c)) {
+                    var t = e.experiments[c];
+                    if (t.groups.length > 0 && t.groups[0].value) return t.groups[0].value
+                }
+                return ""
+            }
+
+            function r(e) {
+                if (e.Promise && (o = e.Promise), void 0 !== e.useSendBeacon && (s = e.useSendBeacon), e.siteOptions) {
+                    var t = i(e.siteOptions);
+                    "" !== t && (h.spade.href = t)
+                }
+                e.serviceUrls && (e.serviceUrls.mixpanel && (h.mixpanel = e.serviceUrls.mixpanel), e.serviceUrls.spade && (h.spade = e.serviceUrls.spade), e.serviceUrls.untrusted_spade && (h.untrusted_spade = e.serviceUrls.untrusted_spade)), e.serviceBatchSizes && (e.serviceBatchSizes.mixpanel && (d.mixpanel = e.serviceBatchSizes.mixpanel), e.serviceBatchSizes.spade && (d.spade = e.serviceBatchSizes.spade), e.serviceBatchSizes.untrusted_spade && (d.untrusted_spade = e.serviceBatchSizes.untrusted_spade))
             }
             n.d(t, "b", function() {
-                return s
-            }), n.d(t, "a", function() {
                 return a
-            }), n.d(t, "d", function() {
+            }), n.d(t, "a", function() {
                 return l
-            }), t.g = i, n.d(t, "e", function() {
-                return r
-            }), n.d(t, "f", function() {
-                return o
-            }), n.d(t, "c", function() {
+            }), n.d(t, "d", function() {
                 return u
+            }), t.g = r, n.d(t, "e", function() {
+                return o
+            }), n.d(t, "f", function() {
+                return s
+            }), n.d(t, "c", function() {
+                return h
             }), n.d(t, "h", function() {
-                return c
+                return d
             });
-            var r, o = !0,
-                s = "mixpanel",
-                a = "spade",
-                l = "untrusted_spade",
-                u = {
+            var o, s = !0,
+                a = "mixpanel",
+                l = "spade",
+                u = "untrusted_spade",
+                c = "4badc757-13a7-468c-99b6-e42aef7fc286",
+                h = {
                     spade: {
                         href: "//trowel.twitch.tv/"
                     },
@@ -14998,7 +15011,7 @@ function(e, t) {
                         href: "//api.mixpanel.com/track"
                     }
                 },
-                c = {
+                d = {
                     spade: 100,
                     untrusted_spade: 100,
                     mixpanel: 50
@@ -15561,8 +15574,9 @@ googletag.cmd = googletag.cmd || [],
                 if (t && s.id === n) return t.show(), void i.show();
                 r.overlay(s.url, function(r, o) {
                     t = r, i = o, n = r.attr("id"), e("#subwindow_close").click(function(t) {
-                        t.preventDefault(), e(this).trigger("overlay.hide")
-                    }), e("#signup_form .birthday_fields select").dropdownify(), r.find('input[name="follow"]').val(s.follow), r.find('input[name="mp_source_action"]').val(s.mpSourceAction), ich.grabTemplates()
+                            t.preventDefault(), e(this).trigger("overlay.hide")
+                        }), e("#signup_form .birthday_fields select").dropdownify(),
+                        r.find('input[name="follow"]').val(s.follow), r.find('input[name="mp_source_action"]').val(s.mpSourceAction), ich.grabTemplates()
                 }, s)
             }), e("#signup_form .birthday_fields select").dropdownify()
         }), window.addEventListener("message", function(t) {
@@ -18057,7 +18071,8 @@ googletag.cmd = googletag.cmd || [],
         var n = {},
             i = /Prerender/.test(window.navigator.userAgent);
         Dobbin.Dobbin.configure({
-            Promise: RSVP.Promise
+            Promise: RSVP.Promise,
+            siteOptions: SiteOptions
         });
         var r = {
                 MIXPANEL: "_mixpanel_",
