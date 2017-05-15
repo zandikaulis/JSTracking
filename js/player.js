@@ -9002,7 +9002,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.13-010544+49b38d3a4e768f1d663013966225269d946ed9be",
+                    app_version: "2017.05.15-152450+76be14fe3275abec357df241be6db68dea12e05f",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -33673,21 +33673,24 @@
                 game: l.PropTypes.string.isRequired,
                 width: l.PropTypes.number.isRequired,
                 height: l.PropTypes.number.isRequired,
-                extensionsApi: l.PropTypes.object.isRequired
+                extensionsApi: l.PropTypes.object.isRequired,
+                videoResolution: l.PropTypes.string.isRequired
             },
             v = function(e) {
                 var t = e.extensions,
                     n = e.playback,
                     r = e.playerDimensions,
                     i = e.stream,
-                    o = e.streamMetadata;
+                    o = e.streamMetadata,
+                    a = e.stats;
                 return {
                     extensions: t,
                     game: o.game,
                     shouldShowExtensions: i.contentType === p.CONTENT_MODE_LIVE && n.contentShowing,
                     width: r.width,
                     height: r.height,
-                    extensionsApi: t.extensionsApi
+                    extensionsApi: t.extensionsApi,
+                    videoResolution: a.videoStats.videoResolution
                 }
             },
             y = function(e) {
@@ -33718,14 +33721,16 @@
                             r = t.extensions.extensions,
                             i = t.game,
                             o = t.extensionsApi,
-                            a = this._computeDimensions(this.props.width, this.props.height),
-                            s = a.width,
-                            l = a.height;
+                            a = t.videoResolution,
+                            s = this._getAspectRatio(a),
+                            l = this._computeDimensions(this.props.width, this.props.height, s),
+                            c = l.width,
+                            p = l.height;
                         if (!n || !r || !r.length) return null;
-                        var c = r.map(function(t) {
+                        var f = r.map(function(t) {
                             return u["default"].createElement(d.ExtensionOverlay, {
-                                width: s,
-                                height: l,
+                                width: c,
+                                height: p,
                                 key: t.id,
                                 extension: t,
                                 onIdentityClick: e._onIdentity(t),
@@ -33735,7 +33740,7 @@
                         });
                         return u["default"].createElement("div", {
                             className: "extension-container"
-                        }, c)
+                        }, f)
                     }
                 }, {
                     key: "_onIdentity",
@@ -33747,12 +33752,22 @@
                     }
                 }, {
                     key: "_computeDimensions",
-                    value: function(e, t) {
-                        var n = e / t > h;
+                    value: function(e, t, n) {
+                        var r = e / t > n;
                         return {
-                            width: n ? Math.ceil(t * h) : e,
-                            height: n ? t : Math.ceil(e / h)
+                            width: r ? Math.ceil(t * n) : e,
+                            height: r ? t : Math.ceil(e / n)
                         }
+                    }
+                }, {
+                    key: "_getAspectRatio",
+                    value: function(e) {
+                        var t = /(\d+)\D*(\d+)/g,
+                            n = t.exec(e);
+                        if (!n) return h;
+                        var r = parseInt(n[1], 10),
+                            i = parseInt(n[2], 10);
+                        return i ? r / i : h
                     }
                 }]), t
             }(u["default"].Component);
@@ -35863,11 +35878,11 @@
                             if ("fallback" === this.options.saveMissingTo && T && T[0])
                                 for (var S = 0; S < T.length; S++) E.push(T[S]);
                             else "all" === this.options.saveMissingTo ? E = this.languageUtils.toResolveHierarchy(t.lng || this.language) : E.push(t.lng || this.language);
-                            this.options.saveMissing && (this.options.missingKeyHandler ? this.options.missingKeyHandler(E, a, i, p) : this.backendConnector && this.backendConnector.saveMissing && this.backendConnector.saveMissing(E, a, i, p)), this.emit("missingKey", E, a, i, p)
+                            this.options.saveMissing && (this.options.missingKeyHandler ? this.options.missingKeyHandler(E, a, i, p) : this.backendConnector && this.backendConnector.saveMissing && this.backendConnector.saveMissing(E, a, i, p)), this.emit("missingKey", E, a, i, p);
                         }
                         p = this.extendTranslation(p, i, t), b && p === i && this.options.appendNamespaceToMissingKey && (p = a + ":" + i), b && this.options.parseMissingKeyHandler && (p = this.options.parseMissingKeyHandler(p))
                     }
-                    return p;
+                    return p
                 }, t.prototype.extendTranslation = function(e, t, n) {
                     var r = this;
                     n.interpolation && this.interpolator.init(u({}, n, {
@@ -38375,7 +38390,8 @@
                     }
                 }
                 return function(t, n, r) {
-                    return n && e(t.prototype, n), r && e(t, r), t
+                    return n && e(t.prototype, n),
+                        r && e(t, r), t
                 }
             }(),
             u = n(389),
