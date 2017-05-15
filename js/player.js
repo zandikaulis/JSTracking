@@ -977,7 +977,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.Analytics = t.SITE_MINIPLAYER_ACTION = t.VIDEO_PLAY_VARIANT_MANIFEST = t.VIDEO_PLAY_MASTER_MANIFEST = t.VIDEO_PLAY_NAUTH = t.VIDEO_PLAY_OAUTH = t.VIDEO_PLAY_LOAD_START = t.REBROADCAST_TYPE = void 0;
+        }), t.Analytics = t.BROADCAST_PLATFORM_WATCH_PARTY = t.SITE_MINIPLAYER_ACTION = t.VIDEO_PLAY_VARIANT_MANIFEST = t.VIDEO_PLAY_MASTER_MANIFEST = t.VIDEO_PLAY_NAUTH = t.VIDEO_PLAY_OAUTH = t.VIDEO_PLAY_LOAD_START = t.REBROADCAST_TYPE = void 0;
         var s = function() {
                 function e(e, t) {
                     var n = [],
@@ -1059,7 +1059,7 @@
             Q = "fullscreen",
             X = "popout",
             J = "mini",
-            Z = "watch_party",
+            Z = t.BROADCAST_PLATFORM_WATCH_PARTY = "watch_party",
             ee = 500;
         t.Analytics = function() {
             function e(t, n, r, i, a) {
@@ -1458,9 +1458,10 @@
             for (var n in e)
                 if (e.hasOwnProperty(n)) {
                     var r = e[n];
-                    n = encodeURIComponent(n), r === !0 ? t.push(n) : r === !1 ? t.push("!" + n) : (r = encodeURIComponent(r), t.push(n + "=" + r))
+                    n = encodeURIComponent(n), r === !0 ? t.push(n) : r === !1 ? t.push("!" + n) : (r = encodeURIComponent(r),
+                        t.push(n + "=" + r))
                 }
-            return t.join("&");
+            return t.join("&")
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -2914,7 +2915,7 @@
             }, {
                 key: "removeEventListener",
                 value: function(e, t) {
-                    this._eventEmitter.removeListener(e, t)
+                    this._eventEmitter.removeListener(e, t);
                 }
             }, {
                 key: "canFullScreen",
@@ -9002,7 +9003,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.15-152450+76be14fe3275abec357df241be6db68dea12e05f",
+                    app_version: "2017.05.15-183326+5f6c2f30518677696d727831a1f6bd4f5c693eeb",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
