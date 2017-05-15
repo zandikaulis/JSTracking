@@ -225,7 +225,7 @@
             de = n(274),
             pe = n(210),
             fe = n(736),
-            he = n(615),
+            he = n(612),
             _e = n(746),
             ve = n(747),
             ye = n(750),
@@ -9003,7 +9003,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.15-185958+ebee4b7fc58b5c8ad5d1aad7b7c27af03a2f9233",
+                    app_version: "2017.05.15-222120+3c29b875aaa4cd6d6f965d04be032d282833494a",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -29784,7 +29784,7 @@
             f = n(592),
             h = n(600),
             _ = n(603),
-            v = n(615),
+            v = n(612),
             y = n(276),
             m = {
                 isAutoQuality: l.PropTypes.bool.isRequired,
@@ -30785,7 +30785,7 @@
             c = n(49),
             d = r(c),
             p = n(604),
-            f = n(612),
+            f = n(613),
             h = n(616),
             _ = n(619),
             v = n(621),
@@ -30894,7 +30894,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.MainMenu = t.MainMenuContainer = void 0;
+        }), t.MainMenu = t.MainMenuContainer = t.mapDispatchToProps = void 0;
         var s = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -30917,13 +30917,15 @@
             v = n(262),
             y = n(210),
             m = n(284),
-            g = {
+            g = n(612),
+            b = {
                 availableQualities: l.PropTypes.array.isRequired,
                 backendType: l.PropTypes.string.isRequired,
                 captionsAvailable: l.PropTypes.bool.isRequired,
                 collection: l.PropTypes.object.isRequired,
                 currentSpeed: l.PropTypes.number.isRequired,
                 currentTime: l.PropTypes.number,
+                hideSettingsMenu: l.PropTypes.func,
                 isStaffUser: l.PropTypes.bool,
                 isVod: l.PropTypes.bool.isRequired,
                 onMenuTransition: l.PropTypes.func,
@@ -30934,14 +30936,15 @@
                 streamUrl: l.PropTypes.string,
                 windowObj: l.PropTypes.object.isRequired
             },
-            b = {
+            E = {
                 currentTime: 0,
                 isStaffUser: !1,
+                hideSettingsMenu: function() {},
                 onMenuTransition: function() {},
                 pausePlayback: function() {},
                 streamUrl: ""
             },
-            E = function(e) {
+            T = function(e) {
                 var t = e.backendInfo,
                     n = e.captions,
                     r = e.collection,
@@ -30967,14 +30970,17 @@
                     windowObj: u
                 }
             },
-            T = function(e) {
+            S = t.mapDispatchToProps = function(e) {
                 return {
                     pausePlayback: function() {
                         e((0, _.pause)())
+                    },
+                    hideSettingsMenu: function() {
+                        e((0, g.showSettingsMenu)(!1))
                     }
                 }
             },
-            S = t.MainMenuContainer = function(e) {
+            P = t.MainMenuContainer = function(e) {
                 function t() {
                     i(this, t);
                     var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -30989,7 +30995,7 @@
                 }, {
                     key: "popoutPlayer",
                     value: function() {
-                        this.props.pausePlayback(), (0, h.popoutPlayer)({
+                        this.props.pausePlayback(), this.props.hideSettingsMenu(), (0, h.popoutPlayer)({
                             collection: this.props.collection,
                             playback: this.props.playback,
                             stream: this.props.stream,
@@ -31036,8 +31042,8 @@
                     }
                 }]), t
             }(u["default"].Component);
-        S.propTypes = g, S.defaultProps = b;
-        t.MainMenu = (0, p.connect)(E, T)(S)
+        P.propTypes = b, P.defaultProps = E;
+        t.MainMenu = (0, p.connect)(T, S)(P)
     }, function(e, t, n) {
         "use strict";
 
@@ -31712,6 +31718,28 @@
                 }]), t
             }(u["default"].Component);
         _.propTypes = f, _.defaultProps = h
+    }, function(e, t) {
+        "use strict";
+
+        function n(e) {
+            return {
+                type: i,
+                value: e
+            }
+        }
+
+        function r() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            return {
+                type: o,
+                value: e
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.setMiniPlayerMode = n, t.showSettingsMenu = r;
+        var i = t.ACTION_SET_MINIPLAYER_MODE = "set miniplayer",
+            o = t.ACTION_SHOW_SETTINGS_MENU = "show settings menu"
     }, function(e, t, n) {
         "use strict";
 
@@ -31726,9 +31754,9 @@
         var i = n(389),
             o = r(i),
             a = n(553),
-            s = n(613),
+            s = n(614),
             l = n(276),
-            u = n(615),
+            u = n(612),
             c = {
                 availableQualities: i.PropTypes.array.isRequired,
                 selectedQuality: i.PropTypes.string.isRequired,
@@ -31816,7 +31844,7 @@
             d = r(c),
             p = n(594),
             f = n(603),
-            h = n(614),
+            h = n(615),
             _ = {
                 availableQualities: l.PropTypes.arrayOf(l.PropTypes.shape({
                     group: l.PropTypes.string
@@ -31981,28 +32009,6 @@
                 }]), t
             }(u["default"].Component);
         v.propTypes = f, v.defaultProps = h
-    }, function(e, t) {
-        "use strict";
-
-        function n(e) {
-            return {
-                type: i,
-                value: e
-            }
-        }
-
-        function r() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            return {
-                type: o,
-                value: e
-            }
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.setMiniPlayerMode = n, t.showSettingsMenu = r;
-        var i = t.ACTION_SET_MINIPLAYER_MODE = "set miniplayer",
-            o = t.ACTION_SHOW_SETTINGS_MENU = "show settings menu"
     }, function(e, t, n) {
         "use strict";
 
@@ -32312,50 +32318,61 @@
                 "default": e
             }
         }
+
+        function i(e) {
+            return function(t) {
+                var n = t.key;
+                "Enter" === n && e()
+            }
+        }
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.Toggle = t.ToggleComponent = void 0;
-        var i = n(389),
-            o = r(i),
-            a = n(594),
-            s = {
-                label: i.PropTypes.string.isRequired,
-                onToggle: i.PropTypes.func,
-                t: i.PropTypes.func.isRequired,
-                toggledOn: i.PropTypes.bool
-            },
+        var o = n(389),
+            a = r(o),
+            s = n(594),
             l = {
+                label: o.PropTypes.string.isRequired,
+                onToggle: o.PropTypes.func,
+                t: o.PropTypes.func.isRequired,
+                toggledOn: o.PropTypes.bool
+            },
+            u = {
                 onToggle: function() {},
                 toggledOn: !1
             },
-            u = t.ToggleComponent = function(e) {
+            c = t.ToggleComponent = function(e) {
                 var t = e.label,
                     n = e.onToggle,
                     r = e.t,
-                    i = e.toggledOn,
-                    a = "toggle_button_" + Math.random().toString(36).substr(2, 10);
-                return o["default"].createElement("div", {
+                    o = e.toggledOn,
+                    s = "toggle_button_" + Math.random().toString(36).substr(2, 10);
+                return a["default"].createElement("div", {
                     className: "pl-player-menu__toggle-item"
-                }, o["default"].createElement("div", {
+                }, a["default"].createElement("div", {
                     className: "pl-toggle__label-wrapper"
-                }, o["default"].createElement("label", {
-                    className: "pl-form__label",
-                    htmlFor: "toggle_button"
-                }, r(t))), o["default"].createElement("div", {
+                }, a["default"].createElement("label", {
+                    className: "pl-form__label qa-toggle-label",
+                    htmlFor: "toggle_button",
+                    role: "button",
+                    onClick: n,
+                    onKeyUp: i(n),
+                    tabIndex: 0
+                }, r(t))), a["default"].createElement("div", {
                     className: "pl-toggle"
-                }, o["default"].createElement("input", {
+                }, a["default"].createElement("input", {
                     className: "qa-input-checkbox",
                     type: "checkbox",
-                    id: a,
-                    checked: i,
+                    id: s,
+                    checked: o,
                     onChange: n
-                }), o["default"].createElement("label", {
+                }), a["default"].createElement("label", {
                     className: "pl-toggle__button",
-                    htmlFor: a
+                    htmlFor: s
                 })))
             };
-        u.propTypes = s, u.defaultProps = l;
-        t.Toggle = (0, a.translate)()(u)
+        c.propTypes = l, c.defaultProps = u;
+        t.Toggle = (0, s.translate)()(c)
     }, function(e, t, n) {
         "use strict";
 
@@ -32404,7 +32421,7 @@
             c = n(553),
             d = n(620),
             p = n(318),
-            f = n(615),
+            f = n(612),
             h = {
                 handleVideoIssueReport: l.PropTypes.func,
                 hideSettingsMenu: l.PropTypes.func,
@@ -32669,7 +32686,7 @@
             a = n(553),
             s = n(610),
             l = n(318),
-            u = n(615),
+            u = n(612),
             c = {
                 currentSpeed: i.PropTypes.number.isRequired,
                 onMenuTransition: i.PropTypes.func,
@@ -35877,8 +35894,7 @@
                             if ("fallback" === this.options.saveMissingTo && T && T[0])
                                 for (var S = 0; S < T.length; S++) E.push(T[S]);
                             else "all" === this.options.saveMissingTo ? E = this.languageUtils.toResolveHierarchy(t.lng || this.language) : E.push(t.lng || this.language);
-                            this.options.saveMissing && (this.options.missingKeyHandler ? this.options.missingKeyHandler(E, a, i, p) : this.backendConnector && this.backendConnector.saveMissing && this.backendConnector.saveMissing(E, a, i, p)),
-                                this.emit("missingKey", E, a, i, p)
+                            this.options.saveMissing && (this.options.missingKeyHandler ? this.options.missingKeyHandler(E, a, i, p) : this.backendConnector && this.backendConnector.saveMissing && this.backendConnector.saveMissing(E, a, i, p)), this.emit("missingKey", E, a, i, p)
                         }
                         p = this.extendTranslation(p, i, t), b && p === i && this.options.appendNamespaceToMissingKey && (p = a + ":" + i), b && this.options.parseMissingKeyHandler && (p = this.options.parseMissingKeyHandler(p))
                     }
@@ -38390,8 +38406,7 @@
                     }
                 }
                 return function(t, n, r) {
-                    return n && e(t.prototype, n),
-                        r && e(t, r), t
+                    return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
             u = n(389),
@@ -42183,7 +42198,7 @@
         }), t.ui = i;
         var o = n(78),
             a = r(o),
-            s = n(615),
+            s = n(612),
             l = {
                 isMini: !1,
                 showSettings: !1
