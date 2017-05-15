@@ -1018,6 +1018,16 @@ window.SiteOptions = {
                 "value": "holdout"
             }]
         },
+        "80ee272f-44ec-4d8c-8ad1-72f4933a3da4": {
+            "name": "android_ingest_testing",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "819aed52-3cc1-4747-a840-476a39487a2e": {
             "name": "SOCIAL_RECOMMENDATIONS",
             "groups": [{
@@ -1046,6 +1056,16 @@ window.SiteOptions = {
             }, {
                 "weight": 50,
                 "value": "two_page"
+            }]
+        },
+        "87d995c4-afbc-400e-a6e4-472419071e26": {
+            "name": "ios_ingest_testing",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "88ad36bd-f5ba-4c8c-8d06-30e486cd5d07": {
