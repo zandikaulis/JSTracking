@@ -1171,22 +1171,23 @@
                         s = t.collection,
                         l = t.stream,
                         c = t.manifestInfo,
-                        d = this.player.getNetworkProfile().filter(function(e) {
+                        d = t.lang,
+                        p = this.player.getNetworkProfile().filter(function(e) {
                             return e.startTime > this.lastNetworkProfile
                         }.bind(this));
-                    this.lastNetworkProfile = d.reduce(function(e, t) {
+                    this.lastNetworkProfile = p.reduce(function(e, t) {
                         return Math.max(e, t.startTime)
                     }, this.lastNetworkProfile);
-                    var p = this.getNetworkProfileStats(d);
-                    this.player.video && (0, f["default"])(p, {
+                    var h = this.getNetworkProfileStats(p);
+                    this.player.video && (0, f["default"])(h, {
                         vod_timestamp: this.player.getCurrentTime()
                     });
-                    var h = (0, u.parse)(a.location.search.slice(1)),
-                        _ = h.tt_medium,
-                        v = void 0 === _ ? "" : _,
-                        y = h.tt_content,
-                        m = void 0 === y ? "" : y,
-                        b = {
+                    var _ = (0, u.parse)(a.location.search.slice(1)),
+                        v = _.tt_medium,
+                        y = void 0 === v ? "" : v,
+                        m = _.tt_content,
+                        b = void 0 === m ? "" : m,
+                        E = {
                             seconds_offset: this.minutesWatchedTimer.initialDelay / 1e3,
                             minutes_logged: this.minutesWatchedTimer.totalMinutes,
                             captions_enabled: r.enabled,
@@ -1195,16 +1196,17 @@
                             broadcast_id: o.broadcastID,
                             community_id: i.data._id,
                             community_name: i.data.name,
-                            medium: v,
-                            content: m,
+                            medium: y,
+                            content: b,
                             transcoder_type: c.transcodestack,
                             autoplayed: this.options.autoplay,
-                            streamType: o.streamType
+                            streamType: o.streamType,
+                            language: d.langCode
                         };
-                    l.contentType === B.CONTENT_MODE_VOD && s.id && (b.collection_item_position = (0, g["default"])(s.items, {
+                    l.contentType === B.CONTENT_MODE_VOD && s.id && (E.collection_item_position = (0, g["default"])(s.items, {
                         item_id: l.videoId.substr(1)
-                    }), b.collection_id = s.id), this.trackEvent(G, (0, f["default"])({}, p, b)), this.stateStore.dispatch((0, M.resetQualityChangeCount)()), this.valveClient.notify(), this.trackNetworkProfile.then(function(t) {
-                        "yes" === t && d.length > 0 && e.tracker.trackEvents(d.map(function(e) {
+                    }), E.collection_id = s.id), this.trackEvent(G, (0, f["default"])({}, h, E)), this.stateStore.dispatch((0, M.resetQualityChangeCount)()), this.valveClient.notify(), this.trackNetworkProfile.then(function(t) {
+                        "yes" === t && p.length > 0 && e.tracker.trackEvents(p.map(function(e) {
                             return {
                                 event: "network_profile",
                                 properties: {
@@ -1458,8 +1460,8 @@
             for (var n in e)
                 if (e.hasOwnProperty(n)) {
                     var r = e[n];
-                    n = encodeURIComponent(n), r === !0 ? t.push(n) : r === !1 ? t.push("!" + n) : (r = encodeURIComponent(r),
-                        t.push(n + "=" + r))
+                    n = encodeURIComponent(n),
+                        r === !0 ? t.push(n) : r === !1 ? t.push("!" + n) : (r = encodeURIComponent(r), t.push(n + "=" + r))
                 }
             return t.join("&")
         }
@@ -2915,7 +2917,7 @@
             }, {
                 key: "removeEventListener",
                 value: function(e, t) {
-                    this._eventEmitter.removeListener(e, t);
+                    this._eventEmitter.removeListener(e, t)
                 }
             }, {
                 key: "canFullScreen",
@@ -9003,7 +9005,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.15-222410+685a70e3181f80279382e47d0e9bcd3fc35b45d3",
+                    app_version: "2017.05.15-225810+4016fce7f97b5a3bed04dcebcc5e8ef738d5fd18",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -37033,6 +37035,7 @@
             "Submit feedback by selecting Report Playback Issue from the gear menu.": "Submit feedback by selecting Report Playback Issue from the gear menu.",
             Offline: "Offline",
             "Get notified when {{channelName}} is live": "Get notified when {{channelName}} is live",
+            "Follow and get notified when {{channelName}} is live": "Follow and get notified when {{channelName}} is live",
             "Live Broadcast has ended": "Live Broadcast has ended",
             "Get notified when {{channelName}} goes live next": "Get notified when {{channelName}} goes live next",
             "Follow {{channelName}} on Twitch": "Follow {{channelName}} on Twitch",
@@ -37090,6 +37093,8 @@
             "Skip this video": "Skip this video",
             "This collection is empty.": "This collection is empty.",
             Quality: "Quality",
+            Speed: "Speed",
+            Default: "Default",
             "Closed Captions Options": "Closed Captions Options",
             Advanced: "Advanced",
             "Noticed a video playback issue? Let us know!": "Noticed a video playback issue? Let us know!",
@@ -37102,7 +37107,8 @@
             "Watch Now": "Watch Now",
             "Watch Next": "Watch Next",
             "Most Recent Video": "Most Recent Video",
-            Settings: "Settings"
+            Settings: "Settings",
+            "Is your video buffering? Try the Auto quality option.": "Is your video buffering? Try the Auto quality option."
         }
     }, function(e, t, n) {
         "use strict";
