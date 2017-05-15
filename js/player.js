@@ -9003,7 +9003,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.15-185620+549bb3ea32db1d846a82afde9dd1d82546fc7ba7",
+                    app_version: "2017.05.15-185958+ebee4b7fc58b5c8ad5d1aad7b7c27af03a2f9233",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -34011,8 +34011,6 @@
                                 n = Date.now(),
                                 i = Math.max(0, .9 * (1e3 * t.exp - n));
                             setTimeout(r.refreshAuth.bind(r, r.auth), i)
-                        }, this.getAuth = function() {
-                            return r.auth
                         }, this.decodeTokenPayload = function(e) {
                             var t, n = {
                                     channel_id: "",
@@ -34038,27 +34036,27 @@
                             n.open("POST", "https://api.twitch.tv/v5/extensions/auth/refresh", !0), n.setRequestHeader("Client-ID", e.clientId), n.setRequestHeader("Content-Type", "application/json"), n.onreadystatechange = function() {
                                 if (n.readyState === XMLHttpRequest.DONE)
                                     if (200 === n.status) {
-                                        var t = JSON.parse(n.responseText).token;
-                                        r.extension.token = t, r.onAuthUpdate({
-                                            clientId: e.clientId,
-                                            channelId: e.channelId,
-                                            token: t,
-                                            userId: e.userId
-                                        }), r.cycleExtensionAuth()
+                                        var e = JSON.parse(n.responseText).token;
+                                        r.extension.token = e, r.onAuthUpdate(r.auth), r.cycleExtensionAuth()
                                     } else r.onAnyFailure("token refresh failed")
                             }, n.send(JSON.stringify({
                                 token: t
                             }))
-                        };
-                        var i = this.decodeTokenPayload(e.token);
-                        this.auth = {
-                            channelId: i.channel_id,
-                            clientId: e.clientId,
-                            token: e.token,
-                            userId: i.opaque_user_id
                         }
                     }
-                    return e
+                    return Object.defineProperty(e.prototype, "auth", {
+                        get: function() {
+                            var e = this.decodeTokenPayload(this.extension.token);
+                            return {
+                                channelId: e.channel_id,
+                                clientId: this.extension.clientId,
+                                token: this.extension.token,
+                                userId: e.opaque_user_id
+                            }
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), e
                 }()
             }, function(e, t, n) {
                 "use strict";
@@ -34087,7 +34085,7 @@
                         }, this.onExtensionLoaded = function() {
                             u.sendMessage({
                                 action: r.a.TwitchExtBoostrap,
-                                auth: u.ems.getAuth()
+                                auth: u.ems.auth
                             })
                         }, this.onContextUpdate = function(e) {
                             u.sendMessage({
@@ -35879,7 +35877,8 @@
                             if ("fallback" === this.options.saveMissingTo && T && T[0])
                                 for (var S = 0; S < T.length; S++) E.push(T[S]);
                             else "all" === this.options.saveMissingTo ? E = this.languageUtils.toResolveHierarchy(t.lng || this.language) : E.push(t.lng || this.language);
-                            this.options.saveMissing && (this.options.missingKeyHandler ? this.options.missingKeyHandler(E, a, i, p) : this.backendConnector && this.backendConnector.saveMissing && this.backendConnector.saveMissing(E, a, i, p)), this.emit("missingKey", E, a, i, p);
+                            this.options.saveMissing && (this.options.missingKeyHandler ? this.options.missingKeyHandler(E, a, i, p) : this.backendConnector && this.backendConnector.saveMissing && this.backendConnector.saveMissing(E, a, i, p)),
+                                this.emit("missingKey", E, a, i, p)
                         }
                         p = this.extendTranslation(p, i, t), b && p === i && this.options.appendNamespaceToMissingKey && (p = a + ":" + i), b && this.options.parseMissingKeyHandler && (p = this.options.parseMissingKeyHandler(p))
                     }
