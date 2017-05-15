@@ -9003,7 +9003,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.15-222120+3c29b875aaa4cd6d6f965d04be032d282833494a",
+                    app_version: "2017.05.15-222410+685a70e3181f80279382e47d0e9bcd3fc35b45d3",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -31567,7 +31567,7 @@
                 onMenuTransition: function() {},
                 onSelectPlaybackSpeed: function() {}
             },
-            y = t.PLAYBACK_SPEEDS = Object.freeze([.5, .75, 1, 1.25, 1.5, 2]),
+            y = t.PLAYBACK_SPEEDS = Object.freeze([.25, .5, .75, 1, 1.25, 1.5, 2]),
             m = t.TEXT_SPEED = "Speed",
             g = t.TEXT_DEFAULT = "Default",
             b = (0, d["default"])({
