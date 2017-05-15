@@ -1197,14 +1197,14 @@ window.SiteOptions = {
                 "weight": 5,
                 "value": "1.7.4+absctrl"
             }, {
-                "weight": 2,
+                "weight": 5,
                 "value": "1.8.2"
             }, {
-                "weight": 28,
+                "weight": 80,
                 "value": "1.7.7+spd67"
             }, {
-                "weight": 60,
-                "value": "1.7.7"
+                "weight": 5,
+                "value": "1.8.2+spd67"
             }]
         },
         "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": {
