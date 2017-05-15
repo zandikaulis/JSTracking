@@ -12610,7 +12610,7 @@ function(e, t) {
             function i(e) {
                 var t = r(e);
                 if (null !== t) throw t;
-                this._config = o(e), this._Promise = e.Promise, this._deviceID = e.deviceID, this._platform = e.platform, this._username = e.login || null, this._defaults = s(e.Promise, e.defaults, e.overrides || {}), this._assignments = a(e.Promise, this._config, this._defaults, e.overrides || {}, this._deviceID)
+                this._config = o(e), this._Promise = e.Promise, this._deviceID = e.deviceID, this._platform = e.platform, this._username = e.login || null, this._defaults = s(e.Promise, e.defaults, e.overrides || {}), this._assignments = a(e.Promise, this._config, this._defaults, e.overrides || {}, this._deviceID), this._spade_url = l(e.Promise, this._config, h.SPADE_URL_PROJECT_UUID)
             }
 
             function r(e) {
@@ -12621,7 +12621,7 @@ function(e, t) {
                 return new e.Promise(function(t, n) {
                     e.provider.getExperimentConfiguration(t, n)
                 }).then(function(e) {
-                    var t = u.validate(e);
+                    var t = c.validate(e);
                     if (t) throw t;
                     return e
                 })
@@ -12644,7 +12644,7 @@ function(e, t) {
                 for (var s in n) n.hasOwnProperty(s) && (o[s] = function(o) {
                     return t.then(function(e) {
                         if (!e.hasOwnProperty(o)) throw new Error("Experiment `" + o + "` is deprecated");
-                        return u.selectTreatment(o, e[o], r)
+                        return c.selectTreatment(o, e[o], r)
                     }, function(e) {
                         return n[o]
                     }).then(function(t) {
@@ -12658,23 +12658,32 @@ function(e, t) {
                 return o
             }
 
-            function l(e, t) {
+            function l(e, t, n) {
+                return t.then(function(e) {
+                    return e[n] && e[n].groups && e[n].groups[0] ? e[n].groups[0].value : ""
+                }, function(e) {
+                    return ""
+                })
+            }
+
+            function u(e, t) {
                 var n, i = {};
                 for (n in e) e.hasOwnProperty(n) && (i[n] = e[n]);
                 for (n in t) t.hasOwnProperty(n) && !e.hasOwnProperty(n) && (i[n] = t[n]);
                 return i
             }
-            var u = n(1),
-                c = n(4);
+            var c = n(1),
+                h = n(4);
             e.exports = i, i.prototype.get = function(e, t) {
-                var n = l(t || {}, {
+                var n = u(t || {}, {
                         mustTrack: !1
                     }),
                     i = this._assignments[e] || this._Promise.reject(new Error("No experiment with ID `" + e + "`")),
-                    r = this._Promise.all([this._config, i]).then(function(t) {
+                    r = this._Promise.all([this._config, i, this._spade_url]).then(function(t) {
                         var n = t[0],
                             i = t[1],
-                            r = {
+                            r = t[2],
+                            o = {
                                 client_time: (new Date).getTime() / 1e3,
                                 device_id: this._deviceID,
                                 experiment_id: e,
@@ -12682,8 +12691,8 @@ function(e, t) {
                                 experiment_group: i,
                                 platform: this._platform
                             };
-                        return null !== this._username && (r.login = this._username), new this._Promise(function(e, t) {
-                            c.sendEvent("experiment_branch", r, e)
+                        return null !== this._username && (o.login = this._username), new this._Promise(function(e, t) {
+                            h.sendEvent(r, "experiment_branch", o, e)
                         }).then(null, function() {
                             return null
                         })
@@ -12952,13 +12961,14 @@ function(e, t) {
             var i = n(5),
                 r = n(6),
                 o = n(7);
-            t.SPADE_URL = "//trowel.twitch.tv/", t.sendEvent = function(e, n, s) {
-                var a = {
-                        event: e,
-                        properties: n
+            t.DEFAULT_SPADE_URL = "//trowel.twitch.tv/", t.SPADE_URL_PROJECT_UUID = "4badc757-13a7-468c-99b6-e42aef7fc286", t.sendEvent = function(e, n, s, a) {
+                var l = {
+                        event: n,
+                        properties: s
                     },
-                    l = i.stringify(r.parse(JSON.stringify(a)));
-                o.fetch(t.SPADE_URL + "?data=" + encodeURIComponent(l), {}, s)
+                    u = i.stringify(r.parse(JSON.stringify(l))),
+                    c = e || t.DEFAULT_SPADE_URL;
+                o.fetch(c + "?data=" + encodeURIComponent(u), {}, a)
             }
         }, function(e, t, n) {
             ! function(i, r) {
@@ -13260,8 +13270,7 @@ function(e, t) {
 
         function S(e, t) {
             var i, r = a({}, e);
-            for (i in t) s(t, i) && (n(e[i]) && n(t[i]) ? (r[i] = {}, a(r[i], e[i]),
-                a(r[i], t[i])) : null != t[i] ? r[i] = t[i] : delete r[i]);
+            for (i in t) s(t, i) && (n(e[i]) && n(t[i]) ? (r[i] = {}, a(r[i], e[i]), a(r[i], t[i])) : null != t[i] ? r[i] = t[i] : delete r[i]);
             for (i in e) s(e, i) && !s(t, i) && n(e[i]) && (r[i] = a({}, r[i]));
             return r
         }
@@ -15575,8 +15584,8 @@ googletag.cmd = googletag.cmd || [],
                 r.overlay(s.url, function(r, o) {
                     t = r, i = o, n = r.attr("id"), e("#subwindow_close").click(function(t) {
                             t.preventDefault(), e(this).trigger("overlay.hide")
-                        }), e("#signup_form .birthday_fields select").dropdownify(),
-                        r.find('input[name="follow"]').val(s.follow), r.find('input[name="mp_source_action"]').val(s.mpSourceAction), ich.grabTemplates()
+                        }),
+                        e("#signup_form .birthday_fields select").dropdownify(), r.find('input[name="follow"]').val(s.follow), r.find('input[name="mp_source_action"]').val(s.mpSourceAction), ich.grabTemplates()
                 }, s)
             }), e("#signup_form .birthday_fields select").dropdownify()
         }), window.addEventListener("message", function(t) {
