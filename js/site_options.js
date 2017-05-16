@@ -689,13 +689,13 @@ window.SiteOptions = {
             "name": "CVP May 11",
             "groups": [{
                 "weight": 5,
-                "value": "1.7.7+absctrl"
+                "value": "1.8.2+absctrl"
             }, {
                 "weight": 5,
-                "value": "1.8.2+spd67"
+                "value": "1.8.2"
             }, {
                 "weight": 10,
-                "value": "1.8.2"
+                "value": "1.8.2+spd67"
             }, {
                 "weight": 80,
                 "value": "1.7.7+spd67"
