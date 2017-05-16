@@ -330,6 +330,16 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b": {
+            "name": "AUTO_ON_NOTIFICATIONS",
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "variant"
+            }]
+        },
         "18f450b9-5593-4d66-a5a7-c8b6fccf95c3": {
             "name": "aax",
             "groups": [{
@@ -1263,11 +1273,14 @@ window.SiteOptions = {
         "9a3b387e-b6cd-4d2b-80a6-bb14d3ba4512": {
             "name": "GAME_FOLLOW_ONBOARD",
             "groups": [{
-                "weight": 100,
+                "weight": 34,
                 "value": "control"
             }, {
-                "weight": 0,
-                "value": "show"
+                "weight": 33,
+                "value": "variant1"
+            }, {
+                "weight": 33,
+                "value": "variant2"
             }]
         },
         "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57": {
