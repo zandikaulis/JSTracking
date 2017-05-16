@@ -1290,6 +1290,16 @@ window.SiteOptions = {
                 "value": "live"
             }]
         },
+        "9ce10ee7-98ec-4126-a42f-28a6a129ca9d": {
+            "name": "ios_chomments",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "active"
+            }]
+        },
         "9d1ee56c-22dc-4d5c-96dd-5ee393c6cd4b": {
             "name": "xboxone_playercore",
             "groups": [{
@@ -1467,10 +1477,10 @@ window.SiteOptions = {
         "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9": {
             "name": "CHANNEL_CHAT_CTA",
             "groups": [{
-                "weight": 20,
+                "weight": 0,
                 "value": "5min"
             }, {
-                "weight": 80,
+                "weight": 100,
                 "value": "control"
             }]
         },
