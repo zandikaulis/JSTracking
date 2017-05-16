@@ -2732,7 +2732,7 @@
                     return r.protocol + "://" + r.authority + "/" + i
                 }
                 return r.protocol + "://" + r.authority
-            }(), t.apiTimeout = 1e4, t.mixpanelHost = "//api.mixpanel.com", t.mixpanelToken = "809576468572134f909dffa6bd0dcfcf", t.mixpanelIgnore = ["abs_stream_format_change", "minute-buffered", "x_untrusted_video_init", "x_untrusted_video-play", "x_untrusted_minute-watched", "x_untrusted_buffer-empty", "x_untrusted_buffer-refill", "network_profile", "video_pause"], t.spadeHost = "//spade.twitch.tv", t.trowelHost = "//trowel.twitch.tv", t.spadeIgnore = [], t.countessHost = "//countess.twitch.tv", t.gamePath = y + "/directory/game", t.popoutSize = {
+            }(), t.apiTimeout = 1e4, t.mixpanelHost = "//api.mixpanel.com", t.mixpanelToken = "809576468572134f909dffa6bd0dcfcf", t.mixpanelIgnore = ["abs_stream_format_change", "minute-buffered", "x_untrusted_video_init", "x_untrusted_video-play", "x_untrusted_minute-watched", "x_untrusted_buffer-empty", "x_untrusted_buffer-refill", "network_profile", "video_pause"], t.spadeHost = "//spade.twitch.tv", t.trowelHost = "//video-edge-8a9219.sjc01.hls.ttvnw.net", t.spadeIgnore = [], t.countessHost = "//countess.twitch.tv", t.gamePath = y + "/directory/game", t.popoutSize = {
                 width: 853,
                 height: 480
             }, t.chromecastId = "358E83DC", t.bufferPollDelay = 1e3, t.qualityText = {
@@ -2912,7 +2912,7 @@
             return o(e, [{
                 key: "addEventListener",
                 value: function(e, t) {
-                    this._eventEmitter.addListener(e, t)
+                    this._eventEmitter.addListener(e, t);
                 }
             }, {
                 key: "removeEventListener",
@@ -9015,7 +9015,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.16-004156+cb93e27579997f277078d45c7e5399382f360311",
+                    app_version: "2017.05.16-015028+b3cbada88a86b41f5b882de9d9fd3f8f0a6b9ec2",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
