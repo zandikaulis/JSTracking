@@ -8191,7 +8191,7 @@
         function r(e) {
             var t = i(e);
             if (null !== t) throw t;
-            this._config = o(e), this._Promise = e.Promise, this._deviceID = e.deviceID, this._platform = e.platform, this._username = e.login || null, this._defaults = a(e.Promise, e.defaults, e.overrides || {}), this._assignments = s(e.Promise, this._config, this._defaults, e.overrides || {}, this._deviceID)
+            this._config = o(e), this._Promise = e.Promise, this._deviceID = e.deviceID, this._platform = e.platform, this._username = e.login || null, this._defaults = a(e.Promise, e.defaults, e.overrides || {}), this._assignments = s(e.Promise, this._config, this._defaults, e.overrides || {}, this._deviceID), this._spade_url = l(e.Promise, this._config, d.SPADE_URL_PROJECT_UUID)
         }
 
         function i(e) {
@@ -8202,7 +8202,7 @@
             return new e.Promise(function(t, n) {
                 e.provider.getExperimentConfiguration(t, n)
             }).then(function(e) {
-                var t = u.validate(e);
+                var t = c.validate(e);
                 if (t) throw t;
                 return e
             })
@@ -8225,7 +8225,7 @@
             for (var a in n) n.hasOwnProperty(a) && (o[a] = function(o) {
                 return t.then(function(e) {
                     if (!e.hasOwnProperty(o)) throw new Error("Experiment `" + o + "` is deprecated");
-                    return u.selectTreatment(o, e[o], i)
+                    return c.selectTreatment(o, e[o], i)
                 }, function(e) {
                     return n[o]
                 }).then(function(t) {
@@ -8239,23 +8239,32 @@
             return o
         }
 
-        function l(e, t) {
+        function l(e, t, n) {
+            return t.then(function(e) {
+                return e[n] && e[n].groups && e[n].groups[0] ? e[n].groups[0].value : ""
+            }, function(e) {
+                return ""
+            })
+        }
+
+        function u(e, t) {
             var n, r = {};
             for (n in e) e.hasOwnProperty(n) && (r[n] = e[n]);
             for (n in t) t.hasOwnProperty(n) && !e.hasOwnProperty(n) && (r[n] = t[n]);
             return r
         }
-        var u = n(242),
-            c = n(245);
+        var c = n(242),
+            d = n(245);
         e.exports = r, r.prototype.get = function(e, t) {
-            var n = l(t || {}, {
+            var n = u(t || {}, {
                     mustTrack: !1
                 }),
                 r = this._assignments[e] || this._Promise.reject(new Error("No experiment with ID `" + e + "`")),
-                i = this._Promise.all([this._config, r]).then(function(t) {
+                i = this._Promise.all([this._config, r, this._spade_url]).then(function(t) {
                     var n = t[0],
                         r = t[1],
-                        i = {
+                        i = t[2],
+                        o = {
                             client_time: (new Date).getTime() / 1e3,
                             device_id: this._deviceID,
                             experiment_id: e,
@@ -8263,13 +8272,13 @@
                             experiment_group: r,
                             platform: this._platform
                         };
-                    null !== this._username && (i.login = this._username);
-                    var o = new this._Promise(function(e, t) {
-                        c.sendEvent("experiment_branch", i, e)
+                    null !== this._username && (o.login = this._username);
+                    var a = new this._Promise(function(e, t) {
+                        d.sendEvent(i, "experiment_branch", o, e)
                     }).then(null, function() {
                         return null
                     });
-                    return o
+                    return a
                 }.bind(this));
             return this._Promise.all([r, n.mustTrack ? i : null]).then(function(e) {
                 return e[0]
@@ -8537,13 +8546,14 @@
         var r = n(246),
             i = n(247),
             o = n(248);
-        t.SPADE_URL = "//trowel.twitch.tv/", t.sendEvent = function(e, n, a) {
-            var s = {
-                    event: e,
-                    properties: n
+        t.DEFAULT_SPADE_URL = "//trowel.twitch.tv/", t.SPADE_URL_PROJECT_UUID = "4badc757-13a7-468c-99b6-e42aef7fc286", t.sendEvent = function(e, n, a, s) {
+            var l = {
+                    event: n,
+                    properties: a
                 },
-                l = r.stringify(i.parse(JSON.stringify(s)));
-            o.fetch(t.SPADE_URL + "?data=" + encodeURIComponent(l), {}, a)
+                u = r.stringify(i.parse(JSON.stringify(l))),
+                c = e || t.DEFAULT_SPADE_URL;
+            o.fetch(c + "?data=" + encodeURIComponent(u), {}, s)
         }
     }, function(e, t, n) {
         ! function(r, i) {
@@ -9005,7 +9015,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.15-225810+4016fce7f97b5a3bed04dcebcc5e8ef738d5fd18",
+                    app_version: "2017.05.16-004156+cb93e27579997f277078d45c7e5399382f360311",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
