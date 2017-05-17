@@ -1247,10 +1247,10 @@
                     var i = {},
                         o = {},
                         a = Promise.all([n, r]).then(function(e) {
-                            var t = s(e, 2),
-                                n = t[0],
-                                r = t[1];
-                            return i = n, o = r, (0, C.krakenRequestv5)("channels/" + n._id + "/community")
+                            var n = s(e, 2),
+                                r = n[0],
+                                a = n[1];
+                            return i = r, o = a, (0, C.getCommunityFromChannel)(t)
                         }).then(function(t) {
                             e.stateStore.dispatch((0, L.setCommunitiesData)(t));
                             var n = o.broadcaster_software,
@@ -1460,8 +1460,8 @@
             for (var n in e)
                 if (e.hasOwnProperty(n)) {
                     var r = e[n];
-                    n = encodeURIComponent(n),
-                        r === !0 ? t.push(n) : r === !1 ? t.push("!" + n) : (r = encodeURIComponent(r), t.push(n + "=" + r))
+                    n = encodeURIComponent(n), r === !0 ? t.push(n) : r === !1 ? t.push("!" + n) : (r = encodeURIComponent(r),
+                        t.push(n + "=" + r))
                 }
             return t.join("&")
         }
@@ -2912,7 +2912,7 @@
             return o(e, [{
                 key: "addEventListener",
                 value: function(e, t) {
-                    this._eventEmitter.addListener(e, t);
+                    this._eventEmitter.addListener(e, t)
                 }
             }, {
                 key: "removeEventListener",
@@ -3727,31 +3727,31 @@
         }
 
         function a(e) {
-            return F().then(function(e) {
+            return H().then(function(e) {
                 return e.token
             }, function(e) {
                 return null
             }).then(function(t) {
-                var n = (0, k["default"])({}, B, e);
+                var n = (0, A["default"])({}, V, e);
                 return t && (n.headers.Authorization = "OAuth " + t), $.ajax(n)
             })
         }
 
         function s(e) {
             return a({
-                url: M.apiHost + "/kraken/" + e,
+                url: L.apiHost + "/kraken/" + e,
                 headers: {
-                    Accept: j
+                    Accept: U
                 }
             })
         }
 
         function l(e, t) {
             var n = {
-                Accept: U
+                Accept: B
             };
-            return t && t.headers && (n = (0, k["default"])(n, t.headers)), a((0, k["default"])({}, t, {
-                url: M.apiHost + "/kraken/" + e,
+            return t && t.headers && (n = (0, A["default"])(n, t.headers)), a((0, A["default"])({}, t, {
+                url: L.apiHost + "/kraken/" + e,
                 headers: n
             }))
         }
@@ -3762,9 +3762,9 @@
 
         function c(e) {
             var t = $.ajax({
-                url: M.spectreHost + "/v1/channels/" + e,
+                url: L.spectreHost + "/v1/channels/" + e,
                 dataType: "jsonp",
-                timeout: M.apiTimeout
+                timeout: L.apiTimeout
             });
             return Promise.resolve(t)
         }
@@ -3796,46 +3796,57 @@
         }
 
         function _(e) {
+            return F(e).then(function(e) {
+                var t = e._id;
+                return l("channels/" + t + "/community").then(function(e) {
+                    return Promise.resolve(e)
+                })["catch"](function() {
+                    return Promise.resolve({})
+                })
+            })
+        }
+
+        function v(e) {
             var t = a({
-                    url: M.apiHost + "/v5/collections/" + e
+                    url: L.apiHost + "/v5/collections/" + e
                 }),
                 n = a({
-                    url: M.apiHost + "/v5/collections/" + e + "/items"
+                    url: L.apiHost + "/v5/collections/" + e + "/items"
                 });
             return Promise.all([t, n])
         }
 
-        function v(e) {
+        function y(e) {
             var t = e.player,
                 n = e.oauth_token;
-            if (t === D.PLAYER_CURSE && n) {
+            if (t === x.PLAYER_CURSE && n) {
                 var r = Promise.resolve({
                     token: n
                 });
-                F.cache.set(void 0, r)
+                H.cache.set(void 0, r)
             }
         }
 
-        function y(e, t) {
-            return null === e.chansub && !e.is_admin && (0, N["default"])(t.restrictions, function(e, t) {
+        function m(e, t) {
+            return null === e.chansub && !e.is_admin && (0, R["default"])(t.restrictions, function(e, t) {
                 return e || "chansub" === t
             }, !1)
         }
 
-        function m(e, t) {
-            var n = M.twitchHost + "/" + o(e);
+        function g(e, t) {
+            var n = L.twitchHost + "/" + o(e);
             return t && (n += "?" + $.param(t)), n
         }
 
-        function g(e, t, n) {
-            var r = m(e),
+        function b(e, t, n) {
+            var r = g(e),
                 i = t[0],
                 a = t.substring(1);
             return r += "/" + o(i) + "/" + o(a), n && (r += "?" + $.param(n)), r
         }
 
-        function b(e) {
-            return V(e).then(function(e) {
+        function E(e) {
+            return F(e).then(function(e) {
                 return l("channels/" + e._id + "/extensions")
             }).then(function(e) {
                 return e.installed_extensions.reduce(function(t, n) {
@@ -3856,7 +3867,7 @@
             })
         }
 
-        function E(e, t, n) {
+        function T(e, t, n) {
             if (!e || !t) return Promise.reject();
             var r = JSON.stringify({
                 token: t,
@@ -3872,73 +3883,73 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.oauthToken = t.channelAPIInfo = t.krakenUserInfo = t.userInfo = t.channelViewerInfo = t.videoInfo = t.channelInfo = void 0, t.krakenRequest = s, t.krakenRequestv5 = l, t.streamInfo = u, t.offlinePlaylistInfo = c, t.getFollowChannel = p, t.setFollowChannel = f, t.setFollowNotifications = h, t.collectionInfo = _, t.setOAuthToken = v, t.isVODRestricted = y, t.channelUrl = m, t.videoUrl = g, t.overlayExtensionsForChannel = b, t.updateIdentitySharingForExtension = E;
-        var T = n(78),
-            S = i(T),
-            P = n(143),
-            w = i(P),
-            C = n(192),
-            k = i(C),
-            A = n(66),
-            O = i(A),
-            I = n(205),
-            N = i(I),
-            R = n(159),
-            M = r(R),
-            L = n(208),
-            D = r(L),
-            x = !!("withCredentials" in new XMLHttpRequest),
-            j = "application/vnd.twitchtv.v3+json",
-            U = "application/vnd.twitchtv.v5+json",
-            B = {
-                dataType: x ? "json" : "jsonp",
+        }), t.oauthToken = t.channelAPIInfo = t.krakenUserInfo = t.userInfo = t.channelViewerInfo = t.videoInfo = t.channelInfo = void 0, t.krakenRequest = s, t.krakenRequestv5 = l, t.streamInfo = u, t.offlinePlaylistInfo = c, t.getFollowChannel = p, t.setFollowChannel = f, t.setFollowNotifications = h, t.getCommunityFromChannel = _, t.collectionInfo = v, t.setOAuthToken = y, t.isVODRestricted = m, t.channelUrl = g, t.videoUrl = b, t.overlayExtensionsForChannel = E, t.updateIdentitySharingForExtension = T;
+        var S = n(78),
+            P = i(S),
+            w = n(143),
+            C = i(w),
+            k = n(192),
+            A = i(k),
+            O = n(66),
+            I = i(O),
+            N = n(205),
+            R = i(N),
+            M = n(159),
+            L = r(M),
+            D = n(208),
+            x = r(D),
+            j = !!("withCredentials" in new XMLHttpRequest),
+            U = "application/vnd.twitchtv.v3+json",
+            B = "application/vnd.twitchtv.v5+json",
+            V = {
+                dataType: j ? "json" : "jsonp",
                 headers: {
                     "Client-ID": "jzkbprff40iqj646a697cyrvl0zt2m6"
                 },
-                timeout: M.apiTimeout
+                timeout: L.apiTimeout
             },
-            V = t.channelInfo = (0, w["default"])(function(e) {
+            F = t.channelInfo = (0, C["default"])(function(e) {
                 return null === e ? Promise.reject(new Error("No channel info available on null channel ID")) : s("channels/" + o(e))
             }),
-            F = (t.videoInfo = (0, w["default"])(function(e) {
+            H = (t.videoInfo = (0, C["default"])(function(e) {
                 if (null === e || void 0 === e) return Promise.reject(new Error("No video info available on null video ID"));
                 var t = s("videos/" + o(e)),
                     n = a({
-                        url: M.apiHost + "/api/videos/" + o(e)
+                        url: L.apiHost + "/api/videos/" + o(e)
                     }).then(function(e) {
-                        return (0, O["default"])(e, ["muted_segments", "increment_view_count_url", "restrictions", "seek_previews_url"])
+                        return (0, I["default"])(e, ["muted_segments", "increment_view_count_url", "restrictions", "seek_previews_url"])
                     });
                 return Promise.all([t, n]).then(function(e) {
                     var t = e[0].channel.name;
-                    return V(t).then(function(t) {
-                        var n = (0, S["default"])({}, e[0], e[1]);
+                    return F(t).then(function(t) {
+                        var n = (0, P["default"])({}, e[0], e[1]);
                         return n.channel = t, n
                     })
                 })
-            }), t.channelViewerInfo = (0, w["default"])(function(e) {
+            }), t.channelViewerInfo = (0, C["default"])(function(e) {
                 return a({
-                    url: M.apiHost + "/api/channels/" + o(e) + "/viewer"
+                    url: L.apiHost + "/api/channels/" + o(e) + "/viewer"
                 })
-            }), t.userInfo = (0, w["default"])(function() {
+            }), t.userInfo = (0, C["default"])(function() {
                 return a({
-                    url: M.apiHost + "/api/viewer/info.json",
+                    url: L.apiHost + "/api/viewer/info.json",
                     xhrFields: {
                         withCredentials: !0
                     }
                 })
-            }), t.krakenUserInfo = (0, w["default"])(function() {
+            }), t.krakenUserInfo = (0, C["default"])(function() {
                 return s("user")
-            }), t.channelAPIInfo = (0, w["default"])(function(e) {
+            }), t.channelAPIInfo = (0, C["default"])(function(e) {
                 return a({
-                    url: M.apiHost + "/api/channels/" + e
+                    url: L.apiHost + "/api/channels/" + e
                 })
-            }), t.oauthToken = (0, w["default"])(function() {
-                var e = $.ajax((0, S["default"])({
-                    url: M.apiHost + "/api/viewer/token.json",
+            }), t.oauthToken = (0, C["default"])(function() {
+                var e = $.ajax((0, P["default"])({
+                    url: L.apiHost + "/api/viewer/token.json",
                     xhrFields: {
                         withCredentials: !0
                     }
-                }, B));
+                }, V));
                 return Promise.resolve(e)
             }))
     }, function(e, t, n) {
@@ -4589,15 +4600,14 @@
                     case 2:
                         i ^= (255 & e.charCodeAt(o + 1)) << 8;
                     case 1:
-                        i ^= 255 & e.charCodeAt(o), i = 1540483477 * (65535 & i) + ((1540483477 * (i >>> 16) & 65535) << 16)
+                        i ^= 255 & e.charCodeAt(o), i = 1540483477 * (65535 & i) + ((1540483477 * (i >>> 16) & 65535) << 16);
                 }
                 return i ^= i >>> 13, i = 1540483477 * (65535 & i) + ((1540483477 * (i >>> 16) & 65535) << 16), i ^= i >>> 15, i >>> 0
             }
 
             function n(e, t) {
                 var n, r, i, o, a, s, l, u;
-                for (n = 3 & e.length, r = e.length - n, i = t, a = 3432918353, s = 461845907,
-                    u = 0; u < r;) l = 255 & e.charCodeAt(u) | (255 & e.charCodeAt(++u)) << 8 | (255 & e.charCodeAt(++u)) << 16 | (255 & e.charCodeAt(++u)) << 24, ++u, l = (65535 & l) * a + (((l >>> 16) * a & 65535) << 16) & 4294967295, l = l << 15 | l >>> 17, l = (65535 & l) * s + (((l >>> 16) * s & 65535) << 16) & 4294967295, i ^= l, i = i << 13 | i >>> 19, o = 5 * (65535 & i) + ((5 * (i >>> 16) & 65535) << 16) & 4294967295, i = (65535 & o) + 27492 + (((o >>> 16) + 58964 & 65535) << 16);
+                for (n = 3 & e.length, r = e.length - n, i = t, a = 3432918353, s = 461845907, u = 0; u < r;) l = 255 & e.charCodeAt(u) | (255 & e.charCodeAt(++u)) << 8 | (255 & e.charCodeAt(++u)) << 16 | (255 & e.charCodeAt(++u)) << 24, ++u, l = (65535 & l) * a + (((l >>> 16) * a & 65535) << 16) & 4294967295, l = l << 15 | l >>> 17, l = (65535 & l) * s + (((l >>> 16) * s & 65535) << 16) & 4294967295, i ^= l, i = i << 13 | i >>> 19, o = 5 * (65535 & i) + ((5 * (i >>> 16) & 65535) << 16) & 4294967295, i = (65535 & o) + 27492 + (((o >>> 16) + 58964 & 65535) << 16);
                 switch (l = 0, n) {
                     case 3:
                         l ^= (255 & e.charCodeAt(u + 2)) << 16;
@@ -5065,7 +5075,7 @@
                 padtime: e.padtime,
                 aax: e.aaxExpGroup
             };
-            if ("control" !== e.skippableExpGroup && (t.skip = e.skippableExpGroup), null !== e.kruxId && (t.kuid = e.kruxId), e.contentType === _.CONTENT_MODE_VOD && (t.vod_id = e.vod.id, t.vod_name = e.vod.name, t.vod_type = e.vod.type), t.embed) {
+            if ("control" !== e.skippableExpGroup && (t.skip = e.skippableExpGroup), null !== e.communityId && (t.community = e.communityId), null !== e.kruxId && (t.kuid = e.kruxId), e.contentType === _.CONTENT_MODE_VOD && (t.vod_id = e.vod.id, t.vod_name = e.vod.name, t.vod_type = e.vod.type), t.embed) {
                 var n = (0, h.parseUri)(e.referrer);
                 t.embed_url = n.host.split(".").slice(-2).join(".")
             }
@@ -6549,8 +6559,8 @@
                                 onEndOrAdSkip: function(n, r) {
                                     e.getSSECore().resetHeartbeat(), e.getSSECore().resetKeepAlive(), e.getPlaylist().addBufferingTime(n), e.getPlaylist().getClip().addBufferingTime(n), e.getPlaylist().getClip().addElapsedTime(n);
                                     var i = e.getSSECore().createLabels(l.END, r, n);
-                                    e.getEventManager().newEvent(i), e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && (e.getPlaylist().getClip().setSeekingTimeBeforeEnd(n - e.getPlaylist().getClip().getSeekingTimestamp()), e.getPlaylist().getClip().setCollectingSeekingTime(!1)), e.getPlaylist().storeClipPlaybackCounters(),
-                                        e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1), r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist()
+                                    e.getEventManager().newEvent(i), e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && (e.getPlaylist().getClip().setSeekingTimeBeforeEnd(n - e.getPlaylist().getClip().getSeekingTimestamp()),
+                                        e.getPlaylist().getClip().setCollectingSeekingTime(!1)), e.getPlaylist().storeClipPlaybackCounters(), e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1), r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist()
                                 },
                                 onBufferStop: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
@@ -7611,9 +7621,9 @@
 
         function d(e, t, n, r) {
             return p(n.stream).then(function(e) {
-                return Promise.all([(0, m.userInfo)(), (0, m.channelInfo)(e), (0, m.channelAPIInfo)(e), (0, m.channelViewerInfo)(e), n.experiments.get(T.PADTIME), n.experiments.get(T.CHOMPERZ), n.experiments.get(T.BISMOL), n.experiments.get(T.AAX_HEADER_BIDDING)])
+                return Promise.all([(0, m.userInfo)(), (0, m.channelInfo)(e), (0, m.channelAPIInfo)(e), (0, m.channelViewerInfo)(e), (0, m.getCommunityFromChannel)(e), n.experiments.get(T.PADTIME), n.experiments.get(T.CHOMPERZ), n.experiments.get(T.BISMOL), n.experiments.get(T.AAX_HEADER_BIDDING)])
             }).then(function(i) {
-                var o = h(i, 8),
+                var o = h(i, 9),
                     a = o[0],
                     s = o[1],
                     l = o[2],
@@ -7622,9 +7632,10 @@
                     d = o[5],
                     p = o[6],
                     f = o[7],
-                    v = (0, S.parseUri)(n.window.location.href),
-                    y = v.queryKey,
-                    m = "digest" === y.referrer;
+                    v = o[8],
+                    y = (0, S.parseUri)(n.window.location.href),
+                    m = y.queryKey,
+                    b = "digest" === m.referrer;
                 return new _.AdsRequestContext({
                     adType: e,
                     sdk: n.sdk,
@@ -7636,11 +7647,12 @@
                     channelAPIInfo: l,
                     channelInfo: s,
                     viewerInfo: u,
-                    padtimeExpGroup: c,
-                    skippableExpGroup: d,
-                    bismolExpGroup: p,
-                    lure: m,
-                    aaxExpGroup: f
+                    padtimeExpGroup: d,
+                    skippableExpGroup: p,
+                    communityInfo: c,
+                    bismolExpGroup: f,
+                    lure: b,
+                    aaxExpGroup: v
                 })
             })
         }
@@ -7760,11 +7772,12 @@
                     f = t.channelAPIInfo,
                     h = t.viewerInfo,
                     _ = t.padtimeExpGroup,
-                    v = t.skippableExpGroup,
-                    y = t.bismolExpGroup,
-                    m = t.lure,
-                    g = t.aaxExpGroup;
-                i(this, e), this.contentType = o.stream.contentType, this.login = u.login, this.adSessionId = (0, a.generate)(p), this.adType = n, this.bismol = y, this.lure = m, this.channel = c.name, this.channelId = c._id, this.chansubToken = h.chansub, this.twitchCorrelator = (0, a.generate)(), this.deviceId = d.get(!1), this.duration = r, this.hasAdFreeSubscription = Boolean(h.has_ad_free_subscription), this.lastAdDisplay = s, this.forced = l, this.padtime = _, this.requestTime = Date.now(), this.skippableExpGroup = v, this.aaxExpGroup = g, this._initUserInfoFields(u), this._initChannelInfoFields(c, f), this._initStateFields(o), this._initAmazonFields()
+                    v = t.communityInfo,
+                    y = t.skippableExpGroup,
+                    m = t.bismolExpGroup,
+                    g = t.lure,
+                    b = t.aaxExpGroup;
+                i(this, e), this.contentType = o.stream.contentType, this.login = u.login, this.adSessionId = (0, a.generate)(p), this.adType = n, this.bismol = m, this.lure = g, this.channel = c.name, this.channelId = c._id, this.chansubToken = h.chansub, this.communityId = v !== {} ? v._id : null, this.twitchCorrelator = (0, a.generate)(), this.deviceId = d.get(!1), this.duration = r, this.hasAdFreeSubscription = Boolean(h.has_ad_free_subscription), this.lastAdDisplay = s, this.forced = l, this.padtime = _, this.requestTime = Date.now(), this.skippableExpGroup = y, this.aaxExpGroup = b, this._initUserInfoFields(u), this._initChannelInfoFields(c, f), this._initStateFields(o), this._initAmazonFields()
             }
             return o(e, [{
                 key: "_initUserInfoFields",
@@ -9015,7 +9028,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.16-015028+b3cbada88a86b41f5b882de9d9fd3f8f0a6b9ec2",
+                    app_version: "2017.05.17-005903+9d124e2ebae4d121a0fa12912cbda47efec69428",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
