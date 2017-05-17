@@ -708,11 +708,8 @@ window.SiteOptions = {
         "45d73059-3cea-436a-b41f-86bb05f845f2": {
             "name": "CVP May 11",
             "groups": [{
-                "weight": 5,
+                "weight": 7,
                 "value": "1.8.2+absctrl"
-            }, {
-                "weight": 2,
-                "value": "1.8.2+abshist"
             }, {
                 "weight": 2,
                 "value": "1.8.100"
