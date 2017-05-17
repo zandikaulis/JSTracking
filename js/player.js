@@ -3801,7 +3801,7 @@
                 return l("channels/" + t + "/community").then(function(e) {
                     return Promise.resolve(e)
                 })["catch"](function() {
-                    return Promise.resolve({})
+                    return Promise.resolve()
                 })
             })
         }
@@ -7777,7 +7777,7 @@
                     m = t.bismolExpGroup,
                     g = t.lure,
                     b = t.aaxExpGroup;
-                i(this, e), this.contentType = o.stream.contentType, this.login = u.login, this.adSessionId = (0, a.generate)(p), this.adType = n, this.bismol = m, this.lure = g, this.channel = c.name, this.channelId = c._id, this.chansubToken = h.chansub, this.communityId = v !== {} ? v._id : null, this.twitchCorrelator = (0, a.generate)(), this.deviceId = d.get(!1), this.duration = r, this.hasAdFreeSubscription = Boolean(h.has_ad_free_subscription), this.lastAdDisplay = s, this.forced = l, this.padtime = _, this.requestTime = Date.now(), this.skippableExpGroup = y, this.aaxExpGroup = b, this._initUserInfoFields(u), this._initChannelInfoFields(c, f), this._initStateFields(o), this._initAmazonFields()
+                i(this, e), this.contentType = o.stream.contentType, this.login = u.login, this.adSessionId = (0, a.generate)(p), this.adType = n, this.bismol = m, this.lure = g, this.channel = c.name, this.channelId = c._id, this.chansubToken = h.chansub, this.communityId = void 0 !== v ? v._id : null, this.twitchCorrelator = (0, a.generate)(), this.deviceId = d.get(!1), this.duration = r, this.hasAdFreeSubscription = Boolean(h.has_ad_free_subscription), this.lastAdDisplay = s, this.forced = l, this.padtime = _, this.requestTime = Date.now(), this.skippableExpGroup = y, this.aaxExpGroup = b, this._initUserInfoFields(u), this._initChannelInfoFields(c, f), this._initStateFields(o), this._initAmazonFields()
             }
             return o(e, [{
                 key: "_initUserInfoFields",
@@ -9028,7 +9028,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.17-005903+9d124e2ebae4d121a0fa12912cbda47efec69428",
+                    app_version: "2017.05.17-030904+fbeac2b103e449d792a09e10aacb4b67a8971e07",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
