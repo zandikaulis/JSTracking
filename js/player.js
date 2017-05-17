@@ -9106,7 +9106,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.17-194410+49927da7773c5c6433501335fa28c2577de4b88a",
+                    app_version: "2017.05.17-194727+6325facc9e88e4e7a2248163b308697adba97a54",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -17306,7 +17306,7 @@
             H = n(428),
             q = i(H),
             G = n(565),
-            Y = n(608),
+            Y = n(607),
             K = n(657),
             W = n(676),
             z = n(642),
@@ -30136,7 +30136,7 @@
                             s = !t && o && i;
                         return u.default.createElement("div", {
                             className: "pl-flex"
-                        }, u.default.createElement(f.QualityChangeBanner, null), u.default.createElement(h.SettingsButton, {
+                        }, u.default.createElement(f.SettingsBanner, null), u.default.createElement(h.SettingsButton, {
                             onClick: this.handleSettingsButtonClick,
                             showSpinningAnimation: s
                         }), a)
@@ -30258,7 +30258,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.QualityChangeBanner = t.QualityChangeBannerContainer = t.QUALITY_CHANGE_DURATION = void 0;
+        }), t.SettingsBanner = t.SettingsBannerContainer = t.QUALITY_CHANGE_DURATION = void 0;
         var s = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -30276,37 +30276,42 @@
             d = r(c),
             p = n(565),
             f = n(607),
-            h = t.QUALITY_CHANGE_DURATION = 5e3,
-            _ = {
+            h = n(612),
+            _ = t.QUALITY_CHANGE_DURATION = 5e3,
+            v = {
                 availableQualities: l.PropTypes.array.isRequired,
                 currentQuality: l.PropTypes.string.isRequired,
+                playbackRate: l.PropTypes.number.isRequired,
+                t: l.PropTypes.func.isRequired,
                 windowObj: l.PropTypes.object.isRequired
             },
-            v = function(e) {
-                var t = e.quality,
-                    n = e.window;
+            y = function(e) {
+                var t = e.playback,
+                    n = e.quality,
+                    r = e.window;
                 return {
-                    availableQualities: t.available,
-                    currentQuality: t.current,
-                    windowObj: n
+                    availableQualities: n.available,
+                    currentQuality: n.current,
+                    playbackRate: t.playbackRate,
+                    windowObj: r
                 }
             },
-            y = t.QualityChangeBannerContainer = function(e) {
+            m = t.SettingsBannerContainer = function(e) {
                 function t() {
                     i(this, t);
                     var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.state = {
                         lastQuality: "",
-                        shouldShowBanner: !1
+                        hasChangedQuality: !1
                     }, e.bannerHideTimeout = 0, e
                 }
                 return a(t, e), s(t, [{
                     key: "componentWillReceiveProps",
                     value: function(e) {
                         var t = this;
-                        e.currentQuality !== this.state.lastQuality && (0 !== this.bannerHideTimeout && this.clearBannerHideTimeout(), this.showBanner(e.currentQuality), this.bannerHideTimeout = e.windowObj.setTimeout(function() {
-                            t.hideBanner()
-                        }, h))
+                        e.currentQuality !== this.state.lastQuality && (0 !== this.bannerHideTimeout && this.clearBannerHideTimeout(), this.showBannerForQuality(e.currentQuality), this.bannerHideTimeout = e.windowObj.setTimeout(function() {
+                            t.hideBannerForQuality()
+                        }, _))
                     }
                 }, {
                     key: "componentWillUnmount",
@@ -30319,18 +30324,18 @@
                         this.props.windowObj.clearTimeout(this.bannerHideTimeout), this.bannerHideTimeout = 0
                     }
                 }, {
-                    key: "showBanner",
+                    key: "showBannerForQuality",
                     value: function(e) {
                         this.setState({
                             lastQuality: e,
-                            shouldShowBanner: !0
+                            hasChangedQuality: !0
                         })
                     }
                 }, {
-                    key: "hideBanner",
+                    key: "hideBannerForQuality",
                     value: function() {
                         this.setState({
-                            shouldShowBanner: !1
+                            hasChangedQuality: !1
                         }), this.bannerHideTimeout = 0
                     }
                 }, {
@@ -30339,64 +30344,24 @@
                         var e = this.props,
                             t = e.availableQualities,
                             n = e.currentQuality,
-                            r = this.state.shouldShowBanner,
-                            i = (0, d.default)(t, function(e) {
+                            r = e.playbackRate,
+                            i = e.t,
+                            o = this.state.hasChangedQuality,
+                            a = (0, d.default)(t, function(e) {
                                 return e.group === n
                             }),
-                            o = i ? i.name : "";
-                        return u.default.createElement(f.QualityChangeBanner, {
-                            currentQuality: o,
-                            showBanner: r
+                            s = a ? a.name : "",
+                            l = o || 1 !== r,
+                            c = o ? i(s) : r + "x";
+                        return u.default.createElement(h.SettingsBanner, {
+                            bannerLabel: c,
+                            showBanner: l
                         })
                     }
                 }]), t
             }(u.default.Component);
-        y.propTypes = _;
-        t.QualityChangeBanner = (0, p.connect)(v)(y)
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.QualityChangeBanner = t.QualityChangeBannerComponent = void 0;
-        var i = n(398),
-            o = r(i),
-            a = n(608),
-            s = n(613),
-            l = r(s),
-            u = {
-                currentQuality: i.PropTypes.string.isRequired,
-                showBanner: i.PropTypes.bool.isRequired,
-                t: i.PropTypes.func.isRequired
-            },
-            c = (0, l.default)({
-                "pl-settings-container": !0,
-                "pl-flex": !0,
-                "pl-flex--verticalCenter": !0
-            }),
-            d = t.QualityChangeBannerComponent = function(e) {
-                var t = e.currentQuality,
-                    n = e.showBanner,
-                    r = e.t,
-                    i = (0, l.default)({
-                        "pl-pill": !0,
-                        "pl-quality-change-banner--animateIn": n,
-                        "pl-quality-change-banner--animateOut": !n,
-                        "qa-quality-change-banner-span": !0
-                    });
-                return o.default.createElement("div", {
-                    className: c
-                }, o.default.createElement("span", {
-                    className: i
-                }, r(t)))
-            };
-        d.propTypes = u;
-        t.QualityChangeBanner = (0, a.translate)()(d)
+        m.propTypes = v;
+        t.SettingsBanner = (0, f.translate)()((0, p.connect)(y)(m))
     }, function(e, t, n) {
         "use strict";
 
@@ -30408,13 +30373,13 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.I18nextProvider = t.Interpolate = t.translate = t.loadNamespaces = void 0;
-        var i = n(609),
+        var i = n(608),
             o = r(i),
-            a = n(610),
+            a = n(609),
             s = r(a),
-            l = n(611),
+            l = n(610),
             u = r(l),
-            c = n(612),
+            c = n(611),
             d = r(c);
         t.loadNamespaces = d.default, t.translate = o.default, t.Interpolate = s.default, t.I18nextProvider = u.default
     }, function(e, t, n) {
@@ -30626,7 +30591,7 @@
                     var n = arguments[t];
                     for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                 }
-                return e
+                return e;
             },
             l = function() {
                 function e(e, t) {
@@ -30849,6 +30814,46 @@
             };
         t.default = i
     }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.SettingsBanner = void 0;
+        var i = n(398),
+            o = r(i),
+            a = n(613),
+            s = r(a),
+            l = {
+                bannerLabel: i.PropTypes.string.isRequired,
+                showBanner: i.PropTypes.bool.isRequired
+            },
+            u = (0, s.default)({
+                "pl-settings-container": !0,
+                "pl-flex": !0,
+                "pl-flex--verticalCenter": !0
+            }),
+            c = t.SettingsBanner = function(e) {
+                var t = e.bannerLabel,
+                    n = e.showBanner,
+                    r = (0, s.default)({
+                        "pl-pill": !0,
+                        "pl-settings-banner--animateIn": n,
+                        "pl-settings-banner--animateOut": !n,
+                        "qa-settings-banner-span": !0
+                    });
+                return o.default.createElement("div", {
+                    className: u
+                }, o.default.createElement("span", {
+                    className: r
+                }, t))
+            };
+        c.propTypes = l
+    }, function(e, t, n) {
         var r, i;
         /*!
         	  Copyright (c) 2016 Jed Watson.
@@ -31004,7 +31009,7 @@
         }), t.Icon = void 0, t.IconComponent = o;
         var a = n(398),
             s = r(a),
-            l = n(608),
+            l = n(607),
             u = n(613),
             c = r(u),
             d = {
@@ -31391,7 +31396,7 @@
             f = n(269),
             h = n(613),
             _ = r(h),
-            v = n(608),
+            v = n(607),
             y = n(617),
             m = n(615),
             g = n(624),
@@ -31842,7 +31847,7 @@
             u = r(l),
             c = n(613),
             d = r(c),
-            p = n(608),
+            p = n(607),
             f = n(617),
             h = n(625),
             _ = {
@@ -32130,7 +32135,7 @@
             u = r(l),
             c = n(613),
             d = r(c),
-            p = n(608),
+            p = n(607),
             f = n(617),
             h = n(629),
             _ = {
@@ -32489,7 +32494,7 @@
             u = r(l),
             c = n(613),
             d = r(c),
-            p = n(608),
+            p = n(607),
             f = n(617),
             h = n(632),
             _ = n(615),
@@ -32618,7 +32623,7 @@
         }), t.Toggle = t.ToggleComponent = void 0;
         var o = n(398),
             a = r(o),
-            s = n(608),
+            s = n(607),
             l = {
                 label: o.PropTypes.string.isRequired,
                 onToggle: o.PropTypes.func,
@@ -32815,7 +32820,7 @@
             u = r(l),
             c = n(613),
             d = r(c),
-            p = n(608),
+            p = n(607),
             f = n(617),
             h = {
                 t: l.PropTypes.func.isRequired,
@@ -33166,7 +33171,7 @@
             u = r(l),
             c = n(613),
             d = r(c),
-            p = n(608),
+            p = n(607),
             f = n(617),
             h = n(615),
             _ = {
@@ -33456,7 +33461,7 @@
         }), t.StreamInfoDisplay = t.StreamInfoDisplayComponent = void 0;
         var i = n(398),
             o = r(i),
-            a = n(608),
+            a = n(607),
             s = n(613),
             l = r(s),
             u = {
@@ -37784,7 +37789,7 @@
             }(),
             l = n(398),
             u = r(l),
-            c = n(608),
+            c = n(607),
             d = n(678),
             p = n(613),
             f = r(p),
@@ -37875,7 +37880,7 @@
         var o = n(398),
             a = r(o),
             s = n(615),
-            l = n(608),
+            l = n(607),
             u = n(613),
             c = r(u),
             d = {
@@ -38032,7 +38037,7 @@
             s = n(615),
             l = n(613),
             u = r(l),
-            c = n(608),
+            c = n(607),
             d = {
                 following: o.PropTypes.bool.isRequired,
                 follow: o.PropTypes.func.isRequired,
@@ -38088,7 +38093,7 @@
             }(),
             l = n(398),
             u = r(l),
-            c = n(608),
+            c = n(607),
             d = n(678),
             p = n(613),
             f = r(p),
@@ -38581,7 +38586,7 @@
             c = n(686),
             d = n(613),
             p = r(d),
-            f = n(608),
+            f = n(607),
             h = n(688),
             _ = {
                 video: l.PropTypes.shape({
@@ -38927,7 +38932,7 @@
             f = n(119),
             h = r(f),
             _ = n(686),
-            v = n(608),
+            v = n(607),
             y = t.RECOMMENDATION_COLUMN_CONFIG = [{
                 minPlayerWidth: 2381,
                 columns: 8

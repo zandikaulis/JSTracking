@@ -363,11 +363,13 @@ window.features = window.features || [], window.features.push("extensions"), def
             return "extension-control." + this.get("extension.clientId")
         }),
         _initializeExtensionCoordinator: function() {
-            var e = this.get("extensions").initExtension({
-                clientId: this.get("extension.clientId"),
-                token: this.get("extensionInstallation.token")
-            }, this.$("iframe")[0], this.get("extensionMode"), this.get("player").getExtensionsApi());
-            e.setGame(this.get("channel.game")), this.set("extensionCoordinator", e)
+            var e = this.get("player"),
+                t = e ? e.getExtensionsApi() : null,
+                n = this.get("extensions").initExtension({
+                    clientId: this.get("extension.clientId"),
+                    token: this.get("extensionInstallation.token")
+                }, this.$("iframe")[0], this.get("extensionMode"), t);
+            n.setGame(this.get("channel.game")), this.set("extensionCoordinator", n)
         },
         didInsertElement: function() {
             this._super.apply(this, arguments), this.get("extensionInstallation.token") && this._initializeExtensionCoordinator();
