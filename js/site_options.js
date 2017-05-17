@@ -226,6 +226,16 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
+        "0bf3975d-a3dd-4f36-800f-0089b2ce279a": {
+            "name": "android_chomments",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "active"
+            }]
+        },
         "0c22fa7f-9b7d-4c6a-9b63-1f70c0af3df2": {
             "name": "CVP-Mar-2017",
             "groups": [{
@@ -949,6 +959,16 @@ window.SiteOptions = {
                 "value": "month"
             }]
         },
+        "6452eb30-73ed-4c21-9cda-53a44f83c184": {
+            "name": "ios_pipboy_flicker_ads",
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "test"
+            }]
+        },
         "653cc0db-d332-4df6-b224-15c5c481f7e7": {
             "name": "language_directory_filter",
             "groups": [{
@@ -1289,6 +1309,16 @@ window.SiteOptions = {
                 "value": "variant2"
             }]
         },
+        "9acd1217-f98c-419a-b39a-0e7fb9e5f325": {
+            "name": "ios_pipboy_browse_ccus",
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "holdback"
+            }]
+        },
         "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57": {
             "name": "CHOMPY",
             "groups": [{
@@ -1319,6 +1349,19 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "9cf2abef-ad3f-4999-baf4-feaab8ec607d": {
+            "name": "ios_pipboy_homepage",
+            "groups": [{
+                "weight": 98,
+                "value": "live"
+            }, {
+                "weight": 1,
+                "value": "pulse"
+            }, {
+                "weight": 1,
+                "value": "browse"
+            }]
+        },
         "9d1ee56c-22dc-4d5c-96dd-5ee393c6cd4b": {
             "name": "xboxone_playercore",
             "groups": [{
@@ -1327,6 +1370,16 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "active"
+            }]
+        },
+        "9d6138b7-c07a-40af-88d7-9636f02bec17": {
+            "name": "android_pipboy_flicker_ads",
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "test"
             }]
         },
         "9e5fffd0-9693-412b-913d-7da332fdeea4": {
@@ -1570,6 +1623,19 @@ window.SiteOptions = {
                 "value": "injects"
             }]
         },
+        "c48618ad-fde4-4c67-9f4c-b89f3c633cf9": {
+            "name": "android_pipboy_homepage",
+            "groups": [{
+                "weight": 98,
+                "value": "live"
+            }, {
+                "weight": 1,
+                "value": "pulse"
+            }, {
+                "weight": 1,
+                "value": "browse"
+            }]
+        },
         "c51b6c01-3155-4314-bd33-a63870349c1f": {
             "name": "baking_bread_c",
             "groups": [{
@@ -1733,6 +1799,16 @@ window.SiteOptions = {
             }, {
                 "weight": 50,
                 "value": "experiment"
+            }]
+        },
+        "dc251546-6da4-4db9-abae-2c1325e7dee6": {
+            "name": "android_pipboy_browse_ccus",
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "holdback"
             }]
         },
         "df008233-c0f2-46dc-92a2-61396ae402e3": {
