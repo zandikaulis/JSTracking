@@ -1596,6 +1596,16 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "bb614c04-fce4-4abb-9686-a38022f4284e": {
+            "name": "ios_autoplay_browse",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "bb654f3c-166a-49fa-9030-c6f4bcda2ebd": {
             "name": "android_autoplay_browse",
             "groups": [{
@@ -1968,6 +1978,26 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "no"
+            }]
+        },
+        "fd1167fc-eb16-489a-91ea-0568fa04ae8a": {
+            "name": "ios_autoplay_profile",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
+        "fe794438-043d-48dc-80b1-e2b069b88dbc": {
+            "name": "ios_autoplay_pulse",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         }
     }
