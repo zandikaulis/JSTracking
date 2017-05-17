@@ -9106,7 +9106,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.17-204627+1731c441ae646400dee00d959c140ec273461c3d",
+                    app_version: "2017.05.17-211133+6abda638a2574d8a2fdb96c2a2872fa9cf9cad81",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -9416,9 +9416,9 @@
             }
 
             function r(e) {
-                if (typeof U.addEventListener != N) U.addEventListener("load", e, !1);
-                else if (typeof B.addEventListener != N) B.addEventListener("load", e, !1);
-                else if (typeof U.attachEvent != N) b(U, "onload", e);
+                if (typeof U.addEventListener !== N) U.addEventListener("load", e, !1);
+                else if (typeof B.addEventListener !== N) B.addEventListener("load", e, !1);
+                else if (typeof U.attachEvent !== N) b(U, "onload", e);
                 else if ("function" == typeof U.onload) {
                     var t = U.onload;
                     U.onload = function() {
@@ -9435,7 +9435,7 @@
                 if (n) {
                     var r = 0;
                     ! function i() {
-                        if (typeof n.GetVariable != N) try {
+                        if (typeof n.GetVariable !== N) try {
                             var a = n.GetVariable("$version");
                             a && (a = a.split(" ")[1].split(","), Q.pv = [g(a[0]), g(a[1]), g(a[2])])
                         } catch (e) {
@@ -9463,13 +9463,13 @@
                                     if (q[t].expressInstall && s()) {
                                         var c = {};
                                         c.data = q[t].expressInstall, c.width = o.getAttribute("width") || "0", c.height = o.getAttribute("height") || "0", o.getAttribute("class") && (c.styleclass = o.getAttribute("class")), o.getAttribute("align") && (c.align = o.getAttribute("align"));
-                                        for (var d = {}, p = o.getElementsByTagName("param"), f = p.length, h = 0; h < f; h++) "movie" != p[h].getAttribute("name").toLowerCase() && (d[p[h].getAttribute("name")] = p[h].getAttribute("value"));
+                                        for (var d = {}, p = o.getElementsByTagName("param"), f = p.length, h = 0; h < f; h++) "movie" !== p[h].getAttribute("name").toLowerCase() && (d[p[h].getAttribute("name")] = p[h].getAttribute("value"));
                                         l(c, d, n, r)
                                     } else u(o), r && r(i);
                             else S(n, !0), r && (i.success = !0, i.ref = a(n), i.id = n, r(i))
                         } else if (S(n, !0), r) {
                             var _ = a(n);
-                            _ && typeof _.SetVariable != N && (i.success = !0, i.ref = _, i.id = _.id), r(i)
+                            _ && typeof _.SetVariable !== N && (i.success = !0, i.ref = _, i.id = _.id), r(i)
                         }
                     }
             }
@@ -9490,10 +9490,10 @@
                         success: !1,
                         id: n
                     }, i) {
-                    "OBJECT" == i.nodeName.toUpperCase() ? (w = c(i), C = null) : (w = i, C = n), e.id = x, (typeof e.width == N || !/%$/.test(e.width) && g(e.width) < 310) && (e.width = "310"), (typeof e.height == N || !/%$/.test(e.height) && g(e.height) < 137) && (e.height = "137");
+                    "OBJECT" === i.nodeName.toUpperCase() ? (w = c(i), C = null) : (w = i, C = n), e.id = x, (typeof e.width === N || !/%$/.test(e.width) && g(e.width) < 310) && (e.width = "310"), (typeof e.height === N || !/%$/.test(e.height) && g(e.height) < 137) && (e.height = "137");
                     var o = Q.ie ? "ActiveX" : "PlugIn",
                         a = "MMredirectURL=" + encodeURIComponent(U.location.toString().replace(/&/g, "%26")) + "&MMplayerType=" + o + "&MMdoctitle=" + encodeURIComponent(B.title.slice(0, 47) + " - Flash Player Installation");
-                    if (typeof t.flashvars != N ? t.flashvars += "&" + a : t.flashvars = a, Q.ie && 4 != i.readyState) {
+                    if (typeof t.flashvars !== N ? t.flashvars += "&" + a : t.flashvars = a, Q.ie && 4 != i.readyState) {
                         var s = m("div");
                         n += "SWFObjectNew", s.setAttribute("id", n), i.parentNode.insertBefore(s, i), i.style.display = "none", h(i)
                     }
@@ -9517,7 +9517,7 @@
                     if (n) {
                         var r = n.childNodes;
                         if (r)
-                            for (var i = r.length, o = 0; o < i; o++) 1 == r[o].nodeType && "PARAM" == r[o].nodeName || 8 == r[o].nodeType || t.appendChild(r[o].cloneNode(!0))
+                            for (var i = r.length, o = 0; o < i; o++) 1 == r[o].nodeType && "PARAM" === r[o].nodeName || 8 == r[o].nodeType || t.appendChild(r[o].cloneNode(!0))
                     }
                 }
                 return t
@@ -9533,7 +9533,7 @@
                 if (n = v(n), Q.wk && Q.wk < 312) return r;
                 if (i) {
                     var o, a, s, l = m(Q.ie ? "div" : R);
-                    typeof e.id == N && (e.id = n);
+                    typeof e.id === N && (e.id = n);
                     for (s in t) t.hasOwnProperty(s) && "movie" !== s.toLowerCase() && f(l, s, t[s]);
                     Q.ie && (l = d(e.data, l.innerHTML));
                     for (o in e) e.hasOwnProperty(o) && (a = o.toLowerCase(), "styleclass" === a ? l.setAttribute("class", e[o]) : "classid" !== a && "data" !== a && l.setAttribute(o, e[o]));
@@ -9549,7 +9549,7 @@
 
             function h(e) {
                 var t = y(e);
-                t && "OBJECT" == t.nodeName.toUpperCase() && (Q.ie ? (t.style.display = "none", function e() {
+                t && "OBJECT" === t.nodeName.toUpperCase() && (Q.ie ? (t.style.display = "none", function e() {
                     if (4 == t.readyState) {
                         for (var n in t) "function" == typeof t[n] && (t[n] = null);
                         t.parentNode.removeChild(t)
@@ -9599,9 +9599,9 @@
                     var o = "string" == typeof n ? n : "screen";
                     if (r && (O = null, I = null), !O || I != o) {
                         var a = m("style");
-                        a.setAttribute("type", "text/css"), a.setAttribute("media", o), O = i.appendChild(a), Q.ie && typeof B.styleSheets != N && B.styleSheets.length > 0 && (O = B.styleSheets[B.styleSheets.length - 1]), I = o
+                        a.setAttribute("type", "text/css"), a.setAttribute("media", o), O = i.appendChild(a), Q.ie && typeof B.styleSheets !== N && B.styleSheets.length > 0 && (O = B.styleSheets[B.styleSheets.length - 1]), I = o
                     }
-                    O && (typeof O.addRule != N ? O.addRule(e, t) : typeof B.createTextNode != N && O.appendChild(B.createTextNode(e + " {" + t + "}")))
+                    O && (typeof O.addRule !== N ? O.addRule(e, t) : typeof B.createTextNode !== N && O.appendChild(B.createTextNode(e + " {" + t + "}")))
                 }
             }
 
@@ -9615,8 +9615,8 @@
 
             function P(e) {
                 var t = /[\\\"<>\.;]/,
-                    n = null != t.exec(e);
-                return n && typeof encodeURIComponent != N ? encodeURIComponent(e) : e
+                    n = null !== t.exec(e);
+                return n && typeof encodeURIComponent !== N ? encodeURIComponent(e) : e
             }
             var w, C, k, A, O, I, N = "undefined",
                 R = "object",
@@ -9638,7 +9638,7 @@
                 $ = !0,
                 z = !1,
                 Q = function() {
-                    var e = typeof B.getElementById != N && typeof B.getElementsByTagName != N && typeof B.createElement != N,
+                    var e = typeof B.getElementById !== N && typeof B.getElementsByTagName !== N && typeof B.createElement !== N,
                         t = V.userAgent.toLowerCase(),
                         n = V.platform.toLowerCase(),
                         r = n ? /win/.test(n) : /win/.test(t),
@@ -9647,8 +9647,8 @@
                         a = "Microsoft Internet Explorer" === V.appName,
                         s = [0, 0, 0],
                         l = null;
-                    if (typeof V.plugins != N && typeof V.plugins[M] == R) l = V.plugins[M].description, l && typeof V.mimeTypes != N && V.mimeTypes[D] && V.mimeTypes[D].enabledPlugin && (F = !0, a = !1, l = l.replace(/^.*\s+(\S+\s+\S+$)/, "$1"), s[0] = g(l.replace(/^(.*)\..*$/, "$1")), s[1] = g(l.replace(/^.*\.(.*)\s.*$/, "$1")), s[2] = /[a-zA-Z]/.test(l) ? g(l.replace(/^.*[a-zA-Z]+(.*)$/, "$1")) : 0);
-                    else if (typeof U.ActiveXObject != N) try {
+                    if (typeof V.plugins !== N && typeof V.plugins[M] === R) l = V.plugins[M].description, l && typeof V.mimeTypes !== N && V.mimeTypes[D] && V.mimeTypes[D].enabledPlugin && (F = !0, a = !1, l = l.replace(/^.*\s+(\S+\s+\S+$)/, "$1"), s[0] = g(l.replace(/^(.*)\..*$/, "$1")), s[1] = g(l.replace(/^.*\.(.*)\s.*$/, "$1")), s[2] = /[a-zA-Z]/.test(l) ? g(l.replace(/^.*[a-zA-Z]+(.*)$/, "$1")) : 0);
+                    else if (typeof U.ActiveXObject !== N) try {
                         var u = new ActiveXObject(L);
                         u && (l = u.GetVariable("$version"), l && (a = !0, l = l.split(" ")[1].split(","), s = [g(l[0]), g(l[1]), g(l[2])]))
                     } catch (e) {}
@@ -9662,8 +9662,8 @@
                     }
                 }();
             (function() {
-                Q.w3 && ((typeof B.readyState != N && ("complete" === B.readyState || "interactive" === B.readyState) || typeof B.readyState == N && (B.getElementsByTagName("body")[0] || B.body)) && e(), K || (typeof B.addEventListener != N && B.addEventListener("DOMContentLoaded", e, !1), Q.ie && (B.attachEvent(j, function t() {
-                    "complete" == B.readyState && (B.detachEvent(j, t), e())
+                Q.w3 && ((typeof B.readyState !== N && ("complete" === B.readyState || "interactive" === B.readyState) || typeof B.readyState === N && (B.getElementsByTagName("body")[0] || B.body)) && e(), K || (typeof B.addEventListener !== N && B.addEventListener("DOMContentLoaded", e, !1), Q.ie && (B.attachEvent(j, function t() {
+                    "complete" === B.readyState && (B.detachEvent(j, t), e())
                 }), U == top && ! function t() {
                     if (!K) {
                         try {
@@ -9723,7 +9723,7 @@
                                 if (u.hasOwnProperty(g)) {
                                     var b = z ? encodeURIComponent(g) : g,
                                         T = z ? encodeURIComponent(u[g]) : u[g];
-                                    typeof y.flashvars != N ? y.flashvars += "&" + b + "=" + T : y.flashvars = b + "=" + T
+                                    typeof y.flashvars !== N ? y.flashvars += "&" + b + "=" + T : y.flashvars = b + "=" + T
                                 }
                         if (E(o)) {
                             var P = p(t, y, n);
@@ -9767,7 +9767,7 @@
                 getQueryParamValue: function(e) {
                     var t = B.location.search || B.location.hash;
                     if (t) {
-                        if (/\?/.test(t) && (t = t.split("?")[1]), null == e) return P(t);
+                        if (/\?/.test(t) && (t = t.split("?")[1]), !e) return P(t);
                         for (var n = t.split("&"), r = 0; r < n.length; r++)
                             if (n[r].substring(0, n[r].indexOf("=")) == e) return P(n[r].substring(n[r].indexOf("=") + 1))
                     }
@@ -10654,8 +10654,8 @@
             }
 
             function A(e) {
-                Ze && (Ze = !1, He.emit(S.PLAY)), pt = !1, it = e.format, Ie(Ue("getVideoTime")), Ne(), We < O.HAVE_METADATA && (null !== Be.getChannel() && (tt = 1 / 0), We = O.HAVE_METADATA, He.emit(S.LOADED_METADATA)),
-                    We < O.HAVE_CURRENT_DATA && (We = O.HAVE_CURRENT_DATA, He.emit(S.LOADED_DATA)), We = O.HAVE_FUTURE_DATA, He.emit(S.PLAYING)
+                Ze && (Ze = !1, He.emit(S.PLAY)), pt = !1, it = e.format, Ie(Ue("getVideoTime")), Ne(), We < O.HAVE_METADATA && (null !== Be.getChannel() && (tt = 1 / 0), We = O.HAVE_METADATA,
+                    He.emit(S.LOADED_METADATA)), We < O.HAVE_CURRENT_DATA && (We = O.HAVE_CURRENT_DATA, He.emit(S.LOADED_DATA)), We = O.HAVE_FUTURE_DATA, He.emit(S.PLAYING)
             }
 
             function ne() {
