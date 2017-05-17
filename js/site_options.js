@@ -1228,13 +1228,16 @@ window.SiteOptions = {
                 "value": "1.7.4+absctrl"
             }, {
                 "weight": 5,
-                "value": "1.8.2"
+                "value": "1.8.3"
             }, {
-                "weight": 70,
+                "weight": 2,
+                "value": "1.8.100"
+            }, {
+                "weight": 58,
                 "value": "1.7.7+spd67"
             }, {
-                "weight": 15,
-                "value": "1.8.2+spd67"
+                "weight": 25,
+                "value": "1.8.3+spd67"
             }]
         },
         "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": {
