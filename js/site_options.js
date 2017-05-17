@@ -1213,10 +1213,10 @@ window.SiteOptions = {
                 "weight": 5,
                 "value": "1.8.2"
             }, {
-                "weight": 80,
+                "weight": 70,
                 "value": "1.7.7+spd67"
             }, {
-                "weight": 5,
+                "weight": 15,
                 "value": "1.8.2+spd67"
             }]
         },
@@ -1279,13 +1279,13 @@ window.SiteOptions = {
         "9a3b387e-b6cd-4d2b-80a6-bb14d3ba4512": {
             "name": "GAME_FOLLOW_ONBOARD",
             "groups": [{
-                "weight": 34,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 33,
+                "weight": 0,
                 "value": "variant1"
             }, {
-                "weight": 33,
+                "weight": 0,
                 "value": "variant2"
             }]
         },
