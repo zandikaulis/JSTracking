@@ -9776,245 +9776,243 @@ $.noty.consumeAlert = function(e) {
             width: "310px"
         },
         addClass: ""
-    }, $.noty.themes.defaultTheme = {
-        name: "defaultTheme",
-        helpers: {
-            borderFix: function() {
-                if (this.options.dismissQueue) {
-                    var e = this.options.layout.container.selector + " " + this.options.layout.parent.selector;
-                    switch (this.options.layout.name) {
-                        case "top":
-                            $(e).css({
-                                borderRadius: "0px 0px 0px 0px"
-                            }), $(e).last().css({
-                                borderRadius: "0px 0px 5px 5px"
-                            });
-                            break;
-                        case "topCenter":
-                        case "topLeft":
-                        case "topRight":
-                        case "bottomCenter":
-                        case "bottomLeft":
-                        case "bottomRight":
-                        case "center":
-                        case "centerLeft":
-                        case "centerRight":
-                        case "inline":
-                            $(e).css({
-                                borderRadius: "0px 0px 0px 0px"
-                            }), $(e).first().css({
-                                "border-top-left-radius": "5px",
-                                "border-top-right-radius": "5px"
-                            }), $(e).last().css({
-                                "border-bottom-left-radius": "5px",
-                                "border-bottom-right-radius": "5px"
-                            });
-                            break;
-                        case "bottom":
-                            $(e).css({
-                                borderRadius: "0px 0px 0px 0px"
-                            }), $(e).first().css({
-                                borderRadius: "5px 5px 0px 0px"
-                            })
+    },
+    function(e) {
+        e.noty.themes.defaultTheme = {
+            name: "defaultTheme",
+            helpers: {
+                borderFix: function() {
+                    if (this.options.dismissQueue) {
+                        var t = this.options.layout.container.selector + " " + this.options.layout.parent.selector;
+                        switch (this.options.layout.name) {
+                            case "top":
+                                e(t).css({
+                                    borderRadius: "0px 0px 0px 0px"
+                                }), e(t).last().css({
+                                    borderRadius: "0px 0px 5px 5px"
+                                });
+                                break;
+                            case "topCenter":
+                            case "topLeft":
+                            case "topRight":
+                            case "bottomCenter":
+                            case "bottomLeft":
+                            case "bottomRight":
+                            case "center":
+                            case "centerLeft":
+                            case "centerRight":
+                            case "inline":
+                                e(t).css({
+                                    borderRadius: "0px 0px 0px 0px"
+                                }), e(t).first().css({
+                                    "border-top-left-radius": "5px",
+                                    "border-top-right-radius": "5px"
+                                }), e(t).last().css({
+                                    "border-bottom-left-radius": "5px",
+                                    "border-bottom-right-radius": "5px"
+                                });
+                                break;
+                            case "bottom":
+                                e(t).css({
+                                    borderRadius: "0px 0px 0px 0px"
+                                }), e(t).first().css({
+                                    borderRadius: "5px 5px 0px 0px"
+                                })
+                        }
                     }
                 }
-            }
-        },
-        modal: {
-            css: {
-                position: "fixed",
-                width: "100%",
-                height: "100%",
-                backgroundColor: "#000",
-                zIndex: 1e4,
-                opacity: .6,
-                display: "none",
-                left: 0,
-                top: 0
-            }
-        },
-        style: function() {
-            switch (this.$bar.css({
-                overflow: "hidden",
-                background: "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAoCAQAAAClM0ndAAAAhklEQVR4AdXO0QrCMBBE0bttkk38/w8WRERpdyjzVOc+HxhIHqJGMQcFFkpYRQotLLSw0IJ5aBdovruMYDA/kT8plF9ZKLFQcgF18hDj1SbQOMlCA4kao0iiXmah7qBWPdxpohsgVZyj7e5I9KcID+EhiDI5gxBYKLBQYKHAQoGFAoEks/YEGHYKB7hFxf0AAAAASUVORK5CYII=') repeat-x scroll left top #fff"
-            }), this.$message.css({
-                fontSize: "13px",
-                lineHeight: "16px",
-                textAlign: "center",
-                padding: "8px 10px 9px",
-                width: "auto",
-                position: "relative"
-            }), this.$closeButton.css({
-                position: "absolute",
-                top: 4,
-                right: 4,
-                width: 10,
-                height: 10,
-                background: "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAxUlEQVR4AR3MPUoDURSA0e++uSkkOxC3IAOWNtaCIDaChfgXBMEZbQRByxCwk+BasgQRZLSYoLgDQbARxry8nyumPcVRKDfd0Aa8AsgDv1zp6pYd5jWOwhvebRTbzNNEw5BSsIpsj/kurQBnmk7sIFcCF5yyZPDRG6trQhujXYosaFoc+2f1MJ89uc76IND6F9BvlXUdpb6xwD2+4q3me3bysiHvtLYrUJto7PD/ve7LNHxSg/woN2kSz4txasBdhyiz3ugPGetTjm3XRokAAAAASUVORK5CYII=)",
-                display: "none",
-                cursor: "pointer"
-            }), this.$buttons.css({
-                padding: 5,
-                textAlign: "right",
-                borderTop: "1px solid #ccc",
-                backgroundColor: "#fff"
-            }), this.$buttons.find("button").css({
-                marginLeft: 5
-            }), this.$buttons.find("button:first").css({
-                marginLeft: 0
-            }), this.$bar.on({
-                mouseenter: function() {
-                    $(this).find(".noty_close").stop().fadeTo("normal", 1)
-                },
-                mouseleave: function() {
-                    $(this).find(".noty_close").stop().fadeTo("normal", 0)
-                }
-            }), this.options.layout.name) {
-                case "top":
-                    this.$bar.css({
-                        borderRadius: "0px 0px 5px 5px",
-                        borderBottom: "2px solid #eee",
-                        borderLeft: "2px solid #eee",
-                        borderRight: "2px solid #eee",
-                        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
-                    });
-                    break;
-                case "topCenter":
-                case "center":
-                case "bottomCenter":
-                case "inline":
-                    this.$bar.css({
-                        borderRadius: "5px",
-                        border: "1px solid #eee",
-                        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
-                    }), this.$message.css({
-                        fontSize: "13px",
-                        textAlign: "center"
-                    });
-                    break;
-                case "topLeft":
-                case "topRight":
-                case "bottomLeft":
-                case "bottomRight":
-                case "centerLeft":
-                case "centerRight":
-                    this.$bar.css({
-                        borderRadius: "5px",
-                        border: "1px solid #eee",
-                        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
-                    }), this.$message.css({
-                        fontSize: "13px",
-                        textAlign: "left"
-                    });
-                    break;
-                case "bottom":
-                    this.$bar.css({
-                        borderRadius: "5px 5px 0px 0px",
-                        borderTop: "2px solid #eee",
-                        borderLeft: "2px solid #eee",
-                        borderRight: "2px solid #eee",
-                        boxShadow: "0 -2px 4px rgba(0, 0, 0, 0.1)"
-                    });
-                    break;
-                default:
-                    this.$bar.css({
-                        border: "2px solid #eee",
-                        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
-                    })
-            }
-            switch (this.options.type) {
-                case "alert":
-                case "notification":
-                    this.$bar.css({
-                        backgroundColor: "#FFF",
-                        borderColor: "#CCC",
-                        color: "#444"
-                    });
-                    break;
-                case "warning":
-                    this.$bar.css({
-                        backgroundColor: "#FFEAA8",
-                        borderColor: "#FFC237",
-                        color: "#826200"
-                    }), this.$buttons.css({
-                        borderTop: "1px solid #FFC237"
-                    });
-                    break;
-                case "error":
-                    this.$bar.css({
-                        backgroundColor: "red",
-                        borderColor: "darkred",
-                        color: "#FFF"
-                    }), this.$message.css({
-                        fontWeight: "bold"
-                    }), this.$buttons.css({
-                        borderTop: "1px solid darkred"
-                    });
-                    break;
-                case "information":
-                    this.$bar.css({
-                        backgroundColor: "#57B7E2",
-                        borderColor: "#0B90C4",
-                        color: "#FFF"
-                    }), this.$buttons.css({
-                        borderTop: "1px solid #0B90C4"
-                    });
-                    break;
-                case "success":
-                    this.$bar.css({
-                        backgroundColor: "lightgreen",
-                        borderColor: "#50C24E",
-                        color: "darkgreen"
-                    }), this.$buttons.css({
-                        borderTop: "1px solid #50C24E"
-                    });
-                    break;
-                default:
-                    this.$bar.css({
-                        backgroundColor: "#FFF",
-                        borderColor: "#CCC",
-                        color: "#444"
-                    })
-            }
-        },
-        callback: {
-            onShow: function() {
-                $.noty.themes.defaultTheme.helpers.borderFix.apply(this)
             },
-            onClose: function() {
-                $.noty.themes.defaultTheme.helpers.borderFix.apply(this)
+            modal: {
+                css: {
+                    position: "fixed",
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: "#000",
+                    zIndex: 1e4,
+                    opacity: .6,
+                    display: "none",
+                    left: 0,
+                    top: 0
+                }
+            },
+            style: function() {
+                switch (this.$bar.css({
+                    overflow: "hidden",
+                    background: "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAoCAQAAAClM0ndAAAAhklEQVR4AdXO0QrCMBBE0bttkk38/w8WRERpdyjzVOc+HxhIHqJGMQcFFkpYRQotLLSw0IJ5aBdovruMYDA/kT8plF9ZKLFQcgF18hDj1SbQOMlCA4kao0iiXmah7qBWPdxpohsgVZyj7e5I9KcID+EhiDI5gxBYKLBQYKHAQoGFAoEks/YEGHYKB7hFxf0AAAAASUVORK5CYII=') repeat-x scroll left top #fff"
+                }), this.$message.css({
+                    fontSize: "13px",
+                    lineHeight: "16px",
+                    textAlign: "center",
+                    padding: "8px 10px 9px",
+                    width: "auto",
+                    position: "relative"
+                }), this.$closeButton.css({
+                    position: "absolute",
+                    top: 4,
+                    right: 4,
+                    width: 10,
+                    height: 10,
+                    background: "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAxUlEQVR4AR3MPUoDURSA0e++uSkkOxC3IAOWNtaCIDaChfgXBMEZbQRByxCwk+BasgQRZLSYoLgDQbARxry8nyumPcVRKDfd0Aa8AsgDv1zp6pYd5jWOwhvebRTbzNNEw5BSsIpsj/kurQBnmk7sIFcCF5yyZPDRG6trQhujXYosaFoc+2f1MJ89uc76IND6F9BvlXUdpb6xwD2+4q3me3bysiHvtLYrUJto7PD/ve7LNHxSg/woN2kSz4txasBdhyiz3ugPGetTjm3XRokAAAAASUVORK5CYII=)",
+                    cursor: "pointer"
+                }), this.$buttons.css({
+                    padding: 5,
+                    textAlign: "right",
+                    borderTop: "1px solid #ccc",
+                    backgroundColor: "#fff"
+                }), this.$buttons.find("button").css({
+                    marginLeft: 5
+                }), this.$buttons.find("button:first").css({
+                    marginLeft: 0
+                }), this.options.layout.name) {
+                    case "top":
+                        this.$bar.css({
+                            borderRadius: "0px 0px 5px 5px",
+                            borderBottom: "2px solid #eee",
+                            borderLeft: "2px solid #eee",
+                            borderRight: "2px solid #eee",
+                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
+                        });
+                        break;
+                    case "topCenter":
+                    case "center":
+                    case "bottomCenter":
+                    case "inline":
+                        this.$bar.css({
+                            borderRadius: "5px",
+                            border: "1px solid #eee",
+                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
+                        }), this.$message.css({
+                            fontSize: "13px",
+                            textAlign: "center"
+                        });
+                        break;
+                    case "topLeft":
+                    case "topRight":
+                    case "bottomLeft":
+                    case "bottomRight":
+                    case "centerLeft":
+                    case "centerRight":
+                        this.$bar.css({
+                            borderRadius: "5px",
+                            border: "1px solid #eee",
+                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
+                        }), this.$message.css({
+                            fontSize: "13px",
+                            textAlign: "left"
+                        });
+                        break;
+                    case "bottom":
+                        this.$bar.css({
+                            borderRadius: "5px 5px 0px 0px",
+                            borderTop: "2px solid #eee",
+                            borderLeft: "2px solid #eee",
+                            borderRight: "2px solid #eee",
+                            boxShadow: "0 -2px 4px rgba(0, 0, 0, 0.1)"
+                        });
+                        break;
+                    default:
+                        this.$bar.css({
+                            border: "2px solid #eee",
+                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
+                        })
+                }
+                switch (this.options.type) {
+                    case "alert":
+                    case "notification":
+                        this.$bar.css({
+                            backgroundColor: "#FFF",
+                            borderColor: "#CCC",
+                            color: "#444"
+                        });
+                        break;
+                    case "warning":
+                        this.$bar.css({
+                            backgroundColor: "#FFEAA8",
+                            borderColor: "#FFC237",
+                            color: "#826200"
+                        }), this.$buttons.css({
+                            borderTop: "1px solid #FFC237"
+                        });
+                        break;
+                    case "error":
+                        this.$bar.css({
+                            backgroundColor: "red",
+                            borderColor: "darkred",
+                            color: "#FFF"
+                        }), this.$message.css({
+                            fontWeight: "bold"
+                        }), this.$buttons.css({
+                            borderTop: "1px solid darkred"
+                        });
+                        break;
+                    case "information":
+                        this.$bar.css({
+                            backgroundColor: "#57B7E2",
+                            borderColor: "#0B90C4",
+                            color: "#FFF"
+                        }), this.$buttons.css({
+                            borderTop: "1px solid #0B90C4"
+                        });
+                        break;
+                    case "success":
+                        this.$bar.css({
+                            backgroundColor: "lightgreen",
+                            borderColor: "#50C24E",
+                            color: "darkgreen"
+                        }), this.$buttons.css({
+                            borderTop: "1px solid #50C24E"
+                        });
+                        break;
+                    default:
+                        this.$bar.css({
+                            backgroundColor: "#FFF",
+                            borderColor: "#CCC",
+                            color: "#444"
+                        })
+                }
+            },
+            callback: {
+                onShow: function() {
+                    e.noty.themes.defaultTheme.helpers.borderFix.apply(this)
+                },
+                onClose: function() {
+                    e.noty.themes.defaultTheme.helpers.borderFix.apply(this)
+                }
             }
         }
-    }, $.noty.layouts.top = {
-        name: "top",
-        options: {},
-        container: {
-            object: '<ul id="noty_top_layout_container" />',
-            selector: "ul#noty_top_layout_container",
-            style: function() {
-                $(this).css({
-                    top: 0,
-                    left: "5%",
-                    position: "fixed",
-                    width: "90%",
-                    height: "auto",
-                    margin: 0,
-                    padding: 0,
-                    listStyleType: "none",
-                    zIndex: 9999999
-                })
-            }
-        },
-        parent: {
-            object: "<li />",
-            selector: "li",
-            css: {}
-        },
-        css: {
-            display: "none"
-        },
-        addClass: ""
-    },
+    }(jQuery),
+    function(e) {
+        e.noty.layouts.top = {
+            name: "top",
+            options: {},
+            container: {
+                object: '<ul id="noty_top_layout_container" />',
+                selector: "ul#noty_top_layout_container",
+                style: function() {
+                    e(this).css({
+                        top: e(".top-nav").height() || 0,
+                        left: "5%",
+                        position: "fixed",
+                        width: "90%",
+                        height: "auto",
+                        margin: 0,
+                        padding: 0,
+                        listStyleType: "none",
+                        zIndex: 9999999
+                    })
+                }
+            },
+            parent: {
+                object: "<li />",
+                selector: "li",
+                css: {}
+            },
+            css: {
+                display: "none"
+            },
+            addClass: ""
+        }
+    }(jQuery),
     function(e, t) {
         "object" == typeof exports ? module.exports = exports = t() : "function" == typeof define && define.amd ? define([], t) : e.CryptoJS = t()
     }(this, function() {
@@ -11040,129 +11038,129 @@ function(e, t) {
         p = l.port,
         m = l.hostname;
     l.protocol = function(e, t) {
-            if (void 0 !== e && e && (e = e.replace(/:(\/\/)?$/, ""), e.match(/[^a-zA-z0-9\.+-]/))) throw new TypeError("Protocol '" + e + "' contains characters other than [A-Z0-9.+-]");
-            return f.call(this, e, t)
-        },
-        l.scheme = l.protocol, l.port = function(e, t) {
-            if (this._parts.urn) return void 0 === e ? "" : this;
-            if (void 0 !== e && (0 === e && (e = null), e && (e += "", ":" === e[0] && (e = e.substring(1)), e.match(/[^0-9]/)))) throw new TypeError("Port '" + e + "' contains characters other than [0-9]");
-            return p.call(this, e, t)
-        }, l.hostname = function(e, t) {
-            if (this._parts.urn) return void 0 === e ? "" : this;
-            if (void 0 !== e) {
-                var n = {};
-                i.parseHost(e, n), e = n.hostname
-            }
-            return m.call(this, e, t)
-        }, l.host = function(e, t) {
-            return this._parts.urn ? void 0 === e ? "" : this : void 0 === e ? this._parts.hostname ? i.buildHost(this._parts) : "" : (i.parseHost(e, this._parts), this.build(!t), this)
-        }, l.authority = function(e, t) {
-            return this._parts.urn ? void 0 === e ? "" : this : void 0 === e ? this._parts.hostname ? i.buildAuthority(this._parts) : "" : (i.parseAuthority(e, this._parts), this.build(!t), this)
-        }, l.userinfo = function(e, t) {
-            if (this._parts.urn) return void 0 === e ? "" : this;
-            if (void 0 === e) {
-                if (!this._parts.username) return "";
-                var n = i.buildUserinfo(this._parts);
-                return n.substring(0, n.length - 1)
-            }
-            return "@" !== e[e.length - 1] && (e += "@"), i.parseUserinfo(e, this._parts), this.build(!t), this
-        }, l.resource = function(e, t) {
-            var n;
-            return void 0 === e ? this.path() + this.search() + this.hash() : (n = i.parse(e), this._parts.path = n.path, this._parts.query = n.query, this._parts.fragment = n.fragment, this.build(!t), this)
-        }, l.subdomain = function(e, t) {
-            if (this._parts.urn) return void 0 === e ? "" : this;
-            if (void 0 === e) {
-                if (!this._parts.hostname || this.is("IP")) return "";
-                var n = this._parts.hostname.length - this.domain().length - 1;
-                return this._parts.hostname.substring(0, n) || ""
-            }
-            var o = this._parts.hostname.length - this.domain().length,
-                s = this._parts.hostname.substring(0, o),
-                a = new RegExp("^" + r(s));
-            return e && "." !== e[e.length - 1] && (e += "."), e && i.ensureValidHostname(e), this._parts.hostname = this._parts.hostname.replace(a, e), this.build(!t), this
-        }, l.domain = function(e, t) {
-            if (this._parts.urn) return void 0 === e ? "" : this;
-            if ("boolean" == typeof e && (t = e, e = void 0), void 0 === e) {
-                if (!this._parts.hostname || this.is("IP")) return "";
-                var n = this._parts.hostname.match(/\./g);
-                if (n && n.length < 2) return this._parts.hostname;
-                var o = this._parts.hostname.length - this.tld(t).length - 1;
-                return o = this._parts.hostname.lastIndexOf(".", o - 1) + 1, this._parts.hostname.substring(o) || ""
-            }
-            if (!e) throw new TypeError("cannot set domain empty");
-            if (i.ensureValidHostname(e), !this._parts.hostname || this.is("IP")) this._parts.hostname = e;
-            else {
-                var s = new RegExp(r(this.domain()) + "$");
-                this._parts.hostname = this._parts.hostname.replace(s, e)
-            }
-            return this.build(!t), this
-        }, l.tld = function(e, t) {
-            if (this._parts.urn) return void 0 === e ? "" : this;
-            if ("boolean" == typeof e && (t = e, e = void 0), void 0 === e) {
-                if (!this._parts.hostname || this.is("IP")) return "";
-                var i = this._parts.hostname.lastIndexOf("."),
-                    o = this._parts.hostname.substring(i + 1);
-                return t !== !0 && n && n.list[o.toLowerCase()] ? n.get(this._parts.hostname) || o : o
-            }
-            var s;
-            if (!e) throw new TypeError("cannot set TLD empty");
-            if (e.match(/[^a-zA-Z0-9-]/)) {
-                if (!n || !n.is(e)) throw new TypeError("TLD '" + e + "' contains characters other than [A-Z0-9]");
-                s = new RegExp(r(this.tld()) + "$"), this._parts.hostname = this._parts.hostname.replace(s, e)
-            } else {
-                if (!this._parts.hostname || this.is("IP")) throw new ReferenceError("cannot set TLD on non-domain host");
-                s = new RegExp(r(this.tld()) + "$"), this._parts.hostname = this._parts.hostname.replace(s, e)
-            }
-            return this.build(!t), this
-        }, l.directory = function(e, t) {
-            if (this._parts.urn) return void 0 === e ? "" : this;
-            if (void 0 === e || e === !0) {
-                if (!this._parts.path && !this._parts.hostname) return "";
-                if ("/" === this._parts.path) return "/";
-                var n = this._parts.path.length - this.filename().length - 1,
-                    o = this._parts.path.substring(0, n) || (this._parts.hostname ? "/" : "");
-                return e ? i.decodePath(o) : o
-            }
-            var s = this._parts.path.length - this.filename().length,
-                a = this._parts.path.substring(0, s),
-                l = new RegExp("^" + r(a));
-            return this.is("relative") || (e || (e = "/"), "/" !== e[0] && (e = "/" + e)), e && "/" !== e[e.length - 1] && (e += "/"), e = i.recodePath(e), this._parts.path = this._parts.path.replace(l, e), this.build(!t), this
-        }, l.filename = function(e, t) {
-            if (this._parts.urn) return void 0 === e ? "" : this;
-            if (void 0 === e || e === !0) {
-                if (!this._parts.path || "/" === this._parts.path) return "";
-                var n = this._parts.path.lastIndexOf("/"),
-                    o = this._parts.path.substring(n + 1);
-                return e ? i.decodePathSegment(o) : o
-            }
-            var s = !1;
-            "/" === e[0] && (e = e.substring(1)), e.match(/\.?\//) && (s = !0);
-            var a = new RegExp(r(this.filename()) + "$");
-            return e = i.recodePath(e), this._parts.path = this._parts.path.replace(a, e), s ? this.normalizePath(t) : this.build(!t), this
-        }, l.suffix = function(e, t) {
-            if (this._parts.urn) return void 0 === e ? "" : this;
-            if (void 0 === e || e === !0) {
-                if (!this._parts.path || "/" === this._parts.path) return "";
-                var n, o, s = this.filename(),
-                    a = s.lastIndexOf(".");
-                return a === -1 ? "" : (n = s.substring(a + 1), o = /^[a-z0-9%]+$/i.test(n) ? n : "", e ? i.decodePathSegment(o) : o)
-            }
-            "." === e[0] && (e = e.substring(1));
-            var l, u = this.suffix();
-            if (u) l = e ? new RegExp(r(u) + "$") : new RegExp(r("." + u) + "$");
-            else {
-                if (!e) return this;
-                this._parts.path += "." + i.recodePath(e)
-            }
-            return l && (e = i.recodePath(e), this._parts.path = this._parts.path.replace(l, e)), this.build(!t), this
-        }, l.segment = function(e, t, n) {
-            var i = this._parts.urn ? ":" : "/",
-                r = this.path(),
-                s = "/" === r.substring(0, 1),
-                a = r.split(i);
-            if ("number" != typeof e && (n = t, t = e, e = void 0), void 0 !== e && "number" != typeof e) throw new Error("Bad segment '" + e + "', must be 0-based integer");
-            return s && a.shift(), e < 0 && (e = Math.max(a.length + e, 0)), void 0 === t ? void 0 === e ? a : a[e] : (null === e || void 0 === a[e] ? o(t) ? a = t : (t || "string" == typeof t && t.length) && ("" === a[a.length - 1] ? a[a.length - 1] = t : a.push(t)) : t || "string" == typeof t && t.length ? a[e] = t : a.splice(e, 1), s && a.unshift(""), this.path(a.join(i), n))
-        };
+        if (void 0 !== e && e && (e = e.replace(/:(\/\/)?$/, ""), e.match(/[^a-zA-z0-9\.+-]/))) throw new TypeError("Protocol '" + e + "' contains characters other than [A-Z0-9.+-]");
+        return f.call(this, e, t)
+    }, l.scheme = l.protocol, l.port = function(e, t) {
+        if (this._parts.urn) return void 0 === e ? "" : this;
+        if (void 0 !== e && (0 === e && (e = null),
+                e && (e += "", ":" === e[0] && (e = e.substring(1)), e.match(/[^0-9]/)))) throw new TypeError("Port '" + e + "' contains characters other than [0-9]");
+        return p.call(this, e, t)
+    }, l.hostname = function(e, t) {
+        if (this._parts.urn) return void 0 === e ? "" : this;
+        if (void 0 !== e) {
+            var n = {};
+            i.parseHost(e, n), e = n.hostname
+        }
+        return m.call(this, e, t)
+    }, l.host = function(e, t) {
+        return this._parts.urn ? void 0 === e ? "" : this : void 0 === e ? this._parts.hostname ? i.buildHost(this._parts) : "" : (i.parseHost(e, this._parts), this.build(!t), this)
+    }, l.authority = function(e, t) {
+        return this._parts.urn ? void 0 === e ? "" : this : void 0 === e ? this._parts.hostname ? i.buildAuthority(this._parts) : "" : (i.parseAuthority(e, this._parts), this.build(!t), this)
+    }, l.userinfo = function(e, t) {
+        if (this._parts.urn) return void 0 === e ? "" : this;
+        if (void 0 === e) {
+            if (!this._parts.username) return "";
+            var n = i.buildUserinfo(this._parts);
+            return n.substring(0, n.length - 1)
+        }
+        return "@" !== e[e.length - 1] && (e += "@"), i.parseUserinfo(e, this._parts), this.build(!t), this
+    }, l.resource = function(e, t) {
+        var n;
+        return void 0 === e ? this.path() + this.search() + this.hash() : (n = i.parse(e), this._parts.path = n.path, this._parts.query = n.query, this._parts.fragment = n.fragment, this.build(!t), this)
+    }, l.subdomain = function(e, t) {
+        if (this._parts.urn) return void 0 === e ? "" : this;
+        if (void 0 === e) {
+            if (!this._parts.hostname || this.is("IP")) return "";
+            var n = this._parts.hostname.length - this.domain().length - 1;
+            return this._parts.hostname.substring(0, n) || ""
+        }
+        var o = this._parts.hostname.length - this.domain().length,
+            s = this._parts.hostname.substring(0, o),
+            a = new RegExp("^" + r(s));
+        return e && "." !== e[e.length - 1] && (e += "."), e && i.ensureValidHostname(e), this._parts.hostname = this._parts.hostname.replace(a, e), this.build(!t), this
+    }, l.domain = function(e, t) {
+        if (this._parts.urn) return void 0 === e ? "" : this;
+        if ("boolean" == typeof e && (t = e, e = void 0), void 0 === e) {
+            if (!this._parts.hostname || this.is("IP")) return "";
+            var n = this._parts.hostname.match(/\./g);
+            if (n && n.length < 2) return this._parts.hostname;
+            var o = this._parts.hostname.length - this.tld(t).length - 1;
+            return o = this._parts.hostname.lastIndexOf(".", o - 1) + 1, this._parts.hostname.substring(o) || ""
+        }
+        if (!e) throw new TypeError("cannot set domain empty");
+        if (i.ensureValidHostname(e), !this._parts.hostname || this.is("IP")) this._parts.hostname = e;
+        else {
+            var s = new RegExp(r(this.domain()) + "$");
+            this._parts.hostname = this._parts.hostname.replace(s, e)
+        }
+        return this.build(!t), this
+    }, l.tld = function(e, t) {
+        if (this._parts.urn) return void 0 === e ? "" : this;
+        if ("boolean" == typeof e && (t = e, e = void 0), void 0 === e) {
+            if (!this._parts.hostname || this.is("IP")) return "";
+            var i = this._parts.hostname.lastIndexOf("."),
+                o = this._parts.hostname.substring(i + 1);
+            return t !== !0 && n && n.list[o.toLowerCase()] ? n.get(this._parts.hostname) || o : o
+        }
+        var s;
+        if (!e) throw new TypeError("cannot set TLD empty");
+        if (e.match(/[^a-zA-Z0-9-]/)) {
+            if (!n || !n.is(e)) throw new TypeError("TLD '" + e + "' contains characters other than [A-Z0-9]");
+            s = new RegExp(r(this.tld()) + "$"), this._parts.hostname = this._parts.hostname.replace(s, e)
+        } else {
+            if (!this._parts.hostname || this.is("IP")) throw new ReferenceError("cannot set TLD on non-domain host");
+            s = new RegExp(r(this.tld()) + "$"), this._parts.hostname = this._parts.hostname.replace(s, e)
+        }
+        return this.build(!t), this
+    }, l.directory = function(e, t) {
+        if (this._parts.urn) return void 0 === e ? "" : this;
+        if (void 0 === e || e === !0) {
+            if (!this._parts.path && !this._parts.hostname) return "";
+            if ("/" === this._parts.path) return "/";
+            var n = this._parts.path.length - this.filename().length - 1,
+                o = this._parts.path.substring(0, n) || (this._parts.hostname ? "/" : "");
+            return e ? i.decodePath(o) : o
+        }
+        var s = this._parts.path.length - this.filename().length,
+            a = this._parts.path.substring(0, s),
+            l = new RegExp("^" + r(a));
+        return this.is("relative") || (e || (e = "/"), "/" !== e[0] && (e = "/" + e)), e && "/" !== e[e.length - 1] && (e += "/"), e = i.recodePath(e), this._parts.path = this._parts.path.replace(l, e), this.build(!t), this
+    }, l.filename = function(e, t) {
+        if (this._parts.urn) return void 0 === e ? "" : this;
+        if (void 0 === e || e === !0) {
+            if (!this._parts.path || "/" === this._parts.path) return "";
+            var n = this._parts.path.lastIndexOf("/"),
+                o = this._parts.path.substring(n + 1);
+            return e ? i.decodePathSegment(o) : o
+        }
+        var s = !1;
+        "/" === e[0] && (e = e.substring(1)), e.match(/\.?\//) && (s = !0);
+        var a = new RegExp(r(this.filename()) + "$");
+        return e = i.recodePath(e), this._parts.path = this._parts.path.replace(a, e), s ? this.normalizePath(t) : this.build(!t), this
+    }, l.suffix = function(e, t) {
+        if (this._parts.urn) return void 0 === e ? "" : this;
+        if (void 0 === e || e === !0) {
+            if (!this._parts.path || "/" === this._parts.path) return "";
+            var n, o, s = this.filename(),
+                a = s.lastIndexOf(".");
+            return a === -1 ? "" : (n = s.substring(a + 1), o = /^[a-z0-9%]+$/i.test(n) ? n : "", e ? i.decodePathSegment(o) : o)
+        }
+        "." === e[0] && (e = e.substring(1));
+        var l, u = this.suffix();
+        if (u) l = e ? new RegExp(r(u) + "$") : new RegExp(r("." + u) + "$");
+        else {
+            if (!e) return this;
+            this._parts.path += "." + i.recodePath(e)
+        }
+        return l && (e = i.recodePath(e), this._parts.path = this._parts.path.replace(l, e)), this.build(!t), this
+    }, l.segment = function(e, t, n) {
+        var i = this._parts.urn ? ":" : "/",
+            r = this.path(),
+            s = "/" === r.substring(0, 1),
+            a = r.split(i);
+        if ("number" != typeof e && (n = t, t = e, e = void 0), void 0 !== e && "number" != typeof e) throw new Error("Bad segment '" + e + "', must be 0-based integer");
+        return s && a.shift(), e < 0 && (e = Math.max(a.length + e, 0)), void 0 === t ? void 0 === e ? a : a[e] : (null === e || void 0 === a[e] ? o(t) ? a = t : (t || "string" == typeof t && t.length) && ("" === a[a.length - 1] ? a[a.length - 1] = t : a.push(t)) : t || "string" == typeof t && t.length ? a[e] = t : a.splice(e, 1), s && a.unshift(""), this.path(a.join(i), n))
+    };
     var g = l.query;
     return l.query = function(e, t) {
         return e === !0 ? i.parseQuery(this._parts.query) : void 0 !== e && "string" != typeof e ? (this._parts.query = i.buildQuery(e, this._parts.duplicateQueryParameters), this.build(!t), this) : g.call(this, e, t)
@@ -15584,8 +15582,8 @@ googletag.cmd = googletag.cmd || [],
                 r.overlay(s.url, function(r, o) {
                     t = r, i = o, n = r.attr("id"), e("#subwindow_close").click(function(t) {
                             t.preventDefault(), e(this).trigger("overlay.hide")
-                        }),
-                        e("#signup_form .birthday_fields select").dropdownify(), r.find('input[name="follow"]').val(s.follow), r.find('input[name="mp_source_action"]').val(s.mpSourceAction), ich.grabTemplates()
+                        }), e("#signup_form .birthday_fields select").dropdownify(),
+                        r.find('input[name="follow"]').val(s.follow), r.find('input[name="mp_source_action"]').val(s.mpSourceAction), ich.grabTemplates()
                 }, s)
             }), e("#signup_form .birthday_fields select").dropdownify()
         }), window.addEventListener("message", function(t) {
