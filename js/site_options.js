@@ -709,7 +709,7 @@ window.SiteOptions = {
             "name": "CVP May 18",
             "groups": [{
                 "weight": 5,
-                "value": "1.8.2+absctrl"
+                "value": "1.8.3+absctrl"
             }, {
                 "weight": 2,
                 "value": "1.8.100"
