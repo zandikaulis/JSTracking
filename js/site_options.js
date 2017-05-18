@@ -790,7 +790,7 @@ window.SiteOptions = {
             "name": "spade_url",
             "groups": [{
                 "weight": 1,
-                "value": "//video-edge-2327b3.sjc01.hls.ttvnw.net"
+                "value": "//video-edge-7281a4.sjc01.hls.ttvnw.net"
             }]
         },
         "4d081a33-0d0f-4b44-bfde-cf07c358915f": {
