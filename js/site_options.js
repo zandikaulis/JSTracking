@@ -706,9 +706,9 @@ window.SiteOptions = {
             }]
         },
         "45d73059-3cea-436a-b41f-86bb05f845f2": {
-            "name": "CVP May 11",
+            "name": "CVP May 18",
             "groups": [{
-                "weight": 7,
+                "weight": 5,
                 "value": "1.8.2+absctrl"
             }, {
                 "weight": 2,
@@ -717,7 +717,7 @@ window.SiteOptions = {
                 "weight": 5,
                 "value": "1.8.2"
             }, {
-                "weight": 10,
+                "weight": 12,
                 "value": "1.8.2+spd67"
             }, {
                 "weight": 76,
