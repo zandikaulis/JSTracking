@@ -1276,6 +1276,16 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "9985aa41-ce6a-48ab-abae-b0e0c34dca71": {
+            "name": "LTV",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "9a3b387e-b6cd-4d2b-80a6-bb14d3ba4512": {
             "name": "GAME_FOLLOW_ONBOARD",
             "groups": [{
