@@ -1980,5 +1980,8 @@ window.SiteOptions = {
                 "value": "active"
             }]
         }
-    }
+    },
+    "prime_new_enabled": false,
+    "prime_new_blocked_regions": "jp,jpa,mx,mex,in,ind,cu,cub,sd,sud,ir,irn,chn,cn,sy,syr,prk,kp",
+    "prime_new_whitelist": "samquality01,samquality02,samquality03,samquality04"
 };
