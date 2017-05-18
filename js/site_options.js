@@ -790,7 +790,7 @@ window.SiteOptions = {
             "name": "spade_url",
             "groups": [{
                 "weight": 1,
-                "value": "//video-edge-7281a4.sjc01.hls.ttvnw.net"
+                "value": "////video-edge-7281a4.sjc01.hls.ttvnw.net/v1/CmbtEHDNg5ElIDg5VYeD6rp6dicmKKTkbVdhaXpppGln5FJQCcjMBA0dWKzlRjNb9Xf-OqrO--TR7VhsGeB8ZqMRK1iyssBfH3vcftS28w60gUC2jPhUCTfY_oixab5XTNDRoUYlBWwexgxnoiHKseQ3JcXQRdN-cnabC5urxRmeAERTUw8nVMTQN1TxwqS0DIbKdlanmkIQAWGnJhm9n6WKAi7RnuBS6C6KSLztNqO8THkwYWb01v4BacgJM14godga3FpoDyiUlpxOf4b1_Mr-6Ii0zpZhteWq1VmTR9IwcasBH3HQsLZGvXjlUhxIGgz8JLN1tyoqiCfLBPSQYTiDvNxF8kzZ97cjZIvk-67Tc2GslltXDNsrRVynblYmJFLkZQrEvbR28SpDH_RdWCVDAdZ4Cp6N_lWgWu1X_oYLz6UH8O1jvVLTQnTHNDHQpGfd32.m3u8"
             }]
         },
         "4d081a33-0d0f-4b44-bfde-cf07c358915f": {
