@@ -715,12 +715,12 @@ window.SiteOptions = {
                 "value": "1.8.100"
             }, {
                 "weight": 5,
-                "value": "1.8.2"
+                "value": "1.8.3"
             }, {
-                "weight": 12,
-                "value": "1.8.2+spd67"
+                "weight": 25,
+                "value": "1.8.3+spd67"
             }, {
-                "weight": 76,
+                "weight": 63,
                 "value": "1.7.7+spd67"
             }]
         },
@@ -812,16 +812,6 @@ window.SiteOptions = {
                 "value": "yes_95"
             }, {
                 "weight": 5,
-                "value": "no"
-            }]
-        },
-        "4df8c7e5-6173-45d0-bc3b-4ece0b89af11": {
-            "name": "secret media eu",
-            "groups": [{
-                "weight": 0,
-                "value": "yes"
-            }, {
-                "weight": 100,
                 "value": "no"
             }]
         },
@@ -1198,16 +1188,6 @@ window.SiteOptions = {
                 "value": "month"
             }]
         },
-        "93883758-3d7d-414b-9975-df688165726b": {
-            "name": "secret media",
-            "groups": [{
-                "weight": 0,
-                "value": "yes"
-            }, {
-                "weight": 100,
-                "value": "no"
-            }]
-        },
         "93a3ce11-6fce-46d3-b108-c394ac28b499": {
             "name": "ios_clips_paris_2",
             "groups": [{
@@ -1317,16 +1297,6 @@ window.SiteOptions = {
             }, {
                 "weight": 10,
                 "value": "holdback"
-            }]
-        },
-        "9b0cc0db-f52c-435f-832d-ba5ac5fc1d57": {
-            "name": "CHOMPY",
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 100,
-                "value": "experiment"
             }]
         },
         "9c843e59-0208-4c83-ae5a-620fb05508ef": {
