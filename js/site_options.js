@@ -1049,7 +1049,7 @@ window.SiteOptions = {
             }]
         },
         "80ee272f-44ec-4d8c-8ad1-72f4933a3da4": {
-            "name": "android_ingest_testing",
+            "name": "android_pipboy_broadcasting",
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1089,7 +1089,7 @@ window.SiteOptions = {
             }]
         },
         "87d995c4-afbc-400e-a6e4-472419071e26": {
-            "name": "ios_ingest_testing",
+            "name": "ios_pipboy_broadcasting",
             "groups": [{
                 "weight": 100,
                 "value": "control"
