@@ -141,7 +141,7 @@ body >
 
     <
     script src = "//www-cdn.jtvnw.net/assets/emberhelper.js" > < /script> <
-    script src = "//web-cdn.ttvnw.net/emberapp-875e12d971dfe2e279582467e3bb56d7.js" > < /script> <
+    script src = "//web-cdn.ttvnw.net/emberapp-e784071ee648df6e0b7beefc44464ed8.js" > < /script> <
     script src = "//www-cdn.jtvnw.net/tmilibs/tmi-v3.js" > < /script>
 
 
