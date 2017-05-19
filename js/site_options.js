@@ -1081,10 +1081,10 @@ window.SiteOptions = {
         "87d995c4-afbc-400e-a6e4-472419071e26": {
             "name": "ios_pipboy_broadcasting",
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "active"
             }]
         },
