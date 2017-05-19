@@ -1982,6 +1982,6 @@ window.SiteOptions = {
         }
     },
     "prime_new_enabled": false,
-    "prime_new_blocked_regions": "tbd",
+    "prime_new_blocked_regions": "TBD,CU,CN",
     "prime_new_whitelist": "samquality01,samquality02,samquality03,samquality04"
 };
