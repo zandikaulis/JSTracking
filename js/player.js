@@ -9644,7 +9644,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.19-211122+6d4527d73dd0aeeb51ec23e84790abc4a66e8dc8",
+                    app_version: "2017.05.19-211510+40397e77828e2e563377c583ad35f32348069b75",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -38612,7 +38612,8 @@
             "Watch Next": "Watch Next",
             "Most Recent Video": "Most Recent Video",
             Settings: "Settings",
-            "Is your video buffering? Try the Auto quality option.": "Is your video buffering? Try the Auto quality option."
+            "Is your video buffering? Try the Auto quality option.": "Is your video buffering? Try the Auto quality option.",
+            "More From": "More From"
         }
     }, function(e, t, n) {
         "use strict";
