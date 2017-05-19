@@ -21,6 +21,85 @@ content = "" >
     <
     meta name = "viewport"
 content = "width=device-width, initial-scale=1" >
+    <
+    meta content = 'Twitch'
+property = 'og:site_name' >
+    <
+    meta content = '161273083968709'
+property = 'fb:app_id' >
+    <
+    meta content = 'extensions - Twitch'
+property = 'og:title' >
+    <
+    meta content = 'https://api.twitch.tv/extensions'
+property = 'og:url' >
+    <
+    meta property = 'og:description' >
+    <
+    meta content = 'video'
+property = 'og:type' >
+    <
+    meta property = 'og:image' >
+    <
+    meta content = 'http://player.twitch.tv/?channel=extensions&amp;player=facebook&amp;autoplay=true'
+property = 'og:video' >
+    <
+    meta content = 'https://player.twitch.tv/?channel=extensions&amp;player=facebook&amp;autoplay=true'
+property = 'og:video:secure_url' >
+    <
+    meta content = '620'
+property = 'og:width' >
+    <
+    meta content = '378'
+property = 'og:height' >
+    <
+    meta content = 'text/html'
+property = 'og:video:type' >
+    <
+    meta content = 'twitch://stream/extensions'
+property = 'al:ios:url' >
+    <
+    meta content = 'id460177396'
+property = 'al:ios:app_store_id' >
+    <
+    meta content = 'Twitch'
+property = 'al:ios:app_name' >
+    <
+    meta content = 'tv.twitch.android.app'
+property = 'al:android:package' >
+    <
+    meta content = 'Twitch'
+property = 'al:android:app_name' >
+    <
+    meta content = 'summary'
+name = 'twitter:card' >
+    <
+    meta name = 'twitter:image' >
+    <
+    meta content = 'Twitch'
+name = 'twitter:app:name:googleplay' >
+    <
+    meta content = 'tv.twitch.android.app'
+name = 'twitter:app:id:googleplay' >
+    <
+    meta content = 'Twitch'
+name = 'twitter:app:name:iphone' >
+    <
+    meta content = 'id460177396'
+name = 'twitter:app:id:iphone' >
+    <
+    meta content = 'twitch://stream/extensions'
+name = 'twitter:app:url:iphone' >
+    <
+    meta content = 'Twitch'
+name = 'twitter:app:name:ipad' >
+    <
+    meta content - android = 'tv.twitch.android.app'
+content - ios = 'id460177396'
+name = 'twitter:app:id:ipad' >
+    <
+    meta content = 'twitch://stream/extensions'
+name = 'twitter:app:url:ipad' >
 
 
 
@@ -141,7 +220,7 @@ body >
 
     <
     script src = "//www-cdn.jtvnw.net/assets/emberhelper.js" > < /script> <
-    script src = "//web-cdn.ttvnw.net/emberapp-7949c8bb90b40584e26840d9ca6006a2.js" > < /script> <
+    script src = "//web-cdn.ttvnw.net/emberapp-2ee49351ff28a45c393fc8831029ac46.js" > < /script> <
     script src = "//www-cdn.jtvnw.net/tmilibs/tmi-v3.js" > < /script>
 
 
