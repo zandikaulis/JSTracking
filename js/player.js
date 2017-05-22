@@ -9644,7 +9644,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.22-164448+fccb80fd8a298f85b04b9702dc288842b52c7bd3",
+                    app_version: "2017.05.22-210944+b2f94ddd3d7e537465d8cb268f3314bf4024bb7d",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -44307,10 +44307,11 @@
             y = n(248),
             m = n(379),
             g = [u.PLAYER_DASHBOARD, u.PLAYER_FRONTPAGE, u.PLAYER_CREATIVE, u.PLAYER_HIGHLIGHTER, u.PLAYER_EMBED],
-            b = "Offline Recommendations: No channel videos",
-            E = "Offline Recommendations: All channel videos watched",
-            T = "Offline Recommendations: Stream changed while fetching",
-            S = "Offline Recommendations: In control group";
+            b = [26610234, 10817445],
+            E = "Offline Recommendations: No channel videos",
+            T = "Offline Recommendations: All channel videos watched",
+            S = "Offline Recommendations: Stream changed while fetching",
+            P = "Offline Recommendations: In control group";
         t.OfflineRecommendationsManager = function() {
             function e(t) {
                 i(this, e), this._stateStore = t, this._unsubs = [], this._unsubs.push((0, p.subscribe)(this._stateStore, ["onlineStatus", "user.loggedinStatus", "streamMetadata"], this.onStateChange.bind(this))), this.onStateChange()
@@ -44348,13 +44349,14 @@
                         o = e.streamMetadata,
                         a = e.env,
                         u = i.contentType === c.CONTENT_MODE_LIVE,
-                        p = "" !== o.channel.id,
-                        f = n === l.OFFLINE_STATUS,
-                        _ = t.loggedInStatus === s.LOGGED_IN,
-                        v = r.hasPlayed === !1,
-                        y = r.transitionScheme === d.TRANSITION_TYPE_RECOMMENDATIONS,
-                        m = !(0, h.default)(g, a.playerType);
-                    return u && p && f && _ && v && y && m
+                        p = 0 !== o.channel.id,
+                        f = !(0, h.default)(b, o.channel.id),
+                        _ = n === l.OFFLINE_STATUS,
+                        v = t.loggedInStatus === s.LOGGED_IN,
+                        y = r.hasPlayed === !1,
+                        m = r.transitionScheme === d.TRANSITION_TYPE_RECOMMENDATIONS,
+                        E = !(0, h.default)(g, a.playerType);
+                    return u && p && f && _ && v && y && m && E
                 }
             }, {
                 key: "_fetchChannelVideos",
@@ -44363,7 +44365,7 @@
                         t = e.streamMetadata;
                     return (0, v.krakenRequestv5)("channels/" + t.channel.id + "/videos?limit=30").then(function(e) {
                         var t = e.videos;
-                        return t.length > 0 ? t : Promise.reject(b)
+                        return t.length > 0 ? t : Promise.reject(E)
                     })
                 }
             }, {
@@ -44379,7 +44381,7 @@
                         var n = e.filter(function(e) {
                             return !(0, _.isWatched)(t, e)
                         });
-                        return n.length > 0 ? n : Promise.reject(E)
+                        return n.length > 0 ? n : Promise.reject(T)
                     })
                 }
             }, {
@@ -44404,7 +44406,7 @@
                 value: function(e, t) {
                     var n = this._stateStore.getState(),
                         r = n.stream;
-                    return r === e ? t : Promise.reject(T)
+                    return r === e ? t : Promise.reject(S)
                 }
             }, {
                 key: "_checkExperimentGroup",
@@ -44412,7 +44414,7 @@
                     var t = this._stateStore.getState(),
                         n = t.experiments;
                     return n.get(y.OFFLINE_RECOMMENDATIONS).then(function(t) {
-                        return "yes" === t ? e : Promise.reject(S)
+                        return "yes" === t ? e : Promise.reject(P)
                     })
                 }
             }, {
