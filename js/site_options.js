@@ -992,6 +992,16 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "6e2f439b-916a-40b7-b1be-e82b284fd0bb": {
+            "name": "offline_experience",
+            "groups": [{
+                "weight": 95,
+                "value": "yes"
+            }, {
+                "weight": 5,
+                "value": "no"
+            }]
+        },
         "711aaaf6-61c0-4cc4-9469-0dfc9908785a": {
             "name": "VP_QOS_TEST",
             "groups": [{
