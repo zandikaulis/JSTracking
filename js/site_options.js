@@ -717,11 +717,8 @@ window.SiteOptions = {
                 "weight": 5,
                 "value": "1.8.4"
             }, {
-                "weight": 63,
+                "weight": 88,
                 "value": "1.8.4+spd67"
-            }, {
-                "weight": 25,
-                "value": "1.7.7+spd67"
             }]
         },
         "474db509-7fb8-403e-97da-66dae8954e6d": {
