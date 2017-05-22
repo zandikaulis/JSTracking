@@ -183,7 +183,7 @@ href = "https://player.twitch.tv/css/player.css" >
 
     <
     script src = "//www.twitch.tv/site_options.js" > < /script> <
-    script src = "//web-cdn.ttvnw.net/global-e0bc9ff92d6a733d8bdacb4cd69b8bb3.js" > < /script> <
+    script src = "//web-cdn.ttvnw.net/global-c1d0772e738a2a13645ca2903ba74899.js" > < /script> <
     script src = "//web-cdn.ttvnw.net/benchmark-b8a7250cd525d280d96c177f17aee13d.js" > < /script>
 
 <
@@ -220,7 +220,7 @@ body >
 
     <
     script src = "//www-cdn.jtvnw.net/assets/emberhelper.js" > < /script> <
-    script src = "//web-cdn.ttvnw.net/emberapp-e538ef555325a8c4f74dc27b06e6d5b8.js" > < /script> <
+    script src = "//web-cdn.ttvnw.net/emberapp-ffcb1cb1bad573dc38fb7b7756bc67d3.js" > < /script> <
     script src = "//www-cdn.jtvnw.net/tmilibs/tmi-v3.js" > < /script>
 
 
