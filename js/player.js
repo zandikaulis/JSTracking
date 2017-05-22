@@ -8817,7 +8817,7 @@
         function r(e) {
             var t = i(e);
             if (null !== t) throw t;
-            this._config = o(e), this._Promise = e.Promise, this._deviceID = e.deviceID, this._platform = e.platform, this._username = e.login || null, this._defaults = a(e.Promise, e.defaults, e.overrides || {}), this._assignments = s(e.Promise, this._config, this._defaults, e.overrides || {}, this._deviceID), this._spade_url = l(e.Promise, this._config, d.SPADE_URL_PROJECT_UUID)
+            this._config = o(e), this._Promise = e.Promise, this._deviceID = e.deviceID, this._platform = e.platform, this._username = e.login || null, this._defaults = a(e.Promise, e.defaults, e.overrides || {}), this._assignments = s(e.Promise, this._config, this._defaults, e.overrides || {}, this._deviceID), this._spade_url = l(this._config, d.SPADE_URL_PROJECT_UUID)
         }
 
         function i(e) {
@@ -8865,9 +8865,9 @@
             return o
         }
 
-        function l(e, t, n) {
-            return t.then(function(e) {
-                return e[n] && e[n].groups && e[n].groups[0] ? e[n].groups[0].value : ""
+        function l(e, t) {
+            return e.then(function(e) {
+                return e[t] && e[t].groups && e[t].groups[0] ? e[t].groups[0].value : ""
             }, function(e) {
                 return ""
             })
@@ -9179,7 +9179,13 @@
                 },
                 u = r.stringify(i.parse(JSON.stringify(l))),
                 c = e || t.DEFAULT_SPADE_URL;
-            o.fetch(c + "?data=" + encodeURIComponent(u), {}, s)
+            o.fetch(c, {
+                method: "post",
+                headers: {
+                    "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                },
+                body: "data=" + encodeURIComponent(u)
+            }, s)
         }
     }, function(e, t, n) {
         ! function(r, i) {
@@ -9244,18 +9250,20 @@
             }, n.appendChild(r), r.src = e
         }
 
-        function r(e, t) {
-            var n = new XMLHttpRequest;
-            n.open("GET", e, !0), n.onreadystatechange = function() {
-                switch (n.readyState) {
+        function r(e, t, n) {
+            var r = new XMLHttpRequest;
+            r.open(t.method || "GET", e, !0), t.headers && Object.keys(t.headers).forEach(function(e) {
+                r.setRequestHeader(e, t.headers[e])
+            }), r.onreadystatechange = function() {
+                switch (r.readyState) {
                     case i:
-                        return void(200 <= n.status && n.status < 300 ? t(null, n.responseText) : t(new Error("XHR error: " + n.status + " " + e), null))
+                        return void(200 <= r.status && r.status < 300 ? n(null, r.responseText) : n(new Error("XHR error: " + r.status + " " + e), null))
                 }
-            }, n.send()
+            }, r.send(t.body)
         }
         var i = 4;
         t.fetch = function(e, t, i) {
-            t.injectScript ? n(e, i || function() {}) : r(e, i || function() {})
+            t.injectScript ? n(e, i || function() {}) : r(e, t, i || function() {})
         }
     }, function(e, t, n) {
         function r(e) {
@@ -9644,7 +9652,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.22-210944+b2f94ddd3d7e537465d8cb268f3314bf4024bb7d",
+                    app_version: "2017.05.22-223416+57e46813d30acc63bf69386e8f562e407ba7c52b",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
