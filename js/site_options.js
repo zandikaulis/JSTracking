@@ -995,10 +995,10 @@ window.SiteOptions = {
         "6e2f439b-916a-40b7-b1be-e82b284fd0bb": {
             "name": "offline_experience",
             "groups": [{
-                "weight": 95,
+                "weight": 100,
                 "value": "show"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "control"
             }]
         },
