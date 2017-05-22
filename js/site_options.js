@@ -258,10 +258,10 @@ window.SiteOptions = {
         "0fb759af-22ba-415a-9c83-e2dbeb6f8e41": {
             "name": "Settings Menu Redesign",
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "old"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "new"
             }]
         },
