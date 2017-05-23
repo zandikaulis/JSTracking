@@ -9653,7 +9653,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.23-191927+e0a878ced9e70d503df157cae094e6cd8e542270",
+                    app_version: "2017.05.23-201411+c074bc8a9ae9ffa67024b53beaf439d08c9ae236",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -15519,9 +15519,9 @@
             m = "twitch-midroll-",
             g = "twitch-postroll",
             b = "treatment",
-            E = 2e3,
-            T = 2e3,
-            S = 2e3,
+            E = 1e3,
+            T = 1e3,
+            S = 1e3,
             P = (t.AAXManager = function() {
                 function e(t, n, r, i) {
                     var a = this;
@@ -44349,14 +44349,16 @@
             y = n(248),
             m = n(382),
             g = [u.PLAYER_DASHBOARD, u.PLAYER_FRONTPAGE, u.PLAYER_CREATIVE, u.PLAYER_HIGHLIGHTER, u.PLAYER_EMBED],
-            b = [26610234, 10817445],
-            E = "Offline Recommendations: No channel videos",
-            T = "Offline Recommendations: All channel videos watched",
-            S = "Offline Recommendations: Stream changed while fetching",
-            P = "Offline Recommendations: In control group";
+            b = 560,
+            E = 300,
+            T = [26610234, 10817445],
+            S = "Offline Recommendations: No channel videos",
+            P = "Offline Recommendations: All channel videos watched",
+            w = "Offline Recommendations: Stream changed while fetching",
+            C = "Offline Recommendations: In control group";
         t.OfflineRecommendationsManager = function() {
             function e(t) {
-                i(this, e), this._stateStore = t, this._unsubs = [], this._unsubs.push((0, p.subscribe)(this._stateStore, ["onlineStatus", "user.loggedinStatus", "streamMetadata"], this.onStateChange.bind(this))), this.onStateChange()
+                i(this, e), this._stateStore = t, this._unsubs = [], this._unsubs.push((0, p.subscribe)(this._stateStore, ["onlineStatus", "user.loggedinStatus", "streamMetadata"], this.onStateChange.bind(this))), this._unsubs.push((0, p.subscribe)(this._stateStore, ["playerDimensions"], this.onDimensionsChange.bind(this))), this.onStateChange()
             }
             return o(e, [{
                 key: "onStateChange",
@@ -44374,11 +44376,20 @@
                         }).then(function(t) {
                             return e._checkIfStreamChanged(n, t)
                         }).then(function(t) {
-                            e._stateStore.dispatch((0, _.setRecommendedVODs)(t, _.OFFLINE_RECOMMENDATIONS_TYPE)), e._stateStore.dispatch((0, a.pushScreen)(a.VOD_RECOMMENDATION_SCREEN))
+                            e._stateStore.dispatch((0, _.setRecommendedVODs)(t, _.OFFLINE_RECOMMENDATIONS_TYPE)), e._isValidPlayerSize() && e._stateStore.dispatch((0, a.pushScreen)(a.VOD_RECOMMENDATION_SCREEN))
                         }).catch(function(e) {
                             return console.warn(e)
                         })
                     }
+                }
+            }, {
+                key: "onDimensionsChange",
+                value: function() {
+                    var e = this._stateStore.getState(),
+                        t = e.recommendations,
+                        n = e.screen,
+                        r = n[0] === a.VOD_RECOMMENDATION_SCREEN;
+                    if (t.type === _.OFFLINE_RECOMMENDATIONS_TYPE) return this._isValidPlayerSize() && !r ? void this._stateStore.dispatch((0, a.pushScreen)(a.VOD_RECOMMENDATION_SCREEN)) : void(!this._isValidPlayerSize() && r && this._stateStore.dispatch((0, a.popScreen)()))
                 }
             }, {
                 key: "_preConditionsMet",
@@ -44392,13 +44403,13 @@
                         a = e.env,
                         u = i.contentType === c.CONTENT_MODE_LIVE,
                         p = 0 !== o.channel.id,
-                        f = !(0, h.default)(b, o.channel.id),
+                        f = !(0, h.default)(T, o.channel.id),
                         _ = n === l.OFFLINE_STATUS,
                         v = t.loggedInStatus === s.LOGGED_IN,
                         y = r.hasPlayed === !1,
                         m = r.transitionScheme === d.TRANSITION_TYPE_RECOMMENDATIONS,
-                        E = !(0, h.default)(g, a.playerType);
-                    return u && p && f && _ && v && y && m && E
+                        b = !(0, h.default)(g, a.playerType);
+                    return u && p && f && _ && v && y && m && b
                 }
             }, {
                 key: "_fetchChannelVideos",
@@ -44407,7 +44418,7 @@
                         t = e.streamMetadata;
                     return (0, v.krakenRequestv5)("channels/" + t.channel.id + "/videos?limit=30").then(function(e) {
                         var t = e.videos;
-                        return t.length > 0 ? t : Promise.reject(E)
+                        return t.length > 0 ? t : Promise.reject(S)
                     })
                 }
             }, {
@@ -44423,7 +44434,7 @@
                         var n = e.filter(function(e) {
                             return !(0, _.isWatched)(t, e)
                         });
-                        return n.length > 0 ? n : Promise.reject(T)
+                        return n.length > 0 ? n : Promise.reject(P)
                     })
                 }
             }, {
@@ -44448,7 +44459,7 @@
                 value: function(e, t) {
                     var n = this._stateStore.getState(),
                         r = n.stream;
-                    return r === e ? t : Promise.reject(S)
+                    return r === e ? t : Promise.reject(w)
                 }
             }, {
                 key: "_checkExperimentGroup",
@@ -44456,8 +44467,17 @@
                     var t = this._stateStore.getState(),
                         n = t.experiments;
                     return n.get(y.OFFLINE_RECOMMENDATIONS).then(function(t) {
-                        return "yes" === t ? e : Promise.reject(P)
+                        return "yes" === t ? e : Promise.reject(C)
                     })
+                }
+            }, {
+                key: "_isValidPlayerSize",
+                value: function() {
+                    var e = this._stateStore.getState(),
+                        t = e.playerDimensions,
+                        n = t.height,
+                        r = t.width;
+                    return n >= E && r >= b
                 }
             }, {
                 key: "destroy",
