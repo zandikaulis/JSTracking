@@ -1012,6 +1012,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "74d6faab-1794-458a-a5f6-b92602254e9e": {
+            "name": "auto_suggest_notification",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "show"
+            }]
+        },
         "758cbec2-80ad-478f-806e-fd3a7db9742f": {
             "name": "I18N_MISSING_TRANS",
             "groups": [{
