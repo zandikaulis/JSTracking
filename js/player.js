@@ -9649,7 +9649,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.23-212642+73884ff79295f06f69553b4983d80903146854c6",
+                    app_version: "2017.05.23-213923+5574ae2968af24ad9935d63ea50126fec169febe",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -39606,7 +39606,13 @@
                                 })
                             }),
                             h = null;
-                        return h = n[0].recommendationType === y.CHANNEL_VODS ? a("More from") + " " + n[0].channelName : a("Watch Now"), u.default.createElement("div", {
+                        if (n[0].recommendationType === y.CHANNEL_VODS) {
+                            var v = n[0].channelName;
+                            h = a("More from {{channelName}}", {
+                                channelName: v
+                            })
+                        } else h = a("Watch Now");
+                        return u.default.createElement("div", {
                             className: T
                         }, u.default.createElement(p.RecCloseButton, {
                             onClick: o
