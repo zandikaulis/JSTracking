@@ -9653,7 +9653,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.23-000604+bc5aebbcb3ca2ebd65c809bc33c30c499e9e5d66",
+                    app_version: "2017.05.23-002420+2884e6b2ae397e42a94ebed9226e4a2a2ade237c",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -35505,45 +35505,36 @@
                 }()
             }, function(e, t, n) {
                 "use strict";
+                var r = n(6);
                 n.d(t, "a", function() {
-                    return i
+                    return o
                 });
-                var r = this && this.__assign || Object.assign || function(e) {
+                var i = this && this.__assign || Object.assign || function(e) {
                         for (var t, n = 1, r = arguments.length; n < r; n++) {
                             t = arguments[n];
                             for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
                         }
                         return e
                     },
-                    i = function() {
+                    o = function() {
                         function e(e) {
-                            var t = this;
-                            this.trackingProperties = {
-                                device_id: "",
-                                host: "",
-                                domain: "",
-                                login: "",
-                                login_id: 0,
-                                channel: "",
-                                channel_id: 0,
-                                url: "",
-                                referrer_host: "",
-                                referrer_url: "",
-                                platform: "",
-                                preferred_language: "",
-                                received_language: "",
-                                extension_id: "",
-                                extension_version: "",
-                                extension_anchor: "panel",
-                                extension_mode: "viewer"
-                            }, this.dobbin = e.dobbin, Object.keys(e.requiredProps).forEach(function(n) {
-                                t.trackingProperties[n] = e.requiredProps[n]
-                            });
-                            var n = e.iframe.ownerDocument.createElement("a");
-                            n.href = e.iframe.ownerDocument.referrer, this.trackingProperties.url = e.iframe.ownerDocument.location.href, this.trackingProperties.host = e.iframe.ownerDocument.location.host, this.trackingProperties.domain = e.iframe.ownerDocument.domain, this.trackingProperties.referrer_url = e.iframe.ownerDocument.referrer, this.trackingProperties.referrer_host = n.host, this.trackingProperties.extension_id = e.extension.id, this.trackingProperties.extension_version = e.extension.version, this.trackingProperties.extension_anchor = e.extension.anchor, this.trackingProperties.extension_mode = e.extensionMode
+                            this.dobbin = e.dobbin;
+                            var t = n.i(r.a)(e.iframe.ownerDocument.referrer);
+                            this.trackingProperties = i({}, e.requiredProps, {
+                                url: e.iframe.ownerDocument.location.href,
+                                host: e.iframe.ownerDocument.location.host,
+                                domain: e.iframe.ownerDocument.domain,
+                                user_agent: e.iframe.ownerDocument.defaultView.navigator.userAgent,
+                                referrer_url: e.iframe.ownerDocument.referrer,
+                                referrer_host: t.host,
+                                extension_id: e.extension.id,
+                                extension_version: e.extension.version,
+                                extension_anchor: e.extension.anchor,
+                                extension_mode: e.extensionMode
+                            })
                         }
                         return e.prototype.trackEvent = function(e, t) {
-                            var n = r({}, t, this.trackingProperties);
+                            var n = i({}, t, this.trackingProperties);
                             this.dobbin.trackEvent(e, n, ["spade"])
                         }, e
                     }()
@@ -35585,7 +35576,40 @@
                 var l = function() {
                     function e(e, t, n, a, s, l, u) {
                         var c = this;
-                        this.iframe = t, this.ems = s, this.contextManager = l, this.tracker = u, this.destroy = function() {
+                        this.extension = e, this.iframe = t, this.ems = s, this.contextManager = l, this.tracker = u, this.handleUserAction = {
+                            click: function(e) {
+                                var t = e.payload,
+                                    n = this.iframe.getBoundingClientRect(),
+                                    r = n.width,
+                                    i = n.height;
+                                this.tracker.trackEvent("extension_click", {
+                                    px_mouse_coord_x: t.clientX,
+                                    px_mouse_coord_y: t.clientY,
+                                    pct_mouse_coord_x: t.clientX / r * 100,
+                                    pct_mouse_coord_y: t.clientY / i * 100
+                                })
+                            },
+                            mousemove: function(e) {
+                                var t = e.payload,
+                                    n = this.iframe.getBoundingClientRect(),
+                                    r = n.left,
+                                    i = n.top;
+                                this.iframe.dispatchEvent(new MouseEvent("mousemove", {
+                                    bubbles: !0,
+                                    clientX: t.clientX,
+                                    clientY: t.clientY,
+                                    screenX: r + t.clientX,
+                                    screenY: i + t.clientY
+                                }))
+                            },
+                            focusin: function(e) {
+                                e.payload;
+                                if ("video_overlay" === this.extension.anchor) {
+                                    for (var t = this.iframe; t && !t.hasAttribute("tabindex");) t = t.parentElement;
+                                    t && t.focus()
+                                }
+                            }
+                        }, this.destroy = function() {
                             c.contextManager.destroy(), c.ems.destroy(), c.eventListeners.forEach(function(e) {
                                 e.target.removeEventListener(e.event, e.callback)
                             })
@@ -35654,36 +35678,21 @@
                                 this.onExtensionLoaded(), this.ems.cycleExtensionAuth(), this.contextManager.initializeContext(), this.tracker.trackEvent("extension_helper_load_success", {});
                                 break;
                             case r.a.TwitchExtUserAction:
-                                this.handleMouseUserAction(e)
-                        }
-                    }, e.prototype.handleMouseUserAction = function(e) {
-                        var t = e.payload;
-                        switch (t.type) {
-                            case "click":
-                                var n = this.iframe.getBoundingClientRect(),
-                                    r = n.width,
-                                    i = n.height;
-                                this.tracker.trackEvent("extension_click", {
-                                    px_mouse_coord_x: t.clientX,
-                                    px_mouse_coord_y: t.clientY,
-                                    pct_mouse_coord_x: t.clientX / r * 100,
-                                    pct_mouse_coord_y: t.clientY / i * 100
-                                });
-                                break;
-                            case "mousemove":
-                                var o = this.iframe.getBoundingClientRect(),
-                                    a = o.left,
-                                    s = o.top;
-                                this.iframe.dispatchEvent(new MouseEvent("mousemove", {
-                                    bubbles: !0,
-                                    clientX: t.clientX,
-                                    clientY: t.clientY,
-                                    screenX: a + t.clientX,
-                                    screenY: s + t.clientY
-                                }))
+                                this.handleUserAction[e.payload.type].call(this, e)
                         }
                     }, e
                 }()
+            }, function(e, t, n) {
+                "use strict";
+                n.d(t, "a", function() {
+                    return r
+                });
+                var r = function(e) {
+                    var t = document.createElement("a");
+                    return t.href = e, {
+                        host: t.host
+                    }
+                }
             }])
         })
     }, function(e, t, n) {
@@ -36657,7 +36666,7 @@
                             this._hideAllElements(), this._stateStore.dispatch((0, d.pause)()), this.$emptyCollectionOverlay.attr("data-active", !0);
                             break;
                         default:
-                            this.onViewChange(), this.$emptyCollectionOverlay.attr("data-active", !1);
+                            this.onViewChange(), this.$emptyCollectionOverlay.attr("data-active", !1)
                     }
                 }
             }, {
@@ -37682,14 +37691,14 @@
             }, e.preload = function(t, n) {
                 c.default.deprecate("i18next.preload() can be replaced with i18next.loadLanguages()"), e.loadLanguages(t, n)
             }, e.setLng = function(t, n, r) {
-                return c.default.deprecate("i18next.setLng() can be replaced with i18next.changeLanguage() or i18next.getFixedT() to get a translation function with fixed language or namespace."),
-                    "function" == typeof n && (r = n, n = {}), n || (n = {}), n.fixLng === !0 && r ? r(null, e.getFixedT(t)) : void e.changeLanguage(t, r)
+                return c.default.deprecate("i18next.setLng() can be replaced with i18next.changeLanguage() or i18next.getFixedT() to get a translation function with fixed language or namespace."), "function" == typeof n && (r = n, n = {}), n || (n = {}), n.fixLng === !0 && r ? r(null, e.getFixedT(t)) : void e.changeLanguage(t, r)
             }, e.addPostProcessor = function(t, n) {
-                c.default.deprecate("i18next.addPostProcessor() can be replaced by i18next.use({ type: 'postProcessor', name: 'name', process: fc })"), e.use({
-                    type: "postProcessor",
-                    name: t,
-                    process: n
-                })
+                c.default.deprecate("i18next.addPostProcessor() can be replaced by i18next.use({ type: 'postProcessor', name: 'name', process: fc })"),
+                    e.use({
+                        type: "postProcessor",
+                        name: t,
+                        process: n
+                    })
             }
         }
         Object.defineProperty(t, "__esModule", {
