@@ -220,7 +220,7 @@ body >
 
     <
     script src = "//www-cdn.jtvnw.net/assets/emberhelper.js" > < /script> <
-    script src = "//web-cdn.ttvnw.net/emberapp-1fa979570e0196bfade4dbc4e7fe6258.js" > < /script> <
+    script src = "//web-cdn.ttvnw.net/emberapp-ea2090f79a5ec5938317bc2f8faaf49c.js" > < /script> <
     script src = "//www-cdn.jtvnw.net/tmilibs/tmi-v3.js?cachebust=true" > < /script>
 
 
