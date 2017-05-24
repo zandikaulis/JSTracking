@@ -621,10 +621,10 @@ window.SiteOptions = {
         "3ba26ac2-a5db-4318-83c5-dcbe11e2774f": {
             "name": "CLIPS_CLIPPY_PATENT_PENDING",
             "groups": [{
-                "weight": 100,
+                "weight": 5,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 95,
                 "value": "variant1"
             }]
         },
