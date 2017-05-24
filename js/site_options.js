@@ -236,6 +236,19 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "0d140c71-9264-4646-bc2c-743089cb9386": {
+            "name": "clips_shelter",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }, {
+                "weight": 0,
+                "value": "variant2"
+            }]
+        },
         "0fb759af-22ba-415a-9c83-e2dbeb6f8e41": {
             "name": "Settings Menu Redesign",
             "groups": [{
@@ -701,8 +714,11 @@ window.SiteOptions = {
                 "weight": 2,
                 "value": "1.7.7+spd67"
             }, {
-                "weight": 86,
+                "weight": 84,
                 "value": "1.8.5+spd67"
+            }, {
+                "weight": 2,
+                "value": "1.8.100+spd67"
             }]
         },
         "474db509-7fb8-403e-97da-66dae8954e6d": {
