@@ -9699,7 +9699,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.24-192205+b33ddc8129765a2fd20aa49ec7190b3cab6b0df5",
+                    app_version: "2017.05.24-195829+5e78dba8957440de97df704371ed01d1de3d85d0",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -39579,7 +39579,7 @@
             "Most Recent Video": "Most Recent Video",
             Settings: "Settings",
             "Is your video buffering? Try the Auto quality option.": "Is your video buffering? Try the Auto quality option.",
-            "More from": "More from"
+            "More from {{channelName}}": "More from {{channelName}}"
         }
     }, function(e, t, n) {
         "use strict";
