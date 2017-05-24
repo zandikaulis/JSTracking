@@ -9699,7 +9699,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.24-004252+955fb12f79debf7c1bf7b3387b479d80afa0b638",
+                    app_version: "2017.05.24-173314+3425194830073a52d2af705ecd50791753a5d417",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -35436,17 +35436,19 @@
             d = n(274),
             p = i(d),
             f = n(573),
-            h = n(655),
-            _ = n(657),
-            v = n(362),
-            y = n(166),
-            m = n(241),
-            g = n(330),
-            b = n(217),
-            E = n(215),
-            T = r(E),
-            S = 16 / 9,
-            P = {
+            h = n(116),
+            _ = i(h),
+            v = n(655),
+            y = n(657),
+            m = n(362),
+            g = n(166),
+            b = n(241),
+            E = n(330),
+            T = n(217),
+            S = n(215),
+            P = r(S),
+            C = 16 / 9,
+            w = {
                 onIdentityToggle: d.PropTypes.func.isRequired,
                 shouldShowExtensions: d.PropTypes.bool.isRequired,
                 extensions: d.PropTypes.shape({
@@ -35454,6 +35456,7 @@
                         id: d.PropTypes.string.isRequired,
                         name: d.PropTypes.string.isRequired,
                         summary: d.PropTypes.string.isRequired,
+                        anchor: d.PropTypes.string.isRequired,
                         version: d.PropTypes.string.isRequired,
                         viewerUrl: d.PropTypes.string.isRequired,
                         token: d.PropTypes.shape({
@@ -35475,10 +35478,11 @@
                 deviceId: d.PropTypes.string.isRequired,
                 platform: d.PropTypes.string.isRequired,
                 locale: d.PropTypes.string.isRequired,
-                playerType: d.PropTypes.string.isRequired
+                playerType: d.PropTypes.string.isRequired,
+                trackEvent: d.PropTypes.func.isRequired
             },
-            C = (u = {}, l(u, T.PLAYER_SITE_MINI, !0), l(u, T.PLAYER_CURSE, !0), l(u, T.PLAYER_FRONTPAGE, !0), l(u, T.PLAYER_FACEBOOK, !0), l(u, T.PLAYER_HIGHLIGHTER, !0), l(u, T.PLAYER_PULSE, !0), l(u, T.PLAYER_TWITCH_EVERYWHERE, !0), u),
-            w = function(e) {
+            k = (u = {}, l(u, P.PLAYER_SITE_MINI, !0), l(u, P.PLAYER_CURSE, !0), l(u, P.PLAYER_FRONTPAGE, !0), l(u, P.PLAYER_FACEBOOK, !0), l(u, P.PLAYER_HIGHLIGHTER, !0), l(u, P.PLAYER_PULSE, !0), l(u, P.PLAYER_TWITCH_EVERYWHERE, !0), u),
+            A = function(e) {
                 return {
                     extensions: e.extensions,
                     game: e.streamMetadata.game,
@@ -35486,7 +35490,7 @@
                     height: e.playerDimensions.height,
                     extensionsApi: e.extensions.extensionsApi,
                     videoResolution: e.stats.videoStats.videoResolution,
-                    shouldShowExtensions: e.env.platform !== v.PLATFORM_MOBILE_WEB && !C.hasOwnProperty(e.env.playerType) && e.stream.contentType === y.CONTENT_MODE_LIVE && e.playback.contentShowing && e.online && e.ads.currentMetadata.contentType === m.AdContentTypes.NONE,
+                    shouldShowExtensions: e.env.platform !== m.PLATFORM_MOBILE_WEB && !k.hasOwnProperty(e.env.playerType) && e.stream.contentType === g.CONTENT_MODE_LIVE && e.playback.contentShowing && e.online && e.ads.currentMetadata.contentType === b.AdContentTypes.NONE,
                     login: e.user.name,
                     loginId: e.user.id,
                     channel: e.streamMetadata.channelName,
@@ -35494,22 +35498,25 @@
                     deviceId: e.env.deviceId,
                     platform: e.env.platform,
                     locale: e.lang.langCode,
-                    playerType: e.env.playerType
+                    playerType: e.env.playerType,
+                    trackEvent: e.analyticsTracker.trackEvent
                 }
             },
-            k = function(e) {
+            O = function(e) {
                 return {
                     onIdentityToggle: function(t) {
                         var n = t.id,
                             r = t.token,
-                            i = r.permissionsState === b.EXTENSION_PERMISSION_STATE_GRANTED;
-                        e((0, g.setIdentitySharingForExtension)(n, r.token, !i))
+                            i = r.permissionsState === T.EXTENSION_PERMISSION_STATE_GRANTED;
+                        e((0, E.setIdentitySharingForExtension)(n, r.token, !i))
                     }
                 }
             },
-            A = t.ExtensionsContainerComponent = function(e) {
+            I = t.ExtensionsContainerComponent = function(e) {
                 function t() {
-                    return o(this, t), a(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments))
+                    o(this, t);
+                    var e = a(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
+                    return e._boundTrackEvent = e._trackEvent.bind(e), e
                 }
                 return s(t, e), c(t, [{
                     key: "render",
@@ -35529,12 +35536,13 @@
                         var d = n.extensions[0];
                         return p.default.createElement("div", {
                             className: "extension-container"
-                        }, p.default.createElement(_.ExtensionAttribution, {
+                        }, p.default.createElement(y.ExtensionAttribution, {
                             extension: d,
-                            onIdentityToggle: this.props.onIdentityToggle
+                            onIdentityToggle: this.props.onIdentityToggle,
+                            trackEvent: this._boundTrackEvent
                         }), p.default.createElement("div", {
                             className: "extension-overlays"
-                        }, p.default.createElement(h.ExtensionOverlay, {
+                        }, p.default.createElement(v.ExtensionOverlay, {
                             width: l,
                             height: u,
                             key: d.id,
@@ -35543,6 +35551,20 @@
                             extensionsApi: i,
                             trackingProperties: c
                         })))
+                    }
+                }, {
+                    key: "_trackEvent",
+                    value: function(e, t) {
+                        var n = this.props.extensions.extensions[0];
+                        this.props.trackEvent(e, (0, _.default)(t, {
+                            extension_id: n.id,
+                            extension_version: n.version,
+                            extension_anchor: n.anchor,
+                            extension_mode: "viewer",
+                            locale: this.props.locale,
+                            login_id: this.props.loginId,
+                            player_type: this.props.playerType
+                        }))
                     }
                 }, {
                     key: "_getTrackingProperties",
@@ -35572,15 +35594,15 @@
                     value: function(e) {
                         var t = /(\d+)\D*(\d+)/g,
                             n = t.exec(e);
-                        if (!n) return S;
+                        if (!n) return C;
                         var r = parseInt(n[1], 10),
                             i = parseInt(n[2], 10);
-                        return i ? r / i : S
+                        return i ? r / i : C
                     }
                 }]), t
             }(p.default.Component);
-        A.propTypes = P;
-        t.ExtensionsContainer = (0, f.connect)(w, k)(A)
+        I.propTypes = w;
+        t.ExtensionsContainer = (0, f.connect)(A, O)(I)
     }, function(e, t, n) {
         "use strict";
 
@@ -36154,13 +36176,14 @@
                         permissionsState: u.PropTypes.string.isRequired,
                         role: u.PropTypes.string.isRequired
                     })
-                }).isRequired
+                }).isRequired,
+                trackEvent: u.PropTypes.func.isRequired
             },
             M = t.ExtensionAttributionComponent = function(e) {
                 function t(e) {
                     o(this, t);
                     var n = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
-                    return n._boundOnCancelDialog = n._onCancelDialog.bind(n), n._boundOnUserPermissionClicked = n._onUserPermissionClicked.bind(n), n._boundOnToggleIdentity = n._onToggleIdentity.bind(n), n._boundOnMoreInfoClick = n._onMoreInfoClick.bind(n), n.state = {
+                    return n._boundOnCancelDialog = n._onCancelDialog.bind(n), n._boundOnUserPermissionClicked = n._onUserPermissionClicked.bind(n), n._boundReportExtensionClicked = n._onReportExtensionClicked.bind(n), n._boundOnToggleIdentity = n._onToggleIdentity.bind(n), n._boundOnMoreInfoClick = n._onMoreInfoClick.bind(n), n.state = {
                         dialogState: k
                     }, n
                 }
@@ -36206,7 +36229,7 @@
                             r = void 0;
                         return this.props.onExtensionReport && (r = c.default.createElement(_.Button, {
                             className: n,
-                            onClick: this.props.onExtensionReport
+                            onClick: this._boundReportExtensionClicked
                         }, c.default.createElement(v.Icon, {
                             svgClass: "extension-attribution-icon",
                             label: I,
@@ -36247,10 +36270,21 @@
                         })
                     }
                 }, {
+                    key: "_onReportExtensionClicked",
+                    value: function() {
+                        this.props.onExtensionReport && (this.props.onExtensionReport(), this.props.trackEvent("extension_ui_interaction_client", {
+                            extension_interaction: "report"
+                        }))
+                    }
+                }, {
                     key: "_onToggleIdentity",
                     value: function() {
                         this.props.onIdentityToggle(this.props.extension), this.setState({
                             dialogState: k
+                        });
+                        var e = this.props.extension.token.permissionsState === d.EXTENSION_PERMISSION_STATE_GRANTED;
+                        this.props.trackEvent("extension_ui_interaction_client", {
+                            extension_interaction: e ? "revoke" : "grant"
                         })
                     }
                 }, {
@@ -37272,7 +37306,7 @@
         "use strict";
 
         function r(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
         }
 
         function i(e, t) {
