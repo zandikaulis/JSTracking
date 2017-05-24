@@ -8805,9 +8805,9 @@
         function l(e) {
             var t, n;
             return new _.default({
-                defaults: (t = {}, i(t, E, "no"), i(t, T, "off"), i(t, S, "no"), i(t, P, "no"), i(t, C, "no"), i(t, w, "no"), i(t, k, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "no"), i(t, D, "1.6.3"), i(t, x, "no"), i(t, j, "no"), i(t, L, "no"), i(t, U, "no,"), i(t, B, "keep"), i(t, V, "no"), i(t, F, "control"), i(t, H, "control"), i(t, q, "pad_control"), i(t, G, "no"), i(t, Y, "no"), i(t, W, "control"), i(t, K, "old"), i(t, $, "no"), i(t, z, "control"), i(t, Q, "control"), i(t, X, "control"), t),
+                defaults: (t = {}, i(t, E, "no"), i(t, T, "off"), i(t, S, "no"), i(t, P, "no"), i(t, C, "no"), i(t, w, "no"), i(t, k, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "no"), i(t, D, "1.6.3"), i(t, x, "no"), i(t, j, "no"), i(t, L, "no"), i(t, U, "no,"), i(t, B, "keep"), i(t, V, "no"), i(t, F, "control"), i(t, H, "pad_control"), i(t, q, "no"), i(t, G, "no"), i(t, Y, "control"), i(t, W, "old"), i(t, K, "no"), i(t, $, "control"), i(t, z, "control"), i(t, Q, "control"), i(t, X, "control"), t),
                 deviceID: e.deviceID,
-                overrides: (0, d.default)((n = {}, i(n, F, o("treatment")), i(n, T, o("v2")), i(n, S, a(["US"])), i(n, P, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, k, a(["SE"])), i(n, A, a(["DK", "FI", "NL", "NO"])), i(n, O, a(["CA"])), i(n, I, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, R, a(["PL"])), i(n, M, a(["AT", "CH", "ES", "IT", "PT"])), i(n, x, o("yes")), i(n, L, o("vca")), i(n, U, o("yes")), i(n, D, o("1.8.3+spd67")), i(n, Y, o("yes")), i(n, K, o("new")), i(n, G, o("yes")), i(n, X, o("show")), n), JSON.parse(u.cookie.get("experiment_overrides", "{}"))),
+                overrides: (0, d.default)((n = {}, i(n, T, o("v2")), i(n, S, a(["US"])), i(n, P, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, k, a(["SE"])), i(n, A, a(["DK", "FI", "NL", "NO"])), i(n, O, a(["CA"])), i(n, I, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, R, a(["PL"])), i(n, M, a(["AT", "CH", "ES", "IT", "PT"])), i(n, x, o("yes")), i(n, L, o("vca")), i(n, U, o("yes")), i(n, D, o("1.8.3+spd67")), i(n, G, o("yes")), i(n, W, o("new")), i(n, q, o("yes")), i(n, Q, o("show")), i(n, X, o("show")), n), JSON.parse(u.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
                 login: e.login,
                 provider: new y.default(y.default.SERVICE_URL),
@@ -8816,7 +8816,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.AUTO_SUGGEST_NOTIFICATION = t.CLIPS_CLIPPY_PATENT_PENDING = t.AAX_HEADER_BIDDING = t.BISMOL = t.SETTINGS_MENU_REDESIGN = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.CLIPS_LOYALTY = t.PLAYER_NOTIFICATION_BUTTON = t.EXTENSIONS = t.HTML5_TOGGLE_REMOVAL = t.PINEAPPLE = t.VP_QOS_TEST = t.DETERMINATION = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
+        }), t.OFFLINE_EXPERIENCE = t.AUTO_SUGGEST_NOTIFICATION = t.CLIPS_CLIPPY_PATENT_PENDING = t.AAX_HEADER_BIDDING = t.BISMOL = t.SETTINGS_MENU_REDESIGN = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.CLIPS_LOYALTY = t.EXTENSIONS = t.HTML5_TOGGLE_REMOVAL = t.PINEAPPLE = t.VP_QOS_TEST = t.DETERMINATION = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
         var u = n(247),
             c = n(116),
             d = r(c),
@@ -8849,17 +8849,17 @@
             U = t.PINEAPPLE = "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3",
             B = t.HTML5_TOGGLE_REMOVAL = "354aaebd-7643-434f-be37-98fe12c01220",
             V = t.EXTENSIONS = "264f75af-a787-4a40-8654-40d78b4d8b41",
-            F = t.PLAYER_NOTIFICATION_BUTTON = "2884161f-6094-4189-b1aa-fd256468f96e",
-            H = t.CLIPS_LOYALTY = "24790bc9-1beb-4cf1-bc75-fe22c400805d",
-            q = t.PADTIME = "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14",
-            G = t.OFFLINE_RECOMMENDATIONS = "00683bde-a79d-4b9d-a7cc-b0549f854d36",
-            Y = t.VIEW_WATCH_TOGETHER = "d0518b75-fbba-418a-9445-ff7c517beb32",
-            W = t.CHOMPERZ = "d48fe249-fd73-4c8f-bd17-415b70dc3708",
-            K = t.SETTINGS_MENU_REDESIGN = "0fb759af-22ba-415a-9c83-e2dbeb6f8e41",
-            $ = t.BISMOL = "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5",
-            z = t.AAX_HEADER_BIDDING = "18f450b9-5593-4d66-a5a7-c8b6fccf95c3",
-            Q = t.CLIPS_CLIPPY_PATENT_PENDING = "3ba26ac2-a5db-4318-83c5-dcbe11e2774f",
-            X = t.AUTO_SUGGEST_NOTIFICATION = "74d6faab-1794-458a-a5f6-b92602254e9e"
+            F = t.CLIPS_LOYALTY = "24790bc9-1beb-4cf1-bc75-fe22c400805d",
+            H = t.PADTIME = "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14",
+            q = t.OFFLINE_RECOMMENDATIONS = "00683bde-a79d-4b9d-a7cc-b0549f854d36",
+            G = t.VIEW_WATCH_TOGETHER = "d0518b75-fbba-418a-9445-ff7c517beb32",
+            Y = t.CHOMPERZ = "d48fe249-fd73-4c8f-bd17-415b70dc3708",
+            W = t.SETTINGS_MENU_REDESIGN = "0fb759af-22ba-415a-9c83-e2dbeb6f8e41",
+            K = t.BISMOL = "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5",
+            $ = t.AAX_HEADER_BIDDING = "18f450b9-5593-4d66-a5a7-c8b6fccf95c3",
+            z = t.CLIPS_CLIPPY_PATENT_PENDING = "3ba26ac2-a5db-4318-83c5-dcbe11e2774f",
+            Q = t.AUTO_SUGGEST_NOTIFICATION = "74d6faab-1794-458a-a5f6-b92602254e9e",
+            X = t.OFFLINE_EXPERIENCE = "6e2f439b-916a-40b7-b1be-e82b284fd0bb"
     }, function(e, t, n) {
         function r(e) {
             var t = i(e);
@@ -9281,7 +9281,7 @@
         ! function(r, i) {
             e.exports = t = i(n(253))
         }(this, function(e) {
-            return e.enc.Utf8;
+            return e.enc.Utf8
         })
     }, function(e, t) {
         function n(e, t) {
@@ -9699,7 +9699,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.24-195829+5e78dba8957440de97df704371ed01d1de3d85d0",
+                    app_version: "2017.05.24-201331+09ee68a8ba3df1ad8647190a29ef6cdab8a9bfc5",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -19319,8 +19319,8 @@
                 }, H.default.createElement(W.I18nextProvider, {
                     i18n: K.I18N_INSTANCE
                 }, H.default.createElement(Q.Experiment, {
-                    uuid: U.PLAYER_NOTIFICATION_BUTTON,
-                    renderValue: "treatment"
+                    uuid: U.OFFLINE_EXPERIENCE,
+                    renderValue: "show"
                 }, H.default.createElement(z.FollowPanel, null)))), document.getElementById("js-follow-panel"))
             }
 
@@ -45267,7 +45267,8 @@
             T = "Offline Recommendations: No channel videos",
             S = "Offline Recommendations: All channel videos watched",
             P = "Offline Recommendations: Stream changed while fetching",
-            C = "Offline Recommendations: In control group";
+            C = "Offline Recommendations: In control group",
+            w = "Offline Experience: In control group";
         t.OfflineRecommendationsManager = function() {
             function e(t) {
                 i(this, e), this._stateStore = t, this._unsubs = [], this._unsubs.push((0, d.subscribe)(this._stateStore, ["onlineStatus", "streamMetadata"], this.onStateChange.bind(this))), this._unsubs.push((0, d.subscribe)(this._stateStore, ["playerDimensions"], this.onDimensionsChange.bind(this))), this.onStateChange()
@@ -45376,7 +45377,9 @@
                 value: function(e) {
                     var t = this._stateStore.getState(),
                         n = t.experiments;
-                    return n.get(v.OFFLINE_RECOMMENDATIONS).then(function(t) {
+                    return n.get(v.OFFLINE_EXPERIENCE).then(function(e) {
+                        return "show" === e ? n.get(v.OFFLINE_RECOMMENDATIONS) : Promise.reject(w)
+                    }).then(function(t) {
                         return "yes" === t ? e : Promise.reject(C)
                     })
                 }
