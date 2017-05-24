@@ -236,25 +236,6 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
-        "0c22fa7f-9b7d-4c6a-9b63-1f70c0af3df2": {
-            "name": "CVP-Mar-2017",
-            "groups": [{
-                "weight": 10,
-                "value": "1.5.1+def"
-            }, {
-                "weight": 8,
-                "value": "1.5.1+abs1"
-            }, {
-                "weight": 2,
-                "value": "1.5.1+abs3"
-            }, {
-                "weight": 2,
-                "value": "1.6.1+speed"
-            }, {
-                "weight": 78,
-                "value": "1.6.1"
-            }]
-        },
         "0fb759af-22ba-415a-9c83-e2dbeb6f8e41": {
             "name": "Settings Menu Redesign",
             "groups": [{
@@ -1216,28 +1197,6 @@ window.SiteOptions = {
             }, {
                 "weight": 90,
                 "value": "variant1"
-            }]
-        },
-        "95003a8e-de0a-4319-9de3-8a0822799298": {
-            "name": "CVP March 21",
-            "groups": [{
-                "weight": 5,
-                "value": "1.7.4+absoff"
-            }, {
-                "weight": 5,
-                "value": "1.7.4+absctrl"
-            }, {
-                "weight": 5,
-                "value": "1.8.3"
-            }, {
-                "weight": 2,
-                "value": "1.8.100"
-            }, {
-                "weight": 58,
-                "value": "1.7.7+spd67"
-            }, {
-                "weight": 25,
-                "value": "1.8.3+spd67"
             }]
         },
         "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": {
