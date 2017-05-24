@@ -220,7 +220,7 @@ body >
 
     <
     script src = "//www-cdn.jtvnw.net/assets/emberhelper.js" > < /script> <
-    script src = "//web-cdn.ttvnw.net/emberapp-c210bf8797273770b1b91a084340bd8c.js" > < /script> <
+    script src = "//web-cdn.ttvnw.net/emberapp-5ed32946b7f96f1dc23d47f54c998f39.js" > < /script> <
     script src = "//www-cdn.jtvnw.net/tmilibs/tmi-v3.js?cachebust=true" > < /script>
 
 
@@ -371,7 +371,7 @@ Twitch.tracking.sendComscoreBeacon({
 Twitch.geo.then(function(data) {
     if (data.geo === "US") {
 
-        $('.amazon-adsystem-tracking-pixel').attr('src', 'http://s.amazon-adsystem.com/iui3?d=3p-hbg&ex-src=twitch.tv&ex-hargs=v%3D1.0%3Bc%3D8858214122683%3Bp%3De75425fb-5407-7bd5-fd20-f462e98a8777');
+        $('.amazon-adsystem-tracking-pixel').attr('src', '//s.amazon-adsystem.com/iui3?d=3p-hbg&ex-src=twitch.tv&ex-hargs=v%3D1.0%3Bc%3D8858214122683%3Bp%3De75425fb-5407-7bd5-fd20-f462e98a8777');
 
     }
 });
