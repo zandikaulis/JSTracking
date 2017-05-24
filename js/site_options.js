@@ -136,10 +136,10 @@ window.SiteOptions = {
         "00683bde-a79d-4b9d-a7cc-b0549f854d36": {
             "name": "offline_recs",
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "no"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "yes"
             }]
         },
@@ -976,10 +976,10 @@ window.SiteOptions = {
         "6e2f439b-916a-40b7-b1be-e82b284fd0bb": {
             "name": "offline_experience",
             "groups": [{
-                "weight": 100,
+                "weight": 95,
                 "value": "show"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "control"
             }]
         },
