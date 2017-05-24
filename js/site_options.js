@@ -463,10 +463,10 @@ window.SiteOptions = {
         "264f75af-a787-4a40-8654-40d78b4d8b41": {
             "name": "extensions",
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }]
         },
@@ -1518,10 +1518,10 @@ window.SiteOptions = {
         "b88f3829-e1ac-471a-912a-264cac2587b3": {
             "name": "FAIRFAX",
             "groups": [{
-                "weight": 1,
+                "weight": 0,
                 "value": "yes"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "no"
             }]
         },
