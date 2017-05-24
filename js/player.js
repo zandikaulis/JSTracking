@@ -9699,7 +9699,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.24-001941+b27a89bf579a85318790e32c9bc260e4b35584ec",
+                    app_version: "2017.05.24-004252+955fb12f79debf7c1bf7b3387b479d80afa0b638",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -17525,15 +17525,26 @@
                 }, {
                     key: "_fetchVideoBids",
                     value: function(e, t, n) {
-                        var r = this;
-                        this._initAndSendAdSpadeEvent(f.AAX_AD_AUCTION, t, e);
-                        var i = this._createSlotsFromSlotIds(e, n);
+                        var r = this,
+                            i = {
+                                slot_ids: e.join(",")
+                            };
+                        this._initAndSendAdSpadeEvent(f.AAX_AD_AUCTION, t, i);
+                        var o = this._createSlotsFromSlotIds(e, n);
                         return new Promise(function(n) {
-                            r._apstag.fetchBids(i, function(i) {
-                                var o = i.filter(function(t) {
+                            var a = r._stateStore.getState().window.Date,
+                                s = a.now();
+                            r._apstag.fetchBids(o, function(o) {
+                                var l = a.now() - s;
+                                i.aax_latency = l;
+                                var u = o.filter(function(t) {
                                     return t.mediaType === v && (0, d.default)(e, t.slotID)
                                 });
-                                o.length > 0 ? (r._initAndSendAdSpadeEvent(f.AAX_AD_AUCTION_RESPONSE, t, e, o), n(o)) : (r._initAndSendAdSpadeEvent(f.AAX_AD_AUCTION_ERROR, t, e), n([]))
+                                u.length > 0 ? (i.amzniid = u.map(function(e) {
+                                    return e.amzniid
+                                }).join(","), i.amznbid = u.map(function(e) {
+                                    return e.amznbid
+                                }).join(","), r._initAndSendAdSpadeEvent(f.AAX_AD_AUCTION_RESPONSE, t, i), n(u)) : (r._initAndSendAdSpadeEvent(f.AAX_AD_AUCTION_ERROR, t, i), n([]))
                             })
                         })
                     }
@@ -17570,14 +17581,9 @@
                 }, {
                     key: "_initAndSendAdSpadeEvent",
                     value: function(e, t) {
-                        var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-                            r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [],
-                            i = (0, h.initializeAdSpadeEvent)(t);
-                        n && n.length > 0 && (i.slot_ids = n.join(",")), r && r.length > 0 && (i.amzniid = r.map(function(e) {
-                            return e.amzniid
-                        }).join(","), i.amznbid = r.map(function(e) {
-                            return e.amznbid
-                        }).join(",")), (0, h.sendAdSpadeEvent)(this._stateStore, null, e, i)
+                        var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                            r = (0, h.initializeAdSpadeEvent)(t);
+                        (0, h.sendAdSpadeEvent)(this._stateStore, null, e, Object.assign({}, r, n))
                     }
                 }]), e
             }(), function() {
