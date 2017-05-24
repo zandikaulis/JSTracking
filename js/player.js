@@ -9699,7 +9699,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.24-173314+3425194830073a52d2af705ecd50791753a5d417",
+                    app_version: "2017.05.24-185216+17263bc2ed2f3ef78385dfe49a88b6926237220f",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -35442,13 +35442,14 @@
             y = n(657),
             m = n(362),
             g = n(166),
-            b = n(241),
-            E = n(330),
-            T = n(217),
-            S = n(215),
-            P = r(S),
-            C = 16 / 9,
-            w = {
+            b = n(430),
+            E = n(241),
+            T = n(330),
+            S = n(217),
+            P = n(215),
+            C = r(P),
+            w = 16 / 9,
+            k = {
                 onIdentityToggle: d.PropTypes.func.isRequired,
                 shouldShowExtensions: d.PropTypes.bool.isRequired,
                 extensions: d.PropTypes.shape({
@@ -35471,6 +35472,7 @@
                 height: d.PropTypes.number.isRequired,
                 extensionsApi: d.PropTypes.object.isRequired,
                 videoResolution: d.PropTypes.string.isRequired,
+                isLoggedIn: d.PropTypes.bool.isRequired,
                 login: d.PropTypes.string.isRequired,
                 loginId: d.PropTypes.number.isRequired,
                 channel: d.PropTypes.string.isRequired,
@@ -35481,8 +35483,8 @@
                 playerType: d.PropTypes.string.isRequired,
                 trackEvent: d.PropTypes.func.isRequired
             },
-            k = (u = {}, l(u, P.PLAYER_SITE_MINI, !0), l(u, P.PLAYER_CURSE, !0), l(u, P.PLAYER_FRONTPAGE, !0), l(u, P.PLAYER_FACEBOOK, !0), l(u, P.PLAYER_HIGHLIGHTER, !0), l(u, P.PLAYER_PULSE, !0), l(u, P.PLAYER_TWITCH_EVERYWHERE, !0), u),
-            A = function(e) {
+            A = (u = {}, l(u, C.PLAYER_SITE_MINI, !0), l(u, C.PLAYER_CURSE, !0), l(u, C.PLAYER_FRONTPAGE, !0), l(u, C.PLAYER_FACEBOOK, !0), l(u, C.PLAYER_HIGHLIGHTER, !0), l(u, C.PLAYER_PULSE, !0), l(u, C.PLAYER_TWITCH_EVERYWHERE, !0), u),
+            O = function(e) {
                 return {
                     extensions: e.extensions,
                     game: e.streamMetadata.game,
@@ -35490,7 +35492,8 @@
                     height: e.playerDimensions.height,
                     extensionsApi: e.extensions.extensionsApi,
                     videoResolution: e.stats.videoStats.videoResolution,
-                    shouldShowExtensions: e.env.platform !== m.PLATFORM_MOBILE_WEB && !k.hasOwnProperty(e.env.playerType) && e.stream.contentType === g.CONTENT_MODE_LIVE && e.playback.contentShowing && e.online && e.ads.currentMetadata.contentType === b.AdContentTypes.NONE,
+                    shouldShowExtensions: e.env.platform !== m.PLATFORM_MOBILE_WEB && !A.hasOwnProperty(e.env.playerType) && e.stream.contentType === g.CONTENT_MODE_LIVE && e.playback.contentShowing && e.online && e.ads.currentMetadata.contentType === E.AdContentTypes.NONE,
+                    isLoggedIn: e.user.loggedInStatus === b.LOGGED_IN,
                     login: e.user.name,
                     loginId: e.user.id,
                     channel: e.streamMetadata.channelName,
@@ -35502,17 +35505,17 @@
                     trackEvent: e.analyticsTracker.trackEvent
                 }
             },
-            O = function(e) {
+            I = function(e) {
                 return {
                     onIdentityToggle: function(t) {
                         var n = t.id,
                             r = t.token,
-                            i = r.permissionsState === T.EXTENSION_PERMISSION_STATE_GRANTED;
-                        e((0, E.setIdentitySharingForExtension)(n, r.token, !i))
+                            i = r.permissionsState === S.EXTENSION_PERMISSION_STATE_GRANTED;
+                        e((0, T.setIdentitySharingForExtension)(n, r.token, !i))
                     }
                 }
             },
-            I = t.ExtensionsContainerComponent = function(e) {
+            N = t.ExtensionsContainerComponent = function(e) {
                 function t() {
                     o(this, t);
                     var e = a(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -35539,7 +35542,8 @@
                         }, p.default.createElement(y.ExtensionAttribution, {
                             extension: d,
                             onIdentityToggle: this.props.onIdentityToggle,
-                            trackEvent: this._boundTrackEvent
+                            trackEvent: this._boundTrackEvent,
+                            isLoggedIn: this.props.isLoggedIn
                         }), p.default.createElement("div", {
                             className: "extension-overlays"
                         }, p.default.createElement(v.ExtensionOverlay, {
@@ -35594,15 +35598,15 @@
                     value: function(e) {
                         var t = /(\d+)\D*(\d+)/g,
                             n = t.exec(e);
-                        if (!n) return C;
+                        if (!n) return w;
                         var r = parseInt(n[1], 10),
                             i = parseInt(n[2], 10);
-                        return i ? r / i : C
+                        return i ? r / i : w
                     }
                 }]), t
             }(p.default.Component);
-        I.propTypes = w;
-        t.ExtensionsContainer = (0, f.connect)(A, O)(I)
+        N.propTypes = k;
+        t.ExtensionsContainer = (0, f.connect)(O, I)(N)
     }, function(e, t, n) {
         "use strict";
 
@@ -35949,7 +35953,7 @@
                                 relatedTarget: null
                             }, t || {});
                         return n.initMouseEvent(e, r.bubbles, r.cancelable, window, r.ctrlKey, r.altKey, r.shiftKey, r.metaKey, r.button, r.relatedTarget), n
-                    }, window.MouseEvent.prototype = Event.prototype
+                    }, window.MouseEvent.prototype = Event.prototype;
                 }
             }, function(e, t, n) {
                 "use strict";
@@ -36164,6 +36168,7 @@
             N = "#icon_report_flag",
             R = {
                 t: u.PropTypes.func.isRequired,
+                isLoggedIn: u.PropTypes.bool.isRequired,
                 onExtensionReport: u.PropTypes.func,
                 onIdentityToggle: u.PropTypes.func,
                 extension: u.PropTypes.shape({
@@ -36191,7 +36196,7 @@
                     key: "render",
                     value: function() {
                         var e = void 0;
-                        this.props.extension.token.role !== d.EXTENSION_ROLE_BROADCASTER && (e = c.default.createElement(p.UserPermissionsButton, {
+                        this.props.extension.token.role !== d.EXTENSION_ROLE_BROADCASTER && this.props.isLoggedIn && (e = c.default.createElement(p.UserPermissionsButton, {
                             isActive: this.state.dialogState === A,
                             onClick: this._boundOnUserPermissionClicked,
                             extension: this.props.extension
@@ -37306,7 +37311,7 @@
         "use strict";
 
         function r(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
 
         function i(e, t) {
