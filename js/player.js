@@ -9699,7 +9699,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.05.25-001042+454b08f53dc052cdeff4b900418bc6bc3811e64f",
+                    app_version: "2017.05.25-150315+57e811080f226f420d7aabde701f2216e618aead",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -9949,7 +9949,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeHost = "//video-edge-1582a3.sjc01.hls.ttvnw.net"
+        t.trustedSpadeHost = "//video-edge-c08e99.sjc01.hls.ttvnw.net"
     }, function(e, t, n) {
         "use strict";
 
@@ -19886,102 +19886,108 @@
 
         function i(e, t, n, r) {
             function i() {
-                $(t).attr("data-showinfo", r.showInfo);
+                I.push((0, _.subscribe)(n, ["screenMode.isFullScreen", "screenMode.isTheatreMode"], o)), o();
                 var i = r.player;
                 $(t).attr("data-playertype", i), i === a.PLAYER_FRONTPAGE && $(t).on("click", ".js-control-fullscreen-overlay", function() {
                     n.dispatch((0, T.emitOpenStream)())
                 }), $(t).on("click", ".js-watch-twitch", function(t) {
-                    t.preventDefault(), A.then(function(t) {
+                    t.preventDefault(), O.then(function(t) {
                         var r = e.getCurrentTime(),
                             i = t;
                         e.video && r && (i += "?t=" + d.toURLString(Math.round(r))), window.open(i, "_blank"), n.dispatch((0, E.pause)())
                     })
-                }), e.addEventListener(y.ENDED, m), e.addEventListener(y.PLAYING, o), e.addEventListener(g.AD_START, l), O.push((0, _.subscribe)(n, ["viewercount"], function(e) {
+                }), e.addEventListener(y.ENDED, P), e.addEventListener(y.PLAYING, l), e.addEventListener(g.AD_START, c), I.push((0, _.subscribe)(n, ["viewercount"], function(e) {
                     var n = e.viewercount;
                     $(t).attr("data-viewers", n)
-                })), O.push((0, _.subscribe)(n, ["stream"], function(e) {
+                })), I.push((0, _.subscribe)(n, ["stream"], function(e) {
                     var t = e.stream;
                     switch (t.contentType) {
                         case f.CONTENT_MODE_LIVE:
-                            (0, s.channelInfo)(t.channel).then(P), A = Promise.resolve((0, s.channelUrl)(t.channel));
+                            (0, s.channelInfo)(t.channel).then(C), O = Promise.resolve((0, s.channelUrl)(t.channel));
                             break;
                         case h.CONTENT_MODE_VOD:
                             (0, s.videoInfo)(t.videoId).then(function(e) {
-                                (0, s.channelInfo)(e.channel.name).then(P), e.preview && (N = e.preview.replace("320x240", S), w())
-                            }), A = (0, s.videoInfo)(t.videoId).then(function(e) {
+                                (0, s.channelInfo)(e.channel.name).then(C), e.preview && (R = e.preview.replace("320x240", S), k())
+                            }), O = (0, s.videoInfo)(t.videoId).then(function(e) {
                                 return (0, s.videoUrl)(e.channel.name, t.videoId)
                             })
                     }
-                })), O.push((0, _.subscribe)(n, ["screen"], function(e) {
+                })), I.push((0, _.subscribe)(n, ["screen"], function(e) {
                     var n = e.screen;
                     $(t).attr("data-screen", n[0])
-                })), O.push((0, _.subscribe)(n, ["manifestInfo.spectre"], c)), O.push((0, _.subscribe)(n, ["online"], v)), O.push((0, _.subscribe)(n, ["streamMetadata"], function(e) {
+                })), I.push((0, _.subscribe)(n, ["manifestInfo.spectre"], v)), I.push((0, _.subscribe)(n, ["online"], m)), I.push((0, _.subscribe)(n, ["streamMetadata"], function(e) {
                     var t = e.streamMetadata;
                     if (t.preview) {
                         var n = "320x240",
                             r = "{width}x{height}";
-                        N = t.preview.template.replace(new RegExp("(" + n + "|" + r + ")", "g"), S), w()
+                        R = t.preview.template.replace(new RegExp("(" + n + "|" + r + ")", "g"), S), k()
                     }
                 }))
             }
 
             function o() {
-                k()
+                var e = n.getState(),
+                    i = e.screenMode;
+                r.showInfo || i.isTheatreMode || i.isFullScreen ? $(t).attr("data-showinfo", !0) : $(t).attr("data-showinfo", !1)
             }
 
             function l() {
-                k()
+                A()
             }
 
-            function c(e) {
-                var r = e.manifestInfo.spectre;
-                n.getState().online && r ? $(t).attr("data-playlist", "pending") : r ? $(t).attr("data-playlist", !0) : ($(t).attr("data-playlist", !1), C(), $(t).attr("data-loading", !1))
+            function c() {
+                A()
             }
 
             function v(e) {
+                var r = e.manifestInfo.spectre;
+                n.getState().online && r ? $(t).attr("data-playlist", "pending") : r ? $(t).attr("data-playlist", !0) : ($(t).attr("data-playlist", !1), w(), $(t).attr("data-loading", !1))
+            }
+
+            function m(e) {
                 var n = e.online;
                 $(t).attr("data-online", n)
             }
 
-            function m() {
+            function P() {
                 var t = e.getChannel();
-                t && c(n.getState())
+                t && v(n.getState())
             }
 
-            function P(n) {
+            function C(n) {
                 var r = e.getChannel();
-                I = n.video_banner;
+                N = n.video_banner;
                 var i = e.getEnded();
-                i && C(), $(t).attr({
+                i && w(), $(t).attr({
                     "data-channel": r || null,
                     "data-video": e.getVideo() || null
                 })
             }
 
-            function C() {
-                var r = e.getChannel();
-                I && r && $(".js-offline-banner", t).css("background-image", "url('" + I + "')"), n.dispatch((0, b.contentIsShowing)())
-            }
-
             function w() {
-                var r = e.getPaused() || e.getReadyState() === u.HAVE_NOTHING;
-                (n.getState().stream === p.NullContentStream || !e.getAutoplay() && r) && ($(t).attr("data-background", !0), $(".js-video-background-banner", t).css("background-image", "url('" + N + "')")), e.getAutoplay() || n.dispatch((0, b.contentIsShowing)())
+                var r = e.getChannel();
+                N && r && $(".js-offline-banner", t).css("background-image", "url('" + N + "')"), n.dispatch((0, b.contentIsShowing)())
             }
 
             function k() {
+                var r = e.getPaused() || e.getReadyState() === u.HAVE_NOTHING;
+                (n.getState().stream === p.NullContentStream || !e.getAutoplay() && r) && ($(t).attr("data-background", !0), $(".js-video-background-banner", t).css("background-image", "url('" + R + "')")), e.getAutoplay() || n.dispatch((0, b.contentIsShowing)())
+            }
+
+            function A() {
                 $(t).attr("data-background", !1)
             }
-            var A = Promise.reject();
-            A.then(null, function() {
+            var O = Promise.reject();
+            O.then(null, function() {
                 return null
             });
-            var O = [],
-                I = void 0,
-                N = void 0;
+            var I = [],
+                N = void 0,
+                R = void 0;
             this.destroy = function() {
-                $(t).off("click"), O.forEach(function(e) {
+                $(t).off("click"), I.forEach(function(e) {
                     return e()
-                }), O = null
+                }), I = null
             }, i()
         }
         Object.defineProperty(t, "__esModule", {
@@ -20356,8 +20362,8 @@
                         n = t.recommendations;
                     n.type === c.POST_RECOMMENDATIONS_TYPE && 0 !== n.videos.length && ($(".js-video-recommendations", this.$root).html(n.videos.map(function(t, n) {
                         var r = e.$template.clone();
-                        0 === n && (e.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")), e.updateAutoplayProgress(100, Math.round(g / 1e3))), e.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")), r.attr("data-index", n), r.find(".js-recommended-stream__thumbnail").attr("src", t.thumbnailURL),
-                            r.find(".js-recommended-stream__channel").text(t.channelName), r.find(".js-recommended-stream__title").text(t.title);
+                        0 === n && (e.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")),
+                            e.updateAutoplayProgress(100, Math.round(g / 1e3))), e.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")), r.attr("data-index", n), r.find(".js-recommended-stream__thumbnail").attr("src", t.thumbnailURL), r.find(".js-recommended-stream__channel").text(t.channelName), r.find(".js-recommended-stream__title").text(t.title);
                         var i = e._stateStore.getState().lang.langCode,
                             o = {
                                 year: "numeric",
@@ -32373,7 +32379,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.PlaybackSpeedMenu = t.PlaybackSpeedMenuComponent = t.TEXT_DEFAULT = t.TEXT_SPEED = t.PLAYBACK_SPEEDS = void 0;
+        }), t.PlaybackSpeedMenu = t.PlaybackSpeedMenuComponent = t.TEXT_NORMAL = t.TEXT_SPEED = t.PLAYBACK_SPEEDS = void 0;
         var s = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -32404,7 +32410,7 @@
             },
             y = t.PLAYBACK_SPEEDS = Object.freeze([.25, .5, .75, 1, 1.25, 1.5, 2]),
             m = t.TEXT_SPEED = "Speed",
-            g = t.TEXT_DEFAULT = "Default",
+            g = t.TEXT_NORMAL = "Normal",
             b = (0, d.default)({
                 "pl-menu__item": !0,
                 "pl-menu__item--block": !0,
