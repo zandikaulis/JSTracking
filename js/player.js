@@ -9699,7 +9699,7 @@
                     g = v.get(!1),
                     E = v.get(!0);
                 _ = {
-                    app_version: "2017.05.24-214906+56daaa7a3f16bd2144eead11d76bea40c460de6c",
+                    app_version: "2017.05.24-233802+be20c7c407af2adc4c28bf71ae16172c7811edc8",
                     flash_version: d,
                     referrer_url: h,
                     referrer_host: y.host,
@@ -12817,6 +12817,10 @@
                 var e = n.getState(),
                     t = e.streamMetadata;
                 return t.videoId
+            }, je.getBroadcastId = function() {
+                var e = n.getState(),
+                    t = e.manifestInfo;
+                return t.broadcast_id
             }, je.startCast = function() {
                 Fe.load()
             }, je.stopCast = function() {
@@ -13077,7 +13081,8 @@
             }
 
             function f(e) {
-                (0, l.default)(e.volume) && (nt = Math.min(Math.max(e.volume, 0), 1), He.emit(S.VOLUME_CHANGE))
+                (0,
+                    l.default)(e.volume) && (nt = Math.min(Math.max(e.volume, 0), 1), He.emit(S.VOLUME_CHANGE))
             }
 
             function _(e) {
@@ -14667,7 +14672,7 @@
                                 n = e.analyticsTracker;
                             n.trackEvent(v.VIDEO_PLAY_VARIANT_MANIFEST, {
                                 time_since_load_start: Date.now() - t.playSessionStartTime
-                            }), this._emitVariantManifestTracking = !1
+                            }), this._emitVariantManifestTracking = !1;
                         }
                     }
                 }, {
@@ -18172,7 +18177,7 @@
 
         function i(e) {
             var t = (0, s.default)(e);
-            return t.abs = "true" === t.abs, t.suppress = "true" === t.suppress, t.spectre = "true" === t.spectre, t
+            return t.abs = "true" === t.abs, t.suppress = "true" === t.suppress, t.spectre = "true" === t.spectre, t.broadcast_id = parseInt(t.broadcast_id, 10), t
         }
 
         function o(e) {
@@ -19841,7 +19846,8 @@
                 r = e.stream,
                 i = e.window,
                 l = {
-                    volume: n.volume
+                    volume: n.volume,
+                    muted: n.muted
                 };
             r.contentType === a.CONTENT_MODE_VOD ? (l.video = r.videoId, l.collection = t ? t.id : void 0, l.time = d.toURLString(n.currentTime)) : r.contentType === o.CONTENT_MODE_LIVE && (l.channel = r.channel);
             var c = s.playerHost + "/?" + u.toString(l),
