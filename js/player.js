@@ -9706,7 +9706,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.05.25-182148+c4c96fbd6f838b394f18d23637a4da9b644d2636",
+                    app_version: "2017.05.25-182933+51ee96d2d3e023565657aada75b11a1178afa113",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -16960,19 +16960,19 @@
                         var t = this;
                         if (!(this._currentAdsManager.getRemainingTime() > 0)) {
                             var n = e;
-                            return this._aaxManager.fetchBids(e).then(function(e) {
+                            return Promise.resolve().then(function() {
+                                return t._aaxManager.fetchBids(e)
+                            }).then(function(e) {
                                 n = t._aaxManager.getAdRequestContextWithAmazonBids(e, n);
                                 var r = t._stateStore.getState().window.Date;
                                 t._adRequestTime = r.now(), (0, S.sendAdSpadeEvent)(t._stateStore, w, f.AD_REQUEST, (0, S.initializeAdSpadeEvent)(n));
-                                try {
-                                    var i = t._stateStore.getState().window.google,
-                                        o = t._videoContainer.offsetParent,
-                                        a = new i.ima.AdsRequest;
-                                    a.adTagUrl = (0, u.buildIMATags)(n), a.linearAdSlotWidth = o.offsetWidth, a.linearAdSlotHeight = o.offsetHeight, a.nonLinearAdSlotWidth = o.offsetWidth, a.nonLinearAdSlotHeight = o.offsetHeight, t._adsLoader.requestAds(a, n)
-                                } catch (e) {
-                                    var s = (0, S.initializeAdSpadeEvent)(n);
-                                    s.reason = e.message, (0, S.sendAdSpadeEvent)(t._stateStore, w, f.AD_REQUEST_ERROR, s)
-                                }
+                                var i = t._stateStore.getState().window.google,
+                                    o = t._videoContainer.offsetParent,
+                                    a = new i.ima.AdsRequest;
+                                a.adTagUrl = (0, u.buildIMATags)(n), a.linearAdSlotWidth = o.offsetWidth, a.linearAdSlotHeight = o.offsetHeight, a.nonLinearAdSlotWidth = o.offsetWidth, a.nonLinearAdSlotHeight = o.offsetHeight, t._adsLoader.requestAds(a, n)
+                            }).catch(function(e) {
+                                var r = (0, S.initializeAdSpadeEvent)(n);
+                                r.reason = e.message, (0, S.sendAdSpadeEvent)(t._stateStore, w, f.AD_REQUEST_ERROR, r)
                             })
                         }
                     }
