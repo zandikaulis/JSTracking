@@ -666,10 +666,10 @@ window.SiteOptions = {
             "name": "FOLLOWING_COMMUNITIES",
             "groups": [{
                 "weight": 75,
-                "value": "BOTTOM"
+                "value": "bottom"
             }, {
                 "weight": 25,
-                "value": "PRIORITY"
+                "value": "priority"
             }]
         },
         "42f5eea6-c548-4791-b767-9c7e29b73ef6": {
