@@ -9706,7 +9706,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.05.25-165107+87ddd6067638bbdc932b11adfc72416414a8d77c",
+                    app_version: "2017.05.25-180653+07ef4b017df2a8e8429447b2a4b36400b8529ad6",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -37392,18 +37392,7 @@
                 key: "onClickThroughChange",
                 value: function(e) {
                     var t = e.ads;
-                    "" === t.clickThrough ? this.$adOverlay.removeAttr("href") : (this.$adOverlay.attr("href", t.clickThrough), this.$adOverlay.on("click", this.trackClick.bind(this)))
-                }
-            }, {
-                key: "trackClick",
-                value: function() {
-                    var e = this._stateStore.getState(),
-                        t = e.analyticsTracker,
-                        n = e.ads;
-                    t.trackEvent("video_ad_click", {
-                        adblock: n.adblock,
-                        clickThrough: n.clickThrough
-                    })
+                    "" === t.clickThrough ? this.$adOverlay.removeAttr("href") : this.$adOverlay.attr("href", t.clickThrough)
                 }
             }]), t
         }(s.UIStateSubscriber)
@@ -38402,7 +38391,8 @@
                     var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                     a(this, t);
                     var i = s(this, e.call(this));
-                    return b.copy(["resourceStore", "languageUtils", "pluralResolver", "interpolator", "backendConnector"], n, i), i.options = r, i.logger = p.default.create("translator"), i
+                    return b.copy(["resourceStore", "languageUtils", "pluralResolver", "interpolator", "backendConnector"], n, i),
+                        i.options = r, i.logger = p.default.create("translator"), i
                 }
                 return l(t, e), t.prototype.changeLanguage = function(e) {
                     e && (this.language = e)
