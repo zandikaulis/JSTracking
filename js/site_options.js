@@ -125,7 +125,7 @@ window.SiteOptions = {
     "cmrc_channel_box_released": true,
     "cmrc_kick_kick_boom_released": false,
     "is_bk_enabled": true,
-    "bits_promo_enabled": true,
+    "bits_promo_enabled": false,
     "p_cheer_enabled": true,
     "prime_blackfriday_promo_enabled": false,
     "is_onsite_notifs_enabled": true,
