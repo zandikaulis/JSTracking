@@ -662,6 +662,16 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "42c46cf2-6a2e-49cb-9a68-622999710fed": {
+            "name": "FOLLOWING_COMMUNITIES",
+            "groups": [{
+                "weight": 75,
+                "value": "BOTTOM"
+            }, {
+                "weight": 25,
+                "value": "PRIORITY"
+            }]
+        },
         "42f5eea6-c548-4791-b767-9c7e29b73ef6": {
             "name": "CLIENT_BATCH_MIXPANEL",
             "groups": [{
