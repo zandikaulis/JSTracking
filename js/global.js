@@ -16461,7 +16461,6 @@ googletag.cmd = googletag.cmd || [],
                 SOCIAL_COLUMN: "0a340f6e-772a-4e12-a95e-5a984c071107",
                 SOCIAL_RECOMMENDATIONS: "819aed52-3cc1-4747-a840-476a39487a2e",
                 ZACH_MODE: "0a4d513f-0274-4b33-b04f-287521abd51b",
-                GROWTH_SKIP_SEEN_FRIENDS_IN_NOTIFICATIONS: "52cb0929-0af1-45ba-81ef-79d9ae80b342",
                 WT_P: "c097971e-c5fc-4763-a8fa-de04f3d713a7",
                 CHANNEL_CHAT_CTA: "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9",
                 SUB_OPTIONS: "86ad7a91-bf36-46c5-adef-6006a09720a8",
@@ -16513,7 +16512,6 @@ googletag.cmd = googletag.cmd || [],
                 "0a340f6e-772a-4e12-a95e-5a984c071107": "control",
                 "819aed52-3cc1-4747-a840-476a39487a2e": "control",
                 "0a4d513f-0274-4b33-b04f-287521abd51b": "control",
-                "52cb0929-0af1-45ba-81ef-79d9ae80b342": "control",
                 "c097971e-c5fc-4763-a8fa-de04f3d713a7": "no",
                 "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9": "control",
                 "86ad7a91-bf36-46c5-adef-6006a09720a8": "two_page",
@@ -16538,7 +16536,6 @@ googletag.cmd = googletag.cmd || [],
                 SOCIAL_COLUMN: "variant2",
                 SOCIAL_RECOMMENDATIONS: "variant1",
                 LOL_METADATA_EXPERIMENT: "treatment",
-                GROWTH_SKIP_SEEN_FRIENDS_IN_NOTIFICATIONS: "yes",
                 WT_P: "yes",
                 OFFLINE_RECOMMENDATIONS: "yes"
             };
@@ -16595,8 +16592,7 @@ googletag.cmd = googletag.cmd || [],
                 }
             },
             m = function() {
-                cookie.remove("experiment_overrides"),
-                    console.warn("Clearing experiment overrides require a page refresh to take effect.")
+                cookie.remove("experiment_overrides"), console.warn("Clearing experiment overrides require a page refresh to take effect.")
             },
             g = {
                 getExperimentValue: f,
