@@ -9706,7 +9706,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.05.26-193124+ef6fdea4fbcbbb1ca0efd0d69acdec7ecdee82bc",
+                    app_version: "2017.05.26-195909+5fd14936f5a4b2455632af98c3505f171dfae962",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -40539,7 +40539,7 @@
             "This collection is empty.": "This collection is empty.",
             Quality: "Quality",
             Speed: "Speed",
-            Default: "Default",
+            Normal: "Normal",
             "Closed Captions Options": "Closed Captions Options",
             Advanced: "Advanced",
             "Noticed a video playback issue? Let us know!": "Noticed a video playback issue? Let us know!",
@@ -40554,6 +40554,16 @@
             "Most Recent Video": "Most Recent Video",
             Settings: "Settings",
             "Is your video buffering? Try the Auto quality option.": "Is your video buffering? Try the Auto quality option.",
+            "More Info": "More Info",
+            "Grant Permissions": "Grant Permissions",
+            "Revoke Permissions": "Revoke Permissions",
+            "Your Twitch User ID": "Your Twitch User ID",
+            "Allows this extension to know your User ID on Twitch.": "Allows this extension to know your User ID on Twitch.",
+            Grant: "Grant",
+            Revoke: "Revoke",
+            "can receive the following permissions": "can receive the following permissions",
+            "you are revoking the following permissions": "you are revoking the following permissions",
+            "Report Extension": "Report Extension",
             "More from {{channelName}}": "More from {{channelName}}"
         }
     }, function(e, t, n) {
