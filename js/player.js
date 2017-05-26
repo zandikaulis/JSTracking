@@ -9706,7 +9706,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.05.26-004808+0b3619f0f3bcd1459de87a7ca51fb24dc59be40c",
+                    app_version: "2017.05.26-182839+58aa1989e834fafb8359faab6b952d2906b236c1",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -34503,16 +34503,23 @@
         }
 
         function i(e) {
-            var t = (0, u.default)("pl-button", {
-                    "pl-button--status": e.isSubscribed
+            var t = (0, u.default)({
+                    "pl-button": !0,
+                    "pl-button--subscribe": !0,
+                    "pl-button--success": e.isSubscribed
                 }),
-                n = void 0;
-            return n = e.isSubscribed ? e.t("Subscribed") : e.t("Subscribe to {{channelName}}", {
+                n = void 0,
+                r = void 0;
+            return e.isSubscribed ? (n = e.t("Subscribed"), r = n) : (n = e.t("Subscribe to {{channelName}}", {
                 channelName: e.channelName
-            }), a.default.createElement(s.Button, {
+            }), r = e.t("Subscribe")), a.default.createElement(s.Button, {
                 className: t,
                 onClick: e.subscribe
-            }, n)
+            }, a.default.createElement("span", {
+                className: "pl-button__text pl-button__text--desktop"
+            }, n), a.default.createElement("span", {
+                className: "pl-button__text pl-button__text--mobile"
+            }, r))
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -35969,7 +35976,7 @@
                             } catch (e) {
                                 return r.onAnyFailure("failed to parse token payload"), n
                             }
-                            return t;
+                            return t
                         }, this.refreshAuth = function(e) {
                             delete r.timeout;
                             var t = e.token,
@@ -37303,7 +37310,7 @@
             return i(e, [{
                 key: "enableClipsButton",
                 value: function() {
-                    this.clipButtonEnabled = !0, this._toggleClipState(!0);
+                    this.clipButtonEnabled = !0, this._toggleClipState(!0)
                 }
             }, {
                 key: "recordClipIfAble",
@@ -38391,8 +38398,7 @@
                     var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                     a(this, t);
                     var i = s(this, e.call(this));
-                    return b.copy(["resourceStore", "languageUtils", "pluralResolver", "interpolator", "backendConnector"], n, i),
-                        i.options = r, i.logger = p.default.create("translator"), i
+                    return b.copy(["resourceStore", "languageUtils", "pluralResolver", "interpolator", "backendConnector"], n, i), i.options = r, i.logger = p.default.create("translator"), i
                 }
                 return l(t, e), t.prototype.changeLanguage = function(e) {
                     e && (this.language = e)
