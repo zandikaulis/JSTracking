@@ -232,13 +232,13 @@
             he = n(325),
             _e = n(218),
             ve = n(765),
-            ye = n(628),
+            ye = n(429),
             me = n(778),
             ge = n(779),
             be = n(782),
             Ee = n(783),
             Te = n(215),
-            Se = n(606),
+            Se = n(607),
             Pe = n(784),
             Ce = n(785),
             we = n(786),
@@ -9706,7 +9706,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.05.26-191032+5979538e1d1d879c5ea01edb2319a94f8bdf1f17",
+                    app_version: "2017.05.26-193124+ef6fdea4fbcbbb1ca0efd0d69acdec7ecdee82bc",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -19413,10 +19413,10 @@
             y = n(424),
             m = n(427),
             g = n(428),
-            b = n(429),
-            E = n(433),
-            T = n(436),
-            S = n(612),
+            b = n(430),
+            E = n(434),
+            T = n(437),
+            S = n(613),
             P = n(640),
             C = n(652),
             w = n(654),
@@ -19436,9 +19436,9 @@
             F = r(B),
             V = n(275),
             H = i(V),
-            q = n(437),
+            q = n(438),
             G = i(q),
-            Y = n(574),
+            Y = n(575),
             W = n(307),
             K = n(674),
             z = n(648),
@@ -21430,13 +21430,22 @@
             }
         }
 
-        function o(e, t) {
+        function o(e, t, n) {
+            return t in e ? Object.defineProperty(e, t, {
+                value: n,
+                enumerable: !0,
+                configurable: !0,
+                writable: !0
+            }) : e[t] = n, e
+        }
+
+        function a(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.PlayerUIClosedCaption = void 0;
-        var a = function() {
+        var s = function() {
                 function e(e, t) {
                     var n = [],
                         r = !0,
@@ -21461,7 +21470,7 @@
                     throw new TypeError("Invalid attempt to destructure non-iterable instance")
                 }
             }(),
-            s = function() {
+            l = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -21472,24 +21481,29 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(117),
-            u = i(l),
-            c = n(402),
-            d = i(c),
-            p = n(70),
-            f = i(p),
-            h = n(348),
-            _ = n(352),
-            v = r(_),
-            y = n(182),
-            m = ["top", "bottom", "textAlign", "fontSize", "lineHeight"],
-            g = "player-captions-row",
-            b = /\r?\n|\r/g;
+            u = n(117),
+            c = i(u),
+            d = n(402),
+            p = i(d),
+            f = n(70),
+            h = i(f),
+            _ = n(348),
+            v = n(352),
+            y = r(v),
+            m = n(182),
+            g = n(429),
+            b = ["top", "bottom", "textAlign", "fontSize", "lineHeight"],
+            E = "player-captions-row",
+            T = /\r?\n|\r/g,
+            S = "custom",
+            P = ["font", "fontOpacity", "alignment", "verticalPosition", "backgroundOpacity", "windowOpacity"],
+            C = ["fontColorName", "edge", "backgroundColorName", "windowColorName"],
+            w = ["fontUnderline", "fontBold", "fontItalic"];
         t.PlayerUIClosedCaption = function() {
             function e(t, n) {
-                o(this, e), this._stateStore = t, this._root = n, this._initDefaults(), this._initHandlers(), this.unsubscribe = this._subscribe()
+                a(this, e), this._stateStore = t, this._root = n, this._initDefaults(), this._initHandlers(), this.unsubscribe = this._subscribe(), this._initCustomCaptionsForm()
             }
-            return s(e, [{
+            return l(e, [{
                 key: "_initDefaults",
                 value: function() {
                     var e = this._captionsState();
@@ -21498,16 +21512,26 @@
             }, {
                 key: "_initHandlers",
                 value: function() {
-                    $(".js-control-cc", this._root).on("click", this.toggleCCStatus.bind(this))
+                    $(".js-control-cc", this._root).on("click", this.toggleCCStatus.bind(this)), $(".js-cc-preset", this._root).on("click", this.selectPreset.bind(this)), $(".js-cc-open-modal", this._root).on("click", this.openCCModal.bind(this)), $(".js-cc-modal-container", this._root).on("click", function(e) {
+                        e.target === this && $(this).attr("data-state", "closed")
+                    }), $(".js-cc-custom-modal-dismiss", this._root).on("click", function() {
+                        $(this).closest(".js-cc-modal-container").attr("data-state", "closed")
+                    }), $(".player-tabs__item", this._root).on("click", function(e) {
+                        $(".player-tabs__item--active").removeClass("player-tabs__item--active");
+                        var t = $(e.target).closest(".player-tabs__item");
+                        t.addClass("player-tabs__item--active");
+                        var n = t.attr("data-tab");
+                        t.closest(".js-cc-modal").attr("data-tab-selected", n)
+                    }), this.setCurrentPreset()
                 }
             }, {
                 key: "_subscribe",
                 value: function() {
                     var e = this;
-                    return (0, y.subscribe)(this._stateStore, ["captions"], function(t, n) {
+                    return (0, m.subscribe)(this._stateStore, ["captions"], function(t, n) {
                         var r = t.captions,
                             i = n.captions;
-                        r.available !== i.available && e.showCCAvailability(r.available), r.enabled !== i.enabled && (e.setCCIconStatus(r.enabled), e.showCaption(r)), r.data !== i.data && e.showCaption(r), r.preset === i.preset && r.style === i.style || e.applyCCStyle()
+                        r.available !== i.available && e.showCCAvailability(r.available), r.enabled !== i.enabled && (e.setCCIconStatus(r.enabled), e.showCaption(r)), r.data !== i.data && e.showCaption(r), r.preset !== i.preset && (e.setCurrentPreset(), e.setCurrentStyles()), r.preset === i.preset && r.style === i.style || e.applyCCStyle()
                     })
                 }
             }, {
@@ -21516,31 +21540,116 @@
                     return this._stateStore.getState().captions
                 }
             }, {
+                key: "_initCustomCaptionsForm",
+                value: function() {
+                    var e = this,
+                        t = this._stateStore.getState().captions.style;
+                    C.forEach(function(n) {
+                        e._setRadioAttribute(n, t)
+                    }), P.forEach(function(n) {
+                        e._setDropdownAttribute(n, t)
+                    }), w.forEach(function(n) {
+                        e._setCheckboxAttribute(n, t)
+                    }), $(".js-cc-modal", this._root).on("change", ".js-cc-dropdown", function(t) {
+                        var n = $(t.target);
+                        e._stateStore.dispatch((0, _.setCaptionsPreset)(S, o({}, n.attr("name"), n.val())))
+                    }), $(".js-cc-modal", this._root).on("click", ".js-cc-radio", function(t) {
+                        var n = $(t.target);
+                        e._stateStore.dispatch((0, _.setCaptionsPreset)(S, o({}, n.attr("name"), n.val())))
+                    }), $(".js-cc-modal", this._root).on("click", ".js-cc-checkbox", function(t) {
+                        var n = $(t.target),
+                            r = y.presetMap["white-on-black"];
+                        e._stateStore.dispatch((0, _.setCaptionsPreset)(S, o({}, n.attr("name"), n.prop("checked") ? n.val() : r[n.attr("name")])))
+                    }), $(".js-cc-font-size", this._root).on("click", function(t) {
+                        var n = y.fontSizeMap[$(t.target).val()],
+                            r = e._stateStore.getState().captions.style.fontSize,
+                            i = r + parseInt(n, 10);
+                        e._stateStore.dispatch((0, _.setCaptionsPreset)(S, {
+                            fontSize: i
+                        }))
+                    })
+                }
+            }, {
+                key: "_setDropdownAttribute",
+                value: function(e, t) {
+                    $(".js-cc-dropdown", this._root).filter('[name="' + e + '"]').val(t[e])
+                }
+            }, {
+                key: "_setRadioAttribute",
+                value: function(e, t) {
+                    $(".js-cc-radio", this._root).filter('[name="' + e + '"][value="' + t[e] + '"]').prop("checked", !0)
+                }
+            }, {
+                key: "_setCheckboxAttribute",
+                value: function(e, t) {
+                    var n = $(".js-cc-checkbox", this._root).filter('[name="' + e + '"]'),
+                        r = t[e] === n.val();
+                    n.prop("checked", r)
+                }
+            }, {
+                key: "selectPreset",
+                value: function(e) {
+                    var t = $(e.target).closest(".js-cc-preset").attr("data-preset");
+                    this._stateStore.dispatch((0, _.setCaptionsPreset)(t, y.presetMap[t]))
+                }
+            }, {
+                key: "setCurrentPreset",
+                value: function() {
+                    var e = this._stateStore.getState().captions.preset;
+                    $(".js-cc-preset", this._root).each(function(t, n) {
+                        var r = $(n).attr("data-preset") === e;
+                        $(n).toggleClass("js-cc-preset-selected", r)
+                    })
+                }
+            }, {
+                key: "openCCModal",
+                value: function() {
+                    $(".js-cc-modal-container", this._root).attr("data-state", "open"), this.hideMenu()
+                }
+            }, {
+                key: "hideMenu",
+                value: function() {
+                    this._stateStore.dispatch((0, g.showSettingsMenu)(!1))
+                }
+            }, {
+                key: "setCurrentStyles",
+                value: function() {
+                    var e = this,
+                        t = this._stateStore.getState().captions.style;
+                    P.forEach(function(n) {
+                        e._setDropdownAttribute(n, t)
+                    }), C.forEach(function(n) {
+                        e._setRadioAttribute(n, t)
+                    }), w.forEach(function(n) {
+                        e._setCheckboxAttribute(n, t)
+                    })
+                }
+            }, {
                 key: "appendToDocumentFragment",
                 value: function(e, t) {
                     if (t && !(t.length < 1)) {
                         var n = document.createElement("div");
-                        return n.innerText = t, n.className = g, e.appendChild(n), e
+                        return n.innerText = t, n.className = E, e.appendChild(n), e
                     }
                 }
             }, {
                 key: "applyCCStyle",
                 value: function() {
                     var e = this._stateStore.getState().captions.style,
-                        t = v.calculateRGBA(v.fontColorMap[e.fontColorName].fontColorValue, v.opacityMap[e.fontOpacity].opacityValue),
+                        t = y.calculateRGBA(y.fontColorMap[e.fontColorName].fontColorValue, y.opacityMap[e.fontOpacity].opacityValue),
                         n = {
                             color: t,
-                            animation: v.opacityMap[e.fontOpacity].animation
+                            animation: y.opacityMap[e.fontOpacity].animation
                         },
-                        r = v.calculateRGBA(v.backgroundColorMap[e.backgroundColorName].backgroundColorValue, v.opacityMap[e.backgroundOpacity].opacityValue),
-                        i = (0, u.default)({}, e, n, v.fontMap[e.font], v.edgeMap[e.edge], v.verticalPositionMap[e.verticalPosition], v.fontUnderlineMap[e.fontUnderline], v.fontItalicMap[e.fontItalic], v.fontBoldMap[e.fontBold], v.alignmentMap[e.alignment], {
+                        r = y.calculateRGBA(y.backgroundColorMap[e.backgroundColorName].backgroundColorValue, y.opacityMap[e.backgroundOpacity].opacityValue),
+                        i = (0, c.default)({}, e, n, y.fontMap[e.font], y.edgeMap[e.edge], y.verticalPositionMap[e.verticalPosition], y.fontUnderlineMap[e.fontUnderline], y.fontItalicMap[e.fontItalic], y.fontBoldMap[e.fontBold], y.alignmentMap[e.alignment], {
                             backgroundColor: r
                         }),
-                        o = (0, d.default)(i, m);
+                        o = (0, p.default)(i, b);
                     $(".js-player-captions", this._root).css(o);
-                    var a = (0, f.default)(i, m);
+                    var a = (0, h.default)(i, b);
                     $(".js-player-captions-container").css(a);
-                    var s = v.calculateRGBA(v.backgroundColorMap[e.windowColorName].backgroundColorValue, v.opacityMap[e.windowOpacity].opacityValue);
+                    var s = y.calculateRGBA(y.backgroundColorMap[e.windowColorName].backgroundColorValue, y.opacityMap[e.windowOpacity].opacityValue);
                     $(".js-player-captions-window").css({
                         backgroundColor: s
                     }), this.setFontSizeStatus(e.fontSize)
@@ -21568,7 +21677,7 @@
                             var n = t.char,
                                 r = t.col;
                             0 === r && e.push("");
-                            var i = a(n, 1),
+                            var i = s(n, 1),
                                 o = i[0];
                             return e[e.length - 1] += o ? o : "", e
                         };
@@ -21581,7 +21690,7 @@
                 value: function(e) {
                     var t = this,
                         n = document.createDocumentFragment();
-                    return String(e).split(b).forEach(function(e) {
+                    return String(e).split(T).forEach(function(e) {
                         return t.appendToDocumentFragment(n, e)
                     }), n
                 }
@@ -21589,7 +21698,7 @@
                 key: "setFontSizeStatus",
                 value: function(e) {
                     var t = $(".js-cc-font-size", this._root);
-                    t.filter('[value="increment"]').prop("disabled", e === v.fontSizeMap.max), t.filter('[value="decrement"]').prop("disabled", e === v.fontSizeMap.min)
+                    t.filter('[value="increment"]').prop("disabled", e === y.fontSizeMap.max), t.filter('[value="decrement"]').prop("disabled", e === y.fontSizeMap.min)
                 }
             }, {
                 key: "setCCIconStatus",
@@ -21619,7 +21728,7 @@
                 key: "toggleCCStatus",
                 value: function() {
                     var e = this._captionsState().enabled;
-                    this._stateStore.getState().analyticsTracker.trackEvent("player_click_cc"), this._stateStore.dispatch((0, h.setCaptionsEnabled)(!e))
+                    this._stateStore.getState().analyticsTracker.trackEvent("player_click_cc"), this._stateStore.dispatch((0, _.setCaptionsEnabled)(!e))
                 }
             }, {
                 key: "destroy",
@@ -21628,6 +21737,28 @@
                 }
             }]), e
         }()
+    }, function(e, t) {
+        "use strict";
+
+        function n(e) {
+            return {
+                type: i,
+                value: e
+            }
+        }
+
+        function r() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            return {
+                type: o,
+                value: e
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.setMiniPlayerMode = n, t.showSettingsMenu = r;
+        var i = t.ACTION_SET_MINIPLAYER_MODE = "set miniplayer",
+            o = t.ACTION_SHOW_SETTINGS_MENU = "show settings menu"
     }, function(e, t, n) {
         "use strict";
 
@@ -21645,25 +21776,16 @@
             }
         }
 
-        function o(e, t, n) {
-            return t in e ? Object.defineProperty(e, t, {
-                value: n,
-                enumerable: !0,
-                configurable: !0,
-                writable: !0
-            }) : e[t] = n, e
-        }
-
-        function a(e, t) {
+        function o(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
 
-        function s(e, t) {
+        function a(e, t) {
             if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
             return !t || "object" != typeof t && "function" != typeof t ? e : t
         }
 
-        function l(e, t) {
+        function s(e, t) {
             if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
             e.prototype = Object.create(t && t.prototype, {
                 constructor: {
@@ -21676,8 +21798,8 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.PlayerUISettings = t.CC_INTRO_POPUP_SEEN_KEY = void 0;
-        var u = function() {
+        }), t.PlayerUISettings = void 0;
+        var l = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -21688,7 +21810,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            c = function e(t, n, r) {
+            u = function e(t, n, r) {
                 null === t && (t = Function.prototype);
                 var i = Object.getOwnPropertyDescriptor(t, n);
                 if (void 0 === i) {
@@ -21699,41 +21821,35 @@
                 var a = i.get;
                 if (void 0 !== a) return a.call(r)
             },
-            d = n(117),
-            p = i(d),
-            f = n(119),
-            h = i(f),
-            _ = n(167),
-            v = r(_),
-            y = n(430),
-            m = i(y),
-            g = n(313),
-            b = r(g),
-            E = n(327),
-            T = n(431),
-            S = n(348),
-            P = n(352),
-            C = n(411),
-            w = n(177),
-            k = r(w),
-            A = n(178),
-            O = r(A),
-            I = n(241),
-            N = "This video quality is only available to subscribers. Subscribe now to watch and support %s.",
-            R = "custom",
-            M = ["font", "fontOpacity", "alignment", "verticalPosition", "backgroundOpacity", "windowOpacity"],
-            L = ["fontColorName", "edge", "backgroundColorName", "windowColorName"],
-            D = ["fontUnderline", "fontBold", "fontItalic"];
-        t.CC_INTRO_POPUP_SEEN_KEY = "cc-intro-popup-seen", t.PlayerUISettings = function(e) {
-            function t(e, n, r, i, o, l) {
-                a(this, t);
-                var u = s(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return u._player = e, u._root = n, u._stateStore = r, u._analytics = i, u._controlsDisplay = o, u._options = l, u._subscribePlayback(), u._subscribeQuality(), u._subscribeKraken(), u._initEvents(), u._initDom(), u._initCustomCaptionsForm(), u
+            c = n(117),
+            d = i(c),
+            p = n(119),
+            f = i(p),
+            h = n(167),
+            _ = r(h),
+            v = n(431),
+            y = i(v),
+            m = n(313),
+            g = r(m),
+            b = n(327),
+            E = n(432),
+            T = n(411),
+            S = n(177),
+            P = r(S),
+            C = n(178),
+            w = r(C),
+            k = n(241),
+            A = "This video quality is only available to subscribers. Subscribe now to watch and support %s.";
+        t.PlayerUISettings = function(e) {
+            function t(e, n, r, i, s, l) {
+                o(this, t);
+                var u = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+                return u._player = e, u._root = n, u._stateStore = r, u._analytics = i, u._controlsDisplay = s, u._options = l, u._subscribePlayback(), u._subscribeQuality(), u._subscribeKraken(), u._initEvents(), u._initDom(), u
             }
-            return l(t, e), u(t, [{
+            return s(t, e), l(t, [{
                 key: "_initEvents",
                 value: function() {
-                    this._player.addEventListener(O.LOADSTART, this.onLoadStart.bind(this)), this._player.addEventListener(O.LOADED_METADATA, this.onLoadedMetadata.bind(this)), this._player.addEventListener(O.SEEKED, this.onSeeked.bind(this)), this._player.addEventListener(k.QUALITIES_CHANGE, this.onQualitiesChange.bind(this)), this._player.addEventListener(k.RESTRICTED, this.onRestricted.bind(this))
+                    this._player.addEventListener(w.LOADSTART, this.onLoadStart.bind(this)), this._player.addEventListener(w.LOADED_METADATA, this.onLoadedMetadata.bind(this)), this._player.addEventListener(w.SEEKED, this.onSeeked.bind(this)), this._player.addEventListener(P.QUALITIES_CHANGE, this.onQualitiesChange.bind(this)), this._player.addEventListener(P.RESTRICTED, this.onRestricted.bind(this))
                 }
             }, {
                 key: "_initDom",
@@ -21744,29 +21860,19 @@
                             r = n.quality,
                             i = n.analyticsTracker,
                             o = $(t.currentTarget).val(),
-                            a = (0, h.default)(r.available, function(e) {
+                            a = (0, f.default)(r.available, function(e) {
                                 return e.group === o
                             });
-                        i.trackEvent("player_click_quality_change"), e._stateStore.dispatch((0, E.selectQuality)(o, a.bandwidth)), e._stateStore.dispatch((0, E.setPreferredQuality)(a)), "auto" === o && e.showQualityFlag("Auto"), e.hideMenu()
-                    }), $(this._root).on("click", ".js-menu-button", this.toggleMenu.bind(this)), new m.default(".js-copy-url", {
+                        i.trackEvent("player_click_quality_change"), e._stateStore.dispatch((0, b.selectQuality)(o, a.bandwidth)), e._stateStore.dispatch((0, b.setPreferredQuality)(a)), "auto" === o && e.showQualityFlag("Auto"), e.hideMenu()
+                    }), $(this._root).on("click", ".js-menu-button", this.toggleMenu.bind(this)), new y.default(".js-copy-url", {
                         text: function() {
-                            var t = b.toURLString(e._player.getCurrentTime()),
+                            var t = g.toURLString(e._player.getCurrentTime()),
                                 n = e._stateStore.getState().streamMetadata.url + "?t=" + t;
                             return e.hideMenu(), n
                         }
                     }), $(this._root).on("click", function(t) {
                         $(t.target).closest(".js-menu, .js-menu-button").length || e.hideMenu()
-                    }), $(window).on("blur", this.hideMenu.bind(this)), $(this._root).on("submit", ".js-video-issue-form", this.onSubmitVideoIssueReport.bind(this)), $(".js-cc-preset", this._root).on("click", this.selectPreset.bind(this)), $(".js-feedback-cancel", this._root).on("click", this.hideLeaveFeedbackMenu.bind(this)), $(".js-cc-open-modal", this._root).on("click", this.openCCModal.bind(this)), $(".js-cc-modal-container", this._root).on("click", function(e) {
-                        e.target === this && $(this).attr("data-state", "closed")
-                    }), $(".js-cc-custom-modal-dismiss", this._root).on("click", function() {
-                        $(this).closest(".js-cc-modal-container").attr("data-state", "closed")
-                    }), $(".player-tabs__item", this._root).on("click", function(e) {
-                        $(".player-tabs__item--active").removeClass("player-tabs__item--active");
-                        var t = $(e.target).closest(".player-tabs__item");
-                        t.addClass("player-tabs__item--active");
-                        var n = t.attr("data-tab");
-                        t.closest(".js-cc-modal").attr("data-tab-selected", n)
-                    }), this.setCurrentPreset(), this._subscribeCaptions()
+                    }), $(window).on("blur", this.hideMenu.bind(this)), $(this._root).on("submit", ".js-video-issue-form", this.onSubmitVideoIssueReport.bind(this)), $(".js-feedback-cancel", this._root).on("click", this.hideLeaveFeedbackMenu.bind(this))
                 }
             }, {
                 key: "_subscribeKraken",
@@ -21801,89 +21907,6 @@
                     })
                 }
             }, {
-                key: "_subscribeCaptions",
-                value: function() {
-                    var e = this;
-                    this.subscribe(this._stateStore, ["captions"], function(t, n) {
-                        var r = t.captions,
-                            i = n.captions;
-                        r.preset !== i.preset && (e.setCurrentPreset(), e.setCurrentStyles())
-                    })
-                }
-            }, {
-                key: "_initCustomCaptionsForm",
-                value: function() {
-                    var e = this,
-                        t = this._stateStore.getState().captions.style;
-                    L.forEach(function(n) {
-                        e._setRadioAttribute(n, t)
-                    }), M.forEach(function(n) {
-                        e._setDropdownAttribute(n, t)
-                    }), D.forEach(function(n) {
-                        e._setCheckboxAttribute(n, t)
-                    }), $(".js-cc-modal", this._root).on("change", ".js-cc-dropdown", function(t) {
-                        var n = $(t.target);
-                        e._stateStore.dispatch((0, S.setCaptionsPreset)(R, o({}, n.attr("name"), n.val())))
-                    }), $(".js-cc-modal", this._root).on("click", ".js-cc-radio", function(t) {
-                        var n = $(t.target);
-                        e._stateStore.dispatch((0, S.setCaptionsPreset)(R, o({}, n.attr("name"), n.val())))
-                    }), $(".js-cc-modal", this._root).on("click", ".js-cc-checkbox", function(t) {
-                        var n = $(t.target);
-                        e._stateStore.dispatch((0, S.setCaptionsPreset)(R, o({}, n.attr("name"), n.prop("checked") ? n.val() : P.presetMap["white-on-black"][n.attr("name")])))
-                    }), $(".js-cc-font-size", this._root).on("click", function(t) {
-                        var n = P.fontSizeMap[$(t.target).val()],
-                            r = e._stateStore.getState().captions.style.fontSize,
-                            i = r + parseInt(n, 10);
-                        e._stateStore.dispatch((0, S.setCaptionsPreset)(R, {
-                            fontSize: i
-                        }))
-                    })
-                }
-            }, {
-                key: "openCCModal",
-                value: function() {
-                    $(".js-cc-modal-container", this._root).attr("data-state", "open"), this.hideMenu()
-                }
-            }, {
-                key: "setCurrentPreset",
-                value: function() {
-                    var e = this._stateStore.getState().captions.preset;
-                    $(".js-cc-preset", this._root).each(function(t, n) {
-                        var r = $(n).attr("data-preset") === e;
-                        $(n).toggleClass("js-cc-preset-selected", r)
-                    })
-                }
-            }, {
-                key: "setCurrentStyles",
-                value: function() {
-                    var e = this,
-                        t = this._stateStore.getState().captions.style;
-                    M.forEach(function(n) {
-                        e._setDropdownAttribute(n, t)
-                    }), L.forEach(function(n) {
-                        e._setRadioAttribute(n, t)
-                    }), D.forEach(function(n) {
-                        e._setCheckboxAttribute(n, t)
-                    })
-                }
-            }, {
-                key: "_setDropdownAttribute",
-                value: function(e, t) {
-                    $(".js-cc-dropdown", this._root).filter('[name="' + e + '"]').val(t[e])
-                }
-            }, {
-                key: "_setRadioAttribute",
-                value: function(e, t) {
-                    $(".js-cc-radio", this._root).filter('[name="' + e + '"][value="' + t[e] + '"]').prop("checked", !0)
-                }
-            }, {
-                key: "_setCheckboxAttribute",
-                value: function(e, t) {
-                    var n = $(".js-cc-checkbox", this._root).filter('[name="' + e + '"]'),
-                        r = t[e] === n.val();
-                    n.prop("checked", r)
-                }
-            }, {
                 key: "onLoadStart",
                 value: function() {
                     this.resetVideoIssueReport()
@@ -21906,7 +21929,7 @@
                     if (t.current !== this._previousQuality) {
                         this._previousQuality = t.current, $(".js-quality", this._root).val(t.current);
                         var n = $(".js-quality option:selected", this._root).text();
-                        this.showQualityFlag(n), this._controlsDisplay.showControls(v.qualityChangeDuration), this._qualityChangeExpected = !1
+                        this.showQualityFlag(n), this._controlsDisplay.showControls(_.qualityChangeDuration), this._qualityChangeExpected = !1
                     }
                 }
             }, {
@@ -21918,7 +21941,7 @@
                     var r = $(".js-quality-display-contain", this._root);
                     r.attr("data-q", "show"), n.setTimeout(function() {
                         r.attr("data-q", "hide")
-                    }, v.qualityChangeDuration)
+                    }, _.qualityChangeDuration)
                 }
             }, {
                 key: "onQualitiesChange",
@@ -21959,12 +21982,6 @@
                     $(".js-menu", this._root).attr("data-state", "closed"), $(".js-menu-button", this._root).attr("data-state", "menu-closed"), $(this._root).attr("data-issettingsopen", !1)
                 }
             }, {
-                key: "selectPreset",
-                value: function(e) {
-                    var t = $(e.target).closest(".js-cc-preset").attr("data-preset");
-                    this._stateStore.dispatch((0, S.setCaptionsPreset)(t, P.presetMap[t]))
-                }
-            }, {
                 key: "onSubmitVideoIssueReport",
                 value: function(e) {
                     e.preventDefault();
@@ -21982,7 +21999,7 @@
                         r = {
                             issue: e.issue
                         };
-                    r = (0, p.default)(r, this._player.getVideoInfo()), this._analytics.trackEvent("vid_issue_report", r), this.showLeaveFeedbackMenu(), n.setTimeout(this.hideMenu.bind(this), v.reportHideDelay), n.setTimeout(this.resetVideoIssueReport.bind(this), v.reportHideDelay + 200)
+                    r = (0, d.default)(r, this._player.getVideoInfo()), this._analytics.trackEvent("vid_issue_report", r), this.showLeaveFeedbackMenu(), n.setTimeout(this.hideMenu.bind(this), _.reportHideDelay), n.setTimeout(this.resetVideoIssueReport.bind(this), _.reportHideDelay + 200)
                 }
             }, {
                 key: "showAdTriggers",
@@ -21990,22 +22007,22 @@
                     var e = this._stateStore.getState().user,
                         t = e.loggedInStatus,
                         n = e.isStaff;
-                    t === T.LOGGED_IN && n ? ($(".trigger-advertisement").show(), $(".player-ad-trigger__preroll").on("click", this.callAdManagerForPreroll.bind(this)), $(".player-ad-trigger__midroll").on("click", this.callAdManagerForMidroll.bind(this)), $(".player-ad-trigger__postroll").on("click", this.callAdManagerForPostroll.bind(this))) : $(".trigger-advertisement").hide()
+                    t === E.LOGGED_IN && n ? ($(".trigger-advertisement").show(), $(".player-ad-trigger__preroll").on("click", this.callAdManagerForPreroll.bind(this)), $(".player-ad-trigger__midroll").on("click", this.callAdManagerForMidroll.bind(this)), $(".player-ad-trigger__postroll").on("click", this.callAdManagerForPostroll.bind(this))) : $(".trigger-advertisement").hide()
                 }
             }, {
                 key: "callAdManagerForPreroll",
                 value: function() {
-                    this._stateStore.dispatch((0, I.requestAds)(I.AdRollTypes.PREROLL, I.DEFAULT_AD_DURATION, !0))
+                    this._stateStore.dispatch((0, k.requestAds)(k.AdRollTypes.PREROLL, k.DEFAULT_AD_DURATION, !0))
                 }
             }, {
                 key: "callAdManagerForMidroll",
                 value: function() {
-                    this._stateStore.dispatch((0, I.requestAds)(I.AdRollTypes.MIDROLL, I.DEFAULT_AD_DURATION, !0))
+                    this._stateStore.dispatch((0, k.requestAds)(k.AdRollTypes.MIDROLL, k.DEFAULT_AD_DURATION, !0))
                 }
             }, {
                 key: "callAdManagerForPostroll",
                 value: function() {
-                    this._stateStore.dispatch((0, I.requestAds)(I.AdRollTypes.POSTROLL, I.DEFAULT_AD_DURATION, !0))
+                    this._stateStore.dispatch((0, k.requestAds)(k.AdRollTypes.POSTROLL, k.DEFAULT_AD_DURATION, !0))
                 }
             }, {
                 key: "showLeaveFeedbackMenu",
@@ -22032,16 +22049,16 @@
                 key: "showLiveQualityChansubOverlay",
                 value: function() {
                     $(".js-player-product-overlay", this._root).attr("data-active", !0), $(".js-player-product-close", this._root).attr("data-active", !0);
-                    var e = this._stateStore.getState().lang.translate(N);
+                    var e = this._stateStore.getState().lang.translate(A);
                     e = e.replace("%s", this._options.channel), $(".js-player-product p", this._root).text(e), $(".js-player-product .purchase_button", this._root).attr("href", "http://www.twitch.tv/" + this._options.channel + "/subscribe?ref=chansub_overlay_subscribe")
                 }
             }, {
                 key: "destroy",
                 value: function() {
-                    c(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "destroy", this).call(this), $(this._root).off("click"), $(this._root).off("change"), $(this._root).off("submit"), $(window).off("blur")
+                    u(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "destroy", this).call(this), $(this._root).off("click"), $(this._root).off("change"), $(this._root).off("submit"), $(window).off("blur")
                 }
             }]), t
-        }(C.UIStateSubscriber)
+        }(T.UIStateSubscriber)
     }, function(e, t, n) {
         var r, r;
         /*!
@@ -22514,7 +22531,7 @@
         }), t.NOT_LOGGED_IN = t.LOGGED_IN = t.UNKNOWN = void 0, t.user = i;
         var o = n(116),
             a = r(o),
-            s = n(432),
+            s = n(433),
             l = t.UNKNOWN = "unknown",
             u = t.LOGGED_IN = "logged in",
             c = t.NOT_LOGGED_IN = "not logged in",
@@ -22575,8 +22592,8 @@
             a = n(167),
             s = r(a),
             l = n(408),
-            u = n(434),
-            c = n(435),
+            u = n(435),
+            c = n(436),
             d = n(215),
             p = n(182);
         t.PlayerUIControlsDisplay = function() {
@@ -22695,18 +22712,18 @@
             u = r(l),
             c = n(259),
             d = r(c),
-            p = n(437),
+            p = n(438),
             f = r(p),
-            h = n(574),
-            _ = n(594),
-            v = n(596),
-            y = n(597),
-            m = n(598),
+            h = n(575),
+            _ = n(595),
+            v = n(597),
+            y = n(598),
+            m = n(599),
             g = n(218),
             b = n(328),
-            E = n(602),
-            T = n(604),
-            S = n(605),
+            E = n(603),
+            T = n(605),
+            S = n(606),
             P = {
                 bufferLength: l.PropTypes.number,
                 currentTime: l.PropTypes.number,
@@ -22965,18 +22982,18 @@
         t.Seekbar = (0, h.connect)(C, w)(A)
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(438)
+        e.exports = n(439)
     }, function(e, t, n) {
         "use strict";
-        var r = n(439),
-            i = n(443),
-            o = n(565),
-            a = n(464),
-            s = n(461),
-            l = n(570),
-            u = n(571),
-            c = n(572),
-            d = n(573);
+        var r = n(440),
+            i = n(444),
+            o = n(566),
+            a = n(465),
+            s = n(462),
+            l = n(571),
+            u = n(572),
+            c = n(573),
+            d = n(574);
         n(284);
         i.inject();
         var p = {
@@ -23062,9 +23079,9 @@
             for (; t.length; e = t.pop()) s(e, e._hostNode);
             return e._hostNode
         }
-        var d = n(440),
-            p = n(441),
-            f = n(442),
+        var d = n(441),
+            p = n(442),
+            f = n(443),
             h = (n(281), p.ID_ATTRIBUTE_NAME),
             _ = f,
             v = "__reactInternalInstance$" + Math.random().toString(36).slice(2),
@@ -23093,7 +23110,7 @@
         function r(e, t) {
             return (e & t) === t
         }
-        var i = n(440),
+        var i = n(441),
             o = (n(281), {
                 MUST_USE_PROPERTY: 1,
                 HAS_BOOLEAN_VALUE: 4,
@@ -23170,25 +23187,25 @@
                 return new f(e)
             }), m.Updates.injectReconcileTransaction(g), m.Updates.injectBatchingStrategy(v), m.Component.injectEnvironment(c))
         }
-        var i = n(444),
-            o = n(445),
-            a = n(460),
-            s = n(472),
-            l = n(473),
-            u = n(478),
-            c = n(479),
-            d = n(492),
-            p = n(439),
-            f = n(536),
-            h = n(537),
-            _ = n(538),
-            v = n(539),
-            y = n(540),
-            m = n(543),
-            g = n(544),
-            b = n(552),
-            E = n(553),
-            T = n(554),
+        var i = n(445),
+            o = n(446),
+            a = n(461),
+            s = n(473),
+            l = n(474),
+            u = n(479),
+            c = n(480),
+            d = n(493),
+            p = n(440),
+            f = n(537),
+            h = n(538),
+            _ = n(539),
+            v = n(540),
+            y = n(541),
+            m = n(544),
+            g = n(545),
+            b = n(553),
+            E = n(554),
+            T = n(555),
             S = !1;
         e.exports = {
             inject: r
@@ -23351,11 +23368,11 @@
             var o = y.getPooled(w.beforeInput, t, n, r);
             return o.data = i, f.accumulateTwoPhaseDispatches(o), o
         }
-        var f = n(446),
-            h = n(453),
-            _ = n(454),
-            v = n(457),
-            y = n(459),
+        var f = n(447),
+            h = n(454),
+            _ = n(455),
+            v = n(458),
+            y = n(460),
             m = [9, 13, 27, 32],
             g = 229,
             b = h.canUseDOM && "CompositionEvent" in window,
@@ -23456,10 +23473,10 @@
         function p(e) {
             v(e, l)
         }
-        var f = n(447),
-            h = n(449),
-            _ = n(451),
-            v = n(452),
+        var f = n(448),
+            h = n(450),
+            _ = n(452),
+            v = n(453),
             y = (n(284), f.getListener),
             m = {
                 accumulateTwoPhaseDispatches: u,
@@ -23492,12 +23509,12 @@
                     return !1
             }
         }
-        var o = n(440),
-            a = n(448),
-            s = n(449),
-            l = n(450),
-            u = n(451),
-            c = n(452),
+        var o = n(441),
+            a = n(449),
+            s = n(450),
+            l = n(451),
+            u = n(452),
+            c = n(453),
             d = (n(281), {}),
             p = null,
             f = function(e, t) {
@@ -23606,7 +23623,7 @@
         function o(e, t, n) {
             u.registrationNameModules[e] ? a("100", e) : void 0, u.registrationNameModules[e] = t, u.registrationNameDependencies[e] = t.eventTypes[n].dependencies
         }
-        var a = n(440),
+        var a = n(441),
             s = (n(281), null),
             l = {},
             u = {
@@ -23706,8 +23723,8 @@
         function d(e) {
             return !!e._dispatchListeners
         }
-        var p, f, h = n(440),
-            _ = n(450),
+        var p, f, h = n(441),
+            _ = n(451),
             v = (n(281), n(284), {
                 injectComponentTree: function(e) {
                     p = e
@@ -23776,7 +23793,7 @@
         function r(e, t) {
             return null == t ? i("30") : void 0, null == e ? t : Array.isArray(e) ? Array.isArray(t) ? (e.push.apply(e, t), e) : (e.push(t), e) : Array.isArray(t) ? [e].concat(t) : [e, t]
         }
-        var i = n(440);
+        var i = n(441);
         n(281);
         e.exports = r
     }, function(e, t) {
@@ -23804,8 +23821,8 @@
             this._root = e, this._startText = this.getText(), this._fallbackText = null
         }
         var i = n(277),
-            o = n(455),
-            a = n(456);
+            o = n(456),
+            a = n(457);
         i(r.prototype, {
             destructor: function() {
                 this._root = null, this._startText = null, this._fallbackText = null
@@ -23828,7 +23845,7 @@
         }), o.addPoolingTo(r), e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(440),
+        var r = n(441),
             i = (n(281), function(e) {
                 var t = this;
                 if (t.instancePool.length) {
@@ -23885,7 +23902,7 @@
         function r() {
             return !o && i.canUseDOM && (o = "textContent" in document.documentElement ? "textContent" : "innerText"), o
         }
-        var i = n(453),
+        var i = n(454),
             o = null;
         e.exports = r
     }, function(e, t, n) {
@@ -23894,7 +23911,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(458),
+        var i = n(459),
             o = {
                 data: null
             };
@@ -23914,7 +23931,7 @@
             return l ? this.isDefaultPrevented = a.thatReturnsTrue : this.isDefaultPrevented = a.thatReturnsFalse, this.isPropagationStopped = a.thatReturnsFalse, this
         }
         var i = n(277),
-            o = n(455),
+            o = n(456),
             a = n(285),
             s = (n(284), "function" == typeof Proxy, ["dispatchConfig", "_targetInst", "nativeEvent", "isDefaultPrevented", "isPropagationStopped", "_dispatchListeners", "_dispatchInstances"]),
             l = {
@@ -23962,7 +23979,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(458),
+        var i = n(459),
             o = {
                 data: null
             };
@@ -24044,15 +24061,15 @@
                 }
             }
         }
-        var g = n(447),
-            b = n(446),
-            E = n(453),
-            T = n(439),
-            S = n(461),
-            P = n(458),
-            C = n(469),
-            w = n(470),
-            k = n(471),
+        var g = n(448),
+            b = n(447),
+            E = n(454),
+            T = n(440),
+            S = n(462),
+            P = n(459),
+            C = n(470),
+            w = n(471),
+            k = n(472),
             A = {
                 change: {
                     phasedRegistrationNames: {
@@ -24136,13 +24153,13 @@
         function u(e, t) {
             E.isBatchingUpdates ? void 0 : c("125"), g.enqueue(e, t), b = !0
         }
-        var c = n(440),
+        var c = n(441),
             d = n(277),
-            p = n(462),
-            f = n(455),
-            h = n(463),
-            _ = n(464),
-            v = n(468),
+            p = n(463),
+            f = n(456),
+            h = n(464),
+            _ = n(465),
+            v = n(469),
             y = (n(281), []),
             m = 0,
             g = p.getPooled(),
@@ -24212,8 +24229,8 @@
         function r(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
-        var i = n(440),
-            o = n(455),
+        var i = n(441),
+            o = n(456),
             a = (n(281), function() {
                 function e(t) {
                     r(this, e), this._callbacks = null, this._contexts = null, this._arg = t
@@ -24252,8 +24269,8 @@
         function r() {
             i.attachRefs(this, this._currentElement)
         }
-        var i = n(465),
-            o = (n(467), n(284), {
+        var i = n(466),
+            o = (n(468), n(284), {
                 mountComponent: function(e, t, n, i, o, a) {
                     var s = e.mountComponent(t, n, i, o, a);
                     return e._currentElement && null != e._currentElement.ref && t.getReactMountReady().enqueue(r, e), s
@@ -24286,7 +24303,7 @@
         function i(e, t, n) {
             "function" == typeof e ? e(null) : o.removeComponentAsRefFrom(t, e, n)
         }
-        var o = n(466),
+        var o = n(467),
             a = {};
         a.attachRefs = function(e, t) {
             if (null !== t && "object" == typeof t) {
@@ -24312,7 +24329,7 @@
         function r(e) {
             return !(!e || "function" != typeof e.attachRef || "function" != typeof e.detachRef)
         }
-        var i = n(440),
+        var i = n(441),
             o = (n(281), {
                 addComponentAsRefTo: function(e, t, n) {
                     r(n) ? void 0 : i("119"), n.attachRef(t, e)
@@ -24332,7 +24349,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(440),
+        var r = n(441),
             i = (n(281), {}),
             o = {
                 reinitializeTransaction: function() {
@@ -24422,7 +24439,7 @@
             }
             return !r && i && "wheel" === e && (r = document.implementation.hasFeature("Events.wheel", "3.0")), r
         }
-        var i, o = n(453);
+        var i, o = n(454);
         o.canUseDOM && (i = document.implementation && document.implementation.hasFeature && document.implementation.hasFeature("", "") !== !0), e.exports = r
     }, function(e, t) {
         "use strict";
@@ -24455,9 +24472,9 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(446),
-            i = n(439),
-            o = n(474),
+        var r = n(447),
+            i = n(440),
+            o = n(475),
             a = {
                 mouseEnter: {
                     registrationName: "onMouseEnter",
@@ -24501,9 +24518,9 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(475),
-            o = n(476),
-            a = n(477),
+        var i = n(476),
+            o = n(477),
+            a = n(478),
             s = {
                 screenX: null,
                 screenY: null,
@@ -24536,8 +24553,8 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(458),
-            o = n(469),
+        var i = n(459),
+            o = n(470),
             a = {
                 view: function(e) {
                     if (e.view) return e.view;
@@ -24584,7 +24601,7 @@
         e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(441),
+        var r = n(442),
             i = r.injection.MUST_USE_PROPERTY,
             o = r.injection.HAS_BOOLEAN_VALUE,
             a = r.injection.HAS_NUMERIC_VALUE,
@@ -24755,8 +24772,8 @@
         e.exports = u
     }, function(e, t, n) {
         "use strict";
-        var r = n(480),
-            i = n(491),
+        var r = n(481),
+            i = n(492),
             o = {
                 processChildrenUpdates: i.dangerouslyProcessChildrenUpdates,
                 replaceNodeWithMarkup: r.dangerouslyReplaceNodeWithMarkup
@@ -24806,11 +24823,11 @@
                 i = e.nextSibling;
             i === t ? n && _(r, document.createTextNode(n), i) : n ? (h(i, n), l(r, i, t)) : l(r, e, t)
         }
-        var c = n(481),
-            d = n(487),
-            p = (n(439), n(467), n(484)),
-            f = n(483),
-            h = n(485),
+        var c = n(482),
+            d = n(488),
+            p = (n(440), n(468), n(485)),
+            f = n(484),
+            h = n(486),
             _ = p(function(e, t, n) {
                 e.insertBefore(t, n)
             }),
@@ -24883,10 +24900,10 @@
                 toString: l
             }
         }
-        var c = n(482),
-            d = n(483),
-            p = n(484),
-            f = n(485),
+        var c = n(483),
+            d = n(484),
+            p = n(485),
+            f = n(486),
             h = 1,
             _ = 11,
             v = "undefined" != typeof document && "number" == typeof document.documentMode || "undefined" != typeof navigator && "string" == typeof navigator.userAgent && /\bEdge\/\d/.test(navigator.userAgent),
@@ -24904,11 +24921,11 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r, i = n(453),
-            o = n(482),
+        var r, i = n(454),
+            o = n(483),
             a = /^[ \r\n\t\f]/,
             s = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/,
-            l = n(484),
+            l = n(485),
             u = l(function(e, t) {
                 if (e.namespaceURI !== o.svg || "innerHTML" in e) e.innerHTML = t;
                 else {
@@ -24939,9 +24956,9 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(453),
-            i = n(486),
-            o = n(483),
+        var r = n(454),
+            i = n(487),
+            o = n(484),
             a = function(e, t) {
                 if (t) {
                     var n = e.firstChild;
@@ -24994,10 +25011,10 @@
         e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(440),
-            i = n(481),
-            o = n(453),
-            a = n(488),
+        var r = n(441),
+            i = n(482),
+            o = n(454),
+            a = n(489),
             s = n(285),
             l = (n(281), {
                 dangerouslyReplaceNodeWithMarkup: function(e, t) {
@@ -25030,9 +25047,9 @@
             for (var p = Array.from(n.childNodes); n.lastChild;) n.removeChild(n.lastChild);
             return p
         }
-        var o = n(453),
-            a = n(489),
-            s = n(490),
+        var o = n(454),
+            a = n(490),
+            s = n(491),
             l = n(281),
             u = o.canUseDOM ? document.createElement("div") : null,
             c = /^\s*<(\w+)/;
@@ -25064,7 +25081,7 @@
         function r(e) {
             return a ? void 0 : o(!1), p.hasOwnProperty(e) || (e = "*"), s.hasOwnProperty(e) || ("*" === e ? a.innerHTML = "<link />" : a.innerHTML = "<" + e + "></" + e + ">", s[e] = !a.firstChild), s[e] ? p[e] : null
         }
-        var i = n(453),
+        var i = n(454),
             o = n(281),
             a = i.canUseDOM ? document.createElement("div") : null,
             s = {},
@@ -25095,8 +25112,8 @@
         }), e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(480),
-            i = n(439),
+        var r = n(481),
+            i = n(440),
             o = {
                 dangerouslyProcessChildrenUpdates: function(e, t) {
                     var n = i.getNodeFromInstance(e);
@@ -25201,27 +25218,27 @@
             var t = e.type;
             p(t), this._currentElement = e, this._tag = t.toLowerCase(), this._namespaceURI = null, this._renderedChildren = null, this._previousStyle = null, this._previousStyleCopy = null, this._hostNode = null, this._hostParent = null, this._rootNodeID = 0, this._domID = 0, this._hostContainerInfo = null, this._wrapperState = null, this._topLevelWrapper = null, this._flags = 0
         }
-        var _ = n(440),
+        var _ = n(441),
             v = n(277),
-            y = n(493),
-            m = n(495),
-            g = n(481),
-            b = n(482),
-            E = n(441),
-            T = n(503),
-            S = n(447),
-            P = n(448),
-            C = n(505),
-            w = n(442),
-            k = n(439),
-            A = n(508),
-            O = n(511),
-            I = n(512),
-            N = n(513),
-            R = (n(467), n(514)),
-            M = n(532),
-            L = (n(285), n(486)),
-            D = (n(281), n(470), n(521), n(535), n(284), w),
+            y = n(494),
+            m = n(496),
+            g = n(482),
+            b = n(483),
+            E = n(442),
+            T = n(504),
+            S = n(448),
+            P = n(449),
+            C = n(506),
+            w = n(443),
+            k = n(440),
+            A = n(509),
+            O = n(512),
+            I = n(513),
+            N = n(514),
+            R = (n(468), n(515)),
+            M = n(533),
+            L = (n(285), n(487)),
+            D = (n(281), n(471), n(522), n(536), n(284), w),
             x = S.deleteListener,
             j = k.getNodeFromInstance,
             U = C.listenTo,
@@ -25500,8 +25517,8 @@
         }, v(h.prototype, h.Mixin, R.Mixin), e.exports = h
     }, function(e, t, n) {
         "use strict";
-        var r = n(439),
-            i = n(494),
+        var r = n(440),
+            i = n(495),
             o = {
                 focusDOMComponent: function() {
                     i(r.getNodeFromInstance(this))
@@ -25519,11 +25536,11 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(496),
-            i = n(453),
-            o = (n(467), n(497), n(499)),
-            a = n(500),
-            s = n(502),
+        var r = n(497),
+            i = n(454),
+            o = (n(468), n(498), n(500)),
+            a = n(501),
+            s = n(503),
             l = (n(284), s(function(e) {
                 return a(e)
             })),
@@ -25675,7 +25692,7 @@
         function r(e) {
             return i(e.replace(o, "ms-"))
         }
-        var i = n(498),
+        var i = n(499),
             o = /^-ms-/;
         e.exports = r
     }, function(e, t) {
@@ -25701,7 +25718,7 @@
             }
             return t + "px"
         }
-        var i = n(496),
+        var i = n(497),
             o = (n(284), i.isUnitlessNumber);
         e.exports = r
     }, function(e, t, n) {
@@ -25710,7 +25727,7 @@
         function r(e) {
             return i(e).replace(o, "-ms-")
         }
-        var i = n(501),
+        var i = n(502),
             o = /^ms-/;
         e.exports = r
     }, function(e, t) {
@@ -25741,8 +25758,8 @@
         function i(e, t) {
             return null == t || e.hasBooleanValue && !t || e.hasNumericValue && isNaN(t) || e.hasPositiveNumericValue && t < 1 || e.hasOverloadedBooleanValue && t === !1
         }
-        var o = n(441),
-            a = (n(439), n(467), n(504)),
+        var o = n(442),
+            a = (n(440), n(468), n(505)),
             s = (n(284), new RegExp("^[" + o.ATTRIBUTE_NAME_START_CHAR + "][" + o.ATTRIBUTE_NAME_CHAR + "]*$")),
             l = {},
             u = {},
@@ -25814,7 +25831,7 @@
         function r(e) {
             return '"' + i(e) + '"'
         }
-        var i = n(486);
+        var i = n(487);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -25823,11 +25840,11 @@
             return Object.prototype.hasOwnProperty.call(e, _) || (e[_] = f++, d[e[_]] = {}), d[e[_]]
         }
         var i, o = n(277),
-            a = n(448),
-            s = n(506),
-            l = n(476),
-            u = n(507),
-            c = n(470),
+            a = n(449),
+            s = n(507),
+            l = n(477),
+            u = n(508),
+            c = n(471),
             d = {},
             p = !1,
             f = 0,
@@ -25942,7 +25959,7 @@
         function r(e) {
             i.enqueueEvents(e), i.processEventQueue(!1)
         }
-        var i = n(447),
+        var i = n(448),
             o = {
                 handleTopLevel: function(e, t, n, o) {
                     var a = i.extractEvents(e, t, n, o);
@@ -25966,7 +25983,7 @@
                 if (t.hasOwnProperty(n) && n in l) return s[e] = t[n];
             return ""
         }
-        var o = n(453),
+        var o = n(454),
             a = {
                 animationend: r("Animation", "AnimationEnd"),
                 animationiteration: r("Animation", "AnimationIteration"),
@@ -26005,12 +26022,12 @@
             }
             return n
         }
-        var a = n(440),
+        var a = n(441),
             s = n(277),
-            l = n(503),
-            u = n(509),
-            c = n(439),
-            d = n(461),
+            l = n(504),
+            u = n(510),
+            c = n(440),
+            d = n(462),
             p = (n(281), n(284), {
                 getHostProps: function(e, t) {
                     var n = u.getValue(t),
@@ -26099,8 +26116,8 @@
             }
             return ""
         }
-        var s = n(440),
-            l = n(510),
+        var s = n(441),
+            l = n(511),
             u = n(299),
             c = n(276),
             d = u(c.isValidElement),
@@ -26159,8 +26176,8 @@
         }
         var i = n(277),
             o = n(276),
-            a = n(439),
-            s = n(512),
+            a = n(440),
+            s = n(513),
             l = (n(284), !1),
             u = {
                 mountWrapper: function(e, t, n) {
@@ -26235,9 +26252,9 @@
             return this._rootNodeID && (this._wrapperState.pendingUpdate = !0), u.asap(r, this), n
         }
         var a = n(277),
-            s = n(509),
-            l = n(439),
-            u = n(461),
+            s = n(510),
+            l = n(440),
+            u = n(462),
             c = (n(284), !1),
             d = {
                 getHostProps: function(e, t) {
@@ -26281,11 +26298,11 @@
                 n = s.executeOnChange(t, e);
             return u.asap(r, this), n
         }
-        var o = n(440),
+        var o = n(441),
             a = n(277),
-            s = n(509),
-            l = n(439),
-            u = n(461),
+            s = n(510),
+            l = n(440),
+            u = n(462),
             c = (n(281), n(284), {
                 getHostProps: function(e, t) {
                     null != t.dangerouslySetInnerHTML ? o("91") : void 0;
@@ -26393,11 +26410,11 @@
         function u(e, t) {
             d.processChildrenUpdates(e, t)
         }
-        var c = n(440),
-            d = n(515),
-            p = (n(516), n(467), n(283), n(464)),
-            f = n(517),
-            h = (n(285), n(531)),
+        var c = n(441),
+            d = n(516),
+            p = (n(517), n(468), n(283), n(465)),
+            f = n(518),
+            h = (n(285), n(532)),
             _ = (n(281), {
                 Mixin: {
                     _reconcilerInstantiateChildren: function(e, t, n) {
@@ -26484,7 +26501,7 @@
         e.exports = _
     }, function(e, t, n) {
         "use strict";
-        var r = n(440),
+        var r = n(441),
             i = (n(281), !1),
             o = {
                 replaceNodeWithMarkup: null,
@@ -26521,10 +26538,10 @@
                 var i = void 0 === e[n];
                 null != t && i && (e[n] = o(t, !0))
             }
-            var i = n(464),
-                o = n(518),
-                a = (n(526), n(522)),
-                s = n(527);
+            var i = n(465),
+                o = n(519),
+                a = (n(527), n(523)),
+                s = n(528);
             n(284);
             "undefined" != typeof t && t.env, 1;
             var l = {
@@ -26592,12 +26609,12 @@
             } else "string" == typeof e || "number" == typeof e ? n = c.createInstanceForText(e) : a("131", typeof e);
             return n._mountIndex = 0, n._mountImage = null, n
         }
-        var a = n(440),
+        var a = n(441),
             s = n(277),
-            l = n(519),
-            u = n(523),
-            c = n(524),
-            d = (n(525), n(281), n(284), function(e) {
+            l = n(520),
+            u = n(524),
+            c = n(525),
+            d = (n(526), n(281), n(284), function(e) {
                 this.construct(e)
             });
         s(d.prototype, l, {
@@ -26617,18 +26634,18 @@
         function a(e) {
             return !(!e.prototype || !e.prototype.isPureReactComponent)
         }
-        var s = n(440),
+        var s = n(441),
             l = n(277),
             u = n(276),
-            c = n(515),
+            c = n(516),
             d = n(283),
-            p = n(450),
-            f = n(516),
-            h = (n(467), n(520)),
-            _ = n(464),
+            p = n(451),
+            f = n(517),
+            h = (n(468), n(521)),
+            _ = n(465),
             v = n(293),
-            y = (n(281), n(521)),
-            m = n(522),
+            y = (n(281), n(522)),
+            m = n(523),
             g = (n(284), {
                 ImpureClass: 0,
                 PureClass: 1,
@@ -26821,7 +26838,7 @@
         e.exports = E
     }, function(e, t, n) {
         "use strict";
-        var r = n(440),
+        var r = n(441),
             i = n(276),
             o = (n(281), {
                 HOST: 0,
@@ -26890,7 +26907,7 @@
         function o(e) {
             return e instanceof l
         }
-        var a = n(440),
+        var a = n(441),
             s = (n(281), null),
             l = null,
             u = {
@@ -26984,10 +27001,10 @@
         function o(e, t, n) {
             return null == e ? 0 : i(e, "", t, n)
         }
-        var a = n(440),
-            s = (n(283), n(528)),
-            l = n(529),
-            u = (n(281), n(526)),
+        var a = n(441),
+            s = (n(283), n(529)),
+            l = n(530),
+            u = (n(281), n(527)),
             c = (n(284), "."),
             d = ":";
         e.exports = o
@@ -27221,7 +27238,7 @@
                 var n = {};
                 return o(e, r, n), n
             }
-            var o = (n(526), n(527));
+            var o = (n(527), n(528));
             n(284);
             "undefined" != typeof t && t.env, 1, e.exports = i
         }).call(t, n(338))
@@ -27232,9 +27249,9 @@
             this.reinitializeTransaction(), this.renderToStaticMarkup = e, this.useCreateElement = !1, this.updateQueue = new s(this)
         }
         var i = n(277),
-            o = n(455),
-            a = n(468),
-            s = (n(467), n(533)),
+            o = n(456),
+            a = n(469),
+            s = (n(468), n(534)),
             l = [],
             u = {
                 enqueue: function() {}
@@ -27262,7 +27279,7 @@
         }
 
         function i(e, t) {}
-        var o = n(534),
+        var o = n(535),
             a = (n(284), function() {
                 function e(t) {
                     r(this, e), this.transaction = t
@@ -27302,9 +27319,9 @@
             }
             return n
         }
-        var a = n(440),
-            s = (n(283), n(516)),
-            l = (n(467), n(461)),
+        var a = n(441),
+            s = (n(283), n(517)),
+            l = (n(468), n(462)),
             u = (n(281), n(284), {
                 isMounted: function(e) {
                     var t = s.get(e);
@@ -27349,8 +27366,8 @@
     }, function(e, t, n) {
         "use strict";
         var r = n(277),
-            i = n(481),
-            o = n(439),
+            i = n(482),
+            o = n(440),
             a = function(e) {
                 this._currentElement = null, this._hostNode = null, this._hostParent = null, this._hostContainerInfo = null, this._domID = 0
             };
@@ -27417,7 +27434,7 @@
             for (u = 0; u < s.length; u++) n(s[u], "bubbled", i);
             for (u = l.length; u-- > 0;) n(l[u], "captured", o)
         }
-        var l = n(440);
+        var l = n(441);
         n(281);
         e.exports = {
             isAncestor: i,
@@ -27428,14 +27445,14 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(440),
+        var r = n(441),
             i = n(277),
-            o = n(480),
-            a = n(481),
-            s = n(439),
-            l = n(486),
+            o = n(481),
+            a = n(482),
+            s = n(440),
+            l = n(487),
             u = (n(281),
-                n(535),
+                n(536),
                 function(e) {
                     this._currentElement = e, this._stringText = "" + e, this._hostNode = null, this._hostParent = null, this._domID = 0, this._mountIndex = 0, this._closingComment = null, this._commentNodes = null
                 });
@@ -27489,8 +27506,8 @@
             this.reinitializeTransaction()
         }
         var i = n(277),
-            o = n(461),
-            a = n(468),
+            o = n(462),
+            a = n(469),
             s = n(285),
             l = {
                 initialize: s,
@@ -27544,13 +27561,13 @@
             e(t)
         }
         var s = n(277),
-            l = n(541),
-            u = n(453),
-            c = n(455),
-            d = n(439),
-            p = n(461),
-            f = n(469),
-            h = n(542);
+            l = n(542),
+            u = n(454),
+            c = n(456),
+            d = n(440),
+            p = n(462),
+            f = n(470),
+            h = n(543);
         s(i.prototype, {
             destructor: function() {
                 this.topLevelType = null, this.nativeEvent = null, this.ancestors.length = 0
@@ -27633,14 +27650,14 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(441),
-            i = n(447),
-            o = n(449),
-            a = n(515),
-            s = n(523),
-            l = n(505),
-            u = n(524),
-            c = n(461),
+        var r = n(442),
+            i = n(448),
+            o = n(450),
+            a = n(516),
+            s = n(524),
+            l = n(506),
+            u = n(525),
+            c = n(462),
             d = {
                 Component: a.injection,
                 DOMProperty: r.injection,
@@ -27659,12 +27676,12 @@
             this.reinitializeTransaction(), this.renderToStaticMarkup = !1, this.reactMountReady = o.getPooled(null), this.useCreateElement = e
         }
         var i = n(277),
-            o = n(462),
-            a = n(455),
-            s = n(505),
-            l = n(545),
-            u = (n(467), n(468)),
-            c = n(534),
+            o = n(463),
+            a = n(456),
+            s = n(506),
+            l = n(546),
+            u = (n(468), n(469)),
+            c = n(535),
             d = {
                 initialize: l.getSelectionInformation,
                 close: l.restoreSelection
@@ -27714,10 +27731,10 @@
         function r(e) {
             return o(document.documentElement, e)
         }
-        var i = n(546),
-            o = n(548),
-            a = n(494),
-            s = n(551),
+        var i = n(547),
+            o = n(549),
+            a = n(495),
+            s = n(552),
             l = {
                 hasSelectionCapabilities: function(e) {
                     var t = e && e.nodeName && e.nodeName.toLowerCase();
@@ -27838,9 +27855,9 @@
                 }
             }
         }
-        var l = n(453),
-            u = n(547),
-            c = n(456),
+        var l = n(454),
+            u = n(548),
+            c = n(457),
             d = l.canUseDOM && "selection" in document && !("getSelection" in window),
             p = {
                 getOffsets: d ? i : o,
@@ -27881,7 +27898,7 @@
         function r(e, t) {
             return !(!e || !t) && (e === t || !i(e) && (i(t) ? r(e, t.parentNode) : "contains" in e ? e.contains(t) : !!e.compareDocumentPosition && !!(16 & e.compareDocumentPosition(t))))
         }
-        var i = n(549);
+        var i = n(550);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -27889,7 +27906,7 @@
         function r(e) {
             return i(e) && 3 == e.nodeType
         }
-        var i = n(550);
+        var i = n(551);
         e.exports = r
     }, function(e, t) {
         "use strict";
@@ -28216,14 +28233,14 @@
             }
             return null
         }
-        var o = n(446),
-            a = n(453),
-            s = n(439),
-            l = n(545),
-            u = n(458),
-            c = n(551),
-            d = n(471),
-            p = n(521),
+        var o = n(447),
+            a = n(454),
+            s = n(440),
+            l = n(546),
+            u = n(459),
+            c = n(552),
+            d = n(472),
+            p = n(522),
             f = a.canUseDOM && "documentMode" in document && document.documentMode <= 11,
             h = {
                 select: {
@@ -28280,23 +28297,23 @@
         function i(e) {
             return "button" === e || "input" === e || "select" === e || "textarea" === e
         }
-        var o = n(440),
-            a = n(541),
-            s = n(446),
-            l = n(439),
-            u = n(555),
-            c = n(556),
-            d = n(458),
-            p = n(557),
-            f = n(558),
-            h = n(474),
-            _ = n(561),
-            v = n(562),
-            y = n(563),
-            m = n(475),
-            g = n(564),
+        var o = n(441),
+            a = n(542),
+            s = n(447),
+            l = n(440),
+            u = n(556),
+            c = n(557),
+            d = n(459),
+            p = n(558),
+            f = n(559),
+            h = n(475),
+            _ = n(562),
+            v = n(563),
+            y = n(564),
+            m = n(476),
+            g = n(565),
             b = n(285),
-            E = n(559),
+            E = n(560),
             T = (n(281), {}),
             S = {};
         ["abort", "animationEnd", "animationIteration", "animationStart", "blur", "canPlay", "canPlayThrough", "click", "contextMenu", "copy", "cut", "doubleClick", "drag", "dragEnd", "dragEnter", "dragExit", "dragLeave", "dragOver", "dragStart", "drop", "durationChange", "emptied", "encrypted", "ended", "error", "focus", "input", "invalid", "keyDown", "keyPress", "keyUp", "load", "loadedData", "loadedMetadata", "loadStart", "mouseDown", "mouseMove", "mouseOut", "mouseOver", "mouseUp", "paste", "pause", "play", "playing", "progress", "rateChange", "reset", "scroll", "seeked", "seeking", "stalled", "submit", "suspend", "timeUpdate", "touchCancel", "touchEnd", "touchMove", "touchStart", "transitionEnd", "volumeChange", "waiting", "wheel"].forEach(function(e) {
@@ -28431,7 +28448,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(458),
+        var i = n(459),
             o = {
                 animationName: null,
                 elapsedTime: null,
@@ -28444,7 +28461,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(458),
+        var i = n(459),
             o = {
                 clipboardData: function(e) {
                     return "clipboardData" in e ? e.clipboardData : window.clipboardData
@@ -28457,7 +28474,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(475),
+        var i = n(476),
             o = {
                 relatedTarget: null
             };
@@ -28468,10 +28485,10 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(475),
-            o = n(559),
-            a = n(560),
-            s = n(477),
+        var i = n(476),
+            o = n(560),
+            a = n(561),
+            s = n(478),
             l = {
                 key: a,
                 location: null,
@@ -28515,7 +28532,7 @@
             }
             return "keydown" === e.type || "keyup" === e.type ? a[e.keyCode] || "Unidentified" : ""
         }
-        var i = n(559),
+        var i = n(560),
             o = {
                 Esc: "Escape",
                 Spacebar: " ",
@@ -28575,7 +28592,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(474),
+        var i = n(475),
             o = {
                 dataTransfer: null
             };
@@ -28586,8 +28603,8 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(475),
-            o = n(477),
+        var i = n(476),
+            o = n(478),
             a = {
                 touches: null,
                 targetTouches: null,
@@ -28605,7 +28622,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(458),
+        var i = n(459),
             o = {
                 propertyName: null,
                 elapsedTime: null,
@@ -28618,7 +28635,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(474),
+        var i = n(475),
             o = {
                 deltaX: function(e) {
                     return "deltaX" in e ? e.deltaX : "wheelDeltaX" in e ? -e.wheelDeltaX : 0
@@ -28689,24 +28706,24 @@
             var t = d(e);
             return t ? t._hostContainerInfo._topLevelWrapper : null
         }
-        var f = n(440),
-            h = n(481),
-            _ = n(441),
+        var f = n(441),
+            h = n(482),
+            _ = n(442),
             v = n(276),
-            y = n(505),
-            m = (n(283), n(439)),
-            g = n(566),
-            b = n(567),
-            E = n(463),
-            T = n(516),
-            S = (n(467), n(568)),
-            P = n(464),
-            C = n(534),
-            w = n(461),
+            y = n(506),
+            m = (n(283), n(440)),
+            g = n(567),
+            b = n(568),
+            E = n(464),
+            T = n(517),
+            S = (n(468), n(569)),
+            P = n(465),
+            C = n(535),
+            w = n(462),
             k = n(293),
-            A = n(518),
-            O = (n(281), n(483)),
-            I = n(522),
+            A = n(519),
+            O = (n(281), n(484)),
+            I = n(523),
             N = (n(284), _.ID_ATTRIBUTE_NAME),
             R = _.ROOT_ATTRIBUTE_NAME,
             M = 1,
@@ -28816,7 +28833,7 @@
             };
             return n
         }
-        var i = (n(535), 9);
+        var i = (n(536), 9);
         e.exports = r
     }, function(e, t) {
         "use strict";
@@ -28827,7 +28844,7 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(569),
+        var r = n(570),
             i = /\/?>/,
             o = /^<\!\-\-/,
             a = {
@@ -28869,10 +28886,10 @@
             var t = a.get(e);
             return t ? (t = s(t), t ? o.getNodeFromInstance(t) : null) : void("function" == typeof e.render ? i("44") : i("45", Object.keys(e)))
         }
-        var i = n(440),
-            o = (n(283), n(439)),
-            a = n(516),
-            s = n(572);
+        var i = n(441),
+            o = (n(283), n(440)),
+            a = n(517),
+            s = n(573);
         n(281), n(284);
         e.exports = r
     }, function(e, t, n) {
@@ -28883,11 +28900,11 @@
                 (t = e._renderedNodeType) === i.COMPOSITE;) e = e._renderedComponent;
             return t === i.HOST ? e._renderedComponent : t === i.EMPTY ? null : void 0
         }
-        var i = n(520);
+        var i = n(521);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(565);
+        var r = n(566);
         e.exports = r.renderSubtreeIntoContainer
     }, function(e, t, n) {
         "use strict";
@@ -28898,9 +28915,9 @@
             }
         }
         t.__esModule = !0, t.connect = t.Provider = void 0;
-        var i = n(575),
+        var i = n(576),
             o = r(i),
-            a = n(580),
+            a = n(581),
             s = r(a);
         t.Provider = o.default, t.connect = s.default
     }, function(e, t, n) {
@@ -28934,11 +28951,11 @@
         }
         t.__esModule = !0, t.default = void 0;
         var s = n(275),
-            l = n(576),
+            l = n(577),
             u = r(l),
-            c = n(578),
+            c = n(579),
             d = r(c),
-            p = n(579),
+            p = n(580),
             f = (r(p), function(e) {
                 function t(n, r) {
                     i(this, t);
@@ -28960,7 +28977,7 @@
             store: d.default.isRequired
         }
     }, function(e, t, n) {
-        e.exports = n(577)()
+        e.exports = n(578)()
     }, function(e, t, n) {
         "use strict";
         var r = n(285),
@@ -29004,7 +29021,7 @@
             }
         }
         t.__esModule = !0;
-        var i = n(576),
+        var i = n(577),
             o = r(i);
         t.default = o.default.shape({
             subscribe: o.default.func.isRequired,
@@ -29189,17 +29206,17 @@
         };
         t.default = u;
         var d = n(275),
-            p = n(578),
+            p = n(579),
             f = r(p),
-            h = n(581),
+            h = n(582),
             _ = r(h),
-            v = n(582),
+            v = n(583),
             y = r(v),
-            m = n(579),
+            m = n(580),
             g = (r(m), n(210)),
             b = (r(g), n(309)),
             E = r(b),
-            T = n(593),
+            T = n(594),
             S = r(T),
             P = function(e) {
                 return {}
@@ -29238,7 +29255,7 @@
             }
         }
         t.__esModule = !0, t.default = r;
-        var i = n(583)
+        var i = n(584)
     }, function(e, t, n) {
         "use strict";
 
@@ -29248,17 +29265,17 @@
             }
         }
         t.__esModule = !0, t.compose = t.applyMiddleware = t.bindActionCreators = t.combineReducers = t.createStore = void 0;
-        var i = n(584),
+        var i = n(585),
             o = r(i),
-            a = n(588),
+            a = n(589),
             s = r(a),
-            l = n(590),
+            l = n(591),
             u = r(l),
-            c = n(591),
+            c = n(592),
             d = r(c),
-            p = n(592),
+            p = n(593),
             f = r(p),
-            h = n(589);
+            h = n(590);
         r(h);
         t.createStore = o.default, t.combineReducers = s.default, t.bindActionCreators = u.default, t.applyMiddleware = d.default, t.compose = f.default
     }, function(e, t, n) {
@@ -29353,13 +29370,13 @@
         t.__esModule = !0, t.ActionTypes = void 0, t.default = i;
         var o = n(210),
             a = r(o),
-            s = n(585),
+            s = n(586),
             l = r(s),
             u = t.ActionTypes = {
                 INIT: "@@redux/INIT"
             }
     }, function(e, t, n) {
-        e.exports = n(586)
+        e.exports = n(587)
     }, function(e, t, n) {
         (function(e, r) {
             "use strict";
@@ -29372,7 +29389,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            var o, a = n(587),
+            var o, a = n(588),
                 s = i(a);
             o = "undefined" != typeof self ? self : "undefined" != typeof window ? window : "undefined" != typeof e ? e : r;
             var l = (0, s.default)(o);
@@ -29449,9 +29466,9 @@
             }
         }
         t.__esModule = !0, t.default = a;
-        var s = n(584),
+        var s = n(585),
             l = n(210),
-            u = (r(l), n(589));
+            u = (r(l), n(590));
         r(u)
     }, function(e, t) {
         "use strict";
@@ -29522,7 +29539,7 @@
             return e
         };
         t.default = i;
-        var a = n(592),
+        var a = n(593),
             s = r(a)
     }, function(e, t) {
         "use strict";
@@ -29574,7 +29591,7 @@
             o = r(i),
             a = n(275),
             s = r(a),
-            l = n(595),
+            l = n(596),
             u = {
                 duration: a.PropTypes.number,
                 mutedSegments: a.PropTypes.arrayOf(a.PropTypes.shape({
@@ -29624,7 +29641,7 @@
         }), t.SeekbarBuffer = void 0;
         var i = n(275),
             o = r(i),
-            a = n(595),
+            a = n(596),
             s = {
                 animate: i.PropTypes.bool,
                 bufferLength: i.PropTypes.number.isRequired,
@@ -29736,10 +29753,10 @@
             }(),
             l = n(275),
             u = r(l),
-            c = n(599),
+            c = n(600),
             d = r(c),
-            p = n(600),
-            f = n(601),
+            p = n(601),
+            f = n(602),
             h = n(119),
             _ = r(h),
             v = {
@@ -30134,7 +30151,7 @@
         }), t.SliderThumb = void 0;
         var i = n(275),
             o = r(i),
-            a = n(595),
+            a = n(596),
             s = {
                 className: i.PropTypes.string,
                 max: i.PropTypes.number.isRequired,
@@ -30232,7 +30249,7 @@
             l = i(s),
             u = n(313),
             c = r(u),
-            d = n(603),
+            d = n(604),
             p = 148,
             f = {
                 duration: s.PropTypes.number,
@@ -30487,9 +30504,9 @@
             h = i(f),
             _ = n(313),
             v = r(_),
-            y = n(603),
-            m = n(595),
-            g = n(606),
+            y = n(604),
+            m = n(596),
+            g = n(607),
             b = {
                 currentTime: f.PropTypes.number,
                 duration: f.PropTypes.number,
@@ -30636,11 +30653,11 @@
             }(),
             o = n(182),
             a = n(218),
-            s = n(607),
-            l = n(608),
-            u = n(609),
-            c = n(610),
-            d = n(611),
+            s = n(608),
+            l = n(609),
+            u = n(610),
+            c = n(611),
+            d = n(612),
             p = n(249);
         t.MARKER_TYPE_GAME_CHANGE = c.TYPE_GAME_CHANGE, t.MARKER_TYPE_GAME_METADATA = d.TYPE_GAME_METADATA, t.TimelineMetadataManager = function() {
             function e(t) {
@@ -31083,13 +31100,13 @@
             }(),
             l = n(275),
             u = r(l),
-            c = n(613),
+            c = n(614),
             d = r(c),
-            p = n(574),
-            f = n(614),
-            h = n(616),
-            _ = n(619),
-            v = n(628),
+            p = n(575),
+            f = n(615),
+            h = n(617),
+            _ = n(620),
+            v = n(429),
             y = n(327),
             m = {
                 isAutoQuality: l.PropTypes.bool.isRequired,
@@ -31205,7 +31222,7 @@
             }(),
             l = n(309),
             u = n(275),
-            c = n(437);
+            c = n(438);
         e.exports = function(e) {
             var t = e.displayName || e.name,
                 n = function(t) {
@@ -31291,9 +31308,9 @@
             u = r(l),
             c = n(119),
             d = r(c),
-            p = n(574),
+            p = n(575),
             f = n(307),
-            h = n(615),
+            h = n(616),
             _ = t.QUALITY_CHANGE_DURATION = 5e3,
             v = {
                 availableQualities: l.PropTypes.array.isRequired,
@@ -31432,8 +31449,8 @@
         }), t.SettingsButton = void 0;
         var i = n(275),
             o = r(i),
-            a = n(617),
-            s = n(618),
+            a = n(618),
+            s = n(619),
             l = n(306),
             u = r(l),
             c = {
@@ -31632,7 +31649,7 @@
             u = r(l),
             c = n(53),
             d = r(c),
-            p = n(620),
+            p = n(621),
             f = n(629),
             h = n(632),
             _ = n(635),
@@ -31758,14 +31775,14 @@
             u = r(l),
             c = n(119),
             d = r(c),
-            p = n(574),
-            f = n(621),
+            p = n(575),
+            f = n(622),
             h = n(415),
             _ = n(360),
             v = n(313),
             y = n(218),
             m = n(335),
-            g = n(628),
+            g = n(429),
             b = {
                 availableQualities: l.PropTypes.array.isRequired,
                 backendType: l.PropTypes.string.isRequired,
@@ -31946,15 +31963,15 @@
             }(),
             u = n(275),
             c = r(u),
-            d = n(622),
+            d = n(623),
             p = r(d),
             f = n(313),
             h = n(306),
             _ = r(h),
             v = n(307),
-            y = n(619),
-            m = n(617),
-            g = n(626),
+            y = n(620),
+            m = n(618),
+            g = n(627),
             b = t.COPY_URL_FEEDBACK_DELAY = 2e3,
             E = {
                 canChangePlaybackSpeed: u.PropTypes.bool,
@@ -32212,7 +32229,7 @@
         t.MainMenu = (0, v.translate)()(j)
     }, function(e, t, n) {
         "use strict";
-        var r = n(623),
+        var r = n(624),
             i = r.CopyToClipboard;
         e.exports = i
     }, function(e, t, n) {
@@ -32273,7 +32290,7 @@
             }(),
             c = n(275),
             d = r(c),
-            p = n(624),
+            p = n(625),
             f = r(p);
         t.CopyToClipboard = function(e) {
             function t() {
@@ -32332,7 +32349,7 @@
             }
             return d
         }
-        var o = n(625),
+        var o = n(626),
             a = "Copy to clipboard: #{key}, Enter";
         e.exports = i
     }, function(e, t) {
@@ -32403,8 +32420,8 @@
             c = n(306),
             d = r(c),
             p = n(307),
-            f = n(619),
-            h = n(627),
+            f = n(620),
+            h = n(628),
             _ = {
                 currentSpeed: l.PropTypes.number.isRequired,
                 onMenuTransition: l.PropTypes.func,
@@ -32522,7 +32539,7 @@
             }(),
             l = n(275),
             u = r(l),
-            c = n(617),
+            c = n(618),
             d = n(306),
             p = r(d),
             f = {
@@ -32566,28 +32583,6 @@
                 }]), t
             }(u.default.Component);
         _.propTypes = f, _.defaultProps = h
-    }, function(e, t) {
-        "use strict";
-
-        function n(e) {
-            return {
-                type: i,
-                value: e
-            }
-        }
-
-        function r() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            return {
-                type: o,
-                value: e
-            }
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.setMiniPlayerMode = n, t.showSettingsMenu = r;
-        var i = t.ACTION_SET_MINIPLAYER_MODE = "set miniplayer",
-            o = t.ACTION_SHOW_SETTINGS_MENU = "show settings menu"
     }, function(e, t, n) {
         "use strict";
 
@@ -32601,10 +32596,10 @@
         }), t.QualityMenu = t.QualityMenuContainer = t.mapDispatchToProps = void 0;
         var i = n(275),
             o = r(i),
-            a = n(574),
+            a = n(575),
             s = n(630),
             l = n(327),
-            u = n(628),
+            u = n(429),
             c = {
                 availableQualities: i.PropTypes.array.isRequired,
                 selectedQuality: i.PropTypes.string.isRequired,
@@ -32691,7 +32686,7 @@
             c = n(306),
             d = r(c),
             p = n(307),
-            f = n(619),
+            f = n(620),
             h = n(631),
             _ = {
                 availableQualities: l.PropTypes.arrayOf(l.PropTypes.shape({
@@ -32809,7 +32804,7 @@
             u = r(l),
             c = n(306),
             d = r(c),
-            p = n(617),
+            p = n(618),
             f = {
                 isActive: l.PropTypes.bool,
                 qualityObj: l.PropTypes.shape({
@@ -32902,7 +32897,7 @@
             }(),
             l = n(275),
             u = r(l),
-            c = n(574),
+            c = n(575),
             d = n(633),
             p = n(335),
             f = n(215),
@@ -33050,9 +33045,9 @@
             c = n(306),
             d = r(c),
             p = n(307),
-            f = n(619),
+            f = n(620),
             h = n(634),
-            _ = n(617),
+            _ = n(618),
             v = {
                 html5PlayerEnabled: l.PropTypes.bool.isRequired,
                 html5ToggleEnabled: l.PropTypes.bool.isRequired,
@@ -33266,10 +33261,10 @@
             }(),
             l = n(275),
             u = r(l),
-            c = n(574),
+            c = n(575),
             d = n(636),
             p = n(360),
-            f = n(628),
+            f = n(429),
             h = {
                 handleVideoIssueReport: l.PropTypes.func,
                 hideSettingsMenu: l.PropTypes.func,
@@ -33376,7 +33371,7 @@
             c = n(306),
             d = r(c),
             p = n(307),
-            f = n(619),
+            f = n(620),
             h = {
                 t: l.PropTypes.func.isRequired,
                 onReportIssueSubmit: l.PropTypes.func.isRequired,
@@ -33563,10 +33558,10 @@
             }(),
             l = n(275),
             u = r(l),
-            c = n(574),
-            d = n(626),
+            c = n(575),
+            d = n(627),
             p = n(360),
-            f = n(628),
+            f = n(429),
             h = {
                 currentSpeed: l.PropTypes.number.isRequired,
                 onMenuTransition: l.PropTypes.func,
@@ -33640,7 +33635,7 @@
         }), t.StaffMenu = t.StaffMenuContainer = t.mapDispatchToProps = void 0;
         var i = n(275),
             o = r(i),
-            a = n(574),
+            a = n(575),
             s = n(639),
             l = n(241),
             u = {
@@ -33727,8 +33722,8 @@
             c = n(306),
             d = r(c),
             p = n(307),
-            f = n(619),
-            h = n(617),
+            f = n(620),
+            h = n(618),
             _ = {
                 onMenuTransition: l.PropTypes.func,
                 onRunLocalPrerollAd: l.PropTypes.func,
@@ -33858,7 +33853,7 @@
             }(),
             l = n(275),
             u = r(l),
-            c = n(574),
+            c = n(575),
             d = n(641),
             p = n(642),
             f = n(167),
@@ -34143,10 +34138,10 @@
             l = n(275),
             u = r(l),
             c = n(644),
-            d = n(574),
+            d = n(575),
             p = n(645),
             f = n(167),
-            h = n(431),
+            h = n(432),
             _ = n(648),
             v = n(215),
             y = t.SUBSCRIBE_URL = "http://everywhere.twitch.tv/subscribe",
@@ -34480,7 +34475,7 @@
         }), t.FollowButton = void 0, t.FollowButtonComponent = i;
         var o = n(275),
             a = r(o),
-            s = n(617),
+            s = n(618),
             l = n(306),
             u = r(l),
             c = n(307),
@@ -34526,7 +34521,7 @@
         }), t.SubscribeButton = void 0, t.SubscribeButtonComponent = i;
         var o = n(275),
             a = r(o),
-            s = n(617),
+            s = n(618),
             l = n(306),
             u = r(l),
             c = n(307),
@@ -34585,11 +34580,11 @@
             u = r(l),
             c = n(275),
             d = r(c),
-            p = n(574),
+            p = n(575),
             f = n(649),
             h = n(651),
             _ = n(644),
-            v = n(431),
+            v = n(432),
             y = n(215),
             m = n(167),
             g = "player_notifbutton_clicks",
@@ -34916,7 +34911,7 @@
         }), t.NotificationsButton = void 0, t.NotificationsButtonComponent = i;
         var o = n(275),
             a = r(o),
-            s = n(617),
+            s = n(618),
             l = n(307),
             u = n(306),
             c = r(u),
@@ -35041,7 +35036,7 @@
         }), t.StreamStatus = t.StreamStatusComponent = void 0;
         var i = n(275),
             o = r(i),
-            a = n(574),
+            a = n(575),
             s = n(166),
             l = n(391),
             u = n(249),
@@ -35173,7 +35168,7 @@
             }(),
             l = n(275),
             u = r(l),
-            c = n(574),
+            c = n(575),
             d = {
                 uuid: l.PropTypes.string.isRequired,
                 renderValue: l.PropTypes.string.isRequired,
@@ -35270,7 +35265,7 @@
             }(),
             l = n(275),
             u = r(l),
-            c = n(574),
+            c = n(575),
             d = {
                 i18n: l.PropTypes.object,
                 shouldShowMutedSegmentsAlert: l.PropTypes.bool
@@ -35365,8 +35360,8 @@
             }(),
             l = n(275),
             u = r(l),
-            c = n(574),
-            d = n(598),
+            c = n(575),
+            d = n(599),
             p = n(360),
             f = {
                 i18n: l.PropTypes.object,
@@ -35542,14 +35537,14 @@
             }(),
             d = n(275),
             p = i(d),
-            f = n(574),
+            f = n(575),
             h = n(116),
             _ = i(h),
             v = n(657),
             y = n(661),
             m = n(363),
             g = n(166),
-            b = n(431),
+            b = n(432),
             E = n(241),
             T = n(331),
             S = n(217),
@@ -35988,7 +35983,7 @@
                                     message: e
                                 })
                             }, this.onMouseEnter = function(e) {
-                                c.tracker.trackEvent("extension_mouseenter", {});
+                                c.tracker.trackEvent("extension_mouseenter", {})
                             }, this.handleMessage = function(e) {
                                 var t = e.source,
                                     n = e.data;
@@ -37138,8 +37133,8 @@
             p = n(662),
             f = n(663),
             h = n(664),
-            _ = n(617),
-            v = n(618),
+            _ = n(618),
+            v = n(619),
             y = n(307),
             m = n(306),
             g = r(m),
@@ -37347,8 +37342,8 @@
             }(),
             d = n(275),
             p = r(d),
-            f = n(617),
-            h = n(618),
+            f = n(618),
+            h = n(619),
             _ = n(217),
             v = n(306),
             y = r(v),
@@ -37511,7 +37506,7 @@
         }), t.UserPermissionsPopup = t.CANCEL_BUTTON_CLASS = t.REVOKE_BUTTON_CLASS = t.GRANT_BUTTON_CLASS = t.USER_PERMISSIONS_SUBTITLE_CLASS = t.USER_PERMISSIONS_TITLE_CLASS = t.USER_PERMISSIONS_POPUP_CLASS = void 0, t.UserPermissionsPopupComponent = i;
         var o = n(275),
             a = r(o),
-            s = n(617),
+            s = n(618),
             l = n(307),
             u = n(306),
             c = r(u),
@@ -37566,8 +37561,8 @@
         }), t.MoreInfoButton = i;
         var o = n(275),
             a = r(o),
-            s = n(617),
-            l = n(618),
+            s = n(618),
+            l = n(619),
             u = n(306),
             c = r(u),
             d = {
@@ -37645,7 +37640,7 @@
             }(),
             u = n(275),
             c = r(u),
-            d = n(574),
+            d = n(575),
             p = n(273),
             f = n(666),
             h = 250,
@@ -39664,7 +39659,7 @@
                     return 0
                 },
                 4: function(e) {
-                    return Number(e % 10 == 1 && e % 100 != 11 ? 0 : e % 10 >= 2 && e % 10 <= 4 && (e % 100 < 10 || e % 100 >= 20) ? 1 : 2);
+                    return Number(e % 10 == 1 && e % 100 != 11 ? 0 : e % 10 >= 2 && e % 10 <= 4 && (e % 100 < 10 || e % 100 >= 20) ? 1 : 2)
                 },
                 5: function(e) {
                     return Number(0 === e ? 0 : 1 == e ? 1 : 2 == e ? 2 : e % 100 >= 3 && e % 100 <= 10 ? 3 : e % 100 >= 11 ? 4 : 5)
@@ -40606,7 +40601,7 @@
             }(),
             l = n(275),
             u = r(l),
-            c = n(574),
+            c = n(575),
             d = n(391),
             p = n(694),
             f = n(420),
@@ -41162,7 +41157,7 @@
         }), t.RecCloseButton = void 0;
         var i = n(275),
             o = r(i),
-            a = n(617),
+            a = n(618),
             s = n(306),
             l = r(s),
             u = {
@@ -43264,7 +43259,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.init = i;
-        var o = n(583),
+        var o = n(584),
             a = n(722),
             s = r(a),
             l = n(723),
@@ -43304,7 +43299,7 @@
             H = n(763),
             q = n(764),
             G = n(766),
-            Y = n(431),
+            Y = n(432),
             W = n(767),
             K = n(768),
             $ = n(769),
@@ -44556,7 +44551,7 @@
             v = n(330),
             y = n(218),
             m = n(166),
-            g = n(432),
+            g = n(433),
             b = t.UPDATE_INTERVAL_VOD = 20,
             E = t.UPDATE_INTERVAL_LIVESTREAM = 600,
             T = t.INIT_UPDATE_OFFSET_VOD = 2e4,
@@ -44905,7 +44900,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.timelineMetadata = i;
-        var o = n(607),
+        var o = n(608),
             a = n(330),
             s = n(116),
             l = r(s),
@@ -45001,7 +44996,7 @@
         }), t.ui = i;
         var o = n(116),
             a = r(o),
-            s = n(628),
+            s = n(429),
             l = {
                 isMini: !1,
                 showSettings: !1
@@ -46054,7 +46049,7 @@
             l = n(644),
             u = n(363),
             c = n(772),
-            d = n(431),
+            d = n(432),
             p = n(53),
             f = r(p),
             h = ["amazon_livestream"];
@@ -46157,7 +46152,7 @@
             o = n(182),
             a = n(762),
             s = n(644),
-            l = n(431);
+            l = n(432);
         t.TwitchEverywhereManager = function() {
             function e(t) {
                 r(this, e), this.stateStore = t, this.unsubs = [], this.unsubs.push((0, o.subscribe)(this.stateStore, ["streamMetadata.channel"], this.onChannelChange.bind(this)))
@@ -46505,7 +46500,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            o = n(432),
+            o = n(433),
             a = n(198),
             s = "staff";
         t.UserManager = function() {
