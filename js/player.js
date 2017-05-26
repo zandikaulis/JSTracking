@@ -204,19 +204,19 @@
             B = n(335),
             F = n(342),
             V = n(315),
-            H = n(700),
+            H = n(702),
             q = n(179),
-            G = n(718),
-            Y = n(719),
+            G = n(720),
+            Y = n(721),
             W = n(363),
-            K = n(747),
+            K = n(749),
             z = n(241),
             Q = n(330),
             X = r(Q),
             J = n(329),
-            Z = n(733),
+            Z = n(735),
             ee = r(Z),
-            te = n(736),
+            te = n(738),
             ne = r(te),
             re = n(327),
             ie = n(364),
@@ -224,31 +224,31 @@
             ae = n(181),
             se = n(426),
             le = n(328),
-            ue = n(726),
+            ue = n(728),
             ce = n(178),
             de = r(ce),
             pe = n(198),
-            fe = n(775),
+            fe = n(777),
             he = n(325),
             _e = n(218),
-            ve = n(763),
+            ve = n(765),
             ye = n(628),
-            me = n(776),
-            ge = n(777),
-            be = n(780),
-            Ee = n(781),
+            me = n(778),
+            ge = n(779),
+            be = n(782),
+            Ee = n(783),
             Te = n(215),
             Se = n(606),
-            Pe = n(782),
-            Ce = n(783),
-            we = n(784),
+            Pe = n(784),
+            Ce = n(785),
+            we = n(786),
             ke = n(175),
             Ae = n(177),
-            Oe = n(785),
+            Oe = n(787),
             Ie = n(331);
         n(337).polyfill(), h.Dobbin.configure({
             Promise: Promise
-        }), n.p = P.playerHost + "/", n(786), window.google || $.getScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = o, window.Twitch.Player = o, window.Twitch.Player.PROMPT_LOGIN = Ae.PROMPT_LOGIN_MODAL
+        }), n.p = P.playerHost + "/", n(788), window.google || $.getScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = o, window.Twitch.Player = o, window.Twitch.Player.PROMPT_LOGIN = Ae.PROMPT_LOGIN_MODAL
     }, function(e, t, n) {
         var r = n(2),
             i = n(3),
@@ -9706,7 +9706,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.05.26-182839+58aa1989e834fafb8359faab6b952d2906b236c1",
+                    app_version: "2017.05.26-191032+5979538e1d1d879c5ea01edb2319a94f8bdf1f17",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -19297,7 +19297,7 @@
                 }, {
                     showInfo: !0
                 });
-                $(t).addClass("player").addClass("theme--light"), $(t).append(n(699));
+                $(t).addClass("player").addClass("theme--light"), $(t).append(n(701));
                 var C = o.getState().playback.muted;
                 o.dispatch((0, R.initializeCaptionsSettings)(C)), o.dispatch((0, M.initializePlaybackSettings)()), o.dispatch((0, L.initializeSettings)()), G.default.render(H.default.createElement(Y.Provider, {
                     store: o
@@ -19422,15 +19422,15 @@
             w = n(654),
             k = n(655),
             A = n(656),
-            O = n(663),
-            I = n(665),
-            N = n(666),
+            O = n(665),
+            I = n(667),
+            N = n(668),
             R = n(348),
             M = n(328),
             L = n(414),
-            D = n(667),
-            x = n(669),
-            j = n(670),
+            D = n(669),
+            x = n(671),
+            j = n(672),
             U = n(249),
             B = n(177),
             F = r(B),
@@ -19440,10 +19440,10 @@
             G = i(q),
             Y = n(574),
             W = n(307),
-            K = n(672),
+            K = n(674),
             z = n(648),
             Q = n(653),
-            X = n(691)
+            X = n(693)
     }, function(e, t, n) {
         "use strict";
 
@@ -35546,7 +35546,7 @@
             h = n(116),
             _ = i(h),
             v = n(657),
-            y = n(659),
+            y = n(661),
             m = n(363),
             g = n(166),
             b = n(431),
@@ -35830,9 +35830,9 @@
                 }, {
                     key: "componentDidUpdate",
                     value: function(e) {
-                        var t = e.extension.token,
-                            n = this.props.extension.token;
-                        this.iframe && n !== t && this.extensionCoordinator.reloadExtension()
+                        var t = e.extension.token.token,
+                            n = this.props.extension.token.token;
+                        this.iframe && n !== t && this.extensionCoordinator.reloadExtension(n)
                     }
                 }, {
                     key: "render",
@@ -35860,344 +35860,1226 @@
             }(u.default.Component);
         _.propTypes = h
     }, function(e, t, n) {
-        ! function(t, n) {
-            e.exports = n()
-        }(this, function() {
-            return function(e) {
-                function t(r) {
-                    if (n[r]) return n[r].exports;
-                    var i = n[r] = {
-                        i: r,
-                        l: !1,
-                        exports: {}
-                    };
-                    return e[r].call(i.exports, i, i.exports, t), i.l = !0, i.exports
-                }
-                var n = {};
-                return t.m = e, t.c = n, t.i = function(e) {
-                    return e
-                }, t.d = function(e, n, r) {
-                    t.o(e, n) || Object.defineProperty(e, n, {
-                        configurable: !1,
-                        enumerable: !0,
-                        get: r
-                    })
-                }, t.n = function(e) {
-                    var n = e && e.__esModule ? function() {
-                        return e.default
-                    } : function() {
+        (function(t, n) {
+            ! function(t, n) {
+                e.exports = n()
+            }(this, function() {
+                return function(e) {
+                    function t(r) {
+                        if (n[r]) return n[r].exports;
+                        var i = n[r] = {
+                            i: r,
+                            l: !1,
+                            exports: {}
+                        };
+                        return e[r].call(i.exports, i, i.exports, t), i.l = !0, i.exports
+                    }
+                    var n = {};
+                    return t.m = e, t.c = n, t.i = function(e) {
                         return e
-                    };
-                    return t.d(n, "a", n), n
-                }, t.o = function(e, t) {
-                    return Object.prototype.hasOwnProperty.call(e, t)
-                }, t.p = "", t(t.s = 5)
-            }([function(e, t, n) {
-                "use strict";
-                n.d(t, "a", function() {
-                    return r
-                }), n.d(t, "b", function() {
-                    return i
-                });
-                var r = function() {
-                    function e() {}
-                    return e
-                }();
-                r.TwitchExtAuth = "twitch-ext-auth", r.TwitchExtBoostrap = "twitch-ext-bootstrap", r.TwitchExtContext = "twitch-ext-context", r.TwitchExtError = "twitch-ext-error", r.TwitchExtLoaded = "twitch-ext-loaded", r.TwitchExtReload = "twitch-ext-reload", r.TwitchExtUserAction = "twitch-ext-user-action";
-                var i = "contextchange"
-            }, function(e, t, n) {
-                "use strict";
-                var r = n(0);
-                n.d(t, "a", function() {
-                    return i
-                });
-                var i = function() {
-                    function e(e, t, n) {
-                        var i = this;
-                        this.playerExtensionsApi = e, this.extensionMode = t, this.onContextUpdate = n, this.context = {}, this.isContextInitialized = !1, this.currentGame = "", this.destroy = function() {
-                            i.playerExtensionsApi.off(r.b, i.updateLocalContext)
-                        }, this.initializeContext = function() {
-                            i.isContextInitialized = !0, i.updateLocalContext()
-                        }, this.setGame = function(e) {
-                            i.currentGame = e, i.updateLocalContext()
-                        }, this.initEvents = function() {
-                            "viewer" === i.extensionMode && (i.playerExtensionsApi.setStatsEnabled(!0), i.playerExtensionsApi.on(r.b, i.updateLocalContext))
-                        }, this.refreshContext = function() {
-                            var e = {
-                                mode: i.extensionMode
-                            };
-                            if ("viewer" === i.extensionMode) {
-                                var t = i.playerExtensionsApi.stats;
-                                e.bitrate = t.playbackRate, e.bufferSize = t.bufferSize, e.displayResolution = t.displayResolution, e.game = i.currentGame, e.hlsLatencyBroadcaster = t.hlsLatencyBroadcaster, e.isFullScreen = i.playerExtensionsApi.fullscreen, e.isPaused = i.playerExtensionsApi.paused, e.isTheatreMode = i.playerExtensionsApi.theatre, e.videoResolution = t.videoResolution
-                            }
+                    }, t.d = function(e, n, r) {
+                        t.o(e, n) || Object.defineProperty(e, n, {
+                            configurable: !1,
+                            enumerable: !0,
+                            get: r
+                        })
+                    }, t.n = function(e) {
+                        var n = e && e.__esModule ? function() {
+                            return e.default
+                        } : function() {
                             return e
-                        }, this.updateLocalContext = function() {
-                            var e = i.refreshContext(),
-                                t = Object.keys(e),
-                                n = t.reduce(function(t, n) {
-                                    return i.context[n] !== e[n] && t.push(n), t
-                                }, []);
-                            i.isContextInitialized && n.length > 0 && (i.context = e, i.onContextUpdate(n))
-                        }, this.initEvents()
-                    }
-                    return e
-                }()
-            }, function(e, t, n) {
-                "use strict";
-                n.d(t, "a", function() {
-                    return r
-                });
-                var r = function() {
-                    function e(e, t, n) {
-                        var r = this;
-                        this.extension = e, this.onAuthUpdate = t, this.onAnyFailure = n, this.destroy = function() {
-                            r.destroyed = !0, void 0 !== r.timeout && (clearTimeout(r.timeout), delete r.timeout)
-                        }, this.cycleExtensionAuth = function() {
-                            var e = r.extension.token,
-                                t = r.decodeTokenPayload(e),
-                                n = Date.now(),
-                                i = Math.max(0, .9 * (1e3 * t.exp - n));
-                            r.timeout = setTimeout(r.refreshAuth.bind(r, r.auth), i)
-                        }, this.decodeTokenPayload = function(e) {
-                            var t, n = {
-                                    channel_id: "",
-                                    exp: 0,
-                                    opaque_user_id: "",
-                                    pubsub_perms: {
-                                        listen: [],
-                                        send: []
-                                    },
-                                    role: "",
-                                    user_id: ""
-                                },
-                                i = e.split(".")[1];
-                            try {
-                                t = JSON.parse(atob(i))
-                            } catch (e) {
-                                return r.onAnyFailure("failed to parse token payload"), n
-                            }
-                            return t
-                        }, this.refreshAuth = function(e) {
-                            delete r.timeout;
-                            var t = e.token,
-                                n = new XMLHttpRequest;
-                            n.open("POST", "https://api.twitch.tv/v5/extensions/auth/refresh", !0), n.setRequestHeader("Client-ID", e.clientId), n.setRequestHeader("Content-Type", "application/json"), n.onreadystatechange = function() {
-                                if (n.readyState === XMLHttpRequest.DONE && !r.destroyed)
-                                    if (200 === n.status) {
-                                        var e = JSON.parse(n.responseText).token;
-                                        r.extension.token = e, r.onAuthUpdate(r.auth), r.cycleExtensionAuth()
-                                    } else r.onAnyFailure("token refresh failed")
-                            }, n.send(JSON.stringify({
-                                token: t
-                            }))
-                        }
-                    }
-                    return Object.defineProperty(e.prototype, "auth", {
-                        get: function() {
-                            var e = this.decodeTokenPayload(this.extension.token);
-                            return {
-                                channelId: e.channel_id,
-                                clientId: this.extension.clientId,
-                                token: this.extension.token,
-                                userId: e.opaque_user_id
-                            }
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), e
-                }()
-            }, function(e, t, n) {
-                "use strict";
-                var r = n(6);
-                n.d(t, "a", function() {
-                    return o
-                });
-                var i = this && this.__assign || Object.assign || function(e) {
-                        for (var t, n = 1, r = arguments.length; n < r; n++) {
-                            t = arguments[n];
-                            for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
-                        }
+                        };
+                        return t.d(n, "a", n), n
+                    }, t.o = function(e, t) {
+                        return Object.prototype.hasOwnProperty.call(e, t)
+                    }, t.p = "", t(t.s = 15)
+                }([function(e, t, n) {
+                    "use strict";
+                    n.d(t, "a", function() {
+                        return r
+                    }), n.d(t, "b", function() {
+                        return i
+                    });
+                    var r = function() {
+                        function e() {}
                         return e
-                    },
-                    o = function() {
-                        function e(e) {
-                            this.dobbin = e.dobbin;
-                            var t = n.i(r.a)(e.iframe.ownerDocument.referrer);
-                            this.trackingProperties = i({}, e.requiredProps, {
-                                url: e.iframe.ownerDocument.location.href,
-                                host: e.iframe.ownerDocument.location.host,
-                                domain: e.iframe.ownerDocument.domain,
-                                user_agent: e.iframe.ownerDocument.defaultView.navigator.userAgent,
-                                referrer_url: e.iframe.ownerDocument.referrer,
-                                referrer_host: t.host,
-                                extension_id: e.extension.id,
-                                extension_version: e.extension.version,
-                                extension_anchor: e.extension.anchor,
-                                extension_mode: e.extensionMode
-                            })
+                    }();
+                    r.TwitchExtAuth = "twitch-ext-auth", r.TwitchExtBoostrap = "twitch-ext-bootstrap", r.TwitchExtContext = "twitch-ext-context", r.TwitchExtError = "twitch-ext-error", r.TwitchExtLoaded = "twitch-ext-loaded", r.TwitchExtReload = "twitch-ext-reload", r.TwitchExtUserAction = "twitch-ext-user-action";
+                    var i = "contextchange"
+                }, function(e, t, n) {
+                    "use strict";
+                    Object.defineProperty(t, "__esModule", {
+                        value: !0
+                    });
+                    var r = n(0),
+                        i = n(7),
+                        o = n(8),
+                        a = n(9);
+                    n.d(t, "ExtensionCoordinator", function() {
+                        return s
+                    });
+                    var s = function() {
+                        function e(e, t, n, a, s, l, u) {
+                            var c = this;
+                            this.extension = e, this.iframe = t, this.ems = s, this.contextManager = l, this.tracker = u, this.handleUserAction = {
+                                click: function(e) {
+                                    var t = e.payload,
+                                        n = this.iframe.getBoundingClientRect(),
+                                        r = n.width,
+                                        i = n.height;
+                                    this.tracker.trackEvent("extension_click", {
+                                        px_mouse_coord_x: t.clientX,
+                                        px_mouse_coord_y: t.clientY,
+                                        pct_mouse_coord_x: t.clientX / r * 100,
+                                        pct_mouse_coord_y: t.clientY / i * 100
+                                    })
+                                },
+                                mousemove: function(e) {
+                                    var t = e.payload,
+                                        n = this.iframe.getBoundingClientRect(),
+                                        r = n.left,
+                                        i = n.top;
+                                    this.iframe.dispatchEvent(new MouseEvent("mousemove", {
+                                        bubbles: !0,
+                                        clientX: t.clientX,
+                                        clientY: t.clientY,
+                                        screenX: r + t.clientX,
+                                        screenY: i + t.clientY
+                                    }))
+                                },
+                                focusin: function(e) {
+                                    e.payload;
+                                    if ("video_overlay" === this.extension.anchor) {
+                                        for (var t = this.iframe; t && !t.hasAttribute("tabindex");) t = t.parentElement;
+                                        t && t.focus()
+                                    }
+                                }
+                            }, this.destroy = function() {
+                                c.contextManager.destroy(), c.ems.destroy(), c.eventListeners.forEach(function(e) {
+                                    e.target.removeEventListener(e.event, e.callback)
+                                })
+                            }, this.reloadExtension = function(e) {
+                                c.ems.token = e, c.sendMessage({
+                                    action: r.a.TwitchExtReload
+                                })
+                            }, this.setGame = function(e) {
+                                c.contextManager.setGame(e)
+                            }, this.sendMessage = function(e) {
+                                c.iframe.contentWindow.postMessage(e, "*")
+                            }, this.onInitialAuth = function() {
+                                c.sendMessage({
+                                    action: r.a.TwitchExtBoostrap,
+                                    auth: c.ems.auth
+                                })
+                            }, this.onContextUpdate = function(e) {
+                                c.sendMessage({
+                                    action: r.a.TwitchExtContext,
+                                    updatedFields: e,
+                                    context: c.contextManager.context
+                                })
+                            }, this.onAuthUpdate = function(e) {
+                                c.sendMessage({
+                                    action: r.a.TwitchExtAuth,
+                                    auth: c.ems.auth
+                                })
+                            }, this.onError = function(e) {
+                                c.sendMessage({
+                                    action: r.a.TwitchExtError,
+                                    message: e
+                                })
+                            }, this.onMouseEnter = function(e) {
+                                c.tracker.trackEvent("extension_mouseenter", {});
+                            }, this.handleMessage = function(e) {
+                                var t = e.source,
+                                    n = e.data;
+                                if (t === c.iframe.contentWindow) try {
+                                    c.handleExtensionAction(n)
+                                } catch (e) {
+                                    console.error(e)
+                                }
+                            }, this.ems = s || new o.a(e, this.onAuthUpdate, this.onError), this.contextManager = l || new i.a(a, n, this.onContextUpdate), this.eventListeners = [{
+                                target: this.iframe,
+                                event: "mouseenter",
+                                callback: this.onMouseEnter
+                            }, {
+                                target: this.iframe.ownerDocument.defaultView,
+                                event: "message",
+                                callback: this.handleMessage
+                            }], this.eventListeners.forEach(function(e) {
+                                e.target.addEventListener(e.event, e.callback)
+                            }), this.tracker.trackEvent("extension_render", {})
                         }
-                        return e.prototype.trackEvent = function(e, t) {
-                            var n = i({}, t, this.trackingProperties);
-                            this.dobbin.trackEvent(e, n, ["spade"])
+                        return e.create = function(t) {
+                            return new e(t.extension, t.iframe, t.mode, t.playerExtensionsApi, null, null, new a.a({
+                                dobbin: t.dobbin,
+                                extension: t.extension,
+                                extensionMode: t.mode,
+                                iframe: t.iframe,
+                                requiredProps: t.trackingProperties
+                            }))
+                        }, e.prototype.handleExtensionAction = function(e) {
+                            switch (e.action) {
+                                case r.a.TwitchExtLoaded:
+                                    this.ems.beginAuthCycle(this.onInitialAuth), this.contextManager.initializeContext(), this.tracker.trackEvent("extension_helper_load_success", {});
+                                    break;
+                                case r.a.TwitchExtUserAction:
+                                    this.handleUserAction[e.payload.type].call(this, e)
+                            }
                         }, e
                     }()
-            }, function(e, t) {
-                try {
-                    new MouseEvent("test")
-                } catch (e) {
-                    window.MouseEvent = function(e, t) {
-                        var n = document.createEvent("MouseEvent"),
-                            r = Object.assign({
-                                bubbles: !1,
-                                cancelable: !1,
-                                clientX: 0,
-                                clientY: 0,
-                                ctrlKey: !1,
-                                altKey: !1,
-                                shiftKey: !1,
-                                metaKey: !1,
-                                button: 0,
-                                relatedTarget: null
-                            }, t || {});
-                        return n.initMouseEvent(e, r.bubbles, r.cancelable, window, r.ctrlKey, r.altKey, r.shiftKey, r.metaKey, r.button, r.relatedTarget), n
-                    }, window.MouseEvent.prototype = Event.prototype
-                }
-            }, function(e, t, n) {
-                "use strict";
-                Object.defineProperty(t, "__esModule", {
-                    value: !0
-                });
-                var r = n(0),
-                    i = n(1),
-                    o = n(2),
-                    a = n(3),
-                    s = n(4);
-                n.n(s);
-                n.d(t, "ExtensionCoordinator", function() {
-                    return l
-                });
-                var l = function() {
-                    function e(e, t, n, a, s, l, u) {
-                        var c = this;
-                        this.extension = e, this.iframe = t, this.ems = s, this.contextManager = l, this.tracker = u, this.handleUserAction = {
-                            click: function(e) {
-                                var t = e.payload,
-                                    n = this.iframe.getBoundingClientRect(),
-                                    r = n.width,
-                                    i = n.height;
-                                this.tracker.trackEvent("extension_click", {
-                                    px_mouse_coord_x: t.clientX,
-                                    px_mouse_coord_y: t.clientY,
-                                    pct_mouse_coord_x: t.clientX / r * 100,
-                                    pct_mouse_coord_y: t.clientY / i * 100
-                                })
-                            },
-                            mousemove: function(e) {
-                                var t = e.payload,
-                                    n = this.iframe.getBoundingClientRect(),
-                                    r = n.left,
-                                    i = n.top;
-                                this.iframe.dispatchEvent(new MouseEvent("mousemove", {
-                                    bubbles: !0,
-                                    clientX: t.clientX,
-                                    clientY: t.clientY,
-                                    screenX: r + t.clientX,
-                                    screenY: i + t.clientY
-                                }))
-                            },
-                            focusin: function(e) {
-                                e.payload;
-                                if ("video_overlay" === this.extension.anchor) {
-                                    for (var t = this.iframe; t && !t.hasAttribute("tabindex");) t = t.parentElement;
-                                    t && t.focus()
+                }, function(e, t) {
+                    try {
+                        new MouseEvent("test")
+                    } catch (e) {
+                        window.MouseEvent = function(e, t) {
+                            var n = document.createEvent("MouseEvent"),
+                                r = Object.assign({
+                                    bubbles: !1,
+                                    cancelable: !1,
+                                    clientX: 0,
+                                    clientY: 0,
+                                    ctrlKey: !1,
+                                    altKey: !1,
+                                    shiftKey: !1,
+                                    metaKey: !1,
+                                    button: 0,
+                                    relatedTarget: null
+                                }, t || {});
+                            return n.initMouseEvent(e, r.bubbles, r.cancelable, window, r.ctrlKey, r.altKey, r.shiftKey, r.metaKey, r.button, r.relatedTarget), n
+                        }, window.MouseEvent.prototype = Event.prototype
+                    }
+                }, function(e, t, n) {
+                    (function(t) {
+                        ! function(n) {
+                            function r() {}
+
+                            function i(e, t) {
+                                return function() {
+                                    e.apply(t, arguments)
                                 }
                             }
-                        }, this.destroy = function() {
-                            c.contextManager.destroy(), c.ems.destroy(), c.eventListeners.forEach(function(e) {
-                                e.target.removeEventListener(e.event, e.callback)
-                            })
-                        }, this.reloadExtension = function() {
-                            c.sendMessage({
-                                action: r.a.TwitchExtReload
-                            })
-                        }, this.setGame = function(e) {
-                            c.contextManager.setGame(e)
-                        }, this.sendMessage = function(e) {
-                            c.iframe.contentWindow.postMessage(e, "*")
-                        }, this.onExtensionLoaded = function() {
-                            c.sendMessage({
-                                action: r.a.TwitchExtBoostrap,
-                                auth: c.ems.auth
-                            })
-                        }, this.onContextUpdate = function(e) {
-                            c.sendMessage({
-                                action: r.a.TwitchExtContext,
-                                updatedFields: e,
-                                context: c.contextManager.context
-                            })
-                        }, this.onAuthUpdate = function(e) {
-                            c.sendMessage({
-                                action: r.a.TwitchExtAuth,
-                                auth: e
-                            })
-                        }, this.onError = function(e) {
-                            c.sendMessage({
-                                action: r.a.TwitchExtError,
-                                message: e
-                            })
-                        }, this.onMouseEnter = function(e) {
-                            c.tracker.trackEvent("extension_mouseenter", {})
-                        }, this.handleMessage = function(e) {
-                            var t = e.source,
-                                n = e.data;
-                            if (t === c.iframe.contentWindow) try {
-                                c.handleExtensionAction(n)
-                            } catch (e) {
-                                console.error(e)
+
+                            function o(e) {
+                                if ("object" != typeof this) throw new TypeError("Promises must be constructed via new");
+                                if ("function" != typeof e) throw new TypeError("not a function");
+                                this._state = 0, this._handled = !1, this._value = void 0, this._deferreds = [], d(e, this)
                             }
-                        }, this.ems = s || new o.a(e, this.onAuthUpdate, this.onError), this.contextManager = l || new i.a(a, n, this.onContextUpdate), this.eventListeners = [{
-                            target: this.iframe,
-                            event: "mouseenter",
-                            callback: this.onMouseEnter
-                        }, {
-                            target: this.iframe.ownerDocument.defaultView,
-                            event: "message",
-                            callback: this.handleMessage
-                        }], this.eventListeners.forEach(function(e) {
-                            e.target.addEventListener(e.event, e.callback)
-                        }), this.tracker.trackEvent("extension_render", {})
-                    }
-                    return e.create = function(t) {
-                        return new e(t.extension, t.iframe, t.mode, t.playerExtensionsApi, null, null, new a.a({
-                            dobbin: t.dobbin,
-                            extension: t.extension,
-                            extensionMode: t.mode,
-                            iframe: t.iframe,
-                            requiredProps: t.trackingProperties
-                        }))
-                    }, e.prototype.handleExtensionAction = function(e) {
-                        switch (e.action) {
-                            case r.a.TwitchExtLoaded:
-                                this.onExtensionLoaded(), this.ems.cycleExtensionAuth(), this.contextManager.initializeContext(), this.tracker.trackEvent("extension_helper_load_success", {});
-                                break;
-                            case r.a.TwitchExtUserAction:
-                                this.handleUserAction[e.payload.type].call(this, e)
+
+                            function a(e, t) {
+                                for (; 3 === e._state;) e = e._value;
+                                return 0 === e._state ? void e._deferreds.push(t) : (e._handled = !0, void o._immediateFn(function() {
+                                    var n = 1 === e._state ? t.onFulfilled : t.onRejected;
+                                    if (null === n) return void(1 === e._state ? s : l)(t.promise, e._value);
+                                    var r;
+                                    try {
+                                        r = n(e._value)
+                                    } catch (e) {
+                                        return void l(t.promise, e)
+                                    }
+                                    s(t.promise, r)
+                                }))
+                            }
+
+                            function s(e, t) {
+                                try {
+                                    if (t === e) throw new TypeError("A promise cannot be resolved with itself.");
+                                    if (t && ("object" == typeof t || "function" == typeof t)) {
+                                        var n = t.then;
+                                        if (t instanceof o) return e._state = 3, e._value = t, void u(e);
+                                        if ("function" == typeof n) return void d(i(n, t), e)
+                                    }
+                                    e._state = 1, e._value = t, u(e)
+                                } catch (t) {
+                                    l(e, t)
+                                }
+                            }
+
+                            function l(e, t) {
+                                e._state = 2, e._value = t, u(e)
+                            }
+
+                            function u(e) {
+                                2 === e._state && 0 === e._deferreds.length && o._immediateFn(function() {
+                                    e._handled || o._unhandledRejectionFn(e._value)
+                                });
+                                for (var t = 0, n = e._deferreds.length; t < n; t++) a(e, e._deferreds[t]);
+                                e._deferreds = null
+                            }
+
+                            function c(e, t, n) {
+                                this.onFulfilled = "function" == typeof e ? e : null, this.onRejected = "function" == typeof t ? t : null, this.promise = n
+                            }
+
+                            function d(e, t) {
+                                var n = !1;
+                                try {
+                                    e(function(e) {
+                                        n || (n = !0, s(t, e))
+                                    }, function(e) {
+                                        n || (n = !0, l(t, e))
+                                    })
+                                } catch (e) {
+                                    if (n) return;
+                                    n = !0, l(t, e)
+                                }
+                            }
+                            var p = setTimeout;
+                            o.prototype.catch = function(e) {
+                                return this.then(null, e)
+                            }, o.prototype.then = function(e, t) {
+                                var n = new this.constructor(r);
+                                return a(this, new c(e, t, n)), n
+                            }, o.all = function(e) {
+                                var t = Array.prototype.slice.call(e);
+                                return new o(function(e, n) {
+                                    function r(o, a) {
+                                        try {
+                                            if (a && ("object" == typeof a || "function" == typeof a)) {
+                                                var s = a.then;
+                                                if ("function" == typeof s) return void s.call(a, function(e) {
+                                                    r(o, e)
+                                                }, n)
+                                            }
+                                            t[o] = a, 0 === --i && e(t)
+                                        } catch (e) {
+                                            n(e)
+                                        }
+                                    }
+                                    if (0 === t.length) return e([]);
+                                    for (var i = t.length, o = 0; o < t.length; o++) r(o, t[o])
+                                })
+                            }, o.resolve = function(e) {
+                                return e && "object" == typeof e && e.constructor === o ? e : new o(function(t) {
+                                    t(e)
+                                })
+                            }, o.reject = function(e) {
+                                return new o(function(t, n) {
+                                    n(e)
+                                })
+                            }, o.race = function(e) {
+                                return new o(function(t, n) {
+                                    for (var r = 0, i = e.length; r < i; r++) e[r].then(t, n)
+                                })
+                            }, o._immediateFn = "function" == typeof t && function(e) {
+                                t(e)
+                            } || function(e) {
+                                p(e, 0)
+                            }, o._unhandledRejectionFn = function(e) {
+                                "undefined" != typeof console && console && console.warn("Possible Unhandled Promise Rejection:", e)
+                            }, o._setImmediateFn = function(e) {
+                                o._immediateFn = e
+                            }, o._setUnhandledRejectionFn = function(e) {
+                                o._unhandledRejectionFn = e
+                            }, "undefined" != typeof e && e.exports ? e.exports = o : n.Promise || (n.Promise = o)
+                        }(this)
+                    }).call(t, n(11).setImmediate)
+                }, function(e, t) {
+                    ! function(e) {
+                        "use strict";
+
+                        function t(e) {
+                            if ("string" != typeof e && (e = String(e)), /[^a-z0-9\-#$%&'*+.\^_`|~]/i.test(e)) throw new TypeError("Invalid character in header field name");
+                            return e.toLowerCase()
                         }
-                    }, e
-                }()
-            }, function(e, t, n) {
+
+                        function n(e) {
+                            return "string" != typeof e && (e = String(e)), e
+                        }
+
+                        function r(e) {
+                            var t = {
+                                next: function() {
+                                    var t = e.shift();
+                                    return {
+                                        done: void 0 === t,
+                                        value: t
+                                    }
+                                }
+                            };
+                            return y.iterable && (t[Symbol.iterator] = function() {
+                                return t
+                            }), t
+                        }
+
+                        function i(e) {
+                            this.map = {}, e instanceof i ? e.forEach(function(e, t) {
+                                this.append(t, e)
+                            }, this) : Array.isArray(e) ? e.forEach(function(e) {
+                                this.append(e[0], e[1])
+                            }, this) : e && Object.getOwnPropertyNames(e).forEach(function(t) {
+                                this.append(t, e[t])
+                            }, this)
+                        }
+
+                        function o(e) {
+                            return e.bodyUsed ? Promise.reject(new TypeError("Already read")) : void(e.bodyUsed = !0)
+                        }
+
+                        function a(e) {
+                            return new Promise(function(t, n) {
+                                e.onload = function() {
+                                    t(e.result)
+                                }, e.onerror = function() {
+                                    n(e.error)
+                                }
+                            })
+                        }
+
+                        function s(e) {
+                            var t = new FileReader,
+                                n = a(t);
+                            return t.readAsArrayBuffer(e), n
+                        }
+
+                        function l(e) {
+                            var t = new FileReader,
+                                n = a(t);
+                            return t.readAsText(e), n
+                        }
+
+                        function u(e) {
+                            for (var t = new Uint8Array(e), n = new Array(t.length), r = 0; r < t.length; r++) n[r] = String.fromCharCode(t[r]);
+                            return n.join("")
+                        }
+
+                        function c(e) {
+                            if (e.slice) return e.slice(0);
+                            var t = new Uint8Array(e.byteLength);
+                            return t.set(new Uint8Array(e)), t.buffer
+                        }
+
+                        function d() {
+                            return this.bodyUsed = !1, this._initBody = function(e) {
+                                if (this._bodyInit = e, e)
+                                    if ("string" == typeof e) this._bodyText = e;
+                                    else if (y.blob && Blob.prototype.isPrototypeOf(e)) this._bodyBlob = e;
+                                else if (y.formData && FormData.prototype.isPrototypeOf(e)) this._bodyFormData = e;
+                                else if (y.searchParams && URLSearchParams.prototype.isPrototypeOf(e)) this._bodyText = e.toString();
+                                else if (y.arrayBuffer && y.blob && g(e)) this._bodyArrayBuffer = c(e.buffer), this._bodyInit = new Blob([this._bodyArrayBuffer]);
+                                else {
+                                    if (!y.arrayBuffer || !ArrayBuffer.prototype.isPrototypeOf(e) && !b(e)) throw new Error("unsupported BodyInit type");
+                                    this._bodyArrayBuffer = c(e)
+                                } else this._bodyText = "";
+                                this.headers.get("content-type") || ("string" == typeof e ? this.headers.set("content-type", "text/plain;charset=UTF-8") : this._bodyBlob && this._bodyBlob.type ? this.headers.set("content-type", this._bodyBlob.type) : y.searchParams && URLSearchParams.prototype.isPrototypeOf(e) && this.headers.set("content-type", "application/x-www-form-urlencoded;charset=UTF-8"))
+                            }, y.blob && (this.blob = function() {
+                                var e = o(this);
+                                if (e) return e;
+                                if (this._bodyBlob) return Promise.resolve(this._bodyBlob);
+                                if (this._bodyArrayBuffer) return Promise.resolve(new Blob([this._bodyArrayBuffer]));
+                                if (this._bodyFormData) throw new Error("could not read FormData body as blob");
+                                return Promise.resolve(new Blob([this._bodyText]))
+                            }, this.arrayBuffer = function() {
+                                return this._bodyArrayBuffer ? o(this) || Promise.resolve(this._bodyArrayBuffer) : this.blob().then(s)
+                            }), this.text = function() {
+                                var e = o(this);
+                                if (e) return e;
+                                if (this._bodyBlob) return l(this._bodyBlob);
+                                if (this._bodyArrayBuffer) return Promise.resolve(u(this._bodyArrayBuffer));
+                                if (this._bodyFormData) throw new Error("could not read FormData body as text");
+                                return Promise.resolve(this._bodyText)
+                            }, y.formData && (this.formData = function() {
+                                return this.text().then(h)
+                            }), this.json = function() {
+                                return this.text().then(JSON.parse)
+                            }, this
+                        }
+
+                        function p(e) {
+                            var t = e.toUpperCase();
+                            return E.indexOf(t) > -1 ? t : e
+                        }
+
+                        function f(e, t) {
+                            t = t || {};
+                            var n = t.body;
+                            if (e instanceof f) {
+                                if (e.bodyUsed) throw new TypeError("Already read");
+                                this.url = e.url, this.credentials = e.credentials, t.headers || (this.headers = new i(e.headers)), this.method = e.method, this.mode = e.mode, n || null == e._bodyInit || (n = e._bodyInit, e.bodyUsed = !0)
+                            } else this.url = String(e);
+                            if (this.credentials = t.credentials || this.credentials || "omit", !t.headers && this.headers || (this.headers = new i(t.headers)), this.method = p(t.method || this.method || "GET"), this.mode = t.mode || this.mode || null, this.referrer = null, ("GET" === this.method || "HEAD" === this.method) && n) throw new TypeError("Body not allowed for GET or HEAD requests");
+                            this._initBody(n)
+                        }
+
+                        function h(e) {
+                            var t = new FormData;
+                            return e.trim().split("&").forEach(function(e) {
+                                if (e) {
+                                    var n = e.split("="),
+                                        r = n.shift().replace(/\+/g, " "),
+                                        i = n.join("=").replace(/\+/g, " ");
+                                    t.append(decodeURIComponent(r), decodeURIComponent(i))
+                                }
+                            }), t
+                        }
+
+                        function _(e) {
+                            var t = new i;
+                            return e.split(/\r?\n/).forEach(function(e) {
+                                var n = e.split(":"),
+                                    r = n.shift().trim();
+                                if (r) {
+                                    var i = n.join(":").trim();
+                                    t.append(r, i)
+                                }
+                            }), t
+                        }
+
+                        function v(e, t) {
+                            t || (t = {}), this.type = "default", this.status = "status" in t ? t.status : 200, this.ok = this.status >= 200 && this.status < 300, this.statusText = "statusText" in t ? t.statusText : "OK", this.headers = new i(t.headers), this.url = t.url || "", this._initBody(e)
+                        }
+                        if (!e.fetch) {
+                            var y = {
+                                searchParams: "URLSearchParams" in e,
+                                iterable: "Symbol" in e && "iterator" in Symbol,
+                                blob: "FileReader" in e && "Blob" in e && function() {
+                                    try {
+                                        return new Blob, !0
+                                    } catch (e) {
+                                        return !1
+                                    }
+                                }(),
+                                formData: "FormData" in e,
+                                arrayBuffer: "ArrayBuffer" in e
+                            };
+                            if (y.arrayBuffer) var m = ["[object Int8Array]", "[object Uint8Array]", "[object Uint8ClampedArray]", "[object Int16Array]", "[object Uint16Array]", "[object Int32Array]", "[object Uint32Array]", "[object Float32Array]", "[object Float64Array]"],
+                                g = function(e) {
+                                    return e && DataView.prototype.isPrototypeOf(e)
+                                },
+                                b = ArrayBuffer.isView || function(e) {
+                                    return e && m.indexOf(Object.prototype.toString.call(e)) > -1
+                                };
+                            i.prototype.append = function(e, r) {
+                                e = t(e), r = n(r);
+                                var i = this.map[e];
+                                this.map[e] = i ? i + "," + r : r
+                            }, i.prototype.delete = function(e) {
+                                delete this.map[t(e)]
+                            }, i.prototype.get = function(e) {
+                                return e = t(e), this.has(e) ? this.map[e] : null
+                            }, i.prototype.has = function(e) {
+                                return this.map.hasOwnProperty(t(e))
+                            }, i.prototype.set = function(e, r) {
+                                this.map[t(e)] = n(r)
+                            }, i.prototype.forEach = function(e, t) {
+                                for (var n in this.map) this.map.hasOwnProperty(n) && e.call(t, this.map[n], n, this)
+                            }, i.prototype.keys = function() {
+                                var e = [];
+                                return this.forEach(function(t, n) {
+                                    e.push(n)
+                                }), r(e)
+                            }, i.prototype.values = function() {
+                                var e = [];
+                                return this.forEach(function(t) {
+                                    e.push(t)
+                                }), r(e)
+                            }, i.prototype.entries = function() {
+                                var e = [];
+                                return this.forEach(function(t, n) {
+                                    e.push([n, t])
+                                }), r(e)
+                            }, y.iterable && (i.prototype[Symbol.iterator] = i.prototype.entries);
+                            var E = ["DELETE", "GET", "HEAD", "OPTIONS", "POST", "PUT"];
+                            f.prototype.clone = function() {
+                                return new f(this, {
+                                    body: this._bodyInit
+                                })
+                            }, d.call(f.prototype), d.call(v.prototype), v.prototype.clone = function() {
+                                return new v(this._bodyInit, {
+                                    status: this.status,
+                                    statusText: this.statusText,
+                                    headers: new i(this.headers),
+                                    url: this.url
+                                })
+                            }, v.error = function() {
+                                var e = new v(null, {
+                                    status: 0,
+                                    statusText: ""
+                                });
+                                return e.type = "error", e
+                            };
+                            var T = [301, 302, 303, 307, 308];
+                            v.redirect = function(e, t) {
+                                if (T.indexOf(t) === -1) throw new RangeError("Invalid status code");
+                                return new v(null, {
+                                    status: t,
+                                    headers: {
+                                        location: e
+                                    }
+                                })
+                            }, e.Headers = i, e.Request = f, e.Response = v, e.fetch = function(e, t) {
+                                return new Promise(function(n, r) {
+                                    var i = new f(e, t),
+                                        o = new XMLHttpRequest;
+                                    o.onload = function() {
+                                        var e = {
+                                            status: o.status,
+                                            statusText: o.statusText,
+                                            headers: _(o.getAllResponseHeaders() || "")
+                                        };
+                                        e.url = "responseURL" in o ? o.responseURL : e.headers.get("X-Request-URL");
+                                        var t = "response" in o ? o.response : o.responseText;
+                                        n(new v(t, e))
+                                    }, o.onerror = function() {
+                                        r(new TypeError("Network request failed"))
+                                    }, o.ontimeout = function() {
+                                        r(new TypeError("Network request failed"))
+                                    }, o.open(i.method, i.url, !0), "include" === i.credentials && (o.withCredentials = !0), "responseType" in o && y.blob && (o.responseType = "blob"), i.headers.forEach(function(e, t) {
+                                        o.setRequestHeader(t, e)
+                                    }), o.send("undefined" == typeof i._bodyInit ? null : i._bodyInit)
+                                })
+                            }, e.fetch.polyfill = !0
+                        }
+                    }("undefined" != typeof self ? self : this)
+                }, function(e, t, n) {
+                    "use strict";
+
+                    function r(e) {
+                        if (e.status >= 200 && e.status < 300) return e;
+                        throw new Error(e.statusText)
+                    }
+                    n.d(t, "b", function() {
+                        return a
+                    }), n.d(t, "c", function() {
+                        return s
+                    }), n.d(t, "a", function() {
+                        return l
+                    }), n.d(t, "d", function() {
+                        return u
+                    }), n.d(t, "e", function() {
+                        return c
+                    });
+                    var i = this && this.__assign || Object.assign || function(e) {
+                            for (var t, n = 1, r = arguments.length; n < r; n++) {
+                                t = arguments[n];
+                                for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
+                            }
+                            return e
+                        },
+                        o = "jzkbprff40iqj646a697cyrvl0zt2m6",
+                        a = "https://api.twitch.tv",
+                        s = "v5",
+                        l = {
+                            "Content-Type": "application/json"
+                        },
+                        u = function(e) {
+                            var t = new Headers(i({}, l, {
+                                    "Client-ID": o
+                                })),
+                                n = new Request(a + "/api/viewer/token.json", {
+                                    credentials: "include",
+                                    headers: t
+                                });
+                            return c(n).then(function(t) {
+                                var n = t.token;
+                                return e.headers.append("Authorization", "OAuth " + n), c(e)
+                            })
+                        },
+                        c = function(e) {
+                            return fetch(e).then(r).then(function(e) {
+                                return e.json()
+                            })
+                        }
+                }, function(e, t, n) {
+                    "use strict";
+                    var r = n(5);
+                    n.d(t, "b", function() {
+                        return o
+                    }), n.d(t, "a", function() {
+                        return a
+                    });
+                    var i = this && this.__assign || Object.assign || function(e) {
+                            for (var t, n = 1, r = arguments.length; n < r; n++) {
+                                t = arguments[n];
+                                for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
+                            }
+                            return e
+                        },
+                        o = function(e, t) {
+                            var o = new Headers(i({}, r.a, {
+                                    "Client-ID": e
+                                })),
+                                a = new Request(r.b + "/" + r.c + "/channels/" + t + "/extensions", {
+                                    headers: o,
+                                    method: "GET"
+                                });
+                            return n.i(r.d)(a)
+                        },
+                        a = function(e, t) {
+                            var o = new Headers(i({}, r.a, {
+                                    "Client-ID": e
+                                })),
+                                a = new Request(r.b + "/" + r.c + "/extensions/auth/refresh", {
+                                    body: JSON.stringify({
+                                        token: t
+                                    }),
+                                    headers: o,
+                                    method: "POST"
+                                });
+                            return n.i(r.e)(a)
+                        }
+                }, function(e, t, n) {
+                    "use strict";
+                    var r = n(0);
+                    n.d(t, "a", function() {
+                        return i
+                    });
+                    var i = function() {
+                        function e(e, t, n) {
+                            var i = this;
+                            this.playerExtensionsApi = e, this.extensionMode = t, this.onContextUpdate = n, this.context = {}, this.isContextInitialized = !1, this.currentGame = "", this.destroy = function() {
+                                i.playerExtensionsApi.off(r.b, i.updateLocalContext)
+                            }, this.initializeContext = function() {
+                                i.isContextInitialized = !0, i.updateLocalContext()
+                            }, this.setGame = function(e) {
+                                i.currentGame = e, i.updateLocalContext()
+                            }, this.initEvents = function() {
+                                i.playerExtensionsApi.setStatsEnabled(!0), i.playerExtensionsApi.on(r.b, i.updateLocalContext)
+                            }, this.refreshContext = function() {
+                                var e = {
+                                    mode: i.extensionMode
+                                };
+                                if ("viewer" === i.extensionMode) {
+                                    var t = i.playerExtensionsApi.stats;
+                                    e.bitrate = t.playbackRate, e.bufferSize = t.bufferSize, e.displayResolution = t.displayResolution, e.game = i.currentGame, e.hlsLatencyBroadcaster = t.hlsLatencyBroadcaster, e.isFullScreen = i.playerExtensionsApi.fullscreen, e.isPaused = i.playerExtensionsApi.paused, e.isTheatreMode = i.playerExtensionsApi.theatre, e.videoResolution = t.videoResolution
+                                }
+                                return e
+                            }, this.updateLocalContext = function() {
+                                var e = i.refreshContext(),
+                                    t = Object.keys(e),
+                                    n = t.reduce(function(t, n) {
+                                        return i.context[n] !== e[n] && t.push(n), t
+                                    }, []);
+                                i.isContextInitialized && n.length > 0 && (i.context = e, i.onContextUpdate(n))
+                            }, this.initEvents()
+                        }
+                        return e
+                    }()
+                }, function(e, t, n) {
+                    "use strict";
+                    var r = n(6);
+                    n.d(t, "a", function() {
+                        return i
+                    });
+                    var i = function() {
+                        function e(e, t, i) {
+                            var o = this;
+                            this.extension = e, this.onAuthUpdate = t, this.onAnyFailure = i, this.refreshTimeout = null, this.beginAuthCycle = function(e) {
+                                var t = o.calculateRefreshAfter();
+                                t <= 0 ? o.refreshAuth(o.auth).then(function(t) {
+                                    o.extension.token = t, e(), o.cycleExtensionAuth()
+                                }) : (e(), o.cycleExtensionAuth())
+                            }, this.destroy = function() {
+                                void 0 !== o.refreshTimeout && (clearTimeout(o.refreshTimeout), o.refreshTimeout = null)
+                            }, this.cycleExtensionAuth = function() {
+                                var e = o.calculateRefreshAfter();
+                                o.refreshTimeout = setTimeout(function() {
+                                    o.refreshAuth(o.auth).then(function(e) {
+                                        o.extension.token = e, o.onAuthUpdate(), o.cycleExtensionAuth()
+                                    })
+                                }, e)
+                            }, this.decodeTokenPayload = function(e) {
+                                var t, n = {
+                                        channel_id: "",
+                                        exp: 0,
+                                        opaque_user_id: "",
+                                        pubsub_perms: {
+                                            listen: [],
+                                            send: []
+                                        },
+                                        role: "",
+                                        user_id: ""
+                                    },
+                                    r = e.split(".")[1];
+                                try {
+                                    t = JSON.parse(atob(r))
+                                } catch (e) {
+                                    return o.onAnyFailure("failed to parse token payload"), n
+                                }
+                                return t
+                            }, this.calculateRefreshAfter = function() {
+                                var e = o.extension.token,
+                                    t = o.decodeTokenPayload(e),
+                                    n = Date.now(),
+                                    r = Math.max(0, .9 * (1e3 * t.exp - n));
+                                return r
+                            }, this.refreshAuth = function(e) {
+                                return clearTimeout(o.refreshTimeout), o.refreshTimeout = null, n.i(r.a)(o.auth.clientId, o.auth.token).catch(function() {
+                                    return o.getTokenFromExtensions()
+                                }).then(function(e) {
+                                    var t = e.token;
+                                    return t ? Promise.resolve(t) : (o.onAnyFailure("token refresh failed"), Promise.reject(""))
+                                })
+                            }, this.getTokenFromExtensions = function() {
+                                return n.i(r.b)(o.auth.clientId, o.auth.channelId).then(function(e) {
+                                    var t = e.tokens;
+                                    return {
+                                        token: t.reduce(function(e, t) {
+                                            var n = t.extension_id,
+                                                r = t.token;
+                                            return n === o.auth.clientId ? r : e
+                                        }, null)
+                                    }
+                                })
+                            }
+                        }
+                        return Object.defineProperty(e.prototype, "auth", {
+                            get: function() {
+                                var e = this.decodeTokenPayload(this.extension.token);
+                                return {
+                                    channelId: e.channel_id,
+                                    clientId: this.extension.clientId,
+                                    token: this.extension.token,
+                                    userId: e.opaque_user_id
+                                }
+                            },
+                            enumerable: !0,
+                            configurable: !0
+                        }), Object.defineProperty(e.prototype, "token", {
+                            set: function(e) {
+                                this.extension.token = e
+                            },
+                            enumerable: !0,
+                            configurable: !0
+                        }), e
+                    }()
+                }, function(e, t, n) {
+                    "use strict";
+                    var r = n(10);
+                    n.d(t, "a", function() {
+                        return o
+                    });
+                    var i = this && this.__assign || Object.assign || function(e) {
+                            for (var t, n = 1, r = arguments.length; n < r; n++) {
+                                t = arguments[n];
+                                for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
+                            }
+                            return e
+                        },
+                        o = function() {
+                            function e(e) {
+                                this.dobbin = e.dobbin;
+                                var t = n.i(r.a)(e.iframe.ownerDocument.referrer);
+                                this.trackingProperties = i({}, e.requiredProps, {
+                                    url: e.iframe.ownerDocument.location.href,
+                                    host: e.iframe.ownerDocument.location.host,
+                                    domain: e.iframe.ownerDocument.domain,
+                                    user_agent: e.iframe.ownerDocument.defaultView.navigator.userAgent,
+                                    referrer_url: e.iframe.ownerDocument.referrer,
+                                    referrer_host: t.host,
+                                    extension_id: e.extension.id,
+                                    extension_version: e.extension.version,
+                                    extension_anchor: e.extension.anchor,
+                                    extension_mode: e.extensionMode
+                                })
+                            }
+                            return e.prototype.trackEvent = function(e, t) {
+                                var n = i({}, t, this.trackingProperties);
+                                this.dobbin.trackEvent(e, n, ["spade"])
+                            }, e
+                        }()
+                }, function(e, t, n) {
+                    "use strict";
+                    n.d(t, "a", function() {
+                        return r
+                    });
+                    var r = function(e) {
+                        var t = document.createElement("a");
+                        return t.href = e, {
+                            host: t.host
+                        }
+                    }
+                }, function(e, r, i) {
+                    function o(e, t) {
+                        this._id = e, this._clearFn = t
+                    }
+                    var a = Function.prototype.apply;
+                    r.setTimeout = function() {
+                        return new o(a.call(setTimeout, window, arguments), clearTimeout)
+                    }, r.setInterval = function() {
+                        return new o(a.call(setInterval, window, arguments), clearInterval)
+                    }, r.clearTimeout = r.clearInterval = function(e) {
+                        e && e.close()
+                    }, o.prototype.unref = o.prototype.ref = function() {}, o.prototype.close = function() {
+                        this._clearFn.call(window, this._id)
+                    }, r.enroll = function(e, t) {
+                        clearTimeout(e._idleTimeoutId), e._idleTimeout = t
+                    }, r.unenroll = function(e) {
+                        clearTimeout(e._idleTimeoutId), e._idleTimeout = -1
+                    }, r._unrefActive = r.active = function(e) {
+                        clearTimeout(e._idleTimeoutId);
+                        var t = e._idleTimeout;
+                        t >= 0 && (e._idleTimeoutId = setTimeout(function() {
+                            e._onTimeout && e._onTimeout()
+                        }, t))
+                    }, i(13), r.setImmediate = t, r.clearImmediate = n
+                }, function(e, t) {
+                    function n() {
+                        throw new Error("setTimeout has not been defined")
+                    }
+
+                    function r() {
+                        throw new Error("clearTimeout has not been defined")
+                    }
+
+                    function i(e) {
+                        if (c === setTimeout) return setTimeout(e, 0);
+                        if ((c === n || !c) && setTimeout) return c = setTimeout, setTimeout(e, 0);
+                        try {
+                            return c(e, 0)
+                        } catch (t) {
+                            try {
+                                return c.call(null, e, 0)
+                            } catch (t) {
+                                return c.call(this, e, 0)
+                            }
+                        }
+                    }
+
+                    function o(e) {
+                        if (d === clearTimeout) return clearTimeout(e);
+                        if ((d === r || !d) && clearTimeout) return d = clearTimeout, clearTimeout(e);
+                        try {
+                            return d(e)
+                        } catch (t) {
+                            try {
+                                return d.call(null, e)
+                            } catch (t) {
+                                return d.call(this, e)
+                            }
+                        }
+                    }
+
+                    function a() {
+                        _ && f && (_ = !1, f.length ? h = f.concat(h) : v = -1, h.length && s())
+                    }
+
+                    function s() {
+                        if (!_) {
+                            var e = i(a);
+                            _ = !0;
+                            for (var t = h.length; t;) {
+                                for (f = h, h = []; ++v < t;) f && f[v].run();
+                                v = -1, t = h.length
+                            }
+                            f = null, _ = !1, o(e)
+                        }
+                    }
+
+                    function l(e, t) {
+                        this.fun = e, this.array = t
+                    }
+
+                    function u() {}
+                    var c, d, p = e.exports = {};
+                    ! function() {
+                        try {
+                            c = "function" == typeof setTimeout ? setTimeout : n
+                        } catch (e) {
+                            c = n
+                        }
+                        try {
+                            d = "function" == typeof clearTimeout ? clearTimeout : r
+                        } catch (e) {
+                            d = r
+                        }
+                    }();
+                    var f, h = [],
+                        _ = !1,
+                        v = -1;
+                    p.nextTick = function(e) {
+                        var t = new Array(arguments.length - 1);
+                        if (arguments.length > 1)
+                            for (var n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
+                        h.push(new l(e, t)), 1 !== h.length || _ || i(s)
+                    }, l.prototype.run = function() {
+                        this.fun.apply(null, this.array)
+                    }, p.title = "browser", p.browser = !0, p.env = {}, p.argv = [], p.version = "", p.versions = {}, p.on = u, p.addListener = u, p.once = u, p.off = u, p.removeListener = u, p.removeAllListeners = u, p.emit = u, p.binding = function(e) {
+                        throw new Error("process.binding is not supported")
+                    }, p.cwd = function() {
+                        return "/"
+                    }, p.chdir = function(e) {
+                        throw new Error("process.chdir is not supported")
+                    }, p.umask = function() {
+                        return 0
+                    }
+                }, function(e, t, n) {
+                    (function(e, t) {
+                        ! function(e, n) {
+                            "use strict";
+
+                            function r(e) {
+                                "function" != typeof e && (e = new Function("" + e));
+                                for (var t = new Array(arguments.length - 1), n = 0; n < t.length; n++) t[n] = arguments[n + 1];
+                                var r = {
+                                    callback: e,
+                                    args: t
+                                };
+                                return _[h] = r, f(h), h++
+                            }
+
+                            function i(e) {
+                                delete _[e]
+                            }
+
+                            function o(e) {
+                                var t = e.callback,
+                                    r = e.args;
+                                switch (r.length) {
+                                    case 0:
+                                        t();
+                                        break;
+                                    case 1:
+                                        t(r[0]);
+                                        break;
+                                    case 2:
+                                        t(r[0], r[1]);
+                                        break;
+                                    case 3:
+                                        t(r[0], r[1], r[2]);
+                                        break;
+                                    default:
+                                        t.apply(n, r)
+                                }
+                            }
+
+                            function a(e) {
+                                if (v) setTimeout(a, 0, e);
+                                else {
+                                    var t = _[e];
+                                    if (t) {
+                                        v = !0;
+                                        try {
+                                            o(t)
+                                        } finally {
+                                            i(e), v = !1
+                                        }
+                                    }
+                                }
+                            }
+
+                            function s() {
+                                f = function(e) {
+                                    t.nextTick(function() {
+                                        a(e)
+                                    })
+                                }
+                            }
+
+                            function l() {
+                                if (e.postMessage && !e.importScripts) {
+                                    var t = !0,
+                                        n = e.onmessage;
+                                    return e.onmessage = function() {
+                                        t = !1
+                                    }, e.postMessage("", "*"), e.onmessage = n, t
+                                }
+                            }
+
+                            function u() {
+                                var t = "setImmediate$" + Math.random() + "$",
+                                    n = function(n) {
+                                        n.source === e && "string" == typeof n.data && 0 === n.data.indexOf(t) && a(+n.data.slice(t.length))
+                                    };
+                                e.addEventListener ? e.addEventListener("message", n, !1) : e.attachEvent("onmessage", n), f = function(n) {
+                                    e.postMessage(t + n, "*")
+                                }
+                            }
+
+                            function c() {
+                                var e = new MessageChannel;
+                                e.port1.onmessage = function(e) {
+                                    var t = e.data;
+                                    a(t)
+                                }, f = function(t) {
+                                    e.port2.postMessage(t)
+                                }
+                            }
+
+                            function d() {
+                                var e = y.documentElement;
+                                f = function(t) {
+                                    var n = y.createElement("script");
+                                    n.onreadystatechange = function() {
+                                        a(t), n.onreadystatechange = null, e.removeChild(n), n = null
+                                    }, e.appendChild(n)
+                                }
+                            }
+
+                            function p() {
+                                f = function(e) {
+                                    setTimeout(a, 0, e)
+                                }
+                            }
+                            if (!e.setImmediate) {
+                                var f, h = 1,
+                                    _ = {},
+                                    v = !1,
+                                    y = e.document,
+                                    m = Object.getPrototypeOf && Object.getPrototypeOf(e);
+                                m = m && m.setTimeout ? m : e, "[object process]" === {}.toString.call(e.process) ? s() : l() ? u() : e.MessageChannel ? c() : y && "onreadystatechange" in y.createElement("script") ? d() : p(), m.setImmediate = r, m.clearImmediate = i
+                            }
+                        }("undefined" == typeof self ? "undefined" == typeof e ? this : e : self)
+                    }).call(t, n(14), n(12))
+                }, function(e, t) {
+                    var n;
+                    n = function() {
+                        return this
+                    }();
+                    try {
+                        n = n || Function("return this")() || (0, eval)("this")
+                    } catch (e) {
+                        "object" == typeof window && (n = window)
+                    }
+                    e.exports = n
+                }, function(e, t, n) {
+                    n(2), n(4), n(3), e.exports = n(1)
+                }])
+            })
+        }).call(t, n(659).setImmediate, n(659).clearImmediate)
+    }, function(e, t, n) {
+        function r(e, t) {
+            this._id = e, this._clearFn = t
+        }
+        var i = Function.prototype.apply;
+        t.setTimeout = function() {
+            return new r(i.call(setTimeout, window, arguments), clearTimeout)
+        }, t.setInterval = function() {
+            return new r(i.call(setInterval, window, arguments), clearInterval)
+        }, t.clearTimeout = t.clearInterval = function(e) {
+            e && e.close()
+        }, r.prototype.unref = r.prototype.ref = function() {}, r.prototype.close = function() {
+            this._clearFn.call(window, this._id)
+        }, t.enroll = function(e, t) {
+            clearTimeout(e._idleTimeoutId), e._idleTimeout = t
+        }, t.unenroll = function(e) {
+            clearTimeout(e._idleTimeoutId), e._idleTimeout = -1
+        }, t._unrefActive = t.active = function(e) {
+            clearTimeout(e._idleTimeoutId);
+            var t = e._idleTimeout;
+            t >= 0 && (e._idleTimeoutId = setTimeout(function() {
+                e._onTimeout && e._onTimeout()
+            }, t))
+        }, n(660), t.setImmediate = setImmediate, t.clearImmediate = clearImmediate
+    }, function(e, t, n) {
+        (function(e, t) {
+            ! function(e, n) {
                 "use strict";
-                n.d(t, "a", function() {
-                    return r
-                });
-                var r = function(e) {
-                    var t = document.createElement("a");
-                    return t.href = e, {
-                        host: t.host
+
+                function r(e) {
+                    "function" != typeof e && (e = new Function("" + e));
+                    for (var t = new Array(arguments.length - 1), n = 0; n < t.length; n++) t[n] = arguments[n + 1];
+                    var r = {
+                        callback: e,
+                        args: t
+                    };
+                    return _[h] = r, f(h), h++
+                }
+
+                function i(e) {
+                    delete _[e]
+                }
+
+                function o(e) {
+                    var t = e.callback,
+                        r = e.args;
+                    switch (r.length) {
+                        case 0:
+                            t();
+                            break;
+                        case 1:
+                            t(r[0]);
+                            break;
+                        case 2:
+                            t(r[0], r[1]);
+                            break;
+                        case 3:
+                            t(r[0], r[1], r[2]);
+                            break;
+                        default:
+                            t.apply(n, r)
                     }
                 }
-            }])
-        })
+
+                function a(e) {
+                    if (v) setTimeout(a, 0, e);
+                    else {
+                        var t = _[e];
+                        if (t) {
+                            v = !0;
+                            try {
+                                o(t)
+                            } finally {
+                                i(e), v = !1
+                            }
+                        }
+                    }
+                }
+
+                function s() {
+                    f = function(e) {
+                        t.nextTick(function() {
+                            a(e)
+                        })
+                    }
+                }
+
+                function l() {
+                    if (e.postMessage && !e.importScripts) {
+                        var t = !0,
+                            n = e.onmessage;
+                        return e.onmessage = function() {
+                            t = !1
+                        }, e.postMessage("", "*"), e.onmessage = n, t
+                    }
+                }
+
+                function u() {
+                    var t = "setImmediate$" + Math.random() + "$",
+                        n = function(n) {
+                            n.source === e && "string" == typeof n.data && 0 === n.data.indexOf(t) && a(+n.data.slice(t.length))
+                        };
+                    e.addEventListener ? e.addEventListener("message", n, !1) : e.attachEvent("onmessage", n), f = function(n) {
+                        e.postMessage(t + n, "*")
+                    }
+                }
+
+                function c() {
+                    var e = new MessageChannel;
+                    e.port1.onmessage = function(e) {
+                        var t = e.data;
+                        a(t)
+                    }, f = function(t) {
+                        e.port2.postMessage(t)
+                    }
+                }
+
+                function d() {
+                    var e = y.documentElement;
+                    f = function(t) {
+                        var n = y.createElement("script");
+                        n.onreadystatechange = function() {
+                            a(t), n.onreadystatechange = null, e.removeChild(n), n = null
+                        }, e.appendChild(n)
+                    }
+                }
+
+                function p() {
+                    f = function(e) {
+                        setTimeout(a, 0, e)
+                    }
+                }
+                if (!e.setImmediate) {
+                    var f, h = 1,
+                        _ = {},
+                        v = !1,
+                        y = e.document,
+                        m = Object.getPrototypeOf && Object.getPrototypeOf(e);
+                    m = m && m.setTimeout ? m : e, "[object process]" === {}.toString.call(e.process) ? s() : l() ? u() : e.MessageChannel ? c() : y && "onreadystatechange" in y.createElement("script") ? d() : p(), m.setImmediate = r, m.clearImmediate = i
+                }
+            }("undefined" == typeof self ? "undefined" == typeof e ? this : e : self)
+        }).call(t, function() {
+            return this
+        }(), n(338))
     }, function(e, t, n) {
         "use strict";
 
@@ -36253,9 +37135,9 @@
             u = n(275),
             c = r(u),
             d = n(217),
-            p = n(660),
-            f = n(661),
-            h = n(662),
+            p = n(662),
+            f = n(663),
+            h = n(664),
             _ = n(617),
             v = n(618),
             y = n(307),
@@ -36765,7 +37647,7 @@
             c = r(u),
             d = n(574),
             p = n(273),
-            f = n(664),
+            f = n(666),
             h = 250,
             _ = "menu-open",
             v = "menu-closed",
@@ -37224,7 +38106,7 @@
             l = n(166),
             u = n(218),
             c = n(198),
-            d = n(668),
+            d = n(670),
             p = n(411),
             f = n(215),
             h = n(342),
@@ -37457,7 +38339,7 @@
             d = n(360),
             p = n(408),
             f = n(391),
-            h = n(671),
+            h = n(673),
             _ = n(328),
             v = 250,
             y = 400,
@@ -37720,9 +38602,9 @@
             }
         }();
         t.missingKeyHandler = o, t.getI18N = a;
-        var l = n(673),
+        var l = n(675),
             u = r(l),
-            c = n(689),
+            c = n(691),
             d = r(c),
             p = n(167),
             f = n(212),
@@ -37750,7 +38632,7 @@
             keySeparator: !1,
             missingKeyHandler: o,
             saveMissing: !0
-        }), u.default.addResourceBundle("en-US", u.default.options.ns[0], n(690));
+        }), u.default.addResourceBundle("en-US", u.default.options.ns[0], n(692));
         var b = function() {
             function e(t, n, r) {
                 i(this, e), this.shortCode = t, this.langCode = n, this._translate = r
@@ -37768,7 +38650,7 @@
         }();
         t.I18N_INSTANCE = u.default, t.DEFAULT_LANGUAGE = new b("en", "en-US", u.default.getFixedT("en-US"))
     }, function(e, t, n) {
-        e.exports = n(674).default
+        e.exports = n(676).default
     }, function(e, t, n) {
         "use strict";
 
@@ -37780,7 +38662,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.use = t.t = t.setDefaultNamespace = t.on = t.off = t.loadResources = t.loadNamespaces = t.loadLanguages = t.init = t.getFixedT = t.exists = t.dir = t.createInstance = t.cloneInstance = t.changeLanguage = void 0;
-        var i = n(675),
+        var i = n(677),
             o = r(i);
         t.default = o.default;
         t.changeLanguage = o.default.changeLanguage.bind(o.default), t.cloneInstance = o.default.cloneInstance.bind(o.default), t.createInstance = o.default.createInstance.bind(o.default), t.dir = o.default.dir.bind(o.default), t.exists = o.default.exists.bind(o.default), t.getFixedT = o.default.getFixedT.bind(o.default), t.init = o.default.init.bind(o.default), t.loadLanguages = o.default.loadLanguages.bind(o.default), t.loadNamespaces = o.default.loadNamespaces.bind(o.default), t.loadResources = o.default.loadResources.bind(o.default), t.off = o.default.off.bind(o.default), t.on = o.default.on.bind(o.default), t.setDefaultNamespace = o.default.setDefaultNamespace.bind(o.default), t.t = o.default.t.bind(o.default), t.use = o.default.use.bind(o.default)
@@ -37847,28 +38729,28 @@
                 }
                 return e
             },
-            p = n(676),
+            p = n(678),
             f = i(p),
-            h = n(677),
+            h = n(679),
             _ = i(h),
-            v = n(678),
+            v = n(680),
             y = i(v),
-            m = n(680),
+            m = n(682),
             g = i(m),
-            b = n(683),
+            b = n(685),
             E = i(b),
-            T = n(684),
+            T = n(686),
             S = i(T),
-            P = n(685),
+            P = n(687),
             C = i(P),
-            w = n(686),
+            w = n(688),
             k = i(w),
-            A = n(687),
+            A = n(689),
             O = i(A),
-            I = n(688),
-            N = n(681),
+            I = n(690),
+            N = n(683),
             R = i(N),
-            M = n(682),
+            M = n(684),
             L = r(M),
             D = function(e) {
                 function t() {
@@ -38189,9 +39071,9 @@
                 }
                 return e
             },
-            c = n(677),
+            c = n(679),
             d = i(c),
-            p = n(679),
+            p = n(681),
             f = r(p),
             h = function(e) {
                 function t() {
@@ -38383,15 +39265,15 @@
             } : function(e) {
                 return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
             },
-            d = n(676),
+            d = n(678),
             p = i(d),
-            f = n(677),
+            f = n(679),
             h = i(f),
-            _ = n(681),
+            _ = n(683),
             v = i(_),
-            y = n(682),
+            y = n(684),
             m = r(y),
-            g = n(679),
+            g = n(681),
             b = r(g),
             E = function(e) {
                 function t(n) {
@@ -38582,7 +39464,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.convertAPIOptions = o, t.convertJSONOptions = a, t.convertTOptions = s, t.appendBackwardsAPI = l;
-        var u = n(676),
+        var u = n(678),
             c = r(u)
     }, function(e, t, n) {
         "use strict";
@@ -38603,7 +39485,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var a = n(676),
+        var a = n(678),
             s = r(a),
             l = function() {
                 function e(t) {
@@ -38680,7 +39562,7 @@
             } : function(e) {
                 return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
             },
-            s = n(676),
+            s = n(678),
             l = r(s),
             u = [{
                 lngs: ["ach", "ak", "am", "arn", "br", "fil", "gun", "ln", "mfe", "mg", "mi", "oc", "tg", "ti", "tr", "uz", "wa"],
@@ -38782,7 +39664,7 @@
                     return 0
                 },
                 4: function(e) {
-                    return Number(e % 10 == 1 && e % 100 != 11 ? 0 : e % 10 >= 2 && e % 10 <= 4 && (e % 100 < 10 || e % 100 >= 20) ? 1 : 2)
+                    return Number(e % 10 == 1 && e % 100 != 11 ? 0 : e % 10 >= 2 && e % 10 <= 4 && (e % 100 < 10 || e % 100 >= 20) ? 1 : 2);
                 },
                 5: function(e) {
                     return Number(0 === e ? 0 : 1 == e ? 1 : 2 == e ? 2 : e % 100 >= 3 && e % 100 <= 10 ? 3 : e % 100 >= 11 ? 4 : 5)
@@ -38910,9 +39792,9 @@
                 }
                 return e
             },
-            s = n(679),
+            s = n(681),
             l = i(s),
-            u = n(676),
+            u = n(678),
             c = r(u),
             d = function() {
                 function e() {
@@ -39066,11 +39948,11 @@
                     throw new TypeError("Invalid attempt to destructure non-iterable instance")
                 }
             }(),
-            p = n(679),
+            p = n(681),
             f = i(p),
-            h = n(676),
+            h = n(678),
             _ = r(h),
-            v = n(677),
+            v = n(679),
             y = r(v),
             m = function(e) {
                 function t(n, r, i) {
@@ -39247,10 +40129,10 @@
                 }
                 return e
             },
-            c = n(679),
-            d = (i(c), n(676)),
+            c = n(681),
+            d = (i(c), n(678)),
             p = r(d),
-            f = n(677),
+            f = n(679),
             h = r(f),
             _ = function(e) {
                 function t(n, r, i) {
@@ -39726,7 +40608,7 @@
             u = r(l),
             c = n(574),
             d = n(391),
-            p = n(692),
+            p = n(694),
             f = n(420),
             h = n(328),
             _ = {
@@ -39875,8 +40757,8 @@
             }(),
             l = n(275),
             u = r(l),
-            c = n(693),
-            d = n(697),
+            c = n(695),
+            d = n(699),
             p = n(306),
             f = r(p),
             h = 0,
@@ -40003,11 +40885,11 @@
             }(),
             l = n(275),
             u = r(l),
-            c = n(694),
+            c = n(696),
             d = n(306),
             p = r(d),
             f = n(307),
-            h = n(696),
+            h = n(698),
             _ = {
                 video: l.PropTypes.shape({
                     thumbnailURL: l.PropTypes.string.isRequired,
@@ -40144,7 +41026,7 @@
             }(),
             u = n(275),
             c = r(u),
-            d = n(695),
+            d = n(697),
             p = n(306),
             f = r(p),
             h = n(316),
@@ -40348,13 +41230,13 @@
             u = r(l),
             c = n(306),
             d = r(c),
-            p = n(696),
+            p = n(698),
             f = n(119),
             h = r(f),
-            _ = n(694),
+            _ = n(696),
             v = n(307),
             y = n(420),
-            m = n(698),
+            m = n(700),
             g = t.RECOMMENDATION_COLUMN_CONFIG = [{
                 minPlayerWidth: 2381,
                 columns: 8
@@ -40624,15 +41506,15 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            s = n(701),
+            s = n(703),
             l = r(s),
-            u = n(705),
+            u = n(707),
             c = r(u),
             d = n(182),
             p = n(333),
             f = n(390),
             h = n(330),
-            _ = n(717),
+            _ = n(719),
             v = n(166),
             y = "production";
         t.PubSub = function() {
@@ -40723,14 +41605,14 @@
         }()
     }, function(e, t, n) {
         var r = n(24),
-            i = n(702),
+            i = n(704),
             o = r(i);
         e.exports = o
     }, function(e, t, n) {
         function r(e, t) {
             return e && e.length && t && t.length ? i(e, t) : e
         }
-        var i = n(703);
+        var i = n(705);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n, r) {
@@ -40745,7 +41627,7 @@
         }
         var i = n(65),
             o = n(54),
-            a = n(704),
+            a = n(706),
             s = n(47),
             l = n(206),
             u = Array.prototype,
@@ -40806,20 +41688,20 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            u = n(706),
+            u = n(708),
             c = r(u),
-            d = n(707),
+            d = n(709),
             p = r(d),
-            f = n(708),
+            f = n(710),
             h = r(f),
-            _ = n(709),
+            _ = n(711),
             v = r(_),
-            y = n(711),
+            y = n(713),
             m = r(y),
-            g = n(712),
+            g = n(714),
             b = r(g),
-            E = n(714),
-            T = n(716),
+            E = n(716),
+            T = n(718),
             S = r(T),
             P = p.default._getLogger("PubsubDriver"),
             C = /^https?:\/\/([\w-]+\.)*twitch\.tv(:\d+)?\/.*$/,
@@ -40990,7 +41872,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(708),
+            a = n(710),
             s = r(a),
             l = function() {},
             u = l,
@@ -41146,13 +42028,13 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(706),
+            l = n(708),
             u = r(l),
-            c = n(707),
+            c = n(709),
             d = r(c),
-            p = n(708),
+            p = n(710),
             f = r(p),
-            h = n(710),
+            h = n(712),
             _ = r(h),
             v = 30,
             y = 3e4,
@@ -41376,7 +42258,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(707),
+            a = n(709),
             s = r(a),
             l = "pubsub",
             u = s.default._getLogger("IframeHost"),
@@ -41534,15 +42416,15 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(706),
+            l = n(708),
             u = r(l),
-            c = n(707),
+            c = n(709),
             d = r(c),
-            p = n(708),
+            p = n(710),
             f = r(p),
-            h = n(713),
+            h = n(715),
             _ = r(h),
-            v = n(710),
+            v = n(712),
             y = r(v),
             m = d.default._getLogger("WebsocketClient"),
             g = 3e4,
@@ -41812,11 +42694,11 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(706),
+            l = n(708),
             u = r(l),
-            c = n(707),
+            c = n(709),
             d = r(c),
-            p = n(708),
+            p = n(710),
             f = r(p),
             h = d.default._getLogger("PubsubSocket"),
             _ = 120,
@@ -41945,7 +42827,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.Stats = void 0;
-        var i = n(715),
+        var i = n(717),
             o = r(i);
         t.Stats = o.default, t.default = {
             Stats: o.default
@@ -42141,9 +43023,9 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(708),
+            a = n(710),
             s = r(a),
-            l = n(707),
+            l = n(709),
             u = r(l),
             c = "https://pubster.twitch.tv/publish",
             d = "https://pubster-darklaunch.twitch.tv/publish",
@@ -42383,54 +43265,54 @@
             value: !0
         }), t.init = i;
         var o = n(583),
-            a = n(720),
+            a = n(722),
             s = r(a),
-            l = n(721),
-            u = n(722),
-            c = n(723),
-            d = n(724),
-            p = n(725),
-            f = n(727),
-            h = n(728),
+            l = n(723),
+            u = n(724),
+            c = n(725),
+            d = n(726),
+            p = n(727),
+            f = n(729),
+            h = n(730),
             _ = n(351),
-            v = n(729),
-            y = n(730),
-            m = n(731),
+            v = n(731),
+            y = n(732),
+            m = n(733),
             g = n(363),
-            b = n(732),
-            E = n(734),
-            T = n(735),
-            S = n(737),
-            P = n(738),
-            C = n(740),
-            w = n(743),
+            b = n(734),
+            E = n(736),
+            T = n(737),
+            S = n(739),
+            P = n(740),
+            C = n(742),
+            w = n(745),
             k = n(408),
-            A = n(744),
-            O = n(746),
-            I = n(748),
-            N = n(749),
-            R = n(750),
-            M = n(751),
-            L = n(752),
-            D = n(753),
-            x = n(754),
-            j = n(755),
-            U = n(756),
-            B = n(757),
-            F = n(758),
-            V = n(759),
-            H = n(761),
-            q = n(762),
-            G = n(764),
+            A = n(746),
+            O = n(748),
+            I = n(750),
+            N = n(751),
+            R = n(752),
+            M = n(753),
+            L = n(754),
+            D = n(755),
+            x = n(756),
+            j = n(757),
+            U = n(758),
+            B = n(759),
+            F = n(760),
+            V = n(761),
+            H = n(763),
+            q = n(764),
+            G = n(766),
             Y = n(431),
-            W = n(765),
-            K = n(766),
-            $ = n(767),
-            z = n(768),
-            Q = n(769),
-            X = n(770),
-            J = (n(365), n(426), n(771)),
-            Z = n(773),
+            W = n(767),
+            K = n(768),
+            $ = n(769),
+            z = n(770),
+            Q = n(771),
+            X = n(772),
+            J = (n(365), n(426), n(773)),
+            Z = n(775),
             ee = (0, o.combineReducers)({
                 accessToken: l.accessToken,
                 ads: u.ads,
@@ -42666,7 +43548,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.analyticsTracker = r;
-        var i = n(726),
+        var i = n(728),
             o = new Error("Attempting to use tracker too early"),
             a = {
                 trackEvent: function() {
@@ -42855,7 +43737,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.experiments = r;
-        var i = n(733),
+        var i = n(735),
             o = new Error("Attempting to use experiments too early"),
             a = {
                 get: function() {
@@ -42951,8 +43833,8 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.lang = r;
-        var i = n(736),
-            o = n(672)
+        var i = n(738),
+            o = n(674)
     }, function(e, t, n) {
         "use strict";
 
@@ -42991,7 +43873,7 @@
         }), t.LAST_KNOWN_LANG = t.ACTION_SET_LANGUAGE = void 0, t.setLanguage = r, t.loadLanguage = i, t.loadDefaultLang = o;
         var a = n(247),
             s = n(248),
-            l = n(672),
+            l = n(674),
             u = n(198),
             c = t.ACTION_SET_LANGUAGE = "set language",
             d = t.LAST_KNOWN_LANG = "playerLanguage"
@@ -43062,7 +43944,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.navigatorReducer = r;
-        var i = n(739)
+        var i = n(741)
     }, function(e, t) {
         "use strict";
 
@@ -43100,9 +43982,9 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.notifications = i;
-        var o = n(741),
+        var o = n(743),
             a = r(o),
-            s = n(742),
+            s = n(744),
             l = r(s),
             u = n(273),
             c = []
@@ -43171,7 +44053,7 @@
         }), t.playerDimensions = i;
         var o = n(116),
             a = r(o),
-            s = n(745),
+            s = n(747),
             l = {
                 left: 0,
                 top: 0,
@@ -43215,7 +44097,7 @@
         }), t.playerOptions = i;
         var o = n(199),
             a = r(o),
-            s = n(747),
+            s = n(749),
             l = {
                 showInfo: !0,
                 showtheatre: !1,
@@ -43783,7 +44665,7 @@
         var o = n(116),
             a = r(o),
             s = n(181),
-            l = n(747),
+            l = n(749),
             u = t.DEFAULT_SCREEN_MODE = Object.freeze({
                 isFullScreen: !1,
                 canFullScreen: !1,
@@ -43956,7 +44838,7 @@
         }), t.subscriptions = i;
         var o = n(116),
             a = r(o),
-            s = n(760),
+            s = n(762),
             l = n(330),
             u = {
                 isSubscribed: !1,
@@ -44074,7 +44956,7 @@
             a = r(o),
             s = n(70),
             l = r(s),
-            u = n(763),
+            u = n(765),
             c = ["host_channel"]
     }, function(e, t) {
         "use strict";
@@ -44185,7 +45067,7 @@
         }), t.DEFAULT_WATCHPARTY = void 0, t.watchParty = i;
         var o = n(116),
             a = r(o),
-            s = n(717),
+            s = n(719),
             l = t.DEFAULT_WATCHPARTY = Object.freeze({
                 watchPartyId: "",
                 vodId: "",
@@ -44335,7 +45217,7 @@
         var o = n(644),
             a = n(360),
             s = r(a),
-            l = n(772),
+            l = n(774),
             u = new l.NullVideoAPI
     }, function(e, t) {
         "use strict";
@@ -44443,7 +45325,7 @@
         var o = n(395),
             a = r(o),
             s = n(177),
-            l = n(774),
+            l = n(776),
             u = new l.NullEventEmitter
     }, function(e, t) {
         "use strict";
@@ -44654,7 +45536,7 @@
             s = n(116),
             l = r(s),
             u = n(198),
-            c = n(750),
+            c = n(752),
             d = n(218),
             p = n(182),
             f = n(161),
@@ -44795,10 +45677,10 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(778),
+            a = n(780),
             s = r(a),
-            l = n(745),
-            u = n(779),
+            l = n(747),
+            u = n(781),
             c = r(u);
         t.PlayerResizeManager = function() {
             function e(t) {
@@ -45171,7 +46053,7 @@
             s = n(182),
             l = n(644),
             u = n(363),
-            c = n(770),
+            c = n(772),
             d = n(431),
             p = n(53),
             f = r(p),
@@ -45273,7 +46155,7 @@
                 }
             }(),
             o = n(182),
-            a = n(760),
+            a = n(762),
             s = n(644),
             l = n(431);
         t.TwitchEverywhereManager = function() {
@@ -45333,7 +46215,7 @@
             u = n(215),
             c = n(218),
             d = n(166),
-            p = n(750),
+            p = n(752),
             f = n(182),
             h = n(53),
             _ = r(h),
@@ -45451,10 +46333,10 @@
                 }
             }(),
             a = n(391),
-            s = n(770),
+            s = n(772),
             l = n(215),
             u = n(166),
-            c = n(750),
+            c = n(752),
             d = n(182),
             p = n(53),
             f = r(p),
