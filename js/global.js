@@ -16471,7 +16471,8 @@ googletag.cmd = googletag.cmd || [],
                 SISKO: "31827b23-ea01-48b8-87c6-1503656957fd",
                 OFFLINE_RECOMMENDATIONS: "00683bde-a79d-4b9d-a7cc-b0549f854d36",
                 GAME_FOLLOW_ONBOARD: "9a3b387e-b6cd-4d2b-80a6-bb14d3ba4512",
-                I18N_GAME_NAMES: "497e1277-7fff-4c16-98f0-6b55c8b59a4f"
+                I18N_GAME_NAMES: "497e1277-7fff-4c16-98f0-6b55c8b59a4f",
+                AUTO_ON_NOTIFICATIONS: "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b"
             },
             r = {
                 "61b169ff-bc62-4725-a40e-1be627197c6f": "no",
@@ -16522,7 +16523,8 @@ googletag.cmd = googletag.cmd || [],
                 "31827b23-ea01-48b8-87c6-1503656957fd": "control",
                 "00683bde-a79d-4b9d-a7cc-b0549f854d36": "no",
                 "9a3b387e-b6cd-4d2b-80a6-bb14d3ba4512": "control",
-                "497e1277-7fff-4c16-98f0-6b55c8b59a4f": "control"
+                "497e1277-7fff-4c16-98f0-6b55c8b59a4f": "control",
+                "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b": "control"
             },
             o = {},
             s = {
@@ -16593,7 +16595,8 @@ googletag.cmd = googletag.cmd || [],
                 }
             },
             m = function() {
-                cookie.remove("experiment_overrides"), console.warn("Clearing experiment overrides require a page refresh to take effect.")
+                cookie.remove("experiment_overrides"),
+                    console.warn("Clearing experiment overrides require a page refresh to take effect.")
             },
             g = {
                 getExperimentValue: f,
