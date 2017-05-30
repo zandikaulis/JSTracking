@@ -9743,7 +9743,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.05.30-210151+300283dfc515b5c0a87a02d839e58e79d69b2cd5",
+                    app_version: "2017.05.30-213515+9dd99e94f7f09a0fa1b54e0d043e6f110517384f",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -19357,9 +19357,7 @@
                     store: o
                 }), document.getElementById("js-player-volume")), G.default.render(H.default.createElement(w.MutedSegmentsAlert, {
                     store: o
-                }), document.getElementById("js-player-alert-container")), ee(o), G.default.render(H.default.createElement(A.ExtensionsContainer, {
-                    store: o
-                }), document.getElementById("js-player-extension-root")), Z(o), J(o), G.default.render(H.default.createElement(Y.Provider, {
+                }), document.getElementById("js-player-alert-container")), ee(o), Z(o), J(o), G.default.render(H.default.createElement(Y.Provider, {
                     store: o
                 }, H.default.createElement(W.I18nextProvider, {
                     i18n: K.I18N_INSTANCE
@@ -20417,8 +20415,8 @@
                         n = t.recommendations;
                     n.type === c.POST_RECOMMENDATIONS_TYPE && 0 !== n.videos.length && ($(".js-video-recommendations", this.$root).html(n.videos.map(function(t, n) {
                         var r = e.$template.clone();
-                        0 === n && (e.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")), e.updateAutoplayProgress(100, Math.round(g / 1e3))), e.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")),
-                            r.attr("data-index", n), r.find(".js-recommended-stream__thumbnail").attr("src", t.thumbnailURL), r.find(".js-recommended-stream__channel").text(t.channelName), r.find(".js-recommended-stream__title").text(t.title);
+                        0 === n && (e.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")), e.updateAutoplayProgress(100, Math.round(g / 1e3))), e.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")), r.attr("data-index", n), r.find(".js-recommended-stream__thumbnail").attr("src", t.thumbnailURL),
+                            r.find(".js-recommended-stream__channel").text(t.channelName), r.find(".js-recommended-stream__title").text(t.title);
                         var i = e._stateStore.getState().lang.langCode,
                             o = {
                                 year: "numeric",
@@ -21579,8 +21577,8 @@
                     return (0, m.subscribe)(this._stateStore, ["captions"], function(t, n) {
                         var r = t.captions,
                             i = n.captions;
-                        r.available !== i.available && e.showCCAvailability(r.available), r.enabled !== i.enabled && (e.setCCIconStatus(r.enabled), e.showCaption(r)),
-                            r.data !== i.data && e.showCaption(r), r.preset !== i.preset && (e.setCurrentPreset(), e.setCurrentStyles()), r.preset === i.preset && r.style === i.style || e.applyCCStyle()
+                        r.available !== i.available && e.showCCAvailability(r.available), r.enabled !== i.enabled && (e.setCCIconStatus(r.enabled), e.showCaption(r)), r.data !== i.data && e.showCaption(r), r.preset !== i.preset && (e.setCurrentPreset(), e.setCurrentStyles()),
+                            r.preset === i.preset && r.style === i.style || e.applyCCStyle()
                     })
                 }
             }, {
