@@ -9743,7 +9743,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.05.30-223202+979ea6255415426b047bc076093d0a763d1d37fc",
+                    app_version: "2017.05.30-223807+78ac7de4a0cc15d6a0bfcd4fd9131388391fe29e",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -46404,7 +46404,7 @@
             m = [l.PLAYER_DASHBOARD, l.PLAYER_FRONTPAGE, l.PLAYER_CREATIVE, l.PLAYER_HIGHLIGHTER],
             g = 560,
             b = 300,
-            E = [26610234, 10817445],
+            E = [26610234, 10817445, 152325025],
             T = "Offline Recommendations: No channel videos",
             S = "Offline Recommendations: All channel videos watched",
             P = "Offline Recommendations: Stream changed while fetching",
