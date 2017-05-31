@@ -1199,10 +1199,10 @@ window.SiteOptions = {
         "9242cab4-db40-400c-99e1-2faf8f8026f0": {
             "name": "NEW_STATS",
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }]
         },
