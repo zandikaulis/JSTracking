@@ -1525,10 +1525,10 @@ window.SiteOptions = {
         "b6400c92-a229-462e-bfb0-9dcf456b5b61": {
             "name": "ios_google_ima",
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "active"
             }]
         },
@@ -1605,8 +1605,11 @@ window.SiteOptions = {
         "c097971e-c5fc-4763-a8fa-de04f3d713a7": {
             "name": "Watch_Party_Web",
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "no"
+            }, {
+                "weight": 50,
+                "value": "yes"
             }]
         },
         "c31d337d-4186-465d-9d0b-cb72a5b2aef2": {
@@ -1745,7 +1748,7 @@ window.SiteOptions = {
             "name": "Watch_Party_Player_UI",
             "groups": [{
                 "weight": 100,
-                "value": "no"
+                "value": "yes"
             }]
         },
         "d24f182c-e36f-498e-9e49-113e02a83bad": {
