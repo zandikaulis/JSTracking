@@ -1069,10 +1069,10 @@ window.SiteOptions = {
         "80ee272f-44ec-4d8c-8ad1-72f4933a3da4": {
             "name": "android_pipboy_broadcasting",
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "active"
             }]
         },
