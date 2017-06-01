@@ -128,6 +128,7 @@ window.SiteOptions = {
     "prime_blackfriday_promo_enabled": false,
     "is_onsite_notifs_enabled": true,
     "is_onsite_notifs_staffonly_beta": false,
+    "asubs_enabled": false,
     "tsubs_enabled": true,
     "release_subs_tsubs": "staff",
     "experiments": {
