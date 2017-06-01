@@ -9743,7 +9743,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.06.01-212028+35068590090c597f9a2a268492457a74238b9631",
+                    app_version: "2017.06.01-214336+43174d4eea20df0537075cc0e4f6d3066886a9d9",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -14192,33 +14192,33 @@
 
         function n(e) {
             return {
-                type: d,
+                type: p,
                 collection: s(e)
             }
         }
 
         function r() {
             return {
-                type: p
+                type: f
             }
         }
 
         function i() {
             return {
-                type: f
+                type: h
             }
         }
 
         function o() {
             return {
-                type: h
+                type: _
             }
         }
 
         function a(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
             return {
-                type: c,
+                type: d,
                 request: {
                     collectionId: e,
                     videoId: t
@@ -14238,13 +14238,22 @@
                 title: e.title,
                 totalDuration: e.total_duration,
                 views: e.views,
-                items: e.items
+                items: e.items.map(function(e) {
+                    return l(e)
+                })
             }
         }
 
-        function l() {
+        function l(e) {
             return {
-                type: _
+                itemId: e.item_id,
+                title: e.title,
+                owner: {
+                    displayName: e.owner.display_name
+                },
+                thumbnails: {
+                    small: e.thumbnails ? e.thumbnails.small : m
+                }
             }
         }
 
@@ -14253,16 +14262,23 @@
                 type: v
             }
         }
+
+        function c() {
+            return {
+                type: y
+            }
+        }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.setCollection = n, t.clearCollection = r, t.loadedLastCollectionItem = i, t.loadedCollectionItem = o, t.requestCollection = a, t.openCollectionSidebar = l, t.closeCollectionSidebar = u;
-        var c = t.ACTION_REQUEST_COLLECTION = "request collection",
-            d = t.ACTION_SET_COLLECTION = "set collection",
-            p = t.ACTION_CLEAR_COLLECTION = "clear collection",
-            f = t.ACTION_LOADED_LAST_COLLECTION_ITEM = "loaded last collection item",
-            h = t.ACTION_LOADED_COLLECTION_ITEM = "loaded collection item",
-            _ = t.ACTION_OPEN_COLLECTION_SIDEBAR = "open collection sidebar",
-            v = t.ACTION_CLOSE_COLLECTION_SIDEBAR = "close collection sidebar"
+        }), t.setCollection = n, t.clearCollection = r, t.loadedLastCollectionItem = i, t.loadedCollectionItem = o, t.requestCollection = a, t.openCollectionSidebar = u, t.closeCollectionSidebar = c;
+        var d = t.ACTION_REQUEST_COLLECTION = "request collection",
+            p = t.ACTION_SET_COLLECTION = "set collection",
+            f = t.ACTION_CLEAR_COLLECTION = "clear collection",
+            h = t.ACTION_LOADED_LAST_COLLECTION_ITEM = "loaded last collection item",
+            _ = t.ACTION_LOADED_COLLECTION_ITEM = "loaded collection item",
+            v = t.ACTION_OPEN_COLLECTION_SIDEBAR = "open collection sidebar",
+            y = t.ACTION_CLOSE_COLLECTION_SIDEBAR = "close collection sidebar",
+            m = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/no-thumbnail-sm.png"
     }, function(e, t, n) {
         "use strict";
 
@@ -14717,7 +14733,7 @@
                 }, {
                     key: "onOfflineError",
                     value: function() {
-                        this.offline = !0, this.events.emit(p.OFFLINE), this.events.emit(f.ENDED);
+                        this.offline = !0, this.events.emit(p.OFFLINE), this.events.emit(f.ENDED)
                     }
                 }, {
                     key: "onHLSVariantParsed",
@@ -38283,7 +38299,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.CollectionOverlay = t.NO_COLLECTION_VIEW_ATTR = t.SIDEBAR_VIEW_ATTR = t.COLLAPSED_VIEW_ATTR = t.DEFAULT_THUMBNAIL_URL = void 0;
+        }), t.CollectionOverlay = t.NO_COLLECTION_VIEW_ATTR = t.SIDEBAR_VIEW_ATTR = t.COLLAPSED_VIEW_ATTR = void 0;
         var a = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -38317,15 +38333,14 @@
             v = 250,
             y = 400,
             m = 350,
-            g = t.DEFAULT_THUMBNAIL_URL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/no-thumbnail-sm.png",
-            b = t.COLLAPSED_VIEW_ATTR = "view-collapsed",
-            E = t.SIDEBAR_VIEW_ATTR = "view-sidebar",
-            T = t.NO_COLLECTION_VIEW_ATTR = "none";
+            g = t.COLLAPSED_VIEW_ATTR = "view-collapsed",
+            b = t.SIDEBAR_VIEW_ATTR = "view-sidebar",
+            E = t.NO_COLLECTION_VIEW_ATTR = "none";
         t.CollectionOverlay = function(e) {
             function t(e, n, o) {
                 r(this, t);
                 var a = i(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                a._stateStore = o, a.player = n, a.window = a._stateStore.getState().window, a.animateCloseTimeout = null, a.sidebarOpenTimeout = null, a.sidebarCloseTimeout = null, a.$root = $(e), a.$root.attr("data-collection-view", T), a.$sidebarItemTemplate = $(".js-collection-item", a.$root), a.$collectionCollapsedNav = $(".js-collection-nav", a.$root), a.$collectionSidebar = $(".js-collection-sidebar", a.$root), a.$collectionCollapsedContainer = $(".js-collection-collapsed-layout", a.$root), a.$collectionCollapsedTitle = $(".js-collection-collapsed-title", a.$root), a.$collectionCollapsedNumber = $(".js-collection-collapsed-number", a.$root), a.$collectionDivider = $(".js-collection-divider", a.$root), a.$collectionCloseButton = $(".js-icon-close-collection", a.$root), a.$collectionTitle = $(".js-collection-title", a.$root), a.$collectionAuthor = $(".js-collection-author", a.$root), a.$collectionItemsCount = $(".js-collection-items-count", a.$root), a.$collectionTimeLength = $(".js-collection-time-length", a.$root), a.$collectionItemContainer = $(".js-collection-item-container", a.$root), a.$emptyCollectionOverlay = $(".js-empty-collection-overlay", a.$root), a.initInteractions();
+                a._stateStore = o, a.player = n, a.window = a._stateStore.getState().window, a.animateCloseTimeout = null, a.sidebarOpenTimeout = null, a.sidebarCloseTimeout = null, a.$root = $(e), a.$root.attr("data-collection-view", E), a.$sidebarItemTemplate = $(".js-collection-item", a.$root), a.$collectionCollapsedNav = $(".js-collection-nav", a.$root), a.$collectionSidebar = $(".js-collection-sidebar", a.$root), a.$collectionCollapsedContainer = $(".js-collection-collapsed-layout", a.$root), a.$collectionCollapsedTitle = $(".js-collection-collapsed-title", a.$root), a.$collectionCollapsedNumber = $(".js-collection-collapsed-number", a.$root), a.$collectionDivider = $(".js-collection-divider", a.$root), a.$collectionCloseButton = $(".js-icon-close-collection", a.$root), a.$collectionTitle = $(".js-collection-title", a.$root), a.$collectionAuthor = $(".js-collection-author", a.$root), a.$collectionItemsCount = $(".js-collection-items-count", a.$root), a.$collectionTimeLength = $(".js-collection-time-length", a.$root), a.$collectionItemContainer = $(".js-collection-item-container", a.$root), a.$emptyCollectionOverlay = $(".js-empty-collection-overlay", a.$root), a.initInteractions();
                 var s = ["collection.title", "collection.owner", "collection.totalDuration"];
                 return a.subscribe(a._stateStore, ["collection.id", "playerOptions.showInfo", "screenMode.isTheatreMode"], a.handleDividerDisplay.bind(a)), a.subscribe(a._stateStore, ["ui.isMini"], a.onMiniChange.bind(a)), a.subscribe(a._stateStore, ["collection.currentView"], a.onViewChange.bind(a)), a.subscribe(a._stateStore, s.concat(["lang"]), a.onMetadataChange.bind(a)), a.subscribe(a._stateStore, ["collection.items", "stream", "lang"], a.onItemsChange.bind(a)), a.subscribe(a._stateStore, ["screen"], a.onScreenChange.bind(a)), a
             }
@@ -38438,16 +38453,16 @@
                         r = n.collection;
                     switch (t && t.collection.currentView === p.SIDEBAR_VIEW && r.currentView !== p.NO_COLLECTION_VIEW && this._animateSidebarClose(), r.currentView) {
                         case p.NO_COLLECTION_VIEW:
-                            this._hideAllElements(), this.$root.attr("data-collection-view", T);
+                            this._hideAllElements(), this.$root.attr("data-collection-view", E);
                             break;
                         case p.COLLAPSED_VIEW:
-                            this._showCollapsedElements(), this.$root.attr("data-collection-view", b);
+                            this._showCollapsedElements(), this.$root.attr("data-collection-view", g);
                             break;
                         case p.SIDEBAR_VIEW:
-                            this._showSidebarElements(), this.$root.attr("data-collection-view", E);
+                            this._showSidebarElements(), this.$root.attr("data-collection-view", b);
                             break;
                         default:
-                            this._hideAllElements(), this.$root.attr("data-collection-view", T)
+                            this._hideAllElements(), this.$root.attr("data-collection-view", E)
                     }
                 }
             }, {
@@ -38483,11 +38498,9 @@
                     return e.map(function(i, o) {
                         var a = r.$sidebarItemTemplate.clone(),
                             s = o + 1;
-                        a.find(".js-collection-item-number").text(s);
-                        var l = i.thumbnails ? i.thumbnails.small : g;
-                        a.attr("data-vod-id", i.item_id), a.find(".js-collection-item-thumbnail").attr("src", l), a.find(".js-collection-item-title").text(i.title), a.find(".js-collection-item-detail-channel").text(i.owner.display_name);
-                        var c = t.contentType === u.CONTENT_MODE_VOD && t.videoId === "v" + i.item_id;
-                        return a.attr("data-currentvod", c), c && r.$collectionCollapsedNumber.text(n.translate("{{currentPosition}}/{{totalVideos}} video", {
+                        a.find(".js-collection-item-number").text(s), a.attr("data-vod-id", i.itemId), a.find(".js-collection-item-thumbnail").attr("src", i.thumbnails.small), a.find(".js-collection-item-title").text(i.title), a.find(".js-collection-item-detail-channel").text(i.owner.displayName);
+                        var l = t.contentType === u.CONTENT_MODE_VOD && t.videoId === "v" + i.itemId;
+                        return a.attr("data-currentvod", l), l && r.$collectionCollapsedNumber.text(n.translate("{{currentPosition}}/{{totalVideos}} video", {
                             count: e.length,
                             currentPosition: o + 1,
                             totalVideos: e.length
@@ -38623,8 +38636,7 @@
                 }
             }]), e
         }();
-        t.I18N_INSTANCE = u.default,
-            t.DEFAULT_LANGUAGE = new b("en", "en-US", u.default.getFixedT("en-US"))
+        t.I18N_INSTANCE = u.default, t.DEFAULT_LANGUAGE = new b("en", "en-US", u.default.getFixedT("en-US"))
     }, function(e, t, n) {
         e.exports = n(675).default
     }, function(e, t, n) {
@@ -39682,7 +39694,7 @@
                     return Number(1 == e || e % 10 == 1 ? 0 : 1)
                 },
                 18: function(e) {
-                    return Number(0 == e ? 0 : 1 == e ? 1 : 2)
+                    return Number(0 == e ? 0 : 1 == e ? 1 : 2);
                 },
                 19: function(e) {
                     return Number(1 == e ? 0 : 0 === e || e % 100 > 1 && e % 100 < 11 ? 1 : e % 100 > 10 && e % 100 < 20 ? 2 : 3)
@@ -45600,7 +45612,7 @@
                         n = e.collection;
                     if (n.id && 0 !== n.items.length) {
                         var r = n.items[n.items.length - 1];
-                        t.contentType === d.CONTENT_MODE_VOD && t.videoId === "v" + r.item_id ? this._stateStore.dispatch((0, _.loadedLastCollectionItem)()) : this._stateStore.dispatch((0, _.loadedCollectionItem)())
+                        t.contentType === d.CONTENT_MODE_VOD && t.videoId === "v" + r.itemId ? this._stateStore.dispatch((0, _.loadedLastCollectionItem)()) : this._stateStore.dispatch((0, _.loadedCollectionItem)())
                     }
                 }
             }, {
@@ -45623,12 +45635,12 @@
                     if (0 !== r.items.length) {
                         var o = n.videoId,
                             a = (0, h.default)(r.items, function(e) {
-                                return "v" + e.item_id === o
+                                return "v" + e.itemId === o
                             });
                         if (a + 1 !== r.items.length) {
                             var s = r.items[a + 1];
                             i.setTimeout(function() {
-                                e._stateStore.dispatch((0, v.selectCollectionVideo)("v" + s.item_id, r.id))
+                                e._stateStore.dispatch((0, v.selectCollectionVideo)("v" + s.itemId, r.id))
                             }, 0)
                         }
                     }
