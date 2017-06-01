@@ -345,10 +345,10 @@ window.SiteOptions = {
         "18f450b9-5593-4d66-a5a7-c8b6fccf95c3": {
             "name": "aax",
             "groups": [{
-                "weight": 50,
+                "weight": 5,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 95,
                 "value": "treatment"
             }]
         },
