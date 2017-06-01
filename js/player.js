@@ -9743,7 +9743,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.06.01-185354+5a71701b3ac837290c184b50ab7f25fdd2098557",
+                    app_version: "2017.06.01-204159+c2f993a1c99832e3a192cbe086dde8076b90c25b",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -35954,6 +35954,27 @@
                     }();
                     r.TwitchExtAuth = "twitch-ext-auth", r.TwitchExtBoostrap = "twitch-ext-bootstrap", r.TwitchExtContext = "twitch-ext-context", r.TwitchExtError = "twitch-ext-error", r.TwitchExtLoaded = "twitch-ext-loaded", r.TwitchExtReload = "twitch-ext-reload", r.TwitchExtUserAction = "twitch-ext-user-action";
                     var i = "contextchange"
+                }, function(e, t) {
+                    try {
+                        new MouseEvent("test")
+                    } catch (e) {
+                        window.MouseEvent = function(e, t) {
+                            var n = document.createEvent("MouseEvent"),
+                                r = Object.assign({
+                                    bubbles: !1,
+                                    cancelable: !1,
+                                    clientX: 0,
+                                    clientY: 0,
+                                    ctrlKey: !1,
+                                    altKey: !1,
+                                    shiftKey: !1,
+                                    metaKey: !1,
+                                    button: 0,
+                                    relatedTarget: null
+                                }, t || {});
+                            return n.initMouseEvent(e, r.bubbles, r.cancelable, window, r.ctrlKey, r.altKey, r.shiftKey, r.metaKey, r.button, r.relatedTarget), n
+                        }, window.MouseEvent.prototype = Event.prototype
+                    }
                 }, function(e, t, n) {
                     "use strict";
                     Object.defineProperty(t, "__esModule", {
@@ -36075,27 +36096,6 @@
                             }
                         }, e
                     }()
-                }, function(e, t) {
-                    try {
-                        new MouseEvent("test")
-                    } catch (e) {
-                        window.MouseEvent = function(e, t) {
-                            var n = document.createEvent("MouseEvent"),
-                                r = Object.assign({
-                                    bubbles: !1,
-                                    cancelable: !1,
-                                    clientX: 0,
-                                    clientY: 0,
-                                    ctrlKey: !1,
-                                    altKey: !1,
-                                    shiftKey: !1,
-                                    metaKey: !1,
-                                    button: 0,
-                                    relatedTarget: null
-                                }, t || {});
-                            return n.initMouseEvent(e, r.bubbles, r.cancelable, window, r.ctrlKey, r.altKey, r.shiftKey, r.metaKey, r.button, r.relatedTarget), n
-                        }, window.MouseEvent.prototype = Event.prototype
-                    }
                 }, function(e, t, n) {
                     (function(t) {
                         ! function(n) {
@@ -36493,8 +36493,6 @@
                         return l
                     }), n.d(t, "d", function() {
                         return u
-                    }), n.d(t, "e", function() {
-                        return c
                     });
                     var i = this && this.__assign || Object.assign || function(e) {
                             for (var t, n = 1, r = arguments.length; n < r; n++) {
@@ -36552,18 +36550,18 @@
                                 });
                             return n.i(r.d)(a)
                         },
-                        a = function(e, t) {
-                            var o = new Headers(i({}, r.a, {
+                        a = function(e, t, o) {
+                            var a = new Headers(i({}, r.a, {
                                     "Client-ID": e
                                 })),
-                                a = new Request(r.b + "/" + r.c + "/extensions/auth/refresh", {
+                                s = new Request(r.b + "/" + r.c + "/extensions/" + e + "/auth/refresh/" + t, {
                                     body: JSON.stringify({
-                                        token: t
+                                        token: o
                                     }),
-                                    headers: o,
+                                    headers: a,
                                     method: "POST"
                                 });
-                            return n.i(r.e)(a)
+                            return n.i(r.d)(s)
                         }
                 }, function(e, t, n) {
                     "use strict";
@@ -36612,6 +36610,7 @@
                         function e(e, t, i) {
                             var o = this;
                             this.extension = e, this.onAuthUpdate = t, this.onAnyFailure = i, this.refreshTimeout = null, this.beginAuthCycle = function(e) {
+                                clearTimeout(o.refreshTimeout), o.refreshTimeout = null;
                                 var t = o.calculateRefreshAfter();
                                 t <= 0 ? o.refreshAuth(o.auth).then(function(t) {
                                     o.extension.token = t, e(), o.cycleExtensionAuth()
@@ -36651,7 +36650,7 @@
                                     r = Math.max(0, .9 * (1e3 * t.exp - n));
                                 return r
                             }, this.refreshAuth = function(e) {
-                                return clearTimeout(o.refreshTimeout), o.refreshTimeout = null, n.i(r.a)(o.auth.clientId, o.auth.token).catch(function() {
+                                return clearTimeout(o.refreshTimeout), o.refreshTimeout = null, n.i(r.a)(o.auth.clientId, o.auth.channelId, o.auth.token).catch(function() {
                                     return o.getTokenFromExtensions()
                                 }).then(function(e) {
                                     var t = e.token;
@@ -36980,7 +36979,7 @@
                     }
                     e.exports = n
                 }, function(e, t, n) {
-                    n(2), n(4), n(3), e.exports = n(1)
+                    n(1), n(4), n(3), e.exports = n(2)
                 }])
             })
         }).call(t, n(659).setImmediate, n(659).clearImmediate)
@@ -37403,9 +37402,9 @@
             m = t.PERMISSION_ICON_GRANT = "grant",
             g = t.PERMISSION_ICON_REVOKE = "revoke",
             b = t.PERMISSION_ICON_APPROVE = "approved",
-            E = (l = {}, s(l, _.EXTENSION_PERMISSION_STATE_NONE, [m, m]), s(l, _.EXTENSION_PERMISSION_STATE_GRANTED, [b, g]), l),
-            T = (u = {}, s(u, _.EXTENSION_PERMISSION_STATE_NONE, "Grant Permissions"),
-                s(u, _.EXTENSION_PERMISSION_STATE_GRANTED, "Revoke Permissions"), u),
+            E = (l = {}, s(l, _.EXTENSION_PERMISSION_STATE_NONE, [m, m]), s(l, _.EXTENSION_PERMISSION_STATE_GRANTED, [b, g]),
+                l),
+            T = (u = {}, s(u, _.EXTENSION_PERMISSION_STATE_NONE, "Grant Permissions"), s(u, _.EXTENSION_PERMISSION_STATE_GRANTED, "Revoke Permissions"), u),
             S = {
                 isActive: d.PropTypes.bool.isRequired,
                 onClick: d.PropTypes.func.isRequired,
@@ -38322,7 +38321,7 @@
                 var a = i(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
                 a._stateStore = o, a.player = n, a.window = a._stateStore.getState().window, a.animateCloseTimeout = null, a.sidebarOpenTimeout = null, a.sidebarCloseTimeout = null, a.$root = $(e), a.$root.attr("data-collection-view", T), a.$sidebarItemTemplate = $(".js-collection-item", a.$root), a.$collectionCollapsedNav = $(".js-collection-nav", a.$root), a.$collectionSidebar = $(".js-collection-sidebar", a.$root), a.$collectionCollapsedContainer = $(".js-collection-collapsed-layout", a.$root), a.$collectionCollapsedTitle = $(".js-collection-collapsed-title", a.$root), a.$collectionCollapsedNumber = $(".js-collection-collapsed-number", a.$root), a.$collectionDivider = $(".js-collection-divider", a.$root), a.$collectionCloseButton = $(".js-icon-close-collection", a.$root), a.$collectionTitle = $(".js-collection-title", a.$root), a.$collectionAuthor = $(".js-collection-author", a.$root), a.$collectionItemsCount = $(".js-collection-items-count", a.$root), a.$collectionTimeLength = $(".js-collection-time-length", a.$root), a.$collectionItemContainer = $(".js-collection-item-container", a.$root), a.$emptyCollectionOverlay = $(".js-empty-collection-overlay", a.$root), a.initInteractions();
                 var s = ["collection.title", "collection.owner", "collection.totalDuration"];
-                return a.subscribe(a._stateStore, ["playerOptions.showInfo", "collection.id"], a.onCollectionDetected.bind(a)), a.subscribe(a._stateStore, ["ui.isMini"], a.onMiniChange.bind(a)), a.subscribe(a._stateStore, ["collection.currentView"], a.onViewChange.bind(a)), a.subscribe(a._stateStore, s.concat(["lang"]), a.onMetadataChange.bind(a)), a.subscribe(a._stateStore, ["collection.items", "stream", "lang"], a.onItemsChange.bind(a)), a.subscribe(a._stateStore, ["screen"], a.onScreenChange.bind(a)), a
+                return a.subscribe(a._stateStore, ["collection.id", "playerOptions.showInfo", "screenMode.isTheatreMode"], a.handleDividerDisplay.bind(a)), a.subscribe(a._stateStore, ["ui.isMini"], a.onMiniChange.bind(a)), a.subscribe(a._stateStore, ["collection.currentView"], a.onViewChange.bind(a)), a.subscribe(a._stateStore, s.concat(["lang"]), a.onMetadataChange.bind(a)), a.subscribe(a._stateStore, ["collection.items", "stream", "lang"], a.onItemsChange.bind(a)), a.subscribe(a._stateStore, ["screen"], a.onScreenChange.bind(a)), a
             }
             return o(t, e), a(t, [{
                 key: "initInteractions",
@@ -38363,12 +38362,14 @@
                     t && (this._stateStore.dispatch((0, _.selectCollectionVideo)("v" + t, n)), this.setSidebarVisible(!1))
                 }
             }, {
-                key: "onCollectionDetected",
+                key: "handleDividerDisplay",
                 value: function() {
                     var e = this._stateStore.getState(),
                         t = e.collection,
-                        n = e.playerOptions;
-                    t.id && this.$collectionDivider.attr("data-show-divider", n.showInfo)
+                        n = e.screenMode,
+                        r = e.playerOptions,
+                        i = !1;
+                    t.id && (i = !!n.isTheatreMode || r.showInfo), this.$collectionDivider.attr("data-show-divider", i)
                 }
             }, {
                 key: "_showCollapsedElements",
@@ -38616,7 +38617,8 @@
                 }
             }]), e
         }();
-        t.I18N_INSTANCE = u.default, t.DEFAULT_LANGUAGE = new b("en", "en-US", u.default.getFixedT("en-US"))
+        t.I18N_INSTANCE = u.default,
+            t.DEFAULT_LANGUAGE = new b("en", "en-US", u.default.getFixedT("en-US"))
     }, function(e, t, n) {
         e.exports = n(675).default
     }, function(e, t, n) {
@@ -39674,7 +39676,7 @@
                     return Number(1 == e || e % 10 == 1 ? 0 : 1)
                 },
                 18: function(e) {
-                    return Number(0 == e ? 0 : 1 == e ? 1 : 2);
+                    return Number(0 == e ? 0 : 1 == e ? 1 : 2)
                 },
                 19: function(e) {
                     return Number(1 == e ? 0 : 0 === e || e % 100 > 1 && e % 100 < 11 ? 1 : e % 100 > 10 && e % 100 < 20 ? 2 : 3)
