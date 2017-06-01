@@ -16465,7 +16465,6 @@ googletag.cmd = googletag.cmd || [],
                 CHANNEL_CHAT_CTA: "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9",
                 SUB_OPTIONS: "86ad7a91-bf36-46c5-adef-6006a09720a8",
                 LOGGED_OUT_FRONT_PAGE_EXPERIMENT: "54e455b2-9854-4c55-b926-cfadbff49324",
-                NEW_STATS: "9242cab4-db40-400c-99e1-2faf8f8026f0",
                 AKAMAI_IMAGE_MANAGER: "f321aa37-e81d-4a81-99d5-303bf9429b7b",
                 SISKO: "31827b23-ea01-48b8-87c6-1503656957fd",
                 OFFLINE_RECOMMENDATIONS: "00683bde-a79d-4b9d-a7cc-b0549f854d36",
@@ -16517,7 +16516,6 @@ googletag.cmd = googletag.cmd || [],
                 "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9": "control",
                 "86ad7a91-bf36-46c5-adef-6006a09720a8": "two_page",
                 "54e455b2-9854-4c55-b926-cfadbff49324": "control",
-                "9242cab4-db40-400c-99e1-2faf8f8026f0": "no",
                 "f321aa37-e81d-4a81-99d5-303bf9429b7b": "control",
                 "31827b23-ea01-48b8-87c6-1503656957fd": "control",
                 "00683bde-a79d-4b9d-a7cc-b0549f854d36": "no",
@@ -17594,11 +17592,10 @@ googletag.cmd = googletag.cmd || [],
                         }, RSVP.hash(data)
                     }).then(function(t) {
                         return results = {
-                                payoutEntity: e.api.get("/api/channels/" + t.login + "/payout_entity"),
-                                login: t.login,
-                                isStaff: t.isStaff
-                            }, n.activeProductOnly && (results.product = e.api.get("/api/channels/" + t.login + "/product")),
-                            RSVP.hash(results)
+                            payoutEntity: e.api.get("/api/channels/" + t.login + "/payout_entity"),
+                            login: t.login,
+                            isStaff: t.isStaff
+                        }, n.activeProductOnly && (results.product = e.api.get("/api/channels/" + t.login + "/product")), RSVP.hash(results)
                     }).then(function(t) {
                         return t.payoutEntity && n.shouldCheckPayable && !t.isStaff && (t.isPayable = e.api.get("/api/payouts/is_payee_payable")), RSVP.hash(t)
                     }).then(function(e) {
