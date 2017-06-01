@@ -9743,7 +9743,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.06.01-172655+04ed49ecf7186af44de0e127b1a090859603d92c",
+                    app_version: "2017.06.01-181301+9113da82ebcd50cf1d28fb7f944d132593c40646",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -34175,7 +34175,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.TwitchEverywherePanelContainer = t.TwitchEverywherePanel = t.mapDispatchToProps = t.SUBSCRIBE_URL = void 0;
+        }), t.TwitchEverywherePanelContainer = t.TwitchEverywherePanel = t.mapDispatchToProps = t.TE_TARGET_ORIGIN = t.TE_AUTHENTICATION_REQUIRED = t.SUBSCRIBE_URL = void 0;
         var s = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -34192,11 +34192,11 @@
             c = n(644),
             d = n(575),
             p = n(645),
-            f = n(168),
-            h = n(432),
-            _ = n(648),
-            v = n(216),
-            y = t.SUBSCRIBE_URL = "http://everywhere.twitch.tv/subscribe",
+            f = n(432),
+            h = n(648),
+            _ = n(216),
+            v = t.SUBSCRIBE_URL = "http://everywhere.twitch.tv/subscribe",
+            y = (t.TE_AUTHENTICATION_REQUIRED = "twitch-everywhere.authentication-required", t.TE_TARGET_ORIGIN = "http://everywhere.twitch.tv"),
             m = {
                 avatarURL: l.PropTypes.string,
                 channelName: l.PropTypes.string.isRequired,
@@ -34207,7 +34207,6 @@
                 didFetchFollow: l.PropTypes.bool.isRequired,
                 isSubscribed: l.PropTypes.bool.isRequired,
                 didFetchSubscriptions: l.PropTypes.bool.isRequired,
-                showFollowNotification: l.PropTypes.bool.isRequired,
                 followChannel: l.PropTypes.func.isRequired,
                 unfollowChannel: l.PropTypes.func.isRequired,
                 window: l.PropTypes.object.isRequired,
@@ -34220,13 +34219,12 @@
                     channelName: e.streamMetadata.channel.name,
                     channelId: e.streamMetadata.channel.id,
                     userId: e.user.id,
-                    isLoggedIn: e.user.loggedInStatus === h.LOGGED_IN,
+                    isLoggedIn: e.user.loggedInStatus === f.LOGGED_IN,
                     isFollowing: e.follow.following,
                     isSubscribed: e.subscriptions.isSubscribed,
                     didFetchSubscriptions: e.subscriptions.didFetch,
                     didFetchFollow: e.follow.fetched,
                     window: e.window,
-                    showFollowNotification: e.follow.showFollowNotification,
                     notificationsEnabled: e.follow.notificationsEnabled,
                     analytics: e.analyticsTracker
                 }
@@ -34250,16 +34248,16 @@
                 return a(t, e), s(t, [{
                     key: "componentDidMount",
                     value: function() {
-                        this.props.analytics.trackEvent(_.NOTIFICATIONS_BUTTON_VIEW, {
+                        this.props.analytics.trackEvent(h.NOTIFICATIONS_BUTTON_VIEW, {
                             follow_state: this.props.isFollowing,
                             notif_state: this.props.notificationsEnabled,
-                            src: v.PLAYER_TWITCH_EVERYWHERE
+                            src: _.PLAYER_TWITCH_EVERYWHERE
                         })
                     }
                 }, {
                     key: "followChannel",
                     value: function() {
-                        this.props.isLoggedIn ? this.props.followChannel(this.props.userId, this.props.channelId) : this.props.window.open(f.TWITCH_SIGNUP_URL, "_blank")
+                        this.props.isLoggedIn ? this.props.followChannel(this.props.userId, this.props.channelId) : this.props.window.parent.postMessage("twitch-everywhere.authentication-required", y)
                     }
                 }, {
                     key: "unfollowChannel",
@@ -34269,12 +34267,15 @@
                 }, {
                     key: "subscribe",
                     value: function() {
-                        this.props.window.open(y, "_blank")
+                        this.props.window.open(v, "_blank")
                     }
                 }, {
                     key: "render",
                     value: function() {
-                        return this.props.didFetchFollow && this.props.didFetchSubscriptions && this.props.channelId !== this.props.userId ? u.default.createElement(p.TwitchEverywhereFollowPanel, {
+                        var e = !this.props.isLoggedIn && this.props.channelName,
+                            t = this.props.didFetchFollow && this.props.didFetchSubscriptions,
+                            n = this.props.channelId === this.props.userId;
+                        return e || t && !n ? u.default.createElement(p.TwitchEverywhereFollowPanel, {
                             avatarURL: this.props.avatarURL,
                             channelName: this.props.channelName,
                             isFollowing: this.props.isFollowing,
@@ -34595,12 +34596,12 @@
         }
 
         function i(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
         }
 
         function o(e, t) {
             if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !t || "object" != typeof t && "function" != typeof t ? e : t;
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
         }
 
         function a(e, t) {
@@ -37403,7 +37404,8 @@
             g = t.PERMISSION_ICON_REVOKE = "revoke",
             b = t.PERMISSION_ICON_APPROVE = "approved",
             E = (l = {}, s(l, _.EXTENSION_PERMISSION_STATE_NONE, [m, m]), s(l, _.EXTENSION_PERMISSION_STATE_GRANTED, [b, g]), l),
-            T = (u = {}, s(u, _.EXTENSION_PERMISSION_STATE_NONE, "Grant Permissions"), s(u, _.EXTENSION_PERMISSION_STATE_GRANTED, "Revoke Permissions"), u),
+            T = (u = {}, s(u, _.EXTENSION_PERMISSION_STATE_NONE, "Grant Permissions"),
+                s(u, _.EXTENSION_PERMISSION_STATE_GRANTED, "Revoke Permissions"), u),
             S = {
                 isActive: d.PropTypes.bool.isRequired,
                 onClick: d.PropTypes.func.isRequired,
@@ -39672,7 +39674,7 @@
                     return Number(1 == e || e % 10 == 1 ? 0 : 1)
                 },
                 18: function(e) {
-                    return Number(0 == e ? 0 : 1 == e ? 1 : 2)
+                    return Number(0 == e ? 0 : 1 == e ? 1 : 2);
                 },
                 19: function(e) {
                     return Number(1 == e ? 0 : 0 === e || e % 100 > 1 && e % 100 < 11 ? 1 : e % 100 > 10 && e % 100 < 20 ? 2 : 3)
