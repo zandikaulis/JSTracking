@@ -1595,10 +1595,10 @@ window.SiteOptions = {
         "c097971e-c5fc-4763-a8fa-de04f3d713a7": {
             "name": "Watch_Party_Web",
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "no"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "yes"
             }]
         },
