@@ -9743,7 +9743,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.06.01-205743+5fa40c27e8d2f20c6c13a29adecbfe1ccf56c12e",
+                    app_version: "2017.06.01-212028+35068590090c597f9a2a268492457a74238b9631",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -20394,9 +20394,15 @@
             function t(e, n) {
                 i(this, t);
                 var r = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return r.$root = e, r._stateStore = n, r.subscribe(r._stateStore, ["recommendations.videos"], r.onRecommendations.bind(r)), r.subscribe(r._stateStore, ["recommendations.numVideosVisible"], r.onVODVisibility.bind(r)), r.subscribe(r._stateStore, ["screen"], r.onScreenChange.bind(r)), r.$recommendationsOverlay = $(".js-recommendations-overlay", r.$root), r.$autoplayTemplate = $(".js-autoplay-timer", r.$root), r.$autoplayTemplate.detach(), r.$timeInfoTemplate = $(".js-recommendation-time-info", r.$root), r.$timeInfoTemplate.detach(), r.$template = $(".js-recommended-stream", r.$root), $(".js-video-recommendations", r.$root).empty(), $(".js-recommendations-overlay .js-player-tower", r.$root).on("click", ".js-recommended-stream", r.onSelect.bind(r)), $(".js-recommendations-overlay .js-player-tower", r.$root).on("click", ".js-featured-recommendations__more-videos", r.transitionToMoreVideos.bind(r)), r
+                return r.$root = e, r._stateStore = n, r.subscribe(r._stateStore, ["recommendations.videos"], r.onRecommendations.bind(r)), r.subscribe(r._stateStore, ["recommendations.numVideosVisible"], r.onVODVisibility.bind(r)), r.subscribe(r._stateStore, ["screen"], r.onScreenChange.bind(r)), r.subscribe(r._stateStore, ["ui.isMini"], r.onPersistentPlayerChange.bind(r)), r.$recommendationsOverlay = $(".js-recommendations-overlay", r.$root), r.$autoplayTemplate = $(".js-autoplay-timer", r.$root), r.$autoplayTemplate.detach(), r.$timeInfoTemplate = $(".js-recommendation-time-info", r.$root), r.$timeInfoTemplate.detach(), r.$template = $(".js-recommended-stream", r.$root), $(".js-video-recommendations", r.$root).empty(), $(".js-recommendations-overlay .js-player-tower", r.$root).on("click", ".js-recommended-stream", r.onSelect.bind(r)), $(".js-recommendations-overlay .js-player-tower", r.$root).on("click", ".js-featured-recommendations__more-videos", r.transitionToMoreVideos.bind(r)), r
             }
             return a(t, e), s(t, [{
+                key: "onPersistentPlayerChange",
+                value: function(e) {
+                    var t = e.ui;
+                    t.isMini && this.transitionToMoreVideos()
+                }
+            }, {
                 key: "onRecommendations",
                 value: function() {
                     var e = this,
@@ -20404,8 +20410,8 @@
                         n = t.recommendations;
                     n.type === c.POST_RECOMMENDATIONS_TYPE && 0 !== n.videos.length && ($(".js-video-recommendations", this.$root).html(n.videos.map(function(t, n) {
                         var r = e.$template.clone();
-                        0 === n && (e.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")), e.updateAutoplayProgress(100, Math.round(g / 1e3))), e.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")), r.attr("data-index", n), r.find(".js-recommended-stream__thumbnail").attr("src", t.thumbnailURL),
-                            r.find(".js-recommended-stream__channel").text(t.channelName), r.find(".js-recommended-stream__title").text(t.title);
+                        0 === n && (e.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")), e.updateAutoplayProgress(100, Math.round(g / 1e3))),
+                            e.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")), r.attr("data-index", n), r.find(".js-recommended-stream__thumbnail").attr("src", t.thumbnailURL), r.find(".js-recommended-stream__channel").text(t.channelName), r.find(".js-recommended-stream__title").text(t.title);
                         var i = e._stateStore.getState().lang.langCode,
                             o = {
                                 year: "numeric",
@@ -21566,8 +21572,8 @@
                     return (0, m.subscribe)(this._stateStore, ["captions"], function(t, n) {
                         var r = t.captions,
                             i = n.captions;
-                        r.available !== i.available && e.showCCAvailability(r.available), r.enabled !== i.enabled && (e.setCCIconStatus(r.enabled), e.showCaption(r)), r.data !== i.data && e.showCaption(r), r.preset !== i.preset && (e.setCurrentPreset(), e.setCurrentStyles()),
-                            r.preset === i.preset && r.style === i.style || e.applyCCStyle()
+                        r.available !== i.available && e.showCCAvailability(r.available),
+                            r.enabled !== i.enabled && (e.setCCIconStatus(r.enabled), e.showCaption(r)), r.data !== i.data && e.showCaption(r), r.preset !== i.preset && (e.setCurrentPreset(), e.setCurrentStyles()), r.preset === i.preset && r.style === i.style || e.applyCCStyle()
                     })
                 }
             }, {
