@@ -9743,7 +9743,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.05.31-183730+0f79829c3b420f54d9ed86f162fa41d6112fe95b",
+                    app_version: "2017.06.01-002309+ec592e8fdd39a7282134de7b1bf5ef52ebf3ed32",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -31382,6 +31382,7 @@
                     i(this, t);
                     var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.state = {
+                        canRenderBanner: !1,
                         lastQuality: "",
                         hasChangedQuality: !1
                     }, e.bannerHideTimeout = 0, e
@@ -31392,7 +31393,9 @@
                         var t = this;
                         e.currentQuality !== this.state.lastQuality && (0 !== this.bannerHideTimeout && this.clearBannerHideTimeout(), this.showBannerForQuality(e.currentQuality), this.bannerHideTimeout = e.windowObj.setTimeout(function() {
                             t.hideBannerForQuality()
-                        }, _))
+                        }, _)), e.currentQuality === this.state.lastQuality && 1 === e.playbackRate || this.setState({
+                            canRenderBanner: !0
+                        })
                     }
                 }, {
                     key: "componentWillUnmount",
@@ -31422,22 +31425,35 @@
                 }, {
                     key: "render",
                     value: function() {
+                        var e = this.props.playbackRate,
+                            t = this.state,
+                            n = t.canRenderBanner,
+                            r = t.hasChangedQuality,
+                            i = r || 1 !== e,
+                            o = this._getBannerLabel();
+                        return n ? u.default.createElement(h.SettingsBanner, {
+                            bannerLabel: o,
+                            showBanner: i
+                        }) : null
+                    }
+                }, {
+                    key: "_getBannerLabel",
+                    value: function() {
+                        var e = this.props.playbackRate;
+                        return this.state.hasChangedQuality ? this._getQualityName() : 1 !== e ? e + "x" : ""
+                    }
+                }, {
+                    key: "_getQualityName",
+                    value: function() {
                         var e = this.props,
                             t = e.availableQualities,
                             n = e.currentQuality,
-                            r = e.playbackRate,
-                            i = e.t,
-                            o = this.state.hasChangedQuality,
-                            a = (0, d.default)(t, function(e) {
+                            r = e.t,
+                            i = (0, d.default)(t, function(e) {
                                 return e.group === n
                             }),
-                            s = a ? a.name : "",
-                            l = o || 1 !== r,
-                            c = o ? i(s) : r + "x";
-                        return u.default.createElement(h.SettingsBanner, {
-                            bannerLabel: c,
-                            showBanner: l
-                        })
+                            o = i ? i.name : "";
+                        return r(o)
                     }
                 }]), t
             }(u.default.Component);
@@ -34595,7 +34611,7 @@
 
         function o(e, t) {
             if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !t || "object" != typeof t && "function" != typeof t ? e : t
+            return !t || "object" != typeof t && "function" != typeof t ? e : t;
         }
 
         function a(e, t) {
@@ -38655,7 +38671,8 @@
             v = r(_),
             y = n(53),
             m = r(y),
-            g = (0, v.default)((0, h.default)(["ar-SA", "bg-BG", "cs-CZ", "da-DK", "de-DE", "el-GR", "en-US", "es-MX", "es-US", "es-ES", "es-LA", "fi-FI", "fr-FR", "hi-IN", "hu-HU", "it-IT", "ja-JP", "ko-KR", "nl-NL", "no-NO", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "sv-SE", "th-TH", "tr-TR", "vi-VN", "zh-TW", "zh-CN"], function(e, t) {
+            g = (0,
+                v.default)((0, h.default)(["ar-SA", "bg-BG", "cs-CZ", "da-DK", "de-DE", "el-GR", "en-US", "es-MX", "es-US", "es-ES", "es-LA", "fi-FI", "fr-FR", "hi-IN", "hu-HU", "it-IT", "ja-JP", "ko-KR", "nl-NL", "no-NO", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "sv-SE", "th-TH", "tr-TR", "vi-VN", "zh-TW", "zh-CN"], function(e, t) {
                 var n = t.replace(/-[a-zA-Z]{2}$/, "");
                 return e[n] = t, e
             }, {}), {
