@@ -9743,7 +9743,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.06.01-204159+c2f993a1c99832e3a192cbe086dde8076b90c25b",
+                    app_version: "2017.06.01-205743+5fa40c27e8d2f20c6c13a29adecbfe1ccf56c12e",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -35651,7 +35651,7 @@
                     isLoggedIn: e.user.loggedInStatus === b.LOGGED_IN,
                     login: e.user.name,
                     loginId: e.user.id,
-                    channel: e.streamMetadata.channelName,
+                    channel: e.streamMetadata.channel.name,
                     channelId: e.streamMetadata.channel.id,
                     deviceId: e.env.deviceId,
                     platform: e.env.platform,
