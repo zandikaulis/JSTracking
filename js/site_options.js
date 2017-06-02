@@ -248,16 +248,6 @@ window.SiteOptions = {
                 "value": "variant2"
             }]
         },
-        "0fb759af-22ba-415a-9c83-e2dbeb6f8e41": {
-            "name": "Settings Menu Redesign",
-            "groups": [{
-                "weight": 0,
-                "value": "old"
-            }, {
-                "weight": 100,
-                "value": "new"
-            }]
-        },
         "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5": {
             "name": "Bismol",
             "groups": [{
