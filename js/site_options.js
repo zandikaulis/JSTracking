@@ -705,7 +705,7 @@ window.SiteOptions = {
                 "value": "1.8.7+absctrl"
             }, {
                 "weight": 2,
-                "value": "1.8.100"
+                "value": "1.8.7+spd67"
             }, {
                 "weight": 2,
                 "value": "1.8.7+abshist"
@@ -720,7 +720,7 @@ window.SiteOptions = {
                 "value": "1.8.7+spd67"
             }, {
                 "weight": 2,
-                "value": "1.8.100+spd67"
+                "value": "1.8.7+spd67"
             }]
         },
         "474db509-7fb8-403e-97da-66dae8954e6d": {
