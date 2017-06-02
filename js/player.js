@@ -9741,7 +9741,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.06.02-174743+c55ef1a85382d72d788dfb58b08a5cc9afe25d38",
+                    app_version: "2017.06.02-185516+d047978c3a0f5f9c44c4a40745d788d1326d486b",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -33656,10 +33656,7 @@
                 isSubscribed: i.PropTypes.bool.isRequired,
                 subscribe: i.PropTypes.func.isRequired
             },
-            p = {
-                avatarURL: l.DEFAULT_AVATAR_URL
-            },
-            f = t.TwitchEverywhereFollowPanel = function(e) {
+            p = t.TwitchEverywhereFollowPanel = function(e) {
                 var t = (0, c.default)({
                     "pl-pinned-panel": !0,
                     "pl-pinned-panel--te": !0
@@ -33669,7 +33666,7 @@
                 }, o.default.createElement("figure", {
                     className: "pl-pinned-panel__avatar"
                 }, o.default.createElement("img", {
-                    src: e.avatarURL,
+                    src: e.avatarURL || l.DEFAULT_AVATAR_URL,
                     alt: "Avatar",
                     height: 30,
                     width: 30
@@ -33684,7 +33681,7 @@
                     channelName: e.channelName
                 }))
             };
-        f.propTypes = d, f.defaultProps = p
+        p.propTypes = d
     }, function(e, t, n) {
         "use strict";
 
@@ -45472,22 +45469,23 @@
             c = n(219),
             d = n(167),
             p = n(749),
-            f = n(183),
-            h = n(53),
-            _ = r(h),
-            v = 3e5,
-            y = [u.PLAYER_DASHBOARD, u.PLAYER_FRONTPAGE, u.PLAYER_CREATIVE, u.PLAYER_HIGHLIGHTER];
+            f = n(769),
+            h = n(183),
+            _ = n(53),
+            v = r(_),
+            y = 3e5,
+            m = [u.PLAYER_DASHBOARD, u.PLAYER_FRONTPAGE, u.PLAYER_CREATIVE, u.PLAYER_HIGHLIGHTER];
         t.PostRecommendationsManager = function() {
             function e(t) {
-                i(this, e), this._stateStore = t, this._unsubs = [], this._unsubs.push((0, f.subscribe)(this._stateStore, ["ads.currentMetadata"], this.onAdsMetadata.bind(this))), this._unsubs.push((0, f.subscribe)(this._stateStore, ["online"], this.onOffline.bind(this))), this._unsubs.push((0, f.subscribe)(this._stateStore, ["screen"], this.onScreenChange.bind(this))), this._unsubs.push((0, f.subscribe)(this._stateStore, ["playback.ended"], this.onEnded.bind(this))), this._unsubs.push((0, f.subscribe)(this._stateStore, ["playback.currentTime"], this.onCurrentTime.bind(this)))
+                i(this, e), this._stateStore = t, this._unsubs = [], this._unsubs.push((0, h.subscribe)(this._stateStore, ["ads.currentMetadata"], this.onAdsMetadata.bind(this))), this._unsubs.push((0, h.subscribe)(this._stateStore, ["onlineStatus"], this.onOnlineStatus.bind(this))), this._unsubs.push((0, h.subscribe)(this._stateStore, ["screen"], this.onScreenChange.bind(this))), this._unsubs.push((0, h.subscribe)(this._stateStore, ["playback.ended"], this.onEnded.bind(this))), this._unsubs.push((0, h.subscribe)(this._stateStore, ["playback.currentTime"], this.onCurrentTime.bind(this)))
             }
             return o(e, [{
-                key: "onOffline",
-                value: function(e) {
-                    var t = e.online,
-                        n = this._stateStore.getState(),
-                        r = n.playback;
-                    !t && r.hasPlayed && this._stateStore.dispatch((0, a.fetchRecommendedVODs)(a.MAX_RECOMMENDED_VODS_VISIBLE))
+                key: "onOnlineStatus",
+                value: function() {
+                    var e = this._stateStore.getState(),
+                        t = e.playback,
+                        n = e.onlineStatus;
+                    n === f.OFFLINE_STATUS && t.hasPlayed && this._stateStore.dispatch((0, a.fetchRecommendedVODs)(a.MAX_RECOMMENDED_VODS_VISIBLE))
                 }
             }, {
                 key: "onCurrentTime",
@@ -45534,7 +45532,7 @@
                         n = e.recommendations,
                         r = e.ui,
                         i = e.playback;
-                    return !(r.isMini || (0, _.default)(y, t.playerType) || n.status === a.UNFETCHED || n.status === a.FETCHED && 0 === n.videos.length || i.transitionScheme !== p.TRANSITION_TYPE_RECOMMENDATIONS)
+                    return !(r.isMini || (0, v.default)(m, t.playerType) || n.status === a.UNFETCHED || n.status === a.FETCHED && 0 === n.videos.length || i.transitionScheme !== p.TRANSITION_TYPE_RECOMMENDATIONS)
                 }
             }, {
                 key: "_startRecommendationTimeout",
@@ -45544,7 +45542,7 @@
                         n = t.window;
                     n.clearTimeout(this.recommendationsTimeoutID), this.recommendationsTimeoutID = n.setTimeout(function() {
                         e._stateStore.dispatch((0, s.popScreen)())
-                    }, v)
+                    }, y)
                 }
             }, {
                 key: "_stopRecommendationTimeout",
