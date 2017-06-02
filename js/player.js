@@ -9741,7 +9741,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.06.02-174036+528f5ddb8f962150e94088a2d4570ff054b04653",
+                    app_version: "2017.06.02-174743+c55ef1a85382d72d788dfb58b08a5cc9afe25d38",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
@@ -35756,7 +35756,8 @@
 
                     function r(e) {
                         if (e.status >= 200 && e.status < 300) return e;
-                        throw new Error(e.statusText)
+                        var t = new Error(e.statusText);
+                        throw t.response = e, t
                     }
                     n.d(t, "b", function() {
                         return a
@@ -35791,6 +35792,8 @@
                             return c(n).then(function(t) {
                                 var n = t.token;
                                 return e.headers.append("Authorization", "OAuth " + n), c(e)
+                            }).catch(function(t) {
+                                if (401 === t.response.status) return c(e)
                             })
                         },
                         c = function(e) {
