@@ -1024,10 +1024,10 @@ window.SiteOptions = {
         "74d6faab-1794-458a-a5f6-b92602254e9e": {
             "name": "auto_suggest_notification",
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "show"
             }]
         },
