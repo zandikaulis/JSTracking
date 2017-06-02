@@ -15072,14 +15072,14 @@ function(e, t) {
                         properties: t
                     };
                     return n.i(a.a)(e) ? this.trackUrgentEvent(o, i) : (this.eventBuffer.forEach(function(e, t) {
-                        -1 !== i.indexOf(t) && e.push(o)
+                        i.indexOf(t) !== -1 && e.push(o)
                     }), this.hookUnload(), this.queueFlush())
                 }, e.trackUrgentEvent = function(e, t) {
                     var o, s = n.i(i.a)([e]),
                         u = t.map(function(e) {
                             return n.i(l.a)(r.d[e].href, "data=" + s)
                         });
-                    return e.event === a.b && -1 !== t.indexOf(r.b) && (o = this.trackUrgentEvent({
+                    return e.event === a.b && t.indexOf(r.b) !== -1 && (o = this.trackUrgentEvent({
                         event: a.c,
                         properties: e.properties
                     }, [r.e]), u.push(o)), r.f.all(u)
@@ -15108,7 +15108,7 @@ function(e, t) {
                 }, e.hookUnload = function() {
                     var e = this;
                     this.unloadHooked || (this.unloadHooked = !0, navigator && navigator.sendBeacon && window.addEventListener("unload", function() {
-                        r.g && e.eventBuffer.forEach(function(t, n) {
+                        e.eventBuffer.forEach(function(t, n) {
                             if (n === r.b) {
                                 var i = {
                                     event: "unload-events-debug",
@@ -15116,7 +15116,8 @@ function(e, t) {
                                 };
                                 e.trackUrgentEvent(i, [r.b])
                             }
-                            for (var o = 1; o;) o = t.flushOnce()
+                            if (r.g)
+                                for (var o = 1; o;) o = t.flushOnce()
                         })
                     }))
                 }, e
@@ -15165,7 +15166,8 @@ function(e, t) {
                                 }
                                 var s = i.charAt(64);
                                 if (s) {
-                                    var a = e.indexOf(s); - 1 !== a && (n = a)
+                                    var a = e.indexOf(s);
+                                    a !== -1 && (n = a)
                                 }
                                 return t(e, n, r)
                             },
@@ -15211,7 +15213,7 @@ function(e, t) {
                         return this.events.forEach(function(t) {
                             var n = t.event;
                             e[n] = e[n] || 0, e[n]++
-                        }), e
+                        }), e.total_event_count = this.events.length, e
                     }, e.prototype.getBatch = function() {
                         var e = Math.max(i.i[this.service], 1);
                         return this.events.splice(0, e)
@@ -15257,7 +15259,7 @@ function(e, t) {
             "use strict";
 
             function i(e) {
-                return -1 !== a.indexOf(e)
+                return a.indexOf(e) !== -1
             }
             n.d(t, "b", function() {
                 return r
@@ -15583,26 +15585,25 @@ googletag.cmd = googletag.cmd || [],
     function(e) {
         e.fn.popoutWindow = function(t, n, i) {
             return i = i || {}, i.beforeFilter || (i.beforeFilter = function() {
-                    return !0
-                }), i.closeCallback || (i.closeCallback = function() {
-                    window.location.reload()
-                }), i.successCallback || (i.successCallback = function() {
-                    window.location.reload()
-                }),
-                i.errorCallback || (i.errorCallback = function() {}), this.each(function() {
-                    e(this).on("click", i.selector, function(r) {
-                        var o = e(this);
-                        if (r.preventDefault(), i.beforeFilter() && !o.data("popout_debounce")) {
-                            o.data("popout_interval") && clearInterval(o.data("popout_interval"));
-                            var s;
-                            s = _.isFunction(t) ? t() : t, window[n] = window.open(s, n, i.popoutOpts), o.data("popout_debounce", !0), setTimeout(function() {
-                                o.data("popout_debounce", !1)
-                            }, 2e3), o.data("popout_interval", setInterval(function() {
-                                window[n] && window[n].closed && (clearInterval(o.data("popout_interval")), i.closeCallback()), window[n] && window[n].success && (clearInterval(o.data("popout_interval")), i.successCallback()), window[n] && window[n].error && (clearInterval(o.data("popout_interval")), i.errorCallback())
-                            }, 500))
-                        }
-                    })
+                return !0
+            }), i.closeCallback || (i.closeCallback = function() {
+                window.location.reload()
+            }), i.successCallback || (i.successCallback = function() {
+                window.location.reload()
+            }), i.errorCallback || (i.errorCallback = function() {}), this.each(function() {
+                e(this).on("click", i.selector, function(r) {
+                    var o = e(this);
+                    if (r.preventDefault(), i.beforeFilter() && !o.data("popout_debounce")) {
+                        o.data("popout_interval") && clearInterval(o.data("popout_interval"));
+                        var s;
+                        s = _.isFunction(t) ? t() : t, window[n] = window.open(s, n, i.popoutOpts), o.data("popout_debounce", !0), setTimeout(function() {
+                            o.data("popout_debounce", !1)
+                        }, 2e3), o.data("popout_interval", setInterval(function() {
+                            window[n] && window[n].closed && (clearInterval(o.data("popout_interval")), i.closeCallback()), window[n] && window[n].success && (clearInterval(o.data("popout_interval")), i.successCallback()), window[n] && window[n].error && (clearInterval(o.data("popout_interval")), i.errorCallback())
+                        }, 500))
+                    }
                 })
+            })
         }
     }(jQuery),
     function(e) {
@@ -16652,8 +16653,8 @@ googletag.cmd = googletag.cmd || [],
         var n = function(e, n) {
             var i = this,
                 r = null;
-            i.player = n, i.$playerEl = n.$el,
-                n.on("adFeedbackShow", function(e) {
+            i.player = n,
+                i.$playerEl = n.$el, n.on("adFeedbackShow", function(e) {
                     r = e.adId, i.show()
                 }), i.$el = t(e), i.$el.find(".close-btn").click(function() {
                     i.$el.hide()
