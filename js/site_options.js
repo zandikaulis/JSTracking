@@ -1972,6 +1972,6 @@ window.SiteOptions = {
         }
     },
     "prime_new_enabled": false,
-    "prime_new_blocked_regions": "TBD",
+    "prime_new_blocked_regions": "JP,JPA,MX,MEX,IN,IND,CU,CUB,SD,SUD,IR,IRN,CHN,CN,SY,SYR,PRK,KP",
     "prime_new_whitelist": "samquality01,samquality02,samquality03,samquality04"
 };
