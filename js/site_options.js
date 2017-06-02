@@ -1921,10 +1921,10 @@ window.SiteOptions = {
         "f321aa37-e81d-4a81-99d5-303bf9429b7b": {
             "name": "AKAMAI_IMAGE_MANAGER",
             "groups": [{
-                "weight": 5,
+                "weight": 25,
                 "value": "experiment"
             }, {
-                "weight": 95,
+                "weight": 75,
                 "value": "control"
             }]
         },
