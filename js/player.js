@@ -9746,7 +9746,7 @@
                     b = y.get(!1),
                     T = y.get(!0);
                 v = {
-                    app_version: "2017.06.02-201951+1b30df43243ed53be033cec8ae2c9a3786aa70bd",
+                    app_version: "2017.06.02-205136+14e845bab6c7681251db349e7a5a46fb8dc87572",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: m.host,
