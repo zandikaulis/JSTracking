@@ -736,10 +736,10 @@ window.SiteOptions = {
         "479d9473-bf6e-4d74-8f9b-dd85d6f98921": {
             "name": "LOL_METADATA_EXPERIMENT",
             "groups": [{
-                "weight": 95,
+                "weight": 100,
                 "value": "treatment"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "control"
             }]
         },
@@ -1881,10 +1881,10 @@ window.SiteOptions = {
         "ec27e6fe-dabc-4fd3-ab62-a2cffc8fe316": {
             "name": "coview_with_regression",
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "experiment"
             }]
         },
