@@ -9751,7 +9751,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.06-020015+f3b4c0d2e29aa433230dc4534883998321b078f6",
+                    app_version: "2017.06.06-165422+76d4f1d9c328f0dec9b27fee0ef9b69e4b64055e",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -22032,7 +22032,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.Seekbar = t.SeekbarComponent = t.classNames = void 0;
+        }), t.Seekbar = t.SeekbarComponent = t.ANIMATION_SKIP_THRESHOLD = t.classNames = void 0;
         var s = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -22110,7 +22110,8 @@
                 sliderLeft: "ui-slider-range",
                 sliderThumb: "ui-slider-handle"
             },
-            O = t.SeekbarComponent = function(e) {
+            O = t.ANIMATION_SKIP_THRESHOLD = .05,
+            k = t.SeekbarComponent = function(e) {
                 function t() {
                     i(this, t);
                     var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -22120,10 +22121,21 @@
                         mouseMoveClientX: 0,
                         mouseMoveOnSeekbar: !1,
                         seekedValue: 0,
-                        skipAnimationForSeek: !1
+                        skipAnimationForFrame: !1
                     }, e.$seekbar = null, e.handleDragStart = e.handleDragStart.bind(e), e.handleDragStop = e.handleDragStop.bind(e), e.handleClick = e.handleClick.bind(e), e.handleMouseMove = e.handleMouseMove.bind(e), e.handleMouseOut = e.handleMouseOut.bind(e), e.seekbarRefHandler = e.seekbarRefHandler.bind(e), e.seekToPosition = e.seekToPosition.bind(e), e.handleShowingMarkerPreview = e.handleShowingMarkerPreview.bind(e), e.handleHidingMarkerPreview = e.handleHidingMarkerPreview.bind(e), e
                 }
                 return a(t, e), s(t, [{
+                    key: "componentWillReceiveProps",
+                    value: function(e) {
+                        if (e.currentTime !== this.props.currentTime && this.props.duration > 0) {
+                            var t = Math.abs(this.props.currentTime - e.currentTime),
+                                n = t / this.props.duration;
+                            n > O && this.setState({
+                                skipAnimationForFrame: !0
+                            })
+                        }
+                    }
+                }, {
                     key: "render",
                     value: function() {
                         var e = this.props,
@@ -22146,7 +22158,7 @@
                             n = e.isShowingMarkerPreview,
                             r = e.mouseMoveOnSeekbar,
                             i = e.seekedValue,
-                            o = e.skipAnimationForSeek,
+                            o = e.skipAnimationForFrame,
                             a = this.props,
                             s = a.bufferLength,
                             l = a.currentTime,
@@ -22241,10 +22253,10 @@
                     key: "componentDidUpdate",
                     value: function() {
                         var e = this;
-                        if (this.state.skipAnimationForSeek) var t = this.props.windowObj.requestAnimationFrame(function() {
+                        if (this.state.skipAnimationForFrame) var t = this.props.windowObj.requestAnimationFrame(function() {
                             var n = e.props.windowObj.requestAnimationFrame(function() {
                                 e.setState({
-                                    skipAnimationForSeek: !1
+                                    skipAnimationForFrame: !1
                                 }), e.props.windowObj.cancelAnimationFrame(n)
                             });
                             e.props.windowObj.cancelAnimationFrame(t)
@@ -22309,13 +22321,13 @@
                     value: function(e) {
                         this.setState({
                             seekedValue: e,
-                            skipAnimationForSeek: !0
+                            skipAnimationForFrame: !0
                         }), this.props.seek(e), this.props.onSeeking()
                     }
                 }]), t
             }(u.default.Component);
-        O.propTypes = P;
-        t.Seekbar = (0, h.connect)(C, w)(O)
+        k.propTypes = P;
+        t.Seekbar = (0, h.connect)(C, w)(k)
     }, function(e, t, n) {
         "use strict";
         e.exports = n(436)
@@ -23096,7 +23108,7 @@
                     return f.traverseTwoPhase(e, t, n)
                 },
                 traverseEnterLeave: function(e, t, n, r, i) {
-                    return f.traverseEnterLeave(e, t, n, r, i);
+                    return f.traverseEnterLeave(e, t, n, r, i)
                 },
                 injection: v
             };
