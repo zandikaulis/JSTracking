@@ -9754,7 +9754,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.06-221022+6b0dcf28c9304410dca82f5dc2a2e2862df078b5",
+                    app_version: "2017.06.06-223808+f8c0fe721a0617e20167e04b6b3acb658cb3e209",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -33917,8 +33917,8 @@
         }
 
         function p(e, t) {
-            var n = t.responseJSON;
-            n.message === b && e(c({
+            var n = t.status;
+            404 === n && e(c({
                 following: !1,
                 notificationsEnabled: !1
             }))
@@ -33932,28 +33932,27 @@
         }
 
         function h(e) {
-            e.trackEvent(E, {
+            e.trackEvent(b, {
                 src: "player"
-            }), e.trackEvent(T, {
+            }), e.trackEvent(E, {
                 notifications: !0
             })
         }
 
         function _(e) {
-            e.trackEvent(T, {
+            e.trackEvent(E, {
                 notifications: !1
             })
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.NOTIFICATIONS_ON = t.NOTIFICATIONS_OFF = t.NOTIFICATION_CHANGE = t.NOTIFICATIONS_BUTTON_VIEW = t.NOTIFICATIONS_BUTTON_CLICK = t.FOLLOW = t.FOLLOW_AND_NOTIFICATIONS_ON = t.FOLLOW_NOT_FOUND = t.ACTION_SHOW_FOLLOW_NOTIFICATION = t.ACTION_PROMPT_LOGIN_MODAL = t.ACTION_FOLLOW_INFO_FETCHED = void 0, t.showFollowNotification = r, t.fetchFollowInfo = o, t.followChannel = a, t.unfollowChannel = s, t.enableNotifications = l, t.disableNotifications = u, t.followInfoFetched = c, t.dispatchFollowSuccess = d, t.dispatchFollowFail = p, t.promptLoginModal = f, t.logNotificationsEnabled = h, t.logNotificationsDisabled = _;
+        }), t.NOTIFICATIONS_ON = t.NOTIFICATIONS_OFF = t.NOTIFICATION_CHANGE = t.NOTIFICATIONS_BUTTON_VIEW = t.NOTIFICATIONS_BUTTON_CLICK = t.FOLLOW = t.FOLLOW_AND_NOTIFICATIONS_ON = t.ACTION_SHOW_FOLLOW_NOTIFICATION = t.ACTION_PROMPT_LOGIN_MODAL = t.ACTION_FOLLOW_INFO_FETCHED = void 0, t.showFollowNotification = r, t.fetchFollowInfo = o, t.followChannel = a, t.unfollowChannel = s, t.enableNotifications = l, t.disableNotifications = u, t.followInfoFetched = c, t.dispatchFollowSuccess = d, t.dispatchFollowFail = p, t.promptLoginModal = f, t.logNotificationsEnabled = h, t.logNotificationsDisabled = _;
         var v = n(199),
             m = t.ACTION_FOLLOW_INFO_FETCHED = "follow info fetched",
             y = t.ACTION_PROMPT_LOGIN_MODAL = "prompt login modal",
             g = t.ACTION_SHOW_FOLLOW_NOTIFICATION = "show follow notification",
-            b = t.FOLLOW_NOT_FOUND = "Follow not found",
-            E = (t.FOLLOW_AND_NOTIFICATIONS_ON = "follow_on_notif_on", t.FOLLOW = "follow"),
-            T = (t.NOTIFICATIONS_BUTTON_CLICK = "player_notifbutton_clicks", t.NOTIFICATIONS_BUTTON_VIEW = "player_notifbutton_views", t.NOTIFICATION_CHANGE = "notification_change");
+            b = (t.FOLLOW_AND_NOTIFICATIONS_ON = "follow_on_notif_on", t.FOLLOW = "follow"),
+            E = (t.NOTIFICATIONS_BUTTON_CLICK = "player_notifbutton_clicks", t.NOTIFICATIONS_BUTTON_VIEW = "player_notifbutton_views", t.NOTIFICATION_CHANGE = "notification_change");
         t.NOTIFICATIONS_OFF = "notif_off", t.NOTIFICATIONS_ON = "notif_on"
     }, function(e, t, n) {
         "use strict";
