@@ -9754,7 +9754,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.06-172909+63cb14e5564983344b90b117cbcb8e32758baeb2",
+                    app_version: "2017.06.06-221022+6b0dcf28c9304410dca82f5dc2a2e2862df078b5",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -44382,7 +44382,7 @@
             s = n(70),
             l = r(s),
             u = n(767),
-            c = ["host_channel"]
+            c = ["host_channel", "content", "medium", "page_session_id", "tab_session_id"]
     }, function(e, t) {
         "use strict";
 
