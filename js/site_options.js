@@ -475,16 +475,16 @@ window.SiteOptions = {
         "274f6835-a41d-417c-ad58-f1321e2aac39": {
             "name": "android_skippable_ads",
             "groups": [{
-                "weight": 5,
+                "weight": 0,
                 "value": "skipcontrol"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "skip15"
             }, {
                 "weight": 0,
                 "value": "skip5"
             }, {
-                "weight": 90,
+                "weight": 100,
                 "value": "holdout"
             }]
         },
@@ -1044,16 +1044,16 @@ window.SiteOptions = {
         "79accd86-e77e-4eae-8979-d19ab2bc4521": {
             "name": "ios_skippable_ads",
             "groups": [{
-                "weight": 5,
+                "weight": 0,
                 "value": "skipcontrol"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "skip15"
             }, {
                 "weight": 0,
                 "value": "skip5"
             }, {
-                "weight": 90,
+                "weight": 100,
                 "value": "holdout"
             }]
         },
@@ -1756,19 +1756,16 @@ window.SiteOptions = {
             "name": "chomperz",
             "groups": [{
                 "weight": 0,
-                "value": "skip5"
-            }, {
-                "weight": 0,
-                "value": "control5"
-            }, {
-                "weight": 100,
-                "value": "control"
+                "value": "skipcontrol"
             }, {
                 "weight": 0,
                 "value": "skip15"
             }, {
                 "weight": 0,
-                "value": "control15"
+                "value": "skip5"
+            }, {
+                "weight": 100,
+                "value": "holdout"
             }]
         },
         "d91cbc6b-1d6f-42ef-89b4-049176164067": {
