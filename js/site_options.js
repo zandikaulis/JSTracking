@@ -1090,10 +1090,10 @@ window.SiteOptions = {
         "86ad7a91-bf36-46c5-adef-6006a09720a8": {
             "name": "sub_options",
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "one_page"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "two_page"
             }]
         },
