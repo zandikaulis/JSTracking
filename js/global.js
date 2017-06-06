@@ -15071,7 +15071,7 @@ function(e, t) {
                         event: e,
                         properties: t
                     };
-                    return n.i(a.a)(e) ? this.trackUrgentEvent(o, i) : (this.eventBuffer.forEach(function(e, t) {
+                    return n.i(a.a)(e, t) ? this.trackUrgentEvent(o, i) : (this.eventBuffer.forEach(function(e, t) {
                         i.indexOf(t) !== -1 && e.push(o)
                     }), this.hookUnload(), this.queueFlush())
                 }, e.trackUrgentEvent = function(e, t) {
@@ -15105,19 +15105,25 @@ function(e, t) {
                         flushed: t - n,
                         buffered: n
                     }
+                }, e.trackUnloadEventsDebug = function() {
+                    var e = this;
+                    this.eventBuffer.forEach(function(t, n) {
+                        if (n === r.b) {
+                            var i = t.getEventsCounts();
+                            i.url = window.location.href || "", window.Twitch && window.Twitch.idsForMixpanel && (i.device_id = window.Twitch.idsForMixpanel.getOrCreateUniqueId());
+                            var o = {
+                                event: "unload-events-debug",
+                                properties: i
+                            };
+                            e.trackUrgentEvent(o, [r.b])
+                        }
+                    })
                 }, e.hookUnload = function() {
                     var e = this;
                     this.unloadHooked || (this.unloadHooked = !0, navigator && navigator.sendBeacon && window.addEventListener("unload", function() {
-                        e.eventBuffer.forEach(function(t, n) {
-                            if (n === r.b) {
-                                var i = {
-                                    event: "unload-events-debug",
-                                    properties: t.getEventsCounts()
-                                };
-                                e.trackUrgentEvent(i, [r.b])
-                            }
+                        e.trackUnloadEventsDebug(), e.eventBuffer.forEach(function(e, t) {
                             if (r.g)
-                                for (var o = 1; o;) o = t.flushOnce()
+                                for (var n = 1; n;) n = e.flushOnce()
                         })
                     }))
                 }, e
@@ -15258,8 +15264,8 @@ function(e, t) {
         }, function(e, t, n) {
             "use strict";
 
-            function i(e) {
-                return a.indexOf(e) !== -1
+            function i(e, t) {
+                return a.indexOf(e) !== -1 || "twitch-feed/channel-feed" === t.component && ("benchmark_component_initializing" === e || "benchmark_component_interactive" === e)
             }
             n.d(t, "b", function() {
                 return r
@@ -15550,36 +15556,37 @@ googletag.cmd = googletag.cmd || [],
                     }
                 };
             e(window).on("fluid-resize", function() {
-                e("#right_col")[0] ? e(window).width() < 800 ? ("false" !== Twitch.storage.get("leftColClosed") && i(), "false" !== Twitch.storage.get("rightColClosed") && s()) : e(window).width() < 1200 ? ("false" !== Twitch.storage.get("leftColClosed") && i(), "true" !== Twitch.storage.get("rightColClosed") && a()) : ("true" !== Twitch.storage.get("leftColClosed") && r(), "true" !== Twitch.storage.get("rightColClosed") && a()) : e(window).width() < 800 ? "false" !== Twitch.storage.get("leftColClosed") && i() : "true" !== Twitch.storage.get("leftColClosed") && r();
-                var t = Math.min(9 * e(".player_column").width() / 16 + 32, e(".channel-main").height() - e(".editable").outerHeight(!0) - e("#stats_and_actions").outerHeight() + 1);
-                e(".live_site_player_container, .archive_site_player_container").css("height", t.toFixed(0) + "px")
-            }), e(window).resize(_.debounce(function() {
-                e(window).trigger("fluid-resize")
-            }, 10)), e("#small_search a").click(function() {
-                return r(), e("#sidebar_search input").focus(), !1
-            }), e("#small_more a").flyout("small_more", {
-                anchor: "mid"
-            }), e("#small_account a").flyout("small_account", {
-                anchor: "bot",
-                data: {
-                    user: Twitch.user.login()
-                }
-            }), e("#left_close").click(function(e) {
-                e.preventDefault(), n()
-            }), e("#right_close").click(function(e) {
-                e.preventDefault(), o()
-            }), e(".stretch").each(function() {
-                var t = 0 + e(this).siblings(".top:first").outerHeight(),
-                    n = 0 + e(this).siblings(".bottom:first").outerHeight();
-                e(this).css({
-                    top: t + "px",
-                    bottom: n + "px",
-                    visibility: "visible"
-                })
-            }), "true" === Twitch.storage.get("leftColClosed") && i(), "true" === Twitch.storage.get("rightColClosed") && s(), e("body").on("rightClose", s).on("rightOpen", a).on("rightToggle", o).on("leftClose", i).on("leftOpen", r).on("leftToggle", n), e(".js-columns-scroll, .js-nav-scroll").TrackpadScrollEmulator({
-                wrapContent: !1,
-                scrollbarHideStrategy: "rightAndBottom"
-            }), e(window).trigger("fluid-resize")
+                    e("#right_col")[0] ? e(window).width() < 800 ? ("false" !== Twitch.storage.get("leftColClosed") && i(), "false" !== Twitch.storage.get("rightColClosed") && s()) : e(window).width() < 1200 ? ("false" !== Twitch.storage.get("leftColClosed") && i(), "true" !== Twitch.storage.get("rightColClosed") && a()) : ("true" !== Twitch.storage.get("leftColClosed") && r(), "true" !== Twitch.storage.get("rightColClosed") && a()) : e(window).width() < 800 ? "false" !== Twitch.storage.get("leftColClosed") && i() : "true" !== Twitch.storage.get("leftColClosed") && r();
+                    var t = Math.min(9 * e(".player_column").width() / 16 + 32, e(".channel-main").height() - e(".editable").outerHeight(!0) - e("#stats_and_actions").outerHeight() + 1);
+                    e(".live_site_player_container, .archive_site_player_container").css("height", t.toFixed(0) + "px")
+                }), e(window).resize(_.debounce(function() {
+                    e(window).trigger("fluid-resize")
+                }, 10)), e("#small_search a").click(function() {
+                    return r(), e("#sidebar_search input").focus(), !1
+                }), e("#small_more a").flyout("small_more", {
+                    anchor: "mid"
+                }), e("#small_account a").flyout("small_account", {
+                    anchor: "bot",
+                    data: {
+                        user: Twitch.user.login()
+                    }
+                }), e("#left_close").click(function(e) {
+                    e.preventDefault(), n()
+                }), e("#right_close").click(function(e) {
+                    e.preventDefault(), o()
+                }), e(".stretch").each(function() {
+                    var t = 0 + e(this).siblings(".top:first").outerHeight(),
+                        n = 0 + e(this).siblings(".bottom:first").outerHeight();
+                    e(this).css({
+                        top: t + "px",
+                        bottom: n + "px",
+                        visibility: "visible"
+                    })
+                }), "true" === Twitch.storage.get("leftColClosed") && i(), "true" === Twitch.storage.get("rightColClosed") && s(), e("body").on("rightClose", s).on("rightOpen", a).on("rightToggle", o).on("leftClose", i).on("leftOpen", r).on("leftToggle", n),
+                e(".js-columns-scroll, .js-nav-scroll").TrackpadScrollEmulator({
+                    wrapContent: !1,
+                    scrollbarHideStrategy: "rightAndBottom"
+                }), e(window).trigger("fluid-resize")
         }
     }(jQuery),
     function(e) {
