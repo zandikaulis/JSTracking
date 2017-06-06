@@ -1813,13 +1813,13 @@ window.SiteOptions = {
         "e15d2a40-b2bb-4819-af2b-cb7a6f0e31cb": {
             "name": "CHANNEL_SIGNUP_CTA_V2",
             "groups": [{
-                "weight": 15,
+                "weight": 0,
                 "value": "show"
             }, {
-                "weight": 70,
+                "weight": 0,
                 "value": "show_dismiss"
             }, {
-                "weight": 15,
+                "weight": 100,
                 "value": "control"
             }]
         },
