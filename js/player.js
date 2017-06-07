@@ -277,7 +277,8 @@
         window.google || (Me = Promise.resolve($.ajax({
             url: "//imasdk.googleapis.com/js/sdkloader/ima3.js",
             dataType: "script",
-            timeout: 2e3
+            timeout: 2e3,
+            cache: !0
         }))), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = o, window.Twitch.Player = o, window.Twitch.Player.PROMPT_LOGIN = Ie.PROMPT_LOGIN_MODAL
     }, function(e, t, n) {
         var r = n(2),
@@ -9759,7 +9760,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.07-200532+d0c307ba000211192c50775fc5d1d5fa16a2cb1d",
+                    app_version: "2017.06.07-225707+7f77fc62efc30289acac84c9c4afa29e0a11d717",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
