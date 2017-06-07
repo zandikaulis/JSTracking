@@ -16275,7 +16275,8 @@ googletag.cmd = googletag.cmd || [],
                 GAME_FOLLOW_ONBOARD: "9a3b387e-b6cd-4d2b-80a6-bb14d3ba4512",
                 FOLLOWING_COMMUNITIES: "42c46cf2-6a2e-49cb-9a68-622999710fed",
                 I18N_GAME_NAMES: "497e1277-7fff-4c16-98f0-6b55c8b59a4f",
-                AUTO_ON_NOTIFICATIONS: "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b"
+                AUTO_ON_NOTIFICATIONS: "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b",
+                MEDIAPLAYER_BACKEND_SELECT: "2c137391-5182-429f-8760-9f71e4d40918"
             },
             r = {
                 "61b169ff-bc62-4725-a40e-1be627197c6f": "no",
@@ -16325,7 +16326,8 @@ googletag.cmd = googletag.cmd || [],
                 "9a3b387e-b6cd-4d2b-80a6-bb14d3ba4512": "control",
                 "42c46cf2-6a2e-49cb-9a68-622999710fed": "bottom",
                 "497e1277-7fff-4c16-98f0-6b55c8b59a4f": "control",
-                "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b": "control"
+                "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b": "control",
+                "2c137391-5182-429f-8760-9f71e4d40918": "no"
             },
             o = {},
             s = {
@@ -16339,7 +16341,8 @@ googletag.cmd = googletag.cmd || [],
                 SOCIAL_RECOMMENDATIONS: "variant1",
                 LOL_METADATA_EXPERIMENT: "treatment",
                 WT_P: "yes",
-                OFFLINE_RECOMMENDATIONS: "yes"
+                OFFLINE_RECOMMENDATIONS: "yes",
+                MEDIAPLAYER_BACKEND_SELECT: "yes"
             };
         _.each(Object.keys(s), function(t) {
             o[i[t]] = e.user().then(function(e) {
