@@ -720,7 +720,7 @@ window.SiteOptions = {
                 "value": "1.8.7+spd67"
             }, {
                 "weight": 2,
-                "value": "1.8.7+spd67"
+                "value": "1.8.8+spd67"
             }]
         },
         "474db509-7fb8-403e-97da-66dae8954e6d": {
