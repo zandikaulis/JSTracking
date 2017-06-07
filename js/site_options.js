@@ -702,21 +702,18 @@ window.SiteOptions = {
             "name": "CVP May 18",
             "groups": [{
                 "weight": 5,
-                "value": "1.8.7+absctrl"
+                "value": "1.8.8+absctrl"
             }, {
                 "weight": 2,
-                "value": "1.8.7+spd67"
+                "value": "1.8.8+spd67"
             }, {
                 "weight": 2,
-                "value": "1.8.7+abshist"
+                "value": "1.8.8+abshist"
             }, {
                 "weight": 3,
                 "value": "1.8.7"
             }, {
-                "weight": 86,
-                "value": "1.8.7+spd67"
-            }, {
-                "weight": 2,
+                "weight": 88,
                 "value": "1.8.8+spd67"
             }]
         },
