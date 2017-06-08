@@ -1899,6 +1899,25 @@ window.SiteOptions = {
                 "value": "experiment"
             }]
         },
+        "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
+            "name": "baking_brownies",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "no_play_800"
+            }, {
+                "weight": 0,
+                "value": "no_play_1300"
+            }, {
+                "weight": 0,
+                "value": "yes_play_800"
+            }, {
+                "weight": 0,
+                "value": "yes_play_1300"
+            }]
+        },
         "efe4cedd-7ea4-4d78-a9e4-5fad8dd9de79": {
             "name": "android_playercore_2",
             "groups": [{
