@@ -1,11 +1,22 @@
-! function(e) {
-    if ("object" == typeof exports && "undefined" != typeof module) module.exports = e();
-    else if ("function" == typeof define && define.amd) define([], e);
-    else {
-        var f;
-        "undefined" != typeof window ? f = window : "undefined" != typeof global ? f = global : "undefined" != typeof self && (f = self), f.TMI = e()
+(function(f) {
+    if (typeof exports === "object" && typeof module !== "undefined") {
+        module.exports = f()
+    } else if (typeof define === "function" && define.amd) {
+        define([], f)
+    } else {
+        var g;
+        if (typeof window !== "undefined") {
+            g = window
+        } else if (typeof global !== "undefined") {
+            g = global
+        } else if (typeof self !== "undefined") {
+            g = self
+        } else {
+            g = this
+        }
+        g.TMI = f()
     }
-}(function() {
+})(function() {
     var define, module, exports;
     return function e(t, n, r) {
         function s(o, u) {
@@ -32,174 +43,12 @@
         return s
     }({
         1: [function(require, module, exports) {
-            "use strict";
-            Object.defineProperty(exports, "__esModule", {
-                value: true
-            });
-            var _createClass = function() {
-                function defineProperties(target, props) {
-                    for (var i = 0; i < props.length; i++) {
-                        var descriptor = props[i];
-                        descriptor.enumerable = descriptor.enumerable || false;
-                        descriptor.configurable = true;
-                        if ("value" in descriptor) descriptor.writable = true;
-                        Object.defineProperty(target, descriptor.key, descriptor)
-                    }
-                }
-                return function(Constructor, protoProps, staticProps) {
-                    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-                    if (staticProps) defineProperties(Constructor, staticProps);
-                    return Constructor
-                }
-            }();
-            var _get = function get(_x, _x2, _x3) {
-                var _again = true;
-                _function: while (_again) {
-                    var object = _x,
-                        property = _x2,
-                        receiver = _x3;
-                    _again = false;
-                    if (object === null) object = Function.prototype;
-                    var desc = Object.getOwnPropertyDescriptor(object, property);
-                    if (desc === undefined) {
-                        var parent = Object.getPrototypeOf(object);
-                        if (parent === null) {
-                            return undefined
-                        } else {
-                            _x = parent;
-                            _x2 = property;
-                            _x3 = receiver;
-                            _again = true;
-                            desc = parent = undefined;
-                            continue _function
-                        }
-                    } else if ("value" in desc) {
-                        return desc.value
-                    } else {
-                        var getter = desc.get;
-                        if (getter === undefined) {
-                            return undefined
-                        }
-                        return getter.call(receiver)
-                    }
-                }
-            };
-
-            function _interopRequireDefault(obj) {
-                return obj && obj.__esModule ? obj : {
-                    "default": obj
-                }
-            }
-
-            function _classCallCheck(instance, Constructor) {
-                if (!(instance instanceof Constructor)) {
-                    throw new TypeError("Cannot call a class as a function")
-                }
-            }
-
-            function _inherits(subClass, superClass) {
-                if (typeof superClass !== "function" && superClass !== null) {
-                    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass)
-                }
-                subClass.prototype = Object.create(superClass && superClass.prototype, {
-                    constructor: {
-                        value: subClass,
-                        enumerable: false,
-                        writable: true,
-                        configurable: true
-                    }
-                });
-                if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass
-            }
-            var _connJs = require("./conn.js");
-            var _connJs2 = _interopRequireDefault(_connJs);
-            var _events = require("./events");
-            var _events2 = _interopRequireDefault(_events);
-            var _ircJs = require("./irc.js");
-            var _ircJs2 = _interopRequireDefault(_ircJs);
-            var _logJs = require("./log.js");
-            var _logJs2 = _interopRequireDefault(_logJs);
-            var _utilJs = require("./util.js");
-            var _utilJs2 = _interopRequireDefault(_utilJs);
-            var _sessionJs = require("./session.js");
-            var _sessionJs2 = _interopRequireDefault(_sessionJs);
-            var _WebSocketJs = require("./WebSocket.js");
-            var _WebSocketJs2 = _interopRequireDefault(_WebSocketJs);
-            var logger = _logJs2["default"]._getLogger("TMI");
-            var TMI = function(_EventsDispatcher) {
-                _inherits(TMI, _EventsDispatcher);
-
-                function TMI() {
-                    _classCallCheck(this, TMI);
-                    _get(Object.getPrototypeOf(TMI.prototype), "constructor", this).call(this);
-                    this._logger = logger;
-                    this.VERSION = 3;
-                    this._sessions = []
-                }
-                _createClass(TMI, [{
-                    key: "createSession",
-                    value: function createSession(opts) {
-                        var nickname = "justinfan" + _utilJs2["default"].randomInt(999999);
-                        var password = "blah";
-                        if (opts.username && opts.oauthToken) {
-                            nickname = opts.username;
-                            password = "oauth:" + opts.oauthToken
-                        }
-                        var session = new _sessionJs2["default"]({
-                            nickname: nickname,
-                            userId: opts.userId,
-                            password: password,
-                            oauthToken: opts.oauthToken,
-                            apiHostport: opts.apiHostport
-                        });
-                        this._sessions.push(session);
-                        return session
-                    }
-                }, {
-                    key: "getMessageRate",
-                    value: function getMessageRate() {
-                        var rate = 0;
-                        $.each(this._sessions, function(_, session) {
-                            rate += session.getMessageRate()
-                        });
-                        return rate
-                    }
-                }, {
-                    key: "usingWebSockets",
-                    value: function usingWebSockets() {
-                        for (var i = 0; i < this._sessions.length; i++) {
-                            if (this._sessions[i].isUsingWebSockets()) {
-                                return true
-                            }
-                        }
-                        return false
-                    }
-                }, {
-                    key: "_onSessionDestroyed",
-                    value: function _onSessionDestroyed(session) {
-                        _utilJs2["default"].array.remove(this._sessions, session)
-                    }
-                }]);
-                return TMI
-            }(_events2["default"]);
-            exports["default"] = new TMI;
-            module.exports = exports["default"]
-        }, {
-            "./WebSocket.js": 4,
-            "./conn.js": 6,
-            "./events": 7,
-            "./irc.js": 8,
-            "./log.js": 9,
-            "./session.js": 11,
-            "./util.js": 16
-        }],
-        2: [function(require, module, exports) {
             (function(global) {
                 (function(root) {
-                    var freeExports = typeof exports == "object" && exports;
-                    var freeModule = typeof module == "object" && module && module.exports == freeExports && module;
+                    var freeExports = typeof exports == "object" && exports && !exports.nodeType && exports;
+                    var freeModule = typeof module == "object" && module && !module.nodeType && module;
                     var freeGlobal = typeof global == "object" && global;
-                    if (freeGlobal.global === freeGlobal || freeGlobal.window === freeGlobal) {
+                    if (freeGlobal.global === freeGlobal || freeGlobal.window === freeGlobal || freeGlobal.self === freeGlobal) {
                         root = freeGlobal
                     }
                     var punycode, maxInt = 2147483647,
@@ -212,8 +61,8 @@
                         initialN = 128,
                         delimiter = "-",
                         regexPunycode = /^xn--/,
-                        regexNonASCII = /[^ -~]/,
-                        regexSeparators = /\x2E|\u3002|\uFF0E|\uFF61/g,
+                        regexNonASCII = /[^\x20-\x7E]/,
+                        regexSeparators = /[\x2E\u3002\uFF0E\uFF61]/g,
                         errors = {
                             overflow: "Overflow: input needs wider integers to process",
                             "not-basic": "Illegal input >= 0x80 (not a basic code point)",
@@ -225,19 +74,29 @@
                         key;
 
                     function error(type) {
-                        throw RangeError(errors[type])
+                        throw new RangeError(errors[type])
                     }
 
                     function map(array, fn) {
                         var length = array.length;
+                        var result = [];
                         while (length--) {
-                            array[length] = fn(array[length])
+                            result[length] = fn(array[length])
                         }
-                        return array
+                        return result
                     }
 
                     function mapDomain(string, fn) {
-                        return map(string.split(regexSeparators), fn).join(".")
+                        var parts = string.split("@");
+                        var result = "";
+                        if (parts.length > 1) {
+                            result = parts[0] + "@";
+                            string = parts[1]
+                        }
+                        string = string.replace(regexSeparators, ".");
+                        var labels = string.split(".");
+                        var encoded = map(labels, fn).join(".");
+                        return result + encoded
                     }
 
                     function ucs2decode(string) {
@@ -409,19 +268,19 @@
                         return output.join("")
                     }
 
-                    function toUnicode(domain) {
-                        return mapDomain(domain, function(string) {
+                    function toUnicode(input) {
+                        return mapDomain(input, function(string) {
                             return regexPunycode.test(string) ? decode(string.slice(4).toLowerCase()) : string
                         })
                     }
 
-                    function toASCII(domain) {
-                        return mapDomain(domain, function(string) {
+                    function toASCII(input) {
+                        return mapDomain(input, function(string) {
                             return regexNonASCII.test(string) ? "xn--" + encode(string) : string
                         })
                     }
                     punycode = {
-                        version: "1.2.4",
+                        version: "1.4.1",
                         ucs2: {
                             decode: ucs2decode,
                             encode: ucs2encode
@@ -435,8 +294,8 @@
                         define("punycode", function() {
                             return punycode
                         })
-                    } else if (freeExports && !freeExports.nodeType) {
-                        if (freeModule) {
+                    } else if (freeExports && freeModule) {
+                        if (module.exports == freeExports) {
                             freeModule.exports = punycode
                         } else {
                             for (key in punycode) {
@@ -449,7 +308,7 @@
                 })(this)
             }).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
         }, {}],
-        3: [function(require, module, exports) {
+        2: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
                 value: true
@@ -573,9 +432,9 @@
             exports["default"] = RateCounter;
             module.exports = exports["default"]
         }, {
-            "./log.js": 9
+            "./log.js": 8
         }],
-        4: [function(require, module, exports) {
+        3: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
                 value: true
@@ -805,13 +664,13 @@
             exports["default"] = TMIWebSocket;
             module.exports = exports["default"]
         }, {
-            "./RateCounter.js": 3,
-            "./events.js": 7,
-            "./log.js": 9,
-            "./stats.js": 13,
+            "./RateCounter.js": 2,
+            "./events.js": 6,
+            "./log.js": 8,
+            "./stats.js": 12,
             "./util.js": 16
         }],
-        5: [function(require, module, exports) {
+        4: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
                 value: true
@@ -1087,10 +946,10 @@
             exports["default"] = api;
             module.exports = exports["default"]
         }, {
-            "./log.js": 9,
+            "./log.js": 8,
             "./util.js": 16
         }],
-        6: [function(require, module, exports) {
+        5: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
                 value: true
@@ -1469,7 +1328,7 @@
                 this._socket.send(sanitized + SEND_SUFFIX, APPEND_NULL_BYTE);
                 if (this._opts.darklaunchConn) {
                     try {
-                        this._opts.darklaunchConn._send(data)
+                        this._opts.darklaunchConn._send(data);
                     } catch (err) {}
                 }
             };
@@ -1527,16 +1386,16 @@
             exports["default"] = Connection;
             module.exports = exports["default"]
         }, {
-            "./WebSocket.js": 4,
-            "./events.js": 7,
-            "./irc.js": 8,
-            "./log.js": 9,
-            "./room.js": 10,
-            "./socket.js": 12,
+            "./WebSocket.js": 3,
+            "./events.js": 6,
+            "./irc.js": 7,
+            "./log.js": 8,
+            "./room.js": 9,
+            "./socket.js": 11,
             "./users.js": 15,
             "./util.js": 16
         }],
-        7: [function(require, module, exports) {
+        6: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
                 value: true
@@ -1607,7 +1466,7 @@
             exports["default"] = EventsDispatcher;
             module.exports = exports["default"]
         }, {}],
-        8: [function(require, module, exports) {
+        7: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
                 value: true
@@ -2010,11 +1869,11 @@
             };
             module.exports = exports["default"]
         }, {
-            "./log.js": 9,
+            "./log.js": 8,
             "./util.js": 16,
-            punycode: 2
+            punycode: 1
         }],
-        9: [function(require, module, exports) {
+        8: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
                 value: true
@@ -2168,7 +2027,7 @@
         }, {
             "./util.js": 16
         }],
-        10: [function(require, module, exports) {
+        9: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
                 value: true
@@ -3106,14 +2965,14 @@
             exports["default"] = Room;
             module.exports = exports["default"]
         }, {
-            "./api.js": 5,
-            "./events.js": 7,
-            "./irc.js": 8,
-            "./log.js": 9,
+            "./api.js": 4,
+            "./events.js": 6,
+            "./irc.js": 7,
+            "./log.js": 8,
             "./users.js": 15,
             "./util.js": 16
         }],
-        11: [function(require, module, exports) {
+        10: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
                 value: true
@@ -3160,7 +3019,6 @@
                 this._emotesParser = new _twitchJs2["default"]({
                     twitchApi: this._twitchApi
                 });
-                this._secureWebsocketsEnabled = true;
                 this._darklaunchEligible = _WebSocketJs2["default"].supported();
                 var useWebSocketDarklaunch = Math.random() > .5;
                 this._darklaunchConn = new _connJs2["default"]({
@@ -3251,7 +3109,7 @@
                     delete self._deletedRooms[name]
                 }, _utilJs2["default"].time.seconds(5))
             };
-            SessionManager.prototype.getRoom = function(roomName) {
+            SessionManager.prototype.getRoom = function(roomName, ownerId) {
                 var deferred = $.Deferred(),
                     self = this;
                 if (_roomJs2["default"].isGroupRoomName(roomName)) {
@@ -3264,18 +3122,13 @@
                         }).fail(_apiJs2["default"].chatdepot.fail(deferred))
                     }
                 } else {
-                    self._getRoomInfo(roomName).done(function(roomInfo) {
-                        roomInfo.allowWebSockets = true;
-                        var conn = self._getOrNewConnection(roomInfo);
-                        deferred.resolve(self._updatePublicRoom({
-                            name: roomName,
-                            connection: conn,
-                            ownerId: roomInfo.ownerId
-                        }))
-                    }).fail(function(msg) {
-                        logger.error("Unable to get room info for " + roomName);
-                        deferred.reject()
-                    })
+                    var roomInfo = self._getRoomInfo(roomName, ownerId);
+                    var conn = self._getOrNewConnection(roomInfo);
+                    deferred.resolve(self._updatePublicRoom({
+                        name: roomName,
+                        connection: conn,
+                        ownerId: ownerId
+                    }))
                 }
                 return deferred
             };
@@ -3483,8 +3336,8 @@
                         wsAddrs: wsAddrs,
                         nickname: this.nickname,
                         password: this._opts.password,
-                        allowWebSockets: opts.useWebSockets || opts.allowWebSockets,
-                        useWebSockets: opts.useWebSockets,
+                        allowWebSockets: true,
+                        useWebSockets: true,
                         webSocketPct: opts.webSocketPct,
                         darklaunchConn: enableDarklaunch ? this._darklaunchConn : null
                     });
@@ -3557,23 +3410,8 @@
                     room.displayName = roomData.display_name;
                     room.publicInvitesEnabled = !!roomData.public_invites_enabled
                 } else {
-                    var addrs = [{
-                        host: "irc.chat.twitch.tv",
-                        port: "80"
-                    }, {
-                        host: "irc.chat.twitch.tv",
-                        port: "6667"
-                    }];
-                    var wsAddrs = [{
-                        host: "irc-ws.chat.twitch.tv",
-                        port: "80"
-                    }];
-                    var conn = this._getOrNewConnection({
-                        cluster: roomData.cluster,
-                        addrs: addrs,
-                        wsAddrs: wsAddrs,
-                        useWebSockets: true
-                    });
+                    var roomInfo = this._getRoomInfo(roomData.irc_channel, roomData.owner_id);
+                    var conn = this._getOrNewConnection(roomInfo);
                     room = this._rooms[roomData.irc_channel] = new _roomJs2["default"]({
                         name: roomData.irc_channel,
                         displayName: roomData.display_name,
@@ -3634,37 +3472,26 @@
                 });
                 return deferred
             };
-            SessionManager.prototype._getRoomInfo = function(roomName) {
-                var deferred = $.Deferred();
-                var self = this;
-                this._twitchApi.get("/api/channels/" + roomName + "/chat_properties").done(function(info) {
-                    var addrs = [],
-                        wsAddrs = [];
-                    addrs = _utilJs2["default"].parseAddressesFromServers(info.chat_servers);
-                    wsAddrs = _utilJs2["default"].parseAddressesFromServers(info.web_socket_servers || []);
-                    if (addrs.length + wsAddrs.length === 0) {
-                        logger.error("No chat servers returned for room " + roomName + ".");
-                        deferred.reject();
-                        return
-                    }
-                    var darklaunchEnabled = typeof info.darklaunch_pct === "number" && Math.random() < info.darklaunch_pct;
-                    if (self._secureWebsocketsEnabled) {
-                        wsAddrs = [{
-                            protocol: "wss",
-                            host: "irc-ws.chat.twitch.tv",
-                            port: "443"
-                        }]
-                    }
-                    deferred.resolve({
-                        darklaunchEnabled: darklaunchEnabled || _utilJs2["default"].urlParams.tmi_darklaunch,
-                        cluster: info.cluster || "main",
-                        addrs: addrs,
-                        wsAddrs: wsAddrs,
-                        ownerId: info._id,
-                        useWebSockets: true
-                    })
-                }).fail(deferred.reject);
-                return deferred
+            SessionManager.prototype._getRoomInfo = function(roomName, ownerId) {
+                var addrs = [{
+                    host: "irc.chat.twitch.tv",
+                    port: "80"
+                }, {
+                    host: "irc.chat.twitch.tv",
+                    port: "6667"
+                }];
+                var wsAddrs = [{
+                    protocol: "wss",
+                    host: "irc-ws.chat.twitch.tv",
+                    port: "443"
+                }];
+                return {
+                    darklaunchEnabled: true,
+                    cluster: "main",
+                    addrs: addrs,
+                    wsAddrs: wsAddrs,
+                    ownerId: ownerId
+                }
             };
             SessionManager.prototype._openGroupsConnection = function() {
                 var self = this;
@@ -3676,16 +3503,10 @@
                     port: "6667"
                 }];
                 var wsAddrs = [{
+                    protocol: "wss",
                     host: "irc-ws.chat.twitch.tv",
-                    port: "80"
+                    port: "443"
                 }];
-                if (this._secureWebsocketsEnabled) {
-                    wsAddrs = [{
-                        protocol: "wss",
-                        host: "irc-ws.chat.twitch.tv",
-                        port: "443"
-                    }]
-                }
                 var conn = this._getOrNewConnection({
                     darklaunchEnabled: false,
                     cluster: "group",
@@ -3773,7 +3594,7 @@
                     oldConn.off("closed", onClosed)
                 };
                 oldConn.on("closed", onClosed);
-                setTimeout(onClosed, RECONNECT_TIMEOUT);
+                setTimeout(onClosed, RECONNECT_TIMEOUT)
             };
             SessionManager.prototype._onConnDisconnected = function(conn) {
                 this._trigger("connection:disconnected", {
@@ -3825,18 +3646,18 @@
             exports["default"] = SessionManager;
             module.exports = exports["default"]
         }, {
-            "./WebSocket.js": 4,
-            "./api.js": 5,
-            "./conn.js": 6,
-            "./events.js": 7,
-            "./irc.js": 8,
-            "./log.js": 9,
-            "./room.js": 10,
+            "./WebSocket.js": 3,
+            "./api.js": 4,
+            "./conn.js": 5,
+            "./events.js": 6,
+            "./irc.js": 7,
+            "./log.js": 8,
+            "./room.js": 9,
             "./twitch.js": 14,
             "./users.js": 15,
             "./util.js": 16
         }],
-        12: [function(require, module, exports) {
+        11: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
                 value: true
@@ -4100,11 +3921,11 @@
             exports["default"] = FlashSocket;
             module.exports = exports["default"]
         }, {
-            "./events.js": 7,
-            "./log.js": 9,
+            "./events.js": 6,
+            "./log.js": 8,
             "./util.js": 16
         }],
-        13: [function(require, module, exports) {
+        12: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
                 value: true
@@ -4143,6 +3964,168 @@
             exports["default"] = stats;
             module.exports = exports["default"]
         }, {}],
+        13: [function(require, module, exports) {
+            "use strict";
+            Object.defineProperty(exports, "__esModule", {
+                value: true
+            });
+            var _createClass = function() {
+                function defineProperties(target, props) {
+                    for (var i = 0; i < props.length; i++) {
+                        var descriptor = props[i];
+                        descriptor.enumerable = descriptor.enumerable || false;
+                        descriptor.configurable = true;
+                        if ("value" in descriptor) descriptor.writable = true;
+                        Object.defineProperty(target, descriptor.key, descriptor)
+                    }
+                }
+                return function(Constructor, protoProps, staticProps) {
+                    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+                    if (staticProps) defineProperties(Constructor, staticProps);
+                    return Constructor
+                }
+            }();
+            var _get = function get(_x, _x2, _x3) {
+                var _again = true;
+                _function: while (_again) {
+                    var object = _x,
+                        property = _x2,
+                        receiver = _x3;
+                    _again = false;
+                    if (object === null) object = Function.prototype;
+                    var desc = Object.getOwnPropertyDescriptor(object, property);
+                    if (desc === undefined) {
+                        var parent = Object.getPrototypeOf(object);
+                        if (parent === null) {
+                            return undefined
+                        } else {
+                            _x = parent;
+                            _x2 = property;
+                            _x3 = receiver;
+                            _again = true;
+                            desc = parent = undefined;
+                            continue _function
+                        }
+                    } else if ("value" in desc) {
+                        return desc.value
+                    } else {
+                        var getter = desc.get;
+                        if (getter === undefined) {
+                            return undefined
+                        }
+                        return getter.call(receiver)
+                    }
+                }
+            };
+
+            function _interopRequireDefault(obj) {
+                return obj && obj.__esModule ? obj : {
+                    "default": obj
+                }
+            }
+
+            function _classCallCheck(instance, Constructor) {
+                if (!(instance instanceof Constructor)) {
+                    throw new TypeError("Cannot call a class as a function")
+                }
+            }
+
+            function _inherits(subClass, superClass) {
+                if (typeof superClass !== "function" && superClass !== null) {
+                    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass)
+                }
+                subClass.prototype = Object.create(superClass && superClass.prototype, {
+                    constructor: {
+                        value: subClass,
+                        enumerable: false,
+                        writable: true,
+                        configurable: true
+                    }
+                });
+                if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass
+            }
+            var _connJs = require("./conn.js");
+            var _connJs2 = _interopRequireDefault(_connJs);
+            var _events = require("./events");
+            var _events2 = _interopRequireDefault(_events);
+            var _ircJs = require("./irc.js");
+            var _ircJs2 = _interopRequireDefault(_ircJs);
+            var _logJs = require("./log.js");
+            var _logJs2 = _interopRequireDefault(_logJs);
+            var _utilJs = require("./util.js");
+            var _utilJs2 = _interopRequireDefault(_utilJs);
+            var _sessionJs = require("./session.js");
+            var _sessionJs2 = _interopRequireDefault(_sessionJs);
+            var _WebSocketJs = require("./WebSocket.js");
+            var _WebSocketJs2 = _interopRequireDefault(_WebSocketJs);
+            var logger = _logJs2["default"]._getLogger("TMI");
+            var TMI = function(_EventsDispatcher) {
+                _inherits(TMI, _EventsDispatcher);
+
+                function TMI() {
+                    _classCallCheck(this, TMI);
+                    _get(Object.getPrototypeOf(TMI.prototype), "constructor", this).call(this);
+                    this._logger = logger;
+                    this.VERSION = 3;
+                    this._sessions = []
+                }
+                _createClass(TMI, [{
+                    key: "createSession",
+                    value: function createSession(opts) {
+                        var nickname = "justinfan" + _utilJs2["default"].randomInt(999999);
+                        var password = "blah";
+                        if (opts.username && opts.oauthToken) {
+                            nickname = opts.username;
+                            password = "oauth:" + opts.oauthToken
+                        }
+                        var session = new _sessionJs2["default"]({
+                            nickname: nickname,
+                            userId: opts.userId,
+                            password: password,
+                            oauthToken: opts.oauthToken,
+                            apiHostport: opts.apiHostport
+                        });
+                        this._sessions.push(session);
+                        return session
+                    }
+                }, {
+                    key: "getMessageRate",
+                    value: function getMessageRate() {
+                        var rate = 0;
+                        $.each(this._sessions, function(_, session) {
+                            rate += session.getMessageRate()
+                        });
+                        return rate
+                    }
+                }, {
+                    key: "usingWebSockets",
+                    value: function usingWebSockets() {
+                        for (var i = 0; i < this._sessions.length; i++) {
+                            if (this._sessions[i].isUsingWebSockets()) {
+                                return true
+                            }
+                        }
+                        return false
+                    }
+                }, {
+                    key: "_onSessionDestroyed",
+                    value: function _onSessionDestroyed(session) {
+                        _utilJs2["default"].array.remove(this._sessions, session)
+                    }
+                }]);
+                return TMI
+            }(_events2["default"]);
+            exports["default"] = new TMI;
+            module.exports = exports["default"]
+        }, {
+            "./WebSocket.js": 3,
+            "./conn.js": 5,
+            "./events": 6,
+            "./irc.js": 7,
+            "./log.js": 8,
+            "./session.js": 10,
+            "./util.js": 16
+        }],
         14: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
@@ -4243,8 +4226,8 @@
             exports["default"] = EmotesParser;
             module.exports = exports["default"]
         }, {
-            "./api.js": 5,
-            "./events.js": 7
+            "./api.js": 4,
+            "./events.js": 6
         }],
         15: [function(require, module, exports) {
             "use strict";
@@ -4517,5 +4500,5 @@
             exports["default"] = util;
             module.exports = exports["default"]
         }, {}]
-    }, {}, [1])(1)
+    }, {}, [13])(13)
 });
