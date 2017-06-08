@@ -1350,7 +1350,7 @@ window.SiteOptions = {
                 "value": "control"
             }, {
                 "weight": 10,
-                "value": "test"
+                "value": "active"
             }]
         },
         "9e5fffd0-9693-412b-913d-7da332fdeea4": {
