@@ -326,10 +326,10 @@ window.SiteOptions = {
         "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b": {
             "name": "AUTO_ON_NOTIFICATIONS",
             "groups": [{
-                "weight": 50,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "variant"
             }]
         },
