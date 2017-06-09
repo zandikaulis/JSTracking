@@ -9760,7 +9760,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.09-010926+9348e57894bc04adde0de3d4e9bf3d29f7c2abd7",
+                    app_version: "2017.06.09-182301+88a46d393580c8c43a3538ca51a3c8efd8d53fd0",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -22216,6 +22216,7 @@
                     var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.state = {
                         isDragging: !1,
+                        isSeeking: !1,
                         isShowingMarkerPreview: !1,
                         mouseMoveClientX: 0,
                         mouseMoveOnSeekbar: !1,
@@ -22232,7 +22233,9 @@
                             n > O && this.setState({
                                 skipAnimationForFrame: !0
                             })
-                        }
+                        }!e.isLoading && this.state.isSeeking && this.setState({
+                            isSeeking: !1
+                        })
                     }
                 }, {
                     key: "render",
@@ -22254,38 +22257,38 @@
                     value: function() {
                         var e = this.state,
                             t = e.isDragging,
-                            n = e.isShowingMarkerPreview,
-                            r = e.mouseMoveOnSeekbar,
-                            i = e.seekedValue,
-                            o = e.skipAnimationForFrame,
-                            a = this.props,
-                            s = a.bufferLength,
-                            l = a.currentTime,
-                            c = a.duration,
-                            d = a.isLoading,
-                            p = a.isPaused,
-                            f = a.mutedSegments,
-                            h = a.seekbarMarkers,
-                            m = d ? i : l,
-                            g = !t && !p && !o,
+                            n = e.isSeeking,
+                            r = e.isShowingMarkerPreview,
+                            i = e.mouseMoveOnSeekbar,
+                            o = e.seekedValue,
+                            a = e.skipAnimationForFrame,
+                            s = this.props,
+                            l = s.bufferLength,
+                            c = s.currentTime,
+                            d = s.duration,
+                            p = s.isPaused,
+                            f = s.mutedSegments,
+                            h = s.seekbarMarkers,
+                            m = n ? o : c,
+                            g = !t && !p && !a,
                             b = this.getSeekbarDimensions(),
                             E = b.seekbarWidth,
                             T = t ? null : u.default.createElement(v.SeekbarBuffer, {
                                 animate: g,
-                                bufferLength: s,
-                                max: c,
+                                bufferLength: l,
+                                max: d,
                                 min: 0,
                                 value: m
                             }),
                             P = u.default.createElement(_.MutedSegments, {
-                                duration: c,
+                                duration: d,
                                 mutedSegments: f
                             }),
                             C = null;
-                        r && !n && c > 0 && (C = this.createSeekbarPreviews());
+                        i && !r && d > 0 && (C = this.createSeekbarPreviews());
                         var w = u.default.createElement(S.SeekbarMarkers, {
-                            currentTime: l,
-                            duration: c,
+                            currentTime: c,
+                            duration: d,
                             markers: h,
                             onHidingMarkerPreview: this.handleHidingMarkerPreview,
                             onMarkerSeek: this.seekToPosition,
@@ -22294,7 +22297,7 @@
                         });
                         return u.default.createElement(y.Slider, {
                             classNames: A,
-                            max: c,
+                            max: d,
                             min: 0,
                             value: m,
                             onClick: this.handleClick,
@@ -22419,6 +22422,7 @@
                     key: "seekToPosition",
                     value: function(e) {
                         this.setState({
+                            isSeeking: !0,
                             seekedValue: e,
                             skipAnimationForFrame: !0
                         }), this.props.seek(e), this.props.onSeeking()
