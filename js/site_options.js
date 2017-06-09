@@ -172,16 +172,6 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
-        "05d8869f-e037-4955-b80a-7c361f9ddffb": {
-            "name": "NEWS_FEED_REDESIGN",
-            "groups": [{
-                "weight": 50,
-                "value": "yes"
-            }, {
-                "weight": 50,
-                "value": "no"
-            }]
-        },
         "05f51b55-9ce2-4d95-9896-8fdfb83b0b04": {
             "name": "test1",
             "groups": [{
