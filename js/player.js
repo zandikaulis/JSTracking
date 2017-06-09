@@ -9760,7 +9760,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.09-182301+88a46d393580c8c43a3538ca51a3c8efd8d53fd0",
+                    app_version: "2017.06.09-204721+c7075214d3cbf71138e4d1beda881af89ecb2b99",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -34363,7 +34363,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        });
+        }), t.mapDispatchToProps = t.mapStateToProps = void 0;
         var u = function() {
             function e(e, t) {
                 for (var n = 0; n < t.length; n++) {
@@ -34415,14 +34415,15 @@
                 disableNotifications: function() {},
                 promptLoginModal: function() {}
             },
-            E = function(e) {
+            E = t.mapStateToProps = function(e) {
                 var t = e.analyticsTracker,
                     n = e.env,
                     r = e.follow,
                     i = e.playerOptions,
                     o = e.streamMetadata,
                     a = e.user,
-                    s = e.window;
+                    s = e.window,
+                    l = e.ui;
                 return {
                     analytics: t,
                     channel: {
@@ -34431,7 +34432,7 @@
                         name: o.channel.displayName
                     },
                     playerType: n.playerType,
-                    showFollowNotification: r.showFollowNotification,
+                    showFollowNotification: r.showFollowNotification && !l.isMini,
                     relationship: {
                         notificationsEnabled: r.notificationsEnabled,
                         following: r.following
@@ -34444,7 +34445,7 @@
                     }
                 }
             },
-            T = function(e) {
+            T = t.mapDispatchToProps = function(e) {
                 return {
                     enableNotifications: function(t, n) {
                         e((0, f.enableNotifications)(t, n))
