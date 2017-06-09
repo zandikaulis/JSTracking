@@ -320,13 +320,13 @@ function toggle_live_player_popout(e) {
             if ((e = gt[n] + t) in vt) return e
     }
 
-    function I(e, t) {
-        for (var n, i, r, o = [], s = 0, a = e.length; s < a; s++) i = e[s], i.style && (o[s] = de._data(i, "olddisplay"), n = i.style.display, t ? (o[s] || "none" !== n || (i.style.display = ""), "" === i.style.display && Ie(i) && (o[s] = de._data(i, "olddisplay", A(i.nodeName)))) : (r = Ie(i), (n && "none" !== n || !r) && de._data(i, "olddisplay", r ? n : de.css(i, "display"))));
+    function N(e, t) {
+        for (var n, i, r, o = [], s = 0, a = e.length; s < a; s++) i = e[s], i.style && (o[s] = de._data(i, "olddisplay"), n = i.style.display, t ? (o[s] || "none" !== n || (i.style.display = ""), "" === i.style.display && Ne(i) && (o[s] = de._data(i, "olddisplay", A(i.nodeName)))) : (r = Ne(i), (n && "none" !== n || !r) && de._data(i, "olddisplay", r ? n : de.css(i, "display"))));
         for (s = 0; s < a; s++) i = e[s], i.style && (t && "none" !== i.style.display && "" !== i.style.display || (i.style.display = t ? o[s] || "" : "none"));
         return e
     }
 
-    function N(e, t, n) {
+    function I(e, t, n) {
         var i = ft.exec(t);
         return i ? Math.max(0, i[1] - (n || 0)) + (i[2] || "px") : t
     }
@@ -376,7 +376,7 @@ function toggle_live_player_popout(e) {
         var i, r, o, s, a, l, u, c = this,
             h = {},
             d = e.style,
-            f = e.nodeType && Ie(e),
+            f = e.nodeType && Ne(e),
             p = de._data(e, "fxshow");
         n.queue || (a = de._queueHooks(e, "fx"), null == a.unqueued && (a.unqueued = 0, l = a.empty.fire, a.empty.fire = function() {
             a.unqueued || l()
@@ -782,7 +782,7 @@ function toggle_live_player_popout(e) {
                         if (h[2]) return X.apply(n, t.getElementsByTagName(e)), n;
                         if ((r = h[3]) && _.getElementsByClassName && t.getElementsByClassName) return X.apply(n, t.getElementsByClassName(r)), n
                     }
-                if (_.qsa && !$[e + " "] && (!I || !I.test(e))) {
+                if (_.qsa && !$[e + " "] && (!N || !N.test(e))) {
                     if (1 !== m) p = t, f = e;
                     else if ("object" !== t.nodeName.toLowerCase()) {
                         for ((a = t.getAttribute("id")) ? a = a.replace(ve, "\\$&") : t.setAttribute("id", a = L), d = k(e), o = d.length, u = ce.test(a) ? "#" + a : "[id='" + a + "']"; o--;) d[o] = u + " " + c(d[o]);
@@ -973,7 +973,7 @@ function toggle_live_player_popout(e) {
                 };
             return r ? i(s) : s
         }
-        var y, _, b, w, x, k, T, D, S, C, M, E, A, P, O, I, N, j, R, L = "sizzle" + 1 * new Date,
+        var y, _, b, w, x, k, T, D, S, C, M, E, A, P, O, N, I, j, R, L = "sizzle" + 1 * new Date,
             F = e.document,
             H = 0,
             z = 0,
@@ -1083,14 +1083,14 @@ function toggle_live_player_popout(e) {
                 return o
             }, b.find.CLASS = _.getElementsByClassName && function(e, t) {
                 if (void 0 !== t.getElementsByClassName && O) return t.getElementsByClassName(e)
-            }, N = [], I = [], (_.qsa = pe.test(A.querySelectorAll)) && (r(function(e) {
-                P.appendChild(e).innerHTML = "<a id='" + L + "'></a><select id='" + L + "-\r\\' msallowcapture=''><option selected=''></option></select>", e.querySelectorAll("[msallowcapture^='']").length && I.push("[*^$]=" + ee + "*(?:''|\"\")"), e.querySelectorAll("[selected]").length || I.push("\\[" + ee + "*(?:value|" + Z + ")"), e.querySelectorAll("[id~=" + L + "-]").length || I.push("~="), e.querySelectorAll(":checked").length || I.push(":checked"), e.querySelectorAll("a#" + L + "+*").length || I.push(".#.+[+~]")
+            }, I = [], N = [], (_.qsa = pe.test(A.querySelectorAll)) && (r(function(e) {
+                P.appendChild(e).innerHTML = "<a id='" + L + "'></a><select id='" + L + "-\r\\' msallowcapture=''><option selected=''></option></select>", e.querySelectorAll("[msallowcapture^='']").length && N.push("[*^$]=" + ee + "*(?:''|\"\")"), e.querySelectorAll("[selected]").length || N.push("\\[" + ee + "*(?:value|" + Z + ")"), e.querySelectorAll("[id~=" + L + "-]").length || N.push("~="), e.querySelectorAll(":checked").length || N.push(":checked"), e.querySelectorAll("a#" + L + "+*").length || N.push(".#.+[+~]")
             }), r(function(e) {
                 var t = A.createElement("input");
-                t.setAttribute("type", "hidden"), e.appendChild(t).setAttribute("name", "D"), e.querySelectorAll("[name=d]").length && I.push("name" + ee + "*[*^$|!~]?="), e.querySelectorAll(":enabled").length || I.push(":enabled", ":disabled"), e.querySelectorAll("*,:x"), I.push(",.*:")
+                t.setAttribute("type", "hidden"), e.appendChild(t).setAttribute("name", "D"), e.querySelectorAll("[name=d]").length && N.push("name" + ee + "*[*^$|!~]?="), e.querySelectorAll(":enabled").length || N.push(":enabled", ":disabled"), e.querySelectorAll("*,:x"), N.push(",.*:")
             })), (_.matchesSelector = pe.test(j = P.matches || P.webkitMatchesSelector || P.mozMatchesSelector || P.oMatchesSelector || P.msMatchesSelector)) && r(function(e) {
-                _.disconnectedMatch = j.call(e, "div"), j.call(e, "[s!='']:x"), N.push("!=", ie)
-            }), I = I.length && new RegExp(I.join("|")), N = N.length && new RegExp(N.join("|")), t = pe.test(P.compareDocumentPosition), R = t || pe.test(P.contains) ? function(e, t) {
+                _.disconnectedMatch = j.call(e, "div"), j.call(e, "[s!='']:x"), I.push("!=", ie)
+            }), N = N.length && new RegExp(N.join("|")), I = I.length && new RegExp(I.join("|")), t = pe.test(P.compareDocumentPosition), R = t || pe.test(P.contains) ? function(e, t) {
                 var n = 9 === e.nodeType ? e.documentElement : e,
                     i = t && t.parentNode;
                 return e === i || !(!i || 1 !== i.nodeType || !(n.contains ? n.contains(i) : e.compareDocumentPosition && 16 & e.compareDocumentPosition(i)))
@@ -1120,7 +1120,7 @@ function toggle_live_player_popout(e) {
         }, t.matches = function(e, n) {
             return t(e, null, null, n)
         }, t.matchesSelector = function(e, n) {
-            if ((e.ownerDocument || e) !== A && E(e), n = n.replace(le, "='$1']"), _.matchesSelector && O && !$[n + " "] && (!N || !N.test(n)) && (!I || !I.test(n))) try {
+            if ((e.ownerDocument || e) !== A && E(e), n = n.replace(le, "='$1']"), _.matchesSelector && O && !$[n + " "] && (!I || !I.test(n)) && (!N || !N.test(n))) try {
                 var i = j.call(e, n);
                 if (i || _.disconnectedMatch || e.document && 11 !== e.document.nodeType) return i
             } catch (e) {}
@@ -1853,16 +1853,16 @@ function toggle_live_player_popout(e) {
     var Ae = /[+-]?(?:\d*\.|)\d+(?:[eE][+-]?\d+|)/.source,
         Pe = new RegExp("^(?:([+-])=|)(" + Ae + ")([a-z%]*)$", "i"),
         Oe = ["Top", "Right", "Bottom", "Left"],
-        Ie = function(e, t) {
+        Ne = function(e, t) {
             return e = t || e, "none" === de.css(e, "display") || !de.contains(e.ownerDocument, e)
         },
-        Ne = function(e, t, n, i, r, o, s) {
+        Ie = function(e, t, n, i, r, o, s) {
             var a = 0,
                 l = e.length,
                 u = null == n;
             if ("object" === de.type(n)) {
                 r = !0;
-                for (a in n) Ne(e, t, a, n[a], !0, o, s)
+                for (a in n) Ie(e, t, a, n[a], !0, o, s)
             } else if (void 0 !== i && (r = !0, de.isFunction(i) || (s = !0), u && (s ? (t.call(e, i), t = null) : (u = t, t = function(e, t, n) {
                     return u.call(de(e), n)
                 })), t))
@@ -2221,7 +2221,7 @@ function toggle_live_player_popout(e) {
             return M(this, e)
         },
         text: function(e) {
-            return Ne(this, function(e) {
+            return Ie(this, function(e) {
                 return void 0 === e ? de.text(this) : this.empty().append((this[0] && this[0].ownerDocument || ie).createTextNode(e))
             }, null, e, arguments.length)
         },
@@ -2263,7 +2263,7 @@ function toggle_live_player_popout(e) {
             })
         },
         html: function(e) {
-            return Ne(this, function(e) {
+            return Ie(this, function(e) {
                 var t = this[0] || {},
                     n = 0,
                     i = this.length;
@@ -2423,7 +2423,7 @@ function toggle_live_player_popout(e) {
             },
             set: function(e, n, i) {
                 var r = i && at(e);
-                return N(e, n, i ? j(e, t, i, he.boxSizing && "border-box" === de.css(e, "boxSizing", !1, r), r) : 0)
+                return I(e, n, i ? j(e, t, i, he.boxSizing && "border-box" === de.css(e, "boxSizing", !1, r), r) : 0)
             }
         }
     }), he.opacity || (de.cssHooks.opacity = {
@@ -2457,10 +2457,10 @@ function toggle_live_player_popout(e) {
                 for (var i = 0, r = {}, o = "string" == typeof n ? n.split(" ") : [n]; i < 4; i++) r[e + Oe[i] + t] = o[i] || o[i - 2] || o[0];
                 return r
             }
-        }, it.test(e) || (de.cssHooks[e + t].set = N)
+        }, it.test(e) || (de.cssHooks[e + t].set = I)
     }), de.fn.extend({
         css: function(e, t) {
-            return Ne(this, function(e, t, n) {
+            return Ie(this, function(e, t, n) {
                 var i, r, o = {},
                     s = 0;
                 if (de.isArray(t)) {
@@ -2471,14 +2471,14 @@ function toggle_live_player_popout(e) {
             }, e, t, arguments.length > 1)
         },
         show: function() {
-            return I(this, !0)
+            return N(this, !0)
         },
         hide: function() {
-            return I(this)
+            return N(this)
         },
         toggle: function(e) {
             return "boolean" == typeof e ? e ? this.show() : this.hide() : this.each(function() {
-                Ie(this) ? de(this).show() : de(this).hide()
+                Ne(this) ? de(this).show() : de(this).hide()
             })
         }
     }), de.Tween = L, L.prototype = {
@@ -2545,7 +2545,7 @@ function toggle_live_player_popout(e) {
             }, i
         }, de.fn.extend({
             fadeTo: function(e, t, n, i) {
-                return this.filter(Ie).css("opacity", 0).show().end().animate({
+                return this.filter(Ne).css("opacity", 0).show().end().animate({
                     opacity: t
                 }, e, n, i)
             },
@@ -2694,7 +2694,7 @@ function toggle_live_player_popout(e) {
         Ct = he.input;
     de.fn.extend({
         attr: function(e, t) {
-            return Ne(this, de.attr, e, t, arguments.length > 1)
+            return Ie(this, de.attr, e, t, arguments.length > 1)
         },
         removeAttr: function(e) {
             return this.each(function() {
@@ -2775,7 +2775,7 @@ function toggle_live_player_popout(e) {
         Et = /^(?:a|area)$/i;
     de.fn.extend({
         prop: function(e, t) {
-            return Ne(this, de.prop, e, t, arguments.length > 1)
+            return Ie(this, de.prop, e, t, arguments.length > 1)
         },
         removeProp: function(e) {
             return e = de.propFix[e] || e, this.each(function() {
@@ -2894,8 +2894,8 @@ function toggle_live_player_popout(e) {
         }
         return n && n.documentElement && !n.getElementsByTagName("parsererror").length || de.error("Invalid XML: " + t), n
     };
-    var It = /([?&])_=[^&]*/,
-        Nt = /^(.*?):[ \t]*([^\r\n]*)\r?$/gm,
+    var Nt = /([?&])_=[^&]*/,
+        It = /^(.*?):[ \t]*([^\r\n]*)\r?$/gm,
         jt = /^(?:about|app|app-storage|.+-extension|file|res|widget):$/,
         Rt = /^(?:GET|HEAD)$/,
         Lt = /^([\w.+-]+:)(?:\/\/(?:[^\/?#]*@|)([^\/?#:]*)(?::(\d+)|)|)/,
@@ -2971,7 +2971,7 @@ function toggle_live_player_popout(e) {
                         var t;
                         if (2 === b) {
                             if (!h)
-                                for (h = {}; t = Nt.exec(a);) h[t[1].toLowerCase()] = t[2];
+                                for (h = {}; t = It.exec(a);) h[t[1].toLowerCase()] = t[2];
                             t = h[e.toLowerCase()]
                         }
                         return null == t ? null : t
@@ -3000,7 +3000,7 @@ function toggle_live_player_popout(e) {
                     }
                 };
             if (m.promise(x).complete = g.add, x.success = x.done, x.error = x.fail, d.url = ((t || d.url || Wt) + "").replace(/#.*$/, "").replace(/^\/\//, Ut[1] + "//"), d.type = n.method || n.type || d.method || d.type, d.dataTypes = de.trim(d.dataType || "*").toLowerCase().match(Te) || [""], null == d.crossDomain && (r = Lt.exec(d.url.toLowerCase()), d.crossDomain = !(!r || r[1] === Ut[1] && r[2] === Ut[2] && (r[3] || ("http:" === r[1] ? "80" : "443")) === (Ut[3] || ("http:" === Ut[1] ? "80" : "443")))), d.data && d.processData && "string" != typeof d.data && (d.data = de.param(d.data, d.traditional)), B(Ft, d, n, x), 2 === b) return x;
-            u = de.event && d.global, u && 0 == de.active++ && de.event.trigger("ajaxStart"), d.type = d.type.toUpperCase(), d.hasContent = !Rt.test(d.type), s = d.url, d.hasContent || (d.data && (s = d.url += (Ot.test(s) ? "&" : "?") + d.data, delete d.data), d.cache === !1 && (d.url = It.test(s) ? s.replace(It, "$1_=" + Pt++) : s + (Ot.test(s) ? "&" : "?") + "_=" + Pt++)), d.ifModified && (de.lastModified[s] && x.setRequestHeader("If-Modified-Since", de.lastModified[s]), de.etag[s] && x.setRequestHeader("If-None-Match", de.etag[s])), (d.data && d.hasContent && d.contentType !== !1 || n.contentType) && x.setRequestHeader("Content-Type", d.contentType), x.setRequestHeader("Accept", d.dataTypes[0] && d.accepts[d.dataTypes[0]] ? d.accepts[d.dataTypes[0]] + ("*" !== d.dataTypes[0] ? ", " + zt + "; q=0.01" : "") : d.accepts["*"]);
+            u = de.event && d.global, u && 0 == de.active++ && de.event.trigger("ajaxStart"), d.type = d.type.toUpperCase(), d.hasContent = !Rt.test(d.type), s = d.url, d.hasContent || (d.data && (s = d.url += (Ot.test(s) ? "&" : "?") + d.data, delete d.data), d.cache === !1 && (d.url = Nt.test(s) ? s.replace(Nt, "$1_=" + Pt++) : s + (Ot.test(s) ? "&" : "?") + "_=" + Pt++)), d.ifModified && (de.lastModified[s] && x.setRequestHeader("If-Modified-Since", de.lastModified[s]), de.etag[s] && x.setRequestHeader("If-None-Match", de.etag[s])), (d.data && d.hasContent && d.contentType !== !1 || n.contentType) && x.setRequestHeader("Content-Type", d.contentType), x.setRequestHeader("Accept", d.dataTypes[0] && d.accepts[d.dataTypes[0]] ? d.accepts[d.dataTypes[0]] + ("*" !== d.dataTypes[0] ? ", " + zt + "; q=0.01" : "") : d.accepts["*"]);
             for (o in d.headers) x.setRequestHeader(o, d.headers[o]);
             if (d.beforeSend && (d.beforeSend.call(f, x, d) === !1 || 2 === b)) return x.abort();
             w = "abort";
@@ -3293,7 +3293,7 @@ function toggle_live_player_popout(e) {
     }, function(e, t) {
         var n = /Y/.test(t);
         de.fn[e] = function(i) {
-            return Ne(this, function(e, i, r) {
+            return Ie(this, function(e, i, r) {
                 var o = te(e);
                 if (void 0 === r) return o ? t in o ? o[t] : o.document.documentElement[i] : e[i];
                 o ? o.scrollTo(n ? de(o).scrollLeft() : r, n ? r : de(o).scrollTop()) : e[i] = r
@@ -3315,7 +3315,7 @@ function toggle_live_player_popout(e) {
             de.fn[i] = function(i, r) {
                 var o = arguments.length && (n || "boolean" != typeof i),
                     s = n || (i === !0 || r === !0 ? "margin" : "border");
-                return Ne(this, function(t, n, i) {
+                return Ie(this, function(t, n, i) {
                     var r;
                     return de.isWindow(t) ? t.document.documentElement["client" + e] : 9 === t.nodeType ? (r = t.documentElement, Math.max(t.body["scroll" + e], r["scroll" + e], t.body["offset" + e], r["offset" + e], r["client" + e])) : void 0 === i ? de.css(t, n, s) : de.style(t, n, i, s)
                 }, t, o ? i : void 0, o, null)
@@ -3497,14 +3497,14 @@ function(e, t, n) {
         A = e.fn.live,
         P = e.fn.die,
         O = e.fn.load,
-        I = "ajaxStart|ajaxStop|ajaxSend|ajaxComplete|ajaxError|ajaxSuccess",
-        N = new RegExp("\\b(?:" + I + ")\\b"),
+        N = "ajaxStart|ajaxStop|ajaxSend|ajaxComplete|ajaxError|ajaxSuccess",
+        I = new RegExp("\\b(?:" + N + ")\\b"),
         j = /(?:^|\s)hover(\.\S+|)\b/,
         R = function(t) {
             return "string" != typeof t || e.event.special.hover ? t : (j.test(t) && i("'hover' pseudo-event is deprecated, use 'mouseenter mouseleave'"), t && t.replace(j, "mouseenter$1 mouseleave$1"))
         };
     e.event.props && "attrChange" !== e.event.props[0] && e.event.props.unshift("attrChange", "attrName", "relatedNode", "srcElement"), e.event.dispatch && r(e.event, "handle", e.event.dispatch, "jQuery.event.handle is undocumented and deprecated"), e.event.add = function(e, t, n, r, o) {
-        e !== document && N.test(t) && i("AJAX events should be attached to document: " + t), S.call(this, e, R(t || ""), n, r, o)
+        e !== document && I.test(t) && i("AJAX events should be attached to document: " + t), S.call(this, e, R(t || ""), n, r, o)
     }, e.event.remove = function(e, t, n, i, r) {
         C.call(this, e, R(t) || "", n, i, r)
     }, e.each(["load", "unload", "error"], function(t, n) {
@@ -3529,8 +3529,8 @@ function(e, t, n) {
     }, e.fn.die = function(t, n) {
         return i("jQuery.fn.die() is deprecated"), P ? P.apply(this, arguments) : (e(this.context).off(t, this.selector || "**", n), this)
     }, e.event.trigger = function(e, t, n, r) {
-        return n || N.test(e) || i("Global events are undocumented and deprecated"), M.call(this, e, t, n || document, r)
-    }, e.each(I.split("|"), function(t, n) {
+        return n || I.test(e) || i("Global events are undocumented and deprecated"), M.call(this, e, t, n || document, r)
+    }, e.each(N.split("|"), function(t, n) {
         e.event.special[n] = {
             setup: function() {
                 var t = this;
@@ -4490,7 +4490,7 @@ function(e, t) {
         }, y.now = Date.now || function() {
             return (new Date).getTime()
         };
-        var I = {
+        var N = {
                 "&": "&amp;",
                 "<": "&lt;",
                 ">": "&gt;",
@@ -4498,7 +4498,7 @@ function(e, t) {
                 "'": "&#x27;",
                 "`": "&#x60;"
             },
-            N = y.invert(I),
+            I = y.invert(N),
             j = function(e) {
                 var t = function(t) {
                         return e[t]
@@ -4510,7 +4510,7 @@ function(e, t) {
                     return e = null == e ? "" : "" + e, i.test(e) ? e.replace(r, t) : e
                 }
             };
-        y.escape = j(I), y.unescape = j(N), y.result = function(e, t, n) {
+        y.escape = j(N), y.unescape = j(I), y.result = function(e, t, n) {
             var i = null == e ? void 0 : e[t];
             return void 0 === i && (i = n), y.isFunction(i) ? i.call(e) : i
         };
@@ -4814,13 +4814,13 @@ function(e, t) {
             return i
         }
 
-        function I(e, t) {
+        function N(e, t) {
             var n = this,
                 i = new n(d, t);
             return w(i, e), i
         }
 
-        function N() {
+        function I() {
             throw new TypeError("You must pass a resolver function as the first argument to the promise constructor")
         }
 
@@ -4829,7 +4829,7 @@ function(e, t) {
         }
 
         function R(e, t) {
-            this._id = Ee++, this._label = t, this._state = void 0, this._result = void 0, this._subscribers = [], ve.instrument && u("created", this), d !== e && ("function" != typeof e && N(), this instanceof R ? C(this, e) : j())
+            this._id = Ee++, this._label = t, this._state = void 0, this._result = void 0, this._subscribers = [], ve.instrument && u("created", this), d !== e && ("function" != typeof e && I(), this instanceof R ? C(this, e) : j())
         }
 
         function L() {
@@ -5000,8 +5000,8 @@ function(e, t) {
         }
 
         function ce() {
-            return void 0 !== Ie ? function() {
-                Ie(de)
+            return void 0 !== Ne ? function() {
+                Ne(de)
             } : he()
         }
 
@@ -5120,7 +5120,7 @@ function(e, t) {
         };
         var Me = "rsvp_" + be() + "-",
             Ee = 0;
-        R.cast = c, R.all = P, R.race = O, R.resolve = c, R.reject = I, R.prototype = {
+        R.cast = c, R.all = P, R.race = O, R.resolve = c, R.reject = N, R.prototype = {
             constructor: R,
             _guidKey: Me,
             _onError: function(e) {
@@ -5173,9 +5173,9 @@ function(e, t) {
             return new Error("hashSettled must be called with an object")
         };
         var Oe = 0,
-            Ie = void 0,
-            Ne = "undefined" != typeof window ? window : void 0,
-            je = Ne || {},
+            Ne = void 0,
+            Ie = "undefined" != typeof window ? window : void 0,
+            je = Ie || {},
             Re = je.MutationObserver || je.WebKitMutationObserver,
             Le = "undefined" == typeof self && "undefined" != typeof process && "[object process]" === {}.toString.call(process),
             Fe = "undefined" != typeof Uint8ClampedArray && "undefined" != typeof importScripts && "undefined" != typeof MessageChannel,
@@ -5204,11 +5204,11 @@ function(e, t) {
                 function() {
                     return e.port2.postMessage(0)
                 }
-        }() : void 0 === Ne && "function" == typeof require ? function() {
+        }() : void 0 === Ie && "function" == typeof require ? function() {
             try {
                 var e = require,
                     t = e("vertx");
-                return Ie = t.runOnLoop || t.runOnContext, ce()
+                return Ne = t.runOnLoop || t.runOnContext, ce()
             } catch (e) {
                 return he()
             }
@@ -7750,7 +7750,7 @@ function(e, t) {
                 })
             },
             _generateHTML: function(e) {
-                var t, n, i, r, o, s, a, l, u, c, h, d, f, p, m, g, v, y, _, b, w, x, k, T, D, S, C, M, E, A, P, O, I, N, j, R, L, F, H, z = new Date,
+                var t, n, i, r, o, s, a, l, u, c, h, d, f, p, m, g, v, y, _, b, w, x, k, T, D, S, C, M, E, A, P, O, N, I, j, R, L, F, H, z = new Date,
                     W = this._daylightSavingAdjust(new Date(z.getFullYear(), z.getMonth(), z.getDate())),
                     U = this._get(e, "isRTL"),
                     $ = this._get(e, "showButtonPanel"),
@@ -7783,8 +7783,8 @@ function(e, t) {
                             C += "'>"
                         }
                         for (C += "<div class='ui-datepicker-header ui-widget-header ui-helper-clearfix" + S + "'>" + (/all|left/.test(S) && 0 === x ? U ? o : i : "") + (/all|right/.test(S) && 0 === x ? U ? i : o : "") + this._generateMonthYearHeader(e, Z, ee, K, J, x > 0 || T > 0, p, m) + "</div><table class='ui-datepicker-calendar'><thead><tr>", M = h ? "<th class='ui-datepicker-week-col'>" + this._get(e, "weekHeader") + "</th>" : "", w = 0; w < 7; w++) E = (w + c) % 7, M += "<th scope='col'" + ((w + c + 6) % 7 >= 5 ? " class='ui-datepicker-week-end'" : "") + "><span title='" + d[E] + "'>" + f[E] + "</span></th>";
-                        for (C += M + "</tr></thead><tbody>", A = this._getDaysInMonth(ee, Z), ee === e.selectedYear && Z === e.selectedMonth && (e.selectedDay = Math.min(e.selectedDay, A)), P = (this._getFirstDayOfMonth(ee, Z) - c + 7) % 7, O = Math.ceil((P + A) / 7), I = G && this.maxRows > O ? this.maxRows : O, this.maxRows = I, N = this._daylightSavingAdjust(new Date(ee, Z, 1 - P)), j = 0; j < I; j++) {
-                            for (C += "<tr>", R = h ? "<td class='ui-datepicker-week-col'>" + this._get(e, "calculateWeek")(N) + "</td>" : "", w = 0; w < 7; w++) L = g ? g.apply(e.input ? e.input[0] : null, [N]) : [!0, ""], F = N.getMonth() !== Z, H = F && !y || !L[0] || K && N < K || J && N > J, R += "<td class='" + ((w + c + 6) % 7 >= 5 ? " ui-datepicker-week-end" : "") + (F ? " ui-datepicker-other-month" : "") + (N.getTime() === D.getTime() && Z === e.selectedMonth && e._keyEvent || _.getTime() === N.getTime() && _.getTime() === D.getTime() ? " " + this._dayOverClass : "") + (H ? " " + this._unselectableClass + " ui-state-disabled" : "") + (F && !v ? "" : " " + L[1] + (N.getTime() === X.getTime() ? " " + this._currentClass : "") + (N.getTime() === W.getTime() ? " ui-datepicker-today" : "")) + "'" + (F && !v || !L[2] ? "" : " title='" + L[2].replace(/'/g, "&#39;") + "'") + (H ? "" : " data-handler='selectDay' data-event='click' data-month='" + N.getMonth() + "' data-year='" + N.getFullYear() + "'") + ">" + (F && !v ? "&#xa0;" : H ? "<span class='ui-state-default'>" + N.getDate() + "</span>" : "<a class='ui-state-default" + (N.getTime() === W.getTime() ? " ui-state-highlight" : "") + (N.getTime() === X.getTime() ? " ui-state-active" : "") + (F ? " ui-priority-secondary" : "") + "' href='#'>" + N.getDate() + "</a>") + "</td>", N.setDate(N.getDate() + 1), N = this._daylightSavingAdjust(N);
+                        for (C += M + "</tr></thead><tbody>", A = this._getDaysInMonth(ee, Z), ee === e.selectedYear && Z === e.selectedMonth && (e.selectedDay = Math.min(e.selectedDay, A)), P = (this._getFirstDayOfMonth(ee, Z) - c + 7) % 7, O = Math.ceil((P + A) / 7), N = G && this.maxRows > O ? this.maxRows : O, this.maxRows = N, I = this._daylightSavingAdjust(new Date(ee, Z, 1 - P)), j = 0; j < N; j++) {
+                            for (C += "<tr>", R = h ? "<td class='ui-datepicker-week-col'>" + this._get(e, "calculateWeek")(I) + "</td>" : "", w = 0; w < 7; w++) L = g ? g.apply(e.input ? e.input[0] : null, [I]) : [!0, ""], F = I.getMonth() !== Z, H = F && !y || !L[0] || K && I < K || J && I > J, R += "<td class='" + ((w + c + 6) % 7 >= 5 ? " ui-datepicker-week-end" : "") + (F ? " ui-datepicker-other-month" : "") + (I.getTime() === D.getTime() && Z === e.selectedMonth && e._keyEvent || _.getTime() === I.getTime() && _.getTime() === D.getTime() ? " " + this._dayOverClass : "") + (H ? " " + this._unselectableClass + " ui-state-disabled" : "") + (F && !v ? "" : " " + L[1] + (I.getTime() === X.getTime() ? " " + this._currentClass : "") + (I.getTime() === W.getTime() ? " ui-datepicker-today" : "")) + "'" + (F && !v || !L[2] ? "" : " title='" + L[2].replace(/'/g, "&#39;") + "'") + (H ? "" : " data-handler='selectDay' data-event='click' data-month='" + I.getMonth() + "' data-year='" + I.getFullYear() + "'") + ">" + (F && !v ? "&#xa0;" : H ? "<span class='ui-state-default'>" + I.getDate() + "</span>" : "<a class='ui-state-default" + (I.getTime() === W.getTime() ? " ui-state-highlight" : "") + (I.getTime() === X.getTime() ? " ui-state-active" : "") + (F ? " ui-priority-secondary" : "") + "' href='#'>" + I.getDate() + "</a>") + "</td>", I.setDate(I.getDate() + 1), I = this._daylightSavingAdjust(I);
                             C += R + "</tr>"
                         }
                         Z++, Z > 11 && (Z = 0, ee++), C += "</tbody></table>" + (G ? "</div>" + (B[0] > 0 && T === B[1] - 1 ? "<div class='ui-datepicker-row-break'></div>" : "") : ""), k += C
@@ -9586,7 +9586,7 @@ $.noty.consumeAlert = function(e) {
                                 e(t).css({
                                     borderRadius: "0px 0px 0px 0px"
                                 }), e(t).last().css({
-                                    borderRadius: "0px 0px 5px 5px"
+                                    borderRadius: "0px 0px 2px 2px"
                                 });
                                 break;
                             case "topCenter":
@@ -9602,18 +9602,18 @@ $.noty.consumeAlert = function(e) {
                                 e(t).css({
                                     borderRadius: "0px 0px 0px 0px"
                                 }), e(t).first().css({
-                                    "border-top-left-radius": "5px",
-                                    "border-top-right-radius": "5px"
+                                    "border-top-left-radius": "2px",
+                                    "border-top-right-radius": "2px"
                                 }), e(t).last().css({
-                                    "border-bottom-left-radius": "5px",
-                                    "border-bottom-right-radius": "5px"
+                                    "border-bottom-left-radius": "2px",
+                                    "border-bottom-right-radius": "2px"
                                 });
                                 break;
                             case "bottom":
                                 e(t).css({
                                     borderRadius: "0px 0px 0px 0px"
                                 }), e(t).first().css({
-                                    borderRadius: "5px 5px 0px 0px"
+                                    borderRadius: "2px 2px 0px 0px"
                                 })
                         }
                     }
@@ -9635,12 +9635,12 @@ $.noty.consumeAlert = function(e) {
             style: function() {
                 switch (this.$bar.css({
                     overflow: "hidden",
-                    background: "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAoCAQAAAClM0ndAAAAhklEQVR4AdXO0QrCMBBE0bttkk38/w8WRERpdyjzVOc+HxhIHqJGMQcFFkpYRQotLLSw0IJ5aBdovruMYDA/kT8plF9ZKLFQcgF18hDj1SbQOMlCA4kao0iiXmah7qBWPdxpohsgVZyj7e5I9KcID+EhiDI5gxBYKLBQYKHAQoGFAoEks/YEGHYKB7hFxf0AAAAASUVORK5CYII=') repeat-x scroll left top #fff"
+                    background: "#fff"
                 }), this.$message.css({
-                    fontSize: "13px",
+                    fontSize: "14px",
                     lineHeight: "16px",
                     textAlign: "center",
-                    padding: "8px 10px 9px",
+                    padding: "10px",
                     width: "auto",
                     position: "relative"
                 }), this.$closeButton.css({
@@ -9663,7 +9663,7 @@ $.noty.consumeAlert = function(e) {
                 }), this.options.layout.name) {
                     case "top":
                         this.$bar.css({
-                            borderRadius: "0px 0px 5px 5px",
+                            borderRadius: "0px 0px 2px 2px",
                             borderBottom: "2px solid #eee",
                             borderLeft: "2px solid #eee",
                             borderRight: "2px solid #eee",
@@ -9673,13 +9673,21 @@ $.noty.consumeAlert = function(e) {
                     case "topCenter":
                     case "center":
                     case "bottomCenter":
+                        this.$closeButton.css({
+                            position: "relative",
+                            top: "0",
+                            right: "0",
+                            width: "14",
+                            height: "14",
+                            background: "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAANJJREFUKBWVkksKwjAURfMBwSV0Bd2GXYEzB4Jzl5R5wYHQgStot+EKXIIghJqTNrGRpOIbNHDfO703H9m1XfW08rLR+nw47e9ipa7trX5Za7Z6PCogMY47J/Q0StwM9czCKJyElA8nVCV4AVXMwkgcMo0mxC71PFiC0UlBmtkp/jCCORgtByEnIEISzU/4PUUnJEpNy//fxDFx46SpzP6QI/gNuSNvGFg9nBz08zrWIByp3IxyUUxpHxMmBO4++ueFGcWDdZc70AjxArBcF/AA8wbdHttPo6KVLgAAAABJRU5ErkJggg==')"
+                        });
                     case "inline":
                         this.$bar.css({
-                            borderRadius: "5px",
+                            borderRadius: "2px",
                             border: "1px solid #eee",
                             boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
                         }), this.$message.css({
-                            fontSize: "13px",
+                            fontSize: "14px",
                             textAlign: "center"
                         });
                         break;
@@ -9690,17 +9698,17 @@ $.noty.consumeAlert = function(e) {
                     case "centerLeft":
                     case "centerRight":
                         this.$bar.css({
-                            borderRadius: "5px",
+                            borderRadius: "2px",
                             border: "1px solid #eee",
                             boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
                         }), this.$message.css({
-                            fontSize: "13px",
+                            fontSize: "14px",
                             textAlign: "left"
                         });
                         break;
                     case "bottom":
                         this.$bar.css({
-                            borderRadius: "5px 5px 0px 0px",
+                            borderRadius: "2px 2px 0px 0px",
                             borderTop: "2px solid #eee",
                             borderLeft: "2px solid #eee",
                             borderRight: "2px solid #eee",
@@ -9709,7 +9717,7 @@ $.noty.consumeAlert = function(e) {
                         break;
                     default:
                         this.$bar.css({
-                            border: "2px solid #eee",
+                            border: "1px solid #eee",
                             boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
                         })
                 }
@@ -10959,107 +10967,108 @@ function(e, t) {
     };
     var g = l.query;
     return l.query = function(e, t) {
-        return e === !0 ? i.parseQuery(this._parts.query) : void 0 !== e && "string" != typeof e ? (this._parts.query = i.buildQuery(e, this._parts.duplicateQueryParameters), this.build(!t), this) : g.call(this, e, t)
-    }, l.addQuery = function(e, t, n) {
-        var r = i.parseQuery(this._parts.query);
-        return i.addQuery(r, e, void 0 === t ? null : t), this._parts.query = i.buildQuery(r, this._parts.duplicateQueryParameters), "string" != typeof e && (n = t), this.build(!n), this
-    }, l.removeQuery = function(e, t, n) {
-        var r = i.parseQuery(this._parts.query);
-        return i.removeQuery(r, e, t), this._parts.query = i.buildQuery(r, this._parts.duplicateQueryParameters), "string" != typeof e && (n = t), this.build(!n), this
-    }, l.addSearch = l.addQuery, l.removeSearch = l.removeQuery, l.normalize = function() {
-        return this._parts.urn ? this.normalizeProtocol(!1).normalizeQuery(!1).normalizeFragment(!1).build() : this.normalizeProtocol(!1).normalizeHostname(!1).normalizePort(!1).normalizePath(!1).normalizeQuery(!1).normalizeFragment(!1).build()
-    }, l.normalizeProtocol = function(e) {
-        return "string" == typeof this._parts.protocol && (this._parts.protocol = this._parts.protocol.toLowerCase(), this.build(!e)), this
-    }, l.normalizeHostname = function(n) {
-        return this._parts.hostname && (this.is("IDN") && e ? this._parts.hostname = e.toASCII(this._parts.hostname) : this.is("IPv6") && t && (this._parts.hostname = t.best(this._parts.hostname)), this._parts.hostname = this._parts.hostname.toLowerCase(), this.build(!n)), this
-    }, l.normalizePort = function(e) {
-        return "string" == typeof this._parts.protocol && this._parts.port === i.defaultPorts[this._parts.protocol] && (this._parts.port = null, this.build(!e)), this
-    }, l.normalizePath = function(e) {
-        if (this._parts.urn) return this;
-        if (!this._parts.path || "/" === this._parts.path) return this;
-        var t, n, r, o, s = this._parts.path;
-        for ("/" !== s[0] && ("." === s[0] && (n = s.substring(0, s.indexOf("/"))), t = !0, s = "/" + s), s = s.replace(/(\/(\.\/)+)|\/{2,}/g, "/");;) {
-            if ((r = s.indexOf("/../")) === -1) break;
-            if (0 === r) {
-                s = s.substring(3);
-                break
+            return e === !0 ? i.parseQuery(this._parts.query) : void 0 !== e && "string" != typeof e ? (this._parts.query = i.buildQuery(e, this._parts.duplicateQueryParameters), this.build(!t), this) : g.call(this, e, t)
+        }, l.addQuery = function(e, t, n) {
+            var r = i.parseQuery(this._parts.query);
+            return i.addQuery(r, e, void 0 === t ? null : t), this._parts.query = i.buildQuery(r, this._parts.duplicateQueryParameters), "string" != typeof e && (n = t), this.build(!n), this
+        }, l.removeQuery = function(e, t, n) {
+            var r = i.parseQuery(this._parts.query);
+            return i.removeQuery(r, e, t), this._parts.query = i.buildQuery(r, this._parts.duplicateQueryParameters), "string" != typeof e && (n = t), this.build(!n), this
+        }, l.addSearch = l.addQuery, l.removeSearch = l.removeQuery, l.normalize = function() {
+            return this._parts.urn ? this.normalizeProtocol(!1).normalizeQuery(!1).normalizeFragment(!1).build() : this.normalizeProtocol(!1).normalizeHostname(!1).normalizePort(!1).normalizePath(!1).normalizeQuery(!1).normalizeFragment(!1).build()
+        }, l.normalizeProtocol = function(e) {
+            return "string" == typeof this._parts.protocol && (this._parts.protocol = this._parts.protocol.toLowerCase(), this.build(!e)), this
+        }, l.normalizeHostname = function(n) {
+            return this._parts.hostname && (this.is("IDN") && e ? this._parts.hostname = e.toASCII(this._parts.hostname) : this.is("IPv6") && t && (this._parts.hostname = t.best(this._parts.hostname)), this._parts.hostname = this._parts.hostname.toLowerCase(), this.build(!n)), this
+        }, l.normalizePort = function(e) {
+            return "string" == typeof this._parts.protocol && this._parts.port === i.defaultPorts[this._parts.protocol] && (this._parts.port = null, this.build(!e)), this
+        }, l.normalizePath = function(e) {
+            if (this._parts.urn) return this;
+            if (!this._parts.path || "/" === this._parts.path) return this;
+            var t, n, r, o, s = this._parts.path;
+            for ("/" !== s[0] && ("." === s[0] && (n = s.substring(0, s.indexOf("/"))), t = !0, s = "/" + s), s = s.replace(/(\/(\.\/)+)|\/{2,}/g, "/");;) {
+                if ((r = s.indexOf("/../")) === -1) break;
+                if (0 === r) {
+                    s = s.substring(3);
+                    break
+                }
+                o = s.substring(0, r).lastIndexOf("/"), o === -1 && (o = r), s = s.substring(0, o) + s.substring(r + 3)
             }
-            o = s.substring(0, r).lastIndexOf("/"), o === -1 && (o = r), s = s.substring(0, o) + s.substring(r + 3)
-        }
-        return t && this.is("relative") && (s = n ? n + s : s.substring(1)), s = i.recodePath(s), this._parts.path = s, this.build(!e), this
-    }, l.normalizePathname = l.normalizePath, l.normalizeQuery = function(e) {
-        return "string" == typeof this._parts.query && (this._parts.query.length ? this.query(i.parseQuery(this._parts.query)) : this._parts.query = null, this.build(!e)), this
-    }, l.normalizeFragment = function(e) {
-        return this._parts.fragment || (this._parts.fragment = null, this.build(!e)), this
-    }, l.normalizeSearch = l.normalizeQuery, l.normalizeHash = l.normalizeFragment, l.iso8859 = function() {
-        var e = i.encode,
-            t = i.decode;
-        return i.encode = escape, i.decode = decodeURIComponent, this.normalize(), i.encode = e, i.decode = t, this
-    }, l.unicode = function() {
-        var e = i.encode,
-            t = i.decode;
-        return i.encode = a, i.decode = unescape, this.normalize(), i.encode = e, i.decode = t, this
-    }, l.readable = function() {
-        var t = this.clone();
-        t.username("").password("").normalize();
-        var n = "";
-        if (t._parts.protocol && (n += t._parts.protocol + "://"), t._parts.hostname && (t.is("punycode") && e ? (n += e.toUnicode(t._parts.hostname), t._parts.port && (n += ":" + t._parts.port)) : n += t.host()), t._parts.hostname && t._parts.path && "/" !== t._parts.path[0] && (n += "/"), n += t.path(!0), t._parts.query) {
-            for (var r = "", o = 0, s = t._parts.query.split("&"), a = s.length; o < a; o++) {
-                var l = (s[o] || "").split("=");
-                r += "&" + i.decodeQuery(l[0]).replace(/&/g, "%26"), void 0 !== l[1] && (r += "=" + i.decodeQuery(l[1]).replace(/&/g, "%26"))
+            return t && this.is("relative") && (s = n ? n + s : s.substring(1)), s = i.recodePath(s), this._parts.path = s, this.build(!e), this
+        }, l.normalizePathname = l.normalizePath, l.normalizeQuery = function(e) {
+            return "string" == typeof this._parts.query && (this._parts.query.length ? this.query(i.parseQuery(this._parts.query)) : this._parts.query = null, this.build(!e)), this
+        }, l.normalizeFragment = function(e) {
+            return this._parts.fragment || (this._parts.fragment = null, this.build(!e)), this
+        }, l.normalizeSearch = l.normalizeQuery, l.normalizeHash = l.normalizeFragment,
+        l.iso8859 = function() {
+            var e = i.encode,
+                t = i.decode;
+            return i.encode = escape, i.decode = decodeURIComponent, this.normalize(), i.encode = e, i.decode = t, this
+        }, l.unicode = function() {
+            var e = i.encode,
+                t = i.decode;
+            return i.encode = a, i.decode = unescape, this.normalize(), i.encode = e, i.decode = t, this
+        }, l.readable = function() {
+            var t = this.clone();
+            t.username("").password("").normalize();
+            var n = "";
+            if (t._parts.protocol && (n += t._parts.protocol + "://"), t._parts.hostname && (t.is("punycode") && e ? (n += e.toUnicode(t._parts.hostname), t._parts.port && (n += ":" + t._parts.port)) : n += t.host()), t._parts.hostname && t._parts.path && "/" !== t._parts.path[0] && (n += "/"), n += t.path(!0), t._parts.query) {
+                for (var r = "", o = 0, s = t._parts.query.split("&"), a = s.length; o < a; o++) {
+                    var l = (s[o] || "").split("=");
+                    r += "&" + i.decodeQuery(l[0]).replace(/&/g, "%26"), void 0 !== l[1] && (r += "=" + i.decodeQuery(l[1]).replace(/&/g, "%26"))
+                }
+                n += "?" + r.substring(1)
             }
-            n += "?" + r.substring(1)
-        }
-        return n += t.hash()
-    }, l.absoluteTo = function(e) {
-        var t, n, r, o = this.clone(),
-            s = ["protocol", "username", "password", "hostname", "port"];
-        if (this._parts.urn) throw new Error("URNs do not have any generally defined hierachical components");
-        if (this._parts.hostname) return o;
-        for (e instanceof i || (e = new i(e)), n = 0, r; r = s[n]; n++) o._parts[r] = e._parts[r];
-        for (s = ["query", "path"], n = 0, r; r = s[n]; n++) !o._parts[r] && e._parts[r] && (o._parts[r] = e._parts[r]);
-        return "/" !== o.path()[0] && (t = e.directory(), o._parts.path = (t ? t + "/" : "") + o._parts.path, o.normalizePath()), o.build(), o
-    }, l.relativeTo = function(e) {
-        var t, n, o = this.clone(),
-            s = ["protocol", "username", "password", "hostname", "port"];
-        if (this._parts.urn) throw new Error("URNs do not have any generally defined hierachical components");
-        if (e instanceof i || (e = new i(e)), "/" !== this.path()[0] || "/" !== e.path()[0]) throw new Error("Cannot calculate common path from non-relative URLs");
-        t = i.commonPath(o.path(), e.path()), n = e.directory();
-        for (var a, l = 0; a = s[l]; l++) o._parts[a] = null;
-        if (!t || "/" === t) return o;
-        if (n + "/" === t) o._parts.path = "./" + o.filename();
-        else {
-            for (var u = "../", c = new RegExp("^" + r(t)), h = n.replace(c, "/").match(/\//g).length - 1; h--;) u += "../";
-            o._parts.path = o._parts.path.replace(c, u)
-        }
-        return o.build(), o
-    }, l.equals = function(e) {
-        var t, n, r, s = this.clone(),
-            a = new i(e),
-            l = {},
-            c = {},
-            h = {};
-        if (s.normalize(), a.normalize(), s.toString() === a.toString()) return !0;
-        if (t = s.query(), n = a.query(), s.query(""), a.query(""), s.toString() !== a.toString()) return !1;
-        if (t.length !== n.length) return !1;
-        l = i.parseQuery(t), c = i.parseQuery(n);
-        for (r in l)
-            if (u.call(l, r)) {
-                if (o(l[r])) {
-                    if (!o(c[r])) return !1;
-                    if (l[r].length !== c[r].length) return !1;
-                    l[r].sort(), c[r].sort();
-                    for (var d = 0, f = l[r].length; d < f; d++)
-                        if (l[r][d] !== c[r][d]) return !1
-                } else if (l[r] !== c[r]) return !1;
-                h[r] = !0
+            return n += t.hash()
+        }, l.absoluteTo = function(e) {
+            var t, n, r, o = this.clone(),
+                s = ["protocol", "username", "password", "hostname", "port"];
+            if (this._parts.urn) throw new Error("URNs do not have any generally defined hierachical components");
+            if (this._parts.hostname) return o;
+            for (e instanceof i || (e = new i(e)), n = 0, r; r = s[n]; n++) o._parts[r] = e._parts[r];
+            for (s = ["query", "path"], n = 0, r; r = s[n]; n++) !o._parts[r] && e._parts[r] && (o._parts[r] = e._parts[r]);
+            return "/" !== o.path()[0] && (t = e.directory(), o._parts.path = (t ? t + "/" : "") + o._parts.path, o.normalizePath()), o.build(), o
+        }, l.relativeTo = function(e) {
+            var t, n, o = this.clone(),
+                s = ["protocol", "username", "password", "hostname", "port"];
+            if (this._parts.urn) throw new Error("URNs do not have any generally defined hierachical components");
+            if (e instanceof i || (e = new i(e)), "/" !== this.path()[0] || "/" !== e.path()[0]) throw new Error("Cannot calculate common path from non-relative URLs");
+            t = i.commonPath(o.path(), e.path()), n = e.directory();
+            for (var a, l = 0; a = s[l]; l++) o._parts[a] = null;
+            if (!t || "/" === t) return o;
+            if (n + "/" === t) o._parts.path = "./" + o.filename();
+            else {
+                for (var u = "../", c = new RegExp("^" + r(t)), h = n.replace(c, "/").match(/\//g).length - 1; h--;) u += "../";
+                o._parts.path = o._parts.path.replace(c, u)
             }
-        for (r in c)
-            if (u.call(c, r) && !h[r]) return !1;
-        return !0
-    }, l.duplicateQueryParameters = function(e) {
-        return this._parts.duplicateQueryParameters = !!e, this
-    }, i
+            return o.build(), o
+        }, l.equals = function(e) {
+            var t, n, r, s = this.clone(),
+                a = new i(e),
+                l = {},
+                c = {},
+                h = {};
+            if (s.normalize(), a.normalize(), s.toString() === a.toString()) return !0;
+            if (t = s.query(), n = a.query(), s.query(""), a.query(""), s.toString() !== a.toString()) return !1;
+            if (t.length !== n.length) return !1;
+            l = i.parseQuery(t), c = i.parseQuery(n);
+            for (r in l)
+                if (u.call(l, r)) {
+                    if (o(l[r])) {
+                        if (!o(c[r])) return !1;
+                        if (l[r].length !== c[r].length) return !1;
+                        l[r].sort(), c[r].sort();
+                        for (var d = 0, f = l[r].length; d < f; d++)
+                            if (l[r][d] !== c[r][d]) return !1
+                    } else if (l[r] !== c[r]) return !1;
+                    h[r] = !0
+                }
+            for (r in c)
+                if (u.call(c, r) && !h[r]) return !1;
+            return !0
+        }, l.duplicateQueryParameters = function(e) {
+            return this._parts.duplicateQueryParameters = !!e, this
+        }, i
 }),
 function(e) {
     var t = function(t, n) {
@@ -11156,7 +11165,7 @@ function(e, t) {
     function i() {
         var e = L.getElementsByTagName("body")[0],
             t = v(P);
-        t.setAttribute("style", "visibility: hidden;"), t.setAttribute("type", I);
+        t.setAttribute("style", "visibility: hidden;"), t.setAttribute("type", N);
         var n = e.appendChild(t);
         if (n) {
             var i = 0;
@@ -11216,7 +11225,7 @@ function(e, t) {
                 success: !1,
                 id: n
             }, r) {
-            "OBJECT" === r.nodeName.toUpperCase() ? (T = u(r), D = null) : (T = r, D = n), e.id = N, (typeof e.width === A || !/%$/.test(e.width) && y(e.width) < 310) && (e.width = "310"), (typeof e.height === A || !/%$/.test(e.height) && y(e.height) < 137) && (e.height = "137");
+            "OBJECT" === r.nodeName.toUpperCase() ? (T = u(r), D = null) : (T = r, D = n), e.id = I, (typeof e.width === A || !/%$/.test(e.width) && y(e.width) < 310) && (e.width = "310"), (typeof e.height === A || !/%$/.test(e.height) && y(e.height) < 137) && (e.height = "137");
             var o = Q.ie ? "ActiveX" : "PlugIn",
                 s = "MMredirectURL=" + encodeURIComponent(("" + R.location).replace(/&/g, "%26")) + "&MMplayerType=" + o + "&MMdoctitle=" + encodeURIComponent(L.title.slice(0, 47) + " - Flash Player Installation");
             if (typeof t.flashvars !== A ? t.flashvars += "&" + s : t.flashvars = s, Q.ie && 4 != r.readyState) {
@@ -11263,7 +11272,7 @@ function(e, t) {
             for (a in t) t.hasOwnProperty(a) && "movie" !== a.toLowerCase() && d(l, a, t[a]);
             Q.ie && (l = c(e.data, l.innerHTML));
             for (o in e) e.hasOwnProperty(o) && (s = o.toLowerCase(), "styleclass" === s ? l.setAttribute("class", e[o]) : "classid" !== s && "data" !== s && l.setAttribute(o, e[o]));
-            Q.ie ? U[U.length] = e.id : (l.setAttribute("type", I), l.setAttribute("data", e.data)), r.parentNode.replaceChild(l, r), i = l
+            Q.ie ? U[U.length] = e.id : (l.setAttribute("type", N), l.setAttribute("data", e.data)), r.parentNode.replaceChild(l, r), i = l
         }
         return i
     }
@@ -11345,8 +11354,8 @@ function(e, t) {
     var T, D, S, C, M, E, A = "undefined",
         P = "object",
         O = "Shockwave Flash",
-        I = "application/x-shockwave-flash",
-        N = "SWFObjectExprInst",
+        N = "application/x-shockwave-flash",
+        I = "SWFObjectExprInst",
         j = "onreadystatechange",
         R = window,
         L = document,
@@ -11370,7 +11379,7 @@ function(e, t) {
                 s = "Microsoft Internet Explorer" === F.appName,
                 a = [0, 0, 0],
                 l = null;
-            if (typeof F.plugins !== A && typeof F.plugins[O] === P)(l = F.plugins[O].description) && typeof F.mimeTypes !== A && F.mimeTypes[I] && F.mimeTypes[I].enabledPlugin && (H = !0, s = !1, l = l.replace(/^.*\s+(\S+\s+\S+$)/, "$1"), a[0] = y(l.replace(/^(.*)\..*$/, "$1")), a[1] = y(l.replace(/^.*\.(.*)\s.*$/, "$1")), a[2] = /[a-zA-Z]/.test(l) ? y(l.replace(/^.*[a-zA-Z]+(.*)$/, "$1")) : 0);
+            if (typeof F.plugins !== A && typeof F.plugins[O] === P)(l = F.plugins[O].description) && typeof F.mimeTypes !== A && F.mimeTypes[N] && F.mimeTypes[N].enabledPlugin && (H = !0, s = !1, l = l.replace(/^.*\s+(\S+\s+\S+$)/, "$1"), a[0] = y(l.replace(/^(.*)\..*$/, "$1")), a[1] = y(l.replace(/^.*\.(.*)\s.*$/, "$1")), a[2] = /[a-zA-Z]/.test(l) ? y(l.replace(/^.*[a-zA-Z]+(.*)$/, "$1")) : 0);
             else if (typeof R.ActiveXObject !== A) try {
                 var u = new ActiveXObject("ShockwaveFlash.ShockwaveFlash");
                 u && (l = u.GetVariable("$version")) && (s = !0, l = l.split(" ")[1].split(","), a = [y(l[0]), y(l[1]), y(l[2])])
@@ -11496,7 +11505,7 @@ function(e, t) {
             },
             expressInstallCallback: function() {
                 if (q) {
-                    var e = g(N);
+                    var e = g(I);
                     e && T && (e.parentNode.replaceChild(T, e), D && (x(D, !0), Q.ie && (T.style.display = "block")), S && S(C)), q = !1
                 }
             },
@@ -13112,18 +13121,18 @@ function(e, t) {
             return k(n) ? n(t) : n.replace(/%s/i, t)
         }
 
-        function I(e, t) {
+        function N(e, t) {
             var n = e.toLowerCase();
             xi[n] = xi[n + "s"] = xi[t] = e
         }
 
-        function N(e) {
+        function I(e) {
             return "string" == typeof e ? xi[e] || xi[e.toLowerCase()] : void 0
         }
 
         function j(e) {
             var t, n, i = {};
-            for (n in e) s(e, n) && (t = N(n)) && (i[t] = e[n]);
+            for (n in e) s(e, n) && (t = I(n)) && (i[t] = e[n]);
             return i
         }
 
@@ -13157,14 +13166,14 @@ function(e, t) {
         }
 
         function W(e) {
-            return e = N(e), k(this[e]) ? this[e]() : this
+            return e = I(e), k(this[e]) ? this[e]() : this
         }
 
         function U(e, t) {
             if ("object" == typeof e) {
                 e = j(e);
                 for (var n = L(e), i = 0; i < n.length; i++) this[n[i].unit](e[n[i].unit])
-            } else if (e = N(e), k(this[e])) return this[e](t);
+            } else if (e = I(e), k(this[e])) return this[e](t);
             return this
         }
 
@@ -13236,7 +13245,7 @@ function(e, t) {
             var n, i = t;
             for ("string" == typeof e && (e = [e]), "number" == typeof t && (i = function(e, n) {
                     n[t] = y(e)
-                }), n = 0; n < e.length; n++) Ii[e[n]] = i
+                }), n = 0; n < e.length; n++) Ni[e[n]] = i
         }
 
         function ee(e, t) {
@@ -13246,7 +13255,7 @@ function(e, t) {
         }
 
         function te(e, t, n) {
-            null != t && s(Ii, e) && Ii[e](t, n._a, n, e)
+            null != t && s(Ni, e) && Ni[e](t, n._a, n, e)
         }
 
         function ne(e, t) {
@@ -13417,7 +13426,7 @@ function(e, t) {
             return n ? "dddd" === t ? (r = yi.call(this._weekdaysParse, s), r !== -1 ? r : null) : "ddd" === t ? (r = yi.call(this._shortWeekdaysParse, s), r !== -1 ? r : null) : (r = yi.call(this._minWeekdaysParse, s), r !== -1 ? r : null) : "dddd" === t ? (r = yi.call(this._weekdaysParse, s)) !== -1 ? r : (r = yi.call(this._shortWeekdaysParse, s)) !== -1 ? r : (r = yi.call(this._minWeekdaysParse, s), r !== -1 ? r : null) : "ddd" === t ? (r = yi.call(this._shortWeekdaysParse, s)) !== -1 ? r : (r = yi.call(this._weekdaysParse, s)) !== -1 ? r : (r = yi.call(this._minWeekdaysParse, s), r !== -1 ? r : null) : (r = yi.call(this._minWeekdaysParse, s)) !== -1 ? r : (r = yi.call(this._weekdaysParse, s)) !== -1 ? r : (r = yi.call(this._shortWeekdaysParse, s), r !== -1 ? r : null)
         }
 
-        function Ie(e, t, n) {
+        function Ne(e, t, n) {
             var i, r, o;
             if (this._weekdaysParseExact) return Oe.call(this, e, t, n);
             for (this._weekdaysParse || (this._weekdaysParse = [], this._minWeekdaysParse = [], this._shortWeekdaysParse = [], this._fullWeekdaysParse = []), i = 0; i < 7; i++) {
@@ -13428,7 +13437,7 @@ function(e, t) {
             }
         }
 
-        function Ne(e) {
+        function Ie(e) {
             if (!this.isValid()) return null != e ? this : NaN;
             var t = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
             return null != e ? (e = Ce(e, this.localeData()), this.add(e - t, "d")) : t
@@ -13561,7 +13570,7 @@ function(e, t) {
 
         function tt(e) {
             var t, n = e._a;
-            return n && c(e).overflow === -2 && (t = n[ji] < 0 || n[ji] > 11 ? ji : n[Ri] < 1 || n[Ri] > ne(n[Ni], n[ji]) ? Ri : n[Li] < 0 || n[Li] > 24 || 24 === n[Li] && (0 !== n[Fi] || 0 !== n[Hi] || 0 !== n[zi]) ? Li : n[Fi] < 0 || n[Fi] > 59 ? Fi : n[Hi] < 0 || n[Hi] > 59 ? Hi : n[zi] < 0 || n[zi] > 999 ? zi : -1, c(e)._overflowDayOfYear && (t < Ni || t > Ri) && (t = Ri), c(e)._overflowWeeks && t === -1 && (t = Wi), c(e)._overflowWeekday && t === -1 && (t = Ui), c(e).overflow = t), e
+            return n && c(e).overflow === -2 && (t = n[ji] < 0 || n[ji] > 11 ? ji : n[Ri] < 1 || n[Ri] > ne(n[Ii], n[ji]) ? Ri : n[Li] < 0 || n[Li] > 24 || 24 === n[Li] && (0 !== n[Fi] || 0 !== n[Hi] || 0 !== n[zi]) ? Li : n[Fi] < 0 || n[Fi] > 59 ? Fi : n[Hi] < 0 || n[Hi] > 59 ? Hi : n[zi] < 0 || n[zi] > 999 ? zi : -1, c(e)._overflowDayOfYear && (t < Ii || t > Ri) && (t = Ri), c(e)._overflowWeeks && t === -1 && (t = Wi), c(e)._overflowWeekday && t === -1 && (t = Ui), c(e).overflow = t), e
         }
 
         function nt(e) {
@@ -13609,7 +13618,7 @@ function(e, t) {
         function st(e) {
             var t, n, i, r, o = [];
             if (!e._d) {
-                for (i = ot(e), e._w && null == e._a[Ri] && null == e._a[ji] && at(e), e._dayOfYear && (r = rt(e._a[Ni], i[Ni]), e._dayOfYear > fe(r) && (c(e)._overflowDayOfYear = !0), n = ve(r, 0, e._dayOfYear), e._a[ji] = n.getUTCMonth(), e._a[Ri] = n.getUTCDate()), t = 0; t < 3 && null == e._a[t]; ++t) e._a[t] = o[t] = i[t];
+                for (i = ot(e), e._w && null == e._a[Ri] && null == e._a[ji] && at(e), e._dayOfYear && (r = rt(e._a[Ii], i[Ii]), e._dayOfYear > fe(r) && (c(e)._overflowDayOfYear = !0), n = ve(r, 0, e._dayOfYear), e._a[ji] = n.getUTCMonth(), e._a[Ri] = n.getUTCDate()), t = 0; t < 3 && null == e._a[t]; ++t) e._a[t] = o[t] = i[t];
                 for (; t < 7; t++) e._a[t] = o[t] = null == e._a[t] ? 2 === t ? 1 : 0 : e._a[t];
                 24 === e._a[Li] && 0 === e._a[Fi] && 0 === e._a[Hi] && 0 === e._a[zi] && (e._nextDay = !0, e._a[Li] = 0), e._d = (e._useUTC ? ve : ge).apply(null, o), null != e._tzm && e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), e._nextDay && (e._a[Li] = 24)
             }
@@ -13617,7 +13626,7 @@ function(e, t) {
 
         function at(e) {
             var t, n, i, r, o, s, a, l;
-            t = e._w, null != t.GG || null != t.W || null != t.E ? (o = 1, s = 4, n = rt(t.GG, e._a[Ni], be(gt(), 1, 4).year), i = rt(t.W, 1), ((r = rt(t.E, 1)) < 1 || r > 7) && (l = !0)) : (o = e._locale._week.dow, s = e._locale._week.doy, n = rt(t.gg, e._a[Ni], be(gt(), o, s).year), i = rt(t.w, 1), null != t.d ? ((r = t.d) < 0 || r > 6) && (l = !0) : null != t.e ? (r = t.e + o, (t.e < 0 || t.e > 6) && (l = !0)) : r = o), i < 1 || i > we(n, o, s) ? c(e)._overflowWeeks = !0 : null != l ? c(e)._overflowWeekday = !0 : (a = _e(n, i, r, o, s), e._a[Ni] = a.year, e._dayOfYear = a.dayOfYear)
+            t = e._w, null != t.GG || null != t.W || null != t.E ? (o = 1, s = 4, n = rt(t.GG, e._a[Ii], be(gt(), 1, 4).year), i = rt(t.W, 1), ((r = rt(t.E, 1)) < 1 || r > 7) && (l = !0)) : (o = e._locale._week.dow, s = e._locale._week.doy, n = rt(t.gg, e._a[Ii], be(gt(), o, s).year), i = rt(t.w, 1), null != t.d ? ((r = t.d) < 0 || r > 6) && (l = !0) : null != t.e ? (r = t.e + o, (t.e < 0 || t.e > 6) && (l = !0)) : r = o), i < 1 || i > we(n, o, s) ? c(e)._overflowWeeks = !0 : null != l ? c(e)._overflowWeekday = !0 : (a = _e(n, i, r, o, s), e._a[Ii] = a.year, e._dayOfYear = a.dayOfYear)
         }
 
         function lt(t) {
@@ -13767,7 +13776,7 @@ function(e, t) {
             return this.utcOffset() > this.clone().month(0).utcOffset() || this.utcOffset() > this.clone().month(5).utcOffset()
         }
 
-        function It() {
+        function Nt() {
             if (!f(this._isDSTShifted)) return this._isDSTShifted;
             var e = {};
             if (p(e, this), e = ft(e), e._a) {
@@ -13777,7 +13786,7 @@ function(e, t) {
             return this._isDSTShifted
         }
 
-        function Nt() {
+        function It() {
             return !!this.isValid() && !this._isUTC
         }
 
@@ -13872,12 +13881,12 @@ function(e, t) {
 
         function Vt(e, t) {
             var n = g(e) ? e : gt(e);
-            return !(!this.isValid() || !n.isValid()) && (t = N(f(t) ? "millisecond" : t), "millisecond" === t ? this.valueOf() > n.valueOf() : n.valueOf() < this.clone().startOf(t).valueOf())
+            return !(!this.isValid() || !n.isValid()) && (t = I(f(t) ? "millisecond" : t), "millisecond" === t ? this.valueOf() > n.valueOf() : n.valueOf() < this.clone().startOf(t).valueOf())
         }
 
         function Qt(e, t) {
             var n = g(e) ? e : gt(e);
-            return !(!this.isValid() || !n.isValid()) && (t = N(f(t) ? "millisecond" : t), "millisecond" === t ? this.valueOf() < n.valueOf() : this.clone().endOf(t).valueOf() < n.valueOf())
+            return !(!this.isValid() || !n.isValid()) && (t = I(f(t) ? "millisecond" : t), "millisecond" === t ? this.valueOf() < n.valueOf() : this.clone().endOf(t).valueOf() < n.valueOf())
         }
 
         function Gt(e, t, n, i) {
@@ -13886,7 +13895,7 @@ function(e, t) {
 
         function Xt(e, t) {
             var n, i = g(e) ? e : gt(e);
-            return !(!this.isValid() || !i.isValid()) && (t = N(t || "millisecond"), "millisecond" === t ? this.valueOf() === i.valueOf() : (n = i.valueOf(), this.clone().startOf(t).valueOf() <= n && n <= this.clone().endOf(t).valueOf()))
+            return !(!this.isValid() || !i.isValid()) && (t = I(t || "millisecond"), "millisecond" === t ? this.valueOf() === i.valueOf() : (n = i.valueOf(), this.clone().startOf(t).valueOf() <= n && n <= this.clone().endOf(t).valueOf()))
         }
 
         function Kt(e, t) {
@@ -13899,7 +13908,7 @@ function(e, t) {
 
         function Zt(e, t, n) {
             var i, r, o, s;
-            return this.isValid() ? (i = Tt(e, this), i.isValid() ? (r = 6e4 * (i.utcOffset() - this.utcOffset()), t = N(t), "year" === t || "month" === t || "quarter" === t ? (s = en(this, i), "quarter" === t ? s /= 3 : "year" === t && (s /= 12)) : (o = this - i, s = "second" === t ? o / 1e3 : "minute" === t ? o / 6e4 : "hour" === t ? o / 36e5 : "day" === t ? (o - r) / 864e5 : "week" === t ? (o - r) / 6048e5 : o), n ? s : v(s)) : NaN) : NaN
+            return this.isValid() ? (i = Tt(e, this), i.isValid() ? (r = 6e4 * (i.utcOffset() - this.utcOffset()), t = I(t), "year" === t || "month" === t || "quarter" === t ? (s = en(this, i), "quarter" === t ? s /= 3 : "year" === t && (s /= 12)) : (o = this - i, s = "second" === t ? o / 1e3 : "minute" === t ? o / 6e4 : "hour" === t ? o / 36e5 : "day" === t ? (o - r) / 864e5 : "week" === t ? (o - r) / 6048e5 : o), n ? s : v(s)) : NaN) : NaN
         }
 
         function en(e, t) {
@@ -13955,7 +13964,7 @@ function(e, t) {
         }
 
         function hn(e) {
-            switch (e = N(e)) {
+            switch (e = I(e)) {
                 case "year":
                     this.month(0);
                 case "quarter":
@@ -13977,7 +13986,7 @@ function(e, t) {
         }
 
         function dn(e) {
-            return void 0 === (e = N(e)) || "millisecond" === e ? this : ("date" === e && (e = "day"), this.startOf(e).add(1, "isoWeek" === e ? "week" : e).subtract(1, "ms"))
+            return void 0 === (e = I(e)) || "millisecond" === e ? this : ("date" === e && (e = "day"), this.startOf(e).add(1, "isoWeek" === e ? "week" : e).subtract(1, "ms"))
         }
 
         function fn() {
@@ -14081,11 +14090,11 @@ function(e, t) {
             t[zi] = y(1e3 * ("0." + e))
         }
 
-        function In() {
+        function Nn() {
             return this._isUTC ? "UTC" : ""
         }
 
-        function Nn() {
+        function In() {
             return this._isUTC ? "Coordinated Universal Time" : ""
         }
 
@@ -14184,7 +14193,7 @@ function(e, t) {
 
         function ei(e) {
             var t, n, i = this._milliseconds;
-            if ("month" === (e = N(e)) || "year" === e) return t = this._days + i / 864e5, n = this._months + Jn(t), "month" === e ? n : n / 12;
+            if ("month" === (e = I(e)) || "year" === e) return t = this._days + i / 864e5, n = this._months + Jn(t), "month" === e ? n : n / 12;
             switch (t = this._days + Math.round(Zn(this._months)), e) {
                 case "week":
                     return t / 7 + i / 6048e5;
@@ -14214,7 +14223,7 @@ function(e, t) {
         }
 
         function ii(e) {
-            return e = N(e), this[e + "s"]()
+            return e = I(e), this[e + "s"]()
         }
 
         function ri(e) {
@@ -14329,8 +14338,8 @@ function(e, t) {
             Ai = /Z|[+-]\d\d(?::?\d\d)?/gi,
             Pi = /[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF\/]+(\s*?[\u0600-\u06FF]+){1,2}/i,
             Oi = {},
-            Ii = {},
-            Ni = 0,
+            Ni = {},
+            Ii = 0,
             ji = 1,
             Ri = 2,
             Li = 3,
@@ -14350,7 +14359,7 @@ function(e, t) {
             return this.localeData().monthsShort(this, e)
         }), Y("MMMM", 0, 0, function(e) {
             return this.localeData().months(this, e)
-        }), I("month", "M"), R("month", 8), G("M", /\d\d?/), G("MM", /\d\d?/, /\d\d/), G("MMM", function(e, t) {
+        }), N("month", "M"), R("month", 8), G("M", /\d\d?/), G("MM", /\d\d?/, /\d\d/), G("MMM", function(e, t) {
             return t.monthsShortRegex(e)
         }), G("MMMM", function(e, t) {
             return t.monthsRegex(e)
@@ -14370,17 +14379,17 @@ function(e, t) {
             return e <= 9999 ? "" + e : "+" + e
         }), Y(0, ["YY", 2], 0, function() {
             return this.year() % 100
-        }), Y(0, ["YYYY", 4], 0, "year"), Y(0, ["YYYYY", 5], 0, "year"), Y(0, ["YYYYYY", 6, !0], 0, "year"), I("year", "y"), R("year", 1), G("Y", /[+-]?\d+/), G("YY", /\d\d?/, /\d\d/), G("YYYY", /\d{1,4}/, /\d{4}/), G("YYYYY", /[+-]?\d{1,6}/, Mi), G("YYYYYY", /[+-]?\d{1,6}/, Mi), Z(["YYYYY", "YYYYYY"], Ni), Z("YYYY", function(t, n) {
-            n[Ni] = 2 === t.length ? e.parseTwoDigitYear(t) : y(t)
+        }), Y(0, ["YYYY", 4], 0, "year"), Y(0, ["YYYYY", 5], 0, "year"), Y(0, ["YYYYYY", 6, !0], 0, "year"), N("year", "y"), R("year", 1), G("Y", /[+-]?\d+/), G("YY", /\d\d?/, /\d\d/), G("YYYY", /\d{1,4}/, /\d{4}/), G("YYYYY", /[+-]?\d{1,6}/, Mi), G("YYYYYY", /[+-]?\d{1,6}/, Mi), Z(["YYYYY", "YYYYYY"], Ii), Z("YYYY", function(t, n) {
+            n[Ii] = 2 === t.length ? e.parseTwoDigitYear(t) : y(t)
         }), Z("YY", function(t, n) {
-            n[Ni] = e.parseTwoDigitYear(t)
+            n[Ii] = e.parseTwoDigitYear(t)
         }), Z("Y", function(e, t) {
-            t[Ni] = parseInt(e, 10)
+            t[Ii] = parseInt(e, 10)
         }), e.parseTwoDigitYear = function(e) {
             return y(e) + (y(e) > 68 ? 1900 : 2e3)
         };
         var Qi = F("FullYear", !0);
-        Y("w", ["ww", 2], "wo", "week"), Y("W", ["WW", 2], "Wo", "isoWeek"), I("week", "w"), I("isoWeek", "W"), R("week", 5), R("isoWeek", 5), G("w", /\d\d?/), G("ww", /\d\d?/, /\d\d/), G("W", /\d\d?/), G("WW", /\d\d?/, /\d\d/), ee(["w", "ww", "W", "WW"], function(e, t, n, i) {
+        Y("w", ["ww", 2], "wo", "week"), Y("W", ["WW", 2], "Wo", "isoWeek"), N("week", "w"), N("isoWeek", "W"), R("week", 5), R("isoWeek", 5), G("w", /\d\d?/), G("ww", /\d\d?/, /\d\d/), G("W", /\d\d?/), G("WW", /\d\d?/, /\d\d/), ee(["w", "ww", "W", "WW"], function(e, t, n, i) {
             t[i.substr(0, 1)] = y(e)
         });
         var Gi = {
@@ -14393,7 +14402,7 @@ function(e, t) {
             return this.localeData().weekdaysShort(this, e)
         }), Y("dddd", 0, 0, function(e) {
             return this.localeData().weekdays(this, e)
-        }), Y("e", 0, 0, "weekday"), Y("E", 0, 0, "isoWeekday"), I("day", "d"), I("weekday", "e"), I("isoWeekday", "E"), R("day", 11), R("weekday", 11), R("isoWeekday", 11), G("d", /\d\d?/), G("e", /\d\d?/), G("E", /\d\d?/), G("dd", function(e, t) {
+        }), Y("e", 0, 0, "weekday"), Y("E", 0, 0, "isoWeekday"), N("day", "d"), N("weekday", "e"), N("isoWeekday", "E"), R("day", 11), R("weekday", 11), R("isoWeekday", 11), G("d", /\d\d?/), G("e", /\d\d?/), G("E", /\d\d?/), G("dd", function(e, t) {
             return t.weekdaysMinRegex(e)
         }), G("ddd", function(e, t) {
             return t.weekdaysShortRegex(e)
@@ -14419,7 +14428,7 @@ function(e, t) {
             return "" + this.hours() + $(this.minutes(), 2)
         }), Y("Hmmss", 0, 0, function() {
             return "" + this.hours() + $(this.minutes(), 2) + $(this.seconds(), 2)
-        }), $e("a", !0), $e("A", !1), I("hour", "h"), R("hour", 13), G("a", Ye), G("A", Ye), G("H", /\d\d?/), G("h", /\d\d?/), G("HH", /\d\d?/, /\d\d/), G("hh", /\d\d?/, /\d\d/), G("hmm", /\d\d\d\d?/), G("hmmss", /\d\d\d\d\d\d?/), G("Hmm", /\d\d\d\d?/), G("Hmmss", /\d\d\d\d\d\d?/), Z(["H", "HH"], Li), Z(["a", "A"], function(e, t, n) {
+        }), $e("a", !0), $e("A", !1), N("hour", "h"), R("hour", 13), G("a", Ye), G("A", Ye), G("H", /\d\d?/), G("h", /\d\d?/), G("HH", /\d\d?/, /\d\d/), G("hh", /\d\d?/, /\d\d/), G("hmm", /\d\d\d\d?/), G("hmmss", /\d\d\d\d\d\d?/), G("Hmm", /\d\d\d\d?/), G("Hmmss", /\d\d\d\d\d\d?/), Z(["H", "HH"], Li), Z(["a", "A"], function(e, t, n) {
             n._isPm = n._locale.isPM(e), n._meridiem = e
         }), Z(["h", "hh"], function(e, t, n) {
             t[Li] = y(e), c(n).bigHour = !0
@@ -14515,24 +14524,24 @@ function(e, t) {
                 return this.weekYear() % 100
             }), Y(0, ["GG", 2], 0, function() {
                 return this.isoWeekYear() % 100
-            }), kn("gggg", "weekYear"), kn("ggggg", "weekYear"), kn("GGGG", "isoWeekYear"), kn("GGGGG", "isoWeekYear"), I("weekYear", "gg"), I("isoWeekYear", "GG"), R("weekYear", 1), R("isoWeekYear", 1), G("G", /[+-]?\d+/), G("g", /[+-]?\d+/), G("GG", /\d\d?/, /\d\d/), G("gg", /\d\d?/, /\d\d/), G("GGGG", /\d{1,4}/, /\d{4}/), G("gggg", /\d{1,4}/, /\d{4}/), G("GGGGG", /[+-]?\d{1,6}/, Mi), G("ggggg", /[+-]?\d{1,6}/, Mi), ee(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, i) {
+            }), kn("gggg", "weekYear"), kn("ggggg", "weekYear"), kn("GGGG", "isoWeekYear"), kn("GGGGG", "isoWeekYear"), N("weekYear", "gg"), N("isoWeekYear", "GG"), R("weekYear", 1), R("isoWeekYear", 1), G("G", /[+-]?\d+/), G("g", /[+-]?\d+/), G("GG", /\d\d?/, /\d\d/), G("gg", /\d\d?/, /\d\d/), G("GGGG", /\d{1,4}/, /\d{4}/), G("gggg", /\d{1,4}/, /\d{4}/), G("GGGGG", /[+-]?\d{1,6}/, Mi), G("ggggg", /[+-]?\d{1,6}/, Mi), ee(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, i) {
                 t[i.substr(0, 2)] = y(e)
             }), ee(["gg", "GG"], function(t, n, i, r) {
                 n[r] = e.parseTwoDigitYear(t)
-            }), Y("Q", 0, "Qo", "quarter"), I("quarter", "Q"), R("quarter", 7), G("Q", /\d/), Z("Q", function(e, t) {
-                t[ji] = 3 * (y(e) - 1)
             }),
-            Y("D", ["DD", 2], "Do", "date"), I("date", "D"), R("date", 9), G("D", /\d\d?/), G("DD", /\d\d?/, /\d\d/), G("Do", function(e, t) {
+            Y("Q", 0, "Qo", "quarter"), N("quarter", "Q"), R("quarter", 7), G("Q", /\d/), Z("Q", function(e, t) {
+                t[ji] = 3 * (y(e) - 1)
+            }), Y("D", ["DD", 2], "Do", "date"), N("date", "D"), R("date", 9), G("D", /\d\d?/), G("DD", /\d\d?/, /\d\d/), G("Do", function(e, t) {
                 return e ? t._ordinalParse : t._ordinalParseLenient
             }), Z(["D", "DD"], Ri), Z("Do", function(e, t) {
                 t[Ri] = y(e.match(/\d\d?/)[0], 10)
             });
         var wr = F("Date", !0);
-        Y("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), I("dayOfYear", "DDD"), R("dayOfYear", 4), G("DDD", /\d{1,3}/), G("DDDD", /\d{3}/), Z(["DDD", "DDDD"], function(e, t, n) {
+        Y("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), N("dayOfYear", "DDD"), R("dayOfYear", 4), G("DDD", /\d{1,3}/), G("DDDD", /\d{3}/), Z(["DDD", "DDDD"], function(e, t, n) {
             n._dayOfYear = y(e)
-        }), Y("m", ["mm", 2], 0, "minute"), I("minute", "m"), R("minute", 14), G("m", /\d\d?/), G("mm", /\d\d?/, /\d\d/), Z(["m", "mm"], Fi);
+        }), Y("m", ["mm", 2], 0, "minute"), N("minute", "m"), R("minute", 14), G("m", /\d\d?/), G("mm", /\d\d?/, /\d\d/), Z(["m", "mm"], Fi);
         var xr = F("Minutes", !1);
-        Y("s", ["ss", 2], 0, "second"), I("second", "s"), R("second", 15), G("s", /\d\d?/), G("ss", /\d\d?/, /\d\d/), Z(["s", "ss"], Hi);
+        Y("s", ["ss", 2], 0, "second"), N("second", "s"), R("second", 15), G("s", /\d\d?/), G("ss", /\d\d?/, /\d\d/), Z(["s", "ss"], Hi);
         var kr = F("Seconds", !1);
         Y("S", 0, 0, function() {
             return ~~(this.millisecond() / 100)
@@ -14550,17 +14559,17 @@ function(e, t) {
             return 1e5 * this.millisecond()
         }), Y(0, ["SSSSSSSSS", 9], 0, function() {
             return 1e6 * this.millisecond()
-        }), I("millisecond", "ms"), R("millisecond", 16), G("S", /\d{1,3}/, /\d/), G("SS", /\d{1,3}/, /\d\d/), G("SSS", /\d{1,3}/, /\d{3}/);
+        }), N("millisecond", "ms"), R("millisecond", 16), G("S", /\d{1,3}/, /\d/), G("SS", /\d{1,3}/, /\d\d/), G("SSS", /\d{1,3}/, /\d{3}/);
         var Tr;
         for (Tr = "SSSS"; Tr.length <= 9; Tr += "S") G(Tr, /\d+/);
         for (Tr = "S"; Tr.length <= 9; Tr += "S") Z(Tr, On);
         var Dr = F("Milliseconds", !1);
         Y("z", 0, 0, "zoneAbbr"), Y("zz", 0, 0, "zoneName");
         var Sr = m.prototype;
-        Sr.add = yr, Sr.calendar = qt, Sr.clone = Bt, Sr.diff = Zt, Sr.endOf = dn, Sr.format = rn, Sr.from = on, Sr.fromNow = sn, Sr.to = an, Sr.toNow = ln, Sr.get = W, Sr.invalidAt = wn, Sr.isAfter = Vt, Sr.isBefore = Qt, Sr.isBetween = Gt, Sr.isSame = Xt, Sr.isSameOrAfter = Kt, Sr.isSameOrBefore = Jt, Sr.isValid = _n, Sr.lang = br, Sr.locale = un, Sr.localeData = cn, Sr.max = fr, Sr.min = dr, Sr.parsingFlags = bn, Sr.set = U, Sr.startOf = hn, Sr.subtract = _r, Sr.toArray = gn, Sr.toObject = vn, Sr.toDate = mn, Sr.toISOString = nn, Sr.toJSON = yn, Sr.toString = tn, Sr.unix = pn, Sr.valueOf = fn, Sr.creationData = xn, Sr.year = Qi, Sr.isLeapYear = me, Sr.weekYear = Tn, Sr.isoWeekYear = Dn, Sr.quarter = Sr.quarters = An, Sr.month = le, Sr.daysInMonth = ue, Sr.week = Sr.weeks = De, Sr.isoWeek = Sr.isoWeeks = Se, Sr.weeksInYear = Cn, Sr.isoWeeksInYear = Sn, Sr.date = wr, Sr.day = Sr.days = Ne, Sr.weekday = je, Sr.isoWeekday = Re, Sr.dayOfYear = Pn, Sr.hour = Sr.hours = ir, Sr.minute = Sr.minutes = xr, Sr.second = Sr.seconds = kr, Sr.millisecond = Sr.milliseconds = Dr, Sr.utcOffset = St, Sr.utc = Mt, Sr.local = Et, Sr.parseZone = At, Sr.hasAlignedHourOffset = Pt, Sr.isDST = Ot, Sr.isLocal = Nt, Sr.isUtcOffset = jt, Sr.isUtc = Rt, Sr.isUTC = Rt, Sr.zoneAbbr = In, Sr.zoneName = Nn, Sr.dates = w("dates accessor is deprecated. Use date instead.", wr), Sr.months = w("months accessor is deprecated. Use month instead", le), Sr.years = w("years accessor is deprecated. Use year instead", Qi), Sr.zone = w("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", Ct), Sr.isDSTShifted = w("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", It);
+        Sr.add = yr, Sr.calendar = qt, Sr.clone = Bt, Sr.diff = Zt, Sr.endOf = dn, Sr.format = rn, Sr.from = on, Sr.fromNow = sn, Sr.to = an, Sr.toNow = ln, Sr.get = W, Sr.invalidAt = wn, Sr.isAfter = Vt, Sr.isBefore = Qt, Sr.isBetween = Gt, Sr.isSame = Xt, Sr.isSameOrAfter = Kt, Sr.isSameOrBefore = Jt, Sr.isValid = _n, Sr.lang = br, Sr.locale = un, Sr.localeData = cn, Sr.max = fr, Sr.min = dr, Sr.parsingFlags = bn, Sr.set = U, Sr.startOf = hn, Sr.subtract = _r, Sr.toArray = gn, Sr.toObject = vn, Sr.toDate = mn, Sr.toISOString = nn, Sr.toJSON = yn, Sr.toString = tn, Sr.unix = pn, Sr.valueOf = fn, Sr.creationData = xn, Sr.year = Qi, Sr.isLeapYear = me, Sr.weekYear = Tn, Sr.isoWeekYear = Dn, Sr.quarter = Sr.quarters = An, Sr.month = le, Sr.daysInMonth = ue, Sr.week = Sr.weeks = De, Sr.isoWeek = Sr.isoWeeks = Se, Sr.weeksInYear = Cn, Sr.isoWeeksInYear = Sn, Sr.date = wr, Sr.day = Sr.days = Ie, Sr.weekday = je, Sr.isoWeekday = Re, Sr.dayOfYear = Pn, Sr.hour = Sr.hours = ir, Sr.minute = Sr.minutes = xr, Sr.second = Sr.seconds = kr, Sr.millisecond = Sr.milliseconds = Dr, Sr.utcOffset = St, Sr.utc = Mt, Sr.local = Et, Sr.parseZone = At, Sr.hasAlignedHourOffset = Pt, Sr.isDST = Ot, Sr.isLocal = It, Sr.isUtcOffset = jt, Sr.isUtc = Rt, Sr.isUTC = Rt, Sr.zoneAbbr = Nn, Sr.zoneName = In, Sr.dates = w("dates accessor is deprecated. Use date instead.", wr), Sr.months = w("months accessor is deprecated. Use month instead", le), Sr.years = w("years accessor is deprecated. Use year instead", Qi), Sr.zone = w("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", Ct), Sr.isDSTShifted = w("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", Nt);
         var Cr = Sr,
             Mr = S.prototype;
-        Mr.calendar = C, Mr.longDateFormat = M, Mr.invalidDate = E, Mr.ordinal = A, Mr.preparse = Ln, Mr.postformat = Ln, Mr.relativeTime = P, Mr.pastFuture = O, Mr.set = T, Mr.months = ie, Mr.monthsShort = re, Mr.monthsParse = se, Mr.monthsRegex = he, Mr.monthsShortRegex = ce, Mr.week = xe, Mr.firstDayOfYear = Te, Mr.firstDayOfWeek = ke, Mr.weekdays = Ee, Mr.weekdaysMin = Pe, Mr.weekdaysShort = Ae, Mr.weekdaysParse = Ie, Mr.weekdaysRegex = Le, Mr.weekdaysShortRegex = Fe, Mr.weekdaysMinRegex = He, Mr.isPM = qe, Mr.meridiem = Be, Xe("en", {
+        Mr.calendar = C, Mr.longDateFormat = M, Mr.invalidDate = E, Mr.ordinal = A, Mr.preparse = Ln, Mr.postformat = Ln, Mr.relativeTime = P, Mr.pastFuture = O, Mr.set = T, Mr.months = ie, Mr.monthsShort = re, Mr.monthsParse = se, Mr.monthsRegex = he, Mr.monthsShortRegex = ce, Mr.week = xe, Mr.firstDayOfYear = Te, Mr.firstDayOfWeek = ke, Mr.weekdays = Ee, Mr.weekdaysMin = Pe, Mr.weekdaysShort = Ae, Mr.weekdaysParse = Ne, Mr.weekdaysRegex = Le, Mr.weekdaysShortRegex = Fe, Mr.weekdaysMinRegex = He, Mr.isPM = qe, Mr.meridiem = Be, Xe("en", {
             ordinalParse: /\d{1,2}(th|st|nd|rd)/,
             ordinal: function(e) {
                 var t = e % 10;
@@ -14571,8 +14580,8 @@ function(e, t) {
             Ar = ni("ms"),
             Pr = ni("s"),
             Or = ni("m"),
-            Ir = ni("h"),
-            Nr = ni("d"),
+            Nr = ni("h"),
+            Ir = ni("d"),
             jr = ni("w"),
             Rr = ni("M"),
             Lr = ni("y"),
@@ -14593,14 +14602,14 @@ function(e, t) {
             },
             Vr = Math.abs,
             Qr = bt.prototype;
-        return Qr.abs = Bn, Qr.add = Qn, Qr.subtract = Gn, Qr.as = ei, Qr.asMilliseconds = Ar, Qr.asSeconds = Pr, Qr.asMinutes = Or, Qr.asHours = Ir, Qr.asDays = Nr, Qr.asWeeks = jr, Qr.asMonths = Rr, Qr.asYears = Lr, Qr.valueOf = ti, Qr._bubble = Kn, Qr.get = ii, Qr.milliseconds = Fr, Qr.seconds = Hr, Qr.minutes = zr, Qr.hours = Wr, Qr.days = Ur, Qr.weeks = oi, Qr.months = $r, Qr.years = Yr, Qr.humanize = ci, Qr.toISOString = hi, Qr.toString = hi, Qr.toJSON = hi, Qr.locale = un, Qr.localeData = cn, Qr.toIsoString = w("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", hi), Qr.lang = br, Y("X", 0, 0, "unix"), Y("x", 0, 0, "valueOf"), G("x", /[+-]?\d+/), G("X", /[+-]?\d+(\.\d{1,3})?/), Z("X", function(e, t, n) {
+        return Qr.abs = Bn, Qr.add = Qn, Qr.subtract = Gn, Qr.as = ei, Qr.asMilliseconds = Ar, Qr.asSeconds = Pr, Qr.asMinutes = Or, Qr.asHours = Nr, Qr.asDays = Ir, Qr.asWeeks = jr, Qr.asMonths = Rr, Qr.asYears = Lr, Qr.valueOf = ti, Qr._bubble = Kn, Qr.get = ii, Qr.milliseconds = Fr, Qr.seconds = Hr, Qr.minutes = zr, Qr.hours = Wr, Qr.days = Ur, Qr.weeks = oi, Qr.months = $r, Qr.years = Yr, Qr.humanize = ci, Qr.toISOString = hi, Qr.toString = hi, Qr.toJSON = hi, Qr.locale = un, Qr.localeData = cn, Qr.toIsoString = w("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", hi), Qr.lang = br, Y("X", 0, 0, "unix"), Y("x", 0, 0, "valueOf"), G("x", /[+-]?\d+/), G("X", /[+-]?\d+(\.\d{1,3})?/), Z("X", function(e, t, n) {
                 n._d = new Date(1e3 * parseFloat(e, 10))
             }), Z("x", function(e, t, n) {
                 n._d = new Date(y(e))
             }), e.version = "2.14.1",
             function(e) {
                 di = e
-            }(gt), e.fn = Cr, e.min = yt, e.max = _t, e.now = pr, e.utc = l, e.unix = jn, e.months = Wn, e.isDate = r, e.locale = Xe, e.invalid = d, e.duration = Lt, e.isMoment = g, e.weekdays = $n, e.parseZone = Rn, e.localeData = Ze, e.isDuration = wt, e.monthsShort = Un, e.weekdaysMin = qn, e.defineLocale = Ke, e.updateLocale = Je, e.locales = et, e.weekdaysShort = Yn, e.normalizeUnits = N, e.relativeTimeRounding = li, e.relativeTimeThreshold = ui, e.calendarFormat = Yt, e.prototype = Cr, e
+            }(gt), e.fn = Cr, e.min = yt, e.max = _t, e.now = pr, e.utc = l, e.unix = jn, e.months = Wn, e.isDate = r, e.locale = Xe, e.invalid = d, e.duration = Lt, e.isMoment = g, e.weekdays = $n, e.parseZone = Rn, e.localeData = Ze, e.isDuration = wt, e.monthsShort = Un, e.weekdaysMin = qn, e.defineLocale = Ke, e.updateLocale = Je, e.locales = et, e.weekdaysShort = Yn, e.normalizeUnits = I, e.relativeTimeRounding = li, e.relativeTimeThreshold = ui, e.calendarFormat = Yt, e.prototype = Cr, e
     }),
     function(e, t) {
         "function" == typeof define && define.amd ? define(["moment"], function(n) {
@@ -15556,36 +15565,37 @@ googletag.cmd = googletag.cmd || [],
                     }
                 };
             e(window).on("fluid-resize", function() {
-                e("#right_col")[0] ? e(window).width() < 800 ? ("false" !== Twitch.storage.get("leftColClosed") && i(), "false" !== Twitch.storage.get("rightColClosed") && s()) : e(window).width() < 1200 ? ("false" !== Twitch.storage.get("leftColClosed") && i(), "true" !== Twitch.storage.get("rightColClosed") && a()) : ("true" !== Twitch.storage.get("leftColClosed") && r(), "true" !== Twitch.storage.get("rightColClosed") && a()) : e(window).width() < 800 ? "false" !== Twitch.storage.get("leftColClosed") && i() : "true" !== Twitch.storage.get("leftColClosed") && r();
-                var t = Math.min(9 * e(".player_column").width() / 16 + 32, e(".channel-main").height() - e(".editable").outerHeight(!0) - e("#stats_and_actions").outerHeight() + 1);
-                e(".live_site_player_container, .archive_site_player_container").css("height", t.toFixed(0) + "px")
-            }), e(window).resize(_.debounce(function() {
-                e(window).trigger("fluid-resize")
-            }, 10)), e("#small_search a").click(function() {
-                return r(), e("#sidebar_search input").focus(), !1
-            }), e("#small_more a").flyout("small_more", {
-                anchor: "mid"
-            }), e("#small_account a").flyout("small_account", {
-                anchor: "bot",
-                data: {
-                    user: Twitch.user.login()
-                }
-            }), e("#left_close").click(function(e) {
-                e.preventDefault(), n()
-            }), e("#right_close").click(function(e) {
-                e.preventDefault(), o()
-            }), e(".stretch").each(function() {
-                var t = 0 + e(this).siblings(".top:first").outerHeight(),
-                    n = 0 + e(this).siblings(".bottom:first").outerHeight();
-                e(this).css({
-                    top: t + "px",
-                    bottom: n + "px",
-                    visibility: "visible"
-                })
-            }), "true" === Twitch.storage.get("leftColClosed") && i(), "true" === Twitch.storage.get("rightColClosed") && s(), e("body").on("rightClose", s).on("rightOpen", a).on("rightToggle", o).on("leftClose", i).on("leftOpen", r).on("leftToggle", n), e(".js-columns-scroll, .js-nav-scroll").TrackpadScrollEmulator({
-                wrapContent: !1,
-                scrollbarHideStrategy: "rightAndBottom"
-            }), e(window).trigger("fluid-resize")
+                    e("#right_col")[0] ? e(window).width() < 800 ? ("false" !== Twitch.storage.get("leftColClosed") && i(), "false" !== Twitch.storage.get("rightColClosed") && s()) : e(window).width() < 1200 ? ("false" !== Twitch.storage.get("leftColClosed") && i(), "true" !== Twitch.storage.get("rightColClosed") && a()) : ("true" !== Twitch.storage.get("leftColClosed") && r(), "true" !== Twitch.storage.get("rightColClosed") && a()) : e(window).width() < 800 ? "false" !== Twitch.storage.get("leftColClosed") && i() : "true" !== Twitch.storage.get("leftColClosed") && r();
+                    var t = Math.min(9 * e(".player_column").width() / 16 + 32, e(".channel-main").height() - e(".editable").outerHeight(!0) - e("#stats_and_actions").outerHeight() + 1);
+                    e(".live_site_player_container, .archive_site_player_container").css("height", t.toFixed(0) + "px")
+                }), e(window).resize(_.debounce(function() {
+                    e(window).trigger("fluid-resize")
+                }, 10)), e("#small_search a").click(function() {
+                    return r(), e("#sidebar_search input").focus(), !1
+                }), e("#small_more a").flyout("small_more", {
+                    anchor: "mid"
+                }), e("#small_account a").flyout("small_account", {
+                    anchor: "bot",
+                    data: {
+                        user: Twitch.user.login()
+                    }
+                }), e("#left_close").click(function(e) {
+                    e.preventDefault(), n()
+                }), e("#right_close").click(function(e) {
+                    e.preventDefault(), o()
+                }), e(".stretch").each(function() {
+                    var t = 0 + e(this).siblings(".top:first").outerHeight(),
+                        n = 0 + e(this).siblings(".bottom:first").outerHeight();
+                    e(this).css({
+                        top: t + "px",
+                        bottom: n + "px",
+                        visibility: "visible"
+                    })
+                }), "true" === Twitch.storage.get("leftColClosed") && i(), "true" === Twitch.storage.get("rightColClosed") && s(),
+                e("body").on("rightClose", s).on("rightOpen", a).on("rightToggle", o).on("leftClose", i).on("leftOpen", r).on("leftToggle", n), e(".js-columns-scroll, .js-nav-scroll").TrackpadScrollEmulator({
+                    wrapContent: !1,
+                    scrollbarHideStrategy: "rightAndBottom"
+                }), e(window).trigger("fluid-resize")
         }
     }(jQuery),
     function(e) {
