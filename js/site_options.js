@@ -1431,10 +1431,10 @@ window.SiteOptions = {
         "aece7525-dceb-49ba-af1b-242c1ae45831": {
             "name": "CHANNEL_LOGIN_CTA",
             "groups": [{
-                "weight": 25,
+                "weight": 100,
                 "value": "no"
             }, {
-                "weight": 75,
+                "weight": 0,
                 "value": "yes"
             }]
         },
