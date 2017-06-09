@@ -1898,7 +1898,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.AD_IMPRESSION = "video_ad_impression", t.AD_IMPRESSION_COMPLETE = "video_ad_impression_complete", t.AD_REQUEST = "video_ad_request", t.AD_REQUEST_DECLINED = "video_ad_request_declined", t.AD_REQUEST_ERROR = "video_ad_request_error", t.AD_REQUEST_RESPONSE = "video_ad_request_response", t.AD_SKIPPED = "video_ad_skipped", t.AD_ERROR = "video_ad_error", t.AD_LOADED = "video_ad_loaded", t.VIDEO_AD_REQUEST_ERROR = "video_ad_request_error", t.AAX_AD_AUCTION = "video_ad_auction", t.AAX_AD_AUCTION_RESPONSE = "video_ad_auction_response", t.AAX_AD_AUCTION_ERROR = "video_ad_auction_error"
+        t.AD_IMPRESSION = "video_ad_impression", t.AD_IMPRESSION_COMPLETE = "video_ad_impression_complete", t.AD_REQUEST = "video_ad_request", t.AD_REQUEST_DECLINED = "video_ad_request_declined", t.AD_REQUEST_ERROR = "video_ad_request_error", t.AD_REQUEST_RESPONSE = "video_ad_request_response", t.AD_SKIPPED = "video_ad_skipped", t.AD_ERROR = "video_ad_error", t.AD_LOADED = "video_ad_loaded", t.VIDEO_AD_REQUEST_ERROR = "video_ad_request_error", t.AAX_AD_AUCTION = "video_ad_auction", t.AAX_AD_AUCTION_RESPONSE = "video_ad_auction_response", t.AAX_AD_AUCTION_ERROR = "video_ad_auction_error", t.AAX_AD_AUCTION_INIT_ERROR = "video_ad_auction_init_error"
     }, function(e, t, n) {
         "use strict";
 
@@ -3161,8 +3161,8 @@
             function e(e, t) {
                 for (var n = 0; n < t.length; n++) {
                     var r = t[n];
-                    r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0),
-                        Object.defineProperty(e, r.key, r)
+                    r.enumerable = r.enumerable || !1,
+                        r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
                 }
             }
             return function(t, n, r) {
@@ -9760,7 +9760,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.09-204721+c7075214d3cbf71138e4d1beda881af89ecb2b99",
+                    app_version: "2017.06.09-210946+abdb9efec29d0529620a7757b6b6838e4baa97ee",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -17246,9 +17246,7 @@
                     value: function(e) {
                         var t = this,
                             n = e;
-                        return Promise.resolve().then(function() {
-                            return t._aaxManager.fetchBids(e)
-                        }).then(function(e) {
+                        return this._requestAaxBids(n).then(function(e) {
                             n = t._aaxManager.getAdRequestContextWithAmazonBids(e, n);
                             var r = t._stateStore.getState().window.Date;
                             t._adRequestTime = r.now(), (0, S.sendAdSpadeEvent)(t._stateStore, A, f.AD_REQUEST, (0, S.initializeAdSpadeEvent)(n));
@@ -17268,6 +17266,15 @@
                             r.adTagUrl = "", r.adsResponse = n, t._adsLoader.requestAds(r, e)
                         }).catch(function(n) {
                             return console.log("Error requesting creative=" + e.creativeId, n.message), t._requestAdsInternal(e)
+                        })
+                    }
+                }, {
+                    key: "_requestAaxBids",
+                    value: function(e) {
+                        var t = this;
+                        return this._aaxManager.fetchBids(e).catch(function(n) {
+                            var r = (0, S.initializeAdSpadeEvent)(e);
+                            return r.reason = n.message, (0, S.sendAdSpadeEvent)(t._stateStore, A, f.AAX_AD_AUCTION_ERROR, r), Promise.resolve([])
                         })
                     }
                 }, {
@@ -17576,14 +17583,23 @@
                 function e(t, n, r, i) {
                     var a = this;
                     o(this, e), this._stateStore = r, this._preloadedBids = [], this._options = i, this._unsubs = [];
-                    var s = this._stateStore.getState(),
-                        l = s.window;
-                    l.apstag ? (this._apstag = l.apstag, this._apstag.init({
-                        pubID: t,
-                        videoAdServer: n
-                    }, function() {
-                        a._apstag = l.apstag
-                    })) : this._apstag = new P, this._unsubs.push((0, u.subscribe)(this._stateStore, ["stream"], this._onStreamChange.bind(this)))
+                    try {
+                        var s = this._stateStore.getState(),
+                            l = s.window;
+                        l.apstag ? (this._apstag = l.apstag, this._apstag.init({
+                            pubID: t,
+                            videoAdServer: n
+                        }, function() {
+                            a._apstag = l.apstag
+                        })) : this._apstag = new P
+                    } catch (e) {
+                        this._apstag = new P;
+                        var c = {
+                            reason: e.message
+                        };
+                        (0, h.sendAdSpadeEvent)(this._stateStore, null, f.AAX_AD_AUCTION_INIT_ERROR, c)
+                    }
+                    this._unsubs.push((0, u.subscribe)(this._stateStore, ["stream"], this._onStreamChange.bind(this)))
                 }
                 return a(e, [{
                     key: "destroy",
@@ -17618,16 +17634,15 @@
                                 default:
                                     return Promise.resolve([])
                             }
-                        }).catch(function() {
-                            return Promise.resolve([])
+                        }).catch(function(e) {
+                            return Promise.reject(e)
                         })
                     }
                 }, {
                     key: "getAdRequestContextWithAmazonBids",
                     value: function(e, t) {
-                        var n = t,
-                            r = e[0];
-                        return r && (n.amzniid = r.amzniid, n.amznbid = r.amznbid), n
+                        var n = t;
+                        return e && e[0] && (n.amzniid = e[0].amzniid, n.amznbid = e[0].amznbid), n
                     }
                 }, {
                     key: "_enabled",
@@ -19072,8 +19087,7 @@
                     }
                 }
                 return function(t, n, r) {
-                    return n && e(t.prototype, n), r && e(t, r),
-                        t
+                    return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
             s = n(317),
@@ -19313,8 +19327,10 @@
             t.setAttribute("tabindex", r.tabindex || -1), t.addEventListener("keydown", function(t) {
                 var r = t.target || t.srcElement;
                 if ("INPUT" !== r.tagName || "text" !== $(r).attr("type")) {
-                    var a, l = o(t);
-                    switch (l) {
+                    var a = o(t),
+                        l = void 0,
+                        u = void 0;
+                    switch (a) {
                         case _:
                             s = !0;
                             break;
@@ -19329,11 +19345,11 @@
                             break;
                         case b:
                         case A:
-                            a = e.getVolume(), a = Math.min(a + c.volumeStepAmount, 1), e.setVolume(a);
+                            l = n.getState().playback.volume, u = Math.round(100 * Math.min(l + c.volumeStepAmount, 1)) / 100, n.dispatch((0, f.changeVolume)(u));
                             break;
                         case E:
                         case O:
-                            a = e.getVolume(), a = Math.max(a - c.volumeStepAmount, 0), e.setVolume(a);
+                            l = Math.round(100 * n.getState().playback.volume) / 100, u = Math.round(100 * Math.max(l - c.volumeStepAmount, 0)) / 100, n.dispatch((0, f.changeVolume)(u));
                             break;
                         case g:
                         case w:
@@ -21633,7 +21649,7 @@
                     o(".js-control-playpause-button .js-pause-button .js-tip", "data-tip", "Pause"), o(".js-control-playpause-button .js-play-button .js-tip", "data-tip", "Play"), o(".js-menu-button .js-tip", "data-tip", "Options"), o(".js-theatre-button .js-control-tip", "data-tip", "Theater Mode"), o(".js-exit-theatre-button .js-control-tip", "data-tip", "Exit Theater Mode"), o(".js-control-cc .js-tip", "data-tip", "Captions"), o(".js-control-fullscreen .js-fullscreen .js-control-tip", "data-tip", "Fullscreen"), n.playerType === u.PLAYER_SITE ? o(".js-control-clips .js-tip", "data-tip", "Clip (Alt+X)") : o(".js-control-clips .js-tip", "data-tip", "Clip"), o(".js-control-fullscreen .js-exit-fullscreen .js-control-tip", "data-tip", "Exit Fullscreen"), o(".js-chromecast-btuton .js-tip", "data-tip", "Chromecast"), o(".js-watch-twitch .js-tip", "data-tip", "Watch on Twitch"), o(".js-font-increment-tip", "data-tip", "Increase Size"), o(".js-font-decrement-tip", "data-tip", "Decrease Size"), $(".js-quality", this.$root).children("option").each(function(e, t) {
                         var n = s.qualityText[$(t).val()];
                         $(t).text(r.translate(n))
-                    })
+                    });
                 }
             }, {
                 key: "localizeCastOverlay",
@@ -21657,8 +21673,7 @@
             var t = {};
             if (null != e)
                 for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-            return t.default = e,
-                t
+            return t.default = e, t
         }
 
         function i(e) {
@@ -23084,7 +23099,8 @@
                 registrationNameDependencies: {},
                 possibleRegistrationNames: null,
                 injectEventPluginOrder: function(e) {
-                    s ? a("101") : void 0, s = Array.prototype.slice.call(e), r()
+                    s ? a("101") : void 0, s = Array.prototype.slice.call(e),
+                        r()
                 },
                 injectEventPluginsByName: function(e) {
                     var t = !1;
@@ -34867,14 +34883,15 @@
             c = n(573),
             d = n(597),
             p = n(360),
-            f = {
+            f = n(168),
+            h = {
                 i18n: l.PropTypes.object,
                 muted: l.PropTypes.bool,
                 mutePlayer: l.PropTypes.func,
                 changeVolume: l.PropTypes.func,
                 volume: l.PropTypes.number
             },
-            h = function(e) {
+            _ = function(e) {
                 var t = e.lang,
                     n = e.playback;
                 return {
@@ -34883,7 +34900,7 @@
                     volume: n.volume
                 }
             },
-            _ = t.mapDispatchToProps = function(e) {
+            v = t.mapDispatchToProps = function(e) {
                 return {
                     mutePlayer: function(t) {
                         e((0, p.mutePlayer)(t, !1))
@@ -34893,12 +34910,12 @@
                     }
                 }
             },
-            v = t.classNames = {
+            m = t.classNames = {
                 slider: "player-volume__slider player-slider",
                 sliderLeft: "ui-slider-range",
                 sliderThumb: "ui-slider-handle"
             },
-            m = t.VolumeSliderComponent = function(e) {
+            y = t.VolumeSliderComponent = function(e) {
                 function t() {
                     i(this, t);
                     var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -34921,7 +34938,7 @@
                         }, i), u.default.createElement("div", {
                             className: "player-volume__slider-container"
                         }, u.default.createElement(d.Slider, {
-                            classNames: v,
+                            classNames: m,
                             max: 1,
                             min: 0,
                             value: r,
@@ -34941,6 +34958,7 @@
                 }, {
                     key: "handleIconClick",
                     value: function() {
+                        if (0 === this.props.volume) return void this.props.changeVolume(f.volumeStepAmount);
                         var e = !this.props.muted;
                         this.props.mutePlayer(e)
                     }
@@ -34949,26 +34967,27 @@
                     value: function() {
                         var e = this.props,
                             t = e.i18n,
-                            n = e.muted;
-                        if (n) {
-                            var r = t.translate("Unmute");
+                            n = e.muted,
+                            r = e.volume;
+                        if (n || 0 === r) {
+                            var i = t.translate("Unmute");
                             return u.default.createElement("span", {
                                 className: "unmute-button"
                             }, u.default.createElement("span", {
                                 className: "player-tip",
-                                "data-tip": r
+                                "data-tip": i
                             }), u.default.createElement("svg", {
                                 className: "player-icon-volumemute"
                             }, u.default.createElement("use", {
                                 xlinkHref: "#icon_volumemute"
                             })))
                         }
-                        var i = t.translate("Mute");
+                        var o = t.translate("Mute");
                         return u.default.createElement("span", {
                             className: "mute-button"
                         }, u.default.createElement("span", {
                             className: "player-tip",
-                            "data-tip": i
+                            "data-tip": o
                         }), u.default.createElement("svg", {
                             className: "player-icon-volumefull"
                         }, u.default.createElement("use", {
@@ -34977,8 +34996,8 @@
                     }
                 }]), t
             }(u.default.Component);
-        m.propTypes = f;
-        t.VolumeSlider = (0, c.connect)(h, _)(m)
+        y.propTypes = h;
+        t.VolumeSlider = (0, c.connect)(_, v)(y)
     }, function(e, t, n) {
         "use strict";
 
@@ -35442,93 +35461,94 @@
                     var s = function() {
                         function e(e, t, n, a, s, l, u) {
                             var c = this;
-                            this.extension = e, this.iframe = t, this.ems = s, this.contextManager = l, this.tracker = u, this.handleUserAction = {
-                                click: function(e) {
-                                    var t = e.payload,
-                                        n = this.iframe.getBoundingClientRect(),
-                                        r = n.width,
-                                        i = n.height;
-                                    this.tracker.trackEvent("extension_click", {
-                                        px_mouse_coord_x: t.clientX,
-                                        px_mouse_coord_y: t.clientY,
-                                        pct_mouse_coord_x: t.clientX / r * 100,
-                                        pct_mouse_coord_y: t.clientY / i * 100
-                                    })
-                                },
-                                mousemove: function(e) {
-                                    var t = e.payload,
-                                        n = this.iframe.getBoundingClientRect(),
-                                        r = n.left,
-                                        i = n.top;
-                                    this.iframe.dispatchEvent(new MouseEvent("mousemove", {
-                                        bubbles: !0,
-                                        clientX: t.clientX,
-                                        clientY: t.clientY,
-                                        screenX: r + t.clientX,
-                                        screenY: i + t.clientY
-                                    }))
-                                },
-                                focusin: function(e) {
-                                    e.payload;
-                                    if ("video_overlay" === this.extension.anchor) {
-                                        for (var t = this.iframe; t && !t.hasAttribute("tabindex");) t = t.parentElement;
-                                        t && t.focus()
+                            this.extension = e, this.iframe = t,
+                                this.ems = s, this.contextManager = l, this.tracker = u, this.handleUserAction = {
+                                    click: function(e) {
+                                        var t = e.payload,
+                                            n = this.iframe.getBoundingClientRect(),
+                                            r = n.width,
+                                            i = n.height;
+                                        this.tracker.trackEvent("extension_click", {
+                                            px_mouse_coord_x: t.clientX,
+                                            px_mouse_coord_y: t.clientY,
+                                            pct_mouse_coord_x: t.clientX / r * 100,
+                                            pct_mouse_coord_y: t.clientY / i * 100
+                                        })
+                                    },
+                                    mousemove: function(e) {
+                                        var t = e.payload,
+                                            n = this.iframe.getBoundingClientRect(),
+                                            r = n.left,
+                                            i = n.top;
+                                        this.iframe.dispatchEvent(new MouseEvent("mousemove", {
+                                            bubbles: !0,
+                                            clientX: t.clientX,
+                                            clientY: t.clientY,
+                                            screenX: r + t.clientX,
+                                            screenY: i + t.clientY
+                                        }))
+                                    },
+                                    focusin: function(e) {
+                                        e.payload;
+                                        if ("video_overlay" === this.extension.anchor) {
+                                            for (var t = this.iframe; t && !t.hasAttribute("tabindex");) t = t.parentElement;
+                                            t && t.focus()
+                                        }
                                     }
-                                }
-                            }, this.destroy = function() {
-                                c.contextManager.destroy(), c.ems.destroy(), c.eventListeners.forEach(function(e) {
-                                    e.target.removeEventListener(e.event, e.callback)
-                                })
-                            }, this.reloadExtension = function(e) {
-                                c.ems.token = e, c.sendMessage({
-                                    action: r.a.TwitchExtReload
-                                })
-                            }, this.setGame = function(e) {
-                                c.contextManager.setGame(e)
-                            }, this.sendMessage = function(e) {
-                                c.iframe.contentWindow.postMessage(e, "*")
-                            }, this.onInitialAuth = function() {
-                                c.sendMessage({
-                                    action: r.a.TwitchExtBoostrap,
-                                    auth: c.ems.auth
-                                })
-                            }, this.onContextUpdate = function(e) {
-                                c.sendMessage({
-                                    action: r.a.TwitchExtContext,
-                                    updatedFields: e,
-                                    context: c.contextManager.context
-                                })
-                            }, this.onAuthUpdate = function(e) {
-                                c.sendMessage({
-                                    action: r.a.TwitchExtAuth,
-                                    auth: c.ems.auth
-                                })
-                            }, this.onError = function(e) {
-                                c.sendMessage({
-                                    action: r.a.TwitchExtError,
-                                    message: e
-                                })
-                            }, this.onMouseEnter = function(e) {
-                                c.tracker.trackEvent("extension_mouseenter", {})
-                            }, this.handleMessage = function(e) {
-                                var t = e.source,
-                                    n = e.data;
-                                if (t === c.iframe.contentWindow) try {
-                                    c.handleExtensionAction(n)
-                                } catch (e) {
-                                    console.error(e)
-                                }
-                            }, this.ems = s || new o.a(e, this.onAuthUpdate, this.onError), this.contextManager = l || new i.a(a, n, this.onContextUpdate), this.eventListeners = [{
-                                target: this.iframe,
-                                event: "mouseenter",
-                                callback: this.onMouseEnter
-                            }, {
-                                target: this.iframe.ownerDocument.defaultView,
-                                event: "message",
-                                callback: this.handleMessage
-                            }], this.eventListeners.forEach(function(e) {
-                                e.target.addEventListener(e.event, e.callback)
-                            }), this.tracker.trackEvent("extension_render", {})
+                                }, this.destroy = function() {
+                                    c.contextManager.destroy(), c.ems.destroy(), c.eventListeners.forEach(function(e) {
+                                        e.target.removeEventListener(e.event, e.callback)
+                                    })
+                                }, this.reloadExtension = function(e) {
+                                    c.ems.token = e, c.sendMessage({
+                                        action: r.a.TwitchExtReload
+                                    })
+                                }, this.setGame = function(e) {
+                                    c.contextManager.setGame(e)
+                                }, this.sendMessage = function(e) {
+                                    c.iframe.contentWindow.postMessage(e, "*")
+                                }, this.onInitialAuth = function() {
+                                    c.sendMessage({
+                                        action: r.a.TwitchExtBoostrap,
+                                        auth: c.ems.auth
+                                    })
+                                }, this.onContextUpdate = function(e) {
+                                    c.sendMessage({
+                                        action: r.a.TwitchExtContext,
+                                        updatedFields: e,
+                                        context: c.contextManager.context
+                                    })
+                                }, this.onAuthUpdate = function(e) {
+                                    c.sendMessage({
+                                        action: r.a.TwitchExtAuth,
+                                        auth: c.ems.auth
+                                    })
+                                }, this.onError = function(e) {
+                                    c.sendMessage({
+                                        action: r.a.TwitchExtError,
+                                        message: e
+                                    })
+                                }, this.onMouseEnter = function(e) {
+                                    c.tracker.trackEvent("extension_mouseenter", {})
+                                }, this.handleMessage = function(e) {
+                                    var t = e.source,
+                                        n = e.data;
+                                    if (t === c.iframe.contentWindow) try {
+                                        c.handleExtensionAction(n)
+                                    } catch (e) {
+                                        console.error(e)
+                                    }
+                                }, this.ems = s || new o.a(e, this.onAuthUpdate, this.onError), this.contextManager = l || new i.a(a, n, this.onContextUpdate), this.eventListeners = [{
+                                    target: this.iframe,
+                                    event: "mouseenter",
+                                    callback: this.onMouseEnter
+                                }, {
+                                    target: this.iframe.ownerDocument.defaultView,
+                                    event: "message",
+                                    callback: this.handleMessage
+                                }], this.eventListeners.forEach(function(e) {
+                                    e.target.addEventListener(e.event, e.callback)
+                                }), this.tracker.trackEvent("extension_render", {})
                         }
                         return e.create = function(t) {
                             return new e(t.extension, t.iframe, t.mode, t.playerExtensionsApi, null, null, new a.a({
