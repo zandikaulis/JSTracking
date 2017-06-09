@@ -1896,16 +1896,16 @@ window.SiteOptions = {
                 "value": "control"
             }, {
                 "weight": 0,
-                "value": "no_play_800"
+                "value": "no_play_600"
             }, {
                 "weight": 0,
-                "value": "no_play_1300"
+                "value": "no_play_1050"
             }, {
                 "weight": 0,
-                "value": "yes_play_800"
+                "value": "yes_play_600"
             }, {
                 "weight": 0,
-                "value": "yes_play_1300"
+                "value": "yes_play_1050"
             }]
         },
         "efe4cedd-7ea4-4d78-a9e4-5fad8dd9de79": {
