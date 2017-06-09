@@ -9760,7 +9760,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.07-225707+7f77fc62efc30289acac84c9c4afa29e0a11d717",
+                    app_version: "2017.06.09-010926+9348e57894bc04adde0de3d4e9bf3d29f7c2abd7",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -10010,7 +10010,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-fe6bd1.sjc01.hls.ttvnw.net/v1/playlist/CrONtlD5FazF_COckCX1rlP6vO_x8A6V4baU1djFcwQS4upNEpisj4A5w-yUUxkrfw2kTPFQx9nncfVittPICF2FxmhC_ppp-LlB7QcKr2S7hDERt-U5P_tW2LpiqUdRvTdTXxYoN5rAxijmn3mt1KVWwg_4Z0lt6g2H6N4WHi9rvdPpVryh_V13EGyd9kHV7xaRILcI4JDD_9w7wrXE089uSSWUR2dLOAx4rHfx6Sa500c9PUxjCcTXQ82hMNuYubnGP1IJxWQbki6_38ZgqiTKRVEmi230xNd7giz5K8JFjqkNGfR32mzfazzgeRMntl4SoJupJIFDEnm39eDck4BuReKdv2KLEwDl5kJtoujDdD57SLFfOCxxgxzq0J_9n7iQX9twbekchpS91z6_pyZ6LurJBLCdMAV97CYbsClRpoa0yIP5UzQ3fzsy5rZo04t66EDOChIZr9wt9NE4vt7.m3u8"
+        t.trustedSpadeURI = "//video-edge-860752.sjc01.hls.ttvnw.net/v1/playlist/CmeqOG7vQChjCIeTQOhd6HamR_KnjZ-FVFPKU8skSEh1H1bxe4Y27HlhIPsf63M3LydVtKmuJvXrScZslITipN_nRzIfaonFr1OiLfSlgsk714KGeGQPEyP0FWUqFZqS8CpVpW92lZecFkBqjLz2G886XIOtHsfj3vfb0mvvEkT-mFJXMow2KW1QO8CzfmGgzR4exybhpSTVJwfDlQT8sZhMHtg8q6-dKMRlq-LPo4ptKaypZHf61NfJW9TyApfRuN_pJlXwX6LS0SpBqobvbV-sZ0ML08c9pGFyuWERAqZ5i58CehZ00uWRF7KPW1SxN86TBE3vKO7DyKTdfuyyMUduSZ3X2zD-JpwTwHb-Y5OpFCNS6z-VgMIG__yQ_qYITmoiCAiqfxtl1EhkchVT9mu8MGFEOpX5j-5pWS0ShAjTZ2Sbj7MZgY7jvzLJjD.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -20601,7 +20601,7 @@
                     var e = this,
                         t = this._stateStore.getState(),
                         n = t.recommendations;
-                    n.type === c.POST_RECOMMENDATIONS_TYPE && 0 !== n.videos.length && ($(".js-video-recommendations", this.$root).html(n.videos.map(function(t, n) {
+                    n.type === c.POST_VOD_RECOMMENDATIONS_TYPE && 0 !== n.videos.length && ($(".js-video-recommendations", this.$root).html(n.videos.map(function(t, n) {
                         var r = e.$template.clone();
                         0 === n && (e.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")), e.updateAutoplayProgress(100, Math.round(g / 1e3))), e.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")), r.attr("data-index", n), r.find(".js-recommended-stream__thumbnail").attr("src", t.thumbnailURL), r.find(".js-recommended-stream__channel").text(t.channelName), r.find(".js-recommended-stream__title").text(t.title);
                         var i = e._stateStore.getState().lang.langCode,
@@ -20643,7 +20643,7 @@
                         r = n.stream,
                         i = n.recommendations,
                         o = n.resumeWatch;
-                    return t[0] !== d.VOD_RECOMMENDATION_SCREEN || i.type !== c.POST_RECOMMENDATIONS_TYPE ? (this.$recommendationsOverlay.addClass("hidden"), this.stopAutoplayCountdown(), void this.stopCheckingForResize()) : (this.$recommendationsOverlay.removeClass("hidden"), this.trackShowRecs(), (0, c.isWatched)(i.videos[0], o.times) ? (this.showView(y), this.trackShowOtherVODs()) : r.contentType === p.CONTENT_MODE_VOD ? (this.showView(v), this.showAutoplay(), this.startAutoplayCountdown(), this.trackShowFeatured()) : (this.showView(m), this.trackShowFeatured()), void this.startCheckingForResize())
+                    return t[0] !== d.VOD_RECOMMENDATION_SCREEN || i.type !== c.POST_VOD_RECOMMENDATIONS_TYPE ? (this.$recommendationsOverlay.addClass("hidden"), this.stopAutoplayCountdown(), void this.stopCheckingForResize()) : (this.$recommendationsOverlay.removeClass("hidden"), this.trackShowRecs(), (0, c.isWatched)(i.videos[0], o.times) ? (this.showView(y), this.trackShowOtherVODs()) : r.contentType === p.CONTENT_MODE_VOD ? (this.showView(v), this.showAutoplay(), this.startAutoplayCountdown(), this.trackShowFeatured()) : (this.showView(m), this.trackShowFeatured()), void this.startCheckingForResize())
                 }
             }, {
                 key: "startCheckingForResize",
@@ -20818,11 +20818,12 @@
             }
         }
 
-        function i(e) {
+        function i() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : O;
             return function(t, n) {
                 var r = n().streamMetadata.channel.name;
                 if (n().recommendations.status !== b || "" === r) return Promise.resolve();
-                var i = Math.floor(Math.random() * P);
+                var i = Math.floor(Math.random() * C);
                 return t({
                     type: g,
                     status: E
@@ -20833,7 +20834,7 @@
                 }).then(function(e) {
                     return "yes" === e ? a(n().stream.videoId) : Promise.reject()
                 }).catch(function() {
-                    return o(r, e + 1)
+                    return o(r, T + 1)
                 }).then(function(r) {
                     var i = n(),
                         o = i.resumeWatch,
@@ -20845,7 +20846,7 @@
                                 r = l(t, o.times);
                             return !n && r ? -1 : n && !r ? 1 : new Date(t.created_at).getTime() - new Date(e.created_at).getTime()
                         }).map(s);
-                    t(u(c.slice(0, e), A))
+                    t(u(c, e))
                 })
             }
         }
@@ -20859,7 +20860,7 @@
                 var t = e.videos;
                 return t.map(function(e) {
                     return (0, _.default)(e, {
-                        recommendationType: w
+                        recommendationType: A
                     })
                 })
             })
@@ -20870,7 +20871,7 @@
                 var t = e.similar_videos;
                 return 0 === t.length ? Promise.reject() : t.map(function(e) {
                     return (0, _.default)(e, {
-                        recommendationType: C
+                        recommendationType: w
                     })
                 })
             })
@@ -20893,8 +20894,8 @@
             if (!t.hasOwnProperty(e._id)) return !1;
             var n = t[e._id];
             if (0 === n) return !0;
-            var r = Math.max(T, S * e.length);
-            return e.length > T && n > r
+            var r = Math.max(S, P * e.length);
+            return e.length > S && n > r
         }
 
         function u(e, t) {
@@ -20919,7 +20920,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.OFFLINE_RECOMMENDATIONS_TYPE = t.POST_RECOMMENDATIONS_TYPE = t.CHANNEL_VODS = t.SIMILAR_VODS = t.MAX_JITTER_DELAY = t.TEN_PERCENT = t.FETCH_VODS_THRESHOLD = t.MINIMUM_WATCHED_LENGTH = t.MAX_RECOMMENDED_VODS_VISIBLE = t.FETCHED = t.FETCHING = t.UNFETCHED = t.ACTION_SET_FETCHING_STATUS = t.ACTION_SET_NUM_VODS_VISIBLE = t.ACTION_SET_RECOMMENDED_VODS_WATCHED = t.ACTION_CLEAR_RECOMMENDED_VODS = t.ACTION_SET_RECOMMENDED_VODS = void 0, t.fetchRecommendedVODs = i, t.isWatched = l, t.setRecommendedVODs = u, t.clearRecommendedVODs = c, t.setVODVisibility = d;
+        }), t.OFFLINE_RECOMMENDATIONS_TYPE = t.POST_VOD_RECOMMENDATIONS_TYPE = t.CHANNEL_VODS = t.SIMILAR_VODS = t.MAX_JITTER_DELAY = t.TEN_PERCENT = t.FETCH_VODS_THRESHOLD = t.MINIMUM_WATCHED_LENGTH = t.MAX_RECOMMENDED_VODS_VISIBLE = t.FETCHED = t.FETCHING = t.UNFETCHED = t.ACTION_SET_FETCHING_STATUS = t.ACTION_SET_NUM_VODS_VISIBLE = t.ACTION_SET_RECOMMENDED_VODS_WATCHED = t.ACTION_CLEAR_RECOMMENDED_VODS = t.ACTION_SET_RECOMMENDED_VODS = void 0, t.fetchRecommendedVODs = i, t.isWatched = l, t.setRecommendedVODs = u, t.clearRecommendedVODs = c, t.setVODVisibility = d;
         var p = n(199),
             f = n(250),
             h = n(117),
@@ -20930,12 +20931,13 @@
             g = t.ACTION_SET_FETCHING_STATUS = "set fetching recommendations status",
             b = t.UNFETCHED = "unfetched",
             E = t.FETCHING = "fetching",
-            T = (t.FETCHED = "fetched", t.MAX_RECOMMENDED_VODS_VISIBLE = 24, t.MINIMUM_WATCHED_LENGTH = 300),
-            S = (t.FETCH_VODS_THRESHOLD = 12e3, t.TEN_PERCENT = .1),
-            P = t.MAX_JITTER_DELAY = 5e3,
-            C = t.SIMILAR_VODS = "similar",
-            w = t.CHANNEL_VODS = "channel",
-            A = t.POST_RECOMMENDATIONS_TYPE = "post recommendations";
+            T = (t.FETCHED = "fetched", t.MAX_RECOMMENDED_VODS_VISIBLE = 32),
+            S = t.MINIMUM_WATCHED_LENGTH = 300,
+            P = (t.FETCH_VODS_THRESHOLD = 12e3, t.TEN_PERCENT = .1),
+            C = t.MAX_JITTER_DELAY = 5e3,
+            w = t.SIMILAR_VODS = "similar",
+            A = t.CHANNEL_VODS = "channel",
+            O = t.POST_VOD_RECOMMENDATIONS_TYPE = "post vod recommendations";
         t.OFFLINE_RECOMMENDATIONS_TYPE = "offline recommendations"
     }, function(e, t, n) {
         "use strict";
@@ -21655,7 +21657,8 @@
             var t = {};
             if (null != e)
                 for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-            return t.default = e, t
+            return t.default = e,
+                t
         }
 
         function i(e) {
@@ -40049,7 +40052,8 @@
                     height: l.PropTypes.number,
                     width: l.PropTypes.number
                 }).isRequired,
-                trackEvent: l.PropTypes.func.isRequired
+                trackEvent: l.PropTypes.func.isRequired,
+                streamHasPlayed: l.PropTypes.bool.isRequired
             },
             v = t.mapStateToProps = function(e) {
                 var t = e.lang,
@@ -40057,7 +40061,8 @@
                     r = e.recommendations,
                     i = e.window,
                     o = e.playerDimensions,
-                    a = e.analyticsTracker;
+                    a = e.analyticsTracker,
+                    s = e.playback;
                 return {
                     recommendedVideos: r.videos,
                     recommendationType: r.type,
@@ -40065,7 +40070,8 @@
                     showRecommendations: n[0] === d.VOD_RECOMMENDATION_SCREEN,
                     i18n: t,
                     playerDimensions: o,
-                    trackEvent: a.trackEvent
+                    trackEvent: a.trackEvent,
+                    streamHasPlayed: s.hasPlayed
                 }
             },
             m = t.mapDispatchToProps = function(e) {
@@ -40097,7 +40103,8 @@
                             i = e.i18n,
                             o = e.playerDimensions,
                             a = e.recommendationType,
-                            s = e.trackEvent;
+                            s = e.trackEvent,
+                            l = e.streamHasPlayed;
                         if (t.length > 0 && this._preloadVideoThumbnails(), !r || 0 === t.length) return null;
                         switch (a) {
                             case f.OFFLINE_RECOMMENDATIONS_TYPE:
@@ -40109,7 +40116,8 @@
                                     playerHeight: o.height,
                                     playerWidth: o.width,
                                     onExit: this.handleExitRecommendations,
-                                    trackEvent: s
+                                    trackEvent: s,
+                                    streamWasOnline: l
                                 });
                             default:
                                 return null
@@ -40188,7 +40196,8 @@
             f = r(p),
             h = 0,
             _ = "offline",
-            v = {
+            v = "postLive",
+            m = {
                 videos: l.PropTypes.array.isRequired,
                 i18n: l.PropTypes.object.isRequired,
                 onSelectVOD: l.PropTypes.func.isRequired,
@@ -40196,21 +40205,27 @@
                 playerWidth: l.PropTypes.number.isRequired,
                 onExit: l.PropTypes.func.isRequired,
                 trackEvent: l.PropTypes.func.isRequired,
-                windowObj: l.PropTypes.object.isRequired
+                windowObj: l.PropTypes.object.isRequired,
+                streamWasOnline: l.PropTypes.bool.isRequired
             },
-            m = t.OfflineRecommendations = function(e) {
+            y = t.OfflineRecommendations = function(e) {
                 function t() {
                     i(this, t);
                     var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.state = {
-                        showFeatured: !0
-                    }, e.handleCloseFeaturedPane = e.handleCloseFeaturedPane.bind(e), e
+                            showFeatured: !0
+                        }, e.handleCloseFeaturedPane = e.handleCloseFeaturedPane.bind(e),
+                        e
                 }
                 return a(t, e), s(t, [{
                     key: "componentWillMount",
                     value: function() {
-                        this.props.trackEvent("player_rec_show", {
-                            type: _
+                        var e = this.props,
+                            t = e.trackEvent,
+                            n = e.streamWasOnline,
+                            r = n ? v : _;
+                        t("player_rec_show", {
+                            type: r
                         })
                     }
                 }, {
@@ -40264,7 +40279,7 @@
                     }
                 }]), t
             }(u.default.Component);
-        m.propTypes = v
+        y.propTypes = m
     }, function(e, t, n) {
         "use strict";
 
@@ -45636,7 +45651,7 @@
                     var e = this._stateStore.getState(),
                         t = e.playback,
                         n = e.onlineStatus;
-                    n === f.OFFLINE_STATUS && t.hasPlayed && this._stateStore.dispatch((0, a.fetchRecommendedVODs)(a.MAX_RECOMMENDED_VODS_VISIBLE))
+                    n === f.OFFLINE_STATUS && t.hasPlayed && this._stateStore.dispatch((0, a.fetchRecommendedVODs)(a.OFFLINE_RECOMMENDATIONS_TYPE))
                 }
             }, {
                 key: "onCurrentTime",
@@ -45645,7 +45660,7 @@
                         t = e.playback,
                         n = e.stream,
                         r = e.recommendations;
-                    t.transitionScheme === p.TRANSITION_TYPE_RECOMMENDATIONS && n.contentType === c.CONTENT_MODE_VOD && 1e3 * (t.duration - t.currentTime) < a.FETCH_VODS_THRESHOLD && r.status === a.UNFETCHED && this._stateStore.dispatch((0, a.fetchRecommendedVODs)(a.MAX_RECOMMENDED_VODS_VISIBLE))
+                    t.transitionScheme === p.TRANSITION_TYPE_RECOMMENDATIONS && n.contentType === c.CONTENT_MODE_VOD && 1e3 * (t.duration - t.currentTime) < a.FETCH_VODS_THRESHOLD && r.status === a.UNFETCHED && this._stateStore.dispatch((0, a.fetchRecommendedVODs)(a.POST_VOD_RECOMMENDATIONS_TYPE))
                 }
             }, {
                 key: "onAdsMetadata",
