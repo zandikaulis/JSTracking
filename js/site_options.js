@@ -604,11 +604,11 @@ window.SiteOptions = {
         "3a823fae-acbe-40c4-9ed8-6b1e685eb4b2": {
             "name": "ios_notification_center",
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
-                "value": "active"
+                "weight": 0,
+                "value": "off"
             }]
         },
         "3ba26ac2-a5db-4318-83c5-dcbe11e2774f": {
@@ -1600,11 +1600,11 @@ window.SiteOptions = {
         "c14ad553-a6e6-441b-961f-8ebf0d444791": {
             "name": "android_notification_center",
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
-                "value": "active"
+                "weight": 0,
+                "value": "off"
             }]
         },
         "c31d337d-4186-465d-9d0b-cb72a5b2aef2": {
