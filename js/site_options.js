@@ -561,10 +561,10 @@ window.SiteOptions = {
         "354aaebd-7643-434f-be37-98fe12c01220": {
             "name": "HTML5_Toggle_Removal",
             "groups": [{
-                "weight": 20,
+                "weight": 40,
                 "value": "remove"
             }, {
-                "weight": 80,
+                "weight": 60,
                 "value": "keep"
             }]
         },
