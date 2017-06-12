@@ -9760,7 +9760,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.09-210946+abdb9efec29d0529620a7757b6b6838e4baa97ee",
+                    app_version: "2017.06.12-201820+4a06fa2e837b07662d586359cf9eab6004e5965f",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -10010,7 +10010,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-860752.sjc01.hls.ttvnw.net/v1/playlist/CmeqOG7vQChjCIeTQOhd6HamR_KnjZ-FVFPKU8skSEh1H1bxe4Y27HlhIPsf63M3LydVtKmuJvXrScZslITipN_nRzIfaonFr1OiLfSlgsk714KGeGQPEyP0FWUqFZqS8CpVpW92lZecFkBqjLz2G886XIOtHsfj3vfb0mvvEkT-mFJXMow2KW1QO8CzfmGgzR4exybhpSTVJwfDlQT8sZhMHtg8q6-dKMRlq-LPo4ptKaypZHf61NfJW9TyApfRuN_pJlXwX6LS0SpBqobvbV-sZ0ML08c9pGFyuWERAqZ5i58CehZ00uWRF7KPW1SxN86TBE3vKO7DyKTdfuyyMUduSZ3X2zD-JpwTwHb-Y5OpFCNS6z-VgMIG__yQ_qYITmoiCAiqfxtl1EhkchVT9mu8MGFEOpX5j-5pWS0ShAjTZ2Sbj7MZgY7jvzLJjD.m3u8"
+        t.trustedSpadeURI = "//video-edge-d07349.sjc01.hls.ttvnw.net/v1/playlist/CokKFdmu2wwcnioqFThv7Jd0r1K0I1wxzdePW-IciXhx--ord3Kwg1oSocH8-kp7DLJqNcYuvSYxEFSQgtSubtJnG5b8lYZ3UqmBLf_fUvlcMYi0cK1KWocGHmTeloGHFN5HSjAKG366HrHCJjRObwo7ShF7Hv6Vx0PH8bHgXU7YLChq0gcAikhL-JKNViQGkXrnfRcWpd3aAQgoowDLQEKHwikEM0oPRFrKtkbXDY0alcbdmfhjTXMyQUVShz7bG-jPUru9NaMR3YGOkZHHaODvDZjZyd_HykEvob0YWQmRokmU4MgaPs-IX1Un3pTQN1mru8Erp2-lIZhTHJqq34V6PaghZZjdd88vMNZ-zuSP65cRHa6Q-qkrGdc8vc-NDvPrpSRZN8eZJaJPdHyv0raXdQ1ksw-_tdnaE50ok3AAnON1edd8CI6LJuGvuE-_lJh.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -30582,23 +30582,26 @@
                 playerHeight: l.PropTypes.number.isRequired,
                 qualitiesAvailable: l.PropTypes.bool.isRequired,
                 qualityIsChanging: l.PropTypes.bool.isRequired,
+                trackEvent: l.PropTypes.func.isRequired,
                 windowObj: l.PropTypes.object.isRequired
             },
             g = {
                 showSettings: function() {}
             },
             b = t.mapStateToProps = function(e) {
-                var t = e.quality,
-                    n = e.playerDimensions,
-                    r = e.ui,
-                    i = e.window;
+                var t = e.analyticsTracker,
+                    n = e.quality,
+                    r = e.playerDimensions,
+                    i = e.ui,
+                    o = e.window;
                 return {
-                    isAutoQuality: t.selected === m.QUALITY_AUTO,
-                    isSettingsShown: r.showSettings,
-                    playerHeight: n.height,
-                    qualitiesAvailable: t.available.length > 0,
-                    qualityIsChanging: t.selected !== t.current,
-                    windowObj: i
+                    isAutoQuality: n.selected === m.QUALITY_AUTO,
+                    isSettingsShown: i.showSettings,
+                    playerHeight: r.height,
+                    qualitiesAvailable: n.available.length > 0,
+                    qualityIsChanging: n.selected !== n.current,
+                    trackEvent: t.trackEvent,
+                    windowObj: o
                 }
             },
             E = function(e) {
@@ -30640,7 +30643,7 @@
                 }, {
                     key: "handleSettingsButtonClick",
                     value: function() {
-                        this.props.onShowSettings(!this.props.isSettingsShown)
+                        this.props.onShowSettings(!this.props.isSettingsShown), this.props.trackEvent("player_click_options")
                     }
                 }, {
                     key: "render",
@@ -31133,7 +31136,7 @@
                     writable: !0,
                     configurable: !0
                 }
-            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t);
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -32534,7 +32537,7 @@
 
         function o(e, t) {
             if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !t || "object" != typeof t && "function" != typeof t ? e : t
+            return !t || "object" != typeof t && "function" != typeof t ? e : t;
         }
 
         function a(e, t) {
@@ -35461,94 +35464,93 @@
                     var s = function() {
                         function e(e, t, n, a, s, l, u) {
                             var c = this;
-                            this.extension = e, this.iframe = t,
-                                this.ems = s, this.contextManager = l, this.tracker = u, this.handleUserAction = {
-                                    click: function(e) {
-                                        var t = e.payload,
-                                            n = this.iframe.getBoundingClientRect(),
-                                            r = n.width,
-                                            i = n.height;
-                                        this.tracker.trackEvent("extension_click", {
-                                            px_mouse_coord_x: t.clientX,
-                                            px_mouse_coord_y: t.clientY,
-                                            pct_mouse_coord_x: t.clientX / r * 100,
-                                            pct_mouse_coord_y: t.clientY / i * 100
-                                        })
-                                    },
-                                    mousemove: function(e) {
-                                        var t = e.payload,
-                                            n = this.iframe.getBoundingClientRect(),
-                                            r = n.left,
-                                            i = n.top;
-                                        this.iframe.dispatchEvent(new MouseEvent("mousemove", {
-                                            bubbles: !0,
-                                            clientX: t.clientX,
-                                            clientY: t.clientY,
-                                            screenX: r + t.clientX,
-                                            screenY: i + t.clientY
-                                        }))
-                                    },
-                                    focusin: function(e) {
-                                        e.payload;
-                                        if ("video_overlay" === this.extension.anchor) {
-                                            for (var t = this.iframe; t && !t.hasAttribute("tabindex");) t = t.parentElement;
-                                            t && t.focus()
-                                        }
+                            this.extension = e, this.iframe = t, this.ems = s, this.contextManager = l, this.tracker = u, this.handleUserAction = {
+                                click: function(e) {
+                                    var t = e.payload,
+                                        n = this.iframe.getBoundingClientRect(),
+                                        r = n.width,
+                                        i = n.height;
+                                    this.tracker.trackEvent("extension_click", {
+                                        px_mouse_coord_x: t.clientX,
+                                        px_mouse_coord_y: t.clientY,
+                                        pct_mouse_coord_x: t.clientX / r * 100,
+                                        pct_mouse_coord_y: t.clientY / i * 100
+                                    })
+                                },
+                                mousemove: function(e) {
+                                    var t = e.payload,
+                                        n = this.iframe.getBoundingClientRect(),
+                                        r = n.left,
+                                        i = n.top;
+                                    this.iframe.dispatchEvent(new MouseEvent("mousemove", {
+                                        bubbles: !0,
+                                        clientX: t.clientX,
+                                        clientY: t.clientY,
+                                        screenX: r + t.clientX,
+                                        screenY: i + t.clientY
+                                    }))
+                                },
+                                focusin: function(e) {
+                                    e.payload;
+                                    if ("video_overlay" === this.extension.anchor) {
+                                        for (var t = this.iframe; t && !t.hasAttribute("tabindex");) t = t.parentElement;
+                                        t && t.focus()
                                     }
-                                }, this.destroy = function() {
-                                    c.contextManager.destroy(), c.ems.destroy(), c.eventListeners.forEach(function(e) {
-                                        e.target.removeEventListener(e.event, e.callback)
-                                    })
-                                }, this.reloadExtension = function(e) {
-                                    c.ems.token = e, c.sendMessage({
-                                        action: r.a.TwitchExtReload
-                                    })
-                                }, this.setGame = function(e) {
-                                    c.contextManager.setGame(e)
-                                }, this.sendMessage = function(e) {
-                                    c.iframe.contentWindow.postMessage(e, "*")
-                                }, this.onInitialAuth = function() {
-                                    c.sendMessage({
-                                        action: r.a.TwitchExtBoostrap,
-                                        auth: c.ems.auth
-                                    })
-                                }, this.onContextUpdate = function(e) {
-                                    c.sendMessage({
-                                        action: r.a.TwitchExtContext,
-                                        updatedFields: e,
-                                        context: c.contextManager.context
-                                    })
-                                }, this.onAuthUpdate = function(e) {
-                                    c.sendMessage({
-                                        action: r.a.TwitchExtAuth,
-                                        auth: c.ems.auth
-                                    })
-                                }, this.onError = function(e) {
-                                    c.sendMessage({
-                                        action: r.a.TwitchExtError,
-                                        message: e
-                                    })
-                                }, this.onMouseEnter = function(e) {
-                                    c.tracker.trackEvent("extension_mouseenter", {})
-                                }, this.handleMessage = function(e) {
-                                    var t = e.source,
-                                        n = e.data;
-                                    if (t === c.iframe.contentWindow) try {
-                                        c.handleExtensionAction(n)
-                                    } catch (e) {
-                                        console.error(e)
-                                    }
-                                }, this.ems = s || new o.a(e, this.onAuthUpdate, this.onError), this.contextManager = l || new i.a(a, n, this.onContextUpdate), this.eventListeners = [{
-                                    target: this.iframe,
-                                    event: "mouseenter",
-                                    callback: this.onMouseEnter
-                                }, {
-                                    target: this.iframe.ownerDocument.defaultView,
-                                    event: "message",
-                                    callback: this.handleMessage
-                                }], this.eventListeners.forEach(function(e) {
-                                    e.target.addEventListener(e.event, e.callback)
-                                }), this.tracker.trackEvent("extension_render", {})
+                                }
+                            }, this.destroy = function() {
+                                c.contextManager.destroy(), c.ems.destroy(), c.eventListeners.forEach(function(e) {
+                                    e.target.removeEventListener(e.event, e.callback)
+                                })
+                            }, this.reloadExtension = function(e) {
+                                c.ems.token = e, c.sendMessage({
+                                    action: r.a.TwitchExtReload
+                                })
+                            }, this.setGame = function(e) {
+                                c.contextManager.setGame(e)
+                            }, this.sendMessage = function(e) {
+                                c.iframe.contentWindow.postMessage(e, "*")
+                            }, this.onInitialAuth = function() {
+                                c.sendMessage({
+                                    action: r.a.TwitchExtBoostrap,
+                                    auth: c.ems.auth
+                                })
+                            }, this.onContextUpdate = function(e) {
+                                c.sendMessage({
+                                    action: r.a.TwitchExtContext,
+                                    updatedFields: e,
+                                    context: c.contextManager.context
+                                })
+                            }, this.onAuthUpdate = function(e) {
+                                c.sendMessage({
+                                    action: r.a.TwitchExtAuth,
+                                    auth: c.ems.auth
+                                })
+                            }, this.onError = function(e) {
+                                c.sendMessage({
+                                    action: r.a.TwitchExtError,
+                                    message: e
+                                })
+                            }, this.onMouseEnter = function(e) {
+                                c.tracker.trackEvent("extension_mouseenter", {})
+                            }, this.handleMessage = function(e) {
+                                var t = e.source,
+                                    n = e.data;
+                                if (t === c.iframe.contentWindow) try {
+                                    c.handleExtensionAction(n)
+                                } catch (e) {
+                                    console.error(e)
+                                }
+                            }, this.ems = s || new o.a(e, this.onAuthUpdate, this.onError), this.contextManager = l || new i.a(a, n, this.onContextUpdate), this.eventListeners = [{
+                                target: this.iframe,
+                                event: "mouseenter",
+                                callback: this.onMouseEnter
+                            }, {
+                                target: this.iframe.ownerDocument.defaultView,
+                                event: "message",
+                                callback: this.handleMessage
+                            }], this.eventListeners.forEach(function(e) {
+                                e.target.addEventListener(e.event, e.callback)
+                            }), this.tracker.trackEvent("extension_render", {})
                         }
                         return e.create = function(t) {
                             return new e(t.extension, t.iframe, t.mode, t.playerExtensionsApi, null, null, new a.a({
