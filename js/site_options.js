@@ -1081,16 +1081,6 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
-        "86ad7a91-bf36-46c5-adef-6006a09720a8": {
-            "name": "sub_options",
-            "groups": [{
-                "weight": 0,
-                "value": "one_page"
-            }, {
-                "weight": 100,
-                "value": "two_page"
-            }]
-        },
         "87d995c4-afbc-400e-a6e4-472419071e26": {
             "name": "ios_pipboy_broadcasting",
             "groups": [{
