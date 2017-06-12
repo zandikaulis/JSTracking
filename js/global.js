@@ -16278,7 +16278,6 @@ googletag.cmd = googletag.cmd || [],
                 ZACH_MODE: "0a4d513f-0274-4b33-b04f-287521abd51b",
                 WT_P: "c097971e-c5fc-4763-a8fa-de04f3d713a7",
                 CHANNEL_CHAT_CTA: "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9",
-                SUB_OPTIONS: "86ad7a91-bf36-46c5-adef-6006a09720a8",
                 LOGGED_OUT_FRONT_PAGE_EXPERIMENT: "54e455b2-9854-4c55-b926-cfadbff49324",
                 AKAMAI_IMAGE_MANAGER: "f321aa37-e81d-4a81-99d5-303bf9429b7b",
                 SISKO: "31827b23-ea01-48b8-87c6-1503656957fd",
@@ -16329,7 +16328,6 @@ googletag.cmd = googletag.cmd || [],
                 "0a4d513f-0274-4b33-b04f-287521abd51b": "control",
                 "c097971e-c5fc-4763-a8fa-de04f3d713a7": "no",
                 "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9": "control",
-                "86ad7a91-bf36-46c5-adef-6006a09720a8": "two_page",
                 "54e455b2-9854-4c55-b926-cfadbff49324": "control",
                 "f321aa37-e81d-4a81-99d5-303bf9429b7b": "control",
                 "31827b23-ea01-48b8-87c6-1503656957fd": "control",
@@ -16581,8 +16579,7 @@ googletag.cmd = googletag.cmd || [],
             }), t.on("chromecastVolumeUpdated", function(e) {
                 o && o.setReceiverVolumeLevel(e.volume, null, c)
             }), t.on("pauseChromecastSession", function() {
-                r && (i = r.media.customData.channel, r.pause(new chrome.cast.media.PauseRequest, null, null),
-                    r = null)
+                r && (i = r.media.customData.channel, r.pause(new chrome.cast.media.PauseRequest, null, null), r = null)
             })
         }, e.mixin({
             chromecast: n
@@ -16590,7 +16587,8 @@ googletag.cmd = googletag.cmd || [],
     }(Twitch, jQuery),
     function(e, t) {
         var n = function(e, t) {
-                this.channel = e, this.stream = t
+                this.channel = e,
+                    this.stream = t
             },
             i = function(t, n) {
                 return new RSVP.Promise(function(i, r) {
