@@ -9760,7 +9760,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.12-220239+e16bbf4160d49b341a3df2733854d2e3efa5aa38",
+                    app_version: "2017.06.12-224804+fab11f61c8db24a22a7fdabd99f6cdb797d16839",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -39832,6 +39832,7 @@
         e.exports = {
             Live: "Live",
             Advertisement: "Advertisement",
+            "This Ad supports {{channelName}}": "This Ad supports {{channelName}}",
             Pause: "Pause",
             Play: "Play",
             Mute: "Mute",
@@ -40227,9 +40228,8 @@
                     i(this, t);
                     var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.state = {
-                            showFeatured: !0
-                        }, e.handleCloseFeaturedPane = e.handleCloseFeaturedPane.bind(e),
-                        e
+                        showFeatured: !0
+                    }, e.handleCloseFeaturedPane = e.handleCloseFeaturedPane.bind(e), e
                 }
                 return a(t, e), s(t, [{
                     key: "componentWillMount",
