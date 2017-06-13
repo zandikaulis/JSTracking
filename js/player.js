@@ -9760,7 +9760,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.13-004748+c55fbad7d7617daa25c0a1beb8167c9f0f8b5ff0",
+                    app_version: "2017.06.13-174126+c75b9ba61922730b283a7f889d9e0a4650fc0ab7",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -12487,7 +12487,7 @@
                 if (e.hasOwnProperty("URL") && (0, X.default)(e.URL)) {
                     var t = e.URL;
                     try {
-                        n.dispatch((0, w.setAdClickThrough)(decodeURIComponent(t)))
+                        n.dispatch((0, w.setAdClickThrough)(t))
                     } catch (e) {
                         console.warn("Failed to decode click-through URL: ", t)
                     }
@@ -13134,11 +13134,12 @@
             }
 
             function u() {
-                Ye = !0, qe.resolve(), He.emit(C.PLAYER_INIT);
+                Ye = !0, qe.resolve(), He.emit(C.PLAYER_INIT)
             }
 
             function d(e) {
-                at = e, He.emit(C.CAPTION_UPDATE)
+                at = e,
+                    He.emit(C.CAPTION_UPDATE)
             }
 
             function f(e) {
@@ -14744,10 +14745,9 @@
                     key: "_initPlayerCore",
                     value: function(e, t) {
                         this.playerCoreEvents = e.Event, this.core = new e((0, I.default)({}, t, {
-                                analyticsTracker: this.stateStore.getState().analyticsTracker,
-                                logLevel: this.playerCoreLogLevel
-                            })), this.core.attachMedia(this.video), this.core.addEventListener(this.playerCoreEvents.HLS_MASTER_PARSED, this.onHLSMasterParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.HLS_VARIANT_PARSED, this.onHLSVariantParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.VARIANT_SWITCH_REQUESTED, this.onVariantSwitchRequested.bind(this)), this.core.addEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this.onID3Tag.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEOUT, this.onSpliceOut.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEIN, this.onSpliceIn.bind(this)), this.core.addEventListener(this.playerCoreEvents.CAPTION, this.onCaption.bind(this)), this.core.addEventListener(this.playerCoreEvents.AUTH_ERROR, this.onAuthError.bind(this)), this.core.addEventListener(this.playerCoreEvents.CORE_ANALYTICS, this.onCoreAnalytics.bind(this)), this.core.addEventListener(this.playerCoreEvents.OFFLINE, this.onOfflineError.bind(this)), this.core.addEventListener(this.playerCoreEvents.BUFFERING, this.onBuffering.bind(this)), this.core.addEventListener(this.playerCoreEvents.FATAL_ERROR, this.onFatalError.bind(this)),
-                            this.events.emit(p.PLAYER_INIT)
+                            analyticsTracker: this.stateStore.getState().analyticsTracker,
+                            logLevel: this.playerCoreLogLevel
+                        })), this.core.attachMedia(this.video), this.core.addEventListener(this.playerCoreEvents.HLS_MASTER_PARSED, this.onHLSMasterParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.HLS_VARIANT_PARSED, this.onHLSVariantParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.VARIANT_SWITCH_REQUESTED, this.onVariantSwitchRequested.bind(this)), this.core.addEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this.onID3Tag.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEOUT, this.onSpliceOut.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEIN, this.onSpliceIn.bind(this)), this.core.addEventListener(this.playerCoreEvents.CAPTION, this.onCaption.bind(this)), this.core.addEventListener(this.playerCoreEvents.AUTH_ERROR, this.onAuthError.bind(this)), this.core.addEventListener(this.playerCoreEvents.CORE_ANALYTICS, this.onCoreAnalytics.bind(this)), this.core.addEventListener(this.playerCoreEvents.OFFLINE, this.onOfflineError.bind(this)), this.core.addEventListener(this.playerCoreEvents.BUFFERING, this.onBuffering.bind(this)), this.core.addEventListener(this.playerCoreEvents.FATAL_ERROR, this.onFatalError.bind(this)), this.events.emit(p.PLAYER_INIT);
                     }
                 }, {
                     key: "onBuffering",
