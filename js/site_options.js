@@ -538,6 +538,16 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "30a7dfaa-e3d2-477e-a4f1-28e2ffb80e72": {
+            "name": "newsfeed_recommendations",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "variant"
+            }]
+        },
         "31827b23-ea01-48b8-87c6-1503656957fd": {
             "name": "SISKO",
             "groups": [{
