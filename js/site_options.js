@@ -1749,10 +1749,10 @@ window.SiteOptions = {
         "d38d7cb0-f7c2-4237-b0f2-66681aa4825c": {
             "name": "clips_click_me",
             "groups": [{
-                "weight": 1,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "variant1"
             }]
         },

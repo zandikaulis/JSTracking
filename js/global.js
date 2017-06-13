@@ -16268,7 +16268,6 @@ googletag.cmd = googletag.cmd || [],
                 CLIENT_BATCH_MIXPANEL: "42f5eea6-c548-4791-b767-9c7e29b73ef6",
                 CLIPS_HEAR_ME_NOW: "9649684c-6d3f-423d-9d3c-f4296efee975",
                 CLIPS_YOU_WERE_RIGHT: "6b4086ea-dcce-41c9-a57b-000fa9366e35",
-                ONSITE_NOTIFICATIONS: "b2925d54-cebb-4e1d-a50d-9dd2b1ea850e",
                 NEWS_FEED_REDESIGN: "05d8869f-e037-4955-b80a-7c361f9ddffb",
                 VOD_UPLOAD_UNITS_V3: "1710cf57-352c-4d09-b2c1-3d40bdf79b30",
                 AWS_ROUNDTRIP_LATENCY_TEST_OPT_IN: "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef",
@@ -16320,7 +16319,6 @@ googletag.cmd = googletag.cmd || [],
                 "6b4086ea-dcce-41c9-a57b-000fa9366e35": "control",
                 "05d8869f-e037-4955-b80a-7c361f9ddffb": "no",
                 "1710cf57-352c-4d09-b2c1-3d40bdf79b30": "control",
-                "b2925d54-cebb-4e1d-a50d-9dd2b1ea850e": "control",
                 "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef": "false",
                 "5daee224-4c99-499f-b6e0-e308a5fa54f1": "control",
                 "479d9473-bf6e-4d74-8f9b-dd85d6f98921": "control",
@@ -16344,7 +16342,6 @@ googletag.cmd = googletag.cmd || [],
                 CLIPS_ENABLED: "yes",
                 DETERMINATION: "yes",
                 DISCOVER_SHOW_COVIEWS: "show",
-                ONSITE_NOTIFICATIONS: "variant2",
                 CLIPS_HEAR_ME_NOW: "variant1",
                 SOCIAL_RECOMMENDATIONS: "variant1",
                 LOL_METADATA_EXPERIMENT: "treatment",
@@ -16587,8 +16584,7 @@ googletag.cmd = googletag.cmd || [],
     }(Twitch, jQuery),
     function(e, t) {
         var n = function(e, t) {
-                this.channel = e,
-                    this.stream = t
+                this.channel = e, this.stream = t
             },
             i = function(t, n) {
                 return new RSVP.Promise(function(i, r) {
@@ -17736,9 +17732,10 @@ googletag.cmd = googletag.cmd || [],
         i.funnel = {
             trackPageViewWithDiagnostics: function(t) {
                 var n = new a;
-                return n.start(), t.then(function(t) {
-                    e.tracking.funnel.trackPageView(t), n.end()
-                })
+                return n.start(),
+                    t.then(function(t) {
+                        e.tracking.funnel.trackPageView(t), n.end()
+                    })
             },
             data: {
                 geo: e.geo,
