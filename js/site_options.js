@@ -1726,6 +1726,16 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
+        "d1aef411-5131-4ffe-8dc8-f6f1f9c05e78": {
+            "name": "android_playercore_4",
+            "groups": [{
+                "weight": 99,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "active"
+            }]
+        },
         "d24f182c-e36f-498e-9e49-113e02a83bad": {
             "name": "passport_redesign",
             "groups": [{
