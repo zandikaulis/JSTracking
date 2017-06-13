@@ -152,16 +152,6 @@ window.SiteOptions = {
                 "value": "live"
             }]
         },
-        "04165981-17be-4593-afbd-762a380f6838": {
-            "name": "MESSAGE_DELETED_EXPERIMENT",
-            "groups": [{
-                "weight": 0,
-                "value": "true"
-            }, {
-                "weight": 100,
-                "value": "false"
-            }]
-        },
         "04b8f9e1-4849-48fa-8d33-c56ec9f040a0": {
             "name": "android_video_paint",
             "groups": [{
@@ -539,7 +529,7 @@ window.SiteOptions = {
             }]
         },
         "30a7dfaa-e3d2-477e-a4f1-28e2ffb80e72": {
-            "name": "newsfeed_recommendations",
+            "name": "NEWSFEED_RECOMMENDATIONS",
             "groups": [{
                 "weight": 0,
                 "value": "control"
