@@ -9742,7 +9742,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.14-013333+82e5b8ced2c0f3eeab5b00fdb177fbe697e67664",
+                    app_version: "2017.06.14-031034+43987acad40c057103dddc9b72d3156025a29ae8",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -20127,7 +20127,10 @@
             }
 
             function y() {
-                var t = e.getChannel()
+                var r = n.getState(),
+                    i = r.onlineStatus,
+                    o = e.getChannel();
+                o && i === S.OFFLINE_STATUS && (w(), $(t).attr("data-loading", !1))
             }
 
             function C(n) {
@@ -20390,8 +20393,8 @@
                         n = t.recommendations;
                     n.type === c.POST_VOD_RECOMMENDATIONS_TYPE && 0 !== n.videos.length && ($(".js-video-recommendations", this.$root).html(n.videos.map(function(t, n) {
                         var r = e.$template.clone();
-                        0 === n && (e.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")), e.updateAutoplayProgress(100, Math.round(g / 1e3))), e.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")), r.attr("data-index", n), r.find(".js-recommended-stream__thumbnail").attr("src", t.thumbnailURL), r.find(".js-recommended-stream__channel").text(t.channelName),
-                            r.find(".js-recommended-stream__title").text(t.title);
+                        0 === n && (e.$autoplayTemplate.clone().appendTo(r.find(".js-recommendations-card")), e.updateAutoplayProgress(100, Math.round(g / 1e3))), e.$timeInfoTemplate.clone().appendTo(r.find(".js-recommendations-card")), r.attr("data-index", n),
+                            r.find(".js-recommended-stream__thumbnail").attr("src", t.thumbnailURL), r.find(".js-recommended-stream__channel").text(t.channelName), r.find(".js-recommended-stream__title").text(t.title);
                         var i = e._stateStore.getState().lang.langCode,
                             o = {
                                 year: "numeric",
@@ -21555,7 +21558,8 @@
                     return (0, y.subscribe)(this._stateStore, ["captions"], function(t, n) {
                         var r = t.captions,
                             i = n.captions;
-                        r.available !== i.available && e.showCCAvailability(r.available), r.enabled !== i.enabled && (e.setCCIconStatus(r.enabled), e.showCaption(r)), r.data !== i.data && e.showCaption(r), r.preset !== i.preset && (e.setCurrentPreset(), e.setCurrentStyles()), r.preset === i.preset && r.style === i.style || e.applyCCStyle()
+                        r.available !== i.available && e.showCCAvailability(r.available), r.enabled !== i.enabled && (e.setCCIconStatus(r.enabled), e.showCaption(r)), r.data !== i.data && e.showCaption(r), r.preset !== i.preset && (e.setCurrentPreset(),
+                            e.setCurrentStyles()), r.preset === i.preset && r.style === i.style || e.applyCCStyle()
                     })
                 }
             }, {
