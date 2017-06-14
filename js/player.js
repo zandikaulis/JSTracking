@@ -9766,7 +9766,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.14-191053+ff68ff95ef168e62ecb1e4a33a97dade0aa431a4",
+                    app_version: "2017.06.14-193919+b3133ddcc6fabc0fbece3022ae2269c83f62ae0e",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -12863,6 +12863,14 @@
                 var e = n.getState(),
                     t = e.streamMetadata;
                 return t.videoId
+            }, De.getSessionInfo = function() {
+                var e = n.getState(),
+                    t = e.analytics,
+                    r = e.manifestInfo;
+                return {
+                    broadcastId: r.broadcast_id,
+                    playSessionId: t.playSessionId
+                }
             }, De.getBroadcastId = function() {
                 var e = n.getState(),
                     t = e.manifestInfo;
@@ -13142,7 +13150,8 @@
             }
 
             function T(e) {
-                e && e.format && nt !== e.format && (nt = e.format, Fe.emit(C.QUALITY_CHANGE)), We = A.NETWORK_LOADING, Fe.emit(S.LOADSTART), Ze = 0, Fe.emit(S.DURATION_CHANGE), Oe(xe("getVideoTime")), Ie()
+                e && e.format && nt !== e.format && (nt = e.format, Fe.emit(C.QUALITY_CHANGE)), We = A.NETWORK_LOADING, Fe.emit(S.LOADSTART), Ze = 0, Fe.emit(S.DURATION_CHANGE),
+                    Oe(xe("getVideoTime")), Ie()
             }
 
             function P() {
@@ -13150,8 +13159,7 @@
             }
 
             function w(e) {
-                Xe && (Xe = !1, Fe.emit(S.PLAY)), ct = !1, nt = e.format, Oe(xe("getVideoTime")),
-                    ke(), Ye < k.HAVE_METADATA && (null !== je.getChannel() && (Ze = 1 / 0), Ye = k.HAVE_METADATA, Fe.emit(S.LOADED_METADATA)), Ye < k.HAVE_CURRENT_DATA && (Ye = k.HAVE_CURRENT_DATA, Fe.emit(S.LOADED_DATA)), Ye = k.HAVE_FUTURE_DATA, Fe.emit(S.PLAYING)
+                Xe && (Xe = !1, Fe.emit(S.PLAY)), ct = !1, nt = e.format, Oe(xe("getVideoTime")), ke(), Ye < k.HAVE_METADATA && (null !== je.getChannel() && (Ze = 1 / 0), Ye = k.HAVE_METADATA, Fe.emit(S.LOADED_METADATA)), Ye < k.HAVE_CURRENT_DATA && (Ye = k.HAVE_CURRENT_DATA, Fe.emit(S.LOADED_DATA)), Ye = k.HAVE_FUTURE_DATA, Fe.emit(S.PLAYING)
             }
 
             function O() {
@@ -14741,7 +14749,7 @@
                                 n = e.analyticsTracker;
                             n.trackEvent(v.VIDEO_PLAY_VARIANT_MANIFEST, {
                                 time_since_load_start: Date.now() - t.playSessionStartTime
-                            }), this._emitVariantManifestTracking = !1
+                            }), this._emitVariantManifestTracking = !1;
                         }
                     }
                 }, {
