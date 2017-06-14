@@ -561,10 +561,10 @@ window.SiteOptions = {
         "354aaebd-7643-434f-be37-98fe12c01220": {
             "name": "HTML5_Toggle_Removal",
             "groups": [{
-                "weight": 40,
+                "weight": 1,
                 "value": "remove"
             }, {
-                "weight": 60,
+                "weight": 99,
                 "value": "keep"
             }]
         },
@@ -1028,10 +1028,10 @@ window.SiteOptions = {
         "78360f5d-4ace-420d-8bca-df0d146ffdee": {
             "name": "CHANNEL_SIGNUP_COLUMN",
             "groups": [{
-                "weight": 0,
+                "weight": 1,
                 "value": "treatment"
             }, {
-                "weight": 100,
+                "weight": 99,
                 "value": "control"
             }]
         },
