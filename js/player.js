@@ -4374,31 +4374,31 @@
         }
 
         function a(e) {
-            return W().then(function(e) {
+            return K().then(function(e) {
                 return e.token
             }, function(e) {
                 return null
             }).then(function(t) {
-                var n = (0, k.default)({}, G, e);
+                var n = (0, I.default)({}, Y, e);
                 return t && (n.headers.Authorization = "OAuth " + t), $.ajax(n)
             })
         }
 
         function s(e) {
             return a({
-                url: j.apiHost + "/kraken/" + e,
+                url: U.apiHost + "/kraken/" + e,
                 headers: {
-                    Accept: H
+                    Accept: q
                 }
             })
         }
 
         function l(e, t) {
             var n = {
-                Accept: q
+                Accept: G
             };
-            return t && t.headers && (n = (0, k.default)(n, t.headers)), a((0, k.default)({}, t, {
-                url: j.apiHost + "/kraken/" + e,
+            return t && t.headers && (n = (0, I.default)(n, t.headers)), a((0, I.default)({}, t, {
+                url: U.apiHost + "/kraken/" + e,
                 headers: n
             }))
         }
@@ -4438,7 +4438,7 @@
         }
 
         function _(e) {
-            return Y(e).then(function(e) {
+            return W(e).then(function(e) {
                 var t = e._id;
                 return l("channels/" + t + "/community").then(function(e) {
                     return Promise.resolve(e)
@@ -4450,16 +4450,16 @@
 
         function v(e) {
             return a({
-                url: j.apiHost + "/v5/channels/" + e + "/collections?limit=1&exclude_empty=true"
+                url: U.apiHost + "/v5/channels/" + e + "/collections?limit=1&exclude_empty=true"
             })
         }
 
         function m(e) {
             var t = a({
-                    url: j.apiHost + "/v5/collections/" + e
+                    url: U.apiHost + "/v5/collections/" + e
                 }),
                 n = a({
-                    url: j.apiHost + "/v5/collections/" + e + "/items"
+                    url: U.apiHost + "/v5/collections/" + e + "/items"
                 });
             return Promise.all([t, n])
         }
@@ -4467,22 +4467,22 @@
         function y(e) {
             var t = e.player,
                 n = e.oauth_token;
-            if (t === B.PLAYER_CURSE && n) {
+            if (t === F.PLAYER_CURSE && n) {
                 var r = Promise.resolve({
                     token: n
                 });
-                W.cache.set(void 0, r)
+                K.cache.set(void 0, r)
             }
         }
 
         function g(e, t) {
-            return null === e.chansub && !e.is_admin && (0, M.default)(t.restrictions, function(e, t) {
+            return null === e.chansub && !e.is_admin && (0, L.default)(t.restrictions, function(e, t) {
                 return e || "chansub" === t
             }, !1)
         }
 
         function b(e, t) {
-            var n = j.twitchHost + "/" + o(e);
+            var n = U.twitchHost + "/" + o(e);
             return t && (n += "?" + $.param(t)), n
         }
 
@@ -4494,14 +4494,14 @@
         }
 
         function T(e) {
-            return Y(e).then(function(e) {
+            return W(e).then(function(e) {
                 return l("channels/" + e._id + "/extensions")
             }).then(function(e) {
                 return e.installed_extensions.reduce(function(t, n) {
                     var r = n.extension,
                         i = n.installation_status;
                     if ("active" !== i.activation_state || "video_overlay" !== i.activation_config.anchor) return t;
-                    var o = (0, D.default)(e.tokens, function(e) {
+                    var o = (0, x.default)(e.tokens, function(e) {
                         return r.id === e.extension_id
                     });
                     return o ? t.concat({
@@ -4511,7 +4511,7 @@
                         anchor: r.anchor,
                         version: r.version,
                         viewerUrl: r.viewer_url,
-                        token: (0, F.parseExtensionToken)(o.token)
+                        token: (0, V.parseExtensionToken)(o.token)
                     }) : t
                 }, [])
             }).catch(function() {
@@ -4533,81 +4533,89 @@
                 processData: !1
             }).then(function(e) {
                 var t = e.token;
-                return (0, F.parseExtensionToken)(t)
+                return (0, V.parseExtensionToken)(t)
+            })
+        }
+
+        function P(e) {
+            return $.ajax({
+                method: "POST",
+                url: "/user/report",
+                data: e
             })
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.oauthToken = t.channelAPIInfo = t.krakenUserInfo = t.userInfo = t.channelViewerInfo = t.videoInfo = t.channelInfo = void 0, t.krakenRequest = s, t.krakenRequestv5 = l, t.streamInfo = u, t.getSubscriptionInfo = c, t.getFollowChannel = p, t.setFollowChannel = f, t.setFollowNotifications = h, t.getCommunityFromChannel = _, t.getFeaturedCollection = v, t.collectionInfo = m, t.setOAuthToken = y, t.isVODRestricted = g, t.channelUrl = b, t.videoUrl = E, t.overlayExtensionsForChannel = T, t.updateIdentitySharingForExtension = S;
-        var P = n(117),
-            C = i(P),
-            w = n(78),
-            A = i(w),
-            O = n(201),
-            k = i(O),
-            I = n(70),
-            N = i(I),
-            R = n(214),
-            M = i(R),
-            L = n(120),
-            D = i(L),
-            x = n(168),
-            j = r(x),
-            U = n(217),
-            B = r(U),
-            F = n(219),
-            V = !!("withCredentials" in new XMLHttpRequest),
-            H = "application/vnd.twitchtv.v3+json",
-            q = "application/vnd.twitchtv.v5+json",
-            G = {
-                dataType: V ? "json" : "jsonp",
+        }), t.oauthToken = t.channelAPIInfo = t.krakenUserInfo = t.userInfo = t.channelViewerInfo = t.videoInfo = t.channelInfo = void 0, t.krakenRequest = s, t.krakenRequestv5 = l, t.streamInfo = u, t.getSubscriptionInfo = c, t.getFollowChannel = p, t.setFollowChannel = f, t.setFollowNotifications = h, t.getCommunityFromChannel = _, t.getFeaturedCollection = v, t.collectionInfo = m, t.setOAuthToken = y, t.isVODRestricted = g, t.channelUrl = b, t.videoUrl = E, t.overlayExtensionsForChannel = T, t.updateIdentitySharingForExtension = S, t.postExtensionReport = P;
+        var C = n(117),
+            w = i(C),
+            A = n(78),
+            O = i(A),
+            k = n(201),
+            I = i(k),
+            N = n(70),
+            R = i(N),
+            M = n(214),
+            L = i(M),
+            D = n(120),
+            x = i(D),
+            j = n(168),
+            U = r(j),
+            B = n(217),
+            F = r(B),
+            V = n(219),
+            H = !!("withCredentials" in new XMLHttpRequest),
+            q = "application/vnd.twitchtv.v3+json",
+            G = "application/vnd.twitchtv.v5+json",
+            Y = {
+                dataType: H ? "json" : "jsonp",
                 headers: {
                     "Client-ID": "jzkbprff40iqj646a697cyrvl0zt2m6"
                 },
-                timeout: j.apiTimeout
+                timeout: U.apiTimeout
             },
-            Y = t.channelInfo = (0, A.default)(function(e) {
+            W = t.channelInfo = (0, O.default)(function(e) {
                 return null === e ? Promise.reject(new Error("No channel info available on null channel ID")) : s("channels/" + o(e))
             }),
-            W = (t.videoInfo = (0, A.default)(function(e) {
+            K = (t.videoInfo = (0, O.default)(function(e) {
                 if (null === e || void 0 === e) return Promise.reject(new Error("No video info available on null video ID"));
                 var t = s("videos/" + o(e)),
                     n = a({
-                        url: j.apiHost + "/api/videos/" + o(e)
+                        url: U.apiHost + "/api/videos/" + o(e)
                     }).then(function(e) {
-                        return (0, N.default)(e, ["muted_segments", "increment_view_count_url", "restrictions", "seek_previews_url"])
+                        return (0, R.default)(e, ["muted_segments", "increment_view_count_url", "restrictions", "seek_previews_url"])
                     });
                 return Promise.all([t, n]).then(function(e) {
                     var t = e[0].channel.name;
-                    return Y(t).then(function(t) {
-                        var n = (0, C.default)({}, e[0], e[1]);
+                    return W(t).then(function(t) {
+                        var n = (0, w.default)({}, e[0], e[1]);
                         return n.channel = t, n
                     })
                 })
-            }), t.channelViewerInfo = (0, A.default)(function(e) {
+            }), t.channelViewerInfo = (0, O.default)(function(e) {
                 return a({
-                    url: j.apiHost + "/api/channels/" + o(e) + "/viewer"
+                    url: U.apiHost + "/api/channels/" + o(e) + "/viewer"
                 })
-            }), t.userInfo = (0, A.default)(function() {
+            }), t.userInfo = (0, O.default)(function() {
                 return a({
-                    url: j.apiHost + "/api/viewer/info.json",
+                    url: U.apiHost + "/api/viewer/info.json",
                     xhrFields: {
                         withCredentials: !0
                     }
                 })
-            }), t.krakenUserInfo = (0, A.default)(function() {
+            }), t.krakenUserInfo = (0, O.default)(function() {
                 return s("user")
-            }), t.channelAPIInfo = (0, A.default)(function(e) {
+            }), t.channelAPIInfo = (0, O.default)(function(e) {
                 return a({
-                    url: j.apiHost + "/api/channels/" + e
+                    url: U.apiHost + "/api/channels/" + e
                 })
-            }), t.oauthToken = (0, A.default)(function() {
-                var e = $.ajax((0, C.default)({
-                    url: j.apiHost + "/api/viewer/token.json",
+            }), t.oauthToken = (0, O.default)(function() {
+                var e = $.ajax((0, w.default)({
+                    url: U.apiHost + "/api/viewer/token.json",
                     xhrFields: {
                         withCredentials: !0
                     }
-                }, G));
+                }, Y));
                 return Promise.resolve(e)
             }))
     }, function(e, t, n) {
@@ -6465,7 +6473,7 @@
                                     return parseInt(F.getLabel("ns_st_lpc"))
                                 },
                                 setLongestPlaybackInterval: function(e) {
-                                    F.setLabel("ns_st_lpc", String(e));
+                                    F.setLabel("ns_st_lpc", String(e))
                                 },
                                 getAssetLongestPlaybackInterval: function() {
                                     return parseInt(F.getLabel("ns_st_lpa"))
@@ -9789,7 +9797,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.15-203437+925b4aa04984d7f5eaaff3d4be96035277aa89f9",
+                    app_version: "2017.06.15-230507+5d683bfc7925b45a4369268c8da2722211765fec",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -19265,12 +19273,15 @@
             }
             var s = !1;
             t.setAttribute("tabindex", r.tabindex || -1), t.addEventListener("keydown", function(t) {
-                var r = t.target || t.srcElement;
-                if ("INPUT" !== r.tagName || "text" !== $(r).attr("type")) {
-                    var a = o(t),
-                        l = void 0,
-                        u = void 0;
-                    switch (a) {
+                var r = t.target || t.srcElement,
+                    a = "INPUT" === r.tagName && "text" === $(r).attr("type"),
+                    l = "TEXTAREA" === r.tagName,
+                    u = "true" === r.contentEditable;
+                if (!(a || l || u)) {
+                    var C = o(t),
+                        N = void 0,
+                        R = void 0;
+                    switch (C) {
                         case _:
                             s = !0;
                             break;
@@ -19285,11 +19296,11 @@
                             break;
                         case b:
                         case A:
-                            l = n.getState().playback.volume, u = Math.round(100 * Math.min(l + c.volumeStepAmount, 1)) / 100, n.dispatch((0, f.changeVolume)(u));
+                            N = n.getState().playback.volume, R = Math.round(100 * Math.min(N + c.volumeStepAmount, 1)) / 100, n.dispatch((0, f.changeVolume)(R));
                             break;
                         case E:
                         case O:
-                            l = Math.round(100 * n.getState().playback.volume) / 100, u = Math.round(100 * Math.max(l - c.volumeStepAmount, 0)) / 100, n.dispatch((0, f.changeVolume)(u));
+                            N = Math.round(100 * n.getState().playback.volume) / 100, R = Math.round(100 * Math.max(N - c.volumeStepAmount, 0)) / 100, n.dispatch((0, f.changeVolume)(R));
                             break;
                         case g:
                         case w:
@@ -30787,7 +30798,8 @@
                 o = e.onMouseOut,
                 a = e.onMouseOver,
                 l = e.children,
-                u = e.className;
+                u = e.className,
+                c = e.disabled;
             return s.default.createElement("button", {
                 type: "button",
                 onClick: n,
@@ -30796,7 +30808,8 @@
                 onMouseOut: o,
                 onFocus: r,
                 onBlur: t,
-                className: u
+                className: u,
+                disabled: c
             }, l)
         }
         Object.defineProperty(t, "__esModule", {
@@ -30807,6 +30820,7 @@
             l = {
                 className: a.PropTypes.string,
                 children: a.PropTypes.oneOfType([a.PropTypes.arrayOf(a.PropTypes.element), a.PropTypes.element, a.PropTypes.node]),
+                disabled: a.PropTypes.bool,
                 onClick: a.PropTypes.func,
                 onMouseOver: a.PropTypes.func,
                 onMouseOut: a.PropTypes.func,
@@ -30815,6 +30829,7 @@
             },
             u = {
                 className: "",
+                disabled: !1,
                 onClick: function() {}
             };
         o.propTypes = l, o.defaultProps = u
@@ -32319,8 +32334,7 @@
                     }
                 }]), t
             }(u.default.Component);
-        C.propTypes = b,
-            C.defaultProps = E;
+        C.propTypes = b, C.defaultProps = E;
         t.AdvancedMenu = (0, c.connect)(T, P)(C)
     }, function(e, t, n) {
         "use strict";
