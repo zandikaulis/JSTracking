@@ -5093,7 +5093,9 @@
             s = n(53),
             l = r(s),
             u = n(223),
-            c = r(u);
+            c = r(u),
+            d = n(117),
+            p = r(d);
         t.AbstractStream = function() {
             function e(t, n, r, o, a) {
                 i(this, e), this._contentId = t, this._oAuthToken = n, this._usherParams = r, this._accessTokenParams = o, this._experimentSettings = a, this._restrictedBitrates = []
@@ -5133,24 +5135,38 @@
                 key: "_commonExperimentParams",
                 value: function() {
                     var e = this;
-                    return Promise.all([this.accessToken, this._experimentSettings.adStitchingUS, this._experimentSettings.adStitchingUK, this._experimentSettings.adStitchingA, this._experimentSettings.adStitchingB, this._experimentSettings.adStitchingC, this._experimentSettings.adStitchingD, this._experimentSettings.adStitchingE, this._experimentSettings.adStitchingF, this._experimentSettings.adStitchingG, this._experimentSettings.adStitchingH, this._experimentSettings.adStitchingI]).then(function(t) {
-                        var n = o(t, 12),
+                    return Promise.all([this.accessToken, this._experimentSettings.adStitchingUS, this._experimentSettings.adStitchingUK, this._experimentSettings.adStitchingA, this._experimentSettings.adStitchingB, this._experimentSettings.adStitchingC, this._experimentSettings.adStitchingD, this._experimentSettings.adStitchingE, this._experimentSettings.adStitchingF, this._experimentSettings.adStitchingG, this._experimentSettings.adStitchingH, this._experimentSettings.adStitchingI, this._experimentSettings.adStitchingPrerolls]).then(function(t) {
+                        var n = o(t, 13),
                             r = n[0],
                             i = n[1],
                             a = n[2],
                             s = n[3],
                             u = n[4],
                             d = n[5],
-                            p = n[6],
-                            f = n[7],
-                            h = n[8],
-                            _ = n[9],
-                            v = n[10],
-                            m = n[11],
-                            y = {};
-                        return y.baking_bread = (0, c.default)([i, a, s, u, d, p, f, h, _, v, m], function(e) {
+                            f = n[6],
+                            h = n[7],
+                            _ = n[8],
+                            v = n[9],
+                            m = n[10],
+                            y = n[11],
+                            g = n[12],
+                            b = {};
+                        b.baking_bread = (0, c.default)([i, a, s, u, d, f, h, _, v, m, y], function(e) {
                             return (0, l.default)(e, "yes")
-                        }), e._restrictedBitrates = JSON.parse(r.token).chansub.restricted_bitrates, y
+                        });
+                        var E = function(e) {
+                            var t = /^(yes_play|no_play)_(\d+)$/,
+                                n = t.exec(e),
+                                r = n || [],
+                                i = o(r, 3),
+                                a = i[1],
+                                s = i[2];
+                            if (a && !(s < 1)) return {
+                                baking_brownies: "yes_play" === a,
+                                baking_brownies_timeout: Number(s)
+                            }
+                        };
+                        return e._restrictedBitrates = JSON.parse(r.token).chansub.restricted_bitrates, (0, p.default)({}, b, E(g))
                     })
                 }
             }, {
@@ -5233,7 +5249,7 @@
         "use strict";
 
         function n(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -6449,7 +6465,7 @@
                                     return parseInt(F.getLabel("ns_st_lpc"))
                                 },
                                 setLongestPlaybackInterval: function(e) {
-                                    F.setLabel("ns_st_lpc", String(e))
+                                    F.setLabel("ns_st_lpc", String(e));
                                 },
                                 getAssetLongestPlaybackInterval: function() {
                                     return parseInt(F.getLabel("ns_st_lpa"))
@@ -7244,7 +7260,8 @@
                                 onEndOrAdSkip: function(n, r) {
                                     e.getSSECore().resetHeartbeat(), e.getSSECore().resetKeepAlive(), e.getPlaylist().getClip().addElapsedTime(n);
                                     var i = e.getSSECore().createLabels(l.END, r, n);
-                                    e.getEventManager().newEvent(i), e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && (e.getPlaylist().getClip().setSeekingTimeBeforeEnd(n - e.getPlaylist().getClip().getSeekingTimestamp()), e.getPlaylist().getClip().setSeeking(!1)), e.getPlaylist().storeClipPlaybackCounters(), e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1), r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist();
+                                    e.getEventManager().newEvent(i), e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && (e.getPlaylist().getClip().setSeekingTimeBeforeEnd(n - e.getPlaylist().getClip().getSeekingTimestamp()),
+                                        e.getPlaylist().getClip().setSeeking(!1)), e.getPlaylist().storeClipPlaybackCounters(), e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1), r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist()
                                 },
                                 onPlay: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
@@ -7899,7 +7916,8 @@
                                     return !1
                                 },
                                 setPlaylist: function(e, n) {
-                                    return void 0 === n && (n = !0), e = t.jsonObjectToStringDictionary(e), n && s.getSseSM().getStateMachine().getCurrentState() !== u.IDLE && c.end(), s.getSseSM().getStateMachine().getCurrentState() == u.IDLE && (s.getSseSM().getPlaylist().isPlaylistStarted() && s.resetPlaylist(), s.getSseSM().getPlaylist().setLabels(e), !0)
+                                    return void 0 === n && (n = !0), e = t.jsonObjectToStringDictionary(e), n && s.getSseSM().getStateMachine().getCurrentState() !== u.IDLE && c.end(), s.getSseSM().getStateMachine().getCurrentState() == u.IDLE && (s.getSseSM().getPlaylist().isPlaylistStarted() && s.resetPlaylist(),
+                                        s.getSseSM().getPlaylist().setLabels(e), !0)
                                 },
                                 importState: function() {},
                                 exportState: function() {
@@ -8877,9 +8895,9 @@
         function l(e) {
             var t, n;
             return new _.default({
-                defaults: (t = {}, i(t, E, "no"), i(t, T, "off"), i(t, S, "no"), i(t, P, "no"), i(t, C, "no"), i(t, w, "no"), i(t, A, "no"), i(t, O, "no"), i(t, k, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "no"), i(t, D, "1.6.3"), i(t, x, "no"), i(t, L, "no"), i(t, j, "no,"), i(t, U, "keep"), i(t, B, "no"), i(t, F, "control"), i(t, V, "pad_control"), i(t, H, "no"), i(t, q, "no"), i(t, G, "control"), i(t, Y, "no"), i(t, W, "control"), i(t, K, "control"), i(t, $, "control"), i(t, z, "control"), t),
+                defaults: (t = {}, i(t, E, "no"), i(t, T, "off"), i(t, S, "no"), i(t, P, "no"), i(t, C, "no"), i(t, w, "no"), i(t, A, "no"), i(t, O, "no"), i(t, k, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "no"), i(t, L, "control"), i(t, x, "1.6.3"), i(t, j, "no"), i(t, D, "no"), i(t, U, "no,"), i(t, B, "keep"), i(t, F, "no"), i(t, V, "control"), i(t, H, "pad_control"), i(t, q, "no"), i(t, G, "no"), i(t, Y, "control"), i(t, W, "no"), i(t, K, "control"), i(t, $, "control"), i(t, z, "control"), i(t, Q, "control"), t),
                 deviceID: e.deviceID,
-                overrides: (0, d.default)((n = {}, i(n, T, o("v2")), i(n, S, a(["US"])), i(n, P, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, A, a(["SE"])), i(n, O, a(["DK", "FI", "NL", "NO"])), i(n, k, a(["CA"])), i(n, I, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, R, a(["PL"])), i(n, M, a(["AT", "CH", "ES", "IT", "PT"])), i(n, x, o("yes")), i(n, L, o("vca")), i(n, j, o("yes")), i(n, D, o("1.8.6+spd67")), i(n, q, o("yes")), i(n, H, o("yes")), i(n, $, o("show")), i(n, z, o("show")), n), JSON.parse(u.cookie.get("experiment_overrides", "{}"))),
+                overrides: (0, d.default)((n = {}, i(n, T, o("v2")), i(n, L, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), i(n, S, a(["US"])), i(n, P, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, A, a(["SE"])), i(n, O, a(["DK", "FI", "NL", "NO"])), i(n, k, a(["CA"])), i(n, I, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, R, a(["PL"])), i(n, M, a(["AT", "CH", "ES", "IT", "PT"])), i(n, j, o("yes")), i(n, D, o("vca")), i(n, U, o("yes")), i(n, x, o("1.8.6+spd67")), i(n, G, o("yes")), i(n, q, o("yes")), i(n, z, o("show")), i(n, Q, o("show")), n), JSON.parse(u.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
                 login: e.login,
                 provider: new m.default(m.default.SERVICE_URL),
@@ -8888,7 +8906,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.OFFLINE_EXPERIENCE = t.AUTO_SUGGEST_NOTIFICATION = t.CLIPS_CLIPPY_PATENT_PENDING = t.AAX_HEADER_BIDDING = t.BISMOL = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.CLIPS_LOYALTY = t.EXTENSIONS = t.HTML5_TOGGLE_REMOVAL = t.PINEAPPLE = t.DETERMINATION = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
+        }), t.OFFLINE_EXPERIENCE = t.AUTO_SUGGEST_NOTIFICATION = t.CLIPS_CLIPPY_PATENT_PENDING = t.AAX_HEADER_BIDDING = t.BISMOL = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.CLIPS_LOYALTY = t.EXTENSIONS = t.HTML5_TOGGLE_REMOVAL = t.PINEAPPLE = t.DETERMINATION = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BROWNIES = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
         var u = n(249),
             c = n(117),
             d = r(c),
@@ -8914,22 +8932,23 @@
             N = t.BAKING_BREAD_G = "c65ae62f-82dc-4394-ad75-df5f641e22d4",
             R = t.BAKING_BREAD_H = "51e3d33c-157b-422d-9a15-b0f9e9c055b2",
             M = t.BAKING_BREAD_I = "ac2acc22-f0ef-4162-b9a3-7357249165ca",
-            L = t.MARKERS = "9e5fffd0-9693-412b-913d-7da332fdeea4",
-            D = t.PLAYER_CORE_VER_CONTROL = "45d73059-3cea-436a-b41f-86bb05f845f2",
-            x = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
-            j = t.PINEAPPLE = "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3",
-            U = t.HTML5_TOGGLE_REMOVAL = "354aaebd-7643-434f-be37-98fe12c01220",
-            B = t.EXTENSIONS = "264f75af-a787-4a40-8654-40d78b4d8b41",
-            F = t.CLIPS_LOYALTY = "24790bc9-1beb-4cf1-bc75-fe22c400805d",
-            V = t.PADTIME = "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14",
-            H = t.OFFLINE_RECOMMENDATIONS = "00683bde-a79d-4b9d-a7cc-b0549f854d36",
-            q = t.VIEW_WATCH_TOGETHER = "d0518b75-fbba-418a-9445-ff7c517beb32",
-            G = t.CHOMPERZ = "d48fe249-fd73-4c8f-bd17-415b70dc3708",
-            Y = t.BISMOL = "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5",
-            W = t.AAX_HEADER_BIDDING = "18f450b9-5593-4d66-a5a7-c8b6fccf95c3",
-            K = t.CLIPS_CLIPPY_PATENT_PENDING = "3ba26ac2-a5db-4318-83c5-dcbe11e2774f",
-            $ = t.AUTO_SUGGEST_NOTIFICATION = "74d6faab-1794-458a-a5f6-b92602254e9e",
-            z = t.OFFLINE_EXPERIENCE = "6e2f439b-916a-40b7-b1be-e82b284fd0bb"
+            L = t.BAKING_BROWNIES = "ed516213-9b6f-49a0-96f7-1706aafc8e2d",
+            D = t.MARKERS = "9e5fffd0-9693-412b-913d-7da332fdeea4",
+            x = t.PLAYER_CORE_VER_CONTROL = "45d73059-3cea-436a-b41f-86bb05f845f2",
+            j = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
+            U = t.PINEAPPLE = "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3",
+            B = t.HTML5_TOGGLE_REMOVAL = "354aaebd-7643-434f-be37-98fe12c01220",
+            F = t.EXTENSIONS = "264f75af-a787-4a40-8654-40d78b4d8b41",
+            V = t.CLIPS_LOYALTY = "24790bc9-1beb-4cf1-bc75-fe22c400805d",
+            H = t.PADTIME = "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14",
+            q = t.OFFLINE_RECOMMENDATIONS = "00683bde-a79d-4b9d-a7cc-b0549f854d36",
+            G = t.VIEW_WATCH_TOGETHER = "d0518b75-fbba-418a-9445-ff7c517beb32",
+            Y = t.CHOMPERZ = "d48fe249-fd73-4c8f-bd17-415b70dc3708",
+            W = t.BISMOL = "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5",
+            K = t.AAX_HEADER_BIDDING = "18f450b9-5593-4d66-a5a7-c8b6fccf95c3",
+            $ = t.CLIPS_CLIPPY_PATENT_PENDING = "3ba26ac2-a5db-4318-83c5-dcbe11e2774f",
+            z = t.AUTO_SUGGEST_NOTIFICATION = "74d6faab-1794-458a-a5f6-b92602254e9e",
+            Q = t.OFFLINE_EXPERIENCE = "6e2f439b-916a-40b7-b1be-e82b284fd0bb"
     }, function(e, t, n) {
         function r(e) {
             var t = i(e);
@@ -9289,21 +9308,22 @@
         var r = n(257),
             i = n(258),
             o = n(259);
-        t.DEFAULT_SPADE_URL = "//trowel.twitch.tv/", t.SPADE_URL_PROJECT_UUID = "4badc757-13a7-468c-99b6-e42aef7fc286", t.sendEvent = function(e, n, a, s) {
-            var l = {
-                    event: n,
-                    properties: a
-                },
-                u = r.stringify(i.parse(JSON.stringify(l))),
-                c = e || t.DEFAULT_SPADE_URL;
-            o.fetch(c, {
-                method: "post",
-                headers: {
-                    "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-                },
-                body: "data=" + encodeURIComponent(u)
-            }, s)
-        }
+        t.DEFAULT_SPADE_URL = "//trowel.twitch.tv/", t.SPADE_URL_PROJECT_UUID = "4badc757-13a7-468c-99b6-e42aef7fc286",
+            t.sendEvent = function(e, n, a, s) {
+                var l = {
+                        event: n,
+                        properties: a
+                    },
+                    u = r.stringify(i.parse(JSON.stringify(l))),
+                    c = e || t.DEFAULT_SPADE_URL;
+                o.fetch(c, {
+                    method: "post",
+                    headers: {
+                        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                    },
+                    body: "data=" + encodeURIComponent(u)
+                }, s)
+            }
     }, function(e, t, n) {
         ! function(r, i) {
             e.exports = t = i(n(255))
@@ -9769,7 +9789,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.14-234454+10ad09ad0211e70aea2e039bb45c53122520ba2c",
+                    app_version: "2017.06.15-004848+1b44cc6eae54746a48ab30b9d92bf37ce65effe0",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -10019,7 +10039,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-1fdfaf.sjc01.hls.ttvnw.net/v1/playlist/Cgz08aBrGNFTjeTCCMilxTt2Foca74ByLtLClDn-I11N0Vomt1XajSXxNkBqTRHWXLnjlSziSpobNXXjyrBzMGeq3CaJsUiEfwx7H0sYXyj4_VFRpwP3X2v6UxOp5DVJek-Aas3ASHd5eH5WfCw560wRqu_Tgfr3wXzeu-5jSoZnDJJdQkuo42mN4XEvwiDIPvaQmqpjEUInlItvAv8gfpa7US_5j8E_eo8V2xZt4TWC6b5WxHc2aCOi66LvYe1RT6xqbkIAcvPrv5I8s7BX63fvpVa8DfjPYGxFSw24NNM8oZuWfaNKTArG8sOKDsYPN0PY0qklWe6wGds3ASrRV28UT1_o-0qkSz6K0VQUGZOVAXA5dBD9MBO3AE8Q29IilAW11xEjvTSOAcZ4CfIBt4wyQZWuxxDQguoHvynnwNNfYfP7zNFJtB2qK4g1.m3u8"
+        t.trustedSpadeURI = "//video-edge-d9a7fa.sjc01.hls.ttvnw.net/v1/playlist/CkrGvDcauBSuI0cOTILGH7zJw_sF0__x930yZwlPXYBlDa44qzfWMCbckIseXxyTxQM2IeQRM_l4-p-daUmWeMEl7OlQBKl1fYYktcIvuHjFREp4jDSjZQ5VOdektOBgPZUbUC4fKgb6F422vJVsoyryfTie5qfiBeIquuDQvA57XqfGdI9gM9zMaAICWmxZJNn69m0op2bWRX9Aaef2612PUGAceiucYseGALdmt6u43n1Z5w3ReCIp2AyX1x2mzrF9Sw7sOVYVi3FLaKoba2-j_WcCcDaHvNYYGCwRhdBaBOe9RLKdPvY7QjvgYGJy0vkwZ7Vh9mZgLu1i0Qv6Z7baNWAVc7IzXD7oXZhuR6zq9x9_1tajUKu99d3Hen1ZD5PuXkSvZksxYcwW4Ns_tmwIDmMI8bmgEvzBnOyq2ZdyTXtdmt6dv4hMVzw2.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -14314,7 +14334,8 @@
                         adStitchingF: E.get(s.BAKING_BREAD_F),
                         adStitchingG: E.get(s.BAKING_BREAD_G),
                         adStitchingH: E.get(s.BAKING_BREAD_H),
-                        adStitchingI: E.get(s.BAKING_BREAD_I)
+                        adStitchingI: E.get(s.BAKING_BREAD_I),
+                        adStitchingPrerolls: E.get(s.BAKING_BROWNIES)
                     },
                     O = void 0;
                 e === v ? O = new l.LiveContentStream(P, w, S, y.params, A) : e === m && (O = new u.VODContentStream(C, w, S, y.params, A)), O.accessToken.then(function() {
@@ -14757,7 +14778,7 @@
                                 stream_format_current: t
                             },
                             o = Object.assign({}, r, i);
-                        this.events.emit(p.ABS_STREAM_FORMAT_CHANGE, o);
+                        this.events.emit(p.ABS_STREAM_FORMAT_CHANGE, o)
                     }
                 }, {
                     key: "onVariantSwitchRequested",
