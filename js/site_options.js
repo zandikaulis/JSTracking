@@ -326,10 +326,10 @@ window.SiteOptions = {
         "18f90f1f-3954-4c30-a93f-ac37e96c8136": {
             "name": "android_clips_all_night",
             "groups": [{
-                "weight": 50,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "variant1"
             }]
         },
