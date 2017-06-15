@@ -9789,7 +9789,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.15-004848+1b44cc6eae54746a48ab30b9d92bf37ce65effe0",
+                    app_version: "2017.06.15-183117+3d1f26705c1d3f0f2facc175f66cbd5d0b76dcb4",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -37325,7 +37325,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.PlayerUIClipsEnabler = void 0;
+        }), t.PlayerUIClipsEnabler = t.REDBULL_CHANNEL_LOGIN = void 0;
         var a = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -37357,14 +37357,32 @@
             h = n(344),
             _ = n(400),
             v = ["misterrogers"],
-            m = function(e) {
+            m = new Date(Date.UTC(2017, 5, 17, 3)),
+            y = new Date(Date.UTC(2017, 5, 19, 13)),
+            g = t.REDBULL_CHANNEL_LOGIN = "redbull",
+            b = function(e) {
                 return v.indexOf(e) === -1
             };
         t.PlayerUIClipsEnabler = function(e) {
             function t(e, n, o, a) {
                 r(this, t);
                 var s = i(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return s._clipsControls = new d.PlayerUIClipsControls(e, o, a, n), s.subscribe(n, ["stream", "onlineStatus", "backend", "env", "playback", "streamMetadata"], s._subscriptionHandler.bind(s)), s
+                s._clipsControls = new d.PlayerUIClipsControls(e, o, a, n);
+                var l = new Date;
+                if (l > m && l < y) {
+                    s._redbullEventActive = !0;
+                    var u = y.getTime() - l.getTime();
+                    setTimeout(function() {
+                        s._redbullEventActive = !1, s._subscriptionHandler(n.getState())
+                    }, u)
+                } else if (l < m) {
+                    s._redbullEventActive = !1;
+                    var c = m.getTime() - l.getTime();
+                    setTimeout(function() {
+                        s._redbullEventActive = !0, s._subscriptionHandler(n.getState())
+                    }, c)
+                }
+                return s.subscribe(n, ["stream", "onlineStatus", "backend", "env", "playback", "streamMetadata"], s._subscriptionHandler.bind(s)), s
             }
             return o(t, e), a(t, [{
                 key: "_subscriptionHandler",
@@ -37377,14 +37395,15 @@
                         a = e.streamMetadata,
                         s = a.broadcastID,
                         c = a.channel,
-                        d = m(c.name),
-                        p = e.backend.getBackend() === h.BACKEND_HLS,
-                        v = i === f.PLAYER_HIGHLIGHTER || i === f.PLAYER_CURSE,
+                        d = b(c.name),
+                        p = c.name === g,
+                        v = e.backend.getBackend() === h.BACKEND_HLS,
+                        m = i === f.PLAYER_HIGHLIGHTER || i === f.PLAYER_CURSE,
                         y = n === l.CONTENT_MODE_LIVE && r !== _.ONLINE_STATUS,
-                        g = n !== l.CONTENT_MODE_LIVE && n !== u.CONTENT_MODE_VOD,
-                        b = Boolean(s),
-                        E = d && o && b && !(y || g || v || p);
-                    this._toggle(E)
+                        E = n !== l.CONTENT_MODE_LIVE && n !== u.CONTENT_MODE_VOD,
+                        T = Boolean(s),
+                        S = d && o && T && !(y || E || m || v) && !(p && this._redbullEventActive && n !== l.CONTENT_MODE_LIVE);
+                    this._toggle(S)
                 }
             }, {
                 key: "_toggle",
@@ -37826,11 +37845,12 @@
                     return e.toUpperCase()
                 }),
                 n = e.replace(/-[a-zA-Z]{2}$/, "");
-            return (0, y.default)(["ar-SA", "bg-BG", "cs-CZ", "da-DK", "de-DE", "el-GR", "en-US", "es-MX", "es-US", "es-ES", "es-LA", "fi-FI", "fr-FR", "hi-IN", "hu-HU", "it-IT", "ja-JP", "ko-KR", "nl-NL", "no-NO", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "sv-SE", "th-TH", "tr-TR", "vi-VN", "zh-TW", "zh-CN"], t) || (t = g[n] || n), new Promise(function(e, r) {
-                u.default.changeLanguage(t, function(i, o) {
-                    i ? r(i) : e(new b(n, t, o))
+            return (0, y.default)(["ar-SA", "bg-BG", "cs-CZ", "da-DK", "de-DE", "el-GR", "en-US", "es-MX", "es-US", "es-ES", "es-LA", "fi-FI", "fr-FR", "hi-IN", "hu-HU", "it-IT", "ja-JP", "ko-KR", "nl-NL", "no-NO", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "sv-SE", "th-TH", "tr-TR", "vi-VN", "zh-TW", "zh-CN"], t) || (t = g[n] || n),
+                new Promise(function(e, r) {
+                    u.default.changeLanguage(t, function(i, o) {
+                        i ? r(i) : e(new b(n, t, o))
+                    })
                 })
-            })
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -37858,8 +37878,7 @@
             v = r(_),
             m = n(53),
             y = r(m),
-            g = (0,
-                v.default)((0, h.default)(["ar-SA", "bg-BG", "cs-CZ", "da-DK", "de-DE", "el-GR", "en-US", "es-MX", "es-US", "es-ES", "es-LA", "fi-FI", "fr-FR", "hi-IN", "hu-HU", "it-IT", "ja-JP", "ko-KR", "nl-NL", "no-NO", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "sv-SE", "th-TH", "tr-TR", "vi-VN", "zh-TW", "zh-CN"], function(e, t) {
+            g = (0, v.default)((0, h.default)(["ar-SA", "bg-BG", "cs-CZ", "da-DK", "de-DE", "el-GR", "en-US", "es-MX", "es-US", "es-ES", "es-LA", "fi-FI", "fr-FR", "hi-IN", "hu-HU", "it-IT", "ja-JP", "ko-KR", "nl-NL", "no-NO", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "sv-SE", "th-TH", "tr-TR", "vi-VN", "zh-TW", "zh-CN"], function(e, t) {
                 var n = t.replace(/-[a-zA-Z]{2}$/, "");
                 return e[n] = t, e
             }, {}), {
