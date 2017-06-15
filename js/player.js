@@ -5756,7 +5756,7 @@
         }
 
         function a(e) {
-            return e.toLowerCase().replace(/[^a-z0-9]+/g, "_")
+            return "string" == typeof e ? e.toLowerCase().replace(/[^a-z0-9]+/g, "_") : ""
         }
 
         function s(e) {
@@ -9769,7 +9769,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.14-232250+0fce97d8716d14a4a0e34bdcee9f4785b015c7c2",
+                    app_version: "2017.06.14-234454+10ad09ad0211e70aea2e039bb45c53122520ba2c",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
