@@ -8903,9 +8903,9 @@
         function l(e) {
             var t, n;
             return new _.default({
-                defaults: (t = {}, i(t, E, "no"), i(t, S, "off"), i(t, T, "no"), i(t, C, "no"), i(t, w, "no"), i(t, P, "no"), i(t, A, "no"), i(t, O, "no"), i(t, k, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "no"), i(t, L, "control"), i(t, x, "1.6.3"), i(t, j, "no"), i(t, D, "no"), i(t, U, "no,"), i(t, B, "keep"), i(t, F, "no"), i(t, V, "control"), i(t, H, "pad_control"), i(t, q, "no"), i(t, G, "no"), i(t, Y, "control"), i(t, W, "no"), i(t, K, "control"), i(t, $, "control"), i(t, z, "control"), i(t, Q, "control"), t),
+                defaults: (t = {}, i(t, E, "no"), i(t, S, "off"), i(t, T, "no"), i(t, C, "no"), i(t, w, "no"), i(t, P, "no"), i(t, A, "no"), i(t, O, "no"), i(t, k, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "no"), i(t, L, "control"), i(t, x, "1.6.3"), i(t, D, "no"), i(t, j, "no,"), i(t, U, "keep"), i(t, B, "no"), i(t, F, "control"), i(t, V, "pad_control"), i(t, H, "no"), i(t, q, "no"), i(t, G, "control"), i(t, Y, "no"), i(t, W, "control"), i(t, K, "control"), i(t, $, "control"), i(t, z, "control"), t),
                 deviceID: e.deviceID,
-                overrides: (0, d.default)((n = {}, i(n, S, o("v2")), i(n, L, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), i(n, T, a(["US"])), i(n, C, a(["GB"])), i(n, w, a(["DE"])), i(n, P, a(["FR"])), i(n, A, a(["SE"])), i(n, O, a(["DK", "FI", "NL", "NO"])), i(n, k, a(["CA"])), i(n, I, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, R, a(["PL"])), i(n, M, a(["AT", "CH", "ES", "IT", "PT"])), i(n, j, o("yes")), i(n, D, o("vca")), i(n, U, o("yes")), i(n, x, o("1.8.6+spd67")), i(n, G, o("yes")), i(n, q, o("yes")), i(n, z, o("show")), i(n, Q, o("show")), n), JSON.parse(u.cookie.get("experiment_overrides", "{}"))),
+                overrides: (0, d.default)((n = {}, i(n, S, o("v2")), i(n, L, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), i(n, T, a(["US"])), i(n, C, a(["GB"])), i(n, w, a(["DE"])), i(n, P, a(["FR"])), i(n, A, a(["SE"])), i(n, O, a(["DK", "FI", "NL", "NO"])), i(n, k, a(["CA"])), i(n, I, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, R, a(["PL"])), i(n, M, a(["AT", "CH", "ES", "IT", "PT"])), i(n, D, o("vca")), i(n, j, o("yes")), i(n, x, o("1.8.6+spd67")), i(n, q, o("yes")), i(n, H, o("yes")), i(n, $, o("show")), i(n, z, o("show")), n), JSON.parse(u.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
                 login: e.login,
                 provider: new m.default(m.default.SERVICE_URL),
@@ -8914,7 +8914,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.OFFLINE_EXPERIENCE = t.AUTO_SUGGEST_NOTIFICATION = t.CLIPS_CLIPPY_PATENT_PENDING = t.AAX_HEADER_BIDDING = t.BISMOL = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.CLIPS_LOYALTY = t.EXTENSIONS = t.HTML5_TOGGLE_REMOVAL = t.PINEAPPLE = t.DETERMINATION = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BROWNIES = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
+        }), t.OFFLINE_EXPERIENCE = t.AUTO_SUGGEST_NOTIFICATION = t.CLIPS_CLIPPY_PATENT_PENDING = t.AAX_HEADER_BIDDING = t.BISMOL = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.CLIPS_LOYALTY = t.EXTENSIONS = t.HTML5_TOGGLE_REMOVAL = t.PINEAPPLE = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BROWNIES = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.CAPTIONS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
         var u = n(249),
             c = n(117),
             d = r(c),
@@ -8943,20 +8943,19 @@
             L = t.BAKING_BROWNIES = "ed516213-9b6f-49a0-96f7-1706aafc8e2d",
             D = t.MARKERS = "9e5fffd0-9693-412b-913d-7da332fdeea4",
             x = t.PLAYER_CORE_VER_CONTROL = "45d73059-3cea-436a-b41f-86bb05f845f2",
-            j = t.DETERMINATION = "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
-            U = t.PINEAPPLE = "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3",
-            B = t.HTML5_TOGGLE_REMOVAL = "354aaebd-7643-434f-be37-98fe12c01220",
-            F = t.EXTENSIONS = "264f75af-a787-4a40-8654-40d78b4d8b41",
-            V = t.CLIPS_LOYALTY = "24790bc9-1beb-4cf1-bc75-fe22c400805d",
-            H = t.PADTIME = "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14",
-            q = t.OFFLINE_RECOMMENDATIONS = "00683bde-a79d-4b9d-a7cc-b0549f854d36",
-            G = t.VIEW_WATCH_TOGETHER = "d0518b75-fbba-418a-9445-ff7c517beb32",
-            Y = t.CHOMPERZ = "d48fe249-fd73-4c8f-bd17-415b70dc3708",
-            W = t.BISMOL = "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5",
-            K = t.AAX_HEADER_BIDDING = "18f450b9-5593-4d66-a5a7-c8b6fccf95c3",
-            $ = t.CLIPS_CLIPPY_PATENT_PENDING = "3ba26ac2-a5db-4318-83c5-dcbe11e2774f",
-            z = t.AUTO_SUGGEST_NOTIFICATION = "74d6faab-1794-458a-a5f6-b92602254e9e",
-            Q = t.OFFLINE_EXPERIENCE = "6e2f439b-916a-40b7-b1be-e82b284fd0bb"
+            j = t.PINEAPPLE = "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3",
+            U = t.HTML5_TOGGLE_REMOVAL = "354aaebd-7643-434f-be37-98fe12c01220",
+            B = t.EXTENSIONS = "264f75af-a787-4a40-8654-40d78b4d8b41",
+            F = t.CLIPS_LOYALTY = "24790bc9-1beb-4cf1-bc75-fe22c400805d",
+            V = t.PADTIME = "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14",
+            H = t.OFFLINE_RECOMMENDATIONS = "00683bde-a79d-4b9d-a7cc-b0549f854d36",
+            q = t.VIEW_WATCH_TOGETHER = "d0518b75-fbba-418a-9445-ff7c517beb32",
+            G = t.CHOMPERZ = "d48fe249-fd73-4c8f-bd17-415b70dc3708",
+            Y = t.BISMOL = "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5",
+            W = t.AAX_HEADER_BIDDING = "18f450b9-5593-4d66-a5a7-c8b6fccf95c3",
+            K = t.CLIPS_CLIPPY_PATENT_PENDING = "3ba26ac2-a5db-4318-83c5-dcbe11e2774f",
+            $ = t.AUTO_SUGGEST_NOTIFICATION = "74d6faab-1794-458a-a5f6-b92602254e9e",
+            z = t.OFFLINE_EXPERIENCE = "6e2f439b-916a-40b7-b1be-e82b284fd0bb"
     }, function(e, t, n) {
         function r(e) {
             var t = i(e);
@@ -9316,22 +9315,21 @@
         var r = n(257),
             i = n(258),
             o = n(259);
-        t.DEFAULT_SPADE_URL = "//trowel.twitch.tv/", t.SPADE_URL_PROJECT_UUID = "4badc757-13a7-468c-99b6-e42aef7fc286",
-            t.sendEvent = function(e, n, a, s) {
-                var l = {
-                        event: n,
-                        properties: a
-                    },
-                    u = r.stringify(i.parse(JSON.stringify(l))),
-                    c = e || t.DEFAULT_SPADE_URL;
-                o.fetch(c, {
-                    method: "post",
-                    headers: {
-                        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-                    },
-                    body: "data=" + encodeURIComponent(u)
-                }, s)
-            }
+        t.DEFAULT_SPADE_URL = "//trowel.twitch.tv/", t.SPADE_URL_PROJECT_UUID = "4badc757-13a7-468c-99b6-e42aef7fc286", t.sendEvent = function(e, n, a, s) {
+            var l = {
+                    event: n,
+                    properties: a
+                },
+                u = r.stringify(i.parse(JSON.stringify(l))),
+                c = e || t.DEFAULT_SPADE_URL;
+            o.fetch(c, {
+                method: "post",
+                headers: {
+                    "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                },
+                body: "data=" + encodeURIComponent(u)
+            }, s)
+        }
     }, function(e, t, n) {
         ! function(r, i) {
             e.exports = t = i(n(255))
@@ -9797,7 +9795,7 @@
                     b = m.get(!1),
                     S = m.get(!0);
                 v = {
-                    app_version: "2017.06.16-142652+06758b47d59479803b0941e0c25e431ff673da4f",
+                    app_version: "2017.06.16-155737+6a406a7538b697a1e83f826a91702cfaed98e3aa",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -19843,9 +19841,7 @@
                     r = e.playerType === f.PLAYER_CURSE;
                 t.get(P.HTML5_TOGGLE_REMOVAL).then(function(e) {
                     "keep" === e ? T.BackendPlayerCore.canPlay() && !r && y() : "remove" === e && w.localStore.remove("backend")
-                }), n && t.get(P.DETERMINATION).then(function(e) {
-                    "yes" === e && E()
-                })
+                }), n && E()
             }
 
             function y() {
