@@ -9797,7 +9797,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.15-230507+5d683bfc7925b45a4369268c8da2722211765fec",
+                    app_version: "2017.06.15-233833+77c7d65f518242eb1f903831b33e14aad30f9fd9",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -45543,46 +45543,26 @@
             }(),
             a = n(421),
             s = n(393),
-            l = n(243),
-            u = n(217),
-            c = n(220),
-            d = n(167),
-            p = n(753),
-            f = n(400),
-            h = n(183),
-            _ = n(53),
-            v = r(_),
-            m = 3e5,
-            y = [u.PLAYER_DASHBOARD, u.PLAYER_FRONTPAGE, u.PLAYER_CREATIVE, u.PLAYER_HIGHLIGHTER];
+            l = n(217),
+            u = n(220),
+            c = n(753),
+            d = n(183),
+            p = n(53),
+            f = r(p),
+            h = 3e5,
+            _ = [l.PLAYER_DASHBOARD, l.PLAYER_FRONTPAGE, l.PLAYER_CREATIVE, l.PLAYER_HIGHLIGHTER];
         t.PostRecommendationsManager = function() {
             function e(t) {
-                i(this, e), this._stateStore = t, this._unsubs = [], this._unsubs.push((0, h.subscribe)(this._stateStore, ["ads.currentMetadata"], this.onAdsMetadata.bind(this))), this._unsubs.push((0, h.subscribe)(this._stateStore, ["onlineStatus"], this.onOnlineStatus.bind(this))), this._unsubs.push((0, h.subscribe)(this._stateStore, ["screen"], this.onScreenChange.bind(this))), this._unsubs.push((0, h.subscribe)(this._stateStore, ["playback.ended"], this.onEnded.bind(this))), this._unsubs.push((0, h.subscribe)(this._stateStore, ["playback.currentTime"], this.onCurrentTime.bind(this)))
+                i(this, e), this._stateStore = t, this._unsubs = [], this._unsubs.push((0, d.subscribe)(this._stateStore, ["screen"], this.onScreenChange.bind(this))), this._unsubs.push((0, d.subscribe)(this._stateStore, ["playback.ended"], this.onEnded.bind(this))), this._unsubs.push((0, d.subscribe)(this._stateStore, ["playback.currentTime"], this.onCurrentTime.bind(this)))
             }
             return o(e, [{
-                key: "onOnlineStatus",
-                value: function() {
-                    var e = this._stateStore.getState(),
-                        t = e.playback,
-                        n = e.onlineStatus;
-                    n === f.OFFLINE_STATUS && t.hasPlayed && this._stateStore.dispatch((0, a.fetchRecommendedVODs)(a.OFFLINE_RECOMMENDATIONS_TYPE))
-                }
-            }, {
                 key: "onCurrentTime",
                 value: function() {
                     var e = this._stateStore.getState(),
                         t = e.playback,
                         n = e.stream,
                         r = e.recommendations;
-                    t.transitionScheme === p.TRANSITION_TYPE_RECOMMENDATIONS && n.contentType === c.CONTENT_MODE_VOD && 1e3 * (t.duration - t.currentTime) < a.FETCH_VODS_THRESHOLD && r.status === a.UNFETCHED && this._stateStore.dispatch((0, a.fetchRecommendedVODs)(a.POST_VOD_RECOMMENDATIONS_TYPE))
-                }
-            }, {
-                key: "onAdsMetadata",
-                value: function(e, t) {
-                    var n = e.ads,
-                        r = t.ads,
-                        i = this._stateStore.getState(),
-                        o = i.stream;
-                    this._shouldShowRecs() && o.contentType === d.CONTENT_MODE_LIVE && n.currentMetadata.rollType === l.AdRollTypes.NONE && r.currentMetadata.rollType === l.AdRollTypes.POSTROLL && this._showRecommendationScreen()
+                    t.transitionScheme === c.TRANSITION_TYPE_RECOMMENDATIONS && n.contentType === u.CONTENT_MODE_VOD && 1e3 * (t.duration - t.currentTime) < a.FETCH_VODS_THRESHOLD && r.status === a.UNFETCHED && this._stateStore.dispatch((0, a.fetchRecommendedVODs)(a.POST_VOD_RECOMMENDATIONS_TYPE))
                 }
             }, {
                 key: "onEnded",
@@ -45590,7 +45570,7 @@
                     var e = this._stateStore.getState(),
                         t = e.stream,
                         n = e.playback;
-                    n.ended && this._shouldShowRecs() && t.contentType === c.CONTENT_MODE_VOD && this._showRecommendationScreen()
+                    n.ended && this._shouldShowRecs() && t.contentType === u.CONTENT_MODE_VOD && this._showRecommendationScreen()
                 }
             }, {
                 key: "onScreenChange",
@@ -45611,7 +45591,7 @@
                         n = e.recommendations,
                         r = e.ui,
                         i = e.playback;
-                    return !(r.isMini || (0, v.default)(y, t.playerType) || n.status === a.UNFETCHED || n.status === a.FETCHED && 0 === n.videos.length || i.transitionScheme !== p.TRANSITION_TYPE_RECOMMENDATIONS)
+                    return !(r.isMini || (0, f.default)(_, t.playerType) || n.status === a.UNFETCHED || n.status === a.FETCHED && 0 === n.videos.length || i.transitionScheme !== c.TRANSITION_TYPE_RECOMMENDATIONS)
                 }
             }, {
                 key: "_startRecommendationTimeout",
@@ -45621,7 +45601,7 @@
                         n = t.window;
                     n.clearTimeout(this.recommendationsTimeoutID), this.recommendationsTimeoutID = n.setTimeout(function() {
                         e._stateStore.dispatch((0, s.popScreen)())
-                    }, m)
+                    }, h)
                 }
             }, {
                 key: "_stopRecommendationTimeout",
@@ -45656,6 +45636,31 @@
         }), t.OfflineRecommendationsManager = void 0;
         var o = function() {
                 function e(e, t) {
+                    var n = [],
+                        r = !0,
+                        i = !1,
+                        o = void 0;
+                    try {
+                        for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0);
+                    } catch (e) {
+                        i = !0, o = e
+                    } finally {
+                        try {
+                            !r && s.return && s.return()
+                        } finally {
+                            if (i) throw o
+                        }
+                    }
+                    return n
+                }
+                return function(t, n) {
+                    if (Array.isArray(t)) return t;
+                    if (Symbol.iterator in Object(t)) return e(t, n);
+                    throw new TypeError("Invalid attempt to destructure non-iterable instance")
+                }
+            }(),
+            a = function() {
+                function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
                         r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
@@ -45665,64 +45670,107 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(393),
-            s = n(400),
-            l = n(217),
-            u = n(167),
-            c = n(753),
-            d = n(183),
-            p = n(53),
-            f = r(p),
-            h = n(421),
-            _ = n(200),
-            v = n(251),
-            m = n(427),
-            y = [l.PLAYER_DASHBOARD, l.PLAYER_FRONTPAGE, l.PLAYER_CREATIVE, l.PLAYER_HIGHLIGHTER],
-            g = 560,
-            b = 300,
-            E = [26610234, 10817445, 152325025],
-            T = "Offline Recommendations: No channel videos",
-            S = "Offline Recommendations: All channel videos watched",
-            P = "Offline Recommendations: Stream changed while fetching",
-            C = "Offline Recommendations: In control group",
-            w = "Offline Experience: In control group";
+            s = n(393),
+            l = n(400),
+            u = n(217),
+            c = n(167),
+            d = n(753),
+            p = n(183),
+            f = n(53),
+            h = r(f),
+            _ = n(421),
+            v = n(331),
+            m = n(200),
+            y = n(251),
+            g = n(427),
+            b = n(243),
+            E = [u.PLAYER_DASHBOARD, u.PLAYER_FRONTPAGE, u.PLAYER_CREATIVE, u.PLAYER_HIGHLIGHTER],
+            T = 560,
+            S = 300,
+            P = [26610234, 10817445, 152325025],
+            C = "Offline Recommendations: No channel videos",
+            w = "Offline Recommendations: All channel videos watched",
+            A = "Offline Recommendations: Stream changed while fetching",
+            O = "Offline Recommendations: In control group",
+            k = "Offline Experience: In control group",
+            I = 5e3;
         t.OfflineRecommendationsManager = function() {
             function e(t) {
-                i(this, e), this._stateStore = t, this._unsubs = [], this._unsubs.push((0, d.subscribe)(this._stateStore, ["onlineStatus", "streamMetadata"], this.onStateChange.bind(this))), this._unsubs.push((0, d.subscribe)(this._stateStore, ["playerDimensions"], this.onDimensionsChange.bind(this))), this.onStateChange()
+                i(this, e), this._stateStore = t, this._unsubs = [], this._unsubs.push((0, p.subscribe)(this._stateStore, ["onlineStatus", "streamMetadata"], this.tryFetchOfflineRecs.bind(this))), this._unsubs.push((0, p.subscribe)(this._stateStore, ["ads", "recommendations", "playback.ended"], this.tryShowOfflineRecs.bind(this))), this._unsubs.push((0, p.subscribe)(this._stateStore, ["playerDimensions"], this.onDimensionsChange.bind(this)))
             }
-            return o(e, [{
-                key: "onStateChange",
+            return a(e, [{
+                key: "tryFetchOfflineRecs",
                 value: function() {
                     var e = this;
-                    if (this._preConditionsMet()) {
-                        var t = this._stateStore.getState(),
-                            n = t.stream;
-                        this._fetchChannelVideos().then(function(t) {
-                            return e._filterOutWatchedVideos(t)
-                        }).then(function(t) {
-                            return e._normalizeChannelVideos(t)
-                        }).then(function(t) {
-                            return e._checkExperimentGroup(t)
-                        }).then(function(t) {
-                            return e._checkIfStreamChanged(n, t)
-                        }).then(function(t) {
-                            e._stateStore.dispatch((0, h.setRecommendedVODs)(t, h.OFFLINE_RECOMMENDATIONS_TYPE)), e._isValidPlayerSize() && e._stateStore.dispatch((0, a.pushScreen)(a.VOD_RECOMMENDATION_SCREEN))
-                        }).catch(function(e) {
-                            return console.warn(e)
-                        })
-                    }
+                    if (!this._shouldFetchOfflineRecs()) return Promise.resolve();
+                    var t = this._stateStore.getState(),
+                        n = t.stream,
+                        r = t.window,
+                        i = t.playback,
+                        a = i.hasPlayed ? Math.floor(Math.random() * I) + 1 : 0,
+                        s = function(e) {
+                            return new Promise(function(t) {
+                                return r.setTimeout(t, e)
+                            })
+                        };
+                    return s(a).then(function() {
+                        return Promise.all([e._getChannelVideos(), e._getFeaturedCollection()])
+                    }).then(function(e) {
+                        return 0 !== e[0].length ? e : Promise.reject(C)
+                    }).then(function(t) {
+                        return e._checkExperimentGroup(t)
+                    }).then(function(t) {
+                        var r = o(t, 2),
+                            i = r[0],
+                            a = r[1],
+                            s = e._stateStore.getState(),
+                            l = s.stream;
+                        return l !== n ? Promise.reject(A) : (i.length > 0 && e._stateStore.dispatch((0, _.setRecommendedVODs)(i, _.OFFLINE_RECOMMENDATIONS_TYPE)), void(a.length > 0 && e._stateStore.dispatch((0, v.featuredCollectionFetched)(a[0]))))
+                    }).catch(function(e) {
+                        return console.warn(e)
+                    })
+                }
+            }, {
+                key: "tryShowOfflineRecs",
+                value: function() {
+                    this._shouldShowOfflineRecs() && this._stateStore.dispatch((0, s.pushScreen)(s.VOD_RECOMMENDATION_SCREEN))
                 }
             }, {
                 key: "onDimensionsChange",
                 value: function() {
                     var e = this._stateStore.getState(),
-                        t = e.recommendations,
-                        n = e.screen,
-                        r = n[0] === a.VOD_RECOMMENDATION_SCREEN;
-                    if (t.type === h.OFFLINE_RECOMMENDATIONS_TYPE) return this._isValidPlayerSize() && !r ? void this._stateStore.dispatch((0, a.pushScreen)(a.VOD_RECOMMENDATION_SCREEN)) : void(!this._isValidPlayerSize() && r && this._stateStore.dispatch((0, a.popScreen)()))
+                        t = e.screen,
+                        n = e.playerDimensions,
+                        r = n.height,
+                        i = n.width,
+                        o = t[0] === s.VOD_RECOMMENDATION_SCREEN,
+                        a = r < S || i < T;
+                    return a && o ? void this._stateStore.dispatch((0, s.popScreen)()) : void(this._shouldShowOfflineRecs() && this._stateStore.dispatch((0, s.pushScreen)(s.VOD_RECOMMENDATION_SCREEN)))
                 }
             }, {
-                key: "_preConditionsMet",
+                key: "_shouldShowOfflineRecs",
+                value: function() {
+                    var e = this._stateStore.getState(),
+                        t = e.screen,
+                        n = e.recommendations,
+                        r = e.playerDimensions,
+                        i = e.stream,
+                        o = e.playback,
+                        a = e.onlineStatus,
+                        u = e.ads,
+                        d = r.height,
+                        p = r.width,
+                        f = d >= S && p >= T,
+                        v = !(0, h.default)(t, s.VOD_RECOMMENDATION_SCREEN),
+                        m = u.currentMetadata.contentType === b.AdContentTypes.NONE,
+                        y = n.type === _.OFFLINE_RECOMMENDATIONS_TYPE,
+                        g = i.contentType === c.CONTENT_MODE_LIVE && a === l.OFFLINE_STATUS,
+                        E = !o.hasPlayed,
+                        P = o.ended;
+                    return f && v && m && y && g && (E || P)
+                }
+            }, {
+                key: "_shouldFetchOfflineRecs",
                 value: function() {
                     var e = this._stateStore.getState(),
                         t = e.onlineStatus,
@@ -45730,23 +45778,46 @@
                         r = e.stream,
                         i = e.streamMetadata,
                         o = e.env,
-                        a = r.contentType === u.CONTENT_MODE_LIVE,
-                        l = 0 !== i.channel.id,
-                        d = !(0, f.default)(E, i.channel.id),
-                        p = t === s.OFFLINE_STATUS,
-                        h = n.hasPlayed === !1,
-                        _ = n.transitionScheme === c.TRANSITION_TYPE_RECOMMENDATIONS,
-                        v = !(0, f.default)(y, o.playerType);
-                    return a && l && d && p && h && _ && v
+                        a = r.contentType === c.CONTENT_MODE_LIVE,
+                        s = 0 !== i.channel.id,
+                        u = !(0, h.default)(P, i.channel.id),
+                        p = t === l.OFFLINE_STATUS,
+                        f = n.transitionScheme === d.TRANSITION_TYPE_RECOMMENDATIONS,
+                        _ = !(0, h.default)(E, o.playerType);
+                    return a && s && u && p && f && _
+                }
+            }, {
+                key: "_getFeaturedCollection",
+                value: function() {
+                    var e = this._stateStore.getState(),
+                        t = e.streamMetadata;
+                    return (0, m.getFeaturedCollection)(t.channel.id).then(function(e) {
+                        var t = e.collections;
+                        return t
+                    }).catch(function(e) {
+                        return console.warn(e), []
+                    })
+                }
+            }, {
+                key: "_getChannelVideos",
+                value: function() {
+                    var e = this;
+                    return this._fetchChannelVideos().then(function(t) {
+                        return e._filterOutWatchedVideos(t)
+                    }).then(function(t) {
+                        return e._normalizeChannelVideos(t)
+                    }).catch(function(e) {
+                        return console.warn(e), []
+                    })
                 }
             }, {
                 key: "_fetchChannelVideos",
                 value: function() {
                     var e = this._stateStore.getState(),
                         t = e.streamMetadata;
-                    return (0, _.krakenRequestv5)("channels/" + t.channel.id + "/videos?limit=30").then(function(e) {
+                    return (0, m.krakenRequestv5)("channels/" + t.channel.id + "/videos?limit=30").then(function(e) {
                         var t = e.videos;
-                        return t.length > 0 ? t : Promise.reject(T)
+                        return t.length > 0 ? t : Promise.reject(C)
                     })
                 }
             }, {
@@ -45754,15 +45825,15 @@
                 value: function(e) {
                     var t = this._stateStore.getState(),
                         n = t.user;
-                    return (0, m.getResumeTimes)(n.id).catch(function() {
+                    return (0, g.getResumeTimes)(n.id).catch(function() {
                         return {
                             videos: []
                         }
                     }).then(function(t) {
                         var n = e.filter(function(e) {
-                            return !(0, h.isWatched)(t, e)
+                            return !(0, _.isWatched)(t, e)
                         });
-                        return n.length > 0 ? n : Promise.reject(S)
+                        return n.length > 0 ? n : Promise.reject(w)
                     })
                 }
             }, {
@@ -45771,7 +45842,7 @@
                     return e.map(function(e) {
                         var t = "";
                         return e.thumbnails.medium.length > 0 && (t = e.thumbnails.medium[0].url), {
-                            recommendationType: h.CHANNEL_VODS,
+                            recommendationType: _.CHANNEL_VODS,
                             creationDate: e.created_at,
                             thumbnailURL: t,
                             title: e.title,
@@ -45783,31 +45854,15 @@
                     })
                 }
             }, {
-                key: "_checkIfStreamChanged",
-                value: function(e, t) {
-                    var n = this._stateStore.getState(),
-                        r = n.stream;
-                    return r === e ? t : Promise.reject(P)
-                }
-            }, {
                 key: "_checkExperimentGroup",
                 value: function(e) {
                     var t = this._stateStore.getState(),
                         n = t.experiments;
-                    return n.get(v.OFFLINE_EXPERIENCE).then(function(e) {
-                        return "show" === e ? n.get(v.OFFLINE_RECOMMENDATIONS) : Promise.reject(w)
+                    return n.get(y.OFFLINE_EXPERIENCE).then(function(e) {
+                        return "show" === e ? n.get(y.OFFLINE_RECOMMENDATIONS) : Promise.reject(k)
                     }).then(function(t) {
-                        return "yes" === t ? e : Promise.reject(C)
+                        return "yes" === t ? e : Promise.reject(O)
                     })
-                }
-            }, {
-                key: "_isValidPlayerSize",
-                value: function() {
-                    var e = this._stateStore.getState(),
-                        t = e.playerDimensions,
-                        n = t.height,
-                        r = t.width;
-                    return n >= b && r >= g
                 }
             }, {
                 key: "destroy",
