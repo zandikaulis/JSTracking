@@ -9797,7 +9797,7 @@
                     b = m.get(!1),
                     S = m.get(!0);
                 v = {
-                    app_version: "2017.06.16-002453+4d2dc24c075a18a1cfc6a2b31a9a062cc7931327",
+                    app_version: "2017.06.16-013352+dfd6aca3aa00cff36507da0eec99288ea80a62e5",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -10047,7 +10047,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-d9a7fa.sjc01.hls.ttvnw.net/v1/playlist/CkrGvDcauBSuI0cOTILGH7zJw_sF0__x930yZwlPXYBlDa44qzfWMCbckIseXxyTxQM2IeQRM_l4-p-daUmWeMEl7OlQBKl1fYYktcIvuHjFREp4jDSjZQ5VOdektOBgPZUbUC4fKgb6F422vJVsoyryfTie5qfiBeIquuDQvA57XqfGdI9gM9zMaAICWmxZJNn69m0op2bWRX9Aaef2612PUGAceiucYseGALdmt6u43n1Z5w3ReCIp2AyX1x2mzrF9Sw7sOVYVi3FLaKoba2-j_WcCcDaHvNYYGCwRhdBaBOe9RLKdPvY7QjvgYGJy0vkwZ7Vh9mZgLu1i0Qv6Z7baNWAVc7IzXD7oXZhuR6zq9x9_1tajUKu99d3Hen1ZD5PuXkSvZksxYcwW4Ns_tmwIDmMI8bmgEvzBnOyq2ZdyTXtdmt6dv4hMVzw2.m3u8"
+        t.trustedSpadeURI = "//video-edge-e0557c.sjc01.hls.ttvnw.net/v1/playlist/Cu3tIspHdxDEb5sU6A-sjQ4on5JZ3zCIjLVvmFHmUZ8xQ_ckViyX8iJPSOhFpyeiCdqVOpiKBDQXe5pDYKtJ51SEltQcckwpfV-2QcxhbPALPCMiS5KvYIhG9r_QiDCENXhGeGunLxJIm2Z9RYCbzdXgchX9gqQlvnwYLDgmS4ots4bMorq4xrPloRy8Fl_Xwqjp8K58MBXXZ2voZBIH-pErkiwtZ5nHVPHVUtSebrLhr-9qmfkFQZLBmaTJxkxqQ35mS5UrZp_j83iq_KAO9tmxTzC6de9lyE7M3dZGOt7vFDZEUvbRB_I-TqmSU9_QHmtwo7WRN4mdOikfD9cxe89AtgKpxPWBzyO0bS-MJUxfQuUlCqY-Oqk92ZfdK8nR4NFk7cLkvFsKjbDYkpt2VeNCqc7s0HEOY-557j8I1w5a8PehEhMx4W9iqMuBhLrM5OlvjW_y28oiBb-3JtV.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -21458,7 +21458,7 @@
             function t(e, n) {
                 r(this, t);
                 var o = i(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return o.$root = e, o.subscribe(n, ["lang", "env"], o.localizeUI.bind(o)), o.subscribe(n, ["lang", "chromecast"], o.localizeCastOverlay.bind(o)), o.localizeUI(n.getState()), o
+                return o.$root = e, o.subscribe(n, ["lang", "env"], o.localizeUI.bind(o)), o.subscribe(n, ["lang", "chromecast"], o.localizeCastOverlay.bind(o)), o.subscribe(n, ["lang", "streamMetadata"], o.localizeAdvertisement.bind(o)), o.localizeUI(n.getState()), o
             }
             return o(t, e), a(t, [{
                 key: "localizeUI",
@@ -21470,7 +21470,7 @@
                             var i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
                             $(e, t.$root).html(r.translate(n, i))
                         };
-                    i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"), i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-advertisement-label", "Advertisement"), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-submit", "Submit"), i(".js-empty-collection-label", "This collection is empty."), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"), i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel");
+                    i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"), i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-submit", "Submit"), i(".js-empty-collection-label", "This collection is empty."), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"), i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel");
                     var o = function(e, n, i) {
                         $(e, t.$root).attr(n, r.translate(i))
                     };
@@ -21490,6 +21490,15 @@
                             escapeValue: !1
                         }
                     }))
+                }
+            }, {
+                key: "localizeAdvertisement",
+                value: function(e) {
+                    var t = e.lang,
+                        n = e.streamMetadata;
+                    n.channel.partner ? $(".js-advertisement-label").html(t.translate("This Ad Supports {{channel}}", {
+                        channel: n.channel.displayName
+                    })) : $(".js-advertisement-label").html(t.translate("Advertisement"))
                 }
             }]), t
         }(l.UIStateSubscriber)
@@ -23087,7 +23096,7 @@
         "use strict";
 
         function r(e, t) {
-            return null == t ? i("30") : void 0, null == e ? t : Array.isArray(e) ? Array.isArray(t) ? (e.push.apply(e, t), e) : (e.push(t), e) : Array.isArray(t) ? [e].concat(t) : [e, t];
+            return null == t ? i("30") : void 0, null == e ? t : Array.isArray(e) ? Array.isArray(t) ? (e.push.apply(e, t), e) : (e.push(t), e) : Array.isArray(t) ? [e].concat(t) : [e, t]
         }
         var i = n(440);
         n(283);
