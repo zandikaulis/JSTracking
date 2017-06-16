@@ -9797,7 +9797,7 @@
                     b = m.get(!1),
                     S = m.get(!0);
                 v = {
-                    app_version: "2017.06.16-013352+dfd6aca3aa00cff36507da0eec99288ea80a62e5",
+                    app_version: "2017.06.16-142652+06758b47d59479803b0941e0c25e431ff673da4f",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -35005,8 +35005,10 @@
             P = n(217),
             A = r(P),
             O = n(402),
-            k = 16 / 9,
-            I = {
+            k = n(182),
+            I = 16 / 9,
+            N = {
+                onExtensionDoubleClick: h.default.func.isRequired,
                 onIdentityToggle: h.default.func.isRequired,
                 shouldShowExtensions: h.default.bool.isRequired,
                 extensions: h.default.shape({
@@ -35040,8 +35042,8 @@
                 playerType: h.default.string.isRequired,
                 trackEvent: h.default.func.isRequired
             },
-            N = (u = {}, l(u, A.PLAYER_SITE_MINI, !0), l(u, A.PLAYER_CURSE, !0), l(u, A.PLAYER_FRONTPAGE, !0), l(u, A.PLAYER_FACEBOOK, !0), l(u, A.PLAYER_HIGHLIGHTER, !0), l(u, A.PLAYER_PULSE, !0), l(u, A.PLAYER_TWITCH_EVERYWHERE, !0), u),
-            R = function(e) {
+            R = (u = {}, l(u, A.PLAYER_SITE_MINI, !0), l(u, A.PLAYER_CURSE, !0), l(u, A.PLAYER_FRONTPAGE, !0), l(u, A.PLAYER_FACEBOOK, !0), l(u, A.PLAYER_HIGHLIGHTER, !0), l(u, A.PLAYER_PULSE, !0), l(u, A.PLAYER_TWITCH_EVERYWHERE, !0), u),
+            M = function(e) {
                 return {
                     extensions: e.extensions,
                     game: e.streamMetadata.game,
@@ -35049,7 +35051,7 @@
                     height: e.playerDimensions.height,
                     extensionsApi: e.extensions.extensionsApi,
                     videoResolution: e.stats.videoStats.videoResolution,
-                    shouldShowExtensions: e.env.platform !== b.PLATFORM_MOBILE_WEB && !N.hasOwnProperty(e.env.playerType) && e.stream.contentType === E.CONTENT_MODE_LIVE && e.playback.contentShowing && e.onlineStatus === O.ONLINE_STATUS && e.ads.currentMetadata.contentType === T.AdContentTypes.NONE,
+                    shouldShowExtensions: e.env.platform !== b.PLATFORM_MOBILE_WEB && !R.hasOwnProperty(e.env.playerType) && e.stream.contentType === E.CONTENT_MODE_LIVE && e.playback.contentShowing && e.onlineStatus === O.ONLINE_STATUS && e.ads.currentMetadata.contentType === T.AdContentTypes.NONE,
                     isLoggedIn: e.user.loggedInStatus === S.LOGGED_IN,
                     login: e.user.name,
                     loginId: e.user.id,
@@ -35062,8 +35064,11 @@
                     trackEvent: e.analyticsTracker.trackEvent
                 }
             },
-            M = function(e) {
+            L = function(e) {
                 return {
+                    onExtensionDoubleClick: function() {
+                        e((0, k.toggleFullScreen)())
+                    },
                     onIdentityToggle: function(t) {
                         var n = t.id,
                             r = t.token,
@@ -35072,7 +35077,7 @@
                     }
                 }
             },
-            L = t.ExtensionsContainerComponent = function(e) {
+            D = t.ExtensionsContainerComponent = function(e) {
                 function t() {
                     o(this, t);
                     var e = a(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -35110,7 +35115,8 @@
                             extension: d,
                             game: r,
                             extensionsApi: i,
-                            trackingProperties: c
+                            trackingProperties: c,
+                            onDoubleClick: this.props.onExtensionDoubleClick
                         })))
                     }
                 }, {
@@ -35155,15 +35161,15 @@
                     value: function(e) {
                         var t = /(\d+)\D*(\d+)/g,
                             n = t.exec(e);
-                        if (!n) return k;
+                        if (!n) return I;
                         var r = parseInt(n[1], 10),
                             i = parseInt(n[2], 10);
-                        return i ? r / i : k
+                        return i ? r / i : I
                     }
                 }]), t
             }(f.default.Component);
-        L.propTypes = I;
-        t.ExtensionsContainer = (0, _.connect)(R, M)(L)
+        D.propTypes = N;
+        t.ExtensionsContainer = (0, _.connect)(M, L)(D)
     }, function(e, t, n) {
         "use strict";
 
@@ -35216,6 +35222,7 @@
             h = t.EXT_OVERLAY_CLASS = "extension-overlay",
             _ = t.EXT_IFRAME_CLASS = "extension-overlay__iframe",
             v = {
+                onDoubleClick: d.default.func.isRequired,
                 width: d.default.number.isRequired,
                 height: d.default.number.isRequired,
                 extension: d.default.shape({
@@ -35245,7 +35252,7 @@
                 function t(e) {
                     i(this, t);
                     var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
-                    return n._iframeRefHandler = n._iframeRefHandler.bind(n), n
+                    return n._iframeRefHandler = n._iframeRefHandler.bind(n), n._boundOnFrameDoubleClick = n._onFrameDoubleClick.bind(n), n
                 }
                 return a(t, e), s(t, [{
                     key: "componentDidMount",
@@ -35272,12 +35279,12 @@
                                 locale: this.props.trackingProperties.locale,
                                 player_type: this.props.trackingProperties.playerType
                             }
-                        }), this.extensionCoordinator.setGame(this.props.game)
+                        }), this.extensionCoordinator.setGame(this.props.game), this.iframe.addEventListener("dblclick", this._boundOnFrameDoubleClick)
                     }
                 }, {
                     key: "componentWillUnmount",
                     value: function() {
-                        this.extensionCoordinator.destroy()
+                        this.iframe.removeEventListener("dblclick", this._boundOnFrameDoubleClick), this.extensionCoordinator.destroy()
                     }
                 }, {
                     key: "componentDidUpdate",
@@ -35302,6 +35309,11 @@
                             scrolling: "no",
                             src: e.viewerUrl
                         }))
+                    }
+                }, {
+                    key: "_onFrameDoubleClick",
+                    value: function(e) {
+                        e.preventDefault(), this.props.onDoubleClick()
                     }
                 }, {
                     key: "_iframeRefHandler",
@@ -35344,7 +35356,7 @@
                         return t.d(n, "a", n), n
                     }, t.o = function(e, t) {
                         return Object.prototype.hasOwnProperty.call(e, t)
-                    }, t.p = "", t(t.s = 15)
+                    }, t.p = "", t(t.s = 16)
                 }([function(e, t, n) {
                     "use strict";
                     n.d(t, "a", function() {
@@ -35356,7 +35368,8 @@
                         function e() {}
                         return e
                     }();
-                    r.TwitchExtAuth = "twitch-ext-auth", r.TwitchExtBoostrap = "twitch-ext-bootstrap", r.TwitchExtContext = "twitch-ext-context", r.TwitchExtError = "twitch-ext-error", r.TwitchExtLoaded = "twitch-ext-loaded", r.TwitchExtReload = "twitch-ext-reload", r.TwitchExtUserAction = "twitch-ext-user-action";
+                    r.TwitchExtAuth = "twitch-ext-auth", r.TwitchExtBoostrap = "twitch-ext-bootstrap", r.TwitchExtContext = "twitch-ext-context", r.TwitchExtError = "twitch-ext-error",
+                        r.TwitchExtLoaded = "twitch-ext-loaded", r.TwitchExtReload = "twitch-ext-reload", r.TwitchExtUserAction = "twitch-ext-user-action";
                     var i = "contextchange"
                 }, function(e, t) {
                     try {
@@ -35376,131 +35389,145 @@
                                     button: 0,
                                     relatedTarget: null
                                 }, t || {});
-                            return n.initMouseEvent(e, r.bubbles, r.cancelable, window, r.ctrlKey, r.altKey, r.shiftKey, r.metaKey, r.button, r.relatedTarget),
-                                n
+                            return n.initMouseEvent(e, r.bubbles, r.cancelable, window, r.ctrlKey, r.altKey, r.shiftKey, r.metaKey, r.button, r.relatedTarget), n
                         }, window.MouseEvent.prototype = Event.prototype
                     }
                 }, function(e, t, n) {
                     "use strict";
                     Object.defineProperty(t, "__esModule", {
                         value: !0
+                    }), n.d(t, "ExtensionCoordinator", function() {
+                        return l
                     });
                     var r = n(0),
                         i = n(7),
                         o = n(8),
-                        a = n(9);
-                    n.d(t, "ExtensionCoordinator", function() {
-                        return s
-                    });
-                    var s = function() {
-                        function e(e, t, n, a, s, l, u) {
-                            var c = this;
-                            this.extension = e, this.iframe = t, this.ems = s, this.contextManager = l, this.tracker = u, this.handleUserAction = {
-                                click: function(e) {
-                                    var t = e.payload,
-                                        n = this.iframe.getBoundingClientRect(),
-                                        r = n.width,
-                                        i = n.height;
-                                    this.tracker.trackEvent("extension_click", {
-                                        px_mouse_coord_x: t.clientX,
-                                        px_mouse_coord_y: t.clientY,
-                                        pct_mouse_coord_x: t.clientX / r * 100,
-                                        pct_mouse_coord_y: t.clientY / i * 100
-                                    })
-                                },
-                                mousemove: function(e) {
-                                    var t = e.payload,
-                                        n = this.iframe.getBoundingClientRect(),
-                                        r = n.left,
-                                        i = n.top;
-                                    this.iframe.dispatchEvent(new MouseEvent("mousemove", {
+                        a = n(9),
+                        s = n(10),
+                        l = function() {
+                            function e(e, t, a, l, u, c, d) {
+                                var f = this;
+                                this.extension = e, this.iframe = t, this.ems = u, this.contextManager = c, this.tracker = d, this.throttleDblClick = n.i(s.a)(function(e, t) {
+                                    var n = t.payload,
+                                        r = e.getBoundingClientRect(),
+                                        i = r.left,
+                                        o = r.top;
+                                    e.dispatchEvent(new MouseEvent("dblclick", {
                                         bubbles: !0,
-                                        clientX: t.clientX,
-                                        clientY: t.clientY,
-                                        screenX: r + t.clientX,
-                                        screenY: i + t.clientY
+                                        clientX: n.clientX,
+                                        clientY: n.clientY,
+                                        screenX: i + n.clientX,
+                                        screenY: o + n.clientY
                                     }))
-                                },
-                                focusin: function(e) {
-                                    e.payload;
-                                    if ("video_overlay" === this.extension.anchor) {
-                                        for (var t = this.iframe; t && !t.hasAttribute("tabindex");) t = t.parentElement;
-                                        t && t.focus()
+                                }, 1e3), this.handleUserAction = {
+                                    click: function(e) {
+                                        var t = e.payload,
+                                            n = this.iframe.getBoundingClientRect(),
+                                            r = n.width,
+                                            i = n.height;
+                                        this.tracker.trackEvent("extension_click", {
+                                            px_mouse_coord_x: t.clientX,
+                                            px_mouse_coord_y: t.clientY,
+                                            pct_mouse_coord_x: t.clientX / r * 100,
+                                            pct_mouse_coord_y: t.clientY / i * 100
+                                        })
+                                    },
+                                    dblclick: function(e) {
+                                        this.throttleDblClick(this.iframe, e)
+                                    },
+                                    mousemove: function(e) {
+                                        var t = e.payload,
+                                            n = this.iframe.getBoundingClientRect(),
+                                            r = n.left,
+                                            i = n.top;
+                                        this.iframe.dispatchEvent(new MouseEvent("mousemove", {
+                                            bubbles: !0,
+                                            clientX: t.clientX,
+                                            clientY: t.clientY,
+                                            screenX: r + t.clientX,
+                                            screenY: i + t.clientY
+                                        }))
+                                    },
+                                    focusin: function(e) {
+                                        e.payload;
+                                        if ("video_overlay" === this.extension.anchor) {
+                                            for (var t = this.iframe; t && !t.hasAttribute("tabindex");) t = t.parentElement;
+                                            t && t.focus()
+                                        }
                                     }
-                                }
-                            }, this.destroy = function() {
-                                c.contextManager.destroy(), c.ems.destroy(), c.eventListeners.forEach(function(e) {
-                                    e.target.removeEventListener(e.event, e.callback)
-                                })
-                            }, this.reloadExtension = function(e) {
-                                c.ems.token = e, c.sendMessage({
-                                    action: r.a.TwitchExtReload
-                                })
-                            }, this.setGame = function(e) {
-                                c.contextManager.setGame(e)
-                            }, this.sendMessage = function(e) {
-                                c.iframe.contentWindow.postMessage(e, "*")
-                            }, this.onInitialAuth = function() {
-                                c.sendMessage({
-                                    action: r.a.TwitchExtBoostrap,
-                                    auth: c.ems.auth
-                                })
-                            }, this.onContextUpdate = function(e) {
-                                c.sendMessage({
-                                    action: r.a.TwitchExtContext,
-                                    updatedFields: e,
-                                    context: c.contextManager.context
-                                })
-                            }, this.onAuthUpdate = function(e) {
-                                c.sendMessage({
-                                    action: r.a.TwitchExtAuth,
-                                    auth: c.ems.auth
-                                })
-                            }, this.onError = function(e) {
-                                c.sendMessage({
-                                    action: r.a.TwitchExtError,
-                                    message: e
-                                })
-                            }, this.onMouseEnter = function(e) {
-                                c.tracker.trackEvent("extension_mouseenter", {})
-                            }, this.handleMessage = function(e) {
-                                var t = e.source,
-                                    n = e.data;
-                                if (t === c.iframe.contentWindow) try {
-                                    c.handleExtensionAction(n)
-                                } catch (e) {
-                                    console.error(e)
-                                }
-                            }, this.ems = s || new o.a(e, this.onAuthUpdate, this.onError), this.contextManager = l || new i.a(a, n, this.onContextUpdate), this.eventListeners = [{
-                                target: this.iframe,
-                                event: "mouseenter",
-                                callback: this.onMouseEnter
-                            }, {
-                                target: this.iframe.ownerDocument.defaultView,
-                                event: "message",
-                                callback: this.handleMessage
-                            }], this.eventListeners.forEach(function(e) {
-                                e.target.addEventListener(e.event, e.callback)
-                            }), this.tracker.trackEvent("extension_render", {})
-                        }
-                        return e.create = function(t) {
-                            return new e(t.extension, t.iframe, t.mode, t.playerExtensionsApi, null, null, new a.a({
-                                dobbin: t.dobbin,
-                                extension: t.extension,
-                                extensionMode: t.mode,
-                                iframe: t.iframe,
-                                requiredProps: t.trackingProperties
-                            }))
-                        }, e.prototype.handleExtensionAction = function(e) {
-                            switch (e.action) {
-                                case r.a.TwitchExtLoaded:
-                                    this.ems.beginAuthCycle(this.onInitialAuth), this.contextManager.initializeContext(), this.tracker.trackEvent("extension_helper_load_success", {});
-                                    break;
-                                case r.a.TwitchExtUserAction:
-                                    this.handleUserAction[e.payload.type].call(this, e)
+                                }, this.destroy = function() {
+                                    f.contextManager.destroy(), f.ems.destroy(), f.eventListeners.forEach(function(e) {
+                                        e.target.removeEventListener(e.event, e.callback)
+                                    })
+                                }, this.reloadExtension = function(e) {
+                                    f.ems.token = e, f.sendMessage({
+                                        action: r.a.TwitchExtReload
+                                    })
+                                }, this.setGame = function(e) {
+                                    f.contextManager.setGame(e)
+                                }, this.sendMessage = function(e) {
+                                    f.iframe.contentWindow.postMessage(e, "*")
+                                }, this.onInitialAuth = function() {
+                                    f.sendMessage({
+                                        action: r.a.TwitchExtBoostrap,
+                                        auth: f.ems.auth
+                                    })
+                                }, this.onContextUpdate = function(e) {
+                                    f.sendMessage({
+                                        action: r.a.TwitchExtContext,
+                                        updatedFields: e,
+                                        context: f.contextManager.context
+                                    })
+                                }, this.onAuthUpdate = function(e) {
+                                    f.sendMessage({
+                                        action: r.a.TwitchExtAuth,
+                                        auth: f.ems.auth
+                                    })
+                                }, this.onError = function(e) {
+                                    f.sendMessage({
+                                        action: r.a.TwitchExtError,
+                                        message: e
+                                    })
+                                }, this.onMouseEnter = function(e) {
+                                    f.tracker.trackEvent("extension_mouseenter", {})
+                                }, this.handleMessage = function(e) {
+                                    var t = e.source,
+                                        n = e.data;
+                                    if (t === f.iframe.contentWindow) try {
+                                        f.handleExtensionAction(n)
+                                    } catch (e) {
+                                        console.error(e)
+                                    }
+                                }, this.ems = u || new o.a(e, this.onAuthUpdate, this.onError), this.contextManager = c || new i.a(l, a, this.onContextUpdate), this.eventListeners = [{
+                                    target: this.iframe,
+                                    event: "mouseenter",
+                                    callback: this.onMouseEnter
+                                }, {
+                                    target: this.iframe.ownerDocument.defaultView,
+                                    event: "message",
+                                    callback: this.handleMessage
+                                }], this.eventListeners.forEach(function(e) {
+                                    e.target.addEventListener(e.event, e.callback)
+                                }), this.tracker.trackEvent("extension_render", {})
                             }
-                        }, e
-                    }()
+                            return e.create = function(t) {
+                                return new e(t.extension, t.iframe, t.mode, t.playerExtensionsApi, null, null, new a.a({
+                                    dobbin: t.dobbin,
+                                    extension: t.extension,
+                                    extensionMode: t.mode,
+                                    iframe: t.iframe,
+                                    requiredProps: t.trackingProperties
+                                }))
+                            }, e.prototype.handleExtensionAction = function(e) {
+                                switch (e.action) {
+                                    case r.a.TwitchExtLoaded:
+                                        this.ems.beginAuthCycle(this.onInitialAuth), this.contextManager.initializeContext(), this.tracker.trackEvent("extension_helper_load_success", {});
+                                        break;
+                                    case r.a.TwitchExtUserAction:
+                                        this.handleUserAction[e.payload.type].call(this, e)
+                                }
+                            }, e
+                        }()
                 }, function(e, t, n) {
                     (function(t) {
                         ! function(n) {
@@ -35625,7 +35652,7 @@
                                 o._unhandledRejectionFn = e
                             }, "undefined" != typeof e && e.exports ? e.exports = o : n.Promise || (n.Promise = o)
                         }(this)
-                    }).call(t, n(11).setImmediate)
+                    }).call(t, n(12).setImmediate)
                 }, function(e, t) {
                     ! function(e) {
                         "use strict";
@@ -35935,13 +35962,13 @@
                         }
                 }, function(e, t, n) {
                     "use strict";
-                    var r = n(5);
                     n.d(t, "b", function() {
                         return o
                     }), n.d(t, "a", function() {
                         return a
                     });
-                    var i = this && this.__assign || Object.assign || function(e) {
+                    var r = n(5),
+                        i = this && this.__assign || Object.assign || function(e) {
                             for (var t, n = 1, r = arguments.length; n < r; n++) {
                                 t = arguments[n];
                                 for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
@@ -35973,137 +36000,137 @@
                         }
                 }, function(e, t, n) {
                     "use strict";
-                    var r = n(0);
                     n.d(t, "a", function() {
                         return i
                     });
-                    var i = function() {
-                        function e(e, t, n) {
-                            var i = this;
-                            this.playerExtensionsApi = e, this.extensionMode = t, this.onContextUpdate = n, this.context = {}, this.isContextInitialized = !1, this.currentGame = "", this.destroy = function() {
-                                i.playerExtensionsApi.off(r.b, i.updateLocalContext)
-                            }, this.initializeContext = function() {
-                                i.isContextInitialized = !0, i.updateLocalContext()
-                            }, this.setGame = function(e) {
-                                i.currentGame = e, i.updateLocalContext()
-                            }, this.initEvents = function() {
-                                i.playerExtensionsApi.setStatsEnabled(!0), i.playerExtensionsApi.on(r.b, i.updateLocalContext)
-                            }, this.refreshContext = function() {
-                                var e = {
-                                    mode: i.extensionMode
-                                };
-                                if ("viewer" === i.extensionMode) {
-                                    var t = i.playerExtensionsApi.stats;
-                                    e.bitrate = t.playbackRate, e.bufferSize = t.bufferSize, e.displayResolution = t.displayResolution, e.game = i.currentGame, e.hlsLatencyBroadcaster = t.hlsLatencyBroadcaster, e.isFullScreen = i.playerExtensionsApi.fullscreen, e.isPaused = i.playerExtensionsApi.paused, e.isTheatreMode = i.playerExtensionsApi.theatre, e.videoResolution = t.videoResolution
-                                }
-                                return e
-                            }, this.updateLocalContext = function() {
-                                var e = i.refreshContext(),
-                                    t = Object.keys(e),
-                                    n = t.reduce(function(t, n) {
-                                        return i.context[n] !== e[n] && t.push(n), t
-                                    }, []);
-                                i.isContextInitialized && n.length > 0 && (i.context = e, i.onContextUpdate(n))
-                            }, this.initEvents()
-                        }
-                        return e
-                    }()
-                }, function(e, t, n) {
-                    "use strict";
-                    var r = n(6);
-                    n.d(t, "a", function() {
-                        return i
-                    });
-                    var i = function() {
-                        function e(e, t, i) {
-                            var o = this;
-                            this.extension = e, this.onAuthUpdate = t, this.onAnyFailure = i, this.refreshTimeout = null, this.beginAuthCycle = function(e) {
-                                clearTimeout(o.refreshTimeout), o.refreshTimeout = null;
-                                var t = o.calculateRefreshAfter();
-                                t <= 0 ? o.refreshAuth(o.auth).then(function(t) {
-                                    o.extension.token = t, e(), o.cycleExtensionAuth()
-                                }) : (e(), o.cycleExtensionAuth())
-                            }, this.destroy = function() {
-                                void 0 !== o.refreshTimeout && (clearTimeout(o.refreshTimeout), o.refreshTimeout = null)
-                            }, this.cycleExtensionAuth = function() {
-                                var e = o.calculateRefreshAfter();
-                                o.refreshTimeout = setTimeout(function() {
-                                    o.refreshAuth(o.auth).then(function(e) {
-                                        o.extension.token = e, o.onAuthUpdate(), o.cycleExtensionAuth()
-                                    })
-                                }, e)
-                            }, this.decodeTokenPayload = function(e) {
-                                var t, n = {
-                                        channel_id: "",
-                                        exp: 0,
-                                        opaque_user_id: "",
-                                        pubsub_perms: {
-                                            listen: [],
-                                            send: []
-                                        },
-                                        role: "",
-                                        user_id: ""
-                                    },
-                                    r = e.split(".")[1];
-                                try {
-                                    t = JSON.parse(atob(r))
-                                } catch (e) {
-                                    return o.onAnyFailure("failed to parse token payload"), n
-                                }
-                                return t
-                            }, this.calculateRefreshAfter = function() {
-                                var e = o.extension.token,
-                                    t = o.decodeTokenPayload(e),
-                                    n = Date.now(),
-                                    r = Math.max(0, .9 * (1e3 * t.exp - n));
-                                return r
-                            }, this.refreshAuth = function(e) {
-                                return clearTimeout(o.refreshTimeout), o.refreshTimeout = null, n.i(r.a)(o.auth.clientId, o.auth.channelId, o.auth.token).catch(function() {
-                                    return o.getTokenFromExtensions()
-                                }).then(function(e) {
-                                    var t = e.token;
-                                    return t ? Promise.resolve(t) : (o.onAnyFailure("token refresh failed"), Promise.reject(""))
-                                })
-                            }, this.getTokenFromExtensions = function() {
-                                return n.i(r.b)(o.auth.clientId, o.auth.channelId).then(function(e) {
-                                    var t = e.tokens;
-                                    return {
-                                        token: t.reduce(function(e, t) {
-                                            var n = t.extension_id,
-                                                r = t.token;
-                                            return n === o.auth.clientId ? r : e
-                                        }, null)
+                    var r = n(0),
+                        i = function() {
+                            function e(e, t, n) {
+                                var i = this;
+                                this.playerExtensionsApi = e, this.extensionMode = t, this.onContextUpdate = n, this.context = {}, this.isContextInitialized = !1, this.currentGame = "", this.destroy = function() {
+                                    i.playerExtensionsApi.off(r.b, i.updateLocalContext)
+                                }, this.initializeContext = function() {
+                                    i.isContextInitialized = !0, i.updateLocalContext()
+                                }, this.setGame = function(e) {
+                                    i.currentGame = e, i.updateLocalContext()
+                                }, this.initEvents = function() {
+                                    i.playerExtensionsApi.setStatsEnabled(!0), i.playerExtensionsApi.on(r.b, i.updateLocalContext)
+                                }, this.refreshContext = function() {
+                                    var e = {
+                                        mode: i.extensionMode
+                                    };
+                                    if ("viewer" === i.extensionMode) {
+                                        var t = i.playerExtensionsApi.stats;
+                                        e.bitrate = t.playbackRate, e.bufferSize = t.bufferSize, e.displayResolution = t.displayResolution, e.game = i.currentGame, e.hlsLatencyBroadcaster = t.hlsLatencyBroadcaster, e.isFullScreen = i.playerExtensionsApi.fullscreen, e.isPaused = i.playerExtensionsApi.paused, e.isTheatreMode = i.playerExtensionsApi.theatre, e.videoResolution = t.videoResolution
                                     }
-                                })
+                                    return e
+                                }, this.updateLocalContext = function() {
+                                    var e = i.refreshContext(),
+                                        t = Object.keys(e),
+                                        n = t.reduce(function(t, n) {
+                                            return i.context[n] !== e[n] && t.push(n), t
+                                        }, []);
+                                    i.isContextInitialized && n.length > 0 && (i.context = e, i.onContextUpdate(n))
+                                }, this.initEvents()
                             }
-                        }
-                        return Object.defineProperty(e.prototype, "auth", {
-                            get: function() {
-                                var e = this.decodeTokenPayload(this.extension.token);
-                                return {
-                                    channelId: e.channel_id,
-                                    clientId: this.extension.clientId,
-                                    token: this.extension.token,
-                                    userId: e.opaque_user_id
-                                }
-                            },
-                            enumerable: !0,
-                            configurable: !0
-                        }), Object.defineProperty(e.prototype, "token", {
-                            set: function(e) {
-                                this.extension.token = e
-                            },
-                            enumerable: !0,
-                            configurable: !0
-                        }), e
-                    }()
+                            return e
+                        }()
                 }, function(e, t, n) {
                     "use strict";
-                    var r = n(10);
+                    n.d(t, "a", function() {
+                        return i
+                    });
+                    var r = n(6),
+                        i = function() {
+                            function e(e, t, i) {
+                                var o = this;
+                                this.extension = e, this.onAuthUpdate = t, this.onAnyFailure = i, this.refreshTimeout = null, this.beginAuthCycle = function(e) {
+                                    clearTimeout(o.refreshTimeout), o.refreshTimeout = null;
+                                    var t = o.calculateRefreshAfter();
+                                    t <= 0 ? o.refreshAuth(o.auth).then(function(t) {
+                                        o.extension.token = t, e(), o.cycleExtensionAuth()
+                                    }) : (e(), o.cycleExtensionAuth())
+                                }, this.destroy = function() {
+                                    void 0 !== o.refreshTimeout && (clearTimeout(o.refreshTimeout), o.refreshTimeout = null)
+                                }, this.cycleExtensionAuth = function() {
+                                    var e = o.calculateRefreshAfter();
+                                    o.refreshTimeout = setTimeout(function() {
+                                        o.refreshAuth(o.auth).then(function(e) {
+                                            o.extension.token = e, o.onAuthUpdate(), o.cycleExtensionAuth()
+                                        })
+                                    }, e)
+                                }, this.decodeTokenPayload = function(e) {
+                                    var t, n = {
+                                            channel_id: "",
+                                            exp: 0,
+                                            opaque_user_id: "",
+                                            pubsub_perms: {
+                                                listen: [],
+                                                send: []
+                                            },
+                                            role: "",
+                                            user_id: ""
+                                        },
+                                        r = e.split(".")[1];
+                                    try {
+                                        t = JSON.parse(atob(r))
+                                    } catch (e) {
+                                        return o.onAnyFailure("failed to parse token payload"), n
+                                    }
+                                    return t
+                                }, this.calculateRefreshAfter = function() {
+                                    var e = o.extension.token,
+                                        t = o.decodeTokenPayload(e),
+                                        n = Date.now(),
+                                        r = Math.max(0, .9 * (1e3 * t.exp - n));
+                                    return r
+                                }, this.refreshAuth = function(e) {
+                                    return clearTimeout(o.refreshTimeout), o.refreshTimeout = null, n.i(r.a)(o.auth.clientId, o.auth.channelId, o.auth.token).catch(function() {
+                                        return o.getTokenFromExtensions()
+                                    }).then(function(e) {
+                                        var t = e.token;
+                                        return t ? Promise.resolve(t) : (o.onAnyFailure("token refresh failed"), Promise.reject(""))
+                                    })
+                                }, this.getTokenFromExtensions = function() {
+                                    return n.i(r.b)(o.auth.clientId, o.auth.channelId).then(function(e) {
+                                        var t = e.tokens;
+                                        return {
+                                            token: t.reduce(function(e, t) {
+                                                var n = t.extension_id,
+                                                    r = t.token;
+                                                return n === o.auth.clientId ? r : e
+                                            }, null)
+                                        }
+                                    })
+                                }
+                            }
+                            return Object.defineProperty(e.prototype, "auth", {
+                                get: function() {
+                                    var e = this.decodeTokenPayload(this.extension.token);
+                                    return {
+                                        channelId: e.channel_id,
+                                        clientId: this.extension.clientId,
+                                        token: this.extension.token,
+                                        userId: e.opaque_user_id
+                                    }
+                                },
+                                enumerable: !0,
+                                configurable: !0
+                            }), Object.defineProperty(e.prototype, "token", {
+                                set: function(e) {
+                                    this.extension.token = e
+                                },
+                                enumerable: !0,
+                                configurable: !0
+                            }), e
+                        }()
+                }, function(e, t, n) {
+                    "use strict";
                     n.d(t, "a", function() {
                         return o
                     });
-                    var i = this && this.__assign || Object.assign || function(e) {
+                    var r = n(11),
+                        i = this && this.__assign || Object.assign || function(e) {
                             for (var t, n = 1, r = arguments.length; n < r; n++) {
                                 t = arguments[n];
                                 for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
@@ -36132,6 +36159,20 @@
                                 this.dobbin.trackEvent(e, n, ["spade"])
                             }, e
                         }()
+                }, function(e, t, n) {
+                    "use strict";
+                    n.d(t, "a", function() {
+                        return r
+                    });
+                    var r = function(e, t) {
+                        var n = !1;
+                        return function() {
+                            for (var r = [], i = 0; i < arguments.length; i++) r[i] = arguments[i];
+                            n || (n = !0, setTimeout(function() {
+                                n = !1
+                            }, t), e.apply(null, r))
+                        }
+                    }
                 }, function(e, t, n) {
                     "use strict";
                     n.d(t, "a", function() {
@@ -36166,7 +36207,7 @@
                         t >= 0 && (e._idleTimeoutId = setTimeout(function() {
                             e._onTimeout && e._onTimeout()
                         }, t))
-                    }, i(13), r.setImmediate = t, r.clearImmediate = n
+                    }, i(14), r.setImmediate = t, r.clearImmediate = n
                 }, function(e, t) {
                     function n() {
                         throw new Error("setTimeout has not been defined")
@@ -36248,7 +36289,9 @@
                         h.push(new l(e, t)), 1 !== h.length || _ || i(s)
                     }, l.prototype.run = function() {
                         this.fun.apply(null, this.array)
-                    }, f.title = "browser", f.browser = !0, f.env = {}, f.argv = [], f.version = "", f.versions = {}, f.on = u, f.addListener = u, f.once = u, f.off = u, f.removeListener = u, f.removeAllListeners = u, f.emit = u, f.binding = function(e) {
+                    }, f.title = "browser", f.browser = !0, f.env = {}, f.argv = [], f.version = "", f.versions = {}, f.on = u, f.addListener = u, f.once = u, f.off = u, f.removeListener = u, f.removeAllListeners = u, f.emit = u, f.prependListener = u, f.prependOnceListener = u, f.listeners = function(e) {
+                        return []
+                    }, f.binding = function(e) {
                         throw new Error("process.binding is not supported")
                     }, f.cwd = function() {
                         return "/"
@@ -36374,7 +36417,7 @@
                                 g = g && g.setTimeout ? g : e, "[object process]" === {}.toString.call(e.process) ? s() : l() ? u() : e.MessageChannel ? c() : m && "onreadystatechange" in m.createElement("script") ? d() : f(), g.setImmediate = r, g.clearImmediate = i
                             }
                         }("undefined" == typeof self ? "undefined" == typeof e ? this : e : self)
-                    }).call(t, n(14), n(12))
+                    }).call(t, n(15), n(13))
                 }, function(e, t) {
                     var n;
                     n = function() {
@@ -37985,12 +38028,11 @@
                     return e.toUpperCase()
                 }),
                 n = e.replace(/-[a-zA-Z]{2}$/, "");
-            return (0, g.default)(["ar-SA", "bg-BG", "cs-CZ", "da-DK", "de-DE", "el-GR", "en-US", "es-MX", "es-US", "es-ES", "es-LA", "fi-FI", "fr-FR", "hi-IN", "hu-HU", "it-IT", "ja-JP", "ko-KR", "nl-NL", "no-NO", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "sv-SE", "th-TH", "tr-TR", "vi-VN", "zh-TW", "zh-CN"], t) || (t = y[n] || n),
-                new Promise(function(e, r) {
-                    u.default.changeLanguage(t, function(i, o) {
-                        i ? r(i) : e(new b(n, t, o))
-                    })
+            return (0, g.default)(["ar-SA", "bg-BG", "cs-CZ", "da-DK", "de-DE", "el-GR", "en-US", "es-MX", "es-US", "es-ES", "es-LA", "fi-FI", "fr-FR", "hi-IN", "hu-HU", "it-IT", "ja-JP", "ko-KR", "nl-NL", "no-NO", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "sv-SE", "th-TH", "tr-TR", "vi-VN", "zh-TW", "zh-CN"], t) || (t = y[n] || n), new Promise(function(e, r) {
+                u.default.changeLanguage(t, function(i, o) {
+                    i ? r(i) : e(new b(n, t, o))
                 })
+            })
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
