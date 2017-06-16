@@ -218,13 +218,13 @@ window.SiteOptions = {
         "0d140c71-9264-4646-bc2c-743089cb9386": {
             "name": "clips_shelter",
             "groups": [{
-                "weight": 20,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 40,
+                "weight": 5,
                 "value": "variant1"
             }, {
-                "weight": 40,
+                "weight": 95,
                 "value": "variant2"
             }]
         },

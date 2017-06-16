@@ -9795,7 +9795,7 @@
                     b = m.get(!1),
                     S = m.get(!0);
                 v = {
-                    app_version: "2017.06.16-180256+94d51f382662d91d1ee7441c82ffbf8346628315",
+                    app_version: "2017.06.16-194750+46a12b2785b80c96adc90baafaab2c2ddee5eda9",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -37581,7 +37581,7 @@
                         g = n === l.CONTENT_MODE_LIVE && r !== _.ONLINE_STATUS,
                         E = n !== l.CONTENT_MODE_LIVE && n !== u.CONTENT_MODE_VOD,
                         S = Boolean(s),
-                        T = d && o && S && !(g || E || m || v) && !(f && this._redbullEventActive && n !== l.CONTENT_MODE_LIVE);
+                        T = d && o && S && !(g || E || m || v) && !(f && this._redbullEventActive && n === l.CONTENT_MODE_LIVE);
                     this._toggle(T)
                 }
             }, {
