@@ -16302,9 +16302,8 @@ googletag.cmd = googletag.cmd || [],
                 GAME_FOLLOW_ONBOARD: "9a3b387e-b6cd-4d2b-80a6-bb14d3ba4512",
                 FOLLOWING_COMMUNITIES: "42c46cf2-6a2e-49cb-9a68-622999710fed",
                 I18N_GAME_NAMES: "497e1277-7fff-4c16-98f0-6b55c8b59a4f",
-                AUTO_ON_NOTIFICATIONS: "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b",
                 NEWSFEED_RECOMMENDATIONS: "30a7dfaa-e3d2-477e-a4f1-28e2ffb80e72",
-                MEDIAPLAYER_BACKEND_SELECT: "2c137391-5182-429f-8760-9f71e4d40918"
+                AUTO_ON_NOTIFICATIONS: "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b"
             },
             r = {
                 "61b169ff-bc62-4725-a40e-1be627197c6f": "no",
@@ -16353,9 +16352,8 @@ googletag.cmd = googletag.cmd || [],
                 "9a3b387e-b6cd-4d2b-80a6-bb14d3ba4512": "control",
                 "42c46cf2-6a2e-49cb-9a68-622999710fed": "bottom",
                 "497e1277-7fff-4c16-98f0-6b55c8b59a4f": "control",
-                "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b": "control",
                 "30a7dfaa-e3d2-477e-a4f1-28e2ffb80e72": "control",
-                "2c137391-5182-429f-8760-9f71e4d40918": "no"
+                "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b": "control"
             },
             o = {},
             s = {
@@ -16368,8 +16366,7 @@ googletag.cmd = googletag.cmd || [],
                 SOCIAL_RECOMMENDATIONS: "variant1",
                 LOL_METADATA_EXPERIMENT: "treatment",
                 WT_P: "yes",
-                OFFLINE_RECOMMENDATIONS: "yes",
-                MEDIAPLAYER_BACKEND_SELECT: "yes"
+                OFFLINE_RECOMMENDATIONS: "yes"
             };
         _.each(Object.keys(s), function(t) {
             o[i[t]] = e.user().then(function(e) {
@@ -17722,30 +17719,31 @@ googletag.cmd = googletag.cmd || [],
                 this.pageViewId = null, this.startTime = null
             };
         a.prototype.start = function() {
-            var t = e.idsForMixpanel.getOrCreateUniqueId(),
-                n = window.location.href,
-                i = (new Date).getTime(),
-                r = window.App.__container__.lookup("controller:application").get("currentRouteName");
-            this.pageViewId = a._getPageViewId(t);
-            var o = {
-                device_id: t,
-                location: r,
-                pageview_id: this.pageViewId,
-                time: i / 1e3,
-                url: n
+                var t = e.idsForMixpanel.getOrCreateUniqueId(),
+                    n = window.location.href,
+                    i = (new Date).getTime(),
+                    r = window.App.__container__.lookup("controller:application").get("currentRouteName");
+                this.pageViewId = a._getPageViewId(t);
+                var o = {
+                    device_id: t,
+                    location: r,
+                    pageview_id: this.pageViewId,
+                    time: i / 1e3,
+                    url: n
+                };
+                this.startTime = i, e.tracking.spade.trackEvent("pageview_diagnostic_opportunity", o)
+            }, a.prototype.end = function() {
+                var t = (new Date).getTime();
+                e.tracking.spade.trackEvent("pageview_diagnostic_complete", {
+                    device_id: e.idsForMixpanel.getOrCreateUniqueId(),
+                    pageview_id: this.pageViewId,
+                    elapsed: (t - this.startTime) / 1e3,
+                    time: t / 1e3
+                })
+            },
+            a._getPageViewId = function(t) {
+                return (new Date).getTime() + "-" + e.idsForMixpanel.createUniqueId(t)
             };
-            this.startTime = i, e.tracking.spade.trackEvent("pageview_diagnostic_opportunity", o)
-        }, a.prototype.end = function() {
-            var t = (new Date).getTime();
-            e.tracking.spade.trackEvent("pageview_diagnostic_complete", {
-                device_id: e.idsForMixpanel.getOrCreateUniqueId(),
-                pageview_id: this.pageViewId,
-                elapsed: (t - this.startTime) / 1e3,
-                time: t / 1e3
-            })
-        }, a._getPageViewId = function(t) {
-            return (new Date).getTime() + "-" + e.idsForMixpanel.createUniqueId(t)
-        };
         var l = (new URI).query(!0);
         if (window.history && "function" == typeof window.history.replaceState) {
             var u = (new URI).removeQuery(["tt_medium", "tt_content", "tt_content_index", "followed_flow"]);
