@@ -17999,17 +17999,27 @@ googletag.cmd = googletag.cmd || [],
                     })
                 }
             })
-        }, i.sendGermanBeacons = function() {
+        }, i.sendGermanBeacons = function(n) {
             e.geo.then(function(e) {
                 if ("DE" === e.geo || "de" === e.received_language) {
-                    var n = function() {
-                        switch (window.SitePageType) {
+                    n = void 0 === n ? window.SitePageType : n;
+                    var i = function(e) {
+                        switch (e) {
                             case "directory":
-                                return "game" === URI().segment(1) ? "1148gameVIDE" : "1148directory";
+                                switch (URI().segment(1)) {
+                                    case "game":
+                                        return "1148gameVIDE";
+                                    case "creative":
+                                        return "1148directory_misc";
+                                    default:
+                                        return "1148directory"
+                                }
                             case "search":
                                 return "4201search";
                             case "front_page":
                                 return "1101homepage";
+                            case "pages":
+                                return "1148text";
                             case "channel":
                             case "video":
                                 return "1148publVIDE";
@@ -18018,12 +18028,11 @@ googletag.cmd = googletag.cmd || [],
                             default:
                                 return null
                         }
-                    }();
-                    n && ("DE" === e.geo && "de" !== e.received_language && (n += "_multilanguage"), t.getScript("https://script.ioam.de/iam.js", function() {
+                    }(n);
+                    i && ("DE" === e.geo && "de" !== e.received_language && (i += "_multilanguage"), t.getScript("https://script.ioam.de/iam.js", function() {
                         var e = {
                             st: "twitchtv",
-                            cp: n,
-                            oc: n,
+                            cp: i,
                             mg: "yes",
                             sv: "front_page" === window.SitePageType ? "ke" : "in"
                         };
