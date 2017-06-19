@@ -15081,18 +15081,22 @@ function(e, t) {
                         event: e,
                         properties: t
                     };
-                    return n.i(a.a)(e, t) ? this.trackUrgentEvent(o, i) : (this.eventBuffer.forEach(function(e, t) {
+                    return n.i(a.a)(e) ? this.trackUrgentEvent(o, i) : (this.eventBuffer.forEach(function(e, t) {
                         i.indexOf(t) !== -1 && e.push(o)
                     }), this.hookUnload(), this.queueFlush())
                 }, e.trackUrgentEvent = function(e, t) {
-                    var o, s = n.i(i.a)([e]),
-                        u = t.map(function(e) {
-                            return n.i(l.a)(r.d[e].href, "data=" + s)
+                    var o = n.i(i.a)([e]),
+                        s = t.map(function(e) {
+                            return n.i(l.a)(r.d[e].href, "data=" + o)
                         });
-                    return e.event === a.b && t.indexOf(r.b) !== -1 && (o = this.trackUrgentEvent({
-                        event: a.c,
-                        properties: e.properties
-                    }, [r.e]), u.push(o)), r.f.all(u)
+                    if (a.b[e.event] && t.indexOf(r.b) !== -1) {
+                        var u = this.trackUrgentEvent({
+                            event: a.b[e.event],
+                            properties: e.properties
+                        }, [r.e]);
+                        s.push(u)
+                    }
+                    return r.f.all(s)
                 }, e.queueFlush = function() {
                     var e = this;
                     return this.queuedFlush || (this.queuedFlush = new r.f(function(t) {
@@ -15139,9 +15143,10 @@ function(e, t) {
                 }, e
             }();
             u.events = {
-                EVENT_PAGEVIEW: a.b,
-                UNTRUSTED_EVENT_PAGEVIEW: a.d,
-                UNTRUSTED_EVENT_PAGEVIEW_FILTERED: a.c
+                EVENT_PAGEVIEW: a.c,
+                UNTRUSTED_EVENT_PAGEVIEW_FILTERED: a.d,
+                UNTRUSTED_EVENT_BENCHMARK_FETCH_START: a.e,
+                UNTRUSTED_EVENT_BENCHMARK_COMPLETE_TRANSITION: a.f
             }, u.configure = r.h, u.eventBuffer = new s.a, u.queuedFlush = void 0, u.unloadHooked = !1
         }, function(e, t, n) {
             ! function(i, r) {
@@ -15274,20 +15279,28 @@ function(e, t) {
         }, function(e, t, n) {
             "use strict";
 
-            function i(e, t) {
-                return a.indexOf(e) !== -1
+            function i(e) {
+                return h.indexOf(e) !== -1
             }
-            n.d(t, "b", function() {
-                return r
-            }), n.d(t, "d", function() {
+            n.d(t, "c", function() {
                 return o
-            }), n.d(t, "c", function() {
-                return s
+            }), n.d(t, "d", function() {
+                return l
+            }), n.d(t, "e", function() {
+                return u
+            }), n.d(t, "f", function() {
+                return c
+            }), n.d(t, "b", function() {
+                return d
             }), t.a = i;
-            var r = "pageview",
-                o = "x_untrusted_pageview",
-                s = "x_untrusted_pageview_filtered",
-                a = [r, "benchmark_fetch_start", "benchmark_validate_transition", "benchmark_complete_transition", "benchmark_component_initializing", "benchmark_component_interactive"]
+            var r, o = "pageview",
+                s = "benchmark_fetch_start",
+                a = "benchmark_complete_transition",
+                l = "x_untrusted_pageview_filtered",
+                u = "x_untrusted_benchmark_fetch_start",
+                c = "x_untrusted_benchmark_complete_transition",
+                h = [o, s, a, "benchmark_validate_transition", "benchmark_component_initializing", "benchmark_component_interactive"],
+                d = (r = {}, r[o] = l, r[s] = u, r[a] = c, r)
         }, function(e, t, n) {
             e.exports = n(4)
         }])
@@ -15584,37 +15597,36 @@ googletag.cmd = googletag.cmd || [],
                     }
                 };
             e(window).on("fluid-resize", function() {
-                    e("#right_col")[0] ? e(window).width() < 800 ? ("false" !== Twitch.storage.get("leftColClosed") && i(), "false" !== Twitch.storage.get("rightColClosed") && s()) : e(window).width() < 1200 ? ("false" !== Twitch.storage.get("leftColClosed") && i(), "true" !== Twitch.storage.get("rightColClosed") && a()) : ("true" !== Twitch.storage.get("leftColClosed") && r(), "true" !== Twitch.storage.get("rightColClosed") && a()) : e(window).width() < 800 ? "false" !== Twitch.storage.get("leftColClosed") && i() : "true" !== Twitch.storage.get("leftColClosed") && r();
-                    var t = Math.min(9 * e(".player_column").width() / 16 + 32, e(".channel-main").height() - e(".editable").outerHeight(!0) - e("#stats_and_actions").outerHeight() + 1);
-                    e(".live_site_player_container, .archive_site_player_container").css("height", t.toFixed(0) + "px")
-                }), e(window).resize(_.debounce(function() {
-                    e(window).trigger("fluid-resize")
-                }, 10)), e("#small_search a").click(function() {
-                    return r(), e("#sidebar_search input").focus(), !1
-                }),
-                e("#small_more a").flyout("small_more", {
-                    anchor: "mid"
-                }), e("#small_account a").flyout("small_account", {
-                    anchor: "bot",
-                    data: {
-                        user: Twitch.user.login()
-                    }
-                }), e("#left_close").click(function(e) {
-                    e.preventDefault(), n()
-                }), e("#right_close").click(function(e) {
-                    e.preventDefault(), o()
-                }), e(".stretch").each(function() {
-                    var t = 0 + e(this).siblings(".top:first").outerHeight(),
-                        n = 0 + e(this).siblings(".bottom:first").outerHeight();
-                    e(this).css({
-                        top: t + "px",
-                        bottom: n + "px",
-                        visibility: "visible"
-                    })
-                }), "true" === Twitch.storage.get("leftColClosed") && i(), "true" === Twitch.storage.get("rightColClosed") && s(), e("body").on("rightClose", s).on("rightOpen", a).on("rightToggle", o).on("leftClose", i).on("leftOpen", r).on("leftToggle", n), e(".js-columns-scroll, .js-nav-scroll").TrackpadScrollEmulator({
-                    wrapContent: !1,
-                    scrollbarHideStrategy: "rightAndBottom"
-                }), e(window).trigger("fluid-resize")
+                e("#right_col")[0] ? e(window).width() < 800 ? ("false" !== Twitch.storage.get("leftColClosed") && i(), "false" !== Twitch.storage.get("rightColClosed") && s()) : e(window).width() < 1200 ? ("false" !== Twitch.storage.get("leftColClosed") && i(), "true" !== Twitch.storage.get("rightColClosed") && a()) : ("true" !== Twitch.storage.get("leftColClosed") && r(), "true" !== Twitch.storage.get("rightColClosed") && a()) : e(window).width() < 800 ? "false" !== Twitch.storage.get("leftColClosed") && i() : "true" !== Twitch.storage.get("leftColClosed") && r();
+                var t = Math.min(9 * e(".player_column").width() / 16 + 32, e(".channel-main").height() - e(".editable").outerHeight(!0) - e("#stats_and_actions").outerHeight() + 1);
+                e(".live_site_player_container, .archive_site_player_container").css("height", t.toFixed(0) + "px")
+            }), e(window).resize(_.debounce(function() {
+                e(window).trigger("fluid-resize")
+            }, 10)), e("#small_search a").click(function() {
+                return r(), e("#sidebar_search input").focus(), !1
+            }), e("#small_more a").flyout("small_more", {
+                anchor: "mid"
+            }), e("#small_account a").flyout("small_account", {
+                anchor: "bot",
+                data: {
+                    user: Twitch.user.login()
+                }
+            }), e("#left_close").click(function(e) {
+                e.preventDefault(), n()
+            }), e("#right_close").click(function(e) {
+                e.preventDefault(), o()
+            }), e(".stretch").each(function() {
+                var t = 0 + e(this).siblings(".top:first").outerHeight(),
+                    n = 0 + e(this).siblings(".bottom:first").outerHeight();
+                e(this).css({
+                    top: t + "px",
+                    bottom: n + "px",
+                    visibility: "visible"
+                })
+            }), "true" === Twitch.storage.get("leftColClosed") && i(), "true" === Twitch.storage.get("rightColClosed") && s(), e("body").on("rightClose", s).on("rightOpen", a).on("rightToggle", o).on("leftClose", i).on("leftOpen", r).on("leftToggle", n), e(".js-columns-scroll, .js-nav-scroll").TrackpadScrollEmulator({
+                wrapContent: !1,
+                scrollbarHideStrategy: "rightAndBottom"
+            }), e(window).trigger("fluid-resize")
         }
     }(jQuery),
     function(e) {
@@ -16584,7 +16596,8 @@ googletag.cmd = googletag.cmd || [],
                     e.api.get("streams/" + t.channel).then(function(e) {
                         if (e.stream) {
                             var r = e.stream;
-                            r.game && (i.subtitle = r.game), r.channel && (r.channel.display_name && (i.title = r.channel.display_name), r.channel.logo ? i.images = [new chrome.cast.Image(r.channel.logo)] : i.images = [new chrome.cast.Image(r.preview.medium)]), n.metadata = i, n.customData = {
+                            r.game && (i.subtitle = r.game), r.channel && (r.channel.display_name && (i.title = r.channel.display_name),
+                                r.channel.logo ? i.images = [new chrome.cast.Image(r.channel.logo)] : i.images = [new chrome.cast.Image(r.preview.medium)]), n.metadata = i, n.customData = {
                                 channel: t.channel,
                                 analytics: t.analytics
                             };
@@ -17719,31 +17732,30 @@ googletag.cmd = googletag.cmd || [],
                 this.pageViewId = null, this.startTime = null
             };
         a.prototype.start = function() {
-                var t = e.idsForMixpanel.getOrCreateUniqueId(),
-                    n = window.location.href,
-                    i = (new Date).getTime(),
-                    r = window.App.__container__.lookup("controller:application").get("currentRouteName");
-                this.pageViewId = a._getPageViewId(t);
-                var o = {
-                    device_id: t,
-                    location: r,
-                    pageview_id: this.pageViewId,
-                    time: i / 1e3,
-                    url: n
-                };
-                this.startTime = i, e.tracking.spade.trackEvent("pageview_diagnostic_opportunity", o)
-            }, a.prototype.end = function() {
-                var t = (new Date).getTime();
-                e.tracking.spade.trackEvent("pageview_diagnostic_complete", {
-                    device_id: e.idsForMixpanel.getOrCreateUniqueId(),
-                    pageview_id: this.pageViewId,
-                    elapsed: (t - this.startTime) / 1e3,
-                    time: t / 1e3
-                })
-            },
-            a._getPageViewId = function(t) {
-                return (new Date).getTime() + "-" + e.idsForMixpanel.createUniqueId(t)
+            var t = e.idsForMixpanel.getOrCreateUniqueId(),
+                n = window.location.href,
+                i = (new Date).getTime(),
+                r = window.App.__container__.lookup("controller:application").get("currentRouteName");
+            this.pageViewId = a._getPageViewId(t);
+            var o = {
+                device_id: t,
+                location: r,
+                pageview_id: this.pageViewId,
+                time: i / 1e3,
+                url: n
             };
+            this.startTime = i, e.tracking.spade.trackEvent("pageview_diagnostic_opportunity", o)
+        }, a.prototype.end = function() {
+            var t = (new Date).getTime();
+            e.tracking.spade.trackEvent("pageview_diagnostic_complete", {
+                device_id: e.idsForMixpanel.getOrCreateUniqueId(),
+                pageview_id: this.pageViewId,
+                elapsed: (t - this.startTime) / 1e3,
+                time: t / 1e3
+            })
+        }, a._getPageViewId = function(t) {
+            return (new Date).getTime() + "-" + e.idsForMixpanel.createUniqueId(t)
+        };
         var l = (new URI).query(!0);
         if (window.history && "function" == typeof window.history.replaceState) {
             var u = (new URI).removeQuery(["tt_medium", "tt_content", "tt_content_index", "followed_flow"]);
