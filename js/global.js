@@ -16069,18 +16069,8 @@ googletag.cmd = googletag.cmd || [],
                     xhrFields: {
                         withCredentials: a.secure
                     },
-                    success: function() {
-                        var e = arguments;
-                        setTimeout(function() {
-                            c.resolve.apply(c, e)
-                        })
-                    },
-                    error: function() {
-                        var e = arguments;
-                        setTimeout(function() {
-                            c.reject.apply(c, e)
-                        })
-                    }
+                    success: c.resolve,
+                    error: c.reject
                 }), a.isCors || a.use_streams_api || a.secure && "https" !== window.location.protocol.slice(0, 5)) {
                 if (this._canCORS()) u.xhrFields.withCredentials = a.allow_cookie;
                 else if (u.dataType = "jsonp", u.headers && u.headers["Client-ID"] && (u.data.client_id = u.headers["Client-ID"], delete u.headers["Client-ID"]), u.headers && u.headers.Authorization) {
@@ -17731,30 +17721,31 @@ googletag.cmd = googletag.cmd || [],
                 this.pageViewId = null, this.startTime = null
             };
         a.prototype.start = function() {
-            var t = e.idsForMixpanel.getOrCreateUniqueId(),
-                n = window.location.href,
-                i = (new Date).getTime(),
-                r = window.App.__container__.lookup("controller:application").get("currentRouteName");
-            this.pageViewId = a._getPageViewId(t);
-            var o = {
-                device_id: t,
-                location: r,
-                pageview_id: this.pageViewId,
-                time: i / 1e3,
-                url: n
+                var t = e.idsForMixpanel.getOrCreateUniqueId(),
+                    n = window.location.href,
+                    i = (new Date).getTime(),
+                    r = window.App.__container__.lookup("controller:application").get("currentRouteName");
+                this.pageViewId = a._getPageViewId(t);
+                var o = {
+                    device_id: t,
+                    location: r,
+                    pageview_id: this.pageViewId,
+                    time: i / 1e3,
+                    url: n
+                };
+                this.startTime = i, e.tracking.spade.trackEvent("pageview_diagnostic_opportunity", o)
+            }, a.prototype.end = function() {
+                var t = (new Date).getTime();
+                e.tracking.spade.trackEvent("pageview_diagnostic_complete", {
+                    device_id: e.idsForMixpanel.getOrCreateUniqueId(),
+                    pageview_id: this.pageViewId,
+                    elapsed: (t - this.startTime) / 1e3,
+                    time: t / 1e3
+                })
+            },
+            a._getPageViewId = function(t) {
+                return (new Date).getTime() + "-" + e.idsForMixpanel.createUniqueId(t)
             };
-            this.startTime = i, e.tracking.spade.trackEvent("pageview_diagnostic_opportunity", o)
-        }, a.prototype.end = function() {
-            var t = (new Date).getTime();
-            e.tracking.spade.trackEvent("pageview_diagnostic_complete", {
-                device_id: e.idsForMixpanel.getOrCreateUniqueId(),
-                pageview_id: this.pageViewId,
-                elapsed: (t - this.startTime) / 1e3,
-                time: t / 1e3
-            })
-        }, a._getPageViewId = function(t) {
-            return (new Date).getTime() + "-" + e.idsForMixpanel.createUniqueId(t)
-        };
         var l = (new URI).query(!0);
         if (window.history && "function" == typeof window.history.replaceState) {
             var u = (new URI).removeQuery(["tt_medium", "tt_content", "tt_content_index", "followed_flow"]);
