@@ -15413,14 +15413,13 @@ googletag.cmd = googletag.cmd || [],
     }(jQuery),
     function(e) {
         e(function() {
-            var t, n, i, r = e("body");
-            r.bind("login.overlay.show", function(o, s) {
-                if (t && s.id === n) return t.show(), void i.show();
-                r.overlay(s.url, function(r, o) {
-                    t = r, i = o, n = r.attr("id"), e("#subwindow_close").click(function(t) {
+            var t = e("body");
+            t.bind("login.overlay.show", function(n, i) {
+                t.overlay(i.url, function(t, n) {
+                    e("#subwindow_close").click(function(t) {
                         t.preventDefault(), e(this).trigger("overlay.hide")
-                    }), e("#signup_form .birthday_fields select").dropdownify(), r.find('input[name="follow"]').val(s.follow), r.find('input[name="mp_source_action"]').val(s.mpSourceAction), ich.grabTemplates()
-                }, s)
+                    }), e("#signup_form .birthday_fields select").dropdownify(), t.find('input[name="follow"]').val(i.follow), t.find('input[name="mp_source_action"]').val(i.mpSourceAction), ich.grabTemplates()
+                }, i)
             }), e("#signup_form .birthday_fields select").dropdownify()
         });
         var t = function(t, n) {
@@ -15475,7 +15474,7 @@ googletag.cmd = googletag.cmd || [],
                 width: "420px",
                 id: o,
                 focusOnLoad: l,
-                destroyOnHide: !1,
+                destroyOnHide: !0,
                 follow: n.follow,
                 mpSourceAction: n.mpSourceAction,
                 formType: t
@@ -16597,8 +16596,7 @@ googletag.cmd = googletag.cmd || [],
                     e.api.get("streams/" + t.channel).then(function(e) {
                         if (e.stream) {
                             var r = e.stream;
-                            r.game && (i.subtitle = r.game), r.channel && (r.channel.display_name && (i.title = r.channel.display_name),
-                                r.channel.logo ? i.images = [new chrome.cast.Image(r.channel.logo)] : i.images = [new chrome.cast.Image(r.preview.medium)]), n.metadata = i, n.customData = {
+                            r.game && (i.subtitle = r.game), r.channel && (r.channel.display_name && (i.title = r.channel.display_name), r.channel.logo ? i.images = [new chrome.cast.Image(r.channel.logo)] : i.images = [new chrome.cast.Image(r.preview.medium)]), n.metadata = i, n.customData = {
                                 channel: t.channel,
                                 analytics: t.analytics
                             };
