@@ -376,13 +376,13 @@ window.SiteOptions = {
         "1ef32b26-85c3-4e36-bece-4d3aea3a7604": {
             "name": "clips_no_long_talk",
             "groups": [{
-                "weight": 100,
+                "weight": 34,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 33,
                 "value": "variant1"
             }, {
-                "weight": 0,
+                "weight": 33,
                 "value": "variant2"
             }]
         },
