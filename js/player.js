@@ -9798,7 +9798,7 @@
                     b = m.get(!1),
                     S = m.get(!0);
                 v = {
-                    app_version: "2017.06.21-173212+bbfba09b9c16856628ded7249de89b53098ccba5",
+                    app_version: "2017.06.21-210730+845d6a9514ee64b278beefdfe1b060525577648a",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -34168,29 +34168,30 @@
                 var t = e.analyticsTracker,
                     n = e.env,
                     r = e.follow,
-                    i = e.playerOptions,
-                    o = e.streamMetadata,
-                    a = e.user,
-                    s = e.window,
-                    l = e.ui;
+                    i = e.playback,
+                    o = e.playerOptions,
+                    a = e.streamMetadata,
+                    s = e.user,
+                    l = e.window,
+                    u = e.ui;
                 return {
                     analytics: t,
                     channel: {
-                        id: o.channel.id,
-                        avatarUrl: o.channel.logo,
-                        name: o.channel.displayName
+                        id: a.channel.id,
+                        avatarUrl: a.channel.logo,
+                        name: a.channel.displayName
                     },
                     playerType: n.playerType,
-                    showFollowNotification: r.showFollowNotification && !l.isMini,
+                    showFollowNotification: r.showFollowNotification && !u.isMini && i.ended,
                     relationship: {
                         notificationsEnabled: r.notificationsEnabled,
                         following: r.following
                     },
-                    win: s,
-                    withInfo: i.showInfo,
+                    win: l,
+                    withInfo: o.showInfo,
                     user: {
-                        id: a.id,
-                        loggedIn: a.loggedInStatus === v.LOGGED_IN
+                        id: s.id,
+                        loggedIn: s.loggedInStatus === v.LOGGED_IN
                     }
                 }
             },
