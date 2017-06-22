@@ -135,10 +135,10 @@ window.SiteOptions = {
         "00683bde-a79d-4b9d-a7cc-b0549f854d36": {
             "name": "offline_recs",
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "no"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "yes"
             }]
         },
