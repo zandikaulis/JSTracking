@@ -3052,8 +3052,7 @@
                 this.ignoredDeferred = null;
                 this._users = new _usersJs2["default"];
                 if (opts.oauthToken) {
-                    this.ignoredDeferred = this._fetchIgnored();
-                    this._openGroupsConnection()
+                    this.ignoredDeferred = this._fetchIgnored()
                 }
                 this._emotesParser.on("emotes_changed", this._onEmotesResponseReceived, this)
             };
@@ -3497,56 +3496,6 @@
                     ownerId: ownerId
                 }
             };
-            SessionManager.prototype._openGroupsConnection = function() {
-                var self = this;
-                var addrs = [{
-                    host: "irc.chat.twitch.tv",
-                    port: "80"
-                }, {
-                    host: "irc.chat.twitch.tv",
-                    port: "6667"
-                }];
-                var wsAddrs = [{
-                    protocol: "wss",
-                    host: "irc-ws.chat.twitch.tv",
-                    port: "443"
-                }];
-                var conn = this._getOrNewConnection({
-                    darklaunchEnabled: false,
-                    cluster: "group",
-                    addrs: addrs,
-                    wsAddrs: wsAddrs,
-                    useWebSockets: true
-                });
-                conn.on("opened", function() {
-                    logger.info("Groups connection opened.")
-                });
-                conn.on("open:retry", function() {
-                    logger.info("Groups connection retrying.")
-                });
-                conn.on("open:failed", function() {
-                    logger.info("Groups connection failed.")
-                });
-                conn.on("whisper", this._onGroupConnWhisper, this);
-                conn.on("notice", this._onGroupConnNotice, this);
-                conn.open()
-            };
-            SessionManager.prototype._onGroupConnWhisper = function(ircMsg) {
-                if (ircMsg.tags.color) {
-                    this._onUserColorChanged(ircMsg.sender, ircMsg.tags.color)
-                }
-                if (!this.isIgnored(ircMsg.sender)) {
-                    this._triggerWhisper(ircMsg)
-                }
-            };
-            SessionManager.prototype._onGroupConnNotice = function(ircMsg) {
-                if (ircMsg.target != "#jtv") return;
-                this._trigger("notice", {
-                    msgId: ircMsg.tags["msg-id"],
-                    message: ircMsg.message,
-                    targetId: ircMsg.tags["target-user-id"]
-                })
-            };
             SessionManager.prototype._onRoomInvite = function(ircChannel, by) {
                 logger.info("Received invite to " + ircChannel + " from " + by);
                 if (this._invited[ircChannel]) {
@@ -3623,7 +3572,7 @@
             };
             SessionManager.prototype.sendWhisper = function(username, message) {
                 var conn = this._getOrNewConnection({
-                    cluster: "group"
+                    cluster: "main"
                 });
                 var whisperMsg = "/w " + username + " " + message;
                 conn._send("PRIVMSG #jtv :" + whisperMsg);
