@@ -1795,16 +1795,6 @@ window.SiteOptions = {
                 "value": "new"
             }]
         },
-        "d38d7cb0-f7c2-4237-b0f2-66681aa4825c": {
-            "name": "clips_click_me",
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 1,
-                "value": "variant1"
-            }]
-        },
         "d48fe249-fd73-4c8f-bd17-415b70dc3708": {
             "name": "chomperz",
             "groups": [{
