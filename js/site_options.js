@@ -1405,6 +1405,16 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "a39cd18b-c3fb-46ad-a6a8-0c2e8686d978": {
+            "name": "clips_rename_me",
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant"
+            }]
+        },
         "a9f7f84a-76fd-44f0-80b1-9421e714a1b7": {
             "name": "ios_clips_paris",
             "groups": [{
