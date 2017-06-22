@@ -376,14 +376,17 @@ window.SiteOptions = {
         "1ef32b26-85c3-4e36-bece-4d3aea3a7604": {
             "name": "clips_no_long_talk",
             "groups": [{
-                "weight": 34,
+                "weight": 25,
                 "value": "control"
             }, {
-                "weight": 33,
+                "weight": 25,
                 "value": "variant1"
             }, {
-                "weight": 33,
+                "weight": 25,
                 "value": "variant2"
+            }, {
+                "weight": 25,
+                "value": "variant3"
             }]
         },
         "213678cc-be7d-4aa6-a938-8baac01a442a": {
@@ -1395,10 +1398,10 @@ window.SiteOptions = {
         "ac1c908f-3779-4068-ae72-086c288f6f87": {
             "name": "FEATURED_COLLECTION_CARD",
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }]
         },
