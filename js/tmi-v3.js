@@ -985,6 +985,7 @@
             var PING_TIMEOUT = 10 * 1e3;
             var PING_INTERVAL = 5 * 60 * 1e3;
             var PING_JITTER = 10 * 1e3;
+            var DARKLAUNCH_DEFER_TIME = 30 * 1e3;
             var Connection = function Connection(opts) {
                 this._opts = opts;
                 this.nickname = opts.nickname;
@@ -1068,9 +1069,7 @@
                     }
                 }
                 if (this._opts.darklaunchConn) {
-                    try {
-                        this._opts.darklaunchConn.open()
-                    } catch (err) {}
+                    setTimeout(this._darklaunchOpen.bind(this), DARKLAUNCH_DEFER_TIME)
                 }
             };
             Connection.prototype.connect = function() {
@@ -1088,6 +1087,11 @@
             };
             Connection.prototype.getMessageRate = function() {
                 return this._socket.getMessageRate()
+            };
+            Connection.prototype._darklaunchOpen = function() {
+                try {
+                    this._opts.darklaunchConn.open()
+                } catch (err) {}
             };
             Connection.prototype._addRoomConn = function(roomConn) {
                 this._roomConns.push(roomConn)
@@ -1328,7 +1332,7 @@
                 this._socket.send(sanitized + SEND_SUFFIX, APPEND_NULL_BYTE);
                 if (this._opts.darklaunchConn) {
                     try {
-                        this._opts.darklaunchConn._send(data);
+                        this._opts.darklaunchConn._send(data)
                     } catch (err) {}
                 }
             };
@@ -2621,7 +2625,7 @@
                 if (duration !== undefined) {
                     this.sendMessage("/followers " + duration)
                 } else {
-                    this.sendMessage("/followers")
+                    this.sendMessage("/followers");
                 }
             };
             Room.prototype.stopFollowersMode = function() {
