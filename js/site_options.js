@@ -574,6 +574,16 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "33d53034-cd8b-408f-abe7-e740f2fec303": {
+            "name": "Hearthstone Directory Filter",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "354aaebd-7643-434f-be37-98fe12c01220": {
             "name": "HTML5_Toggle_Removal",
             "groups": [{
@@ -1009,6 +1019,16 @@ window.SiteOptions = {
             }, {
                 "weight": 5,
                 "value": "control"
+            }]
+        },
+        "6fffb6c6-19d4-4172-980f-498079d99b9c": {
+            "name": "Overwatch Directory Filter",
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
             }]
         },
         "711aaaf6-61c0-4cc4-9469-0dfc9908785a": {
