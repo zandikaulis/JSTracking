@@ -4398,31 +4398,31 @@
         }
 
         function a(e) {
-            return K().then(function(e) {
+            return z().then(function(e) {
                 return e.token
             }, function(e) {
                 return null
             }).then(function(t) {
-                var n = (0, I.default)({}, Y, e);
+                var n = (0, N.default)({}, W, e);
                 return t && (n.headers.Authorization = "OAuth " + t), $.ajax(n)
             })
         }
 
         function s(e) {
             return a({
-                url: U.apiHost + "/kraken/" + e,
+                url: B.apiHost + "/kraken/" + e,
                 headers: {
-                    Accept: q
+                    Accept: G
                 }
             })
         }
 
         function l(e, t) {
             var n = {
-                Accept: G
+                Accept: Y
             };
-            return t && t.headers && (n = (0, I.default)(n, t.headers)), a((0, I.default)({}, t, {
-                url: U.apiHost + "/kraken/" + e,
+            return t && t.headers && (n = (0, N.default)(n, t.headers)), a((0, N.default)({}, t, {
+                url: B.apiHost + "/kraken/" + e,
                 headers: n
             }))
         }
@@ -4435,24 +4435,30 @@
             return l("users/" + e + "/subscriptions/" + t)
         }
 
-        function d(e, t) {
-            return "users/" + o(e.toString()) + "/follows/channels/" + o(t.toString())
+        function d(e) {
+            return a({
+                url: B.apiHost + "/channels/" + o(e) + "/product"
+            })
         }
 
         function f(e, t) {
-            var n = d(e, t);
+            return "users/" + o(e.toString()) + "/follows/channels/" + o(t.toString())
+        }
+
+        function p(e, t) {
+            var n = f(e, t);
             return l(n)
         }
 
-        function p(e, t, n) {
-            var r = d(e, t);
+        function h(e, t, n) {
+            var r = f(e, t);
             return l(r, {
                 method: n ? "PUT" : "DELETE"
             })
         }
 
-        function h(e, t, n) {
-            var r = d(e, t);
+        function _(e, t, n) {
+            var r = f(e, t);
             return l(r, {
                 data: {
                     notifications: n
@@ -4461,8 +4467,8 @@
             })
         }
 
-        function _(e) {
-            return W(e).then(function(e) {
+        function v(e) {
+            return K(e).then(function(e) {
                 var t = e._id;
                 return l("channels/" + t + "/community").then(function(e) {
                     return Promise.resolve(e)
@@ -4472,60 +4478,60 @@
             })
         }
 
-        function v(e) {
+        function m(e) {
             return a({
-                url: U.apiHost + "/v5/channels/" + e + "/collections?limit=1&exclude_empty=true"
+                url: B.apiHost + "/v5/channels/" + e + "/collections?limit=1&exclude_empty=true"
             })
         }
 
-        function m(e) {
+        function g(e) {
             var t = a({
-                    url: U.apiHost + "/v5/collections/" + e
+                    url: B.apiHost + "/v5/collections/" + e
                 }),
                 n = a({
-                    url: U.apiHost + "/v5/collections/" + e + "/items"
+                    url: B.apiHost + "/v5/collections/" + e + "/items"
                 });
             return Promise.all([t, n])
         }
 
-        function g(e) {
+        function y(e) {
             var t = e.player,
                 n = e.oauth_token;
-            if (t === F.PLAYER_CURSE && n) {
+            if (t === V.PLAYER_CURSE && n) {
                 var r = Promise.resolve({
                     token: n
                 });
-                K.cache.set(void 0, r)
+                z.cache.set(void 0, r)
             }
         }
 
-        function y(e, t) {
-            return null === e.chansub && !e.is_admin && (0, L.default)(t.restrictions, function(e, t) {
+        function b(e, t) {
+            return null === e.chansub && !e.is_admin && (0, D.default)(t.restrictions, function(e, t) {
                 return e || "chansub" === t
             }, !1)
         }
 
-        function b(e, t) {
-            var n = U.twitchHost + "/" + o(e);
+        function E(e, t) {
+            var n = B.twitchHost + "/" + o(e);
             return t && (n += "?" + $.param(t)), n
         }
 
-        function E(e, t, n) {
-            var r = b(e),
+        function T(e, t, n) {
+            var r = E(e),
                 i = t[0],
                 a = t.substring(1);
             return r += "/" + o(i) + "/" + o(a), n && (r += "?" + $.param(n)), r
         }
 
-        function T(e) {
-            return W(e).then(function(e) {
+        function S(e) {
+            return K(e).then(function(e) {
                 return l("channels/" + e._id + "/extensions")
             }).then(function(e) {
                 return e.installed_extensions.reduce(function(t, n) {
                     var r = n.extension,
                         i = n.installation_status;
                     if ("active" !== i.activation_state || "video_overlay" !== i.activation_config.anchor) return t;
-                    var o = (0, x.default)(e.tokens, function(e) {
+                    var o = (0, j.default)(e.tokens, function(e) {
                         return r.id === e.extension_id
                     });
                     return o ? t.concat({
@@ -4535,7 +4541,7 @@
                         anchor: r.anchor,
                         version: r.version,
                         viewerUrl: r.viewer_url,
-                        token: (0, V.parseExtensionToken)(o.token)
+                        token: (0, H.parseExtensionToken)(o.token)
                     }) : t
                 }, [])
             }).catch(function() {
@@ -4543,7 +4549,7 @@
             })
         }
 
-        function S(e, t, n) {
+        function C(e, t, n) {
             if (!e || !t) return Promise.reject();
             var r = JSON.stringify({
                 token: t,
@@ -4557,11 +4563,11 @@
                 processData: !1
             }).then(function(e) {
                 var t = e.token;
-                return (0, V.parseExtensionToken)(t)
+                return (0, H.parseExtensionToken)(t)
             })
         }
 
-        function C(e) {
+        function w(e) {
             return $.ajax({
                 method: "POST",
                 url: "/user/report",
@@ -4570,76 +4576,76 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.oauthToken = t.channelAPIInfo = t.krakenUserInfo = t.userInfo = t.channelViewerInfo = t.videoInfo = t.channelInfo = void 0, t.krakenRequest = s, t.krakenRequestv5 = l, t.streamInfo = u, t.getSubscriptionInfo = c, t.getFollowChannel = f, t.setFollowChannel = p, t.setFollowNotifications = h, t.getCommunityFromChannel = _, t.getFeaturedCollection = v, t.collectionInfo = m, t.setOAuthToken = g, t.isVODRestricted = y, t.channelUrl = b, t.videoUrl = E, t.overlayExtensionsForChannel = T, t.updateIdentitySharingForExtension = S, t.postExtensionReport = C;
-        var w = n(117),
-            P = i(w),
-            A = n(78),
-            O = i(A),
-            k = n(201),
-            I = i(k),
-            N = n(70),
-            R = i(N),
-            M = n(214),
-            L = i(M),
-            D = n(120),
-            x = i(D),
-            j = n(168),
-            U = r(j),
-            B = n(217),
-            F = r(B),
-            V = n(219),
-            H = !!("withCredentials" in new XMLHttpRequest),
-            q = "application/vnd.twitchtv.v3+json",
-            G = "application/vnd.twitchtv.v5+json",
-            Y = {
-                dataType: H ? "json" : "jsonp",
+        }), t.oauthToken = t.channelAPIInfo = t.krakenUserInfo = t.userInfo = t.channelViewerInfo = t.videoInfo = t.channelInfo = void 0, t.krakenRequest = s, t.krakenRequestv5 = l, t.streamInfo = u, t.getSubscriptionInfo = c, t.getSubscriptionProducts = d, t.getFollowChannel = p, t.setFollowChannel = h, t.setFollowNotifications = _, t.getCommunityFromChannel = v, t.getFeaturedCollection = m, t.collectionInfo = g, t.setOAuthToken = y, t.isVODRestricted = b, t.channelUrl = E, t.videoUrl = T, t.overlayExtensionsForChannel = S, t.updateIdentitySharingForExtension = C, t.postExtensionReport = w;
+        var P = n(117),
+            A = i(P),
+            O = n(78),
+            k = i(O),
+            I = n(201),
+            N = i(I),
+            R = n(70),
+            M = i(R),
+            L = n(214),
+            D = i(L),
+            x = n(120),
+            j = i(x),
+            U = n(168),
+            B = r(U),
+            F = n(217),
+            V = r(F),
+            H = n(219),
+            q = !!("withCredentials" in new XMLHttpRequest),
+            G = "application/vnd.twitchtv.v3+json",
+            Y = "application/vnd.twitchtv.v5+json",
+            W = {
+                dataType: q ? "json" : "jsonp",
                 headers: {
                     "Client-ID": "jzkbprff40iqj646a697cyrvl0zt2m6"
                 },
-                timeout: U.apiTimeout
+                timeout: B.apiTimeout
             },
-            W = t.channelInfo = (0, O.default)(function(e) {
+            K = t.channelInfo = (0, k.default)(function(e) {
                 return null === e ? Promise.reject(new Error("No channel info available on null channel ID")) : s("channels/" + o(e))
             }),
-            K = (t.videoInfo = (0, O.default)(function(e) {
+            z = (t.videoInfo = (0, k.default)(function(e) {
                 if (null === e || void 0 === e) return Promise.reject(new Error("No video info available on null video ID"));
                 var t = s("videos/" + o(e)),
                     n = a({
-                        url: U.apiHost + "/api/videos/" + o(e)
+                        url: B.apiHost + "/api/videos/" + o(e)
                     }).then(function(e) {
-                        return (0, R.default)(e, ["muted_segments", "increment_view_count_url", "restrictions", "seek_previews_url"])
+                        return (0, M.default)(e, ["muted_segments", "increment_view_count_url", "restrictions", "seek_previews_url"])
                     });
                 return Promise.all([t, n]).then(function(e) {
                     var t = e[0].channel.name;
-                    return W(t).then(function(t) {
-                        var n = (0, P.default)({}, e[0], e[1]);
+                    return K(t).then(function(t) {
+                        var n = (0, A.default)({}, e[0], e[1]);
                         return n.channel = t, n
                     })
                 })
-            }), t.channelViewerInfo = (0, O.default)(function(e) {
+            }), t.channelViewerInfo = (0, k.default)(function(e) {
                 return a({
-                    url: U.apiHost + "/api/channels/" + o(e) + "/viewer"
+                    url: B.apiHost + "/api/channels/" + o(e) + "/viewer"
                 })
-            }), t.userInfo = (0, O.default)(function() {
+            }), t.userInfo = (0, k.default)(function() {
                 return a({
-                    url: U.apiHost + "/api/viewer/info.json",
+                    url: B.apiHost + "/api/viewer/info.json",
                     xhrFields: {
                         withCredentials: !0
                     }
                 })
-            }), t.krakenUserInfo = (0, O.default)(function() {
+            }), t.krakenUserInfo = (0, k.default)(function() {
                 return s("user")
-            }), t.channelAPIInfo = (0, O.default)(function(e) {
+            }), t.channelAPIInfo = (0, k.default)(function(e) {
                 return a({
-                    url: U.apiHost + "/api/channels/" + e
+                    url: B.apiHost + "/api/channels/" + e
                 })
-            }), t.oauthToken = (0, O.default)(function() {
-                var e = $.ajax((0, P.default)({
-                    url: U.apiHost + "/api/viewer/token.json",
+            }), t.oauthToken = (0, k.default)(function() {
+                var e = $.ajax((0, A.default)({
+                    url: B.apiHost + "/api/viewer/token.json",
                     xhrFields: {
                         withCredentials: !0
                     }
-                }, Y));
+                }, W));
                 return Promise.resolve(e)
             }))
     }, function(e, t, n) {
@@ -5252,7 +5258,8 @@
                     return this.accessToken.then(function(t) {
                         if (!t.token) return e._handleInvalidOp("castStreamUrl"), "";
                         var n = e._buildUsherParams(t);
-                        return delete n.allow_source, e._restrictedBitrates = JSON.parse(t.token).chansub.restricted_bitrates, e._baseStreamUrl + "?" + $.param(n)
+                        return delete n.allow_source, e._restrictedBitrates = JSON.parse(t.token).chansub.restricted_bitrates,
+                            e._baseStreamUrl + "?" + $.param(n)
                     })
                 }
             }]), e
@@ -6491,10 +6498,10 @@
                                     F.setLabel("ns_st_upa", String(e))
                                 },
                                 setUniquePlaybackInterval: function(e) {
-                                    F.setLabel("ns_st_upc", String(e))
+                                    F.setLabel("ns_st_upc", String(e));
                                 },
                                 getLongestPlaybackInterval: function() {
-                                    return parseInt(F.getLabel("ns_st_lpc"));
+                                    return parseInt(F.getLabel("ns_st_lpc"))
                                 },
                                 setLongestPlaybackInterval: function(e) {
                                     F.setLabel("ns_st_lpc", String(e))
@@ -7292,8 +7299,7 @@
                                 onEndOrAdSkip: function(n, r) {
                                     e.getSSECore().resetHeartbeat(), e.getSSECore().resetKeepAlive(), e.getPlaylist().getClip().addElapsedTime(n);
                                     var i = e.getSSECore().createLabels(l.END, r, n);
-                                    e.getEventManager().newEvent(i), e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && (e.getPlaylist().getClip().setSeekingTimeBeforeEnd(n - e.getPlaylist().getClip().getSeekingTimestamp()),
-                                        e.getPlaylist().getClip().setSeeking(!1)), e.getPlaylist().storeClipPlaybackCounters(), e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1), r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist()
+                                    e.getEventManager().newEvent(i), e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && (e.getPlaylist().getClip().setSeekingTimeBeforeEnd(n - e.getPlaylist().getClip().getSeekingTimestamp()), e.getPlaylist().getClip().setSeeking(!1)), e.getPlaylist().storeClipPlaybackCounters(), e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1), r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist()
                                 },
                                 onPlay: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
@@ -7943,13 +7949,13 @@
                                             d = l.getClip();
                                         d.isClipStarted() ? (l.hashExists(d.getHash()) || (l.storeHash(d.getHash()), l.storeClipNumber(d.getHash(), d.getClipNumber())), l.storeClipPlaybackCounters(), o = l.hashExists(i) ? l.getClipNumber(i) : t.exists(e.ns_st_cn) ? parseInt(e.ns_st_cn) : l.getMaxClipNumber() + 1) : o = l.hashExists(i) ? l.getClipNumber(i) : d.getClipNumber(), l.resetClip(), d = l.getClip(), d.setHash(i), d.setClipNumber(o), d.setLabels(e);
                                         var p = l.getStoredClipRegisters(i);
-                                        return p && (d.setClipStarted(!0), d.setSegmentPlaybackCounter(p.segmentPlaybackCounter), d.setClipLoadCounter(p.clipLoadCounter), d.setAssetPlaybackCounter(p.assetPlaybackCounter), d.setLowestPartNumberPlayed(p.lowestPartNumberPlayed), d.setSeeking(p.seeking), d.setSeekingTimeBeforeEnd(p.seekingTimeBeforeEnd), d.setSeekStartPosition(p.seekingStartPosition), d.setClipPlaybackIntervals(p.clipPlaybackIntervals), d.setUniquePlaybackInterval(p.uniquePlaybackInterval), d.setLongestPlaybackInterval(p.longestPlaybackInterval), d.setVideoTrack(p.videoTrack), d.setAudioTrack(p.audioTrack), d.setSubtitleTrack(p.subtitleTrack), d.setCDN(p.cdn), d.setPreviousUniquePlaybackInterval(p.uniquePlaybackInterval), d.setPreviousEventIndependentUniquePlaybackInterval(p.uniquePlaybackInterval), d.setPreviousLongestPlaybackInterval(p.longestPlaybackInterval)), d.incrementClipLoadCounter(), d.isClipStarted() && n && (l.incrementPlayCounter(), l.incrementPlaybackCounter()), !0
+                                        return p && (d.setClipStarted(!0), d.setSegmentPlaybackCounter(p.segmentPlaybackCounter), d.setClipLoadCounter(p.clipLoadCounter), d.setAssetPlaybackCounter(p.assetPlaybackCounter), d.setLowestPartNumberPlayed(p.lowestPartNumberPlayed), d.setSeeking(p.seeking), d.setSeekingTimeBeforeEnd(p.seekingTimeBeforeEnd), d.setSeekStartPosition(p.seekingStartPosition), d.setClipPlaybackIntervals(p.clipPlaybackIntervals), d.setUniquePlaybackInterval(p.uniquePlaybackInterval), d.setLongestPlaybackInterval(p.longestPlaybackInterval), d.setVideoTrack(p.videoTrack), d.setAudioTrack(p.audioTrack), d.setSubtitleTrack(p.subtitleTrack), d.setCDN(p.cdn), d.setPreviousUniquePlaybackInterval(p.uniquePlaybackInterval), d.setPreviousEventIndependentUniquePlaybackInterval(p.uniquePlaybackInterval), d.setPreviousLongestPlaybackInterval(p.longestPlaybackInterval)), d.incrementClipLoadCounter(), d.isClipStarted() && n && (l.incrementPlayCounter(),
+                                            l.incrementPlaybackCounter()), !0
                                     }
                                     return !1
                                 },
                                 setPlaylist: function(e, n) {
-                                    return void 0 === n && (n = !0), e = t.jsonObjectToStringDictionary(e), n && s.getSseSM().getStateMachine().getCurrentState() !== u.IDLE && c.end(), s.getSseSM().getStateMachine().getCurrentState() == u.IDLE && (s.getSseSM().getPlaylist().isPlaylistStarted() && s.resetPlaylist(),
-                                        s.getSseSM().getPlaylist().setLabels(e), !0)
+                                    return void 0 === n && (n = !0), e = t.jsonObjectToStringDictionary(e), n && s.getSseSM().getStateMachine().getCurrentState() !== u.IDLE && c.end(), s.getSseSM().getStateMachine().getCurrentState() == u.IDLE && (s.getSseSM().getPlaylist().isPlaylistStarted() && s.resetPlaylist(), s.getSseSM().getPlaylist().setLabels(e), !0)
                                 },
                                 importState: function() {},
                                 exportState: function() {
@@ -9819,7 +9825,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.22-202214+941a8dbd2e2644c1ca30129b64d58bf044599e01",
+                    app_version: "2017.06.23-003317+5f42f2b6a8822abb9c02585ecbcbc935f3d3a375",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -33864,7 +33870,7 @@
                 r = e.onFollowChannel,
                 i = e.onUnfollowChannel,
                 o = e.t;
-            if (!e.didFetchFollow || e.isOwnChannel) return null;
+            if (e.isOwnChannel) return null;
             var s = (0, f.default)("pl-button", "pl-button--follow", "pl-button--icon", "pl-button--status"),
                 l = (0, f.default)("pl-button", "pl-button--follow", "pl-button--icon"),
                 u = a.default.createElement(c.Button, {
@@ -33917,7 +33923,6 @@
                 channelName: l.default.string.isRequired,
                 isOwnChannel: l.default.bool.isRequired,
                 isFollowing: l.default.bool.isRequired,
-                didFetchFollow: l.default.bool.isRequired,
                 onFollowChannel: l.default.func.isRequired,
                 onUnfollowChannel: l.default.func.isRequired,
                 t: l.default.func.isRequired
@@ -33926,8 +33931,7 @@
                 return {
                     channelName: e.streamMetadata.channel.name,
                     isOwnChannel: e.streamMetadata.channel.id === e.user.id,
-                    isFollowing: e.follow.following,
-                    didFetchFollow: e.follow.fetched
+                    isFollowing: e.follow.following
                 }
             };
         i.propTypes = h;
@@ -33943,7 +33947,7 @@
         }
 
         function i(e) {
-            if (!e.didFetchSubscriptions || !e.isSubscribable || e.isOwnChannel) return null;
+            if (!e.isSubscribable || e.isOwnChannel) return null;
             var t = (0, f.default)({
                     "pl-button": !0,
                     "pl-button--subscribe": !0,
@@ -33979,7 +33983,6 @@
                 isOwnChannel: l.default.bool.isRequired,
                 isSubscribed: l.default.bool.isRequired,
                 isSubscribable: l.default.bool.isRequired,
-                didFetchSubscriptions: l.default.bool.isRequired,
                 onSubscribe: l.default.func.isRequired,
                 t: l.default.func.isRequired
             },
@@ -33988,8 +33991,7 @@
                     channelName: e.streamMetadata.channel.name,
                     isOwnChannel: e.streamMetadata.channel.id === e.user.id,
                     isSubscribed: e.subscriptions.isSubscribed,
-                    isSubscribable: e.subscriptions.isSubscribable,
-                    didFetchSubscriptions: e.subscriptions.didFetch
+                    isSubscribable: e.subscriptions.isSubscribable
                 }
             };
         i.propTypes = h;
@@ -37849,8 +37851,7 @@
             }, {
                 key: "_showCollapsedElements",
                 value: function() {
-                    this.$collectionCollapsedNav.attr("data-show-nav", !0),
-                        this.$collectionSidebar.attr("data-show-sidebar", !1)
+                    this.$collectionCollapsedNav.attr("data-show-nav", !0), this.$collectionSidebar.attr("data-show-sidebar", !1);
                 }
             }, {
                 key: "_showSidebarElements",
@@ -38886,8 +38887,7 @@
         }
 
         function s(e) {
-            return (e.interpolationPrefix || e.interpolationSuffix || e.escapeInterpolation) && (e = i(e)), e.nsSeparator = e.nsseparator, e.keySeparator = e.keyseparator, e.returnObjects = e.returnObjectTrees,
-                e
+            return (e.interpolationPrefix || e.interpolationSuffix || e.escapeInterpolation) && (e = i(e)), e.nsSeparator = e.nsseparator, e.keySeparator = e.keyseparator, e.returnObjects = e.returnObjectTrees, e
         }
 
         function l(e) {
@@ -44460,6 +44460,8 @@
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u,
                 t = arguments[1];
             switch (t.type) {
+                case s.ACTION_SUBSCRIPTION_PRODUCTS_FETCHED:
+                    return (0, a.default)({}, e, t.subscriptions);
                 case s.ACTION_CHANNEL_SUBSCRIPTIONS_FETCHED:
                     return (0, a.default)({}, e, {
                         didFetch: !0
@@ -44487,30 +44489,46 @@
 
         function r(e, t) {
             return function(n, r) {
-                return (0, i.getSubscriptionInfo)(e, t).then(function() {
-                    if (t === r().streamMetadata.channel.id) return n(a({
-                        isSubscribed: !0,
+                return (0, o.getSubscriptionInfo)(e, t).then(function() {
+                    if (t === r().streamMetadata.channel.id) return n(l({
+                        isSubscribed: !0
+                    }))
+                }).catch(function() {
+                    if (t === r().streamMetadata.channel.id) return n(l({
+                        isSubscribed: !1
+                    }))
+                })
+            }
+        }
+
+        function i(e) {
+            return function(t, n) {
+                return (0, o.getSubscriptionProducts)(e).then(function() {
+                    if (e === n().streamMetadata.channel.name) return t(u({
                         isSubscribable: !0
                     }))
-                }).catch(function(e) {
-                    if (t === r().streamMetadata.channel.id) return n(422 === e.status ? a({
-                        isSubscribed: !1,
+                }).catch(function() {
+                    if (e === n().streamMetadata.channel.name) return t(u({
                         isSubscribable: !1
-                    }) : a({
-                        isSubscribed: !1,
-                        isSubscribable: !0
                     }))
                 })
             }
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.ACTION_CHANNEL_SUBSCRIPTIONS_FETCHED = void 0, t.fetchChannelSubscriptions = r;
-        var i = n(200),
-            o = t.ACTION_CHANNEL_SUBSCRIPTIONS_FETCHED = "action channel subscriptions fetched",
-            a = function(e) {
+        }), t.ACTION_SUBSCRIPTION_PRODUCTS_FETCHED = t.ACTION_CHANNEL_SUBSCRIPTIONS_FETCHED = void 0, t.fetchChannelSubscriptions = r, t.fetchSubscriptionProducts = i;
+        var o = n(200),
+            a = t.ACTION_CHANNEL_SUBSCRIPTIONS_FETCHED = "action channel subscriptions fetched",
+            s = t.ACTION_SUBSCRIPTION_PRODUCTS_FETCHED = "action subscription products fetched",
+            l = function(e) {
                 return {
-                    type: o,
+                    type: a,
+                    subscriptions: e
+                }
+            },
+            u = function(e) {
+                return {
+                    type: s,
                     subscriptions: e
                 }
             }
@@ -45831,8 +45849,7 @@
                 value: function() {
                     var e = this.store.getState(),
                         t = e.streamMetadata;
-                    return !!t.channelName && (0,
-                        p.default)(h, o(t.channelName))
+                    return !!t.channelName && (0, p.default)(h, o(t.channelName))
                 }
             }, {
                 key: "_fetchFollowInfo",
@@ -45893,11 +45910,12 @@
                 value: function() {
                     var e = this.store.getState(),
                         t = e.user,
-                        n = e.streamMetadata;
-                    if (t.loggedInStatus === l.LOGGED_IN) {
-                        var r = t.id,
-                            i = n.channel.id;
-                        this.store.dispatch((0, s.fetchFollowInfo)(r, i)), this.store.dispatch((0, a.fetchChannelSubscriptions)(r, i))
+                        n = e.streamMetadata,
+                        r = n.channel.name;
+                    if (this.store.dispatch((0, a.fetchSubscriptionProducts)(r)), t.loggedInStatus === l.LOGGED_IN) {
+                        var i = t.id,
+                            o = n.channel.id;
+                        this.store.dispatch((0, s.fetchFollowInfo)(i, o)), this.store.dispatch((0, a.fetchChannelSubscriptions)(i, o))
                     }
                 }
             }, {
