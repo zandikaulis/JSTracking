@@ -2039,6 +2039,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "fa99a372-3bd3-422d-8937-4de546931a37": {
+            "name": "directory_events_suggestions",
+            "groups": [{
+                "weight": 90,
+                "value": "shown"
+            }, {
+                "weight": 10,
+                "value": "hidden"
+            }]
+        },
         "fd1167fc-eb16-489a-91ea-0568fa04ae8a": {
             "name": "ios_autoplay_profile",
             "groups": [{
