@@ -1406,7 +1406,7 @@ window.SiteOptions = {
             }]
         },
         "a39cd18b-c3fb-46ad-a6a8-0c2e8686d978": {
-            "name": "clips_rename_me",
+            "name": "clips_teach_me",
             "groups": [{
                 "weight": 1,
                 "value": "control"
