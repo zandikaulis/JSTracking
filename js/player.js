@@ -251,19 +251,19 @@
             F = n(339),
             V = n(346),
             H = n(319),
-            q = n(709),
+            q = n(711),
             G = n(180),
-            Y = n(727),
-            W = n(728),
+            Y = n(729),
+            W = n(730),
             K = n(366),
-            z = n(757),
+            z = n(759),
             Q = n(243),
             X = n(334),
             J = r(X),
             Z = n(333),
-            ee = n(743),
+            ee = n(745),
             te = r(ee),
-            ne = n(746),
+            ne = n(748),
             re = r(ne),
             ie = n(331),
             oe = n(367),
@@ -275,31 +275,31 @@
             de = n(179),
             fe = r(de),
             pe = n(200),
-            he = n(785),
-            _e = n(738),
+            he = n(787),
+            _e = n(740),
             ve = n(329),
             me = n(220),
-            ge = n(772),
+            ge = n(774),
             ye = n(432),
             be = n(403),
-            Ee = n(786),
-            Te = n(787),
-            Se = n(790),
-            Ce = n(791),
+            Ee = n(788),
+            Te = n(789),
+            Se = n(792),
+            Ce = n(793),
             we = n(217),
             Pe = n(604),
-            Ae = n(792),
-            Oe = n(793),
-            ke = n(794),
+            Ae = n(794),
+            Oe = n(795),
+            ke = n(796),
             Ie = n(176),
             Ne = n(178),
-            Re = n(795),
+            Re = n(797),
             Me = n(335),
             Le = n(644),
             De = n(336);
         n(341).polyfill(), h.Dobbin.configure({
             Promise: Promise
-        }), n.p = w.playerHost + "/", n(796);
+        }), n.p = w.playerHost + "/", n(798);
         var xe = Promise.reject();
         window.google || (xe = Promise.resolve($.ajax({
             url: "//imasdk.googleapis.com/js/sdkloader/ima3.js",
@@ -9825,7 +9825,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.23-003317+5f42f2b6a8822abb9c02585ecbcbc935f3d3a375",
+                    app_version: "2017.06.23-183104+103d4ef83c84b3ae37cdfeed728dffac71160329",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -10075,7 +10075,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-a599d2.sjc01.hls.ttvnw.net/v1/playlist/CuPYIkkfatJNZn8S4oSPpBFOvDBNHrG_JwYftW9i8QBzIAlRlgUjiHsjogkvWlGJc-wGA7LtYW-uxyS7bBzogIPvLLH83TiXwy5fmCnUNUezHJXXR1cpDATuMuqyc6W1dj8Ztyglw7hnVgmDIFHBjlaQkYOSbNJ7cMycnY4Xp3_gjU8wEUwpLaDERZw2iA1LFd0VK8jkEeW00SAlpgTMHVdVUf8qet7AqqSkqXfDbrZt8iqVcU97_7vTbBxoozG5j0AFX4IB8i0nQSQdZ_e_0fHJnH7Lf9YQ7rzXKCZOB2ZYVAeiiSF1Tcf1z2kNaB8CABpkcLrEdXKcm8_TlOH9FnZf60XAIm8hTvY2c1FHvkehMNZJ4O2Qa_JG5wD2_N5LmLuws-nKJdksjP5wyWsfn8WFxAUqEO3-dJWLLyAGnJVmimJ4VZKIw7nOierW_0d8pV6uavtT_a.m3u8"
+        t.trustedSpadeURI = "//video-edge-0457f2.sjc01.hls.ttvnw.net/v1/playlist/CgHbUTv5jbgtZtCeBzt2NVAj1dQcRIuDaHrFaKTiavojV3oLQNfI1Kxk9DppGj9voIFTWH0b7Sp0KrLN6YkeE3RwzQMd3dOkdOaadI9ojXP6WWpxtxahqlNbIW33-6gqbUd4ruCJINCuqyXtLrHS5KI2wn4H0SI3fmvlVkAZdXlhMRoj_LlEPTqA6WTsX3czaF0cIg9jlYSKat98W_pW9GUekLgr8bECPxLqCpZHiWMgUK6DY6EtGij_JR4sLA5fg1ACgC36xui70JbCESdQvDquzQgP9A60AP_EAznulAylD5elgphWeE3yIbWOozY3zLYNHQS-NX3WqnZUM4WPEe8hahL7cIIXPE0PSALCQxLHRTqtpcN4XTKy-sfXkJbmyo2h4tGeMVXJuJbb8hVGsaWKiL0-ci1M-NDcQXMmOdWqOdKwkqCvFHHu3LCbYX2PJz.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -19464,7 +19464,7 @@
                 }, {
                     showInfo: !0
                 });
-                $(t).addClass("player").addClass("theme--dark"), $(t).append(n(708));
+                $(t).addClass("player").addClass("theme--dark"), $(t).append(n(710));
                 var S = o.getState().playback.muted;
                 o.dispatch((0, I.initializeCaptionsSettings)(S)), o.dispatch((0, N.initializePlaybackSettings)()), o.dispatch((0, R.initializeSettings)()), H.default.render(F.default.createElement(q.Provider, {
                     store: o
@@ -19581,15 +19581,15 @@
             C = n(660),
             w = n(661),
             P = n(662),
-            A = n(671),
-            O = n(672),
-            k = n(673),
+            A = n(673),
+            O = n(674),
+            k = n(675),
             I = n(352),
             N = n(332),
             R = n(633),
-            M = n(674),
-            L = n(676),
-            D = n(677),
+            M = n(676),
+            L = n(678),
+            D = n(679),
             x = n(251),
             j = n(178),
             U = r(j),
@@ -19599,10 +19599,10 @@
             H = i(V),
             q = n(574),
             G = n(311),
-            Y = n(679),
+            Y = n(681),
             W = n(650),
             K = n(634),
-            z = n(698)
+            z = n(700)
     }, function(e, t, n) {
         "use strict";
 
@@ -35118,6 +35118,7 @@
                         return f.default.createElement("div", {
                             className: "extension-container"
                         }, f.default.createElement(y.ExtensionAttribution, {
+                            channel: this.props.channel,
                             extension: d,
                             onIdentityToggle: this.props.onIdentityToggle,
                             trackEvent: this._boundTrackEvent,
@@ -36653,27 +36654,28 @@
             h = n(668),
             _ = n(669),
             v = n(670),
-            m = n(615),
-            g = n(616),
-            y = n(311),
-            b = n(310),
-            E = r(b),
-            T = t.EXT_ATTRIBUTION_LINK_CLASS = "extension-attribution__link",
-            S = t.TWITCH_EXT_DETAILS_BASE = "https://www.twitch.tv/ext",
-            C = t.EXT_ATTRIBUTION_DIALOG_CLASS = "extension-dialog",
-            w = t.EXT_ATTRIBUTION_PERMISSIONS_DIALOG_CLASS = C + " extension-dialog__permissions",
-            P = t.EXT_ATTRIBUTION_INFO_DIALOG_CLASS = C + " extension-dialog__info",
-            A = t.EXT_ATTRIBUTION_REPORT_CLASS = "extension-attribution__report",
-            O = t.EXT_ATTRIBUTION_SUMMARY_CLASS = "extension-dialog__summary",
-            k = "closed",
-            I = "permissions",
-            N = "more info",
-            R = "Report Extension",
-            M = "#icon_report_flag",
-            L = {
+            m = n(672),
+            g = n(615),
+            y = n(616),
+            b = n(311),
+            E = n(310),
+            T = r(E),
+            S = t.EXT_ATTRIBUTION_LINK_CLASS = "extension-attribution__link",
+            C = t.TWITCH_EXT_DETAILS_BASE = "https://www.twitch.tv/ext",
+            w = t.EXT_ATTRIBUTION_DIALOG_CLASS = "extension-dialog",
+            P = t.EXT_ATTRIBUTION_PERMISSIONS_DIALOG_CLASS = w + " extension-dialog__permissions",
+            A = t.EXT_ATTRIBUTION_INFO_DIALOG_CLASS = w + " extension-dialog__info",
+            O = t.EXT_ATTRIBUTION_REPORT_CLASS = "extension-attribution__report",
+            k = t.EXT_ATTRIBUTION_SUMMARY_CLASS = "extension-dialog__summary",
+            I = "closed",
+            N = "permissions",
+            R = "more info",
+            M = "report",
+            L = "Report Extension",
+            D = "#icon_report_flag",
+            x = {
                 t: f.default.func.isRequired,
                 isLoggedIn: f.default.bool.isRequired,
-                onExtensionReport: f.default.func,
                 onIdentityToggle: f.default.func,
                 extension: f.default.shape({
                     id: f.default.string.isRequired,
@@ -36686,14 +36688,19 @@
                         role: f.default.string.isRequired
                     })
                 }).isRequired,
-                trackEvent: f.default.func.isRequired
+                trackEvent: f.default.func.isRequired,
+                channel: f.default.string
             },
-            D = t.ExtensionAttributionComponent = function(e) {
+            j = {
+                channel: "",
+                onIdentityToggle: function() {}
+            },
+            U = t.ExtensionAttributionComponent = function(e) {
                 function t(e) {
                     o(this, t);
                     var n = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
-                    return n._boundOnCancelDialog = n._onCancelDialog.bind(n), n._boundOnUserPermissionClicked = n._onUserPermissionClicked.bind(n), n._boundReportExtensionClicked = n._onReportExtensionClicked.bind(n), n._boundOnToggleIdentity = n._onToggleIdentity.bind(n), n._boundOnMoreInfoClick = n._onMoreInfoClick.bind(n), n.state = {
-                        dialogState: k
+                    return n._boundOnCancelDialog = n._onCancelDialog.bind(n), n._boundOnUserPermissionClicked = n._onUserPermissionClicked.bind(n), n._boundOnToggleIdentity = n._onToggleIdentity.bind(n), n._boundOnMoreInfoClick = n._onMoreInfoClick.bind(n), n._boundOnExtensionReportClicked = n._onExtensionReportClicked.bind(n), n.state = {
+                        dialogState: I
                     }, n
                 }
                 return s(t, e), l(t, [{
@@ -36701,19 +36708,19 @@
                     value: function() {
                         var e = void 0;
                         this.props.extension.token.role !== p.EXTENSION_ROLE_BROADCASTER && this.props.isLoggedIn && (e = c.default.createElement(h.UserPermissionsButton, {
-                            isActive: this.state.dialogState === I,
+                            isActive: this.state.dialogState === N,
                             onClick: this._boundOnUserPermissionClicked,
                             extension: this.props.extension
                         }));
-                        var t = S + "/" + this.props.extension.id + "-" + this.props.extension.version;
+                        var t = C + "/" + this.props.extension.id + "-" + this.props.extension.version;
                         return c.default.createElement("div", {
                             className: "player-hover extension-attribution"
                         }, c.default.createElement("a", {
-                            className: T,
+                            className: S,
                             href: t,
                             target: "_blank"
-                        }, this.props.extension.name), e, c.default.createElement(v.MoreInfoButton, {
-                            isActive: this.state.dialogState === N,
+                        }, this.props.extension.name), e, c.default.createElement(m.MoreInfoButton, {
+                            isActive: this.state.dialogState === R,
                             onClick: this._boundOnMoreInfoClick
                         }), this._renderOpenDialog())
                     }
@@ -36722,7 +36729,7 @@
                     value: function() {
                         var e = this.props.extension.token.permissionsState === p.EXTENSION_PERMISSION_STATE_GRANTED;
                         return c.default.createElement("div", {
-                            className: w
+                            className: P
                         }, c.default.createElement(_.UserPermissionsPopup, {
                             isPermissionGranted: e,
                             extension: this.props.extension,
@@ -36733,32 +36740,43 @@
                 }, {
                     key: "_renderMoreInfo",
                     value: function() {
-                        var e, t = (0, E.default)((e = {}, i(e, O, !0), i(e, "extension-dialog__summary-report", Boolean(this.props.onExtensionReport)), e)),
-                            n = (0, E.default)("extension-attribution__button", A),
+                        var e, t = (0, T.default)((e = {}, i(e, k, !0), i(e, "extension-dialog__summary-report", Boolean(this.props.isLoggedIn)), e)),
+                            n = (0, T.default)("extension-attribution__button", O),
                             r = void 0;
-                        return this.props.onExtensionReport && (r = c.default.createElement(m.Button, {
+                        return this.props.isLoggedIn && (r = c.default.createElement(g.Button, {
                             className: n,
-                            onClick: this._boundReportExtensionClicked
-                        }, c.default.createElement(g.Icon, {
+                            onClick: this._boundOnExtensionReportClicked
+                        }, c.default.createElement(y.Icon, {
                             svgClass: "extension-attribution-icon",
-                            label: R,
+                            label: L,
                             labelClass: "player-tip--aright extension-attribution__tooltip",
-                            iconId: M
+                            iconId: D
                         }))), c.default.createElement("div", {
-                            className: P
+                            className: A
                         }, c.default.createElement("div", {
                             className: t
                         }, this.props.extension.summary), r)
                     }
                 }, {
+                    key: "_renderExtensionReport",
+                    value: function() {
+                        return c.default.createElement(v.ExtensionReportPopup, {
+                            channel: this.props.channel,
+                            extension: this.props.extension,
+                            onCancel: this._boundOnCancelDialog
+                        })
+                    }
+                }, {
                     key: "_renderOpenDialog",
                     value: function() {
                         switch (this.state.dialogState) {
-                            case I:
-                                return this._renderUserPermissions();
                             case N:
+                                return this._renderUserPermissions();
+                            case R:
                                 return this._renderMoreInfo();
-                            case k:
+                            case M:
+                                return this._renderExtensionReport();
+                            case I:
                             default:
                                 return null
                         }
@@ -36767,29 +36785,32 @@
                     key: "_onCancelDialog",
                     value: function() {
                         this.setState({
-                            dialogState: k
+                            dialogState: I
                         })
                     }
                 }, {
                     key: "_onUserPermissionClicked",
                     value: function() {
                         var e = this.state.dialogState;
-                        e = e === I ? k : I, this.setState({
+                        e = e === N ? I : N, this.setState({
                             dialogState: e
                         })
                     }
                 }, {
-                    key: "_onReportExtensionClicked",
+                    key: "_onExtensionReportClicked",
                     value: function() {
-                        this.props.onExtensionReport && (this.props.onExtensionReport(), this.props.trackEvent("extension_ui_interaction_client", {
+                        var e = this.state.dialogState === M ? I : M;
+                        this.setState({
+                            dialogState: e
+                        }), this.props.trackEvent("extension_ui_interaction_client", {
                             extension_interaction: "report"
-                        }))
+                        })
                     }
                 }, {
                     key: "_onToggleIdentity",
                     value: function() {
                         this.props.onIdentityToggle(this.props.extension), this.setState({
-                            dialogState: k
+                            dialogState: I
                         });
                         var e = this.props.extension.token.permissionsState === p.EXTENSION_PERMISSION_STATE_GRANTED;
                         this.props.trackEvent("extension_ui_interaction_client", {
@@ -36800,14 +36821,14 @@
                     key: "_onMoreInfoClick",
                     value: function() {
                         var e = this.state.dialogState;
-                        e = e === N ? k : N, this.setState({
+                        e = e === R ? I : R, this.setState({
                             dialogState: e
                         })
                     }
                 }]), t
             }(c.default.Component);
-        D.propTypes = L;
-        t.ExtensionAttribution = (0, y.translate)()(D)
+        U.propTypes = x, U.defaultProps = j;
+        t.ExtensionAttribution = (0, b.translate)()(U)
     }, function(e, t, n) {
         "use strict";
 
@@ -37054,6 +37075,249 @@
             };
         i.propTypes = T;
         t.UserPermissionsPopup = (0, c.translate)()(i)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e) {
+            var t = e.t,
+                n = e.channel,
+                r = e.extension,
+                i = e.onCancel;
+            return a.default.createElement("div", {
+                className: u
+            }, a.default.createElement("h3", {
+                className: c
+            }, t("Report {{- extensionName}}", {
+                extensionName: r.name
+            })), a.default.createElement("p", {
+                className: d
+            }, a.default.createElement(s.Interpolate, {
+                i18nKey: "Tell us your concern about this content so that we can review it to determine \t                    whether there has been a violation of the {{tosLink}}. (Abuse of this feature is \t                    violation of the terms of service.)",
+                tosLink: a.default.createElement("a", {
+                    href: "https://www.twitch.tv/p/terms-of-service",
+                    target: "_blank"
+                }, "terms of service")
+            })), a.default.createElement(l.ExtensionReportForm, {
+                channel: n,
+                extensionId: r.id,
+                extensionName: r.name,
+                extensionVerison: r.version,
+                onCancel: i
+            }))
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.ExtensionReportPopup = t.EXT_REPORT_SUBTITLE_CLASS = t.EXT_REPORT_TITLE_CLASS = t.EXT_REPORT_DIALOG_CLASS = void 0, t.ExtensionReportPopupComponent = i;
+        var o = n(277),
+            a = r(o),
+            s = n(311),
+            l = n(671),
+            u = t.EXT_REPORT_DIALOG_CLASS = "extension-dialog extension-dialog__info",
+            c = t.EXT_REPORT_TITLE_CLASS = "extension-dialog__title",
+            d = t.EXT_REPORT_SUBTITLE_CLASS = "extension-dialog__text",
+            f = {
+                t: o.PropTypes.func.isRequired,
+                channel: o.PropTypes.string.isRequired,
+                extension: o.PropTypes.shape({
+                    id: o.PropTypes.string.isRequired,
+                    name: o.PropTypes.string.isRequired,
+                    version: o.PropTypes.string.isRequired
+                }).isRequired,
+                onCancel: o.PropTypes.func.isRequired
+            };
+        i.propTypes = f;
+        t.ExtensionReportPopup = (0, s.translate)()(i)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e, t, n) {
+            return t in e ? Object.defineProperty(e, t, {
+                value: n,
+                enumerable: !0,
+                configurable: !0,
+                writable: !0
+            }) : e[t] = n, e
+        }
+
+        function o(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function a(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function s(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.ExtensionReportForm = t.ExtensionReportFormComponent = t.CANCEL_BUTTON_CLASSES = t.REPORT_INPUT_CLASSES = t.SUBMIT_BUTTON_CLASS = t.CANCEL_BUTTON_CLASS = t.EXTENSION_REPORT_FORM_INPUT_CONTAINER_CLASS = t.EXTENSION_REPORT_FORM_CLASS = void 0;
+        var l = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var r = t[n];
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                    }
+                }
+                return function(t, n, r) {
+                    return n && e(t.prototype, n), r && e(t, r), t
+                }
+            }(),
+            u = n(277),
+            c = r(u),
+            d = n(311),
+            f = n(615),
+            p = n(310),
+            h = r(p),
+            _ = n(200),
+            v = n(117),
+            m = r(v),
+            g = {
+                t: u.PropTypes.func.isRequired,
+                channel: u.PropTypes.string.isRequired,
+                authenticityToken: u.PropTypes.string.isRequired,
+                extensionId: u.PropTypes.string.isRequired,
+                extensionName: u.PropTypes.string.isRequired,
+                extensionVersion: u.PropTypes.string.isRequired,
+                onCancel: u.PropTypes.func.isRequired
+            },
+            y = t.EXTENSION_REPORT_FORM_CLASS = "extension-dialog__report-inputs",
+            b = t.EXTENSION_REPORT_FORM_INPUT_CONTAINER_CLASS = "extension-dialog__report-input",
+            E = t.CANCEL_BUTTON_CLASS = "extension-permission-footer__cancel-button",
+            T = t.SUBMIT_BUTTON_CLASS = "extension-permission-footer__grant-button",
+            S = t.REPORT_INPUT_CLASSES = "pl-form__input ellipsis",
+            C = t.CANCEL_BUTTON_CLASSES = (0, h.default)("pl-button", "pl-button--hollow", "extension-permission-footer__button", E),
+            w = t.ExtensionReportFormComponent = function(e) {
+                function t(e) {
+                    o(this, t);
+                    var n = a(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
+                    return n.state = {
+                        reported_user: e.channel,
+                        authenticity_token: e.authenticityToken,
+                        tos_ban: "false",
+                        reason: "",
+                        description: "",
+                        sent: !1
+                    }, n._boundOnInputChange = n._onInputChange.bind(n), n._boundOnSubmit = n._onSubmit.bind(n), n
+                }
+                return s(t, e), l(t, [{
+                    key: "_onInputChange",
+                    value: function(e) {
+                        this.setState(i({}, e.target.name, e.target.value))
+                    }
+                }, {
+                    key: "_onSubmit",
+                    value: function() {
+                        var e = this,
+                            t = [this.state.description, "Interaction ID: " + this.props.extensionId, "Interaction Name: " + this.props.extensionName, "Interaction Version: " + this.props.extensionVersion].join("\n");
+                        (0, _.postExtensionReport)((0, m.default)({}, this.state, {
+                            description: t
+                        })).then(function() {
+                            e.setState({
+                                sent: !0
+                            }), e.forceUpdate()
+                        })
+                    }
+                }, {
+                    key: "_canSubmit",
+                    value: function() {
+                        var e = this.state,
+                            t = e.sent,
+                            n = e.description,
+                            r = e.reason,
+                            i = n && r;
+                        return !t && i
+                    }
+                }, {
+                    key: "render",
+                    value: function() {
+                        var e = (0, h.default)("pl-button", {
+                            "pl-button--hollow": !this._canSubmit()
+                        }, "extension-permission-footer__button", T);
+                        return c.default.createElement("form", null, c.default.createElement("div", {
+                            className: y
+                        }, c.default.createElement("div", {
+                            className: b
+                        }, c.default.createElement("label", {
+                            htmlFor: "reason"
+                        }, this.props.t("Select Reason")), c.default.createElement("select", {
+                            className: S,
+                            name: "reason",
+                            value: this.state.reason,
+                            onBlur: this._boundOnInputChange,
+                            onChange: this._boundOnInputChange
+                        }, c.default.createElement("option", {
+                            value: ""
+                        }, "Select one..."), c.default.createElement("option", {
+                            value: "selfharm"
+                        }, "Self-Harm"), c.default.createElement("option", {
+                            value: "harm"
+                        }, "Attempts or Threats to Harm"), c.default.createElement("option", {
+                            value: "harassment"
+                        }, "Harassment"), c.default.createElement("option", {
+                            value: "hate_speech"
+                        }, "Hate Speech"), c.default.createElement("option", {
+                            value: "impersonation"
+                        }, "Impersonation"), c.default.createElement("option", {
+                            value: "spam"
+                        }, "Spam, Scams, or Other Malicious Content"), c.default.createElement("option", {
+                            value: "porn"
+                        }, "Porn or Other Sexually Explicit Content"), c.default.createElement("option", {
+                            value: "nudity"
+                        }, "Nudity or Sexual Behavior/Attire"), c.default.createElement("option", {
+                            value: "gore"
+                        }, "Extreme Violence, Gore, or Other Obscene Content"), c.default.createElement("option", {
+                            value: "cheating"
+                        }, "Cheating in Online Game"), c.default.createElement("option", {
+                            value: "bits_violation"
+                        }, "Bits Acceptable Use Policy Violation"), c.default.createElement("option", {
+                            value: "other"
+                        }, "Other Terms of Service Violation"))), c.default.createElement("div", {
+                            className: b
+                        }, c.default.createElement("label", {
+                            htmlFor: "description"
+                        }, this.props.t("Description")), c.default.createElement("textarea", {
+                            className: S,
+                            name: "description",
+                            value: this.state.description,
+                            onChange: this._boundOnInputChange
+                        }))), c.default.createElement("div", {
+                            className: "extension-permission-footer"
+                        }, c.default.createElement(f.Button, {
+                            className: C,
+                            onClick: this.props.onCancel
+                        }, this.props.t("Cancel")), c.default.createElement(f.Button, {
+                            disabled: !this._canSubmit(),
+                            className: e,
+                            onClick: this._boundOnSubmit
+                        }, this.props.t(this.state.sent ? "Sent!" : "Send"))))
+                    }
+                }]), t
+            }(c.default.Component);
+        w.propTypes = g;
+        t.ExtensionReportForm = (0, d.translate)()(w)
     }, function(e, t, n) {
         "use strict";
 
@@ -37549,7 +37813,7 @@
             l = n(167),
             u = n(220),
             c = n(200),
-            d = n(675),
+            d = n(677),
             f = n(416),
             p = n(217),
             h = n(346),
@@ -37631,7 +37895,7 @@
                 var l = this._store.getState(),
                     u = l.experiments;
                 u.get(o.CLIPS_CLIPPY_PATENT_PENDING).then(function(e) {
-                    "variant1" === e && s.clipsBirthdayHat.css("visibility", "visible")
+                    "variant1" === e && s.clipsBirthdayHat.css("visibility", "visible");
                 })
             }
             return i(e, [{
@@ -37784,7 +38048,7 @@
             d = n(363),
             f = n(413),
             p = n(396),
-            h = n(678),
+            h = n(680),
             _ = n(332),
             v = 250,
             m = 400,
@@ -37851,7 +38115,7 @@
             }, {
                 key: "_showCollapsedElements",
                 value: function() {
-                    this.$collectionCollapsedNav.attr("data-show-nav", !0), this.$collectionSidebar.attr("data-show-sidebar", !1);
+                    this.$collectionCollapsedNav.attr("data-show-nav", !0), this.$collectionSidebar.attr("data-show-sidebar", !1)
                 }
             }, {
                 key: "_showSidebarElements",
@@ -38046,9 +38310,9 @@
             }
         }();
         t.missingKeyHandler = o, t.getI18N = a;
-        var l = n(680),
+        var l = n(682),
             u = r(l),
-            c = n(696),
+            c = n(698),
             d = r(c),
             f = n(168),
             p = n(214),
@@ -38076,7 +38340,7 @@
             keySeparator: !1,
             missingKeyHandler: o,
             saveMissing: !0
-        }), u.default.addResourceBundle("en-US", u.default.options.ns[0], n(697));
+        }), u.default.addResourceBundle("en-US", u.default.options.ns[0], n(699));
         var b = function() {
             function e(t, n, r) {
                 i(this, e), this.shortCode = t, this.langCode = n, this._translate = r
@@ -38094,7 +38358,7 @@
         }();
         t.I18N_INSTANCE = u.default, t.DEFAULT_LANGUAGE = new b("en", "en-US", u.default.getFixedT("en-US"))
     }, function(e, t, n) {
-        e.exports = n(681).default
+        e.exports = n(683).default
     }, function(e, t, n) {
         "use strict";
 
@@ -38106,7 +38370,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.use = t.t = t.setDefaultNamespace = t.on = t.off = t.loadResources = t.loadNamespaces = t.loadLanguages = t.init = t.getFixedT = t.exists = t.dir = t.createInstance = t.cloneInstance = t.changeLanguage = void 0;
-        var i = n(682),
+        var i = n(684),
             o = r(i);
         t.default = o.default;
         t.changeLanguage = o.default.changeLanguage.bind(o.default), t.cloneInstance = o.default.cloneInstance.bind(o.default), t.createInstance = o.default.createInstance.bind(o.default), t.dir = o.default.dir.bind(o.default), t.exists = o.default.exists.bind(o.default), t.getFixedT = o.default.getFixedT.bind(o.default), t.init = o.default.init.bind(o.default), t.loadLanguages = o.default.loadLanguages.bind(o.default), t.loadNamespaces = o.default.loadNamespaces.bind(o.default), t.loadResources = o.default.loadResources.bind(o.default), t.off = o.default.off.bind(o.default), t.on = o.default.on.bind(o.default), t.setDefaultNamespace = o.default.setDefaultNamespace.bind(o.default), t.t = o.default.t.bind(o.default), t.use = o.default.use.bind(o.default)
@@ -38173,28 +38437,28 @@
                 }
                 return e
             },
-            f = n(683),
+            f = n(685),
             p = i(f),
-            h = n(684),
+            h = n(686),
             _ = i(h),
-            v = n(685),
+            v = n(687),
             m = i(v),
-            g = n(687),
+            g = n(689),
             y = i(g),
-            b = n(690),
+            b = n(692),
             E = i(b),
-            T = n(691),
+            T = n(693),
             S = i(T),
-            C = n(692),
+            C = n(694),
             w = i(C),
-            P = n(693),
+            P = n(695),
             A = i(P),
-            O = n(694),
+            O = n(696),
             k = i(O),
-            I = n(695),
-            N = n(688),
+            I = n(697),
+            N = n(690),
             R = i(N),
-            M = n(689),
+            M = n(691),
             L = r(M),
             D = function(e) {
                 function t() {
@@ -38515,9 +38779,9 @@
                 }
                 return e
             },
-            c = n(684),
+            c = n(686),
             d = i(c),
-            f = n(686),
+            f = n(688),
             p = r(f),
             h = function(e) {
                 function t() {
@@ -38709,22 +38973,23 @@
             } : function(e) {
                 return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
             },
-            d = n(683),
+            d = n(685),
             f = i(d),
-            p = n(684),
+            p = n(686),
             h = i(p),
-            _ = n(688),
+            _ = n(690),
             v = i(_),
-            m = n(689),
+            m = n(691),
             g = r(m),
-            y = n(686),
+            y = n(688),
             b = r(y),
             E = function(e) {
                 function t(n) {
                     var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                     a(this, t);
                     var i = s(this, e.call(this));
-                    return b.copy(["resourceStore", "languageUtils", "pluralResolver", "interpolator", "backendConnector"], n, i), i.options = r, i.logger = f.default.create("translator"), i
+                    return b.copy(["resourceStore", "languageUtils", "pluralResolver", "interpolator", "backendConnector"], n, i), i.options = r, i.logger = f.default.create("translator"),
+                        i
                 }
                 return l(t, e), t.prototype.changeLanguage = function(e) {
                     e && (this.language = e)
@@ -38908,7 +39173,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.convertAPIOptions = o, t.convertJSONOptions = a, t.convertTOptions = s, t.appendBackwardsAPI = l;
-        var u = n(683),
+        var u = n(685),
             c = r(u)
     }, function(e, t, n) {
         "use strict";
@@ -38929,7 +39194,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var a = n(683),
+        var a = n(685),
             s = r(a),
             l = function() {
                 function e(t) {
@@ -39006,7 +39271,7 @@
             } : function(e) {
                 return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
             },
-            s = n(683),
+            s = n(685),
             l = r(s),
             u = [{
                 lngs: ["ach", "ak", "am", "arn", "br", "fil", "gun", "ln", "mfe", "mg", "mi", "oc", "tg", "ti", "tr", "uz", "wa"],
@@ -39236,9 +39501,9 @@
                 }
                 return e
             },
-            s = n(686),
+            s = n(688),
             l = i(s),
-            u = n(683),
+            u = n(685),
             c = r(u),
             d = function() {
                 function e() {
@@ -39392,11 +39657,11 @@
                     throw new TypeError("Invalid attempt to destructure non-iterable instance")
                 }
             }(),
-            f = n(686),
+            f = n(688),
             p = i(f),
-            h = n(683),
+            h = n(685),
             _ = r(h),
-            v = n(684),
+            v = n(686),
             m = r(v),
             g = function(e) {
                 function t(n, r, i) {
@@ -39573,10 +39838,10 @@
                 }
                 return e
             },
-            c = n(686),
-            d = (i(c), n(683)),
+            c = n(688),
+            d = (i(c), n(685)),
             f = r(d),
-            p = n(684),
+            p = n(686),
             h = r(p),
             _ = function(e) {
                 function t(n, r, i) {
@@ -40070,7 +40335,7 @@
             d = r(c),
             f = n(574),
             p = n(396),
-            h = n(699),
+            h = n(701),
             _ = n(423),
             v = n(332),
             m = {
@@ -40226,8 +40491,8 @@
             u = r(l),
             c = n(307),
             d = r(c),
-            f = n(700),
-            p = n(706),
+            f = n(702),
+            p = n(708),
             h = n(310),
             _ = r(h),
             v = 0,
@@ -40362,12 +40627,12 @@
             u = r(l),
             c = n(307),
             d = r(c),
-            f = n(701),
+            f = n(703),
             p = n(310),
             h = r(p),
             _ = n(311),
-            v = n(703),
-            m = n(704),
+            v = n(705),
+            m = n(706),
             g = {
                 video: d.default.shape({
                     thumbnailURL: d.default.string.isRequired,
@@ -40506,7 +40771,7 @@
             c = r(u),
             d = n(307),
             f = r(d),
-            p = n(702),
+            p = n(704),
             h = n(310),
             _ = r(h),
             v = n(320),
@@ -40715,7 +40980,7 @@
             c = n(307),
             d = r(c),
             f = n(574),
-            p = n(705),
+            p = n(707),
             h = n(333),
             _ = {
                 featuredCollection: d.default.shape({
@@ -40842,7 +41107,7 @@
             a = r(o),
             s = n(307),
             l = r(s),
-            u = n(701),
+            u = n(703),
             c = {
                 featuredCollection: l.default.shape({
                     id: l.default.string,
@@ -40910,13 +41175,13 @@
             d = r(c),
             f = n(310),
             p = r(f),
-            h = n(703),
+            h = n(705),
             _ = n(120),
             v = r(_),
-            m = n(701),
+            m = n(703),
             g = n(311),
             y = n(423),
-            b = n(707),
+            b = n(709),
             E = t.RECOMMENDATION_COLUMN_CONFIG = [{
                 minPlayerWidth: 2381,
                 columns: 8
@@ -41188,15 +41453,15 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            s = n(710),
+            s = n(712),
             l = r(s),
-            u = n(714),
+            u = n(716),
             c = r(u),
             d = n(183),
             f = n(337),
             p = n(395),
             h = n(334),
-            _ = n(726),
+            _ = n(728),
             v = n(167),
             m = "production";
         t.PubSub = function() {
@@ -41287,14 +41552,14 @@
         }()
     }, function(e, t, n) {
         var r = n(24),
-            i = n(711),
+            i = n(713),
             o = r(i);
         e.exports = o
     }, function(e, t, n) {
         function r(e, t) {
             return e && e.length && t && t.length ? i(e, t) : e
         }
-        var i = n(712);
+        var i = n(714);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n, r) {
@@ -41309,7 +41574,7 @@
         }
         var i = n(65),
             o = n(54),
-            a = n(713),
+            a = n(715),
             s = n(47),
             l = n(208),
             u = Array.prototype,
@@ -41370,20 +41635,20 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            u = n(715),
+            u = n(717),
             c = r(u),
-            d = n(716),
+            d = n(718),
             f = r(d),
-            p = n(717),
+            p = n(719),
             h = r(p),
-            _ = n(718),
+            _ = n(720),
             v = r(_),
-            m = n(720),
+            m = n(722),
             g = r(m),
-            y = n(721),
+            y = n(723),
             b = r(y),
-            E = n(723),
-            T = n(725),
+            E = n(725),
+            T = n(727),
             S = r(T),
             C = f.default._getLogger("PubsubDriver"),
             w = /^https?:\/\/([\w-]+\.)*twitch\.tv(:\d+)?\/.*$/,
@@ -41554,7 +41819,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(717),
+            a = n(719),
             s = r(a),
             l = function() {},
             u = l,
@@ -41710,13 +41975,13 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(715),
+            l = n(717),
             u = r(l),
-            c = n(716),
+            c = n(718),
             d = r(c),
-            f = n(717),
+            f = n(719),
             p = r(f),
-            h = n(719),
+            h = n(721),
             _ = r(h),
             v = 30,
             m = 3e4,
@@ -41940,7 +42205,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(716),
+            a = n(718),
             s = r(a),
             l = "pubsub",
             u = s.default._getLogger("IframeHost"),
@@ -42098,15 +42363,15 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(715),
+            l = n(717),
             u = r(l),
-            c = n(716),
+            c = n(718),
             d = r(c),
-            f = n(717),
+            f = n(719),
             p = r(f),
-            h = n(722),
+            h = n(724),
             _ = r(h),
-            v = n(719),
+            v = n(721),
             m = r(v),
             g = d.default._getLogger("WebsocketClient"),
             y = 3e4,
@@ -42376,11 +42641,11 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(715),
+            l = n(717),
             u = r(l),
-            c = n(716),
+            c = n(718),
             d = r(c),
-            f = n(717),
+            f = n(719),
             p = r(f),
             h = d.default._getLogger("PubsubSocket"),
             _ = 120,
@@ -42509,7 +42774,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.Stats = void 0;
-        var i = n(724),
+        var i = n(726),
             o = r(i);
         t.Stats = o.default, t.default = {
             Stats: o.default
@@ -42704,9 +42969,9 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(717),
+            a = n(719),
             s = r(a),
-            l = n(716),
+            l = n(718),
             u = r(l),
             c = "https://pubster.twitch.tv/publish",
             d = "https://pubster-darklaunch.twitch.tv/publish",
@@ -42922,56 +43187,56 @@
             value: !0
         }), t.init = i;
         var o = n(581),
-            a = n(729),
+            a = n(731),
             s = r(a),
-            l = n(730),
-            u = n(731),
-            c = n(732),
-            d = n(733),
-            f = n(734),
-            p = n(735),
-            h = n(736),
+            l = n(732),
+            u = n(733),
+            c = n(734),
+            d = n(735),
+            f = n(736),
+            p = n(737),
+            h = n(738),
             _ = n(355),
-            v = n(737),
-            m = n(739),
-            g = n(740),
-            y = n(741),
+            v = n(739),
+            m = n(741),
+            g = n(742),
+            y = n(743),
             b = n(366),
-            E = n(742),
-            T = n(744),
-            S = n(745),
-            C = n(747),
-            w = n(748),
-            P = n(750),
-            A = n(753),
+            E = n(744),
+            T = n(746),
+            S = n(747),
+            C = n(749),
+            w = n(750),
+            P = n(752),
+            A = n(755),
             O = n(413),
-            k = n(754),
-            I = n(756),
-            N = n(758),
-            R = n(759),
-            M = n(760),
-            L = n(761),
-            D = n(762),
-            x = n(763),
-            j = n(764),
-            U = n(765),
-            B = n(766),
-            F = n(767),
+            k = n(756),
+            I = n(758),
+            N = n(760),
+            R = n(761),
+            M = n(762),
+            L = n(763),
+            D = n(764),
+            x = n(765),
+            j = n(766),
+            U = n(767),
+            B = n(768),
+            F = n(769),
             V = n(420),
-            H = n(768),
-            q = n(770),
-            G = n(771),
-            Y = n(773),
+            H = n(770),
+            q = n(772),
+            G = n(773),
+            Y = n(775),
             W = n(648),
-            K = n(774),
-            z = n(775),
-            $ = n(776),
-            Q = n(777),
-            X = n(778),
+            K = n(776),
+            z = n(777),
+            $ = n(778),
+            Q = n(779),
+            X = n(780),
             J = n(403),
-            Z = (n(368), n(429), n(779)),
-            ee = n(781),
-            te = n(783),
+            Z = (n(368), n(429), n(781)),
+            ee = n(783),
+            te = n(785),
             ne = (0, o.combineReducers)({
                 accessToken: l.accessToken,
                 ads: u.ads,
@@ -43295,7 +43560,7 @@
         }), t.DEFAULT_CLIPS_STATE = void 0, t.clips = i;
         var o = n(117),
             a = r(o),
-            s = n(738),
+            s = n(740),
             l = Object.freeze({
                 recordClip: function() {
                     console.error("Clip Generator not available yet")
@@ -43437,7 +43702,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.experiments = r;
-        var i = n(743),
+        var i = n(745),
             o = new Error("Attempting to use experiments too early"),
             a = {
                 get: function() {
@@ -43533,8 +43798,8 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.lang = r;
-        var i = n(746),
-            o = n(679)
+        var i = n(748),
+            o = n(681)
     }, function(e, t, n) {
         "use strict";
 
@@ -43573,7 +43838,7 @@
         }), t.LAST_KNOWN_LANG = t.ACTION_SET_LANGUAGE = void 0, t.setLanguage = r, t.loadLanguage = i, t.loadDefaultLang = o;
         var a = n(249),
             s = n(250),
-            l = n(679),
+            l = n(681),
             u = n(200),
             c = t.ACTION_SET_LANGUAGE = "set language",
             d = t.LAST_KNOWN_LANG = "playerLanguage"
@@ -43643,7 +43908,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.navigatorReducer = r;
-        var i = n(749)
+        var i = n(751)
     }, function(e, t) {
         "use strict";
 
@@ -43681,9 +43946,9 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.notifications = i;
-        var o = n(751),
+        var o = n(753),
             a = r(o),
-            s = n(752),
+            s = n(754),
             l = r(s),
             u = n(275),
             c = []
@@ -43752,7 +44017,7 @@
         }), t.playerDimensions = i;
         var o = n(117),
             a = r(o),
-            s = n(755),
+            s = n(757),
             l = {
                 left: 0,
                 top: 0,
@@ -43796,7 +44061,7 @@
         }), t.playerOptions = i;
         var o = n(201),
             a = r(o),
-            s = n(757),
+            s = n(759),
             l = {
                 showInfo: !0,
                 showtheatre: !1,
@@ -44359,7 +44624,7 @@
         var o = n(117),
             a = r(o),
             s = n(182),
-            l = n(757),
+            l = n(759),
             u = t.DEFAULT_SCREEN_MODE = Object.freeze({
                 isFullScreen: !1,
                 canFullScreen: !1,
@@ -44477,7 +44742,7 @@
         }), t.subscriptions = i;
         var o = n(117),
             a = r(o),
-            s = n(769),
+            s = n(771),
             l = n(334),
             u = {
                 isSubscribed: !1,
@@ -44617,7 +44882,7 @@
             a = r(o),
             s = n(70),
             l = r(s),
-            u = n(772),
+            u = n(774),
             c = ["host_channel", "content", "medium", "page_session_id", "tab_session_id"]
     }, function(e, t) {
         "use strict";
@@ -44742,7 +45007,7 @@
         }), t.DEFAULT_WATCHPARTY = void 0, t.watchParty = i;
         var o = n(117),
             a = r(o),
-            s = n(726),
+            s = n(728),
             l = t.DEFAULT_WATCHPARTY = Object.freeze({
                 watchPartyId: "",
                 vodId: "",
@@ -44864,7 +45129,7 @@
         }), t.createVideoApiMiddleware = i;
         var o = n(363),
             a = r(o),
-            s = n(780),
+            s = n(782),
             l = new s.NullVideoAPI
     }, function(e, t) {
         "use strict";
@@ -44999,7 +45264,7 @@
             a = r(o),
             s = n(178),
             l = r(s),
-            u = n(782),
+            u = n(784),
             c = n(180),
             d = n(633),
             f = n(182),
@@ -45070,7 +45335,7 @@
         }), t.createAnalyticsTrackerMiddleware = i;
         var o = n(374),
             a = r(o),
-            s = n(784),
+            s = n(786),
             l = new s.NullAnalyticsTracker
     }, function(e, t) {
         "use strict";
@@ -45281,7 +45546,7 @@
             s = n(117),
             l = r(s),
             u = n(200),
-            c = n(760),
+            c = n(762),
             d = n(220),
             f = n(183),
             p = n(162),
@@ -45422,10 +45687,10 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(788),
+            a = n(790),
             s = r(a),
-            l = n(755),
-            u = n(789),
+            l = n(757),
+            u = n(791),
             c = r(u);
         t.PlayerResizeManager = function() {
             function e(t) {
@@ -45898,7 +46163,7 @@
                 }
             }(),
             o = n(183),
-            a = n(769),
+            a = n(771),
             s = n(644),
             l = n(648);
         t.TwitchEverywhereManager = function() {
@@ -45957,7 +46222,7 @@
             s = n(396),
             l = n(217),
             u = n(220),
-            c = n(760),
+            c = n(762),
             d = n(183),
             f = n(53),
             p = r(f),
@@ -46086,7 +46351,7 @@
             l = n(403),
             u = n(217),
             c = n(167),
-            d = n(760),
+            d = n(762),
             f = n(183),
             p = n(53),
             h = r(p),
