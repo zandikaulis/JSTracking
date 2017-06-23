@@ -15881,7 +15881,8 @@ googletag.cmd = googletag.cmd || [],
                 FOLLOWING_COMMUNITIES: "42c46cf2-6a2e-49cb-9a68-622999710fed",
                 I18N_GAME_NAMES: "497e1277-7fff-4c16-98f0-6b55c8b59a4f",
                 NEWSFEED_RECOMMENDATIONS: "30a7dfaa-e3d2-477e-a4f1-28e2ffb80e72",
-                AUTO_ON_NOTIFICATIONS: "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b"
+                AUTO_ON_NOTIFICATIONS: "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b",
+                LTV: "9985aa41-ce6a-48ab-abae-b0e0c34dca71"
             },
             r = {
                 "61b169ff-bc62-4725-a40e-1be627197c6f": "no",
@@ -15931,7 +15932,8 @@ googletag.cmd = googletag.cmd || [],
                 "42c46cf2-6a2e-49cb-9a68-622999710fed": "bottom",
                 "497e1277-7fff-4c16-98f0-6b55c8b59a4f": "control",
                 "30a7dfaa-e3d2-477e-a4f1-28e2ffb80e72": "control",
-                "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b": "control"
+                "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b": "control",
+                "9985aa41-ce6a-48ab-abae-b0e0c34dca71": "no"
             },
             o = {},
             s = {
@@ -15945,7 +15947,8 @@ googletag.cmd = googletag.cmd || [],
                 SOCIAL_RECOMMENDATIONS: "variant1",
                 LOL_METADATA_EXPERIMENT: "treatment",
                 WT_P: "yes",
-                OFFLINE_RECOMMENDATIONS: "yes"
+                OFFLINE_RECOMMENDATIONS: "yes",
+                LTV: "yes"
             };
         _.each(Object.keys(s), function(t) {
             o[i[t]] = e.user().then(function(e) {
@@ -16656,96 +16659,96 @@ googletag.cmd = googletag.cmd || [],
             }
         });
         n.fetchAds = function(n) {
-                var i = e.ads._readyData;
-                if (t("#dfp-directory-banner, .ad_contain").hide(), this.enabled && i && i.enabled) {
-                    var r = ["dfp-directory-banner"];
-                    n && n.singleOnly || r.push("dfp-directory-rectangle"), e.asyncAds.sra({
-                        slots: r
-                    }).then(function(e) {
-                        e[0] && 1 != t("#google_ads_iframe_\\/3576121\\/twitch\\/directory_0").width() ? t("#dfp-directory-banner").show() : t("#dfp-directory-banner").hide(), e[1] && 1 != t("#google_ads_iframe_\\/3576121\\/twitch\\/directory_1").width() ? t(".ad_contain").show().css("display", "block !important") : t(".ad_contain").hide()
-                    })
-                }
-            }, n.resetGoogletag = function() {
-                if (googletag) {
-                    googletag.destroySlots();
-                    var e = googletag.pubads();
-                    e.getTargetingKeys().forEach(function(t) {
-                        e.clearTargeting(t)
-                    })
-                }
-                return RSVP.resolve()
-            }, n.prepareCompanionAds = function(t) {
-                return new RSVP.Promise(function(r, o) {
-                    e.ads.ready(function(e) {
-                        n.enabled && e && e.enabled ? n.resetGoogletag().then(function() {
-                            var e = i();
-                            googletag.cmd.push(function() {
-                                t.slots.forEach(function(t) {
-                                    googletag.defineSlot(e[t].unitName, e[t].sizes, t).addService(googletag.companionAds())
-                                }), SiteOptions.dfp_sidebar_channel_ad && googletag.defineSlot(e["dfp-channel-adlight"].unitName, e["dfp-channel-adlight"].sizes, "dfp-channel-adlight").addService(googletag.pubads()), googletag.pubads().collapseEmptyDivs(), googletag.enableServices()
-                            }), r()
-                        }, r) : r()
-                    })
+            var i = e.ads._readyData;
+            if (t("#dfp-directory-banner, .ad_contain").hide(), this.enabled && i && i.enabled) {
+                var r = ["dfp-directory-banner"];
+                n && n.singleOnly || r.push("dfp-directory-rectangle"), e.asyncAds.sra({
+                    slots: r
+                }).then(function(e) {
+                    e[0] && 1 != t("#google_ads_iframe_\\/3576121\\/twitch\\/directory_0").width() ? t("#dfp-directory-banner").show() : t("#dfp-directory-banner").hide(), e[1] && 1 != t("#google_ads_iframe_\\/3576121\\/twitch\\/directory_1").width() ? t(".ad_contain").show().css("display", "block !important") : t(".ad_contain").hide()
                 })
-            }, n.displayAdLight = function() {
-                googletag.cmd.push(function() {
-                    googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("chan", e.asyncAds.metadata.chan), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", "https:" === window.location.protocol ? "true" : "false"), googletag.pubads().setTargeting("loggedin", e.user.isLoggedIn() ? "true" : "false"), googletag.display("dfp-channel-adlight")
+            }
+        }, n.resetGoogletag = function() {
+            if (googletag) {
+                googletag.destroySlots();
+                var e = googletag.pubads();
+                e.getTargetingKeys().forEach(function(t) {
+                    e.clearTargeting(t)
                 })
-            },
-            n.afterCompanionAdsRendered = function(n) {
-                t(".js-new-channel-ad").length && ("google" === n && (t(".new_advertisement").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") || t("#google_companion_300x250").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(), e.asyncAds.resizeForCompanionAds(10))
-            }, n.resizeForCompanionAds = function(n) {
-                setTimeout(function() {
-                    var i = t(".js-new-channel-ad").outerHeight();
-                    n > 0 && i < 60 ? e.asyncAds.resizeForCompanionAds(n - 1) : t(".js-rightcol-content").css("top", i)
-                }, 100)
-            }, n.sra = function(r) {
-                var o = function() {
-                        this.slots && this.slots.forEach(function(e) {
-                            e.el && e.el.empty()
-                        });
-                        var e = this,
-                            t = this.slots = [];
-                        return function(n) {
-                            return function() {
-                                if (t === e.slots) return n.apply(this, arguments)
-                            }
-                        }
-                    },
-                    s = function() {
-                        if (googletag.debug_log._events) return googletag.debug_log._events;
-                        var e = googletag.debug_log.log,
-                            t = RSVP.EventTarget.mixin({});
-                        return googletag.debug_log.log = function(n, i, r, o, s) {
-                            return 6 === i.getMessageId() && t.trigger("gpt-slot_rendered"), e.apply(this, arguments)
-                        }, googletag.debug_log._events = t, t
-                    };
-                return function(r) {
-                    var a = this,
-                        l = o();
-                    return new RSVP.Promise(function(o, u) {
-                        n.resetGoogletag().then(l(function() {
-                            var n = i();
-                            googletag.cmd.push(function() {
-                                r.slots.forEach(function(e) {
-                                    a.slots.push({
-                                        id: e,
-                                        el: t("#" + e)
-                                    }), googletag.defineSlot(n[e].unitName, n[e].sizes, e).addService(googletag.pubads())
-                                }), s().on("gpt-slot_rendered", _.after(r.slots.length, function() {
-                                    o(_.map(a.slots, function(e) {
-                                        return "none" !== e.el.css("display")
-                                    }))
-                                })), googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", "https:" === window.location.protocol ? "true" : "false"), googletag.pubads().setTargeting("loggedin", e.user.isLoggedIn() ? "true" : "false"), googletag.pubads().enableSingleRequest(), googletag.pubads().collapseEmptyDivs(), googletag.enableServices(), _.each(r.slots, function(e) {
-                                    googletag.display(e)
-                                })
-                            })
-                        }), u)
-                    })
-                }(r)
-            }, e.mixin({
-                asyncAds: n
+            }
+            return RSVP.resolve()
+        }, n.prepareCompanionAds = function(t) {
+            return new RSVP.Promise(function(r, o) {
+                e.ads.ready(function(e) {
+                    n.enabled && e && e.enabled ? n.resetGoogletag().then(function() {
+                        var e = i();
+                        googletag.cmd.push(function() {
+                            t.slots.forEach(function(t) {
+                                googletag.defineSlot(e[t].unitName, e[t].sizes, t).addService(googletag.companionAds())
+                            }), SiteOptions.dfp_sidebar_channel_ad && googletag.defineSlot(e["dfp-channel-adlight"].unitName, e["dfp-channel-adlight"].sizes, "dfp-channel-adlight").addService(googletag.pubads()), googletag.pubads().collapseEmptyDivs(), googletag.enableServices()
+                        }), r()
+                    }, r) : r()
+                })
             })
+        }, n.displayAdLight = function() {
+            googletag.cmd.push(function() {
+                googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("chan", e.asyncAds.metadata.chan), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", "https:" === window.location.protocol ? "true" : "false"),
+                    googletag.pubads().setTargeting("loggedin", e.user.isLoggedIn() ? "true" : "false"), googletag.display("dfp-channel-adlight")
+            })
+        }, n.afterCompanionAdsRendered = function(n) {
+            t(".js-new-channel-ad").length && ("google" === n && (t(".new_advertisement").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") || t("#google_companion_300x250").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(), e.asyncAds.resizeForCompanionAds(10))
+        }, n.resizeForCompanionAds = function(n) {
+            setTimeout(function() {
+                var i = t(".js-new-channel-ad").outerHeight();
+                n > 0 && i < 60 ? e.asyncAds.resizeForCompanionAds(n - 1) : t(".js-rightcol-content").css("top", i)
+            }, 100)
+        }, n.sra = function(r) {
+            var o = function() {
+                    this.slots && this.slots.forEach(function(e) {
+                        e.el && e.el.empty()
+                    });
+                    var e = this,
+                        t = this.slots = [];
+                    return function(n) {
+                        return function() {
+                            if (t === e.slots) return n.apply(this, arguments)
+                        }
+                    }
+                },
+                s = function() {
+                    if (googletag.debug_log._events) return googletag.debug_log._events;
+                    var e = googletag.debug_log.log,
+                        t = RSVP.EventTarget.mixin({});
+                    return googletag.debug_log.log = function(n, i, r, o, s) {
+                        return 6 === i.getMessageId() && t.trigger("gpt-slot_rendered"), e.apply(this, arguments)
+                    }, googletag.debug_log._events = t, t
+                };
+            return function(r) {
+                var a = this,
+                    l = o();
+                return new RSVP.Promise(function(o, u) {
+                    n.resetGoogletag().then(l(function() {
+                        var n = i();
+                        googletag.cmd.push(function() {
+                            r.slots.forEach(function(e) {
+                                a.slots.push({
+                                    id: e,
+                                    el: t("#" + e)
+                                }), googletag.defineSlot(n[e].unitName, n[e].sizes, e).addService(googletag.pubads())
+                            }), s().on("gpt-slot_rendered", _.after(r.slots.length, function() {
+                                o(_.map(a.slots, function(e) {
+                                    return "none" !== e.el.css("display")
+                                }))
+                            })), googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", "https:" === window.location.protocol ? "true" : "false"), googletag.pubads().setTargeting("loggedin", e.user.isLoggedIn() ? "true" : "false"), googletag.pubads().enableSingleRequest(), googletag.pubads().collapseEmptyDivs(), googletag.enableServices(), _.each(r.slots, function(e) {
+                                googletag.display(e)
+                            })
+                        })
+                    }), u)
+                })
+            }(r)
+        }, e.mixin({
+            asyncAds: n
+        })
     }(Twitch, jQuery),
     function(e, t) {
         var n = function(n, i) {

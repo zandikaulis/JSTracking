@@ -1500,6 +1500,16 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "b19d0945-ad8e-49c9-89f8-2dbb99bddf92": {
+            "name": "android_player_core_5",
+            "groups": [{
+                "weight": 99,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "active"
+            }]
+        },
         "b2925d54-cebb-4e1d-a50d-9dd2b1ea850e": {
             "name": "onsite_notifications",
             "groups": [{
