@@ -1586,6 +1586,16 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
+        "b8e14b8a-c5dd-4904-aac1-536063d91fa3": {
+            "name": "ios_google_ima_pipboy",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "active"
+            }]
+        },
         "b9063610-cdfd-43c3-8479-59a6ab82d831": {
             "name": "Visible Post Reactions",
             "groups": [{
