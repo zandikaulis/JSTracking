@@ -15834,6 +15834,7 @@ googletag.cmd = googletag.cmd || [],
     function(e, t) {
         const n = SiteOptions.experiments || {},
             i = {
+                DIRECTORY_EVENTS_SUGGESTIONS: "fa99a372-3bd3-422d-8937-4de546931a37",
                 RECOMMENDED_GAMES: "61b169ff-bc62-4725-a40e-1be627197c6f",
                 VOD_COVIEWS_AB: "ec27e6fe-dabc-4fd3-ab62-a2cffc8fe316",
                 VOD_UPLOAD_UNITS: "1e406d0d-c293-4c4e-812f-049db8c7e3ec",
@@ -15885,6 +15886,7 @@ googletag.cmd = googletag.cmd || [],
                 LTV: "9985aa41-ce6a-48ab-abae-b0e0c34dca71"
             },
             r = {
+                "fa99a372-3bd3-422d-8937-4de546931a37": "hidden",
                 "61b169ff-bc62-4725-a40e-1be627197c6f": "no",
                 "ec27e6fe-dabc-4fd3-ab62-a2cffc8fe316": "control",
                 "1e406d0d-c293-4c4e-812f-049db8c7e3ec": "control",
@@ -16692,8 +16694,8 @@ googletag.cmd = googletag.cmd || [],
             })
         }, n.displayAdLight = function() {
             googletag.cmd.push(function() {
-                googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("chan", e.asyncAds.metadata.chan), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", "https:" === window.location.protocol ? "true" : "false"),
-                    googletag.pubads().setTargeting("loggedin", e.user.isLoggedIn() ? "true" : "false"), googletag.display("dfp-channel-adlight")
+                googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("chan", e.asyncAds.metadata.chan), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor),
+                    googletag.pubads().setTargeting("salt", "https:" === window.location.protocol ? "true" : "false"), googletag.pubads().setTargeting("loggedin", e.user.isLoggedIn() ? "true" : "false"), googletag.display("dfp-channel-adlight")
             })
         }, n.afterCompanionAdsRendered = function(n) {
             t(".js-new-channel-ad").length && ("google" === n && (t(".new_advertisement").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") || t("#google_companion_300x250").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(), e.asyncAds.resizeForCompanionAds(10))
