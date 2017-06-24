@@ -812,6 +812,19 @@ window.SiteOptions = {
                 "value": "////video-edge-40b1eb.sjc01.hls.ttvnw.net/v1/playlist/Css-naGVGuJfCp_phHIgF-tgx96TgMYGCh5A4KlBoRI6iqqgs_UNwy0Kpd5CR3lCLUQcs3PoO95W4dUuCUdjnBgi2w5K7uhfzDuVCacNTpgqHp1-cLpfkmnb_awak0Ay2iq0002foQZsxKlDis4FGnHJ8xuJLmsc4ibOjl56Ea68oY52iV0BA-8BauvCwWWQMZncq2YMvgVjay8Zj9OTXyprKOK8f7wr0rsCLYW9cPk6VWYUdh4-Ggzi738IJGusgtDTdn0kQqhane0VUIeIt67vdoaW2p4cKZVv11C-tqWvY6PZafK_acW1LSE6aMkVZmEWJNb1BPDgZU4WcJPT7fCa7p4cry60UZnG1uaGhFglWSacTDElmbY0ZWPXISEkAohyY2YlyNOoVVE6Km5dLaQKdfvDr-8lQrE7j1RVGgPW8d4xD6FQS4b5Io2NTiXI.m3u8"
             }]
         },
+        "4bdb6678-2626-466f-bb25-e566dec11354": {
+            "name": "FRONT_PAGE_SIGNUP_EXPERIMENT",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "HalfPageTakeover"
+            }, {
+                "weight": 0,
+                "value": "FullPageTakeover"
+            }]
+        },
         "4d081a33-0d0f-4b44-bfde-cf07c358915f": {
             "name": "baking_bread_d",
             "groups": [{
