@@ -3024,7 +3024,6 @@
                     twitchApi: this._twitchApi
                 });
                 this._darklaunchEligible = _WebSocketJs2["default"].supported();
-                var useWebSocketDarklaunch = Math.random() > .5;
                 this._darklaunchConn = new _connJs2["default"]({
                     cluster: "darklaunch",
                     addrs: [{
@@ -3038,7 +3037,7 @@
                     }],
                     nickname: this.nickname,
                     password: this._opts.password,
-                    useWebSockets: useWebSocketDarklaunch,
+                    useWebSockets: true,
                     logger: _logJs2["default"]._noopLogger
                 });
                 this._connections = {};
@@ -3776,7 +3775,7 @@
             };
             FlashSocket.prototype._onDataReceived = function(data) {
                 data.data = decodeURIComponent(data.data);
-                this._trigger("data", data)
+                this._trigger("data", data);
             };
             FlashSocket.prototype._resetSwfState = function() {
                 delete _flashSockets[this._clientId];
