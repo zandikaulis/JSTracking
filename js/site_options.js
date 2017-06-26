@@ -1602,10 +1602,10 @@ window.SiteOptions = {
         "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14": {
             "name": "padtime",
             "groups": [{
-                "weight": 50,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 5,
                 "value": "treatment"
             }]
         },
