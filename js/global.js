@@ -12462,57 +12462,6 @@ function(e, t) {
             }
         }])
     }),
-    function(e) {
-        e.fn.autocompleteHashtag = function() {
-            function t(e, t) {
-                var n = e.val(),
-                    i = n.trim().split(/\s/).pop();
-                e.val(n.replace(new RegExp(i + "$"), t) + " ")
-            }
-
-            function n(e) {
-                e.empty().hide()
-            }
-
-            function i(i, r, o, s) {
-                var a = o.filter(function(e) {
-                    return 0 === e.indexOf(s) && e !== s
-                });
-                if (!a.length) return i.hide();
-                var l = a.slice(0, 10).map(function(o) {
-                    return e('<li class="balloon__link">' + o + "</li>").click(function() {
-                        t(r, o), n(i)
-                    })
-                });
-                i.html(l).show()
-            }
-            var r = {
-                creative: (SiteOptions.creative_communities || "").split(",").map(function(e) {
-                    return "#" + e
-                })
-            };
-            return e(this).each(function() {
-                var o = e(this),
-                    s = e('<ul class="balloon balloon--down balloon--dropmenu full-width"></ul>').hide();
-                o.after(s), o.keydown(function(a) {
-                    var l = e(this).val(),
-                        u = l.slice(-1),
-                        c = l.trim().split(/\s/).pop(),
-                        h = e("#gameselector_input").val().trim().toLowerCase(),
-                        d = r[h] || [];
-                    if (!u.match(/\s/) && c && h && d.length)
-                        if (13 === a.which || 9 === a.which) {
-                            a.preventDefault();
-                            var f = d.filter(function(e) {
-                                return 0 === e.indexOf(c)
-                            });
-                            1 === f.length && (t(o, f[0]), n(s))
-                        } else "#" === c[0] ? i(s, o, d, c) : n(s);
-                    else n(s)
-                })
-            })
-        }
-    }(jQuery),
     function(e, t) {
         "object" == typeof exports && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : e.moment = t()
     }(this, function() {
@@ -15879,8 +15828,9 @@ googletag.cmd = googletag.cmd || [],
                 SISKO: "31827b23-ea01-48b8-87c6-1503656957fd",
                 OFFLINE_RECOMMENDATIONS: "00683bde-a79d-4b9d-a7cc-b0549f854d36",
                 GAME_FOLLOW_ONBOARD: "9a3b387e-b6cd-4d2b-80a6-bb14d3ba4512",
-                FOLLOWING_COMMUNITIES: "42c46cf2-6a2e-49cb-9a68-622999710fed",
                 I18N_GAME_NAMES: "497e1277-7fff-4c16-98f0-6b55c8b59a4f",
+                OFFLINE_EXPERIENCE: "6e2f439b-916a-40b7-b1be-e82b284fd0bb",
+                FOLLOWING_COMMUNITIES: "42c46cf2-6a2e-49cb-9a68-622999710fed",
                 NEWSFEED_RECOMMENDATIONS: "30a7dfaa-e3d2-477e-a4f1-28e2ffb80e72",
                 AUTO_ON_NOTIFICATIONS: "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b",
                 LTV: "9985aa41-ce6a-48ab-abae-b0e0c34dca71"
@@ -15931,8 +15881,9 @@ googletag.cmd = googletag.cmd || [],
                 "31827b23-ea01-48b8-87c6-1503656957fd": "control",
                 "00683bde-a79d-4b9d-a7cc-b0549f854d36": "no",
                 "9a3b387e-b6cd-4d2b-80a6-bb14d3ba4512": "control",
-                "42c46cf2-6a2e-49cb-9a68-622999710fed": "bottom",
                 "497e1277-7fff-4c16-98f0-6b55c8b59a4f": "control",
+                "6e2f439b-916a-40b7-b1be-e82b284fd0bb": "control",
+                "42c46cf2-6a2e-49cb-9a68-622999710fed": "bottom",
                 "30a7dfaa-e3d2-477e-a4f1-28e2ffb80e72": "control",
                 "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b": "control",
                 "9985aa41-ce6a-48ab-abae-b0e0c34dca71": "no"
@@ -15950,6 +15901,7 @@ googletag.cmd = googletag.cmd || [],
                 LOL_METADATA_EXPERIMENT: "treatment",
                 WT_P: "yes",
                 OFFLINE_RECOMMENDATIONS: "yes",
+                OFFLINE_EXPERIENCE: "show",
                 LTV: "yes"
             };
         _.each(Object.keys(s), function(t) {
@@ -16694,8 +16646,7 @@ googletag.cmd = googletag.cmd || [],
             })
         }, n.displayAdLight = function() {
             googletag.cmd.push(function() {
-                googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("chan", e.asyncAds.metadata.chan), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor),
-                    googletag.pubads().setTargeting("salt", "https:" === window.location.protocol ? "true" : "false"), googletag.pubads().setTargeting("loggedin", e.user.isLoggedIn() ? "true" : "false"), googletag.display("dfp-channel-adlight")
+                googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("chan", e.asyncAds.metadata.chan), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", "https:" === window.location.protocol ? "true" : "false"), googletag.pubads().setTargeting("loggedin", e.user.isLoggedIn() ? "true" : "false"), googletag.display("dfp-channel-adlight")
             })
         }, n.afterCompanionAdsRendered = function(n) {
             t(".js-new-channel-ad").length && ("google" === n && (t(".new_advertisement").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") || t("#google_companion_300x250").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(), e.asyncAds.resizeForCompanionAds(10))
