@@ -45,7 +45,7 @@
                     deviceId: N.get(!1)
                 })), $.dispatch((0, oe.setPlayerType)(a.player)), Ve.push(new q.PubSub($, a)), Ve.push(new Ae.PostRecommendationsManager($)), Ve.push(new Oe.OfflineRecommendationsManager($)), Ve.push(new ke.UserManager($)), Ve.push(new b.AutoSuggestNotificationManager($)), C = new m.AnalyticsTracker($, a), $.dispatch((0, ce.setAnalyticsTracker)(C)), $.dispatch((0, ie.initializeQuality)()), r(), A = a.allowfullscreen ? new G.FullScreen(n, $) : new Y.NoFullScreen(n, $), Ne = new Pe.TimelineMetadataManager($), je = new Ee.CollectionManager($), X = new D.Video(n, $, a), Fe = new Re.ExtensionsApi($), $.dispatch((0, Me.extensionsApiLoaded)(Fe)), M = new R.State(X, $, C, a), a.debug && (window.state = M), Ue = new Te.PlayerResizeManager($), Ue.observe(n), Be = new Se.FollowManager($), a.player === we.PLAYER_TWITCH_EVERYWHERE && (Ve.push(new Ce.TwitchEverywhereManager($)), a.targetOrigin || console.error("Missing targetOrigin option"), $.dispatch((0, oe.setTwitchEverywhereParams)({
                     targetOrigin: a.targetOrigin
-                }))), (0, x.forwardProperties)(E, X), ee = new v.Analytics(X, C, M, $, a), l(a), ne = new j.EmbedHost(X, M, $), new U.PlayerHotkeys(X, n, $, a), $.dispatch((0, ue.setAutoplay)(a.autoplay)), a.controls && (de = new he.ClipGenerator(M, $), $.dispatch((0, _e.clipGeneratorLoaded)(de)), I = new B.PlayerUI(X, n, C, M, $, de, a)), i(a).then(function() {
+                }))), (0, x.forwardProperties)(E, X), ee = new v.Analytics(X, C, M, $, a), l(a), ne = new j.EmbedHost(X, $), new U.PlayerHotkeys(X, n, $, a), $.dispatch((0, ue.setAutoplay)(a.autoplay)), a.controls && (de = new he.ClipGenerator(M, $), $.dispatch((0, _e.clipGeneratorLoaded)(de)), I = new B.PlayerUI(X, n, C, M, $, de, a)), i(a).then(function() {
                     $.dispatch((0, z.setPlayerOptions)(a))
                 }), $.dispatch((0, le.initVodResume)()), X.addEventListener(fe.LOADED_METADATA, function() {
                     $.dispatch((0, se.setCanFullScreen)(A.canFullScreen()))
@@ -9825,7 +9825,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.23-183104+103d4ef83c84b3ae37cdfeed728dffac71160329",
+                    app_version: "2017.06.26-173532+69922bec78c46579afb16e54616cda18e6bca7c3",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -10075,7 +10075,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-0457f2.sjc01.hls.ttvnw.net/v1/playlist/CgHbUTv5jbgtZtCeBzt2NVAj1dQcRIuDaHrFaKTiavojV3oLQNfI1Kxk9DppGj9voIFTWH0b7Sp0KrLN6YkeE3RwzQMd3dOkdOaadI9ojXP6WWpxtxahqlNbIW33-6gqbUd4ruCJINCuqyXtLrHS5KI2wn4H0SI3fmvlVkAZdXlhMRoj_LlEPTqA6WTsX3czaF0cIg9jlYSKat98W_pW9GUekLgr8bECPxLqCpZHiWMgUK6DY6EtGij_JR4sLA5fg1ACgC36xui70JbCESdQvDquzQgP9A60AP_EAznulAylD5elgphWeE3yIbWOozY3zLYNHQS-NX3WqnZUM4WPEe8hahL7cIIXPE0PSALCQxLHRTqtpcN4XTKy-sfXkJbmyo2h4tGeMVXJuJbb8hVGsaWKiL0-ci1M-NDcQXMmOdWqOdKwkqCvFHHu3LCbYX2PJz.m3u8"
+        t.trustedSpadeURI = "//video-edge-bf9a4f.sjc01.hls.ttvnw.net/v1/playlist/CsbfJYnWOssiR4VN5_vc6K60m5SwHzssxj9zqjfVoNTRYOMJCfUc253jnfojCIPpgCFp7khbZuzQGN_GKNTqW1h-V6Okh49E74nm2zRis1gtbqkH99EWFMRaqUwJqh1844wFZon0fJtjouWFbZBvna312FNnME2lLrXwlxxqz1SuhdBe5huAQAlQL1TsRURud5czHn-VQzGgFJQxC20KBSqllSbKj7hwmzNOu9OCe29CNfsXSBGNnqXfzoiqXQsqGJmqKh4_kAhG2xEK8orzjn1As5vPgQEHNbC_hm202u-xbovGohK5z7Cu8vvvZrUQ8hoJTuXI-nDqEc4ZPUe3QrNT0_eDoYumj0KbMV05Bs-i3htd4VN_kcwmaBl2I2smcr29WNRzjLMYenpIEmyEyFlk8ZqwVLrHxjFF3rt6pEPxTsI5Dt136WH8qt0LgVXmKpDmwO93CKpWzC817Hg80HgB.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -18838,46 +18838,47 @@
             }(),
             l = n(17),
             u = i(l),
-            c = n(186),
-            d = n(334),
-            f = r(d),
-            p = n(363),
-            h = n(403),
-            _ = n(333),
-            v = n(331),
-            m = n(402),
-            g = n(183),
-            y = n(406),
-            b = r(y);
+            c = n(334),
+            d = r(c),
+            f = n(363),
+            p = n(403),
+            h = n(333),
+            _ = n(331),
+            v = n(402),
+            m = n(183),
+            g = n(406),
+            y = r(g),
+            b = n(220),
+            E = n(167);
         t.EmbedHost = function() {
-            function e(t, n, r) {
-                a(this, e), this._player = t, this._store = r, this._clients = [], this._unsubscribes = [], this._window = this._store.getState().window, n.addEventListener(c.EVENT_STATE_UPDATE, this._sendPlayerState.bind(this)), n.addEventListener(c.EVENT_PLAYER_UPDATE, this._sendPlayerEvent.bind(this)), this._window.addEventListener("message", this);
-                var i = this._window.opener || this._window.parent;
-                i && i !== this._window && this._addClient(i), this._initSubscriptions(), this._sendStoreState()
+            function e(t, n) {
+                a(this, e), this._player = t, this._store = n, this._clients = [], this._unsubscribes = [], this._window = this._store.getState().window, this._window.addEventListener("message", this);
+                var r = this._window.opener || this._window.parent;
+                r && r !== this._window && this._addClient(r), this._initSubscriptions(), this._sendStoreState()
             }
             return s(e, [{
                 key: "_initSubscriptions",
                 value: function() {
                     var e = this;
-                    this._unsubscribes.push((0, g.subscribe)(this._store, ["stats.videoStats"], function() {
+                    this._unsubscribes.push((0, m.subscribe)(this._store, ["stats.videoStats"], function() {
                         e._sendStoreState()
-                    })), this._unsubscribes.push((0, g.subscribe)(this._store, ["viewercount"], function() {
-                        e._sendStoreState(), e._sendPlayerEvent(b.EVENT_EMBED_VIEWERS_CHANGE)
-                    })), this._unsubscribes.push((0, g.subscribe)(this._store, ["playback.paused", "playback.ended", "playback.hasPlayed"], function(t) {
+                    })), this._unsubscribes.push((0, m.subscribe)(this._store, ["viewercount"], function() {
+                        e._sendStoreState(), e._sendPlayerEvent(y.EVENT_EMBED_VIEWERS_CHANGE)
+                    })), this._unsubscribes.push((0, m.subscribe)(this._store, ["playback.paused", "playback.ended", "playback.hasPlayed"], function(t) {
                         var n = t.playback,
                             r = n.paused,
                             i = n.ended,
                             o = n.hasPlayed;
-                        i ? e._sendPlayerEvent(b.EVENT_EMBED_ENDED) : r ? e._sendPlayerEvent(b.EVENT_EMBED_PAUSE) : o && e._sendPlayerEvent(b.EVENT_EMBED_PLAY)
-                    })), this._unsubscribes.push((0, g.subscribe)(this._store, ["onlineStatus"], function(t) {
+                        i ? e._sendPlayerEvent(y.EVENT_EMBED_ENDED) : r ? e._sendPlayerEvent(y.EVENT_EMBED_PAUSE) : o && e._sendPlayerEvent(y.EVENT_EMBED_PLAY)
+                    })), this._unsubscribes.push((0, m.subscribe)(this._store, ["onlineStatus"], function(t) {
                         var n = t.onlineStatus;
-                        n === h.ONLINE_STATUS ? e._sendPlayerEvent(b.EVENT_EMBED_ONLINE) : e._sendPlayerEvent(b.EVENT_EMBED_OFFLINE)
-                    }))
+                        n === p.ONLINE_STATUS ? e._sendPlayerEvent(y.EVENT_EMBED_ONLINE) : e._sendPlayerEvent(y.EVENT_EMBED_OFFLINE)
+                    })), this._unsubscribes.push((0, m.subscribe)(this._store, ["stream", "streamMetadata.channelName", "streamMetadata.videoId", "quality.current", "quality.available", "playback.currentTime", "playback.duration", "playback.muted", "playback.volume", "playback.paused", "playback.ended"], this._sendPlayerState.bind(this)))
                 }
             }, {
                 key: "_addClient",
                 value: function(e) {
-                    this._clients.push(e), this._send(e, b.BRIDGE_HOST_READY), this._store.dispatch((0, m.requestStatsEnabled)(this))
+                    this._clients.push(e), this._send(e, y.BRIDGE_HOST_READY), this._store.dispatch((0, v.requestStatsEnabled)(this))
                 }
             }, {
                 key: "_send",
@@ -18885,7 +18886,7 @@
                     var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
                         r = Array.isArray(n) ? n : [n],
                         i = {
-                            namespace: b.BRIDGE_CLIENT_NAMESPACE,
+                            namespace: y.BRIDGE_CLIENT_NAMESPACE,
                             method: t,
                             args: r
                         };
@@ -18902,52 +18903,71 @@
             }, {
                 key: "handleEvent",
                 value: function(e) {
-                    if ((0, u.default)(e.data) && e.data.namespace === b.BRIDGE_HOST_NAMESPACE) switch (e.data.method) {
-                        case b.BRIDGE_REQ_SUBSCRIBE:
+                    if ((0, u.default)(e.data) && e.data.namespace === y.BRIDGE_HOST_NAMESPACE) switch (e.data.method) {
+                        case y.BRIDGE_REQ_SUBSCRIBE:
                             this._addClient(e.source);
                             break;
-                        case b.METHOD_PLAY:
-                            this._store.dispatch((0, p.play)());
+                        case y.METHOD_PLAY:
+                            this._store.dispatch((0, f.play)());
                             break;
-                        case b.METHOD_PAUSE:
-                            this._store.dispatch((0, p.pause)());
+                        case y.METHOD_PAUSE:
+                            this._store.dispatch((0, f.pause)());
                             break;
-                        case b.METHOD_SET_CHANNEL:
+                        case y.METHOD_SET_CHANNEL:
                             var t = e.data.args[0];
-                            this._store.dispatch(f.setStream(f.TYPE_CHANNEL, t)), this._store.dispatch((0, _.clearCollection)());
+                            this._store.dispatch(d.setStream(d.TYPE_CHANNEL, t)), this._store.dispatch((0, h.clearCollection)());
                             break;
-                        case b.METHOD_SET_VIDEO:
+                        case y.METHOD_SET_VIDEO:
                             var n = e.data.args[0];
-                            this._store.dispatch(f.setStream(f.TYPE_VIDEO, n)), this._store.dispatch((0, _.clearCollection)());
+                            this._store.dispatch(d.setStream(d.TYPE_VIDEO, n)), this._store.dispatch((0, h.clearCollection)());
                             break;
-                        case b.METHOD_SET_COLLECTION:
-                            this._store.dispatch(_.requestCollection.apply(void 0, o(e.data.args)));
+                        case y.METHOD_SET_COLLECTION:
+                            this._store.dispatch(h.requestCollection.apply(void 0, o(e.data.args)));
                             break;
-                        case b.METHOD_SEEK:
+                        case y.METHOD_SEEK:
                             this._player.setCurrentTime(parseFloat(e.data.args[0]));
                             break;
-                        case b.METHOD_SET_QUALITY:
-                            this._store.dispatch((0, v.selectQuality)(e.data.args[0]));
+                        case y.METHOD_SET_QUALITY:
+                            this._store.dispatch((0, _.selectQuality)(e.data.args[0]));
                             break;
-                        case b.METHOD_SET_MUTE:
-                            this._store.dispatch((0, p.mutePlayer)(!!e.data.args[0]));
+                        case y.METHOD_SET_MUTE:
+                            this._store.dispatch((0, f.mutePlayer)(!!e.data.args[0]));
                             break;
-                        case b.METHOD_SET_VOLUME:
-                            this._store.dispatch((0, p.changeVolume)(e.data.args[0]));
+                        case y.METHOD_SET_VOLUME:
+                            this._store.dispatch((0, f.changeVolume)(e.data.args[0]));
                             break;
-                        case b.METHOD_DESTROY:
-                            this._player.destroy(), this.destroy(), this._sendAll(b.BRIDGE_DESTROY)
+                        case y.METHOD_DESTROY:
+                            this._player.destroy(), this.destroy(), this._sendAll(y.BRIDGE_DESTROY)
                     }
                 }
             }, {
                 key: "_sendPlayerState",
                 value: function(e) {
-                    this._sendAll(b.BRIDGE_STATE_UPDATE, e.toJSON())
+                    var t = this._configurePlaybackState(),
+                        n = e.stream,
+                        r = {
+                            channelName: n instanceof E.LiveContentStream ? n._channelName : "",
+                            currentTime: e.playback.currentTime,
+                            duration: e.playback.duration,
+                            muted: e.playback.muted,
+                            playback: t,
+                            quality: e.quality.current,
+                            qualitiesAvailable: e.quality.available,
+                            videoID: n instanceof b.VODContentStream ? n._vodId : "",
+                            viewers: e.viewercount,
+                            volume: e.playback.volume
+                        };
+                    this._sendAll(y.BRIDGE_STATE_UPDATE, r)
+                }
+            }, {
+                key: "_configurePlaybackState",
+                value: function() {
+                    return this._store.getState().playback.ended ? y.PLAYBACK_ENDED : this._store.getState().playback.paused ? y.PLAYBACK_PAUSED : y.PLAYBACK_PLAYING
                 }
             }, {
                 key: "_sendPlayerEvent",
                 value: function(e) {
-                    this._sendAll(b.BRIDGE_PLAYER_EVENT, e)
+                    this._sendAll(y.BRIDGE_PLAYER_EVENT, e)
                 }
             }, {
                 key: "_sendStoreState",
@@ -18963,12 +18983,12 @@
                             },
                             playSessionId: r.playSessionId
                         };
-                    this._sendAll(b.BRIDGE_STORE_STATE_UPDATE, i)
+                    this._sendAll(y.BRIDGE_STORE_STATE_UPDATE, i)
                 }
             }, {
                 key: "destroy",
                 value: function() {
-                    this._store.dispatch((0, m.requestStatsDisabled)(this)), this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
+                    this._store.dispatch((0, v.requestStatsDisabled)(this)), this._window.removeEventListener("message", this), this._unsubscribes.forEach(function(e) {
                         return e()
                     })
                 }
@@ -19049,7 +19069,8 @@
             S = t.BRIDGE_STATE_UPDATE = "bridgestateupdate",
             C = t.BRIDGE_STORE_STATE_UPDATE = "bridgestorestateupdate",
             w = t.BRIDGE_PLAYER_EVENT = "bridgeplayerevent",
-            P = (t.BRIDGE_DOCUMENT_EVENT = "bridgedocumentevent", t.BRIDGE_HOST_NAMESPACE = "player.embed.host"),
+            P = (t.BRIDGE_DOCUMENT_EVENT = "bridgedocumentevent",
+                t.BRIDGE_HOST_NAMESPACE = "player.embed.host"),
             A = t.BRIDGE_CLIENT_NAMESPACE = "player.embed.client",
             O = t.BRIDGE_DESTROY = "bridgedestroy";
         t.PLAYBACK_PAUSED = "paused", t.PLAYBACK_PLAYING = "playing", t.PLAYBACK_ENDED = "ended", t.EmbedClient = function() {
@@ -19067,8 +19088,7 @@
                     var e = this;
                     return new _.Promise(function(t, n) {
                         function r(e) {
-                            this._isClientMessage(e) && e.data.method === T && (window.removeEventListener("message", i),
-                                window.addEventListener("message", this), this._eventEmitter.emit(y), t())
+                            this._isClientMessage(e) && e.data.method === T && (window.removeEventListener("message", i), window.addEventListener("message", this), this._eventEmitter.emit(y), t())
                         }
                         var i = r.bind(e);
                         window.addEventListener("message", i), setTimeout(n, m)
@@ -21613,7 +21633,7 @@
             }, {
                 key: "setCCIconStatus",
                 value: function(e) {
-                    $(".js-player-icon-cc", this._root).toggle(e), $(".js-player-icon-cc-deactivated", this._root).toggle(!e);
+                    $(".js-player-icon-cc", this._root).toggle(e), $(".js-player-icon-cc-deactivated", this._root).toggle(!e)
                 }
             }, {
                 key: "showCaption",
@@ -23153,8 +23173,7 @@
         }
 
         function c(e, t) {
-            k = e, I = t, N = e.value, R = Object.getOwnPropertyDescriptor(e.constructor.prototype, "value"), Object.defineProperty(k, "value", D),
-                k.attachEvent ? k.attachEvent("onpropertychange", f) : k.addEventListener("propertychange", f, !1)
+            k = e, I = t, N = e.value, R = Object.getOwnPropertyDescriptor(e.constructor.prototype, "value"), Object.defineProperty(k, "value", D), k.attachEvent ? k.attachEvent("onpropertychange", f) : k.addEventListener("propertychange", f, !1)
         }
 
         function d() {
