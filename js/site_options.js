@@ -1015,10 +1015,10 @@ window.SiteOptions = {
         "6b4086ea-dcce-41c9-a57b-000fa9366e35": {
             "name": "clips_you_were_right",
             "groups": [{
-                "weight": 50,
+                "weight": 10,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 90,
                 "value": "variant1"
             }]
         },
