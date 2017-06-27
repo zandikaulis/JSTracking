@@ -1626,6 +1626,7 @@
                     case "subs-only":
                     case "historical":
                     case "noisy":
+                    case "emote-only":
                         return value === "1" ? true : false;
                     case "slow":
                     case "followers-only":
