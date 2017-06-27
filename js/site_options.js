@@ -1984,19 +1984,19 @@ window.SiteOptions = {
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
             "name": "baking_brownies",
             "groups": [{
-                "weight": 100,
+                "weight": 80,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "no_play_600"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "no_play_1050"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "yes_play_600"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "yes_play_1050"
             }]
         },
