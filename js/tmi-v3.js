@@ -1243,7 +1243,7 @@
             };
             Connection.prototype._connectionFailed = function(reasonMsg) {
                 if (this._numSocketConnectAttempts < MAX_CONNECTION_ATTEMPTS) {
-                    if (this._isUsingWebSockets && this._numSocketConnectAttempts >= MAX_WEB_SOCKET_CONNECTION_ATTEMPTS) {
+                    if (this._isUsingWebSockets && this._numSocketConnectAttempts >= MAX_WEB_SOCKET_CONNECTION_ATTEMPTS && this.cluster !== "darklaunch") {
                         this._webSocketFailOver();
                         this._logger.warning(reasonMsg + " Giving up on websockets, attempting to initialize flash socket...")
                     }
@@ -1326,7 +1326,7 @@
             Connection.prototype._send = function(data) {
                 var sanitized = data;
                 for (var i = 0; i < INVALID_CHARS.length; ++i) {
-                    sanitized = sanitized.replace(INVALID_CHARS[i], "")
+                    sanitized = sanitized.replace(INVALID_CHARS[i], "");
                 }
                 this._logger.debug("Sending: " + sanitized);
                 this._socket.send(sanitized + SEND_SUFFIX, APPEND_NULL_BYTE);
@@ -2623,9 +2623,9 @@
             };
             Room.prototype.setFollowersMode = function(duration) {
                 if (duration !== undefined) {
-                    this.sendMessage("/followers " + duration)
+                    this.sendMessage("/followers " + duration);
                 } else {
-                    this.sendMessage("/followers");
+                    this.sendMessage("/followers")
                 }
             };
             Room.prototype.stopFollowersMode = function() {
@@ -3488,7 +3488,7 @@
                     port: "443"
                 }];
                 return {
-                    darklaunchEnabled: true,
+                    darklaunchEnabled: Math.random() < .1,
                     cluster: "main",
                     addrs: addrs,
                     wsAddrs: wsAddrs,
@@ -3775,7 +3775,7 @@
             };
             FlashSocket.prototype._onDataReceived = function(data) {
                 data.data = decodeURIComponent(data.data);
-                this._trigger("data", data);
+                this._trigger("data", data)
             };
             FlashSocket.prototype._resetSwfState = function() {
                 delete _flashSockets[this._clientId];
