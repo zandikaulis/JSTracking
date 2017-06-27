@@ -1325,10 +1325,10 @@ window.SiteOptions = {
         "9acd1217-f98c-419a-b39a-0e7fb9e5f325": {
             "name": "ios_pipboy_browse_ccus",
             "groups": [{
-                "weight": 90,
+                "weight": 99,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 1,
                 "value": "holdback"
             }]
         },
@@ -1867,10 +1867,10 @@ window.SiteOptions = {
         "dc251546-6da4-4db9-abae-2c1325e7dee6": {
             "name": "android_pipboy_browse_ccus",
             "groups": [{
-                "weight": 90,
+                "weight": 99,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 1,
                 "value": "holdback"
             }]
         },
