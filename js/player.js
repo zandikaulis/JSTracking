@@ -9825,7 +9825,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.27-005958+864ad89d041c9989c2a2badf031fadb89d731ab5",
+                    app_version: "2017.06.27-044249+19b168498780906d39ad60554873ab6679be197f",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -40316,20 +40316,21 @@
             h = n(333),
             _ = n(701),
             v = n(396),
-            m = 250,
-            g = {
+            m = n(220),
+            g = 250,
+            y = {
                 collectionItems: d.default.array.isRequired,
                 shouldShowTopBar: d.default.bool.isRequired,
                 showDivider: d.default.bool.isRequired,
-                streamId: d.default.string.isRequired,
+                stream: d.default.object.isRequired,
                 showSidebar: d.default.func,
                 title: d.default.string.isRequired,
                 win: d.default.object.isRequired
             },
-            y = {
+            b = {
                 showSidebar: function() {}
             },
-            b = t.mapStateToProps = function(e) {
+            E = t.mapStateToProps = function(e) {
                 var t = e.collection,
                     n = e.playerOptions,
                     r = e.ui,
@@ -40342,18 +40343,18 @@
                     shouldShowTopBar: t.currentView === p.COLLAPSED_VIEW && !r.isMini && s[0] === v.CONTENT_SCREEN,
                     showDivider: n.showInfo || a.isTheatreMode,
                     collectionItems: t.items,
-                    streamId: String(i.videoId).substr(1),
+                    stream: i,
                     win: o
                 }
             },
-            E = t.mapDispatchToProps = function(e) {
+            T = t.mapDispatchToProps = function(e) {
                 return {
                     showSidebar: function() {
                         e((0, h.openCollectionSidebar)())
                     }
                 }
             },
-            T = t.CollectionTopBarContainer = function(e) {
+            S = t.CollectionTopBarContainer = function(e) {
                 function t() {
                     i(this, t);
                     var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -40362,7 +40363,7 @@
                 return a(t, e), s(t, [{
                     key: "onMouseEnter",
                     value: function() {
-                        this._hoverTimeout = this.props.win.setTimeout(this.showSidebar, m)
+                        this._hoverTimeout = this.props.win.setTimeout(this.showSidebar, g)
                     }
                 }, {
                     key: "onMouseLeave",
@@ -40381,22 +40382,22 @@
                             t = e.collectionItems,
                             n = e.shouldShowTopBar,
                             r = e.showDivider,
-                            i = e.streamId,
+                            i = e.stream,
                             o = e.title;
-                        return n ? u.default.createElement(_.CollectionTopBar, {
+                        return n && i.contentType === m.CONTENT_MODE_VOD ? u.default.createElement(_.CollectionTopBar, {
                             onMouseEnter: this.onMouseEnter,
                             onMouseLeave: this.onMouseLeave,
                             collectionItems: t,
                             showDivider: r,
                             showSidebar: this.showSidebar,
-                            streamId: i,
+                            streamId: i.videoId,
                             title: o
                         }) : null
                     }
                 }]), t
             }(u.default.Component);
-        T.propTypes = g, T.defaultProps = y;
-        t.CollectionTopBar = (0, f.connect)(b, E)(T)
+        S.propTypes = y, S.defaultProps = b;
+        t.CollectionTopBar = (0, f.connect)(E, T)(S)
     }, function(e, t, n) {
         "use strict";
 
