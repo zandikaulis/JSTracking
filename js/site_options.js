@@ -734,7 +734,7 @@ window.SiteOptions = {
                 "value": "1.8.8+spd67"
             }, {
                 "weight": 2,
-                "value": "1.8.8+abshist"
+                "value": "1.8.8+spd67"
             }, {
                 "weight": 3,
                 "value": "1.8.7"
