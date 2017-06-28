@@ -11640,7 +11640,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.27-221128+0b91ac1f648977b3cc956a9cf19d06c5e8da1e79",
+                    app_version: "2017.06.28-210751+d8db418a53e5df943024f68153119ae0cd7b4683",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -11890,7 +11890,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-86af9e.sjc01.hls.ttvnw.net/v1/playlist/CqIsr6OkZxnp6RyZMFbY4Xq9C6F2jvEUd1ujzb8SvgeI8djRqnoeI8AkLB4utVq2GKXJv1xqowR4_H4m5S7tfnbFTcLnH13nM8M9-bnbKWdMNU57UcxXWRKVe90QnZ3SKWGY8ydG0INEvTDeKfSmV345FeKsc2-AWg2fgOe4ES09yffpLO-iV8beJvubVARhxuMWh8Sh34zKV8TCq6AAEToLEpQcP229zK03-FHs4L-KNQ3Cj8kG2IunPyVZT71-bKx7_wjtsZ-ltKAEt2ND0xsGv2RDr5MNAqAGotoyDQobdx2bFjhLpXfIZHWF_g3NqyLqQHsH8_b-BnmZnyRsTKs5AOrEKQEzwzkYOi-DtEmZOwyStzBKNxTH0Oe-N1wbI6Zc8hq6V3UmKqI5maHJhNu4lX8qBb1pxJ-DFYdROb5lCBDm.m3u8"
+        t.trustedSpadeURI = "//video-edge-0b41c0.sjc01.hls.ttvnw.net/v1/playlist/Cu5GTpdPExHo4I1M7ScV3Vv4g18q3u94I79tUgR-KQx-OfLg0J8NuGkWQfCT5BfrIBvk_uNn3vIYpCXPuKI7X2mW6QxQoWBMtaRrK7ZEb_S0reHEpPiP6D_z6cuND7xBx6FJHucvkmvg-sIK-JoO-1mKHBoidvkM7Tm7_WZj1QDL8kvcAt8nSJFyhh-HCKdkkQbopzUGZO3sZgEzr9T6bAsWOXqB_PE7AXmtNRccyIjjWwKkBS_ZKw0oMVnIYvuwqMhQWDD27ejX41T3cNvUInTXh18aNd1Y-6WOJvd89StezmS3klQmSryUvM9_OLvmhMPD9f7_EJR8lqditIonupukzZo3f6Jf1cGnhZ0Ube9Jg0YT2PxvW17Tiuw2lz10-3eK6M4IIRGENRwxKRKym_WPNmgEVgC1oHNaMjS2n6B7PflF.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -38281,13 +38281,13 @@
             },
             l = n(167),
             u = n(224),
-            c = n(200),
-            d = n(677),
-            f = n(419),
-            p = n(217),
-            h = n(349),
-            _ = n(406),
-            v = n(435),
+            c = n(677),
+            d = n(419),
+            f = n(217),
+            p = n(349),
+            h = n(406),
+            _ = n(435),
+            v = n(651),
             m = ["misterrogers"],
             g = function(e) {
                 return m.indexOf(e) === -1
@@ -38296,38 +38296,57 @@
             function t(e, n, o, a) {
                 r(this, t);
                 var s = i(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return s._store = n, s._clipsControls = new d.PlayerUIClipsControls(e, o, a, n), s.subscribe(s._store, ["stream", "onlineStatus", "backend", "env", "playback", "streamMetadata"], s._subscriptionHandler.bind(s)), s
+                return s._store = n, s._clipsControls = new c.PlayerUIClipsControls(e, o, a, n), s.subscribe(s._store, ["stream.contentType", "onlineStatus", "backendInfo.playerBackendType", "env.playerType", "playback.hasPlayed", "playback.paused", "streamMetadata.broadcastID", "streamMetadata.channel", "user.loggedInStatus"], s._subscriptionHandler.bind(s)), s
             }
             return o(t, e), a(t, [{
                 key: "_subscriptionHandler",
                 value: function(e) {
-                    var t = e.stream,
-                        n = t.contentType,
-                        r = e.onlineStatus,
-                        i = e.env.playerType,
-                        o = e.playback.hasPlayed,
-                        a = e.streamMetadata,
-                        s = a.broadcastID,
-                        c = a.channel,
-                        d = g(c.name),
-                        f = e.backend.getBackend() === h.BACKEND_HLS,
-                        v = i === p.PLAYER_HIGHLIGHTER || i === p.PLAYER_CURSE,
-                        m = n === l.CONTENT_MODE_LIVE && r !== _.ONLINE_STATUS,
-                        y = n !== l.CONTENT_MODE_LIVE && n !== u.CONTENT_MODE_VOD,
-                        b = Boolean(s),
-                        E = d && o && b && !(m || y || v || f);
-                    this._toggle(E)
+                    var t = this._validUserState(e) && this._validChannelState(e) && this._validPlaybackState(e) && this._validStreamState(e);
+                    this._toggle(t)
+                }
+            }, {
+                key: "_validUserState",
+                value: function(e) {
+                    var t = e.user.loggedInStatus,
+                        n = t === v.LOGGED_IN;
+                    return n
+                }
+            }, {
+                key: "_validChannelState",
+                value: function(e) {
+                    var t = e.streamMetadata,
+                        n = t.broadcastID,
+                        r = t.channel,
+                        i = g(r.name),
+                        o = Boolean(n);
+                    return o && i
+                }
+            }, {
+                key: "_validStreamState",
+                value: function(e) {
+                    var t = e.stream.contentType,
+                        n = e.onlineStatus,
+                        r = e.env.playerType,
+                        i = e.backendInfo.playerBackendType === p.BACKEND_HLS,
+                        o = r === f.PLAYER_HIGHLIGHTER || r === f.PLAYER_CURSE,
+                        a = t === l.CONTENT_MODE_LIVE && n !== h.ONLINE_STATUS,
+                        s = t !== l.CONTENT_MODE_LIVE && t !== u.CONTENT_MODE_VOD;
+                    return !(a || s || o || i)
+                }
+            }, {
+                key: "_validPlaybackState",
+                value: function(e) {
+                    var t = e.playback,
+                        n = t.hasPlayed,
+                        r = t.paused,
+                        i = e.stream.contentType,
+                        o = i === l.CONTENT_MODE_LIVE;
+                    return n && !(r && o)
                 }
             }, {
                 key: "_toggle",
                 value: function(e) {
-                    var t = this;
-                    return this.lastShouldEnable = e, e ? void(0, c.oauthToken)().then(function(e) {
-                        var n = e.token;
-                        return n && t.lastShouldEnable ? (t._store.dispatch((0, v.showClipsButton)(!0)), t._clipsControls.enableClipsButton()) : Promise.reject("Viewer is not logged in.")
-                    }).catch(function() {
-                        t._clipsControls.disableClipsButton(), t._store.dispatch((0, v.showClipsButton)(!1))
-                    }) : (this._clipsControls.disableClipsButton(), void this._store.dispatch((0, v.showClipsButton)(!1)))
+                    e ? (this._clipsControls.enableClipsButton(), this._store.dispatch((0, _.showClipsButton)(!0))) : (this._clipsControls.disableClipsButton(), this._store.dispatch((0, _.showClipsButton)(!1)))
                 }
             }, {
                 key: "destroy",
@@ -38335,7 +38354,7 @@
                     s(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), "destroy", this).call(this), this._clipsControls.destroy()
                 }
             }]), t
-        }(f.UIStateSubscriber)
+        }(d.UIStateSubscriber)
     }, function(e, t, n) {
         "use strict";
 
@@ -39265,7 +39284,7 @@
                 }, t.prototype.removeResourceBundle = function(e, t) {
                     this.hasResourceBundle(e, t) && delete this.data[e][t], this.removeNamespaces(t), this.emit("removed", e, t)
                 }, t.prototype.hasResourceBundle = function(e, t) {
-                    return void 0 !== this.getResource(e, t)
+                    return void 0 !== this.getResource(e, t);
                 }, t.prototype.getResourceBundle = function(e, t) {
                     return t || (t = this.options.defaultNS), "v1" === this.options.compatibilityAPI ? u({}, this.getResource(e, t)) : this.getResource(e, t)
                 }, t.prototype.toJSON = function() {
@@ -39277,7 +39296,7 @@
         "use strict";
 
         function n(e) {
-            return null == e ? "" : "" + e;
+            return null == e ? "" : "" + e
         }
 
         function r(e, t, n) {
@@ -40414,7 +40433,7 @@
                             var o = "",
                                 a = encodeURIComponent;
                             for (var s in r) o += "&" + a(s) + "=" + a(r[s]);
-                            r = o.slice(1) + (i ? "" : "&_t=" + new Date);
+                            r = o.slice(1) + (i ? "" : "&_t=" + new Date)
                         }
                         try {
                             var l = new(XMLHttpRequest || ActiveXObject)("MSXML2.XMLHTTP.3.0");
@@ -41709,11 +41728,10 @@
                         var t = this.props,
                             n = t.trackEvent,
                             r = t.requestCollection;
-                        r(e.id),
-                            n("player_rec_select", {
-                                recommended_vod_view: "collection",
-                                recommended_collection_id: e.id
-                            })
+                        r(e.id), n("player_rec_select", {
+                            recommended_vod_view: "collection",
+                            recommended_collection_id: e.id
+                        })
                     }
                 }, {
                     key: "_preloadThumbnail",
