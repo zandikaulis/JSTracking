@@ -15835,7 +15835,9 @@ googletag.cmd = googletag.cmd || [],
                 OFFLINE_EXPERIENCE: "6e2f439b-916a-40b7-b1be-e82b284fd0bb",
                 FOLLOWING_COMMUNITIES: "42c46cf2-6a2e-49cb-9a68-622999710fed",
                 NEWSFEED_RECOMMENDATIONS: "30a7dfaa-e3d2-477e-a4f1-28e2ffb80e72",
-                LTV: "9985aa41-ce6a-48ab-abae-b0e0c34dca71"
+                LTV: "9985aa41-ce6a-48ab-abae-b0e0c34dca71",
+                HEARTHSTONE_DIRECTORY_FILTER: "33d53034-cd8b-408f-abe7-e740f2fec303",
+                OVERWATCH_DIRECTORY_FILTER: "6fffb6c6-19d4-4172-980f-498079d99b9c"
             },
             r = {
                 "fa99a372-3bd3-422d-8937-4de546931a37": "hidden",
@@ -15888,7 +15890,9 @@ googletag.cmd = googletag.cmd || [],
                 "6e2f439b-916a-40b7-b1be-e82b284fd0bb": "control",
                 "42c46cf2-6a2e-49cb-9a68-622999710fed": "bottom",
                 "30a7dfaa-e3d2-477e-a4f1-28e2ffb80e72": "control",
-                "9985aa41-ce6a-48ab-abae-b0e0c34dca71": "no"
+                "9985aa41-ce6a-48ab-abae-b0e0c34dca71": "no",
+                "33d53034-cd8b-408f-abe7-e740f2fec303": "no",
+                "6fffb6c6-19d4-4172-980f-498079d99b9c": "no"
             },
             o = {},
             s = {
