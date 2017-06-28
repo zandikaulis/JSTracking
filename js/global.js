@@ -14949,8 +14949,10 @@ googletag.cmd = googletag.cmd || [],
             }), e("#signup_form .birthday_fields select").dropdownify()
         });
         var t = function(t, n) {
-                e(".twitch_subwindow, .auth_form").find('iframe[name="passport"]').each(function() {
-                    this.contentWindow === t.source && n(this)
+                e(".twitch_subwindow, .auth_form").each(function() {
+                    0 === e(this).find(".auth-modal-wrapper").length && e(this).find('iframe[name="passport"]').each(function() {
+                        this.contentWindow === t.source && n(this)
+                    })
                 })
             },
             n = {
