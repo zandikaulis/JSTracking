@@ -545,10 +545,10 @@ window.SiteOptions = {
         "30a7dfaa-e3d2-477e-a4f1-28e2ffb80e72": {
             "name": "NEWSFEED_RECOMMENDATIONS",
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "variant"
             }]
         },
