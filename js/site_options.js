@@ -1098,6 +1098,16 @@ window.SiteOptions = {
                 "value": "holdout"
             }]
         },
+        "7da9cda1-2d29-4917-b595-0c1ea27121e3": {
+            "name": "TEST_EXPERIMENT_TESTING",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": ""
+            }]
+        },
         "80ee272f-44ec-4d8c-8ad1-72f4933a3da4": {
             "name": "android_pipboy_broadcasting",
             "groups": [{
