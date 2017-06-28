@@ -8617,7 +8617,7 @@ function(e, t) {
             html: !1,
             live: !1,
             offset: 0,
-            opacity: .8,
+            opacity: 1,
             title: "title",
             trigger: "hover",
             clickClose: !1,
