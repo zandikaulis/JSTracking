@@ -14645,23 +14645,10 @@ function(e, t) {
                         flushed: t - n,
                         buffered: n
                     }
-                }, e.trackUnloadEventsDebug = function() {
-                    var e = this;
-                    this.eventBuffer.forEach(function(t, n) {
-                        if (n === r.b) {
-                            var i = t.getEventsCounts();
-                            i.url = window.location.href || "", window.Twitch && window.Twitch.idsForMixpanel && (i.device_id = window.Twitch.idsForMixpanel.getOrCreateUniqueId());
-                            var o = {
-                                event: "unload-events-debug",
-                                properties: i
-                            };
-                            e.trackUrgentEvent(o, [r.b])
-                        }
-                    })
                 }, e.hookUnload = function() {
                     var e = this;
                     this.unloadHooked || (this.unloadHooked = !0, navigator && navigator.sendBeacon && window.addEventListener("unload", function() {
-                        e.trackUnloadEventsDebug(), e.eventBuffer.forEach(function(e, t) {
+                        e.eventBuffer.forEach(function(e, t) {
                             if (r.g)
                                 for (var n = 1; n;) n = e.flushOnce()
                         })
@@ -14755,12 +14742,6 @@ function(e, t) {
                             t = n.i(r.a)(e),
                             s = "data=" + t;
                         return n.i(o.a)(i.d[this.service].href, s), e.length
-                    }, e.prototype.getEventsCounts = function() {
-                        var e = {};
-                        return this.events.forEach(function(t) {
-                            var n = t.event;
-                            e[n] = e[n] || 0, e[n]++
-                        }), e.total_event_count = this.events.length, e
                     }, e.prototype.getBatch = function() {
                         var e = Math.max(i.i[this.service], 1);
                         return this.events.splice(0, e)
@@ -16658,8 +16639,7 @@ googletag.cmd = googletag.cmd || [],
                 googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("chan", e.asyncAds.metadata.chan), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", "https:" === window.location.protocol ? "true" : "false"), googletag.pubads().setTargeting("loggedin", e.user.isLoggedIn() ? "true" : "false"), googletag.display("dfp-channel-adlight")
             })
         }, n.afterCompanionAdsRendered = function(n) {
-            t(".js-new-channel-ad").length && ("google" === n && (t(".new_advertisement").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") || t("#google_companion_300x250").show()),
-                t(".js-ad-actions").show(), t(".new_advertisement").show(), e.asyncAds.resizeForCompanionAds(10))
+            t(".js-new-channel-ad").length && ("google" === n && (t(".new_advertisement").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") || t("#google_companion_300x250").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(), e.asyncAds.resizeForCompanionAds(10))
         }, n.resizeForCompanionAds = function(n) {
             setTimeout(function() {
                 var i = t(".js-new-channel-ad").outerHeight();
