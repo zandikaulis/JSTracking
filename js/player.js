@@ -4544,7 +4544,8 @@
                         anchor: r.anchor,
                         version: r.version,
                         viewerUrl: r.viewer_url,
-                        lastUserIdentityLinkState: a.permissionsState === H.EXTENSION_PERMISSION_STATE_GRANTED
+                        lastUserIdentityLinkState: a.permissionsState === H.EXTENSION_PERMISSION_STATE_GRANTED,
+                        supportsIdentityLinking: r.request_identity_link
                     })
                 }, [])
             }).catch(function() {
@@ -11638,7 +11639,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.28-223702+2773329f401921210e798ebcaddd566476e81ccb",
+                    app_version: "2017.06.29-142411+f10d0f46878c46cad0bb251876946ee4e30f5459",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -11888,7 +11889,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-0b41c0.sjc01.hls.ttvnw.net/v1/playlist/Cu5GTpdPExHo4I1M7ScV3Vv4g18q3u94I79tUgR-KQx-OfLg0J8NuGkWQfCT5BfrIBvk_uNn3vIYpCXPuKI7X2mW6QxQoWBMtaRrK7ZEb_S0reHEpPiP6D_z6cuND7xBx6FJHucvkmvg-sIK-JoO-1mKHBoidvkM7Tm7_WZj1QDL8kvcAt8nSJFyhh-HCKdkkQbopzUGZO3sZgEzr9T6bAsWOXqB_PE7AXmtNRccyIjjWwKkBS_ZKw0oMVnIYvuwqMhQWDD27ejX41T3cNvUInTXh18aNd1Y-6WOJvd89StezmS3klQmSryUvM9_OLvmhMPD9f7_EJR8lqditIonupukzZo3f6Jf1cGnhZ0Ube9Jg0YT2PxvW17Tiuw2lz10-3eK6M4IIRGENRwxKRKym_WPNmgEVgC1oHNaMjS2n6B7PflF.m3u8"
+        t.trustedSpadeURI = "//video-edge-a9e283.sjc01.hls.ttvnw.net/v1/playlist/CpozI5bK-Xl67S6TR6ThD4vivS05P2iDF5Ac3XyhVySOAXjMFxXzKdvxk9l_dXmuWUmkfTk1JKqTiTMkQYf15qmJEnAfbnkBQFZlxc_vM-5uFq9U9Za801vUBNpvod7Ce3SN2Uz4GdDc4iW3Thc0nKSCVBoUsxYzum3fFtkLBBbbiJhVcxw4A8y3KIuw4xO7kgTS8gBYUvmHXR5H9P0gJgAPOoFOQWGN6zrJOnKQE8uEuduAhsuIVFerjhCm2tdy1OQahTYUSuf3CZWffjKqNDRSTTsO49nxVQCZAyaOp7a21O1pRP-5wjG2M4_nf7EvwsYR701uH-V2MoohYTQpPnZ0lclcKHGPy6riv4dwGvT9E3qvoaIVbQbLnlTPVGeV3eFDXJrLzxOddv2X65pEvoj6V-BGzCyaQT_lr4G34qJ-VxuTaNHYwc0wPli2L4aT9h2BmG5AKU_UgnU4XsUWfJpc.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -37153,6 +37154,7 @@
                     name: f.default.string.isRequired,
                     summary: f.default.string.isRequired,
                     version: f.default.string.isRequired,
+                    supportsIdentityLinking: f.default.bool.isRequired,
                     token: f.default.shape({
                         token: f.default.string.isRequired,
                         permissionsState: f.default.string.isRequired,
@@ -37177,18 +37179,21 @@
                 return s(t, e), l(t, [{
                     key: "render",
                     value: function() {
-                        var e = void 0;
-                        this.props.extension.token.role !== p.EXTENSION_ROLE_BROADCASTER && this.props.isLoggedIn && (e = c.default.createElement(h.UserPermissionsButton, {
+                        var e = null,
+                            t = this.props.extension.supportsIdentityLinking,
+                            n = this.props.extension.token.permissionsState === p.EXTENSION_PERMISSION_STATE_GRANTED,
+                            r = this.props.extension.token.role !== p.EXTENSION_ROLE_BROADCASTER && this.props.isLoggedIn && (t || n);
+                        r && (e = c.default.createElement(h.UserPermissionsButton, {
                             isActive: this.state.dialogState === N,
                             onClick: this._boundOnUserPermissionClicked,
                             extension: this.props.extension
                         }));
-                        var t = C + "/" + this.props.extension.id + "-" + this.props.extension.version;
+                        var i = C + "/" + this.props.extension.id + "-" + this.props.extension.version;
                         return c.default.createElement("div", {
                             className: "player-hover extension-attribution"
                         }, c.default.createElement("a", {
                             className: S,
-                            href: t,
+                            href: i,
                             target: "_blank"
                         }, this.props.extension.name), e, c.default.createElement(m.MoreInfoButton, {
                             isActive: this.state.dialogState === R,
@@ -38173,7 +38178,8 @@
                 value: function() {
                     var e = $(".js-age-gate .js-select-month", this.$root),
                         t = $(".js-age-gate .js-select-year", this.$root);
-                    this._populateYearDropdown(), e.on("change", this._populateDayDropdown.bind(this)), t.on("change", this._populateDayDropdown.bind(this)), this._populateDayDropdown()
+                    this._populateYearDropdown(), e.on("change", this._populateDayDropdown.bind(this)),
+                        t.on("change", this._populateDayDropdown.bind(this)), this._populateDayDropdown()
                 }
             }, {
                 key: "_populateYearDropdown",
@@ -39272,7 +39278,8 @@
                 }, t.prototype.hasResourceBundle = function(e, t) {
                     return void 0 !== this.getResource(e, t)
                 }, t.prototype.getResourceBundle = function(e, t) {
-                    return t || (t = this.options.defaultNS), "v1" === this.options.compatibilityAPI ? u({}, this.getResource(e, t)) : this.getResource(e, t)
+                    return t || (t = this.options.defaultNS),
+                        "v1" === this.options.compatibilityAPI ? u({}, this.getResource(e, t)) : this.getResource(e, t)
                 }, t.prototype.toJSON = function() {
                     return this.data
                 }, t
@@ -39282,7 +39289,7 @@
         "use strict";
 
         function n(e) {
-            return null == e ? "" : "" + e;
+            return null == e ? "" : "" + e
         }
 
         function r(e, t, n) {
@@ -40407,7 +40414,8 @@
                         var t = {};
                         if (null != e)
                             for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-                        return t.default = e, t
+                        return t.default = e,
+                            t
                     }
 
                     function i(e, t) {
@@ -40419,7 +40427,7 @@
                             var o = "",
                                 a = encodeURIComponent;
                             for (var s in r) o += "&" + a(s) + "=" + a(r[s]);
-                            r = o.slice(1) + (i ? "" : "&_t=" + new Date);
+                            r = o.slice(1) + (i ? "" : "&_t=" + new Date)
                         }
                         try {
                             var l = new(XMLHttpRequest || ActiveXObject)("MSXML2.XMLHTTP.3.0");
@@ -41704,9 +41712,10 @@
                     value: function(e) {
                         var t = e.featuredCollection,
                             n = e.showFeaturedCollection;
-                        n && !this.props.showFeaturedCollection && (this._preloadThumbnail(), this.props.trackEvent("player_rec_show_collection", {
-                            recommended_collection_id: t.id
-                        }))
+                        n && !this.props.showFeaturedCollection && (this._preloadThumbnail(),
+                            this.props.trackEvent("player_rec_show_collection", {
+                                recommended_collection_id: t.id
+                            }))
                     }
                 }, {
                     key: "handleSelect",
@@ -41714,11 +41723,10 @@
                         var t = this.props,
                             n = t.trackEvent,
                             r = t.requestCollection;
-                        r(e.id),
-                            n("player_rec_select", {
-                                recommended_vod_view: "collection",
-                                recommended_collection_id: e.id
-                            })
+                        r(e.id), n("player_rec_select", {
+                            recommended_vod_view: "collection",
+                            recommended_collection_id: e.id
+                        })
                     }
                 }, {
                     key: "_preloadThumbnail",
