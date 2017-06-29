@@ -1784,6 +1784,16 @@ window.SiteOptions = {
                 "value": "no_prerolls"
             }]
         },
+        "ce68dbb6-4d54-4aa0-acee-b33faa539047": {
+            "name": "android_chomments_v2",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "active"
+            }]
+        },
         "cedb939e-3bea-49aa-a666-a6f2f599664d": {
             "name": "ios_big_goku",
             "groups": [{
