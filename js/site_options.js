@@ -1885,10 +1885,10 @@ window.SiteOptions = {
         "dcbdb47a-707d-40f0-828f-2e7910210a4d": {
             "name": "clips_fake_love",
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "variant1"
             }]
         },
