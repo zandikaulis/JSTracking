@@ -11639,7 +11639,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.30-143437+585c3cd34afd206ac72384e429d97ae3369d2073",
+                    app_version: "2017.06.30-173805+d8be87a589f10707f3cb847c1de17ffffff91e6d",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -45582,7 +45582,7 @@
             s = n(70),
             l = r(s),
             u = n(776),
-            c = ["host_channel", "content", "medium", "page_session_id", "tab_session_id"]
+            c = ["host_channel", "content", "medium", "page_session_id", "tab_session_id", "chat_visibility_status"]
     }, function(e, t) {
         "use strict";
 
