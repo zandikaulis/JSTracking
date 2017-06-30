@@ -11639,7 +11639,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.30-173805+d8be87a589f10707f3cb847c1de17ffffff91e6d",
+                    app_version: "2017.06.30-185205+450f8ba6ff9ca16fa1fdb8da2151453b7146b5f8",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -40869,7 +40869,7 @@
                             collectionItems: t,
                             showDivider: r,
                             showSidebar: this.showSidebar,
-                            streamId: i.videoId,
+                            streamId: String(i.videoId).substr(1),
                             title: o
                         }) : null
                     }
