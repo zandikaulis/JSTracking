@@ -11639,7 +11639,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.29-142411+f10d0f46878c46cad0bb251876946ee4e30f5459",
+                    app_version: "2017.06.30-143437+585c3cd34afd206ac72384e429d97ae3369d2073",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -11889,7 +11889,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-a9e283.sjc01.hls.ttvnw.net/v1/playlist/CpozI5bK-Xl67S6TR6ThD4vivS05P2iDF5Ac3XyhVySOAXjMFxXzKdvxk9l_dXmuWUmkfTk1JKqTiTMkQYf15qmJEnAfbnkBQFZlxc_vM-5uFq9U9Za801vUBNpvod7Ce3SN2Uz4GdDc4iW3Thc0nKSCVBoUsxYzum3fFtkLBBbbiJhVcxw4A8y3KIuw4xO7kgTS8gBYUvmHXR5H9P0gJgAPOoFOQWGN6zrJOnKQE8uEuduAhsuIVFerjhCm2tdy1OQahTYUSuf3CZWffjKqNDRSTTsO49nxVQCZAyaOp7a21O1pRP-5wjG2M4_nf7EvwsYR701uH-V2MoohYTQpPnZ0lclcKHGPy6riv4dwGvT9E3qvoaIVbQbLnlTPVGeV3eFDXJrLzxOddv2X65pEvoj6V-BGzCyaQT_lr4G34qJ-VxuTaNHYwc0wPli2L4aT9h2BmG5AKU_UgnU4XsUWfJpc.m3u8"
+        t.trustedSpadeURI = "//video-edge-97b89e.sjc01.hls.ttvnw.net/v1/playlist/Cr8ESqlWi5W_cdhHvkP0lVk0-axJzb_hpI8Gpp4IAAbV9nwc3k9Bxhsmjh3-GNFQ11erJZaKlQm7XSxhUxV1ryR_hBi1bgFceF_jLE3h52QhiCGCf5PDgDXpLClYsB-fLpy1u-uUc_LcO5KHW4engLm29W94ooHlIrmLL0ub2qq4G5NihNc0QmBP2TWCCzenflP0tSH2Qz-ROrHyrky6XBcEmZnofGMuD8yv97basUiRnMCK4auJmrvt-rJX3jUwYGO-a9pt0ESPV6JCAsL4teV_MevmUKk-agu6PakN9AbZgYRkoij76xBAy_sw0cBA7fPkFcfKk-ns6Md4W-BNXq_je-jS4LxWHKWPjjWgnkKTm_UZ0drnia3geOn7uC5G-HnghU1x-dVHK8XzVKSQZDX06JtuILohsCjvDUi6uKJoWDgx5Wt7U-.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -36733,11 +36733,14 @@
             P = r(w),
             O = n(406),
             A = n(182),
-            k = 16 / 9,
-            I = {
+            k = n(314),
+            I = i(k),
+            N = 16 / 9,
+            R = {
                 onExtensionDoubleClick: h.default.func.isRequired,
                 onIdentityToggle: h.default.func.isRequired,
                 onIdentityLinked: h.default.func.isRequired,
+                shouldEnableExtensions: h.default.bool.isRequired,
                 shouldShowExtensions: h.default.bool.isRequired,
                 extensions: h.default.shape({
                     extensions: h.default.arrayOf(h.default.shape({
@@ -36771,8 +36774,8 @@
                 playerType: h.default.string.isRequired,
                 trackEvent: h.default.func.isRequired
             },
-            N = (u = {}, l(u, P.PLAYER_SITE_MINI, !0), l(u, P.PLAYER_CURSE, !0), l(u, P.PLAYER_FRONTPAGE, !0), l(u, P.PLAYER_FACEBOOK, !0), l(u, P.PLAYER_HIGHLIGHTER, !0), l(u, P.PLAYER_PULSE, !0), l(u, P.PLAYER_TWITCH_EVERYWHERE, !0), u),
-            R = function(e) {
+            M = (u = {}, l(u, P.PLAYER_CURSE, !0), l(u, P.PLAYER_FRONTPAGE, !0), l(u, P.PLAYER_FACEBOOK, !0), l(u, P.PLAYER_HIGHLIGHTER, !0), l(u, P.PLAYER_PULSE, !0), l(u, P.PLAYER_TWITCH_EVERYWHERE, !0), u),
+            L = function(e) {
                 return {
                     extensions: e.extensions,
                     game: e.streamMetadata.game,
@@ -36780,7 +36783,8 @@
                     height: e.playerDimensions.height,
                     extensionsApi: e.extensions.extensionsApi,
                     videoResolution: e.stats.videoStats.videoResolution,
-                    shouldShowExtensions: e.env.platform !== b.PLATFORM_MOBILE_WEB && !N.hasOwnProperty(e.env.playerType) && e.stream.contentType === E.CONTENT_MODE_LIVE && e.playback.contentShowing && e.onlineStatus === O.ONLINE_STATUS && e.ads.currentMetadata.contentType === S.AdContentTypes.NONE,
+                    shouldEnableExtensions: e.env.platform !== b.PLATFORM_MOBILE_WEB && !M.hasOwnProperty(e.env.playerType) && e.stream.contentType === E.CONTENT_MODE_LIVE && e.playback.contentShowing && e.onlineStatus === O.ONLINE_STATUS,
+                    shouldShowExtensions: e.env.playerType !== P.PLAYER_SITE_MINI && e.ads.currentMetadata.contentType === S.AdContentTypes.NONE,
                     isLoggedIn: e.user.loggedInStatus === T.LOGGED_IN,
                     login: e.user.name,
                     loginId: e.user.id,
@@ -36793,7 +36797,7 @@
                     trackEvent: e.analyticsTracker.trackEvent
                 }
             },
-            M = t.mapDispatchToProps = function(e) {
+            D = t.mapDispatchToProps = function(e) {
                 return {
                     onExtensionDoubleClick: function() {
                         e((0, A.toggleFullScreen)())
@@ -36806,7 +36810,7 @@
                     }
                 }
             },
-            L = t.ExtensionsContainerComponent = function(e) {
+            x = t.ExtensionsContainerComponent = function(e) {
                 function t() {
                     o(this, t);
                     var e = a(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -36816,23 +36820,28 @@
                     key: "render",
                     value: function() {
                         var e = this.props,
-                            t = e.shouldShowExtensions,
-                            n = e.extensions,
-                            r = e.game,
-                            i = e.extensionsApi,
-                            o = e.videoResolution,
-                            a = this._getAspectRatio(o),
-                            s = this._computeDimensions(this.props.width, this.props.height, a),
-                            l = s.width,
-                            u = s.height,
-                            c = this._getTrackingProperties();
-                        if (!t || !n.extensions.length) return null;
-                        var d = n.extensions[0];
+                            t = e.shouldEnableExtensions,
+                            n = e.shouldShowExtensions,
+                            r = e.extensions,
+                            i = e.game,
+                            o = e.extensionsApi,
+                            a = e.videoResolution,
+                            s = this._getAspectRatio(a),
+                            l = this._computeDimensions(this.props.width, this.props.height, s),
+                            u = l.width,
+                            c = l.height,
+                            d = this._getTrackingProperties();
+                        if (!t || !r.extensions.length) return null;
+                        var p = r.extensions[0],
+                            h = (0, I.default)({
+                                "extension-container": !0,
+                                hide: !n
+                            });
                         return f.default.createElement("div", {
-                            className: "extension-container"
+                            className: h
                         }, f.default.createElement(y.ExtensionAttribution, {
                             channel: this.props.channel,
-                            extension: d,
+                            extension: p,
                             onIdentityToggle: this.props.onIdentityToggle,
                             trackEvent: this._boundTrackEvent,
                             isLoggedIn: this.props.isLoggedIn
@@ -36840,14 +36849,14 @@
                             className: "extension-overlays"
                         }, f.default.createElement(g.ExtensionOverlay, {
                             ref: this._boundExtensionOverlayRefHandler,
-                            width: l,
-                            height: u,
-                            key: d.id,
-                            extension: d,
-                            game: r,
-                            extensionsApi: i,
+                            width: u,
+                            height: c,
+                            key: p.id,
+                            extension: p,
+                            game: i,
+                            extensionsApi: o,
                             onIdentityLinked: this.props.onIdentityLinked,
-                            trackingProperties: c,
+                            trackingProperties: d,
                             onDoubleClick: this.props.onExtensionDoubleClick
                         })))
                     }
@@ -36893,15 +36902,15 @@
                     value: function(e) {
                         var t = /(\d+)\D*(\d+)/g,
                             n = t.exec(e);
-                        if (!n) return k;
+                        if (!n) return N;
                         var r = parseInt(n[1], 10),
                             i = parseInt(n[2], 10);
-                        return i ? r / i : k
+                        return i ? r / i : N
                     }
                 }]), t
             }(f.default.Component);
-        L.propTypes = I;
-        t.ExtensionsContainer = (0, _.connect)(R, M)(L)
+        x.propTypes = R;
+        t.ExtensionsContainer = (0, _.connect)(L, D)(x)
     }, function(e, t, n) {
         "use strict";
 
@@ -38178,8 +38187,7 @@
                 value: function() {
                     var e = $(".js-age-gate .js-select-month", this.$root),
                         t = $(".js-age-gate .js-select-year", this.$root);
-                    this._populateYearDropdown(), e.on("change", this._populateDayDropdown.bind(this)),
-                        t.on("change", this._populateDayDropdown.bind(this)), this._populateDayDropdown()
+                    this._populateYearDropdown(), e.on("change", this._populateDayDropdown.bind(this)), t.on("change", this._populateDayDropdown.bind(this)), this._populateDayDropdown()
                 }
             }, {
                 key: "_populateYearDropdown",
@@ -39276,10 +39284,9 @@
                 }, t.prototype.removeResourceBundle = function(e, t) {
                     this.hasResourceBundle(e, t) && delete this.data[e][t], this.removeNamespaces(t), this.emit("removed", e, t)
                 }, t.prototype.hasResourceBundle = function(e, t) {
-                    return void 0 !== this.getResource(e, t)
+                    return void 0 !== this.getResource(e, t);
                 }, t.prototype.getResourceBundle = function(e, t) {
-                    return t || (t = this.options.defaultNS),
-                        "v1" === this.options.compatibilityAPI ? u({}, this.getResource(e, t)) : this.getResource(e, t)
+                    return t || (t = this.options.defaultNS), "v1" === this.options.compatibilityAPI ? u({}, this.getResource(e, t)) : this.getResource(e, t)
                 }, t.prototype.toJSON = function() {
                     return this.data
                 }, t
@@ -40414,8 +40421,7 @@
                         var t = {};
                         if (null != e)
                             for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-                        return t.default = e,
-                            t
+                        return t.default = e, t
                     }
 
                     function i(e, t) {
@@ -41712,10 +41718,9 @@
                     value: function(e) {
                         var t = e.featuredCollection,
                             n = e.showFeaturedCollection;
-                        n && !this.props.showFeaturedCollection && (this._preloadThumbnail(),
-                            this.props.trackEvent("player_rec_show_collection", {
-                                recommended_collection_id: t.id
-                            }))
+                        n && !this.props.showFeaturedCollection && (this._preloadThumbnail(), this.props.trackEvent("player_rec_show_collection", {
+                            recommended_collection_id: t.id
+                        }))
                     }
                 }, {
                     key: "handleSelect",
