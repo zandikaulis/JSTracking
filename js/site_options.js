@@ -1836,6 +1836,16 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
+        "d0c9c096-4c59-4614-9e0c-38580a7785dd": {
+            "name": "ios_tablet_landscape_chat",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "active"
+            }]
+        },
         "d1aef411-5131-4ffe-8dc8-f6f1f9c05e78": {
             "name": "android_playercore_4",
             "groups": [{
