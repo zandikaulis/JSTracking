@@ -848,10 +848,10 @@ window.SiteOptions = {
         "4e9d0a3c-4f43-4817-8db4-ac060fc32b74": {
             "name": "latency_component_instrumentation",
             "groups": [{
-                "weight": 90,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 5,
                 "value": "active"
             }]
         },
