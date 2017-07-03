@@ -845,6 +845,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "4e9d0a3c-4f43-4817-8db4-ac060fc32b74": {
+            "name": "latency_component_instrumentation",
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "active"
+            }]
+        },
         "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2": {
             "name": "Resume Watching Banner",
             "groups": [{
