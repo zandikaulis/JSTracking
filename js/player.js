@@ -11639,7 +11639,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.05-184328+508e994a434bbe00c1f6501b9e94eab7f2dc3116",
+                    app_version: "2017.07.05-213143+e16e630723af3af6f6240744b1b1e551fef60a14",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -21744,7 +21744,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.TYPE_DEAD_LTV = void 0, t.streamMetadata = i;
+        }), t.TYPE_WATCH_PARTY = t.TYPE_DEAD_LTV = void 0, t.streamMetadata = i;
         var o = n(340),
             a = n(338),
             s = n(167),
@@ -21753,7 +21753,7 @@
             c = r(u),
             d = n(117),
             f = r(d),
-            p = (t.TYPE_DEAD_LTV = "dead_ltv", Object.freeze({
+            p = (t.TYPE_DEAD_LTV = "dead_ltv", t.TYPE_WATCH_PARTY = "watch_party", Object.freeze({
                 broadcastID: 0,
                 channelName: null,
                 videoId: null,
@@ -23402,12 +23402,11 @@
         }
 
         function i(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
         }
         Object.defineProperty(t, "__esModule", {
-                value: !0
-            }),
-            t.PlayerUIControlsDisplay = void 0;
+            value: !0
+        }), t.PlayerUIControlsDisplay = void 0;
         var o = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -36733,10 +36732,11 @@
             P = r(w),
             O = n(406),
             A = n(182),
-            k = n(314),
-            I = i(k),
-            N = 16 / 9,
-            R = {
+            k = n(423),
+            I = n(314),
+            N = i(I),
+            R = 16 / 9,
+            M = {
                 onExtensionDoubleClick: h.default.func.isRequired,
                 onIdentityToggle: h.default.func.isRequired,
                 onIdentityLinked: h.default.func.isRequired,
@@ -36774,8 +36774,8 @@
                 playerType: h.default.string.isRequired,
                 trackEvent: h.default.func.isRequired
             },
-            M = (u = {}, l(u, P.PLAYER_CURSE, !0), l(u, P.PLAYER_FRONTPAGE, !0), l(u, P.PLAYER_FACEBOOK, !0), l(u, P.PLAYER_HIGHLIGHTER, !0), l(u, P.PLAYER_PULSE, !0), l(u, P.PLAYER_TWITCH_EVERYWHERE, !0), u),
-            L = function(e) {
+            L = (u = {}, l(u, P.PLAYER_CURSE, !0), l(u, P.PLAYER_FRONTPAGE, !0), l(u, P.PLAYER_FACEBOOK, !0), l(u, P.PLAYER_HIGHLIGHTER, !0), l(u, P.PLAYER_PULSE, !0), l(u, P.PLAYER_TWITCH_EVERYWHERE, !0), u),
+            D = function(e) {
                 return {
                     extensions: e.extensions,
                     game: e.streamMetadata.game,
@@ -36783,7 +36783,7 @@
                     height: e.playerDimensions.height,
                     extensionsApi: e.extensions.extensionsApi,
                     videoResolution: e.stats.videoStats.videoResolution,
-                    shouldEnableExtensions: e.env.platform !== b.PLATFORM_MOBILE_WEB && !M.hasOwnProperty(e.env.playerType) && e.stream.contentType === E.CONTENT_MODE_LIVE && e.playback.contentShowing && e.onlineStatus === O.ONLINE_STATUS,
+                    shouldEnableExtensions: e.env.platform !== b.PLATFORM_MOBILE_WEB && !L.hasOwnProperty(e.env.playerType) && e.stream.contentType === E.CONTENT_MODE_LIVE && e.streamMetadata.streamType !== k.TYPE_WATCH_PARTY && e.playback.contentShowing && e.onlineStatus === O.ONLINE_STATUS,
                     shouldShowExtensions: e.env.playerType !== P.PLAYER_SITE_MINI && e.ads.currentMetadata.contentType === S.AdContentTypes.NONE,
                     isLoggedIn: e.user.loggedInStatus === T.LOGGED_IN,
                     login: e.user.name,
@@ -36797,7 +36797,7 @@
                     trackEvent: e.analyticsTracker.trackEvent
                 }
             },
-            D = t.mapDispatchToProps = function(e) {
+            x = t.mapDispatchToProps = function(e) {
                 return {
                     onExtensionDoubleClick: function() {
                         e((0, A.toggleFullScreen)())
@@ -36810,7 +36810,7 @@
                     }
                 }
             },
-            x = t.ExtensionsContainerComponent = function(e) {
+            j = t.ExtensionsContainerComponent = function(e) {
                 function t() {
                     o(this, t);
                     var e = a(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -36833,7 +36833,7 @@
                             d = this._getTrackingProperties();
                         if (!t || !r.extensions.length) return null;
                         var p = r.extensions[0],
-                            h = (0, I.default)({
+                            h = (0, N.default)({
                                 "extension-container": !0,
                                 hide: !n
                             });
@@ -36902,15 +36902,15 @@
                     value: function(e) {
                         var t = /(\d+)\D*(\d+)/g,
                             n = t.exec(e);
-                        if (!n) return N;
+                        if (!n) return R;
                         var r = parseInt(n[1], 10),
                             i = parseInt(n[2], 10);
-                        return i ? r / i : N
+                        return i ? r / i : R
                     }
                 }]), t
             }(f.default.Component);
-        x.propTypes = R;
-        t.ExtensionsContainer = (0, _.connect)(L, D)(x)
+        j.propTypes = M;
+        t.ExtensionsContainer = (0, _.connect)(D, x)(j)
     }, function(e, t, n) {
         "use strict";
 
@@ -36921,7 +36921,7 @@
         }
 
         function i(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
         }
 
         function o(e, t) {
@@ -39282,9 +39282,10 @@
                     var a = p.getPath(this.data, o) || {};
                     r ? p.deepExtend(a, n, i) : a = u({}, a, n), p.setPath(this.data, o, a), this.emit("added", e, t, n)
                 }, t.prototype.removeResourceBundle = function(e, t) {
-                    this.hasResourceBundle(e, t) && delete this.data[e][t], this.removeNamespaces(t), this.emit("removed", e, t)
+                    this.hasResourceBundle(e, t) && delete this.data[e][t], this.removeNamespaces(t),
+                        this.emit("removed", e, t)
                 }, t.prototype.hasResourceBundle = function(e, t) {
-                    return void 0 !== this.getResource(e, t);
+                    return void 0 !== this.getResource(e, t)
                 }, t.prototype.getResourceBundle = function(e, t) {
                     return t || (t = this.options.defaultNS), "v1" === this.options.compatibilityAPI ? u({}, this.getResource(e, t)) : this.getResource(e, t)
                 }, t.prototype.toJSON = function() {
@@ -40411,7 +40412,7 @@
                     return n[s].exports
                 }
                 for (var a = "function" == typeof r && r, s = 0; s < i.length; s++) o(i[s]);
-                return o
+                return o;
             }({
                 1: [function(e, t, n) {
                     "use strict";
