@@ -1360,6 +1360,16 @@ window.SiteOptions = {
                 "value": "holdback"
             }]
         },
+        "9b0ada24-ec4b-4664-8576-bf2dda26724b": {
+            "name": "android_theatre_refactor",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "9c843e59-0208-4c83-ae5a-620fb05508ef": {
             "name": "ios_making_the_doughnuts",
             "groups": [{
