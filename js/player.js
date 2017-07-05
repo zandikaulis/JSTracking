@@ -11639,7 +11639,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.06.30-185205+450f8ba6ff9ca16fa1fdb8da2151453b7146b5f8",
+                    app_version: "2017.07.05-183334+feb02869c7bf5a303bceda1ecd5d9a885f3b3005",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -11889,7 +11889,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-97b89e.sjc01.hls.ttvnw.net/v1/playlist/Cr8ESqlWi5W_cdhHvkP0lVk0-axJzb_hpI8Gpp4IAAbV9nwc3k9Bxhsmjh3-GNFQ11erJZaKlQm7XSxhUxV1ryR_hBi1bgFceF_jLE3h52QhiCGCf5PDgDXpLClYsB-fLpy1u-uUc_LcO5KHW4engLm29W94ooHlIrmLL0ub2qq4G5NihNc0QmBP2TWCCzenflP0tSH2Qz-ROrHyrky6XBcEmZnofGMuD8yv97basUiRnMCK4auJmrvt-rJX3jUwYGO-a9pt0ESPV6JCAsL4teV_MevmUKk-agu6PakN9AbZgYRkoij76xBAy_sw0cBA7fPkFcfKk-ns6Md4W-BNXq_je-jS4LxWHKWPjjWgnkKTm_UZ0drnia3geOn7uC5G-HnghU1x-dVHK8XzVKSQZDX06JtuILohsCjvDUi6uKJoWDgx5Wt7U-.m3u8"
+        t.trustedSpadeURI = "//video-edge-4f2981.sjc01.hls.ttvnw.net/v1/playlist/CmXEITcNjlii_CpGT1WcKXWZIytwftAwzDJVV5LzrNLMlOJ7VzUz-ND_xEx2Hi9wn9CYW_iRwMBI6z0e7jlSZR9QfXZnetloGUbLG9HsGyl0mRDi6NHXtJBXc5cwyAvq8bnOrYSlXodjH-kLxJHMzLqyZ2IGA3O62PjR9WU2LCn2TV-bJIzPLZ2LOf5R93Bs8hXX6u1G1S2M0QW8ibhNfRgrkGdxb7HEhhlZ-FBvPyffCQ-rCYD8e834kwj42hlfTIx3TU_eiPnWOHt1H28lk_-sArUrNeXvl0fXw2CTshnD4FuQMeUDSuC1hK7hnAxrgsu3B_OhhoRPp70vZtgHmZm2f9wXKYfe58q4g7JEv0t5BDHLBtQQxglRLK92hGjo4nT9R_c1IU7mkgdltM-q6FnQiVLOxtQx23XGd6BNp1YJRSt4RwdTbXfDspIg7.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -21611,7 +21611,7 @@
                                 var o = t.preview.template;
                                 M = o.replace("320x240", w), A()
                             }
-                            I = (0, s.videoUrl)(t.channel.name, t.videoId);
+                            I = Promise.resolve((0, s.videoUrl)(t.channel.name, t.videoId));
                             break;
                         case h.CONTENT_MODE_NONE:
                             t.streamType === C.TYPE_DEAD_LTV && (M = t.channel.videoBanner.replace("320x240", w), A())
@@ -23405,8 +23405,9 @@
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
         Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.PlayerUIControlsDisplay = void 0;
+                value: !0
+            }),
+            t.PlayerUIControlsDisplay = void 0;
         var o = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -24946,8 +24947,7 @@
                 eventTypes: A,
                 extractEvents: function(e, t, n, i) {
                     var o, a, s = t ? T.getNodeFromInstance(t) : window;
-                    if (r(s) ? M ? o = l : a = u : O(s) ? L ? o = p : (o = _,
-                            a = h) : v(s) && (o = m), o) {
+                    if (r(s) ? M ? o = l : a = u : O(s) ? L ? o = p : (o = _, a = h) : v(s) && (o = m), o) {
                         var c = o(e, t);
                         if (c) {
                             var d = C.getPooled(A.change, c, n, i);

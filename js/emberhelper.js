@@ -104,416 +104,6 @@ function(e) {
     })
 }),
 function(e) {
-    "use strict";
-    typeof define == "function" && define.amd ? define(["jquery", "jquery.ui.widget"], e) : e(window.jQuery)
-}(function(e) {
-    "use strict";
-    e.support.xhrFileUpload = !!window.XMLHttpRequestUpload && !!window.FileReader, e.support.xhrFormDataFileUpload = !!window.FormData, e.widget("blueimp.fileupload", {
-        options: {
-            namespace: undefined,
-            dropZone: e(document),
-            pasteZone: e(document),
-            fileInput: undefined,
-            replaceFileInput: !0,
-            paramName: undefined,
-            singleFileUploads: !0,
-            limitMultiFileUploads: undefined,
-            sequentialUploads: !1,
-            limitConcurrentUploads: undefined,
-            forceIframeTransport: !1,
-            redirect: undefined,
-            redirectParamName: undefined,
-            postMessage: undefined,
-            multipart: !0,
-            maxChunkSize: undefined,
-            uploadedBytes: undefined,
-            recalculateProgress: !0,
-            progressInterval: 100,
-            bitrateInterval: 500,
-            formData: function(e) {
-                return e.serializeArray()
-            },
-            add: function(e, t) {
-                t.submit()
-            },
-            processData: !1,
-            contentType: !1,
-            cache: !1
-        },
-        _refreshOptionsList: ["namespace", "fileInput", "dropZone", "pasteZone", "multipart", "forceIframeTransport"],
-        _BitrateTimer: function() {
-            this.timestamp = +(new Date), this.loaded = 0, this.bitrate = 0, this.getBitrate = function(e, t, n) {
-                var r = e - this.timestamp;
-                if (!this.bitrate || !n || r > n) this.bitrate = (t - this.loaded) * (1e3 / r) * 8, this.loaded = t, this.timestamp = e;
-                return this.bitrate
-            }
-        },
-        _isXHRUpload: function(t) {
-            return !t.forceIframeTransport && (!t.multipart && e.support.xhrFileUpload || e.support.xhrFormDataFileUpload)
-        },
-        _getFormData: function(t) {
-            var n;
-            return typeof t.formData == "function" ? t.formData(t.form) : e.isArray(t.formData) ? t.formData : t.formData ? (n = [], e.each(t.formData, function(e, t) {
-                n.push({
-                    name: e,
-                    value: t
-                })
-            }), n) : []
-        },
-        _getTotal: function(t) {
-            var n = 0;
-            return e.each(t, function(e, t) {
-                n += t.size || 1
-            }), n
-        },
-        _onProgress: function(e, t) {
-            if (e.lengthComputable) {
-                var n = +(new Date),
-                    r, i;
-                if (t._time && t.progressInterval && n - t._time < t.progressInterval && e.loaded !== e.total) return;
-                t._time = n, r = t.total || this._getTotal(t.files), i = parseInt(e.loaded / e.total * (t.chunkSize || r), 10) + (t.uploadedBytes || 0), this._loaded += i - (t.loaded || t.uploadedBytes || 0), t.lengthComputable = !0, t.loaded = i, t.total = r, t.bitrate = t._bitrateTimer.getBitrate(n, i, t.bitrateInterval), this._trigger("progress", e, t), this._trigger("progressall", e, {
-                    lengthComputable: !0,
-                    loaded: this._loaded,
-                    total: this._total,
-                    bitrate: this._bitrateTimer.getBitrate(n, this._loaded, t.bitrateInterval)
-                })
-            }
-        },
-        _initProgressListener: function(t) {
-            var n = this,
-                r = t.xhr ? t.xhr() : e.ajaxSettings.xhr();
-            r.upload && (e(r.upload).bind("progress", function(e) {
-                var r = e.originalEvent;
-                e.lengthComputable = r.lengthComputable, e.loaded = r.loaded, e.total = r.total, n._onProgress(e, t)
-            }), t.xhr = function() {
-                return r
-            })
-        },
-        _initXHRData: function(t) {
-            var n, r = t.files[0],
-                i = t.multipart || !e.support.xhrFileUpload,
-                s = t.paramName[0];
-            if (!i || t.blob) t.headers = e.extend(t.headers, {
-                "X-File-Name": r.name,
-                "X-File-Type": r.type,
-                "X-File-Size": r.size
-            }), t.blob ? i || (t.contentType = "application/octet-stream", t.data = t.blob) : (t.contentType = r.type, t.data = r);
-            i && e.support.xhrFormDataFileUpload && (t.postMessage ? (n = this._getFormData(t), t.blob ? n.push({
-                name: s,
-                value: t.blob
-            }) : e.each(t.files, function(e, r) {
-                n.push({
-                    name: t.paramName[e] || s,
-                    value: r
-                })
-            })) : (t.formData instanceof FormData ? n = t.formData : (n = new FormData, e.each(this._getFormData(t), function(e, t) {
-                n.append(t.name, t.value)
-            })), t.blob ? n.append(s, t.blob, r.name) : e.each(t.files, function(e, r) {
-                r instanceof Blob && n.append(t.paramName[e] || s, r, r.name)
-            })), t.data = n), t.blob = null
-        },
-        _initIframeSettings: function(t) {
-            t.dataType = "iframe " + (t.dataType || ""), t.formData = this._getFormData(t), t.redirect && e("<a></a>").prop("href", t.url).prop("host") !== location.host && t.formData.push({
-                name: t.redirectParamName || "redirect",
-                value: t.redirect
-            })
-        },
-        _initDataSettings: function(e) {
-            this._isXHRUpload(e) ? (this._chunkedUpload(e, !0) || (e.data || this._initXHRData(e), this._initProgressListener(e)), e.postMessage && (e.dataType = "postmessage " + (e.dataType || ""))) : this._initIframeSettings(e, "iframe")
-        },
-        _getParamName: function(t) {
-            var n = e(t.fileInput),
-                r = t.paramName;
-            return r ? e.isArray(r) || (r = [r]) : (r = [], n.each(function() {
-                var t = e(this),
-                    n = t.prop("name") || "files[]",
-                    i = (t.prop("files") || [1]).length;
-                while (i) r.push(n), i -= 1
-            }), r.length || (r = [n.prop("name") || "files[]"])), r
-        },
-        _initFormSettings: function(t) {
-            if (!t.form || !t.form.length) t.form = e(t.fileInput.prop("form")), t.form.length || (t.form = e(this.options.fileInput.prop("form")));
-            t.paramName = this._getParamName(t), t.url || (t.url = t.form.prop("action") || location.href), t.type = (t.type || t.form.prop("method") || "").toUpperCase(), t.type !== "POST" && t.type !== "PUT" && (t.type = "POST"), t.formAcceptCharset || (t.formAcceptCharset = t.form.attr("accept-charset"))
-        },
-        _getAJAXSettings: function(t) {
-            var n = e.extend({}, this.options, t);
-            return this._initFormSettings(n), this._initDataSettings(n), n
-        },
-        _enhancePromise: function(e) {
-            return e.success = e.done, e.error = e.fail, e.complete = e.always, e
-        },
-        _getXHRPromise: function(t, n, r) {
-            var i = e.Deferred(),
-                s = i.promise();
-            return n = n || this.options.context || s, t === !0 ? i.resolveWith(n, r) : t === !1 && i.rejectWith(n, r), s.abort = i.promise, this._enhancePromise(s)
-        },
-        _chunkedUpload: function(t, n) {
-            var r = this,
-                i = t.files[0],
-                s = i.size,
-                o = t.uploadedBytes = t.uploadedBytes || 0,
-                u = t.maxChunkSize || s,
-                a = i.slice || i.webkitSlice || i.mozSlice,
-                f, l, c, h;
-            return !(this._isXHRUpload(t) && a && (o || u < s)) || t.data ? !1 : n ? !0 : o >= s ? (i.error = "Uploaded bytes exceed file size", this._getXHRPromise(!1, t.context, [null, "error", i.error])) : (l = Math.ceil((s - o) / u), f = function(n) {
-                return n ? f(n -= 1).pipe(function() {
-                    var s = e.extend({}, t);
-                    return s.blob = a.call(i, o + n * u, o + (n + 1) * u), s.chunkIndex = n, s.chunksNumber = l, s.chunkSize = s.blob.size, r._initXHRData(s), r._initProgressListener(s), c = (e.ajax(s) || r._getXHRPromise(!1, s.context)).done(function() {
-                        s.loaded || r._onProgress(e.Event("progress", {
-                            lengthComputable: !0,
-                            loaded: s.chunkSize,
-                            total: s.chunkSize
-                        }), s), t.uploadedBytes = s.uploadedBytes += s.chunkSize
-                    }), c
-                }) : r._getXHRPromise(!0, t.context)
-            }, h = f(l), h.abort = function() {
-                return c.abort()
-            }, this._enhancePromise(h))
-        },
-        _beforeSend: function(e, t) {
-            this._active === 0 && (this._trigger("start"), this._bitrateTimer = new this._BitrateTimer), this._active += 1, this._loaded += t.uploadedBytes || 0, this._total += this._getTotal(t.files)
-        },
-        _onDone: function(t, n, r, i) {
-            this._isXHRUpload(i) || this._onProgress(e.Event("progress", {
-                lengthComputable: !0,
-                loaded: 1,
-                total: 1
-            }), i), i.result = t, i.textStatus = n, i.jqXHR = r, this._trigger("done", null, i)
-        },
-        _onFail: function(e, t, n, r) {
-            r.jqXHR = e, r.textStatus = t, r.errorThrown = n, this._trigger("fail", null, r), r.recalculateProgress && (this._loaded -= r.loaded || r.uploadedBytes || 0, this._total -= r.total || this._getTotal(r.files))
-        },
-        _onAlways: function(e, t, n, r) {
-            this._active -= 1, r.textStatus = t, n && n.always ? (r.jqXHR = n, r.result = e) : (r.jqXHR = e, r.errorThrown = n), this._trigger("always", null, r), this._active === 0 && (this._trigger("stop"), this._loaded = this._total = 0, this._bitrateTimer = null)
-        },
-        _onSend: function(t, n) {
-            var r = this,
-                i, s, o, u = r._getAJAXSettings(n),
-                a = function(n, s) {
-                    return r._sending += 1, u._bitrateTimer = new r._BitrateTimer, i = i || (n !== !1 && r._trigger("send", t, u) !== !1 && (r._chunkedUpload(u) || e.ajax(u)) || r._getXHRPromise(!1, u.context, s)).done(function(e, t, n) {
-                        r._onDone(e, t, n, u)
-                    }).fail(function(e, t, n) {
-                        r._onFail(e, t, n, u)
-                    }).always(function(e, t, n) {
-                        r._sending -= 1, r._onAlways(e, t, n, u);
-                        if (u.limitConcurrentUploads && u.limitConcurrentUploads > r._sending) {
-                            var i = r._slots.shift(),
-                                s;
-                            while (i) {
-                                s = i.state ? i.state() === "pending" : !i.isRejected();
-                                if (s) {
-                                    i.resolve();
-                                    break
-                                }
-                                i = r._slots.shift()
-                            }
-                        }
-                    }), i
-                };
-            return this._beforeSend(t, u), this.options.sequentialUploads || this.options.limitConcurrentUploads && this.options.limitConcurrentUploads <= this._sending ? (this.options.limitConcurrentUploads > 1 ? (s = e.Deferred(), this._slots.push(s), o = s.pipe(a)) : o = this._sequence = this._sequence.pipe(a, a), o.abort = function() {
-                var e = [undefined, "abort", "abort"];
-                return i ? i.abort() : (s && s.rejectWith(o, e), a(!1, e))
-            }, this._enhancePromise(o)) : a()
-        },
-        _onAdd: function(t, n) {
-            var r = this,
-                i = !0,
-                s = e.extend({}, this.options, n),
-                o = s.limitMultiFileUploads,
-                u = this._getParamName(s),
-                a, f, l, c;
-            if (!s.singleFileUploads && !o || !this._isXHRUpload(s)) l = [n.files], a = [u];
-            else if (!s.singleFileUploads && o) {
-                l = [], a = [];
-                for (c = 0; c < n.files.length; c += o) l.push(n.files.slice(c, c + o)), f = u.slice(c, c + o), f.length || (f = u), a.push(f)
-            } else a = u;
-            return n.originalFiles = n.files, e.each(l || n.files, function(s, o) {
-                var u = e.extend({}, n);
-                return u.files = l ? o : [o], u.paramName = a[s], u.submit = function() {
-                    return u.jqXHR = this.jqXHR = r._trigger("submit", t, this) !== !1 && r._onSend(t, this), this.jqXHR
-                }, i = r._trigger("add", t, u)
-            }), i
-        },
-        _replaceFileInput: function(t) {
-            var n = t.clone(!0);
-            e("<form></form>").append(n)[0].reset(), t.after(n).detach(), e.cleanData(t.unbind("remove")), this.options.fileInput = this.options.fileInput.map(function(e, r) {
-                return r === t[0] ? n[0] : r
-            }), t[0] === this.element[0] && (this.element = n)
-        },
-        _handleFileTreeEntry: function(t, n) {
-            var r = this,
-                i = e.Deferred(),
-                s = function(e) {
-                    e && !e.entry && (e.entry = t), i.resolve([e])
-                },
-                o;
-            return n = n || "", t.isFile ? t._file ? (t._file.relativePath = n, i.resolve(t._file)) : t.file(function(e) {
-                e.relativePath = n, i.resolve(e)
-            }, s) : t.isDirectory ? (o = t.createReader(), o.readEntries(function(e) {
-                r._handleFileTreeEntries(e, n + t.name + "/").done(function(e) {
-                    i.resolve(e)
-                }).fail(s)
-            }, s)) : i.resolve([]), i.promise()
-        },
-        _handleFileTreeEntries: function(t, n) {
-            var r = this;
-            return e.when.apply(e, e.map(t, function(e) {
-                return r._handleFileTreeEntry(e, n)
-            })).pipe(function() {
-                return Array.prototype.concat.apply([], arguments)
-            })
-        },
-        _getDroppedFiles: function(t) {
-            t = t || {};
-            var n = t.items;
-            return n && n.length && (n[0].webkitGetAsEntry || n[0].getAsEntry) ? this._handleFileTreeEntries(e.map(n, function(e) {
-                var t;
-                return e.webkitGetAsEntry ? (t = e.webkitGetAsEntry(), t._file = e.getAsFile(), t) : e.getAsEntry()
-            })) : e.Deferred().resolve(e.makeArray(t.files)).promise()
-        },
-        _getSingleFileInputFiles: function(t) {
-            t = e(t);
-            var n = t.prop("webkitEntries") || t.prop("entries"),
-                r, i;
-            if (n && n.length) return this._handleFileTreeEntries(n);
-            r = e.makeArray(t.prop("files"));
-            if (!r.length) {
-                i = t.prop("value");
-                if (!i) return e.Deferred().resolve([]).promise();
-                r = [{
-                    name: i.replace(/^.*\\/, "")
-                }]
-            }
-            return e.Deferred().resolve(r).promise()
-        },
-        _getFileInputFiles: function(t) {
-            return t instanceof e && t.length !== 1 ? e.when.apply(e, e.map(t, this._getSingleFileInputFiles)).pipe(function() {
-                return Array.prototype.concat.apply([], arguments)
-            }) : this._getSingleFileInputFiles(t)
-        },
-        _onChange: function(t) {
-            var n = t.data.fileupload,
-                r = {
-                    fileInput: e(t.target),
-                    form: e(t.target.form)
-                };
-            n._getFileInputFiles(r.fileInput).always(function(e) {
-                r.files = e, n.options.replaceFileInput && n._replaceFileInput(r.fileInput), n._trigger("change", t, r) !== !1 && n._onAdd(t, r)
-            })
-        },
-        _onPaste: function(t) {
-            var n = t.data.fileupload,
-                r = t.originalEvent.clipboardData,
-                i = r && r.items || [],
-                s = {
-                    files: []
-                };
-            e.each(i, function(e, t) {
-                var n = t.getAsFile && t.getAsFile();
-                n && s.files.push(n)
-            });
-            if (n._trigger("paste", t, s) === !1 || n._onAdd(t, s) === !1) return !1
-        },
-        _onDrop: function(e) {
-            e.preventDefault();
-            var t = e.data.fileupload,
-                n = e.dataTransfer = e.originalEvent.dataTransfer,
-                r = {};
-            t._getDroppedFiles(n).always(function(n) {
-                r.files = n, t._trigger("drop", e, r) !== !1 && t._onAdd(e, r)
-            })
-        },
-        _onDragOver: function(e) {
-            var t = e.data.fileupload,
-                n = e.dataTransfer = e.originalEvent.dataTransfer;
-            if (t._trigger("dragover", e) === !1) return !1;
-            n && (n.dropEffect = "copy"), e.preventDefault()
-        },
-        _initEventHandlers: function() {
-            var e = this.options.namespace;
-            this._isXHRUpload(this.options) && (this.options.dropZone.bind("dragover." + e, {
-                fileupload: this
-            }, this._onDragOver).bind("drop." + e, {
-                fileupload: this
-            }, this._onDrop), this.options.pasteZone.bind("paste." + e, {
-                fileupload: this
-            }, this._onPaste)), this.options.fileInput.bind("change." + e, {
-                fileupload: this
-            }, this._onChange)
-        },
-        _destroyEventHandlers: function() {
-            var e = this.options.namespace;
-            this.options.dropZone.unbind("dragover." + e, this._onDragOver).unbind("drop." + e, this._onDrop), this.options.pasteZone.unbind("paste." + e, this._onPaste), this.options.fileInput.unbind("change." + e, this._onChange)
-        },
-        _setOption: function(t, n) {
-            var r = e.inArray(t, this._refreshOptionsList) !== -1;
-            r && this._destroyEventHandlers(), e.Widget.prototype._setOption.call(this, t, n), r && (this._initSpecialOptions(), this._initEventHandlers())
-        },
-        _initSpecialOptions: function() {
-            var t = this.options;
-            t.fileInput === undefined ? t.fileInput = this.element.is('input[type="file"]') ? this.element : this.element.find('input[type="file"]') : t.fileInput instanceof e || (t.fileInput = e(t.fileInput)), t.dropZone instanceof e || (t.dropZone = e(t.dropZone)), t.pasteZone instanceof e || (t.pasteZone = e(t.pasteZone))
-        },
-        _create: function() {
-            var t = this.options;
-            e.extend(t, e(this.element[0].cloneNode(!1)).data()), t.namespace = t.namespace || this.widgetName, this._initSpecialOptions(), this._slots = [], this._sequence = this._getXHRPromise(!0), this._sending = this._active = this._loaded = this._total = 0, this._initEventHandlers()
-        },
-        destroy: function() {
-            this._destroyEventHandlers(), e.Widget.prototype.destroy.call(this)
-        },
-        enable: function() {
-            var t = !1;
-            this.options.disabled && (t = !0), e.Widget.prototype.enable.call(this), t && this._initEventHandlers()
-        },
-        disable: function() {
-            this.options.disabled || this._destroyEventHandlers(), e.Widget.prototype.disable.call(this)
-        },
-        add: function(t) {
-            var n = this;
-            if (!t || this.options.disabled) return;
-            t.fileInput && !t.files ? this._getFileInputFiles(t.fileInput).always(function(e) {
-                t.files = e, n._onAdd(null, t)
-            }) : (t.files = e.makeArray(t.files), this._onAdd(null, t))
-        },
-        send: function(t) {
-            if (t && !this.options.disabled) {
-                if (t.fileInput && !t.files) {
-                    var n = this,
-                        r = e.Deferred(),
-                        i = r.promise(),
-                        s, o;
-                    return i.abort = function() {
-                        return o = !0, s ? s.abort() : (r.reject(null, "abort", "abort"), i)
-                    }, this._getFileInputFiles(t.fileInput).always(function(e) {
-                        if (o) return;
-                        t.files = e, s = n._onSend(null, t).then(function(e, t, n) {
-                            r.resolve(e, t, n)
-                        }, function(e, t, n) {
-                            r.reject(e, t, n)
-                        })
-                    }), this._enhancePromise(i)
-                }
-                t.files = e.makeArray(t.files);
-                if (t.files.length) return this._onSend(null, t)
-            }
-            return this._getXHRPromise(!1, t && t.context)
-        }
-    })
-}),
-function(e) {
-    e.fn.twitchFileUpload = function() {
-        var t = {
-                xhr: Twitch.api._createXHR.bind(Twitch.api),
-                crossDomain: !1,
-                beforeSend: function(e) {
-                    e.setRequestHeader("Twitch-Api-Token", Twitch.storage.legacy.get("api_token")), e.setRequestHeader("Client-ID", Twitch.api.config.clientID)
-                }
-            },
-            n = e(this),
-            r = Array.prototype.slice.call(arguments);
-        return r[r.length - 1] = e.extend(t, r[r.length - 1]), n.fileupload.apply(n, r)
-    }
-}(jQuery),
-function(e) {
     e.Jcrop = function(t, n) {
         function u(e) {
             return e + "px"
@@ -2519,7 +2109,8 @@ function(e, t) {
                 c = this.options.axis === "x" || r + f > u && r + f < a,
                 h = this.options.axis === "y" || t + l > s && t + l < o,
                 p = c && h;
-            return this.options.tolerance === "pointer" || this.options.forcePointerForContainers || this.options.tolerance !== "pointer" && this.helperProportions[this.floating ? "width" : "height"] > e[this.floating ? "width" : "height"] ? p : s < t + this.helperProportions.width / 2 && n - this.helperProportions.width / 2 < o && u < r + this.helperProportions.height / 2 && i - this.helperProportions.height / 2 < a
+            return this.options.tolerance === "pointer" || this.options.forcePointerForContainers || this.options.tolerance !== "pointer" && this.helperProportions[this.floating ? "width" : "height"] > e[this
+                .floating ? "width" : "height"] ? p : s < t + this.helperProportions.width / 2 && n - this.helperProportions.width / 2 < o && u < r + this.helperProportions.height / 2 && i - this.helperProportions.height / 2 < a
         },
         _intersectsWithPointer: function(e) {
             var t = this.options.axis === "x" || n(this.positionAbs.top + this.offset.click.top, e.top, e.height),
@@ -2813,1585 +2404,1318 @@ function(e, t) {
             }
         }
     })
-}(jQuery);
-var SWFUpload;
-SWFUpload == undefined && (SWFUpload = function(e) {
-        this.initSWFUpload(e)
-    }), SWFUpload.prototype.initSWFUpload = function(e) {
-        try {
-            this.customSettings = {}, this.settings = e, this.eventQueue = [], this.movieName = "SWFUpload_" + SWFUpload.movieCount++, this.movieElement = null, SWFUpload.instances[this.movieName] = this, this.initSettings(), this.loadFlash(), this.displayDebugInfo()
-        } catch (t) {
-            throw delete SWFUpload.instances[this.movieName], t
-        }
-    }, SWFUpload.instances = {}, SWFUpload.movieCount = 0, SWFUpload.version = "2.2.0 2009-03-25", SWFUpload.QUEUE_ERROR = {
-        QUEUE_LIMIT_EXCEEDED: -100,
-        FILE_EXCEEDS_SIZE_LIMIT: -110,
-        ZERO_BYTE_FILE: -120,
-        INVALID_FILETYPE: -130
-    }, SWFUpload.UPLOAD_ERROR = {
-        HTTP_ERROR: -200,
-        MISSING_UPLOAD_URL: -210,
-        IO_ERROR: -220,
-        SECURITY_ERROR: -230,
-        UPLOAD_LIMIT_EXCEEDED: -240,
-        UPLOAD_FAILED: -250,
-        SPECIFIED_FILE_ID_NOT_FOUND: -260,
-        FILE_VALIDATION_FAILED: -270,
-        FILE_CANCELLED: -280,
-        UPLOAD_STOPPED: -290
-    }, SWFUpload.FILE_STATUS = {
-        QUEUED: -1,
-        IN_PROGRESS: -2,
-        ERROR: -3,
-        COMPLETE: -4,
-        CANCELLED: -5
-    }, SWFUpload.BUTTON_ACTION = {
-        SELECT_FILE: -100,
-        SELECT_FILES: -110,
-        START_UPLOAD: -120
-    }, SWFUpload.CURSOR = {
-        ARROW: -1,
-        HAND: -2
-    }, SWFUpload.WINDOW_MODE = {
-        WINDOW: "window",
-        TRANSPARENT: "transparent",
-        OPAQUE: "opaque"
-    }, SWFUpload.completeURL = function(e) {
-        if (typeof e != "string" || e.match(/^https?:\/\//i) || e.match(/^\//)) return e;
-        var t = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ":" + window.location.port : ""),
-            n = window.location.pathname.lastIndexOf("/");
-        return n <= 0 ? path = "/" : path = window.location.pathname.substr(0, n) + "/", path + e
-    }, SWFUpload.prototype.initSettings = function() {
-        this.ensureDefault = function(e, t) {
-            this.settings[e] = this.settings[e] == undefined ? t : this.settings[e]
-        }, this.ensureDefault("upload_url", ""), this.ensureDefault("preserve_relative_urls", !1), this.ensureDefault("file_post_name", "Filedata"), this.ensureDefault("post_params", {}), this.ensureDefault("use_query_string", !1), this.ensureDefault("requeue_on_error", !1), this.ensureDefault("http_success", []), this.ensureDefault("assume_success_timeout", 0), this.ensureDefault("file_types", "*.*"), this.ensureDefault("file_types_description", "All Files"), this.ensureDefault("file_size_limit", 0), this.ensureDefault("file_upload_limit", 0), this.ensureDefault("file_queue_limit", 0), this.ensureDefault("flash_url", "swfupload.swf"), this.ensureDefault("prevent_swf_caching", !0), this.ensureDefault("button_image_url", ""), this.ensureDefault("button_width", 1), this.ensureDefault("button_height", 1), this.ensureDefault("button_text", ""), this.ensureDefault("button_text_style", "color: #000000; font-size: 16pt;"), this.ensureDefault("button_text_top_padding", 0), this.ensureDefault("button_text_left_padding", 0), this.ensureDefault("button_action", SWFUpload.BUTTON_ACTION.SELECT_FILES), this.ensureDefault("button_disabled", !1), this.ensureDefault("button_placeholder_id", ""), this.ensureDefault("button_placeholder", null), this.ensureDefault("button_cursor", SWFUpload.CURSOR.ARROW), this.ensureDefault("button_window_mode", SWFUpload.WINDOW_MODE.WINDOW), this.ensureDefault("debug", !1), this.settings.debug_enabled = this.settings.debug, this.settings.return_upload_start_handler = this.returnUploadStart, this.ensureDefault("swfupload_loaded_handler", null), this.ensureDefault("file_dialog_start_handler", null), this.ensureDefault("file_queued_handler", null), this.ensureDefault("file_queue_error_handler", null), this.ensureDefault("file_dialog_complete_handler", null), this.ensureDefault("upload_start_handler", null), this.ensureDefault("upload_progress_handler", null), this.ensureDefault("upload_error_handler", null), this.ensureDefault("upload_success_handler", null), this.ensureDefault("upload_complete_handler", null), this.ensureDefault("debug_handler", this.debugMessage), this.ensureDefault("custom_settings", {}), this.customSettings = this.settings.custom_settings, !this.settings.prevent_swf_caching || (this.settings.flash_url = this.settings.flash_url + (this.settings.flash_url.indexOf("?") < 0 ? "?" : "&") + "preventswfcaching=" + (new Date).getTime()), this.settings.preserve_relative_urls || (this.settings.upload_url = SWFUpload.completeURL(this.settings.upload_url), this.settings.button_image_url = SWFUpload.completeURL(this.settings.button_image_url)), delete this.ensureDefault
-    }, SWFUpload.prototype.loadFlash = function() {
-        var e, t;
-        if (document.getElementById(this.movieName) !== null) throw "ID " + this.movieName + " is already in use. The Flash Object could not be added";
-        e = document.getElementById(this.settings.button_placeholder_id) || this.settings.button_placeholder;
-        if (e == undefined) throw "Could not find the placeholder element: " + this.settings.button_placeholder_id;
-        t = document.createElement("div"), t.innerHTML = this.getFlashHTML(), e.parentNode.replaceChild(t.firstChild, e), window[this.movieName] == undefined && (window[this.movieName] = this.getMovieElement())
-    }, SWFUpload.prototype.getFlashHTML = function() {
-        return ['<object id="', this.movieName, '" type="application/x-shockwave-flash" data="', this.settings.flash_url, '" width="', this.settings.button_width, '" height="', this.settings.button_height, '" class="swfupload">', '<param name="wmode" value="', this.settings.button_window_mode, '" />', '<param name="movie" value="', this.settings.flash_url, '" />', '<param name="quality" value="high" />', '<param name="menu" value="false" />', '<param name="allowScriptAccess" value="always" />', '<param name="flashvars" value="' + this.getFlashVars() + '" />', "</object>"].join("")
-    }, SWFUpload.prototype.getFlashVars = function() {
-        var e = this.buildParamString(),
-            t = this.settings.http_success.join(",");
-        return ["movieName=", encodeURIComponent(this.movieName), "&amp;uploadURL=", encodeURIComponent(this.settings.upload_url), "&amp;useQueryString=", encodeURIComponent(this.settings.use_query_string), "&amp;requeueOnError=", encodeURIComponent(this.settings.requeue_on_error), "&amp;httpSuccess=", encodeURIComponent(t), "&amp;assumeSuccessTimeout=", encodeURIComponent(this.settings.assume_success_timeout), "&amp;params=", encodeURIComponent(e), "&amp;filePostName=", encodeURIComponent(this.settings.file_post_name), "&amp;fileTypes=", encodeURIComponent(this.settings.file_types), "&amp;fileTypesDescription=", encodeURIComponent(this.settings.file_types_description), "&amp;fileSizeLimit=", encodeURIComponent(this.settings.file_size_limit), "&amp;fileUploadLimit=", encodeURIComponent(this.settings.file_upload_limit), "&amp;fileQueueLimit=", encodeURIComponent(this.settings.file_queue_limit), "&amp;debugEnabled=", encodeURIComponent(this.settings.debug_enabled), "&amp;buttonImageURL=", encodeURIComponent(this.settings.button_image_url), "&amp;buttonWidth=", encodeURIComponent(this.settings.button_width), "&amp;buttonHeight=", encodeURIComponent(this.settings.button_height), "&amp;buttonText=", encodeURIComponent(this.settings.button_text), "&amp;buttonTextTopPadding=", encodeURIComponent(this.settings.button_text_top_padding), "&amp;buttonTextLeftPadding=", encodeURIComponent(this.settings.button_text_left_padding), "&amp;buttonTextStyle=", encodeURIComponent(this.settings.button_text_style), "&amp;buttonAction=", encodeURIComponent(this.settings.button_action), "&amp;buttonDisabled=", encodeURIComponent(this.settings.button_disabled), "&amp;buttonCursor=", encodeURIComponent(this.settings.button_cursor)].join("")
-    }, SWFUpload.prototype.getMovieElement = function() {
-        this.movieElement == undefined && (this.movieElement = document.getElementById(this.movieName));
-        if (this.movieElement === null) throw "Could not find Flash element";
-        return this.movieElement
-    }, SWFUpload.prototype.buildParamString = function() {
-        var e = this.settings.post_params,
-            t = [];
-        if (typeof e == "object")
-            for (var n in e) e.hasOwnProperty(n) && t.push(encodeURIComponent(n.toString()) + "=" + encodeURIComponent(e[n].toString()));
-        return t.join("&amp;")
-    }, SWFUpload.prototype.destroy = function() {
-        try {
-            this.cancelUpload(null, !1);
-            var e = null;
-            e = this.getMovieElement();
-            if (e && typeof e.CallFunction == "unknown") {
-                for (var t in e) try {
-                    typeof e[t] == "function" && (e[t] = null)
-                } catch (n) {}
-                try {
-                    e.parentNode.removeChild(e)
-                } catch (r) {}
+}(jQuery),
+function(e) {
+    e.color = {}, e.color.make = function(t, n, r, i) {
+        var s = {};
+        return s.r = t || 0, s.g = n || 0, s.b = r || 0, s.a = i != null ? i : 1, s.add = function(e, t) {
+            for (var n = 0; n < e.length; ++n) s[e.charAt(n)] += t;
+            return s.normalize()
+        }, s.scale = function(e, t) {
+            for (var n = 0; n < e.length; ++n) s[e.charAt(n)] *= t;
+            return s.normalize()
+        }, s.toString = function() {
+            return s.a >= 1 ? "rgb(" + [s.r, s.g, s.b].join(",") + ")" : "rgba(" + [s.r, s.g, s.b, s.a].join(",") + ")"
+        }, s.normalize = function() {
+            function e(e, t, n) {
+                return t < e ? e : t > n ? n : t
             }
-            return window[this.movieName] = null, SWFUpload.instances[this.movieName] = null, delete SWFUpload.instances[this.movieName], this.movieElement = null, this.settings = null, this.customSettings = null, this.eventQueue = null, this.movieName = null, !0
-        } catch (i) {
-            return !1
-        }
-    }, SWFUpload.prototype.displayDebugInfo = function() {
-        this.debug(["---SWFUpload Instance Info---\n", "Version: ", SWFUpload.version, "\n", "Movie Name: ", this.movieName, "\n", "Settings:\n", "	", "upload_url:               ", this.settings.upload_url, "\n", "	", "flash_url:                ", this.settings.flash_url, "\n", "	", "use_query_string:         ", this.settings.use_query_string.toString(), "\n", "	", "requeue_on_error:         ", this.settings.requeue_on_error.toString(), "\n", "	", "http_success:             ", this.settings.http_success.join(", "), "\n", "	", "assume_success_timeout:   ", this.settings.assume_success_timeout, "\n", "	", "file_post_name:           ", this.settings.file_post_name, "\n", "	", "post_params:              ", this.settings.post_params.toString(), "\n", "	", "file_types:               ", this.settings.file_types, "\n", "	", "file_types_description:   ", this.settings.file_types_description, "\n", "	", "file_size_limit:          ", this.settings.file_size_limit, "\n", "	", "file_upload_limit:        ", this.settings.file_upload_limit, "\n", "	", "file_queue_limit:         ", this.settings.file_queue_limit, "\n", "	", "debug:                    ", this.settings.debug.toString(), "\n", "	", "prevent_swf_caching:      ", this.settings.prevent_swf_caching.toString(), "\n", "	", "button_placeholder_id:    ", this.settings.button_placeholder_id.toString(), "\n", "	", "button_placeholder:       ", this.settings.button_placeholder ? "Set" : "Not Set", "\n", "	", "button_image_url:         ", this.settings.button_image_url.toString(), "\n", "	", "button_width:             ", this.settings.button_width.toString(), "\n", "	", "button_height:            ", this.settings.button_height.toString(), "\n", "	", "button_text:              ", this.settings.button_text.toString(), "\n", "	", "button_text_style:        ", this.settings.button_text_style.toString(), "\n", "	", "button_text_top_padding:  ", this.settings.button_text_top_padding.toString(), "\n", "	", "button_text_left_padding: ", this.settings.button_text_left_padding.toString(), "\n", "	", "button_action:            ", this.settings.button_action.toString(), "\n", "	", "button_disabled:          ", this.settings.button_disabled.toString(), "\n", "	", "custom_settings:          ", this.settings.custom_settings.toString(), "\n", "Event Handlers:\n", "	", "swfupload_loaded_handler assigned:  ", (typeof this.settings.swfupload_loaded_handler == "function").toString(), "\n", "	", "file_dialog_start_handler assigned: ", (typeof this.settings.file_dialog_start_handler == "function").toString(), "\n", "	", "file_queued_handler assigned:       ", (typeof this.settings.file_queued_handler == "function").toString(), "\n", "	", "file_queue_error_handler assigned:  ", (typeof this.settings.file_queue_error_handler == "function").toString(), "\n", "	", "upload_start_handler assigned:      ", (typeof this.settings.upload_start_handler == "function").toString(), "\n", "	", "upload_progress_handler assigned:   ", (typeof this.settings.upload_progress_handler == "function").toString(), "\n", "	", "upload_error_handler assigned:      ", (typeof this.settings.upload_error_handler == "function").toString(), "\n", "	", "upload_success_handler assigned:    ", (typeof this.settings.upload_success_handler == "function").toString(), "\n", "	", "upload_complete_handler assigned:   ", (typeof this.settings.upload_complete_handler == "function").toString(), "\n", "	", "debug_handler assigned:             ", (typeof this.settings.debug_handler == "function").toString(), "\n"].join(""))
-    }, SWFUpload.prototype.addSetting = function(e, t, n) {
-        return t == undefined ? this.settings[e] = n : this.settings[e] = t
-    }, SWFUpload.prototype.getSetting = function(e) {
-        return this.settings[e] != undefined ? this.settings[e] : ""
-    }, SWFUpload.prototype.callFlash = function(functionName, argumentArray) {
-        argumentArray = argumentArray || [];
-        var movieElement = this.getMovieElement(),
-            returnValue, returnString;
-        try {
-            returnString = movieElement.CallFunction('<invoke name="' + functionName + '" returntype="javascript">' + __flash__argumentsToXML(argumentArray, 0) + "</invoke>"), returnValue = eval(returnString)
-        } catch (ex) {
-            throw "Call to " + functionName + " failed"
-        }
-        return returnValue != undefined && typeof returnValue.post == "object" && (returnValue = this.unescapeFilePostParams(returnValue)), returnValue
-    }, SWFUpload.prototype.selectFile = function() {
-        this.callFlash("SelectFile")
-    }, SWFUpload.prototype.selectFiles = function() {
-        this.callFlash("SelectFiles")
-    }, SWFUpload.prototype.startUpload = function(e) {
-        this.callFlash("StartUpload", [e])
-    }, SWFUpload.prototype.cancelUpload = function(e, t) {
-        t !== !1 && (t = !0), this.callFlash("CancelUpload", [e, t])
-    }, SWFUpload.prototype.stopUpload = function() {
-        this.callFlash("StopUpload")
-    }, SWFUpload.prototype.getStats = function() {
-        return this.callFlash("GetStats")
-    }, SWFUpload.prototype.setStats = function(e) {
-        this.callFlash("SetStats", [e])
-    }, SWFUpload.prototype.getFile = function(e) {
-        return typeof e == "number" ? this.callFlash("GetFileByIndex", [e]) : this.callFlash("GetFile", [e])
-    }, SWFUpload.prototype.addFileParam = function(e, t, n) {
-        return this.callFlash("AddFileParam", [e, t, n])
-    }, SWFUpload.prototype.removeFileParam = function(e, t) {
-        this.callFlash("RemoveFileParam", [e, t])
-    }, SWFUpload.prototype.setUploadURL = function(e) {
-        this.settings.upload_url = e.toString(), this.callFlash("SetUploadURL", [e])
-    }, SWFUpload.prototype.setPostParams = function(e) {
-        this.settings.post_params = e, this.callFlash("SetPostParams", [e])
-    }, SWFUpload.prototype.addPostParam = function(e, t) {
-        this.settings.post_params[e] = t, this.callFlash("SetPostParams", [this.settings.post_params])
-    }, SWFUpload.prototype.removePostParam = function(e) {
-        delete this.settings.post_params[e], this.callFlash("SetPostParams", [this.settings.post_params])
-    }, SWFUpload.prototype.setFileTypes = function(e, t) {
-        this.settings.file_types = e, this.settings.file_types_description = t, this.callFlash("SetFileTypes", [e, t])
-    }, SWFUpload.prototype.setFileSizeLimit = function(e) {
-        this.settings.file_size_limit = e, this.callFlash("SetFileSizeLimit", [e])
-    }, SWFUpload.prototype.setFileUploadLimit = function(e) {
-        this.settings.file_upload_limit = e, this.callFlash("SetFileUploadLimit", [e])
-    }, SWFUpload.prototype.setFileQueueLimit = function(e) {
-        this.settings.file_queue_limit = e, this.callFlash("SetFileQueueLimit", [e])
-    }, SWFUpload.prototype.setFilePostName = function(e) {
-        this.settings.file_post_name = e, this.callFlash("SetFilePostName", [e])
-    }, SWFUpload.prototype.setUseQueryString = function(e) {
-        this.settings.use_query_string = e, this.callFlash("SetUseQueryString", [e])
-    }, SWFUpload.prototype.setRequeueOnError = function(e) {
-        this.settings.requeue_on_error = e, this.callFlash("SetRequeueOnError", [e])
-    }, SWFUpload.prototype.setHTTPSuccess = function(e) {
-        typeof e == "string" && (e = e.replace(" ", "").split(",")), this.settings.http_success = e, this.callFlash("SetHTTPSuccess", [e])
-    }, SWFUpload.prototype.setAssumeSuccessTimeout = function(e) {
-        this.settings.assume_success_timeout = e, this.callFlash("SetAssumeSuccessTimeout", [e])
-    }, SWFUpload.prototype.setDebugEnabled = function(e) {
-        this.settings.debug_enabled = e, this.callFlash("SetDebugEnabled", [e])
-    }, SWFUpload.prototype.setButtonImageURL = function(e) {
-        e == undefined && (e = ""), this.settings.button_image_url = e, this.callFlash("SetButtonImageURL", [e])
-    }, SWFUpload.prototype.setButtonDimensions = function(e, t) {
-        this.settings.button_width = e, this.settings.button_height = t;
-        var n = this.getMovieElement();
-        n != undefined && (n.style.width = e + "px", n.style.height = t + "px"), this.callFlash("SetButtonDimensions", [e, t])
-    }, SWFUpload.prototype.setButtonText = function(e) {
-        this.settings.button_text = e, this.callFlash("SetButtonText", [e])
-    }, SWFUpload.prototype.setButtonTextPadding = function(e, t) {
-        this.settings.button_text_top_padding = t, this.settings.button_text_left_padding = e, this.callFlash("SetButtonTextPadding", [e, t])
-    }, SWFUpload.prototype.setButtonTextStyle = function(e) {
-        this.settings.button_text_style = e, this.callFlash("SetButtonTextStyle", [e])
-    }, SWFUpload.prototype.setButtonDisabled = function(e) {
-        this.settings.button_disabled = e, this.callFlash("SetButtonDisabled", [e])
-    }, SWFUpload.prototype.setButtonAction = function(e) {
-        this.settings.button_action = e, this.callFlash("SetButtonAction", [e])
-    }, SWFUpload.prototype.setButtonCursor = function(e) {
-        this.settings.button_cursor = e, this.callFlash("SetButtonCursor", [e])
-    }, SWFUpload.prototype.queueEvent = function(e, t) {
-        t == undefined ? t = [] : t instanceof Array || (t = [t]);
-        var n = this;
-        if (typeof this.settings[e] == "function") this.eventQueue.push(function() {
-            this.settings[e].apply(this, t)
-        }), setTimeout(function() {
-            n.executeNextEvent()
-        }, 0);
-        else if (this.settings[e] !== null) throw "Event handler " + e + " is unknown or is not a function"
-    }, SWFUpload.prototype.executeNextEvent = function() {
-        var e = this.eventQueue ? this.eventQueue.shift() : null;
-        typeof e == "function" && e.apply(this)
-    }, SWFUpload.prototype.unescapeFilePostParams = function(e) {
-        var t = /[$]([0-9a-f]{4})/i,
-            n = {},
-            r;
-        if (e != undefined) {
-            for (var i in e.post)
-                if (e.post.hasOwnProperty(i)) {
-                    r = i;
-                    var s;
-                    while ((s = t.exec(r)) !== null) r = r.replace(s[0], String.fromCharCode(parseInt("0x" + s[1], 16)));
-                    n[r] = e.post[i]
-                }
-            e.post = n
-        }
-        return e
-    }, SWFUpload.prototype.testExternalInterface = function() {
-        try {
-            return this.callFlash("TestExternalInterface")
-        } catch (e) {
-            return !1
-        }
-    }, SWFUpload.prototype.flashReady = function() {
-        var e = this.getMovieElement();
-        if (!e) {
-            this.debug("Flash called back ready but the flash movie can't be found.");
-            return
-        }
-        this.cleanUp(e), this.queueEvent("swfupload_loaded_handler")
-    }, SWFUpload.prototype.cleanUp = function(e) {
-        try {
-            if (this.movieElement && typeof e.CallFunction == "unknown") {
-                this.debug("Removing Flash functions hooks (this should only run in IE and should prevent memory leaks)");
-                for (var t in e) try {
-                    typeof e[t] == "function" && (e[t] = null)
-                } catch (n) {}
+            return s.r = e(0, parseInt(s.r), 255), s.g = e(0, parseInt(s.g), 255), s.b = e(0, parseInt(s.b), 255), s.a = e(0, s.a, 1), s
+        }, s.clone = function() {
+            return e.color.make(s.r, s.b, s.g, s.a)
+        }, s.normalize()
+    }, e.color.extract = function(t, n) {
+        var r;
+        do {
+            r = t.css(n).toLowerCase();
+            if (r != "" && r != "transparent") break;
+            t = t.parent()
+        } while (!e.nodeName(t.get(0), "body"));
+        return r == "rgba(0, 0, 0, 0)" && (r = "transparent"), e.color.parse(r)
+    }, e.color.parse = function(n) {
+        var r, i = e.color.make;
+        if (r = /rgb\(\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*\)/.exec(n)) return i(parseInt(r[1], 10), parseInt(r[2], 10), parseInt(r[3], 10));
+        if (r = /rgba\(\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*,\s*([0-9]+(?:\.[0-9]+)?)\s*\)/.exec(n)) return i(parseInt(r[1], 10), parseInt(r[2], 10), parseInt(r[3], 10), parseFloat(r[4]));
+        if (r = /rgb\(\s*([0-9]+(?:\.[0-9]+)?)\%\s*,\s*([0-9]+(?:\.[0-9]+)?)\%\s*,\s*([0-9]+(?:\.[0-9]+)?)\%\s*\)/.exec(n)) return i(parseFloat(r[1]) * 2.55, parseFloat(r[2]) * 2.55, parseFloat(r[3]) * 2.55);
+        if (r = /rgba\(\s*([0-9]+(?:\.[0-9]+)?)\%\s*,\s*([0-9]+(?:\.[0-9]+)?)\%\s*,\s*([0-9]+(?:\.[0-9]+)?)\%\s*,\s*([0-9]+(?:\.[0-9]+)?)\s*\)/.exec(n)) return i(parseFloat(r[1]) * 2.55, parseFloat(r[2]) * 2.55, parseFloat(r[3]) * 2.55, parseFloat(r[4]));
+        if (r = /#([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})/.exec(n)) return i(parseInt(r[1], 16), parseInt(r[2], 16), parseInt(r[3], 16));
+        if (r = /#([a-fA-F0-9])([a-fA-F0-9])([a-fA-F0-9])/.exec(n)) return i(parseInt(r[1] + r[1], 16), parseInt(r[2] + r[2], 16), parseInt(r[3] + r[3], 16));
+        var s = e.trim(n).toLowerCase();
+        return s == "transparent" ? i(255, 255, 255, 0) : (r = t[s] || [0, 0, 0], i(r[0], r[1], r[2]))
+    };
+    var t = {
+        aqua: [0, 255, 255],
+        azure: [240, 255, 255],
+        beige: [245, 245, 220],
+        black: [0, 0, 0],
+        blue: [0, 0, 255],
+        brown: [165, 42, 42],
+        cyan: [0, 255, 255],
+        darkblue: [0, 0, 139],
+        darkcyan: [0, 139, 139],
+        darkgrey: [169, 169, 169],
+        darkgreen: [0, 100, 0],
+        darkkhaki: [189, 183, 107],
+        darkmagenta: [139, 0, 139],
+        darkolivegreen: [85, 107, 47],
+        darkorange: [255, 140, 0],
+        darkorchid: [153, 50, 204],
+        darkred: [139, 0, 0],
+        darksalmon: [233, 150, 122],
+        darkviolet: [148, 0, 211],
+        fuchsia: [255, 0, 255],
+        gold: [255, 215, 0],
+        green: [0, 128, 0],
+        indigo: [75, 0, 130],
+        khaki: [240, 230, 140],
+        lightblue: [173, 216, 230],
+        lightcyan: [224, 255, 255],
+        lightgreen: [144, 238, 144],
+        lightgrey: [211, 211, 211],
+        lightpink: [255, 182, 193],
+        lightyellow: [255, 255, 224],
+        lime: [0, 255, 0],
+        magenta: [255, 0, 255],
+        maroon: [128, 0, 0],
+        navy: [0, 0, 128],
+        olive: [128, 128, 0],
+        orange: [255, 165, 0],
+        pink: [255, 192, 203],
+        purple: [128, 0, 128],
+        violet: [128, 0, 128],
+        red: [255, 0, 0],
+        silver: [192, 192, 192],
+        white: [255, 255, 255],
+        yellow: [255, 255, 0]
+    }
+}(jQuery),
+function(e) {
+    function n(t, n) {
+        var r = n.children("." + t)[0];
+        if (r == null) {
+            r = document.createElement("canvas"), r.className = t, e(r).css({
+                direction: "ltr",
+                position: "absolute",
+                left: 0,
+                top: 0
+            }).appendTo(n);
+            if (!r.getContext) {
+                if (!window.G_vmlCanvasManager) throw new Error("Canvas is not available. If you're using IE with a fall-back such as Excanvas, then there's either a mistake in your conditional include, or the page has no DOCTYPE and is rendering in Quirks Mode.");
+                r = window.G_vmlCanvasManager.initElement(r)
             }
-        } catch (r) {}
-        window.__flash__removeCallback = function(e, t) {
-            try {
-                e && (e[t] = null)
-            } catch (n) {}
         }
-    }, SWFUpload.prototype.fileDialogStart = function() {
-        this.queueEvent("file_dialog_start_handler")
-    }, SWFUpload.prototype.fileQueued = function(e) {
-        e = this.unescapeFilePostParams(e), this.queueEvent("file_queued_handler", e)
-    }, SWFUpload.prototype.fileQueueError = function(e, t, n) {
-        e = this.unescapeFilePostParams(e), this.queueEvent("file_queue_error_handler", [e, t, n])
-    }, SWFUpload.prototype.fileDialogComplete = function(e, t, n) {
-        this.queueEvent("file_dialog_complete_handler", [e, t, n])
-    }, SWFUpload.prototype.uploadStart = function(e) {
-        e = this.unescapeFilePostParams(e), this.queueEvent("return_upload_start_handler", e)
-    }, SWFUpload.prototype.returnUploadStart = function(e) {
-        var t;
-        if (typeof this.settings.upload_start_handler == "function") e = this.unescapeFilePostParams(e), t = this.settings.upload_start_handler.call(this, e);
-        else if (this.settings.upload_start_handler != undefined) throw "upload_start_handler must be a function";
-        t === undefined && (t = !0), t = !!t, this.callFlash("ReturnUploadStart", [t])
-    }, SWFUpload.prototype.uploadProgress = function(e, t, n) {
-        e = this.unescapeFilePostParams(e), this.queueEvent("upload_progress_handler", [e, t, n])
-    }, SWFUpload.prototype.uploadError = function(e, t, n) {
-        e = this.unescapeFilePostParams(e), this.queueEvent("upload_error_handler", [e, t, n])
-    }, SWFUpload.prototype.uploadSuccess = function(e, t, n) {
-        e = this.unescapeFilePostParams(e), this.queueEvent("upload_success_handler", [e, t, n])
-    }, SWFUpload.prototype.uploadComplete = function(e) {
-        e = this.unescapeFilePostParams(e), this.queueEvent("upload_complete_handler", e)
-    }, SWFUpload.prototype.debug = function(e) {
-        this.queueEvent("debug_handler", e)
-    }, SWFUpload.prototype.debugMessage = function(e) {
-        if (this.settings.debug) {
-            var t, n = [];
-            if (typeof e == "object" && typeof e.name == "string" && typeof e.message == "string") {
-                for (var r in e) e.hasOwnProperty(r) && n.push(r + ": " + e[r]);
-                t = n.join("\n") || "", n = t.split("\n"), t = "EXCEPTION: " + n.join("\nEXCEPTION: "), SWFUpload.Console.writeLine(t)
-            } else SWFUpload.Console.writeLine(e)
+        this.element = r;
+        var i = this.context = r.getContext("2d"),
+            s = window.devicePixelRatio || 1,
+            o = i.webkitBackingStorePixelRatio || i.mozBackingStorePixelRatio || i.msBackingStorePixelRatio || i.oBackingStorePixelRatio || i.backingStorePixelRatio || 1;
+        this.pixelRatio = s / o, this.resize(n.width(), n.height()), this.textContainer = null, this.text = {}, this._textCache = {}
+    }
+
+    function r(t, r, s, o) {
+        function E(e, t) {
+            t = [w].concat(t);
+            for (var n = 0; n < e.length; ++n) e[n].apply(this, t)
         }
-    }, SWFUpload.Console = {}, SWFUpload.Console.writeLine = function(e) {
-        var t, n;
-        try {
-            t = document.getElementById("SWFUpload_Console"), t || (n = document.createElement("form"), document.getElementsByTagName("body")[0].appendChild(n), t = document.createElement("textarea"), t.id = "SWFUpload_Console", t.style.fontFamily = "monospace", t.setAttribute("wrap", "off"), t.wrap = "off", t.style.overflow = "auto", t.style.width = "700px", t.style.height = "350px", t.style.margin = "5px", n.appendChild(t)), t.value += e + "\n", t.scrollTop = t.scrollHeight - t.clientHeight
-        } catch (r) {
-            alert("Exception: " + r.name + " Message: " + r.message)
+
+        function S() {
+            var t = {
+                Canvas: n
+            };
+            for (var r = 0; r < o.length; ++r) {
+                var i = o[r];
+                i.init(w, t), i.options && e.extend(!0, a, i.options)
+            }
         }
-    },
-    function(e) {
-        e.color = {}, e.color.make = function(t, n, r, i) {
-            var s = {};
-            return s.r = t || 0, s.g = n || 0, s.b = r || 0, s.a = i != null ? i : 1, s.add = function(e, t) {
-                for (var n = 0; n < e.length; ++n) s[e.charAt(n)] += t;
-                return s.normalize()
-            }, s.scale = function(e, t) {
-                for (var n = 0; n < e.length; ++n) s[e.charAt(n)] *= t;
-                return s.normalize()
-            }, s.toString = function() {
-                return s.a >= 1 ? "rgb(" + [s.r, s.g, s.b].join(",") + ")" : "rgba(" + [s.r, s.g, s.b, s.a].join(",") + ")"
-            }, s.normalize = function() {
-                function e(e, t, n) {
-                    return t < e ? e : t > n ? n : t
-                }
-                return s.r = e(0, parseInt(s.r), 255), s.g = e(0, parseInt(s.g), 255), s.b = e(0, parseInt(s.b), 255), s.a = e(0, s.a, 1), s
-            }, s.clone = function() {
-                return e.color.make(s.r, s.b, s.g, s.a)
-            }, s.normalize()
-        }, e.color.extract = function(t, n) {
-            var r;
-            do {
-                r = t.css(n).toLowerCase();
-                if (r != "" && r != "transparent") break;
-                t = t.parent()
-            } while (!e.nodeName(t.get(0), "body"));
-            return r == "rgba(0, 0, 0, 0)" && (r = "transparent"), e.color.parse(r)
-        }, e.color.parse = function(n) {
-            var r, i = e.color.make;
-            if (r = /rgb\(\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*\)/.exec(n)) return i(parseInt(r[1], 10), parseInt(r[2], 10), parseInt(r[3], 10));
-            if (r = /rgba\(\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*,\s*([0-9]+(?:\.[0-9]+)?)\s*\)/.exec(n)) return i(parseInt(r[1], 10), parseInt(r[2], 10), parseInt(r[3], 10), parseFloat(r[4]));
-            if (r = /rgb\(\s*([0-9]+(?:\.[0-9]+)?)\%\s*,\s*([0-9]+(?:\.[0-9]+)?)\%\s*,\s*([0-9]+(?:\.[0-9]+)?)\%\s*\)/.exec(n)) return i(parseFloat(r[1]) * 2.55, parseFloat(r[2]) * 2.55, parseFloat(r[3]) * 2.55);
-            if (r = /rgba\(\s*([0-9]+(?:\.[0-9]+)?)\%\s*,\s*([0-9]+(?:\.[0-9]+)?)\%\s*,\s*([0-9]+(?:\.[0-9]+)?)\%\s*,\s*([0-9]+(?:\.[0-9]+)?)\s*\)/.exec(n)) return i(parseFloat(r[1]) * 2.55, parseFloat(r[2]) * 2.55, parseFloat(r[3]) * 2.55, parseFloat(r[4]));
-            if (r = /#([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})/.exec(n)) return i(parseInt(r[1], 16), parseInt(r[2], 16), parseInt(r[3], 16));
-            if (r = /#([a-fA-F0-9])([a-fA-F0-9])([a-fA-F0-9])/.exec(n)) return i(parseInt(r[1] + r[1], 16), parseInt(r[2] + r[2], 16), parseInt(r[3] + r[3], 16));
-            var s = e.trim(n).toLowerCase();
-            return s == "transparent" ? i(255, 255, 255, 0) : (r = t[s] || [0, 0, 0], i(r[0], r[1], r[2]))
-        };
-        var t = {
-            aqua: [0, 255, 255],
-            azure: [240, 255, 255],
-            beige: [245, 245, 220],
-            black: [0, 0, 0],
-            blue: [0, 0, 255],
-            brown: [165, 42, 42],
-            cyan: [0, 255, 255],
-            darkblue: [0, 0, 139],
-            darkcyan: [0, 139, 139],
-            darkgrey: [169, 169, 169],
-            darkgreen: [0, 100, 0],
-            darkkhaki: [189, 183, 107],
-            darkmagenta: [139, 0, 139],
-            darkolivegreen: [85, 107, 47],
-            darkorange: [255, 140, 0],
-            darkorchid: [153, 50, 204],
-            darkred: [139, 0, 0],
-            darksalmon: [233, 150, 122],
-            darkviolet: [148, 0, 211],
-            fuchsia: [255, 0, 255],
-            gold: [255, 215, 0],
-            green: [0, 128, 0],
-            indigo: [75, 0, 130],
-            khaki: [240, 230, 140],
-            lightblue: [173, 216, 230],
-            lightcyan: [224, 255, 255],
-            lightgreen: [144, 238, 144],
-            lightgrey: [211, 211, 211],
-            lightpink: [255, 182, 193],
-            lightyellow: [255, 255, 224],
-            lime: [0, 255, 0],
-            magenta: [255, 0, 255],
-            maroon: [128, 0, 0],
-            navy: [0, 0, 128],
-            olive: [128, 128, 0],
-            orange: [255, 165, 0],
-            pink: [255, 192, 203],
-            purple: [128, 0, 128],
-            violet: [128, 0, 128],
-            red: [255, 0, 0],
-            silver: [192, 192, 192],
-            white: [255, 255, 255],
-            yellow: [255, 255, 0]
+
+        function x(n) {
+            e.extend(!0, a, n), a.xaxis.color == null && (a.xaxis.color = e.color.parse(a.grid.color).scale("a", .22).toString()), a.yaxis.color == null && (a.yaxis.color = e.color.parse(a.grid.color).scale("a", .22).toString()), a.xaxis.tickColor == null && (a.xaxis.tickColor = a.grid.tickColor || a.xaxis.color), a.yaxis.tickColor == null && (a.yaxis.tickColor = a.grid.tickColor || a.yaxis.color), a.grid.borderColor == null && (a.grid.borderColor = a.grid.color), a.grid.tickColor == null && (a.grid.tickColor = e.color.parse(a.grid.color).scale("a", .22).toString());
+            var r, i, s, o = {
+                style: t.css("font-style"),
+                size: Math.round(.8 * (+t.css("font-size").replace("px", "") || 13)),
+                variant: t.css("font-variant"),
+                weight: t.css("font-weight"),
+                family: t.css("font-family")
+            };
+            o.lineHeight = o.size * 1.15, s = a.xaxes.length || 1;
+            for (r = 0; r < s; ++r) i = a.xaxes[r], i && !i.tickColor && (i.tickColor = i.color), i = e.extend(!0, {}, a.xaxis, i), a.xaxes[r] = i, i.font && (i.font = e.extend({}, o, i.font), i.font.color || (i.font.color = i.color));
+            s = a.yaxes.length || 1;
+            for (r = 0; r < s; ++r) i = a.yaxes[r], i && !i.tickColor && (i.tickColor = i.color), i = e.extend(!0, {}, a.yaxis, i), a.yaxes[r] = i, i.font && (i.font = e.extend({}, o, i.font), i.font.color || (i.font.color = i.color));
+            a.xaxis.noTicks && a.xaxis.ticks == null && (a.xaxis.ticks = a.xaxis.noTicks), a.yaxis.noTicks && a.yaxis.ticks == null && (a.yaxis.ticks = a.yaxis.noTicks), a.x2axis && (a.xaxes[1] = e.extend(!0, {}, a.xaxis, a.x2axis), a.xaxes[1].position = "top"), a.y2axis && (a.yaxes[1] = e.extend(!0, {}, a.yaxis, a.y2axis), a.yaxes[1].position = "right"), a.grid.coloredAreas && (a.grid.markings = a.grid.coloredAreas), a.grid.coloredAreasColor && (a.grid.markingsColor = a.grid.coloredAreasColor), a.lines && e.extend(!0, a.series.lines, a.lines), a.points && e.extend(!0, a.series.points, a.points), a.bars && e.extend(!0, a.series.bars, a.bars), a.shadowSize != null && (a.series.shadowSize = a.shadowSize), a.highlightColor != null && (a.series.highlightColor = a.highlightColor);
+            for (r = 0; r < a.xaxes.length; ++r) O(d, r + 1).options = a.xaxes[r];
+            for (r = 0; r < a.yaxes.length; ++r) O(v, r + 1).options = a.yaxes[r];
+            for (var u in b) a.hooks[u] && a.hooks[u].length && (b[u] = b[u].concat(a.hooks[u]));
+            E(b.processOptions, [a])
         }
-    }(jQuery),
-    function(e) {
-        function n(t, n) {
-            var r = n.children("." + t)[0];
-            if (r == null) {
-                r = document.createElement("canvas"), r.className = t, e(r).css({
-                    direction: "ltr",
-                    position: "absolute",
-                    left: 0,
-                    top: 0
-                }).appendTo(n);
-                if (!r.getContext) {
-                    if (!window.G_vmlCanvasManager) throw new Error("Canvas is not available. If you're using IE with a fall-back such as Excanvas, then there's either a mistake in your conditional include, or the page has no DOCTYPE and is rendering in Quirks Mode.");
-                    r = window.G_vmlCanvasManager.initElement(r)
+
+        function T(e) {
+            u = N(e), M(), _()
+        }
+
+        function N(t) {
+            var n = [];
+            for (var r = 0; r < t.length; ++r) {
+                var i = e.extend(!0, {}, a.series);
+                t[r].data != null ? (i.data = t[r].data, delete t[r].data, e.extend(!0, i, t[r]), t[r].data = i.data) : i.data = t[r], n.push(i)
+            }
+            return n
+        }
+
+        function C(e, t) {
+            var n = e[t + "axis"];
+            return typeof n == "object" && (n = n.n), typeof n != "number" && (n = 1), n
+        }
+
+        function k() {
+            return e.grep(d.concat(v), function(e) {
+                return e
+            })
+        }
+
+        function L(e) {
+            var t = {},
+                n, r;
+            for (n = 0; n < d.length; ++n) r = d[n], r && r.used && (t["x" + r.n] = r.c2p(e.left));
+            for (n = 0; n < v.length; ++n) r = v[n], r && r.used && (t["y" + r.n] = r.c2p(e.top));
+            return t.x1 !== undefined && (t.x = t.x1), t.y1 !== undefined && (t.y = t.y1), t
+        }
+
+        function A(e) {
+            var t = {},
+                n, r, i;
+            for (n = 0; n < d.length; ++n) {
+                r = d[n];
+                if (r && r.used) {
+                    i = "x" + r.n, e[i] == null && r.n == 1 && (i = "x");
+                    if (e[i] != null) {
+                        t.left = r.p2c(e[i]);
+                        break
+                    }
                 }
             }
-            this.element = r;
-            var i = this.context = r.getContext("2d"),
-                s = window.devicePixelRatio || 1,
-                o = i.webkitBackingStorePixelRatio || i.mozBackingStorePixelRatio || i.msBackingStorePixelRatio || i.oBackingStorePixelRatio || i.backingStorePixelRatio || 1;
-            this.pixelRatio = s / o, this.resize(n.width(), n.height()), this.textContainer = null, this.text = {}, this._textCache = {}
+            for (n = 0; n < v.length; ++n) {
+                r = v[n];
+                if (r && r.used) {
+                    i = "y" + r.n, e[i] == null && r.n == 1 && (i = "y");
+                    if (e[i] != null) {
+                        t.top = r.p2c(e[i]);
+                        break
+                    }
+                }
+            }
+            return t
         }
 
-        function r(t, r, s, o) {
-            function E(e, t) {
-                t = [w].concat(t);
-                for (var n = 0; n < e.length; ++n) e[n].apply(this, t)
-            }
+        function O(t, n) {
+            return t[n - 1] || (t[n - 1] = {
+                n: n,
+                direction: t == d ? "x" : "y",
+                options: e.extend(!0, {}, t == d ? a.xaxis : a.yaxis)
+            }), t[n - 1]
+        }
 
-            function S() {
-                var t = {
-                    Canvas: n
-                };
-                for (var r = 0; r < o.length; ++r) {
-                    var i = o[r];
-                    i.init(w, t), i.options && e.extend(!0, a, i.options)
-                }
+        function M() {
+            var t = u.length,
+                n = -1,
+                r;
+            for (r = 0; r < u.length; ++r) {
+                var i = u[r].color;
+                i != null && (t--, typeof i == "number" && i > n && (n = i))
             }
-
-            function x(n) {
-                e.extend(!0, a, n), a.xaxis.color == null && (a.xaxis.color = e.color.parse(a.grid.color).scale("a", .22).toString()), a.yaxis.color == null && (a.yaxis.color = e.color.parse(a.grid.color).scale("a", .22).toString()), a.xaxis.tickColor == null && (a.xaxis.tickColor = a.grid.tickColor || a.xaxis.color), a.yaxis.tickColor == null && (a.yaxis.tickColor = a.grid.tickColor || a.yaxis.color), a.grid.borderColor == null && (a.grid.borderColor = a.grid.color), a.grid.tickColor == null && (a.grid.tickColor = e.color.parse(a.grid.color).scale("a", .22).toString());
-                var r, i, s, o = {
-                    style: t.css("font-style"),
-                    size: Math.round(.8 * (+t.css("font-size").replace("px", "") || 13)),
-                    variant: t.css("font-variant"),
-                    weight: t.css("font-weight"),
-                    family: t.css("font-family")
-                };
-                o.lineHeight = o.size * 1.15, s = a.xaxes.length || 1;
-                for (r = 0; r < s; ++r) i = a.xaxes[r], i && !i.tickColor && (i.tickColor = i.color), i = e.extend(!0, {}, a.xaxis, i), a.xaxes[r] = i, i.font && (i.font = e.extend({}, o, i.font), i.font.color || (i.font.color = i.color));
-                s = a.yaxes.length || 1;
-                for (r = 0; r < s; ++r) i = a.yaxes[r], i && !i.tickColor && (i.tickColor = i.color), i = e.extend(!0, {}, a.yaxis, i), a.yaxes[r] = i, i.font && (i.font = e.extend({}, o, i.font), i.font.color || (i.font.color = i.color));
-                a.xaxis.noTicks && a.xaxis.ticks == null && (a.xaxis.ticks = a.xaxis.noTicks), a.yaxis.noTicks && a.yaxis.ticks == null && (a.yaxis.ticks = a.yaxis.noTicks), a.x2axis && (a.xaxes[1] = e.extend(!0, {}, a.xaxis, a.x2axis), a.xaxes[1].position = "top"), a.y2axis && (a.yaxes[1] = e.extend(!0, {}, a.yaxis, a.y2axis), a.yaxes[1].position = "right"), a.grid.coloredAreas && (a.grid.markings = a.grid.coloredAreas), a.grid.coloredAreasColor && (a.grid.markingsColor = a.grid.coloredAreasColor), a.lines && e.extend(!0, a.series.lines, a.lines), a.points && e.extend(!0, a.series.points, a.points), a.bars && e.extend(!0, a.series.bars, a.bars), a.shadowSize != null && (a.series.shadowSize = a.shadowSize), a.highlightColor != null && (a.series.highlightColor = a.highlightColor);
-                for (r = 0; r < a.xaxes.length; ++r) O(d, r + 1).options = a.xaxes[r];
-                for (r = 0; r < a.yaxes.length; ++r) O(v, r + 1).options = a.yaxes[r];
-                for (var u in b) a.hooks[u] && a.hooks[u].length && (b[u] = b[u].concat(a.hooks[u]));
-                E(b.processOptions, [a])
-            }
-
-            function T(e) {
-                u = N(e), M(), _()
-            }
-
-            function N(t) {
-                var n = [];
-                for (var r = 0; r < t.length; ++r) {
-                    var i = e.extend(!0, {}, a.series);
-                    t[r].data != null ? (i.data = t[r].data, delete t[r].data, e.extend(!0, i, t[r]), t[r].data = i.data) : i.data = t[r], n.push(i)
-                }
-                return n
-            }
-
-            function C(e, t) {
-                var n = e[t + "axis"];
-                return typeof n == "object" && (n = n.n), typeof n != "number" && (n = 1), n
-            }
-
-            function k() {
-                return e.grep(d.concat(v), function(e) {
-                    return e
-                })
-            }
-
-            function L(e) {
-                var t = {},
-                    n, r;
-                for (n = 0; n < d.length; ++n) r = d[n], r && r.used && (t["x" + r.n] = r.c2p(e.left));
-                for (n = 0; n < v.length; ++n) r = v[n], r && r.used && (t["y" + r.n] = r.c2p(e.top));
-                return t.x1 !== undefined && (t.x = t.x1), t.y1 !== undefined && (t.y = t.y1), t
-            }
-
-            function A(e) {
-                var t = {},
-                    n, r, i;
-                for (n = 0; n < d.length; ++n) {
-                    r = d[n];
-                    if (r && r.used) {
-                        i = "x" + r.n, e[i] == null && r.n == 1 && (i = "x");
-                        if (e[i] != null) {
-                            t.left = r.p2c(e[i]);
+            t <= n && (t = n + 1);
+            var s, o = [],
+                f = a.colors,
+                l = f.length,
+                c = 0;
+            for (r = 0; r < t; r++) s = e.color.parse(f[r % l] || "#666"), r % l == 0 && r && (c >= 0 ? c < .5 ? c = -c - .2 : c = 0 : c = -c), o[r] = s.scale("rgb", 1 + c);
+            var h = 0,
+                p;
+            for (r = 0; r < u.length; ++r) {
+                p = u[r], p.color == null ? (p.color = o[h].toString(), ++h) : typeof p.color == "number" && (p.color = o[p.color].toString());
+                if (p.lines.show == null) {
+                    var m, g = !0;
+                    for (m in p)
+                        if (p[m] && p[m].show) {
+                            g = !1;
                             break
                         }
-                    }
+                    g && (p.lines.show = !0)
                 }
-                for (n = 0; n < v.length; ++n) {
-                    r = v[n];
-                    if (r && r.used) {
-                        i = "y" + r.n, e[i] == null && r.n == 1 && (i = "y");
-                        if (e[i] != null) {
-                            t.top = r.p2c(e[i]);
-                            break
-                        }
-                    }
-                }
-                return t
+                p.lines.zero == null && (p.lines.zero = !!p.lines.fill), p.xaxis = O(d, C(p, "x")), p.yaxis = O(v, C(p, "y"))
             }
+        }
 
-            function O(t, n) {
-                return t[n - 1] || (t[n - 1] = {
-                    n: n,
-                    direction: t == d ? "x" : "y",
-                    options: e.extend(!0, {}, t == d ? a.xaxis : a.yaxis)
-                }), t[n - 1]
+        function _() {
+            function x(e, t, n) {
+                t < e.datamin && t != -r && (e.datamin = t), n > e.datamax && n != r && (e.datamax = n)
             }
-
-            function M() {
-                var t = u.length,
-                    n = -1,
-                    r;
-                for (r = 0; r < u.length; ++r) {
-                    var i = u[r].color;
-                    i != null && (t--, typeof i == "number" && i > n && (n = i))
-                }
-                t <= n && (t = n + 1);
-                var s, o = [],
-                    f = a.colors,
-                    l = f.length,
-                    c = 0;
-                for (r = 0; r < t; r++) s = e.color.parse(f[r % l] || "#666"), r % l == 0 && r && (c >= 0 ? c < .5 ? c = -c - .2 : c = 0 : c = -c), o[r] = s.scale("rgb", 1 + c);
-                var h = 0,
-                    p;
-                for (r = 0; r < u.length; ++r) {
-                    p = u[r], p.color == null ? (p.color = o[h].toString(), ++h) : typeof p.color == "number" && (p.color = o[p.color].toString());
-                    if (p.lines.show == null) {
-                        var m, g = !0;
-                        for (m in p)
-                            if (p[m] && p[m].show) {
-                                g = !1;
-                                break
-                            }
-                        g && (p.lines.show = !0)
-                    }
-                    p.lines.zero == null && (p.lines.zero = !!p.lines.fill), p.xaxis = O(d, C(p, "x")), p.yaxis = O(v, C(p, "y"))
-                }
-            }
-
-            function _() {
-                function x(e, t, n) {
-                    t < e.datamin && t != -r && (e.datamin = t), n > e.datamax && n != r && (e.datamax = n)
-                }
-                var t = Number.POSITIVE_INFINITY,
-                    n = Number.NEGATIVE_INFINITY,
-                    r = Number.MAX_VALUE,
-                    i, s, o, a, f, l, c, h, p, d, v, m, g, y, w, S;
-                e.each(k(), function(e, r) {
-                    r.datamin = t, r.datamax = n, r.used = !1
-                });
-                for (i = 0; i < u.length; ++i) l = u[i], l.datapoints = {
-                    points: []
-                }, E(b.processRawData, [l, l.data, l.datapoints]);
-                for (i = 0; i < u.length; ++i) {
-                    l = u[i], w = l.data, S = l.datapoints.format;
-                    if (!S) {
-                        S = [], S.push({
-                            x: !0,
-                            number: !0,
-                            required: !0
-                        }), S.push({
+            var t = Number.POSITIVE_INFINITY,
+                n = Number.NEGATIVE_INFINITY,
+                r = Number.MAX_VALUE,
+                i, s, o, a, f, l, c, h, p, d, v, m, g, y, w, S;
+            e.each(k(), function(e, r) {
+                r.datamin = t, r.datamax = n, r.used = !1
+            });
+            for (i = 0; i < u.length; ++i) l = u[i], l.datapoints = {
+                points: []
+            }, E(b.processRawData, [l, l.data, l.datapoints]);
+            for (i = 0; i < u.length; ++i) {
+                l = u[i], w = l.data, S = l.datapoints.format;
+                if (!S) {
+                    S = [], S.push({
+                        x: !0,
+                        number: !0,
+                        required: !0
+                    }), S.push({
+                        y: !0,
+                        number: !0,
+                        required: !0
+                    });
+                    if (l.bars.show || l.lines.show && l.lines.fill) {
+                        var T = !!(l.bars.show && l.bars.zero || l.lines.show && l.lines.zero);
+                        S.push({
                             y: !0,
                             number: !0,
-                            required: !0
-                        });
-                        if (l.bars.show || l.lines.show && l.lines.fill) {
-                            var T = !!(l.bars.show && l.bars.zero || l.lines.show && l.lines.zero);
-                            S.push({
-                                y: !0,
-                                number: !0,
-                                required: !1,
-                                defaultValue: 0,
-                                autoscale: T
-                            }), l.bars.horizontal && (delete S[S.length - 1].y, S[S.length - 1].x = !0)
-                        }
-                        l.datapoints.format = S
+                            required: !1,
+                            defaultValue: 0,
+                            autoscale: T
+                        }), l.bars.horizontal && (delete S[S.length - 1].y, S[S.length - 1].x = !0)
                     }
-                    if (l.datapoints.pointsize != null) continue;
-                    l.datapoints.pointsize = S.length, h = l.datapoints.pointsize, c = l.datapoints.points;
-                    var N = l.lines.show && l.lines.steps;
-                    l.xaxis.used = l.yaxis.used = !0;
-                    for (s = o = 0; s < w.length; ++s, o += h) {
-                        y = w[s];
-                        var C = y == null;
-                        if (!C)
-                            for (a = 0; a < h; ++a) m = y[a], g = S[a], g && (g.number && m != null && (m = +m, isNaN(m) ? m = null : m == Infinity ? m = r : m == -Infinity && (m = -r)), m == null && (g.required && (C = !0), g.defaultValue != null && (m = g.defaultValue))), c[o + a] = m;
-                        if (C)
-                            for (a = 0; a < h; ++a) m = c[o + a], m != null && (g = S[a], g.x && x(l.xaxis, m, m), g.y && x(l.yaxis, m, m)), c[o + a] = null;
-                        else if (N && o > 0 && c[o - h] != null && c[o - h] != c[o] && c[o - h + 1] != c[o + 1]) {
-                            for (a = 0; a < h; ++a) c[o + h + a] = c[o + a];
-                            c[o + 1] = c[o - h + 1], o += h
-                        }
+                    l.datapoints.format = S
+                }
+                if (l.datapoints.pointsize != null) continue;
+                l.datapoints.pointsize = S.length, h = l.datapoints.pointsize, c = l.datapoints.points;
+                var N = l.lines.show && l.lines.steps;
+                l.xaxis.used = l.yaxis.used = !0;
+                for (s = o = 0; s < w.length; ++s, o += h) {
+                    y = w[s];
+                    var C = y == null;
+                    if (!C)
+                        for (a = 0; a < h; ++a) m = y[a], g = S[a], g && (g.number && m != null && (m = +m, isNaN(m) ? m = null : m == Infinity ? m = r : m == -Infinity && (m = -r)), m == null && (g.required && (C = !0), g.defaultValue != null && (m = g.defaultValue))), c[o + a] = m;
+                    if (C)
+                        for (a = 0; a < h; ++a) m = c[o + a], m != null && (g = S[a], g.x && x(l.xaxis, m, m), g.y && x(l.yaxis, m, m)), c[o + a] = null;
+                    else if (N && o > 0 && c[o - h] != null && c[o - h] != c[o] && c[o - h + 1] != c[o + 1]) {
+                        for (a = 0; a < h; ++a) c[o + h + a] = c[o + a];
+                        c[o + 1] = c[o - h + 1], o += h
                     }
                 }
-                for (i = 0; i < u.length; ++i) l = u[i], E(b.processDatapoints, [l, l.datapoints]);
-                for (i = 0; i < u.length; ++i) {
-                    l = u[i], c = l.datapoints.points, h = l.datapoints.pointsize, S = l.datapoints.format;
-                    var L = t,
-                        A = t,
-                        O = n,
-                        M = n;
-                    for (s = 0; s < c.length; s += h) {
-                        if (c[s] == null) continue;
-                        for (a = 0; a < h; ++a) {
-                            m = c[s + a], g = S[a];
-                            if (!g || g.autoscale === !1 || m == r || m == -r) continue;
-                            g.x && (m < L && (L = m), m > O && (O = m)), g.y && (m < A && (A = m), m > M && (M = m))
-                        }
+            }
+            for (i = 0; i < u.length; ++i) l = u[i], E(b.processDatapoints, [l, l.datapoints]);
+            for (i = 0; i < u.length; ++i) {
+                l = u[i], c = l.datapoints.points, h = l.datapoints.pointsize, S = l.datapoints.format;
+                var L = t,
+                    A = t,
+                    O = n,
+                    M = n;
+                for (s = 0; s < c.length; s += h) {
+                    if (c[s] == null) continue;
+                    for (a = 0; a < h; ++a) {
+                        m = c[s + a], g = S[a];
+                        if (!g || g.autoscale === !1 || m == r || m == -r) continue;
+                        g.x && (m < L && (L = m), m > O && (O = m)), g.y && (m < A && (A = m), m > M && (M = m))
                     }
-                    if (l.bars.show) {
-                        var _;
-                        switch (l.bars.align) {
-                            case "left":
-                                _ = 0;
-                                break;
-                            case "right":
-                                _ = -l.bars.barWidth;
-                                break;
-                            case "center":
-                                _ = -l.bars.barWidth / 2;
-                                break;
-                            default:
-                                throw new Error("Invalid bar alignment: " + l.bars.align)
-                        }
-                        l.bars.horizontal ? (A += _, M += _ + l.bars.barWidth) : (L += _, O += _ + l.bars.barWidth)
+                }
+                if (l.bars.show) {
+                    var _;
+                    switch (l.bars.align) {
+                        case "left":
+                            _ = 0;
+                            break;
+                        case "right":
+                            _ = -l.bars.barWidth;
+                            break;
+                        case "center":
+                            _ = -l.bars.barWidth / 2;
+                            break;
+                        default:
+                            throw new Error("Invalid bar alignment: " + l.bars.align)
                     }
-                    x(l.xaxis, L, O), x(l.yaxis, A, M)
+                    l.bars.horizontal ? (A += _, M += _ + l.bars.barWidth) : (L += _, O += _ + l.bars.barWidth)
                 }
-                e.each(k(), function(e, r) {
-                    r.datamin == t && (r.datamin = null), r.datamax == n && (r.datamax = null)
-                })
+                x(l.xaxis, L, O), x(l.yaxis, A, M)
             }
+            e.each(k(), function(e, r) {
+                r.datamin == t && (r.datamin = null), r.datamax == n && (r.datamax = null)
+            })
+        }
 
-            function D() {
-                t.css("padding", 0).children(":not(.flot-base,.flot-overlay)").remove(), t.css("position") == "static" && t.css("position", "relative"), f = new n("flot-base", t), l = new n("flot-overlay", t), h = f.context, p = l.context, c = e(l.element).unbind();
-                var r = t.data("plot");
-                r && (r.shutdown(), l.clear()), t.data("plot", w)
+        function D() {
+            t.css("padding", 0).children(":not(.flot-base,.flot-overlay)").remove(), t.css("position") == "static" && t.css("position", "relative"), f = new n("flot-base", t), l = new n("flot-overlay", t), h = f.context, p = l.context, c = e(l.element).unbind();
+            var r = t.data("plot");
+            r && (r.shutdown(), l.clear()), t.data("plot", w)
+        }
+
+        function P() {
+            a.grid.hoverable && (c.mousemove(at), c.bind("mouseleave", ft)), a.grid.clickable && c.click(lt), E(b.bindEvents, [c])
+        }
+
+        function H() {
+            ot && clearTimeout(ot), c.unbind("mousemove", at), c.unbind("mouseleave", ft), c.unbind("click", lt), E(b.shutdown, [c])
+        }
+
+        function B(e) {
+            function t(e) {
+                return e
             }
-
-            function P() {
-                a.grid.hoverable && (c.mousemove(at), c.bind("mouseleave", ft)), a.grid.clickable && c.click(lt), E(b.bindEvents, [c])
+            var n, r, i = e.options.transform || t,
+                s = e.options.inverseTransform;
+            e.direction == "x" ? (n = e.scale = g / Math.abs(i(e.max) - i(e.min)), r = Math.min(i(e.max), i(e.min))) : (n = e.scale = y / Math.abs(i(e.max) - i(e.min)), n = -n, r = Math.max(i(e.max), i(e.min))), i == t ? e.p2c = function(e) {
+                return (e - r) * n
+            } : e.p2c = function(e) {
+                return (i(e) - r) * n
+            }, s ? e.c2p = function(e) {
+                return s(r + e / n)
+            } : e.c2p = function(e) {
+                return r + e / n
             }
+        }
 
-            function H() {
-                ot && clearTimeout(ot), c.unbind("mousemove", at), c.unbind("mouseleave", ft), c.unbind("click", lt), E(b.shutdown, [c])
+        function j(e) {
+            var t = e.options,
+                n = e.ticks || [],
+                r = t.labelWidth || 0,
+                i = t.labelHeight || 0,
+                s = e.direction + "Axis " + e.direction + e.n + "Axis",
+                o = "flot-" + e.direction + "-axis flot-" + e.direction + e.n + "-axis " + s,
+                u = t.font || "flot-tick-label tickLabel";
+            for (var a = 0; a < n.length; ++a) {
+                var l = n[a];
+                if (!l.label) continue;
+                var c = f.getTextInfo(o, l.label, u);
+                t.labelWidth == null && (r = Math.max(r, c.width)), t.labelHeight == null && (i = Math.max(i, c.height))
             }
+            e.labelWidth = Math.ceil(r), e.labelHeight = Math.ceil(i)
+        }
 
-            function B(e) {
-                function t(e) {
-                    return e
-                }
-                var n, r, i = e.options.transform || t,
-                    s = e.options.inverseTransform;
-                e.direction == "x" ? (n = e.scale = g / Math.abs(i(e.max) - i(e.min)), r = Math.min(i(e.max), i(e.min))) : (n = e.scale = y / Math.abs(i(e.max) - i(e.min)), n = -n, r = Math.max(i(e.max), i(e.min))), i == t ? e.p2c = function(e) {
-                    return (e - r) * n
-                } : e.p2c = function(e) {
-                    return (i(e) - r) * n
-                }, s ? e.c2p = function(e) {
-                    return s(r + e / n)
-                } : e.c2p = function(e) {
-                    return r + e / n
-                }
-            }
-
-            function j(e) {
-                var t = e.options,
-                    n = e.ticks || [],
-                    r = t.labelWidth || 0,
-                    i = t.labelHeight || 0,
-                    s = e.direction + "Axis " + e.direction + e.n + "Axis",
-                    o = "flot-" + e.direction + "-axis flot-" + e.direction + e.n + "-axis " + s,
-                    u = t.font || "flot-tick-label tickLabel";
-                for (var a = 0; a < n.length; ++a) {
-                    var l = n[a];
-                    if (!l.label) continue;
-                    var c = f.getTextInfo(o, l.label, u);
-                    t.labelWidth == null && (r = Math.max(r, c.width)), t.labelHeight == null && (i = Math.max(i, c.height))
-                }
-                e.labelWidth = Math.ceil(r), e.labelHeight = Math.ceil(i)
-            }
-
-            function F(t) {
-                var n = t.labelWidth,
-                    r = t.labelHeight,
-                    i = t.options.position,
-                    s = t.options.tickLength,
-                    o = a.grid.axisMargin,
-                    u = a.grid.labelMargin,
-                    l = t.direction == "x" ? d : v,
-                    c, h, p = e.grep(l, function(e) {
-                        return e && e.options.position == i && e.reserveSpace
-                    });
-                e.inArray(t, p) == p.length - 1 && (o = 0);
-                if (s == null) {
-                    var g = e.grep(l, function(e) {
-                        return e && e.reserveSpace
-                    });
-                    h = e.inArray(t, g) == 0, h ? s = "full" : s = 5
-                }
-                isNaN(+s) || (u += +s), t.direction == "x" ? (r += u, i == "bottom" ? (m.bottom += r + o, t.box = {
-                    top: f.height - m.bottom,
-                    height: r
-                }) : (t.box = {
-                    top: m.top + o,
-                    height: r
-                }, m.top += r + o)) : (n += u, i == "left" ? (t.box = {
-                    left: m.left + o,
-                    width: n
-                }, m.left += n + o) : (m.right += n + o, t.box = {
-                    left: f.width - m.right,
-                    width: n
-                })), t.position = i, t.tickLength = s, t.box.padding = u, t.innermost = h
-            }
-
-            function I(e) {
-                e.direction == "x" ? (e.box.left = m.left - e.labelWidth / 2, e.box.width = f.width - m.left - m.right + e.labelWidth) : (e.box.top = m.top - e.labelHeight / 2, e.box.height = f.height - m.bottom - m.top + e.labelHeight)
-            }
-
-            function q() {
-                var t = a.grid.minBorderMargin,
-                    n = {
-                        x: 0,
-                        y: 0
-                    },
-                    r, i;
-                if (t == null) {
-                    t = 0;
-                    for (r = 0; r < u.length; ++r) t = Math.max(t, 2 * (u[r].points.radius + u[r].points.lineWidth / 2))
-                }
-                n.x = n.y = Math.ceil(t), e.each(k(), function(e, t) {
-                    var r = t.direction;
-                    t.reserveSpace && (n[r] = Math.ceil(Math.max(n[r], (r == "x" ? t.labelWidth : t.labelHeight) / 2)))
-                }), m.left = Math.max(n.x, m.left), m.right = Math.max(n.x, m.right), m.top = Math.max(n.y, m.top), m.bottom = Math.max(n.y, m.bottom)
-            }
-
-            function R() {
-                var t, n = k(),
-                    r = a.grid.show;
-                for (var i in m) {
-                    var s = a.grid.margin || 0;
-                    m[i] = typeof s == "number" ? s : s[i] || 0
-                }
-                E(b.processOffset, [m]);
-                for (var i in m) typeof a.grid.borderWidth == "object" ? m[i] += r ? a.grid.borderWidth[i] : 0 : m[i] += r ? a.grid.borderWidth : 0;
-                e.each(n, function(e, t) {
-                    t.show = t.options.show, t.show == null && (t.show = t.used), t.reserveSpace = t.show || t.options.reserveSpace, U(t)
+        function F(t) {
+            var n = t.labelWidth,
+                r = t.labelHeight,
+                i = t.options.position,
+                s = t.options.tickLength,
+                o = a.grid.axisMargin,
+                u = a.grid.labelMargin,
+                l = t.direction == "x" ? d : v,
+                c, h, p = e.grep(l, function(e) {
+                    return e && e.options.position == i && e.reserveSpace
                 });
-                if (r) {
-                    var o = e.grep(n, function(e) {
-                        return e.reserveSpace
-                    });
-                    e.each(o, function(e, t) {
-                        z(t), W(t), X(t, t.ticks), j(t)
-                    });
-                    for (t = o.length - 1; t >= 0; --t) F(o[t]);
-                    q(), e.each(o, function(e, t) {
-                        I(t)
-                    })
-                }
-                g = f.width - m.left - m.right, y = f.height - m.bottom - m.top, e.each(n, function(e, t) {
-                    B(t)
-                }), r && G(), it()
-            }
-
-            function U(e) {
-                var t = e.options,
-                    n = +(t.min != null ? t.min : e.datamin),
-                    r = +(t.max != null ? t.max : e.datamax),
-                    i = r - n;
-                if (i == 0) {
-                    var s = r == 0 ? 1 : .01;
-                    t.min == null && (n -= s);
-                    if (t.max == null || t.min != null) r += s
-                } else {
-                    var o = t.autoscaleMargin;
-                    o != null && (t.min == null && (n -= i * o, n < 0 && e.datamin != null && e.datamin >= 0 && (n = 0)), t.max == null && (r += i * o, r > 0 && e.datamax != null && e.datamax <= 0 && (r = 0)))
-                }
-                e.min = n, e.max = r
-            }
-
-            function z(t) {
-                var n = t.options,
-                    r;
-                typeof n.ticks == "number" && n.ticks > 0 ? r = n.ticks : r = .3 * Math.sqrt(t.direction == "x" ? f.width : f.height);
-                var s = (t.max - t.min) / r,
-                    o = -Math.floor(Math.log(s) / Math.LN10),
-                    u = n.tickDecimals;
-                u != null && o > u && (o = u);
-                var a = Math.pow(10, -o),
-                    l = s / a,
-                    c;
-                l < 1.5 ? c = 1 : l < 3 ? (c = 2, l > 2.25 && (u == null || o + 1 <= u) && (c = 2.5, ++o)) : l < 7.5 ? c = 5 : c = 10, c *= a, n.minTickSize != null && c < n.minTickSize && (c = n.minTickSize), t.delta = s, t.tickDecimals = Math.max(0, u != null ? u : o), t.tickSize = n.tickSize || c;
-                if (n.mode == "time" && !t.tickGenerator) throw new Error("Time mode requires the flot.time plugin.");
-                t.tickGenerator || (t.tickGenerator = function(e) {
-                    var t = [],
-                        n = i(e.min, e.tickSize),
-                        r = 0,
-                        s = Number.NaN,
-                        o;
-                    do o = s, s = n + r * e.tickSize, t.push(s), ++r; while (s < e.max && s != o);
-                    return t
-                }, t.tickFormatter = function(e, t) {
-                    var n = t.tickDecimals ? Math.pow(10, t.tickDecimals) : 1,
-                        r = "" + Math.round(e * n) / n;
-                    if (t.tickDecimals != null) {
-                        var i = r.indexOf("."),
-                            s = i == -1 ? 0 : r.length - i - 1;
-                        if (s < t.tickDecimals) return (s ? r : r + ".") + ("" + n).substr(1, t.tickDecimals - s)
-                    }
-                    return r
-                }), e.isFunction(n.tickFormatter) && (t.tickFormatter = function(e, t) {
-                    return "" + n.tickFormatter(e, t)
+            e.inArray(t, p) == p.length - 1 && (o = 0);
+            if (s == null) {
+                var g = e.grep(l, function(e) {
+                    return e && e.reserveSpace
                 });
-                if (n.alignTicksWithAxis != null) {
-                    var h = (t.direction == "x" ? d : v)[n.alignTicksWithAxis - 1];
-                    if (h && h.used && h != t) {
-                        var p = t.tickGenerator(t);
-                        p.length > 0 && (n.min == null && (t.min = Math.min(t.min, p[0])), n.max == null && p.length > 1 && (t.max = Math.max(t.max, p[p.length - 1]))), t.tickGenerator = function(e) {
-                            var t = [],
-                                n, r;
-                            for (r = 0; r < h.ticks.length; ++r) n = (h.ticks[r].v - h.min) / (h.max - h.min), n = e.min + n * (e.max - e.min), t.push(n);
-                            return t
-                        };
-                        if (!t.mode && n.tickDecimals == null) {
-                            var m = Math.max(0, -Math.floor(Math.log(t.delta) / Math.LN10) + 1),
-                                g = t.tickGenerator(t);
-                            g.length > 1 && /\..*0$/.test((g[1] - g[0]).toFixed(m)) || (t.tickDecimals = m)
-                        }
-                    }
-                }
+                h = e.inArray(t, g) == 0, h ? s = "full" : s = 5
             }
+            isNaN(+s) || (u += +s), t.direction == "x" ? (r += u, i == "bottom" ? (m.bottom += r + o, t.box = {
+                top: f.height - m.bottom,
+                height: r
+            }) : (t.box = {
+                top: m.top + o,
+                height: r
+            }, m.top += r + o)) : (n += u, i == "left" ? (t.box = {
+                left: m.left + o,
+                width: n
+            }, m.left += n + o) : (m.right += n + o, t.box = {
+                left: f.width - m.right,
+                width: n
+            })), t.position = i, t.tickLength = s, t.box.padding = u, t.innermost = h
+        }
 
-            function W(t) {
-                var n = t.options.ticks,
-                    r = [];
-                n == null || typeof n == "number" && n > 0 ? r = t.tickGenerator(t) : n && (e.isFunction(n) ? r = n(t) : r = n);
-                var i, s;
-                t.ticks = [];
-                for (i = 0; i < r.length; ++i) {
-                    var o = null,
-                        u = r[i];
-                    typeof u == "object" ? (s = +u[0], u.length > 1 && (o = u[1])) : s = +u, o == null && (o = t.tickFormatter(s, t)), isNaN(s) || t.ticks.push({
-                        v: s,
-                        label: o
-                    })
-                }
-            }
+        function I(e) {
+            e.direction == "x" ? (e.box.left = m.left - e.labelWidth / 2, e.box.width = f.width - m.left - m.right + e.labelWidth) : (e.box.top = m.top - e.labelHeight / 2, e.box.height = f.height - m.bottom - m.top + e.labelHeight)
+        }
 
-            function X(e, t) {
-                e.options.autoscaleMargin && t.length > 0 && (e.options.min == null && (e.min = Math.min(e.min, t[0].v)), e.options.max == null && t.length > 1 && (e.max = Math.max(e.max, t[t.length - 1].v)))
-            }
-
-            function V() {
-                f.clear(), E(b.drawBackground, [h]);
-                var e = a.grid;
-                e.show && e.backgroundColor && K(), e.show && !e.aboveData && Q();
-                for (var t = 0; t < u.length; ++t) E(b.drawSeries, [h, u[t]]), Y(u[t]);
-                E(b.draw, [h]), e.show && e.aboveData && Q(), f.render()
-            }
-
-            function J(e, t) {
-                var n, r, i, s, o = k();
-                for (var u = 0; u < o.length; ++u) {
-                    n = o[u];
-                    if (n.direction == t) {
-                        s = t + n.n + "axis", !e[s] && n.n == 1 && (s = t + "axis");
-                        if (e[s]) {
-                            r = e[s].from, i = e[s].to;
-                            break
-                        }
-                    }
-                }
-                e[s] || (n = t == "x" ? d[0] : v[0], r = e[t + "1"], i = e[t + "2"]);
-                if (r != null &&
-                    i != null && r > i) {
-                    var a = r;
-                    r = i, i = a
-                }
-                return {
-                    from: r,
-                    to: i,
-                    axis: n
-                }
-            }
-
-            function K() {
-                h.save(), h.translate(m.left, m.top), h.fillStyle = bt(a.grid.backgroundColor, y, 0, "rgba(255, 255, 255, 0)"), h.fillRect(0, 0, g, y), h.restore()
-            }
-
-            function Q() {
-                var t, n, r, i;
-                h.save(), h.translate(m.left, m.top);
-                var s = a.grid.markings;
-                if (s) {
-                    e.isFunction(s) && (n = w.getAxes(), n.xmin = n.xaxis.min, n.xmax = n.xaxis.max, n.ymin = n.yaxis.min, n.ymax = n.yaxis.max, s = s(n));
-                    for (t = 0; t < s.length; ++t) {
-                        var o = s[t],
-                            u = J(o, "x"),
-                            f = J(o, "y");
-                        u.from == null && (u.from = u.axis.min), u.to == null && (u.to = u.axis.max), f.from == null && (f.from = f.axis.min), f.to == null && (f.to = f.axis.max);
-                        if (u.to < u.axis.min || u.from > u.axis.max || f.to < f.axis.min || f.from > f.axis.max) continue;
-                        u.from = Math.max(u.from, u.axis.min), u.to = Math.min(u.to, u.axis.max), f.from = Math.max(f.from, f.axis.min), f.to = Math.min(f.to, f.axis.max);
-                        if (u.from == u.to && f.from == f.to) continue;
-                        u.from = u.axis.p2c(u.from), u.to = u.axis.p2c(u.to), f.from = f.axis.p2c(f.from), f.to = f.axis.p2c(f.to), u.from == u.to || f.from == f.to ? (h.beginPath(), h.strokeStyle = o.color || a.grid.markingsColor, h.lineWidth = o.lineWidth || a.grid.markingsLineWidth, h.moveTo(u.from, f.from), h.lineTo(u.to, f.to), h.stroke()) : (h.fillStyle = o.color || a.grid.markingsColor, h.fillRect(u.from, f.to, u.to - u.from, f.from - f.to))
-                    }
-                }
-                n = k(), r = a.grid.borderWidth;
-                for (var l = 0; l < n.length; ++l) {
-                    var c = n[l],
-                        p = c.box,
-                        d = c.tickLength,
-                        v, b, E, S;
-                    if (!c.show || c.ticks.length == 0) continue;
-                    h.lineWidth = 1, c.direction == "x" ? (v = 0, d == "full" ? b = c.position == "top" ? 0 : y : b = p.top - m.top + (c.position == "top" ? p.height : 0)) : (b = 0, d == "full" ? v = c.position == "left" ? 0 : g : v = p.left - m.left + (c.position == "left" ? p.width : 0)), c.innermost || (h.strokeStyle = c.options.color, h.beginPath(), E = S = 0, c.direction == "x" ? E = g + 1 : S = y + 1, h.lineWidth == 1 && (c.direction == "x" ? b = Math.floor(b) + .5 : v = Math.floor(v) + .5), h.moveTo(v, b), h.lineTo(v + E, b + S), h.stroke()), h.strokeStyle = c.options.tickColor, h.beginPath();
-                    for (t = 0; t < c.ticks.length; ++t) {
-                        var x = c.ticks[t].v;
-                        E = S = 0;
-                        if (isNaN(x) || x < c.min || x > c.max || d == "full" && (typeof r == "object" && r[c.position] > 0 || r > 0) && (x == c.min || x == c.max)) continue;
-                        c.direction == "x" ? (v = c.p2c(x), S = d == "full" ? -y : d, c.position == "top" && (S = -S)) : (b = c.p2c(x), E = d == "full" ? -g : d, c.position == "left" && (E = -E)), h.lineWidth == 1 && (c.direction == "x" ? v = Math.floor(v) + .5 : b = Math.floor(b) + .5), h.moveTo(v, b), h.lineTo(v + E, b + S)
-                    }
-                    h.stroke()
-                }
-                r && (i = a.grid.borderColor, typeof r == "object" || typeof i == "object" ? (typeof r != "object" && (r = {
-                    top: r,
-                    right: r,
-                    bottom: r,
-                    left: r
-                }), typeof i != "object" && (i = {
-                    top: i,
-                    right: i,
-                    bottom: i,
-                    left: i
-                }), r.top > 0 && (h.strokeStyle = i.top, h.lineWidth = r.top, h.beginPath(), h.moveTo(0 - r.left, 0 - r.top / 2), h.lineTo(g, 0 - r.top / 2), h.stroke()), r.right > 0 && (h.strokeStyle = i.right, h.lineWidth = r.right, h.beginPath(), h.moveTo(g + r.right / 2, 0 - r.top), h.lineTo(g + r.right / 2, y), h.stroke()), r.bottom > 0 && (h.strokeStyle = i.bottom, h.lineWidth = r.bottom, h.beginPath(), h.moveTo(g + r.right, y + r.bottom / 2), h.lineTo(0, y + r.bottom / 2), h.stroke()), r.left > 0 && (h.strokeStyle = i.left, h.lineWidth = r.left, h.beginPath(), h.moveTo(0 - r.left / 2, y + r.bottom), h.lineTo(0 - r.left / 2, 0), h.stroke())) : (h.lineWidth = r, h.strokeStyle = a.grid.borderColor, h.strokeRect(-r / 2, -r / 2, g + r, y + r))), h.restore()
-            }
-
-            function G() {
-                e.each(k(), function(e, t) {
-                    if (!t.show || t.ticks.length == 0) return;
-                    var n = t.box,
-                        r = t.direction + "Axis " + t.direction + t.n + "Axis",
-                        i = "flot-" + t.direction + "-axis flot-" + t.direction + t.n + "-axis " + r,
-                        s = t.options.font || "flot-tick-label tickLabel",
-                        o, u, a, l, c;
-                    f.removeText(i);
-                    for (var h = 0; h < t.ticks.length; ++h) {
-                        o = t.ticks[h];
-                        if (!o.label || o.v < t.min || o.v > t.max) continue;
-                        t.direction == "x" ? (l = "center", u = m.left + t.p2c(o.v), t.position == "bottom" ? a = n.top + n.padding : (a = n.top + n.height - n.padding, c = "bottom")) : (c = "middle", a = m.top + t.p2c(o.v), t.position == "left" ? (u = n.left + n.width - n.padding, l = "right") : u = n.left + n.padding), f.addText(i, u, a, o.label, s, null, l, c)
-                    }
-                })
-            }
-
-            function Y(e) {
-                e.lines.show && Z(e), e.bars.show && nt(e), e.points.show && et(e)
-            }
-
-            function Z(e) {
-                function t(e, t, n, r, i) {
-                    var s = e.points,
-                        o = e.pointsize,
-                        u = null,
-                        a = null;
-                    h.beginPath();
-                    for (var f = o; f < s.length; f += o) {
-                        var l = s[f - o],
-                            c = s[f - o + 1],
-                            p = s[f],
-                            d = s[f + 1];
-                        if (l == null || p == null) continue;
-                        if (c <= d && c < i.min) {
-                            if (d < i.min) continue;
-                            l = (i.min - c) / (d - c) * (p - l) + l, c = i.min
-                        } else if (d <= c && d < i.min) {
-                            if (c < i.min) continue;
-                            p = (i.min - c) / (d - c) * (p - l) + l, d = i.min
-                        }
-                        if (c >= d && c > i.max) {
-                            if (d > i.max) continue;
-                            l = (i.max - c) / (d - c) * (p - l) + l, c = i.max
-                        } else if (d >= c && d > i.max) {
-                            if (c > i.max) continue;
-                            p = (i.max - c) / (d - c) * (p - l) + l, d = i.max
-                        }
-                        if (l <= p && l < r.min) {
-                            if (p < r.min) continue;
-                            c = (r.min - l) / (p - l) * (d - c) + c, l = r.min
-                        } else if (p <= l && p < r.min) {
-                            if (l < r.min) continue;
-                            d = (r.min - l) / (p - l) * (d - c) + c, p = r.min
-                        }
-                        if (l >= p && l > r.max) {
-                            if (p > r.max) continue;
-                            c = (r.max - l) / (p - l) * (d - c) + c, l = r.max
-                        } else if (p >= l && p > r.max) {
-                            if (l > r.max) continue;
-                            d = (r.max - l) / (p - l) * (d - c) + c, p = r.max
-                        }(l != u || c != a) && h.moveTo(r.p2c(l) + t, i.p2c(c) + n), u = p, a = d, h.lineTo(r.p2c(p) + t, i.p2c(d) + n)
-                    }
-                    h.stroke()
-                }
-
-                function n(e, t, n) {
-                    var r = e.points,
-                        i = e.pointsize,
-                        s = Math.min(Math.max(0, n.min), n.max),
-                        o = 0,
-                        u, a = !1,
-                        f = 1,
-                        l = 0,
-                        c = 0;
-                    for (;;) {
-                        if (i > 0 && o > r.length + i) break;
-                        o += i;
-                        var p = r[o - i],
-                            d = r[o - i + f],
-                            v = r[o],
-                            m = r[o + f];
-                        if (a) {
-                            if (i > 0 && p != null && v == null) {
-                                c = o, i = -i, f = 2;
-                                continue
-                            }
-                            if (i < 0 && o == l + i) {
-                                h.fill(), a = !1, i = -i, f = 1, o = l = c + i;
-                                continue
-                            }
-                        }
-                        if (p == null || v == null) continue;
-                        if (p <= v && p < t.min) {
-                            if (v < t.min) continue;
-                            d = (t.min - p) / (v - p) * (m - d) + d, p = t.min
-                        } else if (v <= p && v < t.min) {
-                            if (p < t.min) continue;
-                            m = (t.min - p) / (v - p) * (m - d) + d, v = t.min
-                        }
-                        if (p >= v && p > t.max) {
-                            if (v > t.max) continue;
-                            d = (t.max - p) / (v - p) * (m - d) + d, p = t.max
-                        } else if (v >= p && v > t.max) {
-                            if (p > t.max) continue;
-                            m = (t.max - p) / (v - p) * (m - d) + d, v = t.max
-                        }
-                        a || (h.beginPath(), h.moveTo(t.p2c(p), n.p2c(s)), a = !0);
-                        if (d >= n.max && m >= n.max) {
-                            h.lineTo(t.p2c(p), n.p2c(n.max)), h.lineTo(t.p2c(v), n.p2c(n.max));
-                            continue
-                        }
-                        if (d <= n.min && m <= n.min) {
-                            h.lineTo(t.p2c(p), n.p2c(n.min)), h.lineTo(t.p2c(v), n.p2c(n.min));
-                            continue
-                        }
-                        var g = p,
-                            y = v;
-                        d <= m && d < n.min && m >= n.min ? (p = (n.min - d) / (m - d) * (v - p) + p, d = n.min) : m <= d && m < n.min && d >= n.min && (v = (n.min - d) / (m - d) * (v - p) + p, m = n.min), d >= m && d > n.max && m <= n.max ? (p = (n.max - d) / (m - d) * (v - p) + p, d = n.max) : m >= d && m > n.max && d <= n.max && (v = (n.max - d) / (m - d) * (v - p) + p, m = n.max), p != g && h.lineTo(t.p2c(g), n.p2c(d)), h.lineTo(t.p2c(p), n.p2c(d)), h.lineTo(t.p2c(v), n.p2c(m)), v != y && (h.lineTo(t.p2c(v), n.p2c(m)), h.lineTo(t.p2c(y), n.p2c(m)))
-                    }
-                }
-                h.save(), h.translate(m.left, m.top), h.lineJoin = "round";
-                var r = e.lines.lineWidth,
-                    i = e.shadowSize;
-                if (r > 0 && i > 0) {
-                    h.lineWidth = i, h.strokeStyle = "rgba(0,0,0,0.1)";
-                    var s = Math.PI / 18;
-                    t(e.datapoints, Math.sin(s) * (r / 2 + i / 2), Math.cos(s) * (r / 2 + i / 2), e.xaxis, e.yaxis), h.lineWidth = i / 2, t(e.datapoints, Math.sin(s) * (r / 2 + i / 4), Math.cos(s) * (r / 2 + i / 4), e.xaxis, e.yaxis)
-                }
-                h.lineWidth = r, h.strokeStyle = e.color;
-                var o = rt(e.lines, e.color, 0, y);
-                o && (h.fillStyle = o, n(e.datapoints, e.xaxis, e.yaxis)), r > 0 && t(e.datapoints, 0, 0, e.xaxis, e.yaxis), h.restore()
-            }
-
-            function et(e) {
-                function t(e, t, n, r, i, s, o, u) {
-                    var a = e.points,
-                        f = e.pointsize;
-                    for (var l = 0; l < a.length; l += f) {
-                        var c = a[l],
-                            p = a[l + 1];
-                        if (c == null || c < s.min || c > s.max || p < o.min || p > o.max) continue;
-                        h.beginPath(), c = s.p2c(c), p = o.p2c(p) + r, u == "circle" ? h.arc(c, p, t, 0, i ? Math.PI : Math.PI * 2, !1) : u(h, c, p, t, i), h.closePath(), n && (h.fillStyle = n, h.fill()), h.stroke()
-                    }
-                }
-                h.save(), h.translate(m.left, m.top);
-                var n = e.points.lineWidth,
-                    r = e.shadowSize,
-                    i = e.points.radius,
-                    s = e.points.symbol;
-                n == 0 && (n = 1e-4);
-                if (n > 0 && r > 0) {
-                    var o = r / 2;
-                    h.lineWidth = o, h.strokeStyle = "rgba(0,0,0,0.1)", t(e.datapoints, i, null, o + o / 2, !0, e.xaxis, e.yaxis, s), h.strokeStyle = "rgba(0,0,0,0.2)", t(e.datapoints, i, null, o / 2, !0, e.xaxis, e.yaxis, s)
-                }
-                h.lineWidth = n, h.strokeStyle = e.color, t(e.datapoints, i, rt(e.points, e.color), 0, !1, e.xaxis, e.yaxis, s), h.restore()
-            }
-
-            function tt(e, t, n, r, i, s, o, u, a, f, l, c) {
-                var h, p, d, v, m, g, y, b, w;
-                l ? (b = g = y = !0, m = !1, h = n, p = e, v = t + r, d = t + i, p < h && (w = p, p = h, h = w, m = !0, g = !1)) : (m = g = y = !0, b = !1, h = e + r, p = e + i, d = n, v = t, v < d && (w = v, v = d, d = w, b = !0, y = !1));
-                if (p < u.min || h > u.max || v < a.min || d > a.max) return;
-                h < u.min && (h = u.min, m = !1), p > u.max && (p = u.max, g = !1), d < a.min && (d = a.min, b = !1), v > a.max && (v = a.max, y = !1), h = u.p2c(h), d = a.p2c(d), p = u.p2c(p), v = a.p2c(v), o && (f.beginPath(), f.moveTo(h, d), f.lineTo(h, v), f.lineTo(p, v), f.lineTo(p, d), f.fillStyle = o(d, v), f.fill()), c > 0 && (m || g || y || b) && (f.beginPath(), f.moveTo(h, d + s), m ? f.lineTo(h, v + s) : f.moveTo(h, v + s), y ? f.lineTo(p, v + s) : f.moveTo(p, v + s), g ? f.lineTo(p, d + s) : f.moveTo(p, d + s), b ? f.lineTo(h, d + s) : f.moveTo(h, d + s), f.stroke())
-            }
-
-            function nt(e) {
-                function t(t, n, r, i, s, o, u) {
-                    var a = t.points,
-                        f = t.pointsize;
-                    for (var l = 0; l < a.length; l += f) {
-                        if (a[l] == null) continue;
-                        tt(a[l], a[l + 1], a[l + 2], n, r, i, s, o, u, h, e.bars.horizontal, e.bars.lineWidth)
-                    }
-                }
-                h.save(), h.translate(m.left, m.top), h.lineWidth = e.bars.lineWidth, h.strokeStyle = e.color;
-                var n;
-                switch (e.bars.align) {
-                    case "left":
-                        n = 0;
-                        break;
-                    case "right":
-                        n = -e.bars.barWidth;
-                        break;
-                    case "center":
-                        n = -e.bars.barWidth / 2;
-                        break;
-                    default:
-                        throw new Error("Invalid bar alignment: " + e.bars.align)
-                }
-                var r = e.bars.fill ? function(t, n) {
-                    return rt(e.bars, e.color, t, n)
-                } : null;
-                t(e.datapoints, n, n + e.bars.barWidth, 0, r, e.xaxis, e.yaxis), h.restore()
-            }
-
-            function rt(t, n, r, i) {
-                var s = t.fill;
-                if (!s) return null;
-                if (t.fillColor) return bt(t.fillColor, r, i, n);
-                var o = e.color.parse(n);
-                return o.a = typeof s == "number" ? s : .4, o.normalize(), o.toString()
-            }
-
-            function it() {
-                t.find(".legend").remove();
-                if (!a.legend.show) return;
-                var n = [],
-                    r = [],
-                    i = !1,
-                    s = a.legend.labelFormatter,
-                    o, f;
-                for (var l = 0; l < u.length; ++l) o = u[l], o.label && (f = s ? s(o.label, o) : o.label, f && r.push({
-                    label: f,
-                    color: o.color
-                }));
-                if (a.legend.sorted)
-                    if (e.isFunction(a.legend.sorted)) r.sort(a.legend.sorted);
-                    else if (a.legend.sorted == "reverse") r.reverse();
-                else {
-                    var c = a.legend.sorted != "descending";
-                    r.sort(function(e, t) {
-                        return e.label == t.label ? 0 : e.label < t.label != c ? 1 : -1
-                    })
-                }
-                for (var l = 0; l < r.length; ++l) {
-                    var h = r[l];
-                    l % a.legend.noColumns == 0 && (i && n.push("</tr>"), n.push("<tr>"), i = !0), n.push('<td class="legendColorBox"><div style="border:1px solid ' + a.legend.labelBoxBorderColor + ';padding:1px"><div style="width:4px;height:0;border:5px solid ' + h.color + ';overflow:hidden"></div></div></td>' + '<td class="legendLabel">' + h.label + "</td>")
-                }
-                i && n.push("</tr>");
-                if (n.length == 0) return;
-                var p = '<table style="font-size:smaller;color:' + a.grid.color + '">' + n.join("") + "</table>";
-                if (a.legend.container != null) e(a.legend.container).html(p);
-                else {
-                    var d = "",
-                        v = a.legend.position,
-                        g = a.legend.margin;
-                    g[0] == null && (g = [g, g]), v.charAt(0) == "n" ? d += "top:" + (g[1] + m.top) + "px;" : v.charAt(0) == "s" && (d += "bottom:" + (g[1] + m.bottom) + "px;"), v.charAt(1) == "e" ? d += "right:" + (g[0] + m.right) + "px;" : v.charAt(1) == "w" && (d += "left:" + (g[0] + m.left) + "px;");
-                    var y = e('<div class="legend">' + p.replace('style="', 'style="position:absolute;' + d + ";") + "</div>").appendTo(t);
-                    if (a.legend.backgroundOpacity != 0) {
-                        var b = a.legend.backgroundColor;
-                        b == null && (b = a.grid.backgroundColor, b && typeof b == "string" ? b = e.color.parse(b) : b = e.color.extract(y, "background-color"), b.a = 1, b = b.toString());
-                        var w = y.children();
-                        e('<div style="position:absolute;width:' + w.width() + "px;height:" + w.height() + "px;" + d + "background-color:" + b + ';"> </div>').prependTo(y).css("opacity", a.legend.backgroundOpacity)
-                    }
-                }
-            }
-
-            function ut(e, t, n) {
-                var r = a.grid.mouseActiveRadius,
-                    i = r * r + 1,
-                    s = null,
-                    o = !1,
-                    f, l, c;
-                for (f = u.length - 1; f >= 0; --f) {
-                    if (!n(u[f])) continue;
-                    var h = u[f],
-                        p = h.xaxis,
-                        d = h.yaxis,
-                        v = h.datapoints.points,
-                        m = p.c2p(e),
-                        g = d.c2p(t),
-                        y = r / p.scale,
-                        b = r / d.scale;
-                    c = h.datapoints.pointsize, p.options.inverseTransform && (y = Number.MAX_VALUE), d.options.inverseTransform && (b = Number.MAX_VALUE);
-                    if (h.lines.show || h.points.show)
-                        for (l = 0; l < v.length; l += c) {
-                            var w = v[l],
-                                E = v[l + 1];
-                            if (w == null) continue;
-                            if (w - m > y || w - m < -y || E - g > b || E - g < -b) continue;
-                            var S = Math.abs(p.p2c(w) - e),
-                                x = Math.abs(d.p2c(E) - t),
-                                T = S * S + x * x;
-                            T < i && (i = T, s = [f, l / c])
-                        }
-                    if (h.bars.show && !s) {
-                        var N = h.bars.align == "left" ? 0 : -h.bars.barWidth / 2,
-                            C = N + h.bars.barWidth;
-                        for (l = 0; l < v.length; l += c) {
-                            var w = v[l],
-                                E = v[l + 1],
-                                k = v[l + 2];
-                            if (w == null) continue;
-                            if (u[f].bars.horizontal ? m <= Math.max(k, w) && m >= Math.min(k, w) && g >= E + N && g <= E + C : m >= w + N && m <= w + C && g >= Math.min(k, E) && g <= Math.max(k, E)) s = [f, l / c]
-                        }
-                    }
-                }
-                return s ? (f = s[0], l = s[1], c = u[f].datapoints.pointsize, {
-                    datapoint: u[f].datapoints.points.slice(l * c, (l + 1) * c),
-                    dataIndex: l,
-                    series: u[f],
-                    seriesIndex: f
-                }) : null
-            }
-
-            function at(e) {
-                a.grid.hoverable && ct("plothover", e, function(e) {
-                    return e["hoverable"] != 0
-                })
-            }
-
-            function ft(e) {
-                a.grid.hoverable && ct("plothover", e, function(e) {
-                    return !1
-                })
-            }
-
-            function lt(e) {
-                ct("plotclick", e, function(e) {
-                    return e["clickable"] != 0
-                })
-            }
-
-            function ct(e, n, r) {
-                var i = c.offset(),
-                    s = n.pageX - i.left - m.left,
-                    o = n.pageY - i.top - m.top,
-                    u = L({
-                        left: s,
-                        top: o
-                    });
-                u.pageX = n.pageX, u.pageY = n.pageY;
-                var f = ut(s, o, r);
-                f && (f.pageX = parseInt(f.series.xaxis.p2c(f.datapoint[0]) + i.left + m.left, 10), f.pageY = parseInt(f.series.yaxis.p2c(f.datapoint[1]) + i.top + m.top, 10));
-                if (a.grid.autoHighlight) {
-                    for (var l = 0; l < st.length; ++l) {
-                        var h = st[l];
-                        h.auto == e && (!f || h.series != f.series || h.point[0] != f.datapoint[0] || h.point[1] != f.datapoint[1]) && vt(h.series, h.point)
-                    }
-                    f && dt(f.series, f.datapoint, e)
-                }
-                t.trigger(e, [u, f])
-            }
-
-            function ht() {
-                var e = a.interaction.redrawOverlayInterval;
-                if (e == -1) {
-                    pt();
-                    return
-                }
-                ot || (ot = setTimeout(pt, e))
-            }
-
-            function pt() {
-                ot = null, p.save(), l.clear(), p.translate(m.left, m.top);
-                var e, t;
-                for (e = 0; e < st.length; ++e) t = st[e], t.series.bars.show ? yt(t.series, t.point) : gt(t.series, t.point);
-                p.restore(), E(b.drawOverlay, [p])
-            }
-
-            function dt(e, t, n) {
-                typeof e == "number" && (e = u[e]);
-                if (typeof t == "number") {
-                    var r = e.datapoints.pointsize;
-                    t = e.datapoints.points.slice(r * t, r * (t + 1))
-                }
-                var i = mt(e, t);
-                i == -1 ? (st.push({
-                    series: e,
-                    point: t,
-                    auto: n
-                }), ht()) : n || (st[i].auto = !1)
-            }
-
-            function vt(e, t) {
-                if (e == null && t == null) {
-                    st = [], ht();
-                    return
-                }
-                typeof e == "number" && (e = u[e]);
-                if (typeof t == "number") {
-                    var n = e.datapoints.pointsize;
-                    t = e.datapoints.points.slice(n * t, n * (t + 1))
-                }
-                var r = mt(e, t);
-                r != -1 && (st.splice(r, 1), ht())
-            }
-
-            function mt(e, t) {
-                for (var n = 0; n < st.length; ++n) {
-                    var r = st[n];
-                    if (r.series == e && r.point[0] == t[0] && r.point[1] == t[1]) return n
-                }
-                return -1
-            }
-
-            function gt(t, n) {
-                var r = n[0],
-                    i = n[1],
-                    s = t.xaxis,
-                    o = t.yaxis,
-                    u = typeof t.highlightColor == "string" ? t.highlightColor : e.color.parse(t.color).scale("a", .5).toString();
-                if (r < s.min || r > s.max || i < o.min || i > o.max) return;
-                var a = t.points.radius + t.points.lineWidth / 2;
-                p.lineWidth = a, p.strokeStyle = u;
-                var f = 1.5 * a;
-                r = s.p2c(r), i = o.p2c(i), p.beginPath(), t.points.symbol == "circle" ? p.arc(r, i, f, 0, 2 * Math.PI, !1) : t.points.symbol(p, r, i, f, !1), p.closePath(), p.stroke()
-            }
-
-            function yt(t, n) {
-                var r = typeof t.highlightColor == "string" ? t.highlightColor : e.color.parse(t.color).scale("a", .5).toString(),
-                    i = r,
-                    s = t.bars.align == "left" ? 0 : -t.bars.barWidth / 2;
-                p.lineWidth = t.bars.lineWidth, p.strokeStyle = r, tt(n[0], n[1], n[2] || 0, s, s + t.bars.barWidth, 0, function() {
-                    return i
-                }, t.xaxis, t.yaxis, p, t.bars.horizontal, t.bars.lineWidth)
-            }
-
-            function bt(t, n, r, i) {
-                if (typeof t == "string") return t;
-                var s = h.createLinearGradient(0, r, 0, n);
-                for (var o = 0, u = t.colors.length; o < u; ++o) {
-                    var a = t.colors[o];
-                    if (typeof a != "string") {
-                        var f = e.color.parse(i);
-                        a.brightness != null && (f = f.scale("rgb", a.brightness)), a.opacity != null && (f.a *= a.opacity), a = f.toString()
-                    }
-                    s.addColorStop(o / (u - 1), a)
-                }
-                return s
-            }
-            var u = [],
-                a = {
-                    colors: ["#edc240", "#afd8f8", "#cb4b4b", "#4da74d", "#9440ed"],
-                    legend: {
-                        show: !0,
-                        noColumns: 1,
-                        labelFormatter: null,
-                        labelBoxBorderColor: "#ccc",
-                        container: null,
-                        position: "ne",
-                        margin: 5,
-                        backgroundColor: null,
-                        backgroundOpacity: .85,
-                        sorted: null
-                    },
-                    xaxis: {
-                        show: null,
-                        position: "bottom",
-                        mode: null,
-                        font: null,
-                        color: null,
-                        tickColor: null,
-                        transform: null,
-                        inverseTransform: null,
-                        min: null,
-                        max: null,
-                        autoscaleMargin: null,
-                        ticks: null,
-                        tickFormatter: null,
-                        labelWidth: null,
-                        labelHeight: null,
-                        reserveSpace: null,
-                        tickLength: null,
-                        alignTicksWithAxis: null,
-                        tickDecimals: null,
-                        tickSize: null,
-                        minTickSize: null
-                    },
-                    yaxis: {
-                        autoscaleMargin: .02,
-                        position: "left"
-                    },
-                    xaxes: [],
-                    yaxes: [],
-                    series: {
-                        points: {
-                            show: !1,
-                            radius: 3,
-                            lineWidth: 2,
-                            fill: !0,
-                            fillColor: "#ffffff",
-                            symbol: "circle"
-                        },
-                        lines: {
-                            lineWidth: 2,
-                            fill: !1,
-                            fillColor: null,
-                            steps: !1
-                        },
-                        bars: {
-                            show: !1,
-                            lineWidth: 2,
-                            barWidth: 1,
-                            fill: !0,
-                            fillColor: null,
-                            align: "left",
-                            horizontal: !1,
-                            zero: !0
-                        },
-                        shadowSize: 3,
-                        highlightColor: null
-                    },
-                    grid: {
-                        show: !0,
-                        aboveData: !1,
-                        color: "#545454",
-                        backgroundColor: null,
-                        borderColor: null,
-                        tickColor: null,
-                        margin: 0,
-                        labelMargin: 5,
-                        axisMargin: 8,
-                        borderWidth: 2,
-                        minBorderMargin: null,
-                        markings: null,
-                        markingsColor: "#f4f4f4",
-                        markingsLineWidth: 2,
-                        clickable: !1,
-                        hoverable: !1,
-                        autoHighlight: !0,
-                        mouseActiveRadius: 10
-                    },
-                    interaction: {
-                        redrawOverlayInterval: 1e3 / 60
-                    },
-                    hooks: {}
+        function q() {
+            var t = a.grid.minBorderMargin,
+                n = {
+                    x: 0,
+                    y: 0
                 },
-                f = null,
-                l = null,
-                c = null,
-                h = null,
-                p = null,
-                d = [],
-                v = [],
-                m = {
-                    left: 0,
-                    right: 0,
-                    top: 0,
-                    bottom: 0
-                },
-                g = 0,
-                y = 0,
-                b = {
-                    processOptions: [],
-                    processRawData: [],
-                    processDatapoints: [],
-                    processOffset: [],
-                    drawBackground: [],
-                    drawSeries: [],
-                    draw: [],
-                    bindEvents: [],
-                    drawOverlay: [],
-                    shutdown: []
-                },
-                w = this;
-            w.setData = T, w.setupGrid = R, w.draw = V, w.getPlaceholder = function() {
+                r, i;
+            if (t == null) {
+                t = 0;
+                for (r = 0; r < u.length; ++r) t = Math.max(t, 2 * (u[r].points.radius + u[r].points.lineWidth / 2))
+            }
+            n.x = n.y = Math.ceil(t), e.each(k(), function(e, t) {
+                var r = t.direction;
+                t.reserveSpace && (n[r] = Math.ceil(Math.max(n[r], (r == "x" ? t.labelWidth : t.labelHeight) / 2)))
+            }), m.left = Math.max(n.x, m.left), m.right = Math.max(n.x, m.right), m.top = Math.max(n.y, m.top), m.bottom = Math.max(n.y, m.bottom)
+        }
+
+        function R() {
+            var t, n = k(),
+                r = a.grid.show;
+            for (var i in m) {
+                var s = a.grid.margin || 0;
+                m[i] = typeof s == "number" ? s : s[i] || 0
+            }
+            E(b.processOffset, [m]);
+            for (var i in m) typeof a.grid.borderWidth == "object" ? m[i] += r ? a.grid.borderWidth[i] : 0 : m[i] += r ? a.grid.borderWidth : 0;
+            e.each(n, function(e, t) {
+                t.show = t.options.show, t.show == null && (t.show = t.used), t.reserveSpace = t.show || t.options.reserveSpace, U(t)
+            });
+            if (r) {
+                var o = e.grep(n, function(e) {
+                    return e.reserveSpace
+                });
+                e.each(o, function(e, t) {
+                    z(t), W(t), X(t, t.ticks), j(t)
+                });
+                for (t = o.length - 1; t >= 0; --t) F(o[t]);
+                q(), e.each(o, function(e, t) {
+                    I(t)
+                })
+            }
+            g = f.width - m.left - m.right, y = f.height - m.bottom - m.top, e.each(n, function(e, t) {
+                B(t)
+            }), r && G(), it()
+        }
+
+        function U(e) {
+            var t = e.options,
+                n = +(t.min != null ? t.min : e.datamin),
+                r = +(t.max != null ? t.max : e.datamax),
+                i = r - n;
+            if (i == 0) {
+                var s = r == 0 ? 1 : .01;
+                t.min == null && (n -= s);
+                if (t.max == null || t.min != null) r += s
+            } else {
+                var o = t.autoscaleMargin;
+                o != null && (t.min == null && (n -= i * o, n < 0 && e.datamin != null && e.datamin >= 0 && (n = 0)), t.max == null && (r += i * o, r > 0 && e.datamax != null && e.datamax <= 0 && (r = 0)))
+            }
+            e.min = n, e.max = r
+        }
+
+        function z(t) {
+            var n = t.options,
+                r;
+            typeof n.ticks == "number" && n.ticks > 0 ? r = n.ticks : r = .3 * Math.sqrt(t.direction == "x" ? f.width : f.height);
+            var s = (t.max - t.min) / r,
+                o = -Math.floor(Math.log(s) / Math.LN10),
+                u = n.tickDecimals;
+            u != null && o > u && (o = u);
+            var a = Math.pow(10, -o),
+                l = s / a,
+                c;
+            l < 1.5 ? c = 1 : l < 3 ? (c = 2, l > 2.25 && (u == null || o + 1 <= u) && (c = 2.5, ++o)) : l < 7.5 ? c = 5 : c = 10, c *= a, n.minTickSize != null && c < n.minTickSize && (c = n.minTickSize), t.delta = s, t.tickDecimals = Math.max(0, u != null ? u : o), t.tickSize = n.tickSize || c;
+            if (n.mode == "time" && !t.tickGenerator) throw new Error("Time mode requires the flot.time plugin.");
+            t.tickGenerator || (t.tickGenerator = function(e) {
+                var t = [],
+                    n = i(e.min, e.tickSize),
+                    r = 0,
+                    s = Number.NaN,
+                    o;
+                do o = s, s = n + r * e.tickSize, t.push(s), ++r; while (s < e.max && s != o);
                 return t
-            }, w.getCanvas = function() {
-                return f.element
-            }, w.getPlotOffset = function() {
-                return m
-            }, w.width = function() {
-                return g
-            }, w.height = function() {
-                return y
-            }, w.offset = function() {
-                var e = c.offset();
-                return e.left += m.left, e.top += m.top, e
-            }, w.getData = function() {
-                return u
-            }, w.getAxes = function() {
-                var t = {},
-                    n;
-                return e.each(d.concat(v), function(e, n) {
-                    n && (t[n.direction + (n.n != 1 ? n.n : "") + "axis"] = n)
-                }), t
-            }, w.getXAxes = function() {
-                return d
-            }, w.getYAxes = function() {
-                return v
-            }, w.c2p = L, w.p2c = A, w.getOptions = function() {
-                return a
-            }, w.highlight = dt, w.unhighlight = vt, w.triggerRedrawOverlay = ht, w.pointOffset = function(e) {
-                return {
-                    left: parseInt(d[C(e, "x") - 1].p2c(+e.x) + m.left, 10),
-                    top: parseInt(v[C(e, "y") - 1].p2c(+e.y) + m.top, 10)
+            }, t.tickFormatter = function(e, t) {
+                var n = t.tickDecimals ? Math.pow(10, t.tickDecimals) : 1,
+                    r = "" + Math.round(e * n) / n;
+                if (t.tickDecimals != null) {
+                    var i = r.indexOf("."),
+                        s = i == -1 ? 0 : r.length - i - 1;
+                    if (s < t.tickDecimals) return (s ? r : r + ".") + ("" + n).substr(1, t.tickDecimals - s)
                 }
-            }, w.shutdown = H, w.resize = function() {
-                var e = t.width(),
-                    n = t.height();
-                f.resize(e, n), l.resize(e, n)
-            }, w.hooks = b, S(w), x(s), D(), T(r), R(), V(), P();
-            var st = [],
-                ot = null
+                return r
+            }), e.isFunction(n.tickFormatter) && (t.tickFormatter = function(e, t) {
+                return "" + n.tickFormatter(e, t)
+            });
+            if (n.alignTicksWithAxis != null) {
+                var h = (t.direction == "x" ? d : v)[n.alignTicksWithAxis - 1];
+                if (h && h.used && h != t) {
+                    var p = t.tickGenerator(t);
+                    p.length > 0 && (n.min == null && (t.min = Math.min(t.min, p[0])), n.max == null && p.length > 1 && (t.max = Math.max(t.max, p[p.length - 1]))), t.tickGenerator = function(e) {
+                        var t = [],
+                            n, r;
+                        for (r = 0; r < h.ticks.length; ++r) n = (h.ticks[r].v - h.min) / (h.max - h.min), n = e.min + n * (e.max - e.min), t.push(n);
+                        return t
+                    };
+                    if (!t.mode && n.tickDecimals == null) {
+                        var m = Math.max(0, -Math.floor(Math.log(t.delta) / Math.LN10) + 1),
+                            g = t.tickGenerator(t);
+                        g.length > 1 && /\..*0$/.test((g[1] - g[0]).toFixed(m)) || (t.tickDecimals = m)
+                    }
+                }
+            }
         }
 
-        function i(e, t) {
-            return t * Math.floor(e / t)
-        }
-        var t = Object.prototype.hasOwnProperty;
-        n.prototype.resize = function(e, t) {
-            if (e <= 0 || t <= 0) throw new Error("Invalid dimensions for plot, width = " + e + ", height = " + t);
-            var n = this.element,
-                r = this.context,
-                i = this.pixelRatio;
-            this.width != e && (n.width = e * i, n.style.width = e + "px", this.width = e), this.height != t && (n.height = t * i, n.style.height = t + "px", this.height = t), r.restore(), r.save(), r.scale(i, i)
-        }, n.prototype.clear = function() {
-            this.context.clearRect(0, 0, this.width, this.height)
-        }, n.prototype.render = function() {
-            var e = this._textCache;
-            for (var n in e)
-                if (t.call(e, n)) {
-                    var r = this.getTextLayer(n),
-                        i = e[n];
-                    r.hide();
-                    for (var s in i)
-                        if (t.call(i, s)) {
-                            var o = i[s];
-                            for (var u in o)
-                                if (t.call(o, u)) {
-                                    var a = o[u];
-                                    a.active ? a.rendered || (r.append(a.element), a.rendered = !0) : (delete o[u], a.rendered && a.element.detach())
-                                }
-                        }
-                    r.show()
-                }
-        }, n.prototype.getTextLayer = function(t) {
-            var n = this.text[t];
-            return n == null && (this.textContainer == null && (this.textContainer = e("<div class='flot-text'></div>").css({
-                position: "absolute",
-                top: 0,
-                left: 0,
-                bottom: 0,
-                right: 0,
-                "font-size": "smaller",
-                color: "#545454"
-            }).insertAfter(this.element)), n = this.text[t] = e("<div></div>").addClass(t).css({
-                position: "absolute",
-                top: 0,
-                left: 0,
-                bottom: 0,
-                right: 0
-            }).appendTo(this.textContainer)), n
-        }, n.prototype.getTextInfo = function(t, n, r, i) {
-            var s, o, u, a;
-            n = "" + n, typeof r == "object" ? s = r.style + " " + r.variant + " " + r.weight + " " + r.size + "px/" + r.lineHeight + "px " + r.family : s = r, o = this._textCache[t], o == null && (o = this._textCache[t] = {}), u = o[s], u == null && (u = o[s] = {}), a = u[n];
-            if (a == null) {
-                var f = e("<div></div>").html(n).css({
-                    position: "absolute",
-                    top: -9999
-                }).appendTo(this.getTextLayer(t));
-                typeof r == "object" ? f.css({
-                    font: s,
-                    color: r.color
-                }) : typeof r == "string" && f.addClass(r), a = u[n] = {
-                    active: !1,
-                    rendered: !1,
-                    element: f,
-                    width: f.outerWidth(!0),
-                    height: f.outerHeight(!0)
-                }, f.detach()
+        function W(t) {
+            var n = t.options.ticks,
+                r = [];
+            n == null || typeof n == "number" && n > 0 ? r = t.tickGenerator(t) : n && (e.isFunction(n) ? r = n(t) : r = n);
+            var i, s;
+            t.ticks = [];
+            for (i = 0; i < r.length; ++i) {
+                var o = null,
+                    u = r[i];
+                typeof u == "object" ? (s = +u[0], u.length > 1 && (o = u[1])) : s = +u, o == null && (o = t.tickFormatter(s, t)), isNaN(s) || t.ticks.push({
+                    v: s,
+                    label: o
+                })
             }
-            return a
-        }, n.prototype.addText = function(e, t, n, r, i, s, o, u) {
-            var a = this.getTextInfo(e, r, i, s);
-            a.active = !0, o == "center" ? t -= a.width / 2 : o == "right" && (t -= a.width), u == "middle" ? n -= a.height / 2 : u == "bottom" && (n -= a.height), a.element.css({
-                top: Math.round(n),
-                left: Math.round(t)
-            })
-        }, n.prototype.removeText = function(e, n, r, i) {
-            if (n == null) {
-                var s = this._textCache[e];
-                if (s != null)
-                    for (var o in s)
-                        if (t.call(s, o)) {
-                            var u = s[o];
-                            for (var a in u) t.call(u, a) && (u[a].active = !1)
-                        }
-            } else this.getTextInfo(e, n, r, i).active = !1
-        }, e.plot = function(t, n, i) {
-            var s = new r(e(t), n, i, e.plot.plugins);
-            return s
-        }, e.plot.version = "0.8.0", e.plot.plugins = [], e.fn.plot = function(t, n) {
-            return this.each(function() {
-                e.plot(this, t, n)
+        }
+
+        function X(e, t) {
+            e.options.autoscaleMargin && t.length > 0 && (e.options.min == null && (e.min = Math.min(e.min, t[0].v)), e.options.max == null && t.length > 1 && (e.max = Math.max(e.max, t[t.length - 1].v)))
+        }
+
+        function V() {
+            f.clear(), E(b.drawBackground, [h]);
+            var e = a.grid;
+            e.show && e.backgroundColor && K(), e.show && !e.aboveData && Q();
+            for (var t = 0; t < u.length; ++t) E(b.drawSeries, [h, u[t]]), Y(u[t]);
+            E(b.draw, [h]), e.show && e.aboveData && Q(), f.render()
+        }
+
+        function J(e, t) {
+            var n, r, i, s, o = k();
+            for (var u = 0; u < o.length; ++u) {
+                n = o[u];
+                if (n.direction == t) {
+                    s = t + n.n + "axis", !e[s] && n.n == 1 && (s = t + "axis");
+                    if (e[s]) {
+                        r = e[s].from, i = e[s].to;
+                        break
+                    }
+                }
+            }
+            e[s] || (n = t == "x" ? d[0] : v[0], r = e[t + "1"], i = e[t + "2"]);
+            if (r != null && i != null && r > i) {
+                var a = r;
+                r = i, i = a
+            }
+            return {
+                from: r,
+                to: i,
+                axis: n
+            }
+        }
+
+        function K() {
+            h.save(), h.translate(m.left, m.top), h.fillStyle = bt(a.grid.backgroundColor, y, 0, "rgba(255, 255, 255, 0)"), h.fillRect(0, 0, g, y), h.restore()
+        }
+
+        function Q() {
+            var t, n, r, i;
+            h.save(), h.translate(m.left, m.top);
+            var s = a.grid.markings;
+            if (s) {
+                e.isFunction(s) && (n = w.getAxes(), n.xmin = n.xaxis.min, n.xmax = n.xaxis.max, n.ymin = n.yaxis.min, n.ymax = n.yaxis.max, s = s(n));
+                for (t = 0; t < s.length; ++t) {
+                    var o = s[t],
+                        u = J(o, "x"),
+                        f = J(o, "y");
+                    u.from == null && (u.from = u.axis.min), u.to == null && (u.to = u.axis.max), f.from == null && (f.from = f.axis.min), f.to == null && (f.to = f.axis.max);
+                    if (u.to < u.axis.min || u.from > u.axis.max || f.to < f.axis.min || f.from > f.axis.max) continue;
+                    u.from = Math.max(u.from, u.axis.min), u.to = Math.min(u.to, u.axis.max), f.from = Math.max(f.from, f.axis.min), f.to = Math.min(f.to, f.axis.max);
+                    if (u.from == u.to && f.from == f.to) continue;
+                    u.from = u.axis.p2c(u.from), u.to = u.axis.p2c(u.to), f.from = f.axis.p2c(f.from), f.to = f.axis.p2c(f.to), u.from == u.to || f.from == f.to ? (h.beginPath(), h.strokeStyle = o.color || a.grid.markingsColor, h.lineWidth = o.lineWidth || a.grid.markingsLineWidth, h.moveTo(u.from, f.from), h.lineTo(u.to, f.to), h.stroke()) : (h.fillStyle = o
+                        .color || a.grid.markingsColor, h.fillRect(u.from, f.to, u.to - u.from, f.from - f.to))
+                }
+            }
+            n = k(), r = a.grid.borderWidth;
+            for (var l = 0; l < n.length; ++l) {
+                var c = n[l],
+                    p = c.box,
+                    d = c.tickLength,
+                    v, b, E, S;
+                if (!c.show || c.ticks.length == 0) continue;
+                h.lineWidth = 1, c.direction == "x" ? (v = 0, d == "full" ? b = c.position == "top" ? 0 : y : b = p.top - m.top + (c.position == "top" ? p.height : 0)) : (b = 0, d == "full" ? v = c.position == "left" ? 0 : g : v = p.left - m.left + (c.position == "left" ? p.width : 0)), c.innermost || (h.strokeStyle = c.options.color, h.beginPath(), E = S = 0, c.direction == "x" ? E = g + 1 : S = y + 1, h.lineWidth == 1 && (c.direction == "x" ? b = Math.floor(b) + .5 : v = Math.floor(v) + .5), h.moveTo(v, b), h.lineTo(v + E, b + S), h.stroke()), h.strokeStyle = c.options.tickColor, h.beginPath();
+                for (t = 0; t < c.ticks.length; ++t) {
+                    var x = c.ticks[t].v;
+                    E = S = 0;
+                    if (isNaN(x) || x < c.min || x > c.max || d == "full" && (typeof r == "object" && r[c.position] > 0 || r > 0) && (x == c.min || x == c.max)) continue;
+                    c.direction == "x" ? (v = c.p2c(x), S = d == "full" ? -y : d, c.position == "top" && (S = -S)) : (b = c.p2c(x), E = d == "full" ? -g : d, c.position == "left" && (E = -E)), h.lineWidth == 1 && (c.direction == "x" ? v = Math.floor(v) + .5 : b = Math.floor(b) + .5), h.moveTo(v, b), h.lineTo(v + E, b + S)
+                }
+                h.stroke()
+            }
+            r && (i = a.grid.borderColor, typeof r == "object" || typeof i == "object" ? (typeof r != "object" && (r = {
+                top: r,
+                right: r,
+                bottom: r,
+                left: r
+            }), typeof i != "object" && (i = {
+                top: i,
+                right: i,
+                bottom: i,
+                left: i
+            }), r.top > 0 && (h.strokeStyle = i.top, h.lineWidth = r.top, h.beginPath(), h.moveTo(0 - r.left, 0 - r.top / 2), h.lineTo(g, 0 - r.top / 2), h.stroke()), r.right > 0 && (h.strokeStyle = i.right, h.lineWidth = r.right, h.beginPath(), h.moveTo(g + r.right / 2, 0 - r.top), h.lineTo(g + r.right / 2, y), h.stroke()), r.bottom > 0 && (h.strokeStyle = i.bottom, h.lineWidth = r.bottom, h.beginPath(), h.moveTo(g + r.right, y + r.bottom / 2), h.lineTo(0, y + r.bottom / 2), h.stroke()), r.left > 0 && (h.strokeStyle = i.left, h.lineWidth = r.left, h.beginPath(), h.moveTo(0 - r.left / 2, y + r.bottom), h.lineTo(0 - r.left / 2, 0), h.stroke())) : (h.lineWidth = r, h.strokeStyle = a.grid.borderColor, h.strokeRect(-r / 2, -r / 2, g + r, y + r))), h.restore()
+        }
+
+        function G() {
+            e.each(k(), function(e, t) {
+                if (!t.show || t.ticks.length == 0) return;
+                var n = t.box,
+                    r = t.direction + "Axis " + t.direction + t.n + "Axis",
+                    i = "flot-" + t.direction + "-axis flot-" + t.direction + t.n + "-axis " + r,
+                    s = t.options.font || "flot-tick-label tickLabel",
+                    o, u, a, l, c;
+                f.removeText(i);
+                for (var h = 0; h < t.ticks.length; ++h) {
+                    o = t.ticks[h];
+                    if (!o.label || o.v < t.min || o.v > t.max) continue;
+                    t.direction == "x" ? (l = "center", u = m.left + t.p2c(o.v), t.position == "bottom" ? a = n.top + n.padding : (a = n.top + n.height - n.padding, c = "bottom")) : (c = "middle", a = m.top + t.p2c(o.v), t.position == "left" ? (u = n.left + n.width - n.padding, l = "right") : u = n.left + n.padding), f.addText(i, u, a, o.label, s, null, l, c)
+                }
             })
         }
-    }(jQuery);
+
+        function Y(e) {
+            e.lines.show && Z(e), e.bars.show && nt(e), e.points.show && et(e)
+        }
+
+        function Z(e) {
+            function t(e, t, n, r, i) {
+                var s = e.points,
+                    o = e.pointsize,
+                    u = null,
+                    a = null;
+                h.beginPath();
+                for (var f = o; f < s.length; f += o) {
+                    var l = s[f - o],
+                        c = s[f - o + 1],
+                        p = s[f],
+                        d = s[f + 1];
+                    if (l == null || p == null) continue;
+                    if (c <= d && c < i.min) {
+                        if (d < i.min) continue;
+                        l = (i.min - c) / (d - c) * (p - l) + l, c = i.min
+                    } else if (d <= c && d < i.min) {
+                        if (c < i.min) continue;
+                        p = (i.min - c) / (d - c) * (p - l) + l, d = i.min
+                    }
+                    if (c >= d && c > i.max) {
+                        if (d > i.max) continue;
+                        l = (i.max - c) / (d - c) * (p - l) + l, c = i.max
+                    } else if (d >= c && d > i.max) {
+                        if (c > i.max) continue;
+                        p = (i.max - c) / (d - c) * (p - l) + l, d = i.max
+                    }
+                    if (l <= p && l < r.min) {
+                        if (p < r.min) continue;
+                        c = (r.min - l) / (p - l) * (d - c) + c, l = r.min
+                    } else if (p <= l && p < r.min) {
+                        if (l < r.min) continue;
+                        d = (r.min - l) / (p - l) * (d - c) + c, p = r.min
+                    }
+                    if (l >= p && l > r.max) {
+                        if (p > r.max) continue;
+                        c = (r.max - l) / (p - l) * (d - c) + c, l = r.max
+                    } else if (p >= l && p > r.max) {
+                        if (l > r.max) continue;
+                        d = (r.max - l) / (p - l) * (d - c) + c, p = r.max
+                    }(l != u || c != a) && h.moveTo(r.p2c(l) + t, i.p2c(c) + n), u = p, a = d, h.lineTo(r.p2c(p) + t, i.p2c(d) + n)
+                }
+                h.stroke()
+            }
+
+            function n(e, t, n) {
+                var r = e.points,
+                    i = e.pointsize,
+                    s = Math.min(Math.max(0, n.min), n.max),
+                    o = 0,
+                    u, a = !1,
+                    f = 1,
+                    l = 0,
+                    c = 0;
+                for (;;) {
+                    if (i > 0 && o > r.length + i) break;
+                    o += i;
+                    var p = r[o - i],
+                        d = r[o - i + f],
+                        v = r[o],
+                        m = r[o + f];
+                    if (a) {
+                        if (i > 0 && p != null && v == null) {
+                            c = o, i = -i, f = 2;
+                            continue
+                        }
+                        if (i < 0 && o == l + i) {
+                            h.fill(), a = !1, i = -i, f = 1, o = l = c + i;
+                            continue
+                        }
+                    }
+                    if (p == null || v == null) continue;
+                    if (p <= v && p < t.min) {
+                        if (v < t.min) continue;
+                        d = (t.min - p) / (v - p) * (m - d) + d, p = t.min
+                    } else if (v <= p && v < t.min) {
+                        if (p < t.min) continue;
+                        m = (t.min - p) / (v - p) * (m - d) + d, v = t.min
+                    }
+                    if (p >= v && p > t.max) {
+                        if (v > t.max) continue;
+                        d = (t.max - p) / (v - p) * (m - d) + d, p = t.max
+                    } else if (v >= p && v > t.max) {
+                        if (p > t.max) continue;
+                        m = (t.max - p) / (v - p) * (m - d) + d, v = t.max
+                    }
+                    a || (h.beginPath(), h.moveTo(t.p2c(p), n.p2c(s)), a = !0);
+                    if (d >= n.max && m >= n.max) {
+                        h.lineTo(t.p2c(p), n.p2c(n.max)), h.lineTo(t.p2c(v), n.p2c(n.max));
+                        continue
+                    }
+                    if (d <= n.min && m <= n.min) {
+                        h.lineTo(t.p2c(p), n.p2c(n.min)), h.lineTo(t.p2c(v), n.p2c(n.min));
+                        continue
+                    }
+                    var g = p,
+                        y = v;
+                    d <= m && d < n.min && m >= n.min ? (p = (n.min - d) / (m - d) * (v - p) + p, d = n.min) : m <= d && m < n.min && d >= n.min && (v = (n.min - d) / (m - d) * (v - p) + p, m = n.min), d >= m && d > n.max && m <= n.max ? (p = (n.max - d) / (m - d) * (v - p) + p, d = n.max) : m >= d && m > n.max && d <= n.max && (v = (n.max - d) / (m - d) * (v - p) + p, m = n.max), p != g && h.lineTo(t.p2c(g), n.p2c(d)), h.lineTo(t.p2c(p), n.p2c(d)), h.lineTo(t.p2c(v), n.p2c(m)), v != y && (h.lineTo(t.p2c(v), n.p2c(m)), h.lineTo(t.p2c(y), n.p2c(m)))
+                }
+            }
+            h.save(), h.translate(m.left, m.top), h.lineJoin = "round";
+            var r = e.lines.lineWidth,
+                i = e.shadowSize;
+            if (r > 0 && i > 0) {
+                h.lineWidth = i, h.strokeStyle = "rgba(0,0,0,0.1)";
+                var s = Math.PI / 18;
+                t(e.datapoints, Math.sin(s) * (r / 2 + i / 2), Math.cos(s) * (r / 2 + i / 2), e.xaxis, e.yaxis), h.lineWidth = i / 2, t(e.datapoints, Math.sin(s) * (r / 2 + i / 4), Math.cos(s) * (r / 2 + i / 4), e.xaxis, e.yaxis)
+            }
+            h.lineWidth = r, h.strokeStyle = e.color;
+            var o = rt(e.lines, e.color, 0, y);
+            o && (h.fillStyle = o, n(e.datapoints, e.xaxis, e.yaxis)), r > 0 && t(e.datapoints, 0, 0, e.xaxis, e.yaxis), h.restore()
+        }
+
+        function et(e) {
+            function t(e, t, n, r, i, s, o, u) {
+                var a = e.points,
+                    f = e.pointsize;
+                for (var l = 0; l < a.length; l += f) {
+                    var c = a[l],
+                        p = a[l + 1];
+                    if (c == null || c < s.min || c > s.max || p < o.min || p > o.max) continue;
+                    h.beginPath(), c = s.p2c(c), p = o.p2c(p) + r, u == "circle" ? h.arc(c, p, t, 0, i ? Math.PI : Math.PI * 2, !1) : u(h, c, p, t, i), h.closePath(), n && (h.fillStyle = n, h.fill()), h.stroke()
+                }
+            }
+            h.save(), h.translate(m.left, m.top);
+            var n = e.points.lineWidth,
+                r = e.shadowSize,
+                i = e.points.radius,
+                s = e.points.symbol;
+            n == 0 && (n = 1e-4);
+            if (n > 0 && r > 0) {
+                var o = r / 2;
+                h.lineWidth = o, h.strokeStyle = "rgba(0,0,0,0.1)", t(e.datapoints, i, null, o + o / 2, !0, e.xaxis, e.yaxis, s), h.strokeStyle = "rgba(0,0,0,0.2)", t(e.datapoints, i, null, o / 2, !0, e.xaxis, e.yaxis, s)
+            }
+            h.lineWidth = n, h.strokeStyle = e.color, t(e.datapoints, i, rt(e.points, e.color), 0, !1, e.xaxis, e.yaxis, s), h.restore()
+        }
+
+        function tt(e, t, n, r, i, s, o, u, a, f, l, c) {
+            var h, p, d, v, m, g, y, b, w;
+            l ? (b = g = y = !0, m = !1, h = n, p = e, v = t + r, d = t + i, p < h && (w = p, p = h, h = w, m = !0, g = !1)) : (m = g = y = !0, b = !1, h = e + r, p = e + i, d = n, v = t, v < d && (w = v, v = d, d = w, b = !0, y = !1));
+            if (p < u.min || h > u.max || v < a.min || d > a.max) return;
+            h < u.min && (h = u.min, m = !1), p > u.max && (p = u.max, g = !1), d < a.min && (d = a.min, b = !1), v > a.max && (v = a.max, y = !1), h = u.p2c(h), d = a.p2c(d), p = u.p2c(p), v = a.p2c(v), o && (f.beginPath(), f.moveTo(h, d), f.lineTo(h, v), f.lineTo(p, v), f.lineTo(p, d), f.fillStyle = o(d, v), f.fill()), c > 0 && (m || g || y || b) && (f.beginPath(), f.moveTo(h, d + s), m ? f.lineTo(h, v + s) : f.moveTo(h, v + s), y ? f.lineTo(p, v + s) : f.moveTo(p, v + s), g ? f.lineTo(p, d + s) : f.moveTo(p, d + s), b ? f.lineTo(h, d + s) : f.moveTo(h, d + s), f.stroke())
+        }
+
+        function nt(e) {
+            function t(t, n, r, i, s, o, u) {
+                var a = t.points,
+                    f = t.pointsize;
+                for (var l = 0; l < a.length; l += f) {
+                    if (a[l] == null) continue;
+                    tt(a[l], a[l + 1], a[l + 2], n, r, i, s, o, u, h, e.bars.horizontal, e.bars.lineWidth)
+                }
+            }
+            h.save(), h.translate(m.left, m.top), h.lineWidth = e.bars.lineWidth, h.strokeStyle = e.color;
+            var n;
+            switch (e.bars.align) {
+                case "left":
+                    n = 0;
+                    break;
+                case "right":
+                    n = -e.bars.barWidth;
+                    break;
+                case "center":
+                    n = -e.bars.barWidth / 2;
+                    break;
+                default:
+                    throw new Error("Invalid bar alignment: " + e.bars.align)
+            }
+            var r = e.bars.fill ? function(t, n) {
+                return rt(e.bars, e.color, t, n)
+            } : null;
+            t(e.datapoints, n, n + e.bars.barWidth, 0, r, e.xaxis, e.yaxis), h.restore()
+        }
+
+        function rt(t, n, r, i) {
+            var s = t.fill;
+            if (!s) return null;
+            if (t.fillColor) return bt(t.fillColor, r, i, n);
+            var o = e.color.parse(n);
+            return o.a = typeof s == "number" ? s : .4, o.normalize(), o.toString()
+        }
+
+        function it() {
+            t.find(".legend").remove();
+            if (!a.legend.show) return;
+            var n = [],
+                r = [],
+                i = !1,
+                s = a.legend.labelFormatter,
+                o, f;
+            for (var l = 0; l < u.length; ++l) o = u[l], o.label && (f = s ? s(o.label, o) : o.label, f && r.push({
+                label: f,
+                color: o.color
+            }));
+            if (a.legend.sorted)
+                if (e.isFunction(a.legend.sorted)) r.sort(a.legend.sorted);
+                else if (a.legend.sorted == "reverse") r.reverse();
+            else {
+                var c = a.legend.sorted != "descending";
+                r.sort(function(e, t) {
+                    return e.label == t.label ? 0 : e.label < t.label != c ? 1 : -1
+                })
+            }
+            for (var l = 0; l < r.length; ++l) {
+                var h = r[l];
+                l % a.legend.noColumns == 0 && (i && n.push("</tr>"), n.push("<tr>"), i = !0), n.push('<td class="legendColorBox"><div style="border:1px solid ' + a.legend.labelBoxBorderColor + ';padding:1px"><div style="width:4px;height:0;border:5px solid ' + h.color + ';overflow:hidden"></div></div></td>' + '<td class="legendLabel">' + h.label + "</td>")
+            }
+            i && n.push("</tr>");
+            if (n.length == 0) return;
+            var p = '<table style="font-size:smaller;color:' + a.grid.color + '">' + n.join("") + "</table>";
+            if (a.legend.container != null) e(a.legend.container).html(p);
+            else {
+                var d = "",
+                    v = a.legend.position,
+                    g = a.legend.margin;
+                g[0] == null && (g = [g, g]), v.charAt(0) == "n" ? d += "top:" + (g[1] + m.top) + "px;" : v.charAt(0) == "s" && (d += "bottom:" + (g[1] + m.bottom) + "px;"), v.charAt(1) == "e" ? d += "right:" + (g[0] + m.right) + "px;" : v.charAt(1) == "w" && (d += "left:" + (g[0] + m.left) + "px;");
+                var y = e('<div class="legend">' + p.replace('style="', 'style="position:absolute;' + d + ";") + "</div>").appendTo(t);
+                if (a.legend.backgroundOpacity != 0) {
+                    var b = a.legend.backgroundColor;
+                    b == null && (b = a.grid.backgroundColor, b && typeof b == "string" ? b = e.color.parse(b) : b = e.color.extract(y, "background-color"), b.a = 1, b = b.toString());
+                    var w = y.children();
+                    e('<div style="position:absolute;width:' + w.width() + "px;height:" + w.height() + "px;" + d + "background-color:" + b + ';"> </div>').prependTo(y).css("opacity", a.legend.backgroundOpacity)
+                }
+            }
+        }
+
+        function ut(e, t, n) {
+            var r = a.grid.mouseActiveRadius,
+                i = r * r + 1,
+                s = null,
+                o = !1,
+                f, l, c;
+            for (f = u.length - 1; f >= 0; --f) {
+                if (!n(u[f])) continue;
+                var h = u[f],
+                    p = h.xaxis,
+                    d = h.yaxis,
+                    v = h.datapoints.points,
+                    m = p.c2p(e),
+                    g = d.c2p(t),
+                    y = r / p.scale,
+                    b = r / d.scale;
+                c = h.datapoints.pointsize, p.options.inverseTransform && (y = Number.MAX_VALUE), d.options.inverseTransform && (b = Number.MAX_VALUE);
+                if (h.lines.show || h.points.show)
+                    for (l = 0; l < v.length; l += c) {
+                        var w = v[l],
+                            E = v[l + 1];
+                        if (w == null) continue;
+                        if (w - m > y || w - m < -y || E - g > b || E - g < -b) continue;
+                        var S = Math.abs(p.p2c(w) - e),
+                            x = Math.abs(d.p2c(E) - t),
+                            T = S * S + x * x;
+                        T < i && (i = T, s = [f, l / c])
+                    }
+                if (h.bars.show && !s) {
+                    var N = h.bars.align == "left" ? 0 : -h.bars.barWidth / 2,
+                        C = N + h.bars.barWidth;
+                    for (l = 0; l < v.length; l += c) {
+                        var w = v[l],
+                            E = v[l + 1],
+                            k = v[l + 2];
+                        if (w == null) continue;
+                        if (u[f].bars.horizontal ? m <= Math.max(k, w) && m >= Math.min(k, w) && g >= E + N && g <= E + C : m >= w + N && m <= w + C && g >= Math.min(k, E) && g <= Math.max(k, E)) s = [f, l / c]
+                    }
+                }
+            }
+            return s ? (f = s[0], l = s[1], c = u[f].datapoints.pointsize, {
+                datapoint: u[f].datapoints.points.slice(l * c, (l + 1) * c),
+                dataIndex: l,
+                series: u[f],
+                seriesIndex: f
+            }) : null
+        }
+
+        function at(e) {
+            a.grid.hoverable && ct("plothover", e, function(e) {
+                return e["hoverable"] != 0
+            })
+        }
+
+        function ft(e) {
+            a.grid.hoverable && ct("plothover", e, function(e) {
+                return !1
+            })
+        }
+
+        function lt(e) {
+            ct("plotclick", e, function(e) {
+                return e["clickable"] != 0
+            })
+        }
+
+        function ct(e, n, r) {
+            var i = c.offset(),
+                s = n.pageX - i.left - m.left,
+                o = n.pageY - i.top - m.top,
+                u = L({
+                    left: s,
+                    top: o
+                });
+            u.pageX = n.pageX, u.pageY = n.pageY;
+            var f = ut(s, o, r);
+            f && (f.pageX = parseInt(f.series.xaxis.p2c(f.datapoint[0]) + i.left + m.left, 10), f.pageY = parseInt(f.series.yaxis.p2c(f.datapoint[1]) + i.top + m.top, 10));
+            if (a.grid.autoHighlight) {
+                for (var l = 0; l < st.length; ++l) {
+                    var h = st[l];
+                    h.auto == e && (!f || h.series != f.series || h.point[0] != f.datapoint[0] || h.point[1] != f.datapoint[1]) && vt(h.series, h.point)
+                }
+                f && dt(f.series, f.datapoint, e)
+            }
+            t.trigger(e, [u, f])
+        }
+
+        function ht() {
+            var e = a.interaction.redrawOverlayInterval;
+            if (e == -1) {
+                pt();
+                return
+            }
+            ot || (ot = setTimeout(pt, e))
+        }
+
+        function pt() {
+            ot = null, p.save(), l.clear(), p.translate(m.left, m.top);
+            var e, t;
+            for (e = 0; e < st.length; ++e) t = st[e], t.series.bars.show ? yt(t.series, t.point) : gt(t.series, t.point);
+            p.restore(), E(b.drawOverlay, [p])
+        }
+
+        function dt(e, t, n) {
+            typeof e == "number" && (e = u[e]);
+            if (typeof t == "number") {
+                var r = e.datapoints.pointsize;
+                t = e.datapoints.points.slice(r * t, r * (t + 1))
+            }
+            var i = mt(e, t);
+            i == -1 ? (st.push({
+                series: e,
+                point: t,
+                auto: n
+            }), ht()) : n || (st[i].auto = !1)
+        }
+
+        function vt(e, t) {
+            if (e == null && t == null) {
+                st = [], ht();
+                return
+            }
+            typeof e == "number" && (e = u[e]);
+            if (typeof t == "number") {
+                var n = e.datapoints.pointsize;
+                t = e.datapoints.points.slice(n * t, n * (t + 1))
+            }
+            var r = mt(e, t);
+            r != -1 && (st.splice(r, 1), ht())
+        }
+
+        function mt(e, t) {
+            for (var n = 0; n < st.length; ++n) {
+                var r = st[n];
+                if (r.series == e && r.point[0] == t[0] && r.point[1] == t[1]) return n
+            }
+            return -1
+        }
+
+        function gt(t, n) {
+            var r = n[0],
+                i = n[1],
+                s = t.xaxis,
+                o = t.yaxis,
+                u = typeof t.highlightColor == "string" ? t.highlightColor : e.color.parse(t.color).scale("a", .5).toString();
+            if (r < s.min || r > s.max || i < o.min || i > o.max) return;
+            var a = t.points.radius + t.points.lineWidth / 2;
+            p.lineWidth = a, p.strokeStyle = u;
+            var f = 1.5 * a;
+            r = s.p2c(r), i = o.p2c(i), p.beginPath(), t.points.symbol == "circle" ? p.arc(r, i, f, 0, 2 * Math.PI, !1) : t.points.symbol(p, r, i, f, !1), p.closePath(), p.stroke()
+        }
+
+        function yt(t, n) {
+            var r = typeof t.highlightColor == "string" ? t.highlightColor : e.color.parse(t.color).scale("a", .5).toString(),
+                i = r,
+                s = t.bars.align == "left" ? 0 : -t.bars.barWidth / 2;
+            p.lineWidth = t.bars.lineWidth, p.strokeStyle = r, tt(n[0], n[1], n[2] || 0, s, s + t.bars.barWidth, 0, function() {
+                return i
+            }, t.xaxis, t.yaxis, p, t.bars.horizontal, t.bars.lineWidth)
+        }
+
+        function bt(t, n, r, i) {
+            if (typeof t == "string") return t;
+            var s = h.createLinearGradient(0, r, 0, n);
+            for (var o = 0, u = t.colors.length; o < u; ++o) {
+                var a = t.colors[o];
+                if (typeof a != "string") {
+                    var f = e.color.parse(i);
+                    a.brightness != null && (f = f.scale("rgb", a.brightness)), a.opacity != null && (f.a *= a.opacity), a = f.toString()
+                }
+                s.addColorStop(o / (u - 1), a)
+            }
+            return s
+        }
+        var u = [],
+            a = {
+                colors: ["#edc240", "#afd8f8", "#cb4b4b", "#4da74d", "#9440ed"],
+                legend: {
+                    show: !0,
+                    noColumns: 1,
+                    labelFormatter: null,
+                    labelBoxBorderColor: "#ccc",
+                    container: null,
+                    position: "ne",
+                    margin: 5,
+                    backgroundColor: null,
+                    backgroundOpacity: .85,
+                    sorted: null
+                },
+                xaxis: {
+                    show: null,
+                    position: "bottom",
+                    mode: null,
+                    font: null,
+                    color: null,
+                    tickColor: null,
+                    transform: null,
+                    inverseTransform: null,
+                    min: null,
+                    max: null,
+                    autoscaleMargin: null,
+                    ticks: null,
+                    tickFormatter: null,
+                    labelWidth: null,
+                    labelHeight: null,
+                    reserveSpace: null,
+                    tickLength: null,
+                    alignTicksWithAxis: null,
+                    tickDecimals: null,
+                    tickSize: null,
+                    minTickSize: null
+                },
+                yaxis: {
+                    autoscaleMargin: .02,
+                    position: "left"
+                },
+                xaxes: [],
+                yaxes: [],
+                series: {
+                    points: {
+                        show: !1,
+                        radius: 3,
+                        lineWidth: 2,
+                        fill: !0,
+                        fillColor: "#ffffff",
+                        symbol: "circle"
+                    },
+                    lines: {
+                        lineWidth: 2,
+                        fill: !1,
+                        fillColor: null,
+                        steps: !1
+                    },
+                    bars: {
+                        show: !1,
+                        lineWidth: 2,
+                        barWidth: 1,
+                        fill: !0,
+                        fillColor: null,
+                        align: "left",
+                        horizontal: !1,
+                        zero: !0
+                    },
+                    shadowSize: 3,
+                    highlightColor: null
+                },
+                grid: {
+                    show: !0,
+                    aboveData: !1,
+                    color: "#545454",
+                    backgroundColor: null,
+                    borderColor: null,
+                    tickColor: null,
+                    margin: 0,
+                    labelMargin: 5,
+                    axisMargin: 8,
+                    borderWidth: 2,
+                    minBorderMargin: null,
+                    markings: null,
+                    markingsColor: "#f4f4f4",
+                    markingsLineWidth: 2,
+                    clickable: !1,
+                    hoverable: !1,
+                    autoHighlight: !0,
+                    mouseActiveRadius: 10
+                },
+                interaction: {
+                    redrawOverlayInterval: 1e3 / 60
+                },
+                hooks: {}
+            },
+            f = null,
+            l = null,
+            c = null,
+            h = null,
+            p = null,
+            d = [],
+            v = [],
+            m = {
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0
+            },
+            g = 0,
+            y = 0,
+            b = {
+                processOptions: [],
+                processRawData: [],
+                processDatapoints: [],
+                processOffset: [],
+                drawBackground: [],
+                drawSeries: [],
+                draw: [],
+                bindEvents: [],
+                drawOverlay: [],
+                shutdown: []
+            },
+            w = this;
+        w.setData = T, w.setupGrid = R, w.draw = V, w.getPlaceholder = function() {
+            return t
+        }, w.getCanvas = function() {
+            return f.element
+        }, w.getPlotOffset = function() {
+            return m
+        }, w.width = function() {
+            return g
+        }, w.height = function() {
+            return y
+        }, w.offset = function() {
+            var e = c.offset();
+            return e.left += m.left, e.top += m.top, e
+        }, w.getData = function() {
+            return u
+        }, w.getAxes = function() {
+            var t = {},
+                n;
+            return e.each(d.concat(v), function(e, n) {
+                n && (t[n.direction + (n.n != 1 ? n.n : "") + "axis"] = n)
+            }), t
+        }, w.getXAxes = function() {
+            return d
+        }, w.getYAxes = function() {
+            return v
+        }, w.c2p = L, w.p2c = A, w.getOptions = function() {
+            return a
+        }, w.highlight = dt, w.unhighlight = vt, w.triggerRedrawOverlay = ht, w.pointOffset = function(e) {
+            return {
+                left: parseInt(d[C(e, "x") - 1].p2c(+e.x) + m.left, 10),
+                top: parseInt(v[C(e, "y") - 1].p2c(+e.y) + m.top, 10)
+            }
+        }, w.shutdown = H, w.resize = function() {
+            var e = t.width(),
+                n = t.height();
+            f.resize(e, n), l.resize(e, n)
+        }, w.hooks = b, S(w), x(s), D(), T(r), R(), V(), P();
+        var st = [],
+            ot = null
+    }
+
+    function i(e, t) {
+        return t * Math.floor(e / t)
+    }
+    var t = Object.prototype.hasOwnProperty;
+    n.prototype.resize = function(e, t) {
+        if (e <= 0 || t <= 0) throw new Error("Invalid dimensions for plot, width = " + e + ", height = " + t);
+        var n = this.element,
+            r = this.context,
+            i = this.pixelRatio;
+        this.width != e && (n.width = e * i, n.style.width = e + "px", this.width = e), this.height != t && (n.height = t * i, n.style.height = t + "px", this.height = t), r.restore(), r.save(), r.scale(i, i)
+    }, n.prototype.clear = function() {
+        this.context.clearRect(0, 0, this.width, this.height)
+    }, n.prototype.render = function() {
+        var e = this._textCache;
+        for (var n in e)
+            if (t.call(e, n)) {
+                var r = this.getTextLayer(n),
+                    i = e[n];
+                r.hide();
+                for (var s in i)
+                    if (t.call(i, s)) {
+                        var o = i[s];
+                        for (var u in o)
+                            if (t.call(o, u)) {
+                                var a = o[u];
+                                a.active ? a.rendered || (r.append(a.element), a.rendered = !0) : (delete o[u], a.rendered && a.element.detach())
+                            }
+                    }
+                r.show()
+            }
+    }, n.prototype.getTextLayer = function(t) {
+        var n = this.text[t];
+        return n == null && (this.textContainer == null && (this.textContainer = e("<div class='flot-text'></div>").css({
+            position: "absolute",
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0,
+            "font-size": "smaller",
+            color: "#545454"
+        }).insertAfter(this.element)), n = this.text[t] = e("<div></div>").addClass(t).css({
+            position: "absolute",
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0
+        }).appendTo(this.textContainer)), n
+    }, n.prototype.getTextInfo = function(t, n, r, i) {
+        var s, o, u, a;
+        n = "" + n, typeof r == "object" ? s = r.style + " " + r.variant + " " + r.weight + " " + r.size + "px/" + r.lineHeight + "px " + r.family : s = r, o = this._textCache[t], o == null && (o = this._textCache[t] = {}), u = o[s], u == null && (u = o[s] = {}), a = u[n];
+        if (a == null) {
+            var f = e("<div></div>").html(n).css({
+                position: "absolute",
+                top: -9999
+            }).appendTo(this.getTextLayer(t));
+            typeof r == "object" ? f.css({
+                font: s,
+                color: r.color
+            }) : typeof r == "string" && f.addClass(r), a = u[n] = {
+                active: !1,
+                rendered: !1,
+                element: f,
+                width: f.outerWidth(!0),
+                height: f.outerHeight(!0)
+            }, f.detach()
+        }
+        return a
+    }, n.prototype.addText = function(e, t, n, r, i, s, o, u) {
+        var a = this.getTextInfo(e, r, i, s);
+        a.active = !0, o == "center" ? t -= a.width / 2 : o == "right" && (t -= a.width), u == "middle" ? n -= a.height / 2 : u == "bottom" && (n -= a.height), a.element.css({
+            top: Math.round(n),
+            left: Math.round(t)
+        })
+    }, n.prototype.removeText = function(e, n, r, i) {
+        if (n == null) {
+            var s = this._textCache[e];
+            if (s != null)
+                for (var o in s)
+                    if (t.call(s, o)) {
+                        var u = s[o];
+                        for (var a in u) t.call(u, a) && (u[a].active = !1)
+                    }
+        } else this.getTextInfo(e, n, r, i).active = !1
+    }, e.plot = function(t, n, i) {
+        var s = new r(e(t), n, i, e.plot.plugins);
+        return s
+    }, e.plot.version = "0.8.0", e.plot.plugins = [], e.fn.plot = function(t, n) {
+        return this.each(function() {
+            e.plot(this, t, n)
+        })
+    }
+}(jQuery);
