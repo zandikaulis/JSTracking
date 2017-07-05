@@ -11639,7 +11639,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.05-183334+feb02869c7bf5a303bceda1ecd5d9a885f3b3005",
+                    app_version: "2017.07.05-184328+508e994a434bbe00c1f6501b9e94eab7f2dc3116",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -41050,7 +41050,7 @@
                     recommendedVideos: r.videos,
                     recommendationType: r.type,
                     windowObj: i,
-                    showRecommendations: n[0] === p.VOD_RECOMMENDATION_SCREEN,
+                    showRecommendations: n[0] === p.VOD_RECOMMENDATION_SCREEN && s.ended,
                     i18n: t,
                     playerDimensions: o,
                     trackEvent: a.trackEvent,
