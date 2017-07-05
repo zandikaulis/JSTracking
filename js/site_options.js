@@ -1274,10 +1274,10 @@ window.SiteOptions = {
         "9649684c-6d3f-423d-9d3c-f4296efee975": {
             "name": "clips_hear_me_now",
             "groups": [{
-                "weight": 10,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 90,
+                "weight": 100,
                 "value": "variant1"
             }]
         },
