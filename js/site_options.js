@@ -602,6 +602,16 @@ window.SiteOptions = {
                 "value": "remove"
             }]
         },
+        "35731f0a-bd57-4582-915d-907dee75b3d4": {
+            "name": "trending_emotes",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "36a0e500-f117-41dd-8421-3e3db7d567dd": {
             "name": "CREATIVE_DIRECTORY_CVS",
             "groups": [{
