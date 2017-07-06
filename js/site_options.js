@@ -1016,6 +1016,16 @@ window.SiteOptions = {
                 "value": "month"
             }]
         },
+        "64207922-aa6c-475e-b53d-84ce535d0d04": {
+            "name": "ios_chomments_v2",
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "active"
+            }]
+        },
         "6452eb30-73ed-4c21-9cda-53a44f83c184": {
             "name": "ios_pipboy_flicker_ads",
             "groups": [{
