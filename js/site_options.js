@@ -901,9 +901,6 @@ window.SiteOptions = {
             "name": "pulse_rollout",
             "groups": [{
                 "weight": 100,
-                "value": "no"
-            }, {
-                "weight": 0,
                 "value": "yes"
             }]
         },
