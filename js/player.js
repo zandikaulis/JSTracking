@@ -11641,7 +11641,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.06-032443+1a0faf0dbd2437c07b1c175ad4140592eab76370",
+                    app_version: "2017.07.06-175030+3c0a517eaf1eb6c2a1e742f52ab484494fcbc421",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: g.host,
@@ -44881,25 +44881,23 @@
         }
 
         function o() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v,
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m,
                 t = arguments[1];
             switch (t.type) {
                 case d.ACTION_INITIALIZE_PLAYBACK_SETTINGS:
-                    return (0, s.default)({}, e, (0, u.default)(t.playback, T));
+                    return (0, s.default)({}, e, (0, u.default)(t.playback, C));
                 case f.ACTION_SET_STREAM:
-                    return (0, s.default)({}, e, {
-                        hasPlayed: !1,
-                        contentShowing: !1,
-                        bufferEmpties: 0
-                    });
+                    return t.stream === h.nullContentStream ? (0, s.default)({}, e, S, {
+                        paused: !1
+                    }) : (0, s.default)({}, e, S);
                 case d.ACTION_PLAYING:
-                    return (0, s.default)({}, e, m, E);
+                    return (0, s.default)({}, e, g, T);
                 case d.ACTION_WAITING:
-                    return (0, s.default)({}, e, g);
-                case d.ACTION_PAUSE:
                     return (0, s.default)({}, e, y);
-                case d.ACTION_ENDED:
+                case d.ACTION_PAUSE:
                     return (0, s.default)({}, e, b);
+                case d.ACTION_ENDED:
+                    return (0, s.default)({}, e, E);
                 case d.ACTION_PLAYER_MUTED:
                     return (0, s.default)({}, e, {
                         muted: t.muted
@@ -44909,7 +44907,7 @@
                         volume: t.volume
                     });
                 case d.ACTION_UPDATE_PLAYBACK_DURATION:
-                    return (0, s.default)({}, e, (0, u.default)(t.playback, T));
+                    return (0, s.default)({}, e, (0, u.default)(t.playback, C));
                 case d.ACTION_QUALITY_RESTRICTED_ERROR:
                     return (0, s.default)({}, e, {
                         restrictedQualityError: !0
@@ -44943,22 +44941,22 @@
                         bufferEmpties: e.bufferEmpties + 1
                     });
                 case d.ACTION_CONTENT_IS_SHOWING:
-                    return (0, s.default)({}, e, E);
+                    return (0, s.default)({}, e, T);
                 case p.ACTION_LOADED_COLLECTION_ITEM:
                     return (0, s.default)({}, e, {
-                        transitionScheme: h
+                        transitionScheme: _
                     });
                 case p.ACTION_LOADED_LAST_COLLECTION_ITEM:
                     return (0, s.default)({}, e, {
-                        transitionScheme: _
+                        transitionScheme: v
                     });
                 case p.ACTION_SET_COLLECTION:
                     return (0, s.default)({}, e, {
-                        transitionScheme: h
+                        transitionScheme: _
                     });
                 case p.ACTION_CLEAR_COLLECTION:
                     return (0, s.default)({}, e, {
-                        transitionScheme: _
+                        transitionScheme: v
                     });
                 case d.ACTION_PLAYBACK_RATE_CHANGED:
                     return (0, s.default)({}, e, {
@@ -44979,9 +44977,10 @@
             d = r(c),
             f = n(338),
             p = n(337),
-            h = t.TRANSITION_TYPE_COLLECTION = "transition collection",
-            _ = t.TRANSITION_TYPE_RECOMMENDATIONS = "transition recommendations",
-            v = {
+            h = n(229),
+            _ = t.TRANSITION_TYPE_COLLECTION = "transition collection",
+            v = t.TRANSITION_TYPE_RECOMMENDATIONS = "transition recommendations",
+            m = {
                 autoplay: !0,
                 buffer: {
                     start: 0,
@@ -44998,29 +44997,34 @@
                 playbackRate: 1,
                 restrictedQualityError: !1,
                 volume: .5,
-                transitionScheme: _,
+                transitionScheme: v,
                 contentShowing: !1
             },
-            m = {
+            g = {
                 hasPlayed: !0,
                 paused: !1,
                 ended: !1
             },
-            g = {
-                ended: !1
-            },
             y = {
-                paused: !0,
                 ended: !1
             },
             b = {
                 paused: !0,
-                ended: !0
+                ended: !1
             },
             E = {
+                paused: !0,
+                ended: !0
+            },
+            T = {
                 contentShowing: !0
             },
-            T = Object.keys(v)
+            S = {
+                hasPlayed: !1,
+                contentShowing: !1,
+                bufferEmpties: 0
+            },
+            C = Object.keys(m)
     }, function(e, t, n) {
         "use strict";
 
