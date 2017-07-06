@@ -33,41 +33,41 @@
         function o(e, t) {
             function n() {
                 var n = void 0;
-                n = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, $ = (0, W.init)(), $.dispatch((0, ae.setWindow)(window));
+                n = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, M = (0, W.init)(), M.dispatch((0, ae.setWindow)(window));
                 var a = o(t);
-                (0, pe.setOAuthToken)(a), a.debug && a.verbose && $.subscribe(function() {
-                    console.debug("state change: %o", $.getState())
-                }), $.dispatch(te.loadExperiments({
+                (0, pe.setOAuthToken)(a), a.debug && a.verbose && M.subscribe(function() {
+                    console.debug("state change: %o", M.getState())
+                }), M.dispatch(te.loadExperiments({
                     login: k.cookie.get("login") || null,
                     deviceID: N.get(!1),
-                    userAgent: $.getState().window.navigator.userAgent
-                })), $.dispatch(re.loadDefaultLang(a.lang)), $.dispatch((0, oe.setEnvironment)({
+                    userAgent: M.getState().window.navigator.userAgent
+                })), M.dispatch(re.loadDefaultLang(a.lang)), M.dispatch((0, oe.setEnvironment)({
                     deviceId: N.get(!1)
-                })), $.dispatch((0, oe.setPlayerType)(a.player)), Ve.push(new q.PubSub($, a)), Ve.push(new Oe.PostRecommendationsManager($)), Ve.push(new Ae.OfflineRecommendationsManager($)), Ve.push(new ke.UserManager($)), Ve.push(new b.AutoSuggestNotificationManager($)), C = new m.AnalyticsTracker($, a), $.dispatch((0, ce.setAnalyticsTracker)(C)), $.dispatch((0, ie.initializeQuality)()), r(), O = a.allowfullscreen ? new G.FullScreen(n, $) : new Y.NoFullScreen(n, $), Ne = new Pe.TimelineMetadataManager($), je = new Ee.CollectionManager($), X = new D.Video(n, $, a), Fe = new Re.ExtensionsApi($), $.dispatch((0, Me.extensionsApiLoaded)(Fe)), M = new R.State(X, $, C, a), a.debug && (window.state = M), Ue = new Te.PlayerResizeManager($), Ue.observe(n), Be = new Se.FollowManager($), a.player === we.PLAYER_TWITCH_EVERYWHERE && (Ve.push(new Ce.TwitchEverywhereManager($)), a.targetOrigin || console.error("Missing targetOrigin option"), $.dispatch((0, oe.setTwitchEverywhereParams)({
+                })), M.dispatch((0, oe.setPlayerType)(a.player)), Fe.push(new q.PubSub(M, a)), Fe.push(new Oe.PostRecommendationsManager(M)), Fe.push(new Ae.OfflineRecommendationsManager(M)), Fe.push(new ke.UserManager(M)), Fe.push(new b.AutoSuggestNotificationManager(M)), E = new m.AnalyticsTracker(M, a), M.dispatch((0, ce.setAnalyticsTracker)(E)), M.dispatch((0, ie.initializeQuality)()), r(), C = a.allowfullscreen ? new G.FullScreen(n, M) : new Y.NoFullScreen(n, M), de = new Pe.TimelineMetadataManager(M), Ne = new Ee.CollectionManager(M), $ = new D.Video(n, M, a), Be = new Re.ExtensionsApi(M), M.dispatch((0, Me.extensionsApiLoaded)(Be)), I = new R.State($, M, E, a), a.debug && (window.state = I), je = new Te.PlayerResizeManager(M), je.observe(n), Ue = new Se.FollowManager(M), a.player === we.PLAYER_TWITCH_EVERYWHERE && (Fe.push(new Ce.TwitchEverywhereManager(M)), a.targetOrigin || console.error("Missing targetOrigin option"), M.dispatch((0, oe.setTwitchEverywhereParams)({
                     targetOrigin: a.targetOrigin
-                }))), (0, x.forwardProperties)(E, X), ee = new v.Analytics(X, C, M, $, a), l(a), ne = new j.EmbedHost(X, M, $), new U.PlayerHotkeys(X, n, $, a), $.dispatch((0, ue.setAutoplay)(a.autoplay)), a.controls && (de = new he.ClipGenerator(M, $), $.dispatch((0, _e.clipGeneratorLoaded)(de)), I = new B.PlayerUI(X, n, C, M, $, de, a)), i(a).then(function() {
-                    $.dispatch((0, z.setPlayerOptions)(a))
-                }), $.dispatch((0, le.initVodResume)()), X.addEventListener(fe.LOADED_METADATA, function() {
-                    $.dispatch((0, se.setCanFullScreen)(O.canFullScreen()))
+                }))), (0, x.forwardProperties)(y, $), X = new v.Analytics($, E, I, M, a), l(a), ee = new j.EmbedHost($, I, M), new U.PlayerHotkeys($, n, M, a), M.dispatch((0, ue.setAutoplay)(a.autoplay)), a.controls && (ne = new he.ClipGenerator(I, M), M.dispatch((0, _e.clipGeneratorLoaded)(ne)), O = new B.PlayerUI($, n, E, I, M, ne, a)), i(a).then(function() {
+                    M.dispatch((0, z.setPlayerOptions)(a))
+                }), M.dispatch((0, le.initVodResume)()), $.addEventListener(fe.LOADED_METADATA, function() {
+                    M.dispatch((0, se.setCanFullScreen)(C.canFullScreen()))
                 })
             }
 
             function r() {
-                var e = $.getState(),
+                var e = M.getState(),
                     t = e.window,
-                    n = $.getState(),
+                    n = M.getState(),
                     r = n.analyticsTracker;
-                t.google ? t.google && $.dispatch((0, Q.imaScriptLoaded)(!0)) : xe.then(function() {
-                    $.dispatch((0, Q.imaScriptLoaded)(!0))
+                t.google ? t.google && M.dispatch((0, Q.imaScriptLoaded)(!0)) : xe.then(function() {
+                    M.dispatch((0, Q.imaScriptLoaded)(!0))
                 }).catch(function() {
-                    $.dispatch((0, Q.imaScriptLoaded)(!1)), r.trackEvent(_.VIDEO_AD_REQUEST_ERROR, {
+                    M.dispatch((0, Q.imaScriptLoaded)(!1)), r.trackEvent(_.VIDEO_AD_REQUEST_ERROR, {
                         reason: "ima load failed"
                     })
                 })
             }
 
             function i(e) {
-                return e.stream && e.channelId ? y(e.stream, e.channelId) : e.channel ? E.setChannel(e.channel) : e.video ? E.setVideo(e.video) : f()
+                return e.stream && e.channelId ? y._setLiveToVod(e.stream, e.channelId) : e.channel ? y.setChannel(e.channel) : e.video ? y.setVideo(e.video) : f()
             }
 
             function o() {
@@ -96,7 +96,7 @@
                     abs: !1,
                     tt_content: "",
                     tt_medium: ""
-                }), $.getState().env.platform === K.PLATFORM_MOBILE_WEB && (t.autoplay = !1), t.tracking = (0, s.default)({}, t.tracking, {
+                }), M.getState().env.platform === K.PLATFORM_MOBILE_WEB && (t.autoplay = !1), t.tracking = (0, s.default)({}, t.tracking, {
                     player: t.player
                 }), t
             }
@@ -110,18 +110,18 @@
             }
 
             function l(e) {
-                if (X.setVolume(e.volume), X.setMuted(e.muted), e.time) {
+                if ($.setVolume(e.volume), $.setMuted(e.muted), e.time) {
                     var t = L.parse(e.time);
-                    X.readyState > X.HAVE_NOTHING ? X.setCurrentTime(t) : X.addEventListener(fe.LOADED_METADATA, function() {
-                        X.setCurrentTime(t)
+                    $.readyState > $.HAVE_NOTHING ? $.setCurrentTime(t) : $.addEventListener(fe.LOADED_METADATA, function() {
+                        $.setCurrentTime(t)
                     })
                 }
                 e.debug && w.allEvents.forEach(function(e) {
-                    (0, u.default)(w.debugIgnoreEvents, e) || X.addEventListener(e, function() {
+                    (0, u.default)(w.debugIgnoreEvents, e) || $.addEventListener(e, function() {
                         console.log("video event: ", e)
                     })
-                }), X.addEventListener(fe.ERROR, function() {
-                    console.error("video error:", X.getError())
+                }), $.addEventListener(fe.ERROR, function() {
+                    console.error("video error:", $.getError())
                 })
             }
 
@@ -131,39 +131,18 @@
 
             function f() {
                 return c().then(function(e) {
-                    return $.dispatch((0, Q.setAdblockDetected)(e))
+                    return M.dispatch((0, Q.setAdblockDetected)(e))
                 }, function() {
-                    return $.dispatch((0, Q.setAdblockDetected)(!0))
+                    return M.dispatch((0, Q.setAdblockDetected)(!0))
                 })
             }
 
             function h(e) {
-                var t = (0, Ie.parseUri)($.getState().window.location.href);
+                var t = (0, Ie.parseUri)(M.getState().window.location.href);
                 t.queryKey.hasOwnProperty("force_preroll") && (e.usher_force_preroll = !0, e.force_preroll = t.queryKey.force_preroll), t.queryKey.hasOwnProperty("force_midroll") && (e.usher_force_midroll = !0, e.force_midroll = t.queryKey.force_midroll), t.queryKey.hasOwnProperty("force_preroll_id") && (e.force_preroll_id = t.queryKey.force_preroll_id), t.queryKey.hasOwnProperty("force_midroll_id") && (e.force_midroll_id = t.queryKey.force_midroll_id)
             }
-
-            function y(e, t) {
-                var n = function(e) {
-                    var n = $.getState(),
-                        r = n.user;
-                    $.dispatch(J.clearStream()), $.dispatch((0, De.fetchDeadLtvStreamMetadata)(e)), $.dispatch((0, Le.fetchFollowInfo)(r.id, t)), $.dispatch((0, Le.showFollowNotification)(!0))
-                };
-                return (0, pe.krakenRequestv5)("content?stream_id=" + e + "&channel_id=" + t).then(function(e) {
-                    if (e.stream) return void E.setChannel(e.channel.name);
-                    if (e.videos.length > 0) {
-                        var t = e.videos.find(function(e) {
-                            return "archive" === e.broadcast_type
-                        });
-                        if (t) return void E.setVideo(t._id)
-                    }
-                    n(e.channel.name)
-                }).catch(function() {
-                    return (0, pe.krakenRequestv5)("channels/" + t).then(function(e) {
-                        n(e.name)
-                    })
-                })
-            }
-            var E = this,
+            var y = this,
+                E = void 0,
                 C = void 0,
                 O = void 0,
                 I = void 0,
@@ -177,38 +156,61 @@
                 je = void 0,
                 Ue = void 0,
                 Be = void 0,
-                Fe = void 0,
-                Ve = [];
-            E.setChannel = function(e) {
-                return f().then(function() {
-                    $.dispatch(J.setStream(J.TYPE_CHANNEL, e)), $.dispatch((0, Z.clearCollection)())
+                Fe = [];
+            y._setLiveToVod = function(e, t) {
+                var n = function(e) {
+                    var n = M.getState(),
+                        r = n.user;
+                    M.dispatch(J.clearStream()), M.dispatch((0, De.fetchDeadLtvStreamMetadata)(e)), M.dispatch((0, Le.fetchFollowInfo)(r.id, t)), M.dispatch((0, Le.showFollowNotification)(!0))
+                };
+                return (0, pe.krakenRequestv5)("content?stream_id=" + e + "&channel_id=" + t).then(function(t) {
+                    if (t.stream && t.stream._id.toString() === e) return void y.setChannel(t.channel.name);
+                    if (t.videos.length > 0) {
+                        var r = t.videos.find(function(e) {
+                                return "archive" === e.broadcast_type
+                            }),
+                            i = t.videos.find(function(e) {
+                                return "highlight" === e.broadcast_type
+                            });
+                        if (r) return void y.setVideo(r._id);
+                        if (i) return void y.setVideo(i._id)
+                    }
+                    n(t.channel.name)
+                }).catch(function() {
+                    return (0, pe.krakenRequestv5)("channels/" + t).then(function(e) {
+                        n(e.name)
+                    })
                 })
-            }, E.setVideo = function(e) {
+            }, y.setChannel = function(e) {
                 return f().then(function() {
-                    $.dispatch(J.setStream(J.TYPE_VIDEO, e)), $.dispatch((0, Z.clearCollection)())
+                    M.dispatch(J.setStream(J.TYPE_CHANNEL, e)), M.dispatch((0, Z.clearCollection)())
                 })
-            }, E.setCollection = function(e) {
+            }, y.setVideo = function(e) {
+                return f().then(function() {
+                    M.dispatch(J.setStream(J.TYPE_VIDEO, e)), M.dispatch((0, Z.clearCollection)())
+                })
+            }, y.setCollection = function(e) {
                 var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                return $.dispatch((0, Z.requestCollection)(e, t))
-            }, E.setLanguage = function(e) {
-                $.dispatch(re.loadLanguage(e))
-            }, E.setMiniPlayerMode = function(e) {
-                $.dispatch((0, ge.setMiniPlayerMode)(e))
-            }, E.recordClip = function() {
-                de && de.recordClip()
-            }, E.isPlaying = function() {
-                var e = $.getState(),
+                return M.dispatch((0, Z.requestCollection)(e, t))
+            }, y.setLanguage = function(e) {
+                M.dispatch(re.loadLanguage(e))
+            }, y.setMiniPlayerMode = function(e) {
+                M.dispatch((0, ge.setMiniPlayerMode)(e))
+            }, y.recordClip = function() {
+                ne && ne.recordClip()
+            }, y.isPlaying = function() {
+                var e = M.getState(),
                     t = e.stream,
                     n = e.onlineStatus,
                     r = t.contentType === me.CONTENT_MODE_VOD,
                     i = n === be.ONLINE_STATUS;
-                return !X.getPaused() && !X.getEnded() && (i || r) && X.getReadyState() > ve.HAVE_CURRENT_DATA
-            }, E.setTrackingProperties = function(e) {
-                $.dispatch((0, ye.setTrackingProperties)(e))
-            }, n(), E.destroy = function() {
-                I.destroy(), X.destroy(), M.destroy(), ee.destroy(), ne.destroy(), Ve.forEach(function(e) {
+                return !$.getPaused() && !$.getEnded() && (i || r) && $.getReadyState() > ve.HAVE_CURRENT_DATA
+            }, y.setTrackingProperties = function(e) {
+                M.dispatch((0, ye.setTrackingProperties)(e))
+            }, n(), y.destroy = function() {
+                O.destroy(), $.destroy(), I.destroy(), X.destroy(), ee.destroy(), Fe.forEach(function(e) {
                     return e.destroy()
-                }), Ne.destroy(), je.destroy(), Ue.destroy(), Be.destroy(), Fe.destroy()
+                }), de.destroy(), Ne.destroy(), je.destroy(), Ue.destroy(), Be.destroy()
             }
         }
         Object.defineProperty(t, "__esModule", {
@@ -1687,7 +1689,7 @@
                 "use strict";
 
                 function r(e) {
-                    return i.stringify(o.parse(JSON.stringify(e)));
+                    return i.stringify(o.parse(JSON.stringify(e)))
                 }
                 var i = n(5),
                     o = (n.n(i), n(6));
@@ -3140,7 +3142,7 @@
             var t = new Image;
             t.src = e
         }, n.prototype.trackVODView = function(e) {
-            this._trackEvent(e.increment_view_count_url)
+            this._trackEvent(e.increment_view_count_url);
         }, n.prototype.trackView = function(e, t) {
             var n = {
                     type: e,
@@ -11527,7 +11529,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.05-214541+3f752bca229c1827b9ea73152186a4bee2906bb3",
+                    app_version: "2017.07.05-235604+02f617f6b94eb4362617bcdd9a0d09137d726412",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
