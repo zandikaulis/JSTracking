@@ -626,7 +626,7 @@ window.SiteOptions = {
             }]
         },
         "39543b0b-b0b8-466c-bb09-d580b00fc5ef": {
-            "name": "pulse_rollout_latency",
+            "name": "pulse",
             "groups": [{
                 "weight": 100,
                 "value": "control"
