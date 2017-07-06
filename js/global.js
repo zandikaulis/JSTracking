@@ -15820,7 +15820,8 @@ googletag.cmd = googletag.cmd || [],
                 LTV: "9985aa41-ce6a-48ab-abae-b0e0c34dca71",
                 HEARTHSTONE_DIRECTORY_FILTER: "33d53034-cd8b-408f-abe7-e740f2fec303",
                 OVERWATCH_DIRECTORY_FILTER: "6fffb6c6-19d4-4172-980f-498079d99b9c",
-                MEDIAPLAYER_BACKEND_SELECT: "2c137391-5182-429f-8760-9f71e4d40918"
+                MEDIAPLAYER_BACKEND_SELECT: "2c137391-5182-429f-8760-9f71e4d40918",
+                LATENCY_COMPONENT_INSTRUMENTATION: "4e9d0a3c-4f43-4817-8db4-ac060fc32b74"
             },
             r = {
                 "4bdb6678-2626-466f-bb25-e566dec11354": "control",
@@ -15877,7 +15878,8 @@ googletag.cmd = googletag.cmd || [],
                 "9985aa41-ce6a-48ab-abae-b0e0c34dca71": "no",
                 "33d53034-cd8b-408f-abe7-e740f2fec303": "no",
                 "6fffb6c6-19d4-4172-980f-498079d99b9c": "no",
-                "2c137391-5182-429f-8760-9f71e4d40918": "no"
+                "2c137391-5182-429f-8760-9f71e4d40918": "no",
+                "4e9d0a3c-4f43-4817-8db4-ac060fc32b74": "control"
             },
             o = {},
             s = {
