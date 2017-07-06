@@ -625,6 +625,16 @@ window.SiteOptions = {
                 "value": "communities-tab"
             }]
         },
+        "39543b0b-b0b8-466c-bb09-d580b00fc5ef": {
+            "name": "pulse_rollout_latency",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant"
+            }]
+        },
         "3a823fae-acbe-40c4-9ed8-6b1e685eb4b2": {
             "name": "ios_notification_center",
             "groups": [{
