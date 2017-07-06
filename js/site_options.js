@@ -1562,7 +1562,7 @@ window.SiteOptions = {
             }]
         },
         "b19d0945-ad8e-49c9-89f8-2dbb99bddf92": {
-            "name": "android_player_core_5",
+            "name": "android_playercore_5",
             "groups": [{
                 "weight": 99,
                 "value": "control"
@@ -1920,6 +1920,16 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "holdout"
+            }]
+        },
+        "d6ba259c-3f82-48ac-b158-bf4760fc864b": {
+            "name": "android_playercore_6",
+            "groups": [{
+                "weight": 99,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "active"
             }]
         },
         "d91cbc6b-1d6f-42ef-89b4-049176164067": {
