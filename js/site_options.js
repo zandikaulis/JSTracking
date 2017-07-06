@@ -181,19 +181,6 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
-        "0a340f6e-772a-4e12-a95e-5a984c071107": {
-            "name": "SOCIAL_COLUMN",
-            "groups": [{
-                "weight": 0,
-                "value": "variant1"
-            }, {
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 100,
-                "value": "variant2"
-            }]
-        },
         "0a4d513f-0274-4b33-b04f-287521abd51b": {
             "name": "ZACH_MODE",
             "groups": [{
