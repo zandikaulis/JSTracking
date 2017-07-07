@@ -124,7 +124,7 @@ window.SiteOptions = {
     "is_bk_enabled": true,
     "bits_promo_enabled": false,
     "p_cheer_enabled": true,
-    "prime_blackfriday_promo_enabled": false,
+    "prime_blackfriday_promo_enabled": true,
     "is_onsite_notifs_enabled": true,
     "is_onsite_notifs_staffonly_beta": false,
     "asubs_enabled": true,
