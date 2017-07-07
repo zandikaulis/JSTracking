@@ -593,10 +593,10 @@ window.SiteOptions = {
         "35731f0a-bd57-4582-915d-907dee75b3d4": {
             "name": "trending_emotes",
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "variant1"
             }]
         },
