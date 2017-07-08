@@ -7652,8 +7652,7 @@
                 timebreak: e.duration,
                 adblock: void 0 === e.adblock ? "unknown" : e.adblock,
                 sdk: e.sdk,
-                padtime: e.padtime,
-                aax: e.aaxExpGroup
+                padtime: e.padtime
             };
             if ("control" !== e.skippableExpGroup && (t.skip = e.skippableExpGroup), null !== e.communityId && (t.community = e.communityId), null !== e.kruxId && (t.kuid = e.kruxId), e.contentType === _.CONTENT_MODE_VOD && (t.vod_id = e.vod.id, t.vod_name = e.vod.name, t.vod_type = e.vod.type), t.embed) {
                 var n = (0, h.parseUri)(e.referrer);
@@ -7960,7 +7959,7 @@
                                     return n && n.getItem(e + t)
                                 },
                                 set: function(t, r) {
-                                    n && n.setItem(e + t, r)
+                                    n && n.setItem(e + t, r);
                                 },
                                 has: function(t) {
                                     return n && n.getItem(e + t)
@@ -10210,9 +10209,9 @@
         function f(e, t, n, r) {
             var i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
             return p(n.stream).then(function(e) {
-                return Promise.all([(0, g.userInfo)(), (0, g.channelInfo)(e), (0, g.channelAPIInfo)(e), (0, g.channelViewerInfo)(e), (0, g.getCommunityFromChannel)(e), n.experiments.get(S.PADTIME), n.experiments.get(S.CHOMPERZ), n.experiments.get(S.BISMOL), n.experiments.get(S.AAX_HEADER_BIDDING)])
+                return Promise.all([(0, g.userInfo)(), (0, g.channelInfo)(e), (0, g.channelAPIInfo)(e), (0, g.channelViewerInfo)(e), (0, g.getCommunityFromChannel)(e), n.experiments.get(S.PADTIME), n.experiments.get(S.CHOMPERZ), n.experiments.get(S.BISMOL)])
             }).then(function(o) {
-                var a = _(o, 9),
+                var a = _(o, 8),
                     s = a[0],
                     l = a[1],
                     u = a[2],
@@ -10221,10 +10220,9 @@
                     f = a[5],
                     p = a[6],
                     h = a[7],
-                    m = a[8],
-                    y = (0, C.parseUri)(n.window.location.href),
-                    g = y.queryKey,
-                    E = "digest" === g.referrer;
+                    m = (0, C.parseUri)(n.window.location.href),
+                    y = m.queryKey,
+                    g = "digest" === y.referrer;
                 return new v.AdsRequestContext({
                     adType: e,
                     sdk: n.sdk,
@@ -10241,8 +10239,7 @@
                     skippableExpGroup: p,
                     communityInfo: d,
                     bismolExpGroup: h,
-                    lure: E,
-                    aaxExpGroup: m
+                    lure: g
                 })
             })
         }
@@ -10367,9 +10364,8 @@
                     m = t.communityInfo,
                     y = t.skippableExpGroup,
                     g = t.bismolExpGroup,
-                    b = t.lure,
-                    E = t.aaxExpGroup;
-                i(this, e), this.contentType = o.stream.contentType, this.login = u.login, this.adSessionId = (0, a.generate)(f), this.adType = n, this.bismol = g, this.lure = b, this.channel = c.name, this.channelId = c._id, this.chansubToken = h.chansub, this.communityId = void 0 !== m ? m._id : null, this.twitchCorrelator = (0, a.generate)(), this.deviceId = d.get(!1), this.duration = r, this.hasAdFreeSubscription = Boolean(h.has_ad_free_subscription), this.lastAdDisplay = s, this.forced = l, this.padtime = v, this.requestTime = Date.now(), this.skippableExpGroup = y, this.aaxExpGroup = E, this.creativeId = _, this._initUserInfoFields(u), this._initChannelInfoFields(c, p), this._initStateFields(o), this._initAmazonFields()
+                    b = t.lure;
+                i(this, e), this.contentType = o.stream.contentType, this.login = u.login, this.adSessionId = (0, a.generate)(f), this.adType = n, this.bismol = g, this.lure = b, this.channel = c.name, this.channelId = c._id, this.chansubToken = h.chansub, this.communityId = void 0 !== m ? m._id : null, this.twitchCorrelator = (0, a.generate)(), this.deviceId = d.get(!1), this.duration = r, this.hasAdFreeSubscription = Boolean(h.has_ad_free_subscription), this.lastAdDisplay = s, this.forced = l, this.padtime = v, this.requestTime = Date.now(), this.skippableExpGroup = y, this.creativeId = _, this._initUserInfoFields(u), this._initChannelInfoFields(c, p), this._initStateFields(o), this._initAmazonFields()
             }
             return o(e, [{
                 key: "_initUserInfoFields",
@@ -10755,9 +10751,10 @@
         function l(e) {
             var t, n;
             return new _.default({
-                defaults: (t = {}, i(t, E, "no"), i(t, T, "no"), i(t, S, "no"), i(t, C, "no"), i(t, w, "no"), i(t, P, "no"), i(t, A, "no"), i(t, O, "no"), i(t, k, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "control"), i(t, D, "1.6.3"), i(t, L, "no"), i(t, x, "no"), i(t, j, "keep"), i(t, U, "pad_control"), i(t, B, "no"), i(t, F, "no"), i(t, V, "control"), i(t, H, "no"), i(t, q, "control"), i(t, G, "control"), i(t, Y, "control"), t),
+                defaults: (t = {}, i(t, E, "no"), i(t, T, "no"), i(t, S, "no"), i(t, C, "no"),
+                    i(t, w, "no"), i(t, P, "no"), i(t, A, "no"), i(t, O, "no"), i(t, k, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "control"), i(t, D, "1.6.3"), i(t, L, "no"), i(t, x, "no"), i(t, j, "keep"), i(t, U, "pad_control"), i(t, B, "no"), i(t, F, "no"), i(t, V, "control"), i(t, H, "no"), i(t, q, "control"), i(t, G, "control"), t),
                 deviceID: e.deviceID,
-                overrides: (0, d.default)((n = {}, i(n, M, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), i(n, T, a(["US"])), i(n, S, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, P, a(["SE"])), i(n, A, a(["DK", "FI", "NL", "NO"])), i(n, O, a(["CA"])), i(n, k, a(["AU", "NZ"])), i(n, I, a(["BE"])), i(n, N, a(["PL"])), i(n, R, a(["AT", "CH", "ES", "IT", "PT"])), i(n, L, o("vca")), i(n, x, o("yes")), i(n, D, o("1.8.7+spd67")), i(n, F, o("yes")), i(n, B, o("yes")), i(n, G, o("show")), i(n, Y, o("show")), n), JSON.parse(u.cookie.get("experiment_overrides", "{}"))),
+                overrides: (0, d.default)((n = {}, i(n, M, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), i(n, T, a(["US"])), i(n, S, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, P, a(["SE"])), i(n, A, a(["DK", "FI", "NL", "NO"])), i(n, O, a(["CA"])), i(n, k, a(["AU", "NZ"])), i(n, I, a(["BE"])), i(n, N, a(["PL"])), i(n, R, a(["AT", "CH", "ES", "IT", "PT"])), i(n, L, o("vca")), i(n, x, o("yes")), i(n, D, o("1.8.7+spd67")), i(n, F, o("yes")), i(n, B, o("yes")), i(n, q, o("show")), i(n, G, o("show")), n), JSON.parse(u.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
                 login: e.login,
                 provider: new m.default(m.default.SERVICE_URL),
@@ -10766,7 +10763,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.OFFLINE_EXPERIENCE = t.AUTO_SUGGEST_NOTIFICATION = t.AAX_HEADER_BIDDING = t.BISMOL = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.HTML5_TOGGLE_REMOVAL = t.PINEAPPLE = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BROWNIES = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
+        }), t.OFFLINE_EXPERIENCE = t.AUTO_SUGGEST_NOTIFICATION = t.BISMOL = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.HTML5_TOGGLE_REMOVAL = t.PINEAPPLE = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BROWNIES = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = l;
         var u = n(253),
             c = n(117),
             d = r(c),
@@ -10801,9 +10798,8 @@
             F = t.VIEW_WATCH_TOGETHER = "d0518b75-fbba-418a-9445-ff7c517beb32",
             V = t.CHOMPERZ = "d48fe249-fd73-4c8f-bd17-415b70dc3708",
             H = t.BISMOL = "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5",
-            q = t.AAX_HEADER_BIDDING = "18f450b9-5593-4d66-a5a7-c8b6fccf95c3",
-            G = t.AUTO_SUGGEST_NOTIFICATION = "74d6faab-1794-458a-a5f6-b92602254e9e",
-            Y = t.OFFLINE_EXPERIENCE = "6e2f439b-916a-40b7-b1be-e82b284fd0bb"
+            q = t.AUTO_SUGGEST_NOTIFICATION = "74d6faab-1794-458a-a5f6-b92602254e9e",
+            G = t.OFFLINE_EXPERIENCE = "6e2f439b-916a-40b7-b1be-e82b284fd0bb"
     }, function(e, t, n) {
         function r(e) {
             var t = i(e);
@@ -11643,7 +11639,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.07-192931+4b4f6871fe46cda88e01b52329f7b114a4e45a7c",
+                    app_version: "2017.07.08-015129+c2bd4c8f98249ba2ab23962ba130fff480e780ed",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -11893,7 +11889,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-e85c99.sjc01.hls.ttvnw.net/v1/playlist/CtNY6UPSUy0yTofkEdGOSDFWurp1BialkRbRat1kBx6_QEo3-UmrKFCQP8r4VM0EuG1NKul8CHLUqrq-86kZT1pjVnCdh8qbwFhShfjH6PJ4mmver3aJGbN8WEb6eL1WPU5CjxoU1Kl-4V_zkWC1JZ5hT_A3o6hGAnson1vbaW7iUCCuoE0iuVs8OWe2AZQLexm5-MJIIUzK4RI2IC4YUhwtpbrRY6XASGu5I_NolfsvZBXl2Pi7chwrYhiwXgjdknhf53jzeIqFWxnLrtcGQePG0lPQ6bsLqF0-KmQqq1Sox4v4qEFnDsruCM5hWblM3RyvpGf2d_gR6P0O0CXtdCiOoxeuD5_51c04c8_OukGs57ujWx50El43JgXGzyAZ7CPkCR50igJsl9l_Ky6SByorWuvjhixmifZpCb64S9yiX2TjqIKsW128AKO7XxVZ.m3u8"
+        t.trustedSpadeURI = "//video-edge-eebff6.sjc01.hls.ttvnw.net/v1/playlist/CpvwSlfht79u2Km3Qlbb1D5HxiTeF-qpVt_zP7kTAQhyd0XAnb6DnJZNkoQUu7XfeBXcTktLBgF0Y14pZNPbpIpO46-jHTp4oIChqCw9RGpB4KreuMh2nqultlIZ7DKJttNYapxww3ETngstypuAQ4WwYBN3uhNu5oqvtEQmH1GgY_Sl1uvvmN0pprKh4ElUF4XGiUV7D4CCY87shA1fOEialQXw3QC-KocbSPnc_x9jgC85LJPX2HiITj-D3eeFz6cRIXGwtH3goFDM1HoZeEBP6oSHo8nyuDSHPKuOvZvEakBtmR_i7gBzHVXurlVWqw_0zS5pv5kVIEqNsnTj383MvmmfeKaO9iCYq2jCdeTcbLjhfkudmG1sDPl8sD2O1_Pmr56go-M9WIrX_n-fyylUqXYCCKhzSU8cF4dSOiumF_usisN2nvJdp8zzxE3-inGLARZZkQkeAVgGt.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -16528,7 +16524,39 @@
                 group: "auto",
                 name: "Auto"
             },
-            x = t.BackendMediaPlayer = function() {
+            x = {
+                broadcast_id: 0,
+                cluster: "",
+                manifest_cluster: "",
+                manifest_node: "",
+                manifest_node_type: "",
+                node: "",
+                serving_id: 0,
+                user_ip: "",
+                vod_cdn_origin: "",
+                vod_cdn_region: "",
+                stream_time_offset: 0,
+                segment_protocol: "",
+                bandwidth: 0,
+                current_bitrate: 0,
+                current_fps: 0,
+                current_fps_exact: 0,
+                dropped_frames: 0,
+                hls_latency_broadcaster: 0,
+                hls_latency_encoder: 0,
+                hls_target_duration: 0,
+                paused: !1,
+                playing: !1,
+                stream_time: 0,
+                totalMemoryNumber: 0,
+                vid_display_height: 0,
+                vid_display_width: 0,
+                vid_height: 0,
+                vid_width: 0,
+                video_buffer_size: 0,
+                volume: 0
+            },
+            j = t.BackendMediaPlayer = function() {
                 function e() {
                     var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         n = arguments[1];
@@ -16709,7 +16737,7 @@
                 }, {
                     key: "getQuality",
                     value: function() {
-                        return null === this._mediaPlayer ? null : this._mediaPlayer.getAutoSwitchQuality() ? D : this._mediaPlayer.getQuality().group
+                        return null === this._mediaPlayer ? null : this._mediaPlayer.getAutoSwitchQuality() ? D : this._mediaPlayer.getQuality().group;
                     }
                 }, {
                     key: "elapsedTime",
@@ -16724,8 +16752,7 @@
                 }, {
                     key: "setCurrentTime",
                     value: function(e) {
-                        return null === this._mediaPlayer ? void this._apiCallQueue.push(this.setCurrentTime.bind(this, e)) : (this._mediaPlayer.seekTo(e), this._eventEmitter.emit(d.SEEKING),
-                            void(this._cache.seekStarted = !0))
+                        return null === this._mediaPlayer ? void this._apiCallQueue.push(this.setCurrentTime.bind(this, e)) : (this._mediaPlayer.seekTo(e), this._eventEmitter.emit(d.SEEKING), void(this._cache.seekStarted = !0))
                     }
                 }, {
                     key: "getDuration",
@@ -16740,9 +16767,9 @@
                 }, {
                     key: "getBuffered",
                     value: function() {
-                        if (null === this._mediaPlayer) return new j;
+                        if (null === this._mediaPlayer) return new U;
                         var e = this._mediaPlayer.getPosition();
-                        return new j(e, e + this._mediaPlayer.getBufferDuration())
+                        return new U(e, e + this._mediaPlayer.getBufferDuration())
                     }
                 }, {
                     key: "getReadyState",
@@ -16803,53 +16830,59 @@
                 }, {
                     key: "getVideoInfo",
                     value: function() {
-                        var e = this._mediaPlayer,
-                            t = e.getPlayerState(),
-                            n = this._stateStore.getState(),
-                            r = n.manifestInfo,
-                            i = n.window;
-                        return {
-                            bandwidth: e.getPlaybackRate(),
-                            broadcast_id: parseInt(r.broadcastId, 10),
-                            cluster: r.cluster,
-                            current_bitrate: e.getPlaybackRate(),
-                            current_fps: e.getVideoFrameRate(),
-                            current_fps_exact: e.getVideoFrameRate(),
-                            dropped_frames: e.getDroppedFrames(),
-                            hls_latency_broadcaster: e.getBroadcasterLatency(),
-                            hls_latency_encoder: e.getTranscoderLatency(),
-                            hls_target_duration: 5,
-                            manifest_cluster: r.manifest_cluster,
-                            manifest_node: r.manifest_node,
-                            manifest_node_type: r.manifest_node_type,
-                            node: r.node,
-                            paused: t === this._mediaPlayerHandle.PlayerState.IDLE,
-                            playing: t === this._mediaPlayerHandle.PlayerState.PLAYING,
-                            segment_protocol: "https:" === i.location.protocol ? "https" : "http",
-                            serving_id: r.serving_id,
-                            stream_time: e.getPosition(),
-                            stream_time_offset: parseFloat(r.stream_time),
-                            totalMemoryNumber: 64,
-                            user_ip: r.user_ip,
-                            vid_display_height: e.getDisplayHeight(),
-                            vid_display_width: e.getDisplayWidth(),
-                            vid_height: e.getVideoHeight(),
-                            vid_width: e.getVideoWidth(),
-                            video_buffer_size: e.getBufferDuration(),
-                            volume: e.getVolume(),
-                            vod_cdn_origin: r.origin,
-                            vod_cdn_region: r.region
+                        var e = this._stateStore.getState(),
+                            t = e.manifestInfo,
+                            n = e.window,
+                            r = {
+                                broadcast_id: parseInt(t.broadcastId, 10),
+                                cluster: t.cluster,
+                                manifest_cluster: t.manifest_cluster,
+                                manifest_node: t.manifest_node,
+                                manifest_node_type: t.manifest_node_type,
+                                node: t.node,
+                                serving_id: t.serving_id,
+                                user_ip: t.user_ip,
+                                vod_cdn_origin: t.origin,
+                                vod_cdn_region: t.region,
+                                stream_time_offset: parseFloat(t.stream_time),
+                                segment_protocol: "https:" === n.location.protocol ? "https" : "http"
+                            },
+                            i = this._mediaPlayer,
+                            o = {};
+                        if (i) {
+                            var a = i.getPlayerState();
+                            o = {
+                                bandwidth: i.getPlaybackRate(),
+                                current_bitrate: i.getPlaybackRate(),
+                                current_fps: i.getVideoFrameRate(),
+                                current_fps_exact: i.getVideoFrameRate(),
+                                dropped_frames: i.getDroppedFrames(),
+                                hls_latency_broadcaster: i.getBroadcasterLatency(),
+                                hls_latency_encoder: i.getTranscoderLatency(),
+                                hls_target_duration: 5,
+                                paused: a === this._mediaPlayerHandle.PlayerState.IDLE,
+                                playing: a === this._mediaPlayerHandle.PlayerState.PLAYING,
+                                stream_time: i.getPosition(),
+                                totalMemoryNumber: 64,
+                                vid_display_height: i.getDisplayHeight(),
+                                vid_display_width: i.getDisplayWidth(),
+                                vid_height: i.getVideoHeight(),
+                                vid_width: i.getVideoWidth(),
+                                video_buffer_size: i.getBufferDuration(),
+                                volume: i.getVolume()
+                            }
                         }
+                        return Object.assign({}, x, r, o)
                     }
                 }, {
                     key: "getPlaybackRate",
                     value: function() {
-                        return this._mediaPlayer.getPlaybackRate()
+                        return this._mediaPlayer ? this._mediaPlayer.getPlaybackRate() : 1
                     }
                 }, {
                     key: "getPlayed",
                     value: function() {
-                        return new j
+                        return new U
                     }
                 }, {
                     key: "getStatsEnabled",
@@ -17007,10 +17040,10 @@
                     }
                 }]), e
             }();
-        x.canPlay = function() {
+        j.canPlay = function() {
             return g.default.canLoad()
         };
-        var j = function() {
+        var U = function() {
             function e(t, n) {
                 a(this, e), this.length = "undefined" == typeof t ? 0 : 1, this._start = t, this._end = n
             }
@@ -19962,16 +19995,14 @@
             f = n(115),
             p = r(f),
             h = n(376),
-            _ = n(255),
-            v = (t.AAX_TWITCH_PUBLISHER_ID = 3036, t.AAX_VIDEO_AD_SERVER = "DFP", "video"),
-            m = "twitch-preroll",
-            y = "twitch-midroll-",
-            g = "twitch-postroll",
-            b = "treatment",
+            _ = (t.AAX_TWITCH_PUBLISHER_ID = 3036, t.AAX_VIDEO_AD_SERVER = "DFP", "video"),
+            v = "twitch-preroll",
+            m = "twitch-midroll-",
+            y = "twitch-postroll",
+            g = 1e3,
+            b = 1e3,
             E = 1e3,
-            T = 1e3,
-            S = 1e3,
-            C = (t.AAXManager = function() {
+            T = (t.AAXManager = function() {
                 function e(t, n, r, i) {
                     var a = this;
                     o(this, e), this._store = r, this._preloadedBids = [], this._options = i, this._unsubs = [];
@@ -19983,9 +20014,9 @@
                             videoAdServer: n
                         }, function() {
                             a._apstag = l.apstag
-                        })) : this._apstag = new C
+                        })) : this._apstag = new T
                     } catch (e) {
-                        this._apstag = new C;
+                        this._apstag = new T;
                         var c = {
                             reason: e.message
                         };
@@ -20004,44 +20035,29 @@
                     key: "preloadPrerollBids",
                     value: function() {
                         var e = this;
-                        return this._enabled().then(function(t) {
-                            return t ? e._getAdsRequestContextForPreroll().then(function(t) {
-                                if (!e._willDeclineAds(t)) return e._preloadVideoBids([m], t, E)
-                            }) : Promise.resolve([])
+                        return this._getAdsRequestContextForPreroll().then(function(t) {
+                            if (!e._willDeclineAds(t)) return e._preloadVideoBids([v], t, g)
                         })
                     }
                 }, {
                     key: "fetchBids",
                     value: function(e) {
-                        var t = this;
-                        return this._enabled().then(function(n) {
-                            if (!n) return Promise.resolve([]);
-                            switch (e.adType) {
-                                case s.AdRollTypes.PREROLL:
-                                    return t._fetchPrerollBids();
-                                case s.AdRollTypes.MIDROLL:
-                                    return t._fetchMidrollBids(e, T);
-                                case s.AdRollTypes.POSTROLL:
-                                    return t._fetchPostrollBids(e, S);
-                                default:
-                                    return Promise.resolve([])
-                            }
-                        }).catch(function(e) {
-                            return Promise.reject(e)
-                        })
+                        switch (e.adType) {
+                            case s.AdRollTypes.PREROLL:
+                                return this._fetchPrerollBids();
+                            case s.AdRollTypes.MIDROLL:
+                                return this._fetchMidrollBids(e, b);
+                            case s.AdRollTypes.POSTROLL:
+                                return this._fetchPostrollBids(e, E);
+                            default:
+                                return Promise.resolve([])
+                        }
                     }
                 }, {
                     key: "getAdRequestContextWithAmazonBids",
                     value: function(e, t) {
                         var n = t;
                         return e && e[0] && (n.amzniid = e[0].amzniid, n.amznbid = e[0].amznbid), n
-                    }
-                }, {
-                    key: "_enabled",
-                    value: function() {
-                        return this._store.getState().experiments.get(_.AAX_HEADER_BIDDING).then(function(e) {
-                            return Promise.resolve(e === b)
-                        })
                     }
                 }, {
                     key: "_fetchPrerollBids",
@@ -20057,14 +20073,14 @@
                         var n = 1,
                             r = Array.apply(null, new Array(n)).map(function(e, t) {
                                 var n = t + 1;
-                                return "" + y + n.toString()
+                                return "" + m + n.toString()
                             });
                         return this._fetchVideoBids(r, e, t)
                     }
                 }, {
                     key: "_fetchPostrollBids",
                     value: function(e, t) {
-                        return this._fetchVideoBids([g], e, t)
+                        return this._fetchVideoBids([y], e, t)
                     }
                 }, {
                     key: "_preloadVideoBids",
@@ -20090,7 +20106,7 @@
                                 var l = a.now() - s;
                                 i.aax_latency = l;
                                 var u = o.filter(function(t) {
-                                    return t.mediaType === v && (0, d.default)(e, t.slotID)
+                                    return t.mediaType === _ && (0, d.default)(e, t.slotID)
                                 });
                                 u.length > 0 ? (i.amzniid = u.map(function(e) {
                                     return e.amzniid
@@ -20106,7 +20122,7 @@
                         return {
                             slots: e.map(function(e) {
                                 return {
-                                    mediaType: v,
+                                    mediaType: _,
                                     slotID: e
                                 }
                             }),
@@ -21063,7 +21079,7 @@
         e.exports = n
     }, function(e, t, n) {
         function r(e) {
-            return a ? Object(a.call(e)) : {};
+            return a ? Object(a.call(e)) : {}
         }
         var i = n(12),
             o = i ? i.prototype : void 0,
@@ -21091,7 +21107,7 @@
         var o = n(70),
             a = r(o),
             s = t.ACTION_SET_ACCESS_TOKEN_PARAMS = "set access token params",
-            l = ["adblock", "need_https", "platform", "player_type"]
+            l = ["adblock", "need_https", "platform", "player_type"];
     }, function(e, t) {
         "use strict";
 
@@ -23765,8 +23781,8 @@
                             var i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
                             $(e, t.$root).html(r.translate(n, i))
                         };
-                    i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"), i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."),
-                        i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-submit", "Submit"), i(".js-empty-collection-label", "This collection is empty."), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"), i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel");
+                    i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"), i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."),
+                        i(".js-age-gate-submit", "Submit"), i(".js-empty-collection-label", "This collection is empty."), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"), i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel");
                     var o = function(e, n, i) {
                         $(e, t.$root).attr(n, r.translate(i))
                     };
@@ -25045,8 +25061,7 @@
 
         function i(e, t, n) {
             var i = r(e, n, t);
-            i && (n._dispatchListeners = _(n._dispatchListeners, i),
-                n._dispatchInstances = _(n._dispatchInstances, e))
+            i && (n._dispatchListeners = _(n._dispatchListeners, i), n._dispatchInstances = _(n._dispatchInstances, e))
         }
 
         function o(e) {
