@@ -655,10 +655,10 @@ window.SiteOptions = {
         "3e44f0d0-68fe-4cc9-9e2e-e85718c13d3d": {
             "name": "COMMUNITIES_SORT",
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "experiment"
             }]
         },
