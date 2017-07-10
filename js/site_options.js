@@ -1102,10 +1102,10 @@ window.SiteOptions = {
         "78360f5d-4ace-420d-8bca-df0d146ffdee": {
             "name": "CHANNEL_SIGNUP_COLUMN",
             "groups": [{
-                "weight": 5,
+                "weight": 0,
                 "value": "treatment"
             }, {
-                "weight": 95,
+                "weight": 100,
                 "value": "control"
             }]
         },
