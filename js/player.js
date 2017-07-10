@@ -11637,7 +11637,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.10-184006+fa9158bd5608b63a806415b5bec6f0586a1c263f",
+                    app_version: "2017.07.10-195036+41207141cda910259c52cea6558757672a97c4a6",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -20514,7 +20514,7 @@
                 }
             }(),
             o = n(199),
-            a = "https://z9jg64h9w9.execute-api.us-west-2.amazonaws.com/Prod?creative_id=";
+            a = "https://dfp-creative-service.twitch.tv/?creative_id=";
         t.DfpCreativeService = function() {
             function e() {
                 r(this, e)
