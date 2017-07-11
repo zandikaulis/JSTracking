@@ -306,7 +306,7 @@
         n(346).polyfill(), h.Dobbin.configure({
             Promise: Promise
         }), n.p = w.playerHost + "/", n(804);
-        var Be = Promise.reject();
+        var Be = Promise.resolve();
         window.google || (Be = Promise.resolve($.ajax({
             url: "//imasdk.googleapis.com/js/sdkloader/ima3.js",
             dataType: "script",
@@ -11639,7 +11639,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.11-190740+61e4b63cf2349003e37b181f7ef01082a52bf88e",
+                    app_version: "2017.07.11-201431+84b6b73d390105f4e46a75239f85ada8695f347e",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
