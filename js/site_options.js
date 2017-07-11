@@ -1049,6 +1049,16 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
+            "name": "vod_rtqos",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "realtime"
+            }]
+        },
         "6b4086ea-dcce-41c9-a57b-000fa9366e35": {
             "name": "clips_you_were_right",
             "groups": [{
