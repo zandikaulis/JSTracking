@@ -3577,7 +3577,7 @@
                 i(this, e), this._store = n, this._root = t, this._store.dispatch((0, l.setCanFullScreen)(this.canFullScreen())), (0, u.subscribe)(this._store, ["screenMode.isFullScreen"], function(e) {
                     var t = e.screenMode;
                     r.setFullScreen(t.isFullScreen)
-                })
+                }), s.default.onchange = this._onFullScreenChange.bind(this)
             }
             return o(e, [{
                 key: "canFullScreen",
@@ -11639,7 +11639,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.11-055048+1f2d44355bcedc2db7662fcc301ffb57375c83e3",
+                    app_version: "2017.07.11-190740+61e4b63cf2349003e37b181f7ef01082a52bf88e",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
