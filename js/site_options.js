@@ -492,10 +492,10 @@ window.SiteOptions = {
         "2c137391-5182-429f-8760-9f71e4d40918": {
             "name": "CVP MediaPlayer backend control",
             "groups": [{
-                "weight": 100,
+                "weight": 98,
                 "value": "no"
             }, {
-                "weight": 0,
+                "weight": 2,
                 "value": "yes"
             }]
         },
