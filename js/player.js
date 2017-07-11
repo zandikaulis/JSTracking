@@ -43,7 +43,7 @@
                     userAgent: M.getState().window.navigator.userAgent
                 })), M.dispatch(ie.loadDefaultLang(a.lang)), M.dispatch((0, ae.setEnvironment)({
                     deviceId: N.get(!1)
-                })), M.dispatch((0, ae.setPlayerType)(a.player)), Ve.push(new G.PubSub(M, a)), Ve.push(new Oe.PostRecommendationsManager(M)), Ve.push(new ke.OfflineRecommendationsManager(M)), Ve.push(new Ie.UserManager(M)), Ve.push(new b.AutoSuggestNotificationManager(M)), E = new m.AnalyticsTracker(M, a), M.dispatch((0, de.setAnalyticsTracker)(E)), M.dispatch((0, oe.initializeQuality)()), r(), C = a.allowfullscreen ? new Y.FullScreen(n, M) : new W.NoFullScreen(n, M), fe = new Ae.TimelineMetadataManager(M), Re = new Te.CollectionManager(M), $ = new D.Video(n, M, a), Fe = new Me.ExtensionsApi(M), M.dispatch((0, Le.extensionsApiLoaded)(Fe)), I = new R.State($, M, E, a), a.debug && (window.state = I), Ue = new Se.PlayerResizeManager(M), Ue.observe(n), Be = new Ce.FollowManager(M), a.player === Pe.PLAYER_TWITCH_EVERYWHERE && (Ve.push(new we.TwitchEverywhereManager(M)), a.targetOrigin || console.error("Missing targetOrigin option"), M.dispatch((0, ae.setTwitchEverywhereParams)({
+                })), M.dispatch((0, ae.setPlayerType)(a.player)), He.push(new G.PubSub(M, a)), He.push(new Oe.PostRecommendationsManager(M)), He.push(new ke.OfflineRecommendationsManager(M)), He.push(new Ie.UserManager(M)), He.push(new b.AutoSuggestNotificationManager(M)), E = new m.AnalyticsTracker(M, a), M.dispatch((0, de.setAnalyticsTracker)(E)), M.dispatch((0, oe.initializeQuality)()), r(), C = a.allowfullscreen ? new Y.FullScreen(n, M) : new W.NoFullScreen(n, M), fe = new Ae.TimelineMetadataManager(M), Re = new Te.CollectionManager(M), $ = new D.Video(n, M, a), Ve = new Me.ExtensionsApi(M), M.dispatch((0, Le.extensionsApiLoaded)(Ve)), I = new R.State($, M, E, a), a.debug && (window.state = I), je = new Se.PlayerResizeManager(M), je.observe(n), Fe = new Ce.FollowManager(M), a.player === Pe.PLAYER_TWITCH_EVERYWHERE && (He.push(new we.TwitchEverywhereManager(M)), a.targetOrigin || console.error("Missing targetOrigin option"), M.dispatch((0, ae.setTwitchEverywhereParams)({
                     targetOrigin: a.targetOrigin
                 }))), (0, x.forwardProperties)(y, $), J = new v.Analytics($, E, I, M, a), M.dispatch((0, ce.setAutoplay)(a.autoplay)), l(a), te = new j.EmbedHost($, I, M), new U.PlayerHotkeys($, n, M, a), a.controls && (re = new _e.ClipGenerator(I, M), M.dispatch((0, ve.clipGeneratorLoaded)(re)), A = new B.PlayerUI($, n, E, I, M, re, a)), i(a).then(function() {
                     M.dispatch((0, Q.setPlayerOptions)(a))
@@ -57,7 +57,7 @@
                     t = e.window,
                     n = M.getState(),
                     r = n.analyticsTracker;
-                t.google ? t.google && M.dispatch((0, X.imaScriptLoaded)(!0)) : je.then(function() {
+                t.google ? t.google && M.dispatch((0, X.imaScriptLoaded)(!0)) : Be.then(function() {
                     M.dispatch((0, X.imaScriptLoaded)(!0))
                 }).catch(function() {
                     M.dispatch((0, X.imaScriptLoaded)(!1)), r.trackEvent(_.VIDEO_AD_REQUEST_ERROR, {
@@ -127,7 +127,7 @@
             }
 
             function c() {
-                return window.Twitch.sentinel ? Promise.resolve(window.Twitch.sentinel.detect) : g.getSentinel()
+                return window.Twitch.sentinel ? Ue.default.msie ? Promise.resolve(!0) : Promise.resolve(window.Twitch.sentinel.detect) : g.getSentinel()
             }
 
             function f() {
@@ -154,10 +154,10 @@
                 re = void 0,
                 fe = void 0,
                 Re = void 0,
-                Ue = void 0,
-                Be = void 0,
+                je = void 0,
                 Fe = void 0,
-                Ve = [];
+                Ve = void 0,
+                He = [];
             y._setLiveToVod = function(e, t) {
                 var n = function(e) {
                     var n = M.getState(),
@@ -209,9 +209,9 @@
             }, y.setTrackingProperties = function(e) {
                 M.dispatch((0, ge.setTrackingProperties)(e))
             }, n(), y.destroy = function() {
-                A.destroy(), $.destroy(), I.destroy(), J.destroy(), te.destroy(), Ve.forEach(function(e) {
+                A.destroy(), $.destroy(), I.destroy(), J.destroy(), te.destroy(), He.forEach(function(e) {
                     return e.destroy()
-                }), fe.destroy(), Re.destroy(), Ue.destroy(), Be.destroy(), Fe.destroy()
+                }), fe.destroy(), Re.destroy(), je.destroy(), Fe.destroy(), Ve.destroy()
             }
         }
         Object.defineProperty(t, "__esModule", {
@@ -300,12 +300,14 @@
             Me = n(803),
             Le = n(339),
             De = n(649),
-            xe = n(340);
+            xe = n(340),
+            je = n(265),
+            Ue = i(je);
         n(346).polyfill(), h.Dobbin.configure({
             Promise: Promise
         }), n.p = w.playerHost + "/", n(804);
-        var je = Promise.reject();
-        window.google || (je = Promise.resolve($.ajax({
+        var Be = Promise.reject();
+        window.google || (Be = Promise.resolve($.ajax({
             url: "//imasdk.googleapis.com/js/sdkloader/ima3.js",
             dataType: "script",
             timeout: 2e3,
@@ -1678,7 +1680,7 @@
                         var n = new Blob([t], {
                             type: "application/x-www-form-urlencoded; charset=UTF-8"
                         });
-                        if (navigator.sendBeacon(e, n)) return o.e.resolve("sendBeacon");
+                        if (navigator.sendBeacon(e, n)) return o.e.resolve("sendBeacon")
                     }
                     return r("POST", e, {
                         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
@@ -11637,7 +11639,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.10-195036+41207141cda910259c52cea6558757672a97c4a6",
+                    app_version: "2017.07.11-055048+1f2d44355bcedc2db7662fcc301ffb57375c83e3",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -11887,7 +11889,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-be6fdf.sjc01.hls.ttvnw.net/v1/playlist/Cjm7Hy2-tRxGDeL7m7q__l7Zs6k-HFbYMaPML5YN419OB7jzrfnnvk554dX6OMh9N2tXfFss_hr3xLdAdI1Cr2SxDufYtZUrLMzHrxa49TCKkO0AivbZHs0OQVsx8XPUatrYfaJQFWMm_xSU-v9SaaFBmXBSjFPCqNBAtWYYoMSw5gIUg0sRblcGYKygelZAmMbC9nrVcyswhwIJFcMfp-VD47RcpRBr1vcNfN1ojRdnrapfSjnbWEYxNnHWLXcrJJCm97DgRD5klyfT4VUHU4w6jjv3a-4cvPep4BIijsV9xwCZzbqxKTXTGs27hY2Udy871TGlXxZC0OXekyKcpWwrPi7fqhoykMNWADA9J4KayftxunhiKbIPuBEC5V333SAMbRpj-UIGhP5xK1WecYHR4cWwbdCq-FmxCVF-AflGXsAX3OgChIKWtBA.m3u8"
+        t.trustedSpadeURI = "//video-edge-43e614.sjc01.hls.ttvnw.net/v1/playlist/CiHYQw8cJTvj4VWjkMdMG_GDFREvIeBlICFpoKmhP-DijFpgEmWzLnLkvI6dXrY78OtIqjHzJs428vedmk5U63aGyms2FebRxTUvpe9SX03_kGt0046opH74GFoPj0B0Hj5DnpTwbMlPqVEWtXs_HwznADqshyYUP9YsXToRB7jcLSyevUMcyQCZ5lj9RI7QtxsdSngEOt2mHthXpLhkUbIISlg8AaGb-hy8rDySmiBDXE4zw80KlVNJMy_s8DguUNbnNd1rlbxXvJicplkbULZqkEuGnaBBoLX3lZPwHrUiJR6qN1EYgmvm4Fy1KMr8hzka1-wkeVCPCA4Rwk1kxh-o1v_Vp7MZY1omMb-nh9sCu6dO9q9zTmvaq5bqPogTtIJTA7cMuhOMJac-5fbklD1aCtTexO7oUFs3DGyl1WkKiupPWE.m3u8"
     }, function(e, t, n) {
         "use strict";
 
