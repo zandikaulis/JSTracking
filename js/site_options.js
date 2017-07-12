@@ -121,7 +121,7 @@ window.SiteOptions = {
     "fl_details_link_enabled": true,
     "cmrc_kick_kick_boom_released": false,
     "is_bk_enabled": true,
-    "bits_promo_enabled": false,
+    "bits_promo_enabled": true,
     "p_cheer_enabled": true,
     "prime_blackfriday_promo_enabled": false,
     "is_onsite_notifs_enabled": true,
@@ -1112,11 +1112,11 @@ window.SiteOptions = {
         "720d8bcb-3246-4846-94ac-41c15e287c37": {
             "name": "automod_smaller_prompt",
             "groups": [{
-                "weight": 90,
-                "value": "control"
+                "weight": 0,
+                "value": "no"
             }, {
-                "weight": 10,
-                "value": "treatment"
+                "weight": 100,
+                "value": "yes"
             }]
         },
         "74d6faab-1794-458a-a5f6-b92602254e9e": {
