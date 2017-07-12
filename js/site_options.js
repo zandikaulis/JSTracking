@@ -195,6 +195,9 @@ window.SiteOptions = {
             "groups": [{
                 "weight": 100,
                 "value": "yes"
+            }, {
+                "weight": 0,
+                "value": "no"
             }]
         },
         "0bf3975d-a3dd-4f36-800f-0089b2ce279a": {
