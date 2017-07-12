@@ -43,7 +43,7 @@
                     userAgent: M.getState().window.navigator.userAgent
                 })), M.dispatch(ie.loadDefaultLang(a.lang)), M.dispatch((0, ae.setEnvironment)({
                     deviceId: N.get(!1)
-                })), M.dispatch((0, ae.setPlayerType)(a.player)), He.push(new G.PubSub(M, a)), He.push(new Oe.PostRecommendationsManager(M)), He.push(new ke.OfflineRecommendationsManager(M)), He.push(new Ie.UserManager(M)), He.push(new b.AutoSuggestNotificationManager(M)), E = new m.AnalyticsTracker(M, a), M.dispatch((0, de.setAnalyticsTracker)(E)), M.dispatch((0, oe.initializeQuality)()), r(), C = a.allowfullscreen ? new Y.FullScreen(n, M) : new W.NoFullScreen(n, M), fe = new Ae.TimelineMetadataManager(M), Re = new Te.CollectionManager(M), $ = new D.Video(n, M, a), Ve = new Me.ExtensionsApi(M), M.dispatch((0, Le.extensionsApiLoaded)(Ve)), I = new R.State($, M, E, a), a.debug && (window.state = I), je = new Se.PlayerResizeManager(M), je.observe(n), Fe = new Ce.FollowManager(M), a.player === Pe.PLAYER_TWITCH_EVERYWHERE && (He.push(new we.TwitchEverywhereManager(M)), a.targetOrigin || console.error("Missing targetOrigin option"), M.dispatch((0, ae.setTwitchEverywhereParams)({
+                })), M.dispatch((0, ae.setPlayerType)(a.player)), qe.push(new G.PubSub(M, a)), qe.push(new Oe.PostRecommendationsManager(M)), qe.push(new ke.OfflineRecommendationsManager(M)), qe.push(new Ie.UserManager(M)), qe.push(new b.AutoSuggestNotificationManager(M)), E = new m.AnalyticsTracker(M, a), M.dispatch((0, de.setAnalyticsTracker)(E)), M.dispatch((0, oe.initializeQuality)()), r(), C = a.allowfullscreen ? new Y.FullScreen(n, M) : new W.NoFullScreen(n, M), fe = new Ae.TimelineMetadataManager(M), Re = new Te.CollectionManager(M), $ = new D.Video(n, M, a), He = new Me.ExtensionsApi(M), M.dispatch((0, Le.extensionsApiLoaded)(He)), I = new R.State($, M, E, a), a.debug && (window.state = I), je = new Se.PlayerResizeManager(M), je.observe(n), Ve = new Ce.FollowManager(M), a.player === Pe.PLAYER_TWITCH_EVERYWHERE && (qe.push(new we.TwitchEverywhereManager(M)), a.targetOrigin || console.error("Missing targetOrigin option"), M.dispatch((0, ae.setTwitchEverywhereParams)({
                     targetOrigin: a.targetOrigin
                 }))), (0, x.forwardProperties)(y, $), J = new v.Analytics($, E, I, M, a), M.dispatch((0, ce.setAutoplay)(a.autoplay)), l(a), te = new j.EmbedHost($, I, M), new U.PlayerHotkeys($, n, M, a), a.controls && (re = new _e.ClipGenerator(I, M), M.dispatch((0, ve.clipGeneratorLoaded)(re)), A = new B.PlayerUI($, n, E, I, M, re, a)), i(a).then(function() {
                     M.dispatch((0, Q.setPlayerOptions)(a))
@@ -73,13 +73,13 @@
             function o() {
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                     t = (0, d.default)(e) ? T.parse(e) : e;
-                return h(t), (0, S.isTwitchEmbed)() || t.player !== O.PLAYER_CURSE && (t = (0, p.default)(t, w.embedParameters)), t.backend = a(t), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== O.PLAYER_HIGHLIGHTER, t = (0, s.default)(t, {
+                return h(t), (0, S.isTwitchEmbed)() || (0, u.default)(Fe, t.player) || (t = (0, p.default)(t, w.embedParameters)), t.backend = a(t), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== O.PLAYER_HIGHLIGHTER, t = (0, s.default)(t, {
                     time: t.t
                 }), (0, u.default)(["mse", "mseDev"], P.localStore.get("backend")) && P.localStore.set("backend", F.BACKEND_PLAYER_CORE), t = (0, s.default)(t, {
                     volume: P.localStore.get("volume"),
                     muted: P.localStore.get("muted"),
                     backend: P.localStore.get("backend"),
-                    player: O.getPlayerType()
+                    player: t.player === O.PLAYER_IMDB ? O.PLAYER_IMDB : O.getPlayerType()
                 }), t = (0, s.default)(t, {
                     volume: .5,
                     muted: !1,
@@ -155,9 +155,9 @@
                 fe = void 0,
                 Re = void 0,
                 je = void 0,
-                Fe = void 0,
                 Ve = void 0,
-                He = [];
+                He = void 0,
+                qe = [];
             y._setLiveToVod = function(e, t) {
                 var n = function(e) {
                     var n = M.getState(),
@@ -209,9 +209,9 @@
             }, y.setTrackingProperties = function(e) {
                 M.dispatch((0, ge.setTrackingProperties)(e))
             }, n(), y.destroy = function() {
-                A.destroy(), $.destroy(), I.destroy(), J.destroy(), te.destroy(), He.forEach(function(e) {
+                A.destroy(), $.destroy(), I.destroy(), J.destroy(), te.destroy(), qe.forEach(function(e) {
                     return e.destroy()
-                }), fe.destroy(), Re.destroy(), je.destroy(), Fe.destroy(), Ve.destroy()
+                }), fe.destroy(), Re.destroy(), je.destroy(), Ve.destroy(), He.destroy()
             }
         }
         Object.defineProperty(t, "__esModule", {
@@ -312,7 +312,9 @@
             dataType: "script",
             timeout: 2e3,
             cache: !0
-        }))), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = o, window.Twitch.Player = o, window.Twitch.Player.PROMPT_LOGIN = Re.PROMPT_LOGIN_MODAL
+        })));
+        var Fe = Object.freeze([O.PLAYER_IMDB, O.PLAYER_CURSE]);
+        window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = o, window.Twitch.Player = o, window.Twitch.Player.PROMPT_LOGIN = Re.PROMPT_LOGIN_MODAL
     }, function(e, t, n) {
         var r = n(2),
             i = n(3),
@@ -1670,7 +1672,7 @@
                         n.hasOwnProperty(e) && i.setRequestHeader(e, n[e])
                     }), new o.e(function(n, o) {
                         i.onreadystatechange = function() {
-                            i.readyState === a && (i.status >= 200 && i.status < 300 ? n(i.responseText) : o(new Error("dobbin.js " + e + " " + t + " responded " + i.status + "\n" + i.responseText)))
+                            i.readyState === a && (i.status >= 200 && i.status < 300 ? n(i.responseText) : o(new Error("dobbin.js " + e + " " + t + " responded " + i.status + "\n" + i.responseText)));
                         }, i.send(r)
                     })
                 }
@@ -11639,7 +11641,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.12-015411+b2a82b2124ec05505a4e8f15e9925fa149d8f186",
+                    app_version: "2017.07.12-022954+02cb0ff70e9d11adf4b16e67c489eef3a1428b72",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
