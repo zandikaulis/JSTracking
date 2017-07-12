@@ -1099,6 +1099,16 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "720d8bcb-3246-4846-94ac-41c15e287c37": {
+            "name": "automod_smaller_prompt",
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "treatment"
+            }]
+        },
         "74d6faab-1794-458a-a5f6-b92602254e9e": {
             "name": "auto_suggest_notification",
             "groups": [{
