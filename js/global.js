@@ -16819,20 +16819,6 @@ googletag.cmd = googletag.cmd || [],
         })
     }(window.Twitch, window.jQuery),
     function(e, t) {
-        var n = {};
-        n.infoModal = function(n, i, r, o) {
-            o = void 0 !== o ? o : {}, t(i).overlay(n, function() {
-                t(r).click(function(e) {
-                    e.preventDefault(), t(this).trigger("overlay.hide")
-                })
-            }, e.defaults(o, {
-                width: "420px"
-            }))
-        }, e.mixin({
-            dashboard: n
-        })
-    }(Twitch, jQuery),
-    function(e, t) {
         var n = function(e, t) {
                 return t -= e.toString().length, t > 0 ? new Array(t + (/\./.test(e) ? 2 : 1)).join("0") + e : e + ""
             },

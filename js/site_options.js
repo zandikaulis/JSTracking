@@ -193,10 +193,10 @@ window.SiteOptions = {
         "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458": {
             "name": "AUTOMOD_SMALLER",
             "groups": [{
-                "weight": 100,
+                "weight": 10,
                 "value": "yes"
             }, {
-                "weight": 0,
+                "weight": 90,
                 "value": "no"
             }]
         },
