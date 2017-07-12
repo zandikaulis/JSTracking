@@ -193,10 +193,10 @@ window.SiteOptions = {
         "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458": {
             "name": "AUTOMOD_SMALLER",
             "groups": [{
-                "weight": 10,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 90,
+                "weight": 0,
                 "value": "no"
             }]
         },
@@ -665,10 +665,10 @@ window.SiteOptions = {
         "3e44f0d0-68fe-4cc9-9e2e-e85718c13d3d": {
             "name": "COMMUNITIES_SORT",
             "groups": [{
-                "weight": 80,
+                "weight": 20,
                 "value": "control"
             }, {
-                "weight": 20,
+                "weight": 80,
                 "value": "experiment"
             }]
         },
@@ -756,7 +756,7 @@ window.SiteOptions = {
                 "value": "1.8.10+absctrl"
             }, {
                 "weight": 2,
-                "value": "1.8.10+spd67"
+                "value": "1.8.11"
             }, {
                 "weight": 2,
                 "value": "1.8.10+spd67"
