@@ -191,7 +191,7 @@ window.SiteOptions = {
             }]
         },
         "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458": {
-            "name": "automod_smaller",
+            "name": "AUTOMOD_SMALLER",
             "groups": [{
                 "weight": 100,
                 "value": "yes"
