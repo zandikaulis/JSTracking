@@ -190,6 +190,13 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
+        "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458": {
+            "name": "automod_smaller",
+            "groups": [{
+                "weight": 100,
+                "value": "yes"
+            }]
+        },
         "0bf3975d-a3dd-4f36-800f-0089b2ce279a": {
             "name": "android_chomments",
             "groups": [{
@@ -1107,16 +1114,6 @@ window.SiteOptions = {
             }, {
                 "weight": 80,
                 "value": "no"
-            }]
-        },
-        "720d8bcb-3246-4846-94ac-41c15e287c37": {
-            "name": "automod_smaller_prompt",
-            "groups": [{
-                "weight": 0,
-                "value": "no"
-            }, {
-                "weight": 100,
-                "value": "yes"
             }]
         },
         "74d6faab-1794-458a-a5f6-b92602254e9e": {
