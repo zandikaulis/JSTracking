@@ -743,19 +743,19 @@ window.SiteOptions = {
             "name": "CVP May 18",
             "groups": [{
                 "weight": 5,
-                "value": "1.8.8+absctrl"
+                "value": "1.8.10+absctrl"
             }, {
                 "weight": 2,
-                "value": "1.8.8+spd67"
+                "value": "1.8.10+spd67"
             }, {
                 "weight": 2,
-                "value": "1.8.8+spd67"
+                "value": "1.8.10+spd67"
             }, {
                 "weight": 3,
-                "value": "1.8.8+spd67"
+                "value": "1.8.10+spd67"
             }, {
                 "weight": 88,
-                "value": "1.8.8+spd67"
+                "value": "1.8.10+spd67"
             }]
         },
         "474db509-7fb8-403e-97da-66dae8954e6d": {
@@ -805,6 +805,16 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "no-with-1.2"
+            }]
+        },
+        "4aea0cbd-2a3b-4377-8fca-fbce7228ac5c": {
+            "name": "android_phone_landscape_chat_write",
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "4afcc1d7-b6f4-489a-beb3-0a32eb780592": {
@@ -1732,16 +1742,6 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "active"
-            }]
-        },
-        "c097971e-c5fc-4763-a8fa-de04f3d713a7": {
-            "name": "Watch_Party_Web",
-            "groups": [{
-                "weight": 0,
-                "value": "no"
-            }, {
-                "weight": 100,
-                "value": "yes"
             }]
         },
         "c14ad553-a6e6-441b-961f-8ebf0d444791": {
