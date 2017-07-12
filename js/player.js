@@ -11641,7 +11641,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.12-022954+02cb0ff70e9d11adf4b16e67c489eef3a1428b72",
+                    app_version: "2017.07.12-172722+74b701092466937e5ca9e8a6881a53ea39f672e0",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -24230,7 +24230,7 @@
         t.PlayerUIControlsDisplay = function() {
             function e(t, n, r) {
                 var o = this;
-                i(this, e), this._player = t, this._root = n, this._store = r, this.unsubs = [], this.unsubs.push((0, f.subscribe)(this._store, ["collection.currentView"], this.onCollectionViewChange.bind(this))), this._hovering = !1, this._hideControlsTimeout = null, this._mouseX = 0, this._mouseY = 0, $(this._root).on("mouseenter", ".js-controls-top, .js-controls-bottom", function() {
+                i(this, e), this._player = t, this._root = n, this._store = r, this.unsubs = [], this.unsubs.push((0, f.subscribe)(this._store, ["collection.currentView"], this.onCollectionViewChange.bind(this))), this.unsubs.push((0, f.subscribe)(this._store, ["quality"], this.onQualityChange.bind(this))), this._hovering = !1, this._hideControlsTimeout = null, this._mouseX = 0, this._mouseY = 0, $(this._root).on("mouseenter", ".js-controls-top, .js-controls-bottom", function() {
                     o.setHovering(!0)
                 }), $(this._root).on("mouseleave", this.hideControls.bind(this)), $(this._root).on("mouseleave", ".js-controls-top, .js-controls-bottom", function() {
                     o.setHovering(!1)
@@ -24243,6 +24243,12 @@
                 value: function(e) {
                     var t = e.collection;
                     t.currentView === l.SIDEBAR_VIEW ? this.hideControls() : this.showControls(s.hoverControlsDelay)
+                }
+            }, {
+                key: "onQualityChange",
+                value: function(e) {
+                    var t = e.quality;
+                    t.current !== this._previousQuality && (this._previousQuality = t.current, this.showControls(s.qualityChangeDuration))
                 }
             }, {
                 key: "setHovering",
@@ -25084,7 +25090,7 @@
         }
 
         function o(e) {
-            e && e.dispatchConfig.phasedRegistrationNames && h.traverseTwoPhase(e._targetInst, i, e)
+            e && e.dispatchConfig.phasedRegistrationNames && h.traverseTwoPhase(e._targetInst, i, e);
         }
 
         function a(e) {
