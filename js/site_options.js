@@ -350,7 +350,7 @@ window.SiteOptions = {
             "name": "test",
             "t": 1,
             "groups": [{
-                "weight": 3,
+                "weight": 2,
                 "value": "a"
             }, {
                 "weight": 1,
