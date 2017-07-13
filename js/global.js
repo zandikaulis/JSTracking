@@ -17354,6 +17354,7 @@ googletag.cmd = googletag.cmd || [],
                         location: n.location,
                         content: n.content,
                         medium: n.medium,
+                        referrer: n.referrer,
                         page_session_id: n.page_session_id
                     }, e.tracking.funnel.debugEnabled() && (console.group("Twitch.tracking.funnel.trackPageView"), console.log("event:", "pageview"), console.log("properties:", n), console.groupEnd()), i.spadeAndMixpanel.trackEvent(Dobbin.Dobbin.events.EVENT_PAGEVIEW, n)
                 })
