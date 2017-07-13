@@ -132,6 +132,7 @@ window.SiteOptions = {
     "experiments": {
         "00683bde-a79d-4b9d-a7cc-b0549f854d36": {
             "name": "offline_recs",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "no"
@@ -142,6 +143,7 @@ window.SiteOptions = {
         },
         "0173154a-7fa4-4a76-b8e1-0575eb3a7fcd": {
             "name": "android_live_preview",
+            "t": 1,
             "groups": [{
                 "weight": 90,
                 "value": "control"
@@ -152,6 +154,7 @@ window.SiteOptions = {
         },
         "04b8f9e1-4849-48fa-8d33-c56ec9f040a0": {
             "name": "android_video_paint",
+            "t": 1,
             "groups": [{
                 "weight": 90,
                 "value": "control"
@@ -162,6 +165,7 @@ window.SiteOptions = {
         },
         "05f51b55-9ce2-4d95-9896-8fdfb83b0b04": {
             "name": "test1",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": ""
@@ -172,6 +176,7 @@ window.SiteOptions = {
         },
         "0670f0ea-3b5c-41a8-946d-114ef4a42540": {
             "name": "INTL_I18N",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -182,6 +187,7 @@ window.SiteOptions = {
         },
         "0a4d513f-0274-4b33-b04f-287521abd51b": {
             "name": "ZACH_MODE",
+            "t": 1,
             "groups": [{
                 "weight": 75,
                 "value": "control"
@@ -192,6 +198,7 @@ window.SiteOptions = {
         },
         "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458": {
             "name": "AUTOMOD_SMALLER",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "yes"
@@ -202,6 +209,7 @@ window.SiteOptions = {
         },
         "0bf3975d-a3dd-4f36-800f-0089b2ce279a": {
             "name": "android_chomments",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -212,6 +220,7 @@ window.SiteOptions = {
         },
         "0d140c71-9264-4646-bc2c-743089cb9386": {
             "name": "clips_shelter",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -225,6 +234,7 @@ window.SiteOptions = {
         },
         "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5": {
             "name": "Bismol",
+            "t": 1,
             "groups": [{
                 "weight": 50,
                 "value": "no"
@@ -235,6 +245,7 @@ window.SiteOptions = {
         },
         "143da2f9-bf80-4555-a661-76c378fcd5c8": {
             "name": "ios_aa",
+            "t": 1,
             "groups": [{
                 "weight": 5,
                 "value": "control"
@@ -245,6 +256,7 @@ window.SiteOptions = {
         },
         "1710cf57-352c-4d09-b2c1-3d40bdf79b30": {
             "name": "vod_upload_units_v3",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -255,6 +267,7 @@ window.SiteOptions = {
         },
         "17133457-67a2-41f8-8961-235020959018": {
             "name": "baking_bread_b",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "yes_10"
@@ -277,6 +290,7 @@ window.SiteOptions = {
         },
         "171906a2-6e34-4d0e-879c-a76a19f19097": {
             "name": "vod_page_recommendations_ordering",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "control"
@@ -290,6 +304,7 @@ window.SiteOptions = {
         },
         "17b33c41-5bf3-40b7-8fc0-ea450d797b0b": {
             "name": "ios_broadcasting",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -300,6 +315,7 @@ window.SiteOptions = {
         },
         "183a7e9b-12bf-42fc-a91c-f8c6bb9a2e2b": {
             "name": "AUTO_ON_NOTIFICATIONS",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -310,6 +326,7 @@ window.SiteOptions = {
         },
         "18f450b9-5593-4d66-a5a7-c8b6fccf95c3": {
             "name": "aax",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -320,6 +337,7 @@ window.SiteOptions = {
         },
         "18f90f1f-3954-4c30-a93f-ac37e96c8136": {
             "name": "android_clips_all_night",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -328,8 +346,20 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "19cc1327-9436-4019-b71c-e2a1e41d3cb3": {
+            "name": "test",
+            "t": 1,
+            "groups": [{
+                "weight": 3,
+                "value": "a"
+            }, {
+                "weight": 1,
+                "value": "b"
+            }]
+        },
         "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3": {
             "name": "Pineapple",
+            "t": 1,
             "groups": [{
                 "weight": 50,
                 "value": "yes"
@@ -340,6 +370,7 @@ window.SiteOptions = {
         },
         "1b905261-e257-4703-ac84-12a6a9099935": {
             "name": "CLIENT_BATCH_SPADE",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -350,6 +381,7 @@ window.SiteOptions = {
         },
         "1c7a531b-462b-4814-820e-5c3f2871cda9": {
             "name": "CHANNEL_SIGNUP_CTA",
+            "t": 1,
             "groups": [{
                 "weight": 95,
                 "value": "control"
@@ -360,6 +392,7 @@ window.SiteOptions = {
         },
         "1e406d0d-c293-4c4e-812f-049db8c7e3ec": {
             "name": "vod_upload_units",
+            "t": 1,
             "groups": [{
                 "weight": 50,
                 "value": "control"
@@ -370,6 +403,7 @@ window.SiteOptions = {
         },
         "1ef32b26-85c3-4e36-bece-4d3aea3a7604": {
             "name": "clips_no_long_talk",
+            "t": 1,
             "groups": [{
                 "weight": 25,
                 "value": "control"
@@ -386,6 +420,7 @@ window.SiteOptions = {
         },
         "213678cc-be7d-4aa6-a938-8baac01a442a": {
             "name": "android_spade_batching",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -396,6 +431,7 @@ window.SiteOptions = {
         },
         "21eae6bf-b120-4cd0-a513-5612ea0fb51c": {
             "name": "ps4_playercore",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -406,6 +442,7 @@ window.SiteOptions = {
         },
         "2232da8a-775e-4a95-b006-19964b59ab4c": {
             "name": "FOLLOW_CTA_V2",
+            "t": 1,
             "groups": [{
                 "weight": 70,
                 "value": "control"
@@ -422,6 +459,7 @@ window.SiteOptions = {
         },
         "2352d0b6-7692-49f1-9f8d-88e6cc47994b": {
             "name": "android_rollout_vod_uploads",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -432,6 +470,7 @@ window.SiteOptions = {
         },
         "23edd834-27d9-4bae-bcde-1e59b25aff51": {
             "name": "android_big_goku",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "control"
@@ -445,6 +484,7 @@ window.SiteOptions = {
         },
         "24790bc9-1beb-4cf1-bc75-fe22c400805d": {
             "name": "clips_loyalty",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -455,6 +495,7 @@ window.SiteOptions = {
         },
         "264f75af-a787-4a40-8654-40d78b4d8b41": {
             "name": "extensions",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "yes"
@@ -465,6 +506,7 @@ window.SiteOptions = {
         },
         "274f6835-a41d-417c-ad58-f1321e2aac39": {
             "name": "android_skippable_ads",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "skipcontrol"
@@ -481,6 +523,7 @@ window.SiteOptions = {
         },
         "2858bc04-3f98-4808-a2dd-86555885ca90": {
             "name": "clips_feel_it_coming",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -491,6 +534,7 @@ window.SiteOptions = {
         },
         "2884161f-6094-4189-b1aa-fd256468f96e": {
             "name": "PLAYER_NOTIFICATION_BUTTON",
+            "t": 1,
             "groups": [{
                 "weight": 50,
                 "value": "control"
@@ -501,6 +545,7 @@ window.SiteOptions = {
         },
         "2c137391-5182-429f-8760-9f71e4d40918": {
             "name": "CVP MediaPlayer backend control",
+            "t": 1,
             "groups": [{
                 "weight": 98,
                 "value": "no"
@@ -511,6 +556,7 @@ window.SiteOptions = {
         },
         "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": {
             "name": "bits_for_ads",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "on"
@@ -521,6 +567,7 @@ window.SiteOptions = {
         },
         "2e0cb30b-7aaa-4e01-9fdd-b7046605b41f": {
             "name": "Mobile Web Chat Experiment",
+            "t": 1,
             "groups": [{
                 "weight": 90,
                 "value": "Gets chat"
@@ -531,6 +578,7 @@ window.SiteOptions = {
         },
         "2f6b028c-c2a5-462c-8daf-3bcb394839bb": {
             "name": "android_playercore",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -541,6 +589,7 @@ window.SiteOptions = {
         },
         "30a7dfaa-e3d2-477e-a4f1-28e2ffb80e72": {
             "name": "NEWSFEED_RECOMMENDATIONS",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -551,6 +600,7 @@ window.SiteOptions = {
         },
         "31827b23-ea01-48b8-87c6-1503656957fd": {
             "name": "SISKO",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -561,6 +611,7 @@ window.SiteOptions = {
         },
         "33a4ec99-5100-4831-b04a-f6a725c334f5": {
             "name": "android_recently_watched",
+            "t": 1,
             "groups": [{
                 "weight": 95,
                 "value": "treatment"
@@ -571,6 +622,7 @@ window.SiteOptions = {
         },
         "33d53034-cd8b-408f-abe7-e740f2fec303": {
             "name": "Hearthstone Directory Filter",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "yes"
@@ -581,6 +633,7 @@ window.SiteOptions = {
         },
         "354aaebd-7643-434f-be37-98fe12c01220": {
             "name": "HTML5_Toggle_Removal",
+            "t": 1,
             "groups": [{
                 "weight": 1,
                 "value": "remove"
@@ -591,6 +644,7 @@ window.SiteOptions = {
         },
         "355ff3e2-38b5-449a-8ab8-a52b5d3ab817": {
             "name": "remove csgo directory",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -601,6 +655,7 @@ window.SiteOptions = {
         },
         "35731f0a-bd57-4582-915d-907dee75b3d4": {
             "name": "trending_emotes",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -611,6 +666,7 @@ window.SiteOptions = {
         },
         "36a0e500-f117-41dd-8421-3e3db7d567dd": {
             "name": "CREATIVE_DIRECTORY_CVS",
+            "t": 1,
             "groups": [{
                 "weight": 90,
                 "value": "communities"
@@ -624,6 +680,7 @@ window.SiteOptions = {
         },
         "3a823fae-acbe-40c4-9ed8-6b1e685eb4b2": {
             "name": "ios_notification_center",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -634,6 +691,7 @@ window.SiteOptions = {
         },
         "3ba26ac2-a5db-4318-83c5-dcbe11e2774f": {
             "name": "CLIPS_CLIPPY_PATENT_PENDING",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -644,6 +702,7 @@ window.SiteOptions = {
         },
         "3c2fb8a5-7914-4f4d-8f13-1cd3b4250919": {
             "name": "ios_moat",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -654,6 +713,7 @@ window.SiteOptions = {
         },
         "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": {
             "name": "DISCOVER_SHOW_COVIEWS",
+            "t": 1,
             "groups": [{
                 "weight": 50,
                 "value": "show"
@@ -664,6 +724,7 @@ window.SiteOptions = {
         },
         "3e44f0d0-68fe-4cc9-9e2e-e85718c13d3d": {
             "name": "COMMUNITIES_SORT",
+            "t": 1,
             "groups": [{
                 "weight": 20,
                 "value": "control"
@@ -674,6 +735,7 @@ window.SiteOptions = {
         },
         "3f821134-e203-49f0-92a7-4440c22f0f26": {
             "name": "Console A/B Tracing",
+            "t": 1,
             "groups": [{
                 "weight": 90,
                 "value": "control"
@@ -684,6 +746,7 @@ window.SiteOptions = {
         },
         "428d3b07-cc7a-424f-aad0-971f5415879a": {
             "name": "NEXUS_ROLLOUT",
+            "t": 1,
             "groups": [{
                 "weight": 80,
                 "value": "disabled"
@@ -694,6 +757,7 @@ window.SiteOptions = {
         },
         "42c46cf2-6a2e-49cb-9a68-622999710fed": {
             "name": "FOLLOWING_COMMUNITIES",
+            "t": 1,
             "groups": [{
                 "weight": 75,
                 "value": "bottom"
@@ -704,6 +768,7 @@ window.SiteOptions = {
         },
         "42f5eea6-c548-4791-b767-9c7e29b73ef6": {
             "name": "CLIENT_BATCH_MIXPANEL",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -714,6 +779,7 @@ window.SiteOptions = {
         },
         "441c3783-aa74-4a33-aa67-80034afe7e89": {
             "name": "ios_vodcast",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -724,6 +790,7 @@ window.SiteOptions = {
         },
         "44c4bb4e-5580-4f0b-8fc9-a8cd426e4e99": {
             "name": "CHANNEL_FOLLOW_BUTTON",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "no_sub"
@@ -734,6 +801,7 @@ window.SiteOptions = {
         },
         "44dbd670-63e6-4f7f-aa47-417f3eccd939": {
             "name": "bashful_bandit",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "yes"
@@ -741,6 +809,7 @@ window.SiteOptions = {
         },
         "45081886-ec79-4f81-9ed3-603c735b2b0c": {
             "name": "mario",
+            "t": 1,
             "groups": [{
                 "weight": 50,
                 "value": "yes"
@@ -751,6 +820,7 @@ window.SiteOptions = {
         },
         "45d73059-3cea-436a-b41f-86bb05f845f2": {
             "name": "CVP May 18",
+            "t": 1,
             "groups": [{
                 "weight": 5,
                 "value": "1.8.10+absctrl"
@@ -770,6 +840,7 @@ window.SiteOptions = {
         },
         "474db509-7fb8-403e-97da-66dae8954e6d": {
             "name": "android_home_games_carousel",
+            "t": 1,
             "groups": [{
                 "weight": 1,
                 "value": "treatment"
@@ -780,6 +851,7 @@ window.SiteOptions = {
         },
         "479d9473-bf6e-4d74-8f9b-dd85d6f98921": {
             "name": "LOL_METADATA_EXPERIMENT",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "treatment"
@@ -790,6 +862,7 @@ window.SiteOptions = {
         },
         "497e1277-7fff-4c16-98f0-6b55c8b59a4f": {
             "name": "I18N_GAME_NAMES",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -800,6 +873,7 @@ window.SiteOptions = {
         },
         "4aa9ee11-136c-4521-a139-e2abb718ec07": {
             "name": "Gabriel",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "yes-forced"
@@ -819,6 +893,7 @@ window.SiteOptions = {
         },
         "4aea0cbd-2a3b-4377-8fca-fbce7228ac5c": {
             "name": "android_phone_landscape_chat_write",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -829,6 +904,7 @@ window.SiteOptions = {
         },
         "4afcc1d7-b6f4-489a-beb3-0a32eb780592": {
             "name": "Closed Captions",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "off"
@@ -842,6 +918,7 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
+            "t": 1,
             "groups": [{
                 "weight": 1,
                 "value": "////video-edge-1819ed.sjc01.hls.ttvnw.net/v1/playlist/Cn3NoJZsn_FAe4Dn0FPkEizMa-e5K0Wk99Z5wO54sTRgpQYHOH5Qufa6ttk7GBdNkS5vOChliO0dtIAzCn_JE4Sp_6KNv42rvpuhFryOn8TQHhfEKfkBfC_s41Et8qrlmrNTgHnDjMdKfgtGOd6DBQm31o103RiH7Q6RAwvPcUB75umOG1NL-UiigdWNNBU0tKAg_trvRV_l_BT453qnNf7Y4Hs1N1scuGJ5pO3FYtLktcOEnU784sKfvFWTUEfWpqd-4z-CHxN4PC3H7-xAhBM__z_v2tizoj3qgvb8CvguzMvZbDY60R3LY6jo4I7lOuD16BWLsnHXfUuNQqaXm2UHWR4v7Ok8daD0W6RDQru4sNod8bP1iFDzNPu51lkxh2w3Wz9PUEs9gmz_bMHex7H9rx5TqTkTMQHfTmKQFoN6_nkcdT3JI6cSO7LaQ84jgEz6McVvsczPPR.m3u8"
@@ -849,6 +926,7 @@ window.SiteOptions = {
         },
         "4bdb6678-2626-466f-bb25-e566dec11354": {
             "name": "FRONT_PAGE_SIGNUP_EXPERIMENT",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -862,6 +940,7 @@ window.SiteOptions = {
         },
         "4d081a33-0d0f-4b44-bfde-cf07c358915f": {
             "name": "baking_bread_d",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "yes_10"
@@ -884,6 +963,7 @@ window.SiteOptions = {
         },
         "4e9d0a3c-4f43-4817-8db4-ac060fc32b74": {
             "name": "latency_component_instrumentation",
+            "t": 1,
             "groups": [{
                 "weight": 95,
                 "value": "control"
@@ -894,6 +974,7 @@ window.SiteOptions = {
         },
         "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2": {
             "name": "Resume Watching Banner",
+            "t": 1,
             "groups": [{
                 "weight": 50,
                 "value": "yes"
@@ -904,6 +985,7 @@ window.SiteOptions = {
         },
         "51e3d33c-157b-422d-9a15-b0f9e9c055b2": {
             "name": "baking_bread_h",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "yes_10"
@@ -926,6 +1008,7 @@ window.SiteOptions = {
         },
         "52cb0929-0af1-45ba-81ef-79d9ae80b342": {
             "name": "GROWTH_SKIP_SEEN_FRIENDS_IN_NOTIFICATIONS",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -936,6 +1019,7 @@ window.SiteOptions = {
         },
         "533f9d45-9152-45a2-8ec7-dc44d40cce6f": {
             "name": "ios_moat_3",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -946,6 +1030,7 @@ window.SiteOptions = {
         },
         "5380a8cf-e5cf-497e-9c6c-16cb1c881e0c": {
             "name": "WATCH_NOW_RIGHTBAR",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "treatment"
@@ -956,6 +1041,7 @@ window.SiteOptions = {
         },
         "54e455b2-9854-4c55-b926-cfadbff49324": {
             "name": "LOGGED_OUT_HOMEPAGE_EXPERIMENTS",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -972,6 +1058,7 @@ window.SiteOptions = {
         },
         "5daee224-4c99-499f-b6e0-e308a5fa54f1": {
             "name": "aws_roundtrip_latency_test_endpoint",
+            "t": 1,
             "groups": [{
                 "weight": 33,
                 "value": "control"
@@ -985,6 +1072,7 @@ window.SiteOptions = {
         },
         "5e786a5f-4ad6-4a1a-9fe9-5926ef05f0e7": {
             "name": "clips_it_aint_me",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -995,6 +1083,7 @@ window.SiteOptions = {
         },
         "5fbb67a0-b4ff-4775-b836-e9a348a87481": {
             "name": "Network Profile Collection",
+            "t": 1,
             "groups": [{
                 "weight": 999,
                 "value": "no"
@@ -1005,6 +1094,7 @@ window.SiteOptions = {
         },
         "61b169ff-bc62-4725-a40e-1be627197c6f": {
             "name": "Recommended Games",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "no"
@@ -1015,6 +1105,7 @@ window.SiteOptions = {
         },
         "621a95a8-8b75-4f13-ae93-56fa51b82252": {
             "name": "ios_uploads_top_videos_time",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1025,6 +1116,7 @@ window.SiteOptions = {
         },
         "64207922-aa6c-475e-b53d-84ce535d0d04": {
             "name": "ios_chomments_v2",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1035,6 +1127,7 @@ window.SiteOptions = {
         },
         "6452eb30-73ed-4c21-9cda-53a44f83c184": {
             "name": "ios_pipboy_flicker_ads",
+            "t": 1,
             "groups": [{
                 "weight": 90,
                 "value": "control"
@@ -1045,6 +1138,7 @@ window.SiteOptions = {
         },
         "653cc0db-d332-4df6-b224-15c5c481f7e7": {
             "name": "language_directory_filter",
+            "t": 1,
             "groups": [{
                 "weight": 34,
                 "value": "control"
@@ -1061,6 +1155,7 @@ window.SiteOptions = {
         },
         "68cde3a8-d4a6-44ae-af4a-22dbc5a0393c": {
             "name": "passport_redesign_test",
+            "t": 1,
             "groups": [{
                 "weight": 50,
                 "value": "new"
@@ -1071,6 +1166,7 @@ window.SiteOptions = {
         },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
             "name": "vod_rtqos",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1081,6 +1177,7 @@ window.SiteOptions = {
         },
         "6b4086ea-dcce-41c9-a57b-000fa9366e35": {
             "name": "clips_you_were_right",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "control"
@@ -1091,6 +1188,7 @@ window.SiteOptions = {
         },
         "6e2f439b-916a-40b7-b1be-e82b284fd0bb": {
             "name": "offline_experience",
+            "t": 1,
             "groups": [{
                 "weight": 95,
                 "value": "show"
@@ -1101,6 +1199,7 @@ window.SiteOptions = {
         },
         "6fffb6c6-19d4-4172-980f-498079d99b9c": {
             "name": "Overwatch Directory Filter",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "yes"
@@ -1111,6 +1210,7 @@ window.SiteOptions = {
         },
         "711aaaf6-61c0-4cc4-9469-0dfc9908785a": {
             "name": "VP_QOS_TEST",
+            "t": 1,
             "groups": [{
                 "weight": 20,
                 "value": "yes"
@@ -1121,6 +1221,7 @@ window.SiteOptions = {
         },
         "74d6faab-1794-458a-a5f6-b92602254e9e": {
             "name": "auto_suggest_notification",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1131,6 +1232,7 @@ window.SiteOptions = {
         },
         "758cbec2-80ad-478f-806e-fd3a7db9742f": {
             "name": "I18N_MISSING_TRANS",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "enabled"
@@ -1141,6 +1243,7 @@ window.SiteOptions = {
         },
         "78360f5d-4ace-420d-8bca-df0d146ffdee": {
             "name": "CHANNEL_SIGNUP_COLUMN",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "treatment"
@@ -1151,6 +1254,7 @@ window.SiteOptions = {
         },
         "79accd86-e77e-4eae-8979-d19ab2bc4521": {
             "name": "ios_skippable_ads",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "skipcontrol"
@@ -1167,6 +1271,7 @@ window.SiteOptions = {
         },
         "7da9cda1-2d29-4917-b595-0c1ea27121e3": {
             "name": "TEST_EXPERIMENT_TESTING",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1177,6 +1282,7 @@ window.SiteOptions = {
         },
         "80ee272f-44ec-4d8c-8ad1-72f4933a3da4": {
             "name": "android_pipboy_broadcasting",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1187,6 +1293,7 @@ window.SiteOptions = {
         },
         "819aed52-3cc1-4747-a840-476a39487a2e": {
             "name": "SOCIAL_RECOMMENDATIONS",
+            "t": 1,
             "groups": [{
                 "weight": 50,
                 "value": "variant1"
@@ -1200,6 +1307,7 @@ window.SiteOptions = {
         },
         "84d81180-6faa-4c58-98d7-48bbff5035c7": {
             "name": "baking_bread_us",
+            "t": 1,
             "groups": [{
                 "weight": 95,
                 "value": "yes"
@@ -1210,6 +1318,7 @@ window.SiteOptions = {
         },
         "87d995c4-afbc-400e-a6e4-472419071e26": {
             "name": "ios_pipboy_broadcasting",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1220,6 +1329,7 @@ window.SiteOptions = {
         },
         "88ad36bd-f5ba-4c8c-8d06-30e486cd5d07": {
             "name": "clips_scared_to_be_lonely",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1230,6 +1340,7 @@ window.SiteOptions = {
         },
         "8ace0f50-8afd-424a-a086-3e61b3e66da0": {
             "name": "MESSAGE_HISTORY",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "off"
@@ -1240,6 +1351,7 @@ window.SiteOptions = {
         },
         "8bc4faaa-b4df-4862-b249-ac153de6294a": {
             "name": "Seaweed",
+            "t": 1,
             "groups": [{
                 "weight": 50,
                 "value": "yes"
@@ -1250,6 +1362,7 @@ window.SiteOptions = {
         },
         "8c2302fe-4f40-4c08-89d1-ee438d562da1": {
             "name": "clips_shape_of_you",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1260,6 +1373,7 @@ window.SiteOptions = {
         },
         "8ce5b50b-429b-4c20-a0f3-1b22eb577673": {
             "name": "ios_rollout_vod_uploads",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "treatment"
@@ -1270,6 +1384,7 @@ window.SiteOptions = {
         },
         "8f5277f3-7583-4fd9-ab09-e5a5c432b12b": {
             "name": "android_autoplay_profile",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1280,6 +1395,7 @@ window.SiteOptions = {
         },
         "903fb381-dbeb-466b-9c88-7b4da328fb2d": {
             "name": "android_autoplay_pulse",
+            "t": 1,
             "groups": [{
                 "weight": 5,
                 "value": "control"
@@ -1290,6 +1406,7 @@ window.SiteOptions = {
         },
         "906c9e2f-ac8a-43f3-9f7f-78668e292d4f": {
             "name": "android_aa",
+            "t": 1,
             "groups": [{
                 "weight": 5,
                 "value": "control"
@@ -1300,6 +1417,7 @@ window.SiteOptions = {
         },
         "9326b2a6-4d2c-4835-95c3-52e3cb567d54": {
             "name": "android_uploads_top_videos_time",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1310,6 +1428,7 @@ window.SiteOptions = {
         },
         "93a3ce11-6fce-46d3-b108-c394ac28b499": {
             "name": "ios_clips_paris_2",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "control"
@@ -1320,6 +1439,7 @@ window.SiteOptions = {
         },
         "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": {
             "name": "DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "hide"
@@ -1330,6 +1450,7 @@ window.SiteOptions = {
         },
         "9649684c-6d3f-423d-9d3c-f4296efee975": {
             "name": "clips_hear_me_now",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1340,6 +1461,7 @@ window.SiteOptions = {
         },
         "98f3f2a5-9e4e-4ba8-aabe-2ff85e7309ee": {
             "name": "CHAT_RULES_EXPERIMENT",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1353,6 +1475,7 @@ window.SiteOptions = {
         },
         "99494f77-1c7c-46c5-9b9c-a117db47d3c5": {
             "name": "BROWSE_EXPERIMENT",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1366,6 +1489,7 @@ window.SiteOptions = {
         },
         "9966ac82-62e7-43b2-b6dc-8e8fd03dd1c5": {
             "name": "android_playercore_3",
+            "t": 1,
             "groups": [{
                 "weight": 99,
                 "value": "control"
@@ -1376,6 +1500,7 @@ window.SiteOptions = {
         },
         "9985aa41-ce6a-48ab-abae-b0e0c34dca71": {
             "name": "LTV",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "yes"
@@ -1386,6 +1511,7 @@ window.SiteOptions = {
         },
         "9a3b387e-b6cd-4d2b-80a6-bb14d3ba4512": {
             "name": "GAME_FOLLOW_ONBOARD",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1399,6 +1525,7 @@ window.SiteOptions = {
         },
         "9acd1217-f98c-419a-b39a-0e7fb9e5f325": {
             "name": "ios_pipboy_browse_ccus",
+            "t": 1,
             "groups": [{
                 "weight": 99,
                 "value": "control"
@@ -1409,6 +1536,7 @@ window.SiteOptions = {
         },
         "9b0ada24-ec4b-4664-8576-bf2dda26724b": {
             "name": "android_theatre_refactor",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1419,6 +1547,7 @@ window.SiteOptions = {
         },
         "9c843e59-0208-4c83-ae5a-620fb05508ef": {
             "name": "ios_making_the_doughnuts",
+            "t": 1,
             "groups": [{
                 "weight": 5,
                 "value": "control"
@@ -1429,6 +1558,7 @@ window.SiteOptions = {
         },
         "9ce10ee7-98ec-4126-a42f-28a6a129ca9d": {
             "name": "ios_chomments",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1439,6 +1569,7 @@ window.SiteOptions = {
         },
         "9cf2abef-ad3f-4999-baf4-feaab8ec607d": {
             "name": "ios_pipboy_homepage",
+            "t": 1,
             "groups": [{
                 "weight": 98,
                 "value": "live"
@@ -1452,6 +1583,7 @@ window.SiteOptions = {
         },
         "9d1ee56c-22dc-4d5c-96dd-5ee393c6cd4b": {
             "name": "xboxone_playercore",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1462,6 +1594,7 @@ window.SiteOptions = {
         },
         "9d6138b7-c07a-40af-88d7-9636f02bec17": {
             "name": "android_pipboy_flicker_ads",
+            "t": 1,
             "groups": [{
                 "weight": 90,
                 "value": "control"
@@ -1472,6 +1605,7 @@ window.SiteOptions = {
         },
         "9e5fffd0-9693-412b-913d-7da332fdeea4": {
             "name": "Marker Experiment",
+            "t": 1,
             "groups": [{
                 "weight": 30,
                 "value": "vca"
@@ -1485,6 +1619,7 @@ window.SiteOptions = {
         },
         "a1ce3d24-076a-4664-be4c-f9046fdce18c": {
             "name": "baking_bread_uk",
+            "t": 1,
             "groups": [{
                 "weight": 95,
                 "value": "yes"
@@ -1495,6 +1630,7 @@ window.SiteOptions = {
         },
         "a23d9d11-be5e-4e7e-8f32-bc70ca8889c7": {
             "name": "ios_ingest_test",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1505,6 +1641,7 @@ window.SiteOptions = {
         },
         "a39cd18b-c3fb-46ad-a6a8-0c2e8686d978": {
             "name": "clips_teach_me",
+            "t": 1,
             "groups": [{
                 "weight": 1,
                 "value": "control"
@@ -1515,6 +1652,7 @@ window.SiteOptions = {
         },
         "a9f7f84a-76fd-44f0-80b1-9421e714a1b7": {
             "name": "ios_clips_paris",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1525,6 +1663,7 @@ window.SiteOptions = {
         },
         "ac1c908f-3779-4068-ae72-086c288f6f87": {
             "name": "FEATURED_COLLECTION_CARD",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "no"
@@ -1535,6 +1674,7 @@ window.SiteOptions = {
         },
         "ac2acc22-f0ef-4162-b9a3-7357249165ca": {
             "name": "baking_bread_i",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "yes_10"
@@ -1557,6 +1697,7 @@ window.SiteOptions = {
         },
         "ad39c35b-c6af-4687-b791-9ab408f825ef": {
             "name": "VOD Thumbnail Previews Rollout",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "yes"
@@ -1567,6 +1708,7 @@ window.SiteOptions = {
         },
         "aece7525-dceb-49ba-af1b-242c1ae45831": {
             "name": "CHANNEL_LOGIN_CTA",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "no"
@@ -1577,6 +1719,7 @@ window.SiteOptions = {
         },
         "af8f152a-f618-416e-8b79-d6ac30479018": {
             "name": "PERPETUA",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "early"
@@ -1590,6 +1733,7 @@ window.SiteOptions = {
         },
         "b0033638-a84e-4f57-8952-7115be4dc3b6": {
             "name": "also_known_as",
+            "t": 1,
             "groups": [{
                 "weight": 50,
                 "value": "control"
@@ -1600,6 +1744,7 @@ window.SiteOptions = {
         },
         "b19d0945-ad8e-49c9-89f8-2dbb99bddf92": {
             "name": "android_playercore_5",
+            "t": 1,
             "groups": [{
                 "weight": 99,
                 "value": "control"
@@ -1610,6 +1755,7 @@ window.SiteOptions = {
         },
         "b2925d54-cebb-4e1d-a50d-9dd2b1ea850e": {
             "name": "onsite_notifications",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1623,6 +1769,7 @@ window.SiteOptions = {
         },
         "b29d055f-74f2-40b9-9383-9c4b79b30360": {
             "name": "cloudfront web-cdn",
+            "t": 1,
             "groups": [{
                 "weight": 1,
                 "value": "level3"
@@ -1636,6 +1783,7 @@ window.SiteOptions = {
         },
         "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7": {
             "name": "urgent_pie",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1646,6 +1794,7 @@ window.SiteOptions = {
         },
         "b451a3d9-79f4-4743-89c1-719335c2c974": {
             "name": "CPR_SUB_NAV_V2",
+            "t": 1,
             "groups": [{
                 "weight": 95,
                 "value": "control"
@@ -1656,6 +1805,7 @@ window.SiteOptions = {
         },
         "b6400c92-a229-462e-bfb0-9dcf456b5b61": {
             "name": "ios_google_ima",
+            "t": 1,
             "groups": [{
                 "weight": 90,
                 "value": "control"
@@ -1666,6 +1816,7 @@ window.SiteOptions = {
         },
         "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9": {
             "name": "CHANNEL_CHAT_CTA",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "5min"
@@ -1676,6 +1827,7 @@ window.SiteOptions = {
         },
         "b88f3829-e1ac-471a-912a-264cac2587b3": {
             "name": "FAIRFAX",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "yes"
@@ -1686,6 +1838,7 @@ window.SiteOptions = {
         },
         "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14": {
             "name": "padtime",
+            "t": 1,
             "groups": [{
                 "weight": 95,
                 "value": "control"
@@ -1696,6 +1849,7 @@ window.SiteOptions = {
         },
         "b8e14b8a-c5dd-4904-aac1-536063d91fa3": {
             "name": "ios_google_ima_pipboy",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1706,6 +1860,7 @@ window.SiteOptions = {
         },
         "b9063610-cdfd-43c3-8479-59a6ab82d831": {
             "name": "Visible Post Reactions",
+            "t": 1,
             "groups": [{
                 "weight": 1,
                 "value": "0"
@@ -1716,6 +1871,7 @@ window.SiteOptions = {
         },
         "baddf9d7-496a-4507-a0b4-6357b95d3ca8": {
             "name": "CLIPS_STARBOY",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1726,6 +1882,7 @@ window.SiteOptions = {
         },
         "bb614c04-fce4-4abb-9686-a38022f4284e": {
             "name": "ios_autoplay_browse",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1736,6 +1893,7 @@ window.SiteOptions = {
         },
         "bb654f3c-166a-49fa-9030-c6f4bcda2ebd": {
             "name": "android_autoplay_browse",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1746,6 +1904,7 @@ window.SiteOptions = {
         },
         "c14ad553-a6e6-441b-961f-8ebf0d444791": {
             "name": "android_notification_center",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1756,6 +1915,7 @@ window.SiteOptions = {
         },
         "c31d337d-4186-465d-9d0b-cb72a5b2aef2": {
             "name": "newsfeed_recommended_clips",
+            "t": 1,
             "groups": [{
                 "weight": 95,
                 "value": "control"
@@ -1766,6 +1926,7 @@ window.SiteOptions = {
         },
         "c48618ad-fde4-4c67-9f4c-b89f3c633cf9": {
             "name": "android_pipboy_homepage",
+            "t": 1,
             "groups": [{
                 "weight": 98,
                 "value": "live"
@@ -1779,6 +1940,7 @@ window.SiteOptions = {
         },
         "c51b6c01-3155-4314-bd33-a63870349c1f": {
             "name": "baking_bread_c",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "yes_10"
@@ -1801,6 +1963,7 @@ window.SiteOptions = {
         },
         "c65ae62f-82dc-4394-ad75-df5f641e22d4": {
             "name": "baking_bread_g",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "yes_10"
@@ -1823,6 +1986,7 @@ window.SiteOptions = {
         },
         "c926728f-d1d3-4b09-b868-db3e2aa000cc": {
             "name": "In-Player Recommendations",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "yes"
@@ -1833,6 +1997,7 @@ window.SiteOptions = {
         },
         "cc164e1e-1361-4730-8d9b-0091a0f9cb8f": {
             "name": "DETERMINATION",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "yes"
@@ -1843,6 +2008,7 @@ window.SiteOptions = {
         },
         "cda5757e-2229-4d3c-9427-5ad3aa18b72f": {
             "name": "ios_nux_preroll_test",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1853,6 +2019,7 @@ window.SiteOptions = {
         },
         "ce68dbb6-4d54-4aa0-acee-b33faa539047": {
             "name": "android_chomments_v2",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1863,6 +2030,7 @@ window.SiteOptions = {
         },
         "cedb939e-3bea-49aa-a666-a6f2f599664d": {
             "name": "ios_big_goku",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "control"
@@ -1876,6 +2044,7 @@ window.SiteOptions = {
         },
         "cf2033c8-5313-4abe-8142-61b9072c9d26": {
             "name": "baking_bread_e",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "yes_10"
@@ -1898,6 +2067,7 @@ window.SiteOptions = {
         },
         "d0518b75-fbba-418a-9445-ff7c517beb32": {
             "name": "Watch_Party_Player_UI",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "yes"
@@ -1905,6 +2075,7 @@ window.SiteOptions = {
         },
         "d0c9c096-4c59-4614-9e0c-38580a7785dd": {
             "name": "ios_tablet_landscape_chat",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -1915,6 +2086,7 @@ window.SiteOptions = {
         },
         "d1aef411-5131-4ffe-8dc8-f6f1f9c05e78": {
             "name": "android_playercore_4",
+            "t": 1,
             "groups": [{
                 "weight": 99,
                 "value": "control"
@@ -1925,6 +2097,7 @@ window.SiteOptions = {
         },
         "d24f182c-e36f-498e-9e49-113e02a83bad": {
             "name": "passport_redesign",
+            "t": 1,
             "groups": [{
                 "weight": 90,
                 "value": "control"
@@ -1935,6 +2108,7 @@ window.SiteOptions = {
         },
         "d48fe249-fd73-4c8f-bd17-415b70dc3708": {
             "name": "chomperz",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "skipcontrol"
@@ -1951,6 +2125,7 @@ window.SiteOptions = {
         },
         "d6ba259c-3f82-48ac-b158-bf4760fc864b": {
             "name": "android_playercore_6",
+            "t": 1,
             "groups": [{
                 "weight": 99,
                 "value": "control"
@@ -1961,6 +2136,7 @@ window.SiteOptions = {
         },
         "d91cbc6b-1d6f-42ef-89b4-049176164067": {
             "name": "coview_with_predictions",
+            "t": 1,
             "groups": [{
                 "weight": 50,
                 "value": "control"
@@ -1971,6 +2147,7 @@ window.SiteOptions = {
         },
         "dc251546-6da4-4db9-abae-2c1325e7dee6": {
             "name": "android_pipboy_browse_ccus",
+            "t": 1,
             "groups": [{
                 "weight": 99,
                 "value": "control"
@@ -1981,6 +2158,7 @@ window.SiteOptions = {
         },
         "dcbdb47a-707d-40f0-828f-2e7910210a4d": {
             "name": "clips_fake_love",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -1991,6 +2169,7 @@ window.SiteOptions = {
         },
         "df008233-c0f2-46dc-92a2-61396ae402e3": {
             "name": "Similar Channels",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -2013,6 +2192,7 @@ window.SiteOptions = {
         },
         "e15d2a40-b2bb-4819-af2b-cb7a6f0e31cb": {
             "name": "CHANNEL_SIGNUP_CTA_V2",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "show"
@@ -2026,6 +2206,7 @@ window.SiteOptions = {
         },
         "e20747aa-a503-436e-b104-27f974b3eecd": {
             "name": "android_clips_paris",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -2036,6 +2217,7 @@ window.SiteOptions = {
         },
         "e39a1b4d-51ef-4b49-9378-91a7eb35c3da": {
             "name": "TIME_SPENT_EXPERIMENT",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "on"
@@ -2046,6 +2228,7 @@ window.SiteOptions = {
         },
         "e6a95194-9540-46e0-858f-f47e5d5e3a5d": {
             "name": "baking_bread_f",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "yes_10"
@@ -2068,6 +2251,7 @@ window.SiteOptions = {
         },
         "e8c5cf6c-5259-446b-aef1-4e33747b3b93": {
             "name": "Game Changes",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "yes"
@@ -2078,6 +2262,7 @@ window.SiteOptions = {
         },
         "ec27e6fe-dabc-4fd3-ab62-a2cffc8fe316": {
             "name": "coview_with_regression",
+            "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "control"
@@ -2088,6 +2273,7 @@ window.SiteOptions = {
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
             "name": "baking_brownies",
+            "t": 1,
             "groups": [{
                 "weight": 80,
                 "value": "control"
@@ -2107,6 +2293,7 @@ window.SiteOptions = {
         },
         "efe4cedd-7ea4-4d78-a9e4-5fad8dd9de79": {
             "name": "android_playercore_2",
+            "t": 1,
             "groups": [{
                 "weight": 99,
                 "value": "control"
@@ -2117,6 +2304,7 @@ window.SiteOptions = {
         },
         "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef": {
             "name": "aws_roundtrip_latency_test_opt_in",
+            "t": 1,
             "groups": [{
                 "weight": 1,
                 "value": "true"
@@ -2127,6 +2315,7 @@ window.SiteOptions = {
         },
         "f321aa37-e81d-4a81-99d5-303bf9429b7b": {
             "name": "AKAMAI_IMAGE_MANAGER",
+            "t": 1,
             "groups": [{
                 "weight": 50,
                 "value": "experiment"
@@ -2137,6 +2326,7 @@ window.SiteOptions = {
         },
         "f51271fc-b922-43c5-a801-d5b44219b31f": {
             "name": "baking_bread_a",
+            "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": "yes_10"
@@ -2159,6 +2349,7 @@ window.SiteOptions = {
         },
         "f60b889e-0327-46a8-ad7b-0d402717da45": {
             "name": "CREATIVE_SIDEBAR_NAVIGATION",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "yes"
@@ -2169,6 +2360,7 @@ window.SiteOptions = {
         },
         "fa99a372-3bd3-422d-8937-4de546931a37": {
             "name": "directory_events_suggestions",
+            "t": 1,
             "groups": [{
                 "weight": 90,
                 "value": "shown"
@@ -2179,6 +2371,7 @@ window.SiteOptions = {
         },
         "fd1167fc-eb16-489a-91ea-0568fa04ae8a": {
             "name": "ios_autoplay_profile",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -2189,6 +2382,7 @@ window.SiteOptions = {
         },
         "fe794438-043d-48dc-80b1-e2b069b88dbc": {
             "name": "ios_autoplay_pulse",
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
