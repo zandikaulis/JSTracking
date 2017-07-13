@@ -121,7 +121,7 @@ window.SiteOptions = {
     "fl_details_link_enabled": true,
     "cmrc_kick_kick_boom_released": false,
     "is_bk_enabled": true,
-    "bits_promo_enabled": true,
+    "bits_promo_enabled": false,
     "p_cheer_enabled": true,
     "prime_blackfriday_promo_enabled": false,
     "is_onsite_notifs_enabled": true,
@@ -1165,7 +1165,7 @@ window.SiteOptions = {
             }]
         },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
-            "name": "vod_rtqos",
+            "name": "rtqos",
             "t": 1,
             "groups": [{
                 "weight": 100,
