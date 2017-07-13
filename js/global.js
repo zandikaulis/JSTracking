@@ -15766,6 +15766,7 @@ googletag.cmd = googletag.cmd || [],
     function(e, t) {
         const n = SiteOptions.experiments || {},
             i = {
+                AUTOMOD_SMALLER: "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458",
                 DIRECTORY_EVENTS_SUGGESTIONS: "fa99a372-3bd3-422d-8937-4de546931a37",
                 RECOMMENDED_GAMES: "61b169ff-bc62-4725-a40e-1be627197c6f",
                 VOD_COVIEWS_AB: "ec27e6fe-dabc-4fd3-ab62-a2cffc8fe316",
@@ -15825,6 +15826,7 @@ googletag.cmd = googletag.cmd || [],
                 TRENDING_EMOTES: "35731f0a-bd57-4582-915d-907dee75b3d4"
             },
             r = {
+                "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458": "no",
                 "4bdb6678-2626-466f-bb25-e566dec11354": "control",
                 "fa99a372-3bd3-422d-8937-4de546931a37": "hidden",
                 "61b169ff-bc62-4725-a40e-1be627197c6f": "no",
@@ -16644,7 +16646,8 @@ googletag.cmd = googletag.cmd || [],
                 googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("chan", e.asyncAds.metadata.chan), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", "https:" === window.location.protocol ? "true" : "false"), googletag.pubads().setTargeting("loggedin", e.user.isLoggedIn() ? "true" : "false"), googletag.display("dfp-channel-adlight")
             })
         }, n.afterCompanionAdsRendered = function(n) {
-            t(".js-new-channel-ad").length && ("google" === n && (t(".new_advertisement").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") || t("#google_companion_300x250").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(), e.asyncAds.resizeForCompanionAds(10))
+            t(".js-new-channel-ad").length && ("google" === n && (t(".new_advertisement").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") || t("#google_companion_300x250").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(),
+                e.asyncAds.resizeForCompanionAds(10))
         }, n.resizeForCompanionAds = function(n) {
             setTimeout(function() {
                 var i = t(".js-new-channel-ad").outerHeight();
