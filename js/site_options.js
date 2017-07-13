@@ -1056,6 +1056,17 @@ window.SiteOptions = {
                 "value": "removeCarouselAndLocalizeTopChannels"
             }]
         },
+        "59c5198b-ea6d-423d-b337-ea93d0dc8d66": {
+            "name": "LEEROY_JENKINS",
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "5daee224-4c99-499f-b6e0-e308a5fa54f1": {
             "name": "aws_roundtrip_latency_test_endpoint",
             "t": 1,
