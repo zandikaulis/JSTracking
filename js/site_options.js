@@ -121,7 +121,7 @@ window.SiteOptions = {
     "fl_details_link_enabled": true,
     "cmrc_kick_kick_boom_released": false,
     "is_bk_enabled": true,
-    "bits_promo_enabled": false,
+    "bits_promo_enabled": true,
     "p_cheer_enabled": true,
     "prime_blackfriday_promo_enabled": false,
     "is_onsite_notifs_enabled": true,
