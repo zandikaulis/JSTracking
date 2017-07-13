@@ -200,10 +200,10 @@ window.SiteOptions = {
             "name": "AUTOMOD_SMALLER",
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "yes"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "no"
             }]
         },
