@@ -13411,7 +13411,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.13-182624+d1479b4b831a6edc05dc9abb82d1885679651611",
+                    app_version: "2017.07.13-215141+6609c11a4e79661033d8d98a32a29b639d41266d",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -20819,12 +20819,21 @@
         }
 
         function a(e) {
-            return _.localStore.set(v, e), {
-                type: T,
-                captions: {
-                    enabled: e
+            return _.localStore.set(v, e),
+                function(t, n) {
+                    var r = e ? "block" : "none",
+                        i = n().captions.style,
+                        o = u((0, c.default)({}, i, {
+                            display: r
+                        }));
+                    return t({
+                        type: T,
+                        captions: {
+                            enabled: e,
+                            style: o
+                        }
+                    })
                 }
-            }
         }
 
         function s(e) {
@@ -21365,23 +21374,24 @@
                             r = e.getUserRequestContext();
                         (0, S.sendAdSpadeEvent)(this._store, k, p.AD_REQUEST_RESPONSE, (0, S.initializeAdSpadeEvent)(r));
                         var i = new n.ima.AdsRenderingSettings;
-                        i.restoreCustomPlaybackStateOnAdBreakComplete = !0, this._currentAdsManager = e.getAdsManager(new I(this._backend), i), this._currentAdsManager.addEventListener(n.ima.AdErrorEvent.Type.AD_ERROR, function(e) {
-                            return t._onAdError(e)
-                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.CONTENT_PAUSE_REQUESTED, function() {
-                            return t._onContentPauseRequested(r)
-                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.CONTENT_RESUME_REQUESTED, function() {
-                            return t._onContentResumeRequested(r)
-                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.LOADED, function(e) {
-                            return t._onAdLoaded(e, r)
-                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.STARTED, function(e) {
-                            return t._onAdStarted(e)
-                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.IMPRESSION, function(e) {
-                            return t._onAdImpression(e, r)
-                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.COMPLETE, function(e) {
-                            return t._onAdEnded(e, r)
-                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.SKIPPED, function(e) {
-                            return t._onAdSkipped(e, r)
-                        }), this._currentAdsManager.init(this._videoContainer.offsetParent.offsetWidth, this._videoContainer.offsetParent.offsetHeight, n.ima.ViewMode.NORMAL), this._currentAdsManager.start()
+                        i.restoreCustomPlaybackStateOnAdBreakComplete = !0, this._currentAdsManager = e.getAdsManager(new I(this._backend), i),
+                            this._currentAdsManager.addEventListener(n.ima.AdErrorEvent.Type.AD_ERROR, function(e) {
+                                return t._onAdError(e)
+                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.CONTENT_PAUSE_REQUESTED, function() {
+                                return t._onContentPauseRequested(r)
+                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.CONTENT_RESUME_REQUESTED, function() {
+                                return t._onContentResumeRequested(r)
+                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.LOADED, function(e) {
+                                return t._onAdLoaded(e, r)
+                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.STARTED, function(e) {
+                                return t._onAdStarted(e)
+                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.IMPRESSION, function(e) {
+                                return t._onAdImpression(e, r)
+                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.COMPLETE, function(e) {
+                                return t._onAdEnded(e, r)
+                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.SKIPPED, function(e) {
+                                return t._onAdSkipped(e, r)
+                            }), this._currentAdsManager.init(this._videoContainer.offsetParent.offsetWidth, this._videoContainer.offsetParent.offsetHeight, n.ima.ViewMode.NORMAL), this._currentAdsManager.start()
                     }
                 }, {
                     key: "_interruptContent",
@@ -22924,8 +22934,9 @@
             }
         }
         Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.ACTION_SET_ACCESS_TOKEN_PARAMS = void 0, t.setAccessTokenParams = i;
+                value: !0
+            }), t.ACTION_SET_ACCESS_TOKEN_PARAMS = void 0,
+            t.setAccessTokenParams = i;
         var o = n(70),
             a = r(o),
             s = t.ACTION_SET_ACCESS_TOKEN_PARAMS = "set access token params",
@@ -24048,7 +24059,7 @@
         function o(e, t, n, r, i) {
             function o() {
                 var e = i;
-                (0, c.isTwitchEmbed)() || (e = (0, s.default)(e, {
+                (0, c.isTwitchEmbed)() || e.playerType !== f.PLAYER_CURSE && (e = (0, s.default)(e, {
                     branding: !0
                 })), u(), d(e), a(), r.showControls(h.initialControlsDelay), $(t).attr("data-branding", e.branding), $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showinfo", e.showInfo), O(), I.push(S()), I.push(w())
             }
@@ -25603,8 +25614,8 @@
                             var i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
                             $(e, t.$root).html(r.translate(n, i))
                         };
-                    i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"), i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."),
-                        i(".js-age-gate-submit", "Submit"), i(".js-empty-collection-label", "This collection is empty."), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"), i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel");
+                    i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"), i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."),
+                        i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-submit", "Submit"), i(".js-empty-collection-label", "This collection is empty."), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"), i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel");
                     var o = function(e, n, i) {
                         $(e, t.$root).attr(n, r.translate(i))
                     };
@@ -25715,7 +25726,7 @@
             m = r(v),
             y = n(183),
             g = n(437),
-            b = ["top", "bottom", "textAlign", "fontSize", "lineHeight"],
+            b = ["top", "bottom", "textAlign", "fontSize", "lineHeight", "display"],
             E = "player-captions-row",
             T = /\r?\n|\r/g,
             S = "custom",
@@ -26893,7 +26904,7 @@
         }
 
         function o(e) {
-            e && e.dispatchConfig.phasedRegistrationNames && h.traverseTwoPhase(e._targetInst, i, e);
+            e && e.dispatchConfig.phasedRegistrationNames && h.traverseTwoPhase(e._targetInst, i, e)
         }
 
         function a(e) {
