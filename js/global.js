@@ -17183,7 +17183,7 @@ googletag.cmd = googletag.cmd || [],
     }(window.Twitch),
     function(e) {
         Twitch.user(function(e) {
-            Twitch.storage.set("csrf_token", e.csrf_token), document.cookie = "csrf_token=" + e.csrf_token + "; domain=." + window.BaseDomain
+            Twitch.storage.set("csrf_token", e.csrf_token), document.cookie = "csrf_token=" + encodeURIComponent(e.csrf_token) + "; domain=.twitch.tv"
         }), e.ajaxPrefilter(function(e, t, n) {
             csrf_token = Twitch.storage.get("csrf_token"), !e.crossDomain && csrf_token && n.setRequestHeader("X-CSRF-Token", csrf_token)
         })
