@@ -1470,6 +1470,17 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "97f8559c-1077-4480-ad07-b64f1c9b8529": {
+            "name": "android_auto_video_quality",
+            "t": 1,
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "active"
+            }]
+        },
         "98f3f2a5-9e4e-4ba8-aabe-2ff85e7309ee": {
             "name": "CHAT_RULES_EXPERIMENT",
             "t": 1,
