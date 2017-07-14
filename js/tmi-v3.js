@@ -668,7 +668,7 @@
             "./events.js": 6,
             "./log.js": 8,
             "./stats.js": 12,
-            "./util.js": 16
+            "./util.js": 15
         }],
         4: [function(require, module, exports) {
             "use strict";
@@ -947,7 +947,7 @@
             module.exports = exports["default"]
         }, {
             "./log.js": 8,
-            "./util.js": 16
+            "./util.js": 15
         }],
         5: [function(require, module, exports) {
             "use strict";
@@ -1396,8 +1396,8 @@
             "./log.js": 8,
             "./room.js": 9,
             "./socket.js": 11,
-            "./users.js": 15,
-            "./util.js": 16
+            "./users.js": 14,
+            "./util.js": 15
         }],
         6: [function(require, module, exports) {
             "use strict";
@@ -1875,7 +1875,7 @@
             module.exports = exports["default"]
         }, {
             "./log.js": 8,
-            "./util.js": 16,
+            "./util.js": 15,
             punycode: 1
         }],
         8: [function(require, module, exports) {
@@ -2030,7 +2030,7 @@
             exports["default"] = logging;
             module.exports = exports["default"]
         }, {
-            "./util.js": 16
+            "./util.js": 15
         }],
         9: [function(require, module, exports) {
             "use strict";
@@ -2473,12 +2473,6 @@
                 }).fail(_apiJs2["default"].chatdepot.fail(deferred));
                 return deferred
             };
-            Room.prototype.getEmotes = function(username) {
-                if (this.session) {
-                    return this.session._users.getEmotes(username)
-                }
-                return null
-            };
             Room.prototype.getLabels = function(username) {
                 var specials = this.session._users.getSpecials(username);
                 return _utilJs2["default"].array.join(this.name === username ? ["owner"] : [], this._roomUserLabels.get(username), specials)
@@ -2507,7 +2501,6 @@
                     style: action ? "action" : undefined,
                     date: new Date,
                     tags: {
-                        emotes: self.session._emotesParser.parseEmotesTag(message),
                         "display-name": self.session.getDisplayName(self.session.nickname),
                         badges: self.getBadges(self.session.nickname)
                     },
@@ -2624,7 +2617,7 @@
             };
             Room.prototype.setFollowersMode = function(duration) {
                 if (duration !== undefined) {
-                    this.sendMessage("/followers " + duration);
+                    this.sendMessage("/followers " + duration)
                 } else {
                     this.sendMessage("/followers")
                 }
@@ -2974,8 +2967,8 @@
             "./events.js": 6,
             "./irc.js": 7,
             "./log.js": 8,
-            "./users.js": 15,
-            "./util.js": 16
+            "./users.js": 14,
+            "./util.js": 15
         }],
         10: [function(require, module, exports) {
             "use strict";
@@ -2994,8 +2987,6 @@
             var _connJs2 = _interopRequireDefault(_connJs);
             var _eventsJs = require("./events.js");
             var _eventsJs2 = _interopRequireDefault(_eventsJs);
-            var _twitchJs = require("./twitch.js");
-            var _twitchJs2 = _interopRequireDefault(_twitchJs);
             var _ircJs = require("./irc.js");
             var _ircJs2 = _interopRequireDefault(_ircJs);
             var _logJs = require("./log.js");
@@ -3021,9 +3012,6 @@
                     hostport: opts.apiHostport,
                     oauthToken: opts.oauthToken
                 });
-                this._emotesParser = new _twitchJs2["default"]({
-                    twitchApi: this._twitchApi
-                });
                 this._darklaunchEligible = _WebSocketJs2["default"].supported();
                 this._darklaunchConn = new _connJs2["default"]({
                     cluster: "darklaunch",
@@ -3048,13 +3036,11 @@
                 this._deletedRooms = {};
                 this._createdRoomDeferreds = [];
                 this._roomMembershipsDeferred = null;
-                this._emoticonImagesResponse = null;
                 this.ignoredDeferred = null;
                 this._users = new _usersJs2["default"];
                 if (opts.oauthToken) {
                     this.ignoredDeferred = this._fetchIgnored()
                 }
-                this._emotesParser.on("emotes_changed", this._onEmotesResponseReceived, this)
             };
             SessionManager.prototype = new _eventsJs2["default"];
             SessionManager.prototype.destroy = function() {
@@ -3357,7 +3343,6 @@
                 conn.on("roomchanged", this._onListRoomsChanged, this);
                 conn.on("roomdeleted", this._onListRoomsChanged, this);
                 conn.on("roominvite", this._onRoomInvite, this);
-                conn.on("emoteset", this._onUserEmotesChanged, this);
                 conn.on("flashdisabled", this._onFlashDisabled, this);
                 conn.on("userstate", this._onUserStateUpdated, this);
                 conn.on("flashtimeout", this._onFlashTimeout, this)
@@ -3371,13 +3356,11 @@
                 conn.off("roomchanged", this._onListRoomsChanged, this);
                 conn.off("roomdeleted", this._onListRoomsChanged, this);
                 conn.off("roominvite", this._onRoomInvite, this);
-                conn.off("emoteset", this._onUserEmotesChanged, this);
                 conn.off("flashdisabled", this._onFlashDisabled, this);
                 conn.off("userstate", this._onUserStateUpdated, this);
                 conn.off("flashtimeout", this._onFlashTimeout, this)
             };
             SessionManager.prototype._onUserStateUpdated = function(msg) {
-                this._emotesParser.updateEmoticons(msg.tags["emote-sets"]);
                 this._updateUserState(this.nickname, msg.tags)
             };
             SessionManager.prototype._updateUserState = function(user, tags) {
@@ -3522,9 +3505,6 @@
                 this._users.setColor(username, color);
                 this._trigger("colorchanged", username)
             };
-            SessionManager.prototype._onUserEmotesChanged = function(username, emotes) {
-                this._users.setEmotes(username, emotes)
-            };
             SessionManager.prototype._onUserSpecialAdded = function(username, special) {
                 this._users.addSpecial(username, special)
             };
@@ -3560,13 +3540,6 @@
             SessionManager.prototype._onFlashTimeout = function() {
                 this._trigger("flashtimedout")
             };
-            SessionManager.prototype._onEmotesResponseReceived = function(response) {
-                this._trigger("emotes_changed", response);
-                this._emoticonImagesResponse = response
-            };
-            SessionManager.prototype.getEmotes = function() {
-                return this._emoticonImagesResponse
-            };
             SessionManager.prototype.updateChannel = function(channelId, data) {
                 return this._tmiApi.put("/api/channels/" + channelId, data)
             };
@@ -3590,7 +3563,7 @@
                     message: msg.message,
                     tags: msg.tags || {
                         badges: msg.tags.badges,
-                        emotes: this._emotesParser.parseEmotesTag(msg.message),
+                        emotes: {},
                         "display-name": this.getDisplayName(msg.sender)
                     },
                     date: new Date
@@ -3606,9 +3579,8 @@
             "./irc.js": 7,
             "./log.js": 8,
             "./room.js": 9,
-            "./twitch.js": 14,
-            "./users.js": 15,
-            "./util.js": 16
+            "./users.js": 14,
+            "./util.js": 15
         }],
         11: [function(require, module, exports) {
             "use strict";
@@ -3876,7 +3848,7 @@
         }, {
             "./events.js": 6,
             "./log.js": 8,
-            "./util.js": 16
+            "./util.js": 15
         }],
         12: [function(require, module, exports) {
             "use strict";
@@ -4077,112 +4049,9 @@
             "./irc.js": 7,
             "./log.js": 8,
             "./session.js": 10,
-            "./util.js": 16
+            "./util.js": 15
         }],
         14: [function(require, module, exports) {
-            "use strict";
-            Object.defineProperty(exports, "__esModule", {
-                value: true
-            });
-
-            function _interopRequireDefault(obj) {
-                return obj && obj.__esModule ? obj : {
-                    "default": obj
-                }
-            }
-            var _apiJs = require("./api.js");
-            var _apiJs2 = _interopRequireDefault(_apiJs);
-            var _eventsJs = require("./events.js");
-            var _eventsJs2 = _interopRequireDefault(_eventsJs);
-            var EmotesParser = function EmotesParser(opts) {
-                opts = opts || {};
-                this.emoticonSetIds = "";
-                this.emoticonRegexToIds = {};
-                this.twitchApi = opts.twitchApi
-            };
-            EmotesParser.prototype = new _eventsJs2["default"];
-            EmotesParser.prototype.updateEmoticons = function(emoticonSetIds) {
-                var self = this;
-                if (!emoticonSetIds || this.emoticonSetIds === emoticonSetIds) {
-                    return
-                }
-                this.emoticonSetIds = emoticonSetIds;
-                this.twitchApi.get("/kraken/chat/emoticon_images", {
-                    emotesets: emoticonSetIds
-                }, {
-                    headers: {
-                        Accept: _apiJs2["default"].twitch.getAcceptHeader(3)
-                    }
-                }).done(function(response) {
-                    self.emoticonRegexToIds = self._buildEmoticonsRegex(response.emoticon_sets);
-                    self._trigger("emotes_changed", response)
-                })
-            };
-            var regexRegex = /[\|\\\^\$\*\+\?\:\#]/;
-            var _isRegex = function _isRegex(str) {
-                return regexRegex.test(str)
-            };
-            var _preprocessRegex = function _preprocessRegex(regexString) {
-                var pattern = regexString.replace(/\\(?=[&;:])/g, "");
-                pattern = "^" + pattern + "$";
-                return $("<textarea/>").html(pattern).text()
-            };
-            EmotesParser.prototype._buildEmoticonsRegex = function(emoticonSets) {
-                var regexToIds = {},
-                    isRegex, code;
-                $.each(this.emoticonSetIds.split(","), function(setIndex, emoticonSetId) {
-                    emoticonSets[emoticonSetId] = emoticonSets[emoticonSetId] || [];
-                    $.each(emoticonSets[emoticonSetId], function(emoticonIndex, emoticon) {
-                        code = emoticon.code;
-                        isRegex = _isRegex(code);
-                        if (isRegex) {
-                            code = _preprocessRegex(code)
-                        }
-                        regexToIds[code] = {
-                            id: emoticon.id,
-                            isRegex: isRegex
-                        }
-                    })
-                });
-                return regexToIds
-            };
-            var _parseString = function _parseString(msg, emoticonCode, emoticonID, instances) {
-                var spaceDelimitedRegex = /\S+/g,
-                    match;
-                while ((match = spaceDelimitedRegex.exec(msg)) !== null) {
-                    if (match[0] === emoticonCode) {
-                        instances[emoticonID] = instances[emoticonID] || [];
-                        instances[emoticonID].push([match.index, spaceDelimitedRegex.lastIndex - 1])
-                    }
-                }
-            };
-            var _parseRegex = function _parseRegex(msg, emoticonCode, emoticonID, instances) {
-                var spaceDelimitedRegex = /\S+/g,
-                    re = new RegExp(emoticonCode),
-                    match;
-                while ((match = spaceDelimitedRegex.exec(msg)) !== null) {
-                    if (re.test(match[0])) {
-                        instances[emoticonID] = instances[emoticonID] || [];
-                        instances[emoticonID].push([match.index, spaceDelimitedRegex.lastIndex - 1])
-                    }
-                }
-            };
-            EmotesParser.prototype.parseEmotesTag = function(msg) {
-                var instances = {},
-                    parser;
-                $.each(this.emoticonRegexToIds, function(emoticonCode, emoticon) {
-                    parser = emoticon.isRegex ? _parseRegex : _parseString;
-                    parser.call(this, msg, emoticonCode, emoticon.id, instances)
-                });
-                return instances
-            };
-            exports["default"] = EmotesParser;
-            module.exports = exports["default"]
-        }, {
-            "./api.js": 4,
-            "./events.js": 6
-        }],
-        15: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
                 value: true
@@ -4206,12 +4075,6 @@
             UserStore.prototype.getColor = function(username) {
                 return this._user(username).color
             };
-            UserStore.prototype.setEmotes = function(username, emotes) {
-                this._user(username).emotes = emotes
-            };
-            UserStore.prototype.getEmotes = function(username) {
-                return this._user(username).emotes
-            };
             UserStore.prototype.addSpecial = function(username, special) {
                 this._specials.add(username, special)
             };
@@ -4233,9 +4096,9 @@
             exports["default"] = UserStore;
             module.exports = exports["default"]
         }, {
-            "./util.js": 16
+            "./util.js": 15
         }],
-        16: [function(require, module, exports) {
+        15: [function(require, module, exports) {
             "use strict";
             Object.defineProperty(exports, "__esModule", {
                 value: true
