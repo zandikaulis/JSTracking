@@ -13430,7 +13430,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.14-070559+18b89fb4ad5759c54f8408ade2ff2b8f46c085a3",
+                    app_version: "2017.07.14-080707+0702bb5596d0ace1dda203aa8797a7d6755eeb41",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -24087,7 +24087,7 @@
         function o(e, t, n, r, i) {
             function o() {
                 var e = i;
-                (0, c.isTwitchEmbed)() || e.playerType !== f.PLAYER_CURSE && (e = (0, s.default)(e, {
+                (0, c.isTwitchEmbed)() || e.player !== f.PLAYER_CURSE && (e = (0, s.default)(e, {
                     branding: !0
                 })), u(), d(e), a(), r.showControls(h.initialControlsDelay), $(t).attr("data-branding", e.branding), $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showinfo", e.showInfo), O(), I.push(S()), I.push(w())
             }
