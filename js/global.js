@@ -15774,7 +15774,6 @@ googletag.cmd = googletag.cmd || [],
                 SIMILAR_VODS: "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7",
                 CDN_EXPERIMENT: "b29d055f-74f2-40b9-9383-9c4b79b30360",
                 CREATIVE_SIDEBAR_NAVIGATION: "f60b889e-0327-46a8-ad7b-0d402717da45",
-                CSGO_LANGUAGE_SAMPLE: "b86f6c73-d333-4d80-ab45-07cfff39aede",
                 VOD_PAGE_RECOMMENDATION_ORDER: "171906a2-6e34-4d0e-879c-a76a19f19097",
                 REMOVE_CSGO_DIRECTORY: "355ff3e2-38b5-449a-8ab8-a52b5d3ab817",
                 LANGUAGE_DIRECTORY_FILTER: "653cc0db-d332-4df6-b224-15c5c481f7e7",
@@ -15835,7 +15834,6 @@ googletag.cmd = googletag.cmd || [],
                 "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7": "control",
                 "b29d055f-74f2-40b9-9383-9c4b79b30360": "control",
                 "f60b889e-0327-46a8-ad7b-0d402717da45": "no",
-                "b86f6c73-d333-4d80-ab45-07cfff39aede": "control",
                 "171906a2-6e34-4d0e-879c-a76a19f19097": "related_first",
                 "355ff3e2-38b5-449a-8ab8-a52b5d3ab817": "control",
                 "653cc0db-d332-4df6-b224-15c5c481f7e7": "control",
@@ -15887,7 +15885,6 @@ googletag.cmd = googletag.cmd || [],
             },
             o = {},
             s = {
-                CSGO_LANGUAGE_SAMPLE: "localized",
                 LANGUAGE_DIRECTORY_FILTER: "full",
                 CLIPS_ENABLED: "yes",
                 DETERMINATION: "yes",
@@ -16646,8 +16643,7 @@ googletag.cmd = googletag.cmd || [],
                 googletag.pubads().clearTargeting(), googletag.pubads().setTargeting("game", e.asyncAds.metadata.game), googletag.pubads().setTargeting("chan", e.asyncAds.metadata.chan), googletag.pubads().setTargeting("pagetype", e.asyncAds.metadata.pagetype), googletag.pubads().setTargeting("campaign", e.asyncAds.metadata.campaign), googletag.pubads().setTargeting("kuid", e.asyncAds.metadata.kuid), googletag.pubads().setTargeting("server", e.deployFlavor), googletag.pubads().setTargeting("salt", "https:" === window.location.protocol ? "true" : "false"), googletag.pubads().setTargeting("loggedin", e.user.isLoggedIn() ? "true" : "false"), googletag.display("dfp-channel-adlight")
             })
         }, n.afterCompanionAdsRendered = function(n) {
-            t(".js-new-channel-ad").length && ("google" === n && (t(".new_advertisement").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") || t("#google_companion_300x250").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(),
-                e.asyncAds.resizeForCompanionAds(10))
+            t(".js-new-channel-ad").length && ("google" === n && (t(".new_advertisement").hide(), t("#google_companion_300x250").hide(), t("#google_companion_300x250").is(":empty") || t("#google_companion_300x250").show()), t(".js-ad-actions").show(), t(".new_advertisement").show(), e.asyncAds.resizeForCompanionAds(10))
         }, n.resizeForCompanionAds = function(n) {
             setTimeout(function() {
                 var i = t(".js-new-channel-ad").outerHeight();
