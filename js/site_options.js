@@ -1349,6 +1349,17 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "8a1fbb7b-4b26-4d3c-8ad6-bbfeb72831f8": {
+            "name": "VODS_IN_CAROUSEL_EXPERIMENT",
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "treatment"
+            }]
+        },
         "8ace0f50-8afd-424a-a086-3e61b3e66da0": {
             "name": "MESSAGE_HISTORY",
             "t": 1,
