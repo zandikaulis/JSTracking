@@ -1309,10 +1309,10 @@ window.SiteOptions = {
                 "weight": 50,
                 "value": "variant1"
             }, {
-                "weight": 49,
+                "weight": 45,
                 "value": "control"
             }, {
-                "weight": 1,
+                "weight": 5,
                 "value": "variant2"
             }]
         },
