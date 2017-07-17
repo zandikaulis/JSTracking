@@ -928,13 +928,13 @@ window.SiteOptions = {
             "name": "FRONT_PAGE_SIGNUP_EXPERIMENT",
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 80,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "HalfPageTakeover"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "FullPageTakeover"
             }]
         },
