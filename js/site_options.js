@@ -1230,6 +1230,17 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "73fd722c-5197-4677-9a89-bb61a6aadc1d": {
+            "name": "twilight_test_experiment",
+            "t": 1,
+            "groups": [{
+                "weight": 99,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "treatment"
+            }]
+        },
         "74d6faab-1794-458a-a5f6-b92602254e9e": {
             "name": "auto_suggest_notification",
             "t": 1,
