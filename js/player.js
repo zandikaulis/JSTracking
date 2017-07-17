@@ -13443,7 +13443,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.17-212359+10643138de926626b3897da28559bc152c8356d0",
+                    app_version: "2017.07.17-213957+7baf6fa72fbbe00e89d877de089b614fba925827",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -18516,7 +18516,7 @@
                         if (this._src) {
                             var e = this._stateStore.getState(),
                                 t = e.playback;
-                            this._mediaPlayer.load(this._src), this._eventEmitter.emit(d.LOADSTART), this._eventEmitter.emit(d.PROGRESS), t.autoplay && this._mediaPlayer.play()
+                            this._mediaPlayer.load(this._src), this._eventEmitter.emit(d.LOADSTART), this._eventEmitter.emit(d.PROGRESS), t.autoplay && (this._mediaPlayer.play(), this._eventEmitter.emit(d.PLAY))
                         }
                     }
                 }, {
@@ -18667,8 +18667,8 @@
                         var t = this._stateStore.getState(),
                             n = t.stream;
                         n instanceof E.LiveContentStream ? this.setChannel(n.channel, n).then(function() {
-                            e._mediaPlayer.play()
-                        }) : this._mediaPlayer.play()
+                            e._mediaPlayer.play(), e._eventEmitter.emit(d.PLAY)
+                        }) : (this._mediaPlayer.play(), this._eventEmitter.emit(d.PLAY))
                     }
                 }, {
                     key: "pause",
