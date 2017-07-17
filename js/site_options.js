@@ -2434,6 +2434,17 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "active"
             }]
+        },
+        "ffe0c67b-19e4-43fe-8193-8897dbf4b8ed": {
+            "name": "extensions_kill_switch_on_event_channels",
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
         }
     },
     "prime_new_enabled": true,
