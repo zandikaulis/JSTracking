@@ -547,10 +547,10 @@ window.SiteOptions = {
             "name": "CVP MediaPlayer backend control",
             "t": 1,
             "groups": [{
-                "weight": 98,
+                "weight": 96,
                 "value": "no"
             }, {
-                "weight": 2,
+                "weight": 4,
                 "value": "yes"
             }]
         },
