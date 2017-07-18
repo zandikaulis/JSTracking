@@ -2424,6 +2424,20 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "fe5bad1f-521b-4ab9-9cd4-8161ef779550": {
+            "name": "crunchyroll_button",
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "dropdown"
+            }, {
+                "weight": 100,
+                "value": "direct"
+            }]
+        },
         "fe794438-043d-48dc-80b1-e2b069b88dbc": {
             "name": "ios_autoplay_pulse",
             "t": 1,
