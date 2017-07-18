@@ -1317,10 +1317,10 @@ window.SiteOptions = {
             "name": "SOCIAL_RECOMMENDATIONS",
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "variant1"
             }, {
-                "weight": 45,
+                "weight": 95,
                 "value": "control"
             }, {
                 "weight": 5,
