@@ -13451,7 +13451,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.19-180133+f540e7b22a05465550a5dc7358f41a5a72912962",
+                    app_version: "2017.07.19-231204+a5c567d87fb6206e877b913ac59f1de064074d09",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -35391,6 +35391,7 @@
                 onMenuTransition: d.default.func,
                 pausePlayback: d.default.func,
                 playback: d.default.object.isRequired,
+                playerType: d.default.string,
                 selectedQuality: d.default.string.isRequired,
                 stream: d.default.object.isRequired,
                 streamUrl: d.default.string,
@@ -35402,32 +35403,35 @@
                 hideSettingsMenu: function() {},
                 onMenuTransition: function() {},
                 pausePlayback: function() {},
-                streamUrl: ""
+                streamUrl: "",
+                playerType: ""
             },
             C = function(e) {
                 var t = e.backendInfo,
                     n = e.captions,
                     r = e.collection,
-                    i = e.playback,
-                    o = e.quality,
-                    a = e.stream,
-                    s = e.streamMetadata,
-                    u = e.user,
-                    l = e.window;
+                    i = e.env,
+                    o = e.playback,
+                    a = e.quality,
+                    s = e.stream,
+                    u = e.streamMetadata,
+                    l = e.user,
+                    c = e.window;
                 return {
-                    availableQualities: o.available,
+                    availableQualities: a.available,
                     backendType: t.playerBackendType,
                     captionsAvailable: n.available,
                     collection: r,
-                    currentSpeed: i.playbackRate,
-                    currentTime: i.currentTime,
-                    isStaffUser: u.isStaff,
-                    isVod: a.contentType === g.CONTENT_MODE_VOD,
-                    playback: i,
-                    selectedQuality: o.selected,
-                    stream: a,
-                    streamUrl: s.url,
-                    windowObj: l
+                    currentSpeed: o.playbackRate,
+                    currentTime: o.currentTime,
+                    isStaffUser: l.isStaff,
+                    isVod: s.contentType === g.CONTENT_MODE_VOD,
+                    playback: o,
+                    playerType: i.playerType,
+                    selectedQuality: a.selected,
+                    stream: s,
+                    streamUrl: u.url,
+                    windowObj: c
                 }
             },
             P = t.mapDispatchToProps = function(e) {
@@ -35459,7 +35463,8 @@
                             collection: this.props.collection,
                             playback: this.props.playback,
                             stream: this.props.stream,
-                            window: this.props.windowObj
+                            window: this.props.windowObj,
+                            playerType: this.props.playerType
                         })
                     }
                 }, {
@@ -36198,18 +36203,19 @@
         function i(e) {
             var t = e.collection,
                 n = e.playback,
-                r = e.stream,
-                i = e.window,
-                u = {
+                r = e.playerType,
+                i = e.stream,
+                u = e.window,
+                c = {
                     volume: n.volume,
                     muted: n.muted
                 };
-            r.contentType === a.CONTENT_MODE_VOD ? (u.video = r.videoId, u.collection = t ? t.id : void 0, u.time = d.toURLString(n.currentTime)) : r.contentType === o.CONTENT_MODE_LIVE && (u.channel = r.channel);
-            var c = s.playerHost + "/?" + l.toString(u),
-                f = s.popoutSize.height,
-                p = s.popoutSize.width,
-                h = "width=" + p + ",height=" + f + ",toolbar=no,menubar=no,scrollbars=no,location=no,status=no";
-            i.open(c, "_blank", h)
+            i.contentType === a.CONTENT_MODE_VOD ? (c.video = i.videoId, c.collection = t ? t.id : void 0, c.time = d.toURLString(n.currentTime)) : i.contentType === o.CONTENT_MODE_LIVE && (c.channel = i.channel), r === f.PLAYER_IMDB && (c.player = f.PLAYER_IMDB);
+            var p = s.playerHost + "/?" + l.toString(c),
+                h = s.popoutSize.height,
+                _ = s.popoutSize.width,
+                v = "width=" + _ + ",height=" + h + ",toolbar=no,menubar=no,scrollbars=no,location=no,status=no";
+            u.open(p, "_blank", v)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -36220,7 +36226,8 @@
             u = n(251),
             l = r(u),
             c = n(321),
-            d = r(c)
+            d = r(c),
+            f = n(217)
     }, function(e, t, n) {
         "use strict";
 
@@ -39609,7 +39616,7 @@
                 }]), t
             }(f.default.Component);
         j.propTypes = M;
-        t.ExtensionsContainer = (0, _.connect)(D, x)(j);
+        t.ExtensionsContainer = (0, _.connect)(D, x)(j)
     }, function(e, t, n) {
         "use strict";
 
@@ -40863,7 +40870,7 @@
                 value: function(e) {
                     try {
                         var t = JSON.parse(sessionStorage.getItem(E)) || {};
-                        return t[e] || 0
+                        return t[e] || 0;
                     } catch (e) {
                         return 0
                     }
@@ -41983,7 +41990,8 @@
                     var o = [e, t];
                     e.indexOf(".") > -1 && (o = e.split("."), r = n, n = t, t = o[1]), this.addNamespaces(t);
                     var a = p.getPath(this.data, o) || {};
-                    r ? p.deepExtend(a, n, i) : a = l({}, a, n), p.setPath(this.data, o, a), this.emit("added", e, t, n)
+                    r ? p.deepExtend(a, n, i) : a = l({}, a, n),
+                        p.setPath(this.data, o, a), this.emit("added", e, t, n)
                 }, t.prototype.removeResourceBundle = function(e, t) {
                     this.hasResourceBundle(e, t) && delete this.data[e][t], this.removeNamespaces(t), this.emit("removed", e, t)
                 }, t.prototype.hasResourceBundle = function(e, t) {
@@ -43111,7 +43119,7 @@
                             return o(n ? n : e)
                         }, d, d.exports, e, t, n, i)
                     }
-                    return n[s].exports;
+                    return n[s].exports
                 }
                 for (var a = "function" == typeof r && r, s = 0; s < i.length; s++) o(i[s]);
                 return o
