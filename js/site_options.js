@@ -2154,16 +2154,16 @@ window.SiteOptions = {
             "name": "chomperz",
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 5,
                 "value": "skipcontrol"
             }, {
                 "weight": 0,
                 "value": "skip15"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "skip5"
             }, {
-                "weight": 100,
+                "weight": 90,
                 "value": "holdout"
             }]
         },
