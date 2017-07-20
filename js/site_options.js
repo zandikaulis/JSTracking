@@ -2413,6 +2413,23 @@ window.SiteOptions = {
                 "value": "hidden"
             }]
         },
+        "fd0fc84e-e959-4a5d-88c7-949ab0622947": {
+            "name": "crunchyroll_autohost",
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "5min"
+            }, {
+                "weight": 100,
+                "value": "10min"
+            }, {
+                "weight": 100,
+                "value": "20min"
+            }]
+        },
         "fd1167fc-eb16-489a-91ea-0568fa04ae8a": {
             "name": "ios_autoplay_profile",
             "t": 1,
