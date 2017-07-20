@@ -1147,23 +1147,6 @@ window.SiteOptions = {
                 "value": "test"
             }]
         },
-        "653cc0db-d332-4df6-b224-15c5c481f7e7": {
-            "name": "language_directory_filter",
-            "t": 1,
-            "groups": [{
-                "weight": 34,
-                "value": "control"
-            }, {
-                "weight": 33,
-                "value": "full"
-            }, {
-                "weight": 33,
-                "value": "scroll"
-            }, {
-                "weight": 0,
-                "value": "scroll_new"
-            }]
-        },
         "68cde3a8-d4a6-44ae-af4a-22dbc5a0393c": {
             "name": "passport_redesign_test",
             "t": 1,
