@@ -2432,13 +2432,13 @@ window.SiteOptions = {
                 "value": "control"
             }, {
                 "weight": 100,
-                "value": "5min"
-            }, {
-                "weight": 100,
                 "value": "10min"
             }, {
                 "weight": 100,
                 "value": "20min"
+            }, {
+                "weight": 100,
+                "value": "30min"
             }]
         },
         "fd1167fc-eb16-489a-91ea-0568fa04ae8a": {
