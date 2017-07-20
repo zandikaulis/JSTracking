@@ -32,21 +32,25 @@
 
         function o(e, t) {
             function n() {
-                var n = void 0;
-                n = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, M = (0, K.init)(), M.dispatch((0, se.setWindow)(window));
-                var a = o(t);
-                (0, he.setOAuthToken)(a), a.debug && a.verbose && M.subscribe(function() {
+                var n = this,
+                    a = void 0;
+                a = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, M = (0, K.init)(), M.dispatch((0, se.setWindow)(window));
+                var s = o(t);
+                (0, he.setOAuthToken)(s), s.debug && s.verbose && M.subscribe(function() {
                     console.debug("state change: %o", M.getState())
                 }), M.dispatch(ne.loadExperiments({
                     login: O.cookie.get("login") || null,
                     deviceID: N.get(!1),
                     userAgent: M.getState().window.navigator.userAgent
-                })), M.dispatch(ie.loadDefaultLang(a.lang)), M.dispatch((0, ae.setEnvironment)({
+                })), M.dispatch(ie.loadDefaultLang(s.lang)), M.dispatch((0, ae.setEnvironment)({
                     deviceId: N.get(!1)
-                })), M.dispatch((0, ae.setPlayerType)(a.player)), qe.push(new G.PubSub(M, a)), qe.push(new Ae.PostRecommendationsManager(M)), qe.push(new Oe.OfflineRecommendationsManager(M)), qe.push(new Ie.UserManager(M)), qe.push(new b.AutoSuggestNotificationManager(M)), E = new m.AnalyticsTracker(M, a), M.dispatch((0, de.setAnalyticsTracker)(E)), M.dispatch((0, oe.initializeQuality)()), r(), w = a.allowfullscreen ? new Y.FullScreen(n, M) : new W.NoFullScreen(n, M), fe = new ke.TimelineMetadataManager(M), Re = new Te.CollectionManager(M), $ = new D.Video(n, M, a), He = new Me.ExtensionsApi(M), M.dispatch((0, Le.extensionsApiLoaded)(He)), I = new R.State($, M, E, a), a.debug && (window.state = I), je = new Se.PlayerResizeManager(M), je.observe(n), Ve = new we.FollowManager(M), a.player === Pe.PLAYER_TWITCH_EVERYWHERE && (qe.push(new Ce.TwitchEverywhereManager(M)), a.targetOrigin || console.error("Missing targetOrigin option"), M.dispatch((0, ae.setTwitchEverywhereParams)({
-                    targetOrigin: a.targetOrigin
-                }))), (0, x.forwardProperties)(y, $), J = new v.Analytics($, E, I, M, a), M.dispatch((0, ce.setAutoplay)(a.autoplay)), u(a), te = new j.EmbedHost($, I, M), new U.PlayerHotkeys($, n, M, a), a.controls && (re = new _e.ClipGenerator(I, M), M.dispatch((0, ve.clipGeneratorLoaded)(re)), k = new B.PlayerUI($, n, E, I, M, re, a)), i(a).then(function() {
-                    M.dispatch((0, Q.setPlayerOptions)(a))
+                })), M.dispatch((0, ae.setPlayerType)(s.player)), qe.push(new G.PubSub(M, s)), qe.push(new Ae.PostRecommendationsManager(M)), qe.push(new Oe.OfflineRecommendationsManager(M)), qe.push(new Ie.UserManager(M)), qe.push(new b.AutoSuggestNotificationManager(M)), E = new m.AnalyticsTracker(M, s), M.dispatch((0, de.setAnalyticsTracker)(E)), M.dispatch((0, oe.initializeQuality)()), r(), w = s.allowfullscreen ? new Y.FullScreen(a, M) : new W.NoFullScreen(a, M), fe = new ke.TimelineMetadataManager(M), Re = new Te.CollectionManager(M), $ = new D.Video(a, M, s), He = new Me.ExtensionsApi(M), M.dispatch((0, Le.extensionsApiLoaded)(He)), I = new R.State($, M, E, s), s.debug && (window.state = I), je = new Se.PlayerResizeManager(M), je.observe(a), Ve = new we.FollowManager(M), s.player === Pe.PLAYER_TWITCH_EVERYWHERE && (qe.push(new Ce.TwitchEverywhereManager(M)), s.targetOrigin || console.error("Missing targetOrigin option"), M.dispatch((0, ae.setTwitchEverywhereParams)({
+                    targetOrigin: s.targetOrigin
+                }))), (0, x.forwardProperties)(y, $), J = new v.Analytics($, E, I, M, s), M.dispatch((0, ce.setAutoplay)(s.autoplay)), u(s), te = new j.EmbedHost($, I, M), new U.PlayerHotkeys($, a, M, s), s.controls && (re = new _e.ClipGenerator(I, M), M.dispatch((0, ve.clipGeneratorLoaded)(re)), k = new B.PlayerUI($, a, E, I, M, re, s)), i(s).then(function() {
+                    M.dispatch((0, Q.setPlayerOptions)(s)), n.store.dispatch((0, ge.setTrackingProperties)({
+                        content: s.tt_content,
+                        medium: s.tt_medium
+                    }))
                 }), M.dispatch((0, le.initVodResume)()), $.addEventListener(pe.LOADED_METADATA, function() {
                     M.dispatch((0, ue.setCanFullScreen)(w.canFullScreen()))
                 })
@@ -2155,18 +2159,17 @@
                         s = t.stream,
                         u = t.manifestInfo,
                         l = t.lang,
-                        c = t.playerOptions,
-                        d = this.player.getNetworkProfile().filter(function(e) {
+                        c = this.player.getNetworkProfile().filter(function(e) {
                             return e.startTime > this.lastNetworkProfile
                         }.bind(this));
-                    this.lastNetworkProfile = d.reduce(function(e, t) {
+                    this.lastNetworkProfile = c.reduce(function(e, t) {
                         return Math.max(e, t.startTime)
                     }, this.lastNetworkProfile);
-                    var p = this.getNetworkProfileStats(d);
-                    this.player.video && (0, f.default)(p, {
+                    var d = this.getNetworkProfileStats(c);
+                    this.player.video && (0, f.default)(d, {
                         vod_timestamp: this.player.getCurrentTime()
                     });
-                    var h = {
+                    var p = {
                         seconds_offset: this.minutesWatchedTimer.initialDelay / 1e3,
                         minutes_logged: this.minutesWatchedTimer.totalMinutes,
                         captions_enabled: r.enabled,
@@ -2175,17 +2178,15 @@
                         broadcast_id: o.broadcastID,
                         community_id: i.data._id,
                         community_name: i.data.name,
-                        medium: c.tt_medium,
-                        content: c.tt_content,
                         transcoder_type: u.transcodestack,
                         autoplayed: this.options.autoplay,
                         streamType: o.streamType,
                         language: l.langCode
                     };
-                    s.contentType === U.CONTENT_MODE_VOD && a.id && (h.collection_item_position = (0, y.default)(a.items, {
+                    s.contentType === U.CONTENT_MODE_VOD && a.id && (p.collection_item_position = (0, y.default)(a.items, {
                         item_id: s.videoId.substr(1)
-                    }), h.collection_id = a.id), this.trackEvent(q, (0, f.default)({}, p, h)), this.store.dispatch((0, R.resetQualityChangeCount)()), this.valveClient.notify(), this.trackNetworkProfile.then(function(t) {
-                        "yes" === t && d.length > 0 && e.tracker.trackEvents(d.map(function(e) {
+                    }), p.collection_id = a.id), this.trackEvent(q, (0, f.default)({}, d, p)), this.store.dispatch((0, R.resetQualityChangeCount)()), this.valveClient.notify(), this.trackNetworkProfile.then(function(t) {
+                        "yes" === t && c.length > 0 && e.tracker.trackEvents(c.map(function(e) {
                             return {
                                 event: "network_profile",
                                 properties: {
@@ -3136,7 +3137,7 @@
             }, r = function() {
                 return t
             }.call(s, n, s, e), !(void 0 !== r && (e.exports = r))
-        }).call(this)
+        }).call(this);
     }, function(e, t) {
         "use strict";
 
@@ -13451,7 +13452,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.19-231204+a5c567d87fb6206e877b913ac59f1de064074d09",
+                    app_version: "2017.07.20-002122+d9d0b487c2d94832654dfc56cc8b24334a201396",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -48363,7 +48364,7 @@
             s = n(70),
             u = r(s),
             l = n(780),
-            c = ["host_channel", "content", "medium", "page_session_id", "tab_session_id", "chat_visibility_status"]
+            c = ["host_channel", "content", "medium", "page_session_id", "tab_session_id", "chat_visibility_status", "referrer"]
     }, function(e, t) {
         "use strict";
 
@@ -49564,8 +49565,7 @@
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
-                        r.enumerable = r.enumerable || !1,
-                            r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
                     }
                 }
                 return function(t, n, r) {
