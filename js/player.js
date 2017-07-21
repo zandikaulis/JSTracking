@@ -32,24 +32,23 @@
 
         function o(e, t) {
             function n() {
-                var n = this,
-                    a = void 0;
-                a = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, M = (0, K.init)(), M.dispatch((0, se.setWindow)(window));
-                var s = o(t);
-                (0, he.setOAuthToken)(s), s.debug && s.verbose && M.subscribe(function() {
+                var n = void 0;
+                n = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, M = (0, K.init)(), M.dispatch((0, se.setWindow)(window));
+                var a = o(t);
+                (0, he.setOAuthToken)(a), a.debug && a.verbose && M.subscribe(function() {
                     console.debug("state change: %o", M.getState())
                 }), M.dispatch(ne.loadExperiments({
                     login: O.cookie.get("login") || null,
                     deviceID: N.get(!1),
                     userAgent: M.getState().window.navigator.userAgent
-                })), M.dispatch(ie.loadDefaultLang(s.lang)), M.dispatch((0, ae.setEnvironment)({
+                })), M.dispatch(ie.loadDefaultLang(a.lang)), M.dispatch((0, ae.setEnvironment)({
                     deviceId: N.get(!1)
-                })), M.dispatch((0, ae.setPlayerType)(s.player)), qe.push(new G.PubSub(M, s)), qe.push(new Ae.PostRecommendationsManager(M)), qe.push(new Oe.OfflineRecommendationsManager(M)), qe.push(new Ie.UserManager(M)), qe.push(new b.AutoSuggestNotificationManager(M)), E = new m.AnalyticsTracker(M, s), M.dispatch((0, de.setAnalyticsTracker)(E)), M.dispatch((0, oe.initializeQuality)()), r(), w = s.allowfullscreen ? new Y.FullScreen(a, M) : new W.NoFullScreen(a, M), fe = new ke.TimelineMetadataManager(M), Re = new Te.CollectionManager(M), $ = new D.Video(a, M, s), He = new Me.ExtensionsApi(M), M.dispatch((0, Le.extensionsApiLoaded)(He)), I = new R.State($, M, E, s), s.debug && (window.state = I), je = new Se.PlayerResizeManager(M), je.observe(a), Ve = new we.FollowManager(M), s.player === Pe.PLAYER_TWITCH_EVERYWHERE && (qe.push(new Ce.TwitchEverywhereManager(M)), s.targetOrigin || console.error("Missing targetOrigin option"), M.dispatch((0, ae.setTwitchEverywhereParams)({
-                    targetOrigin: s.targetOrigin
-                }))), (0, x.forwardProperties)(y, $), J = new v.Analytics($, E, I, M, s), M.dispatch((0, ce.setAutoplay)(s.autoplay)), u(s), te = new j.EmbedHost($, I, M), new U.PlayerHotkeys($, a, M, s), s.controls && (re = new _e.ClipGenerator(I, M), M.dispatch((0, ve.clipGeneratorLoaded)(re)), k = new B.PlayerUI($, a, E, I, M, re, s)), i(s).then(function() {
-                    M.dispatch((0, Q.setPlayerOptions)(s)), n.store.dispatch((0, ge.setTrackingProperties)({
-                        content: s.tt_content,
-                        medium: s.tt_medium
+                })), M.dispatch((0, ae.setPlayerType)(a.player)), qe.push(new G.PubSub(M, a)), qe.push(new Ae.PostRecommendationsManager(M)), qe.push(new Oe.OfflineRecommendationsManager(M)), qe.push(new Ie.UserManager(M)), qe.push(new b.AutoSuggestNotificationManager(M)), E = new m.AnalyticsTracker(M, a), M.dispatch((0, de.setAnalyticsTracker)(E)), M.dispatch((0, oe.initializeQuality)()), r(), w = a.allowfullscreen ? new Y.FullScreen(n, M) : new W.NoFullScreen(n, M), fe = new ke.TimelineMetadataManager(M), Re = new Te.CollectionManager(M), $ = new D.Video(n, M, a), He = new Me.ExtensionsApi(M), M.dispatch((0, Le.extensionsApiLoaded)(He)), I = new R.State($, M, E, a), a.debug && (window.state = I), je = new Se.PlayerResizeManager(M), je.observe(n), Ve = new we.FollowManager(M), a.player === Pe.PLAYER_TWITCH_EVERYWHERE && (qe.push(new Ce.TwitchEverywhereManager(M)), a.targetOrigin || console.error("Missing targetOrigin option"), M.dispatch((0, ae.setTwitchEverywhereParams)({
+                    targetOrigin: a.targetOrigin
+                }))), (0, x.forwardProperties)(y, $), J = new v.Analytics($, E, I, M, a), M.dispatch((0, ce.setAutoplay)(a.autoplay)), u(a), te = new j.EmbedHost($, I, M), new U.PlayerHotkeys($, n, M, a), a.controls && (re = new _e.ClipGenerator(I, M), M.dispatch((0, ve.clipGeneratorLoaded)(re)), k = new B.PlayerUI($, n, E, I, M, re, a)), i(a).then(function() {
+                    M.dispatch((0, Q.setPlayerOptions)(a)), M.dispatch((0, ge.setTrackingProperties)({
+                        content: a.tt_content,
+                        medium: a.tt_medium
                     }))
                 }), M.dispatch((0, le.initVodResume)()), $.addEventListener(pe.LOADED_METADATA, function() {
                     M.dispatch((0, ue.setCanFullScreen)(w.canFullScreen()))
@@ -13452,7 +13451,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.20-002122+d9d0b487c2d94832654dfc56cc8b24334a201396",
+                    app_version: "2017.07.20-222503+2ac5126c4d155dae089fecf13adf63c137c871bd",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -13702,7 +13701,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-a6acf0.sjc01.hls.ttvnw.net/v1/playlist/Cir4VLugZ9hbsQ-VU0Oi2h_MLB6LF2Lj9QpaMiZl53rld9w5aYenuDXna-uHnatfrdQwtS5LUYiGN2p9MKg_s2ZlRybJuxoQ5wotGlyBu6dOqc0FgG7EJn6VcfrEIlFWkk8k4kmYeDv2m2a76u4_vJQP64-itXnb0s6_qa0t2_DEs2P9qDfab54PqJFWvw1wmpt7knUjUmuTT_62ynuw19q6MEbG87p4GOiRLp0dCyqhMu1BrCsuf4RC5pN_ptahcMHg9-xbwbF9k03q88amuZzdBxBg_5FmefoEOeJdIfufa20uSiohBUn92VK_218HfMFqgU3tufRhZNNqAtYu-QvmnRJpcTS-fWju6OKL6HHJOxRLV_uFjUBW6sWdDrAgMqLRSTAF749T3cnfKqM4xfEr6xgnEqVEPCOR-aDtaAgcsNQXj3rp4bmVcZkGtwmE.m3u8"
+        t.trustedSpadeURI = "//video-edge-7645cf.sjc01.hls.ttvnw.net/v1/playlist/CjQG-zSeeUIGpxucZcDr_crFPjvqIyHXagnkSd_m5g6k9SYBaWZ3L3pmsrOi_3yhxa2k2IGEeK5dXq8BH-60tIXzkEjDKJDDL-GVkDTotn0StT7pKq05c960PGpkhyeX1ZY2chsFYTMWsj6xXn0VT2RYfKs2HcMhUuDQpF8B_IyxxYFOMFoZNZNF0Exw6LlR1c8c3xe4BxfpUgN-T1VAX0Mwu1AzlipZfPNN1zbofmRwT0unNTYzjFZmmPATIoY-N7MVO86Nz8e8DtSXKoEZdzO1_kdBdkEaV-taiepBglgXuPB3U_kgiSC1p_AHKv5eSjezz3a6if42N64JXIzSnog8XjhGeMTecxWkJ9U1BKX0WDsEy3-3TEjN-Cie163HYtSUwLkXjYnww4HJTz6MOjxfWWOxMpazJQmC9PP7tBmJHwfBDAHTE-e37H3-a_kt-_vhP-UbNd-2OOY5fp.m3u8"
     }, function(e, t, n) {
         "use strict";
 
