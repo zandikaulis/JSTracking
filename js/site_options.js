@@ -825,8 +825,11 @@ window.SiteOptions = {
                 "weight": 5,
                 "value": "1.8.11+absctrl"
             }, {
-                "weight": 95,
+                "weight": 90,
                 "value": "1.8.11"
+            }, {
+                "weight": 5,
+                "value": "1.8.12"
             }]
         },
         "474db509-7fb8-403e-97da-66dae8954e6d": {
