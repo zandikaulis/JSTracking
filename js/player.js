@@ -13451,7 +13451,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.20-222503+2ac5126c4d155dae089fecf13adf63c137c871bd",
+                    app_version: "2017.07.24-182807+ab61adc3ed803eb63b2f640272669b6f38492e97",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -13701,7 +13701,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-7645cf.sjc01.hls.ttvnw.net/v1/playlist/CjQG-zSeeUIGpxucZcDr_crFPjvqIyHXagnkSd_m5g6k9SYBaWZ3L3pmsrOi_3yhxa2k2IGEeK5dXq8BH-60tIXzkEjDKJDDL-GVkDTotn0StT7pKq05c960PGpkhyeX1ZY2chsFYTMWsj6xXn0VT2RYfKs2HcMhUuDQpF8B_IyxxYFOMFoZNZNF0Exw6LlR1c8c3xe4BxfpUgN-T1VAX0Mwu1AzlipZfPNN1zbofmRwT0unNTYzjFZmmPATIoY-N7MVO86Nz8e8DtSXKoEZdzO1_kdBdkEaV-taiepBglgXuPB3U_kgiSC1p_AHKv5eSjezz3a6if42N64JXIzSnog8XjhGeMTecxWkJ9U1BKX0WDsEy3-3TEjN-Cie163HYtSUwLkXjYnww4HJTz6MOjxfWWOxMpazJQmC9PP7tBmJHwfBDAHTE-e37H3-a_kt-_vhP-UbNd-2OOY5fp.m3u8"
+        t.trustedSpadeURI = "//video-edge-03434a.sjc01.hls.ttvnw.net/v1/playlist/CnRZGCdIFN1248rveJrLndqRcVK_q7y5XuvMTgLXnHs_S_hGbiV756z2z9IsfIa05U9EXPGV_xWPfMGvsyuEscxt94GlC29mKjWdIn00VC5xohKy9GE8fu5Djk9el7JWuKmIC14yKyLnb2w0rBoRR2qDCE3nG2_8H_obh_kfBahLd4Q6vJUVRXPwe0PHWMQ6hZNOTET7974M5hp96gTVvMQx2cw4eW_QMEs0jJemQy0zQuLtQLRHkW0hsmnwDqxCbhU42dDouPIGc921DeNen07mJOT8Z9tfcnOVEy8CMc31xXbVr4VIjd5F2S8RlW4TzpqBCmSCkezrSno0SSCvYPSFSOVx8WzW97AQSce65ZIwRug9yrUFGJo57V5Y5af7RxpGHhOiodoofj8bj_kws155xRSy_rQUxt1SmnYeWLtojef5FDHNyFbJMUR6RZB45.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -21893,7 +21893,7 @@
             T = (t.AAXManager = function() {
                 function e(t, n, r, i) {
                     var a = this;
-                    o(this, e), this._store = r, this._preloadPrerollBidsPromise = Promise.resolve([]), this._options = i, this._unsubs = [];
+                    o(this, e), this._store = r, this._preloadPrerollBidsPromise = null, this._options = i, this._unsubs = [];
                     try {
                         var s = this._store.getState(),
                             u = s.window;
@@ -21910,14 +21910,12 @@
                         };
                         (0, h.sendAdSpadeEvent)(this._store, null, p.AAX_AD_AUCTION_INIT_ERROR, c)
                     }
-                    this._unsubs.push((0, l.subscribe)(this._store, ["stream"], this._onStreamChange.bind(this)))
+                    this._unsubFromStreamChanged = (0, l.subscribe)(this._store, ["stream"], this._onStreamChange.bind(this))
                 }
                 return a(e, [{
                     key: "destroy",
                     value: function() {
-                        this._unsubs.forEach(function(e) {
-                            return e()
-                        })
+                        this._unsubFromStreamChanged()
                     }
                 }, {
                     key: "preloadPrerollBids",
@@ -21932,7 +21930,7 @@
                     value: function(e) {
                         switch (e.adType) {
                             case s.AdRollTypes.PREROLL:
-                                return this._fetchPrerollBids();
+                                return this._fetchPrerollBids(e);
                             case s.AdRollTypes.MIDROLL:
                                 return this._fetchMidrollBids(e, b);
                             case s.AdRollTypes.POSTROLL:
@@ -21949,8 +21947,10 @@
                     }
                 }, {
                     key: "_fetchPrerollBids",
-                    value: function() {
-                        return this._preloadPrerollBidsPromise
+                    value: function(e) {
+                        if (!this._preloadPrerollBidsPromise) return this._fetchVideoBids([v], e, g);
+                        var t = this._preloadPrerollBidsPromise;
+                        return this._preloadPrerollBidsPromise = null, t
                     }
                 }, {
                     key: "_fetchMidrollBids",
@@ -22009,7 +22009,7 @@
                 }, {
                     key: "_onStreamChange",
                     value: function() {
-                        this.preloadPrerollBids()
+                        this.preloadPrerollBids(), this._unsubFromStreamChanged()
                     }
                 }, {
                     key: "_getAdsRequestContextForPreroll",
@@ -22942,7 +22942,7 @@
     }, function(e, t, n) {
         function r(e, t, n) {
             var r = t ? n(a(e), s) : a(e);
-            return o(r, i, new e.constructor)
+            return o(r, i, new e.constructor);
         }
         var i = n(397),
             o = n(215),
@@ -24359,7 +24359,8 @@
 
             function I() {
                 var r = e.getChannel();
-                L && r && $(".js-offline-banner", t).css("background-image", "url('" + L + "')"), n.dispatch((0, g.contentIsShowing)())
+                L && r && $(".js-offline-banner", t).css("background-image", "url('" + L + "')"),
+                    n.dispatch((0, g.contentIsShowing)())
             }
 
             function N() {
@@ -25686,8 +25687,8 @@
                             var i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
                             $(e, t.$root).html(r.translate(n, i))
                         };
-                    i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"), i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"),
-                        i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-submit", "Submit"), i(".js-empty-collection-label", "This collection is empty."), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"), i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel");
+                    i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"),
+                        i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-submit", "Submit"), i(".js-empty-collection-label", "This collection is empty."), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"), i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel");
                     var o = function(e, n, i) {
                         $(e, t.$root).attr(n, r.translate(i))
                     };
