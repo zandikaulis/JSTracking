@@ -823,19 +823,10 @@ window.SiteOptions = {
             "t": 1,
             "groups": [{
                 "weight": 5,
-                "value": "1.8.10+absctrl"
+                "value": "1.8.11+absctrl"
             }, {
-                "weight": 2,
+                "weight": 95,
                 "value": "1.8.11"
-            }, {
-                "weight": 2,
-                "value": "1.8.10+spd67"
-            }, {
-                "weight": 3,
-                "value": "1.8.10+spd67"
-            }, {
-                "weight": 88,
-                "value": "1.8.10+spd67"
             }]
         },
         "474db509-7fb8-403e-97da-66dae8954e6d": {
