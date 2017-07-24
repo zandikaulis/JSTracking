@@ -1936,7 +1936,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.AD_IMPRESSION = "video_ad_impression", t.AD_IMPRESSION_COMPLETE = "video_ad_impression_complete", t.AD_REQUEST = "video_ad_request", t.AD_REQUEST_DECLINED = "video_ad_request_declined", t.AD_REQUEST_ERROR = "video_ad_request_error", t.AD_REQUEST_RESPONSE = "video_ad_request_response", t.AD_SKIPPED = "video_ad_skipped", t.AD_ERROR = "video_ad_error", t.AD_LOADED = "video_ad_loaded", t.VIDEO_AD_REQUEST_ERROR = "video_ad_request_error", t.AAX_AD_AUCTION = "video_ad_auction", t.AAX_AD_AUCTION_RESPONSE = "video_ad_auction_response", t.AAX_AD_AUCTION_ERROR = "video_ad_auction_error", t.AAX_AD_AUCTION_INIT_ERROR = "video_ad_auction_init_error"
+        t.AD_IMPRESSION = "video_ad_impression", t.AD_IMPRESSION_COMPLETE = "video_ad_impression_complete", t.AD_REQUEST = "video_ad_request", t.AD_REQUEST_DECLINED = "video_ad_request_declined", t.AD_REQUEST_ERROR = "video_ad_request_error", t.AD_REQUEST_RESPONSE = "video_ad_request_response", t.AD_SKIPPED = "video_ad_skipped", t.AD_ERROR = "video_ad_error", t.AD_LOADED = "video_ad_loaded", t.VIDEO_AD_REQUEST_ERROR = "video_ad_request_error", t.PLAYBACK_ERROR = "playback_error", t.AAX_AD_AUCTION = "video_ad_auction", t.AAX_AD_AUCTION_RESPONSE = "video_ad_auction_response", t.AAX_AD_AUCTION_ERROR = "video_ad_auction_error", t.AAX_AD_AUCTION_INIT_ERROR = "video_ad_auction_init_error"
     }, function(e, t, n) {
         "use strict";
 
@@ -3136,7 +3136,7 @@
             }, r = function() {
                 return t
             }.call(s, n, s, e), !(void 0 !== r && (e.exports = r))
-        }).call(this);
+        }).call(this)
     }, function(e, t) {
         "use strict";
 
@@ -13451,7 +13451,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.24-182807+ab61adc3ed803eb63b2f640272669b6f38492e97",
+                    app_version: "2017.07.24-195621+e9028cb0a29a1fe3b06876cca3c75282fed76b80",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -19671,7 +19671,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.BackendPlayerCore = t.DEFAULT_STATS = t.BACKEND_PLAYER_CORE = void 0;
+        }), t.BackendPlayerCore = t.PLAYER_WARN_AUTH_ERROR = t.PLAYER_FATAL_AUTH_ERROR = t.PLAYER_OFFLINE_ERROR = t.PLAYER_FATAL_ERROR = t.WARN_AUTH_ERROR_CODE = t.FATAL_AUTH_ERROR_CODE = t.OFFLINE_ERROR_CODE = t.FATAL_ERROR_CODE = t.DEFAULT_STATS = t.BACKEND_PLAYER_CORE = void 0;
         var a = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -19698,22 +19698,24 @@
             h = n(167),
             _ = n(247),
             v = n(116),
-            m = n(120),
-            y = r(m),
-            g = n(345),
+            m = n(115),
+            y = n(349),
+            g = n(120),
             b = r(g),
-            E = n(328),
+            E = n(345),
             T = r(E),
-            S = n(214),
+            S = n(328),
             w = r(S),
-            C = n(53),
+            C = n(214),
             P = r(C),
-            k = n(351),
+            k = n(53),
             A = r(k),
-            O = n(117),
+            O = n(351),
             I = r(O),
-            N = t.BACKEND_PLAYER_CORE = "player-core",
-            R = t.DEFAULT_STATS = {
+            N = n(117),
+            R = r(N),
+            M = t.BACKEND_PLAYER_CORE = "player-core",
+            L = t.DEFAULT_STATS = {
                 playbackRate: 0,
                 fps: 0,
                 bufferSize: 0,
@@ -19725,20 +19727,28 @@
                 displayResolution: "0x0",
                 backendVersion: ""
             },
-            M = new Error("Media resource fetching aborted by user"),
-            L = new Error("Network Error while fetchin media resource"),
-            D = new Error("Error while decoding media resource"),
-            x = new Error("Media resource not supported"),
-            j = {
-                1: M,
-                2: L,
-                3: D,
-                4: x
+            D = t.FATAL_ERROR_CODE = 8001,
+            x = t.OFFLINE_ERROR_CODE = 8002,
+            j = t.FATAL_AUTH_ERROR_CODE = 8003,
+            U = t.WARN_AUTH_ERROR_CODE = 8004,
+            B = t.PLAYER_FATAL_ERROR = "fatal_error",
+            F = t.PLAYER_OFFLINE_ERROR = "offline_error",
+            V = t.PLAYER_FATAL_AUTH_ERROR = "fatal_auth_error",
+            H = t.PLAYER_WARN_AUTH_ERROR = "warn_auth_error",
+            q = new Error("Media resource fetching aborted by user"),
+            G = new Error("Network Error while fetchin media resource"),
+            Y = new Error("Error while decoding media resource"),
+            W = new Error("Media resource not supported"),
+            K = {
+                1: q,
+                2: G,
+                3: Y,
+                4: W
             },
-            U = [p.PAUSE, p.PLAYING, p.WAITING, p.ERROR],
-            B = [0, 1e3, 4e3, 16e3],
-            F = .25,
-            V = t.BackendPlayerCore = function() {
+            z = [p.PAUSE, p.PLAYING, p.WAITING, p.ERROR],
+            $ = [0, 1e3, 4e3, 16e3],
+            Q = .25,
+            X = t.BackendPlayerCore = function() {
                 function e() {
                     var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         n = arguments[1];
@@ -19762,7 +19772,7 @@
                 }, {
                     key: "_initPlayerCore",
                     value: function(e, t) {
-                        this.playerCoreEvents = e.Event, this.core = new e((0, I.default)({}, t, {
+                        this.playerCoreEvents = e.Event, this.core = new e((0, R.default)({}, t, {
                             analyticsTracker: this.store.getState().analyticsTracker,
                             logLevel: this.playerCoreLogLevel
                         })), this.core.attachMedia(this.video), this.core.addEventListener(this.playerCoreEvents.HLS_MASTER_PARSED, this.onHLSMasterParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.HLS_VARIANT_PARSED, this.onHLSVariantParsed.bind(this)), this.core.addEventListener(this.playerCoreEvents.VARIANT_SWITCH_REQUESTED, this.onVariantSwitchRequested.bind(this)), this.core.addEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this.onID3Tag.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEOUT, this.onSpliceOut.bind(this)), this.core.addEventListener(this.playerCoreEvents.SPLICEIN, this.onSpliceIn.bind(this)), this.core.addEventListener(this.playerCoreEvents.CAPTION, this.onCaption.bind(this)), this.core.addEventListener(this.playerCoreEvents.AUTH_ERROR, this.onAuthError.bind(this)), this.core.addEventListener(this.playerCoreEvents.CORE_ANALYTICS, this.onCoreAnalytics.bind(this)), this.core.addEventListener(this.playerCoreEvents.OFFLINE, this.onOfflineError.bind(this)), this.core.addEventListener(this.playerCoreEvents.BUFFERING, this.onBuffering.bind(this)), this.core.addEventListener(this.playerCoreEvents.FATAL_ERROR, this.onFatalError.bind(this)), this.events.emit(f.PLAYER_INIT)
@@ -19785,8 +19795,12 @@
                 }, {
                     key: "onFatalError",
                     value: function(e) {
-                        var t = e.code,
-                            n = j[t] || new Error("Unknown");
+                        var t = e.code;
+                        this.store.dispatch((0, y.trackEvent)(m.PLAYBACK_ERROR, {
+                            playback_error_code: D,
+                            playback_error_msg: B
+                        }));
+                        var n = K[t] || new Error("Unknown");
                         this.events.emit(p.ERROR, n)
                     }
                 }, {
@@ -19799,7 +19813,7 @@
                         r.trackEvent(v.VIDEO_PLAY_MASTER_MANIFEST, {
                             time_since_load_start: Date.now() - n.playSessionStartTime
                         });
-                        var i = (0, w.default)(e, function(e, t, n) {
+                        var i = (0, P.default)(e, function(e, t, n) {
                             var r = n.toLowerCase().replace(/-/g, "_");
                             return e[r] = t, e
                         }, {});
@@ -19808,7 +19822,10 @@
                 }, {
                     key: "onOfflineError",
                     value: function() {
-                        this.offline = !0, this.events.emit(f.OFFLINE), this.events.emit(p.ENDED)
+                        this.store.dispatch((0, y.trackEvent)(m.PLAYBACK_ERROR, {
+                            playback_error_code: x,
+                            playback_error_msg: F
+                        })), this.offline = !0, this.events.emit(f.OFFLINE), this.events.emit(p.ENDED)
                     }
                 }, {
                     key: "onHLSVariantParsed",
@@ -19846,16 +19863,16 @@
                             a = String(o).toLowerCase() === d.QUALITY_AUTO && r && i;
                         this._onVariantSwitchComplete && this.core.removeEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this._onVariantSwitchComplete), this._onVariantSwitchComplete = function(e) {
                             var r = e.variant;
-                            (0, A.default)(n, r) && (t.events.emit(f.QUALITY_CHANGE, r), t.core.removeEventListener(t.playerCoreEvents.SEGMENT_CHANGED, t._onVariantSwitchComplete), t._onVariantSwitchComplete = !1)
-                        }, this.core.addEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this._onVariantSwitchComplete), a && this._onABSFormatChange(e)
+                            (0, I.default)(n, r) && (t.events.emit(f.QUALITY_CHANGE, r), t.core.removeEventListener(t.playerCoreEvents.SEGMENT_CHANGED, t._onVariantSwitchComplete), t._onVariantSwitchComplete = !1)
+                        }, this.core.addEventListener(this.playerCoreEvents.SEGMENT_CHANGED, this._onVariantSwitchComplete), a && this._onABSFormatChange(e);
                     }
                 }, {
                     key: "onID3Tag",
                     value: function(e) {
-                        var t = (0, y.default)(e.ID3, function(e) {
+                        var t = (0, b.default)(e.ID3, function(e) {
                                 return "TOFN" === e.id
                             }),
-                            n = (0, y.default)(e.ID3, function(e) {
+                            n = (0, b.default)(e.ID3, function(e) {
                                 return "TXXX" === e.id
                             });
                         if (t) {
@@ -19884,16 +19901,15 @@
                 }, {
                     key: "getStats",
                     value: function() {
-                        var e = this.core ? this.core.getPlaybackStatistics() : R,
+                        var e = this.core ? this.core.getPlaybackStatistics() : L,
                             t = {
-                                playbackRate: (0, T.default)(e.playbackRate, 2) || 0,
-                                fps: (0, T.default)(e.fps) || 0,
-                                bufferSize: (0,
-                                    T.default)(e.bufferSize),
+                                playbackRate: (0, w.default)(e.playbackRate, 2) || 0,
+                                fps: (0, w.default)(e.fps) || 0,
+                                bufferSize: (0, w.default)(e.bufferSize),
                                 skippedFrames: e.skippedFrames,
                                 memoryUsage: e.memoryUsage + " MB",
-                                hlsLatencyEncoder: (0, T.default)(e.hlsLatencyEncoder / 1e3) || 0,
-                                hlsLatencyBroadcaster: (0, T.default)(e.hlsLatencyBroadcaster / 1e3) || 0,
+                                hlsLatencyEncoder: (0, w.default)(e.hlsLatencyEncoder / 1e3) || 0,
+                                hlsLatencyBroadcaster: (0, w.default)(e.hlsLatencyBroadcaster / 1e3) || 0,
                                 videoResolution: e.videoResolution,
                                 displayResolution: e.displayResolution,
                                 backendVersion: this.getVersion()
@@ -19913,18 +19929,24 @@
                 }, {
                     key: "onAuthError",
                     value: function() {
-                        if (null !== this._retryTimeoutID) return void this.events.emit(p.ERROR, new Error("Authorization error while retry in progress"));
-                        if (this._retryCount < B.length) {
+                        if (null !== this._retryTimeoutID) return this.store.dispatch((0, y.trackEvent)(m.PLAYBACK_ERROR, {
+                            playback_error_code: j,
+                            playback_error_msg: V
+                        })), void this.events.emit(p.ERROR, new Error("Authorization error while retry in progress"));
+                        if (this._retryCount < $.length) {
                             var e = this.store.getState(),
                                 t = e.window,
-                                n = this._getPeriodWithJitter(B[this._retryCount]);
-                            this._retryTimeoutID = t.setTimeout(this._retryStreamLoad.bind(this), n), this._retryCount++
+                                n = this._getPeriodWithJitter($[this._retryCount]);
+                            this.store.dispatch((0, y.trackEvent)(m.PLAYBACK_ERROR, {
+                                playback_error_code: U,
+                                playback_error_msg: H
+                            })), this._retryTimeoutID = t.setTimeout(this._retryStreamLoad.bind(this), n), this._retryCount++
                         } else this.events.emit(p.ERROR, new Error("Authorization Error"))
                     }
                 }, {
                     key: "_getPeriodWithJitter",
                     value: function(e) {
-                        var t = F * (1 - 2 * Math.random());
+                        var t = Q * (1 - 2 * Math.random());
                         return e * (1 + t)
                     }
                 }, {
@@ -19946,7 +19968,7 @@
                 }, {
                     key: "addEventListener",
                     value: function(e, t) {
-                        this.events.on(e, t), (0, P.default)(U, e) || this.video.addEventListener(e, t)
+                        this.events.on(e, t), (0, A.default)(z, e) || this.video.addEventListener(e, t)
                     }
                 }, {
                     key: "removeEventListener",
@@ -20091,7 +20113,7 @@
                 }, {
                     key: "getBackend",
                     value: function() {
-                        return N
+                        return M
                     }
                 }, {
                     key: "play",
@@ -20134,7 +20156,7 @@
                                 broadcast_id: parseInt(e.broadcastId, 10),
                                 cluster: n.cluster,
                                 current_bitrate: e.playbackRate,
-                                current_fps: (0, T.default)(e.fps),
+                                current_fps: (0, w.default)(e.fps),
                                 current_fps_exact: e.fps,
                                 dropped_frames: e.skippedFrames,
                                 hls_latency_broadcaster: e.hlsLatencyBroadcaster,
@@ -20199,15 +20221,15 @@
                         var e = this.store.getState(),
                             t = e.experiments;
                         return t.get(c.PLAYER_CORE_VER_CONTROL).then(function(e) {
-                            return b.default.load({
+                            return T.default.load({
                                 value: e
                             })
                         })
                     }
                 }]), e
             }();
-        V.canPlay = function() {
-            return b.default.canLoad()
+        X.canPlay = function() {
+            return T.default.canLoad()
         }
     }, function(e, t, n) {
         function r(e, t) {
@@ -21415,28 +21437,27 @@
                             r = e.getUserRequestContext();
                         (0, S.sendAdSpadeEvent)(this._store, A, p.AD_REQUEST_RESPONSE, (0, S.initializeAdSpadeEvent)(r));
                         var i = new n.ima.AdsRenderingSettings;
-                        i.restoreCustomPlaybackStateOnAdBreakComplete = !0, this._currentAdsManager = e.getAdsManager(new N(this._backend), i),
-                            this._currentAdsManager.addEventListener(n.ima.AdErrorEvent.Type.AD_ERROR, function(e) {
-                                return t._onAdError(e)
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.RESUMED, function() {
-                                return t._store.dispatch((0, C.emitAdPlayEvent)())
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.PAUSED, function() {
-                                return t._store.dispatch((0, C.emitAdPauseEvent)())
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.CONTENT_PAUSE_REQUESTED, function() {
-                                return t._onContentPauseRequested(r)
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.CONTENT_RESUME_REQUESTED, function() {
-                                return t._onContentResumeRequested(r)
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.LOADED, function(e) {
-                                return t._onAdLoaded(e, r)
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.STARTED, function(e) {
-                                return t._onAdStarted(e)
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.IMPRESSION, function(e) {
-                                return t._onAdImpression(e, r)
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.COMPLETE, function(e) {
-                                return t._onAdEnded(e, r)
-                            }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.SKIPPED, function(e) {
-                                return t._onAdSkipped(e, r)
-                            }), this._currentAdsManager.init(this._videoContainer.offsetParent.offsetWidth, this._videoContainer.offsetParent.offsetHeight, n.ima.ViewMode.NORMAL), this._currentAdsManager.start()
+                        i.restoreCustomPlaybackStateOnAdBreakComplete = !0, this._currentAdsManager = e.getAdsManager(new N(this._backend), i), this._currentAdsManager.addEventListener(n.ima.AdErrorEvent.Type.AD_ERROR, function(e) {
+                            return t._onAdError(e)
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.RESUMED, function() {
+                            return t._store.dispatch((0, C.emitAdPlayEvent)())
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.PAUSED, function() {
+                            return t._store.dispatch((0, C.emitAdPauseEvent)())
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.CONTENT_PAUSE_REQUESTED, function() {
+                            return t._onContentPauseRequested(r)
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.CONTENT_RESUME_REQUESTED, function() {
+                            return t._onContentResumeRequested(r)
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.LOADED, function(e) {
+                            return t._onAdLoaded(e, r)
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.STARTED, function(e) {
+                            return t._onAdStarted(e)
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.IMPRESSION, function(e) {
+                            return t._onAdImpression(e, r)
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.COMPLETE, function(e) {
+                            return t._onAdEnded(e, r)
+                        }), this._currentAdsManager.addEventListener(n.ima.AdEvent.Type.SKIPPED, function(e) {
+                            return t._onAdSkipped(e, r)
+                        }), this._currentAdsManager.init(this._videoContainer.offsetParent.offsetWidth, this._videoContainer.offsetParent.offsetHeight, n.ima.ViewMode.NORMAL), this._currentAdsManager.start()
                     }
                 }, {
                     key: "_interruptContent",
@@ -22401,10 +22422,9 @@
             return i(e, [{
                 key: "getVastXmlResponse",
                 value: function(e) {
-                    var t = this,
-                        n = "" + a + e;
-                    return this._httpsGet(n).then(function(e) {
-                        return e && e.vast_url ? t._httpsGet(e.vast_url, "text") : Promise.reject(new Error("Invalid response from dfp-creative-service " + e))
+                    var t = "" + a + e;
+                    return this._httpsGet(t).then(function(e) {
+                        return e && e.vast_xml_response ? e.vast_xml_response : Promise.reject(new Error("Invalid response from dfp-creative-service " + e))
                     })
                 }
             }, {
@@ -22942,7 +22962,7 @@
     }, function(e, t, n) {
         function r(e, t, n) {
             var r = t ? n(a(e), s) : a(e);
-            return o(r, i, new e.constructor);
+            return o(r, i, new e.constructor)
         }
         var i = n(397),
             o = n(215),
@@ -24359,8 +24379,7 @@
 
             function I() {
                 var r = e.getChannel();
-                L && r && $(".js-offline-banner", t).css("background-image", "url('" + L + "')"),
-                    n.dispatch((0, g.contentIsShowing)())
+                L && r && $(".js-offline-banner", t).css("background-image", "url('" + L + "')"), n.dispatch((0, g.contentIsShowing)())
             }
 
             function N() {
@@ -25675,7 +25694,8 @@
             function t(e, n) {
                 r(this, t);
                 var o = i(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return o.$root = e, o.subscribe(n, ["lang", "env"], o.localizeUI.bind(o)), o.subscribe(n, ["lang", "chromecast"], o.localizeCastOverlay.bind(o)), o.subscribe(n, ["lang", "streamMetadata"], o.localizeAdvertisement.bind(o)), o.localizeUI(n.getState()), o
+                return o.$root = e, o.subscribe(n, ["lang", "env"], o.localizeUI.bind(o)), o.subscribe(n, ["lang", "chromecast"], o.localizeCastOverlay.bind(o)), o.subscribe(n, ["lang", "streamMetadata"], o.localizeAdvertisement.bind(o)), o.localizeUI(n.getState()),
+                    o
             }
             return o(t, e), a(t, [{
                 key: "localizeUI",
@@ -25687,8 +25707,7 @@
                             var i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
                             $(e, t.$root).html(r.translate(n, i))
                         };
-                    i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"),
-                        i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-submit", "Submit"), i(".js-empty-collection-label", "This collection is empty."), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"), i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel");
+                    i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"), i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-submit", "Submit"), i(".js-empty-collection-label", "This collection is empty."), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"), i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel");
                     var o = function(e, n, i) {
                         $(e, t.$root).attr(n, r.translate(i))
                     };
@@ -26864,7 +26883,7 @@
             if (l) c.data = l;
             else {
                 var d = u(n);
-                null !== d && (c.data = d)
+                null !== d && (c.data = d);
             }
             return p.accumulateTwoPhaseDispatches(c), c
         }
