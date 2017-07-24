@@ -1276,6 +1276,17 @@ window.SiteOptions = {
                 "value": "holdout"
             }]
         },
+        "7a2c9c67-fc9b-4c97-b8b9-1e2bd116e998": {
+            "name": "android_playercore_7",
+            "t": 1,
+            "groups": [{
+                "weight": 99,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "active"
+            }]
+        },
         "7da9cda1-2d29-4917-b595-0c1ea27121e3": {
             "name": "TEST_EXPERIMENT_TESTING",
             "t": 1,
