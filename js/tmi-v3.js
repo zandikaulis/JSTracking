@@ -1627,6 +1627,7 @@
                     case "historical":
                     case "noisy":
                     case "emote-only":
+                    case "mercury":
                         return value === "1" ? true : false;
                     case "slow":
                     case "followers-only":
