@@ -1365,6 +1365,17 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
+        "8ab1d7cc-6c63-4105-a5d3-5d5bb926b5f6": {
+            "name": "android_bits_purchase_webview",
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "active "
+            }]
+        },
         "8ace0f50-8afd-424a-a086-3e61b3e66da0": {
             "name": "MESSAGE_HISTORY",
             "t": 1,
