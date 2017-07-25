@@ -8836,8 +8836,8 @@
                 key: "_commonExperimentParams",
                 value: function() {
                     var e = this;
-                    return Promise.all([this.accessToken, this._experimentSettings.adStitchingUS, this._experimentSettings.adStitchingUK, this._experimentSettings.adStitchingA, this._experimentSettings.adStitchingB, this._experimentSettings.adStitchingC, this._experimentSettings.adStitchingD, this._experimentSettings.adStitchingE, this._experimentSettings.adStitchingF, this._experimentSettings.adStitchingG, this._experimentSettings.adStitchingH, this._experimentSettings.adStitchingI, this._experimentSettings.adStitchingPrerolls]).then(function(t) {
-                        var n = o(t, 13),
+                    return Promise.all([this.accessToken, this._experimentSettings.adStitchingUS, this._experimentSettings.adStitchingUK, this._experimentSettings.adStitchingA, this._experimentSettings.adStitchingB, this._experimentSettings.adStitchingC, this._experimentSettings.adStitchingD, this._experimentSettings.adStitchingE, this._experimentSettings.adStitchingF, this._experimentSettings.adStitchingG, this._experimentSettings.adStitchingH, this._experimentSettings.adStitchingI, this._experimentSettings.adStitchingPrerolls, this._experimentSettings.realtimeQos]).then(function(t) {
+                        var n = o(t, 14),
                             r = n[0],
                             i = n[1],
                             a = n[2],
@@ -8851,11 +8851,12 @@
                             m = n[10],
                             y = n[11],
                             g = n[12],
-                            b = {};
-                        b.baking_bread = (0, c.default)([i, a, s, l, d, p, h, _, v, m, y], function(e) {
+                            b = n[13],
+                            E = {};
+                        E.rtqos = b, E.baking_bread = (0, c.default)([i, a, s, l, d, p, h, _, v, m, y], function(e) {
                             return (0, u.default)(e, "yes")
                         });
-                        var E = function(e) {
+                        var T = function(e) {
                             var t = /^(yes_play|no_play)_(\d+)$/,
                                 n = t.exec(e),
                                 r = n || [],
@@ -8867,7 +8868,7 @@
                                 baking_brownies_timeout: Number(s)
                             }
                         };
-                        return e._restrictedBitrates = JSON.parse(r.token).chansub.restricted_bitrates, (0, f.default)({}, b, E(g))
+                        return e._restrictedBitrates = JSON.parse(r.token).chansub.restricted_bitrates, (0, f.default)({}, E, T(g))
                     })
                 }
             }, {
@@ -11033,7 +11034,8 @@
                                     e.getEventManager().newEvent(o), e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1), r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist()
                                 },
                                 onBuffer: function(t, n) {
-                                    e.getSSECore().isPauseOnBufferingEnabled() && e.getSSECore().startPausedOnBufferingTimer(t, n), e.getPlaylist().getClip().incrementBufferCount(), e.getPlaylist().setBufferingTimestamp(t), e.getPlaylist().getClip().setBufferingTimestamp(t);
+                                    e.getSSECore().isPauseOnBufferingEnabled() && e.getSSECore().startPausedOnBufferingTimer(t, n), e.getPlaylist().getClip().incrementBufferCount(),
+                                        e.getPlaylist().setBufferingTimestamp(t), e.getPlaylist().getClip().setBufferingTimestamp(t)
                                 },
                                 onSeekStart: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
@@ -11953,7 +11955,7 @@
             return function(e, t) {
                 var n = t(),
                     r = n.window;
-                o(r, a, u, "TWITCH", "twitch.tv", l, "")
+                o(r, a, u, "TWITCH", "twitch.tv", l, "");
             }
         }
 
@@ -11966,8 +11968,7 @@
                 c5: o,
                 c6: a
             };
-            "COMSCORE" in e ? e.COMSCORE.beacon(s) : (e._comscore || (e._comscore = []),
-                e._comscore.push(s))
+            "COMSCORE" in e ? e.COMSCORE.beacon(s) : (e._comscore || (e._comscore = []), e._comscore.push(s))
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -12591,7 +12592,7 @@
         function u(e) {
             var t, n;
             return new _.default({
-                defaults: (t = {}, i(t, E, "no"), i(t, T, "no"), i(t, S, "no"), i(t, C, "no"), i(t, w, "no"), i(t, P, "no"), i(t, k, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "control"), i(t, D, "1.8.10"), i(t, L, "no"), i(t, x, "no"), i(t, j, "keep"), i(t, U, "pad_control"), i(t, B, "no"), i(t, F, "no"), i(t, V, "control"), i(t, H, "no"), i(t, q, "control"), i(t, G, "control"), t),
+                defaults: (t = {}, i(t, E, "no"), i(t, T, "no"), i(t, S, "no"), i(t, C, "no"), i(t, w, "no"), i(t, P, "no"), i(t, k, "no"), i(t, A, "no"), i(t, O, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "control"), i(t, D, "1.8.10"), i(t, L, "no"), i(t, x, "no"), i(t, j, "keep"), i(t, U, "pad_control"), i(t, B, "no"), i(t, F, "no"), i(t, V, "control"), i(t, H, "no"), i(t, q, "control"), i(t, G, "control"), i(t, Y, "control"), t),
                 deviceID: e.deviceID,
                 overrides: (0, d.default)((n = {}, i(n, M, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), i(n, T, a(["US"])), i(n, S, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, P, a(["SE"])), i(n, k, a(["DK", "FI", "NL", "NO"])), i(n, A, a(["CA"])), i(n, O, a(["AU", "NZ"])), i(n, I, a(["BE"])), i(n, N, a(["PL"])), i(n, R, a(["AT", "CH", "ES", "IT", "PT"])), i(n, L, o("vca")), i(n, x, o("yes")), i(n, D, o("1.8.10+spd67")), i(n, F, o("yes")), i(n, B, o("yes")), i(n, q, o("show")), i(n, G, o("show")), n), JSON.parse(l.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
@@ -12602,7 +12603,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.OFFLINE_EXPERIENCE = t.AUTO_SUGGEST_NOTIFICATION = t.BISMOL = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.HTML5_TOGGLE_REMOVAL = t.PINEAPPLE = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BROWNIES = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = u;
+        }), t.REALTIME_QOS = t.OFFLINE_EXPERIENCE = t.AUTO_SUGGEST_NOTIFICATION = t.BISMOL = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.HTML5_TOGGLE_REMOVAL = t.PINEAPPLE = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BROWNIES = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = u;
         var l = n(253),
             c = n(117),
             d = r(c),
@@ -12638,7 +12639,8 @@
             V = t.CHOMPERZ = "d48fe249-fd73-4c8f-bd17-415b70dc3708",
             H = t.BISMOL = "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5",
             q = t.AUTO_SUGGEST_NOTIFICATION = "74d6faab-1794-458a-a5f6-b92602254e9e",
-            G = t.OFFLINE_EXPERIENCE = "6e2f439b-916a-40b7-b1be-e82b284fd0bb"
+            G = t.OFFLINE_EXPERIENCE = "6e2f439b-916a-40b7-b1be-e82b284fd0bb",
+            Y = t.REALTIME_QOS = "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98"
     }, function(e, t, n) {
         function r(e) {
             var t = i(e);
@@ -13505,7 +13507,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.25-205542+243d9d433e0349dc9104eaf4826361229577ba08",
+                    app_version: "2017.07.25-212447+d4a9972c69953d1c6294fd236ee42e268191138f",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -18049,7 +18051,8 @@
                         adStitchingG: E.get(u.BAKING_BREAD_G),
                         adStitchingH: E.get(u.BAKING_BREAD_H),
                         adStitchingI: E.get(u.BAKING_BREAD_I),
-                        adStitchingPrerolls: E.get(u.BAKING_BROWNIES)
+                        adStitchingPrerolls: E.get(u.BAKING_BROWNIES),
+                        realtimeQos: E.get(u.REALTIME_QOS)
                     },
                     A = void 0;
                 e === y ? A = new l.LiveContentStream(C, P, S, d.params, k) : e === g && (A = new c.VODContentStream(w, P, S, d.params, k)), A.accessToken.then(function() {
