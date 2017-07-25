@@ -13507,7 +13507,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.25-212447+d4a9972c69953d1c6294fd236ee42e268191138f",
+                    app_version: "2017.07.25-230622+6ebfad85d5e6d4197232907d317aab9d888e3b35",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -18485,7 +18485,7 @@
                 function e() {
                     var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         n = arguments[1];
-                    a(this, e), this._stateStore = n, this._mediaPlayer = null, this._eventEmitter = new p.default, this._apiCallQueue = [], this._cache = {}, this._readyState = C.HAVE_NOTHING, this._networkState = P.NETWORK_NO_SOURCE, this._retryTimeoutID = null, this._retryCount = 0, this._src = "", this._currentCaptionData = {}, this._mediaPlayerLogLevel = t["cvp-log"] || "error", this.initialize()
+                    a(this, e), this.store = n, this._mediaPlayer = null, this._eventEmitter = new p.default, this._apiCallQueue = [], this._cache = {}, this._readyState = C.HAVE_NOTHING, this._networkState = P.NETWORK_NO_SOURCE, this._retryTimeoutID = null, this._retryCount = 0, this._src = "", this._currentCaptionData = {}, this._mediaPlayerLogLevel = t["cvp-log"] || "error", this.initialize()
                 }
                 return s(e, [{
                     key: "initialize",
@@ -18515,7 +18515,7 @@
                     key: "loadMediaPlayer",
                     value: function() {
                         var e = this,
-                            t = this._stateStore.getState(),
+                            t = this.store.getState(),
                             n = t.experiments;
                         return n.get(b.PLAYER_CORE_VER_CONTROL).then(function() {
                             return g.default.loadMediaPlayer({
@@ -18561,7 +18561,7 @@
                     value: function(e) {
                         var t = e.spadeEventName,
                             n = e.spadeEventData;
-                        this._stateStore.dispatch((0, k.trackEvent)(t, n))
+                        this.store.dispatch((0, k.trackEvent)(t, n))
                     }
                 }, {
                     key: "addEventListener",
@@ -18588,7 +18588,7 @@
                     value: function() {
                         if (null === this._mediaPlayer) return void this._apiCallQueue.push(this.load.bind(this));
                         if (this._src) {
-                            var e = this._stateStore.getState(),
+                            var e = this.store.getState(),
                                 t = e.playback;
                             this._mediaPlayer.load(this._src), this._eventEmitter.emit(d.LOADSTART), this._eventEmitter.emit(d.PROGRESS), t.autoplay && (this._mediaPlayer.play(), this._eventEmitter.emit(d.PLAY))
                         }
@@ -18628,7 +18628,7 @@
                     value: function(e, t) {
                         var n = this;
                         return t.streamUrl.then(function(t) {
-                            var r = n._stateStore.getState(),
+                            var r = n.store.getState(),
                                 i = r.streamMetadata;
                             e === i.channelName && n.setSrc(t)
                         })
@@ -18638,7 +18638,7 @@
                     value: function(e, t) {
                         var n = this;
                         t.streamUrl.then(function(t) {
-                            var r = n._stateStore.getState(),
+                            var r = n.store.getState(),
                                 i = r.streamMetadata;
                             e === i.videoId && n.setSrc(t)
                         })
@@ -18738,7 +18738,7 @@
                     value: function() {
                         var e = this;
                         if (null === this._mediaPlayer) return void this._apiCallQueue.push(this.play.bind(this));
-                        var t = this._stateStore.getState(),
+                        var t = this.store.getState(),
                             n = t.stream;
                         n instanceof E.LiveContentStream ? this.setChannel(n.channel, n).then(function() {
                             e._mediaPlayer.play(), e._eventEmitter.emit(d.PLAY)
@@ -18762,7 +18762,7 @@
                 }, {
                     key: "getVideoInfo",
                     value: function() {
-                        var e = this._stateStore.getState(),
+                        var e = this.store.getState(),
                             t = e.manifestInfo,
                             n = e.window,
                             r = {
@@ -18836,7 +18836,7 @@
                 }, {
                     key: "destroy",
                     value: function() {
-                        this._mediaPlayer ? (this._mediaPlayer.delete(), this._mediaPlayer = null) : this._apiCallQueue.push(this.destroy.bind(this)), this._stateStore.getState().window.clearTimeout(this._retryTimeoutID)
+                        this._mediaPlayer ? (this._mediaPlayer.delete(), this._mediaPlayer = null) : this._apiCallQueue.push(this.destroy.bind(this)), this.store.getState().window.clearTimeout(this._retryTimeoutID)
                     }
                 }, {
                     key: "_getPeriodWithJitter",
@@ -18848,7 +18848,7 @@
                     key: "_retryStreamLoad",
                     value: function() {
                         var e = this,
-                            t = this._stateStore.getState(),
+                            t = this.store.getState(),
                             n = t.stream;
                         return this._retryTimeoutID = null, this.src = "", this.initialize(), n.resetNAuthToken(), n.streamUrl.then(function(t) {
                             e.setSrc(t), e.play()
@@ -18859,7 +18859,7 @@
                     value: function() {
                         if (null !== this._retryTimeoutID) return void this._eventEmitter.emit(d.ERROR, new Error("Authorization error while retry in progress"));
                         if (this._retryCount < O.length) {
-                            var e = this.stateStore.getState(),
+                            var e = this.store.getState(),
                                 t = e.window,
                                 n = this._getPeriodWithJitter(O[this._retryCount]);
                             this._retryTimeoutID = t.setTimeout(this._retryStreamLoad.bind(this), n), this._retryCount++
@@ -18932,21 +18932,21 @@
                         }), n.addEventListener(e.PlayerEvent.TRACKING, function(e) {
                             var n = e.name,
                                 r = e.properties;
-                            "video_error" === n && t._stateStore.dispatch((0, k.trackEvent)(n, r))
+                            "video_error" === n && t.store.dispatch((0, k.trackEvent)(n, r))
                         }), n.addEventListener(e.PlayerState.BUFFERING, function() {
                             t._readyState = C.HAVE_CURRENT_DATA, t._networkState = P.NETWORK_LOADING
                         }), n.addEventListener(e.PlayerState.IDLE, function() {
                             t._readyState = C.HAVE_NOTHING, t._networkState = P.NETWORK_IDLE, t._eventEmitter.emit(d.PAUSE);
-                            var e = t._stateStore.getState(),
+                            var e = t.store.getState(),
                                 n = e.stream;
                             n instanceof E.LiveContentStream ? t._eventEmitter.emit(d.EMPTIED) : n instanceof T.VODContentStream && t._eventEmitter.emit(d.SUSPEND)
                         }), n.addEventListener(e.PlayerState.ENDED, function() {
                             t._readyState = C.HAVE_NOTHING, t._networkState = P.NETWORK_EMPTY, t._eventEmitter.emit(d.ENDED), t._eventEmitter.emit(d.EMPTIED)
                         }), n.addEventListener(e.PlayerState.READY, function() {
                             t._retryCount = 0, t._readyState = C.HAVE_METADATA, t._networkState = C.NETWORK_IDLE;
-                            var e = t._stateStore.getState(),
+                            var e = t.store.getState(),
                                 r = e.analytics;
-                            t._stateStore.dispatch((0, k.trackEvent)(l.VIDEO_PLAY_MASTER_MANIFEST, {
+                            t.store.dispatch((0, k.trackEvent)(l.VIDEO_PLAY_MASTER_MANIFEST, {
                                 time_since_load_start: Date.now() - r.playSessionStartTime
                             }));
                             var i = (0, _.default)(t._mediaPlayer.getManifestInfo(), function(e, t, n) {
