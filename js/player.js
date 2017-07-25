@@ -13505,7 +13505,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.24-230538+4a2246961e656e6e5c6fe5063e1a019421fb22b7",
+                    app_version: "2017.07.25-205542+243d9d433e0349dc9104eaf4826361229577ba08",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -13755,7 +13755,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-03434a.sjc01.hls.ttvnw.net/v1/playlist/CnRZGCdIFN1248rveJrLndqRcVK_q7y5XuvMTgLXnHs_S_hGbiV756z2z9IsfIa05U9EXPGV_xWPfMGvsyuEscxt94GlC29mKjWdIn00VC5xohKy9GE8fu5Djk9el7JWuKmIC14yKyLnb2w0rBoRR2qDCE3nG2_8H_obh_kfBahLd4Q6vJUVRXPwe0PHWMQ6hZNOTET7974M5hp96gTVvMQx2cw4eW_QMEs0jJemQy0zQuLtQLRHkW0hsmnwDqxCbhU42dDouPIGc921DeNen07mJOT8Z9tfcnOVEy8CMc31xXbVr4VIjd5F2S8RlW4TzpqBCmSCkezrSno0SSCvYPSFSOVx8WzW97AQSce65ZIwRug9yrUFGJo57V5Y5af7RxpGHhOiodoofj8bj_kws155xRSy_rQUxt1SmnYeWLtojef5FDHNyFbJMUR6RZB45.m3u8"
+        t.trustedSpadeURI = "//video-edge-d3c407.sjc01.hls.ttvnw.net/v1/playlist/CvhqcPmzpFtGjVuhQ8bZSpZAVHjrYrBEhszvawaZciF0v81PzyGl0ghu5t90o_c2KLexnMFRU1-SbFnhFScDbvGaYf9VySPzQ8CM98MaiS7KtsDdMWGbhyrO9GOtcdPEI25N2ZMqXD4V5FrQoLm8-zaW7QhyOtokC56mAB7YW0V1p7e1bPsG-HmLNbOH4HL6DFr0cpJ2IaITXfigzO2S7WhrPyvVApFhT1pfmC_cmUWPt_Z_wakDvkhMM7fUwGsSdHI1Mpaj2zcavhZG9G1n1LQjXQ6Z87jwZA4ctFMAmzfUT9mQMU4ushzcKRKJaJT-D3Mc5fjZryjJ4IozKAzZ_Gjy6xtNGCSe43lzI_n79KQBA7IZfe_n_EQ_ZuPlmLkEHAdrvrtKRpMZT_dQSRFHTUEm_nssYjMzCxFLxZAtfLj0ENQLFL8bpBZqvlI-1FT6EliMSg37nhVz.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -38871,7 +38871,7 @@
                     }
                 }]), n
             }(f.default.Component);
-            return t.propTypes = T, t.defaultProps = S, t.displayName = "WrappedFollowPanel(" + s(e) + ")", (0, c.connect)(C, w)(t)
+            return t.propTypes = S, t.defaultProps = C, t.displayName = "WrappedFollowPanel(" + s(e) + ")", (0, c.connect)(w, P)(t)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -38900,7 +38900,8 @@
             g = n(168),
             b = n(217),
             E = n(425),
-            T = {
+            T = n(401),
+            S = {
                 analytics: h.default.object,
                 channel: h.default.shape({
                     id: h.default.number,
@@ -38922,7 +38923,7 @@
                 win: h.default.object.isRequired,
                 withInfo: h.default.bool.isRequired
             },
-            S = {
+            C = {
                 analytics: {
                     trackEvent: function() {}
                 },
@@ -38930,7 +38931,7 @@
                 disableNotifications: function() {},
                 promptLoginModal: function() {}
             },
-            C = t.mapStateToProps = function(e) {
+            w = t.mapStateToProps = function(e) {
                 var t = e.analyticsTracker,
                     n = e.env,
                     r = e.follow,
@@ -38938,8 +38939,9 @@
                     o = e.playerOptions,
                     a = e.streamMetadata,
                     s = e.user,
-                    u = e.window,
-                    l = e.ui;
+                    u = e.screen,
+                    l = e.window,
+                    c = e.ui;
                 return {
                     analytics: t,
                     channel: {
@@ -38948,12 +38950,12 @@
                         name: a.channel.displayName
                     },
                     playerType: n.playerType,
-                    showFollowNotification: r.showFollowNotification && !l.isMini && (i.ended || a.streamType === E.TYPE_DEAD_LTV),
+                    showFollowNotification: r.showFollowNotification && !c.isMini && (i.ended || a.streamType === E.TYPE_DEAD_LTV) && (u[0] === T.VOD_RECOMMENDATION_SCREEN || u[0] === T.CONTENT_SCREEN),
                     relationship: {
                         notificationsEnabled: r.notificationsEnabled,
                         following: r.following
                     },
-                    win: u,
+                    win: l,
                     withInfo: o.showInfo,
                     user: {
                         id: s.id,
@@ -38961,7 +38963,7 @@
                     }
                 }
             },
-            w = t.mapDispatchToProps = function(e) {
+            P = t.mapDispatchToProps = function(e) {
                 return {
                     enableNotifications: function(t, n) {
                         e((0, _.enableNotifications)(t, n))
@@ -39796,8 +39798,7 @@
                     key: "_trackEvent",
                     value: function(e, t) {
                         var n = this.props.extensions.extensions[0];
-                        this.props.trackEvent(e, (0,
-                            m.default)(t, {
+                        this.props.trackEvent(e, (0, m.default)(t, {
                             extension_id: n.id,
                             extension_version: n.version,
                             extension_anchor: n.anchor,
@@ -41068,7 +41069,8 @@
             }, {
                 key: "_onPlaying",
                 value: function() {
-                    this.$root.attr("data-overlay") !== k && (this.player.setMuted(!0), this.store.dispatch((0, h.pause)()))
+                    this.$root.attr("data-overlay") !== k && (this.player.setMuted(!0),
+                        this.store.dispatch((0, h.pause)()))
                 }
             }, {
                 key: "_setOverlay",
@@ -42201,8 +42203,7 @@
                         i = r.keySeparator || this.options.keySeparator;
                     void 0 === i && (i = ".");
                     var o = [e, t];
-                    return n && "string" != typeof n && (o = o.concat(n)),
-                        n && "string" == typeof n && (o = o.concat(i ? n.split(i) : n)), e.indexOf(".") > -1 && (o = e.split(".")), p.getPath(this.data, o)
+                    return n && "string" != typeof n && (o = o.concat(n)), n && "string" == typeof n && (o = o.concat(i ? n.split(i) : n)), e.indexOf(".") > -1 && (o = e.split(".")), p.getPath(this.data, o)
                 }, t.prototype.addResource = function(e, t, n, r) {
                     var i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {
                             silent: !1
@@ -44606,7 +44607,8 @@
             f = t.RecCloseButton = function(e) {
                 var t = e.onClick,
                     n = e.className,
-                    r = (0, c.default)("pl-close-button", n);
+                    r = (0,
+                        c.default)("pl-close-button", n);
                 return o.default.createElement(u.Button, {
                     className: r,
                     onClick: t

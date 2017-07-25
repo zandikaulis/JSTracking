@@ -1156,10 +1156,10 @@ window.SiteOptions = {
             "name": "rtqos",
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "realtime"
             }]
         },
