@@ -2049,6 +2049,17 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "ca305459-aec3-4d0c-b4e4-93d8cda54bba": {
+            "name": "DEMOGRAPHIC_STATS",
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "cc164e1e-1361-4730-8d9b-0091a0f9cb8f": {
             "name": "DETERMINATION",
             "t": 1,
@@ -2423,23 +2434,6 @@ window.SiteOptions = {
                 "value": "hidden"
             }]
         },
-        "fd0fc84e-e959-4a5d-88c7-949ab0622947": {
-            "name": "crunchyroll_autohost",
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 100,
-                "value": "10min"
-            }, {
-                "weight": 100,
-                "value": "20min"
-            }, {
-                "weight": 100,
-                "value": "30min"
-            }]
-        },
         "fd1167fc-eb16-489a-91ea-0568fa04ae8a": {
             "name": "ios_autoplay_profile",
             "t": 1,
@@ -2459,10 +2453,13 @@ window.SiteOptions = {
                 "value": "control"
             }, {
                 "weight": 100,
-                "value": "dropdown"
+                "value": "10min"
             }, {
                 "weight": 100,
-                "value": "direct"
+                "value": "20min"
+            }, {
+                "weight": 100,
+                "value": "30min"
             }]
         },
         "fe794438-043d-48dc-80b1-e2b069b88dbc": {
