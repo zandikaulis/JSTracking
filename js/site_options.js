@@ -657,10 +657,10 @@ window.SiteOptions = {
             "name": "trending_emotes",
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "variant1"
             }]
         },
