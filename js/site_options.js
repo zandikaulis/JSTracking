@@ -2449,17 +2449,20 @@ window.SiteOptions = {
             "name": "crunchyroll_button",
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "10min"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "20min"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "30min"
+            }, {
+                "weight": 100,
+                "value": "15sec"
             }]
         },
         "fe794438-043d-48dc-80b1-e2b069b88dbc": {
