@@ -76,7 +76,7 @@
             function o() {
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                     t = (0, d.default)(e) ? T.parse(e) : e;
-                return h(t), (0, S.isTwitchEmbed)() || (0, l.default)(Fe, t.player) || (t = (0, p.default)(t, w.embedParameters)), t.backend = a(t), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== A.PLAYER_HIGHLIGHTER, t = (0, s.default)(t, {
+                return h(t), (0, S.isTwitchEmbed)() || ((0, l.default)(Fe, t.player) || (t = (0, p.default)(t, w.embedParameters)), t.player !== A.PLAYER_CURSE && (t.branding = !0)), t.backend = a(t), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== A.PLAYER_HIGHLIGHTER, t = (0, s.default)(t, {
                     time: t.t
                 }), (0, l.default)(["mse", "mseDev"], P.localStore.get("backend")) && P.localStore.set("backend", F.BACKEND_PLAYER_CORE), t = (0, s.default)(t, {
                     volume: P.localStore.get("volume"),
@@ -84,6 +84,10 @@
                     backend: P.localStore.get("backend"),
                     player: t.player === A.PLAYER_IMDB ? A.PLAYER_IMDB : A.getPlayerType()
                 }), t = (0, s.default)(t, {
+                    showInfo: t.channelInfo
+                }, {
+                    showInfo: !0,
+                    branding: !0,
                     volume: .5,
                     muted: !1,
                     controls: !0,
@@ -1675,7 +1679,7 @@
                         n.hasOwnProperty(e) && i.setRequestHeader(e, n[e])
                     }), new o.f(function(n, o) {
                         i.onreadystatechange = function() {
-                            i.readyState === a && (i.status >= 200 && i.status < 300 ? n(i.responseText) : o(new Error("dobbin.js " + e + " " + t + " responded " + i.status + "\n" + i.responseText)));
+                            i.readyState === a && (i.status >= 200 && i.status < 300 ? n(i.responseText) : o(new Error("dobbin.js " + e + " " + t + " responded " + i.status + "\n" + i.responseText)))
                         }, i.send(r)
                     })
                 }
@@ -3133,7 +3137,7 @@
             }, a._getOnceReturnValue = function() {
                 return !this.hasOwnProperty("_onceReturnValue") || this._onceReturnValue
             }, a._getEvents = function() {
-                return this._events || (this._events = {});
+                return this._events || (this._events = {})
             }, t.noConflict = function() {
                 return s.EventEmitter = u, t
             }, r = function() {
@@ -13516,7 +13520,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.26-213022+0e6e6bec8bc36eb667b0a40891262605b3e13672",
+                    app_version: "2017.07.26-220401+3d2fed71d89c619194caa2b02b05b7176b30dd40",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -23886,6 +23890,12 @@
         "use strict";
 
         function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e) {
             if (e && e.__esModule) return e;
             var t = {};
             if (null != e)
@@ -23893,101 +23903,91 @@
             return t.default = e, t
         }
 
-        function i(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-
-        function o(e, t, r, i, o, a, j) {
+        function o(e, t, r, i, o, D, j) {
             function B() {
-                var S = (0, s.default)(j, {
-                    showInfo: j.channelInfo,
-                    branding: !0
-                }, {
-                    showInfo: !0
-                });
+                var E = j;
                 $(t).addClass("player").addClass("theme--dark"), $(t).append(n(717));
-                var P = o.getState().playback.muted;
-                o.dispatch((0, I.initializeCaptionsSettings)(P)), o.dispatch((0, N.initializePlaybackSettings)()), o.dispatch((0, R.initializeSettings)()), H.default.render(F.default.createElement(q.Provider, {
+                var C = o.getState().playback.muted;
+                o.dispatch((0, A.initializeCaptionsSettings)(C)), o.dispatch((0, O.initializePlaybackSettings)()), o.dispatch((0, I.initializeSettings)()), F.default.render(U.default.createElement(V.Provider, {
                     store: o
-                }, F.default.createElement(G.I18nextProvider, {
-                    i18n: Y.I18N_INSTANCE
-                }, F.default.createElement(T.StreamInfo, null))), document.getElementById("stream-info")), Z(o), H.default.render(F.default.createElement(b.Seekbar, {
+                }, U.default.createElement(H.I18nextProvider, {
+                    i18n: q.I18N_INSTANCE
+                }, U.default.createElement(b.StreamInfo, null))), document.getElementById("stream-info")), J(o), F.default.render(U.default.createElement(y.Seekbar, {
                     store: o,
                     seek: e.setCurrentTime.bind(e)
-                }), document.getElementById("js-player-seek")), H.default.render(F.default.createElement(w.VolumeSlider, {
+                }), document.getElementById("js-player-seek")), F.default.render(U.default.createElement(S.VolumeSlider, {
                     store: o
-                }), document.getElementById("js-player-volume")), H.default.render(F.default.createElement(C.MutedSegmentsAlert, {
+                }), document.getElementById("js-player-volume")), F.default.render(U.default.createElement(T.MutedSegmentsAlert, {
                     store: o
-                }), document.getElementById("js-player-alert-container")), ne(o), te(o), ee(o), J(o), V(o), H.default.render(F.default.createElement(q.Provider, {
+                }), document.getElementById("js-player-alert-container")), te(o), ee(o), Z(o), X(o), Q(o), F.default.render(U.default.createElement(V.Provider, {
                     store: o
-                }, F.default.createElement(G.I18nextProvider, {
-                    i18n: Y.I18N_INSTANCE
-                }, F.default.createElement(X.InPlayerRecommendationsOverlay, null))), document.getElementById("js-player-recommendations-overlay")), H.default.render(F.default.createElement(q.Provider, {
+                }, U.default.createElement(H.I18nextProvider, {
+                    i18n: q.I18N_INSTANCE
+                }, U.default.createElement(z.InPlayerRecommendationsOverlay, null))), document.getElementById("js-player-recommendations-overlay")), F.default.render(U.default.createElement(V.Provider, {
                     store: o
-                }, F.default.createElement(G.I18nextProvider, {
-                    i18n: Y.I18N_INSTANCE
-                }, F.default.createElement(E.Settings, null))), document.getElementById("js-settings")), a.hookUpForm(t), re = new l.PlayerUIState(t, o), ie = new d.PlayerUIInfo(e, t, o, S), oe = new f.PlayerUIStats(t, o), _e = new p.PlayerUIRecommendations(t, o), ve = new A.PlayerUIError(t, o), ae = new h.PlayerUILeaveDialog(e, t, r, o, S), se = new m.PlayerUILang(t, o), ue = new _.PlayerUISubscribeOverlay(t, o), le = new v.PlayerUIResume(e, i, o, S), de = new O.AgeRestrictionOverlay(t, e, o), fe = new g.PlayerUIControlsDisplay(e, t, o), pe = new c.PlayerUIControls(e, t, o, fe, S), me = new L.AdOverlay(t, o), ye = new D.CollectionOverlay(t, e, o), he = new M.PlayerUIClipsEnabler(t, o, u.localStore, a), ce = new y.PlayerUIClosedCaption(o, t), $(t).attr("data-initializing", !0), e.addEventListener(U.PLAYER_INIT, function() {
+                }, U.default.createElement(H.I18nextProvider, {
+                    i18n: q.I18N_INSTANCE
+                }, U.default.createElement(g.Settings, null))), document.getElementById("js-settings")), D.hookUpForm(t), ne = new s.PlayerUIState(t, o), re = new l.PlayerUIInfo(e, t, o, E), ie = new c.PlayerUIStats(t, o), he = new d.PlayerUIRecommendations(t, o), _e = new P.PlayerUIError(t, o), oe = new f.PlayerUILeaveDialog(e, t, r, o, E), ae = new _.PlayerUILang(t, o), se = new p.PlayerUISubscribeOverlay(t, o), ue = new h.PlayerUIResume(e, i, o, E), ce = new k.AgeRestrictionOverlay(t, e, o), de = new m.PlayerUIControlsDisplay(e, t, o), fe = new u.PlayerUIControls(e, t, o, de, E), ve = new R.AdOverlay(t, o), me = new M.CollectionOverlay(t, e, o), pe = new N.PlayerUIClipsEnabler(t, o, a.localStore, D), le = new v.PlayerUIClosedCaption(o, t), $(t).attr("data-initializing", !0), e.addEventListener(x.PLAYER_INIT, function() {
                     $(t).attr("data-initializing", !1)
                 })
             }
 
-            function V(e) {
-                H.default.render(F.default.createElement(q.Provider, {
+            function Q(e) {
+                F.default.render(U.default.createElement(V.Provider, {
                     store: e
-                }, F.default.createElement(G.I18nextProvider, {
-                    i18n: Y.I18N_INSTANCE
-                }, F.default.createElement(z.CollectionEmptyOverlay, null))), document.getElementById("empty-collection-overlay"))
+                }, U.default.createElement(H.I18nextProvider, {
+                    i18n: q.I18N_INSTANCE
+                }, U.default.createElement(W.CollectionEmptyOverlay, null))), document.getElementById("empty-collection-overlay"))
+            }
+
+            function X(e) {
+                F.default.render(U.default.createElement(V.Provider, {
+                    store: e
+                }, U.default.createElement(H.I18nextProvider, {
+                    i18n: q.I18N_INSTANCE
+                }, U.default.createElement(Y.CollectionTopBar, null))), document.getElementById("collection-topbar"))
             }
 
             function J(e) {
-                H.default.render(F.default.createElement(q.Provider, {
+                F.default.render(U.default.createElement(V.Provider, {
                     store: e
-                }, F.default.createElement(G.I18nextProvider, {
-                    i18n: Y.I18N_INSTANCE
-                }, F.default.createElement(K.CollectionTopBar, null))), document.getElementById("collection-topbar"))
+                }, U.default.createElement(E.StreamStatus, null)), document.getElementById("stream-status"))
             }
 
             function Z(e) {
-                H.default.render(F.default.createElement(q.Provider, {
+                F.default.render(U.default.createElement(V.Provider, {
                     store: e
-                }, F.default.createElement(S.StreamStatus, null)), document.getElementById("stream-status"))
+                }, U.default.createElement(H.I18nextProvider, {
+                    i18n: q.I18N_INSTANCE
+                }, U.default.createElement(K.Experiment, {
+                    uuid: L.OFFLINE_EXPERIENCE,
+                    renderValue: "show"
+                }, U.default.createElement(G.FollowPanel, null)))), document.getElementById("js-follow-panel"))
             }
 
             function ee(e) {
-                H.default.render(F.default.createElement(q.Provider, {
+                F.default.render(U.default.createElement(V.Provider, {
                     store: e
-                }, F.default.createElement(G.I18nextProvider, {
-                    i18n: Y.I18N_INSTANCE
-                }, F.default.createElement(Q.Experiment, {
-                    uuid: x.OFFLINE_EXPERIENCE,
+                }, U.default.createElement(H.I18nextProvider, {
+                    i18n: q.I18N_INSTANCE
+                }, U.default.createElement(K.Experiment, {
+                    uuid: L.AUTO_SUGGEST_NOTIFICATION,
                     renderValue: "show"
-                }, F.default.createElement(W.FollowPanel, null)))), document.getElementById("js-follow-panel"))
+                }, U.default.createElement(w.NotificationPopUpsWrapper, null)))), document.getElementById("js-notification-popup-container"))
             }
 
             function te(e) {
-                H.default.render(F.default.createElement(q.Provider, {
-                    store: e
-                }, F.default.createElement(G.I18nextProvider, {
-                    i18n: Y.I18N_INSTANCE
-                }, F.default.createElement(Q.Experiment, {
-                    uuid: x.AUTO_SUGGEST_NOTIFICATION,
-                    renderValue: "show"
-                }, F.default.createElement(k.NotificationPopUpsWrapper, null)))), document.getElementById("js-notification-popup-container"))
-            }
-
-            function ne(e) {
                 var t = document.getElementById("js-player-extension-root");
-                H.default.render(F.default.createElement(q.Provider, {
+                F.default.render(U.default.createElement(V.Provider, {
                     store: e
-                }, F.default.createElement(G.I18nextProvider, {
-                    i18n: Y.I18N_INSTANCE
-                }, F.default.createElement(P.ExtensionsContainer, {
+                }, U.default.createElement(H.I18nextProvider, {
+                    i18n: q.I18N_INSTANCE
+                }, U.default.createElement(C.ExtensionsContainer, {
                     store: e
                 }))), t)
             }
-            var re = void 0,
+            var ne = void 0,
+                re = void 0,
                 ie = void 0,
                 oe = void 0,
                 ae = void 0,
@@ -24001,60 +24001,57 @@
                 he = void 0,
                 _e = void 0,
                 ve = void 0,
-                me = void 0,
-                ye = void 0;
+                me = void 0;
             this.destroy = function() {
-                re.destroy(), ie.destroy(), oe.destroy(), _e.destroy(), ve.destroy(), ae.destroy(), se.destroy(), ue.destroy(), le.destroy(), fe.destroy(), pe.destroy(), de.destroy(), he.destroy(), ce.destroy(), _e.destroy(), me.destroy(), ye && ye.destroy()
+                ne.destroy(), re.destroy(), ie.destroy(), he.destroy(), _e.destroy(), oe.destroy(), ae.destroy(), se.destroy(), ue.destroy(), de.destroy(), fe.destroy(), ce.destroy(), pe.destroy(), le.destroy(), he.destroy(), ve.destroy(), me && me.destroy()
             }, B()
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.PlayerUI = o;
-        var a = n(1),
-            s = i(a),
-            u = n(254),
-            l = n(420),
-            c = n(422),
-            d = n(424),
-            f = n(426),
-            p = n(427),
-            h = n(429),
-            _ = n(431),
-            v = n(432),
-            m = n(435),
-            y = n(436),
-            g = n(438),
-            b = n(441),
-            E = n(616),
-            T = n(646),
-            S = n(665),
-            C = n(666),
-            w = n(667),
-            P = n(668),
-            k = n(676),
-            A = n(677),
-            O = n(678),
-            I = n(358),
-            N = n(336),
-            R = n(639),
-            M = n(679),
-            L = n(681),
-            D = n(682),
-            x = n(255),
-            j = n(178),
+        var a = n(254),
+            s = n(420),
+            u = n(422),
+            l = n(424),
+            c = n(426),
+            d = n(427),
+            f = n(429),
+            p = n(431),
+            h = n(432),
+            _ = n(435),
+            v = n(436),
+            m = n(438),
+            y = n(441),
+            g = n(616),
+            b = n(646),
+            E = n(665),
+            T = n(666),
+            S = n(667),
+            C = n(668),
+            w = n(676),
+            P = n(677),
+            k = n(678),
+            A = n(358),
+            O = n(336),
+            I = n(639),
+            N = n(679),
+            R = n(681),
+            M = n(682),
+            L = n(255),
+            D = n(178),
+            x = i(D),
+            j = n(281),
             U = r(j),
-            B = n(281),
-            F = i(B),
-            V = n(442),
-            H = i(V),
-            q = n(580),
-            G = n(315),
-            Y = n(684),
-            W = n(656),
-            K = n(703),
-            z = n(705),
-            Q = n(640),
-            X = n(707)
+            B = n(442),
+            F = r(B),
+            V = n(580),
+            H = n(315),
+            q = n(684),
+            G = n(656),
+            Y = n(703),
+            W = n(705),
+            K = n(640),
+            z = n(707)
     }, function(e, t, n) {
         "use strict";
 
@@ -24188,99 +24185,97 @@
         function o(e, t, n, r, i) {
             function o() {
                 var e = i;
-                (0, c.isTwitchEmbed)() || e.player !== f.PLAYER_CURSE && (e = (0, s.default)(e, {
-                    branding: !0
-                })), u(), d(e), a(), r.showControls(h.initialControlsDelay), $(t).attr("data-branding", e.branding), $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showinfo", e.showInfo), A(), I.push(S()), I.push(C())
+                u(), c(e), a(), r.showControls(d.initialControlsDelay), $(t).attr("data-branding", e.branding), $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showinfo", e.showInfo), P(), A.push(E()), A.push(T())
             }
 
             function a() {
-                p(n.getState().screenMode)
+                y(n.getState().screenMode)
             }
 
             function u() {
-                e.addEventListener(y.CASTING_CHANGE, A), e.addEventListener(g.SEEKING, k)
+                e.addEventListener(_.CASTING_CHANGE, P), e.addEventListener(v.SEEKING, w)
             }
 
-            function d(n) {
-                n.player !== f.PLAYER_FRONTPAGE && $(t).on("dblclick", ".js-control-fullscreen-overlay", function(e) {
-                    e.preventDefault(), T()
-                }), $(t).on("click", ".js-control-playpause-button", E), $(t).on("click", ".js-control-play-button", E), $(t).on("click", ".js-control-fullscreen", T), $(t).on("click", ".js-control-theatre", w), $(t).on("click", ".js-chromecast-button", function() {
+            function c(n) {
+                n.player !== l.PLAYER_FRONTPAGE && $(t).on("dblclick", ".js-control-fullscreen-overlay", function(e) {
+                    e.preventDefault(), b()
+                }), $(t).on("click", ".js-control-playpause-button", g), $(t).on("click", ".js-control-play-button", g), $(t).on("click", ".js-control-fullscreen", b), $(t).on("click", ".js-control-theatre", S), $(t).on("click", ".js-chromecast-button", function() {
                     var t = e.getCasting();
                     "available" === t ? e.startCast() : e.stopCast()
                 }), $(t).on("click", ".js-player-alert__close", function() {
                     $(this).closest(".js-player-alert").attr("data-active", !1)
                 }), $(t).on("click", ".js-player-product-close", function(e) {
-                    e.preventDefault(), O()
+                    e.preventDefault(), k()
                 })
             }
 
-            function p(e) {
+            function y(e) {
                 var n = e.isFullScreen,
                     r = e.canFullScreen;
                 $(t).attr("data-isfullscreen", n), $(t).attr("data-canfullscreen", r)
             }
 
-            function E() {
+            function g() {
                 var e = n.getState(),
                     t = e.playback,
                     r = e.analyticsTracker;
-                t.paused ? n.dispatch((0, m.play)()) : n.dispatch((0, m.pause)()), r.trackEvent("player_click_playpause")
+                t.paused ? n.dispatch((0, h.play)()) : n.dispatch((0, h.pause)()), r.trackEvent("player_click_playpause")
             }
 
-            function T() {
+            function b() {
                 var e = n.getState(),
                     t = e.analyticsTracker,
                     r = e.screenMode;
                 t.trackEvent("player_click_fullscreen", {
                     action: !r.isFullScreen
-                }), n.dispatch((0, b.toggleFullScreen)())
+                }), n.dispatch((0, m.toggleFullScreen)())
+            }
+
+            function E() {
+                return (0, f.subscribe)(n, ["screenMode.isFullScreen", "screenMode.canFullScreen"], function(e) {
+                    var t = e.screenMode;
+                    y(t)
+                })
+            }
+
+            function T() {
+                return (0, f.subscribe)(n, ["screenMode.isTheatreMode", "screenMode.canTheatreMode"], function(e) {
+                    var t = e.screenMode;
+                    C(t)
+                })
             }
 
             function S() {
-                return (0, _.subscribe)(n, ["screenMode.isFullScreen", "screenMode.canFullScreen"], function(e) {
-                    var t = e.screenMode;
-                    p(t)
-                })
+                n.dispatch((0, m.toggleTheatreMode)()), n.getState().analyticsTracker.trackEvent("player_click_theater")
             }
 
-            function C() {
-                return (0, _.subscribe)(n, ["screenMode.isTheatreMode", "screenMode.canTheatreMode"], function(e) {
-                    var t = e.screenMode;
-                    P(t)
-                })
+            function C(e) {
+                var n = e.canTheatreMode,
+                    i = e.isTheatreMode;
+                $(t).attr("data-showtheatre", n), $(t).attr("data-theatre", i), r.setHovering(!1), r.showControls(d.hoverControlsDelay)
             }
 
             function w() {
-                n.dispatch((0, b.toggleTheatreMode)()), n.getState().analyticsTracker.trackEvent("player_click_theater")
+                r.showControls(d.hoverControlsDelay)
             }
 
-            function P(e) {
-                var n = e.canTheatreMode,
-                    i = e.isTheatreMode;
-                $(t).attr("data-showtheatre", n), $(t).attr("data-theatre", i), r.setHovering(!1), r.showControls(h.hoverControlsDelay)
-            }
-
-            function k() {
-                r.showControls(h.hoverControlsDelay)
-            }
-
-            function A() {
-                if (n.getState().env.playerType !== f.PLAYER_HIGHLIGHTER) {
+            function P() {
+                if (n.getState().env.playerType !== l.PLAYER_HIGHLIGHTER) {
                     var i = e.getCasting();
                     if ("error" === i && (i = "available"), $(t).attr("data-casting", i), "connected" === i) {
                         var o = e.getCastDevice();
-                        o = (0, l.default)(o) ? o : "Chromecast", n.dispatch((0, v.setDeviceName)(o))
+                        o = (0, s.default)(o) ? o : "Chromecast", n.dispatch((0, p.setDeviceName)(o))
                     }
-                    "connected" === i || "connecting" === i ? ($(t).attr("data-chromecast", "true"), r.showControls()) : ($(t).attr("data-chromecast", "false"), r.showControls(h.hoverControlsDelay))
+                    "connected" === i || "connecting" === i ? ($(t).attr("data-chromecast", "true"), r.showControls()) : ($(t).attr("data-chromecast", "false"), r.showControls(d.hoverControlsDelay))
                 }
             }
 
-            function O() {
+            function k() {
                 $(".js-player-product-overlay", t).attr("data-active", !1)
             }
-            var I = [];
+            var A = [];
             this.destroy = function() {
-                $(t).off("click"), $(t).off("dblclick"), I.forEach(function(e) {
+                $(t).off("click"), $(t).off("dblclick"), A.forEach(function(e) {
                     return e()
                 })
             }, o()
@@ -24288,21 +24283,18 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.PlayerUIControls = o;
-        var a = n(118),
+        var a = n(58),
             s = i(a),
-            u = n(58),
-            l = i(u),
-            c = n(218),
-            d = n(217),
-            f = r(d),
-            p = n(168),
-            h = r(p),
-            _ = n(183),
-            v = n(423),
-            m = n(369),
-            y = n(178),
-            g = n(179),
-            b = n(182)
+            u = n(217),
+            l = r(u),
+            c = n(168),
+            d = r(c),
+            f = n(183),
+            p = n(423),
+            h = n(369),
+            _ = n(178),
+            v = n(179),
+            m = n(182)
     }, function(e, t) {
         "use strict";
 
@@ -24384,7 +24376,7 @@
                     case f.CONTENT_MODE_VOD:
                         return _();
                     case d.CONTENT_MODE_LIVE:
-                        return (0, s.channelUrl)(r.channel.name)
+                        return (0, s.channelUrl)(r.channel.name);
                 }
             }
 
@@ -25750,7 +25742,8 @@
             function t(e, n) {
                 r(this, t);
                 var o = i(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return o.$root = e, o.subscribe(n, ["lang", "env"], o.localizeUI.bind(o)), o.subscribe(n, ["lang", "chromecast"], o.localizeCastOverlay.bind(o)), o.subscribe(n, ["lang", "streamMetadata"], o.localizeAdvertisement.bind(o)), o.localizeUI(n.getState()), o
+                return o.$root = e,
+                    o.subscribe(n, ["lang", "env"], o.localizeUI.bind(o)), o.subscribe(n, ["lang", "chromecast"], o.localizeCastOverlay.bind(o)), o.subscribe(n, ["lang", "streamMetadata"], o.localizeAdvertisement.bind(o)), o.localizeUI(n.getState()), o
             }
             return o(t, e), a(t, [{
                 key: "localizeUI",
@@ -26921,7 +26914,7 @@
                 case "topBlur":
                     return !0;
                 default:
-                    return !1;
+                    return !1
             }
         }
 
@@ -41242,7 +41235,7 @@
             h = n(408),
             _ = n(437),
             v = n(654),
-            m = ["misterrogers"],
+            m = ["misterrogers", "twitchpresents"],
             y = [f.PLAYER_IMDB],
             g = function(e) {
                 return m.indexOf(e) === -1
@@ -47775,6 +47768,7 @@
             a = r(o),
             s = n(766),
             u = {
+                branding: !0,
                 showInfo: !0,
                 showtheatre: !1,
                 collection: "",
@@ -47793,7 +47787,7 @@
         }
 
         function i(e) {
-            var t = (0, a.default)(e, ["showInfo", "collection", "channel", "video", "showtheatre", "tt_content", "tt_medium", "force_preroll", "force_midroll", "force_preroll_id", "force_midroll_id"]);
+            var t = (0, a.default)(e, ["branding", "showInfo", "collection", "channel", "video", "showtheatre", "tt_content", "tt_medium", "force_preroll", "force_midroll", "force_preroll_id", "force_midroll_id"]);
             return {
                 type: s,
                 playerOptions: t
