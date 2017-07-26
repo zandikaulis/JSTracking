@@ -7292,7 +7292,7 @@
 
                     function s(e) {
                         if ("production" !== e && "staging" !== e && "darklaunch" !== e) throw "Invalid Pubsub instance environment";
-                        return null === window.__Twitch__pubsubInstances[e] && (window.__Twitch__pubsubInstances[e] = new k(e)), window.__Twitch__pubsubInstances[e]
+                        return null === window.__Twitch__pubsubInstances[e] && (window.__Twitch__pubsubInstances[e] = new A(e)), window.__Twitch__pubsubInstances[e]
                     }
                     Object.defineProperty(t, "__esModule", {
                         value: !0
@@ -7324,24 +7324,30 @@
                         T = n(29),
                         S = r(T),
                         C = f.default._getLogger("PubsubDriver"),
-                        w = /^https?:\/\/([\w-]+\.)*twitch\.tv(:\d+)?\/.*$/,
-                        P = 1,
-                        k = function(e) {
+                        w = 3e4,
+                        P = /^https?:\/\/([\w-]+\.)*twitch\.tv(:\d+)?\/.*$/,
+                        k = 1,
+                        A = function(e) {
                             function t(e) {
                                 i(this, t);
                                 var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
-                                return n._env = h.default.urlParams.pubsub_environment || e, n._clientReady = !1, n._queuedRequests = [], n._stats = E.Stats.getInstance(n._env, "pubsub-js-client"), n._numDisconnects = 0, h.default.inIframe() && w.test(document.referrer) ? (C.debug("Driver is in an iframe"), n._client = new v.default({
+                                return n._env = h.default.urlParams.pubsub_environment || e, n._clientReady = !1, n._hasDisconnected = !1, n._queuedRequests = [], n._stats = E.Stats.getInstance(n._env, "pubsub-js-client"), n._numDisconnects = 0, h.default.inIframe() && P.test(document.referrer) ? (C.debug("Driver is in an iframe"), n._client = new v.default({
                                     parentUrl: document.referrer
                                 }), n._clientType = "iframe-verified") : (C.debug("Driver is not in an iframe"), n._client = new b.default({
                                     env: n._env,
                                     stats: n._stats
-                                }), n._iframeHost = new y.default(n._client), n._clientType = "ws"), n._stats.setPrefix("pubsub-js-client." + n._clientType), "true" === h.default.urlParams.force_pubsub_tester ? P = 1 : "false" === h.default.urlParams.force_pubsub_tester && (P = 0), Math.random() < P && (n._tester = new S.default({
-                                    env: n._env,
-                                    driver: n,
-                                    stats: n._stats
-                                })), n._client.on("unverified", n._clientUnverified, n), n._client.on("verified", n._clientVerified, n), n._client.verify(), n
+                                }), n._iframeHost = new y.default(n._client), n._clientType = "ws"), n._stats.setPrefix("pubsub-js-client." + n._clientType), "true" === h.default.urlParams.force_pubsub_tester ? k = 1 : "false" === h.default.urlParams.force_pubsub_tester && (k = 0), Math.random() < k && window.setTimeout(n.runTest.bind(n), w), n._client.on("unverified", n._clientUnverified, n), n._client.on("verified", n._clientVerified, n), n._client.verify(), n
                             }
                             return a(t, e), u(t, [{
+                                key: "runTest",
+                                value: function() {
+                                    this._tester = new S.default({
+                                        env: this._env,
+                                        driver: this,
+                                        stats: this._stats
+                                    })
+                                }
+                            }, {
                                 key: "connect",
                                 value: function() {}
                             }, {
@@ -7377,12 +7383,12 @@
                             }, {
                                 key: "_clientConnected",
                                 value: function() {
-                                    C.debug("Client connected"), this._client.on("disconnected", this._clientDisconnected, this), this._stats.logCounter("connected", 1), this._trigger("connected"), this._clientReady = !0, this._flushQueuedRequests()
+                                    C.debug("Client connected"), this._client.on("disconnected", this._clientDisconnected, this), this._stats.logCounter("connected", 1), this._trigger("connected"), this._hasDisconnected && this._trigger("reconnected"), this._clientReady = !0, this._flushQueuedRequests()
                                 }
                             }, {
                                 key: "_clientDisconnected",
                                 value: function() {
-                                    C.debug("Client disconnected"), this._trigger("disconnected"), this._clientReady = !1, this._numDisconnects += 1
+                                    C.debug("Client disconnected"), this._trigger("disconnected"), this._clientReady = !1, this._numDisconnects += 1, this._hasDisconnected = !0
                                 }
                             }, {
                                 key: "_clientVerified",
@@ -7609,7 +7615,7 @@
                         c = "https://pubster.twitch.tv/publish",
                         d = "https://pubster-darklaunch.twitch.tv/publish",
                         f = "pubsubtest.unique.",
-                        p = "pubsubtest.shared." + s.default.randomInt(2),
+                        p = "pubsubtest.shared." + s.default.randomInt(10),
                         h = 1e-4,
                         _ = 6e4,
                         v = 3e4,
@@ -9217,8 +9223,8 @@
                 o(this, e), this.analytics = t, this.player = n, this.store = r, this.ended = !1;
                 var i = r.getState(),
                     a = i.window;
-                n.addEventListener(T.PLAYING, this.onPlaying.bind(this)), n.addEventListener(T.PAUSE, this.onPause.bind(this)), n.addEventListener(T.SEEKING, this.onSeeking.bind(this)), n.addEventListener(T.ENDED, this.onEnded.bind(this)), n.addEventListener(C.AD_START, this.onAdStart.bind(this)), n.addEventListener(C.AD_IMPRESSION, this.onAdImpression.bind(this)), n.addEventListener(C.AD_IMPRESSION_COMPLETE, this.onAdImpressionComplete.bind(this)), n.addEventListener(C.AD_END, this.onAdEnd.bind(this)),
-                    a.addEventListener("beforeunload", this)
+                n.addEventListener(T.PLAYING, this.onPlaying.bind(this)), n.addEventListener(T.PAUSE, this.onPause.bind(this)), n.addEventListener(T.SEEKING, this.onSeeking.bind(this)), n.addEventListener(T.ENDED, this.onEnded.bind(this)), n.addEventListener(C.AD_START, this.onAdStart.bind(this)), n.addEventListener(C.AD_IMPRESSION, this.onAdImpression.bind(this)),
+                    n.addEventListener(C.AD_IMPRESSION_COMPLETE, this.onAdImpressionComplete.bind(this)), n.addEventListener(C.AD_END, this.onAdEnd.bind(this)), a.addEventListener("beforeunload", this)
             }
             return h(e, [{
                 key: "handleEvent",
@@ -10492,7 +10498,7 @@
                                     d.setLabel("ns_st_sp", String(parseInt(d.getLabel("ns_st_sp")) + 1))
                                 },
                                 incrementPauses: function() {
-                                    d.setLabel("ns_st_pp", String(d.getPauses() + 1))
+                                    d.setLabel("ns_st_pp", String(d.getPauses() + 1));
                                 },
                                 addPlaybackTime: function(e) {
                                     if (!isNaN(i)) {
@@ -11033,11 +11039,11 @@
                                     var i = parseInt(r.ns_st_po);
                                     e.getSSECore().resetHeartbeat(), e.getSSECore().resetKeepAlive(), e.getPlaylist().addPlaybackTime(n), e.getPlaylist().getClip().addPlaybackTime(n), e.getPlaylist().getClip().addElapsedTime(n), e.getPlaylist().getClip().addInterval(i);
                                     var o = e.getSSECore().createLabels(u.END, r, n);
-                                    e.getEventManager().newEvent(o), e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1), r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist()
+                                    e.getEventManager().newEvent(o), e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1),
+                                        r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist()
                                 },
                                 onBuffer: function(t, n) {
-                                    e.getSSECore().isPauseOnBufferingEnabled() && e.getSSECore().startPausedOnBufferingTimer(t, n),
-                                        e.getPlaylist().getClip().incrementBufferCount(), e.getPlaylist().setBufferingTimestamp(t), e.getPlaylist().getClip().setBufferingTimestamp(t)
+                                    e.getSSECore().isPauseOnBufferingEnabled() && e.getSSECore().startPausedOnBufferingTimer(t, n), e.getPlaylist().getClip().incrementBufferCount(), e.getPlaylist().setBufferingTimestamp(t), e.getPlaylist().getClip().setBufferingTimestamp(t)
                                 },
                                 onSeekStart: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
@@ -11932,7 +11938,8 @@
                                 }
                             }), a()
                         };
-                    return function(e) {}(s), s.ContentType = e, s.AdType = a, s
+                    return function(e) {}(s), s.ContentType = e,
+                        s.AdType = a, s
                 }()
             }(), e
         })
@@ -13509,7 +13516,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.26-202722+ed7577887d02b28f8d32435f0275d550b7444dcc",
+                    app_version: "2017.07.26-205654+6c8f71a20d0672eb23cb017bcf22651cd2b2a0a8",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -23297,6 +23304,9 @@
                     })), this._unsubscribes.push((0, g.subscribe)(this._store, ["screenMode.isTheatreMode"], function(t) {
                         var n = t.screenMode;
                         e._sendStoreState(), n.isTheatreMode ? e._sendPlayerEvent(E.EVENT_THEATRE_ENTERED) : e._sendPlayerEvent(E.EVENT_THEATRE_EXITED)
+                    })), this._unsubscribes.push((0, g.subscribe)(this._store, ["screenMode.isFullScreen"], function(t) {
+                        var n = t.screenMode;
+                        e._sendStoreState(), n.isFullScreen ? e._sendPlayerEvent(E.EVENT_FULLSCREEN_ENTERED) : e._sendPlayerEvent(E.EVENT_FULLSCREEN_EXITED)
                     }))
                 }
             }, {
@@ -23363,6 +23373,9 @@
                         case E.METHOD_SET_THEATRE:
                             this._store.dispatch((0, h.setTheatreMode)(e.data.args[0]));
                             break;
+                        case E.METHOD_SET_FULLSCREEN:
+                            this._store.dispatch((0, h.setFullScreen)(e.data.args[0]));
+                            break;
                         case E.METHOD_DESTROY:
                             this._player.destroy(), this.destroy(), this._sendAll(E.BRIDGE_DESTROY)
                     }
@@ -23425,7 +23438,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.EmbedClient = t.PLAYBACK_ENDED = t.PLAYBACK_PLAYING = t.PLAYBACK_PAUSED = t.BRIDGE_DESTROY = t.BRIDGE_CLIENT_NAMESPACE = t.BRIDGE_HOST_NAMESPACE = t.BRIDGE_DOCUMENT_EVENT = t.BRIDGE_PLAYER_EVENT = t.BRIDGE_STORE_STATE_UPDATE = t.BRIDGE_STATE_UPDATE = t.BRIDGE_HOST_READY = t.BRIDGE_REQ_SUBSCRIBE = t.METHOD_SET_THEATRE = t.METHOD_DESTROY = t.METHOD_SET_VOLUME = t.METHOD_SET_MUTE = t.METHOD_SET_QUALITY = t.METHOD_SEEK = t.METHOD_SET_COLLECTION = t.METHOD_SET_VIDEO = t.METHOD_SET_CHANNEL = t.METHOD_PAUSE = t.METHOD_PLAY = t.EVENT_THEATRE_EXITED = t.EVENT_THEATRE_ENTERED = t.EVENT_EMBED_VIEWERS_CHANGE = t.EVENT_EMBED_OFFLINE = t.EVENT_EMBED_ONLINE = t.EVENT_EMBED_ENDED = t.EVENT_EMBED_PAUSE = t.EVENT_EMBED_PLAY = t.EVENT_EMBED_READY = void 0;
+        }), t.EmbedClient = t.PLAYBACK_ENDED = t.PLAYBACK_PLAYING = t.PLAYBACK_PAUSED = t.BRIDGE_DESTROY = t.BRIDGE_CLIENT_NAMESPACE = t.BRIDGE_HOST_NAMESPACE = t.BRIDGE_DOCUMENT_EVENT = t.BRIDGE_PLAYER_EVENT = t.BRIDGE_STORE_STATE_UPDATE = t.BRIDGE_STATE_UPDATE = t.BRIDGE_HOST_READY = t.BRIDGE_REQ_SUBSCRIBE = t.METHOD_SET_FULLSCREEN = t.METHOD_SET_THEATRE = t.METHOD_DESTROY = t.METHOD_SET_VOLUME = t.METHOD_SET_MUTE = t.METHOD_SET_QUALITY = t.METHOD_SEEK = t.METHOD_SET_COLLECTION = t.METHOD_SET_VIDEO = t.METHOD_SET_CHANNEL = t.METHOD_PAUSE = t.METHOD_PLAY = t.EVENT_FULLSCREEN_EXITED = t.EVENT_FULLSCREEN_ENTERED = t.EVENT_THEATRE_EXITED = t.EVENT_THEATRE_ENTERED = t.EVENT_EMBED_VIEWERS_CHANGE = t.EVENT_EMBED_OFFLINE = t.EVENT_EMBED_ONLINE = t.EVENT_EMBED_ENDED = t.EVENT_EMBED_PAUSE = t.EVENT_EMBED_PLAY = t.EVENT_EMBED_READY = void 0;
         var a = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -23473,8 +23486,8 @@
                 volume: 0
             },
             g = t.EVENT_EMBED_READY = "ready",
-            b = (t.EVENT_EMBED_PLAY = "play", t.EVENT_EMBED_PAUSE = "pause", t.EVENT_EMBED_ENDED = "ended", t.EVENT_EMBED_ONLINE = "online", t.EVENT_EMBED_OFFLINE = "offline", t.EVENT_EMBED_VIEWERS_CHANGE = "viewerschange", t.EVENT_THEATRE_ENTERED = "theatreentered", t.EVENT_THEATRE_EXITED = "theatreexited", t.METHOD_PLAY = "play", t.METHOD_PAUSE = "pause", t.METHOD_SET_CHANNEL = "channel", t.METHOD_SET_VIDEO = "video", t.METHOD_SET_COLLECTION = "collection", t.METHOD_SEEK = "seek", t.METHOD_SET_QUALITY = "quality", t.METHOD_SET_MUTE = "mute", t.METHOD_SET_VOLUME = "volume", t.METHOD_DESTROY = "destroy"),
-            E = (t.METHOD_SET_THEATRE = "theatre", t.BRIDGE_REQ_SUBSCRIBE = "subscribe"),
+            b = (t.EVENT_EMBED_PLAY = "play", t.EVENT_EMBED_PAUSE = "pause", t.EVENT_EMBED_ENDED = "ended", t.EVENT_EMBED_ONLINE = "online", t.EVENT_EMBED_OFFLINE = "offline", t.EVENT_EMBED_VIEWERS_CHANGE = "viewerschange", t.EVENT_THEATRE_ENTERED = "theatreentered", t.EVENT_THEATRE_EXITED = "theatreexited", t.EVENT_FULLSCREEN_ENTERED = "fullscreenentered", t.EVENT_FULLSCREEN_EXITED = "fullscreenexited", t.METHOD_PLAY = "play", t.METHOD_PAUSE = "pause", t.METHOD_SET_CHANNEL = "channel", t.METHOD_SET_VIDEO = "video", t.METHOD_SET_COLLECTION = "collection", t.METHOD_SEEK = "seek", t.METHOD_SET_QUALITY = "quality", t.METHOD_SET_MUTE = "mute", t.METHOD_SET_VOLUME = "volume", t.METHOD_DESTROY = "destroy"),
+            E = (t.METHOD_SET_THEATRE = "theatre", t.METHOD_SET_FULLSCREEN = "fullscreen", t.BRIDGE_REQ_SUBSCRIBE = "subscribe"),
             T = t.BRIDGE_HOST_READY = "ready",
             S = t.BRIDGE_STATE_UPDATE = "bridgestateupdate",
             C = t.BRIDGE_STORE_STATE_UPDATE = "bridgestorestateupdate",
@@ -26908,7 +26921,7 @@
                 case "topBlur":
                     return !0;
                 default:
-                    return !1
+                    return !1;
             }
         }
 
@@ -26936,8 +26949,7 @@
                     return u(t);
                 case "topKeyPress":
                     var n = t.which;
-                    return n !== C ? null : (k = !0,
-                        w);
+                    return n !== C ? null : (k = !0, w);
                 case "topTextInput":
                     var r = t.data;
                     return r === w && k ? null : r;
