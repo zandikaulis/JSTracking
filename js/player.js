@@ -13507,7 +13507,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.25-230622+6ebfad85d5e6d4197232907d317aab9d888e3b35",
+                    app_version: "2017.07.26-172407+76618d18b04a90b227f0e2db006bc44533bfd9fb",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -13757,7 +13757,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-d3c407.sjc01.hls.ttvnw.net/v1/playlist/CvhqcPmzpFtGjVuhQ8bZSpZAVHjrYrBEhszvawaZciF0v81PzyGl0ghu5t90o_c2KLexnMFRU1-SbFnhFScDbvGaYf9VySPzQ8CM98MaiS7KtsDdMWGbhyrO9GOtcdPEI25N2ZMqXD4V5FrQoLm8-zaW7QhyOtokC56mAB7YW0V1p7e1bPsG-HmLNbOH4HL6DFr0cpJ2IaITXfigzO2S7WhrPyvVApFhT1pfmC_cmUWPt_Z_wakDvkhMM7fUwGsSdHI1Mpaj2zcavhZG9G1n1LQjXQ6Z87jwZA4ctFMAmzfUT9mQMU4ushzcKRKJaJT-D3Mc5fjZryjJ4IozKAzZ_Gjy6xtNGCSe43lzI_n79KQBA7IZfe_n_EQ_ZuPlmLkEHAdrvrtKRpMZT_dQSRFHTUEm_nssYjMzCxFLxZAtfLj0ENQLFL8bpBZqvlI-1FT6EliMSg37nhVz.m3u8"
+        t.trustedSpadeURI = "//video-edge-8cd984.sjc01.hls.ttvnw.net/v1/playlist/CqOAlyW-yWB9ttf7xL5GxragV-1Ojb385l6Yw2VvDtgLWz9OmHB6ViNFVDhIZE2sXxi8VelF3JjXlrLfn7EhH1R0xr0j0DgQNUFzU53jPrmrm9VQ5K600KdpwqbDD6_kwY1_FQFzFMMgdFgtmjASWLKTVHgU-yQ-entp0Tp4PmXqX0MhjRBGbi_Vuu2-UT3qfQnG2gcmQmzN6DmfzgF3bn32vEzSlzJN6GiHjSmnZfdKzPKpLeeyfJc9gx_nDqXX6HGEv3SdIUONKaBloB0Bfko4JPr74c4Z0oEYmD3FOoGJ6pl7gvsmXz7VK-C4Srt455buaeyTIiUGtaJ7RyhQLj4KA7Ml-UOzmkv0pzc-0krYcxtDLCoI6FIh-CwFsAhvvnI9eCfw7U1o7Zi0KzMWLbO5tsF_oG4S5-MbxRGKUxDh7M1rVIlSJjtDejRQYZv_JCGPBlXaEajxQ.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -18439,17 +18439,15 @@
             P = i(w),
             k = n(349),
             A = t.BACKEND_MEDIA_PLAYER = "mediaplayer",
-            O = [0, 1e3, 4e3, 16e3],
-            I = .25,
-            N = new Error("Media resource fetching aborted"),
-            R = new Error("Network Error while fetching media resource"),
-            M = new Error("Error while decoding media resource"),
-            L = new Error("Media resource not supported"),
-            D = {
+            O = new Error("Media resource fetching aborted"),
+            I = new Error("Network Error while fetching media resource"),
+            N = new Error("Error while decoding media resource"),
+            R = new Error("Media resource not supported"),
+            M = {
                 group: "auto",
                 name: "Auto"
             },
-            x = {
+            L = {
                 broadcast_id: 0,
                 cluster: "",
                 manifest_cluster: "",
@@ -18481,17 +18479,17 @@
                 video_buffer_size: 0,
                 volume: 0
             },
-            j = t.BackendMediaPlayer = function() {
+            D = t.BackendMediaPlayer = function() {
                 function e() {
                     var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         n = arguments[1];
-                    a(this, e), this.store = n, this._mediaPlayer = null, this._eventEmitter = new p.default, this._apiCallQueue = [], this._cache = {}, this._readyState = C.HAVE_NOTHING, this._networkState = P.NETWORK_NO_SOURCE, this._retryTimeoutID = null, this._retryCount = 0, this._src = "", this._currentCaptionData = {}, this._mediaPlayerLogLevel = t["cvp-log"] || "error", this.initialize()
+                    a(this, e), this.store = n, this._mediaPlayer = null, this._eventEmitter = new p.default, this._apiCallQueue = [], this._cache = {}, this._readyState = C.HAVE_NOTHING, this._networkState = P.NETWORK_NO_SOURCE, this._hasRetried = !1, this._src = "", this._currentCaptionData = {}, this._mediaPlayerLogLevel = t["cvp-log"] || "error", this.initialize()
                 }
                 return s(e, [{
                     key: "initialize",
                     value: function() {
                         var e = this;
-                        this.loadMediaPlayer().then(function(t) {
+                        return this.loadMediaPlayer().then(function(t) {
                             e._initMediaPlayer(t), e.load()
                         }, function(t) {
                             e.onCoreAnalytics(t)
@@ -18664,12 +18662,12 @@
                                 bandwidth: e.bitrate
                             })
                         };
-                        return [D].concat(o(this._mediaPlayer.getQualities())).map(e)
+                        return [M].concat(o(this._mediaPlayer.getQualities())).map(e)
                     }
                 }, {
                     key: "getQuality",
                     value: function() {
-                        return null === this._mediaPlayer ? null : this._mediaPlayer.getAutoSwitchQuality() ? D : this._mediaPlayer.getQuality().group
+                        return null === this._mediaPlayer ? null : this._mediaPlayer.getAutoSwitchQuality() ? M : this._mediaPlayer.getQuality().group
                     }
                 }, {
                     key: "elapsedTime",
@@ -18699,9 +18697,9 @@
                 }, {
                     key: "getBuffered",
                     value: function() {
-                        if (null === this._mediaPlayer) return new U;
+                        if (null === this._mediaPlayer) return new x;
                         var e = this._mediaPlayer.getPosition();
-                        return new U(e, e + this._mediaPlayer.getBufferDuration())
+                        return new x(e, e + this._mediaPlayer.getBufferDuration())
                     }
                 }, {
                     key: "getReadyState",
@@ -18806,7 +18804,7 @@
                                 volume: i.getVolume()
                             }
                         }
-                        return Object.assign({}, x, r, o)
+                        return Object.assign({}, L, r, o)
                     }
                 }, {
                     key: "setPlaybackRate",
@@ -18821,7 +18819,7 @@
                 }, {
                     key: "getPlayed",
                     value: function() {
-                        return new U
+                        return new x
                     }
                 }, {
                     key: "getStatsEnabled",
@@ -18836,13 +18834,7 @@
                 }, {
                     key: "destroy",
                     value: function() {
-                        this._mediaPlayer ? (this._mediaPlayer.delete(), this._mediaPlayer = null) : this._apiCallQueue.push(this.destroy.bind(this)), this.store.getState().window.clearTimeout(this._retryTimeoutID)
-                    }
-                }, {
-                    key: "_getPeriodWithJitter",
-                    value: function(e) {
-                        var t = I * (1 - 2 * Math.random());
-                        return e * (1 + t)
+                        this._mediaPlayer ? (this._mediaPlayer.delete(), this._mediaPlayer = null) : this._apiCallQueue.push(this.destroy.bind(this))
                     }
                 }, {
                     key: "_retryStreamLoad",
@@ -18850,20 +18842,14 @@
                         var e = this,
                             t = this.store.getState(),
                             n = t.stream;
-                        return this._retryTimeoutID = null, this.src = "", this.initialize(), n.resetNAuthToken(), n.streamUrl.then(function(t) {
+                        return this.src = "", this.initialize(), n.resetNAuthToken(), n.streamUrl.then(function(t) {
                             e.setSrc(t), e.play()
                         })
                     }
                 }, {
                     key: "_onAuthError",
                     value: function() {
-                        if (null !== this._retryTimeoutID) return void this._eventEmitter.emit(d.ERROR, new Error("Authorization error while retry in progress"));
-                        if (this._retryCount < O.length) {
-                            var e = this.store.getState(),
-                                t = e.window,
-                                n = this._getPeriodWithJitter(O[this._retryCount]);
-                            this._retryTimeoutID = t.setTimeout(this._retryStreamLoad.bind(this), n), this._retryCount++
-                        } else this._eventEmitter.emit(d.ERROR, new Error("Authorization Error"))
+                        this._hasRetried ? this._eventEmitter.emit(d.ERROR, new Error("Content not available")) : (this._hasRetried = !0, this._retryStreamLoad())
                     }
                 }, {
                     key: "_onOfflineError",
@@ -18903,16 +18889,16 @@
                                 case e.ErrorType.AUTHORIZATION:
                                     return void t._onAuthError();
                                 case e.ErrorType.NOT_SUPPORTED:
-                                    t._mediaError = L;
+                                    t._mediaError = R;
                                     break;
                                 case e.ErrorType.NETWORK:
-                                    t._mediaError = R;
+                                    t._mediaError = I;
                                     break;
                                 case e.ErrorType.NETWORK_IO:
-                                    t._mediaError = R;
+                                    t._mediaError = I;
                                     break;
                                 default:
-                                    i === e.ErrorSource.DECODER ? t._mediaError = M : (console.error("MediaPlayer failed", r), t._mediaError = N)
+                                    i === e.ErrorSource.DECODER ? t._mediaError = N : (console.error("MediaPlayer failed", r), t._mediaError = O)
                             }
                             t._eventEmitter.emit(d.ERROR, t._mediaError)
                         }), n.addEventListener(e.PlayerEvent.REBUFFERING, function() {
@@ -18943,7 +18929,7 @@
                         }), n.addEventListener(e.PlayerState.ENDED, function() {
                             t._readyState = C.HAVE_NOTHING, t._networkState = P.NETWORK_EMPTY, t._eventEmitter.emit(d.ENDED), t._eventEmitter.emit(d.EMPTIED)
                         }), n.addEventListener(e.PlayerState.READY, function() {
-                            t._retryCount = 0, t._readyState = C.HAVE_METADATA, t._networkState = C.NETWORK_IDLE;
+                            t._hasRetried = !1, t._readyState = C.HAVE_METADATA, t._networkState = C.NETWORK_IDLE;
                             var e = t.store.getState(),
                                 r = e.analytics;
                             t.store.dispatch((0, k.trackEvent)(l.VIDEO_PLAY_MASTER_MANIFEST, {
@@ -18979,10 +18965,10 @@
                     }
                 }]), e
             }();
-        j.canPlay = function() {
+        D.canPlay = function() {
             return g.default.canLoad()
         };
-        var U = function() {
+        var x = function() {
             function e(t, n) {
                 a(this, e), this.length = "undefined" == typeof t ? 0 : 1, this._start = t, this._end = n
             }
