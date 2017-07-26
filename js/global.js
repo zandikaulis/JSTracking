@@ -15583,7 +15583,8 @@ googletag.cmd = googletag.cmd || [],
                 MEDIAPLAYER_BACKEND_SELECT: "2c137391-5182-429f-8760-9f71e4d40918",
                 LATENCY_COMPONENT_INSTRUMENTATION: "4e9d0a3c-4f43-4817-8db4-ac060fc32b74",
                 TRENDING_EMOTES: "35731f0a-bd57-4582-915d-907dee75b3d4",
-                LEEROY_JENKINS: "59c5198b-ea6d-423d-b337-ea93d0dc8d66"
+                LEEROY_JENKINS: "59c5198b-ea6d-423d-b337-ea93d0dc8d66",
+                DEMOGRAPHIC_STATS: "ca305459-aec3-4d0c-b4e4-93d8cda54bba"
             },
             r = {
                 "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458": "no",
@@ -15640,7 +15641,8 @@ googletag.cmd = googletag.cmd || [],
                 "3e44f0d0-68fe-4cc9-9e2e-e85718c13d3d": "control",
                 "4e9d0a3c-4f43-4817-8db4-ac060fc32b74": "control",
                 "35731f0a-bd57-4582-915d-907dee75b3d4": "control",
-                "59c5198b-ea6d-423d-b337-ea93d0dc8d66": "no"
+                "59c5198b-ea6d-423d-b337-ea93d0dc8d66": "no",
+                "ca305459-aec3-4d0c-b4e4-93d8cda54bba": "no"
             },
             o = {},
             s = {
@@ -16712,33 +16714,32 @@ googletag.cmd = googletag.cmd || [],
                 i.alert.apply(i, arguments)
             };
         i._dispatch = function(t, i, r, o) {
-                "function" == typeof(r = r || {}) && (o = r, r = {});
-                var s = e.defaults({
-                    type: t,
-                    text: i,
-                    callback: {
-                        onClose: o || !1
-                    }
-                }, r, n);
-                return s.escape && (s.text = _.escape(i)), noty(s)
-            }, i.alert = function(e, t, n) {
-                return i._dispatch("alert", e, t, n)
-            },
-            i.notice = function(e, t, n) {
-                return i._dispatch("notice", e, t, n)
-            }, i.success = function(e, t, n) {
-                return i._dispatch("success", e, t, n)
-            }, i.error = function(e, t, n) {
-                return i._dispatch("error", e, t, n)
-            }, i.flash = function(e, n) {
-                var r = t("#header_notification"),
-                    o = r.find(".flash-error"),
-                    s = r.find(".flash-success"),
-                    a = r.find(".flash-notice");
-                return o.length ? i.error(o.text(), e, n) : s.length ? i.success(s.text(), e, n) : a.length ? i.alert(a.text(), e, n) : void 0
-            }, e.mixin({
-                notify: i
-            })
+            "function" == typeof(r = r || {}) && (o = r, r = {});
+            var s = e.defaults({
+                type: t,
+                text: i,
+                callback: {
+                    onClose: o || !1
+                }
+            }, r, n);
+            return s.escape && (s.text = _.escape(i)), noty(s)
+        }, i.alert = function(e, t, n) {
+            return i._dispatch("alert", e, t, n)
+        }, i.notice = function(e, t, n) {
+            return i._dispatch("notice", e, t, n)
+        }, i.success = function(e, t, n) {
+            return i._dispatch("success", e, t, n)
+        }, i.error = function(e, t, n) {
+            return i._dispatch("error", e, t, n)
+        }, i.flash = function(e, n) {
+            var r = t("#header_notification"),
+                o = r.find(".flash-error"),
+                s = r.find(".flash-success"),
+                a = r.find(".flash-notice");
+            return o.length ? i.error(o.text(), e, n) : s.length ? i.success(s.text(), e, n) : a.length ? i.alert(a.text(), e, n) : void 0
+        }, e.mixin({
+            notify: i
+        })
     }(Twitch, jQuery), window.sp_cid = "qFEaZsFQnwEdUIs",
     function(e, t) {
         var n = new RSVP.Promise(function(e, n) {
