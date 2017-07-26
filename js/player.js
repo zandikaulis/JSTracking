@@ -13520,7 +13520,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.26-222348+5173a16a9721cc91b080811389a1ff355de4163c",
+                    app_version: "2017.07.26-231514+673668de274b443d34d2b93b3e80f814ef42c516",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -38710,6 +38710,8 @@
             var t = e.playerType,
                 n = e.streamType;
             switch (t) {
+                case f.PLAYER_FACEBOOK:
+                    return n === p.TYPE_DEAD_LTV ? a.default.createElement(d.CenteredFollowPanelContainer, null) : null;
                 case f.PLAYER_POPOUT:
                 case f.PLAYER_SITE:
                 case f.PLAYER_EMBED:
@@ -41067,8 +41069,7 @@
             }, {
                 key: "_onPlaying",
                 value: function() {
-                    this.$root.attr("data-overlay") !== k && (this.player.setMuted(!0),
-                        this.store.dispatch((0, h.pause)()))
+                    this.$root.attr("data-overlay") !== k && (this.player.setMuted(!0), this.store.dispatch((0, h.pause)()))
                 }
             }, {
                 key: "_setOverlay",
@@ -42192,43 +42193,44 @@
                     return i.data = n, i.options = r, i
                 }
                 return u(t, e), t.prototype.addNamespaces = function(e) {
-                    this.options.ns.indexOf(e) < 0 && this.options.ns.push(e)
-                }, t.prototype.removeNamespaces = function(e) {
-                    var t = this.options.ns.indexOf(e);
-                    t > -1 && this.options.ns.splice(t, 1)
-                }, t.prototype.getResource = function(e, t, n) {
-                    var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-                        i = r.keySeparator || this.options.keySeparator;
-                    void 0 === i && (i = ".");
-                    var o = [e, t];
-                    return n && "string" != typeof n && (o = o.concat(n)), n && "string" == typeof n && (o = o.concat(i ? n.split(i) : n)), e.indexOf(".") > -1 && (o = e.split(".")), p.getPath(this.data, o)
-                }, t.prototype.addResource = function(e, t, n, r) {
-                    var i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {
-                            silent: !1
-                        },
-                        o = this.options.keySeparator;
-                    void 0 === o && (o = ".");
-                    var a = [e, t];
-                    n && (a = a.concat(o ? n.split(o) : n)), e.indexOf(".") > -1 && (a = e.split("."), r = t, t = a[1]), this.addNamespaces(t), p.setPath(this.data, a, r), i.silent || this.emit("added", e, t, n, r)
-                }, t.prototype.addResources = function(e, t, n) {
-                    for (var r in n) "string" == typeof n[r] && this.addResource(e, t, r, n[r], {
-                        silent: !0
-                    });
-                    this.emit("added", e, t, n)
-                }, t.prototype.addResourceBundle = function(e, t, n, r, i) {
-                    var o = [e, t];
-                    e.indexOf(".") > -1 && (o = e.split("."), r = n, n = t, t = o[1]), this.addNamespaces(t);
-                    var a = p.getPath(this.data, o) || {};
-                    r ? p.deepExtend(a, n, i) : a = l({}, a, n), p.setPath(this.data, o, a), this.emit("added", e, t, n)
-                }, t.prototype.removeResourceBundle = function(e, t) {
-                    this.hasResourceBundle(e, t) && delete this.data[e][t], this.removeNamespaces(t), this.emit("removed", e, t)
-                }, t.prototype.hasResourceBundle = function(e, t) {
-                    return void 0 !== this.getResource(e, t)
-                }, t.prototype.getResourceBundle = function(e, t) {
-                    return t || (t = this.options.defaultNS), "v1" === this.options.compatibilityAPI ? l({}, this.getResource(e, t)) : this.getResource(e, t)
-                }, t.prototype.toJSON = function() {
-                    return this.data
-                }, t
+                        this.options.ns.indexOf(e) < 0 && this.options.ns.push(e)
+                    }, t.prototype.removeNamespaces = function(e) {
+                        var t = this.options.ns.indexOf(e);
+                        t > -1 && this.options.ns.splice(t, 1)
+                    },
+                    t.prototype.getResource = function(e, t, n) {
+                        var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+                            i = r.keySeparator || this.options.keySeparator;
+                        void 0 === i && (i = ".");
+                        var o = [e, t];
+                        return n && "string" != typeof n && (o = o.concat(n)), n && "string" == typeof n && (o = o.concat(i ? n.split(i) : n)), e.indexOf(".") > -1 && (o = e.split(".")), p.getPath(this.data, o)
+                    }, t.prototype.addResource = function(e, t, n, r) {
+                        var i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {
+                                silent: !1
+                            },
+                            o = this.options.keySeparator;
+                        void 0 === o && (o = ".");
+                        var a = [e, t];
+                        n && (a = a.concat(o ? n.split(o) : n)), e.indexOf(".") > -1 && (a = e.split("."), r = t, t = a[1]), this.addNamespaces(t), p.setPath(this.data, a, r), i.silent || this.emit("added", e, t, n, r)
+                    }, t.prototype.addResources = function(e, t, n) {
+                        for (var r in n) "string" == typeof n[r] && this.addResource(e, t, r, n[r], {
+                            silent: !0
+                        });
+                        this.emit("added", e, t, n)
+                    }, t.prototype.addResourceBundle = function(e, t, n, r, i) {
+                        var o = [e, t];
+                        e.indexOf(".") > -1 && (o = e.split("."), r = n, n = t, t = o[1]), this.addNamespaces(t);
+                        var a = p.getPath(this.data, o) || {};
+                        r ? p.deepExtend(a, n, i) : a = l({}, a, n), p.setPath(this.data, o, a), this.emit("added", e, t, n)
+                    }, t.prototype.removeResourceBundle = function(e, t) {
+                        this.hasResourceBundle(e, t) && delete this.data[e][t], this.removeNamespaces(t), this.emit("removed", e, t)
+                    }, t.prototype.hasResourceBundle = function(e, t) {
+                        return void 0 !== this.getResource(e, t)
+                    }, t.prototype.getResourceBundle = function(e, t) {
+                        return t || (t = this.options.defaultNS), "v1" === this.options.compatibilityAPI ? l({}, this.getResource(e, t)) : this.getResource(e, t)
+                    }, t.prototype.toJSON = function() {
+                        return this.data
+                    }, t
             }(d.default);
         t.default = h
     }, function(e, t) {
@@ -44605,8 +44607,7 @@
             f = t.RecCloseButton = function(e) {
                 var t = e.onClick,
                     n = e.className,
-                    r = (0,
-                        c.default)("pl-close-button", n);
+                    r = (0, c.default)("pl-close-button", n);
                 return o.default.createElement(u.Button, {
                     className: r,
                     onClick: t
