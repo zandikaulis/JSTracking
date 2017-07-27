@@ -2463,13 +2463,13 @@ window.SiteOptions = {
                 "weight": 100,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "10min"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "20min"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "30min"
             }, {
                 "weight": 0,
