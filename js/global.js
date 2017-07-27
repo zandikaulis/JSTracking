@@ -15132,30 +15132,6 @@ googletag.cmd = googletag.cmd || [],
         })
     }(jQuery),
     function(e) {
-        var t = "http://taps.io/ZMdg?referrer=alert_upsell";
-        window.mobileNotification = function() {
-            [{
-                userAgentMatchingPattern: /iPhone|iPod|iPad/i,
-                message: i18n("Get the iOS app to watch Twitch anywhere."),
-                onconfirm: function() {
-                    document.location.href = t
-                }
-            }, {
-                userAgentMatchingPattern: /Android|Dalvik|GINGERBREAD/,
-                message: i18n("Get the Android app to watch Twitch anywhere."),
-                onconfirm: function() {
-                    document.location.href = t
-                }
-            }].forEach(function(e) {
-                !navigator.userAgent.match(e.userAgentMatchingPattern) || navigator.userAgent.match(/IEMobile|Windows Phone/) || Twitch.storage.get("mobile_pushover", {
-                    storage: "sessionStorage"
-                }) || (Twitch.storage.set("mobile_pushover", "true", {
-                    storage: "sessionStorage"
-                }), confirm(e.message) && e.onconfirm())
-            })
-        }
-    }(jQuery),
-    function(e) {
         window.onPopoutClose = function(e, t) {
             var n = setInterval(function() {
                 if (e) {
@@ -16743,17 +16719,18 @@ googletag.cmd = googletag.cmd || [],
     function(e, t) {
         var n = new RSVP.Promise(function(e, n) {
                 t.ajax({
-                    url: "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
-                    dataType: "script",
-                    timeout: 2e3,
-                    cache: !0
-                }).fail(function(e, t, i) {
-                    n()
-                }), document.addEventListener("sp.blocking", function() {
-                    e(!0)
-                }), document.addEventListener("sp.not_blocking", function() {
-                    e(!1)
-                })
+                        url: "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
+                        dataType: "script",
+                        timeout: 2e3,
+                        cache: !0
+                    }).fail(function(e, t, i) {
+                        n()
+                    }),
+                    document.addEventListener("sp.blocking", function() {
+                        e(!0)
+                    }), document.addEventListener("sp.not_blocking", function() {
+                        e(!1)
+                    })
             }),
             i = {
                 detect: n,
