@@ -1556,10 +1556,10 @@ window.SiteOptions = {
             "name": "LTV",
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }]
         },
