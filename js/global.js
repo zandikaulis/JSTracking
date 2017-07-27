@@ -15583,7 +15583,8 @@ googletag.cmd = googletag.cmd || [],
                 LATENCY_COMPONENT_INSTRUMENTATION: "4e9d0a3c-4f43-4817-8db4-ac060fc32b74",
                 TRENDING_EMOTES: "35731f0a-bd57-4582-915d-907dee75b3d4",
                 LEEROY_JENKINS: "59c5198b-ea6d-423d-b337-ea93d0dc8d66",
-                DEMOGRAPHIC_STATS: "ca305459-aec3-4d0c-b4e4-93d8cda54bba"
+                DEMOGRAPHIC_STATS: "ca305459-aec3-4d0c-b4e4-93d8cda54bba",
+                CRUNCHYROLL_BUTTON: "fe5bad1f-521b-4ab9-9cd4-8161ef779550"
             },
             r = {
                 "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458": "no",
@@ -15640,7 +15641,8 @@ googletag.cmd = googletag.cmd || [],
                 "4e9d0a3c-4f43-4817-8db4-ac060fc32b74": "control",
                 "35731f0a-bd57-4582-915d-907dee75b3d4": "control",
                 "59c5198b-ea6d-423d-b337-ea93d0dc8d66": "no",
-                "ca305459-aec3-4d0c-b4e4-93d8cda54bba": "no"
+                "ca305459-aec3-4d0c-b4e4-93d8cda54bba": "no",
+                "fe5bad1f-521b-4ab9-9cd4-8161ef779550": "control"
             },
             o = {},
             s = {
