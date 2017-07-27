@@ -76,7 +76,7 @@
             function o() {
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                     t = (0, d.default)(e) ? T.parse(e) : e;
-                return h(t), (0, S.isTwitchEmbed)() || ((0, l.default)(Fe, t.player) || (t = (0, p.default)(t, w.embedParameters)), t.player !== A.PLAYER_CURSE && (t.branding = !0)), t.backend = a(t), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== A.PLAYER_HIGHLIGHTER, t = (0, s.default)(t, {
+                return h(t), (0, S.isTwitchEmbed)() || ((0, l.default)(Fe, t.player) || (t = (0, p.default)(t, w.embedParameters)), t.player !== A.PLAYER_CURSE && t.player !== A.PLAYER_TWILIGHT && (t.branding = !0)), t.backend = a(t), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== A.PLAYER_HIGHLIGHTER, t = (0, s.default)(t, {
                     time: t.t
                 }), (0, l.default)(["mse", "mseDev"], P.localStore.get("backend")) && P.localStore.set("backend", F.BACKEND_PLAYER_CORE), t = (0, s.default)(t, {
                     volume: P.localStore.get("volume"),
@@ -320,7 +320,7 @@
             timeout: 2e3,
             cache: !0
         })));
-        var Fe = Object.freeze([A.PLAYER_IMDB, A.PLAYER_CURSE]);
+        var Fe = Object.freeze([A.PLAYER_IMDB, A.PLAYER_CURSE, A.PLAYER_TWILIGHT]);
         window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = o, window.Twitch.Player = o, window.Twitch.Player.PROMPT_LOGIN = Re.PROMPT_LOGIN_MODAL
     }, function(e, t, n) {
         var r = n(2),
@@ -1676,7 +1676,7 @@
                     void 0 === n && (n = {}), void 0 === r && (r = "");
                     var i = new XMLHttpRequest;
                     return i.open(e, t, !0), n && Object.keys(n).forEach(function(e) {
-                        n.hasOwnProperty(e) && i.setRequestHeader(e, n[e])
+                        n.hasOwnProperty(e) && i.setRequestHeader(e, n[e]);
                     }), new o.f(function(n, o) {
                         i.onreadystatechange = function() {
                             i.readyState === a && (i.status >= 200 && i.status < 300 ? n(i.responseText) : o(new Error("dobbin.js " + e + " " + t + " responded " + i.status + "\n" + i.responseText)))
@@ -3068,81 +3068,82 @@
                 s = this,
                 u = s.EventEmitter;
             a.getListeners = function(e) {
-                var t, n, r = this._getEvents();
-                if (e instanceof RegExp) {
-                    t = {};
-                    for (n in r) r.hasOwnProperty(n) && e.test(n) && (t[n] = r[n])
-                } else t = r[e] || (r[e] = []);
-                return t
-            }, a.flattenListeners = function(e) {
-                var t, n = [];
-                for (t = 0; t < e.length; t += 1) n.push(e[t].listener);
-                return n
-            }, a.getListenersAsObject = function(e) {
-                var t, n = this.getListeners(e);
-                return n instanceof Array && (t = {}, t[e] = n), t || n
-            }, a.addListener = function(e, t) {
-                var n, r = this.getListenersAsObject(e),
-                    o = "object" == typeof t;
-                for (n in r) r.hasOwnProperty(n) && i(r[n], t) === -1 && r[n].push(o ? t : {
-                    listener: t,
-                    once: !1
-                });
-                return this
-            }, a.on = o("addListener"), a.addOnceListener = function(e, t) {
-                return this.addListener(e, {
-                    listener: t,
-                    once: !0
-                })
-            }, a.once = o("addOnceListener"), a.defineEvent = function(e) {
-                return this.getListeners(e), this
-            }, a.defineEvents = function(e) {
-                for (var t = 0; t < e.length; t += 1) this.defineEvent(e[t]);
-                return this
-            }, a.removeListener = function(e, t) {
-                var n, r, o = this.getListenersAsObject(e);
-                for (r in o) o.hasOwnProperty(r) && (n = i(o[r], t), n !== -1 && o[r].splice(n, 1));
-                return this
-            }, a.off = o("removeListener"), a.addListeners = function(e, t) {
-                return this.manipulateListeners(!1, e, t)
-            }, a.removeListeners = function(e, t) {
-                return this.manipulateListeners(!0, e, t)
-            }, a.manipulateListeners = function(e, t, n) {
-                var r, i, o = e ? this.removeListener : this.addListener,
-                    a = e ? this.removeListeners : this.addListeners;
-                if ("object" != typeof t || t instanceof RegExp)
-                    for (r = n.length; r--;) o.call(this, t, n[r]);
-                else
-                    for (r in t) t.hasOwnProperty(r) && (i = t[r]) && ("function" == typeof i ? o.call(this, r, i) : a.call(this, r, i));
-                return this
-            }, a.removeEvent = function(e) {
-                var t, n = typeof e,
-                    r = this._getEvents();
-                if ("string" === n) delete r[e];
-                else if (e instanceof RegExp)
-                    for (t in r) r.hasOwnProperty(t) && e.test(t) && delete r[t];
-                else delete this._events;
-                return this
-            }, a.removeAllListeners = o("removeEvent"), a.emitEvent = function(e, t) {
-                var n, r, i, o, a, s = this.getListenersAsObject(e);
-                for (o in s)
-                    if (s.hasOwnProperty(o))
-                        for (n = s[o].slice(0), i = n.length; i--;) r = n[i], r.once === !0 && this.removeListener(e, r.listener), a = r.listener.apply(this, t || []), a === this._getOnceReturnValue() && this.removeListener(e, r.listener);
-                return this
-            }, a.trigger = o("emitEvent"), a.emit = function(e) {
-                var t = Array.prototype.slice.call(arguments, 1);
-                return this.emitEvent(e, t)
-            }, a.setOnceReturnValue = function(e) {
-                return this._onceReturnValue = e, this
-            }, a._getOnceReturnValue = function() {
-                return !this.hasOwnProperty("_onceReturnValue") || this._onceReturnValue
-            }, a._getEvents = function() {
-                return this._events || (this._events = {})
-            }, t.noConflict = function() {
-                return s.EventEmitter = u, t
-            }, r = function() {
-                return t
-            }.call(s, n, s, e), !(void 0 !== r && (e.exports = r))
+                    var t, n, r = this._getEvents();
+                    if (e instanceof RegExp) {
+                        t = {};
+                        for (n in r) r.hasOwnProperty(n) && e.test(n) && (t[n] = r[n])
+                    } else t = r[e] || (r[e] = []);
+                    return t
+                }, a.flattenListeners = function(e) {
+                    var t, n = [];
+                    for (t = 0; t < e.length; t += 1) n.push(e[t].listener);
+                    return n
+                }, a.getListenersAsObject = function(e) {
+                    var t, n = this.getListeners(e);
+                    return n instanceof Array && (t = {}, t[e] = n), t || n
+                }, a.addListener = function(e, t) {
+                    var n, r = this.getListenersAsObject(e),
+                        o = "object" == typeof t;
+                    for (n in r) r.hasOwnProperty(n) && i(r[n], t) === -1 && r[n].push(o ? t : {
+                        listener: t,
+                        once: !1
+                    });
+                    return this
+                }, a.on = o("addListener"), a.addOnceListener = function(e, t) {
+                    return this.addListener(e, {
+                        listener: t,
+                        once: !0
+                    })
+                }, a.once = o("addOnceListener"), a.defineEvent = function(e) {
+                    return this.getListeners(e), this
+                }, a.defineEvents = function(e) {
+                    for (var t = 0; t < e.length; t += 1) this.defineEvent(e[t]);
+                    return this
+                }, a.removeListener = function(e, t) {
+                    var n, r, o = this.getListenersAsObject(e);
+                    for (r in o) o.hasOwnProperty(r) && (n = i(o[r], t), n !== -1 && o[r].splice(n, 1));
+                    return this
+                }, a.off = o("removeListener"), a.addListeners = function(e, t) {
+                    return this.manipulateListeners(!1, e, t)
+                }, a.removeListeners = function(e, t) {
+                    return this.manipulateListeners(!0, e, t)
+                }, a.manipulateListeners = function(e, t, n) {
+                    var r, i, o = e ? this.removeListener : this.addListener,
+                        a = e ? this.removeListeners : this.addListeners;
+                    if ("object" != typeof t || t instanceof RegExp)
+                        for (r = n.length; r--;) o.call(this, t, n[r]);
+                    else
+                        for (r in t) t.hasOwnProperty(r) && (i = t[r]) && ("function" == typeof i ? o.call(this, r, i) : a.call(this, r, i));
+                    return this
+                }, a.removeEvent = function(e) {
+                    var t, n = typeof e,
+                        r = this._getEvents();
+                    if ("string" === n) delete r[e];
+                    else if (e instanceof RegExp)
+                        for (t in r) r.hasOwnProperty(t) && e.test(t) && delete r[t];
+                    else delete this._events;
+                    return this
+                }, a.removeAllListeners = o("removeEvent"), a.emitEvent = function(e, t) {
+                    var n, r, i, o, a, s = this.getListenersAsObject(e);
+                    for (o in s)
+                        if (s.hasOwnProperty(o))
+                            for (n = s[o].slice(0), i = n.length; i--;) r = n[i], r.once === !0 && this.removeListener(e, r.listener), a = r.listener.apply(this, t || []), a === this._getOnceReturnValue() && this.removeListener(e, r.listener);
+                    return this
+                }, a.trigger = o("emitEvent"), a.emit = function(e) {
+                    var t = Array.prototype.slice.call(arguments, 1);
+                    return this.emitEvent(e, t)
+                },
+                a.setOnceReturnValue = function(e) {
+                    return this._onceReturnValue = e, this
+                }, a._getOnceReturnValue = function() {
+                    return !this.hasOwnProperty("_onceReturnValue") || this._onceReturnValue
+                }, a._getEvents = function() {
+                    return this._events || (this._events = {})
+                }, t.noConflict = function() {
+                    return s.EventEmitter = u, t
+                }, r = function() {
+                    return t
+                }.call(s, n, s, e), !(void 0 !== r && (e.exports = r))
         }).call(this)
     }, function(e, t) {
         "use strict";
@@ -4878,12 +4879,12 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.PLAYER_IMDB = t.PLAYER_PULSE = t.PLAYER_TWITCH_EVERYWHERE = t.PLAYER_HIGHLIGHTER = t.PLAYER_FACEBOOK = t.PLAYER_CURSE = t.PLAYER_CREATIVE = t.PLAYER_DASHBOARD = t.PLAYER_FRONTPAGE = t.PLAYER_POPOUT = t.PLAYER_EMBED = t.PLAYER_SITE_MINI = t.PLAYER_SITE = void 0, t.isEmbed = r, t.getPlayerType = i;
+        }), t.PLAYER_TWILIGHT = t.PLAYER_IMDB = t.PLAYER_PULSE = t.PLAYER_TWITCH_EVERYWHERE = t.PLAYER_HIGHLIGHTER = t.PLAYER_FACEBOOK = t.PLAYER_CURSE = t.PLAYER_CREATIVE = t.PLAYER_DASHBOARD = t.PLAYER_FRONTPAGE = t.PLAYER_POPOUT = t.PLAYER_EMBED = t.PLAYER_SITE_MINI = t.PLAYER_SITE = void 0, t.isEmbed = r, t.getPlayerType = i;
         var o = n(218),
             a = t.PLAYER_SITE = "site",
             s = (t.PLAYER_SITE_MINI = "site_mini", t.PLAYER_EMBED = "embed"),
             u = t.PLAYER_POPOUT = "popout";
-        t.PLAYER_FRONTPAGE = "frontpage", t.PLAYER_DASHBOARD = "dashboard", t.PLAYER_CREATIVE = "creative", t.PLAYER_CURSE = "curse", t.PLAYER_FACEBOOK = "facebook", t.PLAYER_HIGHLIGHTER = "highlighter", t.PLAYER_TWITCH_EVERYWHERE = "twitch_everywhere", t.PLAYER_PULSE = "pulse", t.PLAYER_IMDB = "imdb"
+        t.PLAYER_FRONTPAGE = "frontpage", t.PLAYER_DASHBOARD = "dashboard", t.PLAYER_CREATIVE = "creative", t.PLAYER_CURSE = "curse", t.PLAYER_FACEBOOK = "facebook", t.PLAYER_HIGHLIGHTER = "highlighter", t.PLAYER_TWITCH_EVERYWHERE = "twitch_everywhere", t.PLAYER_PULSE = "pulse", t.PLAYER_IMDB = "imdb", t.PLAYER_TWILIGHT = "twilight"
     }, function(e, t, n) {
         "use strict";
 
@@ -13520,7 +13521,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.26-234109+4e11f3037f304b717560ae94c1a9788edd878ea1",
+                    app_version: "2017.07.27-222000+771de5647f4681adc07a0b3b08cfb57d1c2f6f92",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -13770,7 +13771,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-8cd984.sjc01.hls.ttvnw.net/v1/playlist/CqOAlyW-yWB9ttf7xL5GxragV-1Ojb385l6Yw2VvDtgLWz9OmHB6ViNFVDhIZE2sXxi8VelF3JjXlrLfn7EhH1R0xr0j0DgQNUFzU53jPrmrm9VQ5K600KdpwqbDD6_kwY1_FQFzFMMgdFgtmjASWLKTVHgU-yQ-entp0Tp4PmXqX0MhjRBGbi_Vuu2-UT3qfQnG2gcmQmzN6DmfzgF3bn32vEzSlzJN6GiHjSmnZfdKzPKpLeeyfJc9gx_nDqXX6HGEv3SdIUONKaBloB0Bfko4JPr74c4Z0oEYmD3FOoGJ6pl7gvsmXz7VK-C4Srt455buaeyTIiUGtaJ7RyhQLj4KA7Ml-UOzmkv0pzc-0krYcxtDLCoI6FIh-CwFsAhvvnI9eCfw7U1o7Zi0KzMWLbO5tsF_oG4S5-MbxRGKUxDh7M1rVIlSJjtDejRQYZv_JCGPBlXaEajxQ.m3u8"
+        t.trustedSpadeURI = "//video-edge-7a66a6.sjc01.hls.ttvnw.net/v1/playlist/CmJ-M7T7MWW_0tykkFM98nakbu0AIsYoZjrbGKoCWInZQstDIXKcgqHjSbA3F2I3mRis9Fto5okBtBRrTP0iCctQ3FooW5tmblG_7mWtTPMWE7bM8BTpzmwmeLeB0t-hkS6akgrwveLdRu0rVXgaWDuLPjYacOBKWfmX60EQ-CeQLZmM-VgILubxOjkFDG94CGoKfa9K6p-_Aah93frW-Q9fWX2LCEhe8aux2ewfchwyWesKWCjRaKr2cndOlB2J5UsUrJnyTim32icICviAiTDy-mwe7a5C-a_vFpEEaF3UWNvyDqOd0Mb5UqoeWUCA3Yj2sF4UFSBRqldHGA9s6GJM7wRdKvZovjkdwvC6su4oOtcTIq2VUS4pNPUfRTXL2yNztIbtIdH5BXfWBHGzl3LItRAC45XCH2ujxp5gpYl0v-yBH_FX7SQGzE0s3u64tIOP.m3u8"
     }, function(e, t, n) {
         "use strict";
 
