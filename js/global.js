@@ -15522,7 +15522,6 @@ googletag.cmd = googletag.cmd || [],
                 BITS_FOR_ADS: "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2",
                 NEXUS_ROLLOUT: "428d3b07-cc7a-424f-aad0-971f5415879a",
                 DETERMINATION: "cc164e1e-1361-4730-8d9b-0091a0f9cb8f",
-                CHANNEL_SIGNUP_COLUMN: "78360f5d-4ace-420d-8bca-df0d146ffdee",
                 DISCOVER_SHOW_COVIEWS: "3e011e23-ef29-46a5-af4b-a86e15d8c9e6",
                 EXTENSIONS: "264f75af-a787-4a40-8654-40d78b4d8b41",
                 FAIRFAX: "b88f3829-e1ac-471a-912a-264cac2587b3",
@@ -15581,7 +15580,6 @@ googletag.cmd = googletag.cmd || [],
                 "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": "off",
                 "428d3b07-cc7a-424f-aad0-971f5415879a": "disabled",
                 "cc164e1e-1361-4730-8d9b-0091a0f9cb8f": "no",
-                "78360f5d-4ace-420d-8bca-df0d146ffdee": "control",
                 "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": "no_show",
                 "264f75af-a787-4a40-8654-40d78b4d8b41": "no",
                 "b88f3829-e1ac-471a-912a-264cac2587b3": "no",
@@ -15683,7 +15681,8 @@ googletag.cmd = googletag.cmd || [],
                     } catch (e) {
                         console.warn("Failed to parse experiment overrides", e)
                     }
-                    o && (n[o] = t), cookie.set("experiment_overrides", JSON.stringify(n)), console.warn("Experiment overrides require a page refresh to take effect.")
+                    o && (n[o] = t), cookie.set("experiment_overrides", JSON.stringify(n)),
+                        console.warn("Experiment overrides require a page refresh to take effect.")
                 }
             },
             g = function() {
@@ -16719,18 +16718,17 @@ googletag.cmd = googletag.cmd || [],
     function(e, t) {
         var n = new RSVP.Promise(function(e, n) {
                 t.ajax({
-                        url: "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
-                        dataType: "script",
-                        timeout: 2e3,
-                        cache: !0
-                    }).fail(function(e, t, i) {
-                        n()
-                    }),
-                    document.addEventListener("sp.blocking", function() {
-                        e(!0)
-                    }), document.addEventListener("sp.not_blocking", function() {
-                        e(!1)
-                    })
+                    url: "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
+                    dataType: "script",
+                    timeout: 2e3,
+                    cache: !0
+                }).fail(function(e, t, i) {
+                    n()
+                }), document.addEventListener("sp.blocking", function() {
+                    e(!0)
+                }), document.addEventListener("sp.not_blocking", function() {
+                    e(!1)
+                })
             }),
             i = {
                 detect: n,
