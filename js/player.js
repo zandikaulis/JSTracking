@@ -4560,22 +4560,25 @@
             }).then(function(e) {
                 return e.installed_extensions.reduce(function(t, n) {
                     var r = n.extension,
-                        i = n.installation_status;
-                    if ("active" !== i.activation_state || "video_overlay" !== i.activation_config.anchor) return t;
-                    var o = (0, j.default)(e.tokens, function(e) {
+                        i = n.installation_status,
+                        o = "active" !== i.activation_state,
+                        a = "video_overlay" !== i.activation_config.anchor,
+                        s = "hidden" !== i.activation_config.anchor;
+                    if (o || a && s) return t;
+                    var u = (0, j.default)(e.tokens, function(e) {
                         return r.id === e.extension_id
                     });
-                    if (!o) return t;
-                    var a = (0, q.parseExtensionToken)(o.token);
+                    if (!u) return t;
+                    var l = (0, q.parseExtensionToken)(u.token);
                     return t.concat({
-                        token: a,
+                        token: l,
                         id: r.id,
                         name: r.name,
                         summary: r.summary,
                         anchor: r.anchor,
                         version: r.version,
                         viewerUrl: r.viewer_url,
-                        lastUserIdentityLinkState: a.permissionsState === q.EXTENSION_PERMISSION_STATE_GRANTED,
+                        lastUserIdentityLinkState: l.permissionsState === q.EXTENSION_PERMISSION_STATE_GRANTED,
                         supportsIdentityLinking: r.request_identity_link
                     })
                 }, [])
@@ -5226,7 +5229,8 @@
                                 }
                                 var o = this;
                                 if ("function" != typeof n) throw new Error("many only accepts instances of Function");
-                                return i._origin = n, this._on(e, i, r), o
+                                return i._origin = n,
+                                    this._on(e, i, r), o
                             }, l.prototype.emit = function() {
                                 this._events || a.call(this);
                                 var e = arguments[0];
@@ -5445,11 +5449,11 @@
                         i = n(33),
                         o = n.n(i);
                     n.d(t, "a", function() {
-                        return u
-                    }), n.d(t, "c", function() {
                         return l
-                    }), n.d(t, "b", function() {
+                    }), n.d(t, "c", function() {
                         return c
+                    }), n.d(t, "b", function() {
+                        return d
                     });
                     var a = "v5",
                         s = function(e) {
@@ -5457,7 +5461,6 @@
                             return t.indexOf(e) >= 0
                         },
                         u = function(e) {
-                            if (s(e)) return Promise.reject("Channel id is in the large event blacklist.");
                             var t = {
                                     factor: 2,
                                     minTimeout: 1e3,
@@ -5465,10 +5468,7 @@
                                     retries: 16
                                 },
                                 n = function(t) {
-                                    var n = r.a.newRequest("/" + a + "/channels/" + e + "/extensions", {
-                                        method: "GET"
-                                    });
-                                    return r.a.authRequest(n).catch(function(e) {
+                                    return r.a.authRequest(e).catch(function(e) {
                                         if (e.response && e.response.status) {
                                             if (!(e.response.status >= 500 || 429 === e.response.status)) throw e;
                                             t()
@@ -5477,7 +5477,14 @@
                                 };
                             return o()(n, t)
                         },
-                        l = function(e, t, n) {
+                        l = function(e) {
+                            if (s(e)) return Promise.reject("Channel id is in the large event blacklist.");
+                            var t = r.a.newRequest("/" + a + "/channels/" + e + "/extensions", {
+                                method: "GET"
+                            });
+                            return u(t)
+                        },
+                        c = function(e, t, n) {
                             var i = r.a.newRequest("/" + a + "/extensions/" + e + "/auth/link_user", {
                                 body: JSON.stringify({
                                     show_user: n,
@@ -5485,9 +5492,9 @@
                                 }),
                                 method: "POST"
                             });
-                            return r.a.authRequest(i)
+                            return u(i)
                         },
-                        c = function(e, t) {
+                        d = function(e, t) {
                             var n = t.payload.channel_id,
                                 i = r.a.newRequest("/" + a + "/extensions/" + e + "/auth/refresh/" + n, {
                                     body: JSON.stringify({
@@ -5495,7 +5502,7 @@
                                     }),
                                     method: "POST"
                                 });
-                            return r.a.authRequest(i)
+                            return u(i)
                         }
                 }, function(e, t, n) {
                     "use strict";
@@ -6530,7 +6537,7 @@
                                     var u = document.createElement("iframe");
                                     switch (u.setAttribute("class", i), u.setAttribute("sandbox", p.join(" ")), u.setAttribute("frameBorder", "0"), e) {
                                         case "viewer":
-                                            u.src = n.i(o.a)(r.extension.viewerUrl, s), r.applyAnchorAttributes(u, a), "video_overlay" !== a && r.applyViewerPanelWhitelist(u, e);
+                                            u.src = n.i(o.a)(r.extension.viewerUrl, s), r.applyAnchorAttributes(u, a), "panel" === a && r.applyViewerPanelWhitelist(u, e);
                                             break;
                                         case "dashboard":
                                             var l = r.extension.panelHeight || 300;
@@ -13521,7 +13528,7 @@
                     b = m.get(!1),
                     T = m.get(!0);
                 v = {
-                    app_version: "2017.07.27-222000+771de5647f4681adc07a0b3b08cfb57d1c2f6f92",
+                    app_version: "2017.07.27-232356+62b184c81c16046c3ad0ef10182e99c2e009e529",
                     flash_version: d,
                     referrer_url: _,
                     referrer_host: y.host,
@@ -39670,7 +39677,8 @@
             I = n(314),
             N = i(I),
             R = 16 / 9,
-            M = {
+            M = "hidden",
+            L = {
                 onExtensionDoubleClick: h.default.func.isRequired,
                 onIdentityToggle: h.default.func.isRequired,
                 onIdentityLinked: h.default.func.isRequired,
@@ -39708,8 +39716,8 @@
                 playerType: h.default.string.isRequired,
                 trackEvent: h.default.func.isRequired
             },
-            L = (l = {}, u(l, P.PLAYER_CURSE, !0), u(l, P.PLAYER_FRONTPAGE, !0), u(l, P.PLAYER_FACEBOOK, !0), u(l, P.PLAYER_HIGHLIGHTER, !0), u(l, P.PLAYER_PULSE, !0), u(l, P.PLAYER_TWITCH_EVERYWHERE, !0), l),
-            D = function(e) {
+            D = (l = {}, u(l, P.PLAYER_CURSE, !0), u(l, P.PLAYER_FRONTPAGE, !0), u(l, P.PLAYER_FACEBOOK, !0), u(l, P.PLAYER_HIGHLIGHTER, !0), u(l, P.PLAYER_PULSE, !0), u(l, P.PLAYER_TWITCH_EVERYWHERE, !0), l),
+            x = function(e) {
                 return {
                     extensions: e.extensions,
                     game: e.streamMetadata.game,
@@ -39717,7 +39725,7 @@
                     height: e.playerDimensions.height,
                     extensionsApi: e.extensions.extensionsApi,
                     videoResolution: e.stats.videoStats.videoResolution,
-                    shouldEnableExtensions: e.env.platform !== b.PLATFORM_MOBILE_WEB && !L.hasOwnProperty(e.env.playerType) && e.stream.contentType === E.CONTENT_MODE_LIVE && e.streamMetadata.streamType !== O.TYPE_WATCH_PARTY && e.playback.contentShowing && e.onlineStatus === k.ONLINE_STATUS,
+                    shouldEnableExtensions: e.env.platform !== b.PLATFORM_MOBILE_WEB && !D.hasOwnProperty(e.env.playerType) && e.stream.contentType === E.CONTENT_MODE_LIVE && e.streamMetadata.streamType !== O.TYPE_WATCH_PARTY && e.playback.contentShowing && e.onlineStatus === k.ONLINE_STATUS,
                     shouldShowExtensions: e.env.playerType !== P.PLAYER_SITE_MINI && e.ads.currentMetadata.contentType === S.AdContentTypes.NONE,
                     isLoggedIn: e.user.loggedInStatus === T.LOGGED_IN,
                     login: e.user.name,
@@ -39731,7 +39739,7 @@
                     trackEvent: e.analyticsTracker.trackEvent
                 }
             },
-            x = t.mapDispatchToProps = function(e) {
+            j = t.mapDispatchToProps = function(e) {
                 return {
                     onExtensionDoubleClick: function() {
                         e((0, A.toggleFullScreen)())
@@ -39744,7 +39752,7 @@
                     }
                 }
             },
-            j = t.ExtensionsContainerComponent = function(e) {
+            U = t.ExtensionsContainerComponent = function(e) {
                 function t() {
                     o(this, t);
                     var e = a(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -39769,7 +39777,7 @@
                         var p = r.extensions[0],
                             h = (0, N.default)({
                                 "extension-container": !0,
-                                hide: !n
+                                hide: !n || p.anchor === M
                             });
                         return f.default.createElement("div", {
                             className: h
@@ -39844,8 +39852,8 @@
                     }
                 }]), t
             }(f.default.Component);
-        j.propTypes = M;
-        t.ExtensionsContainer = (0, _.connect)(D, x)(j)
+        U.propTypes = L;
+        t.ExtensionsContainer = (0, _.connect)(x, j)(U)
     }, function(e, t, n) {
         "use strict";
 
@@ -42194,44 +42202,43 @@
                     return i.data = n, i.options = r, i
                 }
                 return u(t, e), t.prototype.addNamespaces = function(e) {
-                        this.options.ns.indexOf(e) < 0 && this.options.ns.push(e)
-                    }, t.prototype.removeNamespaces = function(e) {
-                        var t = this.options.ns.indexOf(e);
-                        t > -1 && this.options.ns.splice(t, 1)
-                    },
-                    t.prototype.getResource = function(e, t, n) {
-                        var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-                            i = r.keySeparator || this.options.keySeparator;
-                        void 0 === i && (i = ".");
-                        var o = [e, t];
-                        return n && "string" != typeof n && (o = o.concat(n)), n && "string" == typeof n && (o = o.concat(i ? n.split(i) : n)), e.indexOf(".") > -1 && (o = e.split(".")), p.getPath(this.data, o)
-                    }, t.prototype.addResource = function(e, t, n, r) {
-                        var i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {
-                                silent: !1
-                            },
-                            o = this.options.keySeparator;
-                        void 0 === o && (o = ".");
-                        var a = [e, t];
-                        n && (a = a.concat(o ? n.split(o) : n)), e.indexOf(".") > -1 && (a = e.split("."), r = t, t = a[1]), this.addNamespaces(t), p.setPath(this.data, a, r), i.silent || this.emit("added", e, t, n, r)
-                    }, t.prototype.addResources = function(e, t, n) {
-                        for (var r in n) "string" == typeof n[r] && this.addResource(e, t, r, n[r], {
-                            silent: !0
-                        });
-                        this.emit("added", e, t, n)
-                    }, t.prototype.addResourceBundle = function(e, t, n, r, i) {
-                        var o = [e, t];
-                        e.indexOf(".") > -1 && (o = e.split("."), r = n, n = t, t = o[1]), this.addNamespaces(t);
-                        var a = p.getPath(this.data, o) || {};
-                        r ? p.deepExtend(a, n, i) : a = l({}, a, n), p.setPath(this.data, o, a), this.emit("added", e, t, n)
-                    }, t.prototype.removeResourceBundle = function(e, t) {
-                        this.hasResourceBundle(e, t) && delete this.data[e][t], this.removeNamespaces(t), this.emit("removed", e, t)
-                    }, t.prototype.hasResourceBundle = function(e, t) {
-                        return void 0 !== this.getResource(e, t)
-                    }, t.prototype.getResourceBundle = function(e, t) {
-                        return t || (t = this.options.defaultNS), "v1" === this.options.compatibilityAPI ? l({}, this.getResource(e, t)) : this.getResource(e, t)
-                    }, t.prototype.toJSON = function() {
-                        return this.data
-                    }, t
+                    this.options.ns.indexOf(e) < 0 && this.options.ns.push(e)
+                }, t.prototype.removeNamespaces = function(e) {
+                    var t = this.options.ns.indexOf(e);
+                    t > -1 && this.options.ns.splice(t, 1);
+                }, t.prototype.getResource = function(e, t, n) {
+                    var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+                        i = r.keySeparator || this.options.keySeparator;
+                    void 0 === i && (i = ".");
+                    var o = [e, t];
+                    return n && "string" != typeof n && (o = o.concat(n)), n && "string" == typeof n && (o = o.concat(i ? n.split(i) : n)), e.indexOf(".") > -1 && (o = e.split(".")), p.getPath(this.data, o)
+                }, t.prototype.addResource = function(e, t, n, r) {
+                    var i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {
+                            silent: !1
+                        },
+                        o = this.options.keySeparator;
+                    void 0 === o && (o = ".");
+                    var a = [e, t];
+                    n && (a = a.concat(o ? n.split(o) : n)), e.indexOf(".") > -1 && (a = e.split("."), r = t, t = a[1]), this.addNamespaces(t), p.setPath(this.data, a, r), i.silent || this.emit("added", e, t, n, r)
+                }, t.prototype.addResources = function(e, t, n) {
+                    for (var r in n) "string" == typeof n[r] && this.addResource(e, t, r, n[r], {
+                        silent: !0
+                    });
+                    this.emit("added", e, t, n)
+                }, t.prototype.addResourceBundle = function(e, t, n, r, i) {
+                    var o = [e, t];
+                    e.indexOf(".") > -1 && (o = e.split("."), r = n, n = t, t = o[1]), this.addNamespaces(t);
+                    var a = p.getPath(this.data, o) || {};
+                    r ? p.deepExtend(a, n, i) : a = l({}, a, n), p.setPath(this.data, o, a), this.emit("added", e, t, n)
+                }, t.prototype.removeResourceBundle = function(e, t) {
+                    this.hasResourceBundle(e, t) && delete this.data[e][t], this.removeNamespaces(t), this.emit("removed", e, t)
+                }, t.prototype.hasResourceBundle = function(e, t) {
+                    return void 0 !== this.getResource(e, t)
+                }, t.prototype.getResourceBundle = function(e, t) {
+                    return t || (t = this.options.defaultNS), "v1" === this.options.compatibilityAPI ? l({}, this.getResource(e, t)) : this.getResource(e, t)
+                }, t.prototype.toJSON = function() {
+                    return this.data
+                }, t
             }(d.default);
         t.default = h
     }, function(e, t) {
