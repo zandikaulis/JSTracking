@@ -1178,10 +1178,10 @@ window.SiteOptions = {
             "name": "clips_you_were_right",
             "t": 1,
             "groups": [{
-                "weight": 10,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 90,
+                "weight": 100,
                 "value": "variant1"
             }]
         },
