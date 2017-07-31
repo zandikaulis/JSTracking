@@ -1632,6 +1632,17 @@ window.SiteOptions = {
                 "value": "live"
             }]
         },
+        "9cb0fb03-a804-4e1e-94bc-12052b96e41a": {
+            "name": "BROWSE_SORT",
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "CONTROL"
+            }, {
+                "weight": 100,
+                "value": "EXPERIMENT"
+            }]
+        },
         "9ce10ee7-98ec-4126-a42f-28a6a129ca9d": {
             "name": "ios_chomments",
             "t": 1,
@@ -2322,6 +2333,17 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "off"
+            }]
+        },
+        "e3c3a143-0f85-4e84-9b08-73b3ee3ae171": {
+            "name": "ios_onboarding_recommendations",
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "default_not_follow"
             }]
         },
         "e6a95194-9540-46e0-858f-f47e5d5e3a5d": {
