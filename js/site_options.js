@@ -1704,17 +1704,6 @@ window.SiteOptions = {
                 "value": "none"
             }]
         },
-        "9eece8de-e5fa-4e3d-bc51-2044815db062": {
-            "name": "android_buy_bits",
-            "t": 1,
-            "groups": [{
-                "weight": 0,
-                "value": "active"
-            }, {
-                "weight": 100,
-                "value": "control"
-            }]
-        },
         "a1ce3d24-076a-4664-be4c-f9046fdce18c": {
             "name": "baking_bread_uk",
             "t": 1,
@@ -1877,6 +1866,17 @@ window.SiteOptions = {
             }, {
                 "weight": 98,
                 "value": "control"
+            }]
+        },
+        "b2be4fb3-b738-48b1-967c-1529fe57f717": {
+            "name": "ios_graphql",
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "active"
             }]
         },
         "b3dbd888-3ed2-4129-a6a9-7ad4c3d866d7": {
