@@ -2523,5 +2523,7 @@ window.SiteOptions = {
     },
     "prime_new_enabled": true,
     "prime_new_blocked_regions": "JP,JPA,MX,MEX,IN,IND,CU,CUB,SD,SUD,IR,IRN,CHN,CN,SY,SYR,PRK,KP",
-    "prime_new_whitelist": "samquality01,samquality02,samquality03,samquality04"
+    "prime_new_whitelist": "samquality01,samquality02,samquality03,samquality04",
+    "bits_hgc_enabled": false,
+    "bits_hgc_whitelist": "70516263"
 };
