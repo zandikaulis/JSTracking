@@ -1491,6 +1491,17 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "93da9d43-a078-43b9-ab48-602fa9a226b0": {
+            "name": "ios_app_badge",
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": {
             "name": "DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS",
             "t": 1,
