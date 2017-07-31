@@ -17271,7 +17271,7 @@ googletag.cmd = googletag.cmd || [],
             }
 
             function f() {
-                "vert" === D ? (_.width(S.width() + p()), _.height(S.height())) : (_.width(S.width()), _.height(S.height() + p()), C.height(S.height()))
+                "vert" === D ? (_.width(S.width() + p()), _.height(S.height())) : (_.width(S.width()), _.height(S.height()))
             }
 
             function p() {
@@ -17310,7 +17310,9 @@ googletag.cmd = googletag.cmd || [],
                 A = "top";
             return i = e.extend({}, e.fn[n].defaults, i),
                 function() {
-                    S.hasClass("horizontal") && (D = "horiz", M = "scrollLeft", E = "width", A = "left"), S.prepend('<div class="tse-scrollbar"><div class="drag-handle"></div></div>'), w = S.find(".tse-scrollbar"), b = S.find(".drag-handle"), i.wrapContent && C.wrap('<div class="tse-scroll-content" />'), _ = S.find(".tse-scroll-content"), d(), f(), S.on("mouseenter", u), b.on("mousedown", r), _.on("scroll", a), l()
+                    S.hasClass("horizontal") && (D = "horiz", M = "scrollLeft", E = "width", A = "left"), S.prepend('<div class="tse-scrollbar"><div class="drag-handle"></div></div>'), w = S.find(".tse-scrollbar"), b = S.find(".drag-handle");
+                    var e = i.wrapContentClass || "tse-scroll-content";
+                    i.wrapContent && C.wrap('<div class="' + e + '" />'), _ = S.find("." + e), d(), f(), S.on("mouseenter", u), b.on("mousedown", r), _.on("scroll", a), l()
                 }(), {
                     option: m,
                     destroy: v,
