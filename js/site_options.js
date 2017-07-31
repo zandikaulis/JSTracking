@@ -1637,10 +1637,10 @@ window.SiteOptions = {
             "t": 1,
             "groups": [{
                 "weight": 0,
-                "value": "CONTROL"
+                "value": "control"
             }, {
                 "weight": 100,
-                "value": "EXPERIMENT"
+                "value": "experiment"
             }]
         },
         "9ce10ee7-98ec-4126-a42f-28a6a129ca9d": {
