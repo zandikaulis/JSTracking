@@ -1682,6 +1682,17 @@ window.SiteOptions = {
                 "value": "none"
             }]
         },
+        "9eece8de-e5fa-4e3d-bc51-2044815db062": {
+            "name": "android_buy_bits",
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "active"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "a1ce3d24-076a-4664-be4c-f9046fdce18c": {
             "name": "baking_bread_uk",
             "t": 1,
