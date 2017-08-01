@@ -2339,11 +2339,17 @@ window.SiteOptions = {
             "name": "ios_onboarding_recommendations",
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 75,
                 "value": "control"
             }, {
+                "weight": 25,
+                "value": "opt_in"
+            }, {
                 "weight": 0,
-                "value": "default_not_follow"
+                "value": "in_situ"
+            }, {
+                "weight": 0,
+                "value": "opt_in_situ"
             }]
         },
         "e6a95194-9540-46e0-858f-f47e5d5e3a5d": {
