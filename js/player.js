@@ -13561,7 +13561,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.01-180748+1d572e50a7c54600473579fd86391a50e10cdb09",
+                    app_version: "2017.08.01-214026+ab43a511afeaeeec0c7bbf5fc90d004469995341",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -18184,7 +18184,7 @@
             return function(t, n) {
                 var i = n(),
                     a = i.extensions;
-                return !e || a.channel === e && a.loadingState !== T && a.loadingState !== S ? Promise.resolve() : (t(o(e)), (0, p.overlayExtensionsForChannel)(e).then(function(i) {
+                return !e || a.channel === e && a.loadingState === T ? Promise.resolve() : (t(o(e)), (0, p.overlayExtensionsForChannel)(e).then(function(i) {
                     var o = n(),
                         a = o.stream;
                     a.channel === e && t(r(e, i))
@@ -18245,8 +18245,8 @@
             g = t.ACTION_SET_EXTENSION_IDENTITY = "set extension identity linking",
             b = t.ACTION_INIT_EXTENSIONS_API = "initialize extension api",
             E = t.EMS_REQUEST_PER_SECOND_LIMIT = 3e3,
-            T = t.EXTENSIONS_NOT_LOADED = "not loaded",
-            S = (t.EXTENSIONS_LOADED = "loaded", t.EXTENSIONS_LOADING = "loading", t.EXTENSIONS_RELOADING = "reloading")
+            T = (t.EXTENSIONS_NOT_LOADED = "not loaded", t.EXTENSIONS_LOADED = "loaded", t.EXTENSIONS_LOADING = "loading");
+        t.EXTENSIONS_RELOADING = "reloading"
     }, function(e, t, n) {
         "use strict";
 
