@@ -13561,7 +13561,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.01-214026+ab43a511afeaeeec0c7bbf5fc90d004469995341",
+                    app_version: "2017.08.01-231226+ee9e49b55178b16183af9acbe3494c9eefc91e58",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -24357,14 +24357,22 @@
 
         function n(e) {
             return {
-                type: r,
+                type: i,
                 deviceName: e
+            }
+        }
+
+        function r(e) {
+            return {
+                type: o,
+                castingState: e
             }
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.setDeviceName = n;
-        var r = t.ACTION_SET_DEVICE_NAME = "set device name"
+        }), t.setDeviceName = n, t.setCastingState = r;
+        var i = t.ACTION_SET_DEVICE_NAME = "set device name",
+            o = t.ACTION_SET_CASTING_STATE = "set casting state"
     }, function(e, t, n) {
         "use strict";
 
@@ -24378,7 +24386,8 @@
 
         function i(e, t, n, r) {
             function i() {
-                M.push((0, h.subscribe)(n, ["screenMode.isFullScreen", "screenMode.isTheatreMode"], m)), m();
+                M.push((0, h.subscribe)(n, ["screenMode.isFullScreen", "screenMode.isTheatreMode"], m)),
+                    m();
                 var i = r.player;
                 $(t).attr("data-playertype", i), i === a.PLAYER_FRONTPAGE && $(t).on("click", ".js-control-fullscreen-overlay", function() {
                     n.dispatch((0, E.emitOpenStream)())
@@ -25753,7 +25762,7 @@
             I = t.ACTION_VOD_SET_IS_SEEKED = "set isSeeked",
             N = "vodResumeTimes",
             R = "vodResumeWatcheds",
-            M = "livestreamResumeTimes";
+            M = "livestreamResumeTimes"
     }, function(e, t, n) {
         "use strict";
 
@@ -48098,25 +48107,37 @@
         }
 
         function i() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u,
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _,
                 t = arguments[1];
             switch (t.type) {
-                case s.ACTION_SET_DEVICE_NAME:
+                case l.ACTION_SET_DEVICE_NAME:
                     return (0, a.default)({}, e, {
                         deviceName: t.deviceName
                     });
+                case l.ACTION_SET_CASTING_STATE:
+                    return (0, u.default)(h, t.castingState) ? (0, a.default)({}, e, {
+                        castingState: t.castingState
+                    }) : e;
                 default:
                     return e
             }
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.chromecast = i;
+        }), t.CONNECTED = t.CONNECTING = t.AVAILABLE = t.UNAVAILABLE = void 0, t.chromecast = i;
         var o = n(117),
             a = r(o),
-            s = n(423),
-            u = {
-                deviceName: ""
+            s = n(53),
+            u = r(s),
+            l = n(423),
+            c = t.UNAVAILABLE = "unavailable",
+            d = t.AVAILABLE = "available",
+            f = t.CONNECTING = "connecting",
+            p = t.CONNECTED = "connected",
+            h = Object.freeze([c, d, f, p]),
+            _ = {
+                deviceName: "",
+                castingState: c
             }
     }, function(e, t, n) {
         "use strict";
@@ -50513,7 +50534,7 @@
         })
     }, function(e, t, n) {
         function r(e) {
-            return i(e) && 1 === e.nodeType && !o(e);
+            return i(e) && 1 === e.nodeType && !o(e)
         }
         var i = n(40),
             o = n(212);
