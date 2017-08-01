@@ -1770,6 +1770,17 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "ab3ad381-0796-435d-94aa-e3907461d48e": {
+            "name": "android_clip_theatre_mode",
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "active"
+            }]
+        },
         "ac1c908f-3779-4068-ae72-086c288f6f87": {
             "name": "FEATURED_COLLECTION_CARD",
             "t": 1,
