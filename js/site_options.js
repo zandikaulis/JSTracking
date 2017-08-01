@@ -1403,6 +1403,17 @@ window.SiteOptions = {
                 "value": "10-styled"
             }]
         },
+        "8adde0fd-4f64-43e9-a7b0-1367306a6b26": {
+            "name": "android_onboarding_recomendations ",
+            "t": 1,
+            "groups": [{
+                "weight": 75,
+                "value": "control"
+            }, {
+                "weight": 25,
+                "value": "opt_in"
+            }]
+        },
         "8bc4faaa-b4df-4862-b249-ac153de6294a": {
             "name": "Seaweed",
             "t": 1,
@@ -2344,12 +2355,6 @@ window.SiteOptions = {
             }, {
                 "weight": 25,
                 "value": "opt_in"
-            }, {
-                "weight": 0,
-                "value": "in_situ"
-            }, {
-                "weight": 0,
-                "value": "opt_in_situ"
             }]
         },
         "e6a95194-9540-46e0-858f-f47e5d5e3a5d": {
