@@ -1185,6 +1185,17 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "6d07fedb-c0e6-4eae-9082-d4c100eade25": {
+            "name": "android_aax",
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "active"
+            }]
+        },
         "6e2f439b-916a-40b7-b1be-e82b284fd0bb": {
             "name": "offline_experience",
             "t": 1,
