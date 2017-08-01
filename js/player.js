@@ -3550,7 +3550,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.LOADSTART = "loadstart", t.ERROR = "error", t.LOADED_METADATA = "loadedmetadata", t.CAN_PLAY = "canplay", t.PLAYING = "playing", t.WAITING = "waiting", t.SEEKING = "seeking", t.SEEKED = "seeked", t.ENDED = "ended", t.DURATION_CHANGE = "durationchange", t.TIME_UPDATE = "timeupdate", t.PLAY = "play", t.PAUSE = "pause", t.VOLUME_CHANGE = "volumechange", t.RATE_CHANGE = "ratechange"
+        t.LOADSTART = "loadstart", t.PROGRESS = "progress", t.SUSPEND = "suspend", t.EMPTIED = "emptied", t.ERROR = "error", t.LOADED_METADATA = "loadedmetadata", t.CAN_PLAY = "canplay", t.PLAYING = "playing", t.WAITING = "waiting", t.SEEKING = "seeking", t.SEEKED = "seeked", t.ENDED = "ended", t.DURATION_CHANGE = "durationchange", t.TIME_UPDATE = "timeupdate", t.PLAY = "play", t.PAUSE = "pause", t.VOLUME_CHANGE = "volumechange", t.RATE_CHANGE = "ratechange"
     }, function(e, t, n) {
         "use strict";
 
@@ -13561,7 +13561,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.01-180502+0551aee1cdb650687fdc9ef0161a7e82180c509b",
+                    app_version: "2017.08.01-180748+1d572e50a7c54600473579fd86391a50e10cdb09",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -16467,7 +16467,7 @@
                 }), Ue.addEventListener(de.AD_END, function() {
                     m.localStore.set("lastAdDisplay", (new Date).getTime()), t.dispatch((0, B.popScreen)())
                 });
-                var e = [re.LOADSTART, re.LOADED_METADATA];
+                var e = [re.EMPTIED, re.SUSPEND, re.LOADSTART, re.LOADED_METADATA];
                 e.forEach(function(e) {
                     Be.addEventListener(e, function() {
                         xe.emit(le.CASTING_CHANGE), n.debug && console.log("chromecast event: ", e)
@@ -16987,7 +16987,8 @@
             }
 
             function he(e) {
-                ze && !ct && (Oe(xe("getVideoTime")), Ae()), Fe.emit(te.AD_END, e);
+                ze && !ct && (Oe(xe("getVideoTime")),
+                    Ae()), Fe.emit(te.AD_END, e)
             }
 
             function _e(e) {
@@ -20575,7 +20576,7 @@
             function b() {
                 var e = N,
                     t = R;
-                P ? (N = h.NETWORK_LOADING, R = v.HAVE_METADATA, S.emit(f.CAN_PLAY)) : I ? (N = h.NETWORK_LOADING, R = v.HAVE_NOTHING) : O && k ? (N = h.NETWORK_IDLE, R = v.HAVE_NOTHING) : (N = h.NETWORK_EMPTY, R = v.HAVE_NOTHING), N !== e && N === h.NETWORK_LOADING && S.emit(f.LOADSTART), R !== t && (R === v.HAVE_METADATA ? S.emit(f.LOADED_METADATA) : R === v.HAVE_NOTHING && S.emit(f.ENDED))
+                P ? (N = h.NETWORK_LOADING, R = v.HAVE_METADATA, S.emit(f.CAN_PLAY)) : I ? (N = h.NETWORK_LOADING, R = v.HAVE_NOTHING) : O && k ? (N = h.NETWORK_IDLE, R = v.HAVE_NOTHING) : (N = h.NETWORK_EMPTY, R = v.HAVE_NOTHING), N !== e && (N === h.NETWORK_LOADING ? (S.emit(f.LOADSTART), S.emit(f.PROGRESS)) : N === h.NETWORK_IDLE ? S.emit(f.SUSPEND) : N === h.NETWORK_EMPTY && S.emit(f.EMPTIED)), R !== t && (R === v.HAVE_METADATA ? S.emit(f.LOADED_METADATA) : R === v.HAVE_NOTHING && S.emit(f.ENDED))
             }
 
             function E(e) {
@@ -21500,8 +21501,7 @@
                         var t = this,
                             n = this._store.getState().window.google,
                             r = e.getUserRequestContext();
-                        (0,
-                            S.sendAdSpadeEvent)(this._store, O, p.AD_REQUEST_RESPONSE, (0, S.initializeAdSpadeEvent)(r));
+                        (0, S.sendAdSpadeEvent)(this._store, O, p.AD_REQUEST_RESPONSE, (0, S.initializeAdSpadeEvent)(r));
                         var i = new n.ima.AdsRenderingSettings;
                         i.restoreCustomPlaybackStateOnAdBreakComplete = !0, this._currentAdsManager = e.getAdsManager(new N(this._backend), i), this._currentAdsManager.addEventListener(n.ima.AdErrorEvent.Type.AD_ERROR, function(e) {
                             return t._onAdError(e)
@@ -23015,8 +23015,7 @@
         e.exports = r
     }, function(e, t) {
         function n(e, t) {
-            return e.set(t[0], t[1]),
-                e
+            return e.set(t[0], t[1]), e
         }
         e.exports = n
     }, function(e, t) {
@@ -24383,8 +24382,7 @@
                 var i = r.player;
                 $(t).attr("data-playertype", i), i === a.PLAYER_FRONTPAGE && $(t).on("click", ".js-control-fullscreen-overlay", function() {
                     n.dispatch((0, E.emitOpenStream)())
-                }), n.getState().env.playerType === a.PLAYER_IMDB ? (M.push((0,
-                    h.subscribe)(n, ["playback.currentTime", "stream", "streamMetadata"], o)), o(), $(t).on("click", ".js-hyperlink-watch-twitch", function() {
+                }), n.getState().env.playerType === a.PLAYER_IMDB ? (M.push((0, h.subscribe)(n, ["playback.currentTime", "stream", "streamMetadata"], o)), o(), $(t).on("click", ".js-hyperlink-watch-twitch", function() {
                     n.dispatch((0, b.pause)())
                 })) : $(t).on("click", ".js-watch-twitch", function(e) {
                     e.preventDefault(), window.open(u(), "_blank"), n.dispatch((0, b.pause)())
