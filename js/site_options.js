@@ -869,10 +869,10 @@ window.SiteOptions = {
             "name": "Twilight_Upsell",
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 99,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "upsell"
             }]
         },
@@ -926,7 +926,7 @@ window.SiteOptions = {
             "t": 1,
             "groups": [{
                 "weight": 1,
-                "value": "////video-edge-fee868.sjc01.hls.ttvnw.net/v1/playlist/CtEtzwEjKazfSAeTb0t2IhNj4ghibRbFsJIcLPuU2s9N0IhzbLz-wTBnv8harn3N6sgxVU_CUjKviKmbc5VFS9c7Hv2VoljLdZ_NWbivmpxgAH84cpuLHwYpO8VkeILbgDMm_3npO159HCYTLJwdosSt6oPRQx49pbWV8IeCn9Dx36SN4_iy-aU_p_p9fbnShDoFhygeGW8_vyGwwbpyiRYvx4tmXx0o97sLtmYyGwrGWKwyAb-lVeaKplT3oMuLcGaGyk1em6gAyjl82tXcjxbgs0RiQcaitKpfvt3m3Sm9ROTbm4icJkYtsA5xEHklj9LEhgIHdC0tWovZlvFgS47BGUPEHVPrOaJeDSrJ1yzIPsisyVJsPWywe0U7lxiaNtc6bXBOHgXk55CdJanjtTbajgUsULOTKStqosRP7astSH-EjR7_C.m3u8"
+                "value": "////video-edge-92ac4a.sjc01.hls.ttvnw.net/v1/playlist/CgSbTgKhJuiOHLfzgyrZg06OtPXZkwtPVc3TyyexcshrAViD2bnYtNOCS4lz71dVx-lesJTYMtrjKNQ4wSZcBgxHfkA8wTUgJt1mxWxXUsBL4Nh9mra3GabESnbA-22ypmM3IoUQj2CORqtVYghhApEnT1MViw-PkOFLI896m3M0_0gUwyE37pFijSTM7lO-7tslr8Q1iZri1Ry30AiMhSYVWLAdFo_d1JQD2KUYhJgcwjvZasIK8dLGohawuGIMqrFXluJg_6XFbWmfvbzm-FCoFuqZ4ah0Xx9RC2X7aRDvCxrvnhi70ZKIJ8VU-xv9wk22XkLRl0kpkZQB8w-Ys3zqElPAkhXGeFPMciLAvQe5bffGRSAkJhUE2MgmbcmDKjcvgaf-rBB5FE4EuK7If1BfAWwYkPDb5-Z56VpZLFiOyXTjyq1qR04mkiaumDIEFvb3toC08VG1PotySfC.m3u8"
             }]
         },
         "4bdb6678-2626-466f-bb25-e566dec11354": {
