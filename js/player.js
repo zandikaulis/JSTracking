@@ -5445,7 +5445,7 @@
                     }).call(t, n(11))
                 }, function(e, t, n) {
                     "use strict";
-                    var r = n(6),
+                    var r = n(7),
                         i = n(33),
                         o = n.n(i);
                     n.d(t, "a", function() {
@@ -5519,6 +5519,64 @@
                     var i = "contextchange"
                 }, function(e, t, n) {
                     "use strict";
+                    var r = n(3),
+                        i = (n.n(r), n(8)),
+                        o = n(4);
+                    n.d(t, "a", function() {
+                        return s
+                    });
+                    var a = function() {
+                            function e() {
+                                var e = this;
+                                this.clockSkew = 0, this.tokens = {}, this.timers = {}, this.tokenEmitter = new r.EventEmitter2, this.clearTokenManager = function() {
+                                    e.clockSkew = 0, e.tokenEmitter.removeAllListeners();
+                                    for (var t in e.timers) e.timers[t] && e.timers[t] && (clearTimeout(e.timers[t]), delete e.timers[t])
+                                }, this.getToken = function(t) {
+                                    return e.tokens[t]
+                                }, this.registerToken = function(t, n) {
+                                    var r = new i.a(n),
+                                        o = e.tokens[t] || r;
+                                    e.tokens[t] = new i.a(n), e.tokenEmitter.emit(t, r, o), e.updateRefreshTimer(t)
+                                }, this.updateRefreshTimer = function(t) {
+                                    var n = e.getToken(t),
+                                        r = e.tokenEmitter.listeners(t).length > 0,
+                                        i = void 0 !== e.timers[t];
+                                    r && !i ? e.timers[t] = setTimeout(function() {
+                                        delete e.timers[t], e.refreshToken(t)
+                                    }, n.refreshAfter) : !r && i && (clearTimeout(e.timers[t]), delete e.timers[t])
+                                }, this.refreshToken = function(t) {
+                                    var r = e.getToken(t);
+                                    n.i(o.b)(t, r).catch(function() {
+                                        return e.getTokenFromExtensions(t, r)
+                                    }).then(function(n) {
+                                        var r = n.token;
+                                        r && e.registerToken(t, r)
+                                    })
+                                }, this.getTokenFromExtensions = function(e, t) {
+                                    return n.i(o.a)(t.payload.channel_id).then(function(t) {
+                                        var n = t.tokens;
+                                        return {
+                                            token: n.reduce(function(t, n) {
+                                                var r = n.extension_id,
+                                                    i = n.token;
+                                                return r === e ? i : t
+                                            }, "")
+                                        }
+                                    })
+                                }
+                            }
+                            return e.prototype.setClockSkew = function(e) {
+                                var t = new Date(e).getTime();
+                                this.clockSkew = Date.now() - t
+                            }, e.prototype.subscribe = function(e, t) {
+                                this.tokenEmitter.on(e, t), this.getToken(e) && this.updateRefreshTimer(e)
+                            }, e.prototype.unsubscribe = function(e, t) {
+                                this.tokenEmitter.off(e, t), this.getToken(e) && this.updateRefreshTimer(e)
+                            }, e
+                        }(),
+                        s = new a
+                }, function(e, t, n) {
+                    "use strict";
                     n.d(t, "a", function() {
                         return o
                     });
@@ -5570,17 +5628,19 @@
                         o = new i
                 }, function(e, t, n) {
                     "use strict";
+                    var r = n(6);
                     n.d(t, "a", function() {
-                        return o
+                        return a
                     });
-                    var r = 6e4,
-                        i = .9,
-                        o = function() {
+                    var i = 6e4,
+                        o = .9,
+                        a = function() {
                             function e(e) {
                                 this.token = e;
                                 var t = Date.now(),
-                                    n = 1e3 * this.payload.exp;
-                                this.refreshAt = t + (n - t) * i
+                                    n = t,
+                                    i = 1e3 * this.payload.exp + r.a.clockSkew;
+                                this.refreshAt = t + (i - n) * o
                             }
                             return Object.defineProperty(e.prototype, "payload", {
                                 get: function() {
@@ -5603,7 +5663,7 @@
                                 configurable: !0
                             }), Object.defineProperty(e.prototype, "isNearExpiration", {
                                 get: function() {
-                                    return this.expiresIn <= r
+                                    return this.expiresIn <= i
                                 },
                                 enumerable: !0,
                                 configurable: !0
@@ -5633,61 +5693,6 @@
                                 configurable: !0
                             }), e
                         }()
-                }, function(e, t, n) {
-                    "use strict";
-                    var r = n(3),
-                        i = (n.n(r), n(7)),
-                        o = n(4);
-                    n.d(t, "a", function() {
-                        return s
-                    });
-                    var a = function() {
-                            function e() {
-                                var e = this;
-                                this.tokens = {}, this.timers = {}, this.tokenEmitter = new r.EventEmitter2, this.clearTokenManager = function() {
-                                    e.tokenEmitter.removeAllListeners();
-                                    for (var t in e.timers) e.timers[t] && e.timers[t] && (clearTimeout(e.timers[t]), delete e.timers[t])
-                                }, this.getToken = function(t) {
-                                    return e.tokens[t]
-                                }, this.registerToken = function(t, n) {
-                                    var r = new i.a(n),
-                                        o = e.tokens[t] || r;
-                                    e.tokens[t] = new i.a(n), e.tokenEmitter.emit(t, r, o), e.updateRefreshTimer(t)
-                                }, this.updateRefreshTimer = function(t) {
-                                    var n = e.getToken(t),
-                                        r = e.tokenEmitter.listeners(t).length > 0,
-                                        i = void 0 !== e.timers[t];
-                                    r && !i ? e.timers[t] = setTimeout(function() {
-                                        delete e.timers[t], e.refreshToken(t)
-                                    }, n.refreshAfter) : !r && i && (clearTimeout(e.timers[t]), delete e.timers[t])
-                                }, this.refreshToken = function(t) {
-                                    var r = e.getToken(t);
-                                    n.i(o.b)(t, r).catch(function() {
-                                        return e.getTokenFromExtensions(t, r)
-                                    }).then(function(n) {
-                                        var r = n.token;
-                                        r && e.registerToken(t, r)
-                                    })
-                                }, this.getTokenFromExtensions = function(e, t) {
-                                    return n.i(o.a)(t.payload.channel_id).then(function(t) {
-                                        var n = t.tokens;
-                                        return {
-                                            token: n.reduce(function(t, n) {
-                                                var r = n.extension_id,
-                                                    i = n.token;
-                                                return r === e ? i : t
-                                            }, "")
-                                        }
-                                    })
-                                }
-                            }
-                            return e.prototype.subscribe = function(e, t) {
-                                this.tokenEmitter.on(e, t), this.getToken(e) && this.updateRefreshTimer(e)
-                            }, e.prototype.unsubscribe = function(e, t) {
-                                this.tokenEmitter.off(e, t), this.getToken(e) && this.updateRefreshTimer(e)
-                            }, e
-                        }(),
-                        s = new a
                 }, function(e, t, n) {
                     "use strict";
 
@@ -6426,7 +6431,7 @@
                         i = (n.n(r), n(5)),
                         o = n(9),
                         a = n(22),
-                        s = n(8),
+                        s = n(6),
                         u = n(4),
                         l = n(16),
                         c = n(21),
@@ -6544,7 +6549,8 @@
                                             u.src = n.i(o.a)(r.extension.liveConfigUrl, s), u.setAttribute("style", "height: " + l + "px;"), r.applyConfigWhitelist(u, e);
                                             break;
                                         case "config":
-                                            u.src = n.i(o.a)(r.extension.configUrl, s), u.setAttribute("style", "width:100%; height: 700px;"), r.applyConfigWhitelist(u, e)
+                                            u.src = n.i(o.a)(r.extension.configUrl, s), u.setAttribute("style", "width:100%; height: 700px;"),
+                                                r.applyConfigWhitelist(u, e)
                                     }
                                     return t.appendChild(u), u
                                 }, r.getExtensionAuth = function() {
@@ -6670,10 +6676,10 @@
                     }()
                 }, function(e, t, n) {
                     "use strict";
-                    var r = n(6),
+                    var r = n(7),
                         i = n(19),
-                        o = n(8),
-                        a = n(7),
+                        o = n(6),
+                        a = n(8),
                         s = n(4);
                     n.d(t, "a", function() {
                         return u
@@ -6694,7 +6700,7 @@
                         }
                         return e.prototype.getInstalledExtensions = function(e) {
                             return n.i(s.a)(e).then(function(e) {
-                                return e.tokens.forEach(function(t) {
+                                return o.a.setClockSkew(e.issued_at), e.tokens.forEach(function(t) {
                                     var n = e.installed_extensions.reduce(function(e, n) {
                                             var r = n.extension,
                                                 i = n.installation_status;
@@ -7304,7 +7310,7 @@
 
                     function s(e) {
                         if ("production" !== e && "staging" !== e && "darklaunch" !== e) throw "Invalid Pubsub instance environment";
-                        return null === window.__Twitch__pubsubInstances[e] && (window.__Twitch__pubsubInstances[e] = new O(e)), window.__Twitch__pubsubInstances[e]
+                        return null === window.__Twitch__pubsubInstances[e] && (window.__Twitch__pubsubInstances[e] = new k(e)), window.__Twitch__pubsubInstances[e]
                     }
                     Object.defineProperty(t, "__esModule", {
                         value: !0
@@ -7336,30 +7342,24 @@
                         T = n(29),
                         S = r(T),
                         C = f.default._getLogger("PubsubDriver"),
-                        w = 3e4,
-                        P = /^https?:\/\/([\w-]+\.)*twitch\.tv(:\d+)?\/.*$/,
-                        k = 1,
-                        O = function(e) {
+                        w = /^https?:\/\/([\w-]+\.)*twitch\.tv(:\d+)?\/.*$/,
+                        P = 1,
+                        k = function(e) {
                             function t(e) {
                                 i(this, t);
                                 var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
-                                return n._env = h.default.urlParams.pubsub_environment || e, n._clientReady = !1, n._hasDisconnected = !1, n._queuedRequests = [], n._stats = E.Stats.getInstance(n._env, "pubsub-js-client"), n._numDisconnects = 0, h.default.inIframe() && P.test(document.referrer) ? (C.debug("Driver is in an iframe"), n._client = new v.default({
+                                return n._env = h.default.urlParams.pubsub_environment || e, n._clientReady = !1, n._queuedRequests = [], n._stats = E.Stats.getInstance(n._env, "pubsub-js-client"), n._numDisconnects = 0, h.default.inIframe() && w.test(document.referrer) ? (C.debug("Driver is in an iframe"), n._client = new v.default({
                                     parentUrl: document.referrer
                                 }), n._clientType = "iframe-verified") : (C.debug("Driver is not in an iframe"), n._client = new b.default({
                                     env: n._env,
                                     stats: n._stats
-                                }), n._iframeHost = new y.default(n._client), n._clientType = "ws"), n._stats.setPrefix("pubsub-js-client." + n._clientType), "true" === h.default.urlParams.force_pubsub_tester ? k = 1 : "false" === h.default.urlParams.force_pubsub_tester && (k = 0), Math.random() < k && window.setTimeout(n.runTest.bind(n), w), n._client.on("unverified", n._clientUnverified, n), n._client.on("verified", n._clientVerified, n), n._client.verify(), n
+                                }), n._iframeHost = new y.default(n._client), n._clientType = "ws"), n._stats.setPrefix("pubsub-js-client." + n._clientType), "true" === h.default.urlParams.force_pubsub_tester ? P = 1 : "false" === h.default.urlParams.force_pubsub_tester && (P = 0), Math.random() < P && (n._tester = new S.default({
+                                    env: n._env,
+                                    driver: n,
+                                    stats: n._stats
+                                })), n._client.on("unverified", n._clientUnverified, n), n._client.on("verified", n._clientVerified, n), n._client.verify(), n
                             }
                             return a(t, e), u(t, [{
-                                key: "runTest",
-                                value: function() {
-                                    this._tester = new S.default({
-                                        env: this._env,
-                                        driver: this,
-                                        stats: this._stats
-                                    })
-                                }
-                            }, {
                                 key: "connect",
                                 value: function() {}
                             }, {
@@ -7395,12 +7395,12 @@
                             }, {
                                 key: "_clientConnected",
                                 value: function() {
-                                    C.debug("Client connected"), this._client.on("disconnected", this._clientDisconnected, this), this._stats.logCounter("connected", 1), this._trigger("connected"), this._hasDisconnected && this._trigger("reconnected"), this._clientReady = !0, this._flushQueuedRequests()
+                                    C.debug("Client connected"), this._client.on("disconnected", this._clientDisconnected, this), this._stats.logCounter("connected", 1), this._trigger("connected"), this._clientReady = !0, this._flushQueuedRequests()
                                 }
                             }, {
                                 key: "_clientDisconnected",
                                 value: function() {
-                                    C.debug("Client disconnected"), this._trigger("disconnected"), this._clientReady = !1, this._numDisconnects += 1, this._hasDisconnected = !0
+                                    C.debug("Client disconnected"), this._trigger("disconnected"), this._clientReady = !1, this._numDisconnects += 1
                                 }
                             }, {
                                 key: "_clientVerified",
@@ -7627,7 +7627,7 @@
                         c = "https://pubster.twitch.tv/publish",
                         d = "https://pubster-darklaunch.twitch.tv/publish",
                         f = "pubsubtest.unique.",
-                        p = "pubsubtest.shared." + s.default.randomInt(10),
+                        p = "pubsubtest.shared." + s.default.randomInt(2),
                         h = 1e-4,
                         _ = 6e4,
                         v = 3e4,
@@ -13561,7 +13561,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.02-014313+135fe28eefb8caf1cc4f4b5a7d26ce2b8bcadf9a",
+                    app_version: "2017.08.02-161506+cd45fb6780a6560a86142abcacc17cff1d7679b9",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
