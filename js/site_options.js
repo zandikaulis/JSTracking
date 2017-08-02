@@ -1174,6 +1174,17 @@ window.SiteOptions = {
                 "value": "realtime"
             }]
         },
+        "6a587617-eb7c-475e-8bc3-991d4f38fc87": {
+            "name": "ios_hosted_streams",
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "6b4086ea-dcce-41c9-a57b-000fa9366e35": {
             "name": "clips_you_were_right",
             "t": 1,
@@ -1386,7 +1397,7 @@ window.SiteOptions = {
             "t": 1,
             "groups": [{
                 "weight": 0,
-                "value": "control"
+                "value": "off"
             }, {
                 "weight": 100,
                 "value": "active"
