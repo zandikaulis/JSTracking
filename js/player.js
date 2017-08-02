@@ -13561,7 +13561,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.02-161506+cd45fb6780a6560a86142abcacc17cff1d7679b9",
+                    app_version: "2017.08.02-172413+75830403e44b6f677ed3a6a54d656fead6023fb6",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -13580,34 +13580,37 @@
             d.trackEvents = function(n) {
                 var o = e.getState(),
                     a = o.window,
-                    u = a.Date.now() / 1e3;
+                    u = a.Date.now() / 1e3,
+                    l = o.tracking.referrer ? (0, h.parseUri)(o.tracking.referrer).host : "";
                 Promise.all(v).then(function(e) {
                     var a = s.default.apply(null, e),
-                        l = i(),
-                        c = o.env,
-                        d = c.platform,
-                        f = c.playerType,
-                        p = n.map(function(e) {
+                        c = i(),
+                        d = o.env,
+                        f = d.platform,
+                        p = d.playerType,
+                        h = n.map(function(e) {
                             var t = (0, s.default)({}, y, a, e.properties, o.tracking, {
-                                platform: f === S.PLAYER_CURSE ? f : d,
+                                platform: p === S.PLAYER_CURSE ? p : f,
                                 play_session_id: o.analytics.playSessionId,
-                                url: (0, _.sanitizeQuery)(l.href),
-                                host: l.host,
-                                domain: r(l.host)
+                                url: (0, _.sanitizeQuery)(c.href),
+                                host: c.host,
+                                domain: r(c.host),
+                                referrer_host: l,
+                                referrer_domain: l ? r(l) : ""
                             });
                             return t.time || (t.time = u), {
                                 event: e.event,
                                 properties: t
                             }
                         });
-                    t.debug && p.forEach(function(e) {
+                    t.debug && h.forEach(function(e) {
                         var t = e.event,
                             n = e.properties;
                         console.log("track event:", t, n)
                     });
-                    var h = o.analytics.trackingClients;
-                    h.forEach(function(e) {
-                        e.trackEvents(p)
+                    var v = o.analytics.trackingClients;
+                    v.forEach(function(e) {
+                        e.trackEvents(h)
                     })
                 })
             }, d.trackEvent = function(e, t) {
@@ -41358,7 +41361,7 @@
             h = n(409),
             _ = n(438),
             v = n(655),
-            m = ["misterrogers", "twitchpresents"],
+            m = ["misterrogers", "twitchpresents", "redbull", "redbullchanneltwo", "redbullchannelthree"],
             y = [f.PLAYER_IMDB],
             g = function(e) {
                 return m.indexOf(e) === -1
@@ -44761,7 +44764,7 @@
                 className: d
             }, a.default.createElement("div", {
                 className: "player-center-content"
-            }, a.default.createElement("p", null, t("This collection is empty."))));
+            }, a.default.createElement("p", null, t("This collection is empty."))))
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
