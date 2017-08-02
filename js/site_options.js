@@ -472,13 +472,13 @@ window.SiteOptions = {
             "name": "android_big_goku",
             "t": 1,
             "groups": [{
-                "weight": 10,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 45,
+                "weight": 100,
                 "value": "treatment"
             }, {
-                "weight": 45,
+                "weight": 0,
                 "value": "collection"
             }]
         },
