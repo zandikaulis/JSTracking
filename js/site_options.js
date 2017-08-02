@@ -1741,10 +1741,10 @@ window.SiteOptions = {
             "name": "clips_teach_me",
             "t": 1,
             "groups": [{
-                "weight": 6,
+                "weight": 1,
                 "value": "control"
             }, {
-                "weight": 4,
+                "weight": 9,
                 "value": "variant1"
             }]
         },
