@@ -1218,17 +1218,6 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
-        "70a7aea8-402f-43e8-9e2d-23ce4e6fd196": {
-            "name": "ios_volume_view",
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "enabled"
-            }]
-        },
         "711aaaf6-61c0-4cc4-9469-0dfc9908785a": {
             "name": "VP_QOS_TEST",
             "t": 1,
@@ -1752,10 +1741,10 @@ window.SiteOptions = {
             "name": "clips_teach_me",
             "t": 1,
             "groups": [{
-                "weight": 8,
+                "weight": 6,
                 "value": "control"
             }, {
-                "weight": 2,
+                "weight": 4,
                 "value": "variant1"
             }]
         },
