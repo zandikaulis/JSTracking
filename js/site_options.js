@@ -1752,11 +1752,11 @@ window.SiteOptions = {
             "name": "clips_teach_me",
             "t": 1,
             "groups": [{
-                "weight": 1,
+                "weight": 8,
                 "value": "control"
             }, {
-                "weight": 0,
-                "value": "variant"
+                "weight": 2,
+                "value": "variant1"
             }]
         },
         "a9f7f84a-76fd-44f0-80b1-9421e714a1b7": {
