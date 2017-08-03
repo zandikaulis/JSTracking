@@ -15559,6 +15559,7 @@ googletag.cmd = googletag.cmd || [],
                 CLIPS_HEAR_ME_NOW: "9649684c-6d3f-423d-9d3c-f4296efee975",
                 CLIPS_YOU_WERE_RIGHT: "6b4086ea-dcce-41c9-a57b-000fa9366e35",
                 CLIPS_TEACH_ME: "a39cd18b-c3fb-46ad-a6a8-0c2e8686d978",
+                NEW_POA: "8ec5564f-4f15-4269-9824-5658a432cbf3",
                 NEWS_FEED_REDESIGN: "05d8869f-e037-4955-b80a-7c361f9ddffb",
                 VOD_UPLOAD_UNITS_V3: "1710cf57-352c-4d09-b2c1-3d40bdf79b30",
                 AWS_ROUNDTRIP_LATENCY_TEST_OPT_IN: "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef",
@@ -15617,6 +15618,7 @@ googletag.cmd = googletag.cmd || [],
                 "9649684c-6d3f-423d-9d3c-f4296efee975": "control",
                 "6b4086ea-dcce-41c9-a57b-000fa9366e35": "control",
                 "a39cd18b-c3fb-46ad-a6a8-0c2e8686d978": "control",
+                "8ec5564f-4f15-4269-9824-5658a432cbf3": "no",
                 "05d8869f-e037-4955-b80a-7c361f9ddffb": "no",
                 "1710cf57-352c-4d09-b2c1-3d40bdf79b30": "control",
                 "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef": "false",
@@ -15655,6 +15657,7 @@ googletag.cmd = googletag.cmd || [],
                 CLIPS_YOU_WERE_RIGHT: "variant1",
                 SOCIAL_RECOMMENDATIONS: "variant1",
                 LOL_METADATA_EXPERIMENT: "treatment",
+                NEW_POA: "yes",
                 OFFLINE_RECOMMENDATIONS: "yes",
                 OFFLINE_EXPERIENCE: "show",
                 LTV: "yes",
@@ -16716,33 +16719,32 @@ googletag.cmd = googletag.cmd || [],
                 i.alert.apply(i, arguments)
             };
         i._dispatch = function(t, i, r, o) {
-                "function" == typeof(r = r || {}) && (o = r, r = {});
-                var s = e.defaults({
-                    type: t,
-                    text: i,
-                    callback: {
-                        onClose: o || !1
-                    }
-                }, r, n);
-                return s.escape && (s.text = _.escape(i)), noty(s)
-            },
-            i.alert = function(e, t, n) {
-                return i._dispatch("alert", e, t, n)
-            }, i.notice = function(e, t, n) {
-                return i._dispatch("notice", e, t, n)
-            }, i.success = function(e, t, n) {
-                return i._dispatch("success", e, t, n)
-            }, i.error = function(e, t, n) {
-                return i._dispatch("error", e, t, n)
-            }, i.flash = function(e, n) {
-                var r = t("#header_notification"),
-                    o = r.find(".flash-error"),
-                    s = r.find(".flash-success"),
-                    a = r.find(".flash-notice");
-                return o.length ? i.error(o.text(), e, n) : s.length ? i.success(s.text(), e, n) : a.length ? i.alert(a.text(), e, n) : void 0
-            }, e.mixin({
-                notify: i
-            })
+            "function" == typeof(r = r || {}) && (o = r, r = {});
+            var s = e.defaults({
+                type: t,
+                text: i,
+                callback: {
+                    onClose: o || !1
+                }
+            }, r, n);
+            return s.escape && (s.text = _.escape(i)), noty(s)
+        }, i.alert = function(e, t, n) {
+            return i._dispatch("alert", e, t, n)
+        }, i.notice = function(e, t, n) {
+            return i._dispatch("notice", e, t, n)
+        }, i.success = function(e, t, n) {
+            return i._dispatch("success", e, t, n)
+        }, i.error = function(e, t, n) {
+            return i._dispatch("error", e, t, n)
+        }, i.flash = function(e, n) {
+            var r = t("#header_notification"),
+                o = r.find(".flash-error"),
+                s = r.find(".flash-success"),
+                a = r.find(".flash-notice");
+            return o.length ? i.error(o.text(), e, n) : s.length ? i.success(s.text(), e, n) : a.length ? i.alert(a.text(), e, n) : void 0
+        }, e.mixin({
+            notify: i
+        })
     }(Twitch, jQuery), window.sp_cid = "qFEaZsFQnwEdUIs",
     function(e, t) {
         var n = new RSVP.Promise(function(e, n) {
