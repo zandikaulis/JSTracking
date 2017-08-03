@@ -256,8 +256,8 @@
             D = n(322),
             x = n(410),
             j = n(411),
-            U = n(418),
-            B = n(420),
+            U = n(419),
+            B = n(421),
             F = n(351),
             V = n(353),
             H = n(323),
@@ -280,7 +280,7 @@
             ae = n(374),
             se = n(375),
             ue = n(182),
-            le = n(435),
+            le = n(436),
             ce = n(336),
             de = n(350),
             fe = n(179),
@@ -291,7 +291,7 @@
             me = n(333),
             ye = n(224),
             ge = n(793),
-            be = n(438),
+            be = n(412),
             Ee = n(409),
             Te = n(809),
             Se = n(810),
@@ -13561,7 +13561,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.03-182655+5ba13d195a2af82f08afe4903a92faf8ef1e2ffb",
+                    app_version: "2017.08.03-200449+b63605651f1c8e8123f47c548744f1e63ddb3177",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -23355,62 +23355,63 @@
             f = n(342),
             p = n(370),
             h = n(182),
-            _ = n(409),
-            v = n(178),
-            m = n(337),
-            y = n(335),
-            g = n(408),
-            b = n(183),
-            E = n(217),
-            T = n(224),
-            S = n(167),
-            C = n(412),
-            w = r(C),
-            P = n(177),
-            A = n(323);
+            _ = n(412),
+            v = n(409),
+            m = n(178),
+            y = n(337),
+            g = n(335),
+            b = n(408),
+            E = n(183),
+            T = n(217),
+            S = n(224),
+            C = n(167),
+            w = n(413),
+            P = r(w),
+            A = n(177),
+            O = n(323);
         t.EmbedHost = function() {
             function e(t, n) {
-                a(this, e), this._player = t, this._store = n, this._clients = [], this._unsubscribes = [], this._window = this._store.getState().window, this._window.addEventListener("message", this), this._store.getState().env.playerType === E.PLAYER_FRONTPAGE && this._player.addEventListener(v.OPEN_STREAM, this._sendOpenStreamEvent.bind(this));
+                a(this, e), this._player = t, this._store = n, this._clients = [], this._unsubscribes = [], this._window = this._store.getState().window, this._window.addEventListener("message", this), this._store.getState().env.playerType === T.PLAYER_FRONTPAGE && this._player.addEventListener(m.OPEN_STREAM, this._sendOpenStreamEvent.bind(this));
                 var r = this._window.opener || this._window.parent;
                 r && r !== this._window && this._addClient(r), this._store.dispatch((0, f.embedHostLoaded)(this)), this._initSubscriptions(), this._sendStoreState()
             }
             return s(e, [{
                 key: "_sendOpenStreamEvent",
                 value: function() {
-                    this._sendPlayerEvent(w.EVENT_EMBED_OPEN_STREAM)
+                    this._sendPlayerEvent(P.EVENT_EMBED_OPEN_STREAM)
                 }
             }, {
                 key: "_initSubscriptions",
                 value: function() {
                     var e = this;
-                    this._unsubscribes.push((0, b.subscribe)(this._store, ["stats.videoStats"], function() {
+                    this._unsubscribes.push((0, E.subscribe)(this._store, ["stats.videoStats"], function() {
                         e._sendStoreState()
-                    })), this._unsubscribes.push((0, b.subscribe)(this._store, ["viewercount"], function() {
-                        e._sendStoreState(), e._sendPlayerEvent(w.EVENT_EMBED_VIEWERS_CHANGE)
-                    })), this._unsubscribes.push((0, b.subscribe)(this._store, ["playback.contentShowing"], function(t) {
+                    })), this._unsubscribes.push((0, E.subscribe)(this._store, ["viewercount"], function() {
+                        e._sendStoreState(), e._sendPlayerEvent(P.EVENT_EMBED_VIEWERS_CHANGE)
+                    })), this._unsubscribes.push((0, E.subscribe)(this._store, ["playback.contentShowing"], function(t) {
                         var n = t.playback;
-                        n.contentShowing && e._sendPlayerEvent(w.EVENT_EMBED_CONTENT_SHOWING)
-                    })), this._unsubscribes.push((0, b.subscribe)(this._store, ["playback.paused", "playback.ended", "playback.hasPlayed"], function(t) {
+                        n.contentShowing && e._sendPlayerEvent(P.EVENT_EMBED_CONTENT_SHOWING)
+                    })), this._unsubscribes.push((0, E.subscribe)(this._store, ["playback.paused", "playback.ended", "playback.hasPlayed"], function(t) {
                         var n = t.playback,
                             r = n.paused,
                             i = n.ended,
                             o = n.hasPlayed;
-                        i ? e._sendPlayerEvent(w.EVENT_EMBED_ENDED) : r ? e._sendPlayerEvent(w.EVENT_EMBED_PAUSE) : o && e._sendPlayerEvent(w.EVENT_EMBED_PLAY)
-                    })), this._unsubscribes.push((0, b.subscribe)(this._store, ["onlineStatus"], function(t) {
+                        i ? e._sendPlayerEvent(P.EVENT_EMBED_ENDED) : r ? e._sendPlayerEvent(P.EVENT_EMBED_PAUSE) : o && e._sendPlayerEvent(P.EVENT_EMBED_PLAY)
+                    })), this._unsubscribes.push((0, E.subscribe)(this._store, ["onlineStatus"], function(t) {
                         var n = t.onlineStatus;
-                        n === _.ONLINE_STATUS ? e._sendPlayerEvent(w.EVENT_EMBED_ONLINE) : e._sendPlayerEvent(w.EVENT_EMBED_OFFLINE)
-                    })), this._unsubscribes.push((0, b.subscribe)(this._store, ["screenMode.isTheatreMode"], function(t) {
+                        n === v.ONLINE_STATUS ? e._sendPlayerEvent(P.EVENT_EMBED_ONLINE) : e._sendPlayerEvent(P.EVENT_EMBED_OFFLINE)
+                    })), this._unsubscribes.push((0, E.subscribe)(this._store, ["screenMode.isTheatreMode"], function(t) {
                         var n = t.screenMode;
-                        e._sendStoreState(), n.isTheatreMode ? e._sendPlayerEvent(w.EVENT_THEATRE_ENTERED) : e._sendPlayerEvent(w.EVENT_THEATRE_EXITED)
-                    })), this._unsubscribes.push((0, b.subscribe)(this._store, ["screenMode.isFullScreen"], function(t) {
+                        e._sendStoreState(), n.isTheatreMode ? e._sendPlayerEvent(P.EVENT_THEATRE_ENTERED) : e._sendPlayerEvent(P.EVENT_THEATRE_EXITED)
+                    })), this._unsubscribes.push((0, E.subscribe)(this._store, ["screenMode.isFullScreen"], function(t) {
                         var n = t.screenMode;
-                        e._sendStoreState(), n.isFullScreen ? e._sendPlayerEvent(w.EVENT_FULLSCREEN_ENTERED) : e._sendPlayerEvent(w.EVENT_FULLSCREEN_EXITED)
-                    })), this._unsubscribes.push((0, b.subscribe)(this._store, ["stream", "streamMetadata.channelName", "streamMetadata.videoId", "quality.current", "quality.available", "playback.currentTime", "playback.duration", "playback.muted", "playback.volume", "playback.paused", "playback.ended"], this._sendPlayerState.bind(this)))
+                        e._sendStoreState(), n.isFullScreen ? e._sendPlayerEvent(P.EVENT_FULLSCREEN_ENTERED) : e._sendPlayerEvent(P.EVENT_FULLSCREEN_EXITED)
+                    })), this._unsubscribes.push((0, E.subscribe)(this._store, ["stream", "streamMetadata.channelName", "streamMetadata.videoId", "quality.current", "quality.available", "playback.currentTime", "playback.duration", "playback.muted", "playback.volume", "playback.paused", "playback.ended"], this._sendPlayerState.bind(this)))
                 }
             }, {
                 key: "_addClient",
                 value: function(e) {
-                    this._clients.push(e), this._send(e, w.BRIDGE_HOST_READY), this._store.dispatch((0, g.requestStatsEnabled)(this))
+                    this._clients.push(e), this._send(e, P.BRIDGE_HOST_READY), this._store.dispatch((0, b.requestStatsEnabled)(this))
                 }
             }, {
                 key: "_send",
@@ -23418,7 +23419,7 @@
                     var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
                         r = Array.isArray(n) ? n : [n],
                         i = {
-                            namespace: w.BRIDGE_CLIENT_NAMESPACE,
+                            namespace: P.BRIDGE_CLIENT_NAMESPACE,
                             method: t,
                             args: r
                         };
@@ -23435,47 +23436,50 @@
             }, {
                 key: "handleEvent",
                 value: function(e) {
-                    if ((0, l.default)(e.data) && e.data.namespace === w.BRIDGE_HOST_NAMESPACE) switch (e.data.method) {
-                        case w.BRIDGE_REQ_SUBSCRIBE:
+                    if ((0, l.default)(e.data) && e.data.namespace === P.BRIDGE_HOST_NAMESPACE) switch (e.data.method) {
+                        case P.BRIDGE_REQ_SUBSCRIBE:
                             this._addClient(e.source);
                             break;
-                        case w.METHOD_PLAY:
+                        case P.METHOD_PLAY:
                             this._store.dispatch((0, p.play)());
                             break;
-                        case w.METHOD_PAUSE:
+                        case P.METHOD_PAUSE:
                             this._store.dispatch((0, p.pause)());
                             break;
-                        case w.METHOD_SET_CHANNEL:
+                        case P.METHOD_SET_CHANNEL:
                             var t = e.data.args[0];
-                            this._store.dispatch(d.setStream(d.TYPE_CHANNEL, t)), this._store.dispatch((0, m.clearCollection)());
+                            this._store.dispatch(d.setStream(d.TYPE_CHANNEL, t)), this._store.dispatch((0, y.clearCollection)());
                             break;
-                        case w.METHOD_SET_VIDEO:
+                        case P.METHOD_SET_VIDEO:
                             var n = e.data.args[0];
-                            this._store.dispatch(d.setStream(d.TYPE_VIDEO, n)), this._store.dispatch((0, m.clearCollection)());
+                            this._store.dispatch(d.setStream(d.TYPE_VIDEO, n)), this._store.dispatch((0, y.clearCollection)());
                             break;
-                        case w.METHOD_SET_COLLECTION:
-                            this._store.dispatch(m.requestCollection.apply(void 0, o(e.data.args)));
+                        case P.METHOD_SET_COLLECTION:
+                            this._store.dispatch(y.requestCollection.apply(void 0, o(e.data.args)));
                             break;
-                        case w.METHOD_SEEK:
+                        case P.METHOD_SEEK:
                             this._player.setCurrentTime(parseFloat(e.data.args[0]));
                             break;
-                        case w.METHOD_SET_QUALITY:
-                            this._store.dispatch((0, y.selectQuality)(e.data.args[0]));
+                        case P.METHOD_SET_QUALITY:
+                            this._store.dispatch((0, g.selectQuality)(e.data.args[0]));
                             break;
-                        case w.METHOD_SET_MUTE:
+                        case P.METHOD_SET_MUTE:
                             this._store.dispatch((0, p.mutePlayer)(!!e.data.args[0]));
                             break;
-                        case w.METHOD_SET_VOLUME:
+                        case P.METHOD_SET_VOLUME:
                             this._store.dispatch((0, p.changeVolume)(e.data.args[0]));
                             break;
-                        case w.METHOD_SET_THEATRE:
+                        case P.METHOD_SET_THEATRE:
                             this._store.dispatch((0, h.setTheatreMode)(e.data.args[0]));
                             break;
-                        case w.METHOD_SET_FULLSCREEN:
+                        case P.METHOD_SET_FULLSCREEN:
                             this._store.dispatch((0, h.setFullScreen)(e.data.args[0]));
                             break;
-                        case w.METHOD_DESTROY:
-                            this._player.destroy(), this.destroy(), this._sendAll(w.BRIDGE_DESTROY)
+                        case P.METHOD_DESTROY:
+                            this._player.destroy(), this.destroy(), this._sendAll(P.BRIDGE_DESTROY);
+                            break;
+                        case P.METHOD_SET_MINI_PLAYER_MODE:
+                            this._store.dispatch((0, _.setMiniPlayerMode)(e.data.args[0]))
                     }
                 }
             }, {
@@ -23488,46 +23492,46 @@
                         o = this._configurePlaybackState(),
                         a = t,
                         s = {
-                            channelName: a instanceof S.LiveContentStream ? a.channel : "",
+                            channelName: a instanceof C.LiveContentStream ? a.channel : "",
                             currentTime: r.currentTime,
                             duration: r.duration,
                             muted: r.muted,
                             playback: o,
                             quality: n.current,
                             qualitiesAvailable: n.available,
-                            videoID: a instanceof T.VODContentStream ? a.videoId : "",
+                            videoID: a instanceof S.VODContentStream ? a.videoId : "",
                             viewers: i,
                             volume: r.volume
                         };
-                    this._sendAll(w.BRIDGE_STATE_UPDATE, s)
+                    this._sendAll(P.BRIDGE_STATE_UPDATE, s)
                 }
             }, {
                 key: "_configurePlaybackState",
                 value: function() {
-                    return this._store.getState().playback.ended ? w.PLAYBACK_ENDED : this._store.getState().playback.paused ? w.PLAYBACK_PAUSED : w.PLAYBACK_PLAYING
+                    return this._store.getState().playback.ended ? P.PLAYBACK_ENDED : this._store.getState().playback.paused ? P.PLAYBACK_PAUSED : P.PLAYBACK_PLAYING
                 }
             }, {
                 key: "_sendPlayerEvent",
                 value: function(e) {
-                    this._sendAll(w.BRIDGE_PLAYER_EVENT, e)
+                    this._sendAll(P.BRIDGE_PLAYER_EVENT, e)
                 }
             }, {
                 key: "_sendAdCompanionEvent",
                 value: function(e, t) {
                     var n = this;
                     switch (e) {
-                        case P.COMPANION_RENDERED:
+                        case A.COMPANION_RENDERED:
                             this._clients.forEach(function(e) {
-                                n._send(e, w.BRIDGE_PLAYER_EVENT_WITH_PAYLOAD, {
-                                    event: w.EVENT_EMBED_AD_COMPANION_RENDERED,
+                                n._send(e, P.BRIDGE_PLAYER_EVENT_WITH_PAYLOAD, {
+                                    event: P.EVENT_EMBED_AD_COMPANION_RENDERED,
                                     data: t
                                 })
                             });
                             break;
-                        case A.FLASH_AD_EVENTS.AD_COMPANION_RENDERED:
+                        case O.FLASH_AD_EVENTS.AD_COMPANION_RENDERED:
                             this._clients.forEach(function(e) {
-                                n._send(e, w.BRIDGE_PLAYER_EVENT_WITH_PAYLOAD, {
-                                    event: w.EVENT_EMBED_FLASH_AD_COMPANION_RENDERED,
+                                n._send(e, P.BRIDGE_PLAYER_EVENT_WITH_PAYLOAD, {
+                                    event: P.EVENT_EMBED_FLASH_AD_COMPANION_RENDERED,
                                     data: t
                                 })
                             })
@@ -23549,17 +23553,50 @@
                             playSessionId: r.playSessionId,
                             screenMode: i
                         };
-                    this._sendAll(w.BRIDGE_STORE_STATE_UPDATE, o)
+                    this._sendAll(P.BRIDGE_STORE_STATE_UPDATE, o)
                 }
             }, {
                 key: "destroy",
                 value: function() {
-                    this._store.dispatch((0, g.requestStatsDisabled)(this)), this._window.removeEventListener("message", this), this._store.getState().env.playerType === E.PLAYER_FRONTPAGE && this._player.removeEventListener(v.OPEN_STREAM, this._sendOpenStreamEvent.bind(this)), this._unsubscribes.forEach(function(e) {
+                    this._store.dispatch((0, b.requestStatsDisabled)(this)), this._window.removeEventListener("message", this), this._store.getState().env.playerType === T.PLAYER_FRONTPAGE && this._player.removeEventListener(m.OPEN_STREAM, this._sendOpenStreamEvent.bind(this)), this._unsubscribes.forEach(function(e) {
                         return e()
                     })
                 }
             }]), e
         }()
+    }, function(e, t) {
+        "use strict";
+
+        function n(e) {
+            return {
+                type: o,
+                value: e
+            }
+        }
+
+        function r() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
+            return {
+                type: s,
+                value: e
+            }
+        }
+
+        function i() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            return {
+                type: a,
+                value: e
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.setMiniPlayerMode = n, t.showMenu = r, t.showClipsButton = i;
+        var o = t.ACTION_SET_MINIPLAYER_MODE = "set miniplayer",
+            a = t.ACTION_SHOW_CLIPS_BUTTON = "show clips button",
+            s = t.ACTION_SHOW_SETTINGS_MENU = "show settings menu",
+            u = t.MENU_STATE_NONE = "none";
+        t.MENU_STATE_SETTINGS = "settings", t.MENU_STATE_EXTENSIONS = "extensions"
     }, function(e, t, n) {
         "use strict";
 
@@ -23581,7 +23618,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.EmbedClient = t.PLAYBACK_ENDED = t.PLAYBACK_PLAYING = t.PLAYBACK_PAUSED = t.BRIDGE_DESTROY = t.BRIDGE_CLIENT_NAMESPACE = t.BRIDGE_HOST_NAMESPACE = t.BRIDGE_DOCUMENT_EVENT = t.BRIDGE_PLAYER_EVENT_WITH_PAYLOAD = t.BRIDGE_PLAYER_EVENT = t.BRIDGE_STORE_STATE_UPDATE = t.BRIDGE_STATE_UPDATE = t.BRIDGE_HOST_READY = t.BRIDGE_REQ_SUBSCRIBE = t.METHOD_SET_FULLSCREEN = t.METHOD_SET_THEATRE = t.METHOD_DESTROY = t.METHOD_SET_VOLUME = t.METHOD_SET_MUTE = t.METHOD_SET_QUALITY = t.METHOD_SEEK = t.METHOD_SET_COLLECTION = t.METHOD_SET_VIDEO = t.METHOD_SET_CHANNEL = t.METHOD_PAUSE = t.METHOD_PLAY = t.EVENT_EMBED_FLASH_AD_COMPANION_RENDERED = t.EVENT_EMBED_AD_COMPANION_RENDERED = t.EVENT_EMBED_OPEN_STREAM = t.EVENT_EMBED_CONTENT_SHOWING = t.EVENT_FULLSCREEN_EXITED = t.EVENT_FULLSCREEN_ENTERED = t.EVENT_THEATRE_EXITED = t.EVENT_THEATRE_ENTERED = t.EVENT_EMBED_VIEWERS_CHANGE = t.EVENT_EMBED_OFFLINE = t.EVENT_EMBED_ONLINE = t.EVENT_EMBED_ENDED = t.EVENT_EMBED_PAUSE = t.EVENT_EMBED_PLAY = t.EVENT_EMBED_READY = void 0;
+        }), t.EmbedClient = t.PLAYBACK_ENDED = t.PLAYBACK_PLAYING = t.PLAYBACK_PAUSED = t.BRIDGE_DESTROY = t.BRIDGE_CLIENT_NAMESPACE = t.BRIDGE_HOST_NAMESPACE = t.BRIDGE_DOCUMENT_EVENT = t.BRIDGE_PLAYER_EVENT_WITH_PAYLOAD = t.BRIDGE_PLAYER_EVENT = t.BRIDGE_STORE_STATE_UPDATE = t.BRIDGE_STATE_UPDATE = t.BRIDGE_HOST_READY = t.BRIDGE_REQ_SUBSCRIBE = t.METHOD_SET_MINI_PLAYER_MODE = t.METHOD_SET_FULLSCREEN = t.METHOD_SET_THEATRE = t.METHOD_DESTROY = t.METHOD_SET_VOLUME = t.METHOD_SET_MUTE = t.METHOD_SET_QUALITY = t.METHOD_SEEK = t.METHOD_SET_COLLECTION = t.METHOD_SET_VIDEO = t.METHOD_SET_CHANNEL = t.METHOD_PAUSE = t.METHOD_PLAY = t.EVENT_EMBED_FLASH_AD_COMPANION_RENDERED = t.EVENT_EMBED_AD_COMPANION_RENDERED = t.EVENT_EMBED_OPEN_STREAM = t.EVENT_EMBED_CONTENT_SHOWING = t.EVENT_FULLSCREEN_EXITED = t.EVENT_FULLSCREEN_ENTERED = t.EVENT_THEATRE_EXITED = t.EVENT_THEATRE_ENTERED = t.EVENT_EMBED_VIEWERS_CHANGE = t.EVENT_EMBED_OFFLINE = t.EVENT_EMBED_ONLINE = t.EVENT_EMBED_ENDED = t.EVENT_EMBED_PAUSE = t.EVENT_EMBED_PLAY = t.EVENT_EMBED_READY = void 0;
         var a = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -23595,7 +23632,7 @@
             }(),
             s = n(324),
             u = r(s),
-            l = n(413),
+            l = n(414),
             c = r(l),
             d = n(164),
             f = r(d),
@@ -23630,7 +23667,7 @@
             },
             g = t.EVENT_EMBED_READY = "ready",
             b = (t.EVENT_EMBED_PLAY = "play", t.EVENT_EMBED_PAUSE = "pause", t.EVENT_EMBED_ENDED = "ended", t.EVENT_EMBED_ONLINE = "online", t.EVENT_EMBED_OFFLINE = "offline", t.EVENT_EMBED_VIEWERS_CHANGE = "viewerschange", t.EVENT_THEATRE_ENTERED = "theatreentered", t.EVENT_THEATRE_EXITED = "theatreexited", t.EVENT_FULLSCREEN_ENTERED = "fullscreenentered", t.EVENT_FULLSCREEN_EXITED = "fullscreenexited", t.EVENT_EMBED_CONTENT_SHOWING = "contentShowing", t.EVENT_EMBED_OPEN_STREAM = "openStream", t.EVENT_EMBED_AD_COMPANION_RENDERED = "adcompanionrendered", t.EVENT_EMBED_FLASH_AD_COMPANION_RENDERED = "flashAdcompanionrendered", t.METHOD_PLAY = "play", t.METHOD_PAUSE = "pause", t.METHOD_SET_CHANNEL = "channel", t.METHOD_SET_VIDEO = "video", t.METHOD_SET_COLLECTION = "collection", t.METHOD_SEEK = "seek", t.METHOD_SET_QUALITY = "quality", t.METHOD_SET_MUTE = "mute", t.METHOD_SET_VOLUME = "volume", t.METHOD_DESTROY = "destroy"),
-            E = (t.METHOD_SET_THEATRE = "theatre", t.METHOD_SET_FULLSCREEN = "fullscreen", t.BRIDGE_REQ_SUBSCRIBE = "subscribe"),
+            E = (t.METHOD_SET_THEATRE = "theatre", t.METHOD_SET_FULLSCREEN = "fullscreen", t.METHOD_SET_MINI_PLAYER_MODE = "setminiplayermode", t.BRIDGE_REQ_SUBSCRIBE = "subscribe"),
             T = t.BRIDGE_HOST_READY = "ready",
             S = t.BRIDGE_STATE_UPDATE = "bridgestateupdate",
             C = t.BRIDGE_STORE_STATE_UPDATE = "bridgestorestateupdate",
@@ -23745,10 +23782,10 @@
     }, function(e, t, n) {
         var r = n(65),
             i = n(383),
-            o = n(414),
+            o = n(415),
             a = n(74),
             s = n(4),
-            u = n(417),
+            u = n(418),
             l = n(109),
             c = n(390),
             d = 1,
@@ -23770,8 +23807,8 @@
             return t = i(t, e), e = a(e, t), null == e || delete e[s(o(t))]
         }
         var i = n(74),
-            o = n(415),
-            a = n(416),
+            o = n(416),
+            a = n(417),
             s = n(104);
         e.exports = r
     }, function(e, t) {
@@ -23899,7 +23936,7 @@
             p = n(337),
             h = n(182),
             _ = n(370),
-            v = n(419),
+            v = n(420),
             m = "Control",
             y = " ",
             g = "PageUp",
@@ -24161,16 +24198,16 @@
             value: !0
         }), t.PlayerUI = o;
         var a = n(254),
-            s = n(421),
-            u = n(423),
-            l = n(425),
-            c = n(427),
-            d = n(428),
-            f = n(430),
-            p = n(432),
-            h = n(433),
-            _ = n(436),
-            v = n(437),
+            s = n(422),
+            u = n(424),
+            l = n(426),
+            c = n(428),
+            d = n(429),
+            f = n(431),
+            p = n(433),
+            h = n(434),
+            _ = n(437),
+            v = n(438),
             m = n(439),
             y = n(442),
             g = n(617),
@@ -24241,7 +24278,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            s = n(422),
+            s = n(423),
             u = function(e) {
                 function t(e, n) {
                     r(this, t);
@@ -24416,8 +24453,7 @@
                     var i = e.getCasting();
                     if ("error" === i && (i = "available"), $(t).attr("data-casting", i), "connected" === i) {
                         var o = e.getCastDevice();
-                        o = (0, s.default)(o) ? o : "Chromecast",
-                            n.dispatch((0, p.setDeviceName)(o))
+                        o = (0, s.default)(o) ? o : "Chromecast", n.dispatch((0, p.setDeviceName)(o))
                     }
                     "connected" === i || "connecting" === i ? ($(t).attr("data-chromecast", "true"), r.showControls()) : ($(t).attr("data-chromecast", "false"), r.showControls(d.hoverControlsDelay))
                 }
@@ -24443,7 +24479,7 @@
             c = n(168),
             d = r(c),
             f = n(183),
-            p = n(424),
+            p = n(425),
             h = n(370),
             _ = n(178),
             v = n(179),
@@ -24632,7 +24668,7 @@
             b = n(370),
             E = n(185),
             T = n(409),
-            S = n(426),
+            S = n(427),
             C = "1280x720"
     }, function(e, t, n) {
         "use strict";
@@ -24729,7 +24765,7 @@
                 }
             }(),
             s = n(408),
-            u = n(422);
+            u = n(423);
         t.PlayerUIStats = function(e) {
             function t(e, n) {
                 r(this, t);
@@ -24825,8 +24861,8 @@
                 var a = i.get;
                 if (void 0 !== a) return a.call(r)
             },
-            l = n(422),
-            c = n(429),
+            l = n(423),
+            c = n(430),
             d = n(402),
             f = n(224),
             p = n(336),
@@ -25328,7 +25364,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.PlayerUILeaveDialog = o;
-        var a = n(431),
+        var a = n(432),
             s = i(a),
             u = n(168),
             l = r(u),
@@ -25424,7 +25460,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            u = n(422),
+            u = n(423),
             l = n(224),
             c = n(200),
             d = n(168),
@@ -25566,18 +25602,18 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            c = n(434),
+            c = n(435),
             d = i(c),
             f = n(168),
             p = n(186),
             h = n(179),
             _ = r(h),
-            v = n(435),
+            v = n(436),
             m = n(409),
             y = n(200),
             g = n(167),
             b = n(224),
-            E = n(422);
+            E = n(423);
         t.PlayerUIResume = function(e) {
             function t(e, n, r, i) {
                 o(this, t);
@@ -25896,7 +25932,7 @@
                 }
             }(),
             s = n(168),
-            u = n(422),
+            u = n(423),
             l = n(217),
             c = $('<span class="player-chromecast-overlay-device js-chromecast-device"></span>');
         t.PlayerUILang = function(e) {
@@ -26017,7 +26053,7 @@
             }(),
             l = n(118),
             c = i(l),
-            d = n(413),
+            d = n(414),
             f = i(d),
             p = n(70),
             h = i(p),
@@ -26025,7 +26061,7 @@
             v = n(363),
             m = r(v),
             y = n(183),
-            g = n(438),
+            g = n(412),
             b = ["top", "bottom", "textAlign", "fontSize", "lineHeight", "display"],
             E = "player-captions-row",
             T = /\r?\n|\r/g,
@@ -26275,39 +26311,6 @@
                 }
             }]), e
         }()
-    }, function(e, t) {
-        "use strict";
-
-        function n(e) {
-            return {
-                type: o,
-                value: e
-            }
-        }
-
-        function r() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
-            return {
-                type: s,
-                value: e
-            }
-        }
-
-        function i() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            return {
-                type: a,
-                value: e
-            }
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.setMiniPlayerMode = n, t.showMenu = r, t.showClipsButton = i;
-        var o = t.ACTION_SET_MINIPLAYER_MODE = "set miniplayer",
-            a = t.ACTION_SHOW_CLIPS_BUTTON = "show clips button",
-            s = t.ACTION_SHOW_SETTINGS_MENU = "show settings menu",
-            u = t.MENU_STATE_NONE = "none";
-        t.MENU_STATE_SETTINGS = "settings", t.MENU_STATE_EXTENSIONS = "extensions"
     }, function(e, t, n) {
         "use strict";
 
@@ -26338,7 +26341,7 @@
             }(),
             a = n(168),
             s = r(a),
-            u = n(419),
+            u = n(420),
             l = n(440),
             c = n(441),
             d = n(217),
@@ -35018,7 +35021,7 @@
             _ = n(619),
             v = n(621),
             m = n(624),
-            y = n(438),
+            y = n(412),
             g = n(335),
             b = {
                 isAutoQuality: d.default.bool.isRequired,
@@ -35764,7 +35767,7 @@
             g = n(224),
             b = n(351),
             E = n(344),
-            T = n(438),
+            T = n(412),
             S = {
                 availableQualities: d.default.array.isRequired,
                 backendType: d.default.string.isRequired,
@@ -36633,7 +36636,7 @@
             u = n(581),
             l = n(635),
             c = n(335),
-            d = n(438),
+            d = n(412),
             f = n(350),
             p = {
                 availableQualities: s.default.array.isRequired,
@@ -37475,7 +37478,7 @@
             f = n(581),
             p = n(643),
             h = n(370),
-            _ = n(438),
+            _ = n(412),
             v = {
                 handleVideoIssueReport: d.default.func,
                 hideSettingsMenu: d.default.func,
@@ -37776,7 +37779,7 @@
             f = n(581),
             p = n(631),
             h = n(370),
-            _ = n(438),
+            _ = n(412),
             v = {
                 currentSpeed: d.default.number.isRequired,
                 onMenuTransition: d.default.func,
@@ -38897,7 +38900,7 @@
             c = n(658),
             d = n(662),
             f = n(217),
-            p = n(426),
+            p = n(427),
             h = {
                 playerType: u.default.string.isRequired,
                 streamType: u.default.string.isRequired
@@ -39063,7 +39066,7 @@
             y = r(m),
             g = n(168),
             b = n(217),
-            E = n(426),
+            E = n(427),
             T = n(402),
             S = {
                 analytics: h.default.object,
@@ -39830,7 +39833,7 @@
             A = r(P),
             O = n(409),
             k = n(182),
-            I = n(426),
+            I = n(427),
             N = n(314),
             R = i(N),
             M = 16 / 9,
@@ -41160,7 +41163,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            s = n(422),
+            s = n(423),
             u = n(402);
         t.PlayerUIError = function(e) {
             function t(e, n) {
@@ -41474,11 +41477,11 @@
             u = n(167),
             l = n(224),
             c = n(682),
-            d = n(422),
+            d = n(423),
             f = n(217),
             p = n(353),
             h = n(409),
-            _ = n(438),
+            _ = n(412),
             v = n(655),
             m = ["misterrogers", "twitchpresents", "redbull", "redbullchanneltwo", "redbullchannelthree"],
             y = [f.PLAYER_IMDB],
@@ -41647,7 +41650,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            s = n(422);
+            s = n(423);
         t.AdOverlay = function(e) {
             function t(e, n) {
                 r(this, t);
@@ -41715,8 +41718,8 @@
                 var a = i.get;
                 if (void 0 !== a) return a.call(r)
             },
-            u = n(422),
-            l = n(419),
+            u = n(423),
+            l = n(420),
             c = t.COLLAPSED_VIEW_ATTR = "view-collapsed",
             d = t.SIDEBAR_VIEW_ATTR = "view-sidebar",
             f = t.NO_COLLECTION_VIEW_ATTR = "none";
@@ -43816,7 +43819,7 @@
             c = n(311),
             d = r(c),
             f = n(581),
-            p = n(419),
+            p = n(420),
             h = n(337),
             _ = n(705),
             v = n(402),
@@ -44047,7 +44050,7 @@
             v = n(162),
             m = r(v),
             y = n(581),
-            g = n(419),
+            g = n(420),
             b = n(712),
             E = n(337),
             T = n(336),
@@ -44949,7 +44952,7 @@
             f = n(581),
             p = n(402),
             h = n(721),
-            _ = n(429),
+            _ = n(430),
             v = n(336),
             m = {
                 recommendedVideos: d.default.array.isRequired,
@@ -45793,7 +45796,7 @@
             v = r(_),
             m = n(723),
             y = n(315),
-            g = n(429),
+            g = n(430),
             b = n(729),
             E = t.RECOMMENDATION_COLUMN_CONFIG = [{
                 minPlayerWidth: 2381,
@@ -47828,7 +47831,7 @@
             w = n(769),
             P = n(771),
             A = n(774),
-            O = n(419),
+            O = n(420),
             k = n(775),
             I = n(777),
             N = n(779),
@@ -47841,7 +47844,7 @@
             U = n(786),
             B = n(787),
             F = n(788),
-            V = n(426),
+            V = n(427),
             H = n(789),
             q = n(791),
             G = n(792),
@@ -47853,7 +47856,7 @@
             $ = n(798),
             X = n(799),
             J = n(409),
-            Z = (n(375), n(435), n(800)),
+            Z = (n(375), n(436), n(800)),
             ee = n(802),
             te = n(804),
             ne = n(806),
@@ -48308,7 +48311,7 @@
             a = r(o),
             s = n(53),
             u = r(s),
-            l = n(424),
+            l = n(425),
             c = t.UNAVAILABLE = "unavailable",
             d = t.AVAILABLE = "available",
             f = t.CONNECTING = "connecting",
@@ -48986,7 +48989,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.recommendations = i;
-        var o = n(429),
+        var o = n(430),
             a = n(338),
             s = n(117),
             u = r(s),
@@ -49087,13 +49090,13 @@
         }), t.MAX_INIT_UPDATE_OFFSET_LIVESTREAM = t.INIT_UPDATE_OFFSET_VOD = t.UPDATE_INTERVAL_LIVESTREAM = t.UPDATE_INTERVAL_VOD = void 0, t.resumeWatch = o;
         var s = n(117),
             u = r(s),
-            l = n(413),
+            l = n(414),
             c = r(l),
             d = n(201),
             f = r(d),
             p = n(70),
             h = r(p),
-            _ = n(435),
+            _ = n(436),
             v = n(338),
             m = n(224),
             y = n(167),
@@ -49521,7 +49524,7 @@
         }), t.ui = o;
         var a = n(117),
             s = i(a),
-            u = n(438),
+            u = n(412),
             l = r(u),
             c = {
                 isMini: !1,
@@ -50898,7 +50901,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(429),
+            a = n(430),
             s = n(402),
             u = n(217),
             l = n(224),
@@ -51035,11 +51038,11 @@
             f = n(183),
             p = n(53),
             h = r(p),
-            _ = n(429),
+            _ = n(430),
             v = n(337),
             m = n(200),
             y = n(255),
-            g = n(435),
+            g = n(436),
             b = n(247),
             E = [l.PLAYER_DASHBOARD, l.PLAYER_FRONTPAGE, l.PLAYER_CREATIVE, l.PLAYER_HIGHLIGHTER],
             T = 560,
