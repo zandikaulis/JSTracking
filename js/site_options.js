@@ -1921,10 +1921,10 @@ window.SiteOptions = {
             "name": "CHANNEL_CHAT_CTA_V2",
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 10,
                 "value": "5min"
             }, {
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }]
         },
