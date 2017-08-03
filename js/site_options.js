@@ -1124,6 +1124,17 @@ window.SiteOptions = {
                 "value": "test"
             }]
         },
+        "676f7ba1-6f07-4782-adc2-99eaf7e04361": {
+            "name": "SIGNUP_INTERCEPT",
+            "t": 1,
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "show"
+            }]
+        },
         "68cde3a8-d4a6-44ae-af4a-22dbc5a0393c": {
             "name": "passport_redesign_test",
             "t": 1,
