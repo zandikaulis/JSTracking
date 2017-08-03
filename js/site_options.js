@@ -1419,6 +1419,17 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "8ec5564f-4f15-4269-9824-5658a432cbf3": {
+            "name": "NEW_POA",
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "8f5277f3-7583-4fd9-ab09-e5a5c432b12b": {
             "name": "android_autoplay_profile",
             "t": 1,
