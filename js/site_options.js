@@ -933,13 +933,13 @@ window.SiteOptions = {
             "name": "FRONT_PAGE_SIGNUP_EXPERIMENT",
             "t": 1,
             "groups": [{
-                "weight": 80,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "HalfPageTakeover"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "FullPageTakeover"
             }]
         },
