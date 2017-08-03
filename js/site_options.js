@@ -2411,19 +2411,19 @@ window.SiteOptions = {
             "name": "baking_brownies",
             "t": 1,
             "groups": [{
-                "weight": 80,
+                "weight": 75,
                 "value": "control"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "no_play_600"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "no_play_1050"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "yes_play_600"
             }, {
-                "weight": 5,
+                "weight": 25,
                 "value": "yes_play_1050"
             }]
         },
