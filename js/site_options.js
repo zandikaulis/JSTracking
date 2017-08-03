@@ -379,17 +379,6 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
-        "1c7a531b-462b-4814-820e-5c3f2871cda9": {
-            "name": "CHANNEL_SIGNUP_CTA",
-            "t": 1,
-            "groups": [{
-                "weight": 95,
-                "value": "control"
-            }, {
-                "weight": 5,
-                "value": "show"
-            }]
-        },
         "1e406d0d-c293-4c4e-812f-049db8c7e3ec": {
             "name": "vod_upload_units",
             "t": 1,
@@ -438,23 +427,6 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "active"
-            }]
-        },
-        "2232da8a-775e-4a95-b006-19964b59ab4c": {
-            "name": "FOLLOW_CTA_V2",
-            "t": 1,
-            "groups": [{
-                "weight": 70,
-                "value": "control"
-            }, {
-                "weight": 10,
-                "value": "10s"
-            }, {
-                "weight": 10,
-                "value": "20s"
-            }, {
-                "weight": 10,
-                "value": "30s"
             }]
         },
         "2352d0b6-7692-49f1-9f8d-88e6cc47994b": {
@@ -1273,17 +1245,6 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
-        "78360f5d-4ace-420d-8bca-df0d146ffdee": {
-            "name": "CHANNEL_SIGNUP_COLUMN",
-            "t": 1,
-            "groups": [{
-                "weight": 0,
-                "value": "treatment"
-            }, {
-                "weight": 100,
-                "value": "control"
-            }]
-        },
         "79accd86-e77e-4eae-8979-d19ab2bc4521": {
             "name": "ios_skippable_ads",
             "t": 1,
@@ -1826,17 +1787,6 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
-        "aece7525-dceb-49ba-af1b-242c1ae45831": {
-            "name": "CHANNEL_LOGIN_CTA",
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "no"
-            }, {
-                "weight": 0,
-                "value": "yes"
-            }]
-        },
         "af8f152a-f618-416e-8b79-d6ac30479018": {
             "name": "PERPETUA",
             "t": 1,
@@ -1965,6 +1915,17 @@ window.SiteOptions = {
             }, {
                 "weight": 1,
                 "value": "no"
+            }]
+        },
+        "b8ca66a8-ec36-422f-a8a2-256ef0e16e8d": {
+            "name": "CHANNEL_CHAT_CTA_V2",
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "5min"
+            }, {
+                "weight": 100,
+                "value": "control"
             }]
         },
         "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14": {
