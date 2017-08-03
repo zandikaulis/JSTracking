@@ -11755,7 +11755,7 @@ function(e, t) {
             function i(e) {
                 var t = r(e);
                 if (null !== t) throw t;
-                this._config = o(e), this._Promise = e.Promise, this._deviceID = e.deviceID, this._platform = e.platform, this._username = e.login || null, this._defaults = s(e.Promise, e.defaults, e.overrides || {}), this._assignments = a(e.Promise, this._config, this._defaults, e.overrides || {}, this._deviceID), this._spade_url = l(this._config, h.SPADE_URL_PROJECT_UUID)
+                this._config = o(e), this._Promise = e.Promise, this._deviceID = e.deviceID, this._platform = e.platform, this._username = e.login || null, this._overrides = e.overrides || {}, this._defaults = s(e.Promise, e.defaults, this._overrides), this._assignments = a(e.Promise, this._config, this._defaults, this._overrides, this._deviceID, this._username), this._spade_url = l(this._config, h.SPADE_URL_PROJECT_UUID)
             }
 
             function r(e) {
@@ -11784,23 +11784,24 @@ function(e, t) {
                 return i
             }
 
-            function a(e, t, n, i, r) {
-                var o = {};
-                for (var s in n) n.hasOwnProperty(s) && (o[s] = function(o) {
+            function a(e, t, n, i, r, o) {
+                var s = {};
+                for (var a in n) n.hasOwnProperty(a) && (s[a] = function(s) {
                     return t.then(function(e) {
-                        if (!e.hasOwnProperty(o)) throw new Error("Experiment `" + o + "` is deprecated");
-                        return c.selectTreatment(o, e[o], r)
+                        if (!e.hasOwnProperty(s)) throw new Error("Experiment `" + s + "` is deprecated");
+                        if (!e[s].t) throw new Error("Experiment `" + s + "` does not have a type");
+                        return 1 == e[s].t ? c.selectTreatment(s, e[s], r) : o && 2 == e[s].t ? c.selectTreatment(s, e[s], o) : n[s]
                     }, function(e) {
-                        return n[o]
+                        return n[s]
                     }).then(function(t) {
-                        return e.resolve(i[o]).then(function(e) {
+                        return e.resolve(i[s]).then(function(e) {
                             return "string" == typeof e ? e : t
                         }, function() {
                             return t
                         })
                     })
-                }(s));
-                return o
+                }(a));
+                return s
             }
 
             function l(e, t) {
@@ -11821,28 +11822,52 @@ function(e, t) {
                 h = n(4);
             e.exports = i, i.prototype.get = function(e, t) {
                 var n = u(t || {}, {
-                        mustTrack: !1
+                        mustTrack: !1,
+                        channel: null
                     }),
-                    i = this._assignments[e] || this._Promise.reject(new Error("No experiment with ID `" + e + "`")),
-                    r = this._Promise.all([this._config, i, this._spade_url]).then(function(t) {
-                        var n = t[0],
-                            i = t[1],
-                            r = t[2],
-                            o = {
+                    i = this._Promise.all([this._config, this._assignments[e]]).then(function(t) {
+                        var i = t[0],
+                            r = t[1];
+                        return 3 == i[e].t && n.channel ? c.selectTreatment(e, i[e], n.channel) : r
+                    }, function(t) {
+                        return console.warn(t), this._defaults[e] || null
+                    }.bind(this)).then(function(t) {
+                        return this._Promise.resolve(this._overrides[e]).then(function(e) {
+                            return "string" == typeof e ? e : t
+                        }, function() {
+                            return t
+                        })
+                    }.bind(this)),
+                    r = i || this._Promise.reject(new Error("No experiment with ID `" + e + "`")),
+                    o = this._Promise.all([this._config, r, this._spade_url]).then(function(t) {
+                        var i = t[0],
+                            r = t[1],
+                            o = t[2],
+                            s = {
                                 client_time: (new Date).getTime() / 1e3,
                                 device_id: this._deviceID,
                                 experiment_id: e,
-                                experiment_name: n[e].name,
-                                experiment_group: i,
+                                experiment_name: i[e].name,
+                                experiment_group: r,
                                 platform: this._platform
                             };
-                        return null !== this._username && (o.login = this._username), new this._Promise(function(e, t) {
-                            h.sendEvent(r, "experiment_branch", o, e)
+                        switch (null !== this._username && (s.login = this._username), null !== n.channel && (s.channel = n.channel), i[e].t) {
+                            case 1:
+                                s.experiment_type = "device_id";
+                                break;
+                            case 2:
+                                s.experiment_type = "user_id";
+                                break;
+                            case 3:
+                                s.experiment_type = "channel_id"
+                        }
+                        return new this._Promise(function(e, t) {
+                            h.sendEvent(o, "experiment_branch", s, e)
                         }).then(null, function() {
                             return null
                         })
                     }.bind(this));
-                return this._Promise.all([i, n.mustTrack ? r : null]).then(function(e) {
+                return this._Promise.all([r, n.mustTrack ? o : null]).then(function(e) {
                     return e[0]
                 }, function(t) {
                     return console.warn(t), this._defaults[e] || null
@@ -11854,6 +11879,8 @@ function(e, t) {
             }
 
             function r(e, t) {
+                if (!t.hasOwnProperty("t")) return new i(e, t, "missing a `t` property for experiment type");
+                if (1 != t.t && 2 != t.t && 3 != t.t) return new i(e, t, "undefined experiment type");
                 if (!t.hasOwnProperty("groups")) return new i(e, t, "missing a `groups` property");
                 if (0 === t.groups.length) return new i(e, t, "`groups` has no members");
                 var n, r;
@@ -12314,7 +12341,8 @@ function(e, t) {
 
         function p(e, t) {
             var n, i, r;
-            if (f(t._isAMomentObject) || (e._isAMomentObject = t._isAMomentObject), f(t._i) || (e._i = t._i), f(t._f) || (e._f = t._f), f(t._l) || (e._l = t._l), f(t._strict) || (e._strict = t._strict), f(t._tzm) || (e._tzm = t._tzm), f(t._isUTC) || (e._isUTC = t._isUTC), f(t._offset) || (e._offset = t._offset), f(t._pf) || (e._pf = c(t)), f(t._locale) || (e._locale = t._locale), pi.length > 0)
+            if (f(t._isAMomentObject) || (e._isAMomentObject = t._isAMomentObject), f(t._i) || (e._i = t._i), f(t._f) || (e._f = t._f), f(t._l) || (e._l = t._l), f(t._strict) || (e._strict = t._strict),
+                f(t._tzm) || (e._tzm = t._tzm), f(t._isUTC) || (e._isUTC = t._isUTC), f(t._offset) || (e._offset = t._offset), f(t._pf) || (e._pf = c(t)), f(t._locale) || (e._locale = t._locale), pi.length > 0)
                 for (n in pi) i = pi[n], r = t[i], f(r) || (e[i] = r);
             return e
         }
@@ -15538,7 +15566,7 @@ googletag.cmd = googletag.cmd || [],
                 LOL_METADATA_EXPERIMENT: "479d9473-bf6e-4d74-8f9b-dd85d6f98921",
                 SOCIAL_RECOMMENDATIONS: "819aed52-3cc1-4747-a840-476a39487a2e",
                 ZACH_MODE: "0a4d513f-0274-4b33-b04f-287521abd51b",
-                CHANNEL_CHAT_CTA: "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9",
+                CHANNEL_CHAT_CTA_V2: "b8ca66a8-ec36-422f-a8a2-256ef0e16e8d",
                 LOGGED_OUT_FRONT_PAGE_EXPERIMENT: "54e455b2-9854-4c55-b926-cfadbff49324",
                 AKAMAI_IMAGE_MANAGER: "f321aa37-e81d-4a81-99d5-303bf9429b7b",
                 SISKO: "31827b23-ea01-48b8-87c6-1503656957fd",
@@ -15597,7 +15625,7 @@ googletag.cmd = googletag.cmd || [],
                 "479d9473-bf6e-4d74-8f9b-dd85d6f98921": "control",
                 "819aed52-3cc1-4747-a840-476a39487a2e": "control",
                 "0a4d513f-0274-4b33-b04f-287521abd51b": "control",
-                "b7d320bf-c137-4c2d-b374-ea9fa20e3bd9": "control",
+                "b8ca66a8-ec36-422f-a8a2-256ef0e16e8d": "control",
                 "54e455b2-9854-4c55-b926-cfadbff49324": "control",
                 "f321aa37-e81d-4a81-99d5-303bf9429b7b": "control",
                 "31827b23-ea01-48b8-87c6-1503656957fd": "control",
@@ -16720,18 +16748,17 @@ googletag.cmd = googletag.cmd || [],
     function(e, t) {
         var n = new RSVP.Promise(function(e, n) {
                 t.ajax({
-                        url: "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
-                        dataType: "script",
-                        timeout: 2e3,
-                        cache: !0
-                    }).fail(function(e, t, i) {
-                        n()
-                    }),
-                    document.addEventListener("sp.blocking", function() {
-                        e(!0)
-                    }), document.addEventListener("sp.not_blocking", function() {
-                        e(!1)
-                    })
+                    url: "//d2lv4zbk7v5f93.cloudfront.net/esf.js",
+                    dataType: "script",
+                    timeout: 2e3,
+                    cache: !0
+                }).fail(function(e, t, i) {
+                    n()
+                }), document.addEventListener("sp.blocking", function() {
+                    e(!0)
+                }), document.addEventListener("sp.not_blocking", function() {
+                    e(!1)
+                })
             }),
             i = {
                 detect: n,
