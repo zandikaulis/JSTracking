@@ -15586,7 +15586,6 @@ googletag.cmd = googletag.cmd || [],
                 TRENDING_EMOTES: "35731f0a-bd57-4582-915d-907dee75b3d4",
                 LEEROY_JENKINS: "59c5198b-ea6d-423d-b337-ea93d0dc8d66",
                 DEMOGRAPHIC_STATS: "ca305459-aec3-4d0c-b4e4-93d8cda54bba",
-                CRUNCHYROLL_BUTTON: "fe5bad1f-521b-4ab9-9cd4-8161ef779550",
                 VODS_IN_CAROUSEL_EXPERIMENT: "8a1fbb7b-4b26-4d3c-8ad6-bbfeb72831f8",
                 TWILIGHT_UPSELL: "49f40b88-2044-409d-b306-2eb308489a60"
             },
@@ -15644,7 +15643,6 @@ googletag.cmd = googletag.cmd || [],
                 "35731f0a-bd57-4582-915d-907dee75b3d4": "control",
                 "59c5198b-ea6d-423d-b337-ea93d0dc8d66": "no",
                 "ca305459-aec3-4d0c-b4e4-93d8cda54bba": "no",
-                "fe5bad1f-521b-4ab9-9cd4-8161ef779550": "control",
                 "8a1fbb7b-4b26-4d3c-8ad6-bbfeb72831f8": "control",
                 "49f40b88-2044-409d-b306-2eb308489a60": "control"
             },
@@ -16718,32 +16716,33 @@ googletag.cmd = googletag.cmd || [],
                 i.alert.apply(i, arguments)
             };
         i._dispatch = function(t, i, r, o) {
-            "function" == typeof(r = r || {}) && (o = r, r = {});
-            var s = e.defaults({
-                type: t,
-                text: i,
-                callback: {
-                    onClose: o || !1
-                }
-            }, r, n);
-            return s.escape && (s.text = _.escape(i)), noty(s)
-        }, i.alert = function(e, t, n) {
-            return i._dispatch("alert", e, t, n)
-        }, i.notice = function(e, t, n) {
-            return i._dispatch("notice", e, t, n)
-        }, i.success = function(e, t, n) {
-            return i._dispatch("success", e, t, n)
-        }, i.error = function(e, t, n) {
-            return i._dispatch("error", e, t, n)
-        }, i.flash = function(e, n) {
-            var r = t("#header_notification"),
-                o = r.find(".flash-error"),
-                s = r.find(".flash-success"),
-                a = r.find(".flash-notice");
-            return o.length ? i.error(o.text(), e, n) : s.length ? i.success(s.text(), e, n) : a.length ? i.alert(a.text(), e, n) : void 0
-        }, e.mixin({
-            notify: i
-        })
+                "function" == typeof(r = r || {}) && (o = r, r = {});
+                var s = e.defaults({
+                    type: t,
+                    text: i,
+                    callback: {
+                        onClose: o || !1
+                    }
+                }, r, n);
+                return s.escape && (s.text = _.escape(i)), noty(s)
+            },
+            i.alert = function(e, t, n) {
+                return i._dispatch("alert", e, t, n)
+            }, i.notice = function(e, t, n) {
+                return i._dispatch("notice", e, t, n)
+            }, i.success = function(e, t, n) {
+                return i._dispatch("success", e, t, n)
+            }, i.error = function(e, t, n) {
+                return i._dispatch("error", e, t, n)
+            }, i.flash = function(e, n) {
+                var r = t("#header_notification"),
+                    o = r.find(".flash-error"),
+                    s = r.find(".flash-success"),
+                    a = r.find(".flash-notice");
+                return o.length ? i.error(o.text(), e, n) : s.length ? i.success(s.text(), e, n) : a.length ? i.alert(a.text(), e, n) : void 0
+            }, e.mixin({
+                notify: i
+            })
     }(Twitch, jQuery), window.sp_cid = "qFEaZsFQnwEdUIs",
     function(e, t) {
         var n = new RSVP.Promise(function(e, n) {
