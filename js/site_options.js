@@ -2248,6 +2248,17 @@ window.SiteOptions = {
                 "value": "holdout"
             }]
         },
+        "d51e556e-b8c8-4bdd-bc69-7acb169849da": {
+            "name": "android_playercore_8",
+            "t": 1,
+            "groups": [{
+                "weight": 99,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "active"
+            }]
+        },
         "d6ba259c-3f82-48ac-b158-bf4760fc864b": {
             "name": "android_playercore_6",
             "t": 1,
