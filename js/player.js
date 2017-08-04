@@ -13561,7 +13561,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.04-181957+f1d75161206821486d7d91534e3e65c28bbae76e",
+                    app_version: "2017.08.04-205849+bbf3c2c65db4cc92c7821934419ec74d7f85c6a9",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -24385,12 +24385,12 @@
                 e.addEventListener(_.CASTING_CHANGE, P), e.addEventListener(v.SEEKING, w)
             }
 
-            function c(n) {
-                n.player !== l.PLAYER_FRONTPAGE && $(t).on("dblclick", ".js-control-fullscreen-overlay", function(e) {
+            function c(r) {
+                r.player !== l.PLAYER_FRONTPAGE && $(t).on("dblclick", ".js-control-fullscreen-overlay", function(e) {
                     e.preventDefault(), b()
                 }), $(t).on("click", ".js-control-playpause-button", g), $(t).on("click", ".js-control-play-button", g), $(t).on("click", ".js-control-fullscreen", b), $(t).on("click", ".js-control-theatre", S), $(t).on("click", ".js-chromecast-button", function() {
                     var t = e.getCasting();
-                    "available" === t ? e.startCast() : e.stopCast()
+                    "available" === t ? n.dispatch((0, p.startCast)()) : n.dispatch((0, p.stopCast)())
                 }), $(t).on("click", ".js-player-alert__close", function() {
                     $(this).closest(".js-player-alert").attr("data-active", !1)
                 }), $(t).on("click", ".js-player-product-close", function(e) {
@@ -24417,7 +24417,8 @@
                     r = e.screenMode;
                 t.trackEvent("player_click_fullscreen", {
                     action: !r.isFullScreen
-                }), n.dispatch((0, m.toggleFullScreen)())
+                }), n.dispatch((0,
+                    m.toggleFullScreen)())
             }
 
             function E() {
@@ -24487,24 +24488,38 @@
     }, function(e, t) {
         "use strict";
 
-        function n(e) {
+        function n() {
             return {
-                type: i,
+                type: l
+            }
+        }
+
+        function r() {
+            return {
+                type: u
+            }
+        }
+
+        function i(e) {
+            return {
+                type: a,
                 deviceName: e
             }
         }
 
-        function r(e) {
+        function o(e) {
             return {
-                type: o,
+                type: s,
                 castingState: e
             }
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.setDeviceName = n, t.setCastingState = r;
-        var i = t.ACTION_SET_DEVICE_NAME = "set device name",
-            o = t.ACTION_SET_CASTING_STATE = "set casting state"
+        }), t.stopCast = n, t.startCast = r, t.setDeviceName = i, t.setCastingState = o;
+        var a = t.ACTION_SET_DEVICE_NAME = "set device name",
+            s = t.ACTION_SET_CASTING_STATE = "set casting state",
+            u = t.ACTION_START_CASTING = "start casting",
+            l = t.ACTION_STOP_CASTING = "stop casting"
     }, function(e, t, n) {
         "use strict";
 
@@ -49674,7 +49689,7 @@
         }
 
         function i() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
             return function(t) {
                 return function(t) {
                     var n = e;
@@ -49702,7 +49717,13 @@
                                 n.setBackend(e.backendType);
                                 break;
                             case a.ACTION_VIDEO_API_CHANGE_PLAYBACK_RATE:
-                                n.setPlaybackRate(e.playbackRate)
+                                n.setPlaybackRate(e.playbackRate);
+                                break;
+                            case u.ACTION_START_CASTING:
+                                n.startCast();
+                                break;
+                            case u.ACTION_STOP_CASTING:
+                                n.stopCast()
                         }
                         t(e)
                     }
@@ -49715,7 +49736,8 @@
         var o = n(370),
             a = r(o),
             s = n(801),
-            u = new s.NullVideoAPI
+            u = n(425),
+            l = new s.NullVideoAPI
     }, function(e, t) {
         "use strict";
 
@@ -49779,6 +49801,16 @@
                 key: "setPlaybackRate",
                 value: function() {
                     this._error("setPlaybackRate")
+                }
+            }, {
+                key: "startCast",
+                value: function() {
+                    this._error("startCast")
+                }
+            }, {
+                key: "stopCast",
+                value: function() {
+                    this._error("stopCast")
                 }
             }]), e
         }()
@@ -50702,7 +50734,7 @@
                 }
             });
             var A = function() {
-                return "undefined" != typeof ResizeObserver ? ResizeObserver : P;
+                return "undefined" != typeof ResizeObserver ? ResizeObserver : P
             }();
             return A
         })
