@@ -15588,6 +15588,7 @@ googletag.cmd = googletag.cmd || [],
                 LEEROY_JENKINS: "59c5198b-ea6d-423d-b337-ea93d0dc8d66",
                 DEMOGRAPHIC_STATS: "ca305459-aec3-4d0c-b4e4-93d8cda54bba",
                 VODS_IN_CAROUSEL_EXPERIMENT: "8a1fbb7b-4b26-4d3c-8ad6-bbfeb72831f8",
+                SIGNUP_INTERCEPT: "676f7ba1-6f07-4782-adc2-99eaf7e04361",
                 TWILIGHT_UPSELL: "49f40b88-2044-409d-b306-2eb308489a60"
             },
             r = {
@@ -15646,6 +15647,7 @@ googletag.cmd = googletag.cmd || [],
                 "59c5198b-ea6d-423d-b337-ea93d0dc8d66": "no",
                 "ca305459-aec3-4d0c-b4e4-93d8cda54bba": "no",
                 "8a1fbb7b-4b26-4d3c-8ad6-bbfeb72831f8": "control",
+                "676f7ba1-6f07-4782-adc2-99eaf7e04361": "control",
                 "49f40b88-2044-409d-b306-2eb308489a60": "control"
             },
             o = {},
