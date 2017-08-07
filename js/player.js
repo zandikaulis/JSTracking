@@ -13561,7 +13561,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.07-181907+9488699ccff41e154093dadb2b468d47ca1a80e7",
+                    app_version: "2017.08.07-221135+cf964947562a8dd9e07cd56c579f8f3c65a4f52a",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -48321,7 +48321,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.CONNECTED = t.CONNECTING = t.AVAILABLE = t.UNAVAILABLE = void 0, t.chromecast = i;
+        }), t.VALID_CASTING_STATES = t.CONNECTED = t.CONNECTING = t.AVAILABLE = t.UNAVAILABLE = void 0, t.chromecast = i;
         var o = n(117),
             a = r(o),
             s = n(53),
@@ -48331,7 +48331,7 @@
             d = t.AVAILABLE = "available",
             f = t.CONNECTING = "connecting",
             p = t.CONNECTED = "connected",
-            h = Object.freeze([c, d, f, p]),
+            h = t.VALID_CASTING_STATES = Object.freeze([c, d, f, p]),
             _ = {
                 deviceName: "",
                 castingState: c
