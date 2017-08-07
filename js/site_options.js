@@ -1128,10 +1128,10 @@ window.SiteOptions = {
             "name": "SIGNUP_INTERCEPT",
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "show"
             }]
         },
