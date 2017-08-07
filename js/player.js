@@ -13561,7 +13561,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.04-205849+bbf3c2c65db4cc92c7821934419ec74d7f85c6a9",
+                    app_version: "2017.08.07-181907+9488699ccff41e154093dadb2b468d47ca1a80e7",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -13790,7 +13790,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-30a4cf.sjc01.hls.ttvnw.net/v1/playlist/CrgLaQWjyXfHrhqdxx-7gTJS5IyxaP54fbiqKuBZeqr65HoaC6IOhlLr7d_XevHdPmhYRLsgW8DxJWGNDUfZzQv1Qd1NxfNJzXrcmULfdlGfRv3wstqhw0xQJuPjIkirIPoZCFz_ZgQkh_TzoOPye7Nh0QvZ9nV7FZQKrhLCiir0bM0VmV1_QRxrjfdB9LuV0YFbnp-sUPJV30o9JGbpkquR8EQvTeNtJgomYyUR1hXd4fZvANMD6umURa2vPik0c1fiEttaMQm2kFsn2iiyFgwCanWgZum_JgxQwTpaZtnj39N_wXIoF9QvZ5O0oubcdtVN-0vlDJe5Rvrv-fFHC_WCmsJpEvheF718fOGq2RlyEcHcnt70DFdmnX7lS1Aylw_bjRzQ7evd-fBl-Xu-4XUzNAoXHli_oX6LDsBo4KvjpUEVKR6KQ_gh7LeJ9QwBA6Dw4EVYtH8Yqj.m3u8"
+        t.trustedSpadeURI = "//video-edge-6a43e0.sjc01.hls.ttvnw.net/v1/playlist/Cqpnu4sj9l_WuiCPjinsxaVNCCWJ2rWQzvXT5CRcuOwrVrtBrsJzvzKUCuJsV4gFSRwqfAXNI5eiizRjK0tbYrYqr0VvUbEGEP0vQEq6z3PvPNH_Csdfvb3mNw1Lpq1EYUuwzySDEgXydxDXPt8C2iTj6YhWYcSKu0z-r1q3gae1oZjU3zq_Kj42vAkoZ6zuHFOMk1-4dTdfM4-wH2AomwhOTJe54m_Rf8Z_cGmHWszsYR8AII-D4xMvCg2gf40G070uTZQPLRjLH32LMb1j6Gc_MY1Z1A3cJ1qnIlbJoQb-33tpFhR9EyiDf6xecPKV6oGyFNHDWBTQM1hToE9Basx4hzdHgYDJq89X4A6C0rrBu2qLtrtPM-Tra_J0oAgrzErV1YB2IE8cJTI7mDI6EBPvWAWC8nkPG7ZjsqX3xKEU8vXR2bAUa-PtwqeDDx9xnSo5IUMrc6.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -23987,7 +23987,7 @@
                         featuredCollection: (0, u.default)({}, f, t.featuredCollection)
                     });
                 case o.ACTION_SET_COLLECTION:
-                    return (0, u.default)({}, e, t.collection, {
+                    return (0, u.default)({}, p, t.collection, {
                         pendingRequest: {
                             collectionId: "",
                             videoId: ""
