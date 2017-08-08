@@ -1233,6 +1233,23 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "7351db93-1494-464e-b019-b1d4a18da8ed": {
+            "name": "android_onboarding_1_1",
+            "t": 1,
+            "groups": [{
+                "weight": 25,
+                "value": "control"
+            }, {
+                "weight": 25,
+                "value": "variant_a"
+            }, {
+                "weight": 25,
+                "value": "variant_b"
+            }, {
+                "weight": 25,
+                "value": "variant_c"
+            }]
+        },
         "73fd722c-5197-4677-9a89-bb61a6aadc1d": {
             "name": "twilight_test_experiment",
             "t": 1,
