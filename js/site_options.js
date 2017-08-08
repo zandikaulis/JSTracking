@@ -840,10 +840,10 @@ window.SiteOptions = {
             "name": "Twilight_Upsell",
             "t": 2,
             "groups": [{
-                "weight": 97,
+                "weight": 85,
                 "value": "control"
             }, {
-                "weight": 3,
+                "weight": 15,
                 "value": "upsell"
             }]
         },
