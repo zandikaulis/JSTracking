@@ -960,6 +960,17 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "505329a0-55a7-46e5-bf82-c320029e1539": {
+            "name": "Video_Manager_V2",
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "experiment"
+            }]
+        },
         "51e3d33c-157b-422d-9a15-b0f9e9c055b2": {
             "name": "baking_bread_h",
             "t": 1,
