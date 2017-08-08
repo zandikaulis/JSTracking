@@ -52,7 +52,7 @@
                     }))
                 }), M.dispatch((0, le.initVodResume)()), $.addEventListener(pe.LOADED_METADATA, function() {
                     M.dispatch((0, ue.setCanFullScreen)(C.canFullScreen()))
-                })
+                }), document.getElementById("video-playback").focus()
             }
 
             function r() {
@@ -1675,13 +1675,14 @@
                 function r(e, t, n, r) {
                     void 0 === n && (n = {}), void 0 === r && (r = "");
                     var i = new XMLHttpRequest;
-                    return i.open(e, t, !0), n && Object.keys(n).forEach(function(e) {
-                        n.hasOwnProperty(e) && i.setRequestHeader(e, n[e]);
-                    }), new o.f(function(n, o) {
-                        i.onreadystatechange = function() {
-                            i.readyState === a && (i.status >= 200 && i.status < 300 ? n(i.responseText) : o(new Error("dobbin.js " + e + " " + t + " responded " + i.status + "\n" + i.responseText)))
-                        }, i.send(r)
-                    })
+                    return i.open(e, t, !0),
+                        n && Object.keys(n).forEach(function(e) {
+                            n.hasOwnProperty(e) && i.setRequestHeader(e, n[e])
+                        }), new o.f(function(n, o) {
+                            i.onreadystatechange = function() {
+                                i.readyState === a && (i.status >= 200 && i.status < 300 ? n(i.responseText) : o(new Error("dobbin.js " + e + " " + t + " responded " + i.status + "\n" + i.responseText)))
+                            }, i.send(r)
+                        })
                 }
 
                 function i(e, t) {
@@ -3129,7 +3130,7 @@
                 for (o in s)
                     if (s.hasOwnProperty(o))
                         for (n = s[o].slice(0), i = n.length; i--;) r = n[i], r.once === !0 && this.removeListener(e, r.listener), a = r.listener.apply(this, t || []), a === this._getOnceReturnValue() && this.removeListener(e, r.listener);
-                return this
+                return this;
             }, a.trigger = o("emitEvent"), a.emit = function(e) {
                 var t = Array.prototype.slice.call(arguments, 1);
                 return this.emitEvent(e, t)
@@ -13561,7 +13562,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.08-003952+07ae02a048db802af146eebdcadbd43e2ffb6903",
+                    app_version: "2017.08.08-183043+0d8f5d6416a78b2ef4f7ee9c12f6b93b9284365f",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -13790,7 +13791,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-6a43e0.sjc01.hls.ttvnw.net/v1/playlist/Cqpnu4sj9l_WuiCPjinsxaVNCCWJ2rWQzvXT5CRcuOwrVrtBrsJzvzKUCuJsV4gFSRwqfAXNI5eiizRjK0tbYrYqr0VvUbEGEP0vQEq6z3PvPNH_Csdfvb3mNw1Lpq1EYUuwzySDEgXydxDXPt8C2iTj6YhWYcSKu0z-r1q3gae1oZjU3zq_Kj42vAkoZ6zuHFOMk1-4dTdfM4-wH2AomwhOTJe54m_Rf8Z_cGmHWszsYR8AII-D4xMvCg2gf40G070uTZQPLRjLH32LMb1j6Gc_MY1Z1A3cJ1qnIlbJoQb-33tpFhR9EyiDf6xecPKV6oGyFNHDWBTQM1hToE9Basx4hzdHgYDJq89X4A6C0rrBu2qLtrtPM-Tra_J0oAgrzErV1YB2IE8cJTI7mDI6EBPvWAWC8nkPG7ZjsqX3xKEU8vXR2bAUa-PtwqeDDx9xnSo5IUMrc6.m3u8"
+        t.trustedSpadeURI = "//video-edge-81b476.sjc01.hls.ttvnw.net/v1/playlist/Ci3HtT3bdNB6WYe3jNLsyE4pF2Gdsn9q8N-ZCPO1z5KEy9iZJVO1Q8x4RZwa90MdVltROl5KwOkzIyYcLbKkq6bFmPFSZd6RoZHznCwtV61162q6enIecXltE7BXEg4ESqPpGJg4sXxJTnB_HCMeuRZSPRT4GUWTcnQY1tGDfzbNa_Hc-9yIyyHD8pgHZQG4DISRJgJIOqk9pMOInw73iR1vnn_JzGonmFqxxyXNsxFiQaxyl_qKgv-FhqH51ISrg-BcjmvNpMuVdI3fKq_DZYNkniIMUX8qBUSe-eCOCids8R14t0uRSVPFsuCaWy1PCU1fmYbi88nz9e3M3FqeG15_XyP9BcTD3T6VaQWQeSO1c8DDNZxVqVrgxCP-q5MRM1hg5eLel09qJp5DDKbHBok5-iELwUTgJ41H8yNW8pPcRycdwUY_.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -23920,7 +23921,7 @@
 
         function o(e) {
             var t = e.which || e.keyCode || e.charCode;
-            return e.key ? e.key : M[t]
+            return e.key ? e.key : L[t]
         }
 
         function a(e, t, n, r) {
@@ -23947,11 +23948,12 @@
                 if (!(a || u || l)) {
                     var d = o(t),
                         A = void 0,
-                        M = void 0;
+                        L = void 0;
                     switch (d) {
                         case m:
                             s = !0;
                             break;
+                        case M:
                         case y:
                             n.getState().playback.paused ? n.dispatch((0, _.play)()) : n.dispatch((0, _.pause)());
                             break;
@@ -23963,11 +23965,11 @@
                             break;
                         case T:
                         case k:
-                            A = n.getState().playback.volume, M = Math.round(100 * Math.min(A + f.volumeStepAmount, 1)) / 100, n.dispatch((0, _.changeVolume)(M));
+                            A = n.getState().playback.volume, L = Math.round(100 * Math.min(A + f.volumeStepAmount, 1)) / 100, n.dispatch((0, _.changeVolume)(L));
                             break;
                         case S:
                         case I:
-                            A = Math.round(100 * n.getState().playback.volume) / 100, M = Math.round(100 * Math.max(A - f.volumeStepAmount, 0)) / 100, n.dispatch((0, _.changeVolume)(M));
+                            A = Math.round(100 * n.getState().playback.volume) / 100, L = Math.round(100 * Math.max(A - f.volumeStepAmount, 0)) / 100, n.dispatch((0, _.changeVolume)(L));
                             break;
                         case E:
                         case O:
@@ -24024,7 +24026,8 @@
             I = "Down",
             N = "Left",
             R = "Right",
-            M = Object.freeze({
+            M = "Spacebar",
+            L = Object.freeze({
                 17: m,
                 32: y,
                 33: g,
