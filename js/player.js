@@ -2191,8 +2191,7 @@
                         quality_change_count: n.qualityChangeCount,
                         player_size_mode: this._getPlayerDisplayMode(),
                         broadcast_id: o.broadcastID,
-                        community_id: i.data._id,
-                        community_name: i.data.name,
+                        community_ids: i.ids,
                         transcoder_type: u.transcodestack,
                         autoplayed: this.options.autoplay,
                         streamType: o.streamType,
@@ -2245,7 +2244,7 @@
                             var n = s(e, 2),
                                 r = n[0],
                                 a = n[1];
-                            return i = r, o = a, (0, w.getCommunityFromChannel)(t)
+                            return i = r, o = a, (0, w.getCommunitiesFromChannel)(t)
                         }).then(function(t) {
                             e.store.dispatch((0, M.setCommunitiesData)(t));
                             var n = o.broadcaster_software,
@@ -2295,8 +2294,7 @@
                         t = e.communities;
                     this.player.getSeeking() || (this.bufferEmptyStartTime = (new Date).getTime(), this.bufferEmptyCount++, this.trackEvent(G, {
                         buffer_empty_count: this.bufferEmptyCount,
-                        community_id: t.data._id,
-                        community_name: t.data.name
+                        community_ids: t.ids
                     }))
                 }
             }, {
@@ -2312,15 +2310,13 @@
                         var a = (new Date).getTime();
                         this.trackEvent(Y, {
                             buffering_time: (a - this.bufferEmptyStartTime) / 1e3,
-                            community_id: r.data._id,
-                            community_name: r.data.name
+                            community_ids: r.ids
                         }), this.bufferEmptyStartTime = null
                     }
                     if (!this.hasPlayed) {
                         var s = {
                             time_since_load_start: Date.now() - n.playSessionStartTime,
-                            community_id: r.data._id,
-                            community_name: r.data.name,
+                            community_ids: r.ids,
                             autoplayed: this.options.autoplay
                         };
                         i.contentType === U.CONTENT_MODE_VOD && ((0, w.videoInfo)(i.videoId).then(function(t) {
@@ -3138,10 +3134,10 @@
                 for (o in s)
                     if (s.hasOwnProperty(o))
                         for (n = s[o].slice(0), i = n.length; i--;) r = n[i], r.once === !0 && this.removeListener(e, r.listener), a = r.listener.apply(this, t || []), a === this._getOnceReturnValue() && this.removeListener(e, r.listener);
-                return this;
+                return this
             }, a.trigger = o("emitEvent"), a.emit = function(e) {
                 var t = Array.prototype.slice.call(arguments, 1);
-                return this.emitEvent(e, t)
+                return this.emitEvent(e, t);
             }, a.setOnceReturnValue = function(e) {
                 return this._onceReturnValue = e, this
             }, a._getOnceReturnValue = function() {
@@ -4438,31 +4434,31 @@
         }
 
         function a(e) {
-            return Q().then(function(e) {
+            return X().then(function(e) {
                 return e.token
             }, function(e) {
                 return null
             }).then(function(t) {
-                var n = (0, N.default)({}, K, e);
+                var n = (0, R.default)({}, z, e);
                 return t && (n.headers.Authorization = "OAuth " + t), $.ajax(n)
             })
         }
 
         function s(e) {
             return a({
-                url: B.apiHost + "/kraken/" + e,
+                url: F.apiHost + "/kraken/" + e,
                 headers: {
-                    Accept: Y
+                    Accept: W
                 }
             })
         }
 
         function u(e, t) {
             var n = {
-                Accept: W
+                Accept: K
             };
-            return t && t.headers && (n = (0, N.default)(n, t.headers)), a((0, N.default)({}, t, {
-                url: B.apiHost + "/kraken/" + e,
+            return t && t.headers && (n = (0, R.default)(n, t.headers)), a((0, R.default)({}, t, {
+                url: F.apiHost + "/kraken/" + e,
                 headers: n
             }))
         }
@@ -4477,7 +4473,7 @@
 
         function d(e) {
             return a({
-                url: B.apiHost + "/channels/" + o(e) + "/product"
+                url: F.apiHost + "/channels/" + o(e) + "/product"
             })
         }
 
@@ -4508,7 +4504,18 @@
         }
 
         function v(e) {
-            return z(e).then(function(e) {
+            return Q(e).then(function(e) {
+                var t = e._id;
+                return u("channels/" + t + "/communities").then(function(e) {
+                    return Promise.resolve(e)
+                }).catch(function(e) {
+                    return Promise.reject("Bad communities for " + t + ": " + e)
+                })
+            })
+        }
+
+        function m(e) {
+            return Q(e).then(function(e) {
                 var t = e._id;
                 return u("channels/" + t + "/community").then(function(e) {
                     return Promise.resolve(e)
@@ -4518,54 +4525,54 @@
             })
         }
 
-        function m(e) {
+        function y(e) {
             return a({
-                url: B.apiHost + "/v5/channels/" + e + "/collections?limit=1&exclude_empty=true"
+                url: F.apiHost + "/v5/channels/" + e + "/collections?limit=1&exclude_empty=true"
             })
         }
 
-        function y(e) {
+        function g(e) {
             var t = a({
-                    url: B.apiHost + "/v5/collections/" + e
+                    url: F.apiHost + "/v5/collections/" + e
                 }),
                 n = a({
-                    url: B.apiHost + "/v5/collections/" + e + "/items"
+                    url: F.apiHost + "/v5/collections/" + e + "/items"
                 });
             return Promise.all([t, n])
         }
 
-        function g(e) {
+        function b(e) {
             var t = e.player,
                 n = e.oauth_token;
-            if (t === V.PLAYER_CURSE && n) {
+            if (t === H.PLAYER_CURSE && n) {
                 var r = Promise.resolve({
                     token: n
                 });
-                Q.cache.set(void 0, r)
+                X.cache.set(void 0, r)
             }
         }
 
-        function b(e, t) {
-            return null === e.chansub && !e.is_admin && (0, D.default)(t.restrictions, function(e, t) {
+        function E(e, t) {
+            return null === e.chansub && !e.is_admin && (0, x.default)(t.restrictions, function(e, t) {
                 return e || "chansub" === t
             }, !1)
         }
 
-        function E(e, t) {
-            var n = B.twitchHost + "/" + o(e);
+        function T(e, t) {
+            var n = F.twitchHost + "/" + o(e);
             return t && (n += "?" + $.param(t)), n
         }
 
-        function T(e, t, n) {
-            var r = E(e),
+        function S(e, t, n) {
+            var r = T(e),
                 i = t[0],
                 a = t.substring(1);
             return r += "/" + o(i) + "/" + o(a), n && (r += "?" + $.param(n)), r
         }
 
-        function S(e) {
-            return z(e).then(function(e) {
-                return H.ExtensionCoordinator.ExtensionService.getInstalledExtensions(e._id)
+        function C(e) {
+            return Q(e).then(function(e) {
+                return q.ExtensionCoordinator.ExtensionService.getInstalledExtensions(e._id)
             }).then(function(e) {
                 return e.installed_extensions.reduce(function(t, n) {
                     var r = n.extension,
@@ -4574,11 +4581,11 @@
                         a = "video_overlay" !== i.activation_config.anchor,
                         s = "hidden" !== i.activation_config.anchor;
                     if (o || a && s) return t;
-                    var u = (0, j.default)(e.tokens, function(e) {
+                    var u = (0, U.default)(e.tokens, function(e) {
                         return r.id === e.extension_id
                     });
                     if (!u) return t;
-                    var l = (0, q.parseExtensionToken)(u.token);
+                    var l = (0, G.parseExtensionToken)(u.token);
                     return t.concat({
                         token: l,
                         id: r.id,
@@ -4587,7 +4594,7 @@
                         anchor: r.anchor,
                         version: r.version,
                         viewerUrl: r.viewer_url,
-                        lastUserIdentityLinkState: l.permissionsState === q.EXTENSION_PERMISSION_STATE_GRANTED,
+                        lastUserIdentityLinkState: l.permissionsState === G.EXTENSION_PERMISSION_STATE_GRANTED,
                         supportsIdentityLinking: r.request_identity_link
                     })
                 }, [])
@@ -4596,7 +4603,7 @@
             })
         }
 
-        function C(e) {
+        function w(e) {
             return $.ajax({
                 method: "POST",
                 url: "/user/report",
@@ -4604,7 +4611,7 @@
             })
         }
 
-        function w(e, t) {
+        function P(e, t) {
             var n = {
                 url: e,
                 method: "POST",
@@ -4613,7 +4620,7 @@
                 },
                 data: $.param(t)
             };
-            return Q().then(function(e) {
+            return X().then(function(e) {
                 return e.token
             }, function(e) {
                 return null
@@ -4623,77 +4630,77 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.oauthToken = t.channelAPIInfo = t.krakenUserInfo = t.userInfo = t.channelViewerInfo = t.videoInfo = t.channelInfo = void 0, t.krakenRequest = s, t.krakenRequestv5 = u, t.streamInfo = l, t.getSubscriptionInfo = c, t.getSubscriptionProducts = d, t.getFollowChannel = p, t.setFollowChannel = h, t.setFollowNotifications = _, t.getCommunityFromChannel = v, t.getFeaturedCollection = m, t.collectionInfo = y, t.setOAuthToken = g, t.isVODRestricted = b, t.channelUrl = E, t.videoUrl = T, t.overlayExtensionsForChannel = S, t.postExtensionReport = C, t.createClip = w;
-        var P = n(117),
-            O = i(P),
-            A = n(78),
-            k = i(A),
-            I = n(201),
-            N = i(I),
-            R = n(70),
-            M = i(R),
-            L = n(214),
-            D = i(L),
-            x = n(120),
-            j = i(x),
-            U = n(168),
-            B = r(U),
-            F = n(217),
-            V = r(F),
-            H = n(219),
-            q = n(223),
-            G = !!("withCredentials" in new XMLHttpRequest),
-            Y = "application/vnd.twitchtv.v3+json",
-            W = "application/vnd.twitchtv.v5+json",
-            K = {
-                dataType: G ? "json" : "jsonp",
+        }), t.oauthToken = t.channelAPIInfo = t.krakenUserInfo = t.userInfo = t.channelViewerInfo = t.videoInfo = t.channelInfo = void 0, t.krakenRequest = s, t.krakenRequestv5 = u, t.streamInfo = l, t.getSubscriptionInfo = c, t.getSubscriptionProducts = d, t.getFollowChannel = p, t.setFollowChannel = h, t.setFollowNotifications = _, t.getCommunitiesFromChannel = v, t.getCommunityFromChannel = m, t.getFeaturedCollection = y, t.collectionInfo = g, t.setOAuthToken = b, t.isVODRestricted = E, t.channelUrl = T, t.videoUrl = S, t.overlayExtensionsForChannel = C, t.postExtensionReport = w, t.createClip = P;
+        var O = n(117),
+            A = i(O),
+            k = n(78),
+            I = i(k),
+            N = n(201),
+            R = i(N),
+            M = n(70),
+            L = i(M),
+            D = n(214),
+            x = i(D),
+            j = n(120),
+            U = i(j),
+            B = n(168),
+            F = r(B),
+            V = n(217),
+            H = r(V),
+            q = n(219),
+            G = n(223),
+            Y = !!("withCredentials" in new XMLHttpRequest),
+            W = "application/vnd.twitchtv.v3+json",
+            K = "application/vnd.twitchtv.v5+json",
+            z = {
+                dataType: Y ? "json" : "jsonp",
                 headers: {
                     "Client-ID": "jzkbprff40iqj646a697cyrvl0zt2m6"
                 },
-                timeout: B.apiTimeout
+                timeout: F.apiTimeout
             },
-            z = t.channelInfo = (0, k.default)(function(e) {
+            Q = t.channelInfo = (0, I.default)(function(e) {
                 return null === e ? Promise.reject(new Error("No channel info available on null channel ID")) : s("channels/" + o(e))
             }),
-            Q = (t.videoInfo = (0, k.default)(function(e) {
+            X = (t.videoInfo = (0, I.default)(function(e) {
                 if (null === e || void 0 === e) return Promise.reject(new Error("No video info available on null video ID"));
                 var t = s("videos/" + o(e)),
                     n = a({
-                        url: B.apiHost + "/api/videos/" + o(e)
+                        url: F.apiHost + "/api/videos/" + o(e)
                     }).then(function(e) {
-                        return (0, M.default)(e, ["muted_segments", "increment_view_count_url", "restrictions", "seek_previews_url"])
+                        return (0, L.default)(e, ["muted_segments", "increment_view_count_url", "restrictions", "seek_previews_url"])
                     });
                 return Promise.all([t, n]).then(function(e) {
                     var t = e[0].channel.name;
-                    return z(t).then(function(t) {
-                        var n = (0, O.default)({}, e[0], e[1]);
+                    return Q(t).then(function(t) {
+                        var n = (0, A.default)({}, e[0], e[1]);
                         return n.channel = t, n
                     })
                 })
-            }), t.channelViewerInfo = (0, k.default)(function(e) {
+            }), t.channelViewerInfo = (0, I.default)(function(e) {
                 return a({
-                    url: B.apiHost + "/api/channels/" + o(e) + "/viewer"
+                    url: F.apiHost + "/api/channels/" + o(e) + "/viewer"
                 })
-            }), t.userInfo = (0, k.default)(function() {
+            }), t.userInfo = (0, I.default)(function() {
                 return a({
-                    url: B.apiHost + "/api/viewer/info.json",
+                    url: F.apiHost + "/api/viewer/info.json",
                     xhrFields: {
                         withCredentials: !0
                     }
                 })
-            }), t.krakenUserInfo = (0, k.default)(function() {
+            }), t.krakenUserInfo = (0, I.default)(function() {
                 return s("user")
-            }), t.channelAPIInfo = (0, k.default)(function(e) {
+            }), t.channelAPIInfo = (0, I.default)(function(e) {
                 return a({
-                    url: B.apiHost + "/api/channels/" + e
+                    url: F.apiHost + "/api/channels/" + e
                 })
-            }), t.oauthToken = (0, k.default)(function() {
-                var e = $.ajax((0, O.default)({
-                    url: B.apiHost + "/api/viewer/token.json",
+            }), t.oauthToken = (0, I.default)(function() {
+                var e = $.ajax((0, A.default)({
+                    url: F.apiHost + "/api/viewer/token.json",
                     xhrFields: {
                         withCredentials: !0
                     }
-                }, K));
+                }, z));
                 return Promise.resolve(e)
             }))
     }, function(e, t, n) {
@@ -6516,7 +6523,8 @@
                 }, function(e, t, n) {
                     "use strict";
                     var r = n(2),
-                        i = (n.n(r), n(8)),
+                        i = (n.n(r),
+                            n(8)),
                         o = n(11),
                         a = n(22),
                         s = n(5),
@@ -6534,7 +6542,7 @@
                             instanceof Array && function(e, t) {
                                 e.__proto__ = t
                             } || function(e, t) {
-                                for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n]);
+                                for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n])
                             };
                             return function(t, n) {
                                 function r() {
@@ -7782,7 +7790,8 @@
                             }, {
                                 key: "_gotUniqueMessage",
                                 value: function(e) {
-                                    if (g.debug("received unique message: " + e), e === this._expectedMessage) {
+                                    if (g.debug("received unique message: " + e),
+                                        e === this._expectedMessage) {
                                         var t = s.default.time.now() - this._sentUniqueMessageTime;
                                         this._receivedUniqueMessage = !0, this._stats.logTimer(this._statKeys.uniqueSuccess, t, m), this._stats.logCounter(this._statKeys.uniqueSuccess, 1, m)
                                     }
@@ -9193,7 +9202,8 @@
 
         function f(e) {
             var t = e.getUTCFullYear(),
-                n = (0, y.default)(e.getUTCMonth() + 1, 2, "0"),
+                n = (0,
+                    y.default)(e.getUTCMonth() + 1, 2, "0"),
                 r = (0, y.default)(e.getUTCDate(), 2, "0");
             return t + "-" + n + "-" + r
         }
@@ -10483,7 +10493,8 @@
                     p = function() {
                         function e() {
                             function e() {
-                                n = new f, o = {}, o.ns_st_bp = "0", o.ns_st_pa = "0", o.ns_st_pp = "0", o.ns_st_sp = "1", o.ns_st_id = String(+new Date), r = NaN, i = NaN, s = {}, u = 0, a = !1, l = !1, c = 0
+                                n = new f, o = {}, o.ns_st_bp = "0",
+                                    o.ns_st_pa = "0", o.ns_st_pp = "0", o.ns_st_sp = "1", o.ns_st_id = String(+new Date), r = NaN, i = NaN, s = {}, u = 0, a = !1, l = !1, c = 0
                             }
                             var n, r, i, o, a, s, u, l, c, d = this;
                             t.extend(this, {
@@ -11084,8 +11095,8 @@
                                 },
                                 onPlay: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
-                                    e.getPlaylist().getClip().isSeeking() && (e.getPlaylist().getClip().addSeekingAmount(r), e.getPlaylist().getClip().setSeeking(!1)), e.getPlaylist().isPlaylistStarted() || (e.getPlaylist().setPlaylistStarted(!0), e.getPlaylist().incrementPlaybackCounter()), e.getPlaylist().getClip().setClipStarted(!0), e.getPlaylist().getClip().setPlaybackStarted(!0), e.getPlaylist().getClip().incrementSegmentPlaybackCounter(),
-                                        (0 == e.getPlaylist().getClip().getLowestPartNumberPlayed() || parseInt(e.getPlaylist().getClip().getLabels().ns_st_pn) <= e.getPlaylist().getClip().getLowestPartNumberPlayed()) && (e.getPlaylist().getClip().setLowestPartNumberPlayed(parseInt(e.getPlaylist().getClip().getLabels().ns_st_pn)), e.getPlaylist().getClip().incrementAssetPlaybackCounter(), e.getPlaylist().getClip().resetAssetPlaybackCounters()), e.getPlaylist().getClip().incrementPlayCounter(), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t), e.getPlaylist().getClip().setElapsedTimestamp(t), e.getPlaylist().getClip().setPlaybackStartPosition(r), e.getSSECore().isLoadingTimeSent() || (n.ns_st_lt = String(e.getSSECore().getLoadTimeOffset() + t - e.getSSECore().getInitTimestamp()), e.getSSECore().setLoadingTimeSent(!0)), e.getHeartbeat().resume(), e.getKeepAlive().resume();
+                                    e.getPlaylist().getClip().isSeeking() && (e.getPlaylist().getClip().addSeekingAmount(r), e.getPlaylist().getClip().setSeeking(!1)),
+                                        e.getPlaylist().isPlaylistStarted() || (e.getPlaylist().setPlaylistStarted(!0), e.getPlaylist().incrementPlaybackCounter()), e.getPlaylist().getClip().setClipStarted(!0), e.getPlaylist().getClip().setPlaybackStarted(!0), e.getPlaylist().getClip().incrementSegmentPlaybackCounter(), (0 == e.getPlaylist().getClip().getLowestPartNumberPlayed() || parseInt(e.getPlaylist().getClip().getLabels().ns_st_pn) <= e.getPlaylist().getClip().getLowestPartNumberPlayed()) && (e.getPlaylist().getClip().setLowestPartNumberPlayed(parseInt(e.getPlaylist().getClip().getLabels().ns_st_pn)), e.getPlaylist().getClip().incrementAssetPlaybackCounter(), e.getPlaylist().getClip().resetAssetPlaybackCounters()), e.getPlaylist().getClip().incrementPlayCounter(), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t), e.getPlaylist().getClip().setElapsedTimestamp(t), e.getPlaylist().getClip().setPlaybackStartPosition(r), e.getSSECore().isLoadingTimeSent() || (n.ns_st_lt = String(e.getSSECore().getLoadTimeOffset() + t - e.getSSECore().getInitTimestamp()), e.getSSECore().setLoadingTimeSent(!0)), e.getHeartbeat().resume(), e.getKeepAlive().resume();
                                     var i = e.getSSECore().createLabels(u.PLAY, n, t);
                                     e.getEventManager().newEvent(i)
                                 }
@@ -11928,7 +11939,8 @@
                             }
 
                             function f(e, t) {
-                                e = s(e), b == y.None && (b = t), _ && b == t && u(e) ? (v.getClip().setLabels(e), v.getState() != r.PLAYING && v.play()) : c(e), _ = !0, b = t
+                                e = s(e), b == y.None && (b = t), _ && b == t && u(e) ? (v.getClip().setLabels(e),
+                                    v.getState() != r.PLAYING && v.play()) : c(e), _ = !0, b = t
                             }
                             var p = 0,
                                 h = null,
@@ -13527,19 +13539,34 @@
 
         function n(e) {
             return e ? {
-                type: r,
-                communities: {
-                    data: e
-                }
+                type: o,
+                communities: r(e)
             } : {
-                type: i
+                type: a
             }
+        }
+
+        function r(e) {
+            var t = e.communities;
+            return t.length < 1 ? {
+                data: [],
+                ids: ""
+            } : {
+                data: t,
+                ids: i(t)
+            }
+        }
+
+        function i(e) {
+            return e.map(function(e) {
+                return e._id
+            }).join(",")
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.setCommunitiesData = n;
-        var r = t.ACTION_SET_COMMUNITIES_DATA = "set communities data",
-            i = t.ACTION_INVALID_COMMUNITIES_DATA = "invalid communities data"
+        }), t.setCommunitiesData = n, t.joinCommunitiesIds = i;
+        var o = t.ACTION_SET_COMMUNITIES_DATA = "set communities data",
+            a = t.ACTION_INVALID_COMMUNITIES_DATA = "invalid communities data"
     }, function(e, t, n) {
         "use strict";
 
@@ -13608,7 +13635,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.09-221200+1267fac9a84beaa979f5bf5eb50b3132225e3a45",
+                    app_version: "2017.08.09-223637+93644f96ce2468201efff57fe78ed0881f753718",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -41572,7 +41599,7 @@
             h = n(411),
             _ = n(414),
             v = n(656),
-            m = ["misterrogers", "twitchpresents", "redbull", "redbullchanneltwo", "redbullchannelthree"],
+            m = ["misterrogers", "twitchpresents"],
             y = [f.PLAYER_IMDB],
             g = function(e) {
                 return m.indexOf(e) === -1
@@ -42530,7 +42557,7 @@
                     writable: !0,
                     configurable: !0
                 }
-            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : o(e, t));
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : o(e, t))
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -44887,7 +44914,7 @@
         }
 
         function i(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
         }
 
         function o(e, t) {
@@ -48419,7 +48446,8 @@
             switch (t.type) {
                 case s.ACTION_SET_COMMUNITIES_DATA:
                     return (0, a.default)({}, e, {
-                        data: t.communities.data
+                        data: t.communities.data,
+                        ids: t.communities.ids
                     });
                 default:
                     return e
@@ -48432,14 +48460,15 @@
             a = r(o),
             s = n(269),
             u = t.DEFAULT_COMMUNITIES = {
-                data: {
-                    _id: void 0,
-                    owner_id: void 0,
-                    name: void 0,
-                    summary: void 0,
-                    description: void 0,
-                    rules: void 0
-                }
+                data: [{
+                    _id: "",
+                    owner_id: "",
+                    name: "",
+                    summary: "",
+                    description: "",
+                    rules: ""
+                }],
+                ids: ""
             }
     }, function(e, t, n) {
         "use strict";
