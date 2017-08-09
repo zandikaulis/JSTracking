@@ -13608,7 +13608,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.09-201424+c8f52387daea33d0295204359b916a7544fbc9a1",
+                    app_version: "2017.08.09-221200+1267fac9a84beaa979f5bf5eb50b3132225e3a45",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -17440,7 +17440,7 @@
                 AD_LOADED: "flashAdLoaded"
             });
         o.map = {}, o.counter = 0, o.canPlay = function() {
-            return E.hasFlashPlayerVersion("10.2")
+            return E.hasFlashPlayerVersion("10.2") && "" !== E.getFlashPlayerType()
         }, window._BackendFlash_emitEvents = function(e, t) {
             for (var n = o.map[e], r = 0; r < t.length; r++) {
                 var i = t[r];
@@ -18689,8 +18689,7 @@
                 }, {
                     key: "setSrc",
                     value: function(e) {
-                        return null === this._mediaPlayer ? void this._apiCallQueue.push(this.setSrc.bind(this, e)) : (this._src = e,
-                            void(this._src && this.load()))
+                        return null === this._mediaPlayer ? void this._apiCallQueue.push(this.setSrc.bind(this, e)) : (this._src = e, void(this._src && this.load()))
                     }
                 }, {
                     key: "getVolume",
