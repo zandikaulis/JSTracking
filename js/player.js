@@ -4968,7 +4968,7 @@
                         return t.d(n, "a", n), n
                     }, t.o = function(e, t) {
                         return Object.prototype.hasOwnProperty.call(e, t)
-                    }, t.p = "", t(t.s = 40)
+                    }, t.p = "", t(t.s = 42)
                 }([function(e, t, n) {
                     "use strict";
 
@@ -5468,7 +5468,7 @@
                 }, function(e, t, n) {
                     "use strict";
                     var r = n(7),
-                        i = n(33),
+                        i = n(35),
                         o = n.n(i);
                     n.d(t, "a", function() {
                         return l
@@ -5589,7 +5589,7 @@
                     Object.defineProperty(t, "__esModule", {
                         value: !0
                     });
-                    var r = n(19),
+                    var r = n(21),
                         i = n(9);
                     n.d(t, "ExtensionCoordinator", function() {
                         return o
@@ -5652,23 +5652,23 @@
                         o = new i
                 }, function(e, t, n) {
                     "use strict";
-                    n.d(t, "a", function() {
-                        return r
+                    var r = n(17);
+                    n.d(t, "b", function() {
+                        return r.a
                     });
-                    var r = function() {
-                        function e() {}
-                        return e
-                    }();
-                    r.TwitchExtAuth = "twitch-ext-auth", r.TwitchExtBootstrap = "twitch-ext-bootstrap", r.TwitchExtContext = "twitch-ext-context", r.TwitchExtError = "twitch-ext-error", r.TwitchExtLoaded = "twitch-ext-loaded", r.TwitchExtNetworkTiming = "twitch-ext-network-timing", r.TwitchExtReload = "twitch-ext-reload", r.TwitchExtUserAction = "twitch-ext-user-action"
+                    var i = n(18);
+                    n.d(t, "a", function() {
+                        return i.a
+                    })
                 }, function(e, t, n) {
                     "use strict";
                     var r = n(7),
-                        i = n(20),
+                        i = n(22),
                         o = n(5),
                         a = n(10),
                         s = n(4),
                         u = n(2),
-                        l = (n.n(u), n(23));
+                        l = (n.n(u), n(25));
                     n.d(t, "b", function() {
                         return d
                     }), n.d(t, "a", function() {
@@ -6141,7 +6141,7 @@
                                 o._unhandledRejectionFn = e
                             }, "undefined" != typeof e && e.exports ? e.exports = o : n.Promise || (n.Promise = o)
                         }(this)
-                    }).call(t, n(38).setImmediate)
+                    }).call(t, n(40).setImmediate)
                 }, function(e, t) {
                     ! function(e) {
                         "use strict";
@@ -6401,6 +6401,26 @@
                     }("undefined" != typeof self ? self : this)
                 }, function(e, t, n) {
                     "use strict";
+                    n.d(t, "a", function() {
+                        return r
+                    });
+                    var r = function() {
+                        function e() {}
+                        return e
+                    }();
+                    r.TwitchExtAuth = "twitch-ext-auth", r.TwitchExtBootstrap = "twitch-ext-bootstrap", r.TwitchExtContext = "twitch-ext-context", r.TwitchExtError = "twitch-ext-error", r.TwitchExtLoaded = "twitch-ext-loaded", r.TwitchExtNetworkTiming = "twitch-ext-network-timing", r.TwitchExtReload = "twitch-ext-reload", r.TwitchExtUserAction = "twitch-ext-user-action"
+                }, function(e, t, n) {
+                    "use strict";
+                    n.d(t, "a", function() {
+                        return r
+                    });
+                    var r = function() {
+                        function e() {}
+                        return e
+                    }();
+                    r.SupervisorReady = "supervisor-ready", r.SupervisorInit = "supervisor-init"
+                }, function(e, t, n) {
+                    "use strict";
                     var r = n(2),
                         i = (n.n(r), n(6)),
                         o = n(9);
@@ -6485,46 +6505,51 @@
                             function t(t) {
                                 var n = e.call(this) || this;
                                 return n.iframe = t, n.destroy = function() {
-                                        n.iframe.ownerDocument.defaultView.removeEventListener("message", n.handleMessage)
-                                    }, n.sendContext = function(e, t) {
-                                        n.sendMessage({
-                                            action: r.a.TwitchExtContext,
-                                            context: e,
-                                            updatedFields: t
-                                        })
-                                    }, n.sendExtensionAuth = function(e) {
-                                        n.sendMessage({
-                                            action: r.a.TwitchExtAuth,
-                                            auth: e
-                                        })
-                                    }, n.sendExtensionBootstrap = function(e) {
-                                        n.sendMessage({
-                                            action: r.a.TwitchExtBootstrap,
-                                            auth: e
-                                        })
-                                    }, n.sendExtensionReloadMessage = function() {
-                                        n.sendMessage({
-                                            action: r.a.TwitchExtReload
-                                        })
-                                    }, n.handleMessage = function(e) {
-                                        var t = e.source,
-                                            r = e.data;
-                                        if (t === n.iframe.contentWindow) try {
-                                            n.handleExtensionAction(r)
-                                        } catch (e) {
-                                            console.error("Caught Error in Message Handler: " + e.stack)
-                                        }
-                                    }, n.handleExtensionAction = function(e) {
-                                        switch (e.action) {
-                                            case r.a.TwitchExtLoaded:
-                                            case r.a.TwitchExtUserAction:
-                                            case r.a.TwitchExtNetworkTiming:
-                                                n.emit(e.action, e)
-                                        }
-                                    }, n.sendMessage = function(e) {
-                                        n.iframe.contentWindow.postMessage(e, "*")
-                                    }, n.iframe.ownerDocument.defaultView.addEventListener("message", n.handleMessage),
-                                    n
+                                    n.iframe.ownerDocument.defaultView.removeEventListener("message", n.handleMessage)
+                                }, n.sendContext = function(e, t) {
+                                    n.sendMessage({
+                                        action: r.b.TwitchExtContext,
+                                        context: e,
+                                        updatedFields: t
+                                    })
+                                }, n.sendExtensionAuth = function(e) {
+                                    n.sendMessage({
+                                        action: r.b.TwitchExtAuth,
+                                        auth: e
+                                    })
+                                }, n.sendExtensionBootstrap = function(e) {
+                                    n.sendMessage({
+                                        action: r.b.TwitchExtBootstrap,
+                                        auth: e
+                                    })
+                                }, n.sendExtensionReloadMessage = function() {
+                                    n.sendMessage({
+                                        action: r.b.TwitchExtReload
+                                    })
+                                }, n.sendSupervisorInit = function(e) {
+                                    n.sendMessage({
+                                        action: r.a.SupervisorInit,
+                                        options: e
+                                    })
+                                }, n.handleMessage = function(e) {
+                                    var t = e.source,
+                                        r = e.data;
+                                    if (t === n.iframe.contentWindow) try {
+                                        n.handleExtensionAction(r);
+                                    } catch (e) {
+                                        console.error("Caught Error in Message Handler: " + e.stack)
+                                    }
+                                }, n.handleExtensionAction = function(e) {
+                                    switch (e.action) {
+                                        case r.a.SupervisorReady:
+                                        case r.b.TwitchExtLoaded:
+                                        case r.b.TwitchExtUserAction:
+                                        case r.b.TwitchExtNetworkTiming:
+                                            n.emit(e.action, e)
+                                    }
+                                }, n.sendMessage = function(e) {
+                                    n.iframe.contentWindow.postMessage(e, "*")
+                                }, n.iframe.ownerDocument.defaultView.addEventListener("message", n.handleMessage), n
                             }
                             return o(t, e), t
                         }(i.EventEmitter2)
@@ -6533,14 +6558,14 @@
                     var r = n(2),
                         i = (n.n(r), n(8)),
                         o = n(11),
-                        a = n(22),
+                        a = n(24),
                         s = n(5),
                         u = n(4),
-                        l = n(17),
-                        c = n(21),
-                        d = n(18);
+                        l = n(19),
+                        c = n(23),
+                        d = n(20);
                     n.d(t, "a", function() {
-                        return h
+                        return _
                     });
                     var f = this && this.__extends || function() {
                             var e = Object.setPrototypeOf || {
@@ -6559,10 +6584,11 @@
                             }
                         }(),
                         p = ["allow-forms", "allow-scripts", "allow-same-origin"],
-                        h = function(e) {
+                        h = "https://extension-files.twitch.tv/supervisor/v1/index.html",
+                        _ = function(e) {
                             function t(t) {
                                 var r = e.call(this) || this;
-                                r.handleUserAction = {
+                                return r.handleUserAction = {
                                     click: function(e) {
                                         var t = e.payload,
                                             n = this.iframe.getBoundingClientRect(),
@@ -6632,29 +6658,56 @@
                                             extension_interaction: "revoke"
                                         })
                                     })
-                                }, r.applyAnchorAttributes = function(e, t) {
-                                    switch (t) {
+                                }, r.getAnchorAttributes = function() {
+                                    var e = r.extensionOptions.anchor,
+                                        t = {};
+                                    switch (e) {
                                         case "panel":
                                             var n = Number(r.extension.panelHeight) || 300;
-                                            e.setAttribute("style", "height: " + n + "px;");
+                                            t.style = "height: " + n + "px;";
                                             break;
                                         case "video_overlay":
-                                            e.setAttribute("scrolling", "no")
+                                            t.scrolling = "no"
                                     }
-                                }, r.createIframe = function(e, t, i, a, s) {
-                                    var u = document.createElement("iframe");
-                                    switch (u.setAttribute("class", i), u.setAttribute("sandbox", p.join(" ")), u.setAttribute("frameBorder", "0"), e) {
+                                    return t
+                                }, r.applyAnchorAttributes = function(e, t) {
+                                    var n = r.getAnchorAttributes().style;
+                                    n && e.setAttribute("style", n)
+                                }, r.createSupervisorIFrame = function(e, t, n) {
+                                    var i = r.extensionOptions.mode,
+                                        o = document.createElement("iframe");
+                                    switch (o.setAttribute("class", e), o.setAttribute("sandbox", p.join(" ")), o.setAttribute("frameBorder", "0"), o.setAttribute("scrolling", "no"), o.setAttribute("src", h), i) {
                                         case "viewer":
-                                            u.src = n.i(o.a)(r.extension.viewerUrl, s), r.applyAnchorAttributes(u, a), "panel" === a && r.applyViewerPanelWhitelist(u, e);
+                                            r.applyAnchorAttributes(o, t), r.applyViewerPanelWhitelist(o);
                                             break;
                                         case "dashboard":
-                                            var l = r.extension.panelHeight || 300;
-                                            u.src = n.i(o.a)(r.extension.liveConfigUrl, s), u.setAttribute("style", "height: " + l + "px;"), r.applyConfigWhitelist(u, e);
+                                            var a = r.extension.panelHeight || 300;
+                                            o.setAttribute("style", "height: " + a + "px;"), r.applyConfigWhitelist(o);
                                             break;
                                         case "config":
-                                            u.src = n.i(o.a)(r.extension.configUrl, s), u.setAttribute("style", "width:100%; height: 700px;"), r.applyConfigWhitelist(u, e)
+                                            o.setAttribute("style", "width:100%; height: 700px;"), r.applyConfigWhitelist(o)
                                     }
-                                    return t.appendChild(u), u
+                                    return o
+                                }, r.initSupervisedExtension = function() {
+                                    var e, t, i = r.extensionOptions.mode;
+                                    switch (i) {
+                                        case "viewer":
+                                            e = r.extension.viewerUrl, t = r.getViewerPanelWhiteList();
+                                            break;
+                                        case "dashboard":
+                                            e = r.extension.liveConfigUrl, t = r.getConfigWhitelist();
+                                            break;
+                                        case "config":
+                                            e = r.extension.configUrl, t = r.getConfigWhitelist()
+                                    }
+                                    var a = r.getAnchorAttributes();
+                                    a.sandbox = t || p.join(" ");
+                                    var s = {
+                                        extensionURL: n.i(o.a)(e, r.extensionOptions),
+                                        hostOrigin: window.location.origin,
+                                        iframeAttrs: a
+                                    };
+                                    r.coordinator.sendSupervisorInit(s)
                                 }, r.getExtensionAuth = function() {
                                     var e = s.a.getToken(r.extension.clientId);
                                     return {
@@ -6695,7 +6748,7 @@
                                         callback: r.onMouseEnter.bind(r)
                                     }], r.eventListeners.forEach(function(e) {
                                         e.target.addEventListener(e.event, e.callback)
-                                    }), r.contextManager.on("context", r.coordinator.sendContext), r.coordinator.on(i.a.TwitchExtLoaded, r.onExtensionLoaded), r.coordinator.on(i.a.TwitchExtNetworkTiming, r.onExtensionNetworkTraffic), r.coordinator.on(i.a.TwitchExtUserAction, r.onExtensionUserAction), s.a.subscribe(r.extension.clientId, r.handleToken);
+                                    }), r.contextManager.on("context", r.coordinator.sendContext), r.coordinator.on(i.a.SupervisorReady, r.initSupervisedExtension), r.coordinator.on(i.b.TwitchExtLoaded, r.onExtensionLoaded), r.coordinator.on(i.b.TwitchExtNetworkTiming, r.onExtensionNetworkTraffic), r.coordinator.on(i.b.TwitchExtUserAction, r.onExtensionUserAction), s.a.subscribe(r.extension.clientId, r.handleToken);
                                     var e = s.a.getToken(r.extension.clientId);
                                     e.isNearExpiration || r.handleToken(e, e)
                                 }, r.reloadExtension = function() {
@@ -6703,34 +6756,39 @@
                                 }, r.unsetupListeners = function() {
                                     r.eventListeners.forEach(function(e) {
                                         e.target.removeEventListener(e.event, e.callback)
-                                    }), r.contextManager.off("context", r.coordinator.sendContext), r.coordinator.off(i.a.TwitchExtLoaded, r.onExtensionLoaded), r.coordinator.off(i.a.TwitchExtNetworkTiming, r.onExtensionNetworkTraffic), r.coordinator.off(i.a.TwitchExtUserAction, r.onExtensionUserAction), s.a.unsubscribe(r.extension.clientId, r.handleToken)
-                                };
-                                var f = {
+                                    }), r.contextManager.off("context", r.coordinator.sendContext), r.coordinator.off(i.b.TwitchExtLoaded, r.onExtensionLoaded), r.coordinator.off(i.b.TwitchExtNetworkTiming, r.onExtensionNetworkTraffic), r.coordinator.off(i.b.TwitchExtUserAction, r.onExtensionUserAction), s.a.unsubscribe(r.extension.clientId, r.handleToken)
+                                }, r.extension = t.extension, r.extensionOptions = {
                                     anchor: t.extension.anchor,
                                     language: t.language || "en",
                                     mode: t.mode
-                                };
-                                return r.extension = t.extension, r.iframe = r.createIframe(t.mode, t.parentElement, t.iframeClassName, r.extension.anchor, f), r.tracker = t.extensionTracker || new c.a({
+                                }, r.iframe = r.createSupervisorIFrame(t.iframeClassName, r.extension.anchor, r.extensionOptions), r.tracker = t.extensionTracker || new c.a({
                                     dobbin: t.dobbin,
                                     extension: t.extension,
                                     extensionMode: t.mode,
                                     iframe: r.iframe,
                                     requiredProps: t.trackingProperties
-                                }), r.coordinator = t.extensionCoordinator || new d.a(r.iframe), r.contextManager = t.contextManager || new l.a(t.mode), r.setupListeners(), r.tracker.trackEvent("extension_render", {}), r
+                                }), r.coordinator = t.extensionCoordinator || new d.a(r.iframe), r.contextManager = t.contextManager || new l.a(t.mode), r.setupListeners(), r.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(r.iframe), r
                             }
-                            return f(t, e), t.prototype.applyViewerPanelWhitelist = function(e, t) {
-                                var n = this.extension.whitelistedPanelUrls,
-                                    r = n.length && "viewer" === t;
-                                r && e.setAttribute("sandbox", p.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" "))
-                            }, t.prototype.applyConfigWhitelist = function(e, t) {
-                                var n = this.extension.whitelistedConfigUrls,
-                                    r = n.length;
-                                r && e.setAttribute("sandbox", p.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" "))
+                            return f(t, e), t.prototype.getViewerPanelWhiteList = function() {
+                                var e = this.extension.whitelistedPanelUrls,
+                                    t = this.extensionOptions,
+                                    n = t.mode,
+                                    r = t.anchor,
+                                    i = "video_overlay" !== r && e.length && "viewer" === n;
+                                return i ? p.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : p.join(" ")
+                            }, t.prototype.getConfigWhitelist = function() {
+                                var e = this.extension.whitelistedConfigUrls,
+                                    t = e.length;
+                                return t ? p.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : p.join(" ")
+                            }, t.prototype.applyViewerPanelWhitelist = function(e) {
+                                e.setAttribute("sandbox", this.getViewerPanelWhiteList())
+                            }, t.prototype.applyConfigWhitelist = function(e) {
+                                e.setAttribute("sandbox", this.getConfigWhitelist())
                             }, t
                         }(r.EventEmitter2)
                 }, function(e, t, n) {
                     "use strict";
-                    var r = n(28),
+                    var r = n(30),
                         i = n.n(r);
                     n.d(t, "a", function() {
                         return o
@@ -6843,7 +6901,7 @@
                     Object.defineProperty(t, "__esModule", {
                         value: !0
                     }), t.Stats = void 0;
-                    var i = n(25),
+                    var i = n(27),
                         o = r(i);
                     t.Stats = o.default, t.default = {
                         Stats: o.default
@@ -7390,14 +7448,14 @@
                         f = r(d),
                         p = n(1),
                         h = r(p),
-                        _ = n(26),
+                        _ = n(28),
                         v = r(_),
-                        m = n(27),
+                        m = n(29),
                         y = r(m),
-                        g = n(31),
+                        g = n(33),
                         b = r(g),
-                        E = n(24),
-                        T = n(30),
+                        E = n(26),
+                        T = n(32),
                         S = r(T),
                         C = f.default._getLogger("PubsubDriver"),
                         w = 3e4,
@@ -7792,7 +7850,7 @@
                                         success: function() {
                                             g.debug("shared message sent"), this._sentSharedMessage = !0
                                         }.bind(this)
-                                    }), this._sentSharedMessageTime = s.default.time.now());
+                                    }), this._sentSharedMessageTime = s.default.time.now())
                                 }
                             }, {
                                 key: "_gotUniqueMessage",
@@ -7862,7 +7920,7 @@
                         d = r(c),
                         f = n(1),
                         p = r(f),
-                        h = n(29),
+                        h = n(31),
                         _ = r(h),
                         v = n(12),
                         m = r(v),
@@ -8124,14 +8182,14 @@
                             })
                         })
                     }
-                    var o = n(32),
-                        a = n(34),
+                    var o = n(34),
+                        a = n(36),
                         s = Object.prototype.hasOwnProperty;
                     e.exports = i
                 }, function(e, t, n) {
-                    e.exports = n(35)
+                    e.exports = n(37)
                 }, function(e, t, n) {
-                    var r = n(36);
+                    var r = n(38);
                     t.operation = function(e) {
                         var n = t.timeouts(e);
                         return new r(n, {
@@ -8341,7 +8399,7 @@
                                 y = y && y.setTimeout ? y : e, "[object process]" === {}.toString.call(e.process) ? s() : u() ? l() : e.MessageChannel ? c() : m && "onreadystatechange" in m.createElement("script") ? d() : f(), y.setImmediate = r, y.clearImmediate = i
                             }
                         }("undefined" == typeof self ? "undefined" == typeof e ? this : e : self)
-                    }).call(t, n(39), n(13))
+                    }).call(t, n(41), n(13))
                 }, function(e, r, i) {
                     function o(e, t) {
                         this._id = e, this._clearFn = t
@@ -8365,7 +8423,7 @@
                         t >= 0 && (e._idleTimeoutId = setTimeout(function() {
                             e._onTimeout && e._onTimeout()
                         }, t))
-                    }, i(37), r.setImmediate = t, r.clearImmediate = n
+                    }, i(39), r.setImmediate = t, r.clearImmediate = n
                 }, function(e, t) {
                     var n;
                     n = function() {
@@ -10432,7 +10490,8 @@
                                     F.setLabel("ns_st_skd", String(e))
                                 },
                                 resetClipLifecycleLabels: function() {
-                                    L.ns_st_pt = "0", l = 0, c = 0, L.ns_st_bt = "0", P = 0, L.ns_st_bc = "0", j = 0, L.ns_st_pc = "0", D = 0, L.ns_st_sq = "0", L.ns_st_upa = "0", E = 0, T = 0, L.ns_st_et = "0", h = 0, L.ns_st_lpa = "0", C = 0, L.ns_st_skt = "0", k = 0, L.ns_st_ska = "0", R = 0, L.ns_st_skc = "0", x = 0
+                                    L.ns_st_pt = "0", l = 0, c = 0, L.ns_st_bt = "0", P = 0, L.ns_st_bc = "0", j = 0, L.ns_st_pc = "0", D = 0, L.ns_st_sq = "0", L.ns_st_upa = "0", E = 0, T = 0, L.ns_st_et = "0", h = 0, L.ns_st_lpa = "0",
+                                        C = 0, L.ns_st_skt = "0", k = 0, L.ns_st_ska = "0", R = 0, L.ns_st_skc = "0", x = 0
                                 },
                                 incrementSegmentPlaybackCounter: function() {
                                     U++
@@ -10492,7 +10551,7 @@
                         }
                         return e.resetClip = function(e, t, n) {
                             for (var r = e.getLabels(), i = {}, o = 0; n && o < n.length; ++o) r.hasOwnProperty(n[o]) && (i[n[o]] = r[n[o]]);
-                            t.setLabels(i), t.setPlaybackIntervalMergeTolerance(e.getPlaybackIntervalMergeTolerance());
+                            t.setLabels(i), t.setPlaybackIntervalMergeTolerance(e.getPlaybackIntervalMergeTolerance())
                         }, e
                     }(),
                     p = function() {
@@ -11079,7 +11138,8 @@
                                 },
                                 onPlay: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
-                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().incrementPlayCounter(), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t), e.getPlaylist().getClip().addElapsedTime(t), e.getPlaylist().getClip().setElapsedTimestamp(t), e.getPlaylist().getClip().setPlaybackStartPosition(r), e.getHeartbeat().resume(), e.getKeepAlive().resume();
+                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().incrementPlayCounter(), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t),
+                                        e.getPlaylist().getClip().addElapsedTime(t), e.getPlaylist().getClip().setElapsedTimestamp(t), e.getPlaylist().getClip().setPlaybackStartPosition(r), e.getHeartbeat().resume(), e.getKeepAlive().resume();
                                     var i = e.getSSECore().createLabels(u.PLAY, n, t);
                                     e.getEventManager().newEvent(i)
                                 }
@@ -11099,8 +11159,7 @@
                                 },
                                 onPlay: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
-                                    e.getPlaylist().getClip().isSeeking() && (e.getPlaylist().getClip().addSeekingAmount(r),
-                                        e.getPlaylist().getClip().setSeeking(!1)), e.getPlaylist().isPlaylistStarted() || (e.getPlaylist().setPlaylistStarted(!0), e.getPlaylist().incrementPlaybackCounter()), e.getPlaylist().getClip().setClipStarted(!0), e.getPlaylist().getClip().setPlaybackStarted(!0), e.getPlaylist().getClip().incrementSegmentPlaybackCounter(), (0 == e.getPlaylist().getClip().getLowestPartNumberPlayed() || parseInt(e.getPlaylist().getClip().getLabels().ns_st_pn) <= e.getPlaylist().getClip().getLowestPartNumberPlayed()) && (e.getPlaylist().getClip().setLowestPartNumberPlayed(parseInt(e.getPlaylist().getClip().getLabels().ns_st_pn)), e.getPlaylist().getClip().incrementAssetPlaybackCounter(), e.getPlaylist().getClip().resetAssetPlaybackCounters()), e.getPlaylist().getClip().incrementPlayCounter(), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t), e.getPlaylist().getClip().setElapsedTimestamp(t), e.getPlaylist().getClip().setPlaybackStartPosition(r), e.getSSECore().isLoadingTimeSent() || (n.ns_st_lt = String(e.getSSECore().getLoadTimeOffset() + t - e.getSSECore().getInitTimestamp()), e.getSSECore().setLoadingTimeSent(!0)), e.getHeartbeat().resume(), e.getKeepAlive().resume();
+                                    e.getPlaylist().getClip().isSeeking() && (e.getPlaylist().getClip().addSeekingAmount(r), e.getPlaylist().getClip().setSeeking(!1)), e.getPlaylist().isPlaylistStarted() || (e.getPlaylist().setPlaylistStarted(!0), e.getPlaylist().incrementPlaybackCounter()), e.getPlaylist().getClip().setClipStarted(!0), e.getPlaylist().getClip().setPlaybackStarted(!0), e.getPlaylist().getClip().incrementSegmentPlaybackCounter(), (0 == e.getPlaylist().getClip().getLowestPartNumberPlayed() || parseInt(e.getPlaylist().getClip().getLabels().ns_st_pn) <= e.getPlaylist().getClip().getLowestPartNumberPlayed()) && (e.getPlaylist().getClip().setLowestPartNumberPlayed(parseInt(e.getPlaylist().getClip().getLabels().ns_st_pn)), e.getPlaylist().getClip().incrementAssetPlaybackCounter(), e.getPlaylist().getClip().resetAssetPlaybackCounters()), e.getPlaylist().getClip().incrementPlayCounter(), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t), e.getPlaylist().getClip().setElapsedTimestamp(t), e.getPlaylist().getClip().setPlaybackStartPosition(r), e.getSSECore().isLoadingTimeSent() || (n.ns_st_lt = String(e.getSSECore().getLoadTimeOffset() + t - e.getSSECore().getInitTimestamp()), e.getSSECore().setLoadingTimeSent(!0)), e.getHeartbeat().resume(), e.getKeepAlive().resume();
                                     var i = e.getSSECore().createLabels(u.PLAY, n, t);
                                     e.getEventManager().newEvent(i)
                                 }
@@ -11943,8 +12002,7 @@
                             }
 
                             function f(e, t) {
-                                e = s(e),
-                                    b == y.None && (b = t), _ && b == t && u(e) ? (v.getClip().setLabels(e), v.getState() != r.PLAYING && v.play()) : c(e), _ = !0, b = t
+                                e = s(e), b == y.None && (b = t), _ && b == t && u(e) ? (v.getClip().setLabels(e), v.getState() != r.PLAYING && v.play()) : c(e), _ = !0, b = t
                             }
                             var p = 0,
                                 h = null,
@@ -13639,7 +13697,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.10-163916+64854dab095c89af8cff45fc3a10ddc538dfb909",
+                    app_version: "2017.08.10-184952+b6937d2813b279c4dbb219a57de124916ce106ed",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
