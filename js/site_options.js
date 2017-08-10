@@ -2150,14 +2150,17 @@ window.SiteOptions = {
         },
         "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14": {
             "name": "padtime",
-            "v": 1802,
+            "v": 1803,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "treatment"
+            }, {
+                "weight": 5,
+                "value": "treatmentold"
             }]
         },
         "b8e14b8a-c5dd-4904-aac1-536063d91fa3": {
