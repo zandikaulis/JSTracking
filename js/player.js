@@ -8706,13 +8706,13 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.EXTENSION_ROLE_BROADCASTER = t.EXTENSION_ROLE_VIEWER = t.EXTENSION_PERMISSION_STATE_GRANTED = t.EXTENSION_PERMISSION_STATE_NONE = void 0, t.parseExtensionToken = i;
+        }), t.EXTENSION_MENU_REPORT = t.EXTENSION_MENU_MANAGE_ACCESS = t.EXTENSION_MENU_DETAILS = t.EXTENSION_MENU_MAIN = t.EXTENSION_ROLE_BROADCASTER = t.EXTENSION_ROLE_VIEWER = t.EXTENSION_PERMISSION_STATE_GRANTED = t.EXTENSION_PERMISSION_STATE_NONE = void 0, t.parseExtensionToken = i;
         var o = n(117),
             a = r(o),
             s = t.EXTENSION_PERMISSION_STATE_NONE = "none",
             u = t.EXTENSION_PERMISSION_STATE_GRANTED = "granted",
             l = t.EXTENSION_ROLE_VIEWER = "viewer",
-            c = (t.EXTENSION_ROLE_BROADCASTER = "broadcaster", {
+            c = (t.EXTENSION_ROLE_BROADCASTER = "broadcaster", t.EXTENSION_MENU_MAIN = "main menu", t.EXTENSION_MENU_DETAILS = "extension details", t.EXTENSION_MENU_MANAGE_ACCESS = "extension manage access", t.EXTENSION_MENU_REPORT = "extension report", {
                 permissionsState: s,
                 role: l
             })
@@ -10490,8 +10490,7 @@
                                     F.setLabel("ns_st_skd", String(e))
                                 },
                                 resetClipLifecycleLabels: function() {
-                                    L.ns_st_pt = "0", l = 0, c = 0, L.ns_st_bt = "0", P = 0, L.ns_st_bc = "0", j = 0, L.ns_st_pc = "0", D = 0, L.ns_st_sq = "0", L.ns_st_upa = "0", E = 0, T = 0, L.ns_st_et = "0", h = 0, L.ns_st_lpa = "0",
-                                        C = 0, L.ns_st_skt = "0", k = 0, L.ns_st_ska = "0", R = 0, L.ns_st_skc = "0", x = 0
+                                    L.ns_st_pt = "0", l = 0, c = 0, L.ns_st_bt = "0", P = 0, L.ns_st_bc = "0", j = 0, L.ns_st_pc = "0", D = 0, L.ns_st_sq = "0", L.ns_st_upa = "0", E = 0, T = 0, L.ns_st_et = "0", h = 0, L.ns_st_lpa = "0", C = 0, L.ns_st_skt = "0", k = 0, L.ns_st_ska = "0", R = 0, L.ns_st_skc = "0", x = 0
                                 },
                                 incrementSegmentPlaybackCounter: function() {
                                     U++
@@ -11134,12 +11133,12 @@
                                     e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().isSeeking() ? e.getPlaylist().getClip().isCollectingSeekingTime() || (e.getPlaylist().getClip().setSeekingTimestamp(t), e.getPlaylist().getClip().setCollectingSeekingTime(!0)) : e.getPlaylist().getClip().incrementSeeks(), e.getPlaylist().getClip().isSeeking() || (e.getPlaylist().getClip().setSeeking(!0), e.getPlaylist().getClip().setCollectingSeekingTime(!0), e.getPlaylist().getClip().setSeekStartPosition(r), e.getPlaylist().getClip().setSeekingTimestamp(t))
                                 },
                                 onPause: function(t, n) {
-                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().incrementPauses(), e.getPlaylist().getClip().incrementPauses()
+                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().incrementPauses(),
+                                        e.getPlaylist().getClip().incrementPauses()
                                 },
                                 onPlay: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
-                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().incrementPlayCounter(), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t),
-                                        e.getPlaylist().getClip().addElapsedTime(t), e.getPlaylist().getClip().setElapsedTimestamp(t), e.getPlaylist().getClip().setPlaybackStartPosition(r), e.getHeartbeat().resume(), e.getKeepAlive().resume();
+                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().incrementPlayCounter(), e.getPlaylist().setPlaybackTimestamp(t), e.getPlaylist().getClip().setPlaybackTimestamp(t), e.getPlaylist().getClip().addElapsedTime(t), e.getPlaylist().getClip().setElapsedTimestamp(t), e.getPlaylist().getClip().setPlaybackStartPosition(r), e.getHeartbeat().resume(), e.getKeepAlive().resume();
                                     var i = e.getSSECore().createLabels(u.PLAY, n, t);
                                     e.getEventManager().newEvent(i)
                                 }
@@ -11804,127 +11803,128 @@
                         }
                     }();
                 return function(n) {
-                    function r(e, t) {
-                        return S[w] || o(e, t)
-                    }
+                        function r(e, t) {
+                            return S[w] || o(e, t)
+                        }
 
-                    function i() {
-                        w = -1;
-                        for (var t = 0; C >= t; t++)
-                            if (S.hasOwnProperty(String(t))) {
-                                w = t;
-                                break
-                            }
-                        return e.StreamSense.activeIndex = w, w
-                    }
-
-                    function o(t, n) {
-                        return t = t || null, n = n || null, t && "object" == typeof t && (n = t, t = null), S[++C] = new e.StreamSense(n, t), i(), S[C]
-                    }
-
-                    function a() {
-                        var t = !1,
-                            n = w;
-                        if ("number" == typeof arguments[0] && isFinite(arguments[0])) n = arguments[0];
-                        else if (arguments[0] instanceof e.StreamSense)
-                            for (var r in S)
-                                if (S.hasOwnProperty(r) && S[r] === arguments[0]) {
-                                    n = r;
+                        function i() {
+                            w = -1;
+                            for (var t = 0; C >= t; t++)
+                                if (S.hasOwnProperty(String(t))) {
+                                    w = t;
                                     break
                                 }
-                        return S.hasOwnProperty(String(n)) && (t = S[n], delete S[n], t.reset(), i()), t
-                    }
+                            return e.StreamSense.activeIndex = w, w
+                        }
 
-                    function s(e) {
-                        return e = e || {}, r().setPlaylist(e), r().getPlaylist()
-                    }
+                        function o(t, n) {
+                            return t = t || null, n = n || null, t && "object" == typeof t && (n = t, t = null), S[++C] = new e.StreamSense(n, t), i(), S[C]
+                        }
 
-                    function u(e, t, n) {
-                        return e = e || {}, "number" == typeof t && (e.ns_st_cn = String(t)), r().setClip(e, n), r().getClip()
-                    }
+                        function a() {
+                            var t = !1,
+                                n = w;
+                            if ("number" == typeof arguments[0] && isFinite(arguments[0])) n = arguments[0];
+                            else if (arguments[0] instanceof e.StreamSense)
+                                for (var r in S)
+                                    if (S.hasOwnProperty(r) && S[r] === arguments[0]) {
+                                        n = r;
+                                        break
+                                    }
+                            return S.hasOwnProperty(String(n)) && (t = S[n], delete S[n], t.reset(), i()), t
+                        }
 
-                    function l(e, t, n) {
-                        return "undefined" != typeof e && (n = n || null, t = t || {}, r().notify(e, t, n))
-                    }
+                        function s(e) {
+                            return e = e || {}, r().setPlaylist(e), r().getPlaylist()
+                        }
 
-                    function c(e) {
-                        "undefined" != typeof e && r().setLabels(e)
-                    }
+                        function u(e, t, n) {
+                            return e = e || {}, "number" == typeof t && (e.ns_st_cn = String(t)), r().setClip(e, n), r().getClip()
+                        }
 
-                    function d() {
-                        return r().getLabels()
-                    }
+                        function l(e, t, n) {
+                            return "undefined" != typeof e && (n = n || null, t = t || {}, r().notify(e, t, n))
+                        }
 
-                    function f(e) {
-                        "undefined" != typeof e && r().getPlaylist().setLabels(e)
-                    }
+                        function c(e) {
+                            "undefined" != typeof e && r().setLabels(e)
+                        }
 
-                    function p() {
-                        return r().getPlaylist().getLabels()
-                    }
+                        function d() {
+                            return r().getLabels()
+                        }
 
-                    function h(e) {
-                        "undefined" != typeof e && r().getClip().setLabels(e)
-                    }
+                        function f(e) {
+                            "undefined" != typeof e && r().getPlaylist().setLabels(e)
+                        }
 
-                    function _() {
-                        return r().getClip().getLabels()
-                    }
+                        function p() {
+                            return r().getPlaylist().getLabels()
+                        }
 
-                    function v(e) {
-                        return r().reset(e || {})
-                    }
+                        function h(e) {
+                            "undefined" != typeof e && r().getClip().setLabels(e)
+                        }
 
-                    function m(e) {
-                        return r().getPlaylist().reset(e || {})
-                    }
+                        function _() {
+                            return r().getClip().getLabels()
+                        }
 
-                    function y(e) {
-                        return r().getClip().reset(e || {})
-                    }
+                        function v(e) {
+                            return r().reset(e || {})
+                        }
 
-                    function g(e) {
-                        return e = e || {}, r().viewNotify(null, e)
-                    }
+                        function m(e) {
+                            return r().getPlaylist().reset(e || {})
+                        }
 
-                    function b(e, t) {
-                        return arguments.length > 2 && (e = arguments[1], t = arguments[2]), e = e || {}, "number" == typeof t && (e.ns_st_po = String(t)), r().customNotify(e, t)
-                    }
+                        function y(e) {
+                            return r().getClip().reset(e || {})
+                        }
 
-                    function E() {
-                        return r().exportState()
-                    }
+                        function g(e) {
+                            return e = e || {}, r().viewNotify(null, e)
+                        }
 
-                    function T(e) {
-                        r().importState(e)
-                    }
-                    var S = {},
-                        C = -1,
-                        w = -1;
-                    t.extend(n, {
-                        activeIndex: w,
-                        newInstance: o,
-                        new: o,
-                        destroyInstance: a,
-                        destroy: a,
-                        newPlaylist: s,
-                        newClip: u,
-                        notify: l,
-                        setLabels: c,
-                        getLabels: d,
-                        setPlaylistLabels: f,
-                        getPlaylistLabels: p,
-                        setClipLabels: h,
-                        getClipLabels: _,
-                        resetInstance: v,
-                        resetPlaylist: m,
-                        resetClip: y,
-                        viewEvent: g,
-                        customEvent: b,
-                        exportState: E,
-                        importState: T
-                    })
-                }(M), M.PlayerEvents = u, M.InternalStates = l, M.ImplementationType = c, M
+                        function b(e, t) {
+                            return arguments.length > 2 && (e = arguments[1], t = arguments[2]), e = e || {}, "number" == typeof t && (e.ns_st_po = String(t)), r().customNotify(e, t)
+                        }
+
+                        function E() {
+                            return r().exportState()
+                        }
+
+                        function T(e) {
+                            r().importState(e)
+                        }
+                        var S = {},
+                            C = -1,
+                            w = -1;
+                        t.extend(n, {
+                            activeIndex: w,
+                            newInstance: o,
+                            new: o,
+                            destroyInstance: a,
+                            destroy: a,
+                            newPlaylist: s,
+                            newClip: u,
+                            notify: l,
+                            setLabels: c,
+                            getLabels: d,
+                            setPlaylistLabels: f,
+                            getPlaylistLabels: p,
+                            setClipLabels: h,
+                            getClipLabels: _,
+                            resetInstance: v,
+                            resetPlaylist: m,
+                            resetClip: y,
+                            viewEvent: g,
+                            customEvent: b,
+                            exportState: E,
+                            importState: T
+                        })
+                    }(M), M.PlayerEvents = u, M.InternalStates = l, M.ImplementationType = c,
+                    M
             }(), e.StreamingTag = e.StreamingTag || function() {
                 var n = e.StreamSense,
                     r = (e.StreamSense.PlayerEvents, e.StreamSense.InternalStates || null),
@@ -13697,7 +13697,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.10-185834+59a18648b3af32677c39139b358ef158aa88db02",
+                    app_version: "2017.08.10-194323+4140332e6f02ccaa22dc6d312d1471d88a3e25bb",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -17991,17 +17991,11 @@
                 var i = r(),
                     o = i.env,
                     a = i.screenMode;
-                switch (o.playerType) {
-                    case P.PLAYER_SITE:
-                        n(a.isFullScreen ? (0, I.setStream)(I.TYPE_VIDEO, e) : (0, N.emitTransitionToCollection)(t, e));
-                        break;
-                    case P.PLAYER_POPOUT:
-                        var s = E(e, r);
-                        g(s, r);
-                        break;
-                    default:
-                        n((0, I.setStream)(I.TYPE_VIDEO, e))
-                }
+                if (o.playerType === P.PLAYER_SITE || o.playerType === P.PLAYER_TWILIGHT) n(a.isFullScreen ? (0, I.setStream)(I.TYPE_VIDEO, e) : (0, N.emitTransitionToCollection)(t, e));
+                else if (o.playerType === P.PLAYER_POPOUT) {
+                    var s = E(e, r);
+                    g(s, r)
+                } else n((0, I.setStream)(I.TYPE_VIDEO, e))
             }
         }
 
@@ -18774,8 +18768,7 @@
                         if (this._src) {
                             var e = this.store.getState(),
                                 t = e.playback;
-                            this._mediaPlayer.load(this._src),
-                                this._eventEmitter.emit(f.LOADSTART), t.autoplay && (this._mediaPlayer.play(), this._eventEmitter.emit(f.PLAY))
+                            this._mediaPlayer.load(this._src), this._eventEmitter.emit(f.LOADSTART), t.autoplay && (this._mediaPlayer.play(), this._eventEmitter.emit(f.PLAY))
                         }
                     }
                 }, {
@@ -23767,6 +23760,14 @@
                     this._sendAll(P.BRIDGE_STORE_STATE_UPDATE, o)
                 }
             }, {
+                key: "_sendTransitionToCollectionEvent",
+                value: function(e) {
+                    this._sendAll(P.BRIDGE_PLAYER_EVENT_WITH_PAYLOAD, {
+                        event: P.EVENT_EMBED_TRANSITION_TO_COLLECTION_VOD,
+                        data: e
+                    })
+                }
+            }, {
                 key: "_sendStatsUpdateEvent",
                 value: function() {
                     this._sendStoreState(), this._sendPlayerEvent(P.EVENT_EMBED_STATS_UPDATE)
@@ -23834,7 +23835,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.EmbedClient = t.PLAYBACK_ENDED = t.PLAYBACK_PLAYING = t.PLAYBACK_PAUSED = t.BRIDGE_DESTROY = t.BRIDGE_CLIENT_NAMESPACE = t.BRIDGE_HOST_NAMESPACE = t.BRIDGE_DOCUMENT_EVENT = t.BRIDGE_PLAYER_EVENT_WITH_PAYLOAD = t.BRIDGE_PLAYER_EVENT = t.BRIDGE_STORE_STATE_UPDATE = t.BRIDGE_STATE_UPDATE = t.BRIDGE_HOST_READY = t.BRIDGE_REQ_SUBSCRIBE = t.METHOD_SET_MINI_PLAYER_MODE = t.METHOD_SET_FULLSCREEN = t.METHOD_SET_THEATRE = t.METHOD_DESTROY = t.METHOD_SET_VOLUME = t.METHOD_SET_MUTE = t.METHOD_SET_QUALITY = t.METHOD_SEEK = t.METHOD_SET_COLLECTION = t.METHOD_SET_VIDEO = t.METHOD_SET_CHANNEL = t.METHOD_PAUSE = t.METHOD_PLAY = t.EVENT_EMBED_STATS_UPDATE = t.EVENT_EMBED_FLASH_AD_COMPANION_RENDERED = t.EVENT_EMBED_AD_COMPANION_RENDERED = t.EVENT_EMBED_OPEN_STREAM = t.EVENT_EMBED_CONTENT_SHOWING = t.EVENT_FULLSCREEN_EXITED = t.EVENT_FULLSCREEN_ENTERED = t.EVENT_THEATRE_EXITED = t.EVENT_THEATRE_ENTERED = t.EVENT_EMBED_VIEWERS_CHANGE = t.EVENT_EMBED_OFFLINE = t.EVENT_EMBED_ONLINE = t.EVENT_EMBED_ENDED = t.EVENT_EMBED_PAUSE = t.EVENT_EMBED_PLAY = t.EVENT_EMBED_READY = void 0;
+        }), t.EmbedClient = t.PLAYBACK_ENDED = t.PLAYBACK_PLAYING = t.PLAYBACK_PAUSED = t.BRIDGE_DESTROY = t.BRIDGE_CLIENT_NAMESPACE = t.BRIDGE_HOST_NAMESPACE = t.BRIDGE_DOCUMENT_EVENT = t.BRIDGE_PLAYER_EVENT_WITH_PAYLOAD = t.BRIDGE_PLAYER_EVENT = t.BRIDGE_STORE_STATE_UPDATE = t.BRIDGE_STATE_UPDATE = t.BRIDGE_HOST_READY = t.BRIDGE_REQ_SUBSCRIBE = t.METHOD_SET_MINI_PLAYER_MODE = t.METHOD_SET_FULLSCREEN = t.METHOD_SET_THEATRE = t.METHOD_DESTROY = t.METHOD_SET_VOLUME = t.METHOD_SET_MUTE = t.METHOD_SET_QUALITY = t.METHOD_SEEK = t.METHOD_SET_COLLECTION = t.METHOD_SET_VIDEO = t.METHOD_SET_CHANNEL = t.METHOD_PAUSE = t.METHOD_PLAY = t.EVENT_EMBED_STATS_UPDATE = t.EVENT_EMBED_TRANSITION_TO_COLLECTION_VOD = t.EVENT_EMBED_OPEN_STREAM = t.EVENT_EMBED_FLASH_AD_COMPANION_RENDERED = t.EVENT_EMBED_CONTENT_SHOWING = t.EVENT_EMBED_AD_COMPANION_RENDERED = t.EVENT_FULLSCREEN_EXITED = t.EVENT_FULLSCREEN_ENTERED = t.EVENT_THEATRE_EXITED = t.EVENT_THEATRE_ENTERED = t.EVENT_EMBED_VIEWERS_CHANGE = t.EVENT_EMBED_OFFLINE = t.EVENT_EMBED_ONLINE = t.EVENT_EMBED_ENDED = t.EVENT_EMBED_PAUSE = t.EVENT_EMBED_PLAY = t.EVENT_EMBED_READY = void 0;
         var a = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -23882,7 +23883,7 @@
                 volume: 0
             },
             g = t.EVENT_EMBED_READY = "ready",
-            b = (t.EVENT_EMBED_PLAY = "play", t.EVENT_EMBED_PAUSE = "pause", t.EVENT_EMBED_ENDED = "ended", t.EVENT_EMBED_ONLINE = "online", t.EVENT_EMBED_OFFLINE = "offline", t.EVENT_EMBED_VIEWERS_CHANGE = "viewerschange", t.EVENT_THEATRE_ENTERED = "theatreentered", t.EVENT_THEATRE_EXITED = "theatreexited", t.EVENT_FULLSCREEN_ENTERED = "fullscreenentered", t.EVENT_FULLSCREEN_EXITED = "fullscreenexited", t.EVENT_EMBED_CONTENT_SHOWING = "contentShowing", t.EVENT_EMBED_OPEN_STREAM = "openStream", t.EVENT_EMBED_AD_COMPANION_RENDERED = "adcompanionrendered", t.EVENT_EMBED_FLASH_AD_COMPANION_RENDERED = "flashAdcompanionrendered", t.EVENT_EMBED_STATS_UPDATE = "statsupdate", t.METHOD_PLAY = "play", t.METHOD_PAUSE = "pause", t.METHOD_SET_CHANNEL = "channel", t.METHOD_SET_VIDEO = "video", t.METHOD_SET_COLLECTION = "collection", t.METHOD_SEEK = "seek", t.METHOD_SET_QUALITY = "quality", t.METHOD_SET_MUTE = "mute", t.METHOD_SET_VOLUME = "volume", t.METHOD_DESTROY = "destroy"),
+            b = (t.EVENT_EMBED_PLAY = "play", t.EVENT_EMBED_PAUSE = "pause", t.EVENT_EMBED_ENDED = "ended", t.EVENT_EMBED_ONLINE = "online", t.EVENT_EMBED_OFFLINE = "offline", t.EVENT_EMBED_VIEWERS_CHANGE = "viewerschange", t.EVENT_THEATRE_ENTERED = "theatreentered", t.EVENT_THEATRE_EXITED = "theatreexited", t.EVENT_FULLSCREEN_ENTERED = "fullscreenentered", t.EVENT_FULLSCREEN_EXITED = "fullscreenexited", t.EVENT_EMBED_AD_COMPANION_RENDERED = "adcompanionrendered", t.EVENT_EMBED_CONTENT_SHOWING = "contentShowing", t.EVENT_EMBED_FLASH_AD_COMPANION_RENDERED = "flashAdcompanionrendered", t.EVENT_EMBED_OPEN_STREAM = "openStream", t.EVENT_EMBED_TRANSITION_TO_COLLECTION_VOD = "transitionToCollectionVod", t.EVENT_EMBED_STATS_UPDATE = "statsupdate", t.METHOD_PLAY = "play", t.METHOD_PAUSE = "pause", t.METHOD_SET_CHANNEL = "channel", t.METHOD_SET_VIDEO = "video", t.METHOD_SET_COLLECTION = "collection", t.METHOD_SEEK = "seek", t.METHOD_SET_QUALITY = "quality", t.METHOD_SET_MUTE = "mute", t.METHOD_SET_VOLUME = "volume", t.METHOD_DESTROY = "destroy"),
             E = (t.METHOD_SET_THEATRE = "theatre", t.METHOD_SET_FULLSCREEN = "fullscreen", t.METHOD_SET_MINI_PLAYER_MODE = "setminiplayermode", t.BRIDGE_REQ_SUBSCRIBE = "subscribe"),
             T = t.BRIDGE_HOST_READY = "ready",
             S = t.BRIDGE_STATE_UPDATE = "bridgestateupdate",
@@ -27074,7 +27075,7 @@
                 precacheNode: o,
                 uncacheNode: a
             };
-        e.exports = m
+        e.exports = m;
     }, function(e, t) {
         "use strict";
 
@@ -50226,6 +50227,12 @@
                             case a.ACTION_AD_COMPANION_EVENT:
                                 n._sendAdCompanionEvent(e.event, e.data);
                                 break;
+                            case s.ACTION_TRANSITION_TO_COLLECTION:
+                                n._sendTransitionToCollectionEvent({
+                                    vodId: e.vodId,
+                                    collectionId: e.collectionId
+                                });
+                                break;
                             case l.ACTION_UPDATE_STATS:
                                 n._sendStatsUpdateEvent();
                                 break;
@@ -51028,7 +51035,7 @@
                 }
             });
             var O = function() {
-                return "undefined" != typeof ResizeObserver ? ResizeObserver : P
+                return "undefined" != typeof ResizeObserver ? ResizeObserver : P;
             }();
             return O
         })
