@@ -270,19 +270,19 @@
             V = n(353),
             H = n(323),
             q = n(344),
-            G = n(735),
+            G = n(736),
             Y = n(180),
-            W = n(753),
-            K = n(754),
+            W = n(754),
+            K = n(755),
             z = n(375),
-            Q = n(781),
+            Q = n(782),
             X = n(247),
             J = n(338),
             Z = r(J),
             ee = n(337),
-            te = n(768),
+            te = n(769),
             ne = r(te),
-            re = n(770),
+            re = n(771),
             ie = r(re),
             oe = n(335),
             ae = n(376),
@@ -294,26 +294,26 @@
             fe = n(179),
             pe = r(fe),
             he = n(200),
-            _e = n(811),
-            ve = n(764),
+            _e = n(812),
+            ve = n(765),
             me = n(333),
             ye = n(224),
-            ge = n(796),
+            ge = n(797),
             be = n(414),
             Ee = n(411),
-            Te = n(656),
-            Se = n(812),
-            Ce = n(813),
-            we = n(816),
-            Pe = n(817),
+            Te = n(659),
+            Se = n(813),
+            Ce = n(814),
+            we = n(817),
+            Pe = n(818),
             Ae = n(217),
             Oe = n(612),
-            ke = n(818),
-            Ie = n(819),
-            Ne = n(820),
+            ke = n(819),
+            Ie = n(820),
+            Ne = n(821),
             Re = n(176),
             Me = n(178),
-            Le = n(652),
+            Le = n(691),
             De = n(340),
             xe = n(183),
             je = n(185),
@@ -321,7 +321,7 @@
             Be = i(Ue);
         n(347).polyfill(), h.Dobbin.configure({
             Promise: Promise
-        }), n.p = w.playerHost + "/", n(821);
+        }), n.p = w.playerHost + "/", n(822);
         var Fe = Promise.resolve();
         window.google || (Fe = Promise.resolve($.ajax({
             url: "//imasdk.googleapis.com/js/sdkloader/ima3.js",
@@ -13639,7 +13639,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.09-231838+68d166932f37f8b14c8ef7cd4d468625e8be1b88",
+                    app_version: "2017.08.09-232826+87fc252846d5a7a689a93bbaa66f447cc6163fa1",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -24233,109 +24233,106 @@
             return t.default = e, t
         }
 
-        function o(e, t, r, i, o, D, j) {
-            function B() {
-                var E = j;
-                $(t).addClass("player").addClass("theme--dark"), $(t).append(n(734));
-                var C = o.getState().playback.muted;
-                o.dispatch((0, O.initializeCaptionsSettings)(C)), o.dispatch((0, k.initializePlaybackSettings)()), o.dispatch((0, I.initializeSettings)()), F.default.render(U.default.createElement(V.Provider, {
-                    store: o
-                }, U.default.createElement(H.I18nextProvider, {
-                    i18n: q.I18N_INSTANCE
-                }, U.default.createElement(b.StreamInfo, null))), document.getElementById("stream-info")), te(o), F.default.render(U.default.createElement(y.Seekbar, {
+        function o(e, t, r, i, o, L, x) {
+            function U() {
+                var b = x;
+                $(t).addClass("player").addClass("theme--dark"), $(t).append(n(735));
+                var S = o.getState().playback.muted;
+                o.dispatch((0, A.initializeCaptionsSettings)(S)), o.dispatch((0, O.initializePlaybackSettings)()), o.dispatch((0, k.initializeSettings)()), ee(o), ie(o), re(o), te(o), J(o), Z(o), X(o), ne(o), B.default.render(j.default.createElement(y.Seekbar, {
                     store: o,
                     seek: e.setCurrentTime.bind(e)
-                }), document.getElementById("js-player-seek")), F.default.render(U.default.createElement(S.VolumeSlider, {
+                }), document.getElementById("js-player-seek")), B.default.render(j.default.createElement(T.VolumeSlider, {
                     store: o
-                }), document.getElementById("js-player-volume")), F.default.render(U.default.createElement(T.MutedSegmentsAlert, {
+                }), document.getElementById("js-player-volume")), B.default.render(j.default.createElement(E.MutedSegmentsAlert, {
                     store: o
-                }), document.getElementById("js-player-alert-container")), oe(o), ie(o), ne(o), re(o), ee(o), J(o), Z(o), F.default.render(U.default.createElement(V.Provider, {
+                }), document.getElementById("js-player-alert-container")), B.default.render(j.default.createElement(F.Provider, {
                     store: o
-                }, U.default.createElement(H.I18nextProvider, {
-                    i18n: q.I18N_INSTANCE
-                }, U.default.createElement(X.InPlayerRecommendationsOverlay, null))), document.getElementById("js-player-recommendations-overlay")), F.default.render(U.default.createElement(V.Provider, {
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(Q.InPlayerRecommendationsOverlay, null))), document.getElementById("js-player-recommendations-overlay")), B.default.render(j.default.createElement(F.Provider, {
                     store: o
-                }, U.default.createElement(H.I18nextProvider, {
-                    i18n: q.I18N_INSTANCE
-                }, U.default.createElement(g.Settings, null))), document.getElementById("js-settings")), D.hookUpForm(t), ae = new s.PlayerUIState(t, o), se = new l.PlayerUIInfo(e, t, o, E), ue = new c.PlayerUIStats(t, o), ye = new d.PlayerUIRecommendations(t, o), ge = new P.PlayerUIError(t, o), le = new f.PlayerUILeaveDialog(e, t, r, o, E), ce = new _.PlayerUILang(t, o), de = new p.PlayerUISubscribeOverlay(t, o), fe = new h.PlayerUIResume(e, i, o, E), he = new A.AgeRestrictionOverlay(t, e, o), _e = new m.PlayerUIControlsDisplay(e, t, o), ve = new u.PlayerUIControls(e, t, o, _e, E), be = new R.AdOverlay(t, o), Ee = new M.CollectionOverlay(t, o), me = new N.PlayerUIClipsEnabler(t, o, a.localStore, D), pe = new v.PlayerUIClosedCaption(o, t), $(t).attr("data-initializing", !0), e.addEventListener(x.PLAYER_INIT, function() {
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(g.Settings, null))), document.getElementById("js-settings")), L.hookUpForm(t), oe = new s.PlayerUIState(t, o), ae = new l.PlayerUIInfo(e, t, o, b), se = new c.PlayerUIStats(t, o), me = new d.PlayerUIRecommendations(t, o), ye = new w.PlayerUIError(t, o), ue = new f.PlayerUILeaveDialog(e, t, r, o, b), le = new _.PlayerUILang(t, o), ce = new p.PlayerUISubscribeOverlay(t, o), de = new h.PlayerUIResume(e, i, o, b), pe = new P.AgeRestrictionOverlay(t, e, o), he = new m.PlayerUIControlsDisplay(e, t, o), _e = new u.PlayerUIControls(e, t, o, he, b), ge = new N.AdOverlay(t, o), be = new R.CollectionOverlay(t, o), ve = new I.PlayerUIClipsEnabler(t, o, a.localStore, L), fe = new v.PlayerUIClosedCaption(o, t), $(t).attr("data-initializing", !0), e.addEventListener(D.PLAYER_INIT, function() {
                     $(t).attr("data-initializing", !1)
                 })
             }
 
-            function J(e) {
-                F.default.render(U.default.createElement(V.Provider, {
+            function X(e) {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, U.default.createElement(H.I18nextProvider, {
-                    i18n: q.I18N_INSTANCE
-                }, U.default.createElement(K.CollectionSidebar, null))), document.getElementById("js-collection-sidebar"))
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(Y.TopBar, null))), document.getElementById("top-bar"))
+            }
+
+            function J(e) {
+                B.default.render(j.default.createElement(F.Provider, {
+                    store: e
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(W.CollectionSidebar, null))), document.getElementById("js-collection-sidebar"))
             }
 
             function Z(e) {
-                F.default.render(U.default.createElement(V.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, U.default.createElement(H.I18nextProvider, {
-                    i18n: q.I18N_INSTANCE
-                }, U.default.createElement(z.CollectionEmptyOverlay, null))), document.getElementById("empty-collection-overlay"))
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(K.CollectionEmptyOverlay, null))), document.getElementById("empty-collection-overlay"))
             }
 
             function ee(e) {
-                F.default.render(U.default.createElement(V.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, U.default.createElement(H.I18nextProvider, {
-                    i18n: q.I18N_INSTANCE
-                }, U.default.createElement(W.CollectionTopBar, null))), document.getElementById("collection-topbar"))
+                }, j.default.createElement(b.StreamStatus, null)), document.getElementById("stream-status"))
             }
 
             function te(e) {
-                F.default.render(U.default.createElement(V.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, U.default.createElement(E.StreamStatus, null)), document.getElementById("stream-status"))
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(z.Experiment, {
+                    uuid: M.OFFLINE_EXPERIENCE,
+                    renderValue: "show"
+                }, j.default.createElement(q.FollowPanel, null)))), document.getElementById("js-follow-panel"))
             }
 
             function ne(e) {
-                F.default.render(U.default.createElement(V.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, U.default.createElement(H.I18nextProvider, {
-                    i18n: q.I18N_INSTANCE
-                }, U.default.createElement(Q.Experiment, {
-                    uuid: L.OFFLINE_EXPERIENCE,
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(z.Experiment, {
+                    uuid: M.OFFLINE_EXPERIENCE,
                     renderValue: "show"
-                }, U.default.createElement(G.FollowPanel, null)))), document.getElementById("js-follow-panel"))
+                }, j.default.createElement(G.DeadLTVOverlay, null)))), document.getElementById("js-dead-ltv-overlay"))
             }
 
             function re(e) {
-                F.default.render(U.default.createElement(V.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, U.default.createElement(H.I18nextProvider, {
-                    i18n: q.I18N_INSTANCE
-                }, U.default.createElement(Q.Experiment, {
-                    uuid: L.OFFLINE_EXPERIENCE,
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(z.Experiment, {
+                    uuid: M.AUTO_SUGGEST_NOTIFICATION,
                     renderValue: "show"
-                }, U.default.createElement(Y.DeadLTVOverlay, null)))), document.getElementById("js-dead-ltv-overlay"))
+                }, j.default.createElement(C.NotificationPopUpsWrapper, null)))), document.getElementById("js-notification-popup-container"))
             }
 
             function ie(e) {
-                F.default.render(U.default.createElement(V.Provider, {
-                    store: e
-                }, U.default.createElement(H.I18nextProvider, {
-                    i18n: q.I18N_INSTANCE
-                }, U.default.createElement(Q.Experiment, {
-                    uuid: L.AUTO_SUGGEST_NOTIFICATION,
-                    renderValue: "show"
-                }, U.default.createElement(w.NotificationPopUpsWrapper, null)))), document.getElementById("js-notification-popup-container"))
-            }
-
-            function oe(e) {
                 var t = document.getElementById("js-player-extension-root");
-                F.default.render(U.default.createElement(V.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, U.default.createElement(H.I18nextProvider, {
-                    i18n: q.I18N_INSTANCE
-                }, U.default.createElement(C.ExtensionsContainer, {
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(S.ExtensionsContainer, {
                     store: e
                 }))), t)
             }
-            var ae = void 0,
+            var oe = void 0,
+                ae = void 0,
                 se = void 0,
                 ue = void 0,
                 le = void 0,
@@ -24349,11 +24346,10 @@
                 me = void 0,
                 ye = void 0,
                 ge = void 0,
-                be = void 0,
-                Ee = void 0;
+                be = void 0;
             this.destroy = function() {
-                ae.destroy(), se.destroy(), ue.destroy(), ye.destroy(), ge.destroy(), le.destroy(), ce.destroy(), de.destroy(), fe.destroy(), _e.destroy(), ve.destroy(), he.destroy(), me.destroy(), pe.destroy(), ye.destroy(), be.destroy(), Ee && Ee.destroy()
-            }, B()
+                oe.destroy(), ae.destroy(), se.destroy(), me.destroy(), ye.destroy(), ue.destroy(), le.destroy(), ce.destroy(), de.destroy(), he.destroy(), _e.destroy(), pe.destroy(), ve.destroy(), fe.destroy(), me.destroy(), ge.destroy(), be && be.destroy()
+            }, U()
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -24373,36 +24369,35 @@
             y = n(443),
             g = n(618),
             b = n(648),
-            E = n(667),
-            T = n(668),
-            S = n(669),
-            C = n(670),
-            w = n(679),
-            P = n(680),
-            A = n(681),
-            O = n(361),
-            k = n(336),
-            I = n(641),
-            N = n(682),
-            R = n(684),
-            M = n(685),
-            L = n(255),
-            D = n(178),
-            x = i(D),
-            j = n(281),
-            U = r(j),
-            B = n(444),
-            F = r(B),
-            V = n(582),
-            H = n(315),
-            q = n(686),
-            G = n(658),
-            Y = n(705),
-            W = n(708),
-            K = n(710),
-            z = n(722),
-            Q = n(642),
-            X = n(724)
+            E = n(649),
+            T = n(650),
+            S = n(651),
+            C = n(662),
+            w = n(663),
+            P = n(664),
+            A = n(361),
+            O = n(336),
+            k = n(641),
+            I = n(665),
+            N = n(667),
+            R = n(668),
+            M = n(255),
+            L = n(178),
+            D = i(L),
+            x = n(281),
+            j = r(x),
+            U = n(444),
+            B = r(U),
+            F = n(582),
+            V = n(315),
+            H = n(669),
+            q = n(688),
+            G = n(696),
+            Y = n(699),
+            W = n(711),
+            K = n(723),
+            z = n(642),
+            Q = n(725)
     }, function(e, t, n) {
         "use strict";
 
@@ -24493,8 +24488,7 @@
                     }
                 }
                 return function(t, n, r) {
-                    return n && e(t.prototype, n),
-                        r && e(t, r), t
+                    return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
             o = n(183),
@@ -25823,7 +25817,7 @@
                     if (!(this._options.time || i.id || n.contentType !== b.CONTENT_MODE_VOD || r.isSeeked)) {
                         var o = (0, y.videoInfo)(n.videoId);
                         if (!r.userId) return o.then(function(t) {
-                            e._seekToResumeTimeLocal(t)
+                            e._seekToResumeTimeLocal(t);
                         });
                         var a = (0, v.getResumeTimes)(r.userId);
                         return Promise.all([o, a]).then(function(t) {
@@ -38180,1374 +38174,6 @@
                 default: e
             }
         }
-
-        function i(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-        }
-
-        function o(e, t) {
-            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !t || "object" != typeof t && "function" != typeof t ? e : t
-        }
-
-        function a(e, t) {
-            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
-            e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.StreamInfo = t.StreamInfoComponent = t.mapDispatchToProps = void 0;
-        var s = function() {
-                function e(e, t) {
-                    for (var n = 0; n < t.length; n++) {
-                        var r = t[n];
-                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
-                    }
-                }
-                return function(t, n, r) {
-                    return n && e(t.prototype, n), r && e(t, r), t
-                }
-            }(),
-            u = n(281),
-            l = r(u),
-            c = n(311),
-            d = r(c),
-            f = n(582),
-            p = n(649),
-            h = n(650),
-            _ = n(168),
-            v = n(372),
-            m = n(217),
-            y = n(651),
-            g = n(665),
-            b = n(314),
-            E = r(b),
-            T = {
-                channelName: d.default.string,
-                displayName: d.default.string,
-                gameName: d.default.string,
-                lang: d.default.object,
-                logo: d.default.string,
-                name: d.default.string,
-                pause: d.default.func,
-                status: d.default.string,
-                streamUrl: d.default.string,
-                viewerCount: d.default.number,
-                playerType: d.default.string,
-                isWatchParty: d.default.bool,
-                vodId: d.default.string,
-                vodTitle: d.default.string,
-                vodIsViewable: d.default.bool,
-                vodBroadcastType: d.default.string
-            },
-            S = function(e) {
-                var t = e.env,
-                    n = e.lang,
-                    r = e.streamMetadata,
-                    i = e.viewercount,
-                    o = e.watchParty;
-                return {
-                    channelName: r.channelName,
-                    displayName: r.channel.displayName,
-                    gameName: r.game,
-                    lang: n,
-                    logo: r.channel.logo,
-                    name: r.name,
-                    status: r.channel.status,
-                    streamUrl: r.url,
-                    viewerCount: i,
-                    playerType: t.playerType,
-                    isWatchParty: "watch_party" === r.streamType,
-                    vodId: o.vodId,
-                    vodTitle: o.title,
-                    vodIsViewable: "public" === o.viewable,
-                    vodBroadcastType: o.broadcastType
-                }
-            },
-            C = t.mapDispatchToProps = function(e) {
-                return {
-                    pause: function() {
-                        e((0, v.pause)())
-                    }
-                }
-            },
-            w = {
-                a: "player-streaminfo__picture",
-                img: "qa-broadcaster-logo"
-            },
-            P = t.StreamInfoComponent = function(e) {
-                function t() {
-                    return i(this, t), o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments))
-                }
-                return a(t, e), s(t, [{
-                    key: "render",
-                    value: function() {
-                        if (this.props.playerType === m.PLAYER_IMDB) return null;
-                        var e = this.props.playerType === m.PLAYER_TWITCH_EVERYWHERE,
-                            t = e ? l.default.createElement(y.TwitchEverywherePanelContainer, null) : null,
-                            n = e ? null : this._createLogoComponent(),
-                            r = this.props.isWatchParty ? l.default.createElement(g.WatchPartyComponent, this.props) : null;
-                        return l.default.createElement("div", {
-                            className: "player-streaminfo"
-                        }, r, n, this._createStreamInfoDisplay(), t)
-                    }
-                }, {
-                    key: "_createLogoComponent",
-                    value: function() {
-                        var e = this.props,
-                            t = e.logo,
-                            n = e.streamUrl,
-                            r = "_blank";
-                        return t ? l.default.createElement(p.LinkedImage, {
-                            classNames: w,
-                            imgSrc: t,
-                            href: n,
-                            onClick: this.props.pause,
-                            target: r
-                        }) : null
-                    }
-                }, {
-                    key: "_createStreamInfoDisplay",
-                    value: function() {
-                        var e = this.props,
-                            t = e.displayName,
-                            n = e.channelName,
-                            r = e.name,
-                            i = e.status,
-                            o = e.gameName,
-                            a = e.streamUrl,
-                            s = e.viewerCount,
-                            u = e.playerType,
-                            c = e.lang,
-                            d = Boolean(n),
-                            f = d ? i : r,
-                            p = _.gamePath + "/" + encodeURIComponent(o),
-                            v = u === m.PLAYER_TWITCH_EVERYWHERE,
-                            y = (0, E.default)({
-                                "player-streaminfo__meta-container": !v
-                            });
-                        return t ? l.default.createElement(h.StreamInfoDisplay, {
-                            className: y,
-                            live: d,
-                            name: t,
-                            title: f,
-                            gameName: o,
-                            gameUrl: p,
-                            onClick: this.props.pause,
-                            streamUrl: a,
-                            viewerCount: s,
-                            lang: c
-                        }) : null
-                    }
-                }]), t
-            }(l.default.PureComponent);
-        P.propTypes = T;
-        t.StreamInfo = (0, f.connect)(S, C)(P)
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.LinkedImage = void 0;
-        var i = n(281),
-            o = r(i),
-            a = n(311),
-            s = r(a),
-            u = {
-                alt: s.default.string,
-                classNames: s.default.shape({
-                    a: s.default.string,
-                    img: s.default.string
-                }),
-                href: s.default.string,
-                imgSrc: s.default.string,
-                onClick: s.default.func,
-                target: s.default.string
-            },
-            l = t.LinkedImage = function(e) {
-                var t = e.alt,
-                    n = e.classNames,
-                    r = e.href,
-                    i = e.imgSrc,
-                    a = e.onClick,
-                    s = e.target;
-                return o.default.createElement("a", {
-                    className: n.a,
-                    href: r,
-                    target: s,
-                    onClick: a
-                }, o.default.createElement("img", {
-                    alt: t,
-                    className: n.img,
-                    src: i
-                }))
-            };
-        l.propTypes = u
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.StreamInfoDisplay = t.StreamInfoDisplayComponent = void 0;
-        var i = n(281),
-            o = r(i),
-            a = n(311),
-            s = r(a),
-            u = n(315),
-            l = n(314),
-            c = r(l),
-            d = {
-                gameName: s.default.string,
-                gameUrl: s.default.string,
-                lang: s.default.object,
-                live: s.default.bool,
-                name: s.default.string,
-                onClick: s.default.func,
-                streamUrl: s.default.string,
-                title: s.default.string,
-                viewerCount: s.default.number,
-                className: s.default.string
-            },
-            f = (0, c.default)("player-streaminfo__title", "qa-stream-title"),
-            p = (0, c.default)("player-text-link", "player-text-link--no-color", "qa-game-name"),
-            h = {
-                container: "player-streaminfo__name",
-                a: (0, c.default)("player-text-link", "player-text-link--no-color", "qa-display-name")
-            },
-            _ = t.StreamInfoDisplayComponent = function(e) {
-                var t = e.gameName,
-                    n = e.gameUrl,
-                    r = e.lang,
-                    i = e.live,
-                    a = e.name,
-                    s = e.streamUrl,
-                    l = e.onClick,
-                    c = e.title,
-                    d = e.viewerCount,
-                    _ = e.className,
-                    v = Number(d).toLocaleString(r.shortCode),
-                    m = o.default.createElement("a", {
-                        className: p,
-                        href: n,
-                        target: "_blank"
-                    }, t),
-                    y = o.default.createElement("span", null, v),
-                    g = null;
-                return i && (g = o.default.createElement("div", {
-                    className: "player-streaminfo__viewers"
-                }, o.default.createElement(u.Interpolate, {
-                    i18nKey: "playing {{game}} for {{viewerCount}} viewer",
-                    game: m,
-                    viewerCount: y,
-                    options: {
-                        count: d
-                    }
-                }))), o.default.createElement("div", {
-                    className: _
-                }, o.default.createElement("div", {
-                    className: h.container
-                }, o.default.createElement("a", {
-                    className: h.a,
-                    href: s,
-                    target: "_blank",
-                    onClick: l
-                }, a)), o.default.createElement("div", {
-                    className: f
-                }, c), o.default.createElement("div", {
-                    className: "player-streaminfo__game"
-                }, g))
-            };
-        _.propTypes = d;
-        t.StreamInfoDisplay = (0, u.translate)()(_)
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-
-        function i(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-        }
-
-        function o(e, t) {
-            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !t || "object" != typeof t && "function" != typeof t ? e : t
-        }
-
-        function a(e, t) {
-            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
-            e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.TwitchEverywherePanelContainer = t.TwitchEverywherePanel = t.mapDispatchToProps = t.TE_NAMESPACE = t.SUBSCRIBE = t.AUTHENTICATION_REQUIRED = void 0;
-        var s = function() {
-                function e(e, t) {
-                    for (var n = 0; n < t.length; n++) {
-                        var r = t[n];
-                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
-                    }
-                }
-                return function(t, n, r) {
-                    return n && e(t.prototype, n), r && e(t, r), t
-                }
-            }(),
-            u = n(281),
-            l = r(u),
-            c = n(311),
-            d = r(c),
-            f = n(652),
-            p = n(582),
-            h = n(653),
-            _ = n(656),
-            v = n(658),
-            m = n(217),
-            y = t.AUTHENTICATION_REQUIRED = "authentication-required",
-            g = t.SUBSCRIBE = "subscribe",
-            b = t.TE_NAMESPACE = "twitch-everywhere",
-            E = {
-                avatarURL: d.default.string,
-                channelName: d.default.string.isRequired,
-                channelId: d.default.number.isRequired,
-                userId: d.default.number.isRequired,
-                isLoggedIn: d.default.bool.isRequired,
-                isFollowing: d.default.bool.isRequired,
-                didFetchFollow: d.default.bool.isRequired,
-                didFetchSubscriptions: d.default.bool.isRequired,
-                followChannel: d.default.func.isRequired,
-                unfollowChannel: d.default.func.isRequired,
-                window: d.default.object.isRequired,
-                notificationsEnabled: d.default.bool.isRequired,
-                analytics: d.default.object.isRequired,
-                targetOrigin: d.default.string.isRequired
-            },
-            T = function(e) {
-                return {
-                    avatarURL: e.streamMetadata.channel.logo,
-                    channelName: e.streamMetadata.channel.name,
-                    channelId: e.streamMetadata.channel.id,
-                    userId: e.user.id,
-                    isLoggedIn: e.user.loggedInStatus === _.LOGGED_IN,
-                    isFollowing: e.follow.following,
-                    didFetchSubscriptions: e.subscriptions.didFetch,
-                    didFetchFollow: e.follow.fetched,
-                    window: e.window,
-                    notificationsEnabled: e.follow.notificationsEnabled,
-                    analytics: e.analyticsTracker,
-                    targetOrigin: e.env.twitchEverywhere.targetOrigin
-                }
-            },
-            S = t.mapDispatchToProps = function(e) {
-                return {
-                    followChannel: function(t, n) {
-                        e((0, f.followChannel)(t, n))
-                    },
-                    unfollowChannel: function(t, n) {
-                        e((0, f.unfollowChannel)(t, n))
-                    }
-                }
-            },
-            C = t.TwitchEverywherePanel = function(e) {
-                function t() {
-                    i(this, t);
-                    var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
-                    return e.handleFollowChannel = e.handleFollowChannel.bind(e), e.handleUnfollowChannel = e.handleUnfollowChannel.bind(e), e.handleSubscribe = e.handleSubscribe.bind(e), e
-                }
-                return a(t, e), s(t, [{
-                    key: "componentDidMount",
-                    value: function() {
-                        this.props.analytics.trackEvent(v.NOTIFICATIONS_BUTTON_VIEW, {
-                            follow_state: this.props.isFollowing,
-                            notif_state: this.props.notificationsEnabled,
-                            src: m.PLAYER_TWITCH_EVERYWHERE
-                        })
-                    }
-                }, {
-                    key: "postMessage",
-                    value: function(e) {
-                        this.props.window.parent.postMessage({
-                            eventName: e,
-                            namespace: b
-                        }, this.props.targetOrigin)
-                    }
-                }, {
-                    key: "handleFollowChannel",
-                    value: function() {
-                        this.props.isLoggedIn ? this.props.followChannel(this.props.userId, this.props.channelId) : this.postMessage(y)
-                    }
-                }, {
-                    key: "handleUnfollowChannel",
-                    value: function() {
-                        this.props.unfollowChannel(this.props.userId, this.props.channelId)
-                    }
-                }, {
-                    key: "handleSubscribe",
-                    value: function() {
-                        this.postMessage(g)
-                    }
-                }, {
-                    key: "render",
-                    value: function() {
-                        var e = !this.props.isLoggedIn && this.props.channelName,
-                            t = this.props.didFetchFollow && this.props.didFetchSubscriptions,
-                            n = this.props.channelId === this.props.userId;
-                        return e || t && !n ? l.default.createElement(h.TwitchEverywhereFollowPanel, {
-                            avatarURL: this.props.avatarURL,
-                            onFollowChannel: this.handleFollowChannel,
-                            onUnfollowChannel: this.handleUnfollowChannel,
-                            onSubscribe: this.handleSubscribe
-                        }) : null
-                    }
-                }]), t
-            }(l.default.Component);
-        C.propTypes = E;
-        var w = (0, p.connect)(T, S);
-        t.TwitchEverywherePanelContainer = w(C)
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return {
-                type: g,
-                show: e
-            }
-        }
-
-        function i(e, t) {
-            var n = t.stream;
-            return e === n
-        }
-
-        function o(e, t) {
-            return function(n, o) {
-                var a = o(),
-                    s = a.stream;
-                return (0, v.getFollowChannel)(e, t).then(function(e) {
-                    var t = e.notifications;
-                    i(s, o()) && (d(n, e), n(r(!t)))
-                }).catch(function(e) {
-                    i(s, o()) && (f(n, e), n(r(!0)))
-                })
-            }
-        }
-
-        function a(e, t) {
-            return function(n) {
-                return (0, v.setFollowChannel)(e, t, !0).then(function(e) {
-                    return d(n, e)
-                }).catch(function() {})
-            }
-        }
-
-        function s(e, t) {
-            return function(n) {
-                return (0, v.setFollowChannel)(e, t, !1).then(function() {
-                    return n(c({
-                        following: !1,
-                        notificationsEnabled: !1
-                    }))
-                }).catch(function() {})
-            }
-        }
-
-        function u(e, t) {
-            return function(n, r) {
-                var i = r(),
-                    o = i.analyticsTracker;
-                return (0, v.setFollowNotifications)(e, t, !0).then(function(e) {
-                    return d(n, e)
-                }).then(function() {
-                    return h(o)
-                }).catch(function() {})
-            }
-        }
-
-        function l(e, t) {
-            return function(n, r) {
-                var i = r(),
-                    o = i.analyticsTracker;
-                return (0, v.setFollowNotifications)(e, t, !1).then(function(e) {
-                    return d(n, e)
-                }).then(function() {
-                    return _(o)
-                }).catch(function() {})
-            }
-        }
-
-        function c() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return {
-                type: m,
-                followInfo: e
-            }
-        }
-
-        function d(e, t) {
-            var n = t.channel,
-                r = t.notifications;
-            n._id && void 0 !== r && e(c({
-                following: !0,
-                notificationsEnabled: r
-            }))
-        }
-
-        function f(e, t) {
-            var n = t.status;
-            404 === n && e(c({
-                following: !1,
-                notificationsEnabled: !1
-            }))
-        }
-
-        function p(e) {
-            return {
-                type: y,
-                channelName: e
-            }
-        }
-
-        function h(e) {
-            e.trackEvent(b, {
-                src: "player"
-            }), e.trackEvent(E, {
-                notifications: !0
-            })
-        }
-
-        function _(e) {
-            e.trackEvent(E, {
-                notifications: !1
-            })
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.NOTIFICATIONS_ON = t.NOTIFICATIONS_OFF = t.NOTIFICATION_CHANGE = t.NOTIFICATIONS_BUTTON_VIEW = t.NOTIFICATIONS_BUTTON_CLICK = t.FOLLOW = t.FOLLOW_AND_NOTIFICATIONS_ON = t.ACTION_SHOW_FOLLOW_NOTIFICATION = t.ACTION_PROMPT_LOGIN_MODAL = t.ACTION_FOLLOW_INFO_FETCHED = void 0, t.showFollowNotification = r, t.fetchFollowInfo = o, t.followChannel = a, t.unfollowChannel = s, t.enableNotifications = u, t.disableNotifications = l, t.followInfoFetched = c, t.dispatchFollowSuccess = d, t.dispatchFollowFail = f, t.promptLoginModal = p, t.logNotificationsEnabled = h, t.logNotificationsDisabled = _;
-        var v = n(200),
-            m = t.ACTION_FOLLOW_INFO_FETCHED = "follow info fetched",
-            y = t.ACTION_PROMPT_LOGIN_MODAL = "prompt login modal",
-            g = t.ACTION_SHOW_FOLLOW_NOTIFICATION = "show follow notification",
-            b = (t.FOLLOW_AND_NOTIFICATIONS_ON = "follow_on_notif_on", t.FOLLOW = "follow"),
-            E = (t.NOTIFICATIONS_BUTTON_CLICK = "player_notifbutton_clicks", t.NOTIFICATIONS_BUTTON_VIEW = "player_notifbutton_views", t.NOTIFICATION_CHANGE = "notification_change");
-        t.NOTIFICATIONS_OFF = "notif_off", t.NOTIFICATIONS_ON = "notif_on"
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.TwitchEverywhereFollowPanel = void 0;
-        var i = n(281),
-            o = r(i),
-            a = n(311),
-            s = r(a),
-            u = n(654),
-            l = n(655),
-            c = n(168),
-            d = n(314),
-            f = r(d),
-            p = {
-                avatarURL: s.default.string,
-                onFollowChannel: s.default.func.isRequired,
-                onUnfollowChannel: s.default.func.isRequired,
-                onSubscribe: s.default.func.isRequired
-            },
-            h = t.TwitchEverywhereFollowPanel = function(e) {
-                var t = (0, f.default)({
-                    "pl-pinned-panel": !0,
-                    "pl-pinned-panel--te": !0
-                });
-                return o.default.createElement("div", {
-                    className: t
-                }, o.default.createElement("figure", {
-                    className: "pl-pinned-panel__avatar"
-                }, o.default.createElement("img", {
-                    src: e.avatarURL || c.DEFAULT_AVATAR_URL,
-                    alt: "Avatar",
-                    height: 30,
-                    width: 30
-                })), o.default.createElement(u.FollowButton, {
-                    onFollowChannel: e.onFollowChannel,
-                    onUnfollowChannel: e.onUnfollowChannel
-                }), o.default.createElement(l.SubscribeButton, {
-                    onSubscribe: e.onSubscribe
-                }))
-            };
-        h.propTypes = p
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-
-        function i(e) {
-            var t = e.channelName,
-                n = e.isFollowing,
-                r = e.onFollowChannel,
-                i = e.onUnfollowChannel,
-                o = e.t;
-            if (e.isOwnChannel) return null;
-            var s = (0, f.default)("pl-button", "pl-button--follow", "pl-button--icon", "pl-button--status"),
-                u = (0, f.default)("pl-button", "pl-button--follow", "pl-button--icon"),
-                l = a.default.createElement(c.Button, {
-                    className: s,
-                    onClick: i
-                }, a.default.createElement("span", {
-                    className: "pl-button__status pl-button__status--hover"
-                }, a.default.createElement("figure", {
-                    className: "pl-icon"
-                }, a.default.createElement("svg", null, a.default.createElement("use", {
-                    xlinkHref: "#icon_unheart"
-                }))), a.default.createElement("span", {
-                    className: "pl-button__text"
-                }, o("Unfollow"))), a.default.createElement("span", {
-                    className: "pl-button__status pl-button__status--primary"
-                }, a.default.createElement("figure", {
-                    className: "pl-icon"
-                }, a.default.createElement("svg", null, a.default.createElement("use", {
-                    xlinkHref: "#icon_heart"
-                }))), a.default.createElement("span", {
-                    className: "pl-button__text"
-                }, o("Following")))),
-                d = a.default.createElement(c.Button, {
-                    className: u,
-                    onClick: r
-                }, a.default.createElement("figure", {
-                    className: "pl-icon"
-                }, a.default.createElement("svg", null, a.default.createElement("use", {
-                    xlinkHref: "#icon_heart"
-                }))), a.default.createElement("span", {
-                    className: "pl-button__text"
-                }, o("Follow {{channelName}} on Twitch", {
-                    channelName: t
-                })));
-            return n ? l : d
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.FollowButton = t.mapStateToProps = void 0, t.FollowButtonComponent = i;
-        var o = n(281),
-            a = r(o),
-            s = n(311),
-            u = r(s),
-            l = n(582),
-            c = n(623),
-            d = n(314),
-            f = r(d),
-            p = n(315),
-            h = {
-                channelName: u.default.string.isRequired,
-                isOwnChannel: u.default.bool.isRequired,
-                isFollowing: u.default.bool.isRequired,
-                onFollowChannel: u.default.func.isRequired,
-                onUnfollowChannel: u.default.func.isRequired,
-                t: u.default.func.isRequired
-            },
-            _ = t.mapStateToProps = function(e) {
-                return {
-                    channelName: e.streamMetadata.channel.name,
-                    isOwnChannel: e.streamMetadata.channel.id === e.user.id,
-                    isFollowing: e.follow.following
-                }
-            };
-        i.propTypes = h;
-        var v = (0, l.connect)(_);
-        t.FollowButton = (0, p.translate)()(v(i))
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-
-        function i(e) {
-            if (!e.isSubscribable || e.isOwnChannel) return null;
-            var t = (0, f.default)({
-                    "pl-button": !0,
-                    "pl-button--subscribe": !0,
-                    "pl-button--success": e.isSubscribed
-                }),
-                n = void 0,
-                r = void 0;
-            return e.isSubscribed ? (n = e.t("Subscribed"), r = n) : (n = e.t("Subscribe to {{channelName}}", {
-                channelName: e.channelName
-            }), r = e.t("Subscribe")), a.default.createElement(c.Button, {
-                className: t,
-                onClick: e.onSubscribe
-            }, a.default.createElement("span", {
-                className: "pl-button__text pl-button__text--desktop"
-            }, n), a.default.createElement("span", {
-                className: "pl-button__text pl-button__text--mobile"
-            }, r))
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.SubscribeButton = t.mapStateToProps = void 0, t.SubscribeButtonComponent = i;
-        var o = n(281),
-            a = r(o),
-            s = n(311),
-            u = r(s),
-            l = n(582),
-            c = n(623),
-            d = n(314),
-            f = r(d),
-            p = n(315),
-            h = {
-                channelName: u.default.string.isRequired,
-                isOwnChannel: u.default.bool.isRequired,
-                isSubscribed: u.default.bool.isRequired,
-                isSubscribable: u.default.bool.isRequired,
-                onSubscribe: u.default.func.isRequired,
-                t: u.default.func.isRequired
-            },
-            _ = t.mapStateToProps = function(e) {
-                return {
-                    channelName: e.streamMetadata.channel.name,
-                    isOwnChannel: e.streamMetadata.channel.id === e.user.id,
-                    isSubscribed: e.subscriptions.isSubscribed,
-                    isSubscribable: e.subscriptions.isSubscribable
-                }
-            };
-        i.propTypes = h;
-        var v = (0, l.connect)(_);
-        t.SubscribeButton = (0, p.translate)()(v(i))
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-
-        function i() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d,
-                t = arguments[1];
-            switch (t.type) {
-                case s.ACTION_USER_LOGGED_IN:
-                    return (0, a.default)({}, t.userInfo, {
-                        loggedInStatus: l
-                    });
-                case s.ACTION_USER_NOT_LOGGED_IN:
-                    return (0, a.default)({}, d, {
-                        loggedInStatus: c
-                    });
-                default:
-                    return e
-            }
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.NOT_LOGGED_IN = t.LOGGED_IN = t.UNKNOWN = void 0, t.user = i;
-        var o = n(117),
-            a = r(o),
-            s = n(657),
-            u = t.UNKNOWN = "unknown",
-            l = t.LOGGED_IN = "logged in",
-            c = t.NOT_LOGGED_IN = "not logged in",
-            d = {
-                loggedInStatus: u,
-                id: 0,
-                isStaff: !1,
-                name: ""
-            }
-    }, function(e, t) {
-        "use strict";
-
-        function n(e) {
-            return {
-                type: i,
-                userInfo: e
-            }
-        }
-
-        function r() {
-            return {
-                type: o
-            }
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.userLoggedIn = n, t.userNotLoggedIn = r;
-        var i = t.ACTION_USER_LOGGED_IN = "user logged in",
-            o = t.ACTION_USER_NOT_LOGGED_IN = "user not logged in"
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-
-        function i(e) {
-            var t = e.playerType,
-                n = e.streamType;
-            if (n === p.TYPE_DEAD_LTV) return null;
-            switch (t) {
-                case f.PLAYER_POPOUT:
-                case f.PLAYER_SITE:
-                case f.PLAYER_EMBED:
-                    return a.default.createElement(c.GenericFollowPanelContainer, null);
-                case f.PLAYER_PULSE:
-                    return a.default.createElement(d.CenteredFollowPanelContainer, null);
-                default:
-                    return null
-            }
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.FollowPanel = void 0, t.FollowPanelContainer = i;
-        var o = n(281),
-            a = r(o),
-            s = n(311),
-            u = r(s),
-            l = n(582),
-            c = n(659),
-            d = n(663),
-            f = n(217),
-            p = n(428),
-            h = {
-                playerType: u.default.string.isRequired,
-                streamType: u.default.string.isRequired
-            },
-            _ = function(e) {
-                var t = e.env,
-                    n = e.streamMetadata;
-                return {
-                    playerType: t.playerType,
-                    streamType: n.streamType
-                }
-            };
-        i.propTypes = h;
-        t.FollowPanel = (0, l.connect)(_)(i)
-    }, function(e, t, n) {
-        "use strict";
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.GenericFollowPanelContainer = void 0;
-        var r = n(660),
-            i = n(661);
-        t.GenericFollowPanelContainer = (0, r.makeFollowPanel)(i.GenericFollowPanel)
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-
-        function i(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-        }
-
-        function o(e, t) {
-            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !t || "object" != typeof t && "function" != typeof t ? e : t
-        }
-
-        function a(e, t) {
-            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
-            e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-        }
-
-        function s(e) {
-            return e.displayName || e.name || "Component"
-        }
-
-        function u(e) {
-            var t = function(t) {
-                function n() {
-                    i(this, n);
-                    var e = o(this, (n.__proto__ || Object.getPrototypeOf(n)).apply(this, arguments));
-                    return e.enableNotifications = e.enableNotifications.bind(e), e.disableNotifications = e.disableNotifications.bind(e), e.promptUserLogin = e.promptUserLogin.bind(e), e
-                }
-                return a(n, t), l(n, [{
-                    key: "componentWillReceiveProps",
-                    value: function(e) {
-                        e.showFollowNotification && !this.props.showFollowNotification && this._logInteraction(_.NOTIFICATIONS_BUTTON_VIEW)
-                    }
-                }, {
-                    key: "_invokeIfLoggedIn",
-                    value: function(e) {
-                        var t = this.props,
-                            n = t.user,
-                            r = t.channel;
-                        n.loggedIn ? e(n.id, r.id) : this.promptUserLogin()
-                    }
-                }, {
-                    key: "_logInteraction",
-                    value: function(e) {
-                        var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                            n = this.props,
-                            r = n.analytics,
-                            i = n.relationship,
-                            o = n.playerType;
-                        r.trackEvent(e, (0, y.default)(t, {
-                            follow_state: i.following,
-                            notif_state: i.notificationsEnabled,
-                            src: o
-                        }))
-                    }
-                }, {
-                    key: "enableNotifications",
-                    value: function e() {
-                        var t = this.props,
-                            e = t.enableNotifications,
-                            n = t.relationship,
-                            r = n.following ? _.NOTIFICATIONS_ON : _.FOLLOW_AND_NOTIFICATIONS_ON;
-                        this._invokeIfLoggedIn(e), this._logInteraction(_.NOTIFICATIONS_BUTTON_CLICK, {
-                            action: r
-                        })
-                    }
-                }, {
-                    key: "disableNotifications",
-                    value: function e() {
-                        var e = this.props.disableNotifications;
-                        this._invokeIfLoggedIn(e), this._logInteraction(_.NOTIFICATIONS_BUTTON_CLICK, {
-                            action: _.NOTIFICATIONS_OFF
-                        })
-                    }
-                }, {
-                    key: "promptUserLogin",
-                    value: function() {
-                        var e = this.props,
-                            t = e.win,
-                            n = e.playerType,
-                            r = e.promptLoginModal,
-                            i = e.channel;
-                        n === b.PLAYER_SITE ? r(i.name) : t.open(g.TWITCH_SIGNUP_URL, "_blank")
-                    }
-                }, {
-                    key: "render",
-                    value: function() {
-                        var t = this.props,
-                            n = t.channel,
-                            r = t.showFollowNotification,
-                            i = t.relationship,
-                            o = t.withInfo;
-                        return r ? f.default.createElement(e, {
-                            channelName: n.name,
-                            disable: this.disableNotifications,
-                            enable: this.enableNotifications,
-                            notificationsEnabled: i.notificationsEnabled,
-                            withInfo: o
-                        }) : null
-                    }
-                }]), n
-            }(f.default.Component);
-            return t.propTypes = S, t.defaultProps = C, t.displayName = "WrappedFollowPanel(" + s(e) + ")", (0, c.connect)(w, P)(t)
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.mapDispatchToProps = t.mapStateToProps = void 0;
-        var l = function() {
-            function e(e, t) {
-                for (var n = 0; n < t.length; n++) {
-                    var r = t[n];
-                    r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
-                }
-            }
-            return function(t, n, r) {
-                return n && e(t.prototype, n), r && e(t, r), t
-            }
-        }();
-        t.makeFollowPanel = u;
-        var c = n(582),
-            d = n(281),
-            f = r(d),
-            p = n(311),
-            h = r(p),
-            _ = n(652),
-            v = n(656),
-            m = n(117),
-            y = r(m),
-            g = n(168),
-            b = n(217),
-            E = n(428),
-            T = n(404),
-            S = {
-                analytics: h.default.object,
-                channel: h.default.shape({
-                    id: h.default.number,
-                    name: h.default.string
-                }).isRequired,
-                disableNotifications: h.default.func,
-                enableNotifications: h.default.func,
-                playerType: h.default.string.isRequired,
-                promptLoginModal: h.default.func,
-                showFollowNotification: h.default.bool.isRequired,
-                relationship: h.default.shape({
-                    following: h.default.bool,
-                    notificationsEnabled: h.default.bool
-                }).isRequired,
-                user: h.default.shape({
-                    id: h.default.number,
-                    loggedIn: h.default.bool
-                }).isRequired,
-                win: h.default.object.isRequired,
-                withInfo: h.default.bool.isRequired
-            },
-            C = {
-                analytics: {
-                    trackEvent: function() {}
-                },
-                enableNotifications: function() {},
-                disableNotifications: function() {},
-                promptLoginModal: function() {}
-            },
-            w = t.mapStateToProps = function(e) {
-                var t = e.analyticsTracker,
-                    n = e.env,
-                    r = e.follow,
-                    i = e.playback,
-                    o = e.playerOptions,
-                    a = e.streamMetadata,
-                    s = e.user,
-                    u = e.screen,
-                    l = e.window,
-                    c = e.ui;
-                return {
-                    analytics: t,
-                    channel: {
-                        id: a.channel.id,
-                        avatarUrl: a.channel.logo,
-                        name: a.channel.displayName
-                    },
-                    playerType: n.playerType,
-                    showFollowNotification: r.showFollowNotification && !c.isMini && (i.ended || a.streamType === E.TYPE_DEAD_LTV) && (u[0] === T.VOD_RECOMMENDATION_SCREEN || u[0] === T.CONTENT_SCREEN),
-                    relationship: {
-                        notificationsEnabled: r.notificationsEnabled,
-                        following: r.following
-                    },
-                    win: l,
-                    withInfo: o.showInfo,
-                    user: {
-                        id: s.id,
-                        loggedIn: s.loggedInStatus === v.LOGGED_IN
-                    }
-                }
-            },
-            P = t.mapDispatchToProps = function(e) {
-                return {
-                    enableNotifications: function(t, n) {
-                        e((0, _.enableNotifications)(t, n))
-                    },
-                    disableNotifications: function(t, n) {
-                        e((0, _.disableNotifications)(t, n))
-                    },
-                    promptLoginModal: function(t) {
-                        e((0, _.promptLoginModal)(t))
-                    }
-                }
-            }
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-
-        function i(e) {
-            var t = e.channelName,
-                n = e.enable,
-                r = e.disable,
-                i = e.notificationsEnabled,
-                o = e.t,
-                s = e.withInfo,
-                u = (0, f.default)({
-                    "pl-pinned-panel": !0,
-                    "pl-pinned-panel--animate": !0,
-                    "pl-pinned-panel--with-info": s
-                });
-            return a.default.createElement("div", {
-                className: u
-            }, a.default.createElement("h2", {
-                className: "pl-pinned-panel__title"
-            }, o("Follow and get notified when {{channelName}} is live", {
-                channelName: t
-            })), a.default.createElement(c.NotificationsButton, {
-                enable: n,
-                disable: r,
-                notificationsEnabled: i
-            }))
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.GenericFollowPanel = void 0, t.GenericFollowPanelComponent = i;
-        var o = n(281),
-            a = r(o),
-            s = n(311),
-            u = r(s),
-            l = n(315),
-            c = n(662),
-            d = n(314),
-            f = r(d),
-            p = {
-                channelName: u.default.string.isRequired,
-                enable: u.default.func,
-                disable: u.default.func,
-                notificationsEnabled: u.default.bool.isRequired,
-                t: u.default.func,
-                withInfo: u.default.bool.isRequired
-            },
-            h = {
-                t: function() {},
-                enable: function() {},
-                disable: function() {}
-            };
-        i.propTypes = p, i.defaultProps = h;
-        t.GenericFollowPanel = (0, l.translate)()(i)
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-
-        function i(e) {
-            var t = e.className,
-                n = e.notificationsEnabled,
-                r = e.enable,
-                i = e.disable,
-                o = e.t,
-                s = (0, f.default)("pl-button", "pl-button--icon", "pl-button--status", t),
-                u = (0, f.default)("pl-button", t),
-                c = a.default.createElement(l.Button, {
-                    className: s,
-                    onClick: i
-                }, a.default.createElement("span", null, a.default.createElement("figure", null, a.default.createElement("svg", null, a.default.createElement("use", {
-                    xlinkHref: "#icon_pl-followcheck"
-                }))), o("Notifications"))),
-                d = a.default.createElement(l.Button, {
-                    className: u,
-                    onClick: r
-                }, a.default.createElement("span", null, o("Turn On Notifications")));
-            return n ? c : d
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.NotificationsButton = void 0, t.NotificationsButtonComponent = i;
-        var o = n(281),
-            a = r(o),
-            s = n(311),
-            u = r(s),
-            l = n(623),
-            c = n(315),
-            d = n(314),
-            f = r(d),
-            p = {
-                notificationsEnabled: u.default.bool.isRequired,
-                enable: u.default.func.isRequired,
-                disable: u.default.func.isRequired,
-                t: u.default.func.isRequired,
-                className: u.default.string
-            };
-        i.propTypes = p;
-        t.NotificationsButton = (0, c.translate)()(i)
-    }, function(e, t, n) {
-        "use strict";
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.CenteredFollowPanelContainer = void 0;
-        var r = n(660),
-            i = n(664);
-        t.CenteredFollowPanelContainer = (0, r.makeFollowPanel)(i.CenteredFollowPanel)
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-
-        function i(e) {
-            var t = e.channelName,
-                n = e.enable,
-                r = e.disable,
-                i = e.notificationsEnabled,
-                o = e.t;
-            return a.default.createElement("div", {
-                className: _
-            }, a.default.createElement("h2", {
-                className: "pl-pinned-panel__title"
-            }, o("Live Broadcast has ended")), a.default.createElement("p", {
-                className: "pl-pinned-panel__subtext"
-            }, o("Get notified when {{channelName}} goes live next", {
-                channelName: t
-            })), a.default.createElement(c.NotificationsButton, {
-                className: v,
-                enable: n,
-                disable: r,
-                notificationsEnabled: i
-            }))
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.CenteredFollowPanel = void 0, t.CenteredFollowPanelComponent = i;
-        var o = n(281),
-            a = r(o),
-            s = n(311),
-            u = r(s),
-            l = n(315),
-            c = n(662),
-            d = n(314),
-            f = r(d),
-            p = {
-                channelName: u.default.string.isRequired,
-                enable: u.default.func.isRequired,
-                disable: u.default.func.isRequired,
-                notificationsEnabled: u.default.bool.isRequired,
-                t: u.default.func
-            },
-            h = {
-                t: function() {}
-            },
-            _ = (0, f.default)("pl-pinned-panel", "pl-pinned-panel--embed"),
-            v = (0, f.default)("pl-button--hollow", "mg-t-2");
-        i.propTypes = p, i.defaultProps = h;
-        t.CenteredFollowPanel = (0, l.translate)()(i)
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-
-        function i(e, t) {
-            switch (e) {
-                case "highlight":
-                    return t.translate("Playing highlight");
-                case "archive":
-                    return t.translate("Playing past broadcast");
-                case "upload":
-                    return t.translate("Playing uploaded video");
-                default:
-                    return t.translate("Playing pre-recorded video")
-            }
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.WatchPartyComponent = t.WATCH_PARTY_CLASSES = void 0;
-        var o = n(281),
-            a = r(o),
-            s = n(666),
-            u = t.WATCH_PARTY_CLASSES = {
-                container: "player-streaminfo__watchparty",
-                divider: "player-streaminfo__watchparty-divider"
-            },
-            l = t.WatchPartyComponent = function(e) {
-                var t = e.lang,
-                    n = e.vodIsViewable,
-                    r = e.vodId,
-                    o = e.vodTitle,
-                    l = e.vodBroadcastType;
-                return a.default.createElement("div", {
-                    className: u.container
-                }, i(l, t), a.default.createElement(s.WatchPartyDetails, {
-                    vodId: r,
-                    vodTitle: o,
-                    isViewable: n
-                }), a.default.createElement("div", {
-                    className: u.divider
-                }))
-            };
-        l.propTypes = {
-            lang: o.PropTypes.object,
-            vodId: o.PropTypes.string,
-            vodTitle: o.PropTypes.string,
-            vodIsViewable: o.PropTypes.bool,
-            vodBroadcastType: o.PropTypes.string
-        }
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.WatchPartyDetails = t.WATCH_PARTY_CLASSES = void 0;
-        var i = n(281),
-            o = r(i),
-            a = n(168),
-            s = (t.WATCH_PARTY_CLASSES = {
-                container: "player-streaminfo__watchparty",
-                divider: "player-streaminfo__watchparty-divider"
-            }, t.WatchPartyDetails = function(e) {
-                var t = e.isViewable,
-                    n = e.vodId,
-                    r = e.vodTitle;
-                return n && 0 !== n.length ? t ? o.default.createElement("span", null, ": ", o.default.createElement("a", {
-                    href: a.twitchHost + "/videos/" + n,
-                    target: "_blank"
-                }, r)) : o.default.createElement("span", null, ": ", r) : null
-            });
-        s.propTypes = {
-            vodId: i.PropTypes.string,
-            vodTitle: i.PropTypes.string,
-            isViewable: i.PropTypes.bool
-        }
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.StreamStatus = t.StreamStatusComponent = t.mapStateToProps = void 0;
@@ -39962,12 +38588,12 @@
             _ = n(582),
             v = n(117),
             m = i(v),
-            y = n(671),
-            g = n(672),
+            y = n(652),
+            g = n(653),
             b = n(375),
             E = n(167),
-            T = n(656),
-            S = n(678),
+            T = n(659),
+            S = n(661),
             C = n(247),
             w = n(339),
             P = n(217),
@@ -40357,10 +38983,10 @@
             d = n(311),
             f = r(d),
             p = n(223),
-            h = n(673),
-            _ = n(674),
-            v = n(675),
-            m = n(677),
+            h = n(654),
+            _ = n(655),
+            v = n(656),
+            m = n(658),
             y = n(623),
             g = n(624),
             b = n(315),
@@ -40823,7 +39449,7 @@
         var o = n(281),
             a = r(o),
             s = n(315),
-            u = n(676),
+            u = n(657),
             l = t.EXT_REPORT_DIALOG_CLASS = "extension-dialog extension-dialog__info",
             c = t.EXT_REPORT_TITLE_CLASS = "extension-dialog__title",
             d = t.EXT_REPORT_SUBTITLE_CLASS = "extension-dialog__text",
@@ -41066,6 +39692,66 @@
                 onClick: u.default.func.isRequired
             };
         i.propTypes = p
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d,
+                t = arguments[1];
+            switch (t.type) {
+                case s.ACTION_USER_LOGGED_IN:
+                    return (0, a.default)({}, t.userInfo, {
+                        loggedInStatus: l
+                    });
+                case s.ACTION_USER_NOT_LOGGED_IN:
+                    return (0, a.default)({}, d, {
+                        loggedInStatus: c
+                    });
+                default:
+                    return e
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.NOT_LOGGED_IN = t.LOGGED_IN = t.UNKNOWN = void 0, t.user = i;
+        var o = n(117),
+            a = r(o),
+            s = n(660),
+            u = t.UNKNOWN = "unknown",
+            l = t.LOGGED_IN = "logged in",
+            c = t.NOT_LOGGED_IN = "not logged in",
+            d = {
+                loggedInStatus: u,
+                id: 0,
+                isStaff: !1,
+                name: ""
+            }
+    }, function(e, t) {
+        "use strict";
+
+        function n(e) {
+            return {
+                type: i,
+                userInfo: e
+            }
+        }
+
+        function r() {
+            return {
+                type: o
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.userLoggedIn = n, t.userNotLoggedIn = r;
+        var i = t.ACTION_USER_LOGGED_IN = "user logged in",
+            o = t.ACTION_USER_NOT_LOGGED_IN = "user not logged in"
     }, function(e, t, n) {
         "use strict";
 
@@ -41372,8 +40058,7 @@
                 o(this, e), this.$root = $(t), this.player = n, this.store = r, this._setOverlay(A), this._populateAgeDropdowns(), this._unsubscribes = [], this._unsubscribes.push(this._subscribeStream()), this._unsubscribes.push(this._subscribeOnlineStatus()), this.$root.on("click", ".js-player-mature-accept", function(e) {
                     e.preventDefault(), s.localStore.set(T, !0), i._setOverlay(A), i.store.dispatch((0, h.play)()), i.player.setMuted(!1)
                 }), this.$root.on("click", ".js-age-gate-submit", function(e) {
-                    e.preventDefault(), i._is21OrOlder() ? i._setAgeGatePassed() : (i._setAgeGateFailed(),
-                        i._getChannelName().then(i._checkOverlayRequired.bind(i)))
+                    e.preventDefault(), i._is21OrOlder() ? i._setAgeGatePassed() : (i._setAgeGateFailed(), i._getChannelName().then(i._checkOverlayRequired.bind(i)))
                 }), this.player.addEventListener(y.PLAYING, this._onPlaying.bind(this)), this._handleStateUpdate()
             }
             return a(e, [{
@@ -41605,13 +40290,13 @@
             },
             u = n(167),
             l = n(224),
-            c = n(683),
+            c = n(666),
             d = n(425),
             f = n(217),
             p = n(353),
             h = n(411),
             _ = n(414),
-            v = n(656),
+            v = n(659),
             m = ["misterrogers", "twitchpresents"],
             y = [f.PLAYER_IMDB],
             g = function(e) {
@@ -41924,9 +40609,9 @@
             }
         }();
         t.missingKeyHandler = o, t.getI18N = a;
-        var u = n(687),
+        var u = n(670),
             l = r(u),
-            c = n(703),
+            c = n(686),
             d = r(c),
             f = n(168),
             p = n(214),
@@ -41954,7 +40639,7 @@
             keySeparator: !1,
             missingKeyHandler: o,
             saveMissing: !0
-        }), l.default.addResourceBundle("en-US", l.default.options.ns[0], n(704));
+        }), l.default.addResourceBundle("en-US", l.default.options.ns[0], n(687));
         var b = function() {
             function e(t, n, r) {
                 i(this, e), this.shortCode = t, this.langCode = n, this._translate = r
@@ -41972,7 +40657,7 @@
         }();
         t.I18N_INSTANCE = l.default, t.DEFAULT_LANGUAGE = new b("en", "en-US", l.default.getFixedT("en-US"))
     }, function(e, t, n) {
-        e.exports = n(688).default
+        e.exports = n(671).default
     }, function(e, t, n) {
         "use strict";
 
@@ -41984,7 +40669,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.use = t.t = t.setDefaultNamespace = t.on = t.off = t.loadResources = t.loadNamespaces = t.loadLanguages = t.init = t.getFixedT = t.exists = t.dir = t.createInstance = t.cloneInstance = t.changeLanguage = void 0;
-        var i = n(689),
+        var i = n(672),
             o = r(i);
         t.default = o.default;
         t.changeLanguage = o.default.changeLanguage.bind(o.default), t.cloneInstance = o.default.cloneInstance.bind(o.default), t.createInstance = o.default.createInstance.bind(o.default), t.dir = o.default.dir.bind(o.default), t.exists = o.default.exists.bind(o.default), t.getFixedT = o.default.getFixedT.bind(o.default), t.init = o.default.init.bind(o.default), t.loadLanguages = o.default.loadLanguages.bind(o.default), t.loadNamespaces = o.default.loadNamespaces.bind(o.default), t.loadResources = o.default.loadResources.bind(o.default), t.off = o.default.off.bind(o.default), t.on = o.default.on.bind(o.default), t.setDefaultNamespace = o.default.setDefaultNamespace.bind(o.default), t.t = o.default.t.bind(o.default), t.use = o.default.use.bind(o.default)
@@ -42051,28 +40736,28 @@
                 }
                 return e
             },
-            f = n(690),
+            f = n(673),
             p = i(f),
-            h = n(691),
+            h = n(674),
             _ = i(h),
-            v = n(692),
+            v = n(675),
             m = i(v),
-            y = n(694),
+            y = n(677),
             g = i(y),
-            b = n(697),
+            b = n(680),
             E = i(b),
-            T = n(698),
+            T = n(681),
             S = i(T),
-            C = n(699),
+            C = n(682),
             w = i(C),
-            P = n(700),
+            P = n(683),
             A = i(P),
-            O = n(701),
+            O = n(684),
             k = i(O),
-            I = n(702),
-            N = n(695),
+            I = n(685),
+            N = n(678),
             R = i(N),
-            M = n(696),
+            M = n(679),
             L = r(M),
             D = function(e) {
                 function t() {
@@ -42389,13 +41074,13 @@
         var l = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
-                    for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
+                    for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
                 }
                 return e
             },
-            c = n(691),
+            c = n(674),
             d = i(c),
-            f = n(693),
+            f = n(676),
             p = r(f),
             h = function(e) {
                 function t() {
@@ -42587,15 +41272,15 @@
             } : function(e) {
                 return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
             },
-            d = n(690),
+            d = n(673),
             f = i(d),
-            p = n(691),
+            p = n(674),
             h = i(p),
-            _ = n(695),
+            _ = n(678),
             v = i(_),
-            m = n(696),
+            m = n(679),
             y = r(m),
-            g = n(693),
+            g = n(676),
             b = r(g),
             E = function(e) {
                 function t(n) {
@@ -42786,7 +41471,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.convertAPIOptions = o, t.convertJSONOptions = a, t.convertTOptions = s, t.appendBackwardsAPI = u;
-        var l = n(690),
+        var l = n(673),
             c = r(l)
     }, function(e, t, n) {
         "use strict";
@@ -42807,7 +41492,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var a = n(690),
+        var a = n(673),
             s = r(a),
             u = function() {
                 function e(t) {
@@ -42884,7 +41569,7 @@
             } : function(e) {
                 return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
             },
-            s = n(690),
+            s = n(673),
             u = r(s),
             l = [{
                 lngs: ["ach", "ak", "am", "arn", "br", "fil", "gun", "ln", "mfe", "mg", "mi", "oc", "tg", "ti", "tr", "uz", "wa"],
@@ -43114,9 +41799,9 @@
                 }
                 return e
             },
-            s = n(693),
+            s = n(676),
             u = i(s),
-            l = n(690),
+            l = n(673),
             c = r(l),
             d = function() {
                 function e() {
@@ -43270,11 +41955,11 @@
                     throw new TypeError("Invalid attempt to destructure non-iterable instance")
                 }
             }(),
-            f = n(693),
+            f = n(676),
             p = i(f),
-            h = n(690),
+            h = n(673),
             _ = r(h),
-            v = n(691),
+            v = n(674),
             m = r(v),
             y = function(e) {
                 function t(n, r, i) {
@@ -43451,10 +42136,10 @@
                 }
                 return e
             },
-            c = n(693),
-            d = (i(c), n(690)),
+            c = n(676),
+            d = (i(c), n(673)),
             f = r(d),
-            p = n(691),
+            p = n(674),
             h = r(p),
             _ = function(e) {
                 function t(n, r, i) {
@@ -43478,7 +42163,7 @@
                         n && n()
                     }) : n && n()
                 }, t.prototype.save = function() {
-                    this.cache && this.options.cache && this.options.cache.enabled && this.cache.save(this.store.data)
+                    this.cache && this.options.cache && this.options.cache.enabled && this.cache.save(this.store.data);
                 }, t
             }(h.default);
         t.default = _
@@ -43910,6 +42595,581 @@
         }
 
         function i(e) {
+            var t = e.playerType,
+                n = e.streamType;
+            if (n === p.TYPE_DEAD_LTV) return null;
+            switch (t) {
+                case f.PLAYER_POPOUT:
+                case f.PLAYER_SITE:
+                case f.PLAYER_EMBED:
+                    return a.default.createElement(c.GenericFollowPanelContainer, null);
+                case f.PLAYER_PULSE:
+                    return a.default.createElement(d.CenteredFollowPanelContainer, null);
+                default:
+                    return null
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.FollowPanel = void 0, t.FollowPanelContainer = i;
+        var o = n(281),
+            a = r(o),
+            s = n(311),
+            u = r(s),
+            l = n(582),
+            c = n(689),
+            d = n(694),
+            f = n(217),
+            p = n(428),
+            h = {
+                playerType: u.default.string.isRequired,
+                streamType: u.default.string.isRequired
+            },
+            _ = function(e) {
+                var t = e.env,
+                    n = e.streamMetadata;
+                return {
+                    playerType: t.playerType,
+                    streamType: n.streamType
+                }
+            };
+        i.propTypes = h;
+        t.FollowPanel = (0, l.connect)(_)(i)
+    }, function(e, t, n) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.GenericFollowPanelContainer = void 0;
+        var r = n(690),
+            i = n(692);
+        t.GenericFollowPanelContainer = (0, r.makeFollowPanel)(i.GenericFollowPanel)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function o(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function a(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+        }
+
+        function s(e) {
+            return e.displayName || e.name || "Component"
+        }
+
+        function u(e) {
+            var t = function(t) {
+                function n() {
+                    i(this, n);
+                    var e = o(this, (n.__proto__ || Object.getPrototypeOf(n)).apply(this, arguments));
+                    return e.enableNotifications = e.enableNotifications.bind(e), e.disableNotifications = e.disableNotifications.bind(e), e.promptUserLogin = e.promptUserLogin.bind(e), e
+                }
+                return a(n, t), l(n, [{
+                    key: "componentWillReceiveProps",
+                    value: function(e) {
+                        e.showFollowNotification && !this.props.showFollowNotification && this._logInteraction(_.NOTIFICATIONS_BUTTON_VIEW)
+                    }
+                }, {
+                    key: "_invokeIfLoggedIn",
+                    value: function(e) {
+                        var t = this.props,
+                            n = t.user,
+                            r = t.channel;
+                        n.loggedIn ? e(n.id, r.id) : this.promptUserLogin()
+                    }
+                }, {
+                    key: "_logInteraction",
+                    value: function(e) {
+                        var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                            n = this.props,
+                            r = n.analytics,
+                            i = n.relationship,
+                            o = n.playerType;
+                        r.trackEvent(e, (0, y.default)(t, {
+                            follow_state: i.following,
+                            notif_state: i.notificationsEnabled,
+                            src: o
+                        }))
+                    }
+                }, {
+                    key: "enableNotifications",
+                    value: function e() {
+                        var t = this.props,
+                            e = t.enableNotifications,
+                            n = t.relationship,
+                            r = n.following ? _.NOTIFICATIONS_ON : _.FOLLOW_AND_NOTIFICATIONS_ON;
+                        this._invokeIfLoggedIn(e), this._logInteraction(_.NOTIFICATIONS_BUTTON_CLICK, {
+                            action: r
+                        })
+                    }
+                }, {
+                    key: "disableNotifications",
+                    value: function e() {
+                        var e = this.props.disableNotifications;
+                        this._invokeIfLoggedIn(e), this._logInteraction(_.NOTIFICATIONS_BUTTON_CLICK, {
+                            action: _.NOTIFICATIONS_OFF
+                        })
+                    }
+                }, {
+                    key: "promptUserLogin",
+                    value: function() {
+                        var e = this.props,
+                            t = e.win,
+                            n = e.playerType,
+                            r = e.promptLoginModal,
+                            i = e.channel;
+                        n === b.PLAYER_SITE ? r(i.name) : t.open(g.TWITCH_SIGNUP_URL, "_blank")
+                    }
+                }, {
+                    key: "render",
+                    value: function() {
+                        var t = this.props,
+                            n = t.channel,
+                            r = t.showFollowNotification,
+                            i = t.relationship,
+                            o = t.withInfo;
+                        return r ? f.default.createElement(e, {
+                            channelName: n.name,
+                            disable: this.disableNotifications,
+                            enable: this.enableNotifications,
+                            notificationsEnabled: i.notificationsEnabled,
+                            withInfo: o
+                        }) : null
+                    }
+                }]), n
+            }(f.default.Component);
+            return t.propTypes = S, t.defaultProps = C, t.displayName = "WrappedFollowPanel(" + s(e) + ")", (0, c.connect)(w, P)(t)
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.mapDispatchToProps = t.mapStateToProps = void 0;
+        var l = function() {
+            function e(e, t) {
+                for (var n = 0; n < t.length; n++) {
+                    var r = t[n];
+                    r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                }
+            }
+            return function(t, n, r) {
+                return n && e(t.prototype, n), r && e(t, r), t
+            }
+        }();
+        t.makeFollowPanel = u;
+        var c = n(582),
+            d = n(281),
+            f = r(d),
+            p = n(311),
+            h = r(p),
+            _ = n(691),
+            v = n(659),
+            m = n(117),
+            y = r(m),
+            g = n(168),
+            b = n(217),
+            E = n(428),
+            T = n(404),
+            S = {
+                analytics: h.default.object,
+                channel: h.default.shape({
+                    id: h.default.number,
+                    name: h.default.string
+                }).isRequired,
+                disableNotifications: h.default.func,
+                enableNotifications: h.default.func,
+                playerType: h.default.string.isRequired,
+                promptLoginModal: h.default.func,
+                showFollowNotification: h.default.bool.isRequired,
+                relationship: h.default.shape({
+                    following: h.default.bool,
+                    notificationsEnabled: h.default.bool
+                }).isRequired,
+                user: h.default.shape({
+                    id: h.default.number,
+                    loggedIn: h.default.bool
+                }).isRequired,
+                win: h.default.object.isRequired,
+                withInfo: h.default.bool.isRequired
+            },
+            C = {
+                analytics: {
+                    trackEvent: function() {}
+                },
+                enableNotifications: function() {},
+                disableNotifications: function() {},
+                promptLoginModal: function() {}
+            },
+            w = t.mapStateToProps = function(e) {
+                var t = e.analyticsTracker,
+                    n = e.env,
+                    r = e.follow,
+                    i = e.playback,
+                    o = e.playerOptions,
+                    a = e.streamMetadata,
+                    s = e.user,
+                    u = e.screen,
+                    l = e.window,
+                    c = e.ui;
+                return {
+                    analytics: t,
+                    channel: {
+                        id: a.channel.id,
+                        avatarUrl: a.channel.logo,
+                        name: a.channel.displayName
+                    },
+                    playerType: n.playerType,
+                    showFollowNotification: r.showFollowNotification && !c.isMini && (i.ended || a.streamType === E.TYPE_DEAD_LTV) && (u[0] === T.VOD_RECOMMENDATION_SCREEN || u[0] === T.CONTENT_SCREEN),
+                    relationship: {
+                        notificationsEnabled: r.notificationsEnabled,
+                        following: r.following
+                    },
+                    win: l,
+                    withInfo: o.showInfo,
+                    user: {
+                        id: s.id,
+                        loggedIn: s.loggedInStatus === v.LOGGED_IN
+                    }
+                }
+            },
+            P = t.mapDispatchToProps = function(e) {
+                return {
+                    enableNotifications: function(t, n) {
+                        e((0, _.enableNotifications)(t, n))
+                    },
+                    disableNotifications: function(t, n) {
+                        e((0, _.disableNotifications)(t, n))
+                    },
+                    promptLoginModal: function(t) {
+                        e((0, _.promptLoginModal)(t))
+                    }
+                }
+            }
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return {
+                type: g,
+                show: e
+            }
+        }
+
+        function i(e, t) {
+            var n = t.stream;
+            return e === n
+        }
+
+        function o(e, t) {
+            return function(n, o) {
+                var a = o(),
+                    s = a.stream;
+                return (0, v.getFollowChannel)(e, t).then(function(e) {
+                    var t = e.notifications;
+                    i(s, o()) && (d(n, e), n(r(!t)))
+                }).catch(function(e) {
+                    i(s, o()) && (f(n, e), n(r(!0)))
+                })
+            }
+        }
+
+        function a(e, t) {
+            return function(n) {
+                return (0, v.setFollowChannel)(e, t, !0).then(function(e) {
+                    return d(n, e)
+                }).catch(function() {})
+            }
+        }
+
+        function s(e, t) {
+            return function(n) {
+                return (0, v.setFollowChannel)(e, t, !1).then(function() {
+                    return n(c({
+                        following: !1,
+                        notificationsEnabled: !1
+                    }))
+                }).catch(function() {})
+            }
+        }
+
+        function u(e, t) {
+            return function(n, r) {
+                var i = r(),
+                    o = i.analyticsTracker;
+                return (0, v.setFollowNotifications)(e, t, !0).then(function(e) {
+                    return d(n, e)
+                }).then(function() {
+                    return h(o)
+                }).catch(function() {})
+            }
+        }
+
+        function l(e, t) {
+            return function(n, r) {
+                var i = r(),
+                    o = i.analyticsTracker;
+                return (0, v.setFollowNotifications)(e, t, !1).then(function(e) {
+                    return d(n, e)
+                }).then(function() {
+                    return _(o)
+                }).catch(function() {})
+            }
+        }
+
+        function c() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+            return {
+                type: m,
+                followInfo: e
+            }
+        }
+
+        function d(e, t) {
+            var n = t.channel,
+                r = t.notifications;
+            n._id && void 0 !== r && e(c({
+                following: !0,
+                notificationsEnabled: r
+            }))
+        }
+
+        function f(e, t) {
+            var n = t.status;
+            404 === n && e(c({
+                following: !1,
+                notificationsEnabled: !1
+            }))
+        }
+
+        function p(e) {
+            return {
+                type: y,
+                channelName: e
+            }
+        }
+
+        function h(e) {
+            e.trackEvent(b, {
+                src: "player"
+            }), e.trackEvent(E, {
+                notifications: !0
+            })
+        }
+
+        function _(e) {
+            e.trackEvent(E, {
+                notifications: !1
+            })
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.NOTIFICATIONS_ON = t.NOTIFICATIONS_OFF = t.NOTIFICATION_CHANGE = t.NOTIFICATIONS_BUTTON_VIEW = t.NOTIFICATIONS_BUTTON_CLICK = t.FOLLOW = t.FOLLOW_AND_NOTIFICATIONS_ON = t.ACTION_SHOW_FOLLOW_NOTIFICATION = t.ACTION_PROMPT_LOGIN_MODAL = t.ACTION_FOLLOW_INFO_FETCHED = void 0, t.showFollowNotification = r, t.fetchFollowInfo = o, t.followChannel = a, t.unfollowChannel = s, t.enableNotifications = u, t.disableNotifications = l, t.followInfoFetched = c, t.dispatchFollowSuccess = d, t.dispatchFollowFail = f, t.promptLoginModal = p, t.logNotificationsEnabled = h, t.logNotificationsDisabled = _;
+        var v = n(200),
+            m = t.ACTION_FOLLOW_INFO_FETCHED = "follow info fetched",
+            y = t.ACTION_PROMPT_LOGIN_MODAL = "prompt login modal",
+            g = t.ACTION_SHOW_FOLLOW_NOTIFICATION = "show follow notification",
+            b = (t.FOLLOW_AND_NOTIFICATIONS_ON = "follow_on_notif_on", t.FOLLOW = "follow"),
+            E = (t.NOTIFICATIONS_BUTTON_CLICK = "player_notifbutton_clicks", t.NOTIFICATIONS_BUTTON_VIEW = "player_notifbutton_views", t.NOTIFICATION_CHANGE = "notification_change");
+        t.NOTIFICATIONS_OFF = "notif_off", t.NOTIFICATIONS_ON = "notif_on"
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e) {
+            var t = e.channelName,
+                n = e.enable,
+                r = e.disable,
+                i = e.notificationsEnabled,
+                o = e.t,
+                s = e.withInfo,
+                u = (0, f.default)({
+                    "pl-pinned-panel": !0,
+                    "pl-pinned-panel--animate": !0,
+                    "pl-pinned-panel--with-info": s
+                });
+            return a.default.createElement("div", {
+                className: u
+            }, a.default.createElement("h2", {
+                className: "pl-pinned-panel__title"
+            }, o("Follow and get notified when {{channelName}} is live", {
+                channelName: t
+            })), a.default.createElement(c.NotificationsButton, {
+                enable: n,
+                disable: r,
+                notificationsEnabled: i
+            }))
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.GenericFollowPanel = void 0, t.GenericFollowPanelComponent = i;
+        var o = n(281),
+            a = r(o),
+            s = n(311),
+            u = r(s),
+            l = n(315),
+            c = n(693),
+            d = n(314),
+            f = r(d),
+            p = {
+                channelName: u.default.string.isRequired,
+                enable: u.default.func,
+                disable: u.default.func,
+                notificationsEnabled: u.default.bool.isRequired,
+                t: u.default.func,
+                withInfo: u.default.bool.isRequired
+            },
+            h = {
+                t: function() {},
+                enable: function() {},
+                disable: function() {}
+            };
+        i.propTypes = p, i.defaultProps = h;
+        t.GenericFollowPanel = (0, l.translate)()(i)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e) {
+            var t = e.className,
+                n = e.notificationsEnabled,
+                r = e.enable,
+                i = e.disable,
+                o = e.t,
+                s = (0, f.default)("pl-button", "pl-button--icon", "pl-button--status", t),
+                u = (0, f.default)("pl-button", t),
+                c = a.default.createElement(l.Button, {
+                    className: s,
+                    onClick: i
+                }, a.default.createElement("span", null, a.default.createElement("figure", null, a.default.createElement("svg", null, a.default.createElement("use", {
+                    xlinkHref: "#icon_pl-followcheck"
+                }))), o("Notifications"))),
+                d = a.default.createElement(l.Button, {
+                    className: u,
+                    onClick: r
+                }, a.default.createElement("span", null, o("Turn On Notifications")));
+            return n ? c : d
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.NotificationsButton = void 0, t.NotificationsButtonComponent = i;
+        var o = n(281),
+            a = r(o),
+            s = n(311),
+            u = r(s),
+            l = n(623),
+            c = n(315),
+            d = n(314),
+            f = r(d),
+            p = {
+                notificationsEnabled: u.default.bool.isRequired,
+                enable: u.default.func.isRequired,
+                disable: u.default.func.isRequired,
+                t: u.default.func.isRequired,
+                className: u.default.string
+            };
+        i.propTypes = p;
+        t.NotificationsButton = (0, c.translate)()(i)
+    }, function(e, t, n) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.CenteredFollowPanelContainer = void 0;
+        var r = n(690),
+            i = n(695);
+        t.CenteredFollowPanelContainer = (0, r.makeFollowPanel)(i.CenteredFollowPanel)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e) {
+            var t = e.channelName,
+                n = e.enable,
+                r = e.disable,
+                i = e.notificationsEnabled,
+                o = e.t;
+            return a.default.createElement("div", {
+                className: _
+            }, a.default.createElement("h2", {
+                className: "pl-pinned-panel__title"
+            }, o("Live Broadcast has ended")), a.default.createElement("p", {
+                className: "pl-pinned-panel__subtext"
+            }, o("Get notified when {{channelName}} goes live next", {
+                channelName: t
+            })), a.default.createElement(c.NotificationsButton, {
+                className: v,
+                enable: n,
+                disable: r,
+                notificationsEnabled: i
+            }))
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.CenteredFollowPanel = void 0, t.CenteredFollowPanelComponent = i;
+        var o = n(281),
+            a = r(o),
+            s = n(311),
+            u = r(s),
+            l = n(315),
+            c = n(693),
+            d = n(314),
+            f = r(d),
+            p = {
+                channelName: u.default.string.isRequired,
+                enable: u.default.func.isRequired,
+                disable: u.default.func.isRequired,
+                notificationsEnabled: u.default.bool.isRequired,
+                t: u.default.func
+            },
+            h = {
+                t: function() {}
+            },
+            _ = (0, f.default)("pl-pinned-panel", "pl-pinned-panel--embed"),
+            v = (0, f.default)("pl-button--hollow", "mg-t-2");
+        i.propTypes = p, i.defaultProps = h;
+        t.CenteredFollowPanel = (0, l.translate)()(i)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e) {
             var t = e.t,
                 n = e.hideFollowPanel,
                 r = e.streamType,
@@ -43930,7 +43190,7 @@
             u = r(s),
             l = n(582),
             c = n(315),
-            d = n(706),
+            d = n(697),
             f = n(428),
             p = n(217),
             h = n(314),
@@ -43957,8 +43217,8 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.UnavailableContentFollowPanel = void 0;
-        var r = n(660),
-            i = n(707);
+        var r = n(690),
+            i = n(698);
         t.UnavailableContentFollowPanel = (0, r.makeFollowPanel)(i.UnavailableContentFollowPanel)
     }, function(e, t, n) {
         "use strict";
@@ -43994,7 +43254,7 @@
             s = n(311),
             u = r(s),
             l = n(315),
-            c = n(662),
+            c = n(693),
             d = n(314),
             f = r(d),
             p = {
@@ -44010,6 +43270,30 @@
             _ = (0, f.default)("pl-button--hollow", "mg-t-2");
         i.propTypes = p, i.defaultProps = h;
         t.UnavailableContentFollowPanel = (0, l.translate)()(i)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i() {
+            return a.default.createElement("div", {
+                className: d
+            }, a.default.createElement(s.CollectionTopBar, null), a.default.createElement(u.StreamInfo, null))
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.TopBar = i;
+        var o = n(281),
+            a = r(o),
+            s = n(700),
+            u = n(702),
+            l = n(314),
+            c = r(l),
+            d = (0, c.default)("player-hover", "player-controls-top", "js-controls-top")
     }, function(e, t, n) {
         "use strict";
 
@@ -44060,7 +43344,7 @@
             f = n(582),
             p = n(422),
             h = n(337),
-            _ = n(709),
+            _ = n(701),
             v = n(404),
             m = n(224),
             y = 250,
@@ -44228,13 +43512,747 @@
                 onMouseLeave: function() {}
             },
             m = (0, p.default)("pl-flex", "pl-flex--verticalCenter", "pl-flex--nowrap"),
-            y = (0, p.default)("collection-button", "pl-flex__item"),
+            y = (0,
+                p.default)("collection-button", "pl-flex__item"),
             g = (0, p.default)("collection-collapsed-info", "pl-flex", "pl-flex--verticalCenter", "pl-flex__item"),
             b = (0, p.default)("collection-collapsed-info__title", "qa-collection-collapsed-title", "pl-flex__item"),
             E = (0, p.default)("middot-divider", "pl-flex__item"),
             T = (0, p.default)("collection-collapsed-info__number", "qa-collection-collapsed-progress", "pl-flex__item");
         i.propTypes = _, i.defaultProps = v;
         t.CollectionTopBar = (0, l.translate)()(i)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function o(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function a(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.StreamInfo = t.StreamInfoComponent = t.mapDispatchToProps = void 0;
+        var s = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var r = t[n];
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                    }
+                }
+                return function(t, n, r) {
+                    return n && e(t.prototype, n), r && e(t, r), t
+                }
+            }(),
+            u = n(281),
+            l = r(u),
+            c = n(311),
+            d = r(c),
+            f = n(582),
+            p = n(703),
+            h = n(704),
+            _ = n(168),
+            v = n(372),
+            m = n(217),
+            y = n(705),
+            g = n(709),
+            b = n(314),
+            E = r(b),
+            T = {
+                channelName: d.default.string,
+                displayName: d.default.string,
+                gameName: d.default.string,
+                lang: d.default.object,
+                logo: d.default.string,
+                name: d.default.string,
+                pause: d.default.func,
+                status: d.default.string,
+                streamUrl: d.default.string,
+                viewerCount: d.default.number,
+                playerType: d.default.string,
+                isWatchParty: d.default.bool,
+                vodId: d.default.string,
+                vodTitle: d.default.string,
+                vodIsViewable: d.default.bool,
+                vodBroadcastType: d.default.string
+            },
+            S = function(e) {
+                var t = e.env,
+                    n = e.lang,
+                    r = e.streamMetadata,
+                    i = e.viewercount,
+                    o = e.watchParty;
+                return {
+                    channelName: r.channelName,
+                    displayName: r.channel.displayName,
+                    gameName: r.game,
+                    lang: n,
+                    logo: r.channel.logo,
+                    name: r.name,
+                    status: r.channel.status,
+                    streamUrl: r.url,
+                    viewerCount: i,
+                    playerType: t.playerType,
+                    isWatchParty: "watch_party" === r.streamType,
+                    vodId: o.vodId,
+                    vodTitle: o.title,
+                    vodIsViewable: "public" === o.viewable,
+                    vodBroadcastType: o.broadcastType
+                }
+            },
+            C = t.mapDispatchToProps = function(e) {
+                return {
+                    pause: function() {
+                        e((0, v.pause)())
+                    }
+                }
+            },
+            w = {
+                a: "player-streaminfo__picture",
+                img: "qa-broadcaster-logo"
+            },
+            P = t.StreamInfoComponent = function(e) {
+                function t() {
+                    return i(this, t), o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments))
+                }
+                return a(t, e), s(t, [{
+                    key: "render",
+                    value: function() {
+                        if (this.props.playerType === m.PLAYER_IMDB) return null;
+                        var e = this.props.playerType === m.PLAYER_TWITCH_EVERYWHERE,
+                            t = e ? l.default.createElement(y.TwitchEverywherePanelContainer, null) : null,
+                            n = e ? null : this._createLogoComponent(),
+                            r = this.props.isWatchParty ? l.default.createElement(g.WatchPartyComponent, this.props) : null;
+                        return l.default.createElement("div", {
+                            className: "player-streaminfo"
+                        }, r, n, this._createStreamInfoDisplay(), t)
+                    }
+                }, {
+                    key: "_createLogoComponent",
+                    value: function() {
+                        var e = this.props,
+                            t = e.logo,
+                            n = e.streamUrl,
+                            r = "_blank";
+                        return t ? l.default.createElement(p.LinkedImage, {
+                            classNames: w,
+                            imgSrc: t,
+                            href: n,
+                            onClick: this.props.pause,
+                            target: r
+                        }) : null
+                    }
+                }, {
+                    key: "_createStreamInfoDisplay",
+                    value: function() {
+                        var e = this.props,
+                            t = e.displayName,
+                            n = e.channelName,
+                            r = e.name,
+                            i = e.status,
+                            o = e.gameName,
+                            a = e.streamUrl,
+                            s = e.viewerCount,
+                            u = e.playerType,
+                            c = e.lang,
+                            d = Boolean(n),
+                            f = d ? i : r,
+                            p = _.gamePath + "/" + encodeURIComponent(o),
+                            v = u === m.PLAYER_TWITCH_EVERYWHERE,
+                            y = (0, E.default)({
+                                "player-streaminfo__meta-container": !v
+                            });
+                        return t ? l.default.createElement(h.StreamInfoDisplay, {
+                            className: y,
+                            live: d,
+                            name: t,
+                            title: f,
+                            gameName: o,
+                            gameUrl: p,
+                            onClick: this.props.pause,
+                            streamUrl: a,
+                            viewerCount: s,
+                            lang: c
+                        }) : null
+                    }
+                }]), t
+            }(l.default.PureComponent);
+        P.propTypes = T;
+        t.StreamInfo = (0, f.connect)(S, C)(P)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.LinkedImage = void 0;
+        var i = n(281),
+            o = r(i),
+            a = n(311),
+            s = r(a),
+            u = {
+                alt: s.default.string,
+                classNames: s.default.shape({
+                    a: s.default.string,
+                    img: s.default.string
+                }),
+                href: s.default.string,
+                imgSrc: s.default.string,
+                onClick: s.default.func,
+                target: s.default.string
+            },
+            l = t.LinkedImage = function(e) {
+                var t = e.alt,
+                    n = e.classNames,
+                    r = e.href,
+                    i = e.imgSrc,
+                    a = e.onClick,
+                    s = e.target;
+                return o.default.createElement("a", {
+                    className: n.a,
+                    href: r,
+                    target: s,
+                    onClick: a
+                }, o.default.createElement("img", {
+                    alt: t,
+                    className: n.img,
+                    src: i
+                }))
+            };
+        l.propTypes = u
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.StreamInfoDisplay = t.StreamInfoDisplayComponent = void 0;
+        var i = n(281),
+            o = r(i),
+            a = n(311),
+            s = r(a),
+            u = n(315),
+            l = n(314),
+            c = r(l),
+            d = {
+                gameName: s.default.string,
+                gameUrl: s.default.string,
+                lang: s.default.object,
+                live: s.default.bool,
+                name: s.default.string,
+                onClick: s.default.func,
+                streamUrl: s.default.string,
+                title: s.default.string,
+                viewerCount: s.default.number,
+                className: s.default.string
+            },
+            f = (0, c.default)("player-streaminfo__title", "qa-stream-title"),
+            p = (0, c.default)("player-text-link", "player-text-link--no-color", "qa-game-name"),
+            h = {
+                container: "player-streaminfo__name",
+                a: (0, c.default)("player-text-link", "player-text-link--no-color", "qa-display-name")
+            },
+            _ = t.StreamInfoDisplayComponent = function(e) {
+                var t = e.gameName,
+                    n = e.gameUrl,
+                    r = e.lang,
+                    i = e.live,
+                    a = e.name,
+                    s = e.streamUrl,
+                    l = e.onClick,
+                    c = e.title,
+                    d = e.viewerCount,
+                    _ = e.className,
+                    v = Number(d).toLocaleString(r.shortCode),
+                    m = o.default.createElement("a", {
+                        className: p,
+                        href: n,
+                        target: "_blank"
+                    }, t),
+                    y = o.default.createElement("span", null, v),
+                    g = null;
+                return i && (g = o.default.createElement("div", {
+                    className: "player-streaminfo__viewers"
+                }, o.default.createElement(u.Interpolate, {
+                    i18nKey: "playing {{game}} for {{viewerCount}} viewer",
+                    game: m,
+                    viewerCount: y,
+                    options: {
+                        count: d
+                    }
+                }))), o.default.createElement("div", {
+                    className: _
+                }, o.default.createElement("div", {
+                    className: h.container
+                }, o.default.createElement("a", {
+                    className: h.a,
+                    href: s,
+                    target: "_blank",
+                    onClick: l
+                }, a)), o.default.createElement("div", {
+                    className: f
+                }, c), o.default.createElement("div", {
+                    className: "player-streaminfo__game"
+                }, g))
+            };
+        _.propTypes = d;
+        t.StreamInfoDisplay = (0, u.translate)()(_)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function o(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function a(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.TwitchEverywherePanelContainer = t.TwitchEverywherePanel = t.mapDispatchToProps = t.TE_NAMESPACE = t.SUBSCRIBE = t.AUTHENTICATION_REQUIRED = void 0;
+        var s = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var r = t[n];
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                    }
+                }
+                return function(t, n, r) {
+                    return n && e(t.prototype, n), r && e(t, r), t
+                }
+            }(),
+            u = n(281),
+            l = r(u),
+            c = n(311),
+            d = r(c),
+            f = n(691),
+            p = n(582),
+            h = n(706),
+            _ = n(659),
+            v = n(688),
+            m = n(217),
+            y = t.AUTHENTICATION_REQUIRED = "authentication-required",
+            g = t.SUBSCRIBE = "subscribe",
+            b = t.TE_NAMESPACE = "twitch-everywhere",
+            E = {
+                avatarURL: d.default.string,
+                channelName: d.default.string.isRequired,
+                channelId: d.default.number.isRequired,
+                userId: d.default.number.isRequired,
+                isLoggedIn: d.default.bool.isRequired,
+                isFollowing: d.default.bool.isRequired,
+                didFetchFollow: d.default.bool.isRequired,
+                didFetchSubscriptions: d.default.bool.isRequired,
+                followChannel: d.default.func.isRequired,
+                unfollowChannel: d.default.func.isRequired,
+                window: d.default.object.isRequired,
+                notificationsEnabled: d.default.bool.isRequired,
+                analytics: d.default.object.isRequired,
+                targetOrigin: d.default.string.isRequired
+            },
+            T = function(e) {
+                return {
+                    avatarURL: e.streamMetadata.channel.logo,
+                    channelName: e.streamMetadata.channel.name,
+                    channelId: e.streamMetadata.channel.id,
+                    userId: e.user.id,
+                    isLoggedIn: e.user.loggedInStatus === _.LOGGED_IN,
+                    isFollowing: e.follow.following,
+                    didFetchSubscriptions: e.subscriptions.didFetch,
+                    didFetchFollow: e.follow.fetched,
+                    window: e.window,
+                    notificationsEnabled: e.follow.notificationsEnabled,
+                    analytics: e.analyticsTracker,
+                    targetOrigin: e.env.twitchEverywhere.targetOrigin
+                }
+            },
+            S = t.mapDispatchToProps = function(e) {
+                return {
+                    followChannel: function(t, n) {
+                        e((0, f.followChannel)(t, n))
+                    },
+                    unfollowChannel: function(t, n) {
+                        e((0, f.unfollowChannel)(t, n))
+                    }
+                }
+            },
+            C = t.TwitchEverywherePanel = function(e) {
+                function t() {
+                    i(this, t);
+                    var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
+                    return e.handleFollowChannel = e.handleFollowChannel.bind(e), e.handleUnfollowChannel = e.handleUnfollowChannel.bind(e), e.handleSubscribe = e.handleSubscribe.bind(e), e
+                }
+                return a(t, e), s(t, [{
+                    key: "componentDidMount",
+                    value: function() {
+                        this.props.analytics.trackEvent(v.NOTIFICATIONS_BUTTON_VIEW, {
+                            follow_state: this.props.isFollowing,
+                            notif_state: this.props.notificationsEnabled,
+                            src: m.PLAYER_TWITCH_EVERYWHERE
+                        })
+                    }
+                }, {
+                    key: "postMessage",
+                    value: function(e) {
+                        this.props.window.parent.postMessage({
+                            eventName: e,
+                            namespace: b
+                        }, this.props.targetOrigin)
+                    }
+                }, {
+                    key: "handleFollowChannel",
+                    value: function() {
+                        this.props.isLoggedIn ? this.props.followChannel(this.props.userId, this.props.channelId) : this.postMessage(y)
+                    }
+                }, {
+                    key: "handleUnfollowChannel",
+                    value: function() {
+                        this.props.unfollowChannel(this.props.userId, this.props.channelId)
+                    }
+                }, {
+                    key: "handleSubscribe",
+                    value: function() {
+                        this.postMessage(g)
+                    }
+                }, {
+                    key: "render",
+                    value: function() {
+                        var e = !this.props.isLoggedIn && this.props.channelName,
+                            t = this.props.didFetchFollow && this.props.didFetchSubscriptions,
+                            n = this.props.channelId === this.props.userId;
+                        return e || t && !n ? l.default.createElement(h.TwitchEverywhereFollowPanel, {
+                            avatarURL: this.props.avatarURL,
+                            onFollowChannel: this.handleFollowChannel,
+                            onUnfollowChannel: this.handleUnfollowChannel,
+                            onSubscribe: this.handleSubscribe
+                        }) : null
+                    }
+                }]), t
+            }(l.default.Component);
+        C.propTypes = E;
+        var w = (0, p.connect)(T, S);
+        t.TwitchEverywherePanelContainer = w(C)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.TwitchEverywhereFollowPanel = void 0;
+        var i = n(281),
+            o = r(i),
+            a = n(311),
+            s = r(a),
+            u = n(707),
+            l = n(708),
+            c = n(168),
+            d = n(314),
+            f = r(d),
+            p = {
+                avatarURL: s.default.string,
+                onFollowChannel: s.default.func.isRequired,
+                onUnfollowChannel: s.default.func.isRequired,
+                onSubscribe: s.default.func.isRequired
+            },
+            h = t.TwitchEverywhereFollowPanel = function(e) {
+                var t = (0, f.default)({
+                    "pl-pinned-panel": !0,
+                    "pl-pinned-panel--te": !0
+                });
+                return o.default.createElement("div", {
+                    className: t
+                }, o.default.createElement("figure", {
+                    className: "pl-pinned-panel__avatar"
+                }, o.default.createElement("img", {
+                    src: e.avatarURL || c.DEFAULT_AVATAR_URL,
+                    alt: "Avatar",
+                    height: 30,
+                    width: 30
+                })), o.default.createElement(u.FollowButton, {
+                    onFollowChannel: e.onFollowChannel,
+                    onUnfollowChannel: e.onUnfollowChannel
+                }), o.default.createElement(l.SubscribeButton, {
+                    onSubscribe: e.onSubscribe
+                }))
+            };
+        h.propTypes = p
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e) {
+            var t = e.channelName,
+                n = e.isFollowing,
+                r = e.onFollowChannel,
+                i = e.onUnfollowChannel,
+                o = e.t;
+            if (e.isOwnChannel) return null;
+            var s = (0, f.default)("pl-button", "pl-button--follow", "pl-button--icon", "pl-button--status"),
+                u = (0, f.default)("pl-button", "pl-button--follow", "pl-button--icon"),
+                l = a.default.createElement(c.Button, {
+                    className: s,
+                    onClick: i
+                }, a.default.createElement("span", {
+                    className: "pl-button__status pl-button__status--hover"
+                }, a.default.createElement("figure", {
+                    className: "pl-icon"
+                }, a.default.createElement("svg", null, a.default.createElement("use", {
+                    xlinkHref: "#icon_unheart"
+                }))), a.default.createElement("span", {
+                    className: "pl-button__text"
+                }, o("Unfollow"))), a.default.createElement("span", {
+                    className: "pl-button__status pl-button__status--primary"
+                }, a.default.createElement("figure", {
+                    className: "pl-icon"
+                }, a.default.createElement("svg", null, a.default.createElement("use", {
+                    xlinkHref: "#icon_heart"
+                }))), a.default.createElement("span", {
+                    className: "pl-button__text"
+                }, o("Following")))),
+                d = a.default.createElement(c.Button, {
+                    className: u,
+                    onClick: r
+                }, a.default.createElement("figure", {
+                    className: "pl-icon"
+                }, a.default.createElement("svg", null, a.default.createElement("use", {
+                    xlinkHref: "#icon_heart"
+                }))), a.default.createElement("span", {
+                    className: "pl-button__text"
+                }, o("Follow {{channelName}} on Twitch", {
+                    channelName: t
+                })));
+            return n ? l : d
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.FollowButton = t.mapStateToProps = void 0, t.FollowButtonComponent = i;
+        var o = n(281),
+            a = r(o),
+            s = n(311),
+            u = r(s),
+            l = n(582),
+            c = n(623),
+            d = n(314),
+            f = r(d),
+            p = n(315),
+            h = {
+                channelName: u.default.string.isRequired,
+                isOwnChannel: u.default.bool.isRequired,
+                isFollowing: u.default.bool.isRequired,
+                onFollowChannel: u.default.func.isRequired,
+                onUnfollowChannel: u.default.func.isRequired,
+                t: u.default.func.isRequired
+            },
+            _ = t.mapStateToProps = function(e) {
+                return {
+                    channelName: e.streamMetadata.channel.name,
+                    isOwnChannel: e.streamMetadata.channel.id === e.user.id,
+                    isFollowing: e.follow.following
+                }
+            };
+        i.propTypes = h;
+        var v = (0, l.connect)(_);
+        t.FollowButton = (0, p.translate)()(v(i))
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e) {
+            if (!e.isSubscribable || e.isOwnChannel) return null;
+            var t = (0, f.default)({
+                    "pl-button": !0,
+                    "pl-button--subscribe": !0,
+                    "pl-button--success": e.isSubscribed
+                }),
+                n = void 0,
+                r = void 0;
+            return e.isSubscribed ? (n = e.t("Subscribed"), r = n) : (n = e.t("Subscribe to {{channelName}}", {
+                channelName: e.channelName
+            }), r = e.t("Subscribe")), a.default.createElement(c.Button, {
+                className: t,
+                onClick: e.onSubscribe
+            }, a.default.createElement("span", {
+                className: "pl-button__text pl-button__text--desktop"
+            }, n), a.default.createElement("span", {
+                className: "pl-button__text pl-button__text--mobile"
+            }, r))
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.SubscribeButton = t.mapStateToProps = void 0, t.SubscribeButtonComponent = i;
+        var o = n(281),
+            a = r(o),
+            s = n(311),
+            u = r(s),
+            l = n(582),
+            c = n(623),
+            d = n(314),
+            f = r(d),
+            p = n(315),
+            h = {
+                channelName: u.default.string.isRequired,
+                isOwnChannel: u.default.bool.isRequired,
+                isSubscribed: u.default.bool.isRequired,
+                isSubscribable: u.default.bool.isRequired,
+                onSubscribe: u.default.func.isRequired,
+                t: u.default.func.isRequired
+            },
+            _ = t.mapStateToProps = function(e) {
+                return {
+                    channelName: e.streamMetadata.channel.name,
+                    isOwnChannel: e.streamMetadata.channel.id === e.user.id,
+                    isSubscribed: e.subscriptions.isSubscribed,
+                    isSubscribable: e.subscriptions.isSubscribable
+                }
+            };
+        i.propTypes = h;
+        var v = (0, l.connect)(_);
+        t.SubscribeButton = (0, p.translate)()(v(i))
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e, t) {
+            switch (e) {
+                case "highlight":
+                    return t.translate("Playing highlight");
+                case "archive":
+                    return t.translate("Playing past broadcast");
+                case "upload":
+                    return t.translate("Playing uploaded video");
+                default:
+                    return t.translate("Playing pre-recorded video")
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.WatchPartyComponent = t.WATCH_PARTY_CLASSES = void 0;
+        var o = n(281),
+            a = r(o),
+            s = n(710),
+            u = t.WATCH_PARTY_CLASSES = {
+                container: "player-streaminfo__watchparty",
+                divider: "player-streaminfo__watchparty-divider"
+            },
+            l = t.WatchPartyComponent = function(e) {
+                var t = e.lang,
+                    n = e.vodIsViewable,
+                    r = e.vodId,
+                    o = e.vodTitle,
+                    l = e.vodBroadcastType;
+                return a.default.createElement("div", {
+                    className: u.container
+                }, i(l, t), a.default.createElement(s.WatchPartyDetails, {
+                    vodId: r,
+                    vodTitle: o,
+                    isViewable: n
+                }), a.default.createElement("div", {
+                    className: u.divider
+                }))
+            };
+        l.propTypes = {
+            lang: o.PropTypes.object,
+            vodId: o.PropTypes.string,
+            vodTitle: o.PropTypes.string,
+            vodIsViewable: o.PropTypes.bool,
+            vodBroadcastType: o.PropTypes.string
+        }
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.WatchPartyDetails = t.WATCH_PARTY_CLASSES = void 0;
+        var i = n(281),
+            o = r(i),
+            a = n(168),
+            s = (t.WATCH_PARTY_CLASSES = {
+                container: "player-streaminfo__watchparty",
+                divider: "player-streaminfo__watchparty-divider"
+            }, t.WatchPartyDetails = function(e) {
+                var t = e.isViewable,
+                    n = e.vodId,
+                    r = e.vodTitle;
+                return n && 0 !== n.length ? t ? o.default.createElement("span", null, ": ", o.default.createElement("a", {
+                    href: a.twitchHost + "/videos/" + n,
+                    target: "_blank"
+                }, r)) : o.default.createElement("span", null, ": ", r) : null
+            });
+        s.propTypes = {
+            vodId: i.PropTypes.string,
+            vodTitle: i.PropTypes.string,
+            isViewable: i.PropTypes.bool
+        }
     }, function(e, t, n) {
         "use strict";
 
@@ -44284,13 +44302,13 @@
             d = r(c),
             f = n(619),
             p = r(f),
-            h = n(711),
+            h = n(712),
             _ = r(h),
             v = n(162),
             m = r(v),
             y = n(582),
             g = n(422),
-            b = n(716),
+            b = n(717),
             E = n(337),
             T = n(336),
             S = n(404),
@@ -44407,7 +44425,7 @@
         t.CollectionSidebar = (0, y.connect)(P, A)((0, p.default)(k))
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(712)
+        e.exports = n(713)
     }, function(e, t, n) {
         "use strict";
 
@@ -44445,14 +44463,14 @@
                 }
                 return e
             },
-            u = n(713),
+            u = n(714),
             l = r(u),
             c = n(281),
             d = r(c),
             f = n(311),
             p = r(f),
-            h = n(714),
-            _ = (r(h), n(715)),
+            h = n(715),
+            _ = (r(h), n(716)),
             v = ({
                 component: p.default.any,
                 childFactory: p.default.func,
@@ -44619,9 +44637,9 @@
         }), t.AnimatedCollectionSidebar = t.CollectionSidebarComponent = void 0;
         var o = n(281),
             a = r(o),
-            s = n(717),
-            u = n(718),
-            l = n(720),
+            s = n(718),
+            u = n(719),
+            l = n(721),
             c = n(314),
             d = r(c),
             f = {
@@ -44823,7 +44841,7 @@
             a = n(623),
             s = n(314),
             u = r(s),
-            l = n(719),
+            l = n(720),
             c = n(315),
             d = {
                 title: i.PropTypes.string.isRequired,
@@ -44927,7 +44945,7 @@
         }
 
         function i(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
 
         function o(e, t) {
@@ -45055,7 +45073,7 @@
             f = r(d),
             p = n(311),
             h = r(p),
-            _ = n(721),
+            _ = n(722),
             v = n(70),
             m = r(v),
             y = n(314),
@@ -45093,7 +45111,7 @@
             o = r(i),
             a = n(582),
             s = n(404),
-            u = n(723),
+            u = n(724),
             l = {
                 shouldShow: i.PropTypes.bool.isRequired
             },
@@ -45190,7 +45208,7 @@
             d = r(c),
             f = n(582),
             p = n(404),
-            h = n(725),
+            h = n(726),
             _ = n(431),
             v = n(336),
             m = {
@@ -45346,8 +45364,8 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(726),
-            p = n(732),
+            f = n(727),
+            p = n(733),
             h = n(314),
             _ = r(h),
             v = 0,
@@ -45482,12 +45500,12 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(727),
+            f = n(728),
             p = n(314),
             h = r(p),
             _ = n(315),
-            v = n(729),
-            m = n(730),
+            v = n(730),
+            m = n(731),
             y = {
                 video: d.default.shape({
                     thumbnailURL: d.default.string.isRequired,
@@ -45626,7 +45644,7 @@
             c = r(l),
             d = n(311),
             f = r(d),
-            p = n(728),
+            p = n(729),
             h = n(314),
             _ = r(h),
             v = n(324),
@@ -45835,7 +45853,7 @@
             c = n(311),
             d = r(c),
             f = n(582),
-            p = n(731),
+            p = n(732),
             h = n(337),
             _ = {
                 featuredCollection: d.default.shape({
@@ -45962,7 +45980,7 @@
             a = r(o),
             s = n(311),
             u = r(s),
-            l = n(727),
+            l = n(728),
             c = {
                 featuredCollection: u.default.shape({
                     id: u.default.string,
@@ -46030,13 +46048,13 @@
             d = r(c),
             f = n(314),
             p = r(f),
-            h = n(729),
+            h = n(730),
             _ = n(120),
             v = r(_),
-            m = n(727),
+            m = n(728),
             y = n(315),
             g = n(431),
-            b = n(733),
+            b = n(734),
             E = t.RECOMMENDATION_COLUMN_CONFIG = [{
                 minPlayerWidth: 2381,
                 columns: 8
@@ -46277,7 +46295,7 @@
             };
         f.propTypes = c
     }, function(e, t) {
-        e.exports = '<div class="player-initializing player-center-content"> <div class=player-loading-spinner></div> </div> <div class="player-overlay player-overlay--wall player-age-restriction-overlay js-age-restriction-overlay"> <div class=player-center-content> <div class=player-mature-overlay> <p class=js-mature-warning-label>The broadcaster indicated that the channel is intended for mature audiences.</p> <p><button type=button id=mature-link class="player-content-button js-player-mature-accept js-mature-accept-label">Start Watching</button></p> </div> <div class="player-age-gate js-age-gate"> <div class=player-age-gate-warning> <p> <svg class=player-age-gate--icon> <use xlink:href=#age-gate-icon /> </svg> </p> <p class=js-age-gate-warning-label>You must be 21 to view this content. Please enter your date of birth.</p> </div> <div class=player-age-gate-failed-once> <p> <svg class=player-age-gate--fail-icon> <use xlink:href=#age-gate-fail-icon /> </svg> </p> <p class=age-gate-locked-out-label>Sorry, you must be over the age of 21 to view this content.</p> </div> <div class=player-datepicker> <select class="player-datepicker--select js-select-month"> <option class=age-gate-jan value=0 selected=selected>January</option> <option class=age-gate-feb value=1>February</option> <option class=age-gate-mar value=2>March</option> <option class=age-gate-apr value=3>April</option> <option class=age-gate-may value=4>May</option> <option class=age-gate-jun value=5>June</option> <option class=age-gate-jul value=6>July</option> <option class=age-gate-aug value=7>August</option> <option class=age-gate-sept value=8>September</option> <option class=age-gate-oct value=9>October</option> <option class=age-gate-nov value=10>November</option> <option class=age-gate-dec value=11>December</option> </select> <select class="player-datepicker--select js-select-day"></select> <select class="player-datepicker--select js-select-year"></select> <button type=button class="js-age-gate-submit player-content-button">Submit</button> </div> </div> <div class=player-age-gate-locked-out> <p> <svg class=player-age-gate--fail-icon> <use xlink:href=#age-gate-fail-icon /> </svg> </p> <p class=age-gate-locked-out-label>Sorry, you must be over the age of 21 to view this content.</p> </div> </div> </div> <div class="player-offline-banner js-offline-banner"> <img class=js-meta-offline /> </div> <div class="player-overlay player-ad-overlay"> <a class="player-ad-overlay js-player-ad-overlay" target=_blank></a> </div> <div id=js-player-recommendations-overlay /> <div class="player-overlay player-overlay--recommendations hidden js-recommendations-overlay"> <div class="player-tower player-tower--gutter-xs js-player-tower"> <div class="player-tower-columns js-featured-rec-header player-featured-recommendations"> <div class=player-recommendations-header> <h3><span class="js-upnext-label player-featured-recommendations-vod">Up Next</span><span class="js-watchnext-label player-featured-recommendations-live">Watch Next</span></h3> <button class="player-recommendation-button js-featured-recommendations__more-videos"><span class="js-cancelautoplay-label player-featured-recommendations-vod">Cancel</span><span class="js-morevideos-label player-featured-recommendations-live">More Videos</span></button> </div> </div> <div class=player-tower-columns data-columns=12> <div class="player-tower player-tower--gutter-xs js-video-recommendations"> <div class="player-tower-columns player-recommended-stream js-recommended-stream"> <div class=player-card> <a class=player-card__layout> <figure class="player-card__img player-card__img--vod"> <img class=js-recommended-stream__thumbnail /> </figure> <div class=player-card__overlay> <div class="player-card__body js-recommendations-card"> <h4 class="player-card__bread js-recommended-stream__channel"> Channel Name </h4> <h3 class="player-card__title js-recommended-stream__title"> Non-Optional Content Title </h3> <div class="player-card__autoplay-timer js-autoplay-timer"> <h4 class=player-card__info> <span class=js-autoplay-text>Playing in {{timeRemaining}} seconds</span> </h4> <div class="player-card__autoplay js-autoplay"> <div class="autoplay__progress js-autoplay-progress"> </div> </div> </div> <div class="player-card__time-info js-recommendation-time-info"> <h4 class=player-card__info> <time class=js-recommended-stream__date>00:00:00</time> &nbsp;·&nbsp; <time class=js-recommended-stream__length>00:00:00</time> </h4> </div> </div> </div> </a> </div> </div> </div> </div> </div> </div> <div class="player-video-background-banner js-video-background-banner"> <img class=js-meta-video-background /> </div> <div class="player-overlay player-loading js-player-loading"> <div class=player-center-content> <div class=player-loading-spinner></div> </div> </div> <div class="player-overlay player-chromecast-overlay"> <div class=player-center-content> <div class=js-playing-on-label>Playing on {{device}}</div> </div> </div> <div class="player-overlay player-fullscreen-overlay js-control-fullscreen-overlay"> </div> <div class="player-overlay player-extensions" id=js-player-extension-root> </div> <div class="cc-flag player-captions-container js-player-captions-container"> <div class="player-captions-window js-player-captions-window"> <div class="player-captions js-player-captions"></div> </div> </div> <div class="player-overlay player-play-overlay js-paused-overlay"> <button type=button class="player-button player-button-play js-control-play-button"> <svg class=player-icon-play><use xlink:href=#icon_play /></svg> </button> </div> <div class="player-overlay player-overlay--wall player-product-overlay js-player-product-overlay"> <div class="player-center-content player-product js-player-product"> <p></p> <a href="" target=_blank class="purchase_button js-subscribe-label">Subscribe</a> </div> </div> <div id=empty-collection-overlay /> <div class="player-hover player-controls-top js-controls-top"> <div id=collection-topbar /> <div id=stream-info /> </div> <div id=js-collection-sidebar></div> <div id=js-follow-panel></div> <div id=js-dead-ltv-overlay /> <div class=player-storm-warning> <div class=player-center-content> <div class=player-loading-spinner></div> <p> <span class=js-broadcast-down-label>The broadcast is down.</span><br/> <span class=js-broadcast-reload-label>The player will automatically reload when the broadcast is back.</span> </p> </div> </div> <div class=player-error> <div class=player-center-content> <p class=js-player-error></p> </div> </div> <div id=stream-status /> <div id=js-cc-options-modal class="js-cc-modal-container player-modal__container" data-state=closed> <div class="js-cc-modal player-modal__content" data-tab-selected=presets> <button type=button class="player-modal__close js-cc-custom-modal-dismiss"> <svg><use xlink:href=#icon_close_modal /></svg> </button> <h2 class="js-cc-modal-header player-modal__header">Closed Caption Settings</h2> <ul class="player-tabs clearfix"> <li class="player-tabs__item player-tabs__item--active" data-tab=presets> <a href=# class=js-cc-presets-tab>Presets</a> </li> <li class="player-tabs__item js-cc-tab-text" data-tab=text> <a href=# class=js-cc-text-tab>Text</a> </li> <li class="player-tabs__item js-cc-tab-text" data-tab=effects> <a href=# class=js-cc-effects-tab>Effects</a> </li> <li class=player-tabs__item data-tab=background> <a href=# class=js-cc-background-tab>Background</a> </li> <li class=player-tabs__item data-tab=window> <a href=# class=js-cc-window-tab>Window</a> </li> </ul> <div class=cc-modal-menu-frame data-tab=presets> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=white-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=lime-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=yellow-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=cyan-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=magenta-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=white-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=lime-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=yellow-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=cyan-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=magenta-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=black-on-white>aA</div> </div> <div class=cc-modal-menu-frame data-tab=text> <div class=cc-customize-field> <label class=js-cc-font-label for=cc-font>Font</label> <select class=js-cc-dropdown name=font id=cc-font> <option value=mono-serif>Mono Serif</option> <option value=prop-serif>Serif</option> <option value=mono-sans-serif>Mono Sans-Serif</option> <option value=prop-sans-serif>Sans-Serif</option> <option value=casual>Casual</option> <option value=cursive>Cursive</option> <option value=small-capitals>Small Capitals</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-justification-label for=cc-font-justification>Alignment</label> <select class=js-cc-dropdown name=alignment id=cc-font-justification> <option value=left>Left</option> <option value=center>Center</option> <option value=right>Right</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <input id=font-color-white type=radio name=fontColorName class=js-cc-radio value=white> <label for=font-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-black type=radio name=fontColorName class=js-cc-radio value=black> <label for=font-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-red type=radio name=fontColorName class=js-cc-radio value=red> <label for=font-color-red class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-green type=radio name=fontColorName class=js-cc-radio value=green> <label for=font-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-cyan type=radio name=fontColorName class=js-cc-radio value=cyan> <label for=font-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-magenta type=radio name=fontColorName class=js-cc-radio value=magenta> <label for=font-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-yellow type=radio name=fontColorName class=js-cc-radio value=yellow> <label for=font-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-blue type=radio name=fontColorName class=js-cc-radio value=blue> <label for=font-color-blue class=cc-color-palette__square></label> </div> </div> </div> <div class=cc-customize-field> <label class=js-cc-position-label for=cc-position>Position</label> <select class=js-cc-dropdown name=verticalPosition id=cc-position> <option value=bottom>Bottom</option> <option value=top>Top</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-font-opacity>Opacity</label> <select class=js-cc-dropdown name=fontOpacity id=cc-font-opacity> <option value=solid>Solid</option> <option value=translucent>Translucent</option> <option value=semiTransparent>Semi-Transparent</option> <option value=flashing>Flashing</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-size-label>Size</label> <button class="js-cc-font-size cc-font-size" value=increment>A <span class="js-font-increment-tip player-tip js-control-tip" data-tip="Increase Size"></span> </button> <button class="js-cc-font-size cc-font-size" value=decrement>A <span class="js-font-decrement-tip player-tip js-control-tip" data-tip="Decrease Size"></span> </button> </div> </div> <div class=cc-modal-menu-frame data-tab=effects> <div class=cc-customize-field> <label class=js-cc-style-label>Style</label> <div class=cc-style-palette> <div class=cc-style-palette__container> <input id=style-underline type=checkbox name=fontUnderline class=js-cc-checkbox value=underline> <label for=style-underline class=cc-style-palette__square>U</label> </div> <div class=cc-style-palette__container> <input id=style-italic type=checkbox name=fontItalic class=js-cc-checkbox value=italic> <label for=style-italic class=cc-style-palette__square>I</label> </div> <div class=cc-style-palette__container> <input id=style-bold type=checkbox name=fontBold class=js-cc-checkbox value=bold> <label for=style-bold class=cc-style-palette__square>B</label> </div> </div> </div> <div class=cc-customize-field> <label class=js-cc-edge-label>Effect</label> <div class=cc-edge-palette> <div class=cc-edge-palette__container> <hr class=cc-edge-disabled /> <input id=edge-effect-none type=radio name=edge class=js-cc-radio value=none> <label for=edge-effect-none class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-raised type=radio name=edge class=js-cc-radio value=raised> <label for=edge-effect-raised class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-drop-shadow type=radio name=edge class=js-cc-radio value=drop> <label for=edge-effect-drop-shadow class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-depressed type=radio name=edge class=js-cc-radio value=depressed> <label for=edge-effect-depressed class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-uniform type=radio name=edge class=js-cc-radio value=uniform> <label for=edge-effect-uniform class=cc-edge-palette__square>aA</label> </div> </div> </div> </div> <div class=cc-modal-menu-frame data-tab=background> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-bg-opacity>Opacity</label> <select class=js-cc-dropdown name=backgroundOpacity id=cc-bg-opacity> <option class=js-cc-opacity-solid value=solid>Solid</option> <option class=js-cc-opacity-translucent value=translucent>Translucent</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <hr class=cc-no-color /> <input id=background-transparent type=radio name=backgroundColorName class=js-cc-radio value=transparent> <label for=background-transparent class="cc-color-palette__square cc-color-palette__square-no-color"></label> </div> <div class=cc-color-palette__container> <input id=background-color-white type=radio name=backgroundColorName class=js-cc-radio value=white> <label for=background-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-lightgray type=radio name=backgroundColorName class=js-cc-radio value=lightgray> <label for=background-color-lightgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-gray type=radio name=backgroundColorName class=js-cc-radio value=gray> <label for=background-color-gray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-darkgray type=radio name=backgroundColorName class=js-cc-radio value=darkgray> <label for=background-color-darkgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-black type=radio name=backgroundColorName class=js-cc-radio value=black> <label for=background-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-green type=radio name=backgroundColorName class=js-cc-radio value=green> <label for=background-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-blue type=radio name=backgroundColorName class=js-cc-radio value=blue> <label for=background-color-blue class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-cyan type=radio name=backgroundColorName class=js-cc-radio value=cyan> <label for=background-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-magenta type=radio name=backgroundColorName class=js-cc-radio value=magenta> <label for=background-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-yellow type=radio name=backgroundColorName class=js-cc-radio value=yellow> <label for=background-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-red type=radio name=backgroundColorName class=js-cc-radio value=red> <label for=background-color-red class=cc-color-palette__square></label> </div> </div> </div> </div> <div class=cc-modal-menu-frame data-tab=window> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-window-opacity>Opacity</label> <select class=js-cc-dropdown name=windowOpacity id=cc-window-opacity> <option class=js-cc-opacity-solid value=solid>Solid</option> <option class=js-cc-opacity-translucent value=translucent>Translucent</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <hr class=cc-no-color /> <input id=window-transparent type=radio name=windowColorName class=js-cc-radio value=transparent> <label for=window-transparent class="cc-color-palette__square cc-color-palette__square-no-color"></label> </div> <div class=cc-color-palette__container> <input id=window-color-white type=radio name=windowColorName class=js-cc-radio value=white> <label for=window-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-lightgray type=radio name=windowColorName class=js-cc-radio value=lightgray> <label for=window-color-lightgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-gray type=radio name=windowColorName class=js-cc-radio value=gray> <label for=window-color-gray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-darkgray type=radio name=windowColorName class=js-cc-radio value=darkgray> <label for=window-color-darkgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-black type=radio name=windowColorName class=js-cc-radio value=black> <label for=window-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-green type=radio name=windowColorName class=js-cc-radio value=green> <label for=window-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-blue type=radio name=windowColorName class=js-cc-radio value=blue> <label for=window-color-blue class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-cyan type=radio name=windowColorName class=js-cc-radio value=cyan> <label for=window-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-magenta type=radio name=windowColorName class=js-cc-radio value=magenta> <label for=window-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-yellow type=radio name=windowColorName class=js-cc-radio value=yellow> <label for=window-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-red type=radio name=windowColorName class=js-cc-radio value=red> <label for=window-color-red class=cc-color-palette__square></label> </div> </div> </div> </div> </div> </div> <div class="player-hover player-controls-bottom pl-flex js-controls-bottom"> <div id=js-player-seek class=player-seek /> <div class=player-buttons-left> <button type=button class="player-button player-button--playpause js-control-playpause-button" tabindex=-1> <span class="pause-button js-pause-button"> <span class="player-tip player-tip--aleft js-tip" data-tip=Pause></span> <svg class=player-icon-pause><use xlink:href=#icon_pause /></svg> </span> <span class="play-button js-play-button"> <span class="player-tip player-tip--aleft js-tip" data-tip=Play></span> <svg class=player-icon-play><use xlink:href=#icon_play /></svg> </span> </button> <div id=js-player-volume class=player-volume /> </div> <div class=player-buttons-right> <div id=js-notification-popup-container></div> <div id=js-settings class="flex flex__item"></div> <button type=button class="cc-flag player-button player-button--cc js-control-cc" tabindex=-1> <span class="player-tip js-control-tip" data-tip=Captions></span> <svg class=js-player-icon-cc><use xlink:href=#icon_cc_on /></svg> <svg class=js-player-icon-cc-deactivated><use xlink:href=#icon_cc_off /></svg> </button> <div class=player-menu> <button type=button class="player-button player-button--clips js-control-clips" data-canclip=false> <span class="player-tip js-tip" data-tip=Clip></span> <svg class=player-icon-clips><use xlink:href=#icon_clips /></svg> <svg class="player-icon-clips--bday js-player-icon-clips--bday" style=visibility:hidden> <use xlink:href=#icon_clips--bday /> </svg> </button> <form class=js-create-clip-form method=post action="" target=""> <input class=js-create-clip-player-backend-type type=hidden name=player_backend_type value=""/> <input class=js-create-clip-channel type=hidden name=channel value=""/> <input class=js-create-clip-offset type=hidden name=offset value=""/> <input class=js-create-clip-broadcast_id type=hidden name=broadcast_id value=""/> <input class=js-create-clip-vod_id type=hidden name=vod_id value=""/> <input class=js-create-clip-play_session_id type=hidden name=play_session_id value=""/> </form> </div> <button type=button class="player-button player-button--chromecast js-chromecast-button"> <span class="player-tip js-tip" data-tip=Chromecast></span> <svg class=player-icon-chromecast-p1><use xlink:href=#icon_chromecast_p1 /></svg> <svg class=player-icon-chromecast-p2><use xlink:href=#icon_chromecast_p2 /></svg> <svg class=player-icon-chromecast-p3><use xlink:href=#icon_chromecast_p3 /></svg> <svg class=player-icon-chromecast-p4><use xlink:href=#icon_chromecast_p4 /></svg> <svg class=player-icon-chromecast-p5><use xlink:href=#icon_chromecast_p5 /></svg> </button> <button type=button class="player-button player-button--theatre js-control-theatre" tabindex=-1> <span class="enter-theatre-button js-theatre-button"> <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Theater Mode"></span> <svg class=player-icon-theatre><use xlink:href=#icon_theatre /></svg> </span> <span class="exit-theatre-button js-exit-theatre-button"> <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Exit Theater Mode"></span> <svg class=player-icon-theatre-deactivate><use xlink:href=#icon_theatre_deactivate /></svg> </span> </button> <button type=button class="player-button player-button--fullscreen js-control-fullscreen" tabindex=-1> <span class="fullscreen-button js-fullscreen"> <span class="player-tip js-control-tip" data-tip=Fullscreen></span> <svg class=player-icon-fullscreen><use xlink:href=#icon_fullscreen /></svg> </span> <span class="exit-fullscreen-button js-exit-fullscreen"> <span class="player-tip js-control-tip" data-tip="Exit Fullscreen"></span> <svg class=player-icon-unfullscreen><use xlink:href=#icon_unfullscreen /></svg> </span> </button> <button type=button class="player-button player-button--twitch js-watch-twitch"> <span class="player-tip player-tip--aright js-tip" data-tip="Watch on Twitch"></span> <a class="player-button player-button--twitch js-hyperlink-watch-twitch" href="" target=_blank> <svg><use xlink:href=#icon_twitch /></svg> </a> </button> </div> </div> <div class=player-ad-notice> <p class=js-advertisement-label>Advertisement</p> </div> <div id=js-player-alert-container /> <ul class="player-playback-stats js-playback-stats" data-state=off> <button type=button class="player-button player-button--noscale player-button--close js-stats-close"> <svg><use xlink:href=#icon_close /></svg> </button> <li>Video Resolution: <div><span class=js-stat-video-resolution></span></div></li> <li>Display Resolution: <div><span class=js-stat-display-resolution></span></div></li> <li>FPS: <div><span class=js-stat-fps></span></div></li> <li>Skipped Frames: <div><span class=js-stat-skipped-frames></span></div></li> <li>Buffer Size: <div><span class=js-stat-buffer-size></span> sec.</div></li> <li class=stats__latency-broadcaster>Latency to Broadcaster: <div><span class=js-stat-hls-latency-broadcaster></span> sec.</div></li> <li class=stats__latency-encoder>Latency to Encoder: <div><span class=js-stat-hls-latency-encoder></span> sec.</div></li> <li>Playback Rate: <div><span class=js-stat-playback-rate></span> Kbps</div></li> <li>Memory Usage: <div><span class=js-stat-memory-usage></span></div></li> <li>Backend Version: <div><span class=js-stat-video-backend-version></span></div></li> </ul> <svg viewBox="0 0 30 30" xmlns=http://www.w3.org/2000/svg style=width:0;height:0;visibility:hidden;display:block> <symbol viewBox="0 0 30 30" id=icon_play><path clip-rule=evenodd d=M10,7l12,8l-12,8V7z fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_pause><path clip-rule=evenodd d="M9,22h4V8H9V22z M17,8v14h4V8H17z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_volumefull><path clip-rule=evenodd d="M22,21.5v-13L23,8v14L22,21.5z M18,10.5l1-0.5v10l-1-0.5V10.5z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_volumemute><path clip-rule=evenodd d="M23,18L23,18h-0.7L20,15.7L17.7,18H17l0,0v-0.7l2.3-2.3L17,12.7V12l0,0h0.7l2.3,2.3l2.3-2.3H23l0,0v0.7L20.7,15l2.3,2.3V18z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_fullscreen><path clip-rule=evenodd d="M7,7 L15.2,7 L12.8,9.4 L15.8,12.4 L12.4,15.8 L9.4,12.8 L7,15.2 L7,7 Z M23,23 L14.8,23 L17.2,20.6 L14.2,17.6 L17.6,14.2 L20.6,17.2 L23,14.8 L23,23 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_unfullscreen><path clip-rule=evenodd d="M15,15 L23.2,15 L20.8,17.4 L23.8,20.4 L20.4,23.8 L17.4,20.8 L15,23.2 L15,15 L15,15 Z M15,15 L6.8,15 L9.2,12.6 L6.2,9.6 L9.6,6.2 L12.6,9.2 L15,6.8 L15,15 L15,15 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_settings><path clip-rule=evenodd d="M13.3589744,7 L16.6410256,7 L18.0769231,9.8 L21.3589744,9.8 L23,12.2 L21.3589744,15 L23,17.8 L21.3589744,20.2 L18.0769231,20.2 L16.6410256,23 L13.3589744,23 L11.9230769,20.2 L8.64102564,20.2 L7,17.8 L8.64102564,15 L7,12.2 L8.64102564,9.8 L11.9230769,9.8 L13.3589744,7 Z M15,17.8 C16.5860485,17.8 17.8717949,16.5463973 17.8717949,15 C17.8717949,13.4536027 16.5860485,12.2 15,12.2 C13.4139515,12.2 12.1282051,13.4536027 12.1282051,15 C12.1282051,16.5463973 13.4139515,17.8 15,17.8 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_theatre><path d="M6 21h11V9H6v12zM19 9v12h5V9h-5z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_theatre_deactivate><path d="M6 9h11v12H6V9zm2 2h9v8H8v-8zm9-2h7v12h-7V9zm2 2h3v8h-3v-8z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 63 30" id=icon_twitch><path clip-rule=evenodd d="M55,19 L52,19 L52,13 L49,13 L49,19 L46,19 L46,8 L49,8 L49,10 L53,10 L55,12 L55,19 L55,19 Z M45,13 L41,13 L41,16 L45,16 L45,19 L40,19 L38,17 L38,12 L40,10 L45,10 L45,13 L45,13 Z M37,13 L34,13 L34,16 L37,16 L37,19 L33,19 L31,17 L31,8 L34,8 L34,10 L37,10 L37,13 L37,13 Z M27,8 L30,8 L30,9 L27,9 L27,8 Z M27,10 L30,10 L30,19 L27,19 L27,10 Z M26,17 L24,19 L15,19 L15,10 L18,10 L18,16 L19,16 L19,10 L22,10 L22,16 L23,16 L23,10 L26,10 L26,17 L26,17 Z M14,13 L11,13 L11,16 L14,16 L14,19 L10,19 L8,17 L8,8 L11,8 L11,10 L14,10 L14,13 L14,13 Z M53.5,9 L50,9 L50,7 L45.5,7 L43,9 L39.5,9 L38,10.5 L38,9 L35,9 L35,7 L26,7 L26,9 L15,9 L12,7 L7,7 L7,17.5 L9.5,20.125 L14,23 L18,23 L18,22.25 L19.5,23 L25.5,23 L26.5,21.5 L27,23 L31,23 L31,21.5 L32.5,23 L37,23 L37.25,21.5 L38.5,23 L43.5,23 L45,21.5 L45,23 L47.5,23 L49,21.5 L49,23 L52.5,23 L56,19.5 L56,11.5 L53.5,9 L53.5,9 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close><path clip-rule=evenodd d="M15.1035534,15.4571068 L11.5303301,19.0303301 L11.3535534,19.2071068 L11,18.8535534 L11.1767767,18.6767767 L14.75,15.1035534 L11.1767767,11.5303301 L11,11.3535534 L11.3535534,11 L11.5303301,11.1767767 L15.1035534,14.75 L18.6767767,11.1767767 L18.8535534,11 L19.2071068,11.3535534 L19.0303301,11.5303301 L15.4571068,15.1035534 L19.0303301,18.6767767 L19.2071068,18.8535534 L18.8535534,19.2071068 L18.6767767,19.0303301 L15.1035534,15.4571068 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close_md><path clip-rule=evenodd d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p1><path fill-rule=evenodd clip-rule=evenodd d=M15,22c0-0.7-0.1-1.4-0.2-2H22V10H8v3.2C7.4,13.1,6.7,13,6,13V8h18v14H15z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p2><path fill-rule=evenodd clip-rule=evenodd d=M10,13.9V12h10v6h-5.9C13.2,16.2,11.8,14.8,10,13.9z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p3><path fill-rule=evenodd clip-rule=evenodd d=M13,22h-1c0-3.3-2.7-6-6-6v-1C9.9,15,13,18.1,13,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p4><path fill-rule=evenodd clip-rule=evenodd d=M10,22H9c0-1.7-1.3-3-3-3v-1C8.2,18,10,19.8,10,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p5><path fill-rule=evenodd clip-rule=evenodd d=M7,22H6v-1C6.6,21,7,21.4,7,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_clips><path d="M14.802 7.804l-3.83 1.026 2.928 2.321 3.83-1.026-2.928-2.321zm2.895-.776l3.981-1.067.777 2.898-1.83.49-2.928-2.321zM7.969 9.635l-1.745.467L7 13l3.898-1.044-2.929-2.321zM7 13h16v9H7v-9zm1.969 3h2.785l2.228-3h-2.785l-2.228 3zm7.018 0h2.785L21 13h-2.785l-2.228 3z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 13 18" id=icon_clips--bday><path d="M6.505 7.61l2.41 2.33H4.53l.621-2.174-.552-.81L1.43 8.53l1.77-2.803L.266 4.184l3.531-.22.234-3.118 1.761 2.583L8.96 1.854 7.19 4.658 10.124 6.2l-3.53.22-.09 1.189zm6.546 6.33H3.385l.625-2.182h6.785l2.256 2.182zm-3.042 1.818l-7.737 2.073.593-2.073h7.144z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 30 30" id=icon_cc_on><path fill-rule=evenodd clip-rule=evenodd d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol> <symbol viewBox="0 0 30 30" id=icon_cc_off><path fill-rule=evenodd clip-rule=evenodd d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M24,8 L24,22 L6,22 L6,8 L24,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close_modal><path clip-rule=evenodd d="M13.657 3.757l-4.243 4.243 4.243 4.242-1.415 1.415-4.242-4.243-4.243 4.243-1.414-1.415 4.243-4.242-4.243-4.243 1.414-1.414 4.243 4.243 4.242-4.243 1.415 1.414z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 14 14" id=icon_arrow><path d="M6.46765898,5.00010938 L6.46755335,5 L3.08055618,8.27078515 C2.97320936,8.37444877 2.97610632,8.52662201 3.07163118,8.6255409 L3.47144895,9.03956433 C3.56460436,9.13602957 3.72584608,9.14003286 3.82630008,9.04302556 L6.46765898,6.49229492 L9.10901788,9.04302556 C9.20947188,9.14003286 9.3707136,9.13602957 9.46386901,9.03956433 L9.86368678,8.6255409 C9.95921164,8.52662201 9.9621086,8.37444877 9.85476178,8.27078515 L6.46776461,5 L6.46765898,5.00010938 Z" transform="translate(6.467659, 7.056937) scale(-1, 1) rotate(-270.000000) translate(-6.467659, -7.056937) "></path></symbol> <symbol viewBox="0 0 98 86" id=age-gate-icon><path d="M24 8h50v10h12V8h12v78H0V8h12v10h12V8zm52-8h8v16h-8V0zM14 0h8v16h-8V0zm13.356 43.52h3.8c-.03-.954.068-1.9.29-2.84.225-.938.59-1.78 1.097-2.526.506-.745 1.155-1.348 1.945-1.81.79-.463 1.736-.694 2.84-.694.834 0 1.624.135 2.37.403.744.268 1.393.656 1.944 1.162.552.507.99 1.11 1.32 1.81.327.702.49 1.484.49 2.35 0 1.102-.17 2.07-.513 2.905-.344.835-.85 1.61-1.52 2.326-.672.715-1.514 1.423-2.528 2.124-1.013.7-2.19 1.468-3.532 2.303-1.103.655-2.16 1.356-3.175 2.1-1.014.746-1.923 1.61-2.728 2.595-.805.983-1.468 2.14-1.99 3.465-.52 1.327-.857 2.93-1.006 4.807h20.705v-3.354H30.888c.18-.983.56-1.855 1.14-2.616.582-.76 1.282-1.468 2.102-2.123.82-.656 1.722-1.275 2.705-1.856.984-.58 1.968-1.17 2.952-1.765.983-.626 1.937-1.282 2.86-1.968.925-.686 1.745-1.453 2.46-2.303.716-.85 1.29-1.81 1.722-2.884.432-1.073.648-2.31.648-3.71 0-1.492-.26-2.803-.783-3.936-.522-1.133-1.23-2.08-2.124-2.84-.893-.76-1.944-1.34-3.15-1.744-1.21-.402-2.498-.603-3.87-.603-1.67 0-3.16.283-4.47.85-1.312.566-2.408 1.348-3.287 2.347-.88 1-1.528 2.183-1.945 3.555-.418 1.37-.582 2.86-.492 4.47zM65.17 64V32.297H62.26c-.208 1.192-.596 2.176-1.162 2.95-.567.776-1.26 1.387-2.08 1.834-.82.448-1.736.754-2.75.918-1.013.164-2.057.246-3.13.246v3.04h8.228V64h3.8z" fill=#F9F7FC fill-rule=evenodd /></symbol> <symbol id=age-gate-fail-icon viewBox="0 0 92 81"><path d="M0 75.6l3.067-5.4L9.2 59.4l12.267-21.6 12.266-21.6 6.134-10.8L42.933 0h6.134l3.066 5.4 6.134 10.8 12.266 21.6L82.8 59.4l6.133 10.8L92 75.6 89.06 81H3.44L0 75.6zM40 27h12v13l-3 19h-6l-3-19V27zm1 34h10v10H41V61z" fill=#F9F7FC fill-rule=evenodd /></symbol> <symbol viewBox="0 0 19 19" id=icon_open_collection><path fill-rule=evenodd d="M0,6 L19,6 L19,19 L0,19 L0,6 Z M12.25,12.5 L7,9 L7,16 L12.25,12.5 Z M2,3 L17,3 L17,5 L2,5 L2,3 Z M4,0 L15,0 L15,2 L4,2 L4,0 Z"/></symbol> <symbol id=icon_pl-followcheck viewBox="0 0 16 16"><path clip-rule=evenodd d=M6.5,12.75L2,8.25l2-2l2.5,2.5l5.5-5.5l2,2L6.5,12.75z fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=pl-icon_close><path clip-rule=evenodd d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z"/></symbol> <symbol viewBox="0 0 14 12" id=pl-icon_vod><path d="M0 12h14V0H0v12zm4-3V3l7 3-7 3z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 16 3" id=icon_more_info><path d="M15 1.5c0 .389-.139.736-.417 1.042-.277.305-.639.458-1.083.458-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C12.694.153 13.056 0 13.5 0c.444 0 .806.153 1.083.458.278.306.417.653.417 1.042zm-6 0c0 .389-.139.736-.417 1.042C8.306 2.847 7.944 3 7.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C6.694.153 7.056 0 7.5 0c.444 0 .806.153 1.083.458C8.861.764 9 1.111 9 1.5zm-6 0c0 .389-.139.736-.417 1.042C2.306 2.847 1.944 3 1.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C.694.153 1.056 0 1.5 0c.444 0 .806.153 1.083.458C2.861.764 3 1.111 3 1.5z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 22 14" id=icon_grant_permissions><g fill-rule=evenodd><path d="M16 5h-3v1.994L11.91 8H16v3l6-4.5L16 2v3z"/><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/></g></symbol> <symbol viewBox="0 0 22 14" id=icon_revoke_permissions><g fill-rule=evenodd><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill=currentColor d="M17.013 5.34l-2.37-2.37-1.624 1.624 2.37 2.37-2.37 2.37 1.624 1.624 2.37-2.37 2.37 2.37 1.624-1.624-2.37-2.37 2.37-2.37-1.624-1.624-2.37 2.37z"/></g></symbol> <symbol viewBox="0 0 22 14" id=icon_approved_permissions><g fill-rule=evenodd><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill=currentColor fill-rule=nonzero d="M20.356 3L22 4.618 15.513 11 12 7.543l1.644-1.617 1.87 1.839z"/></g></symbol> <symbol viewBox="0 0 16 16" id=icon_report_flag><path clip-rule=evenodd d="M3,14 L1,14 L1,2 L3,2 L3,14 L3,14 Z M4,2 L11,2 L11,4 L15,4 L15,11 L8,11 L8,9 L4,9 L4,2 L4,2 Z"></path></symbol> <symbol id=icon_heart height=16px version=1.1 viewBox="0 0 16 16" width=16px x=0px y=0px> <path clip-rule=evenodd d=M8,14L1,7V4l2-2h3l2,2l2-2h3l2,2v3L8,14z fill-rule=evenodd></path> </symbol> <symbol id=icon_unheart height=16px version=1.1 viewBox="0 0 16 16" width=16px x=0px y=0px> <path clip-rule=evenodd d="M1,9V7h14v2H1z M1,4l2-2h3l2,2l2-2h3l2,2v2H1V4z M8,14l-4.667-4h9.333L8,14z" fill-rule=evenodd></path> </symbol> </svg> ';
+        e.exports = '<div class="player-initializing player-center-content"> <div class=player-loading-spinner></div> </div> <div class="player-overlay player-overlay--wall player-age-restriction-overlay js-age-restriction-overlay"> <div class=player-center-content> <div class=player-mature-overlay> <p class=js-mature-warning-label>The broadcaster indicated that the channel is intended for mature audiences.</p> <p><button type=button id=mature-link class="player-content-button js-player-mature-accept js-mature-accept-label">Start Watching</button></p> </div> <div class="player-age-gate js-age-gate"> <div class=player-age-gate-warning> <p> <svg class=player-age-gate--icon> <use xlink:href=#age-gate-icon /> </svg> </p> <p class=js-age-gate-warning-label>You must be 21 to view this content. Please enter your date of birth.</p> </div> <div class=player-age-gate-failed-once> <p> <svg class=player-age-gate--fail-icon> <use xlink:href=#age-gate-fail-icon /> </svg> </p> <p class=age-gate-locked-out-label>Sorry, you must be over the age of 21 to view this content.</p> </div> <div class=player-datepicker> <select class="player-datepicker--select js-select-month"> <option class=age-gate-jan value=0 selected=selected>January</option> <option class=age-gate-feb value=1>February</option> <option class=age-gate-mar value=2>March</option> <option class=age-gate-apr value=3>April</option> <option class=age-gate-may value=4>May</option> <option class=age-gate-jun value=5>June</option> <option class=age-gate-jul value=6>July</option> <option class=age-gate-aug value=7>August</option> <option class=age-gate-sept value=8>September</option> <option class=age-gate-oct value=9>October</option> <option class=age-gate-nov value=10>November</option> <option class=age-gate-dec value=11>December</option> </select> <select class="player-datepicker--select js-select-day"></select> <select class="player-datepicker--select js-select-year"></select> <button type=button class="js-age-gate-submit player-content-button">Submit</button> </div> </div> <div class=player-age-gate-locked-out> <p> <svg class=player-age-gate--fail-icon> <use xlink:href=#age-gate-fail-icon /> </svg> </p> <p class=age-gate-locked-out-label>Sorry, you must be over the age of 21 to view this content.</p> </div> </div> </div> <div class="player-offline-banner js-offline-banner"> <img class=js-meta-offline /> </div> <div class="player-overlay player-ad-overlay"> <a class="player-ad-overlay js-player-ad-overlay" target=_blank></a> </div> <div id=js-player-recommendations-overlay /> <div class="player-overlay player-overlay--recommendations hidden js-recommendations-overlay"> <div class="player-tower player-tower--gutter-xs js-player-tower"> <div class="player-tower-columns js-featured-rec-header player-featured-recommendations"> <div class=player-recommendations-header> <h3><span class="js-upnext-label player-featured-recommendations-vod">Up Next</span><span class="js-watchnext-label player-featured-recommendations-live">Watch Next</span></h3> <button class="player-recommendation-button js-featured-recommendations__more-videos"><span class="js-cancelautoplay-label player-featured-recommendations-vod">Cancel</span><span class="js-morevideos-label player-featured-recommendations-live">More Videos</span></button> </div> </div> <div class=player-tower-columns data-columns=12> <div class="player-tower player-tower--gutter-xs js-video-recommendations"> <div class="player-tower-columns player-recommended-stream js-recommended-stream"> <div class=player-card> <a class=player-card__layout> <figure class="player-card__img player-card__img--vod"> <img class=js-recommended-stream__thumbnail /> </figure> <div class=player-card__overlay> <div class="player-card__body js-recommendations-card"> <h4 class="player-card__bread js-recommended-stream__channel"> Channel Name </h4> <h3 class="player-card__title js-recommended-stream__title"> Non-Optional Content Title </h3> <div class="player-card__autoplay-timer js-autoplay-timer"> <h4 class=player-card__info> <span class=js-autoplay-text>Playing in {{timeRemaining}} seconds</span> </h4> <div class="player-card__autoplay js-autoplay"> <div class="autoplay__progress js-autoplay-progress"> </div> </div> </div> <div class="player-card__time-info js-recommendation-time-info"> <h4 class=player-card__info> <time class=js-recommended-stream__date>00:00:00</time> &nbsp;·&nbsp; <time class=js-recommended-stream__length>00:00:00</time> </h4> </div> </div> </div> </a> </div> </div> </div> </div> </div> </div> <div class="player-video-background-banner js-video-background-banner"> <img class=js-meta-video-background /> </div> <div class="player-overlay player-loading js-player-loading"> <div class=player-center-content> <div class=player-loading-spinner></div> </div> </div> <div class="player-overlay player-chromecast-overlay"> <div class=player-center-content> <div class=js-playing-on-label>Playing on {{device}}</div> </div> </div> <div class="player-overlay player-fullscreen-overlay js-control-fullscreen-overlay"> </div> <div class="player-overlay player-extensions" id=js-player-extension-root> </div> <div class="cc-flag player-captions-container js-player-captions-container"> <div class="player-captions-window js-player-captions-window"> <div class="player-captions js-player-captions"></div> </div> </div> <div class="player-overlay player-play-overlay js-paused-overlay"> <button type=button class="player-button player-button-play js-control-play-button"> <svg class=player-icon-play><use xlink:href=#icon_play /></svg> </button> </div> <div class="player-overlay player-overlay--wall player-product-overlay js-player-product-overlay"> <div class="player-center-content player-product js-player-product"> <p></p> <a href="" target=_blank class="purchase_button js-subscribe-label">Subscribe</a> </div> </div> <div id=empty-collection-overlay /> <div id=top-bar /> <div id=js-collection-sidebar></div> <div id=js-follow-panel></div> <div id=js-dead-ltv-overlay /> <div class=player-storm-warning> <div class=player-center-content> <div class=player-loading-spinner></div> <p> <span class=js-broadcast-down-label>The broadcast is down.</span><br/> <span class=js-broadcast-reload-label>The player will automatically reload when the broadcast is back.</span> </p> </div> </div> <div class=player-error> <div class=player-center-content> <p class=js-player-error></p> </div> </div> <div id=stream-status /> <div id=js-cc-options-modal class="js-cc-modal-container player-modal__container" data-state=closed> <div class="js-cc-modal player-modal__content" data-tab-selected=presets> <button type=button class="player-modal__close js-cc-custom-modal-dismiss"> <svg><use xlink:href=#icon_close_modal /></svg> </button> <h2 class="js-cc-modal-header player-modal__header">Closed Caption Settings</h2> <ul class="player-tabs clearfix"> <li class="player-tabs__item player-tabs__item--active" data-tab=presets> <a href=# class=js-cc-presets-tab>Presets</a> </li> <li class="player-tabs__item js-cc-tab-text" data-tab=text> <a href=# class=js-cc-text-tab>Text</a> </li> <li class="player-tabs__item js-cc-tab-text" data-tab=effects> <a href=# class=js-cc-effects-tab>Effects</a> </li> <li class=player-tabs__item data-tab=background> <a href=# class=js-cc-background-tab>Background</a> </li> <li class=player-tabs__item data-tab=window> <a href=# class=js-cc-window-tab>Window</a> </li> </ul> <div class=cc-modal-menu-frame data-tab=presets> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=white-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=lime-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=yellow-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=cyan-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=magenta-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=white-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=lime-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=yellow-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=cyan-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=magenta-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=black-on-white>aA</div> </div> <div class=cc-modal-menu-frame data-tab=text> <div class=cc-customize-field> <label class=js-cc-font-label for=cc-font>Font</label> <select class=js-cc-dropdown name=font id=cc-font> <option value=mono-serif>Mono Serif</option> <option value=prop-serif>Serif</option> <option value=mono-sans-serif>Mono Sans-Serif</option> <option value=prop-sans-serif>Sans-Serif</option> <option value=casual>Casual</option> <option value=cursive>Cursive</option> <option value=small-capitals>Small Capitals</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-justification-label for=cc-font-justification>Alignment</label> <select class=js-cc-dropdown name=alignment id=cc-font-justification> <option value=left>Left</option> <option value=center>Center</option> <option value=right>Right</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <input id=font-color-white type=radio name=fontColorName class=js-cc-radio value=white> <label for=font-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-black type=radio name=fontColorName class=js-cc-radio value=black> <label for=font-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-red type=radio name=fontColorName class=js-cc-radio value=red> <label for=font-color-red class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-green type=radio name=fontColorName class=js-cc-radio value=green> <label for=font-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-cyan type=radio name=fontColorName class=js-cc-radio value=cyan> <label for=font-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-magenta type=radio name=fontColorName class=js-cc-radio value=magenta> <label for=font-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-yellow type=radio name=fontColorName class=js-cc-radio value=yellow> <label for=font-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-blue type=radio name=fontColorName class=js-cc-radio value=blue> <label for=font-color-blue class=cc-color-palette__square></label> </div> </div> </div> <div class=cc-customize-field> <label class=js-cc-position-label for=cc-position>Position</label> <select class=js-cc-dropdown name=verticalPosition id=cc-position> <option value=bottom>Bottom</option> <option value=top>Top</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-font-opacity>Opacity</label> <select class=js-cc-dropdown name=fontOpacity id=cc-font-opacity> <option value=solid>Solid</option> <option value=translucent>Translucent</option> <option value=semiTransparent>Semi-Transparent</option> <option value=flashing>Flashing</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-size-label>Size</label> <button class="js-cc-font-size cc-font-size" value=increment>A <span class="js-font-increment-tip player-tip js-control-tip" data-tip="Increase Size"></span> </button> <button class="js-cc-font-size cc-font-size" value=decrement>A <span class="js-font-decrement-tip player-tip js-control-tip" data-tip="Decrease Size"></span> </button> </div> </div> <div class=cc-modal-menu-frame data-tab=effects> <div class=cc-customize-field> <label class=js-cc-style-label>Style</label> <div class=cc-style-palette> <div class=cc-style-palette__container> <input id=style-underline type=checkbox name=fontUnderline class=js-cc-checkbox value=underline> <label for=style-underline class=cc-style-palette__square>U</label> </div> <div class=cc-style-palette__container> <input id=style-italic type=checkbox name=fontItalic class=js-cc-checkbox value=italic> <label for=style-italic class=cc-style-palette__square>I</label> </div> <div class=cc-style-palette__container> <input id=style-bold type=checkbox name=fontBold class=js-cc-checkbox value=bold> <label for=style-bold class=cc-style-palette__square>B</label> </div> </div> </div> <div class=cc-customize-field> <label class=js-cc-edge-label>Effect</label> <div class=cc-edge-palette> <div class=cc-edge-palette__container> <hr class=cc-edge-disabled /> <input id=edge-effect-none type=radio name=edge class=js-cc-radio value=none> <label for=edge-effect-none class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-raised type=radio name=edge class=js-cc-radio value=raised> <label for=edge-effect-raised class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-drop-shadow type=radio name=edge class=js-cc-radio value=drop> <label for=edge-effect-drop-shadow class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-depressed type=radio name=edge class=js-cc-radio value=depressed> <label for=edge-effect-depressed class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-uniform type=radio name=edge class=js-cc-radio value=uniform> <label for=edge-effect-uniform class=cc-edge-palette__square>aA</label> </div> </div> </div> </div> <div class=cc-modal-menu-frame data-tab=background> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-bg-opacity>Opacity</label> <select class=js-cc-dropdown name=backgroundOpacity id=cc-bg-opacity> <option class=js-cc-opacity-solid value=solid>Solid</option> <option class=js-cc-opacity-translucent value=translucent>Translucent</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <hr class=cc-no-color /> <input id=background-transparent type=radio name=backgroundColorName class=js-cc-radio value=transparent> <label for=background-transparent class="cc-color-palette__square cc-color-palette__square-no-color"></label> </div> <div class=cc-color-palette__container> <input id=background-color-white type=radio name=backgroundColorName class=js-cc-radio value=white> <label for=background-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-lightgray type=radio name=backgroundColorName class=js-cc-radio value=lightgray> <label for=background-color-lightgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-gray type=radio name=backgroundColorName class=js-cc-radio value=gray> <label for=background-color-gray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-darkgray type=radio name=backgroundColorName class=js-cc-radio value=darkgray> <label for=background-color-darkgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-black type=radio name=backgroundColorName class=js-cc-radio value=black> <label for=background-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-green type=radio name=backgroundColorName class=js-cc-radio value=green> <label for=background-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-blue type=radio name=backgroundColorName class=js-cc-radio value=blue> <label for=background-color-blue class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-cyan type=radio name=backgroundColorName class=js-cc-radio value=cyan> <label for=background-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-magenta type=radio name=backgroundColorName class=js-cc-radio value=magenta> <label for=background-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-yellow type=radio name=backgroundColorName class=js-cc-radio value=yellow> <label for=background-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-red type=radio name=backgroundColorName class=js-cc-radio value=red> <label for=background-color-red class=cc-color-palette__square></label> </div> </div> </div> </div> <div class=cc-modal-menu-frame data-tab=window> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-window-opacity>Opacity</label> <select class=js-cc-dropdown name=windowOpacity id=cc-window-opacity> <option class=js-cc-opacity-solid value=solid>Solid</option> <option class=js-cc-opacity-translucent value=translucent>Translucent</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <hr class=cc-no-color /> <input id=window-transparent type=radio name=windowColorName class=js-cc-radio value=transparent> <label for=window-transparent class="cc-color-palette__square cc-color-palette__square-no-color"></label> </div> <div class=cc-color-palette__container> <input id=window-color-white type=radio name=windowColorName class=js-cc-radio value=white> <label for=window-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-lightgray type=radio name=windowColorName class=js-cc-radio value=lightgray> <label for=window-color-lightgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-gray type=radio name=windowColorName class=js-cc-radio value=gray> <label for=window-color-gray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-darkgray type=radio name=windowColorName class=js-cc-radio value=darkgray> <label for=window-color-darkgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-black type=radio name=windowColorName class=js-cc-radio value=black> <label for=window-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-green type=radio name=windowColorName class=js-cc-radio value=green> <label for=window-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-blue type=radio name=windowColorName class=js-cc-radio value=blue> <label for=window-color-blue class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-cyan type=radio name=windowColorName class=js-cc-radio value=cyan> <label for=window-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-magenta type=radio name=windowColorName class=js-cc-radio value=magenta> <label for=window-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-yellow type=radio name=windowColorName class=js-cc-radio value=yellow> <label for=window-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-red type=radio name=windowColorName class=js-cc-radio value=red> <label for=window-color-red class=cc-color-palette__square></label> </div> </div> </div> </div> </div> </div> <div class="player-hover player-controls-bottom pl-flex js-controls-bottom"> <div id=js-player-seek class=player-seek /> <div class=player-buttons-left> <button type=button class="player-button player-button--playpause js-control-playpause-button" tabindex=-1> <span class="pause-button js-pause-button"> <span class="player-tip player-tip--aleft js-tip" data-tip=Pause></span> <svg class=player-icon-pause><use xlink:href=#icon_pause /></svg> </span> <span class="play-button js-play-button"> <span class="player-tip player-tip--aleft js-tip" data-tip=Play></span> <svg class=player-icon-play><use xlink:href=#icon_play /></svg> </span> </button> <div id=js-player-volume class=player-volume /> </div> <div class=player-buttons-right> <div id=js-notification-popup-container></div> <div id=js-settings class="flex flex__item"></div> <button type=button class="cc-flag player-button player-button--cc js-control-cc" tabindex=-1> <span class="player-tip js-control-tip" data-tip=Captions></span> <svg class=js-player-icon-cc><use xlink:href=#icon_cc_on /></svg> <svg class=js-player-icon-cc-deactivated><use xlink:href=#icon_cc_off /></svg> </button> <div class=player-menu> <button type=button class="player-button player-button--clips js-control-clips" data-canclip=false> <span class="player-tip js-tip" data-tip=Clip></span> <svg class=player-icon-clips><use xlink:href=#icon_clips /></svg> <svg class="player-icon-clips--bday js-player-icon-clips--bday" style=visibility:hidden> <use xlink:href=#icon_clips--bday /> </svg> </button> <form class=js-create-clip-form method=post action="" target=""> <input class=js-create-clip-player-backend-type type=hidden name=player_backend_type value=""/> <input class=js-create-clip-channel type=hidden name=channel value=""/> <input class=js-create-clip-offset type=hidden name=offset value=""/> <input class=js-create-clip-broadcast_id type=hidden name=broadcast_id value=""/> <input class=js-create-clip-vod_id type=hidden name=vod_id value=""/> <input class=js-create-clip-play_session_id type=hidden name=play_session_id value=""/> </form> </div> <button type=button class="player-button player-button--chromecast js-chromecast-button"> <span class="player-tip js-tip" data-tip=Chromecast></span> <svg class=player-icon-chromecast-p1><use xlink:href=#icon_chromecast_p1 /></svg> <svg class=player-icon-chromecast-p2><use xlink:href=#icon_chromecast_p2 /></svg> <svg class=player-icon-chromecast-p3><use xlink:href=#icon_chromecast_p3 /></svg> <svg class=player-icon-chromecast-p4><use xlink:href=#icon_chromecast_p4 /></svg> <svg class=player-icon-chromecast-p5><use xlink:href=#icon_chromecast_p5 /></svg> </button> <button type=button class="player-button player-button--theatre js-control-theatre" tabindex=-1> <span class="enter-theatre-button js-theatre-button"> <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Theater Mode"></span> <svg class=player-icon-theatre><use xlink:href=#icon_theatre /></svg> </span> <span class="exit-theatre-button js-exit-theatre-button"> <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Exit Theater Mode"></span> <svg class=player-icon-theatre-deactivate><use xlink:href=#icon_theatre_deactivate /></svg> </span> </button> <button type=button class="player-button player-button--fullscreen js-control-fullscreen" tabindex=-1> <span class="fullscreen-button js-fullscreen"> <span class="player-tip js-control-tip" data-tip=Fullscreen></span> <svg class=player-icon-fullscreen><use xlink:href=#icon_fullscreen /></svg> </span> <span class="exit-fullscreen-button js-exit-fullscreen"> <span class="player-tip js-control-tip" data-tip="Exit Fullscreen"></span> <svg class=player-icon-unfullscreen><use xlink:href=#icon_unfullscreen /></svg> </span> </button> <button type=button class="player-button player-button--twitch js-watch-twitch"> <span class="player-tip player-tip--aright js-tip" data-tip="Watch on Twitch"></span> <a class="player-button player-button--twitch js-hyperlink-watch-twitch" href="" target=_blank> <svg><use xlink:href=#icon_twitch /></svg> </a> </button> </div> </div> <div class=player-ad-notice> <p class=js-advertisement-label>Advertisement</p> </div> <div id=js-player-alert-container /> <ul class="player-playback-stats js-playback-stats" data-state=off> <button type=button class="player-button player-button--noscale player-button--close js-stats-close"> <svg><use xlink:href=#icon_close /></svg> </button> <li>Video Resolution: <div><span class=js-stat-video-resolution></span></div></li> <li>Display Resolution: <div><span class=js-stat-display-resolution></span></div></li> <li>FPS: <div><span class=js-stat-fps></span></div></li> <li>Skipped Frames: <div><span class=js-stat-skipped-frames></span></div></li> <li>Buffer Size: <div><span class=js-stat-buffer-size></span> sec.</div></li> <li class=stats__latency-broadcaster>Latency to Broadcaster: <div><span class=js-stat-hls-latency-broadcaster></span> sec.</div></li> <li class=stats__latency-encoder>Latency to Encoder: <div><span class=js-stat-hls-latency-encoder></span> sec.</div></li> <li>Playback Rate: <div><span class=js-stat-playback-rate></span> Kbps</div></li> <li>Memory Usage: <div><span class=js-stat-memory-usage></span></div></li> <li>Backend Version: <div><span class=js-stat-video-backend-version></span></div></li> </ul> <svg viewBox="0 0 30 30" xmlns=http://www.w3.org/2000/svg style=width:0;height:0;visibility:hidden;display:block> <symbol viewBox="0 0 30 30" id=icon_play><path clip-rule=evenodd d=M10,7l12,8l-12,8V7z fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_pause><path clip-rule=evenodd d="M9,22h4V8H9V22z M17,8v14h4V8H17z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_volumefull><path clip-rule=evenodd d="M22,21.5v-13L23,8v14L22,21.5z M18,10.5l1-0.5v10l-1-0.5V10.5z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_volumemute><path clip-rule=evenodd d="M23,18L23,18h-0.7L20,15.7L17.7,18H17l0,0v-0.7l2.3-2.3L17,12.7V12l0,0h0.7l2.3,2.3l2.3-2.3H23l0,0v0.7L20.7,15l2.3,2.3V18z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_fullscreen><path clip-rule=evenodd d="M7,7 L15.2,7 L12.8,9.4 L15.8,12.4 L12.4,15.8 L9.4,12.8 L7,15.2 L7,7 Z M23,23 L14.8,23 L17.2,20.6 L14.2,17.6 L17.6,14.2 L20.6,17.2 L23,14.8 L23,23 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_unfullscreen><path clip-rule=evenodd d="M15,15 L23.2,15 L20.8,17.4 L23.8,20.4 L20.4,23.8 L17.4,20.8 L15,23.2 L15,15 L15,15 Z M15,15 L6.8,15 L9.2,12.6 L6.2,9.6 L9.6,6.2 L12.6,9.2 L15,6.8 L15,15 L15,15 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_settings><path clip-rule=evenodd d="M13.3589744,7 L16.6410256,7 L18.0769231,9.8 L21.3589744,9.8 L23,12.2 L21.3589744,15 L23,17.8 L21.3589744,20.2 L18.0769231,20.2 L16.6410256,23 L13.3589744,23 L11.9230769,20.2 L8.64102564,20.2 L7,17.8 L8.64102564,15 L7,12.2 L8.64102564,9.8 L11.9230769,9.8 L13.3589744,7 Z M15,17.8 C16.5860485,17.8 17.8717949,16.5463973 17.8717949,15 C17.8717949,13.4536027 16.5860485,12.2 15,12.2 C13.4139515,12.2 12.1282051,13.4536027 12.1282051,15 C12.1282051,16.5463973 13.4139515,17.8 15,17.8 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_theatre><path d="M6 21h11V9H6v12zM19 9v12h5V9h-5z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_theatre_deactivate><path d="M6 9h11v12H6V9zm2 2h9v8H8v-8zm9-2h7v12h-7V9zm2 2h3v8h-3v-8z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 63 30" id=icon_twitch><path clip-rule=evenodd d="M55,19 L52,19 L52,13 L49,13 L49,19 L46,19 L46,8 L49,8 L49,10 L53,10 L55,12 L55,19 L55,19 Z M45,13 L41,13 L41,16 L45,16 L45,19 L40,19 L38,17 L38,12 L40,10 L45,10 L45,13 L45,13 Z M37,13 L34,13 L34,16 L37,16 L37,19 L33,19 L31,17 L31,8 L34,8 L34,10 L37,10 L37,13 L37,13 Z M27,8 L30,8 L30,9 L27,9 L27,8 Z M27,10 L30,10 L30,19 L27,19 L27,10 Z M26,17 L24,19 L15,19 L15,10 L18,10 L18,16 L19,16 L19,10 L22,10 L22,16 L23,16 L23,10 L26,10 L26,17 L26,17 Z M14,13 L11,13 L11,16 L14,16 L14,19 L10,19 L8,17 L8,8 L11,8 L11,10 L14,10 L14,13 L14,13 Z M53.5,9 L50,9 L50,7 L45.5,7 L43,9 L39.5,9 L38,10.5 L38,9 L35,9 L35,7 L26,7 L26,9 L15,9 L12,7 L7,7 L7,17.5 L9.5,20.125 L14,23 L18,23 L18,22.25 L19.5,23 L25.5,23 L26.5,21.5 L27,23 L31,23 L31,21.5 L32.5,23 L37,23 L37.25,21.5 L38.5,23 L43.5,23 L45,21.5 L45,23 L47.5,23 L49,21.5 L49,23 L52.5,23 L56,19.5 L56,11.5 L53.5,9 L53.5,9 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close><path clip-rule=evenodd d="M15.1035534,15.4571068 L11.5303301,19.0303301 L11.3535534,19.2071068 L11,18.8535534 L11.1767767,18.6767767 L14.75,15.1035534 L11.1767767,11.5303301 L11,11.3535534 L11.3535534,11 L11.5303301,11.1767767 L15.1035534,14.75 L18.6767767,11.1767767 L18.8535534,11 L19.2071068,11.3535534 L19.0303301,11.5303301 L15.4571068,15.1035534 L19.0303301,18.6767767 L19.2071068,18.8535534 L18.8535534,19.2071068 L18.6767767,19.0303301 L15.1035534,15.4571068 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close_md><path clip-rule=evenodd d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p1><path fill-rule=evenodd clip-rule=evenodd d=M15,22c0-0.7-0.1-1.4-0.2-2H22V10H8v3.2C7.4,13.1,6.7,13,6,13V8h18v14H15z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p2><path fill-rule=evenodd clip-rule=evenodd d=M10,13.9V12h10v6h-5.9C13.2,16.2,11.8,14.8,10,13.9z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p3><path fill-rule=evenodd clip-rule=evenodd d=M13,22h-1c0-3.3-2.7-6-6-6v-1C9.9,15,13,18.1,13,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p4><path fill-rule=evenodd clip-rule=evenodd d=M10,22H9c0-1.7-1.3-3-3-3v-1C8.2,18,10,19.8,10,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p5><path fill-rule=evenodd clip-rule=evenodd d=M7,22H6v-1C6.6,21,7,21.4,7,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_clips><path d="M14.802 7.804l-3.83 1.026 2.928 2.321 3.83-1.026-2.928-2.321zm2.895-.776l3.981-1.067.777 2.898-1.83.49-2.928-2.321zM7.969 9.635l-1.745.467L7 13l3.898-1.044-2.929-2.321zM7 13h16v9H7v-9zm1.969 3h2.785l2.228-3h-2.785l-2.228 3zm7.018 0h2.785L21 13h-2.785l-2.228 3z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 13 18" id=icon_clips--bday><path d="M6.505 7.61l2.41 2.33H4.53l.621-2.174-.552-.81L1.43 8.53l1.77-2.803L.266 4.184l3.531-.22.234-3.118 1.761 2.583L8.96 1.854 7.19 4.658 10.124 6.2l-3.53.22-.09 1.189zm6.546 6.33H3.385l.625-2.182h6.785l2.256 2.182zm-3.042 1.818l-7.737 2.073.593-2.073h7.144z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 30 30" id=icon_cc_on><path fill-rule=evenodd clip-rule=evenodd d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol> <symbol viewBox="0 0 30 30" id=icon_cc_off><path fill-rule=evenodd clip-rule=evenodd d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M24,8 L24,22 L6,22 L6,8 L24,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close_modal><path clip-rule=evenodd d="M13.657 3.757l-4.243 4.243 4.243 4.242-1.415 1.415-4.242-4.243-4.243 4.243-1.414-1.415 4.243-4.242-4.243-4.243 1.414-1.414 4.243 4.243 4.242-4.243 1.415 1.414z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 14 14" id=icon_arrow><path d="M6.46765898,5.00010938 L6.46755335,5 L3.08055618,8.27078515 C2.97320936,8.37444877 2.97610632,8.52662201 3.07163118,8.6255409 L3.47144895,9.03956433 C3.56460436,9.13602957 3.72584608,9.14003286 3.82630008,9.04302556 L6.46765898,6.49229492 L9.10901788,9.04302556 C9.20947188,9.14003286 9.3707136,9.13602957 9.46386901,9.03956433 L9.86368678,8.6255409 C9.95921164,8.52662201 9.9621086,8.37444877 9.85476178,8.27078515 L6.46776461,5 L6.46765898,5.00010938 Z" transform="translate(6.467659, 7.056937) scale(-1, 1) rotate(-270.000000) translate(-6.467659, -7.056937) "></path></symbol> <symbol viewBox="0 0 98 86" id=age-gate-icon><path d="M24 8h50v10h12V8h12v78H0V8h12v10h12V8zm52-8h8v16h-8V0zM14 0h8v16h-8V0zm13.356 43.52h3.8c-.03-.954.068-1.9.29-2.84.225-.938.59-1.78 1.097-2.526.506-.745 1.155-1.348 1.945-1.81.79-.463 1.736-.694 2.84-.694.834 0 1.624.135 2.37.403.744.268 1.393.656 1.944 1.162.552.507.99 1.11 1.32 1.81.327.702.49 1.484.49 2.35 0 1.102-.17 2.07-.513 2.905-.344.835-.85 1.61-1.52 2.326-.672.715-1.514 1.423-2.528 2.124-1.013.7-2.19 1.468-3.532 2.303-1.103.655-2.16 1.356-3.175 2.1-1.014.746-1.923 1.61-2.728 2.595-.805.983-1.468 2.14-1.99 3.465-.52 1.327-.857 2.93-1.006 4.807h20.705v-3.354H30.888c.18-.983.56-1.855 1.14-2.616.582-.76 1.282-1.468 2.102-2.123.82-.656 1.722-1.275 2.705-1.856.984-.58 1.968-1.17 2.952-1.765.983-.626 1.937-1.282 2.86-1.968.925-.686 1.745-1.453 2.46-2.303.716-.85 1.29-1.81 1.722-2.884.432-1.073.648-2.31.648-3.71 0-1.492-.26-2.803-.783-3.936-.522-1.133-1.23-2.08-2.124-2.84-.893-.76-1.944-1.34-3.15-1.744-1.21-.402-2.498-.603-3.87-.603-1.67 0-3.16.283-4.47.85-1.312.566-2.408 1.348-3.287 2.347-.88 1-1.528 2.183-1.945 3.555-.418 1.37-.582 2.86-.492 4.47zM65.17 64V32.297H62.26c-.208 1.192-.596 2.176-1.162 2.95-.567.776-1.26 1.387-2.08 1.834-.82.448-1.736.754-2.75.918-1.013.164-2.057.246-3.13.246v3.04h8.228V64h3.8z" fill=#F9F7FC fill-rule=evenodd /></symbol> <symbol id=age-gate-fail-icon viewBox="0 0 92 81"><path d="M0 75.6l3.067-5.4L9.2 59.4l12.267-21.6 12.266-21.6 6.134-10.8L42.933 0h6.134l3.066 5.4 6.134 10.8 12.266 21.6L82.8 59.4l6.133 10.8L92 75.6 89.06 81H3.44L0 75.6zM40 27h12v13l-3 19h-6l-3-19V27zm1 34h10v10H41V61z" fill=#F9F7FC fill-rule=evenodd /></symbol> <symbol viewBox="0 0 19 19" id=icon_open_collection><path fill-rule=evenodd d="M0,6 L19,6 L19,19 L0,19 L0,6 Z M12.25,12.5 L7,9 L7,16 L12.25,12.5 Z M2,3 L17,3 L17,5 L2,5 L2,3 Z M4,0 L15,0 L15,2 L4,2 L4,0 Z"/></symbol> <symbol id=icon_pl-followcheck viewBox="0 0 16 16"><path clip-rule=evenodd d=M6.5,12.75L2,8.25l2-2l2.5,2.5l5.5-5.5l2,2L6.5,12.75z fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=pl-icon_close><path clip-rule=evenodd d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z"/></symbol> <symbol viewBox="0 0 14 12" id=pl-icon_vod><path d="M0 12h14V0H0v12zm4-3V3l7 3-7 3z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 16 3" id=icon_more_info><path d="M15 1.5c0 .389-.139.736-.417 1.042-.277.305-.639.458-1.083.458-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C12.694.153 13.056 0 13.5 0c.444 0 .806.153 1.083.458.278.306.417.653.417 1.042zm-6 0c0 .389-.139.736-.417 1.042C8.306 2.847 7.944 3 7.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C6.694.153 7.056 0 7.5 0c.444 0 .806.153 1.083.458C8.861.764 9 1.111 9 1.5zm-6 0c0 .389-.139.736-.417 1.042C2.306 2.847 1.944 3 1.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C.694.153 1.056 0 1.5 0c.444 0 .806.153 1.083.458C2.861.764 3 1.111 3 1.5z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 22 14" id=icon_grant_permissions><g fill-rule=evenodd><path d="M16 5h-3v1.994L11.91 8H16v3l6-4.5L16 2v3z"/><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/></g></symbol> <symbol viewBox="0 0 22 14" id=icon_revoke_permissions><g fill-rule=evenodd><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill=currentColor d="M17.013 5.34l-2.37-2.37-1.624 1.624 2.37 2.37-2.37 2.37 1.624 1.624 2.37-2.37 2.37 2.37 1.624-1.624-2.37-2.37 2.37-2.37-1.624-1.624-2.37 2.37z"/></g></symbol> <symbol viewBox="0 0 22 14" id=icon_approved_permissions><g fill-rule=evenodd><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill=currentColor fill-rule=nonzero d="M20.356 3L22 4.618 15.513 11 12 7.543l1.644-1.617 1.87 1.839z"/></g></symbol> <symbol viewBox="0 0 16 16" id=icon_report_flag><path clip-rule=evenodd d="M3,14 L1,14 L1,2 L3,2 L3,14 L3,14 Z M4,2 L11,2 L11,4 L15,4 L15,11 L8,11 L8,9 L4,9 L4,2 L4,2 Z"></path></symbol> <symbol id=icon_heart height=16px version=1.1 viewBox="0 0 16 16" width=16px x=0px y=0px> <path clip-rule=evenodd d=M8,14L1,7V4l2-2h3l2,2l2-2h3l2,2v3L8,14z fill-rule=evenodd></path> </symbol> <symbol id=icon_unheart height=16px version=1.1 viewBox="0 0 16 16" width=16px x=0px y=0px> <path clip-rule=evenodd d="M1,9V7h14v2H1z M1,4l2-2h3l2,2l2-2h3l2,2v2H1V4z M8,14l-4.667-4h9.333L8,14z" fill-rule=evenodd></path> </symbol> </svg> ';
     }, function(e, t, n) {
         "use strict";
 
@@ -46308,15 +46326,15 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            s = n(736),
+            s = n(737),
             u = r(s),
-            l = n(740),
+            l = n(741),
             c = r(l),
             d = n(183),
             f = n(341),
             p = n(403),
             h = n(338),
-            _ = n(752),
+            _ = n(753),
             v = n(167),
             m = "production";
         t.PubSub = function() {
@@ -46407,14 +46425,14 @@
         }()
     }, function(e, t, n) {
         var r = n(24),
-            i = n(737),
+            i = n(738),
             o = r(i);
         e.exports = o
     }, function(e, t, n) {
         function r(e, t) {
             return e && e.length && t && t.length ? i(e, t) : e
         }
-        var i = n(738);
+        var i = n(739);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n, r) {
@@ -46429,7 +46447,7 @@
         }
         var i = n(65),
             o = n(54),
-            a = n(739),
+            a = n(740),
             s = n(47),
             u = n(208),
             l = Array.prototype,
@@ -46490,20 +46508,20 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(741),
+            l = n(742),
             c = r(l),
-            d = n(742),
+            d = n(743),
             f = r(d),
-            p = n(743),
+            p = n(744),
             h = r(p),
-            _ = n(744),
+            _ = n(745),
             v = r(_),
-            m = n(746),
+            m = n(747),
             y = r(m),
-            g = n(747),
+            g = n(748),
             b = r(g),
-            E = n(749),
-            T = n(751),
+            E = n(750),
+            T = n(752),
             S = r(T),
             C = f.default._getLogger("PubsubDriver"),
             w = 3e4,
@@ -46680,7 +46698,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(743),
+            a = n(744),
             s = r(a),
             u = function() {},
             l = u,
@@ -46836,13 +46854,13 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            u = n(741),
+            u = n(742),
             l = r(u),
-            c = n(742),
+            c = n(743),
             d = r(c),
-            f = n(743),
+            f = n(744),
             p = r(f),
-            h = n(745),
+            h = n(746),
             _ = r(h),
             v = 30,
             m = 3e4,
@@ -47066,7 +47084,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(742),
+            a = n(743),
             s = r(a),
             u = "pubsub",
             l = s.default._getLogger("IframeHost"),
@@ -47224,15 +47242,15 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            u = n(741),
+            u = n(742),
             l = r(u),
-            c = n(742),
+            c = n(743),
             d = r(c),
-            f = n(743),
+            f = n(744),
             p = r(f),
-            h = n(748),
+            h = n(749),
             _ = r(h),
-            v = n(745),
+            v = n(746),
             m = r(v),
             y = d.default._getLogger("WebsocketClient"),
             g = 3e4,
@@ -47502,11 +47520,11 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            u = n(741),
+            u = n(742),
             l = r(u),
-            c = n(742),
+            c = n(743),
             d = r(c),
-            f = n(743),
+            f = n(744),
             p = r(f),
             h = d.default._getLogger("PubsubSocket"),
             _ = 120,
@@ -47635,7 +47653,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.Stats = void 0;
-        var i = n(750),
+        var i = n(751),
             o = r(i);
         t.Stats = o.default, t.default = {
             Stats: o.default
@@ -47830,9 +47848,9 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(743),
+            a = n(744),
             s = r(a),
-            u = n(742),
+            u = n(743),
             l = r(u),
             c = "https://pubster.twitch.tv/publish",
             d = "https://pubster-darklaunch.twitch.tv/publish",
@@ -48048,57 +48066,57 @@
             value: !0
         }), t.init = i;
         var o = n(589),
-            a = n(755),
+            a = n(756),
             s = r(a),
-            u = n(756),
-            l = n(757),
-            c = n(758),
-            d = n(759),
-            f = n(760),
-            p = n(761),
-            h = n(762),
+            u = n(757),
+            l = n(758),
+            c = n(759),
+            d = n(760),
+            f = n(761),
+            p = n(762),
+            h = n(763),
             _ = n(364),
-            v = n(763),
-            m = n(765),
-            y = n(766),
+            v = n(764),
+            m = n(766),
+            y = n(767),
             g = n(355),
             b = n(375),
-            E = n(767),
-            T = n(678),
-            S = n(769),
-            C = n(771),
-            w = n(772),
-            P = n(774),
-            A = n(777),
+            E = n(768),
+            T = n(661),
+            S = n(770),
+            C = n(772),
+            w = n(773),
+            P = n(775),
+            A = n(778),
             O = n(422),
-            k = n(778),
-            I = n(780),
-            N = n(782),
-            R = n(783),
-            M = n(784),
-            L = n(785),
-            D = n(786),
-            x = n(787),
-            j = n(788),
-            U = n(789),
-            B = n(790),
-            F = n(791),
+            k = n(779),
+            I = n(781),
+            N = n(783),
+            R = n(784),
+            M = n(785),
+            L = n(786),
+            D = n(787),
+            x = n(788),
+            j = n(789),
+            U = n(790),
+            B = n(791),
+            F = n(792),
             V = n(428),
-            H = n(792),
-            q = n(794),
-            G = n(795),
-            Y = n(797),
-            W = n(656),
-            K = n(798),
-            z = n(799),
-            Q = n(800),
-            $ = n(801),
-            X = n(802),
+            H = n(793),
+            q = n(795),
+            G = n(796),
+            Y = n(798),
+            W = n(659),
+            K = n(799),
+            z = n(800),
+            Q = n(801),
+            $ = n(802),
+            X = n(803),
             J = n(411),
-            Z = (n(377), n(437), n(803)),
-            ee = n(805),
-            te = n(807),
-            ne = n(809),
+            Z = (n(377), n(437), n(804)),
+            ee = n(806),
+            te = n(808),
+            ne = n(810),
             re = (0, o.combineReducers)({
                 accessToken: u.accessToken,
                 ads: l.ads,
@@ -48422,7 +48440,7 @@
         }), t.DEFAULT_CLIPS_STATE = void 0, t.clips = i;
         var o = n(117),
             a = r(o),
-            s = n(764),
+            s = n(765),
             u = Object.freeze({
                 recordClip: function() {
                     console.error("Clip Generator not available yet")
@@ -48536,7 +48554,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.experiments = r;
-        var i = n(768),
+        var i = n(769),
             o = new Error("Attempting to use experiments too early"),
             a = {
                 get: function() {
@@ -48577,8 +48595,8 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.lang = r;
-        var i = n(770),
-            o = n(686)
+        var i = n(771),
+            o = n(669)
     }, function(e, t, n) {
         "use strict";
 
@@ -48617,7 +48635,7 @@
         }), t.LAST_KNOWN_LANG = t.ACTION_SET_LANGUAGE = void 0, t.setLanguage = r, t.loadLanguage = i, t.loadDefaultLang = o;
         var a = n(253),
             s = n(254),
-            u = n(686),
+            u = n(669),
             l = n(200),
             c = t.ACTION_SET_LANGUAGE = "set language",
             d = t.LAST_KNOWN_LANG = "playerLanguage"
@@ -48687,7 +48705,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.navigatorReducer = r;
-        var i = n(773)
+        var i = n(774)
     }, function(e, t) {
         "use strict";
 
@@ -48725,9 +48743,9 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.notifications = i;
-        var o = n(775),
+        var o = n(776),
             a = r(o),
-            s = n(776),
+            s = n(777),
             u = r(s),
             l = n(279),
             c = []
@@ -48796,7 +48814,7 @@
         }), t.playerDimensions = i;
         var o = n(117),
             a = r(o),
-            s = n(779),
+            s = n(780),
             u = {
                 left: 0,
                 top: 0,
@@ -48840,7 +48858,7 @@
         }), t.playerOptions = i;
         var o = n(201),
             a = r(o),
-            s = n(781),
+            s = n(782),
             u = {
                 branding: !0,
                 showInfo: !0,
@@ -48933,7 +48951,7 @@
             a = r(o),
             s = n(70),
             u = r(s),
-            l = n(652),
+            l = n(691),
             c = n(338),
             d = {
                 fetched: !1,
@@ -49299,7 +49317,7 @@
             v = n(338),
             m = n(224),
             y = n(167),
-            g = n(657),
+            g = n(660),
             b = t.UPDATE_INTERVAL_VOD = 20,
             E = t.UPDATE_INTERVAL_LIVESTREAM = 600,
             T = t.INIT_UPDATE_OFFSET_VOD = 2e4,
@@ -49408,7 +49426,7 @@
         var o = n(117),
             a = r(o),
             s = n(182),
-            u = n(781),
+            u = n(782),
             l = t.DEFAULT_SCREEN_MODE = Object.freeze({
                 isFullScreen: !1,
                 canFullScreen: !1,
@@ -49526,7 +49544,7 @@
         }), t.subscriptions = i;
         var o = n(117),
             a = r(o),
-            s = n(793),
+            s = n(794),
             u = n(338),
             l = {
                 isSubscribed: !1,
@@ -49666,7 +49684,7 @@
             a = r(o),
             s = n(70),
             u = r(s),
-            l = n(796),
+            l = n(797),
             c = ["host_channel", "content", "medium", "page_session_id", "tab_session_id", "chat_visibility_status", "referrer"]
     }, function(e, t) {
         "use strict";
@@ -49791,7 +49809,7 @@
         }), t.DEFAULT_WATCHPARTY = void 0, t.watchParty = i;
         var o = n(117),
             a = r(o),
-            s = n(752),
+            s = n(753),
             u = t.DEFAULT_WATCHPARTY = Object.freeze({
                 watchPartyId: "",
                 vodId: "",
@@ -49919,7 +49937,7 @@
         }), t.createVideoApiMiddleware = i;
         var o = n(372),
             a = r(o),
-            s = n(804),
+            s = n(805),
             u = n(356),
             l = new s.NullVideoAPI
     }, function(e, t) {
@@ -50076,11 +50094,11 @@
             u = r(s),
             l = n(179),
             c = r(l),
-            d = n(806),
+            d = n(807),
             f = n(180),
             p = n(641),
             h = n(182),
-            _ = n(652),
+            _ = n(691),
             v = new d.NullEventEmitter
     }, function(e, t) {
         "use strict";
@@ -50154,7 +50172,7 @@
         var o = n(342),
             a = r(o),
             s = n(185),
-            u = n(808),
+            u = n(809),
             l = n(410),
             c = new u.NullEmbedHost
     }, function(e, t) {
@@ -50232,7 +50250,7 @@
         }), t.createAnalyticsTrackerMiddleware = i;
         var o = n(350),
             a = r(o),
-            s = n(810),
+            s = n(811),
             u = new s.NullAnalyticsTracker
     }, function(e, t) {
         "use strict";
@@ -50460,7 +50478,7 @@
             s = n(117),
             u = r(s),
             l = n(200),
-            c = n(784),
+            c = n(785),
             d = n(224),
             f = n(183),
             p = n(162),
@@ -50607,10 +50625,10 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(814),
+            a = n(815),
             s = r(a),
-            u = n(779),
-            l = n(815),
+            u = n(780),
+            l = n(816),
             c = r(l);
         t.PlayerResizeManager = function() {
             function e(t) {
@@ -50981,10 +50999,10 @@
                 }
             }(),
             s = n(183),
-            u = n(652),
+            u = n(691),
             l = n(375),
             c = n(411),
-            d = n(656),
+            d = n(659),
             f = n(53),
             p = r(f),
             h = ["amazon_livestream"];
@@ -51083,9 +51101,9 @@
                 }
             }(),
             o = n(183),
-            a = n(793),
-            s = n(652),
-            u = n(656);
+            a = n(794),
+            s = n(691),
+            u = n(659);
         t.TwitchEverywhereManager = function() {
             function e(t) {
                 r(this, e), this.store = t, this.unsubs = [], this.unsubs.push((0, o.subscribe)(this.store, ["streamMetadata.channel"], this.onChannelChange.bind(this)))
@@ -51142,7 +51160,7 @@
             s = n(404),
             u = n(217),
             l = n(224),
-            c = n(784),
+            c = n(785),
             d = n(183),
             f = n(53),
             p = r(f),
@@ -51271,7 +51289,7 @@
             u = n(411),
             l = n(217),
             c = n(167),
-            d = n(784),
+            d = n(785),
             f = n(183),
             p = n(53),
             h = r(p),
@@ -51490,7 +51508,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            o = n(657),
+            o = n(660),
             a = n(200),
             s = "staff";
         t.UserManager = function() {
