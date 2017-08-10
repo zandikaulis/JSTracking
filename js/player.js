@@ -13639,7 +13639,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.09-232826+87fc252846d5a7a689a93bbaa66f447cc6163fa1",
+                    app_version: "2017.08.09-235429+50d2aea81fc3ba13e27d4b0773ec0d0f036c7179",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -20681,7 +20681,7 @@
             function T() {
                 var e = L,
                     t = D;
-                k ? (L = h.NETWORK_LOADING, D = v.HAVE_METADATA, P.emit(f.CAN_PLAY)) : M ? (L = h.NETWORK_LOADING, D = v.HAVE_NOTHING) : N && I ? (L = h.NETWORK_IDLE, D = v.HAVE_NOTHING) : (L = h.NETWORK_EMPTY, D = v.HAVE_NOTHING), L !== e && L === h.NETWORK_LOADING && P.emit(f.LOADSTART), D !== t && (D === v.HAVE_METADATA ? P.emit(f.LOADED_METADATA) : D === v.HAVE_NOTHING && P.emit(f.ENDED)), P.emit(m.CASTING_CHANGE, S())
+                k ? (L = h.NETWORK_LOADING, D = v.HAVE_METADATA, P.emit(f.CAN_PLAY)) : M ? (L = h.NETWORK_LOADING, D = v.HAVE_NOTHING) : N ? (L = h.NETWORK_IDLE, D = v.HAVE_NOTHING) : (L = h.NETWORK_EMPTY, D = v.HAVE_NOTHING), L !== e && L === h.NETWORK_LOADING && P.emit(f.LOADSTART), D !== t && (D === v.HAVE_METADATA ? P.emit(f.LOADED_METADATA) : D === v.HAVE_NOTHING && P.emit(f.ENDED)), P.emit(m.CASTING_CHANGE, S())
             }
 
             function S() {
@@ -24531,21 +24531,21 @@
         function o(e, t, n, r, i) {
             function o() {
                 var e = i;
-                u(), c(e), a(), r.showControls(d.initialControlsDelay), $(t).attr("data-branding", e.branding), $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showinfo", e.showInfo), P(), O.push(E()), O.push(T())
+                u(), c(e), a(), r.showControls(d.initialControlsDelay), $(t).attr("data-branding", e.branding), $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showinfo", e.showInfo), P(), O.push(b()), O.push(E()), O.push(T())
             }
 
             function a() {
-                y(n.getState().screenMode)
+                m(n.getState().screenMode)
             }
 
             function u() {
-                e.addEventListener(_.CASTING_CHANGE, P), e.addEventListener(v.SEEKING, w)
+                e.addEventListener(_.SEEKING, w)
             }
 
             function c(e) {
                 e.player !== l.PLAYER_FRONTPAGE && $(t).on("dblclick", ".js-control-fullscreen-overlay", function(e) {
-                    e.preventDefault(), b()
-                }), $(t).on("click", ".js-control-playpause-button", g), $(t).on("click", ".js-control-play-button", g), $(t).on("click", ".js-control-fullscreen", b), $(t).on("click", ".js-control-theatre", S), $(t).on("click", ".js-chromecast-button", function() {
+                    e.preventDefault(), g()
+                }), $(t).on("click", ".js-control-playpause-button", y), $(t).on("click", ".js-control-play-button", y), $(t).on("click", ".js-control-fullscreen", g), $(t).on("click", ".js-control-theatre", S), $(t).on("click", ".js-chromecast-button", function() {
                     var e = n.getState().chromecast.castingState;
                     "available" === e ? n.dispatch((0, p.startCast)()) : n.dispatch((0, p.stopCast)())
                 }), $(t).on("click", ".js-player-alert__close", function() {
@@ -24555,44 +24555,50 @@
                 })
             }
 
-            function y(e) {
+            function m(e) {
                 var n = e.isFullScreen,
                     r = e.canFullScreen;
                 $(t).attr("data-isfullscreen", n), $(t).attr("data-canfullscreen", r)
             }
 
-            function g() {
+            function y() {
                 var e = n.getState(),
                     t = e.playback,
                     r = e.analyticsTracker;
                 t.paused ? n.dispatch((0, h.play)()) : n.dispatch((0, h.pause)()), r.trackEvent("player_click_playpause")
             }
 
-            function b() {
+            function g() {
                 var e = n.getState(),
                     t = e.analyticsTracker,
                     r = e.screenMode;
                 t.trackEvent("player_click_fullscreen", {
                     action: !r.isFullScreen
-                }), n.dispatch((0, m.toggleFullScreen)())
+                }), n.dispatch((0, v.toggleFullScreen)())
             }
 
-            function E() {
+            function b() {
                 return (0, f.subscribe)(n, ["screenMode.isFullScreen", "screenMode.canFullScreen"], function(e) {
                     var t = e.screenMode;
-                    y(t)
+                    m(t)
                 })
             }
 
-            function T() {
+            function E() {
                 return (0, f.subscribe)(n, ["screenMode.isTheatreMode", "screenMode.canTheatreMode"], function(e) {
                     var t = e.screenMode;
                     C(t)
                 })
             }
 
+            function T() {
+                return (0, f.subscribe)(n, ["chromecast.castingState"], function() {
+                    P()
+                })
+            }
+
             function S() {
-                n.dispatch((0, m.toggleTheatreMode)()), n.getState().analyticsTracker.trackEvent("player_click_theater")
+                n.dispatch((0, v.toggleTheatreMode)()), n.getState().analyticsTracker.trackEvent("player_click_theater")
             }
 
             function C(e) {
@@ -24638,9 +24644,8 @@
             f = n(183),
             p = n(356),
             h = n(372),
-            _ = n(178),
-            v = n(179),
-            m = n(182)
+            _ = n(179),
+            v = n(182)
     }, function(e, t, n) {
         "use strict";
 
@@ -25817,7 +25822,7 @@
                     if (!(this._options.time || i.id || n.contentType !== b.CONTENT_MODE_VOD || r.isSeeked)) {
                         var o = (0, y.videoInfo)(n.videoId);
                         if (!r.userId) return o.then(function(t) {
-                            e._seekToResumeTimeLocal(t);
+                            e._seekToResumeTimeLocal(t)
                         });
                         var a = (0, v.getResumeTimes)(r.userId);
                         return Promise.all([o, a]).then(function(t) {
