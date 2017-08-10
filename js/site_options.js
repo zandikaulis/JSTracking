@@ -2493,6 +2493,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "d76c815d-2f36-4548-8d48-daa8174bb382": {
+            "name": "ios_clip_theatre_mode",
+            "v": 1800,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "d91cbc6b-1d6f-42ef-89b4-049176164067": {
             "name": "coview_with_predictions",
             "v": 1167,
