@@ -13697,7 +13697,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.10-194323+4140332e6f02ccaa22dc6d312d1471d88a3e25bb",
+                    app_version: "2017.08.10-220929+9d802fe66e1322cb747447529672cc3a0b92c3cc",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -49435,7 +49435,7 @@
                 case u.ACTION_SET_STREAM:
                     return (0, a.default)([s.VOD_RECOMMENDATION_SCREEN, s.VOD_RESTRICTED_SCREEN, s.COLLECTION_EMPTY_SCREEN], e[0]) ? e.slice(1) : e;
                 case l.ACTION_ERROR:
-                    return e[0] !== s.ERROR_SCREEN ? [s.ERROR_SCREEN].concat(e) : e;
+                    return (0, a.default)([s.ERROR_SCREEN, s.VOD_RESTRICTED_SCREEN], e[0]) ? e : [s.ERROR_SCREEN].concat(e);
                 case l.ACTION_CLEAR_ERROR:
                     return e[0] === s.ERROR_SCREEN ? e.slice(1) : e;
                 default:
@@ -51035,7 +51035,7 @@
                 }
             });
             var O = function() {
-                return "undefined" != typeof ResizeObserver ? ResizeObserver : P;
+                return "undefined" != typeof ResizeObserver ? ResizeObserver : P
             }();
             return O
         })
