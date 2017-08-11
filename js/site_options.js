@@ -1278,6 +1278,18 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "6cc85744-ded0-481a-a6ea-38c4b13cea64": {
+            "name": "ios_aax",
+            "v": 1805,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "active"
+            }]
+        },
         "6d07fedb-c0e6-4eae-9082-d4c100eade25": {
             "name": "android_aax",
             "v": 1752,
