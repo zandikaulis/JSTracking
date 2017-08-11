@@ -55,7 +55,7 @@ window.SiteOptions = {
         "other": "Other"
     },
     "default_blc_languages": ["ja", "ko"],
-    "disable_group_chat": null,
+    "disable_group_chat": false,
     "disable_follows_side_panel": false,
     "disable_following_directory": false,
     "new_chat_client": true,
