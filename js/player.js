@@ -12736,7 +12736,7 @@
             return new _.default({
                 defaults: (t = {}, i(t, E, "no"), i(t, T, "no"), i(t, S, "no"), i(t, C, "no"), i(t, w, "no"), i(t, P, "no"), i(t, O, "no"), i(t, A, "no"), i(t, k, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "control"), i(t, D, "1.8.10"), i(t, L, "no"), i(t, x, "no"), i(t, j, "keep"), i(t, U, "pad_control"), i(t, B, "no"), i(t, F, "no"), i(t, V, "control"), i(t, H, "no"), i(t, q, "control"), i(t, G, "control"), i(t, Y, "control"), t),
                 deviceID: e.deviceID,
-                overrides: (0, d.default)((n = {}, i(n, M, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), i(n, T, a(["US"])), i(n, S, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, P, a(["SE"])), i(n, O, a(["DK", "FI", "NL", "NO"])), i(n, A, a(["CA"])), i(n, k, a(["AU", "NZ"])), i(n, I, a(["BE"])), i(n, N, a(["PL"])), i(n, R, a(["AT", "CH", "ES", "IT", "PT"])), i(n, L, o("vca")), i(n, x, o("yes")), i(n, D, o("1.8.10+spd67")), i(n, F, o("yes")), i(n, B, o("yes")), i(n, q, o("show")), i(n, G, o("show")), n), JSON.parse(l.cookie.get("experiment_overrides", "{}"))),
+                overrides: (0, d.default)((n = {}, i(n, M, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), i(n, T, a(["US"])), i(n, S, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, P, a(["SE"])), i(n, O, a(["DK", "FI", "NL", "NO"])), i(n, A, a(["CA"])), i(n, k, a(["AU", "NZ"])), i(n, I, a(["BE"])), i(n, N, a(["PL"])), i(n, R, a(["AT", "CH", "ES", "IT", "PT"])), i(n, L, o("vca")), i(n, x, o("yes")), i(n, D, o("1.8.11")), i(n, F, o("yes")), i(n, B, o("yes")), i(n, q, o("show")), i(n, G, o("show")), n), JSON.parse(l.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
                 login: e.login,
                 provider: new m.default(m.default.SERVICE_URL),
@@ -13697,7 +13697,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.10-220929+9d802fe66e1322cb747447529672cc3a0b92c3cc",
+                    app_version: "2017.08.11-223516+123c5c3f2aef05f938d44a7c96376a7352809a5a",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -13926,7 +13926,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-780899.sjc01.hls.ttvnw.net/v1/playlist/Co7d-ibE2LjfFdVdVrQbYSq5Bb0QFbrxCQ3p7QVngCtXzeB38Jyfe2bhfqLZRDQ3I5Wl1ssRG8MqhkyQiC1R1n-CXx7k-2bJpPPAo25uhwqSwCIWiCC8k1jaKh_zw-Xc7wK0UvvsLy_x-E16Z3ohVpwfHhtn-rJ8FG4lCY_c5XU138Y69-Nqq4BrVASnlaF2zMp9J3cMPuEtPAeITgCFItHNEYJnoxBOHPSQ19krpRrNC5xV4PhUWOear7UjT5mAV9R-ROO5BLSZ8cMIms-k3OuTcYbcmEfO-QcvftiUO9o36IXOTtu3sBKhCI3pmjugMpp6XtP2v-kc9OACL446_2g9K2LrYs95vZpzIYLALLxN0BQoC6Ekr_--s80ZoZxpUQ_2D-Zsu6OWqxHnVgycnOjqPJlBd7-gj3KUT99yKwwKrZ1wU83-iF0xFvFKwvUCcf6m.m3u8"
+        t.trustedSpadeURI = "//video-edge-80e213.sjc01.hls.ttvnw.net/v1/playlist/CooLspOsLRItOiR_bh3y_obyCO4_DN8-38YBx9qTP14WcZI0ruAjhtrLhKU5bsr2I9195gf8jgHwBOTdNwu4OotjZ9Fmzseuz244AsFFBP66WFpTqghB6IjWvD3E4M9tUE0VoeKgcFn73kMvbCLhGfIgUOeR5T1K3XXP4-OYp1wNeGMr1cRiFOcjwHcMyQE5TGJi4IsRgkE-eWQeoLeGSzd_cv0GpbxRcS7ot2Ya5zLF94CDIszitkmrcIb50yOzg5sIIzqux6DwrW3Sf-nexBs0GoUIdogIHq_bvtLhaHn7Fnye27oC0_TRrXwI69-j_DthOL2ZoOhXt9_2RCWhwJhZzwj0Ge5FozD8139OzH796Iq8f_GvBHvsWWf4ZsNG8eH9uMlt_hIRJgHYCBGmfKm0gjcjG8D0Ryy2eRnqwedsAIcca9qOxAHKLNjQK-3p3dzL5gNscDScLy1.m3u8"
     }, function(e, t, n) {
         "use strict";
 
