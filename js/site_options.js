@@ -848,16 +848,13 @@ window.SiteOptions = {
         },
         "45d73059-3cea-436a-b41f-86bb05f845f2": {
             "name": "CVP May 18",
-            "v": 1701,
+            "v": 1807,
             "t": 1,
             "groups": [{
                 "weight": 5,
-                "value": "1.8.11+absctrl"
+                "value": "1.8.12+absctrl"
             }, {
-                "weight": 90,
-                "value": "1.8.11"
-            }, {
-                "weight": 5,
+                "weight": 95,
                 "value": "1.8.12"
             }]
         },
@@ -1280,7 +1277,7 @@ window.SiteOptions = {
         },
         "6cc85744-ded0-481a-a6ea-38c4b13cea64": {
             "name": "ios_aax",
-            "v": 1805,
+            "v": 1806,
             "t": 1,
             "groups": [{
                 "weight": 0,
