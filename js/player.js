@@ -12734,9 +12734,9 @@
         function u(e) {
             var t, n;
             return new _.default({
-                defaults: (t = {}, i(t, E, "no"), i(t, T, "no"), i(t, S, "no"), i(t, C, "no"), i(t, w, "no"), i(t, P, "no"), i(t, O, "no"), i(t, A, "no"), i(t, k, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "control"), i(t, D, "1.8.10"), i(t, L, "no"), i(t, x, "no"), i(t, j, "keep"), i(t, U, "pad_control"), i(t, B, "no"), i(t, F, "no"), i(t, V, "control"), i(t, H, "no"), i(t, q, "control"), i(t, G, "control"), i(t, Y, "control"), t),
+                defaults: (t = {}, i(t, E, "no"), i(t, T, "no"), i(t, S, "no"), i(t, C, "no"), i(t, w, "no"), i(t, P, "no"), i(t, O, "no"), i(t, A, "no"), i(t, k, "no"), i(t, I, "no"), i(t, N, "no"), i(t, R, "no"), i(t, M, "control"), i(t, D, "1.8.10"), i(t, L, "no"), i(t, x, "no"), i(t, j, "keep"), i(t, U, "pad_control"), i(t, B, "no"), i(t, F, "no"), i(t, V, "control"), i(t, H, "no"), i(t, q, "control"), i(t, G, "control"), i(t, Y, "control"), i(t, W, "2.0.0"), t),
                 deviceID: e.deviceID,
-                overrides: (0, d.default)((n = {}, i(n, M, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), i(n, T, a(["US"])), i(n, S, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, P, a(["SE"])), i(n, O, a(["DK", "FI", "NL", "NO"])), i(n, A, a(["CA"])), i(n, k, a(["AU", "NZ"])), i(n, I, a(["BE"])), i(n, N, a(["PL"])), i(n, R, a(["AT", "CH", "ES", "IT", "PT"])), i(n, L, o("vca")), i(n, x, o("yes")), i(n, D, o("1.8.11")), i(n, F, o("yes")), i(n, B, o("yes")), i(n, q, o("show")), i(n, G, o("show")), n), JSON.parse(l.cookie.get("experiment_overrides", "{}"))),
+                overrides: (0, d.default)((n = {}, i(n, M, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), i(n, T, a(["US"])), i(n, S, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, P, a(["SE"])), i(n, O, a(["DK", "FI", "NL", "NO"])), i(n, A, a(["CA"])), i(n, k, a(["AU", "NZ"])), i(n, I, a(["BE"])), i(n, N, a(["PL"])), i(n, R, a(["AT", "CH", "ES", "IT", "PT"])), i(n, L, o("vca")), i(n, x, o("yes")), i(n, D, o("1.8.11")), i(n, F, o("yes")), i(n, B, o("yes")), i(n, q, o("show")), i(n, G, o("show")), i(n, W, o("2.0.0")), n), JSON.parse(l.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
                 login: e.login,
                 provider: new m.default(m.default.SERVICE_URL),
@@ -12745,7 +12745,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.REALTIME_QOS = t.OFFLINE_EXPERIENCE = t.AUTO_SUGGEST_NOTIFICATION = t.BISMOL = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.HTML5_TOGGLE_REMOVAL = t.PINEAPPLE = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BROWNIES = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = u;
+        }), t.MEDIAPLAYER_VERSION_CONTROL = t.REALTIME_QOS = t.OFFLINE_EXPERIENCE = t.AUTO_SUGGEST_NOTIFICATION = t.BISMOL = t.CHOMPERZ = t.VIEW_WATCH_TOGETHER = t.OFFLINE_RECOMMENDATIONS = t.PADTIME = t.HTML5_TOGGLE_REMOVAL = t.PINEAPPLE = t.PLAYER_CORE_VER_CONTROL = t.MARKERS = t.BAKING_BROWNIES = t.BAKING_BREAD_I = t.BAKING_BREAD_H = t.BAKING_BREAD_G = t.BAKING_BREAD_F = t.BAKING_BREAD_E = t.BAKING_BREAD_D = t.BAKING_BREAD_C = t.BAKING_BREAD_B = t.BAKING_BREAD_A = t.BAKING_BREAD_UK = t.BAKING_BREAD_US = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = s, t.createClient = u;
         var l = n(253),
             c = n(117),
             d = r(c),
@@ -12782,7 +12782,8 @@
             H = t.BISMOL = "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5",
             q = t.AUTO_SUGGEST_NOTIFICATION = "74d6faab-1794-458a-a5f6-b92602254e9e",
             G = t.OFFLINE_EXPERIENCE = "6e2f439b-916a-40b7-b1be-e82b284fd0bb",
-            Y = t.REALTIME_QOS = "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98"
+            Y = t.REALTIME_QOS = "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98",
+            W = t.MEDIAPLAYER_VERSION_CONTROL = "ec70bd08-dbc8-4f48-9f60-d035fec3eb20"
     }, function(e, t, n) {
         function r(e) {
             var t = i(e);
@@ -13697,7 +13698,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.11-223516+123c5c3f2aef05f938d44a7c96376a7352809a5a",
+                    app_version: "2017.08.11-234214+6b8d19188bd0927796a1baee0c82b44b9cad6fcc",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -18695,9 +18696,9 @@
                         var e = this,
                             t = this.store.getState(),
                             n = t.experiments;
-                        return n.get(E.PLAYER_CORE_VER_CONTROL).then(function() {
+                        return n.get(E.MEDIAPLAYER_VERSION_CONTROL).then(function(t) {
                             return b.default.loadMediaPlayer({
-                                value: "2.0.0",
+                                value: t,
                                 logLevel: e._mediaPlayerLogLevel
                             })
                         })
