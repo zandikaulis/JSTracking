@@ -13700,7 +13700,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.14-200910+33ce70303536c691c06a91b5dfc008ba7515c9a0",
+                    app_version: "2017.08.14-211340+2291409c4b097340eb8da81124780a2d3bbfabaf",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -24069,7 +24069,7 @@
 
         function o(e) {
             var t = e.which || e.keyCode || e.charCode;
-            return e.key ? e.key : M[t]
+            return e.key ? e.key : L[t]
         }
 
         function a(e, t, n, r) {
@@ -24078,7 +24078,7 @@
                     i = n.getState().playback.duration,
                     o = e.getCurrentTime();
                 if (!r && (0, u.default)(i) && !e.getPaused()) {
-                    var s = a(o, t, O, i, e.getEnded());
+                    var s = a(o, t, A, i, e.getEnded());
                     s && e.setCurrentTime(s)
                 }
             }
@@ -24092,12 +24092,13 @@
                 var r = t.target || t.srcElement,
                     a = "INPUT" === r.tagName && "text" === $(r).attr("type"),
                     u = "TEXTAREA" === r.tagName,
-                    l = "true" === r.contentEditable;
-                if (!(a || u || l)) {
-                    var d = o(t),
-                        O = void 0,
-                        M = void 0;
-                    switch (d) {
+                    l = "true" === r.contentEditable,
+                    d = n.getState().ui.isMini;
+                if (!(a || u || l || d)) {
+                    var A = o(t),
+                        L = void 0,
+                        D = void 0;
+                    switch (A) {
                         case m:
                             s = !0;
                             break;
@@ -24111,27 +24112,28 @@
                             e.setMuted(!0);
                             break;
                         case T:
-                        case k:
-                            O = n.getState().playback.volume, M = Math.round(100 * Math.min(O + f.volumeStepAmount, 1)) / 100, n.dispatch((0, _.changeVolume)(M));
+                        case I:
+                            L = n.getState().playback.volume, D = Math.round(100 * Math.min(L + f.volumeStepAmount, 1)) / 100, n.dispatch((0, _.changeVolume)(D));
                             break;
                         case S:
-                        case I:
-                            O = Math.round(100 * n.getState().playback.volume) / 100, M = Math.round(100 * Math.max(O - f.volumeStepAmount, 0)) / 100, n.dispatch((0, _.changeVolume)(M));
+                        case N:
+                            L = Math.round(100 * n.getState().playback.volume) / 100, D = Math.round(100 * Math.max(L - f.volumeStepAmount, 0)) / 100, n.dispatch((0, _.changeVolume)(D));
                             break;
                         case E:
-                        case A:
+                        case k:
                             n.getState().collection.currentView === v.SIDEBAR_VIEW ? n.dispatch((0, p.closeCollectionSidebar)()) : c.isEmbed() && n.getState().screenMode.isTheatreMode && n.dispatch((0, h.setTheatreMode)(!1));
                             break;
                         case P:
+                        case O:
                             if (!s) return;
                             n.dispatch((0, h.toggleFullScreen)());
                             break;
                         case w:
-                        case R:
+                        case M:
                             i(f.hotkeySeekAmount);
                             break;
                         case C:
-                        case N:
+                        case R:
                             i(-f.hotkeySeekAmount);
                             break;
                         default:
@@ -24166,14 +24168,15 @@
             S = "ArrowDown",
             C = "ArrowLeft",
             w = "ArrowRight",
-            P = "KeyF",
-            O = .01,
-            A = "Esc",
-            k = "Up",
-            I = "Down",
-            N = "Left",
-            R = "Right",
-            M = Object.freeze({
+            P = "f",
+            O = "F",
+            A = .01,
+            k = "Esc",
+            I = "Up",
+            N = "Down",
+            R = "Left",
+            M = "Right",
+            L = Object.freeze({
                 17: m,
                 32: y,
                 33: g,
@@ -24554,7 +24557,7 @@
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
-                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
                     }
                 }
                 return function(t, n, r) {
