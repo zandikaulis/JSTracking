@@ -63,7 +63,7 @@
                 t.google ? t.google && M.dispatch((0, X.imaScriptLoaded)(!0)) : Fe.then(function() {
                     M.dispatch((0, X.imaScriptLoaded)(!0))
                 }).catch(function() {
-                    M.dispatch((0, X.imaScriptLoaded)(!1)), r.trackEvent(_.VIDEO_AD_REQUEST_ERROR, {
+                    M.dispatch((0, X.imaScriptLoaded)(!1)), r.trackEvent(_.AD_REQUEST_ERROR, {
                         reason: "ima load failed"
                     })
                 })
@@ -1952,7 +1952,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.AD_IMPRESSION = "video_ad_impression", t.AD_IMPRESSION_COMPLETE = "video_ad_impression_complete", t.AD_REQUEST = "video_ad_request", t.AD_REQUEST_DECLINED = "video_ad_request_declined", t.AD_REQUEST_ERROR = "video_ad_request_error", t.AD_REQUEST_RESPONSE = "video_ad_request_response", t.AD_SKIPPED = "video_ad_skipped", t.AD_ERROR = "video_ad_error", t.AD_LOADED = "video_ad_loaded", t.VIDEO_AD_REQUEST_ERROR = "video_ad_request_error", t.PLAYBACK_ERROR = "playback_error", t.AAX_AD_AUCTION = "video_ad_auction", t.AAX_AD_AUCTION_RESPONSE = "video_ad_auction_response", t.AAX_AD_AUCTION_ERROR = "video_ad_auction_error", t.AAX_AD_AUCTION_INIT_ERROR = "video_ad_auction_init_error"
+        t.AD_IMPRESSION = "video_ad_impression", t.AD_IMPRESSION_COMPLETE = "video_ad_impression_complete", t.AD_REQUEST = "video_ad_request", t.AD_REQUEST_DECLINED = "video_ad_request_declined", t.AD_REQUEST_ERROR = "video_ad_request_error", t.AD_REQUEST_RESPONSE = "video_ad_request_response", t.AD_SKIPPED = "video_ad_skipped", t.AD_ERROR = "video_ad_error", t.AD_LOADED = "video_ad_loaded", t.PLAYBACK_ERROR = "playback_error", t.AAX_AD_AUCTION = "video_ad_auction", t.AAX_AD_AUCTION_RESPONSE = "video_ad_auction_response", t.AAX_AD_AUCTION_ERROR = "video_ad_auction_error", t.AAX_AD_AUCTION_INIT_ERROR = "video_ad_auction_init_error"
     }, function(e, t, n) {
         "use strict";
 
@@ -3137,7 +3137,7 @@
                 return this
             }, a.trigger = o("emitEvent"), a.emit = function(e) {
                 var t = Array.prototype.slice.call(arguments, 1);
-                return this.emitEvent(e, t);
+                return this.emitEvent(e, t)
             }, a.setOnceReturnValue = function(e) {
                 return this._onceReturnValue = e, this
             }, a._getOnceReturnValue = function() {
@@ -13698,7 +13698,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.11-234214+6b8d19188bd0927796a1baee0c82b44b9cad6fcc",
+                    app_version: "2017.08.14-185048+35b767bd84aeec3e08bfcf7a025dc34311876692",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -13927,7 +13927,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-80e213.sjc01.hls.ttvnw.net/v1/playlist/CooLspOsLRItOiR_bh3y_obyCO4_DN8-38YBx9qTP14WcZI0ruAjhtrLhKU5bsr2I9195gf8jgHwBOTdNwu4OotjZ9Fmzseuz244AsFFBP66WFpTqghB6IjWvD3E4M9tUE0VoeKgcFn73kMvbCLhGfIgUOeR5T1K3XXP4-OYp1wNeGMr1cRiFOcjwHcMyQE5TGJi4IsRgkE-eWQeoLeGSzd_cv0GpbxRcS7ot2Ya5zLF94CDIszitkmrcIb50yOzg5sIIzqux6DwrW3Sf-nexBs0GoUIdogIHq_bvtLhaHn7Fnye27oC0_TRrXwI69-j_DthOL2ZoOhXt9_2RCWhwJhZzwj0Ge5FozD8139OzH796Iq8f_GvBHvsWWf4ZsNG8eH9uMlt_hIRJgHYCBGmfKm0gjcjG8D0Ryy2eRnqwedsAIcca9qOxAHKLNjQK-3p3dzL5gNscDScLy1.m3u8"
+        t.trustedSpadeURI = "//video-edge-498350.sjc01.hls.ttvnw.net/v1/playlist/ClQpryhQqGbqXmhll3zeMe0GQe5cUZOU5XPlj-vKPW0LOdmdl7Voz5kAoNa6U1mBK3NVCgH8B_E0LnNiQOO5Ozx40t4c0h0NWhqvPzYH4raG5_TP8og1wOSQbr5CaVpt-Tal6gtBkYcoI_u7TDKDs97XfzO36aTFQoQaS5WDrNrnS_3x8E6fL-9xi5nJ8Qe4glw9WhYTRleIbziuq0EjGOyJNv5JilM60iSCvxXEp-AddoSFiYKTqMEJzPNh2-ZIpbrIpGwsvpVPCf5sxNq-vAjgHzfki1DtQSOwtevuaZWaujlwLT-1q6OSBszSpOHILYVwGpNf2ZxaV3Nfkt_vp_3dnQ-0vGNYR39A0FW_gEE4BzENenp6svAsulpxwHhCvhQq9QkyMS2ozpsWx5A0ZAJ1SL3X_4AJmp9VJ_r7T325pdzvfTz8ZlhOtbR697U_c_DYZMmYe5DhG_uOoO-IA.m3u8"
     }, function(e, t, n) {
         "use strict";
 
