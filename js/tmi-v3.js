@@ -1101,12 +1101,6 @@
                     return room.isActive
                 })
             };
-            Connection.prototype._exitedRoomConn = function() {
-                var activeRooms = this._activeRoomConns();
-                if (activeRooms.length === 0 && this.cluster != "group") {
-                    this.close()
-                }
-            };
             Connection.prototype._onSocketConnected = function(data) {
                 this._logger.debug("Socket connected.");
                 if (this.isActive) {
@@ -1326,13 +1320,13 @@
             Connection.prototype._send = function(data) {
                 var sanitized = data;
                 for (var i = 0; i < INVALID_CHARS.length; ++i) {
-                    sanitized = sanitized.replace(INVALID_CHARS[i], "");
+                    sanitized = sanitized.replace(INVALID_CHARS[i], "")
                 }
                 this._logger.debug("Sending: " + sanitized);
                 this._socket.send(sanitized + SEND_SUFFIX, APPEND_NULL_BYTE);
                 if (this._opts.darklaunchConn) {
                     try {
-                        this._opts.darklaunchConn._send(data)
+                        this._opts.darklaunchConn._send(data);
                     } catch (err) {}
                 }
             };
@@ -2265,7 +2259,6 @@
                     case "PART":
                         if (ircMsg.sender === this._session.nickname) {
                             this._resetActiveState();
-                            this._connection._exitedRoomConn();
                             this._trigger("exited")
                         }
                         break;
@@ -3784,7 +3777,7 @@
             };
             FlashSocket.prototype._onFlashPlayerMissing = function() {
                 this._logger.critical("Flash Player Missing. (Version 0 or DOM load failure)");
-                this._flashMissing = true
+                this._flashMissing = true;
             };
             FlashSocket.prototype._onOldFlashVersion = function(reqVersion) {
                 this._logger.critical("FlashVersion too old. Current: " + swfobject.getFlashPlayerVersion + ", required: " + reqVersion);
