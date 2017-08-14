@@ -4613,7 +4613,7 @@
         function w(e) {
             return $.ajax({
                 method: "POST",
-                url: "/user/report",
+                url: "https://www.twitch.tv/user/report",
                 data: e
             })
         }
@@ -5226,7 +5226,8 @@
                                     c.call(this, o, u, this.listenerTree, 0)
                                 } else {
                                     if (o = this._events[e], "function" == typeof o) {
-                                        switch (this.event = e, s) {
+                                        switch (this.event = e,
+                                            s) {
                                             case 1:
                                                 o.call(this);
                                                 break;
@@ -6535,7 +6536,7 @@
                                     var t = e.source,
                                         r = e.data;
                                     if (t === n.iframe.contentWindow) try {
-                                        n.handleExtensionAction(r);
+                                        n.handleExtensionAction(r)
                                     } catch (e) {
                                         console.error("Caught Error in Message Handler: " + e.stack)
                                     }
@@ -10481,7 +10482,8 @@
                                     var t = F.getSeekingAmount();
                                     t += Math.abs(e - I), F.setSeekingAmount(t);
                                     var n;
-                                    I == e ? n = 0 : I > e ? n = -1 : e > I && (n = 1), F.setSeekingDirection(n), I = 0
+                                    I == e ? n = 0 : I > e ? n = -1 : e > I && (n = 1), F.setSeekingDirection(n),
+                                        I = 0
                                 },
                                 getSeekingDirection: function() {
                                     return parseInt(F.getLabel("ns_st_skd"))
@@ -11133,8 +11135,8 @@
                                     e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().isSeeking() ? e.getPlaylist().getClip().isCollectingSeekingTime() || (e.getPlaylist().getClip().setSeekingTimestamp(t), e.getPlaylist().getClip().setCollectingSeekingTime(!0)) : e.getPlaylist().getClip().incrementSeeks(), e.getPlaylist().getClip().isSeeking() || (e.getPlaylist().getClip().setSeeking(!0), e.getPlaylist().getClip().setCollectingSeekingTime(!0), e.getPlaylist().getClip().setSeekStartPosition(r), e.getPlaylist().getClip().setSeekingTimestamp(t))
                                 },
                                 onPause: function(t, n) {
-                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().incrementPauses(),
-                                        e.getPlaylist().getClip().incrementPauses()
+                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t),
+                                        e.getPlaylist().incrementPauses(), e.getPlaylist().getClip().incrementPauses()
                                 },
                                 onPlay: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
@@ -11923,8 +11925,8 @@
                             exportState: E,
                             importState: T
                         })
-                    }(M), M.PlayerEvents = u, M.InternalStates = l, M.ImplementationType = c,
-                    M
+                    }(M), M.PlayerEvents = u,
+                    M.InternalStates = l, M.ImplementationType = c, M
             }(), e.StreamingTag = e.StreamingTag || function() {
                 var n = e.StreamSense,
                     r = (e.StreamSense.PlayerEvents, e.StreamSense.InternalStates || null),
@@ -13698,7 +13700,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.14-185048+35b767bd84aeec3e08bfcf7a025dc34311876692",
+                    app_version: "2017.08.14-193032+ad3662dea186bde0f80c9e26c7378efe4afb78d8",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,

@@ -2529,6 +2529,21 @@ window.SiteOptions = {
                 "value": "experiment"
             }]
         },
+        "dadbbe2e-7a79-4d10-8d29-cbff8101ac30": {
+            "name": "clips_make_me",
+            "v": 1811,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }, {
+                "weight": 0,
+                "value": "variant2"
+            }]
+        },
         "dc251546-6da4-4db9-abae-2c1325e7dee6": {
             "name": "android_pipboy_browse_ccus",
             "v": 1543,
