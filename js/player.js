@@ -202,9 +202,12 @@
                     M.dispatch(Z.setStream(Z.TYPE_CHANNEL, e)), M.dispatch((0, ee.clearCollection)())
                 })
             }, y.setVideo = function(e) {
-                return f().then(function() {
-                    M.dispatch(Z.setStream(Z.TYPE_VIDEO, e)), M.dispatch((0, ee.clearCollection)())
-                })
+                if ("string" == typeof e) {
+                    var t = "v" !== e.charAt(0) ? "v" + e : e;
+                    return f().then(function() {
+                        M.dispatch(Z.setStream(Z.TYPE_VIDEO, t)), M.dispatch((0, ee.clearCollection)())
+                    })
+                }
             }, y.setCollection = function(e) {
                 var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
                 return M.dispatch((0, ee.requestCollection)(e, t))
@@ -13700,7 +13703,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.15-222413+492703b1a90567975c1610a50e2e501a92d7d130",
+                    app_version: "2017.08.15-225759+4d6e78105d359bc667f333365faff6b4ef386495",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
