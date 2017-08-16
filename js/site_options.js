@@ -1511,7 +1511,7 @@ window.SiteOptions = {
         },
         "8ab1d7cc-6c63-4105-a5d3-5d5bb926b5f6": {
             "name": "android_bits_purchase_webview",
-            "v": 1812,
+            "v": 1820,
             "t": 1,
             "groups": [{
                 "weight": 100,
