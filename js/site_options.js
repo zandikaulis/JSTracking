@@ -1275,6 +1275,18 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "6b6cb6bc-241d-4ef5-9c0f-0d2e6a38a88c": {
+            "name": "ios_live_channel_autoplay_iphone",
+            "v": 1821,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "6cc85744-ded0-481a-a6ea-38c4b13cea64": {
             "name": "ios_aax",
             "v": 1806,
