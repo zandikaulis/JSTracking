@@ -273,50 +273,50 @@
             V = n(353),
             H = n(323),
             q = n(344),
-            G = n(736),
+            G = n(738),
             Y = n(180),
-            W = n(754),
-            K = n(755),
+            W = n(756),
+            K = n(757),
             z = n(375),
-            Q = n(782),
+            Q = n(784),
             X = n(247),
             J = n(338),
             Z = r(J),
             ee = n(337),
-            te = n(769),
+            te = n(771),
             ne = r(te),
-            re = n(771),
+            re = n(773),
             ie = r(re),
             oe = n(335),
             ae = n(376),
             se = n(377),
             ue = n(182),
-            le = n(437),
+            le = n(436),
             ce = n(336),
             de = n(350),
             fe = n(179),
             pe = r(fe),
             he = n(200),
-            _e = n(812),
-            ve = n(765),
+            _e = n(814),
+            ve = n(767),
             me = n(333),
             ye = n(224),
-            ge = n(797),
+            ge = n(799),
             be = n(414),
             Ee = n(411),
-            Te = n(659),
-            Se = n(813),
-            Ce = n(814),
-            we = n(817),
-            Pe = n(818),
+            Te = n(658),
+            Se = n(815),
+            Ce = n(816),
+            we = n(819),
+            Pe = n(820),
             Ae = n(217),
-            Oe = n(612),
-            ke = n(819),
-            Ie = n(820),
-            Ne = n(821),
+            Oe = n(611),
+            ke = n(821),
+            Ie = n(822),
+            Ne = n(823),
             Re = n(176),
             Me = n(178),
-            Le = n(691),
+            Le = n(690),
             De = n(340),
             xe = n(183),
             je = n(185),
@@ -324,7 +324,7 @@
             Be = i(Ue);
         n(347).polyfill(), h.Dobbin.configure({
             Promise: Promise
-        }), n.p = w.playerHost + "/", n(822);
+        }), n.p = w.playerHost + "/", n(824);
         var Fe = Promise.resolve();
         window.google || (Fe = Promise.resolve($.ajax({
             url: "//imasdk.googleapis.com/js/sdkloader/ima3.js",
@@ -12951,7 +12951,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.16-203321+1f59d8d44cf1f840954387114d87b5c54198c607",
+                    app_version: "2017.08.16-230925+0c5ddcb2791a6cc05261f6bff643b6542022fba5",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -23572,106 +23572,113 @@
             return t.default = e, t
         }
 
-        function o(e, t, r, i, o, L, x) {
-            function U() {
-                var b = x;
-                $(t).addClass("player").addClass("theme--dark"), $(t).append(n(735));
-                var S = o.getState().playback.muted;
-                o.dispatch((0, A.initializeCaptionsSettings)(S)), o.dispatch((0, O.initializePlaybackSettings)()), o.dispatch((0, k.initializeSettings)()), ee(o), ie(o), re(o), te(o), J(o), Z(o), X(o), ne(o), B.default.render(j.default.createElement(y.Seekbar, {
+        function o(e, t, r, i, o, M, D) {
+            function j() {
+                var g = D;
+                $(t).addClass("player").addClass("theme--dark"), $(t).append(n(737));
+                var T = o.getState().playback.muted;
+                o.dispatch((0, P.initializeCaptionsSettings)(T)), o.dispatch((0, A.initializePlaybackSettings)()), o.dispatch((0, O.initializeSettings)()), te(o), oe(o), ie(o), ne(o), Z(o), ee(o), J(o), re(o), X(o), U.default.render(x.default.createElement(m.Seekbar, {
                     store: o,
                     seek: e.setCurrentTime.bind(e)
-                }), document.getElementById("js-player-seek")), B.default.render(j.default.createElement(T.VolumeSlider, {
+                }), document.getElementById("js-player-seek")), U.default.render(x.default.createElement(E.VolumeSlider, {
                     store: o
-                }), document.getElementById("js-player-volume")), B.default.render(j.default.createElement(E.MutedSegmentsAlert, {
+                }), document.getElementById("js-player-volume")), U.default.render(x.default.createElement(b.MutedSegmentsAlert, {
                     store: o
-                }), document.getElementById("js-player-alert-container")), B.default.render(j.default.createElement(F.Provider, {
+                }), document.getElementById("js-player-alert-container")), U.default.render(x.default.createElement(B.Provider, {
                     store: o
-                }, j.default.createElement(V.I18nextProvider, {
-                    i18n: H.I18N_INSTANCE
-                }, j.default.createElement(Q.InPlayerRecommendationsOverlay, null))), document.getElementById("js-player-recommendations-overlay")), B.default.render(j.default.createElement(F.Provider, {
+                }, x.default.createElement(F.I18nextProvider, {
+                    i18n: V.I18N_INSTANCE
+                }, x.default.createElement(z.InPlayerRecommendationsOverlay, null))), document.getElementById("js-player-recommendations-overlay")), U.default.render(x.default.createElement(B.Provider, {
                     store: o
-                }, j.default.createElement(V.I18nextProvider, {
-                    i18n: H.I18N_INSTANCE
-                }, j.default.createElement(g.Settings, null))), document.getElementById("js-settings")), L.hookUpForm(t), oe = new s.PlayerUIState(t, o), ae = new l.PlayerUIInfo(e, t, o, b), se = new c.PlayerUIStats(t, o), me = new d.PlayerUIRecommendations(t, o), ye = new w.PlayerUIError(t, o), ue = new f.PlayerUILeaveDialog(e, t, r, o, b), le = new _.PlayerUILang(t, o), ce = new p.PlayerUISubscribeOverlay(t, o), de = new h.PlayerUIResume(e, i, o, b), pe = new P.AgeRestrictionOverlay(t, e, o), he = new m.PlayerUIControlsDisplay(e, t, o), _e = new u.PlayerUIControls(e, t, o, he, b), ge = new N.AdOverlay(t, o), be = new R.CollectionOverlay(t, o), ve = new I.PlayerUIClipsEnabler(t, o, a.localStore, L), fe = new v.PlayerUIClosedCaption(o, t), $(t).attr("data-initializing", !0), e.addEventListener(D.PLAYER_INIT, function() {
+                }, x.default.createElement(F.I18nextProvider, {
+                    i18n: V.I18N_INSTANCE
+                }, x.default.createElement(y.Settings, null))), document.getElementById("js-settings")), M.hookUpForm(t), ae = new s.PlayerUIState(t, o), se = new l.PlayerUIInfo(e, t, o, g), me = new c.PlayerUIRecommendations(t, o), ye = new C.PlayerUIError(t, o), ue = new d.PlayerUILeaveDialog(e, t, r, o, g), le = new h.PlayerUILang(t, o), ce = new f.PlayerUISubscribeOverlay(t, o), de = new p.PlayerUIResume(e, i, o, g), pe = new w.AgeRestrictionOverlay(t, e, o), he = new v.PlayerUIControlsDisplay(e, t, o), _e = new u.PlayerUIControls(e, t, o, he, g), ge = new I.AdOverlay(t, o), be = new N.CollectionOverlay(t, o), ve = new k.PlayerUIClipsEnabler(t, o, a.localStore, M), fe = new _.PlayerUIClosedCaption(o, t), $(t).attr("data-initializing", !0), e.addEventListener(L.PLAYER_INIT, function() {
                     $(t).attr("data-initializing", !1)
                 })
             }
 
             function X(e) {
-                B.default.render(j.default.createElement(F.Provider, {
+                U.default.render(x.default.createElement(B.Provider, {
                     store: e
-                }, j.default.createElement(V.I18nextProvider, {
-                    i18n: H.I18N_INSTANCE
-                }, j.default.createElement(Y.TopBar, null))), document.getElementById("top-bar"))
+                }, x.default.createElement(F.I18nextProvider, {
+                    i18n: V.I18N_INSTANCE
+                }, x.default.createElement(Q.Stats, null))), document.getElementById("stats"))
             }
 
             function J(e) {
-                B.default.render(j.default.createElement(F.Provider, {
+                U.default.render(x.default.createElement(B.Provider, {
                     store: e
-                }, j.default.createElement(V.I18nextProvider, {
-                    i18n: H.I18N_INSTANCE
-                }, j.default.createElement(W.CollectionSidebar, null))), document.getElementById("js-collection-sidebar"))
+                }, x.default.createElement(F.I18nextProvider, {
+                    i18n: V.I18N_INSTANCE
+                }, x.default.createElement(G.TopBar, null))), document.getElementById("top-bar"))
             }
 
             function Z(e) {
-                B.default.render(j.default.createElement(F.Provider, {
+                U.default.render(x.default.createElement(B.Provider, {
                     store: e
-                }, j.default.createElement(V.I18nextProvider, {
-                    i18n: H.I18N_INSTANCE
-                }, j.default.createElement(K.CollectionEmptyOverlay, null))), document.getElementById("empty-collection-overlay"))
+                }, x.default.createElement(F.I18nextProvider, {
+                    i18n: V.I18N_INSTANCE
+                }, x.default.createElement(Y.CollectionSidebar, null))), document.getElementById("js-collection-sidebar"))
             }
 
             function ee(e) {
-                B.default.render(j.default.createElement(F.Provider, {
+                U.default.render(x.default.createElement(B.Provider, {
                     store: e
-                }, j.default.createElement(b.StreamStatus, null)), document.getElementById("stream-status"))
+                }, x.default.createElement(F.I18nextProvider, {
+                    i18n: V.I18N_INSTANCE
+                }, x.default.createElement(W.CollectionEmptyOverlay, null))), document.getElementById("empty-collection-overlay"))
             }
 
             function te(e) {
-                B.default.render(j.default.createElement(F.Provider, {
+                U.default.render(x.default.createElement(B.Provider, {
                     store: e
-                }, j.default.createElement(V.I18nextProvider, {
-                    i18n: H.I18N_INSTANCE
-                }, j.default.createElement(z.Experiment, {
-                    uuid: M.OFFLINE_EXPERIENCE,
-                    renderValue: "show"
-                }, j.default.createElement(q.FollowPanel, null)))), document.getElementById("js-follow-panel"))
+                }, x.default.createElement(g.StreamStatus, null)), document.getElementById("stream-status"))
             }
 
             function ne(e) {
-                B.default.render(j.default.createElement(F.Provider, {
+                U.default.render(x.default.createElement(B.Provider, {
                     store: e
-                }, j.default.createElement(V.I18nextProvider, {
-                    i18n: H.I18N_INSTANCE
-                }, j.default.createElement(z.Experiment, {
-                    uuid: M.OFFLINE_EXPERIENCE,
+                }, x.default.createElement(F.I18nextProvider, {
+                    i18n: V.I18N_INSTANCE
+                }, x.default.createElement(K.Experiment, {
+                    uuid: R.OFFLINE_EXPERIENCE,
                     renderValue: "show"
-                }, j.default.createElement(G.DeadLTVOverlay, null)))), document.getElementById("js-dead-ltv-overlay"))
+                }, x.default.createElement(H.FollowPanel, null)))), document.getElementById("js-follow-panel"))
             }
 
             function re(e) {
-                B.default.render(j.default.createElement(F.Provider, {
+                U.default.render(x.default.createElement(B.Provider, {
                     store: e
-                }, j.default.createElement(V.I18nextProvider, {
-                    i18n: H.I18N_INSTANCE
-                }, j.default.createElement(z.Experiment, {
-                    uuid: M.AUTO_SUGGEST_NOTIFICATION,
+                }, x.default.createElement(F.I18nextProvider, {
+                    i18n: V.I18N_INSTANCE
+                }, x.default.createElement(K.Experiment, {
+                    uuid: R.OFFLINE_EXPERIENCE,
                     renderValue: "show"
-                }, j.default.createElement(C.NotificationPopUpsWrapper, null)))), document.getElementById("js-notification-popup-container"))
+                }, x.default.createElement(q.DeadLTVOverlay, null)))), document.getElementById("js-dead-ltv-overlay"))
             }
 
             function ie(e) {
-                var t = document.getElementById("js-player-extension-root");
-                B.default.render(j.default.createElement(F.Provider, {
+                U.default.render(x.default.createElement(B.Provider, {
                     store: e
-                }, j.default.createElement(V.I18nextProvider, {
-                    i18n: H.I18N_INSTANCE
-                }, j.default.createElement(S.ExtensionsContainer, {
+                }, x.default.createElement(F.I18nextProvider, {
+                    i18n: V.I18N_INSTANCE
+                }, x.default.createElement(K.Experiment, {
+                    uuid: R.AUTO_SUGGEST_NOTIFICATION,
+                    renderValue: "show"
+                }, x.default.createElement(S.NotificationPopUpsWrapper, null)))), document.getElementById("js-notification-popup-container"))
+            }
+
+            function oe(e) {
+                var t = document.getElementById("js-player-extension-root");
+                U.default.render(x.default.createElement(B.Provider, {
+                    store: e
+                }, x.default.createElement(F.I18nextProvider, {
+                    i18n: V.I18N_INSTANCE
+                }, x.default.createElement(T.ExtensionsContainer, {
                     store: e
                 }))), t)
             }
-            var oe = void 0,
-                ae = void 0,
+            var ae = void 0,
                 se = void 0,
                 ue = void 0,
                 le = void 0,
@@ -23687,8 +23694,8 @@
                 ge = void 0,
                 be = void 0;
             this.destroy = function() {
-                oe.destroy(), ae.destroy(), se.destroy(), me.destroy(), ye.destroy(), ue.destroy(), le.destroy(), ce.destroy(), de.destroy(), he.destroy(), _e.destroy(), pe.destroy(), ve.destroy(), fe.destroy(), me.destroy(), ge.destroy(), be && be.destroy()
-            }, U()
+                ae.destroy(), se.destroy(), me.destroy(), ye.destroy(), ue.destroy(), le.destroy(), ce.destroy(), de.destroy(), he.destroy(), _e.destroy(), pe.destroy(), ve.destroy(), fe.destroy(), me.destroy(), ge.destroy(), be && be.destroy()
+            }, j()
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -23698,45 +23705,45 @@
             u = n(426),
             l = n(427),
             c = n(429),
-            d = n(430),
-            f = n(432),
+            d = n(431),
+            f = n(433),
             p = n(434),
-            h = n(435),
+            h = n(437),
             _ = n(438),
             v = n(439),
-            m = n(440),
-            y = n(443),
-            g = n(618),
+            m = n(442),
+            y = n(617),
+            g = n(647),
             b = n(648),
             E = n(649),
             T = n(650),
-            S = n(651),
+            S = n(661),
             C = n(662),
             w = n(663),
-            P = n(664),
-            A = n(361),
-            O = n(336),
-            k = n(641),
-            I = n(665),
+            P = n(361),
+            A = n(336),
+            O = n(640),
+            k = n(664),
+            I = n(666),
             N = n(667),
-            R = n(668),
-            M = n(255),
-            L = n(178),
-            D = i(L),
-            x = n(281),
-            j = r(x),
-            U = n(444),
-            B = r(U),
-            F = n(582),
-            V = n(315),
-            H = n(669),
-            q = n(688),
-            G = n(696),
-            Y = n(699),
-            W = n(711),
-            K = n(723),
-            z = n(642),
-            Q = n(725)
+            R = n(255),
+            M = n(178),
+            L = i(M),
+            D = n(281),
+            x = r(D),
+            j = n(443),
+            U = r(j),
+            B = n(581),
+            F = n(315),
+            V = n(668),
+            H = n(687),
+            q = n(695),
+            G = n(698),
+            Y = n(710),
+            W = n(722),
+            K = n(641),
+            z = n(724),
+            Q = n(734)
     }, function(e, t, n) {
         "use strict";
 
@@ -24210,86 +24217,6 @@
     }, function(e, t, n) {
         "use strict";
 
-        function r(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-        }
-
-        function i(e, t) {
-            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !t || "object" != typeof t && "function" != typeof t ? e : t
-        }
-
-        function o(e, t) {
-            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
-            e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.PlayerUIStats = void 0;
-        var a = function() {
-                function e(e, t) {
-                    for (var n = 0; n < t.length; n++) {
-                        var r = t[n];
-                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
-                    }
-                }
-                return function(t, n, r) {
-                    return n && e(t.prototype, n), r && e(t, r), t
-                }
-            }(),
-            s = n(410),
-            u = n(425);
-        t.PlayerUIStats = function(e) {
-            function t(e, n) {
-                r(this, t);
-                var o = i(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return o._store = n, o._root = e, $(o._root).on("click", ".js-stats-toggle", function(e) {
-                    e.preventDefault(), o._toggleStatsPopup()
-                }), $(o._root).on("click", ".js-stats-close", function(e) {
-                    e.preventDefault(), o._toggleStatsPopup()
-                }), o.subscribe(o._store, ["stream"], o.onStreamUpdate.bind(o)), o.subscribe(o._store, ["stats.videoStats"], o.updateStats.bind(o)), o.subscribe(o._store, ["stats.displayed"], o.displayStats.bind(o)), o
-            }
-            return o(t, e), a(t, [{
-                key: "onStreamUpdate",
-                value: function(e) {
-                    var t = e.stream;
-                    $(this._root).attr("data-content-stream", t.contentType)
-                }
-            }, {
-                key: "displayStats",
-                value: function(e) {
-                    var t = e.stats.displayed,
-                        n = this._store.getState(),
-                        r = n.lang,
-                        i = t ? "Hide Video Stats" : "Show Video Stats";
-                    $(".js-playback-stats", this._root).attr("data-state", t ? "on" : "off"), $(".js-stats-toggle-text", this._root).text(r.translate(i))
-                }
-            }, {
-                key: "updateStats",
-                value: function(e) {
-                    var t = e.stats.videoStats,
-                        n = this._store.getState(),
-                        r = n.stats.displayed;
-                    r && ($(".js-stat-buffer-size", this._root).text(t.bufferSize), $(".js-stat-display-resolution", this._root).text(t.displayResolution), $(".js-stat-skipped-frames", this._root).text(t.skippedFrames), $(".js-stat-fps", this._root).text(t.fps), $(".js-stat-hls-latency-broadcaster", this._root).text(t.hlsLatencyBroadcaster), $(".js-stat-hls-latency-encoder", this._root).text(t.hlsLatencyEncoder), $(".js-stat-memory-usage", this._root).text(t.memoryUsage), $(".js-stat-playback-rate", this._root).text(t.playbackRate), $(".js-stat-video-resolution", this._root).text(t.videoResolution), $(".js-stat-video-backend-version", this._root).text(t.backendVersion))
-                }
-            }, {
-                key: "_toggleStatsPopup",
-                value: function() {
-                    var e = this._store.getState().stats.displayed;
-                    this._store.dispatch(e ? (0, s.requestStatsDisabled)(this) : (0, s.requestStatsEnabled)(this)), this._store.dispatch((0, s.displayStats)(!e))
-                }
-            }]), t
-        }(u.UIStateSubscriber)
-    }, function(e, t, n) {
-        "use strict";
-
         function r(e) {
             return e && e.__esModule ? e : {
                 default: e
@@ -24342,7 +24269,7 @@
                 if (void 0 !== a) return a.call(r)
             },
             l = n(425),
-            c = n(431),
+            c = n(430),
             d = n(404),
             f = n(224),
             p = n(336),
@@ -24844,7 +24771,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.PlayerUILeaveDialog = o;
-        var a = n(433),
+        var a = n(432),
             s = i(a),
             u = n(168),
             l = r(u),
@@ -25082,13 +25009,13 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            c = n(436),
+            c = n(435),
             d = i(c),
             f = n(168),
             p = n(186),
             h = n(179),
             _ = r(h),
-            v = n(437),
+            v = n(436),
             m = n(411),
             y = n(200),
             g = n(167),
@@ -25142,8 +25069,7 @@
                         o = n.times[r.videoId],
                         a = n.streamTimes[e.broadcast_id],
                         s = i.duration;
-                    if (this._store.dispatch((0, v.setIsSeeked)(!0)),
-                        (0, d.default)(o) && o < s - f.cancelResumeAmount) this._player.setCurrentTime(o);
+                    if (this._store.dispatch((0, v.setIsSeeked)(!0)), (0, d.default)(o) && o < s - f.cancelResumeAmount) this._player.setCurrentTime(o);
                     else if ((0, d.default)(a) && a < s - f.cancelResumeAmount) {
                         var u = Math.max(0, a - f.livestreamResumePushback);
                         this._player.setCurrentTime(u)
@@ -25432,7 +25358,7 @@
                             var i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
                             $(e, t.$root).html(r.translate(n, i))
                         };
-                    i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-stats-toggle", "Show Video Stats"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"), i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-submit", "Submit"), i(".js-empty-collection-label", "This collection is empty."), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"), i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel");
+                    i(".js-mature-accept-label", "Start Watching"), i(".js-close-label", "Close"), i(".js-subscribe-label", "Subscribe"), i(".js-broadcast-down-label", "The broadcast is down."), i(".js-player-options-label", "Player Options"), i(".js-video-quality-label", "Video Quality"), i(".js-popout-player", "Popout Player"), i(".js-copy-url", "Copy Video URL at Current Time"), i(".js-report-issue-label", "Report Playback Issue"), i(".js-select-label", "Select"), i(".js-audio-video-stutter-label", "Audio and video stutter"), i(".js-video-stutter-label", "Video stutters, but audio is fine"), i(".js-video-black-label", "Video is completely black or doesn't load"), i(".js-audio-video-desync-label", "Audio and video aren't synced"), i(".js-fullscreen-not-working-label", "Fullscreen playback doesn't work"), i(".js-ad-too-loud-label", "Advertisement can't be muted or is too loud"), i(".js-ad-too-often-label", "Advertisement has played too many times"), i(".js-submit-label", "Submit"), i(".js-leave-feedback-label", "Leave feedback?"), i(".js-report-thanks-label", "Thanks for your report"), i(".js-coming-up-label", "Coming Up"), i(".js-now-playing-label", "Now playing: "), i(".js-broadcast-reload-label", "The player will automatically reload when the broadcast is back."), i(".js-menu-miniplayer .js-menu-header", "Mini Player"), i(".js-menu-html5 .js-menu-header", "HTML5 Player"), i(".js-menu-html5 .js-html5-feedback-link", "Give Feedback"), i(".js-html5-beta-popup-title", "HTML5 Player"), i(".js-html5-beta-popup-text", "You are now using our new HTML5 video player! Click the gear icon to adjust your settings and share feedback."), i(".js-mature-warning-label", "The broadcaster indicated that the channel is intended for mature audiences."), i(".js-age-gate-warning-label", "You must be 21 to view this content. Please enter your date of birth."), i(".js-age-gate-failed-once-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-locked-out-label", "Sorry, you must be over the age of 21 to view this content."), i(".js-age-gate-submit", "Submit"), i(".js-empty-collection-label", "This collection is empty."), i(".js-cc-label", "Closed Captioning"), i(".js-cc-modal-header", "Closed Caption Settings"), i(".js-cc-presets-tab", "Presets"), i(".js-cc-text-tab", "Text"), i(".js-cc-effects-tab", "Effects"), i(".js-cc-background-tab", "Background"), i(".js-cc-window-tab", "Window"), i(".js-cc-aa", "Aa"), i(".js-cc-font-label", "Font"), i('.js-cc-font-dropdown option[value="mono-serif"]', "Mono Serif"), i('.js-cc-font-dropdown option[value="prop-serif"]', "Serif"), i('.js-cc-font-dropdown option[value="mono-sans-serif"]', "Mono Sans-Serif"), i('.js-cc-font-dropdown option[value="prop-sans-serif"]', "Sans-Serif"), i('.js-cc-font-dropdown option[value="casual"]', "Casual"), i('.js-cc-font-dropdown option[value="cursive"]', "Cursive"), i('.js-cc-font-dropdown option[value="small-capitals"]', "Small Capitals"), i(".js-cc-position-label", "Position"), i('.js-cc-verticalPosition-dropdown option[value="bottom"]', "Bottom"), i('.js-cc-verticalPosition-dropdown option[value="top"]', "Top"), i(".js-cc-justification-label", "Alignment"), i('.js-cc-textAlign-dropdown option[value="center"]', "Center"), i('.js-cc-textAlign-dropdown option[value="left"]', "Left"), i('.js-cc-textAlign-dropdown option[value="right"]', "Right"), i(".js-cc-style-label", "Style"), i(".js-cc-edge-label", "Effect"), i(".js-cc-color-label", "Color"), i(".js-cc-size-label", "Size"), i(".js-cc-font-size", "A"), i(".js-cc-opacity-label", "Opacity"), i(".js-cc-opacity-solid", "Solid"), i(".js-cc-opacity-translucent", "Translucent"), i(".js-cc-opacity-semitransparent", "Semi-Transparent"), i(".js-cc-opacity-transparent", "Transparent"), i(".js-cc-opacity-flashing", "Flashing"), i(".js-upnext-label", "Up Next"), i(".js-cancelautoplay-label", "Cancel");
                     var o = function(e, n, i) {
                         $(e, t.$root).attr(n, r.translate(i))
                     };
@@ -25823,8 +25749,8 @@
             a = n(168),
             s = r(a),
             u = n(422),
-            l = n(441),
-            c = n(442),
+            l = n(440),
+            c = n(441),
             d = n(217),
             f = n(183);
         t.PlayerUIControlsDisplay = function() {
@@ -25951,18 +25877,18 @@
             d = r(c),
             f = n(265),
             p = r(f),
-            h = n(444),
+            h = n(443),
             _ = r(h),
-            v = n(582),
-            m = n(600),
-            y = n(602),
-            g = n(603),
-            b = n(604),
+            v = n(581),
+            m = n(599),
+            y = n(601),
+            g = n(602),
+            b = n(603),
             E = n(224),
             T = n(336),
-            S = n(608),
-            C = n(610),
-            w = n(611),
+            S = n(607),
+            C = n(609),
+            w = n(610),
             P = {
                 bufferLength: d.default.number,
                 currentTime: d.default.number,
@@ -26237,18 +26163,18 @@
         t.Seekbar = (0, v.connect)(A, O)(N)
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(445)
+        e.exports = n(444)
     }, function(e, t, n) {
         "use strict";
-        var r = n(446),
-            i = n(450),
-            o = n(573),
-            a = n(471),
-            s = n(468),
-            u = n(578),
-            l = n(579),
-            c = n(580),
-            d = n(581);
+        var r = n(445),
+            i = n(449),
+            o = n(572),
+            a = n(470),
+            s = n(467),
+            u = n(577),
+            l = n(578),
+            c = n(579),
+            d = n(580);
         n(287);
         i.inject();
         var f = {
@@ -26330,14 +26256,13 @@
 
         function c(e) {
             if (void 0 === e._hostNode ? d("33") : void 0, e._hostNode) return e._hostNode;
-            for (var t = []; !e._hostNode;) t.push(e),
-                e._hostParent ? void 0 : d("34"), e = e._hostParent;
+            for (var t = []; !e._hostNode;) t.push(e), e._hostParent ? void 0 : d("34"), e = e._hostParent;
             for (; t.length; e = t.pop()) s(e, e._hostNode);
             return e._hostNode
         }
-        var d = n(447),
-            f = n(448),
-            p = n(449),
+        var d = n(446),
+            f = n(447),
+            p = n(448),
             h = (n(291), f.ID_ATTRIBUTE_NAME),
             _ = p,
             v = "__reactInternalInstance$" + Math.random().toString(36).slice(2),
@@ -26366,7 +26291,7 @@
         function r(e, t) {
             return (e & t) === t
         }
-        var i = n(447),
+        var i = n(446),
             o = (n(291), {
                 MUST_USE_PROPERTY: 1,
                 HAS_BOOLEAN_VALUE: 4,
@@ -26433,35 +26358,36 @@
         "use strict";
 
         function r() {
-            S || (S = !0, y.EventEmitter.injectReactEventListener(m), y.EventPluginHub.injectEventPluginOrder(s), y.EventPluginUtils.injectComponentTree(f), y.EventPluginUtils.injectTreeTraversal(h), y.EventPluginHub.injectEventPluginsByName({
-                SimpleEventPlugin: T,
-                EnterLeaveEventPlugin: u,
-                ChangeEventPlugin: a,
-                SelectEventPlugin: E,
-                BeforeInputEventPlugin: o
-            }), y.HostComponent.injectGenericComponentClass(d), y.HostComponent.injectTextComponentClass(_), y.DOMProperty.injectDOMPropertyConfig(i), y.DOMProperty.injectDOMPropertyConfig(l), y.DOMProperty.injectDOMPropertyConfig(b), y.EmptyComponent.injectEmptyComponentFactory(function(e) {
-                return new p(e)
-            }), y.Updates.injectReconcileTransaction(g), y.Updates.injectBatchingStrategy(v), y.Component.injectEnvironment(c))
+            S || (S = !0, y.EventEmitter.injectReactEventListener(m),
+                y.EventPluginHub.injectEventPluginOrder(s), y.EventPluginUtils.injectComponentTree(f), y.EventPluginUtils.injectTreeTraversal(h), y.EventPluginHub.injectEventPluginsByName({
+                    SimpleEventPlugin: T,
+                    EnterLeaveEventPlugin: u,
+                    ChangeEventPlugin: a,
+                    SelectEventPlugin: E,
+                    BeforeInputEventPlugin: o
+                }), y.HostComponent.injectGenericComponentClass(d), y.HostComponent.injectTextComponentClass(_), y.DOMProperty.injectDOMPropertyConfig(i), y.DOMProperty.injectDOMPropertyConfig(l), y.DOMProperty.injectDOMPropertyConfig(b), y.EmptyComponent.injectEmptyComponentFactory(function(e) {
+                    return new p(e)
+                }), y.Updates.injectReconcileTransaction(g), y.Updates.injectBatchingStrategy(v), y.Component.injectEnvironment(c))
         }
-        var i = n(451),
-            o = n(452),
-            a = n(467),
-            s = n(480),
-            u = n(481),
-            l = n(486),
-            c = n(487),
-            d = n(500),
-            f = n(446),
-            p = n(544),
-            h = n(545),
-            _ = n(546),
-            v = n(547),
-            m = n(548),
-            y = n(551),
-            g = n(552),
-            b = n(560),
-            E = n(561),
-            T = n(562),
+        var i = n(450),
+            o = n(451),
+            a = n(466),
+            s = n(479),
+            u = n(480),
+            l = n(485),
+            c = n(486),
+            d = n(499),
+            f = n(445),
+            p = n(543),
+            h = n(544),
+            _ = n(545),
+            v = n(546),
+            m = n(547),
+            y = n(550),
+            g = n(551),
+            b = n(559),
+            E = n(560),
+            T = n(561),
             S = !1;
         e.exports = {
             inject: r
@@ -26624,11 +26550,11 @@
             var o = m.getPooled(P.beforeInput, t, n, r);
             return o.data = i, p.accumulateTwoPhaseDispatches(o), o
         }
-        var p = n(453),
-            h = n(460),
-            _ = n(461),
-            v = n(464),
-            m = n(466),
+        var p = n(452),
+            h = n(459),
+            _ = n(460),
+            v = n(463),
+            m = n(465),
             y = [9, 13, 27, 32],
             g = 229,
             b = h.canUseDOM && "CompositionEvent" in window,
@@ -26729,10 +26655,10 @@
         function f(e) {
             v(e, u)
         }
-        var p = n(454),
-            h = n(456),
-            _ = n(458),
-            v = n(459),
+        var p = n(453),
+            h = n(455),
+            _ = n(457),
+            v = n(458),
             m = (n(287), p.getListener),
             y = {
                 accumulateTwoPhaseDispatches: l,
@@ -26765,12 +26691,12 @@
                     return !1
             }
         }
-        var o = n(447),
-            a = n(455),
-            s = n(456),
-            u = n(457),
-            l = n(458),
-            c = n(459),
+        var o = n(446),
+            a = n(454),
+            s = n(455),
+            u = n(456),
+            l = n(457),
+            c = n(458),
             d = (n(291), {}),
             f = null,
             p = function(e, t) {
@@ -26879,7 +26805,7 @@
         function o(e, t, n) {
             l.registrationNameModules[e] ? a("100", e) : void 0, l.registrationNameModules[e] = t, l.registrationNameDependencies[e] = t.eventTypes[n].dependencies
         }
-        var a = n(447),
+        var a = n(446),
             s = (n(291), null),
             u = {},
             l = {
@@ -26979,8 +26905,8 @@
         function d(e) {
             return !!e._dispatchListeners
         }
-        var f, p, h = n(447),
-            _ = n(457),
+        var f, p, h = n(446),
+            _ = n(456),
             v = (n(291), n(287), {
                 injectComponentTree: function(e) {
                     f = e
@@ -27049,7 +26975,7 @@
         function r(e, t) {
             return null == t ? i("30") : void 0, null == e ? t : Array.isArray(e) ? Array.isArray(t) ? (e.push.apply(e, t), e) : (e.push(t), e) : Array.isArray(t) ? [e].concat(t) : [e, t]
         }
-        var i = n(447);
+        var i = n(446);
         n(291);
         e.exports = r
     }, function(e, t) {
@@ -27077,8 +27003,8 @@
             this._root = e, this._startText = this.getText(), this._fallbackText = null
         }
         var i = n(283),
-            o = n(462),
-            a = n(463);
+            o = n(461),
+            a = n(462);
         i(r.prototype, {
             destructor: function() {
                 this._root = null, this._startText = null, this._fallbackText = null
@@ -27101,7 +27027,7 @@
         }), o.addPoolingTo(r), e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(447),
+        var r = n(446),
             i = (n(291), function(e) {
                 var t = this;
                 if (t.instancePool.length) {
@@ -27158,7 +27084,7 @@
         function r() {
             return !o && i.canUseDOM && (o = "textContent" in document.documentElement ? "textContent" : "innerText"), o
         }
-        var i = n(460),
+        var i = n(459),
             o = null;
         e.exports = r
     }, function(e, t, n) {
@@ -27167,7 +27093,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(465),
+        var i = n(464),
             o = {
                 data: null
             };
@@ -27187,7 +27113,7 @@
             return u ? this.isDefaultPrevented = a.thatReturnsTrue : this.isDefaultPrevented = a.thatReturnsFalse, this.isPropagationStopped = a.thatReturnsFalse, this
         }
         var i = n(283),
-            o = n(462),
+            o = n(461),
             a = n(288),
             s = (n(287), "function" == typeof Proxy, ["dispatchConfig", "_targetInst", "nativeEvent", "isDefaultPrevented", "isPropagationStopped", "_dispatchListeners", "_dispatchInstances"]),
             u = {
@@ -27235,7 +27161,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(465),
+        var i = n(464),
             o = {
                 data: null
             };
@@ -27326,16 +27252,16 @@
                 }
             }
         }
-        var E = n(454),
-            T = n(453),
-            S = n(460),
-            C = n(446),
-            w = n(468),
-            P = n(465),
-            A = n(476),
-            O = n(477),
-            k = n(478),
-            I = n(479),
+        var E = n(453),
+            T = n(452),
+            S = n(459),
+            C = n(445),
+            w = n(467),
+            P = n(464),
+            A = n(475),
+            O = n(476),
+            k = n(477),
+            I = n(478),
             N = {
                 change: {
                     phasedRegistrationNames: {
@@ -27411,13 +27337,13 @@
         function l(e, t) {
             E.isBatchingUpdates ? void 0 : c("125"), g.enqueue(e, t), b = !0
         }
-        var c = n(447),
+        var c = n(446),
             d = n(283),
-            f = n(469),
-            p = n(462),
-            h = n(470),
-            _ = n(471),
-            v = n(475),
+            f = n(468),
+            p = n(461),
+            h = n(469),
+            _ = n(470),
+            v = n(474),
             m = (n(291), []),
             y = 0,
             g = f.getPooled(),
@@ -27487,8 +27413,8 @@
         function r(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
-        var i = n(447),
-            o = n(462),
+        var i = n(446),
+            o = n(461),
             a = (n(291), function() {
                 function e(t) {
                     r(this, e), this._callbacks = null, this._contexts = null, this._arg = t
@@ -27527,8 +27453,8 @@
         function r() {
             i.attachRefs(this, this._currentElement)
         }
-        var i = n(472),
-            o = (n(474), n(287), {
+        var i = n(471),
+            o = (n(473), n(287), {
                 mountComponent: function(e, t, n, i, o, a) {
                     var s = e.mountComponent(t, n, i, o, a);
                     return e._currentElement && null != e._currentElement.ref && t.getReactMountReady().enqueue(r, e), s
@@ -27561,7 +27487,7 @@
         function i(e, t, n) {
             "function" == typeof e ? e(null) : o.removeComponentAsRefFrom(t, e, n)
         }
-        var o = n(473),
+        var o = n(472),
             a = {};
         a.attachRefs = function(e, t) {
             if (null !== t && "object" == typeof t) {
@@ -27587,7 +27513,7 @@
         function r(e) {
             return !(!e || "function" != typeof e.attachRef || "function" != typeof e.detachRef)
         }
-        var i = n(447),
+        var i = n(446),
             o = (n(291), {
                 addComponentAsRefTo: function(e, t, n) {
                     r(n) ? void 0 : i("119"), n.attachRef(t, e)
@@ -27607,7 +27533,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(447),
+        var r = n(446),
             i = (n(291), {}),
             o = {
                 reinitializeTransaction: function() {
@@ -27688,7 +27614,7 @@
             var t;
             return e && (t = r(e) ? "" + e.checked : e.value), t
         }
-        var u = n(446),
+        var u = n(445),
             l = {
                 _getTrackerFromNode: function(e) {
                     return i(u.getInstanceFromNode(e))
@@ -27769,7 +27695,7 @@
             }
             return !r && i && "wheel" === e && (r = document.implementation.hasFeature("Events.wheel", "3.0")), r
         }
-        var i, o = n(460);
+        var i, o = n(459);
         o.canUseDOM && (i = document.implementation && document.implementation.hasFeature && document.implementation.hasFeature("", "") !== !0), e.exports = r
     }, function(e, t) {
         "use strict";
@@ -27802,9 +27728,9 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(453),
-            i = n(446),
-            o = n(482),
+        var r = n(452),
+            i = n(445),
+            o = n(481),
             a = {
                 mouseEnter: {
                     registrationName: "onMouseEnter",
@@ -27848,9 +27774,9 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(483),
-            o = n(484),
-            a = n(485),
+        var i = n(482),
+            o = n(483),
+            a = n(484),
             s = {
                 screenX: null,
                 screenY: null,
@@ -27883,8 +27809,8 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(465),
-            o = n(477),
+        var i = n(464),
+            o = n(476),
             a = {
                 view: function(e) {
                     if (e.view) return e.view;
@@ -27931,7 +27857,7 @@
         e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(448),
+        var r = n(447),
             i = r.injection.MUST_USE_PROPERTY,
             o = r.injection.HAS_BOOLEAN_VALUE,
             a = r.injection.HAS_NUMERIC_VALUE,
@@ -28102,8 +28028,8 @@
         e.exports = l
     }, function(e, t, n) {
         "use strict";
-        var r = n(488),
-            i = n(499),
+        var r = n(487),
+            i = n(498),
             o = {
                 processChildrenUpdates: i.dangerouslyProcessChildrenUpdates,
                 replaceNodeWithMarkup: r.dangerouslyReplaceNodeWithMarkup
@@ -28153,11 +28079,11 @@
                 i = e.nextSibling;
             i === t ? n && _(r, document.createTextNode(n), i) : n ? (h(i, n), u(r, i, t)) : u(r, e, t)
         }
-        var c = n(489),
-            d = n(495),
-            f = (n(446), n(474), n(492)),
-            p = n(491),
-            h = n(493),
+        var c = n(488),
+            d = n(494),
+            f = (n(445), n(473), n(491)),
+            p = n(490),
+            h = n(492),
             _ = f(function(e, t, n) {
                 e.insertBefore(t, n)
             }),
@@ -28230,10 +28156,10 @@
                 toString: u
             }
         }
-        var c = n(490),
-            d = n(491),
-            f = n(492),
-            p = n(493),
+        var c = n(489),
+            d = n(490),
+            f = n(491),
+            p = n(492),
             h = 1,
             _ = 11,
             v = "undefined" != typeof document && "number" == typeof document.documentMode || "undefined" != typeof navigator && "string" == typeof navigator.userAgent && /\bEdge\/\d/.test(navigator.userAgent),
@@ -28251,11 +28177,11 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r, i = n(460),
-            o = n(490),
+        var r, i = n(459),
+            o = n(489),
             a = /^[ \r\n\t\f]/,
             s = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/,
-            u = n(492),
+            u = n(491),
             l = u(function(e, t) {
                 if (e.namespaceURI !== o.svg || "innerHTML" in e) e.innerHTML = t;
                 else {
@@ -28286,9 +28212,9 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(460),
-            i = n(494),
-            o = n(491),
+        var r = n(459),
+            i = n(493),
+            o = n(490),
             a = function(e, t) {
                 if (t) {
                     var n = e.firstChild;
@@ -28341,10 +28267,10 @@
         e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(447),
-            i = n(489),
-            o = n(460),
-            a = n(496),
+        var r = n(446),
+            i = n(488),
+            o = n(459),
+            a = n(495),
             s = n(288),
             u = (n(291), {
                 dangerouslyReplaceNodeWithMarkup: function(e, t) {
@@ -28377,9 +28303,9 @@
             for (var f = Array.from(n.childNodes); n.lastChild;) n.removeChild(n.lastChild);
             return f
         }
-        var o = n(460),
-            a = n(497),
-            s = n(498),
+        var o = n(459),
+            a = n(496),
+            s = n(497),
             u = n(291),
             l = o.canUseDOM ? document.createElement("div") : null,
             c = /^\s*<(\w+)/;
@@ -28411,7 +28337,7 @@
         function r(e) {
             return a ? void 0 : o(!1), f.hasOwnProperty(e) || (e = "*"), s.hasOwnProperty(e) || ("*" === e ? a.innerHTML = "<link />" : a.innerHTML = "<" + e + "></" + e + ">", s[e] = !a.firstChild), s[e] ? f[e] : null
         }
-        var i = n(460),
+        var i = n(459),
             o = n(291),
             a = i.canUseDOM ? document.createElement("div") : null,
             s = {},
@@ -28442,8 +28368,8 @@
         }), e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(488),
-            i = n(446),
+        var r = n(487),
+            i = n(445),
             o = {
                 dangerouslyProcessChildrenUpdates: function(e, t) {
                     var n = i.getNodeFromInstance(e);
@@ -28552,28 +28478,28 @@
             var t = e.type;
             p(t), this._currentElement = e, this._tag = t.toLowerCase(), this._namespaceURI = null, this._renderedChildren = null, this._previousStyle = null, this._previousStyleCopy = null, this._hostNode = null, this._hostParent = null, this._rootNodeID = 0, this._domID = 0, this._hostContainerInfo = null, this._wrapperState = null, this._topLevelWrapper = null, this._flags = 0
         }
-        var v = n(447),
+        var v = n(446),
             m = n(283),
-            y = n(501),
-            g = n(503),
-            b = n(489),
-            E = n(490),
-            T = n(448),
-            S = n(511),
-            C = n(454),
-            w = n(455),
-            P = n(513),
-            A = n(449),
-            O = n(446),
-            k = n(516),
-            I = n(519),
-            N = n(520),
-            R = n(521),
-            M = (n(474), n(522)),
-            L = n(540),
-            D = (n(288), n(494)),
-            x = (n(291), n(478), n(529), n(476)),
-            j = (n(543), n(287), A),
+            y = n(500),
+            g = n(502),
+            b = n(488),
+            E = n(489),
+            T = n(447),
+            S = n(510),
+            C = n(453),
+            w = n(454),
+            P = n(512),
+            A = n(448),
+            O = n(445),
+            k = n(515),
+            I = n(518),
+            N = n(519),
+            R = n(520),
+            M = (n(473), n(521)),
+            L = n(539),
+            D = (n(288), n(493)),
+            x = (n(291), n(477), n(528), n(475)),
+            j = (n(542), n(287), A),
             U = C.deleteListener,
             B = O.getNodeFromInstance,
             F = P.listenTo,
@@ -28856,8 +28782,8 @@
         }, m(_.prototype, _.Mixin, M.Mixin), e.exports = _
     }, function(e, t, n) {
         "use strict";
-        var r = n(446),
-            i = n(502),
+        var r = n(445),
+            i = n(501),
             o = {
                 focusDOMComponent: function() {
                     i(r.getNodeFromInstance(this))
@@ -28875,11 +28801,11 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(504),
-            i = n(460),
-            o = (n(474), n(505), n(507)),
-            a = n(508),
-            s = n(510),
+        var r = n(503),
+            i = n(459),
+            o = (n(473), n(504), n(506)),
+            a = n(507),
+            s = n(509),
             u = (n(287), s(function(e) {
                 return a(e)
             })),
@@ -29040,7 +28966,7 @@
         function r(e) {
             return i(e.replace(o, "ms-"))
         }
-        var i = n(506),
+        var i = n(505),
             o = /^-ms-/;
         e.exports = r
     }, function(e, t) {
@@ -29066,7 +28992,7 @@
             }
             return t + "px"
         }
-        var i = n(504),
+        var i = n(503),
             o = (n(287), i.isUnitlessNumber);
         e.exports = r
     }, function(e, t, n) {
@@ -29075,7 +29001,7 @@
         function r(e) {
             return i(e).replace(o, "-ms-")
         }
-        var i = n(509),
+        var i = n(508),
             o = /^ms-/;
         e.exports = r
     }, function(e, t) {
@@ -29106,8 +29032,8 @@
         function i(e, t) {
             return null == t || e.hasBooleanValue && !t || e.hasNumericValue && isNaN(t) || e.hasPositiveNumericValue && t < 1 || e.hasOverloadedBooleanValue && t === !1
         }
-        var o = n(448),
-            a = (n(446), n(474), n(512)),
+        var o = n(447),
+            a = (n(445), n(473), n(511)),
             s = (n(287), new RegExp("^[" + o.ATTRIBUTE_NAME_START_CHAR + "][" + o.ATTRIBUTE_NAME_CHAR + "]*$")),
             u = {},
             l = {},
@@ -29179,7 +29105,7 @@
         function r(e) {
             return '"' + i(e) + '"'
         }
-        var i = n(494);
+        var i = n(493);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -29188,11 +29114,11 @@
             return Object.prototype.hasOwnProperty.call(e, _) || (e[_] = p++, d[e[_]] = {}), d[e[_]]
         }
         var i, o = n(283),
-            a = n(455),
-            s = n(514),
-            u = n(484),
-            l = n(515),
-            c = n(478),
+            a = n(454),
+            s = n(513),
+            u = n(483),
+            l = n(514),
+            c = n(477),
             d = {},
             f = !1,
             p = 0,
@@ -29307,7 +29233,7 @@
         function r(e) {
             i.enqueueEvents(e), i.processEventQueue(!1)
         }
-        var i = n(454),
+        var i = n(453),
             o = {
                 handleTopLevel: function(e, t, n, o) {
                     var a = i.extractEvents(e, t, n, o);
@@ -29332,7 +29258,7 @@
                 if (t.hasOwnProperty(n) && n in u) return s[e] = t[n];
             return ""
         }
-        var o = n(460),
+        var o = n(459),
             a = {
                 animationend: r("Animation", "AnimationEnd"),
                 animationiteration: r("Animation", "AnimationIteration"),
@@ -29371,12 +29297,12 @@
             }
             return n
         }
-        var a = n(447),
+        var a = n(446),
             s = n(283),
-            u = n(511),
-            l = n(517),
-            c = n(446),
-            d = n(468),
+            u = n(510),
+            l = n(516),
+            c = n(445),
+            d = n(467),
             f = (n(291), n(287), {
                 getHostProps: function(e, t) {
                     var n = l.getValue(t),
@@ -29465,8 +29391,8 @@
             }
             return ""
         }
-        var s = n(447),
-            u = n(518),
+        var s = n(446),
+            u = n(517),
             l = n(303),
             c = n(282),
             d = l(c.isValidElement),
@@ -29525,8 +29451,8 @@
         }
         var i = n(283),
             o = n(282),
-            a = n(446),
-            s = n(520),
+            a = n(445),
+            s = n(519),
             u = (n(287), !1),
             l = {
                 mountWrapper: function(e, t, n) {
@@ -29601,9 +29527,9 @@
             return this._rootNodeID && (this._wrapperState.pendingUpdate = !0), l.asap(r, this), n
         }
         var a = n(283),
-            s = n(517),
-            u = n(446),
-            l = n(468),
+            s = n(516),
+            u = n(445),
+            l = n(467),
             c = (n(287), !1),
             d = {
                 getHostProps: function(e, t) {
@@ -29647,11 +29573,11 @@
                 n = s.executeOnChange(t, e);
             return l.asap(r, this), n
         }
-        var o = n(447),
+        var o = n(446),
             a = n(283),
-            s = n(517),
-            u = n(446),
-            l = n(468),
+            s = n(516),
+            u = n(445),
+            l = n(467),
             c = (n(291), n(287), {
                 getHostProps: function(e, t) {
                     null != t.dangerouslySetInnerHTML ? o("91") : void 0;
@@ -29759,11 +29685,11 @@
         function l(e, t) {
             d.processChildrenUpdates(e, t)
         }
-        var c = n(447),
-            d = n(523),
-            f = (n(524), n(474), n(296), n(471)),
-            p = n(525),
-            h = (n(288), n(539)),
+        var c = n(446),
+            d = n(522),
+            f = (n(523), n(473), n(296), n(470)),
+            p = n(524),
+            h = (n(288), n(538)),
             _ = (n(291), {
                 Mixin: {
                     _reconcilerInstantiateChildren: function(e, t, n) {
@@ -29850,7 +29776,7 @@
         e.exports = _
     }, function(e, t, n) {
         "use strict";
-        var r = n(447),
+        var r = n(446),
             i = (n(291), !1),
             o = {
                 replaceNodeWithMarkup: null,
@@ -29887,10 +29813,10 @@
                 var i = void 0 === e[n];
                 null != t && i && (e[n] = o(t, !0))
             }
-            var i = n(471),
-                o = n(526),
-                a = (n(534), n(530)),
-                s = n(535);
+            var i = n(470),
+                o = n(525),
+                a = (n(533), n(529)),
+                s = n(534);
             n(287);
             "undefined" != typeof t && t.env, 1;
             var u = {
@@ -29958,12 +29884,12 @@
             } else "string" == typeof e || "number" == typeof e ? n = c.createInstanceForText(e) : a("131", typeof e);
             return n._mountIndex = 0, n._mountImage = null, n
         }
-        var a = n(447),
+        var a = n(446),
             s = n(283),
-            u = n(527),
-            l = n(531),
-            c = n(532),
-            d = (n(533), n(291), n(287), function(e) {
+            u = n(526),
+            l = n(530),
+            c = n(531),
+            d = (n(532), n(291), n(287), function(e) {
                 this.construct(e)
             });
         s(d.prototype, u, {
@@ -29983,18 +29909,18 @@
         function a(e) {
             return !(!e.prototype || !e.prototype.isPureReactComponent)
         }
-        var s = n(447),
+        var s = n(446),
             u = n(283),
             l = n(282),
-            c = n(523),
+            c = n(522),
             d = n(296),
-            f = n(457),
-            p = n(524),
-            h = (n(474), n(528)),
-            _ = n(471),
+            f = n(456),
+            p = n(523),
+            h = (n(473), n(527)),
+            _ = n(470),
             v = n(290),
-            m = (n(291), n(529)),
-            y = n(530),
+            m = (n(291), n(528)),
+            y = n(529),
             g = (n(287), {
                 ImpureClass: 0,
                 PureClass: 1,
@@ -30187,7 +30113,7 @@
         e.exports = E
     }, function(e, t, n) {
         "use strict";
-        var r = n(447),
+        var r = n(446),
             i = n(282),
             o = (n(291), {
                 HOST: 0,
@@ -30256,7 +30182,7 @@
         function o(e) {
             return e instanceof u
         }
-        var a = n(447),
+        var a = n(446),
             s = (n(291), null),
             u = null,
             l = {
@@ -30350,10 +30276,10 @@
         function o(e, t, n) {
             return null == e ? 0 : i(e, "", t, n)
         }
-        var a = n(447),
-            s = (n(296), n(536)),
-            u = n(537),
-            l = (n(291), n(534)),
+        var a = n(446),
+            s = (n(296), n(535)),
+            u = n(536),
+            l = (n(291), n(533)),
             c = (n(287), "."),
             d = ":";
         e.exports = o
@@ -30616,7 +30542,7 @@
                 var n = {};
                 return o(e, r, n), n
             }
-            var o = (n(534), n(535));
+            var o = (n(533), n(534));
             n(287);
             "undefined" != typeof t && t.env, 1, e.exports = i
         }).call(t, n(222))
@@ -30627,9 +30553,9 @@
             this.reinitializeTransaction(), this.renderToStaticMarkup = e, this.useCreateElement = !1, this.updateQueue = new s(this)
         }
         var i = n(283),
-            o = n(462),
-            a = n(475),
-            s = (n(474), n(541)),
+            o = n(461),
+            a = n(474),
+            s = (n(473), n(540)),
             u = [],
             l = {
                 enqueue: function() {}
@@ -30657,7 +30583,7 @@
         }
 
         function i(e, t) {}
-        var o = n(542),
+        var o = n(541),
             a = (n(287), function() {
                 function e(t) {
                     r(this, e), this.transaction = t
@@ -30697,9 +30623,9 @@
             }
             return n
         }
-        var a = n(447),
-            s = (n(296), n(524)),
-            u = (n(474), n(468)),
+        var a = n(446),
+            s = (n(296), n(523)),
+            u = (n(473), n(467)),
             l = (n(291), n(287), {
                 isMounted: function(e) {
                     var t = s.get(e);
@@ -30744,8 +30670,8 @@
     }, function(e, t, n) {
         "use strict";
         var r = n(283),
-            i = n(489),
-            o = n(446),
+            i = n(488),
+            o = n(445),
             a = function(e) {
                 this._currentElement = null, this._hostNode = null, this._hostParent = null, this._hostContainerInfo = null, this._domID = 0
             };
@@ -30812,7 +30738,7 @@
             for (l = 0; l < s.length; l++) n(s[l], "bubbled", i);
             for (l = u.length; l-- > 0;) n(u[l], "captured", o)
         }
-        var u = n(447);
+        var u = n(446);
         n(291);
         e.exports = {
             isAncestor: i,
@@ -30823,13 +30749,13 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(447),
+        var r = n(446),
             i = n(283),
-            o = n(488),
-            a = n(489),
-            s = n(446),
-            u = n(494),
-            l = (n(291), n(543), function(e) {
+            o = n(487),
+            a = n(488),
+            s = n(445),
+            u = n(493),
+            l = (n(291), n(542), function(e) {
                 this._currentElement = e, this._stringText = "" + e, this._hostNode = null, this._hostParent = null, this._domID = 0, this._mountIndex = 0, this._closingComment = null, this._commentNodes = null
             });
         i(l.prototype, {
@@ -30882,8 +30808,8 @@
             this.reinitializeTransaction()
         }
         var i = n(283),
-            o = n(468),
-            a = n(475),
+            o = n(467),
+            a = n(474),
             s = n(288),
             u = {
                 initialize: s,
@@ -30937,13 +30863,13 @@
             e(t)
         }
         var s = n(283),
-            u = n(549),
-            l = n(460),
-            c = n(462),
-            d = n(446),
-            f = n(468),
-            p = n(477),
-            h = n(550);
+            u = n(548),
+            l = n(459),
+            c = n(461),
+            d = n(445),
+            f = n(467),
+            p = n(476),
+            h = n(549);
         s(i.prototype, {
             destructor: function() {
                 this.topLevelType = null, this.nativeEvent = null, this.ancestors.length = 0
@@ -31026,14 +30952,14 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(448),
-            i = n(454),
-            o = n(456),
-            a = n(523),
-            s = n(531),
-            u = n(513),
-            l = n(532),
-            c = n(468),
+        var r = n(447),
+            i = n(453),
+            o = n(455),
+            a = n(522),
+            s = n(530),
+            u = n(512),
+            l = n(531),
+            c = n(467),
             d = {
                 Component: a.injection,
                 DOMProperty: r.injection,
@@ -31052,12 +30978,12 @@
             this.reinitializeTransaction(), this.renderToStaticMarkup = !1, this.reactMountReady = o.getPooled(null), this.useCreateElement = e
         }
         var i = n(283),
-            o = n(469),
-            a = n(462),
-            s = n(513),
-            u = n(553),
-            l = (n(474), n(475)),
-            c = n(542),
+            o = n(468),
+            a = n(461),
+            s = n(512),
+            u = n(552),
+            l = (n(473), n(474)),
+            c = n(541),
             d = {
                 initialize: u.getSelectionInformation,
                 close: u.restoreSelection
@@ -31107,10 +31033,10 @@
         function r(e) {
             return o(document.documentElement, e)
         }
-        var i = n(554),
-            o = n(556),
-            a = n(502),
-            s = n(559),
+        var i = n(553),
+            o = n(555),
+            a = n(501),
+            s = n(558),
             u = {
                 hasSelectionCapabilities: function(e) {
                     var t = e && e.nodeName && e.nodeName.toLowerCase();
@@ -31231,9 +31157,9 @@
                 }
             }
         }
-        var u = n(460),
-            l = n(555),
-            c = n(463),
+        var u = n(459),
+            l = n(554),
+            c = n(462),
             d = u.canUseDOM && "selection" in document && !("getSelection" in window),
             f = {
                 getOffsets: d ? i : o,
@@ -31274,7 +31200,7 @@
         function r(e, t) {
             return !(!e || !t) && (e === t || !i(e) && (i(t) ? r(e, t.parentNode) : "contains" in e ? e.contains(t) : !!e.compareDocumentPosition && !!(16 & e.compareDocumentPosition(t))))
         }
-        var i = n(557);
+        var i = n(556);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -31282,7 +31208,7 @@
         function r(e) {
             return i(e) && 3 == e.nodeType
         }
-        var i = n(558);
+        var i = n(557);
         e.exports = r
     }, function(e, t) {
         "use strict";
@@ -31609,14 +31535,14 @@
             }
             return null
         }
-        var o = n(453),
-            a = n(460),
-            s = n(446),
-            u = n(553),
-            l = n(465),
-            c = n(559),
-            d = n(479),
-            f = n(529),
+        var o = n(452),
+            a = n(459),
+            s = n(445),
+            u = n(552),
+            l = n(464),
+            c = n(558),
+            d = n(478),
+            f = n(528),
             p = a.canUseDOM && "documentMode" in document && document.documentMode <= 11,
             h = {
                 select: {
@@ -31673,23 +31599,23 @@
         function i(e) {
             return "button" === e || "input" === e || "select" === e || "textarea" === e
         }
-        var o = n(447),
-            a = n(549),
-            s = n(453),
-            u = n(446),
-            l = n(563),
-            c = n(564),
-            d = n(465),
-            f = n(565),
-            p = n(566),
-            h = n(482),
-            _ = n(569),
-            v = n(570),
-            m = n(571),
-            y = n(483),
-            g = n(572),
+        var o = n(446),
+            a = n(548),
+            s = n(452),
+            u = n(445),
+            l = n(562),
+            c = n(563),
+            d = n(464),
+            f = n(564),
+            p = n(565),
+            h = n(481),
+            _ = n(568),
+            v = n(569),
+            m = n(570),
+            y = n(482),
+            g = n(571),
             b = n(288),
-            E = n(567),
+            E = n(566),
             T = (n(291), {}),
             S = {};
         ["abort", "animationEnd", "animationIteration", "animationStart", "blur", "canPlay", "canPlayThrough", "click", "contextMenu", "copy", "cut", "doubleClick", "drag", "dragEnd", "dragEnter", "dragExit", "dragLeave", "dragOver", "dragStart", "drop", "durationChange", "emptied", "encrypted", "ended", "error", "focus", "input", "invalid", "keyDown", "keyPress", "keyUp", "load", "loadedData", "loadedMetadata", "loadStart", "mouseDown", "mouseMove", "mouseOut", "mouseOver", "mouseUp", "paste", "pause", "play", "playing", "progress", "rateChange", "reset", "scroll", "seeked", "seeking", "stalled", "submit", "suspend", "timeUpdate", "touchCancel", "touchEnd", "touchMove", "touchStart", "transitionEnd", "volumeChange", "waiting", "wheel"].forEach(function(e) {
@@ -31824,7 +31750,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(465),
+        var i = n(464),
             o = {
                 animationName: null,
                 elapsedTime: null,
@@ -31837,7 +31763,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(465),
+        var i = n(464),
             o = {
                 clipboardData: function(e) {
                     return "clipboardData" in e ? e.clipboardData : window.clipboardData
@@ -31850,7 +31776,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(483),
+        var i = n(482),
             o = {
                 relatedTarget: null
             };
@@ -31861,10 +31787,10 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(483),
-            o = n(567),
-            a = n(568),
-            s = n(485),
+        var i = n(482),
+            o = n(566),
+            a = n(567),
+            s = n(484),
             u = {
                 key: a,
                 location: null,
@@ -31908,7 +31834,7 @@
             }
             return "keydown" === e.type || "keyup" === e.type ? a[e.keyCode] || "Unidentified" : ""
         }
-        var i = n(567),
+        var i = n(566),
             o = {
                 Esc: "Escape",
                 Spacebar: " ",
@@ -31968,7 +31894,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(482),
+        var i = n(481),
             o = {
                 dataTransfer: null
             };
@@ -31979,8 +31905,8 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(483),
-            o = n(485),
+        var i = n(482),
+            o = n(484),
             a = {
                 touches: null,
                 targetTouches: null,
@@ -31998,7 +31924,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(465),
+        var i = n(464),
             o = {
                 propertyName: null,
                 elapsedTime: null,
@@ -32011,7 +31937,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(482),
+        var i = n(481),
             o = {
                 deltaX: function(e) {
                     return "deltaX" in e ? e.deltaX : "wheelDeltaX" in e ? -e.wheelDeltaX : 0
@@ -32082,24 +32008,24 @@
             var t = d(e);
             return t ? t._hostContainerInfo._topLevelWrapper : null
         }
-        var p = n(447),
-            h = n(489),
-            _ = n(448),
+        var p = n(446),
+            h = n(488),
+            _ = n(447),
             v = n(282),
-            m = n(513),
-            y = (n(296), n(446)),
-            g = n(574),
-            b = n(575),
-            E = n(470),
-            T = n(524),
-            S = (n(474), n(576)),
-            C = n(471),
-            w = n(542),
-            P = n(468),
+            m = n(512),
+            y = (n(296), n(445)),
+            g = n(573),
+            b = n(574),
+            E = n(469),
+            T = n(523),
+            S = (n(473), n(575)),
+            C = n(470),
+            w = n(541),
+            P = n(467),
             A = n(290),
-            O = n(526),
-            k = (n(291), n(491)),
-            I = n(530),
+            O = n(525),
+            k = (n(291), n(490)),
+            I = n(529),
             N = (n(287), _.ID_ATTRIBUTE_NAME),
             R = _.ROOT_ATTRIBUTE_NAME,
             M = 1,
@@ -32209,7 +32135,7 @@
             };
             return n
         }
-        var i = (n(543), 9);
+        var i = (n(542), 9);
         e.exports = r
     }, function(e, t) {
         "use strict";
@@ -32220,7 +32146,7 @@
         e.exports = n
     }, function(e, t, n) {
         "use strict";
-        var r = n(577),
+        var r = n(576),
             i = /\/?>/,
             o = /^<\!\-\-/,
             a = {
@@ -32262,10 +32188,10 @@
             var t = a.get(e);
             return t ? (t = s(t), t ? o.getNodeFromInstance(t) : null) : void("function" == typeof e.render ? i("44") : i("45", Object.keys(e)))
         }
-        var i = n(447),
-            o = (n(296), n(446)),
-            a = n(524),
-            s = n(580);
+        var i = n(446),
+            o = (n(296), n(445)),
+            a = n(523),
+            s = n(579);
         n(291), n(287);
         e.exports = r
     }, function(e, t, n) {
@@ -32276,11 +32202,11 @@
                 (t = e._renderedNodeType) === i.COMPOSITE;) e = e._renderedComponent;
             return t === i.HOST ? e._renderedComponent : t === i.EMPTY ? null : void 0
         }
-        var i = n(528);
+        var i = n(527);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(573);
+        var r = n(572);
         e.exports = r.renderSubtreeIntoContainer
     }, function(e, t, n) {
         "use strict";
@@ -32291,9 +32217,9 @@
             }
         }
         t.__esModule = !0, t.connect = t.Provider = void 0;
-        var i = n(583),
+        var i = n(582),
             o = r(i),
-            a = n(586),
+            a = n(585),
             s = r(a);
         t.Provider = o.default, t.connect = s.default
     }, function(e, t, n) {
@@ -32329,9 +32255,9 @@
         var s = n(281),
             u = n(311),
             l = r(u),
-            c = n(584),
+            c = n(583),
             d = r(c),
-            f = n(585),
+            f = n(584),
             p = (r(f), function(e) {
                 function t(n, r) {
                     i(this, t);
@@ -32545,17 +32471,17 @@
         };
         t.default = l;
         var d = n(281),
-            f = n(584),
+            f = n(583),
             p = r(f),
-            h = n(587),
+            h = n(586),
             _ = r(h),
-            v = n(588),
+            v = n(587),
             m = r(v),
-            y = n(585),
+            y = n(584),
             g = (r(y), n(212)),
             b = (r(g), n(317)),
             E = r(b),
-            T = n(599),
+            T = n(598),
             S = r(T),
             C = function(e) {
                 return {}
@@ -32594,7 +32520,7 @@
             }
         }
         t.__esModule = !0, t.default = r;
-        var i = n(589)
+        var i = n(588)
     }, function(e, t, n) {
         "use strict";
 
@@ -32604,17 +32530,17 @@
             }
         }
         t.__esModule = !0, t.compose = t.applyMiddleware = t.bindActionCreators = t.combineReducers = t.createStore = void 0;
-        var i = n(590),
+        var i = n(589),
             o = r(i),
-            a = n(594),
+            a = n(593),
             s = r(a),
-            u = n(596),
+            u = n(595),
             l = r(u),
-            c = n(597),
+            c = n(596),
             d = r(c),
-            f = n(598),
+            f = n(597),
             p = r(f),
-            h = n(595);
+            h = n(594);
         r(h);
         t.createStore = o.default, t.combineReducers = s.default, t.bindActionCreators = l.default, t.applyMiddleware = d.default, t.compose = p.default
     }, function(e, t, n) {
@@ -32712,13 +32638,13 @@
         t.__esModule = !0, t.ActionTypes = void 0, t.default = i;
         var o = n(212),
             a = r(o),
-            s = n(591),
+            s = n(590),
             u = r(s),
             l = t.ActionTypes = {
                 INIT: "@@redux/INIT"
             }
     }, function(e, t, n) {
-        e.exports = n(592)
+        e.exports = n(591)
     }, function(e, t, n) {
         (function(e, r) {
             "use strict";
@@ -32731,7 +32657,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            var o, a = n(593),
+            var o, a = n(592),
                 s = i(a);
             o = "undefined" != typeof self ? self : "undefined" != typeof window ? window : "undefined" != typeof e ? e : r;
             var u = (0, s.default)(o);
@@ -32809,9 +32735,9 @@
             }
         }
         t.__esModule = !0, t.default = a;
-        var s = n(590),
+        var s = n(589),
             u = n(212),
-            l = (r(u), n(595));
+            l = (r(u), n(594));
         r(l)
     }, function(e, t) {
         "use strict";
@@ -32882,7 +32808,7 @@
             return e
         };
         t.default = i;
-        var a = n(598),
+        var a = n(597),
             s = r(a)
     }, function(e, t) {
         "use strict";
@@ -32932,7 +32858,7 @@
             s = r(a),
             u = n(311),
             l = r(u),
-            c = n(601),
+            c = n(600),
             d = {
                 duration: l.default.number,
                 mutedSegments: l.default.arrayOf(l.default.shape({
@@ -32984,7 +32910,7 @@
             o = r(i),
             a = n(311),
             s = r(a),
-            u = n(601),
+            u = n(600),
             l = {
                 animate: s.default.bool,
                 bufferLength: s.default.number.isRequired,
@@ -33100,10 +33026,10 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(605),
+            f = n(604),
             p = r(f),
-            h = n(606),
-            _ = n(607),
+            h = n(605),
+            _ = n(606),
             v = n(120),
             m = r(v),
             y = {
@@ -33538,7 +33464,7 @@
             o = r(i),
             a = n(311),
             s = r(a),
-            u = n(601),
+            u = n(600),
             l = {
                 animate: s.default.bool,
                 className: s.default.string,
@@ -33638,7 +33564,7 @@
             c = i(l),
             d = n(321),
             f = r(d),
-            p = n(609),
+            p = n(608),
             h = 148,
             _ = {
                 duration: c.default.number,
@@ -33899,9 +33825,9 @@
             v = i(_),
             m = n(321),
             y = r(m),
-            g = n(609),
-            b = n(601),
-            E = n(612),
+            g = n(608),
+            b = n(600),
+            E = n(611),
             T = {
                 currentTime: v.default.number,
                 duration: v.default.number,
@@ -34048,11 +33974,11 @@
             }(),
             o = n(183),
             a = n(224),
-            s = n(613),
-            u = n(614),
-            l = n(615),
-            c = n(616),
-            d = n(617),
+            s = n(612),
+            u = n(613),
+            l = n(614),
+            c = n(615),
+            d = n(616),
             f = n(255);
         t.MARKER_TYPE_GAME_CHANGE = c.TYPE_GAME_CHANGE, t.MARKER_TYPE_GAME_METADATA = d.TYPE_GAME_METADATA, t.TimelineMetadataManager = function() {
             function e(t) {
@@ -34497,12 +34423,12 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(619),
+            f = n(618),
             p = r(f),
-            h = n(582),
-            _ = n(620),
-            v = n(622),
-            m = n(625),
+            h = n(581),
+            _ = n(619),
+            v = n(621),
+            m = n(624),
             y = n(414),
             g = n(335),
             b = {
@@ -34652,7 +34578,7 @@
             }(),
             u = n(317),
             l = n(281),
-            c = n(444);
+            c = n(443);
         e.exports = function(e) {
             var t = e.displayName || e.name,
                 n = function(t) {
@@ -34740,9 +34666,9 @@
             d = r(c),
             f = n(120),
             p = r(f),
-            h = n(582),
+            h = n(581),
             _ = n(315),
-            v = n(621),
+            v = n(620),
             m = t.QUALITY_CHANGE_DURATION = 5e3,
             y = {
                 availableQualities: d.default.array.isRequired,
@@ -34901,8 +34827,8 @@
             o = r(i),
             a = n(311),
             s = r(a),
-            u = n(623),
-            l = n(624),
+            u = n(622),
+            l = n(623),
             c = n(314),
             d = r(c),
             f = {
@@ -35113,12 +35039,12 @@
             d = r(c),
             f = n(53),
             p = r(f),
-            h = n(626),
-            _ = n(635),
-            v = n(638),
-            m = n(643),
-            y = n(645),
-            g = n(646),
+            h = n(625),
+            _ = n(634),
+            v = n(637),
+            m = n(642),
+            y = n(644),
+            g = n(645),
             b = t.IDENTIFIER_MAIN_MENU = "main menu",
             E = t.IDENTIFIER_QUALITY_MENU = "quality menu",
             T = t.IDENTIFIER_ADVANCED_MENU = "advanced menu",
@@ -35241,9 +35167,9 @@
             d = r(c),
             f = n(120),
             p = r(f),
-            h = n(582),
-            _ = n(627),
-            v = n(634),
+            h = n(581),
+            _ = n(626),
+            v = n(633),
             m = n(372),
             y = n(321),
             g = n(224),
@@ -35437,15 +35363,15 @@
             c = r(l),
             d = n(311),
             f = r(d),
-            p = n(628),
+            p = n(627),
             h = r(p),
             _ = n(321),
             v = n(314),
             m = r(v),
             y = n(315),
-            g = n(625),
-            b = n(623),
-            E = n(632),
+            g = n(624),
+            b = n(622),
+            E = n(631),
             T = t.COPY_URL_FEEDBACK_DELAY = 2e3,
             S = {
                 canChangePlaybackSpeed: f.default.bool,
@@ -35703,7 +35629,7 @@
         t.MainMenu = (0, y.translate)()(B)
     }, function(e, t, n) {
         "use strict";
-        var r = n(629),
+        var r = n(628),
             i = r.CopyToClipboard;
         e.exports = i
     }, function(e, t, n) {
@@ -35764,7 +35690,7 @@
             }(),
             c = n(281),
             d = r(c),
-            f = n(630),
+            f = n(629),
             p = r(f);
         t.CopyToClipboard = function(e) {
             function t() {
@@ -35823,7 +35749,7 @@
             }
             return d
         }
-        var o = n(631),
+        var o = n(630),
             a = "Copy to clipboard: #{key}, Enter";
         e.exports = i
     }, function(e, t) {
@@ -35896,8 +35822,8 @@
             f = n(314),
             p = r(f),
             h = n(315),
-            _ = n(625),
-            v = n(633),
+            _ = n(624),
+            v = n(632),
             m = {
                 currentSpeed: d.default.number.isRequired,
                 onMenuTransition: d.default.func,
@@ -36017,7 +35943,7 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(623),
+            f = n(622),
             p = n(314),
             h = r(p),
             _ = {
@@ -36115,8 +36041,8 @@
             o = r(i),
             a = n(311),
             s = r(a),
-            u = n(582),
-            l = n(636),
+            u = n(581),
+            l = n(635),
             c = n(335),
             d = n(414),
             f = n(350),
@@ -36208,8 +36134,8 @@
             f = n(314),
             p = r(f),
             h = n(315),
-            _ = n(625),
-            v = n(637),
+            _ = n(624),
+            v = n(636),
             m = {
                 availableQualities: d.default.arrayOf(d.default.shape({
                     group: d.default.string
@@ -36328,7 +36254,7 @@
             d = r(c),
             f = n(314),
             p = r(f),
-            h = n(623),
+            h = n(622),
             _ = {
                 isActive: d.default.bool,
                 qualityObj: d.default.shape({
@@ -36423,16 +36349,16 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(582),
-            p = n(639),
+            f = n(581),
+            p = n(638),
             h = n(351),
             _ = n(344),
             v = n(217),
             m = n(410),
-            y = n(641),
+            y = n(640),
             g = n(372),
             b = n(323),
-            E = n(642),
+            E = n(641),
             T = n(255),
             S = {
                 isCursePlayer: d.default.bool.isRequired,
@@ -36594,9 +36520,9 @@
             f = n(314),
             p = r(f),
             h = n(315),
-            _ = n(625),
-            v = n(640),
-            m = n(623),
+            _ = n(624),
+            v = n(639),
+            m = n(622),
             y = {
                 html5PlayerEnabled: d.default.bool.isRequired,
                 html5ToggleEnabled: d.default.bool.isRequired,
@@ -36858,7 +36784,7 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(582),
+            f = n(581),
             p = {
                 uuid: d.default.string.isRequired,
                 renderValue: d.default.string.isRequired,
@@ -36957,8 +36883,8 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(582),
-            p = n(644),
+            f = n(581),
+            p = n(643),
             h = n(372),
             _ = n(414),
             v = {
@@ -37069,7 +36995,7 @@
             f = n(314),
             p = r(f),
             h = n(315),
-            _ = n(625),
+            _ = n(624),
             v = {
                 t: d.default.func.isRequired,
                 onReportIssueSubmit: d.default.func.isRequired,
@@ -37258,8 +37184,8 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(582),
-            p = n(632),
+            f = n(581),
+            p = n(631),
             h = n(372),
             _ = n(414),
             v = {
@@ -37337,8 +37263,8 @@
             o = r(i),
             a = n(281),
             s = r(a),
-            u = n(582),
-            l = n(647),
+            u = n(581),
+            l = n(646),
             c = n(247),
             d = {
                 onMenuTransition: o.default.func,
@@ -37426,8 +37352,8 @@
             f = n(314),
             p = r(f),
             h = n(315),
-            _ = n(625),
-            v = n(623),
+            _ = n(624),
+            v = n(622),
             m = {
                 onMenuTransition: d.default.func,
                 onRunLocalPrerollAd: d.default.func,
@@ -37527,12 +37453,12 @@
             o = r(i),
             a = n(311),
             s = r(a),
-            u = n(582),
+            u = n(581),
             l = n(167),
             c = n(404),
             d = n(411),
             f = n(255),
-            p = n(642),
+            p = n(641),
             h = n(314),
             _ = r(h),
             v = {
@@ -37652,7 +37578,7 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(582),
+            f = n(581),
             p = {
                 i18n: d.default.object,
                 shouldShowMutedSegmentsAlert: d.default.bool
@@ -37749,8 +37675,8 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(582),
-            p = n(604),
+            f = n(581),
+            p = n(603),
             h = n(372),
             _ = n(168),
             v = {
@@ -37931,15 +37857,15 @@
             f = i(d),
             p = n(311),
             h = i(p),
-            _ = n(582),
+            _ = n(581),
             v = n(117),
             m = i(v),
-            y = n(652),
-            g = n(653),
+            y = n(651),
+            g = n(652),
             b = n(375),
             E = n(167),
-            T = n(659),
-            S = n(661),
+            T = n(658),
+            S = n(660),
             C = n(247),
             w = n(339),
             P = n(217),
@@ -38329,12 +38255,12 @@
             d = n(311),
             f = r(d),
             p = n(223),
-            h = n(654),
-            _ = n(655),
-            v = n(656),
-            m = n(658),
-            y = n(623),
-            g = n(624),
+            h = n(653),
+            _ = n(654),
+            v = n(655),
+            m = n(657),
+            y = n(622),
+            g = n(623),
             b = n(315),
             E = n(314),
             T = r(E),
@@ -38563,8 +38489,8 @@
             f = r(d),
             p = n(311),
             h = r(p),
-            _ = n(623),
-            v = n(624),
+            _ = n(622),
+            v = n(623),
             m = n(223),
             y = n(314),
             g = r(y),
@@ -38729,7 +38655,7 @@
             a = r(o),
             s = n(311),
             u = r(s),
-            l = n(623),
+            l = n(622),
             c = n(315),
             d = n(314),
             f = r(d),
@@ -38795,7 +38721,7 @@
         var o = n(281),
             a = r(o),
             s = n(315),
-            u = n(657),
+            u = n(656),
             l = t.EXT_REPORT_DIALOG_CLASS = "extension-dialog extension-dialog__info",
             c = t.EXT_REPORT_TITLE_CLASS = "extension-dialog__title",
             d = t.EXT_REPORT_SUBTITLE_CLASS = "extension-dialog__text",
@@ -38866,7 +38792,7 @@
             l = n(281),
             c = r(l),
             d = n(315),
-            f = n(623),
+            f = n(622),
             p = n(314),
             h = r(p),
             _ = n(200),
@@ -39029,8 +38955,8 @@
             a = r(o),
             s = n(311),
             u = r(s),
-            l = n(623),
-            c = n(624),
+            l = n(622),
+            c = n(623),
             d = n(314),
             f = r(d),
             p = {
@@ -39068,7 +38994,7 @@
         }), t.NOT_LOGGED_IN = t.LOGGED_IN = t.UNKNOWN = void 0, t.user = i;
         var o = n(117),
             a = r(o),
-            s = n(660),
+            s = n(659),
             u = t.UNKNOWN = "unknown",
             l = t.LOGGED_IN = "logged in",
             c = t.NOT_LOGGED_IN = "not logged in",
@@ -39231,7 +39157,7 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(582),
+            f = n(581),
             p = n(279),
             h = {
                 i18n: d.default.object.isRequired,
@@ -39636,13 +39562,13 @@
             },
             u = n(167),
             l = n(224),
-            c = n(666),
+            c = n(665),
             d = n(425),
             f = n(217),
             p = n(353),
             h = n(411),
             _ = n(414),
-            v = n(659),
+            v = n(658),
             m = ["misterrogers", "twitchpresents"],
             y = [f.PLAYER_IMDB],
             g = function(e) {
@@ -39955,9 +39881,9 @@
             }
         }();
         t.missingKeyHandler = o, t.getI18N = a;
-        var u = n(670),
+        var u = n(669),
             l = r(u),
-            c = n(686),
+            c = n(685),
             d = r(c),
             f = n(168),
             p = n(214),
@@ -39985,7 +39911,7 @@
             keySeparator: !1,
             missingKeyHandler: o,
             saveMissing: !0
-        }), l.default.addResourceBundle("en-US", l.default.options.ns[0], n(687));
+        }), l.default.addResourceBundle("en-US", l.default.options.ns[0], n(686));
         var b = function() {
             function e(t, n, r) {
                 i(this, e), this.shortCode = t, this.langCode = n, this._translate = r
@@ -40003,7 +39929,7 @@
         }();
         t.I18N_INSTANCE = l.default, t.DEFAULT_LANGUAGE = new b("en", "en-US", l.default.getFixedT("en-US"))
     }, function(e, t, n) {
-        e.exports = n(671).default
+        e.exports = n(670).default
     }, function(e, t, n) {
         "use strict";
 
@@ -40015,7 +39941,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.use = t.t = t.setDefaultNamespace = t.on = t.off = t.loadResources = t.loadNamespaces = t.loadLanguages = t.init = t.getFixedT = t.exists = t.dir = t.createInstance = t.cloneInstance = t.changeLanguage = void 0;
-        var i = n(672),
+        var i = n(671),
             o = r(i);
         t.default = o.default;
         t.changeLanguage = o.default.changeLanguage.bind(o.default), t.cloneInstance = o.default.cloneInstance.bind(o.default), t.createInstance = o.default.createInstance.bind(o.default), t.dir = o.default.dir.bind(o.default), t.exists = o.default.exists.bind(o.default), t.getFixedT = o.default.getFixedT.bind(o.default), t.init = o.default.init.bind(o.default), t.loadLanguages = o.default.loadLanguages.bind(o.default), t.loadNamespaces = o.default.loadNamespaces.bind(o.default), t.loadResources = o.default.loadResources.bind(o.default), t.off = o.default.off.bind(o.default), t.on = o.default.on.bind(o.default), t.setDefaultNamespace = o.default.setDefaultNamespace.bind(o.default), t.t = o.default.t.bind(o.default), t.use = o.default.use.bind(o.default)
@@ -40082,28 +40008,28 @@
                 }
                 return e
             },
-            f = n(673),
+            f = n(672),
             p = i(f),
-            h = n(674),
+            h = n(673),
             _ = i(h),
-            v = n(675),
+            v = n(674),
             m = i(v),
-            y = n(677),
+            y = n(676),
             g = i(y),
-            b = n(680),
+            b = n(679),
             E = i(b),
-            T = n(681),
+            T = n(680),
             S = i(T),
-            C = n(682),
+            C = n(681),
             w = i(C),
-            P = n(683),
+            P = n(682),
             A = i(P),
-            O = n(684),
+            O = n(683),
             k = i(O),
-            I = n(685),
-            N = n(678),
+            I = n(684),
+            N = n(677),
             R = i(N),
-            M = n(679),
+            M = n(678),
             L = r(M),
             D = function(e) {
                 function t() {
@@ -40424,9 +40350,9 @@
                 }
                 return e
             },
-            c = n(674),
+            c = n(673),
             d = i(c),
-            f = n(676),
+            f = n(675),
             p = r(f),
             h = function(e) {
                 function t() {
@@ -40618,15 +40544,15 @@
             } : function(e) {
                 return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
             },
-            d = n(673),
+            d = n(672),
             f = i(d),
-            p = n(674),
+            p = n(673),
             h = i(p),
-            _ = n(678),
+            _ = n(677),
             v = i(_),
-            m = n(679),
+            m = n(678),
             y = r(m),
-            g = n(676),
+            g = n(675),
             b = r(g),
             E = function(e) {
                 function t(n) {
@@ -40817,7 +40743,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.convertAPIOptions = o, t.convertJSONOptions = a, t.convertTOptions = s, t.appendBackwardsAPI = u;
-        var l = n(673),
+        var l = n(672),
             c = r(l)
     }, function(e, t, n) {
         "use strict";
@@ -40838,7 +40764,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var a = n(673),
+        var a = n(672),
             s = r(a),
             u = function() {
                 function e(t) {
@@ -40915,7 +40841,7 @@
             } : function(e) {
                 return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
             },
-            s = n(673),
+            s = n(672),
             u = r(s),
             l = [{
                 lngs: ["ach", "ak", "am", "arn", "br", "fil", "gun", "ln", "mfe", "mg", "mi", "oc", "tg", "ti", "tr", "uz", "wa"],
@@ -41145,9 +41071,9 @@
                 }
                 return e
             },
-            s = n(676),
+            s = n(675),
             u = i(s),
-            l = n(673),
+            l = n(672),
             c = r(l),
             d = function() {
                 function e() {
@@ -41301,11 +41227,11 @@
                     throw new TypeError("Invalid attempt to destructure non-iterable instance")
                 }
             }(),
-            f = n(676),
+            f = n(675),
             p = i(f),
-            h = n(673),
+            h = n(672),
             _ = r(h),
-            v = n(674),
+            v = n(673),
             m = r(v),
             y = function(e) {
                 function t(n, r, i) {
@@ -41482,10 +41408,10 @@
                 }
                 return e
             },
-            c = n(676),
-            d = (i(c), n(673)),
+            c = n(675),
+            d = (i(c), n(672)),
             f = r(d),
-            p = n(674),
+            p = n(673),
             h = r(p),
             _ = function(e) {
                 function t(n, r, i) {
@@ -41830,6 +41756,16 @@
             "Flash is not installed": "Flash is not installed",
             "The broadcaster indicated that the channel is intended for mature audiences.": "The broadcaster indicated that the channel is intended for mature audiences.",
             "Start Watching": "Start Watching",
+            "Video Resolution": "Video Resolution",
+            "Display Resolution": "Display Resolution",
+            FPS: "FPS",
+            "Skipped Frames": "Skipped Frames",
+            "Buffer Size": "Buffer Size",
+            "Latency To Broadcaster": "Latency To Broadcaster",
+            "Latency To Encoder": "Latency To Encoder",
+            "Playback Rate": "Playback Rate",
+            "Memory Usage": "Memory Usage",
+            "Backend Version": "Backend Version",
             "This video is only available to subscribers. Subscribe now to watch and support %s.": "This video is only available to subscribers. Subscribe now to watch and support %s.",
             "This video quality is only available to subscribers. Subscribe now to watch and support %s.": "This video quality is only available to subscribers. Subscribe now to watch and support %s.",
             "Playing on {{device}}": "Playing on {{device}}",
@@ -41929,7 +41865,20 @@
             "Playing highlight": "Playing highlight",
             "Playing uploaded video": "Playing uploaded video",
             "Playing past broadcast": "Playing past broadcast",
-            "Content not available": "Content not available"
+            "Content not available": "Content not available",
+            "Report Interaction": "Report Interaction",
+            "Tell us why there has been a violation of the {{tosLink}}. (Abuse of this feature is violation of the terms of service.)": "Tell us why there has been a violation of the {{tosLink}}. (Abuse of this feature is violation of the terms of service.)",
+            "terms of service": "terms of service",
+            "Grant Access": "Grant Access",
+            "Revoke Access": "Revoke Access",
+            "You are granting the following access:": "You are granting the following access:",
+            "You are revoking the following access:": "You are revoking the following access:",
+            "Allows this interaction to know your User ID on Twitch. Used to show your personal cheering stats for this channel.": "Allows this interaction to know your User ID on Twitch. Used to show your personal cheering stats for this channel.",
+            "View Details": "View Details",
+            "Manage Access": "Manage Access",
+            Access: "Access",
+            Granted: "Granted",
+            "Active Interactions": "Active Interactions"
         }
     }, function(e, t, n) {
         "use strict";
@@ -41962,9 +41911,9 @@
             a = r(o),
             s = n(311),
             u = r(s),
-            l = n(582),
-            c = n(689),
-            d = n(694),
+            l = n(581),
+            c = n(688),
+            d = n(693),
             f = n(217),
             p = n(428),
             h = {
@@ -41986,8 +41935,8 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.GenericFollowPanelContainer = void 0;
-        var r = n(690),
-            i = n(692);
+        var r = n(689),
+            i = n(691);
         t.GenericFollowPanelContainer = (0, r.makeFollowPanel)(i.GenericFollowPanel)
     }, function(e, t, n) {
         "use strict";
@@ -42121,13 +42070,13 @@
             }
         }();
         t.makeFollowPanel = u;
-        var c = n(582),
+        var c = n(581),
             d = n(281),
             f = r(d),
             p = n(311),
             h = r(p),
-            _ = n(691),
-            v = n(659),
+            _ = n(690),
+            v = n(658),
             m = n(117),
             y = r(m),
             g = n(168),
@@ -42376,7 +42325,7 @@
             s = n(311),
             u = r(s),
             l = n(315),
-            c = n(693),
+            c = n(692),
             d = n(314),
             f = r(d),
             p = {
@@ -42430,7 +42379,7 @@
             a = r(o),
             s = n(311),
             u = r(s),
-            l = n(623),
+            l = n(622),
             c = n(315),
             d = n(314),
             f = r(d),
@@ -42448,8 +42397,8 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.CenteredFollowPanelContainer = void 0;
-        var r = n(690),
-            i = n(695);
+        var r = n(689),
+            i = n(694);
         t.CenteredFollowPanelContainer = (0, r.makeFollowPanel)(i.CenteredFollowPanel)
     }, function(e, t, n) {
         "use strict";
@@ -42489,7 +42438,7 @@
             s = n(311),
             u = r(s),
             l = n(315),
-            c = n(693),
+            c = n(692),
             d = n(314),
             f = r(d),
             p = {
@@ -42534,9 +42483,9 @@
             a = r(o),
             s = n(311),
             u = r(s),
-            l = n(582),
+            l = n(581),
             c = n(315),
-            d = n(697),
+            d = n(696),
             f = n(428),
             p = n(217),
             h = n(314),
@@ -42563,8 +42512,8 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.UnavailableContentFollowPanel = void 0;
-        var r = n(690),
-            i = n(698);
+        var r = n(689),
+            i = n(697);
         t.UnavailableContentFollowPanel = (0, r.makeFollowPanel)(i.UnavailableContentFollowPanel)
     }, function(e, t, n) {
         "use strict";
@@ -42600,7 +42549,7 @@
             s = n(311),
             u = r(s),
             l = n(315),
-            c = n(693),
+            c = n(692),
             d = n(314),
             f = r(d),
             p = {
@@ -42635,8 +42584,8 @@
         }), t.TopBar = i;
         var o = n(281),
             a = r(o),
-            s = n(700),
-            u = n(702),
+            s = n(699),
+            u = n(701),
             l = n(314),
             c = r(l),
             d = (0, c.default)("player-hover", "player-controls-top", "js-controls-top")
@@ -42687,10 +42636,10 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(582),
+            f = n(581),
             p = n(422),
             h = n(337),
-            _ = n(701),
+            _ = n(700),
             v = n(404),
             m = n(224),
             y = 250,
@@ -42840,7 +42789,7 @@
             d = r(c),
             f = n(314),
             p = r(f),
-            h = n(623),
+            h = n(622),
             _ = {
                 collectionItems: u.default.array.isRequired,
                 showDivider: u.default.bool.isRequired,
@@ -42858,8 +42807,7 @@
                 onMouseLeave: function() {}
             },
             m = (0, p.default)("pl-flex", "pl-flex--verticalCenter", "pl-flex--nowrap"),
-            y = (0,
-                p.default)("collection-button", "pl-flex__item"),
+            y = (0, p.default)("collection-button", "pl-flex__item"),
             g = (0, p.default)("collection-collapsed-info", "pl-flex", "pl-flex--verticalCenter", "pl-flex__item"),
             b = (0, p.default)("collection-collapsed-info__title", "qa-collection-collapsed-title", "pl-flex__item"),
             E = (0, p.default)("middot-divider", "pl-flex__item"),
@@ -42913,14 +42861,14 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(582),
-            p = n(703),
-            h = n(704),
+            f = n(581),
+            p = n(702),
+            h = n(703),
             _ = n(168),
             v = n(372),
             m = n(217),
-            y = n(705),
-            g = n(709),
+            y = n(704),
+            g = n(708),
             b = n(314),
             E = r(b),
             T = {
@@ -43217,11 +43165,11 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(691),
-            p = n(582),
-            h = n(706),
-            _ = n(659),
-            v = n(688),
+            f = n(690),
+            p = n(581),
+            h = n(705),
+            _ = n(658),
+            v = n(687),
             m = n(217),
             y = t.AUTHENTICATION_REQUIRED = "authentication-required",
             g = t.SUBSCRIBE = "subscribe",
@@ -43339,8 +43287,8 @@
             o = r(i),
             a = n(311),
             s = r(a),
-            u = n(707),
-            l = n(708),
+            u = n(706),
+            l = n(707),
             c = n(168),
             d = n(314),
             f = r(d),
@@ -43431,8 +43379,8 @@
             a = r(o),
             s = n(311),
             u = r(s),
-            l = n(582),
-            c = n(623),
+            l = n(581),
+            c = n(622),
             d = n(314),
             f = r(d),
             p = n(315),
@@ -43490,8 +43438,8 @@
             a = r(o),
             s = n(311),
             u = r(s),
-            l = n(582),
-            c = n(623),
+            l = n(581),
+            c = n(622),
             d = n(314),
             f = r(d),
             p = n(315),
@@ -43540,7 +43488,7 @@
         }), t.WatchPartyComponent = t.WATCH_PARTY_CLASSES = void 0;
         var o = n(281),
             a = r(o),
-            s = n(710),
+            s = n(709),
             u = t.WATCH_PARTY_CLASSES = {
                 container: "player-streaminfo__watchparty",
                 divider: "player-streaminfo__watchparty-divider"
@@ -43646,15 +43594,15 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(619),
+            f = n(618),
             p = r(f),
-            h = n(712),
+            h = n(711),
             _ = r(h),
             v = n(162),
             m = r(v),
-            y = n(582),
+            y = n(581),
             g = n(422),
-            b = n(717),
+            b = n(716),
             E = n(337),
             T = n(336),
             S = n(404),
@@ -43771,7 +43719,7 @@
         t.CollectionSidebar = (0, y.connect)(P, A)((0, p.default)(k))
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(713)
+        e.exports = n(712)
     }, function(e, t, n) {
         "use strict";
 
@@ -43809,14 +43757,14 @@
                 }
                 return e
             },
-            u = n(714),
+            u = n(713),
             l = r(u),
             c = n(281),
             d = r(c),
             f = n(311),
             p = r(f),
-            h = n(715),
-            _ = (r(h), n(716)),
+            h = n(714),
+            _ = (r(h), n(715)),
             v = ({
                 component: p.default.any,
                 childFactory: p.default.func,
@@ -43983,9 +43931,9 @@
         }), t.AnimatedCollectionSidebar = t.CollectionSidebarComponent = void 0;
         var o = n(281),
             a = r(o),
-            s = n(718),
-            u = n(719),
-            l = n(721),
+            s = n(717),
+            u = n(718),
+            l = n(720),
             c = n(314),
             d = r(c),
             f = {
@@ -44184,10 +44132,10 @@
         }), t.CollectionSidebarHeader = t.CollectionSidebarHeaderComponent = void 0;
         var i = n(281),
             o = r(i),
-            a = n(623),
+            a = n(622),
             s = n(314),
             u = r(s),
-            l = n(720),
+            l = n(719),
             c = n(315),
             d = {
                 title: i.PropTypes.string.isRequired,
@@ -44419,7 +44367,7 @@
             f = r(d),
             p = n(311),
             h = r(p),
-            _ = n(722),
+            _ = n(721),
             v = n(70),
             m = r(v),
             y = n(314),
@@ -44455,9 +44403,9 @@
         }), t.CollectionEmptyOverlay = t.CollectionEmptyOverlayContainer = t.mapStateToProps = void 0;
         var i = n(281),
             o = r(i),
-            a = n(582),
+            a = n(581),
             s = n(404),
-            u = n(724),
+            u = n(723),
             l = {
                 shouldShow: i.PropTypes.bool.isRequired
             },
@@ -44552,10 +44500,10 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(582),
+            f = n(581),
             p = n(404),
-            h = n(726),
-            _ = n(431),
+            h = n(725),
+            _ = n(430),
             v = n(336),
             m = {
                 recommendedVideos: d.default.array.isRequired,
@@ -44710,8 +44658,8 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(727),
-            p = n(733),
+            f = n(726),
+            p = n(732),
             h = n(314),
             _ = r(h),
             v = 0,
@@ -44846,12 +44794,12 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(728),
+            f = n(727),
             p = n(314),
             h = r(p),
             _ = n(315),
-            v = n(730),
-            m = n(731),
+            v = n(729),
+            m = n(730),
             y = {
                 video: d.default.shape({
                     thumbnailURL: d.default.string.isRequired,
@@ -44990,7 +44938,7 @@
             c = r(l),
             d = n(311),
             f = r(d),
-            p = n(729),
+            p = n(728),
             h = n(314),
             _ = r(h),
             v = n(324),
@@ -45130,7 +45078,7 @@
             o = r(i),
             a = n(311),
             s = r(a),
-            u = n(623),
+            u = n(622),
             l = n(314),
             c = r(l),
             d = {
@@ -45198,8 +45146,8 @@
             l = r(u),
             c = n(311),
             d = r(c),
-            f = n(582),
-            p = n(732),
+            f = n(581),
+            p = n(731),
             h = n(337),
             _ = {
                 featuredCollection: d.default.shape({
@@ -45326,7 +45274,7 @@
             a = r(o),
             s = n(311),
             u = r(s),
-            l = n(728),
+            l = n(727),
             c = {
                 featuredCollection: u.default.shape({
                     id: u.default.string,
@@ -45394,13 +45342,13 @@
             d = r(c),
             f = n(314),
             p = r(f),
-            h = n(730),
+            h = n(729),
             _ = n(120),
             v = r(_),
-            m = n(728),
+            m = n(727),
             y = n(315),
-            g = n(431),
-            b = n(734),
+            g = n(430),
+            b = n(733),
             E = t.RECOMMENDATION_COLUMN_CONFIG = [{
                 minPlayerWidth: 2381,
                 columns: 8
@@ -45640,8 +45588,236 @@
                 return a.default.createElement("div", null, a.default.createElement("span", null, o), " · ", a.default.createElement("span", null, h))
             };
         f.propTypes = c
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function o(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function a(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.Stats = t.StatsContainer = t.mapDispatchToProps = t.mapStateToProps = void 0;
+        var s = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var r = t[n];
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                    }
+                }
+                return function(t, n, r) {
+                    return n && e(t.prototype, n), r && e(t, r), t
+                }
+            }(),
+            u = n(281),
+            l = r(u),
+            c = n(311),
+            d = r(c),
+            f = n(581),
+            p = n(735),
+            h = n(410),
+            _ = n(167),
+            v = {
+                stats: d.default.shape({
+                    bufferSize: d.default.number,
+                    displayResolution: d.default.string,
+                    skippedFrames: d.default.number,
+                    fps: d.default.number,
+                    hlsLatencyBroadcaster: d.default.number,
+                    hlsLatencyEncoder: d.default.number,
+                    memoryUsage: d.default.string,
+                    playbackRate: d.default.number,
+                    videoResolution: d.default.string,
+                    backendVersion: d.default.string
+                }).isRequired,
+                isLive: d.default.bool.isRequired,
+                displayed: d.default.bool.isRequired,
+                closeStats: d.default.func.isRequired
+            },
+            m = "stats component",
+            y = t.mapStateToProps = function(e) {
+                var t = e.stats,
+                    n = e.stream;
+                return {
+                    isLive: n.contentType === _.CONTENT_MODE_LIVE,
+                    displayed: t.displayed,
+                    stats: t.videoStats
+                }
+            },
+            g = t.mapDispatchToProps = function(e) {
+                return {
+                    closeStats: function() {
+                        e((0, h.displayStats)(!1)), e((0, h.requestStatsDisabled)(m))
+                    }
+                }
+            },
+            b = t.StatsContainer = function(e) {
+                function t() {
+                    i(this, t);
+                    var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
+                    return e.onClose = e.onClose.bind(e), e
+                }
+                return a(t, e), s(t, [{
+                    key: "onClose",
+                    value: function() {
+                        this.props.closeStats()
+                    }
+                }, {
+                    key: "render",
+                    value: function() {
+                        var e = this.props,
+                            t = e.isLive,
+                            n = e.displayed,
+                            r = e.stats;
+                        return n ? l.default.createElement(p.Stats, {
+                            isLive: t,
+                            onClose: this.onClose,
+                            stats: r
+                        }) : null
+                    }
+                }]), t
+            }(l.default.Component);
+        b.propTypes = v;
+        t.Stats = (0, f.connect)(y, g)(b)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e) {
+            var t = e.stats,
+                n = e.isLive,
+                r = e.onClose,
+                i = null,
+                o = null;
+            return n && (i = a.default.createElement(d.Stat, {
+                statName: "Latency To Broadcaster",
+                value: t.hlsLatencyBroadcaster + " sec."
+            }), o = a.default.createElement(d.Stat, {
+                statName: "Latency To Encoder",
+                value: t.hlsLatencyEncoder + " sec."
+            })), a.default.createElement("ul", {
+                className: "pl-playback-stats js-playback-stats"
+            }, a.default.createElement(f.Button, {
+                className: h,
+                onClick: r
+            }, a.default.createElement("svg", null, a.default.createElement("use", {
+                xlinkHref: "#icon_close"
+            }))), a.default.createElement(d.Stat, {
+                statName: "Video Resolution",
+                value: t.videoResolution
+            }), a.default.createElement(d.Stat, {
+                statName: "Display Resolution",
+                value: t.displayResolution
+            }), a.default.createElement(d.Stat, {
+                statName: "FPS",
+                value: t.fps
+            }), a.default.createElement(d.Stat, {
+                statName: "Skipped Frames",
+                value: t.skippedFrames
+            }), a.default.createElement(d.Stat, {
+                statName: "Buffer Size",
+                value: t.bufferSize + " sec."
+            }), i, o, a.default.createElement(d.Stat, {
+                statName: "Playback Rate",
+                value: t.playbackRate + " Kbps"
+            }), a.default.createElement(d.Stat, {
+                statName: "Memory Usage",
+                value: t.memoryUsage
+            }), a.default.createElement(d.Stat, {
+                statName: "Backend Version",
+                value: t.backendVersion
+            }))
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.Stats = i;
+        var o = n(281),
+            a = r(o),
+            s = n(311),
+            u = r(s),
+            l = n(314),
+            c = r(l),
+            d = n(736),
+            f = n(622),
+            p = {
+                stats: u.default.shape({
+                    bufferSize: u.default.number,
+                    displayResolution: u.default.string,
+                    skippedFrames: u.default.number,
+                    fps: u.default.number,
+                    hlsLatencyBroadcaster: u.default.number,
+                    hlsLatencyEncoder: u.default.number,
+                    memoryUsage: u.default.number,
+                    playbackRate: u.default.number,
+                    videoResolution: u.default.string,
+                    backendVersion: u.default.string
+                }).isRequired,
+                isLive: u.default.bool.isRequired,
+                onClose: u.default.func.isRequired
+            },
+            h = (0, c.default)("player-button", "player-button--noscale", "player-button--close");
+        i.propTypes = p
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function i(e) {
+            var t = e.statName,
+                n = e.value,
+                r = e.t;
+            return a.default.createElement("li", {
+                className: "pl-playback-stats--stat"
+            }, r(t) + ": ", a.default.createElement("div", null, a.default.createElement("span", null, n)))
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.Stat = void 0, t.StatComponent = i;
+        var o = n(281),
+            a = r(o),
+            s = n(311),
+            u = r(s),
+            l = n(315),
+            c = {
+                statName: u.default.string.isRequired,
+                value: u.default.string.isRequired,
+                t: u.default.func.isRequired
+            };
+        i.propTypes = c;
+        t.Stat = (0, l.translate)()(i)
     }, function(e, t) {
-        e.exports = '<div class="player-initializing player-center-content"> <div class=player-loading-spinner></div> </div> <div class="player-overlay player-overlay--wall player-age-restriction-overlay js-age-restriction-overlay"> <div class=player-center-content> <div class=player-mature-overlay> <p class=js-mature-warning-label>The broadcaster indicated that the channel is intended for mature audiences.</p> <p><button type=button id=mature-link class="player-content-button js-player-mature-accept js-mature-accept-label">Start Watching</button></p> </div> <div class="player-age-gate js-age-gate"> <div class=player-age-gate-warning> <p> <svg class=player-age-gate--icon> <use xlink:href=#age-gate-icon /> </svg> </p> <p class=js-age-gate-warning-label>You must be 21 to view this content. Please enter your date of birth.</p> </div> <div class=player-age-gate-failed-once> <p> <svg class=player-age-gate--fail-icon> <use xlink:href=#age-gate-fail-icon /> </svg> </p> <p class=age-gate-locked-out-label>Sorry, you must be over the age of 21 to view this content.</p> </div> <div class=player-datepicker> <select class="player-datepicker--select js-select-month"> <option class=age-gate-jan value=0 selected=selected>January</option> <option class=age-gate-feb value=1>February</option> <option class=age-gate-mar value=2>March</option> <option class=age-gate-apr value=3>April</option> <option class=age-gate-may value=4>May</option> <option class=age-gate-jun value=5>June</option> <option class=age-gate-jul value=6>July</option> <option class=age-gate-aug value=7>August</option> <option class=age-gate-sept value=8>September</option> <option class=age-gate-oct value=9>October</option> <option class=age-gate-nov value=10>November</option> <option class=age-gate-dec value=11>December</option> </select> <select class="player-datepicker--select js-select-day"></select> <select class="player-datepicker--select js-select-year"></select> <button type=button class="js-age-gate-submit player-content-button">Submit</button> </div> </div> <div class=player-age-gate-locked-out> <p> <svg class=player-age-gate--fail-icon> <use xlink:href=#age-gate-fail-icon /> </svg> </p> <p class=age-gate-locked-out-label>Sorry, you must be over the age of 21 to view this content.</p> </div> </div> </div> <div class="player-offline-banner js-offline-banner"> <img class=js-meta-offline /> </div> <div class="player-overlay player-ad-overlay"> <a class="player-ad-overlay js-player-ad-overlay" target=_blank></a> </div> <div id=js-player-recommendations-overlay /> <div class="player-overlay player-overlay--recommendations hidden js-recommendations-overlay"> <div class="player-tower player-tower--gutter-xs js-player-tower"> <div class="player-tower-columns js-featured-rec-header player-featured-recommendations"> <div class=player-recommendations-header> <h3><span class="js-upnext-label player-featured-recommendations-vod">Up Next</span><span class="js-watchnext-label player-featured-recommendations-live">Watch Next</span></h3> <button class="player-recommendation-button js-featured-recommendations__more-videos"><span class="js-cancelautoplay-label player-featured-recommendations-vod">Cancel</span><span class="js-morevideos-label player-featured-recommendations-live">More Videos</span></button> </div> </div> <div class=player-tower-columns data-columns=12> <div class="player-tower player-tower--gutter-xs js-video-recommendations"> <div class="player-tower-columns player-recommended-stream js-recommended-stream"> <div class=player-card> <a class=player-card__layout> <figure class="player-card__img player-card__img--vod"> <img class=js-recommended-stream__thumbnail /> </figure> <div class=player-card__overlay> <div class="player-card__body js-recommendations-card"> <h4 class="player-card__bread js-recommended-stream__channel"> Channel Name </h4> <h3 class="player-card__title js-recommended-stream__title"> Non-Optional Content Title </h3> <div class="player-card__autoplay-timer js-autoplay-timer"> <h4 class=player-card__info> <span class=js-autoplay-text>Playing in {{timeRemaining}} seconds</span> </h4> <div class="player-card__autoplay js-autoplay"> <div class="autoplay__progress js-autoplay-progress"> </div> </div> </div> <div class="player-card__time-info js-recommendation-time-info"> <h4 class=player-card__info> <time class=js-recommended-stream__date>00:00:00</time> &nbsp;·&nbsp; <time class=js-recommended-stream__length>00:00:00</time> </h4> </div> </div> </div> </a> </div> </div> </div> </div> </div> </div> <div class="player-video-background-banner js-video-background-banner"> <img class=js-meta-video-background /> </div> <div class="player-overlay player-loading js-player-loading"> <div class=player-center-content> <div class=player-loading-spinner></div> </div> </div> <div class="player-overlay player-chromecast-overlay"> <div class=player-center-content> <div class=js-playing-on-label>Playing on {{device}}</div> </div> </div> <div class="player-overlay player-fullscreen-overlay js-control-fullscreen-overlay"> </div> <div class="player-overlay player-extensions" id=js-player-extension-root> </div> <div class="cc-flag player-captions-container js-player-captions-container"> <div class="player-captions-window js-player-captions-window"> <div class="player-captions js-player-captions"></div> </div> </div> <div class="player-overlay player-play-overlay js-paused-overlay"> <button type=button class="player-button player-button-play js-control-play-button"> <svg class=player-icon-play><use xlink:href=#icon_play /></svg> </button> </div> <div class="player-overlay player-overlay--wall player-product-overlay js-player-product-overlay"> <div class="player-center-content player-product js-player-product"> <p></p> <a href="" target=_blank class="purchase_button js-subscribe-label">Subscribe</a> </div> </div> <div id=empty-collection-overlay /> <div id=top-bar /> <div id=js-collection-sidebar></div> <div id=js-follow-panel></div> <div id=js-dead-ltv-overlay /> <div class=player-storm-warning> <div class=player-center-content> <div class=player-loading-spinner></div> <p> <span class=js-broadcast-down-label>The broadcast is down.</span><br/> <span class=js-broadcast-reload-label>The player will automatically reload when the broadcast is back.</span> </p> </div> </div> <div class=player-error> <div class=player-center-content> <p class=js-player-error></p> </div> </div> <div id=stream-status /> <div id=js-cc-options-modal class="js-cc-modal-container player-modal__container" data-state=closed> <div class="js-cc-modal player-modal__content" data-tab-selected=presets> <button type=button class="player-modal__close js-cc-custom-modal-dismiss"> <svg><use xlink:href=#icon_close_modal /></svg> </button> <h2 class="js-cc-modal-header player-modal__header">Closed Caption Settings</h2> <ul class="player-tabs clearfix"> <li class="player-tabs__item player-tabs__item--active" data-tab=presets> <a href=# class=js-cc-presets-tab>Presets</a> </li> <li class="player-tabs__item js-cc-tab-text" data-tab=text> <a href=# class=js-cc-text-tab>Text</a> </li> <li class="player-tabs__item js-cc-tab-text" data-tab=effects> <a href=# class=js-cc-effects-tab>Effects</a> </li> <li class=player-tabs__item data-tab=background> <a href=# class=js-cc-background-tab>Background</a> </li> <li class=player-tabs__item data-tab=window> <a href=# class=js-cc-window-tab>Window</a> </li> </ul> <div class=cc-modal-menu-frame data-tab=presets> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=white-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=lime-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=yellow-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=cyan-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=magenta-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=white-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=lime-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=yellow-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=cyan-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=magenta-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=black-on-white>aA</div> </div> <div class=cc-modal-menu-frame data-tab=text> <div class=cc-customize-field> <label class=js-cc-font-label for=cc-font>Font</label> <select class=js-cc-dropdown name=font id=cc-font> <option value=mono-serif>Mono Serif</option> <option value=prop-serif>Serif</option> <option value=mono-sans-serif>Mono Sans-Serif</option> <option value=prop-sans-serif>Sans-Serif</option> <option value=casual>Casual</option> <option value=cursive>Cursive</option> <option value=small-capitals>Small Capitals</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-justification-label for=cc-font-justification>Alignment</label> <select class=js-cc-dropdown name=alignment id=cc-font-justification> <option value=left>Left</option> <option value=center>Center</option> <option value=right>Right</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <input id=font-color-white type=radio name=fontColorName class=js-cc-radio value=white> <label for=font-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-black type=radio name=fontColorName class=js-cc-radio value=black> <label for=font-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-red type=radio name=fontColorName class=js-cc-radio value=red> <label for=font-color-red class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-green type=radio name=fontColorName class=js-cc-radio value=green> <label for=font-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-cyan type=radio name=fontColorName class=js-cc-radio value=cyan> <label for=font-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-magenta type=radio name=fontColorName class=js-cc-radio value=magenta> <label for=font-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-yellow type=radio name=fontColorName class=js-cc-radio value=yellow> <label for=font-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-blue type=radio name=fontColorName class=js-cc-radio value=blue> <label for=font-color-blue class=cc-color-palette__square></label> </div> </div> </div> <div class=cc-customize-field> <label class=js-cc-position-label for=cc-position>Position</label> <select class=js-cc-dropdown name=verticalPosition id=cc-position> <option value=bottom>Bottom</option> <option value=top>Top</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-font-opacity>Opacity</label> <select class=js-cc-dropdown name=fontOpacity id=cc-font-opacity> <option value=solid>Solid</option> <option value=translucent>Translucent</option> <option value=semiTransparent>Semi-Transparent</option> <option value=flashing>Flashing</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-size-label>Size</label> <button class="js-cc-font-size cc-font-size" value=increment>A <span class="js-font-increment-tip player-tip js-control-tip" data-tip="Increase Size"></span> </button> <button class="js-cc-font-size cc-font-size" value=decrement>A <span class="js-font-decrement-tip player-tip js-control-tip" data-tip="Decrease Size"></span> </button> </div> </div> <div class=cc-modal-menu-frame data-tab=effects> <div class=cc-customize-field> <label class=js-cc-style-label>Style</label> <div class=cc-style-palette> <div class=cc-style-palette__container> <input id=style-underline type=checkbox name=fontUnderline class=js-cc-checkbox value=underline> <label for=style-underline class=cc-style-palette__square>U</label> </div> <div class=cc-style-palette__container> <input id=style-italic type=checkbox name=fontItalic class=js-cc-checkbox value=italic> <label for=style-italic class=cc-style-palette__square>I</label> </div> <div class=cc-style-palette__container> <input id=style-bold type=checkbox name=fontBold class=js-cc-checkbox value=bold> <label for=style-bold class=cc-style-palette__square>B</label> </div> </div> </div> <div class=cc-customize-field> <label class=js-cc-edge-label>Effect</label> <div class=cc-edge-palette> <div class=cc-edge-palette__container> <hr class=cc-edge-disabled /> <input id=edge-effect-none type=radio name=edge class=js-cc-radio value=none> <label for=edge-effect-none class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-raised type=radio name=edge class=js-cc-radio value=raised> <label for=edge-effect-raised class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-drop-shadow type=radio name=edge class=js-cc-radio value=drop> <label for=edge-effect-drop-shadow class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-depressed type=radio name=edge class=js-cc-radio value=depressed> <label for=edge-effect-depressed class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-uniform type=radio name=edge class=js-cc-radio value=uniform> <label for=edge-effect-uniform class=cc-edge-palette__square>aA</label> </div> </div> </div> </div> <div class=cc-modal-menu-frame data-tab=background> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-bg-opacity>Opacity</label> <select class=js-cc-dropdown name=backgroundOpacity id=cc-bg-opacity> <option class=js-cc-opacity-solid value=solid>Solid</option> <option class=js-cc-opacity-translucent value=translucent>Translucent</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <hr class=cc-no-color /> <input id=background-transparent type=radio name=backgroundColorName class=js-cc-radio value=transparent> <label for=background-transparent class="cc-color-palette__square cc-color-palette__square-no-color"></label> </div> <div class=cc-color-palette__container> <input id=background-color-white type=radio name=backgroundColorName class=js-cc-radio value=white> <label for=background-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-lightgray type=radio name=backgroundColorName class=js-cc-radio value=lightgray> <label for=background-color-lightgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-gray type=radio name=backgroundColorName class=js-cc-radio value=gray> <label for=background-color-gray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-darkgray type=radio name=backgroundColorName class=js-cc-radio value=darkgray> <label for=background-color-darkgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-black type=radio name=backgroundColorName class=js-cc-radio value=black> <label for=background-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-green type=radio name=backgroundColorName class=js-cc-radio value=green> <label for=background-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-blue type=radio name=backgroundColorName class=js-cc-radio value=blue> <label for=background-color-blue class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-cyan type=radio name=backgroundColorName class=js-cc-radio value=cyan> <label for=background-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-magenta type=radio name=backgroundColorName class=js-cc-radio value=magenta> <label for=background-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-yellow type=radio name=backgroundColorName class=js-cc-radio value=yellow> <label for=background-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-red type=radio name=backgroundColorName class=js-cc-radio value=red> <label for=background-color-red class=cc-color-palette__square></label> </div> </div> </div> </div> <div class=cc-modal-menu-frame data-tab=window> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-window-opacity>Opacity</label> <select class=js-cc-dropdown name=windowOpacity id=cc-window-opacity> <option class=js-cc-opacity-solid value=solid>Solid</option> <option class=js-cc-opacity-translucent value=translucent>Translucent</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <hr class=cc-no-color /> <input id=window-transparent type=radio name=windowColorName class=js-cc-radio value=transparent> <label for=window-transparent class="cc-color-palette__square cc-color-palette__square-no-color"></label> </div> <div class=cc-color-palette__container> <input id=window-color-white type=radio name=windowColorName class=js-cc-radio value=white> <label for=window-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-lightgray type=radio name=windowColorName class=js-cc-radio value=lightgray> <label for=window-color-lightgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-gray type=radio name=windowColorName class=js-cc-radio value=gray> <label for=window-color-gray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-darkgray type=radio name=windowColorName class=js-cc-radio value=darkgray> <label for=window-color-darkgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-black type=radio name=windowColorName class=js-cc-radio value=black> <label for=window-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-green type=radio name=windowColorName class=js-cc-radio value=green> <label for=window-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-blue type=radio name=windowColorName class=js-cc-radio value=blue> <label for=window-color-blue class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-cyan type=radio name=windowColorName class=js-cc-radio value=cyan> <label for=window-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-magenta type=radio name=windowColorName class=js-cc-radio value=magenta> <label for=window-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-yellow type=radio name=windowColorName class=js-cc-radio value=yellow> <label for=window-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-red type=radio name=windowColorName class=js-cc-radio value=red> <label for=window-color-red class=cc-color-palette__square></label> </div> </div> </div> </div> </div> </div> <div class="player-hover player-controls-bottom pl-flex js-controls-bottom"> <div id=js-player-seek class=player-seek /> <div class=player-buttons-left> <button type=button class="player-button player-button--playpause js-control-playpause-button" tabindex=-1> <span class="pause-button js-pause-button"> <span class="player-tip player-tip--aleft js-tip" data-tip=Pause></span> <svg class=player-icon-pause><use xlink:href=#icon_pause /></svg> </span> <span class="play-button js-play-button"> <span class="player-tip player-tip--aleft js-tip" data-tip=Play></span> <svg class=player-icon-play><use xlink:href=#icon_play /></svg> </span> </button> <div id=js-player-volume class=player-volume /> </div> <div class=player-buttons-right> <div id=js-notification-popup-container></div> <div id=js-settings class="flex flex__item"></div> <button type=button class="cc-flag player-button player-button--cc js-control-cc" tabindex=-1> <span class="player-tip js-control-tip" data-tip=Captions></span> <svg class=js-player-icon-cc><use xlink:href=#icon_cc_on /></svg> <svg class=js-player-icon-cc-deactivated><use xlink:href=#icon_cc_off /></svg> </button> <div class=player-menu> <button type=button class="player-button player-button--clips js-control-clips" data-canclip=false> <span class="player-tip js-tip" data-tip=Clip></span> <svg class=player-icon-clips><use xlink:href=#icon_clips /></svg> <svg class="player-icon-clips--bday js-player-icon-clips--bday" style=visibility:hidden> <use xlink:href=#icon_clips--bday /> </svg> </button> <form class=js-create-clip-form method=post action="" target=""> <input class=js-create-clip-player-backend-type type=hidden name=player_backend_type value=""/> <input class=js-create-clip-channel type=hidden name=channel value=""/> <input class=js-create-clip-offset type=hidden name=offset value=""/> <input class=js-create-clip-broadcast_id type=hidden name=broadcast_id value=""/> <input class=js-create-clip-vod_id type=hidden name=vod_id value=""/> <input class=js-create-clip-play_session_id type=hidden name=play_session_id value=""/> </form> </div> <button type=button class="player-button player-button--chromecast js-chromecast-button"> <span class="player-tip js-tip" data-tip=Chromecast></span> <svg class=player-icon-chromecast-p1><use xlink:href=#icon_chromecast_p1 /></svg> <svg class=player-icon-chromecast-p2><use xlink:href=#icon_chromecast_p2 /></svg> <svg class=player-icon-chromecast-p3><use xlink:href=#icon_chromecast_p3 /></svg> <svg class=player-icon-chromecast-p4><use xlink:href=#icon_chromecast_p4 /></svg> <svg class=player-icon-chromecast-p5><use xlink:href=#icon_chromecast_p5 /></svg> </button> <button type=button class="player-button player-button--theatre js-control-theatre" tabindex=-1> <span class="enter-theatre-button js-theatre-button"> <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Theater Mode"></span> <svg class=player-icon-theatre><use xlink:href=#icon_theatre /></svg> </span> <span class="exit-theatre-button js-exit-theatre-button"> <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Exit Theater Mode"></span> <svg class=player-icon-theatre-deactivate><use xlink:href=#icon_theatre_deactivate /></svg> </span> </button> <button type=button class="player-button player-button--fullscreen js-control-fullscreen" tabindex=-1> <span class="fullscreen-button js-fullscreen"> <span class="player-tip js-control-tip" data-tip=Fullscreen></span> <svg class=player-icon-fullscreen><use xlink:href=#icon_fullscreen /></svg> </span> <span class="exit-fullscreen-button js-exit-fullscreen"> <span class="player-tip js-control-tip" data-tip="Exit Fullscreen"></span> <svg class=player-icon-unfullscreen><use xlink:href=#icon_unfullscreen /></svg> </span> </button> <button type=button class="player-button player-button--twitch js-watch-twitch"> <span class="player-tip player-tip--aright js-tip" data-tip="Watch on Twitch"></span> <a class="player-button player-button--twitch js-hyperlink-watch-twitch" href="" target=_blank> <svg><use xlink:href=#icon_twitch /></svg> </a> </button> </div> </div> <div class=player-ad-notice> <p class=js-advertisement-label>Advertisement</p> </div> <div id=js-player-alert-container /> <ul class="player-playback-stats js-playback-stats" data-state=off> <button type=button class="player-button player-button--noscale player-button--close js-stats-close"> <svg><use xlink:href=#icon_close /></svg> </button> <li>Video Resolution: <div><span class=js-stat-video-resolution></span></div></li> <li>Display Resolution: <div><span class=js-stat-display-resolution></span></div></li> <li>FPS: <div><span class=js-stat-fps></span></div></li> <li>Skipped Frames: <div><span class=js-stat-skipped-frames></span></div></li> <li>Buffer Size: <div><span class=js-stat-buffer-size></span> sec.</div></li> <li class=stats__latency-broadcaster>Latency to Broadcaster: <div><span class=js-stat-hls-latency-broadcaster></span> sec.</div></li> <li class=stats__latency-encoder>Latency to Encoder: <div><span class=js-stat-hls-latency-encoder></span> sec.</div></li> <li>Playback Rate: <div><span class=js-stat-playback-rate></span> Kbps</div></li> <li>Memory Usage: <div><span class=js-stat-memory-usage></span></div></li> <li>Backend Version: <div><span class=js-stat-video-backend-version></span></div></li> </ul> <svg viewBox="0 0 30 30" xmlns=http://www.w3.org/2000/svg style=width:0;height:0;visibility:hidden;display:block> <symbol viewBox="0 0 30 30" id=icon_play><path clip-rule=evenodd d=M10,7l12,8l-12,8V7z fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_pause><path clip-rule=evenodd d="M9,22h4V8H9V22z M17,8v14h4V8H17z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_volumefull><path clip-rule=evenodd d="M22,21.5v-13L23,8v14L22,21.5z M18,10.5l1-0.5v10l-1-0.5V10.5z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_volumemute><path clip-rule=evenodd d="M23,18L23,18h-0.7L20,15.7L17.7,18H17l0,0v-0.7l2.3-2.3L17,12.7V12l0,0h0.7l2.3,2.3l2.3-2.3H23l0,0v0.7L20.7,15l2.3,2.3V18z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_fullscreen><path clip-rule=evenodd d="M7,7 L15.2,7 L12.8,9.4 L15.8,12.4 L12.4,15.8 L9.4,12.8 L7,15.2 L7,7 Z M23,23 L14.8,23 L17.2,20.6 L14.2,17.6 L17.6,14.2 L20.6,17.2 L23,14.8 L23,23 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_unfullscreen><path clip-rule=evenodd d="M15,15 L23.2,15 L20.8,17.4 L23.8,20.4 L20.4,23.8 L17.4,20.8 L15,23.2 L15,15 L15,15 Z M15,15 L6.8,15 L9.2,12.6 L6.2,9.6 L9.6,6.2 L12.6,9.2 L15,6.8 L15,15 L15,15 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_settings><path clip-rule=evenodd d="M13.3589744,7 L16.6410256,7 L18.0769231,9.8 L21.3589744,9.8 L23,12.2 L21.3589744,15 L23,17.8 L21.3589744,20.2 L18.0769231,20.2 L16.6410256,23 L13.3589744,23 L11.9230769,20.2 L8.64102564,20.2 L7,17.8 L8.64102564,15 L7,12.2 L8.64102564,9.8 L11.9230769,9.8 L13.3589744,7 Z M15,17.8 C16.5860485,17.8 17.8717949,16.5463973 17.8717949,15 C17.8717949,13.4536027 16.5860485,12.2 15,12.2 C13.4139515,12.2 12.1282051,13.4536027 12.1282051,15 C12.1282051,16.5463973 13.4139515,17.8 15,17.8 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_theatre><path d="M6 21h11V9H6v12zM19 9v12h5V9h-5z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_theatre_deactivate><path d="M6 9h11v12H6V9zm2 2h9v8H8v-8zm9-2h7v12h-7V9zm2 2h3v8h-3v-8z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 63 30" id=icon_twitch><path clip-rule=evenodd d="M55,19 L52,19 L52,13 L49,13 L49,19 L46,19 L46,8 L49,8 L49,10 L53,10 L55,12 L55,19 L55,19 Z M45,13 L41,13 L41,16 L45,16 L45,19 L40,19 L38,17 L38,12 L40,10 L45,10 L45,13 L45,13 Z M37,13 L34,13 L34,16 L37,16 L37,19 L33,19 L31,17 L31,8 L34,8 L34,10 L37,10 L37,13 L37,13 Z M27,8 L30,8 L30,9 L27,9 L27,8 Z M27,10 L30,10 L30,19 L27,19 L27,10 Z M26,17 L24,19 L15,19 L15,10 L18,10 L18,16 L19,16 L19,10 L22,10 L22,16 L23,16 L23,10 L26,10 L26,17 L26,17 Z M14,13 L11,13 L11,16 L14,16 L14,19 L10,19 L8,17 L8,8 L11,8 L11,10 L14,10 L14,13 L14,13 Z M53.5,9 L50,9 L50,7 L45.5,7 L43,9 L39.5,9 L38,10.5 L38,9 L35,9 L35,7 L26,7 L26,9 L15,9 L12,7 L7,7 L7,17.5 L9.5,20.125 L14,23 L18,23 L18,22.25 L19.5,23 L25.5,23 L26.5,21.5 L27,23 L31,23 L31,21.5 L32.5,23 L37,23 L37.25,21.5 L38.5,23 L43.5,23 L45,21.5 L45,23 L47.5,23 L49,21.5 L49,23 L52.5,23 L56,19.5 L56,11.5 L53.5,9 L53.5,9 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close><path clip-rule=evenodd d="M15.1035534,15.4571068 L11.5303301,19.0303301 L11.3535534,19.2071068 L11,18.8535534 L11.1767767,18.6767767 L14.75,15.1035534 L11.1767767,11.5303301 L11,11.3535534 L11.3535534,11 L11.5303301,11.1767767 L15.1035534,14.75 L18.6767767,11.1767767 L18.8535534,11 L19.2071068,11.3535534 L19.0303301,11.5303301 L15.4571068,15.1035534 L19.0303301,18.6767767 L19.2071068,18.8535534 L18.8535534,19.2071068 L18.6767767,19.0303301 L15.1035534,15.4571068 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close_md><path clip-rule=evenodd d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p1><path fill-rule=evenodd clip-rule=evenodd d=M15,22c0-0.7-0.1-1.4-0.2-2H22V10H8v3.2C7.4,13.1,6.7,13,6,13V8h18v14H15z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p2><path fill-rule=evenodd clip-rule=evenodd d=M10,13.9V12h10v6h-5.9C13.2,16.2,11.8,14.8,10,13.9z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p3><path fill-rule=evenodd clip-rule=evenodd d=M13,22h-1c0-3.3-2.7-6-6-6v-1C9.9,15,13,18.1,13,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p4><path fill-rule=evenodd clip-rule=evenodd d=M10,22H9c0-1.7-1.3-3-3-3v-1C8.2,18,10,19.8,10,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p5><path fill-rule=evenodd clip-rule=evenodd d=M7,22H6v-1C6.6,21,7,21.4,7,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_clips><path d="M14.802 7.804l-3.83 1.026 2.928 2.321 3.83-1.026-2.928-2.321zm2.895-.776l3.981-1.067.777 2.898-1.83.49-2.928-2.321zM7.969 9.635l-1.745.467L7 13l3.898-1.044-2.929-2.321zM7 13h16v9H7v-9zm1.969 3h2.785l2.228-3h-2.785l-2.228 3zm7.018 0h2.785L21 13h-2.785l-2.228 3z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 13 18" id=icon_clips--bday><path d="M6.505 7.61l2.41 2.33H4.53l.621-2.174-.552-.81L1.43 8.53l1.77-2.803L.266 4.184l3.531-.22.234-3.118 1.761 2.583L8.96 1.854 7.19 4.658 10.124 6.2l-3.53.22-.09 1.189zm6.546 6.33H3.385l.625-2.182h6.785l2.256 2.182zm-3.042 1.818l-7.737 2.073.593-2.073h7.144z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 30 30" id=icon_cc_on><path fill-rule=evenodd clip-rule=evenodd d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol> <symbol viewBox="0 0 30 30" id=icon_cc_off><path fill-rule=evenodd clip-rule=evenodd d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M24,8 L24,22 L6,22 L6,8 L24,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close_modal><path clip-rule=evenodd d="M13.657 3.757l-4.243 4.243 4.243 4.242-1.415 1.415-4.242-4.243-4.243 4.243-1.414-1.415 4.243-4.242-4.243-4.243 1.414-1.414 4.243 4.243 4.242-4.243 1.415 1.414z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 14 14" id=icon_arrow><path d="M6.46765898,5.00010938 L6.46755335,5 L3.08055618,8.27078515 C2.97320936,8.37444877 2.97610632,8.52662201 3.07163118,8.6255409 L3.47144895,9.03956433 C3.56460436,9.13602957 3.72584608,9.14003286 3.82630008,9.04302556 L6.46765898,6.49229492 L9.10901788,9.04302556 C9.20947188,9.14003286 9.3707136,9.13602957 9.46386901,9.03956433 L9.86368678,8.6255409 C9.95921164,8.52662201 9.9621086,8.37444877 9.85476178,8.27078515 L6.46776461,5 L6.46765898,5.00010938 Z" transform="translate(6.467659, 7.056937) scale(-1, 1) rotate(-270.000000) translate(-6.467659, -7.056937) "></path></symbol> <symbol viewBox="0 0 98 86" id=age-gate-icon><path d="M24 8h50v10h12V8h12v78H0V8h12v10h12V8zm52-8h8v16h-8V0zM14 0h8v16h-8V0zm13.356 43.52h3.8c-.03-.954.068-1.9.29-2.84.225-.938.59-1.78 1.097-2.526.506-.745 1.155-1.348 1.945-1.81.79-.463 1.736-.694 2.84-.694.834 0 1.624.135 2.37.403.744.268 1.393.656 1.944 1.162.552.507.99 1.11 1.32 1.81.327.702.49 1.484.49 2.35 0 1.102-.17 2.07-.513 2.905-.344.835-.85 1.61-1.52 2.326-.672.715-1.514 1.423-2.528 2.124-1.013.7-2.19 1.468-3.532 2.303-1.103.655-2.16 1.356-3.175 2.1-1.014.746-1.923 1.61-2.728 2.595-.805.983-1.468 2.14-1.99 3.465-.52 1.327-.857 2.93-1.006 4.807h20.705v-3.354H30.888c.18-.983.56-1.855 1.14-2.616.582-.76 1.282-1.468 2.102-2.123.82-.656 1.722-1.275 2.705-1.856.984-.58 1.968-1.17 2.952-1.765.983-.626 1.937-1.282 2.86-1.968.925-.686 1.745-1.453 2.46-2.303.716-.85 1.29-1.81 1.722-2.884.432-1.073.648-2.31.648-3.71 0-1.492-.26-2.803-.783-3.936-.522-1.133-1.23-2.08-2.124-2.84-.893-.76-1.944-1.34-3.15-1.744-1.21-.402-2.498-.603-3.87-.603-1.67 0-3.16.283-4.47.85-1.312.566-2.408 1.348-3.287 2.347-.88 1-1.528 2.183-1.945 3.555-.418 1.37-.582 2.86-.492 4.47zM65.17 64V32.297H62.26c-.208 1.192-.596 2.176-1.162 2.95-.567.776-1.26 1.387-2.08 1.834-.82.448-1.736.754-2.75.918-1.013.164-2.057.246-3.13.246v3.04h8.228V64h3.8z" fill=#F9F7FC fill-rule=evenodd /></symbol> <symbol id=age-gate-fail-icon viewBox="0 0 92 81"><path d="M0 75.6l3.067-5.4L9.2 59.4l12.267-21.6 12.266-21.6 6.134-10.8L42.933 0h6.134l3.066 5.4 6.134 10.8 12.266 21.6L82.8 59.4l6.133 10.8L92 75.6 89.06 81H3.44L0 75.6zM40 27h12v13l-3 19h-6l-3-19V27zm1 34h10v10H41V61z" fill=#F9F7FC fill-rule=evenodd /></symbol> <symbol viewBox="0 0 19 19" id=icon_open_collection><path fill-rule=evenodd d="M0,6 L19,6 L19,19 L0,19 L0,6 Z M12.25,12.5 L7,9 L7,16 L12.25,12.5 Z M2,3 L17,3 L17,5 L2,5 L2,3 Z M4,0 L15,0 L15,2 L4,2 L4,0 Z"/></symbol> <symbol id=icon_pl-followcheck viewBox="0 0 16 16"><path clip-rule=evenodd d=M6.5,12.75L2,8.25l2-2l2.5,2.5l5.5-5.5l2,2L6.5,12.75z fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=pl-icon_close><path clip-rule=evenodd d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z"/></symbol> <symbol viewBox="0 0 14 12" id=pl-icon_vod><path d="M0 12h14V0H0v12zm4-3V3l7 3-7 3z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 16 3" id=icon_more_info><path d="M15 1.5c0 .389-.139.736-.417 1.042-.277.305-.639.458-1.083.458-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C12.694.153 13.056 0 13.5 0c.444 0 .806.153 1.083.458.278.306.417.653.417 1.042zm-6 0c0 .389-.139.736-.417 1.042C8.306 2.847 7.944 3 7.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C6.694.153 7.056 0 7.5 0c.444 0 .806.153 1.083.458C8.861.764 9 1.111 9 1.5zm-6 0c0 .389-.139.736-.417 1.042C2.306 2.847 1.944 3 1.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C.694.153 1.056 0 1.5 0c.444 0 .806.153 1.083.458C2.861.764 3 1.111 3 1.5z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 22 14" id=icon_grant_permissions><g fill-rule=evenodd><path d="M16 5h-3v1.994L11.91 8H16v3l6-4.5L16 2v3z"/><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/></g></symbol> <symbol viewBox="0 0 22 14" id=icon_revoke_permissions><g fill-rule=evenodd><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill=currentColor d="M17.013 5.34l-2.37-2.37-1.624 1.624 2.37 2.37-2.37 2.37 1.624 1.624 2.37-2.37 2.37 2.37 1.624-1.624-2.37-2.37 2.37-2.37-1.624-1.624-2.37 2.37z"/></g></symbol> <symbol viewBox="0 0 22 14" id=icon_approved_permissions><g fill-rule=evenodd><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill=currentColor fill-rule=nonzero d="M20.356 3L22 4.618 15.513 11 12 7.543l1.644-1.617 1.87 1.839z"/></g></symbol> <symbol viewBox="0 0 16 16" id=icon_report_flag><path clip-rule=evenodd d="M3,14 L1,14 L1,2 L3,2 L3,14 L3,14 Z M4,2 L11,2 L11,4 L15,4 L15,11 L8,11 L8,9 L4,9 L4,2 L4,2 Z"></path></symbol> <symbol id=icon_heart height=16px version=1.1 viewBox="0 0 16 16" width=16px x=0px y=0px> <path clip-rule=evenodd d=M8,14L1,7V4l2-2h3l2,2l2-2h3l2,2v3L8,14z fill-rule=evenodd></path> </symbol> <symbol id=icon_unheart height=16px version=1.1 viewBox="0 0 16 16" width=16px x=0px y=0px> <path clip-rule=evenodd d="M1,9V7h14v2H1z M1,4l2-2h3l2,2l2-2h3l2,2v2H1V4z M8,14l-4.667-4h9.333L8,14z" fill-rule=evenodd></path> </symbol> <symbol viewBox="0 0 30 30" id=icon_extensions><path d="M20 17.113V22a1 1 0 0 1-1 1h-4.887c.257-1.051.87-1.404.887-1.917C15.025 19.6 14.006 19 13 19c-1.004 0-2.055.6-1.998 2.083.037.483.642.854.894 1.917H8a1 1 0 0 1-1-1v-4.887c1.051.257 1.404.87 1.917.887C10.4 18.025 11 17.006 11 16c0-1.004-.6-2.055-2.083-1.998-.483.037-.854.642-1.917.894V11a1 1 0 0 1 1-1h3.896c-.252-1.063-.857-1.434-.894-1.917C10.945 6.6 11.996 6 13 6c1.006 0 2.025.599 2 2.083-.016.513-.63.866-.887 1.917H19a1 1 0 0 1 1 1v3.896c1.063-.252 1.434-.857 1.917-.894C23.4 13.945 24 14.996 24 16c0 1.006-.599 2.025-2.083 2-.513-.016-.866-.63-1.917-.887z" fill-rule=evenodd /></symbol> </svg> ';
+        e.exports = '<div class="player-initializing player-center-content"> <div class=player-loading-spinner></div> </div> <div class="player-overlay player-overlay--wall player-age-restriction-overlay js-age-restriction-overlay"> <div class=player-center-content> <div class=player-mature-overlay> <p class=js-mature-warning-label>The broadcaster indicated that the channel is intended for mature audiences.</p> <p><button type=button id=mature-link class="player-content-button js-player-mature-accept js-mature-accept-label">Start Watching</button></p> </div> <div class="player-age-gate js-age-gate"> <div class=player-age-gate-warning> <p> <svg class=player-age-gate--icon> <use xlink:href=#age-gate-icon /> </svg> </p> <p class=js-age-gate-warning-label>You must be 21 to view this content. Please enter your date of birth.</p> </div> <div class=player-age-gate-failed-once> <p> <svg class=player-age-gate--fail-icon> <use xlink:href=#age-gate-fail-icon /> </svg> </p> <p class=age-gate-locked-out-label>Sorry, you must be over the age of 21 to view this content.</p> </div> <div class=player-datepicker> <select class="player-datepicker--select js-select-month"> <option class=age-gate-jan value=0 selected=selected>January</option> <option class=age-gate-feb value=1>February</option> <option class=age-gate-mar value=2>March</option> <option class=age-gate-apr value=3>April</option> <option class=age-gate-may value=4>May</option> <option class=age-gate-jun value=5>June</option> <option class=age-gate-jul value=6>July</option> <option class=age-gate-aug value=7>August</option> <option class=age-gate-sept value=8>September</option> <option class=age-gate-oct value=9>October</option> <option class=age-gate-nov value=10>November</option> <option class=age-gate-dec value=11>December</option> </select> <select class="player-datepicker--select js-select-day"></select> <select class="player-datepicker--select js-select-year"></select> <button type=button class="js-age-gate-submit player-content-button">Submit</button> </div> </div> <div class=player-age-gate-locked-out> <p> <svg class=player-age-gate--fail-icon> <use xlink:href=#age-gate-fail-icon /> </svg> </p> <p class=age-gate-locked-out-label>Sorry, you must be over the age of 21 to view this content.</p> </div> </div> </div> <div class="player-offline-banner js-offline-banner"> <img class=js-meta-offline /> </div> <div class="player-overlay player-ad-overlay"> <a class="player-ad-overlay js-player-ad-overlay" target=_blank></a> </div> <div id=js-player-recommendations-overlay /> <div class="player-overlay player-overlay--recommendations hidden js-recommendations-overlay"> <div class="player-tower player-tower--gutter-xs js-player-tower"> <div class="player-tower-columns js-featured-rec-header player-featured-recommendations"> <div class=player-recommendations-header> <h3><span class="js-upnext-label player-featured-recommendations-vod">Up Next</span><span class="js-watchnext-label player-featured-recommendations-live">Watch Next</span></h3> <button class="player-recommendation-button js-featured-recommendations__more-videos"><span class="js-cancelautoplay-label player-featured-recommendations-vod">Cancel</span><span class="js-morevideos-label player-featured-recommendations-live">More Videos</span></button> </div> </div> <div class=player-tower-columns data-columns=12> <div class="player-tower player-tower--gutter-xs js-video-recommendations"> <div class="player-tower-columns player-recommended-stream js-recommended-stream"> <div class=player-card> <a class=player-card__layout> <figure class="player-card__img player-card__img--vod"> <img class=js-recommended-stream__thumbnail /> </figure> <div class=player-card__overlay> <div class="player-card__body js-recommendations-card"> <h4 class="player-card__bread js-recommended-stream__channel"> Channel Name </h4> <h3 class="player-card__title js-recommended-stream__title"> Non-Optional Content Title </h3> <div class="player-card__autoplay-timer js-autoplay-timer"> <h4 class=player-card__info> <span class=js-autoplay-text>Playing in {{timeRemaining}} seconds</span> </h4> <div class="player-card__autoplay js-autoplay"> <div class="autoplay__progress js-autoplay-progress"> </div> </div> </div> <div class="player-card__time-info js-recommendation-time-info"> <h4 class=player-card__info> <time class=js-recommended-stream__date>00:00:00</time> &nbsp;·&nbsp; <time class=js-recommended-stream__length>00:00:00</time> </h4> </div> </div> </div> </a> </div> </div> </div> </div> </div> </div> <div class="player-video-background-banner js-video-background-banner"> <img class=js-meta-video-background /> </div> <div class="player-overlay player-loading js-player-loading"> <div class=player-center-content> <div class=player-loading-spinner></div> </div> </div> <div class="player-overlay player-chromecast-overlay"> <div class=player-center-content> <div class=js-playing-on-label>Playing on {{device}}</div> </div> </div> <div class="player-overlay player-fullscreen-overlay js-control-fullscreen-overlay"> </div> <div class="player-overlay player-extensions" id=js-player-extension-root> </div> <div class="cc-flag player-captions-container js-player-captions-container"> <div class="player-captions-window js-player-captions-window"> <div class="player-captions js-player-captions"></div> </div> </div> <div class="player-overlay player-play-overlay js-paused-overlay"> <button type=button class="player-button player-button-play js-control-play-button"> <svg class=player-icon-play><use xlink:href=#icon_play /></svg> </button> </div> <div class="player-overlay player-overlay--wall player-product-overlay js-player-product-overlay"> <div class="player-center-content player-product js-player-product"> <p></p> <a href="" target=_blank class="purchase_button js-subscribe-label">Subscribe</a> </div> </div> <div id=empty-collection-overlay /> <div id=top-bar /> <div id=js-collection-sidebar></div> <div id=js-follow-panel></div> <div id=js-dead-ltv-overlay /> <div class=player-storm-warning> <div class=player-center-content> <div class=player-loading-spinner></div> <p> <span class=js-broadcast-down-label>The broadcast is down.</span><br/> <span class=js-broadcast-reload-label>The player will automatically reload when the broadcast is back.</span> </p> </div> </div> <div class=player-error> <div class=player-center-content> <p class=js-player-error></p> </div> </div> <div id=stream-status /> <div id=js-cc-options-modal class="js-cc-modal-container player-modal__container" data-state=closed> <div class="js-cc-modal player-modal__content" data-tab-selected=presets> <button type=button class="player-modal__close js-cc-custom-modal-dismiss"> <svg><use xlink:href=#icon_close_modal /></svg> </button> <h2 class="js-cc-modal-header player-modal__header">Closed Caption Settings</h2> <ul class="player-tabs clearfix"> <li class="player-tabs__item player-tabs__item--active" data-tab=presets> <a href=# class=js-cc-presets-tab>Presets</a> </li> <li class="player-tabs__item js-cc-tab-text" data-tab=text> <a href=# class=js-cc-text-tab>Text</a> </li> <li class="player-tabs__item js-cc-tab-text" data-tab=effects> <a href=# class=js-cc-effects-tab>Effects</a> </li> <li class=player-tabs__item data-tab=background> <a href=# class=js-cc-background-tab>Background</a> </li> <li class=player-tabs__item data-tab=window> <a href=# class=js-cc-window-tab>Window</a> </li> </ul> <div class=cc-modal-menu-frame data-tab=presets> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=white-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=lime-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=yellow-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=cyan-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=magenta-on-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=white-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=lime-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=yellow-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=cyan-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset=magenta-on-trans-black>aA</div> <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset=black-on-white>aA</div> </div> <div class=cc-modal-menu-frame data-tab=text> <div class=cc-customize-field> <label class=js-cc-font-label for=cc-font>Font</label> <select class=js-cc-dropdown name=font id=cc-font> <option value=mono-serif>Mono Serif</option> <option value=prop-serif>Serif</option> <option value=mono-sans-serif>Mono Sans-Serif</option> <option value=prop-sans-serif>Sans-Serif</option> <option value=casual>Casual</option> <option value=cursive>Cursive</option> <option value=small-capitals>Small Capitals</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-justification-label for=cc-font-justification>Alignment</label> <select class=js-cc-dropdown name=alignment id=cc-font-justification> <option value=left>Left</option> <option value=center>Center</option> <option value=right>Right</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <input id=font-color-white type=radio name=fontColorName class=js-cc-radio value=white> <label for=font-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-black type=radio name=fontColorName class=js-cc-radio value=black> <label for=font-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-red type=radio name=fontColorName class=js-cc-radio value=red> <label for=font-color-red class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-green type=radio name=fontColorName class=js-cc-radio value=green> <label for=font-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-cyan type=radio name=fontColorName class=js-cc-radio value=cyan> <label for=font-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-magenta type=radio name=fontColorName class=js-cc-radio value=magenta> <label for=font-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-yellow type=radio name=fontColorName class=js-cc-radio value=yellow> <label for=font-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=font-color-blue type=radio name=fontColorName class=js-cc-radio value=blue> <label for=font-color-blue class=cc-color-palette__square></label> </div> </div> </div> <div class=cc-customize-field> <label class=js-cc-position-label for=cc-position>Position</label> <select class=js-cc-dropdown name=verticalPosition id=cc-position> <option value=bottom>Bottom</option> <option value=top>Top</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-font-opacity>Opacity</label> <select class=js-cc-dropdown name=fontOpacity id=cc-font-opacity> <option value=solid>Solid</option> <option value=translucent>Translucent</option> <option value=semiTransparent>Semi-Transparent</option> <option value=flashing>Flashing</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-size-label>Size</label> <button class="js-cc-font-size cc-font-size" value=increment>A <span class="js-font-increment-tip player-tip js-control-tip" data-tip="Increase Size"></span> </button> <button class="js-cc-font-size cc-font-size" value=decrement>A <span class="js-font-decrement-tip player-tip js-control-tip" data-tip="Decrease Size"></span> </button> </div> </div> <div class=cc-modal-menu-frame data-tab=effects> <div class=cc-customize-field> <label class=js-cc-style-label>Style</label> <div class=cc-style-palette> <div class=cc-style-palette__container> <input id=style-underline type=checkbox name=fontUnderline class=js-cc-checkbox value=underline> <label for=style-underline class=cc-style-palette__square>U</label> </div> <div class=cc-style-palette__container> <input id=style-italic type=checkbox name=fontItalic class=js-cc-checkbox value=italic> <label for=style-italic class=cc-style-palette__square>I</label> </div> <div class=cc-style-palette__container> <input id=style-bold type=checkbox name=fontBold class=js-cc-checkbox value=bold> <label for=style-bold class=cc-style-palette__square>B</label> </div> </div> </div> <div class=cc-customize-field> <label class=js-cc-edge-label>Effect</label> <div class=cc-edge-palette> <div class=cc-edge-palette__container> <hr class=cc-edge-disabled /> <input id=edge-effect-none type=radio name=edge class=js-cc-radio value=none> <label for=edge-effect-none class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-raised type=radio name=edge class=js-cc-radio value=raised> <label for=edge-effect-raised class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-drop-shadow type=radio name=edge class=js-cc-radio value=drop> <label for=edge-effect-drop-shadow class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-depressed type=radio name=edge class=js-cc-radio value=depressed> <label for=edge-effect-depressed class=cc-edge-palette__square>aA</label> </div> <div class=cc-edge-palette__container> <input id=edge-effect-uniform type=radio name=edge class=js-cc-radio value=uniform> <label for=edge-effect-uniform class=cc-edge-palette__square>aA</label> </div> </div> </div> </div> <div class=cc-modal-menu-frame data-tab=background> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-bg-opacity>Opacity</label> <select class=js-cc-dropdown name=backgroundOpacity id=cc-bg-opacity> <option class=js-cc-opacity-solid value=solid>Solid</option> <option class=js-cc-opacity-translucent value=translucent>Translucent</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <hr class=cc-no-color /> <input id=background-transparent type=radio name=backgroundColorName class=js-cc-radio value=transparent> <label for=background-transparent class="cc-color-palette__square cc-color-palette__square-no-color"></label> </div> <div class=cc-color-palette__container> <input id=background-color-white type=radio name=backgroundColorName class=js-cc-radio value=white> <label for=background-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-lightgray type=radio name=backgroundColorName class=js-cc-radio value=lightgray> <label for=background-color-lightgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-gray type=radio name=backgroundColorName class=js-cc-radio value=gray> <label for=background-color-gray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-darkgray type=radio name=backgroundColorName class=js-cc-radio value=darkgray> <label for=background-color-darkgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-black type=radio name=backgroundColorName class=js-cc-radio value=black> <label for=background-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-green type=radio name=backgroundColorName class=js-cc-radio value=green> <label for=background-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-blue type=radio name=backgroundColorName class=js-cc-radio value=blue> <label for=background-color-blue class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-cyan type=radio name=backgroundColorName class=js-cc-radio value=cyan> <label for=background-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-magenta type=radio name=backgroundColorName class=js-cc-radio value=magenta> <label for=background-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-yellow type=radio name=backgroundColorName class=js-cc-radio value=yellow> <label for=background-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=background-color-red type=radio name=backgroundColorName class=js-cc-radio value=red> <label for=background-color-red class=cc-color-palette__square></label> </div> </div> </div> </div> <div class=cc-modal-menu-frame data-tab=window> <div class=cc-customize-field> <label class=js-cc-opacity-label for=cc-window-opacity>Opacity</label> <select class=js-cc-dropdown name=windowOpacity id=cc-window-opacity> <option class=js-cc-opacity-solid value=solid>Solid</option> <option class=js-cc-opacity-translucent value=translucent>Translucent</option> </select> </div> <div class=cc-customize-field> <label class=js-cc-color-label>Color</label> <div class=cc-color-palette> <div class=cc-color-palette__container> <hr class=cc-no-color /> <input id=window-transparent type=radio name=windowColorName class=js-cc-radio value=transparent> <label for=window-transparent class="cc-color-palette__square cc-color-palette__square-no-color"></label> </div> <div class=cc-color-palette__container> <input id=window-color-white type=radio name=windowColorName class=js-cc-radio value=white> <label for=window-color-white class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-lightgray type=radio name=windowColorName class=js-cc-radio value=lightgray> <label for=window-color-lightgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-gray type=radio name=windowColorName class=js-cc-radio value=gray> <label for=window-color-gray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-darkgray type=radio name=windowColorName class=js-cc-radio value=darkgray> <label for=window-color-darkgray class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-black type=radio name=windowColorName class=js-cc-radio value=black> <label for=window-color-black class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-green type=radio name=windowColorName class=js-cc-radio value=green> <label for=window-color-green class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-blue type=radio name=windowColorName class=js-cc-radio value=blue> <label for=window-color-blue class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-cyan type=radio name=windowColorName class=js-cc-radio value=cyan> <label for=window-color-cyan class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-magenta type=radio name=windowColorName class=js-cc-radio value=magenta> <label for=window-color-magenta class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-yellow type=radio name=windowColorName class=js-cc-radio value=yellow> <label for=window-color-yellow class=cc-color-palette__square></label> </div> <div class=cc-color-palette__container> <input id=window-color-red type=radio name=windowColorName class=js-cc-radio value=red> <label for=window-color-red class=cc-color-palette__square></label> </div> </div> </div> </div> </div> </div> <div class="player-hover player-controls-bottom pl-flex js-controls-bottom"> <div id=js-player-seek class=player-seek /> <div class=player-buttons-left> <button type=button class="player-button player-button--playpause js-control-playpause-button" tabindex=-1> <span class="pause-button js-pause-button"> <span class="player-tip player-tip--aleft js-tip" data-tip=Pause></span> <svg class=player-icon-pause><use xlink:href=#icon_pause /></svg> </span> <span class="play-button js-play-button"> <span class="player-tip player-tip--aleft js-tip" data-tip=Play></span> <svg class=player-icon-play><use xlink:href=#icon_play /></svg> </span> </button> <div id=js-player-volume class=player-volume /> </div> <div class=player-buttons-right> <div id=js-notification-popup-container></div> <div id=js-settings class="flex flex__item"></div> <button type=button class="cc-flag player-button player-button--cc js-control-cc" tabindex=-1> <span class="player-tip js-control-tip" data-tip=Captions></span> <svg class=js-player-icon-cc><use xlink:href=#icon_cc_on /></svg> <svg class=js-player-icon-cc-deactivated><use xlink:href=#icon_cc_off /></svg> </button> <div class=player-menu> <button type=button class="player-button player-button--clips js-control-clips" data-canclip=false> <span class="player-tip js-tip" data-tip=Clip></span> <svg class=player-icon-clips><use xlink:href=#icon_clips /></svg> <svg class="player-icon-clips--bday js-player-icon-clips--bday" style=visibility:hidden> <use xlink:href=#icon_clips--bday /> </svg> </button> <form class=js-create-clip-form method=post action="" target=""> <input class=js-create-clip-player-backend-type type=hidden name=player_backend_type value=""/> <input class=js-create-clip-channel type=hidden name=channel value=""/> <input class=js-create-clip-offset type=hidden name=offset value=""/> <input class=js-create-clip-broadcast_id type=hidden name=broadcast_id value=""/> <input class=js-create-clip-vod_id type=hidden name=vod_id value=""/> <input class=js-create-clip-play_session_id type=hidden name=play_session_id value=""/> </form> </div> <button type=button class="player-button player-button--chromecast js-chromecast-button"> <span class="player-tip js-tip" data-tip=Chromecast></span> <svg class=player-icon-chromecast-p1><use xlink:href=#icon_chromecast_p1 /></svg> <svg class=player-icon-chromecast-p2><use xlink:href=#icon_chromecast_p2 /></svg> <svg class=player-icon-chromecast-p3><use xlink:href=#icon_chromecast_p3 /></svg> <svg class=player-icon-chromecast-p4><use xlink:href=#icon_chromecast_p4 /></svg> <svg class=player-icon-chromecast-p5><use xlink:href=#icon_chromecast_p5 /></svg> </button> <button type=button class="player-button player-button--theatre js-control-theatre" tabindex=-1> <span class="enter-theatre-button js-theatre-button"> <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Theater Mode"></span> <svg class=player-icon-theatre><use xlink:href=#icon_theatre /></svg> </span> <span class="exit-theatre-button js-exit-theatre-button"> <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Exit Theater Mode"></span> <svg class=player-icon-theatre-deactivate><use xlink:href=#icon_theatre_deactivate /></svg> </span> </button> <button type=button class="player-button player-button--fullscreen js-control-fullscreen" tabindex=-1> <span class="fullscreen-button js-fullscreen"> <span class="player-tip js-control-tip" data-tip=Fullscreen></span> <svg class=player-icon-fullscreen><use xlink:href=#icon_fullscreen /></svg> </span> <span class="exit-fullscreen-button js-exit-fullscreen"> <span class="player-tip js-control-tip" data-tip="Exit Fullscreen"></span> <svg class=player-icon-unfullscreen><use xlink:href=#icon_unfullscreen /></svg> </span> </button> <button type=button class="player-button player-button--twitch js-watch-twitch"> <span class="player-tip player-tip--aright js-tip" data-tip="Watch on Twitch"></span> <a class="player-button player-button--twitch js-hyperlink-watch-twitch" href="" target=_blank> <svg><use xlink:href=#icon_twitch /></svg> </a> </button> </div> </div> <div class=player-ad-notice> <p class=js-advertisement-label>Advertisement</p> </div> <div id=js-player-alert-container /> <div id=stats /> <svg viewBox="0 0 30 30" xmlns=http://www.w3.org/2000/svg style=width:0;height:0;visibility:hidden;display:block> <symbol viewBox="0 0 30 30" id=icon_play><path clip-rule=evenodd d=M10,7l12,8l-12,8V7z fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_pause><path clip-rule=evenodd d="M9,22h4V8H9V22z M17,8v14h4V8H17z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_volumefull><path clip-rule=evenodd d="M22,21.5v-13L23,8v14L22,21.5z M18,10.5l1-0.5v10l-1-0.5V10.5z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_volumemute><path clip-rule=evenodd d="M23,18L23,18h-0.7L20,15.7L17.7,18H17l0,0v-0.7l2.3-2.3L17,12.7V12l0,0h0.7l2.3,2.3l2.3-2.3H23l0,0v0.7L20.7,15l2.3,2.3V18z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_fullscreen><path clip-rule=evenodd d="M7,7 L15.2,7 L12.8,9.4 L15.8,12.4 L12.4,15.8 L9.4,12.8 L7,15.2 L7,7 Z M23,23 L14.8,23 L17.2,20.6 L14.2,17.6 L17.6,14.2 L20.6,17.2 L23,14.8 L23,23 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_unfullscreen><path clip-rule=evenodd d="M15,15 L23.2,15 L20.8,17.4 L23.8,20.4 L20.4,23.8 L17.4,20.8 L15,23.2 L15,15 L15,15 Z M15,15 L6.8,15 L9.2,12.6 L6.2,9.6 L9.6,6.2 L12.6,9.2 L15,6.8 L15,15 L15,15 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_settings><path clip-rule=evenodd d="M13.3589744,7 L16.6410256,7 L18.0769231,9.8 L21.3589744,9.8 L23,12.2 L21.3589744,15 L23,17.8 L21.3589744,20.2 L18.0769231,20.2 L16.6410256,23 L13.3589744,23 L11.9230769,20.2 L8.64102564,20.2 L7,17.8 L8.64102564,15 L7,12.2 L8.64102564,9.8 L11.9230769,9.8 L13.3589744,7 Z M15,17.8 C16.5860485,17.8 17.8717949,16.5463973 17.8717949,15 C17.8717949,13.4536027 16.5860485,12.2 15,12.2 C13.4139515,12.2 12.1282051,13.4536027 12.1282051,15 C12.1282051,16.5463973 13.4139515,17.8 15,17.8 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_theatre><path d="M6 21h11V9H6v12zM19 9v12h5V9h-5z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_theatre_deactivate><path d="M6 9h11v12H6V9zm2 2h9v8H8v-8zm9-2h7v12h-7V9zm2 2h3v8h-3v-8z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 63 30" id=icon_twitch><path clip-rule=evenodd d="M55,19 L52,19 L52,13 L49,13 L49,19 L46,19 L46,8 L49,8 L49,10 L53,10 L55,12 L55,19 L55,19 Z M45,13 L41,13 L41,16 L45,16 L45,19 L40,19 L38,17 L38,12 L40,10 L45,10 L45,13 L45,13 Z M37,13 L34,13 L34,16 L37,16 L37,19 L33,19 L31,17 L31,8 L34,8 L34,10 L37,10 L37,13 L37,13 Z M27,8 L30,8 L30,9 L27,9 L27,8 Z M27,10 L30,10 L30,19 L27,19 L27,10 Z M26,17 L24,19 L15,19 L15,10 L18,10 L18,16 L19,16 L19,10 L22,10 L22,16 L23,16 L23,10 L26,10 L26,17 L26,17 Z M14,13 L11,13 L11,16 L14,16 L14,19 L10,19 L8,17 L8,8 L11,8 L11,10 L14,10 L14,13 L14,13 Z M53.5,9 L50,9 L50,7 L45.5,7 L43,9 L39.5,9 L38,10.5 L38,9 L35,9 L35,7 L26,7 L26,9 L15,9 L12,7 L7,7 L7,17.5 L9.5,20.125 L14,23 L18,23 L18,22.25 L19.5,23 L25.5,23 L26.5,21.5 L27,23 L31,23 L31,21.5 L32.5,23 L37,23 L37.25,21.5 L38.5,23 L43.5,23 L45,21.5 L45,23 L47.5,23 L49,21.5 L49,23 L52.5,23 L56,19.5 L56,11.5 L53.5,9 L53.5,9 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close><path clip-rule=evenodd d="M15.1035534,15.4571068 L11.5303301,19.0303301 L11.3535534,19.2071068 L11,18.8535534 L11.1767767,18.6767767 L14.75,15.1035534 L11.1767767,11.5303301 L11,11.3535534 L11.3535534,11 L11.5303301,11.1767767 L15.1035534,14.75 L18.6767767,11.1767767 L18.8535534,11 L19.2071068,11.3535534 L19.0303301,11.5303301 L15.4571068,15.1035534 L19.0303301,18.6767767 L19.2071068,18.8535534 L18.8535534,19.2071068 L18.6767767,19.0303301 L15.1035534,15.4571068 Z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close_md><path clip-rule=evenodd d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p1><path fill-rule=evenodd clip-rule=evenodd d=M15,22c0-0.7-0.1-1.4-0.2-2H22V10H8v3.2C7.4,13.1,6.7,13,6,13V8h18v14H15z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p2><path fill-rule=evenodd clip-rule=evenodd d=M10,13.9V12h10v6h-5.9C13.2,16.2,11.8,14.8,10,13.9z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p3><path fill-rule=evenodd clip-rule=evenodd d=M13,22h-1c0-3.3-2.7-6-6-6v-1C9.9,15,13,18.1,13,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p4><path fill-rule=evenodd clip-rule=evenodd d=M10,22H9c0-1.7-1.3-3-3-3v-1C8.2,18,10,19.8,10,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_chromecast_p5><path fill-rule=evenodd clip-rule=evenodd d=M7,22H6v-1C6.6,21,7,21.4,7,22z /></symbol> <symbol viewBox="0 0 30 30" id=icon_clips><path d="M14.802 7.804l-3.83 1.026 2.928 2.321 3.83-1.026-2.928-2.321zm2.895-.776l3.981-1.067.777 2.898-1.83.49-2.928-2.321zM7.969 9.635l-1.745.467L7 13l3.898-1.044-2.929-2.321zM7 13h16v9H7v-9zm1.969 3h2.785l2.228-3h-2.785l-2.228 3zm7.018 0h2.785L21 13h-2.785l-2.228 3z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 13 18" id=icon_clips--bday><path d="M6.505 7.61l2.41 2.33H4.53l.621-2.174-.552-.81L1.43 8.53l1.77-2.803L.266 4.184l3.531-.22.234-3.118 1.761 2.583L8.96 1.854 7.19 4.658 10.124 6.2l-3.53.22-.09 1.189zm6.546 6.33H3.385l.625-2.182h6.785l2.256 2.182zm-3.042 1.818l-7.737 2.073.593-2.073h7.144z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 30 30" id=icon_cc_on><path fill-rule=evenodd clip-rule=evenodd d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol> <symbol viewBox="0 0 30 30" id=icon_cc_off><path fill-rule=evenodd clip-rule=evenodd d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M24,8 L24,22 L6,22 L6,8 L24,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol> <symbol viewBox="0 0 30 30" id=icon_close_modal><path clip-rule=evenodd d="M13.657 3.757l-4.243 4.243 4.243 4.242-1.415 1.415-4.242-4.243-4.243 4.243-1.414-1.415 4.243-4.242-4.243-4.243 1.414-1.414 4.243 4.243 4.242-4.243 1.415 1.414z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 14 14" id=icon_arrow><path d="M6.46765898,5.00010938 L6.46755335,5 L3.08055618,8.27078515 C2.97320936,8.37444877 2.97610632,8.52662201 3.07163118,8.6255409 L3.47144895,9.03956433 C3.56460436,9.13602957 3.72584608,9.14003286 3.82630008,9.04302556 L6.46765898,6.49229492 L9.10901788,9.04302556 C9.20947188,9.14003286 9.3707136,9.13602957 9.46386901,9.03956433 L9.86368678,8.6255409 C9.95921164,8.52662201 9.9621086,8.37444877 9.85476178,8.27078515 L6.46776461,5 L6.46765898,5.00010938 Z" transform="translate(6.467659, 7.056937) scale(-1, 1) rotate(-270.000000) translate(-6.467659, -7.056937) "></path></symbol> <symbol viewBox="0 0 98 86" id=age-gate-icon><path d="M24 8h50v10h12V8h12v78H0V8h12v10h12V8zm52-8h8v16h-8V0zM14 0h8v16h-8V0zm13.356 43.52h3.8c-.03-.954.068-1.9.29-2.84.225-.938.59-1.78 1.097-2.526.506-.745 1.155-1.348 1.945-1.81.79-.463 1.736-.694 2.84-.694.834 0 1.624.135 2.37.403.744.268 1.393.656 1.944 1.162.552.507.99 1.11 1.32 1.81.327.702.49 1.484.49 2.35 0 1.102-.17 2.07-.513 2.905-.344.835-.85 1.61-1.52 2.326-.672.715-1.514 1.423-2.528 2.124-1.013.7-2.19 1.468-3.532 2.303-1.103.655-2.16 1.356-3.175 2.1-1.014.746-1.923 1.61-2.728 2.595-.805.983-1.468 2.14-1.99 3.465-.52 1.327-.857 2.93-1.006 4.807h20.705v-3.354H30.888c.18-.983.56-1.855 1.14-2.616.582-.76 1.282-1.468 2.102-2.123.82-.656 1.722-1.275 2.705-1.856.984-.58 1.968-1.17 2.952-1.765.983-.626 1.937-1.282 2.86-1.968.925-.686 1.745-1.453 2.46-2.303.716-.85 1.29-1.81 1.722-2.884.432-1.073.648-2.31.648-3.71 0-1.492-.26-2.803-.783-3.936-.522-1.133-1.23-2.08-2.124-2.84-.893-.76-1.944-1.34-3.15-1.744-1.21-.402-2.498-.603-3.87-.603-1.67 0-3.16.283-4.47.85-1.312.566-2.408 1.348-3.287 2.347-.88 1-1.528 2.183-1.945 3.555-.418 1.37-.582 2.86-.492 4.47zM65.17 64V32.297H62.26c-.208 1.192-.596 2.176-1.162 2.95-.567.776-1.26 1.387-2.08 1.834-.82.448-1.736.754-2.75.918-1.013.164-2.057.246-3.13.246v3.04h8.228V64h3.8z" fill=#F9F7FC fill-rule=evenodd /></symbol> <symbol id=age-gate-fail-icon viewBox="0 0 92 81"><path d="M0 75.6l3.067-5.4L9.2 59.4l12.267-21.6 12.266-21.6 6.134-10.8L42.933 0h6.134l3.066 5.4 6.134 10.8 12.266 21.6L82.8 59.4l6.133 10.8L92 75.6 89.06 81H3.44L0 75.6zM40 27h12v13l-3 19h-6l-3-19V27zm1 34h10v10H41V61z" fill=#F9F7FC fill-rule=evenodd /></symbol> <symbol viewBox="0 0 19 19" id=icon_open_collection><path fill-rule=evenodd d="M0,6 L19,6 L19,19 L0,19 L0,6 Z M12.25,12.5 L7,9 L7,16 L12.25,12.5 Z M2,3 L17,3 L17,5 L2,5 L2,3 Z M4,0 L15,0 L15,2 L4,2 L4,0 Z"/></symbol> <symbol id=icon_pl-followcheck viewBox="0 0 16 16"><path clip-rule=evenodd d=M6.5,12.75L2,8.25l2-2l2.5,2.5l5.5-5.5l2,2L6.5,12.75z fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 30 30" id=pl-icon_close><path clip-rule=evenodd d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z"/></symbol> <symbol viewBox="0 0 14 12" id=pl-icon_vod><path d="M0 12h14V0H0v12zm4-3V3l7 3-7 3z" fill-rule=evenodd></path></symbol> <symbol viewBox="0 0 16 3" id=icon_more_info><path d="M15 1.5c0 .389-.139.736-.417 1.042-.277.305-.639.458-1.083.458-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C12.694.153 13.056 0 13.5 0c.444 0 .806.153 1.083.458.278.306.417.653.417 1.042zm-6 0c0 .389-.139.736-.417 1.042C8.306 2.847 7.944 3 7.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C6.694.153 7.056 0 7.5 0c.444 0 .806.153 1.083.458C8.861.764 9 1.111 9 1.5zm-6 0c0 .389-.139.736-.417 1.042C2.306 2.847 1.944 3 1.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C.694.153 1.056 0 1.5 0c.444 0 .806.153 1.083.458C2.861.764 3 1.111 3 1.5z" fill-rule=evenodd /></symbol> <symbol viewBox="0 0 22 14" id=icon_grant_permissions><g fill-rule=evenodd><path d="M16 5h-3v1.994L11.91 8H16v3l6-4.5L16 2v3z"/><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/></g></symbol> <symbol viewBox="0 0 22 14" id=icon_revoke_permissions><g fill-rule=evenodd><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill=currentColor d="M17.013 5.34l-2.37-2.37-1.624 1.624 2.37 2.37-2.37 2.37 1.624 1.624 2.37-2.37 2.37 2.37 1.624-1.624-2.37-2.37 2.37-2.37-1.624-1.624-2.37 2.37z"/></g></symbol> <symbol viewBox="0 0 22 14" id=icon_approved_permissions><g fill-rule=evenodd><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill=currentColor fill-rule=nonzero d="M20.356 3L22 4.618 15.513 11 12 7.543l1.644-1.617 1.87 1.839z"/></g></symbol> <symbol viewBox="0 0 16 16" id=icon_report_flag><path clip-rule=evenodd d="M3,14 L1,14 L1,2 L3,2 L3,14 L3,14 Z M4,2 L11,2 L11,4 L15,4 L15,11 L8,11 L8,9 L4,9 L4,2 L4,2 Z"></path></symbol> <symbol id=icon_heart height=16px version=1.1 viewBox="0 0 16 16" width=16px x=0px y=0px> <path clip-rule=evenodd d=M8,14L1,7V4l2-2h3l2,2l2-2h3l2,2v3L8,14z fill-rule=evenodd></path> </symbol> <symbol id=icon_unheart height=16px version=1.1 viewBox="0 0 16 16" width=16px x=0px y=0px> <path clip-rule=evenodd d="M1,9V7h14v2H1z M1,4l2-2h3l2,2l2-2h3l2,2v2H1V4z M8,14l-4.667-4h9.333L8,14z" fill-rule=evenodd></path> </symbol> <symbol viewBox="0 0 30 30" id=icon_extensions><path d="M20 17.113V22a1 1 0 0 1-1 1h-4.887c.257-1.051.87-1.404.887-1.917C15.025 19.6 14.006 19 13 19c-1.004 0-2.055.6-1.998 2.083.037.483.642.854.894 1.917H8a1 1 0 0 1-1-1v-4.887c1.051.257 1.404.87 1.917.887C10.4 18.025 11 17.006 11 16c0-1.004-.6-2.055-2.083-1.998-.483.037-.854.642-1.917.894V11a1 1 0 0 1 1-1h3.896c-.252-1.063-.857-1.434-.894-1.917C10.945 6.6 11.996 6 13 6c1.006 0 2.025.599 2 2.083-.016.513-.63.866-.887 1.917H19a1 1 0 0 1 1 1v3.896c1.063-.252 1.434-.857 1.917-.894C23.4 13.945 24 14.996 24 16c0 1.006-.599 2.025-2.083 2-.513-.016-.866-.63-1.917-.887z" fill-rule=evenodd /></symbol> </svg> ';
     }, function(e, t, n) {
         "use strict";
 
@@ -45672,15 +45848,15 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            s = n(737),
+            s = n(739),
             u = r(s),
-            l = n(741),
+            l = n(743),
             c = r(l),
             d = n(183),
             f = n(341),
             p = n(403),
             h = n(338),
-            _ = n(753),
+            _ = n(755),
             v = n(167),
             m = "production";
         t.PubSub = function() {
@@ -45771,14 +45947,14 @@
         }()
     }, function(e, t, n) {
         var r = n(24),
-            i = n(738),
+            i = n(740),
             o = r(i);
         e.exports = o
     }, function(e, t, n) {
         function r(e, t) {
             return e && e.length && t && t.length ? i(e, t) : e
         }
-        var i = n(739);
+        var i = n(741);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n, r) {
@@ -45793,7 +45969,7 @@
         }
         var i = n(65),
             o = n(54),
-            a = n(740),
+            a = n(742),
             s = n(47),
             u = n(208),
             l = Array.prototype,
@@ -45854,20 +46030,20 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            l = n(742),
+            l = n(744),
             c = r(l),
-            d = n(743),
+            d = n(745),
             f = r(d),
-            p = n(744),
+            p = n(746),
             h = r(p),
-            _ = n(745),
+            _ = n(747),
             v = r(_),
-            m = n(747),
+            m = n(749),
             y = r(m),
-            g = n(748),
+            g = n(750),
             b = r(g),
-            E = n(750),
-            T = n(752),
+            E = n(752),
+            T = n(754),
             S = r(T),
             C = f.default._getLogger("PubsubDriver"),
             w = 3e4,
@@ -46044,7 +46220,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(744),
+            a = n(746),
             s = r(a),
             u = function() {},
             l = u,
@@ -46200,13 +46376,13 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            u = n(742),
+            u = n(744),
             l = r(u),
-            c = n(743),
+            c = n(745),
             d = r(c),
-            f = n(744),
+            f = n(746),
             p = r(f),
-            h = n(746),
+            h = n(748),
             _ = r(h),
             v = 30,
             m = 3e4,
@@ -46430,7 +46606,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(743),
+            a = n(745),
             s = r(a),
             u = "pubsub",
             l = s.default._getLogger("IframeHost"),
@@ -46588,15 +46764,15 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            u = n(742),
+            u = n(744),
             l = r(u),
-            c = n(743),
+            c = n(745),
             d = r(c),
-            f = n(744),
+            f = n(746),
             p = r(f),
-            h = n(749),
+            h = n(751),
             _ = r(h),
-            v = n(746),
+            v = n(748),
             m = r(v),
             y = d.default._getLogger("WebsocketClient"),
             g = 3e4,
@@ -46866,11 +47042,11 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            u = n(742),
+            u = n(744),
             l = r(u),
-            c = n(743),
+            c = n(745),
             d = r(c),
-            f = n(744),
+            f = n(746),
             p = r(f),
             h = d.default._getLogger("PubsubSocket"),
             _ = 120,
@@ -46999,7 +47175,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.Stats = void 0;
-        var i = n(751),
+        var i = n(753),
             o = r(i);
         t.Stats = o.default, t.default = {
             Stats: o.default
@@ -47194,9 +47370,9 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(744),
+            a = n(746),
             s = r(a),
-            u = n(743),
+            u = n(745),
             l = r(u),
             c = "https://pubster.twitch.tv/publish",
             d = "https://pubster-darklaunch.twitch.tv/publish",
@@ -47411,58 +47587,58 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.init = i;
-        var o = n(589),
-            a = n(756),
+        var o = n(588),
+            a = n(758),
             s = r(a),
-            u = n(757),
-            l = n(758),
-            c = n(759),
-            d = n(760),
-            f = n(761),
-            p = n(762),
-            h = n(763),
+            u = n(759),
+            l = n(760),
+            c = n(761),
+            d = n(762),
+            f = n(763),
+            p = n(764),
+            h = n(765),
             _ = n(364),
-            v = n(764),
-            m = n(766),
-            y = n(767),
+            v = n(766),
+            m = n(768),
+            y = n(769),
             g = n(355),
             b = n(375),
-            E = n(768),
-            T = n(661),
-            S = n(770),
-            C = n(772),
-            w = n(773),
-            P = n(775),
-            A = n(778),
+            E = n(770),
+            T = n(660),
+            S = n(772),
+            C = n(774),
+            w = n(775),
+            P = n(777),
+            A = n(780),
             O = n(422),
-            k = n(779),
-            I = n(781),
-            N = n(783),
-            R = n(784),
-            M = n(785),
-            L = n(786),
-            D = n(787),
-            x = n(788),
-            j = n(789),
-            U = n(790),
-            B = n(791),
-            F = n(792),
+            k = n(781),
+            I = n(783),
+            N = n(785),
+            R = n(786),
+            M = n(787),
+            L = n(788),
+            D = n(789),
+            x = n(790),
+            j = n(791),
+            U = n(792),
+            B = n(793),
+            F = n(794),
             V = n(428),
-            H = n(793),
-            q = n(795),
-            G = n(796),
-            Y = n(798),
-            W = n(659),
-            K = n(799),
-            z = n(800),
-            Q = n(801),
-            $ = n(802),
-            X = n(803),
+            H = n(795),
+            q = n(797),
+            G = n(798),
+            Y = n(800),
+            W = n(658),
+            K = n(801),
+            z = n(802),
+            Q = n(803),
+            $ = n(804),
+            X = n(805),
             J = n(411),
-            Z = (n(377), n(437), n(804)),
-            ee = n(806),
-            te = n(808),
-            ne = n(810),
+            Z = (n(377), n(436), n(806)),
+            ee = n(808),
+            te = n(810),
+            ne = n(812),
             re = (0, o.combineReducers)({
                 accessToken: u.accessToken,
                 ads: l.ads,
@@ -47786,7 +47962,7 @@
         }), t.DEFAULT_CLIPS_STATE = void 0, t.clips = i;
         var o = n(117),
             a = r(o),
-            s = n(765),
+            s = n(767),
             u = Object.freeze({
                 recordClip: function() {
                     console.error("Clip Generator not available yet")
@@ -47900,7 +48076,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.experiments = r;
-        var i = n(769),
+        var i = n(771),
             o = new Error("Attempting to use experiments too early"),
             a = {
                 get: function() {
@@ -47941,8 +48117,8 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.lang = r;
-        var i = n(771),
-            o = n(669)
+        var i = n(773),
+            o = n(668)
     }, function(e, t, n) {
         "use strict";
 
@@ -47981,7 +48157,7 @@
         }), t.LAST_KNOWN_LANG = t.ACTION_SET_LANGUAGE = void 0, t.setLanguage = r, t.loadLanguage = i, t.loadDefaultLang = o;
         var a = n(253),
             s = n(254),
-            u = n(669),
+            u = n(668),
             l = n(200),
             c = t.ACTION_SET_LANGUAGE = "set language",
             d = t.LAST_KNOWN_LANG = "playerLanguage"
@@ -48051,7 +48227,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.navigatorReducer = r;
-        var i = n(774)
+        var i = n(776)
     }, function(e, t) {
         "use strict";
 
@@ -48089,9 +48265,9 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.notifications = i;
-        var o = n(776),
+        var o = n(778),
             a = r(o),
-            s = n(777),
+            s = n(779),
             u = r(s),
             l = n(279),
             c = []
@@ -48160,7 +48336,7 @@
         }), t.playerDimensions = i;
         var o = n(117),
             a = r(o),
-            s = n(780),
+            s = n(782),
             u = {
                 left: 0,
                 top: 0,
@@ -48204,7 +48380,7 @@
         }), t.playerOptions = i;
         var o = n(201),
             a = r(o),
-            s = n(782),
+            s = n(784),
             u = {
                 branding: !0,
                 showInfo: !0,
@@ -48297,7 +48473,7 @@
             a = r(o),
             s = n(70),
             u = r(s),
-            l = n(691),
+            l = n(690),
             c = n(338),
             d = {
                 fetched: !1,
@@ -48552,7 +48728,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.recommendations = i;
-        var o = n(431),
+        var o = n(430),
             a = n(338),
             s = n(117),
             u = r(s),
@@ -48659,11 +48835,11 @@
             f = r(d),
             p = n(70),
             h = r(p),
-            _ = n(437),
+            _ = n(436),
             v = n(338),
             m = n(224),
             y = n(167),
-            g = n(660),
+            g = n(659),
             b = t.UPDATE_INTERVAL_VOD = 20,
             E = t.UPDATE_INTERVAL_LIVESTREAM = 600,
             T = t.INIT_UPDATE_OFFSET_VOD = 2e4,
@@ -48772,7 +48948,7 @@
         var o = n(117),
             a = r(o),
             s = n(182),
-            u = n(782),
+            u = n(784),
             l = t.DEFAULT_SCREEN_MODE = Object.freeze({
                 isFullScreen: !1,
                 canFullScreen: !1,
@@ -48890,7 +49066,7 @@
         }), t.subscriptions = i;
         var o = n(117),
             a = r(o),
-            s = n(794),
+            s = n(796),
             u = n(338),
             l = {
                 isSubscribed: !1,
@@ -48979,7 +49155,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.timelineMetadata = i;
-        var o = n(613),
+        var o = n(612),
             a = n(338),
             s = n(117),
             u = r(s),
@@ -49030,7 +49206,7 @@
             a = r(o),
             s = n(70),
             u = r(s),
-            l = n(797),
+            l = n(799),
             c = ["host_channel", "content", "medium", "page_session_id", "tab_session_id", "chat_visibility_status", "referrer"]
     }, function(e, t) {
         "use strict";
@@ -49155,7 +49331,7 @@
         }), t.DEFAULT_WATCHPARTY = void 0, t.watchParty = i;
         var o = n(117),
             a = r(o),
-            s = n(753),
+            s = n(755),
             u = t.DEFAULT_WATCHPARTY = Object.freeze({
                 watchPartyId: "",
                 vodId: "",
@@ -49219,7 +49395,7 @@
             s = i(a),
             u = n(70),
             l = i(u),
-            c = n(641),
+            c = n(640),
             d = r(c),
             f = {
                 persistenceEnabled: !0
@@ -49283,7 +49459,7 @@
         }), t.createVideoApiMiddleware = i;
         var o = n(372),
             a = r(o),
-            s = n(805),
+            s = n(807),
             u = n(356),
             l = new s.NullVideoAPI
     }, function(e, t) {
@@ -49440,11 +49616,11 @@
             u = r(s),
             l = n(179),
             c = r(l),
-            d = n(807),
+            d = n(809),
             f = n(180),
-            p = n(641),
+            p = n(640),
             h = n(182),
-            _ = n(691),
+            _ = n(690),
             v = new d.NullEventEmitter
     }, function(e, t) {
         "use strict";
@@ -49524,7 +49700,7 @@
         var o = n(342),
             a = r(o),
             s = n(185),
-            u = n(809),
+            u = n(811),
             l = n(410),
             c = new u.NullEmbedHost
     }, function(e, t) {
@@ -49602,7 +49778,7 @@
         }), t.createAnalyticsTrackerMiddleware = i;
         var o = n(350),
             a = r(o),
-            s = n(811),
+            s = n(813),
             u = new s.NullAnalyticsTracker
     }, function(e, t) {
         "use strict";
@@ -49830,7 +50006,7 @@
             s = n(117),
             u = r(s),
             l = n(200),
-            c = n(785),
+            c = n(787),
             d = n(224),
             f = n(183),
             p = n(162),
@@ -49977,10 +50153,10 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(815),
+            a = n(817),
             s = r(a),
-            u = n(780),
-            l = n(816),
+            u = n(782),
+            l = n(818),
             c = r(l);
         t.PlayerResizeManager = function() {
             function e(t) {
@@ -50351,10 +50527,10 @@
                 }
             }(),
             s = n(183),
-            u = n(691),
+            u = n(690),
             l = n(375),
             c = n(411),
-            d = n(659),
+            d = n(658),
             f = n(53),
             p = r(f),
             h = ["amazon_livestream"];
@@ -50453,9 +50629,9 @@
                 }
             }(),
             o = n(183),
-            a = n(794),
-            s = n(691),
-            u = n(659);
+            a = n(796),
+            s = n(690),
+            u = n(658);
         t.TwitchEverywhereManager = function() {
             function e(t) {
                 r(this, e), this.store = t, this.unsubs = [], this.unsubs.push((0, o.subscribe)(this.store, ["streamMetadata.channel"], this.onChannelChange.bind(this)))
@@ -50508,11 +50684,11 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            a = n(431),
+            a = n(430),
             s = n(404),
             u = n(217),
             l = n(224),
-            c = n(785),
+            c = n(787),
             d = n(183),
             f = n(53),
             p = r(f),
@@ -50641,15 +50817,15 @@
             u = n(411),
             l = n(217),
             c = n(167),
-            d = n(785),
+            d = n(787),
             f = n(183),
             p = n(53),
             h = r(p),
-            _ = n(431),
+            _ = n(430),
             v = n(337),
             m = n(200),
             y = n(255),
-            g = n(437),
+            g = n(436),
             b = n(247),
             E = [l.PLAYER_DASHBOARD, l.PLAYER_FRONTPAGE, l.PLAYER_CREATIVE, l.PLAYER_HIGHLIGHTER],
             T = 560,
@@ -50860,7 +51036,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            o = n(660),
+            o = n(659),
             a = n(200),
             s = "staff";
         t.UserManager = function() {
