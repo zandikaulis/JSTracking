@@ -882,6 +882,18 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "48e86f7b-7550-4561-9782-9dfe0796b1f3": {
+            "name": "CHOMPIFY",
+            "v": 1824,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "experiment"
+            }]
+        },
         "497e1277-7fff-4c16-98f0-6b55c8b59a4f": {
             "name": "I18N_GAME_NAMES",
             "v": 1237,
