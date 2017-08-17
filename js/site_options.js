@@ -1968,6 +1968,18 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "aa886844-3254-4197-b026-518f2fa75c10": {
+            "name": "CVP MediaPlayer backend control Aug 17",
+            "v": 1834,
+            "t": 1,
+            "groups": [{
+                "weight": 92,
+                "value": "no"
+            }, {
+                "weight": 8,
+                "value": "yes"
+            }]
+        },
         "ab3ad381-0796-435d-94aa-e3907461d48e": {
             "name": "android_clip_theatre_mode",
             "v": 1753,
