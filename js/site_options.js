@@ -522,6 +522,18 @@ window.SiteOptions = {
                 "value": "holdout"
             }]
         },
+        "27ebb243-e247-4868-8619-6959c674fc13": {
+            "name": "NEW_CHECKOUT",
+            "v": 1833,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "2858bc04-3f98-4808-a2dd-86555885ca90": {
             "name": "clips_feel_it_coming",
             "v": 983,
