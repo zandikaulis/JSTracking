@@ -632,13 +632,13 @@ window.SiteOptions = {
         },
         "33d53034-cd8b-408f-abe7-e740f2fec303": {
             "name": "Hearthstone Directory Filter",
-            "v": 1523,
+            "v": 1832,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 95,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 5,
                 "value": "no"
             }]
         },
@@ -1337,13 +1337,13 @@ window.SiteOptions = {
         },
         "6fffb6c6-19d4-4172-980f-498079d99b9c": {
             "name": "Overwatch Directory Filter",
-            "v": 1522,
+            "v": 1831,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 95,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 5,
                 "value": "no"
             }]
         },
