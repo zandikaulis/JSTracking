@@ -1653,6 +1653,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "8feaebce-0955-4d59-bbad-4e3469dbb2f8": {
+            "name": "android_chomments_posting",
+            "v": 1843,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "active"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "903fb381-dbeb-466b-9c88-7b4da328fb2d": {
             "name": "android_autoplay_pulse",
             "v": 1150,
