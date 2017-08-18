@@ -558,18 +558,6 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
-        "2c137391-5182-429f-8760-9f71e4d40918": {
-            "name": "CVP MediaPlayer backend control",
-            "v": 1815,
-            "t": 1,
-            "groups": [{
-                "weight": 92,
-                "value": "no"
-            }, {
-                "weight": 8,
-                "value": "yes"
-            }]
-        },
         "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": {
             "name": "bits_for_ads",
             "v": 777,
