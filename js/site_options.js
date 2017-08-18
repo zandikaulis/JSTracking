@@ -1509,6 +1509,18 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "8620d12c-8e03-48d8-92ab-65a8d542a17d": {
+            "name": "Extensions Launch Announcement",
+            "v": 1841,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "no"
+            }, {
+                "weight": 0,
+                "value": "yes"
+            }]
+        },
         "87d995c4-afbc-400e-a6e4-472419071e26": {
             "name": "ios_pipboy_broadcasting",
             "v": 1338,
