@@ -2393,13 +2393,13 @@ window.SiteOptions = {
         },
         "ca305459-aec3-4d0c-b4e4-93d8cda54bba": {
             "name": "DEMOGRAPHIC_STATS",
-            "v": 1716,
+            "v": 1839,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }]
         },
