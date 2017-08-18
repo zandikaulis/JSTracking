@@ -1239,6 +1239,18 @@ window.SiteOptions = {
                 "value": "test"
             }]
         },
+        "6564de97-effd-4355-b4bb-2eecf49d035f": {
+            "name": "android_clip_native_player",
+            "v": 1844,
+            "t": 1,
+            "groups": [{
+                "weight": 99,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "active"
+            }]
+        },
         "676f7ba1-6f07-4782-adc2-99eaf7e04361": {
             "name": "SIGNUP_INTERCEPT",
             "v": 1791,
