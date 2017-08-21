@@ -17535,15 +17535,15 @@ var recurly = function(e) {
         C = i(T),
         D = n(25),
         M = n(27),
-        E = n(45),
-        A = n(47),
-        O = n(53),
-        P = n(55),
-        j = n(56),
-        I = (n(54), n(26)),
+        E = n(44),
+        A = n(46),
+        O = n(52),
+        P = n(54),
+        j = n(55),
+        I = (n(53), n(26)),
         N = n(28),
         R = i(N),
-        L = n(59),
+        L = n(58),
         F = i(L),
         z = n(7)("recurly"),
         H = {
@@ -17689,7 +17689,7 @@ var recurly = function(e) {
                 }
             }]), t
         }(b.default);
-    W.prototype.Frame = D.factory, W.prototype.coupon = n(60), W.prototype.giftcard = F.default, W.prototype.ApplePay = M.factory, W.prototype.PayPal = E.factory, W.prototype.paypal = A.deprecated, W.prototype.plan = n(61), W.prototype.tax = n(62), W.prototype.token = n(63), W.prototype.validate = n(64)
+    W.prototype.Frame = D.factory, W.prototype.coupon = n(59), W.prototype.giftcard = F.default, W.prototype.ApplePay = M.factory, W.prototype.PayPal = E.factory, W.prototype.paypal = A.deprecated, W.prototype.plan = n(60), W.prototype.tax = n(61), W.prototype.token = n(62), W.prototype.validate = n(63)
 }, function(e, t) {
     var n = Object.prototype.toString;
     e.exports = function(e) {
@@ -19629,11 +19629,11 @@ var recurly = function(e) {
         p = i(f),
         g = n(29),
         m = i(g),
-        y = n(31),
+        y = n(30),
         v = i(y),
-        _ = n(43),
+        _ = n(42),
         b = i(_),
-        w = n(44),
+        w = n(43),
         k = i(w),
         x = n(12),
         S = i(x),
@@ -19817,77 +19817,12 @@ var recurly = function(e) {
             return !0
         }
     }
-    var r = n(30);
+    var r = n(17);
     e.exports = function(e, t) {
         "function" != typeof t && (t = Object(t) === t ? i(t) : r(t));
         for (var n = 0, o = e.length; n < o; ++n)
             if (t(e[n], n)) return e[n]
     }
-}, function(e, t, n) {
-    function i(e) {
-        switch ({}.toString.call(e)) {
-            case "[object Object]":
-                return a(e);
-            case "[object Function]":
-                return e;
-            case "[object String]":
-                return s(e);
-            case "[object RegExp]":
-                return o(e);
-            default:
-                return r(e)
-        }
-    }
-
-    function r(e) {
-        return function(t) {
-            return e === t
-        }
-    }
-
-    function o(e) {
-        return function(t) {
-            return e.test(t)
-        }
-    }
-
-    function s(e) {
-        return /^ *\W+/.test(e) ? new Function("_", "return _ " + e) : new Function("_", "return " + u(e))
-    }
-
-    function a(e) {
-        var t = {};
-        for (var n in e) t[n] = "string" == typeof e[n] ? r(e[n]) : i(e[n]);
-        return function(e) {
-            if ("object" != typeof e) return !1;
-            for (var n in t) {
-                if (!(n in e)) return !1;
-                if (!t[n](e[n])) return !1
-            }
-            return !0
-        }
-    }
-
-    function u(e) {
-        var t = l(e);
-        if (!t.length) return "_." + e;
-        var n, i, r;
-        for (i = 0; i < t.length; i++) r = t[i], n = "_." + r, n = "('function' == typeof " + n + " ? " + n + "() : " + n + ")", e = c(r, e, n);
-        return e
-    }
-
-    function c(e, t, n) {
-        return t.replace(new RegExp("(\\.)?" + e, "g"), function(e, t) {
-            return t ? e : n
-        })
-    }
-    var l;
-    try {
-        l = n(18)
-    } catch (e) {
-        l = n(18)
-    }
-    e.exports = i
 }, function(e, t, n) {
     "use strict";
 
@@ -19904,11 +19839,11 @@ var recurly = function(e) {
             }
         })
     }
-    var r = n(32),
+    var r = n(31),
         o = n(13),
         s = n(16),
         a = n(2),
-        u = n(42),
+        u = n(41),
         c = n(7)("recurly:pricing:promise"),
         l = ["tax", "plan", "addon", "coupon", "address", "currency", "reset", "remove", "reprice", "giftcard", "shippingAddress"];
     e.exports = i, o(i.prototype, r.prototype), i.prototype.constructor = i, i.prototype.done = function() {
@@ -19918,10 +19853,10 @@ var recurly = function(e) {
     }
 }, function(e, t, n) {
     "use strict";
-    e.exports = n(33)
+    e.exports = n(32)
 }, function(e, t, n) {
     "use strict";
-    e.exports = n(34), n(36), n(37), n(38), n(39), n(41)
+    e.exports = n(33), n(35), n(36), n(37), n(38), n(40)
 }, function(e, t, n) {
     "use strict";
 
@@ -20014,7 +19949,7 @@ var recurly = function(e) {
             });
         n || i !== v || (n = !0, d(t, y))
     }
-    var m = n(35),
+    var m = n(34),
         y = null,
         v = {};
     e.exports = a, a._10 = null, a._97 = null, a._61 = i, a.prototype.then = function(e, t) {
@@ -20073,7 +20008,7 @@ var recurly = function(e) {
     }())
 }, function(e, t, n) {
     "use strict";
-    var i = n(34);
+    var i = n(33);
     e.exports = i, i.prototype.done = function(e, t) {
         (arguments.length ? this.then.apply(this, arguments) : this).then(null, function(e) {
             setTimeout(function() {
@@ -20083,7 +20018,7 @@ var recurly = function(e) {
     }
 }, function(e, t, n) {
     "use strict";
-    var i = n(34);
+    var i = n(33);
     e.exports = i, i.prototype.finally = function(e) {
         return this.then(function(t) {
             return i.resolve(e()).then(function() {
@@ -20102,7 +20037,7 @@ var recurly = function(e) {
         var t = new r(r._61);
         return t._81 = 1, t._65 = e, t
     }
-    var r = n(34);
+    var r = n(33);
     e.exports = r;
     var o = i(!0),
         s = i(!1),
@@ -20179,8 +20114,8 @@ var recurly = function(e) {
         }).join(""), "default:", "args[argLength] = cb;", "res = fn.apply(self, args);", "}", "if (res &&", '(typeof res === "object" || typeof res === "function") &&', 'typeof res.then === "function"', ") {rs(res);}", "});", "};"].join("");
         return Function(["Promise", "fn"], r)(o, e)
     }
-    var o = n(34),
-        s = n(40);
+    var o = n(33),
+        s = n(39);
     e.exports = o, o.denodeify = function(e, t) {
         return "number" == typeof t && t !== 1 / 0 ? i(e, t) : r(e)
     };
@@ -20228,7 +20163,7 @@ var recurly = function(e) {
     function o() {
         this.task = null
     }
-    var s = n(35),
+    var s = n(34),
         a = [],
         u = [],
         c = s.makeRequestCallFromTimer(i);
@@ -20243,7 +20178,7 @@ var recurly = function(e) {
     }
 }, function(e, t, n) {
     "use strict";
-    var i = n(34);
+    var i = n(33);
     e.exports = i, i.enableSynchronous = function() {
         i.prototype.isPending = function() {
             return 0 == this.getState()
@@ -20556,12 +20491,12 @@ var recurly = function(e) {
         }
     }();
     t.factory = a;
-    var c = n(46),
+    var c = n(45),
         l = i(c),
         h = n(11),
         d = i(h),
-        f = n(47),
-        p = n(50),
+        f = n(46),
+        p = n(49),
         g = n(7)("recurly:paypal"),
         m = ["ready", "token", "error"],
         y = function(e) {
@@ -21022,7 +20957,8 @@ var recurly = function(e) {
             Be = Math.max,
             $e = Q(De, "Map"),
             qe = Q(Object, "create");
-        m.prototype.clear = y, m.prototype.delete = v, m.prototype.get = _, m.prototype.has = b, m.prototype.set = w, k.prototype.clear = x, k.prototype.delete = S, k.prototype.get = T, k.prototype.has = C, k.prototype.set = D, M.prototype.clear = E, M.prototype.delete = A, M.prototype.get = O, M.prototype.has = P, M.prototype.set = j, I.prototype.add = I.prototype.push = N, I.prototype.has = R;
+        m.prototype.clear = y,
+            m.prototype.delete = v, m.prototype.get = _, m.prototype.has = b, m.prototype.set = w, k.prototype.clear = x, k.prototype.delete = S, k.prototype.get = T, k.prototype.has = C, k.prototype.set = D, M.prototype.clear = E, M.prototype.delete = A, M.prototype.get = O, M.prototype.has = P, M.prototype.set = j, I.prototype.add = I.prototype.push = N, I.prototype.has = R;
         var Ye = Ue ? g(Ue, Object) : fe,
             Ve = Ue ? function(e) {
                 for (var t = []; e;) s(t, Ye(e)), e = Fe(e);
@@ -21095,10 +21031,10 @@ var recurly = function(e) {
         }
     }();
     t.deprecated = s;
-    var u = n(32),
+    var u = n(31),
         c = (function(e) {
             e && e.__esModule
-        }(u), n(48)),
+        }(u), n(47)),
         l = n(7)("recurly:paypal:strategy:direct");
     t.DirectStrategy = function(e) {
         function t() {
@@ -21177,7 +21113,7 @@ var recurly = function(e) {
                 return n && e(t.prototype, n), i && e(t, i), t
             }
         }(),
-        c = n(49),
+        c = n(48),
         l = i(c),
         h = n(11),
         d = i(h),
@@ -21433,11 +21369,11 @@ var recurly = function(e) {
                 var s = r.get;
                 if (void 0 !== s) return s.call(i)
             },
-            c = n(51),
+            c = n(50),
             l = i(c),
-            h = n(52),
+            h = n(51),
             d = i(h),
-            f = n(48),
+            f = n(47),
             p = n(7)("recurly:paypal:strategy:braintree"),
             g = t.BRAINTREE_CLIENT_VERSION = "3.11.0";
         t.BraintreeStrategy = function(t) {
@@ -21674,7 +21610,7 @@ var recurly = function(e) {
                     default: e
                 }
             }(u),
-            l = n(54),
+            l = n(53),
             h = n(26);
         t.Bus = function(e) {
             function t() {
@@ -21924,11 +21860,11 @@ var recurly = function(e) {
         h = i(l),
         d = n(4),
         f = i(d),
-        p = n(46),
+        p = n(45),
         g = i(p),
-        m = n(57),
+        m = n(56),
         y = i(m),
-        v = n(58),
+        v = n(57),
         _ = n(12),
         b = (i(_), n(7)("recurly:hostedFields"), ["number", "month", "year"]),
         w = t.FIELD_TYPES = ["cvv"].concat(b);
