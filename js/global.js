@@ -15656,7 +15656,6 @@ googletag.cmd = googletag.cmd || [],
                 LATENCY_COMPONENT_INSTRUMENTATION: "4e9d0a3c-4f43-4817-8db4-ac060fc32b74",
                 TRENDING_EMOTES: "35731f0a-bd57-4582-915d-907dee75b3d4",
                 LEEROY_JENKINS: "59c5198b-ea6d-423d-b337-ea93d0dc8d66",
-                DEMOGRAPHIC_STATS: "ca305459-aec3-4d0c-b4e4-93d8cda54bba",
                 VODS_IN_CAROUSEL_EXPERIMENT: "8a1fbb7b-4b26-4d3c-8ad6-bbfeb72831f8",
                 SIGNUP_INTERCEPT: "676f7ba1-6f07-4782-adc2-99eaf7e04361",
                 TWILIGHT_UPSELL: "49f40b88-2044-409d-b306-2eb308489a60",
@@ -15717,7 +15716,6 @@ googletag.cmd = googletag.cmd || [],
                 "4e9d0a3c-4f43-4817-8db4-ac060fc32b74": "control",
                 "35731f0a-bd57-4582-915d-907dee75b3d4": "control",
                 "59c5198b-ea6d-423d-b337-ea93d0dc8d66": "no",
-                "ca305459-aec3-4d0c-b4e4-93d8cda54bba": "no",
                 "8a1fbb7b-4b26-4d3c-8ad6-bbfeb72831f8": "control",
                 "676f7ba1-6f07-4782-adc2-99eaf7e04361": "control",
                 "49f40b88-2044-409d-b306-2eb308489a60": "control",
@@ -16691,27 +16689,26 @@ googletag.cmd = googletag.cmd || [],
     function(e) {
         var t, n, i;
         "test" === e.deployFlavor ? (i = RSVP.resolve(SiteOptions.testGeoData), e.preferredLanguage = t = SiteOptions.testGeoData.preferred_language, e.receivedLanguage = n = SiteOptions.testGeoData.received_language) : i = new RSVP.Promise(function(t, n) {
-                e.api.on("ready", function() {
-                    e.api.get("/api/viewer/info.json").done(function(n) {
-                        e.preferredLanguage = n.preferred_language, e.receivedLanguage = n.received_language;
-                        var i = cookie.get("language");
-                        void 0 === i ? e.language.setCookieAndReload(e.receivedLanguage) : n.login && i !== n.user_language && e.language.setByAsyncPut(i), n.eu && window.euCookieNotification(), e.tracking.spadeAndMixpanel.trackEvent("prime_web_geo_data", {
-                            platform: "web",
-                            geo: n.geo,
-                            ip: n.ip
-                        }), t(n)
-                    }).fail(function(e) {
-                        n({
-                            status: e.status
-                        })
+            e.api.on("ready", function() {
+                e.api.get("/api/viewer/info.json").done(function(n) {
+                    e.preferredLanguage = n.preferred_language, e.receivedLanguage = n.received_language;
+                    var i = cookie.get("language");
+                    void 0 === i ? e.language.setCookieAndReload(e.receivedLanguage) : n.login && i !== n.user_language && e.language.setByAsyncPut(i), n.eu && window.euCookieNotification(), e.tracking.spadeAndMixpanel.trackEvent("prime_web_geo_data", {
+                        platform: "web",
+                        geo: n.geo,
+                        ip: n.ip
+                    }), t(n)
+                }).fail(function(e) {
+                    n({
+                        status: e.status
                     })
                 })
-            }),
-            e.mixin({
-                geo: i,
-                receivedLanguage: n,
-                preferredLanguage: t
             })
+        }), e.mixin({
+            geo: i,
+            receivedLanguage: n,
+            preferredLanguage: t
+        })
     }(window.Twitch),
     function(e, t) {
         var n = {};
@@ -20957,8 +20954,8 @@ var recurly = function(e) {
             Be = Math.max,
             $e = Q(De, "Map"),
             qe = Q(Object, "create");
-        m.prototype.clear = y,
-            m.prototype.delete = v, m.prototype.get = _, m.prototype.has = b, m.prototype.set = w, k.prototype.clear = x, k.prototype.delete = S, k.prototype.get = T, k.prototype.has = C, k.prototype.set = D, M.prototype.clear = E, M.prototype.delete = A, M.prototype.get = O, M.prototype.has = P, M.prototype.set = j, I.prototype.add = I.prototype.push = N, I.prototype.has = R;
+        m.prototype.clear = y, m.prototype.delete = v, m.prototype.get = _, m.prototype.has = b, m.prototype.set = w, k.prototype.clear = x, k.prototype.delete = S, k.prototype.get = T,
+            k.prototype.has = C, k.prototype.set = D, M.prototype.clear = E, M.prototype.delete = A, M.prototype.get = O, M.prototype.has = P, M.prototype.set = j, I.prototype.add = I.prototype.push = N, I.prototype.has = R;
         var Ye = Ue ? g(Ue, Object) : fe,
             Ve = Ue ? function(e) {
                 for (var t = []; e;) s(t, Ye(e)), e = Fe(e);
