@@ -15733,6 +15733,7 @@ googletag.cmd = googletag.cmd || [],
                 CLIPS_YOU_WERE_RIGHT: "variant1",
                 SOCIAL_RECOMMENDATIONS: "variant1",
                 LOL_METADATA_EXPERIMENT: "treatment",
+                NEW_POA: "yes",
                 OFFLINE_RECOMMENDATIONS: "yes",
                 OFFLINE_EXPERIENCE: "show",
                 LTV: "yes",
@@ -16690,26 +16691,27 @@ googletag.cmd = googletag.cmd || [],
     function(e) {
         var t, n, i;
         "test" === e.deployFlavor ? (i = RSVP.resolve(SiteOptions.testGeoData), e.preferredLanguage = t = SiteOptions.testGeoData.preferred_language, e.receivedLanguage = n = SiteOptions.testGeoData.received_language) : i = new RSVP.Promise(function(t, n) {
-            e.api.on("ready", function() {
-                e.api.get("/api/viewer/info.json").done(function(n) {
-                    e.preferredLanguage = n.preferred_language, e.receivedLanguage = n.received_language;
-                    var i = cookie.get("language");
-                    void 0 === i ? e.language.setCookieAndReload(e.receivedLanguage) : n.login && i !== n.user_language && e.language.setByAsyncPut(i), n.eu && window.euCookieNotification(), e.tracking.spadeAndMixpanel.trackEvent("prime_web_geo_data", {
-                        platform: "web",
-                        geo: n.geo,
-                        ip: n.ip
-                    }), t(n)
-                }).fail(function(e) {
-                    n({
-                        status: e.status
+                e.api.on("ready", function() {
+                    e.api.get("/api/viewer/info.json").done(function(n) {
+                        e.preferredLanguage = n.preferred_language, e.receivedLanguage = n.received_language;
+                        var i = cookie.get("language");
+                        void 0 === i ? e.language.setCookieAndReload(e.receivedLanguage) : n.login && i !== n.user_language && e.language.setByAsyncPut(i), n.eu && window.euCookieNotification(), e.tracking.spadeAndMixpanel.trackEvent("prime_web_geo_data", {
+                            platform: "web",
+                            geo: n.geo,
+                            ip: n.ip
+                        }), t(n)
+                    }).fail(function(e) {
+                        n({
+                            status: e.status
+                        })
                     })
                 })
+            }),
+            e.mixin({
+                geo: i,
+                receivedLanguage: n,
+                preferredLanguage: t
             })
-        }), e.mixin({
-            geo: i,
-            receivedLanguage: n,
-            preferredLanguage: t
-        })
     }(window.Twitch),
     function(e, t) {
         var n = {};
