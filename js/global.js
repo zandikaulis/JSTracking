@@ -61,7 +61,7 @@ function toggle_live_player_popout(e) {
             return e === t !== n
         });
         if ("string" == typeof t) {
-            if (xe.test(t)) return de.filter(t, e, n);
+            if (ke.test(t)) return de.filter(t, e, n);
             t = de.filter(t, e)
         }
         return de.grep(e, function(e) {
@@ -186,8 +186,8 @@ function toggle_live_player_popout(e) {
         for (var o, s, a, u, c, l, h, d = e.length, y = f(t), v = [], _ = 0; _ < d; _++)
             if ((s = e[_]) || 0 === s)
                 if ("object" === de.type(s)) de.merge(v, s.nodeType ? [s] : s);
-                else if (Be.test(s)) {
-            for (u = u || y.appendChild(t.createElement("div")), c = (ze.exec(s) || ["", ""])[1].toLowerCase(), h = $e[c] || $e._default, u.innerHTML = h[1] + de.htmlPrefilter(s) + h[2], o = h[0]; o--;) u = u.lastChild;
+                else if ($e.test(s)) {
+            for (u = u || y.appendChild(t.createElement("div")), c = (ze.exec(s) || ["", ""])[1].toLowerCase(), h = Be[c] || Be._default, u.innerHTML = h[1] + de.htmlPrefilter(s) + h[2], o = h[0]; o--;) u = u.lastChild;
             if (!he.leadingWhitespace && We.test(s) && v.push(t.createTextNode(We.exec(s)[0])), !he.tbody)
                 for (s = "table" !== c || qe.test(s) ? "<table>" !== h[1] || qe.test(s) ? 0 : u : u.firstChild, o = s && s.childNodes.length; o--;) de.nodeName(l = s.childNodes[o], "tbody") && !l.childNodes.length && s.removeChild(l);
             for (de.merge(v, u.childNodes), u.textContent = ""; u.firstChild;) u.removeChild(u.firstChild);
@@ -230,11 +230,11 @@ function toggle_live_player_popout(e) {
         })
     }
 
-    function x(e, t) {
+    function k(e, t) {
         return de.nodeName(e, "table") && de.nodeName(11 !== t.nodeType ? t : t.firstChild, "tr") ? e.getElementsByTagName("tbody")[0] || e.appendChild(e.ownerDocument.createElement("tbody")) : e
     }
 
-    function k(e) {
+    function x(e) {
         return e.type = (null !== de.find.attr(e, "type")) + "/" + e.type, e
     }
 
@@ -265,7 +265,7 @@ function toggle_live_player_popout(e) {
                 for (i in r.events) de.removeEvent(t, i, r.handle);
                 t.removeAttribute(de.expando)
             }
-            "script" === n && t.text !== e.text ? (k(t).text = e.text, S(t)) : "object" === n ? (t.parentNode && (t.outerHTML = e.outerHTML), he.html5Clone && e.innerHTML && !de.trim(t.innerHTML) && (t.innerHTML = e.innerHTML)) : "input" === n && Fe.test(e.type) ? (t.defaultChecked = t.checked = e.checked, t.value !== e.value && (t.value = e.value)) : "option" === n ? t.defaultSelected = t.selected = e.defaultSelected : "input" !== n && "textarea" !== n || (t.defaultValue = e.defaultValue)
+            "script" === n && t.text !== e.text ? (x(t).text = e.text, S(t)) : "object" === n ? (t.parentNode && (t.outerHTML = e.outerHTML), he.html5Clone && e.innerHTML && !de.trim(t.innerHTML) && (t.innerHTML = e.innerHTML)) : "input" === n && Fe.test(e.type) ? (t.defaultChecked = t.checked = e.checked, t.value !== e.value && (t.value = e.value)) : "option" === n ? t.defaultSelected = t.selected = e.defaultSelected : "input" !== n && "textarea" !== n || (t.defaultValue = e.defaultValue)
         }
     }
 
@@ -281,7 +281,7 @@ function toggle_live_player_popout(e) {
             g && (t[0] = f.call(this, r, o.html())), D(o, t, n, i)
         });
         if (h && (c = y(t, e[0].ownerDocument, !1, e, i), r = c.firstChild, 1 === c.childNodes.length && (c = r), r || i)) {
-            for (a = de.map(p(c, "script"), k), s = a.length; l < h; l++) o = c, l !== d && (o = de.clone(o, !0, !0), s && de.merge(a, p(o, "script"))), n.call(e[l], o, l);
+            for (a = de.map(p(c, "script"), x), s = a.length; l < h; l++) o = c, l !== d && (o = de.clone(o, !0, !0), s && de.merge(a, p(o, "script"))), n.call(e[l], o, l);
             if (s)
                 for (u = a[a.length - 1].ownerDocument, de.map(a, S), l = 0; l < s; l++) o = a[l], He.test(o.type || "") && !de._data(o, "globalEval") && de.contains(u, o) && (o.src ? de._evalUrl && de._evalUrl(o.src) : de.globalEval((o.text || o.textContent || o.innerHTML || "").replace(it, "")));
             c = r = null
@@ -315,9 +315,9 @@ function toggle_live_player_popout(e) {
     }
 
     function P(e) {
-        if (e in xt) return e;
+        if (e in kt) return e;
         for (var t = e.charAt(0).toUpperCase() + e.slice(1), n = wt.length; n--;)
-            if ((e = wt[n] + t) in xt) return e
+            if ((e = wt[n] + t) in kt) return e
     }
 
     function j(e, t) {
@@ -354,8 +354,8 @@ function toggle_live_player_popout(e) {
 
     function F() {
         return e.setTimeout(function() {
-            kt = void 0
-        }), kt = de.now()
+            xt = void 0
+        }), xt = de.now()
     }
 
     function z(e, t) {
@@ -368,7 +368,7 @@ function toggle_live_player_popout(e) {
     }
 
     function H(e, t, n) {
-        for (var i, r = ($.tweeners[t] || []).concat($.tweeners["*"]), o = 0, s = r.length; o < s; o++)
+        for (var i, r = (B.tweeners[t] || []).concat(B.tweeners["*"]), o = 0, s = r.length; o < s; o++)
             if (i = r[o].call(n, t, e)) return i
     }
 
@@ -417,15 +417,15 @@ function toggle_live_player_popout(e) {
             } else t[i] = r
     }
 
-    function $(e, t, n) {
+    function B(e, t, n) {
         var i, r, o = 0,
-            s = $.prefilters.length,
+            s = B.prefilters.length,
             a = de.Deferred().always(function() {
                 delete u.elem
             }),
             u = function() {
                 if (r) return !1;
-                for (var t = kt || F(), n = Math.max(0, c.startTime + c.duration - t), i = n / c.duration || 0, o = 1 - i, s = 0, u = c.tweens.length; s < u; s++) c.tweens[s].run(o);
+                for (var t = xt || F(), n = Math.max(0, c.startTime + c.duration - t), i = n / c.duration || 0, o = 1 - i, s = 0, u = c.tweens.length; s < u; s++) c.tweens[s].run(o);
                 return a.notifyWith(e, [c, o, n]), o < 1 && u ? n : (a.resolveWith(e, [c]), !1)
             },
             c = a.promise({
@@ -437,7 +437,7 @@ function toggle_live_player_popout(e) {
                 }, n),
                 originalProperties: t,
                 originalOptions: n,
-                startTime: kt || F(),
+                startTime: xt || F(),
                 duration: n.duration,
                 tweens: [],
                 createTween: function(t, n) {
@@ -454,7 +454,7 @@ function toggle_live_player_popout(e) {
             }),
             l = c.props;
         for (U(l, c.opts.specialEasing); o < s; o++)
-            if (i = $.prefilters[o].call(c, e, l, c.opts)) return de.isFunction(i.stop) && (de._queueHooks(c.elem, c.opts.queue).stop = de.proxy(i.stop, i)), i;
+            if (i = B.prefilters[o].call(c, e, l, c.opts)) return de.isFunction(i.stop) && (de._queueHooks(c.elem, c.opts.queue).stop = de.proxy(i.stop, i)), i;
         return de.map(l, H, c), de.isFunction(c.opts.start) && c.opts.start.call(e, c), de.fx.timer(de.extend(u, {
             elem: e,
             anim: c,
@@ -462,7 +462,7 @@ function toggle_live_player_popout(e) {
         })), c.progress(c.opts.progress).done(c.opts.done, c.opts.complete).fail(c.opts.fail).always(c.opts.always)
     }
 
-    function B(e) {
+    function $(e) {
         return de.attr(e, "class") || ""
     }
 
@@ -785,10 +785,10 @@ function toggle_live_player_popout(e) {
                         if (h[2]) return X.apply(n, t.getElementsByTagName(e)), n;
                         if ((r = h[3]) && _.getElementsByClassName && t.getElementsByClassName) return X.apply(n, t.getElementsByClassName(r)), n
                     }
-                if (_.qsa && !$[e + " "] && (!j || !j.test(e))) {
+                if (_.qsa && !B[e + " "] && (!j || !j.test(e))) {
                     if (1 !== g) p = t, f = e;
                     else if ("object" !== t.nodeName.toLowerCase()) {
-                        for ((a = t.getAttribute("id")) ? a = a.replace(ye, "\\$&") : t.setAttribute("id", a = L), d = k(e), o = d.length, c = le.test(a) ? "#" + a : "[id='" + a + "']"; o--;) d[o] = c + " " + l(d[o]);
+                        for ((a = t.getAttribute("id")) ? a = a.replace(ye, "\\$&") : t.setAttribute("id", a = L), d = x(e), o = d.length, c = le.test(a) ? "#" + a : "[id='" + a + "']"; o--;) d[o] = c + " " + l(d[o]);
                         f = d.join(","), p = me.test(e) && u(t.parentNode) || t
                     }
                     if (f) try {
@@ -951,8 +951,8 @@ function toggle_live_player_popout(e) {
                         v = C,
                         _ = i || o && b.find.TAG("*", c),
                         w = z += null == v ? 1 : Math.random() || .1,
-                        x = _.length;
-                    for (c && (C = s === A || s || c); g !== x && null != (l = _[g]); g++) {
+                        k = _.length;
+                    for (c && (C = s === A || s || c); g !== k && null != (l = _[g]); g++) {
                         if (o && l) {
                             for (h = 0, s || l.ownerDocument === A || (E(l), a = !P); d = e[h++];)
                                 if (d(l, s || A, a)) {
@@ -976,14 +976,14 @@ function toggle_live_player_popout(e) {
                 };
             return r ? i(s) : s
         }
-        var v, _, b, w, x, k, S, T, C, D, M, E, A, O, P, j, I, N, R, L = "sizzle" + 1 * new Date,
+        var v, _, b, w, k, x, S, T, C, D, M, E, A, O, P, j, I, N, R, L = "sizzle" + 1 * new Date,
             F = e.document,
             z = 0,
             H = 0,
             W = n(),
             U = n(),
-            $ = n(),
-            B = function(e, t) {
+            B = n(),
+            $ = function(e, t) {
                 return e === t && (M = !0), 0
             },
             q = 1 << 31,
@@ -1046,12 +1046,12 @@ function toggle_live_player_popout(e) {
                 }
             }
         }
-        _ = t.support = {}, x = t.isXML = function(e) {
+        _ = t.support = {}, k = t.isXML = function(e) {
             var t = e && (e.ownerDocument || e).documentElement;
             return !!t && "HTML" !== t.nodeName
         }, E = t.setDocument = function(e) {
             var t, n, i = e ? e.ownerDocument || e : F;
-            return i !== A && 9 === i.nodeType && i.documentElement ? (A = i, O = A.documentElement, P = !x(A), (n = A.defaultView) && n.top !== n && (n.addEventListener ? n.addEventListener("unload", be, !1) : n.attachEvent && n.attachEvent("onunload", be)), _.attributes = r(function(e) {
+            return i !== A && 9 === i.nodeType && i.documentElement ? (A = i, O = A.documentElement, P = !k(A), (n = A.defaultView) && n.top !== n && (n.addEventListener ? n.addEventListener("unload", be, !1) : n.attachEvent && n.attachEvent("onunload", be)), _.attributes = r(function(e) {
                 return e.className = "i", !e.getAttribute("className")
             }), _.getElementsByTagName = r(function(e) {
                 return e.appendChild(A.createComment("")), !e.getElementsByTagName("*").length
@@ -1102,7 +1102,7 @@ function toggle_live_player_popout(e) {
                     for (; t = t.parentNode;)
                         if (t === e) return !0;
                 return !1
-            }, B = t ? function(e, t) {
+            }, $ = t ? function(e, t) {
                 if (e === t) return M = !0, 0;
                 var n = !e.compareDocumentPosition - !t.compareDocumentPosition;
                 return n || (n = (e.ownerDocument || e) === (t.ownerDocument || t) ? e.compareDocumentPosition(t) : 1, 1 & n || !_.sortDetached && t.compareDocumentPosition(e) === n ? e === A || e.ownerDocument === F && R(F, e) ? -1 : t === A || t.ownerDocument === F && R(F, t) ? 1 : D ? J(D, e) - J(D, t) : 0 : 4 & n ? -1 : 1)
@@ -1123,7 +1123,7 @@ function toggle_live_player_popout(e) {
         }, t.matches = function(e, n) {
             return t(e, null, null, n)
         }, t.matchesSelector = function(e, n) {
-            if ((e.ownerDocument || e) !== A && E(e), n = n.replace(ue, "='$1']"), _.matchesSelector && P && !$[n + " "] && (!I || !I.test(n)) && (!j || !j.test(n))) try {
+            if ((e.ownerDocument || e) !== A && E(e), n = n.replace(ue, "='$1']"), _.matchesSelector && P && !B[n + " "] && (!I || !I.test(n)) && (!j || !j.test(n))) try {
                 var i = N.call(e, n);
                 if (i || _.disconnectedMatch || e.document && 11 !== e.document.nodeType) return i
             } catch (e) {}
@@ -1141,7 +1141,7 @@ function toggle_live_player_popout(e) {
             var t, n = [],
                 i = 0,
                 r = 0;
-            if (M = !_.detectDuplicates, D = !_.sortStable && e.slice(0), e.sort(B), M) {
+            if (M = !_.detectDuplicates, D = !_.sortStable && e.slice(0), e.sort($), M) {
                 for (; t = e[r++];) t === e[r] && (i = n.push(r));
                 for (; i--;) e.splice(n[i], 1)
             }
@@ -1189,7 +1189,7 @@ function toggle_live_player_popout(e) {
                 },
                 PSEUDO: function(e) {
                     var t, n = !e[6] && e[2];
-                    return he.CHILD.test(e[0]) ? null : (e[3] ? e[2] = e[4] || e[5] || "" : n && ce.test(n) && (t = k(n, !0)) && (t = n.indexOf(")", n.length - t) - n.length) && (e[0] = e[0].slice(0, t), e[2] = n.slice(0, t)), e.slice(0, 3))
+                    return he.CHILD.test(e[0]) ? null : (e[3] ? e[2] = e[4] || e[5] || "" : n && ce.test(n) && (t = x(n, !0)) && (t = n.indexOf(")", n.length - t) - n.length) && (e[0] = e[0].slice(0, t), e[2] = n.slice(0, t)), e.slice(0, 3))
                 }
             },
             filter: {
@@ -1380,7 +1380,7 @@ function toggle_live_player_popout(e) {
                 return ("input" === n || "button" === n) && t.type === e
             }
         }(v);
-        return c.prototype = b.filters = b.pseudos, b.setFilters = new c, k = t.tokenize = function(e, n) {
+        return c.prototype = b.filters = b.pseudos, b.setFilters = new c, x = t.tokenize = function(e, n) {
             var i, r, o, s, a, u, c, l = U[e + " "];
             if (l) return n ? 0 : l.slice(0);
             for (a = e, u = [], c = b.preFilter; a;) {
@@ -1399,15 +1399,15 @@ function toggle_live_player_popout(e) {
         }, S = t.compile = function(e, t) {
             var n, i = [],
                 r = [],
-                o = $[e + " "];
+                o = B[e + " "];
             if (!o) {
-                for (t || (t = k(e)), n = t.length; n--;) o = m(t[n]), o[L] ? i.push(o) : r.push(o);
-                o = $(e, y(r, i)), o.selector = e
+                for (t || (t = x(e)), n = t.length; n--;) o = m(t[n]), o[L] ? i.push(o) : r.push(o);
+                o = B(e, y(r, i)), o.selector = e
             }
             return o
         }, T = t.select = function(e, t, n, i) {
             var r, o, s, a, c, h = "function" == typeof e && e,
-                d = !i && k(e = h.selector || e);
+                d = !i && x(e = h.selector || e);
             if (n = n || [], 1 === d.length) {
                 if (o = d[0] = d[0].slice(0), o.length > 2 && "ID" === (s = o[0]).type && _.getById && 9 === t.nodeType && P && b.relative[o[1].type]) {
                     if (!(t = (b.find.ID(s.matches[0].replace(ve, _e), t) || [])[0])) return n;
@@ -1420,7 +1420,7 @@ function toggle_live_player_popout(e) {
                     }
             }
             return (h || S(e, d))(i, t, !P, n, !t || me.test(e) && u(t.parentNode) || t), n
-        }, _.sortStable = L.split("").sort(B).join("") === L, _.detectDuplicates = !!M, E(), _.sortDetached = r(function(e) {
+        }, _.sortStable = L.split("").sort($).join("") === L, _.detectDuplicates = !!M, E(), _.sortDetached = r(function(e) {
             return 1 & e.compareDocumentPosition(A.createElement("div"))
         }), r(function(e) {
             return e.innerHTML = "<a href='#'></a>", "#" === e.firstChild.getAttribute("href")
@@ -1453,7 +1453,7 @@ function toggle_live_player_popout(e) {
         },
         be = de.expr.match.needsContext,
         we = /^<([\w-]+)\s*\/?>(?:<\/\1>|)$/,
-        xe = /^.[^:#\[\.,]*$/;
+        ke = /^.[^:#\[\.,]*$/;
     de.filter = function(e, t, n) {
         var i = t[0];
         return n && (e = ":not(" + e + ")"), 1 === t.length && 1 === i.nodeType ? de.find.matchesSelector(i, e) ? [i] : [] : de.find.matches(e, de.grep(t, function(e) {
@@ -1481,11 +1481,11 @@ function toggle_live_player_popout(e) {
             return !!i(this, "string" == typeof e && be.test(e) ? de(e) : e || [], !1).length
         }
     });
-    var ke, Se = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/;
+    var xe, Se = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/;
     (de.fn.init = function(e, t, n) {
         var i, r;
         if (!e) return this;
-        if (n = n || ke, "string" == typeof e) {
+        if (n = n || xe, "string" == typeof e) {
             if (!(i = "<" === e.charAt(0) && ">" === e.charAt(e.length - 1) && e.length >= 3 ? [null, e, null] : Se.exec(e)) || !i[1] && t) return !t || t.jquery ? (t || n).find(e) : this.constructor(t).find(e);
             if (i[1]) {
                 if (t = t instanceof de ? t[0] : t, de.merge(this, de.parseHTML(i[1], t && t.nodeType ? t.ownerDocument || t : ie, !0)), we.test(i[1]) && de.isPlainObject(t))
@@ -1493,13 +1493,13 @@ function toggle_live_player_popout(e) {
                 return this
             }
             if ((r = ie.getElementById(i[2])) && r.parentNode) {
-                if (r.id !== i[2]) return ke.find(e);
+                if (r.id !== i[2]) return xe.find(e);
                 this.length = 1, this[0] = r
             }
             return this.context = ie, this.selector = e, this
         }
         return e.nodeType ? (this.context = this[0] = e, this.length = 1, this) : de.isFunction(e) ? void 0 !== n.ready ? n.ready(e) : e(de) : (void 0 !== e.selector && (this.selector = e.selector, this.context = e.context), de.makeArray(e, this))
-    }).prototype = de.fn, ke = de(ie);
+    }).prototype = de.fn, xe = de(ie);
     var Te = /^(?:parents|prev(?:Until|All))/,
         Ce = {
             children: !0,
@@ -1883,7 +1883,7 @@ function toggle_live_player_popout(e) {
             n = ie.createElement("input");
         e.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>", he.leadingWhitespace = 3 === e.firstChild.nodeType, he.tbody = !e.getElementsByTagName("tbody").length, he.htmlSerialize = !!e.getElementsByTagName("link").length, he.html5Clone = "<:nav></:nav>" !== ie.createElement("nav").cloneNode(!0).outerHTML, n.type = "checkbox", n.checked = !0, t.appendChild(n), he.appendChecked = n.checked, e.innerHTML = "<textarea>x</textarea>", he.noCloneChecked = !!e.cloneNode(!0).lastChild.defaultValue, t.appendChild(e), n = ie.createElement("input"), n.setAttribute("type", "radio"), n.setAttribute("checked", "checked"), n.setAttribute("name", "t"), e.appendChild(n), he.checkClone = e.cloneNode(!0).cloneNode(!0).lastChild.checked, he.noCloneEvent = !!e.addEventListener, e[de.expando] = 1, he.attributes = !e.getAttribute(de.expando)
     }();
-    var $e = {
+    var Be = {
         option: [1, "<select multiple='multiple'>", "</select>"],
         legend: [1, "<fieldset>", "</fieldset>"],
         area: [1, "<map>", "</map>"],
@@ -1894,8 +1894,8 @@ function toggle_live_player_popout(e) {
         td: [3, "<table><tbody><tr>", "</tr></tbody></table>"],
         _default: he.htmlSerialize ? [0, "", ""] : [1, "X<div>", "</div>"]
     };
-    $e.optgroup = $e.option, $e.tbody = $e.tfoot = $e.colgroup = $e.caption = $e.thead, $e.th = $e.td;
-    var Be = /<|&#?\w+;/,
+    Be.optgroup = Be.option, Be.tbody = Be.tfoot = Be.colgroup = Be.caption = Be.thead, Be.th = Be.td;
+    var $e = /<|&#?\w+;/,
         qe = /<tbody/i;
     ! function() {
         var t, n, i = ie.createElement("div");
@@ -2233,14 +2233,14 @@ function toggle_live_player_popout(e) {
         append: function() {
             return D(this, arguments, function(e) {
                 if (1 === this.nodeType || 11 === this.nodeType || 9 === this.nodeType) {
-                    x(this, e).appendChild(e)
+                    k(this, e).appendChild(e)
                 }
             })
         },
         prepend: function() {
             return D(this, arguments, function(e) {
                 if (1 === this.nodeType || 11 === this.nodeType || 9 === this.nodeType) {
-                    var t = x(this, e);
+                    var t = k(this, e);
                     t.insertBefore(e, t.firstChild)
                 }
             })
@@ -2273,7 +2273,7 @@ function toggle_live_player_popout(e) {
                     n = 0,
                     i = this.length;
                 if (void 0 === e) return 1 === t.nodeType ? t.innerHTML.replace(Ke, "") : void 0;
-                if ("string" == typeof e && !et.test(e) && (he.htmlSerialize || !Je.test(e)) && (he.leadingWhitespace || !We.test(e)) && !$e[(ze.exec(e) || ["", ""])[1].toLowerCase()]) {
+                if ("string" == typeof e && !et.test(e) && (he.htmlSerialize || !Je.test(e)) && (he.leadingWhitespace || !We.test(e)) && !Be[(ze.exec(e) || ["", ""])[1].toLowerCase()]) {
                     e = de.htmlPrefilter(e);
                     try {
                         for (; n < i; n++) t = this[n] || {}, 1 === t.nodeType && (de.cleanData(p(t, !1)), t.innerHTML = e);
@@ -2375,7 +2375,7 @@ function toggle_live_player_popout(e) {
             fontWeight: "400"
         },
         wt = ["Webkit", "O", "Moz", "ms"],
-        xt = ie.createElement("div").style;
+        kt = ie.createElement("div").style;
     de.extend({
         cssHooks: {
             opacity: {
@@ -2522,9 +2522,9 @@ function toggle_live_player_popout(e) {
         },
         _default: "swing"
     }, de.fx = L.prototype.init, de.fx.step = {};
-    var kt, St, Tt = /^(?:toggle|show|hide)$/,
+    var xt, St, Tt = /^(?:toggle|show|hide)$/,
         Ct = /queueHooks$/;
-    de.Animation = de.extend($, {
+    de.Animation = de.extend(B, {
             tweeners: {
                 "*": [function(e, t) {
                     var n = this.createTween(e, t);
@@ -2533,11 +2533,11 @@ function toggle_live_player_popout(e) {
             },
             tweener: function(e, t) {
                 de.isFunction(e) ? (t = e, e = ["*"]) : e = e.match(De);
-                for (var n, i = 0, r = e.length; i < r; i++) n = e[i], $.tweeners[n] = $.tweeners[n] || [], $.tweeners[n].unshift(t)
+                for (var n, i = 0, r = e.length; i < r; i++) n = e[i], B.tweeners[n] = B.tweeners[n] || [], B.tweeners[n].unshift(t)
             },
             prefilters: [W],
             prefilter: function(e, t) {
-                t ? $.prefilters.unshift(e) : $.prefilters.push(e)
+                t ? B.prefilters.unshift(e) : B.prefilters.push(e)
             }
         }), de.speed = function(e, t, n) {
             var i = e && "object" == typeof e ? de.extend({}, e) : {
@@ -2558,7 +2558,7 @@ function toggle_live_player_popout(e) {
                 var r = de.isEmptyObject(e),
                     o = de.speed(t, n, i),
                     s = function() {
-                        var t = $(this, de.extend({}, e), o);
+                        var t = B(this, de.extend({}, e), o);
                         (r || de._data(this, "finish")) && t.stop(!0)
                     };
                 return s.finish = s, r || !1 === o.queue ? this.each(s) : this.queue(o.queue, s)
@@ -2617,8 +2617,8 @@ function toggle_live_player_popout(e) {
         }), de.timers = [], de.fx.tick = function() {
             var e, t = de.timers,
                 n = 0;
-            for (kt = de.now(); n < t.length; n++)(e = t[n])() || t[n] !== e || t.splice(n--, 1);
-            t.length || de.fx.stop(), kt = void 0
+            for (xt = de.now(); n < t.length; n++)(e = t[n])() || t[n] !== e || t.splice(n--, 1);
+            t.length || de.fx.stop(), xt = void 0
         }, de.fx.timer = function(e) {
             de.timers.push(e), e() ? de.fx.start() : de.timers.pop()
         }, de.fx.interval = 13, de.fx.start = function() {
@@ -2831,11 +2831,11 @@ function toggle_live_player_popout(e) {
         addClass: function(e) {
             var t, n, i, r, o, s, a, u = 0;
             if (de.isFunction(e)) return this.each(function(t) {
-                de(this).addClass(e.call(this, t, B(this)))
+                de(this).addClass(e.call(this, t, $(this)))
             });
             if ("string" == typeof e && e)
                 for (t = e.match(De) || []; n = this[u++];)
-                    if (r = B(n), i = 1 === n.nodeType && (" " + r + " ").replace(Lt, " ")) {
+                    if (r = $(n), i = 1 === n.nodeType && (" " + r + " ").replace(Lt, " ")) {
                         for (s = 0; o = t[s++];) i.indexOf(" " + o + " ") < 0 && (i += o + " ");
                         a = de.trim(i), r !== a && de.attr(n, "class", a)
                     }
@@ -2844,12 +2844,12 @@ function toggle_live_player_popout(e) {
         removeClass: function(e) {
             var t, n, i, r, o, s, a, u = 0;
             if (de.isFunction(e)) return this.each(function(t) {
-                de(this).removeClass(e.call(this, t, B(this)))
+                de(this).removeClass(e.call(this, t, $(this)))
             });
             if (!arguments.length) return this.attr("class", "");
             if ("string" == typeof e && e)
                 for (t = e.match(De) || []; n = this[u++];)
-                    if (r = B(n), i = 1 === n.nodeType && (" " + r + " ").replace(Lt, " ")) {
+                    if (r = $(n), i = 1 === n.nodeType && (" " + r + " ").replace(Lt, " ")) {
                         for (s = 0; o = t[s++];)
                             for (; i.indexOf(" " + o + " ") > -1;) i = i.replace(" " + o + " ", " ");
                         a = de.trim(i), r !== a && de.attr(n, "class", a)
@@ -2859,18 +2859,18 @@ function toggle_live_player_popout(e) {
         toggleClass: function(e, t) {
             var n = typeof e;
             return "boolean" == typeof t && "string" === n ? t ? this.addClass(e) : this.removeClass(e) : de.isFunction(e) ? this.each(function(n) {
-                de(this).toggleClass(e.call(this, n, B(this), t), t)
+                de(this).toggleClass(e.call(this, n, $(this), t), t)
             }) : this.each(function() {
                 var t, i, r, o;
                 if ("string" === n)
                     for (i = 0, r = de(this), o = e.match(De) || []; t = o[i++];) r.hasClass(t) ? r.removeClass(t) : r.addClass(t);
-                else void 0 !== e && "boolean" !== n || (t = B(this), t && de._data(this, "__className__", t), de.attr(this, "class", t || !1 === e ? "" : de._data(this, "__className__") || ""))
+                else void 0 !== e && "boolean" !== n || (t = $(this), t && de._data(this, "__className__", t), de.attr(this, "class", t || !1 === e ? "" : de._data(this, "__className__") || ""))
             })
         },
         hasClass: function(e) {
             var t, n, i = 0;
             for (t = " " + e + " "; n = this[i++];)
-                if (1 === n.nodeType && (" " + B(n) + " ").replace(Lt, " ").indexOf(t) > -1) return !0;
+                if (1 === n.nodeType && (" " + $(n) + " ").replace(Lt, " ").indexOf(t) > -1) return !0;
             return !1
         }
     }), de.each("blur focus focusin focusout load resize scroll unload click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup error contextmenu".split(" "), function(e, t) {
@@ -2904,8 +2904,8 @@ function toggle_live_player_popout(e) {
         return n && n.documentElement && !n.getElementsByTagName("parsererror").length || de.error("Invalid XML: " + t), n
     };
     var Ut = /#.*$/,
-        $t = /([?&])_=[^&]*/,
-        Bt = /^(.*?):[ \t]*([^\r\n]*)\r?$/gm,
+        Bt = /([?&])_=[^&]*/,
+        $t = /^(.*?):[ \t]*([^\r\n]*)\r?$/gm,
         qt = /^(?:about|app|app-storage|.+-extension|file|res|widget):$/,
         Yt = /^(?:GET|HEAD)$/,
         Vt = /^\/\//,
@@ -2962,8 +2962,8 @@ function toggle_live_player_popout(e) {
         ajaxTransport: q(Xt),
         ajax: function(t, n) {
             function i(t, n, i, r) {
-                var o, h, v, _, w, k = n;
-                2 !== b && (b = 2, u && e.clearTimeout(u), l = void 0, a = r || "", x.readyState = t > 0 ? 4 : 0, o = t >= 200 && t < 300 || 304 === t, i && (_ = Q(d, x, i)), _ = G(d, _, x, o), o ? (d.ifModified && (w = x.getResponseHeader("Last-Modified"), w && (de.lastModified[s] = w), (w = x.getResponseHeader("etag")) && (de.etag[s] = w)), 204 === t || "HEAD" === d.type ? k = "nocontent" : 304 === t ? k = "notmodified" : (k = _.state, h = _.data, v = _.error, o = !v)) : (v = k, !t && k || (k = "error", t < 0 && (t = 0))), x.status = t, x.statusText = (n || k) + "", o ? g.resolveWith(f, [h, k, x]) : g.rejectWith(f, [x, k, v]), x.statusCode(y), y = void 0, c && p.trigger(o ? "ajaxSuccess" : "ajaxError", [x, d, o ? h : v]), m.fireWith(f, [x, k]), c && (p.trigger("ajaxComplete", [x, d]), --de.active || de.event.trigger("ajaxStop")))
+                var o, h, v, _, w, x = n;
+                2 !== b && (b = 2, u && e.clearTimeout(u), l = void 0, a = r || "", k.readyState = t > 0 ? 4 : 0, o = t >= 200 && t < 300 || 304 === t, i && (_ = Q(d, k, i)), _ = G(d, _, k, o), o ? (d.ifModified && (w = k.getResponseHeader("Last-Modified"), w && (de.lastModified[s] = w), (w = k.getResponseHeader("etag")) && (de.etag[s] = w)), 204 === t || "HEAD" === d.type ? x = "nocontent" : 304 === t ? x = "notmodified" : (x = _.state, h = _.data, v = _.error, o = !v)) : (v = x, !t && x || (x = "error", t < 0 && (t = 0))), k.status = t, k.statusText = (n || x) + "", o ? g.resolveWith(f, [h, x, k]) : g.rejectWith(f, [k, x, v]), k.statusCode(y), y = void 0, c && p.trigger(o ? "ajaxSuccess" : "ajaxError", [k, d, o ? h : v]), m.fireWith(f, [k, x]), c && (p.trigger("ajaxComplete", [k, d]), --de.active || de.event.trigger("ajaxStop")))
             }
             "object" == typeof t && (n = t, t = void 0), n = n || {};
             var r, o, s, a, u, c, l, h, d = de.ajaxSetup({}, n),
@@ -2976,13 +2976,13 @@ function toggle_live_player_popout(e) {
                 _ = {},
                 b = 0,
                 w = "canceled",
-                x = {
+                k = {
                     readyState: 0,
                     getResponseHeader: function(e) {
                         var t;
                         if (2 === b) {
                             if (!h)
-                                for (h = {}; t = Bt.exec(a);) h[t[1].toLowerCase()] = t[2];
+                                for (h = {}; t = $t.exec(a);) h[t[1].toLowerCase()] = t[2];
                             t = h[e.toLowerCase()]
                         }
                         return null == t ? null : t
@@ -3002,7 +3002,7 @@ function toggle_live_player_popout(e) {
                         if (e)
                             if (b < 2)
                                 for (t in e) y[t] = [y[t], e[t]];
-                            else x.always(e[x.status]);
+                            else k.always(e[k.status]);
                         return this
                     },
                     abort: function(e) {
@@ -3010,20 +3010,20 @@ function toggle_live_player_popout(e) {
                         return l && l.abort(t), i(0, t), this
                     }
                 };
-            if (g.promise(x).complete = m.add, x.success = x.done, x.error = x.fail, d.url = ((t || d.url || Jt) + "").replace(Ut, "").replace(Vt, Zt[1] + "//"), d.type = n.method || n.type || d.method || d.type, d.dataTypes = de.trim(d.dataType || "*").toLowerCase().match(De) || [""], null == d.crossDomain && (r = Qt.exec(d.url.toLowerCase()), d.crossDomain = !(!r || r[1] === Zt[1] && r[2] === Zt[2] && (r[3] || ("http:" === r[1] ? "80" : "443")) === (Zt[3] || ("http:" === Zt[1] ? "80" : "443")))), d.data && d.processData && "string" != typeof d.data && (d.data = de.param(d.data, d.traditional)), Y(Gt, d, n, x), 2 === b) return x;
-            c = de.event && d.global, c && 0 == de.active++ && de.event.trigger("ajaxStart"), d.type = d.type.toUpperCase(), d.hasContent = !Yt.test(d.type), s = d.url, d.hasContent || (d.data && (s = d.url += (Ht.test(s) ? "&" : "?") + d.data, delete d.data), !1 === d.cache && (d.url = $t.test(s) ? s.replace($t, "$1_=" + zt++) : s + (Ht.test(s) ? "&" : "?") + "_=" + zt++)), d.ifModified && (de.lastModified[s] && x.setRequestHeader("If-Modified-Since", de.lastModified[s]), de.etag[s] && x.setRequestHeader("If-None-Match", de.etag[s])), (d.data && d.hasContent && !1 !== d.contentType || n.contentType) && x.setRequestHeader("Content-Type", d.contentType), x.setRequestHeader("Accept", d.dataTypes[0] && d.accepts[d.dataTypes[0]] ? d.accepts[d.dataTypes[0]] + ("*" !== d.dataTypes[0] ? ", " + Kt + "; q=0.01" : "") : d.accepts["*"]);
-            for (o in d.headers) x.setRequestHeader(o, d.headers[o]);
-            if (d.beforeSend && (!1 === d.beforeSend.call(f, x, d) || 2 === b)) return x.abort();
+            if (g.promise(k).complete = m.add, k.success = k.done, k.error = k.fail, d.url = ((t || d.url || Jt) + "").replace(Ut, "").replace(Vt, Zt[1] + "//"), d.type = n.method || n.type || d.method || d.type, d.dataTypes = de.trim(d.dataType || "*").toLowerCase().match(De) || [""], null == d.crossDomain && (r = Qt.exec(d.url.toLowerCase()), d.crossDomain = !(!r || r[1] === Zt[1] && r[2] === Zt[2] && (r[3] || ("http:" === r[1] ? "80" : "443")) === (Zt[3] || ("http:" === Zt[1] ? "80" : "443")))), d.data && d.processData && "string" != typeof d.data && (d.data = de.param(d.data, d.traditional)), Y(Gt, d, n, k), 2 === b) return k;
+            c = de.event && d.global, c && 0 == de.active++ && de.event.trigger("ajaxStart"), d.type = d.type.toUpperCase(), d.hasContent = !Yt.test(d.type), s = d.url, d.hasContent || (d.data && (s = d.url += (Ht.test(s) ? "&" : "?") + d.data, delete d.data), !1 === d.cache && (d.url = Bt.test(s) ? s.replace(Bt, "$1_=" + zt++) : s + (Ht.test(s) ? "&" : "?") + "_=" + zt++)), d.ifModified && (de.lastModified[s] && k.setRequestHeader("If-Modified-Since", de.lastModified[s]), de.etag[s] && k.setRequestHeader("If-None-Match", de.etag[s])), (d.data && d.hasContent && !1 !== d.contentType || n.contentType) && k.setRequestHeader("Content-Type", d.contentType), k.setRequestHeader("Accept", d.dataTypes[0] && d.accepts[d.dataTypes[0]] ? d.accepts[d.dataTypes[0]] + ("*" !== d.dataTypes[0] ? ", " + Kt + "; q=0.01" : "") : d.accepts["*"]);
+            for (o in d.headers) k.setRequestHeader(o, d.headers[o]);
+            if (d.beforeSend && (!1 === d.beforeSend.call(f, k, d) || 2 === b)) return k.abort();
             w = "abort";
             for (o in {
                     success: 1,
                     error: 1,
                     complete: 1
-                }) x[o](d[o]);
-            if (l = Y(Xt, d, n, x)) {
-                if (x.readyState = 1, c && p.trigger("ajaxSend", [x, d]), 2 === b) return x;
+                }) k[o](d[o]);
+            if (l = Y(Xt, d, n, k)) {
+                if (k.readyState = 1, c && p.trigger("ajaxSend", [k, d]), 2 === b) return k;
                 d.async && d.timeout > 0 && (u = e.setTimeout(function() {
-                    x.abort("timeout")
+                    k.abort("timeout")
                 }, d.timeout));
                 try {
                     b = 1, l.send(v, i)
@@ -3032,7 +3032,7 @@ function toggle_live_player_popout(e) {
                     i(-1, e)
                 }
             } else i(-1, "No Transport");
-            return x
+            return k
         },
         getJSON: function(e, t, n) {
             return de.get(e, t, n, "json")
@@ -3426,10 +3426,10 @@ function(e, t, n) {
         _ = /^\s*</,
         b = /\[(\s*[-\w]+\s*)([~|^$*]?=)\s*([-\w#]*?#[-\w#]*)\s*\]/,
         w = /\[(\s*[-\w]+\s*)([~|^$*]?=)\s*([-\w#]*?#[-\w#]*)\s*\]/g,
-        x = /^([^<]*)(<[\w\W]+>)([^>]*)$/;
+        k = /^([^<]*)(<[\w\W]+>)([^>]*)$/;
     e.fn.init = function(t, n, r) {
         var o, s;
-        return t && "string" == typeof t && !e.isPlainObject(n) && (o = x.exec(e.trim(t))) && o[0] && (_.test(t) || i("$(html) HTML strings must start with '<' character"), o[3] && i("$(html) HTML text after last tag is ignored"), "#" === o[0].charAt(0) && (i("HTML string cannot start with a '#' character"), e.error("JQMIGRATE: Invalid selector string (XSS)")), n && n.context && n.context.nodeType && (n = n.context), e.parseHTML) ? m.call(this, e.parseHTML(o[2], n && n.ownerDocument || n || document, !0), n, r) : (s = m.apply(this, arguments), t && void 0 !== t.selector ? (s.selector = t.selector, s.context = t.context) : (s.selector = "string" == typeof t ? t : "", t && (s.context = t.nodeType ? t : n || document)), s)
+        return t && "string" == typeof t && !e.isPlainObject(n) && (o = k.exec(e.trim(t))) && o[0] && (_.test(t) || i("$(html) HTML strings must start with '<' character"), o[3] && i("$(html) HTML text after last tag is ignored"), "#" === o[0].charAt(0) && (i("HTML string cannot start with a '#' character"), e.error("JQMIGRATE: Invalid selector string (XSS)")), n && n.context && n.context.nodeType && (n = n.context), e.parseHTML) ? m.call(this, e.parseHTML(o[2], n && n.ownerDocument || n || document, !0), n, r) : (s = m.apply(this, arguments), t && void 0 !== t.selector ? (s.selector = t.selector, s.context = t.context) : (s.selector = "string" == typeof t ? t : "", t && (s.context = t.nodeType ? t : n || document)), s)
     }, e.fn.init.prototype = e.fn, e.find = function(e) {
         var t = Array.prototype.slice.call(arguments);
         if ("string" == typeof e && b.test(e)) try {
@@ -3446,8 +3446,8 @@ function(e, t, n) {
         }
         return y.apply(this, t)
     };
-    var k;
-    for (k in y) Object.prototype.hasOwnProperty.call(y, k) && (e.find[k] = y[k]);
+    var x;
+    for (x in y) Object.prototype.hasOwnProperty.call(y, x) && (e.find[x] = y[x]);
     e.parseJSON = function(e) {
         return e ? v.apply(this, arguments) : (i("jQuery.parseJSON requires a valid JSON string"), null)
     }, e.uaMatch = function(e) {
@@ -3800,20 +3800,20 @@ function(e, t, n) {
                     return n
                 }
             },
-            x = function(e) {
+            k = function(e) {
                 if (!v.isObject(e)) return {};
                 if (m) return m(e);
                 y.prototype = e;
                 var t = new y;
                 return y.prototype = null, t
             },
-            k = function(e) {
+            x = function(e) {
                 return function(t) {
                     return null == t ? void 0 : t[e]
                 }
             },
             S = Math.pow(2, 53) - 1,
-            T = k("length"),
+            T = x("length"),
             C = function(e) {
                 var t = T(e);
                 return "number" == typeof t && t >= 0 && t <= S
@@ -4015,7 +4015,7 @@ function(e, t, n) {
         };
         var E = function(e, t, n, i, r) {
             if (!(i instanceof t)) return e.apply(n, r);
-            var o = x(e.prototype),
+            var o = k(e.prototype),
                 s = e.apply(o, r);
             return v.isObject(s) ? s : o
         };
@@ -4157,7 +4157,7 @@ function(e, t, n) {
             }
             return v.pick(e, t, n)
         }, v.defaults = w(v.allKeys, !0), v.create = function(e, t) {
-            var n = x(e);
+            var n = k(e);
             return t && v.extendOwn(n, t), n
         }, v.clone = function(e) {
             return v.isObject(e) ? v.isArray(e) ? e.slice() : v.extend({}, e) : e
@@ -4250,7 +4250,7 @@ function(e, t, n) {
             return function() {
                 return e
             }
-        }, v.noop = function() {}, v.property = k, v.propertyOf = function(e) {
+        }, v.noop = function() {}, v.property = x, v.propertyOf = function(e) {
             return null == e ? function() {} : function(t) {
                 return e[t]
             }
@@ -4425,7 +4425,7 @@ function(e, t, n) {
                     detail: t._result,
                     childId: n && n._id,
                     label: t._label,
-                    timeStamp: ke(),
+                    timeStamp: xe(),
                     error: be["instrument-with-stack"] ? new Error(t._label) : null
                 }
             }) && u()
@@ -4473,7 +4473,7 @@ function(e, t, n) {
         }
 
         function m(e, t) {
-            t._state === Ce ? b(e, t._result) : t._state === De ? (t._onError = null, w(e, t._result)) : x(t, void 0, function(n) {
+            t._state === Ce ? b(e, t._result) : t._state === De ? (t._onError = null, w(e, t._result)) : k(t, void 0, function(n) {
                 t !== n ? v(e, n, void 0) : b(e, n)
             }, function(t) {
                 return w(e, t)
@@ -4489,24 +4489,24 @@ function(e, t, n) {
         }
 
         function _(e) {
-            e._onError && e._onError(e._result), k(e)
+            e._onError && e._onError(e._result), x(e)
         }
 
         function b(e, t) {
-            e._state === Te && (e._result = t, e._state = Ce, 0 === e._subscribers.length ? be.instrument && c("fulfilled", e) : be.async(k, e))
+            e._state === Te && (e._result = t, e._state = Ce, 0 === e._subscribers.length ? be.instrument && c("fulfilled", e) : be.async(x, e))
         }
 
         function w(e, t) {
             e._state === Te && (e._state = De, e._result = t, be.async(_, e))
         }
 
-        function x(e, t, n, i) {
+        function k(e, t, n, i) {
             var r = e._subscribers,
                 o = r.length;
-            e._onError = null, r[o] = t, r[o + Ce] = n, r[o + De] = i, 0 === o && e._state && be.async(k, e)
+            e._onError = null, r[o] = t, r[o + Ce] = n, r[o + De] = i, 0 === o && e._state && be.async(x, e)
         }
 
-        function k(e) {
+        function x(e) {
             var t = e._subscribers,
                 n = e._state;
             if (be.instrument && c(n === Ce ? "fulfilled" : "rejected", e), 0 !== t.length) {
@@ -4558,7 +4558,7 @@ function(e, t, n) {
             i._onError = null;
             var o = new i.constructor(d, n),
                 s = i._result;
-            if (be.instrument && c("chained", i, o), r === Te) x(i, o, e, t);
+            if (be.instrument && c("chained", i, o), r === Te) k(i, o, e, t);
             else {
                 var a = r === Ce ? e : t;
                 be.async(function() {
@@ -4583,14 +4583,14 @@ function(e, t, n) {
         }
 
         function O(e, t) {
-            return xe(e) ? new E(this, e, !0, t).promise : this.reject(new TypeError("Promise.all must be called with an array"), t)
+            return ke(e) ? new E(this, e, !0, t).promise : this.reject(new TypeError("Promise.all must be called with an array"), t)
         }
 
         function P(e, t) {
             var n = this,
                 i = new n(d, t);
-            if (!xe(e)) return w(i, new TypeError("Promise.race must be called with an array")), i;
-            for (var r = 0; i._state === Te && r < e.length; r++) x(n.resolve(e[r]), void 0, function(e) {
+            if (!ke(e)) return w(i, new TypeError("Promise.race must be called with an array")), i;
+            for (var r = 0; i._state === Te && r < e.length; r++) k(n.resolve(e[r]), void 0, function(e) {
                 return v(i, e)
             }, function(e) {
                 return w(i, e)
@@ -4657,7 +4657,7 @@ function(e, t, n) {
             }
         }
 
-        function $(e, t) {
+        function B(e, t) {
             var n = function() {
                 for (var n = this, i = arguments.length, r = new Array(i + 1), o = !1, s = 0; s < i; ++s) {
                     var a = arguments[s];
@@ -4672,13 +4672,13 @@ function(e, t, n) {
                 }
                 var c = new R(d);
                 return r[i] = function(e, n) {
-                    e ? w(c, e) : void 0 === t ? v(c, n) : !0 === t ? v(c, W(arguments)) : xe(t) ? v(c, H(arguments, t)) : v(c, n)
-                }, o ? q(c, r, e, n) : B(c, r, e, n)
+                    e ? w(c, e) : void 0 === t ? v(c, n) : !0 === t ? v(c, W(arguments)) : ke(t) ? v(c, H(arguments, t)) : v(c, n)
+                }, o ? q(c, r, e, n) : $(c, r, e, n)
             };
             return n.__proto__ = e, n
         }
 
-        function B(e, t, n, i) {
+        function $(e, t, n, i) {
             var r = z(n, i, t);
             return r === Pe && w(e, r.value), e
         }
@@ -4716,7 +4716,7 @@ function(e, t, n) {
         }
 
         function X(e, t) {
-            return xe(e) ? new Ie(R, e, t).promise : R.reject(new TypeError("Promise.allSettled must be called with an array"), t)
+            return ke(e) ? new Ie(R, e, t).promise : R.reject(new TypeError("Promise.allSettled must be called with an array"), t)
         }
 
         function K(e, t) {
@@ -4782,7 +4782,7 @@ function(e, t, n) {
         }
 
         function se(e, t, n) {
-            return xe(e) ? o(t) ? R.all(e, n).then(function(e) {
+            return ke(e) ? o(t) ? R.all(e, n).then(function(e) {
                 for (var i = e.length, r = new Array(i), o = 0; o < i; o++) r[o] = t(e[o]);
                 return R.all(r, n)
             }) : R.reject(new TypeError("RSVP.map expects a function as a second argument"), n) : R.reject(new TypeError("RSVP.map must be called with an array"), n)
@@ -4807,7 +4807,7 @@ function(e, t, n) {
         }
 
         function he(e, t, n) {
-            return xe(e) || s(e) && void 0 !== e.then ? o(t) ? (xe(e) ? ce(e, n) : le(e, n)).then(function(e) {
+            return ke(e) || s(e) && void 0 !== e.then ? o(t) ? (ke(e) ? ce(e, n) : le(e, n)).then(function(e) {
                 for (var i = e.length, r = new Array(i), o = 0; o < i; o++) r[o] = t(e[o]);
                 return ce(r, n).then(function(t) {
                     for (var n = new Array(i), r = 0, o = 0; o < i; o++) t[o] && (n[r] = e[o], r++);
@@ -4887,8 +4887,8 @@ function(e, t, n) {
         we = Array.isArray ? Array.isArray : function(e) {
             return "[object Array]" === Object.prototype.toString.call(e)
         };
-        var xe = we,
-            ke = Date.now || function() {
+        var ke = we,
+            xe = Date.now || function() {
                 return (new Date).getTime()
             },
             Se = [],
@@ -4925,13 +4925,13 @@ function(e, t, n) {
             return n
         }, E.prototype._willSettleAt = function(e, t) {
             var n = this;
-            x(e, void 0, function(e) {
+            k(e, void 0, function(e) {
                 return n._settledAt(Ce, t, e)
             }, function(e) {
                 return n._settledAt(De, t, e)
             })
         };
-        var Ae = "rsvp_" + ke() + "-",
+        var Ae = "rsvp_" + xe() + "-",
             Oe = 0;
         R.prototype._onError = function(e) {
             var t = this;
@@ -4995,11 +4995,11 @@ function(e, t, n) {
             He = "undefined" != typeof window ? window : void 0,
             We = He || {},
             Ue = We.MutationObserver || We.WebKitMutationObserver,
-            $e = "undefined" == typeof self && "undefined" != typeof process && "[object process]" === {}.toString.call(process),
-            Be = "undefined" != typeof Uint8ClampedArray && "undefined" != typeof importScripts && "undefined" != typeof MessageChannel,
+            Be = "undefined" == typeof self && "undefined" != typeof process && "[object process]" === {}.toString.call(process),
+            $e = "undefined" != typeof Uint8ClampedArray && "undefined" != typeof importScripts && "undefined" != typeof MessageChannel,
             qe = new Array(1e3),
             Ye = void 0;
-        Ye = $e ? function() {
+        Ye = Be ? function() {
             var e = process.nextTick,
                 t = process.versions.node.match(/^(?:(\d+)\.)?(?:(\d+)\.)?(\*|\d+)$/);
             return Array.isArray(t) && "0" === t[1] && "10" === t[2] && (e = setImmediate),
@@ -5016,7 +5016,7 @@ function(e, t, n) {
                 function() {
                     return n.data = e = ++e % 2
                 }
-        }() : Be ? function() {
+        }() : $e ? function() {
             var e = new MessageChannel;
             return e.port1.onmessage = ge,
                 function() {
@@ -5061,7 +5061,7 @@ function(e, t, n) {
             hashSettled: ie,
             rethrow: re,
             defer: oe,
-            denodeify: $,
+            denodeify: B,
             configure: i,
             on: ye,
             off: ve,
@@ -5069,7 +5069,7 @@ function(e, t, n) {
             reject: ue,
             map: se
         }, me(Ve, "async", Ge), me(Ve, "filter", he), Ve);
-        e.default = Je, e.asap = de, e.cast = Qe, e.Promise = R, e.EventTarget = _e, e.all = V, e.allSettled = X, e.race = K, e.hash = ee, e.hashSettled = ie, e.rethrow = re, e.defer = oe, e.denodeify = $, e.configure = i, e.on = ye, e.off = ve, e.resolve = ae, e.reject = ue, e.map = se, e.async = Ge, e.filter = he, Object.defineProperty(e, "__esModule", {
+        e.default = Je, e.asap = de, e.cast = Qe, e.Promise = R, e.EventTarget = _e, e.all = V, e.allSettled = X, e.race = K, e.hash = ee, e.hashSettled = ie, e.rethrow = re, e.defer = oe, e.denodeify = B, e.configure = i, e.on = ye, e.off = ve, e.resolve = ae, e.reject = ue, e.map = se, e.async = Ge, e.filter = he, Object.defineProperty(e, "__esModule", {
             value: !0
         })
     }),
@@ -5572,20 +5572,20 @@ function(e, t, n) {
                     _ = e.position.getWithinInfo(r.within),
                     b = e.position.getScrollInfo(_),
                     w = (r.collision || "flip").split(" "),
-                    x = {};
+                    k = {};
                 return y = i(v), v[0].preventDefault && (r.at = "left top"), f = y.width, p = y.height, g = y.offset, m = e.extend({}, g), e.each(["my", "at"], function() {
                     var e, t, n = (r[this] || "").split(" ");
-                    1 === n.length && (n = a.test(n[0]) ? n.concat(["center"]) : u.test(n[0]) ? ["center"].concat(n) : ["center", "center"]), n[0] = a.test(n[0]) ? n[0] : "center", n[1] = u.test(n[1]) ? n[1] : "center", e = c.exec(n[0]), t = c.exec(n[1]), x[this] = [e ? e[0] : 0, t ? t[0] : 0], r[this] = [l.exec(n[0])[0], l.exec(n[1])[0]]
-                }), 1 === w.length && (w[1] = w[0]), "right" === r.at[0] ? m.left += f : "center" === r.at[0] && (m.left += f / 2), "bottom" === r.at[1] ? m.top += p : "center" === r.at[1] && (m.top += p / 2), h = t(x.at, f, p), m.left += h[0], m.top += h[1], this.each(function() {
+                    1 === n.length && (n = a.test(n[0]) ? n.concat(["center"]) : u.test(n[0]) ? ["center"].concat(n) : ["center", "center"]), n[0] = a.test(n[0]) ? n[0] : "center", n[1] = u.test(n[1]) ? n[1] : "center", e = c.exec(n[0]), t = c.exec(n[1]), k[this] = [e ? e[0] : 0, t ? t[0] : 0], r[this] = [l.exec(n[0])[0], l.exec(n[1])[0]]
+                }), 1 === w.length && (w[1] = w[0]), "right" === r.at[0] ? m.left += f : "center" === r.at[0] && (m.left += f / 2), "bottom" === r.at[1] ? m.top += p : "center" === r.at[1] && (m.top += p / 2), h = t(k.at, f, p), m.left += h[0], m.top += h[1], this.each(function() {
                     var i, a, u = e(this),
                         c = u.outerWidth(),
                         l = u.outerHeight(),
                         d = n(this, "marginLeft"),
                         y = n(this, "marginTop"),
-                        k = c + d + n(this, "marginRight") + b.width,
+                        x = c + d + n(this, "marginRight") + b.width,
                         S = l + y + n(this, "marginBottom") + b.height,
                         T = e.extend({}, m),
-                        C = t(x.my, u.outerWidth(), u.outerHeight());
+                        C = t(k.my, u.outerWidth(), u.outerHeight());
                     "right" === r.my[0] ? T.left -= c : "center" === r.my[0] && (T.left -= c / 2), "bottom" === r.my[1] ? T.top -= l : "center" === r.my[1] && (T.top -= l / 2), T.left += C[0], T.top += C[1], i = {
                         marginLeft: d,
                         marginTop: y
@@ -5596,7 +5596,7 @@ function(e, t, n) {
                             elemWidth: c,
                             elemHeight: l,
                             collisionPosition: i,
-                            collisionWidth: k,
+                            collisionWidth: x,
                             collisionHeight: S,
                             offset: [h[0] + C[0], h[1] + C[1]],
                             my: r.my,
@@ -7313,7 +7313,7 @@ function(e, t, n) {
                         if (!s) throw "Missing number at position " + u;
                         return u += s[0].length, parseInt(s[0], 10)
                     },
-                    x = function(t, i, r) {
+                    k = function(t, i, r) {
                         var o = -1,
                             s = e.map(b(t) ? r : i, function(e, t) {
                                 return [
@@ -7328,18 +7328,18 @@ function(e, t, n) {
                             }), -1 !== o) return o + 1;
                         throw "Unknown name at position " + u
                     },
-                    k = function() {
+                    x = function() {
                         if (n.charAt(u) !== t.charAt(r)) throw "Unexpected literal at position " + u;
                         u++
                     };
                 for (r = 0; r < t.length; r++)
-                    if (_) "'" !== t.charAt(r) || b("'") ? k() : _ = !1;
+                    if (_) "'" !== t.charAt(r) || b("'") ? x() : _ = !1;
                     else switch (t.charAt(r)) {
                         case "d":
                             y = w("d");
                             break;
                         case "D":
-                            x("D", h, d);
+                            k("D", h, d);
                             break;
                         case "o":
                             v = w("o");
@@ -7348,7 +7348,7 @@ function(e, t, n) {
                             m = w("m");
                             break;
                         case "M":
-                            m = x("M", f, p);
+                            m = k("M", f, p);
                             break;
                         case "y":
                             g = w("y");
@@ -7360,10 +7360,10 @@ function(e, t, n) {
                             a = new Date((w("!") - this._ticksTo1970) / 1e4), g = a.getFullYear(), m = a.getMonth() + 1, y = a.getDate();
                             break;
                         case "'":
-                            b("'") ? k() : _ = !0;
+                            b("'") ? x() : _ = !0;
                             break;
                         default:
-                            k()
+                            x()
                     }
                     if (u < n.length && (s = n.substr(u), !/^\s+/.test(s))) throw "Extra/unparsed characters found in date: " + s;
                 if (-1 === g ? g = (new Date).getFullYear() : g < 100 && (g += (new Date).getFullYear() - (new Date).getFullYear() % 100 + (g <= l ? 0 : -100)), v > -1)
@@ -7568,11 +7568,11 @@ function(e, t, n) {
                 })
             },
             _generateHTML: function(e) {
-                var t, n, i, r, o, s, a, u, c, l, h, d, f, p, g, m, y, v, _, b, w, x, k, S, T, C, D, M, E, A, O, P, j, I, N, R, L, F, z, H = new Date,
+                var t, n, i, r, o, s, a, u, c, l, h, d, f, p, g, m, y, v, _, b, w, k, x, S, T, C, D, M, E, A, O, P, j, I, N, R, L, F, z, H = new Date,
                     W = this._daylightSavingAdjust(new Date(H.getFullYear(), H.getMonth(), H.getDate())),
                     U = this._get(e, "isRTL"),
-                    $ = this._get(e, "showButtonPanel"),
-                    B = this._get(e, "hideIfNoPrevNext"),
+                    B = this._get(e, "showButtonPanel"),
+                    $ = this._get(e, "hideIfNoPrevNext"),
                     q = this._get(e, "navigationAsDateFormat"),
                     Y = this._getNumberOfMonths(e),
                     V = this._get(e, "showCurrentAtPos"),
@@ -7585,8 +7585,8 @@ function(e, t, n) {
                     ee = e.drawYear;
                 if (Z < 0 && (Z += 12, ee--), J)
                     for (t = this._daylightSavingAdjust(new Date(J.getFullYear(), J.getMonth() - Y[0] * Y[1] + 1, J.getDate())), t = K && t < K ? K : t; this._daylightSavingAdjust(new Date(ee, Z, 1)) > t;) --Z < 0 && (Z = 11, ee--);
-                for (e.drawMonth = Z, e.drawYear = ee, n = this._get(e, "prevText"), n = q ? this.formatDate(n, this._daylightSavingAdjust(new Date(ee, Z - Q, 1)), this._getFormatConfig(e)) : n, i = this._canAdjustMonth(e, -1, ee, Z) ? "<a class='ui-datepicker-prev ui-corner-all' data-handler='prev' data-event='click' title='" + n + "'><span class='ui-icon ui-icon-circle-triangle-" + (U ? "e" : "w") + "'>" + n + "</span></a>" : B ? "" : "<a class='ui-datepicker-prev ui-corner-all ui-state-disabled' title='" + n + "'><span class='ui-icon ui-icon-circle-triangle-" + (U ? "e" : "w") + "'>" + n + "</span></a>", r = this._get(e, "nextText"), r = q ? this.formatDate(r, this._daylightSavingAdjust(new Date(ee, Z + Q, 1)), this._getFormatConfig(e)) : r, o = this._canAdjustMonth(e, 1, ee, Z) ? "<a class='ui-datepicker-next ui-corner-all' data-handler='next' data-event='click' title='" + r + "'><span class='ui-icon ui-icon-circle-triangle-" + (U ? "w" : "e") + "'>" + r + "</span></a>" : B ? "" : "<a class='ui-datepicker-next ui-corner-all ui-state-disabled' title='" + r + "'><span class='ui-icon ui-icon-circle-triangle-" + (U ? "w" : "e") + "'>" + r + "</span></a>", s = this._get(e, "currentText"), a = this._get(e, "gotoCurrent") && e.currentDay ? X : W, s = q ? this.formatDate(s, a, this._getFormatConfig(e)) : s, u = e.inline ? "" : "<button type='button' class='ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all' data-handler='hide' data-event='click'>" + this._get(e, "closeText") + "</button>", c = $ ? "<div class='ui-datepicker-buttonpane ui-widget-content'>" + (U ? u : "") + (this._isInRange(e, a) ? "<button type='button' class='ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all' data-handler='today' data-event='click'>" + s + "</button>" : "") + (U ? "" : u) + "</div>" : "", l = parseInt(this._get(e, "firstDay"), 10), l = isNaN(l) ? 0 : l, h = this._get(e, "showWeek"), d = this._get(e, "dayNames"), f = this._get(e, "dayNamesMin"), p = this._get(e, "monthNames"), g = this._get(e, "monthNamesShort"), m = this._get(e, "beforeShowDay"), y = this._get(e, "showOtherMonths"), v = this._get(e, "selectOtherMonths"), _ = this._getDefaultDate(e), b = "", x = 0; x < Y[0]; x++) {
-                    for (k = "", this.maxRows = 4, S = 0; S < Y[1]; S++) {
+                for (e.drawMonth = Z, e.drawYear = ee, n = this._get(e, "prevText"), n = q ? this.formatDate(n, this._daylightSavingAdjust(new Date(ee, Z - Q, 1)), this._getFormatConfig(e)) : n, i = this._canAdjustMonth(e, -1, ee, Z) ? "<a class='ui-datepicker-prev ui-corner-all' data-handler='prev' data-event='click' title='" + n + "'><span class='ui-icon ui-icon-circle-triangle-" + (U ? "e" : "w") + "'>" + n + "</span></a>" : $ ? "" : "<a class='ui-datepicker-prev ui-corner-all ui-state-disabled' title='" + n + "'><span class='ui-icon ui-icon-circle-triangle-" + (U ? "e" : "w") + "'>" + n + "</span></a>", r = this._get(e, "nextText"), r = q ? this.formatDate(r, this._daylightSavingAdjust(new Date(ee, Z + Q, 1)), this._getFormatConfig(e)) : r, o = this._canAdjustMonth(e, 1, ee, Z) ? "<a class='ui-datepicker-next ui-corner-all' data-handler='next' data-event='click' title='" + r + "'><span class='ui-icon ui-icon-circle-triangle-" + (U ? "w" : "e") + "'>" + r + "</span></a>" : $ ? "" : "<a class='ui-datepicker-next ui-corner-all ui-state-disabled' title='" + r + "'><span class='ui-icon ui-icon-circle-triangle-" + (U ? "w" : "e") + "'>" + r + "</span></a>", s = this._get(e, "currentText"), a = this._get(e, "gotoCurrent") && e.currentDay ? X : W, s = q ? this.formatDate(s, a, this._getFormatConfig(e)) : s, u = e.inline ? "" : "<button type='button' class='ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all' data-handler='hide' data-event='click'>" + this._get(e, "closeText") + "</button>", c = B ? "<div class='ui-datepicker-buttonpane ui-widget-content'>" + (U ? u : "") + (this._isInRange(e, a) ? "<button type='button' class='ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all' data-handler='today' data-event='click'>" + s + "</button>" : "") + (U ? "" : u) + "</div>" : "", l = parseInt(this._get(e, "firstDay"), 10), l = isNaN(l) ? 0 : l, h = this._get(e, "showWeek"), d = this._get(e, "dayNames"), f = this._get(e, "dayNamesMin"), p = this._get(e, "monthNames"), g = this._get(e, "monthNamesShort"), m = this._get(e, "beforeShowDay"), y = this._get(e, "showOtherMonths"), v = this._get(e, "selectOtherMonths"), _ = this._getDefaultDate(e), b = "", k = 0; k < Y[0]; k++) {
+                    for (x = "", this.maxRows = 4, S = 0; S < Y[1]; S++) {
                         if (T = this._daylightSavingAdjust(new Date(ee, Z, e.selectedDay)), C = " ui-corner-all", D = "", G) {
                             if (D += "<div class='ui-datepicker-group", Y[1] > 1) switch (S) {
                                 case 0:
@@ -7600,14 +7600,14 @@ function(e, t, n) {
                             }
                             D += "'>"
                         }
-                        for (D += "<div class='ui-datepicker-header ui-widget-header ui-helper-clearfix" + C + "'>" + (/all|left/.test(C) && 0 === x ? U ? o : i : "") + (/all|right/.test(C) && 0 === x ? U ? i : o : "") + this._generateMonthYearHeader(e, Z, ee, K, J, x > 0 || S > 0, p, g) + "</div><table class='ui-datepicker-calendar'><thead><tr>", M = h ? "<th class='ui-datepicker-week-col'>" + this._get(e, "weekHeader") + "</th>" : "", w = 0; w < 7; w++) E = (w + l) % 7, M += "<th scope='col'" + ((w + l + 6) % 7 >= 5 ? " class='ui-datepicker-week-end'" : "") + "><span title='" + d[E] + "'>" + f[E] + "</span></th>";
+                        for (D += "<div class='ui-datepicker-header ui-widget-header ui-helper-clearfix" + C + "'>" + (/all|left/.test(C) && 0 === k ? U ? o : i : "") + (/all|right/.test(C) && 0 === k ? U ? i : o : "") + this._generateMonthYearHeader(e, Z, ee, K, J, k > 0 || S > 0, p, g) + "</div><table class='ui-datepicker-calendar'><thead><tr>", M = h ? "<th class='ui-datepicker-week-col'>" + this._get(e, "weekHeader") + "</th>" : "", w = 0; w < 7; w++) E = (w + l) % 7, M += "<th scope='col'" + ((w + l + 6) % 7 >= 5 ? " class='ui-datepicker-week-end'" : "") + "><span title='" + d[E] + "'>" + f[E] + "</span></th>";
                         for (D += M + "</tr></thead><tbody>", A = this._getDaysInMonth(ee, Z), ee === e.selectedYear && Z === e.selectedMonth && (e.selectedDay = Math.min(e.selectedDay, A)), O = (this._getFirstDayOfMonth(ee, Z) - l + 7) % 7, P = Math.ceil((O + A) / 7), j = G && this.maxRows > P ? this.maxRows : P, this.maxRows = j, I = this._daylightSavingAdjust(new Date(ee, Z, 1 - O)), N = 0; N < j; N++) {
                             for (D += "<tr>", R = h ? "<td class='ui-datepicker-week-col'>" + this._get(e, "calculateWeek")(I) + "</td>" : "", w = 0; w < 7; w++) L = m ? m.apply(e.input ? e.input[0] : null, [I]) : [!0, ""], F = I.getMonth() !== Z, z = F && !v || !L[0] || K && I < K || J && I > J, R += "<td class='" + ((w + l + 6) % 7 >= 5 ? " ui-datepicker-week-end" : "") + (F ? " ui-datepicker-other-month" : "") + (I.getTime() === T.getTime() && Z === e.selectedMonth && e._keyEvent || _.getTime() === I.getTime() && _.getTime() === T.getTime() ? " " + this._dayOverClass : "") + (z ? " " + this._unselectableClass + " ui-state-disabled" : "") + (F && !y ? "" : " " + L[1] + (I.getTime() === X.getTime() ? " " + this._currentClass : "") + (I.getTime() === W.getTime() ? " ui-datepicker-today" : "")) + "'" + (F && !y || !L[2] ? "" : " title='" + L[2].replace(/'/g, "&#39;") + "'") + (z ? "" : " data-handler='selectDay' data-event='click' data-month='" + I.getMonth() + "' data-year='" + I.getFullYear() + "'") + ">" + (F && !y ? "&#xa0;" : z ? "<span class='ui-state-default'>" + I.getDate() + "</span>" : "<a class='ui-state-default" + (I.getTime() === W.getTime() ? " ui-state-highlight" : "") + (I.getTime() === X.getTime() ? " ui-state-active" : "") + (F ? " ui-priority-secondary" : "") + "' href='#'>" + I.getDate() + "</a>") + "</td>", I.setDate(I.getDate() + 1), I = this._daylightSavingAdjust(I);
                             D += R + "</tr>"
                         }
-                        Z++, Z > 11 && (Z = 0, ee++), D += "</tbody></table>" + (G ? "</div>" + (Y[0] > 0 && S === Y[1] - 1 ? "<div class='ui-datepicker-row-break'></div>" : "") : ""), k += D
+                        Z++, Z > 11 && (Z = 0, ee++), D += "</tbody></table>" + (G ? "</div>" + (Y[0] > 0 && S === Y[1] - 1 ? "<div class='ui-datepicker-row-break'></div>" : "") : ""), x += D
                     }
-                    b += k
+                    b += x
                 }
                 return b += c, e._keyEvent = !1, b
             },
@@ -8721,9 +8721,9 @@ function(e, t, n) {
                     _ = Math.abs(l.top - r[m]),
                     b = Math.pow(v, 2) + Math.pow(_, 2),
                     w = Math.round(Math.sqrt(b)),
-                    x = p.shelfOrder * w,
-                    k = p.upperPosition * (r[m] - c);
-                g[m] = k + x
+                    k = p.shelfOrder * w,
+                    x = p.upperPosition * (r[m] - c);
+                g[m] = x + k
             }
             var S = Math.min.apply(null, g);
             for (m = 0, y = g.length; m < y; m++)
@@ -9540,10 +9540,10 @@ var Mustache;
                     g = !1, m = !1
                 }();
             if (!d.scan(u[0])) break;
-            if (g = !0, r = d.scan(k) || "name", d.scan(v), "=" === r) s = d.scanUntil(w), d.scan(w), d.scanUntil(u[1]);
+            if (g = !0, r = d.scan(x) || "name", d.scan(v), "=" === r) s = d.scanUntil(w), d.scan(w), d.scanUntil(u[1]);
             else if ("{" === r) {
                 var T = new RegExp("\\s*" + i("}" + n[1]));
-                s = d.scanUntil(T), d.scan(x), d.scanUntil(u[1])
+                s = d.scanUntil(T), d.scan(k), d.scanUntil(u[1])
             } else s = d.scanUntil(u[1]);
             if (!d.scan(u[1])) throw new Error("Unclosed tag at " + d.pos);
             f.push({
@@ -9581,8 +9581,8 @@ var Mustache;
         _ = /\s+/,
         b = /\S/,
         w = /\s*=/,
-        x = /\s*\}/,
-        k = /#|\^|\/|>|\{|&|=|!/,
+        k = /\s*\}/,
+        x = /#|\^|\/|>|\{|&|=|!/,
         S = Array.isArray || function(e) {
             return "[object Array]" === Object.prototype.toString.call(e)
         },
@@ -10530,20 +10530,20 @@ function(e, t) {
     "function" == typeof define && define.amd ? define(t) : "object" == typeof exports ? module.exports = t() : e.swfobject = t()
 }(this, function() {
     function e() {
-        if (!B && document.getElementsByTagName("body")[0]) {
+        if (!$ && document.getElementsByTagName("body")[0]) {
             try {
                 var e, t = y("span");
                 t.style.display = "none", e = L.getElementsByTagName("body")[0].appendChild(t), e.parentNode.removeChild(e), e = null, t = null
             } catch (e) {
                 return
             }
-            B = !0;
+            $ = !0;
             for (var n = H.length, i = 0; n > i; i++) H[i]()
         }
     }
 
     function t(e) {
-        B ? e() : H[H.length] = e
+        $ ? e() : H[H.length] = e
     }
 
     function n(e) {
@@ -10597,8 +10597,8 @@ function(e, t) {
                                 for (var h = {}, d = c.getElementsByTagName("param"), f = d.length, p = 0; f > p; p++) "movie" !== d[p].getAttribute("name").toLowerCase() && (h[d[p].getAttribute("name")] = d[p].getAttribute("value"));
                                 a(l, h, n, i)
                             } else u(c), i && i(r);
-                    else x(n, !0), i && (r.success = !0, r.ref = o(n), r.id = n, i(r))
-                } else if (x(n, !0), i) {
+                    else k(n, !0), i && (r.success = !0, r.ref = o(n), r.id = n, i(r))
+                } else if (k(n, !0), i) {
                     var g = o(n);
                     g && typeof g.SetVariable !== A && (r.success = !0, r.ref = g, r.id = g.id), i(r)
                 }
@@ -10714,7 +10714,7 @@ function(e, t) {
     }
 
     function _(e, t, n) {
-        e.attachEvent(t, n), $[$.length] = [e, t, n]
+        e.attachEvent(t, n), B[B.length] = [e, t, n]
     }
 
     function b(e) {
@@ -10736,15 +10736,15 @@ function(e, t) {
         }
     }
 
-    function x(e, t) {
+    function k(e, t) {
         if (Y) {
             var n = t ? "visible" : "hidden",
                 i = m(e);
-            B && i ? i.style.visibility = n : "string" == typeof e && w("#" + e, "visibility:" + n)
+            $ && i ? i.style.visibility = n : "string" == typeof e && w("#" + e, "visibility:" + n)
         }
     }
 
-    function k(e) {
+    function x(e) {
         return null !== /[\\\"<>\.;]/.exec(e) && typeof encodeURIComponent !== A ? encodeURIComponent(e) : e
     }
     var S, T, C, D, M, E, A = "undefined",
@@ -10760,8 +10760,8 @@ function(e, t) {
         H = [],
         W = [],
         U = [],
-        $ = [],
-        B = !1,
+        B = [],
+        $ = !1,
         q = !1,
         Y = !0,
         V = !1,
@@ -10790,10 +10790,10 @@ function(e, t) {
             }
         }();
     return function() {
-            Q.w3 && ((typeof L.readyState !== A && ("complete" === L.readyState || "interactive" === L.readyState) || typeof L.readyState === A && (L.getElementsByTagName("body")[0] || L.body)) && e(), B || (typeof L.addEventListener !== A && L.addEventListener("DOMContentLoaded", e, !1), Q.ie && (L.attachEvent(N, function t() {
+            Q.w3 && ((typeof L.readyState !== A && ("complete" === L.readyState || "interactive" === L.readyState) || typeof L.readyState === A && (L.getElementsByTagName("body")[0] || L.body)) && e(), $ || (typeof L.addEventListener !== A && L.addEventListener("DOMContentLoaded", e, !1), Q.ie && (L.attachEvent(N, function t() {
                 "complete" === L.readyState && (L.detachEvent(N, t), e())
             }), R == top && function t() {
-                if (!B) {
+                if (!$) {
                     try {
                         L.documentElement.doScroll("left")
                     } catch (e) {
@@ -10802,14 +10802,14 @@ function(e, t) {
                     e()
                 }
             }()), Q.wk && function t() {
-                return B ? void 0 : /loaded|complete/.test(L.readyState) ? void e() : void setTimeout(t, 0)
+                return $ ? void 0 : /loaded|complete/.test(L.readyState) ? void e() : void setTimeout(t, 0)
             }()))
         }(), H[0] = function() {
             z ? i() : r()
         },
         function() {
             Q.ie && window.attachEvent("onunload", function() {
-                for (var e = $.length, t = 0; e > t; t++) $[t][0].detachEvent($[t][1], $[t][2]);
+                for (var e = B.length, t = 0; e > t; t++) B[t][0].detachEvent(B[t][1], B[t][2]);
                 for (var n = U.length, i = 0; n > i; i++) f(U[i]);
                 for (var r in Q) Q[r] = null;
                 Q = null;
@@ -10820,7 +10820,7 @@ function(e, t) {
             registerObject: function(e, t, n, i) {
                 if (Q.w3 && e && t) {
                     var r = {};
-                    r.id = e, r.swfVersion = t, r.expressInstall = n, r.callbackFn = i, W[W.length] = r, x(e, !1)
+                    r.id = e, r.swfVersion = t, r.expressInstall = n, r.callbackFn = i, W[W.length] = r, k(e, !1)
                 } else i && i({
                     success: !1,
                     id: e
@@ -10835,7 +10835,7 @@ function(e, t) {
                         success: !1,
                         id: p
                     };
-                Q.w3 && (!Q.wk || Q.wk >= 312) && e && n && i && r && o ? (x(p, !1), t(function() {
+                Q.w3 && (!Q.wk || Q.wk >= 312) && e && n && i && r && o ? (k(p, !1), t(function() {
                     i += "", r += "";
                     var t = {};
                     if (d && typeof d === O)
@@ -10848,15 +10848,15 @@ function(e, t) {
                         for (var _ in c)
                             if (c.hasOwnProperty(_)) {
                                 var w = V ? encodeURIComponent(_) : _,
-                                    k = V ? encodeURIComponent(c[_]) : c[_];
-                                typeof y.flashvars !== A ? y.flashvars += "&" + w + "=" + k : y.flashvars = w + "=" + k
+                                    x = V ? encodeURIComponent(c[_]) : c[_];
+                                typeof y.flashvars !== A ? y.flashvars += "&" + w + "=" + x : y.flashvars = w + "=" + x
                             }
                     if (b(o)) {
                         var S = h(t, y, n);
-                        t.id == p && x(p, !0), m.success = !0, m.ref = S, m.id = S.id
+                        t.id == p && k(p, !0), m.success = !0, m.ref = S, m.id = S.id
                     } else {
                         if (u && s()) return t.data = u, void a(t, y, n, f);
-                        x(p, !0)
+                        k(p, !0)
                     }
                     f && f(m)
                 })) : f && f(m)
@@ -10893,16 +10893,16 @@ function(e, t) {
             getQueryParamValue: function(e) {
                 var t = L.location.search || L.location.hash;
                 if (t) {
-                    if (/\?/.test(t) && (t = t.split("?")[1]), !e) return k(t);
+                    if (/\?/.test(t) && (t = t.split("?")[1]), !e) return x(t);
                     for (var n = t.split("&"), i = 0; i < n.length; i++)
-                        if (n[i].substring(0, n[i].indexOf("=")) == e) return k(n[i].substring(n[i].indexOf("=") + 1))
+                        if (n[i].substring(0, n[i].indexOf("=")) == e) return x(n[i].substring(n[i].indexOf("=") + 1))
                 }
                 return ""
             },
             expressInstallCallback: function() {
                 if (q) {
                     var e = m(I);
-                    e && S && (e.parentNode.replaceChild(S, e), T && (x(T, !0), Q.ie && (S.style.display = "block")), C && C(D)), q = !1
+                    e && S && (e.parentNode.replaceChild(S, e), T && (k(T, !0), Q.ie && (S.style.display = "block")), C && C(D)), q = !1
                 }
             },
             version: "2.3"
@@ -12438,17 +12438,17 @@ function(e, t) {
             }, n)
         }
 
-        function x(t, n) {
+        function k(t, n) {
             null != e.deprecationHandler && e.deprecationHandler(t, n), mi[t] || (b(n), mi[t] = !0)
         }
 
-        function k(e) {
+        function x(e) {
             return e instanceof Function || "[object Function]" === Object.prototype.toString.call(e)
         }
 
         function S(e) {
             var t, n;
-            for (n in e) t = e[n], k(t) ? this[n] = t : this["_" + n] = t;
+            for (n in e) t = e[n], x(t) ? this[n] = t : this["_" + n] = t;
             this._config = e, this._ordinalParseLenient = new RegExp(this._ordinalParse.source + "|" + /\d{1,2}/.source)
         }
 
@@ -12465,7 +12465,7 @@ function(e, t) {
 
         function D(e, t, n) {
             var i = this._calendar[e] || this._calendar.sameElse;
-            return k(i) ? i.call(t, n) : i
+            return x(i) ? i.call(t, n) : i
         }
 
         function M(e) {
@@ -12486,21 +12486,21 @@ function(e, t) {
 
         function O(e, t, n, i) {
             var r = this._relativeTime[n];
-            return k(r) ? r(e, t, n, i) : r.replace(/%d/i, e)
+            return x(r) ? r(e, t, n, i) : r.replace(/%d/i, e)
         }
 
         function P(e, t) {
             var n = this._relativeTime[e > 0 ? "future" : "past"];
-            return k(n) ? n(t) : n.replace(/%s/i, t)
+            return x(n) ? n(t) : n.replace(/%s/i, t)
         }
 
         function j(e, t) {
             var n = e.toLowerCase();
-            ki[n] = ki[n + "s"] = ki[t] = e
+            xi[n] = xi[n + "s"] = xi[t] = e
         }
 
         function I(e) {
-            return "string" == typeof e ? ki[e] || ki[e.toLowerCase()] : void 0
+            return "string" == typeof e ? xi[e] || xi[e.toLowerCase()] : void 0
         }
 
         function N(e) {
@@ -12539,29 +12539,29 @@ function(e, t) {
         }
 
         function W(e) {
-            return e = I(e), k(this[e]) ? this[e]() : this
+            return e = I(e), x(this[e]) ? this[e]() : this
         }
 
         function U(e, t) {
             if ("object" == typeof e) {
                 e = N(e);
                 for (var n = L(e), i = 0; i < n.length; i++) this[n[i].unit](e[n[i].unit])
-            } else if (e = I(e), k(this[e])) return this[e](t);
+            } else if (e = I(e), x(this[e])) return this[e](t);
             return this
         }
 
-        function $(e, t, n) {
+        function B(e, t, n) {
             var i = "" + Math.abs(e),
                 r = t - i.length;
             return (e >= 0 ? n ? "+" : "" : "-") + Math.pow(10, Math.max(0, r)).toString().substr(1) + i
         }
 
-        function B(e, t, n, i) {
+        function $(e, t, n, i) {
             var r = i;
             "string" == typeof i && (r = function() {
                 return this[i]()
             }), e && (Mi[e] = r), t && (Mi[t[0]] = function() {
-                return $(r.apply(this, arguments), t[1], t[2])
+                return B(r.apply(this, arguments), t[1], t[2])
             }), n && (Mi[n] = function() {
                 return this.localeData().ordinal(r.apply(this, arguments), e)
             })
@@ -12595,7 +12595,7 @@ function(e, t) {
         }
 
         function G(e, t, n) {
-            Yi[e] = k(t) ? t : function(e, i) {
+            Yi[e] = x(t) ? t : function(e, i) {
                 return e && n ? n : t
             }
         }
@@ -12750,11 +12750,11 @@ function(e, t) {
             return (fe(e) - i + r) / 7
         }
 
-        function xe(e) {
+        function ke(e) {
             return be(e, this._week.dow, this._week.doy).week
         }
 
-        function ke() {
+        function xe() {
             return this._week.dow
         }
 
@@ -12864,13 +12864,13 @@ function(e, t) {
             return this.hours() || 24
         }
 
-        function $e(e, t) {
-            B(e, 0, 0, function() {
+        function Be(e, t) {
+            $(e, 0, 0, function() {
                 return this.localeData().meridiem(this.hours(), this.minutes(), t)
             })
         }
 
-        function Be(e, t) {
+        function $e(e, t) {
             return t._meridiemParse
         }
 
@@ -12914,7 +12914,7 @@ function(e, t) {
         function Ke(e, t) {
             if (null !== t) {
                 var n = _r;
-                return t.abbr = e, null != br[e] ? (x("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info."), n = br[e]._config) : null != t.parentLocale && (null != br[t.parentLocale] ? n = br[t.parentLocale]._config : x("parentLocaleUndefined", "specified parentLocale is not defined yet. See http://momentjs.com/guides/#/warnings/parent-locale/")), br[e] = new C(T(n, t)), Xe(e), br[e]
+                return t.abbr = e, null != br[e] ? (k("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info."), n = br[e]._config) : null != t.parentLocale && (null != br[t.parentLocale] ? n = br[t.parentLocale]._config : k("parentLocaleUndefined", "specified parentLocale is not defined yet. See http://momentjs.com/guides/#/warnings/parent-locale/")), br[e] = new C(T(n, t)), Xe(e), br[e]
             }
             return delete br[e], null
         }
@@ -12948,7 +12948,7 @@ function(e, t) {
 
         function nt(e) {
             var t, n, i, r, o, s, a = e._i,
-                u = wr.exec(a) || xr.exec(a);
+                u = wr.exec(a) || kr.exec(a);
             if (u) {
                 for (l(e).iso = !0, t = 0, n = Sr.length; t < n; t++)
                     if (Sr[t][1].exec(u[1])) {
@@ -12966,7 +12966,7 @@ function(e, t) {
                 }
                 if (!i && null != o) return void(e._isValid = !1);
                 if (u[4]) {
-                    if (!kr.exec(u[4])) return void(e._isValid = !1);
+                    if (!xr.exec(u[4])) return void(e._isValid = !1);
                     s = "Z"
                 }
                 e._f = r + (o || "") + (s || ""), ut(e)
@@ -13095,15 +13095,15 @@ function(e, t) {
             return e instanceof bt
         }
 
-        function xt(e, t) {
-            B(e, 0, 0, function() {
+        function kt(e, t) {
+            $(e, 0, 0, function() {
                 var e = this.utcOffset(),
                     n = "+";
-                return e < 0 && (e = -e, n = "-"), n + $(~~(e / 60), 2) + t + $(~~e % 60, 2)
+                return e < 0 && (e = -e, n = "-"), n + B(~~(e / 60), 2) + t + B(~~e % 60, 2)
             })
         }
 
-        function kt(e, t) {
+        function xt(e, t) {
             var n = (t || "").match(e) || [],
                 i = n[n.length - 1] || [],
                 r = (i + "").match(Ar) || ["-", 0, 0],
@@ -13122,7 +13122,7 @@ function(e, t) {
 
         function Ct(t, n) {
             var i, r = this._offset || 0;
-            return this.isValid() ? null != t ? ("string" == typeof t ? t = kt($i, t) : Math.abs(t) < 16 && (t *= 60), !this._isUTC && n && (i = Tt(this)), this._offset = t, this._isUTC = !0, null != i && this.add(i, "m"), r !== t && (!n || this._changeInProgress ? $t(this, Lt(t - r, "m"), 1, !1) : this._changeInProgress || (this._changeInProgress = !0, e.updateOffset(this, !0), this._changeInProgress = null)), this) : this._isUTC ? r : Tt(this) : null != t ? this : NaN
+            return this.isValid() ? null != t ? ("string" == typeof t ? t = xt(Bi, t) : Math.abs(t) < 16 && (t *= 60), !this._isUTC && n && (i = Tt(this)), this._offset = t, this._isUTC = !0, null != i && this.add(i, "m"), r !== t && (!n || this._changeInProgress ? Bt(this, Lt(t - r, "m"), 1, !1) : this._changeInProgress || (this._changeInProgress = !0, e.updateOffset(this, !0), this._changeInProgress = null)), this) : this._isUTC ? r : Tt(this) : null != t ? this : NaN
         }
 
         function Dt(e, t) {
@@ -13138,7 +13138,7 @@ function(e, t) {
         }
 
         function At() {
-            return this._tzm ? this.utcOffset(this._tzm) : "string" == typeof this._i && this.utcOffset(kt(Ui, this._i)), this
+            return this._tzm ? this.utcOffset(this._tzm) : "string" == typeof this._i && this.utcOffset(xt(Ui, this._i)), this
         }
 
         function Ot(e) {
@@ -13224,18 +13224,18 @@ function(e, t) {
         function Ut(e, t) {
             return function(n, i) {
                 var r, o;
-                return null === i || isNaN(+i) || (x(t, "moment()." + t + "(period, number) is deprecated. Please use moment()." + t + "(number, period). See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info."), o = n, n = i, i = o), n = "string" == typeof n ? +n : n, r = Lt(n, i), $t(this, r, e), this
+                return null === i || isNaN(+i) || (k(t, "moment()." + t + "(period, number) is deprecated. Please use moment()." + t + "(number, period). See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info."), o = n, n = i, i = o), n = "string" == typeof n ? +n : n, r = Lt(n, i), Bt(this, r, e), this
             }
         }
 
-        function $t(t, n, i, r) {
+        function Bt(t, n, i, r) {
             var o = n._milliseconds,
                 s = Wt(n._days),
                 a = Wt(n._months);
             t.isValid() && (r = null == r || r, o && t._d.setTime(t._d.valueOf() + o * i), s && H(t, "Date", z(t, "Date") + s * i), a && ae(t, z(t, "Month") + a * i), r && e.updateOffset(t, s || a))
         }
 
-        function Bt(e, t) {
+        function $t(e, t) {
             var n = e.diff(t, "days", !0);
             return n < -6 ? "sameElse" : n < -1 ? "lastWeek" : n < 0 ? "lastDay" : n < 1 ? "sameDay" : n < 2 ? "nextDay" : n < 7 ? "nextWeek" : "sameElse"
         }
@@ -13244,7 +13244,7 @@ function(e, t) {
             var i = t || mt(),
                 r = St(i, this).startOf("day"),
                 o = e.calendarFormat(this, r) || "sameElse",
-                s = n && (k(n[o]) ? n[o].call(this, i) : n[o]);
+                s = n && (x(n[o]) ? n[o].call(this, i) : n[o]);
             return this.format(s || this.localeData().calendar(o, this, mt(i)))
         }
 
@@ -13296,7 +13296,7 @@ function(e, t) {
 
         function nn() {
             var e = this.clone().utc();
-            return 0 < e.year() && e.year() <= 9999 ? k(Date.prototype.toISOString) ? this.toDate().toISOString() : V(e, "YYYY-MM-DD[T]HH:mm:ss.SSS[Z]") : V(e, "YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]")
+            return 0 < e.year() && e.year() <= 9999 ? x(Date.prototype.toISOString) ? this.toDate().toISOString() : V(e, "YYYY-MM-DD[T]HH:mm:ss.SSS[Z]") : V(e, "YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]")
         }
 
         function rn(t) {
@@ -13408,7 +13408,7 @@ function(e, t) {
             return l(this).overflow
         }
 
-        function xn() {
+        function kn() {
             return {
                 input: this._i,
                 format: this._f,
@@ -13418,8 +13418,8 @@ function(e, t) {
             }
         }
 
-        function kn(e, t) {
-            B(0, [e, e.length], 0, t)
+        function xn(e, t) {
+            $(0, [e, e.length], 0, t)
         }
 
         function Sn(e) {
@@ -13514,11 +13514,11 @@ function(e, t) {
             return zn(e, t, "monthsShort")
         }
 
-        function $n(e, t, n) {
+        function Bn(e, t, n) {
             return Hn(e, t, n, "weekdays")
         }
 
-        function Bn(e, t, n) {
+        function $n(e, t, n) {
             return Hn(e, t, n, "weekdaysShort")
         }
 
@@ -13528,7 +13528,7 @@ function(e, t) {
 
         function Yn() {
             var e = this._data;
-            return this._milliseconds = Br(this._milliseconds), this._days = Br(this._days), this._months = Br(this._months), e.milliseconds = Br(e.milliseconds), e.seconds = Br(e.seconds), e.minutes = Br(e.minutes), e.hours = Br(e.hours), e.months = Br(e.months), e.years = Br(e.years), this
+            return this._milliseconds = $r(this._milliseconds), this._days = $r(this._days), this._months = $r(this._months), e.milliseconds = $r(e.milliseconds), e.seconds = $r(e.seconds), e.minutes = $r(e.minutes), e.hours = $r(e.hours), e.months = $r(e.months), e.years = $r(e.years), this
         }
 
         function Vn(e, t, n, i) {
@@ -13686,7 +13686,7 @@ function(e, t) {
                 LLLL: "dddd, MMMM D, YYYY h:mm A"
             },
             wi = /\d{1,2}/,
-            xi = {
+            ki = {
                 future: "in %s",
                 past: "%s ago",
                 s: "a few seconds",
@@ -13701,7 +13701,7 @@ function(e, t) {
                 y: "a year",
                 yy: "%d years"
             },
-            ki = {},
+            xi = {},
             Si = {},
             Ti = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g,
             Ci = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g,
@@ -13721,8 +13721,8 @@ function(e, t) {
             Hi = /\d+/,
             Wi = /[+-]?\d+/,
             Ui = /Z|[+-]\d\d:?\d\d/gi,
-            $i = /Z|[+-]\d\d(?::?\d\d)?/gi,
-            Bi = /[+-]?\d+(\.\d{1,3})?/,
+            Bi = /Z|[+-]\d\d(?::?\d\d)?/gi,
+            $i = /[+-]?\d+(\.\d{1,3})?/,
             qi = /[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF\/]+(\s*?[\u0600-\u06FF]+){1,2}/i,
             Yi = {},
             Vi = {},
@@ -13740,11 +13740,11 @@ function(e, t) {
             for (t = 0; t < this.length; ++t)
                 if (this[t] === e) return t;
             return -1
-        }, B("M", ["MM", 2], "Mo", function() {
+        }, $("M", ["MM", 2], "Mo", function() {
             return this.month() + 1
-        }), B("MMM", 0, 0, function(e) {
+        }), $("MMM", 0, 0, function(e) {
             return this.localeData().monthsShort(this, e)
-        }), B("MMMM", 0, 0, function(e) {
+        }), $("MMMM", 0, 0, function(e) {
             return this.localeData().months(this, e)
         }), j("month", "M"), R("month", 8), G("M", Ii), G("MM", Ii, Ai), G("MMM", function(e, t) {
             return t.monthsShortRegex(e)
@@ -13761,12 +13761,12 @@ function(e, t) {
             or = "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_"),
             sr = qi,
             ar = qi;
-        B("Y", 0, 0, function() {
+        $("Y", 0, 0, function() {
             var e = this.year();
             return e <= 9999 ? "" + e : "+" + e
-        }), B(0, ["YY", 2], 0, function() {
+        }), $(0, ["YY", 2], 0, function() {
             return this.year() % 100
-        }), B(0, ["YYYY", 4], 0, "year"), B(0, ["YYYYY", 5], 0, "year"), B(0, ["YYYYYY", 6, !0], 0, "year"), j("year", "y"), R("year", 1), G("Y", Wi), G("YY", Ii, Ai), G("YYYY", Fi, Pi), G("YYYYY", zi, ji), G("YYYYYY", zi, ji), Z(["YYYYY", "YYYYYY"], Qi), Z("YYYY", function(t, n) {
+        }), $(0, ["YYYY", 4], 0, "year"), $(0, ["YYYYY", 5], 0, "year"), $(0, ["YYYYYY", 6, !0], 0, "year"), j("year", "y"), R("year", 1), G("Y", Wi), G("YY", Ii, Ai), G("YYYY", Fi, Pi), G("YYYYY", zi, ji), G("YYYYYY", zi, ji), Z(["YYYYY", "YYYYYY"], Qi), Z("YYYY", function(t, n) {
             n[Qi] = 2 === t.length ? e.parseTwoDigitYear(t) : v(t)
         }), Z("YY", function(t, n) {
             n[Qi] = e.parseTwoDigitYear(t)
@@ -13776,20 +13776,20 @@ function(e, t) {
             return v(e) + (v(e) > 68 ? 1900 : 2e3)
         };
         var ur = F("FullYear", !0);
-        B("w", ["ww", 2], "wo", "week"), B("W", ["WW", 2], "Wo", "isoWeek"), j("week", "w"), j("isoWeek", "W"), R("week", 5), R("isoWeek", 5), G("w", Ii), G("ww", Ii, Ai), G("W", Ii), G("WW", Ii, Ai), ee(["w", "ww", "W", "WW"], function(e, t, n, i) {
+        $("w", ["ww", 2], "wo", "week"), $("W", ["WW", 2], "Wo", "isoWeek"), j("week", "w"), j("isoWeek", "W"), R("week", 5), R("isoWeek", 5), G("w", Ii), G("ww", Ii, Ai), G("W", Ii), G("WW", Ii, Ai), ee(["w", "ww", "W", "WW"], function(e, t, n, i) {
             t[i.substr(0, 1)] = v(e)
         });
         var cr = {
             dow: 0,
             doy: 6
         };
-        B("d", 0, "do", "day"), B("dd", 0, 0, function(e) {
+        $("d", 0, "do", "day"), $("dd", 0, 0, function(e) {
             return this.localeData().weekdaysMin(this, e)
-        }), B("ddd", 0, 0, function(e) {
+        }), $("ddd", 0, 0, function(e) {
             return this.localeData().weekdaysShort(this, e)
-        }), B("dddd", 0, 0, function(e) {
+        }), $("dddd", 0, 0, function(e) {
             return this.localeData().weekdays(this, e)
-        }), B("e", 0, 0, "weekday"), B("E", 0, 0, "isoWeekday"), j("day", "d"), j("weekday", "e"), j("isoWeekday", "E"), R("day", 11), R("weekday", 11), R("isoWeekday", 11), G("d", Ii), G("e", Ii), G("E", Ii), G("dd", function(e, t) {
+        }), $("e", 0, 0, "weekday"), $("E", 0, 0, "isoWeekday"), j("day", "d"), j("weekday", "e"), j("isoWeekday", "E"), R("day", 11), R("weekday", 11), R("isoWeekday", 11), G("d", Ii), G("e", Ii), G("E", Ii), G("dd", function(e, t) {
             return t.weekdaysMinRegex(e)
         }), G("ddd", function(e, t) {
             return t.weekdaysShortRegex(e)
@@ -13807,15 +13807,15 @@ function(e, t) {
             fr = qi,
             pr = qi,
             gr = qi;
-        B("H", ["HH", 2], 0, "hour"), B("h", ["hh", 2], 0, We), B("k", ["kk", 2], 0, Ue), B("hmm", 0, 0, function() {
-            return "" + We.apply(this) + $(this.minutes(), 2)
-        }), B("hmmss", 0, 0, function() {
-            return "" + We.apply(this) + $(this.minutes(), 2) + $(this.seconds(), 2)
-        }), B("Hmm", 0, 0, function() {
-            return "" + this.hours() + $(this.minutes(), 2)
-        }), B("Hmmss", 0, 0, function() {
-            return "" + this.hours() + $(this.minutes(), 2) + $(this.seconds(), 2)
-        }), $e("a", !0), $e("A", !1), j("hour", "h"), R("hour", 13), G("a", Be), G("A", Be), G("H", Ii), G("h", Ii), G("HH", Ii, Ai), G("hh", Ii, Ai), G("hmm", Ni), G("hmmss", Ri), G("Hmm", Ni), G("Hmmss", Ri), Z(["H", "HH"], Ki), Z(["a", "A"], function(e, t, n) {
+        $("H", ["HH", 2], 0, "hour"), $("h", ["hh", 2], 0, We), $("k", ["kk", 2], 0, Ue), $("hmm", 0, 0, function() {
+            return "" + We.apply(this) + B(this.minutes(), 2)
+        }), $("hmmss", 0, 0, function() {
+            return "" + We.apply(this) + B(this.minutes(), 2) + B(this.seconds(), 2)
+        }), $("Hmm", 0, 0, function() {
+            return "" + this.hours() + B(this.minutes(), 2)
+        }), $("Hmmss", 0, 0, function() {
+            return "" + this.hours() + B(this.minutes(), 2) + B(this.seconds(), 2)
+        }), Be("a", !0), Be("A", !1), j("hour", "h"), R("hour", 13), G("a", $e), G("A", $e), G("H", Ii), G("h", Ii), G("HH", Ii, Ai), G("hh", Ii, Ai), G("hmm", Ni), G("hmmss", Ri), G("Hmm", Ni), G("Hmmss", Ri), Z(["H", "HH"], Ki), Z(["a", "A"], function(e, t, n) {
             n._isPm = n._locale.isPM(e), n._meridiem = e
         }), Z(["h", "hh"], function(e, t, n) {
             t[Ki] = v(e), l(n).bigHour = !0
@@ -13842,7 +13842,7 @@ function(e, t) {
                 invalidDate: "Invalid date",
                 ordinal: "%d",
                 ordinalParse: wi,
-                relativeTime: xi,
+                relativeTime: ki,
                 months: rr,
                 monthsShort: or,
                 week: cr,
@@ -13853,8 +13853,8 @@ function(e, t) {
             },
             br = {},
             wr = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?/,
-            xr = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?/,
-            kr = /Z|[+-]\d\d(?::?\d\d)?/,
+            kr = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?/,
+            xr = /Z|[+-]\d\d(?::?\d\d)?/,
             Sr = [
                 ["YYYYYY-MM-DD", /[+-]\d{6}-\d\d-\d\d/],
                 ["YYYY-MM-DD", /\d{4}-\d\d-\d\d/],
@@ -13894,8 +13894,8 @@ function(e, t) {
             Er = function() {
                 return Date.now ? Date.now() : +new Date
             };
-        xt("Z", ":"), xt("ZZ", ""), G("Z", $i), G("ZZ", $i), Z(["Z", "ZZ"], function(e, t, n) {
-            n._useUTC = !0, n._tzm = kt($i, e)
+        kt("Z", ":"), kt("ZZ", ""), G("Z", Bi), G("ZZ", Bi), Z(["Z", "ZZ"], function(e, t, n) {
+            n._useUTC = !0, n._tzm = xt(Bi, e)
         });
         var Ar = /([\+\-]|\d\d)/gi;
         e.updateOffset = function() {};
@@ -13908,62 +13908,62 @@ function(e, t) {
         var Nr = w("moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.", function(e) {
             return void 0 === e ? this.localeData() : this.locale(e)
         });
-        B(0, ["gg", 2], 0, function() {
+        $(0, ["gg", 2], 0, function() {
             return this.weekYear() % 100
-        }), B(0, ["GG", 2], 0, function() {
+        }), $(0, ["GG", 2], 0, function() {
             return this.isoWeekYear() % 100
-        }), kn("gggg", "weekYear"), kn("ggggg", "weekYear"), kn("GGGG", "isoWeekYear"), kn("GGGGG", "isoWeekYear"), j("weekYear", "gg"), j("isoWeekYear", "GG"), R("weekYear", 1), R("isoWeekYear", 1), G("G", Wi), G("g", Wi), G("GG", Ii, Ai), G("gg", Ii, Ai), G("GGGG", Fi, Pi), G("gggg", Fi, Pi), G("GGGGG", zi, ji), G("ggggg", zi, ji), ee(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, i) {
+        }), xn("gggg", "weekYear"), xn("ggggg", "weekYear"), xn("GGGG", "isoWeekYear"), xn("GGGGG", "isoWeekYear"), j("weekYear", "gg"), j("isoWeekYear", "GG"), R("weekYear", 1), R("isoWeekYear", 1), G("G", Wi), G("g", Wi), G("GG", Ii, Ai), G("gg", Ii, Ai), G("GGGG", Fi, Pi), G("gggg", Fi, Pi), G("GGGGG", zi, ji), G("ggggg", zi, ji), ee(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, i) {
             t[i.substr(0, 2)] = v(e)
         }), ee(["gg", "GG"], function(t, n, i, r) {
             n[r] = e.parseTwoDigitYear(t)
-        }), B("Q", 0, "Qo", "quarter"), j("quarter", "Q"), R("quarter", 7), G("Q", Ei), Z("Q", function(e, t) {
+        }), $("Q", 0, "Qo", "quarter"), j("quarter", "Q"), R("quarter", 7), G("Q", Ei), Z("Q", function(e, t) {
             t[Gi] = 3 * (v(e) - 1)
-        }), B("D", ["DD", 2], "Do", "date"), j("date", "D"), R("date", 9), G("D", Ii), G("DD", Ii, Ai), G("Do", function(e, t) {
+        }), $("D", ["DD", 2], "Do", "date"), j("date", "D"), R("date", 9), G("D", Ii), G("DD", Ii, Ai), G("Do", function(e, t) {
             return e ? t._ordinalParse : t._ordinalParseLenient
         }), Z(["D", "DD"], Xi), Z("Do", function(e, t) {
             t[Xi] = v(e.match(Ii)[0], 10)
         });
         var Rr = F("Date", !0);
-        B("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), j("dayOfYear", "DDD"), R("dayOfYear", 4), G("DDD", Li), G("DDDD", Oi), Z(["DDD", "DDDD"], function(e, t, n) {
+        $("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), j("dayOfYear", "DDD"), R("dayOfYear", 4), G("DDD", Li), G("DDDD", Oi), Z(["DDD", "DDDD"], function(e, t, n) {
             n._dayOfYear = v(e)
-        }), B("m", ["mm", 2], 0, "minute"), j("minute", "m"), R("minute", 14), G("m", Ii), G("mm", Ii, Ai), Z(["m", "mm"], Ji);
+        }), $("m", ["mm", 2], 0, "minute"), j("minute", "m"), R("minute", 14), G("m", Ii), G("mm", Ii, Ai), Z(["m", "mm"], Ji);
         var Lr = F("Minutes", !1);
-        B("s", ["ss", 2], 0, "second"), j("second", "s"), R("second", 15), G("s", Ii), G("ss", Ii, Ai), Z(["s", "ss"], Zi);
+        $("s", ["ss", 2], 0, "second"), j("second", "s"), R("second", 15), G("s", Ii), G("ss", Ii, Ai), Z(["s", "ss"], Zi);
         var Fr = F("Seconds", !1);
-        B("S", 0, 0, function() {
+        $("S", 0, 0, function() {
             return ~~(this.millisecond() / 100)
-        }), B(0, ["SS", 2], 0, function() {
+        }), $(0, ["SS", 2], 0, function() {
             return ~~(this.millisecond() / 10)
-        }), B(0, ["SSS", 3], 0, "millisecond"), B(0, ["SSSS", 4], 0, function() {
+        }), $(0, ["SSS", 3], 0, "millisecond"), $(0, ["SSSS", 4], 0, function() {
             return 10 * this.millisecond()
-        }), B(0, ["SSSSS", 5], 0, function() {
+        }), $(0, ["SSSSS", 5], 0, function() {
             return 100 * this.millisecond()
-        }), B(0, ["SSSSSS", 6], 0, function() {
+        }), $(0, ["SSSSSS", 6], 0, function() {
             return 1e3 * this.millisecond()
-        }), B(0, ["SSSSSSS", 7], 0, function() {
+        }), $(0, ["SSSSSSS", 7], 0, function() {
             return 1e4 * this.millisecond()
-        }), B(0, ["SSSSSSSS", 8], 0, function() {
+        }), $(0, ["SSSSSSSS", 8], 0, function() {
             return 1e5 * this.millisecond()
-        }), B(0, ["SSSSSSSSS", 9], 0, function() {
+        }), $(0, ["SSSSSSSSS", 9], 0, function() {
             return 1e6 * this.millisecond()
         }), j("millisecond", "ms"), R("millisecond", 16), G("S", Li, Ei), G("SS", Li, Ai), G("SSS", Li, Oi);
         var zr;
         for (zr = "SSSS"; zr.length <= 9; zr += "S") G(zr, Hi);
         for (zr = "S"; zr.length <= 9; zr += "S") Z(zr, Pn);
         var Hr = F("Milliseconds", !1);
-        B("z", 0, 0, "zoneAbbr"), B("zz", 0, 0, "zoneName");
+        $("z", 0, 0, "zoneAbbr"), $("zz", 0, 0, "zoneName");
         var Wr = g.prototype;
-        Wr.add = jr, Wr.calendar = qt, Wr.clone = Yt, Wr.diff = Zt, Wr.endOf = dn, Wr.format = rn, Wr.from = on, Wr.fromNow = sn, Wr.to = an, Wr.toNow = un, Wr.get = W, Wr.invalidAt = wn, Wr.isAfter = Vt, Wr.isBefore = Qt, Wr.isBetween = Gt, Wr.isSame = Xt, Wr.isSameOrAfter = Kt, Wr.isSameOrBefore = Jt, Wr.isValid = _n, Wr.lang = Nr, Wr.locale = cn, Wr.localeData = ln, Wr.max = Mr, Wr.min = Dr, Wr.parsingFlags = bn, Wr.set = U, Wr.startOf = hn, Wr.subtract = Ir, Wr.toArray = mn, Wr.toObject = yn, Wr.toDate = gn, Wr.toISOString = nn, Wr.toJSON = vn, Wr.toString = tn, Wr.unix = pn, Wr.valueOf = fn, Wr.creationData = xn, Wr.year = ur, Wr.isLeapYear = ge, Wr.weekYear = Sn, Wr.isoWeekYear = Tn, Wr.quarter = Wr.quarters = An, Wr.month = ue, Wr.daysInMonth = ce, Wr.week = Wr.weeks = Te, Wr.isoWeek = Wr.isoWeeks = Ce, Wr.weeksInYear = Dn, Wr.isoWeeksInYear = Cn, Wr.date = Rr, Wr.day = Wr.days = Ie, Wr.weekday = Ne, Wr.isoWeekday = Re, Wr.dayOfYear = On, Wr.hour = Wr.hours = vr, Wr.minute = Wr.minutes = Lr, Wr.second = Wr.seconds = Fr, Wr.millisecond = Wr.milliseconds = Hr, Wr.utcOffset = Ct, Wr.utc = Mt, Wr.local = Et, Wr.parseZone = At, Wr.hasAlignedHourOffset = Ot, Wr.isDST = Pt, Wr.isLocal = It, Wr.isUtcOffset = Nt, Wr.isUtc = Rt, Wr.isUTC = Rt, Wr.zoneAbbr = jn, Wr.zoneName = In, Wr.dates = w("dates accessor is deprecated. Use date instead.", Rr), Wr.months = w("months accessor is deprecated. Use month instead", ue), Wr.years = w("years accessor is deprecated. Use year instead", ur), Wr.zone = w("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", Dt), Wr.isDSTShifted = w("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", jt);
+        Wr.add = jr, Wr.calendar = qt, Wr.clone = Yt, Wr.diff = Zt, Wr.endOf = dn, Wr.format = rn, Wr.from = on, Wr.fromNow = sn, Wr.to = an, Wr.toNow = un, Wr.get = W, Wr.invalidAt = wn, Wr.isAfter = Vt, Wr.isBefore = Qt, Wr.isBetween = Gt, Wr.isSame = Xt, Wr.isSameOrAfter = Kt, Wr.isSameOrBefore = Jt, Wr.isValid = _n, Wr.lang = Nr, Wr.locale = cn, Wr.localeData = ln, Wr.max = Mr, Wr.min = Dr, Wr.parsingFlags = bn, Wr.set = U, Wr.startOf = hn, Wr.subtract = Ir, Wr.toArray = mn, Wr.toObject = yn, Wr.toDate = gn, Wr.toISOString = nn, Wr.toJSON = vn, Wr.toString = tn, Wr.unix = pn, Wr.valueOf = fn, Wr.creationData = kn, Wr.year = ur, Wr.isLeapYear = ge, Wr.weekYear = Sn, Wr.isoWeekYear = Tn, Wr.quarter = Wr.quarters = An, Wr.month = ue, Wr.daysInMonth = ce, Wr.week = Wr.weeks = Te, Wr.isoWeek = Wr.isoWeeks = Ce, Wr.weeksInYear = Dn, Wr.isoWeeksInYear = Cn, Wr.date = Rr, Wr.day = Wr.days = Ie, Wr.weekday = Ne, Wr.isoWeekday = Re, Wr.dayOfYear = On, Wr.hour = Wr.hours = vr, Wr.minute = Wr.minutes = Lr, Wr.second = Wr.seconds = Fr, Wr.millisecond = Wr.milliseconds = Hr, Wr.utcOffset = Ct, Wr.utc = Mt, Wr.local = Et, Wr.parseZone = At, Wr.hasAlignedHourOffset = Ot, Wr.isDST = Pt, Wr.isLocal = It, Wr.isUtcOffset = Nt, Wr.isUtc = Rt, Wr.isUTC = Rt, Wr.zoneAbbr = jn, Wr.zoneName = In, Wr.dates = w("dates accessor is deprecated. Use date instead.", Rr), Wr.months = w("months accessor is deprecated. Use month instead", ue), Wr.years = w("years accessor is deprecated. Use year instead", ur), Wr.zone = w("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", Dt), Wr.isDSTShifted = w("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", jt);
         var Ur = Wr,
-            $r = C.prototype;
-        $r.calendar = D, $r.longDateFormat = M, $r.invalidDate = E, $r.ordinal = A, $r.preparse = Ln, $r.postformat = Ln, $r.relativeTime = O, $r.pastFuture = P, $r.set = S, $r.months = ie, $r.monthsShort = re, $r.monthsParse = se, $r.monthsRegex = he, $r.monthsShortRegex = le, $r.week = xe, $r.firstDayOfYear = Se, $r.firstDayOfWeek = ke, $r.weekdays = Ee, $r.weekdaysMin = Oe, $r.weekdaysShort = Ae, $r.weekdaysParse = je, $r.weekdaysRegex = Le, $r.weekdaysShortRegex = Fe, $r.weekdaysMinRegex = ze, $r.isPM = qe, $r.meridiem = Ye, Xe("en", {
+            Br = C.prototype;
+        Br.calendar = D, Br.longDateFormat = M, Br.invalidDate = E, Br.ordinal = A, Br.preparse = Ln, Br.postformat = Ln, Br.relativeTime = O, Br.pastFuture = P, Br.set = S, Br.months = ie, Br.monthsShort = re, Br.monthsParse = se, Br.monthsRegex = he, Br.monthsShortRegex = le, Br.week = ke, Br.firstDayOfYear = Se, Br.firstDayOfWeek = xe, Br.weekdays = Ee, Br.weekdaysMin = Oe, Br.weekdaysShort = Ae, Br.weekdaysParse = je, Br.weekdaysRegex = Le, Br.weekdaysShortRegex = Fe, Br.weekdaysMinRegex = ze, Br.isPM = qe, Br.meridiem = Ye, Xe("en", {
             ordinalParse: /\d{1,2}(th|st|nd|rd)/,
             ordinal: function(e) {
                 var t = e % 10;
                 return e + (1 === v(e % 100 / 10) ? "th" : 1 === t ? "st" : 2 === t ? "nd" : 3 === t ? "rd" : "th")
             }
         }), e.lang = w("moment.lang is deprecated. Use moment.locale instead.", Xe), e.langData = w("moment.langData is deprecated. Use moment.localeData instead.", Ze);
-        var Br = Math.abs,
+        var $r = Math.abs,
             qr = ni("ms"),
             Yr = ni("s"),
             Vr = ni("m"),
@@ -13989,14 +13989,14 @@ function(e, t) {
             },
             uo = Math.abs,
             co = bt.prototype;
-        return co.abs = Yn, co.add = Qn, co.subtract = Gn, co.as = ei, co.asMilliseconds = qr, co.asSeconds = Yr, co.asMinutes = Vr, co.asHours = Qr, co.asDays = Gr, co.asWeeks = Xr, co.asMonths = Kr, co.asYears = Jr, co.valueOf = ti, co._bubble = Kn, co.get = ii, co.milliseconds = Zr, co.seconds = eo, co.minutes = to, co.hours = no, co.days = io, co.weeks = oi, co.months = ro, co.years = oo, co.humanize = li, co.toISOString = hi, co.toString = hi, co.toJSON = hi, co.locale = cn, co.localeData = ln, co.toIsoString = w("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", hi), co.lang = Nr, B("X", 0, 0, "unix"), B("x", 0, 0, "valueOf"), G("x", Wi), G("X", Bi), Z("X", function(e, t, n) {
+        return co.abs = Yn, co.add = Qn, co.subtract = Gn, co.as = ei, co.asMilliseconds = qr, co.asSeconds = Yr, co.asMinutes = Vr, co.asHours = Qr, co.asDays = Gr, co.asWeeks = Xr, co.asMonths = Kr, co.asYears = Jr, co.valueOf = ti, co._bubble = Kn, co.get = ii, co.milliseconds = Zr, co.seconds = eo, co.minutes = to, co.hours = no, co.days = io, co.weeks = oi, co.months = ro, co.years = oo, co.humanize = li, co.toISOString = hi, co.toString = hi, co.toJSON = hi, co.locale = cn, co.localeData = ln, co.toIsoString = w("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", hi), co.lang = Nr, $("X", 0, 0, "unix"), $("x", 0, 0, "valueOf"), G("x", Wi), G("X", $i), Z("X", function(e, t, n) {
                 n._d = new Date(1e3 * parseFloat(e, 10))
             }), Z("x", function(e, t, n) {
                 n._d = new Date(v(e))
             }), e.version = "2.14.1",
             function(e) {
                 di = e
-            }(mt), e.fn = Ur, e.min = vt, e.max = _t, e.now = Er, e.utc = u, e.unix = Nn, e.months = Wn, e.isDate = r, e.locale = Xe, e.invalid = d, e.duration = Lt, e.isMoment = m, e.weekdays = $n, e.parseZone = Rn, e.localeData = Ze, e.isDuration = wt, e.monthsShort = Un, e.weekdaysMin = qn, e.defineLocale = Ke, e.updateLocale = Je, e.locales = et, e.weekdaysShort = Bn, e.normalizeUnits = I, e.relativeTimeRounding = ui, e.relativeTimeThreshold = ci, e.calendarFormat = Bt, e.prototype = Ur, e
+            }(mt), e.fn = Ur, e.min = vt, e.max = _t, e.now = Er, e.utc = u, e.unix = Nn, e.months = Wn, e.isDate = r, e.locale = Xe, e.invalid = d, e.duration = Lt, e.isMoment = m, e.weekdays = Bn, e.parseZone = Rn, e.localeData = Ze, e.isDuration = wt, e.monthsShort = Un, e.weekdaysMin = qn, e.defineLocale = Ke, e.updateLocale = Je, e.locales = et, e.weekdaysShort = $n, e.normalizeUnits = I, e.relativeTimeRounding = ui, e.relativeTimeThreshold = ci, e.calendarFormat = $t, e.prototype = Ur, e
     }),
     function(e, t) {
         "function" == typeof define && define.amd ? define(["moment"], function(n) {
@@ -17315,14 +17315,14 @@ googletag.cmd = googletag.cmd || [],
             function r(t) {
                 t.preventDefault();
                 var n = t.pageY;
-                "horiz" === D && (n = t.pageX), x = n - w.offset()[A], e(document).on("mousemove", o), e(document).on("mouseup", s)
+                "horiz" === D && (n = t.pageX), k = n - w.offset()[A], e(document).on("mousemove", o), e(document).on("mouseup", s)
             }
 
             function o(e) {
                 e.preventDefault();
                 var t = e.pageY;
                 "horiz" === D && (t = e.pageX);
-                var n = t - b.offset()[A] - x,
+                var n = t - b.offset()[A] - k,
                     i = n / b[E](),
                     r = i * C[E]();
                 _[M](r)
@@ -17357,13 +17357,13 @@ googletag.cmd = googletag.cmd || [],
             }
 
             function l() {
-                w.addClass("visible"), "number" == typeof k && window.clearTimeout(k), k = window.setTimeout(function() {
+                w.addClass("visible"), "number" == typeof x && window.clearTimeout(x), x = window.setTimeout(function() {
                     h()
                 }, 1e3)
             }
 
             function h() {
-                w.removeClass("visible"), "number" == typeof k && window.clearTimeout(k)
+                w.removeClass("visible"), "number" == typeof x && window.clearTimeout(x)
             }
 
             function d() {
@@ -17405,7 +17405,7 @@ googletag.cmd = googletag.cmd || [],
             function v(e) {
                 void 0 !== i[e] && i[e].call(S)
             }
-            var _, b, w, x, k, S = t,
+            var _, b, w, k, x, S = t,
                 T = e(t),
                 C = T.find(".tse-content"),
                 D = "vert",
@@ -17491,10 +17491,10 @@ var recurly = function(e) {
 
     function a(e) {
         var t = e.style || {};
-        return delete e.style, R.FIELD_TYPES.forEach(function(n) {
+        return delete e.style, j.FIELD_TYPES.forEach(function(n) {
             e.fields && "string" == typeof e.fields[n] && (e.fields[n] = {
                 selector: e.fields[n]
-            }), t[n] && (e.fields = e.fields || {}, e.fields[n] = e.fields[n] || {}, e.fields[n].style = (0, _.default)({}, t[n], e.fields[n].style))
+            }), t[n] && (e.fields = e.fields || {}, e.fields[n] = e.fields[n] || {}, e.fields[n].style = (0, p.default)({}, t[n], e.fields[n].style))
         }), t.all && (e.fields = e.fields || {}, e.fields.all = {
             style: t.all
         }), e
@@ -17514,43 +17514,42 @@ var recurly = function(e) {
             }
         }(),
         c = n(2),
-        l = (i(c), n(3)),
-        h = i(l),
-        d = n(4),
-        f = i(d),
-        p = n(5),
-        g = i(p),
-        m = n(6),
-        y = i(m),
-        v = n(8),
-        _ = i(v),
-        b = n(9),
-        w = i(b),
-        x = n(13),
-        k = i(x),
-        S = n(14),
-        T = i(S),
-        C = n(15),
-        D = i(C),
-        M = n(17),
-        E = i(M),
-        A = n(18),
-        O = i(A),
-        P = n(29),
-        j = n(47),
-        I = n(50),
-        N = n(52),
-        R = n(53),
-        L = (n(51), n(30)),
+        l = i(c),
+        h = n(3),
+        d = i(h),
+        f = n(4),
+        p = i(f),
+        g = n(6),
+        m = i(g),
+        y = n(10),
+        v = i(y),
+        _ = n(11),
+        b = i(_),
+        w = n(12),
+        k = i(w),
+        x = n(14),
+        S = i(x),
+        T = n(15),
+        C = i(T),
+        D = n(25),
+        M = n(27),
+        E = n(45),
+        A = n(47),
+        O = n(53),
+        P = n(55),
+        j = n(56),
+        I = (n(54), n(26)),
+        N = n(28),
+        R = i(N),
+        L = n(59),
         F = i(L),
-        z = n(56),
-        H = i(z),
-        W = n(10)("recurly"),
-        U = {
+        z = n(7)("recurly"),
+        H = {
             currency: "USD",
             timeout: 6e4,
             publicKey: "",
             parent: !0,
+            parentVersion: S.default,
             cors: !0,
             fraud: {
                 kount: {
@@ -17583,13 +17582,13 @@ var recurly = function(e) {
                 }
             }
         },
-        $ = t.Recurly = function(e) {
+        W = t.Recurly = function(e) {
             function t(e) {
                 r(this, t);
                 var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return n.id = 0, n.version = E.default, n.configured = !1, n.readyState = 0, n.config = (0, _.default)({}, U), e && n.configure(e), n.bankAccount = {
-                    token: (0, h.default)(n, O.default.token),
-                    bankInfo: (0, h.default)(n, O.default.bankInfo)
+                return n.id = (0, I.uuid)(), n.version = S.default, n.configured = !1, n.readyState = 0, n.config = (0, p.default)({}, H), e && n.configure(e), n.bankAccount = {
+                    token: C.default.token.bind(n),
+                    bankInfo: C.default.bankInfo.bind(n)
                 }, n
             }
             return s(t, e), u(t, [{
@@ -17600,27 +17599,23 @@ var recurly = function(e) {
             }, {
                 key: "configure",
                 value: function(e) {
-                    if (W("configure"), e = (0, g.default)(e), "string" === (0, f.default)(e) && (e = {
+                    if (z("configure"), e = (0, d.default)(e), "string" === (0, l.default)(e) && (e = {
                             publicKey: e
                         }), e = a(e), e.publicKey) this.config.publicKey = e.publicKey;
-                    else if (!this.config.publicKey) throw (0, D.default)("config-missing-public-key");
-                    e.api && (this.config.api = e.api), e.currency && (this.config.currency = e.currency), "cors" in e && (this.config.cors = e.cors), "fraud" in e && (0, _.default)(this.config.fraud, e.fraud), "parent" in e && (this.config.parent = e.parent), "object" === (0, f.default)(e.fields) && (0, _.default)(this.config.fields, e.fields), this.config.required = e.required || this.config.required || [], this.config.parent && this.parent(), this.configured = !0
+                    else if (!this.config.publicKey) throw (0, k.default)("config-missing-public-key");
+                    e.api && (this.config.api = e.api), e.currency && (this.config.currency = e.currency), "cors" in e && (this.config.cors = e.cors), "fraud" in e && (0, p.default)(this.config.fraud, e.fraud), "parent" in e && (this.config.parent = e.parent), "object" === (0, l.default)(e.fields) && (0, p.default)(this.config.fields, e.fields), this.config.required = e.required || this.config.required || [], this.config.parent ? this.parent() : e.parentVersion && (this.config.parentVersion = e.parentVersion), this.configured = !0
                 }
             }, {
                 key: "parent",
                 value: function() {
                     var e = this,
                         t = !1;
-                    if (this.hostedFields) {
-                        this.readyState > 1 && !this.hostedFields.integrityCheck() && (t = !0);
-                        (0, y.default)(this.config.fields, function(e) {
-                            return e.selector
-                        }).join("") !== (0, y.default)(this.hostedFields.config.fields, function(e) {
-                            return e.selector
-                        }).join("") && (t = !0)
-                    }
-                    if (t && (this.readyState = 0, this.hostedFields.reset()), this.readyState > 0) return void this.bus.send("hostedFields:configure", this.config);
-                    this.fraud || (this.fraud = new N.Fraud(this)), this.bus && this.bus.stop(), this.bus = new I.Bus, this.bus.add(this), this.hostedFields && !t || (this.hostedFields = new R.HostedFields(this.config)), 0 === this.hostedFields.errors.length ? (this.bus.add(this.hostedFields), this.once("hostedFields:ready", function(t) {
+                    if (this.hostedFields && this.readyState > 1 && !this.hostedFields.integrityCheck(this.config.fields) && (t = !0), t && (this.readyState = 0, this.hostedFields.reset()), this.readyState > 0) return void this.bus.send("hostedFields:configure");
+                    this.fraud || (this.fraud = new P.Fraud(this)), this.bus && this.bus.stop(), this.bus = new O.Bus({
+                        api: this.config.api
+                    }), this.bus.add(this), this.hostedFields && !t || (this.hostedFields = new j.HostedFields({
+                        recurly: this.config
+                    })), 0 === this.hostedFields.errors.length ? (this.bus.add(this.hostedFields), this.once("hostedFields:ready", function(t) {
                         e.readyState = 2, e.emit("ready")
                     }), this.on("hostedFields:state:change", function(t) {
                         return e.emit("change", {
@@ -17638,8 +17633,8 @@ var recurly = function(e) {
             }, {
                 key: "request",
                 value: function(e, t, n, i) {
-                    if (W("request", e, t, n), !this.configured) throw (0, D.default)("not-configured");
-                    return "function" == (0, f.default)(n) && (i = n, n = {}), n.version = this.version, n.key = this.config.publicKey, this.config.cors ? this.xhr(e, t, n, i) : this.jsonp(t, n, i)
+                    if (z("request", e, t, n), !this.configured) throw (0, k.default)("not-configured");
+                    return "function" == (0, l.default)(n) && (i = n, n = {}), this.config.parent ? n.version = this.version : n.version = this.config.parentVersion, n.key = this.config.publicKey, this.config.cors ? this.xhr(e, t, n, i) : this.jsonp(t, n, i)
                 }
             }, {
                 key: "xhr",
@@ -17647,7 +17642,7 @@ var recurly = function(e) {
                     function r() {
                         "post" === e ? (s.setRequestHeader && s.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), s.send(u)) : s.send()
                     }
-                    W("xhr");
+                    z("xhr");
                     var o = function() {
                             var e = window.XMLHttpRequest,
                                 t = window.XDomainRequest;
@@ -17655,449 +17650,44 @@ var recurly = function(e) {
                         }(),
                         s = new o,
                         a = this.url(t),
-                        u = k.default.stringify(n);
+                        u = v.default.stringify(n);
                     "get" === e && (a += "?" + u), s.open(e, a), s.timeout = this.config.timeout, s.ontimeout = function() {
-                        i((0, D.default)("api-timeout"))
+                        i((0, k.default)("api-timeout"))
                     }, s.onerror = function() {
-                        i((0, D.default)("api-error"))
+                        i((0, k.default)("api-error"))
                     }, s.onprogress = function() {}, s.onload = function() {
                         var e;
                         try {
                             e = JSON.parse(this.responseText)
                         } catch (e) {
-                            return W(this.responseText, e), i((0, D.default)("api-error", {
+                            return z(this.responseText, e), i((0, k.default)("api-error", {
                                 message: "There was a problem parsing the API response with: " + this.responseText
                             }))
                         }
-                        e && e.error ? i((0, D.default)("api-error", e.error)) : i(null, e)
+                        e && e.error ? i((0, k.default)("api-error", e.error)) : i(null, e)
                     }, setTimeout(r, 0)
                 }
             }, {
                 key: "jsonp",
                 value: function(e, t, n) {
-                    W("jsonp");
-                    var i = this.url(e) + "?" + k.default.stringify(t);
-                    (0, w.default)(i, {
+                    z("jsonp");
+                    var i = this.url(e) + "?" + v.default.stringify(t);
+                    (0, m.default)(i, {
                         timeout: this.config.timeout,
                         prefix: "__rjs"
                     }, function(e, t) {
                         if (e) return n(e);
-                        t.error ? n((0, D.default)("api-error", t.error)) : n(null, t)
+                        t.error ? n((0, k.default)("api-error", t.error)) : n(null, t)
                     })
                 }
             }, {
                 key: "Pricing",
                 value: function() {
-                    return new F.default(this)
+                    return new R.default(this)
                 }
             }]), t
-        }(T.default);
-    $.prototype.open = n(57), $.prototype.relay = n(58), $.prototype.coupon = n(59), $.prototype.giftcard = H.default, $.prototype.ApplePay = P.factory, $.prototype.PayPal = j.factory, $.prototype.paypal = j.deprecatedPaypal, $.prototype.plan = n(60), $.prototype.tax = n(61), $.prototype.token = n(62), $.prototype.validate = n(63)
-}, function(e, t) {
-    (function(t) {
-        function n(e, t, n) {
-            switch (n.length) {
-                case 0:
-                    return e.call(t);
-                case 1:
-                    return e.call(t, n[0]);
-                case 2:
-                    return e.call(t, n[0], n[1]);
-                case 3:
-                    return e.call(t, n[0], n[1], n[2])
-            }
-            return e.apply(t, n)
-        }
-
-        function i(e, t) {
-            for (var n = -1, i = e ? e.length : 0; ++n < i && !1 !== t(e[n], n, e););
-            return e
-        }
-
-        function r(e, t) {
-            return !!(e ? e.length : 0) && s(e, t, 0) > -1
-        }
-
-        function o(e, t, n, i) {
-            for (var r = e.length, o = n + (i ? 1 : -1); i ? o-- : ++o < r;)
-                if (t(e[o], o, e)) return o;
-            return -1
-        }
-
-        function s(e, t, n) {
-            if (t !== t) return o(e, a, n);
-            for (var i = n - 1, r = e.length; ++i < r;)
-                if (e[i] === t) return i;
-            return -1
-        }
-
-        function a(e) {
-            return e !== e
-        }
-
-        function u(e, t) {
-            for (var n = e.length, i = 0; n--;) e[n] === t && i++;
-            return i
-        }
-
-        function c(e, t) {
-            return null == e ? void 0 : e[t]
-        }
-
-        function l(e) {
-            var t = !1;
-            if (null != e && "function" != typeof e.toString) try {
-                t = !!(e + "")
-            } catch (e) {}
-            return t
-        }
-
-        function h(e, t) {
-            for (var n = -1, i = e.length, r = 0, o = []; ++n < i;) {
-                var s = e[n];
-                s !== t && s !== $ || (e[n] = $, o[r++] = n)
-            }
-            return o
-        }
-
-        function d(e) {
-            return I(e) ? Ee(e) : {}
-        }
-
-        function f(e) {
-            return !(!I(e) || E(e)) && (j(e) || l(e) ? Me : pe).test(O(e))
-        }
-
-        function p(e, t, n, i) {
-            for (var r = -1, o = e.length, s = n.length, a = -1, u = t.length, c = Ae(o - s, 0), l = Array(u + c), h = !i; ++a < u;) l[a] = t[a];
-            for (; ++r < s;)(h || r < o) && (l[n[r]] = e[r]);
-            for (; c--;) l[a++] = e[r++];
-            return l
-        }
-
-        function g(e, t, n, i) {
-            for (var r = -1, o = e.length, s = -1, a = n.length, u = -1, c = t.length, l = Ae(o - a, 0), h = Array(l + c), d = !i; ++r < l;) h[r] = e[r];
-            for (var f = r; ++u < c;) h[f + u] = t[u];
-            for (; ++s < a;)(d || r < o) && (h[f + n[s]] = e[r++]);
-            return h
-        }
-
-        function m(e, t) {
-            var n = -1,
-                i = e.length;
-            for (t || (t = Array(i)); ++n < i;) t[n] = e[n];
-            return t
-        }
-
-        function y(e, t, n) {
-            function i() {
-                return (this && this !== be && this instanceof i ? o : e).apply(r ? n : this, arguments)
-            }
-            var r = t & B,
-                o = v(e);
-            return i
-        }
-
-        function v(e) {
-            return function() {
-                var t = arguments;
-                switch (t.length) {
-                    case 0:
-                        return new e;
-                    case 1:
-                        return new e(t[0]);
-                    case 2:
-                        return new e(t[0], t[1]);
-                    case 3:
-                        return new e(t[0], t[1], t[2]);
-                    case 4:
-                        return new e(t[0], t[1], t[2], t[3]);
-                    case 5:
-                        return new e(t[0], t[1], t[2], t[3], t[4]);
-                    case 6:
-                        return new e(t[0], t[1], t[2], t[3], t[4], t[5]);
-                    case 7:
-                        return new e(t[0], t[1], t[2], t[3], t[4], t[5], t[6])
-                }
-                var n = d(e.prototype),
-                    i = e.apply(n, t);
-                return I(i) ? i : n
-            }
-        }
-
-        function _(e, t, i) {
-            function r() {
-                for (var s = arguments.length, a = Array(s), u = s, c = S(r); u--;) a[u] = arguments[u];
-                var l = s < 3 && a[0] !== c && a[s - 1] !== c ? [] : h(a, c);
-                return (s -= l.length) < i ? x(e, t, b, r.placeholder, void 0, a, l, void 0, void 0, i - s) : n(this && this !== be && this instanceof r ? o : e, this, a)
-            }
-            var o = v(e);
-            return r
-        }
-
-        function b(e, t, n, i, r, o, s, a, c, l) {
-            function d() {
-                for (var T = arguments.length, C = Array(T), D = T; D--;) C[D] = arguments[D];
-                if (_) var M = S(d),
-                    E = u(C, M);
-                if (i && (C = p(C, i, r, _)), o && (C = g(C, o, s, _)), T -= E, _ && T < l) {
-                    var O = h(C, M);
-                    return x(e, t, b, d.placeholder, n, C, O, a, c, l - T)
-                }
-                var P = m ? n : this,
-                    j = y ? P[e] : e;
-                return T = C.length, a ? C = A(C, a) : w && T > 1 && C.reverse(), f && c < T && (C.length = c), this && this !== be && this instanceof d && (j = k || v(j)), j.apply(P, C)
-            }
-            var f = t & K,
-                m = t & B,
-                y = t & q,
-                _ = t & (V | Q),
-                w = t & J,
-                k = y ? void 0 : v(e);
-            return d
-        }
-
-        function w(e, t, i, r) {
-            function o() {
-                for (var t = -1, u = arguments.length, c = -1, l = r.length, h = Array(l + u), d = this && this !== be && this instanceof o ? a : e; ++c < l;) h[c] = r[c];
-                for (; u--;) h[c++] = arguments[++t];
-                return n(d, s ? i : this, h)
-            }
-            var s = t & B,
-                a = v(e);
-            return o
-        }
-
-        function x(e, t, n, i, r, o, s, a, u, c) {
-            var l = t & V,
-                h = l ? s : void 0,
-                d = l ? void 0 : s,
-                f = l ? o : void 0,
-                p = l ? void 0 : o;
-            t |= l ? G : X, (t &= ~(l ? X : G)) & Y || (t &= ~(B | q));
-            var g = n(e, t, r, f, h, p, d, a, u, c);
-            return g.placeholder = i, je(g, e, t)
-        }
-
-        function k(e, t, n, i, r, o, s, a) {
-            var u = t & q;
-            if (!u && "function" != typeof e) throw new TypeError(U);
-            var c = i ? i.length : 0;
-            if (c || (t &= ~(G | X), i = r = void 0), s = void 0 === s ? s : Ae(F(s), 0), a = void 0 === a ? a : F(a), c -= r ? r.length : 0, t & X) {
-                var l = i,
-                    h = r;
-                i = r = void 0
-            }
-            var d = [e, t, n, i, r, l, h, o, s, a];
-            if (e = d[0], t = d[1], n = d[2], i = d[3], r = d[4], a = d[9] = null == d[9] ? u ? 0 : e.length : Ae(d[9] - c, 0), !a && t & (V | Q) && (t &= ~(V | Q)), t && t != B) f = t == V || t == Q ? _(e, t, a) : t != G && t != (B | G) || r.length ? b.apply(void 0, d) : w(e, t, n, i);
-            else var f = y(e, t, n);
-            return je(f, e, t)
-        }
-
-        function S(e) {
-            return e.placeholder
-        }
-
-        function T(e, t) {
-            var n = c(e, t);
-            return f(n) ? n : void 0
-        }
-
-        function C(e) {
-            var t = e.match(le);
-            return t ? t[1].split(he) : []
-        }
-
-        function D(e, t) {
-            var n = t.length,
-                i = n - 1;
-            return t[i] = (n > 1 ? "& " : "") + t[i], t = t.join(n > 2 ? ", " : " "), e.replace(ce, "{\n/* [wrapped with " + t + "] */\n")
-        }
-
-        function M(e, t) {
-            return !!(t = null == t ? ee : t) && ("number" == typeof e || me.test(e)) && e > -1 && e % 1 == 0 && e < t
-        }
-
-        function E(e) {
-            return !!Se && Se in e
-        }
-
-        function A(e, t) {
-            for (var n = e.length, i = Oe(t.length, n), r = m(e); i--;) {
-                var o = t[i];
-                e[i] = M(o, n) ? r[o] : void 0
-            }
-            return e
-        }
-
-        function O(e) {
-            if (null != e) {
-                try {
-                    return Te.call(e)
-                } catch (e) {}
-                try {
-                    return e + ""
-                } catch (e) {}
-            }
-            return ""
-        }
-
-        function P(e, t) {
-            return i(ie, function(n) {
-                var i = "_." + n[0];
-                t & n[1] && !r(e, i) && e.push(i)
-            }), e.sort()
-        }
-
-        function j(e) {
-            var t = I(e) ? De.call(e) : "";
-            return t == re || t == oe
-        }
-
-        function I(e) {
-            var t = typeof e;
-            return !!e && ("object" == t || "function" == t)
-        }
-
-        function N(e) {
-            return !!e && "object" == typeof e
-        }
-
-        function R(e) {
-            return "symbol" == typeof e || N(e) && De.call(e) == se
-        }
-
-        function L(e) {
-            if (!e) return 0 === e ? e : 0;
-            if ((e = z(e)) === Z || e === -Z) {
-                return (e < 0 ? -1 : 1) * te
-            }
-            return e === e ? e : 0
-        }
-
-        function F(e) {
-            var t = L(e),
-                n = t % 1;
-            return t === t ? n ? t - n : t : 0
-        }
-
-        function z(e) {
-            if ("number" == typeof e) return e;
-            if (R(e)) return ne;
-            if (I(e)) {
-                var t = "function" == typeof e.valueOf ? e.valueOf() : e;
-                e = I(t) ? t + "" : t
-            }
-            if ("string" != typeof e) return 0 === e ? e : +e;
-            e = e.replace(ue, "");
-            var n = fe.test(e);
-            return n || ge.test(e) ? ye(e.slice(2), n ? 2 : 8) : de.test(e) ? ne : +e
-        }
-
-        function H(e) {
-            return function() {
-                return e
-            }
-        }
-
-        function W(e) {
-            return e
-        }
-        var U = "Expected a function",
-            $ = "__lodash_placeholder__",
-            B = 1,
-            q = 2,
-            Y = 4,
-            V = 8,
-            Q = 16,
-            G = 32,
-            X = 64,
-            K = 128,
-            J = 512,
-            Z = 1 / 0,
-            ee = 9007199254740991,
-            te = 1.7976931348623157e308,
-            ne = NaN,
-            ie = [
-                ["ary", K],
-                ["bind", B],
-                ["bindKey", q],
-                ["curry", V],
-                ["curryRight", Q],
-                ["flip", J],
-                ["partial", G],
-                ["partialRight", X],
-                ["rearg", 256]
-            ],
-            re = "[object Function]",
-            oe = "[object GeneratorFunction]",
-            se = "[object Symbol]",
-            ae = /[\\^$.*+?()[\]{}|]/g,
-            ue = /^\s+|\s+$/g,
-            ce = /\{(?:\n\/\* \[wrapped with .+\] \*\/)?\n?/,
-            le = /\{\n\/\* \[wrapped with (.+)\] \*/,
-            he = /,? & /,
-            de = /^[-+]0x[0-9a-f]+$/i,
-            fe = /^0b[01]+$/i,
-            pe = /^\[object .+?Constructor\]$/,
-            ge = /^0o[0-7]+$/i,
-            me = /^(?:0|[1-9]\d*)$/,
-            ye = parseInt,
-            ve = "object" == typeof t && t && t.Object === Object && t,
-            _e = "object" == typeof self && self && self.Object === Object && self,
-            be = ve || _e || Function("return this")(),
-            we = Function.prototype,
-            xe = Object.prototype,
-            ke = be["__core-js_shared__"],
-            Se = function() {
-                var e = /[^.]+$/.exec(ke && ke.keys && ke.keys.IE_PROTO || "");
-                return e ? "Symbol(src)_1." + e : ""
-            }(),
-            Te = we.toString,
-            Ce = xe.hasOwnProperty,
-            De = xe.toString,
-            Me = RegExp("^" + Te.call(Ce).replace(ae, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
-            Ee = Object.create,
-            Ae = Math.max,
-            Oe = Math.min,
-            Pe = function() {
-                var e = T(Object, "defineProperty"),
-                    t = T.name;
-                return t && t.length > 2 ? e : void 0
-            }(),
-            je = Pe ? function(e, t, n) {
-                var i = t + "";
-                return Pe(e, "toString", {
-                    configurable: !0,
-                    enumerable: !1,
-                    value: H(D(i, P(C(i), n)))
-                })
-            } : W,
-            Ie = function(e, t) {
-                return t = Ae(void 0 === t ? e.length - 1 : t, 0),
-                    function() {
-                        for (var i = arguments, r = -1, o = Ae(i.length - t, 0), s = Array(o); ++r < o;) s[r] = i[t + r];
-                        r = -1;
-                        for (var a = Array(t + 1); ++r < t;) a[r] = i[r];
-                        return a[t] = s, n(e, this, a)
-                    }
-            }(function(e, t) {
-                var n = h(t, S(Ie));
-                return k(e, G, void 0, t, n)
-            });
-        Ie.placeholder = {}, e.exports = Ie
-    }).call(t, function() {
-        return this
-    }())
-}, function(e, t) {
-    var n = [].slice;
-    e.exports = function(e, t) {
-        if ("string" == typeof t && (t = e[t]), "function" != typeof t) throw new Error("bind() requires a function");
-        var i = n.call(arguments, 2);
-        return function() {
-            return t.apply(e, i.concat(n.call(arguments)))
-        }
-    }
+        }(b.default);
+    W.prototype.Frame = D.factory, W.prototype.coupon = n(60), W.prototype.giftcard = F.default, W.prototype.ApplePay = M.factory, W.prototype.PayPal = E.factory, W.prototype.paypal = A.deprecated, W.prototype.plan = n(61), W.prototype.tax = n(62), W.prototype.token = n(63), W.prototype.validate = n(64)
 }, function(e, t) {
     var n = Object.prototype.toString;
     e.exports = function(e) {
@@ -18138,752 +17728,11 @@ var recurly = function(e) {
     }
     var r;
     try {
-        r = n(4)
+        r = n(2)
     } catch (e) {
-        r = n(4)
+        r = n(2)
     }
     e.exports = i
-}, function(e, t, n) {
-    (function(e, n) {
-        function i(e, t) {
-            for (var n = -1, i = e ? e.length : 0, r = Array(i); ++n < i;) r[n] = t(e[n], n, e);
-            return r
-        }
-
-        function r(e, t) {
-            for (var n = -1, i = e ? e.length : 0; ++n < i;)
-                if (t(e[n], n, e)) return !0;
-            return !1
-        }
-
-        function o(e) {
-            return function(t) {
-                return null == t ? void 0 : t[e]
-            }
-        }
-
-        function s(e, t) {
-            for (var n = -1, i = Array(e); ++n < e;) i[n] = t(n);
-            return i
-        }
-
-        function a(e, t) {
-            return null == e ? void 0 : e[t]
-        }
-
-        function u(e) {
-            var t = !1;
-            if (null != e && "function" != typeof e.toString) try {
-                t = !!(e + "")
-            } catch (e) {}
-            return t
-        }
-
-        function c(e) {
-            var t = -1,
-                n = Array(e.size);
-            return e.forEach(function(e, i) {
-                n[++t] = [i, e]
-            }), n
-        }
-
-        function l(e) {
-            var t = -1,
-                n = Array(e.size);
-            return e.forEach(function(e) {
-                n[++t] = e
-            }), n
-        }
-
-        function h(e) {
-            var t = -1,
-                n = e ? e.length : 0;
-            for (this.clear(); ++t < n;) {
-                var i = e[t];
-                this.set(i[0], i[1])
-            }
-        }
-
-        function d() {
-            this.__data__ = Ut ? Ut(null) : {}
-        }
-
-        function f(e) {
-            return this.has(e) && delete this.__data__[e]
-        }
-
-        function p(e) {
-            var t = this.__data__;
-            if (Ut) {
-                var n = t[e];
-                return n === Fe ? void 0 : n
-            }
-            return Et.call(t, e) ? t[e] : void 0
-        }
-
-        function g(e) {
-            var t = this.__data__;
-            return Ut ? void 0 !== t[e] : Et.call(t, e)
-        }
-
-        function m(e, t) {
-            return this.__data__[e] = Ut && void 0 === t ? Fe : t, this
-        }
-
-        function y(e) {
-            var t = -1,
-                n = e ? e.length : 0;
-            for (this.clear(); ++t < n;) {
-                var i = e[t];
-                this.set(i[0], i[1])
-            }
-        }
-
-        function v() {
-            this.__data__ = []
-        }
-
-        function _(e) {
-            var t = this.__data__,
-                n = z(t, e);
-            return !(n < 0) && (n == t.length - 1 ? t.pop() : Nt.call(t, n, 1), !0)
-        }
-
-        function b(e) {
-            var t = this.__data__,
-                n = z(t, e);
-            return n < 0 ? void 0 : t[n][1]
-        }
-
-        function w(e) {
-            return z(this.__data__, e) > -1
-        }
-
-        function x(e, t) {
-            var n = this.__data__,
-                i = z(n, e);
-            return i < 0 ? n.push([e, t]) : n[i][1] = t, this
-        }
-
-        function k(e) {
-            var t = -1,
-                n = e ? e.length : 0;
-            for (this.clear(); ++t < n;) {
-                var i = e[t];
-                this.set(i[0], i[1])
-            }
-        }
-
-        function S() {
-            this.__data__ = {
-                hash: new h,
-                map: new(Ft || y),
-                string: new h
-            }
-        }
-
-        function T(e) {
-            return se(this, e).delete(e)
-        }
-
-        function C(e) {
-            return se(this, e).get(e)
-        }
-
-        function D(e) {
-            return se(this, e).has(e)
-        }
-
-        function M(e, t) {
-            return se(this, e).set(e, t), this
-        }
-
-        function E(e) {
-            var t = -1,
-                n = e ? e.length : 0;
-            for (this.__data__ = new k; ++t < n;) this.add(e[t])
-        }
-
-        function A(e) {
-            return this.__data__.set(e, Fe), this
-        }
-
-        function O(e) {
-            return this.__data__.has(e)
-        }
-
-        function P(e) {
-            this.__data__ = new y(e)
-        }
-
-        function j() {
-            this.__data__ = new y
-        }
-
-        function I(e) {
-            return this.__data__.delete(e)
-        }
-
-        function N(e) {
-            return this.__data__.get(e)
-        }
-
-        function R(e) {
-            return this.__data__.has(e)
-        }
-
-        function L(e, t) {
-            var n = this.__data__;
-            if (n instanceof y) {
-                var i = n.__data__;
-                if (!Ft || i.length < Re - 1) return i.push([e, t]), this;
-                n = this.__data__ = new k(i)
-            }
-            return n.set(e, t), this
-        }
-
-        function F(e, t) {
-            var n = tn(e) || xe(e) ? s(e.length, String) : [],
-                i = n.length,
-                r = !!i;
-            for (var o in e) !t && !Et.call(e, o) || r && ("length" == o || le(o, i)) || n.push(o);
-            return n
-        }
-
-        function z(e, t) {
-            for (var n = e.length; n--;)
-                if (we(e[n][0], t)) return n;
-            return -1
-        }
-
-        function H(e, t) {
-            return e && Jt(e, t, je)
-        }
-
-        function W(e, t) {
-            t = he(t, e) ? [t] : ne(t);
-            for (var n = 0, i = t.length; null != e && n < i;) e = e[ye(t[n++])];
-            return n && n == i ? e : void 0
-        }
-
-        function U(e) {
-            return At.call(e)
-        }
-
-        function $(e, t) {
-            return null != e && t in Object(e)
-        }
-
-        function B(e, t, n, i, r) {
-            return e === t || (null == e || null == t || !De(e) && !Me(t) ? e !== e && t !== t : q(e, t, B, n, i, r))
-        }
-
-        function q(e, t, n, i, r, o) {
-            var s = tn(e),
-                a = tn(t),
-                c = Be,
-                l = Be;
-            s || (c = Zt(e), c = c == $e ? Je : c), a || (l = Zt(t), l = l == $e ? Je : l);
-            var h = c == Je && !u(e),
-                d = l == Je && !u(t),
-                f = c == l;
-            if (f && !h) return o || (o = new P), s || nn(e) ? ie(e, t, n, i, r, o) : re(e, t, c, n, i, r, o);
-            if (!(r & He)) {
-                var p = h && Et.call(e, "__wrapped__"),
-                    g = d && Et.call(t, "__wrapped__");
-                if (p || g) {
-                    var m = p ? e.value() : e,
-                        y = g ? t.value() : t;
-                    return o || (o = new P), n(m, y, i, r, o)
-                }
-            }
-            return !!f && (o || (o = new P), oe(e, t, n, i, r, o))
-        }
-
-        function Y(e, t, n, i) {
-            var r = n.length,
-                o = r,
-                s = !i;
-            if (null == e) return !o;
-            for (e = Object(e); r--;) {
-                var a = n[r];
-                if (s && a[2] ? a[1] !== e[a[0]] : !(a[0] in e)) return !1
-            }
-            for (; ++r < o;) {
-                a = n[r];
-                var u = a[0],
-                    c = e[u],
-                    l = a[1];
-                if (s && a[2]) {
-                    if (void 0 === c && !(u in e)) return !1
-                } else {
-                    var h = new P;
-                    if (i) var d = i(c, l, u, e, t, h);
-                    if (!(void 0 === d ? B(l, c, i, ze | He, h) : d)) return !1
-                }
-            }
-            return !0
-        }
-
-        function V(e) {
-            return !(!De(e) || fe(e)) && (Te(e) || u(e) ? Ot : ht).test(ve(e))
-        }
-
-        function Q(e) {
-            return Me(e) && Ce(e.length) && !!ft[At.call(e)]
-        }
-
-        function G(e) {
-            return "function" == typeof e ? e : null == e ? Ie : "object" == typeof e ? tn(e) ? Z(e[0], e[1]) : J(e) : Ne(e)
-        }
-
-        function X(e) {
-            if (!pe(e)) return Rt(e);
-            var t = [];
-            for (var n in Object(e)) Et.call(e, n) && "constructor" != n && t.push(n);
-            return t
-        }
-
-        function K(e, t) {
-            var n = -1,
-                i = ke(e) ? Array(e.length) : [];
-            return Kt(e, function(e, r, o) {
-                i[++n] = t(e, r, o)
-            }), i
-        }
-
-        function J(e) {
-            var t = ae(e);
-            return 1 == t.length && t[0][2] ? me(t[0][0], t[0][1]) : function(n) {
-                return n === e || Y(n, e, t)
-            }
-        }
-
-        function Z(e, t) {
-            return he(e) && ge(t) ? me(ye(e), t) : function(n) {
-                var i = Oe(n, e);
-                return void 0 === i && i === t ? Pe(n, e) : B(t, i, void 0, ze | He)
-            }
-        }
-
-        function ee(e) {
-            return function(t) {
-                return W(t, e)
-            }
-        }
-
-        function te(e) {
-            if ("string" == typeof e) return e;
-            if (Ee(e)) return Xt ? Xt.call(e) : "";
-            var t = e + "";
-            return "0" == t && 1 / e == -We ? "-0" : t
-        }
-
-        function ne(e) {
-            return tn(e) ? e : en(e)
-        }
-
-        function ie(e, t, n, i, o, s) {
-            var a = o & He,
-                u = e.length,
-                c = t.length;
-            if (u != c && !(a && c > u)) return !1;
-            var l = s.get(e);
-            if (l && s.get(t)) return l == t;
-            var h = -1,
-                d = !0,
-                f = o & ze ? new E : void 0;
-            for (s.set(e, t), s.set(t, e); ++h < u;) {
-                var p = e[h],
-                    g = t[h];
-                if (i) var m = a ? i(g, p, h, t, e, s) : i(p, g, h, e, t, s);
-                if (void 0 !== m) {
-                    if (m) continue;
-                    d = !1;
-                    break
-                }
-                if (f) {
-                    if (!r(t, function(e, t) {
-                            if (!f.has(t) && (p === e || n(p, e, i, o, s))) return f.add(t)
-                        })) {
-                        d = !1;
-                        break
-                    }
-                } else if (p !== g && !n(p, g, i, o, s)) {
-                    d = !1;
-                    break
-                }
-            }
-            return s.delete(e), s.delete(t), d
-        }
-
-        function re(e, t, n, i, r, o, s) {
-            switch (n) {
-                case rt:
-                    if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) return !1;
-                    e = e.buffer, t = t.buffer;
-                case it:
-                    return !(e.byteLength != t.byteLength || !i(new jt(e), new jt(t)));
-                case qe:
-                case Ye:
-                case Ke:
-                    return we(+e, +t);
-                case Ve:
-                    return e.name == t.name && e.message == t.message;
-                case Ze:
-                case tt:
-                    return e == t + "";
-                case Xe:
-                    var a = c;
-                case et:
-                    var u = o & He;
-                    if (a || (a = l), e.size != t.size && !u) return !1;
-                    var h = s.get(e);
-                    if (h) return h == t;
-                    o |= ze, s.set(e, t);
-                    var d = ie(a(e), a(t), i, r, o, s);
-                    return s.delete(e), d;
-                case nt:
-                    if (Gt) return Gt.call(e) == Gt.call(t)
-            }
-            return !1
-        }
-
-        function oe(e, t, n, i, r, o) {
-            var s = r & He,
-                a = je(e),
-                u = a.length;
-            if (u != je(t).length && !s) return !1;
-            for (var c = u; c--;) {
-                var l = a[c];
-                if (!(s ? l in t : Et.call(t, l))) return !1
-            }
-            var h = o.get(e);
-            if (h && o.get(t)) return h == t;
-            var d = !0;
-            o.set(e, t), o.set(t, e);
-            for (var f = s; ++c < u;) {
-                l = a[c];
-                var p = e[l],
-                    g = t[l];
-                if (i) var m = s ? i(g, p, l, t, e, o) : i(p, g, l, e, t, o);
-                if (!(void 0 === m ? p === g || n(p, g, i, r, o) : m)) {
-                    d = !1;
-                    break
-                }
-                f || (f = "constructor" == l)
-            }
-            if (d && !f) {
-                var y = e.constructor,
-                    v = t.constructor;
-                y != v && "constructor" in e && "constructor" in t && !("function" == typeof y && y instanceof y && "function" == typeof v && v instanceof v) && (d = !1)
-            }
-            return o.delete(e), o.delete(t), d
-        }
-
-        function se(e, t) {
-            var n = e.__data__;
-            return de(t) ? n["string" == typeof t ? "string" : "hash"] : n.map
-        }
-
-        function ae(e) {
-            for (var t = je(e), n = t.length; n--;) {
-                var i = t[n],
-                    r = e[i];
-                t[n] = [i, r, ge(r)]
-            }
-            return t
-        }
-
-        function ue(e, t) {
-            var n = a(e, t);
-            return V(n) ? n : void 0
-        }
-
-        function ce(e, t, n) {
-            t = he(t, e) ? [t] : ne(t);
-            for (var i, r = -1, o = t.length; ++r < o;) {
-                var s = ye(t[r]);
-                if (!(i = null != e && n(e, s))) break;
-                e = e[s]
-            }
-            if (i) return i;
-            var o = e ? e.length : 0;
-            return !!o && Ce(o) && le(s, o) && (tn(e) || xe(e))
-        }
-
-        function le(e, t) {
-            return !!(t = null == t ? Ue : t) && ("number" == typeof e || dt.test(e)) && e > -1 && e % 1 == 0 && e < t
-        }
-
-        function he(e, t) {
-            if (tn(e)) return !1;
-            var n = typeof e;
-            return !("number" != n && "symbol" != n && "boolean" != n && null != e && !Ee(e)) || (st.test(e) || !ot.test(e) || null != t && e in Object(t))
-        }
-
-        function de(e) {
-            var t = typeof e;
-            return "string" == t || "number" == t || "symbol" == t || "boolean" == t ? "__proto__" !== e : null === e
-        }
-
-        function fe(e) {
-            return !!Dt && Dt in e
-        }
-
-        function pe(e) {
-            var t = e && e.constructor;
-            return e === ("function" == typeof t && t.prototype || Tt)
-        }
-
-        function ge(e) {
-            return e === e && !De(e)
-        }
-
-        function me(e, t) {
-            return function(n) {
-                return null != n && (n[e] === t && (void 0 !== t || e in Object(n)))
-            }
-        }
-
-        function ye(e) {
-            if ("string" == typeof e || Ee(e)) return e;
-            var t = e + "";
-            return "0" == t && 1 / e == -We ? "-0" : t
-        }
-
-        function ve(e) {
-            if (null != e) {
-                try {
-                    return Mt.call(e)
-                } catch (e) {}
-                try {
-                    return e + ""
-                } catch (e) {}
-            }
-            return ""
-        }
-
-        function _e(e, t) {
-            return (tn(e) ? i : K)(e, G(t, 3))
-        }
-
-        function be(e, t) {
-            if ("function" != typeof e || t && "function" != typeof t) throw new TypeError(Le);
-            var n = function() {
-                var i = arguments,
-                    r = t ? t.apply(this, i) : i[0],
-                    o = n.cache;
-                if (o.has(r)) return o.get(r);
-                var s = e.apply(this, i);
-                return n.cache = o.set(r, s), s
-            };
-            return n.cache = new(be.Cache || k), n
-        }
-
-        function we(e, t) {
-            return e === t || e !== e && t !== t
-        }
-
-        function xe(e) {
-            return Se(e) && Et.call(e, "callee") && (!It.call(e, "callee") || At.call(e) == $e)
-        }
-
-        function ke(e) {
-            return null != e && Ce(e.length) && !Te(e)
-        }
-
-        function Se(e) {
-            return Me(e) && ke(e)
-        }
-
-        function Te(e) {
-            var t = De(e) ? At.call(e) : "";
-            return t == Qe || t == Ge
-        }
-
-        function Ce(e) {
-            return "number" == typeof e && e > -1 && e % 1 == 0 && e <= Ue
-        }
-
-        function De(e) {
-            var t = typeof e;
-            return !!e && ("object" == t || "function" == t)
-        }
-
-        function Me(e) {
-            return !!e && "object" == typeof e
-        }
-
-        function Ee(e) {
-            return "symbol" == typeof e || Me(e) && At.call(e) == nt
-        }
-
-        function Ae(e) {
-            return null == e ? "" : te(e)
-        }
-
-        function Oe(e, t, n) {
-            var i = null == e ? void 0 : W(e, t);
-            return void 0 === i ? n : i
-        }
-
-        function Pe(e, t) {
-            return null != e && ce(e, t, $)
-        }
-
-        function je(e) {
-            return ke(e) ? F(e) : X(e)
-        }
-
-        function Ie(e) {
-            return e
-        }
-
-        function Ne(e) {
-            return he(e) ? o(ye(e)) : ee(e)
-        }
-        var Re = 200,
-            Le = "Expected a function",
-            Fe = "__lodash_hash_undefined__",
-            ze = 1,
-            He = 2,
-            We = 1 / 0,
-            Ue = 9007199254740991,
-            $e = "[object Arguments]",
-            Be = "[object Array]",
-            qe = "[object Boolean]",
-            Ye = "[object Date]",
-            Ve = "[object Error]",
-            Qe = "[object Function]",
-            Ge = "[object GeneratorFunction]",
-            Xe = "[object Map]",
-            Ke = "[object Number]",
-            Je = "[object Object]",
-            Ze = "[object RegExp]",
-            et = "[object Set]",
-            tt = "[object String]",
-            nt = "[object Symbol]",
-            it = "[object ArrayBuffer]",
-            rt = "[object DataView]",
-            ot = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
-            st = /^\w*$/,
-            at = /^\./,
-            ut = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
-            ct = /[\\^$.*+?()[\]{}|]/g,
-            lt = /\\(\\)?/g,
-            ht = /^\[object .+?Constructor\]$/,
-            dt = /^(?:0|[1-9]\d*)$/,
-            ft = {};
-        ft["[object Float32Array]"] = ft["[object Float64Array]"] = ft["[object Int8Array]"] = ft["[object Int16Array]"] = ft["[object Int32Array]"] = ft["[object Uint8Array]"] = ft["[object Uint8ClampedArray]"] = ft["[object Uint16Array]"] = ft["[object Uint32Array]"] = !0, ft[$e] = ft[Be] = ft[it] = ft[qe] = ft[rt] = ft[Ye] = ft[Ve] = ft[Qe] = ft[Xe] = ft[Ke] = ft[Je] = ft[Ze] = ft[et] = ft[tt] = ft["[object WeakMap]"] = !1;
-        var pt = "object" == typeof e && e && e.Object === Object && e,
-            gt = "object" == typeof self && self && self.Object === Object && self,
-            mt = pt || gt || Function("return this")(),
-            yt = "object" == typeof t && t && !t.nodeType && t,
-            vt = yt && "object" == typeof n && n && !n.nodeType && n,
-            _t = vt && vt.exports === yt,
-            bt = _t && pt.process,
-            wt = function() {
-                try {
-                    return bt && bt.binding("util")
-                } catch (e) {}
-            }(),
-            xt = wt && wt.isTypedArray,
-            kt = Array.prototype,
-            St = Function.prototype,
-            Tt = Object.prototype,
-            Ct = mt["__core-js_shared__"],
-            Dt = function() {
-                var e = /[^.]+$/.exec(Ct && Ct.keys && Ct.keys.IE_PROTO || "");
-                return e ? "Symbol(src)_1." + e : ""
-            }(),
-            Mt = St.toString,
-            Et = Tt.hasOwnProperty,
-            At = Tt.toString,
-            Ot = RegExp("^" + Mt.call(Et).replace(ct, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
-            Pt = mt.Symbol,
-            jt = mt.Uint8Array,
-            It = Tt.propertyIsEnumerable,
-            Nt = kt.splice,
-            Rt = function(e, t) {
-                return function(n) {
-                    return e(t(n))
-                }
-            }(Object.keys, Object),
-            Lt = ue(mt, "DataView"),
-            Ft = ue(mt, "Map"),
-            zt = ue(mt, "Promise"),
-            Ht = ue(mt, "Set"),
-            Wt = ue(mt, "WeakMap"),
-            Ut = ue(Object, "create"),
-            $t = ve(Lt),
-            Bt = ve(Ft),
-            qt = ve(zt),
-            Yt = ve(Ht),
-            Vt = ve(Wt),
-            Qt = Pt ? Pt.prototype : void 0,
-            Gt = Qt ? Qt.valueOf : void 0,
-            Xt = Qt ? Qt.toString : void 0;
-        h.prototype.clear = d, h.prototype.delete = f, h.prototype.get = p, h.prototype.has = g, h.prototype.set = m, y.prototype.clear = v, y.prototype.delete = _, y.prototype.get = b, y.prototype.has = w, y.prototype.set = x, k.prototype.clear = S, k.prototype.delete = T, k.prototype.get = C, k.prototype.has = D, k.prototype.set = M, E.prototype.add = E.prototype.push = A, E.prototype.has = O, P.prototype.clear = j, P.prototype.delete = I, P.prototype.get = N, P.prototype.has = R, P.prototype.set = L;
-        var Kt = function(e, t) {
-                return function(n, i) {
-                    if (null == n) return n;
-                    if (!ke(n)) return e(n, i);
-                    for (var r = n.length, o = t ? r : -1, s = Object(n);
-                        (t ? o-- : ++o < r) && !1 !== i(s[o], o, s););
-                    return n
-                }
-            }(H),
-            Jt = function(e) {
-                return function(t, n, i) {
-                    for (var r = -1, o = Object(t), s = i(t), a = s.length; a--;) {
-                        var u = s[e ? a : ++r];
-                        if (!1 === n(o[u], u, o)) break
-                    }
-                    return t
-                }
-            }(),
-            Zt = U;
-        (Lt && Zt(new Lt(new ArrayBuffer(1))) != rt || Ft && Zt(new Ft) != Xe || zt && "[object Promise]" != Zt(zt.resolve()) || Ht && Zt(new Ht) != et || Wt && "[object WeakMap]" != Zt(new Wt)) && (Zt = function(e) {
-            var t = At.call(e),
-                n = t == Je ? e.constructor : void 0,
-                i = n ? ve(n) : void 0;
-            if (i) switch (i) {
-                case $t:
-                    return rt;
-                case Bt:
-                    return Xe;
-                case qt:
-                    return "[object Promise]";
-                case Yt:
-                    return et;
-                case Vt:
-                    return "[object WeakMap]"
-            }
-            return t
-        });
-        var en = be(function(e) {
-            e = Ae(e);
-            var t = [];
-            return at.test(e) && t.push(""), e.replace(ut, function(e, n, i, r) {
-                t.push(i ? r.replace(lt, "$1") : n || e)
-            }), t
-        });
-        be.Cache = k;
-        var tn = Array.isArray,
-            nn = xt ? function(e) {
-                return function(t) {
-                    return e(t)
-                }
-            }(xt) : Q;
-        n.exports = _e
-    }).call(t, function() {
-        return this
-    }(), n(7)(e))
-}, function(e, t) {
-    e.exports = function(e) {
-        return e.webpackPolyfill || (e.deprecate = function() {}, e.paths = [], e.children = [], e.webpackPolyfill = 1), e
-    }
 }, function(e, t, n) {
     (function(e, n) {
         function i(e, t) {
@@ -19008,14 +17857,14 @@ var recurly = function(e) {
             }
         }
 
-        function x() {
+        function k() {
             this.__data__ = []
         }
 
-        function k(e) {
+        function x(e) {
             var t = this.__data__,
                 n = U(t, e);
-            return !(n < 0) && (n == t.length - 1 ? t.pop() : $t.call(t, n, 1), !0)
+            return !(n < 0) && (n == t.length - 1 ? t.pop() : Bt.call(t, n, 1), !0)
         }
 
         function S(e) {
@@ -19120,11 +17969,11 @@ var recurly = function(e) {
             return -1
         }
 
-        function $(e, t) {
+        function B(e, t) {
             return e && le(t, Ne(t), e)
         }
 
-        function B(e, t, n, i, r, o, a) {
+        function $(e, t, n, i, r, o, a) {
             var u;
             if (i && (u = o ? i(e, r, o, a) : i(e)), void 0 !== u) return u;
             if (!Oe(e)) return e;
@@ -19137,10 +17986,10 @@ var recurly = function(e) {
                 if (hn(e)) return te(e, t);
                 if (l == Ge || l == Ue || d && !o) {
                     if (h(e)) return o ? e : {};
-                    if (u = me(d ? {} : e), !t) return he(e, $(u, e))
+                    if (u = me(d ? {} : e), !t) return he(e, B(u, e))
                 } else {
                     if (!yt[l]) return o ? e : {};
-                    u = ye(e, l, B, t)
+                    u = ye(e, l, $, t)
                 }
             }
             a || (a = new j);
@@ -19148,7 +17997,7 @@ var recurly = function(e) {
             if (f) return f;
             if (a.set(e, u), !c) var p = n ? de(e) : Ne(e);
             return s(p || e, function(r, o) {
-                p && (o = r, r = e[o]), W(u, o, B(r, t, n, i, o, e, a))
+                p && (o = r, r = e[o]), W(u, o, $(r, t, n, i, o, e, a))
             }), u
         }
 
@@ -19174,15 +18023,15 @@ var recurly = function(e) {
         }
 
         function X(e) {
-            if (!xe(e)) return Yt(e);
+            if (!ke(e)) return Yt(e);
             var t = [];
             for (var n in Object(e)) jt.call(e, n) && "constructor" != n && t.push(n);
             return t
         }
 
         function K(e) {
-            if (!Oe(e)) return ke(e);
-            var t = xe(e),
+            if (!Oe(e)) return xe(e);
+            var t = ke(e),
                 n = [];
             for (var i in e)("constructor" != i || !t && jt.call(e, i)) && n.push(i);
             return n
@@ -19208,7 +18057,7 @@ var recurly = function(e) {
             if (c) return void H(e, n, c);
             var l = o ? o(a, u, n + "", e, t, s) : void 0,
                 h = void 0 === l;
-            h && (l = u, ln(u) || dn(u) ? ln(a) ? l = a : Me(a) ? l = ce(a) : (h = !1, l = B(u, !0)) : je(u) || Ce(u) ? Ce(a) ? l = Ie(a) : !Oe(a) || i && Ee(a) ? (h = !1, l = B(u, !0)) : l = a : h = !1), h && (s.set(u, l), r(l, u, i, o, s), s.delete(u)), H(e, n, l)
+            h && (l = u, ln(u) || dn(u) ? ln(a) ? l = a : Me(a) ? l = ce(a) : (h = !1, l = $(u, !0)) : je(u) || Ce(u) ? Ce(a) ? l = Ie(a) : !Oe(a) || i && Ee(a) ? (h = !1, l = $(u, !0)) : l = a : h = !1), h && (s.set(u, l), r(l, u, i, o, s), s.delete(u)), H(e, n, l)
         }
 
         function ee(e, t) {
@@ -19301,7 +18150,7 @@ var recurly = function(e) {
         }
 
         function me(e) {
-            return "function" != typeof e.constructor || xe(e) ? {} : q(Ht(e))
+            return "function" != typeof e.constructor || ke(e) ? {} : q(Ht(e))
         }
 
         function ye(e, t, n, i) {
@@ -19309,8 +18158,8 @@ var recurly = function(e) {
             switch (t) {
                 case tt:
                     return ne(e);
-                case $e:
                 case Be:
+                case $e:
                     return new r(+e);
                 case nt:
                     return ie(e, i);
@@ -19357,12 +18206,12 @@ var recurly = function(e) {
             return !!Ot && Ot in e
         }
 
-        function xe(e) {
+        function ke(e) {
             var t = e && e.constructor;
             return e === ("function" == typeof t && t.prototype || Et)
         }
 
-        function ke(e) {
+        function xe(e) {
             var t = [];
             if (null != e)
                 for (var n in Object(e)) t.push(n);
@@ -19446,8 +18295,8 @@ var recurly = function(e) {
             He = "__lodash_hash_undefined__",
             We = 9007199254740991,
             Ue = "[object Arguments]",
-            $e = "[object Boolean]",
-            Be = "[object Date]",
+            Be = "[object Boolean]",
+            $e = "[object Date]",
             qe = "[object Function]",
             Ye = "[object GeneratorFunction]",
             Ve = "[object Map]",
@@ -19474,16 +18323,16 @@ var recurly = function(e) {
             pt = /^\[object .+?Constructor\]$/,
             gt = /^(?:0|[1-9]\d*)$/,
             mt = {};
-        mt[it] = mt[rt] = mt[ot] = mt[st] = mt[at] = mt[ut] = mt[ct] = mt[lt] = mt[ht] = !0, mt[Ue] = mt["[object Array]"] = mt[tt] = mt[$e] = mt[nt] = mt[Be] = mt["[object Error]"] = mt[qe] = mt[Ve] = mt[Qe] = mt[Ge] = mt[Xe] = mt[Ke] = mt[Je] = mt[et] = !1;
+        mt[it] = mt[rt] = mt[ot] = mt[st] = mt[at] = mt[ut] = mt[ct] = mt[lt] = mt[ht] = !0, mt[Ue] = mt["[object Array]"] = mt[tt] = mt[Be] = mt[nt] = mt[$e] = mt["[object Error]"] = mt[qe] = mt[Ve] = mt[Qe] = mt[Ge] = mt[Xe] = mt[Ke] = mt[Je] = mt[et] = !1;
         var yt = {};
-        yt[Ue] = yt["[object Array]"] = yt[tt] = yt[nt] = yt[$e] = yt[Be] = yt[it] = yt[rt] = yt[ot] = yt[st] = yt[at] = yt[Ve] = yt[Qe] = yt[Ge] = yt[Xe] = yt[Ke] = yt[Je] = yt[Ze] = yt[ut] = yt[ct] = yt[lt] = yt[ht] = !0, yt["[object Error]"] = yt[qe] = yt[et] = !1;
+        yt[Ue] = yt["[object Array]"] = yt[tt] = yt[nt] = yt[Be] = yt[$e] = yt[it] = yt[rt] = yt[ot] = yt[st] = yt[at] = yt[Ve] = yt[Qe] = yt[Ge] = yt[Xe] = yt[Ke] = yt[Je] = yt[Ze] = yt[ut] = yt[ct] = yt[lt] = yt[ht] = !0, yt["[object Error]"] = yt[qe] = yt[et] = !1;
         var vt = "object" == typeof e && e && e.Object === Object && e,
             _t = "object" == typeof self && self && self.Object === Object && self,
             bt = vt || _t || Function("return this")(),
             wt = "object" == typeof t && t && !t.nodeType && t,
-            xt = wt && "object" == typeof n && n && !n.nodeType && n,
-            kt = xt && xt.exports === wt,
-            St = kt && vt.process,
+            kt = wt && "object" == typeof n && n && !n.nodeType && n,
+            xt = kt && kt.exports === wt,
+            St = xt && vt.process,
             Tt = function() {
                 try {
                     return St && St.binding("util")
@@ -19503,14 +18352,14 @@ var recurly = function(e) {
             It = Pt.call(Object),
             Nt = Et.toString,
             Rt = RegExp("^" + Pt.call(jt).replace(dt, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
-            Lt = kt ? bt.Buffer : void 0,
+            Lt = xt ? bt.Buffer : void 0,
             Ft = bt.Symbol,
             zt = bt.Uint8Array,
             Ht = f(Object.getPrototypeOf, Object),
             Wt = Object.create,
             Ut = Et.propertyIsEnumerable,
-            $t = Dt.splice,
-            Bt = Object.getOwnPropertySymbols,
+            Bt = Dt.splice,
+            $t = Object.getOwnPropertySymbols,
             qt = Lt ? Lt.isBuffer : void 0,
             Yt = f(Object.keys, Object),
             Vt = Math.max,
@@ -19527,8 +18376,8 @@ var recurly = function(e) {
             on = Se(Jt),
             sn = Ft ? Ft.prototype : void 0,
             an = sn ? sn.valueOf : void 0;
-        g.prototype.clear = m, g.prototype.delete = y, g.prototype.get = v, g.prototype.has = _, g.prototype.set = b, w.prototype.clear = x, w.prototype.delete = k, w.prototype.get = S, w.prototype.has = T, w.prototype.set = C, D.prototype.clear = M, D.prototype.delete = E, D.prototype.get = A, D.prototype.has = O, D.prototype.set = P, j.prototype.clear = I, j.prototype.delete = N, j.prototype.get = R, j.prototype.has = L, j.prototype.set = F;
-        var un = Bt ? f(Bt, Object) : Le,
+        g.prototype.clear = m, g.prototype.delete = y, g.prototype.get = v, g.prototype.has = _, g.prototype.set = b, w.prototype.clear = k, w.prototype.delete = x, w.prototype.get = S, w.prototype.has = T, w.prototype.set = C, D.prototype.clear = M, D.prototype.delete = E, D.prototype.get = A, D.prototype.has = O, D.prototype.set = P, j.prototype.clear = I, j.prototype.delete = N, j.prototype.get = R, j.prototype.has = L, j.prototype.set = F;
+        var un = $t ? f($t, Object) : Le,
             cn = V;
         (Qt && cn(new Qt(new ArrayBuffer(1))) != nt || Gt && cn(new Gt) != Ve || Xt && "[object Promise]" != cn(Xt.resolve()) || Kt && cn(new Kt) != Ke || Jt && cn(new Jt) != et) && (cn = function(e) {
             var t = Nt.call(e),
@@ -19573,7 +18422,11 @@ var recurly = function(e) {
         n.exports = fn
     }).call(t, function() {
         return this
-    }(), n(7)(e))
+    }(), n(5)(e))
+}, function(e, t) {
+    e.exports = function(e) {
+        return e.webpackPolyfill || (e.deprecate = function() {}, e.paths = [], e.children = [], e.webpackPolyfill = 1), e
+    }
 }, function(e, t, n) {
     function i() {}
 
@@ -19594,7 +18447,7 @@ var recurly = function(e) {
             o("jsonp got", e), u && clearTimeout(u), r(), n && n(null, e)
         }, e += (~e.indexOf("?") ? "&" : "?") + l + "=" + d(p), e = e.replace("?&", "?"), o('jsonp req "%s"', e), a = document.createElement("script"), a.src = e, f.parentNode.insertBefore(a, f)
     }
-    var o = n(10)("jsonp");
+    var o = n(7)("jsonp");
     e.exports = r;
     var s = 0
 }, function(e, t, n) {
@@ -19632,7 +18485,7 @@ var recurly = function(e) {
         } catch (e) {}
         return e
     }
-    t = e.exports = n(11), t.log = o, t.formatArgs = r, t.save = s, t.load = a, t.useColors = i, t.storage = "undefined" != typeof chrome && void 0 !== chrome.storage ? chrome.storage.local : function() {
+    t = e.exports = n(8), t.log = o, t.formatArgs = r, t.save = s, t.load = a, t.useColors = i, t.storage = "undefined" != typeof chrome && void 0 !== chrome.storage ? chrome.storage.local : function() {
         try {
             return window.localStorage
         } catch (e) {}
@@ -19692,7 +18545,7 @@ var recurly = function(e) {
     function u(e) {
         return e instanceof Error ? e.stack || e.message : e
     }
-    t = e.exports = r, t.coerce = u, t.disable = s, t.enable = o, t.enabled = a, t.humanize = n(12), t.names = [], t.skips = [], t.formatters = {};
+    t = e.exports = r, t.coerce = u, t.disable = s, t.enable = o, t.enabled = a, t.humanize = n(9), t.names = [], t.skips = [], t.formatters = {};
     var c, l = 0
 }, function(e, t) {
     function n(e) {
@@ -19833,12 +18686,12 @@ var recurly = function(e) {
     function c(e, t) {
         var n = [];
         if (!t) throw new TypeError("stringify expects an object");
-        for (var i = 0; i < e.length; i++) n.push(x(e[i], t + "[" + i + "]"));
+        for (var i = 0; i < e.length; i++) n.push(k(e[i], t + "[" + i + "]"));
         return n.join("&")
     }
 
     function l(e, t) {
-        for (var n, i = [], r = v(e), o = 0, s = r.length; o < s; ++o) "" != (n = r[o]) && (null == e[n] ? i.push(encodeURIComponent(n) + "=") : i.push(x(e[n], t ? t + "[" + encodeURIComponent(n) + "]" : encodeURIComponent(n))));
+        for (var n, i = [], r = v(e), o = 0, s = r.length; o < s; ++o) "" != (n = r[o]) && (null == e[n] ? i.push(encodeURIComponent(n) + "=") : i.push(k(e[n], t ? t + "[" + encodeURIComponent(n) + "]" : encodeURIComponent(n))));
         return i.join("&")
     }
 
@@ -19890,7 +18743,7 @@ var recurly = function(e) {
     t.parse = function(e) {
         return null == e || "" == e ? {} : "object" == typeof e ? s(e) : a(e)
     };
-    var x = t.stringify = function(e, t) {
+    var k = t.stringify = function(e, t) {
         return y(e) ? c(e, t) : "[object Object]" == p.call(e) ? l(e, t) : "string" == typeof e ? u(e, t) : t + "=" + encodeURIComponent(String(e))
     }
 }, function(e, t) {
@@ -19941,7 +18794,7 @@ var recurly = function(e) {
     function i(e, t) {
         return i.get(e, t)
     }
-    var r = n(16);
+    var r = n(13);
     e.exports = i, i.map = {}, i.baseURL = "", i.doc = function(e) {
         i.baseURL = e
     }, i.get = function(e, t) {
@@ -20012,7 +18865,7 @@ var recurly = function(e) {
             return "Apple Pay configuration option '" + e.opt + "' is not among your available options: " + e.set + ".\n                 Please refer to your site configuration if the available options is incorrect."
         }
     }), i.add("apple-pay-factory-only", {
-        message: "Apple Pay must be initialized by calling recurly.applePay"
+        message: "Apple Pay must be initialized by calling recurly.ApplePay"
     }), i.add("apple-pay-init-error", {
         message: function(e) {
             var t = "Apple Pay did not initialize due to a fatal error";
@@ -20020,22 +18873,26 @@ var recurly = function(e) {
         }
     }), i.add("apple-pay-payment-failure", {
         message: "Apply Pay could not charge the customer"
+    }), i.add("paypal-factory-only", {
+        message: "PayPal must be initialized by calling recurly.PayPal"
     }), i.add("paypal-config-missing", {
         message: function(e) {
             return "Missing PayPal configuration option: '" + e.opt + "'"
         }
+    }), i.add("paypal-load-error", {
+        message: "Client libraries failed to load"
+    }), i.add("paypal-client-error", {
+        message: "PayPal encountered an unexpected error"
     }), i.add("paypal-tokenize-error", {
         message: "An error occurred while attempting to generate the PayPal token"
+    }), i.add("paypal-tokenize-recurly-error", {
+        message: "An error occurred while attempting to generate the Recurly token"
     }), i.add("paypal-braintree-not-ready", {
         message: "Braintree PayPal is not yet ready to create a checkout flow"
-    }), i.add("paypal-braintree-load-error", {
-        message: "Braintree PayPal client libraries failed to load"
     }), i.add("paypal-braintree-api-error", {
         message: "Braintree API experienced an error"
     }), i.add("paypal-braintree-tokenize-braintree-error", {
         message: "An error occurred while attempting to generate the Braintree token"
-    }), i.add("paypal-braintree-tokenize-recurly-error", {
-        message: "An error occurred while attempting to generate the Recurly token"
     })
 }, function(e, t) {
     "function" == typeof Object.keys ? e.exports = function(e, t) {
@@ -20047,7 +18904,7 @@ var recurly = function(e) {
     }
 }, function(e, t) {
     "use strict";
-    e.exports = "4.5.0"
+    e.exports = "4.6.0"
 }, function(e, t, n) {
     "use strict";
 
@@ -20092,14 +18949,14 @@ var recurly = function(e) {
             e[n] && "string" === (0, l.default)(e[n]) || t.push(n)
         }), e.account_number !== e.account_number_confirmation && t.push("account_number_confirmation"), p("validate errors", t), t
     }
-    var a = n(19),
+    var a = n(16),
         u = i(a),
-        c = n(4),
+        c = n(2),
         l = i(c),
-        h = n(22),
-        d = n(15),
+        h = n(19),
+        d = n(12),
         f = i(d),
-        p = n(10)("recurly:bankAccount");
+        p = n(7)("recurly:bankAccount");
     e.exports = {
         token: r,
         bankInfo: o
@@ -20119,11 +18976,11 @@ var recurly = function(e) {
         for (var i = 0; i < e.length; ++i) t.call(n, e[i], i)
     }
     try {
-        var s = n(4)
+        var s = n(2)
     } catch (e) {
-        var s = n(4)
+        var s = n(2)
     }
-    var a = n(20),
+    var a = n(17),
         u = Object.prototype.hasOwnProperty;
     e.exports = function(e, t, n) {
         switch (t = a(t), n = n || this, s(e)) {
@@ -20195,9 +19052,9 @@ var recurly = function(e) {
     }
     var l;
     try {
-        l = n(21)
+        l = n(18)
     } catch (e) {
-        l = n(21)
+        l = n(18)
     }
     e.exports = i
 }, function(e, t) {
@@ -20237,33 +19094,24 @@ var recurly = function(e) {
     }
 
     function r(e, t, n) {
-        var i = l.default.element(t),
+        var i = u.default.element(t),
             r = {
                 fields: {},
                 values: {}
             };
-        return n = n || {}, i && "form" === i.nodeName.toLowerCase() ? (0, u.default)(i.querySelectorAll("[data-recurly]"), function(t) {
-            var n = l.default.data(t, "recurly");
-            ~(0, s.default)(e, n) && (r.fields[n] = t, r.values[n] = l.default.value(t))
-        }) : r.values = t, n.parseCard && (r.values.number = (0, h.parseCard)(r.values.number)), r
+        return n = n || {}, i && "form" === i.nodeName.toLowerCase() ? (0, s.default)(i.querySelectorAll("[data-recurly]"), function(t) {
+            var n = u.default.data(t, "recurly");
+            ~e.indexOf(n) && (r.fields[n] = t, r.values[n] = u.default.value(t))
+        }) : r.values = t, n.parseCard && (r.values.number = (0, c.parseCard)(r.values.number)), r
     }
     Object.defineProperty(t, "__esModule", {
         value: !0
     }), t.normalize = r;
-    var o = n(23),
+    var o = n(16),
         s = i(o),
-        a = n(19),
+        a = n(20),
         u = i(a),
-        c = n(24),
-        l = i(c),
-        h = n(28)
-}, function(e, t) {
-    e.exports = function(e, t) {
-        if (e.indexOf) return e.indexOf(t);
-        for (var n = 0; n < e.length; ++n)
-            if (e[n] === t) return n;
-        return -1
-    }
+        c = n(24)
 }, function(e, t, n) {
     "use strict";
 
@@ -20319,9 +19167,9 @@ var recurly = function(e) {
     function l(e, t) {
         return e = i(e), e ? e.tagName.match(RegExp(t, "i")) ? e : l(e.parentNode, t) : null
     }
-    var h = n(25),
-        d = n(4),
-        f = n(19);
+    var h = n(21),
+        d = n(2),
+        f = n(16);
     e.exports = {
         element: i,
         value: r,
@@ -20332,7 +19180,7 @@ var recurly = function(e) {
     function i(e) {
         return r(e).replace(/\s/g, "-")
     }
-    var r = n(26);
+    var r = n(22);
     e.exports = i
 }, function(e, t, n) {
     function i(e) {
@@ -20340,7 +19188,7 @@ var recurly = function(e) {
             return t ? " " + t : ""
         })
     }
-    var r = n(27);
+    var r = n(23);
     e.exports = i
 }, function(e, t) {
     function n(e) {
@@ -20405,6 +19253,137 @@ var recurly = function(e) {
         }
 
         function a(e) {
+            return e = Object.assign({}, e, {
+                recurly: this
+            }), new v(e)
+        }
+
+        function u(e, t, n) {
+            return (e - t) / 2 + n
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        });
+        var c = function() {
+            function e(e, t) {
+                for (var n = 0; n < t.length; n++) {
+                    var i = t[n];
+                    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                }
+            }
+            return function(t, n, i) {
+                return n && e(t.prototype, n), i && e(t, i), t
+            }
+        }();
+        t.factory = a;
+        var l = n(10),
+            h = i(l),
+            d = n(11),
+            f = i(d),
+            p = n(26),
+            g = n(12),
+            m = (i(g), n(7)("recurly:frame")),
+            y = {
+                width: 450,
+                height: 535
+            },
+            v = function(t) {
+                function n(e) {
+                    r(this, n);
+                    var t = o(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+                    return t.id = (0, p.uuid)(), t.recurly = e.recurly, t.name = "recurly-frame-" + t.recurly.id + "-" + t.id, t.width = e.width || y.width, t.height = e.height || y.height, t.prepare(e.path, e.payload), t.listen(), t
+                }
+                return s(n, t), c(n, [{
+                    key: "prepare",
+                    value: function(t) {
+                        var n = this,
+                            i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                        m("creating request frame"), i.version = this.recurly.version, i.event = this.name, i.key = this.recurly.config.publicKey, this.once(i.event, function(t) {
+                            n.relay && e.document.body.removeChild(n.relay), t.error ? n.emit("error", t.error) : n.emit("done", t)
+                        }), this.url = this.recurly.url(t), this.url += (~this.url.indexOf("?") ? "&" : "?") + h.default.stringify(i)
+                    }
+                }, {
+                    key: "listen",
+                    value: function(t) {
+                        var n = this;
+                        if (this.recurly.bus.add(this), "documentMode" in document) {
+                            m("Creating relay");
+                            var i = document.createElement("iframe");
+                            i.width = i.height = 0, i.src = this.recurly.url("/relay"), i.name = "recurly-relay-" + this.recurly.id + "-" + this.id, i.style.display = "none", i.onload = function() {
+                                return n.create()
+                            }, e.document.body.appendChild(i), this.relay = i
+                        } else this.create()
+                    }
+                }, {
+                    key: "create",
+                    value: function() {
+                        m("opening frame window", this.url, this.name, this.attributes), e.open(this.url, this.name, this.attributes)
+                    }
+                }, {
+                    key: "attributes",
+                    get: function() {
+                        return "\n      resizable,scrollbars,\n      width=" + this.width + ",\n      height=" + this.height + ",\n      top=" + this.top + ",\n      left=" + this.left + "\n    "
+                    }
+                }, {
+                    key: "top",
+                    get: function() {
+                        var t = e.outerHeight || e.document.documentElement.clientHeight,
+                            n = null === e.screenY ? e.screenTop : e.screenY;
+                        return u(t, this.height, n)
+                    }
+                }, {
+                    key: "left",
+                    get: function() {
+                        var t = e.outerWidth || e.document.documentElement.clientWidth,
+                            n = null === e.screenX ? e.screenLeft : e.screenX;
+                        return u(t, this.width, n)
+                    }
+                }]), n
+            }(f.default)
+    }).call(t, function() {
+        return this
+    }())
+}, function(e, t) {
+    "use strict";
+    Object.defineProperty(t, "__esModule", {
+        value: !0
+    });
+    t.uuid = function() {
+        var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 12;
+        return Math.random().toString(36).substr(2, e)
+    }
+}, function(e, t, n) {
+    (function(e) {
+        "use strict";
+
+        function i(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function r(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function o(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function s(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+        }
+
+        function a(e) {
             return new m(Object.assign({}, e, {
                 recurly: this
             }))
@@ -20424,12 +19403,12 @@ var recurly = function(e) {
             }
         }();
         t.factory = a;
-        var c = n(14),
+        var c = n(11),
             l = i(c),
-            h = n(15),
+            h = n(12),
             d = i(h),
-            f = (n(30), n(22)),
-            p = n(10)("recurly:apple-pay"),
+            f = (n(28), n(19)),
+            p = n(7)("recurly:apple-pay"),
             g = ["first_name", "last_name", "address1", "address2", "country", "city", "state", "postal_code", "phone", "vat_number", "fraud_session_id", "token"],
             m = function(t) {
                 function n(t) {
@@ -20642,21 +19621,21 @@ var recurly = function(e) {
                 return n && e(t.prototype, n), i && e(t, i), t
             }
         }(),
-        h = n(14),
+        h = n(11),
         d = i(h),
-        f = n(4),
+        f = n(2),
         p = i(f),
-        g = n(31),
+        g = n(29),
         m = i(g),
-        y = n(32),
+        y = n(31),
         v = i(y),
-        _ = n(44),
+        _ = n(43),
         b = i(_),
-        w = n(45),
-        x = i(w),
-        k = n(15),
-        S = i(k),
-        T = n(10)("recurly:pricing"),
+        w = n(44),
+        k = i(w),
+        x = n(12),
+        S = i(x),
+        T = n(7)("recurly:pricing"),
         C = ["plan", "addon", "coupon", "address", "currency", "gift_card", "shipping_address"],
         D = function(e) {
             function t(e) {
@@ -20667,7 +19646,7 @@ var recurly = function(e) {
             return s(t, e), l(t, [{
                 key: "attach",
                 value: function(e) {
-                    return this.attachment && this.attachment.detach(), this.attachment = new x.default(this, e), this.attachment
+                    return this.attachment && this.attachment.detach(), this.attachment = new k.default(this, e), this.attachment
                 }
             }, {
                 key: "reset",
@@ -20836,12 +19815,77 @@ var recurly = function(e) {
             return !0
         }
     }
-    var r = n(20);
+    var r = n(30);
     e.exports = function(e, t) {
         "function" != typeof t && (t = Object(t) === t ? i(t) : r(t));
         for (var n = 0, o = e.length; n < o; ++n)
             if (t(e[n], n)) return e[n]
     }
+}, function(e, t, n) {
+    function i(e) {
+        switch ({}.toString.call(e)) {
+            case "[object Object]":
+                return a(e);
+            case "[object Function]":
+                return e;
+            case "[object String]":
+                return s(e);
+            case "[object RegExp]":
+                return o(e);
+            default:
+                return r(e)
+        }
+    }
+
+    function r(e) {
+        return function(t) {
+            return e === t
+        }
+    }
+
+    function o(e) {
+        return function(t) {
+            return e.test(t)
+        }
+    }
+
+    function s(e) {
+        return /^ *\W+/.test(e) ? new Function("_", "return _ " + e) : new Function("_", "return " + u(e))
+    }
+
+    function a(e) {
+        var t = {};
+        for (var n in e) t[n] = "string" == typeof e[n] ? r(e[n]) : i(e[n]);
+        return function(e) {
+            if ("object" != typeof e) return !1;
+            for (var n in t) {
+                if (!(n in e)) return !1;
+                if (!t[n](e[n])) return !1
+            }
+            return !0
+        }
+    }
+
+    function u(e) {
+        var t = l(e);
+        if (!t.length) return "_." + e;
+        var n, i, r;
+        for (i = 0; i < t.length; i++) r = t[i], n = "_." + r, n = "('function' == typeof " + n + " ? " + n + "() : " + n + ")", e = c(r, e, n);
+        return e
+    }
+
+    function c(e, t, n) {
+        return t.replace(new RegExp("(\\.)?" + e, "g"), function(e, t) {
+            return t ? e : n
+        })
+    }
+    var l;
+    try {
+        l = n(18)
+    } catch (e) {
+        l = n(18)
+    }
+    e.exports = i
 }, function(e, t, n) {
     "use strict";
 
@@ -20858,12 +19902,12 @@ var recurly = function(e) {
             }
         })
     }
-    var r = n(33),
-        o = n(16),
-        s = n(19),
-        a = n(4),
-        u = n(43),
-        c = n(10)("recurly:pricing:promise"),
+    var r = n(32),
+        o = n(13),
+        s = n(16),
+        a = n(2),
+        u = n(42),
+        c = n(7)("recurly:pricing:promise"),
         l = ["tax", "plan", "addon", "coupon", "address", "currency", "reset", "remove", "reprice", "giftcard", "shippingAddress"];
     e.exports = i, o(i.prototype, r.prototype), i.prototype.constructor = i, i.prototype.done = function() {
         return c("repricing"), r.prototype.done.apply(this.then(this.reprice), arguments), this.pricing
@@ -20872,10 +19916,10 @@ var recurly = function(e) {
     }
 }, function(e, t, n) {
     "use strict";
-    e.exports = n(34)
+    e.exports = n(33)
 }, function(e, t, n) {
     "use strict";
-    e.exports = n(35), n(37), n(38), n(39), n(40), n(42)
+    e.exports = n(34), n(36), n(37), n(38), n(39), n(41)
 }, function(e, t, n) {
     "use strict";
 
@@ -20968,7 +20012,7 @@ var recurly = function(e) {
             });
         n || i !== v || (n = !0, d(t, y))
     }
-    var m = n(36),
+    var m = n(35),
         y = null,
         v = {};
     e.exports = a, a._10 = null, a._97 = null, a._61 = i, a.prototype.then = function(e, t) {
@@ -21027,7 +20071,7 @@ var recurly = function(e) {
     }())
 }, function(e, t, n) {
     "use strict";
-    var i = n(35);
+    var i = n(34);
     e.exports = i, i.prototype.done = function(e, t) {
         (arguments.length ? this.then.apply(this, arguments) : this).then(null, function(e) {
             setTimeout(function() {
@@ -21037,7 +20081,7 @@ var recurly = function(e) {
     }
 }, function(e, t, n) {
     "use strict";
-    var i = n(35);
+    var i = n(34);
     e.exports = i, i.prototype.finally = function(e) {
         return this.then(function(t) {
             return i.resolve(e()).then(function() {
@@ -21056,7 +20100,7 @@ var recurly = function(e) {
         var t = new r(r._61);
         return t._81 = 1, t._65 = e, t
     }
-    var r = n(35);
+    var r = n(34);
     e.exports = r;
     var o = i(!0),
         s = i(!1),
@@ -21133,8 +20177,8 @@ var recurly = function(e) {
         }).join(""), "default:", "args[argLength] = cb;", "res = fn.apply(self, args);", "}", "if (res &&", '(typeof res === "object" || typeof res === "function") &&', 'typeof res.then === "function"', ") {rs(res);}", "});", "};"].join("");
         return Function(["Promise", "fn"], r)(o, e)
     }
-    var o = n(35),
-        s = n(41);
+    var o = n(34),
+        s = n(40);
     e.exports = o, o.denodeify = function(e, t) {
         return "number" == typeof t && t !== 1 / 0 ? i(e, t) : r(e)
     };
@@ -21182,7 +20226,7 @@ var recurly = function(e) {
     function o() {
         this.task = null
     }
-    var s = n(36),
+    var s = n(35),
         a = [],
         u = [],
         c = s.makeRequestCallFromTimer(i);
@@ -21197,7 +20241,7 @@ var recurly = function(e) {
     }
 }, function(e, t, n) {
     "use strict";
-    var i = n(35);
+    var i = n(34);
     e.exports = i, i.enableSynchronous = function() {
         i.prototype.isPending = function() {
             return 0 == this.getState()
@@ -21267,9 +20311,9 @@ var recurly = function(e) {
     function o(e) {
         return +(Math.ceil(e + "e+2") + "e-2")
     }
-    var s = n(19),
-        a = n(31),
-        u = n(8);
+    var s = n(16),
+        a = n(29),
+        u = n(4);
     e.exports = i, i.prototype.subtotal = function() {
         this.price.now.subtotal = 0, this.price.next.subtotal = 0, this.plan(), this.price.now.subtotal += this.price.now.plan, this.price.next.subtotal += this.price.next.plan, this.addons(), this.price.now.subtotal += this.price.now.addons, this.price.next.subtotal += this.price.next.addons, this.discount(), this.price.now.subtotal -= this.price.now.discount, this.price.next.subtotal -= this.price.next.discount, this.setupFee(), this.price.now.subtotal += this.price.now.setup_fee
     }, i.prototype.tax = function(e) {
@@ -21369,74 +20413,72 @@ var recurly = function(e) {
                 return n && e(t.prototype, n), i && e(t, i), t
             }
         }(),
-        a = n(46),
+        a = n(29),
         u = i(a),
-        c = n(31),
+        c = n(20),
         l = i(c),
-        h = n(24),
-        d = i(h),
-        f = n(10)("recurly:pricing:attachment"),
-        p = "init-all",
-        g = function() {
+        h = n(7)("recurly:pricing:attachment"),
+        d = "init-all",
+        f = function() {
             function e(t, n) {
                 var i = this;
-                if (r(this, e), this.pricing = t, this.container = d.default.element(n), !this.container) throw new Error("invalid dom element");
+                if (r(this, e), this.pricing = t, this.container = l.default.element(n), !this.container) throw new Error("invalid dom element");
                 this.change = this.change.bind(this), this.update = this.update.bind(this), this.pricing.on("change", this.update), this.elements.all.forEach(function(e) {
-                    u.default.bind(e, "change", i.change), u.default.bind(e, "propertychange", i.change)
-                }), this.change(p)
+                    e.addEventListener("change", i.change), e.addEventListener("propertychange", i.change)
+                }), this.change(d)
             }
             return s(e, [{
                 key: "change",
                 value: function(e) {
                     var t = this;
-                    f("change");
+                    h("change");
                     var n = this.elements,
                         i = e.target || e.srcElement,
-                        r = d.default.data(i, "recurly"),
+                        r = l.default.data(i, "recurly"),
                         s = function(t) {
-                            return t in n && e === p || r === t
+                            return t in n && e === d || r === t
                         },
                         a = n.addon && s("addon"),
-                        u = s("country") || s("postal_code"),
-                        c = s("currency"),
-                        h = n.coupon && (s("coupon") || s("plan")),
+                        c = s("country") || s("postal_code"),
+                        f = s("currency"),
+                        p = n.coupon && (s("coupon") || s("plan")),
                         g = n.gift_card && s("gift_card"),
                         m = s("shipping_address.country") || s("shipping_address.postal_code"),
                         y = s("vat_number") || s("tax_code"),
-                        v = this.pricing.plan(d.default.value(n.plan), {
-                            quantity: d.default.value(n.plan_quantity)
+                        v = this.pricing.plan(l.default.value(n.plan), {
+                            quantity: l.default.value(n.plan_quantity)
                         });
-                    c && (v = v.currency(d.default.value(n.currency))), a && (v = v.then(function() {
+                    f && (v = v.currency(l.default.value(n.currency))), a && (v = v.then(function() {
                         n.addon.forEach(function(e) {
                             var n = t.pricing.items.plan,
-                                i = d.default.data(e, "recurlyAddon"),
-                                r = d.default.value(e);
-                            n.addons && (0, l.default)(n.addons, {
+                                i = l.default.data(e, "recurlyAddon"),
+                                r = l.default.value(e);
+                            n.addons && (0, u.default)(n.addons, {
                                 code: i
                             }) && (v = v.addon(i, {
                                 quantity: r
                             }))
                         })
-                    })), h && (v = v.coupon(d.default.value(n.coupon).trim()).then(null, o)), g && (v = v.giftcard(d.default.value(n.gift_card).trim()).then(null, o)), u && (v = v.address({
-                        country: d.default.value(n.country),
-                        postal_code: d.default.value(n.postal_code)
+                    })), p && (v = v.coupon(l.default.value(n.coupon).trim()).then(null, o)), g && (v = v.giftcard(l.default.value(n.gift_card).trim()).then(null, o)), c && (v = v.address({
+                        country: l.default.value(n.country),
+                        postal_code: l.default.value(n.postal_code)
                     })), m && (v = v.shippingAddress({
-                        country: d.default.value(n["shipping_address.country"]),
-                        postal_code: d.default.value(n["shipping_address.postal_code"])
+                        country: l.default.value(n["shipping_address.country"]),
+                        postal_code: l.default.value(n["shipping_address.postal_code"])
                     })), y && (v = v.tax({
-                        vat_number: d.default.value(n.vat_number),
-                        tax_code: d.default.value(n.tax_code)
+                        vat_number: l.default.value(n.vat_number),
+                        tax_code: l.default.value(n.tax_code)
                     })), this.pricing = v.done()
                 }
             }, {
                 key: "update",
                 value: function(e) {
                     var t = this.elements;
-                    d.default.value(t.currency_code, e.currency.code), d.default.value(t.currency_symbol, e.currency.symbol), d.default.value(t.plan_base, e.base.plan.unit), d.default.value(t.plan_interval, e.base.plan.interval), ["plan", "addons", "discount", "setup_fee", "subtotal", "tax", "total", "gift_card"].forEach(function(n) {
-                        d.default.value(t[n + "_now"], e.now[n]), d.default.value(t[n + "_next"], e.next[n])
+                    l.default.value(t.currency_code, e.currency.code), l.default.value(t.currency_symbol, e.currency.symbol), l.default.value(t.plan_base, e.base.plan.unit), l.default.value(t.plan_interval, e.base.plan.interval), ["plan", "addons", "discount", "setup_fee", "subtotal", "tax", "total", "gift_card"].forEach(function(n) {
+                        l.default.value(t[n + "_now"], e.now[n]), l.default.value(t[n + "_next"], e.next[n])
                     }), t.addon_price && t.addon_price.forEach(function(t) {
-                        var n = e.base.addons[d.default.data(t, "recurlyAddon")];
-                        n && d.default.value(t, n)
+                        var n = e.base.addons[l.default.data(t, "recurlyAddon")];
+                        n && l.default.value(t, n)
                     })
                 }
             }, {
@@ -21444,7 +20486,7 @@ var recurly = function(e) {
                 value: function() {
                     var e = this;
                     this.pricing.off("change", this.update), this.elements.all.forEach(function(t) {
-                        u.default.unbind(t, "change", e.change), u.default.unbind(t, "propertychange", e.change)
+                        t.removeEventListener("change", e.change), t.removeEventListener("propertychange", e.change)
                     })
                 }
             }, {
@@ -21455,35 +20497,32 @@ var recurly = function(e) {
                         all: [].slice.call(this.container.querySelectorAll("[data-recurly]"))
                     };
                     return e.all.forEach(function(t) {
-                        var n = d.default.data(t, "recurly");
+                        var n = l.default.data(t, "recurly");
                         n in e || (e[n] = []), e[n].push(t)
                     }), this._elements = e, e
                 }
             }]), e
         }();
-    t.default = g
-}, function(e, t) {
-    var n = window.addEventListener ? "addEventListener" : "attachEvent",
-        i = window.removeEventListener ? "removeEventListener" : "detachEvent",
-        r = "addEventListener" !== n ? "on" : "";
-    t.bind = function(e, t, i, o) {
-        return e[n](r + t, i, o || !1), i
-    }, t.unbind = function(e, t, n, o) {
-        return e[i](r + t, n, o || !1), n
-    }
+    t.default = f
 }, function(e, t, n) {
     "use strict";
 
-    function i(e, t) {
-        if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+    function i(e) {
+        return e && e.__esModule ? e : {
+            default: e
+        }
     }
 
     function r(e, t) {
+        if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+    }
+
+    function o(e, t) {
         if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
         return !t || "object" != typeof t && "function" != typeof t ? e : t
     }
 
-    function o(e, t) {
+    function s(e, t) {
         if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
         e.prototype = Object.create(t && t.prototype, {
             constructor: {
@@ -21495,18 +20534,14 @@ var recurly = function(e) {
         }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
     }
 
-    function s(e, t) {
+    function a(e) {
         return e = Object.assign({}, e, {
             recurly: this
-        }), e.braintree ? new h.BraintreePayPal(e) : new f(e)
-    }
-
-    function a(e, t) {
-        d("start"), this.open("/paypal/start", e, t)
+        }), new y(e)
     }
     Object.defineProperty(t, "__esModule", {
         value: !0
-    }), t.PayPal = void 0;
+    });
     var u = function() {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
@@ -21518,543 +20553,52 @@ var recurly = function(e) {
             return n && e(t.prototype, n), i && e(t, i), t
         }
     }();
-    t.factory = s, t.deprecatedPaypal = a;
-    var c = n(14),
-        l = function(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }(c),
-        h = n(48),
-        d = n(10)("recurly:paypal"),
-        f = t.PayPal = function(e) {
+    t.factory = a;
+    var c = n(46),
+        l = i(c),
+        h = n(11),
+        d = i(h),
+        f = n(47),
+        p = n(50),
+        g = n(7)("recurly:paypal"),
+        m = ["ready", "token", "error"],
+        y = function(e) {
             function t(e) {
-                i(this, t);
-                var n = r(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                return n.recurly = e.recurly, n
+                r(this, t);
+                var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+                return n.isReady = !1, n.options = e, n.once("ready", function() {
+                    return n.isReady = !0
+                }), e.braintree ? (n.strategy = new p.BraintreeStrategy(e), n.strategy.onFail(n.fallback.bind(n))) : n.strategy = new f.DirectStrategy(e), n.bindStrategy(), n
             }
-            return o(t, e), u(t, [{
-                key: "start",
+            return s(t, e), u(t, [{
+                key: "ready",
                 value: function(e) {
-                    var t = this;
-                    a.apply(this.recurly, e, function(e, n) {
-                        e ? t.error("paypal-tokenize-error", {
-                            err: e
-                        }) : t.emit("token", n)
+                    this.isReady ? e() : this.once("ready", e)
+                }
+            }, {
+                key: "start",
+                value: function() {
+                    var e;
+                    return (e = this.strategy).start.apply(e, arguments)
+                }
+            }, {
+                key: "fallback",
+                value: function() {
+                    var e = this;
+                    g("Initializing strategy fallback"), this.strategy = new f.DirectStrategy((0, l.default)(this.options, "braintree")), this.bindStrategy(), this.strategy.ready(function() {
+                        return e.emit("ready")
                     })
                 }
             }, {
-                key: "error",
+                key: "bindStrategy",
                 value: function() {
-                    var e = (arguments.length <= 0 ? void 0 : arguments[0]) instanceof Error ? arguments.length <= 0 ? void 0 : arguments[0] : errors.apply(void 0, arguments);
-                    return this.emit("error", e), e
+                    var e = this;
+                    m.forEach(function(t) {
+                        return e.strategy.on(t, e.emit.bind(e, t))
+                    })
                 }
             }]), t
-        }(l.default)
-}, function(e, t, n) {
-    (function(e) {
-        "use strict";
-
-        function i(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-
-        function r(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-        }
-
-        function o(e, t) {
-            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !t || "object" != typeof t && "function" != typeof t ? e : t
-        }
-
-        function s(e, t) {
-            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
-            e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
-                }
-            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.BraintreePayPal = void 0;
-        var a = function() {
-                function e(e, t) {
-                    for (var n = 0; n < t.length; n++) {
-                        var i = t[n];
-                        i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
-                    }
-                }
-                return function(t, n, i) {
-                    return n && e(t.prototype, n), i && e(t, i), t
-                }
-            }(),
-            u = n(49),
-            c = i(u),
-            l = n(14),
-            h = i(l),
-            d = n(15),
-            f = i(d),
-            p = n(10)("recurly:paypal:braintree");
-        t.BraintreePayPal = function(t) {
-            function n(e) {
-                r(this, n);
-                var t = o(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
-                return t.ready = !1, t.config = {}, t.configure(e), t
-            }
-            return s(n, t), a(n, [{
-                key: "configure",
-                value: function(e) {
-                    if (!e.braintree || !e.braintree.clientAuthorization) throw this.error("paypal-config-missing", {
-                        opt: "braintree.clientAuthorization"
-                    });
-                    this.config.clientAuthorization = e.braintree.clientAuthorization, this.recurly = e.recurly, this.load()
-                }
-            }, {
-                key: "load",
-                value: function() {
-                    var e = this;
-                    p("loading Braintree libraries"), (0, c.default)("https://js.braintreegateway.com/web/3.6.3/js/client.min.js", function() {
-                        (0, c.default)("https://js.braintreegateway.com/web/3.6.3/js/paypal.min.js", function() {
-                            e.initialize()
-                        })
-                    })
-                }
-            }, {
-                key: "initialize",
-                value: function() {
-                    var t = this;
-                    if (!e.braintree) return this.error("paypal-braintree-load-error");
-                    p("Initializing Braintree client");
-                    var n = this.config.clientAuthorization;
-                    braintree.client.create({
-                        authorization: n
-                    }, function(e, n) {
-                        if (e) return t.error("paypal-braintree-api-error", {
-                            error: e
-                        });
-                        p("Braintree client created"), braintree.paypal.create({
-                            client: n
-                        }, function(e, n) {
-                            if (e) return t.error("paypal-braintree-api-error", {
-                                error: e
-                            });
-                            p("PayPal client created"), t.paypal = n, t.ready = !0
-                        })
-                    })
-                }
-            }, {
-                key: "start",
-                value: function() {
-                    var e = this;
-                    if (!this.ready) return this.error("paypal-braintree-not-ready");
-                    this.paypal.tokenize({
-                        flow: "vault"
-                    }, function(t, n) {
-                        if (t) return "PAYPAL_POPUP_CLOSED" === t.code ? e.emit("cancel") : e.error("paypal-braintree-tokenize-braintree-error", {
-                            error: t
-                        });
-                        p("Token payload received", n), e.recurly.request("post", "/paypal/token", {
-                            payload: n
-                        }, function(t, n) {
-                            if (t) return e.error("paypal-braintree-tokenize-recurly-error", {
-                                error: t
-                            });
-                            e.emit("token", n)
-                        })
-                    })
-                }
-            }, {
-                key: "error",
-                value: function() {
-                    var e = (arguments.length <= 0 ? void 0 : arguments[0]) instanceof Error ? arguments.length <= 0 ? void 0 : arguments[0] : f.default.apply(void 0, arguments);
-                    return this.emit("error", e), e
-                }
-            }]), n
-        }(h.default)
-    }).call(t, function() {
-        return this
-    }())
-}, function(e, t) {
-    function n(e, t) {
-        for (var n in t) e.setAttribute(n, t[n])
-    }
-
-    function i(e, t) {
-        e.onload = function() {
-            this.onerror = this.onload = null, t(null, e)
-        }, e.onerror = function() {
-            this.onerror = this.onload = null, t(new Error("Failed to load " + this.src), e)
-        }
-    }
-
-    function r(e, t) {
-        e.onreadystatechange = function() {
-            "complete" != this.readyState && "loaded" != this.readyState || (this.onreadystatechange = null, t(null, e))
-        }
-    }
-    e.exports = function(e, t, o) {
-        var s = document.head || document.getElementsByTagName("head")[0],
-            a = document.createElement("script");
-        "function" == typeof t && (o = t, t = {}), t = t || {}, o = o || function() {}, a.type = t.type || "text/javascript", a.charset = t.charset || "utf8", a.async = !("async" in t) || !!t.async, a.src = e, t.attrs && n(a, t.attrs), t.text && (a.text = "" + t.text), ("onload" in a ? i : r)(a, o), a.onload || i(a, o), s.appendChild(a)
-    }
-}, function(e, t, n) {
-    "use strict";
-
-    function i(e) {
-        return e && e.__esModule ? e : {
-            default: e
-        }
-    }
-
-    function r(e, t) {
-        if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-    }
-
-    function o(e, t) {
-        if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        return !t || "object" != typeof t && "function" != typeof t ? e : t
-    }
-
-    function s(e, t) {
-        if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
-        e.prototype = Object.create(t && t.prototype, {
-            constructor: {
-                value: e,
-                enumerable: !1,
-                writable: !0,
-                configurable: !0
-            }
-        }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }
-    Object.defineProperty(t, "__esModule", {
-        value: !0
-    }), t.Bus = void 0;
-    var a = function() {
-            function e(e, t) {
-                for (var n = 0; n < t.length; n++) {
-                    var i = t[n];
-                    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
-                }
-            }
-            return function(t, n, i) {
-                return n && e(t.prototype, n), i && e(t, i), t
-            }
-        }(),
-        u = n(3),
-        c = i(u),
-        l = n(14),
-        h = i(l),
-        d = n(51);
-    t.Bus = function(e) {
-        function t() {
-            r(this, t);
-            var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return e.id = Math.random().toString(36).substr(2, 8), e.debug = n(10)("recurly:bus:" + e.id), e.emitters = [], e.recipients = [], e.receive = e.receive.bind(e), e.connect(), e.send = (0, c.default)(e, e.send), e
-        }
-        return s(t, e), a(t, [{
-            key: "connect",
-            value: function() {
-                window.addEventListener("message", this.receive, !1), this.debug("listening for postMessage events on", window)
-            }
-        }, {
-            key: "receive",
-            value: function(e) {
-                e.data.event && (this.debug("message received", e.data), this.send(new d.Message(e), null, {
-                    exclude: [e.srcElement]
-                }))
-            }
-        }, {
-            key: "add",
-            value: function(e) {
-                ~this.recipients.indexOf(e) || (this.recipients.push(e), "function" == typeof e.emit && e.emit("bus:added", this), this.debug("added recipient", e))
-            }
-        }, {
-            key: "send",
-            value: function(e, t) {
-                var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
-                        exclude: []
-                    },
-                    i = new d.Message(e, t);
-                n.exclude;
-                this.debug("sending message to " + this.recipients.length + " recipients", i), this.recipients.forEach(function(e) {
-                    e.postMessage ? e.postMessage(i, "*") : "function" == typeof e.emit && e.emit(i.event, i.body)
-                })
-            }
-        }, {
-            key: "stop",
-            value: function() {
-                this.recipients = [], window.removeEventListener("message", this.receive, !1)
-            }
-        }]), t
-    }(h.default)
-}, function(e, t) {
-    "use strict";
-
-    function n(e, t) {
-        if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-    }
-    Object.defineProperty(t, "__esModule", {
-        value: !0
-    });
-    var i = function() {
-        function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var i = t[n];
-                i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
-            }
-        }
-        return function(t, n, i) {
-            return n && e(t.prototype, n), i && e(t, i), t
-        }
-    }();
-    t.Message = function() {
-        function e(t) {
-            var i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            if (n(this, e), t instanceof e) return t;
-            t instanceof window.MessageEvent && (i = t.data.body, t = t.data.event), this.event = t, this.body = i
-        }
-        return i(e, [{
-            key: "format",
-            value: function() {
-                return {
-                    event: this.event,
-                    body: this.body
-                }
-            }
-        }]), e
-    }()
-}, function(e, t, n) {
-    "use strict";
-
-    function i(e) {
-        return e && e.__esModule ? e : {
-            default: e
-        }
-    }
-
-    function r(e, t) {
-        if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-    }
-
-    function o(e, t) {
-        if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        return !t || "object" != typeof t && "function" != typeof t ? e : t
-    }
-
-    function s(e, t) {
-        if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
-        e.prototype = Object.create(t && t.prototype, {
-            constructor: {
-                value: e,
-                enumerable: !1,
-                writable: !0,
-                configurable: !0
-            }
-        }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }
-    Object.defineProperty(t, "__esModule", {
-        value: !0
-    }), t.Fraud = void 0;
-    var a = function() {
-            function e(e, t) {
-                for (var n = 0; n < t.length; n++) {
-                    var i = t[n];
-                    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
-                }
-            }
-            return function(t, n, i) {
-                return n && e(t.prototype, n), i && e(t, i), t
-            }
-        }(),
-        u = n(19),
-        c = i(u),
-        l = n(14),
-        h = i(l),
-        d = n(24),
-        f = i(d),
-        p = n(15),
-        g = i(p),
-        m = n(10)("recurly:fraud");
-    t.Fraud = function(e) {
-        function t(e) {
-            r(this, t);
-            var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return n.recurly = e, n.selector = n.recurly.config.fields.number.selector, n.dataCollectorInitiated = !1, n.form = null, e.ready(n.dataCollector.bind(n)), n
-        }
-        return s(t, e), a(t, [{
-            key: "params",
-            value: function(e) {
-                if (!e) return null;
-                var t = [];
-                return this.recurly.config.fraud.kount.dataCollector && e.fraud_session_id && t.push({
-                    processor: "kount",
-                    session_id: e.fraud_session_id
-                }), this.recurly.config.fraud.litle.sessionId && t.push({
-                    processor: "litle_threat_metrix",
-                    session_id: this.recurly.config.fraud.litle.sessionId
-                }), t
-            }
-        }, {
-            key: "dataCollector",
-            value: function() {
-                var e = this;
-                this.recurly.config.fraud.kount.dataCollector && !this.dataCollectorInitiated && (this.dataCollectorInitiated = !0, this.getForm(), this.recurly.request("get", "/fraud_data_collector", function(t, n) {
-                    if (m("response from recurly data collector", t, n), t) throw (0, g.default)("fraud-data-collector-request-failed", {
-                        error: t
-                    });
-                    n.content && (e.addNodes(n.content), e.emit("ready"))
-                }))
-            }
-        }, {
-            key: "addNodes",
-            value: function(e) {
-                var t = this,
-                    n = document.createElement("div");
-                n.innerHTML = e, (0, c.default)(n.childNodes, function(e) {
-                    return t.form.appendChild(e)
-                })
-            }
-        }, {
-            key: "getForm",
-            value: function() {
-                if (this.form = f.default.findNodeInParents(window.document.querySelector(this.selector), "form"), !f.default.element(this.form)) throw (0, g.default)("fraud-data-collector-missing-form", {
-                    selector: this.selector
-                })
-            }
-        }]), t
-    }(h.default)
-}, function(e, t, n) {
-    "use strict";
-
-    function i(e) {
-        return e && e.__esModule ? e : {
-            default: e
-        }
-    }
-
-    function r(e, t) {
-        if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-    }
-
-    function o(e, t) {
-        if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        return !t || "object" != typeof t && "function" != typeof t ? e : t
-    }
-
-    function s(e, t) {
-        if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
-        e.prototype = Object.create(t && t.prototype, {
-            constructor: {
-                value: e,
-                enumerable: !1,
-                writable: !0,
-                configurable: !0
-            }
-        }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }
-    Object.defineProperty(t, "__esModule", {
-        value: !0
-    }), t.HostedFields = t.FIELD_TYPES = void 0;
-    var a = function() {
-            function e(e, t) {
-                for (var n = 0; n < t.length; n++) {
-                    var i = t[n];
-                    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
-                }
-            }
-            return function(t, n, i) {
-                return n && e(t.prototype, n), i && e(t, i), t
-            }
-        }(),
-        u = n(5),
-        c = i(u),
-        l = n(14),
-        h = i(l),
-        d = n(8),
-        f = i(d),
-        p = n(54),
-        g = i(p),
-        m = n(55),
-        y = n(15),
-        v = (i(y), n(10)("recurly:hostedFields"), ["number", "month", "year"]),
-        _ = t.FIELD_TYPES = ["cvv"].concat(v);
-    t.HostedFields = function(e) {
-        function t(e) {
-            r(this, t);
-            var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return n.ready = !1, n.state = {}, n.fields = [], n.errors = [], n.initQueue = [], n.readyState = 0, n.configure(e), n.inject(), n.on("hostedField:state:change", n.update.bind(n)), n.on("bus:added", function(e) {
-                n.bus = e, n.fields.forEach(function(t) {
-                    return e.add(t)
-                })
-            }), n
-        }
-        return s(t, e), a(t, [{
-            key: "integrityCheck",
-            value: function() {
-                return !!this.ready && (0 !== this.fields.length && !~this.fields.map(function(e) {
-                    return e.integrityCheck()
-                }).indexOf(!1))
-            }
-        }, {
-            key: "configure",
-            value: function(e) {
-                this.config = (0, c.default)(e || {})
-            }
-        }, {
-            key: "inject",
-            value: function() {
-                var e = this;
-                this.on("hostedField:ready", this.readyHandler.bind(this)), _.forEach(function(t) {
-                    try {
-                        e.fields.push(new m.HostedField(e.fieldConfig(t))), e.initQueue.push(t)
-                    } catch (n) {
-                        if ("missing-hosted-field-target" !== n.name) throw n;
-                        ~v.indexOf(t) && e.errors.push(n)
-                    }
-                }), this.on("hostedFields:configure", function() {
-                    e.fields.forEach(function(t) {
-                        e.bus && e.bus.send("hostedField:configure", e.fieldConfig(t.type))
-                    })
-                })
-            }
-        }, {
-            key: "reset",
-            value: function() {
-                this.off(), this.ready = !1, this.readyState = 0, this.fields.forEach(function(e) {
-                    return e.reset()
-                }), this.fields = [], this.errors = [], this.initQueue = []
-            }
-        }, {
-            key: "readyHandler",
-            value: function(e) {
-                var t = this.initQueue.indexOf(e.type);
-                ~t && this.initQueue.splice(t, 1), 0 === this.initQueue.length && (this.off("hostedField:ready", this.readyHandler), this.bus.send("hostedFields:ready"), this.ready = !0), this.update(e)
-            }
-        }, {
-            key: "update",
-            value: function(e) {
-                this.state[e.type] = (0, g.default)(e, "type"), this.ready && this.bus.send("hostedFields:state:change", this.state)
-            }
-        }, {
-            key: "fieldConfig",
-            value: function(e) {
-                return {
-                    type: e,
-                    selector: this.config.fields[e].selector,
-                    format: this.config.fields[e].format || this.config.fields.all.format,
-                    style: (0, f.default)({}, this.config.fields.all.style, this.config.fields[e].style),
-                    recurly: this.config
-                }
-            }
-        }]), t
-    }(h.default)
+        }(d.default)
 }, function(e, t) {
     (function(t) {
         function n(e, t, n) {
@@ -22176,7 +20720,7 @@ var recurly = function(e) {
             return this.__data__[e] = qe && void 0 === t ? ge : t, this
         }
 
-        function x(e) {
+        function k(e) {
             var t = -1,
                 n = e ? e.length : 0;
             for (this.clear(); ++t < n;) {
@@ -22185,7 +20729,7 @@ var recurly = function(e) {
             }
         }
 
-        function k() {
+        function x() {
             this.__data__ = []
         }
 
@@ -22223,7 +20767,7 @@ var recurly = function(e) {
         function E() {
             this.__data__ = {
                 hash: new m,
-                map: new(Be || x),
+                map: new($e || k),
                 string: new m
             }
         }
@@ -22309,10 +20853,10 @@ var recurly = function(e) {
         }
 
         function U(e) {
-            return !(!ce(e) || J(e)) && (ae(e) || p(e) ? Re : ke).test(ne(e))
+            return !(!ce(e) || J(e)) && (ae(e) || p(e) ? Re : xe).test(ne(e))
         }
 
-        function $(e) {
+        function B(e) {
             if (!ce(e)) return ee(e);
             var t = Z(e),
                 n = [];
@@ -22320,7 +20864,7 @@ var recurly = function(e) {
             return n
         }
 
-        function B(e, t) {
+        function $(e, t) {
             return e = Object(e), q(e, t, function(t, n) {
                 return n in e
             })
@@ -22435,7 +20979,7 @@ var recurly = function(e) {
         }
 
         function de(e) {
-            return oe(e) ? L(e, !0) : $(e)
+            return oe(e) ? L(e, !0) : B(e)
         }
 
         function fe() {
@@ -22449,8 +20993,8 @@ var recurly = function(e) {
             _e = "[object Function]",
             be = "[object GeneratorFunction]",
             we = "[object Symbol]",
-            xe = /[\\^$.*+?()[\]{}|]/g,
-            ke = /^\[object .+?Constructor\]$/,
+            ke = /[\\^$.*+?()[\]{}|]/g,
+            xe = /^\[object .+?Constructor\]$/,
             Se = /^(?:0|[1-9]\d*)$/,
             Te = "object" == typeof t && t && t.Object === Object && t,
             Ce = "object" == typeof self && self && self.Object === Object && self,
@@ -22466,17 +21010,17 @@ var recurly = function(e) {
             je = Ee.toString,
             Ie = Ae.hasOwnProperty,
             Ne = Ae.toString,
-            Re = RegExp("^" + je.call(Ie).replace(xe, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
+            Re = RegExp("^" + je.call(Ie).replace(ke, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
             Le = De.Symbol,
             Fe = g(Object.getPrototypeOf, Object),
             ze = Ae.propertyIsEnumerable,
             He = Me.splice,
             We = Le ? Le.isConcatSpreadable : void 0,
             Ue = Object.getOwnPropertySymbols,
-            $e = Math.max,
-            Be = Q(De, "Map"),
+            Be = Math.max,
+            $e = Q(De, "Map"),
             qe = Q(Object, "create");
-        m.prototype.clear = y, m.prototype.delete = v, m.prototype.get = _, m.prototype.has = b, m.prototype.set = w, x.prototype.clear = k, x.prototype.delete = S, x.prototype.get = T, x.prototype.has = C, x.prototype.set = D, M.prototype.clear = E, M.prototype.delete = A, M.prototype.get = O, M.prototype.has = P, M.prototype.set = j, I.prototype.add = I.prototype.push = N, I.prototype.has = R;
+        m.prototype.clear = y, m.prototype.delete = v, m.prototype.get = _, m.prototype.has = b, m.prototype.set = w, k.prototype.clear = x, k.prototype.delete = S, k.prototype.get = T, k.prototype.has = C, k.prototype.set = D, M.prototype.clear = E, M.prototype.delete = A, M.prototype.get = O, M.prototype.has = P, M.prototype.set = j, I.prototype.add = I.prototype.push = N, I.prototype.has = R;
         var Ye = Ue ? g(Ue, Object) : fe,
             Ve = Ue ? function(e) {
                 for (var t = []; e;) s(t, Ye(e)), e = Fe(e);
@@ -22484,20 +21028,1725 @@ var recurly = function(e) {
             } : fe,
             Qe = Array.isArray,
             Ge = function(e, t) {
-                return t = $e(void 0 === t ? e.length - 1 : t, 0),
+                return t = Be(void 0 === t ? e.length - 1 : t, 0),
                     function() {
-                        for (var i = arguments, r = -1, o = $e(i.length - t, 0), s = Array(o); ++r < o;) s[r] = i[t + r];
+                        for (var i = arguments, r = -1, o = Be(i.length - t, 0), s = Array(o); ++r < o;) s[r] = i[t + r];
                         r = -1;
                         for (var a = Array(t + 1); ++r < t;) a[r] = i[r];
                         return a[t] = s, n(e, this, a)
                     }
             }(function(e, t) {
-                return null == e ? {} : (t = o(H(t, 1), te), B(e, z(Y(e), t)))
+                return null == e ? {} : (t = o(H(t, 1), te), $(e, z(Y(e), t)))
             });
         e.exports = Ge
     }).call(t, function() {
         return this
     }())
+}, function(e, t, n) {
+    "use strict";
+
+    function i(e, t) {
+        if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+    }
+
+    function r(e, t) {
+        if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        return !t || "object" != typeof t && "function" != typeof t ? e : t
+    }
+
+    function o(e, t) {
+        if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+        e.prototype = Object.create(t && t.prototype, {
+            constructor: {
+                value: e,
+                enumerable: !1,
+                writable: !0,
+                configurable: !0
+            }
+        }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+    }
+
+    function s(e, t) {
+        l("start");
+        var n = this.Frame({
+            path: "/paypal/start",
+            payload: e
+        });
+        n.once("error", function(e) {
+            return t(e)
+        }), n.once("done", function(e) {
+            return t(null, e)
+        })
+    }
+    Object.defineProperty(t, "__esModule", {
+        value: !0
+    }), t.DirectStrategy = void 0;
+    var a = function() {
+        function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var i = t[n];
+                i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+            }
+        }
+        return function(t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t
+        }
+    }();
+    t.deprecated = s;
+    var u = n(32),
+        c = (function(e) {
+            e && e.__esModule
+        }(u), n(48)),
+        l = n(7)("recurly:paypal:strategy:direct");
+    t.DirectStrategy = function(e) {
+        function t() {
+            var e;
+            i(this, t);
+            for (var n = arguments.length, o = Array(n), s = 0; s < n; s++) o[s] = arguments[s];
+            var a = r(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)));
+            return a.emit("ready"), a
+        }
+        return o(t, e), a(t, [{
+            key: "start",
+            value: function() {
+                var e = this,
+                    t = {
+                        description: this.config.display.displayName
+                    },
+                    n = this.recurly.Frame({
+                        path: "/paypal/start",
+                        payload: t
+                    });
+                n.once("error", function(t) {
+                    return e.error("paypal-tokenize-error", {
+                        cause: t
+                    })
+                }), n.once("done", function(t) {
+                    return e.emit("token", t)
+                })
+            }
+        }]), t
+    }(c.PayPalStrategy)
+}, function(e, t, n) {
+    "use strict";
+
+    function i(e) {
+        return e && e.__esModule ? e : {
+            default: e
+        }
+    }
+
+    function r(e, t) {
+        if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+    }
+
+    function o(e, t) {
+        if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        return !t || "object" != typeof t && "function" != typeof t ? e : t
+    }
+
+    function s(e, t) {
+        if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+        e.prototype = Object.create(t && t.prototype, {
+            constructor: {
+                value: e,
+                enumerable: !1,
+                writable: !0,
+                configurable: !0
+            }
+        }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+    }
+    Object.defineProperty(t, "__esModule", {
+        value: !0
+    }), t.PayPalStrategy = void 0;
+    var a = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+            return typeof e
+        } : function(e) {
+            return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
+        },
+        u = function() {
+            function e(e, t) {
+                for (var n = 0; n < t.length; n++) {
+                    var i = t[n];
+                    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                }
+            }
+            return function(t, n, i) {
+                return n && e(t.prototype, n), i && e(t, i), t
+            }
+        }(),
+        c = n(49),
+        l = i(c),
+        h = n(11),
+        d = i(h),
+        f = n(1),
+        p = n(28),
+        g = i(p),
+        m = n(12),
+        y = i(m),
+        v = n(7)("recurly:paypal:strategy"),
+        _ = ["amount", "currency", "displayName", "locale", "enableShippingAddress", "shippingAddressOverride", "shippingAddressEditable", "billingAgreementDescription", "landingPageType"],
+        b = {
+            display: {
+                locale: "en_US"
+            }
+        };
+    t.PayPalStrategy = function(e) {
+        function t(e) {
+            r(this, t);
+            var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+            return n.isReady = !1, n.config = {}, n.once("ready", function() {
+                return n.isReady = !0
+            }), n.configure(e), n
+        }
+        return s(t, e), u(t, [{
+            key: "ready",
+            value: function(e) {
+                this.isReady ? e() : this.once("ready", e)
+            }
+        }, {
+            key: "configure",
+            value: function(e) {
+                var t = this;
+                if (!(e.recurly instanceof f.Recurly)) throw this.error("paypal-factory-only");
+                this.recurly = e.recurly, this.config.display = {}, "object" === a(e.display) && (this.config.display = (0, l.default)(e.display, _)), this.config.display.locale || (this.config.display.locale = b.display.locale), e.pricing instanceof g.default && (this.pricing = e.pricing, this.pricing.price && (this.config.display.amount = this.pricing.price.now.total, this.config.display.currency = this.pricing.price.currency.code), this.pricing.on("change", function(e) {
+                    t.config.display.amount = e.now.total, t.config.display.currency = e.currency.code
+                }))
+            }
+        }, {
+            key: "initialize",
+            value: function() {
+                v("Method 'initialize' not implemented")
+            }
+        }, {
+            key: "start",
+            value: function() {
+                v("Method 'start' not implemented")
+            }
+        }, {
+            key: "cancel",
+            value: function() {
+                this.emit("cancel")
+            }
+        }, {
+            key: "onFail",
+            value: function(e) {
+                this.failure ? e() : this.once("fail", e)
+            }
+        }, {
+            key: "fail",
+            value: function(e, t) {
+                if (!this.failure) {
+                    v("Failure scenario encountered", e, t);
+                    var n = this.failure = this.error(e, t);
+                    this.emit("fail", n)
+                }
+            }
+        }, {
+            key: "error",
+            value: function() {
+                var e = (arguments.length <= 0 ? void 0 : arguments[0]) instanceof Error ? arguments.length <= 0 ? void 0 : arguments[0] : y.default.apply(void 0, arguments);
+                return this.emit("error", e), e
+            }
+        }]), t
+    }(d.default)
+}, function(e, t) {
+    (function(t) {
+        function n(e, t, n) {
+            switch (n.length) {
+                case 0:
+                    return e.call(t);
+                case 1:
+                    return e.call(t, n[0]);
+                case 2:
+                    return e.call(t, n[0], n[1]);
+                case 3:
+                    return e.call(t, n[0], n[1], n[2])
+            }
+            return e.apply(t, n)
+        }
+
+        function i(e, t) {
+            for (var n = -1, i = e ? e.length : 0, r = Array(i); ++n < i;) r[n] = t(e[n], n, e);
+            return r
+        }
+
+        function r(e, t) {
+            for (var n = -1, i = t.length, r = e.length; ++n < i;) e[r + n] = t[n];
+            return e
+        }
+
+        function o(e, t, n, i, s) {
+            var a = -1,
+                c = e.length;
+            for (n || (n = u), s || (s = []); ++a < c;) {
+                var l = e[a];
+                t > 0 && n(l) ? t > 1 ? o(l, t - 1, n, i, s) : r(s, l) : i || (s[s.length] = l)
+            }
+            return s
+        }
+
+        function s(e, t) {
+            return e = Object(e), a(e, t, function(t, n) {
+                return n in e
+            })
+        }
+
+        function a(e, t, n) {
+            for (var i = -1, r = t.length, o = {}; ++i < r;) {
+                var s = t[i],
+                    a = e[s];
+                n(a, s) && (o[s] = a)
+            }
+            return o
+        }
+
+        function u(e) {
+            return I(e) || l(e) || !!(P && e && e[P])
+        }
+
+        function c(e) {
+            if ("string" == typeof e || y(e)) return e;
+            var t = e + "";
+            return "0" == t && 1 / e == -v ? "-0" : t
+        }
+
+        function l(e) {
+            return d(e) && M.call(e, "callee") && (!O.call(e, "callee") || E.call(e) == b)
+        }
+
+        function h(e) {
+            return null != e && p(e.length) && !f(e)
+        }
+
+        function d(e) {
+            return m(e) && h(e)
+        }
+
+        function f(e) {
+            var t = g(e) ? E.call(e) : "";
+            return t == w || t == k
+        }
+
+        function p(e) {
+            return "number" == typeof e && e > -1 && e % 1 == 0 && e <= _
+        }
+
+        function g(e) {
+            var t = typeof e;
+            return !!e && ("object" == t || "function" == t)
+        }
+
+        function m(e) {
+            return !!e && "object" == typeof e
+        }
+
+        function y(e) {
+            return "symbol" == typeof e || m(e) && E.call(e) == x
+        }
+        var v = 1 / 0,
+            _ = 9007199254740991,
+            b = "[object Arguments]",
+            w = "[object Function]",
+            k = "[object GeneratorFunction]",
+            x = "[object Symbol]",
+            S = "object" == typeof t && t && t.Object === Object && t,
+            T = "object" == typeof self && self && self.Object === Object && self,
+            C = S || T || Function("return this")(),
+            D = Object.prototype,
+            M = D.hasOwnProperty,
+            E = D.toString,
+            A = C.Symbol,
+            O = D.propertyIsEnumerable,
+            P = A ? A.isConcatSpreadable : void 0,
+            j = Math.max,
+            I = Array.isArray,
+            N = function(e, t) {
+                return t = j(void 0 === t ? e.length - 1 : t, 0),
+                    function() {
+                        for (var i = arguments, r = -1, o = j(i.length - t, 0), s = Array(o); ++r < o;) s[r] = i[t + r];
+                        r = -1;
+                        for (var a = Array(t + 1); ++r < t;) a[r] = i[r];
+                        return a[t] = s, n(e, this, a)
+                    }
+            }(function(e, t) {
+                return null == e ? {} : s(e, i(o(t, 1), c))
+            });
+        e.exports = N
+    }).call(t, function() {
+        return this
+    }())
+}, function(e, t, n) {
+    (function(e) {
+        "use strict";
+
+        function i(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+
+        function r(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function o(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function s(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.BraintreeStrategy = t.BRAINTREE_CLIENT_VERSION = void 0;
+        var a = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var i = t[n];
+                        i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                    }
+                }
+                return function(t, n, i) {
+                    return n && e(t.prototype, n), i && e(t, i), t
+                }
+            }(),
+            u = function e(t, n, i) {
+                null === t && (t = Function.prototype);
+                var r = Object.getOwnPropertyDescriptor(t, n);
+                if (void 0 === r) {
+                    var o = Object.getPrototypeOf(t);
+                    return null === o ? void 0 : e(o, n, i)
+                }
+                if ("value" in r) return r.value;
+                var s = r.get;
+                if (void 0 !== s) return s.call(i)
+            },
+            c = n(51),
+            l = i(c),
+            h = n(52),
+            d = i(h),
+            f = n(48),
+            p = n(7)("recurly:paypal:strategy:braintree"),
+            g = t.BRAINTREE_CLIENT_VERSION = "3.11.0";
+        t.BraintreeStrategy = function(t) {
+            function n() {
+                var e;
+                r(this, n);
+                for (var t = arguments.length, i = Array(t), s = 0; s < t; s++) i[s] = arguments[s];
+                var a = o(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(i)));
+                return a.load(), a
+            }
+            return s(n, t), a(n, [{
+                key: "configure",
+                value: function(e) {
+                    if (u(n.prototype.__proto__ || Object.getPrototypeOf(n.prototype), "configure", this).call(this, e), !e.braintree || !e.braintree.clientAuthorization) throw this.error("paypal-config-missing", {
+                        opt: "braintree.clientAuthorization"
+                    });
+                    this.config.clientAuthorization = e.braintree.clientAuthorization
+                }
+            }, {
+                key: "load",
+                value: function() {
+                    var e = this;
+                    p("loading Braintree libraries");
+                    var t = this.initialize.bind(this),
+                        n = (0, l.default)(2, t),
+                        i = function(t) {
+                            var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function() {},
+                                i = "https://js.braintreegateway.com/web/" + g + "/js/" + t + ".min.js";
+                            (0, d.default)(i, function(t) {
+                                t ? e.error("paypal-load-error", {
+                                    cause: t
+                                }) : n()
+                            })
+                        },
+                        r = function() {
+                            e.braintreeClientAvailable("paypal") ? n() : i("paypal", n), e.braintreeClientAvailable("dataCollector") ? n() : i("data-collector", n)
+                        };
+                    this.braintreeClientAvailable() ? r() : i("client", r)
+                }
+            }, {
+                key: "initialize",
+                value: function() {
+                    var t = this;
+                    p("Initializing Braintree client");
+                    var n = this.config.clientAuthorization,
+                        i = e.braintree;
+                    i.client.create({
+                        authorization: n
+                    }, function(e, n) {
+                        if (e) return t.fail("paypal-braintree-api-error", {
+                            cause: e
+                        });
+                        p("Braintree client created"), i.dataCollector.create({
+                            client: n,
+                            paypal: !0
+                        }, function(e, r) {
+                            if (e) return t.fail("paypal-braintree-api-error", {
+                                cause: e
+                            });
+                            p("Device data collector created"), t.deviceFingerprint = r.deviceData, i.paypal.create({
+                                client: n
+                            }, function(e, n) {
+                                if (e) return t.fail("paypal-braintree-api-error", {
+                                    error: e
+                                });
+                                p("PayPal client created"), t.paypal = n, t.emit("ready")
+                            })
+                        })
+                    })
+                }
+            }, {
+                key: "start",
+                value: function() {
+                    var e = this,
+                        t = Object.assign({}, this.config.display, {
+                            flow: "vault"
+                        });
+                    this.paypal.tokenize(t, function(t, n) {
+                        if (t) return "PAYPAL_POPUP_CLOSED" === t.code ? e.emit("cancel") : e.error("paypal-braintree-tokenize-braintree-error", {
+                            error: t
+                        });
+                        p("Token payload received", n), e.deviceFingerprint && (n.deviceFingerprint = e.deviceFingerprint), e.recurly.request("post", "/paypal/token", {
+                            type: "braintree",
+                            payload: n
+                        }, function(t, n) {
+                            if (t) return e.error("paypal-braintree-tokenize-recurly-error", {
+                                error: t
+                            });
+                            e.emit("token", n)
+                        })
+                    })
+                }
+            }, {
+                key: "braintreeClientAvailable",
+                value: function(t) {
+                    var n = e.braintree;
+                    return n && n.client && n.client.VERSION === g && (!t || t in n)
+                }
+            }]), n
+        }(f.PayPalStrategy)
+    }).call(t, function() {
+        return this
+    }())
+}, function(e, t) {
+    function n(e, t) {
+        if ("function" != typeof t) throw new TypeError(c);
+        return e = a(e),
+            function() {
+                if (--e < 1) return t.apply(this, arguments)
+            }
+    }
+
+    function i(e) {
+        var t = typeof e;
+        return !!e && ("object" == t || "function" == t)
+    }
+
+    function r(e) {
+        return !!e && "object" == typeof e
+    }
+
+    function o(e) {
+        return "symbol" == typeof e || r(e) && b.call(e) == f
+    }
+
+    function s(e) {
+        if (!e) return 0 === e ? e : 0;
+        if ((e = u(e)) === l || e === -l) {
+            return (e < 0 ? -1 : 1) * h
+        }
+        return e === e ? e : 0
+    }
+
+    function a(e) {
+        var t = s(e),
+            n = t % 1;
+        return t === t ? n ? t - n : t : 0
+    }
+
+    function u(e) {
+        if ("number" == typeof e) return e;
+        if (o(e)) return d;
+        if (i(e)) {
+            var t = "function" == typeof e.valueOf ? e.valueOf() : e;
+            e = i(t) ? t + "" : t
+        }
+        if ("string" != typeof e) return 0 === e ? e : +e;
+        e = e.replace(p, "");
+        var n = m.test(e);
+        return n || y.test(e) ? v(e.slice(2), n ? 2 : 8) : g.test(e) ? d : +e
+    }
+    var c = "Expected a function",
+        l = 1 / 0,
+        h = 1.7976931348623157e308,
+        d = NaN,
+        f = "[object Symbol]",
+        p = /^\s+|\s+$/g,
+        g = /^[-+]0x[0-9a-f]+$/i,
+        m = /^0b[01]+$/i,
+        y = /^0o[0-7]+$/i,
+        v = parseInt,
+        _ = Object.prototype,
+        b = _.toString;
+    e.exports = n
+}, function(e, t) {
+    function n(e, t) {
+        for (var n in t) e.setAttribute(n, t[n])
+    }
+
+    function i(e, t) {
+        e.onload = function() {
+            this.onerror = this.onload = null, t(null, e)
+        }, e.onerror = function() {
+            this.onerror = this.onload = null, t(new Error("Failed to load " + this.src), e)
+        }
+    }
+
+    function r(e, t) {
+        e.onreadystatechange = function() {
+            "complete" != this.readyState && "loaded" != this.readyState || (this.onreadystatechange = null, t(null, e))
+        }
+    }
+    e.exports = function(e, t, o) {
+        var s = document.head || document.getElementsByTagName("head")[0],
+            a = document.createElement("script");
+        "function" == typeof t && (o = t, t = {}), t = t || {}, o = o || function() {}, a.type = t.type || "text/javascript", a.charset = t.charset || "utf8", a.async = !("async" in t) || !!t.async, a.src = e, t.attrs && n(a, t.attrs), t.text && (a.text = "" + t.text), ("onload" in a ? i : r)(a, o), a.onload || i(a, o), s.appendChild(a)
+    }
+}, function(e, t, n) {
+    (function(e) {
+        "use strict";
+
+        function i(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function r(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function o(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+        }
+
+        function s(t) {
+            var n = e.document.createElement("a");
+            return n.href = t, n.protocol + "//" + n.host
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.Bus = void 0;
+        var a = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var i = t[n];
+                        i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                    }
+                }
+                return function(t, n, i) {
+                    return n && e(t.prototype, n), i && e(t, i), t
+                }
+            }(),
+            u = n(11),
+            c = function(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                }
+            }(u),
+            l = n(54),
+            h = n(26);
+        t.Bus = function(e) {
+            function t() {
+                var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+                i(this, t);
+                var o = r(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+                return o.id = (0, h.uuid)(), o.debug = n(7)("recurly:bus:" + o.id), o.emitters = [], o.recipients = [], o.receive = o.receive.bind(o), o.config = {
+                    api: e.api
+                }, o.connect(), o.send = o.send.bind(o), o
+            }
+            return o(t, e), a(t, [{
+                key: "connect",
+                value: function() {
+                    window.addEventListener("message", this.receive, !1), this.debug("listening for postMessage events on", window)
+                }
+            }, {
+                key: "receive",
+                value: function(e) {
+                    if (this.originMatches(e.origin)) return "string" == typeof e.data ? this.receiveFromRelay(e) : void(e.data.event && (this.debug("message received", e.data), this.send(new l.Message(e), null, {
+                        exclude: [e.srcElement]
+                    })))
+                }
+            }, {
+                key: "receiveFromRelay",
+                value: function(e) {
+                    try {
+                        var t = JSON.parse(e.data);
+                        this.send(new l.Message(t.recurly_event, t.recurly_message))
+                    } catch (t) {
+                        this.debug("failed to parse a string message", t, e)
+                    }
+                }
+            }, {
+                key: "add",
+                value: function(e) {
+                    ~this.recipients.indexOf(e) || (this.recipients.push(e), "function" == typeof e.emit && e.emit("bus:added", this), this.debug("added recipient", e))
+                }
+            }, {
+                key: "send",
+                value: function(e, t) {
+                    var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+                            exclude: []
+                        },
+                        i = new l.Message(e, t);
+                    n.exclude;
+                    this.debug("sending message to " + this.recipients.length + " recipients", i), this.recipients.forEach(function(e) {
+                        e.postMessage ? e.postMessage(i, "*") : "function" == typeof e.emit && e.emit(i.event, i.body)
+                    })
+                }
+            }, {
+                key: "stop",
+                value: function() {
+                    this.recipients = [], window.removeEventListener("message", this.receive, !1)
+                }
+            }, {
+                key: "originMatches",
+                value: function(e) {
+                    return s(e) === s(this.config.api)
+                }
+            }]), t
+        }(c.default)
+    }).call(t, function() {
+        return this
+    }())
+}, function(e, t) {
+    "use strict";
+
+    function n(e, t) {
+        if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+    }
+    Object.defineProperty(t, "__esModule", {
+        value: !0
+    });
+    var i = function() {
+        function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var i = t[n];
+                i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+            }
+        }
+        return function(t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t
+        }
+    }();
+    t.Message = function() {
+        function e(t) {
+            var i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            if (n(this, e), t instanceof e) return t;
+            t instanceof window.MessageEvent && (i = t.data.body, t = t.data.event), this.event = t, this.body = i
+        }
+        return i(e, [{
+            key: "format",
+            value: function() {
+                return {
+                    event: this.event,
+                    body: this.body
+                }
+            }
+        }]), e
+    }()
+}, function(e, t, n) {
+    "use strict";
+
+    function i(e) {
+        return e && e.__esModule ? e : {
+            default: e
+        }
+    }
+
+    function r(e, t) {
+        if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+    }
+
+    function o(e, t) {
+        if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        return !t || "object" != typeof t && "function" != typeof t ? e : t
+    }
+
+    function s(e, t) {
+        if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+        e.prototype = Object.create(t && t.prototype, {
+            constructor: {
+                value: e,
+                enumerable: !1,
+                writable: !0,
+                configurable: !0
+            }
+        }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+    }
+    Object.defineProperty(t, "__esModule", {
+        value: !0
+    }), t.Fraud = void 0;
+    var a = function() {
+            function e(e, t) {
+                for (var n = 0; n < t.length; n++) {
+                    var i = t[n];
+                    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                }
+            }
+            return function(t, n, i) {
+                return n && e(t.prototype, n), i && e(t, i), t
+            }
+        }(),
+        u = n(16),
+        c = i(u),
+        l = n(11),
+        h = i(l),
+        d = n(20),
+        f = i(d),
+        p = n(12),
+        g = i(p),
+        m = n(7)("recurly:fraud");
+    t.Fraud = function(e) {
+        function t(e) {
+            r(this, t);
+            var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+            return n.recurly = e, n.selector = n.recurly.config.fields.number.selector, n.dataCollectorInitiated = !1, n.form = null, e.ready(n.dataCollector.bind(n)), n
+        }
+        return s(t, e), a(t, [{
+            key: "params",
+            value: function(e) {
+                if (!e) return null;
+                var t = [];
+                return this.recurly.config.fraud.kount.dataCollector && e.fraud_session_id && t.push({
+                    processor: "kount",
+                    session_id: e.fraud_session_id
+                }), this.recurly.config.fraud.litle.sessionId && t.push({
+                    processor: "litle_threat_metrix",
+                    session_id: this.recurly.config.fraud.litle.sessionId
+                }), t
+            }
+        }, {
+            key: "dataCollector",
+            value: function() {
+                var e = this;
+                this.recurly.config.fraud.kount.dataCollector && !this.dataCollectorInitiated && (this.dataCollectorInitiated = !0, this.getForm(), this.recurly.request("get", "/fraud_data_collector", function(t, n) {
+                    if (m("response from recurly data collector", t, n), t) throw (0, g.default)("fraud-data-collector-request-failed", {
+                        error: t
+                    });
+                    n.content && (e.addNodes(n.content), e.emit("ready"))
+                }))
+            }
+        }, {
+            key: "addNodes",
+            value: function(e) {
+                var t = this,
+                    n = document.createElement("div");
+                n.innerHTML = e, (0, c.default)(n.childNodes, function(e) {
+                    return t.form.appendChild(e)
+                })
+            }
+        }, {
+            key: "getForm",
+            value: function() {
+                if (this.form = f.default.findNodeInParents(window.document.querySelector(this.selector), "form"), !f.default.element(this.form)) throw (0, g.default)("fraud-data-collector-missing-form", {
+                    selector: this.selector
+                })
+            }
+        }]), t
+    }(h.default)
+}, function(e, t, n) {
+    "use strict";
+
+    function i(e) {
+        return e && e.__esModule ? e : {
+            default: e
+        }
+    }
+
+    function r(e, t) {
+        if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+    }
+
+    function o(e, t) {
+        if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        return !t || "object" != typeof t && "function" != typeof t ? e : t
+    }
+
+    function s(e, t) {
+        if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+        e.prototype = Object.create(t && t.prototype, {
+            constructor: {
+                value: e,
+                enumerable: !1,
+                writable: !0,
+                configurable: !0
+            }
+        }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+    }
+    Object.defineProperty(t, "__esModule", {
+        value: !0
+    }), t.HostedFields = t.FIELD_TYPES = void 0;
+    var a = function() {
+            function e(e, t) {
+                for (var n = 0; n < t.length; n++) {
+                    var i = t[n];
+                    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                }
+            }
+            return function(t, n, i) {
+                return n && e(t.prototype, n), i && e(t, i), t
+            }
+        }(),
+        u = n(3),
+        c = i(u),
+        l = n(11),
+        h = i(l),
+        d = n(4),
+        f = i(d),
+        p = n(46),
+        g = i(p),
+        m = n(57),
+        y = i(m),
+        v = n(58),
+        _ = n(12),
+        b = (i(_), n(7)("recurly:hostedFields"), ["number", "month", "year"]),
+        w = t.FIELD_TYPES = ["cvv"].concat(b);
+    t.HostedFields = function(e) {
+        function t(e) {
+            r(this, t);
+            var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+            return n.ready = !1, n.state = {}, n.fields = [], n.errors = [], n.initQueue = [], n.readyState = 0, n.configure(e), n.inject(), n.on("hostedField:state:change", n.update.bind(n)), n.on("bus:added", function(e) {
+                n.bus = e, n.fields.forEach(function(t) {
+                    return e.add(t)
+                })
+            }), n
+        }
+        return s(t, e), a(t, [{
+            key: "integrityCheck",
+            value: function(e) {
+                if (!this.ready) return !1;
+                if (0 === this.fields.length) return !1;
+                if (e) {
+                    if ((0, y.default)(e, function(e) {
+                            return e.selector
+                        }).join("") !== (0, y.default)(this.config.recurly.fields, function(e) {
+                            return e.selector
+                        }).join("")) return !1
+                }
+                return !~this.fields.map(function(e) {
+                    return e.integrityCheck()
+                }).indexOf(!1)
+            }
+        }, {
+            key: "configure",
+            value: function(e) {
+                this.config = (0, c.default)(e || {})
+            }
+        }, {
+            key: "inject",
+            value: function() {
+                var e = this;
+                this.on("hostedField:ready", this.readyHandler.bind(this)), w.forEach(function(t) {
+                    try {
+                        e.fields.push(new v.HostedField(e.fieldConfig(t))), e.initQueue.push(t)
+                    } catch (n) {
+                        if ("missing-hosted-field-target" !== n.name) throw n;
+                        ~b.indexOf(t) && e.errors.push(n)
+                    }
+                }), this.on("hostedFields:configure", function() {
+                    e.fields.forEach(function(t) {
+                        e.bus && e.bus.send("hostedField:configure", e.fieldConfig(t.type))
+                    })
+                })
+            }
+        }, {
+            key: "reset",
+            value: function() {
+                this.off(), this.ready = !1, this.readyState = 0, this.fields.forEach(function(e) {
+                    return e.reset()
+                }), this.fields = [], this.errors = [], this.initQueue = []
+            }
+        }, {
+            key: "readyHandler",
+            value: function(e) {
+                var t = this.initQueue.indexOf(e.type);
+                ~t && this.initQueue.splice(t, 1), 0 === this.initQueue.length && (this.off("hostedField:ready", this.readyHandler), this.bus.send("hostedFields:ready"), this.ready = !0), this.update(e)
+            }
+        }, {
+            key: "update",
+            value: function(e) {
+                this.state[e.type] = (0, g.default)(e, "type"), this.ready && this.bus.send("hostedFields:state:change", this.state)
+            }
+        }, {
+            key: "fieldConfig",
+            value: function(e) {
+                var t = this.config.recurly.fields;
+                return {
+                    type: e,
+                    selector: t[e].selector,
+                    format: t[e].format || t.all.format,
+                    style: (0, f.default)({}, t.all.style, t[e].style),
+                    recurly: this.config.recurly
+                }
+            }
+        }]), t
+    }(h.default)
+}, function(e, t, n) {
+    (function(e, n) {
+        function i(e, t) {
+            for (var n = -1, i = e ? e.length : 0, r = Array(i); ++n < i;) r[n] = t(e[n], n, e);
+            return r
+        }
+
+        function r(e, t) {
+            for (var n = -1, i = e ? e.length : 0; ++n < i;)
+                if (t(e[n], n, e)) return !0;
+            return !1
+        }
+
+        function o(e) {
+            return function(t) {
+                return null == t ? void 0 : t[e]
+            }
+        }
+
+        function s(e, t) {
+            for (var n = -1, i = Array(e); ++n < e;) i[n] = t(n);
+            return i
+        }
+
+        function a(e, t) {
+            return null == e ? void 0 : e[t]
+        }
+
+        function u(e) {
+            var t = !1;
+            if (null != e && "function" != typeof e.toString) try {
+                t = !!(e + "")
+            } catch (e) {}
+            return t
+        }
+
+        function c(e) {
+            var t = -1,
+                n = Array(e.size);
+            return e.forEach(function(e, i) {
+                n[++t] = [i, e]
+            }), n
+        }
+
+        function l(e) {
+            var t = -1,
+                n = Array(e.size);
+            return e.forEach(function(e) {
+                n[++t] = e
+            }), n
+        }
+
+        function h(e) {
+            var t = -1,
+                n = e ? e.length : 0;
+            for (this.clear(); ++t < n;) {
+                var i = e[t];
+                this.set(i[0], i[1])
+            }
+        }
+
+        function d() {
+            this.__data__ = Ut ? Ut(null) : {}
+        }
+
+        function f(e) {
+            return this.has(e) && delete this.__data__[e]
+        }
+
+        function p(e) {
+            var t = this.__data__;
+            if (Ut) {
+                var n = t[e];
+                return n === Fe ? void 0 : n
+            }
+            return Et.call(t, e) ? t[e] : void 0
+        }
+
+        function g(e) {
+            var t = this.__data__;
+            return Ut ? void 0 !== t[e] : Et.call(t, e)
+        }
+
+        function m(e, t) {
+            return this.__data__[e] = Ut && void 0 === t ? Fe : t, this
+        }
+
+        function y(e) {
+            var t = -1,
+                n = e ? e.length : 0;
+            for (this.clear(); ++t < n;) {
+                var i = e[t];
+                this.set(i[0], i[1])
+            }
+        }
+
+        function v() {
+            this.__data__ = []
+        }
+
+        function _(e) {
+            var t = this.__data__,
+                n = z(t, e);
+            return !(n < 0) && (n == t.length - 1 ? t.pop() : Nt.call(t, n, 1), !0)
+        }
+
+        function b(e) {
+            var t = this.__data__,
+                n = z(t, e);
+            return n < 0 ? void 0 : t[n][1]
+        }
+
+        function w(e) {
+            return z(this.__data__, e) > -1
+        }
+
+        function k(e, t) {
+            var n = this.__data__,
+                i = z(n, e);
+            return i < 0 ? n.push([e, t]) : n[i][1] = t, this
+        }
+
+        function x(e) {
+            var t = -1,
+                n = e ? e.length : 0;
+            for (this.clear(); ++t < n;) {
+                var i = e[t];
+                this.set(i[0], i[1])
+            }
+        }
+
+        function S() {
+            this.__data__ = {
+                hash: new h,
+                map: new(Ft || y),
+                string: new h
+            }
+        }
+
+        function T(e) {
+            return se(this, e).delete(e)
+        }
+
+        function C(e) {
+            return se(this, e).get(e)
+        }
+
+        function D(e) {
+            return se(this, e).has(e)
+        }
+
+        function M(e, t) {
+            return se(this, e).set(e, t), this
+        }
+
+        function E(e) {
+            var t = -1,
+                n = e ? e.length : 0;
+            for (this.__data__ = new x; ++t < n;) this.add(e[t])
+        }
+
+        function A(e) {
+            return this.__data__.set(e, Fe), this
+        }
+
+        function O(e) {
+            return this.__data__.has(e)
+        }
+
+        function P(e) {
+            this.__data__ = new y(e)
+        }
+
+        function j() {
+            this.__data__ = new y
+        }
+
+        function I(e) {
+            return this.__data__.delete(e)
+        }
+
+        function N(e) {
+            return this.__data__.get(e)
+        }
+
+        function R(e) {
+            return this.__data__.has(e)
+        }
+
+        function L(e, t) {
+            var n = this.__data__;
+            if (n instanceof y) {
+                var i = n.__data__;
+                if (!Ft || i.length < Re - 1) return i.push([e, t]), this;
+                n = this.__data__ = new x(i)
+            }
+            return n.set(e, t), this
+        }
+
+        function F(e, t) {
+            var n = tn(e) || ke(e) ? s(e.length, String) : [],
+                i = n.length,
+                r = !!i;
+            for (var o in e) !t && !Et.call(e, o) || r && ("length" == o || le(o, i)) || n.push(o);
+            return n
+        }
+
+        function z(e, t) {
+            for (var n = e.length; n--;)
+                if (we(e[n][0], t)) return n;
+            return -1
+        }
+
+        function H(e, t) {
+            return e && Jt(e, t, je)
+        }
+
+        function W(e, t) {
+            t = he(t, e) ? [t] : ne(t);
+            for (var n = 0, i = t.length; null != e && n < i;) e = e[ye(t[n++])];
+            return n && n == i ? e : void 0
+        }
+
+        function U(e) {
+            return At.call(e)
+        }
+
+        function B(e, t) {
+            return null != e && t in Object(e)
+        }
+
+        function $(e, t, n, i, r) {
+            return e === t || (null == e || null == t || !De(e) && !Me(t) ? e !== e && t !== t : q(e, t, $, n, i, r))
+        }
+
+        function q(e, t, n, i, r, o) {
+            var s = tn(e),
+                a = tn(t),
+                c = $e,
+                l = $e;
+            s || (c = Zt(e), c = c == Be ? Je : c), a || (l = Zt(t), l = l == Be ? Je : l);
+            var h = c == Je && !u(e),
+                d = l == Je && !u(t),
+                f = c == l;
+            if (f && !h) return o || (o = new P), s || nn(e) ? ie(e, t, n, i, r, o) : re(e, t, c, n, i, r, o);
+            if (!(r & He)) {
+                var p = h && Et.call(e, "__wrapped__"),
+                    g = d && Et.call(t, "__wrapped__");
+                if (p || g) {
+                    var m = p ? e.value() : e,
+                        y = g ? t.value() : t;
+                    return o || (o = new P), n(m, y, i, r, o)
+                }
+            }
+            return !!f && (o || (o = new P), oe(e, t, n, i, r, o))
+        }
+
+        function Y(e, t, n, i) {
+            var r = n.length,
+                o = r,
+                s = !i;
+            if (null == e) return !o;
+            for (e = Object(e); r--;) {
+                var a = n[r];
+                if (s && a[2] ? a[1] !== e[a[0]] : !(a[0] in e)) return !1
+            }
+            for (; ++r < o;) {
+                a = n[r];
+                var u = a[0],
+                    c = e[u],
+                    l = a[1];
+                if (s && a[2]) {
+                    if (void 0 === c && !(u in e)) return !1
+                } else {
+                    var h = new P;
+                    if (i) var d = i(c, l, u, e, t, h);
+                    if (!(void 0 === d ? $(l, c, i, ze | He, h) : d)) return !1
+                }
+            }
+            return !0
+        }
+
+        function V(e) {
+            return !(!De(e) || fe(e)) && (Te(e) || u(e) ? Ot : ht).test(ve(e))
+        }
+
+        function Q(e) {
+            return Me(e) && Ce(e.length) && !!ft[At.call(e)]
+        }
+
+        function G(e) {
+            return "function" == typeof e ? e : null == e ? Ie : "object" == typeof e ? tn(e) ? Z(e[0], e[1]) : J(e) : Ne(e)
+        }
+
+        function X(e) {
+            if (!pe(e)) return Rt(e);
+            var t = [];
+            for (var n in Object(e)) Et.call(e, n) && "constructor" != n && t.push(n);
+            return t
+        }
+
+        function K(e, t) {
+            var n = -1,
+                i = xe(e) ? Array(e.length) : [];
+            return Kt(e, function(e, r, o) {
+                i[++n] = t(e, r, o)
+            }), i
+        }
+
+        function J(e) {
+            var t = ae(e);
+            return 1 == t.length && t[0][2] ? me(t[0][0], t[0][1]) : function(n) {
+                return n === e || Y(n, e, t)
+            }
+        }
+
+        function Z(e, t) {
+            return he(e) && ge(t) ? me(ye(e), t) : function(n) {
+                var i = Oe(n, e);
+                return void 0 === i && i === t ? Pe(n, e) : $(t, i, void 0, ze | He)
+            }
+        }
+
+        function ee(e) {
+            return function(t) {
+                return W(t, e)
+            }
+        }
+
+        function te(e) {
+            if ("string" == typeof e) return e;
+            if (Ee(e)) return Xt ? Xt.call(e) : "";
+            var t = e + "";
+            return "0" == t && 1 / e == -We ? "-0" : t
+        }
+
+        function ne(e) {
+            return tn(e) ? e : en(e)
+        }
+
+        function ie(e, t, n, i, o, s) {
+            var a = o & He,
+                u = e.length,
+                c = t.length;
+            if (u != c && !(a && c > u)) return !1;
+            var l = s.get(e);
+            if (l && s.get(t)) return l == t;
+            var h = -1,
+                d = !0,
+                f = o & ze ? new E : void 0;
+            for (s.set(e, t), s.set(t, e); ++h < u;) {
+                var p = e[h],
+                    g = t[h];
+                if (i) var m = a ? i(g, p, h, t, e, s) : i(p, g, h, e, t, s);
+                if (void 0 !== m) {
+                    if (m) continue;
+                    d = !1;
+                    break
+                }
+                if (f) {
+                    if (!r(t, function(e, t) {
+                            if (!f.has(t) && (p === e || n(p, e, i, o, s))) return f.add(t)
+                        })) {
+                        d = !1;
+                        break
+                    }
+                } else if (p !== g && !n(p, g, i, o, s)) {
+                    d = !1;
+                    break
+                }
+            }
+            return s.delete(e), s.delete(t), d
+        }
+
+        function re(e, t, n, i, r, o, s) {
+            switch (n) {
+                case rt:
+                    if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) return !1;
+                    e = e.buffer, t = t.buffer;
+                case it:
+                    return !(e.byteLength != t.byteLength || !i(new jt(e), new jt(t)));
+                case qe:
+                case Ye:
+                case Ke:
+                    return we(+e, +t);
+                case Ve:
+                    return e.name == t.name && e.message == t.message;
+                case Ze:
+                case tt:
+                    return e == t + "";
+                case Xe:
+                    var a = c;
+                case et:
+                    var u = o & He;
+                    if (a || (a = l), e.size != t.size && !u) return !1;
+                    var h = s.get(e);
+                    if (h) return h == t;
+                    o |= ze, s.set(e, t);
+                    var d = ie(a(e), a(t), i, r, o, s);
+                    return s.delete(e), d;
+                case nt:
+                    if (Gt) return Gt.call(e) == Gt.call(t)
+            }
+            return !1
+        }
+
+        function oe(e, t, n, i, r, o) {
+            var s = r & He,
+                a = je(e),
+                u = a.length;
+            if (u != je(t).length && !s) return !1;
+            for (var c = u; c--;) {
+                var l = a[c];
+                if (!(s ? l in t : Et.call(t, l))) return !1
+            }
+            var h = o.get(e);
+            if (h && o.get(t)) return h == t;
+            var d = !0;
+            o.set(e, t), o.set(t, e);
+            for (var f = s; ++c < u;) {
+                l = a[c];
+                var p = e[l],
+                    g = t[l];
+                if (i) var m = s ? i(g, p, l, t, e, o) : i(p, g, l, e, t, o);
+                if (!(void 0 === m ? p === g || n(p, g, i, r, o) : m)) {
+                    d = !1;
+                    break
+                }
+                f || (f = "constructor" == l)
+            }
+            if (d && !f) {
+                var y = e.constructor,
+                    v = t.constructor;
+                y != v && "constructor" in e && "constructor" in t && !("function" == typeof y && y instanceof y && "function" == typeof v && v instanceof v) && (d = !1)
+            }
+            return o.delete(e), o.delete(t), d
+        }
+
+        function se(e, t) {
+            var n = e.__data__;
+            return de(t) ? n["string" == typeof t ? "string" : "hash"] : n.map
+        }
+
+        function ae(e) {
+            for (var t = je(e), n = t.length; n--;) {
+                var i = t[n],
+                    r = e[i];
+                t[n] = [i, r, ge(r)]
+            }
+            return t
+        }
+
+        function ue(e, t) {
+            var n = a(e, t);
+            return V(n) ? n : void 0
+        }
+
+        function ce(e, t, n) {
+            t = he(t, e) ? [t] : ne(t);
+            for (var i, r = -1, o = t.length; ++r < o;) {
+                var s = ye(t[r]);
+                if (!(i = null != e && n(e, s))) break;
+                e = e[s]
+            }
+            if (i) return i;
+            var o = e ? e.length : 0;
+            return !!o && Ce(o) && le(s, o) && (tn(e) || ke(e))
+        }
+
+        function le(e, t) {
+            return !!(t = null == t ? Ue : t) && ("number" == typeof e || dt.test(e)) && e > -1 && e % 1 == 0 && e < t
+        }
+
+        function he(e, t) {
+            if (tn(e)) return !1;
+            var n = typeof e;
+            return !("number" != n && "symbol" != n && "boolean" != n && null != e && !Ee(e)) || (st.test(e) || !ot.test(e) || null != t && e in Object(t))
+        }
+
+        function de(e) {
+            var t = typeof e;
+            return "string" == t || "number" == t || "symbol" == t || "boolean" == t ? "__proto__" !== e : null === e
+        }
+
+        function fe(e) {
+            return !!Dt && Dt in e
+        }
+
+        function pe(e) {
+            var t = e && e.constructor;
+            return e === ("function" == typeof t && t.prototype || Tt)
+        }
+
+        function ge(e) {
+            return e === e && !De(e)
+        }
+
+        function me(e, t) {
+            return function(n) {
+                return null != n && (n[e] === t && (void 0 !== t || e in Object(n)))
+            }
+        }
+
+        function ye(e) {
+            if ("string" == typeof e || Ee(e)) return e;
+            var t = e + "";
+            return "0" == t && 1 / e == -We ? "-0" : t
+        }
+
+        function ve(e) {
+            if (null != e) {
+                try {
+                    return Mt.call(e)
+                } catch (e) {}
+                try {
+                    return e + ""
+                } catch (e) {}
+            }
+            return ""
+        }
+
+        function _e(e, t) {
+            return (tn(e) ? i : K)(e, G(t, 3))
+        }
+
+        function be(e, t) {
+            if ("function" != typeof e || t && "function" != typeof t) throw new TypeError(Le);
+            var n = function() {
+                var i = arguments,
+                    r = t ? t.apply(this, i) : i[0],
+                    o = n.cache;
+                if (o.has(r)) return o.get(r);
+                var s = e.apply(this, i);
+                return n.cache = o.set(r, s), s
+            };
+            return n.cache = new(be.Cache || x), n
+        }
+
+        function we(e, t) {
+            return e === t || e !== e && t !== t
+        }
+
+        function ke(e) {
+            return Se(e) && Et.call(e, "callee") && (!It.call(e, "callee") || At.call(e) == Be)
+        }
+
+        function xe(e) {
+            return null != e && Ce(e.length) && !Te(e)
+        }
+
+        function Se(e) {
+            return Me(e) && xe(e)
+        }
+
+        function Te(e) {
+            var t = De(e) ? At.call(e) : "";
+            return t == Qe || t == Ge
+        }
+
+        function Ce(e) {
+            return "number" == typeof e && e > -1 && e % 1 == 0 && e <= Ue
+        }
+
+        function De(e) {
+            var t = typeof e;
+            return !!e && ("object" == t || "function" == t)
+        }
+
+        function Me(e) {
+            return !!e && "object" == typeof e
+        }
+
+        function Ee(e) {
+            return "symbol" == typeof e || Me(e) && At.call(e) == nt
+        }
+
+        function Ae(e) {
+            return null == e ? "" : te(e)
+        }
+
+        function Oe(e, t, n) {
+            var i = null == e ? void 0 : W(e, t);
+            return void 0 === i ? n : i
+        }
+
+        function Pe(e, t) {
+            return null != e && ce(e, t, B)
+        }
+
+        function je(e) {
+            return xe(e) ? F(e) : X(e)
+        }
+
+        function Ie(e) {
+            return e
+        }
+
+        function Ne(e) {
+            return he(e) ? o(ye(e)) : ee(e)
+        }
+        var Re = 200,
+            Le = "Expected a function",
+            Fe = "__lodash_hash_undefined__",
+            ze = 1,
+            He = 2,
+            We = 1 / 0,
+            Ue = 9007199254740991,
+            Be = "[object Arguments]",
+            $e = "[object Array]",
+            qe = "[object Boolean]",
+            Ye = "[object Date]",
+            Ve = "[object Error]",
+            Qe = "[object Function]",
+            Ge = "[object GeneratorFunction]",
+            Xe = "[object Map]",
+            Ke = "[object Number]",
+            Je = "[object Object]",
+            Ze = "[object RegExp]",
+            et = "[object Set]",
+            tt = "[object String]",
+            nt = "[object Symbol]",
+            it = "[object ArrayBuffer]",
+            rt = "[object DataView]",
+            ot = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+            st = /^\w*$/,
+            at = /^\./,
+            ut = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
+            ct = /[\\^$.*+?()[\]{}|]/g,
+            lt = /\\(\\)?/g,
+            ht = /^\[object .+?Constructor\]$/,
+            dt = /^(?:0|[1-9]\d*)$/,
+            ft = {};
+        ft["[object Float32Array]"] = ft["[object Float64Array]"] = ft["[object Int8Array]"] = ft["[object Int16Array]"] = ft["[object Int32Array]"] = ft["[object Uint8Array]"] = ft["[object Uint8ClampedArray]"] = ft["[object Uint16Array]"] = ft["[object Uint32Array]"] = !0, ft[Be] = ft[$e] = ft[it] = ft[qe] = ft[rt] = ft[Ye] = ft[Ve] = ft[Qe] = ft[Xe] = ft[Ke] = ft[Je] = ft[Ze] = ft[et] = ft[tt] = ft["[object WeakMap]"] = !1;
+        var pt = "object" == typeof e && e && e.Object === Object && e,
+            gt = "object" == typeof self && self && self.Object === Object && self,
+            mt = pt || gt || Function("return this")(),
+            yt = "object" == typeof t && t && !t.nodeType && t,
+            vt = yt && "object" == typeof n && n && !n.nodeType && n,
+            _t = vt && vt.exports === yt,
+            bt = _t && pt.process,
+            wt = function() {
+                try {
+                    return bt && bt.binding("util")
+                } catch (e) {}
+            }(),
+            kt = wt && wt.isTypedArray,
+            xt = Array.prototype,
+            St = Function.prototype,
+            Tt = Object.prototype,
+            Ct = mt["__core-js_shared__"],
+            Dt = function() {
+                var e = /[^.]+$/.exec(Ct && Ct.keys && Ct.keys.IE_PROTO || "");
+                return e ? "Symbol(src)_1." + e : ""
+            }(),
+            Mt = St.toString,
+            Et = Tt.hasOwnProperty,
+            At = Tt.toString,
+            Ot = RegExp("^" + Mt.call(Et).replace(ct, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
+            Pt = mt.Symbol,
+            jt = mt.Uint8Array,
+            It = Tt.propertyIsEnumerable,
+            Nt = xt.splice,
+            Rt = function(e, t) {
+                return function(n) {
+                    return e(t(n))
+                }
+            }(Object.keys, Object),
+            Lt = ue(mt, "DataView"),
+            Ft = ue(mt, "Map"),
+            zt = ue(mt, "Promise"),
+            Ht = ue(mt, "Set"),
+            Wt = ue(mt, "WeakMap"),
+            Ut = ue(Object, "create"),
+            Bt = ve(Lt),
+            $t = ve(Ft),
+            qt = ve(zt),
+            Yt = ve(Ht),
+            Vt = ve(Wt),
+            Qt = Pt ? Pt.prototype : void 0,
+            Gt = Qt ? Qt.valueOf : void 0,
+            Xt = Qt ? Qt.toString : void 0;
+        h.prototype.clear = d, h.prototype.delete = f, h.prototype.get = p, h.prototype.has = g, h.prototype.set = m, y.prototype.clear = v, y.prototype.delete = _, y.prototype.get = b, y.prototype.has = w, y.prototype.set = k, x.prototype.clear = S, x.prototype.delete = T, x.prototype.get = C, x.prototype.has = D, x.prototype.set = M, E.prototype.add = E.prototype.push = A, E.prototype.has = O, P.prototype.clear = j, P.prototype.delete = I, P.prototype.get = N, P.prototype.has = R, P.prototype.set = L;
+        var Kt = function(e, t) {
+                return function(n, i) {
+                    if (null == n) return n;
+                    if (!xe(n)) return e(n, i);
+                    for (var r = n.length, o = t ? r : -1, s = Object(n);
+                        (t ? o-- : ++o < r) && !1 !== i(s[o], o, s););
+                    return n
+                }
+            }(H),
+            Jt = function(e) {
+                return function(t, n, i) {
+                    for (var r = -1, o = Object(t), s = i(t), a = s.length; a--;) {
+                        var u = s[e ? a : ++r];
+                        if (!1 === n(o[u], u, o)) break
+                    }
+                    return t
+                }
+            }(),
+            Zt = U;
+        (Lt && Zt(new Lt(new ArrayBuffer(1))) != rt || Ft && Zt(new Ft) != Xe || zt && "[object Promise]" != Zt(zt.resolve()) || Ht && Zt(new Ht) != et || Wt && "[object WeakMap]" != Zt(new Wt)) && (Zt = function(e) {
+            var t = At.call(e),
+                n = t == Je ? e.constructor : void 0,
+                i = n ? ve(n) : void 0;
+            if (i) switch (i) {
+                case Bt:
+                    return rt;
+                case $t:
+                    return Xe;
+                case qt:
+                    return "[object Promise]";
+                case Yt:
+                    return et;
+                case Vt:
+                    return "[object WeakMap]"
+            }
+            return t
+        });
+        var en = be(function(e) {
+            e = Ae(e);
+            var t = [];
+            return at.test(e) && t.push(""), e.replace(ut, function(e, n, i, r) {
+                t.push(i ? r.replace(lt, "$1") : n || e)
+            }), t
+        });
+        be.Cache = x;
+        var tn = Array.isArray,
+            nn = kt ? function(e) {
+                return function(t) {
+                    return e(t)
+                }
+            }(kt) : Q;
+        n.exports = _e
+    }).call(t, function() {
+        return this
+    }(), n(5)(e))
 }, function(e, t, n) {
     (function(e) {
         "use strict";
@@ -22542,17 +22791,15 @@ var recurly = function(e) {
                     return n && e(t.prototype, n), i && e(t, i), t
                 }
             }(),
-            u = n(14),
+            u = n(11),
             c = i(u),
-            l = n(46),
+            l = n(3),
             h = i(l),
-            d = n(5),
+            d = n(20),
             f = i(d),
-            p = n(24),
-            g = i(p),
-            m = n(15),
-            y = i(m);
-        n(10)("recurly:hostedField"), t.HostedField = function(t) {
+            p = n(12),
+            g = i(p);
+        n(7)("recurly:hostedField"), t.HostedField = function(t) {
             function n(e) {
                 r(this, n);
                 var t = o(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
@@ -22570,11 +22817,11 @@ var recurly = function(e) {
             }, {
                 key: "configure",
                 value: function(t) {
-                    if (t = (0, f.default)(t), this.target = g.default.element(e.document.querySelector(t.selector)), !this.target) {
+                    if (t = (0, h.default)(t), this.target = f.default.element(e.document.querySelector(t.selector)), !this.target) {
                         var n = t,
                             i = n.type,
                             r = n.selector;
-                        throw (0, y.default)("missing-hosted-field-target", {
+                        throw (0, g.default)("missing-hosted-field-target", {
                             type: i,
                             selector: r
                         })
@@ -22584,7 +22831,7 @@ var recurly = function(e) {
             }, {
                 key: "inject",
                 value: function() {
-                    this.target.innerHTML = '\n      <div class="' + this.classList() + '">\n        <iframe\n          src="' + this.url() + '"\n          border="0"\n          frameborder="0"\n          allowtransparency="true"\n          scrolling="no">\n        </iframe>\n      </div>\n    ', this.container = this.target.children[0], this.iframe = this.container.children[0], this.window = this.iframe.contentWindow, this.iframe.style.height = "100%", this.iframe.style.width = "100%", this.iframe.style.background = "transparent"
+                    this.target.innerHTML = '\n      <div class="' + this.classList + '">\n        <iframe\n          src="' + this.url + '"\n          border="0"\n          frameborder="0"\n          allowtransparency="true"\n          scrolling="no">\n        </iframe>\n      </div>\n    ', this.container = this.target.children[0], this.iframe = this.container.children[0], this.window = this.iframe.contentWindow, this.iframe.style.height = "100%", this.iframe.style.width = "100%", this.iframe.style.background = "transparent"
                 }
             }, {
                 key: "bindLabel",
@@ -22593,7 +22840,7 @@ var recurly = function(e) {
                     if (this.target.id) {
                         var n = e.document.querySelectorAll("label[for=" + this.target.id + "]");
                         [].slice.apply(n).forEach(function(e) {
-                            h.default.bind(e, "click", t.focus)
+                            e.addEventListener("click", t.focus)
                         })
                     }
                 }
@@ -22605,7 +22852,7 @@ var recurly = function(e) {
             }, {
                 key: "update",
                 value: function() {
-                    this.container.className = this.classList()
+                    this.container.className = this.classList
                 }
             }, {
                 key: "onFocus",
@@ -22628,22 +22875,22 @@ var recurly = function(e) {
                     this.bus && this.bus.send("hostedField:" + this.type + ":focus!")
                 }
             }, {
-                key: "classList",
-                value: function() {
-                    var e = "recurly-hosted-field",
-                        t = [e];
-                    return t.push(e + "-" + this.config.type), this.isFocused && (t.push(e + "-focus"), t.push(e + "-" + this.config.type + "-focus")), t.join(" ")
+                key: "type",
+                get: function() {
+                    return this.config.type
                 }
             }, {
                 key: "url",
-                value: function() {
+                get: function() {
                     var e = encodeURIComponent(JSON.stringify(this.config));
                     return this.config.recurly.api + "/field.html#config=" + e
                 }
             }, {
-                key: "type",
+                key: "classList",
                 get: function() {
-                    return this.config.type
+                    var e = "recurly-hosted-field",
+                        t = [e];
+                    return t.push(e + "-" + this.config.type), this.isFocused && (t.push(e + "-focus"), t.push(e + "-" + this.config.type + "-focus")), t.join(" ")
                 }
             }]), n
         }(c.default)
@@ -22668,47 +22915,11 @@ var recurly = function(e) {
     Object.defineProperty(t, "__esModule", {
         value: !0
     }), t.default = r;
-    var o = n(4),
+    var o = n(2),
         s = i(o),
-        a = n(15),
+        a = n(12),
         u = i(a),
-        c = n(10)("recurly:giftcard")
-}, function(e, t, n) {
-    "use strict";
-
-    function i(e, t, n) {
-        if (a("open"), !1 === this.configured) throw s("not-configured");
-        "function" == r(t) && (n = t, t = {}), t = t || {}, t.version = this.version, t.event = "recurly-open-" + this.id++, t.key = this.config.publicKey, this.once(t.event, n), /^https?:\/\//.test(e) || (e = this.url(e)), e += (~e.indexOf("?") ? "&" : "?") + o.stringify(t), this.relay(function() {
-            window.open(e)
-        })
-    }
-    var r = n(4),
-        o = n(13),
-        s = n(15),
-        a = n(10)("recurly:open");
-    e.exports = i
-}, function(e, t, n) {
-    "use strict";
-
-    function i(e) {
-        var t = this;
-        if (a("relay"), !1 === this.configured) throw s("not-configured");
-        if (o.bind(window, "message", function e(i) {
-                var r = JSON.parse(i.data),
-                    a = r.recurly_event,
-                    u = r.recurly_message,
-                    c = u.error ? s("api-error", u.error) : null;
-                o.unbind(window, "message", e), a && t.emit(a, c, u), n && document.body.removeChild(n)
-            }), "documentMode" in document) {
-            var n = document.createElement("iframe");
-            n.width = n.height = 0, n.src = this.url("/relay"), n.name = "recurly_relay", n.style.display = "none", n.onload = r(this, e), document.body.appendChild(n)
-        } else e()
-    }
-    var r = n(3),
-        o = n(46),
-        s = n(15),
-        a = n(10)("recurly:relay");
-    e.exports = i
+        c = n(7)("recurly:giftcard")
 }, function(e, t, n) {
     "use strict";
 
@@ -22719,9 +22930,9 @@ var recurly = function(e) {
         if (!("coupon" in e)) throw s("missing-coupon");
         this.request("get", "/plans/" + e.plan + "/coupons/" + e.coupon, e, t)
     }
-    var r = n(4),
-        o = n(10)("recurly:coupon"),
-        s = n(15);
+    var r = n(2),
+        o = n(7)("recurly:coupon"),
+        s = n(12);
     e.exports = i
 }, function(e, t, n) {
     "use strict";
@@ -22731,8 +22942,8 @@ var recurly = function(e) {
         if ("undefined" == r(e)) return t(new Error("Missing plan code"));
         this.request("get", "/plans/" + e, t)
     }
-    var r = n(4),
-        o = n(10)("recurly:plan");
+    var r = n(2),
+        o = n(7)("recurly:plan");
     e.exports = i
 }, function(e, t, n) {
     "use strict";
@@ -22742,8 +22953,8 @@ var recurly = function(e) {
         if ("function" != r(t)) throw new Error("Missing callback");
         "currency" in n || (n.currency = this.config.currency), this.request("get", "/tax", n, t)
     }
-    var r = n(4),
-        o = n(5);
+    var r = n(2),
+        o = n(3);
     e.exports = i
 }, function(e, t, n) {
     "use strict";
@@ -22759,13 +22970,13 @@ var recurly = function(e) {
             if (e) return t(e);
             i.fields.token && n.id && (i.fields.token.value = n.id), t(null, n)
         }
-        g("token");
-        var i = (0, d.normalize)(m, e, {
+        f("token");
+        var i = (0, l.normalize)(p, e, {
                 parseCard: !0
             }),
             r = i.values;
-        if (!this.configured) throw (0, p.default)("not-configured");
-        if ("function" !== (0, c.default)(t)) throw (0, p.default)("missing-callback");
+        if (!this.configured) throw (0, d.default)("not-configured");
+        if ("function" !== (0, c.default)(t)) throw (0, d.default)("missing-callback");
         if (this.config.parent) {
             if (r.fraud = this.fraud.params(r), this.hostedFields.errors.length) throw this.hostedFields.errors[0];
             var s = Math.floor(1e10 * Math.random());
@@ -22777,7 +22988,7 @@ var recurly = function(e) {
             })
         } else {
             var a = o.call(this, r);
-            if (a.length) return t((0, p.default)("validation", {
+            if (a.length) return t((0, d.default)("validation", {
                 fields: a
             }));
             this.request("post", "/token", r, n)
@@ -22786,33 +22997,25 @@ var recurly = function(e) {
 
     function o(e) {
         var t = [];
-        return this.validate.cardNumber(e.number) || t.push("number"), this.validate.expiry(e.month, e.year) || t.push("month", "year"), e.first_name || t.push("first_name"), e.last_name || t.push("last_name"), !~(0, h.default)(this.config.required, "cvv") && !e.cvv || this.validate.cvv(e.cvv) || t.push("cvv"), (0, a.default)(this.config.required, function(n) {
-            !e[n] && ~(0, h.default)(m, n) && t.push(n)
-        }), g("validate errors", t), t
+        return this.validate.cardNumber(e.number) || t.push("number"), this.validate.expiry(e.month, e.year) || t.push("month", "year"), e.first_name || t.push("first_name"), e.last_name || t.push("last_name"), !~this.config.required.indexOf("cvv") && !e.cvv || this.validate.cvv(e.cvv) || t.push("cvv"), (0, a.default)(this.config.required, function(n) {
+            !e[n] && ~p.indexOf(n) && t.push(n)
+        }), f("validate errors", t), t
     }
-    var s = n(19),
+    var s = n(16),
         a = i(s),
-        u = n(4),
+        u = n(2),
         c = i(u),
-        l = n(23),
-        h = i(l),
-        d = n(22),
-        f = n(15),
-        p = i(f),
-        g = n(10)("recurly:token");
+        l = n(19),
+        h = n(12),
+        d = i(h),
+        f = n(7)("recurly:token");
     e.exports = r;
-    var m = ["first_name", "last_name", "address1", "address2", "country", "city", "state", "postal_code", "phone", "vat_number", "fraud_session_id", "token"]
+    var p = ["first_name", "last_name", "address1", "address2", "country", "city", "state", "postal_code", "phone", "vat_number", "fraud_session_id", "token"]
 }, function(e, t, n) {
     "use strict";
 
     function i(e) {
-        return e && e.__esModule ? e : {
-            default: e
-        }
-    }
-
-    function r(e) {
-        var t = (0, p.parseCard)(e),
+        var t = (0, c.parseCard)(e),
             n = void 0,
             i = 0,
             r = 1,
@@ -22822,37 +23025,37 @@ var recurly = function(e) {
         return i % 10 == 0 && i > 0
     }
 
-    function o(e) {
+    function r(e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = (0, p.parseCard)(e),
+            n = (0, c.parseCard)(e),
             i = n.length,
-            r = (0, c.default)(g, function(e) {
-                return e.pattern.test(n) && (t || ~(0, f.default)(e.lengths, i))
+            r = (0, u.default)(l, function(e) {
+                return e.pattern.test(n) && (t || ~e.lengths.indexOf(i))
             });
         return r && r.type || "unknown"
     }
 
-    function s(e, t) {
+    function o(e, t) {
         if ((e = Number(e) - 1) < 0 || e > 11) return !1;
         t = Number(t), t += t < 100 ? 2e3 : 0;
         var n = new Date;
         return n.setYear(t), n.setDate(1), n.setHours(0), n.setMinutes(0), n.setSeconds(0), n.setMonth(e + 1), new Date < n
     }
 
-    function a(e) {
-        return e = (0, h.default)(e + ""), !!~[3, 4].indexOf(e.length) && /^\d+$/.test(e)
+    function s(e) {
+        return e = String(e).trim(), !!~[3, 4].indexOf(e.length) && /^\d+$/.test(e)
     }
     Object.defineProperty(t, "__esModule", {
         value: !0
-    }), t.cardNumber = r, t.cardType = o, t.expiry = s, t.cvv = a;
-    var u = n(31),
-        c = i(u),
-        l = n(64),
-        h = i(l),
-        d = n(23),
-        f = i(d),
-        p = n(28),
-        g = [{
+    }), t.cardNumber = i, t.cardType = r, t.expiry = o, t.cvv = s;
+    var a = n(29),
+        u = function(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }(a),
+        c = n(24),
+        l = [{
             type: "discover",
             pattern: /^(6011|622|64[4-9]|65)/,
             lengths: [16]
@@ -22882,15 +23085,6 @@ var recurly = function(e) {
             pattern: /^(30[0-5]|309|36|3[89]|54|55|2014|2149)/,
             lengths: [14]
         }]
-}, function(e, t) {
-    function n(e) {
-        return e.replace(/^\s*|\s*$/g, "")
-    }
-    t = e.exports = n, t.left = function(e) {
-        return e.replace(/^\s*/, "")
-    }, t.right = function(e) {
-        return e.replace(/\s*$/, "")
-    }
 }]);
 ! function e(t, n, i) {
     function r(e) {
