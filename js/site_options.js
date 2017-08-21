@@ -1547,7 +1547,7 @@ window.SiteOptions = {
         },
         "8a1fbb7b-4b26-4d3c-8ad6-bbfeb72831f8": {
             "name": "VODS_IN_CAROUSEL_EXPERIMENT",
-            "v": 1665,
+            "v": 1855,
             "t": 1,
             "groups": [{
                 "weight": 100,
