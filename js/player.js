@@ -14024,7 +14024,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.21-211532+53dcd9120d2ff717fa88193964e4c4c28339af5f",
+                    app_version: "2017.08.21-213016+3f2361603efcf693531fc6d3016cd33a0a427e56",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -49066,6 +49066,7 @@
                 isLoading: !1,
                 muted: !1,
                 paused: !1,
+                playing: !1,
                 playbackRate: 1,
                 restrictedQualityError: !1,
                 volume: .5,
@@ -49073,6 +49074,7 @@
                 contentShowing: !1
             },
             y = {
+                playing: !0,
                 hasPlayed: !0,
                 paused: !1,
                 ended: !1
@@ -49081,10 +49083,12 @@
                 ended: !1
             },
             E = {
+                playing: !1,
                 paused: !0,
                 ended: !1
             },
             b = {
+                playing: !1,
                 paused: !0,
                 ended: !0
             },
@@ -49092,6 +49096,7 @@
                 contentShowing: !0
             },
             S = {
+                playing: !1,
                 hasPlayed: !1,
                 contentShowing: !1,
                 bufferEmpties: 0
