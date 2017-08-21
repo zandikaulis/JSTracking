@@ -15660,7 +15660,8 @@ googletag.cmd = googletag.cmd || [],
                 VODS_IN_CAROUSEL_EXPERIMENT: "8a1fbb7b-4b26-4d3c-8ad6-bbfeb72831f8",
                 SIGNUP_INTERCEPT: "676f7ba1-6f07-4782-adc2-99eaf7e04361",
                 TWILIGHT_UPSELL: "49f40b88-2044-409d-b306-2eb308489a60",
-                CHOMPIFY: "48e86f7b-7550-4561-9782-9dfe0796b1f3"
+                CHOMPIFY: "48e86f7b-7550-4561-9782-9dfe0796b1f3",
+                EXTENSIONS_LAUNCH_ANNOUNCEMENT: "8620d12c-8e03-48d8-92ab-65a8d542a17d"
             },
             r = {
                 "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458": "no",
@@ -15720,7 +15721,8 @@ googletag.cmd = googletag.cmd || [],
                 "8a1fbb7b-4b26-4d3c-8ad6-bbfeb72831f8": "control",
                 "676f7ba1-6f07-4782-adc2-99eaf7e04361": "control",
                 "49f40b88-2044-409d-b306-2eb308489a60": "control",
-                "48e86f7b-7550-4561-9782-9dfe0796b1f3": "control"
+                "48e86f7b-7550-4561-9782-9dfe0796b1f3": "control",
+                "8620d12c-8e03-48d8-92ab-65a8d542a17d": "no"
             },
             o = {},
             s = {
