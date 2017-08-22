@@ -14023,7 +14023,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.22-144604+75f16f720e6d715084b3130115c0c78eef66d993",
+                    app_version: "2017.08.22-151810+3030bea206c5c7e584ab74e78264f1043f165446",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -42324,11 +42324,13 @@
             "Revoke Access": "Revoke Access",
             "You are granting the following access:": "You are granting the following access:",
             "You are revoking the following access:": "You are revoking the following access:",
+            "Allows this extension to know your User ID on Twitch. Used to show your personal cheering stats for this channel.": "Allows this extension to know your User ID on Twitch. Used to show your personal cheering stats for this channel.",
             "Allows this interaction to know your User ID on Twitch. Used to show your personal cheering stats for this channel.": "Allows this interaction to know your User ID on Twitch. Used to show your personal cheering stats for this channel.",
             "View Details": "View Details",
             "Manage Access": "Manage Access",
             Access: "Access",
             Granted: "Granted",
+            "Active Extensions": "Active Extensions",
             "Active Interactions": "Active Interactions"
         }
     }, function(e, t, n) {
@@ -44510,8 +44512,7 @@
                 subTitle: ""
             },
             h = (0, d.default)("collection-sidebar-item__number", "pl-flex__item", "qa-collection-item-number"),
-            _ = (0,
-                d.default)("collection-sidebar-item__thumbnail", "pl-flex__item", "qa-collection-item-thumbnail"),
+            _ = (0, d.default)("collection-sidebar-item__thumbnail", "pl-flex__item", "qa-collection-item-thumbnail"),
             v = (0, d.default)("collection-sidebar-item-detail", "pl-flex__item"),
             m = (0, d.default)("collection-sidebar-item-detail__title", "qa-collection-item-title"),
             y = t.CollectionSidebarItem = function(e) {
