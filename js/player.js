@@ -7977,7 +7977,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.EXTENSIONLESS_PLAYER_TYPES = t.EXTENSION_MENU_REPORT = t.EXTENSION_MENU_MANAGE_ACCESS = t.EXTENSION_MENU_DETAILS = t.EXTENSION_MENU_MAIN = t.EXTENSION_ROLE_BROADCASTER = t.EXTENSION_ROLE_VIEWER = t.EXTENSION_PERMISSION_STATE_GRANTED = t.EXTENSION_PERMISSION_STATE_NONE = void 0;
+        }), t.EXTENSIONLESS_PLAYER_TYPES = t.EXTENSION_HIDDEN_ANCHOR = t.EXTENSION_MENU_REPORT = t.EXTENSION_MENU_MANAGE_ACCESS = t.EXTENSION_MENU_DETAILS = t.EXTENSION_MENU_MAIN = t.EXTENSION_ROLE_BROADCASTER = t.EXTENSION_ROLE_VIEWER = t.EXTENSION_PERMISSION_STATE_GRANTED = t.EXTENSION_PERMISSION_STATE_NONE = void 0;
         var s;
         t.parseExtensionToken = a;
         var u = n(117),
@@ -7987,7 +7987,7 @@
             f = t.EXTENSION_PERMISSION_STATE_NONE = "none",
             p = t.EXTENSION_PERMISSION_STATE_GRANTED = "granted",
             h = t.EXTENSION_ROLE_VIEWER = "viewer",
-            _ = (t.EXTENSION_ROLE_BROADCASTER = "broadcaster", t.EXTENSION_MENU_MAIN = "main menu", t.EXTENSION_MENU_DETAILS = "extension details", t.EXTENSION_MENU_MANAGE_ACCESS = "extension manage access", t.EXTENSION_MENU_REPORT = "extension report", {
+            _ = (t.EXTENSION_ROLE_BROADCASTER = "broadcaster", t.EXTENSION_MENU_MAIN = "main menu", t.EXTENSION_MENU_DETAILS = "extension details", t.EXTENSION_MENU_MANAGE_ACCESS = "extension manage access", t.EXTENSION_MENU_REPORT = "extension report", t.EXTENSION_HIDDEN_ANCHOR = "hidden", {
                 permissionsState: f,
                 role: h
             });
@@ -10258,8 +10258,8 @@
                                 },
                                 onSeekStart: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
-                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().isSeeking() ? e.getPlaylist().getClip().isCollectingSeekingTime() || (e.getPlaylist().getClip().setSeekingTimestamp(t), e.getPlaylist().getClip().setCollectingSeekingTime(!0)) : e.getPlaylist().getClip().incrementSeeks(), e.getPlaylist().getClip().isSeeking() || (e.getPlaylist().getClip().setSeeking(!0),
-                                        e.getPlaylist().getClip().setCollectingSeekingTime(!0), e.getPlaylist().getClip().setSeekStartPosition(r), e.getPlaylist().getClip().setSeekingTimestamp(t))
+                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().isSeeking() ? e.getPlaylist().getClip().isCollectingSeekingTime() || (e.getPlaylist().getClip().setSeekingTimestamp(t), e.getPlaylist().getClip().setCollectingSeekingTime(!0)) : e.getPlaylist().getClip().incrementSeeks(),
+                                        e.getPlaylist().getClip().isSeeking() || (e.getPlaylist().getClip().setSeeking(!0), e.getPlaylist().getClip().setCollectingSeekingTime(!0), e.getPlaylist().getClip().setSeekStartPosition(r), e.getPlaylist().getClip().setSeekingTimestamp(t))
                                 },
                                 onPause: function(t, n) {
                                     e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && (e.getPlaylist().getClip().addSeekingTime(t), e.getPlaylist().getClip().setCollectingSeekingTime(!1))
@@ -10605,8 +10605,7 @@
                                 },
                                 newPseudoEvent: function(e, t, n) {
                                     if (e != u.LOAD && e != u.START || o.getStateMachine().getCurrentState() == l.IDLE) {
-                                        e != u.ERROR || n.ns_st_er || (n.ns_st_er = s.UNKNOWN_VALUE), o.getStateMachine().getCurrentState() != l.IDLE && o.getStateMachine().getCurrentState() != l.PLAYBACK_NOT_STARTED && o.getStateMachine().getCurrentState() != l.SEEKING_BEFORE_PLAYBACK && o.getStateMachine().getCurrentState() != l.BUFFERING_BEFORE_PLAYBACK && (o.getPlaylist().getClip().addElapsedTime(t),
-                                            o.getPlaylist().getClip().setElapsedTimestamp(t));
+                                        e != u.ERROR || n.ns_st_er || (n.ns_st_er = s.UNKNOWN_VALUE), o.getStateMachine().getCurrentState() != l.IDLE && o.getStateMachine().getCurrentState() != l.PLAYBACK_NOT_STARTED && o.getStateMachine().getCurrentState() != l.SEEKING_BEFORE_PLAYBACK && o.getStateMachine().getCurrentState() != l.BUFFERING_BEFORE_PLAYBACK && (o.getPlaylist().getClip().addElapsedTime(t), o.getPlaylist().getClip().setElapsedTimestamp(t));
                                         var r, i, a, c = !0,
                                             d = !1;
                                         switch (e) {
@@ -12013,8 +12012,8 @@
             return new _.default({
                 defaults: (t = {}, i(t, b, "no"), i(t, T, "no"), i(t, S, "no"), i(t, C, "no"), i(t, w, "no"), i(t, A, "no"), i(t, k, "no"), i(t, P, "no"), i(t, O, "no"), i(t, N, "no"), i(t, I, "no"), i(t, R, "no"), i(t, M, "control"), i(t, D, "1.8.10"), i(t, L, "no"), i(t, x, "no"), i(t, j, "keep"), i(t, U, "pad_control"), i(t, B, "no"), i(t, F, "no"), i(t, V, "control"), i(t, H, "no"), i(t, q, "control"), i(t, G, "control"), i(t, Y, "control"), i(t, W, "2.0.0"), t),
                 deviceID: e.deviceID,
-                overrides: (0, d.default)((n = {}, i(n, M, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), i(n, T, a(["US"])), i(n, S, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, A, a(["SE"])), i(n, k, a(["DK", "FI", "NL", "NO"])), i(n, P, a(["CA"])), i(n, O, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, I, a(["PL"])), i(n, R, a(["AT", "CH", "ES", "IT", "PT"])), i(n, L, o("vca")),
-                    i(n, x, o("yes")), i(n, D, o("1.8.11")), i(n, F, o("yes")), i(n, B, o("yes")), i(n, q, o("show")), i(n, G, o("show")), i(n, W, o("2.0.0")), n), JSON.parse(l.cookie.get("experiment_overrides", "{}"))),
+                overrides: (0, d.default)((n = {}, i(n, M, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])),
+                    i(n, T, a(["US"])), i(n, S, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, A, a(["SE"])), i(n, k, a(["DK", "FI", "NL", "NO"])), i(n, P, a(["CA"])), i(n, O, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, I, a(["PL"])), i(n, R, a(["AT", "CH", "ES", "IT", "PT"])), i(n, L, o("vca")), i(n, x, o("yes")), i(n, D, o("1.8.11")), i(n, F, o("yes")), i(n, B, o("yes")), i(n, q, o("show")), i(n, G, o("show")), i(n, W, o("2.0.0")), n), JSON.parse(l.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
                 login: e.login,
                 provider: new m.default(m.default.SERVICE_URL),
@@ -14024,7 +14023,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.22-004830+5aae7aa40fe684e1700fa8694107bacfd590cb09",
+                    app_version: "2017.08.22-144604+75f16f720e6d715084b3130115c0c78eef66d993",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -38200,8 +38199,7 @@
             O = i(P),
             N = n(223),
             I = 16 / 9,
-            R = "hidden",
-            M = {
+            R = {
                 onExtensionDoubleClick: f.default.func.isRequired,
                 onIdentityLinked: f.default.func.isRequired,
                 shouldEnableExtensions: f.default.bool.isRequired,
@@ -38222,7 +38220,7 @@
                 playerType: f.default.string.isRequired,
                 trackEvent: f.default.func.isRequired
             },
-            L = function(e) {
+            M = function(e) {
                 return {
                     extensions: e.extensions.activeOverlayExtensions,
                     game: e.streamMetadata.game,
@@ -38243,7 +38241,7 @@
                     trackEvent: e.analyticsTracker.trackEvent
                 }
             },
-            D = t.mapDispatchToProps = function(e) {
+            L = t.mapDispatchToProps = function(e) {
                 return {
                     onExtensionDoubleClick: function() {
                         e((0, A.toggleFullScreen)())
@@ -38253,7 +38251,7 @@
                     }
                 }
             },
-            x = t.ExtensionsContainerComponent = function(e) {
+            D = t.ExtensionsContainerComponent = function(e) {
                 function t() {
                     o(this, t);
                     var e = a(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -38277,7 +38275,7 @@
                         var f = r[0],
                             p = (0, O.default)({
                                 "extension-container": !0,
-                                hide: !n || f.anchor === R
+                                hide: !n || f.anchor === N.EXTENSION_HIDDEN_ANCHOR
                             });
                         return c.default.createElement("div", {
                             className: p
@@ -38345,8 +38343,8 @@
                     }
                 }]), t
             }(c.default.Component);
-        x.propTypes = M;
-        t.ExtensionsContainer = (0, p.connect)(L, D)(x)
+        D.propTypes = R;
+        t.ExtensionsContainer = (0, p.connect)(M, L)(D)
     }, function(e, t, n) {
         "use strict";
 
@@ -38741,7 +38739,8 @@
                 shouldEnableExtensions: d.default.bool.isRequired
             },
             N = {
-                showSettings: function() {}
+                showSettings: function() {},
+                extensions: []
             },
             I = t.mapStateToProps = function(e) {
                 return {
@@ -38823,22 +38822,25 @@
                 }, {
                     key: "render",
                     value: function() {
-                        if (!this.props.shouldEnableExtensions || 0 === this.props.extensions.length) return null;
-                        var e = this.props.isSettingsShown ? l.default.createElement(y.ExtensionsMenuManager, {
-                                extensions: this.props.extensions,
+                        var e = this.props.extensions.filter(function(e) {
+                            return e.anchor !== A.EXTENSION_HIDDEN_ANCHOR
+                        });
+                        if (!this.props.shouldEnableExtensions || 0 === e.length) return null;
+                        var t = this.props.isSettingsShown ? l.default.createElement(y.ExtensionsMenuManager, {
+                                extensions: e,
                                 isLoggedIn: this.props.isLoggedIn,
                                 onIdentityToggle: this.handleIdentityToggleClick,
                                 playerHeight: this.props.playerHeight,
                                 trackEvent: this.trackEvent,
                                 windowObj: this.props.windowObj
                             }) : null,
-                            t = 1 === this.props.extensions.length ? this.props.extensions[0].name : P;
+                            n = 1 === e.length ? e[0].name : P;
                         return l.default.createElement("div", {
                             className: "pl-flex"
                         }, l.default.createElement(m.ExtensionSettingsButton, {
                             onClick: this.handleSettingsButtonClick,
-                            tooltip: t
-                        }), e)
+                            tooltip: n
+                        }), t)
                     }
                 }]), t
             }(l.default.Component);
