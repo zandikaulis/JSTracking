@@ -1241,13 +1241,13 @@ window.SiteOptions = {
         },
         "676f7ba1-6f07-4782-adc2-99eaf7e04361": {
             "name": "SIGNUP_INTERCEPT",
-            "v": 1865,
+            "v": 1867,
             "t": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 50,
                 "value": "show"
             }]
         },
