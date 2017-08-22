@@ -1228,15 +1228,18 @@ window.SiteOptions = {
             }]
         },
         "6564de97-effd-4355-b4bb-2eecf49d035f": {
-            "name": "android_clip_native_player",
-            "v": 1848,
+            "name": "android_clip_lg_native_player",
+            "v": 1863,
             "t": 1,
             "groups": [{
-                "weight": 1,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 99,
-                "value": "active"
+                "weight": 1,
+                "value": "lg_exo"
+            }, {
+                "weight": 1,
+                "value": "lg_native"
             }]
         },
         "676f7ba1-6f07-4782-adc2-99eaf7e04361": {
