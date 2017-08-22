@@ -741,18 +741,6 @@ window.SiteOptions = {
                 "value": "no_show"
             }]
         },
-        "3e44f0d0-68fe-4cc9-9e2e-e85718c13d3d": {
-            "name": "COMMUNITIES_SORT",
-            "v": 1649,
-            "t": 1,
-            "groups": [{
-                "weight": 20,
-                "value": "control"
-            }, {
-                "weight": 80,
-                "value": "experiment"
-            }]
-        },
         "3f821134-e203-49f0-92a7-4440c22f0f26": {
             "name": "Console A/B Tracing",
             "v": 1062,
