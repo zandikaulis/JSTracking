@@ -15629,6 +15629,7 @@ googletag.cmd = googletag.cmd || [],
                 CLIPS_HEAR_ME_NOW: "9649684c-6d3f-423d-9d3c-f4296efee975",
                 CLIPS_YOU_WERE_RIGHT: "6b4086ea-dcce-41c9-a57b-000fa9366e35",
                 CLIPS_TEACH_ME: "a39cd18b-c3fb-46ad-a6a8-0c2e8686d978",
+                NEW_CHECKOUT: "27ebb243-e247-4868-8619-6959c674fc13",
                 NEW_POA: "8ec5564f-4f15-4269-9824-5658a432cbf3",
                 NEWS_FEED_REDESIGN: "05d8869f-e037-4955-b80a-7c361f9ddffb",
                 VOD_UPLOAD_UNITS_V3: "1710cf57-352c-4d09-b2c1-3d40bdf79b30",
@@ -15690,6 +15691,7 @@ googletag.cmd = googletag.cmd || [],
                 "9649684c-6d3f-423d-9d3c-f4296efee975": "control",
                 "6b4086ea-dcce-41c9-a57b-000fa9366e35": "control",
                 "a39cd18b-c3fb-46ad-a6a8-0c2e8686d978": "control",
+                "27ebb243-e247-4868-8619-6959c674fc13": "no",
                 "8ec5564f-4f15-4269-9824-5658a432cbf3": "no",
                 "05d8869f-e037-4955-b80a-7c361f9ddffb": "no",
                 "1710cf57-352c-4d09-b2c1-3d40bdf79b30": "control",
@@ -20954,8 +20956,8 @@ var recurly = function(e) {
             Be = Math.max,
             $e = Q(De, "Map"),
             qe = Q(Object, "create");
-        m.prototype.clear = y, m.prototype.delete = v, m.prototype.get = _, m.prototype.has = b, m.prototype.set = w, k.prototype.clear = x, k.prototype.delete = S, k.prototype.get = T,
-            k.prototype.has = C, k.prototype.set = D, M.prototype.clear = E, M.prototype.delete = A, M.prototype.get = O, M.prototype.has = P, M.prototype.set = j, I.prototype.add = I.prototype.push = N, I.prototype.has = R;
+        m.prototype.clear = y,
+            m.prototype.delete = v, m.prototype.get = _, m.prototype.has = b, m.prototype.set = w, k.prototype.clear = x, k.prototype.delete = S, k.prototype.get = T, k.prototype.has = C, k.prototype.set = D, M.prototype.clear = E, M.prototype.delete = A, M.prototype.get = O, M.prototype.has = P, M.prototype.set = j, I.prototype.add = I.prototype.push = N, I.prototype.has = R;
         var Ye = Ue ? g(Ue, Object) : fe,
             Ve = Ue ? function(e) {
                 for (var t = []; e;) s(t, Ye(e)), e = Fe(e);
