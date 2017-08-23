@@ -1229,13 +1229,13 @@ window.SiteOptions = {
         },
         "676f7ba1-6f07-4782-adc2-99eaf7e04361": {
             "name": "SIGNUP_INTERCEPT",
-            "v": 1867,
+            "v": 1875,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "show"
             }]
         },
