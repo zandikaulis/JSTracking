@@ -1764,6 +1764,18 @@ window.SiteOptions = {
                 "value": "rules_v2"
             }]
         },
+        "991479b1-3c15-4fd4-a225-28c1994008cd": {
+            "name": "ios_chomments_posting",
+            "v": 1884,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "active"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "99494f77-1c7c-46c5-9b9c-a117db47d3c5": {
             "name": "BROWSE_EXPERIMENT",
             "v": 1047,
