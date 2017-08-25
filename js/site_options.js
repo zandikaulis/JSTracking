@@ -2064,6 +2064,18 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "ad5f316b-0a87-44a6-9348-f6b6ee36b0bb": {
+            "name": "REQUIEM",
+            "v": 1897,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "no"
+            }, {
+                "weight": 0,
+                "value": "yes"
+            }]
+        },
         "ae497662-3b14-4bc8-95f4-adc4beedca4d": {
             "name": "android_graphql_profile",
             "v": 1797,
@@ -2777,14 +2789,14 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 1890,
+            "v": 1894,
             "t": 1,
             "groups": [{
                 "weight": 50,
-                "value": "2.0.4"
+                "value": "2.0.5"
             }, {
                 "weight": 50,
-                "value": "2.0.107"
+                "value": "2.0.108"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
