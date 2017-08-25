@@ -76,7 +76,11 @@
             function o() {
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                     t = (0, d.default)(e) ? T.parse(e) : e;
-                return h(t), (0, S.isTwitchEmbed)() || ((0, u.default)(Ve, t.player) || (t = (0, p.default)(t, w.embedParameters)), t.player !== P.PLAYER_CURSE && t.player !== P.PLAYER_TWILIGHT && (t.branding = !0)), t.backend = a(t), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== P.PLAYER_HIGHLIGHTER, t = (0, s.default)(t, {
+                if (h(t), !(0, S.isTwitchEmbed)()) {
+                    var n = [P.PLAYER_CURSE, P.PLAYER_TWILIGHT, P.PLAYER_AMAZON_LIVE];
+                    (0, u.default)(Ve, t.player) || (t = (0, p.default)(t, w.embedParameters)), (0, u.default)(n, t.player) || (t.branding = !0), t.player === P.PLAYER_AMAZON_LIVE && (t.controls = !1)
+                }
+                return t.backend = a(t), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== P.PLAYER_HIGHLIGHTER, t = (0, s.default)(t, {
                     time: t.t
                 }), (0, u.default)(["mse", "mseDev"], A.localStore.get("backend")) && A.localStore.set("backend", F.BACKEND_PLAYER_CORE), t = (0, s.default)(t, {
                     volume: A.localStore.get("volume"),
@@ -332,7 +336,7 @@
             timeout: 2e3,
             cache: !0
         })));
-        var Ve = Object.freeze([P.PLAYER_IMDB, P.PLAYER_CURSE, P.PLAYER_TWILIGHT]);
+        var Ve = Object.freeze([P.PLAYER_IMDB, P.PLAYER_CURSE, P.PLAYER_TWILIGHT, P.PLAYER_AMAZON_LIVE]);
         window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = o, window.Twitch.Player = o, window.Twitch.Player.PROMPT_LOGIN = Me.PROMPT_LOGIN_MODAL
     }, function(e, t, n) {
         var r = n(2),
@@ -1673,7 +1677,7 @@
                                 },
                                 _createHmacHelper: function(e) {
                                     return function(t, n) {
-                                        return new f.HMAC.init(e, n).finalize(t)
+                                        return new f.HMAC.init(e, n).finalize(t);
                                     }
                                 }
                             }), r.algo = {});
@@ -3137,7 +3141,7 @@
                 for (o in s)
                     if (s.hasOwnProperty(o))
                         for (n = s[o].slice(0), i = n.length; i--;) r = n[i], r.once === !0 && this.removeListener(e, r.listener), a = r.listener.apply(this, t || []), a === this._getOnceReturnValue() && this.removeListener(e, r.listener);
-                return this
+                return this;
             }, a.trigger = o("emitEvent"), a.emit = function(e) {
                 var t = Array.prototype.slice.call(arguments, 1);
                 return this.emitEvent(e, t)
@@ -4908,12 +4912,12 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.PLAYER_TWILIGHT = t.PLAYER_IMDB = t.PLAYER_PULSE = t.PLAYER_TWITCH_EVERYWHERE = t.PLAYER_HIGHLIGHTER = t.PLAYER_FACEBOOK = t.PLAYER_CURSE = t.PLAYER_CREATIVE = t.PLAYER_DASHBOARD = t.PLAYER_FRONTPAGE = t.PLAYER_POPOUT = t.PLAYER_EMBED = t.PLAYER_SITE_MINI = t.PLAYER_SITE = void 0, t.isEmbed = r, t.getPlayerType = i;
+        }), t.PLAYER_AMAZON_LIVE = t.PLAYER_TWILIGHT = t.PLAYER_IMDB = t.PLAYER_PULSE = t.PLAYER_TWITCH_EVERYWHERE = t.PLAYER_HIGHLIGHTER = t.PLAYER_FACEBOOK = t.PLAYER_CURSE = t.PLAYER_CREATIVE = t.PLAYER_DASHBOARD = t.PLAYER_FRONTPAGE = t.PLAYER_POPOUT = t.PLAYER_EMBED = t.PLAYER_SITE_MINI = t.PLAYER_SITE = void 0, t.isEmbed = r, t.getPlayerType = i;
         var o = n(218),
             a = t.PLAYER_SITE = "site",
             s = (t.PLAYER_SITE_MINI = "site_mini", t.PLAYER_EMBED = "embed"),
             l = t.PLAYER_POPOUT = "popout";
-        t.PLAYER_FRONTPAGE = "frontpage", t.PLAYER_DASHBOARD = "dashboard", t.PLAYER_CREATIVE = "creative", t.PLAYER_CURSE = "curse", t.PLAYER_FACEBOOK = "facebook", t.PLAYER_HIGHLIGHTER = "highlighter", t.PLAYER_TWITCH_EVERYWHERE = "twitch_everywhere", t.PLAYER_PULSE = "pulse", t.PLAYER_IMDB = "imdb", t.PLAYER_TWILIGHT = "twilight"
+        t.PLAYER_FRONTPAGE = "frontpage", t.PLAYER_DASHBOARD = "dashboard", t.PLAYER_CREATIVE = "creative", t.PLAYER_CURSE = "curse", t.PLAYER_FACEBOOK = "facebook", t.PLAYER_HIGHLIGHTER = "highlighter", t.PLAYER_TWITCH_EVERYWHERE = "twitch_everywhere", t.PLAYER_PULSE = "pulse", t.PLAYER_IMDB = "imdb", t.PLAYER_TWILIGHT = "twilight", t.PLAYER_AMAZON_LIVE = "amazon_live"
     }, function(e, t, n) {
         "use strict";
 
@@ -14023,7 +14027,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.25-201157+66741203d757674a37b07296d3686678ff02550e",
+                    app_version: "2017.08.25-220659+426ceb87bb6229c6d3da13721fe1febe55b0974e",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: l.host,
@@ -39489,7 +39493,7 @@
             w = t.GRANT_ACCESS_SUMMARY = "You are granting the following access:",
             A = t.REVOKE_ACCESS_SUMMARY = "You are revoking the following access:",
             k = "Your Twitch User ID",
-            P = "Allows this interaction to know your User ID on Twitch. Used to show your personal cheering stats for this channel.",
+            P = "Allows this interaction to know your User ID on Twitch.",
             O = {
                 extension: _.EXTENSION_PROP_TYPE,
                 onMenuTransition: d.default.func,
@@ -39517,7 +39521,7 @@
                 return a(t, e), s(t, [{
                     key: "handleBackButtonClick",
                     value: function() {
-                        this.props.onMenuTransition(m.EXTENSION_MENU_DETAILS)
+                        this.props.onMenuTransition(m.EXTENSION_MENU_DETAILS);
                     }
                 }, {
                     key: "handleIdentityToggleClick",
@@ -40690,7 +40694,7 @@
                 }, e.prototype.error = function() {
                     this.forward(arguments, "error", "")
                 }, e.prototype.deprecate = function() {
-                    this.forward(arguments, "warn", "WARNING DEPRECATED: ", !0)
+                    this.forward(arguments, "warn", "WARNING DEPRECATED: ", !0);
                 }, e.prototype.forward = function(e, t, n, r) {
                     r && !this.debug || ("string" == typeof e[0] && (e[0] = n + this.prefix + " " + e[0]), this.logger[t](e))
                 }, e.prototype.create = function(t) {
@@ -41789,7 +41793,8 @@
                                 i = r[0],
                                 o = r[1];
                             this.read(i, o, "read", null, null, function(n, r) {
-                                n && t.logger.warn("reloading namespace " + o + " for language " + i + " failed", n), !n && r && t.logger.log("reloaded namespace " + o + " for language " + i, r), t.loaded(e, n, r)
+                                n && t.logger.warn("reloading namespace " + o + " for language " + i + " failed", n), !n && r && t.logger.log("reloaded namespace " + o + " for language " + i, r),
+                                    t.loaded(e, n, r)
                             })
                         };
                         e.forEach(function(e) {
@@ -46056,7 +46061,7 @@
 
         function o(e, t) {
             if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !t || "object" != typeof t && "function" != typeof t ? e : t;
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
         }
 
         function a(e, t) {
