@@ -2006,13 +2006,13 @@ window.SiteOptions = {
         },
         "ab3ad381-0796-435d-94aa-e3907461d48e": {
             "name": "android_clip_theatre_mode",
-            "v": 1753,
+            "v": 1899,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 1,
                 "value": "control"
             }, {
-                "weight": 1,
+                "weight": 0,
                 "value": "active"
             }]
         },
@@ -2066,7 +2066,7 @@ window.SiteOptions = {
         },
         "ad5f316b-0a87-44a6-9348-f6b6ee36b0bb": {
             "name": "REQUIEM",
-            "v": 1897,
+            "v": 1898,
             "t": 1,
             "groups": [{
                 "weight": 100,
