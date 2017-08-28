@@ -339,6 +339,18 @@ window.SiteOptions = {
                 "value": "variant"
             }]
         },
+        "1890c9c4-e8fc-4ab3-b933-e44de461c538": {
+            "name": "experiments_client_integration_test",
+            "v": 1907,
+            "t": 1,
+            "groups": [{
+                "weight": 20,
+                "value": "control"
+            }, {
+                "weight": 80,
+                "value": "variant"
+            }]
+        },
         "18f450b9-5593-4d66-a5a7-c8b6fccf95c3": {
             "name": "aax",
             "v": 1545,
