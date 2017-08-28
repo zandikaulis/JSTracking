@@ -1140,6 +1140,18 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "5a699086-06e5-40f9-b924-a0c8e73d449a": {
+            "name": "pulse_aa_test",
+            "v": 1911,
+            "t": 1,
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "also_control"
+            }]
+        },
         "5daee224-4c99-499f-b6e0-e308a5fa54f1": {
             "name": "aws_roundtrip_latency_test_endpoint",
             "v": 953,
