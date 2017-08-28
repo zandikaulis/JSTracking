@@ -341,13 +341,13 @@ window.SiteOptions = {
         },
         "1890c9c4-e8fc-4ab3-b933-e44de461c538": {
             "name": "experiments_client_integration_test",
-            "v": 1907,
+            "v": 1909,
             "t": 1,
             "groups": [{
-                "weight": 20,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 80,
+                "weight": 200,
                 "value": "variant"
             }]
         },
