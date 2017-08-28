@@ -836,14 +836,14 @@ window.SiteOptions = {
         },
         "45d73059-3cea-436a-b41f-86bb05f845f2": {
             "name": "CVP May 18",
-            "v": 1807,
+            "v": 1904,
             "t": 1,
             "groups": [{
                 "weight": 5,
-                "value": "1.8.12+absctrl"
+                "value": "1.8.13+absctrl"
             }, {
                 "weight": 95,
-                "value": "1.8.12"
+                "value": "1.8.13"
             }]
         },
         "474db509-7fb8-403e-97da-66dae8954e6d": {
