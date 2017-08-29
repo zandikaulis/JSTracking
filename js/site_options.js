@@ -1140,18 +1140,6 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
-        "5a699086-06e5-40f9-b924-a0c8e73d449a": {
-            "name": "pulse_aa_test",
-            "v": 1911,
-            "t": 1,
-            "groups": [{
-                "weight": 50,
-                "value": "control"
-            }, {
-                "weight": 50,
-                "value": "also_control"
-            }]
-        },
         "5daee224-4c99-499f-b6e0-e308a5fa54f1": {
             "name": "aws_roundtrip_latency_test_endpoint",
             "v": 953,
@@ -2076,6 +2064,18 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "ac5e7a7f-2e7b-41b0-93d5-6ed68768d03b": {
+            "name": "pulse_a_a_test",
+            "v": 1913,
+            "t": 2,
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "also_control"
+            }]
+        },
         "ad39c35b-c6af-4687-b791-9ab408f825ef": {
             "name": "VOD Thumbnail Previews Rollout",
             "v": 272,
@@ -2813,11 +2813,14 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 1905,
+            "v": 1914,
             "t": 1,
             "groups": [{
-                "weight": 95,
+                "weight": 90,
                 "value": "2.0.5"
+            }, {
+                "weight": 5,
+                "value": "2.0.109"
             }, {
                 "weight": 5,
                 "value": "2.0.108"
