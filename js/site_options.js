@@ -2601,6 +2601,18 @@ window.SiteOptions = {
                 "value": "new"
             }]
         },
+        "d3882247-a37e-4aae-a35f-f109b51ee083": {
+            "name": "android_playercore_9",
+            "v": 1926,
+            "t": 1,
+            "groups": [{
+                "weight": 99,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "active"
+            }]
+        },
         "d48fe249-fd73-4c8f-bd17-415b70dc3708": {
             "name": "chomperz",
             "v": 1686,
