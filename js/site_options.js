@@ -1649,13 +1649,13 @@ window.SiteOptions = {
         },
         "8ec5564f-4f15-4269-9824-5658a432cbf3": {
             "name": "NEW_POA",
-            "v": 1780,
+            "v": 1927,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }]
         },
