@@ -12833,20 +12833,39 @@
             y = r(m),
             g = n(244),
             E = n(247),
-            b = t.AGEGATE_CHANNELS = ["budlight"],
-            T = t.KEY_AGEGATE = "age_gate",
-            S = t.KEY_AGEGATES_FAILED = "age_gates_failed",
-            C = t.KEY_MATURE = "mature",
-            w = t.AGEGATE_ATTR = "age-gate",
-            A = t.AGEGATE_FAILED_ATTR = "age-gate-failed",
-            k = t.AGEGATE_LOCKED_OUT_ATTR = "age-gate-locked-out",
-            P = t.MATURE_ATTR = "mature",
-            O = t.NONE_ATTR = "none";
+            b = n(117),
+            T = i(b),
+            S = t.AGEGATE_CHANNELS = ["budlight"],
+            C = t.KEY_AGEGATE = "age_gate",
+            w = t.KEY_AGEGATES_FAILED = "age_gates_failed",
+            A = t.KEY_MATURE = "mature",
+            k = t.AGEGATE_ATTR = "age-gate",
+            P = t.AGEGATE_FAILED_ATTR = "age-gate-failed",
+            O = t.AGEGATE_LOCKED_OUT_ATTR = "age-gate-locked-out",
+            N = t.MATURE_ATTR = "mature",
+            I = t.NONE_ATTR = "none",
+            R = Object.freeze({
+                1: 31,
+                2: 28,
+                3: 31,
+                4: 30,
+                5: 31,
+                6: 30,
+                7: 31,
+                8: 31,
+                9: 30,
+                10: 31,
+                11: 30,
+                12: 31
+            }),
+            M = Object.freeze((0, T.default)({}, R, {
+                2: 29
+            }));
         t.AgeRestrictionOverlay = function() {
             function e(t, n, r) {
                 var i = this;
-                o(this, e), this.$root = $(t), this.player = n, this.store = r, this._setOverlay(O), this._populateAgeDropdowns(), this._unsubscribes = [], this._unsubscribes.push(this._subscribeStream()), this._unsubscribes.push(this._subscribeOnlineStatus()), this.$root.on("click", ".js-player-mature-accept", function(e) {
-                    e.preventDefault(), s.localStore.set(C, !0), i._setOverlay(O), i.store.dispatch((0, h.play)()), i.player.setMuted(!1);
+                o(this, e), this.$root = $(t), this.player = n, this.store = r, this._setOverlay(I), this._populateAgeDropdowns(), this._unsubscribes = [], this._unsubscribes.push(this._subscribeStream()), this._unsubscribes.push(this._subscribeOnlineStatus()), this.$root.on("click", ".js-player-mature-accept", function(e) {
+                    e.preventDefault(), s.localStore.set(A, !0), i._setOverlay(I), i.store.dispatch((0, h.play)()), i.player.setMuted(!1);
                     var t = i.store.getState(),
                         n = t.playback;
                     n.autoplay && i._requestAds()
@@ -12858,15 +12877,15 @@
                 key: "_checkOverlayRequired",
                 value: function(e) {
                     var t = this;
-                    if ((0, v.default)(b, e))
-                        if (1 === this._getAgeGatesFailed(e)) this._setOverlay(A);
-                        else if (this._getAgeGatesFailed(e) >= 2) this._setOverlay(k);
+                    if ((0, v.default)(S, e))
+                        if (1 === this._getAgeGatesFailed(e)) this._setOverlay(P);
+                        else if (this._getAgeGatesFailed(e) >= 2) this._setOverlay(O);
                     else {
-                        var n = s.localStore.get(T, {});
-                        n[e] || this._setOverlay(w)
+                        var n = s.localStore.get(C, {});
+                        n[e] || this._setOverlay(k)
                     } else(0, d.channelInfo)(e).then(function(e) {
-                        var n = e.mature && !s.localStore.get(C, !1);
-                        t._setOverlay(n ? P : O)
+                        var n = e.mature && !s.localStore.get(A, !1);
+                        t._setOverlay(n ? N : I)
                     })
                 }
             }, {
@@ -12914,7 +12933,7 @@
                             });
                             break;
                         case u.CONTENT_MODE_LIVE:
-                            r !== p.ONLINE_STATUS ? this._setOverlay(O) : this._checkOverlayRequired(n.channel);
+                            r !== p.ONLINE_STATUS ? this._setOverlay(I) : this._checkOverlayRequired(n.channel);
                             break;
                         default:
                             return
@@ -12923,12 +12942,42 @@
             }, {
                 key: "_onPlaying",
                 value: function() {
-                    this.$root.attr("data-overlay") !== O && (this.player.setMuted(!0), this.store.dispatch((0, h.pause)()))
+                    this.$root.attr("data-overlay") !== I && (this.player.setMuted(!0), this.store.dispatch((0, h.pause)()))
                 }
             }, {
                 key: "_setOverlay",
                 value: function(e) {
-                    this.$root.attr("data-overlay", e), e !== O && (this.player.setMuted(!0, !0), this.store.dispatch((0, f.contentIsShowing)()))
+                    this.$root.attr("data-overlay", e), e !== I && (this.player.setMuted(!0, !0), this.store.dispatch((0, f.contentIsShowing)()))
+                }
+            }, {
+                key: "_isValidDate",
+                value: function(e) {
+                    var t = e.day,
+                        n = e.month,
+                        r = e.year,
+                        i = r % 4 === 0 && r % 100 !== 0 || r % 400 === 0,
+                        o = i ? M[n] : R[n];
+                    return t > 0 && t <= o
+                }
+            }, {
+                key: "_getSelectedDate",
+                value: function() {
+                    var e = $(".js-age-gate .js-select-day option:selected", this.$root)[0],
+                        t = $(".js-age-gate .js-select-month option:selected", this.$root)[0],
+                        n = $(".js-age-gate .js-select-year option:selected", this.$root)[0];
+                    return {
+                        day: parseInt(e.value, 10),
+                        month: parseInt(t.value, 10) + 1,
+                        year: parseInt(n.value, 10)
+                    }
+                }
+            }, {
+                key: "_updateSubmitButton",
+                value: function() {
+                    var e = this._getSelectedDate(),
+                        t = document.getElementsByClassName("js-age-gate-submit"),
+                        n = this._isValidDate(e);
+                    n ? t[0].disabled = !1 : t[0].disabled = !0
                 }
             }, {
                 key: "_is21OrOlder",
@@ -12944,16 +12993,16 @@
                 key: "_setAgeGatePassed",
                 value: function() {
                     var e = this,
-                        t = s.localStore.get(T, {});
+                        t = s.localStore.get(C, {});
                     this._getChannelName().then(function(n) {
-                        t[n] = !0, s.localStore.set(T, t), e._setOverlay(O), e.store.dispatch((0, h.play)()), e.player.setMuted(!1)
+                        t[n] = !0, s.localStore.set(C, t), e._setOverlay(I), e.store.dispatch((0, h.play)()), e.player.setMuted(!1)
                     })
                 }
             }, {
                 key: "_getAgeGatesFailed",
                 value: function(e) {
                     try {
-                        var t = JSON.parse(sessionStorage.getItem(S)) || {};
+                        var t = JSON.parse(sessionStorage.getItem(w)) || {};
                         return t[e] || 0
                     } catch (e) {
                         return 0
@@ -12965,19 +13014,20 @@
                     this._getChannelName().then(function(e) {
                         var t = void 0;
                         try {
-                            t = JSON.parse(sessionStorage.getItem(S)) || {}
+                            t = JSON.parse(sessionStorage.getItem(w)) || {}
                         } catch (e) {
                             t = {}
                         }
-                        t[e] ? t[e] = t[e] + 1 : t[e] = 1, sessionStorage.setItem(S, JSON.stringify(t))
+                        t[e] ? t[e] = t[e] + 1 : t[e] = 1, sessionStorage.setItem(w, JSON.stringify(t))
                     })
                 }
             }, {
                 key: "_populateAgeDropdowns",
                 value: function() {
                     var e = $(".js-age-gate .js-select-month", this.$root),
-                        t = $(".js-age-gate .js-select-year", this.$root);
-                    this._populateYearDropdown(), e.on("change", this._populateDayDropdown.bind(this)), t.on("change", this._populateDayDropdown.bind(this)), this._populateDayDropdown()
+                        t = $(".js-age-gate .js-select-year", this.$root),
+                        n = $(".js-age-gate .js-select-day", this.$root);
+                    this._populateYearDropdown(), this._populateDaysDropdown(), e.on("change", this._populateDaysDropdown.bind(this)), e.on("change", this._updateSubmitButton.bind(this)), n.on("change", this._updateSubmitButton.bind(this)), t.on("change", this._updateSubmitButton.bind(this))
                 }
             }, {
                 key: "_populateYearDropdown",
@@ -12988,22 +13038,23 @@
                     }
                 }
             }, {
-                key: "_populateDayDropdown",
+                key: "_populateDaysDropdown",
                 value: function() {
                     var e = $(".js-age-gate .js-select-month option:selected", this.$root),
-                        t = $(".js-age-gate .js-select-year option:selected", this.$root),
-                        n = $(".js-age-gate .js-select-day", this.$root),
-                        r = Number(e[0].value) + 1,
-                        i = Number(t[0].value);
-                    n.empty();
-                    for (var o = 1; o <= this._getDaysInMonth(r, i); o++) {
+                        t = $(".js-age-gate .js-select-day", this.$root),
+                        n = Number(e[0].value) + 1,
+                        r = Number(t[0].value),
+                        i = 0 === r ? 1 : r;
+                    t.empty();
+                    for (var o = 1; o <= this._getDaysInMonth(n); o++) {
                         var a = document.createElement("option");
-                        a.value = o, a.text = o, n[0].add(a)
+                        a.value = o, a.text = o, t[0].add(a)
                     }
+                    i > this._getDaysInMonth(n) ? $(".js-age-gate .js-select-day").val(1) : $(".js-age-gate .js-select-day").val(i)
                 }
             }, {
                 key: "_getDaysInMonth",
-                value: function(e, t) {
+                value: function(e) {
                     switch (e) {
                         case 1:
                         case 3:
@@ -13019,7 +13070,7 @@
                         case 11:
                             return 30;
                         case 2:
-                            return t % 4 === 0 ? 29 : 28;
+                            return 29;
                         default:
                             return console.error("Invalid month value"), 0
                     }
@@ -14023,7 +14074,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.28-232622+49b65c4644cb1b48631e5c433740e443fc0a1b93",
+                    app_version: "2017.08.29-190556+d24c095eff738f2fce4ae547bf10a1fd2d344a47",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -14252,7 +14303,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-8fc282.sjc01.hls.ttvnw.net/v1/playlist/CqUlKt7puOkAONBWDL3yfLAGtgoF_sxal5tzesGWBjTD5Fk3dGQEI03j3AC8UnP-9lONTKDuVOvpPnWVx6fJ5FSA22dhYaJsjduxxg5N36rqKoZNrtv7D6S_3S14E-AVKh9M-T9AUyPEU2gs1clz9ubIO4g96Z2eH7mtD3Q7xtZZxPgpomfT3B5yrCyaJUH5mKc8hiTDWtLxmR-iDztRyfNOXVFOKLoMAIwQNxJ1yXrVk5stY-O2IV4P6BqFQ6sFdtmtijdEWvgWZPVqjRyTJxlVy3zu-Ma8U54E5d90ofpFpDTcSg-fC2eZ_mjiRDKTuliV-OwHRh6c3-I3sKi6FZeyEloLlHgHtfi_Z-1JdOOQs3yS7aKf6PHYugJUlj5ig6EuAPk62FsWQ-H1IaSaaE-41AFsqYqsH1PWg_Q85SaXL0Y352zoMUi0Vh8hEHkQFtnFn.m3u8"
+        t.trustedSpadeURI = "//video-edge-3e5285.sjc01.hls.ttvnw.net/v1/playlist/Cr2ESbUJiu1W6w5VcZ-qDMaWmJRgK1sO6m9m9IpGaDi6O6ojwI_WwKAZrHuhYR3YBQIsiq2rO_saJiL7FQNJzFS9WeQirGDdTry5WiBHROVYyNT54aWSvOlVFJLosQaStvafqY7kfgPODTQfptNsTQQ9MxHhL-HZr9rAvOQG_MKQ59z-ngaUY6MUAMQ8iBge9Gc3in-fwIixfDdhGwKexBLb2xX7AjqG5us04Zg7R-348d-GEgYUSfXS_pecywEFW87bnaFSxViVLwJSpTUXwqJaaqzEpsyr1FLLzt1Y11YF-QXj8MwDOGnAnNQzGnP-fc461LURcG6_Hio6036jrm0BdN_sjMDG3GA6vfIMhoea-qA-9GBf2dHg0jRWVHSc0rM8nW9Q--MSRZWay7w71QoNuqoOwBNJ_pjCUsESPsv0w-7DP2V.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -20833,38 +20884,45 @@
             }
         }
 
-        function i() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                t = e || _.localStore.get(v, p.DEFAULT_CAPTION.enabled);
+        function i(e) {
             return {
-                type: g,
+                type: C,
+                showCCModal: e
+            }
+        }
+
+        function o() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+                t = e || v.localStore.get(m, h.DEFAULT_CAPTION.enabled);
+            return {
+                type: E,
                 captions: {
                     enabled: t,
-                    preset: _.localStore.get(m, p.DEFAULT_CAPTION.preset),
-                    style: _.localStore.get(y, p.DEFAULT_CAPTION.style)
+                    preset: v.localStore.get(y, h.DEFAULT_CAPTION.preset),
+                    style: v.localStore.get(g, h.DEFAULT_CAPTION.style)
                 }
             }
         }
 
-        function o(e) {
+        function a(e) {
             return {
-                type: E,
+                type: b,
                 captions: {
                     data: e
                 }
             }
         }
 
-        function a(e) {
-            return _.localStore.set(v, e),
+        function s(e) {
+            return v.localStore.set(m, e),
                 function(t, n) {
                     var r = e ? "block" : "none",
                         i = n().captions.style,
-                        o = u((0, c.default)({}, i, {
+                        o = l((0, d.default)({}, i, {
                             display: r
                         }));
                     return t({
-                        type: T,
+                        type: S,
                         captions: {
                             enabled: e,
                             style: o
@@ -20873,14 +20931,14 @@
                 }
         }
 
-        function s(e) {
+        function u(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            return _.localStore.set(m, e),
+            return v.localStore.set(y, e),
                 function(n, r) {
                     var i = r().captions.style,
-                        o = u((0, c.default)({}, i, t));
-                    return _.localStore.set(y, o), n({
-                        type: b,
+                        o = l((0, d.default)({}, i, t));
+                    return v.localStore.set(g, o), n({
+                        type: T,
                         captions: {
                             preset: e,
                             style: o
@@ -20889,29 +20947,30 @@
                 }
         }
 
-        function u(e) {
-            var t = (0, f.default)(e.fontSize, h.fontSizeMap.min, h.fontSizeMap.max);
-            return (0, c.default)({}, e, {
+        function l(e) {
+            var t = (0, p.default)(e.fontSize, _.fontSizeMap.min, _.fontSizeMap.max);
+            return (0, d.default)({}, e, {
                 fontSize: t
             })
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.ACTION_TOGGLE_CAPTIONS = t.ACTION_SET_CAPTIONS_PRESET = t.ACTION_SET_CAPTIONS_DATA = t.ACTION_INITIALIZE_CAPTIONS_SETTINGS = t.KEY_CAPTIONS_STYLE = t.KEY_CAPTIONS_PRESET = t.KEY_CAPTIONS_ENABLED = void 0, t.initializeCaptionsSettings = i, t.setCaptionsData = o, t.setCaptionsEnabled = a, t.setCaptionsPreset = s;
-        var l = n(118),
-            c = r(l),
-            d = n(366),
-            f = r(d),
-            p = n(368),
-            h = n(369),
-            _ = n(254),
-            v = t.KEY_CAPTIONS_ENABLED = "captionsEnabled",
-            m = t.KEY_CAPTIONS_PRESET = "captionsPreset",
-            y = t.KEY_CAPTIONS_STYLE = "captionsStyle",
-            g = t.ACTION_INITIALIZE_CAPTIONS_SETTINGS = "captions settings initialized",
-            E = t.ACTION_SET_CAPTIONS_DATA = "captions data received",
-            b = t.ACTION_SET_CAPTIONS_PRESET = "captions preset selected",
-            T = t.ACTION_TOGGLE_CAPTIONS = "captions toggled"
+        }), t.ACTION_SHOW_CC_MODAL = t.ACTION_TOGGLE_CAPTIONS = t.ACTION_SET_CAPTIONS_PRESET = t.ACTION_SET_CAPTIONS_DATA = t.ACTION_INITIALIZE_CAPTIONS_SETTINGS = t.KEY_CAPTIONS_STYLE = t.KEY_CAPTIONS_PRESET = t.KEY_CAPTIONS_ENABLED = void 0, t.showCCModal = i, t.initializeCaptionsSettings = o, t.setCaptionsData = a, t.setCaptionsEnabled = s, t.setCaptionsPreset = u;
+        var c = n(118),
+            d = r(c),
+            f = n(366),
+            p = r(f),
+            h = n(368),
+            _ = n(369),
+            v = n(254),
+            m = t.KEY_CAPTIONS_ENABLED = "captionsEnabled",
+            y = t.KEY_CAPTIONS_PRESET = "captionsPreset",
+            g = t.KEY_CAPTIONS_STYLE = "captionsStyle",
+            E = t.ACTION_INITIALIZE_CAPTIONS_SETTINGS = "captions settings initialized",
+            b = t.ACTION_SET_CAPTIONS_DATA = "captions data received",
+            T = t.ACTION_SET_CAPTIONS_PRESET = "captions preset selected",
+            S = t.ACTION_TOGGLE_CAPTIONS = "captions toggled",
+            C = t.ACTION_SHOW_CC_MODAL = "captions show modal"
     }, function(e, t, n) {
         function r(e, t, n) {
             return void 0 === n && (n = t, t = void 0), void 0 !== n && (n = o(n), n = n === n ? n : 0), void 0 !== t && (t = o(t), t = t === t ? t : 0), i(o(e), t, n)
@@ -20937,6 +20996,10 @@
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
                 t = arguments[1];
             switch (t.type) {
+                case u.ACTION_SHOW_CC_MODAL:
+                    return (0, a.default)({}, e, {
+                        showCCModal: t.showCCModal
+                    });
                 case u.ACTION_INITIALIZE_CAPTIONS_SETTINGS:
                 case u.ACTION_SET_CAPTIONS_PRESET:
                 case u.ACTION_TOGGLE_CAPTIONS:
@@ -20968,7 +21031,8 @@
                 available: !1,
                 preset: "white-on-black",
                 data: null,
-                style: s.presetMap["white-on-black"]
+                style: s.presetMap["white-on-black"],
+                showCCModal: !1
             }
     }, function(e, t, n) {
         "use strict";
@@ -21355,8 +21419,8 @@
                     var a = this._store.getState(),
                         s = a.window,
                         l = s.google;
-                    l && (l.ima.settings.setVpaidMode(l.ima.ImaSdkSettings.VpaidMode.INSECURE), this._unsubs.push((0, T.subscribe)(this._store, ["playerDimensions"], this._resizeAd.bind(this))), this._adContainer = k.clone().appendTo(this._videoContainer).get(0), this._adDisplayContainer = new l.ima.AdDisplayContainer(this._adContainer, $(this._videoContainer).find("video, object").get(0)),
-                        this._adDisplayContainer.initialize(), this._moat = new g.MoatAnalytics(this._adContainer, this._store), this._setupAdsLoader())
+                    l && (l.ima.settings.setVpaidMode(l.ima.ImaSdkSettings.VpaidMode.INSECURE),
+                        this._unsubs.push((0, T.subscribe)(this._store, ["playerDimensions"], this._resizeAd.bind(this))), this._adContainer = k.clone().appendTo(this._videoContainer).get(0), this._adDisplayContainer = new l.ima.AdDisplayContainer(this._adContainer, $(this._videoContainer).find("video, object").get(0)), this._adDisplayContainer.initialize(), this._moat = new g.MoatAnalytics(this._adContainer, this._store), this._setupAdsLoader())
                 }
                 return a(e, [{
                     key: "destroy",
@@ -24165,7 +24229,8 @@
                     }
                 }
                 return function(t, n, r) {
-                    return n && e(t.prototype, n), r && e(t, r), t
+                    return n && e(t.prototype, n), r && e(t, r),
+                        t
                 }
             }(),
             o = n(183),
@@ -24208,8 +24273,7 @@
         function o(e, t, n, r, i) {
             function o() {
                 var e = i;
-                u(), c(e), a(), r.showControls(d.initialControlsDelay), $(t).attr("data-branding", e.branding),
-                    $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showinfo", e.showInfo), A(), P.push(E()), P.push(b()), P.push(T())
+                u(), c(e), a(), r.showControls(d.initialControlsDelay), $(t).attr("data-branding", e.branding), $(t).attr("data-theatre", !1), $(t).attr("data-mini", !1), $(t).attr("data-showinfo", e.showInfo), A(), P.push(E()), P.push(b()), P.push(T())
             }
 
             function a() {
@@ -25615,9 +25679,8 @@
             y.localStore.set(I, e.resumeWatch.times), y.localStore.set(R, e.resumeWatch.watch), y.localStore.set(M, e.resumeWatch.streamTimes)
         }
         Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.ACTION_VOD_SET_IS_SEEKED = t.ACTION_VOD_SET_USER = t.ACTION_VOD_POST_BACKEND_TIME = t.ACTION_LIVESTREAM_SET_RESUME_TIME = t.ACTION_LIVESTREAM_CANCEL_RESUME = t.ACTION_VOD_SET_RESUME_TIME = t.ACTION_VOD_CANCEL_RESUME = t.ACTION_VOD_INIT_RESUME = t.ACTION_SET_RESUME_TIMES = void 0,
-            t.initVodResume = r, t.setUser = i, t.setIsSeeked = o, t.getResumeTimes = s, t.setResumeTimes = u, t.setVodResumeTime = p, t.cancelVodResumeTime = h, t.setLivestreamResumeTime = _, t.cancelLivestreamResumeTime = v;
+            value: !0
+        }), t.ACTION_VOD_SET_IS_SEEKED = t.ACTION_VOD_SET_USER = t.ACTION_VOD_POST_BACKEND_TIME = t.ACTION_LIVESTREAM_SET_RESUME_TIME = t.ACTION_LIVESTREAM_CANCEL_RESUME = t.ACTION_VOD_SET_RESUME_TIME = t.ACTION_VOD_CANCEL_RESUME = t.ACTION_VOD_INIT_RESUME = t.ACTION_SET_RESUME_TIMES = void 0, t.initVodResume = r, t.setUser = i, t.setIsSeeked = o, t.getResumeTimes = s, t.setResumeTimes = u, t.setVodResumeTime = p, t.cancelVodResumeTime = h, t.setLivestreamResumeTime = _, t.cancelLivestreamResumeTime = v;
         var y = n(254),
             g = n(168),
             E = n(224),
