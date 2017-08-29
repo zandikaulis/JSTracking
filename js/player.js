@@ -13735,7 +13735,8 @@
                     partner: e.channel.partner,
                     status: e.status,
                     videoBanner: e.channel.video_banner,
-                    logo: e.channel.logo
+                    logo: e.channel.logo,
+                    mature: e.channel.mature
                 },
                 createdAt: e.created_at,
                 game: e.game,
@@ -13760,7 +13761,8 @@
                     partner: e.channel.partner,
                     status: e.channel.status,
                     videoBanner: e.channel.video_banner,
-                    logo: e.channel.logo
+                    logo: e.channel.logo,
+                    mature: e.channel.mature
                 },
                 createdAt: e.created_at,
                 game: e.game,
@@ -13781,7 +13783,8 @@
                     partner: e.partner,
                     status: e.status,
                     videoBanner: e.video_banner,
-                    logo: e.logo
+                    logo: e.logo,
+                    mature: e.mature
                 },
                 game: e.game,
                 url: e.url
@@ -14074,7 +14077,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.29-212442+25b1e1c052480f8d504be48fd7fc73bad77bddf2",
+                    app_version: "2017.08.29-223629+86b14b59a2827f46bde8922ed5b0ea76cc3745d7",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -24609,7 +24612,8 @@
                     partner: !1,
                     status: "",
                     videoBanner: "",
-                    logo: ""
+                    logo: "",
+                    mature: !1
                 },
                 createdAt: "",
                 game: "",
@@ -25475,7 +25479,7 @@
                     }), C.forEach(function(n) {
                         e._setDropdownAttribute(n, t)
                     }), A.forEach(function(n) {
-                        e._setCheckboxAttribute(n, t);
+                        e._setCheckboxAttribute(n, t)
                     }), $(".js-cc-modal", this._root).on("change", ".js-cc-dropdown", function(t) {
                         var n = $(t.target);
                         e._store.dispatch((0, _.setCaptionsPreset)(S, o({}, n.attr("name"), n.val())))
@@ -26958,7 +26962,7 @@
                 this._root = null, this._startText = null, this._fallbackText = null
             },
             getText: function() {
-                return "value" in this._root ? this._root.value : this._root[a()]
+                return "value" in this._root ? this._root.value : this._root[a()];
             },
             getData: function() {
                 if (this._fallbackText) return this._fallbackText;
