@@ -570,6 +570,24 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
+        "2be750b2-f97a-41e5-a699-0d934cefc05c": {
+            "name": "ios_onboarding_recommendations_v5.3",
+            "v": 1925,
+            "t": 1,
+            "groups": [{
+                "weight": 75,
+                "value": "control"
+            }, {
+                "weight": 25,
+                "value": "opt_in"
+            }, {
+                "weight": 0,
+                "value": "opt_in_situ"
+            }, {
+                "weight": 0,
+                "value": "in_situ"
+            }]
+        },
         "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": {
             "name": "bits_for_ads",
             "v": 777,
