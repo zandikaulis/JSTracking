@@ -2871,6 +2871,18 @@ window.SiteOptions = {
                 "value": "false"
             }]
         },
+        "f164d19e-cbbd-4774-86c7-106f21d892c0": {
+            "name": "ios_browse_game_display_tablet_layout",
+            "v": 1916,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "f321aa37-e81d-4a81-99d5-303bf9429b7b": {
             "name": "AKAMAI_IMAGE_MANAGER",
             "v": 1407,
