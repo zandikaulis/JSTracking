@@ -167,13 +167,13 @@ window.SiteOptions = {
         },
         "05f51b55-9ce2-4d95-9896-8fdfb83b0b04": {
             "name": "test1",
-            "v": 798,
+            "v": 1922,
             "t": 1,
             "groups": [{
                 "weight": 10,
                 "value": ""
             }, {
-                "weight": 0,
+                "weight": 3,
                 "value": ""
             }]
         },
@@ -254,7 +254,7 @@ window.SiteOptions = {
         },
         "143da2f9-bf80-4555-a661-76c378fcd5c8": {
             "name": "ios_aa",
-            "v": 134,
+            "v": 1919,
             "t": 1,
             "groups": [{
                 "weight": 5,
