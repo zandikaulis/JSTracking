@@ -536,13 +536,13 @@ window.SiteOptions = {
         },
         "27ebb243-e247-4868-8619-6959c674fc13": {
             "name": "NEW_CHECKOUT",
-            "v": 1903,
+            "v": 1915,
             "t": 1,
             "groups": [{
-                "weight": 80,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 20,
+                "weight": 0,
                 "value": "no"
             }]
         },
