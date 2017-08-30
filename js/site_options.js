@@ -572,20 +572,23 @@ window.SiteOptions = {
         },
         "2be750b2-f97a-41e5-a699-0d934cefc05c": {
             "name": "ios_onboarding_recommendations_v5.3",
-            "v": 1931,
+            "v": 1933,
             "t": 1,
             "groups": [{
-                "weight": 25,
+                "weight": 20,
                 "value": "control"
             }, {
-                "weight": 25,
+                "weight": 20,
                 "value": "opt_in"
             }, {
-                "weight": 25,
+                "weight": 20,
                 "value": "opt_in_situ"
             }, {
-                "weight": 25,
+                "weight": 20,
                 "value": "in_situ"
+            }, {
+                "weight": 20,
+                "value": "hold_out"
             }]
         },
         "2c1c9b8c-530c-4011-a2a0-e93c0e14d8c2": {
