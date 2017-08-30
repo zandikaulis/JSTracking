@@ -13859,27 +13859,27 @@
 
         function n(e) {
             return {
-                type: c,
+                type: d,
                 video: e
             }
         }
 
         function r() {
             return {
-                type: d
+                type: f
             }
         }
 
         function i() {
             return {
-                type: f
+                type: p
             }
         }
 
         function o(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             return {
-                type: p,
+                type: h,
                 muted: e,
                 automated: t
             }
@@ -13888,42 +13888,50 @@
         function a() {
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
             return {
-                type: h,
+                type: _,
                 volume: e
             }
         }
 
         function s(e) {
             return {
-                type: _,
+                type: v,
                 backendType: e
             }
         }
 
         function u(e) {
             return {
-                type: v,
+                type: m,
                 issueType: e
             }
         }
 
         function l(e) {
             return {
-                type: m,
+                type: y,
                 playbackRate: e
+            }
+        }
+
+        function c(e) {
+            return {
+                type: g,
+                seekTime: e
             }
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.videoAPILoaded = n, t.play = r, t.pause = i, t.mutePlayer = o, t.changeVolume = a, t.changeBackend = s, t.submitVideoIssueReport = u, t.changePlaybackRate = l;
-        var c = t.ACTION_LOAD_VIDEO_API = "load video api",
-            d = t.ACTION_VIDEO_API_PLAY = "video api play content",
-            f = t.ACTION_VIDEO_API_PAUSE = "video api pause content",
-            p = t.ACTION_VIDEO_API_MUTE_PLAYER = "video api mute player",
-            h = t.ACTION_VIDEO_API_CHANGE_VOLUME = "video api change volume",
-            _ = t.ACTION_VIDEO_API_CHANGE_BACKEND = "video api change backend",
-            v = t.ACTION_VIDEO_API_REPORT_VIDEO_ISSUE = "video api report video issue",
-            m = t.ACTION_VIDEO_API_CHANGE_PLAYBACK_RATE = "video api change playback rate"
+        }), t.videoAPILoaded = n, t.play = r, t.pause = i, t.mutePlayer = o, t.changeVolume = a, t.changeBackend = s, t.submitVideoIssueReport = u, t.changePlaybackRate = l, t.seek = c;
+        var d = t.ACTION_LOAD_VIDEO_API = "load video api",
+            f = t.ACTION_VIDEO_API_PLAY = "video api play content",
+            p = t.ACTION_VIDEO_API_PAUSE = "video api pause content",
+            h = t.ACTION_VIDEO_API_MUTE_PLAYER = "video api mute player",
+            _ = t.ACTION_VIDEO_API_CHANGE_VOLUME = "video api change volume",
+            v = t.ACTION_VIDEO_API_CHANGE_BACKEND = "video api change backend",
+            m = t.ACTION_VIDEO_API_REPORT_VIDEO_ISSUE = "video api report video issue",
+            y = t.ACTION_VIDEO_API_CHANGE_PLAYBACK_RATE = "video api change playback rate",
+            g = t.ACTION_VIDEO_API_SEEK = "video api seek"
     }, function(e, t, n) {
         "use strict";
 
@@ -14077,7 +14085,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.29-223629+86b14b59a2827f46bde8922ed5b0ea76cc3745d7",
+                    app_version: "2017.08.30-001508+6755670d3e30bef11daf6458840c949c7e401790",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -23967,8 +23975,7 @@
                 $(t).addClass("player").addClass("theme--dark"), $(t).append(n(741));
                 var b = o.getState().playback.muted;
                 o.dispatch((0, A.initializeCaptionsSettings)(b)), o.dispatch((0, P.initializePlaybackSettings)()), o.dispatch((0, O.initializeSettings)()), re(o), se(o), ae(o), ie(o), te(o), ne(o), ee(o), oe(o), Z(o), le(o), ue(o), U.default.render(x.default.createElement(v.Seekbar, {
-                    store: o,
-                    seek: e.setCurrentTime.bind(e)
+                    store: o
                 }), document.getElementById("js-player-seek")), U.default.render(x.default.createElement(E.VolumeSlider, {
                     store: o
                 }), document.getElementById("js-player-volume")), U.default.render(x.default.createElement(g.MutedSegmentsAlert, {
@@ -25812,7 +25819,7 @@
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.Seekbar = t.SeekbarComponent = t.ANIMATION_SKIP_THRESHOLD = t.classNames = void 0;
+        }), t.Seekbar = t.SeekbarComponent = t.ANIMATION_SKIP_THRESHOLD = t.classNames = t.mapDispatchToProps = void 0;
         var s = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -25839,10 +25846,11 @@
             E = n(602),
             b = n(224),
             T = n(268),
-            S = n(606),
-            C = n(608),
-            w = n(609),
-            A = {
+            S = n(277),
+            C = n(606),
+            w = n(608),
+            A = n(609),
+            P = {
                 bufferLength: d.default.number,
                 currentTime: d.default.number,
                 duration: d.default.number,
@@ -25853,14 +25861,13 @@
                     duration: d.default.number,
                     offset: d.default.number
                 })),
-                onSeeking: d.default.func,
                 seek: d.default.func.isRequired,
                 seekbarMarkers: d.default.array,
                 thumbnailPreviews: d.default.object,
                 windowObj: d.default.object,
                 trackEvent: d.default.func.isRequired
             },
-            P = function(e) {
+            O = function(e) {
                 var t = e.playback,
                     n = e.stream,
                     r = e.timelineMetadata,
@@ -25880,20 +25887,20 @@
                     trackEvent: o.trackEvent
                 }
             },
-            O = function(e) {
+            k = t.mapDispatchToProps = function(e) {
                 return {
-                    onSeeking: function() {
-                        e((0, T.setLoading)(!0))
+                    seek: function(t) {
+                        e((0, S.seek)(t)), e((0, T.setLoading)(!0))
                     }
                 }
             },
-            k = t.classNames = {
+            N = t.classNames = {
                 slider: "player-slider player-slider--roundhandle js-player-slider",
                 sliderLeft: "ui-slider-range",
                 sliderThumb: "ui-slider-handle"
             },
-            N = t.ANIMATION_SKIP_THRESHOLD = .05,
-            I = t.SeekbarComponent = function(e) {
+            I = t.ANIMATION_SKIP_THRESHOLD = .05,
+            R = t.SeekbarComponent = function(e) {
                 function t() {
                     i(this, t);
                     var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -25913,7 +25920,7 @@
                         if (e.currentTime !== this.props.currentTime && this.props.duration > 0) {
                             var t = Math.abs(this.props.currentTime - e.currentTime),
                                 n = t / this.props.duration;
-                            n > N && this.setState({
+                            n > I && this.setState({
                                 skipAnimationForFrame: !0
                             })
                         }!e.isLoading && this.state.isSeeking && this.setState({
@@ -25969,7 +25976,7 @@
                             }),
                             C = null;
                         i && !r && d > 0 && (C = this.createSeekbarPreviews());
-                        var A = l.default.createElement(w.SeekbarMarkers, {
+                        var w = l.default.createElement(A.SeekbarMarkers, {
                             currentTime: c,
                             duration: d,
                             markers: h,
@@ -25980,7 +25987,7 @@
                         });
                         return l.default.createElement(E.Slider, {
                             animate: v,
-                            classNames: k,
+                            classNames: N,
                             max: d,
                             min: 0,
                             value: _,
@@ -25993,7 +26000,7 @@
                                 onStart: this.handleDragStart,
                                 onStop: this.handleDragStop
                             }
-                        }, T, S, C, A)
+                        }, T, S, C, w)
                     }
                 }, {
                     key: "getSeekbarDimensions",
@@ -26021,13 +26028,13 @@
                             a = i.seekbarLeftOffset,
                             s = p.default.msedge || p.default.msie,
                             u = r.count > 0 && !s;
-                        return u ? l.default.createElement(S.ThumbnailPreviews, {
+                        return u ? l.default.createElement(C.ThumbnailPreviews, {
                             duration: n,
                             previews: r,
                             mouseMoveClientX: e,
                             seekbarLeftOffset: a,
                             seekbarWidth: o
-                        }) : l.default.createElement(C.TimestampPreview, {
+                        }) : l.default.createElement(w.TimestampPreview, {
                             duration: n,
                             mouseMoveClientX: e,
                             seekbarLeftOffset: a,
@@ -26108,12 +26115,12 @@
                             isSeeking: !0,
                             seekedValue: e,
                             skipAnimationForFrame: !0
-                        }), this.props.seek(e), this.props.onSeeking()
+                        }), this.props.seek(e)
                     }
                 }]), t
             }(l.default.Component);
-        I.propTypes = A;
-        t.Seekbar = (0, v.connect)(P, O)(I)
+        R.propTypes = P;
+        t.Seekbar = (0, v.connect)(O, k)(R)
     }, function(e, t, n) {
         "use strict";
         e.exports = n(443)
@@ -26962,7 +26969,7 @@
                 this._root = null, this._startText = null, this._fallbackText = null
             },
             getText: function() {
-                return "value" in this._root ? this._root.value : this._root[a()];
+                return "value" in this._root ? this._root.value : this._root[a()]
             },
             getData: function() {
                 if (this._fallbackText) return this._fallbackText;
@@ -50132,6 +50139,9 @@
                             case a.ACTION_VIDEO_API_CHANGE_PLAYBACK_RATE:
                                 n.setPlaybackRate(e.playbackRate);
                                 break;
+                            case a.ACTION_VIDEO_API_SEEK:
+                                n.setCurrentTime(e.seekTime);
+                                break;
                             case u.ACTION_START_CASTING:
                                 n.startCast();
                                 break;
@@ -51170,7 +51180,7 @@
             }, C.prototype.clearActive = function() {
                 this.activeObservations_.splice(0)
             }, C.prototype.hasActive = function() {
-                return this.activeObservations_.length > 0;
+                return this.activeObservations_.length > 0
             };
             var w = "undefined" != typeof WeakMap ? new WeakMap : new l,
                 A = function(e) {
