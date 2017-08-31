@@ -822,6 +822,18 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "43213506-2eba-49c9-950a-db09cc8335a4": {
+            "name": "valkyrie_multi_region_upload",
+            "v": 1936,
+            "t": 2,
+            "groups": [{
+                "weight": 5,
+                "value": "regional_routing"
+            }, {
+                "weight": 10,
+                "value": "control"
+            }]
+        },
         "441c3783-aa74-4a33-aa67-80034afe7e89": {
             "name": "ios_vodcast",
             "v": 1598,
