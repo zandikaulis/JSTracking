@@ -2733,6 +2733,18 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "deafe1ce-a786-4297-b4dc-16291ccdaab6": {
+            "name": "android_theatre_refactor_2",
+            "v": 1937,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "active"
+            }]
+        },
         "df008233-c0f2-46dc-92a2-61396ae402e3": {
             "name": "Similar Channels",
             "v": 535,
