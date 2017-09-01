@@ -1506,6 +1506,18 @@ window.SiteOptions = {
                 "value": ""
             }]
         },
+        "80a4bf5b-0897-4ae6-bf0b-70357524c39b": {
+            "name": "ios_feed_display_content_type_indicator",
+            "v": 1940,
+            "t": 1,
+            "groups": [{
+                "weight": 10,
+                "value": "control"
+            }, {
+                "weight": 90,
+                "value": "active"
+            }]
+        },
         "80ee272f-44ec-4d8c-8ad1-72f4933a3da4": {
             "name": "android_pipboy_broadcasting",
             "v": 1382,
