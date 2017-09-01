@@ -824,7 +824,7 @@ window.SiteOptions = {
         },
         "43213506-2eba-49c9-950a-db09cc8335a4": {
             "name": "valkyrie_multi_region_upload",
-            "v": 1936,
+            "v": 1938,
             "t": 2,
             "groups": [{
                 "weight": 5,
@@ -832,6 +832,9 @@ window.SiteOptions = {
             }, {
                 "weight": 10,
                 "value": "control"
+            }, {
+                "weight": 85,
+                "value": "error"
             }]
         },
         "441c3783-aa74-4a33-aa67-80034afe7e89": {
