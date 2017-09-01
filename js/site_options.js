@@ -141,6 +141,18 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
+        "00d3dec6-a84e-4940-9ebc-25b95b1d3b8c": {
+            "name": "ios_profile_upload",
+            "v": 1942,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "0173154a-7fa4-4a76-b8e1-0575eb3a7fcd": {
             "name": "android_live_preview",
             "v": 459,
