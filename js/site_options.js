@@ -2657,19 +2657,19 @@ window.SiteOptions = {
         },
         "d48fe249-fd73-4c8f-bd17-415b70dc3708": {
             "name": "chomperz",
-            "v": 1962,
+            "v": 1964,
             "t": 1,
             "groups": [{
-                "weight": 5,
+                "weight": 2,
                 "value": "skipcontrol"
             }, {
                 "weight": 0,
                 "value": "skip15"
             }, {
-                "weight": 5,
+                "weight": 3,
                 "value": "skip5"
             }, {
-                "weight": 90,
+                "weight": 95,
                 "value": "holdout"
             }]
         },
