@@ -1361,25 +1361,25 @@ window.SiteOptions = {
         },
         "6cc85744-ded0-481a-a6ea-38c4b13cea64": {
             "name": "ios_aax",
-            "v": 1870,
+            "v": 1951,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "active"
             }]
         },
         "6d07fedb-c0e6-4eae-9082-d4c100eade25": {
             "name": "android_aax",
-            "v": 1871,
+            "v": 1952,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "active"
             }]
         },
