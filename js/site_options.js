@@ -1506,6 +1506,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "7d9127aa-c26f-4b80-a04d-e6ed38e18b78": {
+            "name": "get_bits_button",
+            "v": 1968,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "t1"
+            }, {
+                "weight": 100,
+                "value": "c"
+            }]
+        },
         "7da9cda1-2d29-4917-b595-0c1ea27121e3": {
             "name": "TEST_EXPERIMENT_TESTING",
             "v": 1554,
