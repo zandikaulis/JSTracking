@@ -530,19 +530,19 @@ window.SiteOptions = {
         },
         "274f6835-a41d-417c-ad58-f1321e2aac39": {
             "name": "android_skippable_ads",
-            "v": 1953,
+            "v": 1959,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 5,
                 "value": "skipcontrol"
             }, {
                 "weight": 0,
                 "value": "skip15"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "skip5"
             }, {
-                "weight": 100,
+                "weight": 90,
                 "value": "holdout"
             }]
         },
@@ -1478,19 +1478,19 @@ window.SiteOptions = {
         },
         "79accd86-e77e-4eae-8979-d19ab2bc4521": {
             "name": "ios_skippable_ads",
-            "v": 1954,
+            "v": 1960,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 5,
                 "value": "skipcontrol"
             }, {
                 "weight": 0,
                 "value": "skip15"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "skip5"
             }, {
-                "weight": 100,
+                "weight": 90,
                 "value": "holdout"
             }]
         },
