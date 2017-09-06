@@ -639,6 +639,24 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "2f8b56a6-609f-44e9-a65b-3c3277be5a90": {
+            "name": "android_videoplayer_selection_v0",
+            "v": 1983,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "native"
+            }, {
+                "weight": 1,
+                "value": "playercore"
+            }, {
+                "weight": 98,
+                "value": "exoplayer"
+            }, {
+                "weight": 1,
+                "value": "exoplayer_2"
+            }]
+        },
         "30a7dfaa-e3d2-477e-a4f1-28e2ffb80e72": {
             "name": "NEWSFEED_RECOMMENDATIONS",
             "v": 1568,
@@ -1583,13 +1601,13 @@ window.SiteOptions = {
         },
         "8620d12c-8e03-48d8-92ab-65a8d542a17d": {
             "name": "Extensions Launch Announcement",
-            "v": 1841,
+            "v": 1981,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }]
         },
