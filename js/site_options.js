@@ -1275,6 +1275,18 @@ window.SiteOptions = {
                 "value": "test"
             }]
         },
+        "64c787d2-7a36-447b-bba3-8bbab6846da6": {
+            "name": "android_browse_for_tablet",
+            "v": 1978,
+            "t": 1,
+            "groups": [{
+                "weight": 50,
+                "value": "holdout"
+            }, {
+                "weight": 50,
+                "value": "active"
+            }]
+        },
         "6564de97-effd-4355-b4bb-2eecf49d035f": {
             "name": "android_clip_lg_native_player",
             "v": 1866,
