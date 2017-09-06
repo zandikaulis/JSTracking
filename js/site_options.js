@@ -1016,11 +1016,11 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
-            "v": 1949,
+            "v": 1974,
             "t": 1,
             "groups": [{
                 "weight": 1,
-                "value": "////video-edge-328948.sjc01.hls.ttvnw.net/v1/playlist/CuGVvnrh82-hvck9E-zlQ3OQr9gn7wLT1y_z4NtOHiqRho0W3ZCnljKZV0J-r-VGsJZQLUT2IanwHcnaI81R1dzW5injSu1ivFBBSmp6SjTOytM51tThXIDTFYSpDwA8_vE0LijD-pOABotDKpIDpb1Jvm6z7xvR3ujbu346MhyXAaXumhT6ySVhUinKeVtMtKvqxJ5zZFROO1M-Xquwu9MovCGiONK9Ix00P4-2Ux_6J98kjYtCYmeIpfOGRc0R92VXI02DcLu-vmPGn23lsocUiUpnE68AnumRSHf783d2eT_bnS97RLiRCautPJJEBxkU2rBewouN9w0j5n3dOjmGqNuebDnwivZ08b2WMh4Z8dfZtrBwtlr8-0mUyNJkFKSlo1anpxwQjFK3lLH7C470yguPakwzkr8eD8H8U8yR1e1CsWFpHz4cO.m3u8"
+                "value": "////video-edge-4eb957.sjc01.hls.ttvnw.net/v1/playlist/Cr4Q-HWVZN1QgYFn-TWBfTZJdQBoGv9pHeYKMPjo6BwYxzmgYDNPMFmZhZd8mIr27fggdstunLL5ro4LU3UtuspKsXOH7VD7gxAotEYMYxDofqvtibJes1BCOQjsK-aLO8l44DphYjKlPO1zD-yz4_15Hr1vSU7iGx8SIOY8Jko8xmsyLzpbxP2C2LoBPcxIRzCfhxWVHz4lsbVP_HnwBjxGzF6IyW1gXFFbNEm-b-8V-aE84cbh2ibBFxCWzL41nltRHeNMvvBDqUpu3xeVU9VSHTJG_IXTW414WfbBkvnWmiF5spY6kzDRiJEiHVXW5OnWRg7GAsuKyLxB8qlXuR82GTc9VU7vk7jKfFLKIK_0uN3VPCc4BmkpORMpWjvc-MqnTKo90y4I7xOkVBymrK_p7LMNVEEYET9kivxq93NGt6Bqgy6Nis6M7Q5QKagdegm-DKSu.m3u8"
             }]
         },
         "4bdb6678-2626-466f-bb25-e566dec11354": {
@@ -2897,17 +2897,14 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 1945,
+            "v": 1975,
             "t": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 95,
                 "value": "2.0.5"
             }, {
                 "weight": 5,
-                "value": "2.0.6"
-            }, {
-                "weight": 5,
-                "value": "2.0.108"
+                "value": "2.0.111"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
