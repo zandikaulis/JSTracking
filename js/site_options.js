@@ -640,15 +640,18 @@ window.SiteOptions = {
             }]
         },
         "2f8b56a6-609f-44e9-a65b-3c3277be5a90": {
-            "name": "android_videoplayer_selection_v0",
-            "v": 1983,
+            "name": "android_videoplayer_v0",
+            "v": 1987,
             "t": 1,
             "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
                 "weight": 0,
                 "value": "native"
             }, {
                 "weight": 1,
-                "value": "playercore"
+                "value": "coreplayer"
             }, {
                 "weight": 98,
                 "value": "exoplayer"
@@ -2954,14 +2957,14 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 1975,
+            "v": 1988,
             "t": 1,
             "groups": [{
+                "weight": 5,
+                "value": "2.0.112"
+            }, {
                 "weight": 95,
                 "value": "2.0.5"
-            }, {
-                "weight": 5,
-                "value": "2.0.111"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
