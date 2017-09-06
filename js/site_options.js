@@ -2895,6 +2895,18 @@ window.SiteOptions = {
                 "value": "experiment"
             }]
         },
+        "ec57d33c-2d58-4088-9ff6-617418a6cf1b": {
+            "name": "the_citadel",
+            "v": 1976,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
             "v": 1975,
