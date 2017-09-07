@@ -2783,16 +2783,16 @@ window.SiteOptions = {
         },
         "dadbbe2e-7a79-4d10-8d29-cbff8101ac30": {
             "name": "clips_make_me",
-            "v": 1934,
+            "v": 1993,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 1,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "variant1"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "variant2"
             }]
         },
