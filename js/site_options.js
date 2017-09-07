@@ -684,6 +684,18 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
+        "32099615-3609-4658-9f6b-5c1c1daa3510": {
+            "name": "TWILIGHT_STREAM_SUMMARY",
+            "v": 1992,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "33a4ec99-5100-4831-b04a-f6a725c334f5": {
             "name": "android_recently_watched",
             "v": 330,
@@ -2945,14 +2957,23 @@ window.SiteOptions = {
         },
         "ec57d33c-2d58-4088-9ff6-617418a6cf1b": {
             "name": "the_citadel",
-            "v": 1976,
+            "v": 1991,
             "t": 1,
             "groups": [{
                 "weight": 0,
-                "value": "yes"
+                "value": "yes_10"
             }, {
                 "weight": 100,
                 "value": "no"
+            }, {
+                "weight": 0,
+                "value": "yes_15"
+            }, {
+                "weight": 0,
+                "value": "yes_12"
+            }, {
+                "weight": 0,
+                "value": "yes_8"
             }]
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
