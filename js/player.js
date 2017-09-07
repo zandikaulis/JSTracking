@@ -4554,7 +4554,7 @@
         function E(e) {
             var t = e.player,
                 n = e.oauth_token;
-            if (t === H.PLAYER_CURSE && n) {
+            if ((t === H.PLAYER_CURSE || t === H.PLAYER_TWILIGHT) && n) {
                 var r = Promise.resolve({
                     token: n
                 });
@@ -5249,7 +5249,7 @@
                                 if (!m.arrayBuffer || !ArrayBuffer.prototype.isPrototypeOf(e) && !E(e)) throw new Error("unsupported BodyInit type");
                                 this._bodyArrayBuffer = c(e)
                             } else this._bodyText = "";
-                            this.headers.get("content-type") || ("string" == typeof e ? this.headers.set("content-type", "text/plain;charset=UTF-8") : this._bodyBlob && this._bodyBlob.type ? this.headers.set("content-type", this._bodyBlob.type) : m.searchParams && URLSearchParams.prototype.isPrototypeOf(e) && this.headers.set("content-type", "application/x-www-form-urlencoded;charset=UTF-8"));
+                            this.headers.get("content-type") || ("string" == typeof e ? this.headers.set("content-type", "text/plain;charset=UTF-8") : this._bodyBlob && this._bodyBlob.type ? this.headers.set("content-type", this._bodyBlob.type) : m.searchParams && URLSearchParams.prototype.isPrototypeOf(e) && this.headers.set("content-type", "application/x-www-form-urlencoded;charset=UTF-8"))
                         }, m.blob && (this.blob = function() {
                             var e = o(this);
                             if (e) return e;
@@ -6495,7 +6495,7 @@
                                         data: this._expectedMessage
                                     }),
                                     success: function() {
-                                        Te.debug("shared message sent"), this._sentSharedMessage = !0
+                                        Te.debug("shared message sent"), this._sentSharedMessage = !0;
                                     }.bind(this)
                                 }), this._sentSharedMessageTime = T.time.now())
                             }
@@ -6504,7 +6504,7 @@
                             value: function(e) {
                                 if (Te.debug("received unique message: " + e), e === this._expectedMessage) {
                                     var t = T.time.now() - this._sentUniqueMessageTime;
-                                    this._receivedUniqueMessage = !0, this._stats.logTimer(this._statKeys.uniqueSuccess, t, Ee), this._stats.logCounter(this._statKeys.uniqueSuccess, 1, Ee);
+                                    this._receivedUniqueMessage = !0, this._stats.logTimer(this._statKeys.uniqueSuccess, t, Ee), this._stats.logCounter(this._statKeys.uniqueSuccess, 1, Ee)
                                 }
                             }
                         }, {
@@ -14116,7 +14116,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.09.07-194409+1de3f33ed653a709121a92cb4258655be532e4c3",
+                    app_version: "2017.09.07-195703+e08da9e8bc8312f081a08c1e60b4adbc1656cc01",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -50560,7 +50560,7 @@
         }
 
         function i(e) {
-            if (/\/\/(www|player)\.twitch\.tv/.test(e)) return f;
+            if (/\/\/(www|player|go|canary|rc|.*\.rc|.*\.canary)\.twitch\.tv/.test(e)) return f;
             if (/\/\/betaplayer\.twitch\.tv/.test(e)) return h;
             var t = l.cookie.get(_);
             return t ? t : p
@@ -51208,7 +51208,7 @@
                     this.callback_.call(e, t, e), this.clearActive()
                 }
             }, C.prototype.clearActive = function() {
-                this.activeObservations_.splice(0)
+                this.activeObservations_.splice(0);
             }, C.prototype.hasActive = function() {
                 return this.activeObservations_.length > 0
             };
