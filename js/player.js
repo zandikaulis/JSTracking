@@ -4981,12 +4981,12 @@
                 }
 
                 function l(e) {
-                    return e && "EPROMISERETRY" === e.code && Fe.call(e, "retried")
+                    return e && "EPROMISERETRY" === e.code && Ve.call(e, "retried")
                 }
 
                 function c(e, t) {
                     var n, r;
-                    return "object" == typeof e && "function" == typeof t && (n = t, t = e, e = n), r = Be.operation(t), new Promise(function(t, n) {
+                    return "object" == typeof e && "function" == typeof t && (n = t, t = e, e = n), r = Fe.operation(t), new Promise(function(t, n) {
                         r.attempt(function(i) {
                             Promise.resolve().then(function() {
                                 return e(function(e) {
@@ -6968,7 +6968,7 @@
                             this.token = e;
                             var t = Date.now(),
                                 n = t,
-                                r = 1e3 * this.payload.exp + Qe.clockSkew;
+                                r = 1e3 * this.payload.exp + $e.clockSkew;
                             this.refreshAt = t + (r - n) * Le
                         }
                         return Object.defineProperty(e.prototype, "payload", {
@@ -7065,7 +7065,7 @@
                     }
                     return t
                 };
-                var Ue = i(function(e, t) {
+                var Ue, Be = i(function(e, t) {
                         t.operation = function(e) {
                             var n = t.timeouts(e);
                             return new je(n, {
@@ -7112,15 +7112,15 @@
                             }
                         }
                     }),
-                    Be = Ue,
-                    Fe = Object.prototype.hasOwnProperty,
-                    Ve = c,
-                    He = "v5",
-                    qe = function(e) {
+                    Fe = Be,
+                    Ve = Object.prototype.hasOwnProperty,
+                    He = c,
+                    qe = "v5",
+                    Ge = function(e) {
                         var t = ["124420521", "124421740", "124422593", "124424929", "59980349", "21681549"];
                         return t.indexOf(e) >= 0
                     },
-                    Ge = function(e) {
+                    Ye = function(e) {
                         var t = {
                                 factor: 2,
                                 minTimeout: 1e3,
@@ -7135,36 +7135,36 @@
                                     } else t()
                                 })
                             };
-                        return Ve(n, t)
+                        return He(n, t)
                     },
-                    Ye = function(e) {
-                        if (qe(e)) return Promise.reject("Channel id is in the large event blacklist.");
-                        var t = v.newRequest("/" + He + "/channels/" + e + "/extensions", {
+                    We = function(e) {
+                        if (Ge(e)) return Promise.reject("Channel id is in the large event blacklist.");
+                        var t = v.newRequest("/" + qe + "/channels/" + e + "/extensions", {
                             method: "GET"
                         });
-                        return Ge(t)
+                        return Ye(t)
                     },
-                    We = function(e, t, n) {
-                        var r = v.newRequest("/" + He + "/extensions/" + e + "/auth/link_user", {
+                    Ke = function(e, t, n) {
+                        var r = v.newRequest("/" + qe + "/extensions/" + e + "/auth/link_user", {
                             body: JSON.stringify({
                                 show_user: n,
                                 token: t
                             }),
                             method: "POST"
                         });
-                        return Ge(r)
+                        return Ye(r)
                     },
-                    Ke = function(e, t) {
+                    ze = function(e, t) {
                         var n = t.payload.channel_id,
-                            r = v.newRequest("/" + He + "/extensions/" + e + "/auth/refresh/" + n, {
+                            r = v.newRequest("/" + qe + "/extensions/" + e + "/auth/refresh/" + n, {
                                 body: JSON.stringify({
                                     token: t.token
                                 }),
                                 method: "POST"
                             });
-                        return Ge(r)
+                        return Ye(r)
                     },
-                    ze = function() {
+                    Qe = function() {
                         function e() {
                             var e = this;
                             this.clockSkew = 0, this.tokens = {}, this.timers = {}, this.tokenEmitter = new Re, this.clearTokenManager = function() {
@@ -7185,14 +7185,14 @@
                                 }, n.refreshAfter) : !r && i && (clearTimeout(e.timers[t]), delete e.timers[t])
                             }, this.refreshToken = function(t) {
                                 var n = e.getToken(t);
-                                Ke(t, n).catch(function() {
+                                ze(t, n).catch(function() {
                                     return e.getTokenFromExtensions(t, n)
                                 }).then(function(n) {
                                     var r = n.token;
                                     r && e.registerToken(t, r)
                                 })
                             }, this.getTokenFromExtensions = function(e, t) {
-                                return Ye(t.payload.channel_id).then(function(t) {
+                                return We(t.payload.channel_id).then(function(t) {
                                     var n = t.tokens;
                                     return {
                                         token: n.reduce(function(t, n) {
@@ -7213,8 +7213,8 @@
                             this.tokenEmitter.off(e, t), this.getToken(e) && this.updateRefreshTimer(e)
                         }, e
                     }(),
-                    Qe = new ze,
-                    $e = function() {
+                    $e = new Qe,
+                    Xe = function() {
                         var e = Object.setPrototypeOf || {
                             __proto__: []
                         }
@@ -7230,15 +7230,15 @@
                             e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
                         }
                     }(),
-                    Xe = "playercontext",
-                    Je = "statsupdate",
-                    Ze = "play",
-                    et = "pause",
-                    tt = function(e) {
+                    Je = "playercontext",
+                    Ze = "statsupdate",
+                    et = "play",
+                    tt = "pause",
+                    nt = function(e) {
                         function t(t) {
                             var n = e.call(this) || this;
                             return n.onPlayerContextUpdate = function() {
-                                n.emit(Xe)
+                                n.emit(Je)
                             }, n.onExtensionControlMessage = function(e) {
                                 switch (e.status) {
                                     case "activate":
@@ -7246,20 +7246,21 @@
                                         break;
                                     case "deactivate":
                                     case "mass_deactivate":
+                                    case "uninstall":
                                         n.currentControlHandlers.onDestroyExtension(e.extensionId)
                                 }
                             }, n.pubsub = t || new Ne, n
                         }
-                        return $e(t, e), t.prototype.getInstalledExtensions = function(e) {
-                            return Ye(e).then(function(e) {
-                                return Qe.setClockSkew(e.issued_at), e.tokens.forEach(function(t) {
+                        return Xe(t, e), t.prototype.getInstalledExtensions = function(e) {
+                            return We(e).then(function(e) {
+                                return $e.setClockSkew(e.issued_at), e.tokens.forEach(function(t) {
                                     var n = e.installed_extensions.reduce(function(e, n) {
                                             var r = n.extension,
                                                 i = n.installation_status;
                                             return e ? e : r.id === t.extension_id ? "active" === i.activation_state : e
                                         }, !1),
                                         r = new De(t.token).isBroadcaster;
-                                    (n || r) && Qe.registerToken(t.extension_id, t.token)
+                                    (n || r) && $e.registerToken(t.extension_id, t.token)
                                 }), e
                             })
                         }, t.prototype.setEnvironmentOptions = function(e) {
@@ -7276,33 +7277,48 @@
                         }, t.prototype.unsubscribeFromExtensionControl = function(e) {
                             e === this.currentChannelId && this.currentUnsubscribe && this.currentUnsubscribe()
                         }, t.prototype.registerPlayer = function(e) {
-                            this.player = e, d(this.player) && this.player.setStatsEnabled(!0), this.player.addEventListener(et, this.onPlayerContextUpdate), this.player.addEventListener(Ze, this.onPlayerContextUpdate), this.player.addEventListener(Je, this.onPlayerContextUpdate)
+                            this.player = e, d(this.player) && this.player.setStatsEnabled(!0), this.player.addEventListener(tt, this.onPlayerContextUpdate), this.player.addEventListener(et, this.onPlayerContextUpdate), this.player.addEventListener(Ze, this.onPlayerContextUpdate)
                         }, t.prototype.unregisterPlayer = function() {
-                            this.player && (d(this.player) && this.player.setStatsEnabled(!1), this.player.removeEventListener(et, this.onPlayerContextUpdate), this.player.removeEventListener(Ze, this.onPlayerContextUpdate), this.player.removeEventListener(Je, this.onPlayerContextUpdate), this.player = void 0)
+                            this.player && (d(this.player) && this.player.setStatsEnabled(!1), this.player.removeEventListener(tt, this.onPlayerContextUpdate), this.player.removeEventListener(et, this.onPlayerContextUpdate), this.player.removeEventListener(Ze, this.onPlayerContextUpdate), this.player = void 0)
                         }, t.prototype.onSubscribeFailure = function(e) {}, t.prototype.onSubscribeSuccess = function() {}, t
-                    }(Re),
-                    nt = function() {
+                    }(Re);
+                ! function(e) {
+                    e.Active = "active", e.Inactive = "inactive"
+                }(Ue || (Ue = {}));
+                var rt;
+                ! function(e) {
+                    e.Config = "config", e.Dashboard = "dashboard", e.Viewer = "viewer"
+                }(rt || (rt = {}));
+                var it = function() {
                         function e() {}
-                        return e
-                    }();
-                nt.TwitchExtAuth = "twitch-ext-auth", nt.TwitchExtBootstrap = "twitch-ext-bootstrap", nt.TwitchExtContext = "twitch-ext-context", nt.TwitchExtError = "twitch-ext-error", nt.TwitchExtLoaded = "twitch-ext-loaded", nt.TwitchExtNetworkTiming = "twitch-ext-network-timing", nt.TwitchExtReload = "twitch-ext-reload", nt.TwitchExtUserAction = "twitch-ext-user-action";
-                var rt = function() {
-                    function e() {}
-                    return e
-                }();
-                rt.SupervisorReady = "supervisor-ready", rt.SupervisorInit = "supervisor-init";
-                var it = "https://extension-files.twitch.tv",
-                    ot = it + "/supervisor/v1/index.html",
-                    at = function(e) {
+                        return e.TwitchExtAuth = "twitch-ext-auth", e.TwitchExtBootstrap = "twitch-ext-bootstrap", e.TwitchExtContext = "twitch-ext-context", e.TwitchExtError = "twitch-ext-error", e.TwitchExtLoaded = "twitch-ext-loaded", e.TwitchExtNetworkTiming = "twitch-ext-network-timing", e.TwitchExtReload = "twitch-ext-reload", e.TwitchExtUserAction = "twitch-ext-user-action", e
+                    }(),
+                    ot = function() {
+                        function e() {}
+                        return e.SupervisorReady = "supervisor-ready", e.SupervisorInit = "supervisor-init", e
+                    }(),
+                    at = "https://extension-files.twitch.tv",
+                    st = at + "/supervisor/v1/index.html",
+                    ut = function(e) {
                         var t = document.createElement("a");
                         return t.href = e, {
                             host: t.host
                         }
                     },
-                    st = function(e) {
+                    lt = function(e) {
                         return e ? e.split(".").pop() : ""
                     },
-                    ut = function(e, t) {
+                    ct = function() {
+                        return window.innerHeight
+                    },
+                    dt = function(e) {
+                        return e.getBoundingClientRect()
+                    },
+                    ft = {
+                        getWindowInnerHeight: ct,
+                        getElementBoundingClientRect: dt
+                    },
+                    pt = function(e, t) {
                         var n = !1;
                         return function() {
                             for (var r = [], i = 0; i < arguments.length; i++) r[i] = arguments[i];
@@ -7311,84 +7327,6 @@
                             }, t), e.apply(null, r))
                         }
                     },
-                    lt = function() {
-                        var e = Object.setPrototypeOf || {
-                            __proto__: []
-                        }
-                        instanceof Array && function(e, t) {
-                            e.__proto__ = t
-                        } || function(e, t) {
-                            for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n])
-                        };
-                        return function(t, n) {
-                            function r() {
-                                this.constructor = t
-                            }
-                            e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
-                        }
-                    }(),
-                    ct = "en",
-                    dt = function(e) {
-                        function t(t, n) {
-                            void 0 === n && (n = ct);
-                            var r = e.call(this) || this;
-                            return r.extensionMode = t, r.language = n, r.context = {}, r.isContextInitialized = !1, r.currentGame = "", r.destroy = function() {
-                                bt.off(Xe, r.updateLocalContext)
-                            }, r.initializeContext = function() {
-                                r.isContextInitialized = !0, r.updateLocalContext()
-                            }, r.setGame = function(e) {
-                                r.currentGame = e, r.updateLocalContext()
-                            }, r.refreshContext = function() {
-                                var e = bt.player,
-                                    t = {
-                                        mode: r.extensionMode,
-                                        language: r.language
-                                    };
-                                if ("viewer" === r.extensionMode && (t.game = r.currentGame), "viewer" === r.extensionMode && e) {
-                                    var n = e.getPlaybackStats();
-                                    t.bitrate = n.playbackRate, t.bufferSize = n.bufferSize, t.displayResolution = n.displayResolution, t.hlsLatencyBroadcaster = n.hlsLatencyBroadcaster, t.isFullScreen = e.getFullscreen(), t.isPaused = e.isPaused(), t.isTheatreMode = e.getTheatre(), t.videoResolution = n.videoResolution
-                                }
-                                return t
-                            }, r.updateLocalContext = function() {
-                                var e = r.refreshContext(),
-                                    t = Object.keys(e),
-                                    n = t.reduce(function(t, n) {
-                                        return r.context[n] !== e[n] && t.push(n), t
-                                    }, []);
-                                r.isContextInitialized && n.length > 0 && (r.context = e, r.emit("context", r.context, n))
-                            }, bt.on(Xe, r.updateLocalContext), r
-                        }
-                        return lt(t, e), t
-                    }(Re),
-                    ft = Object.assign || function(e) {
-                        for (var t, n = 1, r = arguments.length; n < r; n++) {
-                            t = arguments[n];
-                            for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
-                        }
-                        return e
-                    },
-                    pt = function() {
-                        function e(e) {
-                            this.dobbin = e.dobbin;
-                            var t = at(e.iframe.ownerDocument.referrer);
-                            this.trackingProperties = ft({}, e.requiredProps, {
-                                url: e.iframe.ownerDocument.location.href,
-                                host: e.iframe.ownerDocument.location.host,
-                                domain: e.iframe.ownerDocument.domain,
-                                user_agent: e.iframe.ownerDocument.defaultView.navigator.userAgent,
-                                referrer_url: e.iframe.ownerDocument.referrer,
-                                referrer_host: t.host,
-                                extension_id: e.extension.clientId,
-                                extension_version: e.extension.version,
-                                extension_anchor: e.extension.anchor,
-                                extension_mode: e.extensionMode
-                            })
-                        }
-                        return e.prototype.trackEvent = function(e, t) {
-                            var n = ft({}, t, this.trackingProperties);
-                            this.dobbin.trackEvent(e, n, ["spade"])
-                        }, e
-                    }(),
                     ht = function() {
                         var e = Object.setPrototypeOf || {
                             __proto__: []
@@ -7405,59 +7343,69 @@
                             e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
                         }
                     }(),
-                    _t = function(e) {
-                        function t(t) {
-                            var n = e.call(this) || this;
-                            return n.iframe = t, n.destroy = function() {
-                                n.iframe.ownerDocument.defaultView.removeEventListener("message", n.handleMessage)
-                            }, n.sendContext = function(e, t) {
-                                n.sendMessage({
-                                    action: nt.TwitchExtContext,
-                                    context: e,
-                                    updatedFields: t
-                                })
-                            }, n.sendExtensionAuth = function(e) {
-                                n.sendMessage({
-                                    action: nt.TwitchExtAuth,
-                                    auth: e
-                                })
-                            }, n.sendExtensionBootstrap = function(e) {
-                                n.sendMessage({
-                                    action: nt.TwitchExtBootstrap,
-                                    auth: e
-                                })
-                            }, n.sendExtensionReloadMessage = function() {
-                                n.sendMessage({
-                                    action: nt.TwitchExtReload
-                                })
-                            }, n.sendSupervisorInit = function(e) {
-                                n.sendMessage({
-                                    action: rt.SupervisorInit,
-                                    options: e
-                                })
-                            }, n.handleMessage = function(e) {
-                                var t = e.source,
-                                    r = e.data;
-                                if (t === n.iframe.contentWindow) try {
-                                    n.handleExtensionAction(r)
-                                } catch (e) {
-                                    console.error("Caught Error in Message Handler: " + e.stack)
+                    _t = "en",
+                    vt = function(e) {
+                        function t(t, n) {
+                            void 0 === n && (n = _t);
+                            var r = e.call(this) || this;
+                            return r.extensionMode = t, r.language = n, r.context = {}, r.isContextInitialized = !1, r.currentGame = "", r.destroy = function() {
+                                At.off(Je, r.updateLocalContext)
+                            }, r.initializeContext = function() {
+                                r.isContextInitialized = !0, r.updateLocalContext()
+                            }, r.setGame = function(e) {
+                                r.currentGame = e, r.updateLocalContext()
+                            }, r.refreshContext = function() {
+                                var e = At.player,
+                                    t = {
+                                        mode: r.extensionMode,
+                                        language: r.language
+                                    };
+                                if ("viewer" === r.extensionMode && (t.game = r.currentGame), "viewer" === r.extensionMode && e) {
+                                    var n = e.getPlaybackStats();
+                                    t.bitrate = n.playbackRate, t.bufferSize = n.bufferSize, t.displayResolution = n.displayResolution, t.hlsLatencyBroadcaster = n.hlsLatencyBroadcaster, t.isFullScreen = e.getFullscreen(), t.isPaused = e.isPaused(), t.isTheatreMode = e.getTheatre(), t.videoResolution = n.videoResolution
                                 }
-                            }, n.handleExtensionAction = function(e) {
-                                switch (e.action) {
-                                    case rt.SupervisorReady:
-                                    case nt.TwitchExtLoaded:
-                                    case nt.TwitchExtUserAction:
-                                    case nt.TwitchExtNetworkTiming:
-                                        n.emit(e.action, e)
-                                }
-                            }, n.sendMessage = function(e) {
-                                n.iframe.contentWindow.postMessage(e, it)
-                            }, n.iframe.ownerDocument.defaultView.addEventListener("message", n.handleMessage), n
+                                return t
+                            }, r.updateLocalContext = function() {
+                                var e = r.refreshContext(),
+                                    t = Object.keys(e),
+                                    n = t.reduce(function(t, n) {
+                                        return r.context[n] !== e[n] && t.push(n), t
+                                    }, []);
+                                r.isContextInitialized && n.length > 0 && (r.context = e, r.emit("context", r.context, n))
+                            }, At.on(Je, r.updateLocalContext), r
                         }
                         return ht(t, e), t
                     }(Re),
-                    vt = function() {
+                    mt = Object.assign || function(e) {
+                        for (var t, n = 1, r = arguments.length; n < r; n++) {
+                            t = arguments[n];
+                            for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
+                        }
+                        return e
+                    },
+                    yt = function() {
+                        function e(e) {
+                            this.dobbin = e.dobbin;
+                            var t = ut(e.iframe.ownerDocument.referrer);
+                            this.trackingProperties = mt({}, e.requiredProps, {
+                                url: e.iframe.ownerDocument.location.href,
+                                host: e.iframe.ownerDocument.location.host,
+                                domain: e.iframe.ownerDocument.domain,
+                                user_agent: e.iframe.ownerDocument.defaultView.navigator.userAgent,
+                                referrer_url: e.iframe.ownerDocument.referrer,
+                                referrer_host: t.host,
+                                extension_id: e.extension.clientId,
+                                extension_version: e.extension.version,
+                                extension_anchor: e.extension.anchor,
+                                extension_mode: e.extensionMode
+                            })
+                        }
+                        return e.prototype.trackEvent = function(e, t) {
+                            var n = mt({}, t, this.trackingProperties);
+                            this.dobbin.trackEvent(e, n, ["spade"])
+                        }, e
+                    }(),
+                    gt = function() {
                         var e = Object.setPrototypeOf || {
                             __proto__: []
                         }
@@ -7473,10 +7421,78 @@
                             e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
                         }
                     }(),
-                    mt = ["allow-forms", "allow-scripts", "allow-same-origin"],
-                    yt = 700,
-                    gt = 300,
                     Et = function(e) {
+                        function t(t) {
+                            var n = e.call(this) || this;
+                            return n.iframe = t, n.destroy = function() {
+                                n.iframe.ownerDocument.defaultView.removeEventListener("message", n.handleMessage)
+                            }, n.sendContext = function(e, t) {
+                                n.sendMessage({
+                                    action: it.TwitchExtContext,
+                                    context: e,
+                                    updatedFields: t
+                                })
+                            }, n.sendExtensionAuth = function(e) {
+                                n.sendMessage({
+                                    action: it.TwitchExtAuth,
+                                    auth: e
+                                })
+                            }, n.sendExtensionBootstrap = function(e) {
+                                n.sendMessage({
+                                    action: it.TwitchExtBootstrap,
+                                    auth: e
+                                })
+                            }, n.sendExtensionReloadMessage = function() {
+                                n.sendMessage({
+                                    action: it.TwitchExtReload
+                                })
+                            }, n.sendSupervisorInit = function(e) {
+                                n.sendMessage({
+                                    action: ot.SupervisorInit,
+                                    options: e
+                                })
+                            }, n.handleMessage = function(e) {
+                                var t = e.source,
+                                    r = e.data;
+                                if (t === n.iframe.contentWindow) try {
+                                    n.handleExtensionAction(r)
+                                } catch (e) {
+                                    console.error("Caught Error in Message Handler: " + e.stack)
+                                }
+                            }, n.handleExtensionAction = function(e) {
+                                switch (e.action) {
+                                    case ot.SupervisorReady:
+                                    case it.TwitchExtLoaded:
+                                    case it.TwitchExtUserAction:
+                                    case it.TwitchExtNetworkTiming:
+                                        n.emit(e.action, e)
+                                }
+                            }, n.sendMessage = function(e) {
+                                n.iframe.contentWindow.postMessage(e, at)
+                            }, n.iframe.ownerDocument.defaultView.addEventListener("message", n.handleMessage), n
+                        }
+                        return gt(t, e), t
+                    }(Re),
+                    bt = function() {
+                        var e = Object.setPrototypeOf || {
+                            __proto__: []
+                        }
+                        instanceof Array && function(e, t) {
+                            e.__proto__ = t
+                        } || function(e, t) {
+                            for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n])
+                        };
+                        return function(t, n) {
+                            function r() {
+                                this.constructor = t
+                            }
+                            e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
+                        }
+                    }(),
+                    Tt = ["allow-forms", "allow-scripts", "allow-same-origin"],
+                    St = 700,
+                    Ct = 300,
+                    wt = function(e) {
                         function t(t) {
                             var n = e.call(this) || this;
                             return n.handleUserAction = {
@@ -7515,7 +7531,7 @@
                                         t && t.focus()
                                     }
                                 }
-                            }, n.hasBootstrapped = !1, n.hasLoaded = !1, n.throttleDblClick = ut(function(e, t) {
+                            }, n.hasSentViewEvent = !1, n.hasBootstrapped = !1, n.hasLoaded = !1, n.throttleDblClick = pt(function(e, t) {
                                 var n = t.payload,
                                     r = e.getBoundingClientRect(),
                                     i = r.left,
@@ -7531,10 +7547,10 @@
                                 n.unsetupListeners(), n.contextManager.destroy(), n.coordinator.destroy(), n.iframe.remove()
                             }, n.linkIdentity = function() {
                                 var e = n.extension.clientId,
-                                    t = Qe.getToken(e);
-                                We(e, t.token, !0).then(function(t) {
+                                    t = $e.getToken(e);
+                                Ke(e, t.token, !0).then(function(t) {
                                     var r = t.token;
-                                    Qe.registerToken(e, r), n.tracker.trackEvent("extension_ui_interaction_client", {
+                                    $e.registerToken(e, r), n.tracker.trackEvent("extension_ui_interaction_client", {
                                         extension_interaction: "grant"
                                     })
                                 })
@@ -7542,16 +7558,31 @@
                                 n.contextManager.setGame(e)
                             }, n.unlinkIdentity = function() {
                                 var e = n.extension.clientId,
-                                    t = Qe.getToken(e);
-                                We(e, t.token, !1).then(function(t) {
+                                    t = $e.getToken(e);
+                                Ke(e, t.token, !1).then(function(t) {
                                     var r = t.token;
-                                    Qe.registerToken(e, r), n.tracker.trackEvent("extension_ui_interaction_client", {
+                                    $e.registerToken(e, r), n.tracker.trackEvent("extension_ui_interaction_client", {
                                         extension_interaction: "revoke"
                                     })
                                 })
+                            }, n.visibilityChanged = function() {
+                                if (!n.hasSentViewEvent && "panel" === n.extension.anchor && n.extensionOptions.mode === rt.Viewer) {
+                                    var e = 100,
+                                        t = 75,
+                                        r = ft.getElementBoundingClientRect(n.iframe),
+                                        i = r.bottom - r.top,
+                                        o = ft.getWindowInnerHeight(),
+                                        a = Math.min(Math.max(o - r.top, 0), i),
+                                        s = a / i,
+                                        u = s * e;
+                                    u >= t && (n.tracker.trackEvent("extension_view", {
+                                        pct_view_visible: t,
+                                        px_view_visible: Math.floor(i * t / e)
+                                    }), n.hasSentViewEvent = !0)
+                                }
                             }, n.getExtensionHeight = function() {
                                 var e = n.extensionOptions.mode;
-                                return "config" === e ? yt : n.extension.panelHeight ? Number(n.extension.panelHeight) : gt
+                                return "config" === e ? St : n.extension.panelHeight ? Number(n.extension.panelHeight) : Ct
                             }, n.getAnchorAttributes = function() {
                                 var e = n.extensionOptions,
                                     t = e.anchor,
@@ -7563,6 +7594,7 @@
                                         i.style = "height: " + o + "px;";
                                         break;
                                     case "video_overlay":
+                                    case "hidden":
                                         "viewer" === r && (i.scrolling = "no")
                                 }
                                 return i
@@ -7572,7 +7604,7 @@
                             }, n.createSupervisorIFrame = function(e, t, r) {
                                 var i = n.extensionOptions.mode,
                                     o = document.createElement("iframe");
-                                switch (o.setAttribute("class", e), o.setAttribute("sandbox", mt.join(" ")), o.setAttribute("frameBorder", "0"), o.setAttribute("scrolling", "no"), o.setAttribute("src", ot), i) {
+                                switch (o.setAttribute("class", e), o.setAttribute("sandbox", Tt.join(" ")), o.setAttribute("frameBorder", "0"), o.setAttribute("scrolling", "no"), o.setAttribute("src", st), i) {
                                     case "viewer":
                                         n.applyAnchorAttributes(o, t), n.applyViewerPanelWhitelist(o);
                                         break;
@@ -7581,7 +7613,7 @@
                                         o.setAttribute("style", "height: " + a + "px;"), n.applyConfigWhitelist(o);
                                         break;
                                     case "config":
-                                        o.setAttribute("style", "width:100%; height: " + yt + "px;"), n.applyConfigWhitelist(o)
+                                        o.setAttribute("style", "width:100%; height: " + St + "px;"), n.applyConfigWhitelist(o)
                                 }
                                 return o
                             }, n.initSupervisedExtension = function() {
@@ -7597,7 +7629,7 @@
                                         e = n.extension.configUrl, t = n.getConfigWhitelist()
                                 }
                                 var i = n.getAnchorAttributes();
-                                i.sandbox = t || mt.join(" ");
+                                i.sandbox = t || Tt.join(" ");
                                 var o = {
                                     extensionURL: f(e, n.extensionOptions),
                                     hostOrigin: window.location.origin,
@@ -7605,7 +7637,7 @@
                                 };
                                 n.coordinator.sendSupervisorInit(o)
                             }, n.getExtensionAuth = function() {
-                                var e = Qe.getToken(n.extension.clientId);
+                                var e = $e.getToken(n.extension.clientId);
                                 return {
                                     channelId: e.payload.channel_id,
                                     clientId: n.extension.clientId,
@@ -7618,7 +7650,7 @@
                                 n.hasLoaded && !e.isNearExpiration && (n.hasBootstrapped ? e.isLinked !== t.isLinked ? n.reloadExtension() : n.sendAuthUpdate(e) : n.sendBootstrap(e))
                             }, n.onExtensionLoaded = function(e) {
                                 n.hasLoaded = !0, n.contextManager.initializeContext(), n.tracker.trackEvent("extension_helper_load_success", {});
-                                var t = Qe.getToken(n.extension.clientId);
+                                var t = $e.getToken(n.extension.clientId);
                                 n.handleToken(t, t)
                             }, n.onExtensionUserAction = function(e) {
                                 n.handleUserAction[e.payload.type].call(n, e)
@@ -7626,7 +7658,7 @@
                                 n.tracker.trackEvent("extension_network_request", {
                                     request_duration: e.payload.duration,
                                     request_end_time: e.payload.endTime,
-                                    request_file_type: st(e.payload.url),
+                                    request_file_type: lt(e.payload.url),
                                     request_start_time: e.payload.startTime,
                                     request_url: e.payload.url
                                 })
@@ -7644,50 +7676,50 @@
                                     callback: n.onMouseEnter.bind(n)
                                 }], n.eventListeners.forEach(function(e) {
                                     e.target.addEventListener(e.event, e.callback)
-                                }), n.contextManager.on("context", n.coordinator.sendContext), n.coordinator.on(rt.SupervisorReady, n.initSupervisedExtension), n.coordinator.on(nt.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.on(nt.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.on(nt.TwitchExtUserAction, n.onExtensionUserAction), Qe.subscribe(n.extension.clientId, n.handleToken);
-                                var e = Qe.getToken(n.extension.clientId);
+                                }), n.contextManager.on("context", n.coordinator.sendContext), n.coordinator.on(ot.SupervisorReady, n.initSupervisedExtension), n.coordinator.on(it.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.on(it.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.on(it.TwitchExtUserAction, n.onExtensionUserAction), $e.subscribe(n.extension.clientId, n.handleToken);
+                                var e = $e.getToken(n.extension.clientId);
                                 e.isNearExpiration || n.handleToken(e, e)
                             }, n.reloadExtension = function() {
                                 n.hasLoaded = !1, n.hasBootstrapped = !1, n.coordinator.sendExtensionReloadMessage()
                             }, n.unsetupListeners = function() {
                                 n.eventListeners.forEach(function(e) {
                                     e.target.removeEventListener(e.event, e.callback)
-                                }), n.contextManager.off("context", n.coordinator.sendContext), n.coordinator.off(nt.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.off(nt.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.off(nt.TwitchExtUserAction, n.onExtensionUserAction), Qe.unsubscribe(n.extension.clientId, n.handleToken)
+                                }), n.contextManager.off("context", n.coordinator.sendContext), n.coordinator.off(it.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.off(it.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.off(it.TwitchExtUserAction, n.onExtensionUserAction), $e.unsubscribe(n.extension.clientId, n.handleToken)
                             }, n.extension = t.extension, n.extensionOptions = {
                                 anchor: t.extension.anchor,
                                 language: t.language || "en",
                                 mode: t.mode
-                            }, n.iframe = n.createSupervisorIFrame(t.iframeClassName, n.extension.anchor, n.extensionOptions), n.tracker = t.extensionTracker || new pt({
+                            }, n.iframe = n.createSupervisorIFrame(t.iframeClassName, n.extension.anchor, n.extensionOptions), n.tracker = t.extensionTracker || new yt({
                                 dobbin: t.dobbin,
                                 extension: t.extension,
                                 extensionMode: t.mode,
                                 iframe: n.iframe,
                                 requiredProps: t.trackingProperties
-                            }), n.coordinator = t.extensionCoordinator || new _t(n.iframe), n.contextManager = t.contextManager || new dt(t.mode), n.setupListeners(), n.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(n.iframe), n
+                            }), n.coordinator = t.extensionCoordinator || new Et(n.iframe), n.contextManager = t.contextManager || new vt(t.mode), n.setupListeners(), n.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(n.iframe), n.visibilityChanged(), n
                         }
-                        return vt(t, e), t.prototype.getViewerPanelWhiteList = function() {
+                        return bt(t, e), t.prototype.getViewerPanelWhiteList = function() {
                             var e = this.extension.whitelistedPanelUrls,
                                 t = this.extensionOptions,
                                 n = t.mode,
                                 r = t.anchor,
-                                i = "video_overlay" !== r && e.length && "viewer" === n;
-                            return i ? mt.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : mt.join(" ")
+                                i = "panel" === r && e.length && "viewer" === n;
+                            return i ? Tt.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : Tt.join(" ")
                         }, t.prototype.getConfigWhitelist = function() {
                             var e = this.extension.whitelistedConfigUrls,
                                 t = e.length;
-                            return t ? mt.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : mt.join(" ")
+                            return t ? Tt.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : Tt.join(" ")
                         }, t.prototype.applyViewerPanelWhitelist = function(e) {
                             e.setAttribute("sandbox", this.getViewerPanelWhiteList())
                         }, t.prototype.applyConfigWhitelist = function(e) {
                             e.setAttribute("sandbox", this.getConfigWhitelist())
                         }, t
                     }(Re),
-                    bt = new tt,
-                    Tt = function() {
+                    At = new nt,
+                    Pt = function() {
                         function e() {}
-                        return e
+                        return e.ExtensionFrame = wt, e.ExtensionService = At, e
                     }();
-                Tt.ExtensionFrame = Et, Tt.ExtensionService = bt, t.extensionService = bt, t.ExtensionCoordinator = Tt, t.ExtensionFrame = Et, Object.defineProperty(t, "__esModule", {
+                t.extensionService = At, t.ExtensionCoordinator = Pt, t.ExtensionFrame = wt, Object.defineProperty(t, "__esModule", {
                     value: !0
                 })
             })
@@ -10251,15 +10283,15 @@
                             var n = this;
                             t.extend(n, {
                                 onEndOrAdSkip: function(n, r) {
-                                    e.getPlaylist().addBufferingTime(n), e.getPlaylist().getClip().addBufferingTime(n), e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && e.getPlaylist().getClip().setSeekingTimeBeforeEnd(n - e.getPlaylist().getClip().getSeekingTimestamp()), e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1), r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist()
+                                    e.getPlaylist().addBufferingTime(n), e.getPlaylist().getClip().addBufferingTime(n), e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && e.getPlaylist().getClip().setSeekingTimeBeforeEnd(n - e.getPlaylist().getClip().getSeekingTimestamp()), e.getPlaylist().getClip().resetClipLifecycleLabels(), e.getPlaylist().getClip().setPlaybackStarted(!1),
+                                        r.hasOwnProperty("ns_st_pe") && t.parseBoolean(r.ns_st_pe, !1) && e.getSSECore().resetPlaylist()
                                 },
                                 onBufferStop: function(t, n) {
                                     e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && (e.getPlaylist().getClip().addSeekingTime(t), e.getPlaylist().getClip().setCollectingSeekingTime(!1))
                                 },
                                 onSeekStart: function(t, n) {
                                     var r = parseInt(n.ns_st_po);
-                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().isSeeking() ? e.getPlaylist().getClip().isCollectingSeekingTime() || (e.getPlaylist().getClip().setSeekingTimestamp(t), e.getPlaylist().getClip().setCollectingSeekingTime(!0)) : e.getPlaylist().getClip().incrementSeeks(),
-                                        e.getPlaylist().getClip().isSeeking() || (e.getPlaylist().getClip().setSeeking(!0), e.getPlaylist().getClip().setCollectingSeekingTime(!0), e.getPlaylist().getClip().setSeekStartPosition(r), e.getPlaylist().getClip().setSeekingTimestamp(t))
+                                    e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().isSeeking() ? e.getPlaylist().getClip().isCollectingSeekingTime() || (e.getPlaylist().getClip().setSeekingTimestamp(t), e.getPlaylist().getClip().setCollectingSeekingTime(!0)) : e.getPlaylist().getClip().incrementSeeks(), e.getPlaylist().getClip().isSeeking() || (e.getPlaylist().getClip().setSeeking(!0), e.getPlaylist().getClip().setCollectingSeekingTime(!0), e.getPlaylist().getClip().setSeekStartPosition(r), e.getPlaylist().getClip().setSeekingTimestamp(t))
                                 },
                                 onPause: function(t, n) {
                                     e.getPlaylist().addBufferingTime(t), e.getPlaylist().getClip().addBufferingTime(t), e.getPlaylist().getClip().isSeeking() && e.getPlaylist().getClip().isCollectingSeekingTime() && (e.getPlaylist().getClip().addSeekingTime(t), e.getPlaylist().getClip().setCollectingSeekingTime(!1))
@@ -12012,8 +12044,7 @@
             return new _.default({
                 defaults: (t = {}, i(t, b, "no"), i(t, T, "no"), i(t, S, "no"), i(t, C, "no"), i(t, w, "no"), i(t, A, "no"), i(t, P, "no"), i(t, O, "no"), i(t, k, "no"), i(t, N, "no"), i(t, I, "no"), i(t, R, "no"), i(t, M, "control"), i(t, D, "1.8.10"), i(t, L, "no"), i(t, x, "no"), i(t, j, "keep"), i(t, U, "pad_control"), i(t, B, "no"), i(t, F, "no"), i(t, V, "control"), i(t, H, "no"), i(t, q, "control"), i(t, G, "control"), i(t, Y, "control"), i(t, W, "2.0.0"), t),
                 deviceID: e.deviceID,
-                overrides: (0, d.default)((n = {}, i(n, M, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])),
-                    i(n, T, a(["US"])), i(n, S, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, A, a(["SE"])), i(n, P, a(["DK", "FI", "NL", "NO"])), i(n, O, a(["CA"])), i(n, k, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, I, a(["PL"])), i(n, R, a(["AT", "CH", "ES", "IT", "PT"])), i(n, L, o("vca")), i(n, x, o("yes")), i(n, D, o("1.8.11")), i(n, F, o("yes")), i(n, B, o("yes")), i(n, q, o("show")), i(n, G, o("show")), i(n, W, o("2.0.0")), n), JSON.parse(l.cookie.get("experiment_overrides", "{}"))),
+                overrides: (0, d.default)((n = {}, i(n, M, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), i(n, T, a(["US"])), i(n, S, a(["GB"])), i(n, C, a(["DE"])), i(n, w, a(["FR"])), i(n, A, a(["SE"])), i(n, P, a(["DK", "FI", "NL", "NO"])), i(n, O, a(["CA"])), i(n, k, a(["AU", "NZ"])), i(n, N, a(["BE"])), i(n, I, a(["PL"])), i(n, R, a(["AT", "CH", "ES", "IT", "PT"])), i(n, L, o("vca")), i(n, x, o("yes")), i(n, D, o("1.8.11")), i(n, F, o("yes")), i(n, B, o("yes")), i(n, q, o("show")), i(n, G, o("show")), i(n, W, o("2.0.0")), n), JSON.parse(l.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
                 login: e.login,
                 provider: new m.default(m.default.SERVICE_URL),
@@ -14085,7 +14116,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.08.30-001508+6755670d3e30bef11daf6458840c949c7e401790",
+                    app_version: "2017.09.07-194409+1de3f33ed653a709121a92cb4258655be532e4c3",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -14314,7 +14345,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-3e5285.sjc01.hls.ttvnw.net/v1/playlist/Cr2ESbUJiu1W6w5VcZ-qDMaWmJRgK1sO6m9m9IpGaDi6O6ojwI_WwKAZrHuhYR3YBQIsiq2rO_saJiL7FQNJzFS9WeQirGDdTry5WiBHROVYyNT54aWSvOlVFJLosQaStvafqY7kfgPODTQfptNsTQQ9MxHhL-HZr9rAvOQG_MKQ59z-ngaUY6MUAMQ8iBge9Gc3in-fwIixfDdhGwKexBLb2xX7AjqG5us04Zg7R-348d-GEgYUSfXS_pecywEFW87bnaFSxViVLwJSpTUXwqJaaqzEpsyr1FLLzt1Y11YF-QXj8MwDOGnAnNQzGnP-fc461LURcG6_Hio6036jrm0BdN_sjMDG3GA6vfIMhoea-qA-9GBf2dHg0jRWVHSc0rM8nW9Q--MSRZWay7w71QoNuqoOwBNJ_pjCUsESPsv0w-7DP2V.m3u8"
+        t.trustedSpadeURI = "//video-edge-e2c440.sjc01.hls.ttvnw.net/v1/playlist/CprQgR2ATb5sNCZ4dGyMYtBJ2vHyIajL5eGN-MaqOpOLg2a7ApNlNwe3gAgxLEZmisQN-OtprdctXcIwG8EVUjZEP7QRAQvyDAVkurJpNU5BtZZLzbY530RgwQGw-CyKQGXLRAbX-wXDdF9LKcln3AXzzUP8pp6gcgiTVMavCRGRPG0ZxC_l9Pyt3ucQZd9eO-c4QLOKRTuNpThZ0O2vv3DL-89J8GHz-FbGffDsGqx34EfXYygbOgJvxcWdxbls6n4va-pEB794Zw68qFz0F2latikfTLySIb3DkdAmHU1tBqDLBCD2XJsWpvrfpKE_Ef_F54pZwV79wLbm3BFWgqfLW_xTYPzuyfvwOrZfpU9wlyr_tDRraTg26wdNqwBYq3s6f2lCoRI2WzKzkw2nX_XDUtQJ-T3dnGlg_TDZPS2att9rNizW9Lw.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -18694,8 +18725,8 @@
                                 current_fps: i.getVideoFrameRate(),
                                 current_fps_exact: i.getVideoFrameRate(),
                                 dropped_frames: i.getDroppedFrames(),
-                                hls_latency_broadcaster: i.getBroadcasterLatency(),
-                                hls_latency_encoder: i.getTranscoderLatency(),
+                                hls_latency_broadcaster: (0, y.default)(i.getBroadcasterLatency()),
+                                hls_latency_encoder: (0, y.default)(i.getTranscoderLatency()),
                                 hls_target_duration: 5,
                                 paused: a === this._mediaPlayerHandle.PlayerState.IDLE,
                                 playing: a === this._mediaPlayerHandle.PlayerState.PLAYING,
@@ -18780,7 +18811,7 @@
                         }), n.addEventListener(e.PlayerState.PLAYING, function() {
                             t._readyState <= C.HAVE_CURRENT_DATA && (t._readyState = C.HAVE_FUTURE_DATA), t._eventEmitter.emit(f.LOADED_DATA), t._eventEmitter.emit(f.PLAYING);
                             var e = n.getPlaybackRate();
-                            e !== t._cache.currentPlaybackRate && (t._cache.currentPlaybackRate = e, t._eventEmitter.emit(f.RATE_CHANGE, e)), t._cache.seekStarted && (t._eventEmitter.emit(f.SEEKED), t._cache.seekStarted = !1)
+                            e !== t._cache.currentPlaybackRate && (t._cache.currentPlaybackRate = e, t._eventEmitter.emit(f.RATE_CHANGE, e)), t._cache.seekStarted && (t._eventEmitter.emit(f.CAN_PLAY), t._eventEmitter.emit(f.SEEKED), t._cache.seekStarted = !1)
                         }), n.addEventListener(e.PlayerEvent.QUALITY_CHANGED, function() {
                             var e = t.getQuality();
                             if (t._mediaPlayer.getAutoSwitchQuality()) {
@@ -18940,8 +18971,7 @@
                     n.call(this, arguments[1], arguments[2]);
                     break;
                 default:
-                    s = Array.prototype.slice.call(arguments, 1),
-                        n.apply(this, s)
+                    s = Array.prototype.slice.call(arguments, 1), n.apply(this, s)
             } else if (o(n))
                 for (s = Array.prototype.slice.call(arguments, 1), l = n.slice(), i = l.length, u = 0; u < i; u++) l[u].apply(this, s);
             return !0
@@ -20113,8 +20143,8 @@
                                 current_fps: (0, C.default)(e.fps),
                                 current_fps_exact: e.fps,
                                 dropped_frames: e.skippedFrames,
-                                hls_latency_broadcaster: e.hlsLatencyBroadcaster,
-                                hls_latency_encoder: e.hlsLatencyEncoder,
+                                hls_latency_broadcaster: (0, C.default)(e.hlsLatencyBroadcaster),
+                                hls_latency_encoder: (0, C.default)(e.hlsLatencyEncoder),
                                 hls_target_duration: e.targetDuration,
                                 manifest_cluster: n.manifest_cluster,
                                 manifest_node: n.manifest_node,
@@ -38350,7 +38380,7 @@
             w = n(651),
             A = n(223),
             P = n(272),
-            O = t.EXTENSION_SETTINGS_TOOLTIP = "Interactions",
+            O = t.EXTENSION_SETTINGS_TOOLTIP = "Extensions",
             k = {
                 isLoggedIn: d.default.bool.isRequired,
                 isSettingsShown: d.default.bool.isRequired,
@@ -38706,7 +38736,7 @@
             h = n(325),
             _ = n(653),
             v = n(658),
-            m = "Active Interactions",
+            m = "Active Extensions",
             y = {
                 extensions: d.default.arrayOf(_.EXTENSION_PROP_TYPE).isRequired,
                 onExtensionClick: d.default.func,
@@ -38900,7 +38930,7 @@
             v = n(621),
             m = n(223),
             y = "View Details",
-            g = "Report Interaction",
+            g = "Report Extension",
             E = "Manage Access",
             b = "Access",
             T = "Granted",
@@ -39116,7 +39146,7 @@
             w = t.GRANT_ACCESS_SUMMARY = "You are granting the following access:",
             A = t.REVOKE_ACCESS_SUMMARY = "You are revoking the following access:",
             P = "Your Twitch User ID",
-            O = "Allows this interaction to know your User ID on Twitch.",
+            O = "Allows this extension to know your User ID on Twitch.",
             k = {
                 extension: _.EXTENSION_PROP_TYPE,
                 onMenuTransition: d.default.func,
@@ -39275,7 +39305,7 @@
             C = t.MENU_BACK_LABEL = "qa-menu-back-label",
             w = t.EXT_SUBMIT_BUTTON = "qa-ext-report-submit-btn",
             A = t.EXT_SUBMIT_LABEL = "qa-ext-report-submit-label",
-            P = "Report Interaction",
+            P = "Report Extension",
             O = "terms of service",
             k = "Description (required)",
             N = "Sent!",
@@ -39341,7 +39371,7 @@
                     key: "handleSubmit",
                     value: function() {
                         var e = this,
-                            t = [this.state.description, "Interaction ID: " + this.props.extension.id, "Interaction Name: " + this.props.extension.name, "Interaction Version: " + this.props.extension.version].join("\n");
+                            t = [this.state.description, "Extension ID: " + this.props.extension.id, "Extension Name: " + this.props.extension.name, "Extension Version: " + this.props.extension.version].join("\n");
                         return (0, E.postExtensionReport)((0, v.default)((0, h.default)({}, this.state, {
                             description: t
                         }), B)).then(function() {
