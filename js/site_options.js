@@ -165,6 +165,18 @@ window.SiteOptions = {
                 "value": "live"
             }]
         },
+        "0238d763-05ee-4d27-ba3f-0b7d45346102": {
+            "name": "android_spade_batching_v2",
+            "v": 2000,
+            "t": 1,
+            "groups": [{
+                "weight": 99,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "active"
+            }]
+        },
         "04b8f9e1-4849-48fa-8d33-c56ec9f040a0": {
             "name": "android_video_paint",
             "v": 1061,
@@ -829,6 +841,18 @@ window.SiteOptions = {
             }, {
                 "weight": 10,
                 "value": "active1"
+            }]
+        },
+        "409d6b75-c64e-449c-b6ec-130118312d3f": {
+            "name": "ios_raids",
+            "v": 1999,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "428d3b07-cc7a-424f-aad0-971f5415879a": {
@@ -1612,6 +1636,18 @@ window.SiteOptions = {
             }, {
                 "weight": 5,
                 "value": "variant2"
+            }]
+        },
+        "821d3e5f-5836-48d6-b203-a7973d6f097c": {
+            "name": "android_raids",
+            "v": 1998,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "84d81180-6faa-4c58-98d7-48bbff5035c7": {
