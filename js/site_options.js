@@ -2472,6 +2472,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "bfc54618-1905-49ed-ab8e-e72af763f553": {
+            "name": "android_story_card_v2.5",
+            "v": 1994,
+            "t": 2,
+            "groups": [{
+                "weight": 10,
+                "value": "holdout"
+            }, {
+                "weight": 90,
+                "value": "active"
+            }]
+        },
         "c14ad553-a6e6-441b-961f-8ebf0d444791": {
             "name": "android_notification_center",
             "v": 1454,
