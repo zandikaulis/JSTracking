@@ -3017,23 +3017,23 @@ window.SiteOptions = {
         },
         "ec57d33c-2d58-4088-9ff6-617418a6cf1b": {
             "name": "the_citadel",
-            "v": 1991,
+            "v": 2004,
             "t": 1,
             "groups": [{
                 "weight": 0,
-                "value": "yes_10"
+                "value": "10"
             }, {
                 "weight": 100,
                 "value": "no"
             }, {
                 "weight": 0,
-                "value": "yes_15"
+                "value": "15"
             }, {
                 "weight": 0,
-                "value": "yes_12"
+                "value": "12"
             }, {
                 "weight": 0,
-                "value": "yes_8"
+                "value": "8"
             }]
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
