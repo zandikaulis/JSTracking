@@ -2111,16 +2111,16 @@ window.SiteOptions = {
         },
         "9e5fffd0-9693-412b-913d-7da332fdeea4": {
             "name": "Marker Experiment",
-            "v": 902,
+            "v": 2010,
             "t": 1,
             "groups": [{
-                "weight": 30,
+                "weight": 0,
                 "value": "vca"
             }, {
-                "weight": 30,
+                "weight": 0,
                 "value": "vod"
             }, {
-                "weight": 40,
+                "weight": 100,
                 "value": "none"
             }]
         },
