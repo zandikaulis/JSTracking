@@ -77,8 +77,8 @@
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                     t = (0, d.default)(e) ? T.parse(e) : e;
                 if (h(t), !(0, S.isTwitchEmbed)()) {
-                    var n = [O.PLAYER_CURSE, O.PLAYER_TWILIGHT, O.PLAYER_AMAZON_LIVE];
-                    (0, l.default)(Ve, t.player) || (t = (0, p.default)(t, w.embedParameters)), (0, l.default)(n, t.player) || (t.branding = !0), t.player === O.PLAYER_AMAZON_LIVE && (t.controls = !1)
+                    var n = [O.PLAYER_CURSE, O.PLAYER_TWILIGHT];
+                    (0, l.default)(Ve, t.player) || (t = (0, p.default)(t, w.embedParameters)), (0, l.default)(n, t.player) || (t.branding = !0)
                 }
                 return t.backend = a(t), t.allowfullscreen = t.allowfullscreen !== !1 && t.player !== O.PLAYER_HIGHLIGHTER, t = (0, s.default)(t, {
                     time: t.t
@@ -14273,7 +14273,7 @@
                     c = m.get(!0),
                     d = S.getPlayerType() === S.PLAYER_EMBED ? null : w;
                 return d = n.playerType === S.PLAYER_TWILIGHT ? C : d, {
-                    app_version: "2017.09.12-204655+98c85459dfa1e28705b641ffcc4e9ebfad9cb908",
+                    app_version: "2017.09.12-213818+3337335f944ee3155a2d35120136fb16a7dc2de4",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -24117,138 +24117,137 @@
             return t.default = e, t
         }
 
-        function o(e, t, r, i, o, M, D) {
-            function j() {
-                var y = D;
-                $(t).addClass("player").addClass("theme--dark"), $(t).append(n(744));
-                var b = o.getState().playback.muted;
-                o.dispatch((0, P.initializeCaptionsSettings)(b)), o.dispatch((0, A.initializePlaybackSettings)()), o.dispatch((0, O.initializeSettings)()), oe(o), le(o), ue(o), ae(o), re(o), ie(o), ne(o), se(o), te(o), de(o), ce(o), ee(o), U.default.render(x.default.createElement(v.Seekbar, {
+        function o(e, t, r, i, o, L, x) {
+            function U() {
+                var g = x;
+                if ($(t).addClass("player").addClass("theme--dark"), $(t).append(n(744)), x.player === s.PLAYER_AMAZON_LIVE) return void te(o);
+                var T = o.getState().playback.muted;
+                o.dispatch((0, A.initializeCaptionsSettings)(T)), o.dispatch((0, O.initializePlaybackSettings)()), o.dispatch((0, k.initializeSettings)()), ae(o), ce(o), le(o), se(o), ie(o), oe(o), re(o), ue(o), ne(o), fe(o), de(o), te(o), B.default.render(j.default.createElement(m.Seekbar, {
                     store: o
-                }), document.getElementById("js-player-seek")), U.default.render(x.default.createElement(E.VolumeSlider, {
+                }), document.getElementById("js-player-seek")), B.default.render(j.default.createElement(b.VolumeSlider, {
                     store: o
-                }), document.getElementById("js-player-volume")), U.default.render(x.default.createElement(g.MutedSegmentsAlert, {
+                }), document.getElementById("js-player-volume")), B.default.render(j.default.createElement(E.MutedSegmentsAlert, {
                     store: o
-                }), document.getElementById("js-player-alert-container")), U.default.render(x.default.createElement(B.Provider, {
+                }), document.getElementById("js-player-alert-container")), B.default.render(j.default.createElement(F.Provider, {
                     store: o
-                }, x.default.createElement(F.I18nextProvider, {
-                    i18n: V.I18N_INSTANCE
-                }, x.default.createElement(m.Settings, null))), document.getElementById("js-settings")), M.hookUpForm(t), fe = new s.PlayerUIState(t, o), pe = new l.PlayerUIInfo(e, t, o, y), Se = new C.PlayerUIError(t, o), he = new c.PlayerUILeaveDialog(e, t, r, o, y), _e = new p.PlayerUILang(t, o), ve = new d.PlayerUISubscribeOverlay(t, o), me = new f.PlayerUIResume(e, i, o, y), ge = new w.AgeRestrictionOverlay(t, e, o), Ee = new _.PlayerUIControlsDisplay(e, t, o), be = new u.PlayerUIControls(e, t, o, Ee, y), Ce = new N.AdOverlay(t, o), we = new I.CollectionOverlay(t, o), Te = new k.PlayerUIClipsEnabler(t, o, a.localStore, M), ye = new h.PlayerUIClosedCaption(o, t), $(t).attr("data-initializing", !0), e.addEventListener(L.PLAYER_INIT, function() {
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(y.Settings, null))), document.getElementById("js-settings")), L.hookUpForm(t), pe = new u.PlayerUIState(t, o), he = new c.PlayerUIInfo(e, t, o, g), Ce = new w.PlayerUIError(t, o), _e = new d.PlayerUILeaveDialog(e, t, r, o, g), ve = new h.PlayerUILang(t, o), me = new f.PlayerUISubscribeOverlay(t, o), ye = new p.PlayerUIResume(e, i, o, g), Ee = new P.AgeRestrictionOverlay(t, e, o), be = new v.PlayerUIControlsDisplay(e, t, o), Te = new l.PlayerUIControls(e, t, o, be, g), we = new I.AdOverlay(t, o), Pe = new R.CollectionOverlay(t, o), Se = new N.PlayerUIClipsEnabler(t, o, a.localStore, L), ge = new _.PlayerUIClosedCaption(o, t), $(t).attr("data-initializing", !0), e.addEventListener(D.PLAYER_INIT, function() {
                     $(t).attr("data-initializing", !1)
                 }), t.addEventListener("wheel", function(e) {
-                    o.dispatch((0, Z.emitWheelEvent)(e))
+                    o.dispatch((0, ee.emitWheelEvent)(e))
                 })
             }
 
-            function ee(e) {
-                U.default.render(x.default.createElement(B.Provider, {
-                    store: e
-                }, x.default.createElement(J.LoadingOverlay, null)), document.getElementById("js-loading-overlay"))
-            }
-
             function te(e) {
-                U.default.render(x.default.createElement(B.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, x.default.createElement(F.I18nextProvider, {
-                    i18n: V.I18N_INSTANCE
-                }, x.default.createElement(X.Stats, null))), document.getElementById("stats"))
+                }, j.default.createElement(Z.LoadingOverlay, null)), document.getElementById("js-loading-overlay"))
             }
 
             function ne(e) {
-                U.default.render(x.default.createElement(B.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, x.default.createElement(F.I18nextProvider, {
-                    i18n: V.I18N_INSTANCE
-                }, x.default.createElement(G.TopBar, null))), document.getElementById("top-bar"))
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(J.Stats, null))), document.getElementById("stats"))
             }
 
             function re(e) {
-                U.default.render(x.default.createElement(B.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, x.default.createElement(F.I18nextProvider, {
-                    i18n: V.I18N_INSTANCE
-                }, x.default.createElement(Y.CollectionSidebar, null))), document.getElementById("js-collection-sidebar"))
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(Y.TopBar, null))), document.getElementById("top-bar"))
             }
 
             function ie(e) {
-                U.default.render(x.default.createElement(B.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, x.default.createElement(F.I18nextProvider, {
-                    i18n: V.I18N_INSTANCE
-                }, x.default.createElement(W.CollectionEmptyOverlay, null))), document.getElementById("empty-collection-overlay"))
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(W.CollectionSidebar, null))), document.getElementById("js-collection-sidebar"))
             }
 
             function oe(e) {
-                U.default.render(x.default.createElement(B.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, x.default.createElement(y.StreamStatus, null)), document.getElementById("stream-status"))
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(K.CollectionEmptyOverlay, null))), document.getElementById("empty-collection-overlay"))
             }
 
             function ae(e) {
-                U.default.render(x.default.createElement(B.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, x.default.createElement(F.I18nextProvider, {
-                    i18n: V.I18N_INSTANCE
-                }, x.default.createElement(K.Experiment, {
-                    uuid: R.OFFLINE_EXPERIENCE,
-                    renderValue: "show"
-                }, x.default.createElement(H.FollowPanel, null)))), document.getElementById("js-follow-panel"))
+                }, j.default.createElement(g.StreamStatus, null)), document.getElementById("stream-status"))
             }
 
             function se(e) {
-                U.default.render(x.default.createElement(B.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, x.default.createElement(F.I18nextProvider, {
-                    i18n: V.I18N_INSTANCE
-                }, x.default.createElement(K.Experiment, {
-                    uuid: R.OFFLINE_EXPERIENCE,
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(z.Experiment, {
+                    uuid: M.OFFLINE_EXPERIENCE,
                     renderValue: "show"
-                }, x.default.createElement(q.DeadLTVOverlay, null)))), document.getElementById("js-dead-ltv-overlay"))
+                }, j.default.createElement(q.FollowPanel, null)))), document.getElementById("js-follow-panel"))
             }
 
             function ue(e) {
-                U.default.render(x.default.createElement(B.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, x.default.createElement(F.I18nextProvider, {
-                    i18n: V.I18N_INSTANCE
-                }, x.default.createElement(K.Experiment, {
-                    uuid: R.AUTO_SUGGEST_NOTIFICATION,
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(z.Experiment, {
+                    uuid: M.OFFLINE_EXPERIENCE,
                     renderValue: "show"
-                }, x.default.createElement(S.NotificationPopUpsWrapper, null)))), document.getElementById("js-notification-popup-container"))
+                }, j.default.createElement(G.DeadLTVOverlay, null)))), document.getElementById("js-dead-ltv-overlay"))
             }
 
             function le(e) {
-                var t = document.getElementById("js-player-extension-root"),
-                    n = document.getElementById("js-extension-settings");
-                U.default.render(x.default.createElement(B.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, x.default.createElement(F.I18nextProvider, {
-                    i18n: V.I18N_INSTANCE
-                }, x.default.createElement(b.ExtensionsContainer, {
-                    store: e
-                }))), t), U.default.render(x.default.createElement(B.Provider, {
-                    store: e
-                }, x.default.createElement(F.I18nextProvider, {
-                    i18n: V.I18N_INSTANCE
-                }, x.default.createElement(T.ExtensionSettings, null))), n)
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(z.Experiment, {
+                    uuid: M.AUTO_SUGGEST_NOTIFICATION,
+                    renderValue: "show"
+                }, j.default.createElement(C.NotificationPopUpsWrapper, null)))), document.getElementById("js-notification-popup-container"))
             }
 
             function ce(e) {
-                U.default.render(x.default.createElement(B.Provider, {
+                var t = document.getElementById("js-player-extension-root"),
+                    n = document.getElementById("js-extension-settings");
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, x.default.createElement(F.I18nextProvider, {
-                    i18n: V.I18N_INSTANCE
-                }, x.default.createElement(z.OfflineRecommendationsOverlay, null))), document.getElementById("js-player-offline-recommendations-overlay"))
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(T.ExtensionsContainer, {
+                    store: e
+                }))), t), B.default.render(j.default.createElement(F.Provider, {
+                    store: e
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(S.ExtensionSettings, null))), n)
             }
 
             function de(e) {
-                U.default.render(x.default.createElement(B.Provider, {
+                B.default.render(j.default.createElement(F.Provider, {
                     store: e
-                }, x.default.createElement(F.I18nextProvider, {
-                    i18n: V.I18N_INSTANCE
-                }, x.default.createElement(Q.PostVODRecommendationsOverlay, null))), document.getElementById("js-player-post-vod-recommendations-overlay"))
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(Q.OfflineRecommendationsOverlay, null))), document.getElementById("js-player-offline-recommendations-overlay"))
             }
-            var fe = void 0,
-                pe = void 0,
+
+            function fe(e) {
+                B.default.render(j.default.createElement(F.Provider, {
+                    store: e
+                }, j.default.createElement(V.I18nextProvider, {
+                    i18n: H.I18N_INSTANCE
+                }, j.default.createElement(X.PostVODRecommendationsOverlay, null))), document.getElementById("js-player-post-vod-recommendations-overlay"))
+            }
+            var pe = void 0,
                 he = void 0,
                 _e = void 0,
                 ve = void 0,
@@ -24260,61 +24259,63 @@
                 Te = void 0,
                 Se = void 0,
                 Ce = void 0,
-                we = void 0;
+                we = void 0,
+                Pe = void 0;
             this.destroy = function() {
-                fe.destroy(), pe.destroy(), Se.destroy(), he.destroy(), _e.destroy(), ve.destroy(), me.destroy(), Ee.destroy(), be.destroy(), ge.destroy(), Te.destroy(), ye.destroy(), Ce.destroy(), we && we.destroy()
-            }, j()
+                pe.destroy(), he.destroy(), Ce.destroy(), _e.destroy(), ve.destroy(), me.destroy(), ye.destroy(), be.destroy(), Te.destroy(), Ee.destroy(), Se.destroy(), ge.destroy(), we.destroy(), Pe && Pe.destroy()
+            }, U()
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.PlayerUI = o;
         var a = n(254),
-            s = n(426),
-            u = n(428),
-            l = n(429),
-            c = n(431),
-            d = n(433),
-            f = n(434),
-            p = n(437),
-            h = n(438),
-            _ = n(439),
-            v = n(442),
-            m = n(617),
-            y = n(647),
-            g = n(648),
-            E = n(649),
-            b = n(650),
-            T = n(655),
-            S = n(663),
-            C = n(664),
-            w = n(267),
-            P = n(366),
-            A = n(268),
-            O = n(640),
-            k = n(665),
-            N = n(667),
-            I = n(668),
-            R = n(255),
-            M = n(178),
-            L = i(M),
-            D = n(293),
-            x = r(D),
-            j = n(443),
-            U = r(j),
-            B = n(581),
-            F = n(327),
-            V = n(669),
-            H = n(688),
-            q = n(696),
-            G = n(699),
-            Y = n(711),
-            W = n(723),
-            K = n(641),
-            z = n(725),
-            Q = n(736),
-            X = n(739),
-            J = n(742),
-            Z = n(348)
+            s = n(217),
+            u = n(426),
+            l = n(428),
+            c = n(429),
+            d = n(431),
+            f = n(433),
+            p = n(434),
+            h = n(437),
+            _ = n(438),
+            v = n(439),
+            m = n(442),
+            y = n(617),
+            g = n(647),
+            E = n(648),
+            b = n(649),
+            T = n(650),
+            S = n(655),
+            C = n(663),
+            w = n(664),
+            P = n(267),
+            A = n(366),
+            O = n(268),
+            k = n(640),
+            N = n(665),
+            I = n(667),
+            R = n(668),
+            M = n(255),
+            L = n(178),
+            D = i(L),
+            x = n(293),
+            j = r(x),
+            U = n(443),
+            B = r(U),
+            F = n(581),
+            V = n(327),
+            H = n(669),
+            q = n(688),
+            G = n(696),
+            Y = n(699),
+            W = n(711),
+            K = n(723),
+            z = n(641),
+            Q = n(725),
+            X = n(736),
+            J = n(739),
+            Z = n(742),
+            ee = n(348)
     }, function(e, t, n) {
         "use strict";
 
@@ -25642,7 +25643,7 @@
                     }), $(".js-cc-modal", this._root).on("click", ".js-cc-checkbox", function(t) {
                         var n = $(t.target),
                             r = m.presetMap["white-on-black"];
-                        e._store.dispatch((0, _.setCaptionsPreset)(S, o({}, n.attr("name"), n.prop("checked") ? n.val() : r[n.attr("name")])))
+                        e._store.dispatch((0, _.setCaptionsPreset)(S, o({}, n.attr("name"), n.prop("checked") ? n.val() : r[n.attr("name")])));
                     }), $(".js-cc-font-size", this._root).on("click", function(t) {
                         var n = m.fontSizeMap[$(t.target).val()],
                             r = e._store.getState().captions.style.fontSize,
