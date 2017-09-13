@@ -2856,6 +2856,18 @@ window.SiteOptions = {
                 "value": "variant2"
             }]
         },
+        "daf63994-587b-4062-8978-d970027af40f": {
+            "name": "SOCIAL_EXPERIMENTS_2",
+            "v": 2012,
+            "t": 2,
+            "groups": [{
+                "weight": 95,
+                "value": "control"
+            }, {
+                "weight": 5,
+                "value": "variant2"
+            }]
+        },
         "dc251546-6da4-4db9-abae-2c1325e7dee6": {
             "name": "android_pipboy_browse_ccus",
             "v": 1543,
