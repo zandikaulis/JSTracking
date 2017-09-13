@@ -1982,7 +1982,7 @@ window.SiteOptions = {
         },
         "99c425d5-7d9f-47bd-a13a-409903cd6515": {
             "name": "SIGNUP_REDIRECT",
-            "v": 1979,
+            "v": 2017,
             "t": 2,
             "groups": [{
                 "weight": 0,
@@ -1993,6 +1993,9 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "control"
+            }, {
+                "weight": 0,
+                "value": "search"
             }]
         },
         "9a3b387e-b6cd-4d2b-80a6-bb14d3ba4512": {
