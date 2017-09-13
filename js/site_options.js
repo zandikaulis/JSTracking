@@ -1454,13 +1454,13 @@ window.SiteOptions = {
         },
         "6d07fedb-c0e6-4eae-9082-d4c100eade25": {
             "name": "android_aax",
-            "v": 1952,
+            "v": 2014,
             "t": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 50,
                 "value": "active"
             }]
         },
@@ -2857,8 +2857,8 @@ window.SiteOptions = {
             }]
         },
         "daf63994-587b-4062-8978-d970027af40f": {
-            "name": "SOCIAL_EXPERIMENTS_2",
-            "v": 2012,
+            "name": "SOCIAL_RECOMMENDATIONS_2",
+            "v": 2013,
             "t": 2,
             "groups": [{
                 "weight": 95,
