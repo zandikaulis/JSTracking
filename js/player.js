@@ -14280,7 +14280,7 @@
                     c = y.get(!0),
                     d = C.getPlayerType() === C.PLAYER_EMBED ? null : P;
                 return d = n.playerType === C.PLAYER_TWILIGHT ? w : d, {
-                    app_version: "2017.09.14-194754+7dd831f62a5515937f22e34f28fa8b3c105a1b40",
+                    app_version: "2017.09.14-203003+a96ede9988f856b68c1926e945c497b12c230b6f",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
