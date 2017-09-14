@@ -2873,13 +2873,13 @@ window.SiteOptions = {
         },
         "daf63994-587b-4062-8978-d970027af40f": {
             "name": "SOCIAL_RECOMMENDATIONS_2",
-            "v": 2013,
+            "v": 2032,
             "t": 2,
             "groups": [{
-                "weight": 95,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "variant2"
             }]
         },
