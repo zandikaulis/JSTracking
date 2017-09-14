@@ -399,6 +399,24 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "198744b6-e96f-413b-aaf6-eab0128c9833": {
+            "name": "signup_redirect_search",
+            "v": 2036,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "games"
+            }, {
+                "weight": 0,
+                "value": "popular"
+            }, {
+                "weight": 0,
+                "value": "search"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "19cc1327-9436-4019-b71c-e2a1e41d3cb3": {
             "name": "test",
             "v": 1653,
