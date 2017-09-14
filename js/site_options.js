@@ -1982,19 +1982,19 @@ window.SiteOptions = {
         },
         "99c425d5-7d9f-47bd-a13a-409903cd6515": {
             "name": "SIGNUP_REDIRECT",
-            "v": 2017,
+            "v": 2019,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 5,
                 "value": "games"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "popular"
             }, {
-                "weight": 100,
+                "weight": 85,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "search"
             }]
         },
