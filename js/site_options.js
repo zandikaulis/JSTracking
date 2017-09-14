@@ -2822,13 +2822,13 @@ window.SiteOptions = {
         },
         "d76c815d-2f36-4548-8d48-daa8174bb382": {
             "name": "ios_clip_theatre_mode",
-            "v": 1800,
+            "v": 2024,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "active"
             }]
         },
