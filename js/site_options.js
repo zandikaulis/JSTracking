@@ -1013,13 +1013,13 @@ window.SiteOptions = {
         },
         "49f40b88-2044-409d-b306-2eb308489a60": {
             "name": "Twilight_Upsell",
-            "v": 1795,
+            "v": 2021,
             "t": 2,
             "groups": [{
-                "weight": 85,
+                "weight": 66,
                 "value": "control"
             }, {
-                "weight": 15,
+                "weight": 34,
                 "value": "upsell"
             }]
         },
