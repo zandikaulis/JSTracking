@@ -3061,8 +3061,8 @@ window.SiteOptions = {
             }]
         },
         "ec57d33c-2d58-4088-9ff6-617418a6cf1b": {
-            "name": "the_citadel",
-            "v": 2004,
+            "name": "citadel",
+            "v": 2038,
             "t": 1,
             "groups": [{
                 "weight": 0,
