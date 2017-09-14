@@ -435,6 +435,18 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "1c7c4872-f75b-4b29-a695-c5919fac68b9": {
+            "name": "android_clip_theatre_mode_release",
+            "v": 2034,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "active"
+            }]
+        },
         "1e406d0d-c293-4c4e-812f-049db8c7e3ec": {
             "name": "vod_upload_units",
             "v": 818,
@@ -1994,19 +2006,19 @@ window.SiteOptions = {
         },
         "99c425d5-7d9f-47bd-a13a-409903cd6515": {
             "name": "SIGNUP_REDIRECT",
-            "v": 2020,
+            "v": 2033,
             "t": 2,
             "groups": [{
-                "weight": 5,
+                "weight": 0,
                 "value": "games"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "popular"
             }, {
-                "weight": 85,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "search"
             }]
         },
@@ -2197,18 +2209,6 @@ window.SiteOptions = {
             }, {
                 "weight": 75,
                 "value": "yes"
-            }]
-        },
-        "ab3ad381-0796-435d-94aa-e3907461d48e": {
-            "name": "android_clip_theatre_mode",
-            "v": 1899,
-            "t": 1,
-            "groups": [{
-                "weight": 1,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "active"
             }]
         },
         "ac1c908f-3779-4068-ae72-086c288f6f87": {
