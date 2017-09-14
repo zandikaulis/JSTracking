@@ -1406,13 +1406,13 @@ window.SiteOptions = {
         },
         "6a587617-eb7c-475e-8bc3-991d4f38fc87": {
             "name": "ios_hosted_streams",
-            "v": 1765,
+            "v": 2028,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "enabled"
             }]
         },
