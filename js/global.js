@@ -15662,6 +15662,7 @@ googletag.cmd = googletag.cmd || [],
                 CHOMPIFY: "48e86f7b-7550-4561-9782-9dfe0796b1f3",
                 EXTENSIONS_LAUNCH_ANNOUNCEMENT: "8620d12c-8e03-48d8-92ab-65a8d542a17d",
                 TWILIGHT_STREAM_SUMMARY: "32099615-3609-4658-9f6b-5c1c1daa3510",
+                SIGNUP_REDIRECT: "99c425d5-7d9f-47bd-a13a-409903cd6515",
                 REQUIEM: "ad5f316b-0a87-44a6-9348-f6b6ee36b0bb"
             },
             r = {
@@ -15724,6 +15725,7 @@ googletag.cmd = googletag.cmd || [],
                 "48e86f7b-7550-4561-9782-9dfe0796b1f3": "control",
                 "8620d12c-8e03-48d8-92ab-65a8d542a17d": "no",
                 "32099615-3609-4658-9f6b-5c1c1daa3510": "no",
+                "99c425d5-7d9f-47bd-a13a-409903cd6515": "control",
                 "ad5f316b-0a87-44a6-9348-f6b6ee36b0bb": "no"
             },
             o = {},
@@ -16699,12 +16701,11 @@ googletag.cmd = googletag.cmd || [],
                 e.api.get("/api/viewer/info.json").done(function(n) {
                     e.preferredLanguage = n.preferred_language, e.receivedLanguage = n.received_language;
                     var i = cookie.get("language");
-                    void 0 === i ? e.language.setCookieAndReload(e.receivedLanguage) : n.login && i !== n.user_language && e.language.setByAsyncPut(i), n.eu && window.euCookieNotification(),
-                        e.tracking.spadeAndMixpanel.trackEvent("prime_web_geo_data", {
-                            platform: "web",
-                            geo: n.geo,
-                            ip: n.ip
-                        }), t(n)
+                    void 0 === i ? e.language.setCookieAndReload(e.receivedLanguage) : n.login && i !== n.user_language && e.language.setByAsyncPut(i), n.eu && window.euCookieNotification(), e.tracking.spadeAndMixpanel.trackEvent("prime_web_geo_data", {
+                        platform: "web",
+                        geo: n.geo,
+                        ip: n.ip
+                    }), t(n)
                 }).fail(function(e) {
                     n({
                         status: e.status
@@ -19486,8 +19487,7 @@ var recurly = function(e) {
                 }, {
                     key: "onPaymentMethodSelected",
                     value: function(e) {
-                        p("Payment method selected", e),
-                            this.session.completePaymentMethodSelection(this.total, this.lineItems)
+                        p("Payment method selected", e), this.session.completePaymentMethodSelection(this.total, this.lineItems)
                     }
                 }, {
                     key: "onShippingContactSelected",
