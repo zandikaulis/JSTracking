@@ -2117,14 +2117,20 @@ window.SiteOptions = {
         },
         "9cb0fb03-a804-4e1e-94bc-12052b96e41a": {
             "name": "BROWSE_SORT",
-            "v": 1743,
+            "v": 2047,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 93,
                 "value": "control"
             }, {
-                "weight": 100,
-                "value": "experiment"
+                "weight": 2,
+                "value": "variantA"
+            }, {
+                "weight": 2,
+                "value": "variantB"
+            }, {
+                "weight": 3,
+                "value": "variantC"
             }]
         },
         "9ce10ee7-98ec-4126-a42f-28a6a129ca9d": {
