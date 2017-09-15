@@ -636,6 +636,18 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
+        "298a5f39-228a-487a-ad06-422c18458403": {
+            "name": "twilight_merch_store_launch",
+            "v": 2046,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "off"
+            }, {
+                "weight": 0,
+                "value": "on"
+            }]
+        },
         "2be750b2-f97a-41e5-a699-0d934cefc05c": {
             "name": "ios_onboarding_recommendations_v5.3",
             "v": 1933,
