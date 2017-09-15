@@ -1689,21 +1689,6 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
-        "819aed52-3cc1-4747-a840-476a39487a2e": {
-            "name": "SOCIAL_RECOMMENDATIONS",
-            "v": 1684,
-            "t": 1,
-            "groups": [{
-                "weight": 0,
-                "value": "variant1"
-            }, {
-                "weight": 95,
-                "value": "control"
-            }, {
-                "weight": 5,
-                "value": "variant2"
-            }]
-        },
         "821d3e5f-5836-48d6-b203-a7973d6f097c": {
             "name": "android_raids",
             "v": 1998,
@@ -2921,13 +2906,13 @@ window.SiteOptions = {
         },
         "daf63994-587b-4062-8978-d970027af40f": {
             "name": "SOCIAL_RECOMMENDATIONS_2",
-            "v": 2032,
+            "v": 2048,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "variant2"
             }]
         },
