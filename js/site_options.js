@@ -1388,13 +1388,13 @@ window.SiteOptions = {
         },
         "64c787d2-7a36-447b-bba3-8bbab6846da6": {
             "name": "android_browse_for_tablet",
-            "v": 1978,
+            "v": 2043,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 100,
                 "value": "holdout"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "active"
             }]
         },
