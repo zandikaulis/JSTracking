@@ -215,13 +215,13 @@ window.SiteOptions = {
         },
         "070d88d9-02da-42cf-a83d-4f884878f93a": {
             "name": "MOBILE_CHECKOUT",
-            "v": 2041,
+            "v": 2045,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }]
         },
