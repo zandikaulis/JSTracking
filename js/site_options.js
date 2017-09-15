@@ -213,6 +213,18 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "070d88d9-02da-42cf-a83d-4f884878f93a": {
+            "name": "MOBILE_CHECKOUT",
+            "v": 2041,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "0a4d513f-0274-4b33-b04f-287521abd51b": {
             "name": "ZACH_MODE",
             "v": 1052,
