@@ -1125,6 +1125,18 @@ window.SiteOptions = {
                 "value": "v2"
             }]
         },
+        "4b724df5-bf1c-4e8b-98b6-2c24fc9af1ae": {
+            "name": "clips_slow_down",
+            "v": 2052,
+            "t": 1,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
             "v": 2040,
