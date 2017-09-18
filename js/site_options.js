@@ -28,6 +28,7 @@ window.SiteOptions = {
     "broadcaster_languages": {
         "en": "English",
         "zh": "中文",
+        "zh-hk": "中文(粵語)",
         "ja": "日本語",
         "ko": "한국어",
         "es": "Español",
@@ -556,6 +557,18 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "collection"
+            }]
+        },
+        "243467cb-2393-41cf-a1a9-526ee51f95f8": {
+            "name": "android_chomments_posting_5.4",
+            "v": 2065,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "24790bc9-1beb-4cf1-bc75-fe22c400805d": {
@@ -1883,7 +1896,7 @@ window.SiteOptions = {
         },
         "8feaebce-0955-4d59-bbad-4e3469dbb2f8": {
             "name": "android_chomments_posting",
-            "v": 1843,
+            "v": 2067,
             "t": 1,
             "groups": [{
                 "weight": 0,

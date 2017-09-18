@@ -15629,7 +15629,6 @@ googletag.cmd = googletag.cmd || [],
                 CLIPS_HEAR_ME_NOW: "9649684c-6d3f-423d-9d3c-f4296efee975",
                 CLIPS_YOU_WERE_RIGHT: "6b4086ea-dcce-41c9-a57b-000fa9366e35",
                 CLIPS_TEACH_ME: "a39cd18b-c3fb-46ad-a6a8-0c2e8686d978",
-                NEW_POA: "8ec5564f-4f15-4269-9824-5658a432cbf3",
                 NEWS_FEED_REDESIGN: "05d8869f-e037-4955-b80a-7c361f9ddffb",
                 VOD_UPLOAD_UNITS_V3: "1710cf57-352c-4d09-b2c1-3d40bdf79b30",
                 AWS_ROUNDTRIP_LATENCY_TEST_OPT_IN: "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef",
@@ -15693,7 +15692,6 @@ googletag.cmd = googletag.cmd || [],
                 "9649684c-6d3f-423d-9d3c-f4296efee975": "control",
                 "6b4086ea-dcce-41c9-a57b-000fa9366e35": "control",
                 "a39cd18b-c3fb-46ad-a6a8-0c2e8686d978": "variant1",
-                "8ec5564f-4f15-4269-9824-5658a432cbf3": "no",
                 "05d8869f-e037-4955-b80a-7c361f9ddffb": "no",
                 "1710cf57-352c-4d09-b2c1-3d40bdf79b30": "control",
                 "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef": "false",
@@ -15737,7 +15735,6 @@ googletag.cmd = googletag.cmd || [],
                 CLIPS_YOU_WERE_RIGHT: "variant1",
                 SOCIAL_RECOMMENDATIONS_2: "variant2",
                 LOL_METADATA_EXPERIMENT: "treatment",
-                NEW_POA: "yes",
                 OFFLINE_RECOMMENDATIONS: "yes",
                 OFFLINE_EXPERIENCE: "show",
                 LTV: "yes",
@@ -16700,11 +16697,12 @@ googletag.cmd = googletag.cmd || [],
                 e.api.get("/api/viewer/info.json").done(function(n) {
                     e.preferredLanguage = n.preferred_language, e.receivedLanguage = n.received_language;
                     var i = cookie.get("language");
-                    void 0 === i ? e.language.setCookieAndReload(e.receivedLanguage) : n.login && i !== n.user_language && e.language.setByAsyncPut(i), n.eu && window.euCookieNotification(), e.tracking.spadeAndMixpanel.trackEvent("prime_web_geo_data", {
-                        platform: "web",
-                        geo: n.geo,
-                        ip: n.ip
-                    }), t(n)
+                    void 0 === i ? e.language.setCookieAndReload(e.receivedLanguage) : n.login && i !== n.user_language && e.language.setByAsyncPut(i), n.eu && window.euCookieNotification(),
+                        e.tracking.spadeAndMixpanel.trackEvent("prime_web_geo_data", {
+                            platform: "web",
+                            geo: n.geo,
+                            ip: n.ip
+                        }), t(n)
                 }).fail(function(e) {
                     n({
                         status: e.status
@@ -19486,7 +19484,8 @@ var recurly = function(e) {
                 }, {
                     key: "onPaymentMethodSelected",
                     value: function(e) {
-                        p("Payment method selected", e), this.session.completePaymentMethodSelection(this.total, this.lineItems)
+                        p("Payment method selected", e),
+                            this.session.completePaymentMethodSelection(this.total, this.lineItems)
                     }
                 }, {
                     key: "onShippingContactSelected",
