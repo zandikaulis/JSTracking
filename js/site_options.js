@@ -2114,7 +2114,7 @@ window.SiteOptions = {
         },
         "9cb0fb03-a804-4e1e-94bc-12052b96e41a": {
             "name": "BROWSE_SORT",
-            "v": 2050,
+            "v": 2063,
             "t": 1,
             "groups": [{
                 "weight": 93,
