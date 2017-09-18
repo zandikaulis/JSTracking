@@ -1653,6 +1653,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "7ad1325c-4495-450c-b26b-6f6a62c9a777": {
+            "name": "PRESENCE_SORT",
+            "v": 2064,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "experiment"
+            }]
+        },
         "7d9127aa-c26f-4b80-a04d-e6ed38e18b78": {
             "name": "GET_BITS_BUTTON",
             "v": 2029,
