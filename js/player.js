@@ -45,7 +45,7 @@
                     deviceId: I.get(!1)
                 })), M.dispatch((0, oe.setPlayerType)(a.player)), qe.push(new G.PubSub(M, a)), qe.push(new Pe.PostRecommendationsManager(M)), qe.push(new ke.OfflineRecommendationsManager(M)), qe.push(new Ne.UserManager(M)), qe.push(new E.AutoSuggestNotificationManager(M)), b = new m.AnalyticsTracker(M, a), M.dispatch((0, ce.setAnalyticsTracker)(b)), M.dispatch((0, ie.initializeQuality)()), r(), C = a.allowfullscreen ? new Y.FullScreen(n, M) : new W.NoFullScreen(n, M), Re = new Ae.TimelineMetadataManager(M), je = new Te.CollectionManager(M), X = new D.Video(n, M, a), N = new R.State(X, M, b, a), a.debug && (window.state = N), Ue = new Se.PlayerResizeManager(M), Ue.observe(n), He = new Ce.FollowManager(M), a.player === Oe.PLAYER_TWITCH_EVERYWHERE && (qe.push(new we.TwitchEverywhereManager(M)), a.targetOrigin || console.error("Missing targetOrigin option"), M.dispatch((0, oe.setTwitchEverywhereParams)({
                     targetOrigin: a.targetOrigin
-                }))), (0, x.forwardProperties)(y, X), ee = new v.Analytics(X, b, N, M, a), M.dispatch((0, le.setAutoplay)(a.autoplay)), u(a), ne = new j.EmbedHost(X, M), new U.PlayerHotkeys(X, n, M, a), a.controls && (de = new he.ClipGenerator(N, M), M.dispatch((0, _e.clipGeneratorLoaded)(de)), A = new B.PlayerUI(X, n, b, N, M, de, a)), i(a).then(function() {
+                }))), (0, x.forwardProperties)(y, X), ee = new v.Analytics(X, b, N, M, a), M.dispatch((0, le.setAutoplay)(a.autoplay)), u(a), ne = new j.EmbedHost(X, M), new U.PlayerHotkeys(X, n, M, a), a.controls && (de = new he.ClipGenerator(N, M), M.dispatch((0, _e.clipGeneratorLoaded)(de)), A = new B.PlayerUI(X, n, N, M, de, a)), i(a).then(function() {
                     M.dispatch((0, Q.setPlayerOptions)(a)), M.dispatch((0, ye.setTrackingProperties)({
                         content: a.tt_content,
                         medium: a.tt_medium
@@ -14353,7 +14353,7 @@
                     c = y.get(!0),
                     d = C.getPlayerType() === C.PLAYER_EMBED ? null : O;
                 return d = n.playerType === C.PLAYER_TWILIGHT ? w : d, {
-                    app_version: "2017.09.19-185648+1a8b1928b519f59699454d48e12fa66ea841cf0d",
+                    app_version: "2017.09.19-192841+cd1f2c7afb5977e325cbe0761790275006943716",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -24363,41 +24363,41 @@
             return t.default = e, t
         }
 
-        function o(e, t, r, i, o, M, D) {
-            function j() {
-                var g = D;
-                if ($(t).addClass("player").addClass("theme--dark"), $(t).append(n(750)), D.player === s.PLAYER_AMAZON_LIVE) return void ne(o);
-                var T = o.getState().playback.muted;
-                o.dispatch((0, O.initializeCaptionsSettings)(T)), o.dispatch((0, A.initializePlaybackSettings)()), o.dispatch((0, P.initializeSettings)()), se(o), de(o), ce(o), ue(o), oe(o), ae(o), ie(o), le(o), re(o), pe(o), fe(o), ne(o), U.default.render(x.default.createElement(B.Provider, {
-                    store: o
+        function o(e, t, r, i, o, M) {
+            function D() {
+                var g = M;
+                if ($(t).addClass("player").addClass("theme--dark"), $(t).append(n(750)), M.player === s.PLAYER_AMAZON_LIVE) return void j(i);
+                var T = i.getState().playback.muted;
+                i.dispatch((0, O.initializeCaptionsSettings)(T)), i.dispatch((0, A.initializePlaybackSettings)()), i.dispatch((0, P.initializeSettings)()), ae(i), ce(i), le(i), se(i), ie(i), oe(i), re(i), ue(i), ne(i), fe(i), de(i), j(i), U.default.render(x.default.createElement(B.Provider, {
+                    store: i
                 }, x.default.createElement(ee.PlayButtonOverlay, null)), document.getElementById("js-paused-overlay")), U.default.render(x.default.createElement(m.Seekbar, {
-                    store: o
+                    store: i
                 }), document.getElementById("js-player-seek")), U.default.render(x.default.createElement(b.VolumeSlider, {
-                    store: o
+                    store: i
                 }), document.getElementById("js-player-volume")), U.default.render(x.default.createElement(E.MutedSegmentsAlert, {
-                    store: o
+                    store: i
                 }), document.getElementById("js-player-alert-container")), U.default.render(x.default.createElement(B.Provider, {
-                    store: o
+                    store: i
                 }, x.default.createElement(F.I18nextProvider, {
                     i18n: V.I18N_INSTANCE
                 }, x.default.createElement(z.ErrorOverlay, null))), document.getElementById("error-overlay")), U.default.render(x.default.createElement(B.Provider, {
-                    store: o
+                    store: i
                 }, x.default.createElement(F.I18nextProvider, {
                     i18n: V.I18N_INSTANCE
-                }, x.default.createElement(y.Settings, null))), document.getElementById("js-settings")), M.hookUpForm(t), he = new u.PlayerUIState(t, o), _e = new c.PlayerUIInfo(e, t, o, g), ve = new d.PlayerUILeaveDialog(e, t, r, o, g), me = new h.PlayerUILang(t, o), ye = new f.PlayerUISubscribeOverlay(t, o), ge = new p.PlayerUIResume(e, i, o, g), be = new w.AgeRestrictionOverlay(t, e, o), Te = new v.PlayerUIControlsDisplay(e, t, o), Se = new l.PlayerUIControls(e, t, o, Te, g), we = new N.AdOverlay(t, o), Oe = new I.CollectionOverlay(t, o), Ce = new k.PlayerUIClipsEnabler(t, o, a.localStore, M), Ee = new _.PlayerUIClosedCaption(o, t), $(t).attr("data-initializing", !0), e.addEventListener(L.PLAYER_INIT, function() {
+                }, x.default.createElement(y.Settings, null))), document.getElementById("js-settings")), o.hookUpForm(t), pe = new u.PlayerUIState(t, i), he = new c.PlayerUIInfo(e, t, i, g), _e = new d.PlayerUILeaveDialog(e, t, i, g), ve = new h.PlayerUILang(t, i), me = new f.PlayerUISubscribeOverlay(t, i), ye = new p.PlayerUIResume(e, r, i, g), Ee = new w.AgeRestrictionOverlay(t, e, i), be = new v.PlayerUIControlsDisplay(e, t, i), Te = new l.PlayerUIControls(e, t, i, be, g), Ce = new N.AdOverlay(t, i), we = new I.CollectionOverlay(t, i), Se = new k.PlayerUIClipsEnabler(t, i, a.localStore, o), ge = new _.PlayerUIClosedCaption(i, t), $(t).attr("data-initializing", !0), e.addEventListener(L.PLAYER_INIT, function() {
                     $(t).attr("data-initializing", !1)
                 }), t.addEventListener("wheel", function(e) {
-                    o.dispatch((0, te.emitWheelEvent)(e))
+                    i.dispatch((0, te.emitWheelEvent)(e))
                 })
             }
 
-            function ne(e) {
+            function j(e) {
                 U.default.render(x.default.createElement(B.Provider, {
                     store: e
                 }, x.default.createElement(Z.LoadingOverlay, null)), document.getElementById("js-loading-overlay"))
             }
 
-            function re(e) {
+            function ne(e) {
                 U.default.render(x.default.createElement(B.Provider, {
                     store: e
                 }, x.default.createElement(F.I18nextProvider, {
@@ -24405,7 +24405,7 @@
                 }, x.default.createElement(J.Stats, null))), document.getElementById("stats"))
             }
 
-            function ie(e) {
+            function re(e) {
                 U.default.render(x.default.createElement(B.Provider, {
                     store: e
                 }, x.default.createElement(F.I18nextProvider, {
@@ -24413,7 +24413,7 @@
                 }, x.default.createElement(G.TopBar, null))), document.getElementById("top-bar"))
             }
 
-            function oe(e) {
+            function ie(e) {
                 U.default.render(x.default.createElement(B.Provider, {
                     store: e
                 }, x.default.createElement(F.I18nextProvider, {
@@ -24421,7 +24421,7 @@
                 }, x.default.createElement(Y.CollectionSidebar, null))), document.getElementById("js-collection-sidebar"))
             }
 
-            function ae(e) {
+            function oe(e) {
                 U.default.render(x.default.createElement(B.Provider, {
                     store: e
                 }, x.default.createElement(F.I18nextProvider, {
@@ -24429,13 +24429,13 @@
                 }, x.default.createElement(W.CollectionEmptyOverlay, null))), document.getElementById("empty-collection-overlay"))
             }
 
-            function se(e) {
+            function ae(e) {
                 U.default.render(x.default.createElement(B.Provider, {
                     store: e
                 }, x.default.createElement(g.StreamStatus, null)), document.getElementById("stream-status"))
             }
 
-            function ue(e) {
+            function se(e) {
                 U.default.render(x.default.createElement(B.Provider, {
                     store: e
                 }, x.default.createElement(F.I18nextProvider, {
@@ -24446,7 +24446,7 @@
                 }, x.default.createElement(H.FollowPanel, null)))), document.getElementById("js-follow-panel"))
             }
 
-            function le(e) {
+            function ue(e) {
                 U.default.render(x.default.createElement(B.Provider, {
                     store: e
                 }, x.default.createElement(F.I18nextProvider, {
@@ -24457,7 +24457,7 @@
                 }, x.default.createElement(q.DeadLTVOverlay, null)))), document.getElementById("js-dead-ltv-overlay"))
             }
 
-            function ce(e) {
+            function le(e) {
                 U.default.render(x.default.createElement(B.Provider, {
                     store: e
                 }, x.default.createElement(F.I18nextProvider, {
@@ -24468,7 +24468,7 @@
                 }, x.default.createElement(C.NotificationPopUpsWrapper, null)))), document.getElementById("js-notification-popup-container"))
             }
 
-            function de(e) {
+            function ce(e) {
                 var t = document.getElementById("js-player-extension-root"),
                     n = document.getElementById("js-extension-settings");
                 U.default.render(x.default.createElement(B.Provider, {
@@ -24484,7 +24484,7 @@
                 }, x.default.createElement(S.ExtensionSettings, null))), n)
             }
 
-            function fe(e) {
+            function de(e) {
                 U.default.render(x.default.createElement(B.Provider, {
                     store: e
                 }, x.default.createElement(F.I18nextProvider, {
@@ -24492,14 +24492,15 @@
                 }, x.default.createElement(Q.OfflineRecommendationsOverlay, null))), document.getElementById("js-player-offline-recommendations-overlay"))
             }
 
-            function pe(e) {
+            function fe(e) {
                 U.default.render(x.default.createElement(B.Provider, {
                     store: e
                 }, x.default.createElement(F.I18nextProvider, {
                     i18n: V.I18N_INSTANCE
                 }, x.default.createElement(X.PostVODRecommendationsOverlay, null))), document.getElementById("js-player-post-vod-recommendations-overlay"))
             }
-            var he = void 0,
+            var pe = void 0,
+                he = void 0,
                 _e = void 0,
                 ve = void 0,
                 me = void 0,
@@ -24510,11 +24511,10 @@
                 Te = void 0,
                 Se = void 0,
                 Ce = void 0,
-                we = void 0,
-                Oe = void 0;
+                we = void 0;
             this.destroy = function() {
-                he.destroy(), _e.destroy(), ve.destroy(), me.destroy(), ye.destroy(), ge.destroy(), Te.destroy(), Se.destroy(), be.destroy(), Ce.destroy(), Ee.destroy(), we.destroy(), Oe && Oe.destroy()
-            }, j()
+                pe.destroy(), he.destroy(), _e.destroy(), ve.destroy(), me.destroy(), ye.destroy(), be.destroy(), Te.destroy(), Ee.destroy(), Se.destroy(), ge.destroy(), Ce.destroy(), we && we.destroy()
+            }, D()
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -25052,85 +25052,85 @@
             }
         }
 
-        function o(e, t, n, r, i) {
-            function o() {
+        function o(e, t, n, r) {
+            function i() {
                 e.addEventListener(f.LOADSTART, h), e.addEventListener(f.ENDED, _), window.addEventListener("beforeunload", v), e.getChannel() && h()
             }
 
-            function a(e) {
+            function o(e) {
                 var t = s.default.getItem("leaveData");
                 if (t) return t[e]
             }
 
-            function u(e, t) {
+            function a(e, t) {
                 var n = s.default.getItem("leaveData");
                 n || (n = {}), n[e] = t, s.default.setItem("leaveData", n)
             }
 
-            function d() {
+            function u() {
                 if (g) {
-                    var e = a(g);
+                    var e = o(g);
                     if (e) {
                         var t = (new Date).getTime() / 1e3;
-                        e.time + l.leaveDialog.refreshTimeout < t || n.trackEvent("page_reload", {
+                        e.time + l.leaveDialog.refreshTimeout < t || n.dispatch((0, p.trackEvent)("page_reload", {
                             storm_detected: e.stormDetected,
                             leave_dialog: e.stormDialog,
                             refresh_warning: e.stormWarning
-                        })
+                        }))
                     }
                 }
             }
 
-            function p() {
+            function d() {
                 if (!g) return !1;
                 if (!e.getEnded()) return !1;
-                if (!E || E < i.leaveDialogViewerThreshold) return !1;
+                if (!E || E < r.leaveDialogViewerThreshold) return !1;
                 var t = (new Date).getTime() / 1e3;
                 return !(!b || b + l.leaveDialog.sinceEnded < t)
             }
 
             function h() {
-                g = e.getChannel(), E = null, b = null, d()
+                g = e.getChannel(), E = null, b = null, u()
             }
 
             function _() {
-                E = r.getState().viewercount, b = (new Date).getTime() / 1e3;
-                var e = p();
-                e && i.refreshWarningEnabled && m()
+                E = n.getState().viewercount, b = (new Date).getTime() / 1e3;
+                var e = d();
+                e && r.refreshWarningEnabled && m()
             }
 
             function v(e) {
-                var t = p(),
-                    n = t && i.leaveDialogEnabled;
-                if (u(g, {
+                var t = d(),
+                    i = t && r.leaveDialogEnabled;
+                if (a(g, {
                         time: (new Date).getTime() / 1e3,
                         stormDetected: t,
-                        stormDialog: n,
-                        stormWarning: r.getState().screen === c.STORM_WARNING_SCREEN
-                    }), n) return y(e)
+                        stormDialog: i,
+                        stormWarning: n.getState().screen === c.STORM_WARNING_SCREEN
+                    }), i) return y(e)
             }
 
             function m() {
-                r.dispatch((0, c.pushScreen)(c.STORM_WARNING_SCREEN)), setTimeout(function() {
-                    r.dispatch((0, c.popScreen)())
+                n.dispatch((0, c.pushScreen)(c.STORM_WARNING_SCREEN)), setTimeout(function() {
+                    n.dispatch((0, c.popScreen)())
                 }, 1e3 * l.leaveDialog.warningDuration)
             }
 
             function y(e) {
-                return n.trackEvent("page_leave_attempt", {
+                return n.dispatch((0, p.trackEvent)("page_leave_attempt", {
                     viewers: E
-                }), setTimeout(function() {
+                })), setTimeout(function() {
                     setTimeout(function() {
-                        n.trackEvent("page_leave_cancel", {
+                        n.dispatch((0, p.trackEvent)("page_leave_cancel", {
                             viewers: E
-                        })
+                        }))
                     }, 1e3)
                 }, 1), e.returnValue = l.leaveDialog.text, l.leaveDialog.text
             }
             var g, E, b;
             this.destroy = function() {
                 window.removeEventListener("beforeunload", v)
-            }, o()
+            }, i()
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -25141,7 +25141,8 @@
             l = r(u),
             c = n(410),
             d = n(179),
-            f = r(d)
+            f = r(d),
+            p = n(276)
     }, function(e, t) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
