@@ -1056,13 +1056,13 @@ window.SiteOptions = {
         },
         "48e86f7b-7550-4561-9782-9dfe0796b1f3": {
             "name": "CHOMPIFY",
-            "v": 2085,
+            "v": 2087,
             "t": 1,
             "groups": [{
-                "weight": 20,
+                "weight": 10,
                 "value": "control"
             }, {
-                "weight": 80,
+                "weight": 90,
                 "value": "experiment"
             }]
         },

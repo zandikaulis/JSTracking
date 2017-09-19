@@ -14354,7 +14354,7 @@
                     c = y.get(!0),
                     d = C.getPlayerType() === C.PLAYER_EMBED ? null : A;
                 return d = n.playerType === C.PLAYER_TWILIGHT ? O : d, {
-                    app_version: "2017.09.19-223154+10b2c8812cd568a8fce49349719a9e4cda50a41d",
+                    app_version: "2017.09.19-231428+06347985b896928959b36a7953f127df8cc2f407",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -35480,25 +35480,27 @@
         }
 
         function o(e) {
-            var t = e.onBlur,
-                n = e.onClick,
-                r = e.onFocus,
-                o = e.onMouseOut,
-                a = e.onMouseOver,
-                u = e.children,
-                l = e.className,
-                c = e.disabled;
+            var t = e.children,
+                n = e.className,
+                r = e.disabled,
+                o = e.onBlur,
+                a = e.onClick,
+                u = e.onFocus,
+                l = e.onMouseOut,
+                c = e.onMouseOver,
+                d = e.tabIndex;
             return s.default.createElement("button", {
-                type: "button",
-                onClick: n,
-                onKeyUp: i(n),
-                onMouseOver: a,
-                onMouseOut: o,
-                onFocus: r,
-                onBlur: t,
-                className: l,
-                disabled: c
-            }, u)
+                className: n,
+                disabled: r,
+                onBlur: o,
+                onClick: a,
+                onFocus: u,
+                onKeyUp: i(a),
+                onMouseOut: l,
+                onMouseOver: c,
+                tabIndex: d,
+                type: "button"
+            }, t)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -35515,12 +35517,18 @@
                 onMouseOver: l.default.func,
                 onMouseOut: l.default.func,
                 onFocus: l.default.func,
-                onBlur: l.default.func
+                onBlur: l.default.func,
+                tabIndex: l.default.string
             },
             d = {
                 className: "",
                 disabled: !1,
-                onClick: function() {}
+                onClick: function() {},
+                onMouseOver: function() {},
+                onMouseOut: function() {},
+                onFocus: function() {},
+                onBlur: function() {},
+                tabIndex: "0"
             };
         o.propTypes = c, o.defaultProps = d
     }, function(e, t, n) {
@@ -35563,9 +35571,8 @@
             }))))
         }
         Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.Icon = void 0,
-            t.IconComponent = o;
+            value: !0
+        }), t.Icon = void 0, t.IconComponent = o;
         var a = n(296),
             s = r(a),
             u = n(326),
@@ -37003,7 +37010,8 @@
                     },
                     toggleHTML5Player: function() {
                         var t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                        e(t ? (0, g.changeBackend)(h.BACKEND_PLAYER_CORE) : (0, g.changeBackend)(E.BACKEND_FLASH))
+                        e(t ? (0, g.changeBackend)(h.BACKEND_PLAYER_CORE) : (0,
+                            g.changeBackend)(E.BACKEND_FLASH))
                     }
                 }
             },
@@ -39784,7 +39792,8 @@
                 function t() {
                     i(this, t);
                     var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
-                    return e.handleBackButtonClick = e.handleBackButtonClick.bind(e), e.handleIdentityToggleClick = e.handleIdentityToggleClick.bind(e), e
+                    return e.handleBackButtonClick = e.handleBackButtonClick.bind(e), e.handleIdentityToggleClick = e.handleIdentityToggleClick.bind(e),
+                        e
                 }
                 return a(t, e), s(t, [{
                     key: "handleBackButtonClick",
@@ -40964,7 +40973,7 @@
                 }
             }, e
         }();
-        t.default = r
+        t.default = r;
     }, function(e, t, n) {
         "use strict";
 
@@ -42067,7 +42076,7 @@
                     writable: !0,
                     configurable: !0
                 }
-            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : o(e, t));
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : o(e, t))
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -43358,8 +43367,7 @@
                 function t() {
                     i(this, t);
                     var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
-                    return e.showSidebar = e.showSidebar.bind(e), e.onMouseEnter = e.onMouseEnter.bind(e), e.onMouseLeave = e.onMouseLeave.bind(e),
-                        e._hoverTimeout = 0, e
+                    return e.showSidebar = e.showSidebar.bind(e), e.onMouseEnter = e.onMouseEnter.bind(e), e.onMouseLeave = e.onMouseLeave.bind(e), e._hoverTimeout = 0, e
                 }
                 return a(t, e), s(t, [{
                     key: "onMouseEnter",
@@ -46379,9 +46387,8 @@
             }
         }
         Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.OFFLINE_RECOMMENDATIONS_TYPE = t.POST_VOD_RECOMMENDATIONS_TYPE = t.CHANNEL_VODS = t.SIMILAR_VODS = t.MAX_JITTER_DELAY = t.TEN_PERCENT = t.FETCH_VODS_THRESHOLD = t.MINIMUM_WATCHED_LENGTH = t.MAX_RECOMMENDED_VODS_VISIBLE = t.FETCHED = t.FETCHING = t.UNFETCHED = t.ACTION_SET_FETCHING_STATUS = t.ACTION_SET_NUM_VODS_VISIBLE = t.ACTION_SET_RECOMMENDED_VODS_WATCHED = t.ACTION_CLEAR_RECOMMENDED_VODS = t.ACTION_SET_RECOMMENDED_VODS = void 0,
-            t.fetchRecommendedVODs = i, t.isWatched = u, t.setRecommendedVODs = l, t.clearRecommendedVODs = c, t.setVODVisibility = d;
+            value: !0
+        }), t.OFFLINE_RECOMMENDATIONS_TYPE = t.POST_VOD_RECOMMENDATIONS_TYPE = t.CHANNEL_VODS = t.SIMILAR_VODS = t.MAX_JITTER_DELAY = t.TEN_PERCENT = t.FETCH_VODS_THRESHOLD = t.MINIMUM_WATCHED_LENGTH = t.MAX_RECOMMENDED_VODS_VISIBLE = t.FETCHED = t.FETCHING = t.UNFETCHED = t.ACTION_SET_FETCHING_STATUS = t.ACTION_SET_NUM_VODS_VISIBLE = t.ACTION_SET_RECOMMENDED_VODS_WATCHED = t.ACTION_CLEAR_RECOMMENDED_VODS = t.ACTION_SET_RECOMMENDED_VODS = void 0, t.fetchRecommendedVODs = i, t.isWatched = u, t.setRecommendedVODs = l, t.clearRecommendedVODs = c, t.setVODVisibility = d;
         var f = n(200),
             p = n(255),
             h = n(117),
