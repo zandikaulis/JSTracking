@@ -1056,13 +1056,13 @@ window.SiteOptions = {
         },
         "48e86f7b-7550-4561-9782-9dfe0796b1f3": {
             "name": "CHOMPIFY",
-            "v": 2082,
+            "v": 2085,
             "t": 1,
             "groups": [{
-                "weight": 33,
+                "weight": 20,
                 "value": "control"
             }, {
-                "weight": 67,
+                "weight": 80,
                 "value": "experiment"
             }]
         },
@@ -1152,7 +1152,7 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
-            "v": 2084,
+            "v": 2086,
             "t": 1,
             "groups": [{
                 "weight": 1,
