@@ -1056,13 +1056,13 @@ window.SiteOptions = {
         },
         "48e86f7b-7550-4561-9782-9dfe0796b1f3": {
             "name": "CHOMPIFY",
-            "v": 2074,
+            "v": 2075,
             "t": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 80,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 20,
                 "value": "experiment"
             }]
         },
@@ -3281,6 +3281,18 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "active"
+            }]
+        },
+        "fd74ad1d-d885-4d12-9036-f571fc82e6df": {
+            "name": "JANEWAY",
+            "v": 2076,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "yes"
             }]
         },
         "fe5bad1f-521b-4ab9-9cd4-8161ef779550": {
