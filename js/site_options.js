@@ -1056,13 +1056,13 @@ window.SiteOptions = {
         },
         "48e86f7b-7550-4561-9782-9dfe0796b1f3": {
             "name": "CHOMPIFY",
-            "v": 2075,
+            "v": 2078,
             "t": 1,
             "groups": [{
-                "weight": 80,
+                "weight": 70,
                 "value": "control"
             }, {
-                "weight": 20,
+                "weight": 30,
                 "value": "experiment"
             }]
         },
@@ -2912,6 +2912,18 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "active"
+            }]
+        },
+        "d8c536f8-31a0-46d0-8e25-1bd5773aee2f": {
+            "name": "android_clip_editing",
+            "v": 2077,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "active"
+            }, {
+                "weight": 100,
+                "value": "control"
             }]
         },
         "d91cbc6b-1d6f-42ef-89b4-049176164067": {
