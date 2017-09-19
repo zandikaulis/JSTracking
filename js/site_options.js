@@ -19,7 +19,7 @@ window.SiteOptions = {
     "creative_communities": "animation,cosplay,drawing,food,gamedev,glass,illustration,leatherwork,music,painting,pixelart,programming,sewing,designdolls,graphite,perler,vector,figurines,woodworking,writing,sketch,anime,watercolor,jewelry,electronics,overwatchcontest,3dmodeling,crossstitch,sculpting,editing,artstation,bodyart,fiberarts,metalworking,papercraft,design,digitalillustration,comedy,magic,dance,voiceacting,theater,robotics,chainmaille,brewing,virink,automotive,comics,pcbuilding,makeup,film,photography,coloringbooks,brickbuilding,crochet",
     "community_theatres": ".",
     "creative_promoted_communities": "animation",
-    "creative_banned_tags": "n3devtest,doonest,cosmos,doonbot,bobross,misterrogers,jwahbatest1,twitchpresents,shoutfactorytv",
+    "creative_banned_tags": "n3devtest,doonest,cosmos,doonbot,bobross,misterrogers,jwahbatest1,twitchpresents,shoutfactorytv,food",
     "creative_fpage_darklaunch": 1,
     "channel_feed_overrides": "food",
     "authentic_biscuit": false,
