@@ -1666,6 +1666,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "7ad0012f-a7c7-41e0-875d-02d057b9dfef": {
+            "name": "ios_feed_autoplay_video_content",
+            "v": 2092,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "7ad1325c-4495-450c-b26b-6f6a62c9a777": {
             "name": "PRESENCE_SORT",
             "v": 2064,
