@@ -1459,6 +1459,18 @@ window.SiteOptions = {
                 "value": "show"
             }]
         },
+        "68ca29e7-fdd0-43f3-b3f4-9b97cf1341c0": {
+            "name": "ios_ipad_optimized_screens",
+            "v": 2093,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "68cde3a8-d4a6-44ae-af4a-22dbc5a0393c": {
             "name": "passport_redesign_test",
             "v": 583,
