@@ -1545,13 +1545,13 @@ window.SiteOptions = {
         },
         "6d07fedb-c0e6-4eae-9082-d4c100eade25": {
             "name": "android_aax",
-            "v": 2014,
+            "v": 2096,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 5,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 95,
                 "value": "active"
             }]
         },
