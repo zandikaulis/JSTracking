@@ -137,6 +137,7 @@
             }
 
             function a(e) {
+                if (e.player === w.PLAYER_AMAZON_LIVE) return q.BACKEND_MEDIA_PLAYER;
                 if (e.flash) return H.BACKEND_FLASH;
                 if (e.hls) return F.BACKEND_HLS;
                 if (e.mediaplayer) return q.BACKEND_MEDIA_PLAYER;
@@ -1664,11 +1665,10 @@
                             },
                             d = i.BufferedBlockAlgorithm = o.extend({
                                 reset: function() {
-                                    this._data = new a.init, this._nDataBytes = 0
+                                    this._data = new a.init, this._nDataBytes = 0;
                                 },
                                 _append: function(e) {
-                                    "string" == typeof e && (e = c.parse(e)),
-                                        this._data.concat(e), this._nDataBytes += e.sigBytes
+                                    "string" == typeof e && (e = c.parse(e)), this._data.concat(e), this._nDataBytes += e.sigBytes
                                 },
                                 _process: function(t) {
                                     var n = this._data,
@@ -3156,7 +3156,8 @@
                 return n
             }, a.getListenersAsObject = function(e) {
                 var t, n = this.getListeners(e);
-                return n instanceof Array && (t = {}, t[e] = n), t || n
+                return n instanceof Array && (t = {},
+                    t[e] = n), t || n
             }, a.addListener = function(e, t) {
                 var n, r = this.getListenersAsObject(e),
                     o = "object" == typeof t;
@@ -8739,8 +8740,9 @@
             }, {
                 key: "onPlaying",
                 value: function() {
-                    var e = this.store.getState();
-                    e.ads.currentMetadata.contentType === R.AdContentTypes.NONE && Promise.all([a(e), s(e)]).then(function(t) {
+                    var e = this.store.getState(),
+                        t = e.stream.contentType;
+                    e.ads.currentMetadata.contentType !== R.AdContentTypes.NONE || t !== N.CONTENT_MODE_VOD && t !== k.CONTENT_MODE_LIVE || Promise.all([a(e), s(e)]).then(function(t) {
                         var n = p(t, 2),
                             r = n[0],
                             i = n[1];
@@ -9291,8 +9293,7 @@
                     var e, t, n, r, i = navigator.userAgent || "",
                         o = navigator.appName || "",
                         a = navigator.appVersion ? "" + parseFloat(navigator.appVersion) : "";
-                    return -1 != (t = i.indexOf("Opera")) ? (a = i.substring(t + 6), -1 != (t = i.indexOf("Version")) && (a = i.substring(t + 8))) : -1 != (t = i.indexOf("OPR/")) ? a = i.substring(t + 4) : -1 != (t = i.indexOf("Android")) ? a = i.substring(t + 11) : -1 != (t = i.indexOf("Chrome")) ? a = i.substring(t + 7) : -1 != (t = i.indexOf("Safari")) ? (a = i.substring(t + 7), -1 != (t = i.indexOf("Version")) && (a = i.substring(t + 8))) : -1 != (t = i.indexOf("Firefox")) ? a = i.substring(t + 8) : "Microsoft Internet Explorer" == o ? (r = new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})"), null != r.exec(i) && (a = parseFloat(RegExp.$1))) : "Netscape" == o ? (r = new RegExp("Trident/.*rv:([0-9]{1,}[.0-9]{0,})"), null != r.exec(i) && (a = parseFloat(RegExp.$1))) : a = i.lastIndexOf(" ") + 1 < (t = i.lastIndexOf("/")) ? i.substring(t + 1) : "unknown", a = a.toString(), -1 != (n = a.indexOf(";")) && (a = a.substring(0, n)), -1 != (n = a.indexOf(" ")) && (a = a.substring(0, n)), -1 != (n = a.indexOf(")")) && (a = a.substring(0, n)), e = parseInt("" + a, 10),
-                        isNaN(e) && (a = "" + parseFloat(navigator.appVersion)), a
+                    return -1 != (t = i.indexOf("Opera")) ? (a = i.substring(t + 6), -1 != (t = i.indexOf("Version")) && (a = i.substring(t + 8))) : -1 != (t = i.indexOf("OPR/")) ? a = i.substring(t + 4) : -1 != (t = i.indexOf("Android")) ? a = i.substring(t + 11) : -1 != (t = i.indexOf("Chrome")) ? a = i.substring(t + 7) : -1 != (t = i.indexOf("Safari")) ? (a = i.substring(t + 7), -1 != (t = i.indexOf("Version")) && (a = i.substring(t + 8))) : -1 != (t = i.indexOf("Firefox")) ? a = i.substring(t + 8) : "Microsoft Internet Explorer" == o ? (r = new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})"), null != r.exec(i) && (a = parseFloat(RegExp.$1))) : "Netscape" == o ? (r = new RegExp("Trident/.*rv:([0-9]{1,}[.0-9]{0,})"), null != r.exec(i) && (a = parseFloat(RegExp.$1))) : a = i.lastIndexOf(" ") + 1 < (t = i.lastIndexOf("/")) ? i.substring(t + 1) : "unknown", a = a.toString(), -1 != (n = a.indexOf(";")) && (a = a.substring(0, n)), -1 != (n = a.indexOf(" ")) && (a = a.substring(0, n)), -1 != (n = a.indexOf(")")) && (a = a.substring(0, n)), e = parseInt("" + a, 10), isNaN(e) && (a = "" + parseFloat(navigator.appVersion)), a
                 },
                 browserAcceptsLargeURLs: function() {
                     return "undefined" == typeof window || (null !== window.ActiveXObject, !0)
@@ -14372,7 +14373,7 @@
                     c = y.get(!0),
                     d = C.getPlayerType() === C.PLAYER_EMBED ? null : A;
                 return d = n.playerType === C.PLAYER_TWILIGHT ? O : d, {
-                    app_version: "2017.09.20-203428+be632454d60d874c26727661d082e185db5879c8",
+                    app_version: "2017.09.21-004511+165f754d41174b03e702a8a39a02103634989e8d",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -14636,7 +14637,7 @@
             l = n(70),
             c = r(l),
             d = n(288),
-            f = Object.freeze((a = {}, o(a, u.TIER_1_EVENTS.MINUTE_WATCHED, ["time", "device_id", "play_session_id", "platform", "customer_id", "content_id"]), o(a, u.TIER_1_EVENTS.VIDEO_PLAY, ["time", "device_id", "play_session_id", "platform", "customer_id", "content_id", "time_since_load_start"]), o(a, u.TIER_1_EVENTS.BUFFER_EMPTY, ["time", "device_id", "play_session_id", "platform", "customer_id", "content_id", "buffer_empty_count"]), o(a, u.VIDEO_PLAYBACK_ERROR, ["time", "device_id", "play_session_id", "platform", "customer_id", "content_id", "reason"]), a)),
+            f = Object.freeze((a = {}, o(a, u.TIER_1_EVENTS.MINUTE_WATCHED, ["time", "device_id", "play_session_id", "customer_id", "content_id"]), o(a, u.TIER_1_EVENTS.VIDEO_PLAY, ["time", "device_id", "play_session_id", "customer_id", "content_id", "time_since_load_start"]), o(a, u.TIER_1_EVENTS.BUFFER_EMPTY, ["time", "device_id", "play_session_id", "customer_id", "content_id", "buffer_empty_count"]), o(a, u.VIDEO_PLAYBACK_ERROR, ["time", "device_id", "play_session_id", "customer_id", "content_id", "reason"]), a)),
             p = Object.freeze(Object.keys(f));
         t.FirstPartyClient = function() {
             function e(t) {
@@ -17225,7 +17226,7 @@
                     });
                 o.some(function(e) {
                     return e.group === r.selected
-                }) || t.dispatch((0, V.selectQuality)(o[0].group, o[0].bandwidth)), t.dispatch((0, B.updateDuration)(t.getState().backend.getDuration())), i.contentType === T.CONTENT_MODE_LIVE && t.dispatch((0, U.setOnline)(!0)), n.autoplay && Se(), i instanceof T.LiveContentStream && t.dispatch((0, F.fetchLiveStreamMetadata)(qe.getVideoInfo().broadcast_id))
+                }) || t.dispatch((0, V.selectQuality)(o[0].group, o[0].bandwidth)), t.dispatch((0, B.updateDuration)(t.getState().backend.getDuration())), i.contentType === T.CONTENT_MODE_LIVE && t.dispatch((0, U.setOnline)(!0)), !n.autoplay || i.contentType !== T.CONTENT_MODE_LIVE && i.contentType !== S.CONTENT_MODE_VOD || Se(), i.contentType === T.CONTENT_MODE_LIVE && t.dispatch((0, F.fetchLiveStreamMetadata)(qe.getVideoInfo().broadcast_id))
             }
 
             function Q(e) {
@@ -17522,8 +17523,9 @@
             }, Ve.play = function() {
                 var e = t.getState(),
                     n = e.playback,
-                    r = e.ads;
-                n.hasPlayed || Se(), t.dispatch((0, B.updatePlaybackState)(ae.PLAYING)), qe.getNetworkState === qe.NETWORK_EMPTY ? qe.load() : r.currentMetadata.contentType === w.AdContentTypes.IMA ? t.dispatch((0, w.playAd)()) : (t.getState().stream.contentType === S.CONTENT_MODE_VOD && Ve.getEnded() && Ve.setCurrentTime(0), qe.play()), t.dispatch((0, M.trackEvent)("video_pause", {
+                    r = e.ads,
+                    i = e.stream;
+                n.hasPlayed || i.contentType !== S.CONTENT_MODE_VOD && i.contentType !== T.CONTENT_MODE_LIVE || Se(), t.dispatch((0, B.updatePlaybackState)(ae.PLAYING)), qe.getNetworkState === qe.NETWORK_EMPTY ? qe.load() : r.currentMetadata.contentType === w.AdContentTypes.IMA ? t.dispatch((0, w.playAd)()) : (i.contentType === S.CONTENT_MODE_VOD && Ve.getEnded() && Ve.setCurrentTime(0), qe.play()), t.dispatch((0, M.trackEvent)("video_pause", {
                     action: "play",
                     in_ad: t.getState().ads.currentMetadata.contentType !== w.AdContentTypes.NONE
                 }))
@@ -19297,8 +19299,8 @@
         }, n.prototype.addListener = function(e, t) {
             var i;
             if (!r(t)) throw TypeError("listener must be a function");
-            return this._events || (this._events = {}), this._events.newListener && this.emit("newListener", e, r(t.listener) ? t.listener : t), this._events[e] ? o(this._events[e]) ? this._events[e].push(t) : this._events[e] = [this._events[e], t] : this._events[e] = t,
-                o(this._events[e]) && !this._events[e].warned && (i = a(this._maxListeners) ? n.defaultMaxListeners : this._maxListeners, i && i > 0 && this._events[e].length > i && (this._events[e].warned = !0, console.error("(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.", this._events[e].length), "function" == typeof console.trace && console.trace())), this
+            return this._events || (this._events = {}), this._events.newListener && this.emit("newListener", e, r(t.listener) ? t.listener : t),
+                this._events[e] ? o(this._events[e]) ? this._events[e].push(t) : this._events[e] = [this._events[e], t] : this._events[e] = t, o(this._events[e]) && !this._events[e].warned && (i = a(this._maxListeners) ? n.defaultMaxListeners : this._maxListeners, i && i > 0 && this._events[e].length > i && (this._events[e].warned = !0, console.error("(node) warning: possible EventEmitter memory leak detected. %d listeners added. Use emitter.setMaxListeners() to increase limit.", this._events[e].length), "function" == typeof console.trace && console.trace())), this
         }, n.prototype.on = n.prototype.addListener, n.prototype.once = function(e, t) {
             function n() {
                 this.removeListener(e, n), i || (i = !0, t.apply(this, arguments))
@@ -22472,14 +22474,16 @@
             f = n(115),
             p = r(f),
             h = n(386),
-            _ = (t.AAX_TWITCH_PUBLISHER_ID = 3036, t.AAX_VIDEO_AD_SERVER = "DFP", "video"),
-            v = "twitch-preroll",
-            m = "twitch-midroll-",
-            y = "twitch-postroll",
-            g = 500,
-            E = 1e3,
-            b = 1e3,
-            T = (t.AAXManager = function() {
+            _ = n(224),
+            v = n(167),
+            m = (t.AAX_TWITCH_PUBLISHER_ID = 3036, t.AAX_VIDEO_AD_SERVER = "DFP", "video"),
+            y = "twitch-preroll",
+            g = "twitch-midroll-",
+            E = "twitch-postroll",
+            b = 500,
+            T = 1e3,
+            S = 1e3,
+            C = (t.AAXManager = function() {
                 function e(t, n, r, i) {
                     var a = this;
                     o(this, e), this._store = r, this._preloadPrerollBidsPromise = null, this._options = i, this._unsubs = [];
@@ -22491,9 +22495,9 @@
                             videoAdServer: n
                         }, function() {
                             a._apstag = u.apstag
-                        })) : this._apstag = new T
+                        })) : this._apstag = new C
                     } catch (e) {
-                        this._apstag = new T;
+                        this._apstag = new C;
                         var c = {
                             reason: e.message
                         };
@@ -22511,7 +22515,7 @@
                     value: function() {
                         var e = this;
                         return this._preloadPrerollBidsPromise = this._getAdsRequestContextForPreroll().then(function(t) {
-                            return e._willDeclineAds(t) ? [] : e._fetchVideoBids([v], t, g)
+                            return e._willDeclineAds(t) ? [] : e._fetchVideoBids([y], t, b)
                         }), this._preloadPrerollBidsPromise
                     }
                 }, {
@@ -22521,9 +22525,9 @@
                             case s.AdRollTypes.PREROLL:
                                 return this._fetchPrerollBids(e);
                             case s.AdRollTypes.MIDROLL:
-                                return this._fetchMidrollBids(e, E);
+                                return this._fetchMidrollBids(e, T);
                             case s.AdRollTypes.POSTROLL:
-                                return this._fetchPostrollBids(e, b);
+                                return this._fetchPostrollBids(e, S);
                             default:
                                 return Promise.resolve([])
                         }
@@ -22537,7 +22541,7 @@
                 }, {
                     key: "_fetchPrerollBids",
                     value: function(e) {
-                        if (!this._preloadPrerollBidsPromise) return this._fetchVideoBids([v], e, g);
+                        if (!this._preloadPrerollBidsPromise) return this._fetchVideoBids([y], e, b);
                         var t = this._preloadPrerollBidsPromise;
                         return this._preloadPrerollBidsPromise = null, t
                     }
@@ -22547,14 +22551,14 @@
                         var n = 1,
                             r = Array.apply(null, new Array(n)).map(function(e, t) {
                                 var n = t + 1;
-                                return "" + m + n.toString()
+                                return "" + g + n.toString()
                             });
                         return this._fetchVideoBids(r, e, t)
                     }
                 }, {
                     key: "_fetchPostrollBids",
                     value: function(e, t) {
-                        return this._fetchVideoBids([y], e, t)
+                        return this._fetchVideoBids([E], e, t)
                     }
                 }, {
                     key: "_fetchVideoBids",
@@ -22572,7 +22576,7 @@
                                 var u = a.now() - s;
                                 i.aax_latency = u;
                                 var l = o.filter(function(t) {
-                                    return t.mediaType === _ && (0, d.default)(e, t.slotID)
+                                    return t.mediaType === m && (0, d.default)(e, t.slotID)
                                 });
                                 l.length > 0 ? (i.amzniid = l.map(function(e) {
                                     return e.amzniid
@@ -22588,7 +22592,7 @@
                         return {
                             slots: e.map(function(e) {
                                 return {
-                                    mediaType: _,
+                                    mediaType: m,
                                     slotID: e
                                 }
                             }),
@@ -22598,7 +22602,9 @@
                 }, {
                     key: "_onStreamChange",
                     value: function() {
-                        this.preloadPrerollBids(), this._unsubFromStreamChanged()
+                        this._unsubFromStreamChanged();
+                        var e = this._store.getState().stream.contentType;
+                        e !== _.CONTENT_MODE_VOD && e !== v.CONTENT_MODE_LIVE || this.preloadPrerollBids()
                     }
                 }, {
                     key: "_getAdsRequestContextForPreroll",
@@ -23222,7 +23228,7 @@
             }, {
                 key: "setVolume",
                 value: function(e) {
-                    this._isAdRunning() && this._flashBackend.setVolume(e)
+                    this._isAdRunning() && this._flashBackend.setVolume(e);
                 }
             }, {
                 key: "setMuted",
