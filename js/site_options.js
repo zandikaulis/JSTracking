@@ -3192,10 +3192,10 @@ window.SiteOptions = {
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
             "name": "baking_brownies",
-            "v": 1782,
+            "v": 2099,
             "t": 1,
             "groups": [{
-                "weight": 75,
+                "weight": 20,
                 "value": "control"
             }, {
                 "weight": 0,
@@ -3207,7 +3207,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_play_600"
             }, {
-                "weight": 25,
+                "weight": 80,
                 "value": "yes_play_1050"
             }]
         },
