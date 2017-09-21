@@ -14373,7 +14373,7 @@
                     c = y.get(!0),
                     d = C.getPlayerType() === C.PLAYER_EMBED ? null : A;
                 return d = n.playerType === C.PLAYER_TWILIGHT ? O : d, {
-                    app_version: "2017.09.21-004511+165f754d41174b03e702a8a39a02103634989e8d",
+                    app_version: "2017.09.21-164610+9f965588cb852eb675a1f2a10ce35d274f3f18d0",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -14710,7 +14710,7 @@
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        t.trustedSpadeURI = "//video-edge-c4be1a.sjc01.hls.ttvnw.net/v1/playlist/ClQK1crw5S0E6jwYlvjm-Mrl1U3aOizWhnfWVJEf6N87xuuDamQMfEhXxuHps2h7mZkx0iami_2GXtDpv3ptALcc-UXLi_ms3mJe21PZtUrtSDeHYwCXW1SHJ8HSOJP9N_z7lvsGUetl7dQMHaIPq8ZTNUChdyfbiBQrpIr9imEwa8hKUIKq62ijmYZquuiCCY-y1JKYHWeh9pUs9Q9DA_emqzIJLVepfkrczkaiUxMtYLeQzquQ87PCzgoHnCP8JoRdFl1b3YJgpygRr80Zf5OvjbkVzNy0T3E1iB7yaTg0nQL1o9DdQXYUYhaaKwPIEofE036DnfIo5aazKd5078If1nK3nW7XIOfl0vgthmm4D4c77wPdvEaXJJAp1gARTsovVDtDImGqh2sHHajqgQIpMCUQcNJ4-KpN_YpxcxNG-eQhWMZ4JAjy11mfG-6Kc5ce4ArQRjpK0mdsXHW.m3u8"
+        t.trustedSpadeURI = "//video-edge-77dfbe.sjc01.hls.ttvnw.net/v1/playlist/CjGfHseYscQ0YmKzbiTyyN1NcKuyC0u6Mx7OBRYHFxQasWwUF36uxnAlJs_iuIAz1glC2_idc6anCG5WthJnDrAiNywQh4Gsmoqklgu-1PAGB813_un77QOa-SEJekjIgmMS_68BYs--Sv3p4jpjLbWtN3erMIXFeoYcRtHUmPAhNwtAqYV1xy427qfKJ2JOxrVr_aaH-xzrQvUvB1cIRmHwHPwItVmMwPD213IYSyBh8C9Hme8ePAUxQMTIJCKuWo5Ue9_-00qZmLlFtFZR_yr17HhQFzYGePUe7q4y7q4vI9IrL-2_cgbDCTiTZKauYHIXCP2XmYUdj8I4DdoKInWCaEiX4wBDf0t1fGZUqSczc1QRstx6ocD1qSoWgd5GjHRDL1mxRAklnOvTbn-CwzzSCtZr-9rSUkKQLvjPM44N0r_bOYxCj80FjSfXg.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -23789,8 +23789,10 @@
             R = n(271),
             M = n(70),
             L = i(M),
-            D = n(427),
-            x = Object.freeze((u = {}, s(u, N.TIER_1_EVENTS.MINUTE_WATCHED, P.EVENT_EMBED_MINUTE_WATCHED), s(u, N.TIER_1_EVENTS.VIDEO_PLAY, P.EVENT_EMBED_VIDEO_PLAY), s(u, N.TIER_1_EVENTS.BUFFER_EMPTY, P.EVENT_EMBED_BUFFER_EMPTY), s(u, N.VIDEO_PLAYBACK_ERROR, P.EVENT_EMBED_VIDEO_PLAYBACK_ERROR), u));
+            D = n(53),
+            x = i(D),
+            j = n(427),
+            U = Object.freeze((u = {}, s(u, N.TIER_1_EVENTS.MINUTE_WATCHED, P.EVENT_EMBED_MINUTE_WATCHED), s(u, N.TIER_1_EVENTS.VIDEO_PLAY, P.EVENT_EMBED_VIDEO_PLAY), s(u, N.TIER_1_EVENTS.BUFFER_EMPTY, P.EVENT_EMBED_BUFFER_EMPTY), s(u, N.VIDEO_PLAYBACK_ERROR, P.EVENT_EMBED_VIDEO_PLAYBACK_ERROR), u));
         t.EmbedHost = function() {
             function e(t, n) {
                 a(this, e), this._player = t, this._store = n, this._clients = [], this._unsubscribes = [], this._window = this._store.getState().window, this._window.addEventListener("message", this), this._store.getState().env.playerType === S.PLAYER_FRONTPAGE && this._player.addEventListener(g.OPEN_STREAM, this._sendOpenStreamEvent.bind(this));
@@ -23959,7 +23961,7 @@
                             this._store.dispatch((0, m.setMiniPlayerMode)(e.data.args[0]));
                             break;
                         case P.METHOD_SET_TRACKING_PROPERTIES:
-                            this._setTwilightTrackingProperties(e.data.args[0])
+                            this._setTrackingProperties(e.data.args[0])
                     }
                 }
             }, {
@@ -24029,7 +24031,7 @@
                 key: "_sendFirstPartyAnalyticEvent",
                 value: function(e, t) {
                     this._sendAll(P.BRIDGE_PLAYER_EVENT_WITH_PAYLOAD, {
-                        event: x[e],
+                        event: U[e],
                         data: t
                     })
                 }
@@ -24088,11 +24090,12 @@
                     })
                 }
             }, {
-                key: "_setTwilightTrackingProperties",
+                key: "_setTrackingProperties",
                 value: function(e) {
-                    if (this._store.getState().env.playerType === S.PLAYER_TWILIGHT) {
-                        var t = (0, L.default)(e, ["client_app", "content", "medium", "player", "referrer", "referrer_url"]);
-                        this._store.dispatch((0, D.setTrackingProperties)(t))
+                    var t = [S.PLAYER_TWILIGHT, S.PLAYER_POPOUT];
+                    if ((0, x.default)(t, this._store.getState().env.playerType)) {
+                        var n = (0, L.default)(e, ["app_session_id", "benchmark_session_id", "client_app", "content", "medium", "player", "referrer", "referrer_url"]);
+                        this._store.dispatch((0, j.setTrackingProperties)(n))
                     }
                 }
             }, {
@@ -24654,7 +24657,7 @@
                 store: n
             }, a.default.createElement(f.I18nextProvider, {
                 i18n: p.I18N_INSTANCE
-            }, a.default.createElement(_.PlayerTypeLoader, null))), o), y) : new h.PlayerUI(e, t, n, r, i)
+            }, a.default.createElement(_.PlayerTypeLoader, null))), o), y) : new h.PlayerUI(e, t, n, r, i);
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -50743,7 +50746,7 @@
             s = n(70),
             u = r(s),
             l = n(427),
-            c = ["chat_visibility_status", "client_app", "content", "host_channel", "medium", "page_session_id", "player", "referrer", "referrer_url", "tab_session_id"]
+            c = ["app_session_id", "benchmark_session_id", "chat_visibility_status", "client_app", "content", "host_channel", "medium", "page_session_id", "player", "referrer", "referrer_url", "tab_session_id"]
     }, function(e, t, n) {
         "use strict";
 
@@ -51867,7 +51870,7 @@
                         }, t.prototype.delete = function(t) {
                             var n = this.__entries__,
                                 r = e(n, t);
-                            ~r && n.splice(r, 1)
+                            ~r && n.splice(r, 1);
                         }, t.prototype.has = function(t) {
                             return !!~e(this.__entries__, t)
                         }, t.prototype.clear = function() {

@@ -15627,6 +15627,7 @@ googletag.cmd = googletag.cmd || [],
                 CLIENT_BATCH_SPADE: "1b905261-e257-4703-ac84-12a6a9099935",
                 CLIENT_BATCH_MIXPANEL: "42f5eea6-c548-4791-b767-9c7e29b73ef6",
                 CLIPS_HEAR_ME_NOW: "9649684c-6d3f-423d-9d3c-f4296efee975",
+                BROWSE_SORT: "9cb0fb03-a804-4e1e-94bc-12052b96e41a",
                 CLIPS_YOU_WERE_RIGHT: "6b4086ea-dcce-41c9-a57b-000fa9366e35",
                 CLIPS_TEACH_ME: "a39cd18b-c3fb-46ad-a6a8-0c2e8686d978",
                 NEWS_FEED_REDESIGN: "05d8869f-e037-4955-b80a-7c361f9ddffb",
@@ -15697,6 +15698,7 @@ googletag.cmd = googletag.cmd || [],
                 "f03d8b21-c0dc-43c6-8ee6-aa59d7edd3ef": "false",
                 "5daee224-4c99-499f-b6e0-e308a5fa54f1": "control",
                 "479d9473-bf6e-4d74-8f9b-dd85d6f98921": "control",
+                "9cb0fb03-a804-4e1e-94bc-12052b96e41a": "control",
                 "daf63994-587b-4062-8978-d970027af40f": "control",
                 "0a4d513f-0274-4b33-b04f-287521abd51b": "control",
                 "b8ca66a8-ec36-422f-a8a2-256ef0e16e8d": "control",
@@ -16697,12 +16699,11 @@ googletag.cmd = googletag.cmd || [],
                 e.api.get("/api/viewer/info.json").done(function(n) {
                     e.preferredLanguage = n.preferred_language, e.receivedLanguage = n.received_language;
                     var i = cookie.get("language");
-                    void 0 === i ? e.language.setCookieAndReload(e.receivedLanguage) : n.login && i !== n.user_language && e.language.setByAsyncPut(i), n.eu && window.euCookieNotification(),
-                        e.tracking.spadeAndMixpanel.trackEvent("prime_web_geo_data", {
-                            platform: "web",
-                            geo: n.geo,
-                            ip: n.ip
-                        }), t(n)
+                    void 0 === i ? e.language.setCookieAndReload(e.receivedLanguage) : n.login && i !== n.user_language && e.language.setByAsyncPut(i), n.eu && window.euCookieNotification(), e.tracking.spadeAndMixpanel.trackEvent("prime_web_geo_data", {
+                        platform: "web",
+                        geo: n.geo,
+                        ip: n.ip
+                    }), t(n)
                 }).fail(function(e) {
                     n({
                         status: e.status
@@ -19484,8 +19485,7 @@ var recurly = function(e) {
                 }, {
                     key: "onPaymentMethodSelected",
                     value: function(e) {
-                        p("Payment method selected", e),
-                            this.session.completePaymentMethodSelection(this.total, this.lineItems)
+                        p("Payment method selected", e), this.session.completePaymentMethodSelection(this.total, this.lineItems)
                     }
                 }, {
                     key: "onShippingContactSelected",
