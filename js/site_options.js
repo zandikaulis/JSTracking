@@ -3237,7 +3237,7 @@ window.SiteOptions = {
         },
         "f164d19e-cbbd-4774-86c7-106f21d892c0": {
             "name": "ios_browse_game_display_tablet_layout",
-            "v": 1916,
+            "v": 2102,
             "t": 1,
             "groups": [{
                 "weight": 100,
