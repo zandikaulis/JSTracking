@@ -2914,6 +2914,21 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "d6386417-a815-4c24-a21b-20e78d5a9e07": {
+            "name": "android_onboarding_1_2",
+            "v": 2108,
+            "t": 1,
+            "groups": [{
+                "weight": 34,
+                "value": "control"
+            }, {
+                "weight": 33,
+                "value": "variant_a"
+            }, {
+                "weight": 33,
+                "value": "variant_b"
+            }]
+        },
         "d6ba259c-3f82-48ac-b158-bf4760fc864b": {
             "name": "android_playercore_6",
             "v": 1596,
