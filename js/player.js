@@ -14373,7 +14373,7 @@
                     c = y.get(!0),
                     d = C.getPlayerType() === C.PLAYER_EMBED ? null : A;
                 return d = n.playerType === C.PLAYER_TWILIGHT ? O : d, {
-                    app_version: "2017.09.21-215456+3eb5acdff51db1f6098e886c35385670b4ee2efd",
+                    app_version: "2017.09.21-235721+b39445ddadbbc44567448ea9d48db903d5fffd7e",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -24152,17 +24152,10 @@
         function i(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
-
-        function o(e) {
-            var t = (0, h.toString)((0, c.default)(e, "width", "height")),
-                n = v + "/?" + t,
-                r = document.createElement("iframe");
-            return r.setAttribute("src", n), e.allowfullscreen !== !1 && r.setAttribute("allowfullscreen", ""), e.width && r.setAttribute("width", e.width), e.height && r.setAttribute("height", e.height), r.setAttribute("frameBorder", "0"), r.setAttribute("scrolling", "no"), r
-        }
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.EmbedClient = t.PLAYBACK_ENDED = t.PLAYBACK_PLAYING = t.PLAYBACK_PAUSED = t.BRIDGE_DESTROY = t.BRIDGE_CLIENT_NAMESPACE = t.BRIDGE_HOST_NAMESPACE = t.BRIDGE_DOCUMENT_EVENT = t.BRIDGE_PLAYER_EVENT_WITH_PAYLOAD = t.BRIDGE_PLAYER_EVENT = t.BRIDGE_STORE_STATE_UPDATE = t.BRIDGE_STATE_UPDATE = t.BRIDGE_HOST_READY = t.BRIDGE_REQ_SUBSCRIBE = t.METHOD_SET_TRACKING_PROPERTIES = t.METHOD_SET_CONTENT = t.METHOD_SET_MINI_PLAYER_MODE = t.METHOD_SET_FULLSCREEN = t.METHOD_SET_THEATRE = t.METHOD_DESTROY = t.METHOD_SET_VOLUME = t.METHOD_SET_MUTE = t.METHOD_SET_QUALITY = t.METHOD_SEEK = t.METHOD_SET_COLLECTION = t.METHOD_SET_VIDEO = t.METHOD_SET_CHANNEL = t.METHOD_PAUSE = t.METHOD_PLAY = t.EVENT_EMBED_ERROR_REASON_NETWORK = t.EVENT_EMBED_ERROR_REASON_FORMAT_NOT_SUPPORTED = t.EVENT_EMBED_ERROR_REASON_NOT_AUTHORIZED = t.EVENT_EMBED_ERROR_REASON_DECODE = t.EVENT_EMBED_ERROR_REASON_ABORTED = t.EVENT_EMBED_ERROR = t.EVENT_EMBED_VIDEO_PLAYBACK_ERROR = t.EVENT_EMBED_BUFFER_EMPTY = t.EVENT_EMBED_VIDEO_PLAY = t.EVENT_EMBED_MINUTE_WATCHED = t.EVENT_EMBED_SEEKED = t.EVENT_EMBED_TIME_UPDATE = t.EVENT_EMBED_STATS_UPDATE = t.EVENT_EMBED_TRANSITION_TO_REC_VOD = t.EVENT_EMBED_TRANSITION_TO_COLLECTION_VOD = t.EVENT_EMBED_OPEN_STREAM = t.EVENT_EMBED_FLASH_AD_COMPANION_RENDERED = t.EVENT_EMBED_CONTENT_SHOWING = t.EVENT_EMBED_AD_COMPANION_RENDERED = t.EVENT_FULLSCREEN_EXITED = t.EVENT_FULLSCREEN_ENTERED = t.EVENT_THEATRE_EXITED = t.EVENT_THEATRE_ENTERED = t.EVENT_EMBED_VIEWERS_CHANGE = t.EVENT_EMBED_WHEEL = t.EVENT_EMBED_OFFLINE = t.EVENT_EMBED_ONLINE = t.EVENT_EMBED_ENDED = t.EVENT_EMBED_PAUSE = t.EVENT_EMBED_PLAY = t.EVENT_EMBED_READY = void 0;
-        var a = function() {
+        var o = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -24173,16 +24166,18 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            s = n(339),
-            u = r(s),
-            l = n(422),
-            c = r(l),
-            d = n(164),
-            f = r(d),
-            p = n(176),
-            h = n(251),
-            _ = n(355),
-            v = function() {
+            a = n(339),
+            s = r(a),
+            u = n(422),
+            l = r(u),
+            c = n(117),
+            d = r(c),
+            f = n(164),
+            p = r(f),
+            h = n(176),
+            _ = n(251),
+            v = n(355),
+            m = function() {
                 var e = "https://player.twitch.tv";
                 if (document.currentScript) e = document.currentScript.src;
                 else {
@@ -24191,15 +24186,15 @@
                     });
                     e = t.length > 0 ? t[0].src : document.scripts[document.scripts.length - 1].src
                 }
-                var n = (0, p.parseUri)(e);
+                var n = (0, h.parseUri)(e);
                 if ("testplayer.twitch.tv" === n.host.toLowerCase()) {
                     var r = n.path.split("/")[1].replace(/[^a-zA-Z0-9_-]+/g, "");
                     return n.protocol + "://" + n.authority + "/" + r
                 }
                 return n.protocol + "://" + n.authority
             }(),
-            m = 15e3,
-            y = {
+            y = 15e3,
+            g = Object.freeze({
                 channelName: "",
                 currentTime: 0,
                 duration: 0,
@@ -24211,38 +24206,59 @@
                 videoID: "",
                 viewers: 0,
                 volume: 0
-            },
-            g = t.EVENT_EMBED_READY = "ready",
-            E = (t.EVENT_EMBED_PLAY = "play", t.EVENT_EMBED_PAUSE = "pause", t.EVENT_EMBED_ENDED = "ended", t.EVENT_EMBED_ONLINE = "online", t.EVENT_EMBED_OFFLINE = "offline", t.EVENT_EMBED_WHEEL = "wheel", t.EVENT_EMBED_VIEWERS_CHANGE = "viewerschange", t.EVENT_THEATRE_ENTERED = "theatreentered", t.EVENT_THEATRE_EXITED = "theatreexited", t.EVENT_FULLSCREEN_ENTERED = "fullscreenentered", t.EVENT_FULLSCREEN_EXITED = "fullscreenexited", t.EVENT_EMBED_AD_COMPANION_RENDERED = "adcompanionrendered", t.EVENT_EMBED_CONTENT_SHOWING = "contentShowing", t.EVENT_EMBED_FLASH_AD_COMPANION_RENDERED = "flashAdcompanionrendered", t.EVENT_EMBED_OPEN_STREAM = "openStream", t.EVENT_EMBED_TRANSITION_TO_COLLECTION_VOD = "transitionToCollectionVod", t.EVENT_EMBED_TRANSITION_TO_REC_VOD = "transitionToRecommendedVod", t.EVENT_EMBED_STATS_UPDATE = "statsupdate", t.EVENT_EMBED_TIME_UPDATE = "timeUpdate", t.EVENT_EMBED_SEEKED = "seeked", t.EVENT_EMBED_MINUTE_WATCHED = "minuteWatched", t.EVENT_EMBED_VIDEO_PLAY = "videoPlay", t.EVENT_EMBED_BUFFER_EMPTY = "bufferEmpty", t.EVENT_EMBED_VIDEO_PLAYBACK_ERROR = "videoError", t.EVENT_EMBED_ERROR = "error", t.EVENT_EMBED_ERROR_REASON_ABORTED = "errorReasonAborted", t.EVENT_EMBED_ERROR_REASON_DECODE = "errorReasonDecode", t.EVENT_EMBED_ERROR_REASON_NOT_AUTHORIZED = "errorReasonAuthorized", t.EVENT_EMBED_ERROR_REASON_FORMAT_NOT_SUPPORTED = "errorReasonSupported", t.EVENT_EMBED_ERROR_REASON_NETWORK = "errorReasonNetwork", t.METHOD_PLAY = "play", t.METHOD_PAUSE = "pause", t.METHOD_SET_CHANNEL = "channel", t.METHOD_SET_VIDEO = "video", t.METHOD_SET_COLLECTION = "collection", t.METHOD_SEEK = "seek", t.METHOD_SET_QUALITY = "quality", t.METHOD_SET_MUTE = "mute", t.METHOD_SET_VOLUME = "volume", t.METHOD_DESTROY = "destroy"),
-            b = (t.METHOD_SET_THEATRE = "theatre", t.METHOD_SET_FULLSCREEN = "fullscreen", t.METHOD_SET_MINI_PLAYER_MODE = "setminiplayermode", t.METHOD_SET_CONTENT = "setcontent", t.METHOD_SET_TRACKING_PROPERTIES = "setTrackingProperties", t.BRIDGE_REQ_SUBSCRIBE = "subscribe"),
-            T = t.BRIDGE_HOST_READY = "ready",
-            S = t.BRIDGE_STATE_UPDATE = "bridgestateupdate",
-            C = t.BRIDGE_STORE_STATE_UPDATE = "bridgestorestateupdate",
-            O = t.BRIDGE_PLAYER_EVENT = "bridgeplayerevent",
-            A = t.BRIDGE_PLAYER_EVENT_WITH_PAYLOAD = "bridgeplayereventwithpayload",
-            P = (t.BRIDGE_DOCUMENT_EVENT = "bridgedocumentevent", t.BRIDGE_HOST_NAMESPACE = "player.embed.host"),
-            w = t.BRIDGE_CLIENT_NAMESPACE = "player.embed.client",
-            k = t.BRIDGE_DESTROY = "bridgedestroy",
-            N = (t.PLAYBACK_PAUSED = "paused", t.PLAYBACK_PLAYING = "playing", t.PLAYBACK_ENDED = "ended", "playerstateupdate");
+            }),
+            E = Object.freeze({
+                height: 390,
+                width: 640,
+                allowfullscreen: !1
+            }),
+            b = t.EVENT_EMBED_READY = "ready",
+            T = (t.EVENT_EMBED_PLAY = "play", t.EVENT_EMBED_PAUSE = "pause", t.EVENT_EMBED_ENDED = "ended", t.EVENT_EMBED_ONLINE = "online", t.EVENT_EMBED_OFFLINE = "offline", t.EVENT_EMBED_WHEEL = "wheel", t.EVENT_EMBED_VIEWERS_CHANGE = "viewerschange", t.EVENT_THEATRE_ENTERED = "theatreentered", t.EVENT_THEATRE_EXITED = "theatreexited", t.EVENT_FULLSCREEN_ENTERED = "fullscreenentered", t.EVENT_FULLSCREEN_EXITED = "fullscreenexited", t.EVENT_EMBED_AD_COMPANION_RENDERED = "adcompanionrendered", t.EVENT_EMBED_CONTENT_SHOWING = "contentShowing", t.EVENT_EMBED_FLASH_AD_COMPANION_RENDERED = "flashAdcompanionrendered", t.EVENT_EMBED_OPEN_STREAM = "openStream", t.EVENT_EMBED_TRANSITION_TO_COLLECTION_VOD = "transitionToCollectionVod", t.EVENT_EMBED_TRANSITION_TO_REC_VOD = "transitionToRecommendedVod", t.EVENT_EMBED_STATS_UPDATE = "statsupdate", t.EVENT_EMBED_TIME_UPDATE = "timeUpdate", t.EVENT_EMBED_SEEKED = "seeked", t.EVENT_EMBED_MINUTE_WATCHED = "minuteWatched", t.EVENT_EMBED_VIDEO_PLAY = "videoPlay", t.EVENT_EMBED_BUFFER_EMPTY = "bufferEmpty", t.EVENT_EMBED_VIDEO_PLAYBACK_ERROR = "videoError", t.EVENT_EMBED_ERROR = "error", t.EVENT_EMBED_ERROR_REASON_ABORTED = "errorReasonAborted", t.EVENT_EMBED_ERROR_REASON_DECODE = "errorReasonDecode", t.EVENT_EMBED_ERROR_REASON_NOT_AUTHORIZED = "errorReasonAuthorized", t.EVENT_EMBED_ERROR_REASON_FORMAT_NOT_SUPPORTED = "errorReasonSupported", t.EVENT_EMBED_ERROR_REASON_NETWORK = "errorReasonNetwork", t.METHOD_PLAY = "play", t.METHOD_PAUSE = "pause", t.METHOD_SET_CHANNEL = "channel", t.METHOD_SET_VIDEO = "video", t.METHOD_SET_COLLECTION = "collection", t.METHOD_SEEK = "seek", t.METHOD_SET_QUALITY = "quality", t.METHOD_SET_MUTE = "mute", t.METHOD_SET_VOLUME = "volume", t.METHOD_DESTROY = "destroy"),
+            S = (t.METHOD_SET_THEATRE = "theatre", t.METHOD_SET_FULLSCREEN = "fullscreen", t.METHOD_SET_MINI_PLAYER_MODE = "setminiplayermode", t.METHOD_SET_CONTENT = "setcontent", t.METHOD_SET_TRACKING_PROPERTIES = "setTrackingProperties", t.BRIDGE_REQ_SUBSCRIBE = "subscribe"),
+            C = t.BRIDGE_HOST_READY = "ready",
+            O = t.BRIDGE_STATE_UPDATE = "bridgestateupdate",
+            A = t.BRIDGE_STORE_STATE_UPDATE = "bridgestorestateupdate",
+            P = t.BRIDGE_PLAYER_EVENT = "bridgeplayerevent",
+            w = t.BRIDGE_PLAYER_EVENT_WITH_PAYLOAD = "bridgeplayereventwithpayload",
+            k = (t.BRIDGE_DOCUMENT_EVENT = "bridgedocumentevent", t.BRIDGE_HOST_NAMESPACE = "player.embed.host"),
+            N = t.BRIDGE_CLIENT_NAMESPACE = "player.embed.client",
+            I = t.BRIDGE_DESTROY = "bridgedestroy",
+            R = (t.PLAYBACK_PAUSED = "paused", t.PLAYBACK_PLAYING = "playing", t.PLAYBACK_ENDED = "ended", "playerstateupdate");
         t.EmbedClient = function() {
-            function e(t, n) {
-                i(this, e), this._eventEmitter = new f.default, this._playerStateEmitter = new f.default, this._playerState = y, this._storeState = {}, this._onHostReady = this._getHostReady(), this._iframe = o(n), t.appendChild(this._iframe), this._host = this._iframe.contentWindow, this._send(b)
+            function e(t) {
+                var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E;
+                i(this, e), this._eventEmitter = new p.default, this._playerStateEmitter = new p.default, this._playerState = g, this._storeState = {}, this._onHostReady = this._getHostReady(), this._iframe = this._createPlayerIframe(n), t.appendChild(this._iframe), this._host = this._iframe.contentWindow, this._send(S)
             }
-            return a(e, [{
+            return o(e, [{
                 key: "destroy",
                 value: function() {
-                    this.callPlayerMethod(E)
+                    this.callPlayerMethod(T)
+                }
+            }, {
+                key: "_createPlayerIframe",
+                value: function(e) {
+                    var t = this._normalizeOptions(e),
+                        n = document.createElement("iframe"),
+                        r = (0, _.toString)((0, l.default)(t, "width", "height")),
+                        i = m + "/?" + r;
+                    return n.setAttribute("src", i), n.setAttribute("width", t.width), n.setAttribute("height", t.height), n.setAttribute("frameBorder", "0"), n.setAttribute("scrolling", "no"), t.allowfullscreen && n.setAttribute("allowfullscreen", ""), n
+                }
+            }, {
+                key: "_normalizeOptions",
+                value: function(e) {
+                    var t = (0, d.default)({}, E, e);
+                    return e.allowfullscreen !== !1 && (t.allowfullscreen = !0), t
                 }
             }, {
                 key: "_getHostReady",
                 value: function() {
                     var e = this;
-                    return new _.Promise(function(t, n) {
+                    return new v.Promise(function(t, n) {
                         function r(e) {
-                            this._isClientMessage(e) && e.data.method === T && (window.removeEventListener("message", i), window.addEventListener("message", this), this._eventEmitter.emit(g), t())
+                            this._isClientMessage(e) && e.data.method === C && (window.removeEventListener("message", i), window.addEventListener("message", this), this._eventEmitter.emit(b), t())
                         }
                         var i = r.bind(e);
-                        window.addEventListener("message", i), setTimeout(n, m)
+                        window.addEventListener("message", i), setTimeout(n, y)
                     })
                 }
             }, {
@@ -24250,7 +24266,7 @@
                 value: function(e) {
                     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
                     var i = {
-                        namespace: P,
+                        namespace: k,
                         method: e,
                         args: n
                     };
@@ -24267,25 +24283,25 @@
             }, {
                 key: "_isClientMessage",
                 value: function(e) {
-                    return !!this._iframe && (Boolean(e.data) && e.data.namespace === w && e.source === this._iframe.contentWindow)
+                    return !!this._iframe && (Boolean(e.data) && e.data.namespace === N && e.source === this._iframe.contentWindow)
                 }
             }, {
                 key: "handleEvent",
                 value: function(e) {
                     if (this._isClientMessage(e)) switch (e.data.method) {
-                        case S:
-                            this._playerState = e.data.args[0], this._playerStateEmitter.emit(N, this._playerState);
-                            break;
                         case O:
+                            this._playerState = e.data.args[0], this._playerStateEmitter.emit(R, this._playerState);
+                            break;
+                        case P:
                             this._eventEmitter.emit(e.data.args[0]);
                             break;
-                        case A:
+                        case w:
                             this._eventEmitter.emit(e.data.args[0].event, e.data.args[0].data);
                             break;
-                        case C:
+                        case A:
                             this._storeState = e.data.args[0];
                             break;
-                        case k:
+                        case I:
                             this._iframe.parentNode.removeChild(this._iframe), delete this._iframe, delete this._host
                     }
                 }
@@ -24307,12 +24323,12 @@
             }, {
                 key: "addPlayerStateListener",
                 value: function(e) {
-                    this._playerStateEmitter.on(N, e), e(this._playerState)
+                    this._playerStateEmitter.on(R, e), e(this._playerState)
                 }
             }, {
                 key: "removePlayerStateListener",
                 value: function(e) {
-                    this._playerStateEmitter.off(N, e)
+                    this._playerStateEmitter.off(R, e)
                 }
             }, {
                 key: "removeEventListener",
@@ -24328,12 +24344,12 @@
             }, {
                 key: "setWidth",
                 value: function(e) {
-                    (0, u.default)(e) && e >= 0 && this._iframe.setAttribute("width", e)
+                    (0, s.default)(e) && e >= 0 && this._iframe.setAttribute("width", e)
                 }
             }, {
                 key: "setHeight",
                 value: function(e) {
-                    (0, u.default)(e) && e >= 0 && this._iframe.setAttribute("height", e)
+                    (0, s.default)(e) && e >= 0 && this._iframe.setAttribute("height", e)
                 }
             }]), e
         }()
@@ -24657,7 +24673,7 @@
                 store: n
             }, a.default.createElement(f.I18nextProvider, {
                 i18n: p.I18N_INSTANCE
-            }, a.default.createElement(_.PlayerTypeLoader, null))), o), y) : new h.PlayerUI(e, t, n, r, i);
+            }, a.default.createElement(_.PlayerTypeLoader, null))), o), y) : new h.PlayerUI(e, t, n, r, i)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
