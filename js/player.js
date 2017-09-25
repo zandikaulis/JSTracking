@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".17e9eccc72e2b9caa068.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".6dd5fe2454bbcc48e268.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -22169,7 +22169,7 @@
                     l = h.a(!0),
                     d = g.g() === g.n ? null : _;
                 return d = i.playerType === g.c ? y : d, {
-                    app_version: "2017.09.22-215357+d590fa6277fb86044b4eccf2814105e7be29cb12",
+                    app_version: "2017.09.25-173153+677f857526e5c60437b8dca1ac81f5ac6b160de5",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -29564,7 +29564,7 @@
         n.d(t, "a", function() {
             return r
         });
-        var r = "//video-edge-774f18.sjc01.hls.ttvnw.net/v1/playlist/Ch36ujRlp_qlh37jlDjgEp9y_eTQDvYkZcydrhqMBVKa09Gva_GEnYyDpzB-zk-glm2QpTO6wMnE2jMZWgQmnSJ9Zf8W8zw5kkcNaw8rVWs7cZDslmOdkYQI-kiAcqrhVpEbp3tszYdI9Zvwe5siJFhPJGJLsWuk79PoWJ6AYfv4WIsLQ-ILQ5_0xwBKfxX6oKlkIL1IAHLfbf_x2zGSG_GNkSOqtzwKVp5bvW0E5OH-la_Esn7fZA6yRw_ZSKQM7eAmvPuf8r8y4IZxAZIgTkuhf89PxKSvgQvkwbr9bQmF_rKvMqCqU00Y_bg-X5ODpseHtiYndwEu__hSt8Hcl9bNOMCdmkuUs5b3v8iBbjK08S252Ptcn_tCvHJoo2VDPcAtFpNOf0TMYuF8U9RQ7_p1xeF69CSm6BfkfRTsFZGZlo9um.m3u8"
+        var r = "//video-edge-696140.sjc01.hls.ttvnw.net/v1/playlist/ClYJTWQwHVowvxCVBD7jPaecjYnUuYFgFmaigjcQ0SdTxho1ZGFe07iJp8mmLDX42YjtWQwTZp6VEg50EUXW0oA1fo0ZHYYhf115Ypp3vd1eNa_erUQF5WvyM72USrX-4r0NeuqkknJrV4STaFgvHQ2P4hYVntNVwfwTdDqGa71dwhPhQoelInui-6aNHo6TWXDTqEbSQB8TiSKMRGryvhPxnL8KEzaKPJWco38_szCV17epgbtYOOS6x8CfQTTTDviHDVeJ7C1XT5CfGxlllRdvh1OLyy-SguNgC7eHZWJ9iOqt7xK01ft5exdidBmmXIZMtOxHshwXSlHCTe0wHxQXlIsyd6cWjht03FxBZy62xqgwKXaCOUQsHz-8JTa9lhT4SwogLiJZt_1b5Prm9Tgm9j4PZdgzNa_PE3qXHGoGEuFAQkpxcRT1.m3u8"
     }, function(e, t, n) {
         "use strict";
 
