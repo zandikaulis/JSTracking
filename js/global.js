@@ -15664,7 +15664,8 @@ googletag.cmd = googletag.cmd || [],
                 TWILIGHT_STREAM_SUMMARY: "32099615-3609-4658-9f6b-5c1c1daa3510",
                 signup_redirect_search: "198744b6-e96f-413b-aaf6-eab0128c9833",
                 REQUIEM: "ad5f316b-0a87-44a6-9348-f6b6ee36b0bb",
-                MOBILE_CHECKOUT: "070d88d9-02da-42cf-a83d-4f884878f93a"
+                MOBILE_CHECKOUT: "070d88d9-02da-42cf-a83d-4f884878f93a",
+                TWILIGHT_MERCH_STORE_LAUNCH: "298a5f39-228a-487a-ad06-422c18458403"
             },
             r = {
                 "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458": "no",
@@ -15728,7 +15729,8 @@ googletag.cmd = googletag.cmd || [],
                 "32099615-3609-4658-9f6b-5c1c1daa3510": "no",
                 "198744b6-e96f-413b-aaf6-eab0128c9833": "control",
                 "ad5f316b-0a87-44a6-9348-f6b6ee36b0bb": "no",
-                "070d88d9-02da-42cf-a83d-4f884878f93a": "no"
+                "070d88d9-02da-42cf-a83d-4f884878f93a": "no",
+                "298a5f39-228a-487a-ad06-422c18458403": "off"
             },
             o = {},
             s = {
@@ -15747,7 +15749,8 @@ googletag.cmd = googletag.cmd || [],
                 HEARTHSTONE_DIRECTORY_FILTER: "yes",
                 OVERWATCH_DIRECTORY_FILTER: "yes",
                 REQUIEM: "yes",
-                MOBILE_CHECKOUT: "yes"
+                MOBILE_CHECKOUT: "yes",
+                TWILIGHT_MERCH_STORE_LAUNCH: "on"
             };
         _.each(Object.keys(s), function(t) {
             o[i[t]] = e.user().then(function(e) {
