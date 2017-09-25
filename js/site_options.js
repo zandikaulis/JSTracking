@@ -1141,13 +1141,13 @@ window.SiteOptions = {
         },
         "4b724df5-bf1c-4e8b-98b6-2c24fc9af1ae": {
             "name": "clips_slow_down",
-            "v": 2052,
+            "v": 2117,
             "t": 1,
             "groups": [{
-                "weight": 1,
+                "weight": 20,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 80,
                 "value": "variant1"
             }]
         },
