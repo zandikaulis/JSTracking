@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".a09aa79caeb078303f67.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".d2eb53fcc4874a0c617a.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -65,7 +65,7 @@
         "use strict";
         e.exports = n(94)
     }, function(e, t, n) {
-        e.exports = n(839)()
+        e.exports = n(841)()
     }, function(e, t, n) {
         var r = n(149),
             i = n(49),
@@ -136,9 +136,9 @@
             }
         }
         t.__esModule = !0, t.connect = t.Provider = void 0;
-        var i = n(911),
+        var i = n(913),
             o = r(i),
-            a = n(912),
+            a = n(914),
             s = r(a);
         t.Provider = o.default, t.connect = s.default
     }, function(e, t, n) {
@@ -214,7 +214,7 @@
         }), n.d(t, "p", function() {
             return $
         });
-        var r = n(829),
+        var r = n(831),
             i = n.n(r),
             o = n(46),
             a = n(64),
@@ -416,6 +416,26 @@
     }, function(e, t, n) {
         "use strict";
 
+        function r(e) {
+            return e && e.__esModule ? e : {
+                default: e
+            }
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.I18nextProvider = t.Interpolate = t.translate = t.loadNamespaces = void 0;
+        var i = n(912),
+            o = r(i),
+            a = n(910),
+            s = r(a),
+            u = n(909),
+            c = r(u),
+            l = n(911),
+            d = r(l);
+        t.loadNamespaces = d.default, t.translate = o.default, t.Interpolate = s.default, t.I18nextProvider = c.default
+    }, function(e, t, n) {
+        "use strict";
+
         function r() {
             try {
                 return window.self !== window.top
@@ -483,26 +503,6 @@
             w = "clips-viewing",
             k = "clips-embed",
             E = "clips-editing"
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return e && e.__esModule ? e : {
-                default: e
-            }
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.I18nextProvider = t.Interpolate = t.translate = t.loadNamespaces = void 0;
-        var i = n(910),
-            o = r(i),
-            a = n(908),
-            s = r(a),
-            u = n(907),
-            c = r(u),
-            l = n(909),
-            d = r(l);
-        t.loadNamespaces = d.default, t.translate = o.default, t.Interpolate = s.default, t.I18nextProvider = c.default
     }, function(e, t, n) {
         "use strict";
         var r = n(34),
@@ -734,7 +734,7 @@
             N = n(50),
             j = n.n(N),
             M = n(6),
-            D = n(8),
+            D = n(9),
             U = n(102),
             B = n(47),
             q = !!("withCredentials" in new XMLHttpRequest),
@@ -926,7 +926,7 @@
         var i = n(209),
             o = n(51),
             a = n(101),
-            s = n(119),
+            s = n(120),
             u = n(345),
             c = Math.max;
         e.exports = r
@@ -990,7 +990,7 @@
             })
         }
         t.a = r;
-        var i = n(822),
+        var i = n(824),
             o = n.n(i),
             a = n(339),
             s = n.n(a)
@@ -1253,9 +1253,9 @@
             h = n(12),
             m = n(74),
             v = n(103),
-            g = n(134),
+            g = n(135),
             y = n(62),
-            _ = n(106),
+            _ = n(107),
             b = n(44),
             w = "set stream",
             k = "channel",
@@ -1325,7 +1325,7 @@
         var n = Array.isArray;
         e.exports = n
     }, function(e, t, n) {
-        var r = n(727),
+        var r = n(729),
             i = n(323),
             o = i(function(e, t) {
                 return null == e ? {} : r(e, t)
@@ -1984,7 +1984,7 @@
         var k = n(32),
             E = n(20),
             S = n(37),
-            P = n(8),
+            P = n(9),
             C = n(99),
             T = n(30),
             O = n.n(T),
@@ -2031,7 +2031,7 @@
             return u
         }), t.c = r;
         var i = n(19),
-            o = n(135),
+            o = n(136),
             a = n(62),
             s = "online",
             u = "offline",
@@ -2048,7 +2048,7 @@
             };
         e.exports = i
     }, function(e, t, n) {
-        e.exports = n(801)
+        e.exports = n(803)
     }, function(e, t) {
         function n(e) {
             var t = typeof e;
@@ -2260,7 +2260,7 @@
             h = n(348),
             m = n.n(h),
             v = n(12),
-            g = n(129),
+            g = n(130),
             y = (n.n(g), "5fbb67a0-b4ff-4775-b836-e9a348a87481"),
             _ = "84d81180-6faa-4c58-98d7-48bbff5035c7",
             b = "a1ce3d24-076a-4664-be4c-f9046fdce18c",
@@ -2922,7 +2922,7 @@
         }), t.a = i;
         var o, a = n(2),
             s = n.n(a),
-            u = n(8),
+            u = n(9),
             c = "none",
             l = "granted",
             d = "broadcaster",
@@ -2938,7 +2938,7 @@
             y = (o = {}, r(o, u.b, !0), r(o, u.h, !0), r(o, u.i, !0), r(o, u.f, !0), r(o, u.j, !0), r(o, u.e, !0), o)
     }, function(e, t, n) {
         "use strict";
-        var r = n(110);
+        var r = n(111);
         e.exports = function(e) {
             if (!r(e)) throw new TypeError("Cannot use null or undefined");
             return e
@@ -2958,15 +2958,15 @@
             o = n(151);
         e.exports = r
     }, function(e, t, n) {
-        var r = n(751),
-            i = n(117),
+        var r = n(753),
+            i = n(118),
             o = r(i);
         e.exports = o
     }, function(e, t, n) {
         function r(e) {
             return null != e && o(e.length) && !i(e)
         }
-        var i = n(118),
+        var i = n(119),
             o = n(219);
         e.exports = r
     }, function(e, t, n) {
@@ -3299,7 +3299,7 @@
         n.d(t, "a", function() {
             return f
         }), t.b = r;
-        var i = n(134),
+        var i = n(135),
             o = n(47),
             a = n(2),
             s = n.n(a),
@@ -3377,12 +3377,12 @@
             c = n.n(u),
             l = n(14),
             d = n.n(l),
-            p = n(586),
-            f = n(588),
-            h = n(585),
-            m = n(589),
-            v = n(587),
-            g = n(591),
+            p = n(588),
+            f = n(590),
+            h = n(587),
+            m = n(591),
+            v = n(589),
+            g = n(593),
             y = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -3527,8 +3527,8 @@
             return null == e ? void 0 === e ? u : s : c && c in Object(e) ? o(e) : a(e)
         }
         var i = n(85),
-            o = n(760),
-            a = n(786),
+            o = n(762),
+            a = n(788),
             s = "[object Null]",
             u = "[object Undefined]",
             c = i ? i.toStringTag : void 0;
@@ -3538,7 +3538,7 @@
             return a(e) ? i(e) : o(e)
         }
         var i = n(307),
-            o = n(720),
+            o = n(722),
             a = n(51);
         e.exports = r
     }, function(e, t, n) {
@@ -3989,7 +3989,7 @@
         var u, c = n(72),
             l = n.n(c),
             d = n(6),
-            p = n(8),
+            p = n(9),
             f = n(46),
             h = n(7),
             m = n(14),
@@ -4170,8 +4170,8 @@
             var n = o(e, t);
             return i(n) ? n : void 0
         }
-        var i = n(718),
-            o = n(761);
+        var i = n(720),
+            o = n(763);
         e.exports = r
     }, function(e, t, n) {
         function r(e) {
@@ -4185,7 +4185,7 @@
             return a(e) ? i(e, !0) : o(e)
         }
         var i = n(307),
-            o = n(721),
+            o = n(723),
             a = n(51);
         e.exports = r
     }, function(e, t, n) {
@@ -4195,9 +4195,9 @@
             return r(e, a(t, 4), n, c, o)
         }
         var i = n(206),
-            o = n(116),
+            o = n(117),
             a = n(86),
-            s = n(731),
+            s = n(733),
             u = n(21);
         e.exports = r
     }, function(e, t, n) {
@@ -4287,9 +4287,9 @@
             l = n.n(c),
             d = n(50),
             p = n.n(d),
-            f = n(117),
+            f = n(118),
             h = n.n(f),
-            m = n(611),
+            m = n(613),
             v = n(440),
             g = n(443),
             y = n(439),
@@ -4299,7 +4299,7 @@
             k = n(447),
             E = n(33),
             S = n(16),
-            P = n(8),
+            P = n(9),
             C = n(103),
             T = n(265),
             O = n(26),
@@ -5023,7 +5023,7 @@
             Le.getStats = function() {
                     return i(Le.getVideoInfo())
                 }, Le.attach = function(t) {
-                    xe(n(671), t), Ae("setLastAdDisplay", [e.lastAdDisplay]), Ae("setPlayerType", [e.player]), Ae("setFlashIMAAdsEnabled", [!0])
+                    xe(n(673), t), Ae("setLastAdDisplay", [e.lastAdDisplay]), Ae("setPlayerType", [e.player]), Ae("setFlashIMAAdsEnabled", [!0])
                 }, Le._emitEvent = function(t, n) {
                     setTimeout(function() {
                         e.debug && "timeupdate" !== t && "playbackStatistics" !== t && console.log("flash event:", t, n), je.emit(t, n)
@@ -5155,7 +5155,7 @@
         }), t.c = r;
         var i = n(70),
             o = n.n(i),
-            a = n(826),
+            a = n(828),
             s = n.n(a),
             u = n(223),
             c = n.n(u),
@@ -5164,7 +5164,7 @@
             p = n(36),
             f = n.n(p),
             h = n(282),
-            m = n(609),
+            m = n(611),
             v = n(12),
             g = n(283),
             y = n(20),
@@ -5304,7 +5304,7 @@
             E = n.n(k),
             S = n(14),
             P = n.n(S),
-            C = n(813),
+            C = n(815),
             T = n.n(C),
             O = n(2),
             x = n.n(O),
@@ -5849,12 +5849,12 @@
         }), t.b = r;
         var a = n(2),
             s = n.n(a),
-            u = n(129),
+            u = n(130),
             c = n.n(u),
             l = n(46),
-            d = n(8),
+            d = n(9),
             p = n(174),
-            f = n(127),
+            f = n(128),
             h = "web",
             m = "mobile_web",
             v = Object.freeze({
@@ -6352,11 +6352,11 @@
         function r(e) {
             return "function" == typeof e ? e : null == e ? a : "object" == typeof e ? s(e) ? o(e[0], e[1]) : i(e) : u(e)
         }
-        var i = n(723),
-            o = n(724),
+        var i = n(725),
+            o = n(726),
             a = n(161),
             s = n(21),
-            u = n(819);
+            u = n(821);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t) {
@@ -6364,7 +6364,7 @@
         }
         var i = n(21),
             o = n(217),
-            a = n(798),
+            a = n(800),
             s = n(224);
         e.exports = r
     }, function(e, t, n) {
@@ -6382,7 +6382,7 @@
         }
         e.exports = n
     }, function(e, t, n) {
-        var r = n(725),
+        var r = n(727),
             i = n(155),
             o = i(function(e, t, n) {
                 r(e, t, n)
@@ -6507,7 +6507,7 @@
         function r() {
             i.attachRefs(this, this._currentElement)
         }
-        var i = n(880),
+        var i = n(882),
             o = (n(39), n(10), {
                 mountComponent: function(e, t, n, i, o, a) {
                     var s = e.mountComponent(t, n, i, o, a);
@@ -6535,13 +6535,13 @@
         "use strict";
         var r = n(15),
             i = n(374),
-            o = n(919),
-            a = n(920),
+            o = n(921),
+            a = n(922),
             s = n(95),
-            u = n(921),
-            c = n(922),
-            l = n(923),
-            d = n(927),
+            u = n(923),
+            c = n(924),
+            l = n(925),
+            d = n(929),
             p = s.createElement,
             f = s.createFactory,
             h = s.cloneElement,
@@ -6841,7 +6841,7 @@
             a = n(74),
             s = n(63),
             u = n(20),
-            c = n(657),
+            c = n(659),
             l = n.n(c),
             d = n(72),
             p = n.n(d),
@@ -7581,8 +7581,8 @@
             return c
         });
         var r = n(413),
-            i = (n.n(r), n(836)),
-            o = (n.n(i), n(946)),
+            i = (n.n(r), n(838)),
+            o = (n.n(i), n(948)),
             a = (n.n(o), n(255)),
             s = n(254),
             u = new a.a,
@@ -7682,6 +7682,48 @@
     }, function(e, t, n) {
         "use strict";
 
+        function r() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h,
+                t = arguments[1];
+            switch (t.type) {
+                case u.a:
+                    return o()({}, e, {
+                        deviceName: t.deviceName
+                    });
+                case u.b:
+                    return s()(f, t.castingState) ? o()({}, e, {
+                        castingState: t.castingState
+                    }) : e;
+                default:
+                    return e
+            }
+        }
+        n.d(t, "c", function() {
+            return c
+        }), n.d(t, "d", function() {
+            return l
+        }), n.d(t, "b", function() {
+            return d
+        }), n.d(t, "a", function() {
+            return p
+        }), t.e = r;
+        var i = n(2),
+            o = n.n(i),
+            a = n(14),
+            s = n.n(a),
+            u = n(134),
+            c = "unavailable",
+            l = "available",
+            d = "connecting",
+            p = "connected",
+            f = Object.freeze([c, l, d, p]),
+            h = {
+                deviceName: "",
+                castingState: c
+            }
+    }, function(e, t, n) {
+        "use strict";
+
         function r(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
@@ -7768,7 +7810,7 @@
         "use strict";
         var r, i = n(200),
             o = n(289),
-            a = n(635),
+            a = n(637),
             s = n(292);
         r = e.exports = function(e, t) {
             var n, r, a, u, c;
@@ -7795,7 +7837,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(649)() ? Symbol : n(651)
+        e.exports = n(651)() ? Symbol : n(653)
     }, function(e, t, n) {
         (function(r) {
             var i;
@@ -8097,7 +8139,7 @@
                     return c
                 }.call(t, n, t, e)) !== o && (e.exports = i)
             }()
-        }).call(t, n(120))
+        }).call(t, n(121))
     }, function(e, t, n) {
         "use strict";
 
@@ -8218,8 +8260,8 @@
         }
         e.exports = n
     }, function(e, t, n) {
-        var r = n(710),
-            i = n(749),
+        var r = n(712),
+            i = n(751),
             o = i(r);
         e.exports = o
     }, function(e, t, n) {
@@ -8231,7 +8273,7 @@
         }
         var i = n(311),
             o = n(86),
-            a = n(119),
+            a = n(120),
             s = Math.max;
         e.exports = r
     }, function(e, t, n) {
@@ -8253,7 +8295,7 @@
                 n = t % 1;
             return t === t ? n ? t - n : t : 0
         }
-        var i = n(827);
+        var i = n(829);
         e.exports = r
     }, function(e, t) {
         function n() {
@@ -8502,7 +8544,7 @@
         function p(e) {
             v(e, u)
         }
-        var f = n(121),
+        var f = n(122),
             h = n(230),
             m = n(363),
             v = n(364),
@@ -8708,7 +8750,7 @@
         n.d(t, "a", function() {
             return m
         }), t.b = i;
-        var o = n(118),
+        var o = n(119),
             a = n.n(o),
             s = n(36),
             u = n.n(s),
@@ -8740,7 +8782,7 @@
          * MIT License | (c) Dustin Diaz 2015
          */
         ! function(t, r, i) {
-            void 0 !== e && e.exports ? e.exports = i() : n(944)("bowser", i)
+            void 0 !== e && e.exports ? e.exports = i() : n(946)("bowser", i)
         }(0, 0, function() {
             function e(e) {
                 function t(t) {
@@ -9162,7 +9204,7 @@
         }), t.a = r, t.i = i, t.c = o, t.b = a;
         var u = n(30),
             c = n.n(u),
-            l = n(803),
+            l = n(805),
             d = n.n(l),
             p = n(274),
             f = n(195),
@@ -9412,8 +9454,8 @@
         }), n.d(t, "c", function() {
             return b
         });
-        var a = n(683),
-            s = n(673),
+        var a = n(685),
+            s = n(675),
             u = n.n(s),
             c = n(6),
             l = n(72),
@@ -9469,48 +9511,6 @@
             }(),
             _ = a.a,
             b = new y("en", "en-US", a.a.getFixedT("en-US"))
-    }, function(e, t, n) {
-        "use strict";
-
-        function r() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h,
-                t = arguments[1];
-            switch (t.type) {
-                case u.a:
-                    return o()({}, e, {
-                        deviceName: t.deviceName
-                    });
-                case u.b:
-                    return s()(f, t.castingState) ? o()({}, e, {
-                        castingState: t.castingState
-                    }) : e;
-                default:
-                    return e
-            }
-        }
-        n.d(t, "c", function() {
-            return c
-        }), n.d(t, "d", function() {
-            return l
-        }), n.d(t, "b", function() {
-            return d
-        }), n.d(t, "a", function() {
-            return p
-        }), t.e = r;
-        var i = n(2),
-            o = n.n(i),
-            a = n(14),
-            s = n.n(a),
-            u = n(133),
-            c = "unavailable",
-            l = "available",
-            d = "connecting",
-            p = "connected",
-            f = Object.freeze([c, l, d, p]),
-            h = {
-                deviceName: "",
-                castingState: c
-            }
     }, function(e, t, n) {
         "use strict";
 
@@ -9612,7 +9612,7 @@
             u = n(27),
             c = n(19),
             l = n(37),
-            d = n(106),
+            d = n(107),
             p = "transition collection",
             f = "transition recommendations",
             h = {
@@ -9819,7 +9819,7 @@
             u = n.n(s),
             c = n(1),
             l = n.n(c),
-            d = n(536),
+            d = n(537),
             p = n(3),
             f = n.n(p),
             h = n(70),
@@ -9963,11 +9963,11 @@
                 this.set(r[0], r[1])
             }
         }
-        var i = n(772),
-            o = n(773),
-            a = n(774),
-            s = n(775),
-            u = n(776);
+        var i = n(774),
+            o = n(775),
+            a = n(776),
+            s = n(777),
+            u = n(778);
         r.prototype.clear = i, r.prototype.delete = o, r.prototype.get = a, r.prototype.has = s, r.prototype.set = u, e.exports = r
     }, function(e, t, n) {
         function r(e) {
@@ -9975,11 +9975,11 @@
             this.size = t.size
         }
         var i = n(146),
-            o = n(791),
-            a = n(792),
-            s = n(793),
-            u = n(794),
-            c = n(795);
+            o = n(793),
+            a = n(794),
+            s = n(795),
+            u = n(796),
+            c = n(797);
         r.prototype.clear = o, r.prototype.delete = a, r.prototype.get = s, r.prototype.has = u, r.prototype.set = c, e.exports = r
     }, function(e, t) {
         function n(e, t) {
@@ -10063,7 +10063,7 @@
             var n = e.__data__;
             return i(t) ? n["string" == typeof t ? "string" : "hash"] : n.map
         }
-        var i = n(770);
+        var i = n(772);
         e.exports = r
     }, function(e, t) {
         function n(e, t) {
@@ -10098,7 +10098,7 @@
         }
         e.exports = n
     }, function(e, t, n) {
-        var r = n(714),
+        var r = n(716),
             i = n(42),
             o = Object.prototype,
             a = o.hasOwnProperty,
@@ -10112,7 +10112,7 @@
     }, function(e, t, n) {
         (function(e) {
             var r = n(35),
-                i = n(825),
+                i = n(827),
                 o = "object" == typeof t && t && !t.nodeType && t,
                 a = o && "object" == typeof e && e && !e.nodeType && e,
                 s = a && a.exports === o,
@@ -10171,7 +10171,7 @@
         e.exports = r
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(857)
+        e.exports = n(859)
     }, function(e, t, n) {
         "use strict";
 
@@ -10180,9 +10180,9 @@
         }
         var i, o = n(15),
             a = n(229),
-            s = n(872),
+            s = n(874),
             u = n(362),
-            c = n(904),
+            c = n(906),
             l = n(240),
             d = {},
             p = !1,
@@ -10298,7 +10298,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(124),
+        var i = n(125),
             o = n(362),
             a = n(238),
             s = {
@@ -10557,7 +10557,7 @@
             p = n(26),
             f = n(7),
             h = n(13),
-            m = n(106),
+            m = n(107),
             v = function() {
                 function e(e, t) {
                     var n = [],
@@ -11126,7 +11126,7 @@
                         }
                 }() : void 0 === G ? function() {
                     try {
-                        var e = n(948);
+                        var e = n(950);
                         return W = e.runOnLoop || e.runOnContext, s()
                     } catch (e) {
                         return u()
@@ -11173,7 +11173,7 @@
                     }
                 }, q(), B.polyfill = q, B.Promise = B, B
             })
-        }).call(t, n(120), n(126))
+        }).call(t, n(121), n(127))
     }, function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
@@ -11184,7 +11184,7 @@
             return l
         });
         var r = n(252),
-            i = n(837),
+            i = n(839),
             o = n.n(i),
             a = function(e) {
                 return ["124420521", "124421740", "124422593", "124424929", "59980349", "21681549"].indexOf(e) >= 0
@@ -11274,7 +11274,7 @@
         n.d(t, "a", function() {
             return s
         });
-        var r = n(112),
+        var r = n(113),
             i = (n.n(r), n(256)),
             o = n(182),
             a = function() {
@@ -11889,7 +11889,7 @@
         });
         var i = n(14),
             o = n.n(i),
-            a = n(824),
+            a = n(826),
             s = n.n(a),
             u = n(2),
             c = n.n(u),
@@ -12104,7 +12104,7 @@
             a = n(1),
             s = n.n(a),
             u = n(18),
-            c = n(9),
+            c = n(8),
             l = (n.n(c), n(3)),
             d = n.n(l),
             p = {
@@ -12330,7 +12330,7 @@
             m = n(2),
             v = n.n(m),
             g = n(6),
-            y = n(8),
+            y = n(9),
             _ = n(67),
             b = n(24),
             w = function() {
@@ -12421,7 +12421,7 @@
             }
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(630)() ? Object.assign : n(631)
+        e.exports = n(632)() ? Object.assign : n(633)
     }, function(e, t, n) {
         "use strict";
         e.exports = n(290)() ? Object.setPrototypeOf : n(291)
@@ -12490,11 +12490,11 @@
                 this.set(r[0], r[1])
             }
         }
-        var i = n(777),
-            o = n(778),
-            a = n(779),
-            s = n(780),
-            u = n(781);
+        var i = n(779),
+            o = n(780),
+            a = n(781),
+            s = n(782),
+            u = n(783);
         r.prototype.clear = i, r.prototype.delete = o, r.prototype.get = a, r.prototype.has = s, r.prototype.set = u, e.exports = r
     }, function(e, t) {
         function n(e, t, n, r) {
@@ -12515,10 +12515,10 @@
             return s
         }
         var i = n(148),
-            o = n(769);
+            o = n(771);
         e.exports = r
     }, function(e, t, n) {
-        var r = n(750),
+        var r = n(752),
             i = r();
         e.exports = i
     }, function(e, t, n) {
@@ -12526,14 +12526,14 @@
             return t === t ? a(e, t, n) : i(e, o, n)
         }
         var i = n(311),
-            o = n(717),
-            a = n(796);
+            o = n(719),
+            a = n(798);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n, a, s) {
             return e === t || (null == e || null == t || !o(e) && !o(t) ? e !== e && t !== t : i(e, t, n, a, r, s))
         }
-        var i = n(715),
+        var i = n(717),
             o = n(42);
         e.exports = r
     }, function(e, t) {
@@ -12557,7 +12557,7 @@
             i = r(Object.getPrototypeOf, Object);
         e.exports = i
     }, function(e, t, n) {
-        var r = n(700),
+        var r = n(702),
             i = n(344),
             o = Object.prototype,
             a = o.propertyIsEnumerable,
@@ -12609,9 +12609,9 @@
         var r = 9007199254740991;
         e.exports = n
     }, function(e, t, n) {
-        var r = n(719),
+        var r = n(721),
             i = n(316),
-            o = n(785),
+            o = n(787),
             a = o && o.isTypedArray,
             s = a ? i(a) : r;
         e.exports = s
@@ -12619,18 +12619,18 @@
         function r(e, t) {
             return (s(e) ? i : a)(e, o(t, 3))
         }
-        var i = n(115),
+        var i = n(116),
             o = n(86),
-            a = n(722),
+            a = n(724),
             s = n(21);
         e.exports = r
     }, function(e, t, n) {
-        var r = n(115),
+        var r = n(116),
             i = n(310),
-            o = n(737),
+            o = n(739),
             a = n(87),
             s = n(49),
-            u = n(756),
+            u = n(758),
             c = n(323),
             l = n(326),
             d = c(function(e, t) {
@@ -12645,7 +12645,7 @@
             });
         e.exports = d
     }, function(e, t, n) {
-        var r = n(753),
+        var r = n(755),
             i = r("round");
         e.exports = i
     }, function(e, t, n) {
@@ -12957,7 +12957,7 @@
             i === t ? n && m(r, document.createTextNode(n), i) : n ? (h(i, n), u(r, i, t)) : u(r, e, t)
         }
         var l = n(91),
-            d = n(849),
+            d = n(851),
             p = (n(17), n(39), n(236)),
             f = n(172),
             h = n(370),
@@ -13225,7 +13225,7 @@
             return ""
         }
         var s = n(11),
-            u = n(878),
+            u = n(880),
             c = n(349),
             l = n(94),
             d = c(l.isValidElement),
@@ -13328,7 +13328,7 @@
             return n
         }
         var a = n(11),
-            s = (n(53), n(123)),
+            s = (n(53), n(124)),
             u = (n(39), n(43)),
             c = (n(4), n(10), {
                 isMounted: function(e) {
@@ -13525,7 +13525,7 @@
         }), t.b = i, t.a = o;
         var a = n(100),
             s = (n.n(a), n(32)),
-            u = n(137),
+            u = n(138),
             c = n(12),
             l = "set language",
             d = "playerLanguage"
@@ -14228,7 +14228,7 @@
             c = n(75),
             l = n(97),
             d = n(76),
-            p = n(128),
+            p = n(129),
             f = n(448),
             h = n(449),
             m = n(193),
@@ -14238,7 +14238,7 @@
             _ = n(13),
             b = n(7),
             w = n(16),
-            k = n(132),
+            k = n(133),
             E = n(264),
             S = n(263),
             P = n(25),
@@ -14249,9 +14249,9 @@
             R = n(44),
             A = n(266),
             I = n(261),
-            L = n(133),
+            L = n(134),
             N = n(186),
-            j = n(135),
+            j = n(136),
             M = n(27),
             D = n(55),
             U = n(62),
@@ -14268,9 +14268,9 @@
             Y = n.n($),
             Q = n(101),
             X = n.n(Q),
-            J = n(118),
+            J = n(119),
             Z = n.n(J),
-            ee = n(808),
+            ee = n(810),
             te = n.n(ee),
             ne = n(20),
             re = n(26),
@@ -14280,7 +14280,7 @@
             se = n(28),
             ue = n(63),
             ce = n(105),
-            le = n(8),
+            le = n(9),
             de = ce,
             pe = [d.a, p.a, c.a, l.a],
             fe = (o = {}, r(o, c.a, c.c), r(o, p.a, p.b), r(o, d.a, d.b), r(o, l.a, l.b), r(o, v.a, v.b), o),
@@ -14826,9 +14826,9 @@
         })
     }, function(e, t, n) {
         var r = n(305),
-            i = n(802),
+            i = n(804),
             o = n(153),
-            a = n(755),
+            a = n(757),
             s = o(function(e) {
                 return e.push(void 0, a), r(i, void 0, e)
             });
@@ -14912,7 +14912,7 @@
         n.d(t, "a", function() {
             return _
         });
-        var r = n(112),
+        var r = n(113),
             i = (n.n(r), n(257)),
             o = n(416),
             a = n(417),
@@ -15194,7 +15194,7 @@
             a = n(184),
             s = n(256),
             u = n(182),
-            c = n(112),
+            c = n(113),
             l = (n.n(c), n(419)),
             d = this && this.__extends || function() {
                 var e = Object.setPrototypeOf || {
@@ -15721,7 +15721,7 @@
         var o = n(438),
             a = n(76),
             s = n(75),
-            u = n(128),
+            u = n(129),
             c = n(97),
             l = n(272),
             d = n(191),
@@ -15803,7 +15803,7 @@
         n.d(t, "b", function() {
             return s
         }), t.a = i;
-        var o = n(804),
+        var o = n(806),
             a = n.n(o),
             s = "set manifest info"
     }, function(e, t, n) {
@@ -15922,7 +15922,7 @@
         n.d(t, "b", function() {
             return a
         }), t.a = r;
-        var i = n(810),
+        var i = n(812),
             o = n.n(i),
             a = "set usher params",
             s = "usher_"
@@ -16016,7 +16016,7 @@
             d = n(72),
             p = n.n(d),
             f = n(65),
-            h = n(8),
+            h = n(9),
             m = n(7),
             v = n(77),
             g = function() {
@@ -16132,7 +16132,7 @@
         var i = n(30),
             o = n.n(i),
             a = n(195),
-            s = n(132),
+            s = n(133),
             u = n(19),
             c = {
                 enabled: !1,
@@ -16463,7 +16463,7 @@
             a = n.n(o),
             s = n(1),
             u = n.n(s),
-            c = n(9),
+            c = n(8),
             l = (n.n(c), n(3)),
             d = n.n(l),
             p = {
@@ -16552,9 +16552,9 @@
             f = n(50),
             h = n.n(f),
             m = n(141),
-            v = n(9),
+            v = n(8),
             g = (n.n(v), n(83)),
-            y = n(535),
+            y = n(536),
             _ = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -16842,9 +16842,9 @@
             c = n.n(u),
             l = n(3),
             d = n.n(l),
-            p = n(9),
+            p = n(8),
             f = (n.n(p), n(57)),
-            h = n(548),
+            h = n(549),
             m = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -16957,10 +16957,10 @@
             s = n.n(a),
             u = n(1),
             c = n.n(u),
-            l = n(945),
+            l = n(947),
             d = n.n(l),
-            p = n(555),
-            f = n(556),
+            p = n(556),
+            f = n(557),
             h = n(50),
             m = n.n(h),
             v = function() {
@@ -17254,7 +17254,7 @@
             return l.a.removeSWF(e)
         }
         t.e = r, t.d = i, t.a = a, t.b = s, t.c = u;
-        var c = n(658),
+        var c = n(660),
             l = n.n(c)
     }, function(e, t, n) {
         "use strict";
@@ -17284,7 +17284,7 @@
         t.a = i, t.b = o;
         var a = n(2),
             s = n.n(a),
-            u = n(107),
+            u = n(108),
             c = n(6)
     }, function(e, t, n) {
         "use strict";
@@ -17488,7 +17488,7 @@
         e.exports = function() {}
     }, function(e, t, n) {
         "use strict";
-        var r = n(110),
+        var r = n(111),
             i = {
                 function: !0,
                 object: !0
@@ -17498,7 +17498,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(110),
+        var r = n(111),
             i = Array.prototype.forEach,
             o = Object.create,
             a = function(e, t) {
@@ -17569,30 +17569,30 @@
             } : (t = {}, t.__proto__ = n, Object.getPrototypeOf(t) === n && {
                 level: 1
             })
-        }()), n(633)
+        }()), n(635)
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(641)() ? String.prototype.contains : n(642)
+        e.exports = n(643)() ? String.prototype.contains : n(644)
     }, function(e, t, n) {
         "use strict";
         var r = n(143),
             i = n(144),
-            o = n(644),
-            a = n(647),
-            s = n(648),
-            u = n(111).iterator;
+            o = n(646),
+            a = n(649),
+            s = n(650),
+            u = n(112).iterator;
         e.exports = function(e) {
             return "function" == typeof s(e)[u] ? e[u]() : r(e) ? new o(e) : i(e) ? new a(e) : new o(e)
         }
     }, function(e, t, n) {
         "use strict";
-        var r, i = n(619),
+        var r, i = n(621),
             o = n(200),
             a = n(68),
             s = n(48),
-            u = n(109),
-            c = n(617),
-            l = n(111),
+            u = n(110),
+            c = n(619),
+            l = n(112),
             d = Object.defineProperty,
             p = Object.defineProperties;
         e.exports = r = function(e, t) {
@@ -17759,7 +17759,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(691),
+        var r = n(693),
             i = r.a.Symbol;
         t.a = i
     }, function(e, t, n) {
@@ -17772,9 +17772,9 @@
             var r = d.call(t, "constructor") && t.constructor;
             return "function" == typeof r && r instanceof r && l.call(r) == p
         }
-        var i = n(685),
-            o = n(687),
-            a = n(692),
+        var i = n(687),
+            o = n(689),
+            a = n(694),
             s = "[object Object]",
             u = Function.prototype,
             c = Object.prototype,
@@ -17794,8 +17794,8 @@
             for (this.__data__ = new i; ++t < n;) this.add(e[t])
         }
         var i = n(205),
-            o = n(788),
-            a = n(789);
+            o = n(790),
+            a = n(791);
         r.prototype.add = r.prototype.push = o, r.prototype.has = a, e.exports = r
     }, function(e, t, n) {
         var r = n(35),
@@ -17834,7 +17834,7 @@
             for (var v in e) !t && !d.call(e, v) || f && ("length" == v || l && ("offset" == v || "parent" == v) || p && ("buffer" == v || "byteLength" == v || "byteOffset" == v) || u(v, m)) || h.push(v);
             return h
         }
-        var i = n(735),
+        var i = n(737),
             o = n(162),
             a = n(21),
             s = n(163),
@@ -17891,17 +17891,17 @@
         var i = n(147),
             o = n(306),
             a = n(149),
-            s = n(706),
-            u = n(707),
+            s = n(708),
+            u = n(709),
             c = n(319),
             l = n(154),
-            d = n(745),
-            p = n(746),
+            d = n(747),
+            p = n(748),
             f = n(325),
             h = n(326),
             m = n(328),
-            v = n(767),
-            g = n(768),
+            v = n(769),
+            g = n(770),
             y = n(330),
             _ = n(21),
             b = n(163),
@@ -17968,7 +17968,7 @@
             return "0" == t && 1 / e == -u ? "-0" : t
         }
         var i = n(85),
-            o = n(115),
+            o = n(116),
             a = n(21),
             s = n(165),
             u = 1 / 0,
@@ -18077,7 +18077,7 @@
         (function(t) {
             var n = "object" == typeof t && t && t.Object === Object && t;
             e.exports = n
-        }).call(t, n(126))
+        }).call(t, n(127))
     }, function(e, t, n) {
         function r(e) {
             return i(e, a, o)
@@ -18106,11 +18106,11 @@
             } : a;
         e.exports = u
     }, function(e, t, n) {
-        var r = n(693),
+        var r = n(695),
             i = n(204),
-            o = n(695),
+            o = n(697),
             a = n(302),
-            s = n(696),
+            s = n(698),
             u = n(59),
             c = n(338),
             l = c(r),
@@ -18158,7 +18158,7 @@
         function r(e) {
             return "function" != typeof e.constructor || a(e) ? {} : i(o(e))
         }
-        var i = n(709),
+        var i = n(711),
             o = n(213),
             a = n(158);
         e.exports = r
@@ -18205,17 +18205,17 @@
             o = Math.max;
         e.exports = r
     }, function(e, t, n) {
-        var r = n(733),
-            i = n(790),
+        var r = n(735),
+            i = n(792),
             o = i(r);
         e.exports = o
     }, function(e, t, n) {
         function r(e) {
             return o(e) ? a(e) : i(e)
         }
-        var i = n(703),
+        var i = n(705),
             o = n(215),
-            a = n(799);
+            a = n(801);
         e.exports = r
     }, function(e, t) {
         function n(e) {
@@ -18241,7 +18241,7 @@
         e.exports = r
     }, function(e, t, n) {
         var r = n(151),
-            i = n(748),
+            i = n(750),
             o = Object.prototype,
             a = o.hasOwnProperty,
             s = i(function(e, t, n) {
@@ -18252,7 +18252,7 @@
         function r(e, t) {
             return null != e && o(e, t, i)
         }
-        var i = n(712),
+        var i = n(714),
             o = n(329);
         e.exports = r
     }, function(e, t, n) {
@@ -18287,7 +18287,7 @@
         function r(e) {
             return null == e ? [] : i(e, o(e))
         }
-        var i = n(738),
+        var i = n(740),
             o = n(60);
         e.exports = r
     }, function(e, t) {
@@ -18385,8 +18385,8 @@
             for (n in t) t.hasOwnProperty(n) && !e.hasOwnProperty(n) && (r[n] = t[n]);
             return r
         }
-        var l = n(833),
-            d = n(834);
+        var l = n(835),
+            d = n(836);
         e.exports = r, r.prototype.get = function(e, t) {
             var n = c(t || {}, {
                     mustTrack: !1
@@ -18433,7 +18433,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(840);
+        var r = n(842);
         e.exports = function(e) {
             return r(e, !1)
         }
@@ -18596,7 +18596,7 @@
             return null == t || e.hasBooleanValue && !t || e.hasNumericValue && isNaN(t) || e.hasPositiveNumericValue && t < 1 || e.hasOverloadedBooleanValue && !1 === t
         }
         var o = n(92),
-            a = (n(17), n(39), n(905)),
+            a = (n(17), n(39), n(907)),
             s = (n(10), new RegExp("^[" + o.ATTRIBUTE_NAME_START_CHAR + "][" + o.ATTRIBUTE_NAME_CHAR + "]*$")),
             u = {},
             c = {},
@@ -18792,8 +18792,8 @@
         function r(e) {
             return o(document.documentElement, e)
         }
-        var i = n(865),
-            o = n(661),
+        var i = n(867),
+            o = n(663),
             a = n(296),
             s = n(297),
             u = {
@@ -18908,11 +18908,11 @@
             v = n(94),
             g = n(168),
             y = (n(53), n(17)),
-            _ = n(859),
-            b = n(861),
+            _ = n(861),
+            b = n(863),
             w = n(357),
-            k = n(123),
-            E = (n(39), n(875)),
+            k = n(124),
+            E = (n(39), n(877)),
             S = n(93),
             P = n(235),
             C = n(43),
@@ -19176,10 +19176,10 @@
         }
         var a = n(11),
             s = n(15),
-            u = n(856),
+            u = n(858),
             c = n(356),
             l = n(358),
-            d = (n(925), n(4), n(10), function(e) {
+            d = (n(927), n(4), n(10), function(e) {
                 this.construct(e)
             });
         s(d.prototype, u, {
@@ -19264,8 +19264,8 @@
             return null == e ? 0 : i(e, "", t, n)
         }
         var a = n(11),
-            s = (n(53), n(871)),
-            u = n(902),
+            s = (n(53), n(873)),
+            u = n(904),
             c = (n(4), n(231)),
             l = (n(10), "."),
             d = ":";
@@ -19306,11 +19306,11 @@
         }
 
         function o() {}
-        var a = n(125),
+        var a = n(126),
             s = n(15),
             u = n(377),
             c = (n(378), n(145));
-        n(4), n(926);
+        n(4), n(928);
         r.prototype.isReactComponent = {}, r.prototype.setState = function(e, t) {
             "object" != typeof e && "function" != typeof e && null != e && a("85"), this.updater.enqueueSetState(this, e), t && this.updater.enqueueCallback(this, t, "setState")
         }, r.prototype.forceUpdate = function(e) {
@@ -19357,7 +19357,7 @@
                 i = P.getOwnerID(e);
             return i && (t = P.getDisplayName(i)), o(n, r && r._source, t)
         }
-        var u, c, l, d, p, f, h, m = n(125),
+        var u, c, l, d, p, f, h, m = n(126),
             v = n(53),
             g = (n(4), n(10), "function" == typeof Array.from && "function" == typeof Map && r(Map) && null != Map.prototype && "function" == typeof Map.prototype.keys && r(Map.prototype.keys) && "function" == typeof Set && r(Set) && null != Set.prototype && "function" == typeof Set.prototype.keys && r(Set.prototype.keys));
         if (g) {
@@ -19663,7 +19663,7 @@
             return s
         }), t.a = r;
         var i = n(301),
-            o = n(938),
+            o = n(940),
             a = n.n(o),
             s = {
                 INIT: "@@redux/INIT"
@@ -19674,9 +19674,9 @@
             value: !0
         });
         var r = n(380),
-            i = n(932),
-            o = n(931),
-            a = n(930),
+            i = n(934),
+            o = n(933),
+            a = n(932),
             s = n(379);
         n(382);
         n.d(t, "createStore", function() {
@@ -22141,7 +22141,7 @@
                     l = h.a(!0),
                     d = g.g() === g.n ? null : _;
                 return d = i.playerType === g.c ? y : d, {
-                    app_version: "2017.09.25-220605+8da40657ecce89d90b8417273938f9ef94ae1a24",
+                    app_version: "2017.09.26-191722+f0ac7f167335fc7ea9a86d0ff9d43a4e38103e4d",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -22234,7 +22234,7 @@
             h = n(178),
             m = n(142),
             v = n(283),
-            g = n(8),
+            g = n(9),
             y = "twilight",
             _ = "ember"
     }, function(e, t, n) {
@@ -22257,7 +22257,7 @@
             a = n(7),
             s = n(76),
             u = n(100),
-            c = (n.n(u), n(8)),
+            c = (n.n(u), n(9)),
             l = n(12),
             d = function() {
                 function e(e, t) {
@@ -22391,7 +22391,7 @@
             s = n(139),
             u = n(7),
             c = n(16),
-            l = n(117),
+            l = n(118),
             d = n.n(l),
             p = n(37),
             f = n(27),
@@ -22587,7 +22587,7 @@
             v = n(37),
             g = n(55),
             y = n(16),
-            _ = n(8),
+            _ = n(9),
             b = n(7),
             w = n(13),
             k = n(455),
@@ -23109,7 +23109,7 @@
         t.a = i;
         var o = n(70),
             a = n.n(o),
-            s = n(8),
+            s = n(9),
             u = n(6),
             c = n(37),
             l = n(40),
@@ -23156,7 +23156,7 @@
         });
         var i = n(24),
             o = n(28),
-            a = n(8),
+            a = n(9),
             s = n(13),
             u = n(139),
             c = n(16),
@@ -23391,9 +23391,9 @@
         n.d(t, "a", function() {
             return c
         });
-        var i = n(933),
+        var i = n(935),
             o = n(267),
-            a = n(812),
+            a = n(814),
             s = n.n(a),
             u = function() {
                 function e(e, t) {
@@ -23457,7 +23457,7 @@
         });
         var i = n(83),
             o = n(24),
-            a = n(8),
+            a = n(9),
             s = n(7),
             u = n(139),
             c = n(16),
@@ -23531,12 +23531,12 @@
         n.d(t, "a", function() {
             return v
         });
-        var o = n(820),
+        var o = n(822),
             a = n.n(o),
             s = n(429),
             u = n(16),
             c = n(189),
-            l = n(135),
+            l = n(136),
             d = n(19),
             p = n(271),
             f = n(13),
@@ -23667,7 +23667,7 @@
         n.d(t, "a", function() {
             return _
         });
-        var a = n(814),
+        var a = n(816),
             s = n.n(a),
             u = n(6),
             c = n(177),
@@ -23825,7 +23825,7 @@
         }
         t.a = r;
         var i = n(381),
-            o = n(929),
+            o = n(931),
             a = n.n(o),
             s = n(462),
             u = n(464),
@@ -23838,7 +23838,7 @@
             m = n(469),
             v = n(470),
             g = n(471),
-            y = n(138),
+            y = n(106),
             _ = n(77),
             b = n(473),
             w = n(56),
@@ -23872,7 +23872,7 @@
             Y = n(497),
             Q = n(487),
             X = n(28),
-            J = (n(127), n(96), n(460)),
+            J = (n(128), n(96), n(460)),
             Z = n(459),
             ee = n(458),
             te = n(457),
@@ -23992,11 +23992,11 @@
             u = n(167),
             c = n.n(u),
             l = n(5),
-            d = (n.n(l), n(9)),
-            p = (n.n(d), n(137)),
-            f = n(602),
-            h = n(603),
-            m = n(8),
+            d = (n.n(l), n(8)),
+            p = (n.n(d), n(138)),
+            f = n(604),
+            h = n(605),
+            m = n(9),
             v = Object.freeze([m.d]),
             g = Object.freeze({
                 destroy: function() {}
@@ -24133,9 +24133,9 @@
             a = n(1),
             s = n.n(a),
             u = n(5),
-            c = (n.n(u), n(532)),
+            c = (n.n(u), n(533)),
             l = n(24),
-            d = n(138),
+            d = n(106),
             p = {
                 isCasting: s.a.bool.isRequired,
                 isPaused: s.a.bool.isRequired,
@@ -24567,7 +24567,7 @@
         n.d(t, "a", function() {
             return u
         });
-        var r = n(112),
+        var r = n(113),
             i = (n.n(r), n(102)),
             o = n(255),
             a = this && this.__extends || function() {
@@ -24625,7 +24625,7 @@
             return s
         });
         var r = n(253),
-            i = n(112),
+            i = n(113),
             o = (n.n(i), n(183)),
             a = this && this.__extends || function() {
                 var e = Object.setPrototypeOf || {
@@ -24836,7 +24836,7 @@
             return a.set(e, t), t
         }
         t.a = r;
-        var i = n(653),
+        var i = n(655),
             o = n.n(i),
             a = new o.a
     }, function(e, t, n) {
@@ -24869,7 +24869,7 @@
                 }
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
-        var a = n(130),
+        var a = n(131),
             s = n(78),
             u = n(79),
             c = n(258),
@@ -25209,7 +25209,7 @@
             if ("production" !== e && "staging" !== e && "darklaunch" !== e) throw "Invalid Pubsub instance environment";
             return null === window.__Twitch__pubsubInstances[e] && (window.__Twitch__pubsubInstances[e] = new b(e)), window.__Twitch__pubsubInstances[e]
         }
-        var s = n(130),
+        var s = n(131),
             u = n(78),
             c = n(79),
             l = n(420),
@@ -25345,7 +25345,7 @@
                 }
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
-        var a = n(130),
+        var a = n(131),
             s = n(78),
             u = n(79),
             c = function() {
@@ -25631,7 +25631,7 @@
                 }
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
-        var a = n(130),
+        var a = n(131),
             s = n(78),
             u = n(79),
             c = n(423),
@@ -25939,7 +25939,7 @@
                 }
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
-        var a = n(131),
+        var a = n(132),
             s = n(80),
             u = n(81),
             c = n(260),
@@ -26240,7 +26240,7 @@
             if ("production" !== e && "staging" !== e && "darklaunch" !== e) throw "Invalid Pubsub instance environment";
             return null === window.__Twitch__pubsubInstances[e] && (window.__Twitch__pubsubInstances[e] = new b(e)), window.__Twitch__pubsubInstances[e]
         }
-        var s = n(131),
+        var s = n(132),
             u = n(80),
             c = n(81),
             l = n(427),
@@ -26376,7 +26376,7 @@
                 }
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
-        var a = n(131),
+        var a = n(132),
             s = n(80),
             u = n(81),
             c = function() {
@@ -26661,7 +26661,7 @@
                 }
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
-        var a = n(131),
+        var a = n(132),
             s = n(80),
             u = n(81),
             c = n(430),
@@ -26920,7 +26920,7 @@
         var i = n(25),
             o = n(272),
             a = n(16),
-            s = n(947),
+            s = n(949),
             u = (n.n(s), n(14)),
             c = n.n(u),
             l = n(63),
@@ -27195,7 +27195,7 @@
         n.d(t, "a", function() {
             return a
         });
-        var i = n(107),
+        var i = n(108),
             o = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -27857,7 +27857,7 @@
         });
         var d = n(2),
             p = n.n(d),
-            f = n(818),
+            f = n(820),
             h = n.n(f),
             m = n(72),
             v = n.n(m),
@@ -28165,7 +28165,7 @@
             return c
         });
         var o = n(13),
-            a = n(835),
+            a = n(837),
             s = (n.n(a), n(26)),
             u = function() {
                 function e(e, t) {
@@ -28395,7 +28395,7 @@
             c = n(194),
             l = n(98),
             d = n(26),
-            p = n(138),
+            p = n(106),
             f = {};
         ! function() {
             function e() {
@@ -28747,7 +28747,7 @@
                 }()
         }
         t.a = r;
-        var i = n(811),
+        var i = n(813),
             o = n.n(i),
             a = n(14),
             s = n.n(a),
@@ -29537,7 +29537,7 @@
         n.d(t, "a", function() {
             return r
         });
-        var r = "//video-edge-696140.sjc01.hls.ttvnw.net/v1/playlist/ClYJTWQwHVowvxCVBD7jPaecjYnUuYFgFmaigjcQ0SdTxho1ZGFe07iJp8mmLDX42YjtWQwTZp6VEg50EUXW0oA1fo0ZHYYhf115Ypp3vd1eNa_erUQF5WvyM72USrX-4r0NeuqkknJrV4STaFgvHQ2P4hYVntNVwfwTdDqGa71dwhPhQoelInui-6aNHo6TWXDTqEbSQB8TiSKMRGryvhPxnL8KEzaKPJWco38_szCV17epgbtYOOS6x8CfQTTTDviHDVeJ7C1XT5CfGxlllRdvh1OLyy-SguNgC7eHZWJ9iOqt7xK01ft5exdidBmmXIZMtOxHshwXSlHCTe0wHxQXlIsyd6cWjht03FxBZy62xqgwKXaCOUQsHz-8JTa9lhT4SwogLiJZt_1b5Prm9Tgm9j4PZdgzNa_PE3qXHGoGEuFAQkpxcRT1.m3u8"
+        var r = "//video-edge-ed32cc.sjc01.hls.ttvnw.net/v1/playlist/Ckk36fL7NG50VprY-wy-d2KDLYCizt2anKc6YWTTW9M5_E829kfHBYP5judMpy49n2IxZVgrGZDI8GQ_Nz-AGEcnkoS2zwGVXp_tE5JFZyS4VOrZkZCB_6_-Lv5iFEfOdLdmUzieWhmkaY2LCzeaNzHVReGQHZKnNwKqox9yF2NQmEZiuDfJgCjNCj2duzNZBVGL3sYnlD7pbGafKAaFisVkpGw-Y6drz8rt-VmRt71cQkzPg28X0FujuWhBkv-UsGOQoAoGxVZZzrLdNNbXNBBSi8MPgq9HEc3ZKXkq3OZi3axiUlc4Xi2HM9pDP7H4zJDtH-jBmALKu9V-05KVrMpiU80c__ym-d-Jsdm19acY9A6GuGu-2CmEnHC_3W012aJGcvf6eIiCjvc23UiBLOVMeHY0YdHnG_i20_Gzi343yYWHpAuEtPejMtWBbcWiQyrP8EXteZKCzl7oOVVz-5.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -29684,7 +29684,7 @@
             a = n(20),
             s = n(454),
             u = n(179),
-            c = n(136),
+            c = n(137),
             l = n(40),
             d = n(61),
             p = new s.a
@@ -29739,7 +29739,7 @@
         t.a = r;
         var i = n(23),
             o = n(450),
-            a = n(133),
+            a = n(134),
             s = new o.a
     }, function(e, t, n) {
         "use strict";
@@ -29987,7 +29987,7 @@
             _ = n(180),
             b = n(6),
             w = n(32),
-            k = n(8),
+            k = n(9),
             E = n(100),
             S = (n.n(E), n(178)),
             P = n(177),
@@ -29998,7 +29998,7 @@
             R = n(390),
             A = n(398),
             I = n(76),
-            L = n(128),
+            L = n(129),
             N = n(75),
             j = n(97),
             M = n(394),
@@ -30014,7 +30014,7 @@
             K = n(245),
             G = n(55),
             $ = n(174),
-            Y = n(127),
+            Y = n(128),
             Q = n(40),
             X = n(96),
             J = n(27),
@@ -30033,7 +30033,7 @@
             de = n(392),
             pe = n(389),
             fe = n(397),
-            he = n(8),
+            he = n(9),
             me = n(247),
             ve = n(393),
             ge = n(391),
@@ -30046,7 +30046,7 @@
             Se = n(54),
             Pe = n(401),
             Ce = n(395),
-            Te = n(129),
+            Te = n(130),
             Oe = n.n(Te);
         n(181).polyfill(), p.Dobbin.configure({
             Promise: Promise
@@ -30430,7 +30430,7 @@
         }
         t.a = r;
         var i = n(245),
-            o = n(137)
+            o = n(138)
     }, function(e, t, n) {
         "use strict";
 
@@ -30504,9 +30504,9 @@
             }
         }
         t.a = r;
-        var i = n(805),
+        var i = n(807),
             o = n.n(i),
-            a = n(823),
+            a = n(825),
             s = n.n(a),
             u = n(187),
             c = []
@@ -30527,7 +30527,7 @@
         }
         t.a = r;
         var i = n(62),
-            o = n(135)
+            o = n(136)
     }, function(e, t, n) {
         "use strict";
 
@@ -30872,7 +30872,7 @@
             o = n.n(i),
             a = n(22),
             s = n.n(a),
-            u = n(136),
+            u = n(137),
             c = {
                 persistenceEnabled: !0
             },
@@ -30932,7 +30932,7 @@
         }
         t.a = r;
         var i = n(19),
-            o = n(106)
+            o = n(107)
     }, function(e, t, n) {
         "use strict";
 
@@ -31137,7 +31137,7 @@
             }
         }
         t.a = r;
-        var i = n(127)
+        var i = n(128)
     }, function(e, t, n) {
         "use strict";
 
@@ -31221,7 +31221,7 @@
         }
         t.a = r;
         var o = n(46),
-            a = n(107),
+            a = n(108),
             s = n(12),
             u = "low",
             c = "high"
@@ -31313,7 +31313,7 @@
         n.d(t, "a", function() {
             return w
         }), t.b = i;
-        var c, l = n(107),
+        var c, l = n(108),
             d = n(12),
             p = n(340),
             f = n.n(p),
@@ -31460,7 +31460,7 @@
             c = n.n(u),
             l = n(345),
             d = n.n(l),
-            p = n(107),
+            p = n(108),
             f = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -31643,8 +31643,8 @@
             s = n(7),
             u = n(503),
             c = n(84),
-            l = n(8),
-            d = n(128),
+            l = n(9),
+            d = n(129),
             p = n(28),
             f = n(38),
             h = n(45),
@@ -31763,7 +31763,7 @@
             u = n.n(s),
             c = n(22),
             l = n.n(c),
-            d = n(132),
+            d = n(133),
             p = n(195),
             f = n(16),
             h = n(38),
@@ -32146,7 +32146,7 @@
         });
         var i = n(0),
             o = n.n(i),
-            a = n(9),
+            a = n(8),
             s = (n.n(a), n(3)),
             u = n.n(s),
             c = {
@@ -32165,8 +32165,8 @@
             o = n(18),
             a = n(3),
             s = n.n(a),
-            u = n(607),
-            c = n(9),
+            u = n(609),
+            c = n(8),
             l = (n.n(c), {
                 title: r.PropTypes.string.isRequired,
                 ownerURL: r.PropTypes.string.isRequired,
@@ -32482,8 +32482,8 @@
             o = n.n(i),
             a = n(1),
             s = n.n(a),
-            u = n(9),
-            c = (n.n(u), n(117)),
+            u = n(8),
+            c = (n.n(u), n(118)),
             l = n.n(c),
             d = n(3),
             p = n.n(d),
@@ -32708,7 +32708,7 @@
             c = n.n(u),
             l = n(1),
             d = n.n(l),
-            p = n(606),
+            p = n(608),
             f = n(22),
             h = n.n(f),
             m = n(3),
@@ -32753,7 +32753,7 @@
             o = n.n(i),
             a = n(1),
             s = n.n(a),
-            u = n(9),
+            u = n(8),
             c = (n.n(u), {
                 label: s.a.string.isRequired,
                 onToggle: s.a.func,
@@ -32828,7 +32828,7 @@
             c = n.n(u),
             l = n(3),
             d = n.n(l),
-            p = n(9),
+            p = n(8),
             f = (n.n(p), n(56)),
             h = n(18),
             m = n(47),
@@ -32955,7 +32955,7 @@
             c = n.n(u),
             l = n(3),
             d = n.n(l),
-            p = n(9),
+            p = n(8),
             f = (n.n(p), n(56)),
             h = n(18),
             m = n(47),
@@ -33214,7 +33214,7 @@
             c = n.n(u),
             l = n(3),
             d = n.n(l),
-            p = n(9),
+            p = n(8),
             f = (n.n(p), n(56)),
             h = n(518),
             m = function() {
@@ -33488,7 +33488,7 @@
             p = n.n(d),
             f = n(22),
             h = n.n(f),
-            m = n(9),
+            m = n(8),
             v = (n.n(m), n(18)),
             g = n(47),
             y = n(12),
@@ -33867,7 +33867,7 @@
             o = n.n(i),
             a = n(1),
             s = n.n(a),
-            u = n(9),
+            u = n(8),
             c = (n.n(u), n(197)),
             l = n(3),
             d = n.n(l),
@@ -33919,7 +33919,7 @@
             o = n.n(i),
             a = n(1),
             s = n.n(a),
-            u = n(9),
+            u = n(8),
             c = (n.n(u), n(197)),
             l = n(3),
             d = n.n(l),
@@ -33947,8 +33947,8 @@
             i = n.n(r),
             o = n(1),
             a = n.n(o),
-            s = n(563),
-            u = n(564),
+            s = n(564),
+            u = n(565),
             c = n(6),
             l = n(3),
             d = n.n(l),
@@ -34007,7 +34007,7 @@
             o = n.n(i),
             a = n(1),
             s = n.n(a),
-            u = n(9),
+            u = n(8),
             c = (n.n(u), n(197)),
             l = n(3),
             d = n.n(l),
@@ -34055,7 +34055,7 @@
             u = n(1),
             c = n.n(u),
             l = n(529),
-            d = n(9),
+            d = n(8),
             p = (n.n(d), n(3)),
             f = n.n(p),
             h = n(32),
@@ -34177,6 +34177,37 @@
         "use strict";
 
         function r(e) {
+            var t = e.deviceName,
+                n = e.t;
+            return o.a.createElement("div", {
+                className: "player-overlay player-chromecast-overlay"
+            }, o.a.createElement("div", {
+                className: "player-center-content"
+            }, o.a.createElement("div", null, n("Playing on {{deviceName}}", {
+                deviceName: t
+            }))))
+        }
+        n.d(t, "a", function() {
+            return d
+        });
+        var i = n(0),
+            o = n.n(i),
+            a = n(1),
+            s = n.n(a),
+            u = n(8),
+            c = (n.n(u), {
+                deviceName: s.a.string.isRequired,
+                t: s.a.func
+            }),
+            l = {
+                t: function() {}
+            };
+        r.propTypes = c, r.defaultProps = l;
+        var d = n.i(u.translate)()(r)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
             var t = e.errorMessage,
                 n = e.t;
             return o.a.createElement("div", {
@@ -34192,7 +34223,7 @@
             o = n.n(i),
             a = n(1),
             s = n.n(a),
-            u = n(9),
+            u = n(8),
             c = (n.n(u), {
                 errorMessage: s.a.string.isRequired,
                 t: s.a.func.isRequired
@@ -34276,8 +34307,8 @@
             l = n(141),
             d = n(3),
             p = n.n(d),
-            f = n(108),
-            h = n(9),
+            f = n(109),
+            h = n(8),
             m = (n.n(h), n(18)),
             v = function() {
                 function e(e, t) {
@@ -34540,7 +34571,7 @@
             s = n.n(a),
             u = n(1),
             c = n.n(u),
-            l = n(538),
+            l = n(539),
             d = n(278),
             p = n(3),
             f = n.n(p),
@@ -34667,9 +34698,9 @@
             l = n(141),
             d = n(3),
             p = n.n(d),
-            f = n(9),
+            f = n(8),
             h = (n.n(f), n(277)),
-            m = n(568),
+            m = n(569),
             v = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -34790,7 +34821,7 @@
         });
         var a = n(0),
             s = n.n(a),
-            u = n(534),
+            u = n(535),
             c = n(278),
             l = n(3),
             d = n.n(l),
@@ -34899,7 +34930,7 @@
             a = n.n(o),
             s = n(1),
             u = n.n(s),
-            c = n(108),
+            c = n(109),
             l = {
                 duration: u.a.number,
                 mutedSegments: u.a.arrayOf(u.a.shape({
@@ -34936,7 +34967,7 @@
             i = n.n(r),
             o = n(1),
             a = n.n(o),
-            s = n(108),
+            s = n(109),
             u = {
                 animate: a.a.bool,
                 bufferLength: a.a.number.isRequired,
@@ -35034,7 +35065,7 @@
             f = n.n(p),
             h = n(41),
             m = n(279),
-            v = n(108),
+            v = n(109),
             g = n(247),
             y = function() {
                 function e(e, t) {
@@ -35350,7 +35381,7 @@
             c = n.n(u),
             l = n(3),
             d = n.n(l),
-            p = n(9),
+            p = n(8),
             f = (n.n(p), n(57)),
             h = n(515),
             m = n(18),
@@ -35504,12 +35535,12 @@
             u = n.n(s),
             c = n(1),
             l = n.n(c),
-            d = n(843),
+            d = n(845),
             p = n.n(d),
             f = n(41),
             h = n(3),
             m = n.n(h),
-            v = n(9),
+            v = n(8),
             g = (n.n(v), n(57)),
             y = n(18),
             _ = n(280),
@@ -35978,9 +36009,9 @@
             c = n.n(u),
             l = n(3),
             d = n.n(l),
-            p = n(9),
+            p = n(8),
             f = (n.n(p), n(57)),
-            h = n(549),
+            h = n(550),
             m = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -36095,7 +36126,7 @@
             c = n.n(u),
             l = n(3),
             d = n.n(l),
-            p = n(9),
+            p = n(8),
             f = (n.n(p), n(57)),
             h = function() {
                 function e(e, t) {
@@ -36347,7 +36378,7 @@
             c = n.n(u),
             l = n(3),
             d = n.n(l),
-            p = n(9),
+            p = n(8),
             f = (n.n(p), n(57)),
             h = n(18),
             m = function() {
@@ -36490,7 +36521,7 @@
             i = n.n(r),
             o = n(1),
             a = n.n(o),
-            s = n(108),
+            s = n(109),
             u = {
                 animate: a.a.bool,
                 className: a.a.string,
@@ -36538,7 +36569,7 @@
             o = n.n(i),
             a = n(1),
             s = n.n(a),
-            u = n(9),
+            u = n(8),
             c = (n.n(u), {
                 statName: s.a.string.isRequired,
                 value: s.a.oneOfType([s.a.string, s.a.number]).isRequired,
@@ -36601,7 +36632,7 @@
             s = n.n(a),
             u = n(3),
             c = n.n(u),
-            l = n(557),
+            l = n(558),
             d = n(18),
             p = {
                 stats: s.a.shape({
@@ -36630,7 +36661,7 @@
             i = n.n(r),
             o = n(1),
             a = n.n(o),
-            s = n(9),
+            s = n(8),
             u = (n.n(s), n(3)),
             c = n.n(u),
             l = {
@@ -36738,7 +36769,7 @@
         });
         var i = n(0),
             o = n.n(i),
-            a = n(560),
+            a = n(561),
             s = {
                 container: "player-streaminfo__watchparty",
                 divider: "player-streaminfo__watchparty-divider"
@@ -36777,8 +36808,8 @@
         t.a = r;
         var i = n(0),
             o = n.n(i),
-            a = n(567),
-            s = n(593),
+            a = n(568),
+            s = n(595),
             u = n(3),
             c = n.n(u),
             l = c()("player-hover", "player-controls-top", "js-controls-top")
@@ -36839,7 +36870,7 @@
             c = (n.n(u), n(18)),
             l = n(3),
             d = n.n(l),
-            p = n(9),
+            p = n(8),
             f = (n.n(p), {
                 channelName: s.a.string.isRequired,
                 isOwnChannel: s.a.bool.isRequired,
@@ -36892,7 +36923,7 @@
             c = (n.n(u), n(18)),
             l = n(3),
             d = n.n(l),
-            p = n(9),
+            p = n(8),
             f = (n.n(p), {
                 channelName: s.a.string.isRequired,
                 isOwnChannel: s.a.bool.isRequired,
@@ -36969,9 +37000,9 @@
             c = n.n(u),
             l = n(226),
             d = n.n(l),
-            p = n(841),
+            p = n(843),
             f = n.n(p),
-            h = n(117),
+            h = n(118),
             m = n.n(h),
             v = n(5),
             g = (n.n(v), n(66)),
@@ -37379,10 +37410,10 @@
             a = n(1),
             s = n.n(a),
             u = n(5),
-            c = (n.n(u), n(9)),
-            l = (n.n(c), n(575)),
+            c = (n.n(u), n(8)),
+            l = (n.n(c), n(576)),
             d = n(67),
-            p = n(8),
+            p = n(9),
             f = n(3),
             h = n.n(f),
             m = {
@@ -37447,7 +37478,7 @@
             k = n(67),
             E = n(45),
             S = n(47),
-            P = n(134),
+            P = n(135),
             C = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -37618,8 +37649,8 @@
             v = n(45),
             g = n(56),
             y = n(25),
-            _ = n(134),
-            b = n(8),
+            _ = n(135),
+            b = n(9),
             w = n(28),
             k = n(40),
             E = n(67),
@@ -37808,9 +37839,9 @@
             a = n(1),
             s = n.n(a),
             u = n(5),
-            c = (n.n(u), n(574)),
-            l = n(573),
-            d = n(8),
+            c = (n.n(u), n(575)),
+            l = n(574),
+            d = n(9),
             p = n(67),
             f = {
                 playerType: s.a.string.isRequired,
@@ -38067,6 +38098,38 @@
         "use strict";
 
         function r(e) {
+            var t = e.deviceName;
+            return e.castingState !== u.a ? null : o.a.createElement(l.a, {
+                deviceName: t
+            })
+        }
+        n.d(t, "a", function() {
+            return f
+        });
+        var i = n(0),
+            o = n.n(i),
+            a = n(1),
+            s = n.n(a),
+            u = n(106),
+            c = n(5),
+            l = (n.n(c), n(531)),
+            d = {
+                deviceName: s.a.string.isRequired,
+                castingState: s.a.string.isRequired
+            },
+            p = function(e) {
+                var t = e.chromecast;
+                return {
+                    castingState: t.castingState,
+                    deviceName: t.deviceName
+                }
+            };
+        r.propTypes = d;
+        var f = n.i(c.connect)(p)(r)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
             var t = e.hasError,
                 n = e.error;
             return t ? o.a.createElement(u.a, {
@@ -38080,7 +38143,7 @@
             o = n.n(i),
             a = n(1),
             s = n.n(a),
-            u = n(531),
+            u = n(532),
             c = n(5),
             l = (n.n(c), {
                 error: s.a.object.isRequired,
@@ -38116,9 +38179,9 @@
             s = n.n(a),
             u = n(5),
             c = (n.n(u), n(23)),
-            l = n(533),
+            l = n(534),
             d = n(7),
-            p = n(138),
+            p = n(106),
             f = n(24),
             h = n(28),
             m = n(66),
@@ -38189,7 +38252,7 @@
             c = n.n(u),
             l = n(5),
             d = (n.n(l), n(24)),
-            p = n(537),
+            p = n(538),
             f = n(83),
             h = n(27),
             m = function() {
@@ -38338,7 +38401,7 @@
             s = n.n(a),
             u = n(5),
             c = (n.n(u), n(24)),
-            l = n(539),
+            l = n(540),
             d = n(83),
             p = n(27),
             f = function() {
@@ -38483,21 +38546,21 @@
             s = n.n(a),
             u = n(1),
             c = n.n(u),
-            l = n(129),
+            l = n(130),
             d = n.n(l),
             p = n(167),
             f = n.n(p),
             h = n(5),
-            m = (n.n(h), n(540)),
-            v = n(541),
-            g = n(543),
+            m = (n.n(h), n(541)),
+            v = n(542),
+            g = n(544),
             y = n(281),
             _ = n(7),
             b = n(27),
             w = n(23),
-            k = n(544),
-            E = n(545),
-            S = n(542),
+            k = n(545),
+            E = n(546),
+            S = n(543),
             P = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -38813,8 +38876,8 @@
             l = n(226),
             d = n.n(l),
             p = n(5),
-            f = (n.n(p), n(590)),
-            h = n(553),
+            f = (n.n(p), n(592)),
+            h = n(554),
             m = n(57),
             v = n(38),
             g = n(55),
@@ -38962,12 +39025,12 @@
             u = n(1),
             c = n.n(u),
             l = n(5),
-            d = (n.n(l), n(546)),
+            d = (n.n(l), n(547)),
             p = n(76),
             f = n(97),
-            h = n(8),
+            h = n(9),
             m = n(104),
-            v = n(136),
+            v = n(137),
             g = n(23),
             y = n(75),
             _ = n(198),
@@ -39125,8 +39188,8 @@
             l = n(50),
             d = n.n(l),
             p = n(5),
-            f = (n.n(p), n(547)),
-            h = n(612),
+            f = (n.n(p), n(548)),
+            h = n(614),
             m = n(23),
             v = n(41),
             g = n(7),
@@ -39387,7 +39450,7 @@
             o = n(1),
             a = n.n(o),
             s = n(5),
-            u = (n.n(s), n(550)),
+            u = (n.n(s), n(551)),
             c = n(55),
             l = n(38),
             d = n(44),
@@ -39460,7 +39523,7 @@
             u = n(1),
             c = n.n(u),
             l = n(5),
-            d = (n.n(l), n(551)),
+            d = (n.n(l), n(552)),
             p = n(23),
             f = n(38),
             h = function() {
@@ -39564,8 +39627,8 @@
             l = n(50),
             d = n.n(l),
             p = n(5),
-            f = (n.n(p), n(9)),
-            h = (n.n(f), n(552)),
+            f = (n.n(p), n(8)),
+            h = (n.n(f), n(553)),
             m = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -39686,7 +39749,7 @@
             o = n(0),
             a = n.n(o),
             s = n(5),
-            u = (n.n(s), n(554)),
+            u = (n.n(s), n(555)),
             c = n(25),
             l = {
                 onMenuTransition: i.a.func,
@@ -39755,7 +39818,7 @@
             u = n(1),
             c = n.n(u),
             l = n(5),
-            d = (n.n(l), n(558)),
+            d = (n.n(l), n(559)),
             p = n(104),
             f = n(13),
             h = function() {
@@ -39861,12 +39924,12 @@
             c = n.n(u),
             l = n(5),
             d = (n.n(l), n(513)),
-            p = n(559),
+            p = n(560),
             f = n(6),
             h = n(23),
-            m = n(8),
-            v = n(595),
-            g = n(561),
+            m = n(9),
+            v = n(597),
+            g = n(562),
             y = n(3),
             _ = n.n(y),
             b = function() {
@@ -40118,7 +40181,7 @@
             d = n(5),
             p = (n.n(d), n(526)),
             f = n(45),
-            h = n(8),
+            h = n(9),
             m = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -40398,9 +40461,9 @@
         });
         var i = n(6),
             o = n(66),
-            a = n(608),
-            s = n(610),
-            u = n(8),
+            a = n(610),
+            s = n(612),
+            u = n(9),
             c = n(16),
             l = function() {
                 function e(e, t) {
@@ -40568,10 +40631,10 @@
         t.a = r;
         var i = n(101),
             o = n.n(i),
-            a = n(8),
+            a = n(9),
             s = n(6),
             u = n(16),
-            c = n(133),
+            c = n(134),
             l = n(23),
             d = n(20),
             p = n(40)
@@ -40697,13 +40760,13 @@
                 }()
         }
         t.a = r;
-        var i = n(8),
+        var i = n(9),
             o = n(12),
             a = n(98),
             s = n(41),
             u = n(13),
             c = n(7),
-            l = n(106),
+            l = n(107),
             d = n(16),
             p = n(20),
             f = n(64),
@@ -40741,7 +40804,7 @@
         });
         var a = n(6),
             s = n(84),
-            u = n(8),
+            u = n(9),
             c = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -40883,7 +40946,7 @@
                 }()
         }
         t.a = r;
-        var i = n(613),
+        var i = n(615),
             o = n(6),
             a = n(24),
             s = n(20),
@@ -40892,18 +40955,10 @@
         "use strict";
 
         function r(e, t, r, x, A) {
-            function X(e) {
-                I.a.render(R.a.createElement(L.Provider, {
-                    store: e
-                }, R.a.createElement(K.a, null)), document.getElementById("js-loading-overlay"))
-            }
-
             function J(e) {
                 I.a.render(R.a.createElement(L.Provider, {
                     store: e
-                }, R.a.createElement(N.I18nextProvider, {
-                    i18n: j.b
-                }, R.a.createElement(z.a, null))), document.getElementById("stats"))
+                }, R.a.createElement(K.a, null)), document.getElementById("js-loading-overlay"))
             }
 
             function Z(e) {
@@ -40911,7 +40966,7 @@
                     store: e
                 }, R.a.createElement(N.I18nextProvider, {
                     i18n: j.b
-                }, R.a.createElement(U.a, null))), document.getElementById("top-bar"))
+                }, R.a.createElement(z.a, null))), document.getElementById("stats"))
             }
 
             function ee(e) {
@@ -40919,7 +40974,7 @@
                     store: e
                 }, R.a.createElement(N.I18nextProvider, {
                     i18n: j.b
-                }, R.a.createElement(B.a, null))), document.getElementById("js-collection-sidebar"))
+                }, R.a.createElement(U.a, null))), document.getElementById("top-bar"))
             }
 
             function te(e) {
@@ -40927,24 +40982,21 @@
                     store: e
                 }, R.a.createElement(N.I18nextProvider, {
                     i18n: j.b
-                }, R.a.createElement(q.a, null))), document.getElementById("empty-collection-overlay"))
+                }, R.a.createElement(B.a, null))), document.getElementById("js-collection-sidebar"))
             }
 
             function ne(e) {
                 I.a.render(R.a.createElement(L.Provider, {
                     store: e
-                }, R.a.createElement(m.a, null)), document.getElementById("stream-status"))
+                }, R.a.createElement(N.I18nextProvider, {
+                    i18n: j.b
+                }, R.a.createElement(q.a, null))), document.getElementById("empty-collection-overlay"))
             }
 
             function re(e) {
                 I.a.render(R.a.createElement(L.Provider, {
                     store: e
-                }, R.a.createElement(N.I18nextProvider, {
-                    i18n: j.b
-                }, R.a.createElement(F.a, {
-                    uuid: T.t,
-                    renderValue: "show"
-                }, R.a.createElement(M.a, null)))), document.getElementById("js-follow-panel"))
+                }, R.a.createElement(m.a, null)), document.getElementById("stream-status"))
             }
 
             function ie(e) {
@@ -40955,10 +41007,21 @@
                 }, R.a.createElement(F.a, {
                     uuid: T.t,
                     renderValue: "show"
-                }, R.a.createElement(D.a, null)))), document.getElementById("js-dead-ltv-overlay"))
+                }, R.a.createElement(M.a, null)))), document.getElementById("js-follow-panel"))
             }
 
             function oe(e) {
+                I.a.render(R.a.createElement(L.Provider, {
+                    store: e
+                }, R.a.createElement(N.I18nextProvider, {
+                    i18n: j.b
+                }, R.a.createElement(F.a, {
+                    uuid: T.t,
+                    renderValue: "show"
+                }, R.a.createElement(D.a, null)))), document.getElementById("js-dead-ltv-overlay"))
+            }
+
+            function ae(e) {
                 I.a.render(R.a.createElement(L.Provider, {
                     store: e
                 }, R.a.createElement(N.I18nextProvider, {
@@ -40969,7 +41032,7 @@
                 }, R.a.createElement(b.a, null)))), document.getElementById("js-notification-popup-container"))
             }
 
-            function ae(e) {
+            function se(e) {
                 var t = document.getElementById("js-player-extension-root"),
                     n = document.getElementById("js-extension-settings");
                 I.a.render(R.a.createElement(L.Provider, {
@@ -40985,7 +41048,7 @@
                 }, R.a.createElement(_.a, null))), n)
             }
 
-            function se(e) {
+            function ue(e) {
                 I.a.render(R.a.createElement(L.Provider, {
                     store: e
                 }, R.a.createElement(N.I18nextProvider, {
@@ -40993,16 +41056,22 @@
                 }, R.a.createElement(H.a, null))), document.getElementById("js-player-offline-recommendations-overlay"))
             }
 
-            function ue(e) {
+            function ce(e) {
                 I.a.render(R.a.createElement(L.Provider, {
                     store: e
                 }, R.a.createElement(N.I18nextProvider, {
                     i18n: j.b
                 }, R.a.createElement(W.a, null))), document.getElementById("js-player-post-vod-recommendations-overlay"))
             }
-            var ce = void 0,
-                le = void 0,
-                de = void 0,
+
+            function le(e) {
+                I.a.render(R.a.createElement(L.Provider, {
+                    store: e
+                }, R.a.createElement(N.I18nextProvider, {
+                    i18n: j.b
+                }, R.a.createElement(X.a, null))), document.getElementById("player-chromecast"))
+            }
+            var de = void 0,
                 pe = void 0,
                 fe = void 0,
                 he = void 0,
@@ -41010,15 +41079,17 @@
                 ve = void 0,
                 ge = void 0,
                 ye = void 0,
-                _e = void 0;
+                _e = void 0,
+                be = void 0,
+                we = void 0;
             this.destroy = function() {
-                    ce.destroy(), le.destroy(), de.destroy(), pe.destroy(), fe.destroy(), ve.destroy(), ge.destroy(), me.destroy(), ye.destroy(), he.destroy(), _e && _e.destroy()
+                    de.destroy(), pe.destroy(), fe.destroy(), he.destroy(), me.destroy(), ye.destroy(), _e.destroy(), ge.destroy(), be.destroy(), ve.destroy(), we && we.destroy()
                 },
                 function() {
                     var m = A;
-                    $(t).addClass("player").addClass("theme--dark"), $(t).append(n(672));
+                    $(t).addClass("player").addClass("theme--dark"), $(t).append(n(674));
                     var y = r.getState().playback.muted;
-                    r.dispatch(n.i(k.a)(y)), r.dispatch(n.i(E.d)()), r.dispatch(n.i(S.a)()), ne(r), ae(r), oe(r), re(r), ee(r), te(r), Z(r), ie(r), J(r), ue(r), se(r), X(r), I.a.render(R.a.createElement(L.Provider, {
+                    r.dispatch(n.i(k.a)(y)), r.dispatch(n.i(E.d)()), r.dispatch(n.i(S.a)()), re(r), se(r), ae(r), ie(r), te(r), ne(r), ee(r), oe(r), Z(r), ce(r), ue(r), J(r), le(r), I.a.render(R.a.createElement(L.Provider, {
                         store: r
                     }, R.a.createElement(Y.a, null)), document.getElementById("js-paused-overlay")), I.a.render(R.a.createElement(L.Provider, {
                         store: r
@@ -41036,7 +41107,7 @@
                         store: r
                     }, R.a.createElement(N.I18nextProvider, {
                         i18n: j.b
-                    }, R.a.createElement(h.a, null))), document.getElementById("js-settings")), x.hookUpForm(t), ce = new o.a(t, r), le = new s.a(e, t, r, m), de = new u.a(e, t, r, m), pe = new l.a(t, r), fe = new c.a(t, r), me = new w.b(t, e, r), ve = new p.a(e, t, r), ge = new a.a(e, t, r, ve, m), _e = new C.a(t, r), ye = new P.a(t, r, i.a, x), he = new d.a(r, t), $(t).attr("data-initializing", !0), e.addEventListener(O.h, function() {
+                    }, R.a.createElement(h.a, null))), document.getElementById("js-settings")), x.hookUpForm(t), de = new o.a(t, r), pe = new s.a(e, t, r, m), fe = new u.a(e, t, r, m), he = new l.a(t, r), me = new c.a(t, r), ge = new w.b(t, e, r), ye = new p.a(e, t, r), _e = new a.a(e, t, r, ye, m), we = new C.a(t, r), be = new P.a(t, r, i.a, x), ve = new d.a(r, t), $(t).attr("data-initializing", !0), e.addEventListener(O.h, function() {
                         $(t).attr("data-initializing", !1)
                     }), t.addEventListener("wheel", function(e) {
                         r.dispatch(n.i(Q.b)(e))
@@ -41045,26 +41116,26 @@
         }
         t.a = r;
         var i = n(32),
-            o = n(604),
-            a = n(598),
-            s = n(599),
-            u = n(601),
-            c = n(605),
-            l = n(600),
+            o = n(606),
+            a = n(600),
+            s = n(601),
+            u = n(603),
+            c = n(607),
+            l = n(602),
             d = n(505),
-            p = n(597),
-            f = n(583),
-            h = n(584),
-            m = n(594),
-            v = n(576),
-            g = n(596),
-            y = n(571),
-            _ = n(570),
-            b = n(577),
+            p = n(599),
+            f = n(585),
+            h = n(586),
+            m = n(596),
+            v = n(577),
+            g = n(598),
+            y = n(572),
+            _ = n(571),
+            b = n(578),
             w = n(275),
-            k = n(132),
+            k = n(133),
             E = n(27),
-            S = n(136),
+            S = n(137),
             P = n(504),
             C = n(506),
             T = n(33),
@@ -41074,22 +41145,23 @@
             A = n(167),
             I = n.n(A),
             L = n(5),
-            N = (n.n(L), n(9)),
-            j = (n.n(N), n(137)),
-            M = n(572),
-            D = n(569),
-            U = n(562),
-            B = n(566),
-            q = n(565),
+            N = (n.n(L), n(8)),
+            j = (n.n(N), n(138)),
+            M = n(573),
+            D = n(570),
+            U = n(563),
+            B = n(567),
+            q = n(566),
             F = n(198),
-            V = n(579),
-            H = n(581),
-            W = n(582),
-            z = n(592),
+            V = n(581),
+            H = n(583),
+            W = n(584),
+            z = n(594),
             K = n(405),
-            G = n(578),
-            Y = n(580),
-            Q = n(82)
+            G = n(579),
+            Y = n(582),
+            Q = n(82),
+            X = n(580)
     }, function(e, t, n) {
         "use strict";
 
@@ -41121,7 +41193,7 @@
             u = n(1),
             c = n.n(u),
             l = n(5),
-            d = (n.n(l), n(8)),
+            d = (n.n(l), n(9)),
             p = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -41172,14 +41244,14 @@
                         switch (e) {
                             case d.d:
                                 return n.e(1).then(function() {
-                                    var e = n(950);
+                                    var e = n(952);
                                     t.setState({
                                         playerTypeComponent: e.default
                                     })
                                 }.bind(null, n)).catch(n.oe);
                             default:
                                 return n.e(0).then(function() {
-                                    var e = n(951);
+                                    var e = n(953);
                                     t.setState({
                                         playerTypeComponent: e.default
                                     })
@@ -41504,7 +41576,7 @@
             a = n(6),
             s = n(99),
             u = n(41),
-            c = n(8)
+            c = n(9)
     }, function(e, t, n) {
         "use strict";
         var r = {};
@@ -41567,7 +41639,7 @@
             }
             return d
         }
-        var o = n(942),
+        var o = n(944),
             a = "Copy to clipboard: #{key}, Enter";
         e.exports = i
     }, function(e, t, n) {
@@ -41740,10 +41812,10 @@
         e.exports = i
     }, function(e, t, n) {
         "use strict";
-        var r, i = n(632),
+        var r, i = n(634),
             o = n(289),
             a = n(68),
-            s = n(639),
+            s = n(641),
             u = n(68),
             c = n(48),
             l = Function.prototype.bind,
@@ -41778,7 +41850,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(621)() ? Array.from : n(622)
+        e.exports = n(623)() ? Array.from : n(624)
     }, function(e, t, n) {
         "use strict";
         e.exports = function() {
@@ -41787,13 +41859,13 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(111).iterator,
+        var r = n(112).iterator,
             i = n(143),
-            o = n(623),
-            a = n(628),
+            o = n(625),
+            a = n(630),
             s = n(68),
             u = n(48),
-            c = n(110),
+            c = n(111),
             l = n(144),
             d = Array.isArray,
             p = Function.prototype.call,
@@ -41839,7 +41911,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(625)() ? Math.sign : n(626)
+        e.exports = n(627)() ? Math.sign : n(628)
     }, function(e, t, n) {
         "use strict";
         e.exports = function() {
@@ -41853,7 +41925,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(624),
+        var r = n(626),
             i = Math.abs,
             o = Math.floor;
         e.exports = function(e) {
@@ -41861,7 +41933,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(627),
+        var r = n(629),
             i = Math.max;
         e.exports = function(e) {
             return i(0, r(e))
@@ -41897,7 +41969,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(636),
+        var r = n(638),
             i = n(48),
             o = Math.max;
         e.exports = function(e, t) {
@@ -41914,7 +41986,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(620),
+        var r = n(622),
             i = n(200),
             o = n(48);
         e.exports = function(e) {
@@ -41956,7 +42028,7 @@
         }()
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(629)("forEach")
+        e.exports = n(631)("forEach")
     }, function(e, t, n) {
         "use strict";
         e.exports = function(e) {
@@ -41964,7 +42036,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(637)() ? Object.keys : n(638)
+        e.exports = n(639)() ? Object.keys : n(640)
     }, function(e, t, n) {
         "use strict";
         e.exports = function() {
@@ -41976,7 +42048,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(110),
+        var r = n(111),
             i = Object.keys;
         e.exports = function(e) {
             return i(r(e) ? Object(e) : e)
@@ -41984,7 +42056,7 @@
     }, function(e, t, n) {
         "use strict";
         var r = n(68),
-            i = n(634),
+            i = n(636),
             o = Function.prototype.call;
         e.exports = function(e, t) {
             var n = {},
@@ -42027,7 +42099,7 @@
         "use strict";
         var r, i = n(201),
             o = n(292),
-            a = n(109),
+            a = n(110),
             s = n(294),
             u = Object.defineProperty;
         r = e.exports = function(e, t) {
@@ -42069,7 +42141,7 @@
         "use strict";
         var r = n(143),
             i = n(144),
-            o = n(111).iterator,
+            o = n(112).iterator,
             a = Array.isArray;
         e.exports = function(e) {
             return null != e && (!!a(e) || (!!i(e) || (!!r(e) || "function" == typeof e[o])))
@@ -42077,7 +42149,7 @@
     }, function(e, t, n) {
         "use strict";
         var r, i = n(201),
-            o = n(109),
+            o = n(110),
             a = n(294),
             s = Object.defineProperty;
         r = e.exports = function(e) {
@@ -42098,7 +42170,7 @@
         })
     }, function(e, t, n) {
         "use strict";
-        var r = n(646);
+        var r = n(648);
         e.exports = function(e) {
             if (!r(e)) throw new TypeError(e + " is not iterable");
             return e
@@ -42127,8 +42199,8 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r, i, o, a, s = n(109),
-            u = n(652),
+        var r, i, o, a, s = n(110),
+            u = n(654),
             c = Object.create,
             l = Object.defineProperties,
             d = Object.defineProperty,
@@ -42198,14 +42270,14 @@
         })), d(i.prototype, i.toStringTag, s("c", "Symbol")), d(o.prototype, i.toStringTag, s("c", i.prototype[i.toStringTag])), d(o.prototype, i.toPrimitive, s("c", i.prototype[i.toPrimitive]))
     }, function(e, t, n) {
         "use strict";
-        var r = n(650);
+        var r = n(652);
         e.exports = function(e) {
             if (!r(e)) throw new TypeError(e + " is not a symbol");
             return e
         }
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(654)() ? WeakMap : n(656)
+        e.exports = n(656)() ? WeakMap : n(658)
     }, function(e, t, n) {
         "use strict";
         e.exports = function() {
@@ -42230,14 +42302,14 @@
     }, function(e, t, n) {
         "use strict";
         var r, i = n(201),
-            o = n(640),
+            o = n(642),
             a = n(48),
-            s = n(643),
-            u = n(109),
+            s = n(645),
+            u = n(110),
             c = n(293),
-            l = n(645),
-            d = n(111).toStringTag,
-            p = n(655),
+            l = n(647),
+            d = n(112).toStringTag,
+            p = n(657),
             f = Array.isArray,
             h = Object.defineProperty,
             m = Object.prototype.hasOwnProperty,
@@ -42764,7 +42836,7 @@
         function r(e) {
             return i(e.replace(o, "ms-"))
         }
-        var i = n(659),
+        var i = n(661),
             o = /^-ms-/;
         e.exports = r
     }, function(e, t, n) {
@@ -42773,7 +42845,7 @@
         function r(e, t) {
             return !(!e || !t) && (e === t || !i(e) && (i(t) ? r(e, t.parentNode) : "contains" in e ? e.contains(t) : !!e.compareDocumentPosition && !!(16 & e.compareDocumentPosition(t))))
         }
-        var i = n(669);
+        var i = n(671);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -42819,8 +42891,8 @@
             return p
         }
         var o = n(29),
-            a = n(662),
-            s = n(664),
+            a = n(664),
+            s = n(666),
             u = n(4),
             c = o.canUseDOM ? document.createElement("div") : null,
             l = /^\s*<(\w+)/;
@@ -42886,7 +42958,7 @@
         function r(e) {
             return i(e).replace(o, "-ms-")
         }
-        var i = n(666),
+        var i = n(668),
             o = /^ms-/;
         e.exports = r
     }, function(e, t, n) {
@@ -42904,7 +42976,7 @@
         function r(e) {
             return i(e) && 3 == e.nodeType
         }
-        var i = n(668);
+        var i = n(670);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -42919,7 +42991,7 @@
     }, function(e, t, n) {
         e.exports = n.p + "vendor/TwitchPlayer.7cfe0f2e9d071ac72c5a539139bcedd4.swf"
     }, function(e, t) {
-        e.exports = '<div class="player-initializing player-center-content">\n    <div class="pl-loading-spinner"></div>\n</div>\n\n<div class="player-overlay player-overlay--wall player-age-restriction-overlay js-age-restriction-overlay">\n    <div class="player-center-content">\n    <div class=\'player-mature-overlay\'>\n        <p class=\'js-mature-warning-label\'>The broadcaster indicated that the channel is intended for mature audiences.</p>\n        <p><button type="button" id="mature-link" class="player-content-button js-player-mature-accept js-mature-accept-label">Start Watching</button></p>\n    </div>\n    <div class=\'player-age-gate js-age-gate\'>\n        <div class=\'player-age-gate-warning\'>\n            <p>\n                <svg class="player-age-gate--icon">\n                    <use xlink:href="#age-gate-icon"/>\n                </svg>\n            </p>\n            <p class=\'js-age-gate-warning-label\'>You must be 21 to view this content. Please enter your date of birth.</p>\n        </div>\n        <div class=\'player-age-gate-failed-once\'>\n            <p>\n                <svg class="player-age-gate--fail-icon">\n                    <use xlink:href="#age-gate-fail-icon"/>\n                </svg>\n            </p>\n            <p class=\'age-gate-locked-out-label\'>Sorry, you must be over the age of 21 to view this content.</p>\n        </div>\n        <div class="player-datepicker">\n            <select class=\'player-datepicker--select js-select-month\'>\n                <option class=\'age-gate-jan\' value=\'0\' selected>January</option>\n                <option class=\'age-gate-feb\' value=\'1\'>February</option>\n                <option class=\'age-gate-mar\' value=\'2\'>March</option>\n                <option class=\'age-gate-apr\' value=\'3\'>April</option>\n                <option class=\'age-gate-may\' value=\'4\'>May</option>\n                <option class=\'age-gate-jun\' value=\'5\'>June</option>\n                <option class=\'age-gate-jul\' value=\'6\'>July</option>\n                <option class=\'age-gate-aug\' value=\'7\'>August</option>\n                <option class=\'age-gate-sept\' value=\'8\'>September</option>\n                <option class=\'age-gate-oct\' value=\'9\'>October</option>\n                <option class=\'age-gate-nov\' value=\'10\'>November</option>\n                <option class=\'age-gate-dec\' value=\'11\'>December</option>\n            </select>\n            <select class=\'player-datepicker--select js-select-day\'></select>\n            <select class=\'player-datepicker--select js-select-year\'></select>\n            <button type="button" class=\'js-age-gate-submit player-content-button\'>Submit</button>\n          </div>\n    </div>\n    <div class=\'player-age-gate-locked-out\'>\n        <p>\n            <svg class="player-age-gate--fail-icon">\n                <use xlink:href="#age-gate-fail-icon"/>\n            </svg>\n        </p>\n        <p class=\'age-gate-locked-out-label\'>Sorry, you must be over the age of 21 to view this content.</p>\n    </div>\n    </div>\n</div>\n\n<div class="player-offline-banner js-offline-banner">\n    <img class="js-meta-offline" />\n</div>\n\n<div id="js-ad-overlay" />\n<div id="js-player-post-vod-recommendations-overlay" />\n<div id="js-player-offline-recommendations-overlay" />\n\n<div class="player-video-background-banner js-video-background-banner">\n    <img class="js-meta-video-background" />\n</div>\n\n<div id="js-loading-overlay" />\n\n<div class="player-overlay player-chromecast-overlay">\n    <div class="player-center-content">\n        <div class="js-playing-on-label">Playing on {{device}}</div>\n    </div>\n</div>\n\n<div class="player-overlay player-fullscreen-overlay js-control-fullscreen-overlay">\n</div>\n\n<div class="player-overlay player-extensions" id="js-player-extension-root">\n</div>\n\n<div class="cc-flag player-captions-container js-player-captions-container">\n    <div class="player-captions-window js-player-captions-window">\n        <div class="player-captions js-player-captions"></div>\n    </div>\n</div>\n\n<div id="js-paused-overlay" />\n\n<div class="player-overlay player-overlay--wall player-product-overlay js-player-product-overlay">\n    <div class="player-center-content player-product js-player-product">\n        <p></p>\n        <a href="" target="_blank" class="purchase_button js-subscribe-label">Subscribe</a>\n    </div>\n</div>\n\n<div id="empty-collection-overlay" />\n\n<div id="top-bar" />\n\n<div id="js-collection-sidebar"></div>\n<div id="js-follow-panel"></div>\n<div id="js-dead-ltv-overlay" />\n\n<div class="player-storm-warning">\n    <div class="player-center-content">\n        <div class="pl-loading-spinner"></div>\n        <p>\n            <span class=\'js-broadcast-down-label\'>The broadcast is down.</span><br />\n            <span class=\'js-broadcast-reload-label\'>The player will automatically reload when the broadcast is back.</span>\n        </p>\n    </div>\n</div>\n\n<div id="error-overlay" />\n\n<div id="stream-status" />\n\n<div id="js-cc-options-modal" class="js-cc-modal-container player-modal__container" data-state="closed">\n    <div class="js-cc-modal player-modal__content" data-tab-selected="presets">\n        <button type="button" class="player-modal__close js-cc-custom-modal-dismiss">\n            <svg><use xlink:href="#icon_close_modal" /></svg>\n        </button>\n        <h2 class="js-cc-modal-header player-modal__header">Closed Caption Settings</h2>\n        <ul class="player-tabs clearfix">\n            <li class="player-tabs__item player-tabs__item--active" data-tab="presets">\n                <a href="#" class="js-cc-presets-tab">Presets</a>\n            </li>\n            <li class="player-tabs__item js-cc-tab-text" data-tab="text">\n                <a href="#" class="js-cc-text-tab">Text</a>\n            </li>\n            <li class="player-tabs__item js-cc-tab-text" data-tab="effects">\n                <a href="#" class="js-cc-effects-tab">Effects</a>\n            </li>\n            <li class="player-tabs__item" data-tab="background">\n                <a href="#" class="js-cc-background-tab">Background</a>\n            </li>\n            <li class="player-tabs__item" data-tab="window">\n                <a href="#" class="js-cc-window-tab">Window</a>\n            </li>\n        </ul>\n        <div class="cc-modal-menu-frame" data-tab="presets">\n            <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset="white-on-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset="lime-on-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset="yellow-on-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset="cyan-on-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset="magenta-on-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset="white-on-trans-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset="lime-on-trans-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset="yellow-on-trans-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset="cyan-on-trans-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset="magenta-on-trans-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset="black-on-white">aA</div>\n        </div>\n        <div class="cc-modal-menu-frame" data-tab="text">\n            <div class="cc-customize-field">\n                <label class="js-cc-font-label" for="cc-font">Font</label>\n                <select class="js-cc-dropdown" name="font" id="cc-font">\n                    <option value="mono-serif">Mono Serif</option>\n                    <option value="prop-serif">Serif</option>\n                    <option value="mono-sans-serif">Mono Sans-Serif</option>\n                    <option value="prop-sans-serif">Sans-Serif</option>\n                    <option value="casual">Casual</option>\n                    <option value="cursive">Cursive</option>\n                    <option value="small-capitals">Small Capitals</option>\n                </select>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-justification-label" for="cc-font-justification">Alignment</label>\n                <select class="js-cc-dropdown" name="alignment" id="cc-font-justification">\n                    <option value="left">Left</option>\n                    <option value="center">Center</option>\n                    <option value="right">Right</option>\n                </select>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-color-label">Color</label>\n                <div class="cc-color-palette">\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-white" type="radio" name="fontColorName" class="js-cc-radio" value="white">\n                        <label for="font-color-white" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-black" type="radio" name="fontColorName" class="js-cc-radio" value="black">\n                        <label for="font-color-black" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-red" type="radio" name="fontColorName" class="js-cc-radio" value="red">\n                        <label for="font-color-red" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-green" type="radio" name="fontColorName" class="js-cc-radio" value="green">\n                        <label for="font-color-green" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-cyan" type="radio" name="fontColorName" class="js-cc-radio" value="cyan">\n                        <label for="font-color-cyan" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-magenta" type="radio" name="fontColorName" class="js-cc-radio" value="magenta">\n                        <label for="font-color-magenta" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-yellow" type="radio" name="fontColorName" class="js-cc-radio" value="yellow">\n                        <label for="font-color-yellow" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-blue" type="radio" name="fontColorName" class="js-cc-radio" value="blue">\n                        <label for="font-color-blue" class="cc-color-palette__square"></label>\n                    </div>\n                </div>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-position-label" for="cc-position">Position</label>\n                <select class="js-cc-dropdown" name="verticalPosition" id="cc-position">\n                    <option value="bottom">Bottom</option>\n                    <option value="top">Top</option>\n                </select>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-opacity-label" for="cc-font-opacity">Opacity</label>\n                <select class="js-cc-dropdown" name="fontOpacity" id="cc-font-opacity">\n                    <option value="solid">Solid</option>\n                    <option value="translucent">Translucent</option>\n                    <option value="semiTransparent">Semi-Transparent</option>\n                    <option value="flashing">Flashing</option>\n                </select>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-size-label">Size</label>\n                <button class="js-cc-font-size cc-font-size" value="increment">A\n                    <span class="js-font-increment-tip player-tip js-control-tip" data-tip="Increase Size"></span>\n                </button>\n                <button class="js-cc-font-size cc-font-size" value="decrement">A\n                    <span class="js-font-decrement-tip player-tip js-control-tip" data-tip="Decrease Size"></span>\n                </button>\n            </div>\n        </div>\n        <div class="cc-modal-menu-frame" data-tab="effects">\n            <div class="cc-customize-field">\n                <label class="js-cc-style-label">Style</label>\n                <div class="cc-style-palette">\n                    <div class="cc-style-palette__container">\n                        <input id="style-underline" type="checkbox" name="fontUnderline" class="js-cc-checkbox" value="underline">\n                        <label for="style-underline" class="cc-style-palette__square">U</label>\n                    </div>\n                    <div class="cc-style-palette__container">\n                        <input id="style-italic" type="checkbox" name="fontItalic" class="js-cc-checkbox" value="italic">\n                        <label for="style-italic" class="cc-style-palette__square">I</label>\n                    </div>\n                    <div class="cc-style-palette__container">\n                        <input id="style-bold" type="checkbox" name="fontBold" class="js-cc-checkbox" value="bold">\n                        <label for="style-bold" class="cc-style-palette__square">B</label>\n                    </div>\n                </div>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-edge-label">Effect</label>\n                <div class="cc-edge-palette">\n                    <div class="cc-edge-palette__container">\n                        <hr class="cc-edge-disabled" />\n                        <input id="edge-effect-none" type="radio" name="edge" class="js-cc-radio" value="none">\n                        <label for="edge-effect-none" class="cc-edge-palette__square">aA</label>\n                    </div>\n                    <div class="cc-edge-palette__container">\n                        <input id="edge-effect-raised" type="radio" name="edge" class="js-cc-radio" value="raised">\n                        <label for="edge-effect-raised" class="cc-edge-palette__square">aA</label>\n                    </div>\n                    <div class="cc-edge-palette__container">\n                        <input id="edge-effect-drop-shadow" type="radio" name="edge" class="js-cc-radio" value="drop">\n                        <label for="edge-effect-drop-shadow" class="cc-edge-palette__square">aA</label>\n                    </div>\n                    <div class="cc-edge-palette__container">\n                        <input id="edge-effect-depressed" type="radio" name="edge" class="js-cc-radio" value="depressed">\n                        <label for="edge-effect-depressed" class="cc-edge-palette__square">aA</label>\n                    </div>\n                    <div class="cc-edge-palette__container">\n                        <input id="edge-effect-uniform" type="radio" name="edge" class="js-cc-radio" value="uniform">\n                        <label for="edge-effect-uniform" class="cc-edge-palette__square">aA</label>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class="cc-modal-menu-frame" data-tab="background">\n            <div class="cc-customize-field">\n                <label class="js-cc-opacity-label" for="cc-bg-opacity">Opacity</label>\n                <select class="js-cc-dropdown" name="backgroundOpacity" id="cc-bg-opacity">\n                    <option class="js-cc-opacity-solid" value="solid">Solid</option>\n                    <option class="js-cc-opacity-translucent" value="translucent">Translucent</option>\n                </select>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-color-label">Color</label>\n                <div class="cc-color-palette">\n                    <div class="cc-color-palette__container">\n                        <hr class="cc-no-color" />\n                        <input id="background-transparent" type="radio" name="backgroundColorName" class="js-cc-radio" value="transparent">\n                        <label for="background-transparent" class="cc-color-palette__square cc-color-palette__square-no-color"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-white" type="radio" name="backgroundColorName" class="js-cc-radio" value="white">\n                        <label for="background-color-white" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-lightgray" type="radio" name="backgroundColorName" class="js-cc-radio" value="lightgray">\n                        <label for="background-color-lightgray" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-gray" type="radio" name="backgroundColorName" class="js-cc-radio" value="gray">\n                        <label for="background-color-gray" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-darkgray" type="radio" name="backgroundColorName" class="js-cc-radio" value="darkgray">\n                        <label for="background-color-darkgray" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-black" type="radio" name="backgroundColorName" class="js-cc-radio" value="black">\n                        <label for="background-color-black" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-green" type="radio" name="backgroundColorName" class="js-cc-radio" value="green">\n                        <label for="background-color-green" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-blue" type="radio" name="backgroundColorName" class="js-cc-radio" value="blue">\n                        <label for="background-color-blue" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-cyan" type="radio" name="backgroundColorName" class="js-cc-radio" value="cyan">\n                        <label for="background-color-cyan" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-magenta" type="radio" name="backgroundColorName" class="js-cc-radio" value="magenta">\n                        <label for="background-color-magenta" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-yellow" type="radio" name="backgroundColorName" class="js-cc-radio" value="yellow">\n                        <label for="background-color-yellow" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-red" type="radio" name="backgroundColorName" class="js-cc-radio" value="red">\n                        <label for="background-color-red" class="cc-color-palette__square"></label>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class="cc-modal-menu-frame" data-tab="window">\n            <div class="cc-customize-field">\n                <label class="js-cc-opacity-label" for="cc-window-opacity">Opacity</label>\n                <select class="js-cc-dropdown" name="windowOpacity" id="cc-window-opacity">\n                    <option class="js-cc-opacity-solid" value="solid">Solid</option>\n                    <option class="js-cc-opacity-translucent" value="translucent">Translucent</option>\n                </select>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-color-label">Color</label>\n                <div class="cc-color-palette">\n                    <div class="cc-color-palette__container">\n                        <hr class="cc-no-color" />\n                        <input id="window-transparent" type="radio" name="windowColorName" class="js-cc-radio" value="transparent">\n                        <label for="window-transparent" class="cc-color-palette__square cc-color-palette__square-no-color"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-white" type="radio" name="windowColorName" class="js-cc-radio" value="white">\n                        <label for="window-color-white" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-lightgray" type="radio" name="windowColorName" class="js-cc-radio" value="lightgray">\n                        <label for="window-color-lightgray" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-gray" type="radio" name="windowColorName" class="js-cc-radio" value="gray">\n                        <label for="window-color-gray" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-darkgray" type="radio" name="windowColorName" class="js-cc-radio" value="darkgray">\n                        <label for="window-color-darkgray" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-black" type="radio" name="windowColorName" class="js-cc-radio" value="black">\n                        <label for="window-color-black" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-green" type="radio" name="windowColorName" class="js-cc-radio" value="green">\n                        <label for="window-color-green" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-blue" type="radio" name="windowColorName" class="js-cc-radio" value="blue">\n                        <label for="window-color-blue" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-cyan" type="radio" name="windowColorName" class="js-cc-radio" value="cyan">\n                        <label for="window-color-cyan" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-magenta" type="radio" name="windowColorName" class="js-cc-radio" value="magenta">\n                        <label for="window-color-magenta" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-yellow" type="radio" name="windowColorName" class="js-cc-radio" value="yellow">\n                        <label for="window-color-yellow" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-red" type="radio" name="windowColorName" class="js-cc-radio" value="red">\n                        <label for="window-color-red" class="cc-color-palette__square"></label>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class="player-hover player-controls-bottom pl-flex js-controls-bottom">\n    <div id="js-player-seek" class="player-seek" />\n\n    <div class="player-buttons-left">\n        <button type="button" class="player-button player-button--playpause js-control-playpause-button" tabindex=\'-1\'>\n            <span class=\'pause-button js-pause-button\'>\n                <span class="player-tip player-tip--aleft js-tip" data-tip="Pause"></span>\n                <svg class="player-icon-pause"><use xlink:href="#icon_pause" /></svg>\n            </span>\n            <span class=\'play-button js-play-button\'>\n                <span class="player-tip player-tip--aleft js-tip" data-tip="Play"></span>\n                <svg class="player-icon-play"><use xlink:href="#icon_play" /></svg>\n            </span>\n        </button>\n\n        <div id="js-player-volume" class="player-volume" />\n    </div>\n\n    <div class="player-buttons-right">\n        <div id="js-notification-popup-container"></div>\n        <div id="js-settings" class="flex flex__item"></div>\n        <div id="js-extension-settings" class="flex flex__item"></div>\n\n        <button type="button" class="cc-flag player-button player-button--cc js-control-cc" tabindex="-1">\n            <span class="player-tip js-control-tip" data-tip="Captions"></span>\n            <svg class="js-player-icon-cc"><use xlink:href="#icon_cc_on" /></svg>\n            <svg class="js-player-icon-cc-deactivated"><use xlink:href="#icon_cc_off" /></svg>\n        </button>\n\n        <div class="player-menu">\n            <button type="button" class="player-button player-button--clips js-control-clips" data-canclip="false">\n                <span class="player-tip js-tip" data-tip="Clip"></span>\n                <svg class="player-icon-clips"><use xlink:href="#icon_clips" /></svg>\n                <svg class="player-icon-clips--bday js-player-icon-clips--bday" style="visibility:hidden">\n                    <use xlink:href="#icon_clips--bday" />\n                </svg>\n            </button>\n            <form class="js-create-clip-form" method="post" action="" target="">\n                <input class="js-create-clip-player-backend-type" type="hidden" name="player_backend_type" value="" />\n                <input class="js-create-clip-channel" type="hidden" name="channel" value="" />\n                <input class="js-create-clip-offset" type="hidden" name="offset" value="" />\n                <input class="js-create-clip-broadcast_id" type="hidden" name="broadcast_id" value="" />\n                <input class="js-create-clip-vod_id" type="hidden" name="vod_id" value="" />\n                <input class="js-create-clip-play_session_id" type="hidden" name="play_session_id" value="" />\n            </form>\n        </div>\n        <button type="button" class="player-button player-button--chromecast js-chromecast-button">\n            <span class="player-tip js-tip" data-tip="Chromecast"></span>\n            <svg class="player-icon-chromecast-p1"><use xlink:href="#icon_chromecast_p1" /></svg>\n            <svg class="player-icon-chromecast-p2"><use xlink:href="#icon_chromecast_p2" /></svg>\n            <svg class="player-icon-chromecast-p3"><use xlink:href="#icon_chromecast_p3" /></svg>\n            <svg class="player-icon-chromecast-p4"><use xlink:href="#icon_chromecast_p4" /></svg>\n            <svg class="player-icon-chromecast-p5"><use xlink:href="#icon_chromecast_p5" /></svg>\n        </button>\n        <button type="button" class="player-button player-button--theatre js-control-theatre" tabindex="-1">\n        <span class=\'enter-theatre-button js-theatre-button\'>\n            <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Theater Mode"></span>\n            <svg class="player-icon-theatre"><use xlink:href="#icon_theatre" /></svg>\n        </span>\n        <span class=\'exit-theatre-button js-exit-theatre-button\'>\n            <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Exit Theater Mode"></span>\n            <svg class="player-icon-theatre-deactivate"><use xlink:href="#icon_theatre_deactivate" /></svg>\n        </span>\n        </button>\n        <button type="button" class="player-button player-button--fullscreen js-control-fullscreen" tabindex=\'-1\'>\n            <span class=\'fullscreen-button js-fullscreen\'>\n                <span class="player-tip js-control-tip" data-tip="Fullscreen"></span>\n                <svg class="player-icon-fullscreen"><use xlink:href="#icon_fullscreen" /></svg>\n            </span>\n            <span class=\'exit-fullscreen-button js-exit-fullscreen\'>\n                <span class="player-tip js-control-tip" data-tip="Exit Fullscreen"></span>\n                <svg class="player-icon-unfullscreen"><use xlink:href="#icon_unfullscreen" /></svg>\n            </span>\n        </button>\n\n        <button type="button" class="player-button player-button--twitch js-watch-twitch">\n            <span class="player-tip player-tip--aright js-tip" data-tip="Watch on Twitch"></span>\n            <a class="player-button player-button--twitch js-hyperlink-watch-twitch" href="" target="_blank">\n                <svg><use xlink:href="#icon_twitch" /></svg>\n            </a>\n        </button>\n    </div>\n</div>\n\n\n<div class="player-ad-notice">\n    <p class=\'js-advertisement-label\'>Advertisement</p>\n</div>\n\n<div id="js-player-alert-container" />\n\n<div id="stats" />\n\n<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" style="width:0;height:0;visibility:hidden;display:block;">\n    <symbol viewBox="0 0 30 30" id="icon_play"><path clip-rule="evenodd" d="M10,7l12,8l-12,8V7z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_pause"><path clip-rule="evenodd" d="M9,22h4V8H9V22z M17,8v14h4V8H17z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_volumefull"><path clip-rule="evenodd" d="M22,21.5v-13L23,8v14L22,21.5z M18,10.5l1-0.5v10l-1-0.5V10.5z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_volumemute"><path clip-rule="evenodd" d="M23,18L23,18h-0.7L20,15.7L17.7,18H17l0,0v-0.7l2.3-2.3L17,12.7V12l0,0h0.7l2.3,2.3l2.3-2.3H23l0,0v0.7L20.7,15l2.3,2.3V18z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_fullscreen"><path clip-rule="evenodd" d="M7,7 L15.2,7 L12.8,9.4 L15.8,12.4 L12.4,15.8 L9.4,12.8 L7,15.2 L7,7 Z M23,23 L14.8,23 L17.2,20.6 L14.2,17.6 L17.6,14.2 L20.6,17.2 L23,14.8 L23,23 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_unfullscreen"><path clip-rule="evenodd" d="M15,15 L23.2,15 L20.8,17.4 L23.8,20.4 L20.4,23.8 L17.4,20.8 L15,23.2 L15,15 L15,15 Z M15,15 L6.8,15 L9.2,12.6 L6.2,9.6 L9.6,6.2 L12.6,9.2 L15,6.8 L15,15 L15,15 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_settings"><path clip-rule="evenodd" d="M13.3589744,7 L16.6410256,7 L18.0769231,9.8 L21.3589744,9.8 L23,12.2 L21.3589744,15 L23,17.8 L21.3589744,20.2 L18.0769231,20.2 L16.6410256,23 L13.3589744,23 L11.9230769,20.2 L8.64102564,20.2 L7,17.8 L8.64102564,15 L7,12.2 L8.64102564,9.8 L11.9230769,9.8 L13.3589744,7 Z M15,17.8 C16.5860485,17.8 17.8717949,16.5463973 17.8717949,15 C17.8717949,13.4536027 16.5860485,12.2 15,12.2 C13.4139515,12.2 12.1282051,13.4536027 12.1282051,15 C12.1282051,16.5463973 13.4139515,17.8 15,17.8 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_theatre"><path d="M6 21h11V9H6v12zM19 9v12h5V9h-5z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_theatre_deactivate"><path d="M6 9h11v12H6V9zm2 2h9v8H8v-8zm9-2h7v12h-7V9zm2 2h3v8h-3v-8z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 63 30" id="icon_twitch"><path clip-rule="evenodd" d="M55,19 L52,19 L52,13 L49,13 L49,19 L46,19 L46,8 L49,8 L49,10 L53,10 L55,12 L55,19 L55,19 Z M45,13 L41,13 L41,16 L45,16 L45,19 L40,19 L38,17 L38,12 L40,10 L45,10 L45,13 L45,13 Z M37,13 L34,13 L34,16 L37,16 L37,19 L33,19 L31,17 L31,8 L34,8 L34,10 L37,10 L37,13 L37,13 Z M27,8 L30,8 L30,9 L27,9 L27,8 Z M27,10 L30,10 L30,19 L27,19 L27,10 Z M26,17 L24,19 L15,19 L15,10 L18,10 L18,16 L19,16 L19,10 L22,10 L22,16 L23,16 L23,10 L26,10 L26,17 L26,17 Z M14,13 L11,13 L11,16 L14,16 L14,19 L10,19 L8,17 L8,8 L11,8 L11,10 L14,10 L14,13 L14,13 Z M53.5,9 L50,9 L50,7 L45.5,7 L43,9 L39.5,9 L38,10.5 L38,9 L35,9 L35,7 L26,7 L26,9 L15,9 L12,7 L7,7 L7,17.5 L9.5,20.125 L14,23 L18,23 L18,22.25 L19.5,23 L25.5,23 L26.5,21.5 L27,23 L31,23 L31,21.5 L32.5,23 L37,23 L37.25,21.5 L38.5,23 L43.5,23 L45,21.5 L45,23 L47.5,23 L49,21.5 L49,23 L52.5,23 L56,19.5 L56,11.5 L53.5,9 L53.5,9 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close"><path clip-rule="evenodd" d="M15.1035534,15.4571068 L11.5303301,19.0303301 L11.3535534,19.2071068 L11,18.8535534 L11.1767767,18.6767767 L14.75,15.1035534 L11.1767767,11.5303301 L11,11.3535534 L11.3535534,11 L11.5303301,11.1767767 L15.1035534,14.75 L18.6767767,11.1767767 L18.8535534,11 L19.2071068,11.3535534 L19.0303301,11.5303301 L15.4571068,15.1035534 L19.0303301,18.6767767 L19.2071068,18.8535534 L18.8535534,19.2071068 L18.6767767,19.0303301 L15.1035534,15.4571068 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close_md"><path clip-rule="evenodd" d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p1"><path fill-rule="evenodd" clip-rule="evenodd" d="M15,22c0-0.7-0.1-1.4-0.2-2H22V10H8v3.2C7.4,13.1,6.7,13,6,13V8h18v14H15z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p2"><path fill-rule="evenodd" clip-rule="evenodd" d="M10,13.9V12h10v6h-5.9C13.2,16.2,11.8,14.8,10,13.9z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p3"><path fill-rule="evenodd" clip-rule="evenodd" d="M13,22h-1c0-3.3-2.7-6-6-6v-1C9.9,15,13,18.1,13,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p4"><path fill-rule="evenodd" clip-rule="evenodd" d="M10,22H9c0-1.7-1.3-3-3-3v-1C8.2,18,10,19.8,10,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p5"><path fill-rule="evenodd" clip-rule="evenodd" d="M7,22H6v-1C6.6,21,7,21.4,7,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_clips"><path d="M14.802 7.804l-3.83 1.026 2.928 2.321 3.83-1.026-2.928-2.321zm2.895-.776l3.981-1.067.777 2.898-1.83.49-2.928-2.321zM7.969 9.635l-1.745.467L7 13l3.898-1.044-2.929-2.321zM7 13h16v9H7v-9zm1.969 3h2.785l2.228-3h-2.785l-2.228 3zm7.018 0h2.785L21 13h-2.785l-2.228 3z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 13 18" id="icon_clips--bday"><path d="M6.505 7.61l2.41 2.33H4.53l.621-2.174-.552-.81L1.43 8.53l1.77-2.803L.266 4.184l3.531-.22.234-3.118 1.761 2.583L8.96 1.854 7.19 4.658 10.124 6.2l-3.53.22-.09 1.189zm6.546 6.33H3.385l.625-2.182h6.785l2.256 2.182zm-3.042 1.818l-7.737 2.073.593-2.073h7.144z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_cc_on"><path fill-rule="evenodd" clip-rule="evenodd" d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_cc_off"><path fill-rule="evenodd" clip-rule="evenodd" d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M24,8 L24,22 L6,22 L6,8 L24,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close_modal"><path clip-rule="evenodd" d="M13.657 3.757l-4.243 4.243 4.243 4.242-1.415 1.415-4.242-4.243-4.243 4.243-1.414-1.415 4.243-4.242-4.243-4.243 1.414-1.414 4.243 4.243 4.242-4.243 1.415 1.414z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 14 14" id="icon_arrow"><path d="M6.46765898,5.00010938 L6.46755335,5 L3.08055618,8.27078515 C2.97320936,8.37444877 2.97610632,8.52662201 3.07163118,8.6255409 L3.47144895,9.03956433 C3.56460436,9.13602957 3.72584608,9.14003286 3.82630008,9.04302556 L6.46765898,6.49229492 L9.10901788,9.04302556 C9.20947188,9.14003286 9.3707136,9.13602957 9.46386901,9.03956433 L9.86368678,8.6255409 C9.95921164,8.52662201 9.9621086,8.37444877 9.85476178,8.27078515 L6.46776461,5 L6.46765898,5.00010938 Z" transform="translate(6.467659, 7.056937) scale(-1, 1) rotate(-270.000000) translate(-6.467659, -7.056937) "></path></symbol>\n    <symbol viewBox="0 0 98 86" id="age-gate-icon"><path d="M24 8h50v10h12V8h12v78H0V8h12v10h12V8zm52-8h8v16h-8V0zM14 0h8v16h-8V0zm13.356 43.52h3.8c-.03-.954.068-1.9.29-2.84.225-.938.59-1.78 1.097-2.526.506-.745 1.155-1.348 1.945-1.81.79-.463 1.736-.694 2.84-.694.834 0 1.624.135 2.37.403.744.268 1.393.656 1.944 1.162.552.507.99 1.11 1.32 1.81.327.702.49 1.484.49 2.35 0 1.102-.17 2.07-.513 2.905-.344.835-.85 1.61-1.52 2.326-.672.715-1.514 1.423-2.528 2.124-1.013.7-2.19 1.468-3.532 2.303-1.103.655-2.16 1.356-3.175 2.1-1.014.746-1.923 1.61-2.728 2.595-.805.983-1.468 2.14-1.99 3.465-.52 1.327-.857 2.93-1.006 4.807h20.705v-3.354H30.888c.18-.983.56-1.855 1.14-2.616.582-.76 1.282-1.468 2.102-2.123.82-.656 1.722-1.275 2.705-1.856.984-.58 1.968-1.17 2.952-1.765.983-.626 1.937-1.282 2.86-1.968.925-.686 1.745-1.453 2.46-2.303.716-.85 1.29-1.81 1.722-2.884.432-1.073.648-2.31.648-3.71 0-1.492-.26-2.803-.783-3.936-.522-1.133-1.23-2.08-2.124-2.84-.893-.76-1.944-1.34-3.15-1.744-1.21-.402-2.498-.603-3.87-.603-1.67 0-3.16.283-4.47.85-1.312.566-2.408 1.348-3.287 2.347-.88 1-1.528 2.183-1.945 3.555-.418 1.37-.582 2.86-.492 4.47zM65.17 64V32.297H62.26c-.208 1.192-.596 2.176-1.162 2.95-.567.776-1.26 1.387-2.08 1.834-.82.448-1.736.754-2.75.918-1.013.164-2.057.246-3.13.246v3.04h8.228V64h3.8z" fill="#F9F7FC" fill-rule="evenodd"/></symbol>\n    <symbol id="age-gate-fail-icon" viewBox="0 0 92 81"><path d="M0 75.6l3.067-5.4L9.2 59.4l12.267-21.6 12.266-21.6 6.134-10.8L42.933 0h6.134l3.066 5.4 6.134 10.8 12.266 21.6L82.8 59.4l6.133 10.8L92 75.6 89.06 81H3.44L0 75.6zM40 27h12v13l-3 19h-6l-3-19V27zm1 34h10v10H41V61z" fill="#F9F7FC" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 19 19" id="icon_open_collection"><path fill-rule="evenodd" d="M0,6 L19,6 L19,19 L0,19 L0,6 Z M12.25,12.5 L7,9 L7,16 L12.25,12.5 Z M2,3 L17,3 L17,5 L2,5 L2,3 Z M4,0 L15,0 L15,2 L4,2 L4,0 Z"/></symbol>\n    <symbol id=\'icon_pl-followcheck\' viewBox=\'0 0 16 16\'><path clip-rule=\'evenodd\' d=\'M6.5,12.75L2,8.25l2-2l2.5,2.5l5.5-5.5l2,2L6.5,12.75z\' fill-rule=\'evenodd\'></symbol>\n    <symbol viewBox="0 0 30 30" id="pl-icon_close"><path clip-rule="evenodd" d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z"/></symbol>\n    <symbol viewBox="0 0 14 12" id="pl-icon_vod"><path d="M0 12h14V0H0v12zm4-3V3l7 3-7 3z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 16 3" id="icon_more_info"><path d="M15 1.5c0 .389-.139.736-.417 1.042-.277.305-.639.458-1.083.458-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C12.694.153 13.056 0 13.5 0c.444 0 .806.153 1.083.458.278.306.417.653.417 1.042zm-6 0c0 .389-.139.736-.417 1.042C8.306 2.847 7.944 3 7.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C6.694.153 7.056 0 7.5 0c.444 0 .806.153 1.083.458C8.861.764 9 1.111 9 1.5zm-6 0c0 .389-.139.736-.417 1.042C2.306 2.847 1.944 3 1.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C.694.153 1.056 0 1.5 0c.444 0 .806.153 1.083.458C2.861.764 3 1.111 3 1.5z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_grant_permissions"><g fill-rule="evenodd"><path d="M16 5h-3v1.994L11.91 8H16v3l6-4.5L16 2v3z"/><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/></g></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_revoke_permissions"><g fill-rule="evenodd"><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill="currentColor" d="M17.013 5.34l-2.37-2.37-1.624 1.624 2.37 2.37-2.37 2.37 1.624 1.624 2.37-2.37 2.37 2.37 1.624-1.624-2.37-2.37 2.37-2.37-1.624-1.624-2.37 2.37z"/></g></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_approved_permissions"><g fill-rule="evenodd"><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill="currentColor" fill-rule="nonzero" d="M20.356 3L22 4.618 15.513 11 12 7.543l1.644-1.617 1.87 1.839z"/></g></symbol>\n    <symbol viewBox="0 0 16 16" id="icon_report_flag"><path clip-rule="evenodd" d="M3,14 L1,14 L1,2 L3,2 L3,14 L3,14 Z M4,2 L11,2 L11,4 L15,4 L15,11 L8,11 L8,9 L4,9 L4,2 L4,2 Z"></path></symbol>\n    <symbol id="icon_heart" height=\'16px\' version=\'1.1\' viewBox=\'0 0 16 16\' width=\'16px\' x=\'0px\' y=\'0px\'>\n      <path clip-rule=\'evenodd\' d=\'M8,14L1,7V4l2-2h3l2,2l2-2h3l2,2v3L8,14z\' fill-rule=\'evenodd\'></path>\n    </symbol>\n    <symbol id=\'icon_unheart\' height=\'16px\' version=\'1.1\' viewBox=\'0 0 16 16\' width=\'16px\' x=\'0px\' y=\'0px\'>\n      <path clip-rule=\'evenodd\' d=\'M1,9V7h14v2H1z M1,4l2-2h3l2,2l2-2h3l2,2v2H1V4z M8,14l-4.667-4h9.333L8,14z\' fill-rule=\'evenodd\'></path>\n    </symbol>\n    <symbol viewBox="0 0 30 30" id="icon_extensions"><path d="M20 17.113V22a1 1 0 0 1-1 1h-4.887c.257-1.051.87-1.404.887-1.917C15.025 19.6 14.006 19 13 19c-1.004 0-2.055.6-1.998 2.083.037.483.642.854.894 1.917H8a1 1 0 0 1-1-1v-4.887c1.051.257 1.404.87 1.917.887C10.4 18.025 11 17.006 11 16c0-1.004-.6-2.055-2.083-1.998-.483.037-.854.642-1.917.894V11a1 1 0 0 1 1-1h3.896c-.252-1.063-.857-1.434-.894-1.917C10.945 6.6 11.996 6 13 6c1.006 0 2.025.599 2 2.083-.016.513-.63.866-.887 1.917H19a1 1 0 0 1 1 1v3.896c1.063-.252 1.434-.857 1.917-.894C23.4 13.945 24 14.996 24 16c0 1.006-.599 2.025-2.083 2-.513-.016-.866-.63-1.917-.887z" fill-rule="evenodd"/></symbol>\n</svg>\n'
+        e.exports = '<div class="player-initializing player-center-content">\n    <div class="pl-loading-spinner"></div>\n</div>\n\n<div class="player-overlay player-overlay--wall player-age-restriction-overlay js-age-restriction-overlay">\n    <div class="player-center-content">\n    <div class=\'player-mature-overlay\'>\n        <p class=\'js-mature-warning-label\'>The broadcaster indicated that the channel is intended for mature audiences.</p>\n        <p><button type="button" id="mature-link" class="player-content-button js-player-mature-accept js-mature-accept-label">Start Watching</button></p>\n    </div>\n    <div class=\'player-age-gate js-age-gate\'>\n        <div class=\'player-age-gate-warning\'>\n            <p>\n                <svg class="player-age-gate--icon">\n                    <use xlink:href="#age-gate-icon"/>\n                </svg>\n            </p>\n            <p class=\'js-age-gate-warning-label\'>You must be 21 to view this content. Please enter your date of birth.</p>\n        </div>\n        <div class=\'player-age-gate-failed-once\'>\n            <p>\n                <svg class="player-age-gate--fail-icon">\n                    <use xlink:href="#age-gate-fail-icon"/>\n                </svg>\n            </p>\n            <p class=\'age-gate-locked-out-label\'>Sorry, you must be over the age of 21 to view this content.</p>\n        </div>\n        <div class="player-datepicker">\n            <select class=\'player-datepicker--select js-select-month\'>\n                <option class=\'age-gate-jan\' value=\'0\' selected>January</option>\n                <option class=\'age-gate-feb\' value=\'1\'>February</option>\n                <option class=\'age-gate-mar\' value=\'2\'>March</option>\n                <option class=\'age-gate-apr\' value=\'3\'>April</option>\n                <option class=\'age-gate-may\' value=\'4\'>May</option>\n                <option class=\'age-gate-jun\' value=\'5\'>June</option>\n                <option class=\'age-gate-jul\' value=\'6\'>July</option>\n                <option class=\'age-gate-aug\' value=\'7\'>August</option>\n                <option class=\'age-gate-sept\' value=\'8\'>September</option>\n                <option class=\'age-gate-oct\' value=\'9\'>October</option>\n                <option class=\'age-gate-nov\' value=\'10\'>November</option>\n                <option class=\'age-gate-dec\' value=\'11\'>December</option>\n            </select>\n            <select class=\'player-datepicker--select js-select-day\'></select>\n            <select class=\'player-datepicker--select js-select-year\'></select>\n            <button type="button" class=\'js-age-gate-submit player-content-button\'>Submit</button>\n          </div>\n    </div>\n    <div class=\'player-age-gate-locked-out\'>\n        <p>\n            <svg class="player-age-gate--fail-icon">\n                <use xlink:href="#age-gate-fail-icon"/>\n            </svg>\n        </p>\n        <p class=\'age-gate-locked-out-label\'>Sorry, you must be over the age of 21 to view this content.</p>\n    </div>\n    </div>\n</div>\n\n<div class="player-offline-banner js-offline-banner">\n    <img class="js-meta-offline" />\n</div>\n\n<div id="js-ad-overlay" />\n<div id="js-player-post-vod-recommendations-overlay" />\n<div id="js-player-offline-recommendations-overlay" />\n\n<div class="player-video-background-banner js-video-background-banner">\n    <img class="js-meta-video-background" />\n</div>\n\n<div id="js-loading-overlay" />\n<div id="player-chromecast" />\n\n<div class="player-overlay player-fullscreen-overlay js-control-fullscreen-overlay">\n</div>\n\n<div class="player-overlay player-extensions" id="js-player-extension-root">\n</div>\n\n<div class="cc-flag player-captions-container js-player-captions-container">\n    <div class="player-captions-window js-player-captions-window">\n        <div class="player-captions js-player-captions"></div>\n    </div>\n</div>\n\n<div id="js-paused-overlay" />\n\n<div class="player-overlay player-overlay--wall player-product-overlay js-player-product-overlay">\n    <div class="player-center-content player-product js-player-product">\n        <p></p>\n        <a href="" target="_blank" class="purchase_button js-subscribe-label">Subscribe</a>\n    </div>\n</div>\n\n<div id="empty-collection-overlay" />\n\n<div id="top-bar" />\n\n<div id="js-collection-sidebar"></div>\n<div id="js-follow-panel"></div>\n<div id="js-dead-ltv-overlay" />\n\n<div class="player-storm-warning">\n    <div class="player-center-content">\n        <div class="pl-loading-spinner"></div>\n        <p>\n            <span class=\'js-broadcast-down-label\'>The broadcast is down.</span><br />\n            <span class=\'js-broadcast-reload-label\'>The player will automatically reload when the broadcast is back.</span>\n        </p>\n    </div>\n</div>\n\n<div id="error-overlay" />\n\n<div id="stream-status" />\n\n<div id="js-cc-options-modal" class="js-cc-modal-container player-modal__container" data-state="closed">\n    <div class="js-cc-modal player-modal__content" data-tab-selected="presets">\n        <button type="button" class="player-modal__close js-cc-custom-modal-dismiss">\n            <svg><use xlink:href="#icon_close_modal" /></svg>\n        </button>\n        <h2 class="js-cc-modal-header player-modal__header">Closed Caption Settings</h2>\n        <ul class="player-tabs clearfix">\n            <li class="player-tabs__item player-tabs__item--active" data-tab="presets">\n                <a href="#" class="js-cc-presets-tab">Presets</a>\n            </li>\n            <li class="player-tabs__item js-cc-tab-text" data-tab="text">\n                <a href="#" class="js-cc-text-tab">Text</a>\n            </li>\n            <li class="player-tabs__item js-cc-tab-text" data-tab="effects">\n                <a href="#" class="js-cc-effects-tab">Effects</a>\n            </li>\n            <li class="player-tabs__item" data-tab="background">\n                <a href="#" class="js-cc-background-tab">Background</a>\n            </li>\n            <li class="player-tabs__item" data-tab="window">\n                <a href="#" class="js-cc-window-tab">Window</a>\n            </li>\n        </ul>\n        <div class="cc-modal-menu-frame" data-tab="presets">\n            <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset="white-on-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset="lime-on-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset="yellow-on-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset="cyan-on-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset="magenta-on-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset="white-on-trans-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset="lime-on-trans-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset="yellow-on-trans-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset="cyan-on-trans-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa cc-transparent-bg" data-preset="magenta-on-trans-black">aA</div>\n            <div class="cc-preset-square js-cc-preset js-cc-aa" data-preset="black-on-white">aA</div>\n        </div>\n        <div class="cc-modal-menu-frame" data-tab="text">\n            <div class="cc-customize-field">\n                <label class="js-cc-font-label" for="cc-font">Font</label>\n                <select class="js-cc-dropdown" name="font" id="cc-font">\n                    <option value="mono-serif">Mono Serif</option>\n                    <option value="prop-serif">Serif</option>\n                    <option value="mono-sans-serif">Mono Sans-Serif</option>\n                    <option value="prop-sans-serif">Sans-Serif</option>\n                    <option value="casual">Casual</option>\n                    <option value="cursive">Cursive</option>\n                    <option value="small-capitals">Small Capitals</option>\n                </select>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-justification-label" for="cc-font-justification">Alignment</label>\n                <select class="js-cc-dropdown" name="alignment" id="cc-font-justification">\n                    <option value="left">Left</option>\n                    <option value="center">Center</option>\n                    <option value="right">Right</option>\n                </select>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-color-label">Color</label>\n                <div class="cc-color-palette">\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-white" type="radio" name="fontColorName" class="js-cc-radio" value="white">\n                        <label for="font-color-white" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-black" type="radio" name="fontColorName" class="js-cc-radio" value="black">\n                        <label for="font-color-black" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-red" type="radio" name="fontColorName" class="js-cc-radio" value="red">\n                        <label for="font-color-red" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-green" type="radio" name="fontColorName" class="js-cc-radio" value="green">\n                        <label for="font-color-green" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-cyan" type="radio" name="fontColorName" class="js-cc-radio" value="cyan">\n                        <label for="font-color-cyan" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-magenta" type="radio" name="fontColorName" class="js-cc-radio" value="magenta">\n                        <label for="font-color-magenta" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-yellow" type="radio" name="fontColorName" class="js-cc-radio" value="yellow">\n                        <label for="font-color-yellow" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="font-color-blue" type="radio" name="fontColorName" class="js-cc-radio" value="blue">\n                        <label for="font-color-blue" class="cc-color-palette__square"></label>\n                    </div>\n                </div>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-position-label" for="cc-position">Position</label>\n                <select class="js-cc-dropdown" name="verticalPosition" id="cc-position">\n                    <option value="bottom">Bottom</option>\n                    <option value="top">Top</option>\n                </select>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-opacity-label" for="cc-font-opacity">Opacity</label>\n                <select class="js-cc-dropdown" name="fontOpacity" id="cc-font-opacity">\n                    <option value="solid">Solid</option>\n                    <option value="translucent">Translucent</option>\n                    <option value="semiTransparent">Semi-Transparent</option>\n                    <option value="flashing">Flashing</option>\n                </select>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-size-label">Size</label>\n                <button class="js-cc-font-size cc-font-size" value="increment">A\n                    <span class="js-font-increment-tip player-tip js-control-tip" data-tip="Increase Size"></span>\n                </button>\n                <button class="js-cc-font-size cc-font-size" value="decrement">A\n                    <span class="js-font-decrement-tip player-tip js-control-tip" data-tip="Decrease Size"></span>\n                </button>\n            </div>\n        </div>\n        <div class="cc-modal-menu-frame" data-tab="effects">\n            <div class="cc-customize-field">\n                <label class="js-cc-style-label">Style</label>\n                <div class="cc-style-palette">\n                    <div class="cc-style-palette__container">\n                        <input id="style-underline" type="checkbox" name="fontUnderline" class="js-cc-checkbox" value="underline">\n                        <label for="style-underline" class="cc-style-palette__square">U</label>\n                    </div>\n                    <div class="cc-style-palette__container">\n                        <input id="style-italic" type="checkbox" name="fontItalic" class="js-cc-checkbox" value="italic">\n                        <label for="style-italic" class="cc-style-palette__square">I</label>\n                    </div>\n                    <div class="cc-style-palette__container">\n                        <input id="style-bold" type="checkbox" name="fontBold" class="js-cc-checkbox" value="bold">\n                        <label for="style-bold" class="cc-style-palette__square">B</label>\n                    </div>\n                </div>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-edge-label">Effect</label>\n                <div class="cc-edge-palette">\n                    <div class="cc-edge-palette__container">\n                        <hr class="cc-edge-disabled" />\n                        <input id="edge-effect-none" type="radio" name="edge" class="js-cc-radio" value="none">\n                        <label for="edge-effect-none" class="cc-edge-palette__square">aA</label>\n                    </div>\n                    <div class="cc-edge-palette__container">\n                        <input id="edge-effect-raised" type="radio" name="edge" class="js-cc-radio" value="raised">\n                        <label for="edge-effect-raised" class="cc-edge-palette__square">aA</label>\n                    </div>\n                    <div class="cc-edge-palette__container">\n                        <input id="edge-effect-drop-shadow" type="radio" name="edge" class="js-cc-radio" value="drop">\n                        <label for="edge-effect-drop-shadow" class="cc-edge-palette__square">aA</label>\n                    </div>\n                    <div class="cc-edge-palette__container">\n                        <input id="edge-effect-depressed" type="radio" name="edge" class="js-cc-radio" value="depressed">\n                        <label for="edge-effect-depressed" class="cc-edge-palette__square">aA</label>\n                    </div>\n                    <div class="cc-edge-palette__container">\n                        <input id="edge-effect-uniform" type="radio" name="edge" class="js-cc-radio" value="uniform">\n                        <label for="edge-effect-uniform" class="cc-edge-palette__square">aA</label>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class="cc-modal-menu-frame" data-tab="background">\n            <div class="cc-customize-field">\n                <label class="js-cc-opacity-label" for="cc-bg-opacity">Opacity</label>\n                <select class="js-cc-dropdown" name="backgroundOpacity" id="cc-bg-opacity">\n                    <option class="js-cc-opacity-solid" value="solid">Solid</option>\n                    <option class="js-cc-opacity-translucent" value="translucent">Translucent</option>\n                </select>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-color-label">Color</label>\n                <div class="cc-color-palette">\n                    <div class="cc-color-palette__container">\n                        <hr class="cc-no-color" />\n                        <input id="background-transparent" type="radio" name="backgroundColorName" class="js-cc-radio" value="transparent">\n                        <label for="background-transparent" class="cc-color-palette__square cc-color-palette__square-no-color"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-white" type="radio" name="backgroundColorName" class="js-cc-radio" value="white">\n                        <label for="background-color-white" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-lightgray" type="radio" name="backgroundColorName" class="js-cc-radio" value="lightgray">\n                        <label for="background-color-lightgray" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-gray" type="radio" name="backgroundColorName" class="js-cc-radio" value="gray">\n                        <label for="background-color-gray" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-darkgray" type="radio" name="backgroundColorName" class="js-cc-radio" value="darkgray">\n                        <label for="background-color-darkgray" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-black" type="radio" name="backgroundColorName" class="js-cc-radio" value="black">\n                        <label for="background-color-black" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-green" type="radio" name="backgroundColorName" class="js-cc-radio" value="green">\n                        <label for="background-color-green" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-blue" type="radio" name="backgroundColorName" class="js-cc-radio" value="blue">\n                        <label for="background-color-blue" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-cyan" type="radio" name="backgroundColorName" class="js-cc-radio" value="cyan">\n                        <label for="background-color-cyan" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-magenta" type="radio" name="backgroundColorName" class="js-cc-radio" value="magenta">\n                        <label for="background-color-magenta" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-yellow" type="radio" name="backgroundColorName" class="js-cc-radio" value="yellow">\n                        <label for="background-color-yellow" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="background-color-red" type="radio" name="backgroundColorName" class="js-cc-radio" value="red">\n                        <label for="background-color-red" class="cc-color-palette__square"></label>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class="cc-modal-menu-frame" data-tab="window">\n            <div class="cc-customize-field">\n                <label class="js-cc-opacity-label" for="cc-window-opacity">Opacity</label>\n                <select class="js-cc-dropdown" name="windowOpacity" id="cc-window-opacity">\n                    <option class="js-cc-opacity-solid" value="solid">Solid</option>\n                    <option class="js-cc-opacity-translucent" value="translucent">Translucent</option>\n                </select>\n            </div>\n            <div class="cc-customize-field">\n                <label class="js-cc-color-label">Color</label>\n                <div class="cc-color-palette">\n                    <div class="cc-color-palette__container">\n                        <hr class="cc-no-color" />\n                        <input id="window-transparent" type="radio" name="windowColorName" class="js-cc-radio" value="transparent">\n                        <label for="window-transparent" class="cc-color-palette__square cc-color-palette__square-no-color"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-white" type="radio" name="windowColorName" class="js-cc-radio" value="white">\n                        <label for="window-color-white" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-lightgray" type="radio" name="windowColorName" class="js-cc-radio" value="lightgray">\n                        <label for="window-color-lightgray" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-gray" type="radio" name="windowColorName" class="js-cc-radio" value="gray">\n                        <label for="window-color-gray" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-darkgray" type="radio" name="windowColorName" class="js-cc-radio" value="darkgray">\n                        <label for="window-color-darkgray" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-black" type="radio" name="windowColorName" class="js-cc-radio" value="black">\n                        <label for="window-color-black" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-green" type="radio" name="windowColorName" class="js-cc-radio" value="green">\n                        <label for="window-color-green" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-blue" type="radio" name="windowColorName" class="js-cc-radio" value="blue">\n                        <label for="window-color-blue" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-cyan" type="radio" name="windowColorName" class="js-cc-radio" value="cyan">\n                        <label for="window-color-cyan" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-magenta" type="radio" name="windowColorName" class="js-cc-radio" value="magenta">\n                        <label for="window-color-magenta" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-yellow" type="radio" name="windowColorName" class="js-cc-radio" value="yellow">\n                        <label for="window-color-yellow" class="cc-color-palette__square"></label>\n                    </div>\n                    <div class="cc-color-palette__container">\n                        <input id="window-color-red" type="radio" name="windowColorName" class="js-cc-radio" value="red">\n                        <label for="window-color-red" class="cc-color-palette__square"></label>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class="player-hover player-controls-bottom pl-flex js-controls-bottom">\n    <div id="js-player-seek" class="player-seek" />\n\n    <div class="player-buttons-left">\n        <button type="button" class="player-button player-button--playpause js-control-playpause-button" tabindex=\'-1\'>\n            <span class=\'pause-button js-pause-button\'>\n                <span class="player-tip player-tip--aleft js-tip" data-tip="Pause"></span>\n                <svg class="player-icon-pause"><use xlink:href="#icon_pause" /></svg>\n            </span>\n            <span class=\'play-button js-play-button\'>\n                <span class="player-tip player-tip--aleft js-tip" data-tip="Play"></span>\n                <svg class="player-icon-play"><use xlink:href="#icon_play" /></svg>\n            </span>\n        </button>\n\n        <div id="js-player-volume" class="player-volume" />\n    </div>\n\n    <div class="player-buttons-right">\n        <div id="js-notification-popup-container"></div>\n        <div id="js-settings" class="flex flex__item"></div>\n        <div id="js-extension-settings" class="flex flex__item"></div>\n\n        <button type="button" class="cc-flag player-button player-button--cc js-control-cc" tabindex="-1">\n            <span class="player-tip js-control-tip" data-tip="Captions"></span>\n            <svg class="js-player-icon-cc"><use xlink:href="#icon_cc_on" /></svg>\n            <svg class="js-player-icon-cc-deactivated"><use xlink:href="#icon_cc_off" /></svg>\n        </button>\n\n        <div class="player-menu">\n            <button type="button" class="player-button player-button--clips js-control-clips" data-canclip="false">\n                <span class="player-tip js-tip" data-tip="Clip"></span>\n                <svg class="player-icon-clips"><use xlink:href="#icon_clips" /></svg>\n                <svg class="player-icon-clips--bday js-player-icon-clips--bday" style="visibility:hidden">\n                    <use xlink:href="#icon_clips--bday" />\n                </svg>\n            </button>\n            <form class="js-create-clip-form" method="post" action="" target="">\n                <input class="js-create-clip-player-backend-type" type="hidden" name="player_backend_type" value="" />\n                <input class="js-create-clip-channel" type="hidden" name="channel" value="" />\n                <input class="js-create-clip-offset" type="hidden" name="offset" value="" />\n                <input class="js-create-clip-broadcast_id" type="hidden" name="broadcast_id" value="" />\n                <input class="js-create-clip-vod_id" type="hidden" name="vod_id" value="" />\n                <input class="js-create-clip-play_session_id" type="hidden" name="play_session_id" value="" />\n            </form>\n        </div>\n        <button type="button" class="player-button player-button--chromecast js-chromecast-button">\n            <span class="player-tip js-tip" data-tip="Chromecast"></span>\n            <svg class="player-icon-chromecast-p1"><use xlink:href="#icon_chromecast_p1" /></svg>\n            <svg class="player-icon-chromecast-p2"><use xlink:href="#icon_chromecast_p2" /></svg>\n            <svg class="player-icon-chromecast-p3"><use xlink:href="#icon_chromecast_p3" /></svg>\n            <svg class="player-icon-chromecast-p4"><use xlink:href="#icon_chromecast_p4" /></svg>\n            <svg class="player-icon-chromecast-p5"><use xlink:href="#icon_chromecast_p5" /></svg>\n        </button>\n        <button type="button" class="player-button player-button--theatre js-control-theatre" tabindex="-1">\n        <span class=\'enter-theatre-button js-theatre-button\'>\n            <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Theater Mode"></span>\n            <svg class="player-icon-theatre"><use xlink:href="#icon_theatre" /></svg>\n        </span>\n        <span class=\'exit-theatre-button js-exit-theatre-button\'>\n            <span class="player-tip theatre-inactive-tip js-control-tip" data-tip="Exit Theater Mode"></span>\n            <svg class="player-icon-theatre-deactivate"><use xlink:href="#icon_theatre_deactivate" /></svg>\n        </span>\n        </button>\n        <button type="button" class="player-button player-button--fullscreen js-control-fullscreen" tabindex=\'-1\'>\n            <span class=\'fullscreen-button js-fullscreen\'>\n                <span class="player-tip js-control-tip" data-tip="Fullscreen"></span>\n                <svg class="player-icon-fullscreen"><use xlink:href="#icon_fullscreen" /></svg>\n            </span>\n            <span class=\'exit-fullscreen-button js-exit-fullscreen\'>\n                <span class="player-tip js-control-tip" data-tip="Exit Fullscreen"></span>\n                <svg class="player-icon-unfullscreen"><use xlink:href="#icon_unfullscreen" /></svg>\n            </span>\n        </button>\n\n        <button type="button" class="player-button player-button--twitch js-watch-twitch">\n            <span class="player-tip player-tip--aright js-tip" data-tip="Watch on Twitch"></span>\n            <a class="player-button player-button--twitch js-hyperlink-watch-twitch" href="" target="_blank">\n                <svg><use xlink:href="#icon_twitch" /></svg>\n            </a>\n        </button>\n    </div>\n</div>\n\n\n<div class="player-ad-notice">\n    <p class=\'js-advertisement-label\'>Advertisement</p>\n</div>\n\n<div id="js-player-alert-container" />\n\n<div id="stats" />\n\n<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" style="width:0;height:0;visibility:hidden;display:block;">\n    <symbol viewBox="0 0 30 30" id="icon_play"><path clip-rule="evenodd" d="M10,7l12,8l-12,8V7z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_pause"><path clip-rule="evenodd" d="M9,22h4V8H9V22z M17,8v14h4V8H17z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_volumefull"><path clip-rule="evenodd" d="M22,21.5v-13L23,8v14L22,21.5z M18,10.5l1-0.5v10l-1-0.5V10.5z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_volumemute"><path clip-rule="evenodd" d="M23,18L23,18h-0.7L20,15.7L17.7,18H17l0,0v-0.7l2.3-2.3L17,12.7V12l0,0h0.7l2.3,2.3l2.3-2.3H23l0,0v0.7L20.7,15l2.3,2.3V18z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_fullscreen"><path clip-rule="evenodd" d="M7,7 L15.2,7 L12.8,9.4 L15.8,12.4 L12.4,15.8 L9.4,12.8 L7,15.2 L7,7 Z M23,23 L14.8,23 L17.2,20.6 L14.2,17.6 L17.6,14.2 L20.6,17.2 L23,14.8 L23,23 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_unfullscreen"><path clip-rule="evenodd" d="M15,15 L23.2,15 L20.8,17.4 L23.8,20.4 L20.4,23.8 L17.4,20.8 L15,23.2 L15,15 L15,15 Z M15,15 L6.8,15 L9.2,12.6 L6.2,9.6 L9.6,6.2 L12.6,9.2 L15,6.8 L15,15 L15,15 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_settings"><path clip-rule="evenodd" d="M13.3589744,7 L16.6410256,7 L18.0769231,9.8 L21.3589744,9.8 L23,12.2 L21.3589744,15 L23,17.8 L21.3589744,20.2 L18.0769231,20.2 L16.6410256,23 L13.3589744,23 L11.9230769,20.2 L8.64102564,20.2 L7,17.8 L8.64102564,15 L7,12.2 L8.64102564,9.8 L11.9230769,9.8 L13.3589744,7 Z M15,17.8 C16.5860485,17.8 17.8717949,16.5463973 17.8717949,15 C17.8717949,13.4536027 16.5860485,12.2 15,12.2 C13.4139515,12.2 12.1282051,13.4536027 12.1282051,15 C12.1282051,16.5463973 13.4139515,17.8 15,17.8 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_theatre"><path d="M6 21h11V9H6v12zM19 9v12h5V9h-5z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_theatre_deactivate"><path d="M6 9h11v12H6V9zm2 2h9v8H8v-8zm9-2h7v12h-7V9zm2 2h3v8h-3v-8z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 63 30" id="icon_twitch"><path clip-rule="evenodd" d="M55,19 L52,19 L52,13 L49,13 L49,19 L46,19 L46,8 L49,8 L49,10 L53,10 L55,12 L55,19 L55,19 Z M45,13 L41,13 L41,16 L45,16 L45,19 L40,19 L38,17 L38,12 L40,10 L45,10 L45,13 L45,13 Z M37,13 L34,13 L34,16 L37,16 L37,19 L33,19 L31,17 L31,8 L34,8 L34,10 L37,10 L37,13 L37,13 Z M27,8 L30,8 L30,9 L27,9 L27,8 Z M27,10 L30,10 L30,19 L27,19 L27,10 Z M26,17 L24,19 L15,19 L15,10 L18,10 L18,16 L19,16 L19,10 L22,10 L22,16 L23,16 L23,10 L26,10 L26,17 L26,17 Z M14,13 L11,13 L11,16 L14,16 L14,19 L10,19 L8,17 L8,8 L11,8 L11,10 L14,10 L14,13 L14,13 Z M53.5,9 L50,9 L50,7 L45.5,7 L43,9 L39.5,9 L38,10.5 L38,9 L35,9 L35,7 L26,7 L26,9 L15,9 L12,7 L7,7 L7,17.5 L9.5,20.125 L14,23 L18,23 L18,22.25 L19.5,23 L25.5,23 L26.5,21.5 L27,23 L31,23 L31,21.5 L32.5,23 L37,23 L37.25,21.5 L38.5,23 L43.5,23 L45,21.5 L45,23 L47.5,23 L49,21.5 L49,23 L52.5,23 L56,19.5 L56,11.5 L53.5,9 L53.5,9 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close"><path clip-rule="evenodd" d="M15.1035534,15.4571068 L11.5303301,19.0303301 L11.3535534,19.2071068 L11,18.8535534 L11.1767767,18.6767767 L14.75,15.1035534 L11.1767767,11.5303301 L11,11.3535534 L11.3535534,11 L11.5303301,11.1767767 L15.1035534,14.75 L18.6767767,11.1767767 L18.8535534,11 L19.2071068,11.3535534 L19.0303301,11.5303301 L15.4571068,15.1035534 L19.0303301,18.6767767 L19.2071068,18.8535534 L18.8535534,19.2071068 L18.6767767,19.0303301 L15.1035534,15.4571068 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close_md"><path clip-rule="evenodd" d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p1"><path fill-rule="evenodd" clip-rule="evenodd" d="M15,22c0-0.7-0.1-1.4-0.2-2H22V10H8v3.2C7.4,13.1,6.7,13,6,13V8h18v14H15z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p2"><path fill-rule="evenodd" clip-rule="evenodd" d="M10,13.9V12h10v6h-5.9C13.2,16.2,11.8,14.8,10,13.9z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p3"><path fill-rule="evenodd" clip-rule="evenodd" d="M13,22h-1c0-3.3-2.7-6-6-6v-1C9.9,15,13,18.1,13,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p4"><path fill-rule="evenodd" clip-rule="evenodd" d="M10,22H9c0-1.7-1.3-3-3-3v-1C8.2,18,10,19.8,10,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p5"><path fill-rule="evenodd" clip-rule="evenodd" d="M7,22H6v-1C6.6,21,7,21.4,7,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_clips"><path d="M14.802 7.804l-3.83 1.026 2.928 2.321 3.83-1.026-2.928-2.321zm2.895-.776l3.981-1.067.777 2.898-1.83.49-2.928-2.321zM7.969 9.635l-1.745.467L7 13l3.898-1.044-2.929-2.321zM7 13h16v9H7v-9zm1.969 3h2.785l2.228-3h-2.785l-2.228 3zm7.018 0h2.785L21 13h-2.785l-2.228 3z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 13 18" id="icon_clips--bday"><path d="M6.505 7.61l2.41 2.33H4.53l.621-2.174-.552-.81L1.43 8.53l1.77-2.803L.266 4.184l3.531-.22.234-3.118 1.761 2.583L8.96 1.854 7.19 4.658 10.124 6.2l-3.53.22-.09 1.189zm6.546 6.33H3.385l.625-2.182h6.785l2.256 2.182zm-3.042 1.818l-7.737 2.073.593-2.073h7.144z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_cc_on"><path fill-rule="evenodd" clip-rule="evenodd" d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_cc_off"><path fill-rule="evenodd" clip-rule="evenodd" d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M24,8 L24,22 L6,22 L6,8 L24,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close_modal"><path clip-rule="evenodd" d="M13.657 3.757l-4.243 4.243 4.243 4.242-1.415 1.415-4.242-4.243-4.243 4.243-1.414-1.415 4.243-4.242-4.243-4.243 1.414-1.414 4.243 4.243 4.242-4.243 1.415 1.414z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 14 14" id="icon_arrow"><path d="M6.46765898,5.00010938 L6.46755335,5 L3.08055618,8.27078515 C2.97320936,8.37444877 2.97610632,8.52662201 3.07163118,8.6255409 L3.47144895,9.03956433 C3.56460436,9.13602957 3.72584608,9.14003286 3.82630008,9.04302556 L6.46765898,6.49229492 L9.10901788,9.04302556 C9.20947188,9.14003286 9.3707136,9.13602957 9.46386901,9.03956433 L9.86368678,8.6255409 C9.95921164,8.52662201 9.9621086,8.37444877 9.85476178,8.27078515 L6.46776461,5 L6.46765898,5.00010938 Z" transform="translate(6.467659, 7.056937) scale(-1, 1) rotate(-270.000000) translate(-6.467659, -7.056937) "></path></symbol>\n    <symbol viewBox="0 0 98 86" id="age-gate-icon"><path d="M24 8h50v10h12V8h12v78H0V8h12v10h12V8zm52-8h8v16h-8V0zM14 0h8v16h-8V0zm13.356 43.52h3.8c-.03-.954.068-1.9.29-2.84.225-.938.59-1.78 1.097-2.526.506-.745 1.155-1.348 1.945-1.81.79-.463 1.736-.694 2.84-.694.834 0 1.624.135 2.37.403.744.268 1.393.656 1.944 1.162.552.507.99 1.11 1.32 1.81.327.702.49 1.484.49 2.35 0 1.102-.17 2.07-.513 2.905-.344.835-.85 1.61-1.52 2.326-.672.715-1.514 1.423-2.528 2.124-1.013.7-2.19 1.468-3.532 2.303-1.103.655-2.16 1.356-3.175 2.1-1.014.746-1.923 1.61-2.728 2.595-.805.983-1.468 2.14-1.99 3.465-.52 1.327-.857 2.93-1.006 4.807h20.705v-3.354H30.888c.18-.983.56-1.855 1.14-2.616.582-.76 1.282-1.468 2.102-2.123.82-.656 1.722-1.275 2.705-1.856.984-.58 1.968-1.17 2.952-1.765.983-.626 1.937-1.282 2.86-1.968.925-.686 1.745-1.453 2.46-2.303.716-.85 1.29-1.81 1.722-2.884.432-1.073.648-2.31.648-3.71 0-1.492-.26-2.803-.783-3.936-.522-1.133-1.23-2.08-2.124-2.84-.893-.76-1.944-1.34-3.15-1.744-1.21-.402-2.498-.603-3.87-.603-1.67 0-3.16.283-4.47.85-1.312.566-2.408 1.348-3.287 2.347-.88 1-1.528 2.183-1.945 3.555-.418 1.37-.582 2.86-.492 4.47zM65.17 64V32.297H62.26c-.208 1.192-.596 2.176-1.162 2.95-.567.776-1.26 1.387-2.08 1.834-.82.448-1.736.754-2.75.918-1.013.164-2.057.246-3.13.246v3.04h8.228V64h3.8z" fill="#F9F7FC" fill-rule="evenodd"/></symbol>\n    <symbol id="age-gate-fail-icon" viewBox="0 0 92 81"><path d="M0 75.6l3.067-5.4L9.2 59.4l12.267-21.6 12.266-21.6 6.134-10.8L42.933 0h6.134l3.066 5.4 6.134 10.8 12.266 21.6L82.8 59.4l6.133 10.8L92 75.6 89.06 81H3.44L0 75.6zM40 27h12v13l-3 19h-6l-3-19V27zm1 34h10v10H41V61z" fill="#F9F7FC" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 19 19" id="icon_open_collection"><path fill-rule="evenodd" d="M0,6 L19,6 L19,19 L0,19 L0,6 Z M12.25,12.5 L7,9 L7,16 L12.25,12.5 Z M2,3 L17,3 L17,5 L2,5 L2,3 Z M4,0 L15,0 L15,2 L4,2 L4,0 Z"/></symbol>\n    <symbol id=\'icon_pl-followcheck\' viewBox=\'0 0 16 16\'><path clip-rule=\'evenodd\' d=\'M6.5,12.75L2,8.25l2-2l2.5,2.5l5.5-5.5l2,2L6.5,12.75z\' fill-rule=\'evenodd\'></symbol>\n    <symbol viewBox="0 0 30 30" id="pl-icon_close"><path clip-rule="evenodd" d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z"/></symbol>\n    <symbol viewBox="0 0 14 12" id="pl-icon_vod"><path d="M0 12h14V0H0v12zm4-3V3l7 3-7 3z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 16 3" id="icon_more_info"><path d="M15 1.5c0 .389-.139.736-.417 1.042-.277.305-.639.458-1.083.458-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C12.694.153 13.056 0 13.5 0c.444 0 .806.153 1.083.458.278.306.417.653.417 1.042zm-6 0c0 .389-.139.736-.417 1.042C8.306 2.847 7.944 3 7.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C6.694.153 7.056 0 7.5 0c.444 0 .806.153 1.083.458C8.861.764 9 1.111 9 1.5zm-6 0c0 .389-.139.736-.417 1.042C2.306 2.847 1.944 3 1.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C.694.153 1.056 0 1.5 0c.444 0 .806.153 1.083.458C2.861.764 3 1.111 3 1.5z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_grant_permissions"><g fill-rule="evenodd"><path d="M16 5h-3v1.994L11.91 8H16v3l6-4.5L16 2v3z"/><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/></g></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_revoke_permissions"><g fill-rule="evenodd"><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill="currentColor" d="M17.013 5.34l-2.37-2.37-1.624 1.624 2.37 2.37-2.37 2.37 1.624 1.624 2.37-2.37 2.37 2.37 1.624-1.624-2.37-2.37 2.37-2.37-1.624-1.624-2.37 2.37z"/></g></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_approved_permissions"><g fill-rule="evenodd"><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill="currentColor" fill-rule="nonzero" d="M20.356 3L22 4.618 15.513 11 12 7.543l1.644-1.617 1.87 1.839z"/></g></symbol>\n    <symbol viewBox="0 0 16 16" id="icon_report_flag"><path clip-rule="evenodd" d="M3,14 L1,14 L1,2 L3,2 L3,14 L3,14 Z M4,2 L11,2 L11,4 L15,4 L15,11 L8,11 L8,9 L4,9 L4,2 L4,2 Z"></path></symbol>\n    <symbol id="icon_heart" height=\'16px\' version=\'1.1\' viewBox=\'0 0 16 16\' width=\'16px\' x=\'0px\' y=\'0px\'>\n      <path clip-rule=\'evenodd\' d=\'M8,14L1,7V4l2-2h3l2,2l2-2h3l2,2v3L8,14z\' fill-rule=\'evenodd\'></path>\n    </symbol>\n    <symbol id=\'icon_unheart\' height=\'16px\' version=\'1.1\' viewBox=\'0 0 16 16\' width=\'16px\' x=\'0px\' y=\'0px\'>\n      <path clip-rule=\'evenodd\' d=\'M1,9V7h14v2H1z M1,4l2-2h3l2,2l2-2h3l2,2v2H1V4z M8,14l-4.667-4h9.333L8,14z\' fill-rule=\'evenodd\'></path>\n    </symbol>\n    <symbol viewBox="0 0 30 30" id="icon_extensions"><path d="M20 17.113V22a1 1 0 0 1-1 1h-4.887c.257-1.051.87-1.404.887-1.917C15.025 19.6 14.006 19 13 19c-1.004 0-2.055.6-1.998 2.083.037.483.642.854.894 1.917H8a1 1 0 0 1-1-1v-4.887c1.051.257 1.404.87 1.917.887C10.4 18.025 11 17.006 11 16c0-1.004-.6-2.055-2.083-1.998-.483.037-.854.642-1.917.894V11a1 1 0 0 1 1-1h3.896c-.252-1.063-.857-1.434-.894-1.917C10.945 6.6 11.996 6 13 6c1.006 0 2.025.599 2 2.083-.016.513-.63.866-.887 1.917H19a1 1 0 0 1 1 1v3.896c1.063-.252 1.434-.857 1.917-.894C23.4 13.945 24 14.996 24 16c0 1.006-.599 2.025-2.083 2-.513-.016-.866-.63-1.917-.887z" fill-rule="evenodd"/></symbol>\n</svg>\n'
     }, function(e, t, n) {
         var r, r;
         ! function(t) {
@@ -43132,9 +43204,9 @@
         function s(e, t) {
             for (var n = e.indexOf(t); - 1 !== n;) e.splice(n, 1), n = e.indexOf(t)
         }
-        var u = n(114),
+        var u = n(115),
             c = n(58),
-            l = n(113),
+            l = n(114),
             d = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
@@ -43321,8 +43393,8 @@
                 }
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : r(e, t))
         }
-        var s = (n(114), n(58)),
-            u = n(113),
+        var s = (n(115), n(58)),
+            u = n(114),
             c = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
@@ -43362,7 +43434,7 @@
         function r(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
-        var i = n(114),
+        var i = n(115),
             o = n(58),
             a = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -43745,8 +43817,8 @@
                 }
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : r(e, t))
         }
-        var s = n(113),
-            u = n(114),
+        var s = n(114),
+            u = n(115),
             c = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
@@ -43838,10 +43910,10 @@
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : r(e, t))
         }
         var s = n(58),
-            u = n(113),
+            u = n(114),
             c = n(299),
             l = n(298),
-            d = n(114),
+            d = n(115),
             p = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
@@ -44067,15 +44139,15 @@
 
         function s() {}
         var u = n(58),
-            c = n(113),
-            l = n(679),
-            d = n(680),
-            p = n(677),
-            f = n(678),
-            h = n(676),
-            m = n(674),
-            v = n(675),
-            g = n(681),
+            c = n(114),
+            l = n(681),
+            d = n(682),
+            p = n(679),
+            f = n(680),
+            h = n(678),
+            m = n(676),
+            v = n(677),
+            g = n(683),
             y = n(299),
             _ = n(298),
             b = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
@@ -44245,7 +44317,7 @@
         t.a = new k
     }, function(e, t, n) {
         "use strict";
-        var r = n(682);
+        var r = n(684);
         t.a = r.a;
         r.a.changeLanguage.bind(r.a), r.a.cloneInstance.bind(r.a), r.a.createInstance.bind(r.a), r.a.dir.bind(r.a), r.a.exists.bind(r.a), r.a.getFixedT.bind(r.a), r.a.init.bind(r.a), r.a.loadLanguages.bind(r.a), r.a.loadNamespaces.bind(r.a), r.a.loadResources.bind(r.a), r.a.off.bind(r.a), r.a.on.bind(r.a), r.a.setDefaultNamespace.bind(r.a), r.a.t.bind(r.a), r.a.use.bind(r.a)
     }, function(e, t, n) {
@@ -44272,8 +44344,8 @@
             return null == e ? void 0 === e ? u : s : c && c in Object(e) ? n.i(o.a)(e) : n.i(a.a)(e)
         }
         var i = n(300),
-            o = n(688),
-            a = n(689),
+            o = n(690),
+            a = n(691),
             s = "[object Null]",
             u = "[object Undefined]",
             c = i.a ? i.a.toStringTag : void 0;
@@ -44283,10 +44355,10 @@
         (function(e) {
             var n = "object" == typeof e && e && e.Object === Object && e;
             t.a = n
-        }).call(t, n(126))
+        }).call(t, n(127))
     }, function(e, t, n) {
         "use strict";
-        var r = n(690),
+        var r = n(692),
             i = n.i(r.a)(Object.getPrototypeOf, Object);
         t.a = i
     }, function(e, t, n) {
@@ -44328,7 +44400,7 @@
         t.a = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(686),
+        var r = n(688),
             i = "object" == typeof self && self && self.Object === Object && self,
             o = r.a || i || Function("return this")();
         t.a = o
@@ -44353,11 +44425,11 @@
                 this.set(r[0], r[1])
             }
         }
-        var i = n(762),
-            o = n(763),
-            a = n(764),
-            s = n(765),
-            u = n(766);
+        var i = n(764),
+            o = n(765),
+            a = n(766),
+            s = n(767),
+            u = n(768);
         r.prototype.clear = i, r.prototype.delete = o, r.prototype.get = a, r.prototype.has = s, r.prototype.set = u, e.exports = r
     }, function(e, t, n) {
         var r = n(69),
@@ -44425,7 +44497,7 @@
                 t(r, e, n(e), o)
             }), r
         }
-        var i = n(116);
+        var i = n(117);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t) {
@@ -44522,8 +44594,8 @@
         }
         var i = n(147),
             o = n(322),
-            a = n(757),
-            s = n(758),
+            a = n(759),
+            s = n(760),
             u = n(328),
             c = n(21),
             l = n(163),
@@ -44574,8 +44646,8 @@
         function r(e) {
             return !(!a(e) || o(e)) && (i(e) ? h : c).test(s(e))
         }
-        var i = n(118),
-            o = n(771),
+        var i = n(119),
+            o = n(773),
             a = n(31),
             s = n(338),
             u = /[\\^$.*+?()[\]{}|]/g,
@@ -44603,7 +44675,7 @@
             return t
         }
         var i = n(158),
-            o = n(783),
+            o = n(785),
             a = Object.prototype,
             s = a.hasOwnProperty;
         e.exports = r
@@ -44617,7 +44689,7 @@
         }
         var i = n(31),
             o = n(158),
-            a = n(784),
+            a = n(786),
             s = Object.prototype,
             u = s.hasOwnProperty;
         e.exports = r
@@ -44629,7 +44701,7 @@
                 r[++n] = t(e, i, o)
             }), r
         }
-        var i = n(116),
+        var i = n(117),
             o = n(51);
         e.exports = r
     }, function(e, t, n) {
@@ -44639,8 +44711,8 @@
                 return n === e || i(n, e, t)
             }
         }
-        var i = n(716),
-            o = n(759),
+        var i = n(718),
+            o = n(761),
             a = n(333);
         e.exports = r
     }, function(e, t, n) {
@@ -44673,7 +44745,7 @@
         var i = n(147),
             o = n(309),
             a = n(208),
-            s = n(726),
+            s = n(728),
             u = n(31),
             c = n(71);
         e.exports = r
@@ -44702,11 +44774,11 @@
             l = n(21),
             d = n(342),
             p = n(163),
-            f = n(118),
+            f = n(119),
             h = n(31),
             m = n(164),
             v = n(220),
-            g = n(828);
+            g = n(830);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t) {
@@ -44714,7 +44786,7 @@
                 return o(e, n)
             })
         }
-        var i = n(728),
+        var i = n(730),
             o = n(341);
         e.exports = r
     }, function(e, t, n) {
@@ -44749,9 +44821,9 @@
                     (h = c(f, v, h, r)) > -1;) f !== e && l.call(f, h, 1), l.call(e, h, 1);
             return e
         }
-        var i = n(115),
+        var i = n(116),
             o = n(209),
-            a = n(713),
+            a = n(715),
             s = n(316),
             u = n(154),
             c = Array.prototype,
@@ -44777,7 +44849,7 @@
             i = Math.floor;
         e.exports = n
     }, function(e, t, n) {
-        var r = n(806),
+        var r = n(808),
             i = n(321),
             o = n(161),
             a = i ? function(e, t) {
@@ -44796,7 +44868,7 @@
                 return !(n = t(e, r, i))
             }), !!n
         }
-        var i = n(116);
+        var i = n(117);
         e.exports = r
     }, function(e, t) {
         function n(e, t) {
@@ -44830,10 +44902,10 @@
             return h
         }
         var i = n(303),
-            o = n(701),
-            a = n(702),
+            o = n(703),
+            a = n(704),
             s = n(317),
-            u = n(754),
+            u = n(756),
             c = n(160),
             l = 200;
         e.exports = r
@@ -44842,8 +44914,8 @@
             return t = i(t, e), null == (e = a(e, t)) || delete e[s(o(t))]
         }
         var i = n(87),
-            o = n(815),
-            a = n(787),
+            o = n(817),
+            a = n(789),
             s = n(88);
         e.exports = r
     }, function(e, t, n) {
@@ -44852,7 +44924,7 @@
                 return e[t]
             })
         }
-        var i = n(115);
+        var i = n(116);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n) {
@@ -44873,7 +44945,7 @@
             var r = t ? n(a(e), s) : a(e);
             return o(r, i, new e.constructor)
         }
-        var i = n(697),
+        var i = n(699),
             o = n(206),
             a = n(332),
             s = 1;
@@ -44890,7 +44962,7 @@
             var r = t ? n(a(e), s) : a(e);
             return o(r, i, new e.constructor)
         }
-        var i = n(698),
+        var i = n(700),
             o = n(206),
             a = n(160),
             s = 1;
@@ -44929,8 +45001,8 @@
                 return u(n, e, a(r, 2), c)
             }
         }
-        var i = n(699),
-            o = n(705),
+        var i = n(701),
+            o = n(707),
             a = n(86),
             s = n(21);
         e.exports = r
@@ -44983,12 +45055,12 @@
             var r = i(t, l(e / u(t)));
             return s(t) ? a(c(r), 0, e).join("") : r.slice(0, e)
         }
-        var i = n(732),
+        var i = n(734),
             o = n(315),
-            a = n(739),
+            a = n(741),
             s = n(215),
             u = n(337),
-            c = n(797),
+            c = n(799),
             l = Math.ceil;
         e.exports = r
     }, function(e, t, n) {
@@ -45003,14 +45075,14 @@
                 return t(e)
             }
         }
-        var i = n(119),
+        var i = n(120),
             o = n(166),
             a = n(224),
             s = Math.min;
         e.exports = r
     }, function(e, t, n) {
         var r = n(302),
-            i = n(816),
+            i = n(818),
             o = n(160),
             a = r && 1 / o(new r([, -0]))[1] == 1 / 0 ? function(e) {
                 return new r(e)
@@ -45242,11 +45314,11 @@
             }
         }
         var i = n(212),
-            o = n(740),
-            a = n(741),
-            s = n(742),
-            u = n(743),
-            c = n(744),
+            o = n(742),
+            a = n(743),
+            s = n(744),
+            u = n(745),
+            c = n(746),
             l = n(320),
             d = "[object Boolean]",
             p = "[object Date]",
@@ -45287,7 +45359,7 @@
         function r(e) {
             return !!o && o in e
         }
-        var i = n(747),
+        var i = n(749),
             o = function() {
                 var e = /[^.]+$/.exec(i && i.keys && i.keys.IE_PROTO || "");
                 return e ? "Symbol(src)_1." + e : ""
@@ -45338,7 +45410,7 @@
                 string: new i
             }
         }
-        var i = n(694),
+        var i = n(696),
             o = n(146),
             a = n(204);
         e.exports = r
@@ -45497,12 +45569,12 @@
         function r(e) {
             return o(e) ? a(e) : i(e)
         }
-        var i = n(704),
+        var i = n(706),
             o = n(215),
-            a = n(800);
+            a = n(802);
         e.exports = r
     }, function(e, t, n) {
-        var r = n(782),
+        var r = n(784),
             i = /^\./,
             o = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
             a = /\\(\\)?/g,
@@ -45562,7 +45634,7 @@
         function r(e, t, n) {
             return void 0 === n && (n = t, t = void 0), void 0 !== n && (n = o(n), n = n === n ? n : 0), void 0 !== t && (t = o(t), t = t === t ? t : 0), i(o(e), t, n)
         }
-        var i = n(708),
+        var i = n(710),
             o = n(166);
         e.exports = r
     }, function(e, t, n) {
@@ -45651,20 +45723,20 @@
             return t = a(t) || 0, i(n) && (P = !!n.leading, C = "maxWait" in n, b = C ? u(a(n.maxWait) || 0, t) : b, T = "trailing" in n ? !!n.trailing : T), g.cancel = m, g.flush = v, g
         }
         var i = n(31),
-            o = n(817),
+            o = n(819),
             a = n(166),
             s = "Expected a function",
             u = Math.max,
             c = Math.min;
         e.exports = r
     }, function(e, t, n) {
-        e.exports = n(809)
+        e.exports = n(811)
     }, function(e, t, n) {
         function r(e, t) {
             return (s(e) ? i : o)(e, a(t))
         }
         var i = n(306),
-            o = n(116),
+            o = n(117),
             a = n(318),
             s = n(21);
         e.exports = r
@@ -45680,7 +45752,7 @@
         function r(e, t) {
             return null != e && o(e, t, i)
         }
-        var i = n(711),
+        var i = n(713),
             o = n(329);
         e.exports = r
     }, function(e, t, n) {
@@ -45725,9 +45797,9 @@
             var r = t ? o(e) : 0;
             return t && r < t ? i(t - r, n) + e : e
         }
-        var i = n(752),
+        var i = n(754),
             o = n(337),
-            a = n(119),
+            a = n(120),
             s = n(224);
         e.exports = r
     }, function(e, t, n) {
@@ -45735,20 +45807,20 @@
             return a(e) ? i(s(e)) : o(e)
         }
         var i = n(313),
-            o = n(729),
+            o = n(731),
             a = n(217),
             s = n(88);
         e.exports = r
     }, function(e, t, n) {
         var r = n(153),
-            i = n(821),
+            i = n(823),
             o = r(i);
         e.exports = o
     }, function(e, t, n) {
         function r(e, t) {
             return e && e.length && t && t.length ? i(e, t) : e
         }
-        var i = n(730);
+        var i = n(732);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n) {
@@ -45763,7 +45835,7 @@
         }
         var i = n(211),
             o = n(216),
-            a = n(119);
+            a = n(120);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n) {
@@ -45772,7 +45844,7 @@
         }
         var i = n(308),
             o = n(86),
-            a = n(734),
+            a = n(736),
             s = n(21),
             u = n(216);
         e.exports = r
@@ -45792,7 +45864,7 @@
                 trailing: s
             })
         }
-        var i = n(807),
+        var i = n(809),
             o = n(31),
             a = "Expected a function";
         e.exports = r
@@ -45818,7 +45890,7 @@
     }, function(e, t, n) {
         var r = n(207),
             i = n(153),
-            o = n(736),
+            o = n(738),
             a = n(342),
             s = i(function(e) {
                 return o(r(e, 1, a, !0))
@@ -45927,7 +45999,7 @@
                 if (t.groups[n].hasOwnProperty("value") ? t.groups[n].hasOwnProperty("weight") ? t.groups[n].weight !== Math.floor(t.groups[n].weight) ? i = "has a non-integer weight" : t.groups[n].weight < 0 && (i = "has a negative weight") : i = "is missing a `weight` property" : i = "is missing a `value` property", i) return new r(e, t, "Group " + t.groups[n].value + " " + i);
             return null
         }
-        var o = n(832);
+        var o = n(834);
         t.validate = function(e) {
             for (var t in e)
                 if (e.hasOwnProperty(t)) {
@@ -45951,8 +46023,8 @@
             }).value
         }
     }, function(e, t, n) {
-        var r = n(830),
-            i = n(831),
+        var r = n(832),
+            i = n(833),
             o = n(346);
         t.DEFAULT_SPADE_URL = "//trowel.twitch.tv/", t.SPADE_URL_PROJECT_UUID = "4badc757-13a7-468c-99b6-e42aef7fc286", t.sendEvent = function(e, n, a, s) {
             var u = {
@@ -46126,7 +46198,7 @@
                     o._unhandledRejectionFn = e
                 }, void 0 !== e && e.exports ? e.exports = o : n.Promise || (n.Promise = o)
             }(this)
-        }).call(t, n(941).setImmediate)
+        }).call(t, n(943).setImmediate)
     }, function(e, t, n) {
         "use strict";
 
@@ -46150,8 +46222,8 @@
                 })
             })
         }
-        var o = n(618),
-            a = n(934),
+        var o = n(620),
+            a = n(936),
             s = Object.prototype.hasOwnProperty;
         e.exports = i
     }, function(e, t, n) {
@@ -46199,7 +46271,7 @@
             i = n(4),
             o = n(10),
             a = n(350),
-            s = n(838);
+            s = n(840);
         e.exports = function(e, t) {
             function n(e) {
                 var t = e && (S && e[S] || e[P]);
@@ -46424,7 +46496,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(915)
+        e.exports = n(917)
     }, function(e, t, n) {
         "use strict";
 
@@ -46483,7 +46555,7 @@
             }(),
             l = n(0),
             d = r(l),
-            p = n(615),
+            p = n(617),
             f = r(p);
         t.CopyToClipboard = function(e) {
             function t() {
@@ -46516,7 +46588,7 @@
         }(d.default.PureComponent)
     }, function(e, t, n) {
         "use strict";
-        var r = n(842),
+        var r = n(844),
             i = r.CopyToClipboard;
         e.exports = i
     }, function(e, t, n) {
@@ -46681,11 +46753,11 @@
             var o = v.getPooled(P.beforeInput, t, n, r);
             return o.data = i, p.accumulateTwoPhaseDispatches(o), o
         }
-        var p = n(122),
+        var p = n(123),
             f = n(29),
-            h = n(852),
-            m = n(889),
-            v = n(892),
+            h = n(854),
+            m = n(891),
+            v = n(894),
             g = [9, 13, 27, 32],
             y = 229,
             _ = f.canUseDOM && "CompositionEvent" in window,
@@ -46741,9 +46813,9 @@
         "use strict";
         var r = n(351),
             i = n(29),
-            o = (n(39), n(660), n(898)),
-            a = n(667),
-            s = n(670),
+            o = (n(39), n(662), n(900)),
+            a = n(669),
+            s = n(672),
             u = (n(10), s(function(e) {
                 return a(e)
             })),
@@ -46873,8 +46945,8 @@
                 }
             }
         }
-        var w = n(121),
-            k = n(122),
+        var w = n(122),
+            k = n(123),
             E = n(29),
             S = n(17),
             P = n(43),
@@ -46919,7 +46991,7 @@
         var r = n(11),
             i = n(91),
             o = n(29),
-            a = n(663),
+            a = n(665),
             s = n(34),
             u = (n(4), {
                 dangerouslyReplaceNodeWithMarkup: function(e, t) {
@@ -46936,7 +47008,7 @@
         e.exports = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(122),
+        var r = n(123),
             i = n(17),
             o = n(169),
             a = {
@@ -47225,11 +47297,11 @@
                 }
             };
             e.exports = u
-        }).call(t, n(120))
+        }).call(t, n(121))
     }, function(e, t, n) {
         "use strict";
         var r = n(227),
-            i = n(862),
+            i = n(864),
             o = {
                 processChildrenUpdates: i.dangerouslyProcessChildrenUpdates,
                 replaceNodeWithMarkup: r.dangerouslyReplaceNodeWithMarkup
@@ -47253,7 +47325,7 @@
             c = n(233),
             l = n(53),
             d = n(234),
-            p = n(123),
+            p = n(124),
             f = (n(39), n(361)),
             h = n(93),
             m = n(145),
@@ -47450,14 +47522,14 @@
     }, function(e, t, n) {
         "use strict";
         var r = n(17),
-            i = n(870),
+            i = n(872),
             o = n(360),
             a = n(93),
             s = n(43),
-            u = n(883),
-            c = n(899),
+            u = n(885),
+            c = n(901),
             l = n(365),
-            d = n(906);
+            d = n(908);
         n(10);
         i.inject();
         var p = {
@@ -47582,23 +47654,23 @@
         }
         var v = n(11),
             g = n(15),
-            y = n(845),
-            _ = n(847),
+            y = n(847),
+            _ = n(849),
             b = n(91),
             w = n(228),
             k = n(92),
             E = n(353),
-            S = n(121),
+            S = n(122),
             P = n(229),
             C = n(168),
             T = n(354),
             O = n(17),
-            x = n(863),
-            R = n(864),
+            x = n(865),
+            R = n(866),
             A = n(355),
-            I = n(867),
-            L = (n(39), n(876)),
-            N = n(881),
+            I = n(869),
+            L = (n(39), n(878)),
+            N = n(883),
             j = (n(34), n(171)),
             M = (n(4), n(240), n(202), n(367)),
             D = (n(242), n(10), T),
@@ -48166,7 +48238,7 @@
             }
         }
         var u = n(29),
-            c = n(903),
+            c = n(905),
             l = n(366),
             d = u.canUseDOM && "selection" in document && !("getSelection" in window),
             p = {
@@ -48385,25 +48457,25 @@
                 return new f(e)
             }), y.Updates.injectReconcileTransaction(_), y.Updates.injectBatchingStrategy(v), y.Component.injectEnvironment(l))
         }
-        var i = n(844),
-            o = n(846),
-            a = n(848),
-            s = n(850),
-            u = n(851),
-            c = n(853),
-            l = n(855),
-            d = n(858),
+        var i = n(846),
+            o = n(848),
+            a = n(850),
+            s = n(852),
+            u = n(853),
+            c = n(855),
+            l = n(857),
+            d = n(860),
             p = n(17),
-            f = n(860),
-            h = n(868),
-            m = n(866),
-            v = n(869),
-            g = n(873),
-            y = n(874),
-            _ = n(879),
-            b = n(884),
-            w = n(885),
-            k = n(886),
+            f = n(862),
+            h = n(870),
+            m = n(868),
+            v = n(871),
+            g = n(875),
+            y = n(876),
+            _ = n(881),
+            b = n(886),
+            w = n(887),
+            k = n(888),
             E = !1;
         e.exports = {
             inject: r
@@ -48418,7 +48490,7 @@
         function r(e) {
             i.enqueueEvents(e), i.processEventQueue(!1)
         }
-        var i = n(121),
+        var i = n(122),
             o = {
                 handleTopLevel: function(e, t, n, o) {
                     r(i.extractEvents(e, t, n, o))
@@ -48459,7 +48531,7 @@
             d = n(17),
             p = n(43),
             f = n(239),
-            h = n(665);
+            h = n(667);
         s(i.prototype, {
             destructor: function() {
                 this.topLevelType = null, this.nativeEvent = null, this.ancestors.length = 0
@@ -48503,7 +48575,7 @@
     }, function(e, t, n) {
         "use strict";
         var r = n(92),
-            i = n(121),
+            i = n(122),
             o = n(230),
             a = n(233),
             s = n(356),
@@ -48523,7 +48595,7 @@
         e.exports = d
     }, function(e, t, n) {
         "use strict";
-        var r = n(897),
+        var r = n(899),
             i = /\/?>/,
             o = /^<\!\-\-/,
             a = {
@@ -48605,9 +48677,9 @@
         }
         var l = n(11),
             d = n(233),
-            p = (n(123), n(39), n(53), n(93)),
-            f = n(854),
-            h = (n(34), n(900)),
+            p = (n(124), n(39), n(53), n(93)),
+            f = n(856),
+            h = (n(34), n(902)),
             m = (n(4), {
                 Mixin: {
                     _reconcilerInstantiateChildren: function(e, t, n) {
@@ -48777,7 +48849,7 @@
         function i(e, t, n) {
             "function" == typeof e ? e(null) : o.removeComponentAsRefFrom(t, e, n)
         }
-        var o = n(877),
+        var o = n(879),
             a = {};
         a.attachRefs = function(e, t) {
             if (null !== t && "object" == typeof t) {
@@ -48806,7 +48878,7 @@
         var i = n(15),
             o = n(73),
             a = n(170),
-            s = (n(39), n(882)),
+            s = (n(39), n(884)),
             u = [],
             c = {
                 enqueue: function() {}
@@ -49157,7 +49229,7 @@
             }
             return null
         }
-        var o = n(122),
+        var o = n(123),
             a = n(29),
             s = n(17),
             u = n(359),
@@ -49223,19 +49295,19 @@
         }
         var o = n(11),
             a = n(295),
-            s = n(122),
+            s = n(123),
             u = n(17),
-            c = n(887),
-            l = n(888),
+            c = n(889),
+            l = n(890),
             d = n(52),
-            p = n(891),
-            f = n(893),
+            p = n(893),
+            f = n(895),
             h = n(169),
-            m = n(890),
-            v = n(894),
-            g = n(895),
-            y = n(124),
-            _ = n(896),
+            m = n(892),
+            v = n(896),
+            g = n(897),
+            y = n(125),
+            _ = n(898),
             b = n(34),
             w = n(237),
             k = (n(4), {}),
@@ -49420,7 +49492,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(124),
+        var i = n(125),
             o = {
                 relatedTarget: null
             };
@@ -49442,9 +49514,9 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(124),
+        var i = n(125),
             o = n(237),
-            a = n(901),
+            a = n(903),
             s = n(238),
             u = {
                 key: a,
@@ -49473,7 +49545,7 @@
         function r(e, t, n, r) {
             return i.call(this, e, t, n, r)
         }
-        var i = n(124),
+        var i = n(125),
             o = n(238),
             a = {
                 touches: null,
@@ -49557,7 +49629,7 @@
         }
         var i = n(11),
             o = (n(53), n(17)),
-            a = n(123),
+            a = n(124),
             s = n(365);
         n(4), n(10);
         e.exports = r
@@ -49580,7 +49652,7 @@
             var o = (n(231), n(371));
             n(10);
             void 0 !== t && t.env, e.exports = i
-        }).call(t, n(120))
+        }).call(t, n(121))
     }, function(e, t, n) {
         "use strict";
 
@@ -50376,15 +50448,15 @@
         var d = n(0),
             p = n(372),
             f = r(p),
-            h = n(913),
+            h = n(915),
             m = r(h),
-            v = n(914),
+            v = n(916),
             g = r(v),
             y = n(373),
             _ = (r(y), n(164)),
             b = (r(_), n(203)),
             w = r(b),
-            k = n(684),
+            k = n(686),
             E = r(k),
             S = function(e) {
                 return {}
@@ -50461,14 +50533,14 @@
                 }
                 return e
             },
-            u = n(614),
+            u = n(616),
             c = r(u),
             l = n(0),
             d = r(l),
             p = n(1),
             f = r(p),
-            h = n(943),
-            m = (r(h), n(916)),
+            h = n(945),
+            m = (r(h), n(918)),
             v = (f.default.any, f.default.func, f.default.node, {
                 component: "span",
                 childFactory: function(e) {
@@ -50623,7 +50695,7 @@
         e.exports = o
     }, function(e, t, n) {
         "use strict";
-        var r = n(125),
+        var r = n(126),
             i = (n(4), function(e) {
                 var t = this;
                 if (t.instancePool.length) {
@@ -50734,10 +50806,10 @@
             var t = [];
             return c(e, t, null, v.thatReturnsArgument), t
         }
-        var h = n(918),
+        var h = n(920),
             m = n(95),
             v = n(34),
-            g = n(928),
+            g = n(930),
             y = h.twoArgumentPooler,
             _ = h.fourArgumentPooler,
             b = /\/+/g;
@@ -50909,7 +50981,7 @@
             o = n(95),
             a = o.isValidElement,
             s = n(377),
-            u = n(616);
+            u = n(618);
         e.exports = u(i, a, s)
     }, function(e, t, n) {
         "use strict";
@@ -50939,7 +51011,7 @@
         function r(e) {
             return o.isValidElement(e) || i("143"), e
         }
-        var i = n(125),
+        var i = n(126),
             o = n(95);
         n(4);
         e.exports = r
@@ -50980,10 +51052,10 @@
         function o(e, t, n) {
             return null == e ? 0 : i(e, "", t, n)
         }
-        var a = n(125),
+        var a = n(126),
             s = (n(53), n(376)),
-            u = n(924),
-            c = (n(4), n(917)),
+            u = n(926),
+            c = (n(4), n(919)),
             l = (n(10), "."),
             d = ":";
         e.exports = o
@@ -51393,9 +51465,9 @@
         }();
         t.a = x
     }, function(e, t, n) {
-        e.exports = n(935)
+        e.exports = n(937)
     }, function(e, t, n) {
-        var r = n(936);
+        var r = n(938);
         t.operation = function(e) {
             var n = t.timeouts(e);
             return new r(n, {
@@ -51592,16 +51664,16 @@
                     }(), p.setImmediate = r, p.clearImmediate = i
                 }
             }("undefined" == typeof self ? void 0 === e ? this : e : self)
-        }).call(t, n(126), n(120))
+        }).call(t, n(127), n(121))
     }, function(e, t, n) {
-        e.exports = n(939)
+        e.exports = n(941)
     }, function(e, t, n) {
         "use strict";
         (function(e, r) {
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            var i, o = n(940),
+            var i, o = n(942),
                 a = function(e) {
                     return e && e.__esModule ? e : {
                         default: e
@@ -51610,7 +51682,7 @@
             i = "undefined" != typeof self ? self : "undefined" != typeof window ? window : void 0 !== e ? e : r;
             var s = (0, a.default)(i);
             t.default = s
-        }).call(t, n(126), n(173)(e))
+        }).call(t, n(127), n(173)(e))
     }, function(e, t, n) {
         "use strict";
 
@@ -51644,7 +51716,7 @@
             t >= 0 && (e._idleTimeoutId = setTimeout(function() {
                 e._onTimeout && e._onTimeout()
             }, t))
-        }, n(937), t.setImmediate = setImmediate, t.clearImmediate = clearImmediate
+        }, n(939), t.setImmediate = setImmediate, t.clearImmediate = clearImmediate
     }, function(e, t) {
         e.exports = function() {
             var e = document.getSelection();
