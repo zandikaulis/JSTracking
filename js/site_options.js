@@ -974,6 +974,18 @@ window.SiteOptions = {
                 "value": "error"
             }]
         },
+        "43ce4dcb-ef59-489e-a163-685a939cea48": {
+            "name": "clips_sunday_candy",
+            "v": 2122,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "441c3783-aa74-4a33-aa67-80034afe7e89": {
             "name": "ios_vodcast",
             "v": 1598,
@@ -3199,11 +3211,11 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 2118,
+            "v": 2121,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "2.0.9"
+                "value": "2.0.10"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
