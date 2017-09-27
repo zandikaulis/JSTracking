@@ -15681,7 +15681,8 @@ googletag.cmd = googletag.cmd || [],
                 OVERWATCH_DIRECTORY_FILTER: "yes",
                 REQUIEM: "yes",
                 MOBILE_CHECKOUT: "yes",
-                TWILIGHT_MERCH_STORE_LAUNCH: "on"
+                TWILIGHT_MERCH_STORE_LAUNCH: "on",
+                JANEWAY: "yes"
             };
         _.each(Object.keys(s), function(t) {
             o[i[t]] = e.user().then(function(e) {
@@ -20972,8 +20973,9 @@ var recurly = function(e) {
     t.deprecated = s;
     var u = n(31),
         c = (function(e) {
-            e && e.__esModule
-        }(u), n(47)),
+                e && e.__esModule
+            }(u),
+            n(47)),
         l = n(7)("recurly:paypal:strategy:direct");
     t.DirectStrategy = function(e) {
         function t() {
