@@ -2114,6 +2114,18 @@ window.SiteOptions = {
                 "value": "variant2"
             }]
         },
+        "9a6391a8-a115-4875-a0c0-afc34db3d87d": {
+            "name": "BITS_CHECKOUT",
+            "v": 2126,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "9acd1217-f98c-419a-b39a-0e7fb9e5f325": {
             "name": "ios_pipboy_browse_ccus",
             "v": 1544,
