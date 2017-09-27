@@ -614,18 +614,6 @@ window.SiteOptions = {
                 "value": "holdout"
             }]
         },
-        "27ebb243-e247-4868-8619-6959c674fc13": {
-            "name": "NEW_CHECKOUT",
-            "v": 1915,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
-            }]
-        },
         "2858bc04-3f98-4808-a2dd-86555885ca90": {
             "name": "clips_feel_it_coming",
             "v": 983,
@@ -1905,18 +1893,6 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "control"
-            }]
-        },
-        "8ec5564f-4f15-4269-9824-5658a432cbf3": {
-            "name": "NEW_POA",
-            "v": 1927,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
             }]
         },
         "8f5277f3-7583-4fd9-ab09-e5a5c432b12b": {
