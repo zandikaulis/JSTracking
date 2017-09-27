@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".7cc81e680dc7880922b5.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".393af70bb32ecac9151e.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -22412,7 +22412,7 @@
                     l = h.a(!0),
                     d = g.g() === g.n ? null : _;
                 return d = i.playerType === g.c ? y : d, {
-                    app_version: "2017.09.27-222334+8f9488ee291647868778fefe3b707977d3cbabb4",
+                    app_version: "2017.09.27-231342+4603222d84414a8d1270a7a59dde683a6d40f66c",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -29135,20 +29135,32 @@
         }
     }, function(e, t, n) {
         "use strict";
+
+        function r(e) {
+            if (Array.isArray(e)) {
+                for (var t = 0, n = Array(e.length); t < e.length; t++) n[t] = e[t];
+                return n
+            }
+            return Array.from(e)
+        }
         n.d(t, "a", function() {
-            return f
+            return h
         });
-        var r = n(36),
-            i = n.n(r),
-            o = n(284),
-            a = n(6),
-            s = n(12),
-            u = n(20),
-            c = n(196),
-            l = n(99),
-            d = n(26),
-            p = n(138),
-            f = {};
+        var i = n(36),
+            o = n.n(i),
+            a = n(284),
+            s = n(6),
+            u = n(12),
+            c = n(20),
+            l = n(196),
+            d = n(99),
+            p = n(26),
+            f = n(138),
+            h = {},
+            m = {
+                group: "auto",
+                name: "Auto"
+            };
         ! function() {
             function e() {
                 function e() {
@@ -29160,13 +29172,13 @@
                             };
                             var e = 5,
                                 n = setInterval(function() {
-                                    var r = (chrome.cast && chrome.cast.isAvailable, !1);
+                                    var r = !(!chrome.cast || !chrome.cast.isAvailable);
                                     (r || e <= 0) && (t.resolve(r), clearInterval(n)), e--
                                 }, 1e3)
                         }
                     else t.resolve(!1)
                 }
-                var t = new o.a;
+                var t = new a.a;
                 return $.ajax({
                     url: "https://www.gstatic.com/cv/js/sender/v1/cast_sender.js",
                     dataType: "script",
@@ -29177,177 +29189,207 @@
 
             function t(e) {
                 if (e) {
-                    var t = new chrome.cast.SessionRequest(a.D),
-                        n = new chrome.cast.ApiConfig(t, h, v, chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED);
+                    var t = new chrome.cast.SessionRequest(s.D),
+                        n = new chrome.cast.ApiConfig(t, v, y, chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED);
                     chrome.cast.initialize(n)
                 }
             }
 
-            function r() {
-                R = !1, w()
-            }
-
-            function h(e) {
-                T = e, T.addUpdateListener(m), x && M && _()
-            }
-
-            function m() {
-                switch (T.status) {
-                    case chrome.cast.SessionStatus.CONNECTED:
-                        var e = T.receiver;
-                        C.volume !== e.volume.level && (C.volume = e.volume.level, P.emit(u.r)), C.muted !== e.volume.muted && (C.muted = e.volume.muted, P.emit(u.r));
-                        break;
-                    case chrome.cast.SessionStatus.STOPPED:
-                        g(null), T.removeUpdateListener(m), T = null, I = !1, w()
-                }
+            function i() {
+                j = !1, S()
             }
 
             function v(e) {
-                R = e === chrome.cast.ReceiverAvailability.AVAILABLE, w()
-            }
-
-            function g(e) {
-                O && O.removeUpdateListener(y), O = e, I = !1, w(), O && O.addUpdateListener(y)
-            }
-
-            function y() {
-                C.currentTime !== O.currentTime && (C.currentTime = O.currentTime, P.emit(u.o)), C.volume !== O.volume.level && (C.volume = O.volume.level, P.emit(u.r)), C.muted !== O.volume.muted && (C.muted = O.volume.muted, P.emit(u.r)), C.playbackRate !== O.playbackRate && (C.playbackRate = O.playbackRate, P.emit(u.s));
-                var e = O.playerState;
-                C.playerState !== O.playerState && (e === chrome.cast.media.PlayerState.PLAYING ? P.emit(u.i) : e === chrome.cast.media.PlayerState.PAUSED ? P.emit(u.q) : chrome.cast.media.PlayerState.BUFFERING, C.playerState = O.playerState)
-            }
-
-            function _() {
-                I = !0, w(), n.i(s.d)(x).then(function(e) {
-                    var t = new chrome.cast.media.MediaInfo(M, "application/x-mpegurl");
-                    t.streamType = chrome.cast.media.StreamType.LIVE;
-                    var n = new chrome.cast.media.GenericMediaMetadata;
-                    n.subtitle = e.game, n.title = e.display_name, n.images = [new chrome.cast.Image(e.logo)], t.metadata = n, t.customData = {
-                        channel: x
-                    };
-                    var r = new chrome.cast.media.LoadRequest(t);
-                    r.autoplay = !0, T.loadMedia(r, g)
-                }, function(e) {
-                    T.stop(), b(e)
+                R = e, R.addUpdateListener(g), I && F ? w() : L && F && k(), R.addMessageListener("urn:x-cast:com.twitch.custom", function(e, t) {
+                    var n = JSON.parse(t);
+                    n.qualities && (V = n.qualities, O.emit(c.g))
                 })
             }
 
-            function b(e) {
-                e && (A = e, P.emit(u.b))
+            function g() {
+                switch (R.status) {
+                    case chrome.cast.SessionStatus.CONNECTED:
+                        var e = R.receiver;
+                        x.volume !== e.volume.level && (x.volume = e.volume.level, O.emit(c.r)), x.muted !== e.volume.muted && (x.muted = e.volume.muted, O.emit(c.r));
+                        break;
+                    case chrome.cast.SessionStatus.STOPPED:
+                        _(null), R.removeUpdateListener(g), R = null, D = !1, S()
+                }
+            }
+
+            function y(e) {
+                j = e === chrome.cast.ReceiverAvailability.AVAILABLE, S()
+            }
+
+            function _(e) {
+                A && A.removeUpdateListener(b), A = e, D = !1, S(), A && (A.addUpdateListener(b), N && (A.seek(N), N = null))
+            }
+
+            function b() {
+                x.currentTime !== A.currentTime && (x.currentTime = A.currentTime, O.emit(c.o)), x.volume !== A.volume.level && (x.volume = A.volume.level, O.emit(c.r)), x.muted !== A.volume.muted && (x.muted = A.volume.muted, O.emit(c.r)), x.playbackRate !== A.playbackRate && (x.playbackRate = A.playbackRate, O.emit(c.s));
+                var e = A.playerState;
+                x.playerState !== A.playerState && (e === chrome.cast.media.PlayerState.PLAYING ? O.emit(c.i) : e === chrome.cast.media.PlayerState.PAUSED ? O.emit(c.q) : chrome.cast.media.PlayerState.BUFFERING, x.playerState = A.playerState)
             }
 
             function w() {
-                var e = L,
-                    t = N;
-                O ? (L = c.a, N = l.b, P.emit(u.g)) : I ? (L = c.a, N = l.d) : R ? (L = c.d, N = l.d) : (L = c.b, N = l.d), L !== e && L === c.a && P.emit(u.c), N !== t && (N === l.b ? P.emit(u.a) : N === l.d && P.emit(u.m)), P.emit(d.d, k())
+                D = !0, S(), n.i(u.d)(I).then(function(e) {
+                    var t = new chrome.cast.media.MediaInfo(F, "application/x-mpegurl");
+                    t.streamType = chrome.cast.media.StreamType.LIVE;
+                    var n = new chrome.cast.media.GenericMediaMetadata;
+                    n.subtitle = e.game, n.title = e.display_name, n.images = [new chrome.cast.Image(e.logo)], t.metadata = n, t.customData = {
+                        channel: I,
+                        analytics: {
+                            chromecast_sender: "player-ui-web"
+                        }
+                    };
+                    var r = new chrome.cast.media.LoadRequest(t);
+                    r.autoplay = !0, R.loadMedia(r, _)
+                }, function(e) {
+                    R.stop(), E(e)
+                })
             }
 
             function k() {
-                return N === l.d ? L === c.b ? p.c : L === c.d ? p.d : p.b : p.a
+                D = !0, S(), n.i(u.e)(L).then(function(e) {
+                    var t = new chrome.cast.media.MediaInfo(F, "application/x-mpegurl");
+                    t.streamType = chrome.cast.media.StreamType.OTHER;
+                    var n = new chrome.cast.media.GenericMediaMetadata;
+                    n.subtitle = e.game, n.title = e.title, n.images = [new chrome.cast.Image(e.preview)], t.metadata = n, t.customData = {
+                        vod_id: L,
+                        analytics: {
+                            chromecast_sender: "player-ui-web"
+                        }
+                    };
+                    var r = new chrome.cast.media.LoadRequest(t);
+                    r.autoplay = !0, R.loadMedia(r, _)
+                }, function(e) {
+                    R.stop(), E(e)
+                })
             }
 
             function E(e) {
-                b(e)
+                e && (M = e, O.emit(c.b))
             }
-            var S = f,
-                P = new i.a,
-                C = {},
-                T = void 0,
-                O = void 0,
-                x = void 0,
+
+            function S() {
+                var e = U,
+                    t = B;
+                A ? (U = l.a, B = d.b) : D ? (U = l.a, B = d.d) : j ? (U = l.d, B = d.d) : (U = l.b, B = d.d), U !== e && U === l.a && O.emit(c.c), B !== t && (B === d.b ? O.emit(c.a) : B === d.d && O.emit(c.m)), O.emit(p.d, P())
+            }
+
+            function P() {
+                return B === d.d ? U === l.b ? f.c : U === l.d ? f.d : f.b : f.a
+            }
+
+            function C(e) {
+                E(e)
+            }
+            var T = h,
+                O = new o.a,
+                x = {},
                 R = void 0,
                 A = void 0,
                 I = void 0,
                 L = void 0,
                 N = void 0,
-                j = !1,
-                M = null;
-            S.init = function() {
-                P.removeAllListeners(), j || (j = !0, r(), e().then(t))
-            }, S.destroy = function() {}, S.addEventListener = function(e, t) {
-                P.on(e, t)
-            }, S.removeEventListener = function(e, t) {
-                P.off(e, t)
-            }, S.getNetworkProfile = function() {
+                j = void 0,
+                M = void 0,
+                D = void 0,
+                U = void 0,
+                B = void 0,
+                q = !1,
+                F = null,
+                V = [];
+            T.init = function() {
+                O.removeAllListeners(), q || (q = !0, i(), e().then(t))
+            }, T.destroy = function() {}, T.addEventListener = function(e, t) {
+                O.on(e, t)
+            }, T.removeEventListener = function(e, t) {
+                O.off(e, t)
+            }, T.getNetworkProfile = function() {
                 return []
-            }, S.getError = function() {
-                return A
-            }, S.getSrc = function() {}, S.setSrc = function() {}, S.getNetworkState = function() {
-                return L
-            }, S.load = function() {
-                chrome.cast.requestSession(h, E)
-            }, S.getBuffered = function() {
+            }, T.getError = function() {
+                return M
+            }, T.getSrc = function() {}, T.setSrc = function() {}, T.getNetworkState = function() {
+                return U
+            }, T.load = function() {
+                chrome.cast.requestSession(v, C)
+            }, T.getBuffered = function() {
                 return {
                     length: 0
                 }
-            }, S.getReadyState = function() {
-                return N
-            }, S.getSeeking = function() {}, S.getCurrentTime = function() {
-                if (O) return O.getEstimatedTime()
-            }, S.setCurrentTime = function(e) {
-                if (O) {
-                    var t = new chrome.cast.media.SeekRequest;
-                    t.time = e, O.seek(t)
-                }
-            }, S.getDuration = function() {}, S.getPaused = function() {
-                if (O) return O.playerState === chrome.cast.media.PlayerState.PAUSED
-            }, S.getPlaybackRate = function() {
+            }, T.getReadyState = function() {
+                return B
+            }, T.getSeeking = function() {}, T.getCurrentTime = function() {
+                if (A) return A.getEstimatedTime()
+            }, T.setCurrentTime = function(e) {
+                N = new chrome.cast.media.SeekRequest, N.currentTime = e, A && (A.seek(N), N = null)
+            }, T.getDuration = function() {}, T.getPaused = function() {
+                if (A) return A.playerState === chrome.cast.media.PlayerState.PAUSED
+            }, T.getPlaybackRate = function() {
                 return 1
-            }, S.setPlaybackRate = function() {}, S.getPlayed = function() {}, S.getEnded = function() {}, S.getAutoplay = function() {}, S.setLoop = function() {}, S.play = function() {
-                if (O) {
+            }, T.setPlaybackRate = function() {}, T.getPlayed = function() {}, T.getEnded = function() {}, T.getAutoplay = function() {}, T.setLoop = function() {}, T.play = function() {
+                if (A) {
                     var e = new chrome.cast.media.PlayRequest;
-                    O.play(e)
-                } else S.load()
-            }, S.pause = function() {
-                if (O) {
+                    A.play(e)
+                } else T.load()
+            }, T.pause = function() {
+                if (A) {
                     var e = new chrome.cast.media.PauseRequest;
-                    O.pause(e)
+                    A.pause(e)
                 }
-            }, S.getControls = function() {}, S.setControls = function() {}, S.elapsedTime = function() {}, S.getVolume = function() {
-                if (O) return O.volume.level
-            }, S.setVolume = function(e) {
-                if (O) {
+            }, T.getControls = function() {}, T.setControls = function() {}, T.elapsedTime = function() {}, T.getVolume = function() {
+                if (A) return A.volume.level
+            }, T.setVolume = function(e) {
+                if (A) {
                     var t = new chrome.cast.Volume(e, null),
                         n = new chrome.cast.media.VolumeRequest(t);
-                    O.setVolume(n)
+                    A.setVolume(n)
                 }
-            }, S.getMuted = function() {
-                return O ? O.volume.muted : T ? T.receiver.volume.muted : void 0
-            }, S.setMuted = function(e) {
-                if (O) {
+            }, T.getMuted = function() {
+                return A ? A.volume.muted : R ? R.receiver.volume.muted : void 0
+            }, T.setMuted = function(e) {
+                if (A) {
                     var t = new chrome.cast.Volume(null, e),
                         n = new chrome.cast.media.VolumeRequest(t);
-                    O.setVolume(n)
+                    A.setVolume(n)
                 }
-            }, S.getQuality = function() {
+            }, T.getQuality = function() {
                 return "auto"
-            }, S.setQuality = function() {}, S.getQualities = function() {
-                return [{
-                    bandwidth: -1,
-                    resolution: "0x0",
-                    group: "auto",
-                    name: "Auto"
-                }]
-            }, S.getChannel = function() {
-                return x
-            }, S.setChannel = function(e, t) {
-                x = e, t.castStreamUrl.then(function(e) {
-                    M = e, T && x && M && _()
+            }, T.setQuality = function(e) {
+                R && R.sendMessage("urn:x-cast:com.twitch.custom", {
+                    quality: e
                 })
-            }, S.getVideo = function() {
+            }, T.getQualities = function() {
+                var e = function(e) {
+                    return Object.assign({}, e, {
+                        bandwidth: e.bitrate
+                    })
+                };
+                return [m].concat(r(V)).map(e)
+            }, T.getChannel = function() {
+                return I
+            }, T.setChannel = function(e, t) {
+                I = e, t.streamUrl.then(function(e) {
+                    F = e, R && I && F && w()
+                })
+            }, T.getVideo = function() {
                 return null
-            }, S.setVideo = function() {
-                x = null, M = null
-            }, S.getStats = function() {
+            }, T.setVideo = function(e, t) {
+                L = e, t.streamUrl.then(function(e) {
+                    F = e, R && L && F && k()
+                })
+            }, T.getStats = function() {
                 return {}
-            }, S.getVideoInfo = function() {
+            }, T.getVideoInfo = function() {
                 return {}
-            }, S.getCaption = function() {}, S.getBackend = function() {
+            }, T.getCaption = function() {}, T.getBackend = function() {
                 return "chromecast"
-            }, S.stop = function() {
-                T && T.stop()
-            }, S.getDevice = function() {
-                if (T && T.receiver) return T.receiver.friendlyName
-            }, S.absAvailable = function() {}
+            }, T.stop = function() {
+                R && R.stop()
+            }, T.getDevice = function() {
+                if (R && R.receiver) return R.receiver.friendlyName
+            }, T.absAvailable = function() {}
         }()
     }, function(e, t, n) {
         "use strict";
