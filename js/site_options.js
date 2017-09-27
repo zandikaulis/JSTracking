@@ -2282,6 +2282,18 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "a88d97b7-ec93-4724-935e-e93f166df82f": {
+            "name": "clips_feel_good",
+            "v": 2128,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "a9f7f84a-76fd-44f0-80b1-9421e714a1b7": {
             "name": "ios_clips_paris",
             "v": 1133,
