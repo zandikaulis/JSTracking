@@ -3190,16 +3190,16 @@ window.SiteOptions = {
         },
         "ec57d33c-2d58-4088-9ff6-617418a6cf1b": {
             "name": "citadel",
-            "v": 2129,
+            "v": 2133,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 10,
                 "value": "10"
             }, {
-                "weight": 100,
+                "weight": 80,
                 "value": "no"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "15"
             }, {
                 "weight": 0,
