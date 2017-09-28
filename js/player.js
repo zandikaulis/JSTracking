@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".393af70bb32ecac9151e.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".bdb76d66957362db4074.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -14441,7 +14441,7 @@
                         var e = this;
                         this._store.getState().experiments.get(c.r).then(function(t) {
                             "no" !== t && (e._timer = new s.a(function() {
-                                e._store.dispatch(n.i(o.d)(a.c, 30, "TIMER_AD"))
+                                e._store.dispatch(n.i(o.d)(a.c, 30, !1, 0, "TIMER_AD"))
                             }, 60 * parseInt(t, 10) * 1e3, window), e._initSubscribes())
                         })
                     }
@@ -22412,7 +22412,7 @@
                     l = h.a(!0),
                     d = g.g() === g.n ? null : _;
                 return d = i.playerType === g.c ? y : d, {
-                    app_version: "2017.09.27-231342+4603222d84414a8d1270a7a59dde683a6d40f66c",
+                    app_version: "2017.09.28-001843+7b5e1394180c505ccc971a44f5f05a8f52aea82e",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
