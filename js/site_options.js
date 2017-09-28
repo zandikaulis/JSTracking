@@ -964,7 +964,7 @@ window.SiteOptions = {
         },
         "43ce4dcb-ef59-489e-a163-685a939cea48": {
             "name": "clips_sunday_candy",
-            "v": 2122,
+            "v": 2131,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -2992,16 +2992,16 @@ window.SiteOptions = {
         },
         "dadbbe2e-7a79-4d10-8d29-cbff8101ac30": {
             "name": "clips_make_me",
-            "v": 1993,
+            "v": 2130,
             "t": 1,
             "groups": [{
-                "weight": 1,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 1,
+                "weight": 100,
                 "value": "variant1"
             }, {
-                "weight": 1,
+                "weight": 0,
                 "value": "variant2"
             }]
         },
@@ -3190,16 +3190,16 @@ window.SiteOptions = {
         },
         "ec57d33c-2d58-4088-9ff6-617418a6cf1b": {
             "name": "citadel",
-            "v": 2127,
+            "v": 2129,
             "t": 1,
             "groups": [{
-                "weight": 10,
+                "weight": 0,
                 "value": "10"
             }, {
-                "weight": 80,
+                "weight": 100,
                 "value": "no"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "15"
             }, {
                 "weight": 0,
