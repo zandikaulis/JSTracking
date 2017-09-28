@@ -964,13 +964,13 @@ window.SiteOptions = {
         },
         "43ce4dcb-ef59-489e-a163-685a939cea48": {
             "name": "clips_sunday_candy",
-            "v": 2131,
+            "v": 2138,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "variant1"
             }]
         },
