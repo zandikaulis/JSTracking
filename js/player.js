@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".a8efb77d26bc11623bd6.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".d540359f28a377855935.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -7031,7 +7031,7 @@
                 function e() {
                     var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         n = arguments[1];
-                    i(this, e), this.store = n, this._options = t, this._mediaPlayer = null, this._eventEmitter = new l.a, this._apiCallQueue = [], this._cache = {}, this._readyState = w.d, this._networkState = k.c, this._hasRetried = !1, this._src = "", this._currentCaptionData = {}, this._mediaPlayerLogLevel = t["cvp-log"] || "error", this.initialize()
+                    i(this, e), this.store = n, this._options = t, this._mediaPlayer = null, this._eventEmitter = new l.a, this._apiCallQueue = [], this._cache = {}, this._readyState = w.d, this._networkState = k.c, this._fireLoadedMetadata = !1, this._hasRetried = !1, this._src = "", this._currentCaptionData = {}, this._mediaPlayerLogLevel = t["cvp-log"] || "error", this.initialize()
                 }
                 return P(e, [{
                     key: "initialize",
@@ -7448,7 +7448,7 @@
                                 t._eventEmitter.emit(o.r, i), t._cache.currentQuality = e
                             } else t._cache.currentQuality = e, t._eventEmitter.emit(o.k, e)
                         }), r.addEventListener(e.PlayerEvent.DURATION_CHANGED, function() {
-                            t._eventEmitter.emit(u.n)
+                            t._fireLoadedMetadata && (t._fireLoadedMetadata = !1, t._eventEmitter.emit(u.a)), t._eventEmitter.emit(u.n)
                         }), r.addEventListener(e.PlayerEvent.ERROR, function(r) {
                             var i = r.type,
                                 o = r.source;
@@ -7505,7 +7505,7 @@
                             var s = h()(t._mediaPlayer.getManifestInfo(), function(e, t, n) {
                                 return e[n.toLowerCase().replace(/-/g, "_")] = t, e
                             }, {});
-                            t._eventEmitter.emit(o.e, s), t._eventEmitter.emit(u.g), t._eventEmitter.emit(u.a), t._cache.currentQuality = r.getQuality()
+                            t._eventEmitter.emit(o.e, s), t._eventEmitter.emit(u.g), t._fireLoadedMetadata = !0, t._cache.currentQuality = r.getQuality()
                         }), r.addEventListener(e.MetadataEvent.ID3, function(e) {
                             var n = p()(e, function(e) {
                                     return "TOFN" === e.id
@@ -22421,7 +22421,7 @@
                     l = h.a(!0),
                     d = g.h() === g.o ? null : _;
                 return d = i.playerType === g.c ? y : d, {
-                    app_version: "2017.09.28-221146+01b8b6699a4ced9ffb267f670168ac7778972681",
+                    app_version: "2017.09.28-232918+69458f94480520a1e6f8a04249645a42871f7d85",
                     flash_version: a,
                     referrer_url: s,
                     referrer_host: u.host,
