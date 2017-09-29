@@ -1568,6 +1568,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "6e2a89f6-a1e8-45c0-8cc9-77e1fc5590ad": {
+            "name": "ios_raids_ads",
+            "v": 2149,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "test"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "6e2f439b-916a-40b7-b1be-e82b284fd0bb": {
             "name": "offline_experience",
             "v": 1521,
@@ -2952,6 +2964,18 @@ window.SiteOptions = {
             }, {
                 "weight": 1,
                 "value": "active"
+            }]
+        },
+        "d5ceeac2-4734-46f3-a1a6-8edba1c6839c": {
+            "name": "android_raids_ads",
+            "v": 2150,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "active"
+            }, {
+                "weight": 100,
+                "value": "control"
             }]
         },
         "d6386417-a815-4c24-a21b-20e78d5a9e07": {
