@@ -415,19 +415,19 @@ window.SiteOptions = {
         },
         "198744b6-e96f-413b-aaf6-eab0128c9833": {
             "name": "signup_redirect_search",
-            "v": 2072,
+            "v": 2153,
             "t": 2,
             "groups": [{
-                "weight": 25,
+                "weight": 0,
                 "value": "games"
             }, {
-                "weight": 25,
+                "weight": 0,
                 "value": "popular"
             }, {
-                "weight": 25,
+                "weight": 0,
                 "value": "search"
             }, {
-                "weight": 25,
+                "weight": 100,
                 "value": "control"
             }]
         },
