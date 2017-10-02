@@ -1079,6 +1079,18 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "4994d68b-77d3-41f3-bebb-64b96c753b43": {
+            "name": "bebo_broadcasting",
+            "v": 2162,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "49f40b88-2044-409d-b306-2eb308489a60": {
             "name": "Twilight_Upsell",
             "v": 2021,
@@ -1546,13 +1558,13 @@ window.SiteOptions = {
         },
         "6cc85744-ded0-481a-a6ea-38c4b13cea64": {
             "name": "ios_aax",
-            "v": 1951,
+            "v": 2160,
             "t": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 50,
                 "value": "active"
             }]
         },
@@ -2056,13 +2068,13 @@ window.SiteOptions = {
         },
         "991479b1-3c15-4fd4-a225-28c1994008cd": {
             "name": "ios_chomments_posting",
-            "v": 1884,
+            "v": 2161,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 10,
                 "value": "active"
             }, {
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }]
         },
