@@ -640,14 +640,14 @@ window.SiteOptions = {
         },
         "298a5f39-228a-487a-ad06-422c18458403": {
             "name": "twilight_merch_store_launch",
-            "v": 2056,
-            "t": 2,
+            "v": 2159,
+            "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "off"
+                "value": "on"
             }, {
                 "weight": 0,
-                "value": "on"
+                "value": "true"
             }]
         },
         "2be750b2-f97a-41e5-a699-0d934cefc05c": {
