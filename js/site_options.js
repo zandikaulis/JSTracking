@@ -1799,6 +1799,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "81bb4059-ff06-446e-86f4-d6e59ae0fe21": {
+            "name": "android_live_tab",
+            "v": 2173,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "821d3e5f-5836-48d6-b203-a7973d6f097c": {
             "name": "android_raids",
             "v": 1998,
@@ -2080,13 +2092,13 @@ window.SiteOptions = {
         },
         "991479b1-3c15-4fd4-a225-28c1994008cd": {
             "name": "ios_chomments_posting",
-            "v": 2169,
+            "v": 2172,
             "t": 1,
             "groups": [{
-                "weight": 40,
+                "weight": 100,
                 "value": "active"
             }, {
-                "weight": 60,
+                "weight": 0,
                 "value": "control"
             }]
         },
