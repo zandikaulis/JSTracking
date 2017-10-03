@@ -443,6 +443,18 @@ window.SiteOptions = {
                 "value": "b"
             }]
         },
+        "19f5492f-19f1-430c-8f22-1db077308950": {
+            "name": "ios_broadcast_abs",
+            "v": 2168,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "enabled"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3": {
             "name": "Pineapple",
             "v": 892,
@@ -1080,8 +1092,8 @@ window.SiteOptions = {
             }]
         },
         "4994d68b-77d3-41f3-bebb-64b96c753b43": {
-            "name": "bebo_broadcasting",
-            "v": 2162,
+            "name": "BROADCAST_SOFTWARE",
+            "v": 2166,
             "t": 2,
             "groups": [{
                 "weight": 100,
@@ -1165,11 +1177,11 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
-            "v": 2155,
+            "v": 2171,
             "t": 1,
             "groups": [{
                 "weight": 1,
-                "value": "//video-edge-1139ac.sjc01.hls.ttvnw.net/v1/playlist/CqwzAoSLqz_R5gjNzKifiRKvtimFZzMr7d-Ju_8SxEMf9ys-ntYMcRMBZ8JkhTLUWAYiuxllKR7MdWtDLQFQgApmyCsA0WiPS_Fk9oH8N7jqcO3RVvRkd3RCuVlYrXoo08A5yPtH1ztvcUwxBtp0drmI5CDaMIBVX0BPczsnW8lUmvQKmwqsUhuORJhV8jJABs3GTqeKdFNLQ1C8ZPDXJBK7-jXqeCV2E43fMCTUgTkHUd08OnjRxTplTu4muG7qsAOpELBIkWVxjlibTbtjOqOIDnOnUssYp7IJsy-l0v7ab3oG6S4SviBNf1LnB0faYQXHRDy5kVRA3dNRGyRSMwr4dpowQHFlUzkRbN9mXdHflHizIKtJ830zjNf7JITZZvrKWWMI3ot0ZaoKdsmHSetc1CUqn56sCdfJlvZZFqdjMLmzrDXU2bAIKKvwR2CRNV.m3u8"
+                "value": "//video-edge-16fa0a.sjc01.hls.ttvnw.net/v1/playlist/CuBszRn5pTAfjHyMfQA-xtvZWdaZ2MT4KNgr2m6kzQSbmJ267gjP6Xn8C7nNIE7dLU52ziN3SC41_uWiZmc8A71JSCJN-u3PFR1ZdN0k0OUc87L8jlzaHMM_FwckuvbxmAS4s-AR58CtZzlkz57xkWRCG5E_qdMCLUB0kBlg2XJaznwFEPNrPZh6xoSPz4gTh3pWMKvIifZLBcv8_dR_Yx6xjnWIcMw1vFEmVoJ40zSCdEWqkAWHAqP5OOR9gMGHtArXXy3bkVLgy51qulwrpFxArnt0qkgCxP8yXxbkg58bnIk5Q00sNwusevpdDvTLj4mOV7sEvfXhOELEvxk1y4U6tmnv7vNfRpOpXQl_w-OYT77bLoFBys-m7evgCz2z328w2u5T5rHUzNP3qd17Fjyt01rqszVXms2oBcHnvEJwvjLtSUegrKFa0YKw.m3u8"
             }]
         },
         "4bdb6678-2626-466f-bb25-e566dec11354": {
@@ -1486,7 +1498,7 @@ window.SiteOptions = {
         },
         "68ca29e7-fdd0-43f3-b3f4-9b97cf1341c0": {
             "name": "ios_ipad_optimized_screens",
-            "v": 2093,
+            "v": 2163,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -2068,13 +2080,13 @@ window.SiteOptions = {
         },
         "991479b1-3c15-4fd4-a225-28c1994008cd": {
             "name": "ios_chomments_posting",
-            "v": 2161,
+            "v": 2169,
             "t": 1,
             "groups": [{
-                "weight": 10,
+                "weight": 40,
                 "value": "active"
             }, {
-                "weight": 90,
+                "weight": 60,
                 "value": "control"
             }]
         },
@@ -3053,6 +3065,18 @@ window.SiteOptions = {
                 "value": "experiment"
             }]
         },
+        "d932e71d-23b9-4562-a2d3-2c57761cbfc6": {
+            "name": "clips_love_story",
+            "v": 2170,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "dadbbe2e-7a79-4d10-8d29-cbff8101ac30": {
             "name": "clips_make_me",
             "v": 2130,
@@ -3383,6 +3407,18 @@ window.SiteOptions = {
                 "value": "yes"
             }, {
                 "weight": 0,
+                "value": "no"
+            }]
+        },
+        "f7249378-b153-4612-bd09-972fbb0b0b7e": {
+            "name": "TWILIGHT_ACHIEVE",
+            "v": 2167,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
                 "value": "no"
             }]
         },
