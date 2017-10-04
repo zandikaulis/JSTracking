@@ -790,13 +790,13 @@ window.SiteOptions = {
         },
         "33d53034-cd8b-408f-abe7-e740f2fec303": {
             "name": "Hearthstone Directory Filter",
-            "v": 1832,
+            "v": 2182,
             "t": 1,
             "groups": [{
-                "weight": 95,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "no"
             }]
         },
@@ -1177,11 +1177,11 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
-            "v": 2171,
+            "v": 2180,
             "t": 1,
             "groups": [{
                 "weight": 1,
-                "value": "//video-edge-16fa0a.sjc01.hls.ttvnw.net/v1/playlist/CuBszRn5pTAfjHyMfQA-xtvZWdaZ2MT4KNgr2m6kzQSbmJ267gjP6Xn8C7nNIE7dLU52ziN3SC41_uWiZmc8A71JSCJN-u3PFR1ZdN0k0OUc87L8jlzaHMM_FwckuvbxmAS4s-AR58CtZzlkz57xkWRCG5E_qdMCLUB0kBlg2XJaznwFEPNrPZh6xoSPz4gTh3pWMKvIifZLBcv8_dR_Yx6xjnWIcMw1vFEmVoJ40zSCdEWqkAWHAqP5OOR9gMGHtArXXy3bkVLgy51qulwrpFxArnt0qkgCxP8yXxbkg58bnIk5Q00sNwusevpdDvTLj4mOV7sEvfXhOELEvxk1y4U6tmnv7vNfRpOpXQl_w-OYT77bLoFBys-m7evgCz2z328w2u5T5rHUzNP3qd17Fjyt01rqszVXms2oBcHnvEJwvjLtSUegrKFa0YKw.m3u8"
+                "value": "//video-edge-b9102a.sjc01.hls.ttvnw.net/v1/playlist/Cp94i42SOMRTv4cZN0xmtc3_oe_4dWZs-oxjSEyOvp3MpX1MZaShKCbWzy5Mvwzjsj-EHBTLDLInagf-P6x3FDQqvDZVccfZzXnjoJM_eBb_ptyy4j95lYabbXdnVFPU69CIlpSsvSN74yZe9QLlD_92irsDxQea6RgWggBuJQGWg85UNRsnnq_MhOXmlfyDjYKfzCxkdD_0IBTKgtrRKbIyxUUXFAVd6rNA8e2OaCuefs_X9k73sq_UBZ09iNKkeSyPpu-BGzYAl58tEQ1IYEdIHYfEiVqfMtnyJmU-0LjSW7dekslzHpooHXzorM6uzJIb7xdgCThSm0Mim0FGpvpAnKNwzZCW6pNXM_O4ImB4IIeoQZVGlYWHUR6N6WmcgJRgnkB2Q0GIWlPV6wOMZv5lCSel7zeGFkGGPDMlF1F7fhEBIrqU9PxXZKmyGjmlFQjNd96Qw0W.m3u8"
             }]
         },
         "4bdb6678-2626-466f-bb25-e566dec11354": {
@@ -1233,6 +1233,18 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "yes"
+            }]
+        },
+        "4dbc0ece-9392-421b-bf3d-7ace54428241": {
+            "name": "ios_social_t1_tab",
+            "v": 2179,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "enabled"
+            }, {
+                "weight": 100,
+                "value": "control"
             }]
         },
         "4e9d0a3c-4f43-4817-8db4-ac060fc32b74": {
@@ -1329,6 +1341,27 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "control"
+            }]
+        },
+        "54131814-150f-4135-994e-9f8085e00340": {
+            "name": "android_videoplayer_v1",
+            "v": 2174,
+            "t": 1,
+            "groups": [{
+                "weight": 5,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "native"
+            }, {
+                "weight": 5,
+                "value": "playercore"
+            }, {
+                "weight": 88,
+                "value": "exoplayer"
+            }, {
+                "weight": 1,
+                "value": "exoplayer_2"
             }]
         },
         "54e455b2-9854-4c55-b926-cfadbff49324": {
@@ -1618,13 +1651,13 @@ window.SiteOptions = {
         },
         "6fffb6c6-19d4-4172-980f-498079d99b9c": {
             "name": "Overwatch Directory Filter",
-            "v": 1831,
+            "v": 2181,
             "t": 1,
             "groups": [{
-                "weight": 95,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "no"
             }]
         },
@@ -3310,11 +3343,14 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 2121,
+            "v": 2176,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "2.0.10"
+            }, {
+                "weight": 50,
+                "value": "2.0.11"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
@@ -3336,6 +3372,18 @@ window.SiteOptions = {
             }, {
                 "weight": 80,
                 "value": "yes_play_1050"
+            }]
+        },
+        "ef25ca44-13bd-4e89-99d2-f9939c013fec": {
+            "name": "twilight_streamer_trailers",
+            "v": 2178,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "on"
             }]
         },
         "efe4cedd-7ea4-4d78-a9e4-5fad8dd9de79": {
