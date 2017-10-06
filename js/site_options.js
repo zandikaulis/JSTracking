@@ -15,7 +15,7 @@ window.SiteOptions = {
     "secure_login_hostport": "secure-login.twitch.tv",
     "mixpanel_token": "809576468572134f909dffa6bd0dcfcf",
     "following_hosts_experiment": true,
-    "creative_featured_channels": "aws,wavedashgames,jimlee,schoolism,elpusherman,murs,kanoelani_art,kohseart,theluckmusic,umiiru,daradef,jonathanong77,make,banzaibaby,thecreativejenn,albertfisk,reidf,heycheri,raquelily,jonmakesbeats,karli_woods,hendoart,littlesparkz,andyraecosplay,viciousfool,vulpsie,vieparlafoi,raydevito,firstupdatesnow,vorgowest,backstoryevents,kindredconcepts,firstinspires1,firstinspires2,firstinspires3,firstinspires4,raidmaxtv,geekchichq,danielle_denicola,tashnarr,aprilgloria,timsww,themindbendersdotcom,alecsteele,punchplanetgame,thebluemuzzy,classicalcast,rattenni,neytiriix,gleemp,volpinprops,thenatureofcomics,ellimacssfx,fmatteatsmochi,davecavedraws,r1sh,prozect,pretzlcosplay,devi_cat,finnpaints,luisfcarrasco,timsww,safehouse,rachtalin,blingsquaredcuteglass,andrewdft,aerosimgaming,ses_dev,britandco,sandexperiment,kennycosplaystuff,hajrameeks,dr_213,p00se2,kayosgirl,cyborgshadow,captsugarspice,dwayne_harty,pennyarcade,quatum_enigmant,zfischerart,moniquereneeart,kaypikefashion,yelainamaycosplay,jordanhanz,patrickrothfuss,johanochnystrom,superdeluxe,merrycontrerry,mintpotion,echosith,kmichruss,peroroh,tinyteee,suchikuchi,elvenaimee,kirkwoodworking,fiercekittenz,sceneofactionmusic,theprinceoffairfield,sidecarangel,djproject46,llanilek,wickedbowie,pixologic,battlebots,jasonyangviolin,ignaceu,revchumley,jarmanprops,gary_bernhardt,drewmsmith,unitytech,volitionlive,jediwinemaster32,somuchmonsters,viking_lass,elvenaimee,drumpunk100,app1ecrisp,richiix27,graceandfirefly,ladeedanger,laughingmanatee,linvalin,simply_jxn,tommycastilloatelier,proletariat_inc,propgame,narcosvszombies,kattbotics,mudflapofficial,darylcagle,skyhook,jjriverband,douplex,thatdanishguy,morwic,itswoofy,shannanina,trippler999,miniappl3,grigoriypeppo,kinggrim,slickentertainmentinc,handmade_hero,hustle_man,krzjn,moatdd,robserob,officialbartlet,dasmehdi,sharyl_sykora,devwars,2daywithpatrickj,voxicon,almightysavo,amouranth,dawah200,invenatrix,amethylia,geitmeise,coco_the_louder,grekklon,aricegirl,queenraykel,dream_ouji,gueneveres,chickentam,shanesemler,serdechny,philthyturtle,yurekb,kashou_,midnight_orchid,mothteeth,hc900,mete0ryt,drunkiegaming,diver__,frankiepixelshow,siddious67,wizard_fu,vendelo,moltenink,lcfinch,moanmei,anna_verhoog,macsmithvideo,marcussakoda,violetlake,bryanmarktaylor,triogaming0414,gafinespline,amelyth,humbleego,twigglybits,letsrobot,wardragonsgame,culprate,wander_ex,stronkgamer,arconyx,stineplays,arvelin_gw,protostar,laamberry,learnsquared,robertmarzullo,darude,properartist,fyrefllywhispr,aditidancedesign,workingchef,purplekoolaidman,chipwhitehouse,greatr_,terx_mazuris,drawfeeshow,hellthyjunkfood,supersoulbros,adafruit,treshtoons,winterthirteen,jeromebirti,darezone,next_level_painting,llanilek,classykatie,smittymcwetbiscuits,ladyavianna,eternity_waits,visualjamie,sifsweetman,morbidcamel101,doubleclickslive,tracimoc,cullen9,andrea_sipl,jeffsfolio,stevelichman,xilent,themaginnis,johnlestudio,aditidancedesign,thefeeb,kalasketch,shticky,mrmarsrising,zan57,sweetest_kill,kittyplays,loriipops,twosenseless,kingeppz,pokeranger69,sambidex,the_widdler,vasiliuss,a_couple_streams,gageziegman,charlyminion,brendonisaiahbengtson,sculpture_geek,halie_atisuto,computex1,sketchben,pharewings,nickblade,browncoatcaptn,nefirst_red,elfinsox,motoruxin,rabbitman109,lifewithlaughs,mrjackart,draskia,sagnewshreds,kwarning,aareneasley,williamchyr,fiercekittenz,autodesksketchbook,artoframan,lion_ess,naphthol,nnniiino,thekesslereffect,anuxinamoon,ionicart,emzolv,derptyme,duckt4rt,laylazar,hazardousarts,macaodev,joglar,sma_art,theblock,gregbaugues,phil_nash,andrinja,nightwolfpack,goldamsel,tockcustom,llamachomp,gamespwnher,imperialgrrl,na_podhvate,billy1kirby,hc_dizee,sharishxad,wicked_faery,tonilyran,lulaboo,chefamax,xzero20,pooseboy,programming,colinbenders,bawkbasoup,bluejay712,simplytam,tiffykat,drunkkidsgaming,aggythesalty,clever_dave,therobanddanshow,jessicagoch,haylinic,fi3nd_,jerpdoesgames,friskkmkay,not_jenn,lethalfrag,datto,deernadia,thedoodsfoods,wacksteven,dalsarius82,sirithre,tinypixxels,creeesart,mrboombati,vellysa,blindcoyotestudios,temmies,cg_village_captain,niffiner,megmouse82,jhovgaard,garret_r,tectuma,smabee_art,mrcreeep,tmiracletv,lindseyillustration,mrcomtruise,therealstark,josymovies,dianarrr,ellalune,finespline,alientonx,fakegamergirl,noellembrooks,lara_cr,ejipt,rintheyordle,reckzilla,u_n_i_c_o,sharkbaroness,mi_cho,bethfreemanartist,sohlol,artofarson,tanzenkat,vorsp,ladyaim,sheenaduquette,kimvoslice,cardenelli,evilhunterr,marjoriedavis,yetipoo,kyena,tareacosplay,rantologg,forrestimel,ladymazur,playinthemud,dctattoo_swe,cnotbusch,meniusa,codibear,evilfx,sinixdesign,alicexz,gamerkirei,quinnsimoesart,liveworkshop,thediredude,mariusbota,voodoo_val,arsenixc,domesticdan,cglas,pixystyx,uguubear,monorirogue,antilousdragonart,johnsilvaart,martin_ci,artyfakes,thejamcave,sampetersonart,synsinsyn,anthonyacc,evynfong,kogumah,fu1212y,seagageplays,silmac1,stevieraedrawn,mujumonster,duchessmorgoth,poeism,narandel,noobovich,loiza0319aad,mizzycyn,datarealms,journeyful,boss1801,archonthewizard,wheeze202,dgoodayle,stresslevelzero,2dgamedev,apolyon6k,automateallthethings,ryansetiawan,kachanac,luzarius,megaultrajman,awesomeallar,unrealengine,thejhnz,jessefreeman,threef_games,warbirdgames,robtheswan,shmellyorc,automationdev,siegegames,xenocideacademy,theelitegamers,hardlydifficult,nocaked,mastak_a,xfactor521,zeglovrk,robotsuperstar,ricepiratemick,flipswitchx,nicko_the_great88,themanymadmasks,weilard,guineapigparkour,fleckogold,boyfruit,tensaes,shyupuff,jessejayjones,eagletoons,mrpatafoin,gildedguy,ioanimator,myanimewaifu,loonygeekfun,tokyoscream,rip_streaming,vinissues,overpowergame,sblomkamp,theanimationstation,doublezmagnum,invader_kendall,kitsyfluffs,samgreenmedia,neareida,linktcone,mightyjrgaming,snugzmeow,staceyofgotham,courtneykissme,ladysundae,xxbrandy,suspicioustumble,candocosplay,byndogehk,tundabolt,nijishoujo,vanimecustoms,raychullfierce,ladydevann,hayzemh,essradi,nicciknacks,kenditv,mariegrey,eviltedsmith,sarahgracie,meestermcfeelme,wonyumi,kenshh0,mszee,nixxycosplay,gingerliz,schrei205,chinnyxo,younihorn,willowmvp,kr1st3n,supparider,darnisart,hddami,acardboardtube,niku_senpai,slowhandzen,a88527304,willdabeef,4scended,thehypoxiaxp,okrono_dm,coyotenerdy,whackly,killeremo69,dreachu,forkthepikachu,peemonster,iitarax3,ladyn8hawk,electrokittenz,o_german_o,confusedlittledemon,lettershoppe,ernestventures,rachtalin,mnaomy,glassmancometh,hairybewchacca,jedsglass,kenshin_campione_tv,vieparlafoi,doug_does,keiksdesigns,echona,fuslie,themrpcgames,jeremyworst,alexgriendling,jordanoutlawart,neilvilppu,sorrosin,usagi0414,murdokxcom,iluffsasuke,mr_nightsky,warmics,fancyschmancytv,jellyfishbunny,barigiet,sathoryn,sheeriku,pamadak,annajeann,teocican,michaeldenicola,chirofish,petitecreame,manicstreaming,treshtoons,alexdrummoart,anitagadzinskaart,ksavannahb,somnivision,asiawww,kiracub,ryanjames3049,firebirdleather,anatisti,dmjazzgames,therealshookon3,sabas_stream,chewiemelodies,xwisdom20,chasesings,wr4thtv,lefrenchstallion,alicemk2,marcusalx,tvsboh,ltchicken,zabuza54130,fallynnknivez,danielle13901,rambojoe43,madnessmethodoperation,meganagitor,justinbirdmusic,sassafras_wot,fujjeh,zamoskal,smokeylah,abstract_methodology,jaz_may,athenre,sinqnew,hysteriayard,misscoookiez,arkaedn,orangemagik,reeltrash,xoneris,rizeupgaming,amandapanda1985,imaginarymonsters,silithur,pixacious,gillyrb2007,prinnycreed,gavinreed,pixel_dimensions,jejoll,bithexed,aeuvex,camilosasuke,pajlada,rosuav,callmepieman,geramy92,freecodecamp,livetocreate,brentschooley,karatgame,xesjkeee,nuflowx,trumpi27,tokyoscarab,skypython,distortednet,addeponken,danyguag,callowcreation,devin_brimer,highsight,dlastons,draxu123,sssmcgrath123,waterdance,drunkdevs,adam13531,drekko2,saulmanlive,rxsheepxr,cloudkilledaerith,peckapon,marshevalias,disasterexe,rileyomalley,youngwavelord,itsnon",
+    "creative_featured_channels": "aws,wavedashgames,jimlee,schoolism,kennycosplaystuff,elpusherman,murs,kanoelani_art,kohseart,theluckmusic,umiiru,daradef,jonathanong77,make,banzaibaby,thecreativejenn,albertfisk,reidf,heycheri,raquelily,jonmakesbeats,karli_woods,hendoart,littlesparkz,andyraecosplay,viciousfool,vulpsie,vieparlafoi,raydevito,firstupdatesnow,vorgowest,backstoryevents,kindredconcepts,firstinspires1,firstinspires2,firstinspires3,firstinspires4,raidmaxtv,geekchichq,danielle_denicola,tashnarr,aprilgloria,timsww,themindbendersdotcom,alecsteele,punchplanetgame,thebluemuzzy,classicalcast,rattenni,neytiriix,gleemp,volpinprops,thenatureofcomics,ellimacssfx,fmatteatsmochi,davecavedraws,r1sh,prozect,pretzlcosplay,devi_cat,finnpaints,luisfcarrasco,timsww,safehouse,rachtalin,blingsquaredcuteglass,andrewdft,aerosimgaming,ses_dev,britandco,sandexperiment,hajrameeks,dr_213,p00se2,kayosgirl,cyborgshadow,captsugarspice,dwayne_harty,pennyarcade,quatum_enigmant,zfischerart,moniquereneeart,kaypikefashion,yelainamaycosplay,jordanhanz,patrickrothfuss,johanochnystrom,superdeluxe,merrycontrerry,mintpotion,echosith,kmichruss,peroroh,tinyteee,suchikuchi,elvenaimee,kirkwoodworking,fiercekittenz,sceneofactionmusic,theprinceoffairfield,sidecarangel,djproject46,llanilek,wickedbowie,pixologic,battlebots,jasonyangviolin,ignaceu,revchumley,jarmanprops,gary_bernhardt,drewmsmith,unitytech,volitionlive,jediwinemaster32,somuchmonsters,viking_lass,elvenaimee,drumpunk100,app1ecrisp,richiix27,graceandfirefly,ladeedanger,laughingmanatee,linvalin,simply_jxn,tommycastilloatelier,proletariat_inc,propgame,narcosvszombies,kattbotics,mudflapofficial,darylcagle,skyhook,jjriverband,douplex,thatdanishguy,morwic,itswoofy,shannanina,trippler999,miniappl3,grigoriypeppo,kinggrim,slickentertainmentinc,handmade_hero,hustle_man,krzjn,moatdd,robserob,officialbartlet,dasmehdi,sharyl_sykora,devwars,2daywithpatrickj,voxicon,almightysavo,amouranth,dawah200,invenatrix,amethylia,geitmeise,coco_the_louder,grekklon,aricegirl,queenraykel,dream_ouji,gueneveres,chickentam,shanesemler,serdechny,philthyturtle,yurekb,kashou_,midnight_orchid,mothteeth,hc900,mete0ryt,drunkiegaming,diver__,frankiepixelshow,siddious67,wizard_fu,vendelo,moltenink,lcfinch,moanmei,anna_verhoog,macsmithvideo,marcussakoda,violetlake,bryanmarktaylor,triogaming0414,gafinespline,amelyth,humbleego,twigglybits,letsrobot,wardragonsgame,culprate,wander_ex,stronkgamer,arconyx,stineplays,arvelin_gw,protostar,laamberry,learnsquared,robertmarzullo,darude,properartist,fyrefllywhispr,aditidancedesign,workingchef,purplekoolaidman,chipwhitehouse,greatr_,terx_mazuris,drawfeeshow,hellthyjunkfood,supersoulbros,adafruit,treshtoons,winterthirteen,jeromebirti,darezone,next_level_painting,llanilek,classykatie,smittymcwetbiscuits,ladyavianna,eternity_waits,visualjamie,sifsweetman,morbidcamel101,doubleclickslive,tracimoc,cullen9,andrea_sipl,jeffsfolio,stevelichman,xilent,themaginnis,johnlestudio,aditidancedesign,thefeeb,kalasketch,shticky,mrmarsrising,zan57,sweetest_kill,kittyplays,loriipops,twosenseless,kingeppz,pokeranger69,sambidex,the_widdler,vasiliuss,a_couple_streams,gageziegman,charlyminion,brendonisaiahbengtson,sculpture_geek,halie_atisuto,computex1,sketchben,pharewings,nickblade,browncoatcaptn,nefirst_red,elfinsox,motoruxin,rabbitman109,lifewithlaughs,mrjackart,draskia,sagnewshreds,kwarning,aareneasley,williamchyr,fiercekittenz,autodesksketchbook,artoframan,lion_ess,naphthol,nnniiino,thekesslereffect,anuxinamoon,ionicart,emzolv,derptyme,duckt4rt,laylazar,hazardousarts,macaodev,joglar,sma_art,theblock,gregbaugues,phil_nash,andrinja,nightwolfpack,goldamsel,tockcustom,llamachomp,gamespwnher,imperialgrrl,na_podhvate,billy1kirby,hc_dizee,sharishxad,wicked_faery,tonilyran,lulaboo,chefamax,xzero20,pooseboy,programming,colinbenders,bawkbasoup,bluejay712,simplytam,tiffykat,drunkkidsgaming,aggythesalty,clever_dave,therobanddanshow,jessicagoch,haylinic,fi3nd_,jerpdoesgames,friskkmkay,not_jenn,lethalfrag,datto,deernadia,thedoodsfoods,wacksteven,dalsarius82,sirithre,tinypixxels,creeesart,mrboombati,vellysa,blindcoyotestudios,temmies,cg_village_captain,niffiner,megmouse82,jhovgaard,garret_r,tectuma,smabee_art,mrcreeep,tmiracletv,lindseyillustration,mrcomtruise,therealstark,josymovies,dianarrr,ellalune,finespline,alientonx,fakegamergirl,noellembrooks,lara_cr,ejipt,rintheyordle,reckzilla,u_n_i_c_o,sharkbaroness,mi_cho,bethfreemanartist,sohlol,artofarson,tanzenkat,vorsp,ladyaim,sheenaduquette,kimvoslice,cardenelli,evilhunterr,marjoriedavis,yetipoo,kyena,tareacosplay,rantologg,forrestimel,ladymazur,playinthemud,dctattoo_swe,cnotbusch,meniusa,codibear,evilfx,sinixdesign,alicexz,gamerkirei,quinnsimoesart,liveworkshop,thediredude,mariusbota,voodoo_val,arsenixc,domesticdan,cglas,pixystyx,uguubear,monorirogue,antilousdragonart,johnsilvaart,martin_ci,artyfakes,thejamcave,sampetersonart,synsinsyn,anthonyacc,evynfong,kogumah,fu1212y,seagageplays,silmac1,stevieraedrawn,mujumonster,duchessmorgoth,poeism,narandel,noobovich,loiza0319aad,mizzycyn,datarealms,journeyful,boss1801,archonthewizard,wheeze202,dgoodayle,stresslevelzero,2dgamedev,apolyon6k,automateallthethings,ryansetiawan,kachanac,luzarius,megaultrajman,awesomeallar,unrealengine,thejhnz,jessefreeman,threef_games,warbirdgames,robtheswan,shmellyorc,automationdev,siegegames,xenocideacademy,theelitegamers,hardlydifficult,nocaked,mastak_a,xfactor521,zeglovrk,robotsuperstar,ricepiratemick,flipswitchx,nicko_the_great88,themanymadmasks,weilard,guineapigparkour,fleckogold,boyfruit,tensaes,shyupuff,jessejayjones,eagletoons,mrpatafoin,gildedguy,ioanimator,myanimewaifu,loonygeekfun,tokyoscream,rip_streaming,vinissues,overpowergame,sblomkamp,theanimationstation,doublezmagnum,invader_kendall,kitsyfluffs,samgreenmedia,neareida,linktcone,mightyjrgaming,snugzmeow,staceyofgotham,courtneykissme,ladysundae,xxbrandy,suspicioustumble,candocosplay,byndogehk,tundabolt,nijishoujo,vanimecustoms,raychullfierce,ladydevann,hayzemh,essradi,nicciknacks,kenditv,mariegrey,eviltedsmith,sarahgracie,meestermcfeelme,wonyumi,kenshh0,mszee,nixxycosplay,gingerliz,schrei205,chinnyxo,younihorn,willowmvp,kr1st3n,supparider,darnisart,hddami,acardboardtube,niku_senpai,slowhandzen,a88527304,willdabeef,4scended,thehypoxiaxp,okrono_dm,coyotenerdy,whackly,killeremo69,dreachu,forkthepikachu,peemonster,iitarax3,ladyn8hawk,electrokittenz,o_german_o,confusedlittledemon,lettershoppe,ernestventures,rachtalin,mnaomy,glassmancometh,hairybewchacca,jedsglass,kenshin_campione_tv,vieparlafoi,doug_does,keiksdesigns,echona,fuslie,themrpcgames,jeremyworst,alexgriendling,jordanoutlawart,neilvilppu,sorrosin,usagi0414,murdokxcom,iluffsasuke,mr_nightsky,warmics,fancyschmancytv,jellyfishbunny,barigiet,sathoryn,sheeriku,pamadak,annajeann,teocican,michaeldenicola,chirofish,petitecreame,manicstreaming,treshtoons,alexdrummoart,anitagadzinskaart,ksavannahb,somnivision,asiawww,kiracub,ryanjames3049,firebirdleather,anatisti,dmjazzgames,therealshookon3,sabas_stream,chewiemelodies,xwisdom20,chasesings,wr4thtv,lefrenchstallion,alicemk2,marcusalx,tvsboh,ltchicken,zabuza54130,fallynnknivez,danielle13901,rambojoe43,madnessmethodoperation,meganagitor,justinbirdmusic,sassafras_wot,fujjeh,zamoskal,smokeylah,abstract_methodology,jaz_may,athenre,sinqnew,hysteriayard,misscoookiez,arkaedn,orangemagik,reeltrash,xoneris,rizeupgaming,amandapanda1985,imaginarymonsters,silithur,pixacious,gillyrb2007,prinnycreed,gavinreed,pixel_dimensions,jejoll,bithexed,aeuvex,camilosasuke,pajlada,rosuav,callmepieman,geramy92,freecodecamp,livetocreate,brentschooley,karatgame,xesjkeee,nuflowx,trumpi27,tokyoscarab,skypython,distortednet,addeponken,danyguag,callowcreation,devin_brimer,highsight,dlastons,draxu123,sssmcgrath123,waterdance,drunkdevs,adam13531,drekko2,saulmanlive,rxsheepxr,cloudkilledaerith,peckapon,marshevalias,disasterexe,rileyomalley,youngwavelord,itsnon",
     "creative_communities": "animation,cosplay,drawing,food,gamedev,glass,illustration,leatherwork,music,painting,pixelart,programming,sewing,designdolls,graphite,perler,vector,figurines,woodworking,writing,sketch,anime,watercolor,jewelry,electronics,overwatchcontest,3dmodeling,crossstitch,sculpting,editing,artstation,bodyart,fiberarts,metalworking,papercraft,design,digitalillustration,comedy,magic,dance,voiceacting,theater,robotics,chainmaille,brewing,virink,automotive,comics,pcbuilding,makeup,film,photography,coloringbooks,brickbuilding,crochet",
     "community_theatres": ".",
     "creative_promoted_communities": "animation",
@@ -650,6 +650,18 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
+        "296d3795-062c-49cc-8e1a-2d3e4e8a5b50": {
+            "name": "android_phone_landscape_chat_write_2",
+            "v": 2185,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "298a5f39-228a-487a-ad06-422c18458403": {
             "name": "twilight_merch_store_launch",
             "v": 2159,
@@ -1177,11 +1189,11 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
-            "v": 2180,
+            "v": 2187,
             "t": 1,
             "groups": [{
                 "weight": 1,
-                "value": "//video-edge-b9102a.sjc01.hls.ttvnw.net/v1/playlist/Cp94i42SOMRTv4cZN0xmtc3_oe_4dWZs-oxjSEyOvp3MpX1MZaShKCbWzy5Mvwzjsj-EHBTLDLInagf-P6x3FDQqvDZVccfZzXnjoJM_eBb_ptyy4j95lYabbXdnVFPU69CIlpSsvSN74yZe9QLlD_92irsDxQea6RgWggBuJQGWg85UNRsnnq_MhOXmlfyDjYKfzCxkdD_0IBTKgtrRKbIyxUUXFAVd6rNA8e2OaCuefs_X9k73sq_UBZ09iNKkeSyPpu-BGzYAl58tEQ1IYEdIHYfEiVqfMtnyJmU-0LjSW7dekslzHpooHXzorM6uzJIb7xdgCThSm0Mim0FGpvpAnKNwzZCW6pNXM_O4ImB4IIeoQZVGlYWHUR6N6WmcgJRgnkB2Q0GIWlPV6wOMZv5lCSel7zeGFkGGPDMlF1F7fhEBIrqU9PxXZKmyGjmlFQjNd96Qw0W.m3u8"
+                "value": "//video-edge-d70dea.sjc01.hls.ttvnw.net/v1/playlist/ClEjnymbTrps9sF-CEi87qlHN0_BvkKRFz1Fjo9TARgMC3FmWoivItgvacmiay81404mRJQuUN6Xqq7L0Rpsxqk9a-KgcqOR05qms5gNbKLF0av_jpDWoUhftm7RJ8iwBeMU1PygxdprigNjr69XbfslsQAhUkf1w-GNh4623bNVhedHiITpmMhA_ZE0hF-a30UcrNrABwG1RK1Lo7nNOoz9KWE7X0Cq6VyMB27JaLjf5DvgLq8ED8gKoyh0j72Z-RQKBwJseE5rF70GYGgoY1F6Yl0B31Ii3slZrSeBEhVT44cxZEk15czNiPSDSHBxfLKSIt8RLeTl-vV4hxuI4ryfTuy3ourNM3umJk1Vz-W-QNFx65gamwlfVqUQqQKPnybVr6-lhAIURxSak-gneevRaliSnpkXCOa-WiI3x5NN-6RLrTFpZpvpr3I-rk5Z.m3u8"
             }]
         },
         "4bdb6678-2626-466f-bb25-e566dec11354": {
@@ -1237,13 +1249,13 @@ window.SiteOptions = {
         },
         "4dbc0ece-9392-421b-bf3d-7ace54428241": {
             "name": "ios_social_t1_tab",
-            "v": 2179,
+            "v": 2186,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 10,
                 "value": "enabled"
             }, {
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }]
         },
@@ -2000,6 +2012,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "8f6043c2-53b7-4ea7-991d-20c14dc2d1a7": {
+            "name": "ios_profile_upload_enhanced",
+            "v": 2184,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "active"
+            }]
+        },
         "8feaebce-0955-4d59-bbad-4e3469dbb2f8": {
             "name": "android_chomments_posting",
             "v": 2067,
@@ -2094,6 +2118,18 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "variant1"
+            }]
+        },
+        "96593822-f5cd-40c1-9288-5d73615362a5": {
+            "name": "android_native_bits_iap",
+            "v": 2192,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "inactive"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "97f8559c-1077-4480-ad07-b64f1c9b8529": {
@@ -2944,17 +2980,20 @@ window.SiteOptions = {
         },
         "d09296ff-a271-4b44-8b6a-5c707943afe2": {
             "name": "ios_onboarding_recommendations_v5.5",
-            "v": 2145,
+            "v": 2190,
             "t": 1,
             "groups": [{
-                "weight": 34,
+                "weight": 30,
                 "value": "control"
             }, {
-                "weight": 33,
+                "weight": 30,
                 "value": "rec_streams"
             }, {
-                "weight": 33,
+                "weight": 30,
                 "value": "clip_preview"
+            }, {
+                "weight": 10,
+                "value": "rec_streams_ads"
             }]
         },
         "d0c9c096-4c59-4614-9e0c-38580a7785dd": {
@@ -3049,17 +3088,20 @@ window.SiteOptions = {
         },
         "d6386417-a815-4c24-a21b-20e78d5a9e07": {
             "name": "android_onboarding_1_2",
-            "v": 2108,
+            "v": 2191,
             "t": 1,
             "groups": [{
-                "weight": 34,
+                "weight": 30,
                 "value": "control"
             }, {
-                "weight": 33,
+                "weight": 30,
                 "value": "variant_a"
             }, {
-                "weight": 33,
+                "weight": 30,
                 "value": "variant_b"
+            }, {
+                "weight": 10,
+                "value": "variant_c"
             }]
         },
         "d6ba259c-3f82-48ac-b158-bf4760fc864b": {
@@ -3343,14 +3385,14 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 2176,
+            "v": 2189,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 90,
                 "value": "2.0.10"
             }, {
-                "weight": 50,
-                "value": "2.0.11"
+                "weight": 10,
+                "value": "2.0.118"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
@@ -3482,6 +3524,18 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "fa2fa316-88b9-49b2-a96c-6ad4ecef2904": {
+            "name": "ios_enable_rooms",
+            "v": 2188,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "fa99a372-3bd3-422d-8937-4de546931a37": {
             "name": "directory_events_suggestions",
             "v": 1529,
@@ -3516,6 +3570,18 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "yes"
+            }]
+        },
+        "fdf6192f-677e-445b-bc0e-c7eaa9f901b9": {
+            "name": "ios_native_bits_iap",
+            "v": 2193,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "inactive"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "fe5bad1f-521b-4ab9-9cd4-8161ef779550": {
