@@ -467,6 +467,18 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "1b6d4038-40ca-455a-81c7-e239d7568de9": {
+            "name": "ios_dynamic_spade_url",
+            "v": 2199,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "original"
+            }, {
+                "weight": 100,
+                "value": "dynamic"
+            }]
+        },
         "1b905261-e257-4703-ac84-12a6a9099935": {
             "name": "CLIENT_BATCH_SPADE",
             "v": 730,
@@ -1189,11 +1201,11 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
-            "v": 2187,
+            "v": 2202,
             "t": 1,
             "groups": [{
                 "weight": 1,
-                "value": "//video-edge-d70dea.sjc01.hls.ttvnw.net/v1/playlist/ClEjnymbTrps9sF-CEi87qlHN0_BvkKRFz1Fjo9TARgMC3FmWoivItgvacmiay81404mRJQuUN6Xqq7L0Rpsxqk9a-KgcqOR05qms5gNbKLF0av_jpDWoUhftm7RJ8iwBeMU1PygxdprigNjr69XbfslsQAhUkf1w-GNh4623bNVhedHiITpmMhA_ZE0hF-a30UcrNrABwG1RK1Lo7nNOoz9KWE7X0Cq6VyMB27JaLjf5DvgLq8ED8gKoyh0j72Z-RQKBwJseE5rF70GYGgoY1F6Yl0B31Ii3slZrSeBEhVT44cxZEk15czNiPSDSHBxfLKSIt8RLeTl-vV4hxuI4ryfTuy3ourNM3umJk1Vz-W-QNFx65gamwlfVqUQqQKPnybVr6-lhAIURxSak-gneevRaliSnpkXCOa-WiI3x5NN-6RLrTFpZpvpr3I-rk5Z.m3u8"
+                "value": "//video-edge-6192f6.sjc01.hls.ttvnw.net/v1/playlist/Ckqr4No3Dz3Weix7B8JfRiZbP0e_cZbbyVbYsA8t390XM5EX1G8obWaH9LVWH4p9D16b-3MJ8np1en0rC72OusOh40fC9EAmwSY8iN0JGFyLxBYuwp-90z8KvUmJ4OFlEBDdLaok4yfr5lgsAl_6QCdkGdTD1VylxArJeNPHB823heXlYr246IduTMZxgqhDDi9dHbPnu5sMCxQQOkCFGW3mDmb2NDx5f3YEhCxs1tNwTZEY2xbvuIZHN01cnnNSr4U8VJt6vK9kLQj92zNtgna3ODU3tWrmDsoMCgOQlFpKOfAtLn6kpPFAueEyOMG0_CeiIbylhudfbqGCFtayjldcyDRftQfmDQazNl0pJmfKhGTlaDspyULINFgZLt8almLRUT9Ezqhnlh66CvjzSaezbI89VmuLFuEpKsJJP5LWx-XazgqdBpg6eVMozOKwDEcCEcmZur5DAxtldw.m3u8"
             }]
         },
         "4bdb6678-2626-466f-bb25-e566dec11354": {
@@ -1820,6 +1832,18 @@ window.SiteOptions = {
                 "value": ""
             }]
         },
+        "7e75faa1-7a39-4c06-8474-c1b902ab9189": {
+            "name": "android_profile_upload_5.5",
+            "v": 2196,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "80a4bf5b-0897-4ae6-bf0b-70357524c39b": {
             "name": "ios_feed_display_content_type_indicator",
             "v": 1940,
@@ -2134,7 +2158,7 @@ window.SiteOptions = {
         },
         "97f8559c-1077-4480-ad07-b64f1c9b8529": {
             "name": "android_auto_video_quality",
-            "v": 1663,
+            "v": 2201,
             "t": 1,
             "groups": [{
                 "weight": 90,
@@ -2409,6 +2433,18 @@ window.SiteOptions = {
             }, {
                 "weight": 1,
                 "value": "variant1"
+            }]
+        },
+        "a6896ac8-2d90-4342-840b-b48573b00d62": {
+            "name": "ios_autoplay_videos_setting",
+            "v": 2197,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "a88d97b7-ec93-4724-935e-e93f166df82f": {
@@ -3562,7 +3598,7 @@ window.SiteOptions = {
         },
         "fd74ad1d-d885-4d12-9036-f571fc82e6df": {
             "name": "JANEWAY",
-            "v": 2076,
+            "v": 2198,
             "t": 1,
             "groups": [{
                 "weight": 100,
