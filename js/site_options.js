@@ -3217,13 +3217,13 @@ window.SiteOptions = {
         },
         "daf63994-587b-4062-8978-d970027af40f": {
             "name": "SOCIAL_RECOMMENDATIONS_2",
-            "v": 2083,
+            "v": 2226,
             "t": 2,
             "groups": [{
-                "weight": 50,
+                "weight": 10,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 90,
                 "value": "variant2"
             }]
         },
