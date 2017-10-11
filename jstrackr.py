@@ -7,7 +7,7 @@ import random
 
 
 def get_url_from_page(url, pat):
-    content = requests.get(url).content
+    content = requests.get(url, cookies={'twilight_beta_opt_out': '1'}).content
     name = re.search(pat, content).group(1)
     return url + name
 
