@@ -3451,16 +3451,16 @@ window.SiteOptions = {
         },
         "ef25ca44-13bd-4e89-99d2-f9939c013fec": {
             "name": "twilight_streamer_trailers",
-            "v": 2227,
+            "v": 2228,
             "t": 2,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "on"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "off"
             }]
         },
