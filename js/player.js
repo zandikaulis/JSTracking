@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".7b82bef0786525f2d7d0.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".9113e40da5a792c15784.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -3399,26 +3399,26 @@
 
         function r() {
             return {
-                type: v
+                type: y
             }
         }
 
         function i(e) {
             return {
-                type: d,
+                type: p,
                 emitter: e
             }
         }
 
         function a() {
             return {
-                type: p
+                type: f
             }
         }
 
         function o(e, t) {
             return {
-                type: h,
+                type: m,
                 collectionId: e,
                 vodId: t
             }
@@ -3426,53 +3426,62 @@
 
         function s(e) {
             return {
-                type: m,
+                type: v,
                 vodId: e
             }
         }
 
         function u() {
             return {
-                type: g
+                type: _
             }
         }
 
         function c() {
             return {
-                type: y
+                type: b
             }
         }
 
         function l() {
             return {
-                type: f
+                type: g
             }
         }
-        n.d(t, "l", function() {
-            return d
-        }), n.d(t, "m", function() {
+
+        function d() {
+            return {
+                type: h
+            }
+        }
+        n.d(t, "m", function() {
             return p
-        }), n.d(t, "k", function() {
+        }), n.d(t, "n", function() {
             return f
-        }), n.d(t, "i", function() {
+        }), n.d(t, "l", function() {
             return h
         }), n.d(t, "j", function() {
             return m
-        }), n.d(t, "n", function() {
+        }), n.d(t, "k", function() {
             return v
-        }), n.d(t, "p", function() {
-            return y
         }), n.d(t, "o", function() {
+            return y
+        }), n.d(t, "r", function() {
             return g
-        }), t.b = r, t.f = i, t.e = a, t.d = o, t.c = s, t.g = u, t.h = c, t.a = l;
-        var d = "use event emitter",
-            p = "emit open stream",
-            f = "emit player ready",
-            h = "transition to collection",
-            m = "transition to recommended vod",
-            v = "emit fullscreen change",
-            y = "emit ad pause",
-            g = "emit ad play"
+        }), n.d(t, "p", function() {
+            return _
+        }), n.d(t, "q", function() {
+            return b
+        }), t.b = r, t.f = i, t.e = a, t.d = o, t.c = s, t.i = u, t.g = c, t.h = l, t.a = d;
+        var p = "use event emitter",
+            f = "emit open stream",
+            h = "emit player ready",
+            m = "transition to collection",
+            v = "transition to recommended vod",
+            y = "emit fullscreen change",
+            g = "emit ad pause",
+            _ = "emit ad play",
+            b = "emit ad playing"
     }, function(e, t, n) {
         "use strict";
 
@@ -22298,7 +22307,7 @@
                     l = h.a(!0),
                     d = y.j() === y.o ? null : _;
                 return d = i.playerType === y.c ? g : d, {
-                    app_version: "2017.10.11-173752+333235c53f34acb96ef1eb5d0ef1b60f0cd872cb",
+                    app_version: "2017.10.11-194056+d9522ba971d4d11cefdc70b203c6f580354cc50a",
                     flash_version: o,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -27892,7 +27901,7 @@
                             provider: "ima"
                         }), this._store.dispatch(n.i(v.a)(p.COMPANION_RENDERED, {
                             provider: "ima"
-                        }))), this._store.dispatch(n.i(w.g)())
+                        }))), this._store.dispatch(n.i(w.i)())
                     }
                 }, {
                     key: "_onAdImpression",
@@ -30407,13 +30416,13 @@
                             case i.h:
                                 n._sendFirstPartyAnalyticEvent(e.event, e.data);
                                 break;
-                            case a.i:
+                            case a.j:
                                 n._sendTransitionToCollectionEvent({
                                     vodId: e.vodId,
                                     collectionId: e.collectionId
                                 });
                                 break;
-                            case a.j:
+                            case a.k:
                                 n._sendTransitionToRecommendedVodEvent({
                                     vodId: e.vodId
                                 });
@@ -30421,7 +30430,7 @@
                             case s.d:
                                 n._sendStatsUpdateEvent();
                                 break;
-                            case a.k:
+                            case a.l:
                                 n._sendReadyEvent();
                                 break;
                             case u.I:
@@ -30451,22 +30460,22 @@
                         var s = t.getState(),
                             p = s.screenMode;
                         switch (e.type) {
-                            case i.l:
+                            case i.m:
                                 r = e.emitter;
                                 break;
-                            case i.m:
+                            case i.n:
                                 r.emit(a.j);
                                 break;
-                            case i.i:
+                            case i.j:
                                 r.emit(a.o, {
                                     vodId: e.vodId,
                                     collectionId: e.collectionId
                                 });
                                 break;
-                            case i.n:
+                            case i.o:
                                 r.emit(u.b);
                                 break;
-                            case i.j:
+                            case i.k:
                                 r.emit(a.p, {
                                     vodId: e.vodId
                                 });
@@ -30486,13 +30495,16 @@
                                     channelDisplayName: e.channelName
                                 });
                                 break;
-                            case i.o:
+                            case i.p:
                                 r.emit(o.p);
                                 break;
-                            case i.p:
+                            case i.q:
+                                r.emit(o.i);
+                                break;
+                            case i.r:
                                 r.emit(o.q);
                                 break;
-                            case i.k:
+                            case i.l:
                                 r.emit(a.u)
                         }
                         n(e)
