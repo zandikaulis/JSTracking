@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".9113e40da5a792c15784.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".54ecb757ee2ef4d76f64.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -22307,7 +22307,7 @@
                     l = h.a(!0),
                     d = y.j() === y.o ? null : _;
                 return d = i.playerType === y.c ? g : d, {
-                    app_version: "2017.10.11-194056+d9522ba971d4d11cefdc70b203c6f580354cc50a",
+                    app_version: "2017.10.11-204746+9c20b93c173af0cae07e2bc3b80cb3d6b78e1f6e",
                     flash_version: o,
                     referrer_url: s,
                     referrer_host: u.host,
@@ -38366,7 +38366,7 @@
                 }
             },
             E = Object.freeze([v.a]),
-            S = Object.freeze(["misterrogers", "twitchpresents", "redbull", "redbullchanneltwo", "redbullchannelthree"]),
+            S = Object.freeze(["misterrogers"]),
             P = function(e) {
                 function t() {
                     r(this, t);
