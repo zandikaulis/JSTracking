@@ -15368,7 +15368,8 @@ googletag.cmd = googletag.cmd || [],
                 REQUIEM: "yes",
                 MOBILE_CHECKOUT: "yes",
                 TWILIGHT_MERCH_STORE_LAUNCH: "on",
-                JANEWAY: "yes"
+                JANEWAY: "yes",
+                TWILIGHT_STREAM_SUMMARY: "yes"
             };
         _.each(Object.keys(s), function(t) {
             o[i[t]] = e.user().then(function(e) {
