@@ -664,13 +664,13 @@ window.SiteOptions = {
         },
         "296d3795-062c-49cc-8e1a-2d3e4e8a5b50": {
             "name": "android_phone_landscape_chat_write_2",
-            "v": 2185,
+            "v": 2234,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "active"
             }]
         },
