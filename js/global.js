@@ -15281,7 +15281,8 @@ googletag.cmd = googletag.cmd || [],
                 REQUIEM: "ad5f316b-0a87-44a6-9348-f6b6ee36b0bb",
                 MOBILE_CHECKOUT: "070d88d9-02da-42cf-a83d-4f884878f93a",
                 TWILIGHT_MERCH_STORE_LAUNCH: "298a5f39-228a-487a-ad06-422c18458403",
-                PREMIERE_FLOW: "4d3d19a7-38c5-4328-9730-7d99565d5edd"
+                PREMIERE_FLOW: "4d3d19a7-38c5-4328-9730-7d99565d5edd",
+                BROADCAST_SOFTWARE: "4994d68b-77d3-41f3-bebb-64b96c753b43"
             },
             r = {
                 "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458": "no",
@@ -15347,7 +15348,8 @@ googletag.cmd = googletag.cmd || [],
                 "ad5f316b-0a87-44a6-9348-f6b6ee36b0bb": "no",
                 "070d88d9-02da-42cf-a83d-4f884878f93a": "no",
                 "298a5f39-228a-487a-ad06-422c18458403": "off",
-                "4d3d19a7-38c5-4328-9730-7d99565d5edd": "no"
+                "4d3d19a7-38c5-4328-9730-7d99565d5edd": "no",
+                "4994d68b-77d3-41f3-bebb-64b96c753b43": "control"
             },
             o = {},
             s = {

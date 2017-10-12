@@ -1105,13 +1105,13 @@ window.SiteOptions = {
         },
         "4994d68b-77d3-41f3-bebb-64b96c753b43": {
             "name": "BROADCAST_SOFTWARE",
-            "v": 2166,
+            "v": 2231,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "active"
             }]
         },
