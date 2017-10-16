@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".71a840a8b02fdf29038e.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2ebb3608fa964da93581.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -1287,70 +1287,74 @@
 
         function r(e) {
             return {
-                type: f,
+                type: p,
                 video: e
             }
         }
 
         function i() {
             return {
-                type: p
+                type: h
             }
         }
 
         function a() {
             return {
-                type: h
+                type: m
             }
         }
 
-        function o(e) {
+        function o() {
+            return {
+                type: v
+            }
+        }
+
+        function s(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             return {
-                type: m,
+                type: y,
                 muted: e,
                 automated: t
             }
         }
 
-        function s() {
+        function u() {
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
             return {
-                type: v,
+                type: g,
                 volume: e
-            }
-        }
-
-        function u(e) {
-            return {
-                type: y,
-                backendType: e
             }
         }
 
         function c(e) {
             return {
-                type: g,
-                issueType: e
+                type: _,
+                backendType: e
             }
         }
 
         function l(e) {
             return {
-                type: _,
-                playbackRate: e
+                type: b,
+                issueType: e
             }
         }
 
         function d(e) {
             return {
-                type: b,
+                type: w,
+                playbackRate: e
+            }
+        }
+
+        function f(e) {
+            return {
+                type: k,
                 seekTime: e
             }
         }
-        n.d(t, "j", function() {
-            return f
-        }), n.d(t, "k", function() {
+        n.d(t, "k", function() {
             return p
         }), n.d(t, "l", function() {
             return h
@@ -1358,24 +1362,29 @@
             return m
         }), n.d(t, "n", function() {
             return v
-        }), n.d(t, "p", function() {
-            return y
         }), n.d(t, "o", function() {
+            return y
+        }), n.d(t, "p", function() {
             return g
-        }), n.d(t, "q", function() {
-            return _
         }), n.d(t, "r", function() {
+            return _
+        }), n.d(t, "q", function() {
             return b
-        }), t.i = r, t.b = i, t.c = a, t.a = o, t.g = s, t.f = u, t.e = c, t.d = l, t.h = d;
-        var f = "load video api",
-            p = "video api play content",
-            h = "video api pause content",
-            m = "video api mute player",
-            v = "video api change volume",
-            y = "video api change backend",
-            g = "video api report video issue",
-            _ = "video api change playback rate",
-            b = "video api seek"
+        }), n.d(t, "s", function() {
+            return w
+        }), n.d(t, "t", function() {
+            return k
+        }), t.i = r, t.b = i, t.c = a, t.j = o, t.a = s, t.g = u, t.f = c, t.e = l, t.d = d, t.h = f;
+        var p = "load video api",
+            h = "video api play content",
+            m = "video api pause content",
+            v = "automated pause content",
+            y = "video api mute player",
+            g = "video api change volume",
+            _ = "video api change backend",
+            b = "video api report video issue",
+            w = "video api change playback rate",
+            k = "video api seek"
     }, function(e, t, n) {
         "use strict";
 
@@ -12057,6 +12066,8 @@
                         action: "pause",
                         in_ad: t.getState().ads.currentMetadata.contentType !== b.c.NONE
                     }))
+                }, De.automatedPause = function() {
+                    Be.pause()
                 }, De.getControls = function() {
                     return !0
                 }, De.setControls = function() {}, De.getVolume = function() {
@@ -22786,7 +22797,7 @@
                     s = h.a(!0),
                     u = y.j() === y.o ? null : g;
                 return {
-                    app_version: "2017.10.16-162953+08df2625dbf2e0efcc6d8ce14384ece26f9f7a24",
+                    app_version: "2017.10.16-171604+33743091272034248a998c05efdaf8c8bb8344ae",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -28601,7 +28612,7 @@
                     value: function() {
                         var e = this._store.getState(),
                             t = e.stream;
-                        t instanceof l.b ? this._backend.setMuted(!0) : t instanceof d.b && !this._backend.getEnded() && this._store.dispatch(n.i(m.c)())
+                        t instanceof l.b ? this._backend.setMuted(!0) : t instanceof d.b && !this._backend.getEnded() && this._store.dispatch(n.i(m.j)())
                     }
                 }, {
                     key: "_resumeContent",
@@ -31340,31 +31351,34 @@
                     var n = e;
                     return function(e) {
                         switch (e.type) {
-                            case i.j:
+                            case i.k:
                                 n = e.video;
                                 break;
-                            case i.k:
+                            case i.l:
                                 n.play();
                                 break;
-                            case i.l:
+                            case i.m:
                                 n.pause();
                                 break;
-                            case i.m:
-                                n.setMuted(e.muted, e.automated);
-                                break;
                             case i.n:
-                                n.setVolume(e.volume);
+                                n.automatedPause();
                                 break;
                             case i.o:
-                                n.submitVideoIssueReport(e.issueType);
+                                n.setMuted(e.muted, e.automated);
                                 break;
                             case i.p:
-                                n.setBackend(e.backendType);
+                                n.setVolume(e.volume);
                                 break;
                             case i.q:
-                                n.setPlaybackRate(e.playbackRate);
+                                n.submitVideoIssueReport(e.issueType);
                                 break;
                             case i.r:
+                                n.setBackend(e.backendType);
+                                break;
+                            case i.s:
+                                n.setPlaybackRate(e.playbackRate);
+                                break;
+                            case i.t:
                                 n.setCurrentTime(e.seekTime);
                                 break;
                             case o.g:
