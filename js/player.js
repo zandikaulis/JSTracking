@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".0753f9683c8fa0ed52b6.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".c494803643112382eaa1.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -22797,7 +22797,7 @@
                     u = v.a(!0),
                     c = _.j() === _.o ? null : b;
                 return {
-                    app_version: "2017.10.16-193452+84522a051ef41fd4b0b48eb921897ed219936463",
+                    app_version: "2017.10.16-210945+f99505cb9b1909d544d5d0d5fd59dfdedfe57dcf",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -30169,13 +30169,13 @@
             }, T.getChannel = function() {
                 return A
             }, T.setChannel = function(e, t) {
-                A = e, t.streamUrl.then(function(e) {
+                A = e, t.castStreamUrl.then(function(e) {
                     F = e, R && A && F && w()
                 })
             }, T.getVideo = function() {
                 return null
             }, T.setVideo = function(e, t) {
-                N = e, t.streamUrl.then(function(e) {
+                N = e, t.castStreamUrl.then(function(e) {
                     F = e, R && N && F && k()
                 })
             }, T.getStats = function() {
