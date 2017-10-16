@@ -515,6 +515,21 @@ window.SiteOptions = {
                 "value": "experiment"
             }]
         },
+        "1e899717-a0a8-4922-b0e7-bb6d71e4ed20": {
+            "name": "android_mobile_promotions",
+            "v": 2246,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active_first_tab"
+            }, {
+                "weight": 0,
+                "value": "active_last_tab"
+            }]
+        },
         "1ef32b26-85c3-4e36-bece-4d3aea3a7604": {
             "name": "clips_no_long_talk",
             "v": 1518,
