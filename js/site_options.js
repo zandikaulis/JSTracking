@@ -3229,7 +3229,7 @@ window.SiteOptions = {
         },
         "d932e71d-23b9-4562-a2d3-2c57761cbfc6": {
             "name": "clips_love_story",
-            "v": 2170,
+            "v": 2255,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -3237,6 +3237,9 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "variant1"
+            }, {
+                "weight": 0,
+                "value": "variant2"
             }]
         },
         "dadbbe2e-7a79-4d10-8d29-cbff8101ac30": {
