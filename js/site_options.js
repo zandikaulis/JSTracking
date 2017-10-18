@@ -1216,7 +1216,7 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
-            "v": 2260,
+            "v": 2262,
             "t": 1,
             "groups": [{
                 "weight": 1,
@@ -3432,18 +3432,6 @@ window.SiteOptions = {
             }, {
                 "weight": 5,
                 "value": "no"
-            }]
-        },
-        "e79bd3a8-4064-463b-9f0f-1caf4e5336c0": {
-            "name": "android_bits_iap",
-            "v": 2256,
-            "t": 1,
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 100,
-                "value": "active"
             }]
         },
         "e8c5cf6c-5259-446b-aef1-4e33747b3b93": {
