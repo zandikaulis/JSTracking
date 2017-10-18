@@ -2173,13 +2173,13 @@ window.SiteOptions = {
         },
         "96593822-f5cd-40c1-9288-5d73615362a5": {
             "name": "android_native_bits_iap",
-            "v": 2192,
+            "v": 2258,
             "t": 1,
             "groups": [{
-                "weight": 100,
-                "value": "inactive"
-            }, {
                 "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
                 "value": "active"
             }]
         },
@@ -3229,7 +3229,7 @@ window.SiteOptions = {
         },
         "d932e71d-23b9-4562-a2d3-2c57761cbfc6": {
             "name": "clips_love_story",
-            "v": 2255,
+            "v": 2259,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -3240,6 +3240,9 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "variant2"
+            }, {
+                "weight": 0,
+                "value": "variant3"
             }]
         },
         "dadbbe2e-7a79-4d10-8d29-cbff8101ac30": {
