@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2a05c4310edd6893f7c3.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".ee675b8d068b5f1daba3.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -23052,7 +23052,7 @@
                     u = v.a(!0),
                     c = _.j() === _.o ? null : b;
                 return {
-                    app_version: "2017.10.18-224006+3978b08afa3a0367317bc2209cc443e3fd3a30d1",
+                    app_version: "2017.10.23-164920+c1aa1300ace6055d923a734a1d2496230e0221b1",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -31651,7 +31651,7 @@
         n.d(t, "a", function() {
             return r
         });
-        var r = "//video-edge-bea41e.sjc01.hls.ttvnw.net/v1/playlist/Cqty035lccQpw5eMrKAtatj7xTC5fOgiYJXGMDaYx092rd4wXy5giA9HRTqJprtXjm6j6LOVxHcci51FG0pIK3j_6mI72otfRuQosK-Febx_wgeD2-fMcGcpUlXhL1CUp1eA1tVhDAztrNDJCyyJRdOsNDr5vlfzwE1CoI0ZsI7dLbp6IRYRgpWlajJzu2Om6LBwomyPCmaWd_Z0rZ2fTpW7t-Earxe8JgVdi-wPFbh0s5nV6O0QgzDV9ek9-gFFcjaHRtZ1utJ9U7OCwLyzCtDTCsi1l6q-8qlO2ZNxQFQ78gN19M9bZfYyp9ztVLZngSyjIXQYx2pOFOMRc2JBheRPhuibzhytMKXbk7KVzp-3NlSXZ1P8cYv09cueGXWqm4zeBSxasDiHEExt7hOTRc01kWiDe9maAc1TlxYZdGT09JFau_6eNO5kx3qVJfegGcE6TocxWaR-lxU.m3u8"
+        var r = "//video-edge-d02d81.sjc01.hls.ttvnw.net/v1/playlist/CoYq2FHeGohYkNvj2RbWGXwTzI0OEZD2XSmWzEolJI8jVSxpBdYYSKoDYzjqu5IeFynFMrX9Aa_mbzLXF793y98zvcld9hqZnmfKKVmFJZ53JrD3R8rT7us2_oHnbILmx3pE2kxI08EJvi4YIdzW7bIdd9k8jUAb07bT5Cf93Fn-VB7ZiMh2lO6Q0RSGP0bhLPSgT41DiU08HqUsz5z0tGWBuj7Wtd9wHJXGX8-Zjio2rHYv4K4i2Y7iAp69__VVx3Mg-CMeGNLOSmHKgLBGhDHOEF1TySZwtsNz9cPlVchzeR49WYV9KIk7kEKPTOb-tb_rBuZG9nwvRxKEaY7rMuWTI2NiOlfYCFtgOTetgO1K83yXO9EyfBSfaYGQ6O1YD9nSab2IB9hYAnN8W97cvSOWqOeYl7GCgAoN37dC_31kONumdyx3gBLNkSEufX.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -40506,7 +40506,7 @@
                 }
             },
             E = Object.freeze([v.a, v.e]),
-            S = Object.freeze(["misterrogers"]),
+            S = Object.freeze(["misterrogers", "twitchpresents"]),
             P = function(e) {
                 function t() {
                     r(this, t);
