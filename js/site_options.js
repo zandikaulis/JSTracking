@@ -3598,7 +3598,7 @@ window.SiteOptions = {
         },
         "f4cfaad7-3641-46c1-941c-afacf61ff4e8": {
             "name": "clips_closer",
-            "v": 2274,
+            "v": 2284,
             "t": 1,
             "groups": [{
                 "weight": 1,
@@ -3606,6 +3606,9 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "variant1"
+            }, {
+                "weight": 0,
+                "value": "variant2"
             }]
         },
         "f51271fc-b922-43c5-a801-d5b44219b31f": {
