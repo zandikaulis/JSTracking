@@ -851,18 +851,6 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
-        "3406cb97-c43e-4fbb-98a7-104c6a5dfdbb": {
-            "name": "leviathan",
-            "v": 2249,
-            "t": 1,
-            "groups": [{
-                "weight": 0,
-                "value": "yes"
-            }, {
-                "weight": 100,
-                "value": "no"
-            }]
-        },
         "354aaebd-7643-434f-be37-98fe12c01220": {
             "name": "HTML5_Toggle_Removal",
             "v": 1604,
