@@ -548,6 +548,18 @@ window.SiteOptions = {
                 "value": "variant3"
             }]
         },
+        "1ef5f796-bb61-4c56-9bd7-0ee44162ebc7": {
+            "name": "android_dashboard",
+            "v": 2278,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "active"
+            }]
+        },
         "213678cc-be7d-4aa6-a938-8baac01a442a": {
             "name": "android_spade_batching",
             "v": 502,
