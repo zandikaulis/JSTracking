@@ -3020,6 +3020,18 @@ window.SiteOptions = {
                 "value": "no_prerolls"
             }]
         },
+        "ce62423f-4298-4448-bd1c-5421d96f65d6": {
+            "name": "ios_dashboard",
+            "v": 2276,
+            "t": 1,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "ce68dbb6-4d54-4aa0-acee-b33faa539047": {
             "name": "android_chomments_v2",
             "v": 1728,
