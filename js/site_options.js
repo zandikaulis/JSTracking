@@ -2503,13 +2503,13 @@ window.SiteOptions = {
         },
         "a88d97b7-ec93-4724-935e-e93f166df82f": {
             "name": "clips_feel_good",
-            "v": 2134,
+            "v": 2291,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "variant1"
             }]
         },
