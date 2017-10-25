@@ -902,6 +902,18 @@ window.SiteOptions = {
                 "value": "communities-tab"
             }]
         },
+        "3886e2be-85fd-43a4-84b9-02024290026a": {
+            "name": "TWITCH_RAID_PROMO",
+            "v": 2294,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "3a823fae-acbe-40c4-9ed8-6b1e685eb4b2": {
             "name": "ios_notification_center",
             "v": 1456,
