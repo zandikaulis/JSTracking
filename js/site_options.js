@@ -290,6 +290,21 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
+        "1318509a-bf97-475d-acdc-df6a24ef6e3e": {
+            "name": "twilight_videos_in_sidenav",
+            "v": 2310,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "none"
+            }, {
+                "weight": 0,
+                "value": "all_content"
+            }, {
+                "weight": 0,
+                "value": "no_archives"
+            }]
+        },
         "143da2f9-bf80-4555-a661-76c378fcd5c8": {
             "name": "ios_aa",
             "v": 1919,

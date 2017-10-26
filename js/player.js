@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".88919c574f3eb0fdb3a6.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2dd7ab3cec22836d8959.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -1316,7 +1316,7 @@
                     g = u[8],
                     _ = n.i(E.a)(r.window.location.href),
                     w = _.queryKey,
-                    k = "digest" === w.referrer,
+                    k = "raid" === w.referrer,
                     S = "true" === w.promo;
                 return new m.a({
                     adType: e,
@@ -1334,9 +1334,9 @@
                     padtimeExpGroup: h,
                     skippableExpGroup: v,
                     communitiesInfo: p,
-                    bismolExpGroup: y,
-                    citadelExpGroup: g,
-                    lure: k,
+                    citadelExpGroup: y,
+                    leviathanExpGroup: g,
+                    raid: k,
                     embedPromo: S
                 })
             })
@@ -2230,9 +2230,9 @@
         function o(e) {
             var t, n;
             return new p.a({
-                defaults: (t = {}, r(t, g, "no"), r(t, b, "no"), r(t, _, "no"), r(t, w, "no"), r(t, k, "no"), r(t, E, "no"), r(t, S, "no"), r(t, P, "no"), r(t, C, "no"), r(t, T, "no"), r(t, O, "no"), r(t, x, "no"), r(t, R, "control"), r(t, A, "1.8.10"), r(t, I, "no"), r(t, L, "no"), r(t, N, "keep"), r(t, M, "pad_control"), r(t, j, "no"), r(t, D, "no"), r(t, q, "control"), r(t, U, "no"), r(t, B, "control"), r(t, F, "control"), r(t, V, "control"), r(t, H, "2.0.0"), r(t, z, "no"), t),
+                defaults: (t = {}, r(t, g, "no"), r(t, b, "no"), r(t, _, "no"), r(t, w, "no"), r(t, k, "no"), r(t, E, "no"), r(t, S, "no"), r(t, P, "no"), r(t, C, "no"), r(t, T, "no"), r(t, O, "no"), r(t, x, "no"), r(t, R, "control"), r(t, A, "1.8.10"), r(t, I, "no"), r(t, L, "no"), r(t, N, "keep"), r(t, M, "pad_control"), r(t, j, "no"), r(t, D, "no"), r(t, q, "control"), r(t, U, "control"), r(t, B, "control"), r(t, F, "control"), r(t, V, "2.0.0"), r(t, H, "no"), r(t, z, "no"), t),
                 deviceID: e.deviceID,
-                overrides: c()((n = {}, r(n, R, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), r(n, b, a(["US"])), r(n, _, a(["GB"])), r(n, w, a(["DE"])), r(n, k, a(["FR"])), r(n, E, a(["SE"])), r(n, S, a(["DK", "FI", "NL", "NO"])), r(n, P, a(["CA"])), r(n, C, a(["AU", "NZ"])), r(n, T, a(["BE"])), r(n, O, a(["PL"])), r(n, x, a(["AT", "CH", "ES", "IT", "PT"])), r(n, I, i("vca")), r(n, L, i("yes")), r(n, A, i("1.8.11")), r(n, D, i("yes")), r(n, j, i("yes")), r(n, B, i("show")), r(n, F, i("show")), r(n, H, i("2.0.0")), n), JSON.parse(s.cookie.get("experiment_overrides", "{}"))),
+                overrides: c()((n = {}, r(n, R, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), r(n, b, a(["US"])), r(n, _, a(["GB"])), r(n, w, a(["DE"])), r(n, k, a(["FR"])), r(n, E, a(["SE"])), r(n, S, a(["DK", "FI", "NL", "NO"])), r(n, P, a(["CA"])), r(n, C, a(["AU", "NZ"])), r(n, T, a(["BE"])), r(n, O, a(["PL"])), r(n, x, a(["AT", "CH", "ES", "IT", "PT"])), r(n, I, i("vca")), r(n, L, i("yes")), r(n, A, i("1.8.11")), r(n, D, i("yes")), r(n, j, i("yes")), r(n, U, i("show")), r(n, B, i("show")), r(n, V, i("2.0.0")), n), JSON.parse(s.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
                 login: e.login,
                 provider: new m.a(m.a.SERVICE_URL),
@@ -2281,13 +2281,13 @@
             return D
         }), n.d(t, "p", function() {
             return q
-        }), n.d(t, "q", function() {
-            return U
         }), n.d(t, "u", function() {
-            return F
+            return B
         }), n.d(t, "m", function() {
-            return V
+            return F
         }), n.d(t, "t", function() {
+            return V
+        }), n.d(t, "q", function() {
             return H
         }), n.d(t, "r", function() {
             return z
@@ -2324,12 +2324,12 @@
             j = "00683bde-a79d-4b9d-a7cc-b0549f854d36",
             D = "d0518b75-fbba-418a-9445-ff7c517beb32",
             q = "d48fe249-fd73-4c8f-bd17-415b70dc3708",
-            U = "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5",
-            B = "74d6faab-1794-458a-a5f6-b92602254e9e",
-            F = "6e2f439b-916a-40b7-b1be-e82b284fd0bb",
-            V = "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98",
-            H = "ec70bd08-dbc8-4f48-9f60-d035fec3eb20",
-            z = "ec57d33c-2d58-4088-9ff6-617418a6cf1b"
+            U = "74d6faab-1794-458a-a5f6-b92602254e9e",
+            B = "6e2f439b-916a-40b7-b1be-e82b284fd0bb",
+            F = "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98",
+            V = "ec70bd08-dbc8-4f48-9f60-d035fec3eb20",
+            H = "ec57d33c-2d58-4088-9ff6-617418a6cf1b",
+            z = "3886e2be-85fd-43a4-84b9-02024290026a"
     }, function(e, t, n) {
         "use strict";
 
@@ -13212,7 +13212,7 @@
                     key: "_createTimer",
                     value: function() {
                         var e = this;
-                        this._store.getState().experiments.get(c.r).then(function(t) {
+                        this._store.getState().experiments.get(c.q).then(function(t) {
                             "no" !== t && (e._timer = new s.a(function() {
                                 e._store.dispatch(n.i(a.d)(o.d, 30, !1, 0, "TIMER_AD"))
                             }, 60 * parseInt(t, 10) * 1e3, window), e._initSubscribes())
@@ -14958,7 +14958,7 @@
                 reason_highlighter: e.playerType === h.i,
                 reason_dashboard: e.playerType === h.s,
                 reason_mobile_web_upsell: Boolean(e.isMobileLocation) && e.platform === v.a,
-                reason_digest: e.adType === p.b && e.lure && "yes" === e.bismol,
+                reason_raid: e.adType === p.b && e.raid && "yes" === e.leviathanExpGroup,
                 reason_vod_midroll: e.contentType === m.a && e.vod.type === y.b && e.adType === p.d && e.requestType === g.c && !1 === e.vodMidrollBlacklisted && "no" !== e.citadelExpGroup,
                 reason_embed_promo: e.contentType === m.a && e.playerType === h.o && e.embedPromo
             }
@@ -20660,7 +20660,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.10.26-200710+1f6ddcfef59d610237304bd3a15c992abf13e282",
+                    app_version: "2017.10.26-213424+b9cc0becfe8f9d3b772ccebd5c91d8da579c3ba7",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -26292,11 +26292,11 @@
                         b = t.padtimeExpGroup,
                         _ = t.communitiesInfo,
                         w = t.skippableExpGroup,
-                        k = t.bismolExpGroup,
-                        E = t.citadelExpGroup,
-                        S = t.lure,
-                        P = t.embedPromo;
-                    r(this, e), this.contentType = c.stream.contentType, this.login = h.login, this.adSessionId = n.i(i.a)(l), this.adType = a, this.bismol = k, this.lure = S, this.channel = m.name, this.channelId = m._id, this.chansubToken = y.chansub, this.communityIds = d(_.communities), this.twitchCorrelator = n.i(i.a)(), this.deviceId = u.a(!1), this.duration = o, this.requestType = s, this.hasAdFreeSubscription = Boolean(y.has_ad_free_subscription), this.lastAdDisplay = f, this.forced = p, this.padtime = b, this.requestTime = Date.now(), this.skippableExpGroup = w, this.citadelExpGroup = E, this.creativeId = g, this.embedPromo = P, this._initUserInfoFields(h), this._initChannelInfoFields(m, v), this._initStateFields(c), this._initAmazonFields()
+                        k = t.citadelExpGroup,
+                        E = t.raid,
+                        S = t.embedPromo,
+                        P = t.leviathanExpGroup;
+                    r(this, e), this.contentType = c.stream.contentType, this.login = h.login, this.adSessionId = n.i(i.a)(l), this.adType = a, this.raid = E, this.channel = m.name, this.channelId = m._id, this.chansubToken = y.chansub, this.communityIds = d(_.communities), this.twitchCorrelator = n.i(i.a)(), this.deviceId = u.a(!1), this.duration = o, this.requestType = s, this.hasAdFreeSubscription = Boolean(y.has_ad_free_subscription), this.lastAdDisplay = f, this.forced = p, this.padtime = b, this.requestTime = Date.now(), this.skippableExpGroup = w, this.citadelExpGroup = k, this.creativeId = g, this.embedPromo = S, this.leviathanExpGroup = P, this._initUserInfoFields(h), this._initChannelInfoFields(m, v), this._initStateFields(c), this._initAmazonFields()
                 }
                 return c(e, [{
                     key: "_initUserInfoFields",
