@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2dd7ab3cec22836d8959.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".490dad4c5779074fa927.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -20660,7 +20660,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.10.26-213424+b9cc0becfe8f9d3b772ccebd5c91d8da579c3ba7",
+                    app_version: "2017.10.26-215419+92bf52d20b2ff5a7d7f4ba7b9f3afee6d721f55e",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -23307,7 +23307,12 @@
             September: "September",
             October: "October",
             November: "November",
-            December: "December"
+            December: "December",
+            "Receive updates on this channel's activity, including when they go live and upload videos or clips, on mobile, email, and web.": "Receive updates on this channel's activity, including when they go live and upload videos or clips, on mobile, email, and web.",
+            "You must be logged in to use this extension feature": "You must be logged in to use this extension feature",
+            "The channel you are attempting to follow does not exist": "The channel you are attempting to follow does not exist",
+            "You are already following {{channelName}}": "You are already following {{channelName}}",
+            "You are about to follow {{channelName}}": "You are about to follow {{channelName}}"
         }
     }, function(e, t, n) {
         "use strict";
