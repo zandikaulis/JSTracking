@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".9a7f29a7f7d62c89cb2e.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".88919c574f3eb0fdb3a6.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -20660,7 +20660,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.10.26-200240+4468c8ccab6a74136f6cab2d7c9d8046820e3a6a",
+                    app_version: "2017.10.26-200710+1f6ddcfef59d610237304bd3a15c992abf13e282",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -33479,7 +33479,7 @@
             }) : e[t] = n, e
         }
         n.d(t, "a", function() {
-            return L
+            return N
         });
         var s, u, c, l, d = n(0),
             f = n.n(d),
@@ -33503,37 +33503,41 @@
                 }
             }(),
             k = v()({
+                "pl-menu__inner": !0,
+                "extension-modal__inner": !0
+            }),
+            E = v()({
                 "pl-menu__section": !0,
                 "extension-modal__header": !0
             }),
-            E = v()((s = {}, o(s, "qa-follow-modal-title-header", !0), o(s, "pl-menu__item", !0), o(s, "extension-modal__title-sub", !0), s)),
-            S = v()((u = {}, o(u, "qa-follow-modal-title-channel", !0), o(u, "pl-menu__item--label", !0), o(u, "extension-modal__title-main", !0), u)),
-            P = v()({
+            S = v()((s = {}, o(s, "qa-follow-modal-title-header", !0), o(s, "pl-menu__item", !0), o(s, "extension-modal__title", !0), s)),
+            P = v()((u = {}, o(u, "qa-follow-modal-title-channel", !0), o(u, "pl-menu__item--label", !0), o(u, "extension-modal__title-channel", !0), u)),
+            C = v()({
                 "pl-menu__section": !0,
                 "pl-menu__section--with-sep": !0
             }),
-            C = v()({
+            T = v()({
                 "pl-menu__item--label": !0,
                 "extension-modal__info-text": !0
             }),
-            T = v()((c = {}, o(c, "qa-follow-modal-button-confirm", !0), o(c, "pl-button", !0), o(c, "extension-modal__button", !0), c)),
-            O = v()((l = {}, o(l, "qa-follow-modal-button-cancel", !0), o(l, "pl-button", !0), o(l, "pl-button--hollow", !0), o(l, "extension-modal__button", !0), l)),
-            x = v()({
+            O = v()((c = {}, o(c, "qa-follow-modal-button-confirm", !0), o(c, "pl-button", !0), o(c, "extension-modal__button", !0), c)),
+            x = v()((l = {}, o(l, "qa-follow-modal-button-cancel", !0), o(l, "pl-button", !0), o(l, "pl-button--hollow", !0), o(l, "extension-modal__button", !0), l)),
+            R = v()({
                 "pl-close-button": !0,
                 "extension-modal__close-button": !0
             }),
-            R = h.a.shape({
+            I = h.a.shape({
                 channel: h.a.string.isRequired,
                 isFollowing: h.a.bool.isRequired,
                 isLoggedIn: h.a.bool.isRequired
             }),
-            I = {
+            A = {
                 t: h.a.func.isRequired,
                 extension: _.a.isRequired,
-                options: R.isRequired,
+                options: I.isRequired,
                 onClose: h.a.func.isRequired
             },
-            A = function(e) {
+            L = function(e) {
                 function t() {
                     r(this, t);
                     var e = i(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -33545,9 +33549,9 @@
                     key: "render",
                     value: function() {
                         return f.a.createElement("div", {
-                            className: "pl-menu__inner"
+                            className: k
                         }, this._renderHeader(), f.a.createElement("div", {
-                            className: P
+                            className: C
                         }, this._renderButtons()), this._renderNotificationToggle())
                     }
                 }, {
@@ -33558,27 +33562,34 @@
                             n = e.isFollowing,
                             r = e.isLoggedIn,
                             i = void 0;
-                        i = r ? t ? n ? "You are already following" : "You are about to follow" : "The channel you are attempting to follow does not exist" : "You must be logged in to use this extension feature";
+                        i = r ? t ? n ? "You are already following {{channelName}}" : "You are about to follow {{channelName}}" : "The channel you are attempting to follow does not exist" : "You must be logged in to use this extension feature";
                         var a = t && r,
-                            o = a ? f.a.createElement("div", {
-                                className: "extension-modal__header-row"
-                            }, f.a.createElement("div", {
-                                className: S
-                            }, t)) : null;
+                            o = void 0;
+                        if (a) {
+                            var s = f.a.createElement("span", {
+                                className: P
+                            }, t);
+                            o = f.a.createElement(y.c, {
+                                i18nKey: i,
+                                channelName: s
+                            })
+                        } else o = f.a.createElement("div", {
+                            className: "extension-modal__title-info"
+                        }, this.props.t(i));
                         return f.a.createElement("div", {
-                            className: k
+                            className: E
                         }, f.a.createElement("div", {
                             className: "extension-modal__header-row"
                         }, f.a.createElement("div", {
-                            className: E
-                        }, this.props.t(i)), f.a.createElement(g.a, {
-                            className: x,
+                            className: S
+                        }, o), f.a.createElement(g.a, {
+                            className: R,
                             onClick: this.cancelFollow
                         }, f.a.createElement("svg", {
                             className: "pl-close-button__svg"
                         }, f.a.createElement("use", {
                             xlinkHref: "#pl-icon_close"
-                        })))), o)
+                        })))))
                     }
                 }, {
                     key: "_renderButtons",
@@ -33588,14 +33599,14 @@
                             n = e.isFollowing;
                         return e.isLoggedIn && t && !n ? [f.a.createElement(g.a, {
                             key: "confirm",
-                            className: T,
+                            className: O,
                             onClick: this.confirmFollow
                         }, this.props.t("Follow")), f.a.createElement(g.a, {
                             key: "cancel",
-                            className: O,
+                            className: x,
                             onClick: this.cancelFollow
                         }, this.props.t("Cancel"))] : f.a.createElement(g.a, {
-                            className: O,
+                            className: x,
                             onClick: this.cancelFollow
                         }, this.props.t("Close"))
                     }
@@ -33608,14 +33619,14 @@
                             r = e.isLoggedIn,
                             i = this.state.notifications;
                         return r && t && !n ? f.a.createElement("div", {
-                            className: P
+                            className: C
                         }, f.a.createElement(b.a, {
                             className: "qa-notification-toggle",
                             label: "Notifications",
                             onToggle: this.onNotificationToggle,
                             toggledOn: i
                         }), f.a.createElement("div", {
-                            className: C
+                            className: T
                         }, this.props.t("Receive updates on this channel's activity, including when they go live and upload videos or clips, on mobile, email, and web."))) : null
                     }
                 }, {
@@ -33643,8 +33654,8 @@
                     }
                 }]), t
             }(f.a.Component);
-        A.propTypes = I;
-        var L = n.i(y.a)()(A)
+        L.propTypes = A;
+        var N = n.i(y.a)()(L)
     }, function(e, t, n) {
         "use strict";
 
