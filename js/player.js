@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2ad6f5d2f32e81e33be4.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".bca665217b8ae5b79b6c.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -1467,6 +1467,10 @@
             return _
         }), n.d(t, "d", function() {
             return w
+        }), n.d(t, "u", function() {
+            return k
+        }), n.d(t, "t", function() {
+            return E
         });
         var r = "loadstart",
             i = "error",
@@ -1486,7 +1490,9 @@
             g = "ratechange",
             b = "loadeddata",
             _ = "stalled",
-            w = "abort"
+            w = "abort",
+            k = "buffering",
+            E = "rebuffering"
     }, function(e, t, n) {
         "use strict";
 
@@ -6280,7 +6286,7 @@
                                 playback_error_msg: "fatal_error"
                             })), t._eventEmitter.emit(u.b, t._mediaError)
                         }), r.addEventListener(e.PlayerEvent.REBUFFERING, function() {
-                            t._readyState !== w.a && (t._readyState = w.a), t._eventEmitter.emit(u.j)
+                            t._readyState = w.a, t._eventEmitter.emit(u.t)
                         }), r.addEventListener(e.PlayerEvent.TIME_UPDATE, function() {
                             t._eventEmitter.emit(u.o)
                         }), r.addEventListener(e.PlayerEvent.BUFFER_UPDATE, function() {
@@ -6290,7 +6296,7 @@
                                 i = e.properties;
                             "video_error" === r && t.store.dispatch(n.i(E.b)(r, i))
                         }), r.addEventListener(e.PlayerState.BUFFERING, function() {
-                            t._readyState = w.a, t._networkState = k.a
+                            t._readyState = w.a, t._networkState = k.a, t._eventEmitter.emit(u.u)
                         }), r.addEventListener(e.PlayerState.IDLE, function() {
                             t._readyState = w.d, t._networkState = k.d, t._eventEmitter.emit(u.q)
                         }), r.addEventListener(e.PlayerState.ENDED, function() {
@@ -10586,7 +10592,7 @@
                     k = _.indexOf("windows") > -1 && _.indexOf("edge") > -1;
                 (w || k) && y.addEventListener(X.o, function() {
                     t.dispatch(n.i(I.g)(!1))
-                }), y.addEventListener(J.I, F), y.addEventListener(X.l, ve), y.addEventListener(X.k, G), y.addEventListener(X.j, G), y.addEventListener(X.j, Y), y.addEventListener(X.p, G), y.addEventListener(X.q, pe), y.addEventListener(J.h, De._loadVideoAPI), y.addEventListener(X.c, De._loadVideoAPI);
+                }), y.addEventListener(J.I, F), y.addEventListener(X.l, ve), y.addEventListener(X.k, G), y.addEventListener(X.j, G), y.addEventListener(X.j, Y), y.addEventListener(X.p, G), y.addEventListener(X.q, pe), y.addEventListener(J.h, De._loadVideoAPI), y.addEventListener(X.c, De._loadVideoAPI), y.addEventListener(X.u, G), y.addEventListener(X.t, Y);
                 var E = t.getState(),
                     S = E.playback;
                 y.setVolume(S.volume), y.setMuted(S.muted), Le(), Ae(), De._propagateBackendMutliEvents()
@@ -20612,7 +20618,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.10.25-225604+6e52f7560462387c676dbf6983af6402cdb4b9d3",
+                    app_version: "2017.10.25-233037+df5ea6376999507a05ce357cb17619cb0d1c2d94",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
