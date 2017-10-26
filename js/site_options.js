@@ -3721,13 +3721,13 @@ window.SiteOptions = {
         },
         "fd74ad1d-d885-4d12-9036-f571fc82e6df": {
             "name": "JANEWAY",
-            "v": 2225,
+            "v": 2301,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "yes"
             }]
         },
