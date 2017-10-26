@@ -1262,6 +1262,18 @@ window.SiteOptions = {
                 "value": "FullPageTakeover"
             }]
         },
+        "4c266e8f-176e-4280-8914-d991e6decee3": {
+            "name": "android_broadcast_abs",
+            "v": 2303,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "4d081a33-0d0f-4b44-bfde-cf07c358915f": {
             "name": "baking_bread_d",
             "v": 1004,
@@ -1556,6 +1568,18 @@ window.SiteOptions = {
                 "value": "test"
             }]
         },
+        "64b8e100-e37d-4796-b446-ff283f20b038": {
+            "name": "android_broadcast_abs",
+            "v": 2305,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "64c787d2-7a36-447b-bba3-8bbab6846da6": {
             "name": "android_browse_for_tablet",
             "v": 2043,
@@ -1685,6 +1709,18 @@ window.SiteOptions = {
                 "value": "control"
             }, {
                 "weight": 95,
+                "value": "active"
+            }]
+        },
+        "6dd84744-bc38-46a8-b146-0f41c5f167ba": {
+            "name": "android_broadcast_abs",
+            "v": 2307,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
                 "value": "active"
             }]
         },
@@ -1934,6 +1970,18 @@ window.SiteOptions = {
         "821d3e5f-5836-48d6-b203-a7973d6f097c": {
             "name": "android_raids",
             "v": 1998,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
+        "8250c31b-0103-4d62-a507-031ac0f9d875": {
+            "name": "android_broadcast_abs",
+            "v": 2306,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -3446,6 +3494,18 @@ window.SiteOptions = {
                 "value": "off"
             }]
         },
+        "e3b7d301-0820-40b5-aac4-bd1728282ee9": {
+            "name": "android_broadcast_abs",
+            "v": 2304,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "e3c3a143-0f85-4e84-9b08-73b3ee3ae171": {
             "name": "ios_onboarding_recommendations",
             "v": 1749,
@@ -3599,6 +3659,18 @@ window.SiteOptions = {
         "f164d19e-cbbd-4774-86c7-106f21d892c0": {
             "name": "ios_browse_game_display_tablet_layout",
             "v": 2102,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
+        "f30da83a-4869-4993-b09f-45d718ab6fab": {
+            "name": "android_broadcast_abs",
+            "v": 2302,
             "t": 1,
             "groups": [{
                 "weight": 100,
