@@ -2602,13 +2602,13 @@ window.SiteOptions = {
         },
         "aa886844-3254-4197-b026-518f2fa75c10": {
             "name": "CVP MediaPlayer backend control Aug 17",
-            "v": 2247,
+            "v": 2311,
             "t": 1,
             "groups": [{
-                "weight": 1,
+                "weight": 2,
                 "value": "no"
             }, {
-                "weight": 99,
+                "weight": 98,
                 "value": "yes"
             }]
         },
@@ -3604,11 +3604,14 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 2223,
+            "v": 2312,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 95,
                 "value": "2.0.13"
+            }, {
+                "weight": 5,
+                "value": "2.0.15"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
