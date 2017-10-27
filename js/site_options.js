@@ -1157,6 +1157,27 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "48ec769e-fc80-4464-8b89-b95f9654f7ea": {
+            "name": "android_videoplayer_v2",
+            "v": 2315,
+            "t": 1,
+            "groups": [{
+                "weight": 5,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "native"
+            }, {
+                "weight": 5,
+                "value": "playercore"
+            }, {
+                "weight": 88,
+                "value": "exoplayer"
+            }, {
+                "weight": 1,
+                "value": "exoplayer_2"
+            }]
+        },
         "497e1277-7fff-4c16-98f0-6b55c8b59a4f": {
             "name": "I18N_GAME_NAMES",
             "v": 1237,
@@ -1323,6 +1344,18 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "yes"
+            }]
+        },
+        "4d606c20-13e7-4949-b8d5-b34492db4662": {
+            "name": "android_miniplayer_width_change",
+            "v": 2314,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "4dbc0ece-9392-421b-bf3d-7ace54428241": {
