@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".490dad4c5779074fa927.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".b6d2dea450469e8549ad.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -5771,9 +5771,9 @@
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
         n.d(t, "a", function() {
-            return C
+            return P
         }), n.d(t, "b", function() {
-            return x
+            return O
         });
         var a = n(22),
             o = n(67),
@@ -5790,12 +5790,11 @@
             y = n(227),
             g = n.n(y),
             b = n(29),
-            _ = n(12),
-            w = n(88),
-            k = n(179),
-            E = n(24),
-            S = n(95),
-            P = function() {
+            _ = n(88),
+            w = n(179),
+            k = n(24),
+            E = n(95),
+            S = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -5806,12 +5805,12 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            C = "mediaplayer",
-            T = {
+            P = "mediaplayer",
+            C = {
                 group: "auto",
                 name: "Auto"
             },
-            O = {
+            T = {
                 broadcast_id: 0,
                 cluster: "",
                 manifest_cluster: "",
@@ -5843,13 +5842,13 @@
                 video_buffer_size: 0,
                 volume: 0
             },
-            x = function() {
+            O = function() {
                 function e() {
                     var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         n = arguments[1];
-                    i(this, e), this.store = n, this._options = t, this._mediaPlayer = null, this._eventEmitter = new l.a, this._apiCallQueue = [], this._cache = {}, this._readyState = w.d, this._networkState = k.c, this._fireLoadedMetadata = !1, this._hasRetried = !1, this._src = "", this._currentCaptionData = {}, this._mediaPlayerLogLevel = t["cvp-log"] || "error", this.initialize()
+                    i(this, e), this.store = n, this._options = t, this._mediaPlayer = null, this._eventEmitter = new l.a, this._apiCallQueue = [], this._cache = {}, this._readyState = _.d, this._networkState = w.c, this._fireLoadedMetadata = !1, this._hasRetried = !1, this._src = "", this._currentCaptionData = {}, this._mediaPlayerLogLevel = t["cvp-log"] || "error", this.initialize()
                 }
-                return P(e, [{
+                return S(e, [{
                     key: "initialize",
                     value: function() {
                         var e = this;
@@ -5924,7 +5923,7 @@
                     value: function(e) {
                         var t = e.spadeEventName,
                             r = e.spadeEventData;
-                        this.store.dispatch(n.i(E.b)(t, r))
+                        this.store.dispatch(n.i(k.b)(t, r))
                     }
                 }, {
                     key: "addEventListener",
@@ -6034,12 +6033,12 @@
                                 bandwidth: e.bitrate
                             })
                         };
-                        return [T].concat(r(this._mediaPlayer.getQualities())).map(e)
+                        return [C].concat(r(this._mediaPlayer.getQualities())).map(e)
                     }
                 }, {
                     key: "getQuality",
                     value: function() {
-                        return null === this._mediaPlayer ? null : this._mediaPlayer.getAutoSwitchQuality() ? T : this._mediaPlayer.getQuality().group
+                        return null === this._mediaPlayer ? null : this._mediaPlayer.getAutoSwitchQuality() ? C : this._mediaPlayer.getQuality().group
                     }
                 }, {
                     key: "elapsedTime",
@@ -6070,9 +6069,9 @@
                 }, {
                     key: "getBuffered",
                     value: function() {
-                        if (null === this._mediaPlayer) return new R;
+                        if (null === this._mediaPlayer) return new x;
                         var e = this._mediaPlayer.getBuffered();
-                        return new R(e.start, e.end)
+                        return new x(e.start, e.end)
                     }
                 }, {
                     key: "getReadyState",
@@ -6102,18 +6101,13 @@
                 }, {
                     key: "getBackend",
                     value: function() {
-                        return C
+                        return P
                     }
                 }, {
                     key: "play",
                     value: function() {
-                        var e = this;
                         if (null === this._mediaPlayer) return void this._apiCallQueue.push(this.play.bind(this));
-                        var t = this.store.getState(),
-                            n = t.stream;
-                        n instanceof _.b ? this.setChannel(n.channel, n).then(function() {
-                            e._mediaPlayer.play(), e._eventEmitter.emit(u.p)
-                        }) : (this._mediaPlayer.play(), this._eventEmitter.emit(u.p))
+                        this._mediaPlayer.play(), this._eventEmitter.emit(u.p)
                     }
                 }, {
                     key: "pause",
@@ -6178,7 +6172,7 @@
                                 volume: i.getVolume()
                             }
                         }
-                        return Object.assign({}, O, r, a)
+                        return Object.assign({}, T, r, a)
                     }
                 }, {
                     key: "setPlaybackRate",
@@ -6193,7 +6187,7 @@
                 }, {
                     key: "getPlayed",
                     value: function() {
-                        return new R
+                        return new x
                     }
                 }, {
                     key: "getStatsEnabled",
@@ -6223,10 +6217,10 @@
                 }, {
                     key: "_onAuthError",
                     value: function() {
-                        this._hasRetried ? (this._eventEmitter.emit(u.b, new Error(S.e)), this.store.dispatch(n.i(E.b)(s.b, {
+                        this._hasRetried ? (this._eventEmitter.emit(u.b, new Error(E.e)), this.store.dispatch(n.i(k.b)(s.b, {
                             playback_error_code: 8003,
                             playback_error_msg: "fatal_auth_error"
-                        }))) : (this._hasRetried = !0, this._retryStreamLoad(), this.store.dispatch(n.i(E.b)(s.b, {
+                        }))) : (this._hasRetried = !0, this._retryStreamLoad(), this.store.dispatch(n.i(k.b)(s.b, {
                             playback_error_code: 8004,
                             playback_error_msg: "warn_auth_error"
                         })))
@@ -6234,7 +6228,7 @@
                 }, {
                     key: "_onOfflineError",
                     value: function() {
-                        this.store.dispatch(n.i(E.b)(s.b, {
+                        this.store.dispatch(n.i(k.b)(s.b, {
                             playback_error_code: 8002,
                             playback_error_msg: "offline_error"
                         })), this._eventEmitter.emit(a.f), this._eventEmitter.emit(u.m)
@@ -6247,7 +6241,7 @@
                         r.addEventListener(e.PlayerEvent.INITIALIZED, function() {
                             t._eventEmitter.emit(a.h)
                         }), r.addEventListener(e.PlayerState.PLAYING, function() {
-                            t._readyState <= w.a && (t._readyState = w.c), t._eventEmitter.emit(u.f), t._eventEmitter.emit(u.i), t._cache.seekStarted && (t._eventEmitter.emit(u.g), t._eventEmitter.emit(u.l), t._cache.seekStarted = !1)
+                            t._readyState <= _.a && (t._readyState = _.c), t._eventEmitter.emit(u.f), t._eventEmitter.emit(u.i), t._cache.seekStarted && (t._eventEmitter.emit(u.g), t._eventEmitter.emit(u.l), t._cache.seekStarted = !1)
                         }), r.addEventListener(e.PlayerEvent.QUALITY_CHANGED, function() {
                             var e = t.getQuality();
                             if (t._mediaPlayer.getAutoSwitchQuality()) {
@@ -6272,21 +6266,21 @@
                                 case e.ErrorType.AUTHORIZATION:
                                     return void t._onAuthError();
                                 case e.ErrorType.NOT_SUPPORTED:
-                                    t._mediaError = new Error(S.d);
+                                    t._mediaError = new Error(E.d);
                                     break;
                                 case e.ErrorType.NETWORK:
                                 case e.ErrorType.NETWORK_IO:
-                                    t._mediaError = new Error(S.a);
+                                    t._mediaError = new Error(E.a);
                                     break;
                                 default:
-                                    a === e.ErrorSource.DECODER ? t._mediaError = new Error(S.b) : (console.error("MediaPlayer failed", i), t._mediaError = new Error(S.c))
+                                    a === e.ErrorSource.DECODER ? t._mediaError = new Error(E.b) : (console.error("MediaPlayer failed", i), t._mediaError = new Error(E.c))
                             }
-                            t.store.dispatch(n.i(E.b)(s.b, {
+                            t.store.dispatch(n.i(k.b)(s.b, {
                                 playback_error_code: 8001,
                                 playback_error_msg: "fatal_error"
                             })), t._eventEmitter.emit(u.b, t._mediaError)
                         }), r.addEventListener(e.PlayerEvent.REBUFFERING, function() {
-                            t._readyState = w.a, t._eventEmitter.emit(u.t)
+                            t._readyState = _.a, t._eventEmitter.emit(u.t)
                         }), r.addEventListener(e.PlayerEvent.TIME_UPDATE, function() {
                             t._eventEmitter.emit(u.o)
                         }), r.addEventListener(e.PlayerEvent.BUFFER_UPDATE, function() {
@@ -6294,18 +6288,18 @@
                         }), r.addEventListener(e.PlayerEvent.TRACKING, function(e) {
                             var r = e.name,
                                 i = e.properties;
-                            "video_error" === r && t.store.dispatch(n.i(E.b)(r, i))
+                            "video_error" === r && t.store.dispatch(n.i(k.b)(r, i))
                         }), r.addEventListener(e.PlayerState.BUFFERING, function() {
-                            t._readyState = w.a, t._networkState = k.a, t._eventEmitter.emit(u.u)
+                            t._readyState = _.a, t._networkState = w.a, t._eventEmitter.emit(u.u)
                         }), r.addEventListener(e.PlayerState.IDLE, function() {
-                            t._readyState = w.d, t._networkState = k.d, t._eventEmitter.emit(u.q)
+                            t._readyState = _.d, t._networkState = w.d, t._eventEmitter.emit(u.q)
                         }), r.addEventListener(e.PlayerState.ENDED, function() {
-                            t._readyState = w.d, t._networkState = k.b, t._eventEmitter.emit(u.m)
+                            t._readyState = _.d, t._networkState = w.b, t._eventEmitter.emit(u.m)
                         }), r.addEventListener(e.PlayerState.READY, function() {
-                            t._hasRetried = !1, t._readyState = w.b, t._networkState = k.d;
+                            t._hasRetried = !1, t._readyState = _.b, t._networkState = w.d;
                             var e = t.store.getState(),
                                 i = e.analytics;
-                            t.store.dispatch(n.i(E.b)(o.e, {
+                            t.store.dispatch(n.i(k.b)(o.e, {
                                 time_since_load_start: Date.now() - i.playSessionStartTime
                             }));
                             var s = h()(t._mediaPlayer.getManifestInfo(), function(e, t, n) {
@@ -6337,14 +6331,14 @@
                     }
                 }]), e
             }();
-        x.canPlay = function() {
+        O.canPlay = function() {
             return g.a.canLoadMediaplayer()
         };
-        var R = function() {
+        var x = function() {
             function e(t, n) {
                 i(this, e), this.length = void 0 === t ? 0 : 1, this._start = t, this._end = n
             }
-            return P(e, [{
+            return S(e, [{
                 key: "start",
                 value: function() {
                     return this._start
@@ -20660,7 +20654,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.10.26-215419+92bf52d20b2ff5a7d7f4ba7b9f3afee6d721f55e",
+                    app_version: "2017.10.26-233359+f4b7d77a0bccc451566da1ce3b72e61f3db4f588",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
