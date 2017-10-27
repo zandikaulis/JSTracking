@@ -3733,13 +3733,13 @@ window.SiteOptions = {
         },
         "f321aa37-e81d-4a81-99d5-303bf9429b7b": {
             "name": "AKAMAI_IMAGE_MANAGER",
-            "v": 1407,
+            "v": 2318,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "experiment"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "control"
             }]
         },
