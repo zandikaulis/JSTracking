@@ -2416,13 +2416,13 @@ window.SiteOptions = {
         },
         "9a6391a8-a115-4875-a0c0-afc34db3d87d": {
             "name": "BITS_CHECKOUT",
-            "v": 2126,
+            "v": 2321,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }]
         },
