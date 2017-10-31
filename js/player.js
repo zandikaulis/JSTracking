@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".45c6dad8060576b595f1.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".7d89b8eb316b88127a63.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -20764,7 +20764,7 @@
                     u = y.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.10.31-022359+85fd13e9f809067c07a7ff92372344d6141fabdc",
+                    app_version: "2017.10.31-214350+1071a2a7404876358dde53d1581df810f96d69af",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -38224,7 +38224,7 @@
                 }
             },
             E = Object.freeze([y.a, y.e]),
-            S = Object.freeze(["misterrogers", "twitchpresents"]),
+            S = Object.freeze(["misterrogers", "contv", "twitchpresents"]),
             P = function(e) {
                 function t() {
                     r(this, t);
