@@ -989,6 +989,18 @@ window.SiteOptions = {
                 "value": "active1"
             }]
         },
+        "40322537-01de-41e2-b46e-0ac2e4a98035": {
+            "name": "ios_chromecast_player_core_test",
+            "v": 2333,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "player_core"
+            }]
+        },
         "409d6b75-c64e-449c-b6ec-130118312d3f": {
             "name": "ios_raids",
             "v": 1999,
