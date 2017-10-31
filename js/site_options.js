@@ -919,13 +919,13 @@ window.SiteOptions = {
         },
         "3886e2be-85fd-43a4-84b9-02024290026a": {
             "name": "TWITCH_RAID_PROMO",
-            "v": 2294,
+            "v": 2335,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 90,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 10,
                 "value": "no"
             }]
         },
