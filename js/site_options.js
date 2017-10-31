@@ -1544,6 +1544,18 @@ window.SiteOptions = {
                 "value": "localized"
             }]
         },
+        "5e739dab-ded8-4722-b9ee-6053bb34b48b": {
+            "name": "ios_chromecast_player_core",
+            "v": 2331,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "legacy"
+            }, {
+                "weight": 0,
+                "value": "player_core"
+            }]
+        },
         "5e786a5f-4ad6-4a1a-9fe9-5926ef05f0e7": {
             "name": "clips_it_aint_me",
             "v": 1086,
