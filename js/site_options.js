@@ -2053,13 +2053,13 @@ window.SiteOptions = {
         },
         "821d3e5f-5836-48d6-b203-a7973d6f097c": {
             "name": "android_raids",
-            "v": 1998,
+            "v": 2339,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "active"
             }]
         },
@@ -3358,13 +3358,13 @@ window.SiteOptions = {
         },
         "d5ceeac2-4734-46f3-a1a6-8edba1c6839c": {
             "name": "android_raids_ads",
-            "v": 2150,
+            "v": 2341,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 90,
                 "value": "active"
             }, {
-                "weight": 100,
+                "weight": 10,
                 "value": "control"
             }]
         },
