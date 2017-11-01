@@ -2906,6 +2906,18 @@ window.SiteOptions = {
                 "value": "new"
             }]
         },
+        "b60494e1-91c9-485c-82a4-b12026cafac3": {
+            "name": "android_chat_refactor",
+            "v": 2336,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "b6400c92-a229-462e-bfb0-9dcf456b5b61": {
             "name": "ios_google_ima",
             "v": 1387,
