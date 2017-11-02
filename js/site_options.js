@@ -2754,8 +2754,8 @@ window.SiteOptions = {
             }]
         },
         "adac3887-6bd4-4fea-bfda-8e019f894dbe": {
-            "name": "custom live up",
-            "v": 2343,
+            "name": "CUSTOM_LIVE_UP",
+            "v": 2344,
             "t": 2,
             "groups": [{
                 "weight": 100,
