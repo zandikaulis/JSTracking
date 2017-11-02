@@ -1582,13 +1582,13 @@ window.SiteOptions = {
         },
         "5f94f02e-56fd-4681-bcba-95f37a7d83fa": {
             "name": "ZUORA_PHASE_1",
-            "v": 2346,
+            "v": 2347,
             "t": 1,
             "groups": [{
-                "weight": 10,
+                "weight": 20,
                 "value": "yes"
             }, {
-                "weight": 90,
+                "weight": 80,
                 "value": "no"
             }]
         },
