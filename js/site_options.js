@@ -2755,13 +2755,13 @@ window.SiteOptions = {
         },
         "adac3887-6bd4-4fea-bfda-8e019f894dbe": {
             "name": "CUSTOM_LIVE_UP",
-            "v": 2345,
+            "v": 2350,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }]
         },
