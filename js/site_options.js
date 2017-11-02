@@ -2584,16 +2584,16 @@ window.SiteOptions = {
         },
         "9fb3c040-d7d1-40b1-ab32-f6843c8baa46": {
             "name": "twilight_web_onboarding",
-            "v": 2261,
+            "v": 2349,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 60,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "no_skip"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "skip"
             }]
         },
