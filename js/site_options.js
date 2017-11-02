@@ -2755,13 +2755,13 @@ window.SiteOptions = {
         },
         "adac3887-6bd4-4fea-bfda-8e019f894dbe": {
             "name": "CUSTOM_LIVE_UP",
-            "v": 2350,
+            "v": 2352,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "yes"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "no"
             }]
         },
@@ -3576,6 +3576,18 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "variant1"
+            }]
+        },
+        "e35023b2-1cfc-4e73-b5ab-30f36d2afc4d": {
+            "name": "ios_host_transition",
+            "v": 2351,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "e39a1b4d-51ef-4b49-9378-91a7eb35c3da": {
