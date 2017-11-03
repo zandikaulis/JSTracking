@@ -2017,13 +2017,13 @@ window.SiteOptions = {
         },
         "80a4bf5b-0897-4ae6-bf0b-70357524c39b": {
             "name": "ios_feed_display_content_type_indicator",
-            "v": 1940,
+            "v": 2357,
             "t": 1,
             "groups": [{
-                "weight": 10,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 90,
+                "weight": 100,
                 "value": "active"
             }]
         },
