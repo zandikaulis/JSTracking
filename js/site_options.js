@@ -2305,7 +2305,7 @@ window.SiteOptions = {
         },
         "9452d9e2-6588-408c-b8aa-1e54ff1e2f4a": {
             "name": "twilight_expando_featuro",
-            "v": 2359,
+            "v": 2362,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -3055,13 +3055,13 @@ window.SiteOptions = {
         },
         "bfc54618-1905-49ed-ab8e-e72af763f553": {
             "name": "android_story_card_v2.5",
-            "v": 1994,
+            "v": 2363,
             "t": 2,
             "groups": [{
-                "weight": 10,
+                "weight": 0,
                 "value": "holdout"
             }, {
-                "weight": 90,
+                "weight": 100,
                 "value": "active"
             }]
         },
