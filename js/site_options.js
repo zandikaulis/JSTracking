@@ -2303,6 +2303,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "9452d9e2-6588-408c-b8aa-1e54ff1e2f4a": {
+            "name": "twilight_expando_featuro",
+            "v": 2359,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "expanded"
+            }]
+        },
         "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": {
             "name": "DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS",
             "v": 702,
@@ -2755,13 +2767,13 @@ window.SiteOptions = {
         },
         "adac3887-6bd4-4fea-bfda-8e019f894dbe": {
             "name": "CUSTOM_LIVE_UP",
-            "v": 2356,
+            "v": 2358,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }]
         },
