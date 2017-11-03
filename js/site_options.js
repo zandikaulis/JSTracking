@@ -1582,13 +1582,13 @@ window.SiteOptions = {
         },
         "5f94f02e-56fd-4681-bcba-95f37a7d83fa": {
             "name": "ZUORA_PHASE_1",
-            "v": 2354,
+            "v": 2365,
             "t": 1,
             "groups": [{
-                "weight": 30,
+                "weight": 50,
                 "value": "yes"
             }, {
-                "weight": 70,
+                "weight": 50,
                 "value": "no"
             }]
         },
@@ -3814,16 +3814,16 @@ window.SiteOptions = {
         },
         "f4cfaad7-3641-46c1-941c-afacf61ff4e8": {
             "name": "clips_closer",
-            "v": 2284,
+            "v": 2370,
             "t": 1,
             "groups": [{
                 "weight": 1,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "variant1"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "variant2"
             }]
         },
