@@ -15281,6 +15281,7 @@ googletag.cmd = googletag.cmd || [],
                 REQUIEM: "ad5f316b-0a87-44a6-9348-f6b6ee36b0bb",
                 TWILIGHT_MERCH_STORE_LAUNCH: "298a5f39-228a-487a-ad06-422c18458403",
                 PREMIERE_FLOW: "4d3d19a7-38c5-4328-9730-7d99565d5edd",
+                CUSTOM_LIVE_UP: "adac3887-6bd4-4fea-bfda-8e019f894dbe",
                 BROADCAST_SOFTWARE: "4994d68b-77d3-41f3-bebb-64b96c753b43"
             },
             r = {
@@ -15347,6 +15348,7 @@ googletag.cmd = googletag.cmd || [],
                 "ad5f316b-0a87-44a6-9348-f6b6ee36b0bb": "no",
                 "298a5f39-228a-487a-ad06-422c18458403": "off",
                 "4d3d19a7-38c5-4328-9730-7d99565d5edd": "no",
+                "adac3887-6bd4-4fea-bfda-8e019f894dbe": "no",
                 "4994d68b-77d3-41f3-bebb-64b96c753b43": "control"
             },
             o = {},
@@ -15369,6 +15371,7 @@ googletag.cmd = googletag.cmd || [],
                 REQUIEM: "yes",
                 TWILIGHT_MERCH_STORE_LAUNCH: "on",
                 JANEWAY: "yes",
+                CUSTOM_LIVE_UP: "yes",
                 TWILIGHT_STREAM_SUMMARY: "yes"
             };
         _.each(Object.keys(s), function(t) {
