@@ -2341,13 +2341,13 @@ window.SiteOptions = {
         },
         "96593822-f5cd-40c1-9288-5d73615362a5": {
             "name": "android_native_bits_iap",
-            "v": 2258,
+            "v": 2371,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "active"
             }]
         },
