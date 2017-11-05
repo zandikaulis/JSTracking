@@ -2003,6 +2003,18 @@ window.SiteOptions = {
                 "value": ""
             }]
         },
+        "7e23544d-0541-4c5f-8560-975ffe2f9026": {
+            "name": "SUB_GIFT_CHECKOUT",
+            "v": 2375,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "7e75faa1-7a39-4c06-8474-c1b902ab9189": {
             "name": "android_profile_upload_5.5",
             "v": 2196,
