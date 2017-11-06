@@ -3937,13 +3937,13 @@ window.SiteOptions = {
         },
         "fdf6192f-677e-445b-bc0e-c7eaa9f901b9": {
             "name": "ios_native_bits_iap",
-            "v": 2219,
+            "v": 2377,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "inactive"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "active"
             }]
         },
