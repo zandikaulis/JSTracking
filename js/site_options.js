@@ -2627,6 +2627,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "9daf3cbf-bd22-4101-95b9-b2c1b0461094": {
+            "name": "android_premieres_reruns",
+            "v": 2387,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "9e5fffd0-9693-412b-913d-7da332fdeea4": {
             "name": "Marker Experiment",
             "v": 2010,
