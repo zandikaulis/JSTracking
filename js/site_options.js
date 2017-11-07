@@ -2329,13 +2329,13 @@ window.SiteOptions = {
         },
         "9452d9e2-6588-408c-b8aa-1e54ff1e2f4a": {
             "name": "twilight_expando_featuro",
-            "v": 2362,
+            "v": 2389,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "expanded"
             }]
         },
@@ -3781,11 +3781,14 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 2338,
+            "v": 2390,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 95,
                 "value": "2.0.16"
+            }, {
+                "weight": 5,
+                "value": "2.1.0"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
