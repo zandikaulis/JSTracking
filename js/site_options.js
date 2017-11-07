@@ -989,6 +989,18 @@ window.SiteOptions = {
                 "value": "active1"
             }]
         },
+        "3fc5b1e2-5580-464e-bc32-21d07a4a1df8": {
+            "name": "android_enable_rooms",
+            "v": 2386,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "40322537-01de-41e2-b46e-0ac2e4a98035": {
             "name": "ios_chromecast_player_core_test",
             "v": 2333,
@@ -2822,6 +2834,18 @@ window.SiteOptions = {
                 "value": "control"
             }, {
                 "weight": 100,
+                "value": "active"
+            }]
+        },
+        "ae5fe654-f29f-435e-b1c9-4d106d51fd42": {
+            "name": "iOS_premieres_reruns_pastpremieres",
+            "v": 2385,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
                 "value": "active"
             }]
         },
