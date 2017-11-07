@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".4ec79c643d90fc09a655.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".dbdbf8cb447a37414103.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -21086,7 +21086,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.11.07-194810+ee9588aa823d99b5c2c06ed163633f1cc99fb67f",
+                    app_version: "2017.11.07-225933+2ac90bc2febbd006fecaf299b0958de00b657ce3",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -23688,10 +23688,14 @@
             "Report Extension": "Report Extension",
             "More from {{channelName}}": "More from {{channelName}}",
             Vodcast: "Vodcast",
+            Premiere: "Premiere",
+            Rerun: "Rerun",
             "Playing pre-recorded video": "Playing pre-recorded video",
             "Playing highlight": "Playing highlight",
             "Playing uploaded video": "Playing uploaded video",
             "Playing past broadcast": "Playing past broadcast",
+            "Rerun of video": "Rerun of video",
+            "Premiering video": "Premiering video",
             "Content not available": "Content not available",
             "Tell us why there has been a violation of the {{tosLink}}. (Abuse of this feature is violation of the terms of service.)": "Tell us why there has been a violation of the {{tosLink}}. (Abuse of this feature is violation of the terms of service.)",
             "terms of service": "terms of service",
