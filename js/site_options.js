@@ -1937,6 +1937,18 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "7889f422-980d-4df3-8c99-02e6d0367445": {
+            "name": "android_channel_specific_notifications",
+            "v": 2394,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "on"
+            }, {
+                "weight": 100,
+                "value": "off"
+            }]
+        },
         "79accd86-e77e-4eae-8979-d19ab2bc4521": {
             "name": "ios_skippable_ads",
             "v": 1960,
