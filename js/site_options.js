@@ -2353,7 +2353,7 @@ window.SiteOptions = {
         },
         "9452d9e2-6588-408c-b8aa-1e54ff1e2f4a": {
             "name": "twilight_expando_featuro",
-            "v": 2389,
+            "v": 2408,
             "t": 1,
             "groups": [{
                 "weight": 90,
@@ -3784,13 +3784,13 @@ window.SiteOptions = {
         },
         "ec57d33c-2d58-4088-9ff6-617418a6cf1b": {
             "name": "citadel",
-            "v": 2230,
+            "v": 2406,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "10"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }, {
                 "weight": 0,
