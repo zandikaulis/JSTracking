@@ -1312,11 +1312,11 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
-            "v": 2382,
+            "v": 2399,
             "t": 1,
             "groups": [{
                 "weight": 1,
-                "value": "//video-edge-813592.sjc01.hls.ttvnw.net/v1/playlist/CpSyeng-ipyrPtTmPpmQ-mJqOMNK-KzsTBRE2XhEIwcP93StbLa3XdJsq7HmUv4vhxxNmLwlC2iTXYW5RFf9Vyp9jv6_d0D3f3H0hLCrh_axHXFxr8p3fY7qsnYKMumT8FjrAamCUZMcNmMB37WRNJDbiqsb90bVKm6wy7qp4x7FMLuphparjgTlpQjC98UzZm5eLZVbTiG_G-lENGMfn2WRJZyRV0Q3HxADKzF08DQaaiBrOLW-mQKb8gNo4omvLb_AOJV2kacGqcXHoKs57sVET5sZs86wLTpaDN_OHNOXeDfDqo0ytNqx5BXeRqoNsuUUEkrA1v8GmbhRf_645v8DzhkWkY4Y6PBro_RUJsAPJA9uJloghf0RnsHXF69NQYIy46kbhY-ewTpyZJfO3bWzIs4MpzqGTI-KsD92JlqBy39LU82avG9PbsHKqR.m3u8"
+                "value": "//video-edge-4e8eb9.sjc01.hls.ttvnw.net/v1/playlist/Ck45l6C9nleLJJb5xHHr-nm2fzsuESuFnO2SJedLU4exZBSPw7ZdakzjU96HE-ZUQ4WWmgnMFwBxBfMnoTUs5bzuJ06-v7zjp5SR7-nUaoNcOBvdob-QF2xeuIEdlfBUSFW_l0hiKkni_DXCCsGMVwU2rY6sdZuE9UWBRWyc9b6kXCQiUYjvY7FXVJqRrInkEaZTMs9srsIHj7ilDhumu8lIQLLTjD_1NwKOCL1L5vrz7fv1mMOe5HGayp8XunC9V4LeTK06vc5swroLGyPQHaD4mwm_vnIrHZmSXfQ2oPMV-9EWYOhzbKs95SUikhHihzI0LUDBgTrsiXSg0SG6huhX7ZUSZrfp4Aly50I77MFCouSS3gB2tyT3aa824jAbyu798uphXsTz68mMujPpEoS1__0UX7zmHX_2AJgiamsM6Sh8mQrfi3yzEZNA8EiDAohwwWj65U.m3u8"
             }]
         },
         "4bdb6678-2626-466f-bb25-e566dec11354": {
