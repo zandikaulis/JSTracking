@@ -1939,14 +1939,14 @@ window.SiteOptions = {
         },
         "7889f422-980d-4df3-8c99-02e6d0367445": {
             "name": "android_channel_specific_notifications",
-            "v": 2394,
+            "v": 2397,
             "t": 1,
             "groups": [{
-                "weight": 0,
-                "value": "on"
-            }, {
                 "weight": 100,
-                "value": "off"
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "79accd86-e77e-4eae-8979-d19ab2bc4521": {
@@ -3793,13 +3793,13 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 2390,
+            "v": 2395,
             "t": 1,
             "groups": [{
-                "weight": 95,
+                "weight": 90,
                 "value": "2.0.16"
             }, {
-                "weight": 5,
+                "weight": 10,
                 "value": "2.1.0"
             }]
         },
