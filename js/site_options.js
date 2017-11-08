@@ -4084,5 +4084,6 @@ window.SiteOptions = {
     "prime_new_blocked_regions": "JP,JPA,IN,IND,CU,CUB,SD,SUD,IR,IRN,CHN,CN,SY,SYR,PRK,KP",
     "prime_new_whitelist": "samquality01,samquality02,samquality03,samquality04",
     "bits_hgc_enabled": true,
-    "bits_hgc_whitelist": "70516263,139075904,22540592,58294775,12219504,40840733"
+    "bits_hgc_whitelist": "70516263,139075904,22540592,58294775,12219504,40840733",
+    "subg_enabled": false
 };
