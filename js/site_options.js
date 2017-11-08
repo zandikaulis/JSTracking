@@ -1553,6 +1553,18 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "5b149fa8-f8e1-4b30-aa30-f8e4bb648464": {
+            "name": "android_first_time_chatter_v5.7",
+            "v": 2398,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "active"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "5daee224-4c99-499f-b6e0-e308a5fa54f1": {
             "name": "aws_roundtrip_latency_test_endpoint",
             "v": 953,
