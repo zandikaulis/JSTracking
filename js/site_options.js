@@ -1015,13 +1015,13 @@ window.SiteOptions = {
         },
         "409d6b75-c64e-449c-b6ec-130118312d3f": {
             "name": "ios_raids",
-            "v": 1999,
+            "v": 2391,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "active"
             }]
         },
@@ -1822,13 +1822,13 @@ window.SiteOptions = {
         },
         "6e2a89f6-a1e8-45c0-8cc9-77e1fc5590ad": {
             "name": "ios_raids_ads",
-            "v": 2149,
+            "v": 2393,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 90,
                 "value": "test"
             }, {
-                "weight": 100,
+                "weight": 10,
                 "value": "control"
             }]
         },
