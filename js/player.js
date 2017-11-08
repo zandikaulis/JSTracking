@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".777e6ff8f92700b17725.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".28bf744d2ef73d4012da.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -14629,7 +14629,7 @@
                                 return e.sku === t
                             }) && r.coordinator.sendExtensionReloadEntitlementsMessage()
                         })
-                    }, r.params = t, r.iframe = r.createSupervisorIFrame(t.iframeClassName, r.extension.anchor, r.extensionOptions), void 0 !== t.onBeginPurchase && (r.onBeginPurchase = t.onBeginPurchase), r.setupListeners(), r.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(r.iframe), r.visibilityChanged(), b.a.onPurchaseCompleted(r.params.loginId, r.handlePurchaseCompleted), r
+                    }, r.params = t, r.iframe = r.createSupervisorIFrame(t.iframeClassName, r.extension.anchor, r.extensionOptions), void 0 !== t.onBeginPurchase && (r.onBeginPurchase = t.onBeginPurchase), r.setupListeners(), r.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(r.iframe), r.visibilityChanged(), r.params.loginId && b.a.onPurchaseCompleted(r.params.loginId, r.handlePurchaseCompleted), r
                 }
                 return _(t, e), Object.defineProperty(t.prototype, "tracker", {
                     get: function() {
@@ -14713,6 +14713,7 @@
                         description: e.description,
                         developerName: e.developer_name,
                         displayPrice: n.i(v.a)(e.price.price, e.price.currency_unit),
+                        extensionName: this.extension.name,
                         shortDescription: e.short_description,
                         sku: e.sku,
                         title: e.title
@@ -21097,7 +21098,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.11.08-182721+c46b1a08ce3036274ee526f39a7aa12f390cdd03",
+                    app_version: "2017.11.08-193229+f3f1e37e081b98649ca55a678e2417c28b57b1f6",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -24168,7 +24169,7 @@
             a = function() {
                 function e(e) {
                     var t = this;
-                    this.userId = e, this.close = function() {
+                    this.loginId = e, this.close = function() {
                         t.replyCallback({
                             action: i.a.FollowComplete,
                             channel: t.channel,
@@ -24179,7 +24180,7 @@
                     }, this.onOpen = function(e) {
                         t.openCallback = e
                     }, this.resultCallback = function(e) {
-                        e.didFollow ? t.follow(t.userId, t.channel, e.notifications) : t.close()
+                        e.didFollow ? t.follow(t.loginId, t.channel, e.notifications) : t.close()
                     }, this.follow = function(e, a, o) {
                         n.i(r.a)(e, a, o).then(function(e) {
                             var n = (e.channel, e.isFollowing),
@@ -24203,12 +24204,12 @@
                     configurable: !0
                 }), e.prototype.open = function(e) {
                     var t = this;
-                    if (this.channel = e.payload.channel, !this.userId) return void this.openCallback({
+                    if (this.channel = e.payload.channel, !this.loginId) return void this.openCallback({
                         channel: this.channel,
                         isFollowing: !1,
                         isLoggedIn: !1
                     });
-                    n.i(r.b)(this.userId, this.channel).then(function(e) {
+                    n.i(r.b)(this.loginId, this.channel).then(function(e) {
                         var n = e.channel,
                             r = e.isFollowing;
                         t.openCallback && t.openCallback({
