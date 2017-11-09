@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".288026b0c37d476e161b.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2998761b479d2b3598e2.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -21098,7 +21098,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.11.09-180916+bfdb80ed28e806300a426e7b8bfa35186992a9b9",
+                    app_version: "2017.11.09-221345+d91f377787fadfa20d3a306c4e3e90e5e95bb0fd",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -33768,6 +33768,7 @@
             }, a.a.createElement(c.a, {
                 close: t
             })), a.a.createElement("div", {
+                "data-test-extensions-confirmation-logged-out": !0,
                 className: "extension-confirmation__section"
             }, a.a.createElement("h4", null, u("You must be logged in to use this extension feature."))), a.a.createElement("div", {
                 className: "extension-confirmation__section extension-confirmation__section--no-bottom"
@@ -33777,14 +33778,15 @@
                 "data-test-extension-confirmation-cancel": !0
             }, u("Close"))));
             var l = null;
-            if (r) {
+            if (!r) {
                 l = a.a.createElement("div", {
                     className: "extension-confirmation__section extension-confirmation__section--no-bottom"
                 }, a.a.createElement("p", {
+                    "data-test-extensions-confirmation-link-notice": !0,
                     className: "extension-confirmation__link-notice"
                 }, a.a.createElement(o.c, {
-                    i18nKey: 'By clicking "Buy", you agree to share your Twitch ID with {developerName}. You can manage account connections under',
-                    developerName: s.developerName
+                    i18nKey: 'By clicking "Buy", you agree to share your Twitch ID with {{extensionName}}. You can manage account connections under',
+                    extensionName: s.extensionName
                 }), " ", a.a.createElement("a", {
                     href: "https://twitch.tv/settings/connections"
                 }, u("Settings")), "."))
@@ -33808,7 +33810,7 @@
                 className: "extension-confirmation__extension-name"
             }, a.a.createElement(o.c, {
                 i18nKey: "{{extensionName}} Extension",
-                developerName: s.extensionName
+                extensionName: s.extensionName
             }))), a.a.createElement("p", {
                 className: "extension-confirmation__description"
             }, s.description)), a.a.createElement("div", {
@@ -33838,6 +33840,7 @@
                 description: u.a.string.isRequired,
                 developerName: u.a.string.isRequired,
                 displayPrice: u.a.string.isRequired,
+                extensionName: u.a.string.isRequired,
                 shortDescription: u.a.string.isRequired,
                 sku: u.a.string.isRequired,
                 title: u.a.string.isRequired
@@ -40172,7 +40175,7 @@
                 }
                 return {
                     isLoggedIn: n.loggedInStatus === d.b,
-                    isLinked: a && a.lastUserIdentityLinkState,
+                    isLinked: !(!a || !a.lastUserIdentityLinkState),
                     purchaseIntent: i
                 }
             },
