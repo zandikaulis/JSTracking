@@ -3200,6 +3200,18 @@ window.SiteOptions = {
                 "value": "browse"
             }]
         },
+        "c4e51121-af38-46de-a93d-a7e10590a1ee": {
+            "name": "ios_clip_editing",
+            "v": 2411,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "c51b6c01-3155-4314-bd33-a63870349c1f": {
             "name": "baking_bread_c",
             "v": 1003,
