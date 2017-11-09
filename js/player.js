@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".a0b539202e41ae3da44e.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".1525805398c1f2c510d3.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -21093,7 +21093,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.11.09-002644+4af9db5baa9e34dbe83f7bb37e378c71d16d86ce",
+                    app_version: "2017.11.09-003141+e66c1e17b0e3a1b5f136567f065821504f5de39f",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -37591,25 +37591,30 @@
                         }, u.a.createElement("span", null, r("Popout Player")))) : null
                     }
                 }, {
+                    key: "_renderCopyUrlButton",
+                    value: function() {
+                        var e = this.props,
+                            t = e.currentTime,
+                            r = e.vodUrlWithTimestamp,
+                            i = e.t,
+                            a = i("Copy Video URL at {{time}}", {
+                                time: n.i(p.d)(t)
+                            });
+                        return this.state.hasRecentlyCopied ? u.a.createElement(g.a, null, u.a.createElement("span", null, i("Copied!"))) : u.a.createElement(f.a, {
+                            text: r,
+                            onCopy: this.handleUrlCopied,
+                            className: "qa-copy-to-clipboard-button"
+                        }, u.a.createElement(g.a, null, u.a.createElement("span", null, a)))
+                    }
+                }, {
                     key: "_renderCopyVideoUrlButton",
                     value: function() {
-                        var e, t = this.props,
-                            i = t.currentTime,
-                            a = t.vodUrlWithTimestamp,
-                            o = t.isVod,
-                            s = t.t,
-                            c = s("Copy Video URL at {{time}}", {
-                                time: n.i(p.d)(i)
-                            }),
-                            l = this.state.hasRecentlyCopied ? u.a.createElement(g.a, null, u.a.createElement("span", null, s("Copied!"))) : u.a.createElement(f.a, {
-                                text: a,
-                                onCopy: this.handleUrlCopied,
-                                className: "qa-copy-to-clipboard-button"
-                            }, u.a.createElement(g.a, null, u.a.createElement("span", null, c))),
-                            d = m()((e = {}, r(e, E, !0), r(e, "pl-menu__item--active", this.state.hasRecentlyCopied), e));
-                        return o ? u.a.createElement("div", {
-                            className: d
-                        }, l) : null
+                        var e, t = this.props.isVod,
+                            n = this._renderCopyUrlButton(),
+                            i = m()((e = {}, r(e, E, !0), r(e, "pl-menu__item--active", this.state.hasRecentlyCopied), e));
+                        return t ? u.a.createElement("div", {
+                            className: i
+                        }, n) : null
                     }
                 }]), t
             }(u.a.Component);
@@ -38029,8 +38034,7 @@
                     key: "render",
                     value: function() {
                         var e = this.props.t,
-                            t = this.state.hasRecentlySubmitted,
-                            n = this._createSelectElement();
+                            t = this._renderFeedbackForm();
                         return s.a.createElement("div", {
                             className: "pl-menu__inner"
                         }, s.a.createElement("div", {
@@ -38040,16 +38044,7 @@
                             onClick: this.handleMenuTransition
                         }, e("Report Playback Issue"))), s.a.createElement("div", {
                             className: w
-                        }, s.a.createElement("form", {
-                            onSubmit: this.handleSubmit
-                        }, s.a.createElement("div", {
-                            className: "form__group"
-                        }, s.a.createElement("p", null, e("Noticed a video playback issue? Let us know!")), n), s.a.createElement("div", {
-                            className: k
-                        }, s.a.createElement("button", {
-                            type: "submit",
-                            className: E
-                        }, e(t ? "Sent!" : "Submit"))))))
+                        }, t))
                     }
                 }, {
                     key: "_createSelectElement",
@@ -38057,11 +38052,11 @@
                         var e = this.props.t;
                         return s.a.createElement("select", {
                             className: g,
-                            onBlur: this.handleIssueSelected
+                            onBlur: this.handleIssueSelected,
+                            defaultValue: ""
                         }, s.a.createElement("option", {
                             value: "",
-                            disabled: !0,
-                            selected: !0
+                            disabled: !0
                         }, e("Select")), s.a.createElement("option", {
                             value: "stutter-both"
                         }, e("Audio and video stutter")), s.a.createElement("option", {
@@ -38077,6 +38072,22 @@
                         }, e("Advertisement can't be muted or is too loud")), s.a.createElement("option", {
                             value: "ad-repeat"
                         }, e("Advertisement has played too many times")))
+                    }
+                }, {
+                    key: "_renderFeedbackForm",
+                    value: function() {
+                        var e = this.props.t,
+                            t = this._createSelectElement();
+                        return this.state.hasRecentlySubmitted ? s.a.createElement("span", null, e("Thanks for your report")) : s.a.createElement("form", {
+                            onSubmit: this.handleSubmit
+                        }, s.a.createElement("div", {
+                            className: "form__group"
+                        }, s.a.createElement("p", null, e("Noticed a video playback issue? Let us know!")), t), s.a.createElement("div", {
+                            className: k
+                        }, s.a.createElement("button", {
+                            type: "submit",
+                            className: E
+                        }, e("Submit"))))
                     }
                 }]), t
             }(s.a.Component);
@@ -42195,12 +42206,11 @@
                     value: function() {
                         var e = this.props,
                             t = e.onMenuTransition,
-                            n = e.handleVideoIssueReport,
-                            r = e.windowObj;
+                            n = e.windowObj;
                         return s.a.createElement(d.b, {
                             onMenuTransition: t,
-                            onReportIssueSubmit: n,
-                            windowObj: r
+                            onReportIssueSubmit: this.handleVideoIssueReport,
+                            windowObj: n
                         })
                     }
                 }]), t
