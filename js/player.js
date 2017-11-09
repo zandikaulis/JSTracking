@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".aef6f6c66ff75a5de9d4.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".a0b539202e41ae3da44e.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -6107,25 +6107,20 @@
                 }, {
                     key: "getStats",
                     value: function() {
-                        if (this._mediaPlayer) {
-                            var e = this._mediaPlayer,
-                                t = e.getQuality(),
-                                n = v()(t.bitrate / 1024, 2) || 0,
-                                r = v()(e.getTranscoderLatency() / 1e3) || 0,
-                                i = v()(e.getBroadcasterLatency() / 1e3) || 0,
-                                a = v()(e.getVideoFrameRate()) || 0,
-                                o = e.getVideoWidth() + "x" + e.getVideoHeight(),
-                                s = e.getDisplayWidth() + "x" + e.getDisplayHeight();
+                        var e = this._mediaPlayer;
+                        if (e) {
+                            var t = e.getVideoWidth() + "x" + e.getVideoHeight(),
+                                n = e.getDisplayWidth() + "x" + e.getDisplayHeight();
                             return {
-                                playbackRate: n,
-                                fps: a,
+                                playbackRate: v()(e.getVideoBitRate() / 1e3),
+                                fps: v()(e.getVideoFrameRate()),
                                 bufferSize: v()(e.getBufferDuration()),
                                 skippedFrames: e.getDroppedFrames(),
                                 memoryUsage: "64 MB",
-                                hlsLatencyEncoder: r,
-                                hlsLatencyBroadcaster: i,
-                                videoResolution: o,
-                                displayResolution: s,
+                                hlsLatencyEncoder: v()(e.getTranscoderLatency() / 1e3),
+                                hlsLatencyBroadcaster: v()(e.getBroadcasterLatency() / 1e3),
+                                videoResolution: t,
+                                displayResolution: n,
                                 backendVersion: e.getVersion()
                             }
                         }
@@ -6367,13 +6362,13 @@
                             a = {};
                         if (i) {
                             var o = i.getPlayerState(),
-                                s = i.getQuality(),
-                                u = v()(s.bitrate / 1024, 2) || 0;
+                                s = i.getVideoBitRate() / 1e3,
+                                u = i.getVideoFrameRate();
                             a = {
-                                bandwidth: u,
-                                current_bitrate: u,
-                                current_fps: i.getVideoFrameRate(),
-                                current_fps_exact: i.getVideoFrameRate(),
+                                bandwidth: s,
+                                current_bitrate: s,
+                                current_fps: v()(u),
+                                current_fps_exact: u,
                                 dropped_frames: i.getDroppedFrames(),
                                 hls_latency_broadcaster: v()(i.getBroadcasterLatency()),
                                 hls_latency_encoder: v()(i.getTranscoderLatency()),
@@ -21098,7 +21093,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.11.08-223414+9c84c1da814aea1a10bab5de1fe38ecbfed30182",
+                    app_version: "2017.11.09-002644+4af9db5baa9e34dbe83f7bb37e378c71d16d86ce",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -31185,6 +31180,7 @@
                     displayResolution: "",
                     skippedFrames: 0,
                     fps: 0,
+                    bitrate: 0,
                     hlsLatencyBroadcaster: 0,
                     hlsLatencyEncoder: 0,
                     memoryUsage: "",
