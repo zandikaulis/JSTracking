@@ -1396,13 +1396,13 @@ window.SiteOptions = {
         },
         "4d606c20-13e7-4949-b8d5-b34492db4662": {
             "name": "android_miniplayer_width_change",
-            "v": 2314,
+            "v": 2429,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 5,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 95,
                 "value": "active"
             }]
         },
