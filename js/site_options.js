@@ -154,6 +154,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "011d1499-61b3-49b2-92b2-b2ffd353ef00": {
+            "name": "twilight_sub_gifting",
+            "v": 2424,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "0173154a-7fa4-4a76-b8e1-0575eb3a7fcd": {
             "name": "android_live_preview",
             "v": 459,
