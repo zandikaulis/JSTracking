@@ -518,6 +518,18 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "1bca04fa-2aa1-4694-891b-c5a7417260b4": {
+            "name": "clips_dont_mind_me",
+            "v": 2434,
+            "t": 1,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "1c7c4872-f75b-4b29-a695-c5919fac68b9": {
             "name": "android_clip_theatre_mode_release",
             "v": 2034,
