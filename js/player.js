@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2998761b479d2b3598e2.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".155ccf2b0768dcd34e1e.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -21098,7 +21098,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.11.09-221345+d91f377787fadfa20d3a306c4e3e90e5e95bb0fd",
+                    app_version: "2017.11.13-204213+8765bb6b958ce20458a468747d2ef87c86036853",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -23740,7 +23740,12 @@
             "You must be logged in to use this extension feature": "You must be logged in to use this extension feature",
             "The channel you are attempting to follow does not exist": "The channel you are attempting to follow does not exist",
             "You are already following {{channelName}}": "You are already following {{channelName}}",
-            "You are about to follow {{channelName}}": "You are about to follow {{channelName}}"
+            "You are about to follow {{channelName}}": "You are about to follow {{channelName}}",
+            "You must be logged in to use this extension feature.": "You must be logged in to use this extension feature.",
+            'By clicking "Buy", you agree to share your Twitch ID with {{extensionName}}. You can manage account connections under': 'By clicking "Buy", you agree to share your Twitch ID with {{extensionName}}. You can manage account connections under',
+            Buy: "Buy",
+            "In-Extension Purchase": "In-Extension Purchase",
+            "{{extensionName}} Extension": "{{extensionName}} Extension"
         }
     }, function(e, t, n) {
         "use strict";
@@ -29788,7 +29793,7 @@
         n.d(t, "a", function() {
             return r
         });
-        var r = "//video-edge-d6b5ea.sjc01.hls.ttvnw.net/v1/playlist/CkScrHZyY0RDjqkIz0rsMauaA2uK0gxYJhfHpRUo_MU0jxoQidvQsYj2QLGF5E20lOBS84QtBl0kKXpkjGba2g9C6E5bmJsU8tJqWw5blh3_rGrFMj6DKlS8cRnMQGWqaRs42urGLABYUpu7B1vAcSQF46aDpRkUR_ULg1x4osaoHfguzYzQj1-IvLl2JYGtpChr4RT-YBEO_wxf3UOpn_kYjra5LhTo3dFqQOvagLA87r8fl3wh40mMBUcU08oJBLGas1GkF6H8SBc5c80JPWD0RgxPP8KUPCmT512Mn61l5MZ5GSHE0h9vTBKUZrUkyxA6d29K41NEGbU0ekzWImyDnZk9oRYT464llH8sgeM_KlXZgbXWtO46aewXWjQMkjNSDl2iXqsjS6soVrWw9tnZx02M3RjIjDtAHyLVOaYcLLyV-uwuvrYEfj-cr3b6ntFWBW3IvQ3ct13RXFgqE.m3u8"
+        var r = "//video-edge-26ea52.sjc01.hls.ttvnw.net/v1/playlist/CtaPbWeC4ya7r7mCBt1Ls2Dh7wHNa6CA7RAgnXQ6c0Wt3N3WrjPR1GqklTQ2pmfGB8Cw9_NUa0ELR4bialAIVscoRxSC8lliIH5BcCKKJ_PJ5gRdz-kzznJvrk5PexaZkKJYy7oWfnQGukAz-vHVg4w-OK2yMDhHhV8bAq-8XeF6rguk4WZmWCchbEm-o_ipZUYn0dAmemgn-CVXMdQmTh-316nJWS3qzEFxWCpKujam0rsRpzx7B0yPbEzwAe3VI11hzBnb9DB41S_XF87FOklZuvPfi07pxvNtOgI6FW0p4_uHqbIkKE5lUrwftrT8xvHWEymElYbAEUiwuZOqMoGnk3OLqNge66y8ClrbCplKICSYuvV4ufKR4C8SY_H3zpUPt0ZI7SVuVfUSsZcXiGZ9VT7l_G_zcFynf9vCN3Xz5U8URsu2U7IEPuwJr.m3u8"
     }, function(e, t, n) {
         "use strict";
 
