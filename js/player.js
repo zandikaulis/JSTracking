@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".5a74702eb54b1f5e490f.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".c1982d36bff7c998d95d.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -6254,7 +6254,7 @@
                 }, {
                     key: "getQuality",
                     value: function() {
-                        return null === this._mediaPlayer ? null : this._mediaPlayer.getAutoSwitchQuality() ? T : this._mediaPlayer.getQuality().group
+                        return null === this._mediaPlayer ? null : this._mediaPlayer.getAutoSwitchQuality() ? T.group : this._mediaPlayer.getQuality().group
                     }
                 }, {
                     key: "elapsedTime",
@@ -6459,16 +6459,15 @@
                         }), r.addEventListener(e.PlayerState.PLAYING, function() {
                             t._readyState <= _.a && (t._readyState = _.c), t._eventEmitter.emit(u.f), t._eventEmitter.emit(u.i), t._cache.seekStarted && (t._eventEmitter.emit(u.g), t._eventEmitter.emit(u.l), t._cache.seekStarted = !1)
                         }), r.addEventListener(e.PlayerEvent.QUALITY_CHANGED, function() {
-                            var e = t.getQuality();
-                            if (t._mediaPlayer.getAutoSwitchQuality()) {
-                                var n = t._mediaPlayer.getABSStats(),
-                                    r = {
-                                        stream_format_previous: t._cache.currentQuality,
-                                        stream_format_current: e
-                                    },
-                                    i = Object.assign({}, n, r);
-                                t._eventEmitter.emit(a.r, i), t._cache.currentQuality = e
-                            } else t._cache.currentQuality = e, t._eventEmitter.emit(a.k, e)
+                            var e = t._cache.currentQuality,
+                                n = t._mediaPlayer.getQuality();
+                            if (t._cache.currentQuality = n, t._eventEmitter.emit(a.k, n.group), t._mediaPlayer.getAutoSwitchQuality() && e.group !== n.group) {
+                                var r = Object.assign({
+                                    stream_format_previous: e.group,
+                                    stream_format_current: n.group
+                                }, t._mediaPlayer.getABSStats());
+                                t._eventEmitter.emit(a.r, r)
+                            }
                         }), r.addEventListener(e.PlayerEvent.DURATION_CHANGED, function() {
                             t._fireLoadedMetadata && (t._fireLoadedMetadata = !1, t._eventEmitter.emit(u.a)), t._eventEmitter.emit(u.n)
                         }), r.addEventListener(e.PlayerEvent.PLAYBACK_RATE_CHANGED, function() {
@@ -21335,7 +21334,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.11.13-212633+41484f121a8347c3489163ec4412030358236933",
+                    app_version: "2017.11.13-230515+1107bb68c56353a7695dd3327015fb356c2a8064",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
