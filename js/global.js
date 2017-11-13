@@ -15284,7 +15284,8 @@ googletag.cmd = googletag.cmd || [],
                 TWILIGHT_MERCH_STORE_LAUNCH: "298a5f39-228a-487a-ad06-422c18458403",
                 PREMIERE_FLOW: "4d3d19a7-38c5-4328-9730-7d99565d5edd",
                 CUSTOM_LIVE_UP: "adac3887-6bd4-4fea-bfda-8e019f894dbe",
-                BROADCAST_SOFTWARE: "4994d68b-77d3-41f3-bebb-64b96c753b43"
+                BROADCAST_SOFTWARE: "4994d68b-77d3-41f3-bebb-64b96c753b43",
+                TWILIGHT_ACHIEVEMENTS: "f7249378-b153-4612-bd09-972fbb0b0b7e"
             },
             r = {
                 "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458": "no",
@@ -15353,7 +15354,8 @@ googletag.cmd = googletag.cmd || [],
                 "298a5f39-228a-487a-ad06-422c18458403": "off",
                 "4d3d19a7-38c5-4328-9730-7d99565d5edd": "no",
                 "adac3887-6bd4-4fea-bfda-8e019f894dbe": "no",
-                "4994d68b-77d3-41f3-bebb-64b96c753b43": "control"
+                "4994d68b-77d3-41f3-bebb-64b96c753b43": "control",
+                "f7249378-b153-4612-bd09-972fbb0b0b7e": "no"
             },
             o = {},
             s = {
@@ -15377,7 +15379,8 @@ googletag.cmd = googletag.cmd || [],
                 TWILIGHT_MERCH_STORE_LAUNCH: "on",
                 JANEWAY: "yes",
                 CUSTOM_LIVE_UP: "yes",
-                TWILIGHT_STREAM_SUMMARY: "yes"
+                TWILIGHT_STREAM_SUMMARY: "yes",
+                TWILIGHT_ACHIEVEMENTS: "yes"
             };
         _.each(Object.keys(s), function(t) {
             o[i[t]] = e.user().then(function(e) {

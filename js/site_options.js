@@ -2755,16 +2755,16 @@ window.SiteOptions = {
         },
         "a540dfb1-7502-4a8c-affa-5175a3e671d9": {
             "name": "twilight_web_onboarding_for_you",
-            "v": 2435,
+            "v": 2439,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
                 "weight": 0,
                 "value": "last"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "first"
             }]
         },
