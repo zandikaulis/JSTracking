@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".c1982d36bff7c998d95d.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2b68db4dc2ac812405cc.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -17259,7 +17259,7 @@
                         return this.state.showAgeGateOverlay ? s.a.createElement(p.a, {
                             handleAgeGatePassed: this.handleAgeGatePassed,
                             channelName: e.channel.name,
-                            age: _[e.channel.name]
+                            requiredAge: _[e.channel.name]
                         }) : null
                     }
                 }, {
@@ -21334,7 +21334,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.11.13-230515+1107bb68c56353a7695dd3327015fb356c2a8064",
+                    app_version: "2017.11.14-184322+401847c4ed6558adf47691719263eb59490d538b",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -30244,7 +30244,7 @@
         n.d(t, "a", function() {
             return r
         });
-        var r = "//video-edge-26ea52.sjc01.hls.ttvnw.net/v1/playlist/CtaPbWeC4ya7r7mCBt1Ls2Dh7wHNa6CA7RAgnXQ6c0Wt3N3WrjPR1GqklTQ2pmfGB8Cw9_NUa0ELR4bialAIVscoRxSC8lliIH5BcCKKJ_PJ5gRdz-kzznJvrk5PexaZkKJYy7oWfnQGukAz-vHVg4w-OK2yMDhHhV8bAq-8XeF6rguk4WZmWCchbEm-o_ipZUYn0dAmemgn-CVXMdQmTh-316nJWS3qzEFxWCpKujam0rsRpzx7B0yPbEzwAe3VI11hzBnb9DB41S_XF87FOklZuvPfi07pxvNtOgI6FW0p4_uHqbIkKE5lUrwftrT8xvHWEymElYbAEUiwuZOqMoGnk3OLqNge66y8ClrbCplKICSYuvV4ufKR4C8SY_H3zpUPt0ZI7SVuVfUSsZcXiGZ9VT7l_G_zcFynf9vCN3Xz5U8URsu2U7IEPuwJr.m3u8"
+        var r = "//video-edge-a08928.sjc01.hls.ttvnw.net/v1/playlist/CtmJKKrLXDAckg12JRHtJaYd0F72_OM8e-TX_fer7QMLGml_J_VFotedbnMcdTOJTYRij9AfqevEsBFetZ8-lk8_pAGQSpDBpcH8qQWIJ4kTwWJJQzTh8ceLQLsa6RE2rt9jAa2sqXfKRpQjz6zx96NaaSaVKsu1sDEn-fnzFshSDZutQoZtpFIJDy5Pz7S_LVHTXms8yZWjd2kMQKlZ3Qid88pmLepvisRDM_f7SvL7r_bom1dwsW8q3cIH33yfHd9em9QftkzzWFbkTaT8ifdDl2moQmJ8kELomuaBC6ZVmdlyh1ZXhHELRuDAQLQMn4NldTOjgYjRGQCwClbzRlzVvpWP2DRqZ9jegOEJtC3n_eCZx4ehQ-4ZB5DiBUCu1Y8Au3a77TWVYNd5yRn9mYaNY_ZoavFZg3rfMWKLXihATTHx06tuLwCD0NauKCE.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -36110,7 +36110,7 @@
             F = 1,
             V = {
                 handleAgeGatePassed: l.a.func.isRequired,
-                age: l.a.number.isRequired,
+                requiredAge: l.a.number.isRequired,
                 channelName: l.a.string.isRequired,
                 t: l.a.func.isRequired
             },
@@ -36201,7 +36201,7 @@
                             t = Number(this.state.dayValue),
                             r = Number(this.state.yearValue),
                             i = new Date(r, e, t);
-                        return n.i(w.c)(i, this.props.age)
+                        return n.i(w.c)(i, this.props.requiredAge)
                     }
                 }, {
                     key: "_isValidDate",
@@ -36326,7 +36326,7 @@
                     value: function() {
                         var e = this.props,
                             t = e.t,
-                            n = e.age;
+                            n = e.requiredAge;
                         return 1 === this.state.ageGatesFailedCount ? u.a.createElement("div", {
                             className: I
                         }, u.a.createElement("p", null, u.a.createElement("svg", {
@@ -36344,7 +36344,7 @@
                     value: function() {
                         var e = this.props,
                             t = e.t,
-                            n = e.age,
+                            n = e.requiredAge,
                             r = this._isValidDate(),
                             i = this._populateMonthDropdown(),
                             a = this._populateDayDropdown(),
@@ -36377,7 +36377,7 @@
                     value: function() {
                         var e = this.props,
                             t = e.t,
-                            n = e.age,
+                            n = e.requiredAge,
                             r = 19 === n ? "#age-gate-icon-19" : "#age-gate-icon-21";
                         return u.a.createElement("div", {
                             className: L
