@@ -49,7 +49,7 @@ window.__twilightSettings = {
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
     "spade_url": "https://video-edge-58cd0a.sjc01.hls.ttvnw.net/v1/playlist/Cveq1-x_hsX_Qjl5RTnVeq40A4We8pa5BRKh4kVaQ536mC6CpH41GvO3ckrbX5TlLzguUv3SuTIipH34prrdTU7deqpQDEDG_zo6IS-Iz6DgA5nouFIV4rr_GGwoVzaCzL5bRcG9DlfXCM5qTyKD8qYWeG03Q5RqTRptVOsRNPhm3ZOLlnyc4vzcNvNKa105DBVeP5tNaawCg96koPX17fCIkSJitrHedkreGam6HxNwWT7oEQ5PMHeC6-MOSdzIkPPz2emskEszkmELlkipvlgHzcyylmrZmoC0D6bxSWocnYrqArCUHsj9Hf7XgOoGgevqoksKFGbZrBEf5-TgYgpjNAyIyUz8WjAthzmADK-SXgOKvHn9dJbxMi0gmOumyurXlzhHOf7Ltgd_nUJgkgXT2lw3d_TX4LuUvCNcfoK54TdWIPLiHO7aPfKh.m3u8",
-    "store_merch_promo": "on",
+    "store_merch_promo": "off",
     "store_merch_seasonal": "on",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
     "twilight_routes": ["channel", "channelEvents", "clips", "collections", "community", "directoryAllChannels", "directoryCommunities", "directoryCreative", "directoryFollowing", "directoryFollowingCommunities", "directoryFollowingChannels", "directoryFollowingGames", "directoryFollowingHosts", "directoryGame", "directoryGames", "directoryGameClips", "directoryGameVideos", "directoryVideos", "event", "index", "merchStore", "settingsNotifications", "video", "videos"],
