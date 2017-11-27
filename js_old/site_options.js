@@ -4169,6 +4169,18 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "f866f89d-85de-4a5b-9b00-d97c791bc16d": {
+            "name": "TWILIGHT_RAID_AUTO_JOIN",
+            "v": 2519,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "fa2fa316-88b9-49b2-a96c-6ad4ecef2904": {
             "name": "ios_enable_rooms",
             "v": 2188,
