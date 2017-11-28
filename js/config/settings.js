@@ -13,7 +13,7 @@ window.__twilightSettings = {
     "bits_truex_partner_hash": "af4f4f3a5b1e302e3e17383b8dd300cb6867ec84",
     "bits_truex_script_url": "https://static.truex.com/js/client.js",
     "blitz_channels": ["lunacyhatter", "clipstv", "n5devtest", "blitz_blitz_blitz"],
-    "blitz_frame_url": "https://twitch-preprod.amazon.com/prime/video/twitchpresents",
+    "blitz_frame_url": "https://twitch.amazon.com/prime/video/twitchpresents",
     "blitz_update_activity": false,
     "commerce_gdp_launch": "off",
     "comscore_config_c1": 2,
@@ -208,29 +208,23 @@ window.__twilightSettings = {
         },
         "9452d9e2-6588-408c-b8aa-1e54ff1e2f4a": {
             "name": "twilight_expando_featuro",
-            "v": 2408,
+            "v": 2526,
             "t": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 100,
                 "value": "expanded"
             }]
         },
         "9fb3c040-d7d1-40b1-ab32-f6843c8baa46": {
             "name": "twilight_web_onboarding",
-            "v": 2349,
+            "v": 2524,
             "t": 1,
             "groups": [{
-                "weight": 60,
+                "weight": 100,
                 "value": "control"
-            }, {
-                "weight": 20,
-                "value": "no_skip"
-            }, {
-                "weight": 20,
-                "value": "skip"
             }]
         },
         "a540dfb1-7502-4a8c-affa-5175a3e671d9": {
@@ -265,16 +259,16 @@ window.__twilightSettings = {
         },
         "afc307f3-4011-40ba-9406-56c474b5922b": {
             "name": "twilight_video_featuro_en",
-            "v": 2459,
+            "v": 2528,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 98,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "mixed"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "last"
             }]
         },
