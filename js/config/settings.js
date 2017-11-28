@@ -48,7 +48,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-58cd0a.sjc01.hls.ttvnw.net/v1/playlist/Cveq1-x_hsX_Qjl5RTnVeq40A4We8pa5BRKh4kVaQ536mC6CpH41GvO3ckrbX5TlLzguUv3SuTIipH34prrdTU7deqpQDEDG_zo6IS-Iz6DgA5nouFIV4rr_GGwoVzaCzL5bRcG9DlfXCM5qTyKD8qYWeG03Q5RqTRptVOsRNPhm3ZOLlnyc4vzcNvNKa105DBVeP5tNaawCg96koPX17fCIkSJitrHedkreGam6HxNwWT7oEQ5PMHeC6-MOSdzIkPPz2emskEszkmELlkipvlgHzcyylmrZmoC0D6bxSWocnYrqArCUHsj9Hf7XgOoGgevqoksKFGbZrBEf5-TgYgpjNAyIyUz8WjAthzmADK-SXgOKvHn9dJbxMi0gmOumyurXlzhHOf7Ltgd_nUJgkgXT2lw3d_TX4LuUvCNcfoK54TdWIPLiHO7aPfKh.m3u8",
+    "spade_url": "https://video-edge-169f08.sjc01.hls.ttvnw.net/v1/playlist/CiY_zJhvCG3REkB-Kcy7i2CJI-JhPdiOJoILouDqKtnvMAh88daLptrIab1sotOuURJ8rXZfkJOlaVqknF2y2vUCMyf48hJo5d2UcGDBkyFx8Zvruyj5dF2A8hKMvNB9v8D7w242q7cvCD5Qc0uAyeK8sISl5pzQI1EHMD2rfxVB-onP3AMYhPKJTMj3FCsN7CRVIlq6h4xj_TtNJtllvm3LOp-RfToxF_ouVO8oQ4dDLkxKoTHv3VtmCWX5QmNIVRQSPgeXiuBt0rNWW_szs8vWQd4gOsqI2f73V7wSS8Tn0XwEhxcvspJAu8Q-Rw2dZREJ9R8vfY3CF7B94pgHqlUsQa-JMH2jcJ-Q8tXgJ7MWi_r3x99qDJggygZbpxDV4EUKnK4m_SVrvXbVgI6vx51H7J4ydgPWVVwy1WeGr3fwnTDaaqdj95xFk26-r6jE-ukxPwBWYUmo6Ea3G8.m3u8",
     "store_merch_promo": "off",
     "store_merch_seasonal": "on",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
@@ -275,6 +275,18 @@ window.__twilightSettings = {
                 "value": "hidden"
             }]
         },
+        "db2180db-bc89-4f97-8bef-208b1782e18f": {
+            "name": "TWILIGHT_LEADERBOARDS",
+            "v": 2520,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "on"
+            }, {
+                "weight": 100,
+                "value": "off"
+            }]
+        },
         "e2969271-bad4-4088-a56d-9582b5e35a8f": {
             "name": "twilight_web_onboarding_for_you_user",
             "v": 2507,
@@ -314,6 +326,18 @@ window.__twilightSettings = {
                 "value": "yes"
             }, {
                 "weight": 0,
+                "value": "no"
+            }]
+        },
+        "f866f89d-85de-4a5b-9b00-d97c791bc16d": {
+            "name": "TWILIGHT_RAID_AUTO_JOIN",
+            "v": 2519,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
                 "value": "no"
             }]
         }
