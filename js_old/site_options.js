@@ -3770,6 +3770,18 @@ window.SiteOptions = {
                 "value": "variant2"
             }]
         },
+        "db2180db-bc89-4f97-8bef-208b1782e18f": {
+            "name": "TWILIGHT_LEADERBOARDS",
+            "v": 2520,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "on"
+            }, {
+                "weight": 100,
+                "value": "off"
+            }]
+        },
         "dc251546-6da4-4db9-abae-2c1325e7dee6": {
             "name": "android_pipboy_browse_ccus",
             "v": 1543,
