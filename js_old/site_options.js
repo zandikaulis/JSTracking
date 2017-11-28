@@ -1063,13 +1063,13 @@ window.SiteOptions = {
         },
         "40322537-01de-41e2-b46e-0ac2e4a98035": {
             "name": "ios_chromecast_player_core_test",
-            "v": 2333,
+            "v": 2527,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 5,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 95,
                 "value": "player_core"
             }]
         },
@@ -2470,13 +2470,13 @@ window.SiteOptions = {
         },
         "9452d9e2-6588-408c-b8aa-1e54ff1e2f4a": {
             "name": "twilight_expando_featuro",
-            "v": 2408,
+            "v": 2526,
             "t": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 100,
                 "value": "expanded"
             }]
         },
@@ -3043,16 +3043,16 @@ window.SiteOptions = {
         },
         "afc307f3-4011-40ba-9406-56c474b5922b": {
             "name": "twilight_video_featuro_en",
-            "v": 2459,
+            "v": 2528,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 98,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "mixed"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "last"
             }]
         },
