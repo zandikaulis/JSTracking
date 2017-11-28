@@ -1,16 +1,352 @@
 webpackJsonp([51], {
+    1e3: function(e, t) {},
+    1001: function(e, t, i) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Bits_BuyCard_Offers"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "withChannel"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Boolean"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "isLoggedIn"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Boolean"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "channelLogin"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "bitsOffers"
+                        },
+                        arguments: [],
+                        directives: [{
+                            kind: "Directive",
+                            name: {
+                                kind: "Name",
+                                value: "skip"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "if"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "isLoggedIn"
+                                    }
+                                }
+                            }]
+                        }],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "FragmentSpread",
+                                name: {
+                                    kind: "Name",
+                                    value: "bitsOffersFragment"
+                                },
+                                directives: []
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [{
+                            kind: "Directive",
+                            name: {
+                                kind: "Name",
+                                value: "include"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "if"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "isLoggedIn"
+                                    }
+                                }
+                            }]
+                        }],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "idSHA1"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "bitsBalance"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "bitsOffers"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "FragmentSpread",
+                                        name: {
+                                            kind: "Name",
+                                            value: "bitsOffersFragment"
+                                        },
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "user"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "login"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "channelLogin"
+                                }
+                            }
+                        }],
+                        directives: [{
+                            kind: "Directive",
+                            name: {
+                                kind: "Name",
+                                value: "include"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "if"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "withChannel"
+                                    }
+                                }
+                            }]
+                        }],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "displayName"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "cheer"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "settings"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "cheerMinimumBits"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 528
+            }
+        };
+        n.loc.source = {
+            body: '#import "twilight/features/bits/models/bits-offers-fragment.gql"\n\nquery Bits_BuyCard_Offers($withChannel: Boolean!, $isLoggedIn: Boolean!, $channelLogin: String!) {\n  bitsOffers @skip(if: $isLoggedIn) {\n    ...bitsOffersFragment\n  }\n  currentUser @include(if: $isLoggedIn) {\n    id\n    idSHA1\n    bitsBalance\n    bitsOffers {\n      ...bitsOffersFragment\n    }\n  }\n  user(login: $channelLogin) @include(if: $withChannel) {\n    id\n    displayName\n    cheer {\n      id\n      settings {\n        cheerMinimumBits\n      }\n    }\n  }\n}\n',
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        var a = {};
+        n.definitions = n.definitions.concat(function(e) {
+            return e.filter(function(e) {
+                if ("FragmentDefinition" !== e.kind) return !0;
+                var t = e.name.value;
+                return !a[t] && (a[t] = !0, !0)
+            })
+        }(i(966).definitions)), e.exports = n
+    },
     1002: function(e, t) {},
-    1003: function(e, t) {},
-    1010: function(e, t, i) {
+    1006: function(e, t) {},
+    1007: function(e, t) {},
+    1014: function(e, t, i) {
         "use strict";
-        var n = i(1032);
+        var n = i(1036);
         i.d(t, !1, function() {}), i.d(t, !1, function() {}), i.d(t, !1, function() {}), i.d(t, !1, function() {}), i.d(t, "b", function() {
             return n.b
         }), i.d(t, "a", function() {
             return n.a
         })
     },
-    1032: function(e, t, i) {
+    1036: function(e, t, i) {
         "use strict";
 
         function n(e) {
@@ -148,20 +484,20 @@ webpackJsonp([51], {
             g = i(12),
             f = i(2),
             S = i(275),
-            v = i(417),
+            v = i(418),
             k = i(64),
-            y = i(9),
+            y = i(8),
             _ = i(137),
-            E = i(8),
+            E = i(9),
             P = i(19),
-            T = i(941),
-            N = i(939),
-            C = i(964),
-            w = i(979),
-            A = i(942),
-            O = i(915),
+            T = i(945),
+            N = i(944),
+            C = i(977),
+            w = i(984),
+            A = i(946),
+            O = i(919),
             U = i(3),
-            B = (i(1037), function(e) {
+            B = (i(1042), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handlePromoBuy = function(e) {
@@ -256,10 +592,10 @@ webpackJsonp([51], {
                 }, t
             }(b.Component)),
             I = B,
-            x = i(961),
-            F = i(958),
+            x = i(965),
+            F = i(962),
             D = i(6),
-            j = i(1038),
+            j = i(1043),
             L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -302,22 +638,23 @@ webpackJsonp([51], {
                     }, b.createElement(U._21, {
                         italic: !0
                     }, Object(f.d)("Fetching bits", "Bits--GetBitsButtonContent"))));
+                    var e = null;
                     if (this.props.bitsOffers) {
-                        var e = this.props.bitsOffers.find(function(e) {
+                        var t = this.props.bitsOffers.find(function(e) {
                             return e.type === x.b && e.isPromo
                         });
-                        e && e.type === x.b && this.props.channelID && !this.state.hideFirstTimeUserIntro && b.createElement(I, {
-                            promo: e,
+                        t && t.type === x.b && this.props.channelID && !this.state.hideFirstTimeUserIntro && (e = b.createElement(I, {
+                            promo: t,
                             animateFirstTimeUserIntro: this.props.animateFirstTimeUserIntro,
                             isShowingTutorial: this.props.isShowingTutorial,
                             toggleShowTutorial: this.props.toggleShowTutorial,
                             trackBitsCardInteraction: this.trackBitsCardInteraction,
                             channelID: this.props.channelID,
                             onPromoBuyClose: this.onPromoBuyClose
-                        })
+                        }))
                     }
-                    var t = null;
-                    void 0 !== this.props.bitsBalance && this.props.bitsConfig ? t = b.createElement(U._17, {
+                    var i = null;
+                    void 0 !== this.props.bitsBalance && this.props.bitsConfig ? i = b.createElement(U._17, {
                         borderBottom: !0,
                         textAlign: U._22.Center,
                         fullWidth: !0,
@@ -333,7 +670,7 @@ webpackJsonp([51], {
                             count: this.props.bitsBalance,
                             bitsConfig: this.props.bitsConfig
                         })
-                    }, "Bits--GetBitsButton"))) : void 0 === this.props.bitsBalance && this.props.bitsConfig && (t = b.createElement(U._17, {
+                    }, "Bits--GetBitsButton"))) : void 0 === this.props.bitsBalance && this.props.bitsConfig && (i = b.createElement(U._17, {
                         borderBottom: !0,
                         textAlign: U._22.Center,
                         fullWidth: !0,
@@ -349,19 +686,19 @@ webpackJsonp([51], {
                             bitsConfig: this.props.bitsConfig
                         })
                     }, "Bits--GetBitsButton"))));
-                    var i = null;
-                    return this.props.bitsConfig && this.props.channelLogin && (i = b.createElement(C.a, {
+                    var n = null;
+                    return this.props.bitsConfig && this.props.channelLogin && (n = b.createElement(C.a, {
                         bitsConfig: this.props.bitsConfig,
                         channelLogin: this.props.channelLogin,
                         closeAllBits: this.onClose,
                         onClose: this.onClose,
                         trackBitsCardInteraction: this.trackBitsCardInteraction,
                         location: O.b.GetBitsButton,
-                        hidePromos: !1,
+                        hidePromos: !0,
                         hideWateb: !0
                     })), b.createElement(U.U, {
                         className: "get-bits-button-content"
-                    }, t, i)
+                    }, i, e, n)
                 }, t = m.__decorate([Object(D.c)("GetBitsButtonContent"), Object(y.a)(j, {
                     name: "data",
                     props: function(e) {
@@ -436,10 +773,10 @@ webpackJsonp([51], {
             G = Object(E.a)(n)(H),
             W = i(11),
             V = i(50),
-            z = i(959),
+            z = i(963),
             q = i(134),
             $ = i(36),
-            K = (i(1039), function(e) {
+            K = (i(1044), function(e) {
                 var t = function() {
                         e.onSelect(e.index)
                     },
@@ -480,7 +817,7 @@ webpackJsonp([51], {
         ! function(e) {
             e[e.Success = 0] = "Success", e[e.UnexpectedError = 1] = "UnexpectedError", e[e.BadSizeError = 2] = "BadSizeError", e[e.NonImageError = 3] = "NonImageError", e[e.WrongFormatError = 4] = "WrongFormatError", e[e.TimeoutError = 5] = "TimeoutError", e[e.Uploading = 6] = "Uploading", e[e.ImageNotSelected = 7] = "ImageNotSelected"
         }(Y || (Y = {}));
-        var Q = (i(1040), i(1041)),
+        var Q = (i(1045), i(1046)),
             X = [{
                 id: "profile_image_001",
                 uri: "https://static-cdn.jtvnw.net/user-default-pictures/bb97f7e6-f11a-4194-9708-52bf5a5125e8-profile_image-300x300.jpg"
@@ -813,8 +1150,8 @@ webpackJsonp([51], {
             }(b.Component),
             ae = ne,
             re = Object(E.a)(null, d)(ae),
-            se = i(934),
-            oe = (i(1042), i(1043));
+            se = i(933),
+            oe = (i(1047), i(1048));
         i.d(t, "b", function() {
             return le
         }), i.d(t, "a", function() {
@@ -1189,8 +1526,8 @@ webpackJsonp([51], {
             }(b.Component),
             pe = de
     },
-    1037: function(e, t) {},
-    1038: function(e, t, i) {
+    1042: function(e, t) {},
+    1043: function(e, t, i) {
         function n(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
@@ -1474,11 +1811,11 @@ webpackJsonp([51], {
             }
         };
         var r = {};
-        a.definitions = a.definitions.concat(n(i(962).definitions)), a.definitions = a.definitions.concat(n(i(963).definitions)), e.exports = a
+        a.definitions = a.definitions.concat(n(i(966).definitions)), a.definitions = a.definitions.concat(n(i(967).definitions)), e.exports = a
     },
-    1039: function(e, t) {},
-    1040: function(e, t) {},
-    1041: function(e, t) {
+    1044: function(e, t) {},
+    1045: function(e, t) {},
+    1046: function(e, t) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -1596,8 +1933,8 @@ webpackJsonp([51], {
         };
         e.exports = i
     },
-    1042: function(e, t) {},
-    1043: function(e, t) {
+    1047: function(e, t) {},
+    1048: function(e, t) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -1919,7 +2256,7 @@ webpackJsonp([51], {
         };
         e.exports = i
     },
-    1276: function(e, t, i) {
+    1279: function(e, t, i) {
         "use strict";
         i.d(t, "a", function() {
             return m
@@ -1930,9 +2267,9 @@ webpackJsonp([51], {
             s = (i.n(r), i(12)),
             o = i(30),
             l = i(55),
-            c = i(1010),
+            c = i(1014),
             u = i(3),
-            d = i(1277),
+            d = i(1280),
             p = (i.n(d), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1970,9 +2307,9 @@ webpackJsonp([51], {
             }(r.Component)),
             m = Object(s.f)(p)
     },
-    1277: function(e, t) {},
-    1670: function(e, t) {},
-    1671: function(e, t) {
+    1280: function(e, t) {},
+    1675: function(e, t) {},
+    1676: function(e, t) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -2351,7 +2688,7 @@ webpackJsonp([51], {
         };
         e.exports = i
     },
-    2007: function(e, t, i) {
+    2019: function(e, t, i) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -2362,15 +2699,15 @@ webpackJsonp([51], {
             s = i(2),
             o = i(66),
             l = i(30),
-            c = i(922),
+            c = i(925),
             u = i(52),
-            d = i(918),
+            d = i(922),
             p = i(14),
-            m = i(1010),
+            m = i(1014),
             h = i(6),
             b = i(12),
             g = i(3),
-            f = (i(1670), 0),
+            f = (i(1675), 0),
             S = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -2501,26 +2838,69 @@ webpackJsonp([51], {
                     }
                 }, t)
             },
-            y = i(1276),
-            _ = i(1671),
+            y = i(1279),
+            _ = i(1676),
             E = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return n.__extends(t, e), t.prototype.componentDidUpdate = function() {
-                    this.props.data.error ? this.props.latencyTracking.reportInteractive() : this.props.data.loading || (this.props.data.user && s.n.setPageTitle(this.props.data.user.displayName), this.props.latencyTracking.reportInteractive(this.props.data.user.collections.edges.length + 1))
+                    if (!this.props.data.loading && this.props.data.user) return s.n.setPageTitle(this.props.data.user.displayName), void this.props.latencyTracking.reportInteractive(this.props.data.user.collections.edges.length + 1);
+                    this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e;
-                    if (this.props.data.error) e = a.createElement(g.U, {
-                        margin: {
-                            top: 5
-                        }
-                    }, a.createElement(o.a, {
-                        message: Object(s.d)("These collections are temporarily unavailable.", "channel-collections")
-                    }));
-                    else if (this.props.data.loading && !this.props.data.user) {
-                        for (var t = [], i = 0; i < 12; i++) t.push(a.createElement(g.U, {
-                            key: "collection-placeholder-" + i,
+                    if (!this.props.data.error && this.props.data.user) {
+                        var t = this.props.data.user,
+                            i = t.collections.edges.map(function(e) {
+                                return e.node
+                            }),
+                            n = !this.props.data.loading && !this.props.data.error && !!t.collections.pageInfo.hasNextPage,
+                            r = null;
+                        0 === i.length && (r = a.createElement(k, {
+                            showCollectionsManagerButton: this.showCollectionManagerButton(),
+                            channelLogin: this.props.match.params.channelLogin
+                        }));
+                        var c = null;
+                        0 !== i.length && this.showCollectionManagerButton() && (c = a.createElement(g.U, {
+                            display: g.H.Flex,
+                            justifyContent: g.T.End,
+                            padding: {
+                                bottom: 2
+                            }
+                        }, a.createElement(g.u, {
+                            type: g.z.Hollow,
+                            linkTo: "/" + this.props.match.params.channelLogin + "/manager/collections",
+                            "data-test-selector": "collections-manage-button"
+                        }, Object(s.d)("Manage your collections", "collection-page"))));
+                        var d = i.map(function(e, i) {
+                            return a.createElement(g.U, {
+                                key: e.id,
+                                margin: {
+                                    bottom: 2
+                                }
+                            }, a.createElement(v, {
+                                channelLinkTo: "/" + t.login,
+                                channelDisplayName: Object(u.a)(t.login, t.displayName),
+                                imageAlt: e.title,
+                                imageSrc: e.thumbnailURL,
+                                linkTo: "/collections/" + e.id,
+                                title: e.title,
+                                totalViews: e.viewCount,
+                                videoCount: e.items.totalCount,
+                                "data-a-target": "collection-card-" + i
+                            }))
+                        });
+                        e = a.createElement("div", null, c, r, a.createElement(g._33, {
+                            gutterSize: g._35.Small,
+                            childWidth: g._34.Medium,
+                            placeholderItems: 20
+                        }, d), a.createElement(l.a, {
+                            enabled: n,
+                            loadMore: this.props.loadMore
+                        }))
+                    } else if (this.props.data.loading && !this.props.data.user) {
+                        for (var p = [], h = 0; h < 12; h++) p.push(a.createElement(g.U, {
+                            key: "collection-placeholder-" + h,
                             padding: {
                                 bottom: 2
                             },
@@ -2542,61 +2922,14 @@ webpackJsonp([51], {
                             gutterSize: g._35.Small,
                             childWidth: g._34.Medium,
                             placeholderItems: 20
-                        }, t)
-                    } else {
-                        var n = this.props.data,
-                            r = n.user,
-                            c = n.currentUser,
-                            d = !this.props.data.loading && !this.props.data.error && !!this.props.data.user.collections.pageInfo.hasNextPage,
-                            p = null,
-                            h = null,
-                            b = r.collections.edges.map(function(e) {
-                                return e.node
-                            });
-                        0 === b.length && (h = a.createElement(k, {
-                            showCollectionsManagerButton: !!c && (c.roles.isStaff || c.id === r.id),
-                            channelLogin: this.props.match.params.channelLogin
-                        }));
-                        var f = !!c && c.id === r.id;
-                        f && 0 !== b.length && (p = a.createElement(g.U, {
-                            display: g.H.Flex,
-                            justifyContent: g.T.End,
-                            padding: {
-                                bottom: 2
-                            }
-                        }, a.createElement(g.u, {
-                            type: g.z.Hollow,
-                            linkTo: "/" + this.props.match.params.channelLogin + "/manager/collections",
-                            "data-test-selector": "collections-manage-button"
-                        }, Object(s.d)("Manage your collections", "collection-page"))));
-                        var S = b.map(function(e, t) {
-                            var i = Object(u.a)(r.login, r.displayName);
-                            return a.createElement(g.U, {
-                                key: e.id,
-                                margin: {
-                                    bottom: 2
-                                }
-                            }, a.createElement(v, {
-                                channelLinkTo: "/" + r.login,
-                                channelDisplayName: i,
-                                imageAlt: e.title,
-                                imageSrc: e.thumbnailURL,
-                                linkTo: "/collections/" + e.id,
-                                title: e.title,
-                                totalViews: e.viewCount,
-                                videoCount: e.items.totalCount,
-                                "data-a-target": "collection-card-" + t
-                            }))
-                        });
-                        e = a.createElement("div", null, p, h, a.createElement(g._33, {
-                            gutterSize: g._35.Small,
-                            childWidth: g._34.Medium,
-                            placeholderItems: 20
-                        }, S), a.createElement(l.a, {
-                            enabled: d,
-                            loadMore: this.props.loadMore
-                        }))
-                    }
+                        }, p)
+                    } else e = a.createElement(g.U, {
+                        margin: {
+                            top: 5
+                        }
+                    }, a.createElement(o.a, {
+                        message: Object(s.d)("These collections are temporarily unavailable.", "channel-collections")
+                    }));
                     return a.createElement(g.U, {
                         fullHeight: !0,
                         "data-test-selector": "channel-collections-page"
@@ -2604,6 +2937,8 @@ webpackJsonp([51], {
                         currentPage: m.b.Collections,
                         ownerLogin: this.props.match.params.channelLogin
                     }, e))
+                }, t.prototype.showCollectionManagerButton = function() {
+                    return !(!this.props.data.currentUser || !this.props.data.user) && (this.props.data.currentUser.id === this.props.data.user.id || this.props.data.currentUser.roles.isStaff)
                 }, t
             }(a.Component),
             P = {
@@ -2644,10 +2979,9 @@ webpackJsonp([51], {
             }), Object(c.a)({
                 location: p.PageviewLocation.ChannelCollections,
                 properties: function(e) {
-                    var t = null;
-                    return e.data.user.id && (t = Number(e.data.user.id)), {
+                    return {
                         channel: e.match.params.channelLogin,
-                        channel_id: t
+                        channel_id: e.data.user && e.data.user.id ? Number(e.data.user.id) : null
                     }
                 },
                 skip: function(e) {
@@ -2658,7 +2992,7 @@ webpackJsonp([51], {
             return T
         })
     },
-    411: function(e, t, i) {
+    412: function(e, t, i) {
         "use strict";
         i.d(t, "a", function() {
             return n
@@ -2668,7 +3002,7 @@ webpackJsonp([51], {
             e[e.Ready = 0] = "Ready", e[e.Dimensions = 1] = "Dimensions", e[e.RequestAd = 2] = "RequestAd", e[e.OnStart = 3] = "OnStart", e[e.OnCredit = 4] = "OnCredit", e[e.OnFinish = 5] = "OnFinish", e[e.OnClose = 6] = "OnClose", e[e.OnError = 7] = "OnError", e[e.Adblock = 8] = "Adblock", e[e.LimitReached = 9] = "LimitReached"
         }(n || (n = {}))
     },
-    915: function(e, t, i) {
+    919: function(e, t, i) {
         "use strict";
 
         function n(e) {
@@ -2764,7 +3098,7 @@ webpackJsonp([51], {
             e.ShowAdButton = "show_ad_button"
         }(l || (l = {}))
     },
-    918: function(e, t, i) {
+    922: function(e, t, i) {
         "use strict";
         i.d(t, "a", function() {
             return n
@@ -2822,7 +3156,7 @@ webpackJsonp([51], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    922: function(e, t, i) {
+    925: function(e, t, i) {
         "use strict";
 
         function n(e) {
@@ -2890,7 +3224,7 @@ webpackJsonp([51], {
             return n
         })
     },
-    923: function(e, t, i) {
+    927: function(e, t, i) {
         "use strict";
 
         function n(e) {
@@ -2899,17 +3233,17 @@ webpackJsonp([51], {
         var a, r = i(0),
             s = i(1),
             o = i(2),
-            l = i(936),
+            l = i(935),
             c = i(136),
-            u = i(271),
+            u = i(270),
             d = i(6),
-            p = i(935),
-            m = i(410),
-            h = i(952),
-            b = i(937),
+            p = i(934),
+            m = i(411),
+            h = i(947),
+            b = i(936),
             g = i(269),
             f = i(3),
-            S = (i(973), "gift-subscription-button"),
+            S = (i(971), "gift-subscription-button"),
             v = "subscribe-button";
         ! function(e) {
             e[e.Prime = 0] = "Prime", e[e.Tier1 = 1] = "Tier1", e[e.Tier2 = 2] = "Tier2", e[e.Tier3 = 3] = "Tier3"
@@ -3185,15 +3519,15 @@ webpackJsonp([51], {
             return y
         })
     },
-    925: function(e, t, i) {
+    929: function(e, t, i) {
         "use strict";
         var n, a = i(4),
             r = i(1),
-            s = i(404),
-            o = i(407),
-            l = i(405),
+            s = i(405),
+            o = i(408),
+            l = i(406),
             c = i(3);
-        i(994);
+        i(999);
         ! function(e) {
             e[e.Normal = 0] = "Normal", e[e.Small = 1] = "Small", e[e.Medium = 2] = "Medium", e[e.ExtraSmall = 3] = "ExtraSmall"
         }(n || (n = {}));
@@ -3253,7 +3587,7 @@ webpackJsonp([51], {
             return u
         })
     },
-    934: function(e, t, i) {
+    933: function(e, t, i) {
         "use strict";
 
         function n(e) {
@@ -3263,10 +3597,10 @@ webpackJsonp([51], {
         }
         var a = i(0),
             r = i(1),
-            s = i(8),
+            s = i(9),
             o = i(19),
             l = i(6),
-            c = i(935),
+            c = i(934),
             u = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3296,7 +3630,7 @@ webpackJsonp([51], {
             return c.b
         })
     },
-    935: function(e, t, i) {
+    934: function(e, t, i) {
         "use strict";
 
         function n(e) {
@@ -3309,10 +3643,10 @@ webpackJsonp([51], {
             s = i(1),
             o = i(2),
             l = i(64),
-            c = i(9),
+            c = i(8),
             u = i(109),
-            d = i(936),
-            p = i(142),
+            d = i(935),
+            p = i(141),
             m = i(23),
             h = i(36),
             b = i(20),
@@ -3320,14 +3654,14 @@ webpackJsonp([51], {
             f = i(65),
             S = i(89),
             v = i(139),
-            k = i(409),
+            k = i(410),
             y = i(30),
             _ = i(52),
             E = i(136),
-            P = i(957),
+            P = i(960),
             T = i(269),
             N = i(3),
-            C = (i(972), function(e) {
+            C = (i(970), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3669,8 +4003,8 @@ webpackJsonp([51], {
                 }, t = r.__decorate([Object(g.c)("GiftRecipientSearch")], t)
             }(s.Component),
             B = U,
-            I = i(940),
-            x = i(923),
+            I = i(942),
+            x = i(927),
             F = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -3716,14 +4050,14 @@ webpackJsonp([51], {
                 }, t
             }(s.Component),
             D = F,
-            j = i(934),
-            L = i(952);
+            j = i(933),
+            L = i(947);
         ! function(e) {
             e[e.Top = 0] = "Top", e[e.SubOptions = 1] = "SubOptions", e[e.GiftOptions = 2] = "GiftOptions", e[e.RecipientSelect = 3] = "RecipientSelect"
         }(a || (a = {}));
-        var M = i(937),
-            R = i(974),
-            H = (i(975), function(e) {
+        var M = i(936),
+            R = i(972),
+            H = (i(973), function(e) {
                 function t(t) {
                     var i = e.call(this, t) || this;
                     return i.handleTopPageSubButtonClick = function() {
@@ -4300,7 +4634,7 @@ webpackJsonp([51], {
                 }, t = r.__decorate([Object(g.c)("BalloonSubbedUser")], t)
             }(s.Component),
             V = W,
-            z = (i(976), i(977));
+            z = (i(974), i(975));
         i.d(t, "a", function() {
             return q
         }), i.d(t, "b", function() {
@@ -4584,7 +4918,7 @@ webpackJsonp([51], {
             }(s.Component),
             K = $
     },
-    936: function(e, t, i) {
+    935: function(e, t, i) {
         "use strict";
         i.d(t, "a", function() {
             return n
@@ -4596,7 +4930,7 @@ webpackJsonp([51], {
             Tier3: "3000"
         }
     },
-    937: function(e, t, i) {
+    936: function(e, t, i) {
         "use strict";
 
         function n(e) {
@@ -4613,53 +4947,12 @@ webpackJsonp([51], {
         }
         t.a = n, t.b = a
     },
-    939: function(e, t, i) {
-        "use strict";
-
-        function n(e) {
-            var t, i = Object(r.d)("{bitsAmount} Bits", {
-                bitsAmount: e.count.toString()
-            }, "Bits--BitsCount");
-            if (e.withImage) {
-                var n = e.bitsConfig.indexedActions[o.e];
-                n || (n = Object(c.b)());
-                var d = n.orderedTiers.find(function(t) {
-                    return t.bits <= e.count
-                });
-                if (d) {
-                    var p = Object(l.b)(d);
-                    return void 0 !== e.themeOverride && (e.themeOverride === s.a.Light ? p.dark = p.light : p.light = p.dark), t = a.createElement(u.a, {
-                        className: "bits-count--img",
-                        sources: p
-                    }), a.createElement("strong", {
-                        className: "bits-count",
-                        "data-a-target": "bits-count"
-                    }, a.createElement("span", null, t, " ", e.withText ? i : ""))
-                }
-            }
-            return a.createElement("strong", {
-                className: "bits-count",
-                "data-a-target": "bits-count"
-            }, a.createElement("span", null, i))
-        }
-        var a = i(1),
-            r = i(2),
-            s = i(37),
-            o = i(268),
-            l = i(404),
-            c = i(407),
-            u = i(405);
-        i(1002);
-        i.d(t, "a", function() {
-            return n
-        })
-    },
-    940: function(e, t, i) {
+    942: function(e, t, i) {
         "use strict";
         var n = i(0),
             a = i(1),
             r = i(2),
-            s = i(923),
+            s = i(927),
             o = i(3),
             l = function(e) {
                 function t() {
@@ -4710,7 +5003,48 @@ webpackJsonp([51], {
             return c
         })
     },
-    941: function(e, t, i) {
+    944: function(e, t, i) {
+        "use strict";
+
+        function n(e) {
+            var t, i = Object(r.d)("{bitsAmount} Bits", {
+                bitsAmount: e.count.toString()
+            }, "Bits--BitsCount");
+            if (e.withImage) {
+                var n = e.bitsConfig.indexedActions[o.e];
+                n || (n = Object(c.b)());
+                var d = n.orderedTiers.find(function(t) {
+                    return t.bits <= e.count
+                });
+                if (d) {
+                    var p = Object(l.b)(d);
+                    return void 0 !== e.themeOverride && (e.themeOverride === s.a.Light ? p.dark = p.light : p.light = p.dark), t = a.createElement(u.a, {
+                        className: "bits-count--img",
+                        sources: p
+                    }), a.createElement("strong", {
+                        className: "bits-count",
+                        "data-a-target": "bits-count"
+                    }, a.createElement("span", null, t, " ", e.withText ? i : ""))
+                }
+            }
+            return a.createElement("strong", {
+                className: "bits-count",
+                "data-a-target": "bits-count"
+            }, a.createElement("span", null, i))
+        }
+        var a = i(1),
+            r = i(2),
+            s = i(37),
+            o = i(268),
+            l = i(405),
+            c = i(408),
+            u = i(406);
+        i(1006);
+        i.d(t, "a", function() {
+            return n
+        })
+    },
+    945: function(e, t, i) {
         "use strict";
 
         function n(e, t) {
@@ -4733,7 +5067,7 @@ webpackJsonp([51], {
         t.a = n;
         var a = i(2)
     },
-    942: function(e, t, i) {
+    946: function(e, t, i) {
         "use strict";
 
         function n(e) {
@@ -4789,11 +5123,11 @@ webpackJsonp([51], {
         }
         t.a = n, t.c = a, t.b = r;
         var s = i(0),
-            o = i(955),
+            o = i(959),
             l = i(268),
-            c = i(915)
+            c = i(919)
     },
-    952: function(e, t, i) {
+    947: function(e, t, i) {
         "use strict";
 
         function n(e, t) {
@@ -4928,7 +5262,7 @@ webpackJsonp([51], {
             return p
         })
     },
-    955: function(e, t, i) {
+    959: function(e, t, i) {
         "use strict";
 
         function n(e) {
@@ -4937,15 +5271,15 @@ webpackJsonp([51], {
         t.a = n;
         var a = /\scurse\/\d/
     },
-    957: function(e, t, i) {
+    960: function(e, t, i) {
         "use strict";
         var n = i(0),
             a = i(1),
             r = i(2),
-            s = i(9),
+            s = i(8),
             o = i(6),
             l = i(3),
-            c = i(971),
+            c = i(969),
             u = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -5009,7 +5343,7 @@ webpackJsonp([51], {
             return d
         })
     },
-    958: function(e, t, i) {
+    962: function(e, t, i) {
         "use strict";
 
         function n(e) {
@@ -5054,7 +5388,7 @@ webpackJsonp([51], {
         t.a = n;
         var a = i(0)
     },
-    959: function(e, t, i) {
+    963: function(e, t, i) {
         "use strict";
         i.d(t, "a", function() {
             return s
@@ -5110,7 +5444,7 @@ webpackJsonp([51], {
                 }, t
             }(a.Component)
     },
-    961: function(e, t, i) {
+    965: function(e, t, i) {
         "use strict";
         i.d(t, "a", function() {
             return n
@@ -5120,7 +5454,7 @@ webpackJsonp([51], {
         var n = "AD",
             a = "BUNDLE"
     },
-    962: function(e, t) {
+    966: function(e, t) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -5284,7 +5618,7 @@ webpackJsonp([51], {
         };
         e.exports = i
     },
-    963: function(e, t) {
+    967: function(e, t) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -5493,736 +5827,7 @@ webpackJsonp([51], {
         };
         e.exports = i
     },
-    964: function(e, t, i) {
-        "use strict";
-
-        function n(e) {
-            return Object(h.bindActionCreators)({
-                closeModal: c.c
-            }, e)
-        }
-
-        function a(e) {
-            return p.__awaiter(this, void 0, void 0, function() {
-                var t, i, n, a, r;
-                return p.__generator(this, function(s) {
-                    switch (s.label) {
-                        case 0:
-                            if (t = b.b.get("bits_truex_partner_hash", ""), !(i = b.b.get("bits_truex_api_url", "")) || !t) return b.i.warn("Truex API info missing from dynamic settings"), [2, v.Error];
-                            s.label = 1;
-                        case 1:
-                            return s.trys.push([1, 5, , 6]), [4, fetch(i + "?placement.key=" + t + "&user.uid=" + e + "&max_activities=1")];
-                        case 2:
-                            return n = s.sent(), n.ok ? [4, n.json()] : [3, 4];
-                        case 3:
-                            if ((a = s.sent()) && Array.isArray(a) && a.length) return [2, v.Available];
-                            s.label = 4;
-                        case 4:
-                            return [2, v.Unavailable];
-                        case 5:
-                            return r = s.sent(), b.i.warn("Failed checking ad availability from TrueX, probably due to AdBlock", r), [2, v.AdBlocked];
-                        case 6:
-                            return [2]
-                    }
-                })
-            })
-        }
-
-        function r(e) {
-            return {
-                adModalOpen: Object(u.b)(e, T),
-                isLoggedIn: Object(d.d)(e)
-            }
-        }
-
-        function s(e) {
-            return {
-                showWatchAdModal: function(t) {
-                    return e(Object(c.d)(T, t))
-                }
-            }
-        }
-        var o, l = i(8),
-            c = i(50),
-            u = i(91),
-            d = i(19),
-            p = i(0),
-            m = i(1),
-            h = i(11),
-            b = i(2),
-            g = i(134),
-            f = i(9),
-            S = i(23);
-        ! function(e) {
-            e[e.ExitEarly = 0] = "ExitEarly", e[e.Unknown = 1] = "Unknown", e[e.Adblock = 2] = "Adblock", e[e.LimitReached = 3] = "LimitReached"
-        }(o || (o = {}));
-        var v, k = i(411),
-            y = i(915),
-            _ = i(3),
-            E = i(992),
-            P = (i(993), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {}, t.hasAwarded = !1, t.messageHandler = function(e) {
-                        return p.__awaiter(t, void 0, void 0, function() {
-                            var t, i, n, a, a, r, s;
-                            return p.__generator(this, function(l) {
-                                switch (l.label) {
-                                    case 0:
-                                        if (e.origin !== window.location.origin) return [2];
-                                        if (!(t = e.data) || "trueXAd" !== t.msgSrc) return [2];
-                                        switch (i = t.type) {
-                                            case k.a.Ready:
-                                                return [3, 1];
-                                            case k.a.RequestAd:
-                                                return [3, 2];
-                                            case k.a.Dimensions:
-                                                return [3, 3];
-                                            case k.a.OnStart:
-                                                return [3, 4];
-                                            case k.a.OnCredit:
-                                                return [3, 5];
-                                            case k.a.OnClose:
-                                            case k.a.OnFinish:
-                                            case k.a.LimitReached:
-                                            case k.a.Adblock:
-                                            case k.a.OnError:
-                                                return [3, 9]
-                                        }
-                                        return [3, 10];
-                                    case 1:
-                                        return n = {
-                                            msgSrc: "wateb-ad-modal",
-                                            tuid: this.props.tuid
-                                        }, e.source.postMessage(n, "*"), [2];
-                                    case 2:
-                                        try {
-                                            if (!(a = JSON.parse(t.activityJSON))) return [2];
-                                            Object(y.g)({
-                                                campaignID: a.campaign_id.toString(),
-                                                requestID: t.requestID,
-                                                requestMethod: this.props.requestRef
-                                            })
-                                        } catch (e) {}
-                                        return [2];
-                                    case 3:
-                                        return t.height && t.width && this.setState({
-                                            customDimensions: {
-                                                height: t.height,
-                                                width: t.width
-                                            }
-                                        }), [3, 10];
-                                    case 4:
-                                        try {
-                                            if (!(a = JSON.parse(t.activityJSON))) return [2];
-                                            Object(y.f)({
-                                                requestID: t.requestID,
-                                                adblock: !1,
-                                                campaignID: a.campaign_id.toString()
-                                            })
-                                        } catch (e) {}
-                                        return [2];
-                                    case 5:
-                                        return l.trys.push([5, 7, , 8]), [4, this.props.redeemTrueXAd(Object(S.a)({
-                                            args: t.engagement.signature_argument_string,
-                                            signature: t.engagement.signature,
-                                            trueXAd: {
-                                                creativeID: t.engagement.ad.creative_id,
-                                                campaignID: t.engagement.ad.campaign_id,
-                                                name: t.engagement.ad.name,
-                                                currencyAmount: t.engagement.ad.currency_amount
-                                            },
-                                            targetID: this.props.channelID
-                                        }))];
-                                    case 6:
-                                        return r = l.sent(), this.hasAwarded = !0, this.props.onBitsAwarded && this.props.onBitsAwarded(r.data.redeemTrueXAd.grantedBits), [3, 8];
-                                    case 7:
-                                        return s = l.sent(), b.i.warn("Error while redeeming bits for truex ad", s), this.props.onError && this.props.onError(o.Unknown), [3, 8];
-                                    case 8:
-                                        return [3, 10];
-                                    case 9:
-                                        return this.props.onError && (t.type === k.a.LimitReached ? this.props.onError(o.LimitReached) : t.type === k.a.Adblock ? this.props.onError(o.Adblock) : t.type === k.a.OnError ? this.props.onError(o.Unknown) : this.hasAwarded || this.props.onError(o.ExitEarly)), this.props.closeModal(), [3, 10];
-                                    case 10:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }, t
-                }
-                return p.__extends(t, e), t.prototype.componentWillMount = function() {
-                    window.addEventListener("message", this.messageHandler)
-                }, t.prototype.componentWillUnmount = function() {
-                    window.removeEventListener("message", this.messageHandler)
-                }, t.prototype.render = function() {
-                    return m.createElement(_._17, {
-                        background: _.m.Base
-                    }, m.createElement("div", {
-                        className: "t-watch-ads-modal",
-                        style: this.state.customDimensions
-                    }, m.createElement(g.a, null), m.createElement("iframe", {
-                        src: "/products/bits/ad"
-                    })))
-                }, t = p.__decorate([Object(f.a)(E, {
-                    name: "redeemTrueXAd"
-                })], t)
-            }(m.Component)),
-            T = Object(l.a)(null, n)(P),
-            N = i(4),
-            C = i(30),
-            w = i(941);
-        ! function(e) {
-            e[e.Error = 0] = "Error", e[e.AdBlocked = 1] = "AdBlocked", e[e.Unavailable = 2] = "Unavailable", e[e.Available = 3] = "Available"
-        }(v || (v = {}));
-        var A, O = i(925),
-            U = function(e) {
-                return m.createElement(_.U, {
-                    display: _.H.Flex,
-                    flexGrow: 1,
-                    flexDirection: _.J.Column,
-                    alignItems: _.c.Center,
-                    fullWidth: !0,
-                    flexWrap: _.K.NoWrap,
-                    padding: {
-                        y: 1
-                    }
-                }, m.createElement(O.a, {
-                    prefix: "cheer",
-                    amount: e.amount,
-                    bitsConfig: e.bitsConfig
-                }), m.createElement(_.U, {
-                    display: _.H.Flex,
-                    padding: {
-                        top: 1
-                    },
-                    flexGrow: 1,
-                    flexDirection: _.J.Column,
-                    alignItems: _.c.Center,
-                    flexWrap: _.K.NoWrap
-                }, m.createElement(_._21, {
-                    type: _._26.H4,
-                    bold: !0
-                }, Object(b.d)("You got {bitsAmount,number} Bits!", {
-                    bitsAmount: e.amount
-                }, "Bits--WatchAdAward")), m.createElement(_.P, {
-                    padding: {
-                        top: 1
-                    }
-                }, m.createElement(_._21, {
-                    color: _.F.Alt2
-                }, Object(b.d)("{bitsAmount,number} Bits were added to your Bit inventory.", {
-                    bitsAmount: e.amount
-                }, "Bits--WatchAdAward"), m.createElement("br", null), Object(b.d)("You can use these Bits to Cheer!", "Bits--WatchAdAward")))), m.createElement(_.U, {
-                    display: _.H.Flex,
-                    padding: {
-                        x: 1,
-                        top: 3
-                    },
-                    alignSelf: _.d.Stretch,
-                    justifyContent: _.T.Between
-                }, m.createElement(_.u, {
-                    onClick: e.onStartCheering
-                }, Object(b.d)("Start Cheering", "Bits--WatchAdAward")), m.createElement(_.u, {
-                    type: _.z.Hollow,
-                    onClick: e.onWatchAnother,
-                    disabled: !e.hasAdAvailable
-                }, Object(b.d)("Watch Another", "Bits--WatchAdAward"))))
-            },
-            B = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        hasAdAvailable: !0
-                    }, t
-                }
-                return p.__extends(t, e), t.prototype.componentWillMount = function() {
-                    return p.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return p.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, a(this.props.truexUserID)];
-                                case 1:
-                                    return e = t.sent(), e !== v.Available && this.setState({
-                                        hasAdAvailable: !1
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.render = function() {
-                    return m.createElement(U, p.__assign({}, this.props, {
-                        hasAdAvailable: this.state.hasAdAvailable
-                    }))
-                }, t
-            }(m.Component),
-            I = i(268),
-            x = (i(995), function(e) {
-                var t = Object(b.d)("Something's wrong!", "Bits--WatchAdError"),
-                    i = Object(b.d)("Something went wrong. Wait a while and try again.", "Bits--WatchAdError"),
-                    n = "adserrorgeneric";
-                switch (e.type) {
-                    case o.Adblock:
-                        n = "adserroradblock", i = Object(b.d)("We can't load this Ad, probably because Ad Blocking software is running. To watch an ad and get Bits, please disable all Ad Blocking software.", "Bits--WatchAdError");
-                        break;
-                    case o.LimitReached:
-                        n = "adserrorlimit", t = Object(b.d)("Ad Limit Reached", "Bits--WatchAdError"), i = Object(b.d)("That's all the Ads we have for now. Try again tomorrow!", "Bits--WatchAdError");
-                        break;
-                    case o.ExitEarly:
-                        i = Object(b.d)("To get Bits, you must view and interact with the Ad for the minimum amount of time.", "Bits--WatchAdError")
-                }
-                var a = m.createElement(_.U, {
-                    className: "watch-ad-error__footer",
-                    display: _.H.Flex,
-                    padding: {
-                        top: 2
-                    },
-                    alignSelf: _.d.Stretch,
-                    justifyContent: _.T.Center
-                }, m.createElement(_.u, {
-                    onClick: e.onTryAgain
-                }, Object(b.d)("Try Again", "Bits--WatchAdError")));
-                return e.type === o.LimitReached && (a = m.createElement(_.U, {
-                    className: "watch-ad-error__footer",
-                    display: _.H.Flex,
-                    padding: {
-                        top: 2
-                    },
-                    alignSelf: _.d.Stretch,
-                    justifyContent: _.T.Between
-                }, m.createElement(_.u, {
-                    onClick: e.onClose
-                }, Object(b.d)("Got It", "Bits--WatchAdError")), m.createElement(_.u, {
-                    onClick: e.onTryAgain,
-                    type: _.z.Hollow
-                }, Object(b.d)("Buy Bits", "Bits--WatchAdError")))), m.createElement(_.U, {
-                    padding: {
-                        x: 1
-                    },
-                    display: _.H.Flex,
-                    flexGrow: 1,
-                    flexDirection: _.J.Column,
-                    alignItems: _.c.Center,
-                    fullWidth: !0,
-                    flexWrap: _.K.NoWrap
-                }, m.createElement(_.U, {
-                    padding: {
-                        y: 2
-                    }
-                }, m.createElement("img", {
-                    className: "watch-ad-error__error-image",
-                    src: I.a + "/light/static/1/" + n + ".png"
-                })), m.createElement(_.U, {
-                    padding: {
-                        bottom: 1
-                    }
-                }, m.createElement(_._21, {
-                    type: _._26.H4,
-                    bold: !0
-                }, t)), m.createElement(_._21, {
-                    color: _.F.Alt2
-                }, i), a)
-            }),
-            F = function(e) {
-                var t = null;
-                return e.disableWatchAd && (t = Object(b.d)("Try again later", "Bits--WatchAdOffer")), m.createElement(_._17, {
-                    className: "bits-buy-card__offer-row",
-                    display: _.H.Flex,
-                    flexShrink: 0,
-                    borderBottom: !0,
-                    justifyContent: _.T.Between,
-                    flexWrap: _.K.NoWrap,
-                    padding: {
-                        x: 2,
-                        y: 1
-                    }
-                }, m.createElement(_.U, {
-                    padding: {
-                        right: 4
-                    }
-                }, m.createElement("strong", null, Object(b.d)("Get {minBitsCount} or more Bits by watching short ads", {
-                    minBitsCount: e.minPayout
-                }, "Bits--WatchAdOffer"))), m.createElement(_.U, {
-                    flexShrink: 0,
-                    display: _.H.Flex,
-                    flexDirection: _.J.Column,
-                    alignItems: _.c.End
-                }, m.createElement(_.u, {
-                    type: _.z.Hollow,
-                    "data-a-target": "bits-watch-ad",
-                    onClick: e.onWatchAdClick,
-                    disabled: e.disableWatchAd
-                }, Object(b.d)("Watch Ad", "Bits--WatchAdOffer")), t && m.createElement(_.U, {
-                    className: "bits-buy-card__sub-text",
-                    alignSelf: _.d.Stretch,
-                    textAlign: _._22.Center,
-                    margin: {
-                        top: .5
-                    }
-                }, t)))
-            },
-            D = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
-            j = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        enableWatchAd: !0
-                    }, t
-                }
-                return p.__extends(t, e), t.prototype.componentWillMount = function() {
-                    return p.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return p.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, a(this.props.truexUserID)];
-                                case 1:
-                                    return e = t.sent(), Object(y.e)({
-                                        channel: this.props.channelLogin,
-                                        channelID: this.props.channelID,
-                                        available: e === v.Available
-                                    }), e !== v.Available && e !== v.AdBlocked && this.setState({
-                                        enableWatchAd: !1
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.render = function() {
-                    return D.test(navigator.userAgent) ? null : m.createElement(F, p.__assign({}, this.props, {
-                        disableWatchAd: !this.state.enableWatchAd
-                    }))
-                }, t
-            }(m.Component),
-            L = i(961),
-            M = i(404),
-            R = i(942),
-            H = i(407),
-            G = i(405),
-            W = i(996);
-        i(997);
-        ! function(e) {
-            e[e.Inactive = 0] = "Inactive", e[e.Error = 1] = "Error", e[e.Awarded = 2] = "Awarded"
-        }(A || (A = {}));
-        var V = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        wateb: A.Inactive,
-                        watebError: null,
-                        bitsAwarded: 0
-                    }, t.handleBuyClick = function(e) {
-                        var i = t.props.data && t.props.data.user ? t.props.data.user.id : "",
-                            n = Object(R.b)({
-                                trackBitsCardInteraction: t.props.trackBitsCardInteraction,
-                                channelID: i,
-                                purchaseUrl: e.currentTarget.dataset.purchaseUrl,
-                                bitsAmount: e.currentTarget.dataset.bitsAmount,
-                                closeAllBits: t.props.closeAllBits,
-                                location: t.props.location
-                            });
-                        n && (t.onBuyPopupClose(n), t.props.onClose())
-                    }, t.onBuyPopupClose = function(e) {
-                        Object(w.a)(e, function() {
-                            t.props.data && t.props.data.refetch()
-                        })
-                    }, t.onAdBitsAwarded = function(e) {
-                        t.props.data && !t.props.data.loading && t.props.data.refetch(), t.setState({
-                            wateb: A.Awarded,
-                            bitsAwarded: e
-                        })
-                    }, t.handleWatchAdClick = function() {
-                        return p.__awaiter(t, void 0, void 0, function() {
-                            return p.__generator(this, function(e) {
-                                return this.props.data && this.props.data.currentUser && this.props.data.user ? (this.props.showWatchAdModal({
-                                    tuid: this.props.data.currentUser.idSHA1,
-                                    onBitsAwarded: this.onAdBitsAwarded,
-                                    onError: this.receiveAdErrorState,
-                                    requestRef: y.c.ShowAdButton,
-                                    channelID: this.props.data.user.id
-                                }), [2]) : [2]
-                            })
-                        })
-                    }, t.receiveAdErrorState = function(e) {
-                        t.setState({
-                            wateb: A.Error,
-                            watebError: e
-                        })
-                    }, t.resetAdErrorState = function() {
-                        t.state.wateb === A.Error && (t.setState({
-                            wateb: A.Inactive
-                        }), t.props.data && t.props.data.refetch())
-                    }, t
-                }
-                return p.__extends(t, e), t.prototype.shouldComponentUpdate = function(e) {
-                    return !e.adModalOpen
-                }, t.prototype.render = function() {
-                    var e = this,
-                        t = {
-                            border: !0,
-                            background: _.m.Base,
-                            fullWidth: !0,
-                            elevation: 3
-                        },
-                        i = N({
-                            "bits-buy-card": !0,
-                            "bits-buy-card__chat-tooltip": this.props.location === y.b.ChatTooltip
-                        }),
-                        n = null;
-                    if (this.props.location === y.b.ChatTooltip && (n = m.createElement("button", {
-                            className: "bits-buy-card__close",
-                            onClick: this.props.onClose,
-                            "data-a-target": "bits-buy-card-close-button"
-                        }, m.createElement(_._8, {
-                            asset: _._9.Close,
-                            height: 11,
-                            width: 11
-                        }))), !this.props.data || this.props.data.loading) return m.createElement(_._17, p.__assign({
-                        className: i,
-                        "data-a-target": "bits-buy-card-loading",
-                        display: _.H.Flex,
-                        flexDirection: _.J.Column,
-                        alignItems: _.c.Center,
-                        justifyContent: _.T.Center,
-                        textAlign: _._22.Center
-                    }, t), m.createElement(_.X, {
-                        delay: 0
-                    }), m.createElement(_.U, {
-                        padding: {
-                            top: 2
-                        }
-                    }, m.createElement(_._21, {
-                        italic: !0
-                    }, Object(b.d)("Fetching bits", "Bits--BuyCard"))));
-                    if (this.props.data.error) return m.createElement(_.U, p.__assign({
-                        className: N(i, "bits-buy-card--shorter"),
-                        display: _.H.Flex,
-                        flexDirection: _.J.Column,
-                        alignItems: _.c.Center,
-                        justifyContent: _.T.Center,
-                        padding: 2,
-                        textAlign: _._22.Center,
-                        "data-a-target": "bits-buy-card-error"
-                    }, t), n, m.createElement(_._21, {
-                        italic: !0
-                    }, Object(b.d)("Bits prices are unavailable right now. Check back again later.", "Bits--BuyCard")));
-                    var a = this.renderWatebCard();
-                    if (a) return m.createElement(_._17, p.__assign({
-                        className: N(i, "bits-buy-card--shorter"),
-                        display: _.H.Flex,
-                        flexDirection: _.J.Column,
-                        alignItems: _.c.Center,
-                        justifyContent: _.T.Center,
-                        textAlign: _._22.Center,
-                        padding: 1
-                    }, t), n, a);
-                    var r = [];
-                    this.props.data.currentUser ? r = this.props.data.currentUser.bitsOffers : this.props.data.bitsOffers && (r = this.props.data.bitsOffers);
-                    var s = r.length,
-                        o = null,
-                        l = [],
-                        c = null;
-                    r.filter(function(e) {
-                        return e.type === L.b
-                    }).some(function(e) {
-                        return e.includesVAT
-                    }) && (c = m.createElement(_._21, {
-                        italic: !0,
-                        type: _._26.P,
-                        color: _.F.Alt
-                    }, Object(b.d)("Prices include VAT", "Bits--BuyCard")));
-                    var u = this.props.data.user ? this.props.data.user.id : "";
-                    r.forEach(function(t, i) {
-                        if (t.type === L.a) {
-                            if (!e.props.channelLogin) return null;
-                            var n = e.props.data && e.props.data.currentUser ? e.props.data.currentUser.idSHA1 : "";
-                            return void(o = m.createElement(j, {
-                                key: "wateb",
-                                minPayout: t.bits,
-                                onWatchAdClick: e.handleWatchAdClick,
-                                truexUserID: n,
-                                channelID: u,
-                                channelLogin: e.props.channelLogin
-                            }))
-                        }
-                        var a = null,
-                            r = t.promotion && null !== t.promotion;
-                        r && "first_time_purchase" === t.promotion.type ? a = m.createElement(_.U, {
-                            className: "bits-buy-card__bonus-text bits-buy-card__bonus-text-headline"
-                        }, m.createElement(_._21, {
-                            type: _._26.Strong,
-                            fontSize: _.L.Size6
-                        }, Object(b.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : r && "black_friday_2017" === t.promotion.id && (a = m.createElement(_.U, {
-                            className: "bits-buy-card__bonus-text bits-buy-card__bonus-text-headline"
-                        }, m.createElement(_._21, {
-                            type: _._26.Strong,
-                            fontSize: _.L.Size6
-                        }, Object(b.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))));
-                        var c = null;
-                        t.discount && (c = m.createElement("div", {
-                            className: "bits-buy-card__sub-text"
-                        }, Object(b.d)("{percentOff,number,percent} discount", {
-                            percentOff: t.discount
-                        }, "Bits--BuyCard")));
-                        var d = null;
-                        !r || "first_time_purchase" !== t.promotion.type && "single_purchase" !== t.promotion.type || (d = m.createElement("div", {
-                            className: "bits-buy-card__sub-text"
-                        }, Object(b.d)("one per account", "Bits--BuyCard")));
-                        var p = i + 1 < s,
-                            h = p ? _._17 : _.U,
-                            g = m.createElement(h, {
-                                className: "bits-buy-card__offer-row",
-                                key: t.id,
-                                flexShrink: 0,
-                                display: _.H.Flex,
-                                justifyContent: _.T.Center,
-                                borderBottom: p,
-                                flexDirection: _.J.Column,
-                                padding: {
-                                    x: 2,
-                                    y: 1
-                                }
-                            }, a, m.createElement(_.U, {
-                                display: _.H.Flex,
-                                justifyContent: _.T.Between,
-                                alignItems: _.c.Center
-                            }, m.createElement(_.U, {
-                                flexGrow: 1
-                            }, m.createElement(_._21, {
-                                type: _._26.H5,
-                                color: _.F.Base,
-                                bold: !0
-                            }, t.bits, " Bits ", null), e.getAvailableTiers(t.bits)), m.createElement(_.U, {
-                                flexShrink: 0,
-                                display: _.H.Flex,
-                                flexDirection: _.J.Column,
-                                alignItems: _.c.End
-                            }, m.createElement(_.u, {
-                                onClick: e.handleBuyClick,
-                                "data-purchase-url": t.url,
-                                "data-bits-amount": t.bits,
-                                "data-a-target": "bits-purchase-button-" + t.bits
-                            }, t.price), (c || d) && m.createElement(_.U, {
-                                alignSelf: _.d.Stretch,
-                                textAlign: _._22.Right,
-                                margin: {
-                                    top: .5
-                                }
-                            }, c, d))));
-                        r ? e.props.hidePromos || l.unshift(g) : l.push(g)
-                    }), o && !this.props.hideWateb && l.unshift(o);
-                    var d = null;
-                    this.props.data && this.props.channelLogin && this.props.data.user && this.props.data.user.cheer.settings.cheerMinimumBits > 1 && (d = m.createElement(_._21, {
-                        color: _.F.Alt
-                    }, Object(b.d)("{displayName} requires {minBits} Bits to Cheer in this channel.", {
-                        displayName: this.props.data.user.displayName || this.props.channelLogin,
-                        minBits: this.props.data.user.cheer.settings.cheerMinimumBits
-                    }, "Bits--BuyCard")));
-                    var h = null;
-                    this.props.data.currentUser && (h = m.createElement(_._21, {
-                        color: _.F.Alt
-                    }, Object(b.d)("You have {totalBits} Bits", {
-                        totalBits: m.createElement("strong", {
-                            "data-a-target": "buy-card-bits-count"
-                        }, this.props.data.currentUser.bitsBalance)
-                    }, "Bits--BuyCard")));
-                    var g = null;
-                    this.props.location === y.b.ChatTooltip && (g = m.createElement(_._17, {
-                        className: "bits-buy-card__header",
-                        padding: {
-                            x: 1,
-                            bottom: 1
-                        },
-                        borderBottom: !0,
-                        flexShrink: 0
-                    }, m.createElement(_.U, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, m.createElement(_._21, {
-                        type: _._26.H4,
-                        color: _.F.Alt
-                    }, Object(b.d)("Purchase Bits", "Bits--BuyCard")), c), h, d));
-                    var f = null;
-                    return f = this.props.fullsize ? m.createElement(_.U, {
-                        className: "bits-buy-card__full-size",
-                        flexGrow: 1,
-                        flexWrap: _.K.NoWrap,
-                        display: _.H.Flex,
-                        flexDirection: _.J.Column
-                    }, l) : m.createElement(C.b, {
-                        className: "bits-buy-card__scroll-view"
-                    }, m.createElement(_.U, {
-                        flexGrow: 1,
-                        flexWrap: _.K.NoWrap,
-                        display: _.H.Flex,
-                        flexDirection: _.J.Column
-                    }, l)), m.createElement(_._17, p.__assign({
-                        className: i,
-                        padding: {
-                            top: 1
-                        },
-                        display: _.H.Flex,
-                        flexDirection: _.J.Column,
-                        "data-a-target": "bits-buy-card"
-                    }, t), n, g, f)
-                }, t.prototype.renderWatebCard = function() {
-                    if (this.props.data && this.props.data.currentUser) switch (this.state.wateb) {
-                        case A.Awarded:
-                            return m.createElement(B, {
-                                bitsConfig: this.props.bitsConfig,
-                                amount: this.state.bitsAwarded,
-                                onStartCheering: this.props.onClose,
-                                onWatchAnother: this.handleWatchAdClick,
-                                truexUserID: this.props.data.currentUser.idSHA1
-                            });
-                        case A.Error:
-                            return m.createElement(x, {
-                                type: this.state.watebError || o.Unknown,
-                                onClose: this.props.onClose,
-                                onTryAgain: this.resetAdErrorState
-                            });
-                        default:
-                            return !1
-                    }
-                }, t.prototype.getAvailableTiers = function(e) {
-                    var t = this.props.bitsConfig.indexedActions[I.e];
-                    t || (t = Object(H.b)());
-                    var i = t.orderedTiers.filter(function(t) {
-                        return t.bits <= e
-                    }).reverse();
-                    return m.createElement(_.U, {
-                        padding: {
-                            top: .5
-                        },
-                        className: "bits-buy-card__tier-bits-images"
-                    }, i.map(function(e) {
-                        return m.createElement(G.a, {
-                            key: e.bits,
-                            sources: Object(M.b)(e, 2, !1)
-                        })
-                    }))
-                }, t = p.__decorate([Object(f.a)(W, {
-                    name: "data",
-                    options: function(e) {
-                        return {
-                            variables: {
-                                channelLogin: e.channelLogin,
-                                withChannel: !!e.channelLogin,
-                                isLoggedIn: e.isLoggedIn
-                            }
-                        }
-                    }
-                })], t)
-            }(m.Component),
-            z = V,
-            q = Object(l.a)(r, s)(z);
-        i.d(t, !1, function() {
-            return r
-        }), i.d(t, !1, function() {
-            return s
-        }), i.d(t, "a", function() {
-            return q
-        })
-    },
-    971: function(e, t) {
+    969: function(e, t) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -6363,9 +5968,9 @@ webpackJsonp([51], {
         };
         e.exports = i
     },
-    972: function(e, t) {},
-    973: function(e, t) {},
-    974: function(e, t) {
+    970: function(e, t) {},
+    971: function(e, t) {},
+    972: function(e, t) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -6539,9 +6144,9 @@ webpackJsonp([51], {
         };
         e.exports = i
     },
-    975: function(e, t) {},
-    976: function(e, t) {},
-    977: function(e, t) {
+    973: function(e, t) {},
+    974: function(e, t) {},
+    975: function(e, t) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -6976,14 +6581,743 @@ webpackJsonp([51], {
         };
         e.exports = i
     },
-    979: function(e, t, i) {
+    977: function(e, t, i) {
+        "use strict";
+
+        function n(e) {
+            return Object(h.bindActionCreators)({
+                closeModal: c.c
+            }, e)
+        }
+
+        function a(e) {
+            return p.__awaiter(this, void 0, void 0, function() {
+                var t, i, n, a, r;
+                return p.__generator(this, function(s) {
+                    switch (s.label) {
+                        case 0:
+                            if (t = b.b.get("bits_truex_partner_hash", ""), !(i = b.b.get("bits_truex_api_url", "")) || !t) return b.i.warn("Truex API info missing from dynamic settings"), [2, v.Error];
+                            s.label = 1;
+                        case 1:
+                            return s.trys.push([1, 5, , 6]), [4, fetch(i + "?placement.key=" + t + "&user.uid=" + e + "&max_activities=1")];
+                        case 2:
+                            return n = s.sent(), n.ok ? [4, n.json()] : [3, 4];
+                        case 3:
+                            if ((a = s.sent()) && Array.isArray(a) && a.length) return [2, v.Available];
+                            s.label = 4;
+                        case 4:
+                            return [2, v.Unavailable];
+                        case 5:
+                            return r = s.sent(), b.i.warn("Failed checking ad availability from TrueX, probably due to AdBlock", r), [2, v.AdBlocked];
+                        case 6:
+                            return [2]
+                    }
+                })
+            })
+        }
+
+        function r(e) {
+            return {
+                adModalOpen: Object(u.b)(e, T),
+                isLoggedIn: Object(d.d)(e)
+            }
+        }
+
+        function s(e) {
+            return {
+                showWatchAdModal: function(t) {
+                    return e(Object(c.d)(T, t))
+                }
+            }
+        }
+        var o, l = i(9),
+            c = i(50),
+            u = i(91),
+            d = i(19),
+            p = i(0),
+            m = i(1),
+            h = i(11),
+            b = i(2),
+            g = i(134),
+            f = i(8),
+            S = i(23);
+        ! function(e) {
+            e[e.ExitEarly = 0] = "ExitEarly", e[e.Unknown = 1] = "Unknown", e[e.Adblock = 2] = "Adblock", e[e.LimitReached = 3] = "LimitReached"
+        }(o || (o = {}));
+        var v, k = i(412),
+            y = i(919),
+            _ = i(3),
+            E = i(997),
+            P = (i(998), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {}, t.hasAwarded = !1, t.messageHandler = function(e) {
+                        return p.__awaiter(t, void 0, void 0, function() {
+                            var t, i, n, a, a, r, s;
+                            return p.__generator(this, function(l) {
+                                switch (l.label) {
+                                    case 0:
+                                        if (e.origin !== window.location.origin) return [2];
+                                        if (!(t = e.data) || "trueXAd" !== t.msgSrc) return [2];
+                                        switch (i = t.type) {
+                                            case k.a.Ready:
+                                                return [3, 1];
+                                            case k.a.RequestAd:
+                                                return [3, 2];
+                                            case k.a.Dimensions:
+                                                return [3, 3];
+                                            case k.a.OnStart:
+                                                return [3, 4];
+                                            case k.a.OnCredit:
+                                                return [3, 5];
+                                            case k.a.OnClose:
+                                            case k.a.OnFinish:
+                                            case k.a.LimitReached:
+                                            case k.a.Adblock:
+                                            case k.a.OnError:
+                                                return [3, 9]
+                                        }
+                                        return [3, 10];
+                                    case 1:
+                                        return n = {
+                                            msgSrc: "wateb-ad-modal",
+                                            tuid: this.props.tuid
+                                        }, e.source.postMessage(n, "*"), [2];
+                                    case 2:
+                                        try {
+                                            if (!(a = JSON.parse(t.activityJSON))) return [2];
+                                            Object(y.g)({
+                                                campaignID: a.campaign_id.toString(),
+                                                requestID: t.requestID,
+                                                requestMethod: this.props.requestRef
+                                            })
+                                        } catch (e) {}
+                                        return [2];
+                                    case 3:
+                                        return t.height && t.width && this.setState({
+                                            customDimensions: {
+                                                height: t.height,
+                                                width: t.width
+                                            }
+                                        }), [3, 10];
+                                    case 4:
+                                        try {
+                                            if (!(a = JSON.parse(t.activityJSON))) return [2];
+                                            Object(y.f)({
+                                                requestID: t.requestID,
+                                                adblock: !1,
+                                                campaignID: a.campaign_id.toString()
+                                            })
+                                        } catch (e) {}
+                                        return [2];
+                                    case 5:
+                                        return l.trys.push([5, 7, , 8]), [4, this.props.redeemTrueXAd(Object(S.a)({
+                                            args: t.engagement.signature_argument_string,
+                                            signature: t.engagement.signature,
+                                            trueXAd: {
+                                                creativeID: t.engagement.ad.creative_id,
+                                                campaignID: t.engagement.ad.campaign_id,
+                                                name: t.engagement.ad.name,
+                                                currencyAmount: t.engagement.ad.currency_amount
+                                            },
+                                            targetID: this.props.channelID
+                                        }))];
+                                    case 6:
+                                        return r = l.sent(), this.hasAwarded = !0, this.props.onBitsAwarded && this.props.onBitsAwarded(r.data.redeemTrueXAd.grantedBits), [3, 8];
+                                    case 7:
+                                        return s = l.sent(), b.i.warn("Error while redeeming bits for truex ad", s), this.props.onError && this.props.onError(o.Unknown), [3, 8];
+                                    case 8:
+                                        return [3, 10];
+                                    case 9:
+                                        return this.props.onError && (t.type === k.a.LimitReached ? this.props.onError(o.LimitReached) : t.type === k.a.Adblock ? this.props.onError(o.Adblock) : t.type === k.a.OnError ? this.props.onError(o.Unknown) : this.hasAwarded || this.props.onError(o.ExitEarly)), this.props.closeModal(), [3, 10];
+                                    case 10:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t
+                }
+                return p.__extends(t, e), t.prototype.componentWillMount = function() {
+                    window.addEventListener("message", this.messageHandler)
+                }, t.prototype.componentWillUnmount = function() {
+                    window.removeEventListener("message", this.messageHandler)
+                }, t.prototype.render = function() {
+                    return m.createElement(_._17, {
+                        background: _.m.Base
+                    }, m.createElement("div", {
+                        className: "t-watch-ads-modal",
+                        style: this.state.customDimensions
+                    }, m.createElement(g.a, null), m.createElement("iframe", {
+                        src: "/products/bits/ad"
+                    })))
+                }, t = p.__decorate([Object(f.a)(E, {
+                    name: "redeemTrueXAd"
+                })], t)
+            }(m.Component)),
+            T = Object(l.a)(null, n)(P),
+            N = i(4),
+            C = i(30),
+            w = i(945);
+        ! function(e) {
+            e[e.Error = 0] = "Error", e[e.AdBlocked = 1] = "AdBlocked", e[e.Unavailable = 2] = "Unavailable", e[e.Available = 3] = "Available"
+        }(v || (v = {}));
+        var A, O = i(929),
+            U = function(e) {
+                return m.createElement(_.U, {
+                    display: _.H.Flex,
+                    flexGrow: 1,
+                    flexDirection: _.J.Column,
+                    alignItems: _.c.Center,
+                    fullWidth: !0,
+                    flexWrap: _.K.NoWrap,
+                    padding: {
+                        y: 1
+                    }
+                }, m.createElement(O.a, {
+                    prefix: "cheer",
+                    amount: e.amount,
+                    bitsConfig: e.bitsConfig
+                }), m.createElement(_.U, {
+                    display: _.H.Flex,
+                    padding: {
+                        top: 1
+                    },
+                    flexGrow: 1,
+                    flexDirection: _.J.Column,
+                    alignItems: _.c.Center,
+                    flexWrap: _.K.NoWrap
+                }, m.createElement(_._21, {
+                    type: _._26.H4,
+                    bold: !0
+                }, Object(b.d)("You got {bitsAmount,number} Bits!", {
+                    bitsAmount: e.amount
+                }, "Bits--WatchAdAward")), m.createElement(_.P, {
+                    padding: {
+                        top: 1
+                    }
+                }, m.createElement(_._21, {
+                    color: _.F.Alt2
+                }, Object(b.d)("{bitsAmount,number} Bits were added to your Bit inventory.", {
+                    bitsAmount: e.amount
+                }, "Bits--WatchAdAward"), m.createElement("br", null), Object(b.d)("You can use these Bits to Cheer!", "Bits--WatchAdAward")))), m.createElement(_.U, {
+                    display: _.H.Flex,
+                    padding: {
+                        x: 1,
+                        top: 3
+                    },
+                    alignSelf: _.d.Stretch,
+                    justifyContent: _.T.Between
+                }, m.createElement(_.u, {
+                    onClick: e.onStartCheering
+                }, Object(b.d)("Start Cheering", "Bits--WatchAdAward")), m.createElement(_.u, {
+                    type: _.z.Hollow,
+                    onClick: e.onWatchAnother,
+                    disabled: !e.hasAdAvailable
+                }, Object(b.d)("Watch Another", "Bits--WatchAdAward"))))
+            },
+            B = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        hasAdAvailable: !0
+                    }, t
+                }
+                return p.__extends(t, e), t.prototype.componentWillMount = function() {
+                    return p.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return p.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return [4, a(this.props.truexUserID)];
+                                case 1:
+                                    return e = t.sent(), e !== v.Available && this.setState({
+                                        hasAdAvailable: !1
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, t.prototype.render = function() {
+                    return m.createElement(U, p.__assign({}, this.props, {
+                        hasAdAvailable: this.state.hasAdAvailable
+                    }))
+                }, t
+            }(m.Component),
+            I = i(268),
+            x = (i(1e3), function(e) {
+                var t = Object(b.d)("Something's wrong!", "Bits--WatchAdError"),
+                    i = Object(b.d)("Something went wrong. Wait a while and try again.", "Bits--WatchAdError"),
+                    n = "adserrorgeneric";
+                switch (e.type) {
+                    case o.Adblock:
+                        n = "adserroradblock", i = Object(b.d)("We can't load this Ad, probably because Ad Blocking software is running. To watch an ad and get Bits, please disable all Ad Blocking software.", "Bits--WatchAdError");
+                        break;
+                    case o.LimitReached:
+                        n = "adserrorlimit", t = Object(b.d)("Ad Limit Reached", "Bits--WatchAdError"), i = Object(b.d)("That's all the Ads we have for now. Try again tomorrow!", "Bits--WatchAdError");
+                        break;
+                    case o.ExitEarly:
+                        i = Object(b.d)("To get Bits, you must view and interact with the Ad for the minimum amount of time.", "Bits--WatchAdError")
+                }
+                var a = m.createElement(_.U, {
+                    className: "watch-ad-error__footer",
+                    display: _.H.Flex,
+                    padding: {
+                        top: 2
+                    },
+                    alignSelf: _.d.Stretch,
+                    justifyContent: _.T.Center
+                }, m.createElement(_.u, {
+                    onClick: e.onTryAgain
+                }, Object(b.d)("Try Again", "Bits--WatchAdError")));
+                return e.type === o.LimitReached && (a = m.createElement(_.U, {
+                    className: "watch-ad-error__footer",
+                    display: _.H.Flex,
+                    padding: {
+                        top: 2
+                    },
+                    alignSelf: _.d.Stretch,
+                    justifyContent: _.T.Between
+                }, m.createElement(_.u, {
+                    onClick: e.onClose
+                }, Object(b.d)("Got It", "Bits--WatchAdError")), m.createElement(_.u, {
+                    onClick: e.onTryAgain,
+                    type: _.z.Hollow
+                }, Object(b.d)("Buy Bits", "Bits--WatchAdError")))), m.createElement(_.U, {
+                    padding: {
+                        x: 1
+                    },
+                    display: _.H.Flex,
+                    flexGrow: 1,
+                    flexDirection: _.J.Column,
+                    alignItems: _.c.Center,
+                    fullWidth: !0,
+                    flexWrap: _.K.NoWrap
+                }, m.createElement(_.U, {
+                    padding: {
+                        y: 2
+                    }
+                }, m.createElement("img", {
+                    className: "watch-ad-error__error-image",
+                    src: I.a + "/light/static/1/" + n + ".png"
+                })), m.createElement(_.U, {
+                    padding: {
+                        bottom: 1
+                    }
+                }, m.createElement(_._21, {
+                    type: _._26.H4,
+                    bold: !0
+                }, t)), m.createElement(_._21, {
+                    color: _.F.Alt2
+                }, i), a)
+            }),
+            F = function(e) {
+                var t = null;
+                return e.disableWatchAd && (t = Object(b.d)("Try again later", "Bits--WatchAdOffer")), m.createElement(_._17, {
+                    className: "bits-buy-card__offer-row",
+                    display: _.H.Flex,
+                    flexShrink: 0,
+                    borderBottom: !0,
+                    justifyContent: _.T.Between,
+                    flexWrap: _.K.NoWrap,
+                    padding: {
+                        x: 2,
+                        y: 1
+                    }
+                }, m.createElement(_.U, {
+                    padding: {
+                        right: 4
+                    }
+                }, m.createElement("strong", null, Object(b.d)("Get {minBitsCount} or more Bits by watching short ads", {
+                    minBitsCount: e.minPayout
+                }, "Bits--WatchAdOffer"))), m.createElement(_.U, {
+                    flexShrink: 0,
+                    display: _.H.Flex,
+                    flexDirection: _.J.Column,
+                    alignItems: _.c.End
+                }, m.createElement(_.u, {
+                    type: _.z.Hollow,
+                    "data-a-target": "bits-watch-ad",
+                    onClick: e.onWatchAdClick,
+                    disabled: e.disableWatchAd
+                }, Object(b.d)("Watch Ad", "Bits--WatchAdOffer")), t && m.createElement(_.U, {
+                    className: "bits-buy-card__sub-text",
+                    alignSelf: _.d.Stretch,
+                    textAlign: _._22.Center,
+                    margin: {
+                        top: .5
+                    }
+                }, t)))
+            },
+            D = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
+            j = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        enableWatchAd: !0
+                    }, t
+                }
+                return p.__extends(t, e), t.prototype.componentWillMount = function() {
+                    return p.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return p.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return [4, a(this.props.truexUserID)];
+                                case 1:
+                                    return e = t.sent(), Object(y.e)({
+                                        channel: this.props.channelLogin,
+                                        channelID: this.props.channelID,
+                                        available: e === v.Available
+                                    }), e !== v.Available && e !== v.AdBlocked && this.setState({
+                                        enableWatchAd: !1
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, t.prototype.render = function() {
+                    return D.test(navigator.userAgent) ? null : m.createElement(F, p.__assign({}, this.props, {
+                        disableWatchAd: !this.state.enableWatchAd
+                    }))
+                }, t
+            }(m.Component),
+            L = i(965),
+            M = i(405),
+            R = i(946),
+            H = i(408),
+            G = i(406),
+            W = i(1001);
+        i(1002);
+        ! function(e) {
+            e[e.Inactive = 0] = "Inactive", e[e.Error = 1] = "Error", e[e.Awarded = 2] = "Awarded"
+        }(A || (A = {}));
+        var V = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        wateb: A.Inactive,
+                        watebError: null,
+                        bitsAwarded: 0
+                    }, t.handleBuyClick = function(e) {
+                        var i = t.props.data && t.props.data.user ? t.props.data.user.id : "",
+                            n = Object(R.b)({
+                                trackBitsCardInteraction: t.props.trackBitsCardInteraction,
+                                channelID: i,
+                                purchaseUrl: e.currentTarget.dataset.purchaseUrl,
+                                bitsAmount: e.currentTarget.dataset.bitsAmount,
+                                closeAllBits: t.props.closeAllBits,
+                                location: t.props.location
+                            });
+                        n && (t.onBuyPopupClose(n), t.props.onClose())
+                    }, t.onBuyPopupClose = function(e) {
+                        Object(w.a)(e, function() {
+                            t.props.data && t.props.data.refetch()
+                        })
+                    }, t.onAdBitsAwarded = function(e) {
+                        t.props.data && !t.props.data.loading && t.props.data.refetch(), t.setState({
+                            wateb: A.Awarded,
+                            bitsAwarded: e
+                        })
+                    }, t.handleWatchAdClick = function() {
+                        return p.__awaiter(t, void 0, void 0, function() {
+                            return p.__generator(this, function(e) {
+                                return this.props.data && this.props.data.currentUser && this.props.data.user ? (this.props.showWatchAdModal({
+                                    tuid: this.props.data.currentUser.idSHA1,
+                                    onBitsAwarded: this.onAdBitsAwarded,
+                                    onError: this.receiveAdErrorState,
+                                    requestRef: y.c.ShowAdButton,
+                                    channelID: this.props.data.user.id
+                                }), [2]) : [2]
+                            })
+                        })
+                    }, t.receiveAdErrorState = function(e) {
+                        t.setState({
+                            wateb: A.Error,
+                            watebError: e
+                        })
+                    }, t.resetAdErrorState = function() {
+                        t.state.wateb === A.Error && (t.setState({
+                            wateb: A.Inactive
+                        }), t.props.data && t.props.data.refetch())
+                    }, t
+                }
+                return p.__extends(t, e), t.prototype.shouldComponentUpdate = function(e) {
+                    return !e.adModalOpen
+                }, t.prototype.render = function() {
+                    var e = this,
+                        t = {
+                            border: !0,
+                            background: _.m.Base,
+                            fullWidth: !0,
+                            elevation: 3
+                        },
+                        i = N({
+                            "bits-buy-card": !0,
+                            "bits-buy-card__chat-tooltip": this.props.location === y.b.ChatTooltip
+                        }),
+                        n = null;
+                    if (this.props.location === y.b.ChatTooltip && (n = m.createElement("button", {
+                            className: "bits-buy-card__close",
+                            onClick: this.props.onClose,
+                            "data-a-target": "bits-buy-card-close-button"
+                        }, m.createElement(_._8, {
+                            asset: _._9.Close,
+                            height: 11,
+                            width: 11
+                        }))), !this.props.data || this.props.data.loading) return m.createElement(_._17, p.__assign({
+                        className: i,
+                        "data-a-target": "bits-buy-card-loading",
+                        display: _.H.Flex,
+                        flexDirection: _.J.Column,
+                        alignItems: _.c.Center,
+                        justifyContent: _.T.Center,
+                        textAlign: _._22.Center
+                    }, t), m.createElement(_.X, {
+                        delay: 0
+                    }), m.createElement(_.U, {
+                        padding: {
+                            top: 2
+                        }
+                    }, m.createElement(_._21, {
+                        italic: !0
+                    }, Object(b.d)("Fetching bits", "Bits--BuyCard"))));
+                    if (this.props.data.error) return m.createElement(_.U, p.__assign({
+                        className: N(i, "bits-buy-card--shorter"),
+                        display: _.H.Flex,
+                        flexDirection: _.J.Column,
+                        alignItems: _.c.Center,
+                        justifyContent: _.T.Center,
+                        padding: 2,
+                        textAlign: _._22.Center,
+                        "data-a-target": "bits-buy-card-error"
+                    }, t), n, m.createElement(_._21, {
+                        italic: !0
+                    }, Object(b.d)("Bits prices are unavailable right now. Check back again later.", "Bits--BuyCard")));
+                    var a = this.renderWatebCard();
+                    if (a) return m.createElement(_._17, p.__assign({
+                        className: N(i, "bits-buy-card--shorter"),
+                        display: _.H.Flex,
+                        flexDirection: _.J.Column,
+                        alignItems: _.c.Center,
+                        justifyContent: _.T.Center,
+                        textAlign: _._22.Center,
+                        padding: 1
+                    }, t), n, a);
+                    var r = [];
+                    this.props.data.currentUser ? r = this.props.data.currentUser.bitsOffers : this.props.data.bitsOffers && (r = this.props.data.bitsOffers);
+                    var s = r.length,
+                        o = null,
+                        l = [],
+                        c = null;
+                    r.filter(function(e) {
+                        return e.type === L.b
+                    }).some(function(e) {
+                        return e.includesVAT
+                    }) && (c = m.createElement(_._21, {
+                        italic: !0,
+                        type: _._26.P,
+                        color: _.F.Alt
+                    }, Object(b.d)("Prices include VAT", "Bits--BuyCard")));
+                    var u = this.props.data.user ? this.props.data.user.id : "";
+                    r.forEach(function(t, i) {
+                        if (t.type === L.a) {
+                            if (!e.props.channelLogin) return null;
+                            var n = e.props.data && e.props.data.currentUser ? e.props.data.currentUser.idSHA1 : "";
+                            return void(o = m.createElement(j, {
+                                key: "wateb",
+                                minPayout: t.bits,
+                                onWatchAdClick: e.handleWatchAdClick,
+                                truexUserID: n,
+                                channelID: u,
+                                channelLogin: e.props.channelLogin
+                            }))
+                        }
+                        var a = null,
+                            r = t.promotion && null !== t.promotion;
+                        r && "first_time_purchase" === t.promotion.type ? a = m.createElement(_.U, {
+                            className: "bits-buy-card__bonus-text bits-buy-card__bonus-text-headline"
+                        }, m.createElement(_._21, {
+                            type: _._26.Strong,
+                            fontSize: _.L.Size6
+                        }, Object(b.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : r && "black_friday_2017" === t.promotion.id && (a = m.createElement(_.U, {
+                            className: "bits-buy-card__bonus-text bits-buy-card__bonus-text-headline"
+                        }, m.createElement(_._21, {
+                            type: _._26.Strong,
+                            fontSize: _.L.Size6
+                        }, Object(b.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))));
+                        var c = null;
+                        t.discount && (c = m.createElement("div", {
+                            className: "bits-buy-card__sub-text"
+                        }, Object(b.d)("{percentOff,number,percent} discount", {
+                            percentOff: t.discount
+                        }, "Bits--BuyCard")));
+                        var d = null;
+                        !r || "first_time_purchase" !== t.promotion.type && "single_purchase" !== t.promotion.type || (d = m.createElement("div", {
+                            className: "bits-buy-card__sub-text"
+                        }, Object(b.d)("one per account", "Bits--BuyCard")));
+                        var p = i + 1 < s,
+                            h = p ? _._17 : _.U,
+                            g = m.createElement(h, {
+                                className: "bits-buy-card__offer-row",
+                                key: t.id,
+                                flexShrink: 0,
+                                display: _.H.Flex,
+                                justifyContent: _.T.Center,
+                                borderBottom: p,
+                                flexDirection: _.J.Column,
+                                padding: {
+                                    x: 2,
+                                    y: 1
+                                }
+                            }, a, m.createElement(_.U, {
+                                display: _.H.Flex,
+                                justifyContent: _.T.Between,
+                                alignItems: _.c.Center
+                            }, m.createElement(_.U, {
+                                flexGrow: 1
+                            }, m.createElement(_._21, {
+                                type: _._26.H5,
+                                color: _.F.Base,
+                                bold: !0
+                            }, t.bits, " Bits ", null), e.getAvailableTiers(t.bits)), m.createElement(_.U, {
+                                flexShrink: 0,
+                                display: _.H.Flex,
+                                flexDirection: _.J.Column,
+                                alignItems: _.c.End
+                            }, m.createElement(_.u, {
+                                onClick: e.handleBuyClick,
+                                "data-purchase-url": t.url,
+                                "data-bits-amount": t.bits,
+                                "data-a-target": "bits-purchase-button-" + t.bits
+                            }, t.price), (c || d) && m.createElement(_.U, {
+                                alignSelf: _.d.Stretch,
+                                textAlign: _._22.Right,
+                                margin: {
+                                    top: .5
+                                }
+                            }, c, d))));
+                        r ? e.props.hidePromos || l.unshift(g) : l.push(g)
+                    }), o && !this.props.hideWateb && l.unshift(o);
+                    var d = null;
+                    this.props.data && this.props.channelLogin && this.props.data.user && this.props.data.user.cheer.settings.cheerMinimumBits > 1 && (d = m.createElement(_._21, {
+                        color: _.F.Alt
+                    }, Object(b.d)("{displayName} requires {minBits} Bits to Cheer in this channel.", {
+                        displayName: this.props.data.user.displayName || this.props.channelLogin,
+                        minBits: this.props.data.user.cheer.settings.cheerMinimumBits
+                    }, "Bits--BuyCard")));
+                    var h = null;
+                    this.props.data.currentUser && (h = m.createElement(_._21, {
+                        color: _.F.Alt
+                    }, Object(b.d)("You have {totalBits} Bits", {
+                        totalBits: m.createElement("strong", {
+                            "data-a-target": "buy-card-bits-count"
+                        }, this.props.data.currentUser.bitsBalance)
+                    }, "Bits--BuyCard")));
+                    var g = null;
+                    this.props.location === y.b.ChatTooltip && (g = m.createElement(_._17, {
+                        className: "bits-buy-card__header",
+                        padding: {
+                            x: 1,
+                            bottom: 1
+                        },
+                        borderBottom: !0,
+                        flexShrink: 0
+                    }, m.createElement(_.U, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, m.createElement(_._21, {
+                        type: _._26.H4,
+                        color: _.F.Alt
+                    }, Object(b.d)("Purchase Bits", "Bits--BuyCard")), c), h, d));
+                    var f = null;
+                    return f = this.props.fullsize ? m.createElement(_.U, {
+                        className: "bits-buy-card__full-size",
+                        flexGrow: 1,
+                        flexWrap: _.K.NoWrap,
+                        display: _.H.Flex,
+                        flexDirection: _.J.Column
+                    }, l) : m.createElement(C.b, {
+                        className: "bits-buy-card__scroll-view"
+                    }, m.createElement(_.U, {
+                        flexGrow: 1,
+                        flexWrap: _.K.NoWrap,
+                        display: _.H.Flex,
+                        flexDirection: _.J.Column
+                    }, l)), m.createElement(_._17, p.__assign({
+                        className: i,
+                        padding: {
+                            top: 1
+                        },
+                        display: _.H.Flex,
+                        flexDirection: _.J.Column,
+                        "data-a-target": "bits-buy-card"
+                    }, t), n, g, f)
+                }, t.prototype.renderWatebCard = function() {
+                    if (this.props.data && this.props.data.currentUser) switch (this.state.wateb) {
+                        case A.Awarded:
+                            return m.createElement(B, {
+                                bitsConfig: this.props.bitsConfig,
+                                amount: this.state.bitsAwarded,
+                                onStartCheering: this.props.onClose,
+                                onWatchAnother: this.handleWatchAdClick,
+                                truexUserID: this.props.data.currentUser.idSHA1
+                            });
+                        case A.Error:
+                            return m.createElement(x, {
+                                type: this.state.watebError || o.Unknown,
+                                onClose: this.props.onClose,
+                                onTryAgain: this.resetAdErrorState
+                            });
+                        default:
+                            return !1
+                    }
+                }, t.prototype.getAvailableTiers = function(e) {
+                    var t = this.props.bitsConfig.indexedActions[I.e];
+                    t || (t = Object(H.b)());
+                    var i = t.orderedTiers.filter(function(t) {
+                        return t.bits <= e
+                    }).reverse();
+                    return m.createElement(_.U, {
+                        padding: {
+                            top: .5
+                        },
+                        className: "bits-buy-card__tier-bits-images"
+                    }, i.map(function(e) {
+                        return m.createElement(G.a, {
+                            key: e.bits,
+                            sources: Object(M.b)(e, 2, !1)
+                        })
+                    }))
+                }, t = p.__decorate([Object(f.a)(W, {
+                    name: "data",
+                    options: function(e) {
+                        return {
+                            variables: {
+                                channelLogin: e.channelLogin,
+                                withChannel: !!e.channelLogin,
+                                isLoggedIn: e.isLoggedIn
+                            }
+                        }
+                    }
+                })], t)
+            }(m.Component),
+            z = V,
+            q = Object(l.a)(r, s)(z);
+        i.d(t, !1, function() {
+            return r
+        }), i.d(t, !1, function() {
+            return s
+        }), i.d(t, "a", function() {
+            return q
+        })
+    },
+    984: function(e, t, i) {
         "use strict";
         var n = i(1),
             a = i(2),
             r = i(268),
-            s = i(405),
+            s = i(406),
             o = i(3),
-            l = (i(1003), {
+            l = (i(1007), {
                 themed: !0,
                 dark: {
                     "1x": r.a + "/dark/animated/1/cheertutorial.gif"
@@ -7016,7 +7350,7 @@ webpackJsonp([51], {
             return c
         })
     },
-    992: function(e, t) {
+    997: function(e, t) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -7104,343 +7438,7 @@ webpackJsonp([51], {
         };
         e.exports = i
     },
-    993: function(e, t) {},
-    994: function(e, t) {},
-    995: function(e, t) {},
-    996: function(e, t, i) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Bits_BuyCard_Offers"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "withChannel"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "Boolean"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "isLoggedIn"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "Boolean"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "channelLogin"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "bitsOffers"
-                        },
-                        arguments: [],
-                        directives: [{
-                            kind: "Directive",
-                            name: {
-                                kind: "Name",
-                                value: "skip"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "if"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "isLoggedIn"
-                                    }
-                                }
-                            }]
-                        }],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "FragmentSpread",
-                                name: {
-                                    kind: "Name",
-                                    value: "bitsOffersFragment"
-                                },
-                                directives: []
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [{
-                            kind: "Directive",
-                            name: {
-                                kind: "Name",
-                                value: "include"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "if"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "isLoggedIn"
-                                    }
-                                }
-                            }]
-                        }],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "idSHA1"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "bitsBalance"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "bitsOffers"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "FragmentSpread",
-                                        name: {
-                                            kind: "Name",
-                                            value: "bitsOffersFragment"
-                                        },
-                                        directives: []
-                                    }]
-                                }
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "user"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "login"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "channelLogin"
-                                }
-                            }
-                        }],
-                        directives: [{
-                            kind: "Directive",
-                            name: {
-                                kind: "Name",
-                                value: "include"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "if"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "withChannel"
-                                    }
-                                }
-                            }]
-                        }],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "displayName"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "cheer"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "settings"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "cheerMinimumBits"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 528
-            }
-        };
-        n.loc.source = {
-            body: '#import "twilight/features/bits/models/bits-offers-fragment.gql"\n\nquery Bits_BuyCard_Offers($withChannel: Boolean!, $isLoggedIn: Boolean!, $channelLogin: String!) {\n  bitsOffers @skip(if: $isLoggedIn) {\n    ...bitsOffersFragment\n  }\n  currentUser @include(if: $isLoggedIn) {\n    id\n    idSHA1\n    bitsBalance\n    bitsOffers {\n      ...bitsOffersFragment\n    }\n  }\n  user(login: $channelLogin) @include(if: $withChannel) {\n    id\n    displayName\n    cheer {\n      id\n      settings {\n        cheerMinimumBits\n      }\n    }\n  }\n}\n',
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        var a = {};
-        n.definitions = n.definitions.concat(function(e) {
-            return e.filter(function(e) {
-                if ("FragmentDefinition" !== e.kind) return !0;
-                var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
-            })
-        }(i(962).definitions)), e.exports = n
-    },
-    997: function(e, t) {}
+    998: function(e, t) {},
+    999: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-collections-1312613a4811b5cd173fd06d4a93e233.js.map
+//# sourceMappingURL=pages.channel-collections-2e8af8d0624eaf6b42748596aec4e407.js.map

@@ -1,6 +1,6 @@
 webpackJsonp([56], {
-    1901: function(e, t) {},
-    1902: function(e, t) {
+    1912: function(e, t) {},
+    1913: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -101,8 +101,8 @@ webpackJsonp([56], {
         };
         e.exports = n
     },
-    1903: function(e, t) {},
-    1904: function(e, t) {
+    1914: function(e, t) {},
+    1915: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -385,8 +385,8 @@ webpackJsonp([56], {
         };
         e.exports = n
     },
-    1905: function(e, t) {},
-    1906: function(e, t) {
+    1916: function(e, t) {},
+    1917: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -474,8 +474,8 @@ webpackJsonp([56], {
         };
         e.exports = n
     },
-    1907: function(e, t) {},
-    1908: function(e, t) {
+    1918: function(e, t) {},
+    1919: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -606,8 +606,8 @@ webpackJsonp([56], {
         };
         e.exports = n
     },
-    1909: function(e, t) {},
-    2030: function(e, t, n) {
+    1920: function(e, t) {},
+    2042: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -617,7 +617,7 @@ webpackJsonp([56], {
             r = n(2),
             l = n(30),
             s = n(137),
-            c = n(406),
+            c = n(407),
             d = n(6),
             m = n(3);
         ! function(e) {
@@ -673,14 +673,14 @@ webpackJsonp([56], {
                 }, t = a.__decorate([Object(d.c)("SettingsTabs")], t)
             }(o.Component),
             g = p,
-            f = n(922),
-            h = n(918),
+            f = n(925),
+            h = n(922),
             S = n(14),
-            b = n(11),
-            v = n(66),
-            y = n(9),
+            v = n(11),
+            b = n(66),
+            y = n(8),
             k = n(23),
-            N = (n(1901), function(e) {
+            N = (n(1912), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -743,8 +743,8 @@ webpackJsonp([56], {
                     }, Object(r.d)("Saved", "AdvancedNotificationSettingsToggle"))))))
                 }, t
             }(o.Component)),
-            _ = n(1902),
-            E = (n(1903), n(1904)),
+            _ = n(1913),
+            E = (n(1914), n(1915)),
             w = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -803,7 +803,7 @@ webpackJsonp([56], {
                     }, o.createElement(m.X, {
                         fillContent: !0
                     }));
-                    if (this.props.data.error) return o.createElement(v.a, {
+                    if (this.props.data.error) return o.createElement(b.a, {
                         message: Object(r.d)("Error loading data.", "AdvancedNotificationSettings")
                     });
                     if (!this.props.data.currentUser) return o.createElement(m._17, {
@@ -811,7 +811,7 @@ webpackJsonp([56], {
                             y: 1
                         },
                         borderBottom: !0
-                    }, o.createElement(v.a, {
+                    }, o.createElement(b.a, {
                         message: Object(r.d)("You must be logged in to update your settings", "AdvancedNotificationSettings")
                     }));
                     var e = Object(r.d)("{followCount, plural, one {You follow # channel} other {You follow # channels}}", {
@@ -924,7 +924,7 @@ webpackJsonp([56], {
                     }
                 }, t
             }(o.Component),
-            O = Object(b.compose)(Object(y.a)(E, {
+            O = Object(v.compose)(Object(y.a)(E, {
                 options: function() {
                     return {
                         fetchPolicy: "cache-and-network",
@@ -959,7 +959,7 @@ webpackJsonp([56], {
             }), Object(y.a)(_, {
                 name: "setAdvancedNotificationSetting"
             }), Object(d.c)("AdvancedNotificationSettings"))(w),
-            x = (n(1905), function(e) {
+            x = (n(1916), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -1016,8 +1016,8 @@ webpackJsonp([56], {
                     }, Object(r.d)("Saved", "PlatformNotificationSettingsToggle")))))
                 }, t
             }(o.Component)),
-            C = n(1906),
-            j = (n(1907), n(1908));
+            C = n(1917),
+            j = (n(1918), n(1919));
         ! function(e) {
             e.onsite = "onsite", e.email = "email", e.push = "push"
         }(u || (u = {}));
@@ -1063,10 +1063,6 @@ webpackJsonp([56], {
                         category: "DEVELOPERS",
                         name: Object(r.d)("Third-Party Applications", "PlatformNotificationSettings"),
                         description: Object(r.d)("Receive notifications for drops", "PlatformNotificationSettings")
-                    }, {
-                        category: "MARKETING",
-                        name: Object(r.d)("Announcements", "PlatformNotificationSettings"),
-                        description: Object(r.d)("Receive notifications from Twitch for product announcements", "PlatformNotificationSettings")
                     }, {
                         category: "COMMERCE",
                         name: Object(r.d)("Gifts", "PlatformNotificationSettings"),
@@ -1118,14 +1114,14 @@ webpackJsonp([56], {
                     }, o.createElement(m.X, {
                         fillContent: !0
                     }));
-                    if (this.props.data.error) return o.createElement(v.a, {
+                    if (this.props.data.error) return o.createElement(b.a, {
                         message: Object(r.d)("Error loading data.", "PlatformNotificationSettings")
                     });
                     if (!this.props.data.currentUser) return o.createElement(m._17, {
                         margin: {
                             top: 1
                         }
-                    }, o.createElement(v.a, {
+                    }, o.createElement(b.a, {
                         message: Object(r.d)("You must be logged in to update your settings.", "PlatformNotificationSettings")
                     }));
                     var e = o.createElement(m._17, {
@@ -1290,7 +1286,7 @@ webpackJsonp([56], {
                     }
                 }, t
             }(o.Component),
-            U = Object(b.compose)(Object(d.c)("PlatformNotificationSettings"), Object(y.a)(j, {
+            U = Object(v.compose)(Object(d.c)("PlatformNotificationSettings"), Object(y.a)(j, {
                 options: function() {
                     return {
                         fetchPolicy: "cache-and-network"
@@ -1299,7 +1295,7 @@ webpackJsonp([56], {
             }), Object(y.a)(C, {
                 name: "setNotificationSetting"
             }))(P),
-            F = (n(1909), function(e) {
+            F = (n(1920), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1346,7 +1342,7 @@ webpackJsonp([56], {
                         startCollapsed: !0,
                         platformName: u.email,
                         displayName: Object(r.d)("By Email", "GlobalNotificationSettingsPage"),
-                        description: Object(r.d)("Receive important notifications through email. You can turn off specific emails using the unsubscribe link at the bottom of the email.", "GlobalNotificationSettingsPage"),
+                        description: Object(r.d)("Receive important notifications through email. You may receive additional emails about features and content on Twitch. You can turn off specific emails using the unsubscribe link included in each message.", "GlobalNotificationSettingsPage"),
                         explanation: Object(r.d)("Send me emails about", "GlobalNotificationSettingsPage"),
                         key: "email"
                     }), o.createElement(U, {
@@ -1370,7 +1366,7 @@ webpackJsonp([56], {
             return T
         })
     },
-    918: function(e, t, n) {
+    922: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -1428,7 +1424,7 @@ webpackJsonp([56], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    922: function(e, t, n) {
+    925: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1497,4 +1493,4 @@ webpackJsonp([56], {
         })
     }
 });
-//# sourceMappingURL=pages.settings-7bcbb17fa467f5bb9201afd2919fb8ae.js.map
+//# sourceMappingURL=pages.settings-03f1db3303ed63067c0e5557b20868d6.js.map

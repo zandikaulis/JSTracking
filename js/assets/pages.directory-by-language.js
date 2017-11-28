@@ -1,5 +1,5 @@
 webpackJsonp([33], {
-    1012: function(e, t, n) {
+    1016: function(e, t, n) {
         "use strict";
 
         function a() {
@@ -25,11 +25,11 @@ webpackJsonp([33], {
         t.a = r;
         var o = n(0),
             l = n(2),
-            s = n(988),
-            d = n(986);
+            s = n(993),
+            d = n(992);
         l.n.store.registerReducer("userPreferences", i)
     },
-    1013: function(e, t, n) {
+    1017: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -40,9 +40,9 @@ webpackJsonp([33], {
         var i = n(0),
             r = n(1),
             o = n(2),
-            l = n(959),
+            l = n(963),
             s = n(3),
-            d = (n(1121), function(e) {
+            d = (n(1125), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -124,7 +124,7 @@ webpackJsonp([33], {
                     }, this.props.errorMessage))
                 }, t
             }(r.Component)),
-            c = n(985),
+            c = n(990),
             u = function(e) {
                 return new Promise(function(t, n) {
                     var a = new FileReader;
@@ -186,7 +186,7 @@ webpackJsonp([33], {
             k = function() {
                 return Object(o.d)("Incompatible format. File must be an image in PNG or JPG format.", "ImageUploader")
             },
-            b = n(917),
+            b = n(921),
             S = this,
             _ = function(e, t) {
                 return i.__awaiter(S, void 0, void 0, function() {
@@ -275,11 +275,11 @@ webpackJsonp([33], {
                     return e.size <= t
                 }, t
             }(r.Component),
-            E = n(8),
+            E = n(9),
             C = n(11),
             w = n(50),
             D = n(134),
-            O = (n(1122), function(e) {
+            O = (n(1126), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -301,40 +301,7 @@ webpackJsonp([33], {
             return F
         })
     },
-    1030: function(e, t, n) {
-        "use strict";
-
-        function a() {
-            return {
-                isEditingEnabled: !1
-            }
-        }
-
-        function i(e, t) {
-            switch (void 0 === e && (e = a()), t.type) {
-                case s.b:
-                    return o.__assign({}, e, {
-                        isEditingEnabled: !0
-                    });
-                case s.a:
-                    return o.__assign({}, e, {
-                        isEditingEnabled: !1
-                    });
-                default:
-                    return e
-            }
-        }
-
-        function r(e) {
-            return e.directoryHeader.isEditingEnabled
-        }
-        t.a = r;
-        var o = n(0),
-            l = n(2),
-            s = n(990);
-        l.n.store.registerReducer("directoryHeader", i)
-    },
-    1031: function(e, t, n) {
+    1018: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -342,12 +309,12 @@ webpackJsonp([33], {
                 trackingSet: e.ads.trackingSet
             }
         }
-        var i = n(8),
+        var i = n(9),
             r = n(0),
             o = n(1),
             l = n(2),
             s = n(111),
-            d = n(415),
+            d = n(416),
             c = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
             u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
             m = function(e) {
@@ -452,7 +419,40 @@ webpackJsonp([33], {
             return g
         })
     },
-    1036: function(e, t, n) {
+    1035: function(e, t, n) {
+        "use strict";
+
+        function a() {
+            return {
+                isEditingEnabled: !1
+            }
+        }
+
+        function i(e, t) {
+            switch (void 0 === e && (e = a()), t.type) {
+                case s.b:
+                    return o.__assign({}, e, {
+                        isEditingEnabled: !0
+                    });
+                case s.a:
+                    return o.__assign({}, e, {
+                        isEditingEnabled: !1
+                    });
+                default:
+                    return e
+            }
+        }
+
+        function r(e) {
+            return e.directoryHeader.isEditingEnabled
+        }
+        t.a = r;
+        var o = n(0),
+            l = n(2),
+            s = n(995);
+        l.n.store.registerReducer("directoryHeader", i)
+    },
+    1040: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -498,19 +498,19 @@ webpackJsonp([33], {
             u = n(1),
             m = n(12),
             p = n(2),
-            g = n(8),
+            g = n(9),
             h = n(11),
             v = n(51),
             f = n(35),
             y = n(19),
-            k = n(9),
+            k = n(8),
             b = n(23),
             S = n(14),
             _ = n(6),
             N = n(3),
-            E = n(1145),
-            C = n(1146),
-            w = (n(1147), n(1148)),
+            E = n(1151),
+            C = n(1152),
+            w = n(1153),
             D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -618,23 +618,14 @@ webpackJsonp([33], {
                             left: 1
                         },
                         className: "directory-follow-btn"
-                    }, u.createElement("button", {
-                        "aria-label": Object(p.d)("Unfollow", "DirectoryFollowButton"),
-                        className: "directory-follow-btn__status-btn",
+                    }, u.createElement(N.v, {
+                        ariaLabel: Object(p.d)("Unfollow", "DirectoryFollowButton"),
                         onClick: this.toggleFollowing,
                         "data-a-target": "directory-unfollow-button",
-                        "data-test-selector": "unfollow-button"
-                    }, u.createElement(N.U, {
-                        display: N.H.Block,
-                        className: "directory-follow-btn__status-btn--hover"
-                    }, u.createElement(N._8, {
-                        asset: N._9.Unheart
-                    })), u.createElement(N.U, {
-                        display: N.H.Block,
-                        className: "directory-follow-btn__status-btn--primary"
-                    }, u.createElement(N._8, {
-                        asset: N._9.Heart
-                    })))) : u.createElement(N.U, {
+                        "data-test-selector": "unfollow-button",
+                        icon: N._9.Heart,
+                        statusAlertIcon: N._9.Unheart
+                    })) : u.createElement(N.U, {
                         margin: {
                             left: 1
                         }
@@ -675,18 +666,18 @@ webpackJsonp([33], {
             }(u.Component),
             O = D,
             F = Object(g.a)(a, i)(O),
-            T = n(966),
+            T = n(979),
             U = n(137),
-            R = n(406),
+            R = n(407),
             I = n(50),
-            j = n(990),
-            L = n(416),
-            x = n(928),
-            A = n(921),
-            M = n(919),
+            j = n(995),
+            L = n(417),
+            x = n(931),
+            M = n(926),
+            A = n(923),
             P = n(31),
             V = n(134),
-            B = (n(1149), n(1150)),
+            B = (n(1154), n(1155)),
             G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -765,7 +756,7 @@ webpackJsonp([33], {
                 name: "tosBanCommunity"
             }))(G),
             z = Object(g.a)(null, r)(H),
-            W = n(1151),
+            W = n(1156),
             q = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -776,7 +767,7 @@ webpackJsonp([33], {
                             onClose: t.handleReportModalClose,
                             reportContext: {
                                 contentID: t.props.data.community.id,
-                                contentType: M.a.Community,
+                                contentType: A.a.Community,
                                 targetUserID: t.props.data.community.owner.id,
                                 extra: t.props.communityName
                             },
@@ -792,7 +783,7 @@ webpackJsonp([33], {
                     }, t.onEditModeToggle = function() {
                         t.props.isHeaderEditEnabled ? t.props.onDisableDirectoryHeaderEdit() : (p.n.history.push(Object(R.a)(t.props.communityName) + "/details"), t.props.onEnableDirectoryHeaderEdit())
                     }, t.handleReportModalClose = function(e) {
-                        (e === A.b.MutationError || e === A.b.Success) && t.props.history.push("/")
+                        (e === M.b.MutationError || e === M.b.Success) && t.props.history.push("/")
                     }, t
                 }
                 return d.__extends(t, e), t.prototype.render = function() {
@@ -861,11 +852,11 @@ webpackJsonp([33], {
                 })], t)
             }(u.Component),
             $ = q,
-            Q = n(1030),
+            Q = n(1035),
             Y = Object(g.a)(o, l)(Object(m.f)($)),
-            J = n(1058),
-            X = n(954);
-        n(1152);
+            J = n(1063),
+            X = n(958);
+        n(1157);
         ! function(e) {
             e[e.DirectoryPage = 0] = "DirectoryPage", e[e.DirectoryVideosPage = 1] = "DirectoryVideosPage", e[e.DirectoryClipsPage = 2] = "DirectoryClipsPage", e[e.DirectoryDetailsPage = 3] = "DirectoryDetailsPage"
         }(s || (s = {}));
@@ -1002,7 +993,7 @@ webpackJsonp([33], {
             return Z
         })
     },
-    1044: function(e, t, n) {
+    1049: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1017,19 +1008,19 @@ webpackJsonp([33], {
                 clearLanguagePreferences: l.a
             }, e)
         }
-        var r = n(8),
+        var r = n(9),
             o = n(11),
-            l = n(986),
-            s = n(1012),
+            l = n(992),
+            s = n(1016),
             d = n(0),
             c = n(1),
             u = n(2),
             m = n(30),
             p = n(64),
-            g = n(987),
+            g = n(968),
             h = n(6),
             v = n(3),
-            f = (n(1045), function(e) {
+            f = (n(1050), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleLanguageChange = function(e) {
@@ -1097,15 +1088,15 @@ webpackJsonp([33], {
             return k
         })
     },
-    1045: function(e, t) {},
-    1051: function(e, t, n) {
+    1050: function(e, t) {},
+    1057: function(e, t, n) {
         "use strict";
         var a, i, r, o = n(4),
             l = n(1),
             s = n(2),
-            d = n(1052),
+            d = n(1058),
             c = n(3),
-            u = (n(1132), a = {}, a[d.a.Live] = "stream-type-indicator--live", a[d.a.Premiere] = "stream-type-indicator--premiere", a[d.a.Rerun] = "stream-type-indicator--rerun", a[d.a.WatchParty] = "stream-type-indicator--rerun", a),
+            u = (n(1138), a = {}, a[d.a.Live] = "stream-type-indicator--live", a[d.a.Premiere] = "stream-type-indicator--premiere", a[d.a.Rerun] = "stream-type-indicator--rerun", a[d.a.WatchParty] = "stream-type-indicator--rerun", a),
             m = (i = {}, i[d.a.Premiere] = c._9.VideoPremiere, i[d.a.Rerun] = c._9.VideoRerun, i[d.a.WatchParty] = c._9.VideoRerun, i),
             p = (r = {}, r[d.a.Premiere] = c._10.Live, r[d.a.Rerun] = c._10.Inherit, r[d.a.WatchParty] = c._10.Inherit, r),
             g = function(e) {
@@ -1162,7 +1153,7 @@ webpackJsonp([33], {
             return g
         })
     },
-    1052: function(e, t, n) {
+    1058: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -1172,15 +1163,15 @@ webpackJsonp([33], {
             e.Live = "live", e.WatchParty = "watch_party", e.Premiere = "premiere", e.Rerun = "rerun"
         }(a || (a = {}))
     },
-    1057: function(e, t, n) {
+    1062: function(e, t, n) {
         "use strict";
         var a = n(0),
             i = n(1),
             r = n(12),
             o = n(2),
-            l = n(1051),
+            l = n(1057),
             s = n(3),
-            d = (n(1133), function(e) {
+            d = (n(1139), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.state = {
@@ -1296,7 +1287,7 @@ webpackJsonp([33], {
             return c
         })
     },
-    1058: function(e, t, n) {
+    1063: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1312,7 +1303,7 @@ webpackJsonp([33], {
                 }
             }, e)
         }
-        var r = n(8),
+        var r = n(9),
             o = n(11),
             l = n(51),
             s = n(35),
@@ -1321,13 +1312,13 @@ webpackJsonp([33], {
             u = n(1),
             m = n(31),
             p = n(2),
-            g = n(9),
+            g = n(8),
             h = n(23),
             v = n(14),
             f = n(3),
-            y = n(1059),
-            k = n(1060),
-            b = n(1061),
+            y = n(1064),
+            k = n(1065),
+            b = n(1066),
             S = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1485,7 +1476,7 @@ webpackJsonp([33], {
             return N
         })
     },
-    1059: function(e, t) {
+    1064: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1612,7 +1603,7 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1060: function(e, t) {
+    1065: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1769,7 +1760,7 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1061: function(e, t) {
+    1066: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1870,9 +1861,9 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1121: function(e, t) {},
-    1122: function(e, t) {},
-    1126: function(e, t, n) {
+    1125: function(e, t) {},
+    1126: function(e, t) {},
+    1130: function(e, t, n) {
         "use strict";
         n.d(t, "c", function() {
             return i
@@ -1881,7 +1872,7 @@ webpackJsonp([33], {
         }), n.d(t, "a", function() {
             return o
         });
-        var a = n(954),
+        var a = n(958),
             i = function(e) {
                 return e.startsWith("/communities") || e.startsWith("/directory/communities") ? a.a.Communities : a.a.Games
             },
@@ -1910,7 +1901,7 @@ webpackJsonp([33], {
                 }
             }
     },
-    1131: function(e, t, n) {
+    1135: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1939,15 +1930,15 @@ webpackJsonp([33], {
                 onShowModal: u.d
             }, e)
         }
-        var l = (n(1030), n(0)),
+        var l = (n(1035), n(0)),
             s = n(1),
-            d = n(8),
+            d = n(9),
             c = n(11),
             u = n(50),
             m = n(2),
-            p = n(9),
+            p = n(8),
             g = n(23),
-            h = n(917),
+            h = n(921),
             v = n(14),
             f = "directory-avatar-edit-menu",
             y = "directory-avatar-overlay",
@@ -2008,7 +1999,7 @@ webpackJsonp([33], {
             },
             F = "https://static-cdn.jtvnw.net/community-images/defaults/avatar-285x380.png",
             T = "https://static-cdn.jtvnw.net/community-images/defaults/banner-1200x180.png",
-            U = n(954),
+            U = n(958),
             R = function(e) {
                 return e === U.a.Communities ? "COMMUNITY" : "GAME"
             },
@@ -2018,23 +2009,23 @@ webpackJsonp([33], {
             j = function() {
                 return Object(m.d)("Remove", "DirectoryHeader")
             },
-            L = n(406),
+            L = n(407),
             x = "https://api.twitch.tv/kraken/communities/",
-            A = function(e) {
+            M = function(e) {
                 return "" + x + e + "/images/avatar"
             },
-            M = function(e) {
+            A = function(e) {
                 return "" + x + e + "/images/cover"
             },
             P = function(e) {
                 return e === U.a.Communities ? Object(L.b)("communities") : Object(L.b)()
             },
-            V = n(1013),
-            B = n(985),
+            V = n(1017),
+            B = n(990),
             G = n(6),
             H = n(3),
-            z = n(1141),
-            W = (n(1142), function(e) {
+            z = n(1147),
+            W = (n(1148), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2104,7 +2095,7 @@ webpackJsonp([33], {
                     }, t.onAvatarUploadClick = function() {
                         if (!t.props.data || !t.props.data.directory || !t.props.data.directory.id) return null;
                         var e = {
-                            uploadURL: A(t.props.data.directory.id),
+                            uploadURL: M(t.props.data.directory.id),
                             imageDimensions: "600x800",
                             maxFileSizeMegabytes: 1,
                             isRequiredImageDimensions: !0,
@@ -2119,7 +2110,7 @@ webpackJsonp([33], {
                             return l.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return [4, h.a.delete(A(this.props.data.directory.id))];
+                                        return [4, h.a.delete(M(this.props.data.directory.id))];
                                     case 1:
                                         return t.sent(), this.trackAvatarEdit(), e = function(e) {
                                             return e.directory.avatarURL = F, e
@@ -2185,7 +2176,7 @@ webpackJsonp([33], {
             }(s.Component)),
             q = W,
             $ = Object(d.a)(a, i)(q),
-            Q = n(990),
+            Q = n(995),
             Y = n(4),
             J = n(12),
             X = function(e) {
@@ -2214,8 +2205,8 @@ webpackJsonp([33], {
                 }, t
             }(s.Component),
             K = X,
-            Z = n(1143),
-            ee = (n(1144), function(e) {
+            Z = n(1149),
+            ee = (n(1150), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2299,7 +2290,7 @@ webpackJsonp([33], {
                     }, t.onBannerUploadClick = function() {
                         if (!t.props.data || !t.props.data.directory || !t.props.data.directory.id) return null;
                         var e = {
-                            uploadURL: M(t.props.data.directory.id),
+                            uploadURL: A(t.props.data.directory.id),
                             imageDimensions: "1200x180",
                             maxFileSizeMegabytes: 3,
                             isRequiredImageDimensions: !0,
@@ -2314,7 +2305,7 @@ webpackJsonp([33], {
                             return l.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return [4, h.a.delete(M(this.props.data.directory.id))];
+                                        return [4, h.a.delete(A(this.props.data.directory.id))];
                                     case 1:
                                         return t.sent(), this.trackBannerEdit(), e = function(e) {
                                             return e.directory.coverURL = T, e
@@ -2419,7 +2410,7 @@ webpackJsonp([33], {
             }(s.Component)),
             te = ee,
             ne = Object(d.a)(r, o)(te),
-            ae = n(1036),
+            ae = n(1040),
             ie = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -2450,9 +2441,9 @@ webpackJsonp([33], {
             return re
         })
     },
-    1132: function(e, t) {},
-    1133: function(e, t) {},
-    1141: function(e, t) {
+    1138: function(e, t) {},
+    1139: function(e, t) {},
+    1147: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2679,8 +2670,8 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1142: function(e, t) {},
-    1143: function(e, t) {
+    1148: function(e, t) {},
+    1149: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3016,8 +3007,8 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1144: function(e, t) {},
-    1145: function(e, t) {
+    1150: function(e, t) {},
+    1151: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3174,7 +3165,7 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1146: function(e, t) {
+    1152: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3301,8 +3292,7 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1147: function(e, t) {},
-    1148: function(e, t) {
+    1153: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3403,8 +3393,8 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1149: function(e, t) {},
-    1150: function(e, t) {
+    1154: function(e, t) {},
+    1155: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3505,7 +3495,7 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1151: function(e, t) {
+    1156: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3718,8 +3708,8 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1152: function(e, t) {},
-    1154: function(e, t, n) {
+    1157: function(e, t) {},
+    1159: function(e, t, n) {
         "use strict";
         var a = n(0),
             i = n(1),
@@ -3748,7 +3738,7 @@ webpackJsonp([33], {
             return d
         })
     },
-    1285: function(e, t, n) {
+    1289: function(e, t, n) {
         "use strict";
 
         function a(e, t, n) {
@@ -3756,7 +3746,7 @@ webpackJsonp([33], {
         }
         t.a = a
     },
-    1290: function(e, t, n) {
+    1294: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3794,10 +3784,10 @@ webpackJsonp([33], {
             r = (n.n(i), n(12)),
             o = n(2),
             l = n(3),
-            s = n(1451),
+            s = n(1455),
             d = (n.n(s), "view-all-button-selector")
     },
-    1334: function(e, t, n) {
+    1307: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3820,17 +3810,17 @@ webpackJsonp([33], {
         var o = n(0),
             l = n(1),
             s = n(2),
-            d = n(1057),
-            c = n(1051),
+            d = n(1062),
+            c = n(1057),
             u = n(52),
-            m = n(406),
+            m = n(407),
             p = n(14),
-            g = n(954),
-            h = n(8),
+            g = n(958),
+            h = n(9),
             v = n(11),
             f = n(50),
-            y = n(416),
-            k = n(9),
+            y = n(417),
+            k = n(8),
             b = n(6),
             S = n(31),
             _ = n(134),
@@ -3852,8 +3842,8 @@ webpackJsonp([33], {
                 }
             },
             C = n(3),
-            w = n(1372),
-            D = (n(1373), "error-message"),
+            w = n(1376),
+            D = (n(1377), "error-message"),
             O = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3973,7 +3963,7 @@ webpackJsonp([33], {
                 name: "banUserFromCommunity"
             }))(O),
             T = Object(h.a)(null, a)(F),
-            U = (n(1374), n(1375)),
+            U = (n(1378), n(1379)),
             R = "error-message",
             I = function(e) {
                 function t() {
@@ -4121,8 +4111,8 @@ webpackJsonp([33], {
                 name: "timeoutUserFromCommunity"
             }))(I),
             L = Object(h.a)(null, i)(j),
-            x = n(1376),
-            A = function(e) {
+            x = n(1380),
+            M = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onStreamBanClick = function() {
@@ -4187,10 +4177,10 @@ webpackJsonp([33], {
                     autoReportInteractive: !0
                 })], t)
             }(l.Component),
-            M = A,
-            P = Object(h.a)(null, r)(M),
-            V = n(1154),
-            B = (n(1377), function(e) {
+            A = M,
+            P = Object(h.a)(null, r)(A),
+            V = n(1159),
+            B = (n(1381), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.getLinkTo = function(e, n) {
@@ -4295,7 +4285,7 @@ webpackJsonp([33], {
             return G
         })
     },
-    1372: function(e, t) {
+    1376: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -4383,9 +4373,9 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1373: function(e, t) {},
-    1374: function(e, t) {},
-    1375: function(e, t) {
+    1377: function(e, t) {},
+    1378: function(e, t) {},
+    1379: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -4506,7 +4496,7 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1376: function(e, t) {
+    1380: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -4663,8 +4653,8 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1377: function(e, t) {},
-    1396: function(e, t, n) {
+    1381: function(e, t) {},
+    1401: function(e, t, n) {
         "use strict";
         var a = n(0),
             i = n(1),
@@ -4708,476 +4698,11 @@ webpackJsonp([33], {
             return o
         })
     },
-    1451: function(e, t) {},
-    1829: function(e, t) {},
-    1830: function(e, t) {},
-    1831: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "GamePage_Game"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "name"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "type"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "DirectoryType"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "limit"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Int"
-                        }
-                    },
-                    defaultValue: null
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "languages"
-                        }
-                    },
-                    type: {
-                        kind: "ListType",
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "String"
-                                }
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "cursor"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Cursor"
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "directory"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "name"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "name"
-                                }
-                            }
-                        }, {
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "type"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "type"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "displayName"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "streams"
-                                },
-                                arguments: [{
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "first"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "limit"
-                                        }
-                                    }
-                                }, {
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "after"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "cursor"
-                                        }
-                                    }
-                                }, {
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "languages"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "languages"
-                                        }
-                                    }
-                                }],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "edges"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "cursor"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "node"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "id"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "title"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "viewersCount"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "previewImageURL"
-                                                        },
-                                                        arguments: [{
-                                                            kind: "Argument",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "width"
-                                                            },
-                                                            value: {
-                                                                kind: "IntValue",
-                                                                value: "320"
-                                                            }
-                                                        }, {
-                                                            kind: "Argument",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "height"
-                                                            },
-                                                            value: {
-                                                                kind: "IntValue",
-                                                                value: "180"
-                                                            }
-                                                        }],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "broadcaster"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "id"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "login"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "displayName"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }]
-                                                        }
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "game"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "id"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "boxArtURL"
-                                                                },
-                                                                arguments: [{
-                                                                    kind: "Argument",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "width"
-                                                                    },
-                                                                    value: {
-                                                                        kind: "IntValue",
-                                                                        value: "285"
-                                                                    }
-                                                                }, {
-                                                                    kind: "Argument",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "height"
-                                                                    },
-                                                                    value: {
-                                                                        kind: "IntValue",
-                                                                        value: "380"
-                                                                    }
-                                                                }],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "name"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }]
-                                                        }
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "pageInfo"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "hasNextPage"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 666
-            }
-        };
-        n.loc.source = {
-            body: "query GamePage_Game($name: String!, $type: DirectoryType!, $limit: Int, $languages: [String!], $cursor: Cursor) {\n  directory(name: $name, type: $type) {\n    id\n    displayName\n    streams(first: $limit, after: $cursor, languages: $languages) {\n      edges {\n        cursor\n        node {\n          id\n          title\n          viewersCount\n          previewImageURL(width: 320 height: 180)\n          broadcaster {\n            id\n            login\n            displayName\n          }\n          game {\n            id\n            boxArtURL(width: 285 height: 380)\n            name\n          }\n        }\n      }\n      pageInfo {\n        hasNextPage\n      }\n    }\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    1832: function(e, t) {},
-    1833: function(e, t) {
+    1455: function(e, t) {},
+    1835: function(e, t) {},
+    1836: function(e, t) {},
+    1837: function(e, t) {},
+    1838: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -5301,7 +4826,7 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1834: function(e, t) {
+    1839: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -5946,17 +5471,482 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1835: function(e, t) {},
-    1836: function(e, t, n) {
+    1840: function(e, t) {},
+    1841: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "GamePage_Game"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "name"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "type"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "DirectoryType"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "limit"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Int"
+                        }
+                    },
+                    defaultValue: null
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "languages"
+                        }
+                    },
+                    type: {
+                        kind: "ListType",
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "String"
+                                }
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "cursor"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Cursor"
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "directory"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "name"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "name"
+                                }
+                            }
+                        }, {
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "type"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "type"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "displayName"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "streams"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "limit"
+                                        }
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "after"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "cursor"
+                                        }
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "languages"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "languages"
+                                        }
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "edges"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "cursor"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }, {
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "node"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "id"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "title"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "viewersCount"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "previewImageURL"
+                                                        },
+                                                        arguments: [{
+                                                            kind: "Argument",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "width"
+                                                            },
+                                                            value: {
+                                                                kind: "IntValue",
+                                                                value: "320"
+                                                            }
+                                                        }, {
+                                                            kind: "Argument",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "height"
+                                                            },
+                                                            value: {
+                                                                kind: "IntValue",
+                                                                value: "180"
+                                                            }
+                                                        }],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "broadcaster"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "login"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "displayName"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "game"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "boxArtURL"
+                                                                },
+                                                                arguments: [{
+                                                                    kind: "Argument",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "width"
+                                                                    },
+                                                                    value: {
+                                                                        kind: "IntValue",
+                                                                        value: "285"
+                                                                    }
+                                                                }, {
+                                                                    kind: "Argument",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "height"
+                                                                    },
+                                                                    value: {
+                                                                        kind: "IntValue",
+                                                                        value: "380"
+                                                                    }
+                                                                }],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "name"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }]
+                                                        }
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "pageInfo"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "hasNextPage"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 666
+            }
+        };
+        n.loc.source = {
+            body: "query GamePage_Game($name: String!, $type: DirectoryType!, $limit: Int, $languages: [String!], $cursor: Cursor) {\n  directory(name: $name, type: $type) {\n    id\n    displayName\n    streams(first: $limit, after: $cursor, languages: $languages) {\n      edges {\n        cursor\n        node {\n          id\n          title\n          viewersCount\n          previewImageURL(width: 320 height: 180)\n          broadcaster {\n            id\n            login\n            displayName\n          }\n          game {\n            id\n            boxArtURL(width: 285 height: 380)\n            name\n          }\n        }\n      }\n      pageInfo {\n        hasNextPage\n      }\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    1842: function(e, t, n) {
         e.exports = n.p + "assets/hearthstone-classes-b3b59eedbe78268cf62299a41ec09be1.png"
     },
-    1837: function(e, t, n) {
+    1843: function(e, t, n) {
         e.exports = n.p + "assets/hearthstone-modes-2390ca3de0f916ce2c85d7b26b665138.png"
     },
-    1838: function(e, t, n) {
+    1844: function(e, t, n) {
         e.exports = n.p + "assets/overwatch-chars-062a1df5ff2aaa76eb8e129940ef964a.png"
     },
-    1839: function(e, t) {
+    1845: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6819,7 +6809,7 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    1840: function(e, t) {
+    1846: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -7284,7 +7274,7 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    2013: function(e, t, n) {
+    2025: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -7293,32 +7283,18 @@ webpackJsonp([33], {
             }
         }
 
-        function i() {
-            return b.createElement(q.U, {
-                margin: {
-                    bottom: 2
-                }
-            }, b.createElement(q._21, {
-                type: q._26.H4,
-                color: q.F.Alt2,
-                fontSize: q.L.Size5,
-                transform: q._25.Uppercase,
-                "data-a-target": "international-section-header"
-            }, Object(C.d)("Channels in English", "DirectoryInternationalSectionHeader")))
-        }
-
-        function r(e) {
+        function i(e) {
             return {
-                isLoggedIn: Object(fe.d)(e)
+                isLoggedIn: Object(se.d)(e)
             }
         }
 
-        function o(e, t, n) {
-            return e + "?tt_medium=" + L.PageviewMedium.Game + "&tt_content=" + t + "&tt_content_index=" + n
+        function r(e, t, n) {
+            return e + "?tt_medium=" + j.PageviewMedium.Game + "&tt_content=" + t + "&tt_content_index=" + n
         }
 
-        function l(e) {
-            for (var t = "", n = [], a = 0, i = Ee.length; a < i && n.length <= 1; a++) t = Ee[a], n = e.split(t).map(function(e) {
+        function o(e) {
+            for (var t = "", n = [], a = 0, i = he.length; a < i && n.length <= 1; a++) t = he[a], n = e.split(t).map(function(e) {
                 return e.trim()
             }).filter(function(e) {
                 return e.length
@@ -7336,9 +7312,9 @@ webpackJsonp([33], {
             }
         }
 
-        function s(e) {
+        function l(e) {
             if (0 === e.length) return [];
-            for (var t = "", n = [], a = 0, i = 0, r = Ee.length; i < r && a <= 1; i++) t = Ee[i], n = e.map(function(e) {
+            for (var t = "", n = [], a = 0, i = 0, r = he.length; i < r && a <= 1; i++) t = he[i], n = e.map(function(e) {
                 return e.split(t).map(function(e) {
                     return e.trim()
                 }).filter(function(e) {
@@ -7347,7 +7323,7 @@ webpackJsonp([33], {
             }), a = Math.min.apply(Math, n.map(function(e) {
                 return e.length
             }));
-            for (var o = 0, s = -1, d = 0; d < a; d++) ! function(e) {
+            for (var l = 0, s = -1, d = 0; d < a; d++) ! function(e) {
                 var t = n.reduce(function(t, a, i) {
                     for (var r = 0; r < i; r++) {
                         var o = n[r];
@@ -7355,12 +7331,12 @@ webpackJsonp([33], {
                     }
                     return t
                 }, 0);
-                t > o && (o = t, s = e)
+                t > l && (l = t, s = e)
             }(d);
             return -1 === s ? e.map(function(e) {
                 return {
                     full: e,
-                    identifier: l(e).best
+                    identifier: o(e).best
                 }
             }) : e.map(function(e, t) {
                 return {
@@ -7370,8 +7346,25 @@ webpackJsonp([33], {
             })
         }
 
-        function d(e) {
-            return C.n.dynamicSettings.get("event_directory_enabled_games", []).includes(e.toLowerCase())
+        function s(e) {
+            return {
+                firstPageLoaded: e.session.firstPageLoaded,
+                sideNavExpanded: e.ui.sideNavExpanded
+            }
+        }
+
+        function d() {
+            return k.createElement(W.U, {
+                margin: {
+                    bottom: 2
+                }
+            }, k.createElement(W._21, {
+                type: W._26.H4,
+                color: W.F.Alt2,
+                fontSize: W.L.Size5,
+                transform: W._25.Uppercase,
+                "data-a-target": "international-section-header"
+            }, Object(E.d)("Channels in English", "DirectoryInternationalSectionHeader")))
         }
 
         function c(e) {
@@ -7400,26 +7393,20 @@ webpackJsonp([33], {
 
         function g(e) {
             return {
-                firstPageLoaded: e.session.firstPageLoaded
-            }
-        }
-
-        function h(e) {
-            return {
-                languagePreferences: Object(E.a)(e),
+                languagePreferences: Object(N.a)(e),
                 sideNavExpanded: e.ui.sideNavExpanded,
                 languageCode: e.session.languageCode,
                 firstPageLoaded: e.session.firstPageLoaded
             }
         }
 
-        function v(e) {
-            return Object(_.bindActionCreators)({
-                onShowModal: N.d
+        function h(e) {
+            return Object(S.bindActionCreators)({
+                onShowModal: _.d
             }, e)
         }
 
-        function f(e) {
+        function v(e) {
             return {
                 sideNavExpanded: e.ui.sideNavExpanded
             }
@@ -7427,32 +7414,32 @@ webpackJsonp([33], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var y, k = n(0),
-            b = n(1),
-            S = n(8),
-            _ = n(11),
-            N = n(50),
-            E = n(1012),
-            C = n(2),
-            w = n(1044),
-            D = n(66),
-            O = n(417),
-            F = n(30),
-            T = n(9),
-            U = n(922),
-            R = n(23),
-            I = n(918),
-            j = n(111),
-            L = n(14),
-            x = n(1031),
-            A = n(415),
-            M = n(1131),
-            P = n(1036),
-            V = n(6),
-            B = n(1396),
-            G = n(954),
-            H = n(1126),
-            z = [{
+        var f, y = n(0),
+            k = n(1),
+            b = n(9),
+            S = n(11),
+            _ = n(50),
+            N = n(1016),
+            E = n(2),
+            C = n(1049),
+            w = n(66),
+            D = n(418),
+            O = n(30),
+            F = n(8),
+            T = n(925),
+            U = n(23),
+            R = n(922),
+            I = n(111),
+            j = n(14),
+            L = n(1018),
+            x = n(416),
+            M = n(1135),
+            A = n(1040),
+            P = n(6),
+            V = n(1401),
+            B = n(958),
+            G = n(1130),
+            H = [{
                 Maps: [{
                     name: "cs_agency",
                     display_name: "Agency"
@@ -7518,9 +7505,9 @@ webpackJsonp([33], {
                     display_name: "Weapons Expert"
                 }]
             }],
-            W = n(64),
-            q = n(3),
-            $ = (n(1829), function(e) {
+            z = n(64),
+            W = n(3),
+            q = (n(1835), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.balloonOpen = !1, t.onChangeSearchTerm = function(e) {
@@ -7529,26 +7516,26 @@ webpackJsonp([33], {
                         return t.balloonOpen = !e
                     }, t.renderSections = function() {
                         return t.props.sections ? t.props.sections.map(function(e) {
-                            return [b.createElement(q.P, {
+                            return [k.createElement(W.P, {
                                 padding: {
                                     x: 1,
                                     top: .5
                                 },
                                 key: "header"
-                            }, b.createElement(q._21, {
-                                color: q.F.Alt2
+                            }, k.createElement(W._21, {
+                                color: W.F.Alt2
                             }, e.title)), e.items]
                         }) : null
                     }, t.renderSelected = function() {
-                        return t.props.selected ? b.createElement(q._17, {
+                        return t.props.selected ? k.createElement(W._17, {
                             borderBottom: !0
-                        }, b.createElement(q.P, {
+                        }, k.createElement(W.P, {
                             padding: {
                                 x: 1,
                                 top: .5
                             }
-                        }, b.createElement(q._21, {
-                            color: q.F.Alt2
+                        }, k.createElement(W._21, {
+                            color: W.F.Alt2
                         }, t.props.selectedTitle)), t.props.selected) : null
                     }, t.setSearchRef = function(e) {
                         t.props.searchRefDelegate && t.props.searchRefDelegate(e)
@@ -7556,72 +7543,72 @@ webpackJsonp([33], {
                         return t.toggleRef = e
                     }, t
                 }
-                return k.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                return y.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                     (!this.props.selected && e.selected || this.props.selected && !e.selected) && this.balloonOpen && this.toggleRef && this.toggleRef.toggleBalloon(!1)
                 }, t.prototype.render = function() {
-                    return this.props.isError ? null : this.props.isLoading ? b.createElement(q.U, {
+                    return this.props.isError ? null : this.props.isLoading ? k.createElement(W.U, {
                         margin: {
                             left: 1
                         },
-                        display: q.H.Flex,
-                        justifyContent: q.T.Center,
-                        alignItems: q.c.Center
-                    }, b.createElement(q._1, {
+                        display: W.H.Flex,
+                        justifyContent: W.T.Center,
+                        alignItems: W.c.Center
+                    }, k.createElement(W._1, {
                         width: 70,
                         height: 30
-                    })) : b.createElement(q.U, {
+                    })) : k.createElement(W.U, {
                         className: "selectable-filter",
                         margin: {
                             left: 1
                         }
-                    }, b.createElement(W.a, {
+                    }, k.createElement(z.a, {
                         onToggle: this.onToggle,
                         ref: this.setToggleRef
-                    }, b.createElement(q.u, k.__assign({
+                    }, k.createElement(W.u, y.__assign({
                         dropdown: !0,
-                        type: q.z.Hollow
-                    }, Object(q._39)(this.props)), b.createElement(q.U, {
-                        display: q.H.Flex
-                    }, this.props.title)), b.createElement(q.p, {
-                        direction: q.q.BottomLeft,
+                        type: W.z.Hollow
+                    }, Object(W._39)(this.props)), k.createElement(W.U, {
+                        display: W.H.Flex
+                    }, this.props.title)), k.createElement(W.p, {
+                        direction: W.q.BottomLeft,
                         noTail: !0
-                    }, b.createElement(q.U, {
+                    }, k.createElement(W.U, {
                         className: "selectable-filter__balloon",
                         padding: {
                             y: .5
                         }
-                    }, b.createElement(q._17, {
+                    }, k.createElement(W._17, {
                         padding: 1,
                         borderBottom: !0
-                    }, b.createElement(q._11, {
+                    }, k.createElement(W._11, {
                         refDelegate: this.setSearchRef,
                         onChange: this.onChangeSearchTerm,
                         placeholder: this.props.searchPlaceholder
-                    })), this.renderSelected(), b.createElement(F.b, {
+                    })), this.renderSelected(), k.createElement(O.b, {
                         className: "selectable-filter__scroll-container"
-                    }, b.createElement(q.U, null, this.renderSections()))))))
+                    }, k.createElement(W.U, null, this.renderSections()))))))
                 }, t
-            }(b.Component)),
-            Q = $,
-            Y = (n(1830), function(e) {
-                return b.createElement(q.S, k.__assign({
+            }(k.Component)),
+            $ = q,
+            Q = (n(1836), function(e) {
+                return k.createElement(W.S, y.__assign({
                     onClick: e.onClick,
                     key: e.key,
                     disabled: e.disabled
-                }, Object(q._39)(e)), b.createElement(q.U, {
+                }, Object(W._39)(e)), k.createElement(W.U, {
                     className: "selectable-filter-item",
-                    display: q.H.Flex,
-                    flexDirection: q.J.Row,
-                    alignItems: q.c.Center,
+                    display: W.H.Flex,
+                    flexDirection: W.J.Row,
+                    alignItems: W.c.Center,
                     margin: {
                         y: .5,
                         x: 1
                     },
-                    flexWrap: q.K.NoWrap
-                }, e.spriteWidth && b.createElement(q.U, {
+                    flexWrap: W.K.NoWrap
+                }, e.spriteWidth && k.createElement(W.U, {
                     className: "selectable-filter-item__avatar-container",
                     flexShrink: 0
-                }, b.createElement("div", {
+                }, k.createElement("div", {
                     className: "selectable-filter-item__avatar",
                     style: {
                         backgroundImage: "url(" + e.spriteAsset + ")",
@@ -7632,19 +7619,19 @@ webpackJsonp([33], {
                         zoom: e.spriteWidth > 0 ? 30 / e.spriteWidth : 1,
                         border: "none"
                     }
-                })), b.createElement(q.P, {
+                })), k.createElement(W.P, {
                     margin: {
                         left: 1
                     },
                     flexGrow: 1,
                     ellipsis: !0
-                }, b.createElement(q._21, {
-                    fontSize: q.L.Size5
-                }, e.name)), e.withClose && b.createElement(q._8, {
-                    asset: q._9.Close
+                }, k.createElement(W._21, {
+                    fontSize: W.L.Size5
+                }, e.name)), e.withClose && k.createElement(W._8, {
+                    asset: W._9.Close
                 })))
             }),
-            J = function(e) {
+            Y = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7683,10 +7670,10 @@ webpackJsonp([33], {
                             return t.renderMap(t.state.selected, e, !0)
                         }
                     }, t.loadData = function() {
-                        return k.__awaiter(t, void 0, void 0, function() {
-                            return k.__generator(this, function(e) {
+                        return y.__awaiter(t, void 0, void 0, function() {
+                            return y.__generator(this, function(e) {
                                 return this.state.isLoading || this.state.isError || this.state.content ? [2] : (this.setState({
-                                    content: z
+                                    content: H
                                 }), [2])
                             })
                         })
@@ -7702,7 +7689,7 @@ webpackJsonp([33], {
                             t.searchRef && (t.searchRef.value = ""), t.props.onSelect(e.name)
                         })
                     }, t.renderMap = function(e, t, n) {
-                        return void 0 === n && (n = !1), b.createElement(Y, {
+                        return void 0 === n && (n = !1), k.createElement(Q, {
                             key: e.name,
                             "data-a-name": e.name,
                             name: e.display_name,
@@ -7713,205 +7700,86 @@ webpackJsonp([33], {
                         return t.searchRef = e
                     }, t
                 }
-                return k.__extends(t, e), t.prototype.componentDidMount = function() {
+                return y.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.firstPageLoaded && this.loadData()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     !this.props.firstPageLoaded && e.firstPageLoaded && this.loadData()
                 }, t.prototype.render = function() {
-                    return b.createElement(Q, {
+                    return k.createElement($, {
                         isError: this.state.isError || !1,
                         isLoading: !this.props.firstPageLoaded || this.state.isLoading || !1,
                         onSearch: this.onSearch,
                         searchRefDelegate: this.setSearchRef,
-                        searchPlaceholder: Object(C.d)("Search by Map", "CSGOMapFilter"),
+                        searchPlaceholder: Object(E.d)("Search by Map", "CSGOMapFilter"),
                         selected: this.getSelected(),
                         sections: this.getSections(),
-                        selectedTitle: Object(C.d)("Selected Map", "CSGOMapFilter"),
-                        title: this.state.selected ? this.state.selected.display_name : Object(C.d)("Map", "CSGOMapFilter"),
+                        selectedTitle: Object(E.d)("Selected Map", "CSGOMapFilter"),
+                        title: this.state.selected ? this.state.selected.display_name : Object(E.d)("Map", "CSGOMapFilter"),
                         "data-test-selector": "csgo-filter-selector"
                     })
                 }, t
-            }(b.Component),
-            X = J,
-            K = Object(S.a)(a)(X),
-            Z = n(1057),
-            ee = n(52),
-            te = n(406),
-            ne = n(1290),
-            ae = n(1285),
-            ie = n(1831),
-            re = n(1154),
-            oe = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return k.__extends(t, e), t.prototype.render = function() {
-                    var e = this;
-                    if (this.props.data.loading && !this.props.data.directory || this.props.data.error || !this.props.data.directory) return null;
-                    var t, n = Object(C.d)("Channels in English", "DirectoryInternationalSection"),
-                        a = this.props.data.directory.streams.edges || [],
-                        r = this.props.directoryWidth;
-                    if (r && r > 0) {
-                        var o = Object(ae.a)(r, 240, 2);
-                        o < a.length && (a = a.slice(0, o - 1), t = b.createElement(ne.a, {
-                            subHeader: n,
-                            linkTo: {
-                                pathname: this.getViewAllPath(),
-                                state: {
-                                    medium: "GAME" === this.props.type ? L.PageviewMedium.Game : L.PageviewMedium.Community,
-                                    content: L.PageviewContent.Game
-                                }
-                            }
-                        }))
-                    }
-                    var l = "COMMUNITY" === this.props.type ? L.PageviewMedium.Community : L.PageviewMedium.Game,
-                        s = Object(C.d)("Untitled Broadcast", "DirectoryInternationalSection"),
-                        d = a.filter(function(e) {
-                            var t = e.node;
-                            return t.broadcaster && t.broadcaster.login
-                        }).map(function(t, n) {
-                            var a = t.node;
-                            return a.broadcaster ? "COMMUNITY" === e.props.type && a.game ? b.createElement(q.U, {
-                                key: a.id,
-                                margin: {
-                                    bottom: 2
-                                }
-                            }, b.createElement(Z.a, {
-                                imageSrc: a.previewImageURL || C.a.defaultStreamPreviewURL,
-                                imageAlt: a.broadcaster.login + " cover image",
-                                viewerCount: a.viewersCount || 0,
-                                title: a.title || s,
-                                channelName: Object(ee.a)(a.broadcaster.login, a.broadcaster.displayName, !0),
-                                gameImageSrc: a.game.boxArtURL || C.a.defaultBoxArtURL,
-                                gameTitle: a.game.name,
-                                gameLinkTo: {
-                                    pathname: Object(te.d)(a.game.name),
-                                    state: {
-                                        medium: L.PageviewMedium.Community,
-                                        content: L.PageviewContent.Live,
-                                        content_index: n
-                                    }
-                                },
-                                linkTo: {
-                                    pathname: "/" + a.broadcaster.login,
-                                    state: {
-                                        medium: L.PageviewMedium.Community,
-                                        content: L.PageviewContent.Live,
-                                        content_index: n
-                                    }
-                                },
-                                channelNameLinkTo: {
-                                    pathname: "/" + a.broadcaster.login + "/videos",
-                                    state: {
-                                        medium: l,
-                                        content: L.PageviewContent.Live,
-                                        content_index: n
-                                    }
-                                }
-                            })) : b.createElement(q.U, {
-                                key: a.id,
-                                margin: {
-                                    bottom: 2
-                                }
-                            }, b.createElement(q._27, {
-                                linkTo: {
-                                    pathname: "/" + a.broadcaster.login,
-                                    state: {
-                                        content: L.PageviewContent.Live,
-                                        content_index: n,
-                                        medium: l
-                                    }
-                                },
-                                title: a.title || s,
-                                imageAlt: a.broadcaster.login + " cover image",
-                                imageSrc: a.previewImageURL,
-                                info: Object(re.b)(a.viewersCount, Object(ee.a)(a.broadcaster.login, a.broadcaster.displayName, !0)),
-                                "data-a-target": "card-" + n,
-                                "data-a-id": "card-" + (a.broadcaster.login || "").replace(/ /g, "")
-                            })) : null
-                        });
-                    return b.createElement("div", null, b.createElement(i, null), b.createElement(q._33, {
-                        gutterSize: q._35.Small,
-                        childWidth: q._34.Medium,
-                        placeholderItems: 20
-                    }, d, t))
-                }, t.prototype.getViewAllPath = function() {
-                    return "COMMUNITY" === this.props.type ? Object(te.a)(this.props.name) + "/" + this.props.languageCode : Object(te.d)(this.props.name) + "/" + this.props.languageCode
-                }, t = k.__decorate([Object(T.a)(ie, {
-                    options: function(e) {
-                        return {
-                            fetchPolicy: "network-only",
-                            variables: {
-                                name: decodeURIComponent(e.name),
-                                limit: 30,
-                                languages: [e.languageCode],
-                                type: e.type
-                            }
-                        }
-                    }
-                }), Object(V.c)("DirectoryInternationalSection", {
-                    autoReportInteractive: !0
-                })], t)
-            }(b.Component),
-            le = oe,
-            se = n(4),
-            de = function() {
+            }(k.Component),
+            J = Y,
+            X = Object(b.a)(a)(J),
+            K = n(413),
+            Z = n(4),
+            ee = function() {
                 var e = function() {
-                    return b.createElement(q.U, {
+                    return k.createElement(W.U, {
                         className: "featured-events-layout__column",
                         margin: {
                             bottom: 3
                         }
-                    }, b.createElement(q.U, {
+                    }, k.createElement(W.U, {
                         margin: {
                             bottom: 1
                         }
-                    }, b.createElement(q._1, {
+                    }, k.createElement(W._1, {
                         height: 60
-                    })), b.createElement(q._21, null, b.createElement(q._1, {
+                    })), k.createElement(W._21, null, k.createElement(W._1, {
                         width: 130
-                    })), b.createElement(q._21, null, b.createElement(q._1, {
+                    })), k.createElement(W._21, null, k.createElement(W._1, {
                         width: 105
                     })))
                 };
-                return b.createElement(q.U, {
+                return k.createElement(W.U, {
                     fullWidth: !0
-                }, b.createElement(q.U, {
+                }, k.createElement(W.U, {
                     margin: {
                         bottom: 2
                     }
-                }, b.createElement(q._21, null, b.createElement(q._1, {
+                }, k.createElement(W._21, null, k.createElement(W._1, {
                     width: 150
                 }))), [1, 2, 3].map(function(t) {
-                    return b.createElement(e, {
+                    return k.createElement(e, {
                         key: t
                     })
                 }))
             },
-            ce = (n(1832), function(e) {
+            te = (n(1837), function(e) {
                 var t = {
                     backgroundImage: "url(" + e.imageURL + ")"
                 };
-                return b.createElement(q._17, {
+                return k.createElement(W._17, {
                     className: "event",
                     margin: {
                         bottom: 1
                     },
                     border: !0
-                }, b.createElement("div", {
+                }, k.createElement("div", {
                     className: "event__header",
                     style: t
-                }, b.createElement("div", {
+                }, k.createElement("div", {
                     className: "event__header-overlay"
-                }, b.createElement(q._21, {
-                    type: q._26.H5,
+                }, k.createElement(W._21, {
+                    type: W._26.H5,
                     bold: !0
                 }, e.title))), e.children)
             }),
-            ue = Object(V.c)("EventCard", {
+            ne = Object(P.c)("EventCard", {
                 autoReportInteractive: !0
-            })(ce),
-            me = function(e) {
+            })(te),
+            ae = function(e) {
                 var t = e.events.map(function(e, t) {
                     if (!e.owner) return null;
                     var n = e.owner.stream;
@@ -7919,149 +7787,149 @@ webpackJsonp([33], {
                     var a = {
                         pathname: "/" + e.owner.login,
                         state: {
-                            medium: L.PageviewMedium.Game,
-                            content: L.PageviewContent.EventLive,
+                            medium: j.PageviewMedium.Game,
+                            content: j.PageviewContent.EventLive,
                             content_index: t
                         }
                     };
-                    return b.createElement(ue, {
+                    return k.createElement(ne, {
                         key: e.id,
                         title: e.title,
                         imageURL: e.coverImageURL,
                         eventIDs: [e.id]
-                    }, b.createElement(q.U, {
+                    }, k.createElement(W.U, {
                         padding: 1,
-                        alignItems: q.c.Baseline,
-                        display: q.H.Flex,
-                        justifyContent: q.T.Between
-                    }, b.createElement(q._21, {
-                        type: q._26.P
-                    }, Object(C.d)("{viewerCount, number} viewers", {
+                        alignItems: W.c.Baseline,
+                        display: W.H.Flex,
+                        justifyContent: W.T.Between
+                    }, k.createElement(W._21, {
+                        type: W._26.P
+                    }, Object(E.d)("{viewerCount, number} viewers", {
                         viewerCount: n.viewersCount
-                    }, "Events"), " - ", e.owner.displayName), b.createElement(q.u, {
+                    }, "Events"), " - ", e.owner.displayName), k.createElement(W.u, {
                         linkTo: a
-                    }, Object(C.d)("Watch Now", "Events"))))
+                    }, Object(E.d)("Watch Now", "Events"))))
                 });
-                return b.createElement(q.U, null, t)
+                return k.createElement(W.U, null, t)
             },
-            pe = Object(V.c)("LiveEvents", {
+            ie = Object(P.c)("LiveEvents", {
                 autoReportInteractive: !0
-            })(me),
-            ge = n(419),
-            he = function(e) {
+            })(ae),
+            re = n(420),
+            oe = function(e) {
                 var t = e.events.map(function(e, t) {
                     if (0 === e.videos.length) return null;
                     var n = e.videos.map(function(n, a) {
-                        var i = Object(ge.a)(n.lengthSeconds || 0),
+                        var i = Object(re.a)(n.lengthSeconds || 0),
                             r = a === e.videos.length - 1 ? "event__video-last" : "",
                             o = {
                                 pathname: "/videos/" + n.id,
                                 state: {
-                                    medium: L.PageviewMedium.Game,
-                                    content: L.PageviewContent.EventPast,
+                                    medium: j.PageviewMedium.Game,
+                                    content: j.PageviewContent.EventPast,
                                     content_index: t
                                 }
                             };
-                        return b.createElement(q.S, {
+                        return k.createElement(W.S, {
                             key: n.id,
                             linkTo: o,
                             alpha: !0
-                        }, b.createElement(q.U, {
+                        }, k.createElement(W.U, {
                             className: "event__video " + r,
                             padding: 1
-                        }, b.createElement(q.U, {
+                        }, k.createElement(W.U, {
                             className: "event__video-card"
-                        }, b.createElement(q.A, {
+                        }, k.createElement(W.A, {
                             row: !0
-                        }, b.createElement(q.C, {
+                        }, k.createElement(W.C, {
                             imageSrc: n.thumbnailURL,
                             imageAlt: n.title,
-                            size: q.D.Size6
-                        }), b.createElement(q.B, null, b.createElement(q.U, {
+                            size: W.D.Size6
+                        }), k.createElement(W.B, null, k.createElement(W.U, {
                             padding: {
                                 left: 1
                             }
-                        }, b.createElement(q._21, {
-                            type: q._26.H6
-                        }, n.title), b.createElement(q.U, {
+                        }, k.createElement(W._21, {
+                            type: W._26.H6
+                        }, n.title), k.createElement(W.U, {
                             className: "event__broadcast-details"
-                        }, b.createElement(q._21, {
-                            type: q._26.P
-                        }, Object(C.d)("{viewCount, number} views", {
+                        }, k.createElement(W._21, {
+                            type: W._26.P
+                        }, Object(E.d)("{viewCount, number} views", {
                             viewCount: n.viewCount
                         }, "Events"), " · ", i))))))))
                     });
-                    return b.createElement(ue, {
+                    return k.createElement(ne, {
                         key: e.id,
                         title: e.title,
                         imageURL: e.imageURL,
                         eventIDs: [e.id]
                     }, n)
                 });
-                return b.createElement(q.U, null, t)
+                return k.createElement(W.U, null, t)
             },
-            ve = Object(V.c)("PastEvents", {
+            le = Object(P.c)("PastEvents", {
                 autoReportInteractive: !0
-            })(he),
-            fe = n(19),
-            ye = n(1833),
-            ke = function(e) {
+            })(oe),
+            se = n(19),
+            de = n(1838),
+            ce = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.unfollowEvent = function(e) {
-                        e && (e.stopPropagation(), e.preventDefault()), t.props.updateEventBroadcastNotifications(Object(R.a)({
+                        e && (e.stopPropagation(), e.preventDefault()), t.props.updateEventBroadcastNotifications(Object(U.a)({
                             eventID: t.props.eventID,
                             emailEnabled: !1
-                        })), C.n.tracking.track(L.SpadeEventType.EventFollowing, {
+                        })), E.n.tracking.track(j.SpadeEventType.EventFollowing, {
                             action: "email_reminder_off",
                             event_id: t.props.eventID,
                             location: "directory"
                         })
                     }, t.followEvent = function(e) {
-                        e && (e.stopPropagation(), e.preventDefault()), t.props.updateEventBroadcastNotifications(Object(R.a)({
+                        e && (e.stopPropagation(), e.preventDefault()), t.props.updateEventBroadcastNotifications(Object(U.a)({
                             eventID: t.props.eventID,
                             emailEnabled: !0
-                        })), C.n.tracking.track(L.SpadeEventType.EventFollowing, {
+                        })), E.n.tracking.track(j.SpadeEventType.EventFollowing, {
                             action: "email_reminder_on",
                             event_id: t.props.eventID,
                             location: "directory"
                         })
                     }, t
                 }
-                return k.__extends(t, e), t.prototype.componentDidMount = function() {
+                return y.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     if (!this.props.isLoggedIn) return null;
-                    var e = q._9.Heart,
+                    var e = W._9.Heart,
                         t = this.followEvent,
-                        n = Object(C.d)("Remind Me", "Events");
-                    return this.props.areNotificationsEnabled && (e = q._9.FollowCheck, t = this.unfollowEvent, n = Object(C.d)("Reminder Set", "Events")), b.createElement(q._30, {
+                        n = Object(E.d)("Remind Me", "Events");
+                    return this.props.areNotificationsEnabled && (e = W._9.FollowCheck, t = this.unfollowEvent, n = Object(E.d)("Reminder Set", "Events")), k.createElement(W._30, {
                         label: n,
-                        align: q._31.Right
-                    }, b.createElement(q.v, {
-                        size: q.x.Default,
+                        align: W._31.Right
+                    }, k.createElement(W.v, {
+                        size: W.x.Default,
                         icon: e,
                         onClick: t,
                         ariaLabel: n
                     }))
-                }, t = k.__decorate([Object(T.a)(ye, {
+                }, t = y.__decorate([Object(F.a)(de, {
                     name: "updateEventBroadcastNotifications"
-                }), Object(V.c)("NotifyMeComponent")], t)
-            }(b.Component),
-            be = ke,
-            Se = Object(S.a)(r)(be),
-            _e = function(e) {
+                }), Object(P.c)("NotifyMeComponent")], t)
+            }(k.Component),
+            ue = ce,
+            me = Object(b.a)(i)(ue),
+            pe = function(e) {
                 var t = 0,
                     n = e.events.map(function(e) {
                         var n = e.broadcasts.map(function(n, a) {
-                                return b.createElement(q.S, {
+                                return k.createElement(W.S, {
                                     key: n.id,
-                                    linkTo: o("https://twitch.tv/events/" + n.id, L.PageviewContent.EventUpcoming, t++),
+                                    linkTo: r("https://twitch.tv/events/" + n.id, j.PageviewContent.EventUpcoming, t++),
                                     alpha: !0
-                                }, b.createElement(q.U, {
+                                }, k.createElement(W.U, {
                                     className: "event__broadcast-wrapper"
-                                }, b.createElement(q.U, {
-                                    className: se("event__broadcast", {
+                                }, k.createElement(W.U, {
+                                    className: Z("event__broadcast", {
                                         "event__broadcast-last": a === e.broadcasts.length - 1
                                     }),
                                     padding: {
@@ -8072,30 +7940,30 @@ webpackJsonp([33], {
                                     margin: {
                                         left: 2
                                     },
-                                    display: q.H.Flex,
-                                    flexWrap: q.K.NoWrap,
-                                    justifyContent: q.T.Between
-                                }, b.createElement(q.U, {
-                                    display: q.H.Flex,
+                                    display: W.H.Flex,
+                                    flexWrap: W.K.NoWrap,
+                                    justifyContent: W.T.Between
+                                }, k.createElement(W.U, {
+                                    display: W.H.Flex,
                                     flexShrink: 1
-                                }, b.createElement(q.U, {
+                                }, k.createElement(W.U, {
                                     className: "event__broadcast-header",
                                     fullWidth: !0
-                                }, b.createElement(q._21, {
+                                }, k.createElement(W._21, {
                                     bold: !0
-                                }, Object(C.c)(n.startAt, "medium"), n.title && " - ", n.title)), b.createElement(q.U, {
+                                }, Object(E.c)(n.startAt, "medium"), n.title && " - ", n.title)), k.createElement(W.U, {
                                     className: "event__broadcast-details"
-                                }, Object(C.d)("{start,time,short} - {end,time,short}", {
+                                }, Object(E.d)("{start,time,short} - {end,time,short}", {
                                     start: n.startAt,
                                     end: n.endAt
-                                }, "UpcomingEvents"))), b.createElement(q.U, {
-                                    display: q.H.Flex,
+                                }, "UpcomingEvents"))), k.createElement(W.U, {
+                                    display: W.H.Flex,
                                     flexShrink: 0,
                                     margin: {
                                         left: 1
                                     },
-                                    alignSelf: q.d.Center
-                                }, b.createElement(Se, {
+                                    alignSelf: W.d.Center
+                                }, k.createElement(me, {
                                     eventID: n.id,
                                     areNotificationsEnabled: n.notificationsEnabled
                                 })))))
@@ -8103,91 +7971,91 @@ webpackJsonp([33], {
                             a = e.broadcasts.map(function(e) {
                                 return e.id
                             });
-                        return b.createElement(ue, {
+                        return k.createElement(ne, {
                             key: a.join(""),
                             imageURL: e.imageURL,
                             title: e.title,
                             eventIDs: a
                         }, n)
                     });
-                return b.createElement(q.U, null, n)
+                return k.createElement(W.U, null, n)
             },
-            Ne = Object(V.c)("UpcomingEvents", {
+            ge = Object(P.c)("UpcomingEvents", {
                 autoReportInteractive: !0
-            })(_e),
-            Ee = [" | ", " - "],
-            Ce = n(1834),
-            we = function(e) {
+            })(pe),
+            he = [" | ", " - "],
+            ve = n(1839),
+            fe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.tracked = !1, t
                 }
-                return k.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                return y.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.componentDidMount = function() {
                     this.onRender()
                 }, t.prototype.render = function() {
-                    if (this.props.data.loading) return b.createElement(de, null);
-                    if (this.props.data.error || null === this.props.data.game) return b.createElement(q._17, {
-                        color: q.F.Alt2,
-                        display: q.H.Flex,
-                        justifyContent: q.T.Center,
-                        alignItems: q.c.Center,
+                    if (this.props.data.loading) return k.createElement(ee, null);
+                    if (this.props.data.error || null === this.props.data.game) return k.createElement(W._17, {
+                        color: W.F.Alt2,
+                        display: W.H.Flex,
+                        justifyContent: W.T.Center,
+                        alignItems: W.c.Center,
                         fullWidth: !0
-                    }, b.createElement(q._8, {
-                        asset: q._9.DeadGlitch,
+                    }, k.createElement(W._8, {
+                        asset: W._9.DeadGlitch,
                         width: 46,
                         height: 48
                     }));
                     var e = !1,
                         t = null,
                         n = this.props.data.game.featuredEventBroadcasts.live.filter(this.isNotNull);
-                    0 !== n.length && (e = !0, t = b.createElement(q.U, {
+                    0 !== n.length && (e = !0, t = k.createElement(W.U, {
                         margin: {
                             bottom: 3
                         }
-                    }, b.createElement(q.U, {
+                    }, k.createElement(W.U, {
                         margin: {
                             bottom: 1
                         }
-                    }, b.createElement(q._21, {
-                        type: q._26.H4
-                    }, Object(C.d)("Live Events", "Events"))), b.createElement(q.U, null, b.createElement(pe, {
+                    }, k.createElement(W._21, {
+                        type: W._26.H4
+                    }, Object(E.d)("Live Events", "Events"))), k.createElement(W.U, null, k.createElement(ie, {
                         events: n
                     }))));
                     var a = null,
                         i = this.props.data.game.featuredEventBroadcasts.future.filter(this.isNotNull),
                         r = this.convertUpcomingEvents(i);
-                    0 !== r.length && (e = !0, a = b.createElement(q.U, {
+                    0 !== r.length && (e = !0, a = k.createElement(W.U, {
                         margin: {
                             bottom: 3
                         }
-                    }, b.createElement(q.U, {
+                    }, k.createElement(W.U, {
                         margin: {
                             bottom: 1
                         }
-                    }, b.createElement(q._21, {
-                        type: q._26.H4
-                    }, Object(C.d)("Upcoming Events", "Events"))), b.createElement(q.U, null, b.createElement(Ne, {
+                    }, k.createElement(W._21, {
+                        type: W._26.H4
+                    }, Object(E.d)("Upcoming Events", "Events"))), k.createElement(W.U, null, k.createElement(ge, {
                         events: r
                     }))));
                     var o = null,
                         l = this.props.data.game.featuredEventBroadcasts.past.filter(this.isNotNull),
                         s = this.convertPastEvents(l);
-                    return 0 !== s.length && (e = !0, o = b.createElement(q.U, {
+                    return 0 !== s.length && (e = !0, o = k.createElement(W.U, {
                         margin: {
                             bottom: 3
                         }
-                    }, b.createElement(q.U, {
+                    }, k.createElement(W.U, {
                         margin: {
                             bottom: 1
                         }
-                    }, b.createElement(q._21, {
-                        type: q._26.H4
-                    }, Object(C.d)("Recent Events", "Events"))), b.createElement(q.U, null, b.createElement(ve, {
+                    }, k.createElement(W._21, {
+                        type: W._26.H4
+                    }, Object(E.d)("Recent Events", "Events"))), k.createElement(W.U, null, k.createElement(le, {
                         events: s
-                    })))), b.createElement(q.U, {
-                        className: se({
+                    })))), k.createElement(W.U, {
+                        className: Z({
                             "featured-events-layout__column": e
                         })
                     }, t, a, o)
@@ -8205,7 +8073,7 @@ webpackJsonp([33], {
                     var r = n.map(function(e) {
                         return e.id
                     });
-                    C.n.tracking.track(L.SpadeEventType.FeaturedEventPresentation, {
+                    E.n.tracking.track(j.SpadeEventType.FeaturedEventPresentation, {
                         game: this.props.data.game ? this.props.data.game.name : "unknown game",
                         live_events: JSON.stringify(a),
                         upcoming_events: JSON.stringify(i),
@@ -8224,7 +8092,7 @@ webpackJsonp([33], {
                     return t.forEach(function(e) {
                         var t = new Map;
                         e.forEach(function(e) {
-                            var n = l(e.title),
+                            var n = o(e.title),
                                 a = t.get(n.prefix) || [];
                             a.push(e), t.has(n.prefix) || t.set(n.prefix, a)
                         }), t.forEach(function(e, t) {
@@ -8234,7 +8102,7 @@ webpackJsonp([33], {
                                 broadcasts: e.map(function(e) {
                                     return {
                                         id: e.id,
-                                        title: l(e.title).postfix,
+                                        title: o(e.title).postfix,
                                         startAt: new Date(e.startAt),
                                         endAt: new Date(e.endAt),
                                         notificationsEnabled: !!e.self && e.self.emailEnabled
@@ -8248,7 +8116,7 @@ webpackJsonp([33], {
                     return e.map(function(e) {
                         var t = [];
                         e.highlights && e.highlights.edges.length > 0 ? t = e.highlights.edges : e.vods && e.vods.edges.length > 0 && (t = e.vods.edges);
-                        var n = s(t.map(function(e) {
+                        var n = l(t.map(function(e) {
                             return e.node.title
                         }));
                         return {
@@ -8269,11 +8137,11 @@ webpackJsonp([33], {
                 }, t.prototype.isNotNull = function(e) {
                     return null !== e
                 }, t.prototype.onRender = function() {
-                    if (!this.props.data.loading && (this.props.latencyTracking.reportInteractive(), !this.tracked && !this.props.data.error && this.props.data.game)) {
+                    if (!this.props.data.loading && !this.tracked && !this.props.data.error && this.props.data.game) {
                         var e = this.props.data.game.featuredEventBroadcasts;
                         this.trackPresentation(e.live.filter(this.isNotNull), this.convertUpcomingEvents(e.future.filter(this.isNotNull)), this.convertPastEvents(e.past.filter(this.isNotNull))), this.tracked = !0
                     }
-                }, t = k.__decorate([Object(T.a)(Ce, {
+                }, t = y.__decorate([Object(F.a)(ve, {
                     options: function(e) {
                         return {
                             variables: {
@@ -8281,38 +8149,269 @@ webpackJsonp([33], {
                             }
                         }
                     }
-                }), Object(V.c)("FeaturedEvents")], t)
-            }(b.Component),
-            De = we,
-            Oe = (n(1835), function(e) {
-                return d(e.gameName) ? b.createElement(q.U, {
-                    display: q.H.Flex,
-                    flexWrap: q.K.NoWrap
-                }, b.createElement(q.U, {
-                    flexGrow: 1,
-                    display: q.H.Flex
-                }, e.children), b.createElement(q.U, {
-                    display: q.H.Flex,
-                    flexGrow: 0,
-                    flexShrink: 0,
-                    margin: {
-                        left: 3
+                })], t)
+            }(k.Component),
+            ye = fe,
+            ke = n(1307),
+            be = (n(1840), "directory-container"),
+            Se = "direectory-grid-grid-layout",
+            _e = "directory-grid-sidebar-layout",
+            Ne = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.renderAdLessGrid = function() {
+                        return t.renderGrid(!1)
+                    }, t.renderGrid = function(e) {
+                        void 0 === e && (e = !0);
+                        var n = null;
+                        return e && (n = k.createElement(L.a, {
+                            injectStyles: {
+                                textAlign: "center",
+                                marginBottom: 20,
+                                order: 999,
+                                width: 300,
+                                height: 250
+                            },
+                            adUnit: x.d.directory,
+                            slotID: x.b.directory.rectangle,
+                            adSize: x.c.directory.rectangle,
+                            targeting: {
+                                pagetype: x.a.games,
+                                game: t.props.directoryName
+                            },
+                            key: -1,
+                            autoEnable: !1
+                        })), k.createElement(W.U, {
+                            flexShrink: 0,
+                            "data-target": be,
+                            "data-test-selector": Se
+                        }, k.createElement(W._33, {
+                            gutterSize: W._35.Small,
+                            childWidth: W._34.Large,
+                            placeholderItems: 20
+                        }, n, t.props.children), k.createElement(O.a, {
+                            enabled: t.props.canLoadMore,
+                            loadMore: t.props.loadMore,
+                            pixelThreshold: 200
+                        }))
+                    }, t.renderSidebar = function() {
+                        return k.createElement(W.U, {
+                            display: W.H.Flex,
+                            flexWrap: W.K.NoWrap,
+                            "data-test-selector": _e
+                        }, k.createElement(W.U, {
+                            flexGrow: 1,
+                            display: W.H.Flex
+                        }, k.createElement(W.U, {
+                            flexShrink: 0
+                        }, k.createElement(W._33, {
+                            gutterSize: W._35.Small,
+                            childWidth: W._34.Medium,
+                            placeholderItems: 20
+                        }, t.props.children), k.createElement(O.a, {
+                            enabled: t.props.canLoadMore,
+                            loadMore: t.props.loadMore,
+                            pixelThreshold: 200
+                        }))), k.createElement(W.U, {
+                            display: W.H.Flex,
+                            flexGrow: 0,
+                            flexShrink: 0,
+                            margin: {
+                                left: 3
+                            }
+                        }, k.createElement(W.U, {
+                            display: W.H.Flex,
+                            flexDirection: W.J.Column
+                        }, k.createElement(L.a, {
+                            injectStyles: {
+                                textAlign: "center",
+                                marginBottom: 20,
+                                order: 0,
+                                width: 320,
+                                height: 250
+                            },
+                            adUnit: x.d.directory,
+                            slotID: x.b.directory.rectangle,
+                            adSize: x.c.directory.rectangle,
+                            targeting: {
+                                pagetype: x.a.games,
+                                game: t.props.directoryName
+                            },
+                            key: -1,
+                            autoEnable: !1
+                        }), t.props.firstPageLoaded ? k.createElement(ye, {
+                            gameName: t.props.communityName
+                        }) : k.createElement(ee, null))))
+                    }, t.updateDisplayAdOrder = function() {
+                        var e = document.querySelector('[data-target="' + be + '"]'),
+                            t = document.querySelector('[data-target="' + ke.a + '"]'),
+                            n = document.querySelector("#" + x.b.directory.rectangle);
+                        if (t && e && n) {
+                            var a = Math.round((e.clientWidth - 300) / t.clientWidth).toString();
+                            n.style.order !== a && "0" !== a && (n.style.order = a)
+                        }
+                    }, t
+                }
+                return y.__extends(t, e), t.prototype.componentDidMount = function() {
+                    window.addEventListener("resize", this.updateDisplayAdOrder), this.onRender()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.onRender()
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    this.props.sideNavExpanded !== e.sideNavExpanded && this.updateDisplayAdOrder()
+                }, t.prototype.componentWillUnmount = function() {
+                    window.removeEventListener("resize", this.updateDisplayAdOrder)
+                }, t.prototype.render = function() {
+                    if (this.isEventApprovedDirectory(this.props.communityName)) {
+                        var e = {
+                                shown: this.renderSidebar,
+                                hidden: this.renderGrid,
+                                fallback: this.renderGrid
+                            },
+                            t = this.renderAdLessGrid;
+                        return k.createElement(K.a, {
+                            name: "TWILIGHT_EVENT_GAME_DIRECTORY",
+                            assignments: e,
+                            loader: t
+                        })
                     }
-                }, e.firstPageLoaded ? b.createElement(De, {
-                    gameName: e.gameName
-                }) : b.createElement(de, null))) : b.createElement("div", null, e.children)
-            }),
-            Fe = Oe,
-            Te = Object(S.a)(c)(Fe),
-            Ue = n(1836),
-            Re = n.n(Ue),
+                    return this.renderGrid()
+                }, t.prototype.isEventApprovedDirectory = function(e) {
+                    return E.n.dynamicSettings.get("event_directory_enabled_games", []).includes(e.toLowerCase())
+                }, t.prototype.onRender = function() {
+                    this.props.latencyTracking.reportInteractive(), this.updateDisplayAdOrder()
+                }, t
+            }(k.Component),
+            Ee = Object(P.c)("DirectoryGrid")(Ne),
+            Ce = Object(b.a)(s)(Ee),
+            we = n(1062),
+            De = n(52),
+            Oe = n(407),
+            Fe = n(1294),
+            Te = n(1289),
+            Ue = n(1841),
+            Re = n(1159),
             Ie = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return y.__extends(t, e), t.prototype.render = function() {
+                    var e = this;
+                    if (this.props.data.loading && !this.props.data.directory || this.props.data.error || !this.props.data.directory) return null;
+                    var t, n = Object(E.d)("Channels in English", "DirectoryInternationalSection"),
+                        a = this.props.data.directory.streams.edges || [],
+                        i = this.props.directoryWidth;
+                    if (i && i > 0) {
+                        var r = Object(Te.a)(i, 240, 2);
+                        r < a.length && (a = a.slice(0, r - 1), t = k.createElement(Fe.a, {
+                            subHeader: n,
+                            linkTo: {
+                                pathname: this.getViewAllPath(),
+                                state: {
+                                    medium: "GAME" === this.props.type ? j.PageviewMedium.Game : j.PageviewMedium.Community,
+                                    content: j.PageviewContent.Game
+                                }
+                            }
+                        }))
+                    }
+                    var o = "COMMUNITY" === this.props.type ? j.PageviewMedium.Community : j.PageviewMedium.Game,
+                        l = Object(E.d)("Untitled Broadcast", "DirectoryInternationalSection"),
+                        s = a.filter(function(e) {
+                            var t = e.node;
+                            return t.broadcaster && t.broadcaster.login
+                        }).map(function(t, n) {
+                            var a = t.node;
+                            return a.broadcaster ? "COMMUNITY" === e.props.type && a.game ? k.createElement(W.U, {
+                                key: a.id,
+                                margin: {
+                                    bottom: 2
+                                }
+                            }, k.createElement(we.a, {
+                                imageSrc: a.previewImageURL || E.a.defaultStreamPreviewURL,
+                                imageAlt: a.broadcaster.login + " cover image",
+                                viewerCount: a.viewersCount || 0,
+                                title: a.title || l,
+                                channelName: Object(De.a)(a.broadcaster.login, a.broadcaster.displayName, !0),
+                                gameImageSrc: a.game.boxArtURL || E.a.defaultBoxArtURL,
+                                gameTitle: a.game.name,
+                                gameLinkTo: {
+                                    pathname: Object(Oe.d)(a.game.name),
+                                    state: {
+                                        medium: j.PageviewMedium.Community,
+                                        content: j.PageviewContent.Live,
+                                        content_index: n
+                                    }
+                                },
+                                linkTo: {
+                                    pathname: "/" + a.broadcaster.login,
+                                    state: {
+                                        medium: j.PageviewMedium.Community,
+                                        content: j.PageviewContent.Live,
+                                        content_index: n
+                                    }
+                                },
+                                channelNameLinkTo: {
+                                    pathname: "/" + a.broadcaster.login + "/videos",
+                                    state: {
+                                        medium: o,
+                                        content: j.PageviewContent.Live,
+                                        content_index: n
+                                    }
+                                }
+                            })) : k.createElement(W.U, {
+                                key: a.id,
+                                margin: {
+                                    bottom: 2
+                                }
+                            }, k.createElement(W._27, {
+                                linkTo: {
+                                    pathname: "/" + a.broadcaster.login,
+                                    state: {
+                                        content: j.PageviewContent.Live,
+                                        content_index: n,
+                                        medium: o
+                                    }
+                                },
+                                title: a.title || l,
+                                imageAlt: a.broadcaster.login + " cover image",
+                                imageSrc: a.previewImageURL,
+                                info: Object(Re.b)(a.viewersCount, Object(De.a)(a.broadcaster.login, a.broadcaster.displayName, !0)),
+                                "data-a-target": "card-" + n,
+                                "data-a-id": "card-" + (a.broadcaster.login || "").replace(/ /g, "")
+                            })) : null
+                        });
+                    return k.createElement("div", null, k.createElement(d, null), k.createElement(W._33, {
+                        gutterSize: W._35.Small,
+                        childWidth: W._34.Medium,
+                        placeholderItems: 20
+                    }, s, t))
+                }, t.prototype.getViewAllPath = function() {
+                    return "COMMUNITY" === this.props.type ? Object(Oe.a)(this.props.name) + "/" + this.props.languageCode : Object(Oe.d)(this.props.name) + "/" + this.props.languageCode
+                }, t = y.__decorate([Object(F.a)(Ue, {
+                    options: function(e) {
+                        return {
+                            fetchPolicy: "network-only",
+                            variables: {
+                                name: decodeURIComponent(e.name),
+                                limit: 30,
+                                languages: [e.languageCode],
+                                type: e.type
+                            }
+                        }
+                    }
+                }), Object(P.c)("DirectoryInternationalSection", {
+                    autoReportInteractive: !0
+                })], t)
+            }(k.Component),
+            je = Ie,
+            Le = n(1842),
+            xe = n.n(Le),
+            Me = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isLoading: !1,
                         isError: !1
-                    }, t.logger = C.n.logger.withCategory("hearthstone-class-filter"), t.getItems = function() {
+                    }, t.logger = E.n.logger.withCategory("hearthstone-class-filter"), t.getItems = function() {
                         var e = [];
                         if (t.state.content) {
                             var n = t.state.searchTerm ? new RegExp(".*" + t.state.searchTerm.split("").join(".*"), "i") : null,
@@ -8341,9 +8440,9 @@ webpackJsonp([33], {
                             return t.renderCharacter(t.state.selected, e, !0)
                         }
                     }, t.loadData = function() {
-                        return k.__awaiter(t, void 0, void 0, function() {
+                        return y.__awaiter(t, void 0, void 0, function() {
                             var e, t;
-                            return k.__generator(this, function(a) {
+                            return y.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
                                         if (this.state.isLoading || this.state.isError || this.state.content) return [2];
@@ -8351,7 +8450,7 @@ webpackJsonp([33], {
                                             isLoading: !0
                                         }), a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, n.e(72).then(n.bind(null, 2014))];
+                                        return a.trys.push([1, 3, , 4]), [4, n.e(72).then(n.bind(null, 2026))];
                                     case 2:
                                         return e = a.sent(), this.setState({
                                             content: e,
@@ -8379,11 +8478,11 @@ webpackJsonp([33], {
                             t.searchRef && (t.searchRef.value = ""), t.props.onSelect(e.class)
                         })
                     }, t.renderCharacter = function(e, t, n) {
-                        return void 0 === n && (n = !1), b.createElement(Y, {
+                        return void 0 === n && (n = !1), k.createElement(Q, {
                             key: e.name,
                             name: e.class,
                             onClick: t,
-                            spriteAsset: Re.a,
+                            spriteAsset: xe.a,
                             spriteOffsetX: e.sprite_x_offset,
                             spriteOffsetY: e.sprite_y_offset,
                             spriteWidth: e.image_width,
@@ -8394,39 +8493,39 @@ webpackJsonp([33], {
                         return t.searchRef = e
                     }, t
                 }
-                return k.__extends(t, e), t.prototype.componentDidMount = function() {
+                return y.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.firstPageLoaded && this.loadData()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     !this.props.firstPageLoaded && e.firstPageLoaded && this.loadData()
                 }, t.prototype.render = function() {
-                    var e = Object(C.d)("Class", "HearthstoneClassFilter");
-                    return b.createElement(Q, {
+                    var e = Object(E.d)("Class", "HearthstoneClassFilter");
+                    return k.createElement($, {
                         isError: this.state.isError || !1,
                         isLoading: !this.props.firstPageLoaded || this.state.isLoading || !1,
                         onSearch: this.onSearch,
                         searchRefDelegate: this.setSearchRef,
-                        searchPlaceholder: Object(C.d)("Search by Class", "HearthstoneClassFilter"),
+                        searchPlaceholder: Object(E.d)("Search by Class", "HearthstoneClassFilter"),
                         selected: this.getSelected(),
                         sections: [{
                             title: e,
                             items: this.getItems()
                         }],
-                        selectedTitle: Object(C.d)("Selected Class", "HearthstoneClassFilter"),
+                        selectedTitle: Object(E.d)("Selected Class", "HearthstoneClassFilter"),
                         title: this.state.selected ? this.state.selected.class : e
                     })
                 }, t
-            }(b.Component),
-            je = Ie,
-            Le = Object(S.a)(u)(je),
-            xe = n(1837),
-            Ae = n.n(xe),
-            Me = function(e) {
+            }(k.Component),
+            Ae = Me,
+            Pe = Object(b.a)(c)(Ae),
+            Ve = n(1843),
+            Be = n.n(Ve),
+            Ge = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isLoading: !1,
                         isError: !1
-                    }, t.logger = C.n.logger.withCategory("hearthstone-mode-filter"), t.getSections = function() {
+                    }, t.logger = E.n.logger.withCategory("hearthstone-mode-filter"), t.getSections = function() {
                         var e = [];
                         if (t.state.content) {
                             var n = t.state.searchTerm ? new RegExp(".*" + t.state.searchTerm.split("").join(".*"), "i") : null,
@@ -8459,9 +8558,9 @@ webpackJsonp([33], {
                             return t.renderCharacter(t.state.selected, e, !0)
                         }
                     }, t.loadData = function() {
-                        return k.__awaiter(t, void 0, void 0, function() {
+                        return y.__awaiter(t, void 0, void 0, function() {
                             var e, t;
-                            return k.__generator(this, function(a) {
+                            return y.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
                                         if (this.state.isLoading || this.state.isError || this.state.content) return [2];
@@ -8469,7 +8568,7 @@ webpackJsonp([33], {
                                             isLoading: !0
                                         }), a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, n.e(71).then(n.bind(null, 2015))];
+                                        return a.trys.push([1, 3, , 4]), [4, n.e(71).then(n.bind(null, 2027))];
                                     case 2:
                                         return e = a.sent(), this.setState({
                                             content: e,
@@ -8497,11 +8596,11 @@ webpackJsonp([33], {
                             t.searchRef && (t.searchRef.value = ""), t.props.onSelect(e.name)
                         })
                     }, t.renderCharacter = function(e, t, n) {
-                        return void 0 === n && (n = !1), b.createElement(Y, {
+                        return void 0 === n && (n = !1), k.createElement(Q, {
                             key: e.name,
                             name: e.display_name,
                             onClick: t,
-                            spriteAsset: Ae.a,
+                            spriteAsset: Be.a,
                             spriteOffsetX: e.sprite_x_offset,
                             spriteOffsetY: e.sprite_y_offset,
                             spriteWidth: e.image_height,
@@ -8512,30 +8611,30 @@ webpackJsonp([33], {
                         return t.searchRef = e
                     }, t
                 }
-                return k.__extends(t, e), t.prototype.componentDidMount = function() {
+                return y.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.firstPageLoaded && this.loadData()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     !this.props.firstPageLoaded && e.firstPageLoaded && this.loadData()
                 }, t.prototype.render = function() {
-                    return b.createElement(Q, {
+                    return k.createElement($, {
                         isError: this.state.isError || !1,
                         isLoading: !this.props.firstPageLoaded || this.state.isLoading || !1,
                         onSearch: this.onSearch,
                         searchRefDelegate: this.setSearchRef,
-                        searchPlaceholder: Object(C.d)("Search by Mode", "HearthstoneModeFilter"),
+                        searchPlaceholder: Object(E.d)("Search by Mode", "HearthstoneModeFilter"),
                         selected: this.getSelected(),
                         sections: this.getSections(),
-                        selectedTitle: Object(C.d)("Selected Mode", "HearthstoneModeFilter"),
-                        title: this.state.selected ? this.state.selected.display_name : Object(C.d)("Mode", "HearthstoneModeFilter")
+                        selectedTitle: Object(E.d)("Selected Mode", "HearthstoneModeFilter"),
+                        title: this.state.selected ? this.state.selected.display_name : Object(E.d)("Mode", "HearthstoneModeFilter")
                     })
                 }, t
-            }(b.Component),
-            Pe = Me,
-            Ve = Object(S.a)(m)(Pe),
-            Be = n(21),
-            Ge = n(917),
-            He = "en_US",
-            ze = {
+            }(k.Component),
+            He = Ge,
+            ze = Object(b.a)(u)(He),
+            We = n(21),
+            qe = n(921),
+            $e = "en_US",
+            Qe = {
                 en: "en_US",
                 de: "de_DE",
                 es: "es_ES",
@@ -8558,13 +8657,13 @@ webpackJsonp([33], {
                 ja: "ja_JP",
                 ko: "ko_KR"
             },
-            We = function(e) {
+            Ye = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isLoading: !1,
                         isError: !1
-                    }, t.logger = C.n.logger.withCategory("league-filter"), t.getSections = function() {
+                    }, t.logger = E.n.logger.withCategory("league-filter"), t.getSections = function() {
                         var e = [],
                             n = [];
                         if (t.state.content) {
@@ -8584,10 +8683,10 @@ webpackJsonp([33], {
                         }
                         var r = [];
                         return e.length > 0 && r.push({
-                            title: Object(C.d)("Champions Online", "LeagueFilter"),
+                            title: Object(E.d)("Champions Online", "LeagueFilter"),
                             items: e
                         }), n.length > 0 && r.push({
-                            title: Object(C.d)("Champions Offline", "LeagueFilter"),
+                            title: Object(E.d)("Champions Offline", "LeagueFilter"),
                             items: n
                         }), r
                     }, t.getSelected = function() {
@@ -8603,9 +8702,9 @@ webpackJsonp([33], {
                             return t.renderCharacter(t.state.selected, e, !0)
                         }
                     }, t.loadData = function() {
-                        return k.__awaiter(t, void 0, void 0, function() {
+                        return y.__awaiter(t, void 0, void 0, function() {
                             var e, t, n, a, i, r;
-                            return k.__generator(this, function(o) {
+                            return y.__generator(this, function(o) {
                                 switch (o.label) {
                                     case 0:
                                         if (this.state.isLoading || this.state.isError || this.state.content) return [2];
@@ -8613,10 +8712,10 @@ webpackJsonp([33], {
                                             isLoading: !0
                                         }), o.label = 1;
                                     case 1:
-                                        return o.trys.push([1, 3, , 4]), e = C.n.intl.getLanguageCode(), t = e ? ze[e] || He : He, n = Ge.a.getAPIURL("/api/lol/champions?" + Be.stringify({
+                                        return o.trys.push([1, 3, , 4]), e = E.n.intl.getLanguageCode(), t = e ? Qe[e] || $e : $e, n = qe.a.getAPIURL("/api/lol/champions?" + We.stringify({
                                             locale: t,
                                             on_site: 1
-                                        })).toString(), a = this.setState, i = {}, [4, Ge.a.get(n)];
+                                        })).toString(), a = this.setState, i = {}, [4, qe.a.get(n)];
                                     case 2:
                                         return a.apply(this, [(i.content = o.sent().body, i.isLoading = !1, i)]), [3, 4];
                                     case 3:
@@ -8644,7 +8743,7 @@ webpackJsonp([33], {
                         void 0 === a && (a = !1);
                         var i = "https://ddragon.leagueoflegends.com/cdn/" + t.state.content.version + "/img/sprite/" + e.image.sprite,
                             r = e.name.replace(/[.']/g, "").replace(/ /g, "").toLowerCase();
-                        return b.createElement(Y, {
+                        return k.createElement(Q, {
                             disabled: 0 === e.channels,
                             key: e.id,
                             name: e.name,
@@ -8661,36 +8760,36 @@ webpackJsonp([33], {
                         return t.searchRef = e
                     }, t
                 }
-                return k.__extends(t, e), t.prototype.componentDidMount = function() {
+                return y.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.firstPageLoaded && this.loadData()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     !this.props.firstPageLoaded && e.firstPageLoaded && this.loadData()
                 }, t.prototype.render = function() {
-                    return b.createElement(Q, {
+                    return k.createElement($, {
                         isError: this.state.isError || !1,
                         isLoading: !this.props.firstPageLoaded || this.state.isLoading || !1,
                         onSearch: this.onSearch,
                         searchRefDelegate: this.setSearchRef,
-                        searchPlaceholder: Object(C.d)("Search by Champion", "LeagueFilter"),
+                        searchPlaceholder: Object(E.d)("Search by Champion", "LeagueFilter"),
                         selected: this.getSelected(),
                         sections: this.getSections(),
-                        selectedTitle: Object(C.d)("Selected Champion", "LeagueFilter"),
-                        title: this.state.selected ? this.state.selected.name : Object(C.d)("Champion", "LeagueFilter"),
+                        selectedTitle: Object(E.d)("Selected Champion", "LeagueFilter"),
+                        title: this.state.selected ? this.state.selected.name : Object(E.d)("Champion", "LeagueFilter"),
                         "data-a-target": "league-champion-filter-dropdown"
                     })
                 }, t
-            }(b.Component),
-            qe = We,
-            $e = Object(S.a)(p)(qe),
-            Qe = n(1838),
-            Ye = n.n(Qe),
-            Je = function(e) {
+            }(k.Component),
+            Je = Ye,
+            Xe = Object(b.a)(m)(Je),
+            Ke = n(1844),
+            Ze = n.n(Ke),
+            et = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isLoading: !1,
                         isError: !1
-                    }, t.logger = C.n.logger.withCategory("overwatch-filter"), t.getSections = function() {
+                    }, t.logger = E.n.logger.withCategory("overwatch-filter"), t.getSections = function() {
                         var e = [],
                             n = [],
                             a = [],
@@ -8715,16 +8814,16 @@ webpackJsonp([33], {
                         }
                         var s = [];
                         return e.length > 0 && s.push({
-                            title: Object(C.d)("Offense", "OverwatchFilter"),
+                            title: Object(E.d)("Offense", "OverwatchFilter"),
                             items: e
                         }), n.length > 0 && s.push({
-                            title: Object(C.d)("Defense", "OverwatchFilter"),
+                            title: Object(E.d)("Defense", "OverwatchFilter"),
                             items: n
                         }), a.length > 0 && s.push({
-                            title: Object(C.d)("Tank", "OverwatchFilter"),
+                            title: Object(E.d)("Tank", "OverwatchFilter"),
                             items: a
                         }), i.length > 0 && s.push({
-                            title: Object(C.d)("Support", "OverwatchFilter"),
+                            title: Object(E.d)("Support", "OverwatchFilter"),
                             items: i
                         }), s
                     }, t.getSelected = function() {
@@ -8740,9 +8839,9 @@ webpackJsonp([33], {
                             return t.renderCharacter(t.state.selected, e, !0)
                         }
                     }, t.loadData = function() {
-                        return k.__awaiter(t, void 0, void 0, function() {
+                        return y.__awaiter(t, void 0, void 0, function() {
                             var e, t;
-                            return k.__generator(this, function(a) {
+                            return y.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
                                         if (this.state.isLoading || this.state.isError || this.state.content) return [2];
@@ -8750,7 +8849,7 @@ webpackJsonp([33], {
                                             isLoading: !0
                                         }), a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, n.e(70).then(n.bind(null, 2016))];
+                                        return a.trys.push([1, 3, , 4]), [4, n.e(70).then(n.bind(null, 2028))];
                                     case 2:
                                         return e = a.sent(), this.setState({
                                             content: e,
@@ -8778,11 +8877,11 @@ webpackJsonp([33], {
                             t.searchRef && (t.searchRef.value = ""), t.props.onSelect(e.character)
                         })
                     }, t.renderCharacter = function(e, t, n) {
-                        return void 0 === n && (n = !1), b.createElement(Y, {
+                        return void 0 === n && (n = !1), k.createElement(Q, {
                             key: e.character,
                             name: e.display_name,
                             onClick: t,
-                            spriteAsset: Ye.a,
+                            spriteAsset: Ze.a,
                             spriteOffsetX: e.sprite_x_offset,
                             spriteOffsetY: e.sprite_y_offset,
                             spriteWidth: e.image_width,
@@ -8793,56 +8892,54 @@ webpackJsonp([33], {
                         return t.searchRef = e
                     }, t
                 }
-                return k.__extends(t, e), t.prototype.componentDidMount = function() {
+                return y.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.firstPageLoaded && this.loadData()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     !this.props.firstPageLoaded && e.firstPageLoaded && this.loadData()
                 }, t.prototype.render = function() {
-                    return b.createElement(Q, {
+                    return k.createElement($, {
                         isError: this.state.isError || !1,
                         isLoading: !this.props.firstPageLoaded || this.state.isLoading || !1,
                         onSearch: this.onSearch,
                         searchRefDelegate: this.setSearchRef,
-                        searchPlaceholder: Object(C.d)("Search by Hero", "OverwatchFilter"),
+                        searchPlaceholder: Object(E.d)("Search by Hero", "OverwatchFilter"),
                         selected: this.getSelected(),
                         sections: this.getSections(),
-                        selectedTitle: Object(C.d)("Selected Hero", "OverwatchFilter"),
-                        title: this.state.selected ? this.state.selected.display_name : Object(C.d)("Hero", "OverwatchFilter")
+                        selectedTitle: Object(E.d)("Selected Hero", "OverwatchFilter"),
+                        title: this.state.selected ? this.state.selected.display_name : Object(E.d)("Hero", "OverwatchFilter")
                     })
                 }, t
-            }(b.Component),
-            Xe = Je,
-            Ke = Object(S.a)(g)(Xe),
-            Ze = n(1334),
-            et = n(1839),
-            tt = "directory-container";
+            }(k.Component),
+            tt = et,
+            nt = Object(b.a)(p)(tt),
+            at = n(1845);
         ! function(e) {
             e.Hearthstone = "hearthstone", e.League = "league of legends", e.Overwatch = "overwatch", e.CSGO = "counter-strike%3a global offensive"
-        }(y || (y = {}));
-        var nt = function(e) {
+        }(f || (f = {}));
+        var it = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.getAdditionalFilters = function() {
-                        if (n.state.directoryType === G.a.Communities) return null;
+                        if (n.state.directoryType === B.a.Communities) return null;
                         switch (decodeURI(n.props.match.params.encodedCommunityName).toLowerCase()) {
-                            case y.Hearthstone:
-                                return [b.createElement(Le, {
+                            case f.Hearthstone:
+                                return [k.createElement(Pe, {
                                     onSelect: n.props.onSelectHearthstoneClass,
                                     key: "class"
-                                }), b.createElement(Ve, {
+                                }), k.createElement(ze, {
                                     onSelect: n.props.onSelectHearthstoneMode,
                                     key: "mode"
                                 })];
-                            case y.League:
-                                return b.createElement($e, {
+                            case f.League:
+                                return k.createElement(Xe, {
                                     onSelect: n.props.onSelectLeagueChampion
                                 });
-                            case y.Overwatch:
-                                return b.createElement(Ke, {
+                            case f.Overwatch:
+                                return k.createElement(nt, {
                                     onSelect: n.props.onSelectOverwatchCharacter
                                 });
-                            case y.CSGO:
-                                return b.createElement(K, {
+                            case f.CSGO:
+                                return k.createElement(X, {
                                     onSelect: n.props.onSelectCSGOMap,
                                     key: "map"
                                 });
@@ -8853,63 +8950,55 @@ webpackJsonp([33], {
                         n.setState({
                             directoryWidth: e
                         })
-                    }, n.updateDisplayAdOrder = function() {
-                        var e = document.querySelector('[data-target="' + tt + '"]'),
-                            t = document.querySelector('[data-target="' + Ze.a + '"]'),
-                            n = document.querySelector("#" + A.b.directory.rectangle);
-                        if (t && e && n) {
-                            var a = Math.round((e.clientWidth - 300) / t.clientWidth).toString();
-                            n.style.order !== a && "0" !== a && (n.style.order = a)
-                        }
                     }, n.onSlotAdded = function() {
                         n.setState(function(e) {
                             var t = e.numSlotsAdded + 1;
-                            return t === Object.keys(A.b.directory).length && j.a.display(A.b.directory.banner), {
+                            return t === Object.keys(x.b.directory).length && I.a.display(x.b.directory.banner), {
                                 numSlotsAdded: t
                             }
                         })
                     }, n.state = {
-                        directoryType: Object(H.c)(t.match.path),
+                        directoryType: Object(G.c)(t.match.path),
                         directoryWidth: -1,
                         numSlotsAdded: 0
                     }, n
                 }
-                return k.__extends(t, e), t.prototype.componentWillMount = function() {
-                    A.g.addListener(A.e, this.onSlotAdded)
+                return y.__extends(t, e), t.prototype.componentWillMount = function() {
+                    x.g.addListener(x.e, this.onSlotAdded)
                 }, t.prototype.componentDidMount = function() {
-                    window.addEventListener("resize", this.updateDisplayAdOrder), this.onRender()
+                    this.onRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.props.sideNavExpanded !== e.sideNavExpanded && this.updateDisplayAdOrder(), this.props.match.path !== e.match.path && this.setState({
-                        directoryType: Object(H.c)(e.match.path)
+                    this.props.match.path !== e.match.path && this.setState({
+                        directoryType: Object(G.c)(e.match.path)
                     })
                 }, t.prototype.componentWillUnmount = function() {
-                    window.removeEventListener("resize", this.updateDisplayAdOrder), A.g.removeListener(A.e, this.onSlotAdded)
+                    x.g.removeListener(x.e, this.onSlotAdded)
                 }, t.prototype.render = function() {
                     var e = this;
-                    if (this.props.data.loading && !this.props.data.directory) return b.createElement(q.X, {
+                    if (this.props.data.loading && !this.props.data.directory) return k.createElement(W.X, {
                         fillContent: !0
                     });
-                    if (this.props.data.error) return b.createElement(D.a, {
-                        message: Object(C.d)("Error loading data.", "DirectoryGamePage")
+                    if (this.props.data.error) return k.createElement(w.a, {
+                        message: Object(E.d)("Error loading data.", "DirectoryGamePage")
                     });
-                    if (!this.props.data.directory) return b.createElement(D.a, {
-                        message: Object(C.d)("Game does not exist", "DirectoryGamePage")
+                    if (!this.props.data.directory) return k.createElement(w.a, {
+                        message: Object(E.d)("Game does not exist", "DirectoryGamePage")
                     });
                     var t = null,
                         n = null;
-                    "en" !== this.props.languageCode && (n = b.createElement(q.U, {
+                    "en" !== this.props.languageCode && (n = k.createElement(W.U, {
                         margin: {
                             bottom: 2
                         }
-                    }, b.createElement(q._21, {
-                        type: q._26.H4,
-                        color: q.F.Alt2,
-                        fontSize: q.L.Size5,
-                        transform: q._25.Uppercase,
+                    }, k.createElement(W._21, {
+                        type: W._26.H4,
+                        color: W.F.Alt2,
+                        fontSize: W.L.Size5,
+                        transform: W._25.Uppercase,
                         "data-a-target": "international-section-header"
-                    }, Object(C.d)("All Channels", "DirectoryInternationalSection"))), t = b.createElement(le, {
+                    }, Object(E.d)("All Channels", "DirectoryInternationalSection"))), t = k.createElement(je, {
                         name: this.props.match.params.encodedCommunityName,
                         type: this.props.match.path.startsWith("/communities") ? "COMMUNITY" : "GAME",
                         directoryWidth: this.state.directoryWidth,
@@ -8920,7 +9009,7 @@ webpackJsonp([33], {
                         return t.broadcaster && t.broadcaster.login
                     }).map(function(t, n) {
                         var a = t.node;
-                        return b.createElement(Ze.b, {
+                        return k.createElement(ke.b, {
                             directoryName: decodeURIComponent(e.props.match.params.encodedCommunityName),
                             directoryType: e.state.directoryType,
                             streamIndex: n,
@@ -8929,99 +9018,71 @@ webpackJsonp([33], {
                         })
                     });
                     if (i.length > 0) {
-                        var r = q._34.Large;
-                        d(decodeURIComponent(this.props.match.params.encodedCommunityName)) && (r = q._34.Medium);
-                        var o = !this.props.data.loading && !this.props.data.error && "" !== this.props.data.directory.id && !!this.props.data.directory.streams.pageInfo.hasNextPage;
-                        a = b.createElement(q.U, {
-                            flexShrink: 0,
-                            "data-target": tt
-                        }, b.createElement(q._33, {
-                            gutterSize: q._35.Small,
-                            childWidth: r,
-                            placeholderItems: 20
-                        }, b.createElement(x.a, {
-                            injectStyles: {
-                                textAlign: "center",
-                                marginBottom: 20,
-                                order: 999,
-                                width: 300,
-                                height: 250
-                            },
-                            adUnit: A.d.directory,
-                            slotID: A.b.directory.rectangle,
-                            adSize: A.c.directory.rectangle,
-                            targeting: {
-                                pagetype: A.a.games,
-                                game: this.props.data.directory.displayName
-                            },
-                            key: -1,
-                            autoEnable: !1
-                        }), i), b.createElement(F.a, {
-                            enabled: o,
-                            loadMore: this.props.loadMore,
-                            pixelThreshold: 200
-                        })), this.state.directoryType === G.a.Games && (a = b.createElement(Te, {
-                            gameName: decodeURIComponent(this.props.match.params.encodedCommunityName)
-                        }, a))
+                        var r = !this.props.data.loading && !this.props.data.error && "" !== this.props.data.directory.id && !!this.props.data.directory.streams.pageInfo.hasNextPage;
+                        a = k.createElement(Ce, {
+                            directoryName: this.props.data.directory.displayName,
+                            communityName: decodeURIComponent(this.props.match.params.encodedCommunityName),
+                            canLoadMore: r,
+                            loadMore: this.props.loadMore
+                        }, i)
                     } else {
-                        var l = Object(C.d)("There are currently no channels streaming to this community", "DirectoryGamePage");
-                        this.state.directoryType === G.a.Games && (l = Object(C.d)("No live channels for this game", "DirectoryGamePage")), a = b.createElement(q.U, {
-                            display: q.H.Flex,
-                            alignItems: q.c.Center,
-                            justifyContent: q.T.Center,
+                        var o = Object(E.d)("There are currently no channels streaming to this community", "DirectoryGamePage");
+                        this.state.directoryType === B.a.Games && (o = Object(E.d)("No live channels for this game", "DirectoryGamePage")), a = k.createElement(W.U, {
+                            display: W.H.Flex,
+                            alignItems: W.c.Center,
+                            justifyContent: W.T.Center,
                             fullWidth: !0,
                             padding: {
                                 y: 3
                             }
-                        }, b.createElement(q._21, {
-                            color: q.F.Alt2,
-                            fontSize: q.L.Size4,
+                        }, k.createElement(W._21, {
+                            color: W.F.Alt2,
+                            fontSize: W.L.Size4,
                             italic: !0
-                        }, l))
+                        }, o))
                     }
-                    var s = !!this.props.data.directory.product;
-                    return b.createElement(F.b, {
+                    var l = !!this.props.data.directory.product;
+                    return k.createElement(O.b, {
                         className: "directory-game-page",
                         "data-a-target": "game-scroller"
-                    }, b.createElement(q.U, null, b.createElement(M.a, {
+                    }, k.createElement(W.U, null, k.createElement(M.a, {
                         directoryType: this.state.directoryType,
                         directoryName: decodeURIComponent(this.props.match.params.encodedCommunityName),
-                        activeTab: P.a.DirectoryPage,
-                        showGameDetails: s
-                    }), b.createElement(q.U, {
+                        activeTab: A.a.DirectoryPage,
+                        showGameDetails: l
+                    }), k.createElement(W.U, {
                         padding: {
                             top: 2,
                             bottom: 3,
                             x: 3
                         }
-                    }, b.createElement(x.a, {
+                    }, k.createElement(L.a, {
                         injectStyles: {
                             textAlign: "center",
                             marginBottom: 30
                         },
-                        adUnit: A.d.directory,
-                        slotID: A.b.directory.banner,
-                        adSize: A.c.directory.banner,
+                        adUnit: x.d.directory,
+                        slotID: x.b.directory.banner,
+                        adSize: x.c.directory.banner,
                         targeting: {
-                            pagetype: A.a.games,
+                            pagetype: x.a.games,
                             game: this.props.data.directory.displayName
                         },
-                        slotRendered: this.updateDisplayAdOrder,
                         autoEnable: !1
-                    }), t, b.createElement(q.U, {
+                    }), t, k.createElement(W.U, {
                         margin: {
                             bottom: 2
                         },
-                        display: q.H.Flex,
-                        flexDirection: q.J.Row
-                    }, b.createElement(w.a, null), this.getAdditionalFilters()), n, a, b.createElement(O.a, {
+                        display: W.H.Flex,
+                        flexDirection: W.J.Row
+                    }, k.createElement(C.a, null), this.getAdditionalFilters()), n, a, k.createElement(D.a, {
                         onResize: this.onResize
-                    })), this.props.firstPageLoaded && b.createElement(B.a, {
+                    })), this.props.firstPageLoaded && k.createElement(V.a, {
                         gameID: this.props.data.directory.id
                     })))
                 }, t.prototype.onRender = function() {
-                    this.props.data.loading || (this.props.latencyTracking.reportInteractive(), this.props.data.directory && C.n.setPageTitle(this.props.data.directory.displayName)), this.updateDisplayAdOrder()
-                }, t = k.__decorate([Object(T.a)(et, {
+                    this.props.data.loading || (this.props.latencyTracking.reportInteractive(), this.props.data.directory && E.n.setPageTitle(this.props.data.directory.displayName))
+                }, t = y.__decorate([Object(F.a)(at, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -9043,20 +9104,20 @@ webpackJsonp([33], {
                         }
                     },
                     props: function(e) {
-                        return k.__assign({}, e, {
+                        return y.__assign({}, e, {
                             loadMore: function() {
                                 return e.data.fetchMore({
-                                    query: et,
-                                    variables: k.__assign({}, e.data.variables, {
+                                    query: at,
+                                    variables: y.__assign({}, e.data.variables, {
                                         cursor: e.data.directory.streams.edges[e.data.directory.streams.edges.length - 1].cursor
                                     }),
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult,
                                             a = n;
                                         return {
-                                            directory: k.__assign({}, a.directory, {
-                                                streams: k.__assign({}, a.directory.streams, {
-                                                    edges: Object(R.b)(e.directory.streams.edges, a.directory.streams.edges)
+                                            directory: y.__assign({}, a.directory, {
+                                                streams: y.__assign({}, a.directory.streams, {
+                                                    edges: Object(U.b)(e.directory.streams.edges, a.directory.streams.edges)
                                                 })
                                             })
                                         }
@@ -9065,10 +9126,10 @@ webpackJsonp([33], {
                             }
                         })
                     }
-                }), Object(V.c)("DirectoryGamePage", {
-                    destination: I.a.DirectoryGameIndex
-                }), Object(U.a)({
-                    location: L.PageviewLocation.Directory,
+                }), Object(P.c)("DirectoryGamePage", {
+                    destination: R.a.DirectoryGameIndex
+                }), Object(T.a)({
+                    location: j.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
@@ -9078,9 +9139,9 @@ webpackJsonp([33], {
                         }
                     }
                 })], t)
-            }(b.Component),
-            at = nt,
-            it = function(e) {
+            }(k.Component),
+            rt = it,
+            ot = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.onSelectHearthstoneClass = function(e) {
@@ -9105,9 +9166,9 @@ webpackJsonp([33], {
                         })
                     }, t
                 }
-                return k.__extends(t, e), t.prototype.render = function() {
-                    var e = at;
-                    return b.createElement(e, k.__assign({
+                return y.__extends(t, e), t.prototype.render = function() {
+                    var e = rt;
+                    return k.createElement(e, y.__assign({
                         hearthstoneClass: this.state.hearthstoneClass,
                         hearthstoneMode: this.state.hearthstoneMode,
                         leagueChampion: this.state.leagueChampion,
@@ -9120,60 +9181,49 @@ webpackJsonp([33], {
                         overwatchCharacter: this.state.overwatchCharacter
                     }, this.props))
                 }, t
-            }(b.Component),
-            rt = Object(S.a)(h, v)(it),
-            ot = n(1840),
-            lt = "directory-container",
-            st = function(e) {
+            }(k.Component),
+            lt = Object(b.a)(g, h)(ot),
+            st = n(1846),
+            dt = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.updateDisplayAdOrder = function() {
-                        var e = document.querySelector('[data-target="' + lt + '"]'),
-                            t = document.querySelector('[data-target="' + Ze.a + '"]'),
-                            n = document.querySelector("#" + A.b.directory.rectangle);
-                        if (t && e && n) {
-                            var a = Math.round((e.clientWidth - 300) / t.clientWidth).toString();
-                            n.style.order !== a && "0" !== a && (n.style.order = a)
-                        }
-                    }, n.onSlotAdded = function() {
+                    return n.onSlotAdded = function() {
                         n.setState(function(e) {
                             var t = e.numSlotsAdded + 1;
-                            return t === Object.keys(A.b.directory).length && j.a.display(A.b.directory.banner), {
+                            return t === Object.keys(x.b.directory).length && I.a.display(x.b.directory.banner), {
                                 numSlotsAdded: t
                             }
                         })
                     }, n.state = {
-                        directoryType: Object(H.c)(t.match.path),
+                        directoryType: Object(G.c)(t.match.path),
                         numSlotsAdded: 0
                     }, n
                 }
-                return k.__extends(t, e), t.prototype.componentWillMount = function() {
-                    A.g.addListener(A.e, this.onSlotAdded)
+                return y.__extends(t, e), t.prototype.componentWillMount = function() {
+                    x.g.addListener(x.e, this.onSlotAdded)
                 }, t.prototype.componentDidMount = function() {
-                    window.addEventListener("resize", this.updateDisplayAdOrder), this.onRender()
+                    this.onRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.props.sideNavExpanded !== e.sideNavExpanded && this.updateDisplayAdOrder()
                 }, t.prototype.componentWillUnmount = function() {
-                    window.removeEventListener("resize", this.updateDisplayAdOrder), A.g.removeListener(A.e, this.onSlotAdded)
+                    x.g.removeListener(x.e, this.onSlotAdded)
                 }, t.prototype.render = function() {
                     var e = this;
-                    if (this.props.data.loading && !this.props.data.directory) return b.createElement(q.X, {
+                    if (this.props.data.loading && !this.props.data.directory) return k.createElement(W.X, {
                         fillContent: !0
                     });
-                    if (this.props.data.error) return b.createElement(D.a, {
-                        message: Object(C.d)("Error loading data.", "DirectoryByLanguagePapge")
+                    if (this.props.data.error) return k.createElement(w.a, {
+                        message: Object(E.d)("Error loading data.", "DirectoryByLanguagePapge")
                     });
-                    if (!this.props.data.directory) return b.createElement(D.a, {
-                        message: Object(C.d)("Game does not exist", "DirectoryByLanguagePapge")
+                    if (!this.props.data.directory) return k.createElement(w.a, {
+                        message: Object(E.d)("Game does not exist", "DirectoryByLanguagePapge")
                     });
                     var t, n = this.props.data.directory.streams.edges.filter(function(e) {
                         var t = e.node;
                         return t.broadcaster && t.broadcaster.login
                     }).map(function(t, n) {
                         var a = t.node;
-                        return b.createElement(Ze.b, {
+                        return k.createElement(ke.b, {
                             directoryName: decodeURIComponent(e.props.match.params.encodedCommunityName),
                             directoryType: e.state.directoryType,
                             streamIndex: n,
@@ -9182,88 +9232,60 @@ webpackJsonp([33], {
                         })
                     });
                     if (n.length > 0) {
-                        var a = q._34.Large;
-                        d(decodeURIComponent(this.props.match.params.encodedCommunityName)) && (a = q._34.Medium);
-                        var r = !this.props.data.loading && !this.props.data.error && "" !== this.props.data.directory.id && !!this.props.data.directory.streams.pageInfo.hasNextPage;
-                        t = b.createElement(q.U, {
-                            flexShrink: 0,
-                            "data-target": lt
-                        }, b.createElement(q._33, {
-                            gutterSize: q._35.Small,
-                            childWidth: a,
-                            placeholderItems: 20
-                        }, b.createElement(x.a, {
-                            injectStyles: {
-                                textAlign: "center",
-                                marginBottom: 20,
-                                order: 999,
-                                width: 300,
-                                height: 250
-                            },
-                            adUnit: A.d.directory,
-                            slotID: A.b.directory.rectangle,
-                            adSize: A.c.directory.rectangle,
-                            targeting: {
-                                pagetype: A.a.games,
-                                game: this.props.data.directory.displayName
-                            },
-                            key: -1,
-                            autoEnable: !1
-                        }), n), b.createElement(F.a, {
-                            enabled: r,
-                            loadMore: this.props.loadMore,
-                            pixelThreshold: 200
-                        })), this.state.directoryType === G.a.Games && (t = b.createElement(Te, {
-                            gameName: decodeURIComponent(this.props.match.params.encodedCommunityName)
-                        }, t))
+                        var a = !this.props.data.loading && !this.props.data.error && "" !== this.props.data.directory.id && !!this.props.data.directory.streams.pageInfo.hasNextPage;
+                        t = k.createElement(Ce, {
+                            directoryName: this.props.data.directory.displayName,
+                            communityName: decodeURIComponent(this.props.match.params.encodedCommunityName),
+                            canLoadMore: a,
+                            loadMore: this.props.loadMore
+                        }, n)
                     } else {
-                        var o = Object(C.d)("There are currently no channels streaming to this community", "DirectoryByLanguagePapge");
-                        this.state.directoryType === G.a.Games && (o = Object(C.d)("No live channels for this game", "DirectoryByLanguagePapge")), t = b.createElement(q.U, {
-                            display: q.H.Flex,
-                            alignItems: q.c.Center,
-                            justifyContent: q.T.Center,
+                        var i = Object(E.d)("There are currently no channels streaming to this community", "DirectoryByLanguagePapge");
+                        this.state.directoryType === B.a.Games && (i = Object(E.d)("No live channels for this game", "DirectoryByLanguagePapge")), t = k.createElement(W.U, {
+                            display: W.H.Flex,
+                            alignItems: W.c.Center,
+                            justifyContent: W.T.Center,
                             fullWidth: !0,
                             padding: {
                                 y: 3
                             }
-                        }, b.createElement(q._21, {
-                            color: q.F.Alt2,
-                            fontSize: q.L.Size4,
+                        }, k.createElement(W._21, {
+                            color: W.F.Alt2,
+                            fontSize: W.L.Size4,
                             italic: !0
-                        }, o))
+                        }, i))
                     }
-                    var l = !!this.props.data.directory.product;
-                    return b.createElement(F.b, {
+                    var r = !!this.props.data.directory.product;
+                    return k.createElement(O.b, {
                         className: "game",
                         "data-a-target": "game-scroller"
-                    }, b.createElement(q.U, null, b.createElement(M.a, {
+                    }, k.createElement(W.U, null, k.createElement(M.a, {
                         directoryType: this.state.directoryType,
                         directoryName: decodeURIComponent(this.props.match.params.encodedCommunityName),
-                        showGameDetails: l
-                    }), b.createElement(q.U, {
+                        showGameDetails: r
+                    }), k.createElement(W.U, {
                         padding: {
                             top: 2,
                             bottom: 3,
                             x: 3
                         }
-                    }, b.createElement(x.a, {
+                    }, k.createElement(L.a, {
                         injectStyles: {
                             textAlign: "center",
                             marginBottom: 30
                         },
-                        adUnit: A.d.directory,
-                        slotID: A.b.directory.banner,
-                        adSize: A.c.directory.banner,
+                        adUnit: x.d.directory,
+                        slotID: x.b.directory.banner,
+                        adSize: x.c.directory.banner,
                         targeting: {
-                            pagetype: A.a.games,
+                            pagetype: x.a.games,
                             game: this.props.data.directory.displayName
                         },
-                        slotRendered: this.updateDisplayAdOrder,
                         autoEnable: !1
-                    }), b.createElement(i, null), t)))
+                    }), k.createElement(d, null), t)))
                 }, t.prototype.onRender = function() {
-                    this.props.data.loading || (this.props.latencyTracking.reportInteractive(), this.props.data.directory && C.n.setPageTitle(this.props.data.directory.displayName)), this.updateDisplayAdOrder()
-                }, t = k.__decorate([Object(T.a)(ot, {
+                    this.props.data.loading || (this.props.latencyTracking.reportInteractive(), this.props.data.directory && E.n.setPageTitle(this.props.data.directory.displayName))
+                }, t = y.__decorate([Object(F.a)(st, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -9276,20 +9298,20 @@ webpackJsonp([33], {
                         }
                     },
                     props: function(e) {
-                        return k.__assign({}, e, {
+                        return y.__assign({}, e, {
                             loadMore: function() {
                                 return e.data.fetchMore({
-                                    query: ot,
-                                    variables: k.__assign({}, e.data.variables, {
+                                    query: st,
+                                    variables: y.__assign({}, e.data.variables, {
                                         cursor: e.data.directory.streams.edges[e.data.directory.streams.edges.length - 1].cursor
                                     }),
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult,
                                             a = n;
                                         return {
-                                            directory: k.__assign({}, a.directory, {
-                                                streams: k.__assign({}, a.directory.streams, {
-                                                    edges: Object(R.b)(e.directory.streams.edges, a.directory.streams.edges)
+                                            directory: y.__assign({}, a.directory, {
+                                                streams: y.__assign({}, a.directory.streams, {
+                                                    edges: Object(U.b)(e.directory.streams.edges, a.directory.streams.edges)
                                                 })
                                             })
                                         }
@@ -9298,10 +9320,10 @@ webpackJsonp([33], {
                             }
                         })
                     }
-                }), Object(V.c)("DirectoryCommunityByLanguagePage", {
-                    destination: I.a.DirectoryCommunityByLanguage
-                }), Object(U.a)({
-                    location: L.PageviewLocation.Directory,
+                }), Object(P.c)("DirectoryCommunityByLanguagePage", {
+                    destination: R.a.DirectoryCommunityByLanguage
+                }), Object(T.a)({
+                    location: j.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
@@ -9311,16 +9333,16 @@ webpackJsonp([33], {
                         }
                     }
                 })], t)
-            }(b.Component),
-            dt = st,
-            ct = Object(S.a)(f)(dt);
+            }(k.Component),
+            ct = dt,
+            ut = Object(b.a)(v)(ct);
         n.d(t, "DirectoryGamePage", function() {
-            return rt
+            return lt
         }), n.d(t, "DirectoryCommunityByLanguagePage", function() {
-            return ct
+            return ut
         })
     },
-    917: function(e, t, n) {
+    921: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
@@ -9451,7 +9473,7 @@ webpackJsonp([33], {
                 }, e
             }()
     },
-    918: function(e, t, n) {
+    922: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -9509,7 +9531,7 @@ webpackJsonp([33], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    919: function(e, t, n) {
+    923: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -9519,18 +9541,86 @@ webpackJsonp([33], {
             e.ChannelFeedComment = "CHANNEL_FEED_COMMENT_REPORT", e.ChannelFeedPost = "CHANNEL_FEED_POST_REPORT", e.Chat = "CHAT_REPORT", e.Clip = "CLIP_REPORT", e.Collection = "COLLECTION_REPORT", e.Community = "COMMUNITY_REPORT", e.Event = "EVENT_REPORT", e.Extension = "EXTENSION_REPORT", e.LiveUp = "LIVE_UP_REPORT", e.Raid = "RAID_REPORT", e.StreamUp = "STREAM_UP_REPORT", e.User = "USER_REPORT", e.VideoChatMessage = "VOD_COMMENT_REPORT", e.Vod = "VOD_REPORT"
         }(a || (a = {}))
     },
-    921: function(e, t, n) {
+    925: function(e, t, n) {
+        "use strict";
+
+        function a(e) {
+            return function(t) {
+                var n = function(n) {
+                    function a(t) {
+                        var a = n.call(this, t) || this;
+                        return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
+                            if (!(a.tracked || e.skip && e.skip(a.props))) {
+                                a.tracked = !0, s.n.adBlockSentinel.pageTransition();
+                                var t = {};
+                                "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = i.__assign({}, e.properties));
+                                var n = i.__assign({}, a.props);
+                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
+                                var r = a.referenceTracking,
+                                    o = r.content,
+                                    l = r.medium,
+                                    d = r.content_index;
+                                s.n.tracking.trackPageview(i.__assign({
+                                    content: o,
+                                    medium: l,
+                                    content_index: d,
+                                    location: e.location
+                                }, t))
+                            }
+                        }, s.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
+                    }
+                    return i.__extends(a, n), a.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
+                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
+                        })
+                    }, a.prototype.componentDidUpdate = function() {
+                        this.trackPageview()
+                    }, a.prototype.render = function() {
+                        return o.createElement(t, i.__assign({}, this.props))
+                    }, a.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? r.parse(e.search) : {},
+                            n = {
+                                content: t.tt_content,
+                                content_index: t.tt_content_index,
+                                medium: t.tt_medium
+                            };
+                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
+                            var a = "",
+                                i = r.stringify(t);
+                            i.length > 0 && (a = "?" + i), this.props.history.replace({
+                                pathname: e.pathname,
+                                hash: e.hash,
+                                search: a
+                            })
+                        }
+                        return n
+                    }, a
+                }(o.Component);
+                return Object(l.f)(n)
+            }
+        }
+        var i = n(0),
+            r = n(21),
+            o = n(1),
+            l = n(12),
+            s = n(2);
+        n.d(t, "a", function() {
+            return a
+        })
+    },
+    926: function(e, t, n) {
         "use strict";
         var a = n(0),
             i = n(4),
             r = n(1),
             o = n(11),
             l = n(2),
-            s = n(9),
+            s = n(8),
             d = n(6),
-            c = n(926),
+            c = n(930),
             u = n(3),
-            m = n(944),
+            m = n(949),
             p = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -9578,7 +9668,7 @@ webpackJsonp([33], {
                     }
                 }
             })(p),
-            h = (n(945), n(946));
+            h = (n(950), n(951));
         n.d(t, "a", function() {
             return f
         }), n.d(t, "b", function() {
@@ -9755,75 +9845,7 @@ webpackJsonp([33], {
                 }
             }))(y)
     },
-    922: function(e, t, n) {
-        "use strict";
-
-        function a(e) {
-            return function(t) {
-                var n = function(n) {
-                    function a(t) {
-                        var a = n.call(this, t) || this;
-                        return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
-                            if (!(a.tracked || e.skip && e.skip(a.props))) {
-                                a.tracked = !0, s.n.adBlockSentinel.pageTransition();
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = i.__assign({}, e.properties));
-                                var n = i.__assign({}, a.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var r = a.referenceTracking,
-                                    o = r.content,
-                                    l = r.medium,
-                                    d = r.content_index;
-                                s.n.tracking.trackPageview(i.__assign({
-                                    content: o,
-                                    medium: l,
-                                    content_index: d,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, s.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
-                    }
-                    return i.__extends(a, n), a.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, a.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, a.prototype.render = function() {
-                        return o.createElement(t, i.__assign({}, this.props))
-                    }, a.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? r.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var a = "",
-                                i = r.stringify(t);
-                            i.length > 0 && (a = "?" + i), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: a
-                            })
-                        }
-                        return n
-                    }, a
-                }(o.Component);
-                return Object(l.f)(n)
-            }
-        }
-        var i = n(0),
-            r = n(21),
-            o = n(1),
-            l = n(12),
-            s = n(2);
-        n.d(t, "a", function() {
-            return a
-        })
-    },
-    926: function(e, t, n) {
+    930: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -9910,7 +9932,56 @@ webpackJsonp([33], {
             return a
         })
     },
-    927: function(e, t, n) {
+    931: function(e, t, n) {
+        "use strict";
+
+        function a(e) {
+            return Object(s.bindActionCreators)({
+                closeModal: c.c
+            }, e)
+        }
+        var i = n(932),
+            r = n(0),
+            o = n(1),
+            l = n(9),
+            s = n(11),
+            d = n(134),
+            c = n(50),
+            u = n(6),
+            m = n(3),
+            p = (n(957), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleClose = function(e) {
+                        t.props.closeModal(), t.props.onClose && t.props.onClose(e)
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return o.createElement(m._17, {
+                        className: "reporting-modal__container",
+                        background: m.m.Base,
+                        padding: {
+                            x: 2,
+                            y: 3
+                        }
+                    }, o.createElement(i.a, {
+                        onClose: this.handleClose,
+                        reportContext: this.props.reportContext,
+                        title: this.props.title,
+                        defaultDescription: this.props.defaultDescription
+                    }), o.createElement(d.a, null))
+                }, t
+            }(o.Component)),
+            g = Object(s.compose)(Object(u.c)("ReportUserModal"), Object(l.a)(null, a))(p);
+        n.d(t, !1, function() {}), n.d(t, !1, function() {
+            return i.a
+        }), n.d(t, !1, function() {
+            return p
+        }), n.d(t, "a", function() {
+            return g
+        })
+    },
+    932: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -9923,19 +9994,19 @@ webpackJsonp([33], {
         });
         var i = n(0),
             r = n(1),
-            o = (n.n(r), n(8)),
+            o = (n.n(r), n(9)),
             l = n(11),
             s = n(2),
-            d = n(9),
+            d = n(8),
             c = n(23),
             u = n(14),
             m = n(6),
-            p = n(921),
-            g = n(919),
-            h = n(926),
-            v = n(921),
-            f = n(947),
-            y = (n.n(f), n(948)),
+            p = n(926),
+            g = n(923),
+            h = n(930),
+            v = n(926),
+            f = n(952),
+            y = (n.n(f), n(953)),
             k = (n.n(y), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -10034,56 +10105,7 @@ webpackJsonp([33], {
                 name: "reportUser"
             }), Object(m.c)("ReportUser"), Object(o.a)(a, null))(k)
     },
-    928: function(e, t, n) {
-        "use strict";
-
-        function a(e) {
-            return Object(s.bindActionCreators)({
-                closeModal: c.c
-            }, e)
-        }
-        var i = n(927),
-            r = n(0),
-            o = n(1),
-            l = n(8),
-            s = n(11),
-            d = n(134),
-            c = n(50),
-            u = n(6),
-            m = n(3),
-            p = (n(953), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleClose = function(e) {
-                        t.props.closeModal(), t.props.onClose && t.props.onClose(e)
-                    }, t
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(m._17, {
-                        className: "reporting-modal__container",
-                        background: m.m.Base,
-                        padding: {
-                            x: 2,
-                            y: 3
-                        }
-                    }, o.createElement(i.a, {
-                        onClose: this.handleClose,
-                        reportContext: this.props.reportContext,
-                        title: this.props.title,
-                        defaultDescription: this.props.defaultDescription
-                    }), o.createElement(d.a, null))
-                }, t
-            }(o.Component)),
-            g = Object(s.compose)(Object(u.c)("ReportUserModal"), Object(l.a)(null, a))(p);
-        n.d(t, !1, function() {}), n.d(t, !1, function() {
-            return i.a
-        }), n.d(t, !1, function() {
-            return p
-        }), n.d(t, "a", function() {
-            return g
-        })
-    },
-    944: function(e, t) {
+    949: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10171,8 +10193,8 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    945: function(e, t) {},
-    946: function(e, t) {
+    950: function(e, t) {},
+    951: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10326,7 +10348,7 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    947: function(e, t) {
+    952: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10427,7 +10449,7 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    948: function(e, t) {
+    953: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10515,8 +10537,8 @@ webpackJsonp([33], {
         };
         e.exports = n
     },
-    953: function(e, t) {},
-    954: function(e, t, n) {
+    957: function(e, t) {},
+    958: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -10526,7 +10548,7 @@ webpackJsonp([33], {
             e.Games = "GAMES", e.Communities = "COMMUNITIES", e.Creative = "CREATIVE"
         }(a || (a = {}))
     },
-    959: function(e, t, n) {
+    963: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
@@ -10582,83 +10604,7 @@ webpackJsonp([33], {
                 }, t
             }(i.Component)
     },
-    966: function(e, t, n) {
-        "use strict";
-        var a, i = n(0),
-            r = n(1),
-            o = n(2);
-        ! function(e) {
-            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
-        }(a || (a = {}));
-        var l = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = o.b.get(this.props.name, a.Off);
-                    return e === a.On || e === a.StaffOnly && this.props.isStaff ? r.Children.only(this.props.children) : null
-                }, t
-            }(r.Component),
-            s = l;
-        n.d(t, "a", function() {
-            return a
-        }), n.d(t, !1, function() {
-            return l
-        }), n.d(t, !1, function() {
-            return s
-        })
-    },
-    985: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return a
-        });
-        var a = {
-            CommunitiesAvatar: "avatar_image",
-            CommunitiesCover: "cover_image",
-            Default: "encoded_image",
-            EventCoverImage: "event_cover_image"
-        }
-    },
-    986: function(e, t, n) {
-        "use strict";
-
-        function a(e, t) {
-            var n = this;
-            return function(a) {
-                return o.__awaiter(n, void 0, void 0, function() {
-                    var n, i;
-                    return o.__generator(this, function(o) {
-                        return n = new Set(r()), t ? n.add(e) : n.delete(e), i = Array.from(n), l.k.set(c, i), a(Object(d.b)(i)), [2]
-                    })
-                })
-            }
-        }
-
-        function i() {
-            var e = this;
-            return function(t) {
-                return o.__awaiter(e, void 0, void 0, function() {
-                    return o.__generator(this, function(e) {
-                        return l.k.set(c, []), t(Object(d.b)([])), [2]
-                    })
-                })
-            }
-        }
-
-        function r() {
-            return l.k.get(c, []).filter(function(e) {
-                return s.a.has(e)
-            })
-        }
-        t.c = a, t.a = i, t.b = r;
-        var o = n(0),
-            l = n(2),
-            s = n(987),
-            d = n(988),
-            c = "languageDirectoryFilters"
-    },
-    987: function(e, t, n) {
+    968: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -10769,7 +10715,83 @@ webpackJsonp([33], {
                 return e.code
             }))
     },
-    988: function(e, t, n) {
+    979: function(e, t, n) {
+        "use strict";
+        var a, i = n(0),
+            r = n(1),
+            o = n(2);
+        ! function(e) {
+            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
+        }(a || (a = {}));
+        var l = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = o.b.get(this.props.name, a.Off);
+                    return e === a.On || e === a.StaffOnly && this.props.isStaff ? r.Children.only(this.props.children) : null
+                }, t
+            }(r.Component),
+            s = l;
+        n.d(t, "a", function() {
+            return a
+        }), n.d(t, !1, function() {
+            return l
+        }), n.d(t, !1, function() {
+            return s
+        })
+    },
+    990: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return a
+        });
+        var a = {
+            CommunitiesAvatar: "avatar_image",
+            CommunitiesCover: "cover_image",
+            Default: "encoded_image",
+            EventCoverImage: "event_cover_image"
+        }
+    },
+    992: function(e, t, n) {
+        "use strict";
+
+        function a(e, t) {
+            var n = this;
+            return function(a) {
+                return o.__awaiter(n, void 0, void 0, function() {
+                    var n, i;
+                    return o.__generator(this, function(o) {
+                        return n = new Set(r()), t ? n.add(e) : n.delete(e), i = Array.from(n), l.k.set(c, i), a(Object(d.b)(i)), [2]
+                    })
+                })
+            }
+        }
+
+        function i() {
+            var e = this;
+            return function(t) {
+                return o.__awaiter(e, void 0, void 0, function() {
+                    return o.__generator(this, function(e) {
+                        return l.k.set(c, []), t(Object(d.b)([])), [2]
+                    })
+                })
+            }
+        }
+
+        function r() {
+            return l.k.get(c, []).filter(function(e) {
+                return s.a.has(e)
+            })
+        }
+        t.c = a, t.a = i, t.b = r;
+        var o = n(0),
+            l = n(2),
+            s = n(968),
+            d = n(993),
+            c = "languageDirectoryFilters"
+    },
+    993: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -10783,7 +10805,7 @@ webpackJsonp([33], {
         }), t.b = a;
         var i = "core.user-preferences.LANGUAGE_PREFERENCES_UPDATED"
     },
-    990: function(e, t, n) {
+    995: function(e, t, n) {
         "use strict";
 
         function a() {
@@ -10806,4 +10828,4 @@ webpackJsonp([33], {
             o = "header.DIRECTORY_HEADER_EDIT_DISABLED"
     }
 });
-//# sourceMappingURL=pages.directory-by-language-41cf122c7a08471d78e8ead4442bf1c4.js.map
+//# sourceMappingURL=pages.directory-by-language-221d4c04a00c2b905fcdf05d060e0a7f.js.map

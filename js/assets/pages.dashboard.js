@@ -1,5 +1,5 @@
 webpackJsonp([36], {
-    1004: function(e, t, n) {
+    1008: function(e, t, n) {
         "use strict";
 
         function r(e, t) {
@@ -40,13 +40,13 @@ webpackJsonp([36], {
             e[e.SECOND = 0] = "SECOND", e[e.MINUTE = 1] = "MINUTE", e[e.HOUR = 2] = "HOUR", e[e.DAY = 3] = "DAY", e[e.WEEK = 4] = "WEEK", e[e.MONTH = 5] = "MONTH"
         }(i || (i = {}))
     },
-    1005: function(e, t, n) {
+    1009: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
         });
         var r = n(1),
-            a = (n.n(r), n(418)),
+            a = (n.n(r), n(419)),
             i = function(e) {
                 var t, n = e.emote,
                     i = n.alt || "";
@@ -64,7 +64,7 @@ webpackJsonp([36], {
                 })
             }
     },
-    1006: function(e, t, n) {
+    1010: function(e, t, n) {
         "use strict";
         var r = n(0),
             a = n(1),
@@ -93,16 +93,16 @@ webpackJsonp([36], {
             return o
         })
     },
-    1008: function(e, t) {},
-    1009: function(e, t, n) {
+    1012: function(e, t) {},
+    1013: function(e, t, n) {
         "use strict";
-        e.exports = {}, e.exports.Arc = n(1484), e.exports.Line = n(1485), e.exports.Point = n(1486), e.exports.Rectangle = n(1487)
+        e.exports = {}, e.exports.Arc = n(1489), e.exports.Line = n(1490), e.exports.Point = n(1491), e.exports.Rectangle = n(1492)
     },
-    1014: function(e, t) {},
-    1015: function(e, t) {},
-    1016: function(e, t) {},
-    1017: function(e, t) {},
-    1019: function(e, t, n) {
+    1019: function(e, t) {},
+    1020: function(e, t) {},
+    1021: function(e, t) {},
+    1022: function(e, t) {},
+    1024: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -220,32 +220,32 @@ webpackJsonp([36], {
         }
         var l = n(0),
             u = n(1),
-            d = n(8),
+            d = n(9),
             c = n(22),
             m = n(11),
             h = n(37),
-            p = n(955),
-            f = n(941),
+            p = n(959),
+            f = n(945),
             _ = n(51),
             g = n(35),
             y = n(138),
             v = n(19),
             b = n(45),
-            M = n(408),
-            k = n(929),
-            L = n(956),
-            S = n(967),
-            w = n(930),
-            D = n(980),
-            C = n(984),
+            M = n(409),
+            k = n(937),
+            L = n(961),
+            S = n(980),
+            w = n(938),
+            D = n(985),
+            C = n(989),
             x = n(2),
             T = n(30),
             Y = n(64),
-            E = n(9),
+            E = n(8),
             O = n(4),
             j = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
             H = n(3),
-            A = (n(1020), function(e) {
+            A = (n(1025), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onColorSelected = function(e) {
@@ -304,8 +304,8 @@ webpackJsonp([36], {
                 }, t
             }(u.Component)),
             R = n(21),
-            F = n(1021),
-            N = (n(1022), function(e) {
+            F = n(1026),
+            N = (n(1027), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.onGlobalBadgeClicked = function(e) {
@@ -526,7 +526,7 @@ webpackJsonp([36], {
                 })], t)
             }(u.Component)),
             I = n(52),
-            P = n(938),
+            P = n(943),
             U = "edit-appearanmce-button",
             W = function(e) {
                 function t() {
@@ -560,9 +560,9 @@ webpackJsonp([36], {
                 }, t
             }(u.Component),
             z = n(50),
-            V = n(928),
+            V = n(931),
             B = n(12),
-            q = n(917),
+            q = n(921),
             G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -603,11 +603,11 @@ webpackJsonp([36], {
                 }, t
             }(u.Component),
             J = n(23),
-            K = n(932),
-            $ = n(951),
-            Q = n(1023),
-            Z = n(1024),
-            X = (n(1025), n(1026)),
+            K = n(940),
+            $ = n(956),
+            Q = n(1028),
+            Z = n(1029),
+            X = (n(1030), n(1031)),
             ee = function(e, t, n) {
                 var r = e.readQuery({
                     query: Z,
@@ -756,7 +756,7 @@ webpackJsonp([36], {
                 })], t)
             }(u.Component),
             re = ne,
-            ae = n(919),
+            ae = n(923),
             ie = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -888,8 +888,8 @@ webpackJsonp([36], {
                 }, t
             }(u.Component),
             oe = Object(d.a)(a, i)(ie),
-            se = n(1027),
-            le = (n(1028), function(e) {
+            se = n(1032),
+            le = (n(1033), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1200,9 +1200,9 @@ webpackJsonp([36], {
                             padding: .5
                         }, Object(L.c)(t)))
                     })
-                }, t = l.__decorate([Object(E.a)(se, function(e) {
-                    return {
-                        options: {
+                }, t = l.__decorate([Object(E.a)(se, {
+                    options: function(e) {
+                        return {
                             variables: {
                                 channelLogin: e.channelLogin
                             }
@@ -1365,8 +1365,8 @@ webpackJsonp([36], {
             return me
         })
     },
-    1020: function(e, t) {},
-    1021: function(e, t, n) {
+    1025: function(e, t) {},
+    1026: function(e, t, n) {
         var r = {
             kind: "Document",
             definitions: [{
@@ -1575,10 +1575,10 @@ webpackJsonp([36], {
                 var t = e.name.value;
                 return !a[t] && (a[t] = !0, !0)
             })
-        }(n(933).definitions)), e.exports = r
+        }(n(941).definitions)), e.exports = r
     },
-    1022: function(e, t) {},
-    1023: function(e, t) {
+    1027: function(e, t) {},
+    1028: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1679,7 +1679,7 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    1024: function(e, t) {
+    1029: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1800,8 +1800,8 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    1025: function(e, t) {},
-    1026: function(e, t) {
+    1030: function(e, t) {},
+    1031: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1902,7 +1902,7 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    1027: function(e, t, n) {
+    1032: function(e, t, n) {
         var r = {
             kind: "Document",
             definitions: [{
@@ -2081,19 +2081,19 @@ webpackJsonp([36], {
                 var t = e.name.value;
                 return !a[t] && (a[t] = !0, !0)
             })
-        }(n(933).definitions)), e.exports = r
+        }(n(941).definitions)), e.exports = r
     },
-    1028: function(e, t) {},
-    1046: function(e, t, n) {
+    1033: function(e, t) {},
+    1051: function(e, t, n) {
         "use strict";
-        var r = n(970);
+        var r = n(983);
         n.d(t, "a", function() {
             return r.a
         }), n.d(t, "b", function() {
             return r.b
         })
     },
-    1050: function(e, t, n) {
+    1056: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -2116,9 +2116,9 @@ webpackJsonp([36], {
         }), n.d(o, "achievement", function() {
             return a
         });
-        var s = n(1294),
-            l = n(1353),
-            u = n(911),
+        var s = n(1298),
+            l = n(1357),
+            u = n(915),
             d = 6e4,
             c = 60 * d,
             m = function() {
@@ -2157,9 +2157,9 @@ webpackJsonp([36], {
             return m
         })
     },
-    1123: function(e, t, n) {
+    1127: function(e, t, n) {
         "use strict";
-        var r = n(920);
+        var r = n(924);
         e.exports = {
             generators: {
                 linear: function(e, t) {
@@ -2213,7 +2213,7 @@ webpackJsonp([36], {
             }
         }
     },
-    1135: function(e, t, n) {
+    1141: function(e, t, n) {
         "use strict";
 
         function r(e, t) {
@@ -2235,7 +2235,7 @@ webpackJsonp([36], {
                 allowFullscreen: !0
             }
     },
-    1153: function(e, t, n) {
+    1158: function(e, t, n) {
         "use strict";
         var r = {
             noop: function() {},
@@ -2319,9 +2319,9 @@ webpackJsonp([36], {
             return Array.prototype.indexOf.call(e, t, n)
         }, r.getValueOrDefault = r.valueOrDefault, r.getValueAtIndexOrDefault = r.valueAtIndexOrDefault
     },
-    1159: function(e, t, n) {
+    1164: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("af", {
@@ -2379,9 +2379,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1160: function(e, t, n) {
+    1165: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -2489,9 +2489,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1161: function(e, t, n) {
+    1166: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ar-dz", {
@@ -2539,9 +2539,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1162: function(e, t, n) {
+    1167: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ar-kw", {
@@ -2589,9 +2589,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1163: function(e, t, n) {
+    1168: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -2685,9 +2685,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1164: function(e, t, n) {
+    1169: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ar-ma", {
@@ -2735,9 +2735,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1165: function(e, t, n) {
+    1170: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -2826,9 +2826,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1166: function(e, t, n) {
+    1171: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ar-tn", {
@@ -2876,9 +2876,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1167: function(e, t, n) {
+    1172: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -2961,9 +2961,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1168: function(e, t, n) {
+    1173: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -3069,9 +3069,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1169: function(e, t, n) {
+    1174: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("bg", {
@@ -3136,9 +3136,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1170: function(e, t, n) {
+    1175: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -3226,9 +3226,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1171: function(e, t, n) {
+    1176: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -3316,9 +3316,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1172: function(e, t, n) {
+    1177: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -3408,9 +3408,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1173: function(e, t, n) {
+    1178: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -3508,9 +3508,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1174: function(e, t, n) {
+    1179: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ca", {
@@ -3581,9 +3581,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1175: function(e, t, n) {
+    1180: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -3713,9 +3713,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1176: function(e, t, n) {
+    1181: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("cv", {
@@ -3766,9 +3766,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1177: function(e, t, n) {
+    1182: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("cy", {
@@ -3823,9 +3823,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1178: function(e, t, n) {
+    1183: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("da", {
@@ -3874,9 +3874,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1179: function(e, t, n) {
+    1184: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -3941,9 +3941,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1180: function(e, t, n) {
+    1185: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -4008,9 +4008,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1181: function(e, t, n) {
+    1186: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -4075,9 +4075,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1182: function(e, t, n) {
+    1187: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = ["ޖެނުއަރީ", "ފެބްރުއަރީ", "މާރިޗު", "އޭޕްރީލު", "މޭ", "ޖޫން", "ޖުލައި", "އޯގަސްޓު", "ސެޕްޓެމްބަރު", "އޮކްޓޯބަރު", "ނޮވެމްބަރު", "ޑިސެމްބަރު"],
@@ -4139,9 +4139,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1183: function(e, t, n) {
+    1188: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -4217,9 +4217,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1184: function(e, t, n) {
+    1189: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-au", {
@@ -4271,9 +4271,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1185: function(e, t, n) {
+    1190: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-ca", {
@@ -4321,9 +4321,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1186: function(e, t, n) {
+    1191: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-gb", {
@@ -4375,9 +4375,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1187: function(e, t, n) {
+    1192: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-ie", {
@@ -4429,9 +4429,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1188: function(e, t, n) {
+    1193: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-nz", {
@@ -4483,9 +4483,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1189: function(e, t, n) {
+    1194: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("eo", {
@@ -4541,9 +4541,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1190: function(e, t, n) {
+    1195: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),
@@ -4608,9 +4608,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1191: function(e, t, n) {
+    1196: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),
@@ -4675,9 +4675,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1192: function(e, t, n) {
+    1197: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -4742,9 +4742,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1193: function(e, t, n) {
+    1198: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("eu", {
@@ -4799,9 +4799,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1194: function(e, t, n) {
+    1199: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -4892,9 +4892,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1195: function(e, t, n) {
+    1200: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -4986,9 +4986,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1196: function(e, t, n) {
+    1201: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("fo", {
@@ -5037,9 +5037,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1197: function(e, t, n) {
+    1202: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("fr", {
@@ -5104,9 +5104,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1198: function(e, t, n) {
+    1203: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("fr-ca", {
@@ -5166,9 +5166,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1199: function(e, t, n) {
+    1204: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("fr-ch", {
@@ -5232,9 +5232,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1200: function(e, t, n) {
+    1205: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = "jan._feb._mrt._apr._mai_jun._jul._aug._sep._okt._nov._des.".split("_"),
@@ -5291,9 +5291,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1201: function(e, t, n) {
+    1206: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = ["Am Faoilleach", "An Gearran", "Am Màrt", "An Giblean", "An Cèitean", "An t-Ògmhios", "An t-Iuchar", "An Lùnastal", "An t-Sultain", "An Dàmhair", "An t-Samhain", "An Dùbhlachd"],
@@ -5350,9 +5350,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1202: function(e, t, n) {
+    1207: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("gl", {
@@ -5415,9 +5415,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1203: function(e, t, n) {
+    1208: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -5506,9 +5506,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1204: function(e, t, n) {
+    1209: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("he", {
@@ -5570,9 +5570,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1205: function(e, t, n) {
+    1210: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -5661,9 +5661,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1206: function(e, t, n) {
+    1211: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -5764,9 +5764,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1207: function(e, t, n) {
+    1212: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -5860,9 +5860,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1208: function(e, t, n) {
+    1213: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("hy-am", {
@@ -5935,9 +5935,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1209: function(e, t, n) {
+    1214: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("id", {
@@ -5991,9 +5991,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1210: function(e, t, n) {
+    1215: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -6072,9 +6072,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1211: function(e, t, n) {
+    1216: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("it", {
@@ -6132,9 +6132,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1212: function(e, t, n) {
+    1217: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ja", {
@@ -6199,9 +6199,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1213: function(e, t, n) {
+    1218: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("jv", {
@@ -6255,9 +6255,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1214: function(e, t, n) {
+    1219: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ka", {
@@ -6319,9 +6319,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1215: function(e, t, n) {
+    1220: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -6396,9 +6396,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1216: function(e, t, n) {
+    1221: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("km", {
@@ -6445,9 +6445,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1217: function(e, t, n) {
+    1222: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -6540,9 +6540,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1218: function(e, t, n) {
+    1223: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ko", {
@@ -6599,9 +6599,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1219: function(e, t, n) {
+    1224: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -6676,9 +6676,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1220: function(e, t, n) {
+    1225: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -6772,9 +6772,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1221: function(e, t, n) {
+    1226: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("lo", {
@@ -6829,9 +6829,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1222: function(e, t, n) {
+    1227: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -6928,9 +6928,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1223: function(e, t, n) {
+    1228: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -7008,9 +7008,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1224: function(e, t, n) {
+    1229: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -7095,9 +7095,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1225: function(e, t, n) {
+    1230: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("mi", {
@@ -7150,9 +7150,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1226: function(e, t, n) {
+    1231: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("mk", {
@@ -7217,9 +7217,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1227: function(e, t, n) {
+    1232: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ml", {
@@ -7270,9 +7270,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1228: function(e, t, n) {
+    1233: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -7433,9 +7433,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1229: function(e, t, n) {
+    1234: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ms", {
@@ -7489,9 +7489,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1230: function(e, t, n) {
+    1235: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ms-my", {
@@ -7545,9 +7545,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1231: function(e, t, n) {
+    1236: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -7628,9 +7628,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1232: function(e, t, n) {
+    1237: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("nb", {
@@ -7681,9 +7681,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1233: function(e, t, n) {
+    1238: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -7773,9 +7773,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1234: function(e, t, n) {
+    1239: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_"),
@@ -7840,9 +7840,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1235: function(e, t, n) {
+    1240: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_"),
@@ -7907,9 +7907,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1236: function(e, t, n) {
+    1241: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("nn", {
@@ -7958,9 +7958,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1237: function(e, t, n) {
+    1242: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -8048,9 +8048,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1238: function(e, t, n) {
+    1243: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -8136,9 +8136,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1239: function(e, t, n) {
+    1244: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("pt", {
@@ -8190,9 +8190,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1240: function(e, t, n) {
+    1245: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("pt-br", {
@@ -8240,9 +8240,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1241: function(e, t, n) {
+    1246: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -8302,9 +8302,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1242: function(e, t, n) {
+    1247: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -8436,9 +8436,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1243: function(e, t, n) {
+    1248: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = ["جنوري", "فيبروري", "مارچ", "اپريل", "مئي", "جون", "جولاءِ", "آگسٽ", "سيپٽمبر", "آڪٽوبر", "نومبر", "ڊسمبر"],
@@ -8500,9 +8500,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1244: function(e, t, n) {
+    1249: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("se", {
@@ -8551,9 +8551,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1245: function(e, t, n) {
+    1250: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("si", {
@@ -8608,9 +8608,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1246: function(e, t, n) {
+    1251: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -8724,9 +8724,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1247: function(e, t, n) {
+    1252: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -8833,9 +8833,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1248: function(e, t, n) {
+    1253: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("sq", {
@@ -8892,9 +8892,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1249: function(e, t, n) {
+    1254: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -8979,9 +8979,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1250: function(e, t, n) {
+    1255: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -9066,9 +9066,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1251: function(e, t, n) {
+    1256: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ss", {
@@ -9125,9 +9125,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1252: function(e, t, n) {
+    1257: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("sv", {
@@ -9181,9 +9181,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1253: function(e, t, n) {
+    1258: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("sw", {
@@ -9231,9 +9231,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1254: function(e, t, n) {
+    1259: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -9325,9 +9325,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1255: function(e, t, n) {
+    1260: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("te", {
@@ -9384,9 +9384,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1256: function(e, t, n) {
+    1261: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("tet", {
@@ -9438,9 +9438,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1257: function(e, t, n) {
+    1262: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("th", {
@@ -9492,9 +9492,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1258: function(e, t, n) {
+    1263: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("tl-ph", {
@@ -9545,9 +9545,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1259: function(e, t, n) {
+    1264: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -9632,9 +9632,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1260: function(e, t, n) {
+    1265: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -9709,9 +9709,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1261: function(e, t, n) {
+    1266: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -9784,9 +9784,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1262: function(e, t, n) {
+    1267: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("tzm", {
@@ -9833,9 +9833,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1263: function(e, t, n) {
+    1268: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("tzm-latn", {
@@ -9882,9 +9882,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1264: function(e, t, n) {
+    1269: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
 
@@ -9999,9 +9999,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1265: function(e, t, n) {
+    1270: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             var t = ["جنوری", "فروری", "مارچ", "اپریل", "مئی", "جون", "جولائی", "اگست", "ستمبر", "اکتوبر", "نومبر", "دسمبر"],
@@ -10063,9 +10063,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1266: function(e, t, n) {
+    1271: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("uz", {
@@ -10112,9 +10112,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1267: function(e, t, n) {
+    1272: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("uz-latn", {
@@ -10161,9 +10161,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1268: function(e, t, n) {
+    1273: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("vi", {
@@ -10227,9 +10227,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1269: function(e, t, n) {
+    1274: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("x-pseudo", {
@@ -10282,9 +10282,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1270: function(e, t, n) {
+    1275: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("yo", {
@@ -10333,9 +10333,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1271: function(e, t, n) {
+    1276: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("zh-cn", {
@@ -10410,9 +10410,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1272: function(e, t, n) {
+    1277: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("zh-hk", {
@@ -10483,9 +10483,9 @@ webpackJsonp([36], {
             })
         })
     },
-    1273: function(e, t, n) {
+    1278: function(e, t, n) {
         ! function(e, t) {
-            t(n(913))
+            t(n(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("zh-tw", {
@@ -10556,142 +10556,7 @@ webpackJsonp([36], {
             })
         })
     },
-    1280: function(e, t, n) {
-        "use strict";
-        var r = n(0),
-            a = n(1),
-            i = n(3),
-            o = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleClickHandler = function(e) {
-                        t.props.onClick && t.props.onClick(), e.currentTarget.select()
-                    }, t
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(i.Q, {
-                        readOnly: !0,
-                        type: i.R.Text,
-                        value: this.props.value,
-                        onClick: this.handleClickHandler
-                    })
-                }, t
-            }(a.Component);
-        n.d(t, "a", function() {
-            return o
-        })
-    },
-    1286: function(e, t, n) {
-        "use strict";
-
-        function r(e, t) {
-            return {
-                id: e.id,
-                owner: {
-                    id: e.owner.id,
-                    login: t.owner.login,
-                    roles: {
-                        isPartner: t.owner.roles.isPartner
-                    }
-                },
-                broadcastType: t.broadcastType,
-                game: t.game
-            }
-        }
-        n.d(t, "a", function() {
-            return a
-        }), n.d(t, "c", function() {
-            return c
-        }), n.d(t, "b", function() {
-            return m
-        });
-        var a, i = n(0),
-            o = n(2),
-            s = n(14),
-            l = n(140),
-            u = n(1323),
-            d = (n.n(u), this);
-        ! function(e) {
-            e.Video = "video", e.Collection = "collection"
-        }(a || (a = {}));
-        var c = function(e, t, n) {
-                return i.__awaiter(d, void 0, void 0, function() {
-                    var a, d, m, h;
-                    return i.__generator(this, function(i) {
-                        switch (i.label) {
-                            case 0:
-                                if (!e) return [2];
-                                i.label = 1;
-                            case 1:
-                                return i.trys.push([1, 3, , 4]), [4, n.query({
-                                    query: u,
-                                    variables: {
-                                        videoID: e.id
-                                    }
-                                })];
-                            case 2:
-                                return a = i.sent().data, d = r(e, a.video), m = {
-                                    channel: d.owner.login,
-                                    channel_id: Number(d.owner.id),
-                                    game: d.game ? d.game.name : null,
-                                    partner: d.owner.roles.isPartner,
-                                    location: s.PageviewLocation.VideoWatchPage,
-                                    share_context: t.collectionID ? s.ShareItemContext.Collection : null,
-                                    share_platform: t.sharePlatform,
-                                    shared_item_id: d.id,
-                                    shared_item_type: Object(l.a)(d.broadcastType),
-                                    shared_item_url: t.shareURL,
-                                    source_item_id: d.id,
-                                    source_item_type: Object(l.a)(d.broadcastType)
-                                }, o.n.tracking.track(s.SpadeEventType.ShareItem, m), [3, 4];
-                            case 3:
-                                return h = i.sent(), o.i.error(h.toString(), c.name), [3, 4];
-                            case 4:
-                                return [2]
-                        }
-                    })
-                })
-            },
-            m = function(e, t, n) {
-                return i.__awaiter(d, void 0, void 0, function() {
-                    var a, d, c, h;
-                    return i.__generator(this, function(i) {
-                        switch (i.label) {
-                            case 0:
-                                if (!e || !t.collectionID) return [2];
-                                i.label = 1;
-                            case 1:
-                                return i.trys.push([1, 3, , 4]), [4, n.query({
-                                    query: u,
-                                    variables: {
-                                        videoID: e.id
-                                    }
-                                })];
-                            case 2:
-                                return a = i.sent().data, d = r(e, a.video), c = {
-                                    channel: d.owner.login,
-                                    channel_id: Number(d.owner.id),
-                                    game: null,
-                                    partner: d.owner.roles.isPartner,
-                                    location: s.PageviewLocation.VideoWatchPage,
-                                    share_context: null,
-                                    share_platform: t.sharePlatform,
-                                    shared_item_id: t.collectionID,
-                                    shared_item_type: s.ShareItemType.Collection,
-                                    shared_item_url: t.shareURL,
-                                    source_item_id: d.id,
-                                    source_item_type: Object(l.a)(d.broadcastType)
-                                }, o.n.tracking.track(s.SpadeEventType.ShareItem, c), [3, 4];
-                            case 3:
-                                return h = i.sent(), o.i.error(h.toString(), m.name), [3, 4];
-                            case 4:
-                                return [2]
-                        }
-                    })
-                })
-            }
-    },
-    1288: function(e, t, n) {
+    1283: function(e, t, n) {
         (function(e, r) {
             var a;
             (function() {
@@ -14900,9 +14765,138 @@ webpackJsonp([36], {
                     return Kn
                 }.call(t, n, t, r)) !== ae && (r.exports = a)
             }).call(this)
-        }).call(t, n(32), n(424)(e))
+        }).call(t, n(32), n(425)(e))
     },
-    1292: function(e, t, n) {
+    1284: function(e, t, n) {
+        "use strict";
+        var r = n(0),
+            a = n(1),
+            i = n(3),
+            o = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleClickHandler = function(e) {
+                        t.props.onClick && t.props.onClick(), e.currentTarget.select()
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return a.createElement(i.Q, {
+                        readOnly: !0,
+                        type: i.R.Text,
+                        value: this.props.value,
+                        onClick: this.handleClickHandler
+                    })
+                }, t
+            }(a.Component);
+        n.d(t, "a", function() {
+            return o
+        })
+    },
+    1290: function(e, t, n) {
+        "use strict";
+
+        function r(e, t) {
+            return {
+                id: e.id,
+                owner: t.owner || null,
+                broadcastType: t.broadcastType,
+                game: t.game
+            }
+        }
+        n.d(t, "a", function() {
+            return a
+        }), n.d(t, "c", function() {
+            return c
+        }), n.d(t, "b", function() {
+            return m
+        });
+        var a, i = n(0),
+            o = n(2),
+            s = n(14),
+            l = n(140),
+            u = n(1329),
+            d = (n.n(u), this);
+        ! function(e) {
+            e.Video = "video", e.Collection = "collection"
+        }(a || (a = {}));
+        var c = function(e, t, n) {
+                return i.__awaiter(d, void 0, void 0, function() {
+                    var a, d, m, h;
+                    return i.__generator(this, function(i) {
+                        switch (i.label) {
+                            case 0:
+                                if (!e) return [2];
+                                i.label = 1;
+                            case 1:
+                                return i.trys.push([1, 3, , 4]), [4, n.query({
+                                    query: u,
+                                    variables: {
+                                        videoID: e.id
+                                    }
+                                })];
+                            case 2:
+                                return a = i.sent().data, d = r(e, a.video), m = {
+                                    channel: d.owner ? d.owner.login : null,
+                                    channel_id: d.owner ? Number(d.owner.id) : null,
+                                    game: d.game ? d.game.name : null,
+                                    partner: !!d.owner && d.owner.roles.isPartner,
+                                    location: s.PageviewLocation.VideoWatchPage,
+                                    share_context: t.collectionID ? s.ShareItemContext.Collection : null,
+                                    share_platform: t.sharePlatform,
+                                    shared_item_id: d.id,
+                                    shared_item_type: Object(l.a)(d.broadcastType),
+                                    shared_item_url: t.shareURL,
+                                    source_item_id: d.id,
+                                    source_item_type: Object(l.a)(d.broadcastType)
+                                }, o.n.tracking.track(s.SpadeEventType.ShareItem, m), [3, 4];
+                            case 3:
+                                return h = i.sent(), o.i.error(h.toString(), c.name), [3, 4];
+                            case 4:
+                                return [2]
+                        }
+                    })
+                })
+            },
+            m = function(e, t, n) {
+                return i.__awaiter(d, void 0, void 0, function() {
+                    var a, d, c, h;
+                    return i.__generator(this, function(i) {
+                        switch (i.label) {
+                            case 0:
+                                if (!e || !t.collectionID) return [2];
+                                i.label = 1;
+                            case 1:
+                                return i.trys.push([1, 3, , 4]), [4, n.query({
+                                    query: u,
+                                    variables: {
+                                        videoID: e.id
+                                    }
+                                })];
+                            case 2:
+                                return a = i.sent().data, d = r(e, a.video), c = {
+                                    channel: d.owner ? d.owner.login : null,
+                                    channel_id: d.owner ? Number(d.owner.id) : null,
+                                    game: null,
+                                    partner: !!d.owner && d.owner.roles.isPartner,
+                                    location: s.PageviewLocation.VideoWatchPage,
+                                    share_context: null,
+                                    share_platform: t.sharePlatform,
+                                    shared_item_id: t.collectionID,
+                                    shared_item_type: s.ShareItemType.Collection,
+                                    shared_item_url: t.shareURL,
+                                    source_item_id: d.id,
+                                    source_item_type: Object(l.a)(d.broadcastType)
+                                }, o.n.tracking.track(s.SpadeEventType.ShareItem, c), [3, 4];
+                            case 3:
+                                return h = i.sent(), o.i.error(h.toString(), m.name), [3, 4];
+                            case 4:
+                                return [2]
+                        }
+                    })
+                })
+            }
+    },
+    1296: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -14913,12 +14907,12 @@ webpackJsonp([36], {
             i = n(21),
             o = (n.n(i), n(1)),
             s = (n.n(o), n(2)),
-            l = n(1280),
-            u = n(1046),
+            l = n(1284),
+            u = n(1051),
             d = n(64),
-            c = n(1135),
+            c = n(1141),
             m = n(14),
-            h = n(1286),
+            h = n(1290),
             p = n(3),
             f = "collection-link";
         ! function(e) {
@@ -15052,16 +15046,18 @@ webpackJsonp([36], {
             },
             b = function(e) {
                 if (!e.video) return "";
-                var t, n = e.video.owner.displayName,
+                var t, n = e.video.owner ? e.video.owner.displayName : null,
                     r = e.video.title,
                     a = L(e.video.id),
                     i = v(e);
-                return t = r ? Object(s.d)("Watch {title} from {displayName} on www.twitch.tv", {
+                return t = n && r ? Object(s.d)("Watch {title} from {displayName} on www.twitch.tv", {
                     displayName: n,
                     title: r
-                }, "VideoShareBox") : Object(s.d)("Watch video from {displayName} on www.twitch.tv", {
+                }, "VideoShareBox") : n && !r ? Object(s.d)("Watch video from {displayName} on www.twitch.tv", {
                     displayName: n
-                }, "VideoShareBox"), Object(c.a)(a, {
+                }, "VideoShareBox") : !n && r ? Object(s.d)("Watch {title} on www.twitch.tv", {
+                    title: r
+                }, "VideoShareBox") : Object(s.d)("Watch on www.twitch.tv", "VideoShareBox"), Object(c.a)(a, {
                     textLink: {
                         url: i,
                         text: t
@@ -15084,9 +15080,9 @@ webpackJsonp([36], {
                 })
             }
     },
-    1293: function(e, t, n) {
+    1297: function(e, t, n) {
         "use strict";
-        var r, a = n(1325),
+        var r, a = n(1331),
             i = function() {
                 function e(e) {
                     Object.assign(this, e)
@@ -15111,7 +15107,7 @@ webpackJsonp([36], {
                     return this.role !== r.None && (this.role !== r.Affiliate || (this.key === a.a || this.key === a.b))
                 }, e
             }(),
-            o = n(911),
+            o = n(915),
             s = function() {
                 function e(e) {
                     Object.assign(this, e), this.progressRatio = e.progress / e.progressCap, this.isComplete = Boolean(this.completedAt)
@@ -15120,7 +15116,7 @@ webpackJsonp([36], {
                     return void 0 === e && (e = new Date), !!this.completedAt && Object(o.isAfter)(this.completedAt, Object(o.subDays)(e, 14))
                 }, e
             }(),
-            l = n(1288),
+            l = n(1283),
             u = function() {
                 function e(e) {
                     void 0 === e && (e = []), this.topRecentlyCompleted = [], this.notCompleted = [], this.pastCompleted = [], this.all = [], this.topRecentlyCompletedMap = new Map, this.all = e, this.buildExclusiveGroups(), this.sortExclusiveGroups()
@@ -15167,7 +15163,7 @@ webpackJsonp([36], {
                     }], ["desc", "desc", "asc"])
                 }, e
             }(),
-            d = n(1473);
+            d = n(1478);
         ! function(e) {
             e[e.None = 0] = "None", e[e.Affiliate = 1] = "Affiliate", e[e.Partner = 2] = "Partner"
         }(r || (r = {})), n.d(t, "d", function() {
@@ -15182,7 +15178,7 @@ webpackJsonp([36], {
             return r
         })
     },
-    1294: function(e, t, n) {
+    1298: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -15200,7 +15196,7 @@ webpackJsonp([36], {
         }
         t.a = r;
         var a = n(0),
-            i = n(917),
+            i = n(921),
             o = function() {
                 function e(e, t) {
                     this.status = e.status, this.body = e.body, this.error = e.error, this.requestError = e.requestError, this.request = t
@@ -15212,7 +15208,7 @@ webpackJsonp([36], {
                 }, e
             }()
     },
-    1322: function(e, t, n) {
+    1328: function(e, t, n) {
         function r(e) {
             return n(a(e))
         }
@@ -15223,242 +15219,242 @@ webpackJsonp([36], {
             return t
         }
         var i = {
-            "./af": 1159,
-            "./af.js": 1159,
-            "./ar": 1160,
-            "./ar-dz": 1161,
-            "./ar-dz.js": 1161,
-            "./ar-kw": 1162,
-            "./ar-kw.js": 1162,
-            "./ar-ly": 1163,
-            "./ar-ly.js": 1163,
-            "./ar-ma": 1164,
-            "./ar-ma.js": 1164,
-            "./ar-sa": 1165,
-            "./ar-sa.js": 1165,
-            "./ar-tn": 1166,
-            "./ar-tn.js": 1166,
-            "./ar.js": 1160,
-            "./az": 1167,
-            "./az.js": 1167,
-            "./be": 1168,
-            "./be.js": 1168,
-            "./bg": 1169,
-            "./bg.js": 1169,
-            "./bn": 1170,
-            "./bn.js": 1170,
-            "./bo": 1171,
-            "./bo.js": 1171,
-            "./br": 1172,
-            "./br.js": 1172,
-            "./bs": 1173,
-            "./bs.js": 1173,
-            "./ca": 1174,
-            "./ca.js": 1174,
-            "./cs": 1175,
-            "./cs.js": 1175,
-            "./cv": 1176,
-            "./cv.js": 1176,
-            "./cy": 1177,
-            "./cy.js": 1177,
-            "./da": 1178,
-            "./da.js": 1178,
-            "./de": 1179,
-            "./de-at": 1180,
-            "./de-at.js": 1180,
-            "./de-ch": 1181,
-            "./de-ch.js": 1181,
-            "./de.js": 1179,
-            "./dv": 1182,
-            "./dv.js": 1182,
-            "./el": 1183,
-            "./el.js": 1183,
-            "./en-au": 1184,
-            "./en-au.js": 1184,
-            "./en-ca": 1185,
-            "./en-ca.js": 1185,
-            "./en-gb": 1186,
-            "./en-gb.js": 1186,
-            "./en-ie": 1187,
-            "./en-ie.js": 1187,
-            "./en-nz": 1188,
-            "./en-nz.js": 1188,
-            "./eo": 1189,
-            "./eo.js": 1189,
-            "./es": 1190,
-            "./es-do": 1191,
-            "./es-do.js": 1191,
-            "./es.js": 1190,
-            "./et": 1192,
-            "./et.js": 1192,
-            "./eu": 1193,
-            "./eu.js": 1193,
-            "./fa": 1194,
-            "./fa.js": 1194,
-            "./fi": 1195,
-            "./fi.js": 1195,
-            "./fo": 1196,
-            "./fo.js": 1196,
-            "./fr": 1197,
-            "./fr-ca": 1198,
-            "./fr-ca.js": 1198,
-            "./fr-ch": 1199,
-            "./fr-ch.js": 1199,
-            "./fr.js": 1197,
-            "./fy": 1200,
-            "./fy.js": 1200,
-            "./gd": 1201,
-            "./gd.js": 1201,
-            "./gl": 1202,
-            "./gl.js": 1202,
-            "./gom-latn": 1203,
-            "./gom-latn.js": 1203,
-            "./he": 1204,
-            "./he.js": 1204,
-            "./hi": 1205,
-            "./hi.js": 1205,
-            "./hr": 1206,
-            "./hr.js": 1206,
-            "./hu": 1207,
-            "./hu.js": 1207,
-            "./hy-am": 1208,
-            "./hy-am.js": 1208,
-            "./id": 1209,
-            "./id.js": 1209,
-            "./is": 1210,
-            "./is.js": 1210,
-            "./it": 1211,
-            "./it.js": 1211,
-            "./ja": 1212,
-            "./ja.js": 1212,
-            "./jv": 1213,
-            "./jv.js": 1213,
-            "./ka": 1214,
-            "./ka.js": 1214,
-            "./kk": 1215,
-            "./kk.js": 1215,
-            "./km": 1216,
-            "./km.js": 1216,
-            "./kn": 1217,
-            "./kn.js": 1217,
-            "./ko": 1218,
-            "./ko.js": 1218,
-            "./ky": 1219,
-            "./ky.js": 1219,
-            "./lb": 1220,
-            "./lb.js": 1220,
-            "./lo": 1221,
-            "./lo.js": 1221,
-            "./lt": 1222,
-            "./lt.js": 1222,
-            "./lv": 1223,
-            "./lv.js": 1223,
-            "./me": 1224,
-            "./me.js": 1224,
-            "./mi": 1225,
-            "./mi.js": 1225,
-            "./mk": 1226,
-            "./mk.js": 1226,
-            "./ml": 1227,
-            "./ml.js": 1227,
-            "./mr": 1228,
-            "./mr.js": 1228,
-            "./ms": 1229,
-            "./ms-my": 1230,
-            "./ms-my.js": 1230,
-            "./ms.js": 1229,
-            "./my": 1231,
-            "./my.js": 1231,
-            "./nb": 1232,
-            "./nb.js": 1232,
-            "./ne": 1233,
-            "./ne.js": 1233,
-            "./nl": 1234,
-            "./nl-be": 1235,
-            "./nl-be.js": 1235,
-            "./nl.js": 1234,
-            "./nn": 1236,
-            "./nn.js": 1236,
-            "./pa-in": 1237,
-            "./pa-in.js": 1237,
-            "./pl": 1238,
-            "./pl.js": 1238,
-            "./pt": 1239,
-            "./pt-br": 1240,
-            "./pt-br.js": 1240,
-            "./pt.js": 1239,
-            "./ro": 1241,
-            "./ro.js": 1241,
-            "./ru": 1242,
-            "./ru.js": 1242,
-            "./sd": 1243,
-            "./sd.js": 1243,
-            "./se": 1244,
-            "./se.js": 1244,
-            "./si": 1245,
-            "./si.js": 1245,
-            "./sk": 1246,
-            "./sk.js": 1246,
-            "./sl": 1247,
-            "./sl.js": 1247,
-            "./sq": 1248,
-            "./sq.js": 1248,
-            "./sr": 1249,
-            "./sr-cyrl": 1250,
-            "./sr-cyrl.js": 1250,
-            "./sr.js": 1249,
-            "./ss": 1251,
-            "./ss.js": 1251,
-            "./sv": 1252,
-            "./sv.js": 1252,
-            "./sw": 1253,
-            "./sw.js": 1253,
-            "./ta": 1254,
-            "./ta.js": 1254,
-            "./te": 1255,
-            "./te.js": 1255,
-            "./tet": 1256,
-            "./tet.js": 1256,
-            "./th": 1257,
-            "./th.js": 1257,
-            "./tl-ph": 1258,
-            "./tl-ph.js": 1258,
-            "./tlh": 1259,
-            "./tlh.js": 1259,
-            "./tr": 1260,
-            "./tr.js": 1260,
-            "./tzl": 1261,
-            "./tzl.js": 1261,
-            "./tzm": 1262,
-            "./tzm-latn": 1263,
-            "./tzm-latn.js": 1263,
-            "./tzm.js": 1262,
-            "./uk": 1264,
-            "./uk.js": 1264,
-            "./ur": 1265,
-            "./ur.js": 1265,
-            "./uz": 1266,
-            "./uz-latn": 1267,
-            "./uz-latn.js": 1267,
-            "./uz.js": 1266,
-            "./vi": 1268,
-            "./vi.js": 1268,
-            "./x-pseudo": 1269,
-            "./x-pseudo.js": 1269,
-            "./yo": 1270,
-            "./yo.js": 1270,
-            "./zh-cn": 1271,
-            "./zh-cn.js": 1271,
-            "./zh-hk": 1272,
-            "./zh-hk.js": 1272,
-            "./zh-tw": 1273,
-            "./zh-tw.js": 1273
+            "./af": 1164,
+            "./af.js": 1164,
+            "./ar": 1165,
+            "./ar-dz": 1166,
+            "./ar-dz.js": 1166,
+            "./ar-kw": 1167,
+            "./ar-kw.js": 1167,
+            "./ar-ly": 1168,
+            "./ar-ly.js": 1168,
+            "./ar-ma": 1169,
+            "./ar-ma.js": 1169,
+            "./ar-sa": 1170,
+            "./ar-sa.js": 1170,
+            "./ar-tn": 1171,
+            "./ar-tn.js": 1171,
+            "./ar.js": 1165,
+            "./az": 1172,
+            "./az.js": 1172,
+            "./be": 1173,
+            "./be.js": 1173,
+            "./bg": 1174,
+            "./bg.js": 1174,
+            "./bn": 1175,
+            "./bn.js": 1175,
+            "./bo": 1176,
+            "./bo.js": 1176,
+            "./br": 1177,
+            "./br.js": 1177,
+            "./bs": 1178,
+            "./bs.js": 1178,
+            "./ca": 1179,
+            "./ca.js": 1179,
+            "./cs": 1180,
+            "./cs.js": 1180,
+            "./cv": 1181,
+            "./cv.js": 1181,
+            "./cy": 1182,
+            "./cy.js": 1182,
+            "./da": 1183,
+            "./da.js": 1183,
+            "./de": 1184,
+            "./de-at": 1185,
+            "./de-at.js": 1185,
+            "./de-ch": 1186,
+            "./de-ch.js": 1186,
+            "./de.js": 1184,
+            "./dv": 1187,
+            "./dv.js": 1187,
+            "./el": 1188,
+            "./el.js": 1188,
+            "./en-au": 1189,
+            "./en-au.js": 1189,
+            "./en-ca": 1190,
+            "./en-ca.js": 1190,
+            "./en-gb": 1191,
+            "./en-gb.js": 1191,
+            "./en-ie": 1192,
+            "./en-ie.js": 1192,
+            "./en-nz": 1193,
+            "./en-nz.js": 1193,
+            "./eo": 1194,
+            "./eo.js": 1194,
+            "./es": 1195,
+            "./es-do": 1196,
+            "./es-do.js": 1196,
+            "./es.js": 1195,
+            "./et": 1197,
+            "./et.js": 1197,
+            "./eu": 1198,
+            "./eu.js": 1198,
+            "./fa": 1199,
+            "./fa.js": 1199,
+            "./fi": 1200,
+            "./fi.js": 1200,
+            "./fo": 1201,
+            "./fo.js": 1201,
+            "./fr": 1202,
+            "./fr-ca": 1203,
+            "./fr-ca.js": 1203,
+            "./fr-ch": 1204,
+            "./fr-ch.js": 1204,
+            "./fr.js": 1202,
+            "./fy": 1205,
+            "./fy.js": 1205,
+            "./gd": 1206,
+            "./gd.js": 1206,
+            "./gl": 1207,
+            "./gl.js": 1207,
+            "./gom-latn": 1208,
+            "./gom-latn.js": 1208,
+            "./he": 1209,
+            "./he.js": 1209,
+            "./hi": 1210,
+            "./hi.js": 1210,
+            "./hr": 1211,
+            "./hr.js": 1211,
+            "./hu": 1212,
+            "./hu.js": 1212,
+            "./hy-am": 1213,
+            "./hy-am.js": 1213,
+            "./id": 1214,
+            "./id.js": 1214,
+            "./is": 1215,
+            "./is.js": 1215,
+            "./it": 1216,
+            "./it.js": 1216,
+            "./ja": 1217,
+            "./ja.js": 1217,
+            "./jv": 1218,
+            "./jv.js": 1218,
+            "./ka": 1219,
+            "./ka.js": 1219,
+            "./kk": 1220,
+            "./kk.js": 1220,
+            "./km": 1221,
+            "./km.js": 1221,
+            "./kn": 1222,
+            "./kn.js": 1222,
+            "./ko": 1223,
+            "./ko.js": 1223,
+            "./ky": 1224,
+            "./ky.js": 1224,
+            "./lb": 1225,
+            "./lb.js": 1225,
+            "./lo": 1226,
+            "./lo.js": 1226,
+            "./lt": 1227,
+            "./lt.js": 1227,
+            "./lv": 1228,
+            "./lv.js": 1228,
+            "./me": 1229,
+            "./me.js": 1229,
+            "./mi": 1230,
+            "./mi.js": 1230,
+            "./mk": 1231,
+            "./mk.js": 1231,
+            "./ml": 1232,
+            "./ml.js": 1232,
+            "./mr": 1233,
+            "./mr.js": 1233,
+            "./ms": 1234,
+            "./ms-my": 1235,
+            "./ms-my.js": 1235,
+            "./ms.js": 1234,
+            "./my": 1236,
+            "./my.js": 1236,
+            "./nb": 1237,
+            "./nb.js": 1237,
+            "./ne": 1238,
+            "./ne.js": 1238,
+            "./nl": 1239,
+            "./nl-be": 1240,
+            "./nl-be.js": 1240,
+            "./nl.js": 1239,
+            "./nn": 1241,
+            "./nn.js": 1241,
+            "./pa-in": 1242,
+            "./pa-in.js": 1242,
+            "./pl": 1243,
+            "./pl.js": 1243,
+            "./pt": 1244,
+            "./pt-br": 1245,
+            "./pt-br.js": 1245,
+            "./pt.js": 1244,
+            "./ro": 1246,
+            "./ro.js": 1246,
+            "./ru": 1247,
+            "./ru.js": 1247,
+            "./sd": 1248,
+            "./sd.js": 1248,
+            "./se": 1249,
+            "./se.js": 1249,
+            "./si": 1250,
+            "./si.js": 1250,
+            "./sk": 1251,
+            "./sk.js": 1251,
+            "./sl": 1252,
+            "./sl.js": 1252,
+            "./sq": 1253,
+            "./sq.js": 1253,
+            "./sr": 1254,
+            "./sr-cyrl": 1255,
+            "./sr-cyrl.js": 1255,
+            "./sr.js": 1254,
+            "./ss": 1256,
+            "./ss.js": 1256,
+            "./sv": 1257,
+            "./sv.js": 1257,
+            "./sw": 1258,
+            "./sw.js": 1258,
+            "./ta": 1259,
+            "./ta.js": 1259,
+            "./te": 1260,
+            "./te.js": 1260,
+            "./tet": 1261,
+            "./tet.js": 1261,
+            "./th": 1262,
+            "./th.js": 1262,
+            "./tl-ph": 1263,
+            "./tl-ph.js": 1263,
+            "./tlh": 1264,
+            "./tlh.js": 1264,
+            "./tr": 1265,
+            "./tr.js": 1265,
+            "./tzl": 1266,
+            "./tzl.js": 1266,
+            "./tzm": 1267,
+            "./tzm-latn": 1268,
+            "./tzm-latn.js": 1268,
+            "./tzm.js": 1267,
+            "./uk": 1269,
+            "./uk.js": 1269,
+            "./ur": 1270,
+            "./ur.js": 1270,
+            "./uz": 1271,
+            "./uz-latn": 1272,
+            "./uz-latn.js": 1272,
+            "./uz.js": 1271,
+            "./vi": 1273,
+            "./vi.js": 1273,
+            "./x-pseudo": 1274,
+            "./x-pseudo.js": 1274,
+            "./yo": 1275,
+            "./yo.js": 1275,
+            "./zh-cn": 1276,
+            "./zh-cn.js": 1276,
+            "./zh-hk": 1277,
+            "./zh-hk.js": 1277,
+            "./zh-tw": 1278,
+            "./zh-tw.js": 1278
         };
         r.keys = function() {
             return Object.keys(i)
-        }, r.resolve = a, e.exports = r, r.id = 1322
+        }, r.resolve = a, e.exports = r, r.id = 1328
     },
-    1323: function(e, t) {
+    1329: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -15645,7 +15641,7 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    1324: function(e, t, n) {
+    1330: function(e, t, n) {
         "use strict";
         n.d(t, "d", function() {
             return r
@@ -15661,7 +15657,7 @@ webpackJsonp([36], {
             i = "BROADCAST_LENGTH_ANY",
             o = "BROADCAST_SORT_POPULAR"
     },
-    1325: function(e, t, n) {
+    1331: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -15723,9 +15719,9 @@ webpackJsonp([36], {
             l = "path_to_affiliate",
             u = "path_to_partner"
     },
-    1326: function(e, t, n) {
-        var r = n(1480),
-            a = n(1482),
+    1332: function(e, t, n) {
+        var r = n(1485),
+            a = n(1487),
             i = function(e) {
                 if (e instanceof i) return e;
                 if (!(this instanceof i)) return new i(e);
@@ -15988,7 +15984,7 @@ webpackJsonp([36], {
             return void 0 === n ? r[t] : n === r[t] ? this : (r[t] = n, this.setValues(e, r), this)
         }, "undefined" != typeof window && (window.Color = i), e.exports = i
     },
-    1327: function(e, t, n) {
+    1333: function(e, t, n) {
         "use strict";
 
         function r(e, t) {
@@ -16051,7 +16047,7 @@ webpackJsonp([36], {
                 }
             }), d) : []
         }
-        var u = n(920);
+        var u = n(924);
         e.exports = {
             modes: {
                 single: function(e, t) {
@@ -16109,11 +16105,11 @@ webpackJsonp([36], {
             }
         }
     },
-    1328: function(e, t, n) {
+    1334: function(e, t, n) {
         "use strict";
-        var r = n(920),
-            a = n(1488),
-            i = n(1489),
+        var r = n(924),
+            a = n(1493),
+            i = n(1494),
             o = i._enabled ? i : a;
         e.exports = r.extend({
             initialize: function() {},
@@ -16123,7 +16119,7 @@ webpackJsonp([36], {
             removeEventListener: function() {}
         }, o)
     },
-    1351: function(e, t, n) {
+    1355: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -16157,16 +16153,16 @@ webpackJsonp([36], {
         }
         t.a = r, t.b = a;
         var o = n(89),
-            s = n(1324)
+            s = n(1330)
     },
-    1352: function(e, t, n) {
+    1356: function(e, t, n) {
         "use strict";
         var r = n(0),
             a = n(4),
             i = n(1),
             o = n(12),
-            s = n(1546),
-            l = n(1050),
+            s = n(1551),
+            l = n(1056),
             u = n(3),
             d = {
                 "data-test-selector": "achievement-card"
@@ -16211,7 +16207,7 @@ webpackJsonp([36], {
             return c
         })
     },
-    1353: function(e, t, n) {
+    1357: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -16243,13 +16239,13 @@ webpackJsonp([36], {
         var s = !0,
             l = !1
     },
-    1354: function(e, t, n) {
-        var r = n(1475)();
-        r.helpers = n(920), n(1479)(r), r.defaults = n(924), r.Element = n(969), r.elements = n(1009), r.Interaction = n(1327), r.platform = n(1328), n(1490)(r), n(1491)(r), n(1492)(r), n(1493)(r), n(1494)(r), n(1495)(r), n(1496)(r), n(1497)(r), n(1498)(r), n(1499)(r), n(1500)(r), n(1501)(r), n(1502)(r), n(1503)(r), n(1504)(r), n(1505)(r), n(1506)(r), n(1507)(r), n(1508)(r), n(1509)(r), n(1510)(r), n(1511)(r), n(1512)(r), n(1513)(r), n(1514)(r), n(1515)(r), n(1516)(r), n(1517)(r);
+    1358: function(e, t, n) {
+        var r = n(1480)();
+        r.helpers = n(924), n(1484)(r), r.defaults = n(928), r.Element = n(982), r.elements = n(1013), r.Interaction = n(1333), r.platform = n(1334), n(1495)(r), n(1496)(r), n(1497)(r), n(1498)(r), n(1499)(r), n(1500)(r), n(1501)(r), n(1502)(r), n(1503)(r), n(1504)(r), n(1505)(r), n(1506)(r), n(1507)(r), n(1508)(r), n(1509)(r), n(1510)(r), n(1511)(r), n(1512)(r), n(1513)(r), n(1514)(r), n(1515)(r), n(1516)(r), n(1517)(r), n(1518)(r), n(1519)(r), n(1520)(r), n(1521)(r), n(1522)(r);
         var a = [];
-        a.push(n(1518)(r), n(1519)(r), n(1520)(r)), r.plugins.register(a), r.platform.initialize(), e.exports = r, "undefined" != typeof window && (window.Chart = r), r.canvasHelpers = r.helpers.canvas
+        a.push(n(1523)(r), n(1524)(r), n(1525)(r)), r.plugins.register(a), r.platform.initialize(), e.exports = r, "undefined" != typeof window && (window.Chart = r), r.canvasHelpers = r.helpers.canvas
     },
-    1454: function(e, t) {
+    1459: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -16493,7 +16489,7 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    1455: function(e, t) {
+    1460: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -16694,7 +16690,7 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    1456: function(e, t) {
+    1461: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -16927,7 +16923,7 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    1457: function(e, t) {
+    1462: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -17065,8 +17061,8 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    1458: function(e, t) {},
-    1459: function(e, t, n) {
+    1463: function(e, t) {},
+    1464: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -17212,11 +17208,6 @@ webpackJsonp([36], {
             onUpdate: function() {}
         }, e.exports = t.default
     },
-    1460: function(e, t) {},
-    1461: function(e, t) {},
-    1462: function(e, t) {},
-    1463: function(e, t) {},
-    1464: function(e, t) {},
     1465: function(e, t) {},
     1466: function(e, t) {},
     1467: function(e, t) {},
@@ -17224,7 +17215,12 @@ webpackJsonp([36], {
     1469: function(e, t) {},
     1470: function(e, t) {},
     1471: function(e, t) {},
-    1472: function(e, t, n) {
+    1472: function(e, t) {},
+    1473: function(e, t) {},
+    1474: function(e, t) {},
+    1475: function(e, t) {},
+    1476: function(e, t) {},
+    1477: function(e, t, n) {
         function r(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
@@ -17497,9 +17493,9 @@ webpackJsonp([36], {
             }
         };
         var i = {};
-        a.definitions = a.definitions.concat(r(n(933).definitions)), a.definitions = a.definitions.concat(r(n(963).definitions)), e.exports = a
+        a.definitions = a.definitions.concat(r(n(941).definitions)), a.definitions = a.definitions.concat(r(n(967).definitions)), e.exports = a
     },
-    1473: function(e, t, n) {
+    1478: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -17508,7 +17504,7 @@ webpackJsonp([36], {
         n.d(t, "a", function() {
             return i
         });
-        var a = n(1293),
+        var a = n(1297),
             i = function() {
                 function e(e) {
                     Object.assign(this, e)
@@ -17522,7 +17518,7 @@ webpackJsonp([36], {
                 }, e
             }()
     },
-    1474: function(e, t, n) {
+    1479: function(e, t, n) {
         "use strict";
         var r = n(1),
             a = n(2),
@@ -17542,9 +17538,9 @@ webpackJsonp([36], {
             return o
         })
     },
-    1475: function(e, t, n) {
+    1480: function(e, t, n) {
         "use strict";
-        n(924)._set("global", {
+        n(928)._set("global", {
             responsive: !0,
             responsiveAnimationDuration: 0,
             maintainAspectRatio: !0,
@@ -17578,9 +17574,9 @@ webpackJsonp([36], {
             return e.Chart = e, e
         }
     },
-    1476: function(e, t, n) {
+    1481: function(e, t, n) {
         "use strict";
-        var r = n(1153),
+        var r = n(1158),
             a = {
                 linear: function(e) {
                     return e
@@ -17692,9 +17688,9 @@ webpackJsonp([36], {
             effects: a
         }, r.easingEffects = a
     },
-    1477: function(e, t, n) {
+    1482: function(e, t, n) {
         "use strict";
-        var r = n(1153),
+        var r = n(1158),
             t = e.exports = {
                 clear: function(e) {
                     e.ctx.clearRect(0, 0, e.width, e.height)
@@ -17812,9 +17808,9 @@ webpackJsonp([36], {
             e.beginPath(), t.roundedRect.apply(t, arguments), e.closePath()
         }
     },
-    1478: function(e, t, n) {
+    1483: function(e, t, n) {
         "use strict";
-        var r = n(1153);
+        var r = n(1158);
         e.exports = {
             toLineHeight: function(e, t) {
                 var n = ("" + e).match(/^(normal|(\d+(?:\.\d+)?)(px|em|%)?)$/);
@@ -17845,11 +17841,11 @@ webpackJsonp([36], {
             }
         }
     },
-    1479: function(e, t, n) {
+    1484: function(e, t, n) {
         "use strict";
-        var r = n(1326),
-            a = n(924),
-            i = n(920);
+        var r = n(1332),
+            a = n(928),
+            i = n(924);
         e.exports = function(e) {
             function t(e, t, n) {
                 var r;
@@ -18103,8 +18099,8 @@ webpackJsonp([36], {
             }
         }
     },
-    1480: function(e, t, n) {
-        var r = n(1481),
+    1485: function(e, t, n) {
+        var r = n(1486),
             a = function() {
                 return new u
             };
@@ -18149,7 +18145,7 @@ webpackJsonp([36], {
             }
         }), e.exports = a
     },
-    1481: function(e, t) {
+    1486: function(e, t) {
         function n(e) {
             var t, n, r, a = e[0] / 255,
                 i = e[1] / 255,
@@ -18642,7 +18638,7 @@ webpackJsonp([36], {
             $ = {};
         for (var Q in K) $[JSON.stringify(K[Q])] = Q
     },
-    1482: function(e, t, n) {
+    1487: function(e, t, n) {
         function r(e) {
             if (e) {
                 var t = /^#([a-fA-F0-9]{3})$/i,
@@ -18755,7 +18751,7 @@ webpackJsonp([36], {
             var t = e.toString(16).toUpperCase();
             return t.length < 2 ? "0" + t : t
         }
-        var b = n(1483);
+        var b = n(1488);
         e.exports = {
             getRgba: r,
             getHsla: a,
@@ -18776,7 +18772,7 @@ webpackJsonp([36], {
         var M = {};
         for (var k in b) M[b[k]] = k
     },
-    1483: function(e, t) {
+    1488: function(e, t) {
         e.exports = {
             aliceblue: [240, 248, 255],
             antiquewhite: [250, 235, 215],
@@ -18928,11 +18924,11 @@ webpackJsonp([36], {
             yellowgreen: [154, 205, 50]
         }
     },
-    1484: function(e, t, n) {
+    1489: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(969),
-            i = n(920);
+        var r = n(928),
+            a = n(982),
+            i = n(924);
         r._set("global", {
             elements: {
                 arc: {
@@ -18992,11 +18988,11 @@ webpackJsonp([36], {
             }
         })
     },
-    1485: function(e, t, n) {
+    1490: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(969),
-            i = n(920),
+        var r = n(928),
+            a = n(982),
+            i = n(924),
             o = r.global;
         r._set("global", {
             elements: {
@@ -19027,7 +19023,7 @@ webpackJsonp([36], {
             }
         })
     },
-    1486: function(e, t, n) {
+    1491: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -19039,9 +19035,9 @@ webpackJsonp([36], {
             var t = this._view;
             return !!t && Math.pow(e - t.y, 2) < Math.pow(t.radius + t.hitRadius, 2)
         }
-        var i = n(924),
-            o = n(969),
-            s = n(920),
+        var i = n(928),
+            o = n(982),
+            s = n(924),
             l = i.global.defaultColor;
         i._set("global", {
             elements: {
@@ -19096,7 +19092,7 @@ webpackJsonp([36], {
             }
         })
     },
-    1487: function(e, t, n) {
+    1492: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -19119,8 +19115,8 @@ webpackJsonp([36], {
                 bottom: i
             }
         }
-        var i = n(924),
-            o = n(969);
+        var i = n(928),
+            o = n(982);
         i._set("global", {
             elements: {
                 rectangle: {
@@ -19208,14 +19204,14 @@ webpackJsonp([36], {
             }
         })
     },
-    1488: function(e, t) {
+    1493: function(e, t) {
         e.exports = {
             acquireContext: function(e) {
                 return e && e.canvas && (e = e.canvas), e && e.getContext("2d") || null
             }
         }
     },
-    1489: function(e, t, n) {
+    1494: function(e, t, n) {
         "use strict";
 
         function r(e, t) {
@@ -19342,7 +19338,7 @@ webpackJsonp([36], {
             var n = e._style || document.createElement("style");
             e._style || (e._style = n, t = "/* Chart.js */\n" + t, n.setAttribute("type", "text/css"), document.getElementsByTagName("head")[0].appendChild(n)), n.appendChild(document.createTextNode(t))
         }
-        var _ = n(920),
+        var _ = n(924),
             g = "$chartjs",
             y = "chartjs-",
             v = y + "render-monitor",
@@ -19415,11 +19411,11 @@ webpackJsonp([36], {
             }
         }, _.addEvent = i, _.removeEvent = o
     },
-    1490: function(e, t, n) {
+    1495: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(969),
-            i = n(920);
+        var r = n(928),
+            a = n(982),
+            i = n(924);
         r._set("global", {
             plugins: {}
         }), e.exports = function(e) {
@@ -19475,11 +19471,11 @@ webpackJsonp([36], {
             }, e.pluginService = e.plugins, e.PluginBase = a.extend({})
         }
     },
-    1491: function(e, t, n) {
+    1496: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(969),
-            i = n(920);
+        var r = n(928),
+            a = n(982),
+            i = n(924);
         r._set("global", {
             animation: {
                 duration: 1e3,
@@ -19543,12 +19539,12 @@ webpackJsonp([36], {
             })
         }
     },
-    1492: function(e, t, n) {
+    1497: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(920),
-            i = n(1327),
-            o = n(1328);
+        var r = n(928),
+            a = n(924),
+            i = n(1333),
+            o = n(1334);
         e.exports = function(e) {
             function t(e) {
                 e = e || {};
@@ -19898,9 +19894,9 @@ webpackJsonp([36], {
             }), e.Controller = e
         }
     },
-    1493: function(e, t, n) {
+    1498: function(e, t, n) {
         "use strict";
-        var r = n(920);
+        var r = n(924);
         e.exports = function(e) {
             function t(e, t) {
                 if (e._chartjs) return void e._chartjs.listeners.push(t);
@@ -20063,9 +20059,9 @@ webpackJsonp([36], {
             }), e.DatasetController.extend = r.inherits
         }
     },
-    1494: function(e, t, n) {
+    1499: function(e, t, n) {
         "use strict";
-        var r = n(920);
+        var r = n(924);
         e.exports = function(e) {
             function t(e, t) {
                 return r.where(e, function(e) {
@@ -20226,10 +20222,10 @@ webpackJsonp([36], {
             }
         }
     },
-    1495: function(e, t, n) {
+    1500: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(920);
+        var r = n(928),
+            a = n(924);
         e.exports = function(e) {
             e.scaleService = {
                 constructors: {},
@@ -20255,7 +20251,7 @@ webpackJsonp([36], {
             }
         }
     },
-    1496: function(e, t, n) {
+    1501: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -20268,10 +20264,10 @@ webpackJsonp([36], {
             var r = e.getPixelForTick(t);
             return n && (r -= 0 === t ? (e.getPixelForTick(1) - r) / 2 : (r - e.getPixelForTick(t - 1)) / 2), r
         }
-        var i = n(924),
-            o = n(969),
-            s = n(920),
-            l = n(1123);
+        var i = n(928),
+            o = n(982),
+            s = n(924),
+            l = n(1127);
         i._set("scale", {
             display: !0,
             position: "left",
@@ -20652,11 +20648,11 @@ webpackJsonp([36], {
             })
         }
     },
-    1497: function(e, t, n) {
+    1502: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(969),
-            i = n(920);
+        var r = n(928),
+            a = n(982),
+            i = n(924);
         r._set("global", {
             tooltips: {
                 enabled: !0,
@@ -21101,10 +21097,10 @@ webpackJsonp([36], {
             }
         }
     },
-    1498: function(e, t, n) {
+    1503: function(e, t, n) {
         "use strict";
-        var r = n(920),
-            a = n(1123);
+        var r = n(924),
+            a = n(1127);
         e.exports = function(e) {
             var t = r.noop;
             e.LinearScaleBase = e.Scale.extend({
@@ -21148,7 +21144,7 @@ webpackJsonp([36], {
             })
         }
     },
-    1499: function(e, t, n) {
+    1504: function(e, t, n) {
         "use strict";
         e.exports = function(e) {
             var t = {
@@ -21214,11 +21210,11 @@ webpackJsonp([36], {
             e.scaleService.registerScaleType("category", n, t)
         }
     },
-    1500: function(e, t, n) {
+    1505: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(920),
-            i = n(1123);
+        var r = n(928),
+            a = n(924),
+            i = n(1127);
         e.exports = function(e) {
             var t = {
                     position: "left",
@@ -21311,10 +21307,10 @@ webpackJsonp([36], {
             e.scaleService.registerScaleType("linear", n, t)
         }
     },
-    1501: function(e, t, n) {
+    1506: function(e, t, n) {
         "use strict";
-        var r = n(920),
-            a = n(1123);
+        var r = n(924),
+            a = n(1127);
         e.exports = function(e) {
             var t = {
                     position: "left",
@@ -21403,11 +21399,11 @@ webpackJsonp([36], {
             e.scaleService.registerScaleType("logarithmic", n, t)
         }
     },
-    1502: function(e, t, n) {
+    1507: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(920),
-            i = n(1123);
+        var r = n(928),
+            a = n(924),
+            i = n(1127);
         e.exports = function(e) {
             function t(e) {
                 var t = e.options;
@@ -21677,7 +21673,7 @@ webpackJsonp([36], {
             e.scaleService.registerScaleType("radialLinear", y, g)
         }
     },
-    1503: function(e, t, n) {
+    1508: function(e, t, n) {
         "use strict";
 
         function r(e, t) {
@@ -21805,10 +21801,10 @@ webpackJsonp([36], {
             });
             return o
         }
-        var _ = n(913);
+        var _ = n(917);
         _ = "function" == typeof _ ? _ : window.moment;
-        var g = n(924),
-            y = n(920),
+        var g = n(928),
+            y = n(924),
             v = Number.MIN_SAFE_INTEGER || -9007199254740991,
             b = Number.MAX_SAFE_INTEGER || 9007199254740991,
             M = {
@@ -22024,11 +22020,11 @@ webpackJsonp([36], {
             e.scaleService.registerScaleType("time", n, t)
         }
     },
-    1504: function(e, t, n) {
+    1509: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(1009),
-            i = n(920);
+        var r = n(928),
+            a = n(1013),
+            i = n(924);
         r._set("bar", {
             hover: {
                 mode: "label"
@@ -22239,11 +22235,11 @@ webpackJsonp([36], {
             })
         }
     },
-    1505: function(e, t, n) {
+    1510: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(1009),
-            i = n(920);
+        var r = n(928),
+            a = n(1013),
+            i = n(924);
         r._set("bubble", {
             hover: {
                 mode: "single"
@@ -22339,11 +22335,11 @@ webpackJsonp([36], {
             })
         }
     },
-    1506: function(e, t, n) {
+    1511: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(1009),
-            i = n(920);
+        var r = n(928),
+            a = n(1013),
+            i = n(924);
         r._set("doughnut", {
             animation: {
                 animateRotate: !0,
@@ -22524,11 +22520,11 @@ webpackJsonp([36], {
             })
         }
     },
-    1507: function(e, t, n) {
+    1512: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(1009),
-            i = n(920);
+        var r = n(928),
+            a = n(1013),
+            i = n(924);
         r._set("line", {
             showLines: !0,
             spanGaps: !1,
@@ -22682,11 +22678,11 @@ webpackJsonp([36], {
             })
         }
     },
-    1508: function(e, t, n) {
+    1513: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(1009),
-            i = n(920);
+        var r = n(928),
+            a = n(1013),
+            i = n(924);
         r._set("polarArea", {
             scale: {
                 type: "radialLinear",
@@ -22813,11 +22809,11 @@ webpackJsonp([36], {
             })
         }
     },
-    1509: function(e, t, n) {
+    1514: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(1009),
-            i = n(920);
+        var r = n(928),
+            a = n(1013),
+            i = n(924);
         r._set("radar", {
             scale: {
                 type: "radialLinear"
@@ -22912,9 +22908,9 @@ webpackJsonp([36], {
             })
         }
     },
-    1510: function(e, t, n) {
+    1515: function(e, t, n) {
         "use strict";
-        n(924)._set("scatter", {
+        n(928)._set("scatter", {
             hover: {
                 mode: "single"
             },
@@ -22945,7 +22941,7 @@ webpackJsonp([36], {
             e.controllers.scatter = e.controllers.line
         }
     },
-    1511: function(e, t, n) {
+    1516: function(e, t, n) {
         "use strict";
         e.exports = function(e) {
             e.Bar = function(t, n) {
@@ -22953,7 +22949,7 @@ webpackJsonp([36], {
             }
         }
     },
-    1512: function(e, t, n) {
+    1517: function(e, t, n) {
         "use strict";
         e.exports = function(e) {
             e.Bubble = function(t, n) {
@@ -22961,7 +22957,7 @@ webpackJsonp([36], {
             }
         }
     },
-    1513: function(e, t, n) {
+    1518: function(e, t, n) {
         "use strict";
         e.exports = function(e) {
             e.Doughnut = function(t, n) {
@@ -22969,7 +22965,7 @@ webpackJsonp([36], {
             }
         }
     },
-    1514: function(e, t, n) {
+    1519: function(e, t, n) {
         "use strict";
         e.exports = function(e) {
             e.Line = function(t, n) {
@@ -22977,7 +22973,7 @@ webpackJsonp([36], {
             }
         }
     },
-    1515: function(e, t, n) {
+    1520: function(e, t, n) {
         "use strict";
         e.exports = function(e) {
             e.PolarArea = function(t, n) {
@@ -22985,7 +22981,7 @@ webpackJsonp([36], {
             }
         }
     },
-    1516: function(e, t, n) {
+    1521: function(e, t, n) {
         "use strict";
         e.exports = function(e) {
             e.Radar = function(t, n) {
@@ -22993,7 +22989,7 @@ webpackJsonp([36], {
             }
         }
     },
-    1517: function(e, t, n) {
+    1522: function(e, t, n) {
         "use strict";
         e.exports = function(e) {
             e.Scatter = function(t, n) {
@@ -23001,11 +22997,11 @@ webpackJsonp([36], {
             }
         }
     },
-    1518: function(e, t, n) {
+    1523: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(1009),
-            i = n(920);
+        var r = n(928),
+            a = n(1013),
+            i = n(924);
         r._set("global", {
             plugins: {
                 filler: {
@@ -23146,11 +23142,11 @@ webpackJsonp([36], {
             }
         }
     },
-    1519: function(e, t, n) {
+    1524: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(969),
-            i = n(920);
+        var r = n(928),
+            a = n(982),
+            i = n(924);
         r._set("global", {
             legend: {
                 display: !0,
@@ -23398,11 +23394,11 @@ webpackJsonp([36], {
             }
         }
     },
-    1520: function(e, t, n) {
+    1525: function(e, t, n) {
         "use strict";
-        var r = n(924),
-            a = n(969),
-            i = n(920);
+        var r = n(928),
+            a = n(982),
+            i = n(924);
         r._set("global", {
             title: {
                 display: !1,
@@ -23506,8 +23502,8 @@ webpackJsonp([36], {
             }
         }
     },
-    1544: function(e, t) {},
-    1545: function(e, t, n) {
+    1549: function(e, t) {},
+    1550: function(e, t, n) {
         "use strict";
 
         function r(e, t) {
@@ -23801,10 +23797,10 @@ webpackJsonp([36], {
         }
         var u, d = n(0),
             c = n(1),
-            m = n(1293),
-            h = n(1294),
+            m = n(1297),
+            h = n(1298),
             p = n(2),
-            f = n(1325),
+            f = n(1331),
             _ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -23849,7 +23845,7 @@ webpackJsonp([36], {
             return _
         })
     },
-    1546: function(e, t, n) {
+    1551: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -23864,7 +23860,7 @@ webpackJsonp([36], {
                 4: i._9.Roman4,
                 5: i._9.Roman5
             },
-            s = (n(1325), function(e) {
+            s = (n(1331), function(e) {
                 return a.createElement(i.U, {
                     display: i.H.Flex,
                     flexWrap: i.K.NoWrap,
@@ -23930,11 +23926,11 @@ webpackJsonp([36], {
             return s
         })
     },
-    1547: function(e, t, n) {
+    1552: function(e, t, n) {
         "use strict";
         var r = n(1),
             a = n(2),
-            i = n(1474),
+            i = n(1479),
             o = n(3),
             s = function(e) {
                 return 0 === e.achievement.progress ? r.createElement("span", null) : e.achievement.completedAt ? r.createElement(o.U, {
@@ -23953,7 +23949,7 @@ webpackJsonp([36], {
             return s
         })
     },
-    1548: function(e, t, n) {
+    1553: function(e, t, n) {
         "use strict";
         var r = n(1),
             a = n(3),
@@ -23980,13 +23976,13 @@ webpackJsonp([36], {
             return i
         })
     },
-    1549: function(e, t, n) {
+    1554: function(e, t, n) {
         "use strict";
-        var r = n(911),
+        var r = n(915),
             a = n(1),
             i = n(2),
-            o = n(1474),
-            s = n(1548),
+            o = n(1479),
+            s = n(1553),
             l = n(3),
             u = function(e) {
                 var t = Object(r.subDays)(new Date, 30),
@@ -24007,9 +24003,9 @@ webpackJsonp([36], {
             return u
         })
     },
-    1550: function(e, t) {},
-    1910: function(e, t) {},
-    1911: function(e, t) {
+    1555: function(e, t) {},
+    1921: function(e, t) {},
+    1922: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -24180,21 +24176,21 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    1912: function(e, t) {},
-    1913: function(e, t) {},
-    1914: function(e, t) {},
-    1915: function(e, t) {},
-    1916: function(e, t) {},
-    1917: function(e, t) {},
-    1918: function(e, t) {},
-    1919: function(e, t) {},
-    1920: function(e, t) {},
-    1921: function(e, t) {},
-    1922: function(e, t) {},
     1923: function(e, t) {},
     1924: function(e, t) {},
     1925: function(e, t) {},
-    1926: function(e, t, n) {
+    1926: function(e, t) {},
+    1927: function(e, t) {},
+    1928: function(e, t) {},
+    1929: function(e, t) {},
+    1930: function(e, t) {},
+    1931: function(e, t) {},
+    1932: function(e, t) {},
+    1933: function(e, t) {},
+    1934: function(e, t) {},
+    1935: function(e, t) {},
+    1936: function(e, t) {},
+    1937: function(e, t, n) {
         function r(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
@@ -24478,9 +24474,9 @@ webpackJsonp([36], {
             }
         };
         var i = {};
-        a.definitions = a.definitions.concat(r(n(933).definitions)), a.definitions = a.definitions.concat(r(n(963).definitions)), e.exports = a
+        a.definitions = a.definitions.concat(r(n(941).definitions)), a.definitions = a.definitions.concat(r(n(967).definitions)), e.exports = a
     },
-    1931: function(e, t) {
+    1943: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -24614,7 +24610,7 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    1932: function(e, t, n) {
+    1944: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -25437,15 +25433,15 @@ webpackJsonp([36], {
             ie = n(1),
             oe = n(2),
             se = n(30),
-            le = n(922),
-            ue = n(918),
+            le = n(925),
+            ue = n(922),
             de = n(14),
             ce = n(6),
-            me = n(1545),
-            he = n(1352),
-            pe = n(1547),
+            me = n(1550),
+            he = n(1356),
+            pe = n(1552),
             fe = n(3),
-            _e = (n(1933), n(1050)),
+            _e = (n(1945), n(1056)),
             ge = function(e) {
                 if (e.query.isLoading || !e.streamSummaryCursor.current) return ie.createElement(fe._1, {
                     height: 400
@@ -25484,7 +25480,7 @@ webpackJsonp([36], {
                     url: _e.b.channelAchievements(e.streamSummaryCursor.current.channel.name)
                 })) : ie.createElement("span", null)
             },
-            ye = (n(1544), n(1549)),
+            ye = (n(1549), n(1554)),
             ve = function(e) {
                 return e.quest && !e.quest.isFinished ? ie.createElement(fe._17, {
                     margin: {
@@ -25517,7 +25513,7 @@ webpackJsonp([36], {
                 }))
             },
             be = n(64),
-            Me = (n(1934), function() {
+            Me = (n(1946), function() {
                 return ie.createElement(fe._17, {
                     className: "dash-feedback",
                     position: fe._2.Absolute,
@@ -25708,7 +25704,7 @@ webpackJsonp([36], {
                     }, this.props.control(e), this.state.isDisclosed && this.props.children(e))
                 }, t
             }(ie.Component),
-            Oe = (n(1935), {
+            Oe = (n(1947), {
                 "data-test-selector": "stream-summary-date-time"
             }),
             je = {
@@ -25895,7 +25891,7 @@ webpackJsonp([36], {
                 }
                 return e
             }(),
-            ze = (n(1936), {
+            ze = (n(1948), {
                 "data-test-selector": "live-dashboard-link"
             }),
             Ve = {
@@ -25903,7 +25899,7 @@ webpackJsonp([36], {
                 imageAlt: "VoHiYo"
             },
             Be = "https://help.twitch.tv/customer/portal/articles/2877822",
-            qe = (n(1937), 5),
+            qe = (n(1949), 5),
             Ge = {
                 "data-test-selector": "referral-percentage"
             },
@@ -25914,7 +25910,7 @@ webpackJsonp([36], {
                 src: "https://static-cdn.jtvnw.net/emoticons/v1/90076/3.0",
                 alt: "StinkyCheese"
             },
-            $e = (n(1550), {
+            $e = (n(1555), {
                 "data-test-selector": "title"
             }),
             Qe = {
@@ -26141,7 +26137,7 @@ webpackJsonp([36], {
                 "data-test-selector": "stream-summary-raids-received-stat-card"
             },
             kt = n(72),
-            Lt = n(1294),
+            Lt = n(1298),
             St = {
                 "data-test-selector": "summary-tip-message"
             },
@@ -26235,7 +26231,7 @@ webpackJsonp([36], {
                 }, t
             }(ie.Component),
             Yt = n(137),
-            Et = (n(1938), function(e) {
+            Et = (n(1950), function(e) {
                 return ie.createElement("div", {
                     className: "sm-cp-card"
                 }, ie.createElement("a", {
@@ -26389,7 +26385,7 @@ webpackJsonp([36], {
                     }))
                 }).slice(0, 5)
             },
-            Rt = n(1354),
+            Rt = n(1358),
             Ft = {
                 width: 400,
                 height: 190
@@ -26483,7 +26479,7 @@ webpackJsonp([36], {
             It = function(e) {
                 return (window.devicePixelRatio || 1) / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
             },
-            Pt = (n(1939), function(e, t) {
+            Pt = (n(1951), function(e, t) {
                 var n = Math.max.apply(null, t);
                 return {
                     at: e[t.indexOf(n)],
@@ -26618,7 +26614,7 @@ webpackJsonp([36], {
                     })
                 }, t
             }(ie.Component),
-            $t = (n(1940), function(e) {
+            $t = (n(1952), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -26677,7 +26673,7 @@ webpackJsonp([36], {
                             return Xt.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 1932))
+                                }).then(n.bind(null, 1944))
                             }, "StreamSummaryPage")(e)
                         }
                     },
@@ -26695,15 +26691,15 @@ webpackJsonp([36], {
             return en
         })
     },
-    1933: function(e, t) {},
-    1934: function(e, t) {},
-    1935: function(e, t) {},
-    1936: function(e, t) {},
-    1937: function(e, t) {},
-    1938: function(e, t) {},
-    1939: function(e, t) {},
-    1940: function(e, t) {},
-    2031: function(e, t, n) {
+    1945: function(e, t) {},
+    1946: function(e, t) {},
+    1947: function(e, t) {},
+    1948: function(e, t) {},
+    1949: function(e, t) {},
+    1950: function(e, t) {},
+    1951: function(e, t) {},
+    1952: function(e, t) {},
+    2043: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -26917,7 +26913,7 @@ webpackJsonp([36], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var M = n(8),
+        var M = n(9),
             k = n(11),
             L = n(51),
             S = n(35),
@@ -26932,10 +26928,10 @@ webpackJsonp([36], {
             j = n(17),
             H = n(4),
             A = n(413),
-            R = n(9),
-            F = n(917),
+            R = n(8),
+            F = n(921),
             N = n(3),
-            I = (n(1910), function(e) {
+            I = (n(1921), function(e) {
                 var t = x.Children.toArray(e.children);
                 if (2 !== t.length) throw new Error("HoverBalloonWrapper should only be given two children: a clickable and a Balloon");
                 var n = t[0],
@@ -26956,7 +26952,7 @@ webpackJsonp([36], {
                     className: "hover-balloon"
                 }, a))
             }),
-            P = n(911),
+            P = n(915),
             U = n(33),
             W = {
                 get: function(e) {
@@ -26984,8 +26980,8 @@ webpackJsonp([36], {
                     return a(t.match, e) && e.children
                 })
             },
-            V = n(1911),
-            B = (n(1912), "https://api.twitch.tv/kraken/payout/invite"),
+            V = n(1922),
+            B = (n(1923), "https://api.twitch.tv/kraken/payout/invite"),
             q = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -27076,7 +27072,7 @@ webpackJsonp([36], {
                         },
                         className: H("permissions" === this.props.page ? o : "dashboard-nav__link")
                     }, Object(E.d)("Editing", "DashboardNav")))), u = x.createElement("li", null, x.createElement(N.S, {
-                        linkTo: "https://www.twitch.tv/" + this.props.channelName + "/dashboard/activity",
+                        linkTo: "https://www.twitch.tv/" + this.props.channelName + "/broadcast",
                         "data-test-selector": "streaming-apps-link-selector"
                     }, x.createElement(N.U, {
                         padding: {
@@ -27318,19 +27314,19 @@ webpackJsonp([36], {
             },
             K = Object(M.a)(i)(G),
             $ = n(31),
-            Q = n(958),
-            Z = n(991),
+            Q = n(962),
+            Z = n(996),
             X = n(30),
-            ee = n(922),
-            te = n(918),
+            ee = n(925),
+            te = n(922),
             ne = n(14),
-            re = n(938),
+            re = n(943),
             ae = n(6),
             ie = n(50),
-            oe = n(928),
-            se = n(919),
+            oe = n(931),
+            se = n(923),
             le = n(64),
-            ue = (n(1913), function(e) {
+            ue = (n(1924), function(e) {
                 return x.createElement("div", {
                     className: "mod-dashboard__ban-message"
                 }, x.createElement("ul", {
@@ -27441,7 +27437,7 @@ webpackJsonp([36], {
                 }, t
             }(x.Component),
             ce = Object(M.a)(null, o)(de),
-            me = (n(1914), function(e) {
+            me = (n(1925), function(e) {
                 var t = "";
                 switch (e.state) {
                     case Z.b:
@@ -27465,7 +27461,7 @@ webpackJsonp([36], {
                     fontSize: N.L.Size5
                 }, t, ": ", Object(E.d)("This message was held for review and is hidden from viewers.", "chomments.moderation.heldForReview")))
             }),
-            he = (n(1915), function(e) {
+            he = (n(1926), function(e) {
                 var t = e.state !== Z.c,
                     n = null;
                 t && (n = x.createElement(me, {
@@ -27503,7 +27499,7 @@ webpackJsonp([36], {
                     when: t
                 }, "chomments.moderation.userLeftMessageWhen"))
             },
-            fe = (n(1916), function(e) {
+            fe = (n(1927), function(e) {
                 return x.createElement(N.U, {
                     display: N.H.Flex,
                     flexWrap: N.K.NoWrap
@@ -27537,7 +27533,7 @@ webpackJsonp([36], {
                     showRelativeTimeOnly: e.showRelativeTimeOnly || !1
                 }))))
             }),
-            _e = (n(1917), function(e) {
+            _e = (n(1928), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -27723,7 +27719,7 @@ webpackJsonp([36], {
                     return x.createElement("ul", null, t)
                 }, t
             }(x.Component),
-            ve = (n(1918), function(e) {
+            ve = (n(1929), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onLoadMoreRepliesClickHandler = function() {
@@ -27753,7 +27749,7 @@ webpackJsonp([36], {
                 }, t
             }(x.Component)),
             be = n(137),
-            Me = (n(1919), "comment"),
+            Me = (n(1930), "comment"),
             ke = "t",
             Le = function(e) {
                 var t = e.context,
@@ -27780,7 +27776,7 @@ webpackJsonp([36], {
                     targetBlank: !0
                 }, Object(Z.u)(r.contentOffset)))
             },
-            Se = (n(1920), function(e) {
+            Se = (n(1931), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onBanUserClickHandler = function() {
@@ -27883,7 +27879,7 @@ webpackJsonp([36], {
                     }, x.createElement(ce, C.__assign({}, t))))), n))
                 }, t
             }(x.Component)),
-            we = (n(1921), function(e) {
+            we = (n(1932), function(e) {
                 var t = e.comments.map(function(t) {
                     return x.createElement("li", {
                         key: t.comment.id,
@@ -27904,8 +27900,8 @@ webpackJsonp([36], {
                 autoReportInteractive: !0
             })(we),
             Ce = n(88),
-            xe = n(1351),
-            Te = (n(1922), function(e) {
+            xe = n(1355),
+            Te = (n(1933), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function(e) {
@@ -27924,7 +27920,7 @@ webpackJsonp([36], {
                     }))
                 }, t
             }(x.Component)),
-            Ye = (n(1923), function(e) {
+            Ye = (n(1934), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.searchInputChangeHandler = function(e) {
@@ -28001,7 +27997,7 @@ webpackJsonp([36], {
                 }, t
             }(x.Component)),
             Ee = Object(ae.c)("SearchFilter")(Ye),
-            Oe = (n(1924), function(e) {
+            Oe = (n(1935), function(e) {
                 return x.createElement(Ee, {
                     disabled: e.disabled,
                     onSearchTermChange: e.onSearchTermChange,
@@ -28053,7 +28049,7 @@ webpackJsonp([36], {
                     disabled: !("onOlderClick" in e)
                 }, Object(E.d)("Older Messages", "chomments.dashboard.olderMessages")))
             },
-            Ne = (n(1925), Object(E.d)("You currently have no messages. Add a message to one of your videos to encourage conversation in your community.", "ModerationDashboard")),
+            Ne = (n(1936), Object(E.d)("You currently have no messages. Add a message to one of your videos to encourage conversation in your community.", "ModerationDashboard")),
             Ie = Object(E.d)("You currently have no messages on this video. Add a message to this video to encourage conversation in your community.", "ModerationDashboard"),
             Pe = function(e) {
                 function t(t) {
@@ -28186,7 +28182,7 @@ webpackJsonp([36], {
             }), Object(ee.a)({
                 location: ne.PageviewLocation.Dashboard
             }))(Pe),
-            Ve = n(1926),
+            Ve = n(1937),
             Be = Object(Y.f)(Object(M.a)(d, c, m)(Object($.graphql)(Ve, {
                 options: function(e) {
                     return {
@@ -28219,7 +28215,7 @@ webpackJsonp([36], {
                         },
                         yes: function() {
                             return qe.a.wrap(function() {
-                                return n.e(69).then(n.bind(null, 2032))
+                                return n.e(69).then(n.bind(null, 2044))
                             }, "AchievementsPage")(e)
                         }
                     },
@@ -28231,11 +28227,11 @@ webpackJsonp([36], {
                 };
                 return x.createElement(A.a, C.__assign({}, t))
             },
-            Je = n(1473),
-            Ke = n(1931),
+            Je = n(1478),
+            Ke = n(1943),
             $e = n(21),
-            Qe = n(1050),
-            Ze = n(1294),
+            Qe = n(1056),
+            Ze = n(1298),
             Xe = function() {
                 function e(e) {
                     this.timeRange = new Qe.a(e.start, e.end), this.now = new Date, this.id = this.timeRange.end.getTime(), this.isCompleted = this.getIsCompleted(), this.channel = e.channel, this.avgViewerCount = e.avgViewerCount, this.maxViewerCount = e.maxViewerCount, this.followersChange = e.followersChange, this.uniqueViewers = e.uniqueViewers, this.uniqueChatters = e.uniqueChatters, this.incomingRaids = e.incomingRaids, this.peakViewershipTime = e.peakViewershipTime
@@ -28309,7 +28305,7 @@ webpackJsonp([36], {
                 })], t)
             }(x.Component),
             tt = et,
-            nt = n(1932),
+            nt = n(1944),
             rt = function(e) {
                 var t = e.match.params.pageName,
                     n = t ? "/" + encodeURIComponent(t) : "";
@@ -28381,7 +28377,7 @@ webpackJsonp([36], {
             return ot
         })
     },
-    913: function(e, t, n) {
+    917: function(e, t, n) {
         (function(e) {
             ! function(t, n) {
                 e.exports = n()
@@ -28996,7 +28992,7 @@ webpackJsonp([36], {
                 function Ze(t) {
                     var r = null;
                     if (!Ea[t] && void 0 !== e && e && e.exports) try {
-                        r = Ca._abbr, n(1322)("./" + t), Xe(r)
+                        r = Ca._abbr, n(1328)("./" + t), Xe(r)
                     } catch (e) {}
                     return Ea[t]
                 }
@@ -30201,9 +30197,9 @@ webpackJsonp([36], {
                         br = e
                     }(bt), t.fn = ti, t.min = kt, t.max = Lt, t.now = Wa, t.utc = m, t.unix = zn, t.months = Kn, t.isDate = l, t.locale = Xe, t.invalid = _, t.duration = Bt, t.isMoment = v, t.weekdays = Qn, t.parseZone = Vn, t.localeData = nt, t.isDuration = xt, t.monthsShort = $n, t.weekdaysMin = Xn, t.defineLocale = et, t.updateLocale = tt, t.locales = rt, t.weekdaysShort = Zn, t.normalizeUnits = F, t.relativeTimeRounding = _r, t.relativeTimeThreshold = gr, t.calendarFormat = Qt, t.prototype = ti, t
             })
-        }).call(t, n(424)(e))
+        }).call(t, n(425)(e))
     },
-    914: function(e, t, n) {
+    918: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -30213,7 +30209,7 @@ webpackJsonp([36], {
             e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention", e[e.Ban = 3] = "Ban", e[e.Timeout = 4] = "Timeout", e[e.AutoModRejectedPrompt = 5] = "AutoModRejectedPrompt", e[e.AutoModMessageRejected = 6] = "AutoModMessageRejected", e[e.AutoModMessageAllowed = 7] = "AutoModMessageAllowed", e[e.AutoModMessageDenied = 8] = "AutoModMessageDenied", e[e.Connected = 9] = "Connected", e[e.Disconnected = 10] = "Disconnected", e[e.Reconnect = 11] = "Reconnect", e[e.Hosting = 12] = "Hosting", e[e.Unhost = 13] = "Unhost", e[e.Subscription = 14] = "Subscription", e[e.Resubscription = 15] = "Resubscription", e[e.SubGift = 16] = "SubGift", e[e.Clear = 17] = "Clear", e[e.SubscriberOnlyMode = 18] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 19] = "FollowerOnlyMode", e[e.SlowMode = 20] = "SlowMode", e[e.RoomMods = 21] = "RoomMods", e[e.RoomState = 22] = "RoomState", e[e.Raid = 23] = "Raid", e[e.Unraid = 24] = "Unraid", e[e.Notice = 25] = "Notice", e[e.Info = 26] = "Info", e[e.BadgesUpdated = 27] = "BadgesUpdated", e[e.Purchase = 28] = "Purchase"
         }(r || (r = {}))
     },
-    917: function(e, t, n) {
+    921: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
@@ -30344,7 +30340,7 @@ webpackJsonp([36], {
                 }, e
             }()
     },
-    918: function(e, t, n) {
+    922: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -30402,7 +30398,7 @@ webpackJsonp([36], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    919: function(e, t, n) {
+    923: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -30412,22 +30408,90 @@ webpackJsonp([36], {
             e.ChannelFeedComment = "CHANNEL_FEED_COMMENT_REPORT", e.ChannelFeedPost = "CHANNEL_FEED_POST_REPORT", e.Chat = "CHAT_REPORT", e.Clip = "CLIP_REPORT", e.Collection = "COLLECTION_REPORT", e.Community = "COMMUNITY_REPORT", e.Event = "EVENT_REPORT", e.Extension = "EXTENSION_REPORT", e.LiveUp = "LIVE_UP_REPORT", e.Raid = "RAID_REPORT", e.StreamUp = "STREAM_UP_REPORT", e.User = "USER_REPORT", e.VideoChatMessage = "VOD_COMMENT_REPORT", e.Vod = "VOD_REPORT"
         }(r || (r = {}))
     },
-    920: function(e, t, n) {
+    924: function(e, t, n) {
         "use strict";
-        e.exports = n(1153), e.exports.easing = n(1476), e.exports.canvas = n(1477), e.exports.options = n(1478)
+        e.exports = n(1158), e.exports.easing = n(1481), e.exports.canvas = n(1482), e.exports.options = n(1483)
     },
-    921: function(e, t, n) {
+    925: function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return function(t) {
+                var n = function(n) {
+                    function r(t) {
+                        var r = n.call(this, t) || this;
+                        return r.tracked = !1, r.referenceTracking = {}, r.trackPageview = function() {
+                            if (!(r.tracked || e.skip && e.skip(r.props))) {
+                                r.tracked = !0, l.n.adBlockSentinel.pageTransition();
+                                var t = {};
+                                "function" == typeof e.properties ? t = e.properties(r.props) : e.properties && (t = a.__assign({}, e.properties));
+                                var n = a.__assign({}, r.props);
+                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
+                                var i = r.referenceTracking,
+                                    o = i.content,
+                                    s = i.medium,
+                                    u = i.content_index;
+                                l.n.tracking.trackPageview(a.__assign({
+                                    content: o,
+                                    medium: s,
+                                    content_index: u,
+                                    location: e.location
+                                }, t))
+                            }
+                        }, l.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : l.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
+                    }
+                    return a.__extends(r, n), r.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
+                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
+                        })
+                    }, r.prototype.componentDidUpdate = function() {
+                        this.trackPageview()
+                    }, r.prototype.render = function() {
+                        return o.createElement(t, a.__assign({}, this.props))
+                    }, r.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? i.parse(e.search) : {},
+                            n = {
+                                content: t.tt_content,
+                                content_index: t.tt_content_index,
+                                medium: t.tt_medium
+                            };
+                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
+                            var r = "",
+                                a = i.stringify(t);
+                            a.length > 0 && (r = "?" + a), this.props.history.replace({
+                                pathname: e.pathname,
+                                hash: e.hash,
+                                search: r
+                            })
+                        }
+                        return n
+                    }, r
+                }(o.Component);
+                return Object(s.f)(n)
+            }
+        }
+        var a = n(0),
+            i = n(21),
+            o = n(1),
+            s = n(12),
+            l = n(2);
+        n.d(t, "a", function() {
+            return r
+        })
+    },
+    926: function(e, t, n) {
         "use strict";
         var r = n(0),
             a = n(4),
             i = n(1),
             o = n(11),
             s = n(2),
-            l = n(9),
+            l = n(8),
             u = n(6),
-            d = n(926),
+            d = n(930),
             c = n(3),
-            m = n(944),
+            m = n(949),
             h = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -30475,7 +30539,7 @@ webpackJsonp([36], {
                     }
                 }
             })(h),
-            f = (n(945), n(946));
+            f = (n(950), n(951));
         n.d(t, "a", function() {
             return g
         }), n.d(t, "b", function() {
@@ -30652,84 +30716,16 @@ webpackJsonp([36], {
                 }
             }))(y)
     },
-    922: function(e, t, n) {
+    928: function(e, t, n) {
         "use strict";
-
-        function r(e) {
-            return function(t) {
-                var n = function(n) {
-                    function r(t) {
-                        var r = n.call(this, t) || this;
-                        return r.tracked = !1, r.referenceTracking = {}, r.trackPageview = function() {
-                            if (!(r.tracked || e.skip && e.skip(r.props))) {
-                                r.tracked = !0, l.n.adBlockSentinel.pageTransition();
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(r.props) : e.properties && (t = a.__assign({}, e.properties));
-                                var n = a.__assign({}, r.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var i = r.referenceTracking,
-                                    o = i.content,
-                                    s = i.medium,
-                                    u = i.content_index;
-                                l.n.tracking.trackPageview(a.__assign({
-                                    content: o,
-                                    medium: s,
-                                    content_index: u,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, l.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : l.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
-                    }
-                    return a.__extends(r, n), r.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, r.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, r.prototype.render = function() {
-                        return o.createElement(t, a.__assign({}, this.props))
-                    }, r.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? i.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var r = "",
-                                a = i.stringify(t);
-                            a.length > 0 && (r = "?" + a), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: r
-                            })
-                        }
-                        return n
-                    }, r
-                }(o.Component);
-                return Object(s.f)(n)
-            }
-        }
-        var a = n(0),
-            i = n(21),
-            o = n(1),
-            s = n(12),
-            l = n(2);
-        n.d(t, "a", function() {
-            return r
-        })
-    },
-    924: function(e, t, n) {
-        "use strict";
-        var r = n(920);
+        var r = n(924);
         e.exports = {
             _set: function(e, t) {
                 return r.merge(this[e] || (this[e] = {}), t)
             }
         }
     },
-    926: function(e, t, n) {
+    930: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -30816,7 +30812,56 @@ webpackJsonp([36], {
             return r
         })
     },
-    927: function(e, t, n) {
+    931: function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return Object(l.bindActionCreators)({
+                closeModal: d.c
+            }, e)
+        }
+        var a = n(932),
+            i = n(0),
+            o = n(1),
+            s = n(9),
+            l = n(11),
+            u = n(134),
+            d = n(50),
+            c = n(6),
+            m = n(3),
+            h = (n(957), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleClose = function(e) {
+                        t.props.closeModal(), t.props.onClose && t.props.onClose(e)
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return o.createElement(m._17, {
+                        className: "reporting-modal__container",
+                        background: m.m.Base,
+                        padding: {
+                            x: 2,
+                            y: 3
+                        }
+                    }, o.createElement(a.a, {
+                        onClose: this.handleClose,
+                        reportContext: this.props.reportContext,
+                        title: this.props.title,
+                        defaultDescription: this.props.defaultDescription
+                    }), o.createElement(u.a, null))
+                }, t
+            }(o.Component)),
+            p = Object(l.compose)(Object(c.c)("ReportUserModal"), Object(s.a)(null, r))(h);
+        n.d(t, !1, function() {}), n.d(t, !1, function() {
+            return a.a
+        }), n.d(t, !1, function() {
+            return h
+        }), n.d(t, "a", function() {
+            return p
+        })
+    },
+    932: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -30829,19 +30874,19 @@ webpackJsonp([36], {
         });
         var a = n(0),
             i = n(1),
-            o = (n.n(i), n(8)),
+            o = (n.n(i), n(9)),
             s = n(11),
             l = n(2),
-            u = n(9),
+            u = n(8),
             d = n(23),
             c = n(14),
             m = n(6),
-            h = n(921),
-            p = n(919),
-            f = n(926),
-            _ = n(921),
-            g = n(947),
-            y = (n.n(g), n(948)),
+            h = n(926),
+            p = n(923),
+            f = n(930),
+            _ = n(926),
+            g = n(952),
+            y = (n.n(g), n(953)),
             v = (n.n(y), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -30940,56 +30985,7 @@ webpackJsonp([36], {
                 name: "reportUser"
             }), Object(m.c)("ReportUser"), Object(o.a)(r, null))(v)
     },
-    928: function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return Object(l.bindActionCreators)({
-                closeModal: d.c
-            }, e)
-        }
-        var a = n(927),
-            i = n(0),
-            o = n(1),
-            s = n(8),
-            l = n(11),
-            u = n(134),
-            d = n(50),
-            c = n(6),
-            m = n(3),
-            h = (n(953), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleClose = function(e) {
-                        t.props.closeModal(), t.props.onClose && t.props.onClose(e)
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(m._17, {
-                        className: "reporting-modal__container",
-                        background: m.m.Base,
-                        padding: {
-                            x: 2,
-                            y: 3
-                        }
-                    }, o.createElement(a.a, {
-                        onClose: this.handleClose,
-                        reportContext: this.props.reportContext,
-                        title: this.props.title,
-                        defaultDescription: this.props.defaultDescription
-                    }), o.createElement(u.a, null))
-                }, t
-            }(o.Component)),
-            p = Object(l.compose)(Object(c.c)("ReportUserModal"), Object(s.a)(null, r))(h);
-        n.d(t, !1, function() {}), n.d(t, !1, function() {
-            return a.a
-        }), n.d(t, !1, function() {
-            return h
-        }), n.d(t, "a", function() {
-            return p
-        })
-    },
-    929: function(e, t, n) {
+    937: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -31016,7 +31012,7 @@ webpackJsonp([36], {
         var i = "viewer-card.VIEWER_CARD_HIDDEN",
             o = "viewer-card.VIEWER_CARD_SHOWN"
     },
-    930: function(e, t, n) {
+    938: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -31076,7 +31072,7 @@ webpackJsonp([36], {
         }), t.h = r, t.j = a, t.i = i, t.k = o, t.l = s, t.c = l, t.d = u, t.e = d, t.f = c, t.g = m, t.b = h, t.m = p;
         var f = "/unraid"
     },
-    931: function(e, t, n) {
+    939: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -31086,7 +31082,7 @@ webpackJsonp([36], {
             e.Admin = "admin", e.GlobalMod = "global_mod", e.Moderator = "mod", e.Owner = "owner", e.Staff = "staff", e.Subscriber = "subscriber", e.User = ""
         }(r || (r = {}))
     },
-    932: function(e, t, n) {
+    940: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -31382,18 +31378,18 @@ webpackJsonp([36], {
         }
         var E = n(1),
             O = n(2),
-            j = n(1004),
+            j = n(1008),
             H = n(136),
-            A = n(938),
-            R = n(943),
-            F = n(1005),
+            A = n(943),
+            R = n(948),
+            F = n(1009),
             N = n(0),
             I = n(12),
-            P = n(9),
-            U = n(1006),
+            P = n(8),
+            U = n(1010),
             W = n(3),
-            z = n(983),
-            V = (n(1017), "https://static-cdn.jtvnw.net/emoticons/v1/58765/2.0"),
+            z = n(988),
+            V = (n(1022), "https://static-cdn.jtvnw.net/emoticons/v1/58765/2.0"),
             B = {
                 ERROR: "clips-chat-card-error"
             },
@@ -31560,11 +31556,11 @@ webpackJsonp([36], {
             K = Object(P.a)(z, {
                 options: J
             })(G),
-            $ = n(914),
-            Q = n(270);
+            $ = n(918),
+            Q = n(271);
         t.b = r, t.e = i, t.f = u, t.n = f, t.m = _, t.i = g, t.k = y, t.g = v, t.d = b, t.j = M, t.c = k, t.l = L, t.a = S, t.o = D, t.p = C, t.q = x, t.h = T
     },
-    933: function(e, t) {
+    941: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -31730,12 +31726,12 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    938: function(e, t, n) {
+    943: function(e, t, n) {
         "use strict";
-        var r = n(982),
-            a = n(965),
-            i = n(950),
-            o = (n(1015), n(0)),
+        var r = n(987),
+            a = n(978),
+            i = n(955),
+            o = (n(1020), n(0)),
             s = function() {
                 function e(e, t, n) {
                     this.globalsBySet = new Map, this.channelsBySet = new Map, this.indexBadges(e, this.globalsBySet, n), Array.isArray(t) && this.indexBadges(t, this.channelsBySet, n)
@@ -31762,7 +31758,7 @@ webpackJsonp([36], {
             return s
         })
     },
-    941: function(e, t, n) {
+    945: function(e, t, n) {
         "use strict";
 
         function r(e, t) {
@@ -31785,14 +31781,14 @@ webpackJsonp([36], {
         t.a = r;
         var a = n(2)
     },
-    943: function(e, t, n) {
+    948: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
         });
         var r = n(4),
             a = (n.n(r), n(1)),
-            i = (n.n(a), n(1016)),
+            i = (n.n(a), n(1021)),
             o = (n.n(i), function(e) {
                 var t = [a.createElement("span", {
                     key: "username-display",
@@ -31820,7 +31816,7 @@ webpackJsonp([36], {
                 var i
             })
     },
-    944: function(e, t) {
+    949: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -31908,8 +31904,8 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    945: function(e, t) {},
-    946: function(e, t) {
+    950: function(e, t) {},
+    951: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -32063,7 +32059,7 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    947: function(e, t) {
+    952: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -32164,7 +32160,7 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    948: function(e, t) {
+    953: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -32252,7 +32248,7 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    949: function(e, t, n) {
+    954: function(e, t, n) {
         "use strict";
         var r = n(2),
             a = n(14),
@@ -32276,7 +32272,7 @@ webpackJsonp([36], {
                 r.m.track(a.SpadeEventType.ChatRoomJoined, o(e))
             }
     },
-    950: function(e, t, n) {
+    955: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
             return r
@@ -32292,7 +32288,7 @@ webpackJsonp([36], {
             i = "visit_url",
             o = "broadcaster"
     },
-    951: function(e, t, n) {
+    956: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -32302,8 +32298,8 @@ webpackJsonp([36], {
             e[e.recent_raids = 0] = "recent_raids", e[e.chat_message = 1] = "chat_message", e[e.viewer_list = 2] = "viewer_list", e[e.test = 3] = "test"
         }(r || (r = {}))
     },
-    953: function(e, t) {},
-    955: function(e, t, n) {
+    957: function(e, t) {},
+    959: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -32312,7 +32308,7 @@ webpackJsonp([36], {
         t.a = r;
         var a = /\scurse\/\d/
     },
-    956: function(e, t, n) {
+    961: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -32369,7 +32365,7 @@ webpackJsonp([36], {
             o = 30,
             s = [0, 10, 30, 60, 1440, 10080, 43200, 129600]
     },
-    958: function(e, t, n) {
+    962: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -32414,7 +32410,7 @@ webpackJsonp([36], {
         t.a = r;
         var a = n(0)
     },
-    963: function(e, t) {
+    967: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -32623,7 +32619,22 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    965: function(e, t, n) {
+    976: function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            var t = Math.floor(e / 3600),
+                n = Math.floor((e - 3600 * t) / 60),
+                r = e - 3600 * t - 60 * n;
+            return t < 10 && (t = "0" + t), n < 10 && (n = "0" + n), r < 10 && (r = "0" + r), t + "h" + n + "m" + r + "s"
+        }
+
+        function a(e) {
+            return "" === e ? "" : e.startsWith("v") ? e : "v" + e
+        }
+        t.b = r, t.a = a
+    },
+    978: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -32646,9 +32657,9 @@ webpackJsonp([36], {
             return d
         });
         var i = n(1),
-            o = (n.n(i), n(950)),
+            o = (n.n(i), n(955)),
             s = n(3),
-            l = n(1014),
+            l = n(1019),
             u = (n.n(l), "https://www.twitch.tv/products/turbo?ref=chat_badge"),
             d = function(e) {
                 var t = e.badge,
@@ -32672,7 +32683,7 @@ webpackJsonp([36], {
                 }, n)
             }
     },
-    967: function(e, t, n) {
+    980: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -32689,7 +32700,7 @@ webpackJsonp([36], {
             SlowMode: "slowMode"
         }
     },
-    969: function(e, t, n) {
+    982: function(e, t, n) {
         "use strict";
 
         function r(e, t, n, r) {
@@ -32709,8 +32720,8 @@ webpackJsonp([36], {
                     t[s] = d
                 }
         }
-        var a = n(1326),
-            i = n(920),
+        var a = n(1332),
+            i = n(924),
             o = function(e) {
                 i.extend(this, e), this.initialize.apply(this, arguments)
             };
@@ -32740,7 +32751,7 @@ webpackJsonp([36], {
             }
         }), o.extend = i.inherits, e.exports = o
     },
-    970: function(e, t, n) {
+    983: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -32771,14 +32782,14 @@ webpackJsonp([36], {
         var s = n(0),
             l = n(1),
             u = n(2),
-            d = n(989),
+            d = n(994),
             c = n(136),
             m = "https://www.facebook.com/sharer/sharer.php",
             h = "https://www.twitter.com/share",
             p = "https://www.reddit.com/submit",
             f = "https://vk.com/share.php",
             _ = n(3);
-        n(1008);
+        n(1012);
         n.d(t, "b", function() {
             return g
         }), n.d(t, "a", function() {
@@ -32902,22 +32913,7 @@ webpackJsonp([36], {
             }, t
         }(l.Component)
     },
-    978: function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            var t = Math.floor(e / 3600),
-                n = Math.floor((e - 3600 * t) / 60),
-                r = e - 3600 * t - 60 * n;
-            return t < 10 && (t = "0" + t), n < 10 && (n = "0" + n), r < 10 && (r = "0" + r), t + "h" + n + "m" + r + "s"
-        }
-
-        function a(e) {
-            return "" === e ? "" : e.startsWith("v") ? e : "v" + e
-        }
-        t.b = r, t.a = a
-    },
-    980: function(e, t, n) {
+    985: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -32948,13 +32944,13 @@ webpackJsonp([36], {
         t.a = r, t.b = a, t.c = i;
         var u = "chatSettings"
     },
-    982: function(e, t, n) {
+    987: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
         });
         var r = n(1),
-            a = (n.n(r), n(965)),
+            a = (n.n(r), n(978)),
             i = function(e) {
                 var t = Object.keys(e.badgesToRender).map(function(t) {
                         var n = e.badgesToRender[t],
@@ -32970,7 +32966,7 @@ webpackJsonp([36], {
                 return r.createElement("span", null, n)
             }
     },
-    983: function(e, t) {
+    988: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -33167,7 +33163,7 @@ webpackJsonp([36], {
         };
         e.exports = n
     },
-    984: function(e, t, n) {
+    989: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
             return l
@@ -33179,8 +33175,8 @@ webpackJsonp([36], {
         var r = n(0),
             a = n(2),
             i = n(14),
-            o = n(967),
-            s = n(949),
+            o = n(980),
+            s = n(954),
             l = function(e) {
                 a.m.track(i.SpadeEventType.ChatSettingsOpened, Object(s.a)(e))
             },
@@ -33200,7 +33196,7 @@ webpackJsonp([36], {
                 a.m.track(i.SpadeEventType.ChatSettingsChanged, t)
             }
     },
-    989: function(e, t, n) {
+    994: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -33216,7 +33212,7 @@ webpackJsonp([36], {
         }
         t.a = r
     },
-    991: function(e, t, n) {
+    996: function(e, t, n) {
         "use strict";
 
         function r(e, t) {
@@ -34193,7 +34189,7 @@ webpackJsonp([36], {
             });
         ae.n.store.registerReducer("vodChat", Ct);
         var xt, Tt = n(19),
-            Yt = n(912),
+            Yt = n(916),
             Et = function(e, t) {
                 void 0 === e && (e = {}), void 0 === t && (t = {});
                 var n = new Yt.BrowserHeaders(t),
@@ -34240,8 +34236,8 @@ webpackJsonp([36], {
                     return this.doRawRequest(e, n)
                 }, e
             }(),
-            It = n(404),
-            Pt = n(270),
+            It = n(405),
+            Pt = n(271),
             Ut = n(135),
             Wt = {
                 normalizeRecord: function(e, t, n) {
@@ -34498,10 +34494,10 @@ webpackJsonp([36], {
                 return e.getTime() > t.getTime() ? e : t
             },
             Sn = n(20),
-            wn = n(1324),
+            wn = n(1330),
             Dn = n(139),
-            Cn = n(409),
-            xn = n(1351),
+            Cn = n(410),
+            xn = n(1355),
             Tn = function() {
                 return Object(Mt.d)("You do not have permission to access this dashboard.", "routines-moderation")
             },
@@ -34548,9 +34544,9 @@ webpackJsonp([36], {
             Rn = n(14),
             Fn = n(56),
             Nn = n(140),
-            In = n(978),
-            Pn = n(1292),
-            Un = n(1454),
+            In = n(976),
+            Pn = n(1296),
+            Un = n(1459),
             Wn = this,
             zn = "replay_mode",
             Vn = "timestamp_mode",
@@ -34740,9 +34736,9 @@ webpackJsonp([36], {
                     share_platform: n
                 }
             },
-            rr = n(1455),
-            ar = n(1456),
-            ir = n(1457),
+            rr = n(1460),
+            ar = n(1461),
+            ir = n(1462),
             or = this,
             sr = function(e) {
                 return Object(ae.d)("This room is in {duration} followers-only mode. Follow this channel to join the community", {
@@ -35016,10 +35012,10 @@ webpackJsonp([36], {
                     })
                 })
             },
-            Sr = (n(1458), n(4)),
-            wr = n(1459),
+            Sr = (n(1463), n(4)),
+            wr = n(1464),
             Dr = n(88),
-            Cr = (n(1460), function(e) {
+            Cr = (n(1465), function(e) {
                 var t = e.onCloseClick ? e.onCloseClick : function() {},
                     n = e.hideCloseButton ? "" : jn.createElement(Hn.U, {
                         className: "modal-shell__close-button",
@@ -35041,7 +35037,7 @@ webpackJsonp([36], {
                     className: r
                 }, e.children, n)))))
             }),
-            xr = (n(1461), "confirm-button"),
+            xr = (n(1466), "confirm-button"),
             Tr = "deny-button",
             Yr = function(e) {
                 return jn.createElement(Cr, {
@@ -35087,7 +35083,7 @@ webpackJsonp([36], {
             Or = function(e) {
                 return e < 10 ? "0" + e : "" + e
             },
-            jr = (n(1462), function(e) {
+            jr = (n(1467), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onClickHandler = function() {
@@ -35130,7 +35126,7 @@ webpackJsonp([36], {
                     }, Object(ae.c)(new Date(1e3 * this.props.video.publishedAt), "medium"), jn.createElement("span", null, " · "), Er(this.props.video.lengthSeconds)))))))
                 }, t
             }(jn.Component)),
-            Hr = n(1005),
+            Hr = n(1009),
             Ar = function(e) {
                 var t = e.message,
                     n = t.tokens.map(function(e, t) {
@@ -35156,7 +35152,7 @@ webpackJsonp([36], {
                     }
                 }, Array.prototype.concat.apply([], n))
             },
-            Rr = n(931),
+            Rr = n(939),
             Fr = /^[\x00-\x7F]*$/,
             Nr = function(e) {
                 return !Fr.test(e)
@@ -35175,9 +35171,9 @@ webpackJsonp([36], {
                 }
             },
             Ur = n(31),
-            Wr = n(8),
-            zr = n(958),
-            Vr = n(930),
+            Wr = n(9),
+            zr = n(962),
+            Vr = n(938),
             Br = function(e) {
                 return e.blocks ? e.blocks.reduce(function(e, t) {
                     return e[t.user._id] = !0, e
@@ -35193,7 +35189,7 @@ webpackJsonp([36], {
             Gr = function(e, t, n) {
                 return e && t && !n
             },
-            Jr = n(938),
+            Jr = n(943),
             Kr = n(6),
             $r = 15e3,
             Qr = function(e) {
@@ -35250,10 +35246,10 @@ webpackJsonp([36], {
                     })))
                 }, t
             }(jn.Component),
-            Zr = n(1019),
-            Xr = n(414),
+            Zr = n(1024),
+            Xr = n(415),
             ea = n(137),
-            ta = (n(1463), function(e) {
+            ta = (n(1468), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.buildModerationDashboardURL = function() {
@@ -35385,28 +35381,25 @@ webpackJsonp([36], {
                         showCoolDownState: !1
                     })
                 }, t.prototype.render = function() {
-                    var e = Sr("form__input-group", "form__input-group--2-icons-right", {
-                            "form__group--error": this.state.showCoolDownState
-                        }),
-                        t = null;
-                    return (!this.props.isUpload || this.state.canSessionModerateMessages || this.state.canSessionEditModerationSettings) && (t = jn.createElement(Zr.b, null, jn.createElement(ra, {
+                    var e = null;
+                    return (!this.props.isUpload || this.state.canSessionModerateMessages || this.state.canSessionEditModerationSettings) && (e = jn.createElement(Zr.b, null, jn.createElement(ra, {
                         canSessionEditModerationSettings: this.state.canSessionEditModerationSettings,
                         canSessionModerateMessages: this.state.canSessionModerateMessages,
                         videoOwnerLogin: this.props.videoOwnerLogin,
                         isUpload: this.props.isUpload
                     }))), jn.createElement("div", null, jn.createElement(Hn.U, {
-                        className: e
-                    }, jn.createElement(Hn.U, {
                         position: Hn._2.Relative
                     }, jn.createElement(Hn._23, {
+                        "data-a-target": "video-chat-input",
+                        error: this.state.showCoolDownState,
                         maxLength: 512,
+                        noResize: !0,
                         onChange: this.onChange,
                         onKeyDown: this.onKeyDown,
+                        paddingRight: 30,
                         placeholder: Object(ae.d)("Post a message", "CommentInput"),
-                        value: this.state.newCommentText,
-                        "data-a-target": "video-chat-input",
                         refDelegate: this.setTextareaRef,
-                        noResize: !0
+                        value: this.state.newCommentText
                     }), jn.createElement(Xr.a, {
                         channelOwnerID: this.props.videoOwnerID,
                         inputRef: this.textArea,
@@ -35414,13 +35407,13 @@ webpackJsonp([36], {
                         attachTop: !0,
                         attachRight: !0,
                         position: Hn._2.Absolute
-                    }))), jn.createElement(Hn.U, {
+                    })), jn.createElement(Hn.U, {
                         margin: {
                             top: 1
                         },
                         justifyContent: Hn.T.Between,
                         display: Hn.H.Flex
-                    }, t, jn.createElement("span", null), " ", jn.createElement(Hn.u, {
+                    }, e, jn.createElement("span", null), " ", jn.createElement(Hn.u, {
                         onClick: this.createComment,
                         disabled: this.state.showCoolDownState,
                         "data-a-target": "video-chat-submit-button"
@@ -35439,7 +35432,7 @@ webpackJsonp([36], {
             ua = Object(Kr.c)("MessageInput", {
                 autoReportInteractive: !0
             })(la),
-            da = (n(1464), function(e) {
+            da = (n(1469), function(e) {
                 var t = e.offset,
                     n = e.onClick;
                 return jn.createElement(Hn._30, {
@@ -35458,9 +35451,9 @@ webpackJsonp([36], {
                     onClick: n
                 }, Er(t))))
             }),
-            ca = n(950),
-            ma = n(943),
-            ha = n(989),
+            ca = n(955),
+            ma = n(948),
+            ha = n(994),
             pa = n(21),
             fa = function(e, t) {
                 var n = new URL("https://www.twitch.tv/videos/" + e);
@@ -35669,7 +35662,7 @@ webpackJsonp([36], {
                     }, this.getContent())))
                 }, t
             }(jn.Component),
-            Sa = (n(1465), function(e) {
+            Sa = (n(1470), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -35754,7 +35747,7 @@ webpackJsonp([36], {
                     var c
                 }, t
             }(jn.Component)),
-            wa = (n(1466), function(e) {
+            wa = (n(1471), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onReplyClickHandler = function() {
@@ -35804,7 +35797,7 @@ webpackJsonp([36], {
                     }, e)))
                 }, t
             }(jn.Component)),
-            Da = (n(1467), function(e) {
+            Da = (n(1472), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.submitReply = function() {
@@ -35926,7 +35919,7 @@ webpackJsonp([36], {
                     return jn.createElement("ul", null, t)
                 }, t
             }(jn.Component),
-            Ya = (n(1468), function(e) {
+            Ya = (n(1473), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -35988,7 +35981,7 @@ webpackJsonp([36], {
                     }), t))
                 }, t
             }(jn.Component)),
-            Ea = (n(1469), function(e) {
+            Ea = (n(1474), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -36087,7 +36080,7 @@ webpackJsonp([36], {
                     return this.props.highlight
                 }, t
             }(jn.Component)),
-            Oa = (n(1470), function(e) {
+            Oa = (n(1475), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -36148,7 +36141,7 @@ webpackJsonp([36], {
                     }), !1)
                 }, t
             }(jn.Component)),
-            ja = (n(1471), 5e3),
+            ja = (n(1476), 5e3),
             Ha = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -36350,7 +36343,7 @@ webpackJsonp([36], {
                 }, t
             }(jn.Component),
             Aa = Object(Kr.c)("VideoChat")(Ha),
-            Ra = n(1472),
+            Ra = n(1477),
             Fa = 2,
             Na = function(e, t, n) {
                 var r = t.onDisableSync;
@@ -36460,4 +36453,4 @@ webpackJsonp([36], {
         })
     }
 });
-//# sourceMappingURL=pages.dashboard-2491f99fa8e666da504e3e5607135f11.js.map
+//# sourceMappingURL=pages.dashboard-a69219ae448f94df22f392a23a2de2b4.js.map

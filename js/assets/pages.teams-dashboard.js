@@ -1,9 +1,9 @@
 webpackJsonp([41], {
-    1009: function(e, t, a) {
+    1013: function(e, t, a) {
         "use strict";
-        e.exports = {}, e.exports.Arc = a(1484), e.exports.Line = a(1485), e.exports.Point = a(1486), e.exports.Rectangle = a(1487)
+        e.exports = {}, e.exports.Arc = a(1489), e.exports.Line = a(1490), e.exports.Point = a(1491), e.exports.Rectangle = a(1492)
     },
-    1050: function(e, t, a) {
+    1056: function(e, t, a) {
         "use strict";
 
         function n(e) {
@@ -26,9 +26,9 @@ webpackJsonp([41], {
         }), a.d(o, "achievement", function() {
             return r
         });
-        var s = a(1294),
-            d = a(1353),
-            l = a(911),
+        var s = a(1298),
+            d = a(1357),
+            l = a(915),
             u = 6e4,
             c = 60 * u,
             m = function() {
@@ -67,9 +67,9 @@ webpackJsonp([41], {
             return m
         })
     },
-    1123: function(e, t, a) {
+    1127: function(e, t, a) {
         "use strict";
-        var n = a(920);
+        var n = a(924);
         e.exports = {
             generators: {
                 linear: function(e, t) {
@@ -123,7 +123,7 @@ webpackJsonp([41], {
             }
         }
     },
-    1153: function(e, t, a) {
+    1158: function(e, t, a) {
         "use strict";
         var n = {
             noop: function() {},
@@ -207,9 +207,9 @@ webpackJsonp([41], {
             return Array.prototype.indexOf.call(e, t, a)
         }, n.getValueOrDefault = n.valueOrDefault, n.getValueAtIndexOrDefault = n.valueAtIndexOrDefault
     },
-    1159: function(e, t, a) {
+    1164: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("af", {
@@ -267,9 +267,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1160: function(e, t, a) {
+    1165: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -377,9 +377,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1161: function(e, t, a) {
+    1166: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ar-dz", {
@@ -427,9 +427,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1162: function(e, t, a) {
+    1167: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ar-kw", {
@@ -477,9 +477,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1163: function(e, t, a) {
+    1168: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -573,9 +573,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1164: function(e, t, a) {
+    1169: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ar-ma", {
@@ -623,9 +623,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1165: function(e, t, a) {
+    1170: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -714,9 +714,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1166: function(e, t, a) {
+    1171: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ar-tn", {
@@ -764,9 +764,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1167: function(e, t, a) {
+    1172: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -849,9 +849,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1168: function(e, t, a) {
+    1173: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -957,9 +957,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1169: function(e, t, a) {
+    1174: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("bg", {
@@ -1024,9 +1024,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1170: function(e, t, a) {
+    1175: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -1114,9 +1114,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1171: function(e, t, a) {
+    1176: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -1204,9 +1204,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1172: function(e, t, a) {
+    1177: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -1296,9 +1296,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1173: function(e, t, a) {
+    1178: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -1396,9 +1396,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1174: function(e, t, a) {
+    1179: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ca", {
@@ -1469,9 +1469,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1175: function(e, t, a) {
+    1180: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -1601,9 +1601,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1176: function(e, t, a) {
+    1181: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("cv", {
@@ -1654,9 +1654,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1177: function(e, t, a) {
+    1182: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("cy", {
@@ -1711,9 +1711,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1178: function(e, t, a) {
+    1183: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("da", {
@@ -1762,9 +1762,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1179: function(e, t, a) {
+    1184: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -1829,9 +1829,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1180: function(e, t, a) {
+    1185: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -1896,9 +1896,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1181: function(e, t, a) {
+    1186: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -1963,9 +1963,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1182: function(e, t, a) {
+    1187: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = ["ޖެނުއަރީ", "ފެބްރުއަރީ", "މާރިޗު", "އޭޕްރީލު", "މޭ", "ޖޫން", "ޖުލައި", "އޯގަސްޓު", "ސެޕްޓެމްބަރު", "އޮކްޓޯބަރު", "ނޮވެމްބަރު", "ޑިސެމްބަރު"],
@@ -2027,9 +2027,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1183: function(e, t, a) {
+    1188: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -2105,9 +2105,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1184: function(e, t, a) {
+    1189: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-au", {
@@ -2159,9 +2159,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1185: function(e, t, a) {
+    1190: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-ca", {
@@ -2209,9 +2209,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1186: function(e, t, a) {
+    1191: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-gb", {
@@ -2263,9 +2263,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1187: function(e, t, a) {
+    1192: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-ie", {
@@ -2317,9 +2317,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1188: function(e, t, a) {
+    1193: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-nz", {
@@ -2371,9 +2371,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1189: function(e, t, a) {
+    1194: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("eo", {
@@ -2429,9 +2429,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1190: function(e, t, a) {
+    1195: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),
@@ -2496,9 +2496,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1191: function(e, t, a) {
+    1196: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),
@@ -2563,9 +2563,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1192: function(e, t, a) {
+    1197: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -2630,9 +2630,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1193: function(e, t, a) {
+    1198: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("eu", {
@@ -2687,9 +2687,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1194: function(e, t, a) {
+    1199: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -2780,9 +2780,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1195: function(e, t, a) {
+    1200: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -2874,9 +2874,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1196: function(e, t, a) {
+    1201: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("fo", {
@@ -2925,9 +2925,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1197: function(e, t, a) {
+    1202: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("fr", {
@@ -2992,9 +2992,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1198: function(e, t, a) {
+    1203: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("fr-ca", {
@@ -3054,9 +3054,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1199: function(e, t, a) {
+    1204: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("fr-ch", {
@@ -3120,9 +3120,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1200: function(e, t, a) {
+    1205: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = "jan._feb._mrt._apr._mai_jun._jul._aug._sep._okt._nov._des.".split("_"),
@@ -3179,9 +3179,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1201: function(e, t, a) {
+    1206: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = ["Am Faoilleach", "An Gearran", "Am Màrt", "An Giblean", "An Cèitean", "An t-Ògmhios", "An t-Iuchar", "An Lùnastal", "An t-Sultain", "An Dàmhair", "An t-Samhain", "An Dùbhlachd"],
@@ -3238,9 +3238,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1202: function(e, t, a) {
+    1207: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("gl", {
@@ -3303,9 +3303,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1203: function(e, t, a) {
+    1208: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -3394,9 +3394,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1204: function(e, t, a) {
+    1209: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("he", {
@@ -3458,9 +3458,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1205: function(e, t, a) {
+    1210: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -3549,9 +3549,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1206: function(e, t, a) {
+    1211: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -3652,9 +3652,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1207: function(e, t, a) {
+    1212: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -3748,9 +3748,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1208: function(e, t, a) {
+    1213: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("hy-am", {
@@ -3823,9 +3823,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1209: function(e, t, a) {
+    1214: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("id", {
@@ -3879,9 +3879,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1210: function(e, t, a) {
+    1215: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -3960,9 +3960,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1211: function(e, t, a) {
+    1216: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("it", {
@@ -4020,9 +4020,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1212: function(e, t, a) {
+    1217: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ja", {
@@ -4087,9 +4087,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1213: function(e, t, a) {
+    1218: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("jv", {
@@ -4143,9 +4143,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1214: function(e, t, a) {
+    1219: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ka", {
@@ -4207,9 +4207,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1215: function(e, t, a) {
+    1220: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -4284,9 +4284,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1216: function(e, t, a) {
+    1221: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("km", {
@@ -4333,9 +4333,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1217: function(e, t, a) {
+    1222: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -4428,9 +4428,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1218: function(e, t, a) {
+    1223: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ko", {
@@ -4487,9 +4487,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1219: function(e, t, a) {
+    1224: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -4564,9 +4564,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1220: function(e, t, a) {
+    1225: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -4660,9 +4660,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1221: function(e, t, a) {
+    1226: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("lo", {
@@ -4717,9 +4717,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1222: function(e, t, a) {
+    1227: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -4816,9 +4816,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1223: function(e, t, a) {
+    1228: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -4896,9 +4896,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1224: function(e, t, a) {
+    1229: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -4983,9 +4983,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1225: function(e, t, a) {
+    1230: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("mi", {
@@ -5038,9 +5038,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1226: function(e, t, a) {
+    1231: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("mk", {
@@ -5105,9 +5105,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1227: function(e, t, a) {
+    1232: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ml", {
@@ -5158,9 +5158,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1228: function(e, t, a) {
+    1233: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -5321,9 +5321,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1229: function(e, t, a) {
+    1234: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ms", {
@@ -5377,9 +5377,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1230: function(e, t, a) {
+    1235: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ms-my", {
@@ -5433,9 +5433,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1231: function(e, t, a) {
+    1236: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -5516,9 +5516,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1232: function(e, t, a) {
+    1237: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("nb", {
@@ -5569,9 +5569,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1233: function(e, t, a) {
+    1238: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -5661,9 +5661,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1234: function(e, t, a) {
+    1239: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_"),
@@ -5728,9 +5728,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1235: function(e, t, a) {
+    1240: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_"),
@@ -5795,9 +5795,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1236: function(e, t, a) {
+    1241: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("nn", {
@@ -5846,9 +5846,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1237: function(e, t, a) {
+    1242: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -5936,9 +5936,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1238: function(e, t, a) {
+    1243: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -6024,9 +6024,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1239: function(e, t, a) {
+    1244: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("pt", {
@@ -6078,9 +6078,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1240: function(e, t, a) {
+    1245: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("pt-br", {
@@ -6128,9 +6128,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1241: function(e, t, a) {
+    1246: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -6190,9 +6190,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1242: function(e, t, a) {
+    1247: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -6324,9 +6324,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1243: function(e, t, a) {
+    1248: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = ["جنوري", "فيبروري", "مارچ", "اپريل", "مئي", "جون", "جولاءِ", "آگسٽ", "سيپٽمبر", "آڪٽوبر", "نومبر", "ڊسمبر"],
@@ -6388,9 +6388,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1244: function(e, t, a) {
+    1249: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("se", {
@@ -6439,9 +6439,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1245: function(e, t, a) {
+    1250: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("si", {
@@ -6496,9 +6496,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1246: function(e, t, a) {
+    1251: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -6612,9 +6612,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1247: function(e, t, a) {
+    1252: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -6721,9 +6721,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1248: function(e, t, a) {
+    1253: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("sq", {
@@ -6780,9 +6780,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1249: function(e, t, a) {
+    1254: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -6867,9 +6867,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1250: function(e, t, a) {
+    1255: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -6954,9 +6954,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1251: function(e, t, a) {
+    1256: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ss", {
@@ -7013,9 +7013,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1252: function(e, t, a) {
+    1257: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("sv", {
@@ -7069,9 +7069,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1253: function(e, t, a) {
+    1258: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("sw", {
@@ -7119,9 +7119,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1254: function(e, t, a) {
+    1259: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -7213,9 +7213,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1255: function(e, t, a) {
+    1260: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("te", {
@@ -7272,9 +7272,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1256: function(e, t, a) {
+    1261: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("tet", {
@@ -7326,9 +7326,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1257: function(e, t, a) {
+    1262: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("th", {
@@ -7380,9 +7380,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1258: function(e, t, a) {
+    1263: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("tl-ph", {
@@ -7433,9 +7433,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1259: function(e, t, a) {
+    1264: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -7520,9 +7520,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1260: function(e, t, a) {
+    1265: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -7597,9 +7597,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1261: function(e, t, a) {
+    1266: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -7672,9 +7672,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1262: function(e, t, a) {
+    1267: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("tzm", {
@@ -7721,9 +7721,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1263: function(e, t, a) {
+    1268: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("tzm-latn", {
@@ -7770,9 +7770,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1264: function(e, t, a) {
+    1269: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
 
@@ -7887,9 +7887,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1265: function(e, t, a) {
+    1270: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             var t = ["جنوری", "فروری", "مارچ", "اپریل", "مئی", "جون", "جولائی", "اگست", "ستمبر", "اکتوبر", "نومبر", "دسمبر"],
@@ -7951,9 +7951,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1266: function(e, t, a) {
+    1271: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("uz", {
@@ -8000,9 +8000,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1267: function(e, t, a) {
+    1272: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("uz-latn", {
@@ -8049,9 +8049,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1268: function(e, t, a) {
+    1273: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("vi", {
@@ -8115,9 +8115,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1269: function(e, t, a) {
+    1274: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("x-pseudo", {
@@ -8170,9 +8170,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1270: function(e, t, a) {
+    1275: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("yo", {
@@ -8221,9 +8221,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1271: function(e, t, a) {
+    1276: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("zh-cn", {
@@ -8298,9 +8298,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1272: function(e, t, a) {
+    1277: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("zh-hk", {
@@ -8371,9 +8371,9 @@ webpackJsonp([41], {
             })
         })
     },
-    1273: function(e, t, a) {
+    1278: function(e, t, a) {
         ! function(e, t) {
-            t(a(913))
+            t(a(917))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("zh-tw", {
@@ -8444,7 +8444,7 @@ webpackJsonp([41], {
             })
         })
     },
-    1294: function(e, t, a) {
+    1298: function(e, t, a) {
         "use strict";
 
         function n(e) {
@@ -8462,7 +8462,7 @@ webpackJsonp([41], {
         }
         t.a = n;
         var r = a(0),
-            i = a(917),
+            i = a(921),
             o = function() {
                 function e(e, t) {
                     this.status = e.status, this.body = e.body, this.error = e.error, this.requestError = e.requestError, this.request = t
@@ -8474,7 +8474,7 @@ webpackJsonp([41], {
                 }, e
             }()
     },
-    1322: function(e, t, a) {
+    1328: function(e, t, a) {
         function n(e) {
             return a(r(e))
         }
@@ -8485,244 +8485,244 @@ webpackJsonp([41], {
             return t
         }
         var i = {
-            "./af": 1159,
-            "./af.js": 1159,
-            "./ar": 1160,
-            "./ar-dz": 1161,
-            "./ar-dz.js": 1161,
-            "./ar-kw": 1162,
-            "./ar-kw.js": 1162,
-            "./ar-ly": 1163,
-            "./ar-ly.js": 1163,
-            "./ar-ma": 1164,
-            "./ar-ma.js": 1164,
-            "./ar-sa": 1165,
-            "./ar-sa.js": 1165,
-            "./ar-tn": 1166,
-            "./ar-tn.js": 1166,
-            "./ar.js": 1160,
-            "./az": 1167,
-            "./az.js": 1167,
-            "./be": 1168,
-            "./be.js": 1168,
-            "./bg": 1169,
-            "./bg.js": 1169,
-            "./bn": 1170,
-            "./bn.js": 1170,
-            "./bo": 1171,
-            "./bo.js": 1171,
-            "./br": 1172,
-            "./br.js": 1172,
-            "./bs": 1173,
-            "./bs.js": 1173,
-            "./ca": 1174,
-            "./ca.js": 1174,
-            "./cs": 1175,
-            "./cs.js": 1175,
-            "./cv": 1176,
-            "./cv.js": 1176,
-            "./cy": 1177,
-            "./cy.js": 1177,
-            "./da": 1178,
-            "./da.js": 1178,
-            "./de": 1179,
-            "./de-at": 1180,
-            "./de-at.js": 1180,
-            "./de-ch": 1181,
-            "./de-ch.js": 1181,
-            "./de.js": 1179,
-            "./dv": 1182,
-            "./dv.js": 1182,
-            "./el": 1183,
-            "./el.js": 1183,
-            "./en-au": 1184,
-            "./en-au.js": 1184,
-            "./en-ca": 1185,
-            "./en-ca.js": 1185,
-            "./en-gb": 1186,
-            "./en-gb.js": 1186,
-            "./en-ie": 1187,
-            "./en-ie.js": 1187,
-            "./en-nz": 1188,
-            "./en-nz.js": 1188,
-            "./eo": 1189,
-            "./eo.js": 1189,
-            "./es": 1190,
-            "./es-do": 1191,
-            "./es-do.js": 1191,
-            "./es.js": 1190,
-            "./et": 1192,
-            "./et.js": 1192,
-            "./eu": 1193,
-            "./eu.js": 1193,
-            "./fa": 1194,
-            "./fa.js": 1194,
-            "./fi": 1195,
-            "./fi.js": 1195,
-            "./fo": 1196,
-            "./fo.js": 1196,
-            "./fr": 1197,
-            "./fr-ca": 1198,
-            "./fr-ca.js": 1198,
-            "./fr-ch": 1199,
-            "./fr-ch.js": 1199,
-            "./fr.js": 1197,
-            "./fy": 1200,
-            "./fy.js": 1200,
-            "./gd": 1201,
-            "./gd.js": 1201,
-            "./gl": 1202,
-            "./gl.js": 1202,
-            "./gom-latn": 1203,
-            "./gom-latn.js": 1203,
-            "./he": 1204,
-            "./he.js": 1204,
-            "./hi": 1205,
-            "./hi.js": 1205,
-            "./hr": 1206,
-            "./hr.js": 1206,
-            "./hu": 1207,
-            "./hu.js": 1207,
-            "./hy-am": 1208,
-            "./hy-am.js": 1208,
-            "./id": 1209,
-            "./id.js": 1209,
-            "./is": 1210,
-            "./is.js": 1210,
-            "./it": 1211,
-            "./it.js": 1211,
-            "./ja": 1212,
-            "./ja.js": 1212,
-            "./jv": 1213,
-            "./jv.js": 1213,
-            "./ka": 1214,
-            "./ka.js": 1214,
-            "./kk": 1215,
-            "./kk.js": 1215,
-            "./km": 1216,
-            "./km.js": 1216,
-            "./kn": 1217,
-            "./kn.js": 1217,
-            "./ko": 1218,
-            "./ko.js": 1218,
-            "./ky": 1219,
-            "./ky.js": 1219,
-            "./lb": 1220,
-            "./lb.js": 1220,
-            "./lo": 1221,
-            "./lo.js": 1221,
-            "./lt": 1222,
-            "./lt.js": 1222,
-            "./lv": 1223,
-            "./lv.js": 1223,
-            "./me": 1224,
-            "./me.js": 1224,
-            "./mi": 1225,
-            "./mi.js": 1225,
-            "./mk": 1226,
-            "./mk.js": 1226,
-            "./ml": 1227,
-            "./ml.js": 1227,
-            "./mr": 1228,
-            "./mr.js": 1228,
-            "./ms": 1229,
-            "./ms-my": 1230,
-            "./ms-my.js": 1230,
-            "./ms.js": 1229,
-            "./my": 1231,
-            "./my.js": 1231,
-            "./nb": 1232,
-            "./nb.js": 1232,
-            "./ne": 1233,
-            "./ne.js": 1233,
-            "./nl": 1234,
-            "./nl-be": 1235,
-            "./nl-be.js": 1235,
-            "./nl.js": 1234,
-            "./nn": 1236,
-            "./nn.js": 1236,
-            "./pa-in": 1237,
-            "./pa-in.js": 1237,
-            "./pl": 1238,
-            "./pl.js": 1238,
-            "./pt": 1239,
-            "./pt-br": 1240,
-            "./pt-br.js": 1240,
-            "./pt.js": 1239,
-            "./ro": 1241,
-            "./ro.js": 1241,
-            "./ru": 1242,
-            "./ru.js": 1242,
-            "./sd": 1243,
-            "./sd.js": 1243,
-            "./se": 1244,
-            "./se.js": 1244,
-            "./si": 1245,
-            "./si.js": 1245,
-            "./sk": 1246,
-            "./sk.js": 1246,
-            "./sl": 1247,
-            "./sl.js": 1247,
-            "./sq": 1248,
-            "./sq.js": 1248,
-            "./sr": 1249,
-            "./sr-cyrl": 1250,
-            "./sr-cyrl.js": 1250,
-            "./sr.js": 1249,
-            "./ss": 1251,
-            "./ss.js": 1251,
-            "./sv": 1252,
-            "./sv.js": 1252,
-            "./sw": 1253,
-            "./sw.js": 1253,
-            "./ta": 1254,
-            "./ta.js": 1254,
-            "./te": 1255,
-            "./te.js": 1255,
-            "./tet": 1256,
-            "./tet.js": 1256,
-            "./th": 1257,
-            "./th.js": 1257,
-            "./tl-ph": 1258,
-            "./tl-ph.js": 1258,
-            "./tlh": 1259,
-            "./tlh.js": 1259,
-            "./tr": 1260,
-            "./tr.js": 1260,
-            "./tzl": 1261,
-            "./tzl.js": 1261,
-            "./tzm": 1262,
-            "./tzm-latn": 1263,
-            "./tzm-latn.js": 1263,
-            "./tzm.js": 1262,
-            "./uk": 1264,
-            "./uk.js": 1264,
-            "./ur": 1265,
-            "./ur.js": 1265,
-            "./uz": 1266,
-            "./uz-latn": 1267,
-            "./uz-latn.js": 1267,
-            "./uz.js": 1266,
-            "./vi": 1268,
-            "./vi.js": 1268,
-            "./x-pseudo": 1269,
-            "./x-pseudo.js": 1269,
-            "./yo": 1270,
-            "./yo.js": 1270,
-            "./zh-cn": 1271,
-            "./zh-cn.js": 1271,
-            "./zh-hk": 1272,
-            "./zh-hk.js": 1272,
-            "./zh-tw": 1273,
-            "./zh-tw.js": 1273
+            "./af": 1164,
+            "./af.js": 1164,
+            "./ar": 1165,
+            "./ar-dz": 1166,
+            "./ar-dz.js": 1166,
+            "./ar-kw": 1167,
+            "./ar-kw.js": 1167,
+            "./ar-ly": 1168,
+            "./ar-ly.js": 1168,
+            "./ar-ma": 1169,
+            "./ar-ma.js": 1169,
+            "./ar-sa": 1170,
+            "./ar-sa.js": 1170,
+            "./ar-tn": 1171,
+            "./ar-tn.js": 1171,
+            "./ar.js": 1165,
+            "./az": 1172,
+            "./az.js": 1172,
+            "./be": 1173,
+            "./be.js": 1173,
+            "./bg": 1174,
+            "./bg.js": 1174,
+            "./bn": 1175,
+            "./bn.js": 1175,
+            "./bo": 1176,
+            "./bo.js": 1176,
+            "./br": 1177,
+            "./br.js": 1177,
+            "./bs": 1178,
+            "./bs.js": 1178,
+            "./ca": 1179,
+            "./ca.js": 1179,
+            "./cs": 1180,
+            "./cs.js": 1180,
+            "./cv": 1181,
+            "./cv.js": 1181,
+            "./cy": 1182,
+            "./cy.js": 1182,
+            "./da": 1183,
+            "./da.js": 1183,
+            "./de": 1184,
+            "./de-at": 1185,
+            "./de-at.js": 1185,
+            "./de-ch": 1186,
+            "./de-ch.js": 1186,
+            "./de.js": 1184,
+            "./dv": 1187,
+            "./dv.js": 1187,
+            "./el": 1188,
+            "./el.js": 1188,
+            "./en-au": 1189,
+            "./en-au.js": 1189,
+            "./en-ca": 1190,
+            "./en-ca.js": 1190,
+            "./en-gb": 1191,
+            "./en-gb.js": 1191,
+            "./en-ie": 1192,
+            "./en-ie.js": 1192,
+            "./en-nz": 1193,
+            "./en-nz.js": 1193,
+            "./eo": 1194,
+            "./eo.js": 1194,
+            "./es": 1195,
+            "./es-do": 1196,
+            "./es-do.js": 1196,
+            "./es.js": 1195,
+            "./et": 1197,
+            "./et.js": 1197,
+            "./eu": 1198,
+            "./eu.js": 1198,
+            "./fa": 1199,
+            "./fa.js": 1199,
+            "./fi": 1200,
+            "./fi.js": 1200,
+            "./fo": 1201,
+            "./fo.js": 1201,
+            "./fr": 1202,
+            "./fr-ca": 1203,
+            "./fr-ca.js": 1203,
+            "./fr-ch": 1204,
+            "./fr-ch.js": 1204,
+            "./fr.js": 1202,
+            "./fy": 1205,
+            "./fy.js": 1205,
+            "./gd": 1206,
+            "./gd.js": 1206,
+            "./gl": 1207,
+            "./gl.js": 1207,
+            "./gom-latn": 1208,
+            "./gom-latn.js": 1208,
+            "./he": 1209,
+            "./he.js": 1209,
+            "./hi": 1210,
+            "./hi.js": 1210,
+            "./hr": 1211,
+            "./hr.js": 1211,
+            "./hu": 1212,
+            "./hu.js": 1212,
+            "./hy-am": 1213,
+            "./hy-am.js": 1213,
+            "./id": 1214,
+            "./id.js": 1214,
+            "./is": 1215,
+            "./is.js": 1215,
+            "./it": 1216,
+            "./it.js": 1216,
+            "./ja": 1217,
+            "./ja.js": 1217,
+            "./jv": 1218,
+            "./jv.js": 1218,
+            "./ka": 1219,
+            "./ka.js": 1219,
+            "./kk": 1220,
+            "./kk.js": 1220,
+            "./km": 1221,
+            "./km.js": 1221,
+            "./kn": 1222,
+            "./kn.js": 1222,
+            "./ko": 1223,
+            "./ko.js": 1223,
+            "./ky": 1224,
+            "./ky.js": 1224,
+            "./lb": 1225,
+            "./lb.js": 1225,
+            "./lo": 1226,
+            "./lo.js": 1226,
+            "./lt": 1227,
+            "./lt.js": 1227,
+            "./lv": 1228,
+            "./lv.js": 1228,
+            "./me": 1229,
+            "./me.js": 1229,
+            "./mi": 1230,
+            "./mi.js": 1230,
+            "./mk": 1231,
+            "./mk.js": 1231,
+            "./ml": 1232,
+            "./ml.js": 1232,
+            "./mr": 1233,
+            "./mr.js": 1233,
+            "./ms": 1234,
+            "./ms-my": 1235,
+            "./ms-my.js": 1235,
+            "./ms.js": 1234,
+            "./my": 1236,
+            "./my.js": 1236,
+            "./nb": 1237,
+            "./nb.js": 1237,
+            "./ne": 1238,
+            "./ne.js": 1238,
+            "./nl": 1239,
+            "./nl-be": 1240,
+            "./nl-be.js": 1240,
+            "./nl.js": 1239,
+            "./nn": 1241,
+            "./nn.js": 1241,
+            "./pa-in": 1242,
+            "./pa-in.js": 1242,
+            "./pl": 1243,
+            "./pl.js": 1243,
+            "./pt": 1244,
+            "./pt-br": 1245,
+            "./pt-br.js": 1245,
+            "./pt.js": 1244,
+            "./ro": 1246,
+            "./ro.js": 1246,
+            "./ru": 1247,
+            "./ru.js": 1247,
+            "./sd": 1248,
+            "./sd.js": 1248,
+            "./se": 1249,
+            "./se.js": 1249,
+            "./si": 1250,
+            "./si.js": 1250,
+            "./sk": 1251,
+            "./sk.js": 1251,
+            "./sl": 1252,
+            "./sl.js": 1252,
+            "./sq": 1253,
+            "./sq.js": 1253,
+            "./sr": 1254,
+            "./sr-cyrl": 1255,
+            "./sr-cyrl.js": 1255,
+            "./sr.js": 1254,
+            "./ss": 1256,
+            "./ss.js": 1256,
+            "./sv": 1257,
+            "./sv.js": 1257,
+            "./sw": 1258,
+            "./sw.js": 1258,
+            "./ta": 1259,
+            "./ta.js": 1259,
+            "./te": 1260,
+            "./te.js": 1260,
+            "./tet": 1261,
+            "./tet.js": 1261,
+            "./th": 1262,
+            "./th.js": 1262,
+            "./tl-ph": 1263,
+            "./tl-ph.js": 1263,
+            "./tlh": 1264,
+            "./tlh.js": 1264,
+            "./tr": 1265,
+            "./tr.js": 1265,
+            "./tzl": 1266,
+            "./tzl.js": 1266,
+            "./tzm": 1267,
+            "./tzm-latn": 1268,
+            "./tzm-latn.js": 1268,
+            "./tzm.js": 1267,
+            "./uk": 1269,
+            "./uk.js": 1269,
+            "./ur": 1270,
+            "./ur.js": 1270,
+            "./uz": 1271,
+            "./uz-latn": 1272,
+            "./uz-latn.js": 1272,
+            "./uz.js": 1271,
+            "./vi": 1273,
+            "./vi.js": 1273,
+            "./x-pseudo": 1274,
+            "./x-pseudo.js": 1274,
+            "./yo": 1275,
+            "./yo.js": 1275,
+            "./zh-cn": 1276,
+            "./zh-cn.js": 1276,
+            "./zh-hk": 1277,
+            "./zh-hk.js": 1277,
+            "./zh-tw": 1278,
+            "./zh-tw.js": 1278
         };
         n.keys = function() {
             return Object.keys(i)
-        }, n.resolve = r, e.exports = n, n.id = 1322
+        }, n.resolve = r, e.exports = n, n.id = 1328
     },
-    1326: function(e, t, a) {
-        var n = a(1480),
-            r = a(1482),
+    1332: function(e, t, a) {
+        var n = a(1485),
+            r = a(1487),
             i = function(e) {
                 if (e instanceof i) return e;
                 if (!(this instanceof i)) return new i(e);
@@ -8985,7 +8985,7 @@ webpackJsonp([41], {
             return void 0 === a ? n[t] : a === n[t] ? this : (n[t] = a, this.setValues(e, n), this)
         }, "undefined" != typeof window && (window.Color = i), e.exports = i
     },
-    1327: function(e, t, a) {
+    1333: function(e, t, a) {
         "use strict";
 
         function n(e, t) {
@@ -9048,7 +9048,7 @@ webpackJsonp([41], {
                 }
             }), u) : []
         }
-        var l = a(920);
+        var l = a(924);
         e.exports = {
             modes: {
                 single: function(e, t) {
@@ -9106,11 +9106,11 @@ webpackJsonp([41], {
             }
         }
     },
-    1328: function(e, t, a) {
+    1334: function(e, t, a) {
         "use strict";
-        var n = a(920),
-            r = a(1488),
-            i = a(1489),
+        var n = a(924),
+            r = a(1493),
+            i = a(1494),
             o = i._enabled ? i : r;
         e.exports = n.extend({
             initialize: function() {},
@@ -9120,7 +9120,7 @@ webpackJsonp([41], {
             removeEventListener: function() {}
         }, o)
     },
-    1353: function(e, t, a) {
+    1357: function(e, t, a) {
         "use strict";
 
         function n(e) {
@@ -9152,15 +9152,15 @@ webpackJsonp([41], {
         var s = !0,
             d = !1
     },
-    1354: function(e, t, a) {
-        var n = a(1475)();
-        n.helpers = a(920), a(1479)(n), n.defaults = a(924), n.Element = a(969), n.elements = a(1009), n.Interaction = a(1327), n.platform = a(1328), a(1490)(n), a(1491)(n), a(1492)(n), a(1493)(n), a(1494)(n), a(1495)(n), a(1496)(n), a(1497)(n), a(1498)(n), a(1499)(n), a(1500)(n), a(1501)(n), a(1502)(n), a(1503)(n), a(1504)(n), a(1505)(n), a(1506)(n), a(1507)(n), a(1508)(n), a(1509)(n), a(1510)(n), a(1511)(n), a(1512)(n), a(1513)(n), a(1514)(n), a(1515)(n), a(1516)(n), a(1517)(n);
+    1358: function(e, t, a) {
+        var n = a(1480)();
+        n.helpers = a(924), a(1484)(n), n.defaults = a(928), n.Element = a(982), n.elements = a(1013), n.Interaction = a(1333), n.platform = a(1334), a(1495)(n), a(1496)(n), a(1497)(n), a(1498)(n), a(1499)(n), a(1500)(n), a(1501)(n), a(1502)(n), a(1503)(n), a(1504)(n), a(1505)(n), a(1506)(n), a(1507)(n), a(1508)(n), a(1509)(n), a(1510)(n), a(1511)(n), a(1512)(n), a(1513)(n), a(1514)(n), a(1515)(n), a(1516)(n), a(1517)(n), a(1518)(n), a(1519)(n), a(1520)(n), a(1521)(n), a(1522)(n);
         var r = [];
-        r.push(a(1518)(n), a(1519)(n), a(1520)(n)), n.plugins.register(r), n.platform.initialize(), e.exports = n, "undefined" != typeof window && (window.Chart = n), n.canvasHelpers = n.helpers.canvas
+        r.push(a(1523)(n), a(1524)(n), a(1525)(n)), n.plugins.register(r), n.platform.initialize(), e.exports = n, "undefined" != typeof window && (window.Chart = n), n.canvasHelpers = n.helpers.canvas
     },
-    1475: function(e, t, a) {
+    1480: function(e, t, a) {
         "use strict";
-        a(924)._set("global", {
+        a(928)._set("global", {
             responsive: !0,
             responsiveAnimationDuration: 0,
             maintainAspectRatio: !0,
@@ -9194,9 +9194,9 @@ webpackJsonp([41], {
             return e.Chart = e, e
         }
     },
-    1476: function(e, t, a) {
+    1481: function(e, t, a) {
         "use strict";
-        var n = a(1153),
+        var n = a(1158),
             r = {
                 linear: function(e) {
                     return e
@@ -9308,9 +9308,9 @@ webpackJsonp([41], {
             effects: r
         }, n.easingEffects = r
     },
-    1477: function(e, t, a) {
+    1482: function(e, t, a) {
         "use strict";
-        var n = a(1153),
+        var n = a(1158),
             t = e.exports = {
                 clear: function(e) {
                     e.ctx.clearRect(0, 0, e.width, e.height)
@@ -9428,9 +9428,9 @@ webpackJsonp([41], {
             e.beginPath(), t.roundedRect.apply(t, arguments), e.closePath()
         }
     },
-    1478: function(e, t, a) {
+    1483: function(e, t, a) {
         "use strict";
-        var n = a(1153);
+        var n = a(1158);
         e.exports = {
             toLineHeight: function(e, t) {
                 var a = ("" + e).match(/^(normal|(\d+(?:\.\d+)?)(px|em|%)?)$/);
@@ -9461,11 +9461,11 @@ webpackJsonp([41], {
             }
         }
     },
-    1479: function(e, t, a) {
+    1484: function(e, t, a) {
         "use strict";
-        var n = a(1326),
-            r = a(924),
-            i = a(920);
+        var n = a(1332),
+            r = a(928),
+            i = a(924);
         e.exports = function(e) {
             function t(e, t, a) {
                 var n;
@@ -9719,8 +9719,8 @@ webpackJsonp([41], {
             }
         }
     },
-    1480: function(e, t, a) {
-        var n = a(1481),
+    1485: function(e, t, a) {
+        var n = a(1486),
             r = function() {
                 return new l
             };
@@ -9765,7 +9765,7 @@ webpackJsonp([41], {
             }
         }), e.exports = r
     },
-    1481: function(e, t) {
+    1486: function(e, t) {
         function a(e) {
             var t, a, n, r = e[0] / 255,
                 i = e[1] / 255,
@@ -10258,7 +10258,7 @@ webpackJsonp([41], {
             K = {};
         for (var $ in Z) K[JSON.stringify(Z[$])] = $
     },
-    1482: function(e, t, a) {
+    1487: function(e, t, a) {
         function n(e) {
             if (e) {
                 var t = /^#([a-fA-F0-9]{3})$/i,
@@ -10371,7 +10371,7 @@ webpackJsonp([41], {
             var t = e.toString(16).toUpperCase();
             return t.length < 2 ? "0" + t : t
         }
-        var L = a(1483);
+        var L = a(1488);
         e.exports = {
             getRgba: n,
             getHsla: r,
@@ -10392,7 +10392,7 @@ webpackJsonp([41], {
         var v = {};
         for (var b in L) v[L[b]] = b
     },
-    1483: function(e, t) {
+    1488: function(e, t) {
         e.exports = {
             aliceblue: [240, 248, 255],
             antiquewhite: [250, 235, 215],
@@ -10544,11 +10544,11 @@ webpackJsonp([41], {
             yellowgreen: [154, 205, 50]
         }
     },
-    1484: function(e, t, a) {
+    1489: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(969),
-            i = a(920);
+        var n = a(928),
+            r = a(982),
+            i = a(924);
         n._set("global", {
             elements: {
                 arc: {
@@ -10608,11 +10608,11 @@ webpackJsonp([41], {
             }
         })
     },
-    1485: function(e, t, a) {
+    1490: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(969),
-            i = a(920),
+        var n = a(928),
+            r = a(982),
+            i = a(924),
             o = n.global;
         n._set("global", {
             elements: {
@@ -10643,7 +10643,7 @@ webpackJsonp([41], {
             }
         })
     },
-    1486: function(e, t, a) {
+    1491: function(e, t, a) {
         "use strict";
 
         function n(e) {
@@ -10655,9 +10655,9 @@ webpackJsonp([41], {
             var t = this._view;
             return !!t && Math.pow(e - t.y, 2) < Math.pow(t.radius + t.hitRadius, 2)
         }
-        var i = a(924),
-            o = a(969),
-            s = a(920),
+        var i = a(928),
+            o = a(982),
+            s = a(924),
             d = i.global.defaultColor;
         i._set("global", {
             elements: {
@@ -10712,7 +10712,7 @@ webpackJsonp([41], {
             }
         })
     },
-    1487: function(e, t, a) {
+    1492: function(e, t, a) {
         "use strict";
 
         function n(e) {
@@ -10735,8 +10735,8 @@ webpackJsonp([41], {
                 bottom: i
             }
         }
-        var i = a(924),
-            o = a(969);
+        var i = a(928),
+            o = a(982);
         i._set("global", {
             elements: {
                 rectangle: {
@@ -10824,14 +10824,14 @@ webpackJsonp([41], {
             }
         })
     },
-    1488: function(e, t) {
+    1493: function(e, t) {
         e.exports = {
             acquireContext: function(e) {
                 return e && e.canvas && (e = e.canvas), e && e.getContext("2d") || null
             }
         }
     },
-    1489: function(e, t, a) {
+    1494: function(e, t, a) {
         "use strict";
 
         function n(e, t) {
@@ -10958,7 +10958,7 @@ webpackJsonp([41], {
             var a = e._style || document.createElement("style");
             e._style || (e._style = a, t = "/* Chart.js */\n" + t, a.setAttribute("type", "text/css"), document.getElementsByTagName("head")[0].appendChild(a)), a.appendChild(document.createTextNode(t))
         }
-        var p = a(920),
+        var p = a(924),
             M = "$chartjs",
             g = "chartjs-",
             y = g + "render-monitor",
@@ -11031,11 +11031,11 @@ webpackJsonp([41], {
             }
         }, p.addEvent = i, p.removeEvent = o
     },
-    1490: function(e, t, a) {
+    1495: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(969),
-            i = a(920);
+        var n = a(928),
+            r = a(982),
+            i = a(924);
         n._set("global", {
             plugins: {}
         }), e.exports = function(e) {
@@ -11091,11 +11091,11 @@ webpackJsonp([41], {
             }, e.pluginService = e.plugins, e.PluginBase = r.extend({})
         }
     },
-    1491: function(e, t, a) {
+    1496: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(969),
-            i = a(920);
+        var n = a(928),
+            r = a(982),
+            i = a(924);
         n._set("global", {
             animation: {
                 duration: 1e3,
@@ -11159,12 +11159,12 @@ webpackJsonp([41], {
             })
         }
     },
-    1492: function(e, t, a) {
+    1497: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(920),
-            i = a(1327),
-            o = a(1328);
+        var n = a(928),
+            r = a(924),
+            i = a(1333),
+            o = a(1334);
         e.exports = function(e) {
             function t(e) {
                 e = e || {};
@@ -11514,9 +11514,9 @@ webpackJsonp([41], {
             }), e.Controller = e
         }
     },
-    1493: function(e, t, a) {
+    1498: function(e, t, a) {
         "use strict";
-        var n = a(920);
+        var n = a(924);
         e.exports = function(e) {
             function t(e, t) {
                 if (e._chartjs) return void e._chartjs.listeners.push(t);
@@ -11679,9 +11679,9 @@ webpackJsonp([41], {
             }), e.DatasetController.extend = n.inherits
         }
     },
-    1494: function(e, t, a) {
+    1499: function(e, t, a) {
         "use strict";
-        var n = a(920);
+        var n = a(924);
         e.exports = function(e) {
             function t(e, t) {
                 return n.where(e, function(e) {
@@ -11842,10 +11842,10 @@ webpackJsonp([41], {
             }
         }
     },
-    1495: function(e, t, a) {
+    1500: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(920);
+        var n = a(928),
+            r = a(924);
         e.exports = function(e) {
             e.scaleService = {
                 constructors: {},
@@ -11871,7 +11871,7 @@ webpackJsonp([41], {
             }
         }
     },
-    1496: function(e, t, a) {
+    1501: function(e, t, a) {
         "use strict";
 
         function n(e) {
@@ -11884,10 +11884,10 @@ webpackJsonp([41], {
             var n = e.getPixelForTick(t);
             return a && (n -= 0 === t ? (e.getPixelForTick(1) - n) / 2 : (n - e.getPixelForTick(t - 1)) / 2), n
         }
-        var i = a(924),
-            o = a(969),
-            s = a(920),
-            d = a(1123);
+        var i = a(928),
+            o = a(982),
+            s = a(924),
+            d = a(1127);
         i._set("scale", {
             display: !0,
             position: "left",
@@ -12268,11 +12268,11 @@ webpackJsonp([41], {
             })
         }
     },
-    1497: function(e, t, a) {
+    1502: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(969),
-            i = a(920);
+        var n = a(928),
+            r = a(982),
+            i = a(924);
         n._set("global", {
             tooltips: {
                 enabled: !0,
@@ -12717,10 +12717,10 @@ webpackJsonp([41], {
             }
         }
     },
-    1498: function(e, t, a) {
+    1503: function(e, t, a) {
         "use strict";
-        var n = a(920),
-            r = a(1123);
+        var n = a(924),
+            r = a(1127);
         e.exports = function(e) {
             var t = n.noop;
             e.LinearScaleBase = e.Scale.extend({
@@ -12764,7 +12764,7 @@ webpackJsonp([41], {
             })
         }
     },
-    1499: function(e, t, a) {
+    1504: function(e, t, a) {
         "use strict";
         e.exports = function(e) {
             var t = {
@@ -12830,11 +12830,11 @@ webpackJsonp([41], {
             e.scaleService.registerScaleType("category", a, t)
         }
     },
-    1500: function(e, t, a) {
+    1505: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(920),
-            i = a(1123);
+        var n = a(928),
+            r = a(924),
+            i = a(1127);
         e.exports = function(e) {
             var t = {
                     position: "left",
@@ -12927,10 +12927,10 @@ webpackJsonp([41], {
             e.scaleService.registerScaleType("linear", a, t)
         }
     },
-    1501: function(e, t, a) {
+    1506: function(e, t, a) {
         "use strict";
-        var n = a(920),
-            r = a(1123);
+        var n = a(924),
+            r = a(1127);
         e.exports = function(e) {
             var t = {
                     position: "left",
@@ -13019,11 +13019,11 @@ webpackJsonp([41], {
             e.scaleService.registerScaleType("logarithmic", a, t)
         }
     },
-    1502: function(e, t, a) {
+    1507: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(920),
-            i = a(1123);
+        var n = a(928),
+            r = a(924),
+            i = a(1127);
         e.exports = function(e) {
             function t(e) {
                 var t = e.options;
@@ -13293,7 +13293,7 @@ webpackJsonp([41], {
             e.scaleService.registerScaleType("radialLinear", g, M)
         }
     },
-    1503: function(e, t, a) {
+    1508: function(e, t, a) {
         "use strict";
 
         function n(e, t) {
@@ -13421,10 +13421,10 @@ webpackJsonp([41], {
             });
             return o
         }
-        var p = a(913);
+        var p = a(917);
         p = "function" == typeof p ? p : window.moment;
-        var M = a(924),
-            g = a(920),
+        var M = a(928),
+            g = a(924),
             y = Number.MIN_SAFE_INTEGER || -9007199254740991,
             L = Number.MAX_SAFE_INTEGER || 9007199254740991,
             v = {
@@ -13640,11 +13640,11 @@ webpackJsonp([41], {
             e.scaleService.registerScaleType("time", a, t)
         }
     },
-    1504: function(e, t, a) {
+    1509: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(1009),
-            i = a(920);
+        var n = a(928),
+            r = a(1013),
+            i = a(924);
         n._set("bar", {
             hover: {
                 mode: "label"
@@ -13855,11 +13855,11 @@ webpackJsonp([41], {
             })
         }
     },
-    1505: function(e, t, a) {
+    1510: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(1009),
-            i = a(920);
+        var n = a(928),
+            r = a(1013),
+            i = a(924);
         n._set("bubble", {
             hover: {
                 mode: "single"
@@ -13955,11 +13955,11 @@ webpackJsonp([41], {
             })
         }
     },
-    1506: function(e, t, a) {
+    1511: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(1009),
-            i = a(920);
+        var n = a(928),
+            r = a(1013),
+            i = a(924);
         n._set("doughnut", {
             animation: {
                 animateRotate: !0,
@@ -14140,11 +14140,11 @@ webpackJsonp([41], {
             })
         }
     },
-    1507: function(e, t, a) {
+    1512: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(1009),
-            i = a(920);
+        var n = a(928),
+            r = a(1013),
+            i = a(924);
         n._set("line", {
             showLines: !0,
             spanGaps: !1,
@@ -14298,11 +14298,11 @@ webpackJsonp([41], {
             })
         }
     },
-    1508: function(e, t, a) {
+    1513: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(1009),
-            i = a(920);
+        var n = a(928),
+            r = a(1013),
+            i = a(924);
         n._set("polarArea", {
             scale: {
                 type: "radialLinear",
@@ -14429,11 +14429,11 @@ webpackJsonp([41], {
             })
         }
     },
-    1509: function(e, t, a) {
+    1514: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(1009),
-            i = a(920);
+        var n = a(928),
+            r = a(1013),
+            i = a(924);
         n._set("radar", {
             scale: {
                 type: "radialLinear"
@@ -14528,9 +14528,9 @@ webpackJsonp([41], {
             })
         }
     },
-    1510: function(e, t, a) {
+    1515: function(e, t, a) {
         "use strict";
-        a(924)._set("scatter", {
+        a(928)._set("scatter", {
             hover: {
                 mode: "single"
             },
@@ -14561,7 +14561,7 @@ webpackJsonp([41], {
             e.controllers.scatter = e.controllers.line
         }
     },
-    1511: function(e, t, a) {
+    1516: function(e, t, a) {
         "use strict";
         e.exports = function(e) {
             e.Bar = function(t, a) {
@@ -14569,7 +14569,7 @@ webpackJsonp([41], {
             }
         }
     },
-    1512: function(e, t, a) {
+    1517: function(e, t, a) {
         "use strict";
         e.exports = function(e) {
             e.Bubble = function(t, a) {
@@ -14577,7 +14577,7 @@ webpackJsonp([41], {
             }
         }
     },
-    1513: function(e, t, a) {
+    1518: function(e, t, a) {
         "use strict";
         e.exports = function(e) {
             e.Doughnut = function(t, a) {
@@ -14585,7 +14585,7 @@ webpackJsonp([41], {
             }
         }
     },
-    1514: function(e, t, a) {
+    1519: function(e, t, a) {
         "use strict";
         e.exports = function(e) {
             e.Line = function(t, a) {
@@ -14593,7 +14593,7 @@ webpackJsonp([41], {
             }
         }
     },
-    1515: function(e, t, a) {
+    1520: function(e, t, a) {
         "use strict";
         e.exports = function(e) {
             e.PolarArea = function(t, a) {
@@ -14601,7 +14601,7 @@ webpackJsonp([41], {
             }
         }
     },
-    1516: function(e, t, a) {
+    1521: function(e, t, a) {
         "use strict";
         e.exports = function(e) {
             e.Radar = function(t, a) {
@@ -14609,7 +14609,7 @@ webpackJsonp([41], {
             }
         }
     },
-    1517: function(e, t, a) {
+    1522: function(e, t, a) {
         "use strict";
         e.exports = function(e) {
             e.Scatter = function(t, a) {
@@ -14617,11 +14617,11 @@ webpackJsonp([41], {
             }
         }
     },
-    1518: function(e, t, a) {
+    1523: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(1009),
-            i = a(920);
+        var n = a(928),
+            r = a(1013),
+            i = a(924);
         n._set("global", {
             plugins: {
                 filler: {
@@ -14762,11 +14762,11 @@ webpackJsonp([41], {
             }
         }
     },
-    1519: function(e, t, a) {
+    1524: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(969),
-            i = a(920);
+        var n = a(928),
+            r = a(982),
+            i = a(924);
         n._set("global", {
             legend: {
                 display: !0,
@@ -15014,11 +15014,11 @@ webpackJsonp([41], {
             }
         }
     },
-    1520: function(e, t, a) {
+    1525: function(e, t, a) {
         "use strict";
-        var n = a(924),
-            r = a(969),
-            i = a(920);
+        var n = a(928),
+            r = a(982),
+            i = a(924);
         n._set("global", {
             title: {
                 display: !1,
@@ -15122,8 +15122,8 @@ webpackJsonp([41], {
             }
         }
     },
-    1521: function(e, t) {},
-    2033: function(e, t, a) {
+    1526: function(e, t) {},
+    2045: function(e, t, a) {
         "use strict";
 
         function n(e) {
@@ -15142,7 +15142,7 @@ webpackJsonp([41], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var i, o = a(8),
+        var i, o = a(9),
             s = a(11),
             d = a(51),
             l = a(35),
@@ -15150,7 +15150,7 @@ webpackJsonp([41], {
             c = a(0),
             m = a(1),
             _ = a(22),
-            h = a(918),
+            h = a(922),
             f = a(6),
             p = a(30),
             M = a(3),
@@ -15175,73 +15175,73 @@ webpackJsonp([41], {
         ! function(e) {
             e.BasicInfo = "basic-info", e.Customize = "customize", e.Members = "members", e.FeaturedChannels = "featured-channels", e.Stats = "stats", e.Revenue = "revenue"
         }(i || (i = {}));
-        var L, v, b, Y = a(2),
-            k = function(e) {
+        var L, v = a(2),
+            b = function(e) {
                 switch (e) {
                     case i.BasicInfo:
-                        return Object(Y.d)("Basic Info", "TeamsDashboard");
+                        return Object(v.d)("Basic Info", "TeamsDashboard");
                     case i.Customize:
-                        return Object(Y.d)("Customize", "TeamsDashboard");
+                        return Object(v.d)("Customize", "TeamsDashboard");
                     case i.Members:
-                        return Object(Y.d)("Members", "TeamsDashboard");
+                        return Object(v.d)("Members", "TeamsDashboard");
                     case i.FeaturedChannels:
-                        return Object(Y.d)("Featured Channels", "TeamsDashboard");
+                        return Object(v.d)("Featured Channels", "TeamsDashboard");
                     case i.Stats:
-                        return Object(Y.d)("Stats", "TeamsDashboard");
+                        return Object(v.d)("Stats", "TeamsDashboard");
                     case i.Revenue:
-                        return Object(Y.d)("Revenue", "TeamsDashboard");
+                        return Object(v.d)("Revenue", "TeamsDashboard");
                     default:
                         return ""
                 }
             },
-            D = function() {
+            Y = function() {
                 return m.createElement(y, {
-                    title: k(i.BasicInfo),
+                    title: b(i.BasicInfo),
                     titleSelector: "basic-info-page-title"
                 })
             },
-            w = Object(f.c)("BasicInfoPage", {
+            k = Object(f.c)("BasicInfoPage", {
                 destination: h.a.TeamsDashboardBasicInfo,
+                autoReportInteractive: !0
+            })(Y),
+            D = function() {
+                return m.createElement(y, {
+                    title: b(i.Customize),
+                    titleSelector: "customize-page-title"
+                })
+            },
+            w = Object(f.c)("CustomizePage", {
+                destination: h.a.TeamsDashboardCustomize,
                 autoReportInteractive: !0
             })(D),
             x = function() {
                 return m.createElement(y, {
-                    title: k(i.Customize),
-                    titleSelector: "customize-page-title"
+                    title: b(i.FeaturedChannels),
+                    titleSelector: "featured-channels-page-title"
                 })
             },
-            T = Object(f.c)("CustomizePage", {
-                destination: h.a.TeamsDashboardCustomize,
+            T = Object(f.c)("FeaturedChannelsPage", {
+                destination: h.a.TeamsDashboardFeaturedChannels,
                 autoReportInteractive: !0
             })(x),
             S = function() {
                 return m.createElement(y, {
-                    title: k(i.FeaturedChannels),
-                    titleSelector: "featured-channels-page-title"
-                })
-            },
-            H = Object(f.c)("FeaturedChannelsPage", {
-                destination: h.a.TeamsDashboardFeaturedChannels,
-                autoReportInteractive: !0
-            })(S),
-            j = function() {
-                return m.createElement(y, {
-                    title: k(i.Members),
+                    title: b(i.Members),
                     titleSelector: "members-page-title"
                 })
             },
-            P = Object(f.c)("MembersPage", {
+            H = Object(f.c)("MembersPage", {
                 destination: h.a.TeamsDashboardMembers,
                 autoReportInteractive: !0
-            })(j),
-            C = a(4),
-            O = (a(1521), {
+            })(S),
+            j = a(4),
+            P = (a(1526), {
                 "side-nav-bar__option": !0,
                 "side-nav-bar__option--active": !0
             }),
-            A = function(e) {
+            C = function(e) {
                 var t = function(t) {
-                    return C(e.page === t ? O : "side-nav-bar__option")
+                    return j(e.page === t ? P : "side-nav-bar__option")
                 };
                 return m.createElement(M._17, {
                     display: M.H.Block,
@@ -15259,7 +15259,7 @@ webpackJsonp([41], {
                 }, m.createElement(M._21, {
                     type: M._26.H4,
                     fontSize: M.L.Size5
-                }, Object(Y.d)("Team Dashboard", "TeamsDashboard"))), m.createElement("ul", null, m.createElement("li", null, m.createElement(M.S, {
+                }, Object(v.d)("Team Dashboard", "TeamsDashboard"))), m.createElement("ul", null, m.createElement("li", null, m.createElement(M.S, {
                     linkTo: "/teams/" + e.teamName + "/dashboard/" + i.BasicInfo
                 }, m.createElement(M.U, {
                     padding: {
@@ -15267,7 +15267,7 @@ webpackJsonp([41], {
                         y: .5
                     },
                     className: t(i.BasicInfo)
-                }, k(i.BasicInfo)))), m.createElement("li", null, m.createElement(M.S, {
+                }, b(i.BasicInfo)))), m.createElement("li", null, m.createElement(M.S, {
                     linkTo: "/teams/" + e.teamName + "/dashboard/" + i.Customize
                 }, m.createElement(M.U, {
                     padding: {
@@ -15275,7 +15275,7 @@ webpackJsonp([41], {
                         y: .5
                     },
                     className: t(i.Customize)
-                }, k(i.Customize)))), m.createElement("li", null, m.createElement(M.S, {
+                }, b(i.Customize)))), m.createElement("li", null, m.createElement(M.S, {
                     linkTo: "/teams/" + e.teamName + "/dashboard/" + i.Revenue,
                     "data-test-selector": "side-nav-revenue"
                 }, m.createElement(M.U, {
@@ -15284,7 +15284,7 @@ webpackJsonp([41], {
                         y: .5
                     },
                     className: t(i.Revenue)
-                }, k(i.Revenue)))), m.createElement("li", null, m.createElement(M.S, {
+                }, b(i.Revenue)))), m.createElement("li", null, m.createElement(M.S, {
                     linkTo: "/teams/" + e.teamName + "/dashboard/" + i.Stats,
                     "data-test-selector": "side-nav-stats"
                 }, m.createElement(M.U, {
@@ -15293,7 +15293,7 @@ webpackJsonp([41], {
                         y: .5
                     },
                     className: t(i.Stats)
-                }, k(i.Stats)))), m.createElement("li", null, m.createElement(M.S, {
+                }, b(i.Stats)))), m.createElement("li", null, m.createElement(M.S, {
                     linkTo: "/teams/" + e.teamName + "/dashboard/" + i.Members
                 }, m.createElement(M.U, {
                     padding: {
@@ -15301,7 +15301,7 @@ webpackJsonp([41], {
                         y: .5
                     },
                     className: t(i.Members)
-                }, k(i.Members)))), m.createElement("li", null, m.createElement(M.S, {
+                }, b(i.Members)))), m.createElement("li", null, m.createElement(M.S, {
                     linkTo: "/teams/" + e.teamName + "/dashboard/" + i.FeaturedChannels
                 }, m.createElement(M.U, {
                     padding: {
@@ -15309,12 +15309,12 @@ webpackJsonp([41], {
                         y: .5
                     },
                     className: t(i.FeaturedChannels)
-                }, k(i.FeaturedChannels))))))
+                }, b(i.FeaturedChannels))))))
             },
-            F = Object(f.c)("Navbar", {
+            O = Object(f.c)("Navbar", {
                 autoReportInteractive: !0
-            })(A),
-            W = function(e) {
+            })(C),
+            A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.doRef = function(e) {
@@ -15329,12 +15329,16 @@ webpackJsonp([41], {
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    for (var e = [], t = new Date(Date.UTC(2017, 9)), a = this.props.latestMonth || new Date, n = new Date(Date.UTC(a.getUTCFullYear(), a.getUTCMonth())); n.getTime() >= t.getTime(); n.setUTCMonth(n.getUTCMonth() - 1)) {
+                    var e = [],
+                        t = new Date(Date.UTC(2017, 9)),
+                        a = this.props.latestMonth || new Date;
+                    a.getTime() < t.getTime() && (a = t);
+                    for (var n = new Date(Date.UTC(a.getUTCFullYear(), a.getUTCMonth())); n.getTime() >= t.getTime(); n.setUTCMonth(n.getUTCMonth() - 1)) {
                         var r = n.getTime();
                         e.push(m.createElement("option", {
                             key: r,
                             value: r
-                        }, Object(Y.c)(n, {
+                        }, Object(v.c)(n, {
                             month: "long",
                             year: "numeric",
                             timeZone: "UTC"
@@ -15348,8 +15352,8 @@ webpackJsonp([41], {
                     }, e))
                 }, t = c.__decorate([Object(f.c)("MonthSelectMenuComponent")], t)
             }(m.Component),
-            E = W,
-            I = function(e) {
+            F = A,
+            W = function(e) {
                 var t = Math.floor(e.amount),
                     a = Math.round(e.amount % 1 * 100);
                 return m.createElement(M.U, {
@@ -15372,13 +15376,13 @@ webpackJsonp([41], {
                     type: e.magnified ? M._26.H4 : M._26.H5
                 }, "$ "), m.createElement(M._21, {
                     type: e.magnified ? M._26.H1 : M._26.H2
-                }, Object(Y.e)(t)), m.createElement(M._21, {
+                }, Object(v.e)(t)), m.createElement(M._21, {
                     type: e.magnified ? M._26.H4 : M._26.H5
-                }, Object(Y.e)(a, {
+                }, Object(v.e)(a, {
                     minimumIntegerDigits: 2
                 }))))
             },
-            z = function(e) {
+            E = function(e) {
                 var t = e.revenues.reduce(function(e, t) {
                     return e + t.amount
                 }, 0);
@@ -15391,37 +15395,124 @@ webpackJsonp([41], {
                     justifyContent: M.T.Between,
                     alignItems: M.c.Center,
                     padding: 1
-                }, m.createElement(I, {
+                }, m.createElement(W, {
                     title: e.totalTitle + " " + e.summaryItemTitleSuffix,
                     amount: t,
                     magnified: !0
                 }), e.revenues.map(function(t, a) {
-                    return m.createElement(I, {
+                    return m.createElement(W, {
                         key: a,
                         title: t.title + " " + e.summaryItemTitleSuffix,
                         amount: t.amount
                     })
                 }))
             },
-            R = this,
-            N = function() {
-                return c.__awaiter(R, void 0, void 0, function() {
-                    var e;
-                    return c.__generator(this, function(t) {
-                        return e = B(G), [2, J(e)]
+            I = a(64),
+            z = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.toggleOpenClose = function(e) {
+                        e && t.props.fetchMembersData(t.props.members)
+                    }, t
+                }
+                return c.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = this.props.members.filter(function(e) {
+                            return e.checked
+                        }).length,
+                        a = this.props.members.length > 100 ? "Select First 100" : "Select All";
+                    return m.createElement(M.U, {
+                        className: "team-members-select-menu"
+                    }, m.createElement(I.a, {
+                        onToggle: this.toggleOpenClose
+                    }, m.createElement(M.u, {
+                        dropdown: !0
+                    }, Object(v.d)("{checkedCount, plural, one {Stats for # Team Member} other {Stats for # Team Members}}", {
+                        checkedCount: t
+                    }, "TeamsDashboard")), m.createElement(M.p, {
+                        direction: M.q.BottomLeft,
+                        noTail: !0
+                    }, m.createElement(p.b, {
+                        className: "team-members-select-menu__scroller"
+                    }, m.createElement(M.U, null, m.createElement(M._17, {
+                        borderBottom: !0,
+                        padding: {
+                            top: 1,
+                            left: .5,
+                            right: .5,
+                            bottom: .5
+                        }
+                    }, m.createElement(M.E, {
+                        label: a,
+                        checked: this.props.groupChecked,
+                        onChange: this.props.toggleGroupChecked
+                    })), this.props.members.map(function(a) {
+                        var n = {
+                            label: a.displayName,
+                            checked: a.checked,
+                            onChange: e.props.toggleMemberChecked.bind(e, a),
+                            disabled: t >= 100 && !a.checked
+                        };
+                        return m.createElement(M._17, {
+                            margin: {
+                                x: .5,
+                                y: 0
+                            },
+                            key: a.id
+                        }, m.createElement(M.E, c.__assign({}, n)))
+                    }))))))
+                }, t = c.__decorate([Object(f.c)("TeamMembersSelectMenu", {
+                    autoReportInteractive: !0
+                })], t)
+            }(m.Component),
+            R = z,
+            N = a(1056),
+            B = this,
+            V = function(e) {
+                return e.map(function(e) {
+                    return {
+                        id: e._id,
+                        displayName: e.display_name
+                    }
+                })
+            };
+        ! function(e) {
+            e.StatsRevealed = "stats_revealed", e.RevenueRevealed = "revenue_revealed"
+        }(L || (L = {}));
+        var J, U, G, q = function(e, t) {
+                return void 0 === t && (t = L.StatsRevealed), c.__awaiter(B, void 0, void 0, function() {
+                    var a, n, r;
+                    return c.__generator(this, function(i) {
+                        switch (i.label) {
+                            case 0:
+                                return a = "/v5/teams/" + e + "/dashboard/members?" + t + "=true", [4, Object(N.c)({
+                                    path: a
+                                })];
+                            case 1:
+                                return n = i.sent(), r = n.body ? n.body.channels : [], [2, V(r)]
+                        }
                     })
                 })
             },
-            B = function(e) {
+            Z = this,
+            K = function() {
+                return c.__awaiter(Z, void 0, void 0, function() {
+                    var e;
+                    return c.__generator(this, function(t) {
+                        return e = $(te), [2, Q(e)]
+                    })
+                })
+            },
+            $ = function(e) {
                 for (var t = {}, a = 0, n = Object.keys(e); a < n.length; a++)
                     for (var r = n[a], i = 0, o = Object.keys(e[r]); i < o.length; i++)
-                        for (var s = o[i], d = V(e[r][s]), l = 0, u = Object.keys(d); l < u.length; l++) {
+                        for (var s = o[i], d = X(e[r][s]), l = 0, u = Object.keys(d); l < u.length; l++) {
                             var c = u[l];
                             t.hasOwnProperty(c) ? t[c].hasOwnProperty(s) ? t[c][s] += d[c] : t[c][s] = d[c] : (t[c] = {}, t[c][s] = d[c])
                         }
                 return t
             },
-            V = function(e) {
+            X = function(e) {
                 var t = {};
                 return e.forEach(function(e) {
                     var a = new Date(e.timestamp),
@@ -15429,7 +15520,7 @@ webpackJsonp([41], {
                     t.hasOwnProperty(n) ? t[n] += e.amount : t[n] = e.amount
                 }), t
             },
-            J = function(e) {
+            Q = function(e) {
                 for (var t = [], a = {
                         twitch_subscriptions: {
                             categoryLabel: "Sub Revenue",
@@ -15467,7 +15558,7 @@ webpackJsonp([41], {
                     timestampLabels: t
                 }
             },
-            U = function(e) {
+            ee = function(e) {
                 return e.map(function(e) {
                     return {
                         title: e.categoryLabel,
@@ -15477,7 +15568,7 @@ webpackJsonp([41], {
                     }
                 })
             },
-            G = {
+            te = {
                 654: {
                     twitch_subscriptions: [{
                         timestamp: "2017-10-26T16:00:00Z",
@@ -15605,19 +15696,19 @@ webpackJsonp([41], {
                     }]
                 }
             },
-            q = a(1354),
-            Z = {
+            ae = a(1358),
+            ne = {
                 width: 800,
                 height: 380
             },
-            K = function(e) {
+            re = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.setCanvasResolution(), this.myChart = new q(this.canvas, {
+                    this.setCanvasResolution(), this.myChart = new ae(this.canvas, {
                         type: "bar",
-                        data: X(this.props.datasets, this.props.timestampLabels),
+                        data: oe(this.props.datasets, this.props.timestampLabels),
                         options: {
                             tooltips: {
                                 backgroundColor: "rgba(0,0,0,0.8)",
@@ -15645,10 +15736,10 @@ webpackJsonp([41], {
                                         }).reduce(function(e, t) {
                                             return e + parseInt(t, 10)
                                         }, 0);
-                                        return Object(Y.e)(t, {
+                                        return Object(v.e)(t, {
                                             style: "currency",
                                             currency: "USD"
-                                        }) + " - " + Object(Y.c)(new Date(e[0].xLabel || "1970-01-01Z"), {
+                                        }) + " - " + Object(v.c)(new Date(e[0].xLabel || "1970-01-01Z"), {
                                             weekday: "short",
                                             month: "short",
                                             day: "numeric",
@@ -15656,7 +15747,7 @@ webpackJsonp([41], {
                                         })
                                     },
                                     label: function(e, t) {
-                                        return " " + Object(Y.e)(parseInt(e.yLabel || "0", 10), {
+                                        return " " + Object(v.e)(parseInt(e.yLabel || "0", 10), {
                                             style: "currency",
                                             currency: "USD"
                                         }) + " " + (void 0 !== e.datasetIndex && t.datasets ? t.datasets[e.datasetIndex].label : "")
@@ -15692,7 +15783,7 @@ webpackJsonp([41], {
                                         min: 0,
                                         maxTicksLimit: 5,
                                         callback: function(e) {
-                                            return Object(Y.e)(e, {
+                                            return Object(v.e)(e, {
                                                 style: "currency",
                                                 currency: "USD"
                                             })
@@ -15703,7 +15794,7 @@ webpackJsonp([41], {
                         }
                     })
                 }, t.prototype.componentWillUpdate = function(e) {
-                    this.myChart.data = X(e.datasets, e.timestampLabels), this.myChart.update()
+                    this.myChart.data = oe(e.datasets, e.timestampLabels), this.myChart.update()
                 }, t.prototype.render = function() {
                     var e = this;
                     return m.createElement("canvas", {
@@ -15712,16 +15803,16 @@ webpackJsonp([41], {
                         }
                     })
                 }, t.prototype.setCanvasResolution = function() {
-                    var e = Z.width,
-                        t = Z.height,
-                        a = $(this.canvas.getContext("2d"));
+                    var e = ne.width,
+                        t = ne.height,
+                        a = ie(this.canvas.getContext("2d"));
                     this.canvas.width = e * a, this.canvas.height = t * a, this.canvas.style.width = e + "px", this.canvas.style.height = t + "px", this.canvas.getContext("2d").setTransform(a, 0, 0, a, 0, 0)
                 }, t = c.__decorate([Object(f.c)("RevenueChart")], t)
             }(m.Component),
-            $ = function(e) {
+            ie = function(e) {
                 return (window.devicePixelRatio || 1) / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
             },
-            X = function(e, t) {
+            oe = function(e, t) {
                 return {
                     labels: t.slice(0),
                     datasets: e.map(function(e) {
@@ -15747,13 +15838,15 @@ webpackJsonp([41], {
                     })
                 }
             },
-            Q = K,
-            ee = function(e) {
+            se = re,
+            de = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
+                        members: [],
                         startTime: new Date,
                         endTime: new Date,
+                        groupChecked: !0,
                         revenues: {
                             twitch_subscriptions: {
                                 categoryLabel: "",
@@ -15777,30 +15870,75 @@ webpackJsonp([41], {
                             },
                             timestampLabels: []
                         }
+                    }, t.toggleMemberChecked = function(e) {
+                        var a = t.state.members.slice(),
+                            n = a.find(function(t) {
+                                return t.id === e.id
+                            });
+                        n.checked = !n.checked, t.setState({
+                            members: a,
+                            groupChecked: !1
+                        })
+                    }, t.toggleGroupChecked = function() {
+                        var e = !t.state.groupChecked,
+                            a = t.state.members.map(function(t, a) {
+                                return t.checked = e && a < 100, t
+                            });
+                        t.setState({
+                            groupChecked: e,
+                            members: a
+                        })
                     }, t.onTimeRangeChange = function(e, a) {
                         t.setState({
                             startTime: e,
                             endTime: a
                         })
+                    }, t.fetchMembersData = function() {
+                        return c.__awaiter(t, void 0, void 0, function() {
+                            return c.__generator(this, function(e) {
+                                return this.setState({}), [2]
+                            })
+                        })
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     return c.__awaiter(this, void 0, void 0, function() {
-                        var e, t;
-                        return c.__generator(this, function(a) {
-                            switch (a.label) {
+                        var e, t, a, n;
+                        return c.__generator(this, function(r) {
+                            switch (r.label) {
                                 case 0:
-                                    return e = this.setState, t = {}, [4, N()];
+                                    return this.props.optionalData && this.props.optionalData.members ? (e = this.props.optionalData.members, [3, 3]) : [3, 1];
                                 case 1:
-                                    return e.apply(this, [(t.revenues = a.sent(), t)]), [2]
+                                    return [4, q(this.props.teamName, L.RevenueRevealed)];
+                                case 2:
+                                    e = r.sent(), r.label = 3;
+                                case 3:
+                                    return t = e.map(function(e, t) {
+                                        return c.__assign({}, e, {
+                                            checked: t < 100
+                                        })
+                                    }), this.setState({
+                                        members: t
+                                    }), a = this.setState, n = {}, [4, K()];
+                                case 4:
+                                    return a.apply(this, [(n.revenues = r.sent(), n)]), [2]
                             }
                         })
                     })
                 }, t.prototype.render = function() {
                     return m.createElement(y, {
-                        title: k(i.Revenue),
+                        title: b(i.Revenue),
                         titleSelector: "revenue-page-title"
-                    }, m.createElement(M._17, {
+                    }, m.createElement(M.U, {
+                        display: M.H.Flex,
+                        flexDirection: M.J.Row
+                    }, m.createElement(R, {
+                        members: this.state.members,
+                        groupChecked: this.state.groupChecked,
+                        fetchMembersData: this.fetchMembersData,
+                        toggleMemberChecked: this.toggleMemberChecked,
+                        toggleGroupChecked: this.toggleGroupChecked
+                    })), m.createElement(M._17, {
                         border: !0,
                         fullWidth: !0
                     }, m.createElement(M.U, {
@@ -15808,24 +15946,24 @@ webpackJsonp([41], {
                         flexDirection: M.J.Row,
                         justifyContent: M.T.Between,
                         margin: 2
-                    }, m.createElement(E, {
+                    }, m.createElement(F, {
                         onChange: this.onTimeRangeChange
                     }), m.createElement(M.U, null, m.createElement(M._21, {
                         color: M.F.Alt2
-                    }, Object(Y.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), m.createElement(M.U, {
+                    }, Object(v.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), m.createElement(M.U, {
                         display: M.H.Flex,
                         flexDirection: M.J.Row,
                         justifyContent: M.T.Between,
                         margin: 2
-                    }, m.createElement(z, {
-                        revenues: U([this.state.revenues.ads, this.state.revenues.twitch_subscriptions, this.state.revenues.prime_subscriptions, this.state.revenues.bits]),
-                        totalTitle: Object(Y.d)("Total Revenue", "TeamsDashboard"),
+                    }, m.createElement(E, {
+                        revenues: ee([this.state.revenues.ads, this.state.revenues.twitch_subscriptions, this.state.revenues.prime_subscriptions, this.state.revenues.bits]),
+                        totalTitle: Object(v.d)("Total Revenue", "TeamsDashboard"),
                         summaryItemTitleSuffix: "*"
                     })), m.createElement(M._17, {
                         padding: 2,
                         background: M.m.Base,
                         borderTop: !0
-                    }, m.createElement(Q, {
+                    }, m.createElement(se, {
                         timestampLabels: this.state.revenues.timestampLabels,
                         datasets: [this.state.revenues.twitch_subscriptions, this.state.revenues.prime_subscriptions, this.state.revenues.ads, this.state.revenues.bits]
                     }))))
@@ -15834,79 +15972,20 @@ webpackJsonp([41], {
                     destination: h.a.TeamsDashboardRevenue
                 })], t)
             }(m.Component),
-            te = ee,
-            ae = function() {
+            le = de,
+            ue = function() {
                 return m.createElement(M.U, {
                     className: "metric-select-menu"
                 }, m.createElement(M._14, {
                     defaultValue: "Avg. Viewers"
                 }, m.createElement("option", {
                     value: "Avg. Viewers"
-                }, Object(Y.d)("Avg. Viewers", "TeamsDashboard")), m.createElement("option", {
+                }, Object(v.d)("Avg. Viewers", "TeamsDashboard")), m.createElement("option", {
                     value: "New Followers"
-                }, Object(Y.d)("New Followers", "TeamsDashboard"))))
+                }, Object(v.d)("New Followers", "TeamsDashboard"))))
             },
-            ne = ae,
-            re = a(64),
-            ie = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.toggleOpenClose = function(e) {
-                        e && t.props.fetchMembersData(t.props.members)
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.render = function() {
-                    var e = this,
-                        t = this.props.members.filter(function(e) {
-                            return e.checked
-                        }).length,
-                        a = this.props.members.length > 100 ? "Select First 100" : "Select All";
-                    return m.createElement(M.U, {
-                        className: "team-members-select-menu"
-                    }, m.createElement(re.a, {
-                        onToggle: this.toggleOpenClose
-                    }, m.createElement(M.u, {
-                        dropdown: !0
-                    }, Object(Y.d)("{checkedCount, plural, one {Stats for # Team Member} other {Stats for # Team Members}}", {
-                        checkedCount: t
-                    }, "TeamsDashboard")), m.createElement(M.p, {
-                        direction: M.q.BottomLeft,
-                        noTail: !0
-                    }, m.createElement(p.b, {
-                        className: "team-members-select-menu__scroller"
-                    }, m.createElement(M.U, null, m.createElement(M._17, {
-                        borderBottom: !0,
-                        padding: {
-                            top: 1,
-                            left: .5,
-                            right: .5,
-                            bottom: .5
-                        }
-                    }, m.createElement(M.E, {
-                        label: a,
-                        checked: this.props.groupChecked,
-                        onChange: this.props.toggleGroupChecked
-                    })), this.props.members.map(function(a) {
-                        var n = {
-                            label: a.displayName,
-                            checked: a.checked,
-                            onChange: e.props.toggleMemberChecked.bind(e, a),
-                            disabled: t >= 100 && !a.checked
-                        };
-                        return m.createElement(M._17, {
-                            margin: {
-                                x: .5,
-                                y: 0
-                            },
-                            key: a.id
-                        }, m.createElement(M.E, c.__assign({}, n)))
-                    }))))))
-                }, t = c.__decorate([Object(f.c)("TeamMembersSelectMenu", {
-                    autoReportInteractive: !0
-                })], t)
-            }(m.Component),
-            oe = ie,
-            se = function(e) {
+            ce = ue,
+            me = function(e) {
                 var t = e.rowContent;
                 return m.createElement(M.N, null, m.createElement(M.G, {
                     cols: {
@@ -15916,11 +15995,11 @@ webpackJsonp([41], {
                     cols: {
                         default: 2
                     }
-                }, m.createElement(M.U, null, m.createElement(M._21, null, Object(Y.e)(t.views)))), m.createElement(M.G, {
+                }, m.createElement(M.U, null, m.createElement(M._21, null, Object(v.e)(t.views)))), m.createElement(M.G, {
                     cols: {
                         default: 2
                     }
-                }, m.createElement(M.U, null, m.createElement(M._21, null, Object(Y.e)(t.percent), "%"))), m.createElement(M.G, {
+                }, m.createElement(M.U, null, m.createElement(M._21, null, Object(v.e)(t.percent), "%"))), m.createElement(M.G, {
                     cols: {
                         default: 5
                     }
@@ -15933,8 +16012,8 @@ webpackJsonp([41], {
                     className: "progress-bar__fill c-background-graph-fill"
                 })))))
             },
-            de = se,
-            le = function(e) {
+            _e = me,
+            he = function(e) {
                 var t = e.columnName;
                 return m.createElement(M.N, null, m.createElement(M.G, {
                     cols: {
@@ -15948,20 +16027,20 @@ webpackJsonp([41], {
                     }
                 }, m.createElement(M.U, null, m.createElement(M._21, {
                     bold: !0
-                }, Object(Y.d)("Views", "TeamsDashboard")))), m.createElement(M.G, {
+                }, Object(v.d)("Views", "TeamsDashboard")))), m.createElement(M.G, {
                     cols: {
                         default: 2
                     }
                 }, m.createElement(M.U, null, m.createElement(M._21, {
                     bold: !0
-                }, Object(Y.d)("Percent", "TeamsDashboard")))), m.createElement(M.G, {
+                }, Object(v.d)("Percent", "TeamsDashboard")))), m.createElement(M.G, {
                     cols: {
                         default: 5
                     }
                 }, m.createElement(M.U, null)))
             },
-            ue = le,
-            ce = function(e) {
+            fe = he,
+            pe = function(e) {
                 var t = e.tableName,
                     a = e.columnName,
                     n = e.rowData,
@@ -15977,13 +16056,13 @@ webpackJsonp([41], {
                     padding: 2,
                     className: "table",
                     flexWrap: M.K.NoWrap
-                }, me(t, i.length), 0 === i.length ? _e() : he(i, a, r))
+                }, Me(t, i.length), 0 === i.length ? ge() : ye(i, a, r))
             },
-            me = function(e, t) {
-                var a = Object(Y.d)("{tableName} (All)", {
+            Me = function(e, t) {
+                var a = Object(v.d)("{tableName} (All)", {
                     tableName: e
                 }, "TeamsDashboard");
-                return t > 10 && (a = Object(Y.d)("{tableName} (Top 10)", {
+                return t > 10 && (a = Object(v.d)("{tableName} (Top 10)", {
                     tableName: e
                 }, "TeamsDashboard")), m.createElement(M.U, {
                     padding: {
@@ -15993,11 +16072,11 @@ webpackJsonp([41], {
                     type: M._26.H4
                 }, a))
             },
-            _e = function() {
-                return m.createElement(M._21, null, Object(Y.d)("Not enough data for us to display", "TeamsDashboard"))
+            ge = function() {
+                return m.createElement(M._21, null, Object(v.d)("Not enough data for us to display", "TeamsDashboard"))
             },
-            he = function(e, t, a) {
-                return m.createElement(M.U, null, m.createElement(M.U, null, m.createElement(ue, {
+            ye = function(e, t, a) {
+                return m.createElement(M.U, null, m.createElement(M.U, null, m.createElement(fe, {
                     columnName: t
                 })), e.slice(0, 10).map(function(e, t) {
                     var n = e.name,
@@ -16005,7 +16084,7 @@ webpackJsonp([41], {
                         i = Math.round(r / a * 100);
                     return m.createElement(M.U, {
                         key: t
-                    }, m.createElement(de, {
+                    }, m.createElement(_e, {
                         rowContent: {
                             name: n,
                             views: r,
@@ -16014,51 +16093,51 @@ webpackJsonp([41], {
                     }))
                 }))
             },
-            fe = ce,
-            pe = Object(Y.d)("Other", "TeamsDashboard"),
-            Me = function(e) {
+            Le = pe,
+            ve = Object(v.d)("Other", "TeamsDashboard"),
+            be = function(e) {
                 return {
-                    unknown: Object(Y.d)("Unknown", "TeamsDashboard"),
-                    tv: Object(Y.d)("TV", "TeamsDashboard"),
-                    ios: Object(Y.d)("iOS App", "TeamsDashboard"),
-                    web: Object(Y.d)("Web", "TeamsDashboard"),
-                    android: Object(Y.d)("Android App", "TeamsDashboard"),
-                    mobile_web: Object(Y.d)("Mobile Web", "TeamsDashboard"),
-                    mobile_aggregated: Object(Y.d)("Mobile", "TeamsDashboard"),
-                    console: Object(Y.d)("Console", "TeamsDashboard"),
-                    other: pe
+                    unknown: Object(v.d)("Unknown", "TeamsDashboard"),
+                    tv: Object(v.d)("TV", "TeamsDashboard"),
+                    ios: Object(v.d)("iOS App", "TeamsDashboard"),
+                    web: Object(v.d)("Web", "TeamsDashboard"),
+                    android: Object(v.d)("Android App", "TeamsDashboard"),
+                    mobile_web: Object(v.d)("Mobile Web", "TeamsDashboard"),
+                    mobile_aggregated: Object(v.d)("Mobile", "TeamsDashboard"),
+                    console: Object(v.d)("Console", "TeamsDashboard"),
+                    other: ve
                 }[e] || e
             },
-            ge = function(e) {
+            Ye = function(e) {
                 return {
-                    other: pe,
-                    front_page_featured: Object(Y.d)("Featured Section - Front Page", "TeamsDashboard"),
-                    creative_page_featured: Object(Y.d)("Featured Section - Creative Page", "TeamsDashboard"),
-                    hosted: Object(Y.d)("Hosts", "TeamsDashboard"),
-                    email_live_notification: Object(Y.d)("Notifications - Email", "TeamsDashboard"),
-                    onsite_notification: Object(Y.d)("Notifications - Onsite", "TeamsDashboard"),
-                    followed_channel: Object(Y.d)("Followers", "TeamsDashboard"),
-                    directory_browse: Object(Y.d)("Browse Page", "TeamsDashboard"),
-                    search: Object(Y.d)("Searches", "TeamsDashboard"),
-                    clips_live: Object(Y.d)("Clips", "TeamsDashboard"),
-                    friend_presence: Object(Y.d)("Friends", "TeamsDashboard"),
-                    top_nav_bar: Object(Y.d)("Your Channel Page", "TeamsDashboard"),
-                    recommended_channel: Object(Y.d)("Recommendations", "TeamsDashboard"),
-                    other_channel_page: Object(Y.d)("Other Channel Page", "TeamsDashboard")
-                }[e] || Object(Y.d)("{name}'s Channel Page", {
+                    other: ve,
+                    front_page_featured: Object(v.d)("Featured Section - Front Page", "TeamsDashboard"),
+                    creative_page_featured: Object(v.d)("Featured Section - Creative Page", "TeamsDashboard"),
+                    hosted: Object(v.d)("Hosts", "TeamsDashboard"),
+                    email_live_notification: Object(v.d)("Notifications - Email", "TeamsDashboard"),
+                    onsite_notification: Object(v.d)("Notifications - Onsite", "TeamsDashboard"),
+                    followed_channel: Object(v.d)("Followers", "TeamsDashboard"),
+                    directory_browse: Object(v.d)("Browse Page", "TeamsDashboard"),
+                    search: Object(v.d)("Searches", "TeamsDashboard"),
+                    clips_live: Object(v.d)("Clips", "TeamsDashboard"),
+                    friend_presence: Object(v.d)("Friends", "TeamsDashboard"),
+                    top_nav_bar: Object(v.d)("Your Channel Page", "TeamsDashboard"),
+                    recommended_channel: Object(v.d)("Recommendations", "TeamsDashboard"),
+                    other_channel_page: Object(v.d)("Other Channel Page", "TeamsDashboard")
+                }[e] || Object(v.d)("{name}'s Channel Page", {
                     name: e
                 }, "TeamsDashboard")
             },
-            ye = function(e) {
+            ke = function(e) {
                 return (t = {
-                    facebook: Object(Y.d)("Facebook", "TeamsDashboard"),
-                    google: Object(Y.d)("Google", "TeamsDashboard"),
-                    reddit: Object(Y.d)("Reddit", "TeamsDashboard"),
-                    youtube: Object(Y.d)("Youtube", "TeamsDashboard")
-                }, t["t.co"] = Object(Y.d)("Twitter", "TeamsDashboard"), t.unknown = Object(Y.d)("Direct/Unknown", "TeamsDashboard"), t.twitch_aggregate = Object(Y.d)("Twitch", "TeamsDashboard"), t.external_aggregate = Object(Y.d)("External", "TeamsDashboard"), t)[e] || e;
+                    facebook: Object(v.d)("Facebook", "TeamsDashboard"),
+                    google: Object(v.d)("Google", "TeamsDashboard"),
+                    reddit: Object(v.d)("Reddit", "TeamsDashboard"),
+                    youtube: Object(v.d)("Youtube", "TeamsDashboard")
+                }, t["t.co"] = Object(v.d)("Twitter", "TeamsDashboard"), t.unknown = Object(v.d)("Direct/Unknown", "TeamsDashboard"), t.twitch_aggregate = Object(v.d)("Twitch", "TeamsDashboard"), t.external_aggregate = Object(v.d)("External", "TeamsDashboard"), t)[e] || e;
                 var t
             },
-            Le = {
+            De = {
                 videoPlayDemographics: {
                     1: {
                         geographical: {
@@ -16074,9 +16153,9 @@ webpackJsonp([41], {
                                 followed_channel: 1e4,
                                 directory_browse: 1e3
                             },
-                            external: (L = {
+                            external: (J = {
                                 unknown: 1e4
-                            }, L["t.co"] = 1e3, L)
+                            }, J["t.co"] = 1e3, J)
                         }
                     },
                     2: {
@@ -16093,9 +16172,9 @@ webpackJsonp([41], {
                                 followed_channel: 1e4,
                                 directory_browse: 1e3
                             },
-                            external: (v = {
+                            external: (U = {
                                 unknown: 1e4
-                            }, v["t.co"] = 1e3, v)
+                            }, U["t.co"] = 1e3, U)
                         }
                     },
                     3: {
@@ -16112,14 +16191,14 @@ webpackJsonp([41], {
                                 followed_channel: 1e4,
                                 directory_browse: 1e3
                             },
-                            external: (b = {
+                            external: (G = {
                                 unknown: 1e4
-                            }, b["t.co"] = 1e3, b)
+                            }, G["t.co"] = 1e3, G)
                         }
                     }
                 }
             },
-            ve = function(e) {
+            we = function(e) {
                 var t = e.videoPlayDemographics,
                     a = {
                         geographical: {},
@@ -16154,9 +16233,9 @@ webpackJsonp([41], {
                     },
                     m = {
                         geographical: c,
-                        platform: Me,
-                        internalReferral: ge,
-                        externalReferral: ye
+                        platform: be,
+                        internalReferral: Ye,
+                        externalReferral: ke
                     };
                 for (var o in a)
                     if (a.hasOwnProperty(o))
@@ -16165,9 +16244,9 @@ webpackJsonp([41], {
                             views: a[o][_]
                         });
                 return u
-            }(Le),
-            be = Object(Y.d)("Referrer", "TeamsDashboard"),
-            Ye = function() {
+            }(De),
+            xe = Object(v.d)("Referrer", "TeamsDashboard"),
+            Te = function() {
                 return m.createElement(M._17, {
                     className: "all-tables-wrapper",
                     display: M.H.Flex,
@@ -16182,17 +16261,17 @@ webpackJsonp([41], {
                     display: M.H.Flex,
                     flexGrow: 1,
                     borderBottom: !0
-                }, m.createElement(fe, {
-                    tableName: Object(Y.d)("Views by Location", "TeamsDashboard"),
-                    columnName: Object(Y.d)("Location", "TeamsDashboard"),
-                    rowData: ve.geographical
+                }, m.createElement(Le, {
+                    tableName: Object(v.d)("Views by Location", "TeamsDashboard"),
+                    columnName: Object(v.d)("Location", "TeamsDashboard"),
+                    rowData: we.geographical
                 })), m.createElement(M._17, {
                     display: M.H.Flex,
                     flexGrow: 1
-                }, m.createElement(fe, {
-                    tableName: Object(Y.d)("Views by Platform", "TeamsDashboard"),
-                    columnName: Object(Y.d)("Platform", "TeamsDashboard"),
-                    rowData: ve.platform
+                }, m.createElement(Le, {
+                    tableName: Object(v.d)("Views by Platform", "TeamsDashboard"),
+                    columnName: Object(v.d)("Platform", "TeamsDashboard"),
+                    rowData: we.platform
                 }))), m.createElement(M.U, {
                     display: M.H.Flex,
                     flexGrow: 1,
@@ -16203,84 +16282,91 @@ webpackJsonp([41], {
                     flexGrow: 1,
                     borderBottom: !0,
                     borderLeft: !0
-                }, m.createElement(fe, {
-                    tableName: Object(Y.d)("Views from Twitch", "TeamsDashboard"),
-                    columnName: be,
-                    rowData: ve.internalReferral
+                }, m.createElement(Le, {
+                    tableName: Object(v.d)("Views from Twitch", "TeamsDashboard"),
+                    columnName: xe,
+                    rowData: we.internalReferral
                 })), m.createElement(M._17, {
                     display: M.H.Flex,
                     flexGrow: 1,
                     borderLeft: !0
-                }, m.createElement(fe, {
-                    tableName: Object(Y.d)("Views from Outside Twitch", "TeamsDashboard"),
-                    columnName: be,
-                    rowData: ve.externalReferral
+                }, m.createElement(Le, {
+                    tableName: Object(v.d)("Views from Outside Twitch", "TeamsDashboard"),
+                    columnName: xe,
+                    rowData: we.externalReferral
                 }))))
             },
-            ke = Ye,
-            De = function(e) {
+            Se = Te,
+            He = function(e) {
                 void 0 === e && (e = "Time,Views\n01 Oct 00:00,360\n01 Oct 01:00,300\n");
                 var t = encodeURIComponent(e),
                     a = document.createElement("a");
                 a.href = "data:text/csv;charset=utf-8," + t, a.download = "views.csv", document.body.appendChild(a), a.click(), document.body.removeChild(a)
             },
-            we = function(e) {
+            je = function(e) {
                 return Object.keys(e).reduce(function(t, a) {
                     return t += a + "," + e[a] + "\n"
                 }, "Time,Views\n")
             },
-            xe = a(1050),
-            Te = this,
-            Se = function(e) {
-                return e.map(function(e) {
-                    return {
-                        id: e._id,
-                        displayName: e.display_name
-                    }
-                })
-            },
-            He = function(e) {
-                return c.__awaiter(Te, void 0, void 0, function() {
-                    var t, a, n;
-                    return c.__generator(this, function(r) {
-                        switch (r.label) {
+            Pe = this,
+            Ce = function(e, t, a, n) {
+                return c.__awaiter(Pe, void 0, void 0, function() {
+                    var r, i, o, s, d;
+                    return c.__generator(this, function(l) {
+                        switch (l.label) {
                             case 0:
-                                return t = "/v5/teams/" + e + "/dashboard/members?stats_revealed=true", [4, Object(xe.c)({
-                                    path: t
-                                })];
-                            case 1:
-                                return a = r.sent(), n = a.body ? a.body.channels : [], [2, Se(n)]
-                        }
-                    })
-                })
-            },
-            je = this,
-            Pe = function(e, t, a, n) {
-                return c.__awaiter(je, void 0, void 0, function() {
-                    var r, i, o;
-                    return c.__generator(this, function(s) {
-                        switch (s.label) {
-                            case 0:
-                                return r = t.join(","), i = "/v5/teams/" + e + "/stats/concurrent_viewers?channel_ids=" + r + "&start_time=" + a + "&end_time=" + n, [4, Object(xe.c)({
+                                return t.length < 1 ? [2, {}] : (r = t.join(","), i = "/v5/teams/" + e + "/stats/concurrent_viewers?channel_ids=" + r + "&start_time=" + a + "&end_time=" + n, [4, Object(N.c)({
                                     path: i
-                                })];
+                                })]);
                             case 1:
-                                return o = s.sent(), [2, o.body ? Ce(o.body) : {}]
+                                return o = l.sent(), s = o.body ? Oe(o.body) : {}, d = Ae(s, a, n), [2, c.__assign({}, s, d)]
                         }
                     })
                 })
-            },
-            Ce = function(e) {
-                for (var t = e.concurrent_viewers, a = {}, n = 0, r = Object.keys(t); n < r.length; n++)
-                    for (var i = r[n], o = 0, s = t[i]; o < s.length; o++) {
-                        var d = s[o];
-                        a.hasOwnProperty(d.timestamp) ? a[d.timestamp] += d.count : a[d.timestamp] = d.count
-                    }
-                return a
             },
             Oe = function(e) {
+                for (var t = e.concurrent_viewers, a = {}, n = 0, r = Object.keys(t); n < r.length; n++) {
+                    var i = r[n];
+                    a[i] = {};
+                    for (var o = a[i], s = 0, d = t[i]; s < d.length; s++) {
+                        var l = d[s],
+                            u = new Date(l.timestamp),
+                            c = new Date(Date.UTC(u.getUTCFullYear(), u.getUTCMonth(), u.getUTCDate(), u.getUTCHours() - u.getUTCHours() % 4)).getTime();
+                        o.hasOwnProperty(c) ? o[c].push(l.count) : o[c] = [l.count]
+                    }
+                }
+                for (var m = {}, _ = 0, h = Object.keys(a); _ < h.length; _++)
+                    for (var i = h[_], o = a[i], f = 0, p = Object.keys(o); f < p.length; f++) {
+                        var M = p[f],
+                            g = o[M].reduce(function(e, t) {
+                                return e + t
+                            }),
+                            y = g / o[M].length;
+                        m.hasOwnProperty(M) ? m[M] += y : m[M] = y
+                    }
+                return m
+            },
+            Ae = function(e, t, a) {
+                for (var n = 0, r = new Date(t), i = new Date(a), o = ["" + (r.getTime() - 144e5)].concat(Object.keys(e).sort(function(e, t) {
+                        return e.localeCompare(t, void 0, {
+                            numeric: !0
+                        })
+                    }), ["" + (i.getTime() + 144e5)]), s = {}, d = 0, l = o; d < l.length; d++) {
+                    var u = l[d],
+                        c = parseInt(u, 10);
+                    if (n)
+                        for (; c - n > 216e5;) n += 144e5, s[n] = 0;
+                    n = c
+                }
+                return s
+            },
+            Fe = function(e) {
                 var t = Object.keys(e);
-                t.sort();
+                t.sort(function(e, t) {
+                    return e.localeCompare(t, void 0, {
+                        numeric: !0
+                    })
+                });
                 for (var a = {
                         timestamps: [],
                         counts: []
@@ -16290,27 +16376,27 @@ webpackJsonp([41], {
                 }
                 return a
             },
-            Ae = {
+            We = {
                 chartLabel: "",
                 timeLabels: [],
                 viewerCounts: []
             },
-            Fe = function() {
+            Ee = function() {
                 function e(e) {
                     this.chartLabel = e.chartLabel, this.timeLabels = e.timeLabels, this.viewerCounts = e.viewerCounts, this.isEmpty = !e.viewerCounts || 0 === e.viewerCounts.length
                 }
                 return e
             }(),
-            We = {
+            Ie = {
                 width: 800,
                 height: 380
             },
-            Ee = function(e) {
+            ze = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive(), this.setCanvasResolution(), this.myChart = new q(this.canvas, {
+                    this.props.latencyTracking.reportInteractive(), this.setCanvasResolution(), this.myChart = new ae(this.canvas, {
                         type: "line",
                         data: {
                             datasets: [{
@@ -16335,6 +16421,25 @@ webpackJsonp([41], {
                             labels: this.props.timeLabels
                         },
                         options: {
+                            tooltips: {
+                                callbacks: {
+                                    title: function(e, t) {
+                                        var a = 0,
+                                            n = e[0];
+                                        return t && t.labels && (a = parseInt(t.labels[n.index || 0], 10)), Object(v.c)(new Date(a), {
+                                            weekday: "short",
+                                            year: "numeric",
+                                            month: "short",
+                                            day: "numeric",
+                                            hour: "numeric",
+                                            timeZone: "UTC"
+                                        })
+                                    },
+                                    label: function(e) {
+                                        return Math.round(parseFloat(e.yLabel || "0"))
+                                    }
+                                }
+                            },
                             legend: {
                                 position: "bottom",
                                 labels: {
@@ -16350,7 +16455,11 @@ webpackJsonp([41], {
                                     },
                                     stacked: !0,
                                     ticks: {
-                                        fontColor: "#898395"
+                                        fontColor: "#898395",
+                                        callback: function(e) {
+                                            var t = new Date(parseInt(e, 10));
+                                            return 0 === t.getUTCHours() ? Object(v.c)(t, "full") : ""
+                                        }
                                     }
                                 }],
                                 yAxes: [{
@@ -16378,25 +16487,25 @@ webpackJsonp([41], {
                         }
                     })
                 }, t.prototype.setCanvasResolution = function() {
-                    var e = We.width,
-                        t = We.height,
-                        a = Ie(this.canvas.getContext("2d"));
+                    var e = Ie.width,
+                        t = Ie.height,
+                        a = Re(this.canvas.getContext("2d"));
                     this.canvas.width = e * a, this.canvas.height = t * a, this.canvas.style.width = e + "px", this.canvas.style.height = t + "px", this.canvas.getContext("2d").setTransform(a, 0, 0, a, 0, 0)
                 }, t = c.__decorate([Object(f.c)("StatsChart")], t)
             }(m.Component),
-            Ie = function(e) {
+            Re = function(e) {
                 return (window.devicePixelRatio || 1) / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
             },
-            ze = Ee,
-            Re = "2017-10-01T00:00:00Z",
-            Ne = "2017-10-08T00:00:00Z",
-            Be = function(e) {
+            Ne = ze,
+            Be = "2017-10-01T00:00:00Z",
+            Ve = "2017-10-08T00:00:00Z",
+            Je = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         members: [],
                         views: {},
-                        lineChartData: new Fe(Ae),
+                        lineChartData: new Ee(We),
                         startTime: new Date,
                         endTime: new Date,
                         groupChecked: !0
@@ -16418,7 +16527,7 @@ webpackJsonp([41], {
                             groupChecked: e,
                             members: a
                         })
-                    }, t.fetchMembersData = function() {
+                    }, t.fetchStats = function() {
                         return c.__awaiter(t, void 0, void 0, function() {
                             var e, t, a, n;
                             return c.__generator(this, function(r) {
@@ -16428,10 +16537,10 @@ webpackJsonp([41], {
                                             return e.checked
                                         }).map(function(e) {
                                             return e.id
-                                        }), [4, Pe(this.props.teamName, e, Re, Ne)];
+                                        }), [4, Ce(this.props.teamName, e, Be, Ve)];
                                     case 1:
-                                        return t = r.sent(), a = Oe(t), n = new Fe({
-                                            chartLabel: Object(Y.d)("Avg. Viewers", "TeamsDashboardPage"),
+                                        return t = r.sent(), a = Fe(t), n = new Ee({
+                                            chartLabel: Object(v.d)("Avg. Viewers", "TeamsDashboardPage"),
                                             timeLabels: a.timestamps,
                                             viewerCounts: a.counts
                                         }), this.setState({
@@ -16456,7 +16565,7 @@ webpackJsonp([41], {
                                 case 0:
                                     return this.props.optionalData && this.props.optionalData.members ? (e = this.props.optionalData.members, [3, 3]) : [3, 1];
                                 case 1:
-                                    return [4, He(this.props.teamName)];
+                                    return [4, q(this.props.teamName)];
                                 case 2:
                                     e = a.sent(), a.label = 3;
                                 case 3:
@@ -16468,7 +16577,7 @@ webpackJsonp([41], {
                                         members: t
                                     })];
                                 case 4:
-                                    return a.sent(), [4, this.fetchMembersData()];
+                                    return a.sent(), [4, this.fetchStats()];
                                 case 5:
                                     return a.sent(), [2]
                             }
@@ -16476,15 +16585,15 @@ webpackJsonp([41], {
                     })
                 }, t.prototype.render = function() {
                     return m.createElement(y, {
-                        title: k(i.Stats),
+                        title: b(i.Stats),
                         titleSelector: "stats-page-title"
                     }, m.createElement(M.U, {
                         display: M.H.Flex,
                         flexDirection: M.J.Row
-                    }, m.createElement(oe, {
+                    }, m.createElement(R, {
                         members: this.state.members,
                         groupChecked: this.state.groupChecked,
-                        fetchMembersData: this.fetchMembersData,
+                        fetchMembersData: this.fetchStats,
                         toggleMemberChecked: this.toggleMemberChecked,
                         toggleGroupChecked: this.toggleGroupChecked
                     })), m.createElement(M._17, {
@@ -16500,40 +16609,42 @@ webpackJsonp([41], {
                     }, m.createElement(M.U, {
                         display: M.H.Flex,
                         flexDirection: M.J.Row
-                    }, m.createElement(ne, null), m.createElement(E, {
+                    }, m.createElement(ce, null), m.createElement(F, {
                         onChange: this.onTimeRangeChange
                     })), m.createElement(M.U, null, m.createElement(M.u, {
                         "data-test-selector": "export-csv-button",
                         onClick: this.clickHandler
-                    }, Object(Y.d)("Export Data", "TeamsDashboardPage")))), m.createElement(M.U, {
+                    }, Object(v.d)("Export Data", "TeamsDashboardPage")))), m.createElement(M.U, {
                         fullWidth: !0
-                    }, m.createElement(ze, c.__assign({}, this.state.lineChartData))), m.createElement(ke, null)))
+                    }, m.createElement(Ne, c.__assign({}, this.state.lineChartData))), m.createElement(Se, null)))
                 }, t.prototype.clickHandler = function() {
-                    var e = we(this.state.views);
-                    De(e)
+                    var e = je(this.state.views);
+                    He(e)
                 }, t = c.__decorate([Object(f.c)("StatsPage", {
                     autoReportInteractive: !0,
                     destination: h.a.TeamsDashboardStats
                 })], t)
             }(m.Component),
-            Ve = Be,
-            Je = function(e) {
+            Ue = Je,
+            Ge = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderStatsPage = function() {
-                        return m.createElement(Ve, {
+                        return m.createElement(Ue, {
                             teamName: t.props.match.params.teamName
                         })
                     }, t.renderBasicInfoPage = function() {
-                        return m.createElement(w, null)
+                        return m.createElement(k, null)
                     }, t.renderCustomizePage = function() {
-                        return m.createElement(T, null)
+                        return m.createElement(w, null)
                     }, t.renderMembersPage = function() {
-                        return m.createElement(P, null)
-                    }, t.renderFeaturedChannelsPage = function() {
                         return m.createElement(H, null)
+                    }, t.renderFeaturedChannelsPage = function() {
+                        return m.createElement(T, null)
                     }, t.renderRevenuePage = function() {
-                        return m.createElement(te, null)
+                        return m.createElement(le, {
+                            teamName: t.props.match.params.teamName
+                        })
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
@@ -16542,7 +16653,7 @@ webpackJsonp([41], {
                         flexWrap: M.K.NoWrap,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, m.createElement(F, {
+                    }, m.createElement(O, {
                         teamName: this.props.match.params.teamName,
                         page: this.props.match.params.pageName
                     }), m.createElement(M.U, {
@@ -16572,13 +16683,13 @@ webpackJsonp([41], {
                     }))
                 }, t
             }(m.Component),
-            Ue = Je,
-            Ge = Object(o.a)(r, n)(Ue);
+            qe = Ge,
+            Ze = Object(o.a)(r, n)(qe);
         a.d(t, "TeamsDashboardRoot", function() {
-            return Ge
+            return Ze
         })
     },
-    913: function(e, t, a) {
+    917: function(e, t, a) {
         (function(e) {
             ! function(t, a) {
                 e.exports = a()
@@ -17193,7 +17304,7 @@ webpackJsonp([41], {
                 function Xe(t) {
                     var n = null;
                     if (!jr[t] && void 0 !== e && e && e.exports) try {
-                        n = xr._abbr, a(1322)("./" + t), Qe(n)
+                        n = xr._abbr, a(1328)("./" + t), Qe(n)
                     } catch (e) {}
                     return jr[t]
                 }
@@ -18398,9 +18509,9 @@ webpackJsonp([41], {
                         Ln = e
                     }(Lt), t.fn = ti, t.min = bt, t.max = Yt, t.now = Nr, t.utc = m, t.unix = Na, t.months = qa, t.isDate = d, t.locale = Qe, t.invalid = p, t.duration = Jt, t.isMoment = y, t.weekdays = Ka, t.parseZone = Ba, t.localeData = at, t.isDuration = Tt, t.monthsShort = Za, t.weekdaysMin = Xa, t.defineLocale = et, t.updateLocale = tt, t.locales = nt, t.weekdaysShort = $a, t.normalizeUnits = W, t.relativeTimeRounding = pn, t.relativeTimeThreshold = Mn, t.calendarFormat = $t, t.prototype = ti, t
             })
-        }).call(t, a(424)(e))
+        }).call(t, a(425)(e))
     },
-    917: function(e, t, a) {
+    921: function(e, t, a) {
         "use strict";
         a.d(t, "a", function() {
             return o
@@ -18531,7 +18642,7 @@ webpackJsonp([41], {
                 }, e
             }()
     },
-    918: function(e, t, a) {
+    922: function(e, t, a) {
         "use strict";
         a.d(t, "a", function() {
             return n
@@ -18589,20 +18700,20 @@ webpackJsonp([41], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    920: function(e, t, a) {
-        "use strict";
-        e.exports = a(1153), e.exports.easing = a(1476), e.exports.canvas = a(1477), e.exports.options = a(1478)
-    },
     924: function(e, t, a) {
         "use strict";
-        var n = a(920);
+        e.exports = a(1158), e.exports.easing = a(1481), e.exports.canvas = a(1482), e.exports.options = a(1483)
+    },
+    928: function(e, t, a) {
+        "use strict";
+        var n = a(924);
         e.exports = {
             _set: function(e, t) {
                 return n.merge(this[e] || (this[e] = {}), t)
             }
         }
     },
-    969: function(e, t, a) {
+    982: function(e, t, a) {
         "use strict";
 
         function n(e, t, a, n) {
@@ -18622,8 +18733,8 @@ webpackJsonp([41], {
                     t[s] = u
                 }
         }
-        var r = a(1326),
-            i = a(920),
+        var r = a(1332),
+            i = a(924),
             o = function(e) {
                 i.extend(this, e), this.initialize.apply(this, arguments)
             };
@@ -18654,4 +18765,4 @@ webpackJsonp([41], {
         }), o.extend = i.inherits, e.exports = o
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-dc1256ad600a4332b3021b6b10e72715.js.map
+//# sourceMappingURL=pages.teams-dashboard-79ed07dda2207092b51511d940ad822e.js.map

@@ -1,5 +1,5 @@
-webpackJsonp([49], {
-    1001: function(e, t, n) {
+webpackJsonp([50], {
+    1005: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -23,7 +23,7 @@ webpackJsonp([49], {
             e[e.Stream = 1] = "Stream", e[e.Vod = 2] = "Vod"
         }(o || (o = {}))
     },
-    1031: function(e, t, n) {
+    1018: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -31,12 +31,12 @@ webpackJsonp([49], {
                 trackingSet: e.ads.trackingSet
             }
         }
-        var r = n(8),
+        var r = n(9),
             a = n(0),
             s = n(1),
             o = n(2),
             l = n(111),
-            c = n(415),
+            c = n(416),
             u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
             d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
             p = function(e) {
@@ -141,14 +141,426 @@ webpackJsonp([49], {
             return h
         })
     },
-    1051: function(e, t, n) {
+    1041: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return {
+                isLoggedIn: Object(N.d)(e)
+            }
+        }
+
+        function r(e) {
+            return Object(E.bindActionCreators)({
+                login: function() {
+                    return Object(C.f)(P.a.ReportHoster)
+                },
+                showReportUserModal: function(e) {
+                    var t = u.__rest(e, []);
+                    return Object(T.d)(U.a, t)
+                }
+            }, e)
+        }
+
+        function a() {
+            return !!window.Twitch && !!window.Twitch.Player
+        }
+
+        function s(e) {
+            return {
+                theatreModeEnabled: e.ui.theatreModeEnabled,
+                isLoggedIn: Object(N.d)(e),
+                authToken: Object(N.a)(e)
+            }
+        }
+
+        function o(e) {
+            return Object(E.bindActionCreators)({
+                enableTheatreMode: w.k,
+                disableTheatreMode: w.j
+            }, e)
+        }
+
+        function l(e, t, n) {
+            if (!e.collectionID && e.videoID) return void t.push("/videos/" + e.videoID);
+            if (e.collectionID && e.videoID) {
+                if (n && n.currentVideoID && n.currentCollectionID && n.currentVideoID === e.videoID && n.currentCollectionID === e.collectionID) return;
+                return void t.push("/videos/" + e.videoID + "?collection=" + e.collectionID)
+            }
+            if (e.collectionID && !e.videoID) return void t.push("/collections/" + e.collectionID);
+            m.i.withCategory("video-player").error(new Error("No collection or video specified from the emitted player transition event."), "No collection or video specified from the emitted player transition event.")
+        }
+        var c, u = n(0),
+            d = n(1),
+            p = n(12),
+            m = n(2),
+            h = n(275),
+            g = n(64),
+            b = n(14),
+            f = n(926),
+            S = n(923),
+            v = n(933),
+            y = n(3),
+            k = (n(1136), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleReportHosterClick = function() {
+                        t.props.isLoggedIn ? t.props.showReportUserModal({
+                            onClose: t.handleReportModalClose,
+                            reportContext: {
+                                contentType: S.a.User,
+                                targetUserID: t.props.hostChannelID
+                            },
+                            title: Object(m.d)("Report {channelDisplayName}", {
+                                channelDisplayName: t.props.hostChannelDisplayName
+                            }, "VideoPlayerHostingUI")
+                        }) : t.props.login()
+                    }, t.handleReportModalClose = function(e) {
+                        (e === f.b.MutationError || e === f.b.Success) && t.props.history.push("/")
+                    }, t
+                }
+                return u.__extends(t, e), t.prototype.render = function() {
+                    var e = !!this.props.hostedChannelDisplayName;
+                    return d.createElement(y._17, {
+                        className: "video-player-hosting-ui__container"
+                    }, e && this.renderHeader(), d.createElement("span", {
+                        key: "video-player"
+                    }, this.props.children), d.createElement(y.U, {
+                        display: e ? y.H.Block : y.H.Hide,
+                        position: y._2.Relative,
+                        zIndex: y._38.Above
+                    }, e && this.renderFooter()))
+                }, t.prototype.renderHeader = function() {
+                    return d.createElement(y.e, {
+                        type: y.i.SlideInBottom,
+                        delay: y.f.Medium,
+                        duration: y.g.Medium,
+                        enabled: !0
+                    }, d.createElement(p.a, {
+                        key: "hosting-ui-header",
+                        className: "video-player-hosting-ui__link",
+                        to: {
+                            pathname: "/" + this.props.hostedChannelLogin,
+                            state: {
+                                medium: b.PageviewMedium.Channel,
+                                content: b.PageviewContent.Host
+                            }
+                        },
+                        "data-a-target": "hosting-ui-link",
+                        "data-test-selector": "video-player-hosting-ui__header"
+                    }, d.createElement(y._17, {
+                        className: "video-player-hosting-ui__header",
+                        display: y.H.Flex,
+                        background: y.m.AccentAlt2,
+                        color: y.F.Overlay,
+                        alignItems: y.c.Center,
+                        padding: {
+                            x: 1,
+                            y: .5
+                        },
+                        "data-a-target": "hosting-ui-header"
+                    }, d.createElement(y.U, {
+                        className: "video-player-hosting-ui__avatar-container"
+                    }, d.createElement(y.l, {
+                        imageSrc: this.props.hostedChannelProfileImageURL || "",
+                        size: 30,
+                        imageAlt: Object(m.d)("Hosted Channel {hostedChannelDisplayName}'s Avatar", {
+                            hostedChannelDisplayName: this.props.hostedChannelDisplayName || ""
+                        }, "VideoPlayerHostingUI")
+                    })), d.createElement(y._17, {
+                        margin: {
+                            left: 1
+                        },
+                        fontSize: y.L.Size5
+                    }, Object(m.d)("Hosting", "VideoPlayerHostingUI"), " ", d.createElement(y._21, {
+                        type: y._26.Span,
+                        className: "video-player-hosting-ui__channel-name",
+                        color: y.F.OverlayAlt,
+                        "data-a-target": "hosting-ui-channel-name"
+                    }, this.props.hostedChannelDisplayName)))))
+                }, t.prototype.renderFooter = function() {
+                    return d.createElement(y.e, {
+                        type: y.i.SlideInTop,
+                        enabled: !0,
+                        delay: y.f.Medium,
+                        duration: y.g.Medium
+                    }, d.createElement(y._17, {
+                        key: "hosting-ui-footer",
+                        background: y.m.AccentAlt2,
+                        className: "video-player-hosting-ui__footer",
+                        display: y.H.Block,
+                        padding: 1,
+                        "data-test-selector": "video-player-hosting-ui__footer",
+                        "data-a-target": "hosting-ui-footer"
+                    }, d.createElement(y.U, {
+                        padding: {
+                            y: .5
+                        },
+                        display: y.H.Flex,
+                        justifyContent: y.T.Between
+                    }, d.createElement(y.U, {
+                        display: y.H.Flex
+                    }, d.createElement(y.U, {
+                        margin: {
+                            right: 1
+                        }
+                    }, d.createElement(h.a, {
+                        "data-a-target": "hosting-ui-follow-button",
+                        channelName: this.props.hostedChannelLogin || "",
+                        channelLogin: this.props.hostedChannelLogin,
+                        hostChannelLogin: this.props.hostChannelLogin,
+                        hostChannelID: this.props.hostChannelID,
+                        isHostedFollow: !0,
+                        balloonDirection: y.q.BottomLeft
+                    })), d.createElement(y.U, null, d.createElement(v.b, {
+                        channelLogin: this.props.hostedChannelLogin,
+                        hostChannelID: this.props.hostChannelID,
+                        hostChannelLogin: this.props.hostChannelLogin,
+                        "data-a-target": "hosting-ui-subscribe-button"
+                    }))), d.createElement(g.a, null, d.createElement(y.v, {
+                        ariaLabel: Object(m.d)("More options", "HostingUI"),
+                        overlay: !0,
+                        icon: y._9.More,
+                        onClick: this.handleReportHosterClick,
+                        "data-a-target": "hosting-ui-more-button"
+                    }), d.createElement(y.p, {
+                        direction: y.q.TopRight,
+                        "data-a-target": "hosting-ui-more-balloon"
+                    }, d.createElement(y.U, {
+                        padding: {
+                            y: 1
+                        }
+                    }, d.createElement(y.S, {
+                        onClick: this.handleReportHosterClick,
+                        "data-a-target": "hosting-ui-report-button"
+                    }, d.createElement(y.U, {
+                        padding: {
+                            x: 1,
+                            y: .5
+                        }
+                    }, Object(m.d)("Report {hostChannelDisplayName}", {
+                        hostChannelDisplayName: this.props.hostChannelDisplayName
+                    }, "VideoPlayerHostingUI")))))))))
+                }, t
+            }(d.Component)),
+            _ = n(9),
+            E = n(11),
+            P = n(51),
+            T = n(50),
+            C = n(35),
+            N = n(19),
+            U = n(931),
+            O = Object(_.a)(i, r)(Object(p.f)(k)),
+            w = n(69),
+            I = n(4),
+            D = n(429),
+            F = n(428),
+            R = n(21),
+            x = n(991),
+            L = n(6);
+        ! function(e) {
+            e.LoadStart = "loadstart", e.Error = "error", e.LoadedMetadata = "loadedmetadata", e.CanPlay = "canplay", e.Playing = "playing", e.Waiting = "waiting", e.Seeking = "seeking", e.Seeked = "seeked", e.Ended = "ended", e.DurationChange = "durationchange", e.TimeUpdate = "timeupdate", e.Play = "play", e.Pause = "pause", e.VolumeChange = "volumechange", e.RateChange = "ratechange"
+        }(c || (c = {}));
+        var j;
+        ! function(e) {
+            e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange"
+        }(j || (j = {}));
+        var A, M = (n(1137), n(976));
+        ! function(e) {
+            e.Embed = "embed", e.Frontpage = "frontpage", e.Site = "site"
+        }(A || (A = {}));
+        var B = {
+                allowfullscreen: !0,
+                branding: !1,
+                channelInfo: !1,
+                controls: !0,
+                height: "100%",
+                playsinline: !0,
+                player: A.Site,
+                showInfo: !1,
+                showtheatre: !1,
+                trackingProperties: {
+                    client_app: "twilight"
+                },
+                width: "100%",
+                oauth_token: ""
+            },
+            G = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.logger = m.i.withCategory("video-player"), n.checkPlayerDependencyStatus = function() {
+                        a() ? (n.setState({
+                            canInitializePlayer: !0
+                        }), n.checkPlayerDependencyAnimationFrame = null) : n.checkPlayerDependencyAnimationFrame = requestAnimationFrame(n.checkPlayerDependencyStatus)
+                    }, n.attachRef = function(e) {
+                        return n.playerRef = e
+                    }, n.onOpenStream = function() {
+                        n.props.playerTypeOverride === A.Frontpage && n.player && (n.props.channelLogin ? m.n.history.push("/" + n.props.channelLogin) : n.props.vodID ? m.n.history.push("/videos/" + n.props.vodID + "?t=" + n.player.getCurrentTime()) : n.props.collectionID && m.n.history.push("/collections/" + n.props.collectionID))
+                    }, n.onPlayerReady = function() {
+                        n.player && (n.logger.debug("Ready"), n.props.latencyTracking.reportInteractive(), n.hasPlayed = !1, n.props.latencyTracking.reportCustomEvent(n.playerLoaded), n.setState({
+                            playerInitialized: !0
+                        }, function() {
+                            return n.updatePlayerTrackingData(n.props.hostChannel)
+                        }))
+                    }, n.onPlayerPlay = function() {
+                        n.logger.debug("Play"), n.reportPlayerPlayed()
+                    }, n.onStreamStatusOnline = function() {
+                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(j.Online)
+                    }, n.onStreamStatusOffline = function() {
+                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(j.Offline)
+                    }, n.onTheatreChange = function(e) {
+                        e ? (n.logger.debug("Theatre Entered"), n.props.enableTheatreMode && !n.props.theatreModeEnabled && n.props.enableTheatreMode()) : (n.logger.debug("Theatre Exited"), n.props.disableTheatreMode && n.props.theatreModeEnabled && n.props.disableTheatreMode())
+                    }, n.onFullScreenChange = function() {
+                        n.player && (n.logger.debug("Fullscreen change", n.player.fullscreen), n.player.fullscreen !== n.state.isFullScreen && n.setState({
+                            isFullScreen: n.player.fullscreen
+                        }))
+                    }, n.onSeek = function() {
+                        n.props.onSeek && n.player && n.props.onSeek(n.player.getCurrentTime())
+                    }, n.onTimeUpdate = function() {
+                        n.props.onVideoTimeChange && n.player && n.props.onVideoTimeChange(n.player.getCurrentTime())
+                    }, n.onTransitionToCollectionVod = function(e) {
+                        if (n.props.onNavigationRequest) {
+                            var t = {};
+                            e.vodId && (t.videoID = Object(x.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
+                        }
+                    }, n.onTransitionToRecommendedVod = function(e) {
+                        if (n.props.onNavigationRequest) {
+                            var t = {};
+                            e.vodId && (t.videoID = Object(x.a)(e.vodId)), n.props.onNavigationRequest(t)
+                        }
+                    }, n.updatePlayerTrackingData = function(e) {
+                        if (n.state.playerInitialized && n.player) {
+                            var t = m.m.getLastPageview();
+                            t ? n.logger.debug("Tracking data updated.", {
+                                pageviewProperties: t,
+                                hostChannel: e
+                            }) : n.logger.debug("pageviewProperties not found; only hosting status updated", {
+                                pageviewProperties: t,
+                                hostChannel: e
+                            }), n.player.setTrackingProperties(u.__assign({}, t, {
+                                host_channel: e
+                            }))
+                        }
+                    }, n.updatePlayerType = function() {
+                        var e = n.props.playerTypeOverride || B.player;
+                        n.player && n.playerType !== e && (n.player.setPlayerType(e), n.playerType = e)
+                    }, n.maybeRecordClip = function() {
+                        n.player && n.state.playerInitialized && n.player.recordClip()
+                    }, n.playerCreated = n.registerCreatedEvent(), n.playerLoaded = n.registerLoadedEvent(), n.playerPlayed = n.registerPlayedEvent(), n.state = {
+                        canInitializePlayer: a(),
+                        playerInitialized: !1,
+                        isFullScreen: !1
+                    }, n.playerType = t.playerTypeOverride || B.player, n.lastSetChannel = t.channelLogin, n
+                }
+                return u.__extends(t, e), t.prototype.componentDidMount = function() {
+                    var e = this;
+                    if (this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.state.canInitializePlayer ? this.initializePlayer() : this.checkPlayerDependencyAnimationFrame = window.requestAnimationFrame(this.checkPlayerDependencyStatus), m.m.eventEmitter.addListener(b.SpadeEventType.Pageview, function() {
+                            return e.updatePlayerTrackingData(e.props.hostChannel)
+                        }), window.__playerScriptChunk && !t.tagInjected) {
+                        this.logger.debug("Loading player chunk after page loaded");
+                        var n = document.createElement("script");
+                        n.crossOrigin = "anonymous", n.src = window.__jqueryChunk, n.onload = function() {
+                            var e = document.createElement("script");
+                            e.async = !0, e.crossOrigin = "anonymous", e.src = window.__playerScriptChunk, document.body.appendChild(e)
+                        }, document.body.appendChild(n);
+                        var i = document.createElement("link");
+                        i.href = window.__playerStyleChunk, i.media = "screen", i.rel = "stylesheet", i.type = "text/css", document.body.appendChild(i), t.tagInjected = !0
+                    }
+                }, t.prototype.componentWillUpdate = function(e, t) {
+                    if (!this.state.canInitializePlayer && t.canInitializePlayer) return void this.initializePlayer();
+                    if (t.canInitializePlayer && t.playerInitialized) {
+                        if (this.updatePlayerTrackingData(e.hostChannel), this.updatePlayerType(), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.channelLogin && e.channelLogin !== this.lastSetChannel) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void m.m.setVideoPlayerTrackingData({
+                            vodID: void 0
+                        });
+                        var n = e.collectionID && this.props.collectionID !== e.collectionID,
+                            i = e.vodID && this.props.vodID !== e.vodID;
+                        if (n || i) {
+                            var r = e.vodID ? Object(M.a)(e.vodID) : "";
+                            if ("" !== r && m.m.setVideoPlayerTrackingData({
+                                    vodID: e.vodID
+                                }), !this.player) return;
+                            return void(n || e.collectionID && i ? this.player.setCollection(e.collectionID, r, e.nextVideoOffset) : this.player.setVideo(r, e.nextVideoOffset))
+                        }
+                        void 0 !== e.nextVideoOffset && e.nextVideoOffset >= 0 && this.props.nextVideoOffset !== e.nextVideoOffset && this.player && this.player.setCurrentTime(e.nextVideoOffset)
+                    }
+                }, t.prototype.render = function() {
+                    var e = I("video-player", {
+                        "video-player--theatre": this.props.theatreModeEnabled,
+                        "video-player--logged-in": this.props.isLoggedIn,
+                        "video-player--fullscreen": this.state.isFullScreen
+                    });
+                    return d.createElement("div", {
+                        className: I(e),
+                        "data-test-selector": "video-player"
+                    }, d.createElement("div", {
+                        className: "video-player__container",
+                        ref: this.attachRef
+                    }))
+                }, t.prototype.componentWillUnmount = function() {
+                    this.unbindHotKeys(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.props.onDestroy && this.props.onDestroy(), this.player && (m.m.eventEmitter.removeListener(b.SpadeEventType.Pageview, this.updatePlayerTrackingData), this.player.removeEventListener(j.PlayerReady, this.onPlayerReady), this.player.removeEventListener(j.Online, this.onStreamStatusOnline), this.player.removeEventListener(j.Offline, this.onStreamStatusOffline), this.player.removeEventListener(c.Ended, this.onStreamStatusOffline), this.player.removeEventListener(c.Play, this.onPlayerPlay), this.player.removeEventListener(j.TheatreChange, this.onTheatreChange), this.player.removeEventListener(j.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(j.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(c.Seeked, this.onSeek), this.player.removeEventListener(c.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(j.OpenStream, this.onOpenStream), D.extensionService.unregisterPlayer(), this.player.destroy()), m.m.setVideoPlayerTrackingData({
+                        vodID: void 0
+                    })
+                }, t.prototype.initializePlayer = function() {
+                    var e = u.__assign({}, B, {
+                        showtheatre: !this.props.disableTheatreButton
+                    });
+                    this.props.playerTypeOverride && (e.player = this.props.playerTypeOverride, this.playerType = this.props.playerTypeOverride), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.vodID && (e.video = Object(M.a)(this.props.vodID), m.m.setVideoPlayerTrackingData({
+                        vodID: this.props.vodID
+                    })), this.props.nextVideoOffset && (e.time = Object(M.b)(this.props.nextVideoOffset)), e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
+                    var t = new window.Twitch.Player(this.playerRef, e);
+                    this.player = t, t.addEventListener(j.PlayerReady, this.onPlayerReady), t.addEventListener(j.Online, this.onStreamStatusOnline), t.addEventListener(j.Offline, this.onStreamStatusOffline), t.addEventListener(c.Ended, this.onStreamStatusOffline), t.addEventListener(c.Play, this.onPlayerPlay), t.addEventListener(c.Seeked, this.onSeek), t.addEventListener(c.TimeUpdate, this.onTimeUpdate), t.addEventListener(j.TheatreChange, this.onTheatreChange), t.addEventListener(j.FullscreenChange, this.onFullScreenChange), t.addEventListener(j.TransitionToCollectionVOD, this.onTransitionToCollectionVod), t.addEventListener(j.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), t.addEventListener(j.OpenStream, this.onOpenStream), D.extensionService.registerPlayer(this.player), this.props.onInit && this.props.onInit(t), this.maybeAttachToWindow(this.props)
+                }, t.prototype.registerCreatedEvent = function() {
+                    return this.props.latencyTracking.registerCustomEvent("Player", "player-created", "Created", 1e3)
+                }, t.prototype.registerLoadedEvent = function() {
+                    return this.props.latencyTracking.registerCustomEvent("Player", "player-loaded", "Init", 2500)
+                }, t.prototype.registerPlayedEvent = function() {
+                    return this.props.latencyTracking.registerCustomEvent("Player", "player-played", "First Frame", 4e3)
+                }, t.prototype.reportPlayerPlayed = function() {
+                    this.hasPlayed || (this.hasPlayed = !0, this.playerPlayed && this.props.latencyTracking.reportCustomEvent(this.playerPlayed))
+                }, t.prototype.maybeAttachToWindow = function(e) {
+                    R.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
+                }, t.prototype.maybeDetachFromWindow = function() {
+                    window.player = void 0
+                }, t.prototype.bindHotKeys = function() {
+                    F.bind("alt+x", this.maybeRecordClip)
+                }, t.prototype.unbindHotKeys = function() {
+                    F.unbind("alt+x")
+                }, t.tagInjected = !1, t
+            }(d.Component),
+            H = Object(L.c)("VideoPlayer")(G),
+            V = Object(_.a)(s, o)(H);
+        n.d(t, !1, function() {
+            return "hosting-ui-report-button"
+        }), n.d(t, !1, function() {
+            return "hosting-ui-more-balloon"
+        }), n.d(t, !1, function() {
+            return "hosting-ui-more-button"
+        }), n.d(t, !1, function() {
+            return "hosting-ui-channel-name"
+        }), n.d(t, !1, function() {
+            return "video-player-hosting-ui__header"
+        }), n.d(t, !1, function() {
+            return "video-player-hosting-ui__footer"
+        }), n.d(t, !1, function() {
+            return k
+        }), n.d(t, "a", function() {
+            return O
+        }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
+            return A
+        }), n.d(t, "c", function() {
+            return V
+        }), n.d(t, "d", function() {
+            return l
+        })
+    },
+    1057: function(e, t, n) {
         "use strict";
         var i, r, a, s = n(4),
             o = n(1),
             l = n(2),
-            c = n(1052),
+            c = n(1058),
             u = n(3),
-            d = (n(1132), i = {}, i[c.a.Live] = "stream-type-indicator--live", i[c.a.Premiere] = "stream-type-indicator--premiere", i[c.a.Rerun] = "stream-type-indicator--rerun", i[c.a.WatchParty] = "stream-type-indicator--rerun", i),
+            d = (n(1138), i = {}, i[c.a.Live] = "stream-type-indicator--live", i[c.a.Premiere] = "stream-type-indicator--premiere", i[c.a.Rerun] = "stream-type-indicator--rerun", i[c.a.WatchParty] = "stream-type-indicator--rerun", i),
             p = (r = {}, r[c.a.Premiere] = u._9.VideoPremiere, r[c.a.Rerun] = u._9.VideoRerun, r[c.a.WatchParty] = u._9.VideoRerun, r),
             m = (a = {}, a[c.a.Premiere] = u._10.Live, a[c.a.Rerun] = u._10.Inherit, a[c.a.WatchParty] = u._10.Inherit, a),
             h = function(e) {
@@ -205,7 +617,7 @@ webpackJsonp([49], {
             return h
         })
     },
-    1052: function(e, t, n) {
+    1058: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -215,426 +627,15 @@ webpackJsonp([49], {
             e.Live = "live", e.WatchParty = "watch_party", e.Premiere = "premiere", e.Rerun = "rerun"
         }(i || (i = {}))
     },
-    1056: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return {
-                isLoggedIn: Object(w.d)(e)
-            }
-        }
-
-        function r(e) {
-            return Object(C.bindActionCreators)({
-                login: function() {
-                    return Object(O.f)(N.a.ReportHoster)
-                },
-                showReportUserModal: function(e) {
-                    var t = u.__rest(e, []);
-                    return Object(U.d)(I.a, t)
-                }
-            }, e)
-        }
-
-        function a() {
-            return !!window.Twitch && !!window.Twitch.Player
-        }
-
-        function s(e) {
-            return {
-                theatreModeEnabled: e.ui.theatreModeEnabled,
-                isLoggedIn: Object(w.d)(e),
-                authToken: Object(w.a)(e)
-            }
-        }
-
-        function o(e) {
-            return Object(C.bindActionCreators)({
-                enableTheatreMode: F.k,
-                disableTheatreMode: F.j
-            }, e)
-        }
-
-        function l(e, t, n) {
-            if (!e.collectionID && e.videoID) return void t.push("/videos/" + e.videoID);
-            if (e.collectionID && e.videoID) {
-                if (n && n.currentVideoID && n.currentCollectionID && n.currentVideoID === e.videoID && n.currentCollectionID === e.collectionID) return;
-                return void t.push("/videos/" + e.videoID + "?collection=" + e.collectionID)
-            }
-            if (e.collectionID && !e.videoID) return void t.push("/collections/" + e.collectionID);
-            h.i.withCategory("video-player").error(new Error("No collection or video specified from the emitted player transition event."), "No collection or video specified from the emitted player transition event.")
-        }
-        var c, u = n(0),
-            d = n(4),
-            p = n(1),
-            m = n(12),
-            h = n(2),
-            g = n(275),
-            b = n(64),
-            f = n(37),
-            S = n(46),
-            v = n(14),
-            y = n(921),
-            k = n(919),
-            _ = n(934),
-            E = n(3),
-            P = (n(1274), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleReportHosterClick = function() {
-                        t.props.isLoggedIn ? t.props.showReportUserModal({
-                            onClose: t.handleReportModalClose,
-                            reportContext: {
-                                contentType: k.a.User,
-                                targetUserID: t.props.hostChannelID
-                            },
-                            title: Object(h.d)("Report {channelDisplayName}", {
-                                channelDisplayName: t.props.hostChannelDisplayName
-                            }, "VideoPlayerHostingUI")
-                        }) : t.props.login()
-                    }, t.handleReportModalClose = function(e) {
-                        (e === y.b.MutationError || e === y.b.Success) && t.props.history.push("/")
-                    }, t
-                }
-                return u.__extends(t, e), t.prototype.render = function() {
-                    var e = !!this.props.hostedChannelDisplayName,
-                        t = d("video-player-hosting-ui__header", (i = {}, i["video-player-hosting-ui__header--visible"] = e, i["video-player-hosting-ui__header--hidden"] = !e, i)),
-                        n = d("video-player-hosting-ui__footer", (r = {}, r["video-player-hosting-ui__footer--visible"] = e, r["video-player-hosting-ui__footer--hidden"] = !e, r));
-                    return p.createElement(E.U, {
-                        className: "video-player-hosting-ui__container " + Object(S.b)(f.a.Dark)
-                    }, p.createElement(m.a, {
-                        key: "hosting-ui-header",
-                        className: "video-player-hosting-ui__link",
-                        to: {
-                            pathname: "/" + this.props.hostedChannelLogin,
-                            state: {
-                                medium: v.PageviewMedium.Channel,
-                                content: v.PageviewContent.Host
-                            }
-                        },
-                        "data-a-target": "hosting-ui-link",
-                        "data-test-selector": "video-player-hosting-ui__header"
-                    }, e && this.renderHeader(t)), p.createElement("span", {
-                        key: "video-player"
-                    }, this.props.children), p.createElement(E._17, {
-                        key: "hosting-ui-footer",
-                        className: n,
-                        padding: 1,
-                        background: E.m.Base,
-                        zIndex: E._38.Above,
-                        position: E._2.Relative,
-                        "data-test-selector": "video-player-hosting-ui__footer",
-                        "data-a-target": "hosting-ui-footer"
-                    }, e && this.renderFooter()));
-                    var i, r
-                }, t.prototype.renderHeader = function(e) {
-                    return p.createElement(E._17, {
-                        className: e,
-                        display: E.H.Flex,
-                        alignItems: E.c.Center,
-                        padding: {
-                            x: 1,
-                            y: .5
-                        },
-                        background: E.m.Base,
-                        "data-a-target": "hosting-ui-header"
-                    }, p.createElement(E.U, {
-                        className: "video-player-hosting-ui__avatar-container"
-                    }, p.createElement(E.l, {
-                        imageSrc: this.props.hostedChannelProfileImageURL || "",
-                        size: 30,
-                        imageAlt: Object(h.d)("Hosted Channel {hostedChannelDisplayName}'s Avatar", {
-                            hostedChannelDisplayName: this.props.hostedChannelDisplayName || ""
-                        }, "VideoPlayerHostingUI")
-                    })), p.createElement(E._17, {
-                        margin: {
-                            left: 1
-                        },
-                        fontSize: E.L.Size5,
-                        color: E.F.Base
-                    }, Object(h.d)("Hosting", "VideoPlayerHostingUI"), " ", p.createElement(E._17, {
-                        className: "video-player-hosting-ui__channel-name",
-                        color: E.F.Link,
-                        "data-a-target": "hosting-ui-channel-name"
-                    }, this.props.hostedChannelDisplayName)))
-                }, t.prototype.renderFooter = function() {
-                    return p.createElement(E.U, {
-                        padding: {
-                            y: .5
-                        },
-                        display: E.H.Flex,
-                        justifyContent: E.T.Between
-                    }, p.createElement(E.U, {
-                        display: E.H.Flex
-                    }, p.createElement(E.U, {
-                        margin: {
-                            right: 1
-                        }
-                    }, p.createElement(g.a, {
-                        "data-a-target": "hosting-ui-follow-button",
-                        channelName: this.props.hostedChannelLogin || "",
-                        channelLogin: this.props.hostedChannelLogin,
-                        hostChannelLogin: this.props.hostChannelLogin,
-                        hostChannelID: this.props.hostChannelID,
-                        isHostedFollow: !0,
-                        balloonDirection: E.q.BottomLeft
-                    })), p.createElement(E.U, null, p.createElement(_.b, {
-                        channelLogin: this.props.hostedChannelLogin,
-                        hostChannelID: this.props.hostChannelID,
-                        hostChannelLogin: this.props.hostChannelLogin,
-                        "data-a-target": "hosting-ui-subscribe-button"
-                    }))), p.createElement(b.a, null, p.createElement(E.v, {
-                        type: E.w.Hollow,
-                        ariaLabel: Object(h.d)("More options", "HostingUI"),
-                        icon: E._9.More,
-                        onClick: this.handleReportHosterClick,
-                        "data-a-target": "hosting-ui-more-button"
-                    }), p.createElement(E.p, {
-                        direction: E.q.TopRight,
-                        "data-a-target": "hosting-ui-more-balloon"
-                    }, p.createElement(E.U, {
-                        padding: {
-                            y: 1
-                        }
-                    }, p.createElement(E.S, {
-                        onClick: this.handleReportHosterClick,
-                        "data-a-target": "hosting-ui-report-button"
-                    }, p.createElement(E.U, {
-                        padding: {
-                            x: 1,
-                            y: .5
-                        }
-                    }, Object(h.d)("Report {hostChannelDisplayName}", {
-                        hostChannelDisplayName: this.props.hostChannelDisplayName
-                    }, "VideoPlayerHostingUI")))))))
-                }, t
-            }(p.Component)),
-            T = n(8),
-            C = n(11),
-            N = n(51),
-            U = n(50),
-            O = n(35),
-            w = n(19),
-            I = n(928),
-            D = Object(T.a)(i, r)(Object(m.f)(P)),
-            F = n(69),
-            R = n(427),
-            x = n(456),
-            L = n(21),
-            j = n(998),
-            A = n(6);
-        ! function(e) {
-            e.LoadStart = "loadstart", e.Error = "error", e.LoadedMetadata = "loadedmetadata", e.CanPlay = "canplay", e.Playing = "playing", e.Waiting = "waiting", e.Seeking = "seeking", e.Seeked = "seeked", e.Ended = "ended", e.DurationChange = "durationchange", e.TimeUpdate = "timeupdate", e.Play = "play", e.Pause = "pause", e.VolumeChange = "volumechange", e.RateChange = "ratechange"
-        }(c || (c = {}));
-        var M;
-        ! function(e) {
-            e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange"
-        }(M || (M = {}));
-        var B, G = (n(1275), n(978));
-        ! function(e) {
-            e.Embed = "embed", e.Frontpage = "frontpage", e.Site = "site"
-        }(B || (B = {}));
-        var V = {
-                allowfullscreen: !0,
-                branding: !1,
-                channelInfo: !1,
-                controls: !0,
-                height: "100%",
-                playsinline: !0,
-                player: B.Site,
-                showInfo: !1,
-                showtheatre: !1,
-                trackingProperties: {
-                    client_app: "twilight"
-                },
-                width: "100%",
-                oauth_token: ""
-            },
-            H = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.logger = h.i.withCategory("video-player"), n.checkPlayerDependencyStatus = function() {
-                        a() ? (n.setState({
-                            canInitializePlayer: !0
-                        }), n.checkPlayerDependencyAnimationFrame = null) : n.checkPlayerDependencyAnimationFrame = requestAnimationFrame(n.checkPlayerDependencyStatus)
-                    }, n.attachRef = function(e) {
-                        return n.playerRef = e
-                    }, n.onOpenStream = function() {
-                        n.props.playerTypeOverride === B.Frontpage && (n.props.channelLogin ? h.n.history.push("/" + n.props.channelLogin) : n.props.vodID ? h.n.history.push("/videos/" + n.props.vodID) : n.props.collectionID && h.n.history.push("/collections/" + n.props.collectionID))
-                    }, n.onPlayerReady = function() {
-                        n.player && (n.logger.debug("Ready"), n.props.latencyTracking.reportInteractive(), n.hasPlayed = !1, n.props.latencyTracking.reportCustomEvent(n.playerLoaded), n.setState({
-                            playerInitialized: !0
-                        }, function() {
-                            return n.updatePlayerTrackingData(n.props.hostChannel)
-                        }))
-                    }, n.onPlayerPlay = function() {
-                        n.logger.debug("Play"), n.reportPlayerPlayed()
-                    }, n.onStreamStatusOnline = function() {
-                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(M.Online)
-                    }, n.onStreamStatusOffline = function() {
-                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(M.Offline)
-                    }, n.onTheatreChange = function(e) {
-                        e ? (n.logger.debug("Theatre Entered"), n.props.enableTheatreMode && !n.props.theatreModeEnabled && n.props.enableTheatreMode()) : (n.logger.debug("Theatre Exited"), n.props.disableTheatreMode && n.props.theatreModeEnabled && n.props.disableTheatreMode())
-                    }, n.onFullScreenChange = function() {
-                        n.player && (n.logger.debug("Fullscreen change", n.player.fullscreen), n.player.fullscreen !== n.state.isFullScreen && n.setState({
-                            isFullScreen: n.player.fullscreen
-                        }))
-                    }, n.onSeek = function() {
-                        n.props.onSeek && n.player && n.props.onSeek(n.player.getCurrentTime())
-                    }, n.onTimeUpdate = function() {
-                        n.props.onVideoTimeChange && n.player && n.props.onVideoTimeChange(n.player.getCurrentTime())
-                    }, n.onTransitionToCollectionVod = function(e) {
-                        if (n.props.onNavigationRequest) {
-                            var t = {};
-                            e.vodId && (t.videoID = Object(j.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
-                        }
-                    }, n.onTransitionToRecommendedVod = function(e) {
-                        if (n.props.onNavigationRequest) {
-                            var t = {};
-                            e.vodId && (t.videoID = Object(j.a)(e.vodId)), n.props.onNavigationRequest(t)
-                        }
-                    }, n.updatePlayerTrackingData = function(e) {
-                        if (n.state.playerInitialized && n.player) {
-                            var t = h.m.getLastPageview();
-                            t ? n.logger.debug("Tracking data updated.", {
-                                pageviewProperties: t,
-                                hostChannel: e
-                            }) : n.logger.debug("pageviewProperties not found; only hosting status updated", {
-                                pageviewProperties: t,
-                                hostChannel: e
-                            }), n.player.setTrackingProperties(u.__assign({}, t, {
-                                host_channel: e
-                            }))
-                        }
-                    }, n.updatePlayerType = function() {
-                        var e = n.props.playerTypeOverride || V.player;
-                        n.player && n.playerType !== e && (n.player.setPlayerType(e), n.playerType = e)
-                    }, n.maybeRecordClip = function() {
-                        n.player && n.state.playerInitialized && n.player.recordClip()
-                    }, n.playerCreated = n.registerCreatedEvent(), n.playerLoaded = n.registerLoadedEvent(), n.playerPlayed = n.registerPlayedEvent(), n.state = {
-                        canInitializePlayer: a(),
-                        playerInitialized: !1,
-                        isFullScreen: !1
-                    }, n.playerType = t.playerTypeOverride || V.player, n.lastSetChannel = t.channelLogin, n
-                }
-                return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                    var e = this;
-                    if (this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.state.canInitializePlayer ? this.initializePlayer() : this.checkPlayerDependencyAnimationFrame = window.requestAnimationFrame(this.checkPlayerDependencyStatus), h.m.eventEmitter.addListener(v.SpadeEventType.Pageview, function() {
-                            return e.updatePlayerTrackingData(e.props.hostChannel)
-                        }), window.__playerScriptChunk && !t.tagInjected) {
-                        this.logger.debug("Loading player chunk after page loaded");
-                        var n = document.createElement("script");
-                        n.crossOrigin = "anonymous", n.src = window.__jqueryChunk, n.onload = function() {
-                            var e = document.createElement("script");
-                            e.async = !0, e.crossOrigin = "anonymous", e.src = window.__playerScriptChunk, document.body.appendChild(e)
-                        }, document.body.appendChild(n);
-                        var i = document.createElement("link");
-                        i.href = window.__playerStyleChunk, i.media = "screen", i.rel = "stylesheet", i.type = "text/css", document.body.appendChild(i), t.tagInjected = !0
-                    }
-                }, t.prototype.componentWillUpdate = function(e, t) {
-                    if (!this.state.canInitializePlayer && t.canInitializePlayer) return void this.initializePlayer();
-                    if (t.canInitializePlayer && t.playerInitialized) {
-                        if (this.updatePlayerTrackingData(e.hostChannel), this.updatePlayerType(), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.channelLogin && e.channelLogin !== this.lastSetChannel) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void h.m.setVideoPlayerTrackingData({
-                            vodID: void 0
-                        });
-                        var n = e.collectionID && this.props.collectionID !== e.collectionID,
-                            i = e.vodID && this.props.vodID !== e.vodID;
-                        if (n || i) {
-                            var r = e.vodID ? Object(G.a)(e.vodID) : "";
-                            if ("" !== r && h.m.setVideoPlayerTrackingData({
-                                    vodID: e.vodID
-                                }), !this.player) return;
-                            return void(n || e.collectionID && i ? this.player.setCollection(e.collectionID, r, e.nextVideoOffset) : this.player.setVideo(r, e.nextVideoOffset))
-                        }
-                        void 0 !== e.nextVideoOffset && e.nextVideoOffset >= 0 && this.props.nextVideoOffset !== e.nextVideoOffset && this.player && this.player.setCurrentTime(e.nextVideoOffset)
-                    }
-                }, t.prototype.render = function() {
-                    var e = d("video-player", {
-                        "video-player--theatre": this.props.theatreModeEnabled,
-                        "video-player--logged-in": this.props.isLoggedIn,
-                        "video-player--fullscreen": this.state.isFullScreen
-                    });
-                    return p.createElement("div", {
-                        className: d(e),
-                        "data-test-selector": "video-player"
-                    }, p.createElement("div", {
-                        className: "video-player__container",
-                        ref: this.attachRef
-                    }))
-                }, t.prototype.componentWillUnmount = function() {
-                    this.unbindHotKeys(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.props.onDestroy && this.props.onDestroy(), this.player && (h.m.eventEmitter.removeListener(v.SpadeEventType.Pageview, this.updatePlayerTrackingData), this.player.removeEventListener(M.PlayerReady, this.onPlayerReady), this.player.removeEventListener(M.Online, this.onStreamStatusOnline), this.player.removeEventListener(M.Offline, this.onStreamStatusOffline), this.player.removeEventListener(c.Ended, this.onStreamStatusOffline), this.player.removeEventListener(c.Play, this.onPlayerPlay), this.player.removeEventListener(M.TheatreChange, this.onTheatreChange), this.player.removeEventListener(M.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(M.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(c.Seeked, this.onSeek), this.player.removeEventListener(c.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(M.OpenStream, this.onOpenStream), R.extensionService.unregisterPlayer(), this.player.destroy()), h.m.setVideoPlayerTrackingData({
-                        vodID: void 0
-                    })
-                }, t.prototype.initializePlayer = function() {
-                    var e = u.__assign({}, V, {
-                        showtheatre: !this.props.disableTheatreButton
-                    });
-                    this.props.playerTypeOverride && (e.player = this.props.playerTypeOverride, this.playerType = this.props.playerTypeOverride), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.vodID && (e.video = Object(G.a)(this.props.vodID), h.m.setVideoPlayerTrackingData({
-                        vodID: this.props.vodID
-                    })), this.props.nextVideoOffset && (e.time = Object(G.b)(this.props.nextVideoOffset)), e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
-                    var t = new window.Twitch.Player(this.playerRef, e);
-                    this.player = t, t.addEventListener(M.PlayerReady, this.onPlayerReady), t.addEventListener(M.Online, this.onStreamStatusOnline), t.addEventListener(M.Offline, this.onStreamStatusOffline), t.addEventListener(c.Ended, this.onStreamStatusOffline), t.addEventListener(c.Play, this.onPlayerPlay), t.addEventListener(c.Seeked, this.onSeek), t.addEventListener(c.TimeUpdate, this.onTimeUpdate), t.addEventListener(M.TheatreChange, this.onTheatreChange), t.addEventListener(M.FullscreenChange, this.onFullScreenChange), t.addEventListener(M.TransitionToCollectionVOD, this.onTransitionToCollectionVod), t.addEventListener(M.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), t.addEventListener(M.OpenStream, this.onOpenStream), R.extensionService.registerPlayer(this.player), this.props.onInit && this.props.onInit(t), this.maybeAttachToWindow(this.props)
-                }, t.prototype.registerCreatedEvent = function() {
-                    return this.props.latencyTracking.registerCustomEvent("Player", "player-created", "Created", 1e3)
-                }, t.prototype.registerLoadedEvent = function() {
-                    return this.props.latencyTracking.registerCustomEvent("Player", "player-loaded", "Init", 2500)
-                }, t.prototype.registerPlayedEvent = function() {
-                    return this.props.latencyTracking.registerCustomEvent("Player", "player-played", "First Frame", 4e3)
-                }, t.prototype.reportPlayerPlayed = function() {
-                    this.hasPlayed || (this.hasPlayed = !0, this.playerPlayed && this.props.latencyTracking.reportCustomEvent(this.playerPlayed))
-                }, t.prototype.maybeAttachToWindow = function(e) {
-                    L.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
-                }, t.prototype.maybeDetachFromWindow = function() {
-                    window.player = void 0
-                }, t.prototype.bindHotKeys = function() {
-                    x.bind("alt+x", this.maybeRecordClip)
-                }, t.prototype.unbindHotKeys = function() {
-                    x.unbind("alt+x")
-                }, t.tagInjected = !1, t
-            }(p.Component),
-            z = Object(A.c)("VideoPlayer")(H),
-            W = Object(T.a)(s, o)(z);
-        n.d(t, !1, function() {
-            return "hosting-ui-report-button"
-        }), n.d(t, !1, function() {
-            return "hosting-ui-more-balloon"
-        }), n.d(t, !1, function() {
-            return "hosting-ui-more-button"
-        }), n.d(t, !1, function() {
-            return "hosting-ui-channel-name"
-        }), n.d(t, !1, function() {
-            return "video-player-hosting-ui__header"
-        }), n.d(t, !1, function() {
-            return "video-player-hosting-ui__footer"
-        }), n.d(t, !1, function() {
-            return "video-player-hosting-ui__header--hidden"
-        }), n.d(t, !1, function() {
-            return "video-player-hosting-ui__header--visible"
-        }), n.d(t, !1, function() {
-            return "video-player-hosting-ui__footer--hidden"
-        }), n.d(t, !1, function() {
-            return "video-player-hosting-ui__footer--visible"
-        }), n.d(t, !1, function() {
-            return P
-        }), n.d(t, "a", function() {
-            return D
-        }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
-            return B
-        }), n.d(t, "c", function() {
-            return W
-        }), n.d(t, "d", function() {
-            return l
-        })
-    },
-    1057: function(e, t, n) {
+    1062: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
             a = n(12),
             s = n(2),
-            o = n(1051),
+            o = n(1057),
             l = n(3),
-            c = (n(1133), function(e) {
+            c = (n(1139), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.state = {
@@ -750,7 +751,7 @@ webpackJsonp([49], {
             return u
         })
     },
-    1124: function(e, t, n) {
+    1128: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -782,11 +783,11 @@ webpackJsonp([49], {
             o = "carouselPlayer.CAROUSEL_UNREGISTERED",
             l = "carouselPlayer.CAROUSEL_PAUSED"
     },
-    1132: function(e, t) {},
-    1133: function(e, t) {},
-    1274: function(e, t) {},
-    1275: function(e, t) {},
-    1295: function(e, t, n) {
+    1136: function(e, t) {},
+    1137: function(e, t) {},
+    1138: function(e, t) {},
+    1139: function(e, t) {},
+    1299: function(e, t, n) {
         "use strict";
 
         function i() {
@@ -880,16 +881,16 @@ webpackJsonp([49], {
         }
         var m, h = n(0),
             g = n(2),
-            b = n(1124);
+            b = n(1128);
         g.n.store.registerReducer("carouselPlayer", r);
-        var f = n(8),
+        var f = n(9),
             S = n(11),
             v = n(4),
             y = n(1),
-            k = n(1001),
+            k = n(1005),
             _ = n(6),
             E = n(3),
-            P = (n(1362), "carousel-card-live"),
+            P = (n(1366), "carousel-card-live"),
             T = "carousel-card-vod",
             C = function(e) {
                 function t() {
@@ -973,8 +974,8 @@ webpackJsonp([49], {
             U = n(68),
             O = n(12),
             w = n(52),
-            I = n(1056),
-            D = (n(1363), {
+            I = n(1041),
+            D = (n(1367), {
                 content: "carousel",
                 medium: "twitch_home"
             }),
@@ -1153,7 +1154,7 @@ webpackJsonp([49], {
                 }, t
             }(y.Component),
             R = n(275),
-            x = (n(1364), function(e) {
+            x = (n(1368), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
@@ -1294,7 +1295,7 @@ webpackJsonp([49], {
             }(y.Component)),
             L = Object(f.a)(s)(x),
             j = n(14),
-            A = (n(1365), 6),
+            A = (n(1369), 6),
             M = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1452,7 +1453,7 @@ webpackJsonp([49], {
             return G
         })
     },
-    1296: function(e, t, n) {
+    1300: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1515,9 +1516,9 @@ webpackJsonp([49], {
             return e.replace(/\[\]\(.+\)/, "")
         }
         t.a = i, t.b = r;
-        var s = n(1001)
+        var s = n(1005)
     },
-    1361: function(e, t, n) {
+    1365: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
@@ -1526,7 +1527,7 @@ webpackJsonp([49], {
             o = n(113),
             l = n(73),
             c = n(74),
-            u = n(293),
+            u = n(473),
             d = function(e) {
                 var t = {
                     name: "TWILIGHT_VIDEO_FEATURO_EN",
@@ -1542,7 +1543,7 @@ webpackJsonp([49], {
                             return o.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 293))
+                                }).then(n.bind(null, 473))
                             }, "FeaturedContent")(i.__assign({}, e, {
                                 shouldMixContent: !0
                             }))
@@ -1551,7 +1552,7 @@ webpackJsonp([49], {
                             return o.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 293))
+                                }).then(n.bind(null, 473))
                             }, "FeaturedContent")(i.__assign({}, e, {
                                 shouldMixContent: !1
                             }))
@@ -1571,11 +1572,11 @@ webpackJsonp([49], {
             return d
         })
     },
-    1362: function(e, t) {},
-    1363: function(e, t) {},
-    1364: function(e, t) {},
-    1365: function(e, t) {},
-    1366: function(e, t) {
+    1366: function(e, t) {},
+    1367: function(e, t) {},
+    1368: function(e, t) {},
+    1369: function(e, t) {},
+    1370: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1879,7 +1880,7 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    1367: function(e, t) {
+    1371: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2391,8 +2392,8 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    1657: function(e, t) {},
-    1658: function(e, t) {
+    1662: function(e, t) {},
+    1663: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2533,8 +2534,8 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    1659: function(e, t) {},
-    1660: function(e, t) {
+    1664: function(e, t) {},
+    1665: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2811,9 +2812,9 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    1661: function(e, t) {},
-    1662: function(e, t) {},
-    2004: function(e, t, n) {
+    1666: function(e, t) {},
+    1667: function(e, t) {},
+    2016: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -2821,11 +2822,11 @@ webpackJsonp([49], {
         var i, r = n(0),
             a = n(1),
             s = n(2),
-            o = n(471),
+            o = n(475),
             l = n(64),
             c = n(6),
             u = n(3),
-            d = (n(1657), function() {
+            d = (n(1662), function() {
                 return a.createElement(u.U, {
                     className: "footer",
                     padding: {
@@ -2978,19 +2979,19 @@ webpackJsonp([49], {
                 autoReportInteractive: !0
             })(d),
             m = n(30),
-            h = n(922),
-            g = n(918),
+            h = n(925),
+            g = n(922),
             b = n(111),
             f = n(14),
-            S = n(1031),
-            v = n(415),
-            y = n(1361),
-            k = n(462),
+            S = n(1018),
+            v = n(416),
+            y = n(1365),
+            k = n(465),
             _ = n(12),
-            E = n(9),
-            P = n(406),
-            T = n(1658),
-            C = (n(1659), function(e) {
+            E = n(8),
+            P = n(407),
+            T = n(1663),
+            C = (n(1664), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3119,13 +3120,13 @@ webpackJsonp([49], {
                 }, t = r.__decorate([Object(E.a)(T), Object(c.c)("FeaturedGames")], t)
             }(a.Component)),
             N = C,
-            U = n(1057),
+            U = n(1062),
             O = n(52);
         ! function(e) {
             e[e.All = 1] = "All", e[e.Xbox = 2] = "Xbox", e[e.PS4 = 3] = "PS4"
         }(i || (i = {}));
-        var w = n(1660),
-            I = (n(1661), function(e) {
+        var w = n(1665),
+            I = (n(1666), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getItems = function() {
@@ -3321,7 +3322,7 @@ webpackJsonp([49], {
                 }), Object(c.c)("TopChannels")], t)
             }(a.Component)),
             D = I,
-            F = (n(1662), function(e) {
+            F = (n(1667), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3518,7 +3519,7 @@ webpackJsonp([49], {
             return R
         })
     },
-    293: function(e, t, n) {
+    473: function(e, t, n) {
         "use strict";
 
         function i(e, t, n) {
@@ -3570,12 +3571,12 @@ webpackJsonp([49], {
         var s = n(0),
             o = n(1),
             l = (n.n(o), n(2)),
-            c = n(9),
-            u = n(1295),
-            d = n(1001),
+            c = n(8),
+            u = n(1299),
+            d = n(1005),
             p = n(73),
-            m = n(1367),
-            h = (n.n(m), n(1296)),
+            m = n(1371),
+            h = (n.n(m), n(1300)),
             g = n(6),
             b = n(3);
         n.d(t, "FeaturedBroadcastersRenderContext", function() {
@@ -3707,13 +3708,13 @@ webpackJsonp([49], {
         var a, s = n(0),
             o = n(1),
             l = (n.n(o), n(2)),
-            c = n(9),
-            u = n(1295),
-            d = n(1001),
-            p = n(1296),
+            c = n(8),
+            u = n(1299),
+            d = n(1005),
+            p = n(1300),
             m = n(6),
             h = n(3),
-            g = n(1366);
+            g = n(1370);
         n.n(g);
         ! function(e) {
             e[e.AnonFront = 1] = "AnonFront", e[e.Front = 2] = "Front"
@@ -3749,7 +3750,7 @@ webpackJsonp([49], {
             }(o.Component),
             f = b
     },
-    918: function(e, t, n) {
+    922: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -3807,7 +3808,7 @@ webpackJsonp([49], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    919: function(e, t, n) {
+    923: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -3817,18 +3818,86 @@ webpackJsonp([49], {
             e.ChannelFeedComment = "CHANNEL_FEED_COMMENT_REPORT", e.ChannelFeedPost = "CHANNEL_FEED_POST_REPORT", e.Chat = "CHAT_REPORT", e.Clip = "CLIP_REPORT", e.Collection = "COLLECTION_REPORT", e.Community = "COMMUNITY_REPORT", e.Event = "EVENT_REPORT", e.Extension = "EXTENSION_REPORT", e.LiveUp = "LIVE_UP_REPORT", e.Raid = "RAID_REPORT", e.StreamUp = "STREAM_UP_REPORT", e.User = "USER_REPORT", e.VideoChatMessage = "VOD_COMMENT_REPORT", e.Vod = "VOD_REPORT"
         }(i || (i = {}))
     },
-    921: function(e, t, n) {
+    925: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return function(t) {
+                var n = function(n) {
+                    function i(t) {
+                        var i = n.call(this, t) || this;
+                        return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
+                            if (!(i.tracked || e.skip && e.skip(i.props))) {
+                                i.tracked = !0, l.n.adBlockSentinel.pageTransition();
+                                var t = {};
+                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = r.__assign({}, e.properties));
+                                var n = r.__assign({}, i.props);
+                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
+                                var a = i.referenceTracking,
+                                    s = a.content,
+                                    o = a.medium,
+                                    c = a.content_index;
+                                l.n.tracking.trackPageview(r.__assign({
+                                    content: s,
+                                    medium: o,
+                                    content_index: c,
+                                    location: e.location
+                                }, t))
+                            }
+                        }, l.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : l.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                    }
+                    return r.__extends(i, n), i.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
+                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
+                        })
+                    }, i.prototype.componentDidUpdate = function() {
+                        this.trackPageview()
+                    }, i.prototype.render = function() {
+                        return s.createElement(t, r.__assign({}, this.props))
+                    }, i.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? a.parse(e.search) : {},
+                            n = {
+                                content: t.tt_content,
+                                content_index: t.tt_content_index,
+                                medium: t.tt_medium
+                            };
+                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
+                            var i = "",
+                                r = a.stringify(t);
+                            r.length > 0 && (i = "?" + r), this.props.history.replace({
+                                pathname: e.pathname,
+                                hash: e.hash,
+                                search: i
+                            })
+                        }
+                        return n
+                    }, i
+                }(s.Component);
+                return Object(o.f)(n)
+            }
+        }
+        var r = n(0),
+            a = n(21),
+            s = n(1),
+            o = n(12),
+            l = n(2);
+        n.d(t, "a", function() {
+            return i
+        })
+    },
+    926: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(4),
             a = n(1),
             s = n(11),
             o = n(2),
-            l = n(9),
+            l = n(8),
             c = n(6),
-            u = n(926),
+            u = n(930),
             d = n(3),
-            p = n(944),
+            p = n(949),
             m = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3876,7 +3945,7 @@ webpackJsonp([49], {
                     }
                 }
             })(m),
-            g = (n(945), n(946));
+            g = (n(950), n(951));
         n.d(t, "a", function() {
             return f
         }), n.d(t, "b", function() {
@@ -4053,75 +4122,7 @@ webpackJsonp([49], {
                 }
             }))(S)
     },
-    922: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return function(t) {
-                var n = function(n) {
-                    function i(t) {
-                        var i = n.call(this, t) || this;
-                        return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
-                            if (!(i.tracked || e.skip && e.skip(i.props))) {
-                                i.tracked = !0, l.n.adBlockSentinel.pageTransition();
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = r.__assign({}, e.properties));
-                                var n = r.__assign({}, i.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var a = i.referenceTracking,
-                                    s = a.content,
-                                    o = a.medium,
-                                    c = a.content_index;
-                                l.n.tracking.trackPageview(r.__assign({
-                                    content: s,
-                                    medium: o,
-                                    content_index: c,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, l.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : l.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
-                    }
-                    return r.__extends(i, n), i.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, i.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, i.prototype.render = function() {
-                        return s.createElement(t, r.__assign({}, this.props))
-                    }, i.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? a.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var i = "",
-                                r = a.stringify(t);
-                            r.length > 0 && (i = "?" + r), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: i
-                            })
-                        }
-                        return n
-                    }, i
-                }(s.Component);
-                return Object(o.f)(n)
-            }
-        }
-        var r = n(0),
-            a = n(21),
-            s = n(1),
-            o = n(12),
-            l = n(2);
-        n.d(t, "a", function() {
-            return i
-        })
-    },
-    923: function(e, t, n) {
+    927: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4130,17 +4131,17 @@ webpackJsonp([49], {
         var r, a = n(0),
             s = n(1),
             o = n(2),
-            l = n(936),
+            l = n(935),
             c = n(136),
-            u = n(271),
+            u = n(270),
             d = n(6),
-            p = n(935),
-            m = n(410),
-            h = n(952),
-            g = n(937),
+            p = n(934),
+            m = n(411),
+            h = n(947),
+            g = n(936),
             b = n(269),
             f = n(3),
-            S = (n(973), "gift-subscription-button"),
+            S = (n(971), "gift-subscription-button"),
             v = "subscribe-button";
         ! function(e) {
             e[e.Prime = 0] = "Prime", e[e.Tier1 = 1] = "Tier1", e[e.Tier2 = 2] = "Tier2", e[e.Tier3 = 3] = "Tier3"
@@ -4416,7 +4417,7 @@ webpackJsonp([49], {
             return k
         })
     },
-    926: function(e, t, n) {
+    930: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4503,7 +4504,56 @@ webpackJsonp([49], {
             return i
         })
     },
-    927: function(e, t, n) {
+    931: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return Object(l.bindActionCreators)({
+                closeModal: u.c
+            }, e)
+        }
+        var r = n(932),
+            a = n(0),
+            s = n(1),
+            o = n(9),
+            l = n(11),
+            c = n(134),
+            u = n(50),
+            d = n(6),
+            p = n(3),
+            m = (n(957), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleClose = function(e) {
+                        t.props.closeModal(), t.props.onClose && t.props.onClose(e)
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return s.createElement(p._17, {
+                        className: "reporting-modal__container",
+                        background: p.m.Base,
+                        padding: {
+                            x: 2,
+                            y: 3
+                        }
+                    }, s.createElement(r.a, {
+                        onClose: this.handleClose,
+                        reportContext: this.props.reportContext,
+                        title: this.props.title,
+                        defaultDescription: this.props.defaultDescription
+                    }), s.createElement(c.a, null))
+                }, t
+            }(s.Component)),
+            h = Object(l.compose)(Object(d.c)("ReportUserModal"), Object(o.a)(null, i))(m);
+        n.d(t, !1, function() {}), n.d(t, !1, function() {
+            return r.a
+        }), n.d(t, !1, function() {
+            return m
+        }), n.d(t, "a", function() {
+            return h
+        })
+    },
+    932: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4516,19 +4566,19 @@ webpackJsonp([49], {
         });
         var r = n(0),
             a = n(1),
-            s = (n.n(a), n(8)),
+            s = (n.n(a), n(9)),
             o = n(11),
             l = n(2),
-            c = n(9),
+            c = n(8),
             u = n(23),
             d = n(14),
             p = n(6),
-            m = n(921),
-            h = n(919),
-            g = n(926),
-            b = n(921),
-            f = n(947),
-            S = (n.n(f), n(948)),
+            m = n(926),
+            h = n(923),
+            g = n(930),
+            b = n(926),
+            f = n(952),
+            S = (n.n(f), n(953)),
             v = (n.n(S), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4627,56 +4677,7 @@ webpackJsonp([49], {
                 name: "reportUser"
             }), Object(p.c)("ReportUser"), Object(s.a)(i, null))(v)
     },
-    928: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return Object(l.bindActionCreators)({
-                closeModal: u.c
-            }, e)
-        }
-        var r = n(927),
-            a = n(0),
-            s = n(1),
-            o = n(8),
-            l = n(11),
-            c = n(134),
-            u = n(50),
-            d = n(6),
-            p = n(3),
-            m = (n(953), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleClose = function(e) {
-                        t.props.closeModal(), t.props.onClose && t.props.onClose(e)
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    return s.createElement(p._17, {
-                        className: "reporting-modal__container",
-                        background: p.m.Base,
-                        padding: {
-                            x: 2,
-                            y: 3
-                        }
-                    }, s.createElement(r.a, {
-                        onClose: this.handleClose,
-                        reportContext: this.props.reportContext,
-                        title: this.props.title,
-                        defaultDescription: this.props.defaultDescription
-                    }), s.createElement(c.a, null))
-                }, t
-            }(s.Component)),
-            h = Object(l.compose)(Object(d.c)("ReportUserModal"), Object(o.a)(null, i))(m);
-        n.d(t, !1, function() {}), n.d(t, !1, function() {
-            return r.a
-        }), n.d(t, !1, function() {
-            return m
-        }), n.d(t, "a", function() {
-            return h
-        })
-    },
-    934: function(e, t, n) {
+    933: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4686,10 +4687,10 @@ webpackJsonp([49], {
         }
         var r = n(0),
             a = n(1),
-            s = n(8),
+            s = n(9),
             o = n(19),
             l = n(6),
-            c = n(935),
+            c = n(934),
             u = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4719,7 +4720,7 @@ webpackJsonp([49], {
             return c.b
         })
     },
-    935: function(e, t, n) {
+    934: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4732,10 +4733,10 @@ webpackJsonp([49], {
             s = n(1),
             o = n(2),
             l = n(64),
-            c = n(9),
+            c = n(8),
             u = n(109),
-            d = n(936),
-            p = n(142),
+            d = n(935),
+            p = n(141),
             m = n(23),
             h = n(36),
             g = n(20),
@@ -4743,14 +4744,14 @@ webpackJsonp([49], {
             f = n(65),
             S = n(89),
             v = n(139),
-            y = n(409),
+            y = n(410),
             k = n(30),
             _ = n(52),
             E = n(136),
-            P = n(957),
+            P = n(960),
             T = n(269),
             C = n(3),
-            N = (n(972), function(e) {
+            N = (n(970), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5092,8 +5093,8 @@ webpackJsonp([49], {
                 }, t = a.__decorate([Object(b.c)("GiftRecipientSearch")], t)
             }(s.Component),
             D = I,
-            F = n(940),
-            R = n(923),
+            F = n(942),
+            R = n(927),
             x = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -5139,14 +5140,14 @@ webpackJsonp([49], {
                 }, t
             }(s.Component),
             L = x,
-            j = n(934),
-            A = n(952);
+            j = n(933),
+            A = n(947);
         ! function(e) {
             e[e.Top = 0] = "Top", e[e.SubOptions = 1] = "SubOptions", e[e.GiftOptions = 2] = "GiftOptions", e[e.RecipientSelect = 3] = "RecipientSelect"
         }(r || (r = {}));
-        var M = n(937),
-            B = n(974),
-            G = (n(975), function(e) {
+        var M = n(936),
+            B = n(972),
+            G = (n(973), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.handleTopPageSubButtonClick = function() {
@@ -5399,8 +5400,8 @@ webpackJsonp([49], {
                     }
                 }), Object(b.c)("BalloonNonSubbedUser")], t)
             }(s.Component)),
-            V = G,
-            H = function(e) {
+            H = G,
+            V = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.showTop = function() {
@@ -5722,8 +5723,8 @@ webpackJsonp([49], {
                     }
                 }, t = a.__decorate([Object(b.c)("BalloonSubbedUser")], t)
             }(s.Component),
-            z = H,
-            W = (n(976), n(977));
+            z = V,
+            W = (n(974), n(975));
         n.d(t, "a", function() {
             return q
         }), n.d(t, "b", function() {
@@ -5912,7 +5913,7 @@ webpackJsonp([49], {
                         var e = null;
                         return this.hasDiscount() && (e = s.createElement(C.U, {
                             className: "tw-subscription-modal__discount-bar"
-                        }, s.createElement(C._21, null, this.messages.discountMessage))), s.createElement(C.U, null, e, s.createElement(V, {
+                        }, s.createElement(C._21, null, this.messages.discountMessage))), s.createElement(C.U, null, e, s.createElement(H, {
                             authToken: this.props.authToken,
                             channelDisplayName: this.state.subData.displayName,
                             channelLogin: this.props.channelLogin,
@@ -5928,7 +5929,7 @@ webpackJsonp([49], {
                             setPromotionData: this.setPromotionData
                         }))
                     }
-                    return s.createElement(V, {
+                    return s.createElement(H, {
                         authToken: this.props.authToken,
                         channelDisplayName: this.state.subData.displayName,
                         channelLogin: this.props.channelLogin,
@@ -6007,7 +6008,7 @@ webpackJsonp([49], {
             }(s.Component),
             K = $
     },
-    936: function(e, t, n) {
+    935: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -6019,7 +6020,7 @@ webpackJsonp([49], {
             Tier3: "3000"
         }
     },
-    937: function(e, t, n) {
+    936: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -6036,12 +6037,12 @@ webpackJsonp([49], {
         }
         t.a = i, t.b = r
     },
-    940: function(e, t, n) {
+    942: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
             a = n(2),
-            s = n(923),
+            s = n(927),
             o = n(3),
             l = function(e) {
                 function t() {
@@ -6092,7 +6093,142 @@ webpackJsonp([49], {
             return c
         })
     },
-    944: function(e, t) {
+    947: function(e, t, n) {
+        "use strict";
+
+        function i(e, t) {
+            return r.__awaiter(this, void 0, void 0, function() {
+                var n, i, a, l, c;
+                return r.__generator(this, function(r) {
+                    switch (r.label) {
+                        case 0:
+                            n = "https://api.twitch.tv/api/premium/credit/spend_token?channel_id=" + e, i = 1, r.label = 1;
+                        case 1:
+                            if (!(i <= o)) return [3, 7];
+                            r.label = 2;
+                        case 2:
+                            return r.trys.push([2, 5, , 6]), [4, fetch(n, {
+                                method: "POST",
+                                headers: {
+                                    "Client-ID": s.n.config.legacyClientID,
+                                    Accept: "application/json; charset=UTF-8",
+                                    "content-type": "application/json; charset=UTF-8",
+                                    Authorization: "OAuth " + t
+                                }
+                            })];
+                        case 3:
+                            return a = r.sent(), [4, a.body];
+                        case 4:
+                            return l = r.sent(), [2, l];
+                        case 5:
+                            if (c = r.sent(), i === o) throw c;
+                            return [3, 6];
+                        case 6:
+                            return ++i, [3, 1];
+                        case 7:
+                            return [2]
+                    }
+                })
+            })
+        }
+        var r = n(0),
+            a = n(1),
+            s = n(2),
+            o = 3,
+            l = n(269),
+            c = n(3),
+            u = "subscribe-button__subscribe-with-prime",
+            d = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        isSubscribing: !1,
+                        primeSubFailure: !0
+                    }, t.handleStartPrimeTrialClick = function() {
+                        t.props.reportSubMenuAction({
+                            action: l.a.ClickSignupForPrime
+                        })
+                    }, t.handleSubWithPrimeClick = function() {
+                        t.setState({
+                            isSubscribing: !0
+                        }, function() {
+                            return r.__awaiter(t, void 0, void 0, function() {
+                                var e;
+                                return r.__generator(this, function(t) {
+                                    switch (t.label) {
+                                        case 0:
+                                            return t.trys.push([0, 3, 4, 5]), this.props.authToken && this.props.userHasPrime && this.props.subLogin ? [4, i(this.props.subLogin, this.props.authToken)] : [3, 2];
+                                        case 1:
+                                            t.sent(), this.props.onSubscribedWithPrime(), t.label = 2;
+                                        case 2:
+                                            return [3, 5];
+                                        case 3:
+                                            return e = t.sent(), s.i.error(e, "Failed to subscribe with Prime", {
+                                                subLogin: this.props.subLogin
+                                            }), this.setState({
+                                                isSubscribing: !1,
+                                                primeSubFailure: !0
+                                            }), [3, 5];
+                                        case 4:
+                                            return this.setState({
+                                                isSubscribing: !1
+                                            }), [7];
+                                        case 5:
+                                            return [2]
+                                    }
+                                })
+                            })
+                        })
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.componentWillMount = function() {
+                    this.setMessages()
+                }, t.prototype.render = function() {
+                    var e = this.props.isSubscribedWithPrime && this.props.canPrimeSubscribe;
+                    return this.props.userHasPrime ? this.props.isSubscribed && !e ? a.createElement(c.u, r.__assign({
+                        ariaLabel: this.messages.subscribed,
+                        "data-test-selector": u,
+                        disabled: !0,
+                        icon: c._9.Crown
+                    }, Object(c._39)(this.props)), this.messages.subscribed) : this.props.canPrimeSubscribe ? a.createElement(c.u, r.__assign({
+                        ariaLabel: this.messages.subscribeFree,
+                        "data-test-selector": u,
+                        disabled: this.state.isSubscribing,
+                        icon: c._9.Crown,
+                        state: this.state.isSubscribing ? c.y.Loading : c.y.Default,
+                        onClick: this.handleSubWithPrimeClick
+                    }, Object(c._39)(this.props)), e ? this.messages.resubscribeFree : this.messages.subscribeFree) : a.createElement(c.u, r.__assign({
+                        ariaLabel: this.messages.primeSubNotAvailable,
+                        "data-test-selector": u,
+                        disabled: !0,
+                        icon: c._9.Crown
+                    }, Object(c._39)(this.props)), this.messages.primeSubNotAvailable) : a.createElement(c.u, r.__assign({
+                        ariaLabel: this.messages.startPrimeTrial,
+                        "data-test-selector": u,
+                        icon: c._9.Crown,
+                        linkTo: s.a.tryPrimeURI,
+                        onClick: this.handleStartPrimeTrialClick
+                    }, Object(c._39)(this.props), {
+                        targetBlank: !0
+                    }), this.messages.startPrimeTrial)
+                }, t.prototype.setMessages = function() {
+                    this.messages = {
+                        subscribed: Object(s.d)("Subscribed", "SubscribeWithPrime"),
+                        startPrimeTrial: Object(s.d)("Start Your Free Trial", "SubscribeWithPrime"),
+                        primeSubNotAvailable: Object(s.d)("Not yet!", "SubscribeWithPrime"),
+                        subscribeFree: Object(s.d)("Subscribe Free", "SubscribeWithPrime"),
+                        resubscribeFree: Object(s.d)("Resubscribe Free", "SubscribeWithPrime")
+                    }
+                }, t
+            }(a.Component),
+            p = d;
+        n.d(t, !1, function() {
+            return u
+        }), n.d(t, "a", function() {
+            return p
+        })
+    },
+    949: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6180,8 +6316,8 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    945: function(e, t) {},
-    946: function(e, t) {
+    950: function(e, t) {},
+    951: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6335,7 +6471,7 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    947: function(e, t) {
+    952: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6436,7 +6572,7 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    948: function(e, t) {
+    953: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6524,151 +6660,16 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    952: function(e, t, n) {
-        "use strict";
-
-        function i(e, t) {
-            return r.__awaiter(this, void 0, void 0, function() {
-                var n, i, a, l, c;
-                return r.__generator(this, function(r) {
-                    switch (r.label) {
-                        case 0:
-                            n = "https://api.twitch.tv/api/premium/credit/spend_token?channel_id=" + e, i = 1, r.label = 1;
-                        case 1:
-                            if (!(i <= o)) return [3, 7];
-                            r.label = 2;
-                        case 2:
-                            return r.trys.push([2, 5, , 6]), [4, fetch(n, {
-                                method: "POST",
-                                headers: {
-                                    "Client-ID": s.n.config.legacyClientID,
-                                    Accept: "application/json; charset=UTF-8",
-                                    "content-type": "application/json; charset=UTF-8",
-                                    Authorization: "OAuth " + t
-                                }
-                            })];
-                        case 3:
-                            return a = r.sent(), [4, a.body];
-                        case 4:
-                            return l = r.sent(), [2, l];
-                        case 5:
-                            if (c = r.sent(), i === o) throw c;
-                            return [3, 6];
-                        case 6:
-                            return ++i, [3, 1];
-                        case 7:
-                            return [2]
-                    }
-                })
-            })
-        }
-        var r = n(0),
-            a = n(1),
-            s = n(2),
-            o = 3,
-            l = n(269),
-            c = n(3),
-            u = "subscribe-button__subscribe-with-prime",
-            d = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        isSubscribing: !1,
-                        primeSubFailure: !0
-                    }, t.handleStartPrimeTrialClick = function() {
-                        t.props.reportSubMenuAction({
-                            action: l.a.ClickSignupForPrime
-                        })
-                    }, t.handleSubWithPrimeClick = function() {
-                        t.setState({
-                            isSubscribing: !0
-                        }, function() {
-                            return r.__awaiter(t, void 0, void 0, function() {
-                                var e;
-                                return r.__generator(this, function(t) {
-                                    switch (t.label) {
-                                        case 0:
-                                            return t.trys.push([0, 3, 4, 5]), this.props.authToken && this.props.userHasPrime && this.props.subLogin ? [4, i(this.props.subLogin, this.props.authToken)] : [3, 2];
-                                        case 1:
-                                            t.sent(), this.props.onSubscribedWithPrime(), t.label = 2;
-                                        case 2:
-                                            return [3, 5];
-                                        case 3:
-                                            return e = t.sent(), s.i.error(e, "Failed to subscribe with Prime", {
-                                                subLogin: this.props.subLogin
-                                            }), this.setState({
-                                                isSubscribing: !1,
-                                                primeSubFailure: !0
-                                            }), [3, 5];
-                                        case 4:
-                                            return this.setState({
-                                                isSubscribing: !1
-                                            }), [7];
-                                        case 5:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        })
-                    }, t
-                }
-                return r.__extends(t, e), t.prototype.componentWillMount = function() {
-                    this.setMessages()
-                }, t.prototype.render = function() {
-                    var e = this.props.isSubscribedWithPrime && this.props.canPrimeSubscribe;
-                    return this.props.userHasPrime ? this.props.isSubscribed && !e ? a.createElement(c.u, r.__assign({
-                        ariaLabel: this.messages.subscribed,
-                        "data-test-selector": u,
-                        disabled: !0,
-                        icon: c._9.Crown
-                    }, Object(c._39)(this.props)), this.messages.subscribed) : this.props.canPrimeSubscribe ? a.createElement(c.u, r.__assign({
-                        ariaLabel: this.messages.subscribeFree,
-                        "data-test-selector": u,
-                        disabled: this.state.isSubscribing,
-                        icon: c._9.Crown,
-                        state: this.state.isSubscribing ? c.y.Loading : c.y.Default,
-                        onClick: this.handleSubWithPrimeClick
-                    }, Object(c._39)(this.props)), e ? this.messages.resubscribeFree : this.messages.subscribeFree) : a.createElement(c.u, r.__assign({
-                        ariaLabel: this.messages.primeSubNotAvailable,
-                        "data-test-selector": u,
-                        disabled: !0,
-                        icon: c._9.Crown
-                    }, Object(c._39)(this.props)), this.messages.primeSubNotAvailable) : a.createElement(c.u, r.__assign({
-                        ariaLabel: this.messages.startPrimeTrial,
-                        "data-test-selector": u,
-                        icon: c._9.Crown,
-                        linkTo: s.a.tryPrimeURI,
-                        onClick: this.handleStartPrimeTrialClick
-                    }, Object(c._39)(this.props), {
-                        targetBlank: !0
-                    }), this.messages.startPrimeTrial)
-                }, t.prototype.setMessages = function() {
-                    this.messages = {
-                        subscribed: Object(s.d)("Subscribed", "SubscribeWithPrime"),
-                        startPrimeTrial: Object(s.d)("Start Your Free Trial", "SubscribeWithPrime"),
-                        primeSubNotAvailable: Object(s.d)("Not yet!", "SubscribeWithPrime"),
-                        subscribeFree: Object(s.d)("Subscribe Free", "SubscribeWithPrime"),
-                        resubscribeFree: Object(s.d)("Resubscribe Free", "SubscribeWithPrime")
-                    }
-                }, t
-            }(a.Component),
-            p = d;
-        n.d(t, !1, function() {
-            return u
-        }), n.d(t, "a", function() {
-            return p
-        })
-    },
-    953: function(e, t) {},
-    957: function(e, t, n) {
+    957: function(e, t) {},
+    960: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
             a = n(2),
-            s = n(9),
+            s = n(8),
             o = n(6),
             l = n(3),
-            c = n(971),
+            c = n(969),
             u = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -6732,7 +6733,7 @@ webpackJsonp([49], {
             return d
         })
     },
-    971: function(e, t) {
+    969: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6873,9 +6874,9 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    972: function(e, t) {},
-    973: function(e, t) {},
-    974: function(e, t) {
+    970: function(e, t) {},
+    971: function(e, t) {},
+    972: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -7049,9 +7050,9 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    975: function(e, t) {},
-    976: function(e, t) {},
-    977: function(e, t) {
+    973: function(e, t) {},
+    974: function(e, t) {},
+    975: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -7486,7 +7487,7 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    978: function(e, t, n) {
+    976: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -7501,7 +7502,7 @@ webpackJsonp([49], {
         }
         t.b = i, t.a = r
     },
-    998: function(e, t, n) {
+    991: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -7510,4 +7511,4 @@ webpackJsonp([49], {
         t.a = i
     }
 });
-//# sourceMappingURL=pages.anon-front-cd7cb21571f4f393ee89b02891307e3f.js.map
+//# sourceMappingURL=pages.anon-front-7cc1b6af1b4f06bc376de54d562becaf.js.map

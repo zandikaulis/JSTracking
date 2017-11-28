@@ -1,5 +1,5 @@
 webpackJsonp([32], {
-    1031: function(e, t, n) {
+    1018: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -7,12 +7,12 @@ webpackJsonp([32], {
                 trackingSet: e.ads.trackingSet
             }
         }
-        var i = n(8),
+        var i = n(9),
             r = n(0),
             o = n(1),
             l = n(2),
             s = n(111),
-            d = n(415),
+            d = n(416),
             c = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
             u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
             m = function(e) {
@@ -117,14 +117,14 @@ webpackJsonp([32], {
             return g
         })
     },
-    1051: function(e, t, n) {
+    1057: function(e, t, n) {
         "use strict";
         var a, i, r, o = n(4),
             l = n(1),
             s = n(2),
-            d = n(1052),
+            d = n(1058),
             c = n(3),
-            u = (n(1132), a = {}, a[d.a.Live] = "stream-type-indicator--live", a[d.a.Premiere] = "stream-type-indicator--premiere", a[d.a.Rerun] = "stream-type-indicator--rerun", a[d.a.WatchParty] = "stream-type-indicator--rerun", a),
+            u = (n(1138), a = {}, a[d.a.Live] = "stream-type-indicator--live", a[d.a.Premiere] = "stream-type-indicator--premiere", a[d.a.Rerun] = "stream-type-indicator--rerun", a[d.a.WatchParty] = "stream-type-indicator--rerun", a),
             m = (i = {}, i[d.a.Premiere] = c._9.VideoPremiere, i[d.a.Rerun] = c._9.VideoRerun, i[d.a.WatchParty] = c._9.VideoRerun, i),
             p = (r = {}, r[d.a.Premiere] = c._10.Live, r[d.a.Rerun] = c._10.Inherit, r[d.a.WatchParty] = c._10.Inherit, r),
             g = function(e) {
@@ -181,7 +181,7 @@ webpackJsonp([32], {
             return g
         })
     },
-    1052: function(e, t, n) {
+    1058: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -191,15 +191,15 @@ webpackJsonp([32], {
             e.Live = "live", e.WatchParty = "watch_party", e.Premiere = "premiere", e.Rerun = "rerun"
         }(a || (a = {}))
     },
-    1057: function(e, t, n) {
+    1062: function(e, t, n) {
         "use strict";
         var a = n(0),
             i = n(1),
             r = n(12),
             o = n(2),
-            l = n(1051),
+            l = n(1057),
             s = n(3),
-            d = (n(1133), function(e) {
+            d = (n(1139), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.state = {
@@ -315,7 +315,7 @@ webpackJsonp([32], {
             return c
         })
     },
-    1058: function(e, t, n) {
+    1063: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -331,7 +331,7 @@ webpackJsonp([32], {
                 }
             }, e)
         }
-        var r = n(8),
+        var r = n(9),
             o = n(11),
             l = n(51),
             s = n(35),
@@ -340,13 +340,13 @@ webpackJsonp([32], {
             u = n(1),
             m = n(31),
             p = n(2),
-            g = n(9),
+            g = n(8),
             f = n(23),
             v = n(14),
             h = n(3),
-            y = n(1059),
-            k = n(1060),
-            b = n(1061),
+            y = n(1064),
+            k = n(1065),
+            b = n(1066),
             S = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -504,7 +504,7 @@ webpackJsonp([32], {
             return _
         })
     },
-    1059: function(e, t) {
+    1064: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -631,7 +631,7 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1060: function(e, t) {
+    1065: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -788,7 +788,7 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1061: function(e, t) {
+    1066: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -889,7 +889,7 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1125: function(e, t, n) {
+    1129: function(e, t, n) {
         "use strict";
         n.d(t, "d", function() {
             return i
@@ -930,7 +930,7 @@ webpackJsonp([32], {
                 return new Date((new Date).getTime() - 12096e5)
             }
     },
-    1126: function(e, t, n) {
+    1130: function(e, t, n) {
         "use strict";
         n.d(t, "c", function() {
             return i
@@ -939,7 +939,7 @@ webpackJsonp([32], {
         }), n.d(t, "a", function() {
             return o
         });
-        var a = n(954),
+        var a = n(958),
             i = function(e) {
                 return e.startsWith("/communities") || e.startsWith("/directory/communities") ? a.a.Communities : a.a.Games
             },
@@ -968,9 +968,9 @@ webpackJsonp([32], {
                 }
             }
     },
-    1132: function(e, t) {},
-    1133: function(e, t) {},
-    1154: function(e, t, n) {
+    1138: function(e, t) {},
+    1139: function(e, t) {},
+    1159: function(e, t, n) {
         "use strict";
         var a = n(0),
             i = n(1),
@@ -999,7 +999,7 @@ webpackJsonp([32], {
             return d
         })
     },
-    1297: function(e, t, n) {
+    1301: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1012,7 +1012,7 @@ webpackJsonp([32], {
         }
         t.a = a
     },
-    1298: function(e, t, n) {
+    1302: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return v
@@ -1021,12 +1021,12 @@ webpackJsonp([32], {
             i = n(21),
             r = (n.n(i), n(1)),
             o = (n.n(r), n(2)),
-            l = n(9),
+            l = n(8),
             s = n(19),
             d = n(3),
-            c = n(1299),
-            u = (n.n(c), n(1300)),
-            m = (n.n(u), n(1301)),
+            c = n(1303),
+            u = (n.n(c), n(1304)),
+            m = (n.n(u), n(1305)),
             p = (n.n(m), function(e) {
                 return "https://api.twitch.tv/api/users/" + e + "/follows/games/follow"
             }),
@@ -1180,7 +1180,7 @@ webpackJsonp([32], {
             }(r.Component),
             v = f
     },
-    1299: function(e, t) {
+    1303: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1301,8 +1301,8 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1300: function(e, t) {},
-    1301: function(e, t) {
+    1304: function(e, t) {},
+    1305: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1367,7 +1367,7 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1302: function(e, t, n) {
+    1306: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
             return a
@@ -1425,102 +1425,7 @@ webpackJsonp([32], {
                 i.m.track(r.SpadeEventType.BrowseForYou, e)
             }
     },
-    1333: function(e, t, n) {
-        "use strict";
-
-        function a(e) {
-            return {
-                firstPageLoaded: e.session.firstPageLoaded,
-                isLoggedIn: Object(v.d)(e)
-            }
-        }
-        var i, r = n(0),
-            o = n(1),
-            l = n(2),
-            s = n(9),
-            d = n(6),
-            c = n(1125),
-            u = n(3),
-            m = n(1368);
-        ! function(e) {
-            e[e.BrowseForYouPage = 0] = "BrowseForYouPage", e[e.BrowseGamePage = 1] = "BrowseGamePage", e[e.BrowseCommunitiesPage = 2] = "BrowseCommunitiesPage", e[e.BrowsePopularPage = 3] = "BrowsePopularPage", e[e.BrowseCreativePage = 4] = "BrowseCreativePage"
-        }(i || (i = {}));
-        var p = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {}, t.userDataLoaded = function() {
-                        return t.props.data && !t.props.data.loading && !t.props.data.error
-                    }, t
-                }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return r.__awaiter(this, void 0, void 0, function() {
-                        var e, t;
-                        return r.__generator(this, function(n) {
-                            switch (n.label) {
-                                case 0:
-                                    return this.props.latencyTracking.reportInteractive(), [4, l.n.experiments.getAssignment(c.c)];
-                                case 1:
-                                    return e = n.sent(), [4, l.n.experiments.getAssignment(c.d)];
-                                case 2:
-                                    return t = n.sent(), Object(c.f)(e, t) && this.setState({
-                                        forYouAssignment: t
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.render = function() {
-                    var e = [o.createElement(u._18, {
-                        key: i.BrowseGamePage,
-                        active: this.props.activeTab === i.BrowseGamePage,
-                        linkTo: "/directory",
-                        "data-a-target": "browse-games-tab"
-                    }, Object(l.d)("Games", "BrowseHeader")), o.createElement(u._18, {
-                        key: i.BrowseCommunitiesPage,
-                        active: this.props.activeTab === i.BrowseCommunitiesPage,
-                        linkTo: "/directory/communities",
-                        "data-a-target": "browse-communities-tab"
-                    }, Object(l.d)("Communities", "BrowseHeader")), o.createElement(u._18, {
-                        key: i.BrowsePopularPage,
-                        active: this.props.activeTab === i.BrowsePopularPage,
-                        linkTo: "/directory/all",
-                        "data-a-target": "browse-popular-tab"
-                    }, Object(l.d)("Popular", "BrowseHeader")), o.createElement(u._18, {
-                        key: i.BrowseCreativePage,
-                        active: this.props.activeTab === i.BrowseCreativePage,
-                        linkTo: "/directory/creative",
-                        "data-a-target": "browse-creative-tab"
-                    }, Object(l.d)("Creative", "BrowseHeader"))];
-                    if (this.props.isLoggedIn && this.userDataLoaded() && this.props.data.currentUser && Object(c.g)(new Date(this.props.data.currentUser.createdAt)) && this.state.forYouAssignment) {
-                        var t = o.createElement(u._18, {
-                            key: i.BrowseForYouPage,
-                            active: this.props.activeTab === i.BrowseForYouPage,
-                            linkTo: "/directory/foryou",
-                            "data-a-target": "browse-for-you-tab"
-                        }, Object(l.d)("For You", "BrowseHeader"));
-                        this.state.forYouAssignment === c.b.First ? e.unshift(t) : this.state.forYouAssignment === c.b.Last && e.push(t)
-                    }
-                    return o.createElement(u.U, {
-                        margin: {
-                            bottom: 2
-                        }
-                    }, o.createElement(u._19, null, e))
-                }, t = r.__decorate([Object(d.c)("BrowseHeader"), Object(s.a)(m, {
-                    skip: function(e) {
-                        return !e.firstPageLoaded
-                    }
-                })], t)
-            }(o.Component),
-            g = p,
-            f = n(8),
-            v = n(19),
-            h = Object(f.a)(a, null)(g);
-        n.d(t, "b", function() {
-            return i
-        }), n.d(t, "a", function() {
-            return h
-        })
-    },
-    1334: function(e, t, n) {
+    1307: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1543,17 +1448,17 @@ webpackJsonp([32], {
         var o = n(0),
             l = n(1),
             s = n(2),
-            d = n(1057),
-            c = n(1051),
+            d = n(1062),
+            c = n(1057),
             u = n(52),
-            m = n(406),
+            m = n(407),
             p = n(14),
-            g = n(954),
-            f = n(8),
+            g = n(958),
+            f = n(9),
             v = n(11),
             h = n(50),
-            y = n(416),
-            k = n(9),
+            y = n(417),
+            k = n(8),
             b = n(6),
             S = n(31),
             w = n(134),
@@ -1575,8 +1480,8 @@ webpackJsonp([32], {
                 }
             },
             E = n(3),
-            C = n(1372),
-            F = (n(1373), "error-message"),
+            C = n(1376),
+            F = (n(1377), "error-message"),
             D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1696,7 +1601,7 @@ webpackJsonp([32], {
                 name: "banUserFromCommunity"
             }))(D),
             O = Object(f.a)(null, a)(T),
-            U = (n(1374), n(1375)),
+            U = (n(1378), n(1379)),
             I = "error-message",
             P = function(e) {
                 function t() {
@@ -1844,7 +1749,7 @@ webpackJsonp([32], {
                 name: "timeoutUserFromCommunity"
             }))(P),
             x = Object(f.a)(null, i)(A),
-            j = n(1376),
+            j = n(1380),
             B = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1912,8 +1817,8 @@ webpackJsonp([32], {
             }(l.Component),
             G = B,
             L = Object(f.a)(null, r)(G),
-            R = n(1154),
-            M = (n(1377), function(e) {
+            R = n(1159),
+            M = (n(1381), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.getLinkTo = function(e, n) {
@@ -2018,7 +1923,102 @@ webpackJsonp([32], {
             return V
         })
     },
-    1368: function(e, t) {
+    1339: function(e, t, n) {
+        "use strict";
+
+        function a(e) {
+            return {
+                firstPageLoaded: e.session.firstPageLoaded,
+                isLoggedIn: Object(v.d)(e)
+            }
+        }
+        var i, r = n(0),
+            o = n(1),
+            l = n(2),
+            s = n(8),
+            d = n(6),
+            c = n(1129),
+            u = n(3),
+            m = n(1372);
+        ! function(e) {
+            e[e.BrowseForYouPage = 0] = "BrowseForYouPage", e[e.BrowseGamePage = 1] = "BrowseGamePage", e[e.BrowseCommunitiesPage = 2] = "BrowseCommunitiesPage", e[e.BrowsePopularPage = 3] = "BrowsePopularPage", e[e.BrowseCreativePage = 4] = "BrowseCreativePage"
+        }(i || (i = {}));
+        var p = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {}, t.userDataLoaded = function() {
+                        return t.props.data && !t.props.data.loading && !t.props.data.error
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return r.__awaiter(this, void 0, void 0, function() {
+                        var e, t;
+                        return r.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    return this.props.latencyTracking.reportInteractive(), [4, l.n.experiments.getAssignment(c.c)];
+                                case 1:
+                                    return e = n.sent(), [4, l.n.experiments.getAssignment(c.d)];
+                                case 2:
+                                    return t = n.sent(), Object(c.f)(e, t) && this.setState({
+                                        forYouAssignment: t
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, t.prototype.render = function() {
+                    var e = [o.createElement(u._18, {
+                        key: i.BrowseGamePage,
+                        active: this.props.activeTab === i.BrowseGamePage,
+                        linkTo: "/directory",
+                        "data-a-target": "browse-games-tab"
+                    }, Object(l.d)("Games", "BrowseHeader")), o.createElement(u._18, {
+                        key: i.BrowseCommunitiesPage,
+                        active: this.props.activeTab === i.BrowseCommunitiesPage,
+                        linkTo: "/directory/communities",
+                        "data-a-target": "browse-communities-tab"
+                    }, Object(l.d)("Communities", "BrowseHeader")), o.createElement(u._18, {
+                        key: i.BrowsePopularPage,
+                        active: this.props.activeTab === i.BrowsePopularPage,
+                        linkTo: "/directory/all",
+                        "data-a-target": "browse-popular-tab"
+                    }, Object(l.d)("Popular", "BrowseHeader")), o.createElement(u._18, {
+                        key: i.BrowseCreativePage,
+                        active: this.props.activeTab === i.BrowseCreativePage,
+                        linkTo: "/directory/creative",
+                        "data-a-target": "browse-creative-tab"
+                    }, Object(l.d)("Creative", "BrowseHeader"))];
+                    if (this.props.isLoggedIn && this.userDataLoaded() && this.props.data.currentUser && Object(c.g)(new Date(this.props.data.currentUser.createdAt)) && this.state.forYouAssignment) {
+                        var t = o.createElement(u._18, {
+                            key: i.BrowseForYouPage,
+                            active: this.props.activeTab === i.BrowseForYouPage,
+                            linkTo: "/directory/foryou",
+                            "data-a-target": "browse-for-you-tab"
+                        }, Object(l.d)("For You", "BrowseHeader"));
+                        this.state.forYouAssignment === c.b.First ? e.unshift(t) : this.state.forYouAssignment === c.b.Last && e.push(t)
+                    }
+                    return o.createElement(u.U, {
+                        margin: {
+                            bottom: 2
+                        }
+                    }, o.createElement(u._19, null, e))
+                }, t = r.__decorate([Object(d.c)("BrowseHeader"), Object(s.a)(m, {
+                    skip: function(e) {
+                        return !e.firstPageLoaded
+                    }
+                })], t)
+            }(o.Component),
+            g = p,
+            f = n(9),
+            v = n(19),
+            h = Object(f.a)(a, null)(g);
+        n.d(t, "b", function() {
+            return i
+        }), n.d(t, "a", function() {
+            return h
+        })
+    },
+    1372: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2083,20 +2083,20 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1369: function(e, t, n) {
+    1373: function(e, t, n) {
         "use strict";
         var a = n(0),
             i = n(1),
             r = n(2),
             o = n(134),
             l = n(30),
-            s = n(9),
+            s = n(8),
             d = n(50),
-            c = n(1297),
-            u = n(1298),
+            c = n(1301),
+            u = n(1302),
             m = n(3),
-            p = n(1370),
-            g = (n(1371), function(e) {
+            p = n(1374),
+            g = (n(1375), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -2205,7 +2205,7 @@ webpackJsonp([32], {
             return g
         })
     },
-    1370: function(e, t) {
+    1374: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2356,8 +2356,8 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1371: function(e, t) {},
-    1372: function(e, t) {
+    1375: function(e, t) {},
+    1376: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2445,9 +2445,9 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1373: function(e, t) {},
-    1374: function(e, t) {},
-    1375: function(e, t) {
+    1377: function(e, t) {},
+    1378: function(e, t) {},
+    1379: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2568,7 +2568,7 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1376: function(e, t) {
+    1380: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2725,8 +2725,8 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1377: function(e, t) {},
-    1663: function(e, t) {
+    1381: function(e, t) {},
+    1668: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2996,7 +2996,7 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1664: function(e, t) {
+    1669: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3385,9 +3385,9 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1665: function(e, t) {},
-    1666: function(e, t) {},
-    1667: function(e, t) {
+    1670: function(e, t) {},
+    1671: function(e, t) {},
+    1672: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3538,7 +3538,7 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    2005: function(e, t, n) {
+    2017: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3559,25 +3559,25 @@ webpackJsonp([32], {
             o = n(1),
             l = n(31),
             s = n(2),
-            d = n(922),
-            c = n(918),
+            d = n(925),
+            c = n(922),
             u = n(14),
             m = n(6),
-            p = n(8),
+            p = n(9),
             g = n(66),
             f = n(30),
-            v = n(9),
+            v = n(8),
             h = n(137),
             y = n(23),
-            k = n(406),
+            k = n(407),
             b = n(111),
-            S = n(1031),
-            w = n(415),
-            _ = n(1333),
-            N = n(954),
-            E = n(1126),
+            S = n(1018),
+            w = n(416),
+            _ = n(1339),
+            N = n(958),
+            E = n(1130),
             C = n(3),
-            F = n(1663),
+            F = n(1668),
             D = "directory-first-item",
             T = "directory-container",
             O = {
@@ -3837,15 +3837,15 @@ webpackJsonp([32], {
                 location: u.PageviewLocation.Directory
             }))(L),
             M = n(19),
-            V = n(1369),
-            H = n(1125),
+            V = n(1373),
+            H = n(1129),
             W = n(12),
-            q = n(1051),
-            z = n(1052),
-            Y = n(1058),
+            q = n(1057),
+            z = n(1058),
+            Y = n(1063),
             $ = n(15),
-            Q = n(1302),
-            X = n(1334),
+            Q = n(1306),
+            X = n(1307),
             J = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3906,8 +3906,8 @@ webpackJsonp([32], {
                 }, t
             }(o.Component),
             K = J,
-            Z = n(1664),
-            ee = (n(1665), "community-streams-row__title"),
+            Z = n(1669),
+            ee = (n(1670), "community-streams-row__title"),
             te = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3989,7 +3989,7 @@ webpackJsonp([32], {
                 }), Object(m.c)("CommunityStreamsRow")], t)
             }(o.Component),
             ne = te,
-            ae = (n(1666), n(1667)),
+            ae = (n(1671), n(1672)),
             ie = "browse-for-you__empty",
             re = "browse-for-you__add_more_games",
             oe = 10,
@@ -4132,7 +4132,7 @@ webpackJsonp([32], {
             return de
         })
     },
-    918: function(e, t, n) {
+    922: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -4190,7 +4190,7 @@ webpackJsonp([32], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    922: function(e, t, n) {
+    925: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -4258,7 +4258,7 @@ webpackJsonp([32], {
             return a
         })
     },
-    954: function(e, t, n) {
+    958: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -4269,4 +4269,4 @@ webpackJsonp([32], {
         }(a || (a = {}))
     }
 });
-//# sourceMappingURL=pages.browse-community-f0e410ae22271c26ad128ed7d29d5f2e.js.map
+//# sourceMappingURL=pages.browse-community-b44df940da720c6381144e837c550dc5.js.map
