@@ -131,6 +131,21 @@ window.__twilightSettings = {
                 "value": "fork"
             }]
         },
+        "4723fff0-7f41-43c7-88b3-246b014dfaf1": {
+            "name": "TWILIGHT_CHANNEL_LOGIN_UPSELL_V1",
+            "v": 2523,
+            "t": 1,
+            "groups": [{
+                "weight": 60,
+                "value": "control"
+            }, {
+                "weight": 20,
+                "value": "thin"
+            }, {
+                "weight": 20,
+                "value": "none"
+            }]
+        },
         "49f40b88-2044-409d-b306-2eb308489a60": {
             "name": "Twilight_Upsell",
             "v": 2446,
