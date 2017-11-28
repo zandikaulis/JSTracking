@@ -1,6 +1,5 @@
 window.__twilightSettings = {
     "environment": "production",
-    "ad_block_sentinel_url": "https://custos.twitchcdn.net/v1.js",
     "amazon_ads_url": "https://s.amazon-adsystem.com/iui3?d=3p-hbg&ex-src=twitch.tv&ex-hargs=v%3D1.0%3Bc%3D8858214122683%3Bp%3De75425fb-5407-7bd5-fd20-f462e98a8777",
     "apollo_excluded_errors": ["missing userID", "no user ID provided to resolver"],
     "apollo_log_errors": false,
@@ -14,7 +13,7 @@ window.__twilightSettings = {
     "bits_truex_partner_hash": "af4f4f3a5b1e302e3e17383b8dd300cb6867ec84",
     "bits_truex_script_url": "https://static.truex.com/js/client.js",
     "blitz_channels": ["lunacyhatter", "clipstv", "n5devtest", "blitz_blitz_blitz"],
-    "blitz_frame_url": "https://twitch.amazon.com/prime/video/twitchpresents",
+    "blitz_frame_url": "https://twitch-preprod.amazon.com/prime/video/twitchpresents",
     "blitz_update_activity": false,
     "commerce_gdp_launch": "off",
     "comscore_config_c1": 2,
