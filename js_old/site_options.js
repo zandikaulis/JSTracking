@@ -4238,6 +4238,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "fd5223cb-3ae7-4a9f-9af8-ce0d44d4b9f1": {
+            "name": "pad_thai",
+            "v": 2525,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "treatment"
+            }]
+        },
         "fd74ad1d-d885-4d12-9036-f571fc82e6df": {
             "name": "JANEWAY",
             "v": 2301,
