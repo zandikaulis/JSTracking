@@ -162,21 +162,21 @@ webpackJsonp([68], {
             r = n(1),
             c = n(30),
             o = n(2),
-            s = n(764),
-            m = n(761),
+            s = n(761),
+            m = n(758),
             u = n(13),
             h = n(5),
             p = (n(1551), n(1552)),
             d = n(1481),
             f = n(1924),
             g = n(21),
-            v = n(1254),
+            v = n(1253),
             b = n(1554),
             E = n(4),
             _ = n(11),
             y = n(1553),
             A = n(1482),
-            S = n(885),
+            S = n(882),
             k = n(3),
             x = {
                 imageSrc: "https://static-cdn.jtvnw.net/emoticons/v1/81274/2.0",
@@ -250,7 +250,7 @@ webpackJsonp([68], {
                     label: Object(o.e)(e.achievement.progressRatio, "percent")
                 }))
             },
-            O = n(1021),
+            O = n(1020),
             w = (n(1925), ["confetti-layer__confetti--slow", "confetti-layer__confetti--medium", "confetti-layer__confetti--fast"]),
             P = ["rgba(247, 42, 107, 1)", "rgba(255, 113, 105, 1)", "rgba(253, 226, 132, 1)", "rgba(181, 138, 242, 1)"],
             T = ["0.011s", "0.176s", "0.321s", "0.446s", "0.849s", "1.056s", "1.229s", "1.333s", "1.379s", "1.828s"],
@@ -288,7 +288,7 @@ webpackJsonp([68], {
                     }))
                 }, t
             }(r.PureComponent),
-            q = n(1255),
+            q = n(1254),
             L = {
                 "data-test-selector": "recently-completed-achievements-list"
             },
@@ -548,8 +548,8 @@ webpackJsonp([68], {
                 }, R), e.right)), r.createElement(K, null))
             },
             M = n(1555),
-            Y = n(1114),
-            V = n(1042),
+            Y = n(1113),
+            V = n(1041),
             J = function(e) {
                 if (e.isPartner) return r.createElement(Q, {
                     title: e.title,
@@ -1158,4 +1158,4 @@ webpackJsonp([68], {
         })
     }
 });
-//# sourceMappingURL=pages.dashboard.achievements-09a02bbebc73bbb671316cf7569ea5b6.js.map
+//# sourceMappingURL=pages.dashboard.achievements-52be21811997e786953b9cdc6ee76eb4.js.map

@@ -1,391 +1,6 @@
 webpackJsonp([46], {
-    1e3: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "DirectoryFollowButton_Community"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "name"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "community"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "name"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "name"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "name"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "self"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "follow"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "followedAt"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 192
-            }
-        };
-        n.loc.source = {
-            body: "query DirectoryFollowButton_Community($name: String!) {\n  community(name: $name) {\n    id\n    name\n    self {\n      follow {\n        followedAt\n      }\n    }\n  }\n\n  currentUser {\n    id\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
+    1e3: function(e, t) {},
     1001: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "mutation",
-                name: {
-                    kind: "Name",
-                    value: "DirectoryFollowButton_FollowCommunity"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "input"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "FollowCommunityInput"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "followCommunity"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "community"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "self"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "follow"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "followedAt"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 212
-            }
-        };
-        n.loc.source = {
-            body: "mutation DirectoryFollowButton_FollowCommunity($input: FollowCommunityInput!) {\n  followCommunity(input: $input) {\n    community {\n      self {\n        follow {\n          followedAt\n        }\n      }\n    }\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    1002: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "mutation",
-                name: {
-                    kind: "Name",
-                    value: "DirectoryFollowButton_UnfollowCommunity"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "input"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "UnfollowCommunityInput"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "unfollowCommunity"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "follow"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "followedAt"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 163
-            }
-        };
-        n.loc.source = {
-            body: "mutation DirectoryFollowButton_UnfollowCommunity($input: UnfollowCommunityInput!) {\n  unfollowCommunity(input: $input) {\n    follow {\n      followedAt\n    }\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    1003: function(e, t) {},
-    1004: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -486,7 +101,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1005: function(e, t) {
+    1002: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -699,8 +314,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1006: function(e, t) {},
-    1020: function(e, t, n) {
+    1003: function(e, t) {},
+    1019: function(e, t, n) {
         "use strict";
         var i = n(1),
             r = n(2),
@@ -722,13 +337,13 @@ webpackJsonp([46], {
             return s
         })
     },
-    1039: function(e, t, n) {
+    1038: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
             a = n(64),
             o = n(2),
-            s = n(130),
+            s = n(128),
             l = "DIRECT_ENTITLEMENT",
             c = n(3),
             u = (n(1295), function(e) {
@@ -846,7 +461,7 @@ webpackJsonp([46], {
             return d
         })
     },
-    1058: function(e, t, n) {
+    1057: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -891,13 +506,13 @@ webpackJsonp([46], {
                 t(e)
             }))
         }
-        var o = n(799),
-            s = n(786),
+        var o = n(796),
+            s = n(783),
             l = n(2),
             c = n(13);
         t.a = r
     },
-    1059: function(e, t) {
+    1058: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1054,8 +669,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1062: function(e, t) {},
-    1238: function(e, t, n) {
+    1061: function(e, t) {},
+    1237: function(e, t, n) {
         function i(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
@@ -1350,7 +965,7 @@ webpackJsonp([46], {
             }
         };
         var a = {};
-        r.definitions = r.definitions.concat(i(n(1059).definitions)), r.definitions = r.definitions.concat(i(n(1298).definitions)), e.exports = r
+        r.definitions = r.definitions.concat(i(n(1058).definitions)), r.definitions = r.definitions.concat(i(n(1298).definitions)), e.exports = r
     },
     1295: function(e, t) {},
     1296: function(e, t, n) {
@@ -1452,7 +1067,7 @@ webpackJsonp([46], {
                 var t = e.name.value;
                 return !r[t] && (r[t] = !0, !0)
             })
-        }(n(1238).definitions)), e.exports = i
+        }(n(1237).definitions)), e.exports = i
     },
     1298: function(e, t, n) {
         var i = {
@@ -1546,7 +1161,7 @@ webpackJsonp([46], {
                 var t = e.name.value;
                 return !r[t] && (r[t] = !0, !0)
             })
-        }(n(1059).definitions)), e.exports = i
+        }(n(1058).definitions)), e.exports = i
     },
     1299: function(e, t) {
         var n = {
@@ -1655,9 +1270,9 @@ webpackJsonp([46], {
         "use strict";
         var i = n(0),
             r = n(1),
-            a = n(899),
+            a = n(896),
             o = n(5),
-            s = n(886),
+            s = n(883),
             l = function(e) {
                 var t = e.video,
                     n = t.id,
@@ -2426,7 +2041,7 @@ webpackJsonp([46], {
             }
         };
         var a = {};
-        r.definitions = r.definitions.concat(i(n(1238).definitions)), r.definitions = r.definitions.concat(i(n(1863).definitions)), r.definitions = r.definitions.concat(i(n(1864).definitions)), e.exports = r
+        r.definitions = r.definitions.concat(i(n(1237).definitions)), r.definitions = r.definitions.concat(i(n(1863).definitions)), r.definitions = r.definitions.concat(i(n(1864).definitions)), e.exports = r
     },
     1863: function(e, t) {
         var n = {
@@ -2641,19 +2256,19 @@ webpackJsonp([46], {
             c = n(1),
             u = n(2),
             d = n(62),
-            p = n(1020),
+            p = n(1019),
             m = n(29),
             h = n(7),
-            f = n(764),
+            f = n(761),
             b = n(13),
-            g = n(984),
-            v = n(884),
+            g = n(981),
+            v = n(881),
             y = n(1296),
             S = n(5),
-            k = n(798),
+            k = n(795),
             _ = n(64),
-            E = n(1058),
-            C = n(1039),
+            E = n(1057),
+            C = n(1038),
             N = n(3),
             P = function(e) {
                 function t() {
@@ -3138,7 +2753,7 @@ webpackJsonp([46], {
             $ = n(8),
             Q = n(10),
             K = n(49),
-            Y = n(123),
+            Y = n(121),
             J = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -3595,7 +3210,7 @@ webpackJsonp([46], {
             return ke
         })
     },
-    760: function(e, t, n) {
+    757: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
@@ -3726,7 +3341,7 @@ webpackJsonp([46], {
                 }, e
             }()
     },
-    762: function(e, t, n) {
+    759: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -3736,7 +3351,7 @@ webpackJsonp([46], {
             e.ChannelFeedComment = "CHANNEL_FEED_COMMENT_REPORT", e.ChannelFeedPost = "CHANNEL_FEED_POST_REPORT", e.Chat = "CHAT_REPORT", e.Clip = "CLIP_REPORT", e.Collection = "COLLECTION_REPORT", e.Community = "COMMUNITY_REPORT", e.Event = "EVENT_REPORT", e.Extension = "EXTENSION_REPORT", e.LiveUp = "LIVE_UP_REPORT", e.Raid = "RAID_REPORT", e.StreamUp = "STREAM_UP_REPORT", e.User = "USER_REPORT", e.VideoChatMessage = "VOD_COMMENT_REPORT", e.Vod = "VOD_REPORT"
         }(i || (i = {}))
     },
-    764: function(e, t, n) {
+    761: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -3804,7 +3419,7 @@ webpackJsonp([46], {
             return i
         })
     },
-    765: function(e, t, n) {
+    762: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(4),
@@ -3813,9 +3428,9 @@ webpackJsonp([46], {
             s = n(2),
             l = n(7),
             c = n(5),
-            u = n(771),
+            u = n(768),
             d = n(3),
-            p = n(789),
+            p = n(786),
             m = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3863,7 +3478,7 @@ webpackJsonp([46], {
                     }
                 }
             })(m),
-            f = (n(790), n(791));
+            f = (n(787), n(788));
         n.d(t, "a", function() {
             return g
         }), n.d(t, "b", function() {
@@ -4040,7 +3655,7 @@ webpackJsonp([46], {
                 }
             }))(v)
     },
-    766: function(e, t, n) {
+    763: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4049,17 +3664,17 @@ webpackJsonp([46], {
         var r, a = n(0),
             o = n(1),
             s = n(2),
-            l = n(776),
-            c = n(125),
-            u = n(249),
+            l = n(773),
+            c = n(123),
+            u = n(247),
             d = n(5),
-            p = n(775),
-            m = n(356),
-            h = n(787),
-            f = n(777),
-            b = n(248),
+            p = n(772),
+            m = n(353),
+            h = n(784),
+            f = n(774),
+            b = n(246),
             g = n(3),
-            v = (n(812), "gift-subscription-button"),
+            v = (n(808), "gift-subscription-button"),
             y = "subscribe-button";
         ! function(e) {
             e[e.Prime = 0] = "Prime", e[e.Tier1 = 1] = "Tier1", e[e.Tier2 = 2] = "Tier2", e[e.Tier3 = 3] = "Tier3"
@@ -4335,7 +3950,7 @@ webpackJsonp([46], {
             return k
         })
     },
-    771: function(e, t, n) {
+    768: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4422,7 +4037,7 @@ webpackJsonp([46], {
             return i
         })
     },
-    772: function(e, t, n) {
+    769: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4430,16 +4045,16 @@ webpackJsonp([46], {
                 closeModal: u.c
             }, e)
         }
-        var r = n(773),
+        var r = n(770),
             a = n(0),
             o = n(1),
             s = n(8),
             l = n(10),
-            c = n(123),
+            c = n(121),
             u = n(49),
             d = n(5),
             p = n(3),
-            m = (n(797), function(e) {
+            m = (n(794), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleClose = function(e) {
@@ -4471,7 +4086,7 @@ webpackJsonp([46], {
             return h
         })
     },
-    773: function(e, t, n) {
+    770: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4491,12 +4106,12 @@ webpackJsonp([46], {
             u = n(22),
             d = n(13),
             p = n(5),
-            m = n(765),
-            h = n(762),
-            f = n(771),
-            b = n(765),
-            g = n(792),
-            v = (n.n(g), n(793)),
+            m = n(762),
+            h = n(759),
+            f = n(768),
+            b = n(762),
+            g = n(789),
+            v = (n.n(g), n(790)),
             y = (n.n(v), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4595,7 +4210,7 @@ webpackJsonp([46], {
                 name: "reportUser"
             }), Object(p.c)("ReportUser"), Object(o.a)(i, null))(y)
     },
-    774: function(e, t, n) {
+    771: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4608,7 +4223,7 @@ webpackJsonp([46], {
             o = n(8),
             s = n(18),
             l = n(5),
-            c = n(775),
+            c = n(772),
             u = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4638,7 +4253,7 @@ webpackJsonp([46], {
             return c.b
         })
     },
-    775: function(e, t, n) {
+    772: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4652,24 +4267,24 @@ webpackJsonp([46], {
             s = n(2),
             l = n(60),
             c = n(7),
-            u = n(102),
-            d = n(776),
-            p = n(130),
+            u = n(100),
+            d = n(773),
+            p = n(128),
             m = n(22),
             h = n(35),
             f = n(19),
             b = n(5),
             g = n(61),
             v = n(83),
-            y = n(128),
-            S = n(355),
+            y = n(126),
+            S = n(352),
             k = n(29),
             _ = n(51),
-            E = n(125),
-            C = n(800),
-            N = n(248),
+            E = n(123),
+            C = n(797),
+            N = n(246),
             P = n(3),
-            T = (n(811), function(e) {
+            T = (n(807), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5011,8 +4626,8 @@ webpackJsonp([46], {
                 }, t = a.__decorate([Object(b.c)("GiftRecipientSearch")], t)
             }(o.Component),
             F = U,
-            I = n(783),
-            R = n(766),
+            I = n(780),
+            R = n(763),
             j = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -5058,14 +4673,14 @@ webpackJsonp([46], {
                 }, t
             }(o.Component),
             x = j,
-            L = n(774),
-            G = n(787);
+            L = n(771),
+            G = n(784);
         ! function(e) {
             e[e.Top = 0] = "Top", e[e.SubOptions = 1] = "SubOptions", e[e.GiftOptions = 2] = "GiftOptions", e[e.RecipientSelect = 3] = "RecipientSelect"
         }(r || (r = {}));
-        var A = n(777),
-            M = n(813),
-            B = (n(814), function(e) {
+        var A = n(774),
+            M = n(809),
+            B = (n(810), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.handleTopPageSubButtonClick = function() {
@@ -5642,7 +5257,7 @@ webpackJsonp([46], {
                 }, t = a.__decorate([Object(b.c)("BalloonSubbedUser")], t)
             }(o.Component),
             q = V,
-            W = (n(815), n(816));
+            W = (n(811), n(812));
         n.d(t, "a", function() {
             return z
         }), n.d(t, "b", function() {
@@ -5926,7 +5541,7 @@ webpackJsonp([46], {
             }(o.Component),
             Q = $
     },
-    776: function(e, t, n) {
+    773: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -5938,7 +5553,7 @@ webpackJsonp([46], {
             Tier3: "3000"
         }
     },
-    777: function(e, t, n) {
+    774: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -5955,12 +5570,12 @@ webpackJsonp([46], {
         }
         t.a = i, t.b = r
     },
-    783: function(e, t, n) {
+    780: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
             a = n(2),
-            o = n(766),
+            o = n(763),
             s = n(3),
             l = function(e) {
                 function t() {
@@ -6011,7 +5626,7 @@ webpackJsonp([46], {
             return c
         })
     },
-    786: function(e, t, n) {
+    783: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -6034,7 +5649,7 @@ webpackJsonp([46], {
         t.a = i;
         var r = n(2)
     },
-    787: function(e, t, n) {
+    784: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -6076,7 +5691,7 @@ webpackJsonp([46], {
             a = n(1),
             o = n(2),
             s = 3,
-            l = n(248),
+            l = n(246),
             c = n(3),
             u = "subscribe-button__subscribe-with-prime",
             d = function(e) {
@@ -6169,7 +5784,7 @@ webpackJsonp([46], {
             return p
         })
     },
-    789: function(e, t) {
+    786: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6257,8 +5872,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    790: function(e, t) {},
-    791: function(e, t) {
+    787: function(e, t) {},
+    788: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6412,7 +6027,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    792: function(e, t) {
+    789: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6513,7 +6128,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    793: function(e, t) {
+    790: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6601,8 +6216,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    797: function(e, t) {},
-    798: function(e, t, n) {
+    794: function(e, t) {},
+    795: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -6612,7 +6227,7 @@ webpackJsonp([46], {
             e.Games = "GAMES", e.Communities = "COMMUNITIES", e.Creative = "CREATIVE"
         }(i || (i = {}))
     },
-    799: function(e, t, n) {
+    796: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -6621,7 +6236,7 @@ webpackJsonp([46], {
         t.a = i;
         var r = /\scurse\/\d/
     },
-    800: function(e, t, n) {
+    797: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
@@ -6629,7 +6244,7 @@ webpackJsonp([46], {
             o = n(7),
             s = n(5),
             l = n(3),
-            c = n(810),
+            c = n(806),
             u = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -6674,7 +6289,7 @@ webpackJsonp([46], {
             return d
         })
     },
-    803: function(e, t, n) {
+    800: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
@@ -6730,7 +6345,7 @@ webpackJsonp([46], {
                 }, t
             }(r.Component)
     },
-    806: function(e, t, n) {
+    803: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -6745,33 +6360,7 @@ webpackJsonp([46], {
         }
         t.b = i, t.a = r
     },
-    808: function(e, t, n) {
-        "use strict";
-        var i, r = n(0),
-            a = n(1),
-            o = n(2);
-        ! function(e) {
-            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
-        }(i || (i = {}));
-        var s = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    var e = o.b.get(this.props.name, i.Off);
-                    return e === i.On || e === i.StaffOnly && this.props.isStaff ? a.Children.only(this.props.children) : null
-                }, t
-            }(a.Component),
-            l = s;
-        n.d(t, "a", function() {
-            return i
-        }), n.d(t, !1, function() {
-            return s
-        }), n.d(t, "b", function() {
-            return l
-        })
-    },
-    810: function(e, t) {
+    806: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6912,9 +6501,9 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    811: function(e, t) {},
-    812: function(e, t) {},
-    813: function(e, t) {
+    807: function(e, t) {},
+    808: function(e, t) {},
+    809: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -7088,9 +6677,9 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    814: function(e, t) {},
-    815: function(e, t) {},
-    816: function(e, t) {
+    810: function(e, t) {},
+    811: function(e, t) {},
+    812: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -7525,7 +7114,33 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    829: function(e, t, n) {
+    815: function(e, t, n) {
+        "use strict";
+        var i, r = n(0),
+            a = n(1),
+            o = n(2);
+        ! function(e) {
+            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
+        }(i || (i = {}));
+        var s = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    var e = o.b.get(this.props.name, i.Off);
+                    return e === i.On || e === i.StaffOnly && this.props.isStaff ? a.Children.only(this.props.children) : null
+                }, t
+            }(a.Component),
+            l = s;
+        n.d(t, "a", function() {
+            return i
+        }), n.d(t, !1, function() {
+            return s
+        }), n.d(t, !1, function() {
+            return l
+        })
+    },
+    826: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -7537,7 +7152,7 @@ webpackJsonp([46], {
             EventCoverImage: "event_cover_image"
         }
     },
-    830: function(e, t, n) {
+    827: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -7545,7 +7160,7 @@ webpackJsonp([46], {
         }
         t.a = i
     },
-    834: function(e, t, n) {
+    831: function(e, t, n) {
         "use strict";
 
         function i() {
@@ -7567,7 +7182,7 @@ webpackJsonp([46], {
         var a = "header.DIRECTORY_HEADER_EDIT_ENABLED",
             o = "header.DIRECTORY_HEADER_EDIT_DISABLED"
     },
-    857: function(e, t, n) {
+    854: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -7578,9 +7193,9 @@ webpackJsonp([46], {
         var r = n(0),
             a = n(1),
             o = n(2),
-            s = n(803),
+            s = n(800),
             l = n(3),
-            c = (n(970), function(e) {
+            c = (n(967), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -7662,7 +7277,7 @@ webpackJsonp([46], {
                     }, this.props.errorMessage))
                 }, t
             }(a.Component)),
-            u = n(829),
+            u = n(826),
             d = function(e) {
                 return new Promise(function(t, n) {
                     var i = new FileReader;
@@ -7724,7 +7339,7 @@ webpackJsonp([46], {
             y = function() {
                 return Object(o.d)("Incompatible format. File must be an image in PNG or JPG format.", "ImageUploader")
             },
-            S = n(760),
+            S = n(757),
             k = this,
             _ = function(e, t) {
                 return r.__awaiter(k, void 0, void 0, function() {
@@ -7816,8 +7431,8 @@ webpackJsonp([46], {
             C = n(8),
             N = n(10),
             P = n(49),
-            T = n(123),
-            D = (n(971), function(e) {
+            T = n(121),
+            D = (n(968), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -7839,7 +7454,7 @@ webpackJsonp([46], {
             return O
         })
     },
-    876: function(e, t, n) {
+    873: function(e, t, n) {
         "use strict";
 
         function i() {
@@ -7869,10 +7484,10 @@ webpackJsonp([46], {
         t.a = a;
         var o = n(0),
             s = n(2),
-            l = n(834);
+            l = n(831);
         s.n.store.registerReducer("directoryHeader", r)
     },
-    884: function(e, t, n) {
+    881: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -7928,9 +7543,9 @@ webpackJsonp([46], {
             k = n(13),
             _ = n(5),
             E = n(3),
-            C = n(1e3),
-            N = n(1001),
-            P = n(1002),
+            C = n(997),
+            N = n(998),
+            P = n(999),
             T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -8086,18 +7701,18 @@ webpackJsonp([46], {
             }(d.Component),
             D = T,
             O = Object(h.a)(i, r)(D),
-            w = n(808),
-            U = n(126),
-            F = n(352),
+            w = n(815),
+            U = n(124),
+            F = n(349),
             I = n(49),
-            R = n(834),
-            j = n(362),
-            x = n(772),
-            L = n(765),
-            G = n(762),
+            R = n(831),
+            j = n(359),
+            x = n(769),
+            L = n(762),
+            G = n(759),
             A = n(30),
-            M = n(123),
-            B = (n(1003), n(1004)),
+            M = n(121),
+            B = (n(1e3), n(1001)),
             H = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -8176,7 +7791,7 @@ webpackJsonp([46], {
                 name: "tosBanCommunity"
             }))(H),
             q = Object(h.a)(null, a)(V),
-            W = n(1005),
+            W = n(1002),
             z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -8272,11 +7887,11 @@ webpackJsonp([46], {
                 })], t)
             }(d.Component),
             $ = z,
-            Q = n(876),
+            Q = n(873),
             K = Object(h.a)(o, s)(Object(p.f)($)),
-            Y = n(907),
-            J = n(798);
-        n(1006);
+            Y = n(904),
+            J = n(795);
+        n(1003);
         ! function(e) {
             e[e.DirectoryPage = 0] = "DirectoryPage", e[e.DirectoryVideosPage = 1] = "DirectoryVideosPage", e[e.DirectoryClipsPage = 2] = "DirectoryClipsPage", e[e.DirectoryDetailsPage = 3] = "DirectoryDetailsPage"
         }(l || (l = {}));
@@ -8413,7 +8028,7 @@ webpackJsonp([46], {
             return Z
         })
     },
-    886: function(e, t, n) {
+    883: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -8466,14 +8081,14 @@ webpackJsonp([46], {
             d = n(1),
             p = n(11),
             m = n(2),
-            h = n(254),
+            h = n(252),
             f = n(60),
             b = n(13),
-            g = n(765),
-            v = n(762),
-            y = n(774),
+            g = n(762),
+            v = n(759),
+            y = n(771),
             S = n(3),
-            k = (n(986), function(e) {
+            k = (n(983), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleReportHosterClick = function() {
@@ -8621,14 +8236,14 @@ webpackJsonp([46], {
             N = n(49),
             P = n(34),
             T = n(18),
-            D = n(772),
+            D = n(769),
             O = Object(_.a)(i, r)(Object(p.f)(k)),
             w = n(65),
             U = n(4),
-            F = n(373),
-            I = n(372),
+            F = n(370),
+            I = n(369),
             R = n(20),
-            j = n(830),
+            j = n(827),
             x = n(5);
         ! function(e) {
             e.LoadStart = "loadstart", e.Error = "error", e.LoadedMetadata = "loadedmetadata", e.CanPlay = "canplay", e.Playing = "playing", e.Waiting = "waiting", e.Seeking = "seeking", e.Seeked = "seeked", e.Ended = "ended", e.DurationChange = "durationchange", e.TimeUpdate = "timeupdate", e.Play = "play", e.Pause = "pause", e.VolumeChange = "volumechange", e.RateChange = "ratechange"
@@ -8637,7 +8252,7 @@ webpackJsonp([46], {
         ! function(e) {
             e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange"
         }(L || (L = {}));
-        var G, A = (n(987), n(806));
+        var G, A = (n(984), n(803));
         ! function(e) {
             e.Embed = "embed", e.Frontpage = "frontpage", e.Site = "site"
         }(G || (G = {}));
@@ -8825,15 +8440,15 @@ webpackJsonp([46], {
             return l
         })
     },
-    899: function(e, t, n) {
+    896: function(e, t, n) {
         "use strict";
         var i, r = n(0),
             a = n(1),
             o = n(2),
-            s = n(364),
+            s = n(361),
             l = n(5),
             c = n(3),
-            u = (n(1062), "embed-overlay");
+            u = (n(1061), "embed-overlay");
         ! function(e) {
             e[e.Clip = 0] = "Clip", e[e.Video = 1] = "Video", e[e.Stream = 2] = "Stream", e[e.VideoOEmbed = 3] = "VideoOEmbed"
         }(i || (i = {}));
@@ -8951,7 +8566,7 @@ webpackJsonp([46], {
             return m
         })
     },
-    907: function(e, t, n) {
+    904: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -8980,9 +8595,9 @@ webpackJsonp([46], {
             f = n(22),
             b = n(13),
             g = n(3),
-            v = n(908),
-            y = n(909),
-            S = n(910),
+            v = n(905),
+            y = n(906),
+            S = n(907),
             k = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -9140,7 +8755,7 @@ webpackJsonp([46], {
             return E
         })
     },
-    908: function(e, t) {
+    905: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -9267,7 +8882,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    909: function(e, t) {
+    906: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -9424,7 +9039,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    910: function(e, t) {
+    907: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -9525,9 +9140,9 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    970: function(e, t) {},
-    971: function(e, t) {},
-    984: function(e, t, n) {
+    967: function(e, t) {},
+    968: function(e, t) {},
+    981: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -9556,7 +9171,7 @@ webpackJsonp([46], {
                 onShowModal: d.d
             }, e)
         }
-        var s = (n(876), n(0)),
+        var s = (n(873), n(0)),
             l = n(1),
             c = n(8),
             u = n(10),
@@ -9564,7 +9179,7 @@ webpackJsonp([46], {
             p = n(2),
             m = n(7),
             h = n(22),
-            f = n(760),
+            f = n(757),
             b = n(13),
             g = "directory-avatar-edit-menu",
             v = "directory-avatar-overlay",
@@ -9625,7 +9240,7 @@ webpackJsonp([46], {
             },
             O = "https://static-cdn.jtvnw.net/community-images/defaults/avatar-285x380.png",
             w = "https://static-cdn.jtvnw.net/community-images/defaults/banner-1200x180.png",
-            U = n(798),
+            U = n(795),
             F = function(e) {
                 return e === U.a.Communities ? "COMMUNITY" : "GAME"
             },
@@ -9635,7 +9250,7 @@ webpackJsonp([46], {
             R = function() {
                 return Object(p.d)("Remove", "DirectoryHeader")
             },
-            j = n(352),
+            j = n(349),
             x = "https://api.twitch.tv/kraken/communities/",
             L = function(e) {
                 return "" + x + e + "/images/avatar"
@@ -9646,12 +9261,12 @@ webpackJsonp([46], {
             A = function(e) {
                 return e === U.a.Communities ? Object(j.b)("communities") : Object(j.b)()
             },
-            M = n(857),
-            B = n(829),
+            M = n(854),
+            B = n(826),
             H = n(5),
             V = n(3),
-            q = n(996),
-            W = (n(997), function(e) {
+            q = n(993),
+            W = (n(994), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -9802,7 +9417,7 @@ webpackJsonp([46], {
             }(l.Component)),
             z = W,
             $ = Object(c.a)(i, r)(z),
-            Q = n(834),
+            Q = n(831),
             K = n(4),
             Y = n(11),
             J = function(e) {
@@ -9831,8 +9446,8 @@ webpackJsonp([46], {
                 }, t
             }(l.Component),
             X = J,
-            Z = n(998),
-            ee = (n(999), function(e) {
+            Z = n(995),
+            ee = (n(996), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10036,7 +9651,7 @@ webpackJsonp([46], {
             }(l.Component)),
             te = ee,
             ne = Object(c.a)(a, o)(te),
-            ie = n(884),
+            ie = n(881),
             re = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -10067,9 +9682,9 @@ webpackJsonp([46], {
             return ae
         })
     },
-    986: function(e, t) {},
-    987: function(e, t) {},
-    996: function(e, t) {
+    983: function(e, t) {},
+    984: function(e, t) {},
+    993: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10296,8 +9911,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    997: function(e, t) {},
-    998: function(e, t) {
+    994: function(e, t) {},
+    995: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10633,6 +10248,391 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    999: function(e, t) {}
+    996: function(e, t) {},
+    997: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "DirectoryFollowButton_Community"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "name"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "community"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "name"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "name"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "name"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "self"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "follow"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "followedAt"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 192
+            }
+        };
+        n.loc.source = {
+            body: "query DirectoryFollowButton_Community($name: String!) {\n  community(name: $name) {\n    id\n    name\n    self {\n      follow {\n        followedAt\n      }\n    }\n  }\n\n  currentUser {\n    id\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    998: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "DirectoryFollowButton_FollowCommunity"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "FollowCommunityInput"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "followCommunity"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "community"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "self"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "follow"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "followedAt"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 212
+            }
+        };
+        n.loc.source = {
+            body: "mutation DirectoryFollowButton_FollowCommunity($input: FollowCommunityInput!) {\n  followCommunity(input: $input) {\n    community {\n      self {\n        follow {\n          followedAt\n        }\n      }\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    999: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "DirectoryFollowButton_UnfollowCommunity"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "UnfollowCommunityInput"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "unfollowCommunity"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "follow"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "followedAt"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 163
+            }
+        };
+        n.loc.source = {
+            body: "mutation DirectoryFollowButton_UnfollowCommunity($input: UnfollowCommunityInput!) {\n  unfollowCommunity(input: $input) {\n    follow {\n      followedAt\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    }
 });
-//# sourceMappingURL=pages.directory-game-details-6a514c4fbdae9f7fd419604abf64f6a0.js.map
+//# sourceMappingURL=pages.directory-game-details-9f92cbd2c99a2c36642c2961feb9f59a.js.map

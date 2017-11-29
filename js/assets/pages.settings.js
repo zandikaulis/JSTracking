@@ -616,8 +616,8 @@ webpackJsonp([55], {
             o = n(1),
             r = n(2),
             l = n(29),
-            s = n(126),
-            c = n(352),
+            s = n(124),
+            c = n(349),
             d = n(5),
             m = n(3);
         ! function(e) {
@@ -673,8 +673,8 @@ webpackJsonp([55], {
                 }, t = a.__decorate([Object(d.c)("SettingsTabs")], t)
             }(o.Component),
             g = p,
-            f = n(764),
-            h = n(761),
+            f = n(761),
+            h = n(758),
             S = n(13),
             v = n(10),
             b = n(62),
@@ -1366,7 +1366,7 @@ webpackJsonp([55], {
             return T
         })
     },
-    761: function(e, t, n) {
+    758: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -1424,7 +1424,7 @@ webpackJsonp([55], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    764: function(e, t, n) {
+    761: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1493,4 +1493,4 @@ webpackJsonp([55], {
         })
     }
 });
-//# sourceMappingURL=pages.settings-c7564c0dbd95cbbbf674321638eceb31.js.map
+//# sourceMappingURL=pages.settings-7a0e305c7d62298d0fb67f092da36f54.js.map
