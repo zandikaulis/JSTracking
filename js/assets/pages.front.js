@@ -1,1758 +1,10 @@
-webpackJsonp([45], {
-    1005: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return r
-        }), n.d(t, "d", function() {
-            return a
-        }), n.d(t, "e", function() {
-            return o
-        }), n.d(t, "c", function() {
-            return i
-        }), n.d(t, "b", function() {
-            return s
-        });
-        var i, r = "carousel-player__main-description",
-            a = "carousel-player-left-button",
-            o = "carousel-player-right-button";
-        ! function(e) {
-            e[e.Horizontal = 1] = "Horizontal", e[e.Vertical = 2] = "Vertical"
-        }(i || (i = {}));
-        var s;
-        ! function(e) {
-            e[e.Stream = 1] = "Stream", e[e.Vod = 2] = "Vod"
-        }(s || (s = {}))
-    },
-    1018: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return {
-                trackingSet: e.ads.trackingSet
-            }
-        }
-        var r = n(9),
-            a = n(0),
-            o = n(1),
-            s = n(2),
-            l = n(111),
-            u = n(416),
-            c = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
-            d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
-            p = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.logger = s.i.withCategory("ad-slot"), n.createSlot = function(e) {
-                        return a.__awaiter(n, void 0, void 0, function() {
-                            var t, n;
-                            return a.__generator(this, function(i) {
-                                switch (i.label) {
-                                    case 0:
-                                        if (this.state.slotCreated) return [2];
-                                        this.setState({
-                                            slotCreated: !0
-                                        }), i.label = 1;
-                                    case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, l.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
-                                    case 2:
-                                        return t = i.sent(), Object(u.h)(t.getSlotElementId()), this.setState({
-                                            slot: t
-                                        }), [3, 4];
-                                    case 3:
-                                        return n = i.sent(), this.logger.warn("Unable to create ad slot", {
-                                            slotID: e.slotID,
-                                            adUnit: e.adUnit,
-                                            adSize: e.adSize,
-                                            targeting: e.targeting,
-                                            autoEnable: e.autoEnable
-                                        }), [3, 4];
-                                    case 4:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }, n.setRef = function(e) {
-                        return n.slotRef = e
-                    }, n.onSlotRenderEnd = function(e) {
-                        var t = e.slot.getSlotElementId();
-                        if (n.state.slot && t === n.props.slotID) {
-                            if (n.logger.debug("Ad slot render ended", {
-                                    elementID: t,
-                                    lineItemID: e.lineItemId,
-                                    createdID: e.creativeId,
-                                    isEmpty: e.isEmpty,
-                                    serviceName: e.serviceName,
-                                    size: e.size
-                                }), e.isEmpty) return;
-                            if (!n.slotRef) return;
-                            if (n.props.slotID === u.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
-                                shouldDisplay: !0
-                            }, function() {
-                                return n.slotRendered(e.slot)
-                            }));
-                            if (n.props.slotID === u.b.directory.banner) {
-                                var i = n.slotRef.querySelector(c);
-                                return void(i && 1 !== i.clientWidth && n.setState({
-                                    shouldDisplay: !0
-                                }, function() {
-                                    return n.slotRendered(e.slot)
-                                }))
-                            }
-                            if (n.props.slotID === u.b.directory.rectangle) {
-                                var i = n.slotRef.querySelector(d);
-                                return void(i && 1 !== i.clientWidth && n.setState({
-                                    shouldDisplay: !0
-                                }, function() {
-                                    return n.slotRendered(e.slot)
-                                }))
-                            }
-                            n.setState({
-                                shouldDisplay: !0
-                            }, function() {
-                                return n.slotRendered(e.slot)
-                            })
-                        }
-                    }, n.slotRendered = function(e) {
-                        n.props.slotRendered && n.props.slotRendered(e)
-                    }, n.state = {
-                        shouldDisplay: !1
-                    }, n
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    u.g.addListener(u.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.state.slotCreated || (e.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentWillReceiveProps)", this.props.slotID), this.createSlot(e)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentWillReceiveProps)", this.props.slotID))
-                }, t.prototype.componentWillUnmount = function() {
-                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), u.g.removeListener(u.f, this.onSlotRenderEnd), this.state.slot && l.a.destroySlot(this.state.slot)
-                }, t.prototype.shouldComponentUpdate = function(e, t) {
-                    return t.shouldDisplay !== this.state.shouldDisplay
-                }, t.prototype.render = function() {
-                    var e = a.__assign({}, this.props.injectStyles);
-                    return this.state.shouldDisplay || (e.display = "none"), o.createElement("div", {
-                        style: e,
-                        id: this.props.slotID,
-                        ref: this.setRef
-                    })
-                }, t
-            }(o.Component),
-            m = p,
-            f = Object(r.a)(i)(m);
-        n.d(t, "a", function() {
-            return f
-        })
-    },
-    1034: function(e, t, n) {
-        "use strict";
-        var i = n(14),
-            r = n(1315),
-            a = n(1053),
-            o = function(e, t) {
-                var n = s(e);
-                Object(a.c)(i.SpadeEventType.FeedCardImpression, n, t)
-            },
-            s = function(e) {
-                var t = e.item.reasons[0] ? Object(r.b)(e.item.reasons[0].reason) : "";
-                switch (e.item.content.__typename) {
-                    case "Clip":
-                        return {
-                            card_author_id: e.item.content.broadcaster.id,
-                            display_reason: t,
-                            feed_presentation: e.feedPresentation
-                        };
-                    case "Post":
-                        return {
-                            card_author_id: e.item.content.author.id,
-                            display_reason: t,
-                            feed_presentation: e.feedPresentation
-                        };
-                    case "Stream":
-                        return {
-                            card_author_id: e.item.content.broadcaster.id,
-                            display_reason: t,
-                            feed_presentation: e.feedPresentation
-                        };
-                    case "Video":
-                        return {
-                            card_author_id: e.item.content.owner.id,
-                            display_reason: t,
-                            feed_presentation: e.feedPresentation
-                        };
-                    default:
-                        return {
-                            card_author_id: "",
-                            display_reason: "",
-                            feed_presentation: ""
-                        }
-                }
-            },
-            l = n(1131),
-            u = function(e, t) {
-                var n = c(e.embed);
-                Object(a.c)(i.SpadeEventType.FeedCardEmbedImpression, n, t)
-            },
-            c = function(e) {
-                switch (e.__typename) {
-                    case "Clip":
-                        var t = e;
-                        return {
-                            embed_entity: l.a + ":" + t.id,
-                            embed_id: t.id,
-                            embed_type: l.a,
-                            media_type: "video"
-                        };
-                    case "PhotoOEmbed":
-                        var n = e;
-                        return {
-                            embed_entity: l.b + ":" + n.inputURL,
-                            embed_id: n.inputURL,
-                            embed_type: l.b,
-                            media_type: "photo"
-                        };
-                    case "Stream":
-                        var i = e;
-                        return {
-                            embed_entity: l.d + ":" + i.id,
-                            embed_id: i.id,
-                            embed_type: l.d,
-                            media_type: "video"
-                        };
-                    case "Video":
-                        var r = e;
-                        return {
-                            embed_entity: l.e + ":" + r.id,
-                            embed_id: r.id,
-                            embed_type: l.e,
-                            media_type: "video"
-                        };
-                    case "VideoOEmbed":
-                        var a = e;
-                        return {
-                            embed_entity: l.b + ":" + a.inputURL,
-                            embed_id: a.inputURL,
-                            embed_type: l.b,
-                            media_type: "video"
-                        };
-                    default:
-                        return {
-                            embed_entity: "",
-                            embed_id: "",
-                            embed_type: "",
-                            media_type: ""
-                        }
-                }
-            },
-            d = function(e, t) {
-                var n = p(e.embed);
-                Object(a.c)(i.SpadeEventType.FeedCardEmbedPlay, n, t)
-            },
-            p = function(e) {
-                switch (e.__typename) {
-                    case "Clip":
-                        var t = e;
-                        return {
-                            action: "play",
-                            embed_entity: l.a + ":" + t.id,
-                            embed_id: t.id,
-                            embed_type: l.a,
-                            media_type: "video"
-                        };
-                    case "Stream":
-                        var n = e;
-                        return {
-                            action: "play",
-                            embed_entity: l.d + ":" + n.id,
-                            embed_id: n.id,
-                            embed_type: l.d,
-                            media_type: "video"
-                        };
-                    case "Video":
-                        var i = e;
-                        return {
-                            action: "play",
-                            embed_entity: l.e + ":" + i.id,
-                            embed_id: i.id,
-                            embed_type: l.e,
-                            media_type: "video"
-                        };
-                    case "VideoOEmbed":
-                        var r = e;
-                        return {
-                            action: "play",
-                            embed_entity: l.b + ":" + r.inputURL,
-                            embed_id: r.inputURL,
-                            embed_type: l.b,
-                            media_type: "video"
-                        };
-                    default:
-                        return {
-                            action: "",
-                            embed_entity: "",
-                            embed_id: "",
-                            embed_type: "",
-                            media_type: ""
-                        }
-                }
-            },
-            m = (n(1314), function(e, t) {
-                var n = Object(l.f)(e.entity),
-                    r = {
-                        action: e.action,
-                        reaction_int: e.reactionInt,
-                        reaction_text: e.reactionText,
-                        target_entity: e.entity,
-                        target_id: n.id,
-                        target_type: n.type
-                    };
-                Object(a.c)(i.SpadeEventType.FeedReaction, r, t)
-            });
-        n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "a", function() {
-            return o
-        }), n.d(t, "b", function() {
-            return u
-        }), n.d(t, "c", function() {
-            return d
-        }), n.d(t, !1, function() {}), n.d(t, "d", function() {
-            return m
-        })
-    },
-    1037: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            var t = [];
-            return e.forEach(function(e) {
-                t[e.from] = {
-                    startIndex: e.from,
-                    endIndex: e.to + 1,
-                    data: {
-                        images: {
-                            themed: !1,
-                            sources: {
-                                "1x": Object(u.e)(e.emoteID, 1),
-                                "2x": Object(u.e)(e.emoteID, 2),
-                                "4x": Object(u.e)(e.emoteID, 4)
-                            }
-                        }
-                    }
-                }
-            }), t
-        }
-
-        function r(e, t, n) {
-            var r = i(e.body.emotes),
-                a = e.badges.reduce(function(e, t) {
-                    return e[t.setID] = t.version, e
-                }, {});
-            return {
-                type: l.a.Post,
-                id: e.id,
-                badges: a,
-                bits: e.bitsUsed,
-                timestamp: 0,
-                deleted: !1,
-                user: o.__assign({
-                    userID: e.author.id,
-                    userLogin: e.author.login,
-                    userType: s.a.User,
-                    color: e.authorColor
-                }, Object(c.a)(e.authorName, e.author.login)),
-                messageParts: Object(u.f)(e.body.content, r, e.bitsUsed, t, n, e.authorName)
-            }
-        }
-
-        function a(e) {
-            var t = "ChatMessage:" + e.tags.msg_id;
-            return {
-                __typename: "ChatMessage",
-                "Symbol(id)": t,
-                id: e.tags.msg_id,
-                authorName: e.tags.display_name,
-                authorColor: e.tags.color,
-                author: {
-                    __typename: "User",
-                    "Symbol(id)": "User:" + e.user_id,
-                    id: e.user_id,
-                    login: e.username
-                },
-                body: {
-                    __typename: "MessageBody",
-                    "Symbol(id)": "$" + t + ".body",
-                    content: e.message,
-                    emotes: e.tags.emotes.map(function(e, n) {
-                        return {
-                            __typename: "EmbeddedEmote",
-                            "Symbol(id)": t + ".body.emotes." + n,
-                            emoteID: e.id.toString(),
-                            from: e.start,
-                            to: e.end,
-                            setID: e.set
-                        }
-                    })
-                },
-                badges: e.tags.badges.map(function(e, n) {
-                    return {
-                        __typename: "Badge",
-                        "Symbol(id)": t + ".badges." + n,
-                        setID: e.badge_set_id,
-                        version: e.badge_set_version
-                    }
-                }),
-                bitsUsed: e.bits_used
-            }
-        }
-        t.b = i, t.a = r, t.c = a;
-        var o = n(0),
-            s = n(939),
-            l = n(918),
-            u = n(135),
-            c = n(414)
-    },
-    1038: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "FragmentDefinition",
-                name: {
-                    kind: "Name",
-                    value: "embeddedEmote"
-                },
-                typeCondition: {
-                    kind: "NamedType",
-                    name: {
-                        kind: "Name",
-                        value: "EmbeddedEmote"
-                    }
-                },
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "emoteID"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "setID"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "from"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "to"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 74
-            }
-        };
-        n.loc.source = {
-            body: "fragment embeddedEmote on EmbeddedEmote {\n  emoteID\n  setID\n  from\n  to\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    1041: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return {
-                isLoggedIn: Object(w.d)(e)
-            }
-        }
-
-        function r(e) {
-            return Object(E.bindActionCreators)({
-                login: function() {
-                    return Object(P.f)(T.a.ReportHoster)
-                },
-                showReportUserModal: function(e) {
-                    var t = c.__rest(e, []);
-                    return Object(C.d)(N.a, t)
-                }
-            }, e)
-        }
-
-        function a() {
-            return !!window.Twitch && !!window.Twitch.Player
-        }
-
-        function o(e) {
-            return {
-                theatreModeEnabled: e.ui.theatreModeEnabled,
-                isLoggedIn: Object(w.d)(e),
-                authToken: Object(w.a)(e)
-            }
-        }
-
-        function s(e) {
-            return Object(E.bindActionCreators)({
-                enableTheatreMode: I.k,
-                disableTheatreMode: I.j
-            }, e)
-        }
-
-        function l(e, t, n) {
-            if (!e.collectionID && e.videoID) return void t.push("/videos/" + e.videoID);
-            if (e.collectionID && e.videoID) {
-                if (n && n.currentVideoID && n.currentCollectionID && n.currentVideoID === e.videoID && n.currentCollectionID === e.collectionID) return;
-                return void t.push("/videos/" + e.videoID + "?collection=" + e.collectionID)
-            }
-            if (e.collectionID && !e.videoID) return void t.push("/collections/" + e.collectionID);
-            m.i.withCategory("video-player").error(new Error("No collection or video specified from the emitted player transition event."), "No collection or video specified from the emitted player transition event.")
-        }
-        var u, c = n(0),
-            d = n(1),
-            p = n(12),
-            m = n(2),
-            f = n(275),
-            h = n(64),
-            g = n(14),
-            b = n(926),
-            v = n(923),
-            y = n(933),
-            S = n(3),
-            k = (n(1136), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleReportHosterClick = function() {
-                        t.props.isLoggedIn ? t.props.showReportUserModal({
-                            onClose: t.handleReportModalClose,
-                            reportContext: {
-                                contentType: v.a.User,
-                                targetUserID: t.props.hostChannelID
-                            },
-                            title: Object(m.d)("Report {channelDisplayName}", {
-                                channelDisplayName: t.props.hostChannelDisplayName
-                            }, "VideoPlayerHostingUI")
-                        }) : t.props.login()
-                    }, t.handleReportModalClose = function(e) {
-                        (e === b.b.MutationError || e === b.b.Success) && t.props.history.push("/")
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.render = function() {
-                    var e = !!this.props.hostedChannelDisplayName;
-                    return d.createElement(S._17, {
-                        className: "video-player-hosting-ui__container"
-                    }, e && this.renderHeader(), d.createElement("span", {
-                        key: "video-player"
-                    }, this.props.children), d.createElement(S.U, {
-                        display: e ? S.H.Block : S.H.Hide,
-                        position: S._2.Relative,
-                        zIndex: S._38.Above
-                    }, e && this.renderFooter()))
-                }, t.prototype.renderHeader = function() {
-                    return d.createElement(S.e, {
-                        type: S.i.SlideInBottom,
-                        delay: S.f.Medium,
-                        duration: S.g.Medium,
-                        enabled: !0
-                    }, d.createElement(p.a, {
-                        key: "hosting-ui-header",
-                        className: "video-player-hosting-ui__link",
-                        to: {
-                            pathname: "/" + this.props.hostedChannelLogin,
-                            state: {
-                                medium: g.PageviewMedium.Channel,
-                                content: g.PageviewContent.Host
-                            }
-                        },
-                        "data-a-target": "hosting-ui-link",
-                        "data-test-selector": "video-player-hosting-ui__header"
-                    }, d.createElement(S._17, {
-                        className: "video-player-hosting-ui__header",
-                        display: S.H.Flex,
-                        background: S.m.AccentAlt2,
-                        color: S.F.Overlay,
-                        alignItems: S.c.Center,
-                        padding: {
-                            x: 1,
-                            y: .5
-                        },
-                        "data-a-target": "hosting-ui-header"
-                    }, d.createElement(S.U, {
-                        className: "video-player-hosting-ui__avatar-container"
-                    }, d.createElement(S.l, {
-                        imageSrc: this.props.hostedChannelProfileImageURL || "",
-                        size: 30,
-                        imageAlt: Object(m.d)("Hosted Channel {hostedChannelDisplayName}'s Avatar", {
-                            hostedChannelDisplayName: this.props.hostedChannelDisplayName || ""
-                        }, "VideoPlayerHostingUI")
-                    })), d.createElement(S._17, {
-                        margin: {
-                            left: 1
-                        },
-                        fontSize: S.L.Size5
-                    }, Object(m.d)("Hosting", "VideoPlayerHostingUI"), " ", d.createElement(S._21, {
-                        type: S._26.Span,
-                        className: "video-player-hosting-ui__channel-name",
-                        color: S.F.OverlayAlt,
-                        "data-a-target": "hosting-ui-channel-name"
-                    }, this.props.hostedChannelDisplayName)))))
-                }, t.prototype.renderFooter = function() {
-                    return d.createElement(S.e, {
-                        type: S.i.SlideInTop,
-                        enabled: !0,
-                        delay: S.f.Medium,
-                        duration: S.g.Medium
-                    }, d.createElement(S._17, {
-                        key: "hosting-ui-footer",
-                        background: S.m.AccentAlt2,
-                        className: "video-player-hosting-ui__footer",
-                        display: S.H.Block,
-                        padding: 1,
-                        "data-test-selector": "video-player-hosting-ui__footer",
-                        "data-a-target": "hosting-ui-footer"
-                    }, d.createElement(S.U, {
-                        padding: {
-                            y: .5
-                        },
-                        display: S.H.Flex,
-                        justifyContent: S.T.Between
-                    }, d.createElement(S.U, {
-                        display: S.H.Flex
-                    }, d.createElement(S.U, {
-                        margin: {
-                            right: 1
-                        }
-                    }, d.createElement(f.a, {
-                        "data-a-target": "hosting-ui-follow-button",
-                        channelName: this.props.hostedChannelLogin || "",
-                        channelLogin: this.props.hostedChannelLogin,
-                        hostChannelLogin: this.props.hostChannelLogin,
-                        hostChannelID: this.props.hostChannelID,
-                        isHostedFollow: !0,
-                        balloonDirection: S.q.BottomLeft
-                    })), d.createElement(S.U, null, d.createElement(y.b, {
-                        channelLogin: this.props.hostedChannelLogin,
-                        hostChannelID: this.props.hostChannelID,
-                        hostChannelLogin: this.props.hostChannelLogin,
-                        "data-a-target": "hosting-ui-subscribe-button"
-                    }))), d.createElement(h.a, null, d.createElement(S.v, {
-                        ariaLabel: Object(m.d)("More options", "HostingUI"),
-                        overlay: !0,
-                        icon: S._9.More,
-                        onClick: this.handleReportHosterClick,
-                        "data-a-target": "hosting-ui-more-button"
-                    }), d.createElement(S.p, {
-                        direction: S.q.TopRight,
-                        "data-a-target": "hosting-ui-more-balloon"
-                    }, d.createElement(S.U, {
-                        padding: {
-                            y: 1
-                        }
-                    }, d.createElement(S.S, {
-                        onClick: this.handleReportHosterClick,
-                        "data-a-target": "hosting-ui-report-button"
-                    }, d.createElement(S.U, {
-                        padding: {
-                            x: 1,
-                            y: .5
-                        }
-                    }, Object(m.d)("Report {hostChannelDisplayName}", {
-                        hostChannelDisplayName: this.props.hostChannelDisplayName
-                    }, "VideoPlayerHostingUI")))))))))
-                }, t
-            }(d.Component)),
-            _ = n(9),
-            E = n(11),
-            T = n(51),
-            C = n(50),
-            P = n(35),
-            w = n(19),
-            N = n(931),
-            O = Object(_.a)(i, r)(Object(p.f)(k)),
-            I = n(69),
-            R = n(4),
-            U = n(429),
-            D = n(428),
-            F = n(21),
-            x = n(991),
-            j = n(6);
-        ! function(e) {
-            e.LoadStart = "loadstart", e.Error = "error", e.LoadedMetadata = "loadedmetadata", e.CanPlay = "canplay", e.Playing = "playing", e.Waiting = "waiting", e.Seeking = "seeking", e.Seeked = "seeked", e.Ended = "ended", e.DurationChange = "durationchange", e.TimeUpdate = "timeupdate", e.Play = "play", e.Pause = "pause", e.VolumeChange = "volumechange", e.RateChange = "ratechange"
-        }(u || (u = {}));
-        var A;
-        ! function(e) {
-            e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange"
-        }(A || (A = {}));
-        var L, M = (n(1137), n(976));
-        ! function(e) {
-            e.Embed = "embed", e.Frontpage = "frontpage", e.Site = "site"
-        }(L || (L = {}));
-        var V = {
-                allowfullscreen: !0,
-                branding: !1,
-                channelInfo: !1,
-                controls: !0,
-                height: "100%",
-                playsinline: !0,
-                player: L.Site,
-                showInfo: !1,
-                showtheatre: !1,
-                trackingProperties: {
-                    client_app: "twilight"
-                },
-                width: "100%",
-                oauth_token: ""
-            },
-            G = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.logger = m.i.withCategory("video-player"), n.checkPlayerDependencyStatus = function() {
-                        a() ? (n.setState({
-                            canInitializePlayer: !0
-                        }), n.checkPlayerDependencyAnimationFrame = null) : n.checkPlayerDependencyAnimationFrame = requestAnimationFrame(n.checkPlayerDependencyStatus)
-                    }, n.attachRef = function(e) {
-                        return n.playerRef = e
-                    }, n.onOpenStream = function() {
-                        n.props.playerTypeOverride === L.Frontpage && n.player && (n.props.channelLogin ? m.n.history.push("/" + n.props.channelLogin) : n.props.vodID ? m.n.history.push("/videos/" + n.props.vodID + "?t=" + n.player.getCurrentTime()) : n.props.collectionID && m.n.history.push("/collections/" + n.props.collectionID))
-                    }, n.onPlayerReady = function() {
-                        n.player && (n.logger.debug("Ready"), n.props.latencyTracking.reportInteractive(), n.hasPlayed = !1, n.props.latencyTracking.reportCustomEvent(n.playerLoaded), n.setState({
-                            playerInitialized: !0
-                        }, function() {
-                            return n.updatePlayerTrackingData(n.props.hostChannel)
-                        }))
-                    }, n.onPlayerPlay = function() {
-                        n.logger.debug("Play"), n.reportPlayerPlayed()
-                    }, n.onStreamStatusOnline = function() {
-                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(A.Online)
-                    }, n.onStreamStatusOffline = function() {
-                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(A.Offline)
-                    }, n.onTheatreChange = function(e) {
-                        e ? (n.logger.debug("Theatre Entered"), n.props.enableTheatreMode && !n.props.theatreModeEnabled && n.props.enableTheatreMode()) : (n.logger.debug("Theatre Exited"), n.props.disableTheatreMode && n.props.theatreModeEnabled && n.props.disableTheatreMode())
-                    }, n.onFullScreenChange = function() {
-                        n.player && (n.logger.debug("Fullscreen change", n.player.fullscreen), n.player.fullscreen !== n.state.isFullScreen && n.setState({
-                            isFullScreen: n.player.fullscreen
-                        }))
-                    }, n.onSeek = function() {
-                        n.props.onSeek && n.player && n.props.onSeek(n.player.getCurrentTime())
-                    }, n.onTimeUpdate = function() {
-                        n.props.onVideoTimeChange && n.player && n.props.onVideoTimeChange(n.player.getCurrentTime())
-                    }, n.onTransitionToCollectionVod = function(e) {
-                        if (n.props.onNavigationRequest) {
-                            var t = {};
-                            e.vodId && (t.videoID = Object(x.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
-                        }
-                    }, n.onTransitionToRecommendedVod = function(e) {
-                        if (n.props.onNavigationRequest) {
-                            var t = {};
-                            e.vodId && (t.videoID = Object(x.a)(e.vodId)), n.props.onNavigationRequest(t)
-                        }
-                    }, n.updatePlayerTrackingData = function(e) {
-                        if (n.state.playerInitialized && n.player) {
-                            var t = m.m.getLastPageview();
-                            t ? n.logger.debug("Tracking data updated.", {
-                                pageviewProperties: t,
-                                hostChannel: e
-                            }) : n.logger.debug("pageviewProperties not found; only hosting status updated", {
-                                pageviewProperties: t,
-                                hostChannel: e
-                            }), n.player.setTrackingProperties(c.__assign({}, t, {
-                                host_channel: e
-                            }))
-                        }
-                    }, n.updatePlayerType = function() {
-                        var e = n.props.playerTypeOverride || V.player;
-                        n.player && n.playerType !== e && (n.player.setPlayerType(e), n.playerType = e)
-                    }, n.maybeRecordClip = function() {
-                        n.player && n.state.playerInitialized && n.player.recordClip()
-                    }, n.playerCreated = n.registerCreatedEvent(), n.playerLoaded = n.registerLoadedEvent(), n.playerPlayed = n.registerPlayedEvent(), n.state = {
-                        canInitializePlayer: a(),
-                        playerInitialized: !1,
-                        isFullScreen: !1
-                    }, n.playerType = t.playerTypeOverride || V.player, n.lastSetChannel = t.channelLogin, n
-                }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    var e = this;
-                    if (this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.state.canInitializePlayer ? this.initializePlayer() : this.checkPlayerDependencyAnimationFrame = window.requestAnimationFrame(this.checkPlayerDependencyStatus), m.m.eventEmitter.addListener(g.SpadeEventType.Pageview, function() {
-                            return e.updatePlayerTrackingData(e.props.hostChannel)
-                        }), window.__playerScriptChunk && !t.tagInjected) {
-                        this.logger.debug("Loading player chunk after page loaded");
-                        var n = document.createElement("script");
-                        n.crossOrigin = "anonymous", n.src = window.__jqueryChunk, n.onload = function() {
-                            var e = document.createElement("script");
-                            e.async = !0, e.crossOrigin = "anonymous", e.src = window.__playerScriptChunk, document.body.appendChild(e)
-                        }, document.body.appendChild(n);
-                        var i = document.createElement("link");
-                        i.href = window.__playerStyleChunk, i.media = "screen", i.rel = "stylesheet", i.type = "text/css", document.body.appendChild(i), t.tagInjected = !0
-                    }
-                }, t.prototype.componentWillUpdate = function(e, t) {
-                    if (!this.state.canInitializePlayer && t.canInitializePlayer) return void this.initializePlayer();
-                    if (t.canInitializePlayer && t.playerInitialized) {
-                        if (this.updatePlayerTrackingData(e.hostChannel), this.updatePlayerType(), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.channelLogin && e.channelLogin !== this.lastSetChannel) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void m.m.setVideoPlayerTrackingData({
-                            vodID: void 0
-                        });
-                        var n = e.collectionID && this.props.collectionID !== e.collectionID,
-                            i = e.vodID && this.props.vodID !== e.vodID;
-                        if (n || i) {
-                            var r = e.vodID ? Object(M.a)(e.vodID) : "";
-                            if ("" !== r && m.m.setVideoPlayerTrackingData({
-                                    vodID: e.vodID
-                                }), !this.player) return;
-                            return void(n || e.collectionID && i ? this.player.setCollection(e.collectionID, r, e.nextVideoOffset) : this.player.setVideo(r, e.nextVideoOffset))
-                        }
-                        void 0 !== e.nextVideoOffset && e.nextVideoOffset >= 0 && this.props.nextVideoOffset !== e.nextVideoOffset && this.player && this.player.setCurrentTime(e.nextVideoOffset)
-                    }
-                }, t.prototype.render = function() {
-                    var e = R("video-player", {
-                        "video-player--theatre": this.props.theatreModeEnabled,
-                        "video-player--logged-in": this.props.isLoggedIn,
-                        "video-player--fullscreen": this.state.isFullScreen
-                    });
-                    return d.createElement("div", {
-                        className: R(e),
-                        "data-test-selector": "video-player"
-                    }, d.createElement("div", {
-                        className: "video-player__container",
-                        ref: this.attachRef
-                    }))
-                }, t.prototype.componentWillUnmount = function() {
-                    this.unbindHotKeys(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.props.onDestroy && this.props.onDestroy(), this.player && (m.m.eventEmitter.removeListener(g.SpadeEventType.Pageview, this.updatePlayerTrackingData), this.player.removeEventListener(A.PlayerReady, this.onPlayerReady), this.player.removeEventListener(A.Online, this.onStreamStatusOnline), this.player.removeEventListener(A.Offline, this.onStreamStatusOffline), this.player.removeEventListener(u.Ended, this.onStreamStatusOffline), this.player.removeEventListener(u.Play, this.onPlayerPlay), this.player.removeEventListener(A.TheatreChange, this.onTheatreChange), this.player.removeEventListener(A.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(A.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(u.Seeked, this.onSeek), this.player.removeEventListener(u.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(A.OpenStream, this.onOpenStream), U.extensionService.unregisterPlayer(), this.player.destroy()), m.m.setVideoPlayerTrackingData({
-                        vodID: void 0
-                    })
-                }, t.prototype.initializePlayer = function() {
-                    var e = c.__assign({}, V, {
-                        showtheatre: !this.props.disableTheatreButton
-                    });
-                    this.props.playerTypeOverride && (e.player = this.props.playerTypeOverride, this.playerType = this.props.playerTypeOverride), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.vodID && (e.video = Object(M.a)(this.props.vodID), m.m.setVideoPlayerTrackingData({
-                        vodID: this.props.vodID
-                    })), this.props.nextVideoOffset && (e.time = Object(M.b)(this.props.nextVideoOffset)), e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
-                    var t = new window.Twitch.Player(this.playerRef, e);
-                    this.player = t, t.addEventListener(A.PlayerReady, this.onPlayerReady), t.addEventListener(A.Online, this.onStreamStatusOnline), t.addEventListener(A.Offline, this.onStreamStatusOffline), t.addEventListener(u.Ended, this.onStreamStatusOffline), t.addEventListener(u.Play, this.onPlayerPlay), t.addEventListener(u.Seeked, this.onSeek), t.addEventListener(u.TimeUpdate, this.onTimeUpdate), t.addEventListener(A.TheatreChange, this.onTheatreChange), t.addEventListener(A.FullscreenChange, this.onFullScreenChange), t.addEventListener(A.TransitionToCollectionVOD, this.onTransitionToCollectionVod), t.addEventListener(A.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), t.addEventListener(A.OpenStream, this.onOpenStream), U.extensionService.registerPlayer(this.player), this.props.onInit && this.props.onInit(t), this.maybeAttachToWindow(this.props)
-                }, t.prototype.registerCreatedEvent = function() {
-                    return this.props.latencyTracking.registerCustomEvent("Player", "player-created", "Created", 1e3)
-                }, t.prototype.registerLoadedEvent = function() {
-                    return this.props.latencyTracking.registerCustomEvent("Player", "player-loaded", "Init", 2500)
-                }, t.prototype.registerPlayedEvent = function() {
-                    return this.props.latencyTracking.registerCustomEvent("Player", "player-played", "First Frame", 4e3)
-                }, t.prototype.reportPlayerPlayed = function() {
-                    this.hasPlayed || (this.hasPlayed = !0, this.playerPlayed && this.props.latencyTracking.reportCustomEvent(this.playerPlayed))
-                }, t.prototype.maybeAttachToWindow = function(e) {
-                    F.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
-                }, t.prototype.maybeDetachFromWindow = function() {
-                    window.player = void 0
-                }, t.prototype.bindHotKeys = function() {
-                    D.bind("alt+x", this.maybeRecordClip)
-                }, t.prototype.unbindHotKeys = function() {
-                    D.unbind("alt+x")
-                }, t.tagInjected = !1, t
-            }(d.Component),
-            B = Object(j.c)("VideoPlayer")(G),
-            z = Object(_.a)(o, s)(B);
-        n.d(t, !1, function() {
-            return "hosting-ui-report-button"
-        }), n.d(t, !1, function() {
-            return "hosting-ui-more-balloon"
-        }), n.d(t, !1, function() {
-            return "hosting-ui-more-button"
-        }), n.d(t, !1, function() {
-            return "hosting-ui-channel-name"
-        }), n.d(t, !1, function() {
-            return "video-player-hosting-ui__header"
-        }), n.d(t, !1, function() {
-            return "video-player-hosting-ui__footer"
-        }), n.d(t, !1, function() {
-            return k
-        }), n.d(t, "a", function() {
-            return O
-        }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
-            return L
-        }), n.d(t, "c", function() {
-            return z
-        }), n.d(t, "d", function() {
-            return l
-        })
-    },
-    1052: function(e, t, n) {
-        "use strict";
-
-        function i() {
-            return function(e) {
-                return function(t) {
-                    function n() {
-                        var e = null !== t && t.apply(this, arguments) || this;
-                        return e.state = {
-                            impressionEventFired: !1,
-                            impressionEvent: function(e) {
-                                return {}
-                            }
-                        }, e.triggerImpressionEvent = function() {
-                            e.state.impressionEvent(e.context.feedTrackingProps), e.setState({
-                                impressionEventFired: !0
-                            })
-                        }, e.setImpressionEvent = function(t) {
-                            e.setState({
-                                impressionEvent: t
-                            })
-                        }, e.setRef = function(t) {
-                            return e.element = t
-                        }, e
-                    }
-                    return o.__extends(n, t), n.prototype.componentDidMount = function() {
-                        if (this.context.feedImpressionSettings && this.context.feedImpressionSettings.autoReport) return this.triggerImpressionEvent();
-                        var e = this.context,
-                            t = e.registerReceiver;
-                        if (!t) return void u.i.warn("<FeedItem /> initialized missing a <ScrollableArea /> provider");
-                        this.unregister = t(this)
-                    }, n.prototype.componentWillUnmount = function() {
-                        this.unregister && this.unregister()
-                    }, n.prototype.render = function() {
-                        var t = {
-                            impressionTracking: {
-                                onImpression: this.setImpressionEvent
-                            }
-                        };
-                        return l.createElement("div", {
-                            ref: this.setRef
-                        }, l.createElement(e, o.__assign({}, this.props, t)))
-                    }, n.prototype.checkVisible = function(e) {
-                        return o.__awaiter(this, void 0, void 0, function() {
-                            var t, n;
-                            return o.__generator(this, function(i) {
-                                return this.element ? (t = this.element.getBoundingClientRect(), n = t.top < e.bottom && t.bottom > e.top, n && !this.state.impressionEventFired && this.triggerImpressionEvent(), [2]) : [2]
-                            })
-                        })
-                    }, n.contextTypes = {
-                        registerReceiver: s.func,
-                        feedTrackingProps: s.object,
-                        feedImpressionSettings: s.object
-                    }, n
-                }(l.Component)
-            }
-        }
-
-        function r(e) {
-            return function(t) {
-                return function(n) {
-                    function i() {
-                        var t = null !== n && n.apply(this, arguments) || this;
-                        return t.getChildContext = function() {
-                            var n = e(t.props);
-                            return {
-                                feedTrackingProps: o.__assign({}, t.context.feedTrackingProps, n)
-                            }
-                        }, t
-                    }
-                    return o.__extends(i, n), i.prototype.render = function() {
-                        var e = {
-                            feedTrackingProps: this.getChildContext().feedTrackingProps
-                        };
-                        return l.createElement(t, o.__assign({}, this.props, e))
-                    }, i.contextTypes = {
-                        feedTrackingProps: s.object
-                    }, i.childContextTypes = {
-                        feedTrackingProps: s.object
-                    }, i
-                }(l.Component)
-            }
-        }
-        var a = n(1053),
-            o = n(0),
-            s = n(15),
-            l = n(1),
-            u = n(2);
-        n.d(t, "a", function() {
-            return a.a
-        }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
-            return a.b
-        }), n.d(t, "c", function() {
-            return i
-        }), n.d(t, "d", function() {
-            return r
-        })
-    },
-    1053: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            var t = e.content.id;
-            switch (e.content.__typename) {
-                case "Clip":
-                    var n = e.content;
-                    return {
-                        type: s.a,
-                        id: n.slug
-                    };
-                case "Post":
-                    return Object(s.f)(t);
-                case "Stream":
-                    var i = e.content;
-                    return {
-                        type: s.d,
-                        id: i.broadcaster.id + ":" + t
-                    };
-                case "Video":
-                    return {
-                        type: s.e,
-                        id: t
-                    };
-                default:
-                    return {
-                        type: "",
-                        id: ""
-                    }
-            }
-        }
-        n.d(t, "a", function() {
-            return r
-        }), t.b = i, n.d(t, "c", function() {
-            return l
-        });
-        var r, a = n(1283),
-            o = (n.n(a), n(2)),
-            s = n(1131);
-        ! function(e) {
-            e.Create = "create", e.Remove = "remove"
-        }(r || (r = {}));
-        var l = function(e, t, n) {
-            o.m.track(e, Object(a.merge)(t, n))
-        }
-    },
-    1054: function(e, t, n) {
-        "use strict";
-        var i, r = n(0),
-            a = n(1),
-            o = n(2),
-            s = n(420),
-            l = n(6),
-            u = n(3),
-            c = (n(1316), "embed-overlay");
-        ! function(e) {
-            e[e.Clip = 0] = "Clip", e[e.Video = 1] = "Video", e[e.Stream = 2] = "Stream", e[e.VideoOEmbed = 3] = "VideoOEmbed"
-        }(i || (i = {}));
-        var d = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        showOverlay: !0
-                    }, t.getOverlayComponent = function() {
-                        var e = t.props,
-                            n = e.createdAt,
-                            r = e.lengthSeconds,
-                            l = e.thumbnailURL,
-                            d = e.type,
-                            p = e.viewCount,
-                            m = r && r > 0 ? Object(s.a)(r) : "";
-                        return a.createElement("a", {
-                            href: "#",
-                            onClick: t.handleClick,
-                            "data-test-selector": c
-                        }, a.createElement(u.j, {
-                            ratio: u.k.Aspect16x9
-                        }, a.createElement(u.U, null, a.createElement(u.P, {
-                            fullWidth: !0,
-                            fullHeight: !0,
-                            position: u._2.Absolute
-                        }, a.createElement("img", {
-                            src: l
-                        })), a.createElement(u.U, {
-                            className: "embed-card__overlay",
-                            position: u._2.Absolute,
-                            attachLeft: !0,
-                            attachTop: !0,
-                            fullWidth: !0,
-                            fullHeight: !0
-                        }, a.createElement(u.U, {
-                            className: "embed-card__play",
-                            display: u.H.Flex,
-                            justifyContent: u.T.Center,
-                            position: u._2.Absolute,
-                            attachLeft: !0,
-                            attachTop: !0,
-                            fullWidth: !0,
-                            fullHeight: !0
-                        }, a.createElement(u._8, {
-                            asset: u._9.Play,
-                            width: 50,
-                            height: 50
-                        })), a.createElement(u.U, {
-                            position: u._2.Absolute,
-                            padding: 1,
-                            attachBottom: !0,
-                            attachLeft: !0
-                        }, n && a.createElement(u._21, null, Object(o.c)(new Date(n), "medium")), a.createElement(u.U, null, d === i.Stream && a.createElement(u.U, {
-                            display: u.H.Inline,
-                            margin: {
-                                right: .5
-                            }
-                        }, a.createElement(u.V, null)), p && a.createElement("span", null, t.getFormattedViewCount(p, d)))), a.createElement(u.U, {
-                            position: u._2.Absolute,
-                            padding: 1,
-                            attachBottom: !0,
-                            attachRight: !0
-                        }, m && a.createElement(u.U, null, a.createElement(u._21, null, m)))), a.createElement(u._17, {
-                            position: u._2.Absolute,
-                            attachTop: !0,
-                            attachLeft: !0,
-                            margin: 1,
-                            fontSize: u.L.Size5
-                        }, d === i.Stream && a.createElement(u.Z, {
-                            label: Object(o.d)("Live", "EmbedOverlayPill"),
-                            type: u._0.Live
-                        }), d === i.Video && a.createElement(u.Z, {
-                            label: Object(o.d)("Video", "EmbedOverlayPill"),
-                            type: u._0.Overlay
-                        }), d === i.Clip && a.createElement(u.Z, {
-                            label: Object(o.d)("Clip", "EmbedOverlayPill"),
-                            type: u._0.Overlay
-                        })))))
-                    }, t.handleClick = function(e) {
-                        e.preventDefault(), t.setState({
-                            showOverlay: !1
-                        }), t.props.onClick && t.props.onClick()
-                    }, t
-                }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    return this.state.showOverlay ? this.getOverlayComponent() : a.createElement(u.j, {
-                        ratio: u.k.Aspect16x9
-                    }, this.props.children)
-                }, t.prototype.getFormattedViewCount = function(e, t) {
-                    switch (t) {
-                        case i.Stream:
-                            return Object(o.d)("{viewCount,number} viewers", {
-                                viewCount: e
-                            }, "OverlayViewCount");
-                        case i.Clip:
-                        case i.Video:
-                            return Object(o.d)("{viewCount,number} views", {
-                                viewCount: e
-                            }, "OverlayViewCount");
-                        default:
-                            return ""
-                    }
-                }, t
-            }(a.Component),
-            p = Object(l.c)("EmbedOverlay")(d),
-            m = p;
-        n.d(t, !1, function() {
-            return c
-        }), n.d(t, "b", function() {
-            return i
-        }), n.d(t, "a", function() {
-            return m
-        })
-    },
-    1061: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "FragmentDefinition",
-                name: {
-                    kind: "Name",
-                    value: "feedUser"
-                },
-                typeCondition: {
-                    kind: "NamedType",
-                    name: {
-                        kind: "Name",
-                        value: "User"
-                    }
-                },
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "id"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "displayName"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "login"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "profileImageURL"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "width"
-                            },
-                            value: {
-                                kind: "IntValue",
-                                value: "70"
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: null
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 85
-            }
-        };
-        n.loc.source = {
-            body: "fragment feedUser on User {\n  id\n  displayName\n  login\n  profileImageURL(width:70)\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    1128: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return {
-                type: o,
-                player: e
-            }
-        }
-
-        function r() {
-            return {
-                type: s
-            }
-        }
-
-        function a() {
-            return {
-                type: l
-            }
-        }
-        n.d(t, "b", function() {
-            return o
-        }), n.d(t, "c", function() {
-            return s
-        }), n.d(t, "a", function() {
-            return l
-        }), t.e = i, t.f = r, t.d = a;
-        var o = "carouselPlayer.CAROUSEL_REGISTERED",
-            s = "carouselPlayer.CAROUSEL_UNREGISTERED",
-            l = "carouselPlayer.CAROUSEL_PAUSED"
-    },
-    1129: function(e, t, n) {
-        "use strict";
-        n.d(t, "d", function() {
-            return r
-        }), n.d(t, "c", function() {
-            return a
-        }), n.d(t, "a", function() {
-            return o
-        }), n.d(t, "b", function() {
-            return s
-        }), n.d(t, "e", function() {
-            return c
-        }), n.d(t, "f", function() {
-            return d
-        }), n.d(t, "g", function() {
-            return p
-        });
-        var i, r = "TWILIGHT_WEB_ONBOARDING_FOR_YOU",
-            a = "TWILIGHT_WEB_ONBOARDING",
-            o = "control";
-        ! function(e) {
-            e.Skip = "skip", e.NoSkip = "no_skip"
-        }(i || (i = {}));
-        var s, l = new Set([i.Skip.toString(), i.NoSkip.toString()]);
-        ! function(e) {
-            e.First = "first", e.Last = "last"
-        }(s || (s = {}));
-        var u = new Set([s.First.toString(), s.Last.toString()]),
-            c = function(e) {
-                return !!e && u.has(e)
-            },
-            d = function(e, t) {
-                return !!e && l.has(e) && c(t)
-            },
-            p = function(e) {
-                return e.getTime() >= m().getTime()
-            },
-            m = function() {
-                return new Date((new Date).getTime() - 12096e5)
-            }
-    },
-    1131: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            var t = e.split(":");
-            return t.length < 2 ? {
-                type: "",
-                id: ""
-            } : {
-                type: t[0],
-                id: t[1]
-            }
-        }
-        n.d(t, "a", function() {
-            return r
-        }), n.d(t, "b", function() {
-            return a
-        }), n.d(t, "c", function() {
-            return o
-        }), n.d(t, "d", function() {
-            return s
-        }), n.d(t, "e", function() {
-            return l
-        }), t.f = i;
-        var r = "clip",
-            a = "url",
-            o = "post",
-            s = "stream",
-            l = "vod"
-    },
-    1132: function(e, t, n) {
-        function i(e) {
-            return e.filter(function(e) {
-                if ("FragmentDefinition" !== e.kind) return !0;
-                var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
-            })
-        }
-        var r = {
-            kind: "Document",
-            definitions: [{
-                kind: "FragmentDefinition",
-                name: {
-                    kind: "Name",
-                    value: "feedItemPost"
-                },
-                typeCondition: {
-                    kind: "NamedType",
-                    name: {
-                        kind: "Name",
-                        value: "Post"
-                    }
-                },
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "id"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "createdAt"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "body"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "content"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "emotes"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "FragmentSpread",
-                                        name: {
-                                            kind: "Name",
-                                            value: "embeddedEmote"
-                                        },
-                                        directives: []
-                                    }]
-                                }
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "reactions"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "emote"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "token"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "setID"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "count"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "self"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "hasReacted"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "embeds"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "FragmentSpread",
-                                name: {
-                                    kind: "Name",
-                                    value: "feedItemClip"
-                                },
-                                directives: []
-                            }, {
-                                kind: "FragmentSpread",
-                                name: {
-                                    kind: "Name",
-                                    value: "feedItemVideo"
-                                },
-                                directives: []
-                            }, {
-                                kind: "InlineFragment",
-                                typeCondition: {
-                                    kind: "NamedType",
-                                    name: {
-                                        kind: "Name",
-                                        value: "PhotoOEmbed"
-                                    }
-                                },
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "title"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "inputURL"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "providerName"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "thumbnail"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "url"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }, {
-                                kind: "InlineFragment",
-                                typeCondition: {
-                                    kind: "NamedType",
-                                    name: {
-                                        kind: "Name",
-                                        value: "VideoOEmbed"
-                                    }
-                                },
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "title"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "inputURL"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "providerName"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "thumbnail"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "url"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "html"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "author"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "FragmentSpread",
-                                name: {
-                                    kind: "Name",
-                                    value: "feedUser"
-                                },
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 803
-            }
-        };
-        r.loc.source = {
-            body: '#import "twilight/features/chat/models/embedded-emote-fragment.gql"\n#import "twilight/features/feed/models/clip-fragment.gql"\n#import "twilight/features/feed/models/user-fragment.gql"\n#import "twilight/features/feed/models/video-fragment.gql"\n\nfragment feedItemPost on Post {\n  id\n  createdAt\n  body {\n    content\n    emotes {\n      ...embeddedEmote\n    }\n  }\n  reactions {\n    emote {\n      id\n      token\n      setID\n    }\n    count\n    self {\n      hasReacted\n    }\n  }\n  embeds {\n    ...feedItemClip\n    ...feedItemVideo\n    ... on PhotoOEmbed {\n      title\n      inputURL\n      providerName\n      thumbnail {\n        url\n      }\n    }\n    ... on VideoOEmbed {\n      title\n      inputURL\n      providerName\n      thumbnail {\n        url\n      }\n      html\n    }\n  }\n  author {\n    ...feedUser\n  }\n}\n',
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        var a = {};
-        r.definitions = r.definitions.concat(i(n(1038).definitions)), r.definitions = r.definitions.concat(i(n(1161).definitions)), r.definitions = r.definitions.concat(i(n(1061).definitions)), r.definitions = r.definitions.concat(i(n(1162).definitions)), e.exports = r
-    },
-    1136: function(e, t) {},
-    1137: function(e, t) {},
-    1160: function(e, t, n) {
+webpackJsonp([44], {
+    1013: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
-            a = n(6),
-            o = n(1041),
+            a = n(5),
+            o = n(886),
             s = n(3),
             l = function(e) {
                 function t() {
@@ -1813,7 +65,7 @@ webpackJsonp([45], {
             return u
         })
     },
-    1161: function(e, t, n) {
+    1014: function(e, t, n) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -2116,9 +368,9 @@ webpackJsonp([45], {
                 var t = e.name.value;
                 return !r[t] && (r[t] = !0, !0)
             })
-        }(n(1061).definitions)), e.exports = i
+        }(n(905).definitions)), e.exports = i
     },
-    1162: function(e, t, n) {
+    1015: function(e, t, n) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -2395,9 +647,9 @@ webpackJsonp([45], {
                 var t = e.name.value;
                 return !r[t] && (r[t] = !0, !0)
             })
-        }(n(1061).definitions)), e.exports = i
+        }(n(905).definitions)), e.exports = i
     },
-    1283: function(e, t, n) {
+    1021: function(e, t, n) {
         (function(e, i) {
             var r;
             (function() {
@@ -2608,11 +860,11 @@ webpackJsonp([45], {
                     return i
                 }
 
-                function G(e) {
+                function B(e) {
                     return "\\" + Nn[e]
                 }
 
-                function B(e, t) {
+                function G(e, t) {
                     return null == e ? re : e[t]
                 }
 
@@ -2745,8 +997,8 @@ webpackJsonp([45], {
                         ["rearg", Te]
                     ],
                     Ve = "[object Arguments]",
-                    Ge = "[object Array]",
-                    Be = "[object AsyncFunction]",
+                    Be = "[object Array]",
+                    Ge = "[object AsyncFunction]",
                     ze = "[object Boolean]",
                     We = "[object Date]",
                     He = "[object DOMException]",
@@ -2799,8 +1051,8 @@ webpackJsonp([45], {
                     Lt = /\{\n\/\* \[wrapped with (.+)\] \*/,
                     Mt = /,? & /,
                     Vt = /[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g,
-                    Gt = /\\(\\)?/g,
-                    Bt = /\$\{([^\\}]*(?:\\.[^\\}]*)*)\}/g,
+                    Bt = /\\(\\)?/g,
+                    Gt = /\$\{([^\\}]*(?:\\.[^\\}]*)*)\}/g,
                     zt = /\w*$/,
                     Wt = /^[-+]0x[0-9a-f]+$/i,
                     Ht = /^0b[01]+$/i,
@@ -2835,9 +1087,9 @@ webpackJsonp([45], {
                     kn = ["Array", "Buffer", "DataView", "Date", "Error", "Float32Array", "Float64Array", "Function", "Int8Array", "Int16Array", "Int32Array", "Map", "Math", "Object", "Promise", "RegExp", "Set", "String", "Symbol", "TypeError", "Uint8Array", "Uint8ClampedArray", "Uint16Array", "Uint32Array", "WeakMap", "_", "clearTimeout", "isFinite", "parseInt", "setTimeout"],
                     _n = -1,
                     En = {};
-                En[ut] = En[ct] = En[dt] = En[pt] = En[mt] = En[ft] = En[ht] = En[gt] = En[bt] = !0, En[Ve] = En[Ge] = En[st] = En[ze] = En[lt] = En[We] = En[qe] = En[$e] = En[Qe] = En[Ye] = En[Je] = En[et] = En[tt] = En[nt] = En[at] = !1;
+                En[ut] = En[ct] = En[dt] = En[pt] = En[mt] = En[ft] = En[ht] = En[gt] = En[bt] = !0, En[Ve] = En[Be] = En[st] = En[ze] = En[lt] = En[We] = En[qe] = En[$e] = En[Qe] = En[Ye] = En[Je] = En[et] = En[tt] = En[nt] = En[at] = !1;
                 var Tn = {};
-                Tn[Ve] = Tn[Ge] = Tn[st] = Tn[lt] = Tn[ze] = Tn[We] = Tn[ut] = Tn[ct] = Tn[dt] = Tn[pt] = Tn[mt] = Tn[Qe] = Tn[Ye] = Tn[Je] = Tn[et] = Tn[tt] = Tn[nt] = Tn[it] = Tn[ft] = Tn[ht] = Tn[gt] = Tn[bt] = !0, Tn[qe] = Tn[$e] = Tn[at] = !1;
+                Tn[Ve] = Tn[Be] = Tn[st] = Tn[lt] = Tn[ze] = Tn[We] = Tn[ut] = Tn[ct] = Tn[dt] = Tn[pt] = Tn[mt] = Tn[Qe] = Tn[Ye] = Tn[Je] = Tn[et] = Tn[tt] = Tn[nt] = Tn[it] = Tn[ft] = Tn[ht] = Tn[gt] = Tn[bt] = !0, Tn[qe] = Tn[$e] = Tn[at] = !1;
                 var Cn = {
                         "À": "A",
                         "Á": "A",
@@ -3068,8 +1320,8 @@ webpackJsonp([45], {
                     }(),
                     Mn = Ln && Ln.isArrayBuffer,
                     Vn = Ln && Ln.isDate,
-                    Gn = Ln && Ln.isMap,
-                    Bn = Ln && Ln.isRegExp,
+                    Bn = Ln && Ln.isMap,
+                    Gn = Ln && Ln.isRegExp,
                     zn = Ln && Ln.isSet,
                     Wn = Ln && Ln.isTypedArray,
                     Hn = N("length"),
@@ -3349,7 +1601,7 @@ webpackJsonp([45], {
                         }
 
                         function Xn(e, t) {
-                            return e && Lr(t, Gl(t), e)
+                            return e && Lr(t, Bl(t), e)
                         }
 
                         function ei(e, t, n) {
@@ -3394,7 +1646,7 @@ webpackJsonp([45], {
                             var f = a.get(e);
                             if (f) return f;
                             a.set(e, o);
-                            var h = c ? l ? va : ba : l ? Gl : Vl,
+                            var h = c ? l ? va : ba : l ? Bl : Vl,
                                 g = d ? re : h(e);
                             return u(g || e, function(i, r) {
                                 g && (r = i, i = e[r]), Hn(o, r, ii(i, t, n, r, e, a))
@@ -3586,8 +1838,8 @@ webpackJsonp([45], {
                         function Ii(e, t, n, i, r, a) {
                             var o = gp(e),
                                 s = gp(t),
-                                l = o ? Ge : Pd(e),
-                                u = s ? Ge : Pd(t);
+                                l = o ? Be : Pd(e),
+                                u = s ? Be : Pd(t);
                             l = l == Ve ? Je : l, u = u == Ve ? Je : u;
                             var c = l == Je,
                                 d = u == Je,
@@ -3655,7 +1907,7 @@ webpackJsonp([45], {
                         }
 
                         function Ai(e) {
-                            return "function" == typeof e ? e : null == e ? Iu : "object" == typeof e ? gp(e) ? zi(e[0], e[1]) : Bi(e) : Lu(e)
+                            return "function" == typeof e ? e : null == e ? Iu : "object" == typeof e ? gp(e) ? zi(e[0], e[1]) : Gi(e) : Lu(e)
                         }
 
                         function Li(e) {
@@ -3677,7 +1929,7 @@ webpackJsonp([45], {
                             return e < t
                         }
 
-                        function Gi(e, t) {
+                        function Bi(e, t) {
                             var n = -1,
                                 i = qs(e) ? nc(e.length) : [];
                             return fd(e, function(e, r, a) {
@@ -3685,15 +1937,15 @@ webpackJsonp([45], {
                             }), i
                         }
 
-                        function Bi(e) {
+                        function Gi(e) {
                             var t = Ea(e);
-                            return 1 == t.length && t[0][2] ? Ba(t[0][0], t[0][1]) : function(n) {
+                            return 1 == t.length && t[0][2] ? Ga(t[0][0], t[0][1]) : function(n) {
                                 return n === e || Ui(n, e, t)
                             }
                         }
 
                         function zi(e, t) {
-                            return ja(e) && Ga(t) ? Ba(Ja(e), t) : function(n) {
+                            return ja(e) && Ba(t) ? Ga(Ja(e), t) : function(n) {
                                 var i = Al(n, e);
                                 return i === re && i === t ? Ml(n, e) : Oi(t, i, fe | he)
                             }
@@ -3706,7 +1958,7 @@ webpackJsonp([45], {
                                     var s = i ? i(e[o], a, o + "", e, t, r) : re;
                                     s === re && (s = a), Ln(e, o, s)
                                 }
-                            }, Gl)
+                            }, Bl)
                         }
 
                         function Hi(e, t, n, i, r, a, o) {
@@ -3732,7 +1984,7 @@ webpackJsonp([45], {
 
                         function $i(e, t, n) {
                             var i = -1;
-                            return t = h(t.length ? t : [Iu], x(ka())), R(Gi(e, function(e, n, r) {
+                            return t = h(t.length ? t : [Iu], x(ka())), R(Bi(e, function(e, n, r) {
                                 return {
                                     criteria: h(t, function(t) {
                                         return t(e)
@@ -4092,7 +2344,7 @@ webpackJsonp([45], {
                             return Lr(e, Cd(e), t)
                         }
 
-                        function Gr(e, t) {
+                        function Br(e, t) {
                             return function(n, i) {
                                 var r = gp(n) ? l : Zn,
                                     a = t ? t() : {};
@@ -4100,7 +2352,7 @@ webpackJsonp([45], {
                             }
                         }
 
-                        function Br(e) {
+                        function Gr(e) {
                             return nr(function(t, n) {
                                 var i = -1,
                                     r = n.length,
@@ -4483,7 +2735,7 @@ webpackJsonp([45], {
                         }
 
                         function va(e) {
-                            return bi(e, Gl, Cd)
+                            return bi(e, Bl, Cd)
                         }
 
                         function ya(e) {
@@ -4513,13 +2765,13 @@ webpackJsonp([45], {
                             for (var t = Vl(e), n = t.length; n--;) {
                                 var i = t[n],
                                     r = e[i];
-                                t[n] = [i, r, Ga(r)]
+                                t[n] = [i, r, Ba(r)]
                             }
                             return t
                         }
 
                         function Ta(e, t) {
-                            var n = B(e, t);
+                            var n = G(e, t);
                             return Di(n) ? n : re
                         }
 
@@ -4667,11 +2919,11 @@ webpackJsonp([45], {
                             return e === ("function" == typeof t && t.prototype || mc)
                         }
 
-                        function Ga(e) {
+                        function Ba(e) {
                             return e === e && !rl(e)
                         }
 
-                        function Ba(e, t) {
+                        function Ga(e, t) {
                             return function(n) {
                                 return null != n && (n[e] === t && (t !== re || e in sc(n)))
                             }
@@ -4991,11 +3243,11 @@ webpackJsonp([45], {
                             return i ? (t = n || t === re ? 1 : _l(t), t = i - t, sr(e, t < 0 ? 0 : t, i)) : []
                         }
 
-                        function Go(e, t) {
+                        function Bo(e, t) {
                             return e && e.length ? br(e, ka(t, 3), !1, !0) : []
                         }
 
-                        function Bo(e, t) {
+                        function Go(e, t) {
                             return e && e.length ? br(e, ka(t, 3)) : []
                         }
 
@@ -5134,7 +3386,7 @@ webpackJsonp([45], {
                         }
 
                         function fs(e, t) {
-                            return (gp(e) ? h : Gi)(e, ka(t, 3))
+                            return (gp(e) ? h : Bi)(e, ka(t, 3))
                         }
 
                         function hs(e, t, n, i) {
@@ -5355,11 +3607,11 @@ webpackJsonp([45], {
                             return ii(e, me)
                         }
 
-                        function Gs(e, t) {
+                        function Bs(e, t) {
                             return t = "function" == typeof t ? t : re, ii(e, me, t)
                         }
 
-                        function Bs(e) {
+                        function Gs(e) {
                             return ii(e, de | me)
                         }
 
@@ -5419,13 +3671,13 @@ webpackJsonp([45], {
                         }
 
                         function el(e) {
-                            return "number" == typeof e && Bc(e)
+                            return "number" == typeof e && Gc(e)
                         }
 
                         function tl(e) {
                             if (!rl(e)) return !1;
                             var t = vi(e);
-                            return t == $e || t == Ke || t == Be || t == Xe
+                            return t == $e || t == Ke || t == Ge || t == Xe
                         }
 
                         function nl(e) {
@@ -5546,7 +3798,7 @@ webpackJsonp([45], {
                         }
 
                         function Cl(e) {
-                            return Lr(e, Gl(e))
+                            return Lr(e, Bl(e))
                         }
 
                         function Pl(e) {
@@ -5571,11 +3823,11 @@ webpackJsonp([45], {
                         }
 
                         function Rl(e, t) {
-                            return null == e ? e : gd(e, ka(t, 3), Gl)
+                            return null == e ? e : gd(e, ka(t, 3), Bl)
                         }
 
                         function Ul(e, t) {
-                            return null == e ? e : bd(e, ka(t, 3), Gl)
+                            return null == e ? e : bd(e, ka(t, 3), Bl)
                         }
 
                         function Dl(e, t) {
@@ -5591,7 +3843,7 @@ webpackJsonp([45], {
                         }
 
                         function jl(e) {
-                            return null == e ? [] : hi(e, Gl(e))
+                            return null == e ? [] : hi(e, Bl(e))
                         }
 
                         function Al(e, t, n) {
@@ -5611,11 +3863,11 @@ webpackJsonp([45], {
                             return qs(e) ? Un(e) : Li(e)
                         }
 
-                        function Gl(e) {
+                        function Bl(e) {
                             return qs(e) ? Un(e, !0) : Mi(e)
                         }
 
-                        function Bl(e, t) {
+                        function Gl(e, t) {
                             var n = {};
                             return t = ka(t, 3), mi(e, function(e, i, r) {
                                 ei(n, t(e, i, r), e)
@@ -5691,7 +3943,7 @@ webpackJsonp([45], {
                         }
 
                         function eu(e) {
-                            return null == e ? [] : j(e, Gl(e))
+                            return null == e ? [] : j(e, Bl(e))
                         }
 
                         function tu(e, t, n) {
@@ -5789,10 +4041,10 @@ webpackJsonp([45], {
                                 c = 0,
                                 d = t.interpolate || Yt,
                                 p = "__p += '",
-                                m = lc((t.escape || Yt).source + "|" + d.source + "|" + (d === wt ? Bt : Yt).source + "|" + (t.evaluate || Yt).source + "|$", "g"),
+                                m = lc((t.escape || Yt).source + "|" + d.source + "|" + (d === wt ? Gt : Yt).source + "|" + (t.evaluate || Yt).source + "|$", "g"),
                                 f = "//# sourceURL=" + ("sourceURL" in t ? t.sourceURL : "lodash.templateSources[" + ++_n + "]") + "\n";
                             e.replace(m, function(t, n, i, r, s, l) {
-                                return i || (i = r), p += e.slice(c, l).replace(Zt, G), n && (a = !0, p += "' +\n__e(" + n + ") +\n'"), s && (o = !0, p += "';\n" + s + ";\n__p += '"), i && (p += "' +\n((__t = (" + i + ")) == null ? '' : __t) +\n'"), c = l + t.length, t
+                                return i || (i = r), p += e.slice(c, l).replace(Zt, B), n && (a = !0, p += "' +\n__e(" + n + ") +\n'"), s && (o = !0, p += "';\n" + s + ";\n__p += '"), i && (p += "' +\n((__t = (" + i + ")) == null ? '' : __t) +\n'"), c = l + t.length, t
                             }), p += "';\n";
                             var h = t.variable;
                             h || (p = "with (obj) {\n" + p + "\n}\n"), p = (o ? p.replace(vt, "") : p).replace(yt, "$1").replace(St, "$1;"), p = "function(" + (h || "obj") + ") {\n" + (h ? "" : "obj || (obj = {});\n") + "var __t, __p = ''" + (a ? ", __e = _.escape" : "") + (o ? ", __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n" : ";\n") + p + "return __p\n}";
@@ -5909,7 +4161,7 @@ webpackJsonp([45], {
                         }
 
                         function Uu(e) {
-                            return Bi(ii(e, de))
+                            return Gi(ii(e, de))
                         }
 
                         function Du(e, t) {
@@ -5965,11 +4217,11 @@ webpackJsonp([45], {
                             return []
                         }
 
-                        function Gu() {
+                        function Bu() {
                             return !1
                         }
 
-                        function Bu() {
+                        function Gu() {
                             return {}
                         }
 
@@ -6078,8 +4330,8 @@ webpackJsonp([45], {
                             Lc = oc.ceil,
                             Mc = oc.floor,
                             Vc = sc.getOwnPropertySymbols,
-                            Gc = Ec ? Ec.isBuffer : re,
-                            Bc = t.isFinite,
+                            Bc = Ec ? Ec.isBuffer : re,
+                            Gc = t.isFinite,
                             zc = dc.join,
                             Wc = $(sc.keys, sc),
                             Hc = oc.max,
@@ -6176,7 +4428,7 @@ webpackJsonp([45], {
                             }
                             return t
                         });
-                        var wd = fc ? tl : Gu,
+                        var wd = fc ? tl : Bu,
                             Nd = Ya(vd),
                             Od = Ac || function(e, t) {
                                 return Dn.setTimeout(e, t)
@@ -6191,7 +4443,7 @@ webpackJsonp([45], {
                             }(function(e) {
                                 var t = [];
                                 return It.test(e) && t.push(""), e.replace(Rt, function(e, n, i, r) {
-                                    t.push(i ? r.replace(Gt, "$1") : n || e)
+                                    t.push(i ? r.replace(Bt, "$1") : n || e)
                                 }), t
                             }),
                             Ud = nr(function(e, t) {
@@ -6230,11 +4482,11 @@ webpackJsonp([45], {
                             Vd = nr(function(e) {
                                 return fr(pi(e, 1, $s, !0))
                             }),
-                            Gd = nr(function(e) {
+                            Bd = nr(function(e) {
                                 var t = ko(e);
                                 return $s(t) && (t = re), fr(pi(e, 1, $s, !0), ka(t, 2))
                             }),
-                            Bd = nr(function(e) {
+                            Gd = nr(function(e) {
                                 var t = ko(e);
                                 return t = "function" == typeof t ? t : re, fr(pi(e, 1, $s, !0), re, t)
                             }),
@@ -6273,12 +4525,12 @@ webpackJsonp([45], {
                                     return t && !e.length && e.push(re), e
                                 })) : this.thru(a)
                             }),
-                            Yd = Gr(function(e, t, n) {
+                            Yd = Br(function(e, t, n) {
                                 gc.call(e, n) ? ++e[n] : ei(e, n, 1)
                             }),
                             Zd = Yr(co),
                             Jd = Yr(po),
-                            Xd = Gr(function(e, t, n) {
+                            Xd = Br(function(e, t, n) {
                                 gc.call(e, n) ? e[n].push(t) : ei(e, n, [t])
                             }),
                             ep = nr(function(e, t, n) {
@@ -6289,10 +4541,10 @@ webpackJsonp([45], {
                                     a[++i] = r ? s(t, e, n) : Ci(e, t, n)
                                 }), a
                             }),
-                            tp = Gr(function(e, t, n) {
+                            tp = Br(function(e, t, n) {
                                 ei(e, n, t)
                             }),
-                            np = Gr(function(e, t, n) {
+                            np = Br(function(e, t, n) {
                                 e[n ? 0 : 1].push(t)
                             }, function() {
                                 return [
@@ -6361,27 +4613,27 @@ webpackJsonp([45], {
                             },
                             gp = nc.isArray,
                             bp = Mn ? x(Mn) : wi,
-                            vp = Gc || Gu,
+                            vp = Bc || Bu,
                             yp = Vn ? x(Vn) : Ni,
-                            Sp = Gn ? x(Gn) : Ri,
-                            kp = Bn ? x(Bn) : Fi,
+                            Sp = Bn ? x(Bn) : Ri,
+                            kp = Gn ? x(Gn) : Fi,
                             _p = zn ? x(zn) : xi,
                             Ep = Wn ? x(Wn) : ji,
                             Tp = aa(Vi),
                             Cp = aa(function(e, t) {
                                 return e <= t
                             }),
-                            Pp = Br(function(e, t) {
+                            Pp = Gr(function(e, t) {
                                 if (Va(t) || qs(t)) return void Lr(t, Vl(t), e);
                                 for (var n in t) gc.call(t, n) && Hn(e, n, t[n])
                             }),
-                            wp = Br(function(e, t) {
-                                Lr(t, Gl(t), e)
+                            wp = Gr(function(e, t) {
+                                Lr(t, Bl(t), e)
                             }),
-                            Np = Br(function(e, t, n, i) {
-                                Lr(t, Gl(t), e, i)
+                            Np = Gr(function(e, t, n, i) {
+                                Lr(t, Bl(t), e, i)
                             }),
-                            Op = Br(function(e, t, n, i) {
+                            Op = Gr(function(e, t, n, i) {
                                 Lr(t, Vl(t), e, i)
                             }),
                             Ip = ga(ti),
@@ -6398,10 +4650,10 @@ webpackJsonp([45], {
                                 gc.call(e, t) ? e[t].push(n) : e[t] = [n]
                             }, ka),
                             xp = nr(Ci),
-                            jp = Br(function(e, t, n) {
+                            jp = Gr(function(e, t, n) {
                                 Wi(e, t, n)
                             }),
-                            Ap = Br(function(e, t, n, i) {
+                            Ap = Gr(function(e, t, n, i) {
                                 Wi(e, t, n, i)
                             }),
                             Lp = ga(function(e, t) {
@@ -6418,8 +4670,8 @@ webpackJsonp([45], {
                                 return null == e ? {} : Ki(e, t)
                             }),
                             Vp = la(Vl),
-                            Gp = la(Gl),
-                            Bp = $r(function(e, t, n) {
+                            Bp = la(Bl),
+                            Gp = $r(function(e, t, n) {
                                 return t = t.toLowerCase(), e + (n ? ru(t) : t)
                             }),
                             zp = $r(function(e, t, n) {
@@ -6483,7 +4735,7 @@ webpackJsonp([45], {
                             mm = ea(function(e, t) {
                                 return e - t
                             }, 0);
-                        return n.after = Ts, n.ary = Cs, n.assign = Pp, n.assignIn = wp, n.assignInWith = Np, n.assignWith = Op, n.at = Ip, n.before = Ps, n.bind = ap, n.bindAll = Zp, n.bindKey = op, n.castArray = Ms, n.chain = Yo, n.chunk = no, n.compact = io, n.concat = ro, n.cond = Pu, n.conforms = wu, n.constant = Nu, n.countBy = Yd, n.create = Nl, n.curry = ws, n.curryRight = Ns, n.debounce = Os, n.defaults = Rp, n.defaultsDeep = Up, n.defer = sp, n.delay = lp, n.difference = Ud, n.differenceBy = Dd, n.differenceWith = Fd, n.drop = ao, n.dropRight = oo, n.dropRightWhile = so, n.dropWhile = lo, n.fill = uo, n.filter = ss, n.flatMap = ls, n.flatMapDeep = us, n.flatMapDepth = cs, n.flatten = mo, n.flattenDeep = fo, n.flattenDepth = ho, n.flip = Is, n.flow = Jp, n.flowRight = Xp, n.fromPairs = go, n.functions = xl, n.functionsIn = jl, n.groupBy = Xd, n.initial = yo, n.intersection = xd, n.intersectionBy = jd, n.intersectionWith = Ad, n.invert = Dp, n.invertBy = Fp, n.invokeMap = ep, n.iteratee = Ru, n.keyBy = tp, n.keys = Vl, n.keysIn = Gl, n.map = fs, n.mapKeys = Bl, n.mapValues = zl, n.matches = Uu, n.matchesProperty = Du, n.memoize = Rs, n.merge = jp, n.mergeWith = Ap, n.method = em, n.methodOf = tm, n.mixin = Fu, n.negate = Us, n.nthArg = Au, n.omit = Lp, n.omitBy = Wl, n.once = Ds, n.orderBy = hs, n.over = nm, n.overArgs = up, n.overEvery = im, n.overSome = rm, n.partial = cp, n.partialRight = dp, n.partition = np, n.pick = Mp, n.pickBy = Hl, n.property = Lu, n.propertyOf = Mu, n.pull = Ld, n.pullAll = To, n.pullAllBy = Co, n.pullAllWith = Po, n.pullAt = Md, n.range = am, n.rangeRight = om, n.rearg = pp, n.reject = vs, n.remove = wo, n.rest = Fs, n.reverse = No, n.sampleSize = Ss, n.set = $l, n.setWith = Kl, n.shuffle = ks, n.slice = Oo, n.sortBy = ip, n.sortedUniq = jo, n.sortedUniqBy = Ao, n.split = hu, n.spread = xs, n.tail = Lo, n.take = Mo, n.takeRight = Vo, n.takeRightWhile = Go, n.takeWhile = Bo, n.tap = Zo, n.throttle = js, n.thru = Jo, n.toArray = Sl, n.toPairs = Vp, n.toPairsIn = Gp, n.toPath = qu, n.toPlainObject = Cl, n.transform = Ql, n.unary = As, n.union = Vd, n.unionBy = Gd, n.unionWith = Bd, n.uniq = zo, n.uniqBy = Wo, n.uniqWith = Ho, n.unset = Yl, n.unzip = qo, n.unzipWith = $o, n.update = Zl, n.updateWith = Jl, n.values = Xl, n.valuesIn = eu, n.without = zd, n.words = Cu, n.wrap = Ls, n.xor = Wd, n.xorBy = Hd, n.xorWith = qd, n.zip = $d, n.zipObject = Ko, n.zipObjectDeep = Qo, n.zipWith = Kd, n.entries = Vp, n.entriesIn = Gp, n.extend = wp, n.extendWith = Np, Fu(n, n), n.add = sm, n.attempt = Yp, n.camelCase = Bp, n.capitalize = ru, n.ceil = lm, n.clamp = tu, n.clone = Vs, n.cloneDeep = Bs, n.cloneDeepWith = zs, n.cloneWith = Gs, n.conformsTo = Ws, n.deburr = au, n.defaultTo = Ou, n.divide = um, n.endsWith = ou, n.eq = Hs, n.escape = su, n.escapeRegExp = lu, n.every = os, n.find = Zd, n.findIndex = co, n.findKey = Ol, n.findLast = Jd, n.findLastIndex = po, n.findLastKey = Il, n.floor = cm, n.forEach = ds, n.forEachRight = ps, n.forIn = Rl, n.forInRight = Ul, n.forOwn = Dl, n.forOwnRight = Fl, n.get = Al, n.gt = mp, n.gte = fp, n.has = Ll, n.hasIn = Ml, n.head = bo, n.identity = Iu, n.includes = ms, n.indexOf = vo, n.inRange = nu, n.invoke = xp, n.isArguments = hp, n.isArray = gp, n.isArrayBuffer = bp, n.isArrayLike = qs, n.isArrayLikeObject = $s, n.isBoolean = Ks, n.isBuffer = vp, n.isDate = yp, n.isElement = Qs, n.isEmpty = Ys, n.isEqual = Zs, n.isEqualWith = Js, n.isError = Xs, n.isFinite = el, n.isFunction = tl, n.isInteger = nl, n.isLength = il, n.isMap = Sp, n.isMatch = ol, n.isMatchWith = sl, n.isNaN = ll, n.isNative = ul, n.isNil = dl, n.isNull = cl, n.isNumber = pl, n.isObject = rl, n.isObjectLike = al, n.isPlainObject = ml, n.isRegExp = kp, n.isSafeInteger = fl, n.isSet = _p, n.isString = hl, n.isSymbol = gl, n.isTypedArray = Ep, n.isUndefined = bl, n.isWeakMap = vl, n.isWeakSet = yl, n.join = So, n.kebabCase = zp, n.last = ko, n.lastIndexOf = _o, n.lowerCase = Wp, n.lowerFirst = Hp, n.lt = Tp, n.lte = Cp, n.max = Ku, n.maxBy = Qu, n.mean = Yu, n.meanBy = Zu, n.min = Ju, n.minBy = Xu, n.stubArray = Vu, n.stubFalse = Gu, n.stubObject = Bu, n.stubString = zu, n.stubTrue = Wu, n.multiply = dm, n.nth = Eo, n.noConflict = xu, n.noop = ju, n.now = rp, n.pad = uu, n.padEnd = cu, n.padStart = du, n.parseInt = pu, n.random = iu, n.reduce = gs, n.reduceRight = bs, n.repeat = mu, n.replace = fu, n.result = ql, n.round = pm, n.runInContext = e, n.sample = ys, n.size = _s, n.snakeCase = qp, n.some = Es, n.sortedIndex = Io, n.sortedIndexBy = Ro, n.sortedIndexOf = Uo, n.sortedLastIndex = Do, n.sortedLastIndexBy = Fo, n.sortedLastIndexOf = xo, n.startCase = $p, n.startsWith = gu, n.subtract = mm, n.sum = ec, n.sumBy = tc, n.template = bu, n.times = Hu, n.toFinite = kl, n.toInteger = _l, n.toLength = El, n.toLower = vu, n.toNumber = Tl, n.toSafeInteger = Pl, n.toString = wl, n.toUpper = yu, n.trim = Su, n.trimEnd = ku, n.trimStart = _u, n.truncate = Eu, n.unescape = Tu, n.uniqueId = $u, n.upperCase = Kp, n.upperFirst = Qp, n.each = ds, n.eachRight = ps, n.first = bo, Fu(n, function() {
+                        return n.after = Ts, n.ary = Cs, n.assign = Pp, n.assignIn = wp, n.assignInWith = Np, n.assignWith = Op, n.at = Ip, n.before = Ps, n.bind = ap, n.bindAll = Zp, n.bindKey = op, n.castArray = Ms, n.chain = Yo, n.chunk = no, n.compact = io, n.concat = ro, n.cond = Pu, n.conforms = wu, n.constant = Nu, n.countBy = Yd, n.create = Nl, n.curry = ws, n.curryRight = Ns, n.debounce = Os, n.defaults = Rp, n.defaultsDeep = Up, n.defer = sp, n.delay = lp, n.difference = Ud, n.differenceBy = Dd, n.differenceWith = Fd, n.drop = ao, n.dropRight = oo, n.dropRightWhile = so, n.dropWhile = lo, n.fill = uo, n.filter = ss, n.flatMap = ls, n.flatMapDeep = us, n.flatMapDepth = cs, n.flatten = mo, n.flattenDeep = fo, n.flattenDepth = ho, n.flip = Is, n.flow = Jp, n.flowRight = Xp, n.fromPairs = go, n.functions = xl, n.functionsIn = jl, n.groupBy = Xd, n.initial = yo, n.intersection = xd, n.intersectionBy = jd, n.intersectionWith = Ad, n.invert = Dp, n.invertBy = Fp, n.invokeMap = ep, n.iteratee = Ru, n.keyBy = tp, n.keys = Vl, n.keysIn = Bl, n.map = fs, n.mapKeys = Gl, n.mapValues = zl, n.matches = Uu, n.matchesProperty = Du, n.memoize = Rs, n.merge = jp, n.mergeWith = Ap, n.method = em, n.methodOf = tm, n.mixin = Fu, n.negate = Us, n.nthArg = Au, n.omit = Lp, n.omitBy = Wl, n.once = Ds, n.orderBy = hs, n.over = nm, n.overArgs = up, n.overEvery = im, n.overSome = rm, n.partial = cp, n.partialRight = dp, n.partition = np, n.pick = Mp, n.pickBy = Hl, n.property = Lu, n.propertyOf = Mu, n.pull = Ld, n.pullAll = To, n.pullAllBy = Co, n.pullAllWith = Po, n.pullAt = Md, n.range = am, n.rangeRight = om, n.rearg = pp, n.reject = vs, n.remove = wo, n.rest = Fs, n.reverse = No, n.sampleSize = Ss, n.set = $l, n.setWith = Kl, n.shuffle = ks, n.slice = Oo, n.sortBy = ip, n.sortedUniq = jo, n.sortedUniqBy = Ao, n.split = hu, n.spread = xs, n.tail = Lo, n.take = Mo, n.takeRight = Vo, n.takeRightWhile = Bo, n.takeWhile = Go, n.tap = Zo, n.throttle = js, n.thru = Jo, n.toArray = Sl, n.toPairs = Vp, n.toPairsIn = Bp, n.toPath = qu, n.toPlainObject = Cl, n.transform = Ql, n.unary = As, n.union = Vd, n.unionBy = Bd, n.unionWith = Gd, n.uniq = zo, n.uniqBy = Wo, n.uniqWith = Ho, n.unset = Yl, n.unzip = qo, n.unzipWith = $o, n.update = Zl, n.updateWith = Jl, n.values = Xl, n.valuesIn = eu, n.without = zd, n.words = Cu, n.wrap = Ls, n.xor = Wd, n.xorBy = Hd, n.xorWith = qd, n.zip = $d, n.zipObject = Ko, n.zipObjectDeep = Qo, n.zipWith = Kd, n.entries = Vp, n.entriesIn = Bp, n.extend = wp, n.extendWith = Np, Fu(n, n), n.add = sm, n.attempt = Yp, n.camelCase = Gp, n.capitalize = ru, n.ceil = lm, n.clamp = tu, n.clone = Vs, n.cloneDeep = Gs, n.cloneDeepWith = zs, n.cloneWith = Bs, n.conformsTo = Ws, n.deburr = au, n.defaultTo = Ou, n.divide = um, n.endsWith = ou, n.eq = Hs, n.escape = su, n.escapeRegExp = lu, n.every = os, n.find = Zd, n.findIndex = co, n.findKey = Ol, n.findLast = Jd, n.findLastIndex = po, n.findLastKey = Il, n.floor = cm, n.forEach = ds, n.forEachRight = ps, n.forIn = Rl, n.forInRight = Ul, n.forOwn = Dl, n.forOwnRight = Fl, n.get = Al, n.gt = mp, n.gte = fp, n.has = Ll, n.hasIn = Ml, n.head = bo, n.identity = Iu, n.includes = ms, n.indexOf = vo, n.inRange = nu, n.invoke = xp, n.isArguments = hp, n.isArray = gp, n.isArrayBuffer = bp, n.isArrayLike = qs, n.isArrayLikeObject = $s, n.isBoolean = Ks, n.isBuffer = vp, n.isDate = yp, n.isElement = Qs, n.isEmpty = Ys, n.isEqual = Zs, n.isEqualWith = Js, n.isError = Xs, n.isFinite = el, n.isFunction = tl, n.isInteger = nl, n.isLength = il, n.isMap = Sp, n.isMatch = ol, n.isMatchWith = sl, n.isNaN = ll, n.isNative = ul, n.isNil = dl, n.isNull = cl, n.isNumber = pl, n.isObject = rl, n.isObjectLike = al, n.isPlainObject = ml, n.isRegExp = kp, n.isSafeInteger = fl, n.isSet = _p, n.isString = hl, n.isSymbol = gl, n.isTypedArray = Ep, n.isUndefined = bl, n.isWeakMap = vl, n.isWeakSet = yl, n.join = So, n.kebabCase = zp, n.last = ko, n.lastIndexOf = _o, n.lowerCase = Wp, n.lowerFirst = Hp, n.lt = Tp, n.lte = Cp, n.max = Ku, n.maxBy = Qu, n.mean = Yu, n.meanBy = Zu, n.min = Ju, n.minBy = Xu, n.stubArray = Vu, n.stubFalse = Bu, n.stubObject = Gu, n.stubString = zu, n.stubTrue = Wu, n.multiply = dm, n.nth = Eo, n.noConflict = xu, n.noop = ju, n.now = rp, n.pad = uu, n.padEnd = cu, n.padStart = du, n.parseInt = pu, n.random = iu, n.reduce = gs, n.reduceRight = bs, n.repeat = mu, n.replace = fu, n.result = ql, n.round = pm, n.runInContext = e, n.sample = ys, n.size = _s, n.snakeCase = qp, n.some = Es, n.sortedIndex = Io, n.sortedIndexBy = Ro, n.sortedIndexOf = Uo, n.sortedLastIndex = Do, n.sortedLastIndexBy = Fo, n.sortedLastIndexOf = xo, n.startCase = $p, n.startsWith = gu, n.subtract = mm, n.sum = ec, n.sumBy = tc, n.template = bu, n.times = Hu, n.toFinite = kl, n.toInteger = _l, n.toLength = El, n.toLower = vu, n.toNumber = Tl, n.toSafeInteger = Pl, n.toString = wl, n.toUpper = yu, n.trim = Su, n.trimEnd = ku, n.trimStart = _u, n.truncate = Eu, n.unescape = Tu, n.uniqueId = $u, n.upperCase = Kp, n.upperFirst = Qp, n.each = ds, n.eachRight = ps, n.first = bo, Fu(n, function() {
                             var e = {};
                             return mi(n, function(t, i) {
                                 gc.call(n.prototype, i) || (e[i] = t)
@@ -6606,9 +4858,9 @@ webpackJsonp([45], {
                     return Qn
                 }.call(t, n, t, i)) !== re && (i.exports = r)
             }).call(this)
-        }).call(t, n(32), n(425)(e))
+        }).call(t, n(31), n(374)(e))
     },
-    1299: function(e, t, n) {
+    1045: function(e, t, n) {
         "use strict";
 
         function i() {
@@ -6702,16 +4954,16 @@ webpackJsonp([45], {
         }
         var m, f = n(0),
             h = n(2),
-            g = n(1128);
+            g = n(977);
         h.n.store.registerReducer("carouselPlayer", r);
-        var b = n(9),
-            v = n(11),
+        var b = n(8),
+            v = n(10),
             y = n(4),
             S = n(1),
-            k = n(1005),
-            _ = n(6),
+            k = n(846),
+            _ = n(5),
             E = n(3),
-            T = (n(1366), "carousel-card-live"),
+            T = (n(1265), "carousel-card-live"),
             C = "carousel-card-vod",
             P = function(e) {
                 function t() {
@@ -6792,11 +5044,11 @@ webpackJsonp([45], {
                 }, t = f.__decorate([Object(_.c)("CarouselCard")], t)
             }(S.Component),
             w = P,
-            N = n(68),
-            O = n(12),
-            I = n(52),
-            R = n(1041),
-            U = (n(1367), {
+            N = n(64),
+            O = n(11),
+            I = n(51),
+            R = n(886),
+            U = (n(1266), {
                 content: "carousel",
                 medium: "twitch_home"
             }),
@@ -6974,8 +5226,8 @@ webpackJsonp([45], {
                     return this.props.item ? this.getContentRender() : this.getPlaceholderRender()
                 }, t
             }(S.Component),
-            F = n(275),
-            x = (n(1368), function(e) {
+            F = n(254),
+            x = (n(1267), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
@@ -7115,8 +5367,8 @@ webpackJsonp([45], {
                 }, t
             }(S.Component)),
             j = Object(b.a)(o)(x),
-            A = n(14),
-            L = (n(1369), 6),
+            A = n(13),
+            L = (n(1268), 6),
             M = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -7269,12 +5521,12 @@ webpackJsonp([45], {
                 }, t = f.__decorate([Object(_.c)("CarouselPlayer")], t)
             }(S.Component),
             V = M,
-            G = Object(b.a)(null, p)(V);
+            B = Object(b.a)(null, p)(V);
         n.d(t, "a", function() {
-            return G
+            return B
         })
     },
-    1300: function(e, t, n) {
+    1046: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -7337,9 +5589,9 @@ webpackJsonp([45], {
             return e.replace(/\[\]\(.+\)/, "")
         }
         t.a = i, t.b = r;
-        var o = n(1005)
+        var o = n(846)
     },
-    1301: function(e, t, n) {
+    1047: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -7352,7 +5604,7 @@ webpackJsonp([45], {
         }
         t.a = i
     },
-    1306: function(e, t, n) {
+    1052: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
             return i
@@ -7370,7 +5622,7 @@ webpackJsonp([45], {
             return d
         });
         var i, r = n(2),
-            a = n(14);
+            a = n(13);
         ! function(e) {
             e.HomepageCTA = "homepage_cta", e.NewSignup = "new_signup"
         }(i || (i = {}));
@@ -7410,14 +5662,14 @@ webpackJsonp([45], {
                 r.m.track(a.SpadeEventType.BrowseForYou, e)
             }
     },
-    1314: function(e, t, n) {
+    1060: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
         });
         var i = n(2),
-            r = n(14),
-            a = (n(1053), function(e) {
+            r = n(13),
+            a = (n(898), function(e) {
                 var t = {
                     action: e.action,
                     entity: "post:" + e.postID,
@@ -7428,7 +5680,7 @@ webpackJsonp([45], {
                 i.m.track(r.SpadeEventType.FeedPost, t)
             })
     },
-    1315: function(e, t, n) {
+    1061: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -7465,19 +5717,36 @@ webpackJsonp([45], {
             return u
         })
     },
-    1316: function(e, t) {},
-    1341: function(e, t, n) {
+    1062: function(e, t) {},
+    1063: function(e, t, n) {
         "use strict";
 
         function i(e) {
-            return Object(E.bindActionCreators)({
-                pauseCarousel: T.d
+            var t = e.split(":");
+            return t[t.length - 1]
+        }
+
+        function r(e, t) {
+            return e + ":" + i(t)
+        }
+        n.d(t, "b", function() {
+            return i
+        }), n.d(t, "a", function() {
+            return r
+        })
+    },
+    1239: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return Object(_.bindActionCreators)({
+                pauseCarousel: E.d
             }, e)
         }
 
         function r(e) {
-            return Object(E.bindActionCreators)({
-                pauseCarousel: T.d
+            return Object(_.bindActionCreators)({
+                pauseCarousel: E.d
             }, e)
         }
 
@@ -7489,8 +5758,8 @@ webpackJsonp([45], {
         }
 
         function o(e, t) {
-            if (e.emote.id === me.emote.id) return -1;
-            if (t.emote.id === me.emote.id) return 1;
+            if (e.emote.id === pe.emote.id) return -1;
+            if (t.emote.id === pe.emote.id) return 1;
             var n = e.self.hasReacted,
                 i = t.self.hasReacted;
             if (e.count === t.count) {
@@ -7502,14 +5771,14 @@ webpackJsonp([45], {
 
         function s(e) {
             return {
-                isLoggedIn: Object(Y.d)(e)
+                isLoggedIn: Object(Q.d)(e)
             }
         }
 
         function l(e) {
-            return Object(E.bindActionCreators)({
+            return Object(_.bindActionCreators)({
                 login: function() {
-                    return Object(Q.f)(K.a.FeedReactionToggle)
+                    return Object(K.f)($.a.FeedReactionToggle)
                 }
             }, e)
         }
@@ -7528,17 +5797,17 @@ webpackJsonp([45], {
                 var i = e[n];
                 switch (i.type) {
                     case Se.a.ClipLink:
-                        t.push(g.createElement("a", {
+                        t.push(h.createElement("a", {
                             key: n,
                             href: i.content.url,
                             target: "_blank"
                         }, i.content.url));
                         break;
                     case Se.a.Link:
-                        i.content.url.match(_e) ? t.push(g.createElement(w.a, {
+                        i.content.url.match(_e) ? t.push(h.createElement(P.a, {
                             key: n,
                             to: i.content.url.replace(_e, "")
-                        }, i.content.displayText)) : t.push(g.createElement("a", {
+                        }, i.content.displayText)) : t.push(h.createElement("a", {
                             key: n,
                             href: i.content.url,
                             target: "_blank",
@@ -7546,20 +5815,20 @@ webpackJsonp([45], {
                         }, i.content.displayText));
                         break;
                     case Se.a.Mention:
-                        t.push(g.createElement(w.a, {
+                        t.push(h.createElement(P.a, {
                             key: n,
                             to: "/" + i.content.recipient
                         }, i.content.recipient));
                         break;
                     case Se.a.Emote:
-                        i.content.images.themed || t.push(g.createElement("img", {
+                        i.content.images.themed || t.push(h.createElement("img", {
                             key: n,
                             src: i.content.images.sources["1x"],
                             alt: i.content.alt
                         }));
                         break;
                     case Se.a.Text:
-                        t.push(g.createElement("span", {
+                        t.push(h.createElement("span", {
                             key: n
                         }, i.content))
                 }
@@ -7580,8 +5849,8 @@ webpackJsonp([45], {
                     }).filter(function(t) {
                         return !d(t, a[e].length)
                     }),
-                    l = Object(te.f)(a[e], Object(ke.b)(s), 0, {}, !1, n);
-                r.push(g.createElement(k._21, {
+                    l = Object(ee.f)(a[e], Object(ke.b)(s), 0, {}, !1, n);
+                r.push(h.createElement(S._21, {
                     key: e
                 }, c(l))), i = o
             }(o, s), s = i;
@@ -7589,80 +5858,76 @@ webpackJsonp([45], {
         }
 
         function m(e) {
-            return e.replace("post:", "")
-        }
-
-        function f(e) {
-            return Object(F.d)("{dateTime, date, medium} {dateTime, time, short}", {
+            return Object(D.d)("{dateTime, date, medium} {dateTime, time, short}", {
                 dateTime: e
             }, "PostDate")
         }
 
-        function h(e) {
+        function f(e) {
             return void 0 !== we[e]
         }
-        var g = n(1),
-            b = n(0),
-            v = n(1052),
-            y = n(1034),
-            S = n(6),
-            k = n(3),
-            _ = n(9),
-            E = n(11),
-            T = n(1128),
-            C = n(15),
-            P = n(1054),
-            w = n(12),
-            N = function(e) {
+        var h = n(1),
+            g = n(0),
+            b = n(897),
+            v = n(875),
+            y = n(5),
+            S = n(3),
+            k = n(8),
+            _ = n(10),
+            E = n(977),
+            T = n(14),
+            C = n(899),
+            P = n(11),
+            w = function(e) {
                 var t = e.author,
                     n = e.title,
                     i = e.description,
                     r = null,
                     a = null;
-                return t && (r = g.createElement(k.U, {
+                return t && (r = h.createElement(S.U, {
                     margin: {
                         right: 1
                     },
                     flexShrink: 0
-                }, g.createElement(w.a, {
+                }, h.createElement(P.a, {
                     to: "/" + t.login,
                     "data-a-target": "pulse-profile-picture"
-                }, g.createElement(k.P, {
+                }, h.createElement(S.P, {
                     flexShrink: 0
-                }, g.createElement(k.l, {
+                }, h.createElement(S.l, {
                     size: 40,
                     imageSrc: t.profileImageURL,
                     imageAlt: "User profile picture"
-                })))), a = g.createElement(k._21, {
-                    fontSize: k.L.Size6,
-                    color: k.F.Alt
-                }, g.createElement(w.a, {
+                })))), a = h.createElement(S._21, {
+                    fontSize: S.L.Size6,
+                    color: S.F.Alt
+                }, h.createElement(P.a, {
                     to: "/" + t.login,
                     "data-a-target": "pulse-displayname-link"
-                }, t.displayName))), g.createElement(k._17, {
-                    display: k.H.Flex,
-                    flexWrap: k.K.NoWrap,
+                }, t.displayName))), h.createElement(S._17, {
+                    display: S.H.Flex,
+                    flexWrap: S.K.NoWrap,
                     padding: 1,
-                    background: k.m.Base
-                }, r, g.createElement(k.U, {
+                    background: S.m.Base
+                }, r, h.createElement(S.U, {
                     flexGrow: 1,
-                    overflow: k.Y.Hidden
-                }, a, g.createElement(k._21, {
-                    fontSize: k.L.Size6,
-                    color: k.F.Base,
+                    overflow: S.Y.Hidden
+                }, a, h.createElement(S._21, {
+                    fontSize: S.L.Size6,
+                    color: S.F.Base,
                     bold: !0,
                     ellipsis: !0
-                }, n), i && g.createElement(k._21, {
-                    fontSize: k.L.Size6,
-                    color: k.F.Alt2,
+                }, n), i && h.createElement(S._21, {
+                    fontSize: S.L.Size6,
+                    color: S.F.Alt2,
                     noWrap: !0
                 }, i)))
             },
-            O = Object(S.c)("EmbedInfo", {
+            N = Object(y.c)("EmbedInfo", {
                 autoReportInteractive: !0
-            })(N),
-            I = n(1160),
-            R = function(e, t) {
+            })(w),
+            O = n(1013),
+            I = function(e, t) {
                 var n = e.embed,
                     i = n.broadcaster,
                     r = n.clipTitle,
@@ -7674,56 +5939,56 @@ webpackJsonp([45], {
                     c = n.viewCount,
                     d = u && u.game ? u.game.name : "",
                     p = function() {
-                        e.pauseCarousel && e.pauseCarousel(), Object(y.c)(e, t.feedTrackingProps)
+                        e.pauseCarousel && e.pauseCarousel(), Object(v.c)(e, t.feedTrackingProps)
                     };
-                return g.createElement(k.U, null, g.createElement(P.a, {
+                return h.createElement(S.U, null, h.createElement(C.a, {
                     createdAt: a,
                     lengthSeconds: o,
                     onClick: p,
                     thumbnailURL: l,
-                    type: P.b.Clip,
+                    type: C.b.Clip,
                     viewCount: c
-                }, g.createElement(I.a, {
+                }, h.createElement(O.a, {
                     embedURL: s
-                })), g.createElement(O, {
+                })), h.createElement(N, {
                     author: i,
                     title: r,
                     description: d
                 }))
             };
-        R.contextTypes = {
-            feedTrackingProps: C.object
+        I.contextTypes = {
+            feedTrackingProps: T.object
         };
-        var U = Object(S.c)("ClipEmbed", {
+        var R = Object(y.c)("ClipEmbed", {
                 autoReportInteractive: !0
-            })(R),
-            D = Object(_.a)(null, i)(U),
-            F = n(2),
-            x = function(e) {
+            })(I),
+            U = Object(k.a)(null, i)(R),
+            D = n(2),
+            F = function(e) {
                 var t = e.embed,
                     n = t.inputURL,
                     i = t.thumbnail,
                     r = t.providerName;
-                return g.createElement("a", {
+                return h.createElement("a", {
                     href: "" + n,
                     target: "_blank",
                     rel: "noopener noreferrer"
-                }, g.createElement(k.j, {
-                    ratio: k.k.Aspect16x9
-                }, g.createElement(k.U, null, g.createElement(k.P, {
+                }, h.createElement(S.j, {
+                    ratio: S.k.Aspect16x9
+                }, h.createElement(S.U, null, h.createElement(S.P, {
                     fullWidth: !0,
                     fullHeight: !0,
-                    position: k._2.Absolute
-                }, g.createElement("img", {
-                    src: i && i.url || F.n.config.defaultStreamPreviewURL
-                })))), g.createElement(O, {
+                    position: S._2.Absolute
+                }, h.createElement("img", {
+                    src: i && i.url || D.n.config.defaultStreamPreviewURL
+                })))), h.createElement(N, {
                     title: r
                 }))
             },
-            j = Object(S.c)("PhotoOEmbed", {
+            x = Object(y.c)("PhotoOEmbed", {
                 autoReportInteractive: !0
-            })(x),
-            A = function(e, t) {
+            })(F),
+            j = function(e, t) {
                 var n = e.embed,
                     i = n.broadcaster,
                     r = n.game,
@@ -7732,28 +5997,28 @@ webpackJsonp([45], {
                     s = n.viewersCount,
                     l = r ? r.name : "",
                     u = function() {
-                        Object(y.c)(e, t.feedTrackingProps)
+                        Object(v.c)(e, t.feedTrackingProps)
                     };
-                return g.createElement(k.U, null, g.createElement(P.a, {
+                return h.createElement(S.U, null, h.createElement(C.a, {
                     onClick: u,
                     thumbnailURL: o,
-                    type: P.b.Stream,
+                    type: C.b.Stream,
                     viewCount: s
-                }, g.createElement(I.a, {
+                }, h.createElement(O.a, {
                     channelLogin: i.login
-                })), g.createElement(O, {
+                })), h.createElement(N, {
                     author: i,
                     title: a,
                     description: l
                 }))
             };
-        A.contextTypes = {
-            feedTrackingProps: C.object
+        j.contextTypes = {
+            feedTrackingProps: T.object
         };
-        var L = Object(S.c)("StreamEmbed", {
+        var A = Object(y.c)("StreamEmbed", {
                 autoReportInteractive: !0
-            })(A),
-            M = function(e, t) {
+            })(j),
+            L = function(e, t) {
                 var n = e.embed,
                     i = n.id,
                     r = n.owner,
@@ -7765,93 +6030,93 @@ webpackJsonp([45], {
                     c = n.videoViewCount,
                     d = o ? o.name : "",
                     p = function() {
-                        e.pauseCarousel && e.pauseCarousel(), Object(y.c)(e, t.feedTrackingProps)
+                        e.pauseCarousel && e.pauseCarousel(), Object(v.c)(e, t.feedTrackingProps)
                     };
-                return g.createElement(k.U, null, g.createElement(P.a, {
+                return h.createElement(S.U, null, h.createElement(C.a, {
                     createdAt: s,
                     lengthSeconds: a,
                     onClick: p,
                     thumbnailURL: l,
-                    type: P.b.Video,
+                    type: C.b.Video,
                     viewCount: c
-                }, g.createElement(I.a, {
+                }, h.createElement(O.a, {
                     vodID: i
-                })), g.createElement(O, {
+                })), h.createElement(N, {
                     author: r,
                     title: u,
                     description: d
                 }))
             };
-        M.contextTypes = {
-            feedTrackingProps: C.object
+        L.contextTypes = {
+            feedTrackingProps: T.object
         };
-        var V = Object(S.c)("VideoEmbed", {
+        var M = Object(y.c)("VideoEmbed", {
                 autoReportInteractive: !0
-            })(M),
-            G = Object(_.a)(null, r)(V),
-            B = (n(1404), function(e, t) {
+            })(L),
+            V = Object(k.a)(null, r)(M),
+            B = (n(1303), function(e, t) {
                 var n = e.embed,
                     i = n.html,
                     r = n.thumbnail,
                     a = n.providerName,
                     o = i.replace("autoplay=false", "autoplay=true"),
                     s = function() {
-                        Object(y.c)(e, t.feedTrackingProps)
+                        Object(v.c)(e, t.feedTrackingProps)
                     };
-                return g.createElement(k.U, null, g.createElement(P.a, {
-                    thumbnailURL: r && r.url || F.n.config.defaultStreamPreviewURL,
-                    type: P.b.VideoOEmbed,
+                return h.createElement(S.U, null, h.createElement(C.a, {
+                    thumbnailURL: r && r.url || D.n.config.defaultStreamPreviewURL,
+                    type: C.b.VideoOEmbed,
                     onClick: s
-                }, g.createElement("div", {
+                }, h.createElement("div", {
                     className: "video-oembed-container",
                     dangerouslySetInnerHTML: {
                         __html: o
                     }
-                })), g.createElement(O, {
+                })), h.createElement(N, {
                     title: a
                 }))
             });
         B.contextTypes = {
-            feedTrackingProps: C.object
+            feedTrackingProps: T.object
         };
-        var z, W = Object(S.c)("VideoOEmbed", {
+        var G, z = Object(y.c)("VideoOEmbed", {
                 autoReportInteractive: !0
             })(B),
-            H = {
-                PhotoOEmbed: j,
-                VideoOEmbed: W,
-                Clip: D,
-                Stream: L,
-                Video: G
+            W = {
+                PhotoOEmbed: x,
+                VideoOEmbed: z,
+                Clip: U,
+                Stream: A,
+                Video: V
             },
-            q = function(e) {
+            H = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onImpression = function(e) {
-                        Object(y.b)({
+                        Object(v.b)({
                             embed: t.props.embed
                         }, e)
                     }, t
                 }
-                return b.__extends(t, e), t.prototype.componentDidMount = function() {
+                return g.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), this.props.impressionTracking.onImpression(this.onImpression)
                 }, t.prototype.render = function() {
-                    var e = H[this.props.embed.__typename];
-                    return e ? g.createElement(e, {
+                    var e = W[this.props.embed.__typename];
+                    return e ? h.createElement(e, {
                         embed: this.props.embed
-                    }) : g.createElement(k.U, null)
-                }, t = b.__decorate([Object(S.c)("Embed"), Object(v.c)()], t)
-            }(g.Component),
-            $ = q,
-            K = n(51),
-            Q = n(35),
-            Y = n(19),
-            Z = n(88),
-            J = n(8),
-            X = n(23),
-            ee = n(270),
-            te = n(135),
-            ne = (n(1405), function(e) {
+                    }) : h.createElement(S.U, null)
+                }, t = g.__decorate([Object(y.c)("Embed"), Object(b.c)()], t)
+            }(h.Component),
+            q = H,
+            $ = n(50),
+            K = n(34),
+            Q = n(18),
+            Y = n(82),
+            Z = n(7),
+            J = n(22),
+            X = n(249),
+            ee = n(124),
+            te = (n(1304), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7885,7 +6150,7 @@ webpackJsonp([45], {
                         }))
                     }, t
                 }
-                return b.__extends(t, e), t.prototype.componentDidMount = function() {
+                return g.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.setState({
@@ -7894,33 +6159,33 @@ webpackJsonp([45], {
                 }, t.prototype.render = function() {
                     var e = this.props.reaction.emote,
                         t = e.token;
-                    return parseInt(e.id, 10) < 15 && (t = Object(ee.c)(e.token)), g.createElement("div", b.__assign({
+                    return parseInt(e.id, 10) < 15 && (t = Object(X.c)(e.token)), h.createElement("div", g.__assign({
                         onClick: this.toggleReaction
-                    }, Object(k._39)(this.props)), g.createElement(k._30, {
+                    }, Object(S._39)(this.props)), h.createElement(S._30, {
                         label: 0 === this.state.reactionCount ? e.token : this.state.reactionCount + " " + t,
-                        direction: k._32.Top,
-                        align: k._31.Center
-                    }, g.createElement(k.U, {
+                        direction: S._32.Top,
+                        align: S._31.Center
+                    }, h.createElement(S.U, {
                         className: this.state.hasReacted ? "activity-reaction activity-reaction--active" : "activity-reaction"
-                    }, g.createElement(k.U, {
+                    }, h.createElement(S.U, {
                         className: "activity-reaction__emote-contain"
-                    }, g.createElement("img", {
-                        src: Object(te.e)("endorse" === e.id ? "1" : e.id, 3),
+                    }, h.createElement("img", {
+                        src: Object(ee.e)("endorse" === e.id ? "1" : e.id, 3),
                         alt: t,
                         className: "activity-reaction__emote"
                     })))))
-                }, t = b.__decorate([Object(S.c)("Reaction")], t)
-            }(g.Component)),
-            ie = ne,
-            re = function(e) {
+                }, t = g.__decorate([Object(y.c)("Reaction")], t)
+            }(h.Component)),
+            ne = te,
+            ie = function(e) {
                 var t = e.reactions.map(function(t, n) {
-                    return g.createElement(k.U, {
+                    return h.createElement(S.U, {
                         key: n,
                         margin: {
                             right: 1,
                             bottom: 1
                         }
-                    }, g.createElement(ie, {
+                    }, h.createElement(ne, {
                         key: n,
                         reaction: t,
                         addReaction: e.addReaction,
@@ -7928,31 +6193,31 @@ webpackJsonp([45], {
                         "data-a-target": "additional-reaction-" + n
                     }))
                 });
-                return g.createElement(k.U, {
-                    position: k._2.Relative
-                }, g.createElement(k.p, {
-                    direction: k.q.TopCenter,
-                    size: k.r.Small,
+                return h.createElement(S.U, {
+                    position: S._2.Relative
+                }, h.createElement(S.p, {
+                    direction: S.q.TopCenter,
+                    size: S.r.Small,
                     show: !0
-                }, g.createElement(k._17, {
-                    display: k.H.Flex,
+                }, h.createElement(S._17, {
+                    display: S.H.Flex,
                     padding: {
                         left: 1,
                         top: 1
                     }
                 }, t)))
             },
-            ae = Object(S.c)("AdditionalReactions", {
+            re = Object(y.c)("AdditionalReactions", {
                 autoReportInteractive: !0
-            })(re),
-            oe = function(e) {
+            })(ie),
+            ae = function(e) {
                 var t = e.reactions.map(function(t, n) {
-                    return g.createElement(k.U, {
+                    return h.createElement(S.U, {
                         key: n,
                         margin: {
                             right: 1
                         }
-                    }, g.createElement(ie, {
+                    }, h.createElement(ne, {
                         key: n,
                         reaction: t,
                         addReaction: e.addReaction,
@@ -7960,17 +6225,17 @@ webpackJsonp([45], {
                         "data-a-target": "top-reaction-" + n
                     }))
                 });
-                return g.createElement(k._17, {
-                    display: k.H.Flex
+                return h.createElement(S._17, {
+                    display: S.H.Flex
                 }, t)
             },
-            se = Object(S.c)("TopReactions", {
+            oe = Object(y.c)("TopReactions", {
                 autoReportInteractive: !0
-            })(oe),
-            le = n(1406),
-            ue = n(1407),
-            ce = n(278),
-            de = (n(1408), function(e) {
+            })(ae),
+            se = n(1305),
+            le = n(1306),
+            ue = n(257),
+            ce = (n(1307), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.closeEmoteSelector = function() {
@@ -7994,36 +6259,36 @@ webpackJsonp([45], {
                         emoteSelectorVisible: !1
                     }, n
                 }
-                return b.__extends(t, e), t.prototype.componentDidMount = function() {
+                return g.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = g.createElement("div", {
+                    var e = h.createElement("div", {
                         onClick: this.toggleEmoteSelector,
                         "data-a-target": "add-reaction-button"
                     }, this.props.children);
-                    return this.state.emoteSelectorVisible || (e = g.createElement(k._30, {
-                        label: Object(F.d)("Add a Reaction", "ReactionSelector"),
-                        direction: k._32.Top,
-                        align: k._31.Center
-                    }, e)), g.createElement(k.U, {
+                    return this.state.emoteSelectorVisible || (e = h.createElement(S._30, {
+                        label: Object(D.d)("Add a Reaction", "ReactionSelector"),
+                        direction: S._32.Top,
+                        align: S._31.Center
+                    }, e)), h.createElement(S.U, {
                         className: "reaction-selector",
-                        position: k._2.Relative
-                    }, g.createElement(Z.a, {
+                        position: S._2.Relative
+                    }, h.createElement(Y.a, {
                         onClickOut: this.closeEmoteSelector
-                    }, this.state.emoteSelectorVisible && g.createElement(ce.a, {
+                    }, this.state.emoteSelectorVisible && h.createElement(ue.a, {
                         onClickEmote: this.onEmoteSelect,
                         visible: this.state.emoteSelectorVisible && this.state.emotesLoaded,
                         toggleVisibility: this.toggleEmoteSelector,
                         onLoad: this.emotesLoaded,
-                        direction: k.q.TopLeft
+                        direction: S.q.TopLeft
                     }), e))
-                }, t = b.__decorate([Object(S.c)("ReactionSelector")], t)
-            }(g.Component)),
-            pe = de;
+                }, t = g.__decorate([Object(y.c)("ReactionSelector")], t)
+            }(h.Component)),
+            de = ce;
         ! function(e) {
             e[e.Add = 0] = "Add", e[e.Remove = 1] = "Remove"
-        }(z || (z = {}));
-        var me = {
+        }(G || (G = {}));
+        var pe = {
                 emote: {
                     id: "9",
                     token: "<3",
@@ -8034,15 +6299,15 @@ webpackJsonp([45], {
                     hasReacted: !1
                 }
             },
-            fe = 4,
-            he = function(e) {
+            me = 4,
+            fe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         totalReactionCount: 0,
                         additionalReactionsVisible: !1
                     }, t.addReaction = function(e, n) {
-                        return t.toggleReaction(z.Add, e, n)
+                        return t.toggleReaction(G.Add, e, n)
                     }, t.countTotalReactions = function() {
                         var e = 0;
                         if (t.props.reactions)
@@ -8058,9 +6323,9 @@ webpackJsonp([45], {
                             additionalReactionsVisible: !1
                         })
                     }, t.removeReaction = function(e, n) {
-                        return t.toggleReaction(z.Remove, e, n)
+                        return t.toggleReaction(G.Remove, e, n)
                     }, t.toggleAdditional = function(e, n) {
-                        n.preventDefault(), e.length <= fe || t.setState(function(e) {
+                        n.preventDefault(), e.length <= me || t.setState(function(e) {
                             return {
                                 additionalReactionsVisible: !e.additionalReactionsVisible
                             }
@@ -8068,21 +6333,21 @@ webpackJsonp([45], {
                     }, t.toggleReaction = function(e, n, i) {
                         if (!t.props.isLoggedIn) return t.props.login(), Promise.reject(new Error("user not logged in"));
                         var r = i;
-                        return parseInt(n, 10) < 15 && (r = Object(ee.c)(i)), e === z.Add ? (t.setState(function(e) {
+                        return parseInt(n, 10) < 15 && (r = Object(X.c)(i)), e === G.Add ? (t.setState(function(e) {
                             return {
                                 totalReactionCount: e.totalReactionCount + 1
                             }
-                        }), t.props.addReaction(Object(X.a)({
+                        }), t.props.addReaction(Object(J.a)({
                             entityID: t.props.parentEntity,
                             emoteID: n
                         })).then(function(e) {
                             var i = {
-                                action: v.a.Create,
+                                action: b.a.Create,
                                 entity: t.props.parentEntity,
                                 reactionInt: n,
                                 reactionText: r
                             };
-                            return Object(y.d)(i, t.context.feedTrackingProps), e
+                            return Object(v.d)(i, t.context.feedTrackingProps), e
                         }, function(e) {
                             return t.setState(function(e) {
                                 return {
@@ -8093,17 +6358,17 @@ webpackJsonp([45], {
                             return {
                                 totalReactionCount: e.totalReactionCount - 1
                             }
-                        }), t.props.removeReaction(Object(X.a)({
+                        }), t.props.removeReaction(Object(J.a)({
                             entityID: t.props.parentEntity,
                             emoteID: n
                         })).then(function(e) {
                             var i = {
-                                action: v.a.Remove,
+                                action: b.a.Remove,
                                 entity: t.props.parentEntity,
                                 reactionInt: n,
                                 reactionText: r
                             };
-                            return Object(y.d)(i, t.context.feedTrackingProps), e
+                            return Object(v.d)(i, t.context.feedTrackingProps), e
                         }, function(e) {
                             return t.setState(function(e) {
                                 return {
@@ -8113,91 +6378,92 @@ webpackJsonp([45], {
                         }))
                     }, t
                 }
-                return b.__extends(t, e), t.prototype.componentDidMount = function() {
+                return g.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.countTotalReactions(), this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this,
                         t = a(this.props.reactions);
-                    0 !== t.length && t[0].emote.id === me.emote.id || (t = [me].concat(t));
+                    0 !== t.length && t[0].emote.id === pe.emote.id || (t = [pe].concat(t));
                     var n = function(n) {
                             return e.toggleAdditional(t, n)
                         },
                         i = null;
-                    this.state.additionalReactionsVisible && (i = g.createElement(ae, {
-                        reactions: t.slice(fe),
+                    this.state.additionalReactionsVisible && (i = h.createElement(re, {
+                        reactions: t.slice(me),
                         addReaction: this.addReaction,
                         removeReaction: this.removeReaction
                     }));
                     var r = null;
-                    r = g.createElement(se, {
-                        reactions: t.slice(0, fe),
+                    r = h.createElement(oe, {
+                        reactions: t.slice(0, me),
                         addReaction: this.addReaction,
                         removeReaction: this.removeReaction
                     });
                     var o = null;
-                    this.props.reactions && this.state.totalReactionCount > 0 && (o = this.props.reactions.length >= fe ? g.createElement("a", {
+                    this.props.reactions && this.state.totalReactionCount > 0 && (o = this.props.reactions.length >= me ? h.createElement("a", {
                         href: "#",
                         onClick: n,
                         "data-test-selector": "additional-toggle-tracking"
-                    }, this.state.totalReactionCount) : g.createElement("span", {
+                    }, this.state.totalReactionCount) : h.createElement("span", {
                         "data-test-selector": "additional-toggle-tracking",
                         "data-a-target": "pulse-reaction-count"
-                    }, this.state.totalReactionCount)), this.state.additionalReactionsVisible || (o = g.createElement(k._30, {
-                        label: Object(F.d)("Total Reactions", "ReactionList"),
-                        direction: k._32.Top,
-                        align: k._31.Center
+                    }, this.state.totalReactionCount)), this.state.additionalReactionsVisible || (o = h.createElement(S._30, {
+                        label: Object(D.d)("Total Reactions", "ReactionList"),
+                        direction: S._32.Top,
+                        align: S._31.Center
                     }, o));
                     var s = null;
-                    return this.props.isLoggedIn && (s = g.createElement(k.U, {
+                    return this.props.isLoggedIn && (s = h.createElement(S.U, {
                         margin: {
                             right: 1
                         }
-                    }, g.createElement(pe, {
+                    }, h.createElement(de, {
                         onEmoteSelect: this.addReaction
-                    }, g.createElement(k._8, {
-                        asset: k._9.AddReaction,
-                        type: k._10.Brand,
+                    }, h.createElement(S._8, {
+                        asset: S._9.AddReaction,
+                        type: S._10.Brand,
                         width: 24,
                         height: 24
-                    })))), g.createElement(k._17, {
-                        display: k.H.Flex,
-                        alignItems: k.c.Center,
+                    })))), h.createElement(S._17, {
+                        display: S.H.Flex,
+                        alignItems: S.c.Center,
                         padding: 1
-                    }, r, g.createElement(k.U, {
+                    }, r, h.createElement(S.U, {
                         margin: {
                             right: 1
                         }
-                    }, s), g.createElement(Z.a, {
+                    }, s), h.createElement(Y.a, {
                         onClickOut: this.hideAdditional
                     }, i, o))
                 }, t.contextTypes = {
-                    feedTrackingProps: C.object
-                }, t = b.__decorate([Object(J.a)(le, {
+                    feedTrackingProps: T.object
+                }, t = g.__decorate([Object(Z.a)(se, {
                     name: "addReaction"
-                }), Object(J.a)(ue, {
+                }), Object(Z.a)(le, {
                     name: "removeReaction"
-                }), Object(S.c)("Reactions")], t)
-            }(g.Component),
-            ge = he,
-            be = Object(_.a)(s, l)(ge),
-            ve = function(e) {
+                }), Object(y.c)("Reactions")], t)
+            }(h.Component),
+            he = fe,
+            ge = Object(k.a)(s, l)(he),
+            be = function(e) {
                 var t = e.content,
                     n = t.slug,
                     i = t.reactions;
-                return g.createElement(k.U, null, g.createElement($, {
+                return h.createElement(S.U, null, h.createElement(q, {
                     embed: e.content
-                }), g.createElement(be, {
+                }), h.createElement(ge, {
                     parentEntity: "clip:" + n,
                     reactions: i
                 }))
             },
-            ye = Object(S.c)("ClipContent", {
+            ve = Object(y.c)("ClipContent", {
                 autoReportInteractive: !0
-            })(ve),
-            Se = n(271),
-            ke = n(1037),
+            })(be),
+            ye = n(1063),
+            Se = n(250),
+            ke = n(881),
             _e = /^(https?:\/\/)?(www.)?twitch\.tv/,
-            Ee = (n(1409), function(e) {
+            Ee = (n(1308), function(e) {
                 var t = e.content,
                     n = t.author,
                     i = t.body,
@@ -8205,16 +6471,16 @@ webpackJsonp([45], {
                     a = t.embeds,
                     o = t.id,
                     s = t.reactions;
-                return g.createElement(k.U, null, g.createElement(k._17, {
-                    display: k.H.Flex,
-                    alignItems: k.c.Center,
+                return h.createElement(S.U, null, h.createElement(S._17, {
+                    display: S.H.Flex,
+                    alignItems: S.c.Center,
                     padding: 1,
                     borderBottom: !0
-                }, g.createElement(k.U, {
+                }, h.createElement(S.U, {
                     margin: {
                         right: 1
                     }
-                }, g.createElement(w.a, {
+                }, h.createElement(P.a, {
                     to: {
                         pathname: "/" + n.login,
                         state: {
@@ -8223,16 +6489,16 @@ webpackJsonp([45], {
                         }
                     },
                     "data-a-target": "pulse-profile-picture"
-                }, g.createElement(k.l, {
+                }, h.createElement(S.l, {
                     size: 40,
                     imageSrc: n.profileImageURL,
                     imageAlt: "User profile picture"
-                }))), g.createElement(k.U, {
+                }))), h.createElement(S.U, {
                     flexGrow: 1
-                }, g.createElement(k.U, {
-                    display: k.H.Flex,
-                    flexDirection: k.J.Column
-                }, g.createElement(w.a, {
+                }, h.createElement(S.U, {
+                    display: S.H.Flex,
+                    flexDirection: S.J.Column
+                }, h.createElement(P.a, {
                     to: {
                         pathname: "/" + n.login,
                         state: {
@@ -8240,72 +6506,72 @@ webpackJsonp([45], {
                             medium: "pulse_card"
                         }
                     }
-                }, g.createElement(k._21, {
-                    fontSize: k.L.Size4,
-                    color: k.F.Base,
+                }, h.createElement(S._21, {
+                    fontSize: S.L.Size4,
+                    color: S.F.Base,
                     bold: !0
-                }, n.displayName)), g.createElement(w.a, {
-                    to: "/" + n.login + "/p/" + m(o),
+                }, n.displayName)), h.createElement(P.a, {
+                    to: "/" + n.login + "/p/" + Object(ye.b)(o),
                     "data-a-target": "pulse-post-link"
-                }, g.createElement(k._30, {
-                    label: f(new Date(r)),
-                    direction: k._32.Bottom
-                }, g.createElement(k._21, {
-                    fontSize: k.L.Size6,
-                    color: k.F.Alt2
-                }, Object(F.g)(new Date(r)))))))), i && g.createElement(k._17, {
+                }, h.createElement(S._30, {
+                    label: m(new Date(r)),
+                    direction: S._32.Bottom
+                }, h.createElement(S._21, {
+                    fontSize: S.L.Size6,
+                    color: S.F.Alt2
+                }, Object(D.g)(new Date(r)))))))), i && h.createElement(S._17, {
                     padding: 1,
                     className: "feed-item-text"
-                }, p(i.content, i.emotes, n.login)), g.createElement(k.U, null, a && a.slice(0, 1).map(function(e, t) {
-                    return g.createElement($, {
+                }, p(i.content, i.emotes, n.login)), h.createElement(S.U, null, a && a.slice(0, 1).map(function(e, t) {
+                    return h.createElement(q, {
                         key: t,
                         embed: e
                     })
-                })), g.createElement(be, {
-                    parentEntity: o,
+                })), h.createElement(ge, {
+                    parentEntity: Object(ye.a)("post", o),
                     reactions: s
                 }))
             }),
-            Te = Object(S.c)("PostContent", {
+            Te = Object(y.c)("PostContent", {
                 autoReportInteractive: !0
             })(Ee),
             Ce = function(e) {
                 var t = e.content,
                     n = t.id,
                     i = t.reactions;
-                return g.createElement(k.U, null, g.createElement($, {
+                return h.createElement(S.U, null, h.createElement(q, {
                     embed: e.content
-                }), g.createElement(be, {
+                }), h.createElement(ge, {
                     parentEntity: "vod:" + n,
                     reactions: i
                 }))
             },
-            Pe = Object(S.c)("VideoContent", {
+            Pe = Object(y.c)("VideoContent", {
                 autoReportInteractive: !0
             })(Ce),
             we = {
-                Clip: ye,
+                Clip: ve,
                 Post: Te,
                 Video: Pe,
                 Stream: function(e) {
-                    return g.createElement($, {
+                    return h.createElement(q, {
                         embed: e.content
                     })
                 }
             },
             Ne = function(e) {
                 var t = we[e.content.__typename];
-                return g.createElement(t, {
+                return h.createElement(t, {
                     content: e.content
                 })
             };
         n.d(t, "b", function() {
-            return h
+            return f
         }), n.d(t, "a", function() {
             return Ne
         })
     },
-    1342: function(e, t, n) {
+    1240: function(e, t, n) {
         "use strict";
         var i = n(1),
             r = n(3),
@@ -8401,7 +6667,7 @@ webpackJsonp([45], {
             return o
         })
     },
-    1343: function(e, t, n) {
+    1241: function(e, t, n) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -8566,18 +6832,18 @@ webpackJsonp([45], {
                 var t = e.name.value;
                 return !r[t] && (r[t] = !0, !0)
             })
-        }(n(1061).definitions)), e.exports = i
+        }(n(905).definitions)), e.exports = i
     },
-    1365: function(e, t, n) {
+    1264: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
             a = n(2),
-            o = n(413),
-            s = n(113),
-            l = n(73),
-            u = n(74),
-            c = n(473),
+            o = n(358),
+            s = n(106),
+            l = n(87),
+            u = n(88),
+            c = n(274),
             d = function(e) {
                 var t = {
                     name: "TWILIGHT_VIDEO_FEATURO_EN",
@@ -8586,14 +6852,14 @@ webpackJsonp([45], {
                             return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 73))
+                                }).then(n.bind(null, 87))
                             }, "FeaturedBroadcasters")(i.__assign({}, e))
                         },
                         mixed: function() {
                             return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 473))
+                                }).then(n.bind(null, 274))
                             }, "FeaturedContent")(i.__assign({}, e, {
                                 shouldMixContent: !0
                             }))
@@ -8602,7 +6868,7 @@ webpackJsonp([45], {
                             return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 473))
+                                }).then(n.bind(null, 274))
                             }, "FeaturedContent")(i.__assign({}, e, {
                                 shouldMixContent: !1
                             }))
@@ -8622,11 +6888,11 @@ webpackJsonp([45], {
             return d
         })
     },
-    1366: function(e, t) {},
-    1367: function(e, t) {},
-    1368: function(e, t) {},
-    1369: function(e, t) {},
-    1370: function(e, t) {
+    1265: function(e, t) {},
+    1266: function(e, t) {},
+    1267: function(e, t) {},
+    1268: function(e, t) {},
+    1269: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -8930,7 +7196,7 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1371: function(e, t) {
+    1270: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -9442,7 +7708,7 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1402: function(e, t, n) {
+    1301: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -9453,13 +7719,13 @@ webpackJsonp([45], {
         var r, a = n(0),
             o = n(1),
             s = n(2),
-            l = n(88),
-            u = n(64),
-            c = n(137),
-            d = n(415),
-            p = n(1052),
-            m = n(1314),
-            f = n(6),
+            l = n(82),
+            u = n(60),
+            c = n(126),
+            d = n(360),
+            p = n(897),
+            m = n(1060),
+            f = n(5),
             h = n(3),
             g = Object(c.a)("/settings/profile");
         ! function(e) {
@@ -9640,7 +7906,7 @@ webpackJsonp([45], {
                 }, t = a.__decorate([Object(f.c)("Composer")], t)
             }(o.Component),
             v = b,
-            y = n(9),
+            y = n(8),
             S = Object(y.a)(i)(v);
         n.d(t, !1, function() {
             return "composer"
@@ -9658,7 +7924,7 @@ webpackJsonp([45], {
             return S
         })
     },
-    1403: function(e, t, n) {
+    1302: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -9681,21 +7947,22 @@ webpackJsonp([45], {
         var a = n(1),
             o = n(2),
             s = n(0),
-            l = n(1052),
-            u = n(1034),
-            c = n(6),
+            l = n(897),
+            u = n(875),
+            c = n(5),
             d = n(3),
-            p = n(1341),
-            m = n(9),
-            f = n(11),
-            h = n(51),
-            g = n(50),
-            b = n(35),
-            v = n(19),
-            y = n(931),
-            S = n(88),
-            k = n(923),
-            _ = (n(1410), function(e) {
+            p = n(1239),
+            m = n(8),
+            f = n(10),
+            h = n(50),
+            g = n(49),
+            b = n(34),
+            v = n(18),
+            y = n(772),
+            S = n(82),
+            k = n(1063),
+            _ = n(762),
+            E = (n(1309), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -9756,43 +8023,42 @@ webpackJsonp([45], {
                         case "Clip":
                             var t = e;
                             return {
-                                contentType: k.a.Clip,
+                                contentType: _.a.Clip,
                                 targetUserID: t.broadcaster.id,
                                 contentID: t.id
                             };
                         case "Post":
-                            var n = e,
-                                i = n.id.split(":");
+                            var n = e;
                             return {
-                                contentType: k.a.ChannelFeedPost,
+                                contentType: _.a.ChannelFeedPost,
                                 targetUserID: n.author.id,
-                                contentID: 2 === i.length ? i[1] : ""
+                                contentID: Object(k.b)(n.id)
                             };
                         case "Stream":
-                            var r = e;
+                            var i = e;
                             return {
-                                contentType: k.a.User,
-                                targetUserID: r.broadcaster.id
+                                contentType: _.a.User,
+                                targetUserID: i.broadcaster.id
                             };
                         case "Video":
-                            var a = e;
+                            var r = e;
                             return {
-                                contentType: k.a.Vod,
-                                targetUserID: a.owner.id,
-                                contentID: a.id
+                                contentType: _.a.Vod,
+                                targetUserID: r.owner.id,
+                                contentID: r.id
                             };
                         default:
                             return {
-                                contentType: k.a.User,
+                                contentType: _.a.User,
                                 targetUserID: ""
                             }
                     }
                 }, t = s.__decorate([Object(c.c)("FeedItemOptions")], t)
             }(a.Component)),
-            E = _,
-            T = Object(m.a)(i, r)(E),
-            C = n(1315),
-            P = function(e) {
+            T = E,
+            C = Object(m.a)(i, r)(T),
+            P = n(1061),
+            w = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onImpression = function(e) {
@@ -9821,9 +8087,9 @@ webpackJsonp([45], {
                             top: .5,
                             right: .5
                         }
-                    }, a.createElement(T, {
+                    }, a.createElement(C, {
                         content: this.props.item.content
-                    })), a.createElement(C.a, {
+                    })), a.createElement(P.a, {
                         reasons: this.props.item.reasons
                     }), a.createElement(p.a, {
                         content: this.props.item.content
@@ -9844,13 +8110,13 @@ webpackJsonp([45], {
                     }
                 }), Object(l.c)()], t)
             }(a.Component),
-            w = P,
-            N = function(e) {
+            N = w,
+            O = function(e) {
                 var t = e.items.edges.filter(function(e) {
                     return e.node.content.id
                 }).map(function(e, t) {
                     var n = e.node;
-                    return a.createElement(w, {
+                    return a.createElement(N, {
                         key: n.content.id,
                         item: n,
                         index: t,
@@ -9863,14 +8129,14 @@ webpackJsonp([45], {
                     color: d.F.Alt2
                 }, Object(o.d)("There are no feed posts.", "ChannelFeedComponent")))
             },
-            O = Object(c.c)("Feed")(N);
+            I = Object(c.c)("Feed")(O);
         n.d(t, "a", function() {
-            return O
+            return I
         })
     },
-    1404: function(e, t) {},
-    1405: function(e, t) {},
-    1406: function(e, t, n) {
+    1303: function(e, t) {},
+    1304: function(e, t) {},
+    1305: function(e, t, n) {
         function i(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
@@ -9988,9 +8254,9 @@ webpackJsonp([45], {
             }
         };
         var a = {};
-        r.definitions = r.definitions.concat(i(n(1161).definitions)), r.definitions = r.definitions.concat(i(n(1132).definitions)), r.definitions = r.definitions.concat(i(n(1162).definitions)), e.exports = r
+        r.definitions = r.definitions.concat(i(n(1014).definitions)), r.definitions = r.definitions.concat(i(n(981).definitions)), r.definitions = r.definitions.concat(i(n(1015).definitions)), e.exports = r
     },
-    1407: function(e, t, n) {
+    1306: function(e, t, n) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -10107,12 +8373,12 @@ webpackJsonp([45], {
                 var t = e.name.value;
                 return !r[t] && (r[t] = !0, !0)
             })
-        }(n(1132).definitions)), e.exports = i
+        }(n(981).definitions)), e.exports = i
     },
-    1408: function(e, t) {},
-    1409: function(e, t) {},
-    1410: function(e, t) {},
-    1411: function(e, t, n) {
+    1307: function(e, t) {},
+    1308: function(e, t) {},
+    1309: function(e, t) {},
+    1310: function(e, t, n) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -10235,9 +8501,9 @@ webpackJsonp([45], {
                 var t = e.name.value;
                 return !r[t] && (r[t] = !0, !0)
             })
-        }(n(1132).definitions)), e.exports = i
+        }(n(981).definitions)), e.exports = i
     },
-    1412: function(e, t, n) {
+    1311: function(e, t, n) {
         function i(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
@@ -10447,15 +8713,15 @@ webpackJsonp([45], {
             }
         };
         var a = {};
-        r.definitions = r.definitions.concat(i(n(1132).definitions)), r.definitions = r.definitions.concat(i(n(1161).definitions)), r.definitions = r.definitions.concat(i(n(1162).definitions)), r.definitions = r.definitions.concat(i(n(1343).definitions)), e.exports = r
+        r.definitions = r.definitions.concat(i(n(981).definitions)), r.definitions = r.definitions.concat(i(n(1014).definitions)), r.definitions = r.definitions.concat(i(n(1015).definitions)), r.definitions = r.definitions.concat(i(n(1241).definitions)), e.exports = r
     },
-    1456: function(e, t, n) {
+    1355: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
-            a = n(1054),
-            o = n(6),
-            s = n(1041),
+            a = n(899),
+            o = n(5),
+            s = n(886),
             l = function(e) {
                 var t = e.video,
                     n = t.id,
@@ -10483,8 +8749,8 @@ webpackJsonp([45], {
             return u
         })
     },
-    1875: function(e, t) {},
-    1876: function(e, t) {
+    1880: function(e, t) {},
+    1881: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10655,7 +8921,7 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1877: function(e, t) {
+    1882: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10796,7 +9062,7 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1878: function(e, t) {
+    1883: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10994,7 +9260,7 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1879: function(e, t) {
+    1884: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -11313,7 +9579,7 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1880: function(e, t) {
+    1885: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -11388,7 +9654,7 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1881: function(e, t, n) {
+    1886: function(e, t, n) {
         function i(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
@@ -11549,9 +9815,9 @@ webpackJsonp([45], {
             }
         };
         var a = {};
-        r.definitions = r.definitions.concat(i(n(1412).definitions)), r.definitions = r.definitions.concat(i(n(1061).definitions)), e.exports = r
+        r.definitions = r.definitions.concat(i(n(1311).definitions)), r.definitions = r.definitions.concat(i(n(905).definitions)), e.exports = r
     },
-    1882: function(e, t) {
+    1887: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -11712,8 +9978,8 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1883: function(e, t) {},
-    2037: function(e, t, n) {
+    1888: function(e, t) {},
+    2042: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -11755,26 +10021,26 @@ webpackJsonp([45], {
         var s = n(0),
             l = n(1),
             u = n(2),
-            c = n(30),
-            d = n(925),
-            p = n(922),
-            m = n(111),
-            f = n(14),
-            h = n(1018),
-            g = n(416),
-            b = n(1365),
-            v = n(6),
-            y = n(9),
-            S = n(33),
-            k = n(8),
-            _ = n(1129),
-            E = n(1306),
-            T = n(66),
+            c = n(29),
+            d = n(764),
+            p = n(761),
+            m = n(104),
+            f = n(13),
+            h = n(858),
+            g = n(361),
+            b = n(1264),
+            v = n(5),
+            y = n(8),
+            S = n(32),
+            k = n(7),
+            _ = n(978),
+            E = n(1052),
+            T = n(62),
             C = n(4),
-            P = n(12),
-            w = n(407),
+            P = n(11),
+            w = n(352),
             N = n(3),
-            O = (n(1875), "game-list-first-item"),
+            O = (n(1880), "game-list-first-item"),
             I = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -11922,7 +10188,7 @@ webpackJsonp([45], {
                 })], t)
             }(l.Component),
             R = Object(y.a)(i)(I),
-            U = n(1876),
+            U = n(1881),
             D = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -11956,7 +10222,7 @@ webpackJsonp([45], {
                 }), Object(v.c)("FollowedGames")], t)
             }(l.Component),
             F = D,
-            x = n(1877),
+            x = n(1882),
             j = "twilight_onboarding",
             A = "twilight_onboarding-prompt_dismissed",
             L = {
@@ -11970,7 +10236,7 @@ webpackJsonp([45], {
                 ["skip", 1],
                 ["no_skip", 3]
             ]),
-            G = function(e) {
+            B = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11982,7 +10248,7 @@ webpackJsonp([45], {
                     }, t.redirectToOnboarding = function(e) {
                         Object(E.g)({
                             source: e
-                        }), u.n.history.push("/hi" + location.search), window.location.reload()
+                        }), window.location.assign("/hi" + location.search)
                     }, t.dismissOnboardingPrompt = function() {
                         Object(E.e)(), S.set(A, !0, M), t.setState({
                             isOnboardingDismissedCookieSet: !0
@@ -12073,11 +10339,11 @@ webpackJsonp([45], {
                     }
                 })], t)
             }(l.Component),
-            B = G,
-            z = Object(y.a)(r)(B),
-            W = n(1054),
-            H = n(1456),
-            q = n(1878),
+            G = B,
+            z = Object(y.a)(r)(G),
+            W = n(899),
+            H = n(1355),
+            q = n(1883),
             $ = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -12113,8 +10379,8 @@ webpackJsonp([45], {
                 }
             })(K),
             Y = Q,
-            Z = n(1301),
-            J = n(1160),
+            Z = n(1047),
+            J = n(1013),
             X = new Map([
                 ["52233100", "179571457"],
                 ["66228451", "179571772"],
@@ -12158,8 +10424,8 @@ webpackJsonp([45], {
             ]),
             ee = Array.from(X.keys()),
             te = ["28036688", "30672745", "31582795", "51533859", "63321379", "62983472", "29400754"],
-            ne = n(1041),
-            ie = n(1879),
+            ne = n(886),
+            ie = n(1884),
             re = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -12387,7 +10653,7 @@ webpackJsonp([45], {
                 })], t)
             }(l.Component),
             ae = re,
-            oe = n(1880),
+            oe = n(1885),
             se = ["control", "on"],
             le = function(e) {
                 function t() {
@@ -12435,13 +10701,13 @@ webpackJsonp([45], {
                 }, t = s.__decorate([Object(v.c)("StreamerTrailersExperiment"), Object(k.a)(oe)], t)
             }(l.Component),
             ue = le,
-            ce = n(465),
-            de = n(23),
-            pe = n(1402),
-            me = n(1403),
-            fe = n(1411),
-            he = n(1052),
-            ge = n(1342),
+            ce = n(410),
+            de = n(22),
+            pe = n(1301),
+            me = n(1302),
+            fe = n(1310),
+            he = n(897),
+            ge = n(1240),
             be = function(e) {
                 for (var t = e.cardCount, n = [], i = 0; i < t; i++) 1 === i ? n.push(l.createElement(ge.b, {
                     key: i
@@ -12450,7 +10716,7 @@ webpackJsonp([45], {
                 }));
                 return l.createElement(N.U, null, n)
             },
-            ve = n(1881),
+            ve = n(1886),
             ye = Object(he.d)(function() {
                 return {
                     feed_type: "rec"
@@ -12534,7 +10800,7 @@ webpackJsonp([45], {
                                     optimisticResponse: {
                                         createPost: {
                                             post: {
-                                                id: "post:" + +new Date,
+                                                id: "" + +new Date,
                                                 createdAt: (new Date).toISOString(),
                                                 body: {
                                                     content: t,
@@ -12584,7 +10850,7 @@ webpackJsonp([45], {
                 }), Object(v.c)("Pulse")], t)
             }(l.Component),
             _e = ke,
-            Ee = n(1882),
+            Ee = n(1887),
             Te = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -12620,7 +10886,7 @@ webpackJsonp([45], {
                 }), Object(v.c)("TopGames")], t)
             }(l.Component),
             Ce = Te,
-            Pe = (n(1883), function(e) {
+            Pe = (n(1888), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -12737,7 +11003,7 @@ webpackJsonp([45], {
             return we
         })
     },
-    473: function(e, t, n) {
+    274: function(e, t, n) {
         "use strict";
 
         function i(e, t, n) {
@@ -12789,13 +11055,13 @@ webpackJsonp([45], {
         var o = n(0),
             s = n(1),
             l = (n.n(s), n(2)),
-            u = n(8),
-            c = n(1299),
-            d = n(1005),
-            p = n(73),
-            m = n(1371),
-            f = (n.n(m), n(1300)),
-            h = n(6),
+            u = n(7),
+            c = n(1045),
+            d = n(846),
+            p = n(87),
+            m = n(1270),
+            f = (n.n(m), n(1046)),
+            h = n(5),
             g = n(3);
         n.d(t, "FeaturedBroadcastersRenderContext", function() {
             return p.FeaturedBroadcastersRenderContext
@@ -12834,141 +11100,7 @@ webpackJsonp([45], {
             }(s.Component),
             v = b
     },
-    73: function(e, t, n) {
-        "use strict";
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        });
-        var i = n(0),
-            r = n(1),
-            a = n(413),
-            o = n(113),
-            s = n(74),
-            l = function(e) {
-                var t = {
-                    name: "TWILIGHT_EXPANDO_FEATURO",
-                    assignments: {
-                        fallback: function() {
-                            return o.a.wrap(function() {
-                                return new Promise(function(e) {
-                                    e()
-                                }).then(n.bind(null, 74))
-                            }, "FeaturedBroadcasters")(i.__assign({}, e, {
-                                streamCount: 6,
-                                showCounts: !1
-                            }))
-                        },
-                        expanded: function() {
-                            return o.a.wrap(function() {
-                                return new Promise(function(e) {
-                                    e()
-                                }).then(n.bind(null, 74))
-                            }, "FeaturedBroadcasters")(i.__assign({}, e, {
-                                streamCount: 8,
-                                showCounts: !0
-                            }))
-                        }
-                    },
-                    loader: function() {
-                        return Object(s.placeholderFeaturedBroadcasters)(e.renderContext)
-                    }
-                };
-                return r.createElement(a.a, i.__assign({}, t))
-            };
-        n.d(t, "FeaturedBroadcastersRenderContext", function() {
-            return s.FeaturedBroadcastersRenderContext
-        }), n.d(t, "FeaturedBroadcasters", function() {
-            return l
-        })
-    },
-    74: function(e, t, n) {
-        "use strict";
-
-        function i(e, t, n, i) {
-            switch (t) {
-                case a.AnonFront:
-                    return s.createElement(c.a, {
-                        items: e,
-                        isLoading: n,
-                        layout: d.c.Horizontal,
-                        showCounts: i,
-                        darkTheme: !0
-                    });
-                default:
-                    return s.createElement(f._17, {
-                        className: "featured-broadcasters",
-                        background: f.m.Base,
-                        elevation: 1
-                    }, s.createElement(f.U, {
-                        padding: 1
-                    }, s.createElement(f._21, {
-                        fontSize: f.L.Size5,
-                        color: f.F.Alt2
-                    }, Object(l.d)("Featured Broadcasters", "FeaturedBroadcastersComponent"))), s.createElement(c.a, {
-                        items: e,
-                        isLoading: n,
-                        layout: d.c.Vertical,
-                        showCounts: i
-                    }))
-            }
-        }
-
-        function r(e) {
-            return i([], e, !0)
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), n.d(t, "FeaturedBroadcastersRenderContext", function() {
-            return a
-        }), t.placeholderFeaturedBroadcasters = r, n.d(t, "FeaturedBroadcasters", function() {
-            return b
-        });
-        var a, o = n(0),
-            s = n(1),
-            l = (n.n(s), n(2)),
-            u = n(8),
-            c = n(1299),
-            d = n(1005),
-            p = n(1300),
-            m = n(6),
-            f = n(3),
-            h = n(1370);
-        n.n(h);
-        ! function(e) {
-            e[e.AnonFront = 1] = "AnonFront", e[e.Front = 2] = "Front"
-        }(a || (a = {}));
-        var g = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.getRender = function(e) {
-                        var n = !(!t.props.data.loading && !t.props.data.error);
-                        return i(e, t.props.renderContext, n, t.props.showCounts)
-                    }, t
-                }
-                return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.postRender()
-                }, t.prototype.componentDidUpdate = function() {
-                    this.postRender()
-                }, t.prototype.render = function() {
-                    var e = this.props.data.featuredStreams || [],
-                        t = Object(p.a)(e);
-                    return this.getRender(t)
-                }, t.prototype.postRender = function() {
-                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
-                }, t = o.__decorate([Object(u.a)(h, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                language: l.n.intl.getLanguageCode(),
-                                first: e.streamCount || 6
-                            }
-                        }
-                    }
-                }), Object(m.c)("FeaturedBroadcasters")], t)
-            }(s.Component),
-            b = g
-    },
-    918: function(e, t, n) {
+    757: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -12978,7 +11110,7 @@ webpackJsonp([45], {
             e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention", e[e.Ban = 3] = "Ban", e[e.Timeout = 4] = "Timeout", e[e.AutoModRejectedPrompt = 5] = "AutoModRejectedPrompt", e[e.AutoModMessageRejected = 6] = "AutoModMessageRejected", e[e.AutoModMessageAllowed = 7] = "AutoModMessageAllowed", e[e.AutoModMessageDenied = 8] = "AutoModMessageDenied", e[e.Connected = 9] = "Connected", e[e.Disconnected = 10] = "Disconnected", e[e.Reconnect = 11] = "Reconnect", e[e.Hosting = 12] = "Hosting", e[e.Unhost = 13] = "Unhost", e[e.Subscription = 14] = "Subscription", e[e.Resubscription = 15] = "Resubscription", e[e.SubGift = 16] = "SubGift", e[e.Clear = 17] = "Clear", e[e.SubscriberOnlyMode = 18] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 19] = "FollowerOnlyMode", e[e.SlowMode = 20] = "SlowMode", e[e.RoomMods = 21] = "RoomMods", e[e.RoomState = 22] = "RoomState", e[e.Raid = 23] = "Raid", e[e.Unraid = 24] = "Unraid", e[e.Notice = 25] = "Notice", e[e.Info = 26] = "Info", e[e.BadgesUpdated = 27] = "BadgesUpdated", e[e.Purchase = 28] = "Purchase"
         }(i || (i = {}))
     },
-    922: function(e, t, n) {
+    761: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -13036,7 +11168,7 @@ webpackJsonp([45], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    923: function(e, t, n) {
+    762: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -13046,7 +11178,7 @@ webpackJsonp([45], {
             e.ChannelFeedComment = "CHANNEL_FEED_COMMENT_REPORT", e.ChannelFeedPost = "CHANNEL_FEED_POST_REPORT", e.Chat = "CHAT_REPORT", e.Clip = "CLIP_REPORT", e.Collection = "COLLECTION_REPORT", e.Community = "COMMUNITY_REPORT", e.Event = "EVENT_REPORT", e.Extension = "EXTENSION_REPORT", e.LiveUp = "LIVE_UP_REPORT", e.Raid = "RAID_REPORT", e.StreamUp = "STREAM_UP_REPORT", e.User = "USER_REPORT", e.VideoChatMessage = "VOD_COMMENT_REPORT", e.Vod = "VOD_REPORT"
         }(i || (i = {}))
     },
-    925: function(e, t, n) {
+    764: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -13106,26 +11238,26 @@ webpackJsonp([45], {
             }
         }
         var r = n(0),
-            a = n(21),
+            a = n(20),
             o = n(1),
-            s = n(12),
+            s = n(11),
             l = n(2);
         n.d(t, "a", function() {
             return i
         })
     },
-    926: function(e, t, n) {
+    765: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(4),
             a = n(1),
-            o = n(11),
+            o = n(10),
             s = n(2),
-            l = n(8),
-            u = n(6),
-            c = n(930),
+            l = n(7),
+            u = n(5),
+            c = n(771),
             d = n(3),
-            p = n(949),
+            p = n(789),
             m = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -13173,7 +11305,7 @@ webpackJsonp([45], {
                     }
                 }
             })(m),
-            h = (n(950), n(951));
+            h = (n(790), n(791));
         n.d(t, "a", function() {
             return b
         }), n.d(t, "b", function() {
@@ -13350,7 +11482,7 @@ webpackJsonp([45], {
                 }
             }))(v)
     },
-    927: function(e, t, n) {
+    766: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -13359,17 +11491,17 @@ webpackJsonp([45], {
         var r, a = n(0),
             o = n(1),
             s = n(2),
-            l = n(935),
-            u = n(136),
-            c = n(270),
-            d = n(6),
-            p = n(934),
-            m = n(411),
-            f = n(947),
-            h = n(936),
-            g = n(269),
+            l = n(776),
+            u = n(125),
+            c = n(249),
+            d = n(5),
+            p = n(775),
+            m = n(356),
+            f = n(787),
+            h = n(777),
+            g = n(248),
             b = n(3),
-            v = (n(971), "gift-subscription-button"),
+            v = (n(812), "gift-subscription-button"),
             y = "subscribe-button";
         ! function(e) {
             e[e.Prime = 0] = "Prime", e[e.Tier1 = 1] = "Tier1", e[e.Tier2 = 2] = "Tier2", e[e.Tier3 = 3] = "Tier3"
@@ -13645,7 +11777,7 @@ webpackJsonp([45], {
             return k
         })
     },
-    930: function(e, t, n) {
+    771: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -13732,7 +11864,7 @@ webpackJsonp([45], {
             return i
         })
     },
-    931: function(e, t, n) {
+    772: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -13740,16 +11872,16 @@ webpackJsonp([45], {
                 closeModal: c.c
             }, e)
         }
-        var r = n(932),
+        var r = n(773),
             a = n(0),
             o = n(1),
-            s = n(9),
-            l = n(11),
-            u = n(134),
-            c = n(50),
-            d = n(6),
+            s = n(8),
+            l = n(10),
+            u = n(123),
+            c = n(49),
+            d = n(5),
             p = n(3),
-            m = (n(957), function(e) {
+            m = (n(797), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleClose = function(e) {
@@ -13781,7 +11913,7 @@ webpackJsonp([45], {
             return f
         })
     },
-    932: function(e, t, n) {
+    773: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -13794,19 +11926,19 @@ webpackJsonp([45], {
         });
         var r = n(0),
             a = n(1),
-            o = (n.n(a), n(9)),
-            s = n(11),
+            o = (n.n(a), n(8)),
+            s = n(10),
             l = n(2),
-            u = n(8),
-            c = n(23),
-            d = n(14),
-            p = n(6),
-            m = n(926),
-            f = n(923),
-            h = n(930),
-            g = n(926),
-            b = n(952),
-            v = (n.n(b), n(953)),
+            u = n(7),
+            c = n(22),
+            d = n(13),
+            p = n(5),
+            m = n(765),
+            f = n(762),
+            h = n(771),
+            g = n(765),
+            b = n(792),
+            v = (n.n(b), n(793)),
             y = (n.n(v), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -13905,7 +12037,7 @@ webpackJsonp([45], {
                 name: "reportUser"
             }), Object(p.c)("ReportUser"), Object(o.a)(i, null))(y)
     },
-    933: function(e, t, n) {
+    774: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -13915,10 +12047,10 @@ webpackJsonp([45], {
         }
         var r = n(0),
             a = n(1),
-            o = n(9),
-            s = n(19),
-            l = n(6),
-            u = n(934),
+            o = n(8),
+            s = n(18),
+            l = n(5),
+            u = n(775),
             c = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -13948,7 +12080,7 @@ webpackJsonp([45], {
             return u.b
         })
     },
-    934: function(e, t, n) {
+    775: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -13960,26 +12092,26 @@ webpackJsonp([45], {
         var r, a = n(0),
             o = n(1),
             s = n(2),
-            l = n(64),
-            u = n(8),
-            c = n(109),
-            d = n(935),
-            p = n(141),
-            m = n(23),
-            f = n(36),
-            h = n(20),
-            g = n(6),
-            b = n(65),
-            v = n(89),
-            y = n(139),
-            S = n(410),
-            k = n(30),
-            _ = n(52),
-            E = n(136),
-            T = n(960),
-            C = n(269),
+            l = n(60),
+            u = n(7),
+            c = n(102),
+            d = n(776),
+            p = n(130),
+            m = n(22),
+            f = n(35),
+            h = n(19),
+            g = n(5),
+            b = n(61),
+            v = n(83),
+            y = n(128),
+            S = n(355),
+            k = n(29),
+            _ = n(51),
+            E = n(125),
+            T = n(800),
+            C = n(248),
             P = n(3),
-            w = (n(970), function(e) {
+            w = (n(811), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -14321,8 +12453,8 @@ webpackJsonp([45], {
                 }, t = a.__decorate([Object(g.c)("GiftRecipientSearch")], t)
             }(o.Component),
             U = R,
-            D = n(942),
-            F = n(927),
+            D = n(783),
+            F = n(766),
             x = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -14368,14 +12500,14 @@ webpackJsonp([45], {
                 }, t
             }(o.Component),
             j = x,
-            A = n(933),
-            L = n(947);
+            A = n(774),
+            L = n(787);
         ! function(e) {
             e[e.Top = 0] = "Top", e[e.SubOptions = 1] = "SubOptions", e[e.GiftOptions = 2] = "GiftOptions", e[e.RecipientSelect = 3] = "RecipientSelect"
         }(r || (r = {}));
-        var M = n(936),
-            V = n(972),
-            G = (n(973), function(e) {
+        var M = n(777),
+            V = n(813),
+            B = (n(814), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.handleTopPageSubButtonClick = function() {
@@ -14628,7 +12760,7 @@ webpackJsonp([45], {
                     }
                 }), Object(g.c)("BalloonNonSubbedUser")], t)
             }(o.Component)),
-            B = G,
+            G = B,
             z = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -14952,7 +13084,7 @@ webpackJsonp([45], {
                 }, t = a.__decorate([Object(g.c)("BalloonSubbedUser")], t)
             }(o.Component),
             W = z,
-            H = (n(974), n(975));
+            H = (n(815), n(816));
         n.d(t, "a", function() {
             return q
         }), n.d(t, "b", function() {
@@ -15141,7 +13273,7 @@ webpackJsonp([45], {
                         var e = null;
                         return this.hasDiscount() && (e = o.createElement(P.U, {
                             className: "tw-subscription-modal__discount-bar"
-                        }, o.createElement(P._21, null, this.messages.discountMessage))), o.createElement(P.U, null, e, o.createElement(B, {
+                        }, o.createElement(P._21, null, this.messages.discountMessage))), o.createElement(P.U, null, e, o.createElement(G, {
                             authToken: this.props.authToken,
                             channelDisplayName: this.state.subData.displayName,
                             channelLogin: this.props.channelLogin,
@@ -15157,7 +13289,7 @@ webpackJsonp([45], {
                             setPromotionData: this.setPromotionData
                         }))
                     }
-                    return o.createElement(B, {
+                    return o.createElement(G, {
                         authToken: this.props.authToken,
                         channelDisplayName: this.state.subData.displayName,
                         channelLogin: this.props.channelLogin,
@@ -15236,7 +13368,7 @@ webpackJsonp([45], {
             }(o.Component),
             K = $
     },
-    935: function(e, t, n) {
+    776: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -15248,7 +13380,7 @@ webpackJsonp([45], {
             Tier3: "3000"
         }
     },
-    936: function(e, t, n) {
+    777: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -15265,7 +13397,7 @@ webpackJsonp([45], {
         }
         t.a = i, t.b = r
     },
-    939: function(e, t, n) {
+    780: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -15275,12 +13407,12 @@ webpackJsonp([45], {
             e.Admin = "admin", e.GlobalMod = "global_mod", e.Moderator = "mod", e.Owner = "owner", e.Staff = "staff", e.Subscriber = "subscriber", e.User = ""
         }(i || (i = {}))
     },
-    942: function(e, t, n) {
+    783: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
             a = n(2),
-            o = n(927),
+            o = n(766),
             s = n(3),
             l = function(e) {
                 function t() {
@@ -15331,7 +13463,7 @@ webpackJsonp([45], {
             return u
         })
     },
-    947: function(e, t, n) {
+    787: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -15373,7 +13505,7 @@ webpackJsonp([45], {
             a = n(1),
             o = n(2),
             s = 3,
-            l = n(269),
+            l = n(248),
             u = n(3),
             c = "subscribe-button__subscribe-with-prime",
             d = function(e) {
@@ -15466,7 +13598,7 @@ webpackJsonp([45], {
             return p
         })
     },
-    949: function(e, t) {
+    789: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -15554,8 +13686,8 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    950: function(e, t) {},
-    951: function(e, t) {
+    790: function(e, t) {},
+    791: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -15709,7 +13841,7 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    952: function(e, t) {
+    792: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -15810,7 +13942,7 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    953: function(e, t) {
+    793: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -15898,27 +14030,24 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    957: function(e, t) {},
-    960: function(e, t, n) {
+    797: function(e, t) {},
+    800: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
             a = n(2),
-            o = n(8),
-            s = n(6),
+            o = n(7),
+            s = n(5),
             l = n(3),
-            u = n(969),
+            u = n(810),
             c = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        canGift: !1,
-                        giftingEnabled: !1
+                        canGift: !1
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentWillMount = function() {
-                    this.getGiftingExperimentAssignment()
-                }, t.prototype.componentDidMount = function() {
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     e.data && e.data.user && e.data.user.self ? this.setState({
@@ -15927,29 +14056,13 @@ webpackJsonp([45], {
                         canGift: !1
                     })
                 }, t.prototype.render = function() {
-                    return this.state.giftingEnabled ? r.createElement(l.u, {
+                    return r.createElement(l.u, {
                         targetBlank: !0,
                         disabled: !this.state.canGift,
                         onClick: this.props.onClick,
                         linkTo: this.props.checkoutURL,
                         "data-test-selector": "gift-subscribe-button"
-                    }, Object(a.d)("Gift Subscription", "GiftSubscribeButton")) : null
-                }, t.prototype.getGiftingExperimentAssignment = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return i.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, a.n.experiments.getAssignment("TWILIGHT_SUB_GIFTING")];
-                                case 1:
-                                    return e = t.sent(), "yes" === e ? this.setState({
-                                        giftingEnabled: !0
-                                    }) : this.setState({
-                                        giftingEnabled: !1
-                                    }), [2]
-                            }
-                        })
-                    })
+                    }, Object(a.d)("Gift Subscription", "GiftSubscribeButton"))
                 }, t = i.__decorate([Object(s.c)("GiftSubscribeButton"), Object(o.a)(u, {
                     options: function(e) {
                         return {
@@ -15971,7 +14084,22 @@ webpackJsonp([45], {
             return d
         })
     },
-    969: function(e, t) {
+    806: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            var t = Math.floor(e / 3600),
+                n = Math.floor((e - 3600 * t) / 60),
+                i = e - 3600 * t - 60 * n;
+            return t < 10 && (t = "0" + t), n < 10 && (n = "0" + n), i < 10 && (i = "0" + i), t + "h" + n + "m" + i + "s"
+        }
+
+        function r(e) {
+            return "" === e ? "" : e.startsWith("v") ? e : "v" + e
+        }
+        t.b = i, t.a = r
+    },
+    810: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -16112,9 +14240,9 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    970: function(e, t) {},
-    971: function(e, t) {},
-    972: function(e, t) {
+    811: function(e, t) {},
+    812: function(e, t) {},
+    813: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -16288,9 +14416,9 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    973: function(e, t) {},
-    974: function(e, t) {},
-    975: function(e, t) {
+    814: function(e, t) {},
+    815: function(e, t) {},
+    816: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -16725,28 +14853,1899 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    976: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            var t = Math.floor(e / 3600),
-                n = Math.floor((e - 3600 * t) / 60),
-                i = e - 3600 * t - 60 * n;
-            return t < 10 && (t = "0" + t), n < 10 && (n = "0" + n), i < 10 && (i = "0" + i), t + "h" + n + "m" + i + "s"
-        }
-
-        function r(e) {
-            return "" === e ? "" : e.startsWith("v") ? e : "v" + e
-        }
-        t.b = i, t.a = r
-    },
-    991: function(e, t, n) {
+    830: function(e, t, n) {
         "use strict";
 
         function i(e) {
             return e && "v" === e.charAt(0) ? e.substring(1) : e
         }
         t.a = i
-    }
+    },
+    846: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return r
+        }), n.d(t, "d", function() {
+            return a
+        }), n.d(t, "e", function() {
+            return o
+        }), n.d(t, "c", function() {
+            return i
+        }), n.d(t, "b", function() {
+            return s
+        });
+        var i, r = "carousel-player__main-description",
+            a = "carousel-player-left-button",
+            o = "carousel-player-right-button";
+        ! function(e) {
+            e[e.Horizontal = 1] = "Horizontal", e[e.Vertical = 2] = "Vertical"
+        }(i || (i = {}));
+        var s;
+        ! function(e) {
+            e[e.Stream = 1] = "Stream", e[e.Vod = 2] = "Vod"
+        }(s || (s = {}))
+    },
+    858: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return {
+                trackingSet: e.ads.trackingSet
+            }
+        }
+        var r = n(8),
+            a = n(0),
+            o = n(1),
+            s = n(2),
+            l = n(104),
+            u = n(361),
+            c = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
+            d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
+            p = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.logger = s.i.withCategory("ad-slot"), n.createSlot = function(e) {
+                        return a.__awaiter(n, void 0, void 0, function() {
+                            var t, n;
+                            return a.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        if (this.state.slotCreated) return [2];
+                                        this.setState({
+                                            slotCreated: !0
+                                        }), i.label = 1;
+                                    case 1:
+                                        return i.trys.push([1, 3, , 4]), [4, l.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
+                                    case 2:
+                                        return t = i.sent(), Object(u.h)(t.getSlotElementId()), this.setState({
+                                            slot: t
+                                        }), [3, 4];
+                                    case 3:
+                                        return n = i.sent(), this.logger.warn("Unable to create ad slot", {
+                                            slotID: e.slotID,
+                                            adUnit: e.adUnit,
+                                            adSize: e.adSize,
+                                            targeting: e.targeting,
+                                            autoEnable: e.autoEnable
+                                        }), [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, n.setRef = function(e) {
+                        return n.slotRef = e
+                    }, n.onSlotRenderEnd = function(e) {
+                        var t = e.slot.getSlotElementId();
+                        if (n.state.slot && t === n.props.slotID) {
+                            if (n.logger.debug("Ad slot render ended", {
+                                    elementID: t,
+                                    lineItemID: e.lineItemId,
+                                    createdID: e.creativeId,
+                                    isEmpty: e.isEmpty,
+                                    serviceName: e.serviceName,
+                                    size: e.size
+                                }), e.isEmpty) return;
+                            if (!n.slotRef) return;
+                            if (n.props.slotID === u.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
+                                shouldDisplay: !0
+                            }, function() {
+                                return n.slotRendered(e.slot)
+                            }));
+                            if (n.props.slotID === u.b.directory.banner) {
+                                var i = n.slotRef.querySelector(c);
+                                return void(i && 1 !== i.clientWidth && n.setState({
+                                    shouldDisplay: !0
+                                }, function() {
+                                    return n.slotRendered(e.slot)
+                                }))
+                            }
+                            if (n.props.slotID === u.b.directory.rectangle) {
+                                var i = n.slotRef.querySelector(d);
+                                return void(i && 1 !== i.clientWidth && n.setState({
+                                    shouldDisplay: !0
+                                }, function() {
+                                    return n.slotRendered(e.slot)
+                                }))
+                            }
+                            n.setState({
+                                shouldDisplay: !0
+                            }, function() {
+                                return n.slotRendered(e.slot)
+                            })
+                        }
+                    }, n.slotRendered = function(e) {
+                        n.props.slotRendered && n.props.slotRendered(e)
+                    }, n.state = {
+                        shouldDisplay: !1
+                    }, n
+                }
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    u.g.addListener(u.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    this.state.slotCreated || (e.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentWillReceiveProps)", this.props.slotID), this.createSlot(e)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentWillReceiveProps)", this.props.slotID))
+                }, t.prototype.componentWillUnmount = function() {
+                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), u.g.removeListener(u.f, this.onSlotRenderEnd), this.state.slot && l.a.destroySlot(this.state.slot)
+                }, t.prototype.shouldComponentUpdate = function(e, t) {
+                    return t.shouldDisplay !== this.state.shouldDisplay
+                }, t.prototype.render = function() {
+                    var e = a.__assign({}, this.props.injectStyles);
+                    return this.state.shouldDisplay || (e.display = "none"), o.createElement("div", {
+                        style: e,
+                        id: this.props.slotID,
+                        ref: this.setRef
+                    })
+                }, t
+            }(o.Component),
+            m = p,
+            f = Object(r.a)(i)(m);
+        n.d(t, "a", function() {
+            return f
+        })
+    },
+    87: function(e, t, n) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        });
+        var i = n(0),
+            r = n(1),
+            a = n(358),
+            o = n(106),
+            s = n(88),
+            l = function(e) {
+                var t = {
+                    name: "TWILIGHT_EXPANDO_FEATURO",
+                    assignments: {
+                        fallback: function() {
+                            return o.a.wrap(function() {
+                                return new Promise(function(e) {
+                                    e()
+                                }).then(n.bind(null, 88))
+                            }, "FeaturedBroadcasters")(i.__assign({}, e, {
+                                streamCount: 6,
+                                showCounts: !1
+                            }))
+                        },
+                        expanded: function() {
+                            return o.a.wrap(function() {
+                                return new Promise(function(e) {
+                                    e()
+                                }).then(n.bind(null, 88))
+                            }, "FeaturedBroadcasters")(i.__assign({}, e, {
+                                streamCount: 8,
+                                showCounts: !0
+                            }))
+                        }
+                    },
+                    loader: function() {
+                        return Object(s.placeholderFeaturedBroadcasters)(e.renderContext)
+                    }
+                };
+                return r.createElement(a.a, i.__assign({}, t))
+            };
+        n.d(t, "FeaturedBroadcastersRenderContext", function() {
+            return s.FeaturedBroadcastersRenderContext
+        }), n.d(t, "FeaturedBroadcasters", function() {
+            return l
+        })
+    },
+    875: function(e, t, n) {
+        "use strict";
+        var i = n(13),
+            r = n(1061),
+            a = n(898),
+            o = function(e, t) {
+                var n = s(e);
+                Object(a.c)(i.SpadeEventType.FeedCardImpression, n, t)
+            },
+            s = function(e) {
+                var t = e.item.reasons[0] ? Object(r.b)(e.item.reasons[0].reason) : "";
+                switch (e.item.content.__typename) {
+                    case "Clip":
+                        return {
+                            card_author_id: e.item.content.broadcaster.id,
+                            display_reason: t,
+                            feed_presentation: e.feedPresentation
+                        };
+                    case "Post":
+                        return {
+                            card_author_id: e.item.content.author.id,
+                            display_reason: t,
+                            feed_presentation: e.feedPresentation
+                        };
+                    case "Stream":
+                        return {
+                            card_author_id: e.item.content.broadcaster.id,
+                            display_reason: t,
+                            feed_presentation: e.feedPresentation
+                        };
+                    case "Video":
+                        return {
+                            card_author_id: e.item.content.owner.id,
+                            display_reason: t,
+                            feed_presentation: e.feedPresentation
+                        };
+                    default:
+                        return {
+                            card_author_id: "",
+                            display_reason: "",
+                            feed_presentation: ""
+                        }
+                }
+            },
+            l = n(980),
+            u = function(e, t) {
+                var n = c(e.embed);
+                Object(a.c)(i.SpadeEventType.FeedCardEmbedImpression, n, t)
+            },
+            c = function(e) {
+                switch (e.__typename) {
+                    case "Clip":
+                        var t = e;
+                        return {
+                            embed_entity: l.a + ":" + t.id,
+                            embed_id: t.id,
+                            embed_type: l.a,
+                            media_type: "video"
+                        };
+                    case "PhotoOEmbed":
+                        var n = e;
+                        return {
+                            embed_entity: l.b + ":" + n.inputURL,
+                            embed_id: n.inputURL,
+                            embed_type: l.b,
+                            media_type: "photo"
+                        };
+                    case "Stream":
+                        var i = e;
+                        return {
+                            embed_entity: l.d + ":" + i.id,
+                            embed_id: i.id,
+                            embed_type: l.d,
+                            media_type: "video"
+                        };
+                    case "Video":
+                        var r = e;
+                        return {
+                            embed_entity: l.e + ":" + r.id,
+                            embed_id: r.id,
+                            embed_type: l.e,
+                            media_type: "video"
+                        };
+                    case "VideoOEmbed":
+                        var a = e;
+                        return {
+                            embed_entity: l.b + ":" + a.inputURL,
+                            embed_id: a.inputURL,
+                            embed_type: l.b,
+                            media_type: "video"
+                        };
+                    default:
+                        return {
+                            embed_entity: "",
+                            embed_id: "",
+                            embed_type: "",
+                            media_type: ""
+                        }
+                }
+            },
+            d = function(e, t) {
+                var n = p(e.embed);
+                Object(a.c)(i.SpadeEventType.FeedCardEmbedPlay, n, t)
+            },
+            p = function(e) {
+                switch (e.__typename) {
+                    case "Clip":
+                        var t = e;
+                        return {
+                            action: "play",
+                            embed_entity: l.a + ":" + t.id,
+                            embed_id: t.id,
+                            embed_type: l.a,
+                            media_type: "video"
+                        };
+                    case "Stream":
+                        var n = e;
+                        return {
+                            action: "play",
+                            embed_entity: l.d + ":" + n.id,
+                            embed_id: n.id,
+                            embed_type: l.d,
+                            media_type: "video"
+                        };
+                    case "Video":
+                        var i = e;
+                        return {
+                            action: "play",
+                            embed_entity: l.e + ":" + i.id,
+                            embed_id: i.id,
+                            embed_type: l.e,
+                            media_type: "video"
+                        };
+                    case "VideoOEmbed":
+                        var r = e;
+                        return {
+                            action: "play",
+                            embed_entity: l.b + ":" + r.inputURL,
+                            embed_id: r.inputURL,
+                            embed_type: l.b,
+                            media_type: "video"
+                        };
+                    default:
+                        return {
+                            action: "",
+                            embed_entity: "",
+                            embed_id: "",
+                            embed_type: "",
+                            media_type: ""
+                        }
+                }
+            },
+            m = (n(1060), function(e, t) {
+                var n = Object(l.f)(e.entity),
+                    r = {
+                        action: e.action,
+                        reaction_int: e.reactionInt,
+                        reaction_text: e.reactionText,
+                        target_entity: e.entity,
+                        target_id: n.id,
+                        target_type: n.type
+                    };
+                Object(a.c)(i.SpadeEventType.FeedReaction, r, t)
+            });
+        n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "a", function() {
+            return o
+        }), n.d(t, "b", function() {
+            return u
+        }), n.d(t, "c", function() {
+            return d
+        }), n.d(t, !1, function() {}), n.d(t, "d", function() {
+            return m
+        })
+    },
+    88: function(e, t, n) {
+        "use strict";
+
+        function i(e, t, n, i) {
+            switch (t) {
+                case a.AnonFront:
+                    return s.createElement(c.a, {
+                        items: e,
+                        isLoading: n,
+                        layout: d.c.Horizontal,
+                        showCounts: i,
+                        darkTheme: !0
+                    });
+                default:
+                    return s.createElement(f._17, {
+                        className: "featured-broadcasters",
+                        background: f.m.Base,
+                        elevation: 1
+                    }, s.createElement(f.U, {
+                        padding: 1
+                    }, s.createElement(f._21, {
+                        fontSize: f.L.Size5,
+                        color: f.F.Alt2
+                    }, Object(l.d)("Featured Broadcasters", "FeaturedBroadcastersComponent"))), s.createElement(c.a, {
+                        items: e,
+                        isLoading: n,
+                        layout: d.c.Vertical,
+                        showCounts: i
+                    }))
+            }
+        }
+
+        function r(e) {
+            return i([], e, !0)
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), n.d(t, "FeaturedBroadcastersRenderContext", function() {
+            return a
+        }), t.placeholderFeaturedBroadcasters = r, n.d(t, "FeaturedBroadcasters", function() {
+            return b
+        });
+        var a, o = n(0),
+            s = n(1),
+            l = (n.n(s), n(2)),
+            u = n(7),
+            c = n(1045),
+            d = n(846),
+            p = n(1046),
+            m = n(5),
+            f = n(3),
+            h = n(1269);
+        n.n(h);
+        ! function(e) {
+            e[e.AnonFront = 1] = "AnonFront", e[e.Front = 2] = "Front"
+        }(a || (a = {}));
+        var g = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.getRender = function(e) {
+                        var n = !(!t.props.data.loading && !t.props.data.error);
+                        return i(e, t.props.renderContext, n, t.props.showCounts)
+                    }, t
+                }
+                return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.postRender()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.postRender()
+                }, t.prototype.render = function() {
+                    var e = this.props.data.featuredStreams || [],
+                        t = Object(p.a)(e);
+                    return this.getRender(t)
+                }, t.prototype.postRender = function() {
+                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
+                }, t = o.__decorate([Object(u.a)(h, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                language: l.n.intl.getLanguageCode(),
+                                first: e.streamCount || 6
+                            }
+                        }
+                    }
+                }), Object(m.c)("FeaturedBroadcasters")], t)
+            }(s.Component),
+            b = g
+    },
+    881: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            var t = [];
+            return e.forEach(function(e) {
+                t[e.from] = {
+                    startIndex: e.from,
+                    endIndex: e.to + 1,
+                    data: {
+                        images: {
+                            themed: !1,
+                            sources: {
+                                "1x": Object(u.e)(e.emoteID, 1),
+                                "2x": Object(u.e)(e.emoteID, 2),
+                                "4x": Object(u.e)(e.emoteID, 4)
+                            }
+                        }
+                    }
+                }
+            }), t
+        }
+
+        function r(e, t, n) {
+            var r = i(e.body.emotes),
+                a = e.badges.reduce(function(e, t) {
+                    return e[t.setID] = t.version, e
+                }, {});
+            return {
+                type: l.a.Post,
+                id: e.id,
+                badges: a,
+                bits: e.bitsUsed,
+                timestamp: 0,
+                deleted: !1,
+                user: o.__assign({
+                    userID: e.author.id,
+                    userLogin: e.author.login,
+                    userType: s.a.User,
+                    color: e.authorColor
+                }, Object(c.a)(e.authorName, e.author.login)),
+                messageParts: Object(u.f)(e.body.content, r, e.bitsUsed, t, n, e.authorName)
+            }
+        }
+
+        function a(e) {
+            var t = "ChatMessage:" + e.tags.msg_id;
+            return {
+                __typename: "ChatMessage",
+                "Symbol(id)": t,
+                id: e.tags.msg_id,
+                authorName: e.tags.display_name,
+                authorColor: e.tags.color,
+                author: {
+                    __typename: "User",
+                    "Symbol(id)": "User:" + e.user_id,
+                    id: e.user_id,
+                    login: e.username
+                },
+                body: {
+                    __typename: "MessageBody",
+                    "Symbol(id)": "$" + t + ".body",
+                    content: e.message,
+                    emotes: e.tags.emotes.map(function(e, n) {
+                        return {
+                            __typename: "EmbeddedEmote",
+                            "Symbol(id)": t + ".body.emotes." + n,
+                            emoteID: e.id.toString(),
+                            from: e.start,
+                            to: e.end,
+                            setID: e.set
+                        }
+                    })
+                },
+                badges: e.tags.badges.map(function(e, n) {
+                    return {
+                        __typename: "Badge",
+                        "Symbol(id)": t + ".badges." + n,
+                        setID: e.badge_set_id,
+                        version: e.badge_set_version
+                    }
+                }),
+                bitsUsed: e.bits_used
+            }
+        }
+        t.b = i, t.a = r, t.c = a;
+        var o = n(0),
+            s = n(780),
+            l = n(757),
+            u = n(124),
+            c = n(359)
+    },
+    882: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "embeddedEmote"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "EmbeddedEmote"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "emoteID"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "setID"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "from"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "to"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 74
+            }
+        };
+        n.loc.source = {
+            body: "fragment embeddedEmote on EmbeddedEmote {\n  emoteID\n  setID\n  from\n  to\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    886: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return {
+                isLoggedIn: Object(w.d)(e)
+            }
+        }
+
+        function r(e) {
+            return Object(E.bindActionCreators)({
+                login: function() {
+                    return Object(P.f)(T.a.ReportHoster)
+                },
+                showReportUserModal: function(e) {
+                    var t = c.__rest(e, []);
+                    return Object(C.d)(N.a, t)
+                }
+            }, e)
+        }
+
+        function a() {
+            return !!window.Twitch && !!window.Twitch.Player
+        }
+
+        function o(e) {
+            return {
+                theatreModeEnabled: e.ui.theatreModeEnabled,
+                isLoggedIn: Object(w.d)(e),
+                authToken: Object(w.a)(e)
+            }
+        }
+
+        function s(e) {
+            return Object(E.bindActionCreators)({
+                enableTheatreMode: I.k,
+                disableTheatreMode: I.j
+            }, e)
+        }
+
+        function l(e, t, n) {
+            if (!e.collectionID && e.videoID) return void t.push("/videos/" + e.videoID);
+            if (e.collectionID && e.videoID) {
+                if (n && n.currentVideoID && n.currentCollectionID && n.currentVideoID === e.videoID && n.currentCollectionID === e.collectionID) return;
+                return void t.push("/videos/" + e.videoID + "?collection=" + e.collectionID)
+            }
+            if (e.collectionID && !e.videoID) return void t.push("/collections/" + e.collectionID);
+            m.i.withCategory("video-player").error(new Error("No collection or video specified from the emitted player transition event."), "No collection or video specified from the emitted player transition event.")
+        }
+        var u, c = n(0),
+            d = n(1),
+            p = n(11),
+            m = n(2),
+            f = n(254),
+            h = n(60),
+            g = n(13),
+            b = n(765),
+            v = n(762),
+            y = n(774),
+            S = n(3),
+            k = (n(986), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleReportHosterClick = function() {
+                        t.props.isLoggedIn ? t.props.showReportUserModal({
+                            onClose: t.handleReportModalClose,
+                            reportContext: {
+                                contentType: v.a.User,
+                                targetUserID: t.props.hostChannelID
+                            },
+                            title: Object(m.d)("Report {channelDisplayName}", {
+                                channelDisplayName: t.props.hostChannelDisplayName
+                            }, "VideoPlayerHostingUI")
+                        }) : t.props.login()
+                    }, t.handleReportModalClose = function(e) {
+                        (e === b.b.MutationError || e === b.b.Success) && t.props.history.push("/")
+                    }, t
+                }
+                return c.__extends(t, e), t.prototype.render = function() {
+                    var e = !!this.props.hostedChannelDisplayName;
+                    return d.createElement(S._17, {
+                        className: "video-player-hosting-ui__container"
+                    }, e && this.renderHeader(), d.createElement("span", {
+                        key: "video-player"
+                    }, this.props.children), d.createElement(S.U, {
+                        display: e ? S.H.Block : S.H.Hide,
+                        position: S._2.Relative,
+                        zIndex: S._38.Above
+                    }, e && this.renderFooter()))
+                }, t.prototype.renderHeader = function() {
+                    return d.createElement(S.e, {
+                        type: S.i.SlideInBottom,
+                        delay: S.f.Medium,
+                        duration: S.g.Medium,
+                        enabled: !0
+                    }, d.createElement(p.a, {
+                        key: "hosting-ui-header",
+                        className: "video-player-hosting-ui__link",
+                        to: {
+                            pathname: "/" + this.props.hostedChannelLogin,
+                            state: {
+                                medium: g.PageviewMedium.Channel,
+                                content: g.PageviewContent.Host
+                            }
+                        },
+                        "data-a-target": "hosting-ui-link",
+                        "data-test-selector": "video-player-hosting-ui__header"
+                    }, d.createElement(S._17, {
+                        className: "video-player-hosting-ui__header",
+                        display: S.H.Flex,
+                        background: S.m.AccentAlt2,
+                        color: S.F.Overlay,
+                        alignItems: S.c.Center,
+                        padding: {
+                            x: 1,
+                            y: .5
+                        },
+                        "data-a-target": "hosting-ui-header"
+                    }, d.createElement(S.U, {
+                        className: "video-player-hosting-ui__avatar-container"
+                    }, d.createElement(S.l, {
+                        imageSrc: this.props.hostedChannelProfileImageURL || "",
+                        size: 30,
+                        imageAlt: Object(m.d)("Hosted Channel {hostedChannelDisplayName}'s Avatar", {
+                            hostedChannelDisplayName: this.props.hostedChannelDisplayName || ""
+                        }, "VideoPlayerHostingUI")
+                    })), d.createElement(S._17, {
+                        margin: {
+                            left: 1
+                        },
+                        fontSize: S.L.Size5
+                    }, Object(m.d)("Hosting", "VideoPlayerHostingUI"), " ", d.createElement(S._21, {
+                        type: S._26.Span,
+                        className: "video-player-hosting-ui__channel-name",
+                        color: S.F.OverlayAlt,
+                        "data-a-target": "hosting-ui-channel-name"
+                    }, this.props.hostedChannelDisplayName)))))
+                }, t.prototype.renderFooter = function() {
+                    return d.createElement(S.e, {
+                        type: S.i.SlideInTop,
+                        enabled: !0,
+                        delay: S.f.Medium,
+                        duration: S.g.Medium
+                    }, d.createElement(S._17, {
+                        key: "hosting-ui-footer",
+                        background: S.m.AccentAlt2,
+                        className: "video-player-hosting-ui__footer",
+                        display: S.H.Block,
+                        padding: 1,
+                        "data-test-selector": "video-player-hosting-ui__footer",
+                        "data-a-target": "hosting-ui-footer"
+                    }, d.createElement(S.U, {
+                        padding: {
+                            y: .5
+                        },
+                        display: S.H.Flex,
+                        justifyContent: S.T.Between
+                    }, d.createElement(S.U, {
+                        display: S.H.Flex
+                    }, d.createElement(S.U, {
+                        margin: {
+                            right: 1
+                        }
+                    }, d.createElement(f.a, {
+                        "data-a-target": "hosting-ui-follow-button",
+                        channelName: this.props.hostedChannelLogin || "",
+                        channelLogin: this.props.hostedChannelLogin,
+                        hostChannelLogin: this.props.hostChannelLogin,
+                        hostChannelID: this.props.hostChannelID,
+                        isHostedFollow: !0,
+                        balloonDirection: S.q.BottomLeft
+                    })), d.createElement(S.U, null, d.createElement(y.b, {
+                        channelLogin: this.props.hostedChannelLogin,
+                        hostChannelID: this.props.hostChannelID,
+                        hostChannelLogin: this.props.hostChannelLogin,
+                        "data-a-target": "hosting-ui-subscribe-button"
+                    }))), d.createElement(h.a, null, d.createElement(S.v, {
+                        ariaLabel: Object(m.d)("More options", "HostingUI"),
+                        overlay: !0,
+                        icon: S._9.More,
+                        onClick: this.handleReportHosterClick,
+                        "data-a-target": "hosting-ui-more-button"
+                    }), d.createElement(S.p, {
+                        direction: S.q.TopRight,
+                        "data-a-target": "hosting-ui-more-balloon"
+                    }, d.createElement(S.U, {
+                        padding: {
+                            y: 1
+                        }
+                    }, d.createElement(S.S, {
+                        onClick: this.handleReportHosterClick,
+                        "data-a-target": "hosting-ui-report-button"
+                    }, d.createElement(S.U, {
+                        padding: {
+                            x: 1,
+                            y: .5
+                        }
+                    }, Object(m.d)("Report {hostChannelDisplayName}", {
+                        hostChannelDisplayName: this.props.hostChannelDisplayName
+                    }, "VideoPlayerHostingUI")))))))))
+                }, t
+            }(d.Component)),
+            _ = n(8),
+            E = n(10),
+            T = n(50),
+            C = n(49),
+            P = n(34),
+            w = n(18),
+            N = n(772),
+            O = Object(_.a)(i, r)(Object(p.f)(k)),
+            I = n(65),
+            R = n(4),
+            U = n(373),
+            D = n(372),
+            F = n(20),
+            x = n(830),
+            j = n(5);
+        ! function(e) {
+            e.LoadStart = "loadstart", e.Error = "error", e.LoadedMetadata = "loadedmetadata", e.CanPlay = "canplay", e.Playing = "playing", e.Waiting = "waiting", e.Seeking = "seeking", e.Seeked = "seeked", e.Ended = "ended", e.DurationChange = "durationchange", e.TimeUpdate = "timeupdate", e.Play = "play", e.Pause = "pause", e.VolumeChange = "volumechange", e.RateChange = "ratechange"
+        }(u || (u = {}));
+        var A;
+        ! function(e) {
+            e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange"
+        }(A || (A = {}));
+        var L, M = (n(987), n(806));
+        ! function(e) {
+            e.Embed = "embed", e.Frontpage = "frontpage", e.Site = "site"
+        }(L || (L = {}));
+        var V = {
+                allowfullscreen: !0,
+                branding: !1,
+                channelInfo: !1,
+                controls: !0,
+                height: "100%",
+                playsinline: !0,
+                player: L.Site,
+                showInfo: !1,
+                showtheatre: !1,
+                trackingProperties: {
+                    client_app: "twilight"
+                },
+                width: "100%",
+                oauth_token: ""
+            },
+            B = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.logger = m.i.withCategory("video-player"), n.checkPlayerDependencyStatus = function() {
+                        a() ? (n.setState({
+                            canInitializePlayer: !0
+                        }), n.checkPlayerDependencyAnimationFrame = null) : n.checkPlayerDependencyAnimationFrame = requestAnimationFrame(n.checkPlayerDependencyStatus)
+                    }, n.attachRef = function(e) {
+                        return n.playerRef = e
+                    }, n.onOpenStream = function() {
+                        n.props.playerTypeOverride === L.Frontpage && n.player && (n.props.channelLogin ? m.n.history.push("/" + n.props.channelLogin) : n.props.vodID ? m.n.history.push("/videos/" + n.props.vodID + "?t=" + n.player.getCurrentTime()) : n.props.collectionID && m.n.history.push("/collections/" + n.props.collectionID))
+                    }, n.onPlayerReady = function() {
+                        n.player && (n.logger.debug("Ready"), n.props.latencyTracking.reportInteractive(), n.hasPlayed = !1, n.props.latencyTracking.reportCustomEvent(n.playerLoaded), n.setState({
+                            playerInitialized: !0
+                        }, function() {
+                            return n.updatePlayerTrackingData(n.props.hostChannel)
+                        }))
+                    }, n.onPlayerPlay = function() {
+                        n.logger.debug("Play"), n.reportPlayerPlayed()
+                    }, n.onStreamStatusOnline = function() {
+                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(A.Online)
+                    }, n.onStreamStatusOffline = function() {
+                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(A.Offline)
+                    }, n.onTheatreChange = function(e) {
+                        e ? (n.logger.debug("Theatre Entered"), n.props.enableTheatreMode && !n.props.theatreModeEnabled && n.props.enableTheatreMode()) : (n.logger.debug("Theatre Exited"), n.props.disableTheatreMode && n.props.theatreModeEnabled && n.props.disableTheatreMode())
+                    }, n.onFullScreenChange = function() {
+                        n.player && (n.logger.debug("Fullscreen change", n.player.fullscreen), n.player.fullscreen !== n.state.isFullScreen && n.setState({
+                            isFullScreen: n.player.fullscreen
+                        }))
+                    }, n.onSeek = function() {
+                        n.props.onSeek && n.player && n.props.onSeek(n.player.getCurrentTime())
+                    }, n.onTimeUpdate = function() {
+                        n.props.onVideoTimeChange && n.player && n.props.onVideoTimeChange(n.player.getCurrentTime())
+                    }, n.onTransitionToCollectionVod = function(e) {
+                        if (n.props.onNavigationRequest) {
+                            var t = {};
+                            e.vodId && (t.videoID = Object(x.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
+                        }
+                    }, n.onTransitionToRecommendedVod = function(e) {
+                        if (n.props.onNavigationRequest) {
+                            var t = {};
+                            e.vodId && (t.videoID = Object(x.a)(e.vodId)), n.props.onNavigationRequest(t)
+                        }
+                    }, n.updatePlayerTrackingData = function(e) {
+                        if (n.state.playerInitialized && n.player) {
+                            var t = m.m.getLastPageview();
+                            t ? n.logger.debug("Tracking data updated.", {
+                                pageviewProperties: t,
+                                hostChannel: e
+                            }) : n.logger.debug("pageviewProperties not found; only hosting status updated", {
+                                pageviewProperties: t,
+                                hostChannel: e
+                            }), n.player.setTrackingProperties(c.__assign({}, t, {
+                                host_channel: e
+                            }))
+                        }
+                    }, n.updatePlayerType = function() {
+                        var e = n.props.playerTypeOverride || V.player;
+                        n.player && n.playerType !== e && (n.player.setPlayerType(e), n.playerType = e)
+                    }, n.maybeRecordClip = function() {
+                        n.player && n.state.playerInitialized && n.player.recordClip()
+                    }, n.playerCreated = n.registerCreatedEvent(), n.playerLoaded = n.registerLoadedEvent(), n.playerPlayed = n.registerPlayedEvent(), n.state = {
+                        canInitializePlayer: a(),
+                        playerInitialized: !1,
+                        isFullScreen: !1
+                    }, n.playerType = t.playerTypeOverride || V.player, n.lastSetChannel = t.channelLogin, n
+                }
+                return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                    var e = this;
+                    if (this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.state.canInitializePlayer ? this.initializePlayer() : this.checkPlayerDependencyAnimationFrame = window.requestAnimationFrame(this.checkPlayerDependencyStatus), m.m.eventEmitter.addListener(g.SpadeEventType.Pageview, function() {
+                            return e.updatePlayerTrackingData(e.props.hostChannel)
+                        }), window.__playerScriptChunk && !t.tagInjected) {
+                        this.logger.debug("Loading player chunk after page loaded");
+                        var n = document.createElement("script");
+                        n.crossOrigin = "anonymous", n.src = window.__jqueryChunk, n.onload = function() {
+                            var e = document.createElement("script");
+                            e.async = !0, e.crossOrigin = "anonymous", e.src = window.__playerScriptChunk, document.body.appendChild(e)
+                        }, document.body.appendChild(n);
+                        var i = document.createElement("link");
+                        i.href = window.__playerStyleChunk, i.media = "screen", i.rel = "stylesheet", i.type = "text/css", document.body.appendChild(i), t.tagInjected = !0
+                    }
+                }, t.prototype.componentWillUpdate = function(e, t) {
+                    if (!this.state.canInitializePlayer && t.canInitializePlayer) return void this.initializePlayer();
+                    if (t.canInitializePlayer && t.playerInitialized) {
+                        if (this.updatePlayerTrackingData(e.hostChannel), this.updatePlayerType(), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.channelLogin && e.channelLogin !== this.lastSetChannel) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void m.m.setVideoPlayerTrackingData({
+                            vodID: void 0
+                        });
+                        var n = e.collectionID && this.props.collectionID !== e.collectionID,
+                            i = e.vodID && this.props.vodID !== e.vodID;
+                        if (n || i) {
+                            var r = e.vodID ? Object(M.a)(e.vodID) : "";
+                            if ("" !== r && m.m.setVideoPlayerTrackingData({
+                                    vodID: e.vodID
+                                }), !this.player) return;
+                            return void(n || e.collectionID && i ? this.player.setCollection(e.collectionID, r, e.nextVideoOffset) : this.player.setVideo(r, e.nextVideoOffset))
+                        }
+                        void 0 !== e.nextVideoOffset && e.nextVideoOffset >= 0 && this.props.nextVideoOffset !== e.nextVideoOffset && this.player && this.player.setCurrentTime(e.nextVideoOffset)
+                    }
+                }, t.prototype.render = function() {
+                    var e = R("video-player", {
+                        "video-player--theatre": this.props.theatreModeEnabled,
+                        "video-player--logged-in": this.props.isLoggedIn,
+                        "video-player--fullscreen": this.state.isFullScreen
+                    });
+                    return d.createElement("div", {
+                        className: R(e),
+                        "data-test-selector": "video-player"
+                    }, d.createElement("div", {
+                        className: "video-player__container",
+                        ref: this.attachRef
+                    }))
+                }, t.prototype.componentWillUnmount = function() {
+                    this.unbindHotKeys(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.props.onDestroy && this.props.onDestroy(), this.player && (m.m.eventEmitter.removeListener(g.SpadeEventType.Pageview, this.updatePlayerTrackingData), this.player.removeEventListener(A.PlayerReady, this.onPlayerReady), this.player.removeEventListener(A.Online, this.onStreamStatusOnline), this.player.removeEventListener(A.Offline, this.onStreamStatusOffline), this.player.removeEventListener(u.Ended, this.onStreamStatusOffline), this.player.removeEventListener(u.Play, this.onPlayerPlay), this.player.removeEventListener(A.TheatreChange, this.onTheatreChange), this.player.removeEventListener(A.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(A.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(u.Seeked, this.onSeek), this.player.removeEventListener(u.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(A.OpenStream, this.onOpenStream), U.extensionService.unregisterPlayer(), this.player.destroy()), m.m.setVideoPlayerTrackingData({
+                        vodID: void 0
+                    })
+                }, t.prototype.initializePlayer = function() {
+                    var e = c.__assign({}, V, {
+                        showtheatre: !this.props.disableTheatreButton
+                    });
+                    this.props.playerTypeOverride && (e.player = this.props.playerTypeOverride, this.playerType = this.props.playerTypeOverride), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.vodID && (e.video = Object(M.a)(this.props.vodID), m.m.setVideoPlayerTrackingData({
+                        vodID: this.props.vodID
+                    })), this.props.nextVideoOffset && (e.time = Object(M.b)(this.props.nextVideoOffset)), e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
+                    var t = new window.Twitch.Player(this.playerRef, e);
+                    this.player = t, t.addEventListener(A.PlayerReady, this.onPlayerReady), t.addEventListener(A.Online, this.onStreamStatusOnline), t.addEventListener(A.Offline, this.onStreamStatusOffline), t.addEventListener(u.Ended, this.onStreamStatusOffline), t.addEventListener(u.Play, this.onPlayerPlay), t.addEventListener(u.Seeked, this.onSeek), t.addEventListener(u.TimeUpdate, this.onTimeUpdate), t.addEventListener(A.TheatreChange, this.onTheatreChange), t.addEventListener(A.FullscreenChange, this.onFullScreenChange), t.addEventListener(A.TransitionToCollectionVOD, this.onTransitionToCollectionVod), t.addEventListener(A.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), t.addEventListener(A.OpenStream, this.onOpenStream), U.extensionService.registerPlayer(this.player), this.props.onInit && this.props.onInit(t), this.maybeAttachToWindow(this.props)
+                }, t.prototype.registerCreatedEvent = function() {
+                    return this.props.latencyTracking.registerCustomEvent("Player", "player-created", "Created", 1e3)
+                }, t.prototype.registerLoadedEvent = function() {
+                    return this.props.latencyTracking.registerCustomEvent("Player", "player-loaded", "Init", 2500)
+                }, t.prototype.registerPlayedEvent = function() {
+                    return this.props.latencyTracking.registerCustomEvent("Player", "player-played", "First Frame", 4e3)
+                }, t.prototype.reportPlayerPlayed = function() {
+                    this.hasPlayed || (this.hasPlayed = !0, this.playerPlayed && this.props.latencyTracking.reportCustomEvent(this.playerPlayed))
+                }, t.prototype.maybeAttachToWindow = function(e) {
+                    F.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
+                }, t.prototype.maybeDetachFromWindow = function() {
+                    window.player = void 0
+                }, t.prototype.bindHotKeys = function() {
+                    D.bind("alt+x", this.maybeRecordClip)
+                }, t.prototype.unbindHotKeys = function() {
+                    D.unbind("alt+x")
+                }, t.tagInjected = !1, t
+            }(d.Component),
+            G = Object(j.c)("VideoPlayer")(B),
+            z = Object(_.a)(o, s)(G);
+        n.d(t, !1, function() {
+            return "hosting-ui-report-button"
+        }), n.d(t, !1, function() {
+            return "hosting-ui-more-balloon"
+        }), n.d(t, !1, function() {
+            return "hosting-ui-more-button"
+        }), n.d(t, !1, function() {
+            return "hosting-ui-channel-name"
+        }), n.d(t, !1, function() {
+            return "video-player-hosting-ui__header"
+        }), n.d(t, !1, function() {
+            return "video-player-hosting-ui__footer"
+        }), n.d(t, !1, function() {
+            return k
+        }), n.d(t, "a", function() {
+            return O
+        }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
+            return L
+        }), n.d(t, "c", function() {
+            return z
+        }), n.d(t, "d", function() {
+            return l
+        })
+    },
+    897: function(e, t, n) {
+        "use strict";
+
+        function i() {
+            return function(e) {
+                return function(t) {
+                    function n() {
+                        var e = null !== t && t.apply(this, arguments) || this;
+                        return e.state = {
+                            impressionEventFired: !1,
+                            impressionEvent: function(e) {
+                                return {}
+                            }
+                        }, e.triggerImpressionEvent = function() {
+                            e.state.impressionEvent(e.context.feedTrackingProps), e.setState({
+                                impressionEventFired: !0
+                            })
+                        }, e.setImpressionEvent = function(t) {
+                            e.setState({
+                                impressionEvent: t
+                            })
+                        }, e.setRef = function(t) {
+                            return e.element = t
+                        }, e
+                    }
+                    return o.__extends(n, t), n.prototype.componentDidMount = function() {
+                        if (this.context.feedImpressionSettings && this.context.feedImpressionSettings.autoReport) return this.triggerImpressionEvent();
+                        var e = this.context,
+                            t = e.registerReceiver;
+                        if (!t) return void u.i.warn("<FeedItem /> initialized missing a <ScrollableArea /> provider");
+                        this.unregister = t(this)
+                    }, n.prototype.componentWillUnmount = function() {
+                        this.unregister && this.unregister()
+                    }, n.prototype.render = function() {
+                        var t = {
+                            impressionTracking: {
+                                onImpression: this.setImpressionEvent
+                            }
+                        };
+                        return l.createElement("div", {
+                            ref: this.setRef
+                        }, l.createElement(e, o.__assign({}, this.props, t)))
+                    }, n.prototype.checkVisible = function(e) {
+                        return o.__awaiter(this, void 0, void 0, function() {
+                            var t, n;
+                            return o.__generator(this, function(i) {
+                                return this.element ? (t = this.element.getBoundingClientRect(), n = t.top < e.bottom && t.bottom > e.top, n && !this.state.impressionEventFired && this.triggerImpressionEvent(), [2]) : [2]
+                            })
+                        })
+                    }, n.contextTypes = {
+                        registerReceiver: s.func,
+                        feedTrackingProps: s.object,
+                        feedImpressionSettings: s.object
+                    }, n
+                }(l.Component)
+            }
+        }
+
+        function r(e) {
+            return function(t) {
+                return function(n) {
+                    function i() {
+                        var t = null !== n && n.apply(this, arguments) || this;
+                        return t.getChildContext = function() {
+                            var n = e(t.props);
+                            return {
+                                feedTrackingProps: o.__assign({}, t.context.feedTrackingProps, n)
+                            }
+                        }, t
+                    }
+                    return o.__extends(i, n), i.prototype.render = function() {
+                        var e = {
+                            feedTrackingProps: this.getChildContext().feedTrackingProps
+                        };
+                        return l.createElement(t, o.__assign({}, this.props, e))
+                    }, i.contextTypes = {
+                        feedTrackingProps: s.object
+                    }, i.childContextTypes = {
+                        feedTrackingProps: s.object
+                    }, i
+                }(l.Component)
+            }
+        }
+        var a = n(898),
+            o = n(0),
+            s = n(14),
+            l = n(1),
+            u = n(2);
+        n.d(t, "a", function() {
+            return a.a
+        }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
+            return a.b
+        }), n.d(t, "c", function() {
+            return i
+        }), n.d(t, "d", function() {
+            return r
+        })
+    },
+    898: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            var t = e.content.id;
+            switch (e.content.__typename) {
+                case "Clip":
+                    var n = e.content;
+                    return {
+                        type: s.a,
+                        id: n.slug
+                    };
+                case "Post":
+                    var i = t.split(":");
+                    return {
+                        type: s.c,
+                        id: i[i.length - 1]
+                    };
+                case "Stream":
+                    var r = e.content;
+                    return {
+                        type: s.d,
+                        id: r.broadcaster.id + ":" + t
+                    };
+                case "Video":
+                    return {
+                        type: s.e,
+                        id: t
+                    };
+                default:
+                    return {
+                        type: "",
+                        id: ""
+                    }
+            }
+        }
+        n.d(t, "a", function() {
+            return r
+        }), t.b = i, n.d(t, "c", function() {
+            return l
+        });
+        var r, a = n(1021),
+            o = (n.n(a), n(2)),
+            s = n(980);
+        ! function(e) {
+            e.Create = "create", e.Remove = "remove"
+        }(r || (r = {}));
+        var l = function(e, t, n) {
+            o.m.track(e, Object(a.merge)(t, n))
+        }
+    },
+    899: function(e, t, n) {
+        "use strict";
+        var i, r = n(0),
+            a = n(1),
+            o = n(2),
+            s = n(364),
+            l = n(5),
+            u = n(3),
+            c = (n(1062), "embed-overlay");
+        ! function(e) {
+            e[e.Clip = 0] = "Clip", e[e.Video = 1] = "Video", e[e.Stream = 2] = "Stream", e[e.VideoOEmbed = 3] = "VideoOEmbed"
+        }(i || (i = {}));
+        var d = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        showOverlay: !0
+                    }, t.getOverlayComponent = function() {
+                        var e = t.props,
+                            n = e.createdAt,
+                            r = e.lengthSeconds,
+                            l = e.thumbnailURL,
+                            d = e.type,
+                            p = e.viewCount,
+                            m = r && r > 0 ? Object(s.a)(r) : "";
+                        return a.createElement("a", {
+                            href: "#",
+                            onClick: t.handleClick,
+                            "data-test-selector": c
+                        }, a.createElement(u.j, {
+                            ratio: u.k.Aspect16x9
+                        }, a.createElement(u.U, null, a.createElement(u.P, {
+                            fullWidth: !0,
+                            fullHeight: !0,
+                            position: u._2.Absolute
+                        }, a.createElement("img", {
+                            src: l
+                        })), a.createElement(u.U, {
+                            className: "embed-card__overlay",
+                            position: u._2.Absolute,
+                            attachLeft: !0,
+                            attachTop: !0,
+                            fullWidth: !0,
+                            fullHeight: !0
+                        }, a.createElement(u.U, {
+                            className: "embed-card__play",
+                            display: u.H.Flex,
+                            justifyContent: u.T.Center,
+                            position: u._2.Absolute,
+                            attachLeft: !0,
+                            attachTop: !0,
+                            fullWidth: !0,
+                            fullHeight: !0
+                        }, a.createElement(u._8, {
+                            asset: u._9.Play,
+                            width: 50,
+                            height: 50
+                        })), a.createElement(u.U, {
+                            position: u._2.Absolute,
+                            padding: 1,
+                            attachBottom: !0,
+                            attachLeft: !0
+                        }, n && a.createElement(u._21, null, Object(o.c)(new Date(n), "medium")), a.createElement(u.U, null, d === i.Stream && a.createElement(u.U, {
+                            display: u.H.Inline,
+                            margin: {
+                                right: .5
+                            }
+                        }, a.createElement(u.V, null)), p && a.createElement("span", null, t.getFormattedViewCount(p, d)))), a.createElement(u.U, {
+                            position: u._2.Absolute,
+                            padding: 1,
+                            attachBottom: !0,
+                            attachRight: !0
+                        }, m && a.createElement(u.U, null, a.createElement(u._21, null, m)))), a.createElement(u._17, {
+                            position: u._2.Absolute,
+                            attachTop: !0,
+                            attachLeft: !0,
+                            margin: 1,
+                            fontSize: u.L.Size5
+                        }, d === i.Stream && a.createElement(u.Z, {
+                            label: Object(o.d)("Live", "EmbedOverlayPill"),
+                            type: u._0.Live
+                        }), d === i.Video && a.createElement(u.Z, {
+                            label: Object(o.d)("Video", "EmbedOverlayPill"),
+                            type: u._0.Overlay
+                        }), d === i.Clip && a.createElement(u.Z, {
+                            label: Object(o.d)("Clip", "EmbedOverlayPill"),
+                            type: u._0.Overlay
+                        })))))
+                    }, t.handleClick = function(e) {
+                        e.preventDefault(), t.setState({
+                            showOverlay: !1
+                        }), t.props.onClick && t.props.onClick()
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    return this.state.showOverlay ? this.getOverlayComponent() : a.createElement(u.j, {
+                        ratio: u.k.Aspect16x9
+                    }, this.props.children)
+                }, t.prototype.getFormattedViewCount = function(e, t) {
+                    switch (t) {
+                        case i.Stream:
+                            return Object(o.d)("{viewCount,number} viewers", {
+                                viewCount: e
+                            }, "OverlayViewCount");
+                        case i.Clip:
+                        case i.Video:
+                            return Object(o.d)("{viewCount,number} views", {
+                                viewCount: e
+                            }, "OverlayViewCount");
+                        default:
+                            return ""
+                    }
+                }, t
+            }(a.Component),
+            p = Object(l.c)("EmbedOverlay")(d),
+            m = p;
+        n.d(t, !1, function() {
+            return c
+        }), n.d(t, "b", function() {
+            return i
+        }), n.d(t, "a", function() {
+            return m
+        })
+    },
+    905: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "feedUser"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "User"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "id"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "displayName"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "login"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "profileImageURL"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "width"
+                            },
+                            value: {
+                                kind: "IntValue",
+                                value: "70"
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: null
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 85
+            }
+        };
+        n.loc.source = {
+            body: "fragment feedUser on User {\n  id\n  displayName\n  login\n  profileImageURL(width:70)\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    977: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return {
+                type: o,
+                player: e
+            }
+        }
+
+        function r() {
+            return {
+                type: s
+            }
+        }
+
+        function a() {
+            return {
+                type: l
+            }
+        }
+        n.d(t, "b", function() {
+            return o
+        }), n.d(t, "c", function() {
+            return s
+        }), n.d(t, "a", function() {
+            return l
+        }), t.e = i, t.f = r, t.d = a;
+        var o = "carouselPlayer.CAROUSEL_REGISTERED",
+            s = "carouselPlayer.CAROUSEL_UNREGISTERED",
+            l = "carouselPlayer.CAROUSEL_PAUSED"
+    },
+    978: function(e, t, n) {
+        "use strict";
+        n.d(t, "d", function() {
+            return r
+        }), n.d(t, "c", function() {
+            return a
+        }), n.d(t, "a", function() {
+            return o
+        }), n.d(t, "b", function() {
+            return s
+        }), n.d(t, "e", function() {
+            return c
+        }), n.d(t, "f", function() {
+            return d
+        }), n.d(t, "g", function() {
+            return p
+        });
+        var i, r = "TWILIGHT_WEB_ONBOARDING_FOR_YOU",
+            a = "TWILIGHT_WEB_ONBOARDING",
+            o = "control";
+        ! function(e) {
+            e.Skip = "skip", e.NoSkip = "no_skip"
+        }(i || (i = {}));
+        var s, l = new Set([i.Skip.toString(), i.NoSkip.toString()]);
+        ! function(e) {
+            e.First = "first", e.Last = "last"
+        }(s || (s = {}));
+        var u = new Set([s.First.toString(), s.Last.toString()]),
+            c = function(e) {
+                return !!e && u.has(e)
+            },
+            d = function(e, t) {
+                return !!e && l.has(e) && c(t)
+            },
+            p = function(e) {
+                return e.getTime() >= m().getTime()
+            },
+            m = function() {
+                return new Date((new Date).getTime() - 12096e5)
+            }
+    },
+    980: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            var t = e.split(":");
+            return t.length < 2 ? {
+                type: "",
+                id: ""
+            } : {
+                type: t[0],
+                id: t[1]
+            }
+        }
+        n.d(t, "a", function() {
+            return r
+        }), n.d(t, "b", function() {
+            return a
+        }), n.d(t, "c", function() {
+            return o
+        }), n.d(t, "d", function() {
+            return s
+        }), n.d(t, "e", function() {
+            return l
+        }), t.f = i;
+        var r = "clip",
+            a = "url",
+            o = "post",
+            s = "stream",
+            l = "vod"
+    },
+    981: function(e, t, n) {
+        function i(e) {
+            return e.filter(function(e) {
+                if ("FragmentDefinition" !== e.kind) return !0;
+                var t = e.name.value;
+                return !a[t] && (a[t] = !0, !0)
+            })
+        }
+        var r = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "feedItemPost"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "Post"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "id"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "createdAt"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "body"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "content"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "emotes"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "FragmentSpread",
+                                        name: {
+                                            kind: "Name",
+                                            value: "embeddedEmote"
+                                        },
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "reactions"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "emote"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "token"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "setID"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "count"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "self"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "hasReacted"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "embeds"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "FragmentSpread",
+                                name: {
+                                    kind: "Name",
+                                    value: "feedItemClip"
+                                },
+                                directives: []
+                            }, {
+                                kind: "FragmentSpread",
+                                name: {
+                                    kind: "Name",
+                                    value: "feedItemVideo"
+                                },
+                                directives: []
+                            }, {
+                                kind: "InlineFragment",
+                                typeCondition: {
+                                    kind: "NamedType",
+                                    name: {
+                                        kind: "Name",
+                                        value: "PhotoOEmbed"
+                                    }
+                                },
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "title"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "inputURL"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "providerName"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "thumbnail"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "url"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }, {
+                                kind: "InlineFragment",
+                                typeCondition: {
+                                    kind: "NamedType",
+                                    name: {
+                                        kind: "Name",
+                                        value: "VideoOEmbed"
+                                    }
+                                },
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "title"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "inputURL"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "providerName"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "thumbnail"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "url"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "html"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "author"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "FragmentSpread",
+                                name: {
+                                    kind: "Name",
+                                    value: "feedUser"
+                                },
+                                directives: []
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 803
+            }
+        };
+        r.loc.source = {
+            body: '#import "twilight/features/chat/models/embedded-emote-fragment.gql"\n#import "twilight/features/feed/models/clip-fragment.gql"\n#import "twilight/features/feed/models/user-fragment.gql"\n#import "twilight/features/feed/models/video-fragment.gql"\n\nfragment feedItemPost on Post {\n  id\n  createdAt\n  body {\n    content\n    emotes {\n      ...embeddedEmote\n    }\n  }\n  reactions {\n    emote {\n      id\n      token\n      setID\n    }\n    count\n    self {\n      hasReacted\n    }\n  }\n  embeds {\n    ...feedItemClip\n    ...feedItemVideo\n    ... on PhotoOEmbed {\n      title\n      inputURL\n      providerName\n      thumbnail {\n        url\n      }\n    }\n    ... on VideoOEmbed {\n      title\n      inputURL\n      providerName\n      thumbnail {\n        url\n      }\n      html\n    }\n  }\n  author {\n    ...feedUser\n  }\n}\n',
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        var a = {};
+        r.definitions = r.definitions.concat(i(n(882).definitions)), r.definitions = r.definitions.concat(i(n(1014).definitions)), r.definitions = r.definitions.concat(i(n(905).definitions)), r.definitions = r.definitions.concat(i(n(1015).definitions)), e.exports = r
+    },
+    986: function(e, t) {},
+    987: function(e, t) {}
 });
-//# sourceMappingURL=pages.front-2bcb0052a21bcaebf5ad7583600847ad.js.map
+//# sourceMappingURL=pages.front-2fcda935afd5e1e8a1ebd17e4b39d693.js.map

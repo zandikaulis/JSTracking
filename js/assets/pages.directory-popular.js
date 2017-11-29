@@ -1,490 +1,5 @@
-webpackJsonp([55], {
-    1016: function(e, t, n) {
-        "use strict";
-
-        function a() {
-            return {
-                languagePreferences: Object(c.b)()
-            }
-        }
-
-        function r(e, t) {
-            switch (void 0 === e && (e = a()), t.type) {
-                case s.a:
-                    return o.__assign({}, e, {
-                        languagePreferences: t.languagePreferences
-                    });
-                default:
-                    return e
-            }
-        }
-
-        function i(e) {
-            return e.userPreferences.languagePreferences
-        }
-        t.a = i;
-        var o = n(0),
-            l = n(2),
-            s = n(993),
-            c = n(992);
-        l.n.store.registerReducer("userPreferences", r)
-    },
-    1018: function(e, t, n) {
-        "use strict";
-
-        function a(e) {
-            return {
-                trackingSet: e.ads.trackingSet
-            }
-        }
-        var r = n(9),
-            i = n(0),
-            o = n(1),
-            l = n(2),
-            s = n(111),
-            c = n(416),
-            d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
-            u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
-            m = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.logger = l.i.withCategory("ad-slot"), n.createSlot = function(e) {
-                        return i.__awaiter(n, void 0, void 0, function() {
-                            var t, n;
-                            return i.__generator(this, function(a) {
-                                switch (a.label) {
-                                    case 0:
-                                        if (this.state.slotCreated) return [2];
-                                        this.setState({
-                                            slotCreated: !0
-                                        }), a.label = 1;
-                                    case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, s.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
-                                    case 2:
-                                        return t = a.sent(), Object(c.h)(t.getSlotElementId()), this.setState({
-                                            slot: t
-                                        }), [3, 4];
-                                    case 3:
-                                        return n = a.sent(), this.logger.warn("Unable to create ad slot", {
-                                            slotID: e.slotID,
-                                            adUnit: e.adUnit,
-                                            adSize: e.adSize,
-                                            targeting: e.targeting,
-                                            autoEnable: e.autoEnable
-                                        }), [3, 4];
-                                    case 4:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }, n.setRef = function(e) {
-                        return n.slotRef = e
-                    }, n.onSlotRenderEnd = function(e) {
-                        var t = e.slot.getSlotElementId();
-                        if (n.state.slot && t === n.props.slotID) {
-                            if (n.logger.debug("Ad slot render ended", {
-                                    elementID: t,
-                                    lineItemID: e.lineItemId,
-                                    createdID: e.creativeId,
-                                    isEmpty: e.isEmpty,
-                                    serviceName: e.serviceName,
-                                    size: e.size
-                                }), e.isEmpty) return;
-                            if (!n.slotRef) return;
-                            if (n.props.slotID === c.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
-                                shouldDisplay: !0
-                            }, function() {
-                                return n.slotRendered(e.slot)
-                            }));
-                            if (n.props.slotID === c.b.directory.banner) {
-                                var a = n.slotRef.querySelector(d);
-                                return void(a && 1 !== a.clientWidth && n.setState({
-                                    shouldDisplay: !0
-                                }, function() {
-                                    return n.slotRendered(e.slot)
-                                }))
-                            }
-                            if (n.props.slotID === c.b.directory.rectangle) {
-                                var a = n.slotRef.querySelector(u);
-                                return void(a && 1 !== a.clientWidth && n.setState({
-                                    shouldDisplay: !0
-                                }, function() {
-                                    return n.slotRendered(e.slot)
-                                }))
-                            }
-                            n.setState({
-                                shouldDisplay: !0
-                            }, function() {
-                                return n.slotRendered(e.slot)
-                            })
-                        }
-                    }, n.slotRendered = function(e) {
-                        n.props.slotRendered && n.props.slotRendered(e)
-                    }, n.state = {
-                        shouldDisplay: !1
-                    }, n
-                }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    c.g.addListener(c.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.state.slotCreated || (e.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentWillReceiveProps)", this.props.slotID), this.createSlot(e)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentWillReceiveProps)", this.props.slotID))
-                }, t.prototype.componentWillUnmount = function() {
-                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), c.g.removeListener(c.f, this.onSlotRenderEnd), this.state.slot && s.a.destroySlot(this.state.slot)
-                }, t.prototype.shouldComponentUpdate = function(e, t) {
-                    return t.shouldDisplay !== this.state.shouldDisplay
-                }, t.prototype.render = function() {
-                    var e = i.__assign({}, this.props.injectStyles);
-                    return this.state.shouldDisplay || (e.display = "none"), o.createElement("div", {
-                        style: e,
-                        id: this.props.slotID,
-                        ref: this.setRef
-                    })
-                }, t
-            }(o.Component),
-            p = m,
-            g = Object(r.a)(a)(p);
-        n.d(t, "a", function() {
-            return g
-        })
-    },
-    1049: function(e, t, n) {
-        "use strict";
-
-        function a(e) {
-            return {
-                languagePreferences: Object(s.a)(e)
-            }
-        }
-
-        function r(e) {
-            return Object(o.bindActionCreators)({
-                updateLanguagePreferences: l.c,
-                clearLanguagePreferences: l.a
-            }, e)
-        }
-        var i = n(9),
-            o = n(11),
-            l = n(992),
-            s = n(1016),
-            c = n(0),
-            d = n(1),
-            u = n(2),
-            m = n(30),
-            p = n(64),
-            g = n(968),
-            h = n(6),
-            f = n(3),
-            v = (n(1050), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleLanguageChange = function(e) {
-                        var n = e.currentTarget,
-                            a = n.parentElement && n.parentElement.getAttribute("data-language-code");
-                        a && t.props.updateLanguagePreferences(a, n.checked)
-                    }, t.renderLanguageOption = function(e) {
-                        return d.createElement(f.U, {
-                            padding: {
-                                x: 1,
-                                y: .5
-                            },
-                            key: e.code
-                        }, d.createElement(f.E, {
-                            label: e.label,
-                            checked: t.props.languagePreferences.includes(e.code),
-                            "data-language-code": e.code,
-                            "data-a-target": "language-filter-" + e.code + "-checkbox",
-                            onChange: t.handleLanguageChange
-                        }))
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = this.props.languagePreferences.length;
-                    return d.createElement(f.U, {
-                        className: "language-select-menu"
-                    }, d.createElement(p.a, null, d.createElement(f.u, {
-                        "data-test-selector": "language-dropdown-button",
-                        "data-a-target": "language-filter-dropdown",
-                        dropdown: !0,
-                        type: f.z.Hollow
-                    }, d.createElement(f.U, {
-                        display: f.H.Flex
-                    }, Object(u.d)("Language", "LanguageSelectMenu"), d.createElement(f.U, {
-                        margin: {
-                            left: .5
-                        }
-                    }, 0 !== e && d.createElement(f.Z, {
-                        type: f._0.Brand,
-                        label: e.toString()
-                    })))), d.createElement(f.p, {
-                        direction: f.q.BottomLeft,
-                        noTail: !0,
-                        "data-a-target": "language-filter-balloon"
-                    }, d.createElement(m.b, {
-                        className: "language-select-menu__balloon"
-                    }, d.createElement(f.U, {
-                        padding: .5
-                    }, Object(g.b)().map(this.renderLanguageOption))), d.createElement(f._17, {
-                        background: f.m.Alt,
-                        borderTop: !0,
-                        className: "language-select-menu__footer"
-                    }, d.createElement(f.u, {
-                        type: f.z.Text,
-                        onClick: this.props.clearLanguagePreferences,
-                        "data-a-target": "language-clear-all"
-                    }, Object(u.d)("Clear all", "LanguageSelectMenu"))))))
-                }, t = c.__decorate([Object(h.c)("LanguageSelectMenu")], t)
-            }(d.Component)),
-            y = v,
-            b = Object(i.a)(a, r)(y);
-        n.d(t, "a", function() {
-            return b
-        })
-    },
-    1050: function(e, t) {},
-    1057: function(e, t, n) {
-        "use strict";
-        var a, r, i, o = n(4),
-            l = n(1),
-            s = n(2),
-            c = n(1058),
-            d = n(3),
-            u = (n(1138), a = {}, a[c.a.Live] = "stream-type-indicator--live", a[c.a.Premiere] = "stream-type-indicator--premiere", a[c.a.Rerun] = "stream-type-indicator--rerun", a[c.a.WatchParty] = "stream-type-indicator--rerun", a),
-            m = (r = {}, r[c.a.Premiere] = d._9.VideoPremiere, r[c.a.Rerun] = d._9.VideoRerun, r[c.a.WatchParty] = d._9.VideoRerun, r),
-            p = (i = {}, i[c.a.Premiere] = d._10.Live, i[c.a.Rerun] = d._10.Inherit, i[c.a.WatchParty] = d._10.Inherit, i),
-            g = function(e) {
-                var t = {
-                    "stream-type-indicator": !0
-                };
-                t[u[e.type]] = !0;
-                var n;
-                n = e.type === c.a.Live ? l.createElement(d.U, {
-                    className: "stream-type-indicator__live-wrapper",
-                    display: d.H.Flex,
-                    alignItems: d.c.Center
-                }, l.createElement(d.V, {
-                    size: d.W.Small
-                })) : l.createElement(d._8, {
-                    asset: m[e.type],
-                    type: p[e.type],
-                    width: 14,
-                    height: 14
-                });
-                var a;
-                switch (e.type) {
-                    case c.a.Live:
-                        a = Object(s.d)("Live", "StreamTypeIndicator");
-                        break;
-                    case c.a.Premiere:
-                        a = Object(s.d)("Premiere", "StreamTypeIndicator");
-                        break;
-                    case c.a.Rerun:
-                    case c.a.WatchParty:
-                        a = Object(s.d)("Rerun", "StreamTypeIndicator");
-                        break;
-                    default:
-                        a = ""
-                }
-                return l.createElement(d._17, {
-                    className: o(t),
-                    background: d.m.Overlay,
-                    padding: {
-                        x: .5
-                    },
-                    borderRadius: d.s.Small,
-                    display: d.H.Flex
-                }, l.createElement(d.U, {
-                    display: d.H.Flex,
-                    margin: {
-                        right: .5
-                    }
-                }, n), l.createElement(d._21, {
-                    type: d._26.Span
-                }, a))
-            };
-        n.d(t, "a", function() {
-            return g
-        })
-    },
-    1058: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return a
-        });
-        var a;
-        ! function(e) {
-            e.Live = "live", e.WatchParty = "watch_party", e.Premiere = "premiere", e.Rerun = "rerun"
-        }(a || (a = {}))
-    },
-    1062: function(e, t, n) {
-        "use strict";
-        var a = n(0),
-            r = n(1),
-            i = n(12),
-            o = n(2),
-            l = n(1057),
-            s = n(3),
-            c = (n(1139), function(e) {
-                function t() {
-                    var t = e.call(this) || this;
-                    return t.state = {
-                        isPremiereExperimentActive: !1
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return a.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, o.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
-                                case 1:
-                                    return e = t.sent(), "yes" === e && o.b.get("premiere_video_manager_staff", !1) && this.setState({
-                                        isPremiereExperimentActive: !0
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.render = function() {
-                    var e = null;
-                    !0 !== this.state.isPremiereExperimentActive && this.props.vodcast && (e = r.createElement(s.U, {
-                        display: s.H.InlineBlock,
-                        padding: {
-                            right: .5
-                        }
-                    }, r.createElement(s.Z, {
-                        label: Object(o.d)("Vodcast", "LiveChannelCard")
-                    })));
-                    var t = Object(o.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
-                        viewerCount: this.props.viewerCount,
-                        channel: r.createElement(i.a, {
-                            to: this.props.channelNameLinkTo,
-                            className: "live-channel-card__videos",
-                            "data-a-target": "live-channel-card-channel-name-link"
-                        }, this.props.channelName)
-                    }, "Live Channel Card");
-                    return r.createElement("div", a.__assign({
-                        className: "live-channel-card"
-                    }, Object(s._39)(this.props)), r.createElement(s.A, {
-                        key: this.props.title
-                    }, r.createElement(s.U, {
-                        fullWidth: !0
-                    }, r.createElement(s.j, {
-                        overflow: !0
-                    }, r.createElement("div", null, r.createElement(i.a, {
-                        to: this.props.linkTo,
-                        title: this.props.title,
-                        "data-a-target": "live-channel-card-thumbnail-link"
-                    }, r.createElement(s.C, {
-                        imageAlt: this.props.imageAlt,
-                        imageSrc: this.props.imageSrc,
-                        aspect: s.k.Aspect16x9
-                    })), this.renderContentType(), this.renderGameBoxArt()))), r.createElement(s.B, null, r.createElement(i.a, {
-                        to: this.props.linkTo,
-                        className: "live-channel-card__channel",
-                        "data-a-target": "live-channel-card-title-link"
-                    }, r.createElement(s.P, {
-                        margin: {
-                            top: .5
-                        }
-                    }, r.createElement(s._21, {
-                        type: s._26.H3,
-                        fontSize: s.L.Size5,
-                        ellipsis: !0,
-                        className: "live-channel-card__title"
-                    }, this.props.title))), r.createElement(s.U, {
-                        className: "live-channel-card__meta",
-                        display: s.H.Flex,
-                        flexWrap: s.K.NoWrap
-                    }, e, r.createElement(s._21, {
-                        type: s._26.Span,
-                        ellipsis: !0
-                    }, t)))))
-                }, t.prototype.renderGameBoxArt = function() {
-                    var e = this.props.gameLinkTo,
-                        t = this.props.gameTitle,
-                        n = this.props.gameImageSrc;
-                    return t && e ? r.createElement(i.a, {
-                        to: e,
-                        title: t,
-                        "data-a-target": "live-channel-card-game-link"
-                    }, r.createElement(s._17, {
-                        className: "live-channel-card__boxart",
-                        position: s._2.Absolute,
-                        attachRight: !0,
-                        attachBottom: !0
-                    }, r.createElement(s._30, {
-                        display: s.H.Block,
-                        direction: s._32.Bottom,
-                        label: t
-                    }, r.createElement(s.C, {
-                        imageSrc: n,
-                        imageAlt: t,
-                        aspect: s.k.BoxArt
-                    })))) : null
-                }, t.prototype.renderContentType = function() {
-                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? r.createElement(s.U, {
-                        position: s._2.Absolute,
-                        attachLeft: !0,
-                        attachTop: !0,
-                        padding: .5
-                    }, r.createElement(l.a, {
-                        type: this.props.streamType
-                    })) : null
-                }, t
-            }(r.Component)),
-            d = c;
-        n.d(t, !1, function() {
-            return c
-        }), n.d(t, "a", function() {
-            return d
-        })
-    },
-    1129: function(e, t, n) {
-        "use strict";
-        n.d(t, "d", function() {
-            return r
-        }), n.d(t, "c", function() {
-            return i
-        }), n.d(t, "a", function() {
-            return o
-        }), n.d(t, "b", function() {
-            return l
-        }), n.d(t, "e", function() {
-            return d
-        }), n.d(t, "f", function() {
-            return u
-        }), n.d(t, "g", function() {
-            return m
-        });
-        var a, r = "TWILIGHT_WEB_ONBOARDING_FOR_YOU",
-            i = "TWILIGHT_WEB_ONBOARDING",
-            o = "control";
-        ! function(e) {
-            e.Skip = "skip", e.NoSkip = "no_skip"
-        }(a || (a = {}));
-        var l, s = new Set([a.Skip.toString(), a.NoSkip.toString()]);
-        ! function(e) {
-            e.First = "first", e.Last = "last"
-        }(l || (l = {}));
-        var c = new Set([l.First.toString(), l.Last.toString()]),
-            d = function(e) {
-                return !!e && c.has(e)
-            },
-            u = function(e, t) {
-                return !!e && s.has(e) && d(t)
-            },
-            m = function(e) {
-                return e.getTime() >= p().getTime()
-            },
-            p = function() {
-                return new Date((new Date).getTime() - 12096e5)
-            }
-    },
-    1138: function(e, t) {},
-    1139: function(e, t) {},
-    1159: function(e, t, n) {
+webpackJsonp([54], {
+    1012: function(e, t, n) {
         "use strict";
         var a = n(0),
             r = n(1),
@@ -513,7 +28,7 @@ webpackJsonp([55], {
             return c
         })
     },
-    1339: function(e, t, n) {
+    1237: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -525,11 +40,11 @@ webpackJsonp([55], {
         var r, i = n(0),
             o = n(1),
             l = n(2),
-            s = n(8),
-            c = n(6),
-            d = n(1129),
+            s = n(7),
+            c = n(5),
+            d = n(978),
             u = n(3),
-            m = n(1372);
+            m = n(1271);
         ! function(e) {
             e[e.BrowseForYouPage = 0] = "BrowseForYouPage", e[e.BrowseGamePage = 1] = "BrowseGamePage", e[e.BrowseCommunitiesPage = 2] = "BrowseCommunitiesPage", e[e.BrowsePopularPage = 3] = "BrowsePopularPage", e[e.BrowseCreativePage = 4] = "BrowseCreativePage"
         }(r || (r = {}));
@@ -599,8 +114,8 @@ webpackJsonp([55], {
                 })], t)
             }(o.Component),
             g = p,
-            h = n(9),
-            f = n(19),
+            h = n(8),
+            f = n(18),
             v = Object(h.a)(a, null)(g);
         n.d(t, "b", function() {
             return r
@@ -608,7 +123,7 @@ webpackJsonp([55], {
             return v
         })
     },
-    1372: function(e, t) {
+    1271: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -673,8 +188,8 @@ webpackJsonp([55], {
         };
         e.exports = n
     },
-    1861: function(e, t) {},
-    1862: function(e, t) {
+    1866: function(e, t) {},
+    1867: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1080,7 +595,7 @@ webpackJsonp([55], {
         };
         e.exports = n
     },
-    2033: function(e, t, n) {
+    2038: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1092,31 +607,31 @@ webpackJsonp([55], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var r = n(9),
+        var r = n(8),
             i = n(0),
             o = n(1),
             l = n(2),
-            s = n(1049),
-            c = n(1062),
-            d = n(66),
-            u = n(30),
-            m = n(8),
-            p = n(925),
-            g = n(52),
-            h = n(23),
-            f = n(407),
-            v = n(922),
-            y = n(111),
-            b = n(14),
-            k = n(1018),
-            _ = n(416),
-            S = n(1339),
-            w = n(6),
-            P = n(1159),
+            s = n(895),
+            c = n(906),
+            d = n(62),
+            u = n(29),
+            m = n(7),
+            p = n(764),
+            g = n(51),
+            h = n(22),
+            f = n(352),
+            v = n(761),
+            y = n(104),
+            b = n(13),
+            k = n(858),
+            _ = n(361),
+            S = n(1237),
+            w = n(5),
+            P = n(1012),
             E = n(4),
-            D = n(64),
+            D = n(60),
             T = n(3),
-            N = (n(1861), function(e) {
+            N = (n(1866), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.typeChangeHandler = function(e) {
@@ -1183,7 +698,7 @@ webpackJsonp([55], {
                     }, t))
                 }, t
             }(o.Component)),
-            C = n(1862),
+            C = n(1867),
             x = "directory-first-item",
             L = "directory-container",
             I = {
@@ -1395,7 +910,7 @@ webpackJsonp([55], {
             return R
         })
     },
-    922: function(e, t, n) {
+    761: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -1453,7 +968,7 @@ webpackJsonp([55], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    925: function(e, t, n) {
+    764: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1513,15 +1028,15 @@ webpackJsonp([55], {
             }
         }
         var r = n(0),
-            i = n(21),
+            i = n(20),
             o = n(1),
-            l = n(12),
+            l = n(11),
             s = n(2);
         n.d(t, "a", function() {
             return a
         })
     },
-    968: function(e, t, n) {
+    809: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1632,7 +1147,7 @@ webpackJsonp([55], {
                 return e.code
             }))
     },
-    992: function(e, t, n) {
+    831: function(e, t, n) {
         "use strict";
 
         function a(e, t) {
@@ -1666,11 +1181,11 @@ webpackJsonp([55], {
         t.c = a, t.a = r, t.b = i;
         var o = n(0),
             l = n(2),
-            s = n(968),
-            c = n(993),
+            s = n(809),
+            c = n(832),
             d = "languageDirectoryFilters"
     },
-    993: function(e, t, n) {
+    832: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1683,6 +1198,491 @@ webpackJsonp([55], {
             return r
         }), t.b = a;
         var r = "core.user-preferences.LANGUAGE_PREFERENCES_UPDATED"
-    }
+    },
+    856: function(e, t, n) {
+        "use strict";
+
+        function a() {
+            return {
+                languagePreferences: Object(c.b)()
+            }
+        }
+
+        function r(e, t) {
+            switch (void 0 === e && (e = a()), t.type) {
+                case s.a:
+                    return o.__assign({}, e, {
+                        languagePreferences: t.languagePreferences
+                    });
+                default:
+                    return e
+            }
+        }
+
+        function i(e) {
+            return e.userPreferences.languagePreferences
+        }
+        t.a = i;
+        var o = n(0),
+            l = n(2),
+            s = n(832),
+            c = n(831);
+        l.n.store.registerReducer("userPreferences", r)
+    },
+    858: function(e, t, n) {
+        "use strict";
+
+        function a(e) {
+            return {
+                trackingSet: e.ads.trackingSet
+            }
+        }
+        var r = n(8),
+            i = n(0),
+            o = n(1),
+            l = n(2),
+            s = n(104),
+            c = n(361),
+            d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
+            u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
+            m = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.logger = l.i.withCategory("ad-slot"), n.createSlot = function(e) {
+                        return i.__awaiter(n, void 0, void 0, function() {
+                            var t, n;
+                            return i.__generator(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        if (this.state.slotCreated) return [2];
+                                        this.setState({
+                                            slotCreated: !0
+                                        }), a.label = 1;
+                                    case 1:
+                                        return a.trys.push([1, 3, , 4]), [4, s.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
+                                    case 2:
+                                        return t = a.sent(), Object(c.h)(t.getSlotElementId()), this.setState({
+                                            slot: t
+                                        }), [3, 4];
+                                    case 3:
+                                        return n = a.sent(), this.logger.warn("Unable to create ad slot", {
+                                            slotID: e.slotID,
+                                            adUnit: e.adUnit,
+                                            adSize: e.adSize,
+                                            targeting: e.targeting,
+                                            autoEnable: e.autoEnable
+                                        }), [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, n.setRef = function(e) {
+                        return n.slotRef = e
+                    }, n.onSlotRenderEnd = function(e) {
+                        var t = e.slot.getSlotElementId();
+                        if (n.state.slot && t === n.props.slotID) {
+                            if (n.logger.debug("Ad slot render ended", {
+                                    elementID: t,
+                                    lineItemID: e.lineItemId,
+                                    createdID: e.creativeId,
+                                    isEmpty: e.isEmpty,
+                                    serviceName: e.serviceName,
+                                    size: e.size
+                                }), e.isEmpty) return;
+                            if (!n.slotRef) return;
+                            if (n.props.slotID === c.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
+                                shouldDisplay: !0
+                            }, function() {
+                                return n.slotRendered(e.slot)
+                            }));
+                            if (n.props.slotID === c.b.directory.banner) {
+                                var a = n.slotRef.querySelector(d);
+                                return void(a && 1 !== a.clientWidth && n.setState({
+                                    shouldDisplay: !0
+                                }, function() {
+                                    return n.slotRendered(e.slot)
+                                }))
+                            }
+                            if (n.props.slotID === c.b.directory.rectangle) {
+                                var a = n.slotRef.querySelector(u);
+                                return void(a && 1 !== a.clientWidth && n.setState({
+                                    shouldDisplay: !0
+                                }, function() {
+                                    return n.slotRendered(e.slot)
+                                }))
+                            }
+                            n.setState({
+                                shouldDisplay: !0
+                            }, function() {
+                                return n.slotRendered(e.slot)
+                            })
+                        }
+                    }, n.slotRendered = function(e) {
+                        n.props.slotRendered && n.props.slotRendered(e)
+                    }, n.state = {
+                        shouldDisplay: !1
+                    }, n
+                }
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    c.g.addListener(c.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    this.state.slotCreated || (e.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentWillReceiveProps)", this.props.slotID), this.createSlot(e)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentWillReceiveProps)", this.props.slotID))
+                }, t.prototype.componentWillUnmount = function() {
+                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), c.g.removeListener(c.f, this.onSlotRenderEnd), this.state.slot && s.a.destroySlot(this.state.slot)
+                }, t.prototype.shouldComponentUpdate = function(e, t) {
+                    return t.shouldDisplay !== this.state.shouldDisplay
+                }, t.prototype.render = function() {
+                    var e = i.__assign({}, this.props.injectStyles);
+                    return this.state.shouldDisplay || (e.display = "none"), o.createElement("div", {
+                        style: e,
+                        id: this.props.slotID,
+                        ref: this.setRef
+                    })
+                }, t
+            }(o.Component),
+            p = m,
+            g = Object(r.a)(a)(p);
+        n.d(t, "a", function() {
+            return g
+        })
+    },
+    895: function(e, t, n) {
+        "use strict";
+
+        function a(e) {
+            return {
+                languagePreferences: Object(s.a)(e)
+            }
+        }
+
+        function r(e) {
+            return Object(o.bindActionCreators)({
+                updateLanguagePreferences: l.c,
+                clearLanguagePreferences: l.a
+            }, e)
+        }
+        var i = n(8),
+            o = n(10),
+            l = n(831),
+            s = n(856),
+            c = n(0),
+            d = n(1),
+            u = n(2),
+            m = n(29),
+            p = n(60),
+            g = n(809),
+            h = n(5),
+            f = n(3),
+            v = (n(896), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleLanguageChange = function(e) {
+                        var n = e.currentTarget,
+                            a = n.parentElement && n.parentElement.getAttribute("data-language-code");
+                        a && t.props.updateLanguagePreferences(a, n.checked)
+                    }, t.renderLanguageOption = function(e) {
+                        return d.createElement(f.U, {
+                            padding: {
+                                x: 1,
+                                y: .5
+                            },
+                            key: e.code
+                        }, d.createElement(f.E, {
+                            label: e.label,
+                            checked: t.props.languagePreferences.includes(e.code),
+                            "data-language-code": e.code,
+                            "data-a-target": "language-filter-" + e.code + "-checkbox",
+                            onChange: t.handleLanguageChange
+                        }))
+                    }, t
+                }
+                return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e = this.props.languagePreferences.length;
+                    return d.createElement(f.U, {
+                        className: "language-select-menu"
+                    }, d.createElement(p.a, null, d.createElement(f.u, {
+                        "data-test-selector": "language-dropdown-button",
+                        "data-a-target": "language-filter-dropdown",
+                        dropdown: !0,
+                        type: f.z.Hollow
+                    }, d.createElement(f.U, {
+                        display: f.H.Flex
+                    }, Object(u.d)("Language", "LanguageSelectMenu"), d.createElement(f.U, {
+                        margin: {
+                            left: .5
+                        }
+                    }, 0 !== e && d.createElement(f.Z, {
+                        type: f._0.Brand,
+                        label: e.toString()
+                    })))), d.createElement(f.p, {
+                        direction: f.q.BottomLeft,
+                        noTail: !0,
+                        "data-a-target": "language-filter-balloon"
+                    }, d.createElement(m.b, {
+                        className: "language-select-menu__balloon"
+                    }, d.createElement(f.U, {
+                        padding: .5
+                    }, Object(g.b)().map(this.renderLanguageOption))), d.createElement(f._17, {
+                        background: f.m.Alt,
+                        borderTop: !0,
+                        className: "language-select-menu__footer"
+                    }, d.createElement(f.u, {
+                        type: f.z.Text,
+                        onClick: this.props.clearLanguagePreferences,
+                        "data-a-target": "language-clear-all"
+                    }, Object(u.d)("Clear all", "LanguageSelectMenu"))))))
+                }, t = c.__decorate([Object(h.c)("LanguageSelectMenu")], t)
+            }(d.Component)),
+            y = v,
+            b = Object(i.a)(a, r)(y);
+        n.d(t, "a", function() {
+            return b
+        })
+    },
+    896: function(e, t) {},
+    901: function(e, t, n) {
+        "use strict";
+        var a, r, i, o = n(4),
+            l = n(1),
+            s = n(2),
+            c = n(902),
+            d = n(3),
+            u = (n(988), a = {}, a[c.a.Live] = "stream-type-indicator--live", a[c.a.Premiere] = "stream-type-indicator--premiere", a[c.a.Rerun] = "stream-type-indicator--rerun", a[c.a.WatchParty] = "stream-type-indicator--rerun", a),
+            m = (r = {}, r[c.a.Premiere] = d._9.VideoPremiere, r[c.a.Rerun] = d._9.VideoRerun, r[c.a.WatchParty] = d._9.VideoRerun, r),
+            p = (i = {}, i[c.a.Premiere] = d._10.Live, i[c.a.Rerun] = d._10.Inherit, i[c.a.WatchParty] = d._10.Inherit, i),
+            g = function(e) {
+                var t = {
+                    "stream-type-indicator": !0
+                };
+                t[u[e.type]] = !0;
+                var n;
+                n = e.type === c.a.Live ? l.createElement(d.U, {
+                    className: "stream-type-indicator__live-wrapper",
+                    display: d.H.Flex,
+                    alignItems: d.c.Center
+                }, l.createElement(d.V, {
+                    size: d.W.Small
+                })) : l.createElement(d._8, {
+                    asset: m[e.type],
+                    type: p[e.type],
+                    width: 14,
+                    height: 14
+                });
+                var a;
+                switch (e.type) {
+                    case c.a.Live:
+                        a = Object(s.d)("Live", "StreamTypeIndicator");
+                        break;
+                    case c.a.Premiere:
+                        a = Object(s.d)("Premiere", "StreamTypeIndicator");
+                        break;
+                    case c.a.Rerun:
+                    case c.a.WatchParty:
+                        a = Object(s.d)("Rerun", "StreamTypeIndicator");
+                        break;
+                    default:
+                        a = ""
+                }
+                return l.createElement(d._17, {
+                    className: o(t),
+                    background: d.m.Overlay,
+                    padding: {
+                        x: .5
+                    },
+                    borderRadius: d.s.Small,
+                    display: d.H.Flex
+                }, l.createElement(d.U, {
+                    display: d.H.Flex,
+                    margin: {
+                        right: .5
+                    }
+                }, n), l.createElement(d._21, {
+                    type: d._26.Span
+                }, a))
+            };
+        n.d(t, "a", function() {
+            return g
+        })
+    },
+    902: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return a
+        });
+        var a;
+        ! function(e) {
+            e.Live = "live", e.WatchParty = "watch_party", e.Premiere = "premiere", e.Rerun = "rerun"
+        }(a || (a = {}))
+    },
+    906: function(e, t, n) {
+        "use strict";
+        var a = n(0),
+            r = n(1),
+            i = n(11),
+            o = n(2),
+            l = n(901),
+            s = n(3),
+            c = (n(989), function(e) {
+                function t() {
+                    var t = e.call(this) || this;
+                    return t.state = {
+                        isPremiereExperimentActive: !1
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return a.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return [4, o.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
+                                case 1:
+                                    return e = t.sent(), "yes" === e && o.b.get("premiere_video_manager_staff", !1) && this.setState({
+                                        isPremiereExperimentActive: !0
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, t.prototype.render = function() {
+                    var e = null;
+                    !0 !== this.state.isPremiereExperimentActive && this.props.vodcast && (e = r.createElement(s.U, {
+                        display: s.H.InlineBlock,
+                        padding: {
+                            right: .5
+                        }
+                    }, r.createElement(s.Z, {
+                        label: Object(o.d)("Vodcast", "LiveChannelCard")
+                    })));
+                    var t = Object(o.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
+                        viewerCount: this.props.viewerCount,
+                        channel: r.createElement(i.a, {
+                            to: this.props.channelNameLinkTo,
+                            className: "live-channel-card__videos",
+                            "data-a-target": "live-channel-card-channel-name-link"
+                        }, this.props.channelName)
+                    }, "Live Channel Card");
+                    return r.createElement("div", a.__assign({
+                        className: "live-channel-card"
+                    }, Object(s._39)(this.props)), r.createElement(s.A, {
+                        key: this.props.title
+                    }, r.createElement(s.U, {
+                        fullWidth: !0
+                    }, r.createElement(s.j, {
+                        overflow: !0
+                    }, r.createElement("div", null, r.createElement(i.a, {
+                        to: this.props.linkTo,
+                        title: this.props.title,
+                        "data-a-target": "live-channel-card-thumbnail-link"
+                    }, r.createElement(s.C, {
+                        imageAlt: this.props.imageAlt,
+                        imageSrc: this.props.imageSrc,
+                        aspect: s.k.Aspect16x9
+                    })), this.renderContentType(), this.renderGameBoxArt()))), r.createElement(s.B, null, r.createElement(i.a, {
+                        to: this.props.linkTo,
+                        className: "live-channel-card__channel",
+                        "data-a-target": "live-channel-card-title-link"
+                    }, r.createElement(s.P, {
+                        margin: {
+                            top: .5
+                        }
+                    }, r.createElement(s._21, {
+                        type: s._26.H3,
+                        fontSize: s.L.Size5,
+                        ellipsis: !0,
+                        className: "live-channel-card__title"
+                    }, this.props.title))), r.createElement(s.U, {
+                        className: "live-channel-card__meta",
+                        display: s.H.Flex,
+                        flexWrap: s.K.NoWrap
+                    }, e, r.createElement(s._21, {
+                        type: s._26.Span,
+                        ellipsis: !0
+                    }, t)))))
+                }, t.prototype.renderGameBoxArt = function() {
+                    var e = this.props.gameLinkTo,
+                        t = this.props.gameTitle,
+                        n = this.props.gameImageSrc;
+                    return t && e ? r.createElement(i.a, {
+                        to: e,
+                        title: t,
+                        "data-a-target": "live-channel-card-game-link"
+                    }, r.createElement(s._17, {
+                        className: "live-channel-card__boxart",
+                        position: s._2.Absolute,
+                        attachRight: !0,
+                        attachBottom: !0
+                    }, r.createElement(s._30, {
+                        display: s.H.Block,
+                        direction: s._32.Bottom,
+                        label: t
+                    }, r.createElement(s.C, {
+                        imageSrc: n,
+                        imageAlt: t,
+                        aspect: s.k.BoxArt
+                    })))) : null
+                }, t.prototype.renderContentType = function() {
+                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? r.createElement(s.U, {
+                        position: s._2.Absolute,
+                        attachLeft: !0,
+                        attachTop: !0,
+                        padding: .5
+                    }, r.createElement(l.a, {
+                        type: this.props.streamType
+                    })) : null
+                }, t
+            }(r.Component)),
+            d = c;
+        n.d(t, !1, function() {
+            return c
+        }), n.d(t, "a", function() {
+            return d
+        })
+    },
+    978: function(e, t, n) {
+        "use strict";
+        n.d(t, "d", function() {
+            return r
+        }), n.d(t, "c", function() {
+            return i
+        }), n.d(t, "a", function() {
+            return o
+        }), n.d(t, "b", function() {
+            return l
+        }), n.d(t, "e", function() {
+            return d
+        }), n.d(t, "f", function() {
+            return u
+        }), n.d(t, "g", function() {
+            return m
+        });
+        var a, r = "TWILIGHT_WEB_ONBOARDING_FOR_YOU",
+            i = "TWILIGHT_WEB_ONBOARDING",
+            o = "control";
+        ! function(e) {
+            e.Skip = "skip", e.NoSkip = "no_skip"
+        }(a || (a = {}));
+        var l, s = new Set([a.Skip.toString(), a.NoSkip.toString()]);
+        ! function(e) {
+            e.First = "first", e.Last = "last"
+        }(l || (l = {}));
+        var c = new Set([l.First.toString(), l.Last.toString()]),
+            d = function(e) {
+                return !!e && c.has(e)
+            },
+            u = function(e, t) {
+                return !!e && s.has(e) && d(t)
+            },
+            m = function(e) {
+                return e.getTime() >= p().getTime()
+            },
+            p = function() {
+                return new Date((new Date).getTime() - 12096e5)
+            }
+    },
+    988: function(e, t) {},
+    989: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-popular-80b5da007a39a5f96012ab12748f874b.js.map
+//# sourceMappingURL=pages.directory-popular-2109844574cd2fc8b70d1f019e534dd1.js.map

@@ -1,976 +1,5 @@
 webpackJsonp([32], {
-    1018: function(e, t, n) {
-        "use strict";
-
-        function a(e) {
-            return {
-                trackingSet: e.ads.trackingSet
-            }
-        }
-        var i = n(9),
-            r = n(0),
-            o = n(1),
-            l = n(2),
-            s = n(111),
-            d = n(416),
-            c = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
-            u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
-            m = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.logger = l.i.withCategory("ad-slot"), n.createSlot = function(e) {
-                        return r.__awaiter(n, void 0, void 0, function() {
-                            var t, n;
-                            return r.__generator(this, function(a) {
-                                switch (a.label) {
-                                    case 0:
-                                        if (this.state.slotCreated) return [2];
-                                        this.setState({
-                                            slotCreated: !0
-                                        }), a.label = 1;
-                                    case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, s.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
-                                    case 2:
-                                        return t = a.sent(), Object(d.h)(t.getSlotElementId()), this.setState({
-                                            slot: t
-                                        }), [3, 4];
-                                    case 3:
-                                        return n = a.sent(), this.logger.warn("Unable to create ad slot", {
-                                            slotID: e.slotID,
-                                            adUnit: e.adUnit,
-                                            adSize: e.adSize,
-                                            targeting: e.targeting,
-                                            autoEnable: e.autoEnable
-                                        }), [3, 4];
-                                    case 4:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }, n.setRef = function(e) {
-                        return n.slotRef = e
-                    }, n.onSlotRenderEnd = function(e) {
-                        var t = e.slot.getSlotElementId();
-                        if (n.state.slot && t === n.props.slotID) {
-                            if (n.logger.debug("Ad slot render ended", {
-                                    elementID: t,
-                                    lineItemID: e.lineItemId,
-                                    createdID: e.creativeId,
-                                    isEmpty: e.isEmpty,
-                                    serviceName: e.serviceName,
-                                    size: e.size
-                                }), e.isEmpty) return;
-                            if (!n.slotRef) return;
-                            if (n.props.slotID === d.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
-                                shouldDisplay: !0
-                            }, function() {
-                                return n.slotRendered(e.slot)
-                            }));
-                            if (n.props.slotID === d.b.directory.banner) {
-                                var a = n.slotRef.querySelector(c);
-                                return void(a && 1 !== a.clientWidth && n.setState({
-                                    shouldDisplay: !0
-                                }, function() {
-                                    return n.slotRendered(e.slot)
-                                }))
-                            }
-                            if (n.props.slotID === d.b.directory.rectangle) {
-                                var a = n.slotRef.querySelector(u);
-                                return void(a && 1 !== a.clientWidth && n.setState({
-                                    shouldDisplay: !0
-                                }, function() {
-                                    return n.slotRendered(e.slot)
-                                }))
-                            }
-                            n.setState({
-                                shouldDisplay: !0
-                            }, function() {
-                                return n.slotRendered(e.slot)
-                            })
-                        }
-                    }, n.slotRendered = function(e) {
-                        n.props.slotRendered && n.props.slotRendered(e)
-                    }, n.state = {
-                        shouldDisplay: !1
-                    }, n
-                }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                    d.g.addListener(d.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.state.slotCreated || (e.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentWillReceiveProps)", this.props.slotID), this.createSlot(e)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentWillReceiveProps)", this.props.slotID))
-                }, t.prototype.componentWillUnmount = function() {
-                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), d.g.removeListener(d.f, this.onSlotRenderEnd), this.state.slot && s.a.destroySlot(this.state.slot)
-                }, t.prototype.shouldComponentUpdate = function(e, t) {
-                    return t.shouldDisplay !== this.state.shouldDisplay
-                }, t.prototype.render = function() {
-                    var e = r.__assign({}, this.props.injectStyles);
-                    return this.state.shouldDisplay || (e.display = "none"), o.createElement("div", {
-                        style: e,
-                        id: this.props.slotID,
-                        ref: this.setRef
-                    })
-                }, t
-            }(o.Component),
-            p = m,
-            g = Object(i.a)(a)(p);
-        n.d(t, "a", function() {
-            return g
-        })
-    },
-    1057: function(e, t, n) {
-        "use strict";
-        var a, i, r, o = n(4),
-            l = n(1),
-            s = n(2),
-            d = n(1058),
-            c = n(3),
-            u = (n(1138), a = {}, a[d.a.Live] = "stream-type-indicator--live", a[d.a.Premiere] = "stream-type-indicator--premiere", a[d.a.Rerun] = "stream-type-indicator--rerun", a[d.a.WatchParty] = "stream-type-indicator--rerun", a),
-            m = (i = {}, i[d.a.Premiere] = c._9.VideoPremiere, i[d.a.Rerun] = c._9.VideoRerun, i[d.a.WatchParty] = c._9.VideoRerun, i),
-            p = (r = {}, r[d.a.Premiere] = c._10.Live, r[d.a.Rerun] = c._10.Inherit, r[d.a.WatchParty] = c._10.Inherit, r),
-            g = function(e) {
-                var t = {
-                    "stream-type-indicator": !0
-                };
-                t[u[e.type]] = !0;
-                var n;
-                n = e.type === d.a.Live ? l.createElement(c.U, {
-                    className: "stream-type-indicator__live-wrapper",
-                    display: c.H.Flex,
-                    alignItems: c.c.Center
-                }, l.createElement(c.V, {
-                    size: c.W.Small
-                })) : l.createElement(c._8, {
-                    asset: m[e.type],
-                    type: p[e.type],
-                    width: 14,
-                    height: 14
-                });
-                var a;
-                switch (e.type) {
-                    case d.a.Live:
-                        a = Object(s.d)("Live", "StreamTypeIndicator");
-                        break;
-                    case d.a.Premiere:
-                        a = Object(s.d)("Premiere", "StreamTypeIndicator");
-                        break;
-                    case d.a.Rerun:
-                    case d.a.WatchParty:
-                        a = Object(s.d)("Rerun", "StreamTypeIndicator");
-                        break;
-                    default:
-                        a = ""
-                }
-                return l.createElement(c._17, {
-                    className: o(t),
-                    background: c.m.Overlay,
-                    padding: {
-                        x: .5
-                    },
-                    borderRadius: c.s.Small,
-                    display: c.H.Flex
-                }, l.createElement(c.U, {
-                    display: c.H.Flex,
-                    margin: {
-                        right: .5
-                    }
-                }, n), l.createElement(c._21, {
-                    type: c._26.Span
-                }, a))
-            };
-        n.d(t, "a", function() {
-            return g
-        })
-    },
-    1058: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return a
-        });
-        var a;
-        ! function(e) {
-            e.Live = "live", e.WatchParty = "watch_party", e.Premiere = "premiere", e.Rerun = "rerun"
-        }(a || (a = {}))
-    },
-    1062: function(e, t, n) {
-        "use strict";
-        var a = n(0),
-            i = n(1),
-            r = n(12),
-            o = n(2),
-            l = n(1057),
-            s = n(3),
-            d = (n(1139), function(e) {
-                function t() {
-                    var t = e.call(this) || this;
-                    return t.state = {
-                        isPremiereExperimentActive: !1
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return a.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, o.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
-                                case 1:
-                                    return e = t.sent(), "yes" === e && o.b.get("premiere_video_manager_staff", !1) && this.setState({
-                                        isPremiereExperimentActive: !0
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.render = function() {
-                    var e = null;
-                    !0 !== this.state.isPremiereExperimentActive && this.props.vodcast && (e = i.createElement(s.U, {
-                        display: s.H.InlineBlock,
-                        padding: {
-                            right: .5
-                        }
-                    }, i.createElement(s.Z, {
-                        label: Object(o.d)("Vodcast", "LiveChannelCard")
-                    })));
-                    var t = Object(o.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
-                        viewerCount: this.props.viewerCount,
-                        channel: i.createElement(r.a, {
-                            to: this.props.channelNameLinkTo,
-                            className: "live-channel-card__videos",
-                            "data-a-target": "live-channel-card-channel-name-link"
-                        }, this.props.channelName)
-                    }, "Live Channel Card");
-                    return i.createElement("div", a.__assign({
-                        className: "live-channel-card"
-                    }, Object(s._39)(this.props)), i.createElement(s.A, {
-                        key: this.props.title
-                    }, i.createElement(s.U, {
-                        fullWidth: !0
-                    }, i.createElement(s.j, {
-                        overflow: !0
-                    }, i.createElement("div", null, i.createElement(r.a, {
-                        to: this.props.linkTo,
-                        title: this.props.title,
-                        "data-a-target": "live-channel-card-thumbnail-link"
-                    }, i.createElement(s.C, {
-                        imageAlt: this.props.imageAlt,
-                        imageSrc: this.props.imageSrc,
-                        aspect: s.k.Aspect16x9
-                    })), this.renderContentType(), this.renderGameBoxArt()))), i.createElement(s.B, null, i.createElement(r.a, {
-                        to: this.props.linkTo,
-                        className: "live-channel-card__channel",
-                        "data-a-target": "live-channel-card-title-link"
-                    }, i.createElement(s.P, {
-                        margin: {
-                            top: .5
-                        }
-                    }, i.createElement(s._21, {
-                        type: s._26.H3,
-                        fontSize: s.L.Size5,
-                        ellipsis: !0,
-                        className: "live-channel-card__title"
-                    }, this.props.title))), i.createElement(s.U, {
-                        className: "live-channel-card__meta",
-                        display: s.H.Flex,
-                        flexWrap: s.K.NoWrap
-                    }, e, i.createElement(s._21, {
-                        type: s._26.Span,
-                        ellipsis: !0
-                    }, t)))))
-                }, t.prototype.renderGameBoxArt = function() {
-                    var e = this.props.gameLinkTo,
-                        t = this.props.gameTitle,
-                        n = this.props.gameImageSrc;
-                    return t && e ? i.createElement(r.a, {
-                        to: e,
-                        title: t,
-                        "data-a-target": "live-channel-card-game-link"
-                    }, i.createElement(s._17, {
-                        className: "live-channel-card__boxart",
-                        position: s._2.Absolute,
-                        attachRight: !0,
-                        attachBottom: !0
-                    }, i.createElement(s._30, {
-                        display: s.H.Block,
-                        direction: s._32.Bottom,
-                        label: t
-                    }, i.createElement(s.C, {
-                        imageSrc: n,
-                        imageAlt: t,
-                        aspect: s.k.BoxArt
-                    })))) : null
-                }, t.prototype.renderContentType = function() {
-                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? i.createElement(s.U, {
-                        position: s._2.Absolute,
-                        attachLeft: !0,
-                        attachTop: !0,
-                        padding: .5
-                    }, i.createElement(l.a, {
-                        type: this.props.streamType
-                    })) : null
-                }, t
-            }(i.Component)),
-            c = d;
-        n.d(t, !1, function() {
-            return d
-        }), n.d(t, "a", function() {
-            return c
-        })
-    },
-    1063: function(e, t, n) {
-        "use strict";
-
-        function a(e) {
-            return {
-                isLoggedIn: Object(d.d)(e)
-            }
-        }
-
-        function i(e) {
-            return Object(o.bindActionCreators)({
-                showLoginModal: function() {
-                    return Object(s.f)(l.a.FollowGameButton)
-                }
-            }, e)
-        }
-        var r = n(9),
-            o = n(11),
-            l = n(51),
-            s = n(35),
-            d = n(19),
-            c = n(0),
-            u = n(1),
-            m = n(31),
-            p = n(2),
-            g = n(8),
-            f = n(23),
-            v = n(14),
-            h = n(3),
-            y = n(1064),
-            k = n(1065),
-            b = n(1066),
-            S = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.follow = function() {
-                        return c.__awaiter(t, void 0, void 0, function() {
-                            var e, t = this;
-                            return c.__generator(this, function(n) {
-                                switch (n.label) {
-                                    case 0:
-                                        return this.props.followGame && this.props.data && this.props.data.game ? (e = c.__assign({}, Object(f.a)({
-                                            gameID: this.props.data.game.id
-                                        }), {
-                                            optimisticResponse: {
-                                                followGame: {
-                                                    __typename: "FollowGamePayload",
-                                                    game: {
-                                                        self: {
-                                                            follow: {
-                                                                followedAt: (new Date).toISOString(),
-                                                                __typename: "GameFollow"
-                                                            },
-                                                            __typename: "GameSelfConnection"
-                                                        },
-                                                        __typename: "Game"
-                                                    }
-                                                }
-                                            },
-                                            update: function(e, n) {
-                                                var a = n.data.followGame,
-                                                    i = e.readQuery({
-                                                        query: k,
-                                                        variables: {
-                                                            name: t.props.gameName
-                                                        }
-                                                    });
-                                                i.game && (i.game.self.follow = a.game.self.follow, e.writeQuery({
-                                                    query: k,
-                                                    variables: {
-                                                        name: t.props.gameName
-                                                    },
-                                                    data: i
-                                                }))
-                                            }
-                                        }), [4, this.props.followGame(e)]) : [2];
-                                    case 1:
-                                        return n.sent(), this.track(v.SpadeEventType.GameFollow), [2]
-                                }
-                            })
-                        })
-                    }, t.unfollow = function() {
-                        return c.__awaiter(t, void 0, void 0, function() {
-                            var e, t = this;
-                            return c.__generator(this, function(n) {
-                                switch (n.label) {
-                                    case 0:
-                                        return this.props.unfollowGame && this.props.data && this.props.data.game ? (e = c.__assign({}, Object(f.a)({
-                                            gameID: this.props.data.game.id
-                                        }), {
-                                            optimisticResponse: {
-                                                unfollowGame: {
-                                                    __typename: "UnfollowGamePayload",
-                                                    follow: null
-                                                }
-                                            },
-                                            update: function(e) {
-                                                var n = e.readQuery({
-                                                    query: k,
-                                                    variables: {
-                                                        name: t.props.gameName
-                                                    }
-                                                });
-                                                n.game && (n.game.self.follow = null, e.writeQuery({
-                                                    query: k,
-                                                    variables: {
-                                                        name: t.props.gameName
-                                                    },
-                                                    data: n
-                                                }))
-                                            }
-                                        }), [4, this.props.unfollowGame(e)]) : [2];
-                                    case 1:
-                                        return n.sent(), this.track(v.SpadeEventType.GameUnfollow), [2]
-                                }
-                            })
-                        })
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(p.d)("Follow", "FollowGameButton");
-                    if (!this.props.isLoggedIn) return u.createElement(h.u, {
-                        icon: h._9.Heart,
-                        ariaLabel: e,
-                        "data-test-selector": "follow-game-button-component",
-                        onClick: this.props.showLoginModal
-                    }, e);
-                    if (this.isLoading) return u.createElement(h._1, {
-                        width: 70,
-                        height: 30
-                    });
-                    if (this.isFollowing) {
-                        var t = Object(p.d)("Unfollow", "FollowGameButton");
-                        return u.createElement(h.v, {
-                            ariaLabel: t,
-                            "data-test-selector": "follow-game-button-component",
-                            icon: h._9.Heart,
-                            onClick: this.unfollow,
-                            statusAlertIcon: h._9.Unheart
-                        })
-                    }
-                    return u.createElement(h.u, {
-                        icon: h._9.Heart,
-                        ariaLabel: e,
-                        "data-test-selector": "follow-game-button-component",
-                        onClick: this.follow,
-                        "data-a-target": "game-directory-follow-button"
-                    }, e)
-                }, Object.defineProperty(t.prototype, "isFollowing", {
-                    get: function() {
-                        return !!(this.props.data && this.props.data.game && this.props.data.game.self && null !== this.props.data.game.self.follow)
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(t.prototype, "isLoading", {
-                    get: function() {
-                        return !this.props.data || this.props.data.loading
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), t.prototype.track = function(e) {
-                    p.n.tracking.track(e, {
-                        src: this.props.src,
-                        kind: e === v.SpadeEventType.GameFollow ? "follow" : "unfollow",
-                        name: this.props.gameName
-                    })
-                }, t
-            }(u.Component),
-            w = Object(m.compose)(Object(g.a)(k, {
-                options: function(e) {
-                    return {
-                        variables: {
-                            name: e.gameName
-                        }
-                    }
-                },
-                skip: function(e) {
-                    return !e.isLoggedIn || !e.gameName
-                }
-            }), Object(g.a)(y, {
-                name: "followGame"
-            }), Object(g.a)(b, {
-                name: "unfollowGame"
-            }))(S),
-            _ = Object(r.a)(a, i)(w);
-        n.d(t, "a", function() {
-            return _
-        })
-    },
-    1064: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "mutation",
-                name: {
-                    kind: "Name",
-                    value: "FollowGameButton_FollowGame"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "input"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "FollowGameInput"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "followGame"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "game"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "self"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "follow"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "followedAt"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 187
-            }
-        };
-        n.loc.source = {
-            body: "mutation FollowGameButton_FollowGame($input: FollowGameInput!) {\n  followGame(input: $input) {\n    game {\n      self {\n        follow {\n          followedAt\n        }\n      }\n    }\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    1065: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "FollowGameButton_Game"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "name"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "game"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "name"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "name"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "name"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "self"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "follow"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "followedAt"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 177
-            }
-        };
-        n.loc.source = {
-            body: "query FollowGameButton_Game($name: String!) {\n  game(name: $name) {\n    id\n    name\n    self {\n      follow {\n        followedAt\n      }\n    }\n  }\n\n  currentUser {\n    id\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    1066: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "mutation",
-                name: {
-                    kind: "Name",
-                    value: "FollowGameButton_UnfollowGame"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "input"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "UnfollowGameInput"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "unfollowGame"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "follow"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "followedAt"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 143
-            }
-        };
-        n.loc.source = {
-            body: "mutation FollowGameButton_UnfollowGame($input: UnfollowGameInput!) {\n  unfollowGame(input: $input) {\n    follow {\n      followedAt\n    }\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    1129: function(e, t, n) {
-        "use strict";
-        n.d(t, "d", function() {
-            return i
-        }), n.d(t, "c", function() {
-            return r
-        }), n.d(t, "a", function() {
-            return o
-        }), n.d(t, "b", function() {
-            return l
-        }), n.d(t, "e", function() {
-            return c
-        }), n.d(t, "f", function() {
-            return u
-        }), n.d(t, "g", function() {
-            return m
-        });
-        var a, i = "TWILIGHT_WEB_ONBOARDING_FOR_YOU",
-            r = "TWILIGHT_WEB_ONBOARDING",
-            o = "control";
-        ! function(e) {
-            e.Skip = "skip", e.NoSkip = "no_skip"
-        }(a || (a = {}));
-        var l, s = new Set([a.Skip.toString(), a.NoSkip.toString()]);
-        ! function(e) {
-            e.First = "first", e.Last = "last"
-        }(l || (l = {}));
-        var d = new Set([l.First.toString(), l.Last.toString()]),
-            c = function(e) {
-                return !!e && d.has(e)
-            },
-            u = function(e, t) {
-                return !!e && s.has(e) && c(t)
-            },
-            m = function(e) {
-                return e.getTime() >= p().getTime()
-            },
-            p = function() {
-                return new Date((new Date).getTime() - 12096e5)
-            }
-    },
-    1130: function(e, t, n) {
-        "use strict";
-        n.d(t, "c", function() {
-            return i
-        }), n.d(t, "b", function() {
-            return r
-        }), n.d(t, "a", function() {
-            return o
-        });
-        var a = n(958),
-            i = function(e) {
-                return e.startsWith("/communities") || e.startsWith("/directory/communities") ? a.a.Communities : a.a.Games
-            },
-            r = function(e) {
-                switch (e) {
-                    case "communities":
-                        return a.a.Communities;
-                    case "games":
-                        return a.a.Games;
-                    case "creative":
-                        return a.a.Creative;
-                    default:
-                        return a.a.Games
-                }
-            },
-            o = function(e) {
-                switch (e) {
-                    case "communities":
-                        return [a.a.Communities, a.a.Creative];
-                    case "games":
-                        return [a.a.Games];
-                    case "creative":
-                        return [a.a.Creative];
-                    default:
-                        return [a.a.Games]
-                }
-            }
-    },
-    1138: function(e, t) {},
-    1139: function(e, t) {},
-    1159: function(e, t, n) {
+    1012: function(e, t, n) {
         "use strict";
         var a = n(0),
             i = n(1),
@@ -999,7 +28,7 @@ webpackJsonp([32], {
             return d
         })
     },
-    1301: function(e, t, n) {
+    1047: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1012,21 +41,21 @@ webpackJsonp([32], {
         }
         t.a = a
     },
-    1302: function(e, t, n) {
+    1048: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return v
         });
         var a = n(0),
-            i = n(21),
+            i = n(20),
             r = (n.n(i), n(1)),
             o = (n.n(r), n(2)),
-            l = n(8),
-            s = n(19),
+            l = n(7),
+            s = n(18),
             d = n(3),
-            c = n(1303),
-            u = (n.n(c), n(1304)),
-            m = (n.n(u), n(1305)),
+            c = n(1049),
+            u = (n.n(c), n(1050)),
+            m = (n.n(u), n(1051)),
             p = (n.n(m), function(e) {
                 return "https://api.twitch.tv/api/users/" + e + "/follows/games/follow"
             }),
@@ -1180,7 +209,7 @@ webpackJsonp([32], {
             }(r.Component),
             v = f
     },
-    1303: function(e, t) {
+    1049: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1301,8 +330,8 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1304: function(e, t) {},
-    1305: function(e, t) {
+    1050: function(e, t) {},
+    1051: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1367,7 +396,7 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1306: function(e, t, n) {
+    1052: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
             return a
@@ -1385,7 +414,7 @@ webpackJsonp([32], {
             return u
         });
         var a, i = n(2),
-            r = n(14);
+            r = n(13);
         ! function(e) {
             e.HomepageCTA = "homepage_cta", e.NewSignup = "new_signup"
         }(a || (a = {}));
@@ -1425,7 +454,7 @@ webpackJsonp([32], {
                 i.m.track(r.SpadeEventType.BrowseForYou, e)
             }
     },
-    1307: function(e, t, n) {
+    1053: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1448,21 +477,21 @@ webpackJsonp([32], {
         var o = n(0),
             l = n(1),
             s = n(2),
-            d = n(1062),
-            c = n(1057),
-            u = n(52),
-            m = n(407),
-            p = n(14),
-            g = n(958),
-            f = n(9),
-            v = n(11),
-            h = n(50),
-            y = n(417),
-            k = n(8),
-            b = n(6),
-            S = n(31),
-            w = n(134),
-            _ = n(23),
+            d = n(906),
+            c = n(901),
+            u = n(51),
+            m = n(352),
+            p = n(13),
+            g = n(798),
+            f = n(8),
+            v = n(10),
+            h = n(49),
+            y = n(362),
+            k = n(7),
+            b = n(5),
+            S = n(30),
+            w = n(123),
+            _ = n(22),
             N = function(e) {
                 switch (e) {
                     case "TARGET_USER_OWNER":
@@ -1480,8 +509,8 @@ webpackJsonp([32], {
                 }
             },
             E = n(3),
-            C = n(1376),
-            F = (n(1377), "error-message"),
+            C = n(1275),
+            F = (n(1276), "error-message"),
             D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1601,7 +630,7 @@ webpackJsonp([32], {
                 name: "banUserFromCommunity"
             }))(D),
             O = Object(f.a)(null, a)(T),
-            U = (n(1378), n(1379)),
+            U = (n(1277), n(1278)),
             I = "error-message",
             P = function(e) {
                 function t() {
@@ -1749,7 +778,7 @@ webpackJsonp([32], {
                 name: "timeoutUserFromCommunity"
             }))(P),
             x = Object(f.a)(null, i)(A),
-            j = n(1380),
+            j = n(1279),
             B = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1817,8 +846,8 @@ webpackJsonp([32], {
             }(l.Component),
             G = B,
             L = Object(f.a)(null, r)(G),
-            R = n(1159),
-            M = (n(1381), function(e) {
+            R = n(1012),
+            M = (n(1280), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.getLinkTo = function(e, n) {
@@ -1923,7 +952,7 @@ webpackJsonp([32], {
             return V
         })
     },
-    1339: function(e, t, n) {
+    1237: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1935,11 +964,11 @@ webpackJsonp([32], {
         var i, r = n(0),
             o = n(1),
             l = n(2),
-            s = n(8),
-            d = n(6),
-            c = n(1129),
+            s = n(7),
+            d = n(5),
+            c = n(978),
             u = n(3),
-            m = n(1372);
+            m = n(1271);
         ! function(e) {
             e[e.BrowseForYouPage = 0] = "BrowseForYouPage", e[e.BrowseGamePage = 1] = "BrowseGamePage", e[e.BrowseCommunitiesPage = 2] = "BrowseCommunitiesPage", e[e.BrowsePopularPage = 3] = "BrowsePopularPage", e[e.BrowseCreativePage = 4] = "BrowseCreativePage"
         }(i || (i = {}));
@@ -2009,8 +1038,8 @@ webpackJsonp([32], {
                 })], t)
             }(o.Component),
             g = p,
-            f = n(9),
-            v = n(19),
+            f = n(8),
+            v = n(18),
             h = Object(f.a)(a, null)(g);
         n.d(t, "b", function() {
             return i
@@ -2018,7 +1047,7 @@ webpackJsonp([32], {
             return h
         })
     },
-    1372: function(e, t) {
+    1271: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2083,20 +1112,20 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1373: function(e, t, n) {
+    1272: function(e, t, n) {
         "use strict";
         var a = n(0),
             i = n(1),
             r = n(2),
-            o = n(134),
-            l = n(30),
-            s = n(8),
-            d = n(50),
-            c = n(1301),
-            u = n(1302),
+            o = n(123),
+            l = n(29),
+            s = n(7),
+            d = n(49),
+            c = n(1047),
+            u = n(1048),
             m = n(3),
-            p = n(1374),
-            g = (n(1375), function(e) {
+            p = n(1273),
+            g = (n(1274), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -2205,7 +1234,7 @@ webpackJsonp([32], {
             return g
         })
     },
-    1374: function(e, t) {
+    1273: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2356,8 +1385,8 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1375: function(e, t) {},
-    1376: function(e, t) {
+    1274: function(e, t) {},
+    1275: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2445,9 +1474,9 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1377: function(e, t) {},
-    1378: function(e, t) {},
-    1379: function(e, t) {
+    1276: function(e, t) {},
+    1277: function(e, t) {},
+    1278: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2568,7 +1597,7 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1380: function(e, t) {
+    1279: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2725,8 +1754,8 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1381: function(e, t) {},
-    1668: function(e, t) {
+    1280: function(e, t) {},
+    1673: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2996,7 +2025,7 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1669: function(e, t) {
+    1674: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3385,9 +2414,9 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    1670: function(e, t) {},
-    1671: function(e, t) {},
-    1672: function(e, t) {
+    1675: function(e, t) {},
+    1676: function(e, t) {},
+    1677: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3538,7 +2567,7 @@ webpackJsonp([32], {
         };
         e.exports = n
     },
-    2017: function(e, t, n) {
+    2022: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3557,27 +2586,27 @@ webpackJsonp([32], {
         });
         var r = n(0),
             o = n(1),
-            l = n(31),
+            l = n(30),
             s = n(2),
-            d = n(925),
-            c = n(922),
-            u = n(14),
-            m = n(6),
-            p = n(9),
-            g = n(66),
-            f = n(30),
-            v = n(8),
-            h = n(137),
-            y = n(23),
-            k = n(407),
-            b = n(111),
-            S = n(1018),
-            w = n(416),
-            _ = n(1339),
-            N = n(958),
-            E = n(1130),
+            d = n(764),
+            c = n(761),
+            u = n(13),
+            m = n(5),
+            p = n(8),
+            g = n(62),
+            f = n(29),
+            v = n(7),
+            h = n(126),
+            y = n(22),
+            k = n(352),
+            b = n(104),
+            S = n(858),
+            w = n(361),
+            _ = n(1237),
+            N = n(798),
+            E = n(979),
             C = n(3),
-            F = n(1668),
+            F = n(1673),
             D = "directory-first-item",
             T = "directory-container",
             O = {
@@ -3836,16 +2865,16 @@ webpackJsonp([32], {
             }), Object(d.a)({
                 location: u.PageviewLocation.Directory
             }))(L),
-            M = n(19),
-            V = n(1373),
-            H = n(1129),
-            W = n(12),
-            q = n(1057),
-            z = n(1058),
-            Y = n(1063),
-            $ = n(15),
-            Q = n(1306),
-            X = n(1307),
+            M = n(18),
+            V = n(1272),
+            H = n(978),
+            W = n(11),
+            q = n(901),
+            z = n(902),
+            Y = n(907),
+            $ = n(14),
+            Q = n(1052),
+            X = n(1053),
             J = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3906,8 +2935,8 @@ webpackJsonp([32], {
                 }, t
             }(o.Component),
             K = J,
-            Z = n(1669),
-            ee = (n(1670), "community-streams-row__title"),
+            Z = n(1674),
+            ee = (n(1675), "community-streams-row__title"),
             te = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3953,7 +2982,7 @@ webpackJsonp([32], {
                 return r.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     this.communityStreamDataLoaded() && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.communityStreamDataLoaded() ? o.createElement(C.U, {
+                    return this.communityStreamDataLoaded() && this.props.data.directory.streams && this.props.data.directory.streams.edges.length ? o.createElement(C.U, {
                         "data-test-selector": "community-streams-row",
                         flexShrink: 0
                     }, o.createElement(C.U, {
@@ -3989,7 +3018,7 @@ webpackJsonp([32], {
                 }), Object(m.c)("CommunityStreamsRow")], t)
             }(o.Component),
             ne = te,
-            ae = (n(1671), n(1672)),
+            ae = (n(1676), n(1677)),
             ie = "browse-for-you__empty",
             re = "browse-for-you__add_more_games",
             oe = 10,
@@ -4060,7 +3089,7 @@ webpackJsonp([32], {
                     }, t.redirectToDirectory = function() {
                         s.n.history.push("/directory" + location.search)
                     }, t.redirectToCommunitySelectionPage = function() {
-                        s.n.history.push("/hi" + location.search), window.location.reload()
+                        window.location.assign("/hi" + location.search)
                     }, t.refetchFollowedData = function() {
                         return r.__awaiter(t, void 0, void 0, function() {
                             return r.__generator(this, function(e) {
@@ -4132,7 +3161,7 @@ webpackJsonp([32], {
             return de
         })
     },
-    922: function(e, t, n) {
+    761: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -4190,7 +3219,7 @@ webpackJsonp([32], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    925: function(e, t, n) {
+    764: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -4250,15 +3279,15 @@ webpackJsonp([32], {
             }
         }
         var i = n(0),
-            r = n(21),
+            r = n(20),
             o = n(1),
-            l = n(12),
+            l = n(11),
             s = n(2);
         n.d(t, "a", function() {
             return a
         })
     },
-    958: function(e, t, n) {
+    798: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -4267,6 +3296,977 @@ webpackJsonp([32], {
         ! function(e) {
             e.Games = "GAMES", e.Communities = "COMMUNITIES", e.Creative = "CREATIVE"
         }(a || (a = {}))
-    }
+    },
+    858: function(e, t, n) {
+        "use strict";
+
+        function a(e) {
+            return {
+                trackingSet: e.ads.trackingSet
+            }
+        }
+        var i = n(8),
+            r = n(0),
+            o = n(1),
+            l = n(2),
+            s = n(104),
+            d = n(361),
+            c = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
+            u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
+            m = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.logger = l.i.withCategory("ad-slot"), n.createSlot = function(e) {
+                        return r.__awaiter(n, void 0, void 0, function() {
+                            var t, n;
+                            return r.__generator(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        if (this.state.slotCreated) return [2];
+                                        this.setState({
+                                            slotCreated: !0
+                                        }), a.label = 1;
+                                    case 1:
+                                        return a.trys.push([1, 3, , 4]), [4, s.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
+                                    case 2:
+                                        return t = a.sent(), Object(d.h)(t.getSlotElementId()), this.setState({
+                                            slot: t
+                                        }), [3, 4];
+                                    case 3:
+                                        return n = a.sent(), this.logger.warn("Unable to create ad slot", {
+                                            slotID: e.slotID,
+                                            adUnit: e.adUnit,
+                                            adSize: e.adSize,
+                                            targeting: e.targeting,
+                                            autoEnable: e.autoEnable
+                                        }), [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, n.setRef = function(e) {
+                        return n.slotRef = e
+                    }, n.onSlotRenderEnd = function(e) {
+                        var t = e.slot.getSlotElementId();
+                        if (n.state.slot && t === n.props.slotID) {
+                            if (n.logger.debug("Ad slot render ended", {
+                                    elementID: t,
+                                    lineItemID: e.lineItemId,
+                                    createdID: e.creativeId,
+                                    isEmpty: e.isEmpty,
+                                    serviceName: e.serviceName,
+                                    size: e.size
+                                }), e.isEmpty) return;
+                            if (!n.slotRef) return;
+                            if (n.props.slotID === d.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
+                                shouldDisplay: !0
+                            }, function() {
+                                return n.slotRendered(e.slot)
+                            }));
+                            if (n.props.slotID === d.b.directory.banner) {
+                                var a = n.slotRef.querySelector(c);
+                                return void(a && 1 !== a.clientWidth && n.setState({
+                                    shouldDisplay: !0
+                                }, function() {
+                                    return n.slotRendered(e.slot)
+                                }))
+                            }
+                            if (n.props.slotID === d.b.directory.rectangle) {
+                                var a = n.slotRef.querySelector(u);
+                                return void(a && 1 !== a.clientWidth && n.setState({
+                                    shouldDisplay: !0
+                                }, function() {
+                                    return n.slotRendered(e.slot)
+                                }))
+                            }
+                            n.setState({
+                                shouldDisplay: !0
+                            }, function() {
+                                return n.slotRendered(e.slot)
+                            })
+                        }
+                    }, n.slotRendered = function(e) {
+                        n.props.slotRendered && n.props.slotRendered(e)
+                    }, n.state = {
+                        shouldDisplay: !1
+                    }, n
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    d.g.addListener(d.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    this.state.slotCreated || (e.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentWillReceiveProps)", this.props.slotID), this.createSlot(e)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentWillReceiveProps)", this.props.slotID))
+                }, t.prototype.componentWillUnmount = function() {
+                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), d.g.removeListener(d.f, this.onSlotRenderEnd), this.state.slot && s.a.destroySlot(this.state.slot)
+                }, t.prototype.shouldComponentUpdate = function(e, t) {
+                    return t.shouldDisplay !== this.state.shouldDisplay
+                }, t.prototype.render = function() {
+                    var e = r.__assign({}, this.props.injectStyles);
+                    return this.state.shouldDisplay || (e.display = "none"), o.createElement("div", {
+                        style: e,
+                        id: this.props.slotID,
+                        ref: this.setRef
+                    })
+                }, t
+            }(o.Component),
+            p = m,
+            g = Object(i.a)(a)(p);
+        n.d(t, "a", function() {
+            return g
+        })
+    },
+    901: function(e, t, n) {
+        "use strict";
+        var a, i, r, o = n(4),
+            l = n(1),
+            s = n(2),
+            d = n(902),
+            c = n(3),
+            u = (n(988), a = {}, a[d.a.Live] = "stream-type-indicator--live", a[d.a.Premiere] = "stream-type-indicator--premiere", a[d.a.Rerun] = "stream-type-indicator--rerun", a[d.a.WatchParty] = "stream-type-indicator--rerun", a),
+            m = (i = {}, i[d.a.Premiere] = c._9.VideoPremiere, i[d.a.Rerun] = c._9.VideoRerun, i[d.a.WatchParty] = c._9.VideoRerun, i),
+            p = (r = {}, r[d.a.Premiere] = c._10.Live, r[d.a.Rerun] = c._10.Inherit, r[d.a.WatchParty] = c._10.Inherit, r),
+            g = function(e) {
+                var t = {
+                    "stream-type-indicator": !0
+                };
+                t[u[e.type]] = !0;
+                var n;
+                n = e.type === d.a.Live ? l.createElement(c.U, {
+                    className: "stream-type-indicator__live-wrapper",
+                    display: c.H.Flex,
+                    alignItems: c.c.Center
+                }, l.createElement(c.V, {
+                    size: c.W.Small
+                })) : l.createElement(c._8, {
+                    asset: m[e.type],
+                    type: p[e.type],
+                    width: 14,
+                    height: 14
+                });
+                var a;
+                switch (e.type) {
+                    case d.a.Live:
+                        a = Object(s.d)("Live", "StreamTypeIndicator");
+                        break;
+                    case d.a.Premiere:
+                        a = Object(s.d)("Premiere", "StreamTypeIndicator");
+                        break;
+                    case d.a.Rerun:
+                    case d.a.WatchParty:
+                        a = Object(s.d)("Rerun", "StreamTypeIndicator");
+                        break;
+                    default:
+                        a = ""
+                }
+                return l.createElement(c._17, {
+                    className: o(t),
+                    background: c.m.Overlay,
+                    padding: {
+                        x: .5
+                    },
+                    borderRadius: c.s.Small,
+                    display: c.H.Flex
+                }, l.createElement(c.U, {
+                    display: c.H.Flex,
+                    margin: {
+                        right: .5
+                    }
+                }, n), l.createElement(c._21, {
+                    type: c._26.Span
+                }, a))
+            };
+        n.d(t, "a", function() {
+            return g
+        })
+    },
+    902: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return a
+        });
+        var a;
+        ! function(e) {
+            e.Live = "live", e.WatchParty = "watch_party", e.Premiere = "premiere", e.Rerun = "rerun"
+        }(a || (a = {}))
+    },
+    906: function(e, t, n) {
+        "use strict";
+        var a = n(0),
+            i = n(1),
+            r = n(11),
+            o = n(2),
+            l = n(901),
+            s = n(3),
+            d = (n(989), function(e) {
+                function t() {
+                    var t = e.call(this) || this;
+                    return t.state = {
+                        isPremiereExperimentActive: !1
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return a.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return [4, o.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
+                                case 1:
+                                    return e = t.sent(), "yes" === e && o.b.get("premiere_video_manager_staff", !1) && this.setState({
+                                        isPremiereExperimentActive: !0
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, t.prototype.render = function() {
+                    var e = null;
+                    !0 !== this.state.isPremiereExperimentActive && this.props.vodcast && (e = i.createElement(s.U, {
+                        display: s.H.InlineBlock,
+                        padding: {
+                            right: .5
+                        }
+                    }, i.createElement(s.Z, {
+                        label: Object(o.d)("Vodcast", "LiveChannelCard")
+                    })));
+                    var t = Object(o.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
+                        viewerCount: this.props.viewerCount,
+                        channel: i.createElement(r.a, {
+                            to: this.props.channelNameLinkTo,
+                            className: "live-channel-card__videos",
+                            "data-a-target": "live-channel-card-channel-name-link"
+                        }, this.props.channelName)
+                    }, "Live Channel Card");
+                    return i.createElement("div", a.__assign({
+                        className: "live-channel-card"
+                    }, Object(s._39)(this.props)), i.createElement(s.A, {
+                        key: this.props.title
+                    }, i.createElement(s.U, {
+                        fullWidth: !0
+                    }, i.createElement(s.j, {
+                        overflow: !0
+                    }, i.createElement("div", null, i.createElement(r.a, {
+                        to: this.props.linkTo,
+                        title: this.props.title,
+                        "data-a-target": "live-channel-card-thumbnail-link"
+                    }, i.createElement(s.C, {
+                        imageAlt: this.props.imageAlt,
+                        imageSrc: this.props.imageSrc,
+                        aspect: s.k.Aspect16x9
+                    })), this.renderContentType(), this.renderGameBoxArt()))), i.createElement(s.B, null, i.createElement(r.a, {
+                        to: this.props.linkTo,
+                        className: "live-channel-card__channel",
+                        "data-a-target": "live-channel-card-title-link"
+                    }, i.createElement(s.P, {
+                        margin: {
+                            top: .5
+                        }
+                    }, i.createElement(s._21, {
+                        type: s._26.H3,
+                        fontSize: s.L.Size5,
+                        ellipsis: !0,
+                        className: "live-channel-card__title"
+                    }, this.props.title))), i.createElement(s.U, {
+                        className: "live-channel-card__meta",
+                        display: s.H.Flex,
+                        flexWrap: s.K.NoWrap
+                    }, e, i.createElement(s._21, {
+                        type: s._26.Span,
+                        ellipsis: !0
+                    }, t)))))
+                }, t.prototype.renderGameBoxArt = function() {
+                    var e = this.props.gameLinkTo,
+                        t = this.props.gameTitle,
+                        n = this.props.gameImageSrc;
+                    return t && e ? i.createElement(r.a, {
+                        to: e,
+                        title: t,
+                        "data-a-target": "live-channel-card-game-link"
+                    }, i.createElement(s._17, {
+                        className: "live-channel-card__boxart",
+                        position: s._2.Absolute,
+                        attachRight: !0,
+                        attachBottom: !0
+                    }, i.createElement(s._30, {
+                        display: s.H.Block,
+                        direction: s._32.Bottom,
+                        label: t
+                    }, i.createElement(s.C, {
+                        imageSrc: n,
+                        imageAlt: t,
+                        aspect: s.k.BoxArt
+                    })))) : null
+                }, t.prototype.renderContentType = function() {
+                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? i.createElement(s.U, {
+                        position: s._2.Absolute,
+                        attachLeft: !0,
+                        attachTop: !0,
+                        padding: .5
+                    }, i.createElement(l.a, {
+                        type: this.props.streamType
+                    })) : null
+                }, t
+            }(i.Component)),
+            c = d;
+        n.d(t, !1, function() {
+            return d
+        }), n.d(t, "a", function() {
+            return c
+        })
+    },
+    907: function(e, t, n) {
+        "use strict";
+
+        function a(e) {
+            return {
+                isLoggedIn: Object(d.d)(e)
+            }
+        }
+
+        function i(e) {
+            return Object(o.bindActionCreators)({
+                showLoginModal: function() {
+                    return Object(s.f)(l.a.FollowGameButton)
+                }
+            }, e)
+        }
+        var r = n(8),
+            o = n(10),
+            l = n(50),
+            s = n(34),
+            d = n(18),
+            c = n(0),
+            u = n(1),
+            m = n(30),
+            p = n(2),
+            g = n(7),
+            f = n(22),
+            v = n(13),
+            h = n(3),
+            y = n(908),
+            k = n(909),
+            b = n(910),
+            S = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.follow = function() {
+                        return c.__awaiter(t, void 0, void 0, function() {
+                            var e, t = this;
+                            return c.__generator(this, function(n) {
+                                switch (n.label) {
+                                    case 0:
+                                        return this.props.followGame && this.props.data && this.props.data.game ? (e = c.__assign({}, Object(f.a)({
+                                            gameID: this.props.data.game.id
+                                        }), {
+                                            optimisticResponse: {
+                                                followGame: {
+                                                    __typename: "FollowGamePayload",
+                                                    game: {
+                                                        self: {
+                                                            follow: {
+                                                                followedAt: (new Date).toISOString(),
+                                                                __typename: "GameFollow"
+                                                            },
+                                                            __typename: "GameSelfConnection"
+                                                        },
+                                                        __typename: "Game"
+                                                    }
+                                                }
+                                            },
+                                            update: function(e, n) {
+                                                var a = n.data.followGame,
+                                                    i = e.readQuery({
+                                                        query: k,
+                                                        variables: {
+                                                            name: t.props.gameName
+                                                        }
+                                                    });
+                                                i.game && (i.game.self.follow = a.game.self.follow, e.writeQuery({
+                                                    query: k,
+                                                    variables: {
+                                                        name: t.props.gameName
+                                                    },
+                                                    data: i
+                                                }))
+                                            }
+                                        }), [4, this.props.followGame(e)]) : [2];
+                                    case 1:
+                                        return n.sent(), this.track(v.SpadeEventType.GameFollow), [2]
+                                }
+                            })
+                        })
+                    }, t.unfollow = function() {
+                        return c.__awaiter(t, void 0, void 0, function() {
+                            var e, t = this;
+                            return c.__generator(this, function(n) {
+                                switch (n.label) {
+                                    case 0:
+                                        return this.props.unfollowGame && this.props.data && this.props.data.game ? (e = c.__assign({}, Object(f.a)({
+                                            gameID: this.props.data.game.id
+                                        }), {
+                                            optimisticResponse: {
+                                                unfollowGame: {
+                                                    __typename: "UnfollowGamePayload",
+                                                    follow: null
+                                                }
+                                            },
+                                            update: function(e) {
+                                                var n = e.readQuery({
+                                                    query: k,
+                                                    variables: {
+                                                        name: t.props.gameName
+                                                    }
+                                                });
+                                                n.game && (n.game.self.follow = null, e.writeQuery({
+                                                    query: k,
+                                                    variables: {
+                                                        name: t.props.gameName
+                                                    },
+                                                    data: n
+                                                }))
+                                            }
+                                        }), [4, this.props.unfollowGame(e)]) : [2];
+                                    case 1:
+                                        return n.sent(), this.track(v.SpadeEventType.GameUnfollow), [2]
+                                }
+                            })
+                        })
+                    }, t
+                }
+                return c.__extends(t, e), t.prototype.render = function() {
+                    var e = Object(p.d)("Follow", "FollowGameButton");
+                    if (!this.props.isLoggedIn) return u.createElement(h.u, {
+                        icon: h._9.Heart,
+                        ariaLabel: e,
+                        "data-test-selector": "follow-game-button-component",
+                        onClick: this.props.showLoginModal
+                    }, e);
+                    if (this.isLoading) return u.createElement(h._1, {
+                        width: 70,
+                        height: 30
+                    });
+                    if (this.isFollowing) {
+                        var t = Object(p.d)("Unfollow", "FollowGameButton");
+                        return u.createElement(h.v, {
+                            ariaLabel: t,
+                            "data-test-selector": "follow-game-button-component",
+                            icon: h._9.Heart,
+                            onClick: this.unfollow,
+                            statusAlertIcon: h._9.Unheart
+                        })
+                    }
+                    return u.createElement(h.u, {
+                        icon: h._9.Heart,
+                        ariaLabel: e,
+                        "data-test-selector": "follow-game-button-component",
+                        onClick: this.follow,
+                        "data-a-target": "game-directory-follow-button"
+                    }, e)
+                }, Object.defineProperty(t.prototype, "isFollowing", {
+                    get: function() {
+                        return !!(this.props.data && this.props.data.game && this.props.data.game.self && null !== this.props.data.game.self.follow)
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), Object.defineProperty(t.prototype, "isLoading", {
+                    get: function() {
+                        return !this.props.data || this.props.data.loading
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), t.prototype.track = function(e) {
+                    p.n.tracking.track(e, {
+                        src: this.props.src,
+                        kind: e === v.SpadeEventType.GameFollow ? "follow" : "unfollow",
+                        name: this.props.gameName
+                    })
+                }, t
+            }(u.Component),
+            w = Object(m.compose)(Object(g.a)(k, {
+                options: function(e) {
+                    return {
+                        variables: {
+                            name: e.gameName
+                        }
+                    }
+                },
+                skip: function(e) {
+                    return !e.isLoggedIn || !e.gameName
+                }
+            }), Object(g.a)(y, {
+                name: "followGame"
+            }), Object(g.a)(b, {
+                name: "unfollowGame"
+            }))(S),
+            _ = Object(r.a)(a, i)(w);
+        n.d(t, "a", function() {
+            return _
+        })
+    },
+    908: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "FollowGameButton_FollowGame"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "FollowGameInput"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "followGame"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "game"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "self"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "follow"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "followedAt"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 187
+            }
+        };
+        n.loc.source = {
+            body: "mutation FollowGameButton_FollowGame($input: FollowGameInput!) {\n  followGame(input: $input) {\n    game {\n      self {\n        follow {\n          followedAt\n        }\n      }\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    909: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "FollowGameButton_Game"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "name"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "game"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "name"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "name"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "name"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "self"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "follow"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "followedAt"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 177
+            }
+        };
+        n.loc.source = {
+            body: "query FollowGameButton_Game($name: String!) {\n  game(name: $name) {\n    id\n    name\n    self {\n      follow {\n        followedAt\n      }\n    }\n  }\n\n  currentUser {\n    id\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    910: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "FollowGameButton_UnfollowGame"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "UnfollowGameInput"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "unfollowGame"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "follow"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "followedAt"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 143
+            }
+        };
+        n.loc.source = {
+            body: "mutation FollowGameButton_UnfollowGame($input: UnfollowGameInput!) {\n  unfollowGame(input: $input) {\n    follow {\n      followedAt\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    978: function(e, t, n) {
+        "use strict";
+        n.d(t, "d", function() {
+            return i
+        }), n.d(t, "c", function() {
+            return r
+        }), n.d(t, "a", function() {
+            return o
+        }), n.d(t, "b", function() {
+            return l
+        }), n.d(t, "e", function() {
+            return c
+        }), n.d(t, "f", function() {
+            return u
+        }), n.d(t, "g", function() {
+            return m
+        });
+        var a, i = "TWILIGHT_WEB_ONBOARDING_FOR_YOU",
+            r = "TWILIGHT_WEB_ONBOARDING",
+            o = "control";
+        ! function(e) {
+            e.Skip = "skip", e.NoSkip = "no_skip"
+        }(a || (a = {}));
+        var l, s = new Set([a.Skip.toString(), a.NoSkip.toString()]);
+        ! function(e) {
+            e.First = "first", e.Last = "last"
+        }(l || (l = {}));
+        var d = new Set([l.First.toString(), l.Last.toString()]),
+            c = function(e) {
+                return !!e && d.has(e)
+            },
+            u = function(e, t) {
+                return !!e && s.has(e) && c(t)
+            },
+            m = function(e) {
+                return e.getTime() >= p().getTime()
+            },
+            p = function() {
+                return new Date((new Date).getTime() - 12096e5)
+            }
+    },
+    979: function(e, t, n) {
+        "use strict";
+        n.d(t, "c", function() {
+            return i
+        }), n.d(t, "b", function() {
+            return r
+        }), n.d(t, "a", function() {
+            return o
+        });
+        var a = n(798),
+            i = function(e) {
+                return e.startsWith("/communities") || e.startsWith("/directory/communities") ? a.a.Communities : a.a.Games
+            },
+            r = function(e) {
+                switch (e) {
+                    case "communities":
+                        return a.a.Communities;
+                    case "games":
+                        return a.a.Games;
+                    case "creative":
+                        return a.a.Creative;
+                    default:
+                        return a.a.Games
+                }
+            },
+            o = function(e) {
+                switch (e) {
+                    case "communities":
+                        return [a.a.Communities, a.a.Creative];
+                    case "games":
+                        return [a.a.Games];
+                    case "creative":
+                        return [a.a.Creative];
+                    default:
+                        return [a.a.Games]
+                }
+            }
+    },
+    988: function(e, t) {},
+    989: function(e, t) {}
 });
-//# sourceMappingURL=pages.browse-community-b44df940da720c6381144e837c550dc5.js.map
+//# sourceMappingURL=pages.browse-community-cc9ff62704049707bb0fc8e8e3ad3fe4.js.map

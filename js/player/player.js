@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".9d7e0822f638c9dc36c3.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".97823e048ed7e7eaf34f.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -1726,13 +1726,13 @@
                         _(w(e, r), r);
                         break;
                     case T.g:
-                        t(n.i(N.c)(e)), t(n.i(C.a)()), t(n.i(A.b)({
+                        t(n.i(N.c)(e)), t(n.i(C.b)()), t(n.i(A.b)({
                             contentType: A.f,
                             contentId: e
                         }));
                         break;
                     default:
-                        t(n.i(C.a)()), t(n.i(A.b)({
+                        t(n.i(C.b)()), t(n.i(A.b)({
                             contentType: A.f,
                             contentId: e
                         }))
@@ -2691,13 +2691,15 @@
 
         function u(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "",
-                n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+                n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
+                r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
             return {
                 type: h,
                 request: {
                     collectionId: e,
                     videoId: t,
-                    timestamp: n
+                    timestamp: n,
+                    preferVideo: r
                 }
             }
         }
@@ -2774,7 +2776,7 @@
             return _
         }), n.d(t, "i", function() {
             return w
-        }), t.p = r, t.k = i, t.a = a, t.l = o, t.m = s, t.b = u, t.j = f, t.c = p;
+        }), t.p = r, t.k = i, t.b = a, t.l = o, t.m = s, t.a = u, t.j = f, t.c = p;
         var h = "request collection",
             m = "set collection",
             v = "clear collection",
@@ -4699,7 +4701,8 @@
                         pendingRequest: {
                             collectionId: "",
                             videoId: "",
-                            timestamp: ""
+                            timestamp: "",
+                            preferVideo: !1
                         },
                         currentView: u
                     });
@@ -4718,7 +4721,8 @@
                         pendingRequest: {
                             collectionId: "",
                             videoId: "",
-                            timestamp: ""
+                            timestamp: "",
+                            preferVideo: !1
                         },
                         featuredCollection: d
                     });
@@ -4777,7 +4781,8 @@
                 pendingRequest: {
                     collectionId: "",
                     videoId: "",
-                    timestamp: ""
+                    timestamp: "",
+                    preferVideo: !1
                 },
                 featuredCollection: d
             }
@@ -21629,7 +21634,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.11.29-000551+6641b71c95762685f187635b39e02d8e92ee6700",
+                    app_version: "2017.11.29-204658+e60707279f7ffb19f6e2b387d600f5cdcbc82e55",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -21929,7 +21934,7 @@
             }(),
             b = function() {
                 function e(t) {
-                    r(this, e), this._store = t, this.unsubs = [], this.unsubs.push(n.i(c.a)(this._store, ["playerOptions.channel", "playerOptions.collection", "playerOptions.video"], this.onOptionsChange.bind(this))), this.unsubs.push(n.i(c.a)(this._store, ["collection.pendingRequest"], this.onPendingRequestChange.bind(this))), this.unsubs.push(n.i(c.a)(this._store, ["collection.id", "stream"], this.onStreamChange.bind(this))), this.unsubs.push(n.i(c.a)(this._store, ["playback.ended"], this._streamEnded.bind(this)))
+                    r(this, e), this._store = t, this.unsubs = [], this.unsubs.push(n.i(c.a)(this._store, ["collection.pendingRequest"], this.onPendingRequestChange.bind(this))), this.unsubs.push(n.i(c.a)(this._store, ["collection.id", "stream"], this.onStreamChange.bind(this))), this.unsubs.push(n.i(c.a)(this._store, ["playback.ended"], this._streamEnded.bind(this)))
                 }
                 return g(e, [{
                     key: "_fetchCollectionInfo",
@@ -21951,42 +21956,31 @@
                         })
                     }
                 }, {
-                    key: "onOptionsChange",
-                    value: function() {
-                        var e = this,
-                            t = this._store.getState(),
-                            r = t.playerOptions;
-                        r.collection && !r.channel && this._fetchCollectionInfo(r.collection).then(function(t) {
-                            if (0 === t.items.length) return e._store.dispatch(n.i(f.k)(t)), void e._showEmptyCollectionOverlay(t);
-                            if (r.video) e._collectionHasVideo(t.items, r.video) && e._store.dispatch(n.i(f.k)(t));
-                            else {
-                                var i = "v" + t.items[0].item_id;
-                                e._store.dispatch(n.i(v.b)({
-                                    contentType: v.f,
-                                    contentId: i
-                                })), e._store.dispatch(n.i(f.k)(t))
-                            }
-                        })
+                    key: "_loadVideo",
+                    value: function(e) {
+                        var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                        this._store.dispatch(n.i(v.b)({
+                            contentType: v.f,
+                            contentId: e
+                        })), this._store.dispatch(n.i(p.b)(t))
                     }
                 }, {
                     key: "onPendingRequestChange",
-                    value: function() {
-                        var e = this,
-                            t = this._store.getState().collection.pendingRequest,
-                            r = t.collectionId,
-                            i = t.videoId,
-                            a = t.timestamp;
-                        r && this._fetchCollectionInfo(r).then(function(t) {
-                            if (0 === t.items.length) return e._store.dispatch(n.i(f.k)(t)), void e._showEmptyCollectionOverlay(t);
-                            if (i && e._collectionHasVideo(t.items, i)) e._store.dispatch(n.i(v.b)({
-                                contentType: v.f,
-                                contentId: i
-                            })), e._store.dispatch(n.i(p.b)(a));
-                            else {
-                                var o = "v" + t.items[0].item_id;
-                                e._store.dispatch(n.i(p.h)(o, r))
-                            }
-                            e._store.dispatch(n.i(f.k)(t))
+                    value: function(e) {
+                        var t = this,
+                            r = e.collection,
+                            i = r.pendingRequest,
+                            a = i.collectionId,
+                            o = i.videoId,
+                            s = i.timestamp,
+                            u = i.preferVideo;
+                        if (a) return this._fetchCollectionInfo(a).then(function(e) {
+                            if (0 === e.items.length) return t._store.dispatch(n.i(f.k)(e)), t._showEmptyCollectionOverlay(e);
+                            var r = t._collectionHasVideo(e.items, o),
+                                i = "v" + e.items[0].item_id;
+                            return r ? (t._store.dispatch(n.i(f.k)(e)), t._loadVideo(o, s)) : "" === o || !u && "" !== o ? (t._store.dispatch(n.i(f.k)(e)), t._loadVideo(i, s)) : u && "" !== o ? t._loadVideo(o, s) : void 0
+                        }).catch(function() {
+                            o && t._loadVideo(o, s)
                         })
                     }
                 }, {
@@ -22251,25 +22245,25 @@
                                     contentType: c.c,
                                     contentId: e.data.args[0],
                                     customerId: e.data.args[1]
-                                })), this._store.dispatch(n.i(v.a)());
+                                })), this._store.dispatch(n.i(v.b)());
                                 break;
                             case k.B:
                                 this._store.dispatch(c.b({
                                     contentType: c.e,
                                     contentId: e.data.args[0]
-                                })), this._store.dispatch(n.i(v.a)());
+                                })), this._store.dispatch(n.i(v.b)());
                                 break;
                             case k.C:
                                 this._store.dispatch(c.b({
                                     contentType: c.h,
                                     contentId: e.data.args[0]
-                                })), this._store.dispatch(n.i(v.a)());
+                                })), this._store.dispatch(n.i(v.b)());
                                 break;
                             case k.D:
                                 this._store.dispatch(c.b({
                                     contentType: c.d,
                                     contentId: e.data.args[0]
-                                })), this._store.dispatch(n.i(v.a)());
+                                })), this._store.dispatch(n.i(v.b)());
                                 break;
                             case k.E:
                                 this._handleSetVideo(e.data.args);
@@ -22328,7 +22322,7 @@
                         this._store.dispatch(c.b({
                             contentType: c.f,
                             contentId: r
-                        })), this._store.dispatch(n.i(v.a)()), this._store.dispatch(n.i(R.b)(i))
+                        })), this._store.dispatch(n.i(v.b)()), this._store.dispatch(n.i(R.b)(i))
                     }
                 }, {
                     key: "_handleSetCollection",
@@ -22337,7 +22331,7 @@
                             r = t[0],
                             i = t[1],
                             a = t[2];
-                        this._store.dispatch(n.i(v.b)(r, i, a))
+                        this._store.dispatch(n.i(v.a)(r, i, a))
                     }
                 }, {
                     key: "_sendPlayerState",
@@ -30662,7 +30656,7 @@
         n.d(t, "a", function() {
             return r
         });
-        var r = "//video-edge-169f08.sjc01.hls.ttvnw.net/v1/playlist/CiY_zJhvCG3REkB-Kcy7i2CJI-JhPdiOJoILouDqKtnvMAh88daLptrIab1sotOuURJ8rXZfkJOlaVqknF2y2vUCMyf48hJo5d2UcGDBkyFx8Zvruyj5dF2A8hKMvNB9v8D7w242q7cvCD5Qc0uAyeK8sISl5pzQI1EHMD2rfxVB-onP3AMYhPKJTMj3FCsN7CRVIlq6h4xj_TtNJtllvm3LOp-RfToxF_ouVO8oQ4dDLkxKoTHv3VtmCWX5QmNIVRQSPgeXiuBt0rNWW_szs8vWQd4gOsqI2f73V7wSS8Tn0XwEhxcvspJAu8Q-Rw2dZREJ9R8vfY3CF7B94pgHqlUsQa-JMH2jcJ-Q8tXgJ7MWi_r3x99qDJggygZbpxDV4EUKnK4m_SVrvXbVgI6vx51H7J4ydgPWVVwy1WeGr3fwnTDaaqdj95xFk26-r6jE-ukxPwBWYUmo6Ea3G8.m3u8"
+        var r = "//video-edge-b31643.sjc01.hls.ttvnw.net/v1/playlist/CmYOayrkx58w5tw18sp1NcqK7LUlbCr_3EaNzbRRj9PIHtievSqOhL8A-idF-b6Ac8dTKVxZ1J70OcQNouj6U9teock8xW4KsjQ1T3v7Z7UR4CeI2D51xJh1VFH5TKD5uhXVH8M1f-WRdWV1nM5hHUpoGI5l2Oz5rDLnsQ3QIj-oPOO9198raiVPLcRSS0SJJoyF4pl0NRcZ5OTlhP7pBzUwOvdk9W3NU_H69uzpTt-r-EO209jj3n4FTJHcS6W1ZvsoY4V1cXUpxZu-5DSbeb7H1Ps9bRsZwiL99nKp7sO6XkfEiiUZHhkzpyxFSVPFNo3GuyKS-_8FCZ0Tlruu14P1wAKxo8K3iWVE9B-wfl0GB9BMAHsgxj5ruPtHy2v_Pt-CbB3cSGmOxPk8IsAbbO03chp5DQx2uPavGasYmbiB99aaE4.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -30915,7 +30909,9 @@
             function i(e) {
                 return e.customerId && e.contentId ? xe._setContent(e.customerId, e.contentId) : e.stream && e.channelId ? xe._setLiveToVod(e.stream, e.channelId) : e.channelId ? n.i(ne.b)("channels/" + e.channelId).then(function(e) {
                     return xe.setChannel(e.name)
-                }) : e.channel ? xe.setChannel(e.channel) : e.video && e.time ? xe.setVideo(e.video, T.a(e.time)) : e.video ? xe.setVideo(e.video) : p()
+                }) : e.channel ? xe.setChannel(e.channel) : e.collection ? p().then(function() {
+                    Be.dispatch(n.i(W.a)(e.collection, e.video, e.time, !0))
+                }) : e.video && e.time ? xe.setVideo(e.video, T.a(e.time)) : e.video ? xe.setVideo(e.video) : p()
             }
 
             function a() {
@@ -31060,14 +31056,14 @@
                             contentType: z.d,
                             contentId: e
                         });
-                        Be.dispatch(t), Be.dispatch(n.i(W.a)())
+                        Be.dispatch(t), Be.dispatch(n.i(W.b)())
                     })
                 }, xe.setClip = function(e) {
                     var t = z.b({
                         contentType: z.e,
                         contentId: e
                     });
-                    Be.dispatch(t), Be.dispatch(n.i(W.a)())
+                    Be.dispatch(t), Be.dispatch(n.i(W.b)())
                 }, xe.setVideo = function(e, t) {
                     if ("string" == typeof e) {
                         var r = "v" !== e.charAt(0) ? "v" + e : e;
@@ -31076,14 +31072,16 @@
                                 contentType: z.f,
                                 contentId: r
                             });
-                            Be.dispatch(e), Be.dispatch(n.i(W.a)()), Be.dispatch(n.i(Z.b)(t))
+                            Be.dispatch(e), Be.dispatch(n.i(W.b)()), Be.dispatch(n.i(Z.b)(t))
                         })
                     }
                 }, xe.setCollection = function() {
                     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
                         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "",
                         r = arguments[2];
-                    Be.dispatch(n.i(W.b)(e, t, r))
+                    return p().then(function() {
+                        Be.dispatch(n.i(W.a)(e, t, r))
+                    })
                 }, xe.setLanguage = function(e) {
                     Be.dispatch(G.b(e))
                 }, xe.setMiniPlayerMode = function(e) {
@@ -31104,7 +31102,7 @@
                     var o = void 0;
                     o = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, Be = n.i(B.a)(), Be.dispatch(n.i($.a)(window));
                     var s = a(t);
-                    n.i(ne.a)(s), s.debug && s.verbose && Be.subscribe(function() {
+                    Be.dispatch(n.i(V.a)(s)), n.i(ne.a)(s), s.debug && s.verbose && Be.subscribe(function() {
                         console.debug("state change: %o", Be.getState())
                     }), s.force_manifest_node && Be.dispatch(n.i(Ie.a)(s.force_manifest_node)), Be.dispatch(K.a({
                         login: S.cookie.get("login") || null,
@@ -31117,7 +31115,7 @@
                     }))), n.i(x.a)(xe, Fe), He = new R.a(Fe, Be, {
                         origin: s.origin
                     }), Ve = new m.a(Fe, Ae, qe, Be, s), Be.dispatch(n.i(Z.a)(s.autoplay)), c(s), $e.push(new I.a(Fe, o, Be, s)), s.controls && (ze = new re.a(qe, Be), Be.dispatch(n.i(ie.a)(ze)), Ue = n.i(A.a)(Fe, o, Be, ze, s)), Qe = new Re.a(Fe, qe, Be, s), i(s).then(function() {
-                        Be.dispatch(n.i(V.a)(s)), Be.dispatch(n.i(ue.a)({
+                        Be.dispatch(n.i(ue.a)({
                             content: s.tt_content,
                             medium: s.tt_medium
                         })), Be.dispatch(n.i(Oe.a)())
@@ -40686,7 +40684,7 @@
             y = function(e) {
                 return {
                     requestCollection: function(t) {
-                        e(n.i(f.b)(t))
+                        e(n.i(f.a)(t))
                     }
                 }
             },

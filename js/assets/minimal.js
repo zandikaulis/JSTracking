@@ -1,5 +1,5 @@
-webpackJsonp([64], {
-    111: function(e, t, n) {
+webpackJsonp([63], {
+    104: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -56,12 +56,12 @@ webpackJsonp([64], {
                 }, e
             }()
     },
-    113: function(e, t, n) {
+    106: function(e, t, n) {
         "use strict";
         var r = n(0),
             i = n(1),
             o = n(2),
-            a = n(66),
+            a = n(62),
             s = n(3),
             l = function(e) {
                 function t(t) {
@@ -123,7 +123,7 @@ webpackJsonp([64], {
             return l
         })
     },
-    115: function(e, t, n) {
+    108: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -144,14 +144,14 @@ webpackJsonp([64], {
                 theme: Object(s.a)(e)
             }
         }
-        var o = n(9),
-            a = n(91),
-            s = n(45),
+        var o = n(8),
+            a = n(85),
+            s = n(44),
             l = n(0),
             c = n(1),
-            u = n(343),
-            d = n(46),
-            h = (n(183), "js-modal-backdrop"),
+            u = n(323),
+            d = n(45),
+            h = (n(172), "js-modal-backdrop"),
             p = Object(o.a)(i)(r);
         n.d(t, "a", function() {
             return p
@@ -159,14 +159,14 @@ webpackJsonp([64], {
             return h
         })
     },
-    116: function(e, t, n) {
+    109: function(e, t, n) {
         "use strict";
         var r, i = n(0),
             o = n(4),
-            a = n(15),
+            a = n(14),
             s = n(1),
             l = n(2);
-        n(234);
+        n(223);
         ! function(e) {
             e[e.Up = 0] = "Up", e[e.Down = 1] = "Down"
         }(r || (r = {}));
@@ -258,7 +258,7 @@ webpackJsonp([64], {
             return c
         })
     },
-    117: function(e, t) {
+    110: function(e, t) {
         function n(e, t, n) {
             switch (n.length) {
                 case 0:
@@ -407,7 +407,7 @@ webpackJsonp([64], {
             });
         e.exports = D
     },
-    118: function(e, t, n) {
+    111: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -446,7 +446,7 @@ webpackJsonp([64], {
             var n = A.call(t, "constructor") && t.constructor;
             return "function" == typeof n && n instanceof n && D.call(n) == B
         }
-        var c = n(150),
+        var c = n(139),
             u = "object" == typeof self && self && self.Object === Object && self,
             d = c.a || u || Function("return this")(),
             h = d,
@@ -476,7 +476,7 @@ webpackJsonp([64], {
             B = D.call(Object);
         t.a = l
     },
-    126: function(e, t, n) {
+    119: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -489,7 +489,7 @@ webpackJsonp([64], {
         }), t.b = r;
         var i = "features.ads.TRACKING_SET"
     },
-    134: function(e, t, n) {
+    123: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -497,15 +497,15 @@ webpackJsonp([64], {
                 onClose: a.c
             }, e)
         }
-        var i = n(9),
-            o = n(11),
-            a = n(50),
+        var i = n(8),
+            o = n(10),
+            a = n(49),
             s = n(0),
             l = n(1),
             c = n(2),
-            u = n(115),
+            u = n(108),
             d = n(3),
-            h = (n(227), function(e) {
+            h = (n(216), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleHistoryChange = function() {
@@ -540,7 +540,7 @@ webpackJsonp([64], {
             return p
         })
     },
-    136: function(e, t, n) {
+    125: function(e, t, n) {
         "use strict";
 
         function r(e, t) {
@@ -551,16 +551,16 @@ webpackJsonp([64], {
         }
         t.a = r;
         var i = n(0),
-            o = n(21);
+            o = n(20);
         n.n(o)
     },
-    14: function(e, t, n) {
+    13: function(e, t, n) {
         "use strict";
-        var r = n(171);
+        var r = n(160);
         n.d(t, "Spade", function() {
             return r.a
         });
-        var i = n(56);
+        var i = n(55);
         n.o(i, "PageviewContent") && n.d(t, "PageviewContent", function() {
             return i.PageviewContent
         }), n.o(i, "PageviewDirectoryContentType") && n.d(t, "PageviewDirectoryContentType", function() {
@@ -583,22 +583,24 @@ webpackJsonp([64], {
             return i.SpadeFollowingCategory
         }), n.o(i, "SpadeVideoBroadcastType") && n.d(t, "SpadeVideoBroadcastType", function() {
             return i.SpadeVideoBroadcastType
+        }), n.o(i, "TwitchDataType") && n.d(t, "TwitchDataType", function() {
+            return i.TwitchDataType
         })
     },
-    145: function(e, t, n) {
+    134: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
         var r = n(0),
-            i = n(17),
-            o = n(295),
-            a = n(146),
-            s = n(147);
+            i = n(16),
+            o = n(275),
+            a = n(135),
+            s = n(136);
         window.IntlMessageFormat = a, window.IntlRelativeFormat = s;
         var l = function() {
                 function e() {
-                    this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "a5154fdd-0ccd-402d-8ce5-e6056f89fd78", this.spadeBatchWindow = 1e3, this.locales = [{
+                    this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "e740fe2d-5a8d-45c0-98bb-4413a3f9cef7", this.spadeBatchWindow = 1e3, this.locales = [{
                         name: "English",
                         languageCode: "en",
                         locale: "en-US",
@@ -616,70 +618,70 @@ webpackJsonp([64], {
                         languageCode: "da",
                         locale: "da-DK",
                         loader: function() {
-                            return n.e(27).then(n.bind(null, 1985))
+                            return n.e(27).then(n.bind(null, 1990))
                         }
                     }, {
                         name: "Deutsch",
                         languageCode: "de",
                         locale: "de-DE",
                         loader: function() {
-                            return n.e(26).then(n.bind(null, 1986))
+                            return n.e(26).then(n.bind(null, 1991))
                         }
                     }, {
                         name: "English - UK",
                         languageCode: "en-gb",
                         locale: "en-GB",
                         loader: function() {
-                            return n.e(31).then(n.bind(null, 1987))
+                            return n.e(31).then(n.bind(null, 1992))
                         }
                     }, {
                         name: "Español - España",
                         languageCode: "es",
                         locale: "es-ES",
                         loader: function() {
-                            return n.e(23).then(n.bind(null, 1988))
+                            return n.e(23).then(n.bind(null, 1993))
                         }
                     }, {
                         name: "Español - Latinoamérica",
                         languageCode: "es-mx",
                         locale: "es-MX",
                         loader: function() {
-                            return n.e(24).then(n.bind(null, 1989))
+                            return n.e(24).then(n.bind(null, 1994))
                         }
                     }, {
                         name: "Français",
                         languageCode: "fr",
                         locale: "fr-FR",
                         loader: function() {
-                            return n.e(21).then(n.bind(null, 1990))
+                            return n.e(21).then(n.bind(null, 1995))
                         }
                     }, {
                         name: "Italiano",
                         languageCode: "it",
                         locale: "it-IT",
                         loader: function() {
-                            return n.e(18).then(n.bind(null, 1991))
+                            return n.e(18).then(n.bind(null, 1996))
                         }
                     }, {
                         name: "Magyar",
                         languageCode: "hu",
                         locale: "hu-HU",
                         loader: function() {
-                            return n.e(19).then(n.bind(null, 1992))
+                            return n.e(19).then(n.bind(null, 1997))
                         }
                     }, {
                         name: "Nederlands",
                         languageCode: "nl",
                         locale: "nl-NL",
                         loader: function() {
-                            return n.e(15).then(n.bind(null, 1993))
+                            return n.e(15).then(n.bind(null, 1998))
                         }
                     }, {
                         name: "Norsk",
                         languageCode: "no",
                         locale: "no-NO",
                         loader: function() {
-                            return n.e(14).then(n.bind(null, 1994))
+                            return n.e(14).then(n.bind(null, 1999))
                         },
                         cldrLocale: "nn"
                     }, {
@@ -687,14 +689,14 @@ webpackJsonp([64], {
                         languageCode: "pl",
                         locale: "pl-PL",
                         loader: function() {
-                            return n.e(13).then(n.bind(null, 1995))
+                            return n.e(13).then(n.bind(null, 2e3))
                         }
                     }, {
                         name: "Português",
                         languageCode: "pt",
                         locale: "pt-PT",
                         loader: function() {
-                            return n.e(11).then(n.bind(null, 1996))
+                            return n.e(11).then(n.bind(null, 2001))
                         },
                         cldrLocale: "pt-pt"
                     }, {
@@ -702,7 +704,7 @@ webpackJsonp([64], {
                         languageCode: "pt-br",
                         locale: "pt-BR",
                         loader: function() {
-                            return n.e(12).then(n.bind(null, 1997))
+                            return n.e(12).then(n.bind(null, 2002))
                         },
                         cldrLocale: "pt"
                     }, {
@@ -710,84 +712,84 @@ webpackJsonp([64], {
                         languageCode: "sk",
                         locale: "sk-SK",
                         loader: function() {
-                            return n.e(8).then(n.bind(null, 1998))
+                            return n.e(8).then(n.bind(null, 2003))
                         }
                     }, {
                         name: "Suomi",
                         languageCode: "fi",
                         locale: "fi-FI",
                         loader: function() {
-                            return n.e(22).then(n.bind(null, 1999))
+                            return n.e(22).then(n.bind(null, 2004))
                         }
                     }, {
                         name: "Svenska",
                         languageCode: "sv",
                         locale: "sv-SE",
                         loader: function() {
-                            return n.e(7).then(n.bind(null, 2e3))
+                            return n.e(7).then(n.bind(null, 2005))
                         }
                     }, {
                         name: "Tiếng Việt",
                         languageCode: "vi",
                         locale: "vi-VN",
                         loader: function() {
-                            return n.e(4).then(n.bind(null, 2001))
+                            return n.e(4).then(n.bind(null, 2006))
                         }
                     }, {
                         name: "Türkçe",
                         languageCode: "tr",
                         locale: "tr-TR",
                         loader: function() {
-                            return n.e(5).then(n.bind(null, 2002))
+                            return n.e(5).then(n.bind(null, 2007))
                         }
                     }, {
                         name: "Čeština",
                         languageCode: "cs",
                         locale: "cs-CZ",
                         loader: function() {
-                            return n.e(28).then(n.bind(null, 2003))
+                            return n.e(28).then(n.bind(null, 2008))
                         }
                     }, {
                         name: "Ελληνικά",
                         languageCode: "el",
                         locale: "el-GR",
                         loader: function() {
-                            return n.e(25).then(n.bind(null, 2004))
+                            return n.e(25).then(n.bind(null, 2009))
                         }
                     }, {
                         name: "Български",
                         languageCode: "bg",
                         locale: "bg-BG",
                         loader: function() {
-                            return n.e(29).then(n.bind(null, 2005))
+                            return n.e(29).then(n.bind(null, 2010))
                         }
                     }, {
                         name: "Русский",
                         languageCode: "ru",
                         locale: "ru-RU",
                         loader: function() {
-                            return n.e(9).then(n.bind(null, 2006))
+                            return n.e(9).then(n.bind(null, 2011))
                         }
                     }, {
                         name: "العربية",
                         languageCode: "ar",
                         locale: "ar-SA",
                         loader: function() {
-                            return n.e(30).then(n.bind(null, 2007))
+                            return n.e(30).then(n.bind(null, 2012))
                         }
                     }, {
                         name: "ภาษาไทย",
                         languageCode: "th",
                         locale: "th-TH",
                         loader: function() {
-                            return n.e(6).then(n.bind(null, 2008))
+                            return n.e(6).then(n.bind(null, 2013))
                         }
                     }, {
                         name: "中文 简体",
                         languageCode: "zh-cn",
                         locale: "zh-CN",
                         loader: function() {
-                            return n.e(3).then(n.bind(null, 2009))
+                            return n.e(3).then(n.bind(null, 2014))
                         },
                         cldrLocale: "zh-hans"
                     }, {
@@ -795,7 +797,7 @@ webpackJsonp([64], {
                         languageCode: "zh-tw",
                         locale: "zh-TW",
                         loader: function() {
-                            return n.e(2).then(n.bind(null, 2010))
+                            return n.e(2).then(n.bind(null, 2015))
                         },
                         cldrLocale: "zh-hant"
                     }, {
@@ -803,28 +805,28 @@ webpackJsonp([64], {
                         languageCode: "ja",
                         locale: "ja-JP",
                         loader: function() {
-                            return n.e(17).then(n.bind(null, 2011))
+                            return n.e(17).then(n.bind(null, 2016))
                         }
                     }, {
                         name: "한국어",
                         languageCode: "ko",
                         locale: "ko-KR",
                         loader: function() {
-                            return n.e(16).then(n.bind(null, 2012))
+                            return n.e(16).then(n.bind(null, 2017))
                         }
                     }, {
                         name: "हिंदी",
                         languageCode: "hi",
                         locale: "hi-IN",
                         loader: function() {
-                            return n.e(20).then(n.bind(null, 2013))
+                            return n.e(20).then(n.bind(null, 2018))
                         }
                     }, {
                         name: "Română",
                         languageCode: "ro",
                         locale: "ro-RO",
                         loader: function() {
-                            return n.e(10).then(n.bind(null, 2014))
+                            return n.e(10).then(n.bind(null, 2019))
                         }
                     }], this.passportAuthURL = "https://api.twitch.tv/kraken/oauth2/authorize", this.passportScopes = ["chat_login", "user_read", "user_subscriptions", "user_presence_friends_read"], this.defaultAvatarURL = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png", this.defaultStreamPreviewURL = "https://static-cdn.jtvnw.net/ttv-static/404_preview-160x90.jpg", this.defaultBoxArtURL = "https://static-cdn.jtvnw.net/ttv-boxart/404_boxart.png", this.defaultCollectionPreviewURL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png", this.hostingCacheDelay = 2001, this.legacyClientID = "jzkbprff40iqj646a697cyrvl0zt2m6", this.algoliaApplicationID = "XLUO134HOR", this.algoliaAPIKey = "d157112f6fc2cab93ce4b01227c80a6d", this.forceNetworkLogging = !1, this.networkLoggingHostNames = ["twitch.tv", "localhost", "jtvnw.net", "twitchcdn.net", "twitchcdn.tech", "twitchcdn-shadow.net", "twitchsvc.net", "twitchsvc.tech", "twitchsvc-shadow.net"], this.defaultNetworkLoggingThreshold = .2, this.layoutCacheKey = "TwitchCache:Layout", this.forceComponentBenchmarking = !1, this.defaultComponentBenchmarkingThreshold = .1, this.forceBenchmarkingTools = !1, this.dfpNetworkCode = "3576121", this.krakenEndpoint = "https://api.twitch.tv/kraken", this.defaultAPIVersion = "5", this.adblockAccount = 58, this.adblockID = "qFEaZsFQnwEdUIs", this.forceMinConsoleLogLevelKey = "twilight.minConsoleLogLevel", this.tryPrimeURI = "https://twitch.amazon.com/prime", this.experimentsOverrideCookie = "experiment_overrides", this.tmiHost = "irc-ws.chat.twitch.tv"
                 }
@@ -839,17 +841,17 @@ webpackJsonp([64], {
                 }
                 return r.__extends(t, e), t
             }(l),
-            h = n(67);
+            h = n(63);
         Object(h.i)(new d)
     },
-    150: function(e, t, n) {
+    139: function(e, t, n) {
         "use strict";
         (function(e) {
             var n = "object" == typeof e && e && e.Object === Object && e;
             t.a = n
-        }).call(t, n(32))
+        }).call(t, n(31))
     },
-    17: function(e, t, n) {
+    16: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -859,28 +861,28 @@ webpackJsonp([64], {
             e[e.Dev = 1] = "Dev", e[e.Production = 2] = "Production"
         }(r || (r = {}))
     },
-    171: function(e, t, n) {
+    160: function(e, t, n) {
         "use strict";
 
         function r(e) {
-            var t = encodeURIComponent(JSON.stringify(e)),
-                n = t.replace(/%([0-9A-F]{2})/g, function(e, t) {
-                    return String.fromCharCode(Number("0x" + t))
-                }),
-                r = btoa(n);
-            return "data=" + encodeURIComponent(r)
+            return i.__assign({}, e, {
+                rendered_item_list: e.rendered_item_list.join(","),
+                rendered_item_types: e.rendered_item_types.join(","),
+                rendered_items_viewcounts: e.rendered_items_viewcounts.join(",")
+            })
         }
         var i = n(0),
-            o = n(26),
-            a = n(338),
-            s = n(56),
-            l = n(72),
-            c = n(177);
+            o = n(25),
+            a = n(318),
+            s = n(55),
+            l = n(93),
+            c = n(68),
+            u = n(166);
         n.d(t, "a", function() {
-            return d
+            return h
         });
-        var u = new Set([s.SpadeEventType.Chat, s.SpadeEventType.Follow, s.SpadeEventType.Unfollow]),
-            d = function() {
+        var d = new Set([s.SpadeEventType.Chat, s.SpadeEventType.Follow, s.SpadeEventType.Unfollow]),
+            h = function() {
                 function e(e) {
                     var t = this;
                     this.eventEmitter = new o.EventEmitter, this.eventQueue = new Array, this.hasCheckedInitialReferrer = !1, this.mixpanelEventQueue = new Array, this.trackingDataCache = {
@@ -933,7 +935,7 @@ webpackJsonp([64], {
                                         return e = n.sent(), [2, e.data];
                                     case 3:
                                         return t = this.store.getState(), this.isLoggedIn(t) ? (this.logger.debug("Querying event data to submit events..."), this.eventDataPromise = this.apollo.client.query({
-                                            query: c
+                                            query: u
                                         }), [4, this.eventDataPromise]) : [3, 5];
                                     case 4:
                                         e = n.sent(), e.data && !e.loading && (this.logger.debug("Event data query completed."), this.trackingDataCache.eventData = e.data), n.label = 5;
@@ -953,14 +955,14 @@ webpackJsonp([64], {
                     }, this.processEvents = function(e) {
                         return i.__awaiter(t, void 0, void 0, function() {
                             var t, n, r, o, a, l, c;
-                            return i.__generator(this, function(d) {
-                                switch (d.label) {
+                            return i.__generator(this, function(u) {
+                                switch (u.label) {
                                     case 0:
                                         return t = this.getOrQueryEventData(), n = this.getOrQueryDeviceFingerprint(), [4, t];
                                     case 1:
-                                        return r = d.sent(), [4, n];
+                                        return r = u.sent(), [4, n];
                                     case 2:
-                                        for (o = d.sent(), a = 0, l = e; a < l.length; a++) c = l[a], c.properties.login = r.currentUser.login, c.properties.logged_in = !!r.currentUser.id, c.properties.user_id = r.currentUser.id ? +r.currentUser.id : null, c.properties.device_fingerprint = o, c.event === s.SpadeEventType.Pageview ? (c.properties.is_turbo = r.currentUser.hasTurbo, c.properties.language = r.currentUser.language || navigator.language) : c.event === s.SpadeEventType.Subscription && (c.properties.has_prime = r.currentUser.hasPrime), u.has(c.event) && this.mixpanelEventQueue.push({
+                                        for (o = u.sent(), a = 0, l = e; a < l.length; a++) c = l[a], c.properties.login = r.currentUser.login, c.properties.logged_in = !!r.currentUser.id, c.properties.user_id = r.currentUser.id ? +r.currentUser.id : null, c.properties.device_fingerprint = o, c.event === s.SpadeEventType.Pageview ? (c.properties.is_turbo = r.currentUser.hasTurbo, c.properties.language = r.currentUser.language || navigator.language) : c.event === s.SpadeEventType.Subscription && (c.properties.has_prime = r.currentUser.hasPrime), d.has(c.event) && this.mixpanelEventQueue.push({
                                             event: c.event,
                                             properties: i.__assign({
                                                 token: this.config.mixpanelToken
@@ -972,7 +974,7 @@ webpackJsonp([64], {
                         })
                     }, this.onWindowUnload = function() {
                         t.logger.debug("Unload triggered."), t.sendEvents(!0)
-                    }, this.logger = e.logger.withCategory("spade"), this.transmitLogger = this.logger.withCategory("transmitter"), this.endpoint = e.endpoint, this.session = e.session, this.apollo = e.apollo, this.config = e.config, this.store = e.store, this.adBlockSentinel = e.adBlockSentinel, this.logger.debug("Creating instance.", {
+                    }, this.logger = e.logger.withCategory("spade"), this.transmitLogger = this.logger.withCategory("transmitter"), this.endpoint = e.endpoint, this.session = e.session, this.apollo = e.apollo, this.config = e.config, this.store = e.store, this.adBlockSentinel = e.adBlockSentinel, this.adBlockDetector = e.adBlockDetector, this.logger.debug("Creating instance.", {
                         endpoint: this.endpoint,
                         sessionID: this.session.benchmarkID
                     }), window.addEventListener("unload", this.onWindowUnload)
@@ -1016,22 +1018,24 @@ webpackJsonp([64], {
                         benchmark_session_id: this.session.benchmarkID,
                         page_session_id: this.session.pageviewID
                     }, e))
+                }, e.prototype.trackItemSectionLoad = function(e) {
+                    this.track(s.SpadeEventType.ItemSectionLoad, r(e))
                 }, e.prototype.trackEvent = function(e, t) {
                     this.hasCheckedInitialReferrer || this.setSpadeReferrerURL();
                     var n = i.__assign({
-                            adblock: this.adBlockSentinel.detect,
+                            adblock: this.adBlockDetector.detect,
                             app_version: this.config.buildID,
                             client_app: "twilight",
                             device_id: this.session.deviceID,
                             domain: window.document.domain,
                             host: window.location.host,
                             platform: this.trackingDataCache.platform,
-                            preferred_language: Object(l.b)({
+                            preferred_language: Object(c.b)({
                                 includeChosenLanguage: !1
                             })[0],
                             referrer_host: this.lastLocationURL ? this.lastLocationURL.host : this.getCurrentReferrerURL().host,
                             referrer_url: this.referrerURL || "",
-                            received_language: Object(l.a)() || "en",
+                            received_language: Object(c.a)() || "en",
                             tab_session_id: this.session.tabID,
                             batch_time: (new Date).getTime() / 1e3,
                             url: window.location.href
@@ -1043,13 +1047,13 @@ webpackJsonp([64], {
                     this.logger.debug("Tracking event", r), this.eventQueue.push(r), this.scheduleEvents()
                 }, e.prototype.sendEvents = function(e) {
                     return void 0 === e && (e = !1), i.__awaiter(this, void 0, void 0, function() {
-                        var t, n, o, a, s;
+                        var t, n, r, o, a;
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
                                     return 0 === this.eventQueue.length ? [2] : [4, this.processEvents(this.eventQueue)];
                                 case 1:
-                                    return i.sent(), (this.sendMixpanelEvents(e), t = this.eventQueue, this.eventQueue = [], Date.now() < this.squelchUntil) ? (this.logger.debug("Skipped Spade transmission. Client event tracking is squelched due to failure to sumbit to Spade service."), [2]) : (n = new Blob([r(t)], {
+                                    return i.sent(), (this.sendMixpanelEvents(e), t = this.eventQueue, this.eventQueue = [], Date.now() < this.squelchUntil) ? (this.logger.debug("Skipped Spade transmission. Client event tracking is squelched due to failure to sumbit to Spade service."), [2]) : (n = new Blob([Object(l.a)(t)], {
                                         type: "application/x-www-form-urlencoded; charset=UTF-8"
                                     }), e && navigator.sendBeacon ? (navigator.sendBeacon(this.endpoint, n) ? this.transmitLogger.debug("Events sent using beacon.", {
                                         size: n.size,
@@ -1059,9 +1063,9 @@ webpackJsonp([64], {
                                         transmitBatch: t
                                     }), [3, 8]) : [3, 2]);
                                 case 2:
-                                    o = 1, i.label = 3;
+                                    r = 1, i.label = 3;
                                 case 3:
-                                    if (!(o <= 3)) return [3, 8];
+                                    if (!(r <= 3)) return [3, 8];
                                     i.label = 4;
                                 case 4:
                                     return i.trys.push([4, 6, , 7]), [4, fetch(this.endpoint, {
@@ -1069,24 +1073,24 @@ webpackJsonp([64], {
                                         body: n
                                     })];
                                 case 5:
-                                    return i.sent(), this.firstBatchSubmitted || (this.firstBatchSubmitted = !0, (a = document.getElementById("root")) && a.setAttribute("data-a-page-events-submitted", Date.now().toString())), this.transmitLogger.debug("Events sent using fetch.", {
+                                    return i.sent(), this.firstBatchSubmitted || (this.firstBatchSubmitted = !0, (o = document.getElementById("root")) && o.setAttribute("data-a-page-events-submitted", Date.now().toString())), this.transmitLogger.debug("Events sent using fetch.", {
                                         size: n.size,
                                         transmitBatch: t
                                     }), [2];
                                 case 6:
-                                    return s = i.sent(), o < 3 ? this.transmitLogger.warn("Events send attempt failed with fetch.", {
-                                        attempt: o,
+                                    return a = i.sent(), r < 3 ? this.transmitLogger.warn("Events send attempt failed with fetch.", {
+                                        attempt: r,
                                         size: n.size,
                                         transmitBatch: t
-                                    }, s) : (this.squelchUntil = Date.now() + 6e4, this.transmitLogger.error(s, "Events failed to send using fetch. Maximum attemps tried, so events will be discarded, and further tracking will be temporarily squelched.", {
-                                        attempt: o,
+                                    }, a) : (this.squelchUntil = Date.now() + 6e4, this.transmitLogger.error(a, "Events failed to send using fetch. Maximum attemps tried, so events will be discarded, and further tracking will be temporarily squelched.", {
+                                        attempt: r,
                                         size: n.size,
                                         maxAttempts: 3,
                                         squelch: this.squelchUntil,
                                         squelchDuration: 6e4
                                     })), [3, 7];
                                 case 7:
-                                    return ++o, [3, 3];
+                                    return ++r, [3, 3];
                                 case 8:
                                     return [2]
                             }
@@ -1105,11 +1109,11 @@ webpackJsonp([64], {
                     }, this.config.spadeBatchWindow))
                 }, e.prototype.sendMixpanelEvents = function(e) {
                     return i.__awaiter(this, void 0, void 0, function() {
-                        var t, n, o, a;
+                        var t, n, r, o;
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return 0 === this.mixpanelEventQueue.length ? [2] : (t = this.mixpanelEventQueue, this.mixpanelEventQueue = [], Date.now() < this.squelchUntil ? (this.logger.debug("Skipped Mixpanel transmission. Client event tracking is squelched due to failure to submit to Spade service."), [2]) : (n = new Blob([r(t)], {
+                                    return 0 === this.mixpanelEventQueue.length ? [2] : (t = this.mixpanelEventQueue, this.mixpanelEventQueue = [], Date.now() < this.squelchUntil ? (this.logger.debug("Skipped Mixpanel transmission. Client event tracking is squelched due to failure to submit to Spade service."), [2]) : (n = new Blob([Object(l.a)(t)], {
                                         type: "application/x-www-form-urlencoded; charset=UTF-8"
                                     }), e && navigator.sendBeacon ? (navigator.sendBeacon(this.endpoint, n) ? this.transmitLogger.debug("Mixpanel events sent using beacon.", {
                                         size: n.size,
@@ -1119,9 +1123,9 @@ webpackJsonp([64], {
                                         transmitBatch: t
                                     }), [3, 7]) : [3, 1]));
                                 case 1:
-                                    o = 1, i.label = 2;
+                                    r = 1, i.label = 2;
                                 case 2:
-                                    if (!(o <= 3)) return [3, 7];
+                                    if (!(r <= 3)) return [3, 7];
                                     i.label = 3;
                                 case 3:
                                     return i.trys.push([3, 5, , 6]), [4, fetch("https://api.mixpanel.com/track", {
@@ -1134,17 +1138,17 @@ webpackJsonp([64], {
                                         transmitBatch: t
                                     }), [2];
                                 case 5:
-                                    return a = i.sent(), o < 3 ? this.transmitLogger.warn("Mixpanel events send attempt failed with fetch.", {
-                                        attempt: o,
+                                    return o = i.sent(), r < 3 ? this.transmitLogger.warn("Mixpanel events send attempt failed with fetch.", {
+                                        attempt: r,
                                         size: n.size,
                                         transmitBatch: t
-                                    }, a) : this.transmitLogger.error(a, "Mixpanel events failed to send using fetch. Maximum attemps tried, so events will be discarded.", {
-                                        attempt: o,
+                                    }, o) : this.transmitLogger.error(o, "Mixpanel events failed to send using fetch. Maximum attemps tried, so events will be discarded.", {
+                                        attempt: r,
                                         size: n.size,
                                         maxAttempts: 3
                                     }), [3, 6];
                                 case 6:
-                                    return ++o, [3, 2];
+                                    return ++r, [3, 2];
                                 case 7:
                                     return [2]
                             }
@@ -1167,7 +1171,7 @@ webpackJsonp([64], {
                 }, e
             }()
     },
-    172: function(e, t, n) {
+    161: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
             return r
@@ -1175,6 +1179,8 @@ webpackJsonp([64], {
             return i
         }), n.d(t, "c", function() {
             return o
+        }), n.d(t, "d", function() {
+            return a
         });
         var r;
         ! function(e) {
@@ -1187,9 +1193,13 @@ webpackJsonp([64], {
         var o;
         ! function(e) {
             e.Archive = "archive", e.Highlight = "highlight", e.Upload = "upload", e.WatchParty = "watch_party", e.PastPremiere = "past_premiere", e.PremiereUpload = "premiere_upload"
-        }(o || (o = {}))
+        }(o || (o = {}));
+        var a;
+        ! function(e) {
+            e.Clip = "clip", e.Channel = " channel", e.Chomment = "chomment", e.Collection = "collection", e.Event = "event", e.Game = "game", e.Stream = "stream", e.Video = "vod", e.User = "user"
+        }(a || (a = {}))
     },
-    173: function(e, t, n) {
+    162: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -1199,7 +1209,7 @@ webpackJsonp([64], {
             e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CrateNotificationAction = "crate_notification_action", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.NetworkRequest = "network_request", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
         }(r || (r = {}))
     },
-    174: function(e, t, n) {
+    163: function(e, t, n) {
         "use strict";
         n.d(t, "d", function() {
             return r
@@ -1233,8 +1243,8 @@ webpackJsonp([64], {
             e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Overview = "overview", e.Videos = "videos"
         }(s || (s = {}))
     },
-    175: function(e, t) {},
-    176: function(e, t, n) {
+    164: function(e, t) {},
+    165: function(e, t, n) {
         "use strict";
         n.d(t, "c", function() {
             return r
@@ -1256,7 +1266,7 @@ webpackJsonp([64], {
             e.Collection = "collection", e.Chomment = "chomment"
         }(o || (o = {}))
     },
-    177: function(e, t) {
+    166: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1351,7 +1361,7 @@ webpackJsonp([64], {
         };
         e.exports = n
     },
-    182: function(e, t, n) {
+    171: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -1375,18 +1385,19 @@ webpackJsonp([64], {
         });
         var o = n(0),
             a = n(2),
-            s = n(126);
+            s = n(119);
         a.n.store.registerReducer("ads", i);
-        n(91), n(19), n(45)
+        n(85), n(18), n(44)
     },
-    183: function(e, t) {},
-    184: function(e, t) {},
-    185: function(e, t) {},
-    186: function(e, t) {},
-    187: function(e, t) {},
-    188: function(e, t) {},
-    189: function(e, t) {},
-    19: function(e, t, n) {
+    172: function(e, t) {},
+    173: function(e, t) {},
+    174: function(e, t) {},
+    175: function(e, t) {},
+    176: function(e, t) {},
+    177: function(e, t) {},
+    178: function(e, t) {},
+    179: function(e, t) {},
+    18: function(e, t, n) {
         "use strict";
 
         function r(e, t) {
@@ -1437,7 +1448,7 @@ webpackJsonp([64], {
         t.e = i, t.d = o, t.c = a, t.a = s, t.b = l;
         var c = n(0),
             u = n(2),
-            d = n(49),
+            d = n(48),
             h = function() {
                 return {
                     authInitialized: !1,
@@ -1449,6 +1460,34 @@ webpackJsonp([64], {
                 }
             };
         u.n.store.registerReducer("session", r)
+    },
+    180: function(e, t) {},
+    181: function(e, t) {},
+    182: function(e, t) {},
+    183: function(e, t) {},
+    184: function(e, t) {},
+    185: function(e, t) {},
+    186: function(e, t) {},
+    187: function(e, t) {},
+    188: function(e, t) {},
+    189: function(e, t) {},
+    19: function(e, t, n) {
+        "use strict";
+
+        function r() {
+            return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(e) {
+                var t = 16 * Math.random() | 0;
+                return ("x" === e ? t : 3 & t | 8).toString(16)
+            })
+        }
+
+        function i() {
+            return "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx".replace(/[xy]/g, function(e) {
+                var t = 16 * Math.random() | 0;
+                return ("x" === e ? t : 3 & t | 8).toString(16)
+            })
+        }
+        t.a = r, t.b = i
     },
     190: function(e, t) {},
     191: function(e, t) {},
@@ -1462,7 +1501,7 @@ webpackJsonp([64], {
     199: function(e, t) {},
     2: function(e, t, n) {
         "use strict";
-        var r = n(67);
+        var r = n(63);
         n.d(t, "a", function() {
             return r.a
         }), n.d(t, "b", function() {
@@ -1493,24 +1532,6 @@ webpackJsonp([64], {
             return r.o
         })
     },
-    20: function(e, t, n) {
-        "use strict";
-
-        function r() {
-            return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(e) {
-                var t = 16 * Math.random() | 0;
-                return ("x" === e ? t : 3 & t | 8).toString(16)
-            })
-        }
-
-        function i() {
-            return "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx".replace(/[xy]/g, function(e) {
-                var t = 16 * Math.random() | 0;
-                return ("x" === e ? t : 3 & t | 8).toString(16)
-            })
-        }
-        t.a = r, t.b = i
-    },
     200: function(e, t) {},
     201: function(e, t) {},
     202: function(e, t) {},
@@ -1530,18 +1551,7 @@ webpackJsonp([64], {
     216: function(e, t) {},
     217: function(e, t) {},
     218: function(e, t) {},
-    219: function(e, t) {},
-    220: function(e, t) {},
-    221: function(e, t) {},
-    222: function(e, t) {},
-    223: function(e, t) {},
-    224: function(e, t) {},
-    225: function(e, t) {},
-    226: function(e, t) {},
-    227: function(e, t) {},
-    228: function(e, t) {},
-    229: function(e, t) {},
-    230: function(e, t) {
+    219: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1639,7 +1649,7 @@ webpackJsonp([64], {
         };
         e.exports = n
     },
-    231: function(e, t, n) {
+    220: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -1689,14 +1699,14 @@ webpackJsonp([64], {
             }
         }
         t.a = r;
-        var a = n(21),
+        var a = n(20),
             s = (n.n(a), n(2)),
-            l = n(17),
-            c = n(35),
-            u = n(43),
-            d = n(42)
+            l = n(16),
+            c = n(34),
+            u = n(42),
+            d = n(41)
     },
-    232: function(e, t, n) {
+    221: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -1705,7 +1715,7 @@ webpackJsonp([64], {
                 username: e.session.user && e.session.user.login
             }
         }
-        var i = n(9),
+        var i = n(8),
             o = n(0),
             a = n(1),
             s = n(2),
@@ -1744,21 +1754,21 @@ webpackJsonp([64], {
         });
         var c = Object(i.a)(r)(l)
     },
-    233: function(e, t) {},
-    234: function(e, t) {},
-    235: function(e, t) {},
-    236: function(e, t) {},
-    237: function(e, t) {},
-    238: function(e, t) {},
-    239: function(e, t, n) {
+    222: function(e, t) {},
+    223: function(e, t) {},
+    224: function(e, t) {},
+    225: function(e, t) {},
+    226: function(e, t) {},
+    227: function(e, t) {},
+    228: function(e, t, n) {
         "use strict";
         var r = n(0),
             i = n(1),
             o = n(2),
-            a = n(8),
+            a = n(7),
             s = n(3),
-            l = n(240),
-            c = (n(241), "euCookieDismiss"),
+            l = n(229),
+            c = (n(230), "euCookieDismiss"),
             u = "eu-cookie-notification__link",
             d = function(e) {
                 function t() {
@@ -1801,7 +1811,7 @@ webpackJsonp([64], {
                 }, t = r.__decorate([Object(a.a)(l)], t)
             }(i.Component),
             h = d,
-            p = (n(242), [h]),
+            p = (n(231), [h]),
             m = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -1847,17 +1857,7 @@ webpackJsonp([64], {
             return m
         })
     },
-    24: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return r
-        });
-        var r;
-        ! function(e) {
-            e[e.Unknown = 0] = "Unknown", e[e.Pass = 1] = "Pass", e[e.Fail = 2] = "Fail"
-        }(r || (r = {}))
-    },
-    240: function(e, t) {
+    229: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1912,18 +1912,28 @@ webpackJsonp([64], {
         };
         e.exports = n
     },
-    241: function(e, t) {},
-    242: function(e, t) {},
-    248: function(e, t, n) {
+    23: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return r
+        });
+        var r;
+        ! function(e) {
+            e[e.Unknown = 0] = "Unknown", e[e.Pass = 1] = "Pass", e[e.Fail = 2] = "Fail"
+        }(r || (r = {}))
+    },
+    230: function(e, t) {},
+    231: function(e, t) {},
+    237: function(e, t, n) {
         "use strict";
         var r = n(0),
-            i = n(21),
+            i = n(20),
             o = n(1),
             a = n(2),
-            s = n(8),
-            l = n(17),
-            c = n(14),
-            u = n(6),
+            s = n(7),
+            l = n(16),
+            c = n(13),
+            u = n(5),
             d = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -1955,7 +1965,7 @@ webpackJsonp([64], {
                 }, t = r.__decorate([Object(u.c)("AmazonAds")], t)
             }(o.Component),
             h = d,
-            p = n(12),
+            p = n(11),
             m = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -2019,7 +2029,7 @@ webpackJsonp([64], {
                 }, t = r.__decorate([Object(u.c)("GoogleAnalytics")], t)
             }(o.Component),
             v = f,
-            w = n(56),
+            w = n(55),
             b = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -2103,7 +2113,7 @@ webpackJsonp([64], {
                 }, t = r.__decorate([Object(u.c)("IVW")], t)
             }(o.Component),
             y = Object(p.f)(b),
-            _ = n(33),
+            _ = n(32),
             E = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -2201,7 +2211,7 @@ webpackJsonp([64], {
                 }, t = r.__decorate([Object(u.c)("Quantcast")], t)
             }(o.Component),
             S = C,
-            L = n(249);
+            L = n(238);
         n.d(t, "a", function() {
             return x
         });
@@ -2242,7 +2252,7 @@ webpackJsonp([64], {
             }(o.Component),
             x = T
     },
-    249: function(e, t) {
+    238: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2307,8 +2317,248 @@ webpackJsonp([64], {
         };
         e.exports = n
     },
-    297: function(e, t) {},
-    299: function(e, t) {},
+    277: function(e, t) {},
+    279: function(e, t) {},
+    280: function(e, t) {},
+    29: function(e, t, n) {
+        "use strict";
+        var r = n(84),
+            i = n(109),
+            o = n(0),
+            a = n(14),
+            s = n(1),
+            l = n(2),
+            c = n(3),
+            u = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.getStyles = function() {
+                        var e = n.state,
+                            t = e.anchoredBottom,
+                            r = e.anchoredTop,
+                            i = e.top,
+                            o = e.width,
+                            a = t || r,
+                            s = "absolute";
+                        return window.outerWidth < (n.props.disableStickinessBelowWidth || 0) ? (s = "inherit", a = !1) : a && (s = "fixed"), {
+                            position: s,
+                            top: r ? "inherit" : i,
+                            width: a ? o : "inherit"
+                        }
+                    }, n.lockBottom = function(e) {
+                        n.setState({
+                            anchoredBottom: !0,
+                            top: window.innerHeight - e,
+                            width: n.element.getBoundingClientRect().width
+                        })
+                    }, n.lockTop = function() {
+                        n.setState({
+                            anchoredTop: !0,
+                            width: n.element.getBoundingClientRect().width
+                        })
+                    }, n.setRef = function(e) {
+                        return n.element = e
+                    }, n.state = {
+                        anchoredBottom: !1,
+                        anchoredTop: !1,
+                        lastOffset: void 0,
+                        offsetTop: void 0,
+                        top: void 0,
+                        width: void 0
+                    }, n
+                }
+                return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                    var e = this.element.getBoundingClientRect();
+                    this.setState({
+                        offsetTop: e.top
+                    });
+                    var t = this.context.registerReceiver;
+                    if (!t) return void l.i.warn("<StickyContainer /> initialized missing a <ScrollableArea /> provider");
+                    this.unregister = t(this)
+                }, t.prototype.componentWillUnmount = function() {
+                    this.unregister && this.unregister()
+                }, t.prototype.render = function() {
+                    return s.createElement(c.U, {
+                        position: c._2.Relative,
+                        fullWidth: !0
+                    }, s.createElement("div", {
+                        className: "sticky-container",
+                        ref: this.setRef,
+                        style: this.getStyles()
+                    }, this.props.children))
+                }, t.prototype.checkVisible = function(e, t) {
+                    return o.__awaiter(this, void 0, void 0, function() {
+                        var e, n, i, a, s;
+                        return o.__generator(this, function(o) {
+                            return !t || t.type !== r.a.Resize && t.type !== r.a.Wheel && t.type !== r.a.Scroll || (e = this.state.anchoredBottom || this.state.anchoredTop, n = t.offset >= (this.state.lastOffset || 0), t.type === r.a.Resize ? (this.unlock(t.offset), this.checkBounding(n, t.offset)) : t.wheelEvent && t.type === r.a.Wheel && e ? (i = t.wheelEvent, a = void 0, a = 0 === i.deltaMode ? i.deltaY || i.wheelDelta : 16 * i.deltaY, s = a + t.offset, this.context.yScrollTo(s), this.checkBounding(a > 0, t.offset)) : t.type !== r.a.Scroll || t.offset === this.state.lastOffset || e || this.checkBounding(n, t.offset)), [2]
+                        })
+                    })
+                }, t.prototype.checkBounding = function(e, t) {
+                    e && this.state.anchoredTop && this.unlock(t), !e && this.state.anchoredBottom && this.unlock(t), this.state.anchoredBottom || this.state.anchoredTop || this.shouldLock(e), this.setState({
+                        lastOffset: t
+                    })
+                }, t.prototype.shouldLock = function(e) {
+                    var t = this.element.getBoundingClientRect(),
+                        n = this.state.offsetTop || 0;
+                    if (t.height < window.innerHeight - n) return void this.lockTop();
+                    var r = t.top < n,
+                        i = t.top >= window.innerHeight,
+                        o = t.bottom < n,
+                        a = t.bottom + (this.props.bottomPixelThreshold || 0) >= window.innerHeight,
+                        s = !i && !r,
+                        l = !a && !o;
+                    !s && !l || s && l || (!e && s && this.lockTop(), e && l && this.lockBottom(t.height + (this.props.bottomPixelThreshold || 0))), r && o && this.lockBottom(t.height + (this.props.bottomPixelThreshold || 0)), i && a && this.lockTop()
+                }, t.prototype.unlock = function(e) {
+                    var t, n = this.state,
+                        r = n.offsetTop,
+                        i = n.width,
+                        o = this.element.getBoundingClientRect(),
+                        a = window.innerHeight - (r || 0),
+                        s = i;
+                    t = "inherit", o.height <= a ? s = "inherit" : this.state.anchoredTop ? t = e : this.state.anchoredBottom && (t = e - o.height + a - (this.props.bottomPixelThreshold || 0)), this.setState({
+                        top: t,
+                        width: s,
+                        anchoredBottom: !1,
+                        anchoredTop: !1
+                    })
+                }, t.contextTypes = {
+                    registerReceiver: a.func,
+                    yScrollTo: a.func
+                }, t
+            }(s.Component);
+        n.d(t, "b", function() {
+            return r.b
+        }), n.d(t, "a", function() {
+            return i.a
+        }), n.d(t, "c", function() {
+            return u
+        })
+    },
+    291: function(e, t, n) {
+        (function(t) {
+            function n(e, t, n) {
+                switch (n.length) {
+                    case 0:
+                        return e.call(t);
+                    case 1:
+                        return e.call(t, n[0]);
+                    case 2:
+                        return e.call(t, n[0], n[1]);
+                    case 3:
+                        return e.call(t, n[0], n[1], n[2])
+                }
+                return e.apply(t, n)
+            }
+
+            function r(e, t) {
+                for (var n = -1, r = e ? e.length : 0, i = Array(r); ++n < r;) i[n] = t(e[n], n, e);
+                return i
+            }
+
+            function i(e, t) {
+                for (var n = -1, r = t.length, i = e.length; ++n < r;) e[i + n] = t[n];
+                return e
+            }
+
+            function o(e, t, n, r, a) {
+                var s = -1,
+                    c = e.length;
+                for (n || (n = l), a || (a = []); ++s < c;) {
+                    var u = e[s];
+                    t > 0 && n(u) ? t > 1 ? o(u, t - 1, n, r, a) : i(a, u) : r || (a[a.length] = u)
+                }
+                return a
+            }
+
+            function a(e, t) {
+                return e = Object(e), s(e, t, function(t, n) {
+                    return n in e
+                })
+            }
+
+            function s(e, t, n) {
+                for (var r = -1, i = t.length, o = {}; ++r < i;) {
+                    var a = t[r],
+                        s = e[a];
+                    n(s, a) && (o[a] = s)
+                }
+                return o
+            }
+
+            function l(e) {
+                return D(e) || u(e) || !!(N && e && e[N])
+            }
+
+            function c(e) {
+                if ("string" == typeof e || v(e)) return e;
+                var t = e + "";
+                return "0" == t && 1 / e == -w ? "-0" : t
+            }
+
+            function u(e) {
+                return h(e) && x.call(e, "callee") && (!I.call(e, "callee") || R.call(e) == y)
+            }
+
+            function d(e) {
+                return null != e && m(e.length) && !p(e)
+            }
+
+            function h(e) {
+                return f(e) && d(e)
+            }
+
+            function p(e) {
+                var t = g(e) ? R.call(e) : "";
+                return t == _ || t == E
+            }
+
+            function m(e) {
+                return "number" == typeof e && e > -1 && e % 1 == 0 && e <= b
+            }
+
+            function g(e) {
+                var t = typeof e;
+                return !!e && ("object" == t || "function" == t)
+            }
+
+            function f(e) {
+                return !!e && "object" == typeof e
+            }
+
+            function v(e) {
+                return "symbol" == typeof e || f(e) && R.call(e) == k
+            }
+            var w = 1 / 0,
+                b = 9007199254740991,
+                y = "[object Arguments]",
+                _ = "[object Function]",
+                E = "[object GeneratorFunction]",
+                k = "[object Symbol]",
+                C = "object" == typeof t && t && t.Object === Object && t,
+                S = "object" == typeof self && self && self.Object === Object && self,
+                L = C || S || Function("return this")(),
+                T = Object.prototype,
+                x = T.hasOwnProperty,
+                R = T.toString,
+                z = L.Symbol,
+                I = T.propertyIsEnumerable,
+                N = z ? z.isConcatSpreadable : void 0,
+                M = Math.max,
+                D = Array.isArray,
+                A = function(e, t) {
+                    return t = M(void 0 === t ? e.length - 1 : t, 0),
+                        function() {
+                            for (var r = arguments, i = -1, o = M(r.length - t, 0), a = Array(o); ++i < o;) a[i] = r[t + i];
+                            i = -1;
+                            for (var s = Array(t + 1); ++i < t;) s[i] = r[i];
+                            return s[t] = a, n(e, this, s)
+                        }
+                }(function(e, t) {
+                    return null == e ? {} : a(e, r(o(t, 1), c))
+                });
+            e.exports = A
+        }).call(t, n(31))
+    },
     3: function(e, t, n) {
         "use strict";
 
@@ -2344,7 +2594,7 @@ webpackJsonp([64], {
         var s, l = n(0),
             c = n(4),
             u = n(1);
-        n(184);
+        n(173);
         ! function(e) {
             e[e.Start = 1] = "Start", e[e.End = 2] = "End", e[e.Center = 3] = "Center", e[e.Baseline = 4] = "Baseline", e[e.Stretch = 5] = "Stretch"
         }(s || (s = {}));
@@ -2368,11 +2618,11 @@ webpackJsonp([64], {
         ! function(e) {
             e[e.Wrap = 1] = "Wrap", e[e.NoWrap = 2] = "NoWrap", e[e.WrapReverse = 3] = "WrapReverse"
         }(b || (b = {}));
-        var _, E = (H = {}, H[b.Wrap] = "flex-wrap", H[b.NoWrap] = "flex-nowrap", H[b.WrapReverse] = "flex-wrap-reverse", H);
+        var _, E = (O = {}, O[b.Wrap] = "flex-wrap", O[b.NoWrap] = "flex-nowrap", O[b.WrapReverse] = "flex-wrap-reverse", O);
         ! function(e) {
             e[e.Start = 1] = "Start", e[e.End = 2] = "End", e[e.Center = 3] = "Center", e[e.Between = 4] = "Between", e[e.Around = 5] = "Around"
         }(_ || (_ = {}));
-        var k, C = (O = {}, O[_.Start] = "justify-content-start", O[_.End] = "justify-content-end", O[_.Center] = "justify-content-center", O[_.Between] = "justify-content-between", O[_.Around] = "justify-content-around", O);
+        var k, C = (H = {}, H[_.Start] = "justify-content-start", H[_.End] = "justify-content-end", H[_.Center] = "justify-content-center", H[_.Between] = "justify-content-between", H[_.Around] = "justify-content-around", H);
         ! function(e) {
             e[e.Auto = 1] = "Auto", e[e.Scroll = 2] = "Scroll", e[e.Visible = 3] = "Visible", e[e.Hidden = 4] = "Hidden"
         }(k || (k = {}));
@@ -2392,7 +2642,7 @@ webpackJsonp([64], {
         ! function(e) {
             e[e.Default = 1] = "Default", e[e.Above = 2] = "Above", e[e.Below = 3] = "Below"
         }(I || (I = {}));
-        var M, D, A, B, P, H, O, V, F, U, q, j, W, G = (j = {}, j[I.Default] = "z-default", j[I.Above] = "z-above", j[I.Below] = "z-below", j),
+        var M, D, A, B, P, O, H, V, F, U, q, j, G, W = (j = {}, j[I.Default] = "z-default", j[I.Above] = "z-above", j[I.Below] = "z-below", j),
             Q = new Set([0, .5, 1, 2, 3, 4, 5, "auto"]),
             K = function(e) {
                 function t() {
@@ -2400,7 +2650,7 @@ webpackJsonp([64], {
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
                     var e = (p = {}, p["" + this.props.className] = !!this.props.className, p["top-0"] = this.props.attachTop, p["right-0"] = this.props.attachRight, p["bottom-0"] = this.props.attachBottom, p["left-0"] = this.props.attachLeft, p.ellipsis = this.props.ellipsis, p["full-width"] = this.props.fullWidth, p["full-height"] = this.props.fullHeight, p);
-                    this.props.overflow && (e[L[this.props.overflow]] = !0), this.props.resize && (e[z[T.X]] = !0), this.props.zIndex && (e[G[this.props.zIndex]] = !0);
+                    this.props.overflow && (e[L[this.props.overflow]] = !0), this.props.resize && (e[z[T.X]] = !0), this.props.zIndex && (e[W[this.props.zIndex]] = !0);
                     var t = this.getBreakpointClasses(this.props),
                         n = this.getBreakpointClasses(this.props.breakpointExtraSmall, "xs"),
                         i = this.getBreakpointClasses(this.props.breakpointSmall, "sm"),
@@ -2451,11 +2701,11 @@ webpackJsonp([64], {
                     }, this.props.children))
                 }, t
             }(K);
-        n(185);
+        n(174);
         ! function(e) {
             e[e.Short = 1] = "Short", e[e.Medium = 2] = "Medium", e[e.Long = 3] = "Long"
-        }(W || (W = {}));
-        var J, X = (ne = {}, ne[W.Short] = "tw-animation--delay-short", ne[W.Medium] = "tw-animation--delay-medium", ne[W.Long] = "tw-animation--delay-long", ne);
+        }(G || (G = {}));
+        var J, X = (ne = {}, ne[G.Short] = "tw-animation--delay-short", ne[G.Medium] = "tw-animation--delay-medium", ne[G.Long] = "tw-animation--delay-long", ne);
         ! function(e) {
             e[e.Short = 1] = "Short", e[e.Medium = 2] = "Medium", e[e.Long = 3] = "Long"
         }(J || (J = {}));
@@ -2482,7 +2732,7 @@ webpackJsonp([64], {
                     "data-a-target": "tw-animation-target"
                 }, e.children))
             };
-        n(186);
+        n(175);
         ! function(e) {
             e[e.Aspect21x9 = 1] = "Aspect21x9", e[e.Aspect16x9 = 2] = "Aspect16x9", e[e.Aspect4x3 = 3] = "Aspect4x3", e[e.Aspect1x1 = 4] = "Aspect1x1", e[e.Aspect3x4 = 5] = "Aspect3x4", e[e.BoxArt = 6] = "BoxArt"
         }(ae || (ae = {}));
@@ -2500,7 +2750,7 @@ webpackJsonp([64], {
                     className: c("tw-aspect", t)
                 }, r(e)), e.children)
             };
-        n(187);
+        n(176);
         ! function(e) {
             e[e.Offline = 1] = "Offline", e[e.Invisible = 2] = "Invisible", e[e.Online = 3] = "Online", e[e.Busy = 4] = "Busy", e[e.Away = 5] = "Away"
         }(he || (he = {}));
@@ -2521,7 +2771,7 @@ webpackJsonp([64], {
                     className: "tw-presence__indicator " + c(n)
                 }))
             };
-        n(188);
+        n(177);
         ! function(e) {
             e[e.Base = 1] = "Base", e[e.Alt = 2] = "Alt", e[e.Alt2 = 3] = "Alt2", e[e.Link = 4] = "Link", e[e.Live = 5] = "Live", e[e.Error = 6] = "Error", e[e.Overlay = 7] = "Overlay", e[e.OverlayAlt = 8] = "OverlayAlt"
         }(ve || (ve = {}));
@@ -2561,16 +2811,16 @@ webpackJsonp([64], {
                     title: n
                 }), e.children)
             };
-        n(189);
+        n(178);
         ! function(e) {
             e[e.Base = 1] = "Base", e[e.Alt = 2] = "Alt", e[e.Alt2 = 3] = "Alt2", e[e.Overlay = 4] = "Overlay", e[e.Accent = 5] = "Accent", e[e.AccentAlt = 6] = "AccentAlt", e[e.AccentAlt2 = 7] = "AccentAlt2"
         }(De || (De = {}));
-        var Pe, He = (Oe = {}, Oe[De.Base] = "c-background", Oe[De.Alt] = "c-background-alt", Oe[De.Alt2] = "c-background-alt-2", Oe[De.Overlay] = "c-background-overlay", Oe[De.Accent] = "c-background-accent", Oe[De.AccentAlt] = "c-background-accent-alt", Oe[De.AccentAlt2] = "c-background-accent-alt-2", Oe);
+        var Pe, Oe = (He = {}, He[De.Base] = "c-background", He[De.Alt] = "c-background-alt", He[De.Alt2] = "c-background-alt-2", He[De.Overlay] = "c-background-overlay", He[De.Accent] = "c-background-accent", He[De.AccentAlt] = "c-background-accent-alt", He[De.AccentAlt2] = "c-background-accent-alt-2", He);
         ! function(e) {
             e[e.None = 1] = "None", e[e.Small = 2] = "Small", e[e.Medium = 3] = "Medium", e[e.Large = 4] = "Large", e[e.Rounded = 5] = "Rounded"
         }(Pe || (Pe = {}));
-        var Oe, Ve, Fe, Ue, qe, je, We = (Ve = {}, Ve[Pe.None] = "border-radius-none", Ve[Pe.Small] = "border-radius-small", Ve[Pe.Medium] = "border-radius-medium", Ve[Pe.Large] = "border-radius-large", Ve[Pe.Rounded] = "border-radius-rounded", Ve),
-            Ge = (Fe = {}, Fe[ve.Base] = "c-text", Fe[ve.Alt] = "c-text-alt", Fe[ve.Alt2] = "c-text-alt-2", Fe[ve.Link] = "c-text-link", Fe[ve.Live] = "c-text-live", Fe[ve.Error] = "c-text-error", Fe[ve.Overlay] = "c-text-overlay", Fe[ve.OverlayAlt] = "c-text-overlay-alt", Fe),
+        var He, Ve, Fe, Ue, qe, je, Ge = (Ve = {}, Ve[Pe.None] = "border-radius-none", Ve[Pe.Small] = "border-radius-small", Ve[Pe.Medium] = "border-radius-medium", Ve[Pe.Large] = "border-radius-large", Ve[Pe.Rounded] = "border-radius-rounded", Ve),
+            We = (Fe = {}, Fe[ve.Base] = "c-text", Fe[ve.Alt] = "c-text-alt", Fe[ve.Alt2] = "c-text-alt-2", Fe[ve.Link] = "c-text-link", Fe[ve.Live] = "c-text-live", Fe[ve.Error] = "c-text-error", Fe[ve.Overlay] = "c-text-overlay", Fe[ve.OverlayAlt] = "c-text-overlay-alt", Fe),
             Qe = (Ue = {}, Ue[ye.Size1] = "font-size-1", Ue[ye.Size2] = "font-size-2", Ue[ye.Size3] = "font-size-3", Ue[ye.Size4] = "font-size-4", Ue[ye.Size5] = "font-size-5", Ue[ye.Size6] = "font-size-6", Ue[ye.Size7] = "font-size-7", Ue[ye.Size8] = "font-size-8", Ue),
             Ke = function(e) {
                 function t() {
@@ -2584,7 +2834,7 @@ webpackJsonp([64], {
                         "border-l": this.props.border || this.props.borderLeft && !this.props.borderMarked,
                         "border--marked": this.props.borderMarked
                     }, g["elevation-" + this.props.elevation] = !!this.props.elevation, g);
-                    this.props.borderRadius && (e[We[this.props.borderRadius]] = !0);
+                    this.props.borderRadius && (e[Ge[this.props.borderRadius]] = !0);
                     var t = this.getColorClass(),
                         n = this.getBackgroundClass(),
                         i = this.getBreakpointClasses(this.props),
@@ -2604,12 +2854,12 @@ webpackJsonp([64], {
                     var n = [];
                     return t ? t += "-" : t = "", e.fontSize && n.push(t + Qe[e.fontSize]), n
                 }, t.prototype.getColorClass = function() {
-                    return this.props.background !== De.Overlay || this.props.color ? this.props.color ? Ge[this.props.color] : "" : Ge[ve.Overlay]
+                    return this.props.background !== De.Overlay || this.props.color ? this.props.color ? We[this.props.color] : "" : We[ve.Overlay]
                 }, t.prototype.getBackgroundClass = function() {
-                    return this.props.background ? He[this.props.background] : ""
+                    return this.props.background ? Oe[this.props.background] : ""
                 }, t
             }(u.Component),
-            Ze = (n(190), qe = {}, qe[Pe.None] = "border-radius-none", qe[Pe.Small] = "border-radius-small", qe[Pe.Medium] = "border-radius-medium", qe[Pe.Large] = "border-radius-large", qe[Pe.Rounded] = "border-radius-rounded", qe),
+            Ze = (n(179), qe = {}, qe[Pe.None] = "border-radius-none", qe[Pe.Small] = "border-radius-small", qe[Pe.Medium] = "border-radius-medium", qe[Pe.Large] = "border-radius-large", qe[Pe.Rounded] = "border-radius-rounded", qe),
             Je = function(e) {
                 var t = (a = {
                         "tw-avatar": !0
@@ -2637,7 +2887,7 @@ webpackJsonp([64], {
                 }), o);
                 var a
             };
-        n(191);
+        n(180);
         ! function(e) {
             e[e.Inherit = 0] = "Inherit", e[e.Alt = 1] = "Alt", e[e.Alt2 = 2] = "Alt2", e[e.Brand = 3] = "Brand", e[e.Live = 4] = "Live", e[e.Warn = 5] = "Warn", e[e.Alert = 6] = "Alert", e[e.Success = 7] = "Success", e[e.Prime = 8] = "Prime", e[e.Placeholder = 9] = "Placeholder", e[e.OverlayPlaceholder = 10] = "OverlayPlaceholder"
         }(je || (je = {}));
@@ -3581,7 +3831,7 @@ webpackJsonp([64], {
                     y: "0px"
                 }, nt[e.asset].path))
             };
-        n(192);
+        n(181);
         ! function(e) {
             e[e.Notification = 1] = "Notification", e[e.Alt = 2] = "Alt", e[e.Alt2 = 3] = "Alt2", e[e.Brand = 4] = "Brand", e[e.Live = 5] = "Live", e[e.Alert = 6] = "Alert", e[e.Success = 7] = "Success", e[e.Prime = 8] = "Prime", e[e.Dashboard = 9] = "Dashboard"
         }(tt || (tt = {}));
@@ -3618,7 +3868,7 @@ webpackJsonp([64], {
                     position: S.Relative
                 }, i) : i
             },
-            lt = n(12),
+            lt = n(11),
             ct = new Set(["imageAlt", "imageSrc", "onImageError", "onImageLoad"]),
             ut = function(e) {
                 var t, n, i;
@@ -3642,7 +3892,7 @@ webpackJsonp([64], {
                     position: S.Relative
                 }, r(e)), e.children)
             };
-        n(193);
+        n(182);
         ! function(e) {
             e[e.Default = 1] = "Default", e[e.Size2 = 2] = "Size2", e[e.Size3 = 3] = "Size3", e[e.Size4 = 4] = "Size4", e[e.Size6 = 5] = "Size6", e[e.Size8 = 6] = "Size8", e[e.Size16 = 7] = "Size16", e[e.Size24 = 8] = "Size24", e[e.Size32 = 9] = "Size32"
         }(ot || (ot = {}));
@@ -3665,7 +3915,7 @@ webpackJsonp([64], {
                     onError: e.onImageError
                 })), e.children))
             },
-            ft = (n(194), function(e) {
+            ft = (n(183), function(e) {
                 var t = {
                         "tw-placeholder": !0,
                         "tw-placeholder--overlay": e.overlay,
@@ -3693,7 +3943,7 @@ webpackJsonp([64], {
                     })
                 }))
             }),
-            vt = (n(195), function(e) {
+            vt = (n(184), function(e) {
                 var t;
                 return t = u.createElement(ut, {
                     key: e.title
@@ -3725,7 +3975,7 @@ webpackJsonp([64], {
                     className: "tw-box-art-card"
                 }, r(e)), t)
             });
-        n(196);
+        n(185);
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Small = 1] = "Small", e[e.Large = 2] = "Large"
         }(pt || (pt = {}));
@@ -3764,7 +4014,7 @@ webpackJsonp([64], {
                     }, e)), e
                 }, t
             }(u.Component);
-        n(197);
+        n(186);
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Hollow = 1] = "Hollow", e[e.Text = 2] = "Text", e[e.Alert = 3] = "Alert", e[e.Success = 4] = "Success"
         }(bt || (bt = {}));
@@ -3938,12 +4188,12 @@ webpackJsonp([64], {
                     }
                 }, t
             }(u.Component);
-        n(198);
+        n(187);
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Hollow = 1] = "Hollow", e[e.Primary = 2] = "Primary", e[e.Alert = 3] = "Alert", e[e.Secondary = 4] = "Secondary", e[e.Success = 5] = "Success"
         }(zt || (zt = {}));
-        var Dt, At, Bt, Pt, Ht = (Dt = {}, Dt[zt.Primary] = "tw-button-icon--primary", Dt[zt.Hollow] = "tw-button-icon--hollow", Dt[zt.Alert] = "tw-button-icon--alert", Dt[zt.Secondary] = "tw-button-icon--secondary", Dt[zt.Success] = "tw-button-icon--success", Dt),
-            Ot = (At = {}, At[Et.Small] = "tw-button-icon--small", At[Et.Large] = "tw-button-icon--large", At),
+        var Dt, At, Bt, Pt, Ot = (Dt = {}, Dt[zt.Primary] = "tw-button-icon--primary", Dt[zt.Hollow] = "tw-button-icon--hollow", Dt[zt.Alert] = "tw-button-icon--alert", Dt[zt.Secondary] = "tw-button-icon--secondary", Dt[zt.Success] = "tw-button-icon--success", Dt),
+            Ht = (At = {}, At[Et.Small] = "tw-button-icon--small", At[Et.Large] = "tw-button-icon--large", At),
             Vt = (Bt = {}, Bt[Et.Small] = {
                 width: 12,
                 height: 12
@@ -3968,7 +4218,7 @@ webpackJsonp([64], {
                         "tw-button-icon--overlay": this.props.overlay,
                         "tw-button-icon--status": !!this.props.statusAlertIcon
                     };
-                    if (this.props.statusAlertIcon ? n[Ht[zt.Success]] = !0 : this.props.type && (n[Ht[this.props.type]] = !0), this.props.size && (n[Ot[this.props.size]] = !0), this.props.dropdown && (e = u.createElement("span", {
+                    if (this.props.statusAlertIcon ? n[Ot[zt.Success]] = !0 : this.props.type && (n[Ot[this.props.type]] = !0), this.props.size && (n[Ht[this.props.size]] = !0), this.props.dropdown && (e = u.createElement("span", {
                             className: "tw-button-icon__icon tw-button-icon__icon--right",
                             key: "tw-button-dropdown"
                         }, u.createElement(rt, {
@@ -4054,7 +4304,7 @@ webpackJsonp([64], {
                     }, h), p)
                 }, t
             }(u.Component);
-        n(199);
+        n(188);
         ! function(e) {
             e[e.ExtraSmall = 1] = "ExtraSmall", e[e.Small = 2] = "Small", e[e.Medium = 3] = "Medium", e[e.Large = 4] = "Large", e[e.ExtraLarge = 5] = "ExtraLarge"
         }(Pt || (Pt = {}));
@@ -4062,7 +4312,7 @@ webpackJsonp([64], {
         ! function(e) {
             e[e.Top = 1] = "Top", e[e.Bottom = 2] = "Bottom", e[e.Left = 3] = "Left", e[e.Right = 4] = "Right", e[e.TopLeft = 5] = "TopLeft", e[e.TopRight = 6] = "TopRight", e[e.BottomRight = 7] = "BottomRight", e[e.BottomLeft = 8] = "BottomLeft", e[e.TopCenter = 9] = "TopCenter", e[e.BottomCenter = 10] = "BottomCenter", e[e.LeftCenter = 11] = "LeftCenter", e[e.RightCenter = 12] = "RightCenter"
         }(Ut || (Ut = {}));
-        var jt, Wt, Gt, Qt = (Wt = {}, Wt[Ut.Top] = "tw-balloon--up", Wt[Ut.Bottom] = "tw-balloon--down", Wt[Ut.Left] = "tw-balloon--left", Wt[Ut.Right] = "tw-balloon--right", Wt[Ut.TopLeft] = "tw-balloon--up tw-balloon--left", Wt[Ut.TopRight] = "tw-balloon--up tw-balloon--right", Wt[Ut.BottomRight] = "tw-balloon--down tw-balloon--right", Wt[Ut.BottomLeft] = "tw-balloon--down", Wt[Ut.TopCenter] = "tw-balloon--up tw-balloon--center", Wt[Ut.BottomCenter] = "tw-balloon--down tw-balloon--center", Wt[Ut.LeftCenter] = "tw-balloon--left tw-balloon--center", Wt[Ut.RightCenter] = "tw-balloon--right tw-balloon--center", Wt),
+        var jt, Gt, Wt, Qt = (Gt = {}, Gt[Ut.Top] = "tw-balloon--up", Gt[Ut.Bottom] = "tw-balloon--down", Gt[Ut.Left] = "tw-balloon--left", Gt[Ut.Right] = "tw-balloon--right", Gt[Ut.TopLeft] = "tw-balloon--up tw-balloon--left", Gt[Ut.TopRight] = "tw-balloon--up tw-balloon--right", Gt[Ut.BottomRight] = "tw-balloon--down tw-balloon--right", Gt[Ut.BottomLeft] = "tw-balloon--down", Gt[Ut.TopCenter] = "tw-balloon--up tw-balloon--center", Gt[Ut.BottomCenter] = "tw-balloon--down tw-balloon--center", Gt[Ut.LeftCenter] = "tw-balloon--left tw-balloon--center", Gt[Ut.RightCenter] = "tw-balloon--right tw-balloon--center", Gt),
             Kt = function(e) {
                 var t = {
                     "tw-balloon": !0,
@@ -4092,7 +4342,7 @@ webpackJsonp([64], {
                     style: p
                 }), e.children, m)
             },
-            Zt = (n(200), function(e) {
+            Zt = (n(189), function(e) {
                 var t, n = o(),
                     i = {
                         "tw-checkbox": !0,
@@ -4121,7 +4371,7 @@ webpackJsonp([64], {
                     htmlFor: e.id ? e.id : n
                 }, e.label))
             }),
-            Jt = (n(201), function(e) {
+            Jt = (n(190), function(e) {
                 var t = {
                     "tw-drop-zone": !0,
                     "tw-drop-zone--over": e.dragOver,
@@ -4141,11 +4391,11 @@ webpackJsonp([64], {
                     className: "tw-drop-zone__content"
                 }, e.children))
             });
-        n(202);
+        n(191);
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Small = 1] = "Small", e[e.Large = 2] = "Large", e[e.None = 3] = "None"
-        }(Gt || (Gt = {}));
-        var Xt, Yt, $t = (Xt = {}, Xt[Gt.Small] = "tw-grid--gutter-sm", Xt[Gt.Large] = "tw-grid--gutter-lg", Xt[Gt.None] = "tw-grid--gutter-none", Xt),
+        }(Wt || (Wt = {}));
+        var Xt, Yt, $t = (Xt = {}, Xt[Wt.Small] = "tw-grid--gutter-sm", Xt[Wt.Large] = "tw-grid--gutter-lg", Xt[Wt.None] = "tw-grid--gutter-none", Xt),
             en = function(e) {
                 var t = {
                     "tw-grid": !0
@@ -4154,7 +4404,7 @@ webpackJsonp([64], {
                     className: c(t)
                 }, r(e)), e.children)
             },
-            tn = (n(203), function(e) {
+            tn = (n(192), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -4172,7 +4422,7 @@ webpackJsonp([64], {
                     return "object" != typeof t ? "tw-col-" + t : (n.push("tw-col-" + e + t.default), t.xs && n.push("xs-tw-col-" + e + t.xs), t.sm && n.push("sm-tw-col-" + e + t.sm), t.md && n.push("md-tw-col-" + e + t.md), t.lg && n.push("lg-tw-col-" + e + t.lg), t.xl && n.push("xl-tw-col-" + e + t.xl), t.xxl && n.push("xxl-tw-col-" + e + t.xxl), n)
                 }, t
             }(u.Component));
-        n(204);
+        n(193);
         ! function(e) {
             e[e.Text = 0] = "Text", e[e.Email = 1] = "Email", e[e.Password = 2] = "Password", e[e.Search = 3] = "Search"
         }(Yt || (Yt = {}));
@@ -4222,7 +4472,7 @@ webpackJsonp([64], {
                     value: e.value
                 }))
             },
-            on = (n(205), function(e) {
+            on = (n(194), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.refHandler = function(e) {
@@ -4269,7 +4519,7 @@ webpackJsonp([64], {
                     }, i), this.props.children)
                 }, t
             }(u.Component)),
-            an = (n(206), function(e) {
+            an = (n(195), function(e) {
                 var t, n, i = {
                         "tw-group": !0,
                         "tw-group--error": e.error
@@ -4290,7 +4540,7 @@ webpackJsonp([64], {
                     htmlFor: e.id
                 }, e.label, t), e.children, n)
             });
-        n(207);
+        n(196);
         ! function(e) {
             e[e.Small = 1] = "Small", e[e.Medium = 2] = "Medium", e[e.Large = 3] = "Large"
         }(nn || (nn = {}));
@@ -4306,7 +4556,7 @@ webpackJsonp([64], {
                     className: c(t)
                 }, r(e)))
             };
-        n(208);
+        n(197);
         ! function(e) {
             e[e.Top = 1] = "Top", e[e.Bottom = 2] = "Bottom", e[e.Left = 3] = "Left", e[e.Right = 4] = "Right"
         }(ln || (ln = {}));
@@ -4344,7 +4594,7 @@ webpackJsonp([64], {
                     "data-a-target": "tw-tooltip-label"
                 }, e.label)))
             },
-            wn = (n(209), function(e) {
+            wn = (n(198), function(e) {
                 var t, n = {
                     "tw-stat": !0
                 };
@@ -4366,7 +4616,7 @@ webpackJsonp([64], {
                     label: e.label
                 }, i) : i
             }),
-            bn = (n(210), function(e) {
+            bn = (n(199), function(e) {
                 var t, n = {
                     "tw-tag": !0
                 };
@@ -4395,7 +4645,7 @@ webpackJsonp([64], {
                     asset: Xe.Close
                 })))
             });
-        n(211);
+        n(200);
         ! function(e) {
             e[e.Notification = 1] = "Notification", e[e.Brand = 2] = "Brand", e[e.Live = 3] = "Live", e[e.Alert = 4] = "Alert", e[e.Success = 5] = "Success", e[e.Prime = 6] = "Prime", e[e.Overlay = 7] = "Overlay"
         }(gn || (gn = {}));
@@ -4408,7 +4658,7 @@ webpackJsonp([64], {
                     className: c(t)
                 }, r(e)), e.label)
             };
-        n(212);
+        n(201);
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Small = 1] = "Small", e[e.ExtraSmall = 2] = "ExtraSmall"
         }(_n || (_n = {}));
@@ -4436,7 +4686,7 @@ webpackJsonp([64], {
                     "data-a-target": "tw-progress-bar-animation"
                 }))
             },
-            In = (n(213), function(e) {
+            In = (n(202), function(e) {
                 var t, n = "tw-" + o(),
                     i = {
                         "tw-radio": !0,
@@ -4466,7 +4716,7 @@ webpackJsonp([64], {
                     htmlFor: e.id ? e.id : n
                 }, e.label))
             }),
-            Nn = (n(214), function(e) {
+            Nn = (n(203), function(e) {
                 var t, n = o(),
                     i = {
                         "tw-toggle": !0,
@@ -4495,7 +4745,7 @@ webpackJsonp([64], {
                     className: "tw-toggle__button"
                 }))
             }),
-            Mn = (n(215), function(e) {
+            Mn = (n(204), function(e) {
                 var t, n = {
                     "tw-range": !0,
                     "tw-range--error": e.error
@@ -4517,7 +4767,7 @@ webpackJsonp([64], {
                     value: e.value
                 }, r(e)))
             }),
-            Dn = (n(216), function(e) {
+            Dn = (n(205), function(e) {
                 var t, n = "tw-" + o();
                 return e.tabIndex && (t = e.tabIndex), u.createElement("div", l.__assign({
                     className: c("tw-search-input")
@@ -4547,12 +4797,12 @@ webpackJsonp([64], {
                     value: e.value
                 }))
             }),
-            An = (n(217), function(e) {
+            An = (n(206), function(e) {
                 return u.createElement("div", l.__assign({
                     className: c("tw-segmented-button")
                 }, r(e)), e.children)
             }),
-            Bn = (n(218), function(e) {
+            Bn = (n(207), function(e) {
                 var t, n = {
                     "tw-segmented-button-option": !0
                 };
@@ -4579,7 +4829,7 @@ webpackJsonp([64], {
                     className: "tw-segmented-button-option__label"
                 }, e.label))
             }),
-            Pn = (n(219), function(e) {
+            Pn = (n(208), function(e) {
                 var t, n = {
                     "tw-select": !0,
                     "tw-select--disabled": e.disabled,
@@ -4600,7 +4850,7 @@ webpackJsonp([64], {
                     ref: e.refDelegate
                 }, r(e)), e.children)
             }),
-            Hn = (n(220), function(e) {
+            On = (n(209), function(e) {
                 var t, n, i = {
                     "tw-tab-nav__item": !0,
                     "mg-l-auto": e.pullRight,
@@ -4641,7 +4891,7 @@ webpackJsonp([64], {
                     role: "presentation"
                 }, r(e)), t)
             }),
-            On = (n(221), function(e) {
+            Hn = (n(210), function(e) {
                 return u.createElement("div", l.__assign({
                     className: e.alignRight ? "flex" : ""
                 }, r(e)), u.createElement("ul", {
@@ -4649,7 +4899,7 @@ webpackJsonp([64], {
                     role: "tablist"
                 }, e.children))
             }),
-            Vn = (n(222), function(e) {
+            Vn = (n(211), function(e) {
                 var t, n = {
                     "tw-textarea": !0,
                     "tw-textarea--no-resize": e.noResize,
@@ -4682,7 +4932,7 @@ webpackJsonp([64], {
                     ref: e.refDelegate
                 }, r(e))))
             }),
-            Fn = (n(223), function(e) {
+            Fn = (n(212), function(e) {
                 var t;
                 return t = u.createElement(ut, {
                     key: e.title
@@ -4714,7 +4964,7 @@ webpackJsonp([64], {
                     className: "tw-thumbnail-card"
                 }, r(e)), t)
             }),
-            Un = (n(224), function(e) {
+            Un = (n(213), function(e) {
                 var t = {
                     "tw-toast": !0
                 };
@@ -4749,15 +4999,15 @@ webpackJsonp([64], {
                     asset: Xe.Close
                 }))))))
             });
-        n(225);
+        n(214);
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.ExtraSmall = 1] = "ExtraSmall", e[e.Small = 2] = "Small", e[e.Large = 3] = "Large", e[e.None = 4] = "None"
         }(xn || (xn = {}));
-        var qn, jn = (Wn = {}, Wn[xn.ExtraSmall] = "tw-tower--gutter-xs", Wn[xn.Small] = "tw-tower--gutter-sm", Wn[xn.Large] = "tw-tower--gutter-lg", Wn[xn.None] = "tw-tower--gutter-none", Wn);
+        var qn, jn = (Gn = {}, Gn[xn.ExtraSmall] = "tw-tower--gutter-xs", Gn[xn.Small] = "tw-tower--gutter-sm", Gn[xn.Large] = "tw-tower--gutter-lg", Gn[xn.None] = "tw-tower--gutter-none", Gn);
         ! function(e) {
             e[e.ExtraSmall = 1] = "ExtraSmall", e[e.Small = 2] = "Small", e[e.Medium = 3] = "Medium", e[e.Large = 4] = "Large"
         }(qn || (qn = {}));
-        var Wn, Gn, Qn = (Gn = {}, Gn[qn.ExtraSmall] = "tw-tower--120", Gn[qn.Small] = "tw-tower--180", Gn[qn.Medium] = "tw-tower--240", Gn[qn.Large] = "tw-tower--300", Gn),
+        var Gn, Wn, Qn = (Wn = {}, Wn[qn.ExtraSmall] = "tw-tower--120", Wn[qn.Small] = "tw-tower--180", Wn[qn.Medium] = "tw-tower--240", Wn[qn.Large] = "tw-tower--300", Wn),
             Kn = function(e) {
                 var t = {
                     "tw-tower": !0,
@@ -4776,7 +5026,7 @@ webpackJsonp([64], {
                     className: c(t)
                 }, r(e)), e.children, n)
             },
-            Zn = (n(226), function(e) {
+            Zn = (n(215), function(e) {
                 var t = {
                     "tw-typeset": !0
                 };
@@ -4787,7 +5037,7 @@ webpackJsonp([64], {
         n.d(t, "e", function() {
             return le
         }), n.d(t, "f", function() {
-            return W
+            return G
         }), n.d(t, "g", function() {
             return J
         }), n.d(t, "h", function() {
@@ -4841,7 +5091,7 @@ webpackJsonp([64], {
         }), n.d(t, "N", function() {
             return en
         }), n.d(t, "O", function() {
-            return Gt
+            return Wt
         }), n.d(t, "G", function() {
             return tn
         }), n.d(t, "_8", function() {
@@ -4949,9 +5199,9 @@ webpackJsonp([64], {
         }), n.d(t, "_14", function() {
             return Pn
         }), n.d(t, "_18", function() {
-            return Hn
-        }), n.d(t, "_19", function() {
             return On
+        }), n.d(t, "_19", function() {
+            return Hn
         }), n.d(t, "_23", function() {
             return Vn
         }), n.d(t, "_27", function() {
@@ -4976,247 +5226,7 @@ webpackJsonp([64], {
             return r
         })
     },
-    30: function(e, t, n) {
-        "use strict";
-        var r = n(90),
-            i = n(116),
-            o = n(0),
-            a = n(15),
-            s = n(1),
-            l = n(2),
-            c = n(3),
-            u = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.getStyles = function() {
-                        var e = n.state,
-                            t = e.anchoredBottom,
-                            r = e.anchoredTop,
-                            i = e.top,
-                            o = e.width,
-                            a = t || r,
-                            s = "absolute";
-                        return window.outerWidth < (n.props.disableStickinessBelowWidth || 0) ? (s = "inherit", a = !1) : a && (s = "fixed"), {
-                            position: s,
-                            top: r ? "inherit" : i,
-                            width: a ? o : "inherit"
-                        }
-                    }, n.lockBottom = function(e) {
-                        n.setState({
-                            anchoredBottom: !0,
-                            top: window.innerHeight - e,
-                            width: n.element.getBoundingClientRect().width
-                        })
-                    }, n.lockTop = function() {
-                        n.setState({
-                            anchoredTop: !0,
-                            width: n.element.getBoundingClientRect().width
-                        })
-                    }, n.setRef = function(e) {
-                        return n.element = e
-                    }, n.state = {
-                        anchoredBottom: !1,
-                        anchoredTop: !1,
-                        lastOffset: void 0,
-                        offsetTop: void 0,
-                        top: void 0,
-                        width: void 0
-                    }, n
-                }
-                return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                    var e = this.element.getBoundingClientRect();
-                    this.setState({
-                        offsetTop: e.top
-                    });
-                    var t = this.context.registerReceiver;
-                    if (!t) return void l.i.warn("<StickyContainer /> initialized missing a <ScrollableArea /> provider");
-                    this.unregister = t(this)
-                }, t.prototype.componentWillUnmount = function() {
-                    this.unregister && this.unregister()
-                }, t.prototype.render = function() {
-                    return s.createElement(c.U, {
-                        position: c._2.Relative,
-                        fullWidth: !0
-                    }, s.createElement("div", {
-                        className: "sticky-container",
-                        ref: this.setRef,
-                        style: this.getStyles()
-                    }, this.props.children))
-                }, t.prototype.checkVisible = function(e, t) {
-                    return o.__awaiter(this, void 0, void 0, function() {
-                        var e, n, i, a, s;
-                        return o.__generator(this, function(o) {
-                            return !t || t.type !== r.a.Resize && t.type !== r.a.Wheel && t.type !== r.a.Scroll || (e = this.state.anchoredBottom || this.state.anchoredTop, n = t.offset >= (this.state.lastOffset || 0), t.type === r.a.Resize ? (this.unlock(t.offset), this.checkBounding(n, t.offset)) : t.wheelEvent && t.type === r.a.Wheel && e ? (i = t.wheelEvent, a = void 0, a = 0 === i.deltaMode ? i.deltaY || i.wheelDelta : 16 * i.deltaY, s = a + t.offset, this.context.yScrollTo(s), this.checkBounding(a > 0, t.offset)) : t.type !== r.a.Scroll || t.offset === this.state.lastOffset || e || this.checkBounding(n, t.offset)), [2]
-                        })
-                    })
-                }, t.prototype.checkBounding = function(e, t) {
-                    e && this.state.anchoredTop && this.unlock(t), !e && this.state.anchoredBottom && this.unlock(t), this.state.anchoredBottom || this.state.anchoredTop || this.shouldLock(e), this.setState({
-                        lastOffset: t
-                    })
-                }, t.prototype.shouldLock = function(e) {
-                    var t = this.element.getBoundingClientRect(),
-                        n = this.state.offsetTop || 0;
-                    if (t.height < window.innerHeight - n) return void this.lockTop();
-                    var r = t.top < n,
-                        i = t.top >= window.innerHeight,
-                        o = t.bottom < n,
-                        a = t.bottom + (this.props.bottomPixelThreshold || 0) >= window.innerHeight,
-                        s = !i && !r,
-                        l = !a && !o;
-                    !s && !l || s && l || (!e && s && this.lockTop(), e && l && this.lockBottom(t.height + (this.props.bottomPixelThreshold || 0))), r && o && this.lockBottom(t.height + (this.props.bottomPixelThreshold || 0)), i && a && this.lockTop()
-                }, t.prototype.unlock = function(e) {
-                    var t, n = this.state,
-                        r = n.offsetTop,
-                        i = n.width,
-                        o = this.element.getBoundingClientRect(),
-                        a = window.innerHeight - (r || 0),
-                        s = i;
-                    t = "inherit", o.height <= a ? s = "inherit" : this.state.anchoredTop ? t = e : this.state.anchoredBottom && (t = e - o.height + a - (this.props.bottomPixelThreshold || 0)), this.setState({
-                        top: t,
-                        width: s,
-                        anchoredBottom: !1,
-                        anchoredTop: !1
-                    })
-                }, t.contextTypes = {
-                    registerReceiver: a.func,
-                    yScrollTo: a.func
-                }, t
-            }(s.Component);
-        n.d(t, "b", function() {
-            return r.b
-        }), n.d(t, "a", function() {
-            return i.a
-        }), n.d(t, "c", function() {
-            return u
-        })
-    },
-    300: function(e, t) {},
-    311: function(e, t, n) {
-        (function(t) {
-            function n(e, t, n) {
-                switch (n.length) {
-                    case 0:
-                        return e.call(t);
-                    case 1:
-                        return e.call(t, n[0]);
-                    case 2:
-                        return e.call(t, n[0], n[1]);
-                    case 3:
-                        return e.call(t, n[0], n[1], n[2])
-                }
-                return e.apply(t, n)
-            }
-
-            function r(e, t) {
-                for (var n = -1, r = e ? e.length : 0, i = Array(r); ++n < r;) i[n] = t(e[n], n, e);
-                return i
-            }
-
-            function i(e, t) {
-                for (var n = -1, r = t.length, i = e.length; ++n < r;) e[i + n] = t[n];
-                return e
-            }
-
-            function o(e, t, n, r, a) {
-                var s = -1,
-                    c = e.length;
-                for (n || (n = l), a || (a = []); ++s < c;) {
-                    var u = e[s];
-                    t > 0 && n(u) ? t > 1 ? o(u, t - 1, n, r, a) : i(a, u) : r || (a[a.length] = u)
-                }
-                return a
-            }
-
-            function a(e, t) {
-                return e = Object(e), s(e, t, function(t, n) {
-                    return n in e
-                })
-            }
-
-            function s(e, t, n) {
-                for (var r = -1, i = t.length, o = {}; ++r < i;) {
-                    var a = t[r],
-                        s = e[a];
-                    n(s, a) && (o[a] = s)
-                }
-                return o
-            }
-
-            function l(e) {
-                return D(e) || u(e) || !!(N && e && e[N])
-            }
-
-            function c(e) {
-                if ("string" == typeof e || v(e)) return e;
-                var t = e + "";
-                return "0" == t && 1 / e == -w ? "-0" : t
-            }
-
-            function u(e) {
-                return h(e) && x.call(e, "callee") && (!I.call(e, "callee") || R.call(e) == y)
-            }
-
-            function d(e) {
-                return null != e && m(e.length) && !p(e)
-            }
-
-            function h(e) {
-                return f(e) && d(e)
-            }
-
-            function p(e) {
-                var t = g(e) ? R.call(e) : "";
-                return t == _ || t == E
-            }
-
-            function m(e) {
-                return "number" == typeof e && e > -1 && e % 1 == 0 && e <= b
-            }
-
-            function g(e) {
-                var t = typeof e;
-                return !!e && ("object" == t || "function" == t)
-            }
-
-            function f(e) {
-                return !!e && "object" == typeof e
-            }
-
-            function v(e) {
-                return "symbol" == typeof e || f(e) && R.call(e) == k
-            }
-            var w = 1 / 0,
-                b = 9007199254740991,
-                y = "[object Arguments]",
-                _ = "[object Function]",
-                E = "[object GeneratorFunction]",
-                k = "[object Symbol]",
-                C = "object" == typeof t && t && t.Object === Object && t,
-                S = "object" == typeof self && self && self.Object === Object && self,
-                L = C || S || Function("return this")(),
-                T = Object.prototype,
-                x = T.hasOwnProperty,
-                R = T.toString,
-                z = L.Symbol,
-                I = T.propertyIsEnumerable,
-                N = z ? z.isConcatSpreadable : void 0,
-                M = Math.max,
-                D = Array.isArray,
-                A = function(e, t) {
-                    return t = M(void 0 === t ? e.length - 1 : t, 0),
-                        function() {
-                            for (var r = arguments, i = -1, o = M(r.length - t, 0), a = Array(o); ++i < o;) a[i] = r[t + i];
-                            i = -1;
-                            for (var s = Array(t + 1); ++i < t;) s[i] = r[i];
-                            return s[t] = a, n(e, this, s)
-                        }
-                }(function(e, t) {
-                    return null == e ? {} : a(e, r(o(t, 1), c))
-                });
-            e.exports = A
-        }).call(t, n(32))
-    },
-    35: function(e, t, n) {
+    34: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -5483,8 +5493,8 @@ webpackJsonp([64], {
         var m, g = n(0),
             f = n(2),
             v = n(1),
-            w = n(134),
-            b = n(66);
+            w = n(123),
+            b = n(62);
         ! function(e) {
             e.Login = "login", e.Signup = "signup"
         }(m || (m = {}));
@@ -5492,13 +5502,13 @@ webpackJsonp([64], {
         ! function(e) {
             e.Height = "height", e.Loaded = "loaded", e.KrakenCallback = "krakenCallback", e.PassportCallback = "passportCallback", e.Heartbeat = "heartbeat"
         }(y || (y = {}));
-        var _ = n(20),
-            E = n(136),
-            k = n(43),
-            C = n(51),
-            S = n(14),
+        var _ = n(19),
+            E = n(125),
+            k = n(42),
+            C = n(50),
+            S = n(13),
             L = n(3),
-            T = (n(229), 5e3),
+            T = (n(218), 5e3),
             x = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -5644,14 +5654,14 @@ webpackJsonp([64], {
                     }))
                 }, t
             }(v.Component),
-            R = n(50),
-            z = n(49),
-            I = n(19),
-            N = n(72),
-            M = n(230);
+            R = n(49),
+            z = n(48),
+            I = n(18),
+            N = n(68),
+            M = n(219);
         t.f = i, t.h = o, t.g = a, t.a = s, t.d = l, t.c = c, t.b = u, t.e = d
     },
-    37: function(e, t, n) {
+    36: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -5661,7 +5671,7 @@ webpackJsonp([64], {
             e[e.Light = 0] = "Light", e[e.Dark = 1] = "Dark"
         }(r || (r = {}))
     },
-    42: function(e, t, n) {
+    41: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -5673,7 +5683,7 @@ webpackJsonp([64], {
         }
         t.b = r, t.a = i
     },
-    43: function(e, t, n) {
+    42: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -5742,8 +5752,8 @@ webpackJsonp([64], {
             return v
         }), t.e = r, t.h = i, t.d = o, t.b = a, t.c = s, t.g = l, t.f = c;
         var u = n(0),
-            d = n(33),
-            h = (n.n(d), n(42)),
+            d = n(32),
+            h = (n.n(d), n(41)),
             p = "twilight-login-state",
             m = "api_token",
             g = "twilight-user",
@@ -5757,7 +5767,7 @@ webpackJsonp([64], {
                 expires: 365
             })
     },
-    45: function(e, t, n) {
+    44: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -5818,36 +5828,41 @@ webpackJsonp([64], {
         t.a = o;
         var a = n(0),
             s = n(2),
-            l = n(37),
-            c = n(46),
-            u = n(69);
+            l = n(36),
+            c = n(45),
+            u = n(65);
         s.n.store.registerReducer("ui", i)
     },
-    46: function(e, t, n) {
+    45: function(e, t, n) {
         "use strict";
 
         function r() {
-            return a.k.get(l, s.a.Light)
+            return s.k.get(c, o())
         }
 
         function i(e) {
-            a.k.set(l, e)
+            s.k.set(c, e)
         }
 
-        function o(e) {
+        function o() {
+            return s.k.get(u, l.a.Light) !== l.a.Light ? l.a.Dark : l.a.Light
+        }
+
+        function a(e) {
             switch (e) {
-                case s.a.Dark:
+                case l.a.Dark:
                     return "theme--dark";
                 default:
                     return ""
             }
         }
-        t.a = r, t.c = i, t.b = o;
-        var a = n(2),
-            s = n(37),
-            l = "twilight.theme"
+        t.a = r, t.c = i, t.b = a;
+        var s = n(2),
+            l = n(36),
+            c = "twilight.theme",
+            u = "storage:theme"
     },
-    49: function(e, t, n) {
+    48: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -5890,7 +5905,7 @@ webpackJsonp([64], {
             c = "core.session.FIRST_PAGE_LOADED",
             u = "core.session.INITIAL_AVAILABILITY_SET"
     },
-    50: function(e, t, n) {
+    49: function(e, t, n) {
         "use strict";
 
         function r(e, t) {
@@ -5914,95 +5929,7 @@ webpackJsonp([64], {
         var o = "core.modal.MODAL_SHOWN",
             a = "core.ui.MODAL_CLOSED"
     },
-    51: function(e, t, n) {
-        "use strict";
-
-        function r(e, t) {
-            var n = {
-                action: t.action,
-                auth_ux: "modal",
-                type: t.type,
-                nonce: t.nonce
-            };
-            a.n.tracking.track(e, n)
-        }
-
-        function i() {
-            for (var e = "", t = 0; t < s; t++) {
-                var n = Math.floor(Math.random() * l.length);
-                e += l.charAt(n)
-            }
-            return e
-        }
-        n.d(t, "a", function() {
-            return o
-        }), t.c = r, t.b = i;
-        var o, a = n(2),
-            s = 30,
-            l = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        ! function(e) {
-            e.BitsLandingPage = "bits_landing_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.EventFollowButton = "event_follow_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.HCGSignupButton = "hgc_signup_button", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SubsLandingPage = "subs_landing_Page", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.VODComment = "vod_comment", e.VODOptions = "vod_options"
-        }(o || (o = {}))
-    },
-    55: function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            for (var t = {}, n = 0, r = Object.keys(e).filter(function(e) {
-                    return e.startsWith("data-")
-                }); n < r.length; n++) {
-                var i = r[n];
-                t[i] = e[i]
-            }
-            return t
-        }
-        t.a = r
-    },
-    56: function(e, t, n) {
-        "use strict";
-        var r = n(172);
-        n.d(t, "SpadeFollowingCategory", function() {
-            return r.a
-        }), n.d(t, "SpadePlatform", function() {
-            return r.b
-        }), n.d(t, "SpadeVideoBroadcastType", function() {
-            return r.c
-        });
-        var i = n(173);
-        n.d(t, "SpadeEventType", function() {
-            return i.a
-        });
-        var o = n(174);
-        n.d(t, "PageviewContent", function() {
-            return o.a
-        }), n.d(t, "PageviewDirectoryContentType", function() {
-            return o.b
-        }), n.d(t, "PageviewFollowingTab", function() {
-            return o.c
-        }), n.d(t, "PageviewLocation", function() {
-            return o.d
-        }), n.d(t, "PageviewMedium", function() {
-            return o.e
-        });
-        var a = n(175);
-        n.n(a);
-        n.o(a, "ShareItemContext") && n.d(t, "ShareItemContext", function() {
-            return a.ShareItemContext
-        }), n.o(a, "ShareItemSourceItemType") && n.d(t, "ShareItemSourceItemType", function() {
-            return a.ShareItemSourceItemType
-        }), n.o(a, "ShareItemType") && n.d(t, "ShareItemType", function() {
-            return a.ShareItemType
-        });
-        var s = n(176);
-        n.d(t, "ShareItemContext", function() {
-            return s.a
-        }), n.d(t, "ShareItemSourceItemType", function() {
-            return s.b
-        }), n.d(t, "ShareItemType", function() {
-            return s.c
-        })
-    },
-    6: function(e, t, n) {
+    5: function(e, t, n) {
         "use strict";
 
         function r(e, t) {
@@ -6037,9 +5964,9 @@ webpackJsonp([64], {
         var i = n(0),
             o = n(1),
             a = n(3),
-            s = n(15),
+            s = n(14),
             l = n(2),
-            c = n(24),
+            c = n(23),
             u = function() {
                 function e(e, t) {
                     var n = this;
@@ -6099,8 +6026,8 @@ webpackJsonp([64], {
                 }, t = i.__decorate([r("CriticalImage")], t)
             }(o.Component),
             m = p,
-            g = n(30),
-            f = n(65),
+            g = n(29),
+            f = n(61),
             v = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -6130,7 +6057,7 @@ webpackJsonp([64], {
                 }, t
             }(o.Component),
             y = b,
-            _ = (n(235), function(e) {
+            _ = (n(224), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.onClickExpand = function() {
@@ -6199,7 +6126,7 @@ webpackJsonp([64], {
                 }, t
             }(o.Component),
             C = k,
-            S = (n(236), function(e) {
+            S = (n(225), function(e) {
                 function t(t) {
                     return e.call(this, t) || this
                 }
@@ -6248,7 +6175,7 @@ webpackJsonp([64], {
                 }, t
             }(o.Component)),
             L = S,
-            T = (n(237), function(e) {
+            T = (n(226), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -6429,7 +6356,7 @@ webpackJsonp([64], {
                     }), n
                 }, e
             }(),
-            z = (n(238), "twilight.perf-hide"),
+            z = (n(227), "twilight.perf-hide"),
             I = "twilight.perf-size",
             N = "twilight.perf-tab",
             M = 3,
@@ -6689,7 +6616,97 @@ webpackJsonp([64], {
             return r
         })
     },
-    65: function(e, t, n) {
+    50: function(e, t, n) {
+        "use strict";
+
+        function r(e, t) {
+            var n = {
+                action: t.action,
+                auth_ux: "modal",
+                type: t.type,
+                nonce: t.nonce
+            };
+            a.n.tracking.track(e, n)
+        }
+
+        function i() {
+            for (var e = "", t = 0; t < s; t++) {
+                var n = Math.floor(Math.random() * l.length);
+                e += l.charAt(n)
+            }
+            return e
+        }
+        n.d(t, "a", function() {
+            return o
+        }), t.c = r, t.b = i;
+        var o, a = n(2),
+            s = 30,
+            l = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        ! function(e) {
+            e.BitsLandingPage = "bits_landing_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.EventFollowButton = "event_follow_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.HCGSignupButton = "hgc_signup_button", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SubsLandingPage = "subs_landing_Page", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.VODComment = "vod_comment", e.VODOptions = "vod_options"
+        }(o || (o = {}))
+    },
+    54: function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            for (var t = {}, n = 0, r = Object.keys(e).filter(function(e) {
+                    return e.startsWith("data-")
+                }); n < r.length; n++) {
+                var i = r[n];
+                t[i] = e[i]
+            }
+            return t
+        }
+        t.a = r
+    },
+    55: function(e, t, n) {
+        "use strict";
+        var r = n(161);
+        n.d(t, "SpadeFollowingCategory", function() {
+            return r.a
+        }), n.d(t, "SpadePlatform", function() {
+            return r.b
+        }), n.d(t, "SpadeVideoBroadcastType", function() {
+            return r.c
+        }), n.d(t, "TwitchDataType", function() {
+            return r.d
+        });
+        var i = n(162);
+        n.d(t, "SpadeEventType", function() {
+            return i.a
+        });
+        var o = n(163);
+        n.d(t, "PageviewContent", function() {
+            return o.a
+        }), n.d(t, "PageviewDirectoryContentType", function() {
+            return o.b
+        }), n.d(t, "PageviewFollowingTab", function() {
+            return o.c
+        }), n.d(t, "PageviewLocation", function() {
+            return o.d
+        }), n.d(t, "PageviewMedium", function() {
+            return o.e
+        });
+        var a = n(164);
+        n.n(a);
+        n.o(a, "ShareItemContext") && n.d(t, "ShareItemContext", function() {
+            return a.ShareItemContext
+        }), n.o(a, "ShareItemSourceItemType") && n.d(t, "ShareItemSourceItemType", function() {
+            return a.ShareItemSourceItemType
+        }), n.o(a, "ShareItemType") && n.d(t, "ShareItemType", function() {
+            return a.ShareItemType
+        });
+        var s = n(165);
+        n.d(t, "ShareItemContext", function() {
+            return s.a
+        }), n.d(t, "ShareItemSourceItemType", function() {
+            return s.b
+        }), n.d(t, "ShareItemType", function() {
+            return s.c
+        })
+    },
+    61: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -6699,11 +6716,11 @@ webpackJsonp([64], {
             e[e.Backspace = 8] = "Backspace", e[e.Tab = 9] = "Tab", e[e.Enter = 13] = "Enter", e[e.Esc = 27] = "Esc", e[e.Space = 32] = "Space", e[e.Left = 37] = "Left", e[e.Up = 38] = "Up", e[e.Right = 39] = "Right", e[e.Down = 40] = "Down", e[e.Colon = 58] = "Colon", e[e.At = 64] = "At", e[e.P = 80] = "P"
         }(r || (r = {}))
     },
-    66: function(e, t, n) {
+    62: function(e, t, n) {
         "use strict";
         var r = n(1),
             i = n(3),
-            o = (n(228), function(e) {
+            o = (n(217), function(e) {
                 return r.createElement(i._17, {
                     className: "core-error",
                     color: i.F.Alt2,
@@ -6740,15 +6757,24 @@ webpackJsonp([64], {
             return o
         })
     },
-    67: function(e, t, n) {
+    63: function(e, t, n) {
         "use strict";
 
         function r(e) {
+            for (var t = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", n = "", r = 0; r < e; r++) n += t.charAt(Math.floor(Math.random() * t.length));
+            return n
+        }
+
+        function i() {
+            return "" + h + r(5) + "/" + r(10) + "/" + r(6) + "'/;ord='" + Date.now()
+        }
+
+        function o(e) {
             return !!(e && e.timing && e.getEntriesByType && e.setResourceTimingBufferSize && e.clearResourceTimings)
         }
 
-        function i(e) {
-            var t = e ? te()() : $()(),
+        function a(e) {
+            var t = e ? ae()() : ie()(),
                 n = t.push.bind(t),
                 r = /^([^#?]+)?(\?[^#]+)?(\#.+)?$/i;
             return t.push = function(e, i) {
@@ -6764,15 +6790,70 @@ webpackJsonp([64], {
             }, t
         }
 
-        function o(e) {
-            le = new Ee(e), ce = le.config, ue = le.dynamicSettings, de = le.intl.formatDate, he = le.intl.formatMessage, pe = le.intl.formatNumber, me = le.intl.formatNumberShort, ge = le.intl.formatRelativeDate, fe = le.intl.formatTime, ve = le.logger, we = le.pubsub, be = le.storage, ye = le.tempStorage, _e = le.tracking
+        function s(e) {
+            pe = new Te(e), me = pe.config, ge = pe.dynamicSettings, fe = pe.intl.formatDate, ve = pe.intl.formatMessage, we = pe.intl.formatNumber, be = pe.intl.formatNumberShort, ye = pe.intl.formatRelativeDate, _e = pe.intl.formatTime, Ee = pe.logger, ke = pe.pubsub, Ce = pe.storage, Se = pe.tempStorage, Le = pe.tracking
         }
-        var a = n(1),
-            s = n(31),
-            l = n(114),
-            c = n(17);
+        var l = n(1),
+            c = n(30),
+            u = n(107),
+            d = n(16),
+            h = "https://ad.doubleclick.net/ddm/ad/",
+            p = n(93),
+            m = function() {
+                function e(e) {
+                    this.detect = !1, this.logger = e.logger.withCategory("ad-block-detector"), this.logger.debug("Created.")
+                }
+                return e.prototype.detectAdBlock = function() {
+                    this.logger.debug("Start ad block tests."), this.detectEasyList(), this.detectEasyListPrivacy()
+                }, e.prototype.detectEasyList = function() {
+                    var e = this,
+                        t = {
+                            method: "GET",
+                            mode: "no-cors"
+                        };
+                    fetch(i(), t).then(function() {
+                        e.logger.debug("DoubleClick is reachable.")
+                    }).catch(function(t) {
+                        e.logger.debug("DoubleClick is unreachable.", {
+                            err: t
+                        }), e.detect = !0
+                    })
+                }, e.prototype.detectEasyListPrivacy = function() {
+                    var e = this,
+                        t = {
+                            event: "dummy-event",
+                            properties: {
+                                time: Date.now(),
+                                random1: r(256),
+                                random2: r(256),
+                                random3: r(256),
+                                random4: r(256)
+                            }
+                        },
+                        n = {
+                            method: "POST",
+                            body: new Blob([Object(p.a)([t])], {
+                                type: "application/x-www-form-urlencoded; charset=UTF-8"
+                            })
+                        };
+                    fetch("https://spade.twitch.tv", n).then(function(t) {
+                        e.logger.debug("Spade is reachable.", {
+                            status: t.status
+                        })
+                    }).catch(function(t) {
+                        e.logger.debug("Spade unreachable: ", {
+                            err: t
+                        }), e.detect = !0
+                    })
+                }, e.prototype.addTwitchGlobal = function() {
+                    if (window.Twitch || (window.Twitch = {}), window.Twitch.sentinel) return void this.logger.debug("Sentinel global already exists.", {
+                        sentinel: window.Twitch.sentinel
+                    });
+                    window.Twitch.sentinel = this, this.logger.debug("Setting global sentinel.")
+                }, e
+            }();
         window._sp_ = window._sp_ || {}, window._sp_.config = window._sp_.config || {};
-        var u, d = function() {
+        var g, f = function() {
                 function e(e) {
                     var t = this;
                     this.detect = !1, this.logger = e.logger.withCategory("AdBlockSentinel"), window.sp_cid = e.cid, window._sp_.config.account_id = e.accountID, document.addEventListener("sp.blocking", function() {
@@ -6788,12 +6869,12 @@ webpackJsonp([64], {
                     window._sp_ && window._sp_.pageChange ? (window._sp_.pageChange(), this.logger.debug("Called pageChange method")) : this.logger.debug("window._sp_ or window._sp_.pageChange does not exist.")
                 }, e
             }(),
-            h = n(0),
-            p = n(33),
-            m = n(336),
-            g = n(21),
-            f = n(2),
-            v = {
+            v = n(0),
+            w = n(32),
+            b = n(316),
+            y = n(20),
+            _ = n(2),
+            E = {
                 "59c5198b-ea6d-423d-b337-ea93d0dc8d66": "no",
                 "298a5f39-228a-487a-ad06-422c18458403": "off",
                 "32099615-3609-4658-9f6b-5c1c1daa3510": "no",
@@ -6806,9 +6887,10 @@ webpackJsonp([64], {
                 "011d1499-61b3-49b2-92b2-b2ffd353ef00": "no",
                 "afc307f3-4011-40ba-9406-56c474b5922b": "control",
                 "1318509a-bf97-475d-acdc-df6a24ef6e3e": "none",
-                "d6bb4aa4-efae-4031-96be-f08950d6c8f4": "shown"
+                "d6bb4aa4-efae-4031-96be-f08950d6c8f4": "shown",
+                "db2180db-bc89-4f97-8bef-208b1782e18f": "off"
             },
-            w = {
+            k = {
                 TWILIGHT_LEEROY_JENKINS: "59c5198b-ea6d-423d-b337-ea93d0dc8d66",
                 MERCH_STORE_LAUNCH: "298a5f39-228a-487a-ad06-422c18458403",
                 TWILIGHT_STREAM_SUMMARY: "32099615-3609-4658-9f6b-5c1c1daa3510",
@@ -6821,9 +6903,10 @@ webpackJsonp([64], {
                 TWILIGHT_SUB_GIFTING: "011d1499-61b3-49b2-92b2-b2ffd353ef00",
                 TWILIGHT_VIDEO_FEATURO_EN: "afc307f3-4011-40ba-9406-56c474b5922b",
                 TWILIGHT_VIDEOS_IN_SIDENAV: "1318509a-bf97-475d-acdc-df6a24ef6e3e",
-                TWILIGHT_EVENT_GAME_DIRECTORY: "d6bb4aa4-efae-4031-96be-f08950d6c8f4"
+                TWILIGHT_EVENT_GAME_DIRECTORY: "d6bb4aa4-efae-4031-96be-f08950d6c8f4",
+                TWILIGHT_LEADERBOARDS: "db2180db-bc89-4f97-8bef-208b1782e18f"
             },
-            b = {
+            C = {
                 MERCH_STORE_LAUNCH: "on",
                 TWILIGHT_STREAM_SUMMARY: "yes",
                 TWILIGHT_ACHIEVE: "yes",
@@ -6831,21 +6914,21 @@ webpackJsonp([64], {
             };
         ! function(e) {
             e.Channel = "channel_id", e.Device = "device_id", e.User = "user_id"
-        }(u || (u = {}));
-        var y, _ = function() {
+        }(g || (g = {}));
+        var S, L = function() {
                 function e(e) {
                     this.logger = e.logger.withCategory("Experiment"), this.session = e.session, this.store = e.store, this.tracking = e.tracking
                 }
                 return e.prototype.getAssignment = function(e, t) {
-                    return void 0 === t && (t = {}), h.__awaiter(this, void 0, void 0, function() {
+                    return void 0 === t && (t = {}), v.__awaiter(this, void 0, void 0, function() {
                         var n, r, i, o, a;
-                        return h.__generator(this, function(s) {
+                        return v.__generator(this, function(s) {
                             switch (s.label) {
                                 case 0:
                                     return [4, this.initialize()];
                                 case 1:
-                                    if (s.sent(), !w[e]) return this.logger.warn("Experiment name not in mapping", e), [2, null];
-                                    if (n = w[e], !this.experiments[n]) return this.logger.warn("Unable to find experiment configuration", {
+                                    if (s.sent(), !k[e]) return this.logger.warn("Experiment name not in mapping", e), [2, null];
+                                    if (n = k[e], !this.experiments[n]) return this.logger.warn("Unable to find experiment configuration", {
                                         name: e,
                                         id: n
                                     }), [2, null];
@@ -6854,15 +6937,15 @@ webpackJsonp([64], {
                                         id: n,
                                         experiment: r
                                     }), [2, null];
-                                    switch (i = this.assignments[n], this.overrides[n] ? o = this.overrides[n] : 3 === r.t ? t.channel ? o = Object(m.selectTreatment)(n, r, t.channel) : (this.logger.warn("Called getAssignment() for channel experiment with no channel", r), o = i) : o = i, r.t) {
+                                    switch (i = this.assignments[n], this.overrides[n] ? o = this.overrides[n] : 3 === r.t ? t.channel ? o = Object(b.selectTreatment)(n, r, t.channel) : (this.logger.warn("Called getAssignment() for channel experiment with no channel", r), o = i) : o = i, r.t) {
                                         case 1:
-                                            a = u.Device;
+                                            a = g.Device;
                                             break;
                                         case 2:
-                                            a = u.User;
+                                            a = g.User;
                                             break;
                                         case 3:
-                                            a = u.Channel;
+                                            a = g.Channel;
                                             break;
                                         default:
                                             a = void 0
@@ -6890,12 +6973,12 @@ webpackJsonp([64], {
                         experiment_type: e.type
                     })
                 }, e.prototype.initialize = function() {
-                    return h.__awaiter(this, void 0, void 0, function() {
+                    return v.__awaiter(this, void 0, void 0, function() {
                         var e, t, n = this;
-                        return h.__generator(this, function(r) {
+                        return v.__generator(this, function(r) {
                             return this.initializing ? [2, this.initializing] : (this.initializing = new Promise(function(e) {
                                 return n.initializeComplete = e
-                            }), window.__twilightSettings && window.__twilightSettings.experiments ? (this.experiments = window.__twilightSettings && window.__twilightSettings.experiments, (e = Object(m.validate)(this.experiments)) && (this.logger.error(e, "Invalid experiment configuration. Experiments will be default"), this.experiments = {})) : (this.logger.warn("Unable to get experiment data from dynamic settings. Experiments will be default."), this.experiments = {}), t = this.store.getState().session.user, this.overrides = this.determineOverrides(!(!t || !t.roles) && t.roles.isStaff), this.login = t ? t.login : void 0, this.assignments = this.determineAssignments(this.experiments, this.session.deviceID, this.login), this.logger.debug("Experiment settings determined", {
+                            }), window.__twilightSettings && window.__twilightSettings.experiments ? (this.experiments = window.__twilightSettings && window.__twilightSettings.experiments, (e = Object(b.validate)(this.experiments)) && (this.logger.error(e, "Invalid experiment configuration. Experiments will be default"), this.experiments = {})) : (this.logger.warn("Unable to get experiment data from dynamic settings. Experiments will be default."), this.experiments = {}), t = this.store.getState().session.user, this.overrides = this.determineOverrides(!(!t || !t.roles) && t.roles.isStaff), this.login = t ? t.login : void 0, this.assignments = this.determineAssignments(this.experiments, this.session.deviceID, this.login), this.logger.debug("Experiment settings determined", {
                                 overrides: this.overrides,
                                 assignments: this.assignments,
                                 experiments: this.experiments
@@ -6905,51 +6988,51 @@ webpackJsonp([64], {
                 }, e.prototype.determineOverrides = function(e) {
                     var t = this,
                         n = {};
-                    e && Object.keys(b).forEach(function(e) {
-                        w[e] ? b[e] && (n[w[e]] = b[e]) : t.logger.warn("Staff experiment name is not in mapping", e)
+                    e && Object.keys(C).forEach(function(e) {
+                        k[e] ? C[e] && (n[k[e]] = C[e]) : t.logger.warn("Staff experiment name is not in mapping", e)
                     });
                     var r = {};
                     try {
-                        var i = p.get(f.a.experimentsOverrideCookie);
+                        var i = w.get(_.a.experimentsOverrideCookie);
                         if (i) {
                             var o = JSON.parse(i);
                             Object.keys(o).forEach(function(e) {
-                                v[e] ? r[e] = o[e] : t.logger.warn("Cookie experiment ID is not in DEFAULT_ASSIGNMENTS mapping", e)
+                                E[e] ? r[e] = o[e] : t.logger.warn("Cookie experiment ID is not in DEFAULT_ASSIGNMENTS mapping", e)
                             })
                         }
                     } catch (e) {
                         this.logger.warn("Unable to parse cookie overrides", e)
                     }
                     var a = {},
-                        s = g.parse(window.location.search);
+                        s = y.parse(window.location.search);
                     if (s.experiments) try {
                         var l = JSON.parse(s.experiments);
                         Object.keys(l).forEach(function(e) {
-                            w[e] ? a[w[e]] = l[e] : t.logger.warn("URL override experiment name is not in mapping", e)
+                            k[e] ? a[k[e]] = l[e] : t.logger.warn("URL override experiment name is not in mapping", e)
                         })
                     } catch (e) {
                         this.logger.warn("Unable to parse URL overrides", e)
                     }
-                    return h.__assign({}, n, r, a)
+                    return v.__assign({}, n, r, a)
                 }, e.prototype.determineAssignments = function(e, t, n) {
                     var r = this,
                         i = {};
-                    return Object.keys(v).forEach(function(o) {
+                    return Object.keys(E).forEach(function(o) {
                         if (!e[o]) return void r.logger.warn("Experiment is deprecated", o);
                         var a = e[o];
-                        1 === a.t ? i[o] = Object(m.selectTreatment)(o, a, t) : 2 === a.t && n ? i[o] = Object(m.selectTreatment)(o, a, n) : i[o] = v[o]
+                        1 === a.t ? i[o] = Object(b.selectTreatment)(o, a, t) : 2 === a.t && n ? i[o] = Object(b.selectTreatment)(o, a, n) : i[o] = E[o]
                     }), i
                 }, e
             }(),
-            E = n(170),
-            k = n.n(E),
-            C = function() {
+            T = n(159),
+            x = n.n(T),
+            R = function() {
                 function e(e, t) {
                     this.store = e, this.logger = t.withCategory("pubsub")
                 }
                 return e.prototype.subscribe = function(e) {
                     var t = this;
-                    this.driver || (this.driver = k.a.getInstance("production"));
+                    this.driver || (this.driver = x.a.getInstance("production"));
                     var n = this.wrapMessageCallback(e.onMessage),
                         r = this.store.getState();
                     return this.driver.Listen({
@@ -7003,7 +7086,7 @@ webpackJsonp([64], {
                     }
                 }, e
             }(),
-            S = function() {
+            z = function() {
                 function e(e) {
                     this.currentPageComponentName = "", this.buildID = e.buildID, this.endpoint = e.endpoint, this.logger = e.logger.withCategory("sentinel"), this.session = e.session, this.store = e.store, this.logger.debug("Creating instance.", {
                         buildID: e.buildID,
@@ -7011,9 +7094,9 @@ webpackJsonp([64], {
                     })
                 }
                 return e.prototype.report = function(e) {
-                    return h.__awaiter(this, void 0, void 0, function() {
+                    return v.__awaiter(this, void 0, void 0, function() {
                         var t, n, r, i;
-                        return h.__generator(this, function(o) {
+                        return v.__generator(this, function(o) {
                             switch (o.label) {
                                 case 0:
                                     t = {
@@ -7065,13 +7148,13 @@ webpackJsonp([64], {
                     this.currentPageComponentName = e
                 }, e
             }(),
-            L = n(14),
-            T = n(339),
-            x = function() {
+            I = n(13),
+            N = n(319),
+            M = function() {
                 function e(e, t) {
                     this.logger = e.withCategory("tmi");
                     var n = this.getConnectionOptions(t);
-                    this.disabled = n.disabled, this.logger.debug("Creating TMI client", n), this.client = new T.a({
+                    this.disabled = n.disabled, this.logger.debug("Creating TMI client", n), this.client = new N.a({
                         connection: n,
                         logger: this.logger
                     })
@@ -7085,9 +7168,9 @@ webpackJsonp([64], {
                         authToken: t
                     })
                 }, e.prototype.connect = function() {
-                    return h.__awaiter(this, void 0, void 0, function() {
+                    return v.__awaiter(this, void 0, void 0, function() {
                         var e, t;
-                        return h.__generator(this, function(n) {
+                        return v.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
                                     if (this.disabled) return [2];
@@ -7106,9 +7189,9 @@ webpackJsonp([64], {
                         })
                     })
                 }, e.prototype.join = function(e) {
-                    return h.__awaiter(this, void 0, void 0, function() {
+                    return v.__awaiter(this, void 0, void 0, function() {
                         var t, n;
-                        return h.__generator(this, function(r) {
+                        return v.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
                                     if (this.disabled) return [2];
@@ -7132,9 +7215,9 @@ webpackJsonp([64], {
                         })
                     })
                 }, e.prototype.part = function(e) {
-                    return h.__awaiter(this, void 0, void 0, function() {
+                    return v.__awaiter(this, void 0, void 0, function() {
                         var t, n;
-                        return h.__generator(this, function(r) {
+                        return v.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
                                     if (!this.client.isConnected()) return this.logger.warn("Attempt to part channel, but not connected."), [2];
@@ -7157,9 +7240,9 @@ webpackJsonp([64], {
                         })
                     })
                 }, e.prototype.awaitParted = function() {
-                    return h.__awaiter(this, void 0, void 0, function() {
+                    return v.__awaiter(this, void 0, void 0, function() {
                         var e;
-                        return h.__generator(this, function(t) {
+                        return v.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
                                     return t.trys.push([0, 3, , 4]), this.pendingPart ? (this.logger.debug("Waiting for pending part operation..."), [4, this.pendingPart]) : [3, 2];
@@ -7181,8 +7264,8 @@ webpackJsonp([64], {
                         this.logger.warn("Failed to disconnect client!", e)
                     }
                 }, e.prototype.ensureConnected = function() {
-                    return h.__awaiter(this, void 0, void 0, function() {
-                        return h.__generator(this, function(e) {
+                    return v.__awaiter(this, void 0, void 0, function() {
+                        return v.__generator(this, function(e) {
                             switch (e.label) {
                                 case 0:
                                     return this.client.isConnected() ? [3, 2] : (this.logger.debug("Connection not yet established. Waiting on connect to complete..."), [4, this.connect()]);
@@ -7202,9 +7285,9 @@ webpackJsonp([64], {
                             server: e.tmiHost
                         },
                         n = this.getQueryStringOptions();
-                    return null === n ? (this.logger.debug("Using options from configuration"), t) : "false" === n.server ? h.__assign({}, t, {
+                    return null === n ? (this.logger.debug("Using options from configuration"), t) : "false" === n.server ? v.__assign({}, t, {
                         disabled: !0
-                    }) : e.buildType !== c.a.Dev ? t : {
+                    }) : e.buildType !== d.a.Dev ? t : {
                         disabled: !1,
                         secure: null !== n.secure ? n.secure : t.secure,
                         port: null !== n.port ? n.port : t.port,
@@ -7212,7 +7295,7 @@ webpackJsonp([64], {
                     }
                 }, e.prototype.getQueryStringOptions = function() {
                     try {
-                        var e = g.parse(window.location.search),
+                        var e = y.parse(window.location.search),
                             t = {
                                 server: void 0 !== e.tmi_host ? e.tmi_host : null,
                                 port: void 0 !== e.tmi_port ? +e.tmi_port : null,
@@ -7225,9 +7308,9 @@ webpackJsonp([64], {
                     return null
                 }, e
             }(),
-            R = n(26),
-            z = n(11),
-            I = new s.IntrospectionFragmentMatcher({
+            D = n(25),
+            A = n(10),
+            B = new c.IntrospectionFragmentMatcher({
                 introspectionQueryResultData: {
                     __schema: {
                         types: [{
@@ -7286,28 +7369,28 @@ webpackJsonp([64], {
                     }
                 }
             }),
-            N = n(43),
-            M = "apollo_excluded_errors",
-            D = "apollo_log_errors",
-            A = function() {
+            P = n(42),
+            O = "apollo_excluded_errors",
+            H = "apollo_log_errors",
+            V = function() {
                 function e(e) {
-                    this.authToken = null, this.batchID = 0, this.excludedErrors = [], this.eventEmitter = new R.EventEmitter, this.logErrors = !1, this.queryID = 0, this.config = e.config, this.logger = e.logger.withCategory("apollo"), this.store = e.store, this.session = e.session, this.excludedErrors = e.dynamicSettings.get(M, []), this.logErrors = e.dynamicSettings.get(D, !1), this.client = this.createApolloClient(), this.reduxStore = Object(z.createStore)(Object(z.combineReducers)({
+                    this.authToken = null, this.batchID = 0, this.excludedErrors = [], this.eventEmitter = new D.EventEmitter, this.logErrors = !1, this.queryID = 0, this.config = e.config, this.logger = e.logger.withCategory("apollo"), this.store = e.store, this.session = e.session, this.excludedErrors = e.dynamicSettings.get(O, []), this.logErrors = e.dynamicSettings.get(H, !1), this.client = this.createApolloClient(), this.reduxStore = Object(A.createStore)(Object(A.combineReducers)({
                         apollo: this.client.reducer()
-                    }), (e.config.buildType !== c.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || z.compose)(Object(z.applyMiddleware)(this.client.middleware())))
+                    }), (e.config.buildType !== d.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || A.compose)(Object(A.applyMiddleware)(this.client.middleware())))
                 }
                 return e.prototype.addQueryMetricsListener = function(e) {
                     this.eventEmitter.addListener("query-metrics", e)
                 }, e.prototype.removeQueryMetricsListener = function(e) {
                     this.eventEmitter.removeListener("query-metrics", e)
                 }, e.prototype.createApolloClient = function() {
-                    return new s.ApolloClient({
+                    return new c.ApolloClient({
                         networkInterface: this.createNetworkInterface(),
                         queryDeduplication: !0,
-                        fragmentMatcher: I
+                        fragmentMatcher: B
                     })
                 }, e.prototype.createNetworkInterface = function() {
                     var e = this,
-                        t = Object(s.createBatchingNetworkInterface)({
+                        t = Object(c.createBatchingNetworkInterface)({
                             uri: this.config.graphqlEndpoint,
                             batchInterval: 10
                         });
@@ -7324,14 +7407,14 @@ webpackJsonp([64], {
                         }
                     }]), t.useAfter([{
                         applyBatchAfterware: function(t, n) {
-                            return h.__awaiter(e, void 0, void 0, function() {
+                            return v.__awaiter(e, void 0, void 0, function() {
                                 var e, r, i, o, a, s, l, c, u, d = this;
-                                return h.__generator(this, function(h) {
+                                return v.__generator(this, function(h) {
                                     switch (h.label) {
                                         case 0:
                                             e = 0, r = t.responses, h.label = 1;
                                         case 1:
-                                            return e < r.length ? (i = r[e], i.status ? 401 !== i.status ? [3, 2] : this.config.embedded ? (this.logger.warn("Received 401 response from GraphQL."), [3, 4]) : (this.logger.warn("Received 401 response from GraphQL, logging user out."), Object(N.e)(), window.location.reload(!0), [2]) : [3, 5]) : [3, 6];
+                                            return e < r.length ? (i = r[e], i.status ? 401 !== i.status ? [3, 2] : this.config.embedded ? (this.logger.warn("Received 401 response from GraphQL."), [3, 4]) : (this.logger.warn("Received 401 response from GraphQL, logging user out."), Object(P.e)(), window.location.reload(!0), [2]) : [3, 5]) : [3, 6];
                                         case 2:
                                             return a = (o = this.logger).error, s = [new Error("Received non-200 response from GraphQL."), "Received non-200 response from GraphQL."], l = {
                                                 status: i.status
@@ -7382,9 +7465,9 @@ webpackJsonp([64], {
                     }]), t
                 }, e
             }(),
-            B = n(340),
-            P = n.n(B),
-            H = function() {
+            F = n(320),
+            U = n.n(F),
+            q = function() {
                 function e(e) {
                     var t = this;
                     this.reducers = {}, this.rootReducer = function(e, n) {
@@ -7397,7 +7480,7 @@ webpackJsonp([64], {
                                     type: "@@INIT"
                                 });
                                 if (void 0 === o) throw new Error("Reducer for key " + n.name + " returned undefined!");
-                                r = h.__assign({}, e, (s = {}, s[n.name] = o, s)), i = !0;
+                                r = v.__assign({}, e, (s = {}, s[n.name] = o, s)), i = !0;
                                 break;
                             default:
                                 for (var a in t.reducers)
@@ -7409,7 +7492,7 @@ webpackJsonp([64], {
                         }
                         return i ? r : e;
                         var s
-                    }, this.reduxStore = Object(z.createStore)(this.rootReducer, (e.buildType !== c.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || z.compose)(Object(z.applyMiddleware)(P.a)))
+                    }, this.reduxStore = Object(A.createStore)(this.rootReducer, (e.buildType !== d.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || A.compose)(Object(A.applyMiddleware)(U.a)))
                 }
                 return e.prototype.getReduxStore = function() {
                     return this.reduxStore
@@ -7425,7 +7508,7 @@ webpackJsonp([64], {
                     })
                 }, e
             }(),
-            O = function() {
+            j = function() {
                 function e(e, t, n) {
                     this.sniffers = e, this.trackFunc = t, this.filterFunc = n, this.startCalled = !1
                 }
@@ -7481,27 +7564,27 @@ webpackJsonp([64], {
                     return e > 0 && t > 0 ? t - e : void 0
                 }, e
             }(),
-            V = "resource",
-            F = function() {
+            G = "resource",
+            W = function() {
                 function e(e, t, n) {
-                    var i = this;
-                    this.performance = t, this.frameURL = n, this.startCalled = !1, this.eventEmitter = new R.EventEmitter, this.emitterName = "network-sniffer", this.processNewResourceTimings = function() {
-                        var e = i.performance.getEntriesByType(V);
+                    var r = this;
+                    this.performance = t, this.frameURL = n, this.startCalled = !1, this.eventEmitter = new D.EventEmitter, this.emitterName = "network-sniffer", this.processNewResourceTimings = function() {
+                        var e = r.performance.getEntriesByType(G);
                         if (0 !== e.length) {
                             for (var t = 0, n = e; t < n.length; t++) {
-                                var r = n[t];
-                                i.fireResourceListeners(r)
+                                var i = n[t];
+                                r.fireResourceListeners(i)
                             }
-                            i.clearResourceBuffer()
+                            r.clearResourceBuffer()
                         }
-                    }, this.logger = e.withCategory("network-sniffer"), r(t) ? this.logger.debug("Created") : this.logger.warn("No sniffing allowed!")
+                    }, this.logger = e.withCategory("network-sniffer"), o(t) ? this.logger.debug("Created") : this.logger.warn("No sniffing allowed!")
                 }
                 return e.prototype.start = function() {
                     return !this.startCalled && (this.startCalled = !0, this.setResourceBufferSize(), setInterval(this.processNewResourceTimings, 500), !0)
                 }, e.prototype.getFrameTiming = function() {
                     return this.performance.timing
                 }, e.prototype.getAvailableResourceTimings = function() {
-                    return this.processNewResourceTimings(), this.performance.getEntriesByType(V)
+                    return this.processNewResourceTimings(), this.performance.getEntriesByType(G)
                 }, e.prototype.addResourceListener = function(e) {
                     this.eventEmitter.addListener(this.emitterName, e)
                 }, e.prototype.removeResourceListener = function(e) {
@@ -7514,10 +7597,10 @@ webpackJsonp([64], {
                     this.eventEmitter.emit(this.emitterName, e)
                 }, e
             }(),
-            U = function() {
+            Q = function() {
                 function e(e) {
                     var t = this;
-                    this.buffer = [], this.eventEmitter = new R.EventEmitter, this.emitterName = "network-metrics", this.loggedHostWarnings = {}, this.shouldLogHosts = function(e) {
+                    this.buffer = [], this.eventEmitter = new D.EventEmitter, this.emitterName = "network-metrics", this.loggedHostWarnings = {}, this.shouldLogHosts = function(e) {
                         return function(n) {
                             var r = new URL(n),
                                 i = r.hostname,
@@ -7545,7 +7628,7 @@ webpackJsonp([64], {
                     var n = this.createSniffers();
                     n.map(function(e) {
                         t.logger.debug("Starting network sniffer"), e.start()
-                    }), this.networkLogger = new O(n, this.onRequestCompleted, this.shouldLogHosts(e.config.networkLoggingHostNames)), this.logger.debug("Starting network logger"), this.networkLogger.start()
+                    }), this.networkLogger = new j(n, this.onRequestCompleted, this.shouldLogHosts(e.config.networkLoggingHostNames)), this.logger.debug("Starting network logger"), this.networkLogger.start()
                 }
                 return e.prototype.flush = function() {
                     this.networkLogger.flush()
@@ -7576,25 +7659,25 @@ webpackJsonp([64], {
                     }
                 }, e.prototype.canAccessPerformance = function(e) {
                     try {
-                        return r(e.performance)
+                        return o(e.performance)
                     } catch (e) {
                         return this.logger.warn("Unable to determine if network sniffing is allowed", e), !1
                     }
                 }, e.prototype.createSniffer = function(e) {
                     try {
-                        return new F(this.logger, e.performance, e.location.href)
+                        return new W(this.logger, e.performance, e.location.href)
                     } catch (e) {
                         this.logger.warn("Unable to create network sniffer", e)
                     }
                 }, e
             }(),
-            q = n(49),
-            j = n(24),
-            W = function() {
+            K = n(48),
+            Z = n(23),
+            J = function() {
                 function e(t, n) {
                     var r = this;
                     if (this.componentDuration = {
-                            latencyStatus: j.a.Unknown
+                            latencyStatus: Z.a.Unknown
                         }, this.isRoot = !1, this.hasReportedInteractive = !1, this.customEvents = {}, this.hasSentInitializing = !1, this.hasSentInteractive = !1, this.setLocation = function(e) {
                             r.root.setLocation(e)
                         }, this.sendInitializingEvent = function(e, t, n) {
@@ -7634,14 +7717,14 @@ webpackJsonp([64], {
                         label: n,
                         benchmark: r,
                         duration: {
-                            latencyStatus: j.a.Unknown
+                            latencyStatus: Z.a.Unknown
                         }
                     };
                     return this.root.customEvents[e] || (this.root.customEvents[e] = []), this.root.customEvents[e].push(i), this.raiseUpdate(), i
                 }, e.prototype.reportCustomEvent = function(e) {
                     if (!e.duration || !e.duration.value) {
                         var t = this.getCurrentTimestamp() - this.getRootInitTimestamp(),
-                            n = t <= e.benchmark ? j.a.Pass : j.a.Fail;
+                            n = t <= e.benchmark ? Z.a.Pass : Z.a.Fail;
                         e.duration.value = t, e.duration.latencyStatus = n, this.raiseUpdate()
                     }
                 }, e.prototype.createChild = function(t, n) {
@@ -7670,7 +7753,7 @@ webpackJsonp([64], {
                         var e = Math.round(this.completedTimestamp - this.startTimestamp);
                         this.componentDuration = {
                             value: e,
-                            latencyStatus: j.a.Unknown
+                            latencyStatus: Z.a.Unknown
                         }, this.logger.debug("Done", {
                             componantName: this.componentName,
                             durationMs: this.componentDuration.value
@@ -7710,7 +7793,7 @@ webpackJsonp([64], {
                     var e = this.getCurrentTimestamp();
                     this.startTimestamp = e, this.relativeStartTime = this.getRelativeStartTimestamp(), this.completedTimestamp = 0, this.componentDuration = {
                         value: void 0,
-                        latencyStatus: j.a.Unknown
+                        latencyStatus: Z.a.Unknown
                     }
                 }, e.prototype.childReset = function(e) {
                     this.children.includes(e) || this.children.push(e), this.completedTimestamp ? this.logger.warn("Child component reset after this one completed", {
@@ -7728,13 +7811,13 @@ webpackJsonp([64], {
                     }), this.hasReportedInteractive && this.checkChildCompleted()
                 }, e.counter = 1, e
             }(),
-            G = function() {
+            X = function() {
                 function e(e, t) {
                     this.tracking = e, this.logger = t.withCategory("tracker"), this.logger.debug("Created")
                 }
                 return e.prototype.trackNetworkRequestEvent = function(e, t, n, r, i, o) {
                     if (o.request_url === this.tracking.getEndpoint()) return void this.logger.debug("Skipping Spade network request.");
-                    this.tracking.trackBenchmark(L.SpadeEventType.NetworkRequest, h.__assign({
+                    this.tracking.trackBenchmark(I.SpadeEventType.NetworkRequest, v.__assign({
                         is_pre_pageload: r,
                         destination: e,
                         location: t,
@@ -7743,7 +7826,7 @@ webpackJsonp([64], {
                         relative_start_time: i
                     }, o))
                 }, e.prototype.trackCompleteTransition = function(e, t, n, r, i, o, a) {
-                    this.tracking.trackBenchmark(L.SpadeEventType.CompleteTransition, {
+                    this.tracking.trackBenchmark(I.SpadeEventType.CompleteTransition, {
                         client_time: r / 1e3,
                         lost_visibility: a,
                         destination: e,
@@ -7753,7 +7836,7 @@ webpackJsonp([64], {
                         time_from_fetch: i
                     })
                 }, e.prototype.trackAppBooted = function(e, t, n, r, i, o) {
-                    this.tracking.trackBenchmark(L.SpadeEventType.AppBooted, {
+                    this.tracking.trackBenchmark(I.SpadeEventType.AppBooted, {
                         client_time: r / 1e3,
                         lost_visibility: o,
                         destination: e,
@@ -7762,7 +7845,7 @@ webpackJsonp([64], {
                         time_from_fetch: i
                     })
                 }, e.prototype.trackInitialize = function(e, t, n, r, i, o, a, s, l, c) {
-                    this.tracking.trackBenchmark(L.SpadeEventType.ComponentInitializing, {
+                    this.tracking.trackBenchmark(I.SpadeEventType.ComponentInitializing, {
                         destination: e,
                         location: t,
                         page_component_name: n,
@@ -7775,7 +7858,7 @@ webpackJsonp([64], {
                         relative_start_time: i
                     })
                 }, e.prototype.trackInteractive = function(e, t, n, r, i, o, a, s, l, c, u, d) {
-                    this.tracking.trackBenchmark(L.SpadeEventType.ComponentInteractive, {
+                    this.tracking.trackBenchmark(I.SpadeEventType.ComponentInteractive, {
                         destination: e,
                         location: t,
                         page_component_name: n,
@@ -7791,7 +7874,7 @@ webpackJsonp([64], {
                         is_pre_pageload: l
                     })
                 }, e.prototype.trackFetchStart = function(e, t, n, r, i) {
-                    this.tracking.trackBenchmark(L.SpadeEventType.FetchStart, {
+                    this.tracking.trackBenchmark(I.SpadeEventType.FetchStart, {
                         destination: e,
                         location: t,
                         page_component_name: n,
@@ -7812,16 +7895,16 @@ webpackJsonp([64], {
                     })
                 }, e
             }(),
-            Q = function(e) {
+            Y = function(e) {
                 function t(t) {
                     var n = e.call(this, "Root", {
                         logger: t.logger.withCategory("latency-tracker")
                     }) || this;
                     if (n.rootInitDuration = {
-                            latencyStatus: j.a.Unknown
+                            latencyStatus: Z.a.Unknown
                         }, n.pageLoadDuration = {
-                            latencyStatus: j.a.Unknown
-                        }, n.networkEvents = [], n.queryBatchMetrics = [], n.queryEvents = [], n.isFirstLoad = !0, n.isRoot = !0, n.hasLostVisibility = !1, n.emitter = new R.EventEmitter, n.getLocation = function() {
+                            latencyStatus: Z.a.Unknown
+                        }, n.networkEvents = [], n.queryBatchMetrics = [], n.queryEvents = [], n.isFirstLoad = !0, n.isRoot = !0, n.hasLostVisibility = !1, n.emitter = new D.EventEmitter, n.getLocation = function() {
                             return n.location
                         }, n.setLocation = function(e) {
                             n.logger.debug("Updating location", {
@@ -7847,14 +7930,14 @@ webpackJsonp([64], {
                                 i = Math.round(e.start_time - n.getNavigationStartTimestamp());
                             n.networkEvents.push({
                                 networkEvent: e,
-                                latencyStatus: j.a.Unknown,
+                                latencyStatus: Z.a.Unknown,
                                 relativeStartTime: i,
                                 isPendingSpade: !0,
                                 isApiRequest: t,
                                 isPrePageload: r,
                                 duration: {
                                     value: e.duration,
-                                    latencyStatus: j.a.Unknown
+                                    latencyStatus: Z.a.Unknown
                                 }
                             }), n.reconcileQueries()
                         }, n.reconcileQueries = function() {
@@ -7876,7 +7959,7 @@ webpackJsonp([64], {
                                         return e.networkEvent.duration >= r.slowestQueryInBatch && e.networkEvent.start_time >= r.batchTimestamp
                                     })), i ? (r.relatedNetworkEvent = i.networkEvent, r.isPrePageload = i.isPrePageload, r.requestDuration = {
                                         value: Math.round(i.networkEvent.duration),
-                                        latencyStatus: j.a.Unknown
+                                        latencyStatus: Z.a.Unknown
                                     }) : e && n.logger.warn("Unable to find a related network event for query", {
                                         queryEvent: r,
                                         filteredApiRequests: t,
@@ -7893,7 +7976,7 @@ webpackJsonp([64], {
                             n.queryBatchMetrics.push({
                                 batchID: e.batchID,
                                 batchTimestamp: e.batchTimestamp,
-                                latencyStatus: j.a.Unknown,
+                                latencyStatus: Z.a.Unknown,
                                 slowestQueryInBatch: t
                             });
                             for (var r = 0, i = e.queries; r < i.length; r++) {
@@ -7904,16 +7987,16 @@ webpackJsonp([64], {
                                     relativeStartTime: Math.round(e.batchTimestamp - n.getNavigationStartTimestamp()),
                                     queryDuration: {
                                         value: o.durationMs,
-                                        latencyStatus: j.a.Unknown
+                                        latencyStatus: Z.a.Unknown
                                     },
                                     requestDuration: {
-                                        latencyStatus: j.a.Unknown
+                                        latencyStatus: Z.a.Unknown
                                     },
                                     operationName: o.operationName,
                                     queryID: o.queryID,
                                     slowestQueryInBatch: t,
                                     variables: o.variables,
-                                    latencyStatus: j.a.Unknown,
+                                    latencyStatus: Z.a.Unknown,
                                     isPendingSpade: !0,
                                     isPrePageload: !1
                                 })
@@ -7950,9 +8033,9 @@ webpackJsonp([64], {
                             }
                         }, n.checkLostVisibility = function() {
                             n.hasLostVisibility || (n.hasLostVisibility = document.hidden)
-                        }, n.root = n, n.store = t.store, n.networkEventsEnabled = t.networkEventsEnabled, n.componentEventsEnabled = t.componentEventsEnabled, n.toolsEnabled = t.toolsEnabled, n.graphqlEndpoint = t.config.graphqlEndpoint, n.tracker = new G(t.tracking, n.logger), n.navigationStart = performance.timing.navigationStart, n.rootInitDuration = {
+                        }, n.root = n, n.store = t.store, n.networkEventsEnabled = t.networkEventsEnabled, n.componentEventsEnabled = t.componentEventsEnabled, n.toolsEnabled = t.toolsEnabled, n.graphqlEndpoint = t.config.graphqlEndpoint, n.tracker = new X(t.tracking, n.logger), n.navigationStart = performance.timing.navigationStart, n.rootInitDuration = {
                             value: Math.round(n.startTimestamp - n.navigationStart),
-                            latencyStatus: j.a.Unknown
+                            latencyStatus: Z.a.Unknown
                         }, n.networkMonitor = t.networkMonitor, n.sentinel = t.sentinel, n.networkEventsEnabled && n.networkMonitor && n.networkMonitor.subscribeToUpdates(n.onNetworkRequest), n.networkEventsEnabled && t.apollo && t.apollo.addQueryMetricsListener(n.onQuery), t.trackVisibility) try {
                         n.checkLostVisibility(), document.addEventListener("visibilitychange", n.checkLostVisibility)
                     } catch (e) {
@@ -7960,18 +8043,18 @@ webpackJsonp([64], {
                     }
                     return n.raiseUpdate(), n
                 }
-                return h.__extends(t, e), t.prototype.subscribeToUpdates = function(e) {
+                return v.__extends(t, e), t.prototype.subscribeToUpdates = function(e) {
                     this.emitter.addListener("root-latency-tracker", e)
                 }, t.prototype.getCustomEvents = function() {
                     return this.customEvents
                 }, t.prototype.reset = function() {
                     var e = this.getCurrentTimestamp();
                     this.customEvents = {}, this.resetChildren(), this.children = [], this.startTimestamp = e, this.navigationStart = e, this.relativeStartTime = 0, this.rootInitDuration = {
-                        latencyStatus: j.a.Unknown
+                        latencyStatus: Z.a.Unknown
                     }, this.completedTimestamp = 0, this.componentDuration = {
-                        latencyStatus: j.a.Unknown
+                        latencyStatus: Z.a.Unknown
                     }, this.hasReportedInteractive = !1, this.page = void 0, this.isFirstLoad = !1, this.pageLoadDuration = {
-                        latencyStatus: j.a.Unknown
+                        latencyStatus: Z.a.Unknown
                     }, this.networkEvents = [], this.queryEvents = [], this.queryBatchMetrics = [], this.hasSentInitializing = !1, this.hasSentInteractive = !1, this.hasSentAppBooted = !1, this.hasSentCompleteTransition = !1, this.hasReportedInteractive = !1, this.hasLostVisibility = !1, this.raiseUpdate(), this.logger.debug("Reset Root")
                 }, t.prototype.raiseUpdate = function() {
                     var e = this;
@@ -7998,19 +8081,19 @@ webpackJsonp([64], {
                         if (!this.page) return void this.logger.warn("Root page attemped to complete without a registered page component.");
                         if (this.completedTimestamp = this.getCurrentTimestamp(), this.componentDuration = {
                                 value: Math.round(this.completedTimestamp - this.startTimestamp),
-                                latencyStatus: j.a.Unknown
+                                latencyStatus: Z.a.Unknown
                             }, this.logger.debug("Root tracker done", {
                                 durationMs: this.componentDuration
                             }), this.pageLoadDuration = {
                                 value: (this.componentDuration.value || 0) + (this.rootInitDuration.value || 0),
-                                latencyStatus: j.a.Unknown
+                                latencyStatus: Z.a.Unknown
                             }, this.logger.debug("Root page completed", {
                                 pageLoadDuration: this.pageLoadDuration,
                                 rootInitDuration: this.rootInitDuration,
                                 componentDuration: this.componentDuration,
                                 children: this.getChildNames()
                             }), this.raiseUpdate(), this.sendAllEvents(), this.isFirstLoad) {
-                            this.store.dispatch(Object(q.f)());
+                            this.store.dispatch(Object(K.f)());
                             var e = document.getElementById("root");
                             e && e.setAttribute("data-a-page-loaded", Date.now().toString())
                         }
@@ -8018,25 +8101,25 @@ webpackJsonp([64], {
                 }, t.prototype.getNavigationStartTimestamp = function() {
                     return this.navigationStart > 0 ? this.navigationStart : performance.timing.navigationStart
                 }, t
-            }(W),
-            K = {
+            }(J),
+            $ = {
                 forceNetworkLoggingStorageKey: "twilight.force-component-benchmarking",
                 forceComponentBenchmarkingStorageKey: "twilight.force-network-monitoring",
                 forceToolsStorageKey: "twilight.force-benchmarking-tools"
             },
-            Z = {
+            ee = {
                 networkingThreshold: "benchmark_networking_threshold",
                 componentThreshold: "benchmark_component_threshold"
             },
-            J = function() {
+            te = function() {
                 function e(e) {
                     var t = this;
                     this.getRootLatencyTracker = function() {
                         return t.latencyTracker
                     }, this.logger = e.logger.withCategory("Benchmarking"), this.seed = Math.round(100 * Math.random()) / 100, this.storage = e.storage;
-                    var n = e.dynamicSettings.get(Z.networkingThreshold, e.config.defaultNetworkLoggingThreshold),
-                        r = e.dynamicSettings.get(Z.componentThreshold, e.config.defaultComponentBenchmarkingThreshold);
-                    this.toolsEnabled = this.shouldEnableTools(e.config), this.componentsEnabled = this.shouldEnableComponentBenchmarking(e.config, r, this.toolsEnabled), this.networkingEnabled = this.shouldEnableNetworkBenchmarking(e.config, n, this.componentsEnabled, this.toolsEnabled), this.networkingEnabled && (this.networkMonitoring = new U(e)), this.latencyTracker = new Q({
+                    var n = e.dynamicSettings.get(ee.networkingThreshold, e.config.defaultNetworkLoggingThreshold),
+                        r = e.dynamicSettings.get(ee.componentThreshold, e.config.defaultComponentBenchmarkingThreshold);
+                    this.toolsEnabled = this.shouldEnableTools(e.config), this.componentsEnabled = this.shouldEnableComponentBenchmarking(e.config, r, this.toolsEnabled), this.networkingEnabled = this.shouldEnableNetworkBenchmarking(e.config, n, this.componentsEnabled, this.toolsEnabled), this.networkingEnabled && (this.networkMonitoring = new Q(e)), this.latencyTracker = new Y({
                         componentEventsEnabled: this.componentsEnabled,
                         networkEventsEnabled: this.networkingEnabled,
                         toolsEnabled: this.toolsEnabled,
@@ -8058,30 +8141,30 @@ webpackJsonp([64], {
                     })
                 }
                 return e.prototype.shouldEnableTools = function(e) {
-                    return e.forceComponentBenchmarking ? (this.logger.debug("Tools enabled, due to config."), !0) : !!this.storage.get(K.forceToolsStorageKey, !1) && (this.logger.debug("Tools enabled, due to local storage."), !0)
+                    return e.forceComponentBenchmarking ? (this.logger.debug("Tools enabled, due to config."), !0) : !!this.storage.get($.forceToolsStorageKey, !1) && (this.logger.debug("Tools enabled, due to local storage."), !0)
                 }, e.prototype.shouldEnableComponentBenchmarking = function(e, t, n) {
-                    return n ? (this.logger.debug("Components enabled, due to Tools being enabled"), !0) : e.forceComponentBenchmarking ? (this.logger.debug("Components enabled, due to config."), !0) : this.storage.get(K.forceComponentBenchmarkingStorageKey, !1) ? (this.logger.debug("Components enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Components enabled, due to random selection"), !0)
+                    return n ? (this.logger.debug("Components enabled, due to Tools being enabled"), !0) : e.forceComponentBenchmarking ? (this.logger.debug("Components enabled, due to config."), !0) : this.storage.get($.forceComponentBenchmarkingStorageKey, !1) ? (this.logger.debug("Components enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Components enabled, due to random selection"), !0)
                 }, e.prototype.shouldEnableNetworkBenchmarking = function(e, t, n, r) {
-                    return n || r ? (this.logger.debug("Networking enabled, due to Components or Tools being enabled"), !0) : e.forceNetworkLogging ? (this.logger.debug("Networking enabled, due to config."), !0) : this.storage.get(K.forceNetworkLoggingStorageKey, !1) ? (this.logger.debug("Networking enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Networking enabled, due to random selection"), !0)
+                    return n || r ? (this.logger.debug("Networking enabled, due to Components or Tools being enabled"), !0) : e.forceNetworkLogging ? (this.logger.debug("Networking enabled, due to config."), !0) : this.storage.get($.forceNetworkLoggingStorageKey, !1) ? (this.logger.debug("Networking enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Networking enabled, due to random selection"), !0)
                 }, e
             }(),
-            X = n(97),
-            Y = n(178),
-            $ = n.n(Y),
-            ee = n(181),
-            te = n.n(ee);
+            ne = n(94),
+            re = n(167),
+            ie = n.n(re),
+            oe = n(170),
+            ae = n.n(oe);
         ! function(e) {
             e[e.Debug = 1] = "Debug", e[e.Info = 2] = "Info", e[e.Warn = 3] = "Warn", e[e.Error = 4] = "Error", e[e.Fatal = 5] = "Fatal"
-        }(y || (y = {}));
-        var ne = function() {
+        }(S || (S = {}));
+        var se = function() {
                 function e(e, t) {
                     var n = this;
-                    if (this.eventEmitter = new R.EventEmitter, this.addMessageListener = function(e) {
+                    if (this.eventEmitter = new D.EventEmitter, this.addMessageListener = function(e) {
                             n.eventEmitter.addListener("message", e)
                         }, this.removeMessageListener = function(e) {
                             n.eventEmitter.removeListener("message", e)
                         }, this.onWindowError = function(e) {
-                            e.error ? (e.preventDefault(), n.write(y.Error, "Uncaught error.", void 0, e.error, "uncaught")) : n.write(y.Warn, "Uncaught error, but the error object is null. This is usually caused by a browser permission issue. Please check the browser console.", [{
+                            e.error ? (e.preventDefault(), n.write(S.Error, "Uncaught error.", void 0, e.error, "uncaught")) : n.write(S.Warn, "Uncaught error, but the error object is null. This is usually caused by a browser permission issue. Please check the browser console.", [{
                                 event: e
                             }], new Error("Uncaught error, but the error object is null."), "uncaught")
                         }, e && t) throw new Error("Cannot pass both `options` and `childOptions` arguments.");
@@ -8098,25 +8181,25 @@ webpackJsonp([64], {
                     })
                 }, e.prototype.debug = function(e) {
                     for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-                    this.write(y.Debug, e, t)
+                    this.write(S.Debug, e, t)
                 }, e.prototype.info = function(e) {
                     for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-                    this.write(y.Info, e, t)
+                    this.write(S.Info, e, t)
                 }, e.prototype.warn = function(e) {
                     for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-                    this.write(y.Warn, e, t)
+                    this.write(S.Warn, e, t)
                 }, e.prototype.error = function(e, t) {
                     for (var n = [], r = 2; r < arguments.length; r++) n[r - 2] = arguments[r];
-                    this.write(y.Error, t, n, e, "caught")
+                    this.write(S.Error, t, n, e, "caught")
                 }, e.prototype.fatal = function(e, t) {
                     for (var n = [], r = 2; r < arguments.length; r++) n[r - 2] = arguments[r];
-                    this.write(y.Fatal, t, n, e, "fatal")
+                    this.write(S.Fatal, t, n, e, "fatal")
                 }, e.prototype.flush = function() {
                     if (this.rootLogger) throw new Error("Cannot flush a child logger.");
                     var e = this.buffer;
                     return this.buffer = [], this.messagesTruncated && e.unshift({
                         time: e[0].time - 1,
-                        level: y[y.Info].toLowerCase(),
+                        level: S[S.Info].toLowerCase(),
                         message: "Log truncated.",
                         args: [{
                             firstMessageTime: this.firstMessageTime,
@@ -8126,13 +8209,13 @@ webpackJsonp([64], {
                     }), e
                 }, e.prototype.write = function(e, t, n, r, i, o, a) {
                     if (void 0 === n && (n = []), void 0 === a && (a = !1), this.rootLogger) return void this.rootLogger.write(e, t, n, r, i, this.category, a);
-                    this.buffer.length === this.maxBufferSize && (this.firstMessageTime || (this.firstMessageTime = this.buffer[0].time), this.truncationEvents = (this.truncationEvents || 0) + 1, this.messagesTruncated = (this.messagesTruncated || 0) + this.buffer.splice(0, Math.ceil(this.maxBufferSize / 10)).length), o = o || this.category, e >= this.minConsoleLogLevel && this.writeToConsole(e, o, t, n, r), e !== y.Debug && this.writeToBuffer(e, o, t, n, r, i, a), !this.onError || e !== y.Error && e !== y.Fatal || this.onError(this)
+                    this.buffer.length === this.maxBufferSize && (this.firstMessageTime || (this.firstMessageTime = this.buffer[0].time), this.truncationEvents = (this.truncationEvents || 0) + 1, this.messagesTruncated = (this.messagesTruncated || 0) + this.buffer.splice(0, Math.ceil(this.maxBufferSize / 10)).length), o = o || this.category, e >= this.minConsoleLogLevel && this.writeToConsole(e, o, t, n, r), e !== S.Debug && this.writeToBuffer(e, o, t, n, r, i, a), !this.onError || e !== S.Error && e !== S.Fatal || this.onError(this)
                 }, e.prototype.writeToBuffer = function(e, t, n, r, i, o, a) {
                     void 0 === a && (a = !1);
                     var s = [],
                         l = {
                             time: Date.now(),
-                            level: y[e].toLowerCase(),
+                            level: S[e].toLowerCase(),
                             message: n
                         };
                     if (r && r.length > 0 && (l.args = r.map(function(e, t) {
@@ -8157,13 +8240,13 @@ webpackJsonp([64], {
                             stack: i.stack || null,
                             type: o || "caught"
                         }]), this.buffer.push(l), !a)
-                        for (var u = 0, d = s; u < d.length; u++) {
-                            var h = d[u];
-                            this.buildType === c.a.Production ? this.write(y.Warn, "Failed to serialize argument for log message.", [{
+                        for (var c = 0, u = s; c < u.length; c++) {
+                            var h = u[c];
+                            this.buildType === d.a.Production ? this.write(S.Warn, "Failed to serialize argument for log message.", [{
                                 message: h.message,
                                 argIndex: h.argIndex,
                                 err: h.err
-                            }], void 0, void 0, void 0, !0) : this.write(y.Error, "Failed to serialize argument for log message.", [{
+                            }], void 0, void 0, void 0, !0) : this.write(S.Error, "Failed to serialize argument for log message.", [{
                                 message: h.message,
                                 argIndex: h.argIndex
                             }], h.err, "caught", t, !0)
@@ -8171,14 +8254,14 @@ webpackJsonp([64], {
                     this.eventEmitter.emit("message", l)
                 }, e.prototype.writeToConsole = function(e, t, n, r, i) {
                     var o = (new Date).toLocaleTimeString();
-                    t = t ? "[" + t + "] " : "", n = o + " [" + y[e].toUpperCase() + "] " + t + n, e === y.Fatal && (e = y.Error);
-                    var a = (console[y[e].toLowerCase()] || console.log).bind(console);
+                    t = t ? "[" + t + "] " : "", n = o + " [" + S[e].toUpperCase() + "] " + t + n, e === S.Fatal && (e = S.Error);
+                    var a = (console[S[e].toLowerCase()] || console.log).bind(console);
                     i ? a.apply(void 0, [n, i].concat(r)) : a.apply(void 0, [n].concat(r))
                 }, e
             }(),
-            re = n(20),
-            ie = n(42),
-            oe = function() {
+            le = n(19),
+            ce = n(41),
+            ue = function() {
                 function e(e) {
                     var t = this;
                     this.onHistoryChange = function() {
@@ -8186,25 +8269,25 @@ webpackJsonp([64], {
                     }, this.storage = e.storage, this.tempStorage = e.tempStorage, this.benchmarkID = this.getOrCreateBenchmarkSessionID(), this.deviceID = this.getOrCreateDeviceID(), this.localStorageDeviceID = this.getOrCreateLocalStorageDeviceID(), this.pageviewID = this.getUniqueID(), this.tabID = this.getOrCreateSessionStorageUniqueID(), e.history.listen(this.onHistoryChange)
                 }
                 return e.prototype.getUniqueID = function() {
-                    return Object(re.b)().substring(0, 16)
+                    return Object(le.b)().substring(0, 16)
                 }, e.prototype.getOrCreateDeviceID = function() {
-                    var e = p.get("unique_id");
-                    return e || (e = Object(re.b)().substring(0, 16), p.set("unique_id", e, {
+                    var e = w.get("unique_id");
+                    return e || (e = Object(le.b)().substring(0, 16), w.set("unique_id", e, {
                         expires: 3650,
-                        domain: Object(ie.a)(),
+                        domain: Object(ce.a)(),
                         secure: "https:" === window.location.protocol
                     }), e)
                 }, e.prototype.getOrCreateBenchmarkSessionID = function() {
-                    return p.get("twilight.automation_session_id") || Object(re.b)().substring(0, 16)
+                    return w.get("twilight.automation_session_id") || Object(le.b)().substring(0, 16)
                 }, e.prototype.getOrCreateSessionStorageUniqueID = function() {
                     var e = this.tempStorage.get("session_storage_unique_id", "");
-                    return e || (e = Object(re.b)().substring(0, 16), this.tempStorage.set("session_storage_unique_id", e), e)
+                    return e || (e = Object(le.b)().substring(0, 16), this.tempStorage.set("session_storage_unique_id", e), e)
                 }, e.prototype.getOrCreateLocalStorageDeviceID = function() {
                     var e = this.storage.get("local_storage_device_id", "");
-                    return e || (e = Object(re.b)().substring(0, 16), this.storage.set("local_storage_device_id", e), e)
+                    return e || (e = Object(le.b)().substring(0, 16), this.storage.set("local_storage_device_id", e), e)
                 }, e
             }(),
-            ae = function() {
+            de = function() {
                 function e(e, t) {
                     this.cache = {}, this.storage = e, this.logger = t
                 }
@@ -8266,41 +8349,41 @@ webpackJsonp([64], {
                     }
                 }, e
             }(),
-            se = n(342);
+            he = n(322);
         n.d(t, "o", function() {
-            return le
-        }), n.d(t, "a", function() {
-            return ce
-        }), n.d(t, "b", function() {
-            return ue
-        }), n.d(t, "c", function() {
-            return de
-        }), n.d(t, "d", function() {
-            return he
-        }), n.d(t, "e", function() {
             return pe
-        }), n.d(t, "f", function() {
+        }), n.d(t, "a", function() {
             return me
-        }), n.d(t, "g", function() {
+        }), n.d(t, "b", function() {
             return ge
-        }), n.d(t, "h", function() {
+        }), n.d(t, "c", function() {
             return fe
-        }), n.d(t, "j", function() {
+        }), n.d(t, "d", function() {
             return ve
-        }), n.d(t, "k", function() {
+        }), n.d(t, "e", function() {
             return we
-        }), n.d(t, "l", function() {
+        }), n.d(t, "f", function() {
             return be
-        }), n.d(t, "m", function() {
+        }), n.d(t, "g", function() {
             return ye
-        }), n.d(t, "n", function() {
+        }), n.d(t, "h", function() {
             return _e
-        }), t.i = o;
-        var le, ce, ue, de, he, pe, me, ge, fe, ve, we, be, ye, _e, Ee = function() {
+        }), n.d(t, "j", function() {
+            return Ee
+        }), n.d(t, "k", function() {
+            return ke
+        }), n.d(t, "l", function() {
+            return Ce
+        }), n.d(t, "m", function() {
+            return Se
+        }), n.d(t, "n", function() {
+            return Le
+        }), t.i = s;
+        var pe, me, ge, fe, ve, we, be, ye, _e, Ee, ke, Ce, Se, Le, Te = function() {
             function e(e) {
                 var t = this;
-                this.dynamicSettings = new X.a, this.history = i(), this.pageTitle = "Twitch", this.config = e, this.store = new H(this.config);
-                var n = this.config.buildType === c.a.Production ? y.Error : y.Debug;
+                this.dynamicSettings = new ne.a, this.history = a(), this.pageTitle = "Twitch", this.config = e, this.store = new q(this.config);
+                var n = this.config.buildType === d.a.Production ? S.Error : S.Debug;
                 try {
                     var r = localStorage.getItem(this.config.forceMinConsoleLogLevelKey);
                     null !== r && (n = Number(r))
@@ -8310,15 +8393,15 @@ webpackJsonp([64], {
                         key: this.config.forceMinConsoleLogLevelKey
                     })
                 }
-                this.logger = new ne({
+                this.logger = new se({
                     minConsoleLogLevel: n,
                     maxBufferSize: 1e3,
                     buildType: this.config.buildType
-                }), this.logger.addWindowErrorListener(), this.storage = new ae(localStorage, this.logger.withCategory("storage")), this.tempStorage = new ae(sessionStorage, this.logger.withCategory("tempStorage")), this.session = new oe({
+                }), this.logger.addWindowErrorListener(), this.storage = new de(localStorage, this.logger.withCategory("storage")), this.tempStorage = new de(sessionStorage, this.logger.withCategory("tempStorage")), this.session = new ue({
                     history: this.history,
                     storage: this.storage,
                     tempStorage: this.tempStorage
-                }), this.config.embedded || (this.sentinel = new S({
+                }), this.config.embedded || (this.sentinel = new z({
                     buildID: e.buildID,
                     endpoint: e.sentinelEndpoint,
                     logger: this.logger,
@@ -8326,25 +8409,28 @@ webpackJsonp([64], {
                     store: this.store
                 }), this.logger.onError = function(e) {
                     t.sentinel.report(e.flush())
-                }), this.adBlockSentinel = new d({
+                }), this.adBlockSentinel = new f({
                     accountID: e.adblockAccount,
                     cid: e.adblockID,
                     logger: this.logger
-                }), this.adBlockSentinel.addTwitchGlobal(), this.apollo = new A({
+                }), this.adBlockDetector = new m({
+                    logger: this.logger
+                }), this.adBlockDetector.addTwitchGlobal(), this.adBlockDetector.detectAdBlock(), this.apollo = new V({
                     config: this.config,
                     dynamicSettings: this.dynamicSettings,
                     logger: this.logger,
                     session: this.session,
                     store: this.store
-                }), this.tracking = new L.Spade({
+                }), this.tracking = new I.Spade({
                     apollo: this.apollo,
                     config: this.config,
                     endpoint: this.dynamicSettings.get("spade_url", e.defaultSpadeEndpoint),
                     logger: this.logger,
                     session: this.session,
                     store: this.store,
-                    adBlockSentinel: this.adBlockSentinel
-                }), this.pubsub = new C(this.store, this.logger), this.intl = new se.TwilightIntl(e.locales), this.config.embedded || (this.benchmarking = new J({
+                    adBlockSentinel: this.adBlockSentinel,
+                    adBlockDetector: this.adBlockDetector
+                }), this.pubsub = new R(this.store, this.logger), this.intl = new he.TwilightIntl(e.locales), this.config.embedded || (this.benchmarking = new te({
                     apollo: this.apollo,
                     config: this.config,
                     dynamicSettings: this.dynamicSettings,
@@ -8355,17 +8441,17 @@ webpackJsonp([64], {
                     store: this.store,
                     tracking: this.tracking,
                     window: window
-                })), this.experiments = new _({
+                })), this.experiments = new L({
                     logger: this.logger,
                     session: this.session,
                     store: this.store,
                     tracking: this.tracking
-                }), this.tmi = new x(this.logger, this.config)
+                }), this.tmi = new M(this.logger, this.config)
             }
             return e.prototype.mount = function(e, t) {
-                l.render(this.wrap(e), t)
+                u.render(this.wrap(e), t)
             }, e.prototype.wrap = function(e) {
-                return a.createElement(s.ApolloProvider, {
+                return l.createElement(c.ApolloProvider, {
                     store: this.store.getReduxStore(),
                     client: this.apollo.client
                 }, e)
@@ -8381,7 +8467,7 @@ webpackJsonp([64], {
             }, e
         }()
     },
-    69: function(e, t, n) {
+    65: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -8449,7 +8535,7 @@ webpackJsonp([64], {
             g = "core.ui.SIDE_NAV_EXPANDED",
             f = "core.ui.THEME_CHANGED"
     },
-    72: function(e, t, n) {
+    68: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -8473,11 +8559,11 @@ webpackJsonp([64], {
             })
         }
         t.a = r, t.b = i, t.c = o;
-        var a, s = n(33),
-            l = (n.n(s), n(42)),
+        var a, s = n(32),
+            l = (n.n(s), n(41)),
             c = "language"
     },
-    8: function(e, t, n) {
+    7: function(e, t, n) {
         "use strict";
 
         function r(e, t) {
@@ -8485,20 +8571,141 @@ webpackJsonp([64], {
                 return Object(i.graphql)(e, t)(n)
             }
         }
-        var i = n(31);
+        var i = n(30);
         n.d(t, "a", function() {
             return r
         })
     },
-    90: function(e, t, n) {
+    750: function(e, t, n) {
+        n(134), n(171), e.exports = n(751)
+    },
+    751: function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return {
+                isReady: e.session.authInitialized && e.session.languageInitialized,
+                firstPageLoaded: e.session.firstPageLoaded,
+                isLoggedIn: Object(u.d)(e)
+            }
+        }
+
+        function i() {
+            l.n.mount(a.createElement(s.c, {
+                history: l.n.history
+            }, a.createElement(N, null)), document.getElementById("root"))
+        }
+
+        function o() {
+            var e = l.n.store.getState();
+            !D && Object(u.e)(e) && (D = !0, M(), l.a.optimizedBuild ? i() : setTimeout(i, 100))
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        });
+        var a = n(1),
+            s = n(21),
+            l = n(2),
+            c = n(34),
+            u = n(18),
+            d = n(220),
+            h = n(8),
+            p = n(11),
+            m = n(0),
+            g = n(106),
+            f = n(16),
+            v = n(104),
+            w = n(221),
+            b = n(5),
+            y = n(228),
+            _ = n(237),
+            E = n(3),
+            k = (n(752), g.a.wrap(function() {
+                return n.e(38).then(n.bind(null, 2051))
+            }, "PopoutChatPage")),
+            C = g.a.wrap(function() {
+                return n.e(58).then(n.bind(null, 2052))
+            }, "BitsRoot"),
+            S = g.a.wrap(function() {
+                return n.e(57).then(n.bind(null, 2054))
+            }, "SubsRoot"),
+            L = g.a.wrap(function() {
+                return n.e(39).then(n.bind(null, 2057))
+            }, "EmbeddedChatPage"),
+            T = g.a.wrap(function() {
+                return n.e(0).then(n.bind(null, 2058))
+            }, "CommunitySelectionPage"),
+            x = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onHistoryChange = function() {
+                        t.props.rootLatencyTracker.reset(), v.a.clearAppWideTracking("game"), v.a.clearAppWideTracking("chan"), v.a.clearAppWideTracking("pagetype")
+                    }, t
+                }
+                return m.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.history.listen(this.onHistoryChange), this.reportInteractive()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.reportInteractive()
+                }, t.prototype.render = function() {
+                    return this.props.isReady ? a.createElement(E.U, {
+                        className: "twilight-minimal-root",
+                        position: E._2.Absolute,
+                        overflow: E.Y.Hidden,
+                        attachTop: !0,
+                        attachRight: !0,
+                        attachBottom: !0,
+                        attachLeft: !0
+                    }, a.createElement(p.e, null, a.createElement(p.d, {
+                        path: "/popout/:channelLogin/chat",
+                        component: k
+                    }), a.createElement(p.d, {
+                        path: "/embed/:channelLogin/chat",
+                        component: L
+                    }), a.createElement(p.d, {
+                        path: "/bits",
+                        component: C
+                    }), a.createElement(p.d, {
+                        path: "/hi",
+                        component: T
+                    }), a.createElement(p.d, {
+                        path: "/subs",
+                        component: S
+                    }), a.createElement(p.d, {
+                        path: "/",
+                        render: R
+                    })), a.createElement(w.a, null), l.n.benchmarking.toolsEnabled && a.createElement(b.b, {
+                        benchmarking: l.n.benchmarking
+                    }), l.a.buildType !== f.a.Production && this.props.firstPageLoaded && a.createElement(y.a, null), this.props.firstPageLoaded && a.createElement(_.a, {
+                        history: this.props.history
+                    })) : null
+                }, t.prototype.reportInteractive = function() {
+                    this.props.isReady && this.props.latencyTracking.reportInteractive()
+                }, t = m.__decorate([Object(b.c)("MinimalRoot", {
+                    isRoot: !0
+                })], t)
+            }(a.Component),
+            R = function() {
+                return window.location.reload(), null
+            },
+            z = x,
+            I = Object(h.a)(r)(z),
+            N = Object(p.f)(I);
+        l.a.optimizedBuild || n.e(1).then(n.bind(null, 2050)).then(function(e) {
+            return window.Perf = e
+        });
+        var M, D = !1;
+        M = l.n.store.getReduxStore().subscribe(o), Object(d.a)(), l.n.store.dispatch(Object(c.e)())
+    },
+    752: function(e, t) {},
+    84: function(e, t, n) {
         "use strict";
         var r, i = n(0),
             o = n(4),
-            a = n(15),
+            a = n(14),
             s = n(1),
-            l = n(345),
-            c = n(55),
-            u = (n(233), 100);
+            l = n(325),
+            c = n(54),
+            u = (n(222), 100);
         ! function(e) {
             e[e.Resize = 0] = "Resize", e[e.Scroll = 1] = "Scroll", e[e.Wheel = 2] = "Wheel"
         }(r || (r = {}));
@@ -8611,7 +8818,7 @@ webpackJsonp([64], {
             return d
         })
     },
-    91: function(e, t, n) {
+    85: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -8655,134 +8862,26 @@ webpackJsonp([64], {
         }
         t.a = a, t.b = s;
         var l = n(2),
-            c = n(20),
-            u = n(50),
+            c = n(19),
+            u = n(49),
             d = {},
             h = new Map;
         l.n.store.registerReducer("modal", o)
     },
-    910: function(e, t, n) {
-        n(145), n(182), e.exports = n(911)
-    },
-    911: function(e, t, n) {
+    93: function(e, t, n) {
         "use strict";
 
         function r(e) {
-            return {
-                isReady: e.session.authInitialized && e.session.languageInitialized,
-                firstPageLoaded: e.session.firstPageLoaded,
-                isLoggedIn: Object(u.d)(e)
-            }
+            var t = encodeURIComponent(JSON.stringify(e)),
+                n = t.replace(/%([0-9A-F]{2})/g, function(e, t) {
+                    return String.fromCharCode(Number("0x" + t))
+                }),
+                r = btoa(n);
+            return "data=" + encodeURIComponent(r)
         }
-
-        function i() {
-            l.n.mount(a.createElement(s.c, {
-                history: l.n.history
-            }, a.createElement(N, null)), document.getElementById("root"))
-        }
-
-        function o() {
-            var e = l.n.store.getState();
-            !D && Object(u.e)(e) && (D = !0, M(), l.a.optimizedBuild ? i() : setTimeout(i, 100))
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        });
-        var a = n(1),
-            s = n(22),
-            l = n(2),
-            c = n(35),
-            u = n(19),
-            d = n(231),
-            h = n(9),
-            p = n(12),
-            m = n(0),
-            g = n(113),
-            f = n(17),
-            v = n(111),
-            w = n(232),
-            b = n(6),
-            y = n(239),
-            _ = n(248),
-            E = n(3),
-            k = (n(912), g.a.wrap(function() {
-                return n.e(37).then(n.bind(null, 2047))
-            }, "PopoutChatPage")),
-            C = g.a.wrap(function() {
-                return n.e(59).then(n.bind(null, 2048))
-            }, "BitsRoot"),
-            S = g.a.wrap(function() {
-                return n.e(58).then(n.bind(null, 2050))
-            }, "SubsRoot"),
-            L = g.a.wrap(function() {
-                return n.e(38).then(n.bind(null, 2053))
-            }, "EmbeddedChatPage"),
-            T = g.a.wrap(function() {
-                return n.e(0).then(n.bind(null, 2054))
-            }, "CommunitySelectionPage"),
-            x = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onHistoryChange = function() {
-                        t.props.rootLatencyTracker.reset(), v.a.clearAppWideTracking("game"), v.a.clearAppWideTracking("chan"), v.a.clearAppWideTracking("pagetype")
-                    }, t
-                }
-                return m.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.history.listen(this.onHistoryChange), this.reportInteractive()
-                }, t.prototype.componentDidUpdate = function() {
-                    this.reportInteractive()
-                }, t.prototype.render = function() {
-                    return this.props.isReady ? a.createElement(E.U, {
-                        className: "twilight-minimal-root",
-                        position: E._2.Absolute,
-                        overflow: E.Y.Hidden,
-                        attachTop: !0,
-                        attachRight: !0,
-                        attachBottom: !0,
-                        attachLeft: !0
-                    }, a.createElement(p.e, null, a.createElement(p.d, {
-                        path: "/popout/:channelLogin/chat",
-                        component: k
-                    }), a.createElement(p.d, {
-                        path: "/embed/:channelLogin/chat",
-                        component: L
-                    }), a.createElement(p.d, {
-                        path: "/bits",
-                        component: C
-                    }), a.createElement(p.d, {
-                        path: "/hi",
-                        component: T
-                    }), a.createElement(p.d, {
-                        path: "/subs",
-                        component: S
-                    }), a.createElement(p.d, {
-                        path: "/",
-                        render: R
-                    })), a.createElement(w.a, null), l.n.benchmarking.toolsEnabled && a.createElement(b.b, {
-                        benchmarking: l.n.benchmarking
-                    }), l.a.buildType !== f.a.Production && this.props.firstPageLoaded && a.createElement(y.a, null), this.props.firstPageLoaded && a.createElement(_.a, {
-                        history: this.props.history
-                    })) : null
-                }, t.prototype.reportInteractive = function() {
-                    this.props.isReady && this.props.latencyTracking.reportInteractive()
-                }, t = m.__decorate([Object(b.c)("MinimalRoot", {
-                    isRoot: !0
-                })], t)
-            }(a.Component),
-            R = function() {
-                return window.location.reload(), null
-            },
-            z = x,
-            I = Object(h.a)(r)(z),
-            N = Object(p.f)(I);
-        l.a.optimizedBuild || n.e(1).then(n.bind(null, 2046)).then(function(e) {
-            return window.Perf = e
-        });
-        var M, D = !1;
-        M = l.n.store.getReduxStore().subscribe(o), Object(d.a)(), l.n.store.dispatch(Object(c.e)())
+        t.a = r
     },
-    912: function(e, t) {},
-    97: function(e, t, n) {
+    94: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -8796,5 +8895,5 @@ webpackJsonp([64], {
             }, e
         }()
     }
-}, [910]);
-//# sourceMappingURL=minimal-0c35338126ad9a7c525d002f3b898043.js.map
+}, [750]);
+//# sourceMappingURL=minimal-854f1959cd1263b2a14e3dda41384f72.js.map

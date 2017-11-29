@@ -1,273 +1,5 @@
 webpackJsonp([34], {
-    1010: function(e, t, n) {
-        "use strict";
-        var a = n(0),
-            i = n(1),
-            r = n(2),
-            l = function(e) {
-                function t(t) {
-                    var n = e.call(this) || this;
-                    return n.handleImageError = function() {
-                        n.setState({
-                            imageURL: r.a.defaultStreamPreviewURL
-                        })
-                    }, n.state = {
-                        imageURL: t.imageURL
-                    }, n
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    return i.createElement("img", {
-                        src: this.state.imageURL,
-                        alt: this.state.imageURL,
-                        onError: this.handleImageError,
-                        className: this.props.className
-                    })
-                }, t
-            }(i.Component);
-        n.d(t, "a", function() {
-            return l
-        })
-    },
-    1012: function(e, t) {},
-    1015: function(e, t, n) {
-        "use strict";
-
-        function a() {
-            return Object(s.d)("Unable to ban user", "BlockUserMutation")
-        }
-
-        function i(e) {
-            var t = this;
-            return Object(o.a)(m, {
-                props: function(n) {
-                    return {
-                        onBanUser: function(i, o) {
-                            return void 0 === o && (o = null), l.__awaiter(t, void 0, void 0, function() {
-                                var t, m, h, g, f, C;
-                                return l.__generator(this, function(l) {
-                                    switch (l.label) {
-                                        case 0:
-                                            if (t = o ? p.a.Timeout : p.a.Ban, m = e(n.ownProps), h = m.channelID, g = m.onPushMessage, !n.mutate) return [3, 5];
-                                            l.label = 1;
-                                        case 1:
-                                            return l.trys.push([1, 3, , 4]), [4, n.mutate(Object(c.a)({
-                                                channelID: h,
-                                                bannedUserLogin: i,
-                                                expiresIn: o && r(o)
-                                            }))];
-                                        case 2:
-                                            return l.sent(), f = Object(u.a)(t, i, null, o), g && g(f), [2, f];
-                                        case 3:
-                                            throw C = l.sent(), s.i.error(C, "Unable to ban user"), g && g(Object(d.a)(a())), new Error(a());
-                                        case 4:
-                                            return [3, 6];
-                                        case 5:
-                                            throw g && g(Object(d.a)(a())), new Error(a());
-                                        case 6:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }
-                    }
-                }
-            })
-        }
-
-        function r(e) {
-            if (!e) return "0s";
-            var t = e,
-                n = "";
-            if (t > b) {
-                var a = Math.floor(t / b);
-                t -= a * b, n += a + "mo"
-            }
-            if (t > C) {
-                var i = Math.floor(t / C);
-                t -= i * C, n += i + "w"
-            }
-            if (t > f) {
-                var r = Math.floor(t / f);
-                t -= r * f, n += r + "d"
-            }
-            if (t > g) {
-                var l = Math.floor(t / g);
-                t -= l * g, n += l + "h"
-            }
-            if (t > h) {
-                var s = Math.floor(t / h);
-                t -= s * h, n += s + "m"
-            }
-            return t > 0 && (n += t + "s"), n
-        }
-        t.a = i;
-        var l = n(0),
-            s = n(2),
-            o = n(8),
-            c = n(23),
-            d = n(964),
-            u = n(986),
-            p = n(918),
-            m = n(1023),
-            h = (n.n(m), 60),
-            g = 60 * h,
-            f = 24 * g,
-            C = 7 * f,
-            b = 4 * C
-    },
-    1023: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "mutation",
-                name: {
-                    kind: "Name",
-                    value: "Chat_BanUserFromChatRoom"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "input"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "BanUserFromChatRoomInput"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "banUserFromChatRoom"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "ban"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "createdAt"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 148
-            }
-        };
-        n.loc.source = {
-            body: "mutation Chat_BanUserFromChatRoom($input: BanUserFromChatRoomInput!) {\n  banUserFromChatRoom(input: $input) {\n    ban {\n      createdAt\n    }\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    1051: function(e, t, n) {
-        "use strict";
-        var a = n(983);
-        n.d(t, "a", function() {
-            return a.a
-        }), n.d(t, "b", function() {
-            return a.b
-        })
-    },
-    1060: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return o
-        }), n.d(t, "b", function() {
-            return c
-        }), n.d(t, "c", function() {
-            return u
-        });
-        var a, i = n(2),
-            r = n(983),
-            l = n(14),
-            s = (a = {}, a[r.b.Twitter] = "twitter", a[r.b.Reddit] = "reddit", a[r.b.VKontakte] = "vkontakte", a[r.b.Facebook] = "facebook", a[r.b.Copy] = "link", a),
-            o = {
-                MyClips: "MyClips",
-                ClipsOfMyChannel: "ClipsOfMyChannel"
-            },
-            c = {
-                Game: "TopClipsGame",
-                Channel: "TopClipsChannel"
-            },
-            d = {
-                MyClips: l.PageviewLocation.MyClipsManager,
-                ClipsOfMyChannel: l.PageviewLocation.ChannelClipsManager,
-                TopClipsGame: l.PageviewLocation.ClipsGame,
-                TopClipsChannel: l.PageviewLocation.ChannelClips
-            },
-            u = function(e, t) {
-                return function(n) {
-                    i.n.tracking.track(l.SpadeEventType.VideoShare, {
-                        vod_id: e.id,
-                        vod_type: "clip",
-                        share_platform: s[n],
-                        location: d[t],
-                        game: e.game ? e.game.name : null,
-                        channel_id: Number(e.broadcaster.id),
-                        channel: e.broadcaster.login,
-                        live: null
-                    })
-                }
-            }
-    },
-    1141: function(e, t, n) {
+    1022: function(e, t, n) {
         "use strict";
 
         function a(e, t) {
@@ -289,7 +21,7 @@ webpackJsonp([34], {
                 allowFullscreen: !0
             }
     },
-    1291: function(e, t, n) {
+    1038: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -298,9 +30,9 @@ webpackJsonp([34], {
         var i = n(0),
             r = n(1),
             l = n(2),
-            s = n(88),
+            s = n(82),
             o = n(3),
-            c = (n(1308), {
+            c = (n(1054), {
                 TITLE: "clips-modal-title",
                 MAIN_BODY: "clips-modal-main-body",
                 SUCCESS_BODY: "clips-modal-success-body",
@@ -414,8 +146,8 @@ webpackJsonp([34], {
                     })))))
                 }, t
             }(r.Component),
-            u = n(1015),
-            p = n(6),
+            u = n(855),
+            p = n(5),
             m = 86400,
             h = {
                 isLoading: !1,
@@ -498,9 +230,9 @@ webpackJsonp([34], {
                 }
             },
             C = Object(p.c)("ClipsModalBanUser")(Object(u.a)(f)(g)),
-            b = n(8),
-            v = n(1309),
-            y = (n(1310), this),
+            b = n(7),
+            v = n(1055),
+            y = (n(1056), this),
             S = {
                 isLoading: !1,
                 hasErrored: !1,
@@ -621,8 +353,8 @@ webpackJsonp([34], {
             _ = a({
                 props: k
             })(E),
-            T = n(31),
-            w = n(1311),
+            T = n(30),
+            w = n(1057),
             D = this,
             M = {
                 isLoading: !1,
@@ -860,8 +592,8 @@ webpackJsonp([34], {
             return F
         })
     },
-    1308: function(e, t) {},
-    1309: function(e, t) {
+    1054: function(e, t) {},
+    1055: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -972,8 +704,8 @@ webpackJsonp([34], {
         };
         e.exports = n
     },
-    1310: function(e, t) {},
-    1311: function(e, t) {
+    1056: function(e, t) {},
+    1057: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1107,7 +839,7 @@ webpackJsonp([34], {
         };
         e.exports = n
     },
-    1454: function(e, t, n) {
+    1353: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -1117,7 +849,7 @@ webpackJsonp([34], {
         var a = "//static-cdn.jtvnw.net/ttv-boxart",
             i = "52x72"
     },
-    1545: function(e, t) {
+    1550: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1403,7 +1135,7 @@ webpackJsonp([34], {
         };
         e.exports = n
     },
-    1826: function(e, t, n) {
+    1831: function(e, t, n) {
         var a = {
             kind: "Document",
             definitions: [{
@@ -1506,9 +1238,9 @@ webpackJsonp([34], {
                 var t = e.name.value;
                 return !i[t] && (i[t] = !0, !0)
             })
-        }(n(1545).definitions)), e.exports = a
+        }(n(1550).definitions)), e.exports = a
     },
-    1827: function(e, t) {
+    1832: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1563,12 +1295,12 @@ webpackJsonp([34], {
         };
         e.exports = n
     },
-    1828: function(e, t) {},
-    1829: function(e, t) {},
-    1830: function(e, t) {},
-    1831: function(e, t) {},
-    1832: function(e, t) {},
-    1833: function(e, t, n) {
+    1833: function(e, t) {},
+    1834: function(e, t) {},
+    1835: function(e, t) {},
+    1836: function(e, t) {},
+    1837: function(e, t) {},
+    1838: function(e, t, n) {
         var a = {
             kind: "Document",
             definitions: [{
@@ -1840,9 +1572,9 @@ webpackJsonp([34], {
                 var t = e.name.value;
                 return !i[t] && (i[t] = !0, !0)
             })
-        }(n(1545).definitions)), e.exports = a
+        }(n(1550).definitions)), e.exports = a
     },
-    1834: function(e, t) {
+    1839: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1907,7 +1639,7 @@ webpackJsonp([34], {
         };
         e.exports = n
     },
-    2023: function(e, t, n) {
+    2028: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1963,11 +1695,11 @@ webpackJsonp([34], {
         });
         var p, m = n(0),
             h = n(1),
-            g = n(31),
-            f = n(22),
-            C = n(925),
-            b = n(922),
-            v = n(14);
+            g = n(30),
+            f = n(21),
+            C = n(764),
+            b = n(761),
+            v = n(13);
         ! function(e) {
             e[e.ViewsAscending = 0] = "ViewsAscending", e[e.ViewsDescending = 1] = "ViewsDescending", e[e.CreatedAtAscending = 2] = "CreatedAtAscending", e[e.CreatedAtDescending = 3] = "CreatedAtDescending"
         }(p || (p = {}));
@@ -1979,28 +1711,28 @@ webpackJsonp([34], {
         ! function(e) {
             e[e.Broadcaster = 0] = "Broadcaster", e[e.Curator = 1] = "Curator"
         }(E || (E = {}));
-        var _, T, w = n(6),
-            D = n(9),
-            M = n(11),
-            R = n(51),
-            O = n(35),
-            N = n(19),
-            x = n(15),
+        var _, T, w = n(5),
+            D = n(8),
+            M = n(10),
+            R = n(50),
+            O = n(34),
+            N = n(18),
+            x = n(14),
             U = n(2),
-            A = n(8),
-            L = n(89),
-            I = n(23),
-            j = n(50),
-            F = n(30),
-            B = n(1291),
-            H = n(1060),
-            P = n(12),
-            V = n(88),
-            G = n(64),
-            W = n(407),
-            K = n(136),
-            q = n(1051),
-            Q = n(1141),
+            A = n(7),
+            L = n(83),
+            I = n(22),
+            j = n(49),
+            F = n(29),
+            B = n(1038),
+            H = n(904),
+            P = n(11),
+            V = n(82),
+            G = n(60),
+            W = n(352),
+            K = n(125),
+            q = n(969),
+            Q = n(1022),
             z = n(3),
             Y = [{
                 type: q.b.Twitter,
@@ -2072,8 +1804,8 @@ webpackJsonp([34], {
                 })))))
             },
             X = Object(w.c)("ClipsManagerSocialShare")($),
-            J = n(65),
-            Z = n(1826),
+            J = n(61),
+            Z = n(1831),
             ee = this,
             te = {
                 TITLE_TEXT: "cmgr-title-text",
@@ -2227,8 +1959,8 @@ webpackJsonp([34], {
             re = Object(A.a)(Z, {
                 props: ie
             })(ae),
-            le = n(1827),
-            se = (n(1828), {
+            le = n(1832),
+            se = (n(1833), {
                 MODERATION_DROPDOWN: "cmgr-moderation-dropdown",
                 MODERATION_BUTTON: "cmgr-moderation-button",
                 GAME_LINK: "cmgr-expanded-game-link",
@@ -2527,10 +2259,10 @@ webpackJsonp([34], {
             }(h.Component),
             ce = Object(w.c)("ClipsManagerExpandedRow")(Object(A.a)(le)(oe)),
             de = Object(D.a)(null, i)(ce),
-            ue = n(139),
-            pe = n(410),
-            me = n(1454),
-            he = (n(1829), function(e) {
+            ue = n(128),
+            pe = n(355),
+            me = n(1353),
+            he = (n(1834), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderCardContent = function() {
@@ -2843,7 +2575,7 @@ webpackJsonp([34], {
                 }, t
             }(h.Component),
             ve = Object(w.c)("ClipsManagerSearch")(be),
-            ye = (n(1830), {
+            ye = (n(1835), {
                 MY_CLIPS_RADIO: "cmgr-my-clips-radio",
                 CLIPS_OF_ME_RADIO: "cmgr-clips-of-me-radio"
             }),
@@ -2915,8 +2647,8 @@ webpackJsonp([34], {
                 }, t
             }(h.Component),
             Ee = Object(w.c)("ClipsManagerRightColumn")(Se),
-            ke = n(1010),
-            _e = (n(1831), "clips-manager-row-checkbox"),
+            ke = n(851),
+            _e = (n(1836), "clips-manager-row-checkbox"),
             Te = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3033,7 +2765,7 @@ webpackJsonp([34], {
                     }, e.game.name)) : null
                 }, t
             }(h.Component),
-            we = (n(1832), {
+            we = (n(1837), {
                 SELECT_ALL: "clips-manager-select-all",
                 BATCH_DELETE: "clips-manager-batch-delete",
                 VIEWS_HEADER: "clips-manager-views-sort",
@@ -3377,7 +3109,7 @@ webpackJsonp([34], {
                     })
                 }, t
             }(h.Component),
-            Me = n(1833),
+            Me = n(1838),
             Re = function(e) {
                 var t = function() {
                         var t = e.data.user.clips.edges,
@@ -3468,7 +3200,7 @@ webpackJsonp([34], {
                 options: Oe,
                 props: Re
             }), Object(D.a)(null, o))(De),
-            xe = n(1834),
+            xe = n(1839),
             Ue = function(e) {
                 function t(t) {
                     var n = e.call(this) || this;
@@ -3602,7 +3334,7 @@ webpackJsonp([34], {
             return Be
         })
     },
-    918: function(e, t, n) {
+    757: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -3612,7 +3344,7 @@ webpackJsonp([34], {
             e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention", e[e.Ban = 3] = "Ban", e[e.Timeout = 4] = "Timeout", e[e.AutoModRejectedPrompt = 5] = "AutoModRejectedPrompt", e[e.AutoModMessageRejected = 6] = "AutoModMessageRejected", e[e.AutoModMessageAllowed = 7] = "AutoModMessageAllowed", e[e.AutoModMessageDenied = 8] = "AutoModMessageDenied", e[e.Connected = 9] = "Connected", e[e.Disconnected = 10] = "Disconnected", e[e.Reconnect = 11] = "Reconnect", e[e.Hosting = 12] = "Hosting", e[e.Unhost = 13] = "Unhost", e[e.Subscription = 14] = "Subscription", e[e.Resubscription = 15] = "Resubscription", e[e.SubGift = 16] = "SubGift", e[e.Clear = 17] = "Clear", e[e.SubscriberOnlyMode = 18] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 19] = "FollowerOnlyMode", e[e.SlowMode = 20] = "SlowMode", e[e.RoomMods = 21] = "RoomMods", e[e.RoomState = 22] = "RoomState", e[e.Raid = 23] = "Raid", e[e.Unraid = 24] = "Unraid", e[e.Notice = 25] = "Notice", e[e.Info = 26] = "Info", e[e.BadgesUpdated = 27] = "BadgesUpdated", e[e.Purchase = 28] = "Purchase"
         }(a || (a = {}))
     },
-    920: function(e, t, n) {
+    759: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3620,7 +3352,7 @@ webpackJsonp([34], {
         }
         t.a = a
     },
-    922: function(e, t, n) {
+    761: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -3678,7 +3410,7 @@ webpackJsonp([34], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    925: function(e, t, n) {
+    764: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3738,15 +3470,15 @@ webpackJsonp([34], {
             }
         }
         var i = n(0),
-            r = n(21),
+            r = n(20),
             l = n(1),
-            s = n(12),
+            s = n(11),
             o = n(2);
         n.d(t, "a", function() {
             return a
         })
     },
-    964: function(e, t, n) {
+    804: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3757,10 +3489,25 @@ webpackJsonp([34], {
             }
         }
         t.a = a;
-        var i = n(918),
-            r = n(920)
+        var i = n(757),
+            r = n(759)
     },
-    983: function(e, t, n) {
+    825: function(e, t, n) {
+        "use strict";
+
+        function a(e, t, n, a) {
+            return {
+                type: e,
+                id: Object(i.a)(t + "-mod"),
+                userLogin: t,
+                reason: n,
+                duration: a
+            }
+        }
+        t.a = a;
+        var i = n(759)
+    },
+    833: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3791,14 +3538,14 @@ webpackJsonp([34], {
         var s = n(0),
             o = n(1),
             c = n(2),
-            d = n(994),
-            u = n(136),
+            d = n(845),
+            u = n(125),
             p = "https://www.facebook.com/sharer/sharer.php",
             m = "https://www.twitter.com/share",
             h = "https://www.reddit.com/submit",
             g = "https://vk.com/share.php",
             f = n(3);
-        n(1012);
+        n(874);
         n.d(t, "b", function() {
             return C
         }), n.d(t, "a", function() {
@@ -3922,22 +3669,7 @@ webpackJsonp([34], {
             }, t
         }(o.Component)
     },
-    986: function(e, t, n) {
-        "use strict";
-
-        function a(e, t, n, a) {
-            return {
-                type: e,
-                id: Object(i.a)(t + "-mod"),
-                userLogin: t,
-                reason: n,
-                duration: a
-            }
-        }
-        t.a = a;
-        var i = n(920)
-    },
-    994: function(e, t, n) {
+    845: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3952,6 +3684,274 @@ webpackJsonp([34], {
             return document.body.removeChild(t), n
         }
         t.a = a
+    },
+    851: function(e, t, n) {
+        "use strict";
+        var a = n(0),
+            i = n(1),
+            r = n(2),
+            l = function(e) {
+                function t(t) {
+                    var n = e.call(this) || this;
+                    return n.handleImageError = function() {
+                        n.setState({
+                            imageURL: r.a.defaultStreamPreviewURL
+                        })
+                    }, n.state = {
+                        imageURL: t.imageURL
+                    }, n
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return i.createElement("img", {
+                        src: this.state.imageURL,
+                        alt: this.state.imageURL,
+                        onError: this.handleImageError,
+                        className: this.props.className
+                    })
+                }, t
+            }(i.Component);
+        n.d(t, "a", function() {
+            return l
+        })
+    },
+    855: function(e, t, n) {
+        "use strict";
+
+        function a() {
+            return Object(s.d)("Unable to ban user", "BlockUserMutation")
+        }
+
+        function i(e) {
+            var t = this;
+            return Object(o.a)(m, {
+                props: function(n) {
+                    return {
+                        onBanUser: function(i, o) {
+                            return void 0 === o && (o = null), l.__awaiter(t, void 0, void 0, function() {
+                                var t, m, h, g, f, C;
+                                return l.__generator(this, function(l) {
+                                    switch (l.label) {
+                                        case 0:
+                                            if (t = o ? p.a.Timeout : p.a.Ban, m = e(n.ownProps), h = m.channelID, g = m.onPushMessage, !n.mutate) return [3, 5];
+                                            l.label = 1;
+                                        case 1:
+                                            return l.trys.push([1, 3, , 4]), [4, n.mutate(Object(c.a)({
+                                                channelID: h,
+                                                bannedUserLogin: i,
+                                                expiresIn: o && r(o)
+                                            }))];
+                                        case 2:
+                                            return l.sent(), f = Object(u.a)(t, i, null, o), g && g(f), [2, f];
+                                        case 3:
+                                            throw C = l.sent(), s.i.error(C, "Unable to ban user"), g && g(Object(d.a)(a())), new Error(a());
+                                        case 4:
+                                            return [3, 6];
+                                        case 5:
+                                            throw g && g(Object(d.a)(a())), new Error(a());
+                                        case 6:
+                                            return [2]
+                                    }
+                                })
+                            })
+                        }
+                    }
+                }
+            })
+        }
+
+        function r(e) {
+            if (!e) return "0s";
+            var t = e,
+                n = "";
+            if (t > b) {
+                var a = Math.floor(t / b);
+                t -= a * b, n += a + "mo"
+            }
+            if (t > C) {
+                var i = Math.floor(t / C);
+                t -= i * C, n += i + "w"
+            }
+            if (t > f) {
+                var r = Math.floor(t / f);
+                t -= r * f, n += r + "d"
+            }
+            if (t > g) {
+                var l = Math.floor(t / g);
+                t -= l * g, n += l + "h"
+            }
+            if (t > h) {
+                var s = Math.floor(t / h);
+                t -= s * h, n += s + "m"
+            }
+            return t > 0 && (n += t + "s"), n
+        }
+        t.a = i;
+        var l = n(0),
+            s = n(2),
+            o = n(7),
+            c = n(22),
+            d = n(804),
+            u = n(825),
+            p = n(757),
+            m = n(863),
+            h = (n.n(m), 60),
+            g = 60 * h,
+            f = 24 * g,
+            C = 7 * f,
+            b = 4 * C
+    },
+    863: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "Chat_BanUserFromChatRoom"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "BanUserFromChatRoomInput"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "banUserFromChatRoom"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "ban"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "createdAt"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 148
+            }
+        };
+        n.loc.source = {
+            body: "mutation Chat_BanUserFromChatRoom($input: BanUserFromChatRoomInput!) {\n  banUserFromChatRoom(input: $input) {\n    ban {\n      createdAt\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    874: function(e, t) {},
+    904: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return o
+        }), n.d(t, "b", function() {
+            return c
+        }), n.d(t, "c", function() {
+            return u
+        });
+        var a, i = n(2),
+            r = n(833),
+            l = n(13),
+            s = (a = {}, a[r.b.Twitter] = "twitter", a[r.b.Reddit] = "reddit", a[r.b.VKontakte] = "vkontakte", a[r.b.Facebook] = "facebook", a[r.b.Copy] = "link", a),
+            o = {
+                MyClips: "MyClips",
+                ClipsOfMyChannel: "ClipsOfMyChannel"
+            },
+            c = {
+                Game: "TopClipsGame",
+                Channel: "TopClipsChannel"
+            },
+            d = {
+                MyClips: l.PageviewLocation.MyClipsManager,
+                ClipsOfMyChannel: l.PageviewLocation.ChannelClipsManager,
+                TopClipsGame: l.PageviewLocation.ClipsGame,
+                TopClipsChannel: l.PageviewLocation.ChannelClips
+            },
+            u = function(e, t) {
+                return function(n) {
+                    i.n.tracking.track(l.SpadeEventType.VideoShare, {
+                        vod_id: e.id,
+                        vod_type: "clip",
+                        share_platform: s[n],
+                        location: d[t],
+                        game: e.game ? e.game.name : null,
+                        channel_id: Number(e.broadcaster.id),
+                        channel: e.broadcaster.login,
+                        live: null
+                    })
+                }
+            }
+    },
+    969: function(e, t, n) {
+        "use strict";
+        var a = n(833);
+        n.d(t, "a", function() {
+            return a.a
+        }), n.d(t, "b", function() {
+            return a.b
+        })
     }
 });
-//# sourceMappingURL=pages.my-clips-manager-14586bf913d976ea3f4a121d009880a4.js.map
+//# sourceMappingURL=pages.my-clips-manager-c90de41e49736aee12db8722d1657831.js.map

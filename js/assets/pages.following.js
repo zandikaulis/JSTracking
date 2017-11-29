@@ -1,987 +1,10 @@
-webpackJsonp([52], {
-    1016: function(e, t, n) {
-        "use strict";
-
-        function i() {
-            return {
-                languagePreferences: Object(d.b)()
-            }
-        }
-
-        function a(e, t) {
-            switch (void 0 === e && (e = i()), t.type) {
-                case s.a:
-                    return r.__assign({}, e, {
-                        languagePreferences: t.languagePreferences
-                    });
-                default:
-                    return e
-            }
-        }
-
-        function l(e) {
-            return e.userPreferences.languagePreferences
-        }
-        t.a = l;
-        var r = n(0),
-            o = n(2),
-            s = n(993),
-            d = n(992);
-        o.n.store.registerReducer("userPreferences", a)
-    },
-    1039: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "FragmentDefinition",
-                name: {
-                    kind: "Name",
-                    value: "PreviewCardVideo"
-                },
-                typeCondition: {
-                    kind: "NamedType",
-                    name: {
-                        kind: "Name",
-                        value: "Video"
-                    }
-                },
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "animatedPreviewURL"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "broadcastType"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "game"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "boxArtURL"
-                                },
-                                arguments: [{
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "width"
-                                    },
-                                    value: {
-                                        kind: "IntValue",
-                                        value: "40"
-                                    }
-                                }, {
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "height"
-                                    },
-                                    value: {
-                                        kind: "IntValue",
-                                        value: "55"
-                                    }
-                                }],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "name"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "id"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "lengthSeconds"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "owner"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "displayName"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "previewThumbnailURL"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "width"
-                            },
-                            value: {
-                                kind: "IntValue",
-                                value: "320"
-                            }
-                        }, {
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "height"
-                            },
-                            value: {
-                                kind: "IntValue",
-                                value: "180"
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "publishedAt"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "title"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "viewCount"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 289
-            }
-        };
-        n.loc.source = {
-            body: "fragment PreviewCardVideo on Video {\n  animatedPreviewURL\n  broadcastType\n  game {\n    boxArtURL(width: 40 height: 55)\n    id\n    name\n  }\n  id\n  lengthSeconds\n  owner {\n    displayName\n    id\n    login\n  }\n  previewThumbnailURL(width: 320 height: 180)\n  publishedAt\n  title\n  viewCount\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    1049: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return {
-                languagePreferences: Object(s.a)(e)
-            }
-        }
-
-        function a(e) {
-            return Object(r.bindActionCreators)({
-                updateLanguagePreferences: o.c,
-                clearLanguagePreferences: o.a
-            }, e)
-        }
-        var l = n(9),
-            r = n(11),
-            o = n(992),
-            s = n(1016),
-            d = n(0),
-            c = n(1),
-            u = n(2),
-            m = n(30),
-            v = n(64),
-            g = n(968),
-            p = n(6),
-            h = n(3),
-            f = (n(1050), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleLanguageChange = function(e) {
-                        var n = e.currentTarget,
-                            i = n.parentElement && n.parentElement.getAttribute("data-language-code");
-                        i && t.props.updateLanguagePreferences(i, n.checked)
-                    }, t.renderLanguageOption = function(e) {
-                        return c.createElement(h.U, {
-                            padding: {
-                                x: 1,
-                                y: .5
-                            },
-                            key: e.code
-                        }, c.createElement(h.E, {
-                            label: e.label,
-                            checked: t.props.languagePreferences.includes(e.code),
-                            "data-language-code": e.code,
-                            "data-a-target": "language-filter-" + e.code + "-checkbox",
-                            onChange: t.handleLanguageChange
-                        }))
-                    }, t
-                }
-                return d.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = this.props.languagePreferences.length;
-                    return c.createElement(h.U, {
-                        className: "language-select-menu"
-                    }, c.createElement(v.a, null, c.createElement(h.u, {
-                        "data-test-selector": "language-dropdown-button",
-                        "data-a-target": "language-filter-dropdown",
-                        dropdown: !0,
-                        type: h.z.Hollow
-                    }, c.createElement(h.U, {
-                        display: h.H.Flex
-                    }, Object(u.d)("Language", "LanguageSelectMenu"), c.createElement(h.U, {
-                        margin: {
-                            left: .5
-                        }
-                    }, 0 !== e && c.createElement(h.Z, {
-                        type: h._0.Brand,
-                        label: e.toString()
-                    })))), c.createElement(h.p, {
-                        direction: h.q.BottomLeft,
-                        noTail: !0,
-                        "data-a-target": "language-filter-balloon"
-                    }, c.createElement(m.b, {
-                        className: "language-select-menu__balloon"
-                    }, c.createElement(h.U, {
-                        padding: .5
-                    }, Object(g.b)().map(this.renderLanguageOption))), c.createElement(h._17, {
-                        background: h.m.Alt,
-                        borderTop: !0,
-                        className: "language-select-menu__footer"
-                    }, c.createElement(h.u, {
-                        type: h.z.Text,
-                        onClick: this.props.clearLanguagePreferences,
-                        "data-a-target": "language-clear-all"
-                    }, Object(u.d)("Clear all", "LanguageSelectMenu"))))))
-                }, t = d.__decorate([Object(p.c)("LanguageSelectMenu")], t)
-            }(c.Component)),
-            k = f,
-            w = Object(l.a)(i, a)(k);
-        n.d(t, "a", function() {
-            return w
-        })
-    },
-    1050: function(e, t) {},
-    1055: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return l
-        });
-        var i = n(1),
-            a = (n.n(i), n(3)),
-            l = function() {
-                return i.createElement(a.A, null, i.createElement(a.j, {
-                    ratio: a.k.Aspect16x9
-                }, i.createElement(a._1, null)), i.createElement(a.B, null, i.createElement(a.U, {
-                    display: a.H.Flex,
-                    margin: {
-                        bottom: 1
-                    }
-                }, i.createElement(a.U, {
-                    display: a.H.InlineBlock,
-                    margin: {
-                        top: 1,
-                        right: 1
-                    }
-                }, i.createElement(a._1, {
-                    width: 40,
-                    height: 56
-                })), i.createElement(a.U, {
-                    display: a.H.InlineBlock,
-                    margin: {
-                        top: 1
-                    }
-                }, i.createElement(a._21, null, i.createElement(a._1, {
-                    width: 150
-                })), i.createElement(a._21, {
-                    fontSize: a.L.Size7
-                }, i.createElement(a._1, {
-                    width: 100
-                }))))))
-            }
-    },
-    1057: function(e, t, n) {
-        "use strict";
-        var i, a, l, r = n(4),
-            o = n(1),
-            s = n(2),
-            d = n(1058),
-            c = n(3),
-            u = (n(1138), i = {}, i[d.a.Live] = "stream-type-indicator--live", i[d.a.Premiere] = "stream-type-indicator--premiere", i[d.a.Rerun] = "stream-type-indicator--rerun", i[d.a.WatchParty] = "stream-type-indicator--rerun", i),
-            m = (a = {}, a[d.a.Premiere] = c._9.VideoPremiere, a[d.a.Rerun] = c._9.VideoRerun, a[d.a.WatchParty] = c._9.VideoRerun, a),
-            v = (l = {}, l[d.a.Premiere] = c._10.Live, l[d.a.Rerun] = c._10.Inherit, l[d.a.WatchParty] = c._10.Inherit, l),
-            g = function(e) {
-                var t = {
-                    "stream-type-indicator": !0
-                };
-                t[u[e.type]] = !0;
-                var n;
-                n = e.type === d.a.Live ? o.createElement(c.U, {
-                    className: "stream-type-indicator__live-wrapper",
-                    display: c.H.Flex,
-                    alignItems: c.c.Center
-                }, o.createElement(c.V, {
-                    size: c.W.Small
-                })) : o.createElement(c._8, {
-                    asset: m[e.type],
-                    type: v[e.type],
-                    width: 14,
-                    height: 14
-                });
-                var i;
-                switch (e.type) {
-                    case d.a.Live:
-                        i = Object(s.d)("Live", "StreamTypeIndicator");
-                        break;
-                    case d.a.Premiere:
-                        i = Object(s.d)("Premiere", "StreamTypeIndicator");
-                        break;
-                    case d.a.Rerun:
-                    case d.a.WatchParty:
-                        i = Object(s.d)("Rerun", "StreamTypeIndicator");
-                        break;
-                    default:
-                        i = ""
-                }
-                return o.createElement(c._17, {
-                    className: r(t),
-                    background: c.m.Overlay,
-                    padding: {
-                        x: .5
-                    },
-                    borderRadius: c.s.Small,
-                    display: c.H.Flex
-                }, o.createElement(c.U, {
-                    display: c.H.Flex,
-                    margin: {
-                        right: .5
-                    }
-                }, n), o.createElement(c._21, {
-                    type: c._26.Span
-                }, i))
-            };
-        n.d(t, "a", function() {
-            return g
-        })
-    },
-    1058: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return i
-        });
-        var i;
-        ! function(e) {
-            e.Live = "live", e.WatchParty = "watch_party", e.Premiere = "premiere", e.Rerun = "rerun"
-        }(i || (i = {}))
-    },
-    1062: function(e, t, n) {
-        "use strict";
-        var i = n(0),
-            a = n(1),
-            l = n(12),
-            r = n(2),
-            o = n(1057),
-            s = n(3),
-            d = (n(1139), function(e) {
-                function t() {
-                    var t = e.call(this) || this;
-                    return t.state = {
-                        isPremiereExperimentActive: !1
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return i.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, r.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
-                                case 1:
-                                    return e = t.sent(), "yes" === e && r.b.get("premiere_video_manager_staff", !1) && this.setState({
-                                        isPremiereExperimentActive: !0
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.render = function() {
-                    var e = null;
-                    !0 !== this.state.isPremiereExperimentActive && this.props.vodcast && (e = a.createElement(s.U, {
-                        display: s.H.InlineBlock,
-                        padding: {
-                            right: .5
-                        }
-                    }, a.createElement(s.Z, {
-                        label: Object(r.d)("Vodcast", "LiveChannelCard")
-                    })));
-                    var t = Object(r.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
-                        viewerCount: this.props.viewerCount,
-                        channel: a.createElement(l.a, {
-                            to: this.props.channelNameLinkTo,
-                            className: "live-channel-card__videos",
-                            "data-a-target": "live-channel-card-channel-name-link"
-                        }, this.props.channelName)
-                    }, "Live Channel Card");
-                    return a.createElement("div", i.__assign({
-                        className: "live-channel-card"
-                    }, Object(s._39)(this.props)), a.createElement(s.A, {
-                        key: this.props.title
-                    }, a.createElement(s.U, {
-                        fullWidth: !0
-                    }, a.createElement(s.j, {
-                        overflow: !0
-                    }, a.createElement("div", null, a.createElement(l.a, {
-                        to: this.props.linkTo,
-                        title: this.props.title,
-                        "data-a-target": "live-channel-card-thumbnail-link"
-                    }, a.createElement(s.C, {
-                        imageAlt: this.props.imageAlt,
-                        imageSrc: this.props.imageSrc,
-                        aspect: s.k.Aspect16x9
-                    })), this.renderContentType(), this.renderGameBoxArt()))), a.createElement(s.B, null, a.createElement(l.a, {
-                        to: this.props.linkTo,
-                        className: "live-channel-card__channel",
-                        "data-a-target": "live-channel-card-title-link"
-                    }, a.createElement(s.P, {
-                        margin: {
-                            top: .5
-                        }
-                    }, a.createElement(s._21, {
-                        type: s._26.H3,
-                        fontSize: s.L.Size5,
-                        ellipsis: !0,
-                        className: "live-channel-card__title"
-                    }, this.props.title))), a.createElement(s.U, {
-                        className: "live-channel-card__meta",
-                        display: s.H.Flex,
-                        flexWrap: s.K.NoWrap
-                    }, e, a.createElement(s._21, {
-                        type: s._26.Span,
-                        ellipsis: !0
-                    }, t)))))
-                }, t.prototype.renderGameBoxArt = function() {
-                    var e = this.props.gameLinkTo,
-                        t = this.props.gameTitle,
-                        n = this.props.gameImageSrc;
-                    return t && e ? a.createElement(l.a, {
-                        to: e,
-                        title: t,
-                        "data-a-target": "live-channel-card-game-link"
-                    }, a.createElement(s._17, {
-                        className: "live-channel-card__boxart",
-                        position: s._2.Absolute,
-                        attachRight: !0,
-                        attachBottom: !0
-                    }, a.createElement(s._30, {
-                        display: s.H.Block,
-                        direction: s._32.Bottom,
-                        label: t
-                    }, a.createElement(s.C, {
-                        imageSrc: n,
-                        imageAlt: t,
-                        aspect: s.k.BoxArt
-                    })))) : null
-                }, t.prototype.renderContentType = function() {
-                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? a.createElement(s.U, {
-                        position: s._2.Absolute,
-                        attachLeft: !0,
-                        attachTop: !0,
-                        padding: .5
-                    }, a.createElement(o.a, {
-                        type: this.props.streamType
-                    })) : null
-                }, t
-            }(a.Component)),
-            c = d;
-        n.d(t, !1, function() {
-            return d
-        }), n.d(t, "a", function() {
-            return c
-        })
-    },
-    1133: function(e, t, n) {
-        "use strict";
-
-        function i(e, t, n, i) {
-            var l = i || a(t),
-                s = "";
-            l && (s = "?sort=" + o(l));
-            var d = n ? n.toLowerCase() : r(t);
-            m.n.history.push(e + "/" + d + s)
-        }
-
-        function a(e) {
-            return d(u.parse(e.location.search).sort || "")
-        }
-
-        function l(e) {
-            switch (e.match.params.filter) {
-                case v.a.Archive.toLowerCase():
-                    return v.a.Archive;
-                case v.a.Highlight.toLowerCase():
-                    return v.a.Highlight;
-                case v.a.Upload.toLowerCase():
-                    return v.a.Upload;
-                case v.a.PastPremiere.toLowerCase():
-                    return v.a.PastPremiere;
-                default:
-                    return
-            }
-        }
-
-        function r(e) {
-            var t = l(e);
-            return t ? t.toLowerCase() : "all"
-        }
-
-        function o(e) {
-            switch (e) {
-                case g.b:
-                    return c.Popular;
-                case g.a:
-                    return c.Newest;
-                default:
-                    return e
-            }
-        }
-
-        function s(e) {
-            var t = u.parse(e.location.search);
-            return e.match.params.collectionID || t.collection || ""
-        }
-
-        function d(e) {
-            switch (e.toUpperCase()) {
-                case g.b:
-                    return g.b;
-                case g.a:
-                    return g.a;
-                default:
-                    return null
-            }
-        }
-        t.d = i, t.c = a, t.b = l, t.a = s, t.e = d;
-        var c, u = n(21),
-            m = (n.n(u), n(2)),
-            v = n(272),
-            g = n(981);
-        ! function(e) {
-            e.Popular = "views", e.Newest = "time"
-        }(c || (c = {}))
-    },
-    1134: function(e, t, n) {
-        "use strict";
-        var i = n(1144);
-        n.d(t, "VideoPreviewCard", function() {
-            return i.a
-        });
-        var a = n(1146),
-            l = (n.n(a), n(1055));
-        n.d(t, "VideoPreviewCardPlaceholder", function() {
-            return l.a
-        })
-    },
-    1138: function(e, t) {},
-    1139: function(e, t) {},
-    1144: function(e, t, n) {
-        "use strict";
-        var i = n(0),
-            a = n(4),
-            l = n(21),
-            r = n(1),
-            o = n(12),
-            s = n(2),
-            d = n(52),
-            c = n(420),
-            u = n(6),
-            m = n(272),
-            v = n(991),
-            g = n(921),
-            p = n(976),
-            h = function() {
-                function e() {}
-                return e.getResumeTime = function(t, n) {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var a, l, r, o, d, c;
-                        return i.__generator(this, function(i) {
-                            switch (i.label) {
-                                case 0:
-                                    return a = s.n.store.getState(), a.session.user && a.session.user.id ? (e.currentRequest || (window.location.pathname !== e.lastPath && delete e.cachedResponse, e.cachedResponse ? e.currentRequest = e.cachedResponse : e.currentRequest = g.a.get("/api/resumewatching/user?id=" + (a.session.user && a.session.user.id), {
-                                        credentials: "include"
-                                    }, {
-                                        excludeHeaders: ["Authorization", "Client-ID", "Twitch-Api-Token", "X-Requested-With"]
-                                    })), [4, e.currentRequest]) : [3, 2];
-                                case 1:
-                                    return l = i.sent(), !l.error && l.body && l.body.videos && Array.isArray(l.body.videos) ? (e.lastPath = window.location.pathname, e.cachedResponse = Promise.resolve(l), delete e.currentRequest, r = l.body.videos.find(function(e) {
-                                        return e && e.video_id === Object(v.a)(t) || e.video_id === Object(p.a)(t)
-                                    }), [2, Promise.resolve(r ? r.position : void 0)]) : (delete e.currentRequest, [2, Promise.resolve(void 0)]);
-                                case 2:
-                                    return o = Object(p.a)(t), d = s.n.storage.get("vodResumeTimes", {}), d[o] ? [2, Promise.resolve(d[o])] : n === m.a.Archive && (c = s.n.storage.get("livestreamResumeTimes", {}), c[t]) ? [2, Promise.resolve(c[t])] : [2, Promise.resolve(void 0)]
-                            }
-                        })
-                    })
-                }, e
-            }(),
-            f = n(3);
-        n(1145);
-        n.d(t, "a", function() {
-            return w
-        });
-        var k = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        hovered: !1,
-                        didAnimatedPreviewLoad: !1,
-                        didAnimatedPreviewFailToLoad: !1
-                    }, t.ignoreResumeTimeResponse = !1, t.getResumeData = function() {
-                        return i.__awaiter(t, void 0, void 0, function() {
-                            var e;
-                            return i.__generator(this, function(t) {
-                                switch (t.label) {
-                                    case 0:
-                                        return [4, h.getResumeTime(this.props.video.id, this.props.video.broadcastType)];
-                                    case 1:
-                                        return e = t.sent(), this.ignoreResumeTimeResponse ? [2] : (e !== this.state.resumeOffsetSeconds && this.setState({
-                                            resumeOffsetSeconds: e
-                                        }), [2])
-                                }
-                            })
-                        })
-                    }, t.onMouseEnter = function() {
-                        t.setState({
-                            hovered: !0
-                        })
-                    }, t.onMouseLeave = function() {
-                        t.setState({
-                            hovered: !1
-                        })
-                    }, t.onPreviewImageLoad = function(e) {
-                        t.props.latencyTracking.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
-                            didAnimatedPreviewLoad: !0
-                        })
-                    }, t.onPreviewImageLoadError = function(e) {
-                        e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
-                            didAnimatedPreviewFailToLoad: !0
-                        })
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.getResumeData()
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.props.video.id !== e.video.id && this.setState({
-                        resumeOffsetSeconds: void 0
-                    }, this.getResumeData)
-                }, t.prototype.componentWillUnmount = function() {
-                    this.ignoreResumeTimeResponse = !0
-                }, t.prototype.render = function() {
-                    var e = null;
-                    if (this.state.resumeOffsetSeconds) {
-                        var t = this.state.resumeOffsetSeconds / this.props.video.lengthSeconds * 100;
-                        e = r.createElement(f.U, {
-                            position: f._2.Absolute,
-                            attachBottom: !0,
-                            fullWidth: !0
-                        }, r.createElement(f._5, {
-                            size: f._6.Small,
-                            value: t,
-                            mask: !0
-                        }))
-                    }
-                    return r.createElement("div", i.__assign({
-                        onMouseEnter: this.onMouseEnter,
-                        onMouseLeave: this.onMouseLeave
-                    }, Object(f._39)(this.props)), r.createElement(f.A, null, r.createElement(f.U, {
-                        fullWidth: !0
-                    }, r.createElement(f.j, {
-                        overflow: !0
-                    }, r.createElement("div", null, r.createElement(f._17, {
-                        display: f.H.InlineFlex,
-                        position: f._2.Absolute,
-                        attachTop: !0,
-                        attachLeft: !0,
-                        margin: .5,
-                        zIndex: f._38.Default,
-                        fontSize: f.L.Size6,
-                        background: f.m.Overlay,
-                        color: f.F.Overlay,
-                        className: "video-preview-card__preview-overlay-stat"
-                    }, r.createElement(f._16, {
-                        "data-test-selector": "video-view-count",
-                        icon: f._9.GlyphViews,
-                        label: Object(s.d)("views", "VideoPreviewCard"),
-                        value: Object(s.f)(this.props.video.viewCount)
-                    })), r.createElement(f._17, {
-                        display: f.H.InlineFlex,
-                        position: f._2.Absolute,
-                        attachTop: !0,
-                        attachRight: !0,
-                        margin: .5,
-                        zIndex: f._38.Default,
-                        fontSize: f.L.Size6,
-                        background: f.m.Overlay,
-                        color: f.F.Overlay,
-                        className: "video-preview-card__preview-overlay-stat"
-                    }, r.createElement(f._16, {
-                        "data-test-selector": "video-length",
-                        icon: f._9.GlyphLength,
-                        label: Object(s.d)("length", "VideoPreviewCard"),
-                        value: Object(c.a)(this.props.video.lengthSeconds)
-                    })), this.videoPreviewImage(), e))), r.createElement(f.B, null, r.createElement(f.U, {
-                        display: f.H.Flex,
-                        flexDirection: f.J.Row,
-                        flexWrap: f.K.NoWrap,
-                        padding: {
-                            top: 1
-                        }
-                    }, this.props.hideGameArt ? null : this.gameBoxArt(), this.videoMetaData()))))
-                }, t.prototype.generateSearchString = function() {
-                    var e = {};
-                    this.props.collectionID && (e.collection = this.props.collectionID);
-                    var t = l.stringify(e);
-                    return t ? "?" + t : ""
-                }, t.prototype.videoPreviewImage = function() {
-                    var e = this.state.hovered && !this.state.didAnimatedPreviewFailToLoad,
-                        t = e ? this.props.video.animatedPreviewURL : this.props.video.previewThumbnailURL,
-                        n = a("video-preview-card__image-wrapper", {
-                            "video-preview-card__image-wrapper--watched": !(void 0 === this.state.resumeOffsetSeconds || this.state.hovered)
-                        }),
-                        i = a("video-preview-card__preview-image", {
-                            "video-preview-card__preview-image--animated": this.state.hovered && this.state.didAnimatedPreviewLoad
-                        });
-                    return r.createElement(f.j, {
-                        overflow: !0
-                    }, r.createElement(o.a, {
-                        to: {
-                            pathname: "/videos/" + this.props.video.id,
-                            state: {
-                                content: this.props.trackingContent,
-                                medium: this.props.trackingMedium
-                            },
-                            search: this.generateSearchString()
-                        },
-                        title: this.props.video.title,
-                        "data-a-target": "video-preview-card-image-link",
-                        "data-test-selector": "preview-image-link"
-                    }, r.createElement("div", {
-                        className: n
-                    }, r.createElement(f.P, {
-                        flexShrink: 0
-                    }, r.createElement("figure", null, r.createElement(f.j, {
-                        ratio: f.k.Aspect16x9
-                    }, r.createElement("img", {
-                        alt: this.props.video.title,
-                        className: i,
-                        "data-test-selector": "preview-image",
-                        onLoad: this.onPreviewImageLoad,
-                        onError: this.onPreviewImageLoadError,
-                        src: t
-                    })))))))
-                }, t.prototype.gameBoxArt = function() {
-                    if (!this.showGameArt() || !this.props.video.game) return null;
-                    var e = this.props.video.game,
-                        t = {
-                            pathname: "/directory/games/" + encodeURI(e.name),
-                            state: {
-                                content: this.props.trackingContent,
-                                medium: this.props.trackingMedium
-                            }
-                        },
-                        n = a("video-preview-card__image-wrapper", {
-                            "video-preview-card__image-wrapper--watched": !(void 0 === this.state.resumeOffsetSeconds || this.state.hovered)
-                        });
-                    return r.createElement(f.U, {
-                        "data-test-selector": "game-box-art",
-                        display: f.H.InlineFlex,
-                        flexShrink: 0
-                    }, r.createElement(o.a, {
-                        to: t,
-                        title: e.name,
-                        "data-a-target": "video-preview-card-boxart-link"
-                    }, r.createElement(f.P, {
-                        margin: {
-                            right: 1
-                        }
-                    }, r.createElement("figure", {
-                        className: "video-preview-card__game-art"
-                    }, r.createElement(f._30, {
-                        display: f.H.Block,
-                        direction: f._32.Bottom,
-                        label: e.name
-                    }, r.createElement("div", {
-                        className: n
-                    }, r.createElement(f.C, {
-                        aspect: f.k.BoxArt,
-                        imageAlt: e.name,
-                        imageSrc: e.boxArtURL || s.a.defaultBoxArtURL
-                    })))))))
-                }, t.prototype.videoMetaData = function() {
-                    var e = Object(s.c)(new Date(this.props.video.publishedAt), "medium"),
-                        t = null;
-                    if (this.props.video.owner) {
-                        var n = {
-                            pathname: "/" + this.props.video.owner.login,
-                            state: {
-                                content: this.props.trackingContent,
-                                medium: this.props.trackingMedium
-                            }
-                        };
-                        t = r.createElement(o.a, {
-                            to: n,
-                            className: "video-preview-card__owner-display-name",
-                            "data-a-target": "video-preview-card-channel-link",
-                            "data-test-selector": "video-owner",
-                            title: Object(d.a)(this.props.video.owner.login, this.props.video.owner.displayName, !0)
-                        }, Object(d.a)(this.props.video.owner.login, this.props.video.owner.displayName))
-                    }
-                    return r.createElement(f.U, {
-                        display: f.H.Flex,
-                        flexDirection: f.J.Column
-                    }, r.createElement(f.U, {
-                        "data-test-selector": "video-title",
-                        overflow: f.Y.Hidden,
-                        position: f._2.Relative
-                    }, r.createElement(f._21, {
-                        color: f.F.Base,
-                        fontSize: f.L.Size5
-                    }, r.createElement(o.a, {
-                        className: "video-preview-card__video-title",
-                        to: {
-                            pathname: "/videos/" + this.props.video.id,
-                            state: {
-                                content: this.props.trackingContent,
-                                medium: this.props.trackingMedium
-                            },
-                            search: this.generateSearchString()
-                        },
-                        title: this.props.video.title,
-                        "data-a-target": "video-preview-card-title-link"
-                    }, this.props.video.title))), r.createElement(f.U, {
-                        flexShrink: 0,
-                        flexGrow: 0
-                    }, r.createElement(f._21, {
-                        type: f._26.Span,
-                        color: f.F.Alt2
-                    }, e, r.createElement("span", null, " · "), t)))
-                }, t.prototype.showGameArt = function() {
-                    return !this.props.hideGameArt && this.props.video.game && "" !== this.props.video.game.name
-                }, t
-            }(r.Component),
-            w = Object(u.c)("VideoPreviewCard")(k)
-    },
-    1145: function(e, t) {},
-    1146: function(e, t) {},
-    1288: function(e, t, n) {
+webpackJsonp([51], {
+    1026: function(e, t, n) {
         "use strict";
         var i = n(1),
-            a = n(6),
-            l = n(1134),
-            r = n(1055),
+            a = n(5),
+            l = n(983),
+            r = n(900),
             o = n(3),
             s = function(e) {
                 var t = [];
@@ -997,8 +20,11 @@ webpackJsonp([52], {
                         }
                     }, i.createElement(l.VideoPreviewCard, {
                         hideGameArt: e.hideGameArt,
-                        trackingContent: e.trackingContent,
-                        trackingMedium: e.trackingMedium,
+                        tracking: {
+                            content: e.trackingContent,
+                            content_index: n,
+                            medium: e.trackingMedium
+                        },
                         video: t
                     }))
                 });
@@ -1019,7 +45,7 @@ webpackJsonp([52], {
             return d
         })
     },
-    1289: function(e, t, n) {
+    1027: function(e, t, n) {
         "use strict";
 
         function i(e, t, n) {
@@ -1027,7 +53,7 @@ webpackJsonp([52], {
         }
         t.a = i
     },
-    1294: function(e, t, n) {
+    1041: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1062,13 +88,13 @@ webpackJsonp([52], {
         }
         t.a = i;
         var a = n(1),
-            l = (n.n(a), n(12)),
+            l = (n.n(a), n(11)),
             r = n(2),
             o = n(3),
-            s = n(1455),
+            s = n(1354),
             d = (n.n(s), "view-all-button-selector")
     },
-    1301: function(e, t, n) {
+    1047: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1081,21 +107,21 @@ webpackJsonp([52], {
         }
         t.a = i
     },
-    1302: function(e, t, n) {
+    1048: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return h
         });
         var i = n(0),
-            a = n(21),
+            a = n(20),
             l = (n.n(a), n(1)),
             r = (n.n(l), n(2)),
-            o = n(8),
-            s = n(19),
+            o = n(7),
+            s = n(18),
             d = n(3),
-            c = n(1303),
-            u = (n.n(c), n(1304)),
-            m = (n.n(u), n(1305)),
+            c = n(1049),
+            u = (n.n(c), n(1050)),
+            m = (n.n(u), n(1051)),
             v = (n.n(m), function(e) {
                 return "https://api.twitch.tv/api/users/" + e + "/follows/games/follow"
             }),
@@ -1249,7 +275,7 @@ webpackJsonp([52], {
             }(l.Component),
             h = p
     },
-    1303: function(e, t) {
+    1049: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1370,8 +396,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1304: function(e, t) {},
-    1305: function(e, t) {
+    1050: function(e, t) {},
+    1051: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1436,19 +462,19 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1326: function(e, t, n) {
+    1074: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(4),
             l = n(1),
             r = n(2),
-            o = n(1049),
-            s = n(64),
-            d = n(272),
-            c = n(1133),
-            u = n(981),
+            o = n(895),
+            s = n(60),
+            d = n(251),
+            c = n(982),
+            u = n(820),
             m = n(3),
-            v = (n(1327), function(e) {
+            v = (n(1075), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.sortChangeHandler = function(e) {
@@ -1612,28 +638,28 @@ webpackJsonp([52], {
                     }, Object(r.d)("Popular", "VideoFilter")))))
                 }, t
             }(l.Component)),
-            g = n(1288);
+            g = n(1026);
         n.d(t, "a", function() {
             return v
         }), n.d(t, "b", function() {
             return g.a
         }), n.d(t, !1, function() {})
     },
-    1327: function(e, t) {},
-    1373: function(e, t, n) {
+    1075: function(e, t) {},
+    1272: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
             l = n(2),
-            r = n(134),
-            o = n(30),
-            s = n(8),
-            d = n(50),
-            c = n(1301),
-            u = n(1302),
+            r = n(123),
+            o = n(29),
+            s = n(7),
+            d = n(49),
+            c = n(1047),
+            u = n(1048),
             m = n(3),
-            v = n(1374),
-            g = (n(1375), function(e) {
+            v = n(1273),
+            g = (n(1274), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -1742,7 +768,7 @@ webpackJsonp([52], {
             return g
         })
     },
-    1374: function(e, t) {
+    1273: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1893,10 +919,10 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1375: function(e, t) {},
-    1455: function(e, t) {},
-    1867: function(e, t) {},
-    1868: function(e, t) {
+    1274: function(e, t) {},
+    1354: function(e, t) {},
+    1872: function(e, t) {},
+    1873: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2100,7 +1126,7 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1869: function(e, t) {
+    1874: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2271,8 +1297,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1870: function(e, t) {},
-    1871: function(e, t) {
+    1875: function(e, t) {},
+    1876: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2625,7 +1651,7 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1872: function(e, t, n) {
+    1877: function(e, t, n) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -2774,9 +1800,9 @@ webpackJsonp([52], {
                 var t = e.name.value;
                 return !a[t] && (a[t] = !0, !0)
             })
-        }(n(1039).definitions)), e.exports = i
+        }(n(883).definitions)), e.exports = i
     },
-    1873: function(e, t) {
+    1878: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3575,7 +2601,7 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1874: function(e, t) {
+    1879: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3885,7 +2911,7 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    2036: function(e, t, n) {
+    2041: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -3900,19 +2926,19 @@ webpackJsonp([52], {
                 linkTo: "/directory/following",
                 "data-a-target": "following-overview-tab"
             }, Object(w.d)("Overview", "FollowingHeaderTabs")), f.createElement(L._18, {
-                active: t === N.SpadeFollowingCategory.Live,
+                active: t === C.SpadeFollowingCategory.Live,
                 "data-a-target": "following-channels-tab",
                 linkTo: "/directory/following/live"
             }, Object(w.d)("Channels", "FollowingHeaderTabs")), f.createElement(L._18, {
-                active: t === N.SpadeFollowingCategory.Hosts,
+                active: t === C.SpadeFollowingCategory.Hosts,
                 "data-a-target": "following-hosts-tab",
                 linkTo: "/directory/following/hosts"
             }, Object(w.d)("Hosts", "FollowingHeaderTabs")), f.createElement(L._18, {
-                active: t === N.SpadeFollowingCategory.Games,
+                active: t === C.SpadeFollowingCategory.Games,
                 "data-a-target": "following-games-tab",
                 linkTo: "/directory/following/games"
             }, Object(w.d)("Games", "FollowingHeaderTabs")), f.createElement(L._18, {
-                active: t === N.SpadeFollowingCategory.Communities,
+                active: t === C.SpadeFollowingCategory.Communities,
                 linkTo: Object(F.a)("/directory/following/communities"),
                 targetBlank: Object(F.b)(),
                 "data-a-target": "following-communities-tab"
@@ -4110,8 +3136,8 @@ webpackJsonp([52], {
                     linkTo: {
                         pathname: "/directory/following/hosts",
                         state: {
-                            medium: N.PageviewMedium.Following,
-                            content: N.PageviewContent.Following
+                            medium: C.PageviewMedium.Following,
+                            content: C.PageviewContent.Following
                         }
                     }
                 }))
@@ -4129,7 +3155,7 @@ webpackJsonp([52], {
                         margin: {
                             bottom: 2
                         }
-                    }, f.createElement(G.a, {
+                    }, f.createElement(M.a, {
                         imageSrc: e.hosting.stream.previewImageURL || w.a.defaultStreamPreviewURL,
                         imageAlt: a,
                         viewerCount: e.hosting.stream && e.hosting.stream.viewersCount || 0,
@@ -4140,24 +3166,24 @@ webpackJsonp([52], {
                         gameLinkTo: {
                             pathname: "/directory/game/" + (e.hosting.stream && e.hosting.stream.game ? e.hosting.stream.game.name : ""),
                             state: {
-                                medium: N.PageviewMedium.Following,
-                                content: N.PageviewContent.LiveHost,
+                                medium: C.PageviewMedium.Following,
+                                content: C.PageviewContent.LiveHost,
                                 content_index: t
                             }
                         },
                         linkTo: {
                             pathname: "/" + e.login,
                             state: {
-                                medium: N.PageviewMedium.Following,
-                                content: N.PageviewContent.LiveHost,
+                                medium: C.PageviewMedium.Following,
+                                content: C.PageviewContent.LiveHost,
                                 content_index: t
                             }
                         },
                         channelNameLinkTo: {
                             pathname: "/" + e.hosting.login + "/videos",
                             state: {
-                                medium: N.PageviewMedium.Following,
-                                content: N.PageviewContent.LiveHost,
+                                medium: C.PageviewMedium.Following,
+                                content: C.PageviewContent.LiveHost,
                                 content_index: t
                             }
                         },
@@ -4213,8 +3239,8 @@ webpackJsonp([52], {
                 if (!e.stream) return null;
                 var n = Object(z.a)(e.login, e.displayName),
                     i = {
-                        medium: N.PageviewMedium.Following,
-                        content: N.PageviewContent.Live,
+                        medium: C.PageviewMedium.Following,
+                        content: C.PageviewContent.Live,
                         content_index: t
                     };
                 return f.createElement(L.U, {
@@ -4222,7 +3248,7 @@ webpackJsonp([52], {
                     margin: {
                         bottom: 2
                     }
-                }, f.createElement(G.a, {
+                }, f.createElement(M.a, {
                     imageSrc: e.stream && e.stream.previewImageURL || w.a.defaultStreamPreviewURL,
                     imageAlt: e.stream && e.stream.title || "",
                     viewerCount: e.stream && e.stream.viewersCount || 0,
@@ -4270,27 +3296,27 @@ webpackJsonp([52], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var u = n(9),
-            m = n(11),
-            v = n(51),
-            g = n(35),
-            p = n(19),
+        var u = n(8),
+            m = n(10),
+            v = n(50),
+            g = n(34),
+            p = n(18),
             h = n(0),
             f = n(1),
-            k = n(22),
+            k = n(21),
             w = n(2),
-            y = n(66),
-            S = n(6),
-            b = n(30),
-            _ = n(8),
-            E = n(925),
-            C = n(922),
-            N = n(14),
-            F = n(137),
+            y = n(62),
+            S = n(5),
+            b = n(29),
+            _ = n(7),
+            E = n(764),
+            N = n(761),
+            C = n(13),
+            F = n(126),
             L = n(3),
-            U = n(1294),
-            A = n(1289),
-            P = (n(1867), n(1868)),
+            U = n(1041),
+            A = n(1027),
+            P = (n(1872), n(1873)),
             x = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -4315,7 +3341,7 @@ webpackJsonp([52], {
                     }), f.createElement(b.b, null, f.createElement(L.U, {
                         padding: 3
                     }, f.createElement(i, {
-                        activeCategory: N.SpadeFollowingCategory.Communities
+                        activeCategory: C.SpadeFollowingCategory.Communities
                     }), e))
                 }, t.prototype.onRender = function() {
                     this.props.latencyTracking.reportInteractive()
@@ -4327,21 +3353,21 @@ webpackJsonp([52], {
                         }
                     }
                 }), Object(S.c)("FollowingCommunitiesPage", {
-                    destination: C.a.DirectoryFollowingCommunities
+                    destination: N.a.DirectoryFollowingCommunities
                 }), Object(E.a)({
-                    location: N.PageviewLocation.Directory,
+                    location: C.PageviewLocation.Directory,
                     properties: function() {
                         return {
-                            content_type: N.PageviewDirectoryContentType.Communities,
-                            tab: N.PageviewFollowingTab.Communities
+                            content_type: C.PageviewDirectoryContentType.Communities,
+                            tab: C.PageviewFollowingTab.Communities
                         }
                     }
                 })], t)
             }(f.Component),
             O = x,
-            T = n(50),
-            j = n(1373),
-            R = n(407),
+            T = n(49),
+            j = n(1272),
+            R = n(352),
             D = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -4442,7 +3468,7 @@ webpackJsonp([52], {
                 }, t
             }(f.Component),
             I = Object(u.a)(null, l)(D),
-            V = n(1869),
+            V = n(1874),
             H = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -4468,7 +3494,7 @@ webpackJsonp([52], {
                     }), f.createElement(b.b, null, f.createElement(L.U, {
                         padding: 3
                     }, f.createElement(i, {
-                        activeCategory: N.SpadeFollowingCategory.Games
+                        activeCategory: C.SpadeFollowingCategory.Games
                     }), e))
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
@@ -4480,16 +3506,16 @@ webpackJsonp([52], {
                         }
                     }
                 }), Object(S.c)("FollowingGamesPage", {
-                    destination: C.a.DirectoryFollowingGames
+                    destination: N.a.DirectoryFollowingGames
                 }), Object(E.a)({
-                    location: N.PageviewLocation.Directory,
+                    location: C.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: N.PageviewDirectoryContentType.Games,
-                            tab: N.PageviewFollowingTab.Games,
+                            content_type: C.PageviewDirectoryContentType.Games,
+                            tab: C.PageviewFollowingTab.Games,
                             num_live_games: e.data.currentUser.followedGames.nodes.filter(function(e) {
                                 return e && e.viewersCount > 0
                             }).length
@@ -4497,10 +3523,10 @@ webpackJsonp([52], {
                     }
                 })], t)
             }(f.Component),
-            M = H,
-            G = n(1062),
-            z = n(52),
-            W = (n(1870), n(1871)),
+            G = H,
+            M = n(906),
+            z = n(51),
+            W = (n(1875), n(1876)),
             q = 50,
             B = function(e) {
                 function t() {
@@ -4554,7 +3580,7 @@ webpackJsonp([52], {
                     return f.createElement(b.b, null, f.createElement(L.U, {
                         padding: 3
                     }, f.createElement(i, {
-                        activeCategory: N.SpadeFollowingCategory.Hosts
+                        activeCategory: C.SpadeFollowingCategory.Hosts
                     }), e))
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
@@ -4568,25 +3594,25 @@ webpackJsonp([52], {
                         }
                     }
                 }), Object(S.c)("FollowingHostsPage", {
-                    destination: C.a.DirectoryFollowingHosts
+                    destination: N.a.DirectoryFollowingHosts
                 }), Object(E.a)({
-                    location: N.PageviewLocation.Directory,
+                    location: C.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: N.PageviewDirectoryContentType.Hosts,
-                            tab: N.PageviewFollowingTab.Hosts,
+                            content_type: C.PageviewDirectoryContentType.Hosts,
+                            tab: C.PageviewFollowingTab.Hosts,
                             num_host_channels: e.data.currentUser.followedHosts.nodes.length
                         }
                     }
                 })], t)
             }(f.Component),
             $ = B,
-            X = n(418),
-            Q = n(1326),
-            Y = n(1872),
+            X = n(363),
+            Q = n(1074),
+            Y = n(1877),
             J = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -4613,8 +3639,8 @@ webpackJsonp([52], {
                         t = t.slice(0, n)
                     }
                     return f.createElement("div", null, e, f.createElement(Q.b, {
-                        trackingMedium: N.PageviewMedium.Following,
-                        trackingContent: N.PageviewContent.SuggestedVideos,
+                        trackingMedium: C.PageviewMedium.Following,
+                        trackingContent: C.PageviewContent.SuggestedVideos,
                         videos: t
                     }))
                 }, t = h.__decorate([Object(_.a)(Y, {
@@ -4627,7 +3653,7 @@ webpackJsonp([52], {
                 }), Object(S.c)("SuggestedVideos")], t)
             }(f.Component),
             K = J,
-            Z = n(1873),
+            Z = n(1878),
             ee = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4688,19 +3714,19 @@ webpackJsonp([52], {
                         }
                     }
                 }), Object(S.c)("FollowingIndexPage", {
-                    destination: C.a.DirectoryFollowingIndex
+                    destination: N.a.DirectoryFollowingIndex
                 }), Object(E.a)({
-                    location: N.PageviewLocation.Directory,
+                    location: C.PageviewLocation.Directory,
                     properties: function() {
                         return {
-                            content_type: N.PageviewDirectoryContentType.Mixed,
-                            tab: N.PageviewFollowingTab.Overview
+                            content_type: C.PageviewDirectoryContentType.Mixed,
+                            tab: C.PageviewFollowingTab.Overview
                         }
                     }
                 })], t)
             }(f.Component),
             te = ee,
-            ne = n(1874),
+            ne = n(1879),
             ie = 50,
             ae = function(e) {
                 function t() {
@@ -4754,7 +3780,7 @@ webpackJsonp([52], {
                     return f.createElement(b.b, null, f.createElement(L.U, {
                         padding: 3
                     }, f.createElement(i, {
-                        activeCategory: N.SpadeFollowingCategory.Live
+                        activeCategory: C.SpadeFollowingCategory.Live
                     }), e))
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
@@ -4768,16 +3794,16 @@ webpackJsonp([52], {
                         }
                     }
                 }), Object(S.c)("FollowingLivePage", {
-                    destination: C.a.DirectoryFollowingLiveChannels
+                    destination: N.a.DirectoryFollowingLiveChannels
                 }), Object(E.a)({
-                    location: N.PageviewLocation.Directory,
+                    location: C.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: N.PageviewDirectoryContentType.Channels,
-                            tab: N.PageviewFollowingTab.Channels,
+                            content_type: C.PageviewDirectoryContentType.Channels,
+                            tab: C.PageviewFollowingTab.Channels,
                             num_live_channels: e.data.currentUser.followedLiveUsers.nodes.length
                         }
                     }
@@ -4797,7 +3823,7 @@ webpackJsonp([52], {
                         component: $
                     }), f.createElement(k.b, {
                         path: "/directory/following/games",
-                        component: M
+                        component: G
                     }), f.createElement(k.b, {
                         path: "/directory/following/communities",
                         component: O
@@ -4817,14 +3843,14 @@ webpackJsonp([52], {
             return se
         })
     },
-    921: function(e, t, n) {
+    760: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
         });
         var i = n(0),
             a = n(2),
-            l = n(19),
+            l = n(18),
             r = function() {
                 function e() {}
                 return e.get = function(e, t, n) {
@@ -4948,7 +3974,7 @@ webpackJsonp([52], {
                 }, e
             }()
     },
-    922: function(e, t, n) {
+    761: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -5006,7 +4032,7 @@ webpackJsonp([52], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    925: function(e, t, n) {
+    764: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -5066,15 +4092,30 @@ webpackJsonp([52], {
             }
         }
         var a = n(0),
-            l = n(21),
+            l = n(20),
             r = n(1),
-            o = n(12),
+            o = n(11),
             s = n(2);
         n.d(t, "a", function() {
             return i
         })
     },
-    968: function(e, t, n) {
+    806: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            var t = Math.floor(e / 3600),
+                n = Math.floor((e - 3600 * t) / 60),
+                i = e - 3600 * t - 60 * n;
+            return t < 10 && (t = "0" + t), n < 10 && (n = "0" + n), i < 10 && (i = "0" + i), t + "h" + n + "m" + i + "s"
+        }
+
+        function a(e) {
+            return "" === e ? "" : e.startsWith("v") ? e : "v" + e
+        }
+        t.b = i, t.a = a
+    },
+    809: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -5185,22 +4226,7 @@ webpackJsonp([52], {
                 return e.code
             }))
     },
-    976: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            var t = Math.floor(e / 3600),
-                n = Math.floor((e - 3600 * t) / 60),
-                i = e - 3600 * t - 60 * n;
-            return t < 10 && (t = "0" + t), n < 10 && (n = "0" + n), i < 10 && (i = "0" + i), t + "h" + n + "m" + i + "s"
-        }
-
-        function a(e) {
-            return "" === e ? "" : e.startsWith("v") ? e : "v" + e
-        }
-        t.b = i, t.a = a
-    },
-    981: function(e, t, n) {
+    820: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
             return a
@@ -5213,7 +4239,7 @@ webpackJsonp([52], {
             e.Popular = "VIEWS", e.Newest = "TIME"
         }(i || (i = {}))
     },
-    991: function(e, t, n) {
+    830: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -5221,7 +4247,7 @@ webpackJsonp([52], {
         }
         t.a = i
     },
-    992: function(e, t, n) {
+    831: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -5255,11 +4281,11 @@ webpackJsonp([52], {
         t.c = i, t.a = a, t.b = l;
         var r = n(0),
             o = n(2),
-            s = n(968),
-            d = n(993),
+            s = n(809),
+            d = n(832),
             c = "languageDirectoryFilters"
     },
-    993: function(e, t, n) {
+    832: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -5272,6 +4298,977 @@ webpackJsonp([52], {
             return a
         }), t.b = i;
         var a = "core.user-preferences.LANGUAGE_PREFERENCES_UPDATED"
-    }
+    },
+    856: function(e, t, n) {
+        "use strict";
+
+        function i() {
+            return {
+                languagePreferences: Object(d.b)()
+            }
+        }
+
+        function a(e, t) {
+            switch (void 0 === e && (e = i()), t.type) {
+                case s.a:
+                    return r.__assign({}, e, {
+                        languagePreferences: t.languagePreferences
+                    });
+                default:
+                    return e
+            }
+        }
+
+        function l(e) {
+            return e.userPreferences.languagePreferences
+        }
+        t.a = l;
+        var r = n(0),
+            o = n(2),
+            s = n(832),
+            d = n(831);
+        o.n.store.registerReducer("userPreferences", a)
+    },
+    883: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "PreviewCardVideo"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "Video"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "animatedPreviewURL"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "broadcastType"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "game"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "boxArtURL"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "width"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "40"
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "height"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "55"
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "name"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "id"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "lengthSeconds"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "owner"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "displayName"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "previewThumbnailURL"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "width"
+                            },
+                            value: {
+                                kind: "IntValue",
+                                value: "320"
+                            }
+                        }, {
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "height"
+                            },
+                            value: {
+                                kind: "IntValue",
+                                value: "180"
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "publishedAt"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "title"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "viewCount"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 289
+            }
+        };
+        n.loc.source = {
+            body: "fragment PreviewCardVideo on Video {\n  animatedPreviewURL\n  broadcastType\n  game {\n    boxArtURL(width: 40 height: 55)\n    id\n    name\n  }\n  id\n  lengthSeconds\n  owner {\n    displayName\n    id\n    login\n  }\n  previewThumbnailURL(width: 320 height: 180)\n  publishedAt\n  title\n  viewCount\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    895: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return {
+                languagePreferences: Object(s.a)(e)
+            }
+        }
+
+        function a(e) {
+            return Object(r.bindActionCreators)({
+                updateLanguagePreferences: o.c,
+                clearLanguagePreferences: o.a
+            }, e)
+        }
+        var l = n(8),
+            r = n(10),
+            o = n(831),
+            s = n(856),
+            d = n(0),
+            c = n(1),
+            u = n(2),
+            m = n(29),
+            v = n(60),
+            g = n(809),
+            p = n(5),
+            h = n(3),
+            f = (n(896), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleLanguageChange = function(e) {
+                        var n = e.currentTarget,
+                            i = n.parentElement && n.parentElement.getAttribute("data-language-code");
+                        i && t.props.updateLanguagePreferences(i, n.checked)
+                    }, t.renderLanguageOption = function(e) {
+                        return c.createElement(h.U, {
+                            padding: {
+                                x: 1,
+                                y: .5
+                            },
+                            key: e.code
+                        }, c.createElement(h.E, {
+                            label: e.label,
+                            checked: t.props.languagePreferences.includes(e.code),
+                            "data-language-code": e.code,
+                            "data-a-target": "language-filter-" + e.code + "-checkbox",
+                            onChange: t.handleLanguageChange
+                        }))
+                    }, t
+                }
+                return d.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e = this.props.languagePreferences.length;
+                    return c.createElement(h.U, {
+                        className: "language-select-menu"
+                    }, c.createElement(v.a, null, c.createElement(h.u, {
+                        "data-test-selector": "language-dropdown-button",
+                        "data-a-target": "language-filter-dropdown",
+                        dropdown: !0,
+                        type: h.z.Hollow
+                    }, c.createElement(h.U, {
+                        display: h.H.Flex
+                    }, Object(u.d)("Language", "LanguageSelectMenu"), c.createElement(h.U, {
+                        margin: {
+                            left: .5
+                        }
+                    }, 0 !== e && c.createElement(h.Z, {
+                        type: h._0.Brand,
+                        label: e.toString()
+                    })))), c.createElement(h.p, {
+                        direction: h.q.BottomLeft,
+                        noTail: !0,
+                        "data-a-target": "language-filter-balloon"
+                    }, c.createElement(m.b, {
+                        className: "language-select-menu__balloon"
+                    }, c.createElement(h.U, {
+                        padding: .5
+                    }, Object(g.b)().map(this.renderLanguageOption))), c.createElement(h._17, {
+                        background: h.m.Alt,
+                        borderTop: !0,
+                        className: "language-select-menu__footer"
+                    }, c.createElement(h.u, {
+                        type: h.z.Text,
+                        onClick: this.props.clearLanguagePreferences,
+                        "data-a-target": "language-clear-all"
+                    }, Object(u.d)("Clear all", "LanguageSelectMenu"))))))
+                }, t = d.__decorate([Object(p.c)("LanguageSelectMenu")], t)
+            }(c.Component)),
+            k = f,
+            w = Object(l.a)(i, a)(k);
+        n.d(t, "a", function() {
+            return w
+        })
+    },
+    896: function(e, t) {},
+    900: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return l
+        });
+        var i = n(1),
+            a = (n.n(i), n(3)),
+            l = function() {
+                return i.createElement(a.A, null, i.createElement(a.j, {
+                    ratio: a.k.Aspect16x9
+                }, i.createElement(a._1, null)), i.createElement(a.B, null, i.createElement(a.U, {
+                    display: a.H.Flex,
+                    margin: {
+                        bottom: 1
+                    }
+                }, i.createElement(a.U, {
+                    display: a.H.InlineBlock,
+                    margin: {
+                        top: 1,
+                        right: 1
+                    }
+                }, i.createElement(a._1, {
+                    width: 40,
+                    height: 56
+                })), i.createElement(a.U, {
+                    display: a.H.InlineBlock,
+                    margin: {
+                        top: 1
+                    }
+                }, i.createElement(a._21, null, i.createElement(a._1, {
+                    width: 150
+                })), i.createElement(a._21, {
+                    fontSize: a.L.Size7
+                }, i.createElement(a._1, {
+                    width: 100
+                }))))))
+            }
+    },
+    901: function(e, t, n) {
+        "use strict";
+        var i, a, l, r = n(4),
+            o = n(1),
+            s = n(2),
+            d = n(902),
+            c = n(3),
+            u = (n(988), i = {}, i[d.a.Live] = "stream-type-indicator--live", i[d.a.Premiere] = "stream-type-indicator--premiere", i[d.a.Rerun] = "stream-type-indicator--rerun", i[d.a.WatchParty] = "stream-type-indicator--rerun", i),
+            m = (a = {}, a[d.a.Premiere] = c._9.VideoPremiere, a[d.a.Rerun] = c._9.VideoRerun, a[d.a.WatchParty] = c._9.VideoRerun, a),
+            v = (l = {}, l[d.a.Premiere] = c._10.Live, l[d.a.Rerun] = c._10.Inherit, l[d.a.WatchParty] = c._10.Inherit, l),
+            g = function(e) {
+                var t = {
+                    "stream-type-indicator": !0
+                };
+                t[u[e.type]] = !0;
+                var n;
+                n = e.type === d.a.Live ? o.createElement(c.U, {
+                    className: "stream-type-indicator__live-wrapper",
+                    display: c.H.Flex,
+                    alignItems: c.c.Center
+                }, o.createElement(c.V, {
+                    size: c.W.Small
+                })) : o.createElement(c._8, {
+                    asset: m[e.type],
+                    type: v[e.type],
+                    width: 14,
+                    height: 14
+                });
+                var i;
+                switch (e.type) {
+                    case d.a.Live:
+                        i = Object(s.d)("Live", "StreamTypeIndicator");
+                        break;
+                    case d.a.Premiere:
+                        i = Object(s.d)("Premiere", "StreamTypeIndicator");
+                        break;
+                    case d.a.Rerun:
+                    case d.a.WatchParty:
+                        i = Object(s.d)("Rerun", "StreamTypeIndicator");
+                        break;
+                    default:
+                        i = ""
+                }
+                return o.createElement(c._17, {
+                    className: r(t),
+                    background: c.m.Overlay,
+                    padding: {
+                        x: .5
+                    },
+                    borderRadius: c.s.Small,
+                    display: c.H.Flex
+                }, o.createElement(c.U, {
+                    display: c.H.Flex,
+                    margin: {
+                        right: .5
+                    }
+                }, n), o.createElement(c._21, {
+                    type: c._26.Span
+                }, i))
+            };
+        n.d(t, "a", function() {
+            return g
+        })
+    },
+    902: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return i
+        });
+        var i;
+        ! function(e) {
+            e.Live = "live", e.WatchParty = "watch_party", e.Premiere = "premiere", e.Rerun = "rerun"
+        }(i || (i = {}))
+    },
+    906: function(e, t, n) {
+        "use strict";
+        var i = n(0),
+            a = n(1),
+            l = n(11),
+            r = n(2),
+            o = n(901),
+            s = n(3),
+            d = (n(989), function(e) {
+                function t() {
+                    var t = e.call(this) || this;
+                    return t.state = {
+                        isPremiereExperimentActive: !1
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return i.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return [4, r.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
+                                case 1:
+                                    return e = t.sent(), "yes" === e && r.b.get("premiere_video_manager_staff", !1) && this.setState({
+                                        isPremiereExperimentActive: !0
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, t.prototype.render = function() {
+                    var e = null;
+                    !0 !== this.state.isPremiereExperimentActive && this.props.vodcast && (e = a.createElement(s.U, {
+                        display: s.H.InlineBlock,
+                        padding: {
+                            right: .5
+                        }
+                    }, a.createElement(s.Z, {
+                        label: Object(r.d)("Vodcast", "LiveChannelCard")
+                    })));
+                    var t = Object(r.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
+                        viewerCount: this.props.viewerCount,
+                        channel: a.createElement(l.a, {
+                            to: this.props.channelNameLinkTo,
+                            className: "live-channel-card__videos",
+                            "data-a-target": "live-channel-card-channel-name-link"
+                        }, this.props.channelName)
+                    }, "Live Channel Card");
+                    return a.createElement("div", i.__assign({
+                        className: "live-channel-card"
+                    }, Object(s._39)(this.props)), a.createElement(s.A, {
+                        key: this.props.title
+                    }, a.createElement(s.U, {
+                        fullWidth: !0
+                    }, a.createElement(s.j, {
+                        overflow: !0
+                    }, a.createElement("div", null, a.createElement(l.a, {
+                        to: this.props.linkTo,
+                        title: this.props.title,
+                        "data-a-target": "live-channel-card-thumbnail-link"
+                    }, a.createElement(s.C, {
+                        imageAlt: this.props.imageAlt,
+                        imageSrc: this.props.imageSrc,
+                        aspect: s.k.Aspect16x9
+                    })), this.renderContentType(), this.renderGameBoxArt()))), a.createElement(s.B, null, a.createElement(l.a, {
+                        to: this.props.linkTo,
+                        className: "live-channel-card__channel",
+                        "data-a-target": "live-channel-card-title-link"
+                    }, a.createElement(s.P, {
+                        margin: {
+                            top: .5
+                        }
+                    }, a.createElement(s._21, {
+                        type: s._26.H3,
+                        fontSize: s.L.Size5,
+                        ellipsis: !0,
+                        className: "live-channel-card__title"
+                    }, this.props.title))), a.createElement(s.U, {
+                        className: "live-channel-card__meta",
+                        display: s.H.Flex,
+                        flexWrap: s.K.NoWrap
+                    }, e, a.createElement(s._21, {
+                        type: s._26.Span,
+                        ellipsis: !0
+                    }, t)))))
+                }, t.prototype.renderGameBoxArt = function() {
+                    var e = this.props.gameLinkTo,
+                        t = this.props.gameTitle,
+                        n = this.props.gameImageSrc;
+                    return t && e ? a.createElement(l.a, {
+                        to: e,
+                        title: t,
+                        "data-a-target": "live-channel-card-game-link"
+                    }, a.createElement(s._17, {
+                        className: "live-channel-card__boxart",
+                        position: s._2.Absolute,
+                        attachRight: !0,
+                        attachBottom: !0
+                    }, a.createElement(s._30, {
+                        display: s.H.Block,
+                        direction: s._32.Bottom,
+                        label: t
+                    }, a.createElement(s.C, {
+                        imageSrc: n,
+                        imageAlt: t,
+                        aspect: s.k.BoxArt
+                    })))) : null
+                }, t.prototype.renderContentType = function() {
+                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? a.createElement(s.U, {
+                        position: s._2.Absolute,
+                        attachLeft: !0,
+                        attachTop: !0,
+                        padding: .5
+                    }, a.createElement(o.a, {
+                        type: this.props.streamType
+                    })) : null
+                }, t
+            }(a.Component)),
+            c = d;
+        n.d(t, !1, function() {
+            return d
+        }), n.d(t, "a", function() {
+            return c
+        })
+    },
+    982: function(e, t, n) {
+        "use strict";
+
+        function i(e, t, n, i) {
+            var l = i || a(t),
+                s = "";
+            l && (s = "?sort=" + o(l));
+            var d = n ? n.toLowerCase() : r(t);
+            m.n.history.push(e + "/" + d + s)
+        }
+
+        function a(e) {
+            return d(u.parse(e.location.search).sort || "")
+        }
+
+        function l(e) {
+            switch (e.match.params.filter) {
+                case v.a.Archive.toLowerCase():
+                    return v.a.Archive;
+                case v.a.Highlight.toLowerCase():
+                    return v.a.Highlight;
+                case v.a.Upload.toLowerCase():
+                    return v.a.Upload;
+                case v.a.PastPremiere.toLowerCase():
+                    return v.a.PastPremiere;
+                default:
+                    return
+            }
+        }
+
+        function r(e) {
+            var t = l(e);
+            return t ? t.toLowerCase() : "all"
+        }
+
+        function o(e) {
+            switch (e) {
+                case g.b:
+                    return c.Popular;
+                case g.a:
+                    return c.Newest;
+                default:
+                    return e
+            }
+        }
+
+        function s(e) {
+            var t = u.parse(e.location.search);
+            return e.match.params.collectionID || t.collection || ""
+        }
+
+        function d(e) {
+            switch (e.toUpperCase()) {
+                case g.b:
+                    return g.b;
+                case g.a:
+                    return g.a;
+                default:
+                    return null
+            }
+        }
+        t.d = i, t.c = a, t.b = l, t.a = s, t.e = d;
+        var c, u = n(20),
+            m = (n.n(u), n(2)),
+            v = n(251),
+            g = n(820);
+        ! function(e) {
+            e.Popular = "views", e.Newest = "time"
+        }(c || (c = {}))
+    },
+    983: function(e, t, n) {
+        "use strict";
+        var i = n(993);
+        n.d(t, "VideoPreviewCard", function() {
+            return i.a
+        });
+        var a = n(995),
+            l = (n.n(a), n(900));
+        n.d(t, "VideoPreviewCardPlaceholder", function() {
+            return l.a
+        })
+    },
+    988: function(e, t) {},
+    989: function(e, t) {},
+    993: function(e, t, n) {
+        "use strict";
+        var i = n(0),
+            a = n(4),
+            l = n(20),
+            r = n(1),
+            o = n(11),
+            s = n(2),
+            d = n(51),
+            c = n(364),
+            u = n(5),
+            m = n(251),
+            v = n(830),
+            g = n(760),
+            p = n(806),
+            h = function() {
+                function e() {}
+                return e.getResumeTime = function(t, n) {
+                    return i.__awaiter(this, void 0, void 0, function() {
+                        var a, l, r, o, d, c;
+                        return i.__generator(this, function(i) {
+                            switch (i.label) {
+                                case 0:
+                                    return a = s.n.store.getState(), a.session.user && a.session.user.id ? (e.currentRequest || (window.location.pathname !== e.lastPath && delete e.cachedResponse, e.cachedResponse ? e.currentRequest = e.cachedResponse : e.currentRequest = g.a.get("/api/resumewatching/user?id=" + (a.session.user && a.session.user.id), {
+                                        credentials: "include"
+                                    }, {
+                                        excludeHeaders: ["Authorization", "Client-ID", "Twitch-Api-Token", "X-Requested-With"]
+                                    })), [4, e.currentRequest]) : [3, 2];
+                                case 1:
+                                    return l = i.sent(), !l.error && l.body && l.body.videos && Array.isArray(l.body.videos) ? (e.lastPath = window.location.pathname, e.cachedResponse = Promise.resolve(l), delete e.currentRequest, r = l.body.videos.find(function(e) {
+                                        return e && e.video_id === Object(v.a)(t) || e.video_id === Object(p.a)(t)
+                                    }), [2, Promise.resolve(r ? r.position : void 0)]) : (delete e.currentRequest, [2, Promise.resolve(void 0)]);
+                                case 2:
+                                    return o = Object(p.a)(t), d = s.n.storage.get("vodResumeTimes", {}), d[o] ? [2, Promise.resolve(d[o])] : n === m.a.Archive && (c = s.n.storage.get("livestreamResumeTimes", {}), c[t]) ? [2, Promise.resolve(c[t])] : [2, Promise.resolve(void 0)]
+                            }
+                        })
+                    })
+                }, e
+            }(),
+            f = n(3);
+        n(994);
+        n.d(t, "a", function() {
+            return w
+        });
+        var k = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        hovered: !1,
+                        didAnimatedPreviewLoad: !1,
+                        didAnimatedPreviewFailToLoad: !1
+                    }, t.ignoreResumeTimeResponse = !1, t.getResumeData = function() {
+                        return i.__awaiter(t, void 0, void 0, function() {
+                            var e;
+                            return i.__generator(this, function(t) {
+                                switch (t.label) {
+                                    case 0:
+                                        return [4, h.getResumeTime(this.props.video.id, this.props.video.broadcastType)];
+                                    case 1:
+                                        return e = t.sent(), this.ignoreResumeTimeResponse ? [2] : (e !== this.state.resumeOffsetSeconds && this.setState({
+                                            resumeOffsetSeconds: e
+                                        }), [2])
+                                }
+                            })
+                        })
+                    }, t.onMouseEnter = function() {
+                        t.setState({
+                            hovered: !0
+                        })
+                    }, t.onMouseLeave = function() {
+                        t.setState({
+                            hovered: !1
+                        })
+                    }, t.onPreviewImageLoad = function(e) {
+                        t.props.latencyTracking.reportInteractive(), e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
+                            didAnimatedPreviewLoad: !0
+                        })
+                    }, t.onPreviewImageLoadError = function(e) {
+                        e.currentTarget.src === t.props.video.animatedPreviewURL && t.setState({
+                            didAnimatedPreviewFailToLoad: !0
+                        })
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.getResumeData()
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    this.props.video.id !== e.video.id && this.setState({
+                        resumeOffsetSeconds: void 0
+                    }, this.getResumeData)
+                }, t.prototype.componentWillUnmount = function() {
+                    this.ignoreResumeTimeResponse = !0
+                }, t.prototype.render = function() {
+                    var e = null;
+                    if (this.state.resumeOffsetSeconds) {
+                        var t = this.state.resumeOffsetSeconds / this.props.video.lengthSeconds * 100;
+                        e = r.createElement(f.U, {
+                            position: f._2.Absolute,
+                            attachBottom: !0,
+                            fullWidth: !0
+                        }, r.createElement(f._5, {
+                            size: f._6.Small,
+                            value: t,
+                            mask: !0
+                        }))
+                    }
+                    return r.createElement("div", i.__assign({
+                        onMouseEnter: this.onMouseEnter,
+                        onMouseLeave: this.onMouseLeave
+                    }, Object(f._39)(this.props)), r.createElement(f.A, null, r.createElement(f.U, {
+                        fullWidth: !0
+                    }, r.createElement(f.j, {
+                        overflow: !0
+                    }, r.createElement("div", null, r.createElement(f._17, {
+                        display: f.H.InlineFlex,
+                        position: f._2.Absolute,
+                        attachTop: !0,
+                        attachLeft: !0,
+                        margin: .5,
+                        zIndex: f._38.Default,
+                        fontSize: f.L.Size6,
+                        background: f.m.Overlay,
+                        color: f.F.Overlay,
+                        className: "video-preview-card__preview-overlay-stat"
+                    }, r.createElement(f._16, {
+                        "data-test-selector": "video-view-count",
+                        icon: f._9.GlyphViews,
+                        label: Object(s.d)("views", "VideoPreviewCard"),
+                        value: Object(s.f)(this.props.video.viewCount)
+                    })), r.createElement(f._17, {
+                        display: f.H.InlineFlex,
+                        position: f._2.Absolute,
+                        attachTop: !0,
+                        attachRight: !0,
+                        margin: .5,
+                        zIndex: f._38.Default,
+                        fontSize: f.L.Size6,
+                        background: f.m.Overlay,
+                        color: f.F.Overlay,
+                        className: "video-preview-card__preview-overlay-stat"
+                    }, r.createElement(f._16, {
+                        "data-test-selector": "video-length",
+                        icon: f._9.GlyphLength,
+                        label: Object(s.d)("length", "VideoPreviewCard"),
+                        value: Object(c.a)(this.props.video.lengthSeconds)
+                    })), this.videoPreviewImage(), e))), r.createElement(f.B, null, r.createElement(f.U, {
+                        display: f.H.Flex,
+                        flexDirection: f.J.Row,
+                        flexWrap: f.K.NoWrap,
+                        padding: {
+                            top: 1
+                        }
+                    }, this.props.hideGameArt ? null : this.gameBoxArt(), this.videoMetaData()))))
+                }, t.prototype.generateSearchString = function() {
+                    var e = {};
+                    this.props.collectionID && (e.collection = this.props.collectionID);
+                    var t = l.stringify(e);
+                    return t ? "?" + t : ""
+                }, t.prototype.videoPreviewImage = function() {
+                    var e = this.state.hovered && !this.state.didAnimatedPreviewFailToLoad,
+                        t = e ? this.props.video.animatedPreviewURL : this.props.video.previewThumbnailURL,
+                        n = a("video-preview-card__image-wrapper", {
+                            "video-preview-card__image-wrapper--watched": !(void 0 === this.state.resumeOffsetSeconds || this.state.hovered)
+                        }),
+                        i = a("video-preview-card__preview-image", {
+                            "video-preview-card__preview-image--animated": this.state.hovered && this.state.didAnimatedPreviewLoad
+                        });
+                    return r.createElement(f.j, {
+                        overflow: !0
+                    }, r.createElement(o.a, {
+                        to: {
+                            pathname: "/videos/" + this.props.video.id,
+                            state: this.getLinkState(),
+                            search: this.generateSearchString()
+                        },
+                        title: this.props.video.title,
+                        "data-a-target": "video-preview-card-image-link",
+                        "data-test-selector": "preview-image-link"
+                    }, r.createElement("div", {
+                        className: n
+                    }, r.createElement(f.P, {
+                        flexShrink: 0
+                    }, r.createElement("figure", null, r.createElement(f.j, {
+                        ratio: f.k.Aspect16x9
+                    }, r.createElement("img", {
+                        alt: this.props.video.title,
+                        className: i,
+                        "data-test-selector": "preview-image",
+                        onLoad: this.onPreviewImageLoad,
+                        onError: this.onPreviewImageLoadError,
+                        src: t
+                    })))))))
+                }, t.prototype.gameBoxArt = function() {
+                    if (!this.showGameArt() || !this.props.video.game) return null;
+                    var e = this.props.video.game,
+                        t = {
+                            pathname: "/directory/games/" + encodeURI(e.name),
+                            state: this.getLinkState()
+                        },
+                        n = a("video-preview-card__image-wrapper", {
+                            "video-preview-card__image-wrapper--watched": !(void 0 === this.state.resumeOffsetSeconds || this.state.hovered)
+                        });
+                    return r.createElement(f.U, {
+                        "data-test-selector": "game-box-art",
+                        display: f.H.InlineFlex,
+                        flexShrink: 0
+                    }, r.createElement(o.a, {
+                        to: t,
+                        title: e.name,
+                        "data-a-target": "video-preview-card-boxart-link"
+                    }, r.createElement(f.P, {
+                        margin: {
+                            right: 1
+                        }
+                    }, r.createElement("figure", {
+                        className: "video-preview-card__game-art"
+                    }, r.createElement(f._30, {
+                        display: f.H.Block,
+                        direction: f._32.Bottom,
+                        label: e.name
+                    }, r.createElement("div", {
+                        className: n
+                    }, r.createElement(f.C, {
+                        aspect: f.k.BoxArt,
+                        imageAlt: e.name,
+                        imageSrc: e.boxArtURL || s.a.defaultBoxArtURL
+                    })))))))
+                }, t.prototype.videoMetaData = function() {
+                    var e = Object(s.c)(new Date(this.props.video.publishedAt), "medium"),
+                        t = null;
+                    if (this.props.video.owner) {
+                        var n = {
+                            pathname: "/" + this.props.video.owner.login,
+                            state: this.getLinkState()
+                        };
+                        t = r.createElement(o.a, {
+                            to: n,
+                            className: "video-preview-card__owner-display-name",
+                            "data-a-target": "video-preview-card-channel-link",
+                            "data-test-selector": "video-owner",
+                            title: Object(d.a)(this.props.video.owner.login, this.props.video.owner.displayName, !0)
+                        }, Object(d.a)(this.props.video.owner.login, this.props.video.owner.displayName))
+                    }
+                    return r.createElement(f.U, {
+                        display: f.H.Flex,
+                        flexDirection: f.J.Column
+                    }, r.createElement(f.U, {
+                        "data-test-selector": "video-title",
+                        overflow: f.Y.Hidden,
+                        position: f._2.Relative
+                    }, r.createElement(f._21, {
+                        color: f.F.Base,
+                        fontSize: f.L.Size5
+                    }, r.createElement(o.a, {
+                        className: "video-preview-card__video-title",
+                        to: {
+                            pathname: "/videos/" + this.props.video.id,
+                            state: this.getLinkState(),
+                            search: this.generateSearchString()
+                        },
+                        title: this.props.video.title,
+                        "data-a-target": "video-preview-card-title-link"
+                    }, this.props.video.title))), r.createElement(f.U, {
+                        flexShrink: 0,
+                        flexGrow: 0
+                    }, r.createElement(f._21, {
+                        type: f._26.Span,
+                        color: f.F.Alt2
+                    }, e, r.createElement("span", null, " · "), t)))
+                }, t.prototype.showGameArt = function() {
+                    return !this.props.hideGameArt && this.props.video.game && "" !== this.props.video.game.name
+                }, t.prototype.getLinkState = function() {
+                    return {
+                        content: this.props.tracking.content,
+                        content_index: this.props.tracking.content_index,
+                        medium: this.props.tracking.medium
+                    }
+                }, t
+            }(r.Component),
+            w = Object(u.c)("VideoPreviewCard")(k)
+    },
+    994: function(e, t) {},
+    995: function(e, t) {}
 });
-//# sourceMappingURL=pages.following-a693e39473f70efb4404afb1620c28ad.js.map
+//# sourceMappingURL=pages.following-2632900f4a2b8861c228f03e22f5e67d.js.map
