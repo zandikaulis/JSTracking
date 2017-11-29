@@ -2867,6 +2867,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "a7b419e4-cd89-4a50-8334-4dbc29a407b0": {
+            "name": "ios_notification_permissions_for_upgraders",
+            "v": 2530,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "enabled"
+            }, {
+                "weight": 0,
+                "value": "disabled"
+            }]
+        },
         "a88d97b7-ec93-4724-935e-e93f166df82f": {
             "name": "clips_feel_good",
             "v": 2379,
