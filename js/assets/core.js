@@ -4494,7 +4494,10 @@ webpackJsonp([62], [, , function(e, t, n) {
     }
 
     function r() {
-        return s.k.get(d, l.a.Light) !== l.a.Light ? l.a.Dark : l.a.Light
+        var e = s.k.get(d, {
+            activeTheme: ""
+        });
+        return e && "theme--dark" === e.activeTheme ? l.a.Dark : l.a.Light
     }
 
     function o(e) {
@@ -8714,7 +8717,7 @@ webpackJsonp([62], [, , function(e, t, n) {
     window.IntlMessageFormat = o, window.IntlRelativeFormat = s;
     var l = function() {
             function e() {
-                this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "d02c067c-fc21-413f-94d1-ae746041eda4", this.spadeBatchWindow = 1e3, this.locales = [{
+                this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "fa394f67-5cfc-4622-b237-65de548f9809", this.spadeBatchWindow = 1e3, this.locales = [{
                     name: "English",
                     languageCode: "en",
                     locale: "en-US",
@@ -33942,4 +33945,4 @@ webpackJsonp([62], [, , function(e, t, n) {
     };
     e.exports = n
 }, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , function(e, t) {}], [424]);
-//# sourceMappingURL=core-358addb5c712dc9f2cdedd9150fa51fd.js.map
+//# sourceMappingURL=core-3fcdfda534933c68074df5797784d9b0.js.map

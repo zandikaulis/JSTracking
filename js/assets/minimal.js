@@ -600,7 +600,7 @@ webpackJsonp([63], {
         window.IntlMessageFormat = a, window.IntlRelativeFormat = s;
         var l = function() {
                 function e() {
-                    this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "d02c067c-fc21-413f-94d1-ae746041eda4", this.spadeBatchWindow = 1e3, this.locales = [{
+                    this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "fa394f67-5cfc-4622-b237-65de548f9809", this.spadeBatchWindow = 1e3, this.locales = [{
                         name: "English",
                         languageCode: "en",
                         locale: "en-US",
@@ -5845,7 +5845,10 @@ webpackJsonp([63], {
         }
 
         function o() {
-            return s.k.get(u, l.a.Light) !== l.a.Light ? l.a.Dark : l.a.Light
+            var e = s.k.get(u, {
+                activeTheme: ""
+            });
+            return e && "theme--dark" === e.activeTheme ? l.a.Dark : l.a.Light
         }
 
         function a(e) {
@@ -8896,4 +8899,4 @@ webpackJsonp([63], {
         }()
     }
 }, [747]);
-//# sourceMappingURL=minimal-97b8c7bd464392f0663880b713928727.js.map
+//# sourceMappingURL=minimal-5de9e63938b9adefdd6213ecaeb04b73.js.map
