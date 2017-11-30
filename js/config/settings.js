@@ -15,6 +15,7 @@ window.__twilightSettings = {
     "blitz_channels": ["lunacyhatter", "clipstv", "n5devtest", "blitz_blitz_blitz"],
     "blitz_frame_url": "https://twitch.amazon.com/prime/video/twitchpresents",
     "blitz_update_activity": false,
+    "browser_notifications_launch": false,
     "commerce_gdp_launch": "off",
     "comscore_config_c1": 2,
     "comscore_config_c2": 6745306,
