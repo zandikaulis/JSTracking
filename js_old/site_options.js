@@ -555,8 +555,8 @@ window.SiteOptions = {
             }]
         },
         "1dc7b575-1187-42bf-8d01-c62bea1f89c9": {
-            "name": "growth_email_verify_bar",
-            "v": 2539,
+            "name": "twilight_growth_email_verify_bar",
+            "v": 2540,
             "t": 1,
             "groups": [{
                 "weight": 1,
