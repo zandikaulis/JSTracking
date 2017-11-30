@@ -1660,13 +1660,13 @@ window.SiteOptions = {
         },
         "5b149fa8-f8e1-4b30-aa30-f8e4bb648464": {
             "name": "android_first_time_chatter_v5.7",
-            "v": 2398,
+            "v": 2536,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "active"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }]
         },
@@ -2064,6 +2064,18 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "show"
+            }]
+        },
+        "7582bc5a-db43-4579-a0e6-6c8fd79a41ba": {
+            "name": "android_first_time_chatter_prompt",
+            "v": 2537,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "758cbec2-80ad-478f-806e-fd3a7db9742f": {
