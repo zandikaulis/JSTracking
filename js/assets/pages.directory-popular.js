@@ -1,5 +1,7 @@
-webpackJsonp([54], {
-    1009: function(e, t, n) {
+webpackJsonp([55], {
+    1007: function(e, t) {},
+    1008: function(e, t) {},
+    1031: function(e, t, n) {
         "use strict";
         var a = n(0),
             r = n(1),
@@ -28,7 +30,7 @@ webpackJsonp([54], {
             return c
         })
     },
-    1236: function(e, t, n) {
+    1256: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -40,11 +42,11 @@ webpackJsonp([54], {
         var r, i = n(0),
             o = n(1),
             l = n(2),
-            s = n(7),
+            s = n(6),
             c = n(5),
-            d = n(975),
+            d = n(999),
             u = n(3),
-            m = n(1271);
+            m = n(1294);
         ! function(e) {
             e[e.BrowseForYouPage = 0] = "BrowseForYouPage", e[e.BrowseGamePage = 1] = "BrowseGamePage", e[e.BrowseCommunitiesPage = 2] = "BrowseCommunitiesPage", e[e.BrowsePopularPage = 3] = "BrowsePopularPage", e[e.BrowseCreativePage = 4] = "BrowseCreativePage"
         }(r || (r = {}));
@@ -114,8 +116,8 @@ webpackJsonp([54], {
                 })], t)
             }(o.Component),
             g = p,
-            h = n(8),
-            f = n(18),
+            h = n(7),
+            f = n(17),
             v = Object(h.a)(a, null)(g);
         n.d(t, "b", function() {
             return r
@@ -123,7 +125,7 @@ webpackJsonp([54], {
             return v
         })
     },
-    1271: function(e, t) {
+    1294: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -188,8 +190,8 @@ webpackJsonp([54], {
         };
         e.exports = n
     },
-    1866: function(e, t) {},
-    1867: function(e, t) {
+    1889: function(e, t) {},
+    1890: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -595,7 +597,7 @@ webpackJsonp([54], {
         };
         e.exports = n
     },
-    2038: function(e, t, n) {
+    2061: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -607,31 +609,32 @@ webpackJsonp([54], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var r = n(8),
+        var r = n(7),
             i = n(0),
             o = n(1),
             l = n(2),
-            s = n(892),
-            c = n(903),
-            d = n(62),
-            u = n(29),
-            m = n(7),
-            p = n(761),
-            g = n(51),
-            h = n(22),
-            f = n(349),
-            v = n(758),
-            y = n(102),
-            b = n(13),
-            k = n(855),
-            _ = n(358),
-            S = n(1236),
-            w = n(5),
-            P = n(1009),
-            E = n(4),
-            D = n(60),
-            T = n(3),
-            N = (n(1866), function(e) {
+            s = n(916),
+            c = n(925),
+            d = n(67),
+            u = n(28),
+            m = n(6),
+            p = n(811),
+            g = n(49),
+            h = n(21),
+            f = n(374),
+            v = n(808),
+            y = n(110),
+            b = n(12),
+            k = n(879),
+            _ = n(381),
+            w = n(1256),
+            S = n(5),
+            P = n(444),
+            E = n(1031),
+            T = n(4),
+            D = n(47),
+            N = n(3),
+            C = (n(1889), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.typeChangeHandler = function(e) {
@@ -656,39 +659,39 @@ webpackJsonp([54], {
                         default:
                             e = t
                     }
-                    return o.createElement(T.U, {
+                    return o.createElement(N.U, {
                         margin: {
                             bottom: 2
                         },
-                        display: T.H.Flex
-                    }, o.createElement("div", null, o.createElement(T.U, {
-                        display: T.H.InlineFlex
+                        display: N.H.Flex
+                    }, o.createElement("div", null, o.createElement(N.U, {
+                        display: N.H.InlineFlex
                     }, o.createElement(D.a, {
                         ref: this.saveBalloonWrapperRef,
                         "data-a-target": "platform-filter-balloon"
-                    }, o.createElement(T.u, {
-                        type: T.z.Hollow,
+                    }, o.createElement(N.u, {
+                        type: N.z.Hollow,
                         "data-test-selector": "filter-dropdown-button",
                         "data-a-target": "platform-filter-dropdown",
                         dropdown: !0
-                    }, e), o.createElement(T.p, {
-                        direction: T.q.Bottom,
+                    }, e), o.createElement(N.p, {
+                        direction: N.q.Bottom,
                         noTail: !0
-                    }, o.createElement(T.U, {
+                    }, o.createElement(N.U, {
                         className: "layout",
                         padding: {
                             y: 1
                         }
                     }, this.renderFilterItem("all", t, "filter-item-all"), this.renderFilterItem("xb1", n, "filter-item-xbox"), this.renderFilterItem("ps4", a, "filter-item-ps4")))))))
                 }, t.prototype.renderFilterItem = function(e, t, n) {
-                    var a = E("platform-filter", {
+                    var a = T("platform-filter", {
                         "platform-filter--active": !this.props.broadcastType || this.props.broadcastType === e
                     });
-                    return o.createElement(T.S, {
+                    return o.createElement(N.S, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": e,
                         "data-a-target": "platform-filter-" + e + "-button"
-                    }, o.createElement(T.U, {
+                    }, o.createElement(N.U, {
                         className: a,
                         padding: {
                             y: .5,
@@ -698,14 +701,14 @@ webpackJsonp([54], {
                     }, t))
                 }, t
             }(o.Component)),
-            C = n(1867),
-            x = "directory-first-item",
+            x = n(1890),
+            I = "directory-first-item",
             L = "directory-container",
-            I = {
+            O = {
                 xb1: "xbox",
                 ps4: "ps4"
             },
-            O = function(e) {
+            A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -714,7 +717,7 @@ webpackJsonp([54], {
                         return requestAnimationFrame(t.updateDisplayAdOrder)
                     }, t.updateDisplayAdOrder = function() {
                         var e = document.querySelector('[data-target="' + L + '"]'),
-                            t = document.querySelector('[data-target="' + x + '"]'),
+                            t = document.querySelector('[data-target="' + I + '"]'),
                             n = document.querySelector("#" + _.b.directory.rectangle);
                         if (t && e && n) {
                             var a = Math.round((e.clientWidth - 300) / t.clientWidth).toString();
@@ -740,7 +743,7 @@ webpackJsonp([54], {
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.props.sideNavExpanded !== e.sideNavExpanded && this.onWindowResize()
                 }, t.prototype.render = function() {
-                    if (this.props.data.loading && !this.props.data.streams) return o.createElement(T.X, {
+                    if (this.props.data.loading && !this.props.data.streams) return o.createElement(N.X, {
                         fillContent: !0
                     });
                     if (this.props.data.error) return o.createElement(d.a, {
@@ -751,11 +754,11 @@ webpackJsonp([54], {
                             var a = t.node;
                             return o.createElement("div", {
                                 key: a.id,
-                                "data-target": n ? "" : x,
+                                "data-target": n ? "" : I,
                                 style: {
                                     order: n
                                 }
-                            }, o.createElement(T.U, {
+                            }, o.createElement(N.U, {
                                 margin: {
                                     bottom: 2
                                 },
@@ -769,7 +772,7 @@ webpackJsonp([54], {
                                         medium: e
                                     }
                                 },
-                                title: a.title || P.a,
+                                title: a.title || E.a,
                                 imageAlt: a.broadcaster.login + " cover image",
                                 imageSrc: a.previewImageURL,
                                 viewerCount: a.viewersCount || 0,
@@ -798,12 +801,11 @@ webpackJsonp([54], {
                             })))
                         }),
                         n = !this.props.data.loading && !this.props.data.error && !!this.props.data.streams.pageInfo.hasNextPage;
-                    return o.createElement(u.b, {
-                        className: "browse-popular",
-                        "data-a-target": "browse-scroller"
-                    }, o.createElement(T.U, {
+                    return o.createElement(N.U, {
                         padding: 3
-                    }, o.createElement(k.a, {
+                    }, o.createElement(P.b, {
+                        className: "browse-popular"
+                    }), o.createElement(k.a, {
                         injectStyles: {
                             textAlign: "center",
                             marginBottom: 30
@@ -815,26 +817,26 @@ webpackJsonp([54], {
                             pagetype: _.a.games
                         },
                         autoEnable: !1
-                    }), o.createElement(S.a, {
-                        activeTab: S.b.BrowsePopularPage
-                    }), o.createElement(T.U, {
+                    }), o.createElement(w.a, {
+                        activeTab: w.b.BrowsePopularPage
+                    }), o.createElement(N.U, {
                         margin: {
                             bottom: 2
                         },
-                        display: T.H.Flex,
-                        flexDirection: T.J.Row
-                    }, o.createElement(N, {
+                        display: N.H.Flex,
+                        flexDirection: N.J.Row
+                    }, o.createElement(C, {
                         broadcastType: decodeURIComponent(this.props.match.params.filter || "all")
-                    }), o.createElement(T.U, {
+                    }), o.createElement(N.U, {
                         padding: {
                             x: 1
                         }
-                    }, o.createElement(s.a, null))), o.createElement(T.U, {
+                    }, o.createElement(s.a, null))), o.createElement(N.U, {
                         flexShrink: 0,
                         "data-target": L
-                    }, o.createElement(T._33, {
-                        gutterSize: T._35.Small,
-                        childWidth: T._34.Large,
+                    }, o.createElement(N._33, {
+                        gutterSize: N._35.Small,
+                        childWidth: N._34.Large,
                         placeholderItems: 20
                     }, o.createElement(k.a, {
                         key: -1,
@@ -857,16 +859,16 @@ webpackJsonp([54], {
                         enabled: n,
                         loadMore: this.props.loadMore,
                         pixelThreshold: 200
-                    }))))
+                    })))
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive(), this.updateDisplayAdOrder()
-                }, t = i.__decorate([Object(m.a)(C, {
+                }, t = i.__decorate([Object(m.a)(x, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
                                 limit: 30,
-                                platformType: e.match.params.filter ? I[decodeURIComponent(e.match.params.filter)] : "all",
+                                platformType: e.match.params.filter ? O[decodeURIComponent(e.match.params.filter)] : "all",
                                 languages: e.languagePreferences.map(function(e, t) {
                                     return e.toUpperCase()
                                 })
@@ -881,7 +883,7 @@ webpackJsonp([54], {
                                     a = t.variables,
                                     r = t.streams;
                                 return n({
-                                    query: C,
+                                    query: x,
                                     variables: i.__assign({}, a, {
                                         cursor: r.edges[r.edges.length - 5].cursor
                                     }),
@@ -898,19 +900,127 @@ webpackJsonp([54], {
                             }
                         })
                     }
-                }), Object(w.c)("DirectoryPopularPage", {
+                }), Object(S.c)("DirectoryPopularPage", {
                     destination: v.a.DirectoryPopular
                 }), Object(p.a)({
                     location: b.PageviewLocation.DirectoryPopular
                 })], t)
             }(o.Component),
-            A = O,
-            R = Object(r.a)(a)(A);
+            F = A,
+            B = Object(r.a)(a)(F);
         n.d(t, "DirectoryPopularPage", function() {
-            return R
+            return B
         })
     },
-    758: function(e, t, n) {
+    381: function(e, t, n) {
+        "use strict";
+
+        function a(e) {
+            p.emit(u, e)
+        }
+
+        function r(e) {
+            p.emit(m, e)
+        }
+        n.d(t, "b", function() {
+            return l
+        }), n.d(t, "c", function() {
+            return s
+        }), n.d(t, "d", function() {
+            return c
+        }), n.d(t, "a", function() {
+            return d
+        }), n.d(t, "f", function() {
+            return u
+        }), n.d(t, "e", function() {
+            return m
+        }), n.d(t, "g", function() {
+            return p
+        }), t.i = a, t.h = r;
+        var i = n(24),
+            o = (n.n(i), n(2)),
+            l = {
+                directory: {
+                    banner: "dfp-directory-banner",
+                    rectangle: "dfp-directory-rectangle"
+                },
+                channel250: "google_companion_300x250",
+                anonFront: {
+                    rect: "Twitch_FPMedRect_holder",
+                    banner: "Twitch_FPopaBanner_holder",
+                    takeover: "Twitch_FPTakeoverSkinv2_holder",
+                    bottom: "Twitch_FP970Bottom_holder",
+                    sizzle: "sizzle_strip"
+                },
+                front: {
+                    leaderboard: "hpto_logged_in_leaderboard",
+                    rightTop: "hpto_logged_in_rcol_top",
+                    rightBottom: "hpto_logged_in_rcol_bottom"
+                }
+            },
+            s = {
+                directory: {
+                    banner: [
+                        [970, 66],
+                        [970, 250],
+                        [728, 90]
+                    ],
+                    rectangle: [
+                        [300, 250]
+                    ]
+                },
+                channel250: [300, 250],
+                anonFront: {
+                    rect: [
+                        [300, 250]
+                    ],
+                    banner: [
+                        [970, 418],
+                        [970, 67],
+                        [970, 250],
+                        [970, 150],
+                        [980, 250]
+                    ],
+                    takeover: [
+                        [1, 1]
+                    ],
+                    bottom: [
+                        [970, 66],
+                        [728, 90]
+                    ],
+                    sizzle: [
+                        [980, 250]
+                    ]
+                },
+                front: {
+                    leaderboard: [
+                        [970, 66],
+                        [728, 90]
+                    ],
+                    rightTop: [
+                        [300, 250]
+                    ],
+                    rightBottom: [
+                        [300, 600]
+                    ]
+                }
+            },
+            c = {
+                directory: "/" + o.a.dfpNetworkCode + "/twitch/directory",
+                channel: "/" + o.a.dfpNetworkCode + "/twitch/channels",
+                frontpage: "/" + o.a.dfpNetworkCode + "/twitch/homepage",
+                sizzle: "/" + o.a.dfpNetworkCode + "/twitch/sizzle_strip"
+            },
+            d = {
+                games: "games",
+                channel: "channel",
+                frontpage: "homepage"
+            },
+            u = "ads.slot-render-end",
+            m = "ads.slot-ready",
+            p = new i.EventEmitter
+    },
+    808: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -968,7 +1078,7 @@ webpackJsonp([54], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    761: function(e, t, n) {
+    811: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1030,13 +1140,13 @@ webpackJsonp([54], {
         var r = n(0),
             i = n(20),
             o = n(1),
-            l = n(11),
+            l = n(10),
             s = n(2);
         n.d(t, "a", function() {
             return a
         })
     },
-    805: function(e, t, n) {
+    837: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1147,7 +1257,7 @@ webpackJsonp([54], {
                 return e.code
             }))
     },
-    828: function(e, t, n) {
+    851: function(e, t, n) {
         "use strict";
 
         function a(e, t) {
@@ -1181,11 +1291,11 @@ webpackJsonp([54], {
         t.c = a, t.a = r, t.b = i;
         var o = n(0),
             l = n(2),
-            s = n(805),
-            c = n(829),
+            s = n(837),
+            c = n(852),
             d = "languageDirectoryFilters"
     },
-    829: function(e, t, n) {
+    852: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1199,7 +1309,7 @@ webpackJsonp([54], {
         }), t.b = a;
         var r = "core.user-preferences.LANGUAGE_PREFERENCES_UPDATED"
     },
-    853: function(e, t, n) {
+    877: function(e, t, n) {
         "use strict";
 
         function a() {
@@ -1225,11 +1335,11 @@ webpackJsonp([54], {
         t.a = i;
         var o = n(0),
             l = n(2),
-            s = n(829),
-            c = n(828);
+            s = n(852),
+            c = n(851);
         l.n.store.registerReducer("userPreferences", r)
     },
-    855: function(e, t, n) {
+    879: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1237,12 +1347,12 @@ webpackJsonp([54], {
                 trackingSet: e.ads.trackingSet
             }
         }
-        var r = n(8),
+        var r = n(7),
             i = n(0),
             o = n(1),
             l = n(2),
-            s = n(102),
-            c = n(358),
+            s = n(110),
+            c = n(381),
             d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
             u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
             m = function(e) {
@@ -1347,7 +1457,7 @@ webpackJsonp([54], {
             return g
         })
     },
-    892: function(e, t, n) {
+    916: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1362,19 +1472,19 @@ webpackJsonp([54], {
                 clearLanguagePreferences: l.a
             }, e)
         }
-        var i = n(8),
-            o = n(10),
-            l = n(828),
-            s = n(853),
+        var i = n(7),
+            o = n(9),
+            l = n(851),
+            s = n(877),
             c = n(0),
             d = n(1),
             u = n(2),
-            m = n(29),
-            p = n(60),
-            g = n(805),
+            m = n(28),
+            p = n(47),
+            g = n(837),
             h = n(5),
             f = n(3),
-            v = (n(893), function(e) {
+            v = (n(917), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleLanguageChange = function(e) {
@@ -1442,15 +1552,15 @@ webpackJsonp([54], {
             return b
         })
     },
-    893: function(e, t) {},
-    898: function(e, t, n) {
+    917: function(e, t) {},
+    921: function(e, t, n) {
         "use strict";
         var a, r, i, o = n(4),
             l = n(1),
             s = n(2),
-            c = n(899),
+            c = n(274),
             d = n(3),
-            u = (n(985), a = {}, a[c.a.Live] = "stream-type-indicator--live", a[c.a.Premiere] = "stream-type-indicator--premiere", a[c.a.Rerun] = "stream-type-indicator--rerun", a[c.a.WatchParty] = "stream-type-indicator--rerun", a),
+            u = (n(1007), a = {}, a[c.a.Live] = "stream-type-indicator--live", a[c.a.Premiere] = "stream-type-indicator--premiere", a[c.a.Rerun] = "stream-type-indicator--rerun", a[c.a.WatchParty] = "stream-type-indicator--rerun", a),
             m = (r = {}, r[c.a.Premiere] = d._9.VideoPremiere, r[c.a.Rerun] = d._9.VideoRerun, r[c.a.WatchParty] = d._9.VideoRerun, r),
             p = (i = {}, i[c.a.Premiere] = d._10.Live, i[c.a.Rerun] = d._10.Inherit, i[c.a.WatchParty] = d._10.Inherit, i),
             g = function(e) {
@@ -1507,25 +1617,15 @@ webpackJsonp([54], {
             return g
         })
     },
-    899: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return a
-        });
-        var a;
-        ! function(e) {
-            e.Live = "live", e.WatchParty = "watch_party", e.Premiere = "premiere", e.Rerun = "rerun"
-        }(a || (a = {}))
-    },
-    903: function(e, t, n) {
+    925: function(e, t, n) {
         "use strict";
         var a = n(0),
             r = n(1),
-            i = n(11),
+            i = n(10),
             o = n(2),
-            l = n(898),
+            l = n(921),
             s = n(3),
-            c = (n(986), function(e) {
+            c = (n(1008), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.state = {
@@ -1641,7 +1741,7 @@ webpackJsonp([54], {
             return d
         })
     },
-    975: function(e, t, n) {
+    999: function(e, t, n) {
         "use strict";
         n.d(t, "d", function() {
             return r
@@ -1681,8 +1781,6 @@ webpackJsonp([54], {
             p = function() {
                 return new Date((new Date).getTime() - 12096e5)
             }
-    },
-    985: function(e, t) {},
-    986: function(e, t) {}
+    }
 });
-//# sourceMappingURL=pages.directory-popular-d04f93b9023367cc7711b7e3c90eb60c.js.map
+//# sourceMappingURL=pages.directory-popular-42def8b84802cbcf8afddb5237e1cb20.js.map

@@ -1,5 +1,5 @@
 webpackJsonp([68], {
-    1924: function(e, t) {
+    1947: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -133,11 +133,11 @@ webpackJsonp([68], {
         };
         e.exports = n
     },
-    1925: function(e, t) {},
-    1926: function(e, t) {},
-    1927: function(e, t) {},
-    1928: function(e, t) {},
-    2048: function(e, t, n) {
+    1948: function(e, t) {},
+    1949: function(e, t) {},
+    1950: function(e, t) {},
+    1951: function(e, t) {},
+    2071: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -160,23 +160,23 @@ webpackJsonp([68], {
         });
         var l = n(0),
             r = n(1),
-            c = n(30),
+            c = n(32),
             o = n(2),
-            s = n(761),
-            m = n(758),
-            u = n(13),
+            s = n(811),
+            m = n(808),
+            u = n(12),
             h = n(5),
-            p = (n(1551), n(1552)),
-            d = n(1481),
-            f = n(1924),
-            g = n(21),
-            v = n(1253),
-            b = n(1554),
+            p = (n(1575), n(1576)),
+            d = n(1503),
+            f = n(1947),
+            g = n(22),
+            v = n(1276),
+            b = n(1578),
             E = n(4),
-            _ = n(11),
-            y = n(1553),
-            A = n(1482),
-            S = n(882),
+            _ = n(10),
+            y = n(1577),
+            A = n(1504),
+            S = n(906),
             k = n(3),
             x = {
                 imageSrc: "https://static-cdn.jtvnw.net/emoticons/v1/81274/2.0",
@@ -250,8 +250,8 @@ webpackJsonp([68], {
                     label: Object(o.e)(e.achievement.progressRatio, "percent")
                 }))
             },
-            O = n(1020),
-            w = (n(1925), ["confetti-layer__confetti--slow", "confetti-layer__confetti--medium", "confetti-layer__confetti--fast"]),
+            O = n(864),
+            w = (n(1948), ["confetti-layer__confetti--slow", "confetti-layer__confetti--medium", "confetti-layer__confetti--fast"]),
             P = ["rgba(247, 42, 107, 1)", "rgba(255, 113, 105, 1)", "rgba(253, 226, 132, 1)", "rgba(181, 138, 242, 1)"],
             T = ["0.011s", "0.176s", "0.321s", "0.446s", "0.849s", "1.056s", "1.229s", "1.333s", "1.379s", "1.828s"],
             j = function(e) {
@@ -288,7 +288,7 @@ webpackJsonp([68], {
                     }))
                 }, t
             }(r.PureComponent),
-            q = n(1254),
+            q = n(1277),
             L = {
                 "data-test-selector": "recently-completed-achievements-list"
             },
@@ -436,8 +436,8 @@ webpackJsonp([68], {
                     key: "past-completed"
                 }), e)]
             },
-            I = n(60),
-            K = (n(1926), function() {
+            I = n(47),
+            K = (n(1949), function() {
                 return r.createElement(k._17, {
                     className: "dash-feedback",
                     position: k._2.Absolute,
@@ -483,7 +483,7 @@ webpackJsonp([68], {
                     }
                 }, r.createElement(k._21, null, Object(o.d)("Send Feedback", "DashboardHelpLinks"))))))))
             }),
-            W = (n(1927), {
+            W = (n(1950), {
                 "data-test-selector": "quests-col"
             }),
             R = {
@@ -547,9 +547,9 @@ webpackJsonp([68], {
                     className: n
                 }, R), e.right)), r.createElement(K, null))
             },
-            M = n(1555),
-            Y = n(1113),
-            V = n(1041),
+            M = n(1579),
+            Y = n(1133),
+            V = n(1062),
             J = function(e) {
                 if (e.isPartner) return r.createElement(Q, {
                     title: e.title,
@@ -706,7 +706,7 @@ webpackJsonp([68], {
                     onClickCTA: t
                 })
             },
-            ie = n(1556),
+            ie = n(1580),
             le = function(e) {
                 var t = E({
                         "ach-q-item": !0,
@@ -983,7 +983,7 @@ webpackJsonp([68], {
                     href: "https://help.twitch.tv/customer/portal/articles/2877819"
                 }, t)))))
             },
-            fe = (n(1928), "achievement-spotlights"),
+            fe = (n(1951), "achievement-spotlights"),
             ge = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -1158,4 +1158,4 @@ webpackJsonp([68], {
         })
     }
 });
-//# sourceMappingURL=pages.dashboard.achievements-52be21811997e786953b9cdc6ee76eb4.js.map
+//# sourceMappingURL=pages.dashboard.achievements-e0169613e9a5202129e697ad8b6784f3.js.map

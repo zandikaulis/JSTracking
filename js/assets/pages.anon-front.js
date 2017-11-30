@@ -1,33 +1,35 @@
-webpackJsonp([49], {
-    1014: function(e, t, n) {
+webpackJsonp([47], {
+    1007: function(e, t) {},
+    1008: function(e, t) {},
+    1036: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
         var i = n(0),
-            r = n(1),
-            a = n(355),
-            s = n(104),
-            o = n(1015),
+            a = n(1),
+            r = n(376),
+            o = n(111),
+            s = n(1037),
             l = function(e) {
                 var t = {
                     name: "TWILIGHT_EXPANDO_FEATURO",
                     assignments: {
                         fallback: function() {
-                            return s.a.wrap(function() {
+                            return o.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 1015))
+                                }).then(n.bind(null, 1037))
                             }, "FeaturedBroadcasters")(i.__assign({}, e, {
                                 streamCount: 6,
                                 showCounts: !1
                             }))
                         },
                         expanded: function() {
-                            return s.a.wrap(function() {
+                            return o.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 1015))
+                                }).then(n.bind(null, 1037))
                             }, "FeaturedBroadcasters")(i.__assign({}, e, {
                                 streamCount: 8,
                                 showCounts: !0
@@ -35,74 +37,74 @@ webpackJsonp([49], {
                         }
                     },
                     loader: function() {
-                        return Object(o.placeholderFeaturedBroadcasters)(e.renderContext)
+                        return Object(s.placeholderFeaturedBroadcasters)(e.renderContext)
                     }
                 };
-                return r.createElement(a.a, i.__assign({}, t))
+                return a.createElement(r.a, i.__assign({}, t))
             };
         n.d(t, "FeaturedBroadcastersRenderContext", function() {
-            return o.FeaturedBroadcastersRenderContext
+            return s.FeaturedBroadcastersRenderContext
         }), n.d(t, "FeaturedBroadcasters", function() {
             return l
         })
     },
-    1015: function(e, t, n) {
+    1037: function(e, t, n) {
         "use strict";
 
         function i(e, t, n, i) {
             switch (t) {
-                case a.AnonFront:
-                    return o.createElement(u.a, {
+                case r.AnonFront:
+                    return s.createElement(d.a, {
                         items: e,
                         isLoading: n,
-                        layout: d.c.Horizontal,
+                        layout: u.c.Horizontal,
                         showCounts: i,
                         darkTheme: !0
                     });
                 default:
-                    return o.createElement(h._17, {
+                    return s.createElement(g._17, {
                         className: "featured-broadcasters",
-                        background: h.m.Base,
+                        background: g.m.Base,
                         elevation: 1
-                    }, o.createElement(h.U, {
+                    }, s.createElement(g.U, {
                         padding: 1
-                    }, o.createElement(h._21, {
-                        fontSize: h.L.Size5,
-                        color: h.F.Alt2
-                    }, Object(l.d)("Featured Broadcasters", "FeaturedBroadcastersComponent"))), o.createElement(u.a, {
+                    }, s.createElement(g._21, {
+                        fontSize: g.L.Size5,
+                        color: g.F.Alt2
+                    }, Object(l.d)("Featured Broadcasters", "FeaturedBroadcastersComponent"))), s.createElement(d.a, {
                         items: e,
                         isLoading: n,
-                        layout: d.c.Vertical,
+                        layout: u.c.Vertical,
                         showCounts: i
                     }))
             }
         }
 
-        function r(e) {
+        function a(e) {
             return i([], e, !0)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), n.d(t, "FeaturedBroadcastersRenderContext", function() {
-            return a
-        }), t.placeholderFeaturedBroadcasters = r, n.d(t, "FeaturedBroadcasters", function() {
-            return f
+            return r
+        }), t.placeholderFeaturedBroadcasters = a, n.d(t, "FeaturedBroadcasters", function() {
+            return v
         });
-        var a, s = n(0),
-            o = n(1),
-            l = (n.n(o), n(2)),
-            c = n(7),
-            u = n(1044),
-            d = n(843),
-            p = n(1045),
-            m = n(5),
-            h = n(3),
-            g = n(1268);
-        n.n(g);
+        var r, o = n(0),
+            s = n(1),
+            l = (n.n(s), n(2)),
+            c = n(6),
+            d = n(1065),
+            u = n(867),
+            m = n(1066),
+            p = n(5),
+            g = n(3),
+            f = n(1291);
+        n.n(f);
         ! function(e) {
             e[e.AnonFront = 1] = "AnonFront", e[e.Front = 2] = "Front"
-        }(a || (a = {}));
-        var b = function(e) {
+        }(r || (r = {}));
+        var h = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getRender = function(e) {
@@ -110,17 +112,17 @@ webpackJsonp([49], {
                         return i(e, t.props.renderContext, n, t.props.showCounts)
                     }, t
                 }
-                return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                return o.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.postRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.postRender()
                 }, t.prototype.render = function() {
                     var e = this.props.data.featuredStreams || [],
-                        t = Object(p.a)(e);
+                        t = Object(m.a)(e);
                     return this.getRender(t)
                 }, t.prototype.postRender = function() {
                     this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
-                }, t = s.__decorate([Object(c.a)(g, {
+                }, t = o.__decorate([Object(c.a)(f, {
                     options: function(e) {
                         return {
                             variables: {
@@ -129,11 +131,11 @@ webpackJsonp([49], {
                             }
                         }
                     }
-                }), Object(m.c)("FeaturedBroadcasters")], t)
-            }(o.Component),
-            f = b
+                }), Object(p.c)("FeaturedBroadcasters")], t)
+            }(s.Component),
+            v = h
     },
-    1044: function(e, t, n) {
+    1065: function(e, t, n) {
         "use strict";
 
         function i() {
@@ -142,40 +144,40 @@ webpackJsonp([49], {
             }
         }
 
-        function r(e, t) {
+        function a(e, t) {
             switch (void 0 === e && (e = i()), t.type) {
-                case b.b:
-                    return m = t.player, h.__assign({}, e, {
+                case h.b:
+                    return p = t.player, g.__assign({}, e, {
                         isPlayerInitialized: !0
                     });
-                case b.c:
-                    return m = null, h.__assign({}, e, {
+                case h.c:
+                    return p = null, g.__assign({}, e, {
                         isPlayerInitialized: !1
                     });
-                case b.a:
-                    return e.isPlayerInitialized && m && m.pause(), e;
+                case h.a:
+                    return e.isPlayerInitialized && p && p.pause(), e;
                 default:
                     return e
             }
         }
 
-        function a(e) {
+        function r(e) {
             switch (e.type) {
-                case k.b.Stream:
-                    return y.createElement(I.c, {
+                case b.b.Stream:
+                    return _.createElement(T.c, {
                         channelLogin: e.id,
                         vodID: "",
                         disableTheatreButton: !0,
-                        playerTypeOverride: I.b.Frontpage,
+                        playerTypeOverride: T.b.Frontpage,
                         onInit: e.onPlayerInit,
                         onDestroy: e.onPlayerDestroy
                     });
-                case k.b.Vod:
-                    return y.createElement(I.c, {
+                case b.b.Vod:
+                    return _.createElement(T.c, {
                         channelLogin: "",
                         vodID: e.id,
                         disableTheatreButton: !0,
-                        playerTypeOverride: I.b.Frontpage,
+                        playerTypeOverride: T.b.Frontpage,
                         onInit: e.onPlayerInit,
                         onDestroy: e.onPlayerDestroy,
                         onVideoTimeChange: e.onVideoTimeChange
@@ -185,100 +187,100 @@ webpackJsonp([49], {
             }
         }
 
-        function s(e) {
+        function o(e) {
             return {
                 firstPageLoaded: e.session.firstPageLoaded
             }
         }
 
-        function o(e) {
+        function s(e) {
             var t = {};
             e.forEach(function(e, n) {
                 t["carousel_slot_" + n + "_channel"] = e.broadcaster.login, t["carousel_slot_" + n + "_priority"] = e.priorityLevel, t["carousel_slot_" + n + "_game"] = e.content.gameName
-            }), g.m.track(j.SpadeEventType.FrontPageCarouselDisplay, t)
+            }), f.m.track(j.SpadeEventType.FrontPageCarouselDisplay, t)
         }
 
         function l(e) {
-            g.m.track(j.SpadeEventType.FrontPageCarouselClick, e)
+            f.m.track(j.SpadeEventType.FrontPageCarouselClick, e)
         }
 
         function c(e, t) {
-            var n = h.__assign({
+            var n = g.__assign({
                 clicked_element: t
             }, e);
-            g.m.track(j.SpadeEventType.FrontPageCarouselPromotionCardClick, n)
-        }
-
-        function u(e) {
-            g.m.track(j.SpadeEventType.FrontPageCarouselPromotionCardView, e)
+            f.m.track(j.SpadeEventType.FrontPageCarouselPromotionCardClick, n)
         }
 
         function d(e) {
-            g.m.track(j.SpadeEventType.FrontPageCarouselNavButtonClick, {
+            f.m.track(j.SpadeEventType.FrontPageCarouselPromotionCardView, e)
+        }
+
+        function u(e) {
+            f.m.track(j.SpadeEventType.FrontPageCarouselNavButtonClick, {
                 direction: e
             })
         }
 
-        function p(e) {
-            return Object(S.bindActionCreators)({
-                registerCarousel: b.e,
-                unregisterCarousel: b.f
+        function m(e) {
+            return Object(y.bindActionCreators)({
+                registerCarousel: h.e,
+                unregisterCarousel: h.f
             }, e)
         }
-        var m, h = n(0),
-            g = n(2),
-            b = n(974);
-        g.n.store.registerReducer("carouselPlayer", r);
-        var f = n(8),
-            S = n(10),
-            v = n(4),
-            y = n(1),
-            k = n(843),
-            _ = n(5),
-            E = n(3),
-            P = (n(1264), "carousel-card-live"),
-            T = "carousel-card-vod",
-            C = function(e) {
+        var p, g = n(0),
+            f = n(2),
+            h = n(998);
+        f.n.store.registerReducer("carouselPlayer", a);
+        var v = n(7),
+            y = n(9),
+            k = n(4),
+            _ = n(1),
+            b = n(867),
+            S = n(5),
+            N = n(3),
+            E = (n(1287), "carousel-card-live"),
+            C = "carousel-card-vod",
+            w = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderLiveCounts = function() {
-                        return t.props.showCounts ? y.createElement(E.U, {
+                        return t.props.showCounts ? _.createElement(N.U, {
                             className: "carousel-nav__meta",
-                            alignItems: E.c.Center,
+                            alignItems: N.c.Center,
                             attachBottom: !0,
                             margin: {
                                 left: .5
                             },
-                            zIndex: E._38.Above
-                        }, t.renderIndicator(), y.createElement(E.U, {
-                            display: E.H.InlineFlex,
+                            zIndex: N._38.Above
+                        }, t.renderIndicator(), _.createElement(N.U, {
+                            display: N.H.InlineFlex,
                             margin: {
                                 left: .5
                             }
-                        }, y.createElement(E._21, {
-                            color: E.F.Overlay,
-                            type: E._26.Span
-                        }, Object(g.e)(t.props.item.content.viewersCount)))) : null
+                        }, _.createElement(N._21, {
+                            color: N.F.Overlay,
+                            type: N._26.Span
+                        }, Object(f.e)(t.props.item.content.viewersCount)))) : null
                     }, t.renderIndicator = function() {
-                        return t.props.item.content.type === k.b.Stream ? y.createElement(E.V, {
-                            size: E.W.Small,
-                            "data-test-selector": P
-                        }) : y.createElement(E._8, {
-                            asset: E._9.GlyphViews,
-                            "data-test-selector": T
+                        return t.props.item.content.type === b.b.Stream ? _.createElement(N.V, {
+                            size: N.W.Small,
+                            "data-test-selector": E
+                        }) : _.createElement(N._8, {
+                            asset: N._9.GlyphViews,
+                            "data-test-selector": C
                         })
                     }, t.itemClick = function() {
                         t.props.itemClick(t.props.item)
                     }, t
                 }
-                return h.__extends(t, e), t.prototype.componentDidMount = function() {
+                return g.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = v({
+                    var e = k({
                         "carousel-nav__item": !0,
                         "carousel-nav__item--active": this.props.itemActive
                     });
-                    return y.createElement(E.U, {
+                    return _.createElement(N.U, {
                         className: e,
                         margin: {
                             x: .5
@@ -287,53 +289,53 @@ webpackJsonp([49], {
                             bottom: .5
                         },
                         flexGrow: 1,
-                        position: E._2.Relative
-                    }, y.createElement(E._30, {
-                        label: (this.props.item.isSponsored ? Object(g.d)("Sponsored", "CarouselCardComponent") : "") + " " + this.props.item.broadcaster.displayName,
-                        direction: E._32.Top,
-                        display: E.H.Block
-                    }, y.createElement(E.S, h.__assign({
+                        position: N._2.Relative
+                    }, _.createElement(N._30, {
+                        label: (this.props.item.isSponsored ? Object(f.d)("Sponsored", "CarouselCardComponent") : "") + " " + this.props.item.broadcaster.displayName,
+                        direction: N._32.Top,
+                        display: N.H.Block
+                    }, _.createElement(N.S, g.__assign({
                         onClick: this.itemClick
-                    }, Object(E._39)(this.props)), y.createElement(E.j, {
-                        ratio: E.k.Aspect16x9
-                    }, this.renderLiveCounts(), y.createElement(E.U, {
+                    }, Object(N._39)(this.props)), _.createElement(N.j, {
+                        ratio: N.k.Aspect16x9
+                    }, this.renderLiveCounts(), _.createElement(N.U, {
                         className: "carousel-nav__img-container"
-                    }, y.createElement("img", {
+                    }, _.createElement("img", {
                         className: "carousel-nav__img",
                         "data-content-id": this.props.item.content.id,
                         src: this.props.item.imageURL,
                         alt: this.props.item.broadcaster.displayName,
                         "data-a-target": "carousel-image"
-                    }), this.props.item.isSponsored ? y.createElement(E.U, {
-                        position: E._2.Absolute,
+                    }), this.props.item.isSponsored ? _.createElement(N.U, {
+                        position: N._2.Absolute,
                         attachRight: !0,
                         attachTop: !0
-                    }, y.createElement(E._8, {
-                        asset: E._9.Featured,
-                        type: E._10.Brand,
+                    }, _.createElement(N._8, {
+                        asset: N._9.Featured,
+                        type: N._10.Brand,
                         width: 20,
                         height: 20
                     })) : "")))))
-                }, t = h.__decorate([Object(_.c)("CarouselCard")], t)
-            }(y.Component),
-            N = C,
-            U = n(64),
-            O = n(11),
-            w = n(51),
-            I = n(883),
-            D = (n(1265), {
+                }, t = g.__decorate([Object(S.c)("CarouselCard")], t)
+            }(_.Component),
+            O = w,
+            U = n(65),
+            x = n(10),
+            F = n(49),
+            T = n(443),
+            D = (n(1288), {
                 content: "carousel",
                 medium: "twitch_home"
             }),
-            F = function(e) {
+            R = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
-                        var e = v("horizontal-carousel-player__details", {
+                        var e = k("horizontal-carousel-player__details", {
                                 "horizontal-carousel-player__details--overlay": t.props.darkTheme
                             }),
-                            n = Object(g.d)("playing {game}", {
-                                game: y.createElement(O.a, {
+                            n = Object(f.d)("playing {game}", {
+                                game: _.createElement(x.a, {
                                     to: {
                                         pathname: "/directory/game/" + t.props.item.content.gameName,
                                         state: D
@@ -347,81 +349,81 @@ webpackJsonp([49], {
                                 onPlayerDestroy: t.props.onPlayerDestroy,
                                 onVideoTimeChange: t.onVideoTimeChange
                             };
-                        return y.createElement(E._17, {
+                        return _.createElement(N._17, {
                             className: "horizontal-carousel-player",
                             margin: {
                                 bottom: 2
                             },
-                            display: E.H.Flex,
-                            flexDirection: E.J.Row,
-                            color: E.F.Alt
-                        }, y.createElement(E.U, {
+                            display: N.H.Flex,
+                            flexDirection: N.J.Row,
+                            color: N.F.Alt
+                        }, _.createElement(N.U, {
                             flexGrow: 1,
                             flexShrink: 0
-                        }, y.createElement(E.U, {
+                        }, _.createElement(N.U, {
                             className: "horizontal-carousel-player__video",
-                            position: E._2.Relative,
-                            overflow: E.Y.Hidden
-                        }, a(i))), y.createElement(E.U, {
+                            position: N._2.Relative,
+                            overflow: N.Y.Hidden
+                        }, r(i))), _.createElement(N.U, {
                             className: e,
                             flexGrow: 0,
                             padding: 2
-                        }, y.createElement(E.U, {
-                            display: E.H.Flex,
-                            flexWrap: E.K.NoWrap,
-                            textAlign: E._22.Left,
-                            alignItems: E.c.Start
-                        }, y.createElement(E.U, {
+                        }, _.createElement(N.U, {
+                            display: N.H.Flex,
+                            flexWrap: N.K.NoWrap,
+                            textAlign: N._22.Left,
+                            alignItems: N.c.Start
+                        }, _.createElement(N.U, {
                             margin: {
                                 right: 1
                             },
                             flexShrink: 0
-                        }, y.createElement("span", {
+                        }, _.createElement("span", {
                             onClick: t.promotionCardClick.bind(t, "thumbnail")
-                        }, y.createElement(O.a, {
+                        }, _.createElement(x.a, {
                             to: {
                                 pathname: "/" + t.props.item.broadcaster.login,
                                 state: D
                             },
                             "data-a-target": "carousel-profile-image"
-                        }, y.createElement(E.l, {
+                        }, _.createElement(N.l, {
                             imageSrc: t.props.item.broadcaster.profileImageURL,
-                            imageAlt: Object(g.d)("Profile Picture for {login}", {
+                            imageAlt: Object(f.d)("Profile Picture for {login}", {
                                 login: t.props.item.broadcaster.login
                             }, "HorizontalCarouselPlayer"),
                             size: 40
-                        })))), y.createElement(E.U, {
+                        })))), _.createElement(N.U, {
                             margin: {
                                 right: 1
                             },
                             flexGrow: 1
-                        }, y.createElement(E._21, {
-                            fontSize: E.L.Size4,
-                            color: E.F.Base,
+                        }, _.createElement(N._21, {
+                            fontSize: N.L.Size4,
+                            color: N.F.Base,
                             "data-a-target": "carousel-broadcaster-displayname"
-                        }, Object(w.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName)), y.createElement(E._21, {
-                            fontSize: E.L.Size6,
-                            color: E.F.Base,
+                        }, Object(F.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName)), _.createElement(N._21, {
+                            fontSize: N.L.Size6,
+                            color: N.F.Base,
                             "data-a-target": "carousel-user-playing-message"
-                        }, y.createElement("span", {
+                        }, _.createElement("span", {
                             onClick: t.promotionCardClick.bind(t, "game_name")
-                        }, n)))), y.createElement(E.U, {
+                        }, n)))), _.createElement(N.U, {
                             margin: {
                                 y: 1
                             }
-                        }, y.createElement("span", {
+                        }, _.createElement("span", {
                             onClick: t.promotionCardClick.bind(t, "stream_title")
-                        }, y.createElement(O.a, {
+                        }, _.createElement(x.a, {
                             to: t.getLinkForTitle()
-                        }, y.createElement(E._21, {
-                            type: E._26.Span,
-                            "data-a-target": k.a,
-                            fontSize: E.L.Size3
-                        }, t.props.item.title)))), y.createElement(U, {
+                        }, _.createElement(N._21, {
+                            type: N._26.Span,
+                            "data-a-target": b.a,
+                            fontSize: N.L.Size3
+                        }, t.props.item.title)))), _.createElement(U, {
                             source: t.props.item.description || ""
                         })))
                     }, t.getLinkForTitle = function() {
-                        if (t.props.item.content.type === k.b.Stream) return {
+                        if (t.props.item.content.type === b.b.Stream) return {
                             pathname: "/" + t.props.item.broadcaster.login,
                             state: D
                         };
@@ -431,58 +433,58 @@ webpackJsonp([49], {
                             state: D
                         }
                     }, t.getPlaceholderRender = function() {
-                        var e = v("horizontal-carousel-player__details", {
+                        var e = k("horizontal-carousel-player__details", {
                             "horizontal-carousel-player__details--overlay": t.props.darkTheme
                         });
-                        return y.createElement(E.U, {
-                            display: E.H.Flex,
-                            flexWrap: E.K.NoWrap,
+                        return _.createElement(N.U, {
+                            display: N.H.Flex,
+                            flexWrap: N.K.NoWrap,
                             flexShrink: 0,
                             margin: {
                                 bottom: 2
                             }
-                        }, y.createElement(E.U, {
+                        }, _.createElement(N.U, {
                             flexGrow: 1,
                             flexShrink: 1,
                             fullWidth: !0
-                        }, y.createElement(E.j, {
-                            ratio: E.k.Aspect16x9
-                        }, y.createElement(E._1, {
+                        }, _.createElement(N.j, {
+                            ratio: N.k.Aspect16x9
+                        }, _.createElement(N._1, {
                             "data-test-selector": "carousel-player-placeholder"
-                        }))), y.createElement(E.U, {
-                            className: v(e),
+                        }))), _.createElement(N.U, {
+                            className: k(e),
                             flexGrow: 0,
                             flexShrink: 0,
                             padding: 2
-                        }, y.createElement(E.U, {
-                            display: E.H.Flex,
-                            flexWrap: E.K.NoWrap,
-                            textAlign: E._22.Left,
-                            alignItems: E.c.Start
-                        }, y.createElement(E.U, {
+                        }, _.createElement(N.U, {
+                            display: N.H.Flex,
+                            flexWrap: N.K.NoWrap,
+                            textAlign: N._22.Left,
+                            alignItems: N.c.Start
+                        }, _.createElement(N.U, {
                             margin: {
                                 right: 1
                             },
                             flexShrink: 0
-                        }, y.createElement(E._1, {
+                        }, _.createElement(N._1, {
                             width: 40,
                             height: 40
-                        })), y.createElement(E.U, {
+                        })), _.createElement(N.U, {
                             margin: {
                                 right: 1
                             },
                             flexGrow: 1
-                        }, y.createElement(E._21, null, y.createElement(E._1, {
+                        }, _.createElement(N._21, null, _.createElement(N._1, {
                             width: 70
-                        })), y.createElement(E._21, null, y.createElement(E._1, {
+                        })), _.createElement(N._21, null, _.createElement(N._1, {
                             width: 70
-                        })))), y.createElement(E.U, {
+                        })))), _.createElement(N.U, {
                             margin: {
                                 y: 1
                             }
-                        }, y.createElement(E._21, null, y.createElement(E._1, {
+                        }, _.createElement(N._21, null, _.createElement(N._1, {
                             lineCount: 1
-                        })), y.createElement(E._21, null, y.createElement(E._1, {
+                        })), _.createElement(N._21, null, _.createElement(N._1, {
                             lineCount: 4
                         })))))
                     }, t.onVideoTimeChange = function(e) {
@@ -493,30 +495,30 @@ webpackJsonp([49], {
                         t.props.onPromotionCardClick(t.props.item, e)
                     }, t
                 }
-                return h.__extends(t, e), t.prototype.componentWillUpdate = function(e) {
+                return g.__extends(t, e), t.prototype.componentWillUpdate = function(e) {
                     e.item !== this.props.item && this.props.onPromotionCardView(e.item)
                 }, t.prototype.render = function() {
                     return this.props.item ? this.getContentRender() : this.getPlaceholderRender()
                 }, t
-            }(y.Component),
-            R = n(252),
-            x = (n(1266), function(e) {
+            }(_.Component),
+            I = n(139),
+            P = (n(1289), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
-                        var e = v("vertical-carousel-player__details", {
+                        var e = k("vertical-carousel-player__details", {
                                 "vertical-carousel-player__details--overlay": t.props.darkTheme
                             }),
-                            n = Object(g.d)("{login} playing {game}", {
-                                login: y.createElement("span", {
+                            n = Object(f.d)("{login} playing {game}", {
+                                login: _.createElement("span", {
                                     onClick: t.promotionCardClick.bind(t, "display_name")
-                                }, y.createElement(O.a, {
+                                }, _.createElement(x.a, {
                                     to: "/" + t.props.item.broadcaster.login,
                                     "data-a-target": "carousel-broadcaster-displayname"
-                                }, Object(w.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName))),
-                                game: y.createElement("span", {
+                                }, Object(F.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName))),
+                                game: _.createElement("span", {
                                     onClick: t.promotionCardClick.bind(t, "game_name")
-                                }, y.createElement(O.a, {
+                                }, _.createElement(x.a, {
                                     to: "/directory/game/" + t.props.item.content.gameName,
                                     "data-a-target": "carousel-broadcaster-game-name"
                                 }, t.props.item.content.gameName))
@@ -527,122 +529,122 @@ webpackJsonp([49], {
                                 onPlayerInit: t.props.onPlayerInit,
                                 onPlayerDestroy: t.props.onPlayerDestroy
                             };
-                        return y.createElement(E._17, {
+                        return _.createElement(N._17, {
                             className: "vertical-carousel-player",
                             padding: {
                                 bottom: 1,
                                 x: 1
                             },
-                            color: E.F.Alt
-                        }, y.createElement(E.U, {
+                            color: N.F.Alt
+                        }, _.createElement(N.U, {
                             className: "vertical-carousel-player__video",
-                            position: E._2.Relative,
-                            overflow: E.Y.Hidden
-                        }, a(i)), y.createElement(E.U, {
-                            className: v(e),
-                            display: E.H.Flex,
-                            flexWrap: E.K.NoWrap,
-                            textAlign: E._22.Left,
-                            alignItems: E.c.Center,
+                            position: N._2.Relative,
+                            overflow: N.Y.Hidden
+                        }, r(i)), _.createElement(N.U, {
+                            className: k(e),
+                            display: N.H.Flex,
+                            flexWrap: N.K.NoWrap,
+                            textAlign: N._22.Left,
+                            alignItems: N.c.Center,
                             padding: {
                                 y: 1
                             }
-                        }, y.createElement(E.U, {
+                        }, _.createElement(N.U, {
                             margin: {
                                 right: 1
                             },
                             flexShrink: 0
-                        }, y.createElement("span", {
+                        }, _.createElement("span", {
                             onClick: t.promotionCardClick.bind(t, "thumbnail")
-                        }, y.createElement(O.a, {
+                        }, _.createElement(x.a, {
                             to: "/" + t.props.item.broadcaster.login,
                             "data-a-target": "carousel-avatar-link"
-                        }, y.createElement(E.l, {
+                        }, _.createElement(N.l, {
                             imageSrc: t.props.item.broadcaster.profileImageURL,
-                            imageAlt: Object(g.d)("Profile Picture for {login}", {
+                            imageAlt: Object(f.d)("Profile Picture for {login}", {
                                 login: t.props.item.broadcaster.login
                             }, "VerticalCarouselPlayer"),
                             size: 40
-                        })))), y.createElement(E.U, {
+                        })))), _.createElement(N.U, {
                             margin: {
                                 right: 1
                             },
                             flexGrow: 1
-                        }, y.createElement(E._21, {
-                            "data-a-target": k.a,
-                            fontSize: E.L.Size5,
-                            color: E.F.Base,
+                        }, _.createElement(N._21, {
+                            "data-a-target": b.a,
+                            fontSize: N.L.Size5,
+                            color: N.F.Base,
                             bold: !0
-                        }, t.props.item.title), y.createElement(E._21, {
-                            fontSize: E.L.Size6,
-                            color: E.F.Base
-                        }, n)), y.createElement(E.U, {
+                        }, t.props.item.title), _.createElement(N._21, {
+                            fontSize: N.L.Size6,
+                            color: N.F.Base
+                        }, n)), _.createElement(N.U, {
                             flexShrink: 0
-                        }, t.props.firstPageLoaded ? y.createElement(R.a, {
+                        }, t.props.firstPageLoaded ? _.createElement(I.a, {
                             showLoadingPlaceholder: !0,
                             channelLogin: t.props.item.broadcaster.login,
                             "data-a-target": "carousel-follow-button"
-                        }) : y.createElement(E._1, {
+                        }) : _.createElement(N._1, {
                             width: 70,
                             height: 30
-                        }))), y.createElement(U, {
+                        }))), _.createElement(U, {
                             source: t.props.item.description || ""
                         }))
                     }, t.getPlaceholderRender = function() {
-                        return y.createElement(E.U, {
+                        return _.createElement(N.U, {
                             padding: {
                                 bottom: 1,
                                 x: 1
                             }
-                        }, y.createElement(E.j, {
-                            ratio: E.k.Aspect16x9
-                        }, y.createElement(E._1, {
+                        }, _.createElement(N.j, {
+                            ratio: N.k.Aspect16x9
+                        }, _.createElement(N._1, {
                             "data-test-selector": "carousel-player-placeholder"
-                        })), y.createElement(E.U, {
-                            display: E.H.Flex,
-                            flexWrap: E.K.NoWrap,
-                            textAlign: E._22.Left,
-                            alignItems: E.c.Center,
+                        })), _.createElement(N.U, {
+                            display: N.H.Flex,
+                            flexWrap: N.K.NoWrap,
+                            textAlign: N._22.Left,
+                            alignItems: N.c.Center,
                             padding: {
                                 y: 1
                             }
-                        }, y.createElement(E.U, {
+                        }, _.createElement(N.U, {
                             margin: {
                                 right: 1
                             },
                             flexShrink: 0
-                        }, y.createElement(E._1, {
+                        }, _.createElement(N._1, {
                             width: 40,
                             height: 40
-                        })), y.createElement(E.U, {
+                        })), _.createElement(N.U, {
                             margin: {
                                 right: 1
                             },
                             flexGrow: 1
-                        }, y.createElement(E._21, null, y.createElement(E._1, {
+                        }, _.createElement(N._21, null, _.createElement(N._1, {
                             width: 150
-                        })), y.createElement(E._21, null, y.createElement(E._1, {
+                        })), _.createElement(N._21, null, _.createElement(N._1, {
                             width: 100
-                        }))), y.createElement(E.U, {
+                        }))), _.createElement(N.U, {
                             flexShrink: 0
-                        }, y.createElement(E._1, {
+                        }, _.createElement(N._1, {
                             width: 70,
                             height: 30
-                        }))), y.createElement(E._21, null, y.createElement(E._1, {
+                        }))), _.createElement(N._21, null, _.createElement(N._1, {
                             lineCount: 3
                         })))
                     }, t.promotionCardClick = function(e) {
                         t.props.onPromotionCardClick(t.props.item, e)
                     }, t
                 }
-                return h.__extends(t, e), t.prototype.render = function() {
+                return g.__extends(t, e), t.prototype.render = function() {
                     return this.props.item ? this.getContentRender() : this.getPlaceholderRender()
                 }, t
-            }(y.Component)),
-            L = Object(f.a)(s)(x),
-            j = n(13),
-            A = (n(1267), 6),
-            M = function(e) {
+            }(_.Component)),
+            L = Object(v.a)(o)(P),
+            j = n(12),
+            A = (n(1290), 6),
+            H = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -651,14 +653,14 @@ webpackJsonp([49], {
                     }, t.displayEventFired = !1, t.renderLeftButton = function() {
                         if (t.props.items.length > A) {
                             var e = t.state.startingIndex > 0;
-                            return y.createElement(E.U, {
-                                display: E.H.Flex,
-                                alignItems: E.c.Stretch
-                            }, y.createElement(E.v, {
-                                ariaLabel: Object(g.d)("Page Left", "CarouselPlayerComponent"),
-                                icon: E._9.AngleLeft,
+                            return _.createElement(N.U, {
+                                display: N.H.Flex,
+                                alignItems: N.c.Stretch
+                            }, _.createElement(N.v, {
+                                ariaLabel: Object(f.d)("Page Left", "CarouselPlayerComponent"),
+                                icon: N._9.AngleLeft,
                                 onClick: t.handlePageLeft,
-                                "data-test-selector": k.d,
+                                "data-test-selector": b.d,
                                 disabled: !e
                             }))
                         }
@@ -666,23 +668,23 @@ webpackJsonp([49], {
                     }, t.renderRightButton = function() {
                         if (t.props.items.length > A) {
                             var e = t.props.items.length > t.state.startingIndex + A;
-                            return y.createElement(E.U, {
-                                display: E.H.Flex,
-                                alignItems: E.c.Stretch
-                            }, y.createElement(E.v, {
-                                ariaLabel: Object(g.d)("Page Right", "CarouselPlayerComponent"),
-                                icon: E._9.AngleRight,
+                            return _.createElement(N.U, {
+                                display: N.H.Flex,
+                                alignItems: N.c.Stretch
+                            }, _.createElement(N.v, {
+                                ariaLabel: Object(f.d)("Page Right", "CarouselPlayerComponent"),
+                                icon: N._9.AngleRight,
                                 onClick: t.handlePageRight,
-                                "data-test-selector": k.e,
+                                "data-test-selector": b.e,
                                 disabled: !e
                             }))
                         }
                         return null
                     }, t.getCardsRender = function() {
                         if (t.state.activeItem) {
-                            t.displayEventFired || (o(t.props.items), t.displayEventFired = !0);
+                            t.displayEventFired || (s(t.props.items), t.displayEventFired = !0);
                             return t.props.items.slice(t.state.startingIndex, t.state.startingIndex + A).map(function(e, n) {
-                                return y.createElement(N, {
+                                return _.createElement(O, {
                                     key: e.content.id,
                                     item: e,
                                     itemClick: t.selectContent,
@@ -692,19 +694,19 @@ webpackJsonp([49], {
                                 })
                             })
                         }
-                        for (var e = [], n = 0; n < A; n++) e.push(y.createElement(E.U, {
+                        for (var e = [], n = 0; n < A; n++) e.push(_.createElement(N.U, {
                             key: n,
                             margin: {
                                 x: .5
                             },
                             flexGrow: 1
-                        }, y.createElement(E.j, {
-                            ratio: E.k.Aspect16x9
-                        }, y.createElement(E._1, null)), y.createElement(E.U, {
+                        }, _.createElement(N.j, {
+                            ratio: N.k.Aspect16x9
+                        }, _.createElement(N._1, null)), _.createElement(N.U, {
                             margin: {
                                 top: .5
                             }
-                        }, y.createElement(E._1, {
+                        }, _.createElement(N._1, {
                             height: 4
                         }))));
                         return e
@@ -718,10 +720,10 @@ webpackJsonp([49], {
                             onPlayerDestroy: t.unregisterCarousel
                         };
                         switch (t.props.layout) {
-                            case k.c.Vertical:
-                                return y.createElement(L, h.__assign({}, e));
+                            case b.c.Vertical:
+                                return _.createElement(L, g.__assign({}, e));
                             default:
-                                return y.createElement(F, h.__assign({}, e))
+                                return _.createElement(R, g.__assign({}, e))
                         }
                     }, t.registerCarousel = function(e) {
                         t.props.registerCarousel && t.props.registerCarousel(e)
@@ -740,18 +742,18 @@ webpackJsonp([49], {
                         })
                     }, t.trackPromotionClick = function(e, n) {
                         var i = e.broadcaster,
-                            r = e.content,
-                            a = e.isScheduled;
+                            a = e.content,
+                            r = e.isScheduled;
                         c({
-                            broadcast_type: r.subType,
+                            broadcast_type: a.subType,
                             carousel_index: t.props.items.indexOf(t.state.activeItem),
                             channel: i.displayName,
-                            game: r.gameName,
-                            promotion_was_scheduled: a,
-                            views: r.viewersCount
+                            game: a.gameName,
+                            promotion_was_scheduled: r,
+                            views: a.viewersCount
                         }, n)
                     }, t.trackPromotionView = function(e) {
-                        u({
+                        d({
                             broadcast_type: e.content.subType,
                             carousel_index: t.props.items.indexOf(e),
                             channel: e.broadcaster.login,
@@ -761,45 +763,45 @@ webpackJsonp([49], {
                         })
                     }, t.handlePageRight = function() {
                         var e = t.props.items.length - A;
-                        e !== t.state.startingIndex && (d("next"), t.setState({
+                        e !== t.state.startingIndex && (u("next"), t.setState({
                             startingIndex: e
                         }))
                     }, t.handlePageLeft = function() {
-                        t.state.startingIndex > 0 && (d("prev"), t.setState({
+                        t.state.startingIndex > 0 && (u("prev"), t.setState({
                             startingIndex: 0
                         }))
                     }, t
                 }
-                return h.__extends(t, e), t.prototype.componentDidMount = function() {
+                return g.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillUpdate = function(e) {
                     !this.state.activeItem && e.items.length > 0 && this.setState({
                         activeItem: e.items[0]
                     })
                 }, t.prototype.render = function() {
-                    return y.createElement(E.U, {
-                        className: v("carousel-player", {
+                    return _.createElement(N.U, {
+                        className: k("carousel-player", {
                             "theme--dark": this.props.darkTheme
                         })
-                    }, this.getLayoutRender(), y.createElement(E._17, {
-                        background: E.m.Alt
-                    }, y.createElement(E.U, {
-                        display: E.H.Flex,
-                        flexWrap: E.K.NoWrap,
+                    }, this.getLayoutRender(), _.createElement(N._17, {
+                        background: N.m.Alt
+                    }, _.createElement(N.U, {
+                        display: N.H.Flex,
+                        flexWrap: N.K.NoWrap,
                         padding: {
                             x: .5,
                             y: 1
                         }
                     }, this.renderLeftButton(), this.getCardsRender(), this.renderRightButton())))
-                }, t = h.__decorate([Object(_.c)("CarouselPlayer")], t)
-            }(y.Component),
-            B = M,
-            G = Object(f.a)(null, p)(B);
+                }, t = g.__decorate([Object(S.c)("CarouselPlayer")], t)
+            }(_.Component),
+            B = H,
+            V = Object(v.a)(null, m)(B);
         n.d(t, "a", function() {
-            return G
+            return V
         })
     },
-    1045: function(e, t, n) {
+    1066: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -816,11 +818,11 @@ webpackJsonp([49], {
                     content: {
                         id: n ? n.login : "",
                         gameName: t,
-                        type: s.b.Stream,
+                        type: o.b.Stream,
                         subType: e.stream ? e.stream.type : "",
                         viewersCount: e.stream ? e.stream.viewersCount : 0
                     },
-                    description: a(e.description || ""),
+                    description: r(e.description || ""),
                     imageURL: e.imageURL || "",
                     isScheduled: e.isScheduled || !1,
                     isSponsored: e.isSponsored || !1,
@@ -830,7 +832,7 @@ webpackJsonp([49], {
             })
         }
 
-        function r(e) {
+        function a(e) {
             return e.map(function(e) {
                 var t = "",
                     n = null;
@@ -844,11 +846,11 @@ webpackJsonp([49], {
                     content: {
                         id: e.video ? e.video.id : "",
                         gameName: t,
-                        type: s.b.Vod,
+                        type: o.b.Vod,
                         subType: "",
                         viewersCount: e.video ? e.video.viewCount : 0
                     },
-                    description: a(e.description || ""),
+                    description: r(e.description || ""),
                     imageURL: e.imageURL || "",
                     isScheduled: e.isScheduled || !1,
                     isSponsored: e.isSponsored || !1,
@@ -858,47 +860,47 @@ webpackJsonp([49], {
             })
         }
 
-        function a(e) {
+        function r(e) {
             return e.replace(/\[\]\(.+\)/, "")
         }
-        t.a = i, t.b = r;
-        var s = n(843)
+        t.a = i, t.b = a;
+        var o = n(867)
     },
-    1263: function(e, t, n) {
+    1286: function(e, t, n) {
         "use strict";
         var i = n(0),
-            r = n(1),
-            a = n(2),
-            s = n(355),
-            o = n(104),
-            l = n(1014),
-            c = n(1015),
-            u = n(1269),
-            d = function(e) {
+            a = n(1),
+            r = n(2),
+            o = n(376),
+            s = n(111),
+            l = n(1036),
+            c = n(1037),
+            d = n(1292),
+            u = function(e) {
                 var t = {
                     name: "TWILIGHT_VIDEO_FEATURO_EN",
                     assignments: {
                         fallback: function() {
-                            return o.a.wrap(function() {
+                            return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 1014))
+                                }).then(n.bind(null, 1036))
                             }, "FeaturedBroadcasters")(i.__assign({}, e))
                         },
                         mixed: function() {
-                            return o.a.wrap(function() {
+                            return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 1269))
+                                }).then(n.bind(null, 1292))
                             }, "FeaturedContent")(i.__assign({}, e, {
                                 shouldMixContent: !0
                             }))
                         },
                         last: function() {
-                            return o.a.wrap(function() {
+                            return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 1269))
+                                }).then(n.bind(null, 1292))
                             }, "FeaturedContent")(i.__assign({}, e, {
                                 shouldMixContent: !1
                             }))
@@ -908,21 +910,37 @@ webpackJsonp([49], {
                         return Object(c.placeholderFeaturedBroadcasters)(e.renderContext)
                     }
                 };
-                return "en" === a.n.intl.getLanguageCode() ? r.createElement(s.a, i.__assign({}, t)) : r.createElement(l.FeaturedBroadcasters, {
+                return "en" === r.n.intl.getLanguageCode() ? a.createElement(o.a, i.__assign({}, t)) : a.createElement(l.FeaturedBroadcasters, {
                     renderContext: e.renderContext
                 })
             };
         n.d(t, "a", function() {
-            return u.FeaturedBroadcastersRenderContext
+            return d.FeaturedBroadcastersRenderContext
         }), n.d(t, "b", function() {
-            return d
+            return u
         })
     },
-    1264: function(e, t) {},
-    1265: function(e, t) {},
-    1266: function(e, t) {},
-    1267: function(e, t) {},
-    1268: function(e, t) {
+    1287: function(e, t) {},
+    1288: function(e, t) {},
+    1289: function(e, t) {},
+    129: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return r.b.get(s.a, !1) || r.a.buildType !== o.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? l + e : l + e.pathname
+        }
+
+        function a() {
+            return !r.b.get(s.a, !1) && r.a.buildType === o.a.Production
+        }
+        var r = n(2),
+            o = n(16),
+            s = n(262);
+        t.a = i, t.b = a;
+        var l = "https://www.twitch.tv"
+    },
+    1290: function(e, t) {},
+    1291: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1226,92 +1244,92 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    1269: function(e, t, n) {
+    1292: function(e, t, n) {
         "use strict";
 
         function i(e, t, n) {
             switch (t) {
-                case p.FeaturedBroadcastersRenderContext.AnonFront:
-                    return o.createElement(u.a, {
+                case m.FeaturedBroadcastersRenderContext.AnonFront:
+                    return s.createElement(d.a, {
                         items: e,
                         isLoading: n,
-                        layout: d.c.Horizontal,
+                        layout: u.c.Horizontal,
                         showCounts: !0,
                         darkTheme: !0
                     });
                 default:
-                    return o.createElement(b._17, {
+                    return s.createElement(h._17, {
                         className: "featured-content",
-                        background: b.m.Base,
+                        background: h.m.Base,
                         elevation: 1
-                    }, o.createElement(b.U, {
+                    }, s.createElement(h.U, {
                         padding: 1
-                    }, r(n)), o.createElement(u.a, {
+                    }, a(n)), s.createElement(d.a, {
                         items: e,
                         isLoading: n,
-                        layout: d.c.Vertical,
+                        layout: u.c.Vertical,
                         showCounts: !0
                     }))
             }
         }
 
-        function r(e) {
-            return e ? o.createElement(b._21, {
-                fontSize: b.L.Size5,
-                color: b.F.Alt2
-            }, o.createElement(b._1, {
+        function a(e) {
+            return e ? s.createElement(h._21, {
+                fontSize: h.L.Size5,
+                color: h.F.Alt2
+            }, s.createElement(h._1, {
                 width: 100
-            })) : o.createElement(b._21, {
-                fontSize: b.L.Size5,
-                color: b.F.Alt2
+            })) : s.createElement(h._21, {
+                fontSize: h.L.Size5,
+                color: h.F.Alt2
             }, Object(l.d)("Featured", "FeaturedContentComponent"))
         }
 
-        function a(e) {
+        function r(e) {
             return i([], e, !0)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.placeholderFeaturedBroadcasters = a, n.d(t, "FeaturedContent", function() {
-            return S
+        }), t.placeholderFeaturedBroadcasters = r, n.d(t, "FeaturedContent", function() {
+            return y
         });
-        var s = n(0),
-            o = n(1),
-            l = (n.n(o), n(2)),
-            c = n(7),
-            u = n(1044),
-            d = n(843),
-            p = n(1014),
-            m = n(1270),
-            h = (n.n(m), n(1045)),
-            g = n(5),
-            b = n(3);
+        var o = n(0),
+            s = n(1),
+            l = (n.n(s), n(2)),
+            c = n(6),
+            d = n(1065),
+            u = n(867),
+            m = n(1036),
+            p = n(1293),
+            g = (n.n(p), n(1066)),
+            f = n(5),
+            h = n(3);
         n.d(t, "FeaturedBroadcastersRenderContext", function() {
-            return p.FeaturedBroadcastersRenderContext
+            return m.FeaturedBroadcastersRenderContext
         });
-        var f = function(e) {
+        var v = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                return o.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.postRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.postRender()
                 }, t.prototype.render = function() {
                     var e = this.props.data.featuredStreams || [],
-                        t = Object(h.a)(e),
+                        t = Object(g.a)(e),
                         n = this.props.data.featuredVideos || [],
-                        r = Object(h.b)(n);
-                    if (t.length > 0 && t.splice(t.length - r.length), this.props.shouldMixContent && r.length > 0) {
-                        var a = 6 - r.length,
-                            s = t.splice(a);
-                        t = t.concat(r).concat(s)
-                    } else t = t.concat(r);
-                    var o = !(!this.props.data.loading && !this.props.data.error);
-                    return i(t, this.props.renderContext, o)
+                        a = Object(g.b)(n);
+                    if (t.length > 0 && t.splice(t.length - a.length), this.props.shouldMixContent && a.length > 0) {
+                        var r = 6 - a.length,
+                            o = t.splice(r);
+                        t = t.concat(a).concat(o)
+                    } else t = t.concat(a);
+                    var s = !(!this.props.data.loading && !this.props.data.error);
+                    return i(t, this.props.renderContext, s)
                 }, t.prototype.postRender = function() {
                     this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
-                }, t = s.__decorate([Object(c.a)(m, {
+                }, t = o.__decorate([Object(c.a)(p, {
                     options: function() {
                         return {
                             variables: {
@@ -1319,11 +1337,11 @@ webpackJsonp([49], {
                             }
                         }
                     }
-                }), Object(g.c)("FeaturedContent")], t)
-            }(o.Component),
-            S = f
+                }), Object(f.c)("FeaturedContent")], t)
+            }(s.Component),
+            y = v
     },
-    1270: function(e, t) {
+    1293: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1835,8 +1853,160 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    1667: function(e, t) {},
-    1668: function(e, t) {
+    132: function(e, t, n) {
+        "use strict";
+
+        function i(e, t) {
+            var n = a.b.get(l, "https://twitch.amazon.com/prime"),
+                i = "";
+            try {
+                i = btoa(t)
+            } catch (e) {
+                c.error(e, "Could not decode location pathname substring for redirect")
+            }
+            return i ? n + "?ref_=" + e + "&redirectRoute=" + i : n + "?ref_=" + e
+        }
+        n.d(t, "b", function() {
+            return r
+        }), n.d(t, "a", function() {
+            return o
+        }), n.d(t, "c", function() {
+            return s
+        }), t.d = i;
+        var a = n(2),
+            r = "sm_tw_tup_ntp_t_all",
+            o = "sm_tw_thp_blue_t_all",
+            s = "sm_w_tup_ntp_t_c",
+            l = "prime_landing_page_base_url",
+            c = a.i.withCategory("PrimeUtilsLogger")
+    },
+    133: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return S.debug("Updating activity", e), E = g.__assign({}, E, {
+                activity: e
+            }), m()
+        }
+
+        function a(e) {
+            S.debug("Updating visibility", e), p(e)
+        }
+
+        function r(e) {
+            S.debug("Saving current availability", e), E = g.__assign({}, E, {
+                availability: e
+            })
+        }
+
+        function o() {
+            r(h.a.Online)
+        }
+
+        function s() {
+            r(h.a.Idle)
+        }
+
+        function l() {
+            S.debug("Clearing activity"), E = g.__assign({}, E, {
+                activity: null
+            }), m()
+        }
+
+        function c() {
+            return g.__awaiter(this, void 0, void 0, function() {
+                var e;
+                return g.__generator(this, function(t) {
+                    switch (t.label) {
+                        case 0:
+                            S.debug("Clearing previous session"), E = {
+                                sessionID: d(),
+                                availability: h.a.Online,
+                                activity: null
+                            }, t.label = 1;
+                        case 1:
+                            return t.trys.push([1, 4, , 5]), [4, m()];
+                        case 2:
+                            return t.sent(), S.debug("Setting new session"), E = g.__assign({}, E, {
+                                sessionID: f.n.session.tabID
+                            }), u(f.n.session.tabID), [4, m()];
+                        case 3:
+                            return [2, t.sent()];
+                        case 4:
+                            return e = t.sent(), [2, e];
+                        case 5:
+                            return [2]
+                    }
+                })
+            })
+        }
+
+        function d() {
+            return f.k.get(_, "")
+        }
+
+        function u(e) {
+            f.k.set(_, e)
+        }
+
+        function m() {
+            return g.__awaiter(this, void 0, void 0, function() {
+                return g.__generator(this, function(e) {
+                    return Object(v.d)(f.n.store.getState()) ? (S.debug("Setting status on server", {
+                        state: E
+                    }), b && clearTimeout(b), [2, f.n.apollo.client.mutate({
+                        mutation: y,
+                        variables: {
+                            input: E
+                        }
+                    }).then(function(e) {
+                        S.debug("Status scheduled to be set again", {
+                            seconds: e.data.setSessionStatus.setAgainInSeconds
+                        }), b = setTimeout(m, 1e3 * e.data.setSessionStatus.setAgainInSeconds)
+                    }, function(e) {
+                        S.warn("Failed to update status. Trying again in 60 seconds.", e), b = setTimeout(m, 6e4)
+                    })]) : [2]
+                })
+            })
+        }
+
+        function p(e) {
+            Object(v.d)(f.n.store.getState()) && (S.debug("Setting visibility on server", {
+                visibility: e
+            }), f.n.apollo.client.mutate({
+                mutation: k,
+                variables: {
+                    input: {
+                        visibility: e
+                    }
+                }
+            }).then(function(e) {
+                S.debug("Visibility set", {
+                    visibility: e.data.updateVisibility.user.availability
+                })
+            }, function(e) {
+                S.warn("Failed to update visibility.", e)
+            }))
+        }
+        t.f = i, t.e = a, t.c = r, t.b = o, t.d = s, t.a = l, t.g = c;
+        var g = n(0),
+            f = n(2),
+            h = n(51),
+            v = n(17),
+            y = n(416),
+            k = (n.n(y), n(417)),
+            _ = (n.n(k), "twilight.sessionID"),
+            b = 0,
+            S = f.i.withCategory("Session Status"),
+            N = {
+                sessionID: f.n.session.tabID,
+                availability: "",
+                activity: null
+            },
+            E = N
+    },
+    1691: function(e, t) {},
+    1692: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1977,8 +2147,8 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    1669: function(e, t) {},
-    1670: function(e, t) {
+    1693: function(e, t) {},
+    1694: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2255,435 +2425,435 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    1671: function(e, t) {},
-    1672: function(e, t) {},
-    2021: function(e, t, n) {
+    1695: function(e, t) {},
+    1696: function(e, t) {},
+    2044: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var i, r = n(0),
-            a = n(1),
-            s = n(2),
-            o = n(416),
-            l = n(60),
+        var i, a = n(0),
+            r = n(1),
+            o = n(2),
+            s = n(389),
+            l = n(47),
             c = n(5),
-            u = n(3),
-            d = (n(1667), function() {
-                return a.createElement(u.U, {
+            d = n(3),
+            u = (n(1691), function() {
+                return r.createElement(d.U, {
                     className: "footer",
                     padding: {
                         y: 3
                     }
-                }, a.createElement(u.U, {
+                }, r.createElement(d.U, {
                     className: "footer__link-container",
-                    display: u.H.Flex,
-                    alignItems: u.c.Center,
-                    justifyContent: u.T.Center,
+                    display: d.H.Flex,
+                    alignItems: d.c.Center,
+                    justifyContent: d.T.Center,
                     margin: "auto",
                     padding: {
                         y: 3
                     }
-                }, a.createElement(u.U, {
+                }, r.createElement(d.U, {
                     className: "footer__glitch",
-                    display: u.H.Flex,
-                    alignItems: u.c.Center,
+                    display: d.H.Flex,
+                    alignItems: d.c.Center,
                     margin: {
                         right: 2
                     }
-                }, a.createElement(u._8, {
-                    asset: u._9.LogoGlitch,
+                }, r.createElement(d._8, {
+                    asset: d._9.LogoGlitch,
                     width: 30,
                     height: 30
-                })), a.createElement(u.U, {
+                })), r.createElement(d.U, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement("a", {
+                }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/about/"
-                }, Object(s.d)("About", "Footer"))), a.createElement(u.U, {
+                }, Object(o.d)("About", "Footer"))), r.createElement(d.U, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement("a", {
+                }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
                     href: "https://blog.twitch.tv/"
-                }, Object(s.d)("Blog", "Footer"))), a.createElement(u.U, {
+                }, Object(o.d)("Blog", "Footer"))), r.createElement(d.U, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement("a", {
+                }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
                     href: "https://www.twitch.tv/products/turbo/ticket?ref=footer"
-                }, Object(s.d)("Turbo", "Footer"))), a.createElement(u.U, {
+                }, Object(o.d)("Turbo", "Footer"))), r.createElement(d.U, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement("a", {
+                }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
                     href: "https://music.twitch.tv/"
-                }, Object(s.d)("Music", "Footer"))), a.createElement(u.U, {
+                }, Object(o.d)("Music", "Footer"))), r.createElement(d.U, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement("a", {
+                }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
                     href: "http://twitchadvertising.tv/"
-                }, Object(s.d)("Advertise", "Footer"))), a.createElement(u.U, {
+                }, Object(o.d)("Advertise", "Footer"))), r.createElement(d.U, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement("a", {
+                }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
                     href: "https://dev.twitch.tv/"
-                }, Object(s.d)("Developers", "Footer"))), a.createElement(u.U, {
+                }, Object(o.d)("Developers", "Footer"))), r.createElement(d.U, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement("a", {
+                }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/partners/"
-                }, Object(s.d)("Partners", "Footer"))), a.createElement(u.U, {
+                }, Object(o.d)("Partners", "Footer"))), r.createElement(d.U, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement("a", {
+                }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/platforms/"
-                }, Object(s.d)("Mobile", "Footer"))), a.createElement(u.U, {
+                }, Object(o.d)("Mobile", "Footer"))), r.createElement(d.U, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement("a", {
+                }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/jobs/"
-                }, Object(s.d)("Jobs", "Footer"))), a.createElement(u.U, {
+                }, Object(o.d)("Jobs", "Footer"))), r.createElement(d.U, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement("a", {
+                }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
                     href: "https://help.twitch.tv/"
-                }, Object(s.d)("Help", "Footer"))), a.createElement(u.U, {
+                }, Object(o.d)("Help", "Footer"))), r.createElement(d.U, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement("a", {
+                }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/legal/terms-of-service/"
-                }, Object(s.d)("Terms", "Footer"))), a.createElement(u.U, {
+                }, Object(o.d)("Terms", "Footer"))), r.createElement(d.U, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement("a", {
+                }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/legal/privacy-policy/"
-                }, Object(s.d)("Privacy Policy", "Footer"))), a.createElement(u.U, {
+                }, Object(o.d)("Privacy Policy", "Footer"))), r.createElement(d.U, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement("a", {
+                }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/legal/ad-choices/"
-                }, Object(s.d)("Ad Choices", "Footer"))), a.createElement(u.U, {
+                }, Object(o.d)("Ad Choices", "Footer"))), r.createElement(d.U, {
                     margin: {
                         right: 1
                     }
-                }, a.createElement("a", {
+                }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/legal/cookie-policy/"
-                }, Object(s.d)("Cookie Policy", "Footer"))), a.createElement(u.U, {
+                }, Object(o.d)("Cookie Policy", "Footer"))), r.createElement(d.U, {
                     margin: {
                         left: 5
                     }
-                }, a.createElement(l.a, null, a.createElement("span", {
+                }, r.createElement(l.a, null, r.createElement("span", {
                     className: "footer__link"
-                }, Object(s.d)("Language", "Footer")), a.createElement(u.p, {
-                    size: u.r.Medium,
-                    direction: u.q.TopRight
-                }, a.createElement(o.a, null))))))
+                }, Object(o.d)("Language", "Footer")), r.createElement(d.p, {
+                    size: d.r.Medium,
+                    direction: d.q.TopRight
+                }, r.createElement(s.a, null))))))
             }),
-            p = Object(c.c)("Footer", {
+            m = Object(c.c)("Footer", {
                 autoReportInteractive: !0
-            })(d),
-            m = n(29),
-            h = n(761),
-            g = n(758),
-            b = n(102),
-            f = n(13),
-            S = n(855),
-            v = n(358),
-            y = n(1263),
-            k = n(407),
-            _ = n(11),
-            E = n(7),
-            P = n(349),
-            T = n(1668),
-            C = (n(1669), function(e) {
+            })(u),
+            p = n(907),
+            g = n(811),
+            f = n(808),
+            h = n(110),
+            v = n(12),
+            y = n(879),
+            k = n(381),
+            _ = n(1286),
+            b = n(387),
+            S = n(10),
+            N = n(6),
+            E = n(374),
+            C = n(1692),
+            w = (n(1693), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         adDisplayed: !1
                     }, t.getItems = function() {
                         if (t.props.data.loading || t.props.data.error) {
-                            for (var e = [], n = 0; n < 12; n++) e.push(a.createElement(u.G, {
+                            for (var e = [], n = 0; n < 12; n++) e.push(r.createElement(d.G, {
                                 cols: 2,
                                 key: "placeholder-" + n
-                            }, a.createElement(u.U, {
+                            }, r.createElement(d.U, {
                                 key: n,
                                 margin: {
                                     bottom: n < 6 ? 4 : 0
                                 }
-                            }, a.createElement(u.U, {
+                            }, r.createElement(d.U, {
                                 margin: {
                                     bottom: .5
                                 }
-                            }, a.createElement(u.j, {
-                                ratio: u.k.Aspect3x4
-                            }, a.createElement(u._1, null))), a.createElement(u._21, null, a.createElement(u._1, {
+                            }, r.createElement(d.j, {
+                                ratio: d.k.Aspect3x4
+                            }, r.createElement(d._1, null))), r.createElement(d._21, null, r.createElement(d._1, {
                                 width: 120
-                            })), a.createElement(u._21, {
-                                fontSize: u.L.Size7
-                            }, a.createElement(u._1, {
+                            })), r.createElement(d._21, {
+                                fontSize: d.L.Size7
+                            }, r.createElement(d._1, {
                                 width: 80
                             })))));
                             return e
                         }
                         var i = t.props.data.games.edges.slice(0, t.state.adDisplayed ? 10 : 12).map(function(e, t) {
                                 var n = e.node;
-                                return a.createElement(u.G, {
+                                return r.createElement(d.G, {
                                     cols: 2,
                                     key: "game-" + n.id
-                                }, a.createElement(u.U, {
+                                }, r.createElement(d.U, {
                                     margin: {
                                         bottom: t < 6 ? 4 : 0
                                     }
-                                }, a.createElement(u.t, {
-                                    linkTo: Object(P.d)(n.name),
+                                }, r.createElement(d.t, {
+                                    linkTo: Object(E.d)(n.name),
                                     title: n.name,
                                     imageAlt: n.name + " cover image",
                                     imageSrc: n.boxArtURL,
-                                    info: Object(s.d)("{viewerCount,number} viewers", {
+                                    info: Object(o.d)("{viewerCount,number} viewers", {
                                         viewerCount: n.viewersCount
                                     }, "FeaturedGames"),
                                     "data-a-target": "card-" + t,
                                     "data-a-id": "card-" + n.name.replace(/ /g, "")
                                 })))
                             }),
-                            r = a.createElement(u.U, {
-                                display: u.H.Flex,
+                            a = r.createElement(d.U, {
+                                display: d.H.Flex,
                                 flexGrow: 1,
-                                justifyContent: u.T.Center,
+                                justifyContent: d.T.Center,
                                 key: "ad"
-                            }, a.createElement(S.a, {
-                                adSize: v.c.anonFront.rect,
-                                adUnit: v.d.frontpage,
-                                slotID: v.b.anonFront.rect,
+                            }, r.createElement(y.a, {
+                                adSize: k.c.anonFront.rect,
+                                adUnit: k.d.frontpage,
+                                slotID: k.b.anonFront.rect,
                                 targeting: {
-                                    pagetype: v.a.frontpage
+                                    pagetype: k.a.frontpage
                                 },
                                 slotRendered: t.onSlotRendered,
                                 autoEnable: !1
                             }));
-                        return i.splice(4, 0, r), i
+                        return i.splice(4, 0, a), i
                     }, t.onSlotRendered = function() {
                         t.state.adDisplayed || t.setState({
                             adDisplayed: !0
                         })
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.postRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.postRender()
                 }, t.prototype.render = function() {
-                    var e = a.createElement(u.U, {
-                            display: u.H.Flex,
-                            flexDirection: u.J.Row,
-                            alignItems: u.c.Baseline,
+                    var e = r.createElement(d.U, {
+                            display: d.H.Flex,
+                            flexDirection: d.J.Row,
+                            alignItems: d.c.Baseline,
                             margin: {
                                 bottom: 1
                             }
-                        }, a.createElement(u._21, {
-                            fontSize: u.L.Size2,
-                            color: u.F.Base
-                        }, Object(s.d)("Featured Games", "FeaturedGames")), a.createElement(u.U, {
+                        }, r.createElement(d._21, {
+                            fontSize: d.L.Size2,
+                            color: d.F.Base
+                        }, Object(o.d)("Featured Games", "FeaturedGames")), r.createElement(d.U, {
                             className: "anon-featured-games__subheader",
                             margin: {
                                 left: 2
                             }
-                        }, a.createElement(u._21, {
-                            fontSize: u.L.Size3,
-                            color: u.F.Alt2
-                        }, Object(s.d)("Games people are watching now", "FeaturedGames")))),
-                        t = a.createElement(u.U, {
-                            display: u.H.Flex,
-                            justifyContent: u.T.End
-                        }, a.createElement(u.P, {
-                            display: u.H.Flex,
-                            alignItems: u.c.Center
-                        }, a.createElement(_.a, {
+                        }, r.createElement(d._21, {
+                            fontSize: d.L.Size3,
+                            color: d.F.Alt2
+                        }, Object(o.d)("Games people are watching now", "FeaturedGames")))),
+                        t = r.createElement(d.U, {
+                            display: d.H.Flex,
+                            justifyContent: d.T.End
+                        }, r.createElement(d.P, {
+                            display: d.H.Flex,
+                            alignItems: d.c.Center
+                        }, r.createElement(S.a, {
                             to: "/directory",
                             "data-a-target": "see-all-live-games-link"
-                        }, a.createElement(u._21, {
-                            fontSize: u.L.Size4
-                        }, Object(s.d)("See all live games", "FeaturedGames")), a.createElement(u._17, {
-                            color: u.F.Link,
+                        }, r.createElement(d._21, {
+                            fontSize: d.L.Size4
+                        }, Object(o.d)("See all live games", "FeaturedGames")), r.createElement(d._17, {
+                            color: d.F.Link,
                             margin: {
                                 left: .5
                             },
-                            display: u.H.InlineFlex,
-                            alignItems: u.c.Center
-                        }, a.createElement(u._8, {
-                            asset: u._9.AngleRight,
+                            display: d.H.InlineFlex,
+                            alignItems: d.c.Center
+                        }, r.createElement(d._8, {
+                            asset: d._9.AngleRight,
                             width: 14,
                             height: 14
                         })))));
-                    return a.createElement(u._17, {
+                    return r.createElement(d._17, {
                         className: "anon-featured-games",
-                        background: u.m.Base
-                    }, e, a.createElement(u.N, null, this.getItems()), t)
+                        background: d.m.Base
+                    }, e, r.createElement(d.N, null, this.getItems()), t)
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = r.__decorate([Object(E.a)(T), Object(c.c)("FeaturedGames")], t)
-            }(a.Component)),
-            N = C,
-            U = n(903),
-            O = n(51);
+                }, t = a.__decorate([Object(N.a)(C), Object(c.c)("FeaturedGames")], t)
+            }(r.Component)),
+            O = w,
+            U = n(925),
+            x = n(49);
         ! function(e) {
             e[e.All = 1] = "All", e[e.Xbox = 2] = "Xbox", e[e.PS4 = 3] = "PS4"
         }(i || (i = {}));
-        var w = n(1670),
-            I = (n(1671), function(e) {
+        var F = n(1694),
+            T = (n(1695), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getItems = function() {
                         if (t.props.data.loading || t.props.data.error) {
-                            for (var e = [], n = 0; n < 6; n++) e.push(a.createElement(u.U, {
+                            for (var e = [], n = 0; n < 6; n++) e.push(r.createElement(d.U, {
                                 key: n,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, a.createElement(u.U, {
+                            }, r.createElement(d.U, {
                                 margin: {
                                     bottom: .5
                                 }
-                            }, a.createElement(u.j, {
-                                ratio: u.k.Aspect16x9
-                            }, a.createElement(u._1, null))), a.createElement(u._21, null, a.createElement(u._1, {
+                            }, r.createElement(d.j, {
+                                ratio: d.k.Aspect16x9
+                            }, r.createElement(d._1, null))), r.createElement(d._21, null, r.createElement(d._1, {
                                 width: 150
-                            })), a.createElement(u._21, {
-                                fontSize: u.L.Size7
-                            }, a.createElement(u._1, {
+                            })), r.createElement(d._21, {
+                                fontSize: d.L.Size7
+                            }, r.createElement(d._1, {
                                 width: 100
                             }))));
                             return e
                         }
                         return t.props.data.streams.edges.map(function(e, n) {
                             var i = e.node,
-                                r = Object(O.a)(i.broadcaster.login, i.broadcaster.displayName),
-                                o = {
-                                    medium: f.PageviewMedium.Following,
-                                    content: f.PageviewContent.Live,
+                                a = Object(x.a)(i.broadcaster.login, i.broadcaster.displayName),
+                                s = {
+                                    medium: v.PageviewMedium.Following,
+                                    content: v.PageviewContent.Live,
                                     content_index: n
                                 };
-                            return a.createElement(u.U, {
+                            return r.createElement(d.U, {
                                 className: "anon-top-channels",
                                 key: i.broadcaster.id,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, a.createElement(U.a, {
-                                imageSrc: i && i.previewImageURL || s.a.defaultStreamPreviewURL,
+                            }, r.createElement(U.a, {
+                                imageSrc: i && i.previewImageURL || o.a.defaultStreamPreviewURL,
                                 imageAlt: i && i.title || "",
                                 viewerCount: i && i.viewersCount || 0,
                                 title: i && i.title || "",
-                                channelName: r,
-                                gameImageSrc: i && i.game && i.game.boxArtURL || s.a.defaultBoxArtURL,
+                                channelName: a,
+                                gameImageSrc: i && i.game && i.game.boxArtURL || o.a.defaultBoxArtURL,
                                 gameTitle: i && i.game ? i.game.name : "",
                                 gameLinkTo: {
                                     pathname: "/directory/game/" + (i && i.game ? i.game.name : ""),
-                                    state: o
+                                    state: s
                                 },
                                 linkTo: {
                                     pathname: "/" + i.broadcaster.login,
-                                    state: o
+                                    state: s
                                 },
                                 channelNameLinkTo: {
                                     pathname: "/" + i.broadcaster.login + "/videos",
-                                    state: o
+                                    state: s
                                 },
                                 "data-a-target": "top-" + t.getDataProp() + "-channel-" + n
                             }))
                         })
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.postRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.postRender()
                 }, t.prototype.render = function() {
-                    var e = a.createElement(u.U, {
-                            display: u.H.Flex,
-                            flexDirection: u.J.Row,
-                            alignItems: u.c.Baseline,
+                    var e = r.createElement(d.U, {
+                            display: d.H.Flex,
+                            flexDirection: d.J.Row,
+                            alignItems: d.c.Baseline,
                             margin: {
                                 bottom: 1
                             }
-                        }, a.createElement(u._21, {
-                            fontSize: u.L.Size2,
-                            color: u.F.Base
-                        }, this.getTitle()), a.createElement(u.U, {
+                        }, r.createElement(d._21, {
+                            fontSize: d.L.Size2,
+                            color: d.F.Base
+                        }, this.getTitle()), r.createElement(d.U, {
                             className: "anon-top-channels__subheader",
                             margin: {
                                 left: 2
                             }
-                        }, a.createElement(u._21, {
-                            fontSize: u.L.Size3,
-                            color: u.F.Alt2
+                        }, r.createElement(d._21, {
+                            fontSize: d.L.Size3,
+                            color: d.F.Alt2
                         }, this.getSubtitle()))),
-                        t = a.createElement(u.U, {
+                        t = r.createElement(d.U, {
                             className: "anon-top-channels__footer",
-                            display: u.H.Flex,
-                            justifyContent: u.T.End
-                        }, a.createElement(u.P, {
-                            display: u.H.Flex,
-                            alignItems: u.c.Center
-                        }, a.createElement(_.a, {
+                            display: d.H.Flex,
+                            justifyContent: d.T.End
+                        }, r.createElement(d.P, {
+                            display: d.H.Flex,
+                            alignItems: d.c.Center
+                        }, r.createElement(S.a, {
                             to: this.getLink(),
                             "data-a-target": "see-all-" + this.getDataProp() + "-channels-link"
-                        }, a.createElement(u._21, {
-                            fontSize: u.L.Size4
-                        }, this.getFooter()), a.createElement(u._17, {
-                            color: u.F.Link,
+                        }, r.createElement(d._21, {
+                            fontSize: d.L.Size4
+                        }, this.getFooter()), r.createElement(d._17, {
+                            color: d.F.Link,
                             margin: {
                                 left: .5
                             },
-                            display: u.H.InlineFlex,
-                            alignItems: u.c.Center
-                        }, a.createElement(u._8, {
-                            asset: u._9.AngleRight,
+                            display: d.H.InlineFlex,
+                            alignItems: d.c.Center
+                        }, r.createElement(d._8, {
+                            asset: d._9.AngleRight,
                             width: 14,
                             height: 14
                         })))));
-                    return a.createElement("div", null, e, a.createElement(u._33, {
-                        gutterSize: u._35.Small,
-                        childWidth: u._34.Large,
+                    return r.createElement("div", null, e, r.createElement(d._33, {
+                        gutterSize: d._35.Small,
+                        childWidth: d._34.Large,
                         placeholderItems: 6
                     }, this.getItems()), t)
                 }, t.prototype.postRender = function() {
@@ -2691,33 +2861,33 @@ webpackJsonp([49], {
                 }, t.prototype.getFooter = function() {
                     switch (this.props.type) {
                         case i.All:
-                            return Object(s.d)("See all live Channels", "TopChannels");
+                            return Object(o.d)("See all live Channels", "TopChannels");
                         case i.PS4:
-                            return Object(s.d)("See all PS4 Channels", "TopChannels");
+                            return Object(o.d)("See all PS4 Channels", "TopChannels");
                         case i.Xbox:
-                            return Object(s.d)("See all Xbox One Channels", "TopChannels");
+                            return Object(o.d)("See all Xbox One Channels", "TopChannels");
                         default:
                             return ""
                     }
                 }, t.prototype.getSubtitle = function() {
                     switch (this.props.type) {
                         case i.All:
-                            return Object(s.d)("Broadcasters people are watching now", "TopChannels");
+                            return Object(o.d)("Broadcasters people are watching now", "TopChannels");
                         case i.PS4:
-                            return Object(s.d)("Channels broadcasted from Playstation 4", "TopChannels");
+                            return Object(o.d)("Channels broadcasted from Playstation 4", "TopChannels");
                         case i.Xbox:
-                            return Object(s.d)("Channels broadcasted from Xbox one", "TopChannels");
+                            return Object(o.d)("Channels broadcasted from Xbox one", "TopChannels");
                         default:
                             return ""
                     }
                 }, t.prototype.getTitle = function() {
                     switch (this.props.type) {
                         case i.All:
-                            return Object(s.d)("Top Live Channels", "TopChannels");
+                            return Object(o.d)("Top Live Channels", "TopChannels");
                         case i.PS4:
-                            return Object(s.d)("Top PS4 Channels", "TopChannels");
+                            return Object(o.d)("Top PS4 Channels", "TopChannels");
                         case i.Xbox:
-                            return Object(s.d)("Top Xbox One Channels", "TopChannels");
+                            return Object(o.d)("Top Xbox One Channels", "TopChannels");
                         default:
                             return ""
                     }
@@ -2743,7 +2913,7 @@ webpackJsonp([49], {
                         default:
                             return ""
                     }
-                }, t = r.__decorate([Object(E.a)(w, {
+                }, t = a.__decorate([Object(N.a)(F, {
                     options: function(e) {
                         var t = "";
                         switch (e.type) {
@@ -2763,9 +2933,9 @@ webpackJsonp([49], {
                         }
                     }
                 }), Object(c.c)("TopChannels")], t)
-            }(a.Component)),
-            D = I,
-            F = (n(1672), function(e) {
+            }(r.Component)),
+            D = T,
+            R = (n(1696), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2778,73 +2948,72 @@ webpackJsonp([49], {
                     }, t.onSlotAdded = function() {
                         t.setState(function(e) {
                             var t = e.numSlotsAdded + 1;
-                            return t === Object.keys(v.b.anonFront).length && b.a.display(v.b.anonFront.takeover), {
+                            return t === Object.keys(k.b.anonFront).length && h.a.display(k.b.anonFront.takeover), {
                                 numSlotsAdded: t
                             }
                         })
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentWillMount = function() {
-                    v.g.addListener(v.e, this.onSlotAdded)
+                return a.__extends(t, e), t.prototype.componentWillMount = function() {
+                    k.g.addListener(k.e, this.onSlotAdded)
                 }, t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive(), s.n.setPageTitle()
+                    this.props.latencyTracking.reportInteractive(), o.n.setPageTitle()
                 }, t.prototype.render = function() {
-                    return a.createElement(u.U, {
+                    return r.createElement(d.U, {
                         fullHeight: !0
-                    }, a.createElement(k.a, null), a.createElement(u._17, {
+                    }, r.createElement(p.a, null, r.createElement(b.a, null)), r.createElement(d._17, {
                         className: "anon-front",
-                        background: u.m.Base,
-                        position: u._2.Relative,
-                        zIndex: u._38.Default,
+                        background: d.m.Base,
+                        position: d._2.Relative,
                         fullHeight: !0
-                    }, a.createElement(m.b, null, a.createElement("div", {
+                    }, r.createElement("div", {
                         id: "mantle_skin",
                         className: this.state.takeoverRendered ? "anon-front__takeover" : ""
-                    }, a.createElement(S.a, {
-                        adSize: v.c.anonFront.takeover,
-                        adUnit: v.d.frontpage,
-                        slotID: v.b.anonFront.takeover,
+                    }, r.createElement(y.a, {
+                        adSize: k.c.anonFront.takeover,
+                        adUnit: k.d.frontpage,
+                        slotID: k.b.anonFront.takeover,
                         targeting: {
-                            pagetype: v.a.frontpage
+                            pagetype: k.a.frontpage
                         },
                         slotRendered: this.onTakeoverRendered,
                         autoEnable: !1
-                    }), a.createElement(u.U, {
+                    }), r.createElement(d.U, {
                         className: "anon-front__featured-section",
-                        display: u.H.Flex,
-                        justifyContent: u.T.Center
-                    }, a.createElement(u.U, {
+                        display: d.H.Flex,
+                        justifyContent: d.T.Center
+                    }, r.createElement(d.U, {
                         className: "anon-front__banner"
-                    }, a.createElement(S.a, {
-                        adSize: v.c.anonFront.banner,
-                        adUnit: v.d.frontpage,
-                        slotID: v.b.anonFront.banner,
+                    }, r.createElement(y.a, {
+                        adSize: k.c.anonFront.banner,
+                        adUnit: k.d.frontpage,
+                        slotID: k.b.anonFront.banner,
                         targeting: {
-                            pagetype: v.a.frontpage
+                            pagetype: k.a.frontpage
                         },
                         injectStyles: {
                             display: "flex"
                         },
                         autoEnable: !1
-                    })), a.createElement(u.U, {
+                    })), r.createElement(d.U, {
                         className: "anon-front__content-section",
                         padding: this.state.takeoverRendered ? 2 : 0
-                    }, a.createElement(y.b, {
-                        renderContext: y.a.AnonFront
-                    })), a.createElement(u.U, {
+                    }, r.createElement(_.b, {
+                        renderContext: _.a.AnonFront
+                    })), r.createElement(d.U, {
                         className: "anon-front__sizzle-strip",
-                        display: u.H.Flex,
-                        justifyContent: u.T.Center
-                    }, a.createElement(S.a, {
-                        adSize: v.c.anonFront.sizzle,
-                        adUnit: v.d.sizzle,
-                        slotID: v.b.anonFront.sizzle,
+                        display: d.H.Flex,
+                        justifyContent: d.T.Center
+                    }, r.createElement(y.a, {
+                        adSize: k.c.anonFront.sizzle,
+                        adUnit: k.d.sizzle,
+                        slotID: k.b.anonFront.sizzle,
                         targeting: {
-                            pagetype: v.a.frontpage
+                            pagetype: k.a.frontpage
                         },
                         autoEnable: !1
-                    }))), a.createElement(u._17, {
-                        background: u.m.Base,
+                    }))), r.createElement(d._17, {
+                        background: d.m.Base,
                         margin: {
                             x: "auto"
                         },
@@ -2854,47 +3023,47 @@ webpackJsonp([49], {
                             bottom: 3
                         },
                         className: "anon-front__content-section"
-                    }, a.createElement(N, null)), a.createElement(u._17, {
+                    }, r.createElement(O, null)), r.createElement(d._17, {
                         className: "anon-front__social-container",
-                        display: u.H.Flex,
-                        flexDirection: u.J.Column,
-                        alignItems: u.c.Center,
-                        justifyContent: u.T.Center,
+                        display: d.H.Flex,
+                        flexDirection: d.J.Column,
+                        alignItems: d.c.Center,
+                        justifyContent: d.T.Center,
                         borderTop: !0,
                         borderBottom: !0,
                         padding: {
                             y: 3,
                             x: 2
                         }
-                    }, a.createElement(u._21, {
-                        fontSize: u.L.Size3
-                    }, Object(s.d)("Follow the latest Twitch news", "AnonFrontPage")), a.createElement(u.U, {
+                    }, r.createElement(d._21, {
+                        fontSize: d.L.Size3
+                    }, Object(o.d)("Follow the latest Twitch news", "AnonFrontPage")), r.createElement(d.U, {
                         margin: {
                             top: 1
                         },
-                        display: u.H.Flex,
-                        flexDirection: u.J.Row
-                    }, a.createElement(u.u, {
+                        display: d.H.Flex,
+                        flexDirection: d.J.Row
+                    }, r.createElement(d.u, {
                         linkTo: "https://www.facebook.com/twitch",
                         targetBlank: !0,
-                        size: u.x.Large,
+                        size: d.x.Large,
                         "data-a-target": "frontpage-facebook-link"
-                    }, Object(s.d)("Facebook", "AnonFrontPage")), a.createElement(u.U, {
+                    }, Object(o.d)("Facebook", "AnonFrontPage")), r.createElement(d.U, {
                         margin: {
                             x: .5
                         }
-                    }, a.createElement(u.u, {
+                    }, r.createElement(d.u, {
                         linkTo: "https://www.twitter.com/twitch",
                         targetBlank: !0,
-                        size: u.x.Large,
+                        size: d.x.Large,
                         "data-a-target": "frontpage-twitter-link"
-                    }, Object(s.d)("Twitter", "AnonFrontPage"))), a.createElement(u.u, {
+                    }, Object(o.d)("Twitter", "AnonFrontPage"))), r.createElement(d.u, {
                         linkTo: "https://blog.twitch.tv/",
                         targetBlank: !0,
-                        size: u.x.Large,
+                        size: d.x.Large,
                         "data-a-target": "frontpage-blog-link"
-                    }, Object(s.d)("Official Blog", "AnonFrontPage")))), a.createElement(u._17, {
-                        background: u.m.Base,
+                    }, Object(o.d)("Official Blog", "AnonFrontPage")))), r.createElement(d._17, {
+                        background: d.m.Base,
                         padding: {
                             x: 1,
                             top: 3,
@@ -2904,11 +3073,11 @@ webpackJsonp([49], {
                             x: "auto"
                         },
                         className: "anon-front__content-section"
-                    }, a.createElement(D, {
+                    }, r.createElement(D, {
                         type: i.All,
                         key: "channels.all"
-                    })), a.createElement(u._17, {
-                        background: u.m.Base,
+                    })), r.createElement(d._17, {
+                        background: d.m.Base,
                         padding: {
                             x: 1,
                             y: 3
@@ -2917,11 +3086,11 @@ webpackJsonp([49], {
                             x: "auto"
                         },
                         className: "anon-front__content-section"
-                    }, a.createElement(D, {
+                    }, r.createElement(D, {
                         type: i.PS4,
                         key: "channels.ps4"
-                    })), a.createElement(u._17, {
-                        background: u.m.Base,
+                    })), r.createElement(d._17, {
+                        background: d.m.Base,
                         padding: {
                             x: 1,
                             y: 3
@@ -2930,39 +3099,7752 @@ webpackJsonp([49], {
                             x: "auto"
                         },
                         className: "anon-front__content-section"
-                    }, a.createElement(D, {
+                    }, r.createElement(D, {
                         type: i.Xbox,
                         key: "channels.xbox"
-                    })), a.createElement(u.U, {
+                    })), r.createElement(d.U, {
                         className: "anon-front__bottom",
-                        display: u.H.Flex,
-                        justifyContent: u.T.Center
-                    }, a.createElement(S.a, {
-                        adSize: v.c.anonFront.bottom,
-                        adUnit: v.d.frontpage,
-                        slotID: v.b.anonFront.bottom,
+                        display: d.H.Flex,
+                        justifyContent: d.T.Center
+                    }, r.createElement(y.a, {
+                        adSize: k.c.anonFront.bottom,
+                        adUnit: k.d.frontpage,
+                        slotID: k.b.anonFront.bottom,
                         targeting: {
-                            pagetype: v.a.frontpage
+                            pagetype: k.a.frontpage
                         },
                         injectStyles: {
                             display: "flex"
                         },
                         autoEnable: !1
-                    })), a.createElement(p, null)))))
+                    })), r.createElement(m, null))))
                 }, t.prototype.componentWillUnmount = function() {
-                    v.g.removeListener(v.e, this.onSlotAdded)
-                }, t = r.__decorate([Object(c.c)("AnonFrontPage", {
-                    destination: g.a.Index
-                }), Object(h.a)({
-                    location: f.PageviewLocation.FrontPage
+                    k.g.removeListener(k.e, this.onSlotAdded)
+                }, t = a.__decorate([Object(c.c)("AnonFrontPage", {
+                    destination: f.a.Index
+                }), Object(g.a)({
+                    location: v.PageviewLocation.FrontPage
                 })], t)
-            }(a.Component)),
-            R = F;
+            }(r.Component)),
+            I = R;
         n.d(t, "AnonFrontPage", function() {
-            return R
+            return I
         })
     },
-    758: function(e, t, n) {
+    262: function(e, t, n) {
+        "use strict";
+        var i = n(0),
+            a = n(20),
+            r = n(1),
+            o = n(2),
+            s = n(16),
+            l = "legacy_routes_enabled",
+            c = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.isEnabled = !1, n.onHistoryChange = function(e, t) {
+                        return n.isEnabled ? "REPLACE" === t ? void n.logger.debug("Skipping legacy route processing, due to history replace.") : e && e.pathname ? (n.logger.debug("Location changed", {
+                            path: e.pathname
+                        }), void n.legacyRoutes.forEach(function(t) {
+                            try {
+                                if (e.pathname.match(t)) {
+                                    n.logger.debug("Found legacy route. Reloading...");
+                                    var i = "" !== e.search ? a.parse(e.search) : {};
+                                    i["from-redirect"] = "true";
+                                    var r = a.stringify(i),
+                                        l = o.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
+                                        c = window.location.protocol + "//" + l + e.pathname + "?" + r;
+                                    return n.logger.debug("Redirecting to legacy route", {
+                                        newUrl: c
+                                    }), void window.location.replace(c)
+                                }
+                            } catch (e) {
+                                o.i.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
+                                    regex: t
+                                })
+                            }
+                        })) : void n.logger.debug("Unable to process history change. Path is null or empty.") : void n.logger.debug("Legacy routing not enabled.")
+                    }, n.processRedirectParam = function(e) {
+                        if (e && e.pathname && e.search) {
+                            var t = "" !== e.search ? a.parse(e.search) : {};
+                            if (t["from-redirect"]) {
+                                delete t["from-redirect"];
+                                var i = a.stringify(t),
+                                    r = "";
+                                i.length > 0 && (r = "?" + i), n.props.history.replace({
+                                    pathname: e.pathname,
+                                    hash: e.hash,
+                                    search: r
+                                })
+                            }
+                        }
+                    }, n.isEnabled = o.b.get(l, !1), n.logger = o.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return null
+                }, t.prototype.componentDidMount = function() {
+                    this.processRedirectParam(this.props.history.location)
+                }, t.prototype.buildRoutes = function() {
+                    if (!this.isEnabled) return [];
+                    this.logger.debug("Building legacy routes...");
+                    var e = o.b.get("legacy_routes", []),
+                        t = [];
+                    if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
+                    for (var n = 0, i = e; n < i.length; n++) {
+                        var a = i[n];
+                        try {
+                            var r = new RegExp(a, "i");
+                            t.push(r)
+                        } catch (e) {
+                            this.logger.debug("Failed to parse route!", {
+                                val: a,
+                                err: e
+                            })
+                        }
+                    }
+                    return this.logger.debug("Done building legacy routes!", {
+                        count: t.length
+                    }), t
+                }, t
+            }(r.Component),
+            d = c;
+        n.d(t, "a", function() {
+            return l
+        }), n.d(t, !1, function() {
+            return "legacy_routes"
+        }), n.d(t, "b", function() {
+            return d
+        })
+    },
+    376: function(e, t, n) {
+        "use strict";
+        var i = n(0),
+            a = n(1),
+            r = n(2),
+            o = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        assignmentDetermined: !1,
+                        assignment: ""
+                    }, t.logger = r.n.logger.withCategory("component-experiment"), t.didUnmount = !1, t
+                }
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return i.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return [4, r.n.experiments.getAssignment(this.props.name, this.props.channel ? {
+                                        channel: this.props.channel
+                                    } : {})];
+                                case 1:
+                                    return e = t.sent(), this.didUnmount ? [2] : (e && this.props.assignments[e] ? this.logger.debug("Displaying component for experiment", {
+                                        name: this.props.name,
+                                        assignment: e
+                                    }) : this.logger.debug("Displaying fallback component for experiment", {
+                                        name: this.props.name,
+                                        assignment: e
+                                    }), this.setState({
+                                        assignment: e,
+                                        assignmentDetermined: !0
+                                    }), [2])
+                            }
+                        })
+                    })
+                }, t.prototype.componentWillUnmount = function() {
+                    this.didUnmount = !0
+                }, t.prototype.render = function() {
+                    if (!this.state.assignmentDetermined) return this.props.loader();
+                    if (this.props.assignments[this.state.assignment]) {
+                        var e = this.props.assignments[this.state.assignment]();
+                        return "string" == typeof e ? (window.location.replace(e), null) : e
+                    }
+                    return this.props.assignments.fallback()
+                }, t
+            }(a.Component),
+            s = o;
+        n.d(t, "a", function() {
+            return s
+        })
+    },
+    378: function(e, t, n) {
+        "use strict";
+
+        function i(e, t) {
+            var n = Math.floor(e % 60),
+                i = Math.floor(e % 3600 / 60),
+                r = Math.floor(e / 3600);
+            return t && t.zeroPadAll ? a(r, 2) + ":" + a(i, 2) + ":" + a(n, 2) : r ? r + ":" + a(i, 2) + ":" + a(n, 2) : i + ":" + a(n, 2)
+        }
+
+        function a(e, t) {
+            return t -= e.toString().length, t > 0 ? new Array(t + (/\./.test(e.toString()) ? 2 : 1)).join("0") + e : e.toString()
+        }
+        t.a = i
+    },
+    381: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            p.emit(u, e)
+        }
+
+        function a(e) {
+            p.emit(m, e)
+        }
+        n.d(t, "b", function() {
+            return s
+        }), n.d(t, "c", function() {
+            return l
+        }), n.d(t, "d", function() {
+            return c
+        }), n.d(t, "a", function() {
+            return d
+        }), n.d(t, "f", function() {
+            return u
+        }), n.d(t, "e", function() {
+            return m
+        }), n.d(t, "g", function() {
+            return p
+        }), t.i = i, t.h = a;
+        var r = n(24),
+            o = (n.n(r), n(2)),
+            s = {
+                directory: {
+                    banner: "dfp-directory-banner",
+                    rectangle: "dfp-directory-rectangle"
+                },
+                channel250: "google_companion_300x250",
+                anonFront: {
+                    rect: "Twitch_FPMedRect_holder",
+                    banner: "Twitch_FPopaBanner_holder",
+                    takeover: "Twitch_FPTakeoverSkinv2_holder",
+                    bottom: "Twitch_FP970Bottom_holder",
+                    sizzle: "sizzle_strip"
+                },
+                front: {
+                    leaderboard: "hpto_logged_in_leaderboard",
+                    rightTop: "hpto_logged_in_rcol_top",
+                    rightBottom: "hpto_logged_in_rcol_bottom"
+                }
+            },
+            l = {
+                directory: {
+                    banner: [
+                        [970, 66],
+                        [970, 250],
+                        [728, 90]
+                    ],
+                    rectangle: [
+                        [300, 250]
+                    ]
+                },
+                channel250: [300, 250],
+                anonFront: {
+                    rect: [
+                        [300, 250]
+                    ],
+                    banner: [
+                        [970, 418],
+                        [970, 67],
+                        [970, 250],
+                        [970, 150],
+                        [980, 250]
+                    ],
+                    takeover: [
+                        [1, 1]
+                    ],
+                    bottom: [
+                        [970, 66],
+                        [728, 90]
+                    ],
+                    sizzle: [
+                        [980, 250]
+                    ]
+                },
+                front: {
+                    leaderboard: [
+                        [970, 66],
+                        [728, 90]
+                    ],
+                    rightTop: [
+                        [300, 250]
+                    ],
+                    rightBottom: [
+                        [300, 600]
+                    ]
+                }
+            },
+            c = {
+                directory: "/" + o.a.dfpNetworkCode + "/twitch/directory",
+                channel: "/" + o.a.dfpNetworkCode + "/twitch/channels",
+                frontpage: "/" + o.a.dfpNetworkCode + "/twitch/homepage",
+                sizzle: "/" + o.a.dfpNetworkCode + "/twitch/sizzle_strip"
+            },
+            d = {
+                games: "games",
+                channel: "channel",
+                frontpage: "homepage"
+            },
+            u = "ads.slot-render-end",
+            m = "ads.slot-ready",
+            p = new r.EventEmitter
+    },
+    386: function(e, t, n) {
+        "use strict";
+        var i = n(0),
+            a = n(1),
+            r = n(2),
+            o = n(6),
+            s = n(56),
+            l = n(3),
+            c = n(406),
+            d = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return a.createElement(l.S, i.__assign({
+                        onClick: this.props.onClick,
+                        linkTo: this.props.linkTo,
+                        hover: this.props.hover,
+                        tabIndex: -1,
+                        key: this.props.id
+                    }, Object(s.a)(this.props)), a.createElement(l.U, {
+                        className: "search-game-result-card",
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, a.createElement(l.A, {
+                        row: !0
+                    }, a.createElement(l.C, {
+                        imageAlt: this.props.imageAlt,
+                        imageSrc: this.props.data && !this.props.data.loading && this.props.data.game ? this.props.data.game.boxArtURL : r.a.defaultBoxArtURL,
+                        size: l.D.Size4,
+                        aspect: l.k.BoxArt
+                    }), a.createElement(l.B, null, a.createElement(l.P, {
+                        padding: {
+                            x: 1
+                        }
+                    }, a.createElement(l._21, {
+                        type: l._26.H5,
+                        ellipsis: !0
+                    }, this.props.title))))))
+                }, t = i.__decorate([Object(o.a)(c, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                name: e.title
+                            }
+                        }
+                    }
+                })], t)
+            }(a.Component);
+        n.d(t, "a", function() {
+            return d
+        })
+    },
+    387: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return {
+                firstPageLoaded: !!e.session.firstPageLoaded
+            }
+        }
+        var a = n(7),
+            r = n(0),
+            o = n(20),
+            s = n(1),
+            l = n(2),
+            c = n(47),
+            d = n(6),
+            u = n(105),
+            m = n(5),
+            p = n(3),
+            g = (n(421), function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    return s.createElement(p.U, null, s.createElement(p._17, {
+                        className: "prime-offer-header",
+                        borderBottom: !0,
+                        background: p.m.Alt2,
+                        padding: {
+                            x: 1,
+                            y: .5
+                        }
+                    }, s.createElement(p.U, {
+                        flexGrow: 1
+                    }, s.createElement(p._21, {
+                        bold: !0,
+                        type: p._26.H6
+                    }, Object(l.d)("Free with Prime", "PrimeOfferHeader")))), this.getNumOfUnseenOffersDisplay())
+                }, t.prototype.getNumOfUnseenOffersDisplay = function() {
+                    var e = this.props.numOfUnseenOffers;
+                    if (e) return s.createElement(p._17, {
+                        className: "prime-offer__new-offer-header",
+                        borderBottom: !0,
+                        background: p.m.Alt2,
+                        padding: {
+                            x: 1,
+                            y: .5
+                        }
+                    }, s.createElement(p.U, {
+                        fullWidth: !0,
+                        display: p.H.Flex
+                    }, s.createElement(p.U, {
+                        flexGrow: 1
+                    }, s.createElement(p._21, {
+                        bold: !0,
+                        type: p._26.H6
+                    }, Object(l.d)("New Prime Loot", "PrimeOfferHeader"))), s.createElement(p.U, {
+                        className: "prime-offer__new-offer-header-count",
+                        display: p.H.Flex,
+                        alignItems: p.c.Center,
+                        textAlign: p._22.Center
+                    }, s.createElement(p._17, {
+                        className: "prime-offer__new-offer-header-count__text",
+                        background: p.m.Base,
+                        color: p.F.Base
+                    }, s.createElement(p._21, null, e.toString())))))
+                }, t = r.__decorate([Object(m.c)("PrimeOfferHeader")], t)
+            }(s.Component)),
+            f = g,
+            h = n(28),
+            v = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e = Object(l.d)("You'll get characters, vehicles, skins, and boosts for games like {hearthstone} and {smite}, plus surprises like a rotating selection of indie games.", {
+                        hearthstone: s.createElement(p._21, {
+                            italic: !0,
+                            type: p._26.Span
+                        }, Object(l.d)("Hearthstone", "PrimeEmpty")),
+                        smite: s.createElement(p._21, {
+                            italic: !0,
+                            type: p._26.Span
+                        }, Object(l.d)("Smite", "PrimeEmpty"))
+                    }, "PrimeEmpty");
+                    return s.createElement(p.U, {
+                        className: "prime-empty",
+                        margin: 2
+                    }, s.createElement(p.U, {
+                        textAlign: p._22.Center,
+                        margin: 2
+                    }, s.createElement("img", {
+                        className: "prime-empty__image",
+                        src: "https://m.media-amazon.com/images/G/01/sm/landing/Trunk_w_Star_transparent._V530838660_.png",
+                        alt: Object(l.d)("Prime Treasure Chest", "PrimeEmpty")
+                    })), s.createElement(p._21, {
+                        type: p._26.P,
+                        bold: !0
+                    }, Object(l.d)("Free in-game loot every month, plus surprises", "PrimeEmpty")), s.createElement("div", null, e))
+                }, t = r.__decorate([Object(m.c)("PrimeEmpty")], t)
+            }(s.Component),
+            y = v,
+            k = n(65),
+            _ = n(21),
+            b = {
+                DIRECT_ENTITLEMENT: "DIRECT_ENTITLEMENT",
+                CLAIM_CODE: "CLAIM_CODE",
+                EXTERNAL_OFFER: "EXTERNAL_OFFER"
+            },
+            S = function(e, t) {
+                return e + "-" + t
+            },
+            N = function() {
+                return U("claimedOffers")
+            },
+            E = function(e) {
+                l.k.set("claimedOffers", e)
+            },
+            C = function() {
+                return U("seenOffers")
+            },
+            w = function(e) {
+                l.k.set("seenOffers", e)
+            },
+            O = function(e, t) {
+                return (e && (e.priority || 0 === e.priority) ? e.priority : 99999) - (t && (t.priority || 0 === t.priority) ? t.priority : 99999)
+            },
+            U = function(e) {
+                return l.k.get(e, [])
+            },
+            x = function() {
+                var e = location.search,
+                    t = o.parse(e);
+                return t && t.dateOverride || ""
+            },
+            F = (n(422), n(423)),
+            T = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    return s.createElement(p.U, {
+                        className: "prime-claim-button"
+                    }, this.getClaimButton())
+                }, t.prototype.getClaimButton = function() {
+                    var e = this.props,
+                        t = this.getButtonText(),
+                        n = s.createElement(p.u, {
+                            fullWidth: !0,
+                            state: this.props.claiming ? p.y.Loading : p.y.Default,
+                            disabled: this.props.claiming,
+                            onClick: this.props.claimCallback,
+                            "data-a-target": "prime-claim-button"
+                        }, t);
+                    return e.offerType === b.EXTERNAL_OFFER ? s.createElement(p.u, {
+                        fullWidth: !0,
+                        linkTo: e.offerLinkUri,
+                        targetBlank: !0
+                    }, t) : s.createElement(p.U, {
+                        position: p._2.Relative
+                    }, n)
+                }, t.prototype.getButtonText = function() {
+                    return this.props.offerType === b.CLAIM_CODE ? Object(l.d)("Get Code", "PrimeClaimButton") : this.props.offerType === b.EXTERNAL_OFFER ? Object(l.d)("Learn More", "PrimeClaimButton") : Object(l.d)("Claim Offer", "PrimeClaimButton")
+                }, t = r.__decorate([Object(d.a)(F), Object(m.c)("PrimeClaimButton")], t)
+            }(s.Component),
+            D = T,
+            R = function(e) {
+                function t() {
+                    var t = e.call(this) || this;
+                    return t.toggleShowDescription = function() {
+                        t.setState({
+                            showDescription: !t.state.showDescription
+                        })
+                    }, t.state = {
+                        showDescription: !1
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    return s.createElement(p.U, {
+                        className: "prime-claim-description",
+                        margin: {
+                            top: 1
+                        }
+                    }, s.createElement(p.u, {
+                        fullWidth: !0,
+                        type: p.z.Hollow,
+                        onClick: this.toggleShowDescription
+                    }, this.getDescriptionButtonText()), this.getDescriptionBlock())
+                }, t.prototype.getDescriptionButtonText = function() {
+                    return this.state.showDescription ? Object(l.d)("Close Info", "PrimeClaimDescription") : Object(l.d)("More Info", "PrimeClaimDescription")
+                }, t.prototype.getDescriptionBlock = function() {
+                    var e = null;
+                    return this.state.showDescription && (e = s.createElement(p._17, {
+                        className: "prime-claim-description__body",
+                        background: p.m.Alt2,
+                        border: !0
+                    }, s.createElement(p.U, {
+                        margin: {
+                            bottom: 2
+                        },
+                        padding: 1
+                    }, s.createElement(k, {
+                        source: this.props.description || ""
+                    })))), e
+                }, t = r.__decorate([Object(m.c)("PrimeClaimDescription")], t)
+            }(s.Component),
+            I = R,
+            P = n(132),
+            L = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.getLink = function() {
+                    return this.props.externalUri ? this.props.externalUri : Object(P.d)(P.c, window.location.pathname.substring(1))
+                }, t.prototype.render = function() {
+                    return s.createElement(p.U, {
+                        className: "prime-upsell-button",
+                        margin: {
+                            top: 2,
+                            bottom: 1
+                        }
+                    }, s.createElement(p.u, {
+                        fullWidth: !0,
+                        linkTo: this.getLink(),
+                        targetBlank: !0
+                    }, Object(l.d)("Start Your Free Trial", "PrimeUpsellButton")))
+                }, t = r.__decorate([Object(m.c)("PrimeUpsellButton")], t)
+            }(s.Component),
+            j = L,
+            A = n(424),
+            H = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    return s.createElement(p.U, {
+                        className: "prime-claim",
+                        margin: {
+                            top: 2,
+                            bottom: 1
+                        }
+                    }, this.getCallToAction(), this.getClaimDescriptionSection())
+                }, t.prototype.getCallToAction = function() {
+                    var e = this.props.data;
+                    return !e.loading && !e.error && e.currentUser && e.currentUser.hasPrime ? s.createElement(D, {
+                        offerType: this.props.offerType,
+                        offerId: this.props.offerId,
+                        claimCallback: this.props.claimCallback,
+                        claiming: this.props.claiming,
+                        offerLinkUri: this.props.externalUri
+                    }) : s.createElement(j, {
+                        externalUri: this.props.externalUri
+                    })
+                }, t.prototype.getClaimDescriptionSection = function() {
+                    return this.props.offerType === b.EXTERNAL_OFFER ? null : s.createElement(I, {
+                        description: this.props.offerDescription
+                    })
+                }, t = r.__decorate([Object(d.a)(A), Object(m.c)("PrimeInstructions")], t)
+            }(s.Component),
+            B = H,
+            V = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    return s.createElement(p._17, {
+                        background: p.m.Alt2,
+                        display: p.H.Flex,
+                        justifyContent: p.T.Center,
+                        padding: {
+                            y: 1
+                        },
+                        margin: {
+                            bottom: 1
+                        },
+                        textAlign: p._22.Center
+                    }, s.createElement(p._21, {
+                        type: p._26.H4,
+                        align: p._37.Middle
+                    }, s.createElement(p._17, {
+                        padding: 1,
+                        display: p.H.InlineFlex,
+                        flexGrow: 1,
+                        flexWrap: p.K.NoWrap,
+                        alignItems: p.c.Center,
+                        fontSize: this.props.fontSize ? this.props.fontSize : p.L.Size5,
+                        "data-a-target": "prime-error-glitch"
+                    }, s.createElement(p.U, {
+                        margin: {
+                            right: 1
+                        },
+                        display: p.H.InlineFlex,
+                        flexGrow: 1,
+                        flexWrap: p.K.NoWrap,
+                        alignItems: p.c.Center
+                    }, s.createElement(p._8, {
+                        asset: p._9.DeadGlitch,
+                        type: p._10.Alert,
+                        width: 20,
+                        height: 20
+                    })), Object(l.d)("Something has gone wrong. Please try again later.", "PrimeError"))))
+                }, t = r.__decorate([Object(m.c)("PrimeError")], t)
+            }(s.Component),
+            q = V,
+            M = (n(425), function(e) {
+                function t() {
+                    var t = e.call(this) || this;
+                    return t.setRef = function(e) {
+                        t.setState({
+                            clipboardInput: e
+                        })
+                    }, t.copy = function() {
+                        var e;
+                        try {
+                            t.state.clipboardInput && t.state.clipboardInput.select(), e = document.execCommand("copy")
+                        } catch (t) {
+                            e = !1
+                        }
+                        return t.setState({
+                            copied: e
+                        }), e
+                    }, t.state = {
+                        copied: !1,
+                        clipboardInput: void 0
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e = this.state.copied ? Object(l.d)("copied", "CopyButton") : Object(l.d)("copy", "CopyButton");
+                    return s.createElement(p.U, {
+                        className: "copy-button copy-btn",
+                        display: p.H.Flex
+                    }, s.createElement(p.P, {
+                        className: "copy-button__btn"
+                    }, s.createElement(p.u, {
+                        onClick: this.copy,
+                        type: this.state.copied ? p.z.Success : p.z.Default
+                    }, e)), s.createElement("input", {
+                        className: "copy-button__copy-input",
+                        ref: this.setRef,
+                        value: this.props.clipboardText,
+                        readOnly: !0
+                    }))
+                }, t = r.__decorate([Object(m.c)("CopyButton")], t)
+            }(s.Component)),
+            z = M,
+            W = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onChange = function(e) {
+                        t.setState({
+                            value: e.currentTarget.value,
+                            copied: !1
+                        })
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.componentWillMount = function() {
+                    this.props.initialText && this.setState({
+                        value: this.props.initialText,
+                        copied: !1
+                    })
+                }, t.prototype.render = function() {
+                    return this.state && this.state.value ? s.createElement(p.U, {
+                        className: "copyable-item",
+                        display: p.H.Flex,
+                        flexGrow: 1
+                    }, s.createElement(p.U, {
+                        flexGrow: 1
+                    }, s.createElement(p.Q, {
+                        type: p.R.Text,
+                        onChange: this.onChange,
+                        value: this.state.value,
+                        disabled: this.props.disabled,
+                        readOnly: this.props.readOnly
+                    })), s.createElement(p.U, null, s.createElement(z, {
+                        clipboardText: this.state.value
+                    }))) : null
+                }, t = r.__decorate([Object(m.c)("CopyableItem")], t)
+            }(s.Component),
+            G = W,
+            K = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    return s.createElement(p._17, {
+                        className: "prime-claim-instructions",
+                        background: p.m.Alt2,
+                        border: !0,
+                        padding: 1,
+                        fontSize: p.L.Size6
+                    }, s.createElement(p._36, null, s.createElement(k, {
+                        source: this.props.claimInstructions || "",
+                        escapeHtml: !0
+                    })))
+                }, t = r.__decorate([Object(m.c)("PrimeClaimInstructions")], t)
+            }(s.Component),
+            Q = K,
+            $ = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    return s.createElement(p.U, {
+                        className: "prime-redeem",
+                        margin: {
+                            top: 1
+                        }
+                    }, this.getCodeOrConfirmation(), this.getPrimeClaimInstructions())
+                }, t.prototype.getCodeOrConfirmation = function() {
+                    return this.props.code && this.props.deliveryMethod === b.CLAIM_CODE ? s.createElement(p.U, null, s.createElement(G, {
+                        initialText: this.props.code,
+                        readOnly: !0,
+                        textCenter: !0
+                    })) : s.createElement(p._17, {
+                        background: p.m.Alt2,
+                        display: p.H.Flex,
+                        justifyContent: p.T.Center,
+                        padding: {
+                            y: 1
+                        },
+                        margin: {
+                            bottom: 1
+                        }
+                    }, s.createElement(p._21, {
+                        type: p._26.H4,
+                        align: p._37.Middle
+                    }, s.createElement(p.U, {
+                        padding: 1,
+                        display: p.H.InlineFlex,
+                        flexGrow: 1,
+                        flexWrap: p.K.NoWrap,
+                        alignItems: p.c.Center,
+                        "data-a-target": "prime-redeem-check"
+                    }, s.createElement(p.U, {
+                        margin: {
+                            right: 1
+                        },
+                        display: p.H.InlineFlex,
+                        flexGrow: 1,
+                        flexWrap: p.K.NoWrap,
+                        alignItems: p.c.Center
+                    }, s.createElement(p._8, {
+                        asset: p._9.Check,
+                        type: p._10.Success,
+                        width: 20,
+                        height: 20
+                    })), Object(l.d)("Added To Your Twitch Account", "PrimeRedeem"))))
+                }, t.prototype.getPrimeClaimInstructions = function() {
+                    if (this.props.claimInstructions) return s.createElement(Q, {
+                        claimInstructions: this.props.claimInstructions || ""
+                    })
+                }, t = r.__decorate([Object(m.c)("PrimeRedeem")], t)
+            }(s.Component),
+            X = $,
+            J = n(426),
+            Y = (n(427), n(428)),
+            Z = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        claimed: !1,
+                        claiming: !1,
+                        error: !1
+                    }, t.renderRedeemUpsellOrClaimSection = function(e) {
+                        var n = e.content || {},
+                            i = e.self || {
+                                claimData: ""
+                            },
+                            a = t.props.data || {},
+                            r = a.currentUser || {};
+                        return t.state.error ? s.createElement(q, {
+                            fontSize: p.L.Size6
+                        }) : (t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime ? s.createElement(X, {
+                            claimInstructions: e.claimInstructions,
+                            code: i.claimData,
+                            deliveryMethod: e.deliveryMethod
+                        }) : s.createElement(B, {
+                            offerId: e.id,
+                            offerDescription: e.description || "",
+                            offerType: e.deliveryMethod || "",
+                            externalUri: n.externalURL || "",
+                            claimCallback: t.claimOffer,
+                            claiming: t.state.claiming
+                        })
+                    }, t.claimOffer = function(e) {
+                        e.nativeEvent.stopImmediatePropagation(), t.setState({
+                            claiming: !0
+                        });
+                        var n = t.props.data;
+                        if (!n.loading && !n.error && n.currentUser.id) {
+                            var i = n.currentUser.id,
+                                a = t.props.offer,
+                                r = Object(_.a)({
+                                    offerID: a.id
+                                });
+                            t.props.claimPrimeOffer(r).then(function() {
+                                t.markAsClaimedInLocalStorage(i)
+                            }).catch(function() {
+                                t.setState({
+                                    claiming: !1,
+                                    claimed: !1,
+                                    error: !0
+                                })
+                            })
+                        }
+                    }, t.markAsClaimedInLocalStorage = function(e) {
+                        var n = t.props.offer,
+                            i = S(n.id, e),
+                            a = N();
+                        a.push(i), E(a), t.setState({
+                            claiming: !1,
+                            claimed: !0,
+                            error: !1
+                        })
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e = this.props.offer,
+                        t = this.props.isLast || !1;
+                    if (e) {
+                        var n = e.content || {},
+                            i = n.game || {},
+                            a = n.categories || [];
+                        return s.createElement(p._17, {
+                            className: "prime-offer",
+                            alignItems: p.c.Center,
+                            borderBottom: !t,
+                            padding: {
+                                x: 2,
+                                y: 1
+                            }
+                        }, s.createElement(p.U, {
+                            className: "prime-offer__title",
+                            padding: {
+                                y: .5
+                            }
+                        }, s.createElement(k, {
+                            className: "prime-offer__title__markdown",
+                            containerTagName: "h4",
+                            source: e.title || ""
+                        })), s.createElement("img", {
+                            src: e.imageURL
+                        }), s.createElement(p.U, {
+                            className: "prime-offer__description",
+                            padding: {
+                                top: .5
+                            }
+                        }, s.createElement(p._21, {
+                            type: p._26.P
+                        }, i.name, " ", a[0])), s.createElement(p.U, {
+                            className: "prime-offer__publisher"
+                        }, s.createElement(p._21, {
+                            type: p._26.P,
+                            color: p.F.Alt2,
+                            fontSize: p.L.Size7
+                        }, n.publisher)), this.renderRedeemUpsellOrClaimSection(e))
+                    }
+                    return null
+                }, t.prototype.isCurrentOfferClaimed = function(e) {
+                    return (e.self || {
+                        hasEntitlement: !1
+                    }).hasEntitlement || this.isCurrentOfferClaimedInLocalStorage()
+                }, t.prototype.isCurrentOfferClaimedInLocalStorage = function() {
+                    var e = this.props.data,
+                        t = this.props.offer;
+                    if (!e.loading && !e.error && e.currentUser) {
+                        var n = e.currentUser.id,
+                            i = S(t.id, n);
+                        return N().includes(i)
+                    }
+                }, t = r.__decorate([Object(d.a)(Y, {
+                    name: "data"
+                }), Object(d.a)(J, {
+                    name: "claimPrimeOffer"
+                }), Object(m.c)("PrimeOffer")], t)
+            }(s.Component),
+            ee = Z,
+            te = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    return s.createElement(p._17, {
+                        className: "prime-offer-placeholder",
+                        alignItems: p.c.Center,
+                        borderBottom: !0,
+                        padding: {
+                            x: 2,
+                            y: 1
+                        }
+                    }, s.createElement(p.U, {
+                        className: "prime-offer-placeholder__title",
+                        padding: {
+                            y: .5
+                        }
+                    }, s.createElement(p._1, {
+                        height: 20
+                    })), s.createElement(p._1, {
+                        height: 160
+                    }), s.createElement(p.U, {
+                        className: "prime-offer-placeholder__description",
+                        padding: {
+                            y: .5
+                        }
+                    }, s.createElement(p._1, {
+                        height: 20,
+                        width: 160
+                    })), s.createElement(p.U, {
+                        className: "prime-offer-placeholder__publisher"
+                    }, s.createElement(p._1, {
+                        height: 20,
+                        width: 80
+                    })), s.createElement(p.U, {
+                        className: "prime-offer-placeholder__claim",
+                        margin: {
+                            top: 2,
+                            bottom: 1
+                        }
+                    }, s.createElement(p._1, {
+                        height: 40
+                    })))
+                }, t = r.__decorate([Object(m.c)("PrimeOfferPlaceholder")], t)
+            }(s.Component),
+            ne = te,
+            ie = (n(429), function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    return s.createElement(p._17, {
+                        "data-a-target": "prime-offers-upsell",
+                        className: "prime-offers-upsell",
+                        alignItems: p.c.Center,
+                        padding: {
+                            x: 2,
+                            y: 1
+                        },
+                        borderBottom: !0
+                    }, s.createElement(p._21, {
+                        type: p._26.H4
+                    }, Object(l.d)("Claim With Twitch Prime", "PrimeUpsell")), s.createElement(p.U, {
+                        className: "prime-upsell__logo-container",
+                        fullWidth: !0,
+                        margin: {
+                            y: 2
+                        },
+                        textAlign: p._22.Center
+                    }, s.createElement(p._8, {
+                        asset: p._9.LogoTwitchPrime,
+                        width: 330,
+                        height: 150,
+                        type: p._10.Brand
+                    })), s.createElement(p._21, {
+                        type: p._26.P
+                    }, Object(l.d)("Get free game loot like this every month plus surprises, ad-free viewing, and loads more with Twitch Prime.", "PrimeUpsell")), s.createElement(j, null))
+                }, t = r.__decorate([Object(m.c)("PrimeUpsell")], t)
+            }(s.Component)),
+            ae = ie,
+            re = n(430),
+            oe = (n(431), n(432)),
+            se = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.shouldShowPlaceholders = function() {
+                        var e = t.props.offersData,
+                            n = e.primeOffers,
+                            i = void 0 === n || null === n;
+                        return e.loading || !e.error && i && t.props.showByDefault
+                    }, t.renderOfferPlaceholders = function() {
+                        for (var e = [], t = 0; t < 3; ++t) e.push(s.createElement(ne, {
+                            key: t
+                        }));
+                        return e
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                    var e = this.props.offersData;
+                    e && e.primeOffers && this.props.latencyTracking.reportInteractive(e.primeOffers.length)
+                }, t.prototype.render = function() {
+                    return s.createElement(h.b, {
+                        className: "prime-offer-listing"
+                    }, s.createElement(p.U, {
+                        className: "prime-offer-listing__content",
+                        alignItems: p.c.Center,
+                        padding: {
+                            top: 1,
+                            bottom: 2,
+                            left: 1,
+                            right: 1
+                        }
+                    }, this.renderUpsell(), this.renderOfferExperience()))
+                }, t.prototype.renderUpsell = function() {
+                    var e = this.props.userData;
+                    if (!e.loading && !e.error && !this.currentUserHasPrime(e)) return s.createElement(ae, null)
+                }, t.prototype.renderOfferExperience = function() {
+                    var e = this.props.offersData;
+                    if (this.shouldShowPlaceholders()) return this.renderOfferPlaceholders();
+                    if (!e.error && e.primeOffers && e.primeOffers.length) {
+                        var t = this.getSortedOffers(),
+                            n = t[t.length - 1];
+                        return t.map(function(e) {
+                            return s.createElement(ee, {
+                                key: e.id,
+                                offer: e,
+                                isLast: n.id === e.id
+                            })
+                        })
+                    }
+                    return s.createElement(y, null)
+                }, t.prototype.getSortedOffers = function() {
+                    var e = this.props.offersData.primeOffers,
+                        t = this.getUserId();
+                    if (t) {
+                        var n = N(),
+                            i = e.filter(function(e) {
+                                return !n.includes(S(e.id, t))
+                            }).sort(O),
+                            a = e.filter(function(e) {
+                                return !i.includes(e)
+                            }).sort(O);
+                        return i.concat(a)
+                    }
+                    return e.slice().sort(O)
+                }, t.prototype.getUserId = function() {
+                    var e = this.props.userData;
+                    return !e.loading && !e.error && e.currentUser && e.currentUser.id ? e.currentUser.id : ""
+                }, t.prototype.currentUserHasPrime = function(e) {
+                    var t = e.currentUser;
+                    return t && t.hasPrime
+                }, t = r.__decorate([Object(d.a)(re, {
+                    name: "offersData"
+                }), Object(d.a)(oe, {
+                    name: "userData"
+                }), Object(m.c)("PrimeOfferList")], t)
+            }(s.Component),
+            le = se,
+            ce = n(433),
+            de = (n(434), n(435)),
+            ue = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        numOfUnseenOffers: 0
+                    }, t.showOffersByDefault = function() {
+                        var e = location.search,
+                            n = o.parse(e);
+                        return n && !!n.expandoffers || t.props.openByDefault
+                    }, t.onToggleMenu = function(e) {
+                        t.seeOffers(), e && t.setState({
+                            numOfUnseenOffers: 0
+                        })
+                    }, t.getUnseenOffers = function(e) {
+                        var n = e.offersData;
+                        if (n && !n.loading && !n.error) {
+                            var i = n.primeOffers || [],
+                                a = C();
+                            t.setState({
+                                numOfUnseenOffers: i.filter(function(e) {
+                                    return !(a.includes(e.id) || t.offerIsClaimed(e))
+                                }).length
+                            })
+                        }
+                    }, t.offerIsClaimed = function(e) {
+                        return e.self && e.self.hasEntitlement
+                    }, t.seeOffers = function() {
+                        var e = t.props.offersData;
+                        if (e && !e.loading && !e.error) {
+                            var n = e.primeOffers || [],
+                                i = n.map(function(e) {
+                                    return "" + e.id
+                                });
+                            w(i)
+                        }
+                    }, t.renderOfferList = function() {
+                        var e = t.props.offersData,
+                            n = t.showOffersByDefault() || !1;
+                        return e && !e.loading && !e.error || n ? s.createElement(p.U, {
+                            "data-a-target": "offers-list",
+                            className: "prime-offers__list"
+                        }, s.createElement(f, {
+                            numOfUnseenOffers: t.state.numOfUnseenOffers
+                        }), s.createElement(le, {
+                            showByDefault: n
+                        })) : null
+                    }, t
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.getUnseenOffers(this.props)
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    this.getUnseenOffers(e)
+                }, t.prototype.render = function() {
+                    var e = this.props.userData && this.props.userData.requestInfo && Object(u.b)(this.props.userData.requestInfo.countryCode),
+                        t = this.props.userData && this.props.userData.currentUser && this.props.userData.currentUser.hasPrime;
+                    if (!e && !t) return null;
+                    var n = {
+                        align: p._31.Center,
+                        direction: p._32.Bottom,
+                        label: ""
+                    };
+                    return this.state.numOfUnseenOffers > 0 ? n.label = Object(l.d)("New Prime Loot", "PrimeOffers") : n.label = Object(l.d)("Prime Loot", "PrimeOffers"), s.createElement(p.U, {
+                        className: "prime-offers",
+                        position: p._2.Relative
+                    }, s.createElement(c.a, {
+                        onToggle: this.onToggleMenu,
+                        openByDefault: this.showOffersByDefault(),
+                        tooltipProps: n
+                    }, s.createElement(p.v, {
+                        ariaLabel: Object(l.d)("Prime offers", "PrimeOffers"),
+                        overlay: !0,
+                        size: p.x.Large,
+                        icon: p._9.Crown,
+                        "data-a-target": "prime-offers-icon",
+                        "data-target": "prime-offers-icon"
+                    }), s.createElement(p.p, {
+                        direction: p.q.BottomRight,
+                        size: p.r.Large,
+                        offsetX: "9px"
+                    }, this.renderOfferList())), this.renderUnseenOffersDisplay())
+                }, t.prototype.renderUnseenOffersDisplay = function() {
+                    var e = this.state.numOfUnseenOffers;
+                    if (e) return s.createElement(p.U, {
+                        className: "prime-offers__pill",
+                        position: p._2.Absolute
+                    }, s.createElement(p.e, {
+                        type: p.i.BounceIn,
+                        duration: p.g.Medium,
+                        timing: p.h.EaseIn,
+                        enabled: e > 0
+                    }, s.createElement(p.Z, {
+                        label: e.toString(),
+                        type: p._0.Notification
+                    })))
+                }, t = r.__decorate([Object(d.a)(ce, {
+                    name: "offersData",
+                    skip: function(e) {
+                        return !e.firstPageLoaded
+                    }
+                }), Object(d.a)(de, {
+                    name: "userData"
+                }), Object(m.c)("PrimeOffers", {
+                    autoReportInteractive: !0
+                })], t)
+            }(s.Component),
+            me = ue,
+            pe = Object(a.a)(i)(me),
+            ge = (n(436), n(437)),
+            fe = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.componentWillMount = function() {
+                    this.setState({
+                        dateOverride: x()
+                    })
+                }, t.prototype.render = function() {
+                    var e = this.props.data.requestInfo && Object(u.b)(this.props.data.requestInfo.countryCode);
+                    if (this.props.data.currentUser && this.props.data.currentUser.hasPrime || !e) return null;
+                    if (this.props.data.loading) return null;
+                    var t = Object(P.d)(P.a, ""),
+                        n = Object(l.d)("Twitch Prime", "BlueBar"),
+                        i = s.createElement("span", null, Object(l.d)("Free loot every month, plus exclusives and surprises, ad-free viewing, and loads more.", "BlueBar")),
+                        a = Object(P.d)(P.a, ""),
+                        r = Object(l.d)("Start Your Free Trial", "BlueBar");
+                    if (!this.props.data.loading && !this.props.data.error) {
+                        var o = this.props.data;
+                        o && o.primePromotions && o.primePromotions.forEach(function(e) {
+                            switch (e.id) {
+                                case "twitch.prime.bluebar.left1":
+                                    t = e.externalURL, n = e.text;
+                                    break;
+                                case "twitch.prime.bluebar.center1":
+                                    i = s.createElement(k, {
+                                        source: e.text,
+                                        renderers: {
+                                            Link: function(e) {
+                                                return s.createElement("a", {
+                                                    href: e.href,
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer"
+                                                }, e.children)
+                                            }
+                                        }
+                                    });
+                                    break;
+                                case "twitch.prime.bluebar.right1":
+                                    a = e.externalURL, r = e.text
+                            }
+                        })
+                    }
+                    return s.createElement(p._17, {
+                        color: p.F.Base,
+                        className: "blue-bar",
+                        position: p._2.Relative,
+                        fullWidth: !0
+                    }, s.createElement(p.U, {
+                        className: "blue-bar__bar",
+                        display: p.H.Flex,
+                        alignItems: p.c.Center,
+                        justifyContent: p.T.Between,
+                        flexWrap: p.K.NoWrap,
+                        margin: "auto",
+                        padding: {
+                            x: 2,
+                            y: .5
+                        }
+                    }, s.createElement(p.U, {
+                        display: p.H.InlineFlex,
+                        alignItems: p.c.Center,
+                        padding: {
+                            right: .5
+                        }
+                    }, s.createElement(p.U, {
+                        className: "blue-bar__logo",
+                        display: p.H.InlineFlex,
+                        margin: {
+                            right: .5
+                        },
+                        flexShrink: 0
+                    }, s.createElement(p._8, {
+                        asset: p._9.Crown,
+                        width: 20,
+                        height: 13
+                    })), s.createElement(p._21, {
+                        bold: !0,
+                        type: p._26.Span,
+                        noWrap: !0,
+                        fontSize: p.L.Size6
+                    }, s.createElement(p.P, {
+                        padding: {
+                            x: 1
+                        }
+                    }, s.createElement("a", {
+                        className: "blue-bar__link",
+                        href: t,
+                        target: "_blank",
+                        rel: "noopener noreferrer"
+                    }, n))), s.createElement(p._21, {
+                        className: "blue-bar__headline",
+                        type: p._26.Span,
+                        fontSize: p.L.Size6
+                    }, i)), s.createElement(p.U, {
+                        display: p.H.InlineFlex,
+                        flexShrink: 0
+                    }, s.createElement(p._21, {
+                        bold: !0,
+                        type: p._26.Span,
+                        noWrap: !0,
+                        fontSize: p.L.Size6,
+                        color: p.F.Base
+                    }, s.createElement("a", {
+                        className: "blue-bar__link",
+                        href: a,
+                        target: "_blank",
+                        rel: "noopener noreferrer"
+                    }, r)))))
+                }, t = r.__decorate([Object(d.a)(ge, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                stringIds: ["twitch.prime.bluebar.left1", "twitch.prime.bluebar.center1", "twitch.prime.bluebar.right1"],
+                                dateOverride: e.dateOverride
+                            }
+                        }
+                    }
+                }), Object(m.c)("BlueBarComponent")], t)
+            }(s.Component),
+            he = fe;
+        n.d(t, "b", function() {
+            return pe
+        }), n.d(t, "a", function() {
+            return he
+        }), n.d(t, "c", function() {
+            return x
+        })
+    },
+    389: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return function() {
+                Object(l.c)(e), window.location.reload(!0)
+            }
+        }
+
+        function a() {
+            return {}
+        }
+
+        function r(e) {
+            return Object(s.bindActionCreators)({
+                changeLanguage: i
+            }, e)
+        }
+        var o = n(7),
+            s = n(9),
+            l = n(72),
+            c = n(0),
+            d = n(1),
+            u = n(2),
+            m = n(3),
+            p = (n(397), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.renderLink = function(e) {
+                        var n = function() {
+                            return t.props.changeLanguage(e.languageCode)
+                        };
+                        return d.createElement(m.S, {
+                            key: e.languageCode,
+                            onClick: n,
+                            "data-target": "language-selector-link"
+                        }, d.createElement(m.U, {
+                            padding: {
+                                y: .5,
+                                x: 1
+                            }
+                        }, e.name))
+                    }, t
+                }
+                return c.__extends(t, e), t.prototype.render = function() {
+                    var e = Math.floor(u.a.locales.length / 2);
+                    return d.createElement(m.U, {
+                        className: "language-selector",
+                        display: m.H.Flex,
+                        padding: {
+                            y: 1
+                        }
+                    }, d.createElement("div", {
+                        className: "language-selector__list language-selector__list--border-right"
+                    }, u.a.locales.slice(0, e).map(this.renderLink)), d.createElement("div", {
+                        className: "language-selector__list"
+                    }, u.a.locales.slice(e).map(this.renderLink)))
+                }, t
+            }(d.Component)),
+            g = Object(o.a)(a, r)(p);
+        n.d(t, "a", function() {
+            return g
+        })
+    },
+    390: function(e, t, n) {
+        "use strict";
+
+        function i(e, t) {
+            var n = {},
+                i = o(e);
+            if (!i) return n;
+            var s;
+            try {
+                s = new URL(i)
+            } catch (t) {
+                return _.i.error(t.toString(), i + " was malformed from notification id:[" + e.id + "]"), n
+            }
+            return r(e.type, s) ? n.linkTo = {
+                pathname: s.pathname,
+                search: s.search,
+                state: {
+                    content: e.type,
+                    medium: t
+                }
+            } : (n.linkTo = a(s.toString(), e.type, t), n.targetBlank = !0), n
+        }
+
+        function a(e, t, n) {
+            var i = e.split("?");
+            if (1 === i.length) return e + "?tt_content=" + t + "&tt_medium=" + n;
+            var a = y.parse(i[1]);
+            return a.tt_content = a.tt_content ? a.tt_content : t, a.tt_medium = a.tt_medium ? a.tt_medium : n, [i[0], y.stringify(a, {
+                encode: !1
+            })].join("?")
+        }
+
+        function r(e, t) {
+            return !L.has(e) && "https://www.twitch.tv" === t.origin
+        }
+
+        function o(e) {
+            var t = e.actions.filter(function(e) {
+                return "click" === e.type
+            });
+            return t.length > 0 ? t[0].url : ""
+        }
+
+        function s(e) {
+            return {
+                id: e.id,
+                body: e.body_md,
+                type: e.type,
+                thumbnailURL: e.thumbnail_url,
+                createdAt: e.created_at,
+                updatedAt: e.updated_at,
+                isRead: e.read,
+                actions: e.actions.map(function(e) {
+                    return {
+                        body: e.body,
+                        type: e.type,
+                        url: e.url,
+                        __typename: "OnsiteNotificationAction"
+                    }
+                }),
+                __typename: "OnsiteNotification"
+            }
+        }
+
+        function l(e) {
+            return {
+                currentUser: Object(ae.c)(e)
+            }
+        }
+
+        function c(e) {
+            return e.type === C.c.OnsiteNotificationsRead
+        }
+
+        function d(e) {
+            return e.type === C.c.OnsiteNotificationCreate || e.type === C.c.OnsiteNotificationUpdate
+        }
+
+        function u(e) {
+            return e.type === C.c.OnsiteNotificationDelete
+        }
+
+        function m(e, t) {
+            return me.debug("Received pubsub summary update", e), t && t.currentUser && t.currentUser.notifications && t.currentUser.notifications.summary && e.data.summary ? (t.currentUser.notifications.summary.lastSeenAt = e.data.summary.last_seen_at, t.currentUser.notifications.summary.unseenCount = e.data.summary.unseen_view_count, t) : t
+        }
+
+        function p(e, t) {
+            if (me.debug("Received pubsub notification update", e), !(t && t.currentUser && t.currentUser.notifications && t.currentUser.notifications.edges && t.currentUser.notifications.edges)) return t;
+            if (c(e)) {
+                var n = new Set(e.data.notification_ids),
+                    i = t.currentUser.notifications.edges.map(function(e) {
+                        return n.has(e.node.id) ? v.__assign({}, e, {
+                            node: v.__assign({}, e.node, {
+                                isRead: !0
+                            })
+                        }) : e
+                    });
+                t.currentUser.notifications.edges = i
+            } else if (d(e)) {
+                if (e.data.persistent) {
+                    var a = s(e.data.notification),
+                        i = g(t.currentUser.notifications.edges, a.id);
+                    i.unshift({
+                        cursor: null,
+                        node: a,
+                        __typename: "OnsiteNotificationEdge"
+                    }), t.currentUser.notifications.edges = i
+                }
+            } else u(e) && (t.currentUser.notifications.edges = g(t.currentUser.notifications.edges, e.data.notification_id));
+            return t
+        }
+
+        function g(e, t) {
+            return e.filter(function(e) {
+                return e.node.id !== t
+            })
+        }
+
+        function f() {
+            return function(e) {
+                return function(t) {
+                    function n() {
+                        var e = null !== t && t.apply(this, arguments) || this;
+                        return e.state = {
+                            shouldDefer: !0
+                        }, e.stopDeferring = function() {
+                            e.state.shouldDefer && e.setState({
+                                shouldDefer: !1
+                            })
+                        }, e
+                    }
+                    return v.__extends(n, t), n.prototype.render = function() {
+                        var t = {
+                            shouldDefer: this.state.shouldDefer,
+                            stopDeferring: this.stopDeferring
+                        };
+                        return k.createElement(e, v.__assign({}, this.props, t))
+                    }, n
+                }(k.Component)
+            }
+        }
+        var h, v = n(0),
+            y = n(20),
+            k = n(1),
+            _ = n(2),
+            b = n(47),
+            S = n(6),
+            N = n(106),
+            E = n(16),
+            C = n(37),
+            w = n(21),
+            O = n(30),
+            U = n(5),
+            x = n(28),
+            F = n(32),
+            T = n(398),
+            D = n.n(T),
+            R = n(14),
+            I = n(65),
+            P = n(12),
+            L = new Set(["affiliateinvite", "feedcomment", "friendrequests", "partneragreementupdate", "partnerinvite", "vodcomment", "vodcommentmod"]),
+            j = {
+                Center: "center",
+                Toast: "toast",
+                Browser: "browser"
+            },
+            A = {
+                Open: "open",
+                Close: "close",
+                MarkAllRead: "mark_all_read"
+            },
+            H = {
+                PrimaryCta: "primary_cta",
+                Dismiss: "dismiss"
+            },
+            B = function(e) {
+                var t = {
+                    notification_id: e.notification.id,
+                    notification_type: e.notification.type,
+                    ui_context: e.uiContext
+                };
+                _.m.track(P.SpadeEventType.NotificationImpression, t)
+            },
+            V = function(e) {
+                var t = {
+                    unseen_view_count: e.unseenCount,
+                    action: e.action
+                };
+                _.m.track(P.SpadeEventType.NotificationCenterInteraction, t)
+            },
+            q = function(e) {
+                var t = {
+                    notification_id: e.notification.id,
+                    notification_type: e.notification.type,
+                    ui_context: e.uiContext,
+                    action: e.action
+                };
+                _.m.track(P.SpadeEventType.NotificationInteraction, t)
+            },
+            M = n(3),
+            z = (n(399), "persistent-notification__delete"),
+            W = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.impressionEventFired = !1, t.isVisible = function(e) {
+                        if (null !== t.element) {
+                            var n = t.element.getBoundingClientRect();
+                            return n.top < e.bottom && n.bottom > e.top
+                        }
+                        return !1
+                    }, t.setRef = function(e) {
+                        return t.element = e
+                    }, t.deleteNotification = function() {
+                        q({
+                            uiContext: j.Center,
+                            notification: t.props.data,
+                            action: H.Dismiss
+                        }), t.props.onDeleteNotification(t.props.data.id)
+                    }, t.clickNotification = function() {
+                        q({
+                            uiContext: j.Center,
+                            notification: t.props.data,
+                            action: H.PrimaryCta
+                        }), t.props.onViewNotification(t.props.data.id)
+                    }, t.renderDeleteNotification = function() {
+                        return k.createElement(M.U, {
+                            className: "persistent-notification__delete",
+                            padding: {
+                                top: 1,
+                                left: 1,
+                                right: .5
+                            },
+                            position: M._2.Absolute
+                        }, k.createElement(M.U, {
+                            display: M.H.Flex,
+                            flexWrap: M.K.NoWrap,
+                            alignItems: M.c.Start
+                        }, k.createElement(M.v, {
+                            ariaLabel: "delete-notification",
+                            "data-test-selector": z,
+                            icon: M._9.Close,
+                            size: M.x.Small,
+                            onClick: t.deleteNotification
+                        })))
+                    }, t
+                }
+                return v.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive();
+                    var e = this.context.registerReceiver;
+                    e ? this.unregister = e(this) : _.i.warn("<PersistentNotification /> initialized missing a <ScrollableArea /> provider")
+                }, t.prototype.componentWillUnmount = function() {
+                    this.unregister && this.unregister()
+                }, t.prototype.render = function() {
+                    return k.createElement(M.U, {
+                        className: "persistent-notification",
+                        position: M._2.Relative,
+                        refDelegate: this.setRef,
+                        "data-test-selector": "persistent-notification"
+                    }, k.createElement(M._17, {
+                        display: M.H.Flex,
+                        className: this.props.data.isRead ? "persistent-notification__read" : "persistent-notification__unread",
+                        borderBottom: !0,
+                        flexWrap: M.K.NoWrap
+                    }, k.createElement(M.S, v.__assign({
+                        "data-test-selector": "persistent-notification__click",
+                        onClick: this.clickNotification
+                    }, i(this.props.data, P.PageviewMedium.NotificationCenter), {
+                        alpha: !0
+                    }), k.createElement(M.U, {
+                        className: "persistent-notification__area",
+                        display: M.H.Flex,
+                        flexWrap: M.K.NoWrap,
+                        padding: {
+                            top: 1,
+                            bottom: 1,
+                            left: 1,
+                            right: 3
+                        }
+                    }, k.createElement(M.C, {
+                        aspect: M.k.Aspect1x1,
+                        imageSrc: this.props.data.thumbnailURL,
+                        imageAlt: Object(_.d)("Notification center item thumbnail", "OnsiteNotifications"),
+                        size: M.D.Size4
+                    }), k.createElement(M.U, {
+                        display: M.H.Flex,
+                        flexDirection: M.J.Column,
+                        flexWrap: M.K.NoWrap,
+                        margin: {
+                            x: 1
+                        }
+                    }, k.createElement(M.U, {
+                        className: "persistent-notification__body",
+                        overflow: M.Y.Hidden,
+                        "data-test-selector": "persistent-notification__body"
+                    }, k.createElement(M._21, {
+                        type: M._26.Span,
+                        color: M.F.Alt
+                    }, k.createElement(I, {
+                        source: this.props.data.body || ""
+                    }))), k.createElement(M.U, {
+                        display: M.H.Flex,
+                        alignItems: M.c.Center,
+                        flexShrink: 0,
+                        margin: {
+                            top: .5
+                        }
+                    }, k.createElement(M._8, {
+                        asset: M._9.MessagesSC,
+                        height: 12,
+                        width: 12,
+                        type: M._10.Alt2
+                    }), k.createElement(M.U, {
+                        margin: {
+                            left: .5
+                        }
+                    }, k.createElement(M._21, {
+                        type: M._26.Span,
+                        color: M.F.Alt2
+                    }, Object(_.g)(new Date(this.props.data.updatedAt)))))))), this.renderDeleteNotification()))
+                }, t.prototype.checkVisible = function(e) {
+                    return v.__awaiter(this, void 0, void 0, function() {
+                        return v.__generator(this, function(t) {
+                            return !this.impressionEventFired && this.isVisible(e) && (B({
+                                uiContext: j.Center,
+                                notification: this.props.data
+                            }), this.impressionEventFired = !0), [2]
+                        })
+                    })
+                }, t.contextTypes = {
+                    registerReceiver: R.func
+                }, t = v.__decorate([Object(U.c)("PersistentNotification")], t)
+            }(k.Component),
+            G = W,
+            K = n(400),
+            Q = n(401),
+            $ = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        isRead: !1
+                    }, t.createNotificationData = function() {
+                        return {
+                            id: "friendrequests",
+                            type: "friendrequests",
+                            body: Object(_.d)("{count, plural, one {You have # new friend request} other {You have # new friend requests}}", {
+                                count: t.props.count
+                            }, "FriendRequestsNotification"),
+                            createdAt: t.props.date,
+                            updatedAt: t.props.date,
+                            isRead: t.props.isOldNotification || t.state.isRead,
+                            thumbnailURL: D.a,
+                            actions: [{
+                                body: "View",
+                                type: "click",
+                                url: "https://www.twitch.tv/friends/requests"
+                            }]
+                        }
+                    }, t.clearUnseenCount = function() {
+                        Object(w.d)(Q, {}, function(e) {
+                            return e.currentUser.incomingFriendRequests.totalUnreadCount = 0, e
+                        }), t.props.clearUnreadFriendRequests().then(function() {}).catch(function(e) {
+                            return _.i.error(e, "[FriendRequestsNotification] Failed to clear unread requests.")
+                        })
+                    }, t.viewFriendRequests = function() {
+                        t.setState({
+                            isRead: !0
+                        })
+                    }, t
+                }
+                return v.__extends(t, e), t.prototype.render = function() {
+                    return k.createElement(G, {
+                        key: "friendRequestsNotification",
+                        data: this.createNotificationData(),
+                        onDeleteNotification: this.clearUnseenCount,
+                        onViewNotification: this.viewFriendRequests
+                    })
+                }, t
+            }(k.Component),
+            X = Object(F.compose)(Object(S.a)(K, {
+                name: "clearUnreadFriendRequests"
+            }))($),
+            J = (n(402), "center-window__empty"),
+            Y = "center-window__content-footer",
+            Z = "center-window__footer__text",
+            ee = "center-window__read-all",
+            te = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        isLoadingMore: !1
+                    }, t.renderContent = function() {
+                        if (!t.props.hasInitiallyLoaded || t.props.data.length || t.props.friendRequestsData) {
+                            return [t.mapPersistentNotificationElements(), t.renderContentFooter()]
+                        }
+                        return t.renderEmptyCenterWindowElement()
+                    }, t.renderContentFooter = function() {
+                        var e = !t.props.hasInitiallyLoaded || t.state.isLoadingMore ? k.createElement(M.X, {
+                            delay: 0,
+                            fillContent: !0
+                        }) : k.createElement(M._8, {
+                            asset: M._9.LogoGlitch,
+                            width: 24,
+                            height: 24,
+                            type: M._10.Alt2
+                        });
+                        return k.createElement(M.U, {
+                            className: "center-window__content-footer",
+                            key: "center-window__content-footer",
+                            "data-test-selector": Y,
+                            display: M.H.Flex,
+                            flexDirection: M.J.Column,
+                            justifyContent: M.T.Center,
+                            alignItems: M.c.Center,
+                            textAlign: M._22.Center,
+                            padding: 1,
+                            flexGrow: 1
+                        }, e)
+                    }, t.mapPersistentNotificationElements = function() {
+                        var e = t.props.data.map(function(e) {
+                            return k.createElement(G, {
+                                key: "onsite-notification-" + e.node.id,
+                                data: e.node,
+                                onDeleteNotification: t.props.onDeleteNotification,
+                                onViewNotification: t.props.onViewNotification
+                            })
+                        });
+                        return t.props.friendRequestsData && e.unshift(k.createElement(X, v.__assign({}, t.props.friendRequestsData))), e
+                    }, t.renderEmptyCenterWindowElement = function() {
+                        return k.createElement(M._17, {
+                            "data-test-selector": J,
+                            className: "center-window__empty-state",
+                            background: M.m.Alt,
+                            display: M.H.Flex,
+                            justifyContent: M.T.Center,
+                            alignItems: M.c.Center,
+                            textAlign: M._22.Center,
+                            flexDirection: M.J.Column,
+                            padding: 2,
+                            fullWidth: !0
+                        }, k.createElement(M._8, {
+                            asset: M._9.LogoGlitch,
+                            width: 100,
+                            height: 100,
+                            type: M._10.Placeholder
+                        }), k.createElement(M.U, {
+                            margin: {
+                                top: 1
+                            }
+                        }, k.createElement(M._21, {
+                            type: M._26.H5,
+                            color: M.F.Alt2
+                        }, Object(_.d)("Hooray! You're in the clear!", "OnsiteNotifications"))))
+                    }, t.renderMarkAsRead = function() {
+                        return 0 !== t.props.data.length || t.props.friendRequestsData ? k.createElement(M.u, {
+                            "data-test-selector": ee,
+                            type: M.z.Text,
+                            size: M.x.Small,
+                            disabled: 0 === t.props.data.length && !t.props.friendRequestsData,
+                            onClick: t.props.onReadAllNotifications
+                        }, Object(_.d)("Mark All as Read", "OnsiteNotifications")) : null
+                    }, t.renderNotificationsHeaderElement = function() {
+                        return k.createElement(M._17, {
+                            className: "center-window__header",
+                            background: M.m.Alt,
+                            padding: {
+                                x: 1,
+                                y: .5
+                            },
+                            display: M.H.Flex,
+                            alignItems: M.c.Center,
+                            justifyContent: M.T.Between,
+                            borderBottom: !0
+                        }, k.createElement(M._21, {
+                            type: M._26.H6,
+                            color: M.F.Alt2,
+                            bold: !0
+                        }, Object(_.d)("Notifications", "OnsiteNotifications")), t.renderMarkAsRead())
+                    }, t.renderUnreadNotificationsFooterElement = function() {
+                        var e = 0 === t.props.newNotificationsCount ? null : k.createElement(M._21, {
+                            "data-test-selector": Z,
+                            type: M._26.H6,
+                            color: M.F.Alt2
+                        }, Object(_.d)("{num, plural, one {1 New Notification} other {{num, number} New Notifications} }", {
+                            num: t.props.newNotificationsCount
+                        }, "OnsiteNotifications"));
+                        return k.createElement(M._17, {
+                            className: "center-window__footer",
+                            background: M.m.Alt,
+                            padding: .5,
+                            alignItems: M.c.Center,
+                            textAlign: M._22.Center,
+                            borderTop: !0
+                        }, e)
+                    }, t.loadMore = function() {
+                        return v.__awaiter(t, void 0, void 0, function() {
+                            var e = this;
+                            return v.__generator(this, function(t) {
+                                return this.state.isLoadingMore ? [2] : (this.setState({
+                                    isLoadingMore: !0
+                                }), [2, this.props.onLoadMore().then(function() {
+                                    return e.setState({
+                                        isLoadingMore: !1
+                                    })
+                                })])
+                            })
+                        })
+                    }, t
+                }
+                return v.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    return k.createElement(M._17, {
+                        className: "center-window",
+                        "data-test-selector": "center-window",
+                        background: M.m.Alt
+                    }, this.renderNotificationsHeaderElement(), k.createElement(x.b, {
+                        className: "center-window__scroll",
+                        contentClassName: "center-window__scroll-container"
+                    }, k.createElement(M.U, {
+                        display: M.H.Flex,
+                        alignItems: M.c.Center,
+                        flexDirection: M.J.Column,
+                        flexGrow: 1,
+                        flexWrap: M.K.NoWrap
+                    }, this.renderContent(), k.createElement(x.a, {
+                        enabled: this.props.data.length > 0 && !!this.props.data[this.props.data.length - 1].cursor,
+                        contentLength: this.props.data.length,
+                        loadMore: this.loadMore,
+                        pixelThreshold: 200
+                    }))), this.renderUnreadNotificationsFooterElement())
+                }, t = v.__decorate([Object(U.c)("OnsiteNotificationsCenterWindow")], t)
+            }(k.Component),
+            ne = te,
+            ie = n(7),
+            ae = n(17),
+            re = n(86),
+            oe = (n(403), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.closeTimeout = 0, t.close = function() {
+                        q({
+                            uiContext: j.Toast,
+                            notification: t.props.item,
+                            action: H.Dismiss
+                        }), t.props.close(t.props.index)
+                    }, t.onMouseEnter = function() {
+                        t.cancelCloseTimer()
+                    }, t.onMouseLeave = function() {
+                        t.scheduleCloseTimer()
+                    }, t.view = function() {
+                        t.props.view(t.props.index)
+                    }, t
+                }
+                return v.__extends(t, e), t.prototype.componentWillMount = function() {
+                    this.scheduleCloseTimer()
+                }, t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive(), B({
+                        uiContext: j.Toast,
+                        notification: this.props.item
+                    })
+                }, t.prototype.componentWillUnmount = function() {
+                    this.cancelCloseTimer()
+                }, t.prototype.render = function() {
+                    return k.createElement(M.e, {
+                        type: M.i.BounceIn,
+                        duration: M.g.Medium,
+                        enabled: !0
+                    }, k.createElement("div", {
+                        onMouseEnter: this.onMouseEnter,
+                        onMouseLeave: this.onMouseLeave,
+                        "data-test-selector": "onsite-notification-toast__mouse-enter-detector"
+                    }, k.createElement(M._17, {
+                        className: "onsite-notification-toast",
+                        background: M.m.Base,
+                        display: M.H.Flex,
+                        flexWrap: M.K.NoWrap,
+                        margin: {
+                            bottom: 1
+                        },
+                        border: !0
+                    }, k.createElement(M.S, v.__assign({
+                        onClick: this.view,
+                        alpha: !0
+                    }, i(this.props.item, P.PageviewMedium.NotificationToast)), k.createElement(M.U, {
+                        className: "onsite-notification-toast__container",
+                        display: M.H.Flex,
+                        flexWrap: M.K.NoWrap
+                    }, k.createElement(M.U, {
+                        padding: {
+                            y: 1,
+                            left: 1
+                        },
+                        display: M.H.Flex,
+                        flexShrink: 0
+                    }, k.createElement(M.C, {
+                        aspect: M.k.Aspect1x1,
+                        imageSrc: this.props.item.thumbnailURL,
+                        imageAlt: Object(_.d)("Notification toast thumbnail", "OnsiteNotifications"),
+                        size: M.D.Size4
+                    })), k.createElement(M.U, {
+                        display: M.H.Flex,
+                        flexDirection: M.J.Column,
+                        flexWrap: M.K.NoWrap,
+                        flexGrow: 1,
+                        padding: 1
+                    }, k.createElement(M.U, {
+                        className: "onsite-notification-toast__body",
+                        overflow: M.Y.Hidden
+                    }, k.createElement(M._17, {
+                        color: M.F.Alt
+                    }, k.createElement(I, {
+                        source: this.props.item.body
+                    }))), k.createElement(M.U, {
+                        margin: {
+                            top: .5
+                        },
+                        flexShrink: 0
+                    }, k.createElement(M._17, {
+                        color: M.F.Alt2
+                    }, Object(_.g)(new Date(this.props.item.updatedAt))))))), this.renderActions())))
+                }, t.prototype.renderActions = function() {
+                    return k.createElement(M._17, {
+                        className: "onsite-notification-toast__action-wrapper",
+                        display: M.H.Flex,
+                        alignContent: M.b.Stretch,
+                        flexGrow: 0,
+                        flexShrink: 0,
+                        flexDirection: M.J.Column,
+                        borderLeft: !0
+                    }, k.createElement(M._17, {
+                        className: "onsite-notification-toast__action",
+                        display: M.H.Flex,
+                        alignContent: M.b.Stretch,
+                        flexGrow: 1,
+                        borderBottom: !0
+                    }, k.createElement(M.S, v.__assign({
+                        onClick: this.view,
+                        "data-test-selector": "onsite-notification-toast__view",
+                        alpha: !0
+                    }, i(this.props.item, P.PageviewMedium.NotificationToast)), k.createElement(M._17, {
+                        display: M.H.Flex,
+                        alignItems: M.c.Center,
+                        justifyContent: M.T.Center,
+                        fullHeight: !0,
+                        flexGrow: 1,
+                        padding: .5
+                    }, k.createElement(M._21, {
+                        color: M.F.Link
+                    }, this.primaryCTAText())))), k.createElement(M._17, {
+                        className: "onsite-notification-toast__action",
+                        display: M.H.Flex,
+                        alignContent: M.b.Stretch,
+                        flexGrow: 1
+                    }, k.createElement(M.S, {
+                        onClick: this.close,
+                        "data-test-selector": "onsite-notification-toast__close",
+                        alpha: !0
+                    }, k.createElement(M._17, {
+                        display: M.H.Flex,
+                        alignItems: M.c.Center,
+                        justifyContent: M.T.Center,
+                        fullHeight: !0,
+                        flexGrow: 1,
+                        padding: .5
+                    }, k.createElement(M._21, {
+                        color: M.F.Alt2
+                    }, Object(_.d)("Close", "OnsiteNotifications"))))))
+                }, t.prototype.primaryCTAText = function() {
+                    var e = this.props.item.actions.find(function(e) {
+                        return "click" === e.type
+                    });
+                    return e ? e.body : Object(_.d)("View", "OnsiteNotifications")
+                }, t.prototype.scheduleCloseTimer = function() {
+                    var e = this;
+                    this.cancelCloseTimer(), this.closeTimeout = setTimeout(function() {
+                        e.props.close(e.props.index), e.closeTimeout = 0
+                    }, 1e4)
+                }, t.prototype.cancelCloseTimer = function() {
+                    this.closeTimeout && (clearTimeout(this.closeTimeout), this.closeTimeout = 0)
+                }, t
+            }(k.Component)),
+            se = Object(U.c)("OnsiteNotificationToast")(oe),
+            le = se,
+            ce = (n(404), _.i.withCategory("toast-manager")),
+            de = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        notifications: []
+                    }, t.view = function(e) {
+                        t.props.onViewNotification(t.state.notifications[e].id), t.close(e)
+                    }, t.close = function(e) {
+                        var n = t.state.notifications.slice();
+                        n.splice(e, 1), t.setState({
+                            notifications: n
+                        })
+                    }, t
+                }
+                return v.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive(), this.conditionallyInsertTestData()
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    var t = this.props.pubsub.messages.info,
+                        n = e.pubsub.messages.info;
+                    if (n && n.data.toast && (!t || n.data.notification.id !== t.data.notification.id || n.data.notification.updated_at !== t.data.notification.updated_at)) {
+                        ce.debug("Received pubsub update", e.pubsub.messages.info);
+                        var i = s(n.data.notification);
+                        this.onNewNotification(i)
+                    }
+                }, t.prototype.render = function() {
+                    return k.createElement(M.U, {
+                        className: "onsite-notifications-toast-manager",
+                        position: M._2.Absolute,
+                        margin: {
+                            top: 5
+                        },
+                        "data-test-selector": "onsite-notifications-toast-manager"
+                    }, this.renderToasts())
+                }, t.prototype.conditionallyInsertTestData = function() {
+                    return v.__awaiter(this, void 0, void 0, function() {
+                        var e, t;
+                        return v.__generator(this, function(i) {
+                            switch (i.label) {
+                                case 0:
+                                    return _.a.buildType !== E.a.Production && y.parse(window.location.search).onsite_test_data ? [4, n.e(35).then(n.bind(null, 2043))] : [3, 2];
+                                case 1:
+                                    e = i.sent().MockOnsiteNotifications, t = e.getMockOnsiteNotificationModels(3), this.setState({
+                                        notifications: t
+                                    }), i.label = 2;
+                                case 2:
+                                    return [2]
+                            }
+                        })
+                    })
+                }, t.prototype.renderToasts = function() {
+                    var e = this,
+                        t = this.state.notifications.map(function(t, n) {
+                            return k.createElement(le, {
+                                key: t.id,
+                                item: t,
+                                index: n,
+                                view: e.view,
+                                close: e.close
+                            })
+                        });
+                    return 0 === t.length ? null : t
+                }, t.prototype.onNewNotification = function(e) {
+                    var t = this.state.notifications.slice(),
+                        n = t.findIndex(function(t) {
+                            return t.id === e.id
+                        });
+                    n > -1 && t.splice(n, 1), t.unshift(e), t.length > 3 && t.pop(), this.setState({
+                        notifications: t
+                    })
+                }, t = v.__decorate([Object(U.c)("OnsiteNotificationToastManager"), Object(re.a)([{
+                    topic: function(e) {
+                        return Object(O.e)("" + (e.currentUser && e.currentUser.id))
+                    },
+                    mapMessageTypesToProps: (h = {}, h[C.c.OnsiteNotificationCreate] = "info", h[C.c.OnsiteNotificationUpdate] = "info", h),
+                    skip: function(e) {
+                        return !e.currentUser
+                    }
+                }])], t)
+            }(k.Component),
+            ue = Object(ie.a)(l)(de),
+            me = _.i.withCategory("onsite-pubsub-mutators"),
+            pe = n(391),
+            ge = n(392),
+            fe = n(393),
+            he = n(394),
+            ve = n(395);
+        n(405);
+        n.d(t, "a", function() {
+            return Se
+        }), n.d(t, "b", function() {
+            return we
+        });
+        var ye = _.i.withCategory("onsite-notifications"),
+            ke = "onsite-notifications__badge",
+            _e = "99+",
+            be = 5e3,
+            Se = 10,
+            Ne = {
+                align: M._31.Center,
+                direction: M._32.Bottom,
+                label: ""
+            },
+            Ee = {
+                limit: Se,
+                cursor: ""
+            },
+            Ce = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        newNotificationsCount: 0,
+                        newFriendRequestsBadgeCount: 0,
+                        isFriendRequestsNotificationUnread: !1
+                    }, t.newNotificationsCountTimer = 0, t.hasInsertedSummaryData = !1, t.hasInsertedListNotificationsData = !1, t.viewNotification = function(e) {
+                        t.centerWindowToggleBalloon.toggleBalloon(!1), t.readNotification(e)
+                    }, t.conditionallyInsertSummaryTestData = function() {
+                        t.summaryDataLoaded(t.props) && !t.hasInsertedSummaryData && _.a.buildType !== E.a.Production && y.parse(window.location.search).onsite_test_data && (t.hasInsertedSummaryData = !0, Object(w.d)(he, v.__assign({}, t.props.summaryData.variables), function(e) {
+                            return e.currentUser.notifications.summary.unseenCount = y.parse(window.location.search).onsite_test_data, e
+                        }))
+                    }, t.conditionallyInsertListNotificationsTestData = function() {
+                        return v.__awaiter(t, void 0, void 0, function() {
+                            var e;
+                            return v.__generator(this, function(t) {
+                                switch (t.label) {
+                                    case 0:
+                                        return this.notificationsInitiallyLoaded() && !this.hasInsertedListNotificationsData && _.a.buildType !== E.a.Production && y.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(35).then(n.bind(null, 2043))]) : [3, 2];
+                                    case 1:
+                                        e = t.sent().MockOnsiteNotifications, Object(w.d)(ge, v.__assign({}, this.props.listData.variables), function(t) {
+                                            return t.currentUser.notifications.edges = e.getMockOnsiteNotificationEdges(y.parse(window.location.search).onsite_test_data), t
+                                        }), t.label = 2;
+                                    case 2:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t.summaryDataLoaded = function(e) {
+                        return e.summaryData && !e.summaryData.loading && !e.summaryData.error && e.summaryData.currentUser && e.summaryData.currentUser.notifications && e.summaryData.currentUser.notifications.summary && e.summaryData.currentUser.incomingFriendRequests
+                    }, t.notificationsInitiallyLoaded = function() {
+                        return t.props.listData && t.props.listData.currentUser && t.props.listData.currentUser.notifications && void 0 !== t.props.listData.currentUser.notifications.edges
+                    }, t.hasNewFriendRequests = function(e) {
+                        var t = e.summaryData.currentUser;
+                        if (t.incomingFriendRequests && t.incomingFriendRequests.newestEdge && t.incomingFriendRequests.newestEdge.createdAt) {
+                            var n = new Date(t.incomingFriendRequests.newestEdge.createdAt),
+                                i = new Date(t.notifications.summary.lastSeenAt);
+                            return t.incomingFriendRequests.totalUnreadCount > 0 && n > i
+                        }
+                        return !1
+                    }, t.getFriendRequestsData = function() {
+                        if (t.summaryDataLoaded(t.props)) {
+                            var e = t.props.summaryData.currentUser;
+                            if (e.incomingFriendRequests && e.incomingFriendRequests.newestEdge) {
+                                var n = e.incomingFriendRequests.totalUnreadCount,
+                                    i = e.incomingFriendRequests.newestEdge.createdAt;
+                                return n && i ? {
+                                    count: n,
+                                    date: i,
+                                    isOldNotification: !t.state.isFriendRequestsNotificationUnread
+                                } : void 0
+                            }
+                        }
+                    }, t.toggleCenter = function(e) {
+                        e || (t.props.stopDeferring(), t.getUnseenNotificationsAndApplyTimer(), t.viewNotifications()), V({
+                            unseenCount: t.getUnseenNotificationsCount(t.props),
+                            action: e ? A.Close : A.Open
+                        })
+                    }, t.getUnseenNotificationsAndApplyTimer = function() {
+                        var e = t.state.newNotificationsCount;
+                        t.summaryDataLoaded(t.props) && (e = t.getUnseenNotificationsCount(t.props), t.setState({
+                            newNotificationsCount: e
+                        })), t.clearTimeout(), e > 0 && (t.newNotificationsCountTimer = setTimeout(function() {
+                            t.setState({
+                                newNotificationsCount: 0
+                            }), t.clearTimeout()
+                        }, be))
+                    }, t.viewNotifications = function() {
+                        if (t.summaryDataLoaded(t.props)) {
+                            t.setState({
+                                newFriendRequestsBadgeCount: 0
+                            });
+                            var e = v.__assign({}, Object(w.a)({}), {
+                                optimisticResponse: {
+                                    viewedNotifications: {
+                                        user: {
+                                            notifications: {
+                                                summary: {
+                                                    unseenCount: 0,
+                                                    lastSeenAt: new Date,
+                                                    __typename: "OnsiteNotificationsSummary"
+                                                },
+                                                __typename: "OnsiteNotificationConnection"
+                                            },
+                                            __typename: "User"
+                                        },
+                                        __typename: "ViewedNotificationsPayload"
+                                    }
+                                }
+                            });
+                            Object(w.d)(he, v.__assign({}, t.props.summaryData.variables), function(e) {
+                                return e.currentUser.notifications.summary.unseenCount = 0, e
+                            }), t.props.viewNotifications(e).then(function() {}).catch(function(e) {
+                                return ye.error(e, "failure to read message... ")
+                            })
+                        }
+                    }, t.getUnseenNotificationsCount = function(e) {
+                        return t.summaryDataLoaded(e) ? e.summaryData.currentUser.notifications.summary.unseenCount + t.state.newFriendRequestsBadgeCount : 0
+                    }, t.renderUnseenNotificationsBadge = function() {
+                        var e = t.getUnseenNotificationsCount(t.props);
+                        if (e > 0) {
+                            var n = e >= 100 ? _e : e.toString();
+                            return k.createElement(M.U, {
+                                className: "onsite-notifications__badge",
+                                "data-test-selector": ke,
+                                position: M._2.Absolute
+                            }, k.createElement(M.Z, {
+                                label: n,
+                                type: M._0.Notification
+                            }))
+                        }
+                    }, t.deleteNotification = function(e) {
+                        var n = v.__assign({}, Object(w.a)({
+                            id: e
+                        }), {
+                            optimisticResponse: {
+                                deleteNotification: {
+                                    __typename: "DeleteNotificationPayload",
+                                    notification: {
+                                        __typename: "OnsiteNotification",
+                                        id: e
+                                    }
+                                }
+                            }
+                        });
+                        return Object(w.d)(ge, v.__assign({}, t.props.listData.variables), function(t) {
+                            return t.currentUser.notifications.edges = t.currentUser.notifications.edges.filter(function(t) {
+                                return t.node.id !== e
+                            }), t
+                        }), t.props.deleteOnsiteNotification(n).then(function() {}).catch(function(t) {
+                            ye.error(t, "Unable to delete notification " + e)
+                        })
+                    }, t.readAllNotifications = function() {
+                        t.setState({
+                            isFriendRequestsNotificationUnread: !1
+                        });
+                        var e = t.notificationsInitiallyLoaded() ? t.props.listData.currentUser.notifications.edges.map(function(e) {
+                            return e.node.id
+                        }) : [];
+                        if (e.length > 0) {
+                            V({
+                                unseenCount: t.getUnseenNotificationsCount(t.props),
+                                action: A.MarkAllRead
+                            });
+                            var n = e.map(function(e) {
+                                    return {
+                                        id: e,
+                                        isRead: !0,
+                                        __typename: "OnsiteNotification"
+                                    }
+                                }),
+                                i = v.__assign({}, Object(w.a)({
+                                    ids: e
+                                }), {
+                                    optimisticResponse: {
+                                        readNotifications: {
+                                            __typename: "ReadNotificationsPayload",
+                                            notifications: n,
+                                            count: e.length
+                                        }
+                                    }
+                                });
+                            return Object(w.d)(ge, v.__assign({}, t.props.listData.variables), function(e) {
+                                return e.currentUser.notifications.edges = e.currentUser.notifications.edges.map(function(e) {
+                                    return v.__assign({}, e, {
+                                        node: v.__assign({}, e.node, {
+                                            isRead: !0
+                                        })
+                                    })
+                                }), e
+                            }), t.props.readOnsiteNotification(i).then(function() {}).catch(function(t) {
+                                ye.error(t, "Unable to read notifications " + e)
+                            })
+                        }
+                    }, t.readNotification = function(e) {
+                        var n = v.__assign({}, Object(w.a)({
+                            ids: [e]
+                        }), {
+                            optimisticResponse: {
+                                readNotifications: {
+                                    __typename: "ReadNotificationsPayload",
+                                    notifications: [{
+                                        id: e,
+                                        isRead: !0,
+                                        __typename: "OnsiteNotification"
+                                    }],
+                                    count: 1
+                                }
+                            }
+                        });
+                        return Object(w.d)(ge, v.__assign({}, t.props.listData.variables), function(t) {
+                            return t.currentUser.notifications.edges = t.currentUser.notifications.edges.map(function(t) {
+                                return t.node.id === e ? v.__assign({}, t, {
+                                    node: v.__assign({}, t.node, {
+                                        isRead: !0
+                                    })
+                                }) : t
+                            }), t
+                        }), t.props.readOnsiteNotification(n).then(function() {}).catch(function(t) {
+                            ye.error(t, "Unable to read notification " + e)
+                        })
+                    }, t.loadMore = function() {
+                        return v.__awaiter(t, void 0, void 0, function() {
+                            return v.__generator(this, function(e) {
+                                return this.props.listData.loading ? [2] : [2, this.props.loadMore()]
+                            })
+                        })
+                    }, t.clearTimeout = function() {
+                        t.newNotificationsCountTimer && (clearTimeout(t.newNotificationsCountTimer), t.newNotificationsCountTimer = 0)
+                    }, t.saveCenterWindowToggleBalloonRef = function(e) {
+                        return t.centerWindowToggleBalloon = e
+                    }, t
+                }
+                return v.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                    this.conditionallyInsertSummaryTestData(), this.conditionallyInsertListNotificationsTestData()
+                }, t.prototype.componentWillUnmount = function() {
+                    this.clearTimeout()
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    if (this.summaryDataLoaded(e)) {
+                        var t = this.hasNewFriendRequests(e);
+                        this.setState({
+                            newFriendRequestsBadgeCount: t ? 1 : 0
+                        }), this.summaryDataLoaded(this.props) || this.setState({
+                            isFriendRequestsNotificationUnread: t
+                        }), _.n.setBadgeCount(this.getUnseenNotificationsCount(e))
+                    }
+                }, t.prototype.render = function() {
+                    var e = this.props.shouldDefer || !this.notificationsInitiallyLoaded() ? [] : this.props.listData.currentUser.notifications.edges;
+                    return Ne.label = Object(_.d)("Notifications", "OnsiteNotificationsToolTip"), k.createElement(M.U, {
+                        className: "onsite-notifications"
+                    }, k.createElement(ue, {
+                        onViewNotification: this.viewNotification
+                    }), k.createElement(M.U, {
+                        position: M._2.Relative
+                    }, k.createElement(b.a, {
+                        onToggle: this.toggleCenter,
+                        ref: this.saveCenterWindowToggleBalloonRef,
+                        tooltipProps: Ne
+                    }, k.createElement(M.v, {
+                        ariaLabel: Object(_.d)("Open Notifications", "OnsiteNotifications"),
+                        size: M.x.Large,
+                        icon: M._9.NotificationBell,
+                        overlay: !0
+                    }), k.createElement(M.p, {
+                        "data-test-selector": "center-window__balloon",
+                        direction: M.q.BottomRight,
+                        size: M.r.Large,
+                        offsetX: "10px"
+                    }, k.createElement(ne, {
+                        newNotificationsCount: this.state.newNotificationsCount,
+                        hasInitiallyLoaded: this.notificationsInitiallyLoaded(),
+                        data: e,
+                        friendRequestsData: this.getFriendRequestsData(),
+                        onLoadMore: this.loadMore,
+                        onViewNotification: this.viewNotification,
+                        onReadAllNotifications: this.readAllNotifications,
+                        onDeleteNotification: this.deleteNotification
+                    }))), this.renderUnseenNotificationsBadge()))
+                }, t = v.__decorate([f(), Object(S.a)(he, {
+                    name: "summaryData",
+                    skip: function(e) {
+                        return !e.firstPageLoaded
+                    }
+                }), Object(S.a)(ve, {
+                    name: "viewNotifications"
+                }), Object(S.a)(ge, {
+                    name: "listData",
+                    options: function(e) {
+                        return {
+                            variables: v.__assign({}, Ee, {
+                                language: e.languageCode
+                            })
+                        }
+                    },
+                    skip: function(e) {
+                        return e.shouldDefer
+                    },
+                    props: function(e) {
+                        return v.__assign({}, e, {
+                            loadMore: function() {
+                                return e.listData.fetchMore({
+                                    query: ge,
+                                    variables: v.__assign({}, e.listData.variables, {
+                                        cursor: e.listData.currentUser ? e.listData.currentUser.notifications.edges[e.listData.currentUser.notifications.edges.length - 1].cursor : ""
+                                    }),
+                                    updateQuery: function(e, t) {
+                                        var n = t.fetchMoreResult,
+                                            i = n;
+                                        return {
+                                            currentUser: v.__assign({}, i.currentUser, {
+                                                notifications: v.__assign({}, i.currentUser.notifications, {
+                                                    edges: e.currentUser.notifications.edges.concat(i.currentUser.notifications.edges)
+                                                })
+                                            })
+                                        }
+                                    }
+                                })
+                            }
+                        })
+                    }
+                }), Object(S.a)(pe, {
+                    name: "deleteOnsiteNotification"
+                }), Object(S.a)(fe, {
+                    name: "readOnsiteNotification"
+                }), Object(N.a)(function(e) {
+                    return {
+                        query: he,
+                        skip: !e.currentUser,
+                        topic: Object(O.e)("" + (e.currentUser && e.currentUser.id)),
+                        types: [C.c.OnsiteNotificationSummaryUpdate, C.c.OnsiteNotificationUpdate, C.c.OnsiteNotificationCreate, C.c.OnsiteNotificationDelete],
+                        mutator: m
+                    }
+                }), Object(N.a)(function(e) {
+                    return {
+                        query: ge,
+                        variables: v.__assign({}, Ee, {
+                            language: e.languageCode
+                        }),
+                        skip: !e.currentUser,
+                        topic: Object(O.e)("" + (e.currentUser && e.currentUser.id)),
+                        types: [C.c.OnsiteNotificationsRead, C.c.OnsiteNotificationUpdate, C.c.OnsiteNotificationCreate, C.c.OnsiteNotificationDelete],
+                        mutator: p
+                    }
+                }), Object(U.c)("OnsiteNotifications", {
+                    autoReportInteractive: !0
+                })], t)
+            }(k.Component),
+            we = Ce
+    },
+    391: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "OnsiteNotifications_DeleteNotification"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "DeleteNotificationInput"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "deleteNotification"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "notification"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 162
+            }
+        };
+        n.loc.source = {
+            body: "mutation OnsiteNotifications_DeleteNotification($input: DeleteNotificationInput!) {\n  deleteNotification(input: $input) {\n    notification {\n      id\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    392: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "OnsiteNotifications_ListNotifications"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "limit"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Int"
+                        }
+                    },
+                    defaultValue: null
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "cursor"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Cursor"
+                        }
+                    },
+                    defaultValue: null
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "language"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "String"
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "notifications"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "limit"
+                                        }
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "after"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "cursor"
+                                        }
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "language"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "language"
+                                        }
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "pageInfo"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "hasNextPage"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "edges"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "cursor"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }, {
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "node"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "id"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "type"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "body"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "createdAt"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "updatedAt"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "isRead"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "thumbnailURL"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "actions"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "body"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "type"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "url"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }]
+                                                        }
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 514
+            }
+        };
+        n.loc.source = {
+            body: "query OnsiteNotifications_ListNotifications($limit: Int, $cursor: Cursor, $language: String) {\n  currentUser {\n    id\n    notifications(first: $limit, after: $cursor, language: $language) {\n      pageInfo {\n        hasNextPage\n      }\n      edges {\n        cursor\n        node {\n          id\n          type\n          body\n          createdAt\n          updatedAt\n          isRead\n          thumbnailURL\n          actions {\n            body\n            type\n            url\n          }\n        }\n      }\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    393: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "OnsiteNotifications_ReadNotifications"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "ReadNotificationsInput"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "readNotifications"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "notifications"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "isRead"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 167
+            }
+        };
+        n.loc.source = {
+            body: "mutation OnsiteNotifications_ReadNotifications($input: ReadNotificationsInput!) {\n readNotifications(input: $input) {\n   notifications {\n     id\n     isRead\n   }\n }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    394: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "OnsiteNotifications_Summary"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "notifications"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "summary"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "unseenCount"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }, {
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "lastSeenAt"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "incomingFriendRequests"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "1"
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "totalUnreadCount"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "newestEdge"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "createdAt"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 267
+            }
+        };
+        n.loc.source = {
+            body: "query OnsiteNotifications_Summary {\n  currentUser {\n    id\n    notifications {\n      summary {\n        unseenCount\n        lastSeenAt\n      }\n    }\n    incomingFriendRequests(first: 1) {\n      totalUnreadCount\n      newestEdge {\n        createdAt\n      }\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    395: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "OnsiteNotifications_View"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "viewedNotifications"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "user"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "notifications"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "summary"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "unseenCount"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "lastSeenAt"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 184
+            }
+        };
+        n.loc.source = {
+            body: "mutation OnsiteNotifications_View {\n  viewedNotifications {\n    user {\n      notifications {\n        summary {\n          unseenCount\n          lastSeenAt\n        }\n      }\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    396: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return {
+                firstPageLoaded: e.session.firstPageLoaded,
+                languageCode: e.session.languageCode,
+                currentUser: Object(f.c)(e)
+            }
+        }
+
+        function a(e) {
+            return {
+                isLoggedIn: Object(f.d)(e)
+            }
+        }
+
+        function r(e) {
+            return {
+                theme: Object(be.a)(e),
+                firstPageLoaded: e.session.firstPageLoaded,
+                initialUserAvailabilityIsSet: e.session.initialUserAvailabilityIsSet
+            }
+        }
+
+        function o(e) {
+            return Object(m.bindActionCreators)({
+                changeTheme: _e.b,
+                initialUserAvailabilitySet: ke.g
+            }, e)
+        }
+
+        function s(e) {
+            return Object(m.bindActionCreators)({
+                login: function() {
+                    return Object(g.f)(p.a.TopNavSignupButton)
+                },
+                logout: g.g,
+                signup: function() {
+                    return Object(g.h)(p.a.TopNavSignupButton)
+                }
+            }, e)
+        }
+
+        function l(e) {
+            return {
+                isLoggedIn: Object(f.d)(e)
+            }
+        }
+        var c, d = n(7),
+            u = n(10),
+            m = n(9),
+            p = n(48),
+            g = n(31),
+            f = n(17),
+            h = n(0),
+            v = n(1),
+            y = n(2),
+            k = n(376),
+            _ = n(389),
+            b = n(47),
+            S = n(12),
+            N = n(5),
+            E = n(390),
+            C = Object(d.a)(i)(E.b),
+            w = n(22),
+            O = n(39),
+            U = n(18),
+            x = n(107),
+            F = n(265),
+            T = n(64),
+            D = n(4),
+            R = n(28),
+            I = n(129),
+            P = n(49),
+            L = n(378),
+            j = n(386),
+            A = n(6),
+            H = n(56),
+            B = n(3),
+            V = (n(407), n(408)),
+            q = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return h.__extends(t, e), t.prototype.render = function() {
+                    var e, t = {
+                        "search-live-result-card": !0,
+                        "search-live-result-card--hover": this.props.borderHover
+                    };
+                    return this.props.data && !this.props.data.loading && this.props.data.user && this.props.data.user.stream && (e = this.props.data.user.stream.previewImageURL), v.createElement(B.U, {
+                        className: D(t),
+                        key: this.props.id,
+                        fullWidth: !0
+                    }, v.createElement(B.S, h.__assign({
+                        linkTo: this.props.linkTo,
+                        hover: this.props.borderHover,
+                        tabIndex: -1,
+                        "data-a-target": "search-live-result-card-link"
+                    }, Object(H.a)(this.props)), v.createElement(B.A, null, v.createElement(B.U, {
+                        className: "search-live-result-card__wrapper",
+                        position: B._2.Relative,
+                        overflow: B.Y.Hidden,
+                        fullWidth: !0
+                    }, v.createElement(B.C, {
+                        imageSrc: e || y.a.defaultStreamPreviewURL,
+                        imageAlt: this.props.imageAlt,
+                        aspect: B.k.Aspect16x9
+                    }), v.createElement(B._17, {
+                        className: "search-live-result-card__overlay",
+                        position: B._2.Absolute,
+                        attachLeft: !0,
+                        attachTop: !0,
+                        attachRight: !0,
+                        attachBottom: !0,
+                        display: B.H.Flex,
+                        flexDirection: B.J.Column,
+                        justifyContent: B.T.End,
+                        overflow: B.Y.Hidden,
+                        color: B.F.Overlay
+                    }, v.createElement(B.B, null, v.createElement(B.U, {
+                        className: "search-live-result-card__body",
+                        padding: .5
+                    }, v.createElement(B._21, {
+                        type: B._26.H5,
+                        ellipsis: !0,
+                        className: "search-live-result-card__title"
+                    }, this.props.channelName), v.createElement(B.U, {
+                        className: "search-live-result-card__viewer-count-container",
+                        display: B.H.Flex,
+                        alignItems: B.c.Center
+                    }, v.createElement(B.U, {
+                        margin: {
+                            right: .5
+                        },
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        flexShrink: 0
+                    }, v.createElement(B._8, {
+                        asset: B._9.GlyphLive,
+                        type: B._10.Live,
+                        width: 14,
+                        height: 14
+                    })), v.createElement(B._21, {
+                        className: "search-live-result-card__viewer-count",
+                        ellipsis: !0
+                    }, Object(y.e)(this.props.viewerCount))), v.createElement(B._21, {
+                        className: "search-live-result-card__info",
+                        ellipsis: !0
+                    }, this.props.title))))))))
+                }, t = h.__decorate([Object(A.a)(V, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                login: e.login
+                            }
+                        }
+                    }
+                })], t)
+            }(v.Component),
+            M = (n(409), function(e) {
+                var t, n, i;
+                e.title && (e.hitsCount && e.hitsCount > 0 ? t = Object(y.d)("more", "SearchResultSection") : e.totalHitsCount && e.totalHitsCount > 0 && (t = Object(y.d)("Show", "SearchResultSection")), void 0 !== e.totalHitsCount && (i = v.createElement(B.Z, {
+                    type: B._0.Brand,
+                    label: e.totalHitsCount < 100 ? Object(y.e)(e.totalHitsCount) : "99+"
+                })), n = v.createElement(B.S, h.__assign({
+                    onClick: e.onHeaderClick,
+                    tabIndex: -1
+                }, Object(B._39)(e), {
+                    "data-ts_selectable": !0
+                }), v.createElement(B.U, {
+                    className: "search-result-view__titlesep search-result-view--no-hover",
+                    display: B.H.Flex,
+                    justifyContent: B.T.Between
+                }, v.createElement("div", null, v.createElement(B.U, {
+                    display: B.H.Inline,
+                    margin: {
+                        right: 1
+                    }
+                }, v.createElement(B._21, {
+                    type: B._26.Span,
+                    color: B.F.Link,
+                    fontSize: B.L.Size7,
+                    transform: B._25.Uppercase
+                }, e.title)), i), v.createElement(B._21, {
+                    fontSize: B.L.Size7,
+                    transform: B._25.Uppercase
+                }, t))));
+                var a;
+                return (Array.isArray(e.children) && e.children.length > 0 || e.children && !Array.isArray(e.children)) && (a = v.createElement(B.U, {
+                    className: "search-result-view__listing-wrapper",
+                    margin: {
+                        top: .5,
+                        bottom: .5
+                    }
+                }, e.children)), v.createElement("div", {
+                    className: "search-result-view__block"
+                }, n, a)
+            }),
+            z = (n(410), function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return h.__extends(t, e), t.prototype.render = function() {
+                    return v.createElement(B.U, {
+                        className: "search-title-bar " + (this.props.showBack ? "search-title-bar--show" : ""),
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        "data-a-target": "nav-search-title-bar"
+                    }, v.createElement(B._17, {
+                        className: "search-title-bar__back-container",
+                        display: B.H.Flex,
+                        alignItems: B.c.Stretch,
+                        borderRight: !0
+                    }, v.createElement(B.v, {
+                        icon: B._9.AngleLeft,
+                        type: B.w.Secondary,
+                        size: B.x.Large,
+                        onClick: this.props.onBackClick,
+                        ariaLabel: Object(y.d)("Back button", "SearchTitleBar"),
+                        "data-ts_selectable": this.props.showBack,
+                        "data-a-target": "nav-search-back"
+                    })), v.createElement(B.U, {
+                        className: "search-title-bar__title"
+                    }, v.createElement(B._21, {
+                        fontSize: B.L.Size5
+                    }, this.props.title)))
+                }, t
+            }(v.Component)),
+            W = n(269),
+            G = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleOptionChange = function(e) {
+                        var n = e.currentTarget.elements;
+                        t.props.onOptionsChange({
+                            type: +n.type.value,
+                            length: +n.video_length.value,
+                            sort: +n.sort.value
+                        })
+                    }, t
+                }
+                return h.__extends(t, e), t.prototype.render = function() {
+                    return v.createElement(B._17, {
+                        className: "search__video-filters",
+                        background: B.m.Alt,
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, v.createElement(B.P, {
+                        display: B.H.Flex,
+                        justifyContent: B.T.Between
+                    }, v.createElement("form", {
+                        onInput: this.handleOptionChange
+                    }, v.createElement(B.U, {
+                        flexShrink: 0
+                    }, v.createElement(B.U, {
+                        display: B.H.InlineFlex,
+                        margin: {
+                            right: 1
+                        }
+                    }, v.createElement(B._14, {
+                        name: "type"
+                    }, v.createElement("option", {
+                        value: W.c.AllVideos
+                    }, Object(y.d)("All Videos", "search__video-filters")), v.createElement("option", {
+                        value: W.c.PastBroadcasts
+                    }, Object(y.d)("Past Broadcasts", "search__video-filters")), v.createElement("option", {
+                        value: W.c.Uploads
+                    }, Object(y.d)("Uploads", "search__video-filters")), v.createElement("option", {
+                        value: W.c.Highlights
+                    }, Object(y.d)("Highlights", "search__video-filters")))), v.createElement(B.U, {
+                        display: B.H.InlineFlex
+                    }, v.createElement(B._14, {
+                        name: "video_length"
+                    }, v.createElement("option", {
+                        value: W.a.AnyLength
+                    }, Object(y.d)("Any Length", "search__video-filters")), v.createElement("option", {
+                        value: W.a.Short
+                    }, Object(y.d)("Short", "search__video-filters")), v.createElement("option", {
+                        value: W.a.Long
+                    }, Object(y.d)("Long", "search__video-filters"))))), v.createElement(B.U, {
+                        display: B.H.InlineFlex,
+                        flexShrink: 0
+                    }, v.createElement(B._14, {
+                        name: "sort"
+                    }, v.createElement("option", {
+                        value: W.b.Popular
+                    }, Object(y.d)("Popular", "search__video-filters")), v.createElement("option", {
+                        value: W.b.Newest
+                    }, Object(y.d)("Newest", "search__video-filters")))))))
+                }, t
+            }(v.Component),
+            K = n(66),
+            Q = (n(411), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onBackClick = function() {
+                        return t.headerSelect(null)
+                    }, t.gameHeaderSelect = function() {
+                        return t.headerSelect(K.a.Games)
+                    }, t.liveHeaderSelect = function() {
+                        return t.headerSelect(K.a.Channels)
+                    }, t.userHeaderSelect = function() {
+                        return t.headerSelect(K.a.Users)
+                    }, t.videoHeaderSelect = function() {
+                        return t.headerSelect(K.a.Videos)
+                    }, t.communityHeaderSelect = function() {
+                        return t.headerSelect(K.a.Communities)
+                    }, t.headerSelect = function(e) {
+                        t.props.onCategorySelected(e)
+                    }, t.onClick = function(e) {
+                        if (e.nativeEvent.stopImmediatePropagation(), e.target !== e.currentTarget) {
+                            var n = e.target,
+                                i = n.querySelector("a"),
+                                a = i ? i.querySelector("[data-tt_content]") : null;
+                            a || (i = n.closest("a")), a = i && i.dataset.tt_content ? i : null, a && t.props.onResultSelected()
+                        }
+                    }, t.setScrollRef = function(e) {
+                        return t.scroll = e
+                    }, t
+                }
+                return h.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                    this.previousCategory !== this.props.currentCategory && (this.previousCategory = this.props.currentCategory, this.scroll.scrollToTop())
+                }, t.prototype.render = function() {
+                    var e, t = {
+                        "search-result-view": !0,
+                        "search-result-view--active": !0,
+                        "search-result-view--filtered": this.props.currentCategory === K.a.Videos
+                    };
+                    e = this.props.currentCategory && null !== this.props.currentCategory ? v.createElement(z, {
+                        title: this.getCategoryTitle(this.props.currentCategory),
+                        showBack: !0,
+                        onBackClick: this.onBackClick
+                    }) : v.createElement(z, {
+                        title: Object(y.d)("Top Results", "SearchResultPanel__titlebar"),
+                        showBack: !1
+                    });
+                    var n;
+                    n = this.props.isWaiting ? v.createElement(B.X, {
+                        fillContent: !0
+                    }) : this.props.isErrored ? this.getErrorMessage() : this.props.currentCategory && null !== this.props.currentCategory ? this.getCategoryDrillDown(this.props.currentCategory) : this.props.gameResults && this.props.gameResults.totalHits > 0 || this.props.userResults && this.props.userResults.totalHits > 0 || this.props.communityResults && this.props.communityResults.totalHits > 0 || this.props.videoResults && this.props.videoResults.totalHits > 0 || this.props.liveResults && this.props.liveResults.totalHits > 0 ? this.getResultSections() : this.getNoResultsMessage();
+                    var i;
+                    return this.props.currentCategory === K.a.Videos && (i = v.createElement(G, {
+                        key: "video-filters",
+                        onOptionsChange: this.props.onVideoOptionsChange
+                    })), v.createElement("div", {
+                        className: "search-panel " + (this.props.isOpen ? "" : "search-panel--closed"),
+                        tabIndex: 0,
+                        onKeyDown: this.props.onKeyDown
+                    }, e, i, v.createElement(B._17, {
+                        className: D(t),
+                        background: B.m.Base,
+                        position: B._2.Absolute,
+                        overflow: B.Y.Hidden,
+                        display: B.H.Block
+                    }, v.createElement(R.b, {
+                        className: "search-result-view__wrapper",
+                        contentClassName: "search-result-view__scroll-container",
+                        onClick: this.onClick,
+                        scrollRef: this.setScrollRef,
+                        suppressScrollX: !0,
+                        "data-a-target": "search-scroller"
+                    }, v.createElement(B.U, {
+                        fullWidth: !0
+                    }, n, v.createElement(R.a, {
+                        key: this.props.currentCategory || "none",
+                        enabled: !this.props.isWaiting && this.props.isOpen,
+                        loadMore: this.props.loadMore
+                    })))))
+                }, t.prototype.getResultSections = function() {
+                    var e, t = [],
+                        n = [],
+                        i = this.getGameCards(),
+                        a = this.getUserCards(),
+                        r = this.getCommunityCards(),
+                        o = this.getVideoCards(),
+                        s = this.getLiveCards();
+                    return s.length > 0 && (e = v.createElement(B.U, {
+                        className: "search-result-view__live",
+                        margin: {
+                            y: 1,
+                            x: 1
+                        }
+                    }, v.createElement(B.N, null, s))), this.getResultSection("games-section", K.a.Games, this.gameHeaderSelect, this.props.gameResults, i.length, i, n, t), this.getResultSection("live-section", K.a.Channels, this.liveHeaderSelect, this.props.liveResults, s.length, e, n, t), this.getResultSection("channels-section", K.a.Users, this.userHeaderSelect, this.props.userResults, a.length, a, n, t), this.getResultSection("videos-section", K.a.Videos, this.videoHeaderSelect, this.props.videoResults, o.length, o, n, t), this.getResultSection("communities-section", K.a.Communities, this.communityHeaderSelect, this.props.communityResults, r.length, r, n, t), t.concat(n)
+                }, t.prototype.getResultSection = function(e, t, n, i, a, r, o, s) {
+                    var l = v.createElement(M, {
+                        key: e,
+                        totalHitsCount: i ? i.totalHits : 0,
+                        hitsCount: a,
+                        title: this.getCategoryTitle(t),
+                        onHeaderClick: n,
+                        "data-a-target": e
+                    }, r);
+                    0 === a ? o.push(l) : s.push(l)
+                }, t.prototype.getGameCards = function() {
+                    return this.props.gameResults ? this.props.gameResults.results.map(function(e) {
+                        return v.createElement(j.a, {
+                            id: "game_" + e.id,
+                            key: "game_" + e.id,
+                            imageAlt: e.thumbnailAltText,
+                            linkTo: e.linkTo,
+                            title: e.title,
+                            "data-ts_selectable": !0,
+                            "data-tt_content": !0
+                        })
+                    }) : []
+                }, t.prototype.getLiveCards = function() {
+                    return this.props.liveResults ? this.props.liveResults.results.map(function(e) {
+                        var t = Object(P.a)(e.login || "", e.name || "");
+                        return v.createElement(B.G, {
+                            key: "live_" + e.id,
+                            cols: 6
+                        }, v.createElement(B.U, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, v.createElement(q, {
+                            id: "live_" + e.id,
+                            imageAlt: e.thumbnailAltText,
+                            linkTo: e.linkTo,
+                            title: e.status || "",
+                            login: e.login ? e.login : "",
+                            channelName: t,
+                            viewerCount: e.viewerCount || 0,
+                            "data-ts_selectable": !0,
+                            "data-tt_content": !0
+                        })))
+                    }) : []
+                }, t.prototype.getUserCards = function() {
+                    return this.props.userResults ? this.props.userResults.results.map(function(e) {
+                        var t = Object(P.a)(e.login || "", e.name || "");
+                        return v.createElement(B.S, {
+                            linkTo: e.linkTo,
+                            tabIndex: -1,
+                            "data-ts_selectable": !0,
+                            "data-tt_content": !0,
+                            key: e.id
+                        }, v.createElement(B.U, {
+                            padding: {
+                                y: .5,
+                                x: 1
+                            }
+                        }, v.createElement(B.A, {
+                            row: !0
+                        }, v.createElement(B.C, {
+                            imageAlt: e.thumbnailAltText,
+                            imageSrc: e.thumbnail ? e.thumbnail : "",
+                            size: B.D.Size4,
+                            aspect: B.k.Aspect1x1
+                        }), v.createElement(B.B, null, v.createElement(B.P, {
+                            padding: {
+                                x: 1
+                            }
+                        }, v.createElement(B._21, {
+                            type: B._26.H5,
+                            ellipsis: !0
+                        }, t))))))
+                    }) : []
+                }, t.prototype.getVideoCards = function() {
+                    return this.props.videoResults ? this.props.videoResults.results.map(function(e) {
+                        var t = Object(P.a)(e.login || "", e.name || ""),
+                            n = Object(L.a)(e.length || 0);
+                        return v.createElement(B.S, {
+                            key: "video_" + e.id,
+                            linkTo: e.linkTo,
+                            tabIndex: -1,
+                            "data-ts_selectable": !0,
+                            "data-tt_content": !0
+                        }, v.createElement(B.U, {
+                            className: "search-panel__card",
+                            fullWidth: !0,
+                            padding: {
+                                y: .5,
+                                x: 1
+                            }
+                        }, v.createElement(B.A, {
+                            row: !0
+                        }, v.createElement(B.C, {
+                            imageSrc: e.thumbnail ? e.thumbnail : "",
+                            imageAlt: e.thumbnailAltText,
+                            size: B.D.Size8,
+                            aspect: B.k.Aspect16x9
+                        }), v.createElement(B.B, null, v.createElement(B.P, {
+                            margin: {
+                                left: 1
+                            }
+                        }, v.createElement(B._21, {
+                            type: B._26.H5,
+                            ellipsis: !0
+                        }, e.title)), v.createElement(B.P, {
+                            margin: {
+                                left: 1
+                            }
+                        }, v.createElement(B._21, {
+                            className: "search-panel__link",
+                            ellipsis: !0
+                        }, e.createdAt ? Object(y.c)(new Date(1e3 * e.createdAt), "medium") : "", " · ", n || "", " · ", v.createElement(B._21, {
+                            className: "search-pannel__highlight-link",
+                            type: B._26.Span
+                        }, t)))))))
+                    }) : []
+                }, t.prototype.getCommunityCards = function() {
+                    return this.props.communityResults ? this.props.communityResults.results.map(function(e) {
+                        return v.createElement(B.S, {
+                            key: "community_" + e.id,
+                            targetBlank: Object(I.b)(),
+                            linkTo: Object(I.a)(e.linkTo),
+                            tabIndex: -1,
+                            "data-ts_selectable": !0,
+                            "data-tt_content": !0
+                        }, v.createElement(B.U, {
+                            className: "search-panel__card",
+                            fullWidth: !0,
+                            padding: {
+                                y: .5,
+                                x: 1
+                            }
+                        }, v.createElement(B.A, {
+                            row: !0
+                        }, v.createElement(B.C, {
+                            imageSrc: e.thumbnail ? e.thumbnail : "",
+                            imageAlt: e.thumbnailAltText,
+                            size: B.D.Size4,
+                            aspect: B.k.BoxArt
+                        }), v.createElement(B.B, null, v.createElement(B.P, {
+                            margin: {
+                                left: 1
+                            }
+                        }, v.createElement(B._21, {
+                            type: B._26.H5,
+                            ellipsis: !0
+                        }, e.name)), v.createElement(B.P, {
+                            margin: {
+                                left: 1
+                            }
+                        }, v.createElement(B._21, {
+                            className: "search-panel__link",
+                            ellipsis: !0
+                        }, Object(y.d)("{viewerCount,number} Viewers", {
+                            viewerCount: e.viewerCount || 0
+                        }, "SearchResultPanel")))))))
+                    }) : []
+                }, t.prototype.getCategoryDrillDown = function(e) {
+                    var t;
+                    switch (e) {
+                        case K.a.Games:
+                            if (!this.props.gameResults || 0 === this.props.gameResults.totalHits) return this.getNoResultsMessage();
+                            t = this.getGameCards();
+                            break;
+                        case K.a.Users:
+                            if (!this.props.userResults || 0 === this.props.userResults.totalHits) return this.getNoResultsMessage();
+                            t = this.getUserCards();
+                            break;
+                        case K.a.Communities:
+                            if (!this.props.communityResults || 0 === this.props.communityResults.totalHits) return this.getNoResultsMessage();
+                            t = this.getCommunityCards();
+                            break;
+                        case K.a.Videos:
+                            if (!this.props.videoResults || 0 === this.props.videoResults.totalHits) return this.getNoResultsMessage();
+                            t = this.getVideoCards();
+                            break;
+                        case K.a.Channels:
+                            if (!this.props.liveResults || 0 === this.props.liveResults.totalHits) return this.getNoResultsMessage();
+                            t = [v.createElement(B.U, {
+                                className: "search-result-view__live",
+                                margin: {
+                                    x: 1
+                                },
+                                key: "live_drill-down-container"
+                            }, v.createElement(B.N, null, this.getLiveCards()))];
+                            break;
+                        default:
+                            return this.getNoResultsMessage()
+                    }
+                    return v.createElement(M, null, t)
+                }, t.prototype.getCategoryTitle = function(e) {
+                    switch (e) {
+                        case K.a.Games:
+                            return Object(y.d)("Games", "SearchResultPanel");
+                        case K.a.Users:
+                            return Object(y.d)("Channels", "SearchResultPanel");
+                        case K.a.Communities:
+                            return Object(y.d)("Communities", "SearchResultPanel");
+                        case K.a.Videos:
+                            return Object(y.d)("Videos", "SearchResultPanel");
+                        case K.a.Channels:
+                            return Object(y.d)("Live", "SearchResultPanel");
+                        default:
+                            return Object(y.d)("Top Results", "SearchResultPanel")
+                    }
+                }, t.prototype.getNoResultsMessage = function() {
+                    return v.createElement(B.U, {
+                        display: B.H.Flex,
+                        flexDirection: B.J.Column,
+                        justifyContent: B.T.Center,
+                        alignItems: B.c.Center,
+                        className: "notice-wrap aspect__fill"
+                    }, v.createElement(B.U, {
+                        className: "notice-wrap__visual",
+                        textAlign: B._22.Center,
+                        flexShrink: 1
+                    }, v.createElement(B._8, {
+                        asset: B._9.SearchNoResults,
+                        width: 46,
+                        height: 48
+                    })), v.createElement("h4", {
+                        className: "notice-wrap__title flex__item",
+                        "data-test-selector": "panel-body-no-results"
+                    }, Object(y.d)("No results found", "SearchResultPanel")), v.createElement("p", {
+                        className: "notice-wrap__text flex__item"
+                    }, Object(y.d)("They're probably in another castle", "SearchResultPanel")))
+                }, t.prototype.getErrorMessage = function() {
+                    return v.createElement(B.U, {
+                        display: B.H.Flex,
+                        flexDirection: B.J.Column,
+                        justifyContent: B.T.Center,
+                        alignItems: B.c.Center,
+                        className: "notice-wrap aspect__fill"
+                    }, v.createElement(B.U, {
+                        className: "notice-wrap__visual",
+                        textAlign: B._22.Center,
+                        flexShrink: 1
+                    }, v.createElement(B._8, {
+                        asset: B._9.DeadGlitch,
+                        width: 46,
+                        height: 48
+                    })), v.createElement("h4", {
+                        "data-test-selector": "search-error-message",
+                        className: "notice-wrap__title flex__item"
+                    }, Object(y.d)("Search is not available at this time", "SearchResultPanel")), v.createElement("p", {
+                        className: "notice-wrap__text flex__item"
+                    }, Object(y.d)("Please try again later", "SearchResultPanel")))
+                }, t
+            }(v.Component)),
+            $ = (n(412), function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.state = {
+                        isAnimating: !1,
+                        currentCategory: t.currentCategory
+                    }, n
+                }
+                return h.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    var t = this;
+                    e.currentCategory && e.currentCategory !== this.props.currentCategory && this.setState({
+                        currentCategory: e.currentCategory
+                    }), this.props.isVisible !== e.isVisible && (this.animationTimeout && window.clearTimeout(this.animationTimeout), this.setState({
+                        isAnimating: !0
+                    }), this.animationTimeout = window.setTimeout(function() {
+                        t.setState({
+                            isAnimating: !1
+                        })
+                    }, 300))
+                }, t.prototype.componentWillUnmount = function() {
+                    this.animationTimeout && window.clearTimeout(this.animationTimeout)
+                }, t.prototype.render = function() {
+                    if (!this.state.currentCategory) return null;
+                    var e = this.getAssetName(this.state.currentCategory);
+                    return this.props.isVisible || this.state.isAnimating ? v.createElement(B.U, {
+                        className: "search-tag"
+                    }, v.createElement(B.e, {
+                        enabled: !0,
+                        type: this.props.isVisible ? B.i.BounceIn : B.i.BounceOut
+                    }, v.createElement(B._20, {
+                        label: this.state.currentCategory,
+                        icon: e,
+                        onClose: this.props.onClick,
+                        "data-test-selector": "filter-icon",
+                        "data-a-target": "nav-search-clear"
+                    }))) : null
+                }, t.prototype.getAssetName = function(e) {
+                    switch (e) {
+                        case K.a.Games:
+                            return B._9.NavGames;
+                        case K.a.Users:
+                            return B._9.NavProfile;
+                        case K.a.Communities:
+                            return B._9.Communities;
+                        case K.a.Videos:
+                            return B._9.NavVideos;
+                        case K.a.Channels:
+                        default:
+                            return B._9.NavChannels
+                    }
+                }, t
+            }(v.Component)),
+            X = (n(413), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleChange = function(e) {
+                        t.props.onChange(e.target.value)
+                    }, t.categoryTagClicked = function(e) {
+                        e.nativeEvent.stopImmediatePropagation(), t.props.onCategorySelected(null)
+                    }, t
+                }
+                return h.__extends(t, e), t.prototype.render = function() {
+                    return v.createElement("div", null, v.createElement("div", {
+                        className: "top-nav__search-container",
+                        "data-click-out-id": "nav-search-balloon"
+                    }, v.createElement(T.a, {
+                        onClickOut: this.props.onClickOut
+                    }, v.createElement(B._11, {
+                        onChange: this.handleChange,
+                        onFocus: this.props.onFocus,
+                        onKeyDown: this.props.onKeyDown,
+                        placeholder: Object(y.d)("Search", "NavSearch"),
+                        id: "nav-search-input",
+                        "data-a-target": "nav-search-input",
+                        spellCheck: !1
+                    }), v.createElement(B.p, {
+                        direction: B.q.Bottom,
+                        noTail: !0,
+                        size: B.r.Large,
+                        show: this.props.isOpen,
+                        offsetY: "5px",
+                        "data-a-target": "nav-search-balloon"
+                    }, v.createElement(Q, {
+                        isOpen: this.props.isOpen,
+                        gameResults: this.props.gameResults,
+                        userResults: this.props.userResults,
+                        communityResults: this.props.communityResults,
+                        videoResults: this.props.videoResults,
+                        liveResults: this.props.liveResults,
+                        isErrored: this.props.isErrored,
+                        isWaiting: this.props.isWaiting,
+                        onResultSelected: this.props.onResultSelected,
+                        onCategorySelected: this.props.onCategorySelected,
+                        currentCategory: this.props.currentCategory,
+                        onVideoOptionsChange: this.props.onVideoOptionsChange,
+                        loadMore: this.props.loadMore,
+                        onKeyDown: this.props.onKeyDown
+                    })), v.createElement($, {
+                        isVisible: this.props.isOpen && !!this.props.currentCategory,
+                        currentCategory: this.props.currentCategory,
+                        onClick: this.categoryTagClicked
+                    }))))
+                }, t
+            }(v.Component)),
+            J = 50,
+            Y = function(e) {
+                function t() {
+                    var t = e.call(this) || this;
+                    return t.onCategorySelected = function(e) {
+                        t.setState(h.__assign({}, t.getEmptyState(), {
+                            term: t.state.term,
+                            currentCategory: e,
+                            isOpen: !0,
+                            isWaiting: !0
+                        }), function() {
+                            t.doSearch(t.state.term)
+                        })
+                    }, t.onChange = function(e) {
+                        if (t.inputTimer && (clearTimeout(t.inputTimer), t.inputTimer = 0), !e) return void t.setState(t.getEmptyState());
+                        t.setState({
+                            topGameResults: null,
+                            topUserResults: null,
+                            topLiveResults: null,
+                            topVideoResults: null,
+                            topCommunityResults: null,
+                            isWaiting: !0
+                        }), t.inputTimer = setTimeout(function() {
+                            return t.doSearch(e)
+                        }, J)
+                    }, t.onHistoryChange = function() {
+                        t.state.isOpen && t.setState({
+                            isOpen: !1
+                        })
+                    }, t.onClickOut = function() {
+                        t.state.isOpen && t.setState({
+                            isOpen: !1
+                        })
+                    }, t.onFocus = function() {
+                        t.state.term && !t.state.isOpen && t.setState({
+                            isOpen: !0
+                        })
+                    }, t.onKeyDown = function(e) {
+                        t.state.term && (e.keyCode === O.a.Esc ? t.setState({
+                            isOpen: !1
+                        }) : e.keyCode === O.a.Up ? t.focusNext(-1) : e.keyCode === O.a.Down && t.focusNext(1))
+                    }, t.onResultSelected = function() {
+                        t.setState({
+                            isOpen: !1
+                        })
+                    }, t.loadMore = function() {
+                        return h.__awaiter(t, void 0, void 0, function() {
+                            var e, t, n, i;
+                            return h.__generator(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        if (this.state.queryID || null === this.state.currentCategory || !0 === this.state.exhaustedHits) return [2];
+                                        e = this.state.currentPage + 1, a.label = 1;
+                                    case 1:
+                                        return a.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(this.state.currentCategory, this.state.term, "", {
+                                            page: e
+                                        })];
+                                    case 2:
+                                        return t = a.sent(), [3, 4];
+                                    case 3:
+                                        return n = a.sent(), y.i.error(n, "Algolia page search failed"), this.setState(h.__assign({}, this.getEmptyState(), {
+                                            isErrored: !0,
+                                            isOpen: !0
+                                        })), [2];
+                                    case 4:
+                                        return t ? (i = Object(F.b)({
+                                            searchResults: t,
+                                            append: e > 0,
+                                            currentGameResults: this.state.currentGameResults,
+                                            currentUserResults: this.state.currentUserResults,
+                                            currentCommunityResults: this.state.currentCommunityResults,
+                                            currentVideoResults: this.state.currentVideoResults,
+                                            currentLiveResults: this.state.currentLiveResults
+                                        }), this.setState(h.__assign({}, i, {
+                                            term: this.state.term,
+                                            isOpen: !0,
+                                            isWaiting: !1,
+                                            currentPage: e,
+                                            exhaustedHits: i.exhaustedHits
+                                        })), [2]) : (this.setState(h.__assign({}, this.getEmptyState(), {
+                                            isErrored: !0,
+                                            isOpen: !0
+                                        })), [2])
+                                }
+                            })
+                        })
+                    }, t.changeVideoOptions = function(e) {
+                        return h.__awaiter(t, void 0, void 0, function() {
+                            var t, n, i;
+                            return h.__generator(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        t = U.a(), a.label = 1;
+                                    case 1:
+                                        return a.trys.push([1, 3, , 4]), [4, this.searchClient.queryVideos(this.state.term, t, e)];
+                                    case 2:
+                                        return n = a.sent(), n.hits && this.setState({
+                                            currentVideoResults: {
+                                                totalHits: n.totalHits,
+                                                results: n.hits.map(F.a)
+                                            },
+                                            queryID: ""
+                                        }), [3, 4];
+                                    case 3:
+                                        return i = a.sent(), y.i.error(i, "Algolia video search failed"), this.setState({
+                                            isErrored: !0
+                                        }), [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t.searchClient = new x.a(y.a.algoliaApplicationID, y.a.algoliaAPIKey), t.state = t.getEmptyState(), t
+                }
+                return h.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive(), this.props.history.listen(this.onHistoryChange)
+                }, t.prototype.componentDidUpdate = function() {
+                    !this.state.focusSelectable || this.state.queryID || this.inputTimer || (this.focusNext(1), this.setState({
+                        focusSelectable: !1
+                    }))
+                }, t.prototype.render = function() {
+                    return v.createElement(X, {
+                        onChange: this.onChange,
+                        onClickOut: this.onClickOut,
+                        onFocus: this.onFocus,
+                        onKeyDown: this.onKeyDown,
+                        onResultSelected: this.onResultSelected,
+                        gameResults: this.state.currentGameResults,
+                        userResults: this.state.currentUserResults,
+                        communityResults: this.state.currentCommunityResults,
+                        videoResults: this.state.currentVideoResults,
+                        liveResults: this.state.currentLiveResults,
+                        isOpen: this.state.isOpen,
+                        isErrored: this.state.isErrored,
+                        isWaiting: this.state.isWaiting,
+                        onCategorySelected: this.onCategorySelected,
+                        currentCategory: this.state.currentCategory,
+                        onVideoOptionsChange: this.changeVideoOptions,
+                        loadMore: this.loadMore
+                    })
+                }, t.prototype.focusNext = function(e) {
+                    var t, n = document.querySelectorAll("[data-ts_selectable=true]"),
+                        i = document.activeElement,
+                        a = Array.prototype.indexOf.call(n, i);
+                    if (t = a < 0 ? e > 0 ? 0 : n.length - 1 : a + e, t < 0 && (t = 0), !(t >= n.length)) {
+                        var r = n.item(t);
+                        r.focus(), r.tabIndex = 0, this.state.currentFocus && (this.state.currentFocus.tabIndex = -1), this.setState({
+                            currentFocus: r
+                        })
+                    }
+                }, t.prototype.doSearch = function(e) {
+                    return h.__awaiter(this, void 0, void 0, function() {
+                        var t, n, i, a, r, o;
+                        return h.__generator(this, function(s) {
+                            switch (s.label) {
+                                case 0:
+                                    this.inputTimer = 0, t = -1, n = U.a(), i = "INPUT" === document.activeElement.tagName, this.setState({
+                                        queryID: n,
+                                        focusSelectable: !i && !!this.state.currentFocus
+                                    }), s.label = 1;
+                                case 1:
+                                    return s.trys.push([1, 6, , 7]), this.state.currentCategory && null !== this.state.currentCategory ? (t = 0, [4, this.searchClient.queryForType(this.state.currentCategory, e, n)]) : [3, 3];
+                                case 2:
+                                    return a = s.sent(), [3, 5];
+                                case 3:
+                                    return this.state.topGameResults && this.state.topUserResults && this.state.topLiveResults && this.state.topVideoResults && this.state.topCommunityResults ? (this.setState({
+                                        currentGameResults: this.state.topGameResults,
+                                        currentUserResults: this.state.topUserResults,
+                                        currentLiveResults: this.state.topLiveResults,
+                                        currentVideoResults: this.state.topVideoResults,
+                                        currentCommunityResults: this.state.topCommunityResults,
+                                        queryID: "",
+                                        term: e,
+                                        isOpen: !0,
+                                        isWaiting: !1,
+                                        currentPage: t
+                                    }), [2]) : [4, this.searchClient.queryTopResults(e, n)];
+                                case 4:
+                                    a = s.sent(), s.label = 5;
+                                case 5:
+                                    return [3, 7];
+                                case 6:
+                                    return r = s.sent(), y.i.error(r, "Algolia top results search failed"), this.setState(h.__assign({}, this.getEmptyState(), {
+                                        isErrored: !0,
+                                        isOpen: !0,
+                                        term: e
+                                    })), [2];
+                                case 7:
+                                    return a ? this.state.queryID !== a.id ? [2] : (o = Object(F.b)({
+                                        searchResults: a,
+                                        append: !1,
+                                        currentGameResults: this.state.currentGameResults,
+                                        currentUserResults: this.state.currentUserResults,
+                                        currentCommunityResults: this.state.currentCommunityResults,
+                                        currentVideoResults: this.state.currentVideoResults,
+                                        currentLiveResults: this.state.currentLiveResults
+                                    }), this.state.currentCategory && null === this.state.currentCategory && (o = h.__assign({}, o, {
+                                        topGameResults: o.currentGameResults,
+                                        topUserResults: o.currentUserResults,
+                                        topLiveResults: o.currentLiveResults,
+                                        topVideoResults: o.currentVideoResults,
+                                        topCommunityResults: o.currentCommunityResults,
+                                        exhaustedHits: o.exhaustedHits
+                                    })), this.setState(function(n) {
+                                        return h.__assign({}, n, o, {
+                                            queryID: "",
+                                            term: e,
+                                            isOpen: !0,
+                                            isWaiting: !1,
+                                            currentPage: t
+                                        })
+                                    }), [2]) : (this.setState(h.__assign({}, this.getEmptyState(), {
+                                        isErrored: !0,
+                                        isOpen: !0,
+                                        term: e
+                                    })), [2])
+                            }
+                        })
+                    })
+                }, t.prototype.getEmptyState = function() {
+                    return {
+                        term: "",
+                        currentGameResults: {
+                            totalHits: 0,
+                            results: []
+                        },
+                        currentUserResults: {
+                            totalHits: 0,
+                            results: []
+                        },
+                        currentLiveResults: {
+                            totalHits: 0,
+                            results: []
+                        },
+                        currentCommunityResults: {
+                            totalHits: 0,
+                            results: []
+                        },
+                        currentVideoResults: {
+                            totalHits: 0,
+                            results: []
+                        },
+                        isOpen: !1,
+                        isErrored: !1,
+                        queryID: "",
+                        isWaiting: !1,
+                        currentCategory: null,
+                        currentPage: -1,
+                        focusSelectable: !1,
+                        exhaustedHits: !1
+                    }
+                }, t = h.__decorate([Object(N.c)("NavSearch")], t)
+            }(v.Component),
+            Z = Object(w.e)(Y),
+            ee = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onLoginClick = function(e) {
+                        e.preventDefault(), t.props.login()
+                    }, t.onSignUpClick = function(e) {
+                        e.preventDefault(), t.props.signup()
+                    }, t
+                }
+                return h.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    return v.createElement(B.U, {
+                        className: "anon-user",
+                        flexWrap: B.K.NoWrap,
+                        display: B.H.Flex,
+                        margin: {
+                            left: 1
+                        },
+                        "data-a-target": "user-card"
+                    }, v.createElement(B.U, {
+                        margin: {
+                            right: 1
+                        }
+                    }, v.createElement(B.u, {
+                        onClick: this.onLoginClick,
+                        "data-a-target": "login-button"
+                    }, Object(y.d)("Log in", "top-nav"))), v.createElement(B.U, {
+                        margin: {
+                            right: 1
+                        }
+                    }, v.createElement(B.u, {
+                        onClick: this.onSignUpClick,
+                        "data-a-target": "signup-button"
+                    }, Object(y.d)("Sign up", "top-nav"))))
+                }, t = h.__decorate([Object(N.c)("AnonUser")], t)
+            }(v.Component),
+            te = ee,
+            ne = n(414),
+            ie = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return h.__extends(t, e), t.prototype.render = function() {
+                    var e = !1;
+                    if (this.props.data) {
+                        if (this.props.data.loading || this.props.data.error) return null;
+                        e = !!this.props.data.currentUser && this.props.data.currentUser.hasPrime
+                    }
+                    return !this.props.isLoggedIn || e ? v.createElement(u.b, {
+                        to: {
+                            pathname: "/store/merch",
+                            state: {
+                                medium: S.PageviewMedium.TopNav,
+                                content: S.PageviewContent.Games
+                            }
+                        },
+                        className: "top-nav__nav-link",
+                        "data-a-target": "store-link",
+                        activeClassName: "active"
+                    }, Object(y.d)("Store", "TopNavStore")) : null
+                }, t = h.__decorate([Object(A.a)(ne, {
+                    skip: function(e) {
+                        return !e.isLoggedIn
+                    }
+                }), Object(N.c)("TopNavStoreComponent", {
+                    autoReportInteractive: !0
+                })], t)
+            }(v.Component),
+            ae = ie,
+            re = Object(d.a)(a)(ae),
+            oe = n(105),
+            se = n(132),
+            le = n(415),
+            ce = Object(I.a)("/products/turbo?ref=top_nav"),
+            de = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return h.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    if (this.props.data.loading || this.props.data.error) return null;
+                    var e = this.props.data.requestInfo && !Object(oe.b)(this.props.data.requestInfo.countryCode),
+                        t = !this.props.data.currentUser || !this.props.data.currentUser.hasTurbo;
+                    if (e && t) return v.createElement("a", {
+                        href: ce,
+                        target: "_blank",
+                        className: "top-nav__nav-link",
+                        "data-a-target": "try-prime-link"
+                    }, Object(y.d)("Go Turbo", "TopNavUpsell"));
+                    if (!this.props.data.currentUser || !this.props.data.currentUser.hasPrime) {
+                        var n = Object(se.d)(se.b, window.location.pathname.substring(1));
+                        return v.createElement("a", {
+                            href: n,
+                            target: "_blank",
+                            className: "top-nav__nav-link",
+                            "data-a-target": "try-prime-link"
+                        }, Object(y.d)("Try Prime", "TopNavUpsell"))
+                    }
+                    return null
+                }, t = h.__decorate([Object(A.a)(le), Object(N.c)("TopNavUpsellComponent")], t)
+            }(v.Component),
+            ue = de,
+            me = n(86),
+            pe = n(106),
+            ge = n(51),
+            fe = n(37),
+            he = n(21),
+            ve = n(30),
+            ye = n(133),
+            ke = n(53),
+            _e = n(131),
+            be = n(52),
+            Se = function() {
+                return v.createElement(B.U, {
+                    display: B.H.Flex,
+                    flexGrow: 1,
+                    alignItems: B.c.Center,
+                    fullHeight: !0,
+                    className: "top-nav__user-card",
+                    "data-a-target": "user-card"
+                }, v.createElement(B.U, {
+                    display: B.H.Flex,
+                    flexWrap: B.K.NoWrap,
+                    alignItems: B.c.Center,
+                    flexGrow: 1,
+                    padding: {
+                        right: 1
+                    },
+                    fullHeight: !0,
+                    className: "top-nav__user-card-wrapper"
+                }, v.createElement(B.U, {
+                    margin: {
+                        x: 1
+                    }
+                }, v.createElement(N.a, {
+                    size: 30,
+                    imageSrc: y.a.defaultAvatarURL,
+                    imageAlt: Object(y.d)("User Avatar", "UserError"),
+                    "data-a-target": "top-nav-avatar"
+                })), v.createElement(B.U, {
+                    flexGrow: 1
+                }, v.createElement(B._17, {
+                    color: B.F.Base,
+                    className: "top-nav__username"
+                }, ""))))
+            },
+            Ne = function() {
+                return v.createElement(B.U, {
+                    display: B.H.Flex,
+                    flexGrow: 1,
+                    alignItems: B.c.Center,
+                    fullHeight: !0,
+                    className: "top-nav__user-card top-nav__user-card--placeholder",
+                    "data-a-target": "user-card"
+                }, v.createElement(B.U, {
+                    display: B.H.Flex,
+                    flexWrap: B.K.NoWrap,
+                    alignItems: B.c.Center,
+                    flexGrow: 1,
+                    padding: {
+                        right: 1
+                    },
+                    fullHeight: !0,
+                    className: "top-nav__user-card-wrapper"
+                }, v.createElement(B.U, {
+                    margin: {
+                        x: 1
+                    }
+                }, v.createElement("div", {
+                    className: "top-nav__user-card-placeholder-avatar"
+                })), v.createElement(B.U, {
+                    flexGrow: 1,
+                    display: B.H.Flex,
+                    flexDirection: B.J.Column,
+                    justifyContent: B.T.Center
+                }, v.createElement(B._17, {
+                    color: B.F.Base,
+                    className: "top-nav__username"
+                }, v.createElement("div", {
+                    className: "top-nav__user-card-placeholder-name"
+                })), v.createElement(B.U, {
+                    className: "top-nav__user-status"
+                }, v.createElement(B.U, {
+                    ellipsis: !0,
+                    display: B.H.Flex,
+                    alignItems: B.c.Center
+                }, v.createElement(B.U, {
+                    display: B.H.InlineFlex,
+                    margin: {
+                        right: .5
+                    }
+                }, v.createElement("div", {
+                    className: "top-nav__user-card-placeholder-presence"
+                })), v.createElement(B._17, {
+                    display: B.H.InlineFlex,
+                    color: B.F.Alt
+                }, v.createElement("div", {
+                    className: "top-nav__user-card-placeholder-status"
+                }))))), v.createElement(B.U, {
+                    display: B.H.Flex,
+                    flexShrink: 0,
+                    className: "top-nav__user-card-dropdown-arrow top-nav__user-card-dropdown-arrow--presence",
+                    "data-a-target": "top-nav-dropdown-arrow"
+                }, v.createElement(B._8, {
+                    asset: B._9.GlyphArrDown
+                }))))
+            },
+            Ee = n(38),
+            Ce = n(70),
+            we = (n(418), function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.onCardClick = function() {
+                        n.setState({
+                            dropdownOpen: !n.state.dropdownOpen
+                        })
+                    }, n.onClickOut = function() {
+                        n.setState({
+                            dropdownOpen: !1
+                        })
+                    }, n.onLogoutClick = function(e) {
+                        e.preventDefault(), n.props.logout()
+                    }, n.onShareCheckboxClick = function() {
+                        n.props.toggleShareActivity()
+                    }, n.onDarkModeCheckboxClick = function() {
+                        var e = n.props.theme === Ee.a.Dark ? Ee.a.Light : Ee.a.Dark;
+                        n.props.changeTheme(e, _e.a.UserMenu)
+                    }, n.onOnlineClick = function(e) {
+                        e && e.stopPropagation(), n.props.toggleVisibility(ge.a.Online)
+                    }, n.onInvisibleClick = function(e) {
+                        e && e.stopPropagation(), n.props.toggleVisibility(ge.a.Offline)
+                    }, n.unsubscribeFromHistory = n.props.history.listen(function() {
+                        n.setState({
+                            dropdownOpen: !1
+                        })
+                    }), n.state = {
+                        dropdownOpen: !1
+                    }, n
+                }
+                return h.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                    this.unsubscribeFromHistory()
+                }, t.prototype.render = function() {
+                    var e = this.props.gqlData.currentUser.profileImageURL || y.a.defaultAvatarURL,
+                        t = D("top-nav__dropdown-wrapper", {
+                            toggled: this.state.dropdownOpen
+                        }),
+                        n = D("top-nav__user-card", "theme--dark", {
+                            "top-nav__dropdown-open": this.state.dropdownOpen
+                        }),
+                        i = this.state.dropdownOpen ? "dropdown-down" : "dropdown-up",
+                        a = this.state.dropdownOpen ? "dropdown-down" : "dropdown-up",
+                        r = this.props.gqlData.currentUser.availability === ge.a.Offline ? B.F.Base : B.F.Alt2,
+                        o = this.props.gqlData.currentUser.availability === ge.a.Online ? B.F.Base : B.F.Alt2,
+                        s = this.props.gqlData.currentUser.settings.isSharingActivity,
+                        l = this.props.gqlData.currentUser.availability || this.props.gqlData.currentUser.settings.visibility,
+                        c = v.createElement(B.U, {
+                            margin: {
+                                x: 2,
+                                bottom: 1
+                            }
+                        }, v.createElement(B.E, {
+                            id: "dark-mode-toggle",
+                            label: Object(y.d)("Dark Mode", "TopNavUser"),
+                            "data-a-target": "dark-mode-toggle",
+                            "data-test-selector": "dark-mode-toggle",
+                            "data-a-value": this.props.theme,
+                            checked: this.props.theme === Ee.a.Dark,
+                            onChange: this.onDarkModeCheckboxClick
+                        }));
+                    return v.createElement(B.U, {
+                        position: B._2.Relative,
+                        display: B.H.Flex,
+                        flexGrow: 1,
+                        alignItems: B.c.Stretch,
+                        fullHeight: !0
+                    }, v.createElement(T.a, {
+                        onClickOut: this.onClickOut,
+                        className: n
+                    }, v.createElement(B.U, {
+                        display: B.H.Flex,
+                        flexGrow: 1,
+                        alignItems: B.c.Stretch,
+                        fullHeight: !0
+                    }, v.createElement(B.S, {
+                        onClick: this.onCardClick,
+                        "data-a-target": "user-menu-toggle",
+                        "data-test-selector": "user-menu-toggle"
+                    }, v.createElement(B.U, {
+                        display: B.H.Flex,
+                        flexWrap: B.K.NoWrap,
+                        alignItems: B.c.Center,
+                        flexGrow: 1,
+                        padding: {
+                            right: 1
+                        },
+                        fullHeight: !0,
+                        className: "top-nav__user-card-wrapper"
+                    }, v.createElement(B.U, {
+                        margin: {
+                            x: 1
+                        },
+                        flexShrink: 0
+                    }, v.createElement(B.U, {
+                        className: "top-nav__user-card-avatar-container"
+                    }, v.createElement(N.a, {
+                        size: 30,
+                        imageSrc: e,
+                        imageAlt: "User avatar",
+                        "data-a-target": "top-nav-avatar"
+                    }))), v.createElement(B.U, {
+                        flexGrow: 1,
+                        flexShrink: 1,
+                        flexDirection: B.J.Column
+                    }, v.createElement(B._17, {
+                        color: B.F.Base,
+                        className: "top-nav__username",
+                        "data-a-target": "user-display-name"
+                    }, this.props.gqlData.currentUser.displayName), v.createElement(B.U, {
+                        className: "top-nav__user-status",
+                        ellipsis: !0,
+                        fullWidth: !0,
+                        alignItems: B.c.Center,
+                        display: B.H.Flex,
+                        flexWrap: B.K.NoWrap
+                    }, v.createElement(B.U, {
+                        display: B.H.Flex,
+                        flexShrink: 0,
+                        margin: {
+                            right: .5
+                        }
+                    }, v.createElement(Ce.a, {
+                        availability: l
+                    })), v.createElement(B._17, {
+                        ellipsis: !0,
+                        color: B.F.Alt
+                    }, v.createElement(B._21, {
+                        type: B._26.Span,
+                        noWrap: !0,
+                        "data-a-target": "online-status"
+                    }, this.props.gqlData.currentUser && v.createElement(Ce.b, {
+                        activity: this.props.gqlData.currentUser.activity,
+                        availability: l === ge.a.Offline ? ge.a.Invisible : l
+                    }))))), v.createElement(B._17, {
+                        display: B.H.Flex,
+                        flexShrink: 0,
+                        color: B.F.Base,
+                        className: "user-card-wrapper__dropdown-arrow",
+                        "data-a-target": "top-nav-dropdown-arrow"
+                    }, v.createElement(B._8, {
+                        asset: B._9.GlyphArrDown
+                    }))))), v.createElement(B._17, {
+                        fullWidth: !0,
+                        overflow: B.Y.Hidden,
+                        position: B._2.Absolute,
+                        className: t,
+                        background: B.m.Base,
+                        color: B.F.Base,
+                        "data-a-target": i,
+                        "data-test-selector": a
+                    }, v.createElement(B._17, {
+                        padding: {
+                            y: 1
+                        },
+                        background: B.m.Alt
+                    }, v.createElement(B.S, {
+                        onClick: this.onOnlineClick,
+                        "data-a-target": "online-dropdown-button",
+                        "data-test-selector": "online-dropdown-button"
+                    }, v.createElement(B._17, {
+                        color: B.F.Alt2,
+                        display: B.H.Flex,
+                        padding: {
+                            x: 2,
+                            y: .5
+                        }
+                    }, v.createElement(B.U, {
+                        alignItems: B.c.Center,
+                        display: B.H.InlineFlex,
+                        margin: {
+                            right: 1
+                        }
+                    }, v.createElement(B._3, {
+                        status: B._4.Online
+                    })), v.createElement(B._21, {
+                        bold: this.props.gqlData.currentUser.availability === ge.a.Online,
+                        color: o
+                    }, Object(y.d)("Online", "TopNavUser")))), v.createElement(B.S, {
+                        onClick: this.onInvisibleClick,
+                        "data-a-target": "invisible-dropdown-button",
+                        "data-test-selector": "invisible-dropdown-button"
+                    }, v.createElement(B._17, {
+                        color: B.F.Base,
+                        display: B.H.Flex,
+                        padding: {
+                            x: 2,
+                            y: .5
+                        }
+                    }, v.createElement(B.U, {
+                        alignItems: B.c.Center,
+                        display: B.H.InlineFlex,
+                        margin: {
+                            right: 1
+                        }
+                    }, v.createElement(B._3, {
+                        status: B._4.Invisible
+                    })), v.createElement(B._21, {
+                        bold: this.props.gqlData.currentUser.availability === ge.a.Offline,
+                        color: r
+                    }, Object(y.d)("Invisible", "TopNavUser")))), v.createElement(B.U, {
+                        margin: {
+                            x: 2,
+                            bottom: 1,
+                            top: .5
+                        }
+                    }, v.createElement(B.E, {
+                        id: "share-activity-toggle",
+                        label: Object(y.d)("Share my activity", "TopNavUser"),
+                        "data-a-target": "share-activity-toggle",
+                        "data-test-selector": "share-activity-toggle",
+                        "data-a-value": s,
+                        checked: s,
+                        onChange: this.onShareCheckboxClick,
+                        disabled: this.props.gqlData.currentUser.availability === ge.a.Offline
+                    }), v.createElement(B._21, {
+                        type: B._26.Span,
+                        color: B.F.Alt
+                    }, Object(y.d)("Share what you're watching, playing, or streaming with your friends.", "TopNavUser"))), v.createElement(B._17, {
+                        borderBottom: !0,
+                        margin: {
+                            x: 2,
+                            y: 1
+                        }
+                    }), c), v.createElement(B.U, {
+                        margin: {
+                            y: 1
+                        }
+                    }, v.createElement(B.S, {
+                        linkTo: {
+                            pathname: "/" + this.props.gqlData.currentUser.login,
+                            state: {
+                                content: "self-channel",
+                                medium: "twitch-topnav"
+                            }
+                        },
+                        "data-a-target": "channel-dropdown-link"
+                    }, v.createElement(B._17, {
+                        color: B.F.Alt,
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        padding: {
+                            x: 2,
+                            y: .5
+                        }
+                    }, v.createElement(B.U, {
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        margin: {
+                            right: 1
+                        }
+                    }, v.createElement(B._8, {
+                        asset: B._9.NavMyChannel,
+                        height: 18,
+                        width: 18
+                    })), v.createElement(B._21, null, Object(y.d)("Channel", "TopNavUser")))), v.createElement(B.S, {
+                        linkTo: Object(I.a)("/" + this.props.gqlData.currentUser.login + "/manager/past_broadcasts"),
+                        "data-a-target": "video-manager-dropdown-link"
+                    }, v.createElement(B._17, {
+                        color: B.F.Alt,
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        padding: {
+                            x: 2,
+                            y: .5
+                        }
+                    }, v.createElement(B.U, {
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        margin: {
+                            right: 1
+                        }
+                    }, v.createElement(B._8, {
+                        asset: B._9.NavManager,
+                        height: 18,
+                        width: 18
+                    })), v.createElement(B._21, null, Object(y.d)("Video Manager", "TopNavUser")))), v.createElement(B.S, {
+                        linkTo: Object(I.a)("/" + this.props.gqlData.currentUser.login + "/dashboard"),
+                        "data-a-target": "dashboard-dropdown-link"
+                    }, v.createElement(B._17, {
+                        color: B.F.Alt,
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        padding: {
+                            x: 2,
+                            y: .5
+                        }
+                    }, v.createElement(B.U, {
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        margin: {
+                            right: 1
+                        }
+                    }, v.createElement(B._8, {
+                        asset: B._9.NavDashboard,
+                        height: 18,
+                        width: 18
+                    })), v.createElement(B._21, null, Object(y.d)("Dashboard", "TopNavUser")))), v.createElement(B._17, {
+                        borderBottom: !0,
+                        margin: {
+                            x: 2,
+                            y: 1
+                        }
+                    }), v.createElement(B.S, {
+                        targetBlank: Object(I.b)(),
+                        linkTo: Object(I.a)("/friends"),
+                        "data-a-target": "friends-dropdown-link"
+                    }, v.createElement(B._17, {
+                        color: B.F.Alt,
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        padding: {
+                            x: 2,
+                            y: .5
+                        }
+                    }, v.createElement(B.U, {
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        margin: {
+                            right: 1
+                        }
+                    }, v.createElement(B._8, {
+                        asset: B._9.Friends,
+                        height: 18,
+                        width: 18
+                    })), v.createElement(B._21, null, Object(y.d)("Friends", "TopNavUser")))), v.createElement(B.S, {
+                        targetBlank: Object(I.b)(),
+                        linkTo: Object(I.a)("/messages/inbox"),
+                        "data-a-target": "inbox-dropdown-link"
+                    }, v.createElement(B._17, {
+                        color: B.F.Alt,
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        padding: {
+                            x: 2,
+                            y: .5
+                        }
+                    }, v.createElement(B.U, {
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        margin: {
+                            right: 1
+                        }
+                    }, v.createElement(B._8, {
+                        asset: B._9.NavMessages,
+                        height: 18,
+                        width: 18
+                    })), v.createElement(B._21, null, Object(y.d)("Messages", "TopNavUser")))), v.createElement(B.S, {
+                        targetBlank: Object(I.b)(),
+                        linkTo: Object(I.a)("/subscriptions"),
+                        "data-a-target": "subscriptions-dropdown-link"
+                    }, v.createElement(B._17, {
+                        color: B.F.Alt,
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        padding: {
+                            x: 2,
+                            y: .5
+                        }
+                    }, v.createElement(B.U, {
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        margin: {
+                            right: 1
+                        }
+                    }, v.createElement(B._8, {
+                        asset: B._9.NavBackpack,
+                        height: 18,
+                        width: 18
+                    })), v.createElement(B._21, null, Object(y.d)("Subscriptions", "TopNavUser")))), v.createElement(B.S, {
+                        targetBlank: Object(I.b)(),
+                        linkTo: Object(I.a)("/inventory"),
+                        "data-a-target": "inventory-dropdown-link"
+                    }, v.createElement(B._17, {
+                        color: B.F.Alt,
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        padding: {
+                            x: 2,
+                            y: .5
+                        }
+                    }, v.createElement(B.U, {
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        margin: {
+                            right: 1
+                        }
+                    }, v.createElement(B._8, {
+                        asset: B._9.Crate,
+                        height: 18,
+                        width: 18
+                    })), v.createElement(B._21, null, Object(y.d)("Inventory", "TopNavUser")))), v.createElement(B._17, {
+                        borderBottom: !0,
+                        margin: {
+                            x: 2,
+                            y: 1
+                        }
+                    }), v.createElement(B.S, {
+                        targetBlank: Object(I.b)(),
+                        linkTo: Object(I.a)("/settings/profile"),
+                        "data-a-target": "settings-dropdown-link"
+                    }, v.createElement(B._17, {
+                        color: B.F.Alt,
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        padding: {
+                            x: 2,
+                            y: .5
+                        }
+                    }, v.createElement(B.U, {
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        margin: {
+                            right: 1
+                        }
+                    }, v.createElement(B._8, {
+                        asset: B._9.NavSettings,
+                        height: 18,
+                        width: 18
+                    })), v.createElement(B._21, null, Object(y.d)("Settings", "TopNavUser")))), v.createElement(B.S, {
+                        "data-a-target": "dropdown-logout",
+                        onClick: this.onLogoutClick
+                    }, v.createElement(B._17, {
+                        color: B.F.Alt,
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        padding: {
+                            x: 2,
+                            y: .5
+                        }
+                    }, v.createElement(B.U, {
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        margin: {
+                            right: 1
+                        }
+                    }, v.createElement(B._8, {
+                        asset: B._9.NavLogout,
+                        height: 18,
+                        width: 18
+                    })), v.createElement(B._21, null, Object(y.d)("Log Out", "TopNavUser"))))))))
+                }, t
+            }(v.Component)),
+            Oe = Object(w.e)(we),
+            Ue = n(419),
+            xe = n(420),
+            Fe = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.isSettingNewSession = !1, t.dataIsReady = function(e) {
+                        return e.data && !e.data.loading && !e.data.error
+                    }, t.setUserToOffline = function() {
+                        Object(ye.c)(ge.a.Offline), Object(ye.a)()
+                    }, t.toggleShareActivity = function() {
+                        var e = !t.props.data.currentUser.settings.isSharingActivity,
+                            n = h.__assign({}, Object(he.a)({
+                                isSharingActivity: e
+                            }), {
+                                optimisticResponse: {
+                                    updateIsSharingActivity: {
+                                        __typename: "UpdateIsSharingActivityPayload",
+                                        user: {
+                                            __typename: "User",
+                                            id: t.props.data.currentUser.id,
+                                            settings: {
+                                                isSharingActivity: e,
+                                                __typename: "UserSettings"
+                                            }
+                                        }
+                                    }
+                                }
+                            });
+                        t.props.updateIsSharingActivity(n)
+                    }, t.toggleVisibility = function(e) {
+                        t.dataIsReady(t.props) && Object(ye.e)(e)
+                    }, t.setNewSession = function() {
+                        return h.__awaiter(t, void 0, void 0, function() {
+                            var e;
+                            return h.__generator(this, function(t) {
+                                switch (t.label) {
+                                    case 0:
+                                        if (this.isSettingNewSession) return [2];
+                                        this.isSettingNewSession = !0, t.label = 1;
+                                    case 1:
+                                        return t.trys.push([1, 3, 4, 5]), [4, Object(ye.g)()];
+                                    case 2:
+                                        return t.sent(), this.props.initialUserAvailabilitySet(), [3, 5];
+                                    case 3:
+                                        return e = t.sent(), y.i.warn("Failed to set new user availability session.", e), [3, 5];
+                                    case 4:
+                                        return this.isSettingNewSession = !1, [7];
+                                    case 5:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t.maybeRefetchData = function(e) {
+                        var n = e.pubsub.messages.presence;
+                        n && e.data.currentUser.id && n.data.user_id === +e.data.currentUser.id && t.props.pubsub.messages.presence !== n && e.data.refetch()
+                    }, t
+                }
+                return h.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.maybeRefetchData(this.props), this.props.firstPageLoaded && this.dataIsReady(this.props) && !this.props.initialUserAvailabilityIsSet && this.setNewSession(), this.reportInteractive()
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    this.maybeRefetchData(e), e.firstPageLoaded && this.dataIsReady(e) && !e.initialUserAvailabilityIsSet && this.setNewSession()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.reportInteractive()
+                }, t.prototype.componentWillUnmount = function() {
+                    this.setUserToOffline()
+                }, t.prototype.render = function() {
+                    return this.props.data && !this.props.data.loading && this.props.data.currentUser ? this.props.data.error ? v.createElement(Se, null) : v.createElement(Oe, {
+                        gqlData: this.props.data,
+                        toggleShareActivity: this.toggleShareActivity,
+                        toggleVisibility: this.toggleVisibility,
+                        changeTheme: this.props.changeTheme,
+                        firstPageLoaded: this.props.firstPageLoaded,
+                        logout: this.props.logout,
+                        theme: this.props.theme
+                    }) : v.createElement(Ne, null)
+                }, t.prototype.reportInteractive = function() {
+                    !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
+                }, t = h.__decorate([Object(A.a)(Ue), Object(A.a)(xe, {
+                    name: "updateIsSharingActivity"
+                }), Object(pe.a)(function(e) {
+                    return {
+                        query: Ue,
+                        topic: e.data.currentUser ? Object(ve.f)(e.data.currentUser.id) : "",
+                        skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
+                        type: fe.c.PresenceSettings,
+                        mutator: function(e, t) {
+                            return t.currentUser.settings.visibility = e.data.availability_override.toUpperCase(), t.currentUser.settings.isSharingActivity = e.data.share_activity, t
+                        }
+                    }
+                }), Object(me.a)([{
+                    topic: function(e) {
+                        return Object(ve.f)(e.data.currentUser.id)
+                    },
+                    mapMessageTypesToProps: (c = {}, c[fe.c.Presence] = "presence", c),
+                    skip: function(e) {
+                        return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
+                    }
+                }]), Object(N.c)("User")], t)
+            }(v.Component),
+            Te = Object(d.a)(r, o)(Object(u.f)(Fe)),
+            De = n(387),
+            Re = (n(438), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.renderOnsiteNotifications = function() {
+                        return t.props.isLoggedIn ? v.createElement(B.U, {
+                            flexGrow: 0,
+                            alignSelf: B.d.Center,
+                            flexWrap: B.K.NoWrap,
+                            padding: {
+                                left: .5,
+                                right: 1
+                            },
+                            flexShrink: 0
+                        }, v.createElement(C, null)) : null
+                    }, t.renderTwitchPrimeCrown = function(e) {
+                        return v.createElement(B.U, {
+                            className: "top-nav__prime",
+                            flexGrow: 0,
+                            flexShrink: 0,
+                            padding: {
+                                x: .5
+                            },
+                            alignSelf: B.d.Center,
+                            flexWrap: B.K.NoWrap
+                        }, !e && v.createElement(De.b, null))
+                    }, t.saveEllipsisRef = function(e) {
+                        return t.ellipsisMenu = e
+                    }, t.onNavigationClicked = function() {
+                        t.ellipsisMenu.toggleBalloon(!1)
+                    }, t.renderBrowseLink = function(e) {
+                        var t = e.match,
+                            n = t && "following" !== t.params.subpage,
+                            i = Object(y.d)("Browse", "TopNav");
+                        return v.createElement(u.a, {
+                            className: "top-nav__nav-link" + (n ? " active" : ""),
+                            "data-a-target": "browse-link",
+                            title: i,
+                            to: {
+                                pathname: "/directory",
+                                state: {
+                                    medium: S.PageviewMedium.TopNav,
+                                    content: S.PageviewContent.Games
+                                }
+                            }
+                        }, i)
+                    }, t.renderStoreLink = function() {
+                        var e = Object(y.d)("Store", "TopNav"),
+                            t = function() {
+                                return v.createElement(B.S, {
+                                    targetBlank: !0,
+                                    linkTo: "https://www.twitch.tv/store",
+                                    "data-a-target": "store-link"
+                                }, v.createElement(B.U, {
+                                    padding: {
+                                        y: .5,
+                                        x: 1
+                                    }
+                                }, e))
+                            },
+                            n = function() {
+                                return v.createElement(B.S, {
+                                    linkTo: {
+                                        pathname: "/store/merch",
+                                        state: {
+                                            medium: S.PageviewMedium.TopNav,
+                                            content: S.PageviewContent.Logo
+                                        }
+                                    },
+                                    "data-a-target": "store-link"
+                                }, v.createElement(B.U, {
+                                    padding: {
+                                        y: .5,
+                                        x: 1
+                                    }
+                                }, e))
+                            },
+                            i = {
+                                fallback: t,
+                                on: n
+                            };
+                        return v.createElement(k.a, {
+                            name: "MERCH_STORE_LAUNCH",
+                            loader: t,
+                            assignments: i
+                        })
+                    }, t
+                }
+                return h.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e = null;
+                    if (this.props.isLoggedIn) {
+                        var t = Object(y.d)("Following", "TopNav");
+                        e = v.createElement(u.b, {
+                            activeClassName: "active",
+                            to: {
+                                pathname: "/directory/following",
+                                state: {
+                                    medium: S.PageviewMedium.TopNav,
+                                    content: S.PageviewContent.Following
+                                }
+                            },
+                            className: "top-nav__nav-link",
+                            "data-a-target": "following-link",
+                            title: t
+                        }, t)
+                    }
+                    return v.createElement(B.P, {
+                        position: B._2.Fixed,
+                        attachTop: !0,
+                        fullWidth: !0
+                    }, v.createElement("nav", {
+                        className: "top-nav",
+                        "data-a-target": "top-nav-container",
+                        style: {
+                            height: "5rem"
+                        }
+                    }, v.createElement(B.U, {
+                        className: "top-nav__menu",
+                        display: B.H.Flex,
+                        alignItems: B.c.Stretch,
+                        flexWrap: B.K.NoWrap
+                    }, v.createElement(B.P, {
+                        display: B.H.InlineFlex,
+                        alignItems: B.c.Center,
+                        flexShrink: 0
+                    }, v.createElement(u.a, {
+                        to: {
+                            pathname: "/",
+                            state: {
+                                medium: S.PageviewMedium.TopNav,
+                                content: S.PageviewContent.Logo
+                            }
+                        },
+                        className: "top-nav__home-link",
+                        "data-a-target": "home-link"
+                    }, v.createElement(B._8, {
+                        asset: B._9.LogoTwitch,
+                        width: 94,
+                        height: 32
+                    }))), v.createElement(B.U, {
+                        className: "top-nav__nav-items-container",
+                        display: B.H.Flex,
+                        flexGrow: 1,
+                        flexWrap: B.K.NoWrap,
+                        flexShrink: 0
+                    }, e, v.createElement(u.d, {
+                        path: "/directory/:subpage?",
+                        children: this.renderBrowseLink
+                    }), v.createElement("a", {
+                        href: "https://app.twitch.tv/download",
+                        "data-a-target": "get-desktop-link",
+                        className: "top-nav__nav-link"
+                    }, Object(y.d)("Get Desktop", "TopNav")), v.createElement(ue, null), v.createElement(re, null), v.createElement(B.U, {
+                        className: "top-nav__ellipsis-button",
+                        display: B.H.Flex,
+                        alignItems: B.c.Center
+                    }, v.createElement(b.a, {
+                        ref: this.saveEllipsisRef
+                    }, v.createElement(B.v, {
+                        icon: B._9.NavMore,
+                        overlay: !0,
+                        ariaLabel: Object(y.d)("More nav items", "TopNav"),
+                        "data-a-target": "ellipsis-button"
+                    }), v.createElement(B.p, {
+                        direction: B.q.Bottom,
+                        tailOffset: 7,
+                        size: B.r.Small,
+                        "data-a-target": "overflow-menu"
+                    }, v.createElement(B.U, {
+                        padding: 1
+                    }, v.createElement(B.S, {
+                        targetBlank: !0,
+                        linkTo: "https://www.twitch.tv/p/about",
+                        "data-a-target": "about-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("About", "TopNav"))), v.createElement(B.S, {
+                        targetBlank: !0,
+                        linkTo: "http://twitchadvertising.tv/",
+                        "data-a-target": "advertisers-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Advertisers", "TopNav"))), v.createElement(B.S, {
+                        targetBlank: !0,
+                        linkTo: "https://blog.twitch.tv/",
+                        "data-a-target": "blog-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Blog", "TopNav"))), v.createElement(B.S, {
+                        targetBlank: !0,
+                        linkTo: "https://www.twitch.tv/p/legal/community-guidelines",
+                        "data-a-target": "community-guidelines-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Community Guidelines", "TopNav"))), v.createElement(B.S, {
+                        targetBlank: !0,
+                        linkTo: "https://www.twitch.tv/p/cookie-policy",
+                        "data-a-target": "cookie-policy-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Cookie Policy", "TopNav"))), v.createElement(B.S, {
+                        onClick: this.onNavigationClicked,
+                        linkTo: "/directory/game/Creative",
+                        "data-a-target": "creative-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Creative", "TopNav"))), v.createElement(B.S, {
+                        targetBlank: !0,
+                        linkTo: "https://dev.twitch.tv/",
+                        "data-a-target": "developers-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Developers", "TopNav"))), v.createElement(B.S, {
+                        targetBlank: !0,
+                        linkTo: "https://help.twitch.tv/",
+                        "data-a-target": "help-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Help", "TopNav"))), v.createElement(B.S, {
+                        targetBlank: !0,
+                        linkTo: "https://www.twitch.tv/jobs",
+                        "data-a-target": "jobs-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Jobs", "TopNav"))), v.createElement(b.a, {
+                        display: B.H.Block
+                    }, v.createElement(B.S, {
+                        "data-target": "language-selector-click",
+                        "data-a-target": "language-selector"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Language", "TopNav"))), v.createElement(B.p, {
+                        size: B.r.Small,
+                        direction: B.q.Right,
+                        offsetY: "4px",
+                        offsetX: "20px",
+                        "data-target": "language-selector",
+                        "data-a-target": "language-selector-menu"
+                    }, v.createElement(_.a, null))), v.createElement(B.S, {
+                        targetBlank: !0,
+                        linkTo: "https://music.twitch.tv/",
+                        "data-a-target": "music-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Music", "TopNav"))), v.createElement(B.S, {
+                        targetBlank: !0,
+                        linkTo: "https://www.twitch.tv/p/partners",
+                        "data-a-target": "partners-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Partners", "TopNav"))), v.createElement(B.S, {
+                        targetBlank: !0,
+                        linkTo: "https://www.twitch.tv/p/press",
+                        "data-a-target": "press-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Press", "TopNav"))), v.createElement(B.S, {
+                        targetBlank: !0,
+                        linkTo: "https://twitch.tv/p/security",
+                        "data-a-target": "security-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Security", "TopNav"))), this.renderStoreLink(), v.createElement(B.S, {
+                        targetBlank: !0,
+                        linkTo: "https://www.twitch.tv/p/terms-of-service",
+                        "data-a-target": "terms-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Terms", "TopNav"))), v.createElement(B.S, {
+                        targetBlank: !0,
+                        linkTo: "https://app.twitch.tv/download",
+                        "data-a-target": "desktop-app-link"
+                    }, v.createElement(B.U, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Get Twitch Desktop App", "TopNav"))))))), v.createElement(B.U, {
+                        className: "top-nav__search",
+                        flexGrow: 1,
+                        alignSelf: B.d.Center
+                    }, v.createElement(Z, null))), this.renderTwitchPrimeCrown(), this.renderOnsiteNotifications(), v.createElement(B.U, {
+                        className: "top-nav__nav-items-container",
+                        display: B.H.Flex,
+                        alignItems: B.c.Center,
+                        flexWrap: B.K.NoWrap,
+                        flexGrow: 0,
+                        flexShrink: 0
+                    }, this.props.isLoggedIn ? v.createElement(Te, {
+                        logout: this.props.logout
+                    }) : v.createElement(te, {
+                        login: this.props.login,
+                        signup: this.props.signup
+                    })))))
+                }, t = h.__decorate([Object(N.c)("TopNav")], t)
+            }(v.Component)),
+            Ie = Re,
+            Pe = Object(u.f)(Object(d.a)(l, s)(Ie));
+        n.d(t, "a", function() {
+            return "5rem"
+        }), n.d(t, "b", function() {
+            return Pe
+        })
+    },
+    397: function(e, t) {},
+    398: function(e, t, n) {
+        e.exports = n.p + "assets/friend_requests-aec9595d7e19764bc23d982c8c0f43d9.png"
+    },
+    399: function(e, t) {},
+    400: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "FriendRequestsNotification_Clear"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "clearUnreadFriendRequests"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "user"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 106
+            }
+        };
+        n.loc.source = {
+            body: "mutation FriendRequestsNotification_Clear {\n  clearUnreadFriendRequests {\n    user {\n      id\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    401: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "FriendRequestsNotification_Query"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "incomingFriendRequests"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "1"
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "totalUnreadCount"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 138
+            }
+        };
+        n.loc.source = {
+            body: "query FriendRequestsNotification_Query {\n  currentUser {\n    id\n    incomingFriendRequests(first: 1) {\n      totalUnreadCount\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    402: function(e, t) {},
+    403: function(e, t) {},
+    404: function(e, t) {},
+    405: function(e, t) {},
+    406: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Search_SearchGameResultCard_Game"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "name"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "game"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "name"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "name"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "boxArtURL"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "width"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "40"
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "height"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "55"
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 128
+            }
+        };
+        n.loc.source = {
+            body: "query Search_SearchGameResultCard_Game($name: String!) {\n  game(name: $name) {\n    id\n    boxArtURL(width: 40 height: 55)\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    407: function(e, t) {},
+    408: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Search_SearchLiveResultCard_UserStream"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "login"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "user"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "login"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "stream"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "previewImageURL"
+                                        },
+                                        arguments: [{
+                                            kind: "Argument",
+                                            name: {
+                                                kind: "Name",
+                                                value: "width"
+                                            },
+                                            value: {
+                                                kind: "IntValue",
+                                                value: "156"
+                                            }
+                                        }, {
+                                            kind: "Argument",
+                                            name: {
+                                                kind: "Name",
+                                                value: "height"
+                                            },
+                                            value: {
+                                                kind: "IntValue",
+                                                value: "88"
+                                            }
+                                        }],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 174
+            }
+        };
+        n.loc.source = {
+            body: "query Search_SearchLiveResultCard_UserStream($login: String!) {\n  user(login: $login) {\n    id\n    stream {\n      id\n      previewImageURL(width: 156 height: 88)\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    409: function(e, t) {},
+    410: function(e, t) {},
+    411: function(e, t) {},
+    412: function(e, t) {},
+    413: function(e, t) {},
+    414: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "TopNav_Store_CurrentUser"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "hasPrime"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 75
+            }
+        };
+        n.loc.source = {
+            body: "query TopNav_Store_CurrentUser {\n  currentUser {\n    id\n    hasPrime\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    415: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "TopNav_PrimeUpsell_CurrentUser"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "hasPrime"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "hasTurbo"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "requestInfo"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "countryCode"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 130
+            }
+        };
+        n.loc.source = {
+            body: "query TopNav_PrimeUpsell_CurrentUser {\n  currentUser {\n    id\n    hasPrime\n    hasTurbo\n  }\n  requestInfo {\n    countryCode\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    416: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "ChannelPage_SetSessionStatus"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "SetSessionStatusInput"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "setSessionStatus"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "setAgainInSeconds"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 136
+            }
+        };
+        n.loc.source = {
+            body: "mutation ChannelPage_SetSessionStatus($input: SetSessionStatusInput!) {\n  setSessionStatus(input: $input) {\n    setAgainInSeconds\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    417: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "TopNav_User_UpdateVisibility"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "UpdateVisibilityInput"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "updateVisibility"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "user"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "availability"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 159
+            }
+        };
+        n.loc.source = {
+            body: "mutation TopNav_User_UpdateVisibility($input: UpdateVisibilityInput!) {\n  updateVisibility(input: $input) {\n    user {\n      id\n      availability\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    418: function(e, t) {},
+    419: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "TopNav_User_User"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "displayName"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "profileImageURL"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "width"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "70"
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "availability"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "settings"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "isSharingActivity"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "visibility"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "activity"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "type"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "InlineFragment",
+                                        typeCondition: {
+                                            kind: "NamedType",
+                                            name: {
+                                                kind: "Name",
+                                                value: "Watching"
+                                            }
+                                        },
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "user"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "displayName"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "stream"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "game"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: {
+                                                                    kind: "SelectionSet",
+                                                                    selections: [{
+                                                                        kind: "Field",
+                                                                        alias: null,
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "name"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: [],
+                                                                        selectionSet: null
+                                                                    }]
+                                                                }
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "hosting"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "displayName"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "stream"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: {
+                                                                    kind: "SelectionSet",
+                                                                    selections: [{
+                                                                        kind: "Field",
+                                                                        alias: null,
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "game"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: [],
+                                                                        selectionSet: {
+                                                                            kind: "SelectionSet",
+                                                                            selections: [{
+                                                                                kind: "Field",
+                                                                                alias: null,
+                                                                                name: {
+                                                                                    kind: "Name",
+                                                                                    value: "name"
+                                                                                },
+                                                                                arguments: [],
+                                                                                directives: [],
+                                                                                selectionSet: null
+                                                                            }]
+                                                                        }
+                                                                    }]
+                                                                }
+                                                            }]
+                                                        }
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "InlineFragment",
+                                        typeCondition: {
+                                            kind: "NamedType",
+                                            name: {
+                                                kind: "Name",
+                                                value: "Streaming"
+                                            }
+                                        },
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "stream"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "game"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "name"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }]
+                                                        }
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "InlineFragment",
+                                        typeCondition: {
+                                            kind: "NamedType",
+                                            name: {
+                                                kind: "Name",
+                                                value: "Playing"
+                                            }
+                                        },
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "game"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "name"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 710
+            }
+        };
+        n.loc.source = {
+            body: "query TopNav_User_User {\n  currentUser {\n    id\n    displayName\n    profileImageURL(width: 70)\n    login\n    availability\n    settings {\n      isSharingActivity\n      visibility\n    }\n    activity {\n      type\n      ... on Watching {\n        user {\n          displayName\n          stream {\n            game {\n              name\n            }\n          }\n          hosting {\n            displayName\n            stream {\n              game {\n                name\n              }\n            }\n          }\n        }\n      }\n      ... on Streaming {\n        stream {\n          game {\n            name\n          }\n        }\n      }\n      ... on Playing {\n        game {\n          name\n        }\n      }\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    420: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "TopNav_User_UpdateIsSharingActivity"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "UpdateIsSharingActivityInput"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "updateIsSharingActivity"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "user"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "settings"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "isSharingActivity"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 212
+            }
+        };
+        n.loc.source = {
+            body: "mutation TopNav_User_UpdateIsSharingActivity($input: UpdateIsSharingActivityInput!) {\n  updateIsSharingActivity(input: $input) {\n    user {\n      id\n      settings {\n        isSharingActivity\n      }\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    421: function(e, t) {},
+    422: function(e, t) {},
+    423: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Current_User"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 50
+            }
+        };
+        n.loc.source = {
+            body: "query Current_User {\n  currentUser {\n    id\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    424: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Current_User"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "hasPrime"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 63
+            }
+        };
+        n.loc.source = {
+            body: "query Current_User {\n  currentUser {\n    id\n    hasPrime\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    425: function(e, t) {},
+    426: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "claimPrimeOffer"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "ClaimPrimeOfferInput"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "claimPrimeOffer"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "self"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "claimData"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "hasEntitlement"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 153
+            }
+        };
+        n.loc.source = {
+            body: "mutation claimPrimeOffer($input: ClaimPrimeOfferInput!) {\n  claimPrimeOffer(input: $input) {\n    self {\n      claimData\n      hasEntitlement\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    427: function(e, t) {},
+    428: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Current_User"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "hasPrime"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 63
+            }
+        };
+        n.loc.source = {
+            body: "query Current_User {\n  currentUser {\n    id\n    hasPrime\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    429: function(e, t) {},
+    430: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Prime_PrimeOfferList_PrimeOffers"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "primeOffers"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "title"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "imageURL"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "claimInstructions"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "description"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "deliveryMethod"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "priority"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "content"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "game"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }, {
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "name"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "externalURL"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "publisher"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "categories"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "self"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "hasEntitlement"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "claimData"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 333
+            }
+        };
+        n.loc.source = {
+            body: "query Prime_PrimeOfferList_PrimeOffers {\n  primeOffers {\n    id\n    title\n    imageURL\n    claimInstructions\n    description\n    deliveryMethod\n    priority\n    content {\n      game {\n        id\n        name\n      }\n      externalURL\n      publisher\n      categories\n    }\n    self {\n      hasEntitlement\n      claimData\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    431: function(e, t) {},
+    432: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Current_User"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "hasPrime"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 63
+            }
+        };
+        n.loc.source = {
+            body: "query Current_User {\n  currentUser {\n    id\n    hasPrime\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    433: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Prime_PrimeOffers_PrimeOfferIds"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "primeOffers"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "self"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "hasEntitlement"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "claimData"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 123
+            }
+        };
+        n.loc.source = {
+            body: "query Prime_PrimeOffers_PrimeOfferIds {\n  primeOffers {\n    id\n    self {\n      hasEntitlement\n      claimData\n    }\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    434: function(e, t) {},
+    435: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Prime_PrimeOffers_CurrentUser"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "hasPrime"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "requestInfo"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "countryCode"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 116
+            }
+        };
+        n.loc.source = {
+            body: "query Prime_PrimeOffers_CurrentUser {\n  currentUser {\n    id\n    hasPrime\n  }\n  requestInfo {\n    countryCode\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    436: function(e, t) {},
+    437: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Prime_BlueBar_CurrentUser"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "stringIds"
+                        }
+                    },
+                    type: {
+                        kind: "ListType",
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "ID"
+                                }
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "dateOverride"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Time"
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "hasPrime"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "primePromotions"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "ids"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "stringIds"
+                                }
+                            }
+                        }, {
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "dateOverride"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "dateOverride"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "text"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "externalURL"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "isExternalLink"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "requestInfo"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "countryCode"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 274
+            }
+        };
+        n.loc.source = {
+            body: "query Prime_BlueBar_CurrentUser($stringIds: [ID!], $dateOverride: Time) {\n  currentUser {\n    id\n    hasPrime\n  }\n  primePromotions (ids: $stringIds, dateOverride: $dateOverride) {\n    id\n    text\n    externalURL\n    isExternalLink\n  }\n  requestInfo {\n    countryCode\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    438: function(e, t) {},
+    451: function(e, t) {
+        function n(e) {
+            var t = !1;
+            if (null != e && "function" != typeof e.toString) try {
+                t = !!(e + "")
+            } catch (e) {}
+            return t
+        }
+
+        function i(e) {
+            return !!e && "object" == typeof e
+        }
+
+        function a(e) {
+            if (!i(e) || u.call(e) != r || n(e)) return !1;
+            var t = m(e);
+            if (null === t) return !0;
+            var a = c.call(t, "constructor") && t.constructor;
+            return "function" == typeof a && a instanceof a && l.call(a) == d
+        }
+        var r = "[object Object]",
+            o = Function.prototype,
+            s = Object.prototype,
+            l = o.toString,
+            c = s.hasOwnProperty,
+            d = l.call(Object),
+            u = s.toString,
+            m = function(e, t) {
+                return function(n) {
+                    return e(t(n))
+                }
+            }(Object.getPrototypeOf, Object);
+        e.exports = a
+    },
+    808: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -3020,17 +10902,7 @@ webpackJsonp([49], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    759: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return i
-        });
-        var i;
-        ! function(e) {
-            e.ChannelFeedComment = "CHANNEL_FEED_COMMENT_REPORT", e.ChannelFeedPost = "CHANNEL_FEED_POST_REPORT", e.Chat = "CHAT_REPORT", e.Clip = "CLIP_REPORT", e.Collection = "COLLECTION_REPORT", e.Community = "COMMUNITY_REPORT", e.Event = "EVENT_REPORT", e.Extension = "EXTENSION_REPORT", e.LiveUp = "LIVE_UP_REPORT", e.Raid = "RAID_REPORT", e.StreamUp = "STREAM_UP_REPORT", e.User = "USER_REPORT", e.VideoChatMessage = "VOD_COMMENT_REPORT", e.Vod = "VOD_REPORT"
-        }(i || (i = {}))
-    },
-    761: function(e, t, n) {
+    811: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -3042,23 +10914,23 @@ webpackJsonp([49], {
                             if (!(i.tracked || e.skip && e.skip(i.props))) {
                                 i.tracked = !0, l.n.adBlockSentinel.pageTransition();
                                 var t = {};
-                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = r.__assign({}, e.properties));
-                                var n = r.__assign({}, i.props);
+                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = a.__assign({}, e.properties));
+                                var n = a.__assign({}, i.props);
                                 n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var a = i.referenceTracking,
-                                    s = a.content,
-                                    o = a.medium,
-                                    c = a.content_index;
-                                l.n.tracking.trackPageview(r.__assign({
-                                    content: s,
-                                    medium: o,
+                                var r = i.referenceTracking,
+                                    o = r.content,
+                                    s = r.medium,
+                                    c = r.content_index;
+                                l.n.tracking.trackPageview(a.__assign({
+                                    content: o,
+                                    medium: s,
                                     content_index: c,
                                     location: e.location
                                 }, t))
                             }
                         }, l.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : l.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
                     }
-                    return r.__extends(i, n), i.prototype.componentDidMount = function() {
+                    return a.__extends(i, n), i.prototype.componentDidMount = function() {
                         var e = this;
                         this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
                             "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
@@ -3066,9 +10938,9 @@ webpackJsonp([49], {
                     }, i.prototype.componentDidUpdate = function() {
                         this.trackPageview()
                     }, i.prototype.render = function() {
-                        return s.createElement(t, r.__assign({}, this.props))
+                        return o.createElement(t, a.__assign({}, this.props))
                     }, i.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? a.parse(e.search) : {},
+                        var t = "" !== e.search ? r.parse(e.search) : {},
                             n = {
                                 content: t.tt_content,
                                 content_index: t.tt_content_index,
@@ -3076,8 +10948,8 @@ webpackJsonp([49], {
                             };
                         if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
                             var i = "",
-                                r = a.stringify(t);
-                            r.length > 0 && (i = "?" + r), this.props.history.replace({
+                                a = r.stringify(t);
+                            a.length > 0 && (i = "?" + a), this.props.history.replace({
                                 pathname: e.pathname,
                                 hash: e.hash,
                                 search: i
@@ -3085,3649 +10957,44 @@ webpackJsonp([49], {
                         }
                         return n
                     }, i
-                }(s.Component);
-                return Object(o.f)(n)
+                }(o.Component);
+                return Object(s.f)(n)
             }
         }
-        var r = n(0),
-            a = n(20),
-            s = n(1),
-            o = n(11),
+        var a = n(0),
+            r = n(20),
+            o = n(1),
+            s = n(10),
             l = n(2);
         n.d(t, "a", function() {
             return i
         })
     },
-    762: function(e, t, n) {
-        "use strict";
-        var i = n(0),
-            r = n(4),
-            a = n(1),
-            s = n(10),
-            o = n(2),
-            l = n(7),
-            c = n(5),
-            u = n(768),
-            d = n(3),
-            p = n(786),
-            m = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleChange = function(e) {
-                        t.props.onChange(e.target.value)
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
-                    this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = null,
-                        t = Object(o.d)("Select One...", "ReportUserModal");
-                    return e = this.props.data.loading ? [a.createElement("option", {
-                        key: "Loading"
-                    }, Object(o.d)("Loading...", "ReportReasonsSelect"))] : Object(u.b)(this.props.data.reportReasons).map(function(e) {
-                        return a.createElement("option", {
-                            key: e.canonical,
-                            value: e.canonical
-                        }, e.localized)
-                    }), a.createElement(d.U, {
-                        margin: {
-                            bottom: 2
-                        }
-                    }, a.createElement(d.M, {
-                        id: "reporting-modal__select",
-                        label: Object(o.d)("Select Reason (required)", "ReportUserModal")
-                    }, a.createElement(d._14, {
-                        id: "reporting-modal__select",
-                        "data-test-selector": "reporting-modal.select",
-                        disabled: this.props.data.loading || !!this.props.data.error,
-                        onChange: this.handleChange,
-                        defaultValue: t
-                    }, a.createElement("option", {
-                        disabled: !0,
-                        key: "default"
-                    }, t), e)))
-                }, t = i.__decorate([Object(c.c)("ReportReasonSelect")], t)
-            }(a.Component),
-            h = Object(l.a)(p, {
-                options: function(e) {
-                    return {
-                        variables: {
-                            content: e.reportContentType
-                        }
-                    }
-                }
-            })(m),
-            g = (n(787), n(788));
-        n.d(t, "a", function() {
-            return f
-        }), n.d(t, "b", function() {
-            return b
-        }), n.d(t, "c", function() {
-            return v
-        });
-        var b, f = "community_rules_violation";
-        ! function(e) {
-            e[e.Unsubmitted = 0] = "Unsubmitted", e[e.Success = 1] = "Success", e[e.FormError = 2] = "FormError", e[e.MutationError = 3] = "MutationError"
-        }(b || (b = {}));
-        var S = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        community: null,
-                        description: "",
-                        reason: null,
-                        isCommunityReason: !1,
-                        selectedCommunityID: null,
-                        selectedCommunityName: null
-                    }, t.headerMessage = Object(o.d)("Tell us your concern about this content so that we can review it to determine whether there has been a violation of the {tosLink}. {br} (Abuse of this feature is a violation of the terms of service)", {
-                        br: a.createElement("br", null),
-                        tosLink: a.createElement("a", {
-                            href: "https://www.twitch.tv/p/terms-of-service",
-                            target: "_blank"
-                        }, Object(o.d)("terms of service", "ReportUser"))
-                    }, "ReportUser"), t.selectCommunity = function(e) {
-                        t.setState({
-                            selectedCommunityID: e.target.value,
-                            selectedCommunityName: e.target.name
-                        })
-                    }, t.handleSubmit = function(e) {
-                        e.preventDefault(), t.state.reason && t.state.description.length > 0 ? t.props.onSubmit(t.state.reason || "", t.state.description, t.state.selectedCommunityID, t.state.selectedCommunityName) : t.props.onError(b.FormError)
-                    }, t.handleTextAreaChange = function(e) {
-                        t.setState({
-                            description: e.target.value
-                        })
-                    }, t.handleReasonChange = function(e) {
-                        if (!t.props.data || t.props.data.loading || t.props.data.error || !t.props.data.user) return null;
-                        var n = t.props.data.user.directories.nodes.filter(function(e) {
-                            return "COMMUNITY" === e.directoryType
-                        });
-                        n.length && e === f ? t.setState({
-                            reason: e,
-                            selectedCommunityID: n[0].id,
-                            selectedCommunityName: n[0].name,
-                            isCommunityReason: !0
-                        }) : t.setState({
-                            reason: e,
-                            isCommunityReason: !1
-                        })
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(d.U, {
-                        display: d.H.Flex,
-                        flexDirection: d.J.Column,
-                        alignItems: d.c.Center,
-                        justifyContent: d.T.Center
-                    }, this.renderStatusMessage(), this.renderBody())
-                }, t.prototype.renderBody = function() {
-                    return this.props.submitStatus === b.Success ? a.createElement("div", null, a.createElement(d.u, {
-                        onClick: this.props.onClose
-                    }, a.createElement(d.U, {
-                        padding: {
-                            x: 2
-                        }
-                    }, Object(o.d)("Close", "ReportUser")))) : a.createElement("div", null, a.createElement(d.U, {
-                        "data-test-selector": "reporting.title",
-                        margin: {
-                            bottom: 1
-                        }
-                    }, a.createElement(d._21, {
-                        type: d._26.H4
-                    }, this.props.title), a.createElement(d._17, {
-                        color: d.F.Alt2,
-                        margin: {
-                            top: 1
-                        }
-                    }, this.headerMessage)), a.createElement("form", null, a.createElement(d._17, {
-                        borderTop: !0,
-                        borderBottom: !0,
-                        margin: {
-                            y: 2
-                        },
-                        padding: {
-                            y: 2
-                        }
-                    }, a.createElement(h, {
-                        reportContentType: this.props.reportContentType,
-                        onChange: this.handleReasonChange
-                    }), this.renderCommunitiesSelector(), a.createElement(d.M, {
-                        id: "reporting__text-area",
-                        label: Object(o.d)("Description (required)", "ReportUser")
-                    }, a.createElement(d._23, {
-                        defaultValue: this.props.defaultDescription,
-                        onChange: this.handleTextAreaChange
-                    }))), a.createElement(d._17, {
-                        display: d.H.Flex,
-                        justifyContent: d.T.Center
-                    }, a.createElement(d.u, {
-                        onClick: this.handleSubmit
-                    }, a.createElement(d.U, {
-                        padding: {
-                            x: 2
-                        }
-                    }, Object(o.d)("Send", "ReportUser"))))))
-                }, t.prototype.renderCommunitiesSelector = function() {
-                    if (!this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user) return null;
-                    if (this.state.isCommunityReason) {
-                        var e = this.props.data.user.directories.nodes.filter(function(e) {
-                                return "COMMUNITY" === e.directoryType
-                            }),
-                            t = e.map(function(e) {
-                                return a.createElement("option", {
-                                    key: e.id,
-                                    value: e.id,
-                                    name: e.name
-                                }, e.displayName)
-                            });
-                        return a.createElement(d.U, {
-                            margin: {
-                                bottom: 2
-                            }
-                        }, a.createElement(d.M, {
-                            id: "reporting__select-community",
-                            label: Object(o.d)("Community", "ReportUser")
-                        }, a.createElement(d._14, {
-                            id: "reporting__select-community",
-                            "data-test-selector": "reporting.select-community",
-                            disabled: this.props.data.loading || !!this.props.data.error,
-                            onChange: this.selectCommunity
-                        }, t)))
-                    }
-                }, t.prototype.renderStatusMessage = function() {
-                    var e = null;
-                    switch (this.props.submitStatus) {
-                        case b.FormError:
-                            e = Object(o.d)("Reason and Description are required.", "ReportUser");
-                            break;
-                        case b.MutationError:
-                            e = Object(o.d)("Sorry, a network error occurred when submitting your report. Please try again later.", "ReportUser");
-                            break;
-                        case b.Success:
-                            e = Object(o.d)("Thank you for your report.", "ReportUser");
-                            break;
-                        default:
-                            return null
-                    }
-                    var t = r({
-                        "reporting__error-container": this.props.submitStatus !== b.Success,
-                        "reporting__success-container": this.props.submitStatus === b.Success
-                    });
-                    return a.createElement(d._17, {
-                        className: t,
-                        fullWidth: this.props.submitStatus !== b.Success,
-                        "data-test-selector": "reporting.error",
-                        margin: {
-                            bottom: 2
-                        },
-                        padding: 1
-                    }, e)
-                }, t
-            }(a.Component),
-            v = Object(s.compose)(Object(l.a)(g, {
-                options: function(e) {
-                    return {
-                        fetchPolicy: "network-only",
-                        variables: {
-                            userId: e.targetUserID
-                        }
-                    }
-                }
-            }))(S)
-    },
-    763: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return "subscribe-button-modal-tab-" + e
-        }
-        var r, a = n(0),
-            s = n(1),
-            o = n(2),
-            l = n(773),
-            c = n(123),
-            u = n(247),
-            d = n(5),
-            p = n(772),
-            m = n(353),
-            h = n(784),
-            g = n(774),
-            b = n(246),
-            f = n(3),
-            S = (n(808), "gift-subscription-button"),
-            v = "subscribe-button";
-        ! function(e) {
-            e[e.Prime = 0] = "Prime", e[e.Tier1 = 1] = "Tier1", e[e.Tier2 = 2] = "Tier2", e[e.Tier3 = 3] = "Tier3"
-        }(r || (r = {}));
-        var y = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.toggleActiveTab = function(e) {
-                        if (e.currentTarget.parentElement) switch (e.currentTarget.parentElement.getAttribute("data-a-target")) {
-                            case "subscribe-button-modal-tab-" + r.Prime:
-                                n.setState({
-                                    activeTab: r.Prime,
-                                    currentPurchasePrice: n.messages.tier1Price
-                                }), n.props.onSelectTierTab(r.Prime);
-                                break;
-                            case "subscribe-button-modal-tab-" + r.Tier1:
-                                n.setState({
-                                    activeTab: r.Tier1,
-                                    currentPurchasePrice: n.messages.tier1Price
-                                }), n.props.onSelectTierTab(r.Tier1);
-                                break;
-                            case "subscribe-button-modal-tab-" + r.Tier2:
-                                n.setState({
-                                    activeTab: r.Tier2,
-                                    currentPurchasePrice: n.messages.tier2Price
-                                }), n.props.onSelectTierTab(r.Tier2);
-                                break;
-                            case "subscribe-button-modal-tab-" + r.Tier3:
-                                n.setState({
-                                    activeTab: r.Tier3,
-                                    currentPurchasePrice: n.messages.tier3Price
-                                }), n.props.onSelectTierTab(r.Tier3);
-                                break;
-                            default:
-                                n.setState({
-                                    activeTab: r.Prime,
-                                    currentPurchasePrice: n.messages.tier1Price
-                                }), n.props.onSelectTierTab(r.Prime)
-                        }
-                    }, n.getTabTitle = function() {
-                        switch (n.state.activeTab) {
-                            case r.Prime:
-                                return n.messages.freeSubWithPrime;
-                            case r.Tier1:
-                                return n.messages.tier1Sub;
-                            case r.Tier2:
-                                return n.messages.tier2Sub;
-                            case r.Tier3:
-                                return n.messages.tier3Sub;
-                            default:
-                                return n.messages.tier1Sub
-                        }
-                    }, n.getTierSubscribeButton = function() {
-                        var e = n.props.subscriptionProducts[n.state.activeTab - 1];
-                        return n.props.isGift ? n.props.giftRecipient ? s.createElement(f.u, {
-                            ariaLabel: n.messages.giftSubscription + " " + n.state.currentPurchasePrice,
-                            "data-test-selector": S,
-                            onClick: n.reportGiftCheckoutAction,
-                            targetBlank: !0,
-                            purchase: n.state.currentPurchasePrice,
-                            linkTo: Object(c.a)(e.url, {
-                                recipient: n.props.giftRecipient
-                            })
-                        }, n.messages.giftSubscription) : s.createElement(f.u, {
-                            ariaLabel: n.messages.giftSubscription + " " + n.state.currentPurchasePrice,
-                            "data-test-selector": S,
-                            onClick: n.onGiftSelect,
-                            purchase: n.state.currentPurchasePrice
-                        }, n.messages.giftSubscription) : n.state.subbedTier === n.state.activeTab && n.state.activeTab === r.Prime ? s.createElement(h.a, {
-                            authToken: n.props.authToken,
-                            "data-a-target": "subscribe-with-prime-button",
-                            isSubscribed: n.props.isSubscribed,
-                            isSubscribedWithPrime: n.props.subbedTier === p.a,
-                            onSubscribedWithPrime: n.onSubscribedWithPrime,
-                            reportSubMenuAction: n.props.reportSubMenuAction,
-                            subLogin: n.props.subLogin,
-                            userHasPrime: n.props.userHasPrime,
-                            canPrimeSubscribe: n.props.canPrimeSubscribe
-                        }) : s.createElement(m.a, {
-                            isSubbedToTier: n.state.subbedTier === n.state.activeTab,
-                            tierPrice: n.state.currentPurchasePrice,
-                            reportSubAction: n.props.reportSubMenuAction,
-                            url: e.url,
-                            "data-a-target": "subscribe-now-button",
-                            "data-test-selector": v
-                        })
-                    }, n.onSubscribedWithPrime = function() {
-                        n.props.onSubscribedWithPrime && n.props.onSubscribedWithPrime()
-                    }, n.reportGiftCheckoutAction = function() {
-                        n.props.reportSubMenuAction({
-                            action: b.a.BuyGiftSub,
-                            checkoutButtonTier: n.state.currentPurchasePrice,
-                            giftRecipient: n.props.giftRecipient ? n.props.giftRecipient : null
-                        })
-                    }, n.onGiftSelect = function() {
-                        n.props.reportSubMenuAction({
-                            action: b.a.GiftASub,
-                            checkoutButtonTier: n.state.currentPurchasePrice
-                        }), n.props.onGiftSelect && n.props.onGiftSelect()
-                    }, n.mapSubbedTierToTabs = function(e) {
-                        e.subbedTier === l.a.Prime ? (n.setState({
-                            activeTab: r.Prime,
-                            subbedTier: r.Prime
-                        }), e.onSelectTierTab(r.Prime)) : e.subbedTier === l.a.Tier1 ? (n.setState({
-                            activeTab: r.Tier1,
-                            subbedTier: r.Tier1
-                        }), e.onSelectTierTab(r.Tier1)) : e.subbedTier === l.a.Tier2 ? (n.setState({
-                            activeTab: r.Tier2,
-                            subbedTier: r.Tier2
-                        }), e.onSelectTierTab(r.Tier2)) : e.subbedTier === l.a.Tier3 ? (n.setState({
-                            activeTab: r.Tier3,
-                            subbedTier: r.Tier3
-                        }), e.onSelectTierTab(r.Tier3)) : e.isGift ? e.onSelectTierTab(n.state.activeTab) : e.onSelectTierTab(r.Prime)
-                    }, n.getExtraEmotes = function(e) {
-                        return (e === r.Tier2 ? Object(u.b)(n.props.subscriptionProducts[1].emotes) : Object(u.b)(n.props.subscriptionProducts[2].emotes.concat(n.props.subscriptionProducts[1].emotes))).map(function(e) {
-                            return s.createElement(f.U, {
-                                display: f.H.InlineFlex,
-                                margin: {
-                                    right: .5
-                                },
-                                key: e.id
-                            }, s.createElement("img", {
-                                srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/" + e.srcSet
-                            }))
-                        })
-                    }, n.state = {
-                        activeTab: r.Tier1,
-                        currentPurchasePrice: n.props.subscriptionProducts[0].price,
-                        subbedTier: null
-                    }, n
-                }
-                return a.__extends(t, e), t.prototype.componentWillMount = function() {
-                    this.setMessages(this.props), this.mapSubbedTierToTabs(this.props)
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.setMessages(e)
-                }, t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = null;
-                    this.state.subbedTier && (e = s.createElement(f.U, {
-                        display: f.H.InlineFlex,
-                        margin: {
-                            right: .5
-                        },
-                        className: "subscription-balloon-options__subbed-star"
-                    }, s.createElement(f._8, {
-                        asset: f._9.Star
-                    })));
-                    var t = s.createElement(f._21, null),
-                        n = null,
-                        a = null,
-                        c = null,
-                        u = s.createElement(f.U, {
-                            display: f.H.InlineFlex
-                        }, this.state.subbedTier === r.Tier3 && e, s.createElement(f._18, {
-                            active: this.state.activeTab === r.Tier3,
-                            "data-a-target": i(r.Tier3),
-                            onClick: this.toggleActiveTab
-                        }, this.messages.tier3TabName));
-                    this.hasDiscount(this.props) && this.state.activeTab !== r.Prime && (t = s.createElement(f.U, null, s.createElement(f._21, {
-                        className: "tw-subscription-modal__old-price"
-                    }, s.createElement("s", null, Object(g.a)(this.props.subscriptionProducts[this.state.activeTab - 1].self.oldPrice), " / Month")), s.createElement(f._21, {
-                        className: "tw-subscription-modal__new-price",
-                        type: f._26.H5,
-                        bold: !0
-                    }, Object(g.a)(this.props.subscriptionProducts[this.state.activeTab - 1].self.newPrice), " for the first month (Save 50%)"))), this.props.subbedTier !== l.a.Prime || this.props.isGift || (n = s.createElement(f.U, {
-                        display: f.H.InlineFlex,
-                        margin: {
-                            right: 2
-                        }
-                    }, s.createElement(f.U, {
-                        display: f.H.InlineFlex,
-                        margin: {
-                            right: 1
-                        },
-                        className: "subscription-balloon-options__prime-crown"
-                    }, s.createElement(f._8, {
-                        asset: f._9.Crown
-                    })), s.createElement(f._18, {
-                        active: this.state.activeTab === r.Prime,
-                        "data-a-target": i(r.Prime),
-                        onClick: this.toggleActiveTab
-                    }, this.messages.prime))), this.props.subbedTier && this.props.subbedTier !== l.a.Tier1 || (a = s.createElement(f.U, {
-                        display: f.H.InlineFlex,
-                        margin: {
-                            right: 2
-                        }
-                    }, this.state.subbedTier === r.Tier1 && e, s.createElement(f._18, {
-                        active: this.state.activeTab === r.Tier1,
-                        "data-a-target": i(r.Tier1),
-                        onClick: this.toggleActiveTab
-                    }, this.messages.tier1TabName))), this.props.subbedTier && this.props.subbedTier !== l.a.Prime && this.props.subbedTier !== l.a.Tier1 && this.props.subbedTier !== l.a.Tier2 || (c = s.createElement(f.U, {
-                        display: f.H.InlineFlex,
-                        margin: {
-                            right: 2
-                        }
-                    }, this.state.subbedTier === r.Tier2 && e, s.createElement(f._18, {
-                        active: this.state.activeTab === r.Tier2,
-                        "data-a-target": i(r.Tier2),
-                        onClick: this.toggleActiveTab
-                    }, this.messages.tier2TabName)));
-                    var d = null;
-                    return (this.messages.tier2EmoteCount > 0 && this.state.activeTab === r.Tier2 || this.messages.tier3EmoteCount > 0 && this.state.activeTab === r.Tier3) && (d = s.createElement(f.U, {
-                        display: f.H.InlineFlex,
-                        alignItems: f.c.Center
-                    }, this.getExtraEmotes(this.state.activeTab), s.createElement(f._21, {
-                        bold: !0
-                    }, Object(o.d)("Plus {extraEmoteCount, number} extra channel emote(s)", {
-                        extraEmoteCount: this.state.activeTab === r.Tier2 ? this.messages.tier2EmoteCount : this.messages.tier3EmoteCount
-                    }, "SubTierTabs")))), s.createElement(f.U, {
-                        className: "channel-header__subscription-balloon-options"
-                    }, s.createElement(f.U, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, s.createElement(f._19, null, n, a, c, u)), s.createElement(f.U, null, s.createElement(f.U, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, s.createElement(f._21, {
-                        type: f._26.H5,
-                        bold: !0
-                    }, this.getTabTitle())), s.createElement(f.U, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, s.createElement(f._21, null, this.messages.subTierBenefits)), d, t, s.createElement(f.U, {
-                        margin: {
-                            top: 1,
-                            right: 1
-                        }
-                    }, this.getTierSubscribeButton())))
-                }, t.prototype.setMessages = function(e) {
-                    var t = e.subscriptionProducts[1].emotes.length,
-                        n = t + e.subscriptionProducts[2].emotes.length;
-                    this.messages = {
-                        tier2EmoteCount: t,
-                        tier3EmoteCount: n,
-                        prime: Object(o.d)("Prime", "SubTierTabs"),
-                        subscribed: Object(o.d)("Subscribed", "SubTierTabs"),
-                        subTierBenefits: Object(o.d)("Includes {availableEmoteCount, number} emoticon(s), subscriber badge, customizable messages upon subscribing, and ad-free viewing", {
-                            availableEmoteCount: e.subscriptionProducts[0].emotes.length
-                        }, "SubTierTabs"),
-                        tier1Price: e.subscriptionProducts[0].price,
-                        tier2Price: e.subscriptionProducts[1].price,
-                        tier3Price: e.subscriptionProducts[2].price,
-                        tier1TabName: e.subscriptionProducts[0].price,
-                        tier2TabName: e.subscriptionProducts[1].price,
-                        tier3TabName: e.subscriptionProducts[2].price,
-                        subscribeNow: Object(o.d)("Subscribe Now", "SubTierTabs"),
-                        freeSubWithPrime: Object(o.d)("Free Channel Sub with Twitch Prime", "SubTierTabs"),
-                        giftSubscription: Object(o.d)("Gift A Subscription", "SubTierTabs"),
-                        tier1Sub: e.subscriptionProducts[0].displayName,
-                        tier2Sub: e.subscriptionProducts[1].displayName,
-                        tier3Sub: e.subscriptionProducts[2].displayName
-                    }, this.hasDiscount(e) && (this.messages.tier1Price = Object(g.a)(e.subscriptionProducts[0].self.newPrice), this.messages.tier2Price = Object(g.a)(e.subscriptionProducts[1].self.newPrice), this.messages.tier3Price = Object(g.a)(e.subscriptionProducts[2].self.newPrice))
-                }, t.prototype.isSubscriptionDiscountReady = function(e) {
-                    return void 0 !== e.subscriptionProducts[0].self
-                }, t.prototype.hasDiscount = function(e) {
-                    return !!this.isSubscriptionDiscountReady(e) && Object(g.b)(e.subscriptionProducts)
-                }, t = a.__decorate([Object(d.c)("SubTierTabs")], t)
-            }(s.Component),
-            k = y;
-        n.d(t, !1, function() {
-            return S
-        }), n.d(t, !1, function() {
-            return v
-        }), n.d(t, "b", function() {
-            return r
-        }), n.d(t, !1, function() {
-            return i
-        }), n.d(t, "a", function() {
-            return k
-        })
-    },
-    768: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            if (e) {
-                var t = e.map(function(e) {
-                    return e.id
-                });
-                return s().filter(function(e) {
-                    return t.includes(e.canonical)
-                })
-            }
-            return s()
-        }
-        var r = function(e, t) {
-                return 'community report (<a href="{link}">{link}</a>) {description}'.replace(/{link}/g, "https://www.twitch.tv/communities/{communityName}".replace("{communityName}", e)).replace(/{description}/, t)
-            },
-            a = n(2),
-            s = function() {
-                return [{
-                    localized: Object(a.d)("Site Suspension Evasion", "ReportUserModal"),
-                    canonical: "tos_ban_evasion"
-                }, {
-                    localized: Object(a.d)("Chat Ban Evasion", "ReportUserModal"),
-                    canonical: "chat_ban_evasion"
-                }, {
-                    localized: Object(a.d)("Self-Harm", "ReportUserModal"),
-                    canonical: "selfharm"
-                }, {
-                    localized: Object(a.d)("Attempts or Threats to Harm", "ReportUserModal"),
-                    canonical: "harm"
-                }, {
-                    localized: Object(a.d)("Harassment", "ReportUserModal"),
-                    canonical: "harassment"
-                }, {
-                    localized: Object(a.d)("Hate Speech", "ReportUserModal"),
-                    canonical: "hate_speech"
-                }, {
-                    localized: Object(a.d)("Offensive Username", "ReportUserModal"),
-                    canonical: "offensive_username"
-                }, {
-                    localized: Object(a.d)("Impersonation", "ReportUserModal"),
-                    canonical: "impersonation"
-                }, {
-                    localized: Object(a.d)("Spam, Scams, or Other Malicious Content", "ReportUserModal"),
-                    canonical: "spam"
-                }, {
-                    localized: Object(a.d)("Porn or Other Sexually Explicit Content", "ReportUserModal"),
-                    canonical: "porn"
-                }, {
-                    localized: Object(a.d)("Nudity or Sexual Behavior/Attire", "ReportUserModal"),
-                    canonical: "nudity"
-                }, {
-                    localized: Object(a.d)("Extreme Violence, Gore, or Other Obscene Content", "ReportUserModal"),
-                    canonical: "gore"
-                }, {
-                    localized: Object(a.d)("Underaged User", "ReportUserModal"),
-                    canonical: "underaged"
-                }, {
-                    localized: Object(a.d)("Cheating in Online Game", "ReportUserModal"),
-                    canonical: "cheating"
-                }, {
-                    localized: Object(a.d)("Prohibited Game", "ReportUserModal"),
-                    canonical: "prohibited"
-                }, {
-                    localized: Object(a.d)("Miscategorized Content or Other Category Violation", "ReportUserModal"),
-                    canonical: "miscategorized"
-                }, {
-                    localized: Object(a.d)("Community Rules Violation", "ReportUserModal"),
-                    canonical: "community_rules_violation"
-                }, {
-                    localized: Object(a.d)("Community is Violating Terms of Service", "ReportUserModal"),
-                    canonical: "community_tos_violation"
-                }, {
-                    localized: Object(a.d)("Bits Acceptable Use Policy Violation", "ReportUserModal"),
-                    canonical: "bits_violation"
-                }, {
-                    localized: Object(a.d)("Other Terms of Service Violation", "ReportUserModal"),
-                    canonical: "other"
-                }]
-            };
-        n.d(t, "a", function() {
-            return r
-        }), n.d(t, "b", function() {
-            return i
-        })
-    },
-    769: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return Object(l.bindActionCreators)({
-                closeModal: u.c
-            }, e)
-        }
-        var r = n(770),
-            a = n(0),
-            s = n(1),
-            o = n(8),
-            l = n(10),
-            c = n(121),
-            u = n(49),
-            d = n(5),
-            p = n(3),
-            m = (n(794), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleClose = function(e) {
-                        t.props.closeModal(), t.props.onClose && t.props.onClose(e)
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    return s.createElement(p._17, {
-                        className: "reporting-modal__container",
-                        background: p.m.Base,
-                        padding: {
-                            x: 2,
-                            y: 3
-                        }
-                    }, s.createElement(r.a, {
-                        onClose: this.handleClose,
-                        reportContext: this.props.reportContext,
-                        title: this.props.title,
-                        defaultDescription: this.props.defaultDescription
-                    }), s.createElement(c.a, null))
-                }, t
-            }(s.Component)),
-            h = Object(l.compose)(Object(d.c)("ReportUserModal"), Object(o.a)(null, i))(m);
-        n.d(t, !1, function() {}), n.d(t, !1, function() {
-            return r.a
-        }), n.d(t, !1, function() {
-            return m
-        }), n.d(t, "a", function() {
-            return h
-        })
-    },
-    770: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return {
-                sessionUser: e.session.user
-            }
-        }
-        n.d(t, "a", function() {
-            return y
-        });
-        var r = n(0),
-            a = n(1),
-            s = (n.n(a), n(8)),
-            o = n(10),
-            l = n(2),
-            c = n(7),
-            u = n(22),
-            d = n(13),
-            p = n(5),
-            m = n(762),
-            h = n(759),
-            g = n(768),
-            b = n(762),
-            f = n(789),
-            S = (n.n(f), n(790)),
-            v = (n.n(S), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        submitStatus: b.b.Unsubmitted
-                    }, t.handleSubmit = function(e, n, i, a) {
-                        return r.__awaiter(t, void 0, void 0, function() {
-                            var t, s, t, o;
-                            return r.__generator(this, function(r) {
-                                switch (r.label) {
-                                    case 0:
-                                        if (e !== m.a) return [3, 5];
-                                        t = {
-                                            userID: this.props.reportContext.targetUserID,
-                                            communityID: i || "",
-                                            reason: n
-                                        }, r.label = 1;
-                                    case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, this.props.reportUserInCommunity(Object(u.a)(t))];
-                                    case 2:
-                                        return r.sent(), l.n.tracking.track(d.SpadeEventType.CommunityModeration, {
-                                            community_id: i,
-                                            name: a,
-                                            is_official: !1,
-                                            user_id: this.props.sessionUser && this.props.sessionUser.id,
-                                            target_id: this.props.reportContext.targetUserID,
-                                            action: "report",
-                                            reason: e
-                                        }), this.setState({
-                                            submitStatus: b.b.Success
-                                        }), [3, 4];
-                                    case 3:
-                                        return s = r.sent(), l.i.error(s, "ReportUserInCommunity Mutation failed."), this.setState({
-                                            submitStatus: b.b.MutationError
-                                        }), [3, 4];
-                                    case 4:
-                                        return [3, 9];
-                                    case 5:
-                                        t = {
-                                            description: n,
-                                            reason: e,
-                                            content: this.props.reportContext.contentType,
-                                            contentID: this.props.reportContext.contentID,
-                                            extra: this.props.reportContext.extra,
-                                            targetID: this.props.reportContext.targetUserID
-                                        }, this.props.reportContext.contentType === h.a.Community && this.props.reportContext.extra && (t.description = Object(g.a)(this.props.reportContext.extra, n)), r.label = 6;
-                                    case 6:
-                                        return r.trys.push([6, 8, , 9]), [4, this.props.reportUser(Object(u.a)(t))];
-                                    case 7:
-                                        return r.sent(), this.props.reportContext.contentType === h.a.Community && l.n.tracking.track(d.SpadeEventType.CommunityReport, {
-                                            community_id: this.props.reportContext.contentID,
-                                            name: this.props.reportContext.extra,
-                                            is_official: !1,
-                                            user_id: this.props.sessionUser && this.props.sessionUser.id,
-                                            reason: e
-                                        }), this.setState({
-                                            submitStatus: b.b.Success
-                                        }), [3, 9];
-                                    case 8:
-                                        return o = r.sent(), l.i.error(o, "ReportUser Mutation failed."), this.setState({
-                                            submitStatus: b.b.MutationError
-                                        }), [3, 9];
-                                    case 9:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }, t.handleChildError = function(e) {
-                        return t.setState({
-                            submitStatus: e
-                        })
-                    }, t.handleClose = function() {
-                        t.props.onClose && t.props.onClose(t.state.submitStatus)
-                    }, t
-                }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.componentWillUnmount = function() {
-                    this.handleClose()
-                }, t.prototype.render = function() {
-                    return a.createElement(b.c, {
-                        onClose: this.handleClose,
-                        onError: this.handleChildError,
-                        onSubmit: this.handleSubmit,
-                        reportContentType: this.props.reportContext.contentType,
-                        submitStatus: this.state.submitStatus,
-                        targetUserID: this.props.reportContext.targetUserID,
-                        title: this.props.title,
-                        defaultDescription: this.props.defaultDescription
-                    })
-                }, t
-            }(a.Component)),
-            y = Object(o.compose)(Object(c.a)(f, {
-                name: "reportUserInCommunity"
-            }), Object(c.a)(S, {
-                name: "reportUser"
-            }), Object(p.c)("ReportUser"), Object(s.a)(i, null))(v)
-    },
-    771: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return {
-                authToken: Object(o.a)(e)
-            }
-        }
-        var r = n(0),
-            a = n(1),
-            s = n(8),
-            o = n(18),
-            l = n(5),
-            c = n(772),
-            u = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.reportInteractive = function() {
-                        t.props.latencyTracking.reportInteractive()
-                    }, t
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(c.b, {
-                        authToken: this.props.authToken,
-                        hostChannelID: this.props.hostChannelID,
-                        hostChannelLogin: this.props.hostChannelLogin,
-                        channelLogin: this.props.channelLogin,
-                        updateContainerWidth: this.props.updateContainerWidth,
-                        reportInteractive: this.reportInteractive
-                    })
-                }, t = r.__decorate([Object(l.c)("SubscribeButton")], t)
-            }(a.Component),
-            d = Object(s.a)(i)(u);
-        n.d(t, !1, function() {
-            return u
-        }), n.d(t, "b", function() {
-            return d
-        }), n.d(t, !1, function() {}), n.d(t, "a", function() {
-            return c.a
-        }), n.d(t, !1, function() {
-            return c.b
-        })
-    },
-    772: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            var t = new Map;
-            return t.set(R.b.Prime, null), e.forEach(function(e, n) {
-                t.set(n + 1, e)
-            }), t
-        }
-        var r, a = n(0),
-            s = n(1),
-            o = n(2),
-            l = n(60),
-            c = n(7),
-            u = n(100),
-            d = n(773),
-            p = n(128),
-            m = n(22),
-            h = n(35),
-            g = n(19),
-            b = n(5),
-            f = n(61),
-            S = n(83),
-            v = n(126),
-            y = n(352),
-            k = n(29),
-            _ = n(51),
-            E = n(123),
-            P = n(797),
-            T = n(246),
-            C = n(3),
-            N = (n(807), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        selectedUser: null
-                    }, t.messages = {
-                        noResults: Object(o.d)("No Results", "GiftRecipientSearchResult"),
-                        buyGift: Object(o.d)("Buy Gift Subscription", "GiftRecipientSearchResult"),
-                        searchHint: Object(o.d)("Start typing to see a list of suggestions here.", "GiftRecipientSearchResult")
-                    }, t.reportGiftCheckoutAction = function() {
-                        t.props.reportSubMenuAction({
-                            action: T.a.BuyGiftSub,
-                            checkoutButtonTier: t.props.selectedProductPrice,
-                            giftRecipient: t.state.selectedUser ? t.state.selectedUser.login : null
-                        })
-                    }, t.onUserClick = function(e) {
-                        for (var n = e.target; n.parentElement && !n.dataset.user_id;) n = n.parentElement;
-                        n.dataset.user_id && n.dataset.user_login && n.dataset.user_name ? t.setState({
-                            selectedUser: {
-                                id: n.dataset.userId || "",
-                                login: n.dataset.user_login || "",
-                                name: n.dataset.user_name || ""
-                            }
-                        }) : t.setState({
-                            selectedUser: null
-                        })
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    (e.isWaiting || e.isErrored || !e.hasInput) && this.setState({
-                        selectedUser: null
-                    })
-                }, t.prototype.render = function() {
-                    var e;
-                    return e = this.props.isWaiting ? s.createElement(C.U, {
-                        fullHeight: !0
-                    }, s.createElement(C.X, {
-                        fillContent: !0
-                    })) : this.props.hasInput ? this.props.isErrored ? this.getErrorMessage() : this.props.userResults && this.props.userResults.totalHits > 0 ? this.getUserResultContent() : this.getNoResultsMessage() : s.createElement(C.U, {
-                        margin: 1
-                    }, s.createElement(C._21, {
-                        color: C.F.Alt2
-                    }, this.messages.searchHint)), s.createElement("div", {
-                        onKeyDown: this.props.onKeyDown
-                    }, s.createElement(C._17, {
-                        className: "gift-recipient-search-result-view",
-                        background: C.m.Alt,
-                        position: C._2.Relative,
-                        overflow: C.Y.Hidden,
-                        display: C.H.Block,
-                        margin: {
-                            bottom: 2
-                        },
-                        borderLeft: !0,
-                        borderBottom: !0,
-                        borderRight: !0
-                    }, s.createElement(C.P, {
-                        overflow: C.Y.Hidden,
-                        position: C._2.Relative
-                    }, s.createElement(k.b, {
-                        suppressScrollX: !0
-                    }, s.createElement(C.U, null, e, s.createElement(k.a, {
-                        enabled: !this.props.isWaiting && this.props.hasInput,
-                        loadMore: this.props.loadMore
-                    }))))), this.getBuyGiftButton())
-                }, t.prototype.getBuyGiftButton = function() {
-                    var e = Object(E.a)(this.props.selectedProductURL, {
-                            recipient: this.state.selectedUser ? this.state.selectedUser.login : ""
-                        }),
-                        t = s.createElement(P.a, {
-                            subProductId: this.props.selectedProductId,
-                            giftRecipient: this.state.selectedUser ? this.state.selectedUser.login : null,
-                            onClick: this.reportGiftCheckoutAction,
-                            checkoutURL: e
-                        }),
-                        n = null;
-                    if (this.state.selectedUser) {
-                        var i = Object(_.a)(this.state.selectedUser.login || "", this.state.selectedUser.name || "");
-                        n = s.createElement(C.P, {
-                            margin: {
-                                x: 1
-                            }
-                        }, s.createElement(C._21, null, Object(o.d)("for {displayName}", {
-                            displayName: s.createElement(C._21, {
-                                bold: !0,
-                                type: C._26.Span
-                            }, i)
-                        }, "GiftRecipientSearchResult")))
-                    }
-                    return s.createElement(C.U, {
-                        display: C.H.Flex,
-                        alignItems: C.c.Center,
-                        fullWidth: !0
-                    }, t, n)
-                }, t.prototype.getErrorMessage = function() {
-                    return s.createElement(C.U, {
-                        fullWidth: !0,
-                        textAlign: C._22.Center,
-                        justifyContent: C.T.Center
-                    }, s.createElement(C._21, null, Object(o.d)("Something went wrong", "GiftRecipientSearchResult")))
-                }, t.prototype.getUserResultContent = function() {
-                    var e = this;
-                    return this.props.userResults ? this.props.userResults.results.map(function(t) {
-                        var n = Object(_.a)(t.login || "", t.name || "");
-                        return s.createElement(C.S, {
-                            tabIndex: -1,
-                            "data-ts_selectable": !0,
-                            "data-tt_content": !0,
-                            key: "git-recipient-result__" + t.id,
-                            "data-user_id": t.id,
-                            "data-user_login": t.login,
-                            "data-user_name": t.name,
-                            onClick: e.onUserClick,
-                            "data-test-selector": "subscribe-button__gift_search_result"
-                        }, s.createElement(C.U, {
-                            padding: .5
-                        }, s.createElement(C.A, {
-                            row: !0
-                        }, s.createElement(C.C, {
-                            imageAlt: t.thumbnailAltText,
-                            imageSrc: t.thumbnail ? t.thumbnail : "",
-                            size: C.D.Size4,
-                            aspect: C.k.Aspect1x1
-                        }), s.createElement(C.B, null, s.createElement(C.P, {
-                            padding: {
-                                x: 1
-                            }
-                        }, s.createElement(C._21, {
-                            type: C._26.H5,
-                            ellipsis: !0
-                        }, n))))))
-                    }) : s.createElement(C._1, null)
-                }, t.prototype.getNoResultsMessage = function() {
-                    return s.createElement(C.U, {
-                        margin: 1
-                    }, s.createElement(C._21, {
-                        color: C.F.Alt2
-                    }, this.messages.noResults))
-                }, t = a.__decorate([Object(b.c)("GiftRecipientSearchResultPanel")], t)
-            }(s.Component)),
-            U = N,
-            O = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleChange = function(e) {
-                        t.props.onChange(e.target.value)
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    return this.props.selectedSubProduct ? (this.formatMessages(), s.createElement(C.U, {
-                        padding: 2
-                    }, s.createElement(C.U, null, s.createElement(C.U, {
-                        display: C.H.Flex,
-                        justifyContent: C.T.Between,
-                        alignItems: C.c.Center,
-                        margin: {
-                            bottom: 1
-                        }
-                    }, s.createElement(C._21, {
-                        type: C._26.H4,
-                        bold: !0
-                    }, this.messages.giftSubscription), s.createElement(C.u, {
-                        type: C.z.Text,
-                        "data-a-target": "subscribe-back-button",
-                        icon: C._9.AngleLeft,
-                        onClick: this.props.onBack
-                    }, s.createElement(C.U, {
-                        alignItems: C.c.Center,
-                        display: C.H.InlineFlex
-                    }, s.createElement(C._21, null, this.messages.back)))), s.createElement(C.U, null, s.createElement(C._21, null, this.messages.giftSingleMonth), s.createElement(C.U, {
-                        display: C.H.Flex,
-                        justifyContent: C.T.Center,
-                        fullWidth: !0
-                    }, s.createElement(C.P, {
-                        fullWidth: !0
-                    }, s.createElement("div", null, s.createElement(C._11, {
-                        onChange: this.handleChange,
-                        onKeyDown: this.props.onKeyDown,
-                        id: "gift-recipient-search",
-                        placeholder: this.messages.searchPlaceholder
-                    }), s.createElement(U, {
-                        hasInput: this.props.hasInput,
-                        userResults: this.props.userResults,
-                        isErrored: this.props.isErrored,
-                        isWaiting: this.props.isWaiting,
-                        loadMore: this.props.loadMore,
-                        onKeyDown: this.props.onKeyDown,
-                        selectedProductId: this.props.selectedSubProduct.id,
-                        selectedProductURL: this.props.selectedSubProduct.url,
-                        selectedProductPrice: this.props.selectedSubProduct.price,
-                        reportSubMenuAction: this.props.reportSubMenuAction
-                    })))))))) : s.createElement(C._1, null)
-                }, t.prototype.formatMessages = function() {
-                    this.messages = {
-                        giftSubscription: Object(o.d)("Choose a Gift Recipient", "GiftRecipientSearch"),
-                        giftSingleMonth: Object(o.d)("{subDisplayName}: {giftPrice} Gift Subscription (Single Month)", {
-                            subDisplayName: this.props.selectedSubProduct ? this.props.selectedSubProduct.displayName : "",
-                            giftPrice: this.props.selectedSubProduct ? this.props.selectedSubProduct.price : ""
-                        }, "GiftRecipientSearch"),
-                        back: Object(o.d)("Back", "GiftRecipientSearch"),
-                        searchPlaceholder: Object(o.d)("Search for a Twitch ID", "GiftRecipientSearch")
-                    }
-                }, t
-            }(s.Component),
-            w = 50,
-            I = function(e) {
-                function t() {
-                    var t = e.call(this) || this;
-                    return t.onChange = function(e) {
-                        if (t.inputTimer && (clearTimeout(t.inputTimer), t.inputTimer = 0), !e) return void t.setState(t.getEmptyState());
-                        t.setState({
-                            isWaiting: !0
-                        }), t.inputTimer = setTimeout(function() {
-                            return t.doSearch(e)
-                        }, w)
-                    }, t.loadMore = function() {
-                        return a.__awaiter(t, void 0, void 0, function() {
-                            var e, t, n, i;
-                            return a.__generator(this, function(r) {
-                                switch (r.label) {
-                                    case 0:
-                                        if (this.state.queryID || !0 === this.state.exhaustedHits) return [2];
-                                        e = this.state.currentPage + 1, r.label = 1;
-                                    case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(S.a.Users, this.state.term, "", {
-                                            page: e
-                                        })];
-                                    case 2:
-                                        return t = r.sent(), [3, 4];
-                                    case 3:
-                                        return n = r.sent(), this.setState(a.__assign({}, this.getEmptyState(), {
-                                            isErrored: !0,
-                                            hasInput: !0
-                                        })), [2];
-                                    case 4:
-                                        return t ? (i = Object(y.b)({
-                                            searchResults: t,
-                                            append: e > 0,
-                                            currentUserResults: this.state.currentUserResults
-                                        }), this.setState({
-                                            currentUserResults: i.currentUserResults,
-                                            term: this.state.term,
-                                            hasInput: !0,
-                                            isWaiting: !1,
-                                            currentPage: e,
-                                            exhaustedHits: i.exhaustedHits
-                                        }), [2]) : (this.setState(a.__assign({}, this.getEmptyState(), {
-                                            isErrored: !0,
-                                            hasInput: !0
-                                        })), [2])
-                                }
-                            })
-                        })
-                    }, t.onKeyDown = function(e) {
-                        t.state.term && (e.keyCode === f.a.Esc ? t.setState({
-                            hasInput: !1
-                        }) : e.keyCode === f.a.Up ? t.focusNext(-1) : e.keyCode === f.a.Down && t.focusNext(1))
-                    }, t.state = t.getEmptyState(), t.searchClient = new v.a(o.a.algoliaApplicationID, o.a.algoliaAPIKey), t
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    return s.createElement(O, {
-                        onChange: this.onChange,
-                        loadMore: this.loadMore,
-                        onKeyDown: this.onKeyDown,
-                        userResults: this.state.currentUserResults,
-                        hasInput: this.state.hasInput,
-                        isErrored: this.state.isErrored,
-                        isWaiting: this.state.isWaiting,
-                        onBack: this.props.onBack,
-                        selectedSubProduct: this.props.selectedSubProduct,
-                        reportSubMenuAction: this.props.reportSubMenuAction
-                    })
-                }, t.prototype.getEmptyState = function() {
-                    return {
-                        currentUserResults: {
-                            totalHits: 0,
-                            results: []
-                        },
-                        term: "",
-                        hasInput: !1,
-                        isErrored: !1,
-                        queryID: "",
-                        isWaiting: !1,
-                        currentPage: -1,
-                        focusSelectable: !1,
-                        exhaustedHits: !1
-                    }
-                }, t.prototype.doSearch = function(e) {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        var t, n, i, r, s, o;
-                        return a.__generator(this, function(l) {
-                            switch (l.label) {
-                                case 0:
-                                    this.inputTimer = 0, t = -1, n = g.a(), i = "INPUT" === document.activeElement.tagName, this.setState({
-                                        queryID: n,
-                                        focusSelectable: !i && !!this.state.currentFocus
-                                    }), l.label = 1;
-                                case 1:
-                                    return l.trys.push([1, 3, , 4]), t = 0, [4, this.searchClient.queryForType(S.a.Users, e, n)];
-                                case 2:
-                                    return r = l.sent(), [3, 4];
-                                case 3:
-                                    return s = l.sent(), this.setState(a.__assign({}, this.getEmptyState(), {
-                                        isErrored: !0,
-                                        hasInput: !0,
-                                        term: e
-                                    })), [2];
-                                case 4:
-                                    return r ? this.state.queryID !== r.id ? [2] : (o = Object(y.b)({
-                                        searchResults: r,
-                                        append: !1
-                                    }), this.setState(function(n) {
-                                        return a.__assign({}, n, o, {
-                                            queryID: "",
-                                            term: e,
-                                            hasInput: !0,
-                                            isWaiting: !1,
-                                            currentPage: t
-                                        })
-                                    }), [2]) : (this.setState(a.__assign({}, this.getEmptyState(), {
-                                        isErrored: !0,
-                                        hasInput: !0,
-                                        term: e
-                                    })), [2])
-                            }
-                        })
-                    })
-                }, t.prototype.focusNext = function(e) {
-                    var t, n = document.querySelectorAll("[data-ts_selectable=true]"),
-                        i = document.activeElement,
-                        r = Array.prototype.indexOf.call(n, i);
-                    if (t = r < 0 ? e > 0 ? 0 : n.length - 1 : r + e, t < 0 && (t = 0), !(t >= n.length)) {
-                        var a = n.item(t);
-                        a.focus(), a.tabIndex = 0, this.state.currentFocus && (this.state.currentFocus.tabIndex = -1), this.setState({
-                            currentFocus: a
-                        })
-                    }
-                }, t = a.__decorate([Object(b.c)("GiftRecipientSearch")], t)
-            }(s.Component),
-            D = I,
-            F = n(780),
-            R = n(763),
-            x = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.componentWillMount = function() {
-                    this.setMessages()
-                }, t.prototype.render = function() {
-                    return s.createElement(C.U, {
-                        padding: 2
-                    }, s.createElement(C.U, null, s.createElement(C.U, {
-                        display: C.H.Flex,
-                        justifyContent: C.T.Between,
-                        alignItems: C.c.Center,
-                        margin: {
-                            bottom: 1
-                        }
-                    }, s.createElement(C._21, {
-                        type: C._26.H4,
-                        bold: !0
-                    }, this.messages.allSubscriptions), s.createElement(C.u, {
-                        type: C.z.Text,
-                        "data-a-target": "subscribe-back-button",
-                        "data-test-selector": "subscribe-button__back-button",
-                        icon: C._9.AngleLeft,
-                        onClick: this.props.onBack
-                    }, s.createElement(C.U, {
-                        alignItems: C.c.Center,
-                        display: C.H.InlineFlex
-                    }, s.createElement(C._21, null, this.messages.back)))), s.createElement(R.a, {
-                        channelDisplayName: this.props.channelDisplayName,
-                        onSelectTierTab: this.props.onSelectTierTab,
-                        reportSubMenuAction: this.props.reportSubMenuAction,
-                        subscriptionProducts: this.props.subscriptionProducts,
-                        userHasPrime: !1,
-                        canPrimeSubscribe: !1,
-                        isSubscribed: this.props.isSubscribed
-                    })))
-                }, t.prototype.setMessages = function() {
-                    this.messages = {
-                        back: Object(o.d)("Back", "PaidSubOptions"),
-                        allSubscriptions: Object(o.d)("All Paid Subscriptions", "PaidSubOptions")
-                    }
-                }, t
-            }(s.Component),
-            L = x,
-            j = n(771),
-            A = n(784);
-        ! function(e) {
-            e[e.Top = 0] = "Top", e[e.SubOptions = 1] = "SubOptions", e[e.GiftOptions = 2] = "GiftOptions", e[e.RecipientSelect = 3] = "RecipientSelect"
-        }(r || (r = {}));
-        var M = n(774),
-            B = n(809),
-            G = (n(810), function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.handleTopPageSubButtonClick = function() {
-                        n.props.reportSubMenuAction({
-                            action: T.a.ClickCheckout,
-                            checkoutButtonTier: n.messages.tier1Price
-                        })
-                    }, n.showGiftOptions = function() {
-                        n.props.reportSubMenuAction({
-                            action: T.a.ClickGiftSubOptions,
-                            modalLevel: "second_page"
-                        }), n.setState(function() {
-                            return {
-                                currentPage: r.GiftOptions
-                            }
-                        })
-                    }, n.showSubOptions = function() {
-                        n.props.reportSubMenuAction({
-                            action: T.a.ClickMoreSubOptions,
-                            modalLevel: "second_page"
-                        }), n.setState(function() {
-                            return {
-                                currentPage: r.SubOptions
-                            }
-                        })
-                    }, n.showRecipientSelect = function() {
-                        n.setState(function() {
-                            return {
-                                currentPage: r.RecipientSelect
-                            }
-                        })
-                    }, n.showTop = function() {
-                        n.setState(function() {
-                            return {
-                                currentPage: r.Top
-                            }
-                        })
-                    }, n.goToPreviousPage = function() {
-                        return n.props.reportSubMenuAction({
-                            action: T.a.ClickBack,
-                            modalLevel: n.state.currentPage === r.SubOptions || n.state.currentPage === r.GiftOptions ? "top_page" : "second_page"
-                        }), n.state.currentPage === r.SubOptions || n.state.currentPage === r.GiftOptions ? void n.showTop() : n.state.currentPage === r.RecipientSelect ? void n.showGiftOptions() : void 0
-                    }, n.onSelectTierTab = function(e) {
-                        var t = n.tabToSubProduct.get(e);
-                        if (t) {
-                            var i = n.props.subscriptionProducts.findIndex(function(e) {
-                                return e.price === t.price
-                            });
-                            i !== n.state.selectedSubProductIndex && n.setState({
-                                selectedSubProductIndex: i
-                            }), n.props.onSelectTierTab(t.price)
-                        } else n.props.onSelectTierTab(j.a)
-                    }, n.state = {
-                        currentPage: r.Top,
-                        selectedSubProductIndex: 0,
-                        giftingEnabled: !1
-                    }, n.tabToSubProduct = i(t.subscriptionProducts), n
-                }
-                return a.__extends(t, e), t.prototype.componentWillMount = function() {
-                    this.getGiftingExperimentAssignment()
-                }, t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    if (!this.isSubscriptionDiscountReady(e) && this.isDiscountDataReady(e)) {
-                        if (e.data.error) return;
-                        var t = Object.assign({}, e.data.user.subscriptionProducts);
-                        this.props.setPromotionData(t)
-                    }
-                }, t.prototype.render = function() {
-                    return this.setMessages(), this.state.currentPage === r.Top ? this.getTopPage() : this.state.currentPage === r.SubOptions ? this.getPaidOptionsPage() : this.state.currentPage === r.GiftOptions ? this.getGiftOptionsPage() : this.state.currentPage === r.RecipientSelect ? this.getGiftRecipientSearchPage() : this.getTopPage()
-                }, t.prototype.getGiftingExperimentAssignment = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return a.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, o.n.experiments.getAssignment("TWILIGHT_SUB_GIFTING")];
-                                case 1:
-                                    return e = t.sent(), this.setState({
-                                        giftingEnabled: "yes" === e
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.getPaidOptionsPage = function() {
-                    return s.createElement(L, {
-                        onBack: this.goToPreviousPage,
-                        channelDisplayName: this.props.channelDisplayName,
-                        onSelectTierTab: this.onSelectTierTab,
-                        reportSubMenuAction: this.props.reportSubMenuAction,
-                        subscriptionProducts: this.props.subscriptionProducts,
-                        isSubscribed: !1,
-                        hasDiscount: this.hasDiscount(this.props)
-                    })
-                }, t.prototype.getGiftOptionsPage = function() {
-                    return s.createElement(C.U, {
-                        padding: 2
-                    }, s.createElement(F.a, {
-                        onBack: this.goToPreviousPage,
-                        channelDisplayName: this.props.channelDisplayName,
-                        onSelectTierTab: this.onSelectTierTab,
-                        reportSubMenuAction: this.props.reportSubMenuAction,
-                        subscriptionProducts: this.props.subscriptionProducts,
-                        onGiftSelect: this.showRecipientSelect
-                    }))
-                }, t.prototype.getGiftRecipientSearchPage = function() {
-                    return s.createElement(D, {
-                        onBack: this.goToPreviousPage,
-                        selectedSubProduct: this.props.subscriptionProducts[this.state.selectedSubProductIndex],
-                        reportSubMenuAction: this.props.reportSubMenuAction
-                    })
-                }, t.prototype.getTopPage = function() {
-                    var e = null,
-                        t = null,
-                        n = null,
-                        i = s.createElement(C._21, null, this.messages.tier1PricePerMonth),
-                        r = this.messages.tier1Price;
-                    return this.hasDiscount(this.props) && (i = s.createElement(C.U, null, s.createElement(C._21, {
-                        className: "tw-subscription-modal__old-price"
-                    }, s.createElement("s", null, this.messages.tier1PricePerMonth)), s.createElement(C._21, {
-                        className: "tw-subscription-modal__new-price",
-                        type: C._26.H5,
-                        bold: !0
-                    }, this.messages.discountMessage, " ")), r = Object(M.a)(this.props.subscriptionProducts[0].self.newPrice)), (this.props.inPrimeRegion || this.props.userHasPrime) && (n = this.renderPrimeSection()), this.props.isNonStandardSub || (e = s.createElement(C.U, {
-                        margin: {
-                            right: 1
-                        },
-                        display: C.H.Inline
-                    }, s.createElement(C.u, {
-                        ariaLabel: this.messages.seeMoreSubOptions,
-                        onClick: this.showSubOptions,
-                        type: C.z.Hollow,
-                        "data-test-selector": "subscribe-button__more-sub-options-button",
-                        "data-a-target": "see-more-sub-options-button"
-                    }, this.messages.seeMoreSubOptions))), this.state.giftingEnabled && (t = s.createElement(C.U, {
-                        display: C.H.Inline
-                    }, s.createElement(C.u, {
-                        ariaLabel: this.messages.giftSubscription,
-                        onClick: this.showGiftOptions,
-                        type: C.z.Hollow,
-                        "data-test-selector": "subscribe-button__gift"
-                    }, this.messages.giftSubscription))), s.createElement(C.U, {
-                        padding: 2
-                    }, n, s.createElement(C.U, null, s.createElement(C._21, {
-                        type: C._26.H4,
-                        bold: !0
-                    }, this.messages.paidSubscription), i, s.createElement(C.U, {
-                        display: C.H.Flex
-                    }, s.createElement(C.U, {
-                        margin: {
-                            right: 1,
-                            top: 1
-                        }
-                    }, s.createElement(C.u, {
-                        ariaLabel: this.messages.subscribeTier1,
-                        "data-a-target": "tier1-subscribe-button",
-                        "data-test-selector": "subscribe-button__top-page-sub-button",
-                        linkTo: this.props.subscriptionProducts[0].url,
-                        onClick: this.handleTopPageSubButtonClick,
-                        purchase: r,
-                        targetBlank: !0
-                    }, this.messages.subscribe)))), s.createElement(C.U, {
-                        margin: {
-                            right: 1,
-                            top: 2
-                        }
-                    }, e, t))
-                }, t.prototype.renderPrimeSection = function() {
-                    var e = this.props.userHasPrime ? this.messages.useFreeChannelSub : this.messages.primeUpsell;
-                    return s.createElement(C.U, {
-                        margin: {
-                            bottom: 2
-                        }
-                    }, s.createElement(C.U, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, s.createElement(C._21, {
-                        type: C._26.H4,
-                        bold: !0
-                    }, this.messages.freeSubWithPrime)), s.createElement(C.U, null, s.createElement(C.U, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, s.createElement(C._21, null, e)), s.createElement(A.a, {
-                        authToken: this.props.authToken,
-                        "data-a-target": "subscribe-with-prime-button",
-                        isSubscribed: !1,
-                        isSubscribedWithPrime: !1,
-                        onSubscribedWithPrime: this.props.onSubscribedWithPrime,
-                        reportSubMenuAction: this.props.reportSubMenuAction,
-                        subLogin: this.props.subLogin,
-                        userHasPrime: this.props.userHasPrime,
-                        canPrimeSubscribe: this.props.canPrimeSubscribe
-                    })))
-                }, t.prototype.setMessages = function() {
-                    var e = this.props.subscriptionProducts[0].price;
-                    this.hasDiscount(this.props) && this.props.subscriptionProducts[0].self.isEligibleForDiscount && (e = Object(M.a)(this.props.subscriptionProducts[0].self.newPrice)), this.messages = {
-                        useFreeChannelSub: Object(o.d)("Use your free channel subscription to directly support your favorite streamer. {upsellTextLink}", {
-                            upsellTextLink: s.createElement("a", {
-                                href: "https://help.twitch.tv/customer/en/portal/articles/2572060-twitch-prime-guide",
-                                target: "_blank"
-                            }, Object(o.d)("Learn more about your free sub", "BalloonNonSubbedUser"))
-                        }, "BalloonNonSubbedUser"),
-                        primeUpsell: Object(o.d)("{upsellTextBold}, plus get free game loot every month, ad-free viewing, and loads more with Twitch Prime.", {
-                            upsellTextBold: s.createElement("strong", null, Object(o.d)("Support your favorite streamer", "BalloonNonSubbedUser"))
-                        }, "BalloonNonSubbedUser"),
-                        freeSubWithPrime: Object(o.d)("Free Channel Sub with Twitch Prime", "BalloonNonSubbedUser"),
-                        changeSubscription: Object(o.d)("Change Your Subscription", "BalloonNonSubbedUser"),
-                        seeMoreSubOptions: Object(o.d)("More Paid Subscription Options", "BalloonNonSubbedUser"),
-                        tier1Price: Object(o.d)("{tier1Price}", {
-                            tier1Price: e
-                        }, "BalloonNonSubbedUser"),
-                        paidSubscription: Object(o.d)("Paid Subscription", "BalloonNonSubbedUser"),
-                        tier1PricePerMonth: Object(o.d)("{price} / Month", {
-                            price: this.props.subscriptionProducts[0].price
-                        }, "BalloonNonSubbedUser"),
-                        subscribeTier1: Object(o.d)("Subscribe {tier1Price}", {
-                            tier1Price: e
-                        }, "BalloonNonSubbedUser"),
-                        subscribeToUser: Object(o.d)("Subscribe to {username}", {
-                            username: this.props.channelDisplayName
-                        }, "BalloonNonSubbedUser"),
-                        subscribe: Object(o.d)("Subscribe", "BalloonNonSubbedUser"),
-                        back: Object(o.d)("Back", "BalloonNonSubbedUser"),
-                        allSubscriptions: Object(o.d)("All Paid Subscriptions", "BalloonNonSubbedUser"),
-                        chooseGiftSubscription: Object(o.d)("Choose A Gift Subscription", "BalloonNonSubbedUser"),
-                        discountMessage: Object(o.d)("{price} for the first month (Save 50%)", {
-                            price: e
-                        }, "BalloonNonSubbedUser"),
-                        giftSubscription: Object(o.d)("Gift a Subscription", "BalloonNonSubbedUser"),
-                        giftDiscountDisclaimer: Object(o.d)("Promotions do not apply to Gift Subscriptions", "BalloonNonSubbedUser")
-                    }
-                }, t.prototype.isDiscountDataReady = function(e) {
-                    return e.data.user && e.data.user.subscriptionProducts && e.data.user.subscriptionProducts.length > 0 && e.data.user.subscriptionProducts[0] && e.data.user.subscriptionProducts[0].self && void 0 !== e.data.user.subscriptionProducts[0].self.isEligibleForDiscount
-                }, t.prototype.isSubscriptionDiscountReady = function(e) {
-                    return void 0 !== e.subscriptionProducts[0].self
-                }, t.prototype.hasDiscount = function(e) {
-                    return !!this.isDiscountDataReady(e) && Object(M.b)(e.subscriptionProducts)
-                }, t = a.__decorate([Object(c.a)(B, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                login: e.channelLogin
-                            }
-                        }
-                    },
-                    skip: function(e) {
-                        return !e.channelLogin
-                    }
-                }), Object(b.c)("BalloonNonSubbedUser")], t)
-            }(s.Component)),
-            V = G,
-            H = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.showTop = function() {
-                        n.setState(function() {
-                            return {
-                                currentPage: r.Top
-                            }
-                        })
-                    }, n.showRecipientSelect = function() {
-                        n.setState(function() {
-                            return {
-                                currentPage: r.RecipientSelect
-                            }
-                        })
-                    }, n.showGiftOptions = function() {
-                        n.props.reportSubMenuAction({
-                            action: T.a.ClickGiftSubOptions
-                        }), n.setState(function() {
-                            return {
-                                currentPage: r.GiftOptions
-                            }
-                        })
-                    }, n.showSubOptions = function() {
-                        n.setState(function() {
-                            return {
-                                currentPage: r.SubOptions
-                            }
-                        })
-                    }, n.goToPreviousPage = function() {
-                        return n.state.currentPage === r.GiftOptions || n.state.currentPage === r.SubOptions || n.state.giftShortcut ? (n.showTop(), void n.setState({
-                            giftShortcut: !1
-                        })) : n.state.currentPage === r.RecipientSelect ? void n.showGiftOptions() : void 0
-                    }, n.onGiftSelect = function() {
-                        n.props.reportSubMenuAction({
-                            action: T.a.GiftASub,
-                            checkoutButtonTier: n.props.subscriptionProducts[0].price
-                        }), n.setState({
-                            selectedSubProductIndex: 0,
-                            giftShortcut: !0
-                        }), n.showRecipientSelect()
-                    }, n.handleTopPageSubButtonClick = function() {
-                        n.props.reportSubMenuAction({
-                            action: T.a.ClickCheckout,
-                            checkoutButtonTier: n.props.subscriptionProducts[0].price
-                        })
-                    }, n.onSelectTierTab = function(e) {
-                        var t = n.tabToSubProduct.get(e);
-                        if (t) {
-                            var i = n.props.subscriptionProducts.findIndex(function(e) {
-                                return e.price === t.price
-                            });
-                            i !== n.state.selectedSubProductIndex && n.setState({
-                                selectedSubProductIndex: i
-                            }), n.props.onSelectTierTab(t.price)
-                        } else n.props.onSelectTierTab(j.a)
-                    }, n.state = {
-                        currentPage: r.Top,
-                        selectedSubProductIndex: 0,
-                        giftShortcut: !1,
-                        giftingEnabled: !1
-                    }, n.tabToSubProduct = i(t.subscriptionProducts), n
-                }
-                return a.__extends(t, e), t.prototype.componentWillMount = function() {
-                    this.getGiftingExperimentAssignment()
-                }, t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    return this.setMessages(), this.state.currentPage === r.Top ? this.getTopPage() : this.state.currentPage === r.SubOptions ? this.getSubOptionsPage() : this.state.currentPage === r.GiftOptions ? this.getGiftOptionsPage() : this.state.currentPage === r.RecipientSelect ? this.getGiftRecipientSearchPage() : this.getTopPage()
-                }, t.prototype.getGiftingExperimentAssignment = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return a.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, o.n.experiments.getAssignment("TWILIGHT_SUB_GIFTING")];
-                                case 1:
-                                    return e = t.sent(), this.setState({
-                                        giftingEnabled: "yes" === e
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.getGiftRecipientSearchPage = function() {
-                    return s.createElement(D, {
-                        onBack: this.goToPreviousPage,
-                        selectedSubProduct: this.props.subscriptionProducts[this.state.selectedSubProductIndex],
-                        reportSubMenuAction: this.props.reportSubMenuAction
-                    })
-                }, t.prototype.getGiftOptionsPage = function() {
-                    return s.createElement(C.U, {
-                        padding: 2
-                    }, s.createElement(F.a, {
-                        onBack: this.goToPreviousPage,
-                        channelDisplayName: this.props.channelDisplayName,
-                        subscriptionProducts: this.props.subscriptionProducts,
-                        onGiftSelect: this.showRecipientSelect,
-                        onSelectTierTab: this.onSelectTierTab,
-                        reportSubMenuAction: this.props.reportSubMenuAction
-                    }))
-                }, t.prototype.getSubOptionsPage = function() {
-                    return s.createElement(L, {
-                        onBack: this.goToPreviousPage,
-                        channelDisplayName: this.props.channelDisplayName,
-                        onSelectTierTab: this.onSelectTierTab,
-                        reportSubMenuAction: this.props.reportSubMenuAction,
-                        subscriptionProducts: this.props.subscriptionProducts,
-                        hasDiscount: !1,
-                        isSubscribed: !0
-                    })
-                }, t.prototype.getTopPageGiftSection = function() {
-                    return s.createElement(C.U, null, s.createElement(C._21, {
-                        type: C._26.H4,
-                        bold: !0
-                    }, this.messages.helpGrow), s.createElement(C.U, {
-                        margin: {
-                            top: 1,
-                            bottom: 1
-                        },
-                        display: C.H.Flex
-                    }, s.createElement(C.u, {
-                        ariaLabel: this.messages.giftSubscription + " " + this.props.subscriptionProducts[0].price,
-                        onClick: this.onGiftSelect,
-                        purchase: this.props.subscriptionProducts[0].price
-                    }, this.messages.giftSubscription), s.createElement(C.U, {
-                        margin: {
-                            left: 1
-                        }
-                    }, s.createElement(C.u, {
-                        ariaLabel: this.messages.giftOptions,
-                        onClick: this.showGiftOptions,
-                        type: C.z.Hollow
-                    }, this.messages.giftOptions))))
-                }, t.prototype.getTopPageUpgradeSection = function() {
-                    return s.createElement(C.U, null, s.createElement(C._21, {
-                        type: C._26.H4,
-                        bold: !0
-                    }, this.messages.upgradeSubscription), s.createElement(R.a, {
-                        authToken: this.props.authToken,
-                        onSubscribedWithPrime: this.props.onSubscribedWithPrime,
-                        subLogin: this.props.subLogin,
-                        userHasPrime: this.props.userHasPrime,
-                        canPrimeSubscribe: this.props.canPrimeSubscribe,
-                        channelDisplayName: this.props.channelDisplayName,
-                        onSelectTierTab: this.onSelectTierTab,
-                        subbedTier: this.props.subbedTier,
-                        subscriptionProducts: this.props.subscriptionProducts,
-                        reportSubMenuAction: this.props.reportSubMenuAction,
-                        onGiftSelect: this.showRecipientSelect,
-                        isSubscribed: !0
-                    }))
-                }, t.prototype.getGiftInfoSection = function() {
-                    var e, t, n = null;
-                    return this.props.giftPaidUpgrade ? (e = this.messages.yourSubscription, t = this.messages.giftInfo, n = this.messages.giftUpgradeInfo) : (e = this.messages.yourGiftSub, t = this.messages.giftInfoWithExpiration), s.createElement(C.U, null, s.createElement(C._21, {
-                        bold: !0,
-                        type: C._26.H4
-                    }, e), s.createElement(C.P, {
-                        margin: {
-                            y: 1
-                        }
-                    }, s.createElement(C._21, null, t)), n)
-                }, t.prototype.getGiftExtendSection = function() {
-                    var e = null,
-                        t = null;
-                    return this.props.isNonStandardSub || (e = s.createElement(C.U, {
-                        margin: {
-                            right: 1
-                        },
-                        display: C.H.Inline
-                    }, s.createElement(C.u, {
-                        ariaLabel: this.messages.seeMoreSubOptions,
-                        onClick: this.showSubOptions,
-                        type: C.z.Hollow,
-                        "data-a-target": "see-more-sub-options-button"
-                    }, this.messages.seeMoreSubOptions))), t = s.createElement(C.U, {
-                        display: C.H.Inline
-                    }, s.createElement(C.u, {
-                        ariaLabel: this.messages.giftSubscription,
-                        onClick: this.showGiftOptions,
-                        type: C.z.Hollow
-                    }, this.messages.giftSubscription)), s.createElement(C.U, null, s.createElement(C.U, {
-                        margin: {
-                            top: 1
-                        }
-                    }, s.createElement(C._21, {
-                        type: C._26.H4,
-                        bold: !0
-                    }, this.messages.extendSubscription), s.createElement(C.P, {
-                        margin: {
-                            top: 1
-                        }
-                    }, s.createElement(C._21, null, this.messages.tier1PricePerMonth)), s.createElement(C.U, {
-                        margin: {
-                            right: 1,
-                            top: 1
-                        }
-                    }, s.createElement(C.u, {
-                        ariaLabel: this.props.subscriptionProducts[0].price,
-                        "data-a-target": "tier1-subscribe-button",
-                        linkTo: this.props.subscriptionProducts[0].url,
-                        onClick: this.handleTopPageSubButtonClick,
-                        purchase: this.props.subscriptionProducts[0].price,
-                        targetBlank: !0
-                    }, this.messages.subscribe))), s.createElement(C.U, {
-                        margin: {
-                            right: 1,
-                            top: 2
-                        }
-                    }, e, t))
-                }, t.prototype.getTopPage = function() {
-                    return this.state.giftingEnabled ? this.props.userHasGiftSub ? this.props.userHasGiftSub && !this.props.giftPaidUpgrade ? s.createElement(C.U, {
-                        className: "channel-header__subscription-modal-main",
-                        padding: 2
-                    }, s.createElement(C.U, {
-                        margin: {
-                            bottom: 2
-                        }
-                    }, this.getGiftInfoSection()), this.getGiftExtendSection()) : s.createElement(C.U, {
-                        className: "channel-header__subscription-modal-main",
-                        padding: 2
-                    }, s.createElement(C.U, {
-                        margin: {
-                            bottom: 2
-                        }
-                    }, this.getGiftInfoSection()), this.getTopPageGiftSection()) : s.createElement(C.U, {
-                        className: "channel-header__subscription-modal-main",
-                        padding: 2
-                    }, s.createElement(C.U, {
-                        margin: {
-                            bottom: 2
-                        }
-                    }, this.getTopPageGiftSection()), this.getTopPageUpgradeSection()) : s.createElement(C.U, {
-                        className: "channel-header__subscription-modal-main",
-                        padding: 2
-                    }, this.getTopPageUpgradeSection())
-                }, t.prototype.setMessages = function() {
-                    switch (this.props.subbedTier) {
-                        case d.a.Tier1:
-                            this.props.subscriptionProducts[0].price;
-                            break;
-                        case d.a.Tier2:
-                            this.props.subscriptionProducts[1].price;
-                            break;
-                        case d.a.Tier3:
-                            this.props.subscriptionProducts[2].price;
-                            break;
-                        default:
-                            this.props.subscriptionProducts[0].price
-                    }
-                    this.messages = {
-                        upgradeSubscription: Object(o.d)("Upgrade Your Subscription", "BalloonSubbedUser"),
-                        helpGrow: Object(o.d)("Help Grow {streamer}'s Community", {
-                            streamer: this.props.channelDisplayName
-                        }, "BalloonSubbedUser"),
-                        giftSubscription: Object(o.d)("Gift A Subscription", "BalloonSubbedUser"),
-                        giftOptions: Object(o.d)("More Gift Options", "BalloonSubbedUser"),
-                        chooseGiftSubscription: Object(o.d)("Choose A Gift Subscription", "BalloonSubbedUser"),
-                        back: Object(o.d)("Back", "BalloonSubbedUser"),
-                        yourSubscription: Object(o.d)("Your Subscription", "BalloonSubbedUser"),
-                        extendSubscription: Object(o.d)("Extend Your Subscription", "BalloonSubbedUser"),
-                        yourGiftSub: Object(o.d)("Your Gift Subscription", "BalloonSubbedUser"),
-                        seeMoreSubOptions: Object(o.d)("More Paid Subscription Options", "BalloonSubbedUser"),
-                        subscribe: Object(o.d)("Subscribe", "BalloonSubbedUser"),
-                        giftInfo: Object(o.d)("{giftPrice} Gift Subscription from {giftSender}", {
-                            giftPrice: this.getCurrentSubPrice(),
-                            giftSender: s.createElement(C._21, {
-                                bold: !0,
-                                type: C._26.Span
-                            }, this.props.giftSender || "")
-                        }, "BalloonSubbedUser"),
-                        giftUpgradeInfo: Object(o.d)("Your new {upgradePrice} Paid Subscription will begin on {subStartDate}", {
-                            upgradePrice: this.props.giftPaidUpgrade ? this.props.giftPaidUpgrade.price : "",
-                            subStartDate: this.getFormattedGiftUpgradeStartDate()
-                        }, "BalloonSubbedUser"),
-                        giftInfoWithExpiration: Object(o.d)("{giftPrice} Subscription from {giftSender} - Benefits expire on {giftEndDate}", {
-                            giftPrice: this.getCurrentSubPrice(),
-                            giftSender: s.createElement(C._21, {
-                                bold: !0,
-                                type: C._26.Span
-                            }, this.props.giftSender || ""),
-                            giftEndDate: this.getFormattedGiftEndDate()
-                        }, "BalloonSubbedUser"),
-                        tier1PricePerMonth: Object(o.d)("{price} / Month", {
-                            price: this.props.subscriptionProducts[0].price
-                        }, "BalloonSubbedUser"),
-                        allSubscriptions: Object(o.d)("All Paid Subscriptions", "BalloonSubbedUser")
-                    }
-                }, t.prototype.getFormattedGiftUpgradeStartDate = function() {
-                    var e = "";
-                    if (this.props.giftPaidUpgrade && this.props.giftPaidUpgrade.startsAt) try {
-                        e = Object(o.c)(new Date(this.props.giftPaidUpgrade.startsAt), {
-                            month: "long",
-                            day: "numeric"
-                        })
-                    } catch (t) {
-                        o.i.debug(t, "There was an error formatting gift upgrade start date."), e = ""
-                    }
-                    return e
-                }, t.prototype.getFormattedGiftEndDate = function() {
-                    var e = "";
-                    if (this.props.giftSubEndDate) try {
-                        e = Object(o.c)(new Date(this.props.giftSubEndDate), {
-                            month: "long",
-                            day: "numeric"
-                        })
-                    } catch (t) {
-                        o.i.debug(t, "There was an error formatting gift end date."), e = ""
-                    }
-                    return e
-                }, t.prototype.getCurrentSubPrice = function() {
-                    switch (this.props.subbedTier) {
-                        case "1000":
-                            return this.props.subscriptionProducts[0].price;
-                        case "2000":
-                            return this.props.subscriptionProducts[1].price;
-                        case "3000":
-                            return this.props.subscriptionProducts[2].price;
-                        default:
-                            return this.props.subscriptionProducts[0].price
-                    }
-                }, t = a.__decorate([Object(b.c)("BalloonSubbedUser")], t)
-            }(s.Component),
-            z = H,
-            W = (n(811), n(812));
-        n.d(t, "a", function() {
-            return q
-        }), n.d(t, "b", function() {
-            return K
-        });
-        var q = "prime",
-            $ = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        isSubscribed: !1,
-                        activeTierPrice: q,
-                        subbedTier: null,
-                        subData: null,
-                        inPrimeRegion: !1,
-                        isNonStandardSub: !1,
-                        isGiftSub: !1,
-                        hasReconciledUser: !1,
-                        subGiftingEnabled: !1
-                    }, t.modalLevel = "top_page", t.reportSubMenuAction = function(e) {
-                        Object(T.b)({
-                            action: e.action || "",
-                            channelLogin: t.props.channelLogin || "",
-                            channelID: t.props.data && t.props.data.user.id,
-                            checkoutButtonTier: e.checkoutButtonTier || t.state.activeTierPrice.slice(),
-                            hasSubCredit: !!t.props.data.user.self && t.props.data.user.self.canPrimeSubscribe,
-                            hostChannelID: t.props.hostChannelID,
-                            hostChannelLogin: t.props.hostChannelLogin,
-                            isMenuOpen: !(e.action === T.a.OpenSubMenu),
-                            sub_location: "channel_page",
-                            modal: !t.state.isSubscribed,
-                            modalLevel: t.state.isSubscribed ? "" : t.modalLevel.slice(),
-                            showPrimeContent: t.state.inPrimeRegion,
-                            giftRecipient: e.giftRecipient || null
-                        }), !e.modalLevel || e.action !== T.a.ClickMoreSubOptions && e.action !== T.a.ClickBack || (t.modalLevel = e.modalLevel, t.setState({
-                            activeTierPrice: q
-                        }))
-                    }, t.handleMenuToggle = function(e) {
-                        t.reportSubMenuAction({
-                            action: e ? T.a.CloseSubMenu : T.a.OpenSubMenu
-                        })
-                    }, t.onSelectTierTab = function(e) {
-                        t.state.activeTierPrice !== e && t.setState({
-                            activeTierPrice: e
-                        })
-                    }, t.onSubscribedWithPrime = function() {
-                        t.reportSubMenuAction({
-                            action: T.a.SubWithPrime
-                        }), t.modalLevel = "", t.setState({
-                            isSubscribed: !0,
-                            subbedTier: d.a.Prime
-                        }), Object(m.d)(W, {
-                            login: t.props.channelLogin
-                        }, function(e) {
-                            return e.user && e.user.self && (e.user.self.canPrimeSubscribe = !1, e.user.self.subscriptionBenefit = {
-                                id: Object(g.a)(),
-                                purchasedWithPrime: !0,
-                                tier: q,
-                                endsAt: null,
-                                paidUpgrade: null,
-                                gift: {
-                                    isGift: !1,
-                                    gifter: null,
-                                    __typename: "SubscriptionGift"
-                                },
-                                __typename: "SubscriptionBenefit"
-                            }), e
-                        })
-                    }, t.setMessages = function() {
-                        var e;
-                        e = t.state.subGiftingEnabled ? Object(o.d)("Gift A Sub", "SubscribeButton") : Object(o.d)("Subscribed", "SubscribeButton"), t.messages = {
-                            subscribe: t.props.hostChannelID ? Object(o.d)("Subscribe to {username}", {
-                                username: t.props.data.user.displayName
-                            }, "SubscribeButton") : Object(o.d)("Subscribe", "SubscribeButton"),
-                            subscribed: t.props.hostChannelID ? Object(o.d)("Subscribed to {username}", {
-                                username: t.props.data.user.displayName
-                            }, "SubscribeButton") : e,
-                            discountMessage: Object(o.d)("Get 50% off the first month of any paid Subscription", "SubscribeButton")
-                        }
-                    }, t.setPromotionData = function(e) {
-                        if (t.state) {
-                            var n = Object.assign({}, t.state.subData);
-                            if (null !== n) {
-                                for (var i = [], r = 0; r < 3; r++) {
-                                    var a = Object.assign({}, n.subscriptionProducts[r]);
-                                    a.self = e[r].self, i.push(a)
-                                }
-                                n.subscriptionProducts = i, t.setState({
-                                    subData: n
-                                })
-                            }
-                        }
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.componentWillMount = function() {
-                    this.getGiftingExperimentAssignment()
-                }, t.prototype.componentDidMount = function() {
-                    this.props.reportInteractive && this.isUserDataReady(this.props) && this.props.reportInteractive()
-                }, t.prototype.componentDidUpdate = function() {
-                    this.props.channelLogin && !this.isUserDataReady(this.props) || !this.props.updateContainerWidth || this.props.updateContainerWidth(), this.props.reportInteractive && this.isUserDataReady(this.props) && this.props.reportInteractive()
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    if (this.isUserDataReady(e) && e.pubsub.messages.subscriptionInfo !== this.props.pubsub.messages.subscriptionInfo && this.props.data.refetch(), this.props.channelLogin !== e.channelLogin && this.setState({
-                            subData: null,
-                            isSubscribed: !1,
-                            hasReconciledUser: !1
-                        }), this.isUserDataReady(e) && this.hasSubscriptionProducts(e)) {
-                        if (!this.state.inPrimeRegion && e.data.requestInfo && Object(p.b)(e.data.requestInfo.countryCode) && this.setState({
-                                inPrimeRegion: !0
-                            }), e.data.currentUser && this.isOwnChannel(e)) return void this.setState({
-                            hasReconciledUser: !0
-                        });
-                        if (this.setState({
-                                subData: e.data.user,
-                                isNonStandardSub: 1 === e.data.user.subscriptionProducts.length
-                            }), e.data.user.subscriptionProducts.some(this.isSubscriptionProductInvalid) && this.setState({
-                                isNonStandardSub: !0
-                            }), e.data.currentUser && e.data.user.self)
-                            if (e.data.user.self.subscriptionBenefit) {
-                                var t = e.data.user.self.subscriptionBenefit.purchasedWithPrime ? q : e.data.user.self.subscriptionBenefit.tier;
-                                this.modalLevel = "";
-                                var n = e.data.user.self.subscriptionBenefit.gift.isGift;
-                                this.setState({
-                                    isSubscribed: !0,
-                                    subbedTier: t,
-                                    hasReconciledUser: !0,
-                                    isGiftSub: n
-                                })
-                            } else this.setState({
-                                isSubscribed: !1,
-                                hasReconciledUser: !0
-                            });
-                        else this.setState({
-                            hasReconciledUser: !0
-                        })
-                    }
-                }, t.prototype.render = function() {
-                    if (!this.shouldRender() || !this.hasSubscriptionProducts(this.props)) return null;
-                    if (this.setMessages(), this.props.data.currentUser && this.state.isSubscribed && this.state.isNonStandardSub) return s.createElement(C.u, {
-                        disabled: !0,
-                        ariaLabel: this.messages.subscribed,
-                        icon: C._9.Star
-                    }, this.messages.subscribed);
-                    var e = this.state.subbedTier === d.a.Prime ? C._9.Crown : C._9.Star,
-                        t = this.state.isSubscribed ? this.messages.subscribed : this.messages.subscribe,
-                        n = this.state.isSubscribed ? "subscribed-button" : "subscribe-button",
-                        i = s.createElement(C.u, {
-                            "data-a-target": n,
-                            "data-test-selector": "subscribe-button__dropdown",
-                            ariaLabel: t,
-                            type: this.state.isSubscribed ? C.z.Success : C.z.Default,
-                            dropdown: !0,
-                            icon: this.state.isSubscribed ? e : void 0
-                        }, t),
-                        r = this.props.hostChannelID ? C.q.TopLeft : C.q.BottomRight;
-                    return s.createElement(l.a, {
-                        onToggle: this.handleMenuToggle
-                    }, i, s.createElement(C.p, {
-                        size: C.r.Large,
-                        direction: r,
-                        "data-a-target": "sub-balloon"
-                    }, this.renderBalloonContent()))
-                }, t.prototype.renderBalloonContent = function() {
-                    if (!this.state.subData) return o.i.debug("NOT rendering sub balloon; sub data not yet ready", {
-                        state: this.state
-                    }), null;
-                    if (o.i.debug("rendering sub balloon", {
-                            state: this.state
-                        }), this.props.data.currentUser) {
-                        if (this.state.isSubscribed) return s.createElement(z, {
-                            authToken: this.props.authToken,
-                            canPrimeSubscribe: !!this.props.data.user.self && this.props.data.user.self.canPrimeSubscribe,
-                            channelDisplayName: this.state.subData.displayName,
-                            onSelectTierTab: this.onSelectTierTab,
-                            reportSubMenuAction: this.reportSubMenuAction,
-                            subbedTier: this.state.subbedTier,
-                            isNonStandardSub: this.state.isNonStandardSub,
-                            subscriptionProducts: this.state.subData.subscriptionProducts,
-                            onSubscribedWithPrime: this.onSubscribedWithPrime,
-                            userHasPrime: this.props.data.currentUser.hasPrime,
-                            userHasGiftSub: this.state.isGiftSub,
-                            subLogin: this.state.subData.login,
-                            giftSubEndDate: this.props.data.user.self && this.props.data.user.self.subscriptionBenefit ? this.props.data.user.self.subscriptionBenefit.endsAt : void 0,
-                            giftPaidUpgrade: this.props.data.user.self && this.props.data.user.self.subscriptionBenefit && this.props.data.user.self.subscriptionBenefit.paidUpgrade ? this.props.data.user.self.subscriptionBenefit.paidUpgrade : void 0,
-                            giftSender: this.getGiftSender()
-                        });
-                        var e = null;
-                        return this.hasDiscount() && (e = s.createElement(C.U, {
-                            className: "tw-subscription-modal__discount-bar"
-                        }, s.createElement(C._21, null, this.messages.discountMessage))), s.createElement(C.U, null, e, s.createElement(V, {
-                            authToken: this.props.authToken,
-                            channelDisplayName: this.state.subData.displayName,
-                            channelLogin: this.props.channelLogin,
-                            canPrimeSubscribe: !!this.props.data.user.self && this.props.data.user.self.canPrimeSubscribe,
-                            inPrimeRegion: this.state.inPrimeRegion,
-                            isNonStandardSub: this.state.isNonStandardSub,
-                            onSelectTierTab: this.onSelectTierTab,
-                            onSubscribedWithPrime: this.onSubscribedWithPrime,
-                            reportSubMenuAction: this.reportSubMenuAction,
-                            subLogin: this.state.subData.login,
-                            subscriptionProducts: this.state.subData.subscriptionProducts,
-                            userHasPrime: this.props.data.currentUser.hasPrime,
-                            setPromotionData: this.setPromotionData
-                        }))
-                    }
-                    return s.createElement(V, {
-                        authToken: this.props.authToken,
-                        channelDisplayName: this.state.subData.displayName,
-                        channelLogin: this.props.channelLogin,
-                        canPrimeSubscribe: !!this.props.data.user.self && this.props.data.user.self.canPrimeSubscribe,
-                        inPrimeRegion: this.state.inPrimeRegion,
-                        isNonStandardSub: this.state.isNonStandardSub,
-                        onSelectTierTab: this.onSelectTierTab,
-                        onSubscribedWithPrime: this.onSubscribedWithPrime,
-                        reportSubMenuAction: this.reportSubMenuAction,
-                        subLogin: this.state.subData.login,
-                        subscriptionProducts: this.state.subData.subscriptionProducts,
-                        userHasPrime: !1,
-                        setPromotionData: this.setPromotionData
-                    })
-                }, t.prototype.hasSubscriptionProducts = function(e) {
-                    return e.data.user.subscriptionProducts && e.data.user.subscriptionProducts.length > 0
-                }, t.prototype.shouldRender = function() {
-                    return !!this.isUserDataReady(this.props) && (!this.hasSubscriptionProducts(this.props) || !!this.isSubscriptionReady())
-                }, t.prototype.isUserDataReady = function(e) {
-                    return e.data && e.data.user && !e.data.loading && !e.data.error
-                }, t.prototype.isOwnChannel = function(e) {
-                    return e.data.user.id === (e.data.currentUser && e.data.currentUser.id)
-                }, t.prototype.isSubscriptionReady = function() {
-                    return this.state.subData && this.state.hasReconciledUser
-                }, t.prototype.getGiftSender = function() {
-                    return this.state.isGiftSub && this.props.data.user.self && this.props.data.user.self.subscriptionBenefit && this.props.data.user.self.subscriptionBenefit.gift.isGift ? this.props.data.user.self.subscriptionBenefit.gift.gifter.displayName : null
-                }, t.prototype.getGiftingExperimentAssignment = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        var e, t;
-                        return a.__generator(this, function(n) {
-                            switch (n.label) {
-                                case 0:
-                                    e = "no", n.label = 1;
-                                case 1:
-                                    return n.trys.push([1, 3, , 4]), [4, o.n.experiments.getAssignment("TWILIGHT_SUB_GIFTING")];
-                                case 2:
-                                    return e = n.sent(), [3, 4];
-                                case 3:
-                                    return t = n.sent(), e = "no", [3, 4];
-                                case 4:
-                                    return this.setState({
-                                        subGiftingEnabled: "yes" === e
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.isSubscriptionProductInvalid = function(e) {
-                    return !e.emoteSetID
-                }, t.prototype.isSubscriptionDiscountReady = function(e) {
-                    return !(!e || !e.subData) && void 0 !== e.subData.subscriptionProducts[0].self
-                }, t.prototype.hasDiscount = function() {
-                    var e = this.state;
-                    return !!this.isSubscriptionDiscountReady(e) && (!(!e || !e.subData) && Object(M.b)(e.subData.subscriptionProducts))
-                }, t = a.__decorate([Object(c.a)(W, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                login: e.channelLogin
-                            }
-                        }
-                    },
-                    skip: function(e) {
-                        return !e.channelLogin
-                    }
-                }), Object(u.a)([{
-                    topic: function(e) {
-                        return Object(h.n)(e.data.currentUser && e.data.currentUser.id || "")
-                    },
-                    mapMessageTypesToProps: {
-                        "*": "subscriptionInfo"
-                    },
-                    skip: function(e) {
-                        return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
-                    }
-                }])], t)
-            }(s.Component),
-            K = $
-    },
-    773: function(e, t, n) {
+    867: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return i
-        });
-        var i = {
-            Prime: "prime",
-            Tier1: "1000",
-            Tier2: "2000",
-            Tier3: "3000"
-        }
-    },
-    774: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return "$" + (e / 100).toFixed(2).toString()
-        }
-
-        function r(e) {
-            if (e[0].self && e[1].self && e[2].self) {
-                if (e[0].self.isEligibleForDiscount) return !0;
-                if (e[1].self.isEligibleForDiscount) return !0;
-                if (e[2].self.isEligibleForDiscount) return !0
-            }
-            return !1
-        }
-        t.a = i, t.b = r
-    },
-    780: function(e, t, n) {
-        "use strict";
-        var i = n(0),
-            r = n(1),
-            a = n(2),
-            s = n(763),
-            o = n(3),
-            l = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onGiftSelect = function() {
-                        t.props.onGiftSelect && t.props.onGiftSelect()
-                    }, t.onSelectTierTab = function(e) {
-                        t.props.onSelectTierTab && t.props.onSelectTierTab(e)
-                    }, t.reportSubMenuAction = function(e) {
-                        t.props.reportSubMenuAction && t.props.reportSubMenuAction(e)
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(o.U, null, r.createElement(o.U, {
-                        display: o.H.Flex,
-                        justifyContent: o.T.Between,
-                        alignItems: o.c.Center,
-                        fullWidth: !0
-                    }, r.createElement(o._21, {
-                        bold: !0,
-                        type: o._26.H5
-                    }, Object(a.d)("Choose A Gift Subscription", "GiftTierTabs")), r.createElement(o.u, {
-                        type: o.z.Text,
-                        icon: o._9.AngleLeft,
-                        onClick: this.props.onBack,
-                        "data-test-selector": "sub-gift-select-back-button"
-                    }, r.createElement(o.U, {
-                        alignItems: o.c.Center,
-                        display: o.H.InlineFlex
-                    }, r.createElement(o._21, null, Object(a.d)("Back", "GiftTierTabs"))))), r.createElement(s.a, {
-                        isGift: !0,
-                        giftRecipient: this.props.giftRecipient,
-                        onGiftSelect: this.onGiftSelect,
-                        channelDisplayName: this.props.channelDisplayName,
-                        subscriptionProducts: this.props.subscriptionProducts,
-                        onSelectTierTab: this.onSelectTierTab,
-                        reportSubMenuAction: this.reportSubMenuAction,
-                        userHasPrime: !1,
-                        canPrimeSubscribe: !1,
-                        isSubscribed: !1
-                    }))
-                }, t
-            }(r.Component),
-            c = l;
-        n.d(t, !1, function() {
-            return "sub-gift-select-back-button"
-        }), n.d(t, "a", function() {
-            return c
-        })
-    },
-    784: function(e, t, n) {
-        "use strict";
-
-        function i(e, t) {
-            return r.__awaiter(this, void 0, void 0, function() {
-                var n, i, a, l, c;
-                return r.__generator(this, function(r) {
-                    switch (r.label) {
-                        case 0:
-                            n = "https://api.twitch.tv/api/premium/credit/spend_token?channel_id=" + e, i = 1, r.label = 1;
-                        case 1:
-                            if (!(i <= o)) return [3, 7];
-                            r.label = 2;
-                        case 2:
-                            return r.trys.push([2, 5, , 6]), [4, fetch(n, {
-                                method: "POST",
-                                headers: {
-                                    "Client-ID": s.n.config.legacyClientID,
-                                    Accept: "application/json; charset=UTF-8",
-                                    "content-type": "application/json; charset=UTF-8",
-                                    Authorization: "OAuth " + t
-                                }
-                            })];
-                        case 3:
-                            return a = r.sent(), [4, a.body];
-                        case 4:
-                            return l = r.sent(), [2, l];
-                        case 5:
-                            if (c = r.sent(), i === o) throw c;
-                            return [3, 6];
-                        case 6:
-                            return ++i, [3, 1];
-                        case 7:
-                            return [2]
-                    }
-                })
-            })
-        }
-        var r = n(0),
-            a = n(1),
-            s = n(2),
-            o = 3,
-            l = n(246),
-            c = n(3),
-            u = "subscribe-button__subscribe-with-prime",
-            d = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        isSubscribing: !1,
-                        primeSubFailure: !0
-                    }, t.handleStartPrimeTrialClick = function() {
-                        t.props.reportSubMenuAction({
-                            action: l.a.ClickSignupForPrime
-                        })
-                    }, t.handleSubWithPrimeClick = function() {
-                        t.setState({
-                            isSubscribing: !0
-                        }, function() {
-                            return r.__awaiter(t, void 0, void 0, function() {
-                                var e;
-                                return r.__generator(this, function(t) {
-                                    switch (t.label) {
-                                        case 0:
-                                            return t.trys.push([0, 3, 4, 5]), this.props.authToken && this.props.userHasPrime && this.props.subLogin ? [4, i(this.props.subLogin, this.props.authToken)] : [3, 2];
-                                        case 1:
-                                            t.sent(), this.props.onSubscribedWithPrime(), t.label = 2;
-                                        case 2:
-                                            return [3, 5];
-                                        case 3:
-                                            return e = t.sent(), s.i.error(e, "Failed to subscribe with Prime", {
-                                                subLogin: this.props.subLogin
-                                            }), this.setState({
-                                                isSubscribing: !1,
-                                                primeSubFailure: !0
-                                            }), [3, 5];
-                                        case 4:
-                                            return this.setState({
-                                                isSubscribing: !1
-                                            }), [7];
-                                        case 5:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        })
-                    }, t
-                }
-                return r.__extends(t, e), t.prototype.componentWillMount = function() {
-                    this.setMessages()
-                }, t.prototype.render = function() {
-                    var e = this.props.isSubscribedWithPrime && this.props.canPrimeSubscribe;
-                    return this.props.userHasPrime ? this.props.isSubscribed && !e ? a.createElement(c.u, r.__assign({
-                        ariaLabel: this.messages.subscribed,
-                        "data-test-selector": u,
-                        disabled: !0,
-                        icon: c._9.Crown
-                    }, Object(c._39)(this.props)), this.messages.subscribed) : this.props.canPrimeSubscribe ? a.createElement(c.u, r.__assign({
-                        ariaLabel: this.messages.subscribeFree,
-                        "data-test-selector": u,
-                        disabled: this.state.isSubscribing,
-                        icon: c._9.Crown,
-                        state: this.state.isSubscribing ? c.y.Loading : c.y.Default,
-                        onClick: this.handleSubWithPrimeClick
-                    }, Object(c._39)(this.props)), e ? this.messages.resubscribeFree : this.messages.subscribeFree) : a.createElement(c.u, r.__assign({
-                        ariaLabel: this.messages.primeSubNotAvailable,
-                        "data-test-selector": u,
-                        disabled: !0,
-                        icon: c._9.Crown
-                    }, Object(c._39)(this.props)), this.messages.primeSubNotAvailable) : a.createElement(c.u, r.__assign({
-                        ariaLabel: this.messages.startPrimeTrial,
-                        "data-test-selector": u,
-                        icon: c._9.Crown,
-                        linkTo: s.a.tryPrimeURI,
-                        onClick: this.handleStartPrimeTrialClick
-                    }, Object(c._39)(this.props), {
-                        targetBlank: !0
-                    }), this.messages.startPrimeTrial)
-                }, t.prototype.setMessages = function() {
-                    this.messages = {
-                        subscribed: Object(s.d)("Subscribed", "SubscribeWithPrime"),
-                        startPrimeTrial: Object(s.d)("Start Your Free Trial", "SubscribeWithPrime"),
-                        primeSubNotAvailable: Object(s.d)("Not yet!", "SubscribeWithPrime"),
-                        subscribeFree: Object(s.d)("Subscribe Free", "SubscribeWithPrime"),
-                        resubscribeFree: Object(s.d)("Resubscribe Free", "SubscribeWithPrime")
-                    }
-                }, t
-            }(a.Component),
-            p = d;
-        n.d(t, !1, function() {
-            return u
-        }), n.d(t, "a", function() {
-            return p
-        })
-    },
-    786: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "ReportUserModal_ReportReasons"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "content"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "ReportContentType"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "reportReasons"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "content"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "content"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 118
-            }
-        };
-        n.loc.source = {
-            body: "query ReportUserModal_ReportReasons($content: ReportContentType!) {\n  reportReasons(content: $content) {\n    id\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    787: function(e, t) {},
-    788: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "ReportUserModal_UserCommunities"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "userId"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "ID"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "user"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "id"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "userId"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "directories"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "nodes"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "name"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "displayName"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "directoryType"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 201
-            }
-        };
-        n.loc.source = {
-            body: "query ReportUserModal_UserCommunities($userId: ID!) {\n  user(id: $userId) {\n    id\n    directories {\n      nodes {\n        id\n        name\n        displayName\n        directoryType\n      }\n    }\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    789: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "mutation",
-                name: {
-                    kind: "Name",
-                    value: "ReportUserModal_ReportUserCommunity"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "input"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "ReportUserInCommunityInput"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "reportUserInCommunity"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "user"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 157
-            }
-        };
-        n.loc.source = {
-            body: "mutation ReportUserModal_ReportUserCommunity($input: ReportUserInCommunityInput!) {\n  reportUserInCommunity(input: $input) {\n    user {\n      id\n    }\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    790: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "mutation",
-                name: {
-                    kind: "Name",
-                    value: "ReportUserModal_ReportUser"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "input"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "ReportContentInput"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "reportContent"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "contentID"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 120
-            }
-        };
-        n.loc.source = {
-            body: "mutation ReportUserModal_ReportUser($input: ReportContentInput!) {\n  reportContent(input: $input) {\n    contentID\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    794: function(e, t) {},
-    797: function(e, t, n) {
-        "use strict";
-        var i = n(0),
-            r = n(1),
-            a = n(2),
-            s = n(7),
-            o = n(5),
-            l = n(3),
-            c = n(806),
-            u = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        canGift: !1
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    e.data && e.data.user && e.data.user.self ? this.setState({
-                        canGift: e.data.user.self.canGift
-                    }) : this.setState({
-                        canGift: !1
-                    })
-                }, t.prototype.render = function() {
-                    return r.createElement(l.u, {
-                        targetBlank: !0,
-                        disabled: !this.state.canGift,
-                        onClick: this.props.onClick,
-                        linkTo: this.props.checkoutURL,
-                        "data-test-selector": "gift-subscribe-button"
-                    }, Object(a.d)("Gift Subscription", "GiftSubscribeButton"))
-                }, t = i.__decorate([Object(o.c)("GiftSubscribeButton"), Object(s.a)(c, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                recipientLogin: e.giftRecipient,
-                                subProductId: e.subProductId
-                            }
-                        }
-                    },
-                    skip: function(e) {
-                        return !e.giftRecipient || !e.subProductId
-                    }
-                })], t)
-            }(r.Component),
-            d = u;
-        n.d(t, !1, function() {
-            return "gift-subscribe-button"
-        }), n.d(t, "a", function() {
-            return d
-        })
-    },
-    803: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            var t = Math.floor(e / 3600),
-                n = Math.floor((e - 3600 * t) / 60),
-                i = e - 3600 * t - 60 * n;
-            return t < 10 && (t = "0" + t), n < 10 && (n = "0" + n), i < 10 && (i = "0" + i), t + "h" + n + "m" + i + "s"
-        }
-
-        function r(e) {
-            return "" === e ? "" : e.startsWith("v") ? e : "v" + e
-        }
-        t.b = i, t.a = r
-    },
-    806: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "GiftSubscribeButton_Gift_Eligibility"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "recipientLogin"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "String"
-                        }
-                    },
-                    defaultValue: null
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "subProductId"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "user"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "login"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "recipientLogin"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "self"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "canGift"
-                                        },
-                                        arguments: [{
-                                            kind: "Argument",
-                                            name: {
-                                                kind: "Name",
-                                                value: "product"
-                                            },
-                                            value: {
-                                                kind: "Variable",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "subProductId"
-                                                }
-                                            }
-                                        }],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 195
-            }
-        };
-        n.loc.source = {
-            body: "query GiftSubscribeButton_Gift_Eligibility($recipientLogin: String, $subProductId: String!) {\n  user(login: $recipientLogin) {\n    id\n    self {\n      canGift(product: $subProductId)\n    }\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    807: function(e, t) {},
-    808: function(e, t) {},
-    809: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "ChannelPage_SubscribeButton_Promotion"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "login"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "user"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "login"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "subscriptionProducts"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "self"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "isEligibleForDiscount"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "newPrice"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "oldPrice"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "discountType"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "discountType"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 246
-            }
-        };
-        n.loc.source = {
-            body: "query ChannelPage_SubscribeButton_Promotion($login: String!) {\n  user(login: $login) {\n    id\n    subscriptionProducts {\n      id\n      self {\n\t\t\t\tisEligibleForDiscount\n\t\t\t\tnewPrice\n\t\t\t\toldPrice\n\t\t\t\tdiscountType\n\t\t\t\tdiscountType\n\t\t\t}\n    }\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    810: function(e, t) {},
-    811: function(e, t) {},
-    812: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "ChannelPage_SubscribeButton_User"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "login"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "user"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "login"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "displayName"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "subscriptionProducts"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "price"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "url"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "emoteSetID"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "displayName"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "name"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "emotes"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "self"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "canPrimeSubscribe"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "subscriptionBenefit"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "purchasedWithPrime"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "tier"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "endsAt"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "paidUpgrade"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "price"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "startsAt"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }]
-                                                }
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "gift"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "isGift"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "gifter"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "id"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "displayName"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }]
-                                                        }
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "hasPrime"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "requestInfo"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "countryCode"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 673
-            }
-        };
-        n.loc.source = {
-            body: "query ChannelPage_SubscribeButton_User($login: String!) {\n  user(login: $login) {\n    id\n    login\n    displayName\n    subscriptionProducts {\n      id\n      price\n      url\n      emoteSetID\n      displayName\n      name\n      emotes {\n        id\n      }\n    }\n    self {\n      canPrimeSubscribe\n      subscriptionBenefit {\n        id\n        purchasedWithPrime\n        tier\n        endsAt\n        paidUpgrade {\n          price\n          startsAt\n        }\n        gift {\n          isGift\n          gifter {\n            id\n            displayName\n          }\n        }\n      }\n    }\n  }\n  currentUser {\n    id\n    login\n    hasPrime\n  }\n  requestInfo {\n    countryCode\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    827: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return e && "v" === e.charAt(0) ? e.substring(1) : e
-        }
-        t.a = i
-    },
-    843: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return r
-        }), n.d(t, "d", function() {
             return a
+        }), n.d(t, "d", function() {
+            return r
         }), n.d(t, "e", function() {
-            return s
+            return o
         }), n.d(t, "c", function() {
             return i
         }), n.d(t, "b", function() {
-            return o
+            return s
         });
-        var i, r = "carousel-player__main-description",
-            a = "carousel-player-left-button",
-            s = "carousel-player-right-button";
+        var i, a = "carousel-player__main-description",
+            r = "carousel-player-left-button",
+            o = "carousel-player-right-button";
         ! function(e) {
             e[e.Horizontal = 1] = "Horizontal", e[e.Vertical = 2] = "Vertical"
         }(i || (i = {}));
-        var o;
+        var s;
         ! function(e) {
             e[e.Stream = 1] = "Stream", e[e.Vod = 2] = "Vod"
-        }(o || (o = {}))
+        }(s || (s = {}))
     },
-    855: function(e, t, n) {
+    879: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -6735,21 +11002,21 @@ webpackJsonp([49], {
                 trackingSet: e.ads.trackingSet
             }
         }
-        var r = n(8),
-            a = n(0),
-            s = n(1),
-            o = n(2),
-            l = n(102),
-            c = n(358),
-            u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
-            d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
-            p = function(e) {
+        var a = n(7),
+            r = n(0),
+            o = n(1),
+            s = n(2),
+            l = n(110),
+            c = n(381),
+            d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
+            u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
+            m = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.logger = o.i.withCategory("ad-slot"), n.createSlot = function(e) {
-                        return a.__awaiter(n, void 0, void 0, function() {
+                    return n.logger = s.i.withCategory("ad-slot"), n.createSlot = function(e) {
+                        return r.__awaiter(n, void 0, void 0, function() {
                             var t, n;
-                            return a.__generator(this, function(i) {
+                            return r.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
                                         if (this.state.slotCreated) return [2];
@@ -6795,7 +11062,7 @@ webpackJsonp([49], {
                                 return n.slotRendered(e.slot)
                             }));
                             if (n.props.slotID === c.b.directory.banner) {
-                                var i = n.slotRef.querySelector(u);
+                                var i = n.slotRef.querySelector(d);
                                 return void(i && 1 !== i.clientWidth && n.setState({
                                     shouldDisplay: !0
                                 }, function() {
@@ -6803,7 +11070,7 @@ webpackJsonp([49], {
                                 }))
                             }
                             if (n.props.slotID === c.b.directory.rectangle) {
-                                var i = n.slotRef.querySelector(d);
+                                var i = n.slotRef.querySelector(u);
                                 return void(i && 1 !== i.clientWidth && n.setState({
                                     shouldDisplay: !0
                                 }, function() {
@@ -6822,7 +11089,7 @@ webpackJsonp([49], {
                         shouldDisplay: !1
                     }, n
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     c.g.addListener(c.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.state.slotCreated || (e.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentWillReceiveProps)", this.props.slotID), this.createSlot(e)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentWillReceiveProps)", this.props.slotID))
@@ -6831,457 +11098,109 @@ webpackJsonp([49], {
                 }, t.prototype.shouldComponentUpdate = function(e, t) {
                     return t.shouldDisplay !== this.state.shouldDisplay
                 }, t.prototype.render = function() {
-                    var e = a.__assign({}, this.props.injectStyles);
-                    return this.state.shouldDisplay || (e.display = "none"), s.createElement("div", {
+                    var e = r.__assign({}, this.props.injectStyles);
+                    return this.state.shouldDisplay || (e.display = "none"), o.createElement("div", {
                         style: e,
                         id: this.props.slotID,
                         ref: this.setRef
                     })
                 }, t
-            }(s.Component),
-            m = p,
-            h = Object(r.a)(i)(m);
+            }(o.Component),
+            p = m,
+            g = Object(a.a)(i)(p);
         n.d(t, "a", function() {
-            return h
+            return g
         })
     },
-    883: function(e, t, n) {
+    907: function(e, t, n) {
         "use strict";
 
         function i(e) {
             return {
-                isLoggedIn: Object(N.d)(e)
+                sideNavCollapsed: !e.ui.sideNavExpanded,
+                rightColumnCollapsed: !e.ui.rightColumnExpanded
             }
         }
-
-        function r(e) {
-            return Object(E.bindActionCreators)({
-                login: function() {
-                    return Object(C.f)(P.a.ReportHoster)
-                },
-                showReportUserModal: function(e) {
-                    var t = u.__rest(e, []);
-                    return Object(T.d)(U.a, t)
-                }
-            }, e)
-        }
-
-        function a() {
-            return !!window.Twitch && !!window.Twitch.Player
-        }
-
-        function s(e) {
-            return {
-                theatreModeEnabled: e.ui.theatreModeEnabled,
-                isLoggedIn: Object(N.d)(e),
-                authToken: Object(N.a)(e)
-            }
-        }
-
-        function o(e) {
-            return Object(E.bindActionCreators)({
-                enableTheatreMode: w.k,
-                disableTheatreMode: w.j
-            }, e)
-        }
-
-        function l(e, t, n) {
-            if (!e.collectionID && e.videoID) return void t.push("/videos/" + e.videoID);
-            if (e.collectionID && e.videoID) {
-                if (n && n.currentVideoID && n.currentCollectionID && n.currentVideoID === e.videoID && n.currentCollectionID === e.collectionID) return;
-                return void t.push("/videos/" + e.videoID + "?collection=" + e.collectionID)
-            }
-            if (e.collectionID && !e.videoID) return void t.push("/collections/" + e.collectionID);
-            m.i.withCategory("video-player").error(new Error("No collection or video specified from the emitted player transition event."), "No collection or video specified from the emitted player transition event.")
-        }
-        var c, u = n(0),
-            d = n(1),
-            p = n(11),
-            m = n(2),
-            h = n(252),
-            g = n(60),
-            b = n(13),
-            f = n(762),
-            S = n(759),
-            v = n(771),
-            y = n(3),
-            k = (n(983), function(e) {
+        var a = n(7),
+            r = n(0),
+            o = n(1),
+            s = n(380),
+            l = n(143),
+            c = n(144),
+            d = n(396),
+            u = n(449),
+            m = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleReportHosterClick = function() {
-                        t.props.isLoggedIn ? t.props.showReportUserModal({
-                            onClose: t.handleReportModalClose,
-                            reportContext: {
-                                contentType: S.a.User,
-                                targetUserID: t.props.hostChannelID
-                            },
-                            title: Object(m.d)("Report {channelDisplayName}", {
-                                channelDisplayName: t.props.hostChannelDisplayName
-                            }, "VideoPlayerHostingUI")
-                        }) : t.props.login()
-                    }, t.handleReportModalClose = function(e) {
-                        (e === f.b.MutationError || e === f.b.Success) && t.props.history.push("/")
+                    return t.state = {}, t.resizeAnimationFrame = 0, t.collapseOnBreakpoint = function() {
+                        var e = window.innerWidth,
+                            n = {
+                                sideNavCollapsedFromCSS: e < c.d,
+                                rightColumnCollapsedFromCSS: e < l.b
+                            };
+                        t.state.sideNavCollapsedFromCSS === n.sideNavCollapsedFromCSS && t.state.rightColumnCollapsedFromCSS === n.rightColumnCollapsedFromCSS || t.setState(n), t.resizeAnimationFrame = 0
+                    }, t.handleWindowResize = function() {
+                        t.resizeAnimationFrame || (t.resizeAnimationFrame = requestAnimationFrame(t.collapseOnBreakpoint))
+                    }, t.onInnerChildrenResize = function(e, n) {
+                        t.context.setRootScrollableOffsetHeight(n / 10 + "rem")
                     }, t
                 }
-                return u.__extends(t, e), t.prototype.render = function() {
-                    var e = !!this.props.hostedChannelDisplayName;
-                    return d.createElement(y._17, {
-                        className: "video-player-hosting-ui__container"
-                    }, e && this.renderHeader(), d.createElement("span", {
-                        key: "video-player"
-                    }, this.props.children), d.createElement(y.U, {
-                        display: e ? y.H.Block : y.H.Hide,
-                        position: y._2.Relative,
-                        zIndex: y._38.Above
-                    }, e && this.renderFooter()))
-                }, t.prototype.renderHeader = function() {
-                    return d.createElement(y.e, {
-                        type: y.i.SlideInBottom,
-                        delay: y.f.Medium,
-                        duration: y.g.Medium,
-                        enabled: !0
-                    }, d.createElement(p.a, {
-                        key: "hosting-ui-header",
-                        className: "video-player-hosting-ui__link",
-                        to: {
-                            pathname: "/" + this.props.hostedChannelLogin,
-                            state: {
-                                medium: b.PageviewMedium.Channel,
-                                content: b.PageviewContent.Host
-                            }
-                        },
-                        "data-a-target": "hosting-ui-link",
-                        "data-test-selector": "video-player-hosting-ui__header"
-                    }, d.createElement(y._17, {
-                        className: "video-player-hosting-ui__header",
-                        display: y.H.Flex,
-                        background: y.m.AccentAlt2,
-                        color: y.F.Overlay,
-                        alignItems: y.c.Center,
-                        padding: {
-                            x: 1,
-                            y: .5
-                        },
-                        "data-a-target": "hosting-ui-header"
-                    }, d.createElement(y.U, {
-                        className: "video-player-hosting-ui__avatar-container"
-                    }, d.createElement(y.l, {
-                        imageSrc: this.props.hostedChannelProfileImageURL || "",
-                        size: 30,
-                        imageAlt: Object(m.d)("Hosted Channel {hostedChannelDisplayName}'s Avatar", {
-                            hostedChannelDisplayName: this.props.hostedChannelDisplayName || ""
-                        }, "VideoPlayerHostingUI")
-                    })), d.createElement(y._17, {
-                        margin: {
-                            left: 1
-                        },
-                        fontSize: y.L.Size5
-                    }, Object(m.d)("Hosting", "VideoPlayerHostingUI"), " ", d.createElement(y._21, {
-                        type: y._26.Span,
-                        className: "video-player-hosting-ui__channel-name",
-                        color: y.F.OverlayAlt,
-                        "data-a-target": "hosting-ui-channel-name"
-                    }, this.props.hostedChannelDisplayName)))))
-                }, t.prototype.renderFooter = function() {
-                    return d.createElement(y.e, {
-                        type: y.i.SlideInTop,
-                        enabled: !0,
-                        delay: y.f.Medium,
-                        duration: y.g.Medium
-                    }, d.createElement(y._17, {
-                        key: "hosting-ui-footer",
-                        background: y.m.AccentAlt2,
-                        className: "video-player-hosting-ui__footer",
-                        display: y.H.Block,
-                        padding: 1,
-                        "data-test-selector": "video-player-hosting-ui__footer",
-                        "data-a-target": "hosting-ui-footer"
-                    }, d.createElement(y.U, {
-                        padding: {
-                            y: .5
-                        },
-                        display: y.H.Flex,
-                        justifyContent: y.T.Between
-                    }, d.createElement(y.U, {
-                        display: y.H.Flex
-                    }, d.createElement(y.U, {
-                        margin: {
-                            right: 1
-                        }
-                    }, d.createElement(h.a, {
-                        "data-a-target": "hosting-ui-follow-button",
-                        channelName: this.props.hostedChannelLogin || "",
-                        channelLogin: this.props.hostedChannelLogin,
-                        hostChannelLogin: this.props.hostChannelLogin,
-                        hostChannelID: this.props.hostChannelID,
-                        isHostedFollow: !0,
-                        balloonDirection: y.q.BottomLeft
-                    })), d.createElement(y.U, null, d.createElement(v.b, {
-                        channelLogin: this.props.hostedChannelLogin,
-                        hostChannelID: this.props.hostChannelID,
-                        hostChannelLogin: this.props.hostChannelLogin,
-                        "data-a-target": "hosting-ui-subscribe-button"
-                    }))), d.createElement(g.a, null, d.createElement(y.v, {
-                        ariaLabel: Object(m.d)("More options", "HostingUI"),
-                        overlay: !0,
-                        icon: y._9.More,
-                        onClick: this.handleReportHosterClick,
-                        "data-a-target": "hosting-ui-more-button"
-                    }), d.createElement(y.p, {
-                        direction: y.q.TopRight,
-                        "data-a-target": "hosting-ui-more-balloon"
-                    }, d.createElement(y.U, {
-                        padding: {
-                            y: 1
-                        }
-                    }, d.createElement(y.S, {
-                        onClick: this.handleReportHosterClick,
-                        "data-a-target": "hosting-ui-report-button"
-                    }, d.createElement(y.U, {
-                        padding: {
-                            x: 1,
-                            y: .5
-                        }
-                    }, Object(m.d)("Report {hostChannelDisplayName}", {
-                        hostChannelDisplayName: this.props.hostChannelDisplayName
-                    }, "VideoPlayerHostingUI")))))))))
-                }, t
-            }(d.Component)),
-            _ = n(8),
-            E = n(10),
-            P = n(50),
-            T = n(49),
-            C = n(34),
-            N = n(18),
-            U = n(769),
-            O = Object(_.a)(i, r)(Object(p.f)(k)),
-            w = n(65),
-            I = n(4),
-            D = n(370),
-            F = n(369),
-            R = n(20),
-            x = n(827),
-            L = n(5);
-        ! function(e) {
-            e.LoadStart = "loadstart", e.Error = "error", e.LoadedMetadata = "loadedmetadata", e.CanPlay = "canplay", e.Playing = "playing", e.Waiting = "waiting", e.Seeking = "seeking", e.Seeked = "seeked", e.Ended = "ended", e.DurationChange = "durationchange", e.TimeUpdate = "timeupdate", e.Play = "play", e.Pause = "pause", e.VolumeChange = "volumechange", e.RateChange = "ratechange"
-        }(c || (c = {}));
-        var j;
-        ! function(e) {
-            e.PlayerInit = "init", e.ContentShowing = "contentShowing", e.PlaybackStatistics = "playbackStatistics", e.ChansubRequired = "chansubRequired", e.VideoFailure = "videoFailure", e.Formats = "videoFormats", e.ABSStreamFormatChange = "abs_stream_format_change", e.FormatChanged = "videoFormatChanged", e.TimeChange = "timeChange", e.BufferChange = "bufferChange", e.SegmentChange = "segmentchange", e.UsherFailError = "usherFail", e.CaptionUpdate = "captions", e.SeekFailed = "seekfailed", e.VariantSwitchRequest = "variantSwitchRequested", e.ViewersChange = "viewerschange", e.StreamLoaded = "streamLoaded", e.VideoLoaded = "videoLoaded", e.VideoPaused = "videoPaused", e.QualityChange = "qualitychange", e.Online = "online", e.Offline = "offline", e.Restricted = "restricted", e.CastingChange = "castingchange", e.TheatreChange = "theatrechange", e.MidrollRequested = "midrollrequested", e.ManifestExtraInfo = "manifestExtraInfo", e.TransitionToCollectionVOD = "transitionToCollectionVod", e.TransitionToRecommendedVOD = "transitionToRecommendedVod", e.StitchedAdStart = "stitchedadstart", e.StichedAdEnd = "stitchedadend", e.PersistenPlayerToggle = "persistentPlayerEnableToggle", e.StatsUpdate = "statsupdate", e.PromptLoginModal = "prompt login modal", e.OpenStream = "openStream", e.PlayerReady = "ready", e.FullscreenChange = "fullscreenchange"
-        }(j || (j = {}));
-        var A, M = (n(984), n(803));
-        ! function(e) {
-            e.Embed = "embed", e.Frontpage = "frontpage", e.Site = "site"
-        }(A || (A = {}));
-        var B = {
-                allowfullscreen: !0,
-                branding: !1,
-                channelInfo: !1,
-                controls: !0,
-                height: "100%",
-                playsinline: !0,
-                player: A.Site,
-                showInfo: !1,
-                showtheatre: !1,
-                trackingProperties: {
-                    client_app: "twilight"
-                },
-                width: "100%",
-                oauth_token: ""
-            },
-            G = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.logger = m.i.withCategory("video-player"), n.checkPlayerDependencyStatus = function() {
-                        a() ? (n.setState({
-                            canInitializePlayer: !0
-                        }), n.checkPlayerDependencyAnimationFrame = null) : n.checkPlayerDependencyAnimationFrame = requestAnimationFrame(n.checkPlayerDependencyStatus)
-                    }, n.attachRef = function(e) {
-                        return n.playerRef = e
-                    }, n.onOpenStream = function() {
-                        n.props.playerTypeOverride === A.Frontpage && n.player && (n.props.channelLogin ? m.n.history.push("/" + n.props.channelLogin) : n.props.vodID ? m.n.history.push("/videos/" + n.props.vodID + "?t=" + n.player.getCurrentTime()) : n.props.collectionID && m.n.history.push("/collections/" + n.props.collectionID))
-                    }, n.onPlayerReady = function() {
-                        n.player && (n.logger.debug("Ready"), n.props.latencyTracking.reportInteractive(), n.hasPlayed = !1, n.props.latencyTracking.reportCustomEvent(n.playerLoaded), n.setState({
-                            playerInitialized: !0
-                        }, function() {
-                            return n.updatePlayerTrackingData(n.props.hostChannel)
-                        }))
-                    }, n.onPlayerPlay = function() {
-                        n.logger.debug("Play"), n.reportPlayerPlayed()
-                    }, n.onStreamStatusOnline = function() {
-                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(j.Online)
-                    }, n.onStreamStatusOffline = function() {
-                        n.props.onStreamStatusChange && n.props.onStreamStatusChange(j.Offline)
-                    }, n.onTheatreChange = function(e) {
-                        e ? (n.logger.debug("Theatre Entered"), n.props.enableTheatreMode && !n.props.theatreModeEnabled && n.props.enableTheatreMode()) : (n.logger.debug("Theatre Exited"), n.props.disableTheatreMode && n.props.theatreModeEnabled && n.props.disableTheatreMode())
-                    }, n.onFullScreenChange = function() {
-                        n.player && (n.logger.debug("Fullscreen change", n.player.fullscreen), n.player.fullscreen !== n.state.isFullScreen && n.setState({
-                            isFullScreen: n.player.fullscreen
-                        }))
-                    }, n.onSeek = function() {
-                        n.props.onSeek && n.player && n.props.onSeek(n.player.getCurrentTime())
-                    }, n.onTimeUpdate = function() {
-                        n.props.onVideoTimeChange && n.player && n.props.onVideoTimeChange(n.player.getCurrentTime())
-                    }, n.onTransitionToCollectionVod = function(e) {
-                        if (n.props.onNavigationRequest) {
-                            var t = {};
-                            e.vodId && (t.videoID = Object(x.a)(e.vodId)), e.collectionId && (t.collectionID = e.collectionId), n.props.onNavigationRequest(t)
-                        }
-                    }, n.onTransitionToRecommendedVod = function(e) {
-                        if (n.props.onNavigationRequest) {
-                            var t = {};
-                            e.vodId && (t.videoID = Object(x.a)(e.vodId)), n.props.onNavigationRequest(t)
-                        }
-                    }, n.updatePlayerTrackingData = function(e) {
-                        if (n.state.playerInitialized && n.player) {
-                            var t = m.m.getLastPageview();
-                            t ? n.logger.debug("Tracking data updated.", {
-                                pageviewProperties: t,
-                                hostChannel: e
-                            }) : n.logger.debug("pageviewProperties not found; only hosting status updated", {
-                                pageviewProperties: t,
-                                hostChannel: e
-                            }), n.player.setTrackingProperties(u.__assign({}, t, {
-                                host_channel: e
-                            }))
-                        }
-                    }, n.updatePlayerType = function() {
-                        var e = n.props.playerTypeOverride || B.player;
-                        n.player && n.playerType !== e && (n.player.setPlayerType(e), n.playerType = e)
-                    }, n.maybeRecordClip = function() {
-                        n.player && n.state.playerInitialized && n.player.recordClip()
-                    }, n.playerCreated = n.registerCreatedEvent(), n.playerLoaded = n.registerLoadedEvent(), n.playerPlayed = n.registerPlayedEvent(), n.state = {
-                        canInitializePlayer: a(),
-                        playerInitialized: !1,
-                        isFullScreen: !1
-                    }, n.playerType = t.playerTypeOverride || B.player, n.lastSetChannel = t.channelLogin, n
-                }
-                return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                    var e = this;
-                    if (this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.state.canInitializePlayer ? this.initializePlayer() : this.checkPlayerDependencyAnimationFrame = window.requestAnimationFrame(this.checkPlayerDependencyStatus), m.m.eventEmitter.addListener(b.SpadeEventType.Pageview, function() {
-                            return e.updatePlayerTrackingData(e.props.hostChannel)
-                        }), window.__playerScriptChunk && !t.tagInjected) {
-                        this.logger.debug("Loading player chunk after page loaded");
-                        var n = document.createElement("script");
-                        n.crossOrigin = "anonymous", n.src = window.__jqueryChunk, n.onload = function() {
-                            var e = document.createElement("script");
-                            e.async = !0, e.crossOrigin = "anonymous", e.src = window.__playerScriptChunk, document.body.appendChild(e)
-                        }, document.body.appendChild(n);
-                        var i = document.createElement("link");
-                        i.href = window.__playerStyleChunk, i.media = "screen", i.rel = "stylesheet", i.type = "text/css", document.body.appendChild(i), t.tagInjected = !0
-                    }
-                }, t.prototype.componentWillUpdate = function(e, t) {
-                    if (!this.state.canInitializePlayer && t.canInitializePlayer) return void this.initializePlayer();
-                    if (t.canInitializePlayer && t.playerInitialized) {
-                        if (this.updatePlayerTrackingData(e.hostChannel), this.updatePlayerType(), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.channelLogin && e.channelLogin !== this.lastSetChannel) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void m.m.setVideoPlayerTrackingData({
-                            vodID: void 0
-                        });
-                        var n = e.collectionID && this.props.collectionID !== e.collectionID,
-                            i = e.vodID && this.props.vodID !== e.vodID;
-                        if (n || i) {
-                            var r = e.vodID ? Object(M.a)(e.vodID) : "";
-                            if ("" !== r && m.m.setVideoPlayerTrackingData({
-                                    vodID: e.vodID
-                                }), !this.player) return;
-                            return void(n || e.collectionID && i ? this.player.setCollection(e.collectionID, r, e.nextVideoOffset) : this.player.setVideo(r, e.nextVideoOffset))
-                        }
-                        void 0 !== e.nextVideoOffset && e.nextVideoOffset >= 0 && this.props.nextVideoOffset !== e.nextVideoOffset && this.player && this.player.setCurrentTime(e.nextVideoOffset)
-                    }
-                }, t.prototype.render = function() {
-                    var e = I("video-player", {
-                        "video-player--theatre": this.props.theatreModeEnabled,
-                        "video-player--logged-in": this.props.isLoggedIn,
-                        "video-player--fullscreen": this.state.isFullScreen
-                    });
-                    return d.createElement("div", {
-                        className: I(e),
-                        "data-test-selector": "video-player"
-                    }, d.createElement("div", {
-                        className: "video-player__container",
-                        ref: this.attachRef
-                    }))
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    window.addEventListener("resize", this.handleWindowResize)
                 }, t.prototype.componentWillUnmount = function() {
-                    this.unbindHotKeys(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.props.onDestroy && this.props.onDestroy(), this.player && (m.m.eventEmitter.removeListener(b.SpadeEventType.Pageview, this.updatePlayerTrackingData), this.player.removeEventListener(j.PlayerReady, this.onPlayerReady), this.player.removeEventListener(j.Online, this.onStreamStatusOnline), this.player.removeEventListener(j.Offline, this.onStreamStatusOffline), this.player.removeEventListener(c.Ended, this.onStreamStatusOffline), this.player.removeEventListener(c.Play, this.onPlayerPlay), this.player.removeEventListener(j.TheatreChange, this.onTheatreChange), this.player.removeEventListener(j.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(j.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(c.Seeked, this.onSeek), this.player.removeEventListener(c.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(j.OpenStream, this.onOpenStream), D.extensionService.unregisterPlayer(), this.player.destroy()), m.m.setVideoPlayerTrackingData({
-                        vodID: void 0
-                    })
-                }, t.prototype.initializePlayer = function() {
-                    var e = u.__assign({}, B, {
-                        showtheatre: !this.props.disableTheatreButton
-                    });
-                    this.props.playerTypeOverride && (e.player = this.props.playerTypeOverride, this.playerType = this.props.playerTypeOverride), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.vodID && (e.video = Object(M.a)(this.props.vodID), m.m.setVideoPlayerTrackingData({
-                        vodID: this.props.vodID
-                    })), this.props.nextVideoOffset && (e.time = Object(M.b)(this.props.nextVideoOffset)), e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
-                    var t = new window.Twitch.Player(this.playerRef, e);
-                    this.player = t, t.addEventListener(j.PlayerReady, this.onPlayerReady), t.addEventListener(j.Online, this.onStreamStatusOnline), t.addEventListener(j.Offline, this.onStreamStatusOffline), t.addEventListener(c.Ended, this.onStreamStatusOffline), t.addEventListener(c.Play, this.onPlayerPlay), t.addEventListener(c.Seeked, this.onSeek), t.addEventListener(c.TimeUpdate, this.onTimeUpdate), t.addEventListener(j.TheatreChange, this.onTheatreChange), t.addEventListener(j.FullscreenChange, this.onFullScreenChange), t.addEventListener(j.TransitionToCollectionVOD, this.onTransitionToCollectionVod), t.addEventListener(j.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), t.addEventListener(j.OpenStream, this.onOpenStream), D.extensionService.registerPlayer(this.player), this.props.onInit && this.props.onInit(t), this.maybeAttachToWindow(this.props)
-                }, t.prototype.registerCreatedEvent = function() {
-                    return this.props.latencyTracking.registerCustomEvent("Player", "player-created", "Created", 1e3)
-                }, t.prototype.registerLoadedEvent = function() {
-                    return this.props.latencyTracking.registerCustomEvent("Player", "player-loaded", "Init", 2500)
-                }, t.prototype.registerPlayedEvent = function() {
-                    return this.props.latencyTracking.registerCustomEvent("Player", "player-played", "First Frame", 4e3)
-                }, t.prototype.reportPlayerPlayed = function() {
-                    this.hasPlayed || (this.hasPlayed = !0, this.playerPlayed && this.props.latencyTracking.reportCustomEvent(this.playerPlayed))
-                }, t.prototype.maybeAttachToWindow = function(e) {
-                    R.parse(window.location.search).attachPlayer && e.attachToWindow && this.player && (window.player = this.player)
-                }, t.prototype.maybeDetachFromWindow = function() {
-                    window.player = void 0
-                }, t.prototype.bindHotKeys = function() {
-                    F.bind("alt+x", this.maybeRecordClip)
-                }, t.prototype.unbindHotKeys = function() {
-                    F.unbind("alt+x")
-                }, t.tagInjected = !1, t
-            }(d.Component),
-            V = Object(L.c)("VideoPlayer")(G),
-            H = Object(_.a)(s, o)(V);
-        n.d(t, !1, function() {
-            return "hosting-ui-report-button"
-        }), n.d(t, !1, function() {
-            return "hosting-ui-more-balloon"
-        }), n.d(t, !1, function() {
-            return "hosting-ui-more-button"
-        }), n.d(t, !1, function() {
-            return "hosting-ui-channel-name"
-        }), n.d(t, !1, function() {
-            return "video-player-hosting-ui__header"
-        }), n.d(t, !1, function() {
-            return "video-player-hosting-ui__footer"
-        }), n.d(t, !1, function() {
-            return k
-        }), n.d(t, "a", function() {
-            return O
-        }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
-            return A
-        }), n.d(t, "c", function() {
-            return H
-        }), n.d(t, "d", function() {
-            return l
+                    window.removeEventListener("resize", this.handleWindowResize), this.context.resetRootScrollableOffsetHeight(), this.resizeAnimationFrame && cancelAnimationFrame(this.resizeAnimationFrame)
+                }, t.prototype.render = function() {
+                    var e = document.querySelector("." + u.b),
+                        t = 0,
+                        n = 0;
+                    e ? (t = e.getBoundingClientRect().left, n = window.innerWidth - e.getBoundingClientRect().right) : n = window.innerWidth;
+                    var i = {
+                        position: "fixed",
+                        top: d.a,
+                        left: t,
+                        right: n,
+                        zIndex: 500
+                    };
+                    return o.createElement("div", {
+                        style: i
+                    }, o.createElement(s.a, {
+                        onResize: this.onInnerChildrenResize
+                    }), this.props.children)
+                }, t.contextTypes = {
+                    setRootScrollableOffsetHeight: o.PropTypes.func,
+                    resetRootScrollableOffsetHeight: o.PropTypes.func
+                }, t
+            }(o.Component),
+            p = Object(a.a)(i)(m);
+        n.d(t, "a", function() {
+            return p
         })
     },
-    898: function(e, t, n) {
+    921: function(e, t, n) {
         "use strict";
-        var i, r, a, s = n(4),
-            o = n(1),
+        var i, a, r, o = n(4),
+            s = n(1),
             l = n(2),
-            c = n(899),
-            u = n(3),
-            d = (n(985), i = {}, i[c.a.Live] = "stream-type-indicator--live", i[c.a.Premiere] = "stream-type-indicator--premiere", i[c.a.Rerun] = "stream-type-indicator--rerun", i[c.a.WatchParty] = "stream-type-indicator--rerun", i),
-            p = (r = {}, r[c.a.Premiere] = u._9.VideoPremiere, r[c.a.Rerun] = u._9.VideoRerun, r[c.a.WatchParty] = u._9.VideoRerun, r),
-            m = (a = {}, a[c.a.Premiere] = u._10.Live, a[c.a.Rerun] = u._10.Inherit, a[c.a.WatchParty] = u._10.Inherit, a),
-            h = function(e) {
+            c = n(274),
+            d = n(3),
+            u = (n(1007), i = {}, i[c.a.Live] = "stream-type-indicator--live", i[c.a.Premiere] = "stream-type-indicator--premiere", i[c.a.Rerun] = "stream-type-indicator--rerun", i[c.a.WatchParty] = "stream-type-indicator--rerun", i),
+            m = (a = {}, a[c.a.Premiere] = d._9.VideoPremiere, a[c.a.Rerun] = d._9.VideoRerun, a[c.a.WatchParty] = d._9.VideoRerun, a),
+            p = (r = {}, r[c.a.Premiere] = d._10.Live, r[c.a.Rerun] = d._10.Inherit, r[c.a.WatchParty] = d._10.Inherit, r),
+            g = function(e) {
                 var t = {
                     "stream-type-indicator": !0
                 };
-                t[d[e.type]] = !0;
+                t[u[e.type]] = !0;
                 var n;
-                n = e.type === c.a.Live ? o.createElement(u.U, {
+                n = e.type === c.a.Live ? s.createElement(d.U, {
                     className: "stream-type-indicator__live-wrapper",
-                    display: u.H.Flex,
-                    alignItems: u.c.Center
-                }, o.createElement(u.V, {
-                    size: u.W.Small
-                })) : o.createElement(u._8, {
-                    asset: p[e.type],
-                    type: m[e.type],
+                    display: d.H.Flex,
+                    alignItems: d.c.Center
+                }, s.createElement(d.V, {
+                    size: d.W.Small
+                })) : s.createElement(d._8, {
+                    asset: m[e.type],
+                    type: p[e.type],
                     width: 14,
                     height: 14
                 });
@@ -7300,46 +11219,36 @@ webpackJsonp([49], {
                     default:
                         i = ""
                 }
-                return o.createElement(u._17, {
-                    className: s(t),
-                    background: u.m.Overlay,
+                return s.createElement(d._17, {
+                    className: o(t),
+                    background: d.m.Overlay,
                     padding: {
                         x: .5
                     },
-                    borderRadius: u.s.Small,
-                    display: u.H.Flex
-                }, o.createElement(u.U, {
-                    display: u.H.Flex,
+                    borderRadius: d.s.Small,
+                    display: d.H.Flex
+                }, s.createElement(d.U, {
+                    display: d.H.Flex,
                     margin: {
                         right: .5
                     }
-                }, n), o.createElement(u._21, {
-                    type: u._26.Span
+                }, n), s.createElement(d._21, {
+                    type: d._26.Span
                 }, i))
             };
         n.d(t, "a", function() {
-            return h
+            return g
         })
     },
-    899: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return i
-        });
-        var i;
-        ! function(e) {
-            e.Live = "live", e.WatchParty = "watch_party", e.Premiere = "premiere", e.Rerun = "rerun"
-        }(i || (i = {}))
-    },
-    903: function(e, t, n) {
+    925: function(e, t, n) {
         "use strict";
         var i = n(0),
-            r = n(1),
-            a = n(11),
-            s = n(2),
-            o = n(898),
+            a = n(1),
+            r = n(10),
+            o = n(2),
+            s = n(921),
             l = n(3),
-            c = (n(986), function(e) {
+            c = (n(1008), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.state = {
@@ -7352,9 +11261,9 @@ webpackJsonp([49], {
                         return i.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, s.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
+                                    return [4, o.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
                                 case 1:
-                                    return e = t.sent(), "yes" === e && s.b.get("premiere_video_manager_staff", !1) && this.setState({
+                                    return e = t.sent(), "yes" === e && o.b.get("premiere_video_manager_staff", !1) && this.setState({
                                         isPremiereExperimentActive: !0
                                     }), [2]
                             }
@@ -7362,56 +11271,56 @@ webpackJsonp([49], {
                     })
                 }, t.prototype.render = function() {
                     var e = null;
-                    !0 !== this.state.isPremiereExperimentActive && this.props.vodcast && (e = r.createElement(l.U, {
+                    !0 !== this.state.isPremiereExperimentActive && this.props.vodcast && (e = a.createElement(l.U, {
                         display: l.H.InlineBlock,
                         padding: {
                             right: .5
                         }
-                    }, r.createElement(l.Z, {
-                        label: Object(s.d)("Vodcast", "LiveChannelCard")
+                    }, a.createElement(l.Z, {
+                        label: Object(o.d)("Vodcast", "LiveChannelCard")
                     })));
-                    var t = Object(s.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
+                    var t = Object(o.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
                         viewerCount: this.props.viewerCount,
-                        channel: r.createElement(a.a, {
+                        channel: a.createElement(r.a, {
                             to: this.props.channelNameLinkTo,
                             className: "live-channel-card__videos",
                             "data-a-target": "live-channel-card-channel-name-link"
                         }, this.props.channelName)
                     }, "Live Channel Card");
-                    return r.createElement("div", i.__assign({
+                    return a.createElement("div", i.__assign({
                         className: "live-channel-card"
-                    }, Object(l._39)(this.props)), r.createElement(l.A, {
+                    }, Object(l._39)(this.props)), a.createElement(l.A, {
                         key: this.props.title
-                    }, r.createElement(l.U, {
+                    }, a.createElement(l.U, {
                         fullWidth: !0
-                    }, r.createElement(l.j, {
+                    }, a.createElement(l.j, {
                         overflow: !0
-                    }, r.createElement("div", null, r.createElement(a.a, {
+                    }, a.createElement("div", null, a.createElement(r.a, {
                         to: this.props.linkTo,
                         title: this.props.title,
                         "data-a-target": "live-channel-card-thumbnail-link"
-                    }, r.createElement(l.C, {
+                    }, a.createElement(l.C, {
                         imageAlt: this.props.imageAlt,
                         imageSrc: this.props.imageSrc,
                         aspect: l.k.Aspect16x9
-                    })), this.renderContentType(), this.renderGameBoxArt()))), r.createElement(l.B, null, r.createElement(a.a, {
+                    })), this.renderContentType(), this.renderGameBoxArt()))), a.createElement(l.B, null, a.createElement(r.a, {
                         to: this.props.linkTo,
                         className: "live-channel-card__channel",
                         "data-a-target": "live-channel-card-title-link"
-                    }, r.createElement(l.P, {
+                    }, a.createElement(l.P, {
                         margin: {
                             top: .5
                         }
-                    }, r.createElement(l._21, {
+                    }, a.createElement(l._21, {
                         type: l._26.H3,
                         fontSize: l.L.Size5,
                         ellipsis: !0,
                         className: "live-channel-card__title"
-                    }, this.props.title))), r.createElement(l.U, {
+                    }, this.props.title))), a.createElement(l.U, {
                         className: "live-channel-card__meta",
                         display: l.H.Flex,
                         flexWrap: l.K.NoWrap
-                    }, e, r.createElement(l._21, {
+                    }, e, a.createElement(l._21, {
                         type: l._26.Span,
                         ellipsis: !0
                     }, t)))))
@@ -7419,77 +11328,73 @@ webpackJsonp([49], {
                     var e = this.props.gameLinkTo,
                         t = this.props.gameTitle,
                         n = this.props.gameImageSrc;
-                    return t && e ? r.createElement(a.a, {
+                    return t && e ? a.createElement(r.a, {
                         to: e,
                         title: t,
                         "data-a-target": "live-channel-card-game-link"
-                    }, r.createElement(l._17, {
+                    }, a.createElement(l._17, {
                         className: "live-channel-card__boxart",
                         position: l._2.Absolute,
                         attachRight: !0,
                         attachBottom: !0
-                    }, r.createElement(l._30, {
+                    }, a.createElement(l._30, {
                         display: l.H.Block,
                         direction: l._32.Bottom,
                         label: t
-                    }, r.createElement(l.C, {
+                    }, a.createElement(l.C, {
                         imageSrc: n,
                         imageAlt: t,
                         aspect: l.k.BoxArt
                     })))) : null
                 }, t.prototype.renderContentType = function() {
-                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? r.createElement(l.U, {
+                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? a.createElement(l.U, {
                         position: l._2.Absolute,
                         attachLeft: !0,
                         attachTop: !0,
                         padding: .5
-                    }, r.createElement(o.a, {
+                    }, a.createElement(s.a, {
                         type: this.props.streamType
                     })) : null
                 }, t
-            }(r.Component)),
-            u = c;
+            }(a.Component)),
+            d = c;
         n.d(t, !1, function() {
             return c
         }), n.d(t, "a", function() {
-            return u
+            return d
         })
     },
-    974: function(e, t, n) {
+    998: function(e, t, n) {
         "use strict";
 
         function i(e) {
             return {
-                type: s,
+                type: o,
                 player: e
-            }
-        }
-
-        function r() {
-            return {
-                type: o
             }
         }
 
         function a() {
             return {
+                type: s
+            }
+        }
+
+        function r() {
+            return {
                 type: l
             }
         }
         n.d(t, "b", function() {
-            return s
-        }), n.d(t, "c", function() {
             return o
+        }), n.d(t, "c", function() {
+            return s
         }), n.d(t, "a", function() {
             return l
-        }), t.e = i, t.f = r, t.d = a;
-        var s = "carouselPlayer.CAROUSEL_REGISTERED",
-            o = "carouselPlayer.CAROUSEL_UNREGISTERED",
+        }), t.e = i, t.f = a, t.d = r;
+        var o = "carouselPlayer.CAROUSEL_REGISTERED",
+            s = "carouselPlayer.CAROUSEL_UNREGISTERED",
             l = "carouselPlayer.CAROUSEL_PAUSED"
-    },
-    983: function(e, t) {},
-    984: function(e, t) {},
-    985: function(e, t) {},
-    986: function(e, t) {}
+    }
 });
-//# sourceMappingURL=pages.anon-front-23baf89dcd0a7ef64044170eb96e1643.js.map
+//# sourceMappingURL=pages.anon-front-dba8bf5c1b581a112160379bbc853075.js.map

@@ -1,5 +1,5 @@
-webpackJsonp([59], {
-    2039: function(e, t, r) {
+webpackJsonp([58], {
+    2062: function(e, t, r) {
         "use strict";
 
         function i(e) {
@@ -25,13 +25,13 @@ webpackJsonp([59], {
         });
         var n = r(0),
             a = r(1),
-            o = r(10),
+            o = r(9),
             s = r(2),
-            c = r(761),
-            d = r(758),
-            u = r(13),
+            c = r(811),
+            d = r(808),
+            u = r(12),
             l = r(5),
-            h = r(757),
+            h = r(810),
             g = r(3),
             m = function(e) {
                 function t() {
@@ -119,14 +119,72 @@ webpackJsonp([59], {
             return f
         })
     },
-    757: function(e, t, r) {
+    808: function(e, t, r) {
+        "use strict";
+        r.d(t, "a", function() {
+            return i
+        });
+        var i = {
+            BrowseCommunities: "browse.communities",
+            BrowseCreative: "browse.creative",
+            BrowseForYou: "browse.for-you",
+            ChannelIndex: "channel.index.index",
+            ChannelDashboardAchievements: "channel.dashboard.achievements",
+            ChannelDashboardModeration: "channel.dashboard.moderation",
+            ChannelDashboardStreamSummary: "channel.dashboard.stream-summary",
+            ChannelClips: "channel.clips",
+            ChannelClipsManager: "videoManager.clips.channel",
+            ChannelCollections: "channel.collections",
+            ChannelEvents: "channel.events",
+            ChatPopout: "chat",
+            DevOnly: "dev",
+            DirectoryCommunityByLanguage: "directory.community.language",
+            DirectoryCommunityIndex: "directory.community.index",
+            DirectoryCommunityDetails: "directory.community.details",
+            DirectoryGames: "directory.games",
+            DirectoryPopular: "directory.popular",
+            DirectoryGameIndex: "directory.game.index",
+            DirectoryGameClips: "directory.game.clips",
+            DirectoryGameDetails: "directory.game.details",
+            DirectoryGameVideos: "directory.game.videos",
+            DirectoryFollowingIndex: "directory.following.index",
+            DirectoryFollowingGames: "directory.following.games",
+            DirectoryFollowingVideos: "directory.following.videos.video-type",
+            DirectoryFollowingHosts: "directory.following.hosts",
+            DirectoryFollowingLiveChannels: "directory.following.channels",
+            DirectoryFollowingCommunities: "directory.following.communities",
+            EmailVerification: "emailVerification",
+            EventDetails: "event.details",
+            Index: "index",
+            MyClipsManager: "videoManager.clips",
+            NotificationSettingsPage: "settings.notificationSettings",
+            OnboardingIndex: "onboarding.index",
+            ReportUserPage: "reportUser.page",
+            StoreMerchPage: "store.merch",
+            SubsLandingPage: "subs.landing",
+            SubsBroadcasterPage: "subs.broadcaster",
+            TeamsDashboardBasicInfo: "teams.dashboard.basic-info",
+            TeamsDashboardCustomize: "teams.dashboard.customize",
+            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
+            TeamsDashboardMembers: "teams.dashboard.members",
+            TeamsDashboardStats: "teams.dashboard.stats",
+            TeamsDashboardRevenue: "teams.dashboard.revenue",
+            VideosPage: "videos",
+            VideoWatchPage: "video",
+            VideoManagerPage: "videoManager.page",
+            VideoManagerEditPropertiesPage: "videoManager.edit",
+            VideoManagerUploadPage: "videoManager.upload",
+            VideoManagerUploadListPage: "videoManager.upload-list"
+        }
+    },
+    810: function(e, t, r) {
         "use strict";
         r.d(t, "a", function() {
             return o
         });
         var i = r(0),
             n = r(2),
-            a = r(18),
+            a = r(17),
             o = function() {
                 function e() {}
                 return e.get = function(e, t, r) {
@@ -250,65 +308,7 @@ webpackJsonp([59], {
                 }, e
             }()
     },
-    758: function(e, t, r) {
-        "use strict";
-        r.d(t, "a", function() {
-            return i
-        });
-        var i = {
-            BrowseCommunities: "browse.communities",
-            BrowseCreative: "browse.creative",
-            BrowseForYou: "browse.for-you",
-            ChannelIndex: "channel.index.index",
-            ChannelDashboardAchievements: "channel.dashboard.achievements",
-            ChannelDashboardModeration: "channel.dashboard.moderation",
-            ChannelDashboardStreamSummary: "channel.dashboard.stream-summary",
-            ChannelClips: "channel.clips",
-            ChannelClipsManager: "videoManager.clips.channel",
-            ChannelCollections: "channel.collections",
-            ChannelEvents: "channel.events",
-            ChatPopout: "chat",
-            DevOnly: "dev",
-            DirectoryCommunityByLanguage: "directory.community.language",
-            DirectoryCommunityIndex: "directory.community.index",
-            DirectoryCommunityDetails: "directory.community.details",
-            DirectoryGames: "directory.games",
-            DirectoryPopular: "directory.popular",
-            DirectoryGameIndex: "directory.game.index",
-            DirectoryGameClips: "directory.game.clips",
-            DirectoryGameDetails: "directory.game.details",
-            DirectoryGameVideos: "directory.game.videos",
-            DirectoryFollowingIndex: "directory.following.index",
-            DirectoryFollowingGames: "directory.following.games",
-            DirectoryFollowingVideos: "directory.following.videos.video-type",
-            DirectoryFollowingHosts: "directory.following.hosts",
-            DirectoryFollowingLiveChannels: "directory.following.channels",
-            DirectoryFollowingCommunities: "directory.following.communities",
-            EmailVerification: "emailVerification",
-            EventDetails: "event.details",
-            Index: "index",
-            MyClipsManager: "videoManager.clips",
-            NotificationSettingsPage: "settings.notificationSettings",
-            OnboardingIndex: "onboarding.index",
-            ReportUserPage: "reportUser.page",
-            StoreMerchPage: "store.merch",
-            SubsLandingPage: "subs.landing",
-            SubsBroadcasterPage: "subs.broadcaster",
-            TeamsDashboardBasicInfo: "teams.dashboard.basic-info",
-            TeamsDashboardCustomize: "teams.dashboard.customize",
-            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
-            TeamsDashboardMembers: "teams.dashboard.members",
-            TeamsDashboardStats: "teams.dashboard.stats",
-            TeamsDashboardRevenue: "teams.dashboard.revenue",
-            VideosPage: "videos",
-            VideoWatchPage: "video",
-            VideoManagerPage: "videoManager.page",
-            VideoManagerEditPropertiesPage: "videoManager.edit",
-            VideoManagerUploadPage: "videoManager.upload",
-            VideoManagerUploadListPage: "videoManager.upload-list"
-        }
-    },
-    761: function(e, t, r) {
+    811: function(e, t, r) {
         "use strict";
 
         function i(e) {
@@ -370,11 +370,11 @@ webpackJsonp([59], {
         var n = r(0),
             a = r(20),
             o = r(1),
-            s = r(11),
+            s = r(10),
             c = r(2);
         r.d(t, "a", function() {
             return i
         })
     }
 });
-//# sourceMappingURL=pages.email-verification-1af1fae29e918bad9c9246cf84d153b2.js.map
+//# sourceMappingURL=pages.email-verification-0c15e84e014f7a84d8043911b93f7ac4.js.map
