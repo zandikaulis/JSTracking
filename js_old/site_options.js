@@ -554,6 +554,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "1dc7b575-1187-42bf-8d01-c62bea1f89c9": {
+            "name": "growth_email_verify_bar",
+            "v": 2539,
+            "t": 1,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "1e406d0d-c293-4c4e-812f-049db8c7e3ec": {
             "name": "vod_upload_units",
             "v": 818,
