@@ -1,11 +1,11 @@
-webpackJsonp([65], {
-    1987: function(e, t) {},
-    1988: function(e, t) {},
-    1989: function(e, t) {},
-    1990: function(e, t) {},
-    1991: function(e, t) {},
+webpackJsonp([66], {
     1992: function(e, t) {},
-    1993: function(e, t) {
+    1993: function(e, t) {},
+    1994: function(e, t) {},
+    1995: function(e, t) {},
+    1996: function(e, t) {},
+    1997: function(e, t) {},
+    1998: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -70,8 +70,8 @@ webpackJsonp([65], {
         };
         e.exports = n
     },
-    1994: function(e, t) {},
-    2076: function(e, t, n) {
+    1999: function(e, t) {},
+    2082: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -93,7 +93,7 @@ webpackJsonp([65], {
         var r = n(7),
             o = n(9),
             s = n(48),
-            l = n(31),
+            l = n(32),
             c = n(17),
             d = n(0),
             u = n(1),
@@ -106,7 +106,7 @@ webpackJsonp([65], {
             y = n(5),
             v = n(815),
             k = n(3),
-            _ = (n(1987), function(e) {
+            _ = (n(1992), function(e) {
                 return u.createElement(k.P, {
                     className: "bits-landing-page-text-section",
                     margin: {
@@ -117,7 +117,7 @@ webpackJsonp([65], {
                     color: k.F.Base
                 }, e.text))
             }),
-            B = (n(1988), function(e) {
+            B = (n(1993), function(e) {
                 var t = e.additionInfo.map(function(e, t) {
                     return u.createElement(_, {
                         key: "additionInfo:" + t,
@@ -147,7 +147,7 @@ webpackJsonp([65], {
                     margin: "auto"
                 }, e.cheermoteImaages))
             }),
-            C = (n(1989), function(e) {
+            C = (n(1994), function(e) {
                 var t = null;
                 return e.additionalInfo && (t = u.createElement(_, {
                     text: e.additionalInfo
@@ -278,7 +278,7 @@ webpackJsonp([65], {
                 question: A.additionalHelpQuestion,
                 answer: A.additionalHelpAnswer
             }],
-            S = (n(1990), function(e) {
+            S = (n(1995), function(e) {
                 var t = [1, 100, 1e3, 5e3, 1e4].map(function(t) {
                         return u.createElement(k.U, {
                             display: k.H.Block,
@@ -336,7 +336,7 @@ webpackJsonp([65], {
                     className: "bits-landing-page-faq__content"
                 }, a))
             }),
-            O = (n(1991), function(e) {
+            O = (n(1996), function(e) {
                 var t = u.createElement(k.U, {
                         margin: {
                             left: .5
@@ -419,7 +419,7 @@ webpackJsonp([65], {
                     amount: t
                 }, "BitsLandingPage"))))
             },
-            j = (n(1992), function(e) {
+            j = (n(1997), function(e) {
                 return u.createElement(k.U, {
                     className: "bits-landing-page-right-pane",
                     padding: {
@@ -492,8 +492,8 @@ webpackJsonp([65], {
                 }))
             }),
             P = function() {},
-            U = n(1993),
-            F = (n(1994), function(e) {
+            U = n(1998),
+            F = (n(1999), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.bitsConfig = Object(b.a)(), t
@@ -692,7 +692,7 @@ webpackJsonp([65], {
         });
         var a;
         ! function(e) {
-            e[e.Text = 0] = "Text", e[e.Mention = 1] = "Mention", e[e.Link = 2] = "Link", e[e.Emote = 3] = "Emote", e[e.ClipLink = 4] = "ClipLink"
+            e[e.Text = 0] = "Text", e[e.Mention = 1] = "Mention", e[e.Link = 2] = "Link", e[e.Emote = 3] = "Emote", e[e.ClipLink = 4] = "ClipLink", e[e.VideoLink = 5] = "VideoLink"
         }(a || (a = {}))
     },
     270: function(e, t, n) {
@@ -1968,7 +1968,7 @@ webpackJsonp([65], {
                     }))
                 }, t
             }(p.Component),
-            z = (n(860), function(e) {
+            V = (n(860), function(e) {
                 var t = Object(f.d)("Something's wrong!", "Bits--WatchAdError"),
                     n = Object(f.d)("Something went wrong. Wait a while and try again.", "Bits--WatchAdError"),
                     a = "adserrorgeneric";
@@ -2034,7 +2034,7 @@ webpackJsonp([65], {
                     color: B.F.Alt2
                 }, n), i)
             }),
-            V = n(861);
+            z = n(861);
         n(862);
         ! function(e) {
             e[e.Inactive = 0] = "Inactive", e[e.Error = 1] = "Error", e[e.Awarded = 2] = "Awarded"
@@ -2189,7 +2189,7 @@ webpackJsonp([65], {
                                 truexUserID: this.props.data.currentUser.idSHA1
                             });
                         case O.Error:
-                            return p.createElement(z, {
+                            return p.createElement(V, {
                                 type: this.state.watebError || s.Unknown,
                                 onClose: this.props.onClose,
                                 onTryAgain: this.resetAdErrorState
@@ -2197,7 +2197,7 @@ webpackJsonp([65], {
                         default:
                             return !1
                     }
-                }, t = m.__decorate([Object(b.a)(V, {
+                }, t = m.__decorate([Object(b.a)(z, {
                     name: "data",
                     options: function(e) {
                         return {
@@ -2649,4 +2649,4 @@ webpackJsonp([65], {
     },
     862: function(e, t) {}
 });
-//# sourceMappingURL=pages.bits.components.bits-landing-page-132abef17318cc0cd3b7bed38fa649f8.js.map
+//# sourceMappingURL=pages.bits.components.bits-landing-page-212b6bb0a8b19edae8e57c28aff54acb.js.map

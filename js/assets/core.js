@@ -1,4 +1,4 @@
-webpackJsonp([62], [, , function(e, t, n) {
+webpackJsonp([63], [, , function(e, t, n) {
     "use strict";
     var i = n(68);
     n.d(t, "a", function() {
@@ -3390,7 +3390,7 @@ webpackJsonp([62], [, , function(e, t, n) {
             return Object(a.graphql)(e, t)(n)
         }
     }
-    var a = n(32);
+    var a = n(31);
     n.d(t, "a", function() {
         return i
     })
@@ -3796,7 +3796,7 @@ webpackJsonp([62], [, , function(e, t, n) {
     var y = n(2),
         k = n(37),
         S = n(21)
-}, function(e, t, n) {
+}, , function(e, t, n) {
     "use strict";
 
     function i(e) {
@@ -4064,7 +4064,7 @@ webpackJsonp([62], [, , function(e, t, n) {
         f = n(2),
         v = n(1),
         b = n(104),
-        y = n(67);
+        y = n(66);
     ! function(e) {
         e.Login = "login", e.Signup = "signup"
     }(h || (h = {}));
@@ -4230,7 +4230,7 @@ webpackJsonp([62], [, , function(e, t, n) {
         L = n(72),
         U = n(233);
     t.f = a, t.h = r, t.g = o, t.a = s, t.d = l, t.c = c, t.b = u, t.e = d
-}, , , , , function(e, t, n) {
+}, , , , function(e, t, n) {
     "use strict";
 
     function i(e, t) {
@@ -5000,15 +5000,6 @@ webpackJsonp([62], [, , function(e, t, n) {
     })
 }, , function(e, t, n) {
     "use strict";
-    n.d(t, "a", function() {
-        return i
-    });
-    var i;
-    ! function(e) {
-        e.Games = "game", e.Videos = "vod", e.VideosNewest = "vod_by_created_at", e.Users = "user", e.Channels = "live_channel", e.Communities = "community"
-    }(i || (i = {}))
-}, function(e, t, n) {
-    "use strict";
     var i = n(1),
         a = n(3),
         r = (n(231), function(e) {
@@ -5049,6 +5040,15 @@ webpackJsonp([62], [, , function(e, t, n) {
     })
 }, function(e, t, n) {
     "use strict";
+    n.d(t, "a", function() {
+        return i
+    });
+    var i;
+    ! function(e) {
+        e.Games = "game", e.Videos = "vod", e.VideosNewest = "vod_by_created_at", e.Users = "user", e.Channels = "live_channel", e.Communities = "community"
+    }(i || (i = {}))
+}, function(e, t, n) {
+    "use strict";
 
     function i(e) {
         for (var t = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", n = "", i = 0; i < e; i++) n += t.charAt(Math.floor(Math.random() * t.length));
@@ -5084,7 +5084,7 @@ webpackJsonp([62], [, , function(e, t, n) {
         me = new Te(e), he = me.config, ge = me.dynamicSettings, fe = me.intl.formatDate, ve = me.intl.formatMessage, be = me.intl.formatNumber, ye = me.intl.formatNumberShort, ke = me.intl.formatRelativeDate, Se = me.intl.formatTime, _e = me.logger, we = me.pubsub, Ee = me.storage, Ce = me.tempStorage, Ne = me.tracking
     }
     var l = n(1),
-        c = n(32),
+        c = n(31),
         u = n(113),
         d = n(16),
         p = "https://ad.doubleclick.net/ddm/ad/",
@@ -7584,7 +7584,7 @@ webpackJsonp([62], [, , function(e, t, n) {
     });
     var r = n(0),
         o = n(502),
-        s = (n.n(o), n(66)),
+        s = (n.n(o), n(67)),
         l = n(269),
         c = {
             games: {
@@ -8191,7 +8191,7 @@ webpackJsonp([62], [, , function(e, t, n) {
     var i = n(0),
         a = n(1),
         r = n(2),
-        o = n(67),
+        o = n(66),
         s = n(3),
         l = function(e) {
             function t(t) {
@@ -8682,12 +8682,12 @@ webpackJsonp([62], [, , function(e, t, n) {
     "use strict";
 
     function i(e) {
-        return void 0 === e && (e = ""), v.test(e)
+        return void 0 === e && (e = ""), y.test(e)
     }
 
     function a(e) {
         void 0 === e && (e = "");
-        var t = e.match(v);
+        var t = e.match(y);
         if (null === t) return "";
         if (t && t.length > 0 && void 0 !== t.index) {
             return t[1]
@@ -8695,31 +8695,45 @@ webpackJsonp([62], [, , function(e, t, n) {
         return ""
     }
 
-    function r(e, t, n, i, a, r) {
+    function r(e) {
+        return void 0 === e && (e = ""), S.test(e)
+    }
+
+    function o(e) {
+        void 0 === e && (e = "");
+        var t = e.match(S);
+        if (null === t) return "";
+        if (t && t.length > 0 && void 0 !== t.index) {
+            return t[1]
+        }
+        return ""
+    }
+
+    function s(e, t, n, i, a, r) {
         void 0 === r && (r = !1);
-        var c;
-        c = a ? Object(b.b)(e, a) : s(t.emotes);
-        var u = Object(y.a)(t.displayName, t.username);
+        var o;
+        o = a ? Object(k.b)(e, a) : c(t.emotes);
+        var s = Object(_.a)(t.displayName, t.username);
         return {
             badges: t.badges || {},
             bits: t.bits,
-            user: m.__assign({}, u, {
+            user: g.__assign({}, s, {
                 userLogin: t.username,
                 userID: t.userID,
                 userType: t.userType,
-                color: t.color || o(t.userID)
+                color: t.color || l(t.userID)
             }),
-            messageParts: e ? l(e, c, t.bits, n, i, u.userDisplayName) : [],
+            messageParts: e ? u(e, o, t.bits, n, i, s.userDisplayName) : [],
             deleted: r,
             timestamp: Date.now()
         }
     }
 
-    function o(e, t) {
-        return void 0 === t && (t = 15), "number" != typeof S[e] && (S[e] = Math.floor(Math.random() * t)), k[S[e]]
+    function l(e, t) {
+        return void 0 === t && (t = 15), "number" != typeof E[e] && (E[e] = Math.floor(Math.random() * t)), w[E[e]]
     }
 
-    function s(e) {
+    function c(e) {
         var t = [];
         return e && Object.keys(e).forEach(function(n) {
             e[n].forEach(function(e) {
@@ -8730,9 +8744,9 @@ webpackJsonp([62], [, , function(e, t, n) {
                         images: {
                             themed: !1,
                             sources: {
-                                "1x": p(n, 1),
-                                "2x": p(n, 2),
-                                "4x": p(n, 4)
+                                "1x": h(n, 1),
+                                "2x": h(n, 2),
+                                "4x": h(n, 4)
                             }
                         }
                     }
@@ -8741,134 +8755,139 @@ webpackJsonp([62], [, , function(e, t, n) {
         }), t
     }
 
-    function l(e, t, n, i, a, r) {
+    function u(e, t, n, i, a, r) {
         void 0 === t && (t = []);
         var o = [],
             s = 0,
-            l = c(e);
+            l = d(e);
         t.forEach(function(t) {
             var c = l ? l.slice(s, t.startIndex).join("") : e.slice(s, t.startIndex);
-            c && (o = n ? o.concat(u(c, r, a, i)) : o.concat(d(c, r, a))), o.push({
-                type: f.a.Emote,
-                content: m.__assign({
+            c && (o = n ? o.concat(p(c, r, a, i)) : o.concat(m(c, r, a))), o.push({
+                type: b.a.Emote,
+                content: g.__assign({
                     alt: l ? l.slice(t.startIndex, t.endIndex).join("") : e.slice(t.startIndex, t.endIndex)
                 }, t.data)
             }), s = t.endIndex
         });
-        var p = l ? l.slice(s).join("") : e.slice(s);
-        return p && (o = n ? o.concat(u(p, r, a, i)) : o.concat(d(p, r, a))), o
+        var c = l ? l.slice(s).join("") : e.slice(s);
+        return c && (o = n ? o.concat(p(c, r, a, i)) : o.concat(m(c, r, a))), o
     }
 
-    function c(e) {
+    function d(e) {
         var t = /[^\uD800-\uDFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDFFF]/g;
         return e.match(t)
     }
 
-    function u(e, t, n, i) {
-        if (!i) return d(e, t, n);
-        var a = Object(g.c)(e, i).map(function(e) {
-            return e.type === f.a.Text ? d(e.content, t, n) : e
+    function p(e, t, n, i) {
+        if (!i) return m(e, t, n);
+        var a = Object(v.c)(e, i).map(function(e) {
+            return e.type === b.a.Text ? m(e.content, t, n) : e
         });
         return [].concat.apply([], a)
     }
 
-    function d(e, t, n) {
-        var r = /([^\w@#%\-+=:~])?(?:(https?:\/\/)?(?:[\w@#%\-+=:~]+\.)+[a-z]{2,6}(?:\/[\w.\/@#%&()\-+=:?~]*)?)([^\w.\/@#%&()\-+=:?~]|\s|$)/g,
-            o = /([^\w@#%\-+=:~])?(@)([^\u0000-\u007F]+|\w+)+([^\w.\/@#%&()\-+=:?~]|\s|$)/g,
-            s = [],
-            l = e.split(/\s+/),
-            c = {
-                type: f.a.ClipLink,
-                content: {
-                    slug: "",
-                    url: ""
-                }
-            };
-        return l.forEach(function(e, u) {
-            r.lastIndex = 0;
-            var d = r.exec(e);
-            o.lastIndex = 0;
-            var p = o.exec(e);
-            if (d) {
-                var m = d.index,
+    function m(e, t, n) {
+        var s = /([^\w@#%\-+=:~])?(?:(https?:\/\/)?(?:[\w@#%\-+=:~]+\.)+[a-z]{2,6}(?:\/[\w.\/@#%&()\-+=:?~]*)?)([^\w.\/@#%&()\-+=:?~]|\s|$)/g,
+            l = /([^\w@#%\-+=:~])?(@)([^\u0000-\u007F]+|\w+)+([^\w.\/@#%&()\-+=:?~]|\s|$)/g,
+            c = [],
+            u = e.split(/\s+/);
+        return u.forEach(function(e, d) {
+            s.lastIndex = 0;
+            var p = s.exec(e);
+            l.lastIndex = 0;
+            var m = l.exec(e);
+            if (p) {
+                var h = p.index,
                     g = !1,
                     v = !1,
-                    b = d[1];
-                b && (m += 1, /\s/.test(b) || (g = !0)), 0 !== m && s.push({
-                    type: f.a.Text,
-                    content: (v ? " " : "") + e.slice(0, m) + (g ? " " : "")
+                    y = p[1];
+                y && (h += 1, /\s/.test(y) || (g = !0)), 0 !== h && c.push({
+                    type: b.a.Text,
+                    content: (v ? " " : "") + e.slice(0, h) + (g ? " " : "")
                 }), v = !1;
-                var y = r.lastIndex,
-                    k = d[3];
-                if (k && (y -= 1, /\s/.test(k) || (v = !0)), n) s.push({
-                    type: f.a.Text,
-                    content: " <" + Object(h.d)("deleted link", "CreateMessageData") + "> "
+                var k = s.lastIndex,
+                    S = p[3];
+                if (S && (k -= 1, /\s/.test(S) || (v = !0)), n) c.push({
+                    type: b.a.Text,
+                    content: " <" + Object(f.d)("deleted link", "CreateMessageData") + "> "
                 });
                 else {
-                    var S = d[2],
-                        _ = (S ? "" : "https://") + e.slice(m, y);
-                    if (i(_)) {
-                        var w = a(_);
-                        c = {
-                            type: f.a.ClipLink,
+                    var _ = p[2],
+                        w = (_ ? "" : "https://") + e.slice(h, k);
+                    if (i(w)) {
+                        var E = a(w);
+                        c.push({
+                            type: b.a.ClipLink,
                             content: {
-                                slug: w,
-                                url: _
+                                slug: E,
+                                url: w,
+                                displayText: e.slice(h, k)
                             }
-                        }
-                    } else s.push({
-                        type: f.a.Link,
+                        })
+                    } else if (r(w)) {
+                        var C = o(w);
+                        c.push({
+                            type: b.a.VideoLink,
+                            content: {
+                                id: C,
+                                url: w,
+                                displayText: e.slice(h, k)
+                            }
+                        })
+                    } else c.push({
+                        type: b.a.Link,
                         content: {
-                            displayText: e.slice(m, y),
-                            url: _
+                            displayText: e.slice(h, k),
+                            url: w
                         }
                     })
                 }
-                var E = e.slice(y),
-                    C = "";
-                u < l.length - 1 && (C = " "), E && s.push({
-                    type: f.a.Text,
-                    content: (v ? " " : "") + E + C
+                var N = e.slice(k),
+                    T = "";
+                d < u.length - 1 && (T = " "), N && c.push({
+                    type: b.a.Text,
+                    content: (v ? " " : "") + N + T
                 })
             } else {
-                if (!p) {
-                    var N = s.length && s[s.length - 1],
-                        C = "";
-                    if (u < l.length - 1 && (C = " "), N && N.type === f.a.Text) N.content += e + C;
+                if (!m) {
+                    var D = c.length && c[c.length - 1],
+                        T = "";
+                    if (d < u.length - 1 && (T = " "), D && D.type === b.a.Text) D.content += e + T;
                     else {
-                        var T = "";
-                        u && (T = " "), s.push({
-                            type: f.a.Text,
-                            content: T + e + C
+                        var I = "";
+                        d && (I = " "), c.push({
+                            type: b.a.Text,
+                            content: I + e + T
                         })
                     }
                     return
                 }
-                var D = p[3];
-                s.push({
-                    type: f.a.Mention,
+                var O = m[3];
+                c.push({
+                    type: b.a.Mention,
                     content: {
                         sender: t,
-                        recipient: D
+                        recipient: O
                     }
                 })
             }
-        }), c.content.slug && (s.length > 0 && (c.content.url = " " + c.content.url), s.push(c)), s
+        }), c
     }
 
-    function p(e, t) {
+    function h(e, t) {
         return "https://static-cdn.jtvnw.net/emoticons/v1/" + e + "/" + Math.min(Math.ceil(t), 3) + ".0"
     }
-    var m = n(0),
-        h = n(2),
-        g = n(372),
-        f = n(260),
-        v = new RegExp("(?:^|\\s)(?:https?://)?clips.twitch.tv/(\\w+)(?:/)?(\\w+)?(?:/edit)?(?:$|\\s)?"),
-        b = n(266),
-        y = n(382);
-    t.a = r, t.b = o, t.f = l, t.d = c, t.c = d, t.e = p;
-    var k = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
-        S = {}
+    var g = n(0),
+        f = n(2),
+        v = n(372),
+        b = n(260),
+        y = new RegExp("(?:^|\\s)(?:https?://)?clips.twitch.tv/(\\w+)(?:/)?(\\w+)?(?:/edit)?(?:$|\\s)?"),
+        k = n(266),
+        S = new RegExp("(?:^|\\s)(?:https?://)?(?:(?:www|go).)?twitch.tv/videos/(\\d+)(?:$|\\s)?"),
+        _ = n(382);
+    t.a = s, t.b = l, t.f = u, t.d = d, t.c = m, t.e = h;
+    var w = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
+        E = {}
 }, function(e, t, n) {
     "use strict";
 
@@ -9462,7 +9481,7 @@ webpackJsonp([62], [, , function(e, t, n) {
     var o = n(7),
         s = n(9),
         l = n(48),
-        c = n(31),
+        c = n(32),
         u = n(17),
         d = n(0),
         p = n(1),
@@ -9743,7 +9762,7 @@ webpackJsonp([62], [, , function(e, t, n) {
         g = n(18),
         f = n(5),
         v = n(39),
-        b = n(66),
+        b = n(67),
         y = n(107),
         k = n(265),
         S = n(28),
@@ -10825,7 +10844,7 @@ webpackJsonp([62], [, , function(e, t, n) {
             }, t.prototype.componentDidMount = function() {
                 this.props.reportInteractive && this.isUserDataReady(this.props) && this.props.reportInteractive()
             }, t.prototype.componentDidUpdate = function() {
-                this.props.channelLogin && !this.isUserDataReady(this.props) || !this.props.updateContainerWidth || this.props.updateContainerWidth(), this.props.reportInteractive && this.isUserDataReady(this.props) && this.props.reportInteractive()
+                this.props.channelLogin && !this.isUserDataReady(this.props) || !this.props.updateContainerWidth || this.props.updateContainerWidth(), this.props.reportInteractive && this.props.data && !this.props.data.loading && this.props.reportInteractive()
             }, t.prototype.componentWillReceiveProps = function(e) {
                 if (this.isUserDataReady(e) && e.pubsub.messages.subscriptionInfo !== this.props.pubsub.messages.subscriptionInfo && this.props.data.refetch(), this.props.channelLogin !== e.channelLogin && this.setState({
                         subData: null,
@@ -11348,7 +11367,7 @@ webpackJsonp([62], [, , function(e, t, n) {
         F = n(7),
         R = n(9),
         P = n(48),
-        M = n(31),
+        M = n(32),
         A = n(56),
         j = n(49),
         B = n(112),
@@ -12454,7 +12473,7 @@ webpackJsonp([62], [, , function(e, t, n) {
             }, t = _.__decorate([Object(D.a)($e), Object(U.c)("RecommendedFriends")], t)
         }(E.Component),
         Je = Ye,
-        Xe = n(66),
+        Xe = n(67),
         Ze = n(107),
         et = n(524),
         tt = n(525),
@@ -13419,7 +13438,7 @@ webpackJsonp([62], [, , function(e, t, n) {
     window.IntlMessageFormat = o, window.IntlRelativeFormat = s;
     var l = function() {
             function e() {
-                this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "b9fd2322-ccbe-4730-b8ea-4d57563ddb8f", this.spadeBatchWindow = 1e3, this.locales = [{
+                this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "b3461bd1-f0ae-4737-9fed-477e4b7eb5c8", this.spadeBatchWindow = 1e3, this.locales = [{
                     name: "English",
                     languageCode: "en",
                     locale: "en-US",
@@ -13437,70 +13456,70 @@ webpackJsonp([62], [, , function(e, t, n) {
                     languageCode: "da",
                     locale: "da-DK",
                     loader: function() {
-                        return n.e(27).then(n.bind(null, 2013))
+                        return n.e(27).then(n.bind(null, 2018))
                     }
                 }, {
                     name: "Deutsch",
                     languageCode: "de",
                     locale: "de-DE",
                     loader: function() {
-                        return n.e(26).then(n.bind(null, 2014))
+                        return n.e(26).then(n.bind(null, 2019))
                     }
                 }, {
                     name: "English - UK",
                     languageCode: "en-gb",
                     locale: "en-GB",
                     loader: function() {
-                        return n.e(31).then(n.bind(null, 2015))
+                        return n.e(31).then(n.bind(null, 2020))
                     }
                 }, {
                     name: "Español - España",
                     languageCode: "es",
                     locale: "es-ES",
                     loader: function() {
-                        return n.e(23).then(n.bind(null, 2016))
+                        return n.e(23).then(n.bind(null, 2021))
                     }
                 }, {
                     name: "Español - Latinoamérica",
                     languageCode: "es-mx",
                     locale: "es-MX",
                     loader: function() {
-                        return n.e(24).then(n.bind(null, 2017))
+                        return n.e(24).then(n.bind(null, 2022))
                     }
                 }, {
                     name: "Français",
                     languageCode: "fr",
                     locale: "fr-FR",
                     loader: function() {
-                        return n.e(21).then(n.bind(null, 2018))
+                        return n.e(21).then(n.bind(null, 2023))
                     }
                 }, {
                     name: "Italiano",
                     languageCode: "it",
                     locale: "it-IT",
                     loader: function() {
-                        return n.e(18).then(n.bind(null, 2019))
+                        return n.e(18).then(n.bind(null, 2024))
                     }
                 }, {
                     name: "Magyar",
                     languageCode: "hu",
                     locale: "hu-HU",
                     loader: function() {
-                        return n.e(19).then(n.bind(null, 2020))
+                        return n.e(19).then(n.bind(null, 2025))
                     }
                 }, {
                     name: "Nederlands",
                     languageCode: "nl",
                     locale: "nl-NL",
                     loader: function() {
-                        return n.e(15).then(n.bind(null, 2021))
+                        return n.e(15).then(n.bind(null, 2026))
                     }
                 }, {
                     name: "Norsk",
                     languageCode: "no",
                     locale: "no-NO",
                     loader: function() {
-                        return n.e(14).then(n.bind(null, 2022))
+                        return n.e(14).then(n.bind(null, 2027))
                     },
                     cldrLocale: "nn"
                 }, {
@@ -13508,14 +13527,14 @@ webpackJsonp([62], [, , function(e, t, n) {
                     languageCode: "pl",
                     locale: "pl-PL",
                     loader: function() {
-                        return n.e(13).then(n.bind(null, 2023))
+                        return n.e(13).then(n.bind(null, 2028))
                     }
                 }, {
                     name: "Português",
                     languageCode: "pt",
                     locale: "pt-PT",
                     loader: function() {
-                        return n.e(11).then(n.bind(null, 2024))
+                        return n.e(11).then(n.bind(null, 2029))
                     },
                     cldrLocale: "pt-pt"
                 }, {
@@ -13523,7 +13542,7 @@ webpackJsonp([62], [, , function(e, t, n) {
                     languageCode: "pt-br",
                     locale: "pt-BR",
                     loader: function() {
-                        return n.e(12).then(n.bind(null, 2025))
+                        return n.e(12).then(n.bind(null, 2030))
                     },
                     cldrLocale: "pt"
                 }, {
@@ -13531,84 +13550,84 @@ webpackJsonp([62], [, , function(e, t, n) {
                     languageCode: "sk",
                     locale: "sk-SK",
                     loader: function() {
-                        return n.e(8).then(n.bind(null, 2026))
+                        return n.e(8).then(n.bind(null, 2031))
                     }
                 }, {
                     name: "Suomi",
                     languageCode: "fi",
                     locale: "fi-FI",
                     loader: function() {
-                        return n.e(22).then(n.bind(null, 2027))
+                        return n.e(22).then(n.bind(null, 2032))
                     }
                 }, {
                     name: "Svenska",
                     languageCode: "sv",
                     locale: "sv-SE",
                     loader: function() {
-                        return n.e(7).then(n.bind(null, 2028))
+                        return n.e(7).then(n.bind(null, 2033))
                     }
                 }, {
                     name: "Tiếng Việt",
                     languageCode: "vi",
                     locale: "vi-VN",
                     loader: function() {
-                        return n.e(4).then(n.bind(null, 2029))
+                        return n.e(4).then(n.bind(null, 2034))
                     }
                 }, {
                     name: "Türkçe",
                     languageCode: "tr",
                     locale: "tr-TR",
                     loader: function() {
-                        return n.e(5).then(n.bind(null, 2030))
+                        return n.e(5).then(n.bind(null, 2035))
                     }
                 }, {
                     name: "Čeština",
                     languageCode: "cs",
                     locale: "cs-CZ",
                     loader: function() {
-                        return n.e(28).then(n.bind(null, 2031))
+                        return n.e(28).then(n.bind(null, 2036))
                     }
                 }, {
                     name: "Ελληνικά",
                     languageCode: "el",
                     locale: "el-GR",
                     loader: function() {
-                        return n.e(25).then(n.bind(null, 2032))
+                        return n.e(25).then(n.bind(null, 2037))
                     }
                 }, {
                     name: "Български",
                     languageCode: "bg",
                     locale: "bg-BG",
                     loader: function() {
-                        return n.e(29).then(n.bind(null, 2033))
+                        return n.e(29).then(n.bind(null, 2038))
                     }
                 }, {
                     name: "Русский",
                     languageCode: "ru",
                     locale: "ru-RU",
                     loader: function() {
-                        return n.e(9).then(n.bind(null, 2034))
+                        return n.e(9).then(n.bind(null, 2039))
                     }
                 }, {
                     name: "العربية",
                     languageCode: "ar",
                     locale: "ar-SA",
                     loader: function() {
-                        return n.e(30).then(n.bind(null, 2035))
+                        return n.e(30).then(n.bind(null, 2040))
                     }
                 }, {
                     name: "ภาษาไทย",
                     languageCode: "th",
                     locale: "th-TH",
                     loader: function() {
-                        return n.e(6).then(n.bind(null, 2036))
+                        return n.e(6).then(n.bind(null, 2041))
                     }
                 }, {
                     name: "中文 简体",
                     languageCode: "zh-cn",
                     locale: "zh-CN",
                     loader: function() {
-                        return n.e(3).then(n.bind(null, 2037))
+                        return n.e(3).then(n.bind(null, 2042))
                     },
                     cldrLocale: "zh-hans"
                 }, {
@@ -13616,7 +13635,7 @@ webpackJsonp([62], [, , function(e, t, n) {
                     languageCode: "zh-tw",
                     locale: "zh-TW",
                     loader: function() {
-                        return n.e(2).then(n.bind(null, 2038))
+                        return n.e(2).then(n.bind(null, 2043))
                     },
                     cldrLocale: "zh-hant"
                 }, {
@@ -13624,28 +13643,28 @@ webpackJsonp([62], [, , function(e, t, n) {
                     languageCode: "ja",
                     locale: "ja-JP",
                     loader: function() {
-                        return n.e(17).then(n.bind(null, 2039))
+                        return n.e(17).then(n.bind(null, 2044))
                     }
                 }, {
                     name: "한국어",
                     languageCode: "ko",
                     locale: "ko-KR",
                     loader: function() {
-                        return n.e(16).then(n.bind(null, 2040))
+                        return n.e(16).then(n.bind(null, 2045))
                     }
                 }, {
                     name: "हिंदी",
                     languageCode: "hi",
                     locale: "hi-IN",
                     loader: function() {
-                        return n.e(20).then(n.bind(null, 2041))
+                        return n.e(20).then(n.bind(null, 2046))
                     }
                 }, {
                     name: "Română",
                     languageCode: "ro",
                     locale: "ro-RO",
                     loader: function() {
-                        return n.e(10).then(n.bind(null, 2042))
+                        return n.e(10).then(n.bind(null, 2047))
                     }
                 }], this.passportAuthURL = "https://api.twitch.tv/kraken/oauth2/authorize", this.passportScopes = ["chat_login", "user_read", "user_subscriptions", "user_presence_friends_read"], this.defaultAvatarURL = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png", this.defaultStreamPreviewURL = "https://static-cdn.jtvnw.net/ttv-static/404_preview-160x90.jpg", this.defaultBoxArtURL = "https://static-cdn.jtvnw.net/ttv-boxart/404_boxart.png", this.defaultCollectionPreviewURL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png", this.hostingCacheDelay = 2001, this.legacyClientID = "jzkbprff40iqj646a697cyrvl0zt2m6", this.algoliaApplicationID = "XLUO134HOR", this.algoliaAPIKey = "d157112f6fc2cab93ce4b01227c80a6d", this.forceNetworkLogging = !1, this.networkLoggingHostNames = ["twitch.tv", "localhost", "jtvnw.net", "twitchcdn.net", "twitchcdn.tech", "twitchcdn-shadow.net", "twitchsvc.net", "twitchsvc.tech", "twitchsvc-shadow.net"], this.defaultNetworkLoggingThreshold = .2, this.layoutCacheKey = "TwitchCache:Layout", this.forceComponentBenchmarking = !1, this.defaultComponentBenchmarkingThreshold = .1, this.forceBenchmarkingTools = !1, this.dfpNetworkCode = "3576121", this.krakenEndpoint = "https://api.twitch.tv/kraken", this.defaultAPIVersion = "5", this.adblockAccount = 58, this.adblockID = "qFEaZsFQnwEdUIs", this.forceMinConsoleLogLevelKey = "twilight.minConsoleLogLevel", this.tryPrimeURI = "https://twitch.amazon.com/prime", this.experimentsOverrideCookie = "experiment_overrides", this.tmiHost = "irc-ws.chat.twitch.tv", this.persistentPlayerEnabledKey = "persistenceEnabled"
             }
@@ -14038,11 +14057,11 @@ webpackJsonp([62], [, , function(e, t, n) {
     }(a || (a = {}));
     var r;
     ! function(e) {
-        e.Community = "community", e.EventLive = "event_suggestion_live", e.EventPast = "event_suggestion_past", e.EventUpcoming = "event_suggestion_upcoming", e.Following = "directory_following", e.FollowedChannels = "followed_channels", e.Game = "game", e.Games = "directory_games", e.Host = "host_channel", e.Live = "live_channel", e.LiveHost = "live_host", e.Logo = "twitch_logo", e.Popular = "popular_games", e.PopularVideos = "popular_videos", e.Presence = "friend_presence", e.RecentVideos = "recent_videos", e.LatestCollection = "latest_collection", e.RecommendedChannels = "recommended_channels", e.RecommendedVideos = "recommended_videos", e.SuggestedVideos = "suggested_videos", e.TextLink = "text_link", e.User = "user", e.Video = "video"
+        e.ChatCard = "chat_card", e.Community = "community", e.EventLive = "event_suggestion_live", e.EventPast = "event_suggestion_past", e.EventUpcoming = "event_suggestion_upcoming", e.Following = "directory_following", e.FollowedChannels = "followed_channels", e.Game = "game", e.Games = "directory_games", e.Host = "host_channel", e.Live = "live_channel", e.LiveHost = "live_host", e.Logo = "twitch_logo", e.Popular = "popular_games", e.PopularVideos = "popular_videos", e.Presence = "friend_presence", e.RecentVideos = "recent_videos", e.LatestCollection = "latest_collection", e.RecommendedChannels = "recommended_channels", e.RecommendedVideos = "recommended_videos", e.SuggestedVideos = "suggested_videos", e.TextLink = "text_link", e.User = "user", e.Video = "video"
     }(r || (r = {}));
     var o;
     ! function(e) {
-        e.Browse = "twitch_browse_directory", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelVideos = "channel_videos", e.ChatNotification = "chat_bar_notification", e.Community = "twitch_community_directory", e.Game = "twitch_game_directory", e.GameVideos = "twitch_video_game_directory", e.EventDetails = "event_details", e.Following = "following_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.SideNav = "twitch_socialcolumn", e.TopNav = "twitch_topnav", e.VideoEmbed = "vod_embed", e.VideoWatchPage = "vod", e.Whispers = "conversations"
+        e.Browse = "twitch_browse_directory", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelVideos = "channel_videos", e.Chat = "twitch_chat", e.ChatNotification = "chat_bar_notification", e.Community = "twitch_community_directory", e.Game = "twitch_game_directory", e.GameVideos = "twitch_video_game_directory", e.EventDetails = "event_details", e.Following = "following_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.SideNav = "twitch_socialcolumn", e.TopNav = "twitch_topnav", e.VideoEmbed = "vod_embed", e.VideoWatchPage = "vod", e.Whispers = "conversations"
     }(o || (o = {}));
     var s;
     ! function(e) {
@@ -14340,7 +14359,7 @@ webpackJsonp([62], [, , function(e, t, n) {
     var o = n(20),
         s = (n.n(o), n(2)),
         l = n(16),
-        c = n(31),
+        c = n(32),
         u = n(45),
         d = n(44)
 }, function(e, t, n) {
@@ -14985,7 +15004,7 @@ webpackJsonp([62], [, , function(e, t, n) {
     });
     var i;
     ! function(e) {
-        e[e.Text = 0] = "Text", e[e.Mention = 1] = "Mention", e[e.Link = 2] = "Link", e[e.Emote = 3] = "Emote", e[e.ClipLink = 4] = "ClipLink"
+        e[e.Text = 0] = "Text", e[e.Mention = 1] = "Mention", e[e.Link = 2] = "Link", e[e.Emote = 3] = "Emote", e[e.ClipLink = 4] = "ClipLink", e[e.VideoLink = 5] = "VideoLink"
     }(i || (i = {}))
 }, function(e, t, n) {
     "use strict";
@@ -16816,7 +16835,7 @@ webpackJsonp([62], [, , function(e, t, n) {
         h = n(4),
         g = n(2),
         f = n(64),
-        v = n(67),
+        v = n(66),
         b = n(6),
         y = n(86),
         k = n(39),
@@ -16834,7 +16853,7 @@ webpackJsonp([62], [, , function(e, t, n) {
         L = n(12),
         U = n(70),
         F = n(284),
-        R = n(32),
+        R = n(31),
         P = n(89),
         M = n(3),
         A = n(277),
@@ -21241,7 +21260,7 @@ webpackJsonp([62], [, , function(e, t, n) {
         T = n(30),
         D = n(5),
         I = n(28),
-        O = n(32),
+        O = n(31),
         x = n(398),
         L = n.n(x),
         U = n(14),
@@ -21810,7 +21829,7 @@ webpackJsonp([62], [, , function(e, t, n) {
                     return v.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
-                                return k.a.buildType !== E.a.Production && b.parse(window.location.search).onsite_test_data ? [4, n.e(35).then(n.bind(null, 2043))] : [3, 2];
+                                return k.a.buildType !== E.a.Production && b.parse(window.location.search).onsite_test_data ? [4, n.e(36).then(n.bind(null, 2048))] : [3, 2];
                             case 1:
                                 e = i.sent().MockOnsiteNotifications, t = e.getMockOnsiteNotificationModels(3), this.setState({
                                     notifications: t
@@ -21896,7 +21915,7 @@ webpackJsonp([62], [, , function(e, t, n) {
                         return v.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return this.notificationsInitiallyLoaded() && !this.hasInsertedListNotificationsData && k.a.buildType !== E.a.Production && b.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(35).then(n.bind(null, 2043))]) : [3, 2];
+                                    return this.notificationsInitiallyLoaded() && !this.hasInsertedListNotificationsData && k.a.buildType !== E.a.Production && b.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(36).then(n.bind(null, 2048))]) : [3, 2];
                                 case 1:
                                     e = t.sent().MockOnsiteNotifications, Object(N.d)(he, v.__assign({}, this.props.listData.variables), function(t) {
                                         return t.currentUser.notifications.edges = e.getMockOnsiteNotificationEdges(b.parse(window.location.search).onsite_test_data), t
@@ -23057,7 +23076,7 @@ webpackJsonp([62], [, , function(e, t, n) {
         d = n(10),
         p = n(9),
         m = n(48),
-        h = n(31),
+        h = n(32),
         g = n(17),
         f = n(0),
         v = n(1),
@@ -23298,7 +23317,7 @@ webpackJsonp([62], [, , function(e, t, n) {
                 }, Object(b.d)("Newest", "search__video-filters")))))))
             }, t
         }(v.Component),
-        Q = n(66),
+        Q = n(67),
         K = (n(411), function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
@@ -27940,6 +27959,95 @@ webpackJsonp([62], [, , function(e, t, n) {
     })
 }, function(e, t, n) {
     "use strict";
+    var i = n(0),
+        a = n(1),
+        r = n(69),
+        o = (n(530), function(e) {
+            function t() {
+                var t = null !== e && e.apply(this, arguments) || this;
+                return t.state = {
+                    scrollableProps: {}
+                }, t.getChildContext = function() {
+                    return {
+                        setRootScrollableProps: t.setRootScrollableProps,
+                        resetRootScrollableProps: t.resetRootScrollableProps,
+                        getRootScrollableOffsetHeight: t.getOffsetHeight,
+                        setRootScrollableOffsetHeight: t.setOffsetHeight,
+                        resetRootScrollableOffsetHeight: t.resetOffsetHeight
+                    }
+                }, t.setRootScrollableProps = function(e) {
+                    t.setState({
+                        scrollableProps: e
+                    })
+                }, t.resetRootScrollableProps = function() {
+                    t.setState({
+                        scrollableProps: {}
+                    })
+                }, t.getOffsetHeight = function() {
+                    return t.state.offsetHeight
+                }, t.setOffsetHeight = function(e) {
+                    t.setState({
+                        offsetHeight: e
+                    })
+                }, t.resetOffsetHeight = function() {
+                    t.setState({
+                        offsetHeight: void 0
+                    })
+                }, t.setScrollableAreaRef = function(e) {
+                    return t.scrollableAreaRef = e
+                }, t
+            }
+            return i.__extends(t, e), t.prototype.render = function() {
+                var e = void 0,
+                    t = this.state.offsetHeight;
+                t && (e = {
+                    paddingTop: t
+                });
+                var n = i.__assign({
+                    className: "root-scrollable",
+                    contentClassName: "root-scrollable__content"
+                }, this.state.scrollableProps);
+                return a.createElement(r.b, i.__assign({}, n, {
+                    "data-a-target": "root-scroller",
+                    style: e,
+                    scrollRef: this.setScrollableAreaRef,
+                    scrollbarVerticalOffset: t
+                }), this.props.children)
+            }, t.childContextTypes = {
+                setRootScrollableProps: a.PropTypes.func,
+                resetRootScrollableProps: a.PropTypes.func,
+                getRootScrollableOffsetHeight: a.PropTypes.func,
+                setRootScrollableOffsetHeight: a.PropTypes.func,
+                resetRootScrollableOffsetHeight: a.PropTypes.func
+            }, t
+        }(a.Component)),
+        s = function(e) {
+            function t() {
+                var t = null !== e && e.apply(this, arguments) || this;
+                return t.shouldSetRootScrollableProps = function(e, t) {
+                    return !(!e || !t) && (e.disableDebounce !== t.disableDebounce || (e.scrollRef !== t.scrollRef || (e.contentClassName !== t.contentClassName || (e.scrollContentClassName !== t.scrollContentClassName || (e.suppressScrollX !== t.suppressScrollX || (e.suppressScrollY !== t.suppressScrollY || e.className !== t.className))))))
+                }, t
+            }
+            return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                this.context.setRootScrollableProps(this.props)
+            }, t.prototype.componentWillReceiveProps = function(e) {
+                this.shouldSetRootScrollableProps(this.props, e) && this.context.setRootScrollableProps(e)
+            }, t.prototype.componentWillUnmount = function() {
+                this.context.resetRootScrollableProps()
+            }, t.prototype.render = function() {
+                return null
+            }, t.contextTypes = {
+                setRootScrollableProps: a.PropTypes.func,
+                resetRootScrollableProps: a.PropTypes.func
+            }, t
+        }(a.Component);
+    n.d(t, "a", function() {
+        return o
+    }), n.d(t, "b", function() {
+        return s
+    })
+}, function(e, t, n) {
+    "use strict";
 
     function i(e) {
         return {
@@ -28145,7 +28253,7 @@ webpackJsonp([62], [, , function(e, t, n) {
         w = n(9),
         E = n(48),
         C = n(36),
-        N = n(31),
+        N = n(32),
         T = n(17),
         D = n(377),
         I = Object(_.a)(i, a)(Object(p.f)(S)),
@@ -28363,95 +28471,6 @@ webpackJsonp([62], [, , function(e, t, n) {
     }), n.d(t, "d", function() {
         return l
     })
-}, function(e, t, n) {
-    "use strict";
-    var i = n(0),
-        a = n(1),
-        r = n(69),
-        o = (n(530), function(e) {
-            function t() {
-                var t = null !== e && e.apply(this, arguments) || this;
-                return t.state = {
-                    scrollableProps: {}
-                }, t.getChildContext = function() {
-                    return {
-                        setRootScrollableProps: t.setRootScrollableProps,
-                        resetRootScrollableProps: t.resetRootScrollableProps,
-                        getRootScrollableOffsetHeight: t.getOffsetHeight,
-                        setRootScrollableOffsetHeight: t.setOffsetHeight,
-                        resetRootScrollableOffsetHeight: t.resetOffsetHeight
-                    }
-                }, t.setRootScrollableProps = function(e) {
-                    t.setState({
-                        scrollableProps: e
-                    })
-                }, t.resetRootScrollableProps = function() {
-                    t.setState({
-                        scrollableProps: {}
-                    })
-                }, t.getOffsetHeight = function() {
-                    return t.state.offsetHeight
-                }, t.setOffsetHeight = function(e) {
-                    t.setState({
-                        offsetHeight: e
-                    })
-                }, t.resetOffsetHeight = function() {
-                    t.setState({
-                        offsetHeight: void 0
-                    })
-                }, t.setScrollableAreaRef = function(e) {
-                    return t.scrollableAreaRef = e
-                }, t
-            }
-            return i.__extends(t, e), t.prototype.render = function() {
-                var e = void 0,
-                    t = this.state.offsetHeight;
-                t && (e = {
-                    paddingTop: t
-                });
-                var n = i.__assign({
-                    className: "root-scrollable",
-                    contentClassName: "root-scrollable__content"
-                }, this.state.scrollableProps);
-                return a.createElement(r.b, i.__assign({}, n, {
-                    "data-a-target": "root-scroller",
-                    style: e,
-                    scrollRef: this.setScrollableAreaRef,
-                    scrollbarVerticalOffset: t
-                }), this.props.children)
-            }, t.childContextTypes = {
-                setRootScrollableProps: a.PropTypes.func,
-                resetRootScrollableProps: a.PropTypes.func,
-                getRootScrollableOffsetHeight: a.PropTypes.func,
-                setRootScrollableOffsetHeight: a.PropTypes.func,
-                resetRootScrollableOffsetHeight: a.PropTypes.func
-            }, t
-        }(a.Component)),
-        s = function(e) {
-            function t() {
-                var t = null !== e && e.apply(this, arguments) || this;
-                return t.shouldSetRootScrollableProps = function(e, t) {
-                    return !(!e || !t) && (e.disableDebounce !== t.disableDebounce || (e.scrollRef !== t.scrollRef || (e.contentClassName !== t.contentClassName || (e.scrollContentClassName !== t.scrollContentClassName || (e.suppressScrollX !== t.suppressScrollX || (e.suppressScrollY !== t.suppressScrollY || e.className !== t.className))))))
-                }, t
-            }
-            return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                this.context.setRootScrollableProps(this.props)
-            }, t.prototype.componentWillReceiveProps = function(e) {
-                this.shouldSetRootScrollableProps(this.props, e) && this.context.setRootScrollableProps(e)
-            }, t.prototype.componentWillUnmount = function() {
-                this.context.resetRootScrollableProps()
-            }, t.prototype.render = function() {
-                return null
-            }, t.contextTypes = {
-                setRootScrollableProps: a.PropTypes.func,
-                resetRootScrollableProps: a.PropTypes.func
-            }, t
-        }(a.Component);
-    n.d(t, "a", function() {
-        return o
-    }), n.d(t, "b", function() {
-        return s
-    })
 }, , function(e, t, n) {
     e.exports = n.p + "assets/bg_glitch_pattern-34ca2e369aad1ed33b57f3d2d59c70eb.png"
 }, function(e, t, n) {
@@ -28514,7 +28533,7 @@ webpackJsonp([62], [, , function(e, t, n) {
     var r = n(7),
         o = n(9),
         s = n(48),
-        l = n(31),
+        l = n(32),
         c = n(17),
         u = n(0),
         d = n(1),
@@ -28779,7 +28798,7 @@ webpackJsonp([62], [, , function(e, t, n) {
         _ = n(1),
         w = n(499),
         E = n(452),
-        C = n(444),
+        C = n(443),
         N = n(144),
         T = n(7),
         D = n(9),
@@ -28801,7 +28820,7 @@ webpackJsonp([62], [, , function(e, t, n) {
         W = n(28),
         q = n(47),
         G = n(18),
-        Q = n(66),
+        Q = n(67),
         K = n(107),
         $ = n(285),
         Y = n(3),
@@ -29448,142 +29467,156 @@ webpackJsonp([62], [, , function(e, t, n) {
         ve = n(16),
         be = n(5),
         ye = fe.a.wrap(function() {
-            return n.e(47).then(n.bind(null, 2044))
+            return n.e(48).then(n.bind(null, 2049))
         }, "AnonFrontPage"),
         ke = fe.a.wrap(function() {
-            return n.e(32).then(n.bind(null, 2045))
+            return n.e(32).then(n.bind(null, 2050))
         }, "BrowseCommunitiesPage"),
         Se = fe.a.wrap(function() {
-            return n.e(32).then(n.bind(null, 2045))
+            return n.e(32).then(n.bind(null, 2050))
         }, "BrowseForYouPage"),
         _e = fe.a.wrap(function() {
-            return n.e(32).then(n.bind(null, 2045))
+            return n.e(32).then(n.bind(null, 2050))
         }, "BrowseCreativePage"),
         we = fe.a.wrap(function() {
-            return n.e(41).then(n.bind(null, 2046))
+            return n.e(42).then(n.bind(null, 2051))
         }, "ChannelClipsPage"),
         Ee = fe.a.wrap(function() {
-            return n.e(46).then(n.bind(null, 2047))
+            return n.e(47).then(n.bind(null, 2052))
         }, "ChannelCollectionsPage"),
         Ce = fe.a.wrap(function() {
-            return n.e(44).then(n.bind(null, 2048))
+            return n.e(45).then(n.bind(null, 2053))
         }, "ChannelEventsPage"),
         Ne = fe.a.wrap(function() {
-            return n.e(0).then(n.bind(null, 2049))
+            return n.e(0).then(n.bind(null, 2054))
         }, "ChannelPage"),
         Te = fe.a.wrap(function() {
-            return n.e(40).then(n.bind(null, 2050))
+            return n.e(41).then(n.bind(null, 2055))
         }, "ChannelVideosPage"),
         De = fe.a.wrap(function() {
-            return n.e(34).then(n.bind(null, 2051))
+            return n.e(35).then(n.bind(null, 2056))
         }, "ChannelClipsManagerPage"),
         Ie = fe.a.wrap(function() {
-            return n.e(34).then(n.bind(null, 2051))
+            return n.e(35).then(n.bind(null, 2056))
         }, "MyClipsManagerPage"),
         Oe = fe.a.wrap(function() {
-            return n.e(60).then(n.bind(null, 2052))
+            return n.e(61).then(n.bind(null, 2057))
         }, "DevOnlyRoot"),
         xe = fe.a.wrap(function() {
-            return n.e(33).then(n.bind(null, 2053))
-        }, "DirectoryCommunityByLanguagePage"),
+            return n.e(58).then(n.bind(null, 2058))
+        }, "DevOnlyTestingCarouselPage"),
         Le = fe.a.wrap(function() {
-            return n.e(53).then(n.bind(null, 2057))
-        }, "DirectoryCommunityDetailsPage"),
+            return n.e(33).then(n.bind(null, 2059))
+        }, "DirectoryCommunityByLanguagePage"),
         Ue = fe.a.wrap(function() {
-            return n.e(49).then(n.bind(null, 2058))
-        }, "DirectoryGameClipsPage"),
+            return n.e(54).then(n.bind(null, 2063))
+        }, "DirectoryCommunityDetailsPage"),
         Fe = fe.a.wrap(function() {
-            return n.e(50).then(n.bind(null, 2059))
-        }, "DirectoryGameDetailsPage"),
+            return n.e(50).then(n.bind(null, 2064))
+        }, "DirectoryGameClipsPage"),
         Re = fe.a.wrap(function() {
-            return n.e(33).then(n.bind(null, 2053))
-        }, "DirectoryGamePage"),
+            return n.e(51).then(n.bind(null, 2065))
+        }, "DirectoryGameDetailsPage"),
         Pe = fe.a.wrap(function() {
-            return n.e(51).then(n.bind(null, 2060))
-        }, "DirectoryGameVideosPage"),
+            return n.e(33).then(n.bind(null, 2059))
+        }, "DirectoryGamePage"),
         Me = fe.a.wrap(function() {
-            return n.e(55).then(n.bind(null, 2061))
-        }, "DirectoryPopularPage"),
+            return n.e(52).then(n.bind(null, 2066))
+        }, "DirectoryGameVideosPage"),
         Ae = fe.a.wrap(function() {
-            return n.e(32).then(n.bind(null, 2045))
-        }, "BrowseGamePage"),
+            return n.e(34).then(n.bind(null, 2067))
+        }, "DirectoryPopularPage"),
         je = fe.a.wrap(function() {
-            return n.e(58).then(n.bind(null, 2062))
-        }, "EmailVerificationPage"),
+            return n.e(34).then(n.bind(null, 2067))
+        }, "DirectoryPopularByLanguagePage"),
         Be = fe.a.wrap(function() {
-            return n.e(48).then(n.bind(null, 2063))
-        }, "EventLandingPage"),
+            return n.e(32).then(n.bind(null, 2050))
+        }, "BrowseGamePage"),
         He = fe.a.wrap(function() {
-            return n.e(52).then(n.bind(null, 2064))
-        }, "FollowingRootPage"),
+            return n.e(59).then(n.bind(null, 2068))
+        }, "EmailVerificationPage"),
         Ve = fe.a.wrap(function() {
-            return n.e(45).then(n.bind(null, 2065))
-        }, "FrontPage"),
+            return n.e(49).then(n.bind(null, 2069))
+        }, "EventLandingPage"),
         ze = fe.a.wrap(function() {
-            return n.e(59).then(n.bind(null, 2066))
-        }, "ReportUserPage"),
+            return n.e(53).then(n.bind(null, 2070))
+        }, "FollowingRootPage"),
         We = fe.a.wrap(function() {
-            return n.e(54).then(n.bind(null, 2067))
-        }, "StoreMerchPage"),
+            return n.e(46).then(n.bind(null, 2071))
+        }, "FrontPage"),
         qe = fe.a.wrap(function() {
-            return n.e(42).then(n.bind(null, 2068))
-        }, "VideoWatchPage"),
+            return n.e(60).then(n.bind(null, 2072))
+        }, "ReportUserPage"),
         Ge = fe.a.wrap(function() {
-            return n.e(56).then(n.bind(null, 2069))
+            return n.e(55).then(n.bind(null, 2073))
+        }, "StoreMerchPage"),
+        Qe = fe.a.wrap(function() {
+            return n.e(43).then(n.bind(null, 2074))
+        }, "VideoWatchPage"),
+        Ke = fe.a.wrap(function() {
+            return n.e(56).then(n.bind(null, 2075))
         }, "GlobalNotificationSettingsPage"),
-        Qe = function() {
+        $e = function() {
             return _.createElement(ge.c, {
                 path: "/",
                 to: "/directory/following"
             })
         },
-        Ke = function() {
+        Ye = function() {
             return window.location.reload(), null
         },
-        $e = function(e) {
+        Je = function(e) {
             return _.createElement(ge.c, {
                 to: "/popout/" + e.match.params.channelLogin + "/chat"
             })
         },
-        Ye = function(e) {
+        Xe = function(e) {
             return _.createElement(ge.c, {
                 to: "/" + e.match.params.channelLogin + "/videos/all"
             })
         },
-        Je = function(e) {
+        Ze = function(e) {
             return _.createElement(ge.c, {
                 to: "/" + e.match.params.channelLogin + "/videos/archive"
             })
         },
-        Xe = function(e) {
+        et = function(e) {
             return _.createElement(ge.c, {
                 to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
             })
         },
-        Ze = function(e) {
+        tt = function() {
+            return _.createElement(ge.c, {
+                to: "/directory/all/xbox"
+            })
+        },
+        nt = function(e) {
             var t = e.isLoggedIn;
             return _.createElement(ge.e, null, V.a.buildType !== ve.a.Production && _.createElement(ge.d, {
+                path: "/_dev/testing/carousel",
+                component: xe
+            }), V.a.buildType !== ve.a.Production && _.createElement(ge.d, {
                 path: "/_dev",
                 component: Oe
             }), _.createElement(ge.d, {
                 exact: !0,
                 path: "/",
-                component: t ? Ve : ye
+                component: t ? We : ye
             }), _.createElement(ge.d, {
                 path: "/bits",
-                render: Ke
+                render: Ye
             }), _.createElement(ge.d, {
                 path: "/collections/:collectionID",
-                component: qe
+                component: Qe
             }), _.createElement(ge.d, {
                 path: "/communities/:encodedCommunityName/details",
-                component: Le
+                component: Ue
             }), _.createElement(ge.d, {
                 path: "/communities/:encodedCommunityName/:encodedLanguage",
-                component: xe
+                component: Le
             }), _.createElement(ge.d, {
                 path: "/communities/:encodedCommunityName",
-                component: Re
+                component: Pe
             }), _.createElement(ge.d, {
                 path: "/directory/communities",
                 component: ke
@@ -29595,71 +29628,83 @@ webpackJsonp([62], [, , function(e, t, n) {
                 component: Se
             }), _.createElement(ge.d, {
                 path: "/directory/following/:category?",
-                component: He
+                component: ze
             }), _.createElement(ge.d, {
                 path: "/directory/game/:encodedCommunityName/clips",
-                component: Ue
+                component: Fe
             }), V.a.buildType !== ve.a.Production && _.createElement(ge.d, {
                 path: "/directory/game/:encodedCommunityName/details",
-                component: Fe
-            }), _.createElement(ge.d, {
-                path: "/directory/game/:encodedCommunityName/videos/:filter",
-                component: Pe
-            }), _.createElement(ge.d, {
-                path: "/directory/game/:encodedCommunityName/videos",
-                render: Xe
-            }), _.createElement(ge.d, {
-                path: "/directory/game/:encodedCommunityName/:encodedLanguage",
-                component: xe
-            }), _.createElement(ge.d, {
-                path: "/directory/game/:encodedCommunityName",
                 component: Re
             }), _.createElement(ge.d, {
-                path: "/directory/all/:filter?",
+                path: "/directory/game/:encodedCommunityName/videos/:filter",
                 component: Me
             }), _.createElement(ge.d, {
-                path: "/directory/:category?",
+                path: "/directory/game/:encodedCommunityName/videos",
+                render: et
+            }), _.createElement(ge.d, {
+                path: "/directory/game/:encodedCommunityName/:encodedLanguage",
+                component: Le
+            }), _.createElement(ge.d, {
+                path: "/directory/game/:encodedCommunityName",
+                component: Pe
+            }), _.createElement(ge.d, {
+                path: "/directory/all/ps4",
                 component: Ae
             }), _.createElement(ge.d, {
-                path: "/events/:eventName",
-                render: Be
+                path: "/directory/all/xb1",
+                component: tt
             }), _.createElement(ge.d, {
-                path: "/email-verification/:emailOpaqueId",
+                path: "/directory/all/xbox",
+                component: Ae
+            }), _.createElement(ge.d, {
+                path: "/directory/all/:encodedLanguage",
                 component: je
             }), _.createElement(ge.d, {
+                path: "/directory/all",
+                component: Ae
+            }), _.createElement(ge.d, {
+                path: "/directory/:category?",
+                component: Be
+            }), _.createElement(ge.d, {
+                path: "/events/:eventName",
+                render: Ve
+            }), _.createElement(ge.d, {
+                path: "/email-verification/:emailOpaqueId",
+                component: He
+            }), _.createElement(ge.d, {
                 path: "/following",
-                component: Qe
+                component: $e
             }), _.createElement(ge.d, {
                 path: "/popout",
-                render: Ke
+                render: Ye
             }), _.createElement(ge.d, {
                 path: "/videos/:videoID",
-                component: qe
+                component: Qe
             }), _.createElement(ge.d, {
                 path: "/store/merch",
-                component: We
+                component: Ge
             }), _.createElement(ge.d, {
                 path: "/store"
             }, _.createElement(ge.c, {
                 to: "/store/merch"
             })), _.createElement(ge.d, {
                 path: "/subs",
-                render: Ke
+                render: Ye
             }), _.createElement(ge.d, {
                 path: "/settings/notifications",
-                component: Ge
+                component: Ke
             }), _.createElement(ge.d, {
                 path: "/:channelName/report",
-                component: ze
+                component: qe
             }), _.createElement(ge.d, {
                 path: "/:channelLogin/videos/(past_broadcasts?)",
-                render: Je
+                render: Ze
             }), _.createElement(ge.d, {
                 path: "/:channelLogin/videos/:filter(all|archive|upload|highlight)",
                 component: Te
             }), _.createElement(ge.d, {
                 path: "/:channelLogin/videos/:unknownFilter?",
-                render: Ye
+                render: Xe
             }), V.a.buildType !== ve.a.Production && _.createElement(ge.d, {
                 path: "/:channelName/manager/clips/channel",
                 component: De
@@ -29671,7 +29716,7 @@ webpackJsonp([62], [, , function(e, t, n) {
                 component: we
             }), _.createElement(ge.d, {
                 path: "/:channelLogin/chat",
-                render: $e
+                render: Je
             }), _.createElement(ge.d, {
                 path: "/:channelLogin/collections",
                 component: Ee
@@ -29686,16 +29731,16 @@ webpackJsonp([62], [, , function(e, t, n) {
                 component: Ne
             }))
         },
-        et = Object(be.c)("DefaultRootRouter", {
+        it = Object(be.c)("DefaultRootRouter", {
             autoReportInteractive: !0
-        })(Ze);
+        })(nt);
     n.d(t, "b", function() {
-        return tt
+        return at
     }), n.d(t, "a", function() {
-        return nt
+        return rt
     });
-    var tt = "twilight-main",
-        nt = function(e) {
+    var at = "twilight-main",
+        rt = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {}, t.setMainRef = function(e) {
@@ -29716,12 +29761,12 @@ webpackJsonp([62], [, , function(e, t, n) {
                     fullHeight: !0,
                     fullWidth: !0
                 }, _.createElement("main", {
-                    className: tt,
+                    className: at,
                     ref: this.setMainRef
                 }, _.createElement(C.a, null, _.createElement(Y.U, {
                     position: Y._2.Relative,
                     fullWidth: !0
-                }, _.createElement(et, {
+                }, _.createElement(it, {
                     isLoggedIn: this.props.isLoggedIn
                 }), _.createElement(w.b, {
                     mainRef: this.state.mainContentRef
@@ -34874,7 +34919,7 @@ webpackJsonp([62], [, , function(e, t, n) {
         h = n(4),
         g = n(288),
         f = n(144),
-        v = n(443),
+        v = n(444),
         b = n(3),
         y = (n(529), function(e) {
             function t() {
@@ -35171,7 +35216,7 @@ webpackJsonp([62], [, , function(e, t, n) {
                 })
             }, t.prototype.componentWillUnmount = function() {
                 var e = this;
-                if (this.unregister(), this.props.disablePersistenceOnUnmount || this.state.userHasDismissedContent) return _.destroyPlayer(), void(D = null);
+                if (this.unregister(), this.props.disablePersistenceOnUnmount || this.state.userHasDismissedContent || !this.props.persistentPlayerEnabled) return _.destroyPlayer(), void(D = null);
                 var t = this.props,
                     n = t.playerProps,
                     i = t.miniPlayerTitle,
@@ -38988,7 +39033,7 @@ webpackJsonp([62], [, , function(e, t, n) {
 
     function l() {
         var e = d.n.store.getState();
-        !ie && Object(m.e)(e) && (ie = !0, ne(), d.a.optimizedBuild ? s() : setTimeout(s, 100))
+        !ie && Object(m.e)(e) && (ie = !0, ne(), d.a.optimizedBuild ? s() : setTimeout(s, 500))
     }
     Object.defineProperty(t, "__esModule", {
         value: !0
@@ -38996,7 +39041,7 @@ webpackJsonp([62], [, , function(e, t, n) {
     var c = n(1),
         u = n(22),
         d = n(2),
-        p = n(31),
+        p = n(32),
         m = n(17),
         h = n(234),
         g = n(7),
@@ -39110,10 +39155,10 @@ webpackJsonp([62], [, , function(e, t, n) {
         K = Object(g.a)(r)(Q.a),
         $ = n(3),
         Y = (n(797), y.a.wrap(function() {
-            return n.e(36).then(n.bind(null, 2070))
+            return n.e(37).then(n.bind(null, 2076))
         }, "DashboardRoot")),
         J = y.a.wrap(function() {
-            return n.e(37).then(n.bind(null, 2072))
+            return n.e(38).then(n.bind(null, 2078))
         }, "TeamsDashboardRoot"),
         X = function(e) {
             function t() {
@@ -39168,7 +39213,7 @@ webpackJsonp([62], [, , function(e, t, n) {
         })(X),
         ee = Object(g.a)(o)(Z),
         te = Object(u.e)(ee);
-    d.a.optimizedBuild || n.e(1).then(n.bind(null, 2073)).then(function(e) {
+    d.a.optimizedBuild || n.e(1).then(n.bind(null, 2079)).then(function(e) {
         return window.Perf = e
     });
     var ne, ie = !1;
@@ -39248,4 +39293,4 @@ webpackJsonp([62], [, , function(e, t, n) {
     };
     e.exports = n
 }, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , function(e, t) {}], [538]);
-//# sourceMappingURL=core-dd3de4ba759d4f55c78ae4def2afc305.js.map
+//# sourceMappingURL=core-d9b3d0a98a9a6ad7c71ac52d02b80b71.js.map

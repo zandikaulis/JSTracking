@@ -1,5 +1,5 @@
-webpackJsonp([66], {
-    1255: function(e, t, n) {
+webpackJsonp([67], {
+    1262: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -61,14 +61,14 @@ webpackJsonp([66], {
             s = n(2),
             o = n(12)
     },
-    1996: function(e, t, n) {
+    2001: function(e, t, n) {
         e.exports = n.p + "assets/chat-badges-4b67550d7a270b216efd364135a9d764.png"
     },
-    1997: function(e, t, n) {
+    2002: function(e, t, n) {
         e.exports = n.p + "assets/emotes-e2efaf11b6d1b3db4fe5fd980350e28b.png"
     },
-    1998: function(e, t) {},
-    1999: function(e, t) {
+    2003: function(e, t) {},
+    2004: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -325,11 +325,11 @@ webpackJsonp([66], {
         };
         e.exports = n
     },
-    2e3: function(e, t) {},
-    2001: function(e, t) {},
-    2002: function(e, t) {},
-    2003: function(e, t) {},
-    2078: function(e, t, n) {
+    2005: function(e, t) {},
+    2006: function(e, t) {},
+    2007: function(e, t) {},
+    2008: function(e, t) {},
+    2084: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -358,9 +358,9 @@ webpackJsonp([66], {
             o = n(0),
             l = n(1),
             c = n(2),
-            u = n(1996),
+            u = n(2001),
             d = n.n(u),
-            m = n(1997),
+            m = n(2002),
             p = n.n(m),
             g = n(28),
             h = n(811),
@@ -369,13 +369,13 @@ webpackJsonp([66], {
             _ = n(5),
             y = n(9),
             v = n(48),
-            S = n(31),
+            S = n(32),
             k = n(17),
             w = n(6),
             C = n(21),
             E = n(10),
             x = n(3),
-            P = (n(1998), function(e) {
+            P = (n(2003), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.handleClick = function() {
@@ -417,9 +417,9 @@ webpackJsonp([66], {
                 }, t = o.__decorate([Object(_.c)("FollowedChannelLink")], t)
             }(l.Component)),
             N = P,
-            F = n(1255),
-            O = n(1999),
-            D = (n(2e3), function(e) {
+            F = n(1262),
+            O = n(2004),
+            D = (n(2005), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -545,12 +545,12 @@ webpackJsonp([66], {
             T = Object(s.a)(a, r)(L),
             U = n(39),
             I = n(18),
-            j = n(66),
+            j = n(67),
             M = n(107),
             R = n(265),
             H = n(64),
             A = n(49),
-            W = (n(2001), function(e) {
+            W = (n(2006), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onStreamerClick = function(e) {
@@ -634,7 +634,7 @@ webpackJsonp([66], {
                 }, t
             }(l.Component)),
             z = W,
-            V = (n(2002), {
+            V = (n(2007), {
                 searchPlaceholder: Object(c.d)("Search for a Streamer", "StreamerSearch")
             }),
             B = function(e) {
@@ -843,7 +843,7 @@ webpackJsonp([66], {
                 }, t = o.__decorate([Object(_.c)("StreamerSearch")], t)
             }(l.Component),
             G = Object(s.a)(i)(K),
-            $ = (n(2003), function(e) {
+            $ = (n(2008), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.messages = {
@@ -1035,6 +1035,7 @@ webpackJsonp([66], {
             DirectoryCommunityDetails: "directory.community.details",
             DirectoryGames: "directory.games",
             DirectoryPopular: "directory.popular",
+            DirectoryPopularByLanguage: "directory.popular.language",
             DirectoryGameIndex: "directory.game.index",
             DirectoryGameClips: "directory.game.clips",
             DirectoryGameDetails: "directory.game.details",
@@ -1138,4 +1139,4 @@ webpackJsonp([66], {
         })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-landing-page-cffdc244e5e813aec8a1edae2246a817.js.map
+//# sourceMappingURL=pages.subs.components.subs-landing-page-d1f3cc0ea8bc19ea9360ec91521da763.js.map

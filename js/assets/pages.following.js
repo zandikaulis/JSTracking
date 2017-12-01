@@ -1,5 +1,5 @@
-webpackJsonp([52], {
-    1003: function(e, t, n) {
+webpackJsonp([53], {
+    1005: function(e, t, n) {
         "use strict";
 
         function i(e, t, n, i) {
@@ -69,21 +69,21 @@ webpackJsonp([52], {
             e.Popular = "views", e.Newest = "time"
         }(c || (c = {}))
     },
-    1004: function(e, t, n) {
+    1006: function(e, t, n) {
         "use strict";
-        var i = n(1012);
+        var i = n(1013);
         n.d(t, "VideoPreviewCard", function() {
             return i.a
         });
-        var a = n(1014),
-            l = (n.n(a), n(920));
+        var a = n(1015),
+            l = (n.n(a), n(922));
         n.d(t, "VideoPreviewCardPlaceholder", function() {
             return l.a
         })
     },
-    1007: function(e, t) {},
     1008: function(e, t) {},
-    1012: function(e, t, n) {
+    1009: function(e, t) {},
+    1013: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return v
@@ -98,7 +98,7 @@ webpackJsonp([52], {
             c = n(378),
             u = n(5),
             m = n(3),
-            g = n(1013),
+            g = n(1014),
             p = (n.n(g), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -319,14 +319,14 @@ webpackJsonp([52], {
             }(r.Component)),
             v = Object(u.c)("VideoPreviewCard")(p)
     },
-    1013: function(e, t) {},
     1014: function(e, t) {},
-    1046: function(e, t, n) {
+    1015: function(e, t) {},
+    1047: function(e, t, n) {
         "use strict";
         var i = n(1),
             a = n(5),
-            l = n(1004),
-            r = n(920),
+            l = n(1006),
+            r = n(922),
             o = n(3),
             s = function(e) {
                 var t = [];
@@ -367,7 +367,7 @@ webpackJsonp([52], {
             return d
         })
     },
-    1047: function(e, t, n) {
+    1048: function(e, t, n) {
         "use strict";
 
         function i(e, t, n) {
@@ -375,7 +375,7 @@ webpackJsonp([52], {
         }
         t.a = i
     },
-    1061: function(e, t, n) {
+    1062: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -413,10 +413,10 @@ webpackJsonp([52], {
             l = (n.n(a), n(10)),
             r = n(2),
             o = n(3),
-            s = n(1376),
+            s = n(1379),
             d = (n.n(s), "view-all-button-selector")
     },
-    1067: function(e, t, n) {
+    1069: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -429,7 +429,7 @@ webpackJsonp([52], {
         }
         t.a = i
     },
-    1068: function(e, t, n) {
+    1070: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return h
@@ -441,9 +441,9 @@ webpackJsonp([52], {
             o = n(6),
             s = n(17),
             d = n(3),
-            c = n(1069),
-            u = (n.n(c), n(1070)),
-            m = (n.n(u), n(1071)),
+            c = n(1071),
+            u = (n.n(c), n(1072)),
+            m = (n.n(u), n(1073)),
             g = (n.n(m), function(e) {
                 return "https://api.twitch.tv/api/users/" + e + "/follows/games/follow"
             }),
@@ -597,7 +597,7 @@ webpackJsonp([52], {
             }(l.Component),
             h = v
     },
-    1069: function(e, t) {
+    1071: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -718,8 +718,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1070: function(e, t) {},
-    1071: function(e, t) {
+    1072: function(e, t) {},
+    1073: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -784,19 +784,19 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1093: function(e, t, n) {
+    1100: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(4),
             l = n(1),
             r = n(2),
-            o = n(916),
+            o = n(918),
             s = n(47),
             d = n(263),
-            c = n(1003),
+            c = n(1005),
             u = n(841),
             m = n(3),
-            g = (n(1094), function(e) {
+            g = (n(1101), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.sortChangeHandler = function(e) {
@@ -960,14 +960,14 @@ webpackJsonp([52], {
                     }, Object(r.d)("Popular", "VideoFilter")))))
                 }, t
             }(l.Component)),
-            p = n(1046);
+            p = n(1047);
         n.d(t, "a", function() {
             return g
         }), n.d(t, "b", function() {
             return p.a
         }), n.d(t, !1, function() {})
     },
-    1094: function(e, t) {},
+    1101: function(e, t) {},
     129: function(e, t, n) {
         "use strict";
 
@@ -984,7 +984,7 @@ webpackJsonp([52], {
         t.a = i, t.b = a;
         var s = "https://www.twitch.tv"
     },
-    1295: function(e, t, n) {
+    1302: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
@@ -993,11 +993,11 @@ webpackJsonp([52], {
             o = n(28),
             s = n(6),
             d = n(36),
-            c = n(1067),
-            u = n(1068),
+            c = n(1069),
+            u = n(1070),
             m = n(3),
-            g = n(1296),
-            p = (n(1297), function(e) {
+            g = n(1303),
+            p = (n(1304), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -1106,7 +1106,7 @@ webpackJsonp([52], {
             return p
         })
     },
-    1296: function(e, t) {
+    1303: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1257,10 +1257,10 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1297: function(e, t) {},
-    1376: function(e, t) {},
-    1895: function(e, t) {},
-    1896: function(e, t) {
+    1304: function(e, t) {},
+    1379: function(e, t) {},
+    1900: function(e, t) {},
+    1901: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1464,7 +1464,7 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1897: function(e, t) {
+    1902: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1635,8 +1635,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1898: function(e, t) {},
-    1899: function(e, t) {
+    1903: function(e, t) {},
+    1904: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1989,7 +1989,7 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1900: function(e, t, n) {
+    1905: function(e, t, n) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -2140,7 +2140,7 @@ webpackJsonp([52], {
             })
         }(n(904).definitions)), e.exports = i
     },
-    1901: function(e, t) {
+    1906: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2939,7 +2939,7 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1902: function(e, t) {
+    1907: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3249,7 +3249,7 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    2064: function(e, t, n) {
+    2070: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -3637,13 +3637,13 @@ webpackJsonp([52], {
         var u = n(7),
             m = n(9),
             g = n(48),
-            p = n(31),
+            p = n(32),
             v = n(17),
             h = n(0),
             f = n(1),
             k = n(22),
             w = n(2),
-            y = n(67),
+            y = n(66),
             S = n(5),
             b = n(6),
             _ = n(811),
@@ -3651,9 +3651,9 @@ webpackJsonp([52], {
             N = n(12),
             C = n(129),
             F = n(3),
-            L = n(1061),
-            U = n(1047),
-            A = (n(1895), n(1896)),
+            L = n(1062),
+            U = n(1048),
+            A = (n(1900), n(1901)),
             x = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -3703,7 +3703,7 @@ webpackJsonp([52], {
             }(f.Component),
             P = x,
             O = n(36),
-            T = n(1295),
+            T = n(1302),
             j = n(374),
             D = function(e) {
                 function t() {
@@ -3805,7 +3805,7 @@ webpackJsonp([52], {
                 }, t
             }(f.Component),
             V = Object(u.a)(null, l)(D),
-            I = n(1897),
+            I = n(1902),
             R = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -3861,9 +3861,9 @@ webpackJsonp([52], {
                 })], t)
             }(f.Component),
             H = R,
-            G = n(925),
+            G = n(908),
             M = n(49),
-            W = (n(1898), n(1899)),
+            W = (n(1903), n(1904)),
             z = 50,
             B = function(e) {
                 function t() {
@@ -3948,8 +3948,8 @@ webpackJsonp([52], {
             }(f.Component),
             q = B,
             $ = n(380),
-            Q = n(1093),
-            X = n(1900),
+            Q = n(1100),
+            X = n(1905),
             Y = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -3990,7 +3990,7 @@ webpackJsonp([52], {
                 }), Object(S.c)("SuggestedVideos")], t)
             }(f.Component),
             J = Y,
-            K = n(1901),
+            K = n(1906),
             Z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4063,7 +4063,7 @@ webpackJsonp([52], {
                 })], t)
             }(f.Component),
             ee = Z,
-            te = n(1902),
+            te = n(1907),
             ne = 50,
             ie = function(e) {
                 function t() {
@@ -4304,6 +4304,7 @@ webpackJsonp([52], {
             DirectoryCommunityDetails: "directory.community.details",
             DirectoryGames: "directory.games",
             DirectoryPopular: "directory.popular",
+            DirectoryPopularByLanguage: "directory.popular.language",
             DirectoryGameIndex: "directory.game.index",
             DirectoryGameClips: "directory.game.clips",
             DirectoryGameDetails: "directory.game.details",
@@ -4881,213 +4882,15 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    916: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return {
-                languagePreferences: Object(s.a)(e)
-            }
-        }
-
-        function a(e) {
-            return Object(r.bindActionCreators)({
-                updateLanguagePreferences: o.c,
-                clearLanguagePreferences: o.a
-            }, e)
-        }
-        var l = n(7),
-            r = n(9),
-            o = n(851),
-            s = n(877),
-            d = n(0),
-            c = n(1),
-            u = n(2),
-            m = n(28),
-            g = n(47),
-            p = n(837),
-            v = n(5),
-            h = n(3),
-            f = (n(917), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleLanguageChange = function(e) {
-                        var n = e.currentTarget,
-                            i = n.parentElement && n.parentElement.getAttribute("data-language-code");
-                        i && t.props.updateLanguagePreferences(i, n.checked)
-                    }, t.renderLanguageOption = function(e) {
-                        return c.createElement(h.U, {
-                            padding: {
-                                x: 1,
-                                y: .5
-                            },
-                            key: e.code
-                        }, c.createElement(h.E, {
-                            label: e.label,
-                            checked: t.props.languagePreferences.includes(e.code),
-                            "data-language-code": e.code,
-                            "data-a-target": "language-filter-" + e.code + "-checkbox",
-                            onChange: t.handleLanguageChange
-                        }))
-                    }, t
-                }
-                return d.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = this.props.languagePreferences.length;
-                    return c.createElement(h.U, {
-                        className: "language-select-menu"
-                    }, c.createElement(g.a, null, c.createElement(h.u, {
-                        "data-test-selector": "language-dropdown-button",
-                        "data-a-target": "language-filter-dropdown",
-                        dropdown: !0,
-                        type: h.z.Hollow
-                    }, c.createElement(h.U, {
-                        display: h.H.Flex
-                    }, Object(u.d)("Language", "LanguageSelectMenu"), c.createElement(h.U, {
-                        margin: {
-                            left: .5
-                        }
-                    }, 0 !== e && c.createElement(h.Z, {
-                        type: h._0.Brand,
-                        label: e.toString()
-                    })))), c.createElement(h.p, {
-                        direction: h.q.BottomLeft,
-                        noTail: !0,
-                        "data-a-target": "language-filter-balloon"
-                    }, c.createElement(m.b, {
-                        className: "language-select-menu__balloon"
-                    }, c.createElement(h.U, {
-                        padding: .5
-                    }, Object(p.b)().map(this.renderLanguageOption))), c.createElement(h._17, {
-                        background: h.m.Alt,
-                        borderTop: !0,
-                        className: "language-select-menu__footer"
-                    }, c.createElement(h.u, {
-                        type: h.z.Text,
-                        onClick: this.props.clearLanguagePreferences,
-                        "data-a-target": "language-clear-all"
-                    }, Object(u.d)("Clear all", "LanguageSelectMenu"))))))
-                }, t = d.__decorate([Object(v.c)("LanguageSelectMenu")], t)
-            }(c.Component)),
-            k = f,
-            w = Object(l.a)(i, a)(k);
-        n.d(t, "a", function() {
-            return w
-        })
-    },
-    917: function(e, t) {},
-    920: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return l
-        });
-        var i = n(1),
-            a = (n.n(i), n(3)),
-            l = function() {
-                return i.createElement(a.A, null, i.createElement(a.j, {
-                    ratio: a.k.Aspect16x9
-                }, i.createElement(a._1, null)), i.createElement(a.B, null, i.createElement(a.U, {
-                    display: a.H.Flex,
-                    margin: {
-                        bottom: 1
-                    }
-                }, i.createElement(a.U, {
-                    display: a.H.InlineBlock,
-                    margin: {
-                        top: 1,
-                        right: 1
-                    }
-                }, i.createElement(a._1, {
-                    width: 40,
-                    height: 56
-                })), i.createElement(a.U, {
-                    display: a.H.InlineBlock,
-                    margin: {
-                        top: 1
-                    }
-                }, i.createElement(a._21, null, i.createElement(a._1, {
-                    width: 150
-                })), i.createElement(a._21, {
-                    fontSize: a.L.Size7
-                }, i.createElement(a._1, {
-                    width: 100
-                }))))))
-            }
-    },
-    921: function(e, t, n) {
-        "use strict";
-        var i, a, l, r = n(4),
-            o = n(1),
-            s = n(2),
-            d = n(274),
-            c = n(3),
-            u = (n(1007), i = {}, i[d.a.Live] = "stream-type-indicator--live", i[d.a.Premiere] = "stream-type-indicator--premiere", i[d.a.Rerun] = "stream-type-indicator--rerun", i[d.a.WatchParty] = "stream-type-indicator--rerun", i),
-            m = (a = {}, a[d.a.Premiere] = c._9.VideoPremiere, a[d.a.Rerun] = c._9.VideoRerun, a[d.a.WatchParty] = c._9.VideoRerun, a),
-            g = (l = {}, l[d.a.Premiere] = c._10.Live, l[d.a.Rerun] = c._10.Inherit, l[d.a.WatchParty] = c._10.Inherit, l),
-            p = function(e) {
-                var t = {
-                    "stream-type-indicator": !0
-                };
-                t[u[e.type]] = !0;
-                var n;
-                n = e.type === d.a.Live ? o.createElement(c.U, {
-                    className: "stream-type-indicator__live-wrapper",
-                    display: c.H.Flex,
-                    alignItems: c.c.Center
-                }, o.createElement(c.V, {
-                    size: c.W.Small
-                })) : o.createElement(c._8, {
-                    asset: m[e.type],
-                    type: g[e.type],
-                    width: 14,
-                    height: 14
-                });
-                var i;
-                switch (e.type) {
-                    case d.a.Live:
-                        i = Object(s.d)("Live", "StreamTypeIndicator");
-                        break;
-                    case d.a.Premiere:
-                        i = Object(s.d)("Premiere", "StreamTypeIndicator");
-                        break;
-                    case d.a.Rerun:
-                    case d.a.WatchParty:
-                        i = Object(s.d)("Rerun", "StreamTypeIndicator");
-                        break;
-                    default:
-                        i = ""
-                }
-                return o.createElement(c._17, {
-                    className: r(t),
-                    background: c.m.Overlay,
-                    padding: {
-                        x: .5
-                    },
-                    borderRadius: c.s.Small,
-                    display: c.H.Flex
-                }, o.createElement(c.U, {
-                    display: c.H.Flex,
-                    margin: {
-                        right: .5
-                    }
-                }, n), o.createElement(c._21, {
-                    type: c._26.Span
-                }, i))
-            };
-        n.d(t, "a", function() {
-            return p
-        })
-    },
-    925: function(e, t, n) {
+    908: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
             l = n(10),
             r = n(2),
-            o = n(921),
+            o = n(909),
             s = n(3),
-            d = (n(1008), function(e) {
+            d = (n(1009), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.state = {
@@ -5202,6 +5005,204 @@ webpackJsonp([52], {
         }), n.d(t, "a", function() {
             return c
         })
+    },
+    909: function(e, t, n) {
+        "use strict";
+        var i, a, l, r = n(4),
+            o = n(1),
+            s = n(2),
+            d = n(274),
+            c = n(3),
+            u = (n(1008), i = {}, i[d.a.Live] = "stream-type-indicator--live", i[d.a.Premiere] = "stream-type-indicator--premiere", i[d.a.Rerun] = "stream-type-indicator--rerun", i[d.a.WatchParty] = "stream-type-indicator--rerun", i),
+            m = (a = {}, a[d.a.Premiere] = c._9.VideoPremiere, a[d.a.Rerun] = c._9.VideoRerun, a[d.a.WatchParty] = c._9.VideoRerun, a),
+            g = (l = {}, l[d.a.Premiere] = c._10.Live, l[d.a.Rerun] = c._10.Inherit, l[d.a.WatchParty] = c._10.Inherit, l),
+            p = function(e) {
+                var t = {
+                    "stream-type-indicator": !0
+                };
+                t[u[e.type]] = !0;
+                var n;
+                n = e.type === d.a.Live ? o.createElement(c.U, {
+                    className: "stream-type-indicator__live-wrapper",
+                    display: c.H.Flex,
+                    alignItems: c.c.Center
+                }, o.createElement(c.V, {
+                    size: c.W.Small
+                })) : o.createElement(c._8, {
+                    asset: m[e.type],
+                    type: g[e.type],
+                    width: 14,
+                    height: 14
+                });
+                var i;
+                switch (e.type) {
+                    case d.a.Live:
+                        i = Object(s.d)("Live", "StreamTypeIndicator");
+                        break;
+                    case d.a.Premiere:
+                        i = Object(s.d)("Premiere", "StreamTypeIndicator");
+                        break;
+                    case d.a.Rerun:
+                    case d.a.WatchParty:
+                        i = Object(s.d)("Rerun", "StreamTypeIndicator");
+                        break;
+                    default:
+                        i = ""
+                }
+                return o.createElement(c._17, {
+                    className: r(t),
+                    background: c.m.Overlay,
+                    padding: {
+                        x: .5
+                    },
+                    borderRadius: c.s.Small,
+                    display: c.H.Flex
+                }, o.createElement(c.U, {
+                    display: c.H.Flex,
+                    margin: {
+                        right: .5
+                    }
+                }, n), o.createElement(c._21, {
+                    type: c._26.Span
+                }, i))
+            };
+        n.d(t, "a", function() {
+            return p
+        })
+    },
+    918: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return {
+                languagePreferences: Object(s.a)(e)
+            }
+        }
+
+        function a(e) {
+            return Object(r.bindActionCreators)({
+                updateLanguagePreferences: o.c,
+                clearLanguagePreferences: o.a
+            }, e)
+        }
+        var l = n(7),
+            r = n(9),
+            o = n(851),
+            s = n(877),
+            d = n(0),
+            c = n(1),
+            u = n(2),
+            m = n(28),
+            g = n(47),
+            p = n(837),
+            v = n(5),
+            h = n(3),
+            f = (n(919), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleLanguageChange = function(e) {
+                        var n = e.currentTarget,
+                            i = n.parentElement && n.parentElement.getAttribute("data-language-code");
+                        i && t.props.updateLanguagePreferences(i, n.checked)
+                    }, t.renderLanguageOption = function(e) {
+                        return c.createElement(h.U, {
+                            padding: {
+                                x: 1,
+                                y: .5
+                            },
+                            key: e.code
+                        }, c.createElement(h.E, {
+                            label: e.label,
+                            checked: t.props.languagePreferences.includes(e.code),
+                            "data-language-code": e.code,
+                            "data-a-target": "language-filter-" + e.code + "-checkbox",
+                            onChange: t.handleLanguageChange
+                        }))
+                    }, t
+                }
+                return d.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    var e = this.props.languagePreferences.length;
+                    return c.createElement(h.U, {
+                        className: "language-select-menu"
+                    }, c.createElement(g.a, null, c.createElement(h.u, {
+                        "data-test-selector": "language-dropdown-button",
+                        "data-a-target": "language-filter-dropdown",
+                        dropdown: !0,
+                        type: h.z.Hollow
+                    }, c.createElement(h.U, {
+                        display: h.H.Flex
+                    }, Object(u.d)("Language", "LanguageSelectMenu"), c.createElement(h.U, {
+                        margin: {
+                            left: .5
+                        }
+                    }, 0 !== e && c.createElement(h.Z, {
+                        type: h._0.Brand,
+                        label: e.toString()
+                    })))), c.createElement(h.p, {
+                        direction: h.q.BottomLeft,
+                        noTail: !0,
+                        "data-a-target": "language-filter-balloon"
+                    }, c.createElement(m.b, {
+                        className: "language-select-menu__balloon"
+                    }, c.createElement(h.U, {
+                        padding: .5
+                    }, Object(p.b)().map(this.renderLanguageOption))), c.createElement(h._17, {
+                        background: h.m.Alt,
+                        borderTop: !0,
+                        className: "language-select-menu__footer"
+                    }, c.createElement(h.u, {
+                        type: h.z.Text,
+                        onClick: this.props.clearLanguagePreferences,
+                        "data-a-target": "language-clear-all"
+                    }, Object(u.d)("Clear all", "LanguageSelectMenu"))))))
+                }, t = d.__decorate([Object(v.c)("LanguageSelectMenu")], t)
+            }(c.Component)),
+            k = f,
+            w = Object(l.a)(i, a)(k);
+        n.d(t, "a", function() {
+            return w
+        })
+    },
+    919: function(e, t) {},
+    922: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return l
+        });
+        var i = n(1),
+            a = (n.n(i), n(3)),
+            l = function() {
+                return i.createElement(a.A, null, i.createElement(a.j, {
+                    ratio: a.k.Aspect16x9
+                }, i.createElement(a._1, null)), i.createElement(a.B, null, i.createElement(a.U, {
+                    display: a.H.Flex,
+                    margin: {
+                        bottom: 1
+                    }
+                }, i.createElement(a.U, {
+                    display: a.H.InlineBlock,
+                    margin: {
+                        top: 1,
+                        right: 1
+                    }
+                }, i.createElement(a._1, {
+                    width: 40,
+                    height: 56
+                })), i.createElement(a.U, {
+                    display: a.H.InlineBlock,
+                    margin: {
+                        top: 1
+                    }
+                }, i.createElement(a._21, null, i.createElement(a._1, {
+                    width: 150
+                })), i.createElement(a._21, {
+                    fontSize: a.L.Size7
+                }, i.createElement(a._1, {
+                    width: 100
+                }))))))
+            }
     }
 });
-//# sourceMappingURL=pages.following-88e4d13a0de1477e4e15e3ca5b5c7d60.js.map
+//# sourceMappingURL=pages.following-337c1e25e0f7e1f343f8568c072c940e.js.map

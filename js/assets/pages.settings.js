@@ -15,8 +15,8 @@ webpackJsonp([56], {
         t.a = i, t.b = a;
         var s = "https://www.twitch.tv"
     },
-    1921: function(e, t) {},
-    1922: function(e, t) {
+    1926: function(e, t) {},
+    1927: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -117,8 +117,8 @@ webpackJsonp([56], {
         };
         e.exports = n
     },
-    1923: function(e, t) {},
-    1924: function(e, t) {
+    1928: function(e, t) {},
+    1929: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -411,8 +411,8 @@ webpackJsonp([56], {
         };
         e.exports = n
     },
-    1925: function(e, t) {},
-    1926: function(e, t) {
+    1930: function(e, t) {},
+    1931: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -500,8 +500,8 @@ webpackJsonp([56], {
         };
         e.exports = n
     },
-    1927: function(e, t) {},
-    1928: function(e, t) {
+    1932: function(e, t) {},
+    1933: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -632,8 +632,8 @@ webpackJsonp([56], {
         };
         e.exports = n
     },
-    1929: function(e, t) {},
-    2069: function(e, t, n) {
+    1934: function(e, t) {},
+    2075: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -703,11 +703,11 @@ webpackJsonp([56], {
             h = n(808),
             b = n(12),
             v = n(9),
-            S = n(67),
+            S = n(66),
             y = n(6),
             k = n(21),
             N = n(10),
-            _ = (n(1921), function(e) {
+            _ = (n(1926), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -783,8 +783,8 @@ webpackJsonp([56], {
                     }, Object(r.d)("Saved", "AdvancedNotificationSettingsToggle"))))))
                 }, t
             }(o.Component)),
-            E = n(1922),
-            w = (n(1923), n(1924)),
+            E = n(1927),
+            w = (n(1928), n(1929)),
             x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1001,7 +1001,7 @@ webpackJsonp([56], {
             }), Object(y.a)(E, {
                 name: "setAdvancedNotificationSetting"
             }), Object(d.c)("AdvancedNotificationSettings"))(x),
-            C = (n(1925), function(e) {
+            C = (n(1930), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -1066,8 +1066,8 @@ webpackJsonp([56], {
                     }, Object(r.d)("Saved", "PlatformNotificationSettingsToggle")))))
                 }, t
             }(o.Component)),
-            P = n(1926),
-            j = (n(1927), n(1928));
+            P = n(1931),
+            j = (n(1932), n(1933));
         ! function(e) {
             e.onsite = "onsite", e.email = "email", e.push = "push"
         }(m || (m = {}));
@@ -1349,7 +1349,7 @@ webpackJsonp([56], {
             }), Object(y.a)(P, {
                 name: "setNotificationSetting"
             }))(U),
-            T = (n(1929), function(e) {
+            T = (n(1934), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1530,6 +1530,7 @@ webpackJsonp([56], {
             DirectoryCommunityDetails: "directory.community.details",
             DirectoryGames: "directory.games",
             DirectoryPopular: "directory.popular",
+            DirectoryPopularByLanguage: "directory.popular.language",
             DirectoryGameIndex: "directory.game.index",
             DirectoryGameClips: "directory.game.clips",
             DirectoryGameDetails: "directory.game.details",
@@ -1633,4 +1634,4 @@ webpackJsonp([56], {
         })
     }
 });
-//# sourceMappingURL=pages.settings-503bf2332ba559c592f9028bfb4d950c.js.map
+//# sourceMappingURL=pages.settings-305496223b01fcfa288299562d863600.js.map

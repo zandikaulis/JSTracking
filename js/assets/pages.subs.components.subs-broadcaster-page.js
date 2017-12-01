@@ -1,5 +1,5 @@
-webpackJsonp([67], {
-    1255: function(e, t, n) {
+webpackJsonp([68], {
+    1262: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -61,9 +61,9 @@ webpackJsonp([67], {
             a = n(2),
             o = n(12)
     },
-    2004: function(e, t) {},
-    2005: function(e, t) {},
-    2006: function(e, t) {
+    2009: function(e, t) {},
+    2010: function(e, t) {},
+    2011: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -224,8 +224,8 @@ webpackJsonp([67], {
         };
         e.exports = n
     },
-    2007: function(e, t) {},
-    2008: function(e, t) {
+    2012: function(e, t) {},
+    2013: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -465,7 +465,7 @@ webpackJsonp([67], {
         };
         e.exports = n
     },
-    2079: function(e, t, n) {
+    2085: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -474,7 +474,7 @@ webpackJsonp([67], {
             s = n(0),
             a = n(1),
             o = n(2),
-            c = n(67),
+            c = n(66),
             l = n(28),
             u = n(6),
             d = n(811),
@@ -512,8 +512,8 @@ webpackJsonp([67], {
                 }, t
             }(a.Component),
             f = y,
-            _ = n(1255);
-        n(2004);
+            _ = n(1262);
+        n(2009);
         ! function(e) {
             e[e.Tier1 = 0] = "Tier1", e[e.Tier2 = 1] = "Tier2", e[e.Tier3 = 2] = "Tier3"
         }(i || (i = {}));
@@ -706,7 +706,7 @@ webpackJsonp([67], {
                 }, t = s.__decorate([Object(h.c)("SubPlanTabs")], t)
             }(a.Component),
             T = S,
-            P = (n(2005), n(2006)),
+            P = (n(2010), n(2011)),
             E = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -792,7 +792,7 @@ webpackJsonp([67], {
                 })], t)
             }(a.Component),
             C = E,
-            N = (n(2007), function(e) {
+            N = (n(2012), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onSubClick = function(e) {
@@ -944,8 +944,8 @@ webpackJsonp([67], {
                 }, t = s.__decorate([Object(h.c)("SubsPlanTiers")], t)
             }(a.Component)),
             w = N,
-            x = n(2008),
-            D = function(e) {
+            D = n(2013),
+            x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1015,7 +1015,7 @@ webpackJsonp([67], {
                         channelId: this.props.data.user.id,
                         channelLogin: this.props.data.user.login
                     }))))
-                }, t = s.__decorate([Object(u.a)(x, {
+                }, t = s.__decorate([Object(u.a)(D, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1029,7 +1029,7 @@ webpackJsonp([67], {
                     location: m.PageviewLocation.SubsBroadcasterPage
                 })], t)
             }(a.Component),
-            F = D,
+            F = x,
             I = Object(r.a)()(F);
         n.d(t, "SubsBroadcasterPage", function() {
             return I
@@ -1059,6 +1059,7 @@ webpackJsonp([67], {
             DirectoryCommunityDetails: "directory.community.details",
             DirectoryGames: "directory.games",
             DirectoryPopular: "directory.popular",
+            DirectoryPopularByLanguage: "directory.popular.language",
             DirectoryGameIndex: "directory.game.index",
             DirectoryGameClips: "directory.game.clips",
             DirectoryGameDetails: "directory.game.details",
@@ -1162,4 +1163,4 @@ webpackJsonp([67], {
         })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-0718eb55c7cbbfd252e81ec92854bbf3.js.map
+//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-5c9a6850dc071d631d4e4210dc4b3d49.js.map

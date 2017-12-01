@@ -1,5 +1,5 @@
-webpackJsonp([58], {
-    2062: function(e, t, r) {
+webpackJsonp([59], {
+    2068: function(e, t, r) {
         "use strict";
 
         function i(e) {
@@ -110,13 +110,13 @@ webpackJsonp([58], {
                     })
                 }, t
             }(a.Component),
-            f = Object(o.compose)(Object(l.c)("EmailVerification", {
+            p = Object(o.compose)(Object(l.c)("EmailVerification", {
                 destination: d.a.EmailVerification
             }), Object(c.a)({
                 location: u.PageviewLocation.EmailVerification
             }))(m);
         r.d(t, "EmailVerificationPage", function() {
-            return f
+            return p
         })
     },
     808: function(e, t, r) {
@@ -143,6 +143,7 @@ webpackJsonp([58], {
             DirectoryCommunityDetails: "directory.community.details",
             DirectoryGames: "directory.games",
             DirectoryPopular: "directory.popular",
+            DirectoryPopularByLanguage: "directory.popular.language",
             DirectoryGameIndex: "directory.game.index",
             DirectoryGameClips: "directory.game.clips",
             DirectoryGameDetails: "directory.game.details",
@@ -377,4 +378,4 @@ webpackJsonp([58], {
         })
     }
 });
-//# sourceMappingURL=pages.email-verification-0c15e84e014f7a84d8043911b93f7ac4.js.map
+//# sourceMappingURL=pages.email-verification-a16cb30c93bebb78a21c52b7cf483edd.js.map
