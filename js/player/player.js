@@ -19,7 +19,7 @@
         };
         var r = {},
             i = {
-                3: 0
+                4: 0
             };
         return t.e = function(e) {
             function n() {
@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".79ce92986f054961a33e.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".8fc7151c2f3f65f3307f.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -161,9 +161,9 @@
             return c
         }), n.d(t, "h", function() {
             return l
-        }), n.d(t, "t", function() {
+        }), n.d(t, "u", function() {
             return d
-        }), n.d(t, "s", function() {
+        }), n.d(t, "t", function() {
             return f
         }), n.d(t, "b", function() {
             return p
@@ -179,15 +179,17 @@
             return g
         }), n.d(t, "d", function() {
             return b
-        }), n.d(t, "q", function() {
-            return _
-        }), n.d(t, "e", function() {
-            return w
-        }), n.d(t, "f", function() {
-            return k
         }), n.d(t, "p", function() {
+            return _
+        }), n.d(t, "q", function() {
+            return w
+        }), n.d(t, "e", function() {
+            return k
+        }), n.d(t, "f", function() {
             return E
-        }), t.r = r, t.j = i;
+        }), n.d(t, "r", function() {
+            return S
+        }), t.s = r, t.j = i;
         var a = n(165),
             o = "site",
             s = "site_mini",
@@ -204,9 +206,10 @@
             g = "imdb",
             b = "amazon_live",
             _ = "clips-viewing",
-            w = "amazon_vse_test",
-            k = [_, "clips-embed", "clips-editing"],
-            E = [o, s, u, c, l, d, f, p, h, m, v, y, g, b, _, "clips-embed", "clips-editing", w]
+            w = "clips-embed",
+            k = "amazon_vse_test",
+            E = [_, w, "clips-editing"],
+            S = [o, s, u, c, l, d, f, p, h, m, v, y, g, b, _, w, "clips-editing", k]
     }, function(e, t, n) {
         "use strict";
         n.d(t, "u", function() {
@@ -6638,7 +6641,7 @@
                         deviceId: t.deviceId
                     });
                 case f.e:
-                    var n = v()(h.p, t.playerType) ? t.playerType : e.playerType;
+                    var n = v()(h.r, t.playerType) ? t.playerType : e.playerType;
                     return s()({}, e, {
                         playerType: n
                     });
@@ -10688,7 +10691,7 @@
             m = n(6),
             v = n(9),
             y = n.n(v),
-            g = Object.freeze([m.a, m.e, m.i, m.d]),
+            g = Object.freeze([m.a, m.e, m.i, m.d, m.p, m.q]),
             b = Object.freeze(["misterrogers", "contv", "failarmy"]),
             _ = Object.freeze({
                 recordClip: function() {
@@ -15928,10 +15931,10 @@
                 reason_channelsub: Boolean(e.chansubToken) && e.hasAdFreeSubscription,
                 reason_channeladfree: e.adType === p.b && !e.prerollsEnabled || e.adType === p.c && !e.postrollsEnabled,
                 reason_frontpage: e.playerType === h.h,
-                reason_creative_player: e.playerType === h.s,
+                reason_creative_player: e.playerType === h.t,
                 reason_facebook: e.playerType === h.k,
                 reason_highlighter: e.playerType === h.i,
-                reason_dashboard: e.playerType === h.t,
+                reason_dashboard: e.playerType === h.u,
                 reason_mobile_web_upsell: Boolean(e.isMobileLocation) && e.platform === v.a,
                 reason_raid: e.adType === p.b && e.raid && "yes" === e.leviathanExpGroup,
                 reason_vod_midroll: e.contentType === m.a && e.vod.type === y.b && e.adType === p.d && e.requestType === g.b && !1 === e.vodMidrollBlacklisted && "no" !== e.citadelExpGroup,
@@ -21660,7 +21663,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.12.01-205636+c8ec807948d8c0a50cfdc86d6dd2339866eee8a8",
+                    app_version: "2017.12.01-215257+850ae0827d186d8ad4bf151a47dd6791643ea833",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -22662,7 +22665,7 @@
                 }, {
                     key: "updateHandlers",
                     value: function(e) {
-                        e.env.playerType === l.q ? this.keydownHandler = this.handleClipsViewingHotkeys : this.keydownHandler = this.handlePlayerHotkeys
+                        e.env.playerType === l.p ? this.keydownHandler = this.handleClipsViewingHotkeys : this.keydownHandler = this.handlePlayerHotkeys
                     }
                 }, {
                     key: "seekSeconds",
@@ -22740,7 +22743,7 @@
                                 break;
                             case "Escape":
                             case "Esc":
-                                t.getState().collection.currentView === m.a ? t.dispatch(n.i(f.c)()) : l.r() && t.getState().screenMode.isTheatreMode && t.dispatch(n.i(p.c)(!1));
+                                t.getState().collection.currentView === m.a ? t.dispatch(n.i(f.c)()) : l.s() && t.getState().screenMode.isTheatreMode && t.dispatch(n.i(p.c)(!1));
                                 break;
                             case "f":
                             case "F":
@@ -22875,7 +22878,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            _ = [o.t, o.h, o.s, o.i, o.e, o.d],
+            _ = [o.u, o.h, o.t, o.i, o.e, o.d],
             w = [152325025],
             k = function() {
                 function e(t) {
@@ -23145,7 +23148,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            p = [o.t, o.h, o.s, o.i],
+            p = [o.u, o.h, o.t, o.i],
             h = function() {
                 function e(t) {
                     r(this, e), this._store = t, this._unsubs = [], this._unsubs.push(n.i(c.a)(this._store, ["recommendations.videos"], this.onRecommendationsChange.bind(this))), this._unsubs.push(n.i(c.a)(this._store, ["playback.ended"], this.onEnded.bind(this))), this._unsubs.push(n.i(c.a)(this._store, ["playback.currentTime"], this.onCurrentTime.bind(this)))
@@ -23749,7 +23752,7 @@
             p = n(605),
             h = n(606),
             m = n(6),
-            v = Object.freeze([m.d, m.q]),
+            v = Object.freeze([m.d, m.p, m.q]),
             y = Object.freeze({
                 destroy: function() {}
             })
@@ -23905,288 +23908,6 @@
             };
         r.propTypes = f;
         var h = n.i(u.connect)(p)(r)
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e, t, n) {
-            return t in e ? Object.defineProperty(e, t, {
-                value: n,
-                enumerable: !0,
-                configurable: !0,
-                writable: !0
-            }) : e[t] = n, e
-        }
-
-        function i(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-        }
-        n.d(t, "a", function() {
-            return w
-        });
-        var a = n(28),
-            o = n.n(a),
-            s = n(210),
-            u = n.n(s),
-            c = n(21),
-            l = n.n(c),
-            d = n(27),
-            f = n(81),
-            p = n(13),
-            h = function() {
-                function e(e, t) {
-                    var n = [],
-                        r = !0,
-                        i = !1,
-                        a = void 0;
-                    try {
-                        for (var o, s = e[Symbol.iterator](); !(r = (o = s.next()).done) && (n.push(o.value), !t || n.length !== t); r = !0);
-                    } catch (e) {
-                        i = !0, a = e
-                    } finally {
-                        try {
-                            !r && s.return && s.return()
-                        } finally {
-                            if (i) throw a
-                        }
-                    }
-                    return n
-                }
-                return function(t, n) {
-                    if (Array.isArray(t)) return t;
-                    if (Symbol.iterator in Object(t)) return e(t, n);
-                    throw new TypeError("Invalid attempt to destructure non-iterable instance")
-                }
-            }(),
-            m = function() {
-                function e(e, t) {
-                    for (var n = 0; n < t.length; n++) {
-                        var r = t[n];
-                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
-                    }
-                }
-                return function(t, n, r) {
-                    return n && e(t.prototype, n), r && e(t, r), t
-                }
-            }(),
-            v = ["top", "bottom", "textAlign", "fontSize", "lineHeight", "display"],
-            y = /\r?\n|\r/g,
-            g = ["font", "fontOpacity", "alignment", "verticalPosition", "backgroundOpacity", "windowOpacity"],
-            b = ["fontColorName", "edge", "backgroundColorName", "windowColorName"],
-            _ = ["fontUnderline", "fontBold", "fontItalic"],
-            w = function() {
-                function e(t, n) {
-                    i(this, e), this._store = t, this._root = n, this._initDefaults(), this._initHandlers(), this.unsubscribe = this._subscribe(), this._initCustomCaptionsForm()
-                }
-                return m(e, [{
-                    key: "_initDefaults",
-                    value: function() {
-                        this.applyCCStyle()
-                    }
-                }, {
-                    key: "_initHandlers",
-                    value: function() {
-                        $(".js-cc-preset", this._root).on("click", this.selectPreset.bind(this)), $(".js-cc-modal-container", this._root).on("click", function(e) {
-                            e.target === this && $(this).attr("data-state", "closed")
-                        }), $(".js-cc-custom-modal-dismiss", this._root).on("click", function() {
-                            $(this).closest(".js-cc-modal-container").attr("data-state", "closed")
-                        }), $(".player-tabs__item", this._root).on("click", function(e) {
-                            $(".player-tabs__item--active").removeClass("player-tabs__item--active");
-                            var t = $(e.target).closest(".player-tabs__item");
-                            t.addClass("player-tabs__item--active");
-                            var n = t.attr("data-tab");
-                            t.closest(".js-cc-modal").attr("data-tab-selected", n)
-                        }), this.setCurrentPreset()
-                    }
-                }, {
-                    key: "_subscribe",
-                    value: function() {
-                        var e = this;
-                        return n.i(p.a)(this._store, ["captions"], function(t, n) {
-                            var r = t.captions,
-                                i = n.captions;
-                            r.enabled !== i.enabled && e.showCaption(r), r.data !== i.data && e.showCaption(r), r.preset !== i.preset && (e.setCurrentPreset(), e.setCurrentStyles()), r.preset === i.preset && r.style === i.style || e.applyCCStyle()
-                        })
-                    }
-                }, {
-                    key: "_captionsState",
-                    value: function() {
-                        return this._store.getState().captions
-                    }
-                }, {
-                    key: "_initCustomCaptionsForm",
-                    value: function() {
-                        var e = this,
-                            t = this._store.getState().captions.style;
-                        b.forEach(function(n) {
-                            e._setRadioAttribute(n, t)
-                        }), g.forEach(function(n) {
-                            e._setDropdownAttribute(n, t)
-                        }), _.forEach(function(n) {
-                            e._setCheckboxAttribute(n, t)
-                        }), $(".js-cc-modal", this._root).on("change", ".js-cc-dropdown", function(t) {
-                            var i = $(t.target);
-                            e._store.dispatch(n.i(d.i)("custom", r({}, i.attr("name"), i.val())))
-                        }), $(".js-cc-modal", this._root).on("click", ".js-cc-radio", function(t) {
-                            var i = $(t.target);
-                            e._store.dispatch(n.i(d.i)("custom", r({}, i.attr("name"), i.val())))
-                        }), $(".js-cc-modal", this._root).on("click", ".js-cc-checkbox", function(t) {
-                            var i = $(t.target),
-                                a = f.b["white-on-black"];
-                            e._store.dispatch(n.i(d.i)("custom", r({}, i.attr("name"), i.prop("checked") ? i.val() : a[i.attr("name")])))
-                        }), $(".js-cc-font-size", this._root).on("click", function(t) {
-                            var r = f.a[$(t.target).val()],
-                                i = e._store.getState().captions.style.fontSize,
-                                a = i + parseInt(r, 10);
-                            e._store.dispatch(n.i(d.i)("custom", {
-                                fontSize: a
-                            }))
-                        })
-                    }
-                }, {
-                    key: "_setDropdownAttribute",
-                    value: function(e, t) {
-                        $(".js-cc-dropdown", this._root).filter('[name="' + e + '"]').val(t[e])
-                    }
-                }, {
-                    key: "_setRadioAttribute",
-                    value: function(e, t) {
-                        $(".js-cc-radio", this._root).filter('[name="' + e + '"][value="' + t[e] + '"]').prop("checked", !0)
-                    }
-                }, {
-                    key: "_setCheckboxAttribute",
-                    value: function(e, t) {
-                        var n = $(".js-cc-checkbox", this._root).filter('[name="' + e + '"]'),
-                            r = t[e] === n.val();
-                        n.prop("checked", r)
-                    }
-                }, {
-                    key: "selectPreset",
-                    value: function(e) {
-                        var t = $(e.target).closest(".js-cc-preset").attr("data-preset");
-                        this._store.dispatch(n.i(d.i)(t, f.b[t]))
-                    }
-                }, {
-                    key: "setCurrentPreset",
-                    value: function() {
-                        var e = this._store.getState().captions.preset;
-                        $(".js-cc-preset", this._root).each(function(t, n) {
-                            var r = $(n).attr("data-preset") === e;
-                            $(n).toggleClass("js-cc-preset-selected", r)
-                        })
-                    }
-                }, {
-                    key: "setCurrentStyles",
-                    value: function() {
-                        var e = this,
-                            t = this._store.getState().captions.style;
-                        g.forEach(function(n) {
-                            e._setDropdownAttribute(n, t)
-                        }), b.forEach(function(n) {
-                            e._setRadioAttribute(n, t)
-                        }), _.forEach(function(n) {
-                            e._setCheckboxAttribute(n, t)
-                        })
-                    }
-                }, {
-                    key: "appendToDocumentFragment",
-                    value: function(e, t) {
-                        if (t && !(t.length < 1)) {
-                            var n = document.createElement("div");
-                            return n.innerText = t, n.className = "player-captions-row", e.appendChild(n), e
-                        }
-                    }
-                }, {
-                    key: "applyCCStyle",
-                    value: function() {
-                        var e = this._store.getState().captions.style,
-                            t = e.fontColorName || "white",
-                            n = e.fontOpacity || "solid",
-                            r = e.backgroundColorName || "black",
-                            i = e.backgroundOpacity || "solid",
-                            a = f.c(f.d[t].fontColorValue, f.e[n].opacityValue),
-                            s = {
-                                color: a,
-                                animation: f.e[n].animation
-                            },
-                            c = f.c(f.f[r].backgroundColorValue, f.e[i].opacityValue),
-                            d = o()({}, e, s, f.g[e.font], f.h[e.edge], f.i[e.verticalPosition], f.j[e.fontUnderline], f.k[e.fontItalic], f.l[e.fontBold], f.m[e.alignment], {
-                                backgroundColor: c
-                            }),
-                            p = u()(d, v);
-                        $(".js-player-captions", this._root).css(p);
-                        var h = l()(d, v);
-                        $(".js-player-captions-container").css(h);
-                        var m = f.c(f.f[e.windowColorName].backgroundColorValue, f.e[e.windowOpacity].opacityValue);
-                        $(".js-player-captions-window").css({
-                            backgroundColor: m
-                        }), this.setFontSizeStatus(e.fontSize)
-                    }
-                }, {
-                    key: "clearCaptions",
-                    value: function() {
-                        $(".js-player-captions", this._root).empty()
-                    }
-                }, {
-                    key: "findCaptions",
-                    value: function(e) {
-                        var t = e.data,
-                            n = e.text,
-                            r = n && n.length > 0 ? n.trim() : null;
-                        return r || (Array.isArray(t) && t.length > 0 ? t : null)
-                    }
-                }, {
-                    key: "getCaptionsFromData",
-                    value: function() {
-                        var e = this,
-                            t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-                            n = document.createDocumentFragment(),
-                            r = function(e, t) {
-                                var n = t.char;
-                                0 === t.col && e.push("");
-                                var r = h(n, 1),
-                                    i = r[0];
-                                return e[e.length - 1] += i || "", e
-                            };
-                        return t.reduce(r, []).forEach(function(t) {
-                            return e.appendToDocumentFragment(n, t)
-                        }), n
-                    }
-                }, {
-                    key: "getCaptionsFromText",
-                    value: function(e) {
-                        var t = this,
-                            n = document.createDocumentFragment();
-                        return String(e).split(y).forEach(function(e) {
-                            return t.appendToDocumentFragment(n, e)
-                        }), n
-                    }
-                }, {
-                    key: "setFontSizeStatus",
-                    value: function(e) {
-                        var t = $(".js-cc-font-size", this._root);
-                        t.filter('[value="increment"]').prop("disabled", e === f.a.max), t.filter('[value="decrement"]').prop("disabled", e === f.a.min)
-                    }
-                }, {
-                    key: "showCaption",
-                    value: function(e) {
-                        var t = e.available,
-                            n = e.enabled,
-                            r = e.data,
-                            i = r ? this.findCaptions(r) : null,
-                            a = t && n && i && i.length > 0;
-                        if (this.clearCaptions(), a) {
-                            var o = $(".js-player-captions", this._root),
-                                s = Array.isArray(i) ? this.getCaptionsFromData(i) : this.getCaptionsFromText(i);
-                            o.append(s)
-                        }
-                    }
-                }, {
-                    key: "destroy",
-                    value: function() {
-                        $(this._root).off("click"), this.unsubscribe()
-                    }
-                }]), e
-            }()
     }, function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -24633,6 +24354,288 @@
             }(o.a)
     }, function(e, t) {
         e.exports = '<div class="player-initializing player-center-content">\n    <div class="pl-loading-spinner"></div>\n</div>\n<div id="player-mature" />\n<div id="player-age-gate-overlay" />\n\n<div id="js-cc-panel"></div>\n\n<div class="player-offline-banner js-offline-banner">\n    <img class="js-meta-offline" />\n</div>\n\n<div id="js-ad-overlay" />\n<div id="js-player-post-vod-recommendations-overlay" />\n<div id="js-player-offline-recommendations-overlay" />\n\n<div class="player-video-background-banner js-video-background-banner">\n    <img class="js-meta-video-background" />\n</div>\n\n<div id="js-loading-overlay" />\n<div id="player-chromecast" />\n\n<div class="player-overlay player-fullscreen-overlay js-control-fullscreen-overlay">\n</div>\n\n<div class="player-overlay player-extensions" id="js-player-extension-root">\n</div>\n\n<div id="js-player-extension-confirmation-root" />\n\n<div class="player-captions-container js-player-captions-container">\n    <div class="player-captions-window js-player-captions-window">\n        <div class="player-captions js-player-captions"></div>\n    </div>\n</div>\n\n<div id="js-paused-overlay" />\n<div id="player-subscribe-overlay" />\n\n<div id="empty-collection-overlay" />\n\n<div id="top-bar" />\n\n<div id="js-collection-sidebar"></div>\n<div id="js-follow-panel"></div>\n<div id="js-dead-ltv-overlay" />\n\n<div id="storm-warning-overlay" />\n\n<div id="error-overlay" />\n\n<div id="stream-status" />\n\n<div id="js-controls-bottom" />\n<form class="js-create-clip-form" method="post" action="" target="">\n    <input class="js-create-clip-player-backend-type" type="hidden" name="player_backend_type" value="" />\n    <input class="js-create-clip-channel" type="hidden" name="channel" value="" />\n    <input class="js-create-clip-offset" type="hidden" name="offset" value="" />\n    <input class="js-create-clip-broadcast_id" type="hidden" name="broadcast_id" value="" />\n    <input class="js-create-clip-vod_id" type="hidden" name="vod_id" value="" />\n    <input class="js-create-clip-play_session_id" type="hidden" name="play_session_id" value="" />\n</form>\n\n<div id="js-player-alert-container" />\n\n<div id="stats" />\n\n<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" style="width:0;height:0;visibility:hidden;display:block;">\n    <symbol viewBox="0 0 30 30" id="icon_play"><path clip-rule="evenodd" d="M10,7l12,8l-12,8V7z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_pause"><path clip-rule="evenodd" d="M9,22h4V8H9V22z M17,8v14h4V8H17z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_volumefull"><path clip-rule="evenodd" d="M22,21.5v-13L23,8v14L22,21.5z M18,10.5l1-0.5v10l-1-0.5V10.5z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_volumemute"><path clip-rule="evenodd" d="M23,18L23,18h-0.7L20,15.7L17.7,18H17l0,0v-0.7l2.3-2.3L17,12.7V12l0,0h0.7l2.3,2.3l2.3-2.3H23l0,0v0.7L20.7,15l2.3,2.3V18z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_fullscreen"><path clip-rule="evenodd" d="M7,7 L15.2,7 L12.8,9.4 L15.8,12.4 L12.4,15.8 L9.4,12.8 L7,15.2 L7,7 Z M23,23 L14.8,23 L17.2,20.6 L14.2,17.6 L17.6,14.2 L20.6,17.2 L23,14.8 L23,23 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_unfullscreen"><path clip-rule="evenodd" d="M15,15 L23.2,15 L20.8,17.4 L23.8,20.4 L20.4,23.8 L17.4,20.8 L15,23.2 L15,15 L15,15 Z M15,15 L6.8,15 L9.2,12.6 L6.2,9.6 L9.6,6.2 L12.6,9.2 L15,6.8 L15,15 L15,15 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_settings"><path clip-rule="evenodd" d="M13.3589744,7 L16.6410256,7 L18.0769231,9.8 L21.3589744,9.8 L23,12.2 L21.3589744,15 L23,17.8 L21.3589744,20.2 L18.0769231,20.2 L16.6410256,23 L13.3589744,23 L11.9230769,20.2 L8.64102564,20.2 L7,17.8 L8.64102564,15 L7,12.2 L8.64102564,9.8 L11.9230769,9.8 L13.3589744,7 Z M15,17.8 C16.5860485,17.8 17.8717949,16.5463973 17.8717949,15 C17.8717949,13.4536027 16.5860485,12.2 15,12.2 C13.4139515,12.2 12.1282051,13.4536027 12.1282051,15 C12.1282051,16.5463973 13.4139515,17.8 15,17.8 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_theatre"><path d="M6 21h11V9H6v12zM19 9v12h5V9h-5z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_theatre_deactivate"><path d="M6 9h11v12H6V9zm2 2h9v8H8v-8zm9-2h7v12h-7V9zm2 2h3v8h-3v-8z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 63 30" id="icon_twitch"><path clip-rule="evenodd" d="M55,19 L52,19 L52,13 L49,13 L49,19 L46,19 L46,8 L49,8 L49,10 L53,10 L55,12 L55,19 L55,19 Z M45,13 L41,13 L41,16 L45,16 L45,19 L40,19 L38,17 L38,12 L40,10 L45,10 L45,13 L45,13 Z M37,13 L34,13 L34,16 L37,16 L37,19 L33,19 L31,17 L31,8 L34,8 L34,10 L37,10 L37,13 L37,13 Z M27,8 L30,8 L30,9 L27,9 L27,8 Z M27,10 L30,10 L30,19 L27,19 L27,10 Z M26,17 L24,19 L15,19 L15,10 L18,10 L18,16 L19,16 L19,10 L22,10 L22,16 L23,16 L23,10 L26,10 L26,17 L26,17 Z M14,13 L11,13 L11,16 L14,16 L14,19 L10,19 L8,17 L8,8 L11,8 L11,10 L14,10 L14,13 L14,13 Z M53.5,9 L50,9 L50,7 L45.5,7 L43,9 L39.5,9 L38,10.5 L38,9 L35,9 L35,7 L26,7 L26,9 L15,9 L12,7 L7,7 L7,17.5 L9.5,20.125 L14,23 L18,23 L18,22.25 L19.5,23 L25.5,23 L26.5,21.5 L27,23 L31,23 L31,21.5 L32.5,23 L37,23 L37.25,21.5 L38.5,23 L43.5,23 L45,21.5 L45,23 L47.5,23 L49,21.5 L49,23 L52.5,23 L56,19.5 L56,11.5 L53.5,9 L53.5,9 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close"><path clip-rule="evenodd" d="M15.1035534,15.4571068 L11.5303301,19.0303301 L11.3535534,19.2071068 L11,18.8535534 L11.1767767,18.6767767 L14.75,15.1035534 L11.1767767,11.5303301 L11,11.3535534 L11.3535534,11 L11.5303301,11.1767767 L15.1035534,14.75 L18.6767767,11.1767767 L18.8535534,11 L19.2071068,11.3535534 L19.0303301,11.5303301 L15.4571068,15.1035534 L19.0303301,18.6767767 L19.2071068,18.8535534 L18.8535534,19.2071068 L18.6767767,19.0303301 L15.1035534,15.4571068 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close_md"><path clip-rule="evenodd" d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p1"><path fill-rule="evenodd" clip-rule="evenodd" d="M15,22c0-0.7-0.1-1.4-0.2-2H22V10H8v3.2C7.4,13.1,6.7,13,6,13V8h18v14H15z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p2"><path fill-rule="evenodd" clip-rule="evenodd" d="M10,13.9V12h10v6h-5.9C13.2,16.2,11.8,14.8,10,13.9z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p3"><path fill-rule="evenodd" clip-rule="evenodd" d="M13,22h-1c0-3.3-2.7-6-6-6v-1C9.9,15,13,18.1,13,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p4"><path fill-rule="evenodd" clip-rule="evenodd" d="M10,22H9c0-1.7-1.3-3-3-3v-1C8.2,18,10,19.8,10,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p5"><path fill-rule="evenodd" clip-rule="evenodd" d="M7,22H6v-1C6.6,21,7,21.4,7,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_clips"><path d="M14.802 7.804l-3.83 1.026 2.928 2.321 3.83-1.026-2.928-2.321zm2.895-.776l3.981-1.067.777 2.898-1.83.49-2.928-2.321zM7.969 9.635l-1.745.467L7 13l3.898-1.044-2.929-2.321zM7 13h16v9H7v-9zm1.969 3h2.785l2.228-3h-2.785l-2.228 3zm7.018 0h2.785L21 13h-2.785l-2.228 3z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 13 18" id="icon_clips--bday"><path d="M6.505 7.61l2.41 2.33H4.53l.621-2.174-.552-.81L1.43 8.53l1.77-2.803L.266 4.184l3.531-.22.234-3.118 1.761 2.583L8.96 1.854 7.19 4.658 10.124 6.2l-3.53.22-.09 1.189zm6.546 6.33H3.385l.625-2.182h6.785l2.256 2.182zm-3.042 1.818l-7.737 2.073.593-2.073h7.144z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_cc_on"><path fill-rule="evenodd" clip-rule="evenodd" d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_cc_off"><path fill-rule="evenodd" clip-rule="evenodd" d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M24,8 L24,22 L6,22 L6,8 L24,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close_modal"><path clip-rule="evenodd" d="M13.657 3.757l-4.243 4.243 4.243 4.242-1.415 1.415-4.242-4.243-4.243 4.243-1.414-1.415 4.243-4.242-4.243-4.243 1.414-1.414 4.243 4.243 4.242-4.243 1.415 1.414z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 14 14" id="icon_arrow"><path d="M6.46765898,5.00010938 L6.46755335,5 L3.08055618,8.27078515 C2.97320936,8.37444877 2.97610632,8.52662201 3.07163118,8.6255409 L3.47144895,9.03956433 C3.56460436,9.13602957 3.72584608,9.14003286 3.82630008,9.04302556 L6.46765898,6.49229492 L9.10901788,9.04302556 C9.20947188,9.14003286 9.3707136,9.13602957 9.46386901,9.03956433 L9.86368678,8.6255409 C9.95921164,8.52662201 9.9621086,8.37444877 9.85476178,8.27078515 L6.46776461,5 L6.46765898,5.00010938 Z" transform="translate(6.467659, 7.056937) scale(-1, 1) rotate(-270.000000) translate(-6.467659, -7.056937) "></path></symbol>\n    <symbol viewBox="0 0 98 86" id="age-gate-icon-21"><path d="M24 8h50v10h12V8h10a2 2 0 0 1 2 2v74a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h10v10h12V8zm52-8h8v16h-8V0zM14 0h8v16h-8V0zm13.638 33.726c2.978-1.237 5.656-1.856 8.032-1.856 3.076 0 5.55.83 7.422 2.49 1.872 1.66 2.807 3.817 2.807 6.47 0 2.083-.52 3.87-1.562 5.359-1.042 1.49-3.027 3.455-5.957 5.896-2.1 1.742-3.414 3.02-3.943 3.833-.529.814-.826 1.782-.891 2.905h12.89V65h-20.36v-3.906c0-3.142.487-5.587 1.464-7.337s3.15-4.04 6.519-6.872c1.595-1.351 2.632-2.364 3.112-3.04.48-.675.72-1.38.72-2.112 0-.96-.374-1.77-1.122-2.429-.75-.659-1.734-.989-2.955-.989-1.79 0-3.849.863-6.176 2.588v-7.177zm32.592-1.319h6.421V65h-7.446V44.272h-5.127v-5.615h1.196c1.563 0 2.78-.431 3.65-1.294.871-.862 1.306-2.148 1.306-3.857v-1.099z" fill="#F9F7FC" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 98 86" id="age-gate-icon-19"><path d="M24 8h50v10h12V8h10a2 2 0 0 1 2 2v74a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h10v10h12V8zm52-8h8v16h-8V0zM14 0h8v16h-8V0zm18.718 32.407h6.42V65h-7.446V44.272h-5.127v-5.615h1.197c1.562 0 2.779-.431 3.65-1.294.87-.862 1.306-2.148 1.306-3.857v-1.099zm29.614 18.994c-.911 1.058-1.827 1.856-2.747 2.393-.92.537-1.843.806-2.77.806-2.182 0-4.09-1.034-5.726-3.101-1.635-2.067-2.453-4.622-2.453-7.666 0-3.32.984-6.144 2.954-8.472 1.97-2.327 4.419-3.49 7.348-3.49 3.337 0 6.063 1.496 8.18 4.491 2.115 2.995 3.173 7.137 3.173 12.427 0 2.962-.468 5.717-1.404 8.264-.936 2.547-2.409 4.598-4.419 6.153-2.01 1.554-4.423 2.331-7.239 2.331-2.001 0-4.174-.48-6.518-1.44v-7.202c2.132 1.464 3.988 2.197 5.566 2.197 1.71 0 3.068-.643 4.077-1.929 1.01-1.286 1.669-3.206 1.978-5.762zm0-6.933c-.163-1.937-.541-3.443-1.135-4.517-.594-1.074-1.29-1.611-2.088-1.611-.813 0-1.473.476-1.977 1.428-.505.952-.757 2.128-.757 3.528 0 1.383.236 2.494.708 3.332.472.839 1.099 1.258 1.88 1.258.553 0 1.11-.285 1.672-.855.562-.57 1.127-1.424 1.697-2.563z" fill="#F9F7FC" fill-rule="evenodd"/></symbol>\n    <symbol id="age-gate-fail-icon" viewBox="0 0 92 81"><path d="M0 75.6l3.067-5.4L9.2 59.4l12.267-21.6 12.266-21.6 6.134-10.8L42.933 0h6.134l3.066 5.4 6.134 10.8 12.266 21.6L82.8 59.4l6.133 10.8L92 75.6 89.06 81H3.44L0 75.6zM40 27h12v13l-3 19h-6l-3-19V27zm1 34h10v10H41V61z" fill="#F9F7FC" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 19 19" id="icon_open_collection"><path fill-rule="evenodd" d="M0,6 L19,6 L19,19 L0,19 L0,6 Z M12.25,12.5 L7,9 L7,16 L12.25,12.5 Z M2,3 L17,3 L17,5 L2,5 L2,3 Z M4,0 L15,0 L15,2 L4,2 L4,0 Z"/></symbol>\n    <symbol id=\'icon_pl-followcheck\' viewBox=\'0 0 16 16\'><path clip-rule=\'evenodd\' d=\'M6.5,12.75L2,8.25l2-2l2.5,2.5l5.5-5.5l2,2L6.5,12.75z\' fill-rule=\'evenodd\'></symbol>\n    <symbol viewBox="0 0 30 30" id="pl-icon_close"><path clip-rule="evenodd" d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z"/></symbol>\n    <symbol viewBox="0 0 14 12" id="pl-icon_vod"><path d="M0 12h14V0H0v12zm4-3V3l7 3-7 3z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 16 3" id="icon_more_info"><path d="M15 1.5c0 .389-.139.736-.417 1.042-.277.305-.639.458-1.083.458-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C12.694.153 13.056 0 13.5 0c.444 0 .806.153 1.083.458.278.306.417.653.417 1.042zm-6 0c0 .389-.139.736-.417 1.042C8.306 2.847 7.944 3 7.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C6.694.153 7.056 0 7.5 0c.444 0 .806.153 1.083.458C8.861.764 9 1.111 9 1.5zm-6 0c0 .389-.139.736-.417 1.042C2.306 2.847 1.944 3 1.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C.694.153 1.056 0 1.5 0c.444 0 .806.153 1.083.458C2.861.764 3 1.111 3 1.5z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_grant_permissions"><g fill-rule="evenodd"><path d="M16 5h-3v1.994L11.91 8H16v3l6-4.5L16 2v3z"/><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/></g></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_revoke_permissions"><g fill-rule="evenodd"><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill="currentColor" d="M17.013 5.34l-2.37-2.37-1.624 1.624 2.37 2.37-2.37 2.37 1.624 1.624 2.37-2.37 2.37 2.37 1.624-1.624-2.37-2.37 2.37-2.37-1.624-1.624-2.37 2.37z"/></g></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_approved_permissions"><g fill-rule="evenodd"><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill="currentColor" fill-rule="nonzero" d="M20.356 3L22 4.618 15.513 11 12 7.543l1.644-1.617 1.87 1.839z"/></g></symbol>\n    <symbol viewBox="0 0 16 16" id="icon_report_flag"><path clip-rule="evenodd" d="M3,14 L1,14 L1,2 L3,2 L3,14 L3,14 Z M4,2 L11,2 L11,4 L15,4 L15,11 L8,11 L8,9 L4,9 L4,2 L4,2 Z"></path></symbol>\n    <symbol viewBox="0 0 12 12" height=\'12px\' id="icon_offline"><path clip-rule="evenodd" d="M6,0 C-1.7,0, -1.7,12, 6,12 C13.7,12, 13.7,0, 6,0" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 12 12" height=\'12px\' id="icon_live"><path clip-rule="evenodd" d="M6,0 C-1.7,0, -1.7,12, 6,12 C13.7,12, 13.7,0, 6,0" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 12 12" height=\'12px\' id="icon_vodcast"><path clip-rule="evenodd" d="M6,0 C-1.7,0, -1.7,12, 6,12 C13.7,12, 13.7,0, 6,0" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 12 12" height=\'12px\' id="icon_premiere">\n        <path d="M6,1.2A4.8,4.8,0,1,1,1.2,6,4.8,4.8,0,0,1,6,1.2M6,0a6,6,0,1,0,6,6A6,6,0,0,0,6,0Z" /><polygon id="Path" points="4.5 9.3 4.5 2.7 9.5 6 4.5 9.3" />\n    </symbol>\n    <symbol viewBox="0 0 12 12" height=\'12px\' id="icon_rerun">\n        <path d="M5.9,11.7a5.7,5.7,0,1,1,4-9.7.7.7,0,1,1-1,1A4.2,4.2,0,1,0,8.9,9a.7.7,0,1,1,1,1A5.6,5.6,0,0,1,5.9,11.7Z" /><polygon points="12 5 7 5 12 0 12 5" />\n    </symbol>\n    <symbol id="icon_heart" height=\'16px\' version=\'1.1\' viewBox=\'0 0 16 16\' width=\'16px\' x=\'0px\' y=\'0px\'>\n      <path clip-rule=\'evenodd\' d=\'M8,14L1,7V4l2-2h3l2,2l2-2h3l2,2v3L8,14z\' fill-rule=\'evenodd\'></path>\n    </symbol>\n    <symbol id=\'icon_unheart\' height=\'16px\' version=\'1.1\' viewBox=\'0 0 16 16\' width=\'16px\' x=\'0px\' y=\'0px\'>\n      <path clip-rule=\'evenodd\' d=\'M1,9V7h14v2H1z M1,4l2-2h3l2,2l2-2h3l2,2v2H1V4z M8,14l-4.667-4h9.333L8,14z\' fill-rule=\'evenodd\'></path>\n    </symbol>\n    <symbol viewBox="0 0 30 30" id="icon_extensions"><path d="M20 17.113V22a1 1 0 0 1-1 1h-4.887c.257-1.051.87-1.404.887-1.917C15.025 19.6 14.006 19 13 19c-1.004 0-2.055.6-1.998 2.083.037.483.642.854.894 1.917H8a1 1 0 0 1-1-1v-4.887c1.051.257 1.404.87 1.917.887C10.4 18.025 11 17.006 11 16c0-1.004-.6-2.055-2.083-1.998-.483.037-.854.642-1.917.894V11a1 1 0 0 1 1-1h3.896c-.252-1.063-.857-1.434-.894-1.917C10.945 6.6 11.996 6 13 6c1.006 0 2.025.599 2 2.083-.016.513-.63.866-.887 1.917H19a1 1 0 0 1 1 1v3.896c1.063-.252 1.434-.857 1.917-.894C23.4 13.945 24 14.996 24 16c0 1.006-.599 2.025-2.083 2-.513-.016-.866-.63-1.917-.887z" fill-rule="evenodd"/></symbol>\n</svg>\n'
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e, t, n) {
+            return t in e ? Object.defineProperty(e, t, {
+                value: n,
+                enumerable: !0,
+                configurable: !0,
+                writable: !0
+            }) : e[t] = n, e
+        }
+
+        function i(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+        n.d(t, "a", function() {
+            return w
+        });
+        var a = n(28),
+            o = n.n(a),
+            s = n(210),
+            u = n.n(s),
+            c = n(21),
+            l = n.n(c),
+            d = n(27),
+            f = n(81),
+            p = n(13),
+            h = function() {
+                function e(e, t) {
+                    var n = [],
+                        r = !0,
+                        i = !1,
+                        a = void 0;
+                    try {
+                        for (var o, s = e[Symbol.iterator](); !(r = (o = s.next()).done) && (n.push(o.value), !t || n.length !== t); r = !0);
+                    } catch (e) {
+                        i = !0, a = e
+                    } finally {
+                        try {
+                            !r && s.return && s.return()
+                        } finally {
+                            if (i) throw a
+                        }
+                    }
+                    return n
+                }
+                return function(t, n) {
+                    if (Array.isArray(t)) return t;
+                    if (Symbol.iterator in Object(t)) return e(t, n);
+                    throw new TypeError("Invalid attempt to destructure non-iterable instance")
+                }
+            }(),
+            m = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var r = t[n];
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                    }
+                }
+                return function(t, n, r) {
+                    return n && e(t.prototype, n), r && e(t, r), t
+                }
+            }(),
+            v = ["top", "bottom", "textAlign", "fontSize", "lineHeight", "display"],
+            y = /\r?\n|\r/g,
+            g = ["font", "fontOpacity", "alignment", "verticalPosition", "backgroundOpacity", "windowOpacity"],
+            b = ["fontColorName", "edge", "backgroundColorName", "windowColorName"],
+            _ = ["fontUnderline", "fontBold", "fontItalic"],
+            w = function() {
+                function e(t, n) {
+                    i(this, e), this._store = t, this._root = n, this._initDefaults(), this._initHandlers(), this.unsubscribe = this._subscribe(), this._initCustomCaptionsForm()
+                }
+                return m(e, [{
+                    key: "_initDefaults",
+                    value: function() {
+                        this.applyCCStyle()
+                    }
+                }, {
+                    key: "_initHandlers",
+                    value: function() {
+                        $(".js-cc-preset", this._root).on("click", this.selectPreset.bind(this)), $(".js-cc-modal-container", this._root).on("click", function(e) {
+                            e.target === this && $(this).attr("data-state", "closed")
+                        }), $(".js-cc-custom-modal-dismiss", this._root).on("click", function() {
+                            $(this).closest(".js-cc-modal-container").attr("data-state", "closed")
+                        }), $(".player-tabs__item", this._root).on("click", function(e) {
+                            $(".player-tabs__item--active").removeClass("player-tabs__item--active");
+                            var t = $(e.target).closest(".player-tabs__item");
+                            t.addClass("player-tabs__item--active");
+                            var n = t.attr("data-tab");
+                            t.closest(".js-cc-modal").attr("data-tab-selected", n)
+                        }), this.setCurrentPreset()
+                    }
+                }, {
+                    key: "_subscribe",
+                    value: function() {
+                        var e = this;
+                        return n.i(p.a)(this._store, ["captions"], function(t, n) {
+                            var r = t.captions,
+                                i = n.captions;
+                            r.enabled !== i.enabled && e.showCaption(r), r.data !== i.data && e.showCaption(r), r.preset !== i.preset && (e.setCurrentPreset(), e.setCurrentStyles()), r.preset === i.preset && r.style === i.style || e.applyCCStyle()
+                        })
+                    }
+                }, {
+                    key: "_captionsState",
+                    value: function() {
+                        return this._store.getState().captions
+                    }
+                }, {
+                    key: "_initCustomCaptionsForm",
+                    value: function() {
+                        var e = this,
+                            t = this._store.getState().captions.style;
+                        b.forEach(function(n) {
+                            e._setRadioAttribute(n, t)
+                        }), g.forEach(function(n) {
+                            e._setDropdownAttribute(n, t)
+                        }), _.forEach(function(n) {
+                            e._setCheckboxAttribute(n, t)
+                        }), $(".js-cc-modal", this._root).on("change", ".js-cc-dropdown", function(t) {
+                            var i = $(t.target);
+                            e._store.dispatch(n.i(d.i)("custom", r({}, i.attr("name"), i.val())))
+                        }), $(".js-cc-modal", this._root).on("click", ".js-cc-radio", function(t) {
+                            var i = $(t.target);
+                            e._store.dispatch(n.i(d.i)("custom", r({}, i.attr("name"), i.val())))
+                        }), $(".js-cc-modal", this._root).on("click", ".js-cc-checkbox", function(t) {
+                            var i = $(t.target),
+                                a = f.b["white-on-black"];
+                            e._store.dispatch(n.i(d.i)("custom", r({}, i.attr("name"), i.prop("checked") ? i.val() : a[i.attr("name")])))
+                        }), $(".js-cc-font-size", this._root).on("click", function(t) {
+                            var r = f.a[$(t.target).val()],
+                                i = e._store.getState().captions.style.fontSize,
+                                a = i + parseInt(r, 10);
+                            e._store.dispatch(n.i(d.i)("custom", {
+                                fontSize: a
+                            }))
+                        })
+                    }
+                }, {
+                    key: "_setDropdownAttribute",
+                    value: function(e, t) {
+                        $(".js-cc-dropdown", this._root).filter('[name="' + e + '"]').val(t[e])
+                    }
+                }, {
+                    key: "_setRadioAttribute",
+                    value: function(e, t) {
+                        $(".js-cc-radio", this._root).filter('[name="' + e + '"][value="' + t[e] + '"]').prop("checked", !0)
+                    }
+                }, {
+                    key: "_setCheckboxAttribute",
+                    value: function(e, t) {
+                        var n = $(".js-cc-checkbox", this._root).filter('[name="' + e + '"]'),
+                            r = t[e] === n.val();
+                        n.prop("checked", r)
+                    }
+                }, {
+                    key: "selectPreset",
+                    value: function(e) {
+                        var t = $(e.target).closest(".js-cc-preset").attr("data-preset");
+                        this._store.dispatch(n.i(d.i)(t, f.b[t]))
+                    }
+                }, {
+                    key: "setCurrentPreset",
+                    value: function() {
+                        var e = this._store.getState().captions.preset;
+                        $(".js-cc-preset", this._root).each(function(t, n) {
+                            var r = $(n).attr("data-preset") === e;
+                            $(n).toggleClass("js-cc-preset-selected", r)
+                        })
+                    }
+                }, {
+                    key: "setCurrentStyles",
+                    value: function() {
+                        var e = this,
+                            t = this._store.getState().captions.style;
+                        g.forEach(function(n) {
+                            e._setDropdownAttribute(n, t)
+                        }), b.forEach(function(n) {
+                            e._setRadioAttribute(n, t)
+                        }), _.forEach(function(n) {
+                            e._setCheckboxAttribute(n, t)
+                        })
+                    }
+                }, {
+                    key: "appendToDocumentFragment",
+                    value: function(e, t) {
+                        if (t && !(t.length < 1)) {
+                            var n = document.createElement("div");
+                            return n.innerText = t, n.className = "player-captions-row", e.appendChild(n), e
+                        }
+                    }
+                }, {
+                    key: "applyCCStyle",
+                    value: function() {
+                        var e = this._store.getState().captions.style,
+                            t = e.fontColorName || "white",
+                            n = e.fontOpacity || "solid",
+                            r = e.backgroundColorName || "black",
+                            i = e.backgroundOpacity || "solid",
+                            a = f.c(f.d[t].fontColorValue, f.e[n].opacityValue),
+                            s = {
+                                color: a,
+                                animation: f.e[n].animation
+                            },
+                            c = f.c(f.f[r].backgroundColorValue, f.e[i].opacityValue),
+                            d = o()({}, e, s, f.g[e.font], f.h[e.edge], f.i[e.verticalPosition], f.j[e.fontUnderline], f.k[e.fontItalic], f.l[e.fontBold], f.m[e.alignment], {
+                                backgroundColor: c
+                            }),
+                            p = u()(d, v);
+                        $(".js-player-captions", this._root).css(p);
+                        var h = l()(d, v);
+                        $(".js-player-captions-container").css(h);
+                        var m = f.c(f.f[e.windowColorName].backgroundColorValue, f.e[e.windowOpacity].opacityValue);
+                        $(".js-player-captions-window").css({
+                            backgroundColor: m
+                        }), this.setFontSizeStatus(e.fontSize)
+                    }
+                }, {
+                    key: "clearCaptions",
+                    value: function() {
+                        $(".js-player-captions", this._root).empty()
+                    }
+                }, {
+                    key: "findCaptions",
+                    value: function(e) {
+                        var t = e.data,
+                            n = e.text,
+                            r = n && n.length > 0 ? n.trim() : null;
+                        return r || (Array.isArray(t) && t.length > 0 ? t : null)
+                    }
+                }, {
+                    key: "getCaptionsFromData",
+                    value: function() {
+                        var e = this,
+                            t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+                            n = document.createDocumentFragment(),
+                            r = function(e, t) {
+                                var n = t.char;
+                                0 === t.col && e.push("");
+                                var r = h(n, 1),
+                                    i = r[0];
+                                return e[e.length - 1] += i || "", e
+                            };
+                        return t.reduce(r, []).forEach(function(t) {
+                            return e.appendToDocumentFragment(n, t)
+                        }), n
+                    }
+                }, {
+                    key: "getCaptionsFromText",
+                    value: function(e) {
+                        var t = this,
+                            n = document.createDocumentFragment();
+                        return String(e).split(y).forEach(function(e) {
+                            return t.appendToDocumentFragment(n, e)
+                        }), n
+                    }
+                }, {
+                    key: "setFontSizeStatus",
+                    value: function(e) {
+                        var t = $(".js-cc-font-size", this._root);
+                        t.filter('[value="increment"]').prop("disabled", e === f.a.max), t.filter('[value="decrement"]').prop("disabled", e === f.a.min)
+                    }
+                }, {
+                    key: "showCaption",
+                    value: function(e) {
+                        var t = e.available,
+                            n = e.enabled,
+                            r = e.data,
+                            i = r ? this.findCaptions(r) : null,
+                            a = t && n && i && i.length > 0;
+                        if (this.clearCaptions(), a) {
+                            var o = $(".js-player-captions", this._root),
+                                s = Array.isArray(i) ? this.getCaptionsFromData(i) : this.getCaptionsFromText(i);
+                            o.append(s)
+                        }
+                    }
+                }, {
+                    key: "destroy",
+                    value: function() {
+                        $(this._root).off("click"), this.unsubscribe()
+                    }
+                }]), e
+            }()
     }, function(e, t) {
         e.exports = {
             Live: "Live",
@@ -30921,7 +30924,7 @@
             }
 
             function i(e) {
-                return e.customerId && e.contentId ? xe._setContent(e.customerId, e.contentId) : e.stream && e.channelId ? xe._setLiveToVod(e.stream, e.channelId) : e.channelId ? n.i(ne.b)("channels/" + e.channelId).then(function(e) {
+                return E.f.includes(e.player) ? xe.setClip(e.clip) : e.customerId && e.contentId ? xe._setContent(e.customerId, e.contentId) : e.stream && e.channelId ? xe._setLiveToVod(e.stream, e.channelId) : e.channelId ? n.i(ne.b)("channels/" + e.channelId).then(function(e) {
                     return xe.setChannel(e.name)
                 }) : e.channel ? xe.setChannel(e.channel) : e.collection ? p().then(function() {
                     Be.dispatch(n.i(W.a)(e.collection, e.video, e.time, !0))
@@ -31076,7 +31079,7 @@
                         contentType: z.e,
                         contentId: e
                     });
-                    Be.dispatch(t), Be.dispatch(n.i(W.b)())
+                    return Be.dispatch(t), Be.dispatch(n.i(W.b)()), Promise.resolve(!0)
                 }, xe.setVideo = function(e, t) {
                     if ("string" == typeof e) {
                         var r = "v" !== e.charAt(0) ? "v" + e : e;
@@ -44308,7 +44311,7 @@
                 },
                 function() {
                     var l = E;
-                    $(t).addClass("player").addClass("theme--dark"), $(t).append(n(373));
+                    $(t).addClass("player").addClass("theme--dark"), $(t).append(n(372));
                     var d = r.getState().playback.muted;
                     r.dispatch(n.i(m.a)(d)), r.dispatch(n.i(v.e)()), r.dispatch(n.i(y.a)()), te(r), ie(r), ae(r), ne(r), Z(r), ee(r), X(r), re(r), J(r), ue(r), se(r), Q(r), ce(r), le(r), de(r), oe(r), fe(r), pe(r), S.a.render(k.a.createElement(P.Provider, {
                         store: r
@@ -44334,13 +44337,13 @@
                 }()
         }
         t.a = r;
-        var i = n(372),
-            a = n(369),
-            o = n(370),
-            s = n(371),
-            u = n(366),
-            c = n(368),
-            l = n(367),
+        var i = n(371),
+            a = n(368),
+            o = n(369),
+            s = n(370),
+            u = n(373),
+            c = n(367),
+            l = n(366),
             d = n(602),
             f = n(580),
             p = n(575),
@@ -44465,14 +44468,21 @@
                         var t = this;
                         switch (e) {
                             case d.d:
-                                return n.e(2).then(function() {
+                                return n.e(3).then(function() {
                                     var e = n(894);
                                     t.setState({
                                         playerTypeComponent: e.default
                                     })
                                 }.bind(null, n)).catch(n.oe);
-                            case d.q:
+                            case d.p:
                                 return n.e(1).then(function() {
+                                    var e = n(896);
+                                    t.setState({
+                                        playerTypeComponent: e.default
+                                    })
+                                }.bind(null, n)).catch(n.oe);
+                            case d.q:
+                                return n.e(2).then(function() {
                                     var e = n(895);
                                     t.setState({
                                         playerTypeComponent: e.default
@@ -44480,7 +44490,7 @@
                                 }.bind(null, n)).catch(n.oe);
                             default:
                                 return n.e(0).then(function() {
-                                    var e = n(896);
+                                    var e = n(897);
                                     t.setState({
                                         playerTypeComponent: e.default
                                     })
