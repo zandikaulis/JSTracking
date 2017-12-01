@@ -192,13 +192,13 @@ window.SiteOptions = {
         },
         "04adab74-98c1-4adb-88ea-c896504692d3": {
             "name": "ios_native_bits_iap_onboarding_feature",
-            "v": 2548,
+            "v": 2553,
             "t": 1,
             "groups": [{
-                "weight": 95,
+                "weight": 0,
                 "value": "inactive"
             }, {
-                "weight": 5,
+                "weight": 100,
                 "value": "active"
             }]
         },
@@ -3467,13 +3467,13 @@ window.SiteOptions = {
         },
         "c5b39c2e-17e2-4226-b59e-ba48d940a855": {
             "name": "ios_native_bits_iap_onboarding",
-            "v": 2549,
+            "v": 2552,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "inactive"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "active"
             }]
         },
