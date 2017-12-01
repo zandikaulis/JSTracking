@@ -3292,7 +3292,8 @@ webpackJsonp([41], {
                     return t.state = {
                         claimed: !1,
                         claiming: !1,
-                        error: !1
+                        error: !1,
+                        claimData: ""
                     }, t.renderRedeemUpsellOrClaimSection = function(e) {
                         var n = e.content || {},
                             i = e.self || {
@@ -3300,13 +3301,18 @@ webpackJsonp([41], {
                             },
                             a = t.props.data || {},
                             r = a.currentUser || {};
-                        return t.state.error ? o.createElement(V, {
+                        if (t.state.error) return o.createElement(V, {
                             fontSize: m.L.Size6
-                        }) : (t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime ? o.createElement(Q, {
-                            claimInstructions: e.claimInstructions,
-                            code: i.claimData,
-                            deliveryMethod: e.deliveryMethod
-                        }) : o.createElement(P, {
+                        });
+                        if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime) {
+                            var s = t.state.claimData || i.claimData;
+                            return o.createElement(Q, {
+                                claimInstructions: e.claimInstructions,
+                                code: s,
+                                deliveryMethod: e.deliveryMethod
+                            })
+                        }
+                        return o.createElement(P, {
                             offerId: e.id,
                             offerDescription: e.description || "",
                             offerType: e.deliveryMethod || "",
@@ -3325,8 +3331,13 @@ webpackJsonp([41], {
                                 r = Object(y.a)({
                                     offerID: a.id
                                 });
-                            t.props.claimPrimeOffer(r).then(function() {
-                                t.markAsClaimedInLocalStorage(i)
+                            t.props.claimPrimeOffer(r).then(function(e) {
+                                var n = e.data || {},
+                                    r = n.claimPrimeOffer || {},
+                                    s = r.self || {};
+                                s && a && t.setState({
+                                    claimData: s.claimData
+                                }), t.markAsClaimedInLocalStorage(i)
                             }).catch(function() {
                                 t.setState({
                                     claiming: !1,
@@ -34265,4 +34276,4 @@ webpackJsonp([41], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-clips-d33ffa8738344ef44d74b6c6ea3cba99.js.map
+//# sourceMappingURL=pages.channel-clips-f9b4941bfcf32f6a4bdfd908c961b615.js.map

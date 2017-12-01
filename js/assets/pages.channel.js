@@ -11731,7 +11731,8 @@ webpackJsonp([0], Array(21).concat([function(e, t, n) {
                 return t.state = {
                     claimed: !1,
                     claiming: !1,
-                    error: !1
+                    error: !1,
+                    claimData: ""
                 }, t.renderRedeemUpsellOrClaimSection = function(e) {
                     var n = e.content || {},
                         i = e.self || {
@@ -11739,13 +11740,18 @@ webpackJsonp([0], Array(21).concat([function(e, t, n) {
                         },
                         a = t.props.data || {},
                         r = a.currentUser || {};
-                    return t.state.error ? s.createElement(V, {
+                    if (t.state.error) return s.createElement(V, {
                         fontSize: m.L.Size6
-                    }) : (t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime ? s.createElement(Y, {
-                        claimInstructions: e.claimInstructions,
-                        code: i.claimData,
-                        deliveryMethod: e.deliveryMethod
-                    }) : s.createElement(B, {
+                    });
+                    if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime) {
+                        var o = t.state.claimData || i.claimData;
+                        return s.createElement(Y, {
+                            claimInstructions: e.claimInstructions,
+                            code: o,
+                            deliveryMethod: e.deliveryMethod
+                        })
+                    }
+                    return s.createElement(B, {
                         offerId: e.id,
                         offerDescription: e.description || "",
                         offerType: e.deliveryMethod || "",
@@ -11764,8 +11770,13 @@ webpackJsonp([0], Array(21).concat([function(e, t, n) {
                             r = Object(y.a)({
                                 offerID: a.id
                             });
-                        t.props.claimPrimeOffer(r).then(function() {
-                            t.markAsClaimedInLocalStorage(i)
+                        t.props.claimPrimeOffer(r).then(function(e) {
+                            var n = e.data || {},
+                                r = n.claimPrimeOffer || {},
+                                o = r.self || {};
+                            o && a && t.setState({
+                                claimData: o.claimData
+                            }), t.markAsClaimedInLocalStorage(i)
                         }).catch(function() {
                             t.setState({
                                 claiming: !1,
@@ -75042,4 +75053,4 @@ webpackJsonp([0], Array(21).concat([function(e, t, n) {
         return A
     })
 }]));
-//# sourceMappingURL=pages.channel-b39ba204dbfa94a72f7bd64ec1cb524d.js.map
+//# sourceMappingURL=pages.channel-2e6a88b9a565846e5b6e5de1db52a00a.js.map

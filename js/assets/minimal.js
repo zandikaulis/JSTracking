@@ -586,7 +586,7 @@ webpackJsonp([63], {
         window.IntlMessageFormat = a, window.IntlRelativeFormat = s;
         var l = function() {
                 function e() {
-                    this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "a0890fbb-4365-41a4-8325-d4a55ba6863b", this.spadeBatchWindow = 1e3, this.locales = [{
+                    this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "b9fd2322-ccbe-4730-b8ea-4d57563ddb8f", this.spadeBatchWindow = 1e3, this.locales = [{
                         name: "English",
                         languageCode: "en",
                         locale: "en-US",
@@ -8935,4 +8935,4 @@ webpackJsonp([63], {
         }()
     }
 }, [798]);
-//# sourceMappingURL=minimal-b42021638bc0c2f1c1d3c027347b1cc6.js.map
+//# sourceMappingURL=minimal-f319358d9c50672907b31509f7346ecc.js.map

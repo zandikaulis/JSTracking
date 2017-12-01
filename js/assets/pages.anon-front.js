@@ -164,20 +164,20 @@ webpackJsonp([47], {
         function r(e) {
             switch (e.type) {
                 case b.b.Stream:
-                    return _.createElement(T.c, {
+                    return _.createElement(D.c, {
                         channelLogin: e.id,
                         vodID: "",
                         disableTheatreButton: !0,
-                        playerTypeOverride: T.b.Frontpage,
+                        playerTypeOverride: D.b.Frontpage,
                         onInit: e.onPlayerInit,
                         onDestroy: e.onPlayerDestroy
                     });
                 case b.b.Vod:
-                    return _.createElement(T.c, {
+                    return _.createElement(D.c, {
                         channelLogin: "",
                         vodID: e.id,
                         disableTheatreButton: !0,
-                        playerTypeOverride: T.b.Frontpage,
+                        playerTypeOverride: D.b.Frontpage,
                         onInit: e.onPlayerInit,
                         onDestroy: e.onPlayerDestroy,
                         onVideoTimeChange: e.onVideoTimeChange
@@ -322,8 +322,8 @@ webpackJsonp([47], {
             U = n(65),
             x = n(10),
             F = n(49),
-            T = n(443),
-            D = (n(1288), {
+            D = n(443),
+            T = (n(1288), {
                 content: "carousel",
                 medium: "twitch_home"
             }),
@@ -338,7 +338,7 @@ webpackJsonp([47], {
                                 game: _.createElement(x.a, {
                                     to: {
                                         pathname: "/directory/game/" + t.props.item.content.gameName,
-                                        state: D
+                                        state: T
                                     }
                                 }, t.props.item.content.gameName)
                             }, "HorizontalCarouselPlayer"),
@@ -383,7 +383,7 @@ webpackJsonp([47], {
                         }, _.createElement(x.a, {
                             to: {
                                 pathname: "/" + t.props.item.broadcaster.login,
-                                state: D
+                                state: T
                             },
                             "data-a-target": "carousel-profile-image"
                         }, _.createElement(N.l, {
@@ -425,12 +425,12 @@ webpackJsonp([47], {
                     }, t.getLinkForTitle = function() {
                         if (t.props.item.content.type === b.b.Stream) return {
                             pathname: "/" + t.props.item.broadcaster.login,
-                            state: D
+                            state: T
                         };
                         var e = t.state ? t.state.videoOffset || 0 : 0;
                         return {
                             pathname: "/videos/" + t.props.item.content.id + "?t=" + e,
-                            state: D
+                            state: T
                         }
                     }, t.getPlaceholderRender = function() {
                         var e = k("horizontal-carousel-player__details", {
@@ -2739,7 +2739,7 @@ webpackJsonp([47], {
             e[e.All = 1] = "All", e[e.Xbox = 2] = "Xbox", e[e.PS4 = 3] = "PS4"
         }(i || (i = {}));
         var F = n(1694),
-            T = (n(1695), function(e) {
+            D = (n(1695), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getItems = function() {
@@ -2934,7 +2934,7 @@ webpackJsonp([47], {
                     }
                 }), Object(c.c)("TopChannels")], t)
             }(r.Component)),
-            D = T,
+            T = D,
             R = (n(1696), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3073,7 +3073,7 @@ webpackJsonp([47], {
                             x: "auto"
                         },
                         className: "anon-front__content-section"
-                    }, r.createElement(D, {
+                    }, r.createElement(T, {
                         type: i.All,
                         key: "channels.all"
                     })), r.createElement(d._17, {
@@ -3086,7 +3086,7 @@ webpackJsonp([47], {
                             x: "auto"
                         },
                         className: "anon-front__content-section"
-                    }, r.createElement(D, {
+                    }, r.createElement(T, {
                         type: i.PS4,
                         key: "channels.ps4"
                     })), r.createElement(d._17, {
@@ -3099,7 +3099,7 @@ webpackJsonp([47], {
                             x: "auto"
                         },
                         className: "anon-front__content-section"
-                    }, r.createElement(D, {
+                    }, r.createElement(T, {
                         type: i.Xbox,
                         key: "channels.xbox"
                     })), r.createElement(d.U, {
@@ -3585,7 +3585,7 @@ webpackJsonp([47], {
                 return t && t.dateOverride || ""
             },
             F = (n(422), n(423)),
-            T = function(e) {
+            D = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3616,7 +3616,7 @@ webpackJsonp([47], {
                     return this.props.offerType === b.CLAIM_CODE ? Object(l.d)("Get Code", "PrimeClaimButton") : this.props.offerType === b.EXTERNAL_OFFER ? Object(l.d)("Learn More", "PrimeClaimButton") : Object(l.d)("Claim Offer", "PrimeClaimButton")
                 }, t = r.__decorate([Object(d.a)(F), Object(m.c)("PrimeClaimButton")], t)
             }(s.Component),
-            D = T,
+            T = D,
             R = function(e) {
                 function t() {
                     var t = e.call(this) || this;
@@ -3701,7 +3701,7 @@ webpackJsonp([47], {
                     }, this.getCallToAction(), this.getClaimDescriptionSection())
                 }, t.prototype.getCallToAction = function() {
                     var e = this.props.data;
-                    return !e.loading && !e.error && e.currentUser && e.currentUser.hasPrime ? s.createElement(D, {
+                    return !e.loading && !e.error && e.currentUser && e.currentUser.hasPrime ? s.createElement(T, {
                         offerType: this.props.offerType,
                         offerId: this.props.offerId,
                         claimCallback: this.props.claimCallback,
@@ -3929,7 +3929,8 @@ webpackJsonp([47], {
                     return t.state = {
                         claimed: !1,
                         claiming: !1,
-                        error: !1
+                        error: !1,
+                        claimData: ""
                     }, t.renderRedeemUpsellOrClaimSection = function(e) {
                         var n = e.content || {},
                             i = e.self || {
@@ -3937,13 +3938,18 @@ webpackJsonp([47], {
                             },
                             a = t.props.data || {},
                             r = a.currentUser || {};
-                        return t.state.error ? s.createElement(q, {
+                        if (t.state.error) return s.createElement(q, {
                             fontSize: p.L.Size6
-                        }) : (t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime ? s.createElement(X, {
-                            claimInstructions: e.claimInstructions,
-                            code: i.claimData,
-                            deliveryMethod: e.deliveryMethod
-                        }) : s.createElement(B, {
+                        });
+                        if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime) {
+                            var o = t.state.claimData || i.claimData;
+                            return s.createElement(X, {
+                                claimInstructions: e.claimInstructions,
+                                code: o,
+                                deliveryMethod: e.deliveryMethod
+                            })
+                        }
+                        return s.createElement(B, {
                             offerId: e.id,
                             offerDescription: e.description || "",
                             offerType: e.deliveryMethod || "",
@@ -3962,8 +3968,13 @@ webpackJsonp([47], {
                                 r = Object(_.a)({
                                     offerID: a.id
                                 });
-                            t.props.claimPrimeOffer(r).then(function() {
-                                t.markAsClaimedInLocalStorage(i)
+                            t.props.claimPrimeOffer(r).then(function(e) {
+                                var n = e.data || {},
+                                    r = n.claimPrimeOffer || {},
+                                    o = r.self || {};
+                                o && a && t.setState({
+                                    claimData: o.claimData
+                                }), t.markAsClaimedInLocalStorage(i)
                             }).catch(function() {
                                 t.setState({
                                     claiming: !1,
@@ -4669,8 +4680,8 @@ webpackJsonp([47], {
             U = n(5),
             x = n(28),
             F = n(32),
-            T = n(398),
-            D = n.n(T),
+            D = n(398),
+            T = n.n(D),
             R = n(14),
             I = n(65),
             P = n(12),
@@ -4864,7 +4875,7 @@ webpackJsonp([47], {
                             createdAt: t.props.date,
                             updatedAt: t.props.date,
                             isRead: t.props.isOldNotification || t.state.isRead,
-                            thumbnailURL: D.a,
+                            thumbnailURL: T.a,
                             actions: [{
                                 body: "View",
                                 type: "click",
@@ -6507,8 +6518,8 @@ webpackJsonp([47], {
             U = n(18),
             x = n(107),
             F = n(265),
-            T = n(64),
-            D = n(4),
+            D = n(64),
+            T = n(4),
             R = n(28),
             I = n(129),
             P = n(49),
@@ -6528,7 +6539,7 @@ webpackJsonp([47], {
                         "search-live-result-card--hover": this.props.borderHover
                     };
                     return this.props.data && !this.props.data.loading && this.props.data.user && this.props.data.user.stream && (e = this.props.data.user.stream.previewImageURL), v.createElement(B.U, {
-                        className: D(t),
+                        className: T(t),
                         key: this.props.id,
                         fullWidth: !0
                     }, v.createElement(B.S, h.__assign({
@@ -6789,7 +6800,7 @@ webpackJsonp([47], {
                         tabIndex: 0,
                         onKeyDown: this.props.onKeyDown
                     }, e, i, v.createElement(B._17, {
-                        className: D(t),
+                        className: T(t),
                         background: B.m.Base,
                         position: B._2.Absolute,
                         overflow: B.Y.Hidden,
@@ -7138,7 +7149,7 @@ webpackJsonp([47], {
                     return v.createElement("div", null, v.createElement("div", {
                         className: "top-nav__search-container",
                         "data-click-out-id": "nav-search-balloon"
-                    }, v.createElement(T.a, {
+                    }, v.createElement(D.a, {
                         onClickOut: this.props.onClickOut
                     }, v.createElement(B._11, {
                         onChange: this.handleChange,
@@ -7676,10 +7687,10 @@ webpackJsonp([47], {
                     this.unsubscribeFromHistory()
                 }, t.prototype.render = function() {
                     var e = this.props.gqlData.currentUser.profileImageURL || y.a.defaultAvatarURL,
-                        t = D("top-nav__dropdown-wrapper", {
+                        t = T("top-nav__dropdown-wrapper", {
                             toggled: this.state.dropdownOpen
                         }),
-                        n = D("top-nav__user-card", "theme--dark", {
+                        n = T("top-nav__user-card", "theme--dark", {
                             "top-nav__dropdown-open": this.state.dropdownOpen
                         }),
                         i = this.state.dropdownOpen ? "dropdown-down" : "dropdown-up",
@@ -7708,7 +7719,7 @@ webpackJsonp([47], {
                         flexGrow: 1,
                         alignItems: B.c.Stretch,
                         fullHeight: !0
-                    }, v.createElement(T.a, {
+                    }, v.createElement(D.a, {
                         onClickOut: this.onClickOut,
                         className: n
                     }, v.createElement(B.U, {
@@ -8184,8 +8195,8 @@ webpackJsonp([47], {
                     }
                 }]), Object(N.c)("User")], t)
             }(v.Component),
-            Te = Object(d.a)(r, o)(Object(u.f)(Fe)),
-            De = n(387),
+            De = Object(d.a)(r, o)(Object(u.f)(Fe)),
+            Te = n(387),
             Re = (n(438), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -8210,7 +8221,7 @@ webpackJsonp([47], {
                             },
                             alignSelf: B.d.Center,
                             flexWrap: B.K.NoWrap
-                        }, !e && v.createElement(De.b, null))
+                        }, !e && v.createElement(Te.b, null))
                     }, t.saveEllipsisRef = function(e) {
                         return t.ellipsisMenu = e
                     }, t.onNavigationClicked = function() {
@@ -8520,7 +8531,7 @@ webpackJsonp([47], {
                         flexWrap: B.K.NoWrap,
                         flexGrow: 0,
                         flexShrink: 0
-                    }, this.props.isLoggedIn ? v.createElement(Te, {
+                    }, this.props.isLoggedIn ? v.createElement(De, {
                         logout: this.props.logout
                     }) : v.createElement(te, {
                         login: this.props.login,
@@ -11397,4 +11408,4 @@ webpackJsonp([47], {
             l = "carouselPlayer.CAROUSEL_PAUSED"
     }
 });
-//# sourceMappingURL=pages.anon-front-dba8bf5c1b581a112160379bbc853075.js.map
+//# sourceMappingURL=pages.anon-front-e5d2e8fd492f617744d6b82f1ce57162.js.map

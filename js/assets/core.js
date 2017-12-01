@@ -13419,7 +13419,7 @@ webpackJsonp([62], [, , function(e, t, n) {
     window.IntlMessageFormat = o, window.IntlRelativeFormat = s;
     var l = function() {
             function e() {
-                this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "a0890fbb-4365-41a4-8325-d4a55ba6863b", this.spadeBatchWindow = 1e3, this.locales = [{
+                this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "b9fd2322-ccbe-4730-b8ea-4d57563ddb8f", this.spadeBatchWindow = 1e3, this.locales = [{
                     name: "English",
                     languageCode: "en",
                     locale: "en-US",
@@ -20421,7 +20421,8 @@ webpackJsonp([62], [, , function(e, t, n) {
                 return t.state = {
                     claimed: !1,
                     claiming: !1,
-                    error: !1
+                    error: !1,
+                    claimData: ""
                 }, t.renderRedeemUpsellOrClaimSection = function(e) {
                     var n = e.content || {},
                         i = e.self || {
@@ -20429,13 +20430,18 @@ webpackJsonp([62], [, , function(e, t, n) {
                         },
                         a = t.props.data || {},
                         r = a.currentUser || {};
-                    return t.state.error ? s.createElement(V, {
+                    if (t.state.error) return s.createElement(V, {
                         fontSize: m.L.Size6
-                    }) : (t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime ? s.createElement(Y, {
-                        claimInstructions: e.claimInstructions,
-                        code: i.claimData,
-                        deliveryMethod: e.deliveryMethod
-                    }) : s.createElement(B, {
+                    });
+                    if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime) {
+                        var o = t.state.claimData || i.claimData;
+                        return s.createElement(Y, {
+                            claimInstructions: e.claimInstructions,
+                            code: o,
+                            deliveryMethod: e.deliveryMethod
+                        })
+                    }
+                    return s.createElement(B, {
                         offerId: e.id,
                         offerDescription: e.description || "",
                         offerType: e.deliveryMethod || "",
@@ -20454,8 +20460,13 @@ webpackJsonp([62], [, , function(e, t, n) {
                             r = Object(k.a)({
                                 offerID: a.id
                             });
-                        t.props.claimPrimeOffer(r).then(function() {
-                            t.markAsClaimedInLocalStorage(i)
+                        t.props.claimPrimeOffer(r).then(function(e) {
+                            var n = e.data || {},
+                                r = n.claimPrimeOffer || {},
+                                o = r.self || {};
+                            o && a && t.setState({
+                                claimData: o.claimData
+                            }), t.markAsClaimedInLocalStorage(i)
                         }).catch(function() {
                             t.setState({
                                 claiming: !1,
@@ -39237,4 +39248,4 @@ webpackJsonp([62], [, , function(e, t, n) {
     };
     e.exports = n
 }, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , function(e, t) {}], [538]);
-//# sourceMappingURL=core-c939710c5feaf0745522b760b6adcae3.js.map
+//# sourceMappingURL=core-dd3de4ba759d4f55c78ae4def2afc305.js.map
