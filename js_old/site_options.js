@@ -180,13 +180,13 @@ window.SiteOptions = {
         },
         "0238d763-05ee-4d27-ba3f-0b7d45346102": {
             "name": "android_spade_batching_v2",
-            "v": 2000,
+            "v": 2543,
             "t": 1,
             "groups": [{
-                "weight": 99,
+                "weight": 80,
                 "value": "control"
             }, {
-                "weight": 1,
+                "weight": 20,
                 "value": "active"
             }]
         },
@@ -3527,13 +3527,13 @@ window.SiteOptions = {
         },
         "ce62423f-4298-4448-bd1c-5421d96f65d6": {
             "name": "ios_dashboard",
-            "v": 2276,
+            "v": 2544,
             "t": 1,
             "groups": [{
-                "weight": 1,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "active"
             }]
         },
