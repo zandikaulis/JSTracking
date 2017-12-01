@@ -49,7 +49,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-40fe2b.sjc01.hls.ttvnw.net/v1/playlist/CvRDTrciRRTHsoHmG4kImXc9rTu0R_RNp30f-yQF7nl0DAJZ8Z_xZ0j1RP0uS83tk7iW0U8ae_gDYOSU-vPjKSP_F_sUHObOu2kqlu1KqfZwCyjEUj7Noz440wVzoenEc1Css3sUOEcjqVi2HgYFlJxHxOElPVUvyOMHU5oo3tgus_pnKVetfev5lSzIeKswkYaOeDD7CyHxxwCjbwvplkw4IVK1xesfNjk2E5eH72PkS91VPg0GTYJ_v6WiUj4hCdcE6h6tB7glFCbCJ6SAMKl66Zvu74VxBbe9JM83UqZjYukm6B_zwAQqYdignYsy3NICVMsTFTHJceLAXLaHgwjxtxy0mGrQAEhcMCwJnanNpE9Y62a3Kcg0QXawuxpUASsbMNtJvtM4kFaCx0_t7ixcmKOEgm0fg05MWUCiwPT1gIonpcPcO2DWW.m3u8",
+    "spade_url": "https://video-edge-2f6d0d.sjc01.hls.ttvnw.net/v1/playlist/CnRbmudXImbrI_I2giUtbJwc6ILteCS0f4PepjxaFtemwOZpTokI2u9Up6Ypx8d2n6ewjK5mlehJapqFFNBwT7PLUuyIhQ8pa1QHYLt0_ptV9lxe8Ogu4If9Cfn30LOmPVQceibraDa4bdaq1E14xj1xZU9oXB9Yw1h1eERB_0wQX7KR4pxZmFCXh8viduOVJEhSMf_w5SiXqY01_7yiXHJFinE4BcNkBnuLZ2X68P6ksQhWAfrjnBf2FrqufXTO6fhq2bvX6FyKgbpiDZ8Hs98ZrcZEiaDz5o7VRV_Ahy58VfNGvhxFRqC0k4Zt1katjlgVS4snXJDLPMEvau-ztHyyauWw6MqNVJIUoO2TBX2WR8a4XbCpEg6OG17MCLdNb3vRbyB57928G-OG9-Aid4u3OF_OJzjo0qiCRQW77Wfu4PGX90A0vzPqZdEQvuNnWVoHDCVWyL.m3u8",
     "store_merch_promo": "off",
     "store_merch_seasonal": "on",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
@@ -82,6 +82,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "no_archives"
+            }]
+        },
+        "1dc7b575-1187-42bf-8d01-c62bea1f89c9": {
+            "name": "twilight_growth_email_verify_bar",
+            "v": 2540,
+            "t": 1,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
             }]
         },
         "298a5f39-228a-487a-ad06-422c18458403": {
