@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".8fc7151c2f3f65f3307f.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".ab0659a3cb3e8ed4e6e8.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -764,6 +764,8 @@
                     body: n.i(U.stringify)(t)
                 };
                 return r && (i.headers.Authorization = "OAuth " + r), fetch(e, i)
+            }).then(function(e) {
+                return e.json()
             })
         }
         t.q = s, t.b = u, n.d(t, "d", function() {
@@ -21663,7 +21665,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.12.01-215257+850ae0827d186d8ad4bf151a47dd6791643ea833",
+                    app_version: "2017.12.01-222240+34bcda2b9dfcf5c496d1e787eb3beb9953d4f70f",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
