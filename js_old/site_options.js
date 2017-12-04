@@ -1693,10 +1693,10 @@ window.SiteOptions = {
         },
         "59cbe6c8-2355-403e-aa3a-ab22310adebe": {
             "name": "aml_ranking_follows",
-            "v": 2546,
+            "v": 2566,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
                 "weight": 0,
@@ -1711,7 +1711,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "just_one"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "complete"
             }]
         },

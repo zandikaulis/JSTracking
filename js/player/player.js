@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e6519ac43e0a59ccaee3.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".8269c48f34516dce621f.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -6148,7 +6148,7 @@
                     value: function() {
                         var e = this;
                         return this.loadMediaPlayer().then(function(t) {
-                            e._initMediaPlayer(t), e.setMuted(e._options.muted), e._initMobileAttributes(), e.load()
+                            e._initMediaPlayer(t), e.setMuted(e._options.muted), e._initMobileAttributes()
                         }, function(t) {
                             e.onCoreAnalytics(t)
                         })
@@ -21688,7 +21688,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.12.04-212529+c60fb7e1d1aaa97a65bfb721652beffe28e1e68a",
+                    app_version: "2017.12.04-231458+58111d075b7b46775d9aa2e8d0eb34021c499d95",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
