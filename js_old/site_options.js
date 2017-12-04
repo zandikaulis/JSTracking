@@ -1547,6 +1547,27 @@ window.SiteOptions = {
                 "value": "experiment"
             }]
         },
+        "50ac9a2b-63c2-46ed-9e7d-123363195dfd": {
+            "name": "twilight_new_browse",
+            "v": 2565,
+            "t": 1,
+            "groups": [{
+                "weight": 60,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "variant1"
+            }, {
+                "weight": 10,
+                "value": "variant2"
+            }, {
+                "weight": 10,
+                "value": "variant3"
+            }, {
+                "weight": 10,
+                "value": "variant4"
+            }]
+        },
         "51e3d33c-157b-422d-9a15-b0f9e9c055b2": {
             "name": "baking_bread_h",
             "v": 1007,
