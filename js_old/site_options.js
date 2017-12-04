@@ -2981,13 +2981,10 @@ window.SiteOptions = {
         },
         "aa886844-3254-4197-b026-518f2fa75c10": {
             "name": "CVP MediaPlayer backend control Aug 17",
-            "v": 2311,
+            "v": 2564,
             "t": 1,
             "groups": [{
-                "weight": 2,
-                "value": "no"
-            }, {
-                "weight": 98,
+                "weight": 100,
                 "value": "yes"
             }]
         },

@@ -5,7 +5,7 @@ window.__twilightSettings = {
     "apollo_log_errors": false,
     "benchmark_component_threshold": 0.1,
     "benchmark_networking_threshold": 0.15,
-    "better_together": "off",
+    "better_together": "staff",
     "bits_special_promo_base_payout": 1000,
     "bits_special_promo_bonus_payout": 0,
     "bits_special_promo_offer_id": "B073RTRHTZ",
