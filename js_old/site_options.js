@@ -3785,13 +3785,13 @@ window.SiteOptions = {
         },
         "d8c536f8-31a0-46d0-8e25-1bd5773aee2f": {
             "name": "android_clip_editing",
-            "v": 2077,
+            "v": 2560,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 40,
                 "value": "active"
             }, {
-                "weight": 100,
+                "weight": 60,
                 "value": "control"
             }]
         },
