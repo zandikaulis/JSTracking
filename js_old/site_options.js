@@ -3444,6 +3444,18 @@ window.SiteOptions = {
                 "value": "off"
             }]
         },
+        "c2d3d8cb-713f-41eb-965e-07e88a94ccb4": {
+            "name": "android_player_refactor",
+            "v": 2575,
+            "t": 1,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "c31d337d-4186-465d-9d0b-cb72a5b2aef2": {
             "name": "newsfeed_recommended_clips",
             "v": 1053,
