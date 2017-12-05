@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".8269c48f34516dce621f.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".1a8c78cfe54fba36be7b.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -6159,7 +6159,6 @@
                         var t = e.mediaPlayerInstance,
                             n = e.mediaPlayerHandle;
                         this._mediaPlayer = t, this._mediaPlayerHandle = n, this._cache = {
-                            seekStarted: !1,
                             currentQuality: this._mediaPlayer.getQuality()
                         }, this._attachInternalListeners(n), this._eventEmitter.emit(a.h), this._apiCallQueue.forEach(function(e) {
                             e()
@@ -6344,7 +6343,7 @@
                     key: "setCurrentTime",
                     value: function(e) {
                         if (null === this._mediaPlayer) return void this._apiCallQueue.push(this.setCurrentTime.bind(this, e));
-                        this._mediaPlayer.seekTo(e), this._eventEmitter.emit(u.k), this._cache.seekStarted = !0
+                        this._mediaPlayer.seekTo(e), this._eventEmitter.emit(u.k)
                     }
                 }, {
                     key: "getDuration",
@@ -6413,7 +6412,7 @@
                 }, {
                     key: "getSeeking",
                     value: function() {
-                        return !!this._cache.seekStarted
+                        return !!this._mediaPlayer && this._mediaPlayer.isSeeking()
                     }
                 }, {
                     key: "getVideoInfo",
@@ -6544,7 +6543,7 @@
                         r.addEventListener(e.PlayerEvent.INITIALIZED, function() {
                             t._eventEmitter.emit(a.h)
                         }), r.addEventListener(e.PlayerState.PLAYING, function() {
-                            t._readyState <= _.a && (t._readyState = _.c), t._eventEmitter.emit(u.f), t._eventEmitter.emit(u.i), t._cache.seekStarted && (t._eventEmitter.emit(u.g), t._eventEmitter.emit(u.l), t._cache.seekStarted = !1)
+                            t._readyState <= _.a && (t._readyState = _.c), t._eventEmitter.emit(u.f), t._eventEmitter.emit(u.i)
                         }), r.addEventListener(e.PlayerEvent.QUALITY_CHANGED, function() {
                             var e = t._cache.currentQuality,
                                 n = t._mediaPlayer.getQuality();
@@ -6583,11 +6582,13 @@
                                 playback_error_msg: "fatal_error"
                             })), t.store.dispatch(n.i(S.a)(t._errorCode))
                         }), r.addEventListener(e.PlayerEvent.REBUFFERING, function() {
-                            t._readyState !== _.a && (t._readyState = _.a), t._eventEmitter.emit(u.j)
+                            t._readyState = _.a, t._eventEmitter.emit(u.j)
                         }), r.addEventListener(e.PlayerEvent.TIME_UPDATE, function() {
                             t._eventEmitter.emit(u.o)
                         }), r.addEventListener(e.PlayerEvent.BUFFER_UPDATE, function() {
                             t._eventEmitter.emit(a.b, t._mediaPlayer.getBuffered())
+                        }), r.addEventListener(e.PlayerEvent.SEEK_COMPLETED, function() {
+                            t._eventEmitter.emit(u.g), t._eventEmitter.emit(u.l)
                         }), r.addEventListener(e.PlayerEvent.TRACKING, function(e) {
                             var r = e.name,
                                 i = e.properties;
@@ -21688,7 +21689,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.12.04-231458+58111d075b7b46775d9aa2e8d0eb34021c499d95",
+                    app_version: "2017.12.05-003802+fd0aa600e573b48e1888603e517e3534b610d7e1",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
