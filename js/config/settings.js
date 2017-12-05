@@ -49,7 +49,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-87da71.sjc01.hls.ttvnw.net/v1/playlist/CvNhaxHJasyzvpw6qRDDkmIZxIQ9oAcvQmIaDOUbFQh9xd7A6EPULqAY4LxdFbofGO99dNRn380hq-_TkGz8LT2OiZ4mI6VrwCUjm9Ot9qf-6HxNFinFQVH4CrkR14zyTKUxSuiU5Kiv2BC00ZyJ54ah4XyEbadvxe-bDME2VXj3QHNG57HiiNOtnfnqWs8P1sAa2k-3F0zCwh5RvzazY3mJ1UISTS0CnFCsS_Vtc-glVgEI46T5SmIEdgC0mNZcQpPQiUvDjj1eb4SZGyzcKiWSfMyKgqEmPbkCuZUT67x2sean9ezMf6E0yodOumd5oHDJ_rJjXLRW_tmfXN2RyMv78gRd1skybSR1fTr53Bol5e_3l8IcanYI0ktGmw4Sb3cDbg2_dsfVN9K8t3q9_PoxCfFT9iVhK5cmTdEyMdsa6acbUPkmWj6.m3u8",
+    "spade_url": "https://video-edge-6ac9ed.sjc01.hls.ttvnw.net/v1/playlist/CquPM8Wo3r3kZVpqdDZmZqnVsYNb55DZMhyIQOjHw354TERJSeLxjpgI2mfbs3qOzxXbKLhEOBYbq_tK7GhB45DqcAC_cX1JrUx-IbSBdqfcm7GHS079m1Wc0YHGvYhA0CtzL-vaBxaPguTdlaJoJvR7dgBTmwAXdKkqwnl65EivTK2l2Ob5B1jOEzlNHwVbSxLx_ByVQFBkOZ-V0XI0NtN2FknkBjey53gZ_SiO0_vUIV4PK3bCF6pNu-NqYGEtQlxQDHTyDF6bw12Cr3nvd1z0Ygv76gadMaklKkbpuV872fz8ss5S94efSaT89hPFclgHo_U7Jkyynp0Y3q7oHtm710bbD3SmxYDLASNAsM23I_q3GEcP6_rACo5BN5tT-Dbs8csYz3YiczVwzqqLuCu0MVe3CYzhFlwsPeFd_F4LUhvmp-8RH5WWWV70ePMoWi_Rf7zwOe5NRCpXqTq.m3u8",
     "store_merch_promo": "off",
     "store_merch_seasonal": "on",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
@@ -181,6 +181,27 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "yes"
+            }]
+        },
+        "50ac9a2b-63c2-46ed-9e7d-123363195dfd": {
+            "name": "twilight_new_browse",
+            "v": 2565,
+            "t": 1,
+            "groups": [{
+                "weight": 60,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "variant1"
+            }, {
+                "weight": 10,
+                "value": "variant2"
+            }, {
+                "weight": 10,
+                "value": "variant3"
+            }, {
+                "weight": 10,
+                "value": "variant4"
             }]
         },
         "59c5198b-ea6d-423d-b337-ea93d0dc8d66": {
