@@ -1,5 +1,5 @@
 webpackJsonp([48], {
-    1003: function(e, t, n) {
+    1e3: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -31,9 +31,143 @@ webpackJsonp([48], {
             s = "carouselPlayer.CAROUSEL_UNREGISTERED",
             l = "carouselPlayer.CAROUSEL_PAUSED"
     },
-    1010: function(e, t) {},
-    1011: function(e, t) {},
-    1066: function(e, t, n) {
+    1007: function(e, t) {},
+    1008: function(e, t) {},
+    1034: function(e, t, n) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        });
+        var i = n(0),
+            a = n(1),
+            r = n(833),
+            o = n(111),
+            s = n(1035),
+            l = function(e) {
+                var t = {
+                    name: "TWILIGHT_EXPANDO_FEATURO",
+                    assignments: {
+                        fallback: function() {
+                            return o.a.wrap(function() {
+                                return new Promise(function(e) {
+                                    e()
+                                }).then(n.bind(null, 1035))
+                            }, "FeaturedBroadcasters")(i.__assign({}, e, {
+                                streamCount: 6,
+                                showCounts: !1
+                            }))
+                        },
+                        expanded: function() {
+                            return o.a.wrap(function() {
+                                return new Promise(function(e) {
+                                    e()
+                                }).then(n.bind(null, 1035))
+                            }, "FeaturedBroadcasters")(i.__assign({}, e, {
+                                streamCount: 8,
+                                showCounts: !0
+                            }))
+                        }
+                    },
+                    loader: function() {
+                        return Object(s.placeholderFeaturedBroadcasters)(e.renderContext)
+                    }
+                };
+                return a.createElement(r.a, i.__assign({}, t))
+            };
+        n.d(t, "FeaturedBroadcastersRenderContext", function() {
+            return s.FeaturedBroadcastersRenderContext
+        }), n.d(t, "FeaturedBroadcasters", function() {
+            return l
+        })
+    },
+    1035: function(e, t, n) {
+        "use strict";
+
+        function i(e, t, n, i) {
+            switch (t) {
+                case r.AnonFront:
+                    return s.createElement(d.a, {
+                        items: e,
+                        isLoading: n,
+                        layout: u.c.Horizontal,
+                        showCounts: i,
+                        darkTheme: !0
+                    });
+                default:
+                    return s.createElement(g._17, {
+                        className: "featured-broadcasters",
+                        background: g.m.Base,
+                        elevation: 1
+                    }, s.createElement(g.U, {
+                        padding: 1
+                    }, s.createElement(g._21, {
+                        fontSize: g.L.Size5,
+                        color: g.F.Alt2
+                    }, Object(l.d)("Featured Broadcasters", "FeaturedBroadcastersComponent"))), s.createElement(d.a, {
+                        items: e,
+                        isLoading: n,
+                        layout: u.c.Vertical,
+                        showCounts: i
+                    }))
+            }
+        }
+
+        function a(e) {
+            return i([], e, !0)
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), n.d(t, "FeaturedBroadcastersRenderContext", function() {
+            return r
+        }), t.placeholderFeaturedBroadcasters = a, n.d(t, "FeaturedBroadcasters", function() {
+            return v
+        });
+        var r, o = n(0),
+            s = n(1),
+            l = (n.n(s), n(2)),
+            c = n(7),
+            d = n(1065),
+            u = n(866),
+            m = n(1066),
+            p = n(5),
+            g = n(3),
+            f = n(1297);
+        n.n(f);
+        ! function(e) {
+            e[e.AnonFront = 1] = "AnonFront", e[e.Front = 2] = "Front"
+        }(r || (r = {}));
+        var h = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.getRender = function(e) {
+                        var n = !(!t.props.data.loading && !t.props.data.error);
+                        return i(e, t.props.renderContext, n, t.props.showCounts)
+                    }, t
+                }
+                return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.postRender()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.postRender()
+                }, t.prototype.render = function() {
+                    var e = this.props.data.featuredStreams || [],
+                        t = Object(m.a)(e);
+                    return this.getRender(t)
+                }, t.prototype.postRender = function() {
+                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
+                }, t = o.__decorate([Object(c.a)(f, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                language: l.n.intl.getLanguageCode(),
+                                first: e.streamCount || 6
+                            }
+                        }
+                    }
+                }), Object(p.c)("FeaturedBroadcasters")], t)
+            }(s.Component),
+            v = h
+    },
+    1065: function(e, t, n) {
         "use strict";
 
         function i() {
@@ -127,16 +261,16 @@ webpackJsonp([48], {
         }
         var p, g = n(0),
             f = n(2),
-            h = n(1003);
+            h = n(1e3);
         f.n.store.registerReducer("carouselPlayer", a);
-        var v = n(7),
+        var v = n(6),
             y = n(9),
             k = n(4),
             _ = n(1),
-            b = n(869),
+            b = n(866),
             S = n(5),
             N = n(3),
-            E = (n(1294), "carousel-card-live"),
+            E = (n(1293), "carousel-card-live"),
             C = "carousel-card-vod",
             w = function(e) {
                 function t() {
@@ -217,11 +351,11 @@ webpackJsonp([48], {
                 }, t = g.__decorate([Object(S.c)("CarouselCard")], t)
             }(_.Component),
             O = w,
-            U = n(65),
-            x = n(10),
+            x = n(65),
+            U = n(10),
             F = n(49),
-            D = n(446),
-            R = (n(1295), {
+            D = n(443),
+            R = (n(1294), {
                 content: "carousel",
                 medium: "twitch_home"
             }),
@@ -233,7 +367,7 @@ webpackJsonp([48], {
                                 "horizontal-carousel-player__details--overlay": t.props.darkTheme
                             }),
                             n = Object(f.d)("playing {game}", {
-                                game: _.createElement(x.a, {
+                                game: _.createElement(U.a, {
                                     to: {
                                         pathname: "/directory/game/" + t.props.item.content.gameName,
                                         state: R
@@ -278,7 +412,7 @@ webpackJsonp([48], {
                             flexShrink: 0
                         }, _.createElement("span", {
                             onClick: t.promotionCardClick.bind(t, "thumbnail")
-                        }, _.createElement(x.a, {
+                        }, _.createElement(U.a, {
                             to: {
                                 pathname: "/" + t.props.item.broadcaster.login,
                                 state: R
@@ -311,13 +445,13 @@ webpackJsonp([48], {
                             }
                         }, _.createElement("span", {
                             onClick: t.promotionCardClick.bind(t, "stream_title")
-                        }, _.createElement(x.a, {
+                        }, _.createElement(U.a, {
                             to: t.getLinkForTitle()
                         }, _.createElement(N._21, {
                             type: N._26.Span,
                             "data-a-target": b.a,
                             fontSize: N.L.Size3
-                        }, t.props.item.title)))), _.createElement(U, {
+                        }, t.props.item.title)))), _.createElement(x, {
                             source: t.props.item.description || ""
                         })))
                     }, t.getLinkForTitle = function() {
@@ -399,8 +533,8 @@ webpackJsonp([48], {
                     return this.props.item ? this.getContentRender() : this.getPlaceholderRender()
                 }, t
             }(_.Component),
-            I = n(141),
-            P = (n(1296), function(e) {
+            I = n(139),
+            P = (n(1295), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
@@ -410,13 +544,13 @@ webpackJsonp([48], {
                             n = Object(f.d)("{login} playing {game}", {
                                 login: _.createElement("span", {
                                     onClick: t.promotionCardClick.bind(t, "display_name")
-                                }, _.createElement(x.a, {
+                                }, _.createElement(U.a, {
                                     to: "/" + t.props.item.broadcaster.login,
                                     "data-a-target": "carousel-broadcaster-displayname"
                                 }, Object(F.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName))),
                                 game: _.createElement("span", {
                                     onClick: t.promotionCardClick.bind(t, "game_name")
-                                }, _.createElement(x.a, {
+                                }, _.createElement(U.a, {
                                     to: "/directory/game/" + t.props.item.content.gameName,
                                     "data-a-target": "carousel-broadcaster-game-name"
                                 }, t.props.item.content.gameName))
@@ -454,7 +588,7 @@ webpackJsonp([48], {
                             flexShrink: 0
                         }, _.createElement("span", {
                             onClick: t.promotionCardClick.bind(t, "thumbnail")
-                        }, _.createElement(x.a, {
+                        }, _.createElement(U.a, {
                             to: "/" + t.props.item.broadcaster.login,
                             "data-a-target": "carousel-avatar-link"
                         }, _.createElement(N.l, {
@@ -485,7 +619,7 @@ webpackJsonp([48], {
                         }) : _.createElement(N._1, {
                             width: 70,
                             height: 30
-                        }))), _.createElement(U, {
+                        }))), _.createElement(x, {
                             source: t.props.item.description || ""
                         }))
                     }, t.getPlaceholderRender = function() {
@@ -541,7 +675,7 @@ webpackJsonp([48], {
             }(_.Component)),
             L = Object(v.a)(o)(P),
             j = n(12),
-            A = (n(1297), 6),
+            A = (n(1296), 6),
             H = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -699,7 +833,7 @@ webpackJsonp([48], {
             return V
         })
     },
-    1067: function(e, t, n) {
+    1066: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -762,18 +896,34 @@ webpackJsonp([48], {
             return e.replace(/\[\]\(.+\)/, "")
         }
         t.a = i, t.b = a;
-        var o = n(869)
+        var o = n(866)
     },
-    1293: function(e, t, n) {
+    129: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return r.b.get(s.a, !1) || r.a.buildType !== o.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? l + e : l + e.pathname
+        }
+
+        function a() {
+            return !r.b.get(s.a, !1) && r.a.buildType === o.a.Production
+        }
+        var r = n(2),
+            o = n(16),
+            s = n(263);
+        t.a = i, t.b = a;
+        var l = "https://www.twitch.tv"
+    },
+    1292: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
             r = n(2),
-            o = n(836),
-            s = n(113),
-            l = n(73),
-            c = n(74),
-            d = n(301),
+            o = n(833),
+            s = n(111),
+            l = n(1034),
+            c = n(1035),
+            d = n(1298),
             u = function(e) {
                 var t = {
                     name: "TWILIGHT_VIDEO_FEATURO_EN",
@@ -782,14 +932,14 @@ webpackJsonp([48], {
                             return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 73))
+                                }).then(n.bind(null, 1034))
                             }, "FeaturedBroadcasters")(i.__assign({}, e))
                         },
                         mixed: function() {
                             return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 301))
+                                }).then(n.bind(null, 1298))
                             }, "FeaturedContent")(i.__assign({}, e, {
                                 shouldMixContent: !0
                             }))
@@ -798,7 +948,7 @@ webpackJsonp([48], {
                             return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 301))
+                                }).then(n.bind(null, 1298))
                             }, "FeaturedContent")(i.__assign({}, e, {
                                 shouldMixContent: !1
                             }))
@@ -818,11 +968,11 @@ webpackJsonp([48], {
             return u
         })
     },
+    1293: function(e, t) {},
     1294: function(e, t) {},
     1295: function(e, t) {},
     1296: function(e, t) {},
-    1297: function(e, t) {},
-    1298: function(e, t) {
+    1297: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1125,6 +1275,103 @@ webpackJsonp([48], {
             }
         };
         e.exports = n
+    },
+    1298: function(e, t, n) {
+        "use strict";
+
+        function i(e, t, n) {
+            switch (t) {
+                case m.FeaturedBroadcastersRenderContext.AnonFront:
+                    return s.createElement(d.a, {
+                        items: e,
+                        isLoading: n,
+                        layout: u.c.Horizontal,
+                        showCounts: !0,
+                        darkTheme: !0
+                    });
+                default:
+                    return s.createElement(h._17, {
+                        className: "featured-content",
+                        background: h.m.Base,
+                        elevation: 1
+                    }, s.createElement(h.U, {
+                        padding: 1
+                    }, a(n)), s.createElement(d.a, {
+                        items: e,
+                        isLoading: n,
+                        layout: u.c.Vertical,
+                        showCounts: !0
+                    }))
+            }
+        }
+
+        function a(e) {
+            return e ? s.createElement(h._21, {
+                fontSize: h.L.Size5,
+                color: h.F.Alt2
+            }, s.createElement(h._1, {
+                width: 100
+            })) : s.createElement(h._21, {
+                fontSize: h.L.Size5,
+                color: h.F.Alt2
+            }, Object(l.d)("Featured", "FeaturedContentComponent"))
+        }
+
+        function r(e) {
+            return i([], e, !0)
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.placeholderFeaturedBroadcasters = r, n.d(t, "FeaturedContent", function() {
+            return y
+        });
+        var o = n(0),
+            s = n(1),
+            l = (n.n(s), n(2)),
+            c = n(7),
+            d = n(1065),
+            u = n(866),
+            m = n(1034),
+            p = n(1299),
+            g = (n.n(p), n(1066)),
+            f = n(5),
+            h = n(3);
+        n.d(t, "FeaturedBroadcastersRenderContext", function() {
+            return m.FeaturedBroadcastersRenderContext
+        });
+        var v = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.postRender()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.postRender()
+                }, t.prototype.render = function() {
+                    var e = this.props.data.featuredStreams || [],
+                        t = Object(g.a)(e),
+                        n = this.props.data.featuredVideos || [],
+                        a = Object(g.b)(n);
+                    if (t.length > 0 && t.splice(t.length - a.length), this.props.shouldMixContent && a.length > 0) {
+                        var r = 6 - a.length,
+                            o = t.splice(r);
+                        t = t.concat(a).concat(o)
+                    } else t = t.concat(a);
+                    var s = !(!this.props.data.loading && !this.props.data.error);
+                    return i(t, this.props.renderContext, s)
+                }, t.prototype.postRender = function() {
+                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
+                }, t = o.__decorate([Object(c.a)(p, {
+                    options: function() {
+                        return {
+                            variables: {
+                                language: l.n.intl.getLanguageCode()
+                            }
+                        }
+                    }
+                }), Object(f.c)("FeaturedContent")], t)
+            }(s.Component),
+            y = v
     },
     1299: function(e, t) {
         var n = {
@@ -1638,23 +1885,7 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    131: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return r.b.get(s.a, !1) || r.a.buildType !== o.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? l + e : l + e.pathname
-        }
-
-        function a() {
-            return !r.b.get(s.a, !1) && r.a.buildType === o.a.Production
-        }
-        var r = n(2),
-            o = n(16),
-            s = n(264);
-        t.a = i, t.b = a;
-        var l = "https://www.twitch.tv"
-    },
-    134: function(e, t, n) {
+    132: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -1681,7 +1912,7 @@ webpackJsonp([48], {
             l = "prime_landing_page_base_url",
             c = a.i.withCategory("PrimeUtilsLogger")
     },
-    135: function(e, t, n) {
+    133: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1794,8 +2025,8 @@ webpackJsonp([48], {
             f = n(2),
             h = n(51),
             v = n(17),
-            y = n(418),
-            k = (n.n(y), n(419)),
+            y = n(415),
+            k = (n.n(y), n(416)),
             _ = (n.n(k), "twilight.sessionID"),
             b = 0,
             S = f.i.withCategory("Session Status"),
@@ -1806,8 +2037,8 @@ webpackJsonp([48], {
             },
             E = N
     },
-    1693: function(e, t) {},
-    1694: function(e, t) {
+    1694: function(e, t) {},
+    1695: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1948,8 +2179,8 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    1695: function(e, t) {},
-    1696: function(e, t) {
+    1696: function(e, t) {},
+    1697: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2226,9 +2457,9 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    1697: function(e, t) {},
     1698: function(e, t) {},
-    2048: function(e, t, n) {
+    1699: function(e, t) {},
+    2052: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -2236,11 +2467,11 @@ webpackJsonp([48], {
         var i, a = n(0),
             r = n(1),
             o = n(2),
-            s = n(391),
+            s = n(388),
             l = n(47),
             c = n(5),
             d = n(3),
-            u = (n(1693), function() {
+            u = (n(1694), function() {
                 return r.createElement(d.U, {
                     className: "footer",
                     padding: {
@@ -2392,20 +2623,20 @@ webpackJsonp([48], {
             m = Object(c.c)("Footer", {
                 autoReportInteractive: !0
             })(u),
-            p = n(908),
-            g = n(813),
-            f = n(810),
-            h = n(112),
+            p = n(905),
+            g = n(810),
+            f = n(807),
+            h = n(110),
             v = n(12),
-            y = n(879),
-            k = n(383),
-            _ = n(1293),
-            b = n(389),
+            y = n(876),
+            k = n(380),
+            _ = n(1292),
+            b = n(386),
             S = n(10),
-            N = n(6),
-            E = n(377),
-            C = n(1694),
-            w = (n(1695), function(e) {
+            N = n(7),
+            E = n(374),
+            C = n(1695),
+            w = (n(1696), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2534,13 +2765,13 @@ webpackJsonp([48], {
                 }, t = a.__decorate([Object(N.a)(C), Object(c.c)("FeaturedGames")], t)
             }(r.Component)),
             O = w,
-            U = n(909),
-            x = n(49);
+            x = n(906),
+            U = n(49);
         ! function(e) {
             e[e.All = 1] = "All", e[e.Xbox = 2] = "Xbox", e[e.PS4 = 3] = "PS4"
         }(i || (i = {}));
-        var F = n(1696),
-            D = (n(1697), function(e) {
+        var F = n(1697),
+            D = (n(1698), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getItems = function() {
@@ -2567,7 +2798,7 @@ webpackJsonp([48], {
                         }
                         return t.props.data.streams.edges.map(function(e, n) {
                             var i = e.node,
-                                a = Object(x.a)(i.broadcaster.login, i.broadcaster.displayName),
+                                a = Object(U.a)(i.broadcaster.login, i.broadcaster.displayName),
                                 s = {
                                     medium: v.PageviewMedium.Following,
                                     content: v.PageviewContent.Live,
@@ -2579,7 +2810,7 @@ webpackJsonp([48], {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, r.createElement(U.a, {
+                            }, r.createElement(x.a, {
                                 imageSrc: i && i.previewImageURL || o.a.defaultStreamPreviewURL,
                                 imageAlt: i && i.title || "",
                                 viewerCount: i && i.viewersCount || 0,
@@ -2736,7 +2967,7 @@ webpackJsonp([48], {
                 }), Object(c.c)("TopChannels")], t)
             }(r.Component)),
             R = D,
-            T = (n(1698), function(e) {
+            T = (n(1699), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2932,7 +3163,7 @@ webpackJsonp([48], {
             return I
         })
     },
-    264: function(e, t, n) {
+    263: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(20),
@@ -3017,104 +3248,7 @@ webpackJsonp([48], {
             return d
         })
     },
-    301: function(e, t, n) {
-        "use strict";
-
-        function i(e, t, n) {
-            switch (t) {
-                case m.FeaturedBroadcastersRenderContext.AnonFront:
-                    return s.createElement(d.a, {
-                        items: e,
-                        isLoading: n,
-                        layout: u.c.Horizontal,
-                        showCounts: !0,
-                        darkTheme: !0
-                    });
-                default:
-                    return s.createElement(h._17, {
-                        className: "featured-content",
-                        background: h.m.Base,
-                        elevation: 1
-                    }, s.createElement(h.U, {
-                        padding: 1
-                    }, a(n)), s.createElement(d.a, {
-                        items: e,
-                        isLoading: n,
-                        layout: u.c.Vertical,
-                        showCounts: !0
-                    }))
-            }
-        }
-
-        function a(e) {
-            return e ? s.createElement(h._21, {
-                fontSize: h.L.Size5,
-                color: h.F.Alt2
-            }, s.createElement(h._1, {
-                width: 100
-            })) : s.createElement(h._21, {
-                fontSize: h.L.Size5,
-                color: h.F.Alt2
-            }, Object(l.d)("Featured", "FeaturedContentComponent"))
-        }
-
-        function r(e) {
-            return i([], e, !0)
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.placeholderFeaturedBroadcasters = r, n.d(t, "FeaturedContent", function() {
-            return y
-        });
-        var o = n(0),
-            s = n(1),
-            l = (n.n(s), n(2)),
-            c = n(6),
-            d = n(1066),
-            u = n(869),
-            m = n(73),
-            p = n(1299),
-            g = (n.n(p), n(1067)),
-            f = n(5),
-            h = n(3);
-        n.d(t, "FeaturedBroadcastersRenderContext", function() {
-            return m.FeaturedBroadcastersRenderContext
-        });
-        var v = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.postRender()
-                }, t.prototype.componentDidUpdate = function() {
-                    this.postRender()
-                }, t.prototype.render = function() {
-                    var e = this.props.data.featuredStreams || [],
-                        t = Object(g.a)(e),
-                        n = this.props.data.featuredVideos || [],
-                        a = Object(g.b)(n);
-                    if (t.length > 0 && t.splice(t.length - a.length), this.props.shouldMixContent && a.length > 0) {
-                        var r = 6 - a.length,
-                            o = t.splice(r);
-                        t = t.concat(a).concat(o)
-                    } else t = t.concat(a);
-                    var s = !(!this.props.data.loading && !this.props.data.error);
-                    return i(t, this.props.renderContext, s)
-                }, t.prototype.postRender = function() {
-                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
-                }, t = o.__decorate([Object(c.a)(p, {
-                    options: function() {
-                        return {
-                            variables: {
-                                language: l.n.intl.getLanguageCode()
-                            }
-                        }
-                    }
-                }), Object(f.c)("FeaturedContent")], t)
-            }(s.Component),
-            y = v
-    },
-    380: function(e, t, n) {
+    377: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -3129,7 +3263,7 @@ webpackJsonp([48], {
         }
         t.a = i
     },
-    383: function(e, t, n) {
+    380: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -3237,15 +3371,15 @@ webpackJsonp([48], {
             m = "ads.slot-ready",
             p = new r.EventEmitter
     },
-    388: function(e, t, n) {
+    385: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
             r = n(2),
-            o = n(6),
+            o = n(7),
             s = n(56),
             l = n(3),
-            c = n(408),
+            c = n(405),
             d = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -3292,7 +3426,7 @@ webpackJsonp([48], {
             return d
         })
     },
-    389: function(e, t, n) {
+    386: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -3300,17 +3434,17 @@ webpackJsonp([48], {
                 firstPageLoaded: !!e.session.firstPageLoaded
             }
         }
-        var a = n(7),
+        var a = n(6),
             r = n(0),
             o = n(20),
             s = n(1),
             l = n(2),
             c = n(47),
-            d = n(6),
-            u = n(107),
+            d = n(7),
+            u = n(105),
             m = n(5),
             p = n(3),
-            g = (n(423), function(e) {
+            g = (n(420), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3408,13 +3542,13 @@ webpackJsonp([48], {
                 return e + "-" + t
             },
             N = function() {
-                return U("claimedOffers")
+                return x("claimedOffers")
             },
             E = function(e) {
                 l.k.set("claimedOffers", e)
             },
             C = function() {
-                return U("seenOffers")
+                return x("seenOffers")
             },
             w = function(e) {
                 l.k.set("seenOffers", e)
@@ -3422,15 +3556,15 @@ webpackJsonp([48], {
             O = function(e, t) {
                 return (e && (e.priority || 0 === e.priority) ? e.priority : 99999) - (t && (t.priority || 0 === t.priority) ? t.priority : 99999)
             },
-            U = function(e) {
+            x = function(e) {
                 return l.k.get(e, [])
             },
-            x = function() {
+            U = function() {
                 var e = location.search,
                     t = o.parse(e);
                 return t && t.dateOverride || void 0
             },
-            F = (n(424), n(425)),
+            F = (n(421), n(422)),
             D = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -3506,7 +3640,7 @@ webpackJsonp([48], {
                 }, t = r.__decorate([Object(m.c)("PrimeClaimDescription")], t)
             }(s.Component),
             I = T,
-            P = n(134),
+            P = n(132),
             L = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -3530,7 +3664,7 @@ webpackJsonp([48], {
                 }, t = r.__decorate([Object(m.c)("PrimeUpsellButton")], t)
             }(s.Component),
             j = L,
-            A = n(426),
+            A = n(423),
             H = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -3609,7 +3743,7 @@ webpackJsonp([48], {
                 }, t = r.__decorate([Object(m.c)("PrimeError")], t)
             }(s.Component),
             q = V,
-            M = (n(427), function(e) {
+            M = (n(424), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.setRef = function(e) {
@@ -3767,8 +3901,8 @@ webpackJsonp([48], {
                 }, t = r.__decorate([Object(m.c)("PrimeRedeem")], t)
             }(s.Component),
             X = $,
-            J = n(428),
-            Y = (n(429), n(430)),
+            J = n(425),
+            Y = (n(426), n(427)),
             Z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3952,7 +4086,7 @@ webpackJsonp([48], {
                 }, t = r.__decorate([Object(m.c)("PrimeOfferPlaceholder")], t)
             }(s.Component),
             ne = te,
-            ie = (n(431), function(e) {
+            ie = (n(428), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3988,8 +4122,8 @@ webpackJsonp([48], {
                 }, t = r.__decorate([Object(m.c)("PrimeUpsell")], t)
             }(s.Component)),
             ae = ie,
-            re = n(432),
-            oe = (n(433), n(434)),
+            re = n(429),
+            oe = (n(430), n(431)),
             se = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4066,8 +4200,8 @@ webpackJsonp([48], {
                 }), Object(m.c)("PrimeOfferList")], t)
             }(s.Component),
             le = se,
-            ce = n(435),
-            de = (n(436), n(437)),
+            ce = n(432),
+            de = (n(433), n(434)),
             ue = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4175,7 +4309,7 @@ webpackJsonp([48], {
             }(s.Component),
             me = ue,
             pe = Object(a.a)(i)(me),
-            ge = (n(438), n(439)),
+            ge = (n(435), n(436)),
             fe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -4288,7 +4422,7 @@ webpackJsonp([48], {
                         return {
                             variables: {
                                 stringIds: ["twitch.prime.bluebar.left1", "twitch.prime.bluebar.center1", "twitch.prime.bluebar.right1"],
-                                dateOverride: x()
+                                dateOverride: U()
                             }
                         }
                     }
@@ -4300,10 +4434,10 @@ webpackJsonp([48], {
         }), n.d(t, "a", function() {
             return he
         }), n.d(t, "c", function() {
-            return x
+            return U
         })
     },
-    391: function(e, t, n) {
+    388: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4321,14 +4455,14 @@ webpackJsonp([48], {
                 changeLanguage: i
             }, e)
         }
-        var o = n(7),
+        var o = n(6),
             s = n(9),
             l = n(72),
             c = n(0),
             d = n(1),
             u = n(2),
             m = n(3),
-            p = (n(399), function(e) {
+            p = (n(396), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderLink = function(e) {
@@ -4367,7 +4501,7 @@ webpackJsonp([48], {
             return g
         })
     },
-    392: function(e, t, n) {
+    389: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -4378,7 +4512,7 @@ webpackJsonp([48], {
             try {
                 s = new URL(i)
             } catch (t) {
-                return _.i.error(t.toString(), i + " was malformed from notification id:[" + e.id + "]"), n
+                return b.i.error(t.toString(), i + " was malformed from notification id:[" + e.id + "]"), n
             }
             return r(e.type, s) ? n.linkTo = {
                 pathname: s.pathname,
@@ -4393,14 +4527,14 @@ webpackJsonp([48], {
         function a(e, t, n) {
             var i = e.split("?");
             if (1 === i.length) return e + "?tt_content=" + t + "&tt_medium=" + n;
-            var a = y.parse(i[1]);
-            return a.tt_content = a.tt_content ? a.tt_content : t, a.tt_medium = a.tt_medium ? a.tt_medium : n, [i[0], y.stringify(a, {
+            var a = k.parse(i[1]);
+            return a.tt_content = a.tt_content ? a.tt_content : t, a.tt_medium = a.tt_medium ? a.tt_medium : n, [i[0], k.stringify(a, {
                 encode: !1
             })].join("?")
         }
 
         function r(e, t) {
-            return !L.has(e) && "https://www.twitch.tv" === t.origin
+            return !j.has(e) && "https://www.twitch.tv" === t.origin
         }
 
         function o(e) {
@@ -4433,59 +4567,67 @@ webpackJsonp([48], {
 
         function l(e) {
             return {
-                currentUser: Object(ae.c)(e)
+                currentUser: Object(re.c)(e)
             }
         }
 
-        function c(e) {
-            return e.type === C.c.OnsiteNotificationsRead
+        function c(e, t) {
+            for (var n = [], i = 0; i < e.length; i += t) {
+                var a = e.slice(i, i + t);
+                n.push(a)
+            }
+            return n
         }
 
         function d(e) {
-            return e.type === C.c.OnsiteNotificationCreate || e.type === C.c.OnsiteNotificationUpdate
+            return e.type === w.c.OnsiteNotificationsRead
         }
 
         function u(e) {
-            return e.type === C.c.OnsiteNotificationDelete
+            return e.type === w.c.OnsiteNotificationCreate || e.type === w.c.OnsiteNotificationUpdate
         }
 
-        function m(e, t) {
-            return me.debug("Received pubsub summary update", e), t && t.currentUser && t.currentUser.notifications && t.currentUser.notifications.summary && e.data.summary ? (t.currentUser.notifications.summary.lastSeenAt = e.data.summary.last_seen_at, t.currentUser.notifications.summary.unseenCount = e.data.summary.unseen_view_count, t) : t
+        function m(e) {
+            return e.type === w.c.OnsiteNotificationDelete
         }
 
         function p(e, t) {
-            if (me.debug("Received pubsub notification update", e), !(t && t.currentUser && t.currentUser.notifications && t.currentUser.notifications.edges && t.currentUser.notifications.edges)) return t;
-            if (c(e)) {
+            return pe.debug("Received pubsub summary update", e), t && t.currentUser && t.currentUser.notifications && t.currentUser.notifications.summary && e.data.summary ? (t.currentUser.notifications.summary.lastSeenAt = e.data.summary.last_seen_at, t.currentUser.notifications.summary.unseenCount = e.data.summary.unseen_view_count, t) : t
+        }
+
+        function g(e, t) {
+            if (pe.debug("Received pubsub notification update", e), !(t && t.currentUser && t.currentUser.notifications && t.currentUser.notifications.edges && t.currentUser.notifications.edges)) return t;
+            if (d(e)) {
                 var n = new Set(e.data.notification_ids),
                     i = t.currentUser.notifications.edges.map(function(e) {
-                        return n.has(e.node.id) ? v.__assign({}, e, {
-                            node: v.__assign({}, e.node, {
+                        return n.has(e.node.id) ? y.__assign({}, e, {
+                            node: y.__assign({}, e.node, {
                                 isRead: !0
                             })
                         }) : e
                     });
                 t.currentUser.notifications.edges = i
-            } else if (d(e)) {
+            } else if (u(e)) {
                 if (e.data.persistent) {
                     var a = s(e.data.notification),
-                        i = g(t.currentUser.notifications.edges, a.id);
+                        i = f(t.currentUser.notifications.edges, a.id);
                     i.unshift({
                         cursor: null,
                         node: a,
                         __typename: "OnsiteNotificationEdge"
                     }), t.currentUser.notifications.edges = i
                 }
-            } else u(e) && (t.currentUser.notifications.edges = g(t.currentUser.notifications.edges, e.data.notification_id));
+            } else m(e) && (t.currentUser.notifications.edges = f(t.currentUser.notifications.edges, e.data.notification_id));
             return t
         }
 
-        function g(e, t) {
+        function f(e, t) {
             return e.filter(function(e) {
                 return e.node.id !== t
             })
         }
 
-        function f() {
+        function h() {
             return function(e) {
                 return function(t) {
                     function n() {
@@ -4498,77 +4640,77 @@ webpackJsonp([48], {
                             })
                         }, e
                     }
-                    return v.__extends(n, t), n.prototype.render = function() {
+                    return y.__extends(n, t), n.prototype.render = function() {
                         var t = {
                             shouldDefer: this.state.shouldDefer,
                             stopDeferring: this.stopDeferring
                         };
-                        return k.createElement(e, v.__assign({}, this.props, t))
+                        return _.createElement(e, y.__assign({}, this.props, t))
                     }, n
-                }(k.Component)
+                }(_.Component)
             }
         }
-        var h, v = n(0),
-            y = n(20),
-            k = n(1),
-            _ = n(2),
-            b = n(47),
-            S = n(6),
-            N = n(108),
-            E = n(16),
-            C = n(37),
-            w = n(21),
-            O = n(30),
+        var v, y = n(0),
+            k = n(20),
+            _ = n(1),
+            b = n(2),
+            S = n(47),
+            N = n(7),
+            E = n(106),
+            C = n(16),
+            w = n(37),
+            O = n(21),
+            x = n(30),
             U = n(5),
-            x = n(28),
-            F = n(31),
-            D = n(400),
-            R = n.n(D),
-            T = n(14),
-            I = n(65),
-            P = n(12),
-            L = new Set(["affiliateinvite", "feedcomment", "friendrequests", "partneragreementupdate", "partnerinvite", "vodcomment", "vodcommentmod"]),
-            j = {
+            F = n(28),
+            D = n(31),
+            R = n(397),
+            T = n.n(R),
+            I = n(14),
+            P = n(65),
+            L = n(12),
+            j = new Set(["affiliateinvite", "feedcomment", "friendrequests", "partneragreementupdate", "partnerinvite", "vodcomment", "vodcommentmod"]),
+            A = {
                 Center: "center",
                 Toast: "toast",
                 Browser: "browser"
             },
-            A = {
+            H = {
                 Open: "open",
                 Close: "close",
                 MarkAllRead: "mark_all_read"
             },
-            H = {
+            B = {
                 PrimaryCta: "primary_cta",
                 Dismiss: "dismiss"
             },
-            B = function(e) {
+            V = function(e) {
                 var t = {
                     notification_id: e.notification.id,
                     notification_type: e.notification.type,
                     ui_context: e.uiContext
                 };
-                _.m.track(P.SpadeEventType.NotificationImpression, t)
+                b.m.track(L.SpadeEventType.NotificationImpression, t)
             },
-            V = function(e) {
+            q = function(e) {
                 var t = {
                     unseen_view_count: e.unseenCount,
                     action: e.action
                 };
-                _.m.track(P.SpadeEventType.NotificationCenterInteraction, t)
+                b.m.track(L.SpadeEventType.NotificationCenterInteraction, t)
             },
-            q = function(e) {
+            M = function(e) {
                 var t = {
                     notification_id: e.notification.id,
                     notification_type: e.notification.type,
                     ui_context: e.uiContext,
                     action: e.action
                 };
-                _.m.track(P.SpadeEventType.NotificationInteraction, t)
+                b.m.track(L.SpadeEventType.NotificationInteraction, t)
             },
-            M = n(3),
-            z = (n(401), "persistent-notification__delete"),
-            W = function(e) {
+            z = n(3),
+            W = (n(398), "persistent-notification__delete"),
+            G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.impressionEventFired = !1, t.isVisible = function(e) {
@@ -4580,129 +4722,129 @@ webpackJsonp([48], {
                     }, t.setRef = function(e) {
                         return t.element = e
                     }, t.deleteNotification = function() {
-                        q({
-                            uiContext: j.Center,
+                        M({
+                            uiContext: A.Center,
                             notification: t.props.data,
-                            action: H.Dismiss
+                            action: B.Dismiss
                         }), t.props.onDeleteNotification(t.props.data.id)
                     }, t.clickNotification = function() {
-                        q({
-                            uiContext: j.Center,
+                        M({
+                            uiContext: A.Center,
                             notification: t.props.data,
-                            action: H.PrimaryCta
+                            action: B.PrimaryCta
                         }), t.props.onViewNotification(t.props.data.id)
                     }, t.renderDeleteNotification = function() {
-                        return k.createElement(M.U, {
+                        return _.createElement(z.U, {
                             className: "persistent-notification__delete",
                             padding: {
                                 top: 1,
                                 left: 1,
                                 right: .5
                             },
-                            position: M._2.Absolute
-                        }, k.createElement(M.U, {
-                            display: M.H.Flex,
-                            flexWrap: M.K.NoWrap,
-                            alignItems: M.c.Start
-                        }, k.createElement(M.v, {
+                            position: z._2.Absolute
+                        }, _.createElement(z.U, {
+                            display: z.H.Flex,
+                            flexWrap: z.K.NoWrap,
+                            alignItems: z.c.Start
+                        }, _.createElement(z.v, {
                             ariaLabel: "delete-notification",
-                            "data-test-selector": z,
-                            icon: M._9.Close,
-                            size: M.x.Small,
+                            "data-test-selector": W,
+                            icon: z._9.Close,
+                            size: z.x.Small,
                             onClick: t.deleteNotification
                         })))
                     }, t
                 }
-                return v.__extends(t, e), t.prototype.componentDidMount = function() {
+                return y.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive();
                     var e = this.context.registerReceiver;
-                    e ? this.unregister = e(this) : _.i.warn("<PersistentNotification /> initialized missing a <ScrollableArea /> provider")
+                    e ? this.unregister = e(this) : b.i.warn("<PersistentNotification /> initialized missing a <ScrollableArea /> provider")
                 }, t.prototype.componentWillUnmount = function() {
                     this.unregister && this.unregister()
                 }, t.prototype.render = function() {
-                    return k.createElement(M.U, {
+                    return _.createElement(z.U, {
                         className: "persistent-notification",
-                        position: M._2.Relative,
+                        position: z._2.Relative,
                         refDelegate: this.setRef,
                         "data-test-selector": "persistent-notification"
-                    }, k.createElement(M._17, {
-                        display: M.H.Flex,
+                    }, _.createElement(z._17, {
+                        display: z.H.Flex,
                         className: this.props.data.isRead ? "persistent-notification__read" : "persistent-notification__unread",
                         borderBottom: !0,
-                        flexWrap: M.K.NoWrap
-                    }, k.createElement(M.S, v.__assign({
+                        flexWrap: z.K.NoWrap
+                    }, _.createElement(z.S, y.__assign({
                         "data-test-selector": "persistent-notification__click",
                         onClick: this.clickNotification
-                    }, i(this.props.data, P.PageviewMedium.NotificationCenter), {
+                    }, i(this.props.data, L.PageviewMedium.NotificationCenter), {
                         alpha: !0
-                    }), k.createElement(M.U, {
+                    }), _.createElement(z.U, {
                         className: "persistent-notification__area",
-                        display: M.H.Flex,
-                        flexWrap: M.K.NoWrap,
+                        display: z.H.Flex,
+                        flexWrap: z.K.NoWrap,
                         padding: {
                             top: 1,
                             bottom: 1,
                             left: 1,
                             right: 3
                         }
-                    }, k.createElement(M.C, {
-                        aspect: M.k.Aspect1x1,
+                    }, _.createElement(z.C, {
+                        aspect: z.k.Aspect1x1,
                         imageSrc: this.props.data.thumbnailURL,
-                        imageAlt: Object(_.d)("Notification center item thumbnail", "OnsiteNotifications"),
-                        size: M.D.Size4
-                    }), k.createElement(M.U, {
-                        display: M.H.Flex,
-                        flexDirection: M.J.Column,
-                        flexWrap: M.K.NoWrap,
+                        imageAlt: Object(b.d)("Notification center item thumbnail", "OnsiteNotifications"),
+                        size: z.D.Size4
+                    }), _.createElement(z.U, {
+                        display: z.H.Flex,
+                        flexDirection: z.J.Column,
+                        flexWrap: z.K.NoWrap,
                         margin: {
                             x: 1
                         }
-                    }, k.createElement(M.U, {
+                    }, _.createElement(z.U, {
                         className: "persistent-notification__body",
-                        overflow: M.Y.Hidden,
+                        overflow: z.Y.Hidden,
                         "data-test-selector": "persistent-notification__body"
-                    }, k.createElement(M._21, {
-                        type: M._26.Span,
-                        color: M.F.Alt
-                    }, k.createElement(I, {
+                    }, _.createElement(z._21, {
+                        type: z._26.Span,
+                        color: z.F.Alt
+                    }, _.createElement(P, {
                         source: this.props.data.body || ""
-                    }))), k.createElement(M.U, {
-                        display: M.H.Flex,
-                        alignItems: M.c.Center,
+                    }))), _.createElement(z.U, {
+                        display: z.H.Flex,
+                        alignItems: z.c.Center,
                         flexShrink: 0,
                         margin: {
                             top: .5
                         }
-                    }, k.createElement(M._8, {
-                        asset: M._9.MessagesSC,
+                    }, _.createElement(z._8, {
+                        asset: z._9.MessagesSC,
                         height: 12,
                         width: 12,
-                        type: M._10.Alt2
-                    }), k.createElement(M.U, {
+                        type: z._10.Alt2
+                    }), _.createElement(z.U, {
                         margin: {
                             left: .5
                         }
-                    }, k.createElement(M._21, {
-                        type: M._26.Span,
-                        color: M.F.Alt2
-                    }, Object(_.g)(new Date(this.props.data.updatedAt)))))))), this.renderDeleteNotification()))
+                    }, _.createElement(z._21, {
+                        type: z._26.Span,
+                        color: z.F.Alt2
+                    }, Object(b.g)(new Date(this.props.data.updatedAt)))))))), this.renderDeleteNotification()))
                 }, t.prototype.checkVisible = function(e) {
-                    return v.__awaiter(this, void 0, void 0, function() {
-                        return v.__generator(this, function(t) {
-                            return !this.impressionEventFired && this.isVisible(e) && (B({
-                                uiContext: j.Center,
+                    return y.__awaiter(this, void 0, void 0, function() {
+                        return y.__generator(this, function(t) {
+                            return !this.impressionEventFired && this.isVisible(e) && (V({
+                                uiContext: A.Center,
                                 notification: this.props.data
                             }), this.impressionEventFired = !0), [2]
                         })
                     })
                 }, t.contextTypes = {
-                    registerReceiver: T.func
-                }, t = v.__decorate([Object(U.c)("PersistentNotification")], t)
-            }(k.Component),
-            G = W,
-            K = n(402),
-            Q = n(403),
-            $ = function(e) {
+                    registerReceiver: I.func
+                }, t = y.__decorate([Object(U.c)("PersistentNotification")], t)
+            }(_.Component),
+            K = G,
+            Q = n(399),
+            $ = n(400),
+            X = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4711,13 +4853,13 @@ webpackJsonp([48], {
                         return {
                             id: "friendrequests",
                             type: "friendrequests",
-                            body: Object(_.d)("{count, plural, one {You have # new friend request} other {You have # new friend requests}}", {
+                            body: Object(b.d)("{count, plural, one {You have # new friend request} other {You have # new friend requests}}", {
                                 count: t.props.count
                             }, "FriendRequestsNotification"),
                             createdAt: t.props.date,
                             updatedAt: t.props.date,
                             isRead: t.props.isOldNotification || t.state.isRead,
-                            thumbnailURL: R.a,
+                            thumbnailURL: T.a,
                             actions: [{
                                 body: "View",
                                 type: "click",
@@ -4725,10 +4867,10 @@ webpackJsonp([48], {
                             }]
                         }
                     }, t.clearUnseenCount = function() {
-                        Object(w.d)(Q, {}, function(e) {
+                        Object(O.d)($, {}, function(e) {
                             return e.currentUser.incomingFriendRequests.totalUnreadCount = 0, e
                         }), t.props.clearUnreadFriendRequests().then(function() {}).catch(function(e) {
-                            return _.i.error(e, "[FriendRequestsNotification] Failed to clear unread requests.")
+                            return b.i.error(e, "[FriendRequestsNotification] Failed to clear unread requests.")
                         })
                     }, t.viewFriendRequests = function() {
                         t.setState({
@@ -4736,23 +4878,23 @@ webpackJsonp([48], {
                         })
                     }, t
                 }
-                return v.__extends(t, e), t.prototype.render = function() {
-                    return k.createElement(G, {
+                return y.__extends(t, e), t.prototype.render = function() {
+                    return _.createElement(K, {
                         key: "friendRequestsNotification",
                         data: this.createNotificationData(),
                         onDeleteNotification: this.clearUnseenCount,
                         onViewNotification: this.viewFriendRequests
                     })
                 }, t
-            }(k.Component),
-            X = Object(F.compose)(Object(S.a)(K, {
+            }(_.Component),
+            J = Object(D.compose)(Object(N.a)(Q, {
                 name: "clearUnreadFriendRequests"
-            }))($),
-            J = (n(404), "center-window__empty"),
-            Y = "center-window__content-footer",
-            Z = "center-window__footer__text",
-            ee = "center-window__read-all",
-            te = function(e) {
+            }))(X),
+            Y = (n(401), "center-window__empty"),
+            Z = "center-window__content-footer",
+            ee = "center-window__footer__text",
+            te = "center-window__read-all",
+            ne = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4763,107 +4905,107 @@ webpackJsonp([48], {
                         }
                         return t.renderEmptyCenterWindowElement()
                     }, t.renderContentFooter = function() {
-                        var e = !t.props.hasInitiallyLoaded || t.state.isLoadingMore ? k.createElement(M.X, {
+                        var e = !t.props.hasInitiallyLoaded || t.state.isLoadingMore ? _.createElement(z.X, {
                             delay: 0,
                             fillContent: !0
-                        }) : k.createElement(M._8, {
-                            asset: M._9.LogoGlitch,
+                        }) : _.createElement(z._8, {
+                            asset: z._9.LogoGlitch,
                             width: 24,
                             height: 24,
-                            type: M._10.Alt2
+                            type: z._10.Alt2
                         });
-                        return k.createElement(M.U, {
+                        return _.createElement(z.U, {
                             className: "center-window__content-footer",
                             key: "center-window__content-footer",
-                            "data-test-selector": Y,
-                            display: M.H.Flex,
-                            flexDirection: M.J.Column,
-                            justifyContent: M.T.Center,
-                            alignItems: M.c.Center,
-                            textAlign: M._22.Center,
+                            "data-test-selector": Z,
+                            display: z.H.Flex,
+                            flexDirection: z.J.Column,
+                            justifyContent: z.T.Center,
+                            alignItems: z.c.Center,
+                            textAlign: z._22.Center,
                             padding: 1,
                             flexGrow: 1
                         }, e)
                     }, t.mapPersistentNotificationElements = function() {
                         var e = t.props.data.map(function(e) {
-                            return k.createElement(G, {
+                            return _.createElement(K, {
                                 key: "onsite-notification-" + e.node.id,
                                 data: e.node,
                                 onDeleteNotification: t.props.onDeleteNotification,
                                 onViewNotification: t.props.onViewNotification
                             })
                         });
-                        return t.props.friendRequestsData && e.unshift(k.createElement(X, v.__assign({}, t.props.friendRequestsData))), e
+                        return t.props.friendRequestsData && e.unshift(_.createElement(J, y.__assign({}, t.props.friendRequestsData))), e
                     }, t.renderEmptyCenterWindowElement = function() {
-                        return k.createElement(M._17, {
-                            "data-test-selector": J,
+                        return _.createElement(z._17, {
+                            "data-test-selector": Y,
                             className: "center-window__empty-state",
-                            background: M.m.Alt,
-                            display: M.H.Flex,
-                            justifyContent: M.T.Center,
-                            alignItems: M.c.Center,
-                            textAlign: M._22.Center,
-                            flexDirection: M.J.Column,
+                            background: z.m.Alt,
+                            display: z.H.Flex,
+                            justifyContent: z.T.Center,
+                            alignItems: z.c.Center,
+                            textAlign: z._22.Center,
+                            flexDirection: z.J.Column,
                             padding: 2,
                             fullWidth: !0
-                        }, k.createElement(M._8, {
-                            asset: M._9.LogoGlitch,
+                        }, _.createElement(z._8, {
+                            asset: z._9.LogoGlitch,
                             width: 100,
                             height: 100,
-                            type: M._10.Placeholder
-                        }), k.createElement(M.U, {
+                            type: z._10.Placeholder
+                        }), _.createElement(z.U, {
                             margin: {
                                 top: 1
                             }
-                        }, k.createElement(M._21, {
-                            type: M._26.H5,
-                            color: M.F.Alt2
-                        }, Object(_.d)("Hooray! You're in the clear!", "OnsiteNotifications"))))
+                        }, _.createElement(z._21, {
+                            type: z._26.H5,
+                            color: z.F.Alt2
+                        }, Object(b.d)("Hooray! You're in the clear!", "OnsiteNotifications"))))
                     }, t.renderMarkAsRead = function() {
-                        return 0 !== t.props.data.length || t.props.friendRequestsData ? k.createElement(M.u, {
-                            "data-test-selector": ee,
-                            type: M.z.Text,
-                            size: M.x.Small,
+                        return 0 !== t.props.data.length || t.props.friendRequestsData ? _.createElement(z.u, {
+                            "data-test-selector": te,
+                            type: z.z.Text,
+                            size: z.x.Small,
                             disabled: 0 === t.props.data.length && !t.props.friendRequestsData,
                             onClick: t.props.onReadAllNotifications
-                        }, Object(_.d)("Mark All as Read", "OnsiteNotifications")) : null
+                        }, Object(b.d)("Mark All as Read", "OnsiteNotifications")) : null
                     }, t.renderNotificationsHeaderElement = function() {
-                        return k.createElement(M._17, {
+                        return _.createElement(z._17, {
                             className: "center-window__header",
-                            background: M.m.Alt,
+                            background: z.m.Alt,
                             padding: {
                                 x: 1,
                                 y: .5
                             },
-                            display: M.H.Flex,
-                            alignItems: M.c.Center,
-                            justifyContent: M.T.Between,
+                            display: z.H.Flex,
+                            alignItems: z.c.Center,
+                            justifyContent: z.T.Between,
                             borderBottom: !0
-                        }, k.createElement(M._21, {
-                            type: M._26.H6,
-                            color: M.F.Alt2,
+                        }, _.createElement(z._21, {
+                            type: z._26.H6,
+                            color: z.F.Alt2,
                             bold: !0
-                        }, Object(_.d)("Notifications", "OnsiteNotifications")), t.renderMarkAsRead())
+                        }, Object(b.d)("Notifications", "OnsiteNotifications")), t.renderMarkAsRead())
                     }, t.renderUnreadNotificationsFooterElement = function() {
-                        var e = 0 === t.props.newNotificationsCount ? null : k.createElement(M._21, {
-                            "data-test-selector": Z,
-                            type: M._26.H6,
-                            color: M.F.Alt2
-                        }, Object(_.d)("{num, plural, one {1 New Notification} other {{num, number} New Notifications} }", {
+                        var e = 0 === t.props.newNotificationsCount ? null : _.createElement(z._21, {
+                            "data-test-selector": ee,
+                            type: z._26.H6,
+                            color: z.F.Alt2
+                        }, Object(b.d)("{num, plural, one {1 New Notification} other {{num, number} New Notifications} }", {
                             num: t.props.newNotificationsCount
                         }, "OnsiteNotifications"));
-                        return k.createElement(M._17, {
+                        return _.createElement(z._17, {
                             className: "center-window__footer",
-                            background: M.m.Alt,
+                            background: z.m.Alt,
                             padding: .5,
-                            alignItems: M.c.Center,
-                            textAlign: M._22.Center,
+                            alignItems: z.c.Center,
+                            textAlign: z._22.Center,
                             borderTop: !0
                         }, e)
                     }, t.loadMore = function() {
-                        return v.__awaiter(t, void 0, void 0, function() {
+                        return y.__awaiter(t, void 0, void 0, function() {
                             var e = this;
-                            return v.__generator(this, function(t) {
+                            return y.__generator(this, function(t) {
                                 return this.state.isLoadingMore ? [2] : (this.setState({
                                     isLoadingMore: !0
                                 }), [2, this.props.onLoadMore().then(function() {
@@ -4875,170 +5017,174 @@ webpackJsonp([48], {
                         })
                     }, t
                 }
-                return v.__extends(t, e), t.prototype.componentDidMount = function() {
+                return y.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return k.createElement(M._17, {
+                    return _.createElement(z._17, {
                         className: "center-window",
                         "data-test-selector": "center-window",
-                        background: M.m.Alt
-                    }, this.renderNotificationsHeaderElement(), k.createElement(x.b, {
+                        background: z.m.Alt
+                    }, this.renderNotificationsHeaderElement(), _.createElement(F.b, {
                         className: "center-window__scroll",
                         contentClassName: "center-window__scroll-container"
-                    }, k.createElement(M.U, {
-                        display: M.H.Flex,
-                        alignItems: M.c.Center,
-                        flexDirection: M.J.Column,
+                    }, _.createElement(z.U, {
+                        display: z.H.Flex,
+                        alignItems: z.c.Center,
+                        flexDirection: z.J.Column,
                         flexGrow: 1,
-                        flexWrap: M.K.NoWrap
-                    }, this.renderContent(), k.createElement(x.a, {
+                        flexWrap: z.K.NoWrap
+                    }, this.renderContent(), _.createElement(F.a, {
                         enabled: this.props.data.length > 0 && !!this.props.data[this.props.data.length - 1].cursor,
                         contentLength: this.props.data.length,
                         loadMore: this.loadMore,
                         pixelThreshold: 200
                     }))), this.renderUnreadNotificationsFooterElement())
-                }, t = v.__decorate([Object(U.c)("OnsiteNotificationsCenterWindow")], t)
-            }(k.Component),
-            ne = te,
-            ie = n(7),
-            ae = n(17),
-            re = n(88),
-            oe = (n(405), function(e) {
+                }, t = y.__decorate([Object(U.c)("OnsiteNotificationsCenterWindow")], t)
+            }(_.Component),
+            ie = ne,
+            ae = n(6),
+            re = n(17),
+            oe = n(86),
+            se = (n(402), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.closeTimeout = 0, t.close = function() {
-                        q({
-                            uiContext: j.Toast,
+                        M({
+                            uiContext: A.Toast,
                             notification: t.props.item,
-                            action: H.Dismiss
+                            action: B.Dismiss
                         }), t.props.close(t.props.index)
                     }, t.onMouseEnter = function() {
                         t.cancelCloseTimer()
                     }, t.onMouseLeave = function() {
                         t.scheduleCloseTimer()
                     }, t.view = function() {
-                        t.props.view(t.props.index)
+                        M({
+                            uiContext: A.Toast,
+                            notification: t.props.item,
+                            action: B.PrimaryCta
+                        }), t.props.view(t.props.index)
                     }, t
                 }
-                return v.__extends(t, e), t.prototype.componentWillMount = function() {
+                return y.__extends(t, e), t.prototype.componentWillMount = function() {
                     this.scheduleCloseTimer()
                 }, t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive(), B({
-                        uiContext: j.Toast,
+                    this.props.latencyTracking.reportInteractive(), V({
+                        uiContext: A.Toast,
                         notification: this.props.item
                     })
                 }, t.prototype.componentWillUnmount = function() {
                     this.cancelCloseTimer()
                 }, t.prototype.render = function() {
-                    return k.createElement(M.e, {
-                        type: M.i.BounceIn,
-                        duration: M.g.Medium,
+                    return _.createElement(z.e, {
+                        type: z.i.BounceIn,
+                        duration: z.g.Medium,
                         enabled: !0
-                    }, k.createElement("div", {
+                    }, _.createElement("div", {
                         onMouseEnter: this.onMouseEnter,
                         onMouseLeave: this.onMouseLeave,
                         "data-test-selector": "onsite-notification-toast__mouse-enter-detector"
-                    }, k.createElement(M._17, {
+                    }, _.createElement(z._17, {
                         className: "onsite-notification-toast",
-                        background: M.m.Base,
-                        display: M.H.Flex,
-                        flexWrap: M.K.NoWrap,
+                        background: z.m.Base,
+                        display: z.H.Flex,
+                        flexWrap: z.K.NoWrap,
                         margin: {
                             bottom: 1
                         },
                         border: !0
-                    }, k.createElement(M.S, v.__assign({
+                    }, _.createElement(z.S, y.__assign({
                         onClick: this.view,
                         alpha: !0
-                    }, i(this.props.item, P.PageviewMedium.NotificationToast)), k.createElement(M.U, {
+                    }, i(this.props.item, L.PageviewMedium.NotificationToast)), _.createElement(z.U, {
                         className: "onsite-notification-toast__container",
-                        display: M.H.Flex,
-                        flexWrap: M.K.NoWrap
-                    }, k.createElement(M.U, {
+                        display: z.H.Flex,
+                        flexWrap: z.K.NoWrap
+                    }, _.createElement(z.U, {
                         padding: {
                             y: 1,
                             left: 1
                         },
-                        display: M.H.Flex,
+                        display: z.H.Flex,
                         flexShrink: 0
-                    }, k.createElement(M.C, {
-                        aspect: M.k.Aspect1x1,
+                    }, _.createElement(z.C, {
+                        aspect: z.k.Aspect1x1,
                         imageSrc: this.props.item.thumbnailURL,
-                        imageAlt: Object(_.d)("Notification toast thumbnail", "OnsiteNotifications"),
-                        size: M.D.Size4
-                    })), k.createElement(M.U, {
-                        display: M.H.Flex,
-                        flexDirection: M.J.Column,
-                        flexWrap: M.K.NoWrap,
+                        imageAlt: Object(b.d)("Notification toast thumbnail", "OnsiteNotifications"),
+                        size: z.D.Size4
+                    })), _.createElement(z.U, {
+                        display: z.H.Flex,
+                        flexDirection: z.J.Column,
+                        flexWrap: z.K.NoWrap,
                         flexGrow: 1,
                         padding: 1
-                    }, k.createElement(M.U, {
+                    }, _.createElement(z.U, {
                         className: "onsite-notification-toast__body",
-                        overflow: M.Y.Hidden
-                    }, k.createElement(M._17, {
-                        color: M.F.Alt
-                    }, k.createElement(I, {
+                        overflow: z.Y.Hidden
+                    }, _.createElement(z._17, {
+                        color: z.F.Alt
+                    }, _.createElement(P, {
                         source: this.props.item.body
-                    }))), k.createElement(M.U, {
+                    }))), _.createElement(z.U, {
                         margin: {
                             top: .5
                         },
                         flexShrink: 0
-                    }, k.createElement(M._17, {
-                        color: M.F.Alt2
-                    }, Object(_.g)(new Date(this.props.item.updatedAt))))))), this.renderActions())))
+                    }, _.createElement(z._17, {
+                        color: z.F.Alt2
+                    }, Object(b.g)(new Date(this.props.item.updatedAt))))))), this.renderActions())))
                 }, t.prototype.renderActions = function() {
-                    return k.createElement(M._17, {
+                    return _.createElement(z._17, {
                         className: "onsite-notification-toast__action-wrapper",
-                        display: M.H.Flex,
-                        alignContent: M.b.Stretch,
+                        display: z.H.Flex,
+                        alignContent: z.b.Stretch,
                         flexGrow: 0,
                         flexShrink: 0,
-                        flexDirection: M.J.Column,
+                        flexDirection: z.J.Column,
                         borderLeft: !0
-                    }, k.createElement(M._17, {
+                    }, _.createElement(z._17, {
                         className: "onsite-notification-toast__action",
-                        display: M.H.Flex,
-                        alignContent: M.b.Stretch,
+                        display: z.H.Flex,
+                        alignContent: z.b.Stretch,
                         flexGrow: 1,
                         borderBottom: !0
-                    }, k.createElement(M.S, v.__assign({
+                    }, _.createElement(z.S, y.__assign({
                         onClick: this.view,
                         "data-test-selector": "onsite-notification-toast__view",
                         alpha: !0
-                    }, i(this.props.item, P.PageviewMedium.NotificationToast)), k.createElement(M._17, {
-                        display: M.H.Flex,
-                        alignItems: M.c.Center,
-                        justifyContent: M.T.Center,
+                    }, i(this.props.item, L.PageviewMedium.NotificationToast)), _.createElement(z._17, {
+                        display: z.H.Flex,
+                        alignItems: z.c.Center,
+                        justifyContent: z.T.Center,
                         fullHeight: !0,
                         flexGrow: 1,
                         padding: .5
-                    }, k.createElement(M._21, {
-                        color: M.F.Link
-                    }, this.primaryCTAText())))), k.createElement(M._17, {
+                    }, _.createElement(z._21, {
+                        color: z.F.Link
+                    }, this.primaryCTAText())))), _.createElement(z._17, {
                         className: "onsite-notification-toast__action",
-                        display: M.H.Flex,
-                        alignContent: M.b.Stretch,
+                        display: z.H.Flex,
+                        alignContent: z.b.Stretch,
                         flexGrow: 1
-                    }, k.createElement(M.S, {
+                    }, _.createElement(z.S, {
                         onClick: this.close,
                         "data-test-selector": "onsite-notification-toast__close",
                         alpha: !0
-                    }, k.createElement(M._17, {
-                        display: M.H.Flex,
-                        alignItems: M.c.Center,
-                        justifyContent: M.T.Center,
+                    }, _.createElement(z._17, {
+                        display: z.H.Flex,
+                        alignItems: z.c.Center,
+                        justifyContent: z.T.Center,
                         fullHeight: !0,
                         flexGrow: 1,
                         padding: .5
-                    }, k.createElement(M._21, {
-                        color: M.F.Alt2
-                    }, Object(_.d)("Close", "OnsiteNotifications"))))))
+                    }, _.createElement(z._21, {
+                        color: z.F.Alt2
+                    }, Object(b.d)("Close", "OnsiteNotifications"))))))
                 }, t.prototype.primaryCTAText = function() {
                     var e = this.props.item.actions.find(function(e) {
                         return "click" === e.type
                     });
-                    return e ? e.body : Object(_.d)("View", "OnsiteNotifications")
+                    return e ? e.body : Object(b.d)("View", "OnsiteNotifications")
                 }, t.prototype.scheduleCloseTimer = function() {
                     var e = this;
                     this.cancelCloseTimer(), this.closeTimeout = setTimeout(function() {
@@ -5047,11 +5193,11 @@ webpackJsonp([48], {
                 }, t.prototype.cancelCloseTimer = function() {
                     this.closeTimeout && (clearTimeout(this.closeTimeout), this.closeTimeout = 0)
                 }, t
-            }(k.Component)),
-            se = Object(U.c)("OnsiteNotificationToast")(oe),
-            le = se,
-            ce = (n(406), _.i.withCategory("toast-manager")),
-            de = function(e) {
+            }(_.Component)),
+            le = Object(U.c)("OnsiteNotificationToast")(se),
+            ce = le,
+            de = (n(403), b.i.withCategory("toast-manager")),
+            ue = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5065,32 +5211,32 @@ webpackJsonp([48], {
                         })
                     }, t
                 }
-                return v.__extends(t, e), t.prototype.componentDidMount = function() {
+                return y.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), this.conditionallyInsertTestData()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     var t = this.props.pubsub.messages.info,
                         n = e.pubsub.messages.info;
                     if (n && n.data.toast && (!t || n.data.notification.id !== t.data.notification.id || n.data.notification.updated_at !== t.data.notification.updated_at)) {
-                        ce.debug("Received pubsub update", e.pubsub.messages.info);
+                        de.debug("Received pubsub update", e.pubsub.messages.info);
                         var i = s(n.data.notification);
                         this.onNewNotification(i)
                     }
                 }, t.prototype.render = function() {
-                    return k.createElement(M.U, {
+                    return _.createElement(z.U, {
                         className: "onsite-notifications-toast-manager",
-                        position: M._2.Absolute,
+                        position: z._2.Absolute,
                         margin: {
                             top: 5
                         },
                         "data-test-selector": "onsite-notifications-toast-manager"
                     }, this.renderToasts())
                 }, t.prototype.conditionallyInsertTestData = function() {
-                    return v.__awaiter(this, void 0, void 0, function() {
+                    return y.__awaiter(this, void 0, void 0, function() {
                         var e, t;
-                        return v.__generator(this, function(i) {
+                        return y.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return _.a.buildType !== E.a.Production && y.parse(window.location.search).onsite_test_data ? [4, n.e(36).then(n.bind(null, 2047))] : [3, 2];
+                                    return b.a.buildType !== C.a.Production && k.parse(window.location.search).onsite_test_data ? [4, n.e(36).then(n.bind(null, 2051))] : [3, 2];
                                 case 1:
                                     e = i.sent().MockOnsiteNotifications, t = e.getMockOnsiteNotificationModels(3), this.setState({
                                         notifications: t
@@ -5103,7 +5249,7 @@ webpackJsonp([48], {
                 }, t.prototype.renderToasts = function() {
                     var e = this,
                         t = this.state.notifications.map(function(t, n) {
-                            return k.createElement(le, {
+                            return _.createElement(ce, {
                                 key: t.id,
                                 item: t,
                                 index: n,
@@ -5120,44 +5266,45 @@ webpackJsonp([48], {
                     n > -1 && t.splice(n, 1), t.unshift(e), t.length > 3 && t.pop(), this.setState({
                         notifications: t
                     })
-                }, t = v.__decorate([Object(U.c)("OnsiteNotificationToastManager"), Object(re.a)([{
+                }, t = y.__decorate([Object(U.c)("OnsiteNotificationToastManager"), Object(oe.a)([{
                     topic: function(e) {
-                        return Object(O.e)("" + (e.currentUser && e.currentUser.id))
+                        return Object(x.e)("" + (e.currentUser && e.currentUser.id))
                     },
-                    mapMessageTypesToProps: (h = {}, h[C.c.OnsiteNotificationCreate] = "info", h[C.c.OnsiteNotificationUpdate] = "info", h),
+                    mapMessageTypesToProps: (v = {}, v[w.c.OnsiteNotificationCreate] = "info", v[w.c.OnsiteNotificationUpdate] = "info", v),
                     skip: function(e) {
                         return !e.currentUser
                     }
                 }])], t)
-            }(k.Component),
-            ue = Object(ie.a)(l)(de),
-            me = _.i.withCategory("onsite-pubsub-mutators"),
-            pe = n(393),
-            ge = n(394),
-            fe = n(395),
-            he = n(396),
-            ve = n(397);
-        n(407);
+            }(_.Component),
+            me = Object(ae.a)(l)(ue),
+            pe = b.i.withCategory("onsite-pubsub-mutators"),
+            ge = n(390),
+            fe = n(391),
+            he = n(392),
+            ve = n(393),
+            ye = n(394);
+        n(404);
         n.d(t, "a", function() {
-            return Se
+            return Ne
         }), n.d(t, "b", function() {
-            return we
+            return xe
         });
-        var ye = _.i.withCategory("onsite-notifications"),
-            ke = "onsite-notifications__badge",
-            _e = "99+",
-            be = 5e3,
-            Se = 10,
-            Ne = {
-                align: M._31.Center,
-                direction: M._32.Bottom,
+        var ke = b.i.withCategory("onsite-notifications"),
+            _e = "onsite-notifications__badge",
+            be = "99+",
+            Se = 5e3,
+            Ne = 10,
+            Ee = 100,
+            Ce = {
+                align: z._31.Center,
+                direction: z._32.Bottom,
                 label: ""
             },
-            Ee = {
-                limit: Se,
+            we = {
+                limit: Ne,
                 cursor: ""
             },
-            Ce = function(e) {
+            Oe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5167,19 +5314,19 @@ webpackJsonp([48], {
                     }, t.newNotificationsCountTimer = 0, t.hasInsertedSummaryData = !1, t.hasInsertedListNotificationsData = !1, t.viewNotification = function(e) {
                         t.centerWindowToggleBalloon.toggleBalloon(!1), t.readNotification(e)
                     }, t.conditionallyInsertSummaryTestData = function() {
-                        t.summaryDataLoaded(t.props) && !t.hasInsertedSummaryData && _.a.buildType !== E.a.Production && y.parse(window.location.search).onsite_test_data && (t.hasInsertedSummaryData = !0, Object(w.d)(he, v.__assign({}, t.props.summaryData.variables), function(e) {
-                            return e.currentUser.notifications.summary.unseenCount = y.parse(window.location.search).onsite_test_data, e
+                        t.summaryDataLoaded(t.props) && !t.hasInsertedSummaryData && b.a.buildType !== C.a.Production && k.parse(window.location.search).onsite_test_data && (t.hasInsertedSummaryData = !0, Object(O.d)(ve, y.__assign({}, t.props.summaryData.variables), function(e) {
+                            return e.currentUser.notifications.summary.unseenCount = k.parse(window.location.search).onsite_test_data, e
                         }))
                     }, t.conditionallyInsertListNotificationsTestData = function() {
-                        return v.__awaiter(t, void 0, void 0, function() {
+                        return y.__awaiter(t, void 0, void 0, function() {
                             var e;
-                            return v.__generator(this, function(t) {
+                            return y.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return this.notificationsInitiallyLoaded() && !this.hasInsertedListNotificationsData && _.a.buildType !== E.a.Production && y.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(36).then(n.bind(null, 2047))]) : [3, 2];
+                                        return this.listDataLoaded() && !this.hasInsertedListNotificationsData && b.a.buildType !== C.a.Production && k.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(36).then(n.bind(null, 2051))]) : [3, 2];
                                     case 1:
-                                        e = t.sent().MockOnsiteNotifications, Object(w.d)(ge, v.__assign({}, this.props.listData.variables), function(t) {
-                                            return t.currentUser.notifications.edges = e.getMockOnsiteNotificationEdges(y.parse(window.location.search).onsite_test_data), t
+                                        e = t.sent().MockOnsiteNotifications, Object(O.d)(fe, y.__assign({}, this.props.listData.variables), function(t) {
+                                            return t.currentUser.notifications.edges = e.getMockOnsiteNotificationEdges(k.parse(window.location.search).onsite_test_data), t
                                         }), t.label = 2;
                                     case 2:
                                         return [2]
@@ -5188,7 +5335,7 @@ webpackJsonp([48], {
                         })
                     }, t.summaryDataLoaded = function(e) {
                         return e.summaryData && !e.summaryData.loading && !e.summaryData.error && e.summaryData.currentUser && e.summaryData.currentUser.notifications && e.summaryData.currentUser.notifications.summary && e.summaryData.currentUser.incomingFriendRequests
-                    }, t.notificationsInitiallyLoaded = function() {
+                    }, t.listDataLoaded = function() {
                         return t.props.listData && t.props.listData.currentUser && t.props.listData.currentUser.notifications && void 0 !== t.props.listData.currentUser.notifications.edges
                     }, t.hasNewFriendRequests = function(e) {
                         var t = e.summaryData.currentUser;
@@ -5212,9 +5359,9 @@ webpackJsonp([48], {
                             }
                         }
                     }, t.toggleCenter = function(e) {
-                        e || (t.props.stopDeferring(), t.getUnseenNotificationsAndApplyTimer(), t.viewNotifications()), V({
+                        e || (t.props.stopDeferring(), t.getUnseenNotificationsAndApplyTimer(), t.viewNotifications()), q({
                             unseenCount: t.getUnseenNotificationsCount(t.props),
-                            action: e ? A.Close : A.Open
+                            action: e ? H.Close : H.Open
                         })
                     }, t.getUnseenNotificationsAndApplyTimer = function() {
                         var e = t.state.newNotificationsCount;
@@ -5224,13 +5371,13 @@ webpackJsonp([48], {
                             t.setState({
                                 newNotificationsCount: 0
                             }), t.clearTimeout()
-                        }, be))
+                        }, Se))
                     }, t.viewNotifications = function() {
                         if (t.summaryDataLoaded(t.props)) {
                             t.setState({
                                 newFriendRequestsBadgeCount: 0
                             });
-                            var e = v.__assign({}, Object(w.a)({}), {
+                            var e = y.__assign({}, Object(O.a)({}), {
                                 optimisticResponse: {
                                     viewedNotifications: {
                                         user: {
@@ -5248,10 +5395,10 @@ webpackJsonp([48], {
                                     }
                                 }
                             });
-                            Object(w.d)(he, v.__assign({}, t.props.summaryData.variables), function(e) {
+                            Object(O.d)(ve, y.__assign({}, t.props.summaryData.variables), function(e) {
                                 return e.currentUser.notifications.summary.unseenCount = 0, e
                             }), t.props.viewNotifications(e).then(function() {}).catch(function(e) {
-                                return ye.error(e, "failure to read message... ")
+                                return ke.error(e, "failure to read message... ")
                             })
                         }
                     }, t.getUnseenNotificationsCount = function(e) {
@@ -5259,109 +5406,162 @@ webpackJsonp([48], {
                     }, t.renderUnseenNotificationsBadge = function() {
                         var e = t.getUnseenNotificationsCount(t.props);
                         if (e > 0) {
-                            var n = e >= 100 ? _e : e.toString();
-                            return k.createElement(M.U, {
+                            var n = e >= 100 ? be : e.toString();
+                            return _.createElement(z.U, {
                                 className: "onsite-notifications__badge",
-                                "data-test-selector": ke,
-                                position: M._2.Absolute
-                            }, k.createElement(M.Z, {
+                                "data-test-selector": _e,
+                                position: z._2.Absolute
+                            }, _.createElement(z.Z, {
                                 label: n,
-                                type: M._0.Notification
+                                type: z._0.Notification
                             }))
                         }
                     }, t.deleteNotification = function(e) {
-                        var n = v.__assign({}, Object(w.a)({
-                            id: e
-                        }), {
-                            optimisticResponse: {
-                                deleteNotification: {
-                                    __typename: "DeleteNotificationPayload",
-                                    notification: {
-                                        __typename: "OnsiteNotification",
-                                        id: e
-                                    }
+                        return y.__awaiter(t, void 0, void 0, function() {
+                            var t, n;
+                            return y.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        t = y.__assign({}, Object(O.a)({
+                                            id: e
+                                        }), {
+                                            optimisticResponse: {
+                                                deleteNotification: {
+                                                    __typename: "DeleteNotificationPayload",
+                                                    notification: {
+                                                        __typename: "OnsiteNotification",
+                                                        id: e
+                                                    }
+                                                }
+                                            }
+                                        }), i.label = 1;
+                                    case 1:
+                                        return i.trys.push([1, 3, , 4]), [4, this.props.deleteOnsiteNotification(t)];
+                                    case 2:
+                                        return i.sent(), [3, 4];
+                                    case 3:
+                                        return n = i.sent(), ke.error(n, "Unable to delete notification", {
+                                            id: e
+                                        }), [3, 4];
+                                    case 4:
+                                        return this.listDataLoaded() && Object(O.d)(fe, y.__assign({}, this.props.listData.variables), function(t) {
+                                            return t.currentUser.notifications.edges = t.currentUser.notifications.edges.filter(function(t) {
+                                                return t.node.id !== e
+                                            }), t
+                                        }), [2]
                                 }
-                            }
-                        });
-                        return Object(w.d)(ge, v.__assign({}, t.props.listData.variables), function(t) {
-                            return t.currentUser.notifications.edges = t.currentUser.notifications.edges.filter(function(t) {
-                                return t.node.id !== e
-                            }), t
-                        }), t.props.deleteOnsiteNotification(n).then(function() {}).catch(function(t) {
-                            ye.error(t, "Unable to delete notification " + e)
+                            })
                         })
                     }, t.readAllNotifications = function() {
-                        t.setState({
-                            isFriendRequestsNotificationUnread: !1
-                        });
-                        var e = t.notificationsInitiallyLoaded() ? t.props.listData.currentUser.notifications.edges.map(function(e) {
-                            return e.node.id
-                        }) : [];
-                        if (e.length > 0) {
-                            V({
+                        if (t.setState({
+                                isFriendRequestsNotificationUnread: !1
+                            }), t.listDataLoaded()) {
+                            q({
                                 unseenCount: t.getUnseenNotificationsCount(t.props),
-                                action: A.MarkAllRead
+                                action: H.MarkAllRead
                             });
-                            var n = e.map(function(e) {
-                                    return {
-                                        id: e,
-                                        isRead: !0,
-                                        __typename: "OnsiteNotification"
-                                    }
-                                }),
-                                i = v.__assign({}, Object(w.a)({
-                                    ids: e
-                                }), {
-                                    optimisticResponse: {
-                                        readNotifications: {
-                                            __typename: "ReadNotificationsPayload",
-                                            notifications: n,
-                                            count: e.length
-                                        }
-                                    }
-                                });
-                            return Object(w.d)(ge, v.__assign({}, t.props.listData.variables), function(e) {
-                                return e.currentUser.notifications.edges = e.currentUser.notifications.edges.map(function(e) {
-                                    return v.__assign({}, e, {
-                                        node: v.__assign({}, e.node, {
-                                            isRead: !0
-                                        })
-                                    })
-                                }), e
-                            }), t.props.readOnsiteNotification(i).then(function() {}).catch(function(t) {
-                                ye.error(t, "Unable to read notifications " + e)
-                            })
-                        }
-                    }, t.readNotification = function(e) {
-                        var n = v.__assign({}, Object(w.a)({
-                            ids: [e]
-                        }), {
-                            optimisticResponse: {
-                                readNotifications: {
-                                    __typename: "ReadNotificationsPayload",
-                                    notifications: [{
-                                        id: e,
-                                        isRead: !0,
-                                        __typename: "OnsiteNotification"
-                                    }],
-                                    count: 1
+                            var e = t.props.listData.currentUser.notifications.edges.filter(function(e) {
+                                return !e.node.isRead
+                            }).map(function(e) {
+                                return e.node.id
+                            });
+                            if (0 !== e.length) {
+                                for (var n = c(e, Ee), i = 0, a = n; i < a.length; i++) {
+                                    var r = a[i];
+                                    t.markIDsAsRead(r)
                                 }
+                                Object(O.d)(fe, y.__assign({}, t.props.listData.variables), function(e) {
+                                    return e.currentUser.notifications.edges = e.currentUser.notifications.edges.map(function(e) {
+                                        return y.__assign({}, e, {
+                                            node: y.__assign({}, e.node, {
+                                                isRead: !0
+                                            })
+                                        })
+                                    }), e
+                                })
                             }
-                        });
-                        return Object(w.d)(ge, v.__assign({}, t.props.listData.variables), function(t) {
-                            return t.currentUser.notifications.edges = t.currentUser.notifications.edges.map(function(t) {
-                                return t.node.id === e ? v.__assign({}, t, {
-                                    node: v.__assign({}, t.node, {
-                                        isRead: !0
-                                    })
-                                }) : t
-                            }), t
-                        }), t.props.readOnsiteNotification(n).then(function() {}).catch(function(t) {
-                            ye.error(t, "Unable to read notification " + e)
+                        }
+                    }, t.markIDsAsRead = function(e) {
+                        return y.__awaiter(t, void 0, void 0, function() {
+                            var t, n, i;
+                            return y.__generator(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        t = e.map(function(e) {
+                                            return {
+                                                id: e,
+                                                isRead: !0,
+                                                __typename: "OnsiteNotification"
+                                            }
+                                        }), n = y.__assign({}, Object(O.a)({
+                                            ids: e
+                                        }), {
+                                            optimisticResponse: {
+                                                readNotifications: {
+                                                    __typename: "ReadNotificationsPayload",
+                                                    notifications: t,
+                                                    count: e.length
+                                                }
+                                            }
+                                        }), a.label = 1;
+                                    case 1:
+                                        return a.trys.push([1, 3, , 4]), [4, this.props.readOnsiteNotification(n)];
+                                    case 2:
+                                        return a.sent(), [3, 4];
+                                    case 3:
+                                        return i = a.sent(), ke.error(i, "Unable to read notifications", {
+                                            ids: e
+                                        }), [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t.readNotification = function(e) {
+                        return y.__awaiter(t, void 0, void 0, function() {
+                            var t, n;
+                            return y.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        t = y.__assign({}, Object(O.a)({
+                                            ids: [e]
+                                        }), {
+                                            optimisticResponse: {
+                                                readNotifications: {
+                                                    __typename: "ReadNotificationsPayload",
+                                                    notifications: [{
+                                                        id: e,
+                                                        isRead: !0,
+                                                        __typename: "OnsiteNotification"
+                                                    }],
+                                                    count: 1
+                                                }
+                                            }
+                                        }), i.label = 1;
+                                    case 1:
+                                        return i.trys.push([1, 3, , 4]), [4, this.props.readOnsiteNotification(t)];
+                                    case 2:
+                                        return i.sent(), [3, 4];
+                                    case 3:
+                                        return n = i.sent(), ke.error(n, "Unable to read notification", {
+                                            id: e
+                                        }), [3, 4];
+                                    case 4:
+                                        return this.listDataLoaded() && Object(O.d)(fe, y.__assign({}, this.props.listData.variables), function(t) {
+                                            return t.currentUser.notifications.edges = t.currentUser.notifications.edges.map(function(t) {
+                                                return t.node.id === e ? y.__assign({}, t, {
+                                                    node: y.__assign({}, t.node, {
+                                                        isRead: !0
+                                                    })
+                                                }) : t
+                                            }), t
+                                        }), [2]
+                                }
+                            })
                         })
                     }, t.loadMore = function() {
-                        return v.__awaiter(t, void 0, void 0, function() {
-                            return v.__generator(this, function(e) {
+                        return y.__awaiter(t, void 0, void 0, function() {
+                            return y.__generator(this, function(e) {
                                 return this.props.listData.loading ? [2] : [2, this.props.loadMore()]
                             })
                         })
@@ -5371,7 +5571,7 @@ webpackJsonp([48], {
                         return t.centerWindowToggleBalloon = e
                     }, t
                 }
-                return v.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                return y.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     this.conditionallyInsertSummaryTestData(), this.conditionallyInsertListNotificationsTestData()
                 }, t.prototype.componentWillUnmount = function() {
                     this.clearTimeout()
@@ -5382,33 +5582,33 @@ webpackJsonp([48], {
                             newFriendRequestsBadgeCount: t ? 1 : 0
                         }), this.summaryDataLoaded(this.props) || this.setState({
                             isFriendRequestsNotificationUnread: t
-                        }), _.n.setBadgeCount(this.getUnseenNotificationsCount(e))
+                        }), b.n.setBadgeCount(this.getUnseenNotificationsCount(e))
                     }
                 }, t.prototype.render = function() {
-                    var e = this.props.shouldDefer || !this.notificationsInitiallyLoaded() ? [] : this.props.listData.currentUser.notifications.edges;
-                    return Ne.label = Object(_.d)("Notifications", "OnsiteNotificationsToolTip"), k.createElement(M.U, {
+                    var e = this.props.shouldDefer || !this.listDataLoaded() ? [] : this.props.listData.currentUser.notifications.edges;
+                    return Ce.label = Object(b.d)("Notifications", "OnsiteNotificationsToolTip"), _.createElement(z.U, {
                         className: "onsite-notifications"
-                    }, k.createElement(ue, {
+                    }, _.createElement(me, {
                         onViewNotification: this.viewNotification
-                    }), k.createElement(M.U, {
-                        position: M._2.Relative
-                    }, k.createElement(b.a, {
+                    }), _.createElement(z.U, {
+                        position: z._2.Relative
+                    }, _.createElement(S.a, {
                         onToggle: this.toggleCenter,
                         ref: this.saveCenterWindowToggleBalloonRef,
-                        tooltipProps: Ne
-                    }, k.createElement(M.v, {
-                        ariaLabel: Object(_.d)("Open Notifications", "OnsiteNotifications"),
-                        size: M.x.Large,
-                        icon: M._9.NotificationBell,
+                        tooltipProps: Ce
+                    }, _.createElement(z.v, {
+                        ariaLabel: Object(b.d)("Open Notifications", "OnsiteNotifications"),
+                        size: z.x.Large,
+                        icon: z._9.NotificationBell,
                         overlay: !0
-                    }), k.createElement(M.p, {
+                    }), _.createElement(z.p, {
                         "data-test-selector": "center-window__balloon",
-                        direction: M.q.BottomRight,
-                        size: M.r.Large,
+                        direction: z.q.BottomRight,
+                        size: z.r.Large,
                         offsetX: "10px"
-                    }, k.createElement(ne, {
+                    }, _.createElement(ie, {
                         newNotificationsCount: this.state.newNotificationsCount,
-                        hasInitiallyLoaded: this.notificationsInitiallyLoaded(),
+                        hasInitiallyLoaded: this.listDataLoaded(),
                         data: e,
                         friendRequestsData: this.getFriendRequestsData(),
                         onLoadMore: this.loadMore,
@@ -5416,18 +5616,18 @@ webpackJsonp([48], {
                         onReadAllNotifications: this.readAllNotifications,
                         onDeleteNotification: this.deleteNotification
                     }))), this.renderUnseenNotificationsBadge()))
-                }, t = v.__decorate([f(), Object(S.a)(he, {
+                }, t = y.__decorate([h(), Object(N.a)(ve, {
                     name: "summaryData",
                     skip: function(e) {
                         return !e.firstPageLoaded
                     }
-                }), Object(S.a)(ve, {
+                }), Object(N.a)(ye, {
                     name: "viewNotifications"
-                }), Object(S.a)(ge, {
+                }), Object(N.a)(fe, {
                     name: "listData",
                     options: function(e) {
                         return {
-                            variables: v.__assign({}, Ee, {
+                            variables: y.__assign({}, we, {
                                 language: e.languageCode
                             })
                         }
@@ -5436,19 +5636,19 @@ webpackJsonp([48], {
                         return e.shouldDefer
                     },
                     props: function(e) {
-                        return v.__assign({}, e, {
+                        return y.__assign({}, e, {
                             loadMore: function() {
                                 return e.listData.fetchMore({
-                                    query: ge,
-                                    variables: v.__assign({}, e.listData.variables, {
+                                    query: fe,
+                                    variables: y.__assign({}, e.listData.variables, {
                                         cursor: e.listData.currentUser ? e.listData.currentUser.notifications.edges[e.listData.currentUser.notifications.edges.length - 1].cursor : ""
                                     }),
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult,
                                             i = n;
                                         return {
-                                            currentUser: v.__assign({}, i.currentUser, {
-                                                notifications: v.__assign({}, i.currentUser.notifications, {
+                                            currentUser: y.__assign({}, i.currentUser, {
+                                                notifications: y.__assign({}, i.currentUser.notifications, {
                                                     edges: e.currentUser.notifications.edges.concat(i.currentUser.notifications.edges)
                                                 })
                                             })
@@ -5458,36 +5658,36 @@ webpackJsonp([48], {
                             }
                         })
                     }
-                }), Object(S.a)(pe, {
+                }), Object(N.a)(ge, {
                     name: "deleteOnsiteNotification"
-                }), Object(S.a)(fe, {
+                }), Object(N.a)(he, {
                     name: "readOnsiteNotification"
-                }), Object(N.a)(function(e) {
+                }), Object(E.a)(function(e) {
                     return {
-                        query: he,
+                        query: ve,
                         skip: !e.currentUser,
-                        topic: Object(O.e)("" + (e.currentUser && e.currentUser.id)),
-                        types: [C.c.OnsiteNotificationSummaryUpdate, C.c.OnsiteNotificationUpdate, C.c.OnsiteNotificationCreate, C.c.OnsiteNotificationDelete],
-                        mutator: m
+                        topic: Object(x.e)("" + (e.currentUser && e.currentUser.id)),
+                        types: [w.c.OnsiteNotificationSummaryUpdate, w.c.OnsiteNotificationUpdate, w.c.OnsiteNotificationCreate, w.c.OnsiteNotificationDelete],
+                        mutator: p
                     }
-                }), Object(N.a)(function(e) {
+                }), Object(E.a)(function(e) {
                     return {
-                        query: ge,
-                        variables: v.__assign({}, Ee, {
+                        query: fe,
+                        variables: y.__assign({}, we, {
                             language: e.languageCode
                         }),
                         skip: !e.currentUser,
-                        topic: Object(O.e)("" + (e.currentUser && e.currentUser.id)),
-                        types: [C.c.OnsiteNotificationsRead, C.c.OnsiteNotificationUpdate, C.c.OnsiteNotificationCreate, C.c.OnsiteNotificationDelete],
-                        mutator: p
+                        topic: Object(x.e)("" + (e.currentUser && e.currentUser.id)),
+                        types: [w.c.OnsiteNotificationsRead, w.c.OnsiteNotificationUpdate, w.c.OnsiteNotificationCreate, w.c.OnsiteNotificationDelete],
+                        mutator: g
                     }
                 }), Object(U.c)("OnsiteNotifications", {
                     autoReportInteractive: !0
                 })], t)
-            }(k.Component),
-            we = Ce
+            }(_.Component),
+            xe = Oe
     },
-    393: function(e, t) {
+    390: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -5588,7 +5788,7 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    394: function(e, t) {
+    391: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -5918,7 +6118,7 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    395: function(e, t) {
+    392: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6029,7 +6229,7 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    396: function(e, t) {
+    393: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6186,7 +6386,7 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    397: function(e, t) {
+    394: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6290,7 +6490,7 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    398: function(e, t, n) {
+    395: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -6339,7 +6539,7 @@ webpackJsonp([48], {
                 isLoggedIn: Object(f.d)(e)
             }
         }
-        var c, d = n(7),
+        var c, d = n(6),
             u = n(10),
             m = n(9),
             p = n(48),
@@ -6348,28 +6548,28 @@ webpackJsonp([48], {
             h = n(0),
             v = n(1),
             y = n(2),
-            k = n(391),
+            k = n(388),
             _ = n(47),
             b = n(12),
             S = n(5),
-            N = n(392),
+            N = n(389),
             E = Object(d.a)(i)(N.b),
             C = n(22),
             w = n(39),
             O = n(18),
-            U = n(109),
-            x = n(267),
+            x = n(107),
+            U = n(266),
             F = n(64),
             D = n(4),
             R = n(28),
-            T = n(131),
+            T = n(129),
             I = n(49),
-            P = n(380),
-            L = n(388),
-            j = n(6),
+            P = n(377),
+            L = n(385),
+            j = n(7),
             A = n(56),
             H = n(3),
-            B = (n(409), n(410)),
+            B = (n(406), n(407)),
             V = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -6449,7 +6649,7 @@ webpackJsonp([48], {
                     }
                 })], t)
             }(v.Component),
-            q = (n(411), function(e) {
+            q = (n(408), function(e) {
                 var t, n, i;
                 e.title && (e.hitsCount && e.hitsCount > 0 ? t = Object(y.d)("more", "SearchResultSection") : e.totalHitsCount && e.totalHitsCount > 0 && (t = Object(y.d)("Show", "SearchResultSection")), void 0 !== e.totalHitsCount && (i = v.createElement(H.Z, {
                     type: H._0.Brand,
@@ -6488,7 +6688,7 @@ webpackJsonp([48], {
                     className: "search-result-view__block"
                 }, n, a)
             }),
-            M = (n(412), function(e) {
+            M = (n(409), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -6518,7 +6718,7 @@ webpackJsonp([48], {
                     }, this.props.title)))
                 }, t
             }(v.Component)),
-            z = n(271),
+            z = n(270),
             W = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -6584,7 +6784,7 @@ webpackJsonp([48], {
                 }, t
             }(v.Component),
             G = n(67),
-            K = (n(413), function(e) {
+            K = (n(410), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onBackClick = function() {
@@ -6925,7 +7125,7 @@ webpackJsonp([48], {
                     }, Object(y.d)("Please try again later", "SearchResultPanel")))
                 }, t
             }(v.Component)),
-            Q = (n(414), function(e) {
+            Q = (n(411), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -6977,7 +7177,7 @@ webpackJsonp([48], {
                     }
                 }, t
             }(v.Component)),
-            $ = (n(415), function(e) {
+            $ = (n(412), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleChange = function(e) {
@@ -7094,7 +7294,7 @@ webpackJsonp([48], {
                                             isOpen: !0
                                         })), [2];
                                     case 4:
-                                        return t ? (i = Object(x.b)({
+                                        return t ? (i = Object(U.b)({
                                             searchResults: t,
                                             append: e > 0,
                                             currentGameResults: this.state.currentGameResults,
@@ -7128,7 +7328,7 @@ webpackJsonp([48], {
                                         return n = a.sent(), n.hits && this.setState({
                                             currentVideoResults: {
                                                 totalHits: n.totalHits,
-                                                results: n.hits.map(x.a)
+                                                results: n.hits.map(U.a)
                                             },
                                             queryID: ""
                                         }), [3, 4];
@@ -7141,7 +7341,7 @@ webpackJsonp([48], {
                                 }
                             })
                         })
-                    }, t.searchClient = new U.a(y.a.algoliaApplicationID, y.a.algoliaAPIKey), t.state = t.getEmptyState(), t
+                    }, t.searchClient = new x.a(y.a.algoliaApplicationID, y.a.algoliaAPIKey), t.state = t.getEmptyState(), t
                 }
                 return h.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), this.props.history.listen(this.onHistoryChange)
@@ -7217,7 +7417,7 @@ webpackJsonp([48], {
                                         term: e
                                     })), [2];
                                 case 7:
-                                    return a ? this.state.queryID !== a.id ? [2] : (o = Object(x.b)({
+                                    return a ? this.state.queryID !== a.id ? [2] : (o = Object(U.b)({
                                         searchResults: a,
                                         append: !1,
                                         currentGameResults: this.state.currentGameResults,
@@ -7321,7 +7521,7 @@ webpackJsonp([48], {
                 }, t = h.__decorate([Object(S.c)("AnonUser")], t)
             }(v.Component),
             ee = Z,
-            te = n(416),
+            te = n(413),
             ne = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -7354,9 +7554,9 @@ webpackJsonp([48], {
             }(v.Component),
             ie = ne,
             ae = Object(d.a)(a)(ie),
-            re = n(107),
-            oe = n(134),
-            se = n(417),
+            re = n(105),
+            oe = n(132),
+            se = n(414),
             le = Object(T.a)("/products/turbo?ref=top_nav"),
             ce = function(e) {
                 function t() {
@@ -7387,15 +7587,15 @@ webpackJsonp([48], {
                 }, t = h.__decorate([Object(j.a)(se), Object(S.c)("TopNavUpsellComponent")], t)
             }(v.Component),
             de = ce,
-            ue = n(88),
-            me = n(108),
+            ue = n(86),
+            me = n(106),
             pe = n(51),
             ge = n(37),
             fe = n(21),
             he = n(30),
-            ve = n(135),
+            ve = n(133),
             ye = n(53),
-            ke = n(133),
+            ke = n(131),
             _e = n(52),
             be = function() {
                 return v.createElement(H.U, {
@@ -7494,7 +7694,7 @@ webpackJsonp([48], {
             },
             Ne = n(38),
             Ee = n(70),
-            Ce = (n(420), function(e) {
+            Ce = (n(417), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onCardClick = function() {
@@ -7937,9 +8137,9 @@ webpackJsonp([48], {
                 }, t
             }(v.Component)),
             we = Object(C.e)(Ce),
-            Oe = n(421),
-            Ue = n(422),
-            xe = function(e) {
+            Oe = n(418),
+            xe = n(419),
+            Ue = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.isSettingNewSession = !1, t.dataIsReady = function(e) {
@@ -8014,7 +8214,7 @@ webpackJsonp([48], {
                     }) : v.createElement(Se, null)
                 }, t.prototype.reportInteractive = function() {
                     !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
-                }, t = h.__decorate([Object(j.a)(Oe), Object(j.a)(Ue, {
+                }, t = h.__decorate([Object(j.a)(Oe), Object(j.a)(xe, {
                     name: "updateIsSharingActivity"
                 }), Object(me.a)(function(e) {
                     return {
@@ -8036,9 +8236,9 @@ webpackJsonp([48], {
                     }
                 }]), Object(S.c)("User")], t)
             }(v.Component),
-            Fe = Object(d.a)(r, o)(Object(u.f)(xe)),
-            De = n(389),
-            Re = (n(440), function(e) {
+            Fe = Object(d.a)(r, o)(Object(u.f)(Ue)),
+            De = n(386),
+            Re = (n(437), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderOnsiteNotifications = function() {
@@ -8339,12 +8539,12 @@ webpackJsonp([48], {
             return Ie
         })
     },
-    399: function(e, t) {},
-    400: function(e, t, n) {
+    396: function(e, t) {},
+    397: function(e, t, n) {
         e.exports = n.p + "assets/friend_requests-aec9595d7e19764bc23d982c8c0f43d9.png"
     },
-    401: function(e, t) {},
-    402: function(e, t) {
+    398: function(e, t) {},
+    399: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -8412,7 +8612,7 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    403: function(e, t) {
+    400: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -8500,11 +8700,11 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
+    401: function(e, t) {},
+    402: function(e, t) {},
+    403: function(e, t) {},
     404: function(e, t) {},
-    405: function(e, t) {},
-    406: function(e, t) {},
-    407: function(e, t) {},
-    408: function(e, t) {
+    405: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -8622,8 +8822,8 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    409: function(e, t) {},
-    410: function(e, t) {
+    406: function(e, t) {},
+    407: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -8764,12 +8964,12 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
+    408: function(e, t) {},
+    409: function(e, t) {},
+    410: function(e, t) {},
     411: function(e, t) {},
     412: function(e, t) {},
-    413: function(e, t) {},
-    414: function(e, t) {},
-    415: function(e, t) {},
-    416: function(e, t) {
+    413: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -8834,7 +9034,7 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    417: function(e, t) {
+    414: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -8932,7 +9132,7 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    418: function(e, t) {
+    415: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -9020,7 +9220,7 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    419: function(e, t) {
+    416: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -9131,8 +9331,8 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    420: function(e, t) {},
-    421: function(e, t) {
+    417: function(e, t) {},
+    418: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -9512,7 +9712,7 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    422: function(e, t) {
+    419: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -9636,9 +9836,9 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    423: function(e, t) {},
-    424: function(e, t) {},
-    425: function(e, t) {
+    420: function(e, t) {},
+    421: function(e, t) {},
+    422: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -9693,7 +9893,7 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    426: function(e, t) {
+    423: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -9758,8 +9958,8 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    427: function(e, t) {},
-    428: function(e, t) {
+    424: function(e, t) {},
+    425: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -9870,8 +10070,8 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    429: function(e, t) {},
-    430: function(e, t) {
+    426: function(e, t) {},
+    427: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -9936,8 +10136,8 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    431: function(e, t) {},
-    432: function(e, t) {
+    428: function(e, t) {},
+    429: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10161,8 +10361,8 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    433: function(e, t) {},
-    434: function(e, t) {
+    430: function(e, t) {},
+    431: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10227,7 +10427,7 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    435: function(e, t) {
+    432: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10315,8 +10515,8 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    436: function(e, t) {},
-    437: function(e, t) {
+    433: function(e, t) {},
+    434: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10404,8 +10604,8 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    438: function(e, t) {},
-    439: function(e, t) {
+    435: function(e, t) {},
+    436: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10612,8 +10812,8 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    440: function(e, t) {},
-    453: function(e, t) {
+    437: function(e, t) {},
+    450: function(e, t) {
         function n(e) {
             var t = !1;
             if (null != e && "function" != typeof e.toString) try {
@@ -10647,141 +10847,7 @@ webpackJsonp([48], {
             }(Object.getPrototypeOf, Object);
         e.exports = a
     },
-    73: function(e, t, n) {
-        "use strict";
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        });
-        var i = n(0),
-            a = n(1),
-            r = n(836),
-            o = n(113),
-            s = n(74),
-            l = function(e) {
-                var t = {
-                    name: "TWILIGHT_EXPANDO_FEATURO",
-                    assignments: {
-                        fallback: function() {
-                            return o.a.wrap(function() {
-                                return new Promise(function(e) {
-                                    e()
-                                }).then(n.bind(null, 74))
-                            }, "FeaturedBroadcasters")(i.__assign({}, e, {
-                                streamCount: 6,
-                                showCounts: !1
-                            }))
-                        },
-                        expanded: function() {
-                            return o.a.wrap(function() {
-                                return new Promise(function(e) {
-                                    e()
-                                }).then(n.bind(null, 74))
-                            }, "FeaturedBroadcasters")(i.__assign({}, e, {
-                                streamCount: 8,
-                                showCounts: !0
-                            }))
-                        }
-                    },
-                    loader: function() {
-                        return Object(s.placeholderFeaturedBroadcasters)(e.renderContext)
-                    }
-                };
-                return a.createElement(r.a, i.__assign({}, t))
-            };
-        n.d(t, "FeaturedBroadcastersRenderContext", function() {
-            return s.FeaturedBroadcastersRenderContext
-        }), n.d(t, "FeaturedBroadcasters", function() {
-            return l
-        })
-    },
-    74: function(e, t, n) {
-        "use strict";
-
-        function i(e, t, n, i) {
-            switch (t) {
-                case r.AnonFront:
-                    return s.createElement(d.a, {
-                        items: e,
-                        isLoading: n,
-                        layout: u.c.Horizontal,
-                        showCounts: i,
-                        darkTheme: !0
-                    });
-                default:
-                    return s.createElement(g._17, {
-                        className: "featured-broadcasters",
-                        background: g.m.Base,
-                        elevation: 1
-                    }, s.createElement(g.U, {
-                        padding: 1
-                    }, s.createElement(g._21, {
-                        fontSize: g.L.Size5,
-                        color: g.F.Alt2
-                    }, Object(l.d)("Featured Broadcasters", "FeaturedBroadcastersComponent"))), s.createElement(d.a, {
-                        items: e,
-                        isLoading: n,
-                        layout: u.c.Vertical,
-                        showCounts: i
-                    }))
-            }
-        }
-
-        function a(e) {
-            return i([], e, !0)
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), n.d(t, "FeaturedBroadcastersRenderContext", function() {
-            return r
-        }), t.placeholderFeaturedBroadcasters = a, n.d(t, "FeaturedBroadcasters", function() {
-            return v
-        });
-        var r, o = n(0),
-            s = n(1),
-            l = (n.n(s), n(2)),
-            c = n(6),
-            d = n(1066),
-            u = n(869),
-            m = n(1067),
-            p = n(5),
-            g = n(3),
-            f = n(1298);
-        n.n(f);
-        ! function(e) {
-            e[e.AnonFront = 1] = "AnonFront", e[e.Front = 2] = "Front"
-        }(r || (r = {}));
-        var h = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.getRender = function(e) {
-                        var n = !(!t.props.data.loading && !t.props.data.error);
-                        return i(e, t.props.renderContext, n, t.props.showCounts)
-                    }, t
-                }
-                return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.postRender()
-                }, t.prototype.componentDidUpdate = function() {
-                    this.postRender()
-                }, t.prototype.render = function() {
-                    var e = this.props.data.featuredStreams || [],
-                        t = Object(m.a)(e);
-                    return this.getRender(t)
-                }, t.prototype.postRender = function() {
-                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
-                }, t = o.__decorate([Object(c.a)(f, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                language: l.n.intl.getLanguageCode(),
-                                first: e.streamCount || 6
-                            }
-                        }
-                    }
-                }), Object(p.c)("FeaturedBroadcasters")], t)
-            }(s.Component),
-            v = h
-    },
-    810: function(e, t, n) {
+    807: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -10840,7 +10906,7 @@ webpackJsonp([48], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    813: function(e, t, n) {
+    810: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -10908,7 +10974,7 @@ webpackJsonp([48], {
             return i
         })
     },
-    836: function(e, t, n) {
+    833: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
@@ -10960,7 +11026,7 @@ webpackJsonp([48], {
             return s
         })
     },
-    869: function(e, t, n) {
+    866: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -10984,7 +11050,7 @@ webpackJsonp([48], {
             e[e.Stream = 1] = "Stream", e[e.Vod = 2] = "Vod"
         }(s || (s = {}))
     },
-    879: function(e, t, n) {
+    876: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -10992,12 +11058,12 @@ webpackJsonp([48], {
                 trackingSet: e.ads.trackingSet
             }
         }
-        var a = n(7),
+        var a = n(6),
             r = n(0),
             o = n(1),
             s = n(2),
-            l = n(112),
-            c = n(383),
+            l = n(110),
+            c = n(380),
             d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
             u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
             m = function(e) {
@@ -11102,7 +11168,7 @@ webpackJsonp([48], {
             return g
         })
     },
-    908: function(e, t, n) {
+    905: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -11111,14 +11177,14 @@ webpackJsonp([48], {
                 rightColumnCollapsed: !e.ui.rightColumnExpanded
             }
         }
-        var a = n(7),
+        var a = n(6),
             r = n(0),
             o = n(1),
-            s = n(382),
-            l = n(145),
-            c = n(146),
-            d = n(398),
-            u = n(451),
+            s = n(379),
+            l = n(143),
+            c = n(144),
+            d = n(395),
+            u = n(448),
             m = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -11166,15 +11232,15 @@ webpackJsonp([48], {
             return p
         })
     },
-    909: function(e, t, n) {
+    906: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
             r = n(10),
             o = n(2),
-            s = n(910),
+            s = n(907),
             l = n(3),
-            c = (n(1011), function(e) {
+            c = (n(1008), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.state = {
@@ -11291,15 +11357,15 @@ webpackJsonp([48], {
             return d
         })
     },
-    910: function(e, t, n) {
+    907: function(e, t, n) {
         "use strict";
         var i, a, r, o = n(0),
             s = n(4),
             l = n(1),
             c = n(2),
-            d = n(276),
+            d = n(145),
             u = n(3),
-            m = (n(1010), i = {}, i[d.a.Live] = "stream-type-indicator--live", i[d.a.Premiere] = "stream-type-indicator--premiere", i[d.a.Rerun] = "stream-type-indicator--rerun", i[d.a.WatchParty] = "stream-type-indicator--rerun", i),
+            m = (n(1007), i = {}, i[d.a.Live] = "stream-type-indicator--live", i[d.a.Premiere] = "stream-type-indicator--premiere", i[d.a.Rerun] = "stream-type-indicator--rerun", i[d.a.WatchParty] = "stream-type-indicator--rerun", i),
             p = (a = {}, a[d.a.Premiere] = u._9.VideoPremiere, a[d.a.Rerun] = u._9.VideoRerun, a[d.a.WatchParty] = u._9.VideoRerun, a),
             g = (r = {}, r[d.a.Premiere] = u._10.Live, r[d.a.Rerun] = u._10.Inherit, r[d.a.WatchParty] = u._10.Inherit, r),
             f = function(e) {
@@ -11366,4 +11432,4 @@ webpackJsonp([48], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front-5a0e45411dee43e471efab3c990c20fc.js.map
+//# sourceMappingURL=pages.anon-front-7a6949446ab4d0e3251d1fe3238c922b.js.map

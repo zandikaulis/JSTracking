@@ -3117,6 +3117,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "aec6897c-9a43-4d5a-a09e-3a9ebf05e4d5": {
+            "name": "twilight_onboarding_randomized_games",
+            "v": 2570,
+            "t": 1,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "af8f152a-f618-416e-8b79-d6ac30479018": {
             "name": "PERPETUA",
             "v": 999,

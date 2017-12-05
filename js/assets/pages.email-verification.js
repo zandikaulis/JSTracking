@@ -1,5 +1,5 @@
 webpackJsonp([59], {
-    2068: function(e, t, r) {
+    2072: function(e, t, r) {
         "use strict";
 
         function i(e) {
@@ -27,11 +27,11 @@ webpackJsonp([59], {
             a = r(1),
             o = r(9),
             s = r(2),
-            c = r(813),
-            d = r(810),
+            c = r(810),
+            d = r(807),
             u = r(12),
             l = r(5),
-            h = r(812),
+            h = r(809),
             g = r(3),
             m = function(e) {
                 function t() {
@@ -67,10 +67,9 @@ webpackJsonp([59], {
                         },
                         "data-test-selector": "verify-success"
                     }, Object(s.d)("Your email address has been successfully validated.", "EmailVerification"));
-                    var e = Object(s.d)("Unknown Error", "EmailVerification"),
-                        t = Object(s.d)("Couldn't validate your email: {errorMessage}", {
-                            errorMessage: this.state.errorMessage || e
-                        }, "EmailVerification");
+                    var e = Object(s.d)("Couldn't validate your email: {errorMessage}", {
+                        errorMessage: this.maybeGetLocalizedErrorMessage(this.state.errorMessage)
+                    }, "EmailVerification");
                     return a.createElement(g.U, {
                         margin: {
                             top: 1
@@ -79,7 +78,9 @@ webpackJsonp([59], {
                     }, a.createElement(g._21, {
                         color: g.F.Error,
                         type: g._26.Strong
-                    }, t))
+                    }, e))
+                }, t.prototype.maybeGetLocalizedErrorMessage = function(e) {
+                    return e ? "Not Found" === e ? Object(s.d)("Not Found", "EmailVerification") : e : Object(s.d)("Unknown Error", "EmailVerification")
                 }, t.prototype.verifyEmail = function() {
                     return n.__awaiter(this, void 0, void 0, function() {
                         var e, t, r, a;
@@ -119,7 +120,7 @@ webpackJsonp([59], {
             return p
         })
     },
-    810: function(e, t, r) {
+    807: function(e, t, r) {
         "use strict";
         r.d(t, "a", function() {
             return i
@@ -178,7 +179,7 @@ webpackJsonp([59], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    812: function(e, t, r) {
+    809: function(e, t, r) {
         "use strict";
         r.d(t, "a", function() {
             return o
@@ -309,7 +310,7 @@ webpackJsonp([59], {
                 }, e
             }()
     },
-    813: function(e, t, r) {
+    810: function(e, t, r) {
         "use strict";
 
         function i(e) {
@@ -378,4 +379,4 @@ webpackJsonp([59], {
         })
     }
 });
-//# sourceMappingURL=pages.email-verification-c50d602d84daca910d53ac4907895b5c.js.map
+//# sourceMappingURL=pages.email-verification-353c4c963888436cd6481df0768badc8.js.map
