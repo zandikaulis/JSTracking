@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".6b1d7ed3b18b8cf876b5.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".4b3f2793dde0c53e3936.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -4430,25 +4430,27 @@
                             r = t.analytics,
                             i = t.communities,
                             a = t.stream,
-                            o = t.collection;
+                            o = t.streamMetadata,
+                            s = t.collection;
                         if (null !== this.bufferEmptyStartTime) {
-                            var s = (new Date).getTime();
+                            var u = (new Date).getTime();
                             this.trackEvent(A.a.BUFFER_REFILL, {
-                                buffering_time: (s - this.bufferEmptyStartTime) / 1e3,
+                                buffering_time: (u - this.bufferEmptyStartTime) / 1e3,
                                 community_ids: i.ids
                             }), this.bufferEmptyStartTime = null
                         }
                         if (!this.hasPlayed) {
-                            var u = {
+                            var c = {
                                 time_since_load_start: Date.now() - r.playSessionStartTime,
                                 community_ids: i.ids,
-                                autoplayed: this.options.autoplay
+                                autoplayed: this.options.autoplay,
+                                broadcastId: o.broadcastID
                             };
                             a.contentType === N.a && (n.i(w.e)(a.videoId).then(function(t) {
                                 e.countessTracker.trackVODView(t)
-                            }), o.id && (u.collection_item_position = h()(o.items, {
+                            }), s.id && (c.collection_item_position = h()(s.items, {
                                 item_id: a.videoId.substr(1)
-                            }), u.collection_id = o.id)), this.trackEvent(A.a.VIDEO_PLAY, u), this.hasPlayed = !0, this.valveClient.notify(), this.store.dispatch(k.a()), this.store.dispatch(k.b())
+                            }), c.collection_id = s.id)), this.trackEvent(A.a.VIDEO_PLAY, c), this.hasPlayed = !0, this.valveClient.notify(), this.store.dispatch(k.a()), this.store.dispatch(k.b())
                         }
                         this.minutesWatchedTimer.start()
                     }
@@ -21692,7 +21694,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.12.05-211151+807e9c9bc3aac4279a74f85d71c29b23f21fb744",
+                    app_version: "2017.12.05-211919+3f5cbe2f4850920d829174e8cc380dda688946cb",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,

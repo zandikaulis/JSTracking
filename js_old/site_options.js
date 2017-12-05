@@ -2102,13 +2102,13 @@ window.SiteOptions = {
         },
         "74156eb2-ed95-482c-b006-60c1428e8846": {
             "name": "twilight_web_onboarding_channel_ranking",
-            "v": 2508,
+            "v": 2571,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "yes"
             }]
         },
