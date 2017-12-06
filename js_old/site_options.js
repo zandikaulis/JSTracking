@@ -712,19 +712,19 @@ window.SiteOptions = {
         },
         "274f6835-a41d-417c-ad58-f1321e2aac39": {
             "name": "android_skippable_ads",
-            "v": 1959,
+            "v": 2582,
             "t": 1,
             "groups": [{
-                "weight": 5,
+                "weight": 0,
                 "value": "skipcontrol"
             }, {
                 "weight": 0,
                 "value": "skip15"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "skip5"
             }, {
-                "weight": 90,
+                "weight": 100,
                 "value": "holdout"
             }]
         },
@@ -1267,13 +1267,13 @@ window.SiteOptions = {
         },
         "47597570-dd4e-4996-85eb-86db164cae9c": {
             "name": "TWILIGHT_AML_RANKING_FOLLOWS",
-            "v": 2572,
+            "v": 2585,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "treatment"
             }]
         },
@@ -2186,19 +2186,19 @@ window.SiteOptions = {
         },
         "79accd86-e77e-4eae-8979-d19ab2bc4521": {
             "name": "ios_skippable_ads",
-            "v": 1960,
+            "v": 2583,
             "t": 1,
             "groups": [{
-                "weight": 5,
+                "weight": 0,
                 "value": "skipcontrol"
             }, {
                 "weight": 0,
                 "value": "skip15"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "skip5"
             }, {
-                "weight": 90,
+                "weight": 100,
                 "value": "holdout"
             }]
         },
