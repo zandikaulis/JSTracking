@@ -1408,11 +1408,11 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
-            "v": 2567,
+            "v": 2576,
             "t": 1,
             "groups": [{
                 "weight": 1,
-                "value": "//video-edge-6ac9ed.sjc01.hls.ttvnw.net/v1/playlist/CquPM8Wo3r3kZVpqdDZmZqnVsYNb55DZMhyIQOjHw354TERJSeLxjpgI2mfbs3qOzxXbKLhEOBYbq_tK7GhB45DqcAC_cX1JrUx-IbSBdqfcm7GHS079m1Wc0YHGvYhA0CtzL-vaBxaPguTdlaJoJvR7dgBTmwAXdKkqwnl65EivTK2l2Ob5B1jOEzlNHwVbSxLx_ByVQFBkOZ-V0XI0NtN2FknkBjey53gZ_SiO0_vUIV4PK3bCF6pNu-NqYGEtQlxQDHTyDF6bw12Cr3nvd1z0Ygv76gadMaklKkbpuV872fz8ss5S94efSaT89hPFclgHo_U7Jkyynp0Y3q7oHtm710bbD3SmxYDLASNAsM23I_q3GEcP6_rACo5BN5tT-Dbs8csYz3YiczVwzqqLuCu0MVe3CYzhFlwsPeFd_F4LUhvmp-8RH5WWWV70ePMoWi_Rf7zwOe5NRCpXqTq.m3u8"
+                "value": "//video-edge-8ac5ec.sjc01.hls.ttvnw.net/v1/playlist/Cv5Tc2QQfuYbJiT3tmtc1MpM1JOCgs050GUs-L-LF8HDt4MoTx4Yh-kQVzeJEVtKy1JreA-SgzmhHVaa6LOH5Jhx96yBtopU_waFnH1ZXlo9VhyiMuJVntQ_ICm0cHV4DvW9Q4f8YfA6F09IssE0pYe-duDKG81jaPg9j-AXGbqdJ3CDp-_WwAbTF7-uHiRn0dKmzELjkWBKD7fZ-XwlGunvLW4dMUc53LxKlvCa1WNCxUYMSjGFN-0RdKDS2S1qaCl8K3TlIPZS_BoB1FL3yBup4gIzSWirtvQ9YOaAeqUw8VYtku7FgLZ23DGLkYzliKK3Uja-d0KltJKKbNxiWOwCQyp3_SCEwyUy71F0rFYYGdIp-K_KJvKZ50VukpNhsJSghnuim6LMythwBkRlra0S9ZWKQngCY2x13uHwVHsW7n0.m3u8"
             }]
         },
         "4bc4a7c7-21b7-44f5-a0fb-79f430ee8ac4": {
@@ -1689,6 +1689,18 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "active"
+            }]
+        },
+        "560f30f8-b4fc-4a9d-96ac-9143dc1f4110": {
+            "name": "recommended_clips_live_recs",
+            "v": 2578,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "liverecs"
             }]
         },
         "59c5198b-ea6d-423d-b337-ea93d0dc8d66": {
@@ -4322,13 +4334,13 @@ window.SiteOptions = {
         },
         "f866f89d-85de-4a5b-9b00-d97c791bc16d": {
             "name": "TWILIGHT_RAID_AUTO_JOIN",
-            "v": 2574,
+            "v": 2577,
             "t": 1,
             "groups": [{
-                "weight": 10,
+                "weight": 20,
                 "value": "yes"
             }, {
-                "weight": 90,
+                "weight": 80,
                 "value": "no"
             }]
         },
