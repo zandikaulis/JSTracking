@@ -638,6 +638,18 @@ window.SiteOptions = {
                 "value": "live"
             }]
         },
+        "2153e9fc-7f48-4402-aa54-7883d0c55c98": {
+            "name": "android_chromecast_player_core",
+            "v": 2610,
+            "t": 1,
+            "groups": [{
+                "weight": 5,
+                "value": "control"
+            }, {
+                "weight": 95,
+                "value": "player_core"
+            }]
+        },
         "21eae6bf-b120-4cd0-a513-5612ea0fb51c": {
             "name": "ps4_playercore",
             "v": 1121,
@@ -1726,10 +1738,10 @@ window.SiteOptions = {
         },
         "59cbe6c8-2355-403e-aa3a-ab22310adebe": {
             "name": "aml_ranking_follows",
-            "v": 2608,
+            "v": 2609,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
                 "weight": 0,
@@ -1744,7 +1756,7 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "just_one"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "complete"
             }]
         },
