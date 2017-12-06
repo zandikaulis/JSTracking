@@ -1270,13 +1270,13 @@ window.SiteOptions = {
         },
         "47597570-dd4e-4996-85eb-86db164cae9c": {
             "name": "TWILIGHT_AML_RANKING_FOLLOWS",
-            "v": 2585,
+            "v": 2606,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 99,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 1,
                 "value": "treatment"
             }]
         },
@@ -1726,7 +1726,7 @@ window.SiteOptions = {
         },
         "59cbe6c8-2355-403e-aa3a-ab22310adebe": {
             "name": "aml_ranking_follows",
-            "v": 2566,
+            "v": 2608,
             "t": 2,
             "groups": [{
                 "weight": 0,
