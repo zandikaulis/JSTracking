@@ -49,7 +49,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-6ac9ed.sjc01.hls.ttvnw.net/v1/playlist/CquPM8Wo3r3kZVpqdDZmZqnVsYNb55DZMhyIQOjHw354TERJSeLxjpgI2mfbs3qOzxXbKLhEOBYbq_tK7GhB45DqcAC_cX1JrUx-IbSBdqfcm7GHS079m1Wc0YHGvYhA0CtzL-vaBxaPguTdlaJoJvR7dgBTmwAXdKkqwnl65EivTK2l2Ob5B1jOEzlNHwVbSxLx_ByVQFBkOZ-V0XI0NtN2FknkBjey53gZ_SiO0_vUIV4PK3bCF6pNu-NqYGEtQlxQDHTyDF6bw12Cr3nvd1z0Ygv76gadMaklKkbpuV872fz8ss5S94efSaT89hPFclgHo_U7Jkyynp0Y3q7oHtm710bbD3SmxYDLASNAsM23I_q3GEcP6_rACo5BN5tT-Dbs8csYz3YiczVwzqqLuCu0MVe3CYzhFlwsPeFd_F4LUhvmp-8RH5WWWV70ePMoWi_Rf7zwOe5NRCpXqTq.m3u8",
+    "spade_url": "https://video-edge-8ac5ec.sjc01.hls.ttvnw.net/v1/playlist/Cv5Tc2QQfuYbJiT3tmtc1MpM1JOCgs050GUs-L-LF8HDt4MoTx4Yh-kQVzeJEVtKy1JreA-SgzmhHVaa6LOH5Jhx96yBtopU_waFnH1ZXlo9VhyiMuJVntQ_ICm0cHV4DvW9Q4f8YfA6F09IssE0pYe-duDKG81jaPg9j-AXGbqdJ3CDp-_WwAbTF7-uHiRn0dKmzELjkWBKD7fZ-XwlGunvLW4dMUc53LxKlvCa1WNCxUYMSjGFN-0RdKDS2S1qaCl8K3TlIPZS_BoB1FL3yBup4gIzSWirtvQ9YOaAeqUw8VYtku7FgLZ23DGLkYzliKK3Uja-d0KltJKKbNxiWOwCQyp3_SCEwyUy71F0rFYYGdIp-K_KJvKZ50VukpNhsJSghnuim6LMythwBkRlra0S9ZWKQngCY2x13uHwVHsW7n0.m3u8",
     "store_merch_promo": "off",
     "store_merch_seasonal": "on",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
@@ -398,13 +398,13 @@ window.__twilightSettings = {
         },
         "f866f89d-85de-4a5b-9b00-d97c791bc16d": {
             "name": "TWILIGHT_RAID_AUTO_JOIN",
-            "v": 2574,
+            "v": 2577,
             "t": 1,
             "groups": [{
-                "weight": 10,
+                "weight": 20,
                 "value": "yes"
             }, {
-                "weight": 90,
+                "weight": 80,
                 "value": "no"
             }]
         }
