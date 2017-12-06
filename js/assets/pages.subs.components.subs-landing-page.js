@@ -1,26 +1,26 @@
 webpackJsonp([67], {
-    1261: function(e, t, n) {
+    1262: function(e, t, n) {
         "use strict";
 
         function a(e) {
-            return i.__awaiter(this, void 0, void 0, function() {
+            return s.__awaiter(this, void 0, void 0, function() {
                 var t;
-                return i.__generator(this, function(n) {
+                return s.__generator(this, function(n) {
                     return t = {
                         login: e.login,
                         user_id: Number(e.userId),
                         channel: e.channel,
                         channel_id: e.channelId,
                         clickthrough_location: e.clickthroughLocation
-                    }, s.m.track(o.SpadeEventType.SubsLandingStreamerClick, t), [2]
+                    }, i.m.track(o.SpadeEventType.SubsLandingStreamerClick, t), [2]
                 })
             })
         }
 
         function r(e) {
-            return i.__awaiter(this, void 0, void 0, function() {
+            return s.__awaiter(this, void 0, void 0, function() {
                 var t, n;
-                return i.__generator(this, function(a) {
+                return s.__generator(this, function(a) {
                     if (t = null, e.isSubscribedCurrentTier) switch (e.isSubscribedCurrentTier) {
                         case "1000":
                             t = "$4.99";
@@ -52,13 +52,13 @@ webpackJsonp([67], {
                         vod_type: "",
                         viewport_height: window.innerHeight,
                         viewport_width: window.innerWidth
-                    }, s.m.track(o.SpadeEventType.Subscription, n), [2]
+                    }, i.m.track(o.SpadeEventType.Subscription, n), [2]
                 })
             })
         }
         t.a = a, t.b = r;
-        var i = n(0),
-            s = n(2),
+        var s = n(0),
+            i = n(2),
             o = n(12)
     },
     2004: function(e, t, n) {
@@ -346,7 +346,7 @@ webpackJsonp([67], {
             }, e)
         }
 
-        function i(e) {
+        function s(e) {
             return {
                 user: Object(k.c)(e)
             }
@@ -354,7 +354,7 @@ webpackJsonp([67], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var s = n(6),
+        var i = n(6),
             o = n(0),
             l = n(1),
             c = n(2),
@@ -363,8 +363,8 @@ webpackJsonp([67], {
             m = n(2005),
             p = n.n(m),
             g = n(28),
-            h = n(810),
-            f = n(807),
+            h = n(811),
+            f = n(809),
             b = n(12),
             _ = n(5),
             y = n(9),
@@ -417,7 +417,7 @@ webpackJsonp([67], {
                 }, t = o.__decorate([Object(_.c)("FollowedChannelLink")], t)
             }(l.Component)),
             N = P,
-            F = n(1261),
+            F = n(1262),
             O = n(2007),
             D = (n(2008), function(e) {
                 function t() {
@@ -542,12 +542,12 @@ webpackJsonp([67], {
                 })], t)
             }(l.Component)),
             L = D,
-            T = Object(s.a)(a, r)(L),
-            U = n(39),
+            T = Object(i.a)(a, r)(L),
+            U = n(40),
             I = n(18),
-            j = n(67),
+            j = n(66),
             M = n(107),
-            R = n(266),
+            R = n(265),
             H = n(64),
             A = n(49),
             W = (n(2009), function(e) {
@@ -778,9 +778,9 @@ webpackJsonp([67], {
                         a = document.activeElement,
                         r = Array.prototype.indexOf.call(n, a);
                     if (t = r < 0 ? e > 0 ? 0 : n.length - 1 : r + e, t < 0 && (t = 0), !(t >= n.length)) {
-                        var i = n.item(t);
-                        i.focus(), i.tabIndex = 0, this.state.currentFocus && (this.state.currentFocus.tabIndex = -1), this.setState({
-                            currentFocus: i
+                        var s = n.item(t);
+                        s.focus(), s.tabIndex = 0, this.state.currentFocus && (this.state.currentFocus.tabIndex = -1), this.setState({
+                            currentFocus: s
                         })
                     }
                 }, t.prototype.getEmptyState = function() {
@@ -800,7 +800,7 @@ webpackJsonp([67], {
                     }
                 }, t.prototype.doSearch = function(e) {
                     return o.__awaiter(this, void 0, void 0, function() {
-                        var t, n, a, r, i, s;
+                        var t, n, a, r, s, i;
                         return o.__generator(this, function(l) {
                             switch (l.label) {
                                 case 0:
@@ -815,17 +815,17 @@ webpackJsonp([67], {
                                 case 2:
                                     return r = l.sent(), [3, 4];
                                 case 3:
-                                    return i = l.sent(), c.i.error(i, "Algolia top results search failed"), this.setState(o.__assign({}, this.getEmptyState(), {
+                                    return s = l.sent(), c.i.error(s, "Algolia top results search failed"), this.setState(o.__assign({}, this.getEmptyState(), {
                                         isErrored: !0,
                                         isOpen: !0,
                                         term: e
                                     })), [2];
                                 case 4:
-                                    return r ? this.state.queryID !== r.id ? [2] : (s = Object(R.b)({
+                                    return r ? this.state.queryID !== r.id ? [2] : (i = Object(R.b)({
                                         searchResults: r,
                                         append: !1
                                     }), this.setState(function(n) {
-                                        return o.__assign({}, n, s, {
+                                        return o.__assign({}, n, i, {
                                             queryID: "",
                                             term: e,
                                             isOpen: !0,
@@ -842,7 +842,7 @@ webpackJsonp([67], {
                     })
                 }, t = o.__decorate([Object(_.c)("StreamerSearch")], t)
             }(l.Component),
-            G = Object(s.a)(i)(K),
+            G = Object(i.a)(s)(K),
             $ = (n(2011), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1006,12 +1006,12 @@ webpackJsonp([67], {
                 })], t)
             }(l.Component)),
             J = $,
-            Y = Object(s.a)()(J);
+            Y = Object(i.a)()(J);
         n.d(t, "SubsLandingPage", function() {
             return Y
         })
     },
-    807: function(e, t, n) {
+    809: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -1022,6 +1022,7 @@ webpackJsonp([67], {
             BrowseForYou: "browse.for-you",
             ChannelIndex: "channel.index.index",
             ChannelDashboardAchievements: "channel.dashboard.achievements",
+            ChannelDashboardExtensions: "channel.dashboard.extensions",
             ChannelDashboardModeration: "channel.dashboard.moderation",
             ChannelDashboardStreamSummary: "channel.dashboard.stream-summary",
             ChannelClips: "channel.clips",
@@ -1070,7 +1071,7 @@ webpackJsonp([67], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    810: function(e, t, n) {
+    811: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1085,12 +1086,12 @@ webpackJsonp([67], {
                                 "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = r.__assign({}, e.properties));
                                 var n = r.__assign({}, a.props);
                                 n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var i = a.referenceTracking,
-                                    s = i.content,
-                                    o = i.medium,
-                                    c = i.content_index;
+                                var s = a.referenceTracking,
+                                    i = s.content,
+                                    o = s.medium,
+                                    c = s.content_index;
                                 l.n.tracking.trackPageview(r.__assign({
-                                    content: s,
+                                    content: i,
                                     medium: o,
                                     content_index: c,
                                     location: e.location
@@ -1106,9 +1107,9 @@ webpackJsonp([67], {
                     }, a.prototype.componentDidUpdate = function() {
                         this.trackPageview()
                     }, a.prototype.render = function() {
-                        return s.createElement(t, r.__assign({}, this.props))
+                        return i.createElement(t, r.__assign({}, this.props))
                     }, a.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? i.parse(e.search) : {},
+                        var t = "" !== e.search ? s.parse(e.search) : {},
                             n = {
                                 content: t.tt_content,
                                 content_index: t.tt_content_index,
@@ -1116,7 +1117,7 @@ webpackJsonp([67], {
                             };
                         if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
                             var a = "",
-                                r = i.stringify(t);
+                                r = s.stringify(t);
                             r.length > 0 && (a = "?" + r), this.props.history.replace({
                                 pathname: e.pathname,
                                 hash: e.hash,
@@ -1125,13 +1126,13 @@ webpackJsonp([67], {
                         }
                         return n
                     }, a
-                }(s.Component);
+                }(i.Component);
                 return Object(o.f)(n)
             }
         }
         var r = n(0),
-            i = n(20),
-            s = n(1),
+            s = n(20),
+            i = n(1),
             o = n(10),
             l = n(2);
         n.d(t, "a", function() {
@@ -1139,4 +1140,4 @@ webpackJsonp([67], {
         })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-landing-page-cf0ef5e18cab97890cc37ca4d2cdce3e.js.map
+//# sourceMappingURL=pages.subs.components.subs-landing-page-292f69b2991a31a69dfd5e1313570625.js.map

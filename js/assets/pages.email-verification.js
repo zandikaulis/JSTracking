@@ -27,11 +27,11 @@ webpackJsonp([59], {
             a = r(1),
             o = r(9),
             s = r(2),
-            c = r(810),
-            d = r(807),
+            c = r(811),
+            d = r(809),
             u = r(12),
             l = r(5),
-            h = r(809),
+            h = r(812),
             g = r(3),
             m = function(e) {
                 function t() {
@@ -120,7 +120,7 @@ webpackJsonp([59], {
             return p
         })
     },
-    807: function(e, t, r) {
+    809: function(e, t, r) {
         "use strict";
         r.d(t, "a", function() {
             return i
@@ -131,6 +131,7 @@ webpackJsonp([59], {
             BrowseForYou: "browse.for-you",
             ChannelIndex: "channel.index.index",
             ChannelDashboardAchievements: "channel.dashboard.achievements",
+            ChannelDashboardExtensions: "channel.dashboard.extensions",
             ChannelDashboardModeration: "channel.dashboard.moderation",
             ChannelDashboardStreamSummary: "channel.dashboard.stream-summary",
             ChannelClips: "channel.clips",
@@ -179,7 +180,75 @@ webpackJsonp([59], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    809: function(e, t, r) {
+    811: function(e, t, r) {
+        "use strict";
+
+        function i(e) {
+            return function(t) {
+                var r = function(r) {
+                    function i(t) {
+                        var i = r.call(this, t) || this;
+                        return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
+                            if (!(i.tracked || e.skip && e.skip(i.props))) {
+                                i.tracked = !0, c.n.adBlockSentinel.pageTransition();
+                                var t = {};
+                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = n.__assign({}, e.properties));
+                                var r = n.__assign({}, i.props);
+                                r.location && r.location.state && (t.medium = r.location.state.medium, t.content = r.location.state.content, t.content_index = r.location.state.content_index);
+                                var a = i.referenceTracking,
+                                    o = a.content,
+                                    s = a.medium,
+                                    d = a.content_index;
+                                c.n.tracking.trackPageview(n.__assign({
+                                    content: o,
+                                    medium: s,
+                                    content_index: d,
+                                    location: e.location
+                                }, t))
+                            }
+                        }, c.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                    }
+                    return n.__extends(i, r), i.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, r) {
+                            "REPLACE" !== r && (e.tracked = !1, e.referenceTracking = {})
+                        })
+                    }, i.prototype.componentDidUpdate = function() {
+                        this.trackPageview()
+                    }, i.prototype.render = function() {
+                        return o.createElement(t, n.__assign({}, this.props))
+                    }, i.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? a.parse(e.search) : {},
+                            r = {
+                                content: t.tt_content,
+                                content_index: t.tt_content_index,
+                                medium: t.tt_medium
+                            };
+                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, r.medium || r.content) {
+                            var i = "",
+                                n = a.stringify(t);
+                            n.length > 0 && (i = "?" + n), this.props.history.replace({
+                                pathname: e.pathname,
+                                hash: e.hash,
+                                search: i
+                            })
+                        }
+                        return r
+                    }, i
+                }(o.Component);
+                return Object(s.f)(r)
+            }
+        }
+        var n = r(0),
+            a = r(20),
+            o = r(1),
+            s = r(10),
+            c = r(2);
+        r.d(t, "a", function() {
+            return i
+        })
+    },
+    812: function(e, t, r) {
         "use strict";
         r.d(t, "a", function() {
             return o
@@ -309,74 +378,6 @@ webpackJsonp([59], {
                     }), i
                 }, e
             }()
-    },
-    810: function(e, t, r) {
-        "use strict";
-
-        function i(e) {
-            return function(t) {
-                var r = function(r) {
-                    function i(t) {
-                        var i = r.call(this, t) || this;
-                        return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
-                            if (!(i.tracked || e.skip && e.skip(i.props))) {
-                                i.tracked = !0, c.n.adBlockSentinel.pageTransition();
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = n.__assign({}, e.properties));
-                                var r = n.__assign({}, i.props);
-                                r.location && r.location.state && (t.medium = r.location.state.medium, t.content = r.location.state.content, t.content_index = r.location.state.content_index);
-                                var a = i.referenceTracking,
-                                    o = a.content,
-                                    s = a.medium,
-                                    d = a.content_index;
-                                c.n.tracking.trackPageview(n.__assign({
-                                    content: o,
-                                    medium: s,
-                                    content_index: d,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, c.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
-                    }
-                    return n.__extends(i, r), i.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, r) {
-                            "REPLACE" !== r && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, i.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, i.prototype.render = function() {
-                        return o.createElement(t, n.__assign({}, this.props))
-                    }, i.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? a.parse(e.search) : {},
-                            r = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, r.medium || r.content) {
-                            var i = "",
-                                n = a.stringify(t);
-                            n.length > 0 && (i = "?" + n), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: i
-                            })
-                        }
-                        return r
-                    }, i
-                }(o.Component);
-                return Object(s.f)(r)
-            }
-        }
-        var n = r(0),
-            a = r(20),
-            o = r(1),
-            s = r(10),
-            c = r(2);
-        r.d(t, "a", function() {
-            return i
-        })
     }
 });
-//# sourceMappingURL=pages.email-verification-353c4c963888436cd6481df0768badc8.js.map
+//# sourceMappingURL=pages.email-verification-b5afc3a63c456005fabc2a2b0560fdbe.js.map

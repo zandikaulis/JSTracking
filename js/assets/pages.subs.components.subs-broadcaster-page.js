@@ -1,5 +1,5 @@
 webpackJsonp([68], {
-    1261: function(e, t, n) {
+    1262: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -474,16 +474,16 @@ webpackJsonp([68], {
             s = n(0),
             a = n(1),
             o = n(2),
-            c = n(66),
+            c = n(67),
             l = n(28),
             u = n(7),
-            d = n(810),
-            p = n(807),
+            d = n(811),
+            p = n(809),
             m = n(12),
             b = n(87),
             h = n(5),
-            g = n(273),
-            v = n(274),
+            g = n(272),
+            v = n(273),
             k = n(3),
             y = function(e) {
                 function t() {
@@ -512,7 +512,7 @@ webpackJsonp([68], {
                 }, t
             }(a.Component),
             f = y,
-            _ = n(1261);
+            _ = n(1262);
         n(2012);
         ! function(e) {
             e[e.Tier1 = 0] = "Tier1", e[e.Tier2 = 1] = "Tier2", e[e.Tier3 = 2] = "Tier3"
@@ -944,8 +944,8 @@ webpackJsonp([68], {
                 }, t = s.__decorate([Object(h.c)("SubsPlanTiers")], t)
             }(a.Component)),
             w = N,
-            D = n(2016),
-            x = function(e) {
+            x = n(2016),
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1015,7 +1015,7 @@ webpackJsonp([68], {
                         channelId: this.props.data.user.id,
                         channelLogin: this.props.data.user.login
                     }))))
-                }, t = s.__decorate([Object(u.a)(D, {
+                }, t = s.__decorate([Object(u.a)(x, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1029,13 +1029,13 @@ webpackJsonp([68], {
                     location: m.PageviewLocation.SubsBroadcasterPage
                 })], t)
             }(a.Component),
-            F = x,
+            F = D,
             I = Object(r.a)()(F);
         n.d(t, "SubsBroadcasterPage", function() {
             return I
         })
     },
-    807: function(e, t, n) {
+    809: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -1046,6 +1046,7 @@ webpackJsonp([68], {
             BrowseForYou: "browse.for-you",
             ChannelIndex: "channel.index.index",
             ChannelDashboardAchievements: "channel.dashboard.achievements",
+            ChannelDashboardExtensions: "channel.dashboard.extensions",
             ChannelDashboardModeration: "channel.dashboard.moderation",
             ChannelDashboardStreamSummary: "channel.dashboard.stream-summary",
             ChannelClips: "channel.clips",
@@ -1094,7 +1095,7 @@ webpackJsonp([68], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    810: function(e, t, n) {
+    811: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1163,4 +1164,4 @@ webpackJsonp([68], {
         })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-ebcdb7c0d866d698198b5efbf93eb275.js.map
+//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-297048bdd77a40064c1b681630fecd88.js.map

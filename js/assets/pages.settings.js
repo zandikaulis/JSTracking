@@ -1,5 +1,5 @@
 webpackJsonp([56], {
-    129: function(e, t, n) {
+    128: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -11,7 +11,7 @@ webpackJsonp([56], {
         }
         var o = n(2),
             r = n(16),
-            l = n(263);
+            l = n(262);
         t.a = i, t.b = a;
         var s = "https://www.twitch.tv"
     },
@@ -642,8 +642,8 @@ webpackJsonp([56], {
             o = n(1),
             r = n(2),
             l = n(28),
-            s = n(129),
-            c = n(374),
+            s = n(128),
+            c = n(372),
             d = n(5),
             u = n(3);
         ! function(e) {
@@ -699,11 +699,11 @@ webpackJsonp([56], {
                 }, t = a.__decorate([Object(d.c)("SettingsTabs")], t)
             }(o.Component),
             p = g,
-            f = n(810),
-            h = n(807),
+            f = n(811),
+            h = n(809),
             b = n(12),
             v = n(9),
-            S = n(66),
+            S = n(67),
             y = n(7),
             k = n(21),
             N = n(10),
@@ -966,7 +966,7 @@ webpackJsonp([56], {
                     }
                 }, t
             }(o.Component),
-            O = Object(v.compose)(Object(y.a)(w, {
+            C = Object(v.compose)(Object(y.a)(w, {
                 options: function() {
                     return {
                         fetchPolicy: "cache-and-network",
@@ -1001,7 +1001,7 @@ webpackJsonp([56], {
             }), Object(y.a)(E, {
                 name: "setAdvancedNotificationSetting"
             }), Object(d.c)("AdvancedNotificationSettings"))(x),
-            C = (n(1933), function(e) {
+            O = (n(1933), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -1309,7 +1309,7 @@ webpackJsonp([56], {
                     for (var e = [], t = 0, n = this.VisibleSettings; t < n.length; t++) {
                         var i = n[t],
                             a = this.getSettingByCategory(i.category);
-                        a && e.push(o.createElement(C, {
+                        a && e.push(o.createElement(O, {
                             category: i.category,
                             text: i.name,
                             description: i.description,
@@ -1407,7 +1407,7 @@ webpackJsonp([56], {
                         description: Object(r.d)("Get Twitch updates on the go. Receive notifications right on your phone's home screen.", "GlobalNotificationSettingsPage"),
                         explanation: Object(r.d)("Send me push notifications", "GlobalNotificationSettingsPage"),
                         key: "push"
-                    }), o.createElement(O, null))))
+                    }), o.createElement(C, null))))
                 }, t.prototype.onRender = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t = a.__decorate([Object(d.c)("GlobalNotificationSettingsPage", {
@@ -1421,7 +1421,7 @@ webpackJsonp([56], {
             return D
         })
     },
-    263: function(e, t, n) {
+    262: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(20),
@@ -1506,7 +1506,7 @@ webpackJsonp([56], {
             return d
         })
     },
-    807: function(e, t, n) {
+    809: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -1517,6 +1517,7 @@ webpackJsonp([56], {
             BrowseForYou: "browse.for-you",
             ChannelIndex: "channel.index.index",
             ChannelDashboardAchievements: "channel.dashboard.achievements",
+            ChannelDashboardExtensions: "channel.dashboard.extensions",
             ChannelDashboardModeration: "channel.dashboard.moderation",
             ChannelDashboardStreamSummary: "channel.dashboard.stream-summary",
             ChannelClips: "channel.clips",
@@ -1565,7 +1566,7 @@ webpackJsonp([56], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    810: function(e, t, n) {
+    811: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1634,4 +1635,4 @@ webpackJsonp([56], {
         })
     }
 });
-//# sourceMappingURL=pages.settings-d15a459b0d6379706c4ad77d43a4d73d.js.map
+//# sourceMappingURL=pages.settings-1f412f2abb16689f4a027ef27af9e009.js.map

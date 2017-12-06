@@ -162,21 +162,21 @@ webpackJsonp([69], {
             r = n(1),
             c = n(31),
             o = n(2),
-            s = n(810),
-            m = n(807),
+            s = n(811),
+            m = n(809),
             u = n(12),
             h = n(5),
-            p = (n(1578), n(1579)),
+            p = (n(1577), n(1578)),
             d = n(1506),
             f = n(1955),
             g = n(22),
-            v = n(1282),
-            b = n(1581),
+            v = n(1283),
+            b = n(1580),
             E = n(4),
             _ = n(10),
-            y = n(1580),
+            y = n(1579),
             A = n(1507),
-            S = n(904),
+            S = n(906),
             k = n(3),
             x = {
                 imageSrc: "https://static-cdn.jtvnw.net/emoticons/v1/81274/2.0",
@@ -250,7 +250,7 @@ webpackJsonp([69], {
                     label: Object(o.e)(e.achievement.progressRatio, "percent")
                 }))
             },
-            O = n(864),
+            O = n(866),
             w = (n(1956), ["confetti-layer__confetti--slow", "confetti-layer__confetti--medium", "confetti-layer__confetti--fast"]),
             P = ["rgba(247, 42, 107, 1)", "rgba(255, 113, 105, 1)", "rgba(253, 226, 132, 1)", "rgba(181, 138, 242, 1)"],
             T = ["0.011s", "0.176s", "0.321s", "0.446s", "0.849s", "1.056s", "1.229s", "1.333s", "1.379s", "1.828s"],
@@ -288,7 +288,7 @@ webpackJsonp([69], {
                     }))
                 }, t
             }(r.PureComponent),
-            q = n(1283),
+            q = n(1284),
             L = {
                 "data-test-selector": "recently-completed-achievements-list"
             },
@@ -547,9 +547,9 @@ webpackJsonp([69], {
                     className: n
                 }, R), e.right)), r.createElement(K, null))
             },
-            M = n(1582),
-            Y = n(1139),
-            V = n(1062),
+            M = n(1581),
+            Y = n(1140),
+            V = n(1064),
             J = function(e) {
                 if (e.isPartner) return r.createElement(Q, {
                     title: e.title,
@@ -706,7 +706,7 @@ webpackJsonp([69], {
                     onClickCTA: t
                 })
             },
-            ie = n(1583),
+            ie = n(1582),
             le = function(e) {
                 var t = E({
                         "ach-q-item": !0,
@@ -1158,4 +1158,4 @@ webpackJsonp([69], {
         })
     }
 });
-//# sourceMappingURL=pages.dashboard.achievements-a589b49ece9a7715ccde67f5f1b94fcb.js.map
+//# sourceMappingURL=pages.dashboard.achievements-1d3e3c193638b6a14b69d18bb1bbcccb.js.map

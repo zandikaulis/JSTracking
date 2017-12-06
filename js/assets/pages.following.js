@@ -1,5 +1,5 @@
 webpackJsonp([53], {
-    1004: function(e, t, n) {
+    1006: function(e, t, n) {
         "use strict";
 
         function i(e, t, n, i) {
@@ -63,27 +63,27 @@ webpackJsonp([53], {
         t.d = i, t.c = a, t.b = l, t.a = s, t.e = d;
         var c, u = n(20),
             m = (n.n(u), n(2)),
-            g = n(264),
-            p = n(841);
+            g = n(263),
+            p = n(843);
         ! function(e) {
             e.Popular = "views", e.Newest = "time"
         }(c || (c = {}))
     },
-    1005: function(e, t, n) {
+    1007: function(e, t, n) {
         "use strict";
-        var i = n(1012);
+        var i = n(1014);
         n.d(t, "VideoPreviewCard", function() {
             return i.a
         });
-        var a = n(1014),
-            l = (n.n(a), n(920));
+        var a = n(1016),
+            l = (n.n(a), n(922));
         n.d(t, "VideoPreviewCardPlaceholder", function() {
             return l.a
         })
     },
-    1007: function(e, t) {},
-    1008: function(e, t) {},
-    1012: function(e, t, n) {
+    1009: function(e, t) {},
+    1010: function(e, t) {},
+    1014: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return v
@@ -95,10 +95,10 @@ webpackJsonp([53], {
             o = (n.n(r), n(10)),
             s = n(2),
             d = n(49),
-            c = n(377),
+            c = n(375),
             u = n(5),
             m = n(3),
-            g = n(1013),
+            g = n(1015),
             p = (n.n(g), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -319,14 +319,14 @@ webpackJsonp([53], {
             }(r.Component)),
             v = Object(u.c)("VideoPreviewCard")(p)
     },
-    1013: function(e, t) {},
-    1014: function(e, t) {},
-    1045: function(e, t, n) {
+    1015: function(e, t) {},
+    1016: function(e, t) {},
+    1047: function(e, t, n) {
         "use strict";
         var i = n(1),
             a = n(5),
-            l = n(1005),
-            r = n(920),
+            l = n(1007),
+            r = n(922),
             o = n(3),
             s = function(e) {
                 var t = [];
@@ -367,7 +367,7 @@ webpackJsonp([53], {
             return d
         })
     },
-    1046: function(e, t, n) {
+    1048: function(e, t, n) {
         "use strict";
 
         function i(e, t, n) {
@@ -375,7 +375,7 @@ webpackJsonp([53], {
         }
         t.a = i
     },
-    1061: function(e, t, n) {
+    1063: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -413,10 +413,10 @@ webpackJsonp([53], {
             l = (n.n(a), n(10)),
             r = n(2),
             o = n(3),
-            s = n(1379),
+            s = n(1381),
             d = (n.n(s), "view-all-button-selector")
     },
-    1068: function(e, t, n) {
+    1070: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -429,7 +429,7 @@ webpackJsonp([53], {
         }
         t.a = i
     },
-    1069: function(e, t, n) {
+    1071: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return h
@@ -441,9 +441,9 @@ webpackJsonp([53], {
             o = n(7),
             s = n(17),
             d = n(3),
-            c = n(1070),
-            u = (n.n(c), n(1071)),
-            m = (n.n(u), n(1072)),
+            c = n(1072),
+            u = (n.n(c), n(1073)),
+            m = (n.n(u), n(1074)),
             g = (n.n(m), function(e) {
                 return "https://api.twitch.tv/api/users/" + e + "/follows/games/follow"
             }),
@@ -597,7 +597,7 @@ webpackJsonp([53], {
             }(l.Component),
             h = v
     },
-    1070: function(e, t) {
+    1072: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -718,8 +718,8 @@ webpackJsonp([53], {
         };
         e.exports = n
     },
-    1071: function(e, t) {},
-    1072: function(e, t) {
+    1073: function(e, t) {},
+    1074: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -784,19 +784,19 @@ webpackJsonp([53], {
         };
         e.exports = n
     },
-    1099: function(e, t, n) {
+    1100: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(4),
             l = n(1),
             r = n(2),
-            o = n(916),
+            o = n(918),
             s = n(47),
-            d = n(264),
-            c = n(1004),
-            u = n(841),
+            d = n(263),
+            c = n(1006),
+            u = n(843),
             m = n(3),
-            g = (n(1100), function(e) {
+            g = (n(1101), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.sortChangeHandler = function(e) {
@@ -960,15 +960,15 @@ webpackJsonp([53], {
                     }, Object(r.d)("Popular", "VideoFilter")))))
                 }, t
             }(l.Component)),
-            p = n(1045);
+            p = n(1047);
         n.d(t, "a", function() {
             return g
         }), n.d(t, "b", function() {
             return p.a
         }), n.d(t, !1, function() {})
     },
-    1100: function(e, t) {},
-    129: function(e, t, n) {
+    1101: function(e, t) {},
+    128: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -980,11 +980,11 @@ webpackJsonp([53], {
         }
         var l = n(2),
             r = n(16),
-            o = n(263);
+            o = n(262);
         t.a = i, t.b = a;
         var s = "https://www.twitch.tv"
     },
-    1301: function(e, t, n) {
+    1303: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
@@ -992,12 +992,12 @@ webpackJsonp([53], {
             r = n(104),
             o = n(28),
             s = n(7),
-            d = n(36),
-            c = n(1068),
-            u = n(1069),
+            d = n(38),
+            c = n(1070),
+            u = n(1071),
             m = n(3),
-            g = n(1302),
-            p = (n(1303), function(e) {
+            g = n(1304),
+            p = (n(1305), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -1106,7 +1106,7 @@ webpackJsonp([53], {
             return p
         })
     },
-    1302: function(e, t) {
+    1304: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1257,8 +1257,8 @@ webpackJsonp([53], {
         };
         e.exports = n
     },
-    1303: function(e, t) {},
-    1379: function(e, t) {},
+    1305: function(e, t) {},
+    1381: function(e, t) {},
     1904: function(e, t) {},
     1905: function(e, t) {
         var n = {
@@ -2138,7 +2138,7 @@ webpackJsonp([53], {
                 var t = e.name.value;
                 return !a[t] && (a[t] = !0, !0)
             })
-        }(n(902).definitions)), e.exports = i
+        }(n(904).definitions)), e.exports = i
     },
     1910: function(e, t) {
         var n = {
@@ -3264,19 +3264,19 @@ webpackJsonp([53], {
                 linkTo: "/directory/following",
                 "data-a-target": "following-overview-tab"
             }, Object(w.d)("Overview", "FollowingHeaderTabs")), f.createElement(F._18, {
-                active: t === C.SpadeFollowingCategory.Live,
+                active: t === N.SpadeFollowingCategory.Live,
                 "data-a-target": "following-channels-tab",
                 linkTo: "/directory/following/live"
             }, Object(w.d)("Channels", "FollowingHeaderTabs")), f.createElement(F._18, {
-                active: t === C.SpadeFollowingCategory.Hosts,
+                active: t === N.SpadeFollowingCategory.Hosts,
                 "data-a-target": "following-hosts-tab",
                 linkTo: "/directory/following/hosts"
             }, Object(w.d)("Hosts", "FollowingHeaderTabs")), f.createElement(F._18, {
-                active: t === C.SpadeFollowingCategory.Games,
+                active: t === N.SpadeFollowingCategory.Games,
                 "data-a-target": "following-games-tab",
                 linkTo: "/directory/following/games"
             }, Object(w.d)("Games", "FollowingHeaderTabs")), f.createElement(F._18, {
-                active: t === C.SpadeFollowingCategory.Communities,
+                active: t === N.SpadeFollowingCategory.Communities,
                 linkTo: Object(E.a)("/directory/following/communities"),
                 targetBlank: Object(E.b)(),
                 "data-a-target": "following-communities-tab"
@@ -3474,8 +3474,8 @@ webpackJsonp([53], {
                     linkTo: {
                         pathname: "/directory/following/hosts",
                         state: {
-                            medium: C.PageviewMedium.Following,
-                            content: C.PageviewContent.Following
+                            medium: N.PageviewMedium.Following,
+                            content: N.PageviewContent.Following
                         }
                     }
                 }))
@@ -3504,24 +3504,24 @@ webpackJsonp([53], {
                         gameLinkTo: {
                             pathname: "/directory/game/" + (e.hosting.stream && e.hosting.stream.game ? e.hosting.stream.game.name : ""),
                             state: {
-                                medium: C.PageviewMedium.Following,
-                                content: C.PageviewContent.LiveHost,
+                                medium: N.PageviewMedium.Following,
+                                content: N.PageviewContent.LiveHost,
                                 content_index: t
                             }
                         },
                         linkTo: {
                             pathname: "/" + e.login,
                             state: {
-                                medium: C.PageviewMedium.Following,
-                                content: C.PageviewContent.LiveHost,
+                                medium: N.PageviewMedium.Following,
+                                content: N.PageviewContent.LiveHost,
                                 content_index: t
                             }
                         },
                         channelNameLinkTo: {
                             pathname: "/" + e.hosting.login + "/videos",
                             state: {
-                                medium: C.PageviewMedium.Following,
-                                content: C.PageviewContent.LiveHost,
+                                medium: N.PageviewMedium.Following,
+                                content: N.PageviewContent.LiveHost,
                                 content_index: t
                             }
                         },
@@ -3578,8 +3578,8 @@ webpackJsonp([53], {
                 if (!e.stream) return null;
                 var n = Object(M.a)(e.login, e.displayName),
                     i = {
-                        medium: C.PageviewMedium.Following,
-                        content: C.PageviewContent.Live,
+                        medium: N.PageviewMedium.Following,
+                        content: N.PageviewContent.Live,
                         content_index: t
                     };
                 return f.createElement(F.U, {
@@ -3644,16 +3644,16 @@ webpackJsonp([53], {
             f = n(1),
             k = n(22),
             w = n(2),
-            y = n(66),
+            y = n(67),
             S = n(5),
             b = n(7),
-            _ = n(810),
-            N = n(807),
-            C = n(12),
-            E = n(129),
+            _ = n(811),
+            C = n(809),
+            N = n(12),
+            E = n(128),
             F = n(3),
-            L = n(1061),
-            U = n(1046),
+            L = n(1063),
+            U = n(1048),
             A = (n(1904), n(1905)),
             x = function(e) {
                 function t() {
@@ -3679,7 +3679,7 @@ webpackJsonp([53], {
                     }), f.createElement(F.U, {
                         padding: 3
                     }, f.createElement(i, {
-                        activeCategory: C.SpadeFollowingCategory.Communities
+                        activeCategory: N.SpadeFollowingCategory.Communities
                     }), e)
                 }, t.prototype.onRender = function() {
                     this.props.latencyTracking.reportInteractive()
@@ -3691,21 +3691,21 @@ webpackJsonp([53], {
                         }
                     }
                 }), Object(S.c)("FollowingCommunitiesPage", {
-                    destination: N.a.DirectoryFollowingCommunities
+                    destination: C.a.DirectoryFollowingCommunities
                 }), Object(_.a)({
-                    location: C.PageviewLocation.Directory,
+                    location: N.PageviewLocation.Directory,
                     properties: function() {
                         return {
-                            content_type: C.PageviewDirectoryContentType.Communities,
-                            tab: C.PageviewFollowingTab.Communities
+                            content_type: N.PageviewDirectoryContentType.Communities,
+                            tab: N.PageviewFollowingTab.Communities
                         }
                     }
                 })], t)
             }(f.Component),
             P = x,
-            O = n(36),
-            T = n(1301),
-            j = n(374),
+            O = n(38),
+            T = n(1303),
+            j = n(372),
             D = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -3832,7 +3832,7 @@ webpackJsonp([53], {
                     }), f.createElement(F.U, {
                         padding: 3
                     }, f.createElement(i, {
-                        activeCategory: C.SpadeFollowingCategory.Games
+                        activeCategory: N.SpadeFollowingCategory.Games
                     }), e)
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
@@ -3844,16 +3844,16 @@ webpackJsonp([53], {
                         }
                     }
                 }), Object(S.c)("FollowingGamesPage", {
-                    destination: N.a.DirectoryFollowingGames
+                    destination: C.a.DirectoryFollowingGames
                 }), Object(_.a)({
-                    location: C.PageviewLocation.Directory,
+                    location: N.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: C.PageviewDirectoryContentType.Games,
-                            tab: C.PageviewFollowingTab.Games,
+                            content_type: N.PageviewDirectoryContentType.Games,
+                            tab: N.PageviewFollowingTab.Games,
                             num_live_games: e.data.currentUser.followedGames.nodes.filter(function(e) {
                                 return e && e.viewersCount > 0
                             }).length
@@ -3862,7 +3862,7 @@ webpackJsonp([53], {
                 })], t)
             }(f.Component),
             H = R,
-            G = n(906),
+            G = n(908),
             M = n(49),
             W = (n(1907), n(1908)),
             z = 50,
@@ -3918,7 +3918,7 @@ webpackJsonp([53], {
                     return f.createElement(F.U, {
                         padding: 3
                     }, f.createElement(i, {
-                        activeCategory: C.SpadeFollowingCategory.Hosts
+                        activeCategory: N.SpadeFollowingCategory.Hosts
                     }), e)
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
@@ -3932,24 +3932,24 @@ webpackJsonp([53], {
                         }
                     }
                 }), Object(S.c)("FollowingHostsPage", {
-                    destination: N.a.DirectoryFollowingHosts
+                    destination: C.a.DirectoryFollowingHosts
                 }), Object(_.a)({
-                    location: C.PageviewLocation.Directory,
+                    location: N.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: C.PageviewDirectoryContentType.Hosts,
-                            tab: C.PageviewFollowingTab.Hosts,
+                            content_type: N.PageviewDirectoryContentType.Hosts,
+                            tab: N.PageviewFollowingTab.Hosts,
                             num_host_channels: e.data.currentUser.followedHosts.nodes.length
                         }
                     }
                 })], t)
             }(f.Component),
             q = B,
-            $ = n(379),
-            Q = n(1099),
+            $ = n(377),
+            Q = n(1100),
             X = n(1909),
             Y = function(e) {
                 function t() {
@@ -3977,8 +3977,8 @@ webpackJsonp([53], {
                         t = t.slice(0, n)
                     }
                     return f.createElement("div", null, e, f.createElement(Q.b, {
-                        trackingMedium: C.PageviewMedium.Following,
-                        trackingContent: C.PageviewContent.SuggestedVideos,
+                        trackingMedium: N.PageviewMedium.Following,
+                        trackingContent: N.PageviewContent.SuggestedVideos,
                         videos: t
                     }))
                 }, t = h.__decorate([Object(b.a)(X, {
@@ -4052,13 +4052,13 @@ webpackJsonp([53], {
                         }
                     }
                 }), Object(S.c)("FollowingIndexPage", {
-                    destination: N.a.DirectoryFollowingIndex
+                    destination: C.a.DirectoryFollowingIndex
                 }), Object(_.a)({
-                    location: C.PageviewLocation.Directory,
+                    location: N.PageviewLocation.Directory,
                     properties: function() {
                         return {
-                            content_type: C.PageviewDirectoryContentType.Mixed,
-                            tab: C.PageviewFollowingTab.Overview
+                            content_type: N.PageviewDirectoryContentType.Mixed,
+                            tab: N.PageviewFollowingTab.Overview
                         }
                     }
                 })], t)
@@ -4118,7 +4118,7 @@ webpackJsonp([53], {
                     return f.createElement(F.U, {
                         padding: 3
                     }, f.createElement(i, {
-                        activeCategory: C.SpadeFollowingCategory.Live
+                        activeCategory: N.SpadeFollowingCategory.Live
                     }), e)
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
@@ -4132,16 +4132,16 @@ webpackJsonp([53], {
                         }
                     }
                 }), Object(S.c)("FollowingLivePage", {
-                    destination: N.a.DirectoryFollowingLiveChannels
+                    destination: C.a.DirectoryFollowingLiveChannels
                 }), Object(_.a)({
-                    location: C.PageviewLocation.Directory,
+                    location: N.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: C.PageviewDirectoryContentType.Channels,
-                            tab: C.PageviewFollowingTab.Channels,
+                            content_type: N.PageviewDirectoryContentType.Channels,
+                            tab: N.PageviewFollowingTab.Channels,
                             num_live_channels: e.data.currentUser.followedLiveUsers.nodes.length
                         }
                     }
@@ -4181,7 +4181,7 @@ webpackJsonp([53], {
             return oe
         })
     },
-    263: function(e, t, n) {
+    262: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(20),
@@ -4266,7 +4266,7 @@ webpackJsonp([53], {
             return c
         })
     },
-    377: function(e, t, n) {
+    375: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -4281,7 +4281,7 @@ webpackJsonp([53], {
         }
         t.a = i
     },
-    807: function(e, t, n) {
+    809: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -4292,6 +4292,7 @@ webpackJsonp([53], {
             BrowseForYou: "browse.for-you",
             ChannelIndex: "channel.index.index",
             ChannelDashboardAchievements: "channel.dashboard.achievements",
+            ChannelDashboardExtensions: "channel.dashboard.extensions",
             ChannelDashboardModeration: "channel.dashboard.moderation",
             ChannelDashboardStreamSummary: "channel.dashboard.stream-summary",
             ChannelClips: "channel.clips",
@@ -4340,7 +4341,7 @@ webpackJsonp([53], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    810: function(e, t, n) {
+    811: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4408,7 +4409,7 @@ webpackJsonp([53], {
             return i
         })
     },
-    837: function(e, t, n) {
+    839: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4519,7 +4520,7 @@ webpackJsonp([53], {
                 return e.code
             }))
     },
-    841: function(e, t, n) {
+    843: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
             return a
@@ -4532,7 +4533,7 @@ webpackJsonp([53], {
             e.Popular = "VIEWS", e.Newest = "TIME"
         }(i || (i = {}))
     },
-    851: function(e, t, n) {
+    853: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -4566,11 +4567,11 @@ webpackJsonp([53], {
         t.c = i, t.a = a, t.b = l;
         var r = n(0),
             o = n(2),
-            s = n(837),
-            d = n(852),
+            s = n(839),
+            d = n(854),
             c = "languageDirectoryFilters"
     },
-    852: function(e, t, n) {
+    854: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4584,7 +4585,7 @@ webpackJsonp([53], {
         }), t.b = i;
         var a = "core.user-preferences.LANGUAGE_PREFERENCES_UPDATED"
     },
-    874: function(e, t, n) {
+    876: function(e, t, n) {
         "use strict";
 
         function i() {
@@ -4610,11 +4611,11 @@ webpackJsonp([53], {
         t.a = l;
         var r = n(0),
             o = n(2),
-            s = n(852),
-            d = n(851);
+            s = n(854),
+            d = n(853);
         o.n.store.registerReducer("userPreferences", a)
     },
-    902: function(e, t) {
+    904: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -4883,15 +4884,15 @@ webpackJsonp([53], {
         };
         e.exports = n
     },
-    906: function(e, t, n) {
+    908: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
             l = n(10),
             r = n(2),
-            o = n(907),
+            o = n(909),
             s = n(3),
-            d = (n(1008), function(e) {
+            d = (n(1010), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.state = {
@@ -5008,15 +5009,15 @@ webpackJsonp([53], {
             return c
         })
     },
-    907: function(e, t, n) {
+    909: function(e, t, n) {
         "use strict";
         var i, a, l, r = n(0),
             o = n(4),
             s = n(1),
             d = n(2),
-            c = n(145),
+            c = n(144),
             u = n(3),
-            m = (n(1007), i = {}, i[c.a.Live] = "stream-type-indicator--live", i[c.a.Premiere] = "stream-type-indicator--premiere", i[c.a.Rerun] = "stream-type-indicator--rerun", i[c.a.WatchParty] = "stream-type-indicator--rerun", i),
+            m = (n(1009), i = {}, i[c.a.Live] = "stream-type-indicator--live", i[c.a.Premiere] = "stream-type-indicator--premiere", i[c.a.Rerun] = "stream-type-indicator--rerun", i[c.a.WatchParty] = "stream-type-indicator--rerun", i),
             g = (a = {}, a[c.a.Premiere] = u._9.VideoPremiere, a[c.a.Rerun] = u._9.VideoRerun, a[c.a.WatchParty] = u._9.VideoRerun, a),
             p = (l = {}, l[c.a.Premiere] = u._10.Live, l[c.a.Rerun] = u._10.Inherit, l[c.a.WatchParty] = u._10.Inherit, l),
             v = function(e) {
@@ -5082,7 +5083,7 @@ webpackJsonp([53], {
             return v
         })
     },
-    916: function(e, t, n) {
+    918: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -5099,17 +5100,17 @@ webpackJsonp([53], {
         }
         var l = n(6),
             r = n(9),
-            o = n(851),
-            s = n(874),
+            o = n(853),
+            s = n(876),
             d = n(0),
             c = n(1),
             u = n(2),
             m = n(28),
             g = n(47),
-            p = n(837),
+            p = n(839),
             v = n(5),
             h = n(3),
-            f = (n(917), function(e) {
+            f = (n(919), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleLanguageChange = function(e) {
@@ -5177,8 +5178,8 @@ webpackJsonp([53], {
             return w
         })
     },
-    917: function(e, t) {},
-    920: function(e, t, n) {
+    919: function(e, t) {},
+    922: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return l
@@ -5217,4 +5218,4 @@ webpackJsonp([53], {
             }
     }
 });
-//# sourceMappingURL=pages.following-d18edcfa14c23b6e2797cb58bbb35a6c.js.map
+//# sourceMappingURL=pages.following-2b1294c461e80a50bac00389faf0a87e.js.map

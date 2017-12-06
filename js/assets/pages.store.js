@@ -1,9 +1,9 @@
 webpackJsonp([55], {
-    1040: function(t, e, n) {
+    1042: function(t, e, n) {
         "use strict";
         var i = n(1),
             o = n(2),
-            r = n(66),
+            r = n(67),
             a = n(3),
             s = function() {
                 return i.createElement(r.a, {
@@ -21,7 +21,7 @@ webpackJsonp([55], {
             return s
         })
     },
-    1042: function(t, e, n) {
+    1044: function(t, e, n) {
         var i, o;
         ! function(r, a) {
             i = a, void 0 !== (o = "function" == typeof i ? i.call(e, n, e, t) : i) && (t.exports = o)
@@ -63,7 +63,7 @@ webpackJsonp([55], {
             }, t
         })
     },
-    1043: function(t, e, n) {
+    1045: function(t, e, n) {
         var i;
         ! function(o, r) {
             "use strict";
@@ -145,7 +145,7 @@ webpackJsonp([55], {
             return r
         })
     },
-    1090: function(t, e, n) {
+    1091: function(t, e, n) {
         "use strict";
         (t.exports = {}).forEach = function(t, e) {
             for (var n = 0; n < t.length; n++) {
@@ -154,7 +154,7 @@ webpackJsonp([55], {
             }
         }
     },
-    1091: function(t, e, n) {
+    1092: function(t, e, n) {
         "use strict";
         var i = t.exports = {};
         i.isIE = function(t) {
@@ -174,14 +174,14 @@ webpackJsonp([55], {
             return !!window.opera
         }
     },
-    1318: function(t, e, n) {
+    1320: function(t, e, n) {
         "use strict";
         n.d(e, "a", function() {
             return c
         });
         var i = n(1),
             o = (n.n(i), n(2)),
-            r = n(38),
+            r = n(33),
             a = n(5),
             s = function(t) {
                 var e = t.className || "",
@@ -212,17 +212,17 @@ webpackJsonp([55], {
             },
             c = Object(a.c)("AmazonLogo")(s)
     },
-    1337: function(t, e, n) {
+    1339: function(t, e, n) {
         var i = "undefined" != typeof window,
-            o = i ? window.Masonry || n(1338) : null,
-            r = i ? n(1343) : null,
-            a = n(116),
-            s = n(1344),
-            c = n(1355),
-            l = n(1356),
+            o = i ? window.Masonry || n(1340) : null,
+            r = i ? n(1345) : null,
+            a = n(115),
+            s = n(1346),
+            c = n(1357),
+            l = n(1358),
             u = n(14),
             d = n(1),
-            h = n(295),
+            h = n(293),
             f = "masonryContainer",
             p = {
                 enableResizableChildren: u.bool,
@@ -334,10 +334,10 @@ webpackJsonp([55], {
             });
         t.exports = m, t.exports.default = m
     },
-    1338: function(t, e, n) {
+    1340: function(t, e, n) {
         var i, o, r;
         ! function(a, s) {
-            o = [n(1339), n(1043)], i = s, void 0 !== (r = "function" == typeof i ? i.apply(e, o) : i) && (t.exports = r)
+            o = [n(1341), n(1045)], i = s, void 0 !== (r = "function" == typeof i ? i.apply(e, o) : i) && (t.exports = r)
         }(window, function(t, e) {
             "use strict";
             var n = t.create("masonry");
@@ -424,11 +424,11 @@ webpackJsonp([55], {
             }, n
         })
     },
-    1339: function(t, e, n) {
+    1341: function(t, e, n) {
         var i, o;
         ! function(r, a) {
             "use strict";
-            i = [n(1042), n(1043), n(1340), n(1342)], void 0 !== (o = function(t, e, n, i) {
+            i = [n(1044), n(1045), n(1342), n(1344)], void 0 !== (o = function(t, e, n, i) {
                 return a(r, t, e, n, i)
             }.apply(e, i)) && (t.exports = o)
         }(window, function(t, e, n, i, o) {
@@ -702,10 +702,10 @@ webpackJsonp([55], {
             return r.Item = o, r
         })
     },
-    1340: function(t, e, n) {
+    1342: function(t, e, n) {
         var i, o;
         ! function(r, a) {
-            i = [n(1341)], void 0 !== (o = function(t) {
+            i = [n(1343)], void 0 !== (o = function(t) {
                 return a(r, t)
             }.apply(e, i)) && (t.exports = o)
         }(window, function(t, e) {
@@ -787,7 +787,7 @@ webpackJsonp([55], {
             }, n
         })
     },
-    1341: function(t, e, n) {
+    1343: function(t, e, n) {
         var i, o;
         ! function(r, a) {
             "use strict";
@@ -809,10 +809,10 @@ webpackJsonp([55], {
             }
         })
     },
-    1342: function(t, e, n) {
+    1344: function(t, e, n) {
         var i, o, r;
         ! function(a, s) {
-            o = [n(1042), n(1043)], i = s, void 0 !== (r = "function" == typeof i ? i.apply(e, o) : i) && (t.exports = r)
+            o = [n(1044), n(1045)], i = s, void 0 !== (r = "function" == typeof i ? i.apply(e, o) : i) && (t.exports = r)
         }(window, function(t, e) {
             "use strict";
 
@@ -1032,11 +1032,11 @@ webpackJsonp([55], {
             }, i
         })
     },
-    1343: function(t, e, n) {
+    1345: function(t, e, n) {
         var i, o;
         ! function(r, a) {
             "use strict";
-            i = [n(1042)], void 0 !== (o = function(t) {
+            i = [n(1044)], void 0 !== (o = function(t) {
                 return a(r, t)
             }.apply(e, i)) && (t.exports = o)
         }("undefined" != typeof window ? window : this, function(t, e) {
@@ -1157,7 +1157,7 @@ webpackJsonp([55], {
             }, o.makeJQueryPlugin(), o
         })
     },
-    1344: function(t, e, n) {
+    1346: function(t, e, n) {
         "use strict";
 
         function i(t) {
@@ -1180,17 +1180,17 @@ webpackJsonp([55], {
             var i = t[e];
             return void 0 !== i && null !== i || void 0 === n ? i : n
         }
-        var s = n(1090).forEach,
-            c = n(1345),
-            l = n(1346),
-            u = n(1347),
-            d = n(1348),
-            h = n(1349),
-            f = n(1091),
-            p = n(1350),
-            m = n(1352),
-            g = n(1353),
-            v = n(1354);
+        var s = n(1091).forEach,
+            c = n(1347),
+            l = n(1348),
+            u = n(1349),
+            d = n(1350),
+            h = n(1351),
+            f = n(1092),
+            p = n(1352),
+            m = n(1354),
+            g = n(1355),
+            v = n(1356);
         t.exports = function(t) {
             function e(t, e, n) {
                 function c(t) {
@@ -1301,7 +1301,7 @@ webpackJsonp([55], {
             }
         }
     },
-    1345: function(t, e, n) {
+    1347: function(t, e, n) {
         "use strict";
         t.exports = function(t) {
             function e(t) {
@@ -1329,7 +1329,7 @@ webpackJsonp([55], {
             }
         }
     },
-    1346: function(t, e, n) {
+    1348: function(t, e, n) {
         "use strict";
         t.exports = function(t) {
             function e(e) {
@@ -1363,7 +1363,7 @@ webpackJsonp([55], {
             }
         }
     },
-    1347: function(t, e, n) {
+    1349: function(t, e, n) {
         "use strict";
         t.exports = function() {
             function t() {
@@ -1375,7 +1375,7 @@ webpackJsonp([55], {
             }
         }
     },
-    1348: function(t, e, n) {
+    1350: function(t, e, n) {
         "use strict";
         t.exports = function(t) {
             function e(t) {
@@ -1397,7 +1397,7 @@ webpackJsonp([55], {
             }
         }
     },
-    1349: function(t, e, n) {
+    1351: function(t, e, n) {
         "use strict";
         t.exports = function(t) {
             function e() {}
@@ -1420,7 +1420,7 @@ webpackJsonp([55], {
             return n
         }
     },
-    1350: function(t, e, n) {
+    1352: function(t, e, n) {
         "use strict";
 
         function i() {
@@ -1449,7 +1449,7 @@ webpackJsonp([55], {
                 size: n
             }
         }
-        var o = n(1351);
+        var o = n(1353);
         t.exports = function(t) {
             function e(t, e) {
                 !p && d && u && 0 === f.size() && a(), f.add(t, e)
@@ -1493,7 +1493,7 @@ webpackJsonp([55], {
             }
         }
     },
-    1351: function(t, e, n) {
+    1353: function(t, e, n) {
         "use strict";
 
         function i(t, e, n) {
@@ -1501,7 +1501,7 @@ webpackJsonp([55], {
             return void 0 !== i && null !== i || void 0 === n ? i : n
         }(t.exports = {}).getOption = i
     },
-    1352: function(t, e, n) {
+    1354: function(t, e, n) {
         "use strict";
 
         function i(t) {
@@ -1522,9 +1522,9 @@ webpackJsonp([55], {
             cleanState: r
         }
     },
-    1353: function(t, e, n) {
+    1355: function(t, e, n) {
         "use strict";
-        var i = n(1091);
+        var i = n(1092);
         t.exports = function(t) {
             function e(t, e) {
                 function n() {
@@ -1603,9 +1603,9 @@ webpackJsonp([55], {
             }
         }
     },
-    1354: function(t, e, n) {
+    1356: function(t, e, n) {
         "use strict";
-        var i = n(1090).forEach;
+        var i = n(1091).forEach;
         t.exports = function(t) {
             function e(t) {
                 t.className += " " + m + "_animation_active"
@@ -1900,7 +1900,7 @@ webpackJsonp([55], {
             }
         }
     },
-    1355: function(t, e, n) {
+    1357: function(t, e, n) {
         (function(e) {
             function n(t, e, n) {
                 function o(e) {
@@ -2005,9 +2005,9 @@ webpackJsonp([55], {
                     return v.Date.now()
                 };
             t.exports = n
-        }).call(e, n(33))
+        }).call(e, n(35))
     },
-    1356: function(t, e, n) {
+    1358: function(t, e, n) {
         (function(e) {
             function n(t, e, n) {
                 switch (n.length) {
@@ -2447,7 +2447,7 @@ webpackJsonp([55], {
                     return null == t ? {} : (e = r(F(e, 1), et), q(t, A(G(t), e)))
                 });
             t.exports = Qt
-        }).call(e, n(33))
+        }).call(e, n(35))
     },
     1921: function(t, e) {},
     1922: function(t, e) {},
@@ -2737,25 +2737,25 @@ webpackJsonp([55], {
             value: !0
         });
         var c = n(6),
-            l = n(810),
+            l = n(811),
             u = n(12),
             d = n(17),
             h = n(0),
             f = n(1),
-            p = n(833),
-            m = n(1040),
+            p = n(835),
+            m = n(1042),
             g = function() {
                 return f.createElement("div", null)
             },
             v = n(4),
             y = n(2),
-            b = n(66),
-            _ = n(836),
+            b = n(67),
+            _ = n(838),
             E = n(7),
             w = n(105),
-            S = n(807),
+            S = n(809),
             x = n(5),
-            C = n(1337),
+            C = n(1339),
             k = n.n(C),
             I = {
                 columnWidth: 270,
@@ -2862,8 +2862,8 @@ webpackJsonp([55], {
                 }, e
             }(f.Component)),
             R = j,
-            W = n(1318),
-            A = n(38),
+            W = n(1320),
+            A = n(33),
             F = (n(1922), function(t) {
                 function e() {
                     var e = null !== t && t.apply(this, arguments) || this;
@@ -3155,7 +3155,7 @@ webpackJsonp([55], {
             return V
         })
     },
-    807: function(t, e, n) {
+    809: function(t, e, n) {
         "use strict";
         n.d(e, "a", function() {
             return i
@@ -3166,6 +3166,7 @@ webpackJsonp([55], {
             BrowseForYou: "browse.for-you",
             ChannelIndex: "channel.index.index",
             ChannelDashboardAchievements: "channel.dashboard.achievements",
+            ChannelDashboardExtensions: "channel.dashboard.extensions",
             ChannelDashboardModeration: "channel.dashboard.moderation",
             ChannelDashboardStreamSummary: "channel.dashboard.stream-summary",
             ChannelClips: "channel.clips",
@@ -3214,7 +3215,7 @@ webpackJsonp([55], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    810: function(t, e, n) {
+    811: function(t, e, n) {
         "use strict";
 
         function i(t) {
@@ -3282,7 +3283,7 @@ webpackJsonp([55], {
             return i
         })
     },
-    833: function(t, e, n) {
+    835: function(t, e, n) {
         "use strict";
         var i = n(0),
             o = n(1),
@@ -3334,7 +3335,7 @@ webpackJsonp([55], {
             return s
         })
     },
-    836: function(t, e, n) {
+    838: function(t, e, n) {
         "use strict";
         var i, o = n(0),
             r = n(1),
@@ -3361,4 +3362,4 @@ webpackJsonp([55], {
         })
     }
 });
-//# sourceMappingURL=pages.store-8fc66ff3c213803b79178ba600b6e790.js.map
+//# sourceMappingURL=pages.store-43f5cc67e9a7ef001d816157208805c5.js.map
