@@ -1945,13 +1945,13 @@ window.SiteOptions = {
         },
         "68ca29e7-fdd0-43f3-b3f4-9b97cf1341c0": {
             "name": "ios_ipad_optimized_screens",
-            "v": 2163,
+            "v": 2611,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 5,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 95,
                 "value": "enabled"
             }]
         },
