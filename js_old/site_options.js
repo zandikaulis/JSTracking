@@ -557,18 +557,6 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
-        "1dc7b575-1187-42bf-8d01-c62bea1f89c9": {
-            "name": "twilight_growth_email_verify_bar",
-            "v": 2540,
-            "t": 1,
-            "groups": [{
-                "weight": 1,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "enabled"
-            }]
-        },
         "1e406d0d-c293-4c4e-812f-049db8c7e3ec": {
             "name": "vod_upload_units",
             "v": 818,
@@ -789,6 +777,18 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "true"
+            }]
+        },
+        "29a37cfd-6a34-4624-970f-6b155b40636b": {
+            "name": "twilight_onboarding_randomized_games",
+            "v": 2621,
+            "t": 2,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
             }]
         },
         "2be750b2-f97a-41e5-a699-0d934cefc05c": {
@@ -2235,6 +2235,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "7aa589f3-34d8-425f-8227-29007d50757e": {
+            "name": "twilight_growth_email_verify_bar",
+            "v": 2618,
+            "t": 2,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "7ad0012f-a7c7-41e0-875d-02d057b9dfef": {
             "name": "ios_feed_autoplay_video_content",
             "v": 2092,
@@ -3163,18 +3175,6 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "active"
-            }]
-        },
-        "aec6897c-9a43-4d5a-a09e-3a9ebf05e4d5": {
-            "name": "twilight_onboarding_randomized_games",
-            "v": 2570,
-            "t": 1,
-            "groups": [{
-                "weight": 1,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "enabled"
             }]
         },
         "af8f152a-f618-416e-8b79-d6ac30479018": {
