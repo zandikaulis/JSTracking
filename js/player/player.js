@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e4a69c4943778343c048.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".f506bcc95f8eb1228868.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -9196,7 +9196,11 @@
                 a = void 0,
                 o = void 0,
                 s = void 0,
-                y = void 0;
+                y = void 0,
+                g = void 0,
+                b = new Promise(function(e) {
+                    g = e
+                });
             i.attach = function(e) {
                     $(e).append(o), o.addEventListener(h, function() {
                         var e;
@@ -9219,7 +9223,7 @@
                 }, i.getSrc = function() {
                     return o.src
                 }, i.setSrc = function(e) {
-                    o.src = e, i.load()
+                    o.src = e, i.load(), g()
                 }, i.getNetworkState = function() {
                     return o.networkState
                 }, i.getBuffered = function() {
@@ -9253,7 +9257,11 @@
                 }, i.setLoop = function(e) {
                     o.loop = e
                 }, i.play = function() {
-                    o.play()
+                    return b.then(function() {
+                        return o.play()
+                    }).catch(function(e) {
+                        return e
+                    })
                 }, i.pause = function() {
                     o.pause()
                 }, i.getControls = function() {
@@ -21694,7 +21702,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.12.07-195540+a984fd63d9d194acbf63527413db447d53d9a40e",
+                    app_version: "2017.12.07-212634+4dce7f0472a81184e7571a3d9b1d0d31983eee75",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
