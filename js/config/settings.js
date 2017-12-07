@@ -122,13 +122,13 @@ window.__twilightSettings = {
         },
         "3763f4e7-c786-4000-a6c3-b91b9c774302": {
             "name": "twilight_fenix_down",
-            "v": 2505,
+            "v": 2623,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "recs"
             }]
         },
@@ -161,13 +161,13 @@ window.__twilightSettings = {
         },
         "47597570-dd4e-4996-85eb-86db164cae9c": {
             "name": "TWILIGHT_AML_RANKING_FOLLOWS",
-            "v": 2606,
+            "v": 2622,
             "t": 2,
             "groups": [{
-                "weight": 99,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 1,
+                "weight": 5,
                 "value": "treatment"
             }]
         },

@@ -994,13 +994,13 @@ window.SiteOptions = {
         },
         "3763f4e7-c786-4000-a6c3-b91b9c774302": {
             "name": "twilight_fenix_down",
-            "v": 2505,
+            "v": 2623,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "recs"
             }]
         },
