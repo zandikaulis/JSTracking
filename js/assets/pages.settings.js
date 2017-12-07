@@ -1,5 +1,5 @@
-webpackJsonp([56], {
-    128: function(e, t, n) {
+webpackJsonp([52], {
+    129: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -11,12 +11,12 @@ webpackJsonp([56], {
         }
         var o = n(2),
             r = n(14),
-            l = n(265);
+            l = n(264);
         t.a = i, t.b = a;
         var s = "https://www.twitch.tv"
     },
-    1922: function(e, t) {},
-    1923: function(e, t) {
+    1930: function(e, t) {},
+    1931: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -117,8 +117,8 @@ webpackJsonp([56], {
         };
         e.exports = n
     },
-    1924: function(e, t) {},
-    1925: function(e, t) {
+    1932: function(e, t) {},
+    1933: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -411,8 +411,8 @@ webpackJsonp([56], {
         };
         e.exports = n
     },
-    1926: function(e, t) {},
-    1927: function(e, t) {
+    1934: function(e, t) {},
+    1935: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -500,8 +500,8 @@ webpackJsonp([56], {
         };
         e.exports = n
     },
-    1928: function(e, t) {},
-    1929: function(e, t) {
+    1936: function(e, t) {},
+    1937: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -632,7 +632,7 @@ webpackJsonp([56], {
         };
         e.exports = n
     },
-    1930: function(e, t) {},
+    1938: function(e, t) {},
     2072: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -642,8 +642,8 @@ webpackJsonp([56], {
             o = n(1),
             r = n(2),
             l = n(28),
-            s = n(128),
-            c = n(377),
+            s = n(129),
+            c = n(376),
             d = n(5),
             u = n(3);
         ! function(e) {
@@ -699,15 +699,15 @@ webpackJsonp([56], {
                 }, t = a.__decorate([Object(d.c)("SettingsTabs")], t)
             }(o.Component),
             p = g,
-            f = n(816),
-            h = n(814),
+            f = n(822),
+            h = n(820),
             b = n(12),
             v = n(9),
             S = n(67),
             y = n(7),
             k = n(21),
             N = n(10),
-            _ = (n(1922), function(e) {
+            _ = (n(1930), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -783,8 +783,8 @@ webpackJsonp([56], {
                     }, Object(r.d)("Saved", "AdvancedNotificationSettingsToggle"))))))
                 }, t
             }(o.Component)),
-            E = n(1923),
-            w = (n(1924), n(1925)),
+            E = n(1931),
+            w = (n(1932), n(1933)),
             x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1001,7 +1001,7 @@ webpackJsonp([56], {
             }), Object(y.a)(E, {
                 name: "setAdvancedNotificationSetting"
             }), Object(d.c)("AdvancedNotificationSettings"))(x),
-            O = (n(1926), function(e) {
+            O = (n(1934), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -1066,8 +1066,8 @@ webpackJsonp([56], {
                     }, Object(r.d)("Saved", "PlatformNotificationSettingsToggle")))))
                 }, t
             }(o.Component)),
-            P = n(1927),
-            j = (n(1928), n(1929));
+            P = n(1935),
+            j = (n(1936), n(1937));
         ! function(e) {
             e.onsite = "onsite", e.email = "email", e.push = "push"
         }(m || (m = {}));
@@ -1349,7 +1349,7 @@ webpackJsonp([56], {
             }), Object(y.a)(P, {
                 name: "setNotificationSetting"
             }))(U),
-            T = (n(1930), function(e) {
+            T = (n(1938), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1421,7 +1421,7 @@ webpackJsonp([56], {
             return D
         })
     },
-    265: function(e, t, n) {
+    264: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(20),
@@ -1506,7 +1506,7 @@ webpackJsonp([56], {
             return d
         })
     },
-    814: function(e, t, n) {
+    820: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -1566,7 +1566,7 @@ webpackJsonp([56], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    816: function(e, t, n) {
+    822: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1635,4 +1635,4 @@ webpackJsonp([56], {
         })
     }
 });
-//# sourceMappingURL=pages.settings-76fa690c52f2176083e60c42f30e0f01.js.map
+//# sourceMappingURL=pages.settings-dd59564b373bf16ad74ea8b753813895.js.map

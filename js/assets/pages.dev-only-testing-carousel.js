@@ -1,5 +1,5 @@
-webpackJsonp([58], {
-    1379: function(e, t, r) {
+webpackJsonp([54], {
+    1372: function(e, t, r) {
         "use strict";
         r.d(t, "a", function() {
             return p
@@ -10,7 +10,7 @@ webpackJsonp([58], {
             o = (r.n(l), r(2)),
             s = r(5),
             d = r(3),
-            c = r(1380),
+            c = r(1373),
             u = (r.n(c), "[data-js-selector=carousel-content]");
         ! function(e) {
             e.Previous = "previous", e.Next = "next"
@@ -172,9 +172,9 @@ webpackJsonp([58], {
             }(l.Component),
             p = h
     },
-    1380: function(e, t) {},
-    1864: function(e, t) {},
-    2054: function(e, t, r) {
+    1373: function(e, t) {},
+    1896: function(e, t) {},
+    2062: function(e, t, r) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -182,9 +182,9 @@ webpackJsonp([58], {
         var n = r(0),
             a = r(1),
             i = r(28),
-            l = r(1379),
+            l = r(1372),
             o = r(3),
-            s = (r(1864), function(e) {
+            s = (r(1896), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t
@@ -352,4 +352,4 @@ webpackJsonp([58], {
         })
     }
 });
-//# sourceMappingURL=pages.dev-only-testing-carousel-9bb9926540e0a783fd260e429ac68a8a.js.map
+//# sourceMappingURL=pages.dev-only-testing-carousel-fb7bda55fd770b800d4eb19a4f7ea4bc.js.map

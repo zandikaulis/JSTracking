@@ -1,14 +1,5 @@
-webpackJsonp([35], {
-    1e3: function(e, t, n) {
-        "use strict";
-        var a = n(859);
-        n.d(t, "a", function() {
-            return a.a
-        }), n.d(t, "b", function() {
-            return a.b
-        })
-    },
-    1046: function(e, t, n) {
+webpackJsonp([34], {
+    1031: function(e, t, n) {
         "use strict";
 
         function a(e, t) {
@@ -30,7 +21,7 @@ webpackJsonp([35], {
                 allowFullscreen: !0
             }
     },
-    1063: function(e, t, n) {
+    1047: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -41,7 +32,7 @@ webpackJsonp([35], {
             l = n(2),
             s = n(64),
             o = n(3),
-            c = (n(1084), {
+            c = (n(1068), {
                 TITLE: "clips-modal-title",
                 MAIN_BODY: "clips-modal-main-body",
                 SUCCESS_BODY: "clips-modal-success-body",
@@ -155,7 +146,7 @@ webpackJsonp([35], {
                     })))))
                 }, t
             }(r.Component),
-            u = n(880),
+            u = n(881),
             p = n(5),
             m = 86400,
             h = {
@@ -240,8 +231,8 @@ webpackJsonp([35], {
             },
             C = Object(p.c)("ClipsModalBanUser")(Object(u.a)(f)(g)),
             b = n(7),
-            v = n(1085),
-            y = (n(1086), this),
+            v = n(1069),
+            y = (n(1070), this),
             E = {
                 isLoading: !1,
                 hasErrored: !1,
@@ -362,8 +353,8 @@ webpackJsonp([35], {
             _ = a({
                 props: k
             })(S),
-            T = n(31),
-            w = n(1087),
+            T = n(32),
+            w = n(1071),
             D = this,
             M = {
                 isLoading: !1,
@@ -601,8 +592,8 @@ webpackJsonp([35], {
             return F
         })
     },
-    1084: function(e, t) {},
-    1085: function(e, t) {
+    1068: function(e, t) {},
+    1069: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -713,8 +704,8 @@ webpackJsonp([35], {
         };
         e.exports = n
     },
-    1086: function(e, t) {},
-    1087: function(e, t) {
+    1070: function(e, t) {},
+    1071: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -848,7 +839,7 @@ webpackJsonp([35], {
         };
         e.exports = n
     },
-    1378: function(e, t, n) {
+    1367: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -858,7 +849,7 @@ webpackJsonp([35], {
         var a = "//static-cdn.jtvnw.net/ttv-boxart",
             i = "52x72"
     },
-    1574: function(e, t) {
+    1569: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1144,7 +1135,7 @@ webpackJsonp([35], {
         };
         e.exports = n
     },
-    1855: function(e, t, n) {
+    1850: function(e, t, n) {
         var a = {
             kind: "Document",
             definitions: [{
@@ -1247,9 +1238,9 @@ webpackJsonp([35], {
                 var t = e.name.value;
                 return !i[t] && (i[t] = !0, !0)
             })
-        }(n(1574).definitions)), e.exports = a
+        }(n(1569).definitions)), e.exports = a
     },
-    1856: function(e, t) {
+    1851: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1304,12 +1295,12 @@ webpackJsonp([35], {
         };
         e.exports = n
     },
-    1857: function(e, t) {},
-    1858: function(e, t) {},
-    1859: function(e, t) {},
-    1860: function(e, t) {},
-    1861: function(e, t) {},
-    1862: function(e, t, n) {
+    1852: function(e, t) {},
+    1853: function(e, t) {},
+    1854: function(e, t) {},
+    1855: function(e, t) {},
+    1856: function(e, t) {},
+    1857: function(e, t, n) {
         var a = {
             kind: "Document",
             definitions: [{
@@ -1581,9 +1572,9 @@ webpackJsonp([35], {
                 var t = e.name.value;
                 return !i[t] && (i[t] = !0, !0)
             })
-        }(n(1574).definitions)), e.exports = a
+        }(n(1569).definitions)), e.exports = a
     },
-    1863: function(e, t) {
+    1858: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1648,7 +1639,7 @@ webpackJsonp([35], {
         };
         e.exports = n
     },
-    2052: function(e, t, n) {
+    2056: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1704,10 +1695,10 @@ webpackJsonp([35], {
         });
         var p, m = n(0),
             h = n(1),
-            g = n(31),
+            g = n(32),
             f = n(22),
-            C = n(816),
-            b = n(814),
+            C = n(822),
+            b = n(820),
             v = n(12);
         ! function(e) {
             e[e.ViewsAscending = 0] = "ViewsAscending", e[e.ViewsDescending = 1] = "ViewsDescending", e[e.CreatedAtAscending = 2] = "CreatedAtAscending", e[e.CreatedAtDescending = 3] = "CreatedAtDescending"
@@ -1723,8 +1714,8 @@ webpackJsonp([35], {
         var _, T, w = n(5),
             D = n(6),
             M = n(9),
-            R = n(48),
-            O = n(32),
+            R = n(49),
+            O = n(33),
             N = n(17),
             x = n(15),
             U = n(2),
@@ -1733,15 +1724,15 @@ webpackJsonp([35], {
             I = n(21),
             j = n(38),
             F = n(28),
-            B = n(1063),
-            H = n(931),
+            B = n(1047),
+            H = n(911),
             P = n(10),
             V = n(64),
             G = n(47),
-            W = n(377),
+            W = n(376),
             K = n(68),
-            q = n(1e3),
-            Q = n(1046),
+            q = n(993),
+            Q = n(1031),
             z = n(3),
             Y = [{
                 type: q.b.Twitter,
@@ -1814,7 +1805,7 @@ webpackJsonp([35], {
             },
             X = Object(w.c)("ClipsManagerSocialShare")($),
             J = n(40),
-            Z = n(1855),
+            Z = n(1850),
             ee = this,
             te = {
                 TITLE_TEXT: "cmgr-title-text",
@@ -1968,8 +1959,8 @@ webpackJsonp([35], {
             re = Object(A.a)(Z, {
                 props: ie
             })(ae),
-            le = n(1856),
-            se = (n(1857), {
+            le = n(1851),
+            se = (n(1852), {
                 MODERATION_DROPDOWN: "cmgr-moderation-dropdown",
                 MODERATION_BUTTON: "cmgr-moderation-button",
                 GAME_LINK: "cmgr-expanded-game-link",
@@ -2268,10 +2259,10 @@ webpackJsonp([35], {
             }(h.Component),
             ce = Object(w.c)("ClipsManagerExpandedRow")(Object(A.a)(le)(oe)),
             de = Object(D.a)(null, i)(ce),
-            ue = n(107),
-            pe = n(269),
-            me = n(1378),
-            he = (n(1858), function(e) {
+            ue = n(108),
+            pe = n(267),
+            me = n(1367),
+            he = (n(1853), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderCardContent = function() {
@@ -2584,7 +2575,7 @@ webpackJsonp([35], {
                 }, t
             }(h.Component),
             ve = Object(w.c)("ClipsManagerSearch")(be),
-            ye = (n(1859), {
+            ye = (n(1854), {
                 MY_CLIPS_RADIO: "cmgr-my-clips-radio",
                 CLIPS_OF_ME_RADIO: "cmgr-clips-of-me-radio"
             }),
@@ -2676,7 +2667,7 @@ webpackJsonp([35], {
                     })
                 }, t
             }(h.Component),
-            _e = (n(1860), "clips-manager-row-checkbox"),
+            _e = (n(1855), "clips-manager-row-checkbox"),
             Te = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -2793,7 +2784,7 @@ webpackJsonp([35], {
                     }, e.game.name)) : null
                 }, t
             }(h.Component),
-            we = (n(1861), {
+            we = (n(1856), {
                 SELECT_ALL: "clips-manager-select-all",
                 BATCH_DELETE: "clips-manager-batch-delete",
                 VIEWS_HEADER: "clips-manager-views-sort",
@@ -3137,7 +3128,7 @@ webpackJsonp([35], {
                     })
                 }, t
             }(h.Component),
-            Me = n(1862),
+            Me = n(1857),
             Re = function(e) {
                 var t = function() {
                         var t = e.data.user.clips.edges,
@@ -3228,7 +3219,7 @@ webpackJsonp([35], {
                 options: Oe,
                 props: Re
             }), Object(D.a)(null, o))(De),
-            xe = n(1863),
+            xe = n(1858),
             Ue = function(e) {
                 function t(t) {
                     var n = e.call(this) || this;
@@ -3362,7 +3353,7 @@ webpackJsonp([35], {
             return Be
         })
     },
-    811: function(e, t, n) {
+    817: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -3372,7 +3363,7 @@ webpackJsonp([35], {
             e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention", e[e.Ban = 3] = "Ban", e[e.Timeout = 4] = "Timeout", e[e.AutoModRejectedPrompt = 5] = "AutoModRejectedPrompt", e[e.AutoModMessageRejected = 6] = "AutoModMessageRejected", e[e.AutoModMessageAllowed = 7] = "AutoModMessageAllowed", e[e.AutoModMessageDenied = 8] = "AutoModMessageDenied", e[e.Connected = 9] = "Connected", e[e.Disconnected = 10] = "Disconnected", e[e.Reconnect = 11] = "Reconnect", e[e.Hosting = 12] = "Hosting", e[e.Unhost = 13] = "Unhost", e[e.Subscription = 14] = "Subscription", e[e.Resubscription = 15] = "Resubscription", e[e.SubGift = 16] = "SubGift", e[e.Clear = 17] = "Clear", e[e.SubscriberOnlyMode = 18] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 19] = "FollowerOnlyMode", e[e.SlowMode = 20] = "SlowMode", e[e.EmoteOnlyMode = 21] = "EmoteOnlyMode", e[e.RoomMods = 22] = "RoomMods", e[e.RoomState = 23] = "RoomState", e[e.Raid = 24] = "Raid", e[e.Unraid = 25] = "Unraid", e[e.Notice = 26] = "Notice", e[e.Info = 27] = "Info", e[e.BadgesUpdated = 28] = "BadgesUpdated", e[e.Purchase = 29] = "Purchase"
         }(a || (a = {}))
     },
-    813: function(e, t, n) {
+    819: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3380,7 +3371,7 @@ webpackJsonp([35], {
         }
         t.a = a
     },
-    814: function(e, t, n) {
+    820: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -3440,7 +3431,7 @@ webpackJsonp([35], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    816: function(e, t, n) {
+    822: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3508,7 +3499,7 @@ webpackJsonp([35], {
             return a
         })
     },
-    839: function(e, t, n) {
+    843: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3519,25 +3510,10 @@ webpackJsonp([35], {
             }
         }
         t.a = a;
-        var i = n(811),
-            r = n(813)
+        var i = n(817),
+            r = n(819)
     },
-    852: function(e, t, n) {
-        "use strict";
-
-        function a(e, t, n, a) {
-            return {
-                type: e,
-                id: Object(i.a)(t + "-mod"),
-                userLogin: t,
-                reason: n,
-                duration: a
-            }
-        }
-        t.a = a;
-        var i = n(813)
-    },
-    859: function(e, t, n) {
+    851: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3568,14 +3544,14 @@ webpackJsonp([35], {
         var s = n(0),
             o = n(1),
             c = n(2),
-            d = n(871),
+            d = n(859),
             u = n(68),
             p = "https://www.facebook.com/sharer/sharer.php",
             m = "https://www.twitter.com/share",
             h = "https://www.reddit.com/submit",
             g = "https://vk.com/share.php",
             f = n(3);
-        n(901);
+        n(900);
         n.d(t, "b", function() {
             return C
         }), n.d(t, "a", function() {
@@ -3583,7 +3559,7 @@ webpackJsonp([35], {
         });
         var C;
         ! function(e) {
-            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy"
+            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput"
         }(C || (C = {}));
         var b = function(e) {
             function t(t) {
@@ -3699,7 +3675,22 @@ webpackJsonp([35], {
             }, t
         }(o.Component)
     },
-    871: function(e, t, n) {
+    855: function(e, t, n) {
+        "use strict";
+
+        function a(e, t, n, a) {
+            return {
+                type: e,
+                id: Object(i.a)(t + "-mod"),
+                userLogin: t,
+                reason: n,
+                duration: a
+            }
+        }
+        t.a = a;
+        var i = n(819)
+    },
+    859: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3715,7 +3706,7 @@ webpackJsonp([35], {
         }
         t.a = a
     },
-    880: function(e, t, n) {
+    881: function(e, t, n) {
         "use strict";
 
         function a() {
@@ -3791,17 +3782,17 @@ webpackJsonp([35], {
             s = n(2),
             o = n(7),
             c = n(21),
-            d = n(839),
-            u = n(852),
-            p = n(811),
-            m = n(890),
+            d = n(843),
+            u = n(855),
+            p = n(817),
+            m = n(889),
             h = (n.n(m), 60),
             g = 60 * h,
             f = 24 * g,
             C = 7 * f,
             b = 4 * C
     },
-    890: function(e, t) {
+    889: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3902,8 +3893,8 @@ webpackJsonp([35], {
         };
         e.exports = n
     },
-    901: function(e, t) {},
-    931: function(e, t, n) {
+    900: function(e, t) {},
+    911: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
@@ -3913,9 +3904,9 @@ webpackJsonp([35], {
             return u
         });
         var a, i = n(2),
-            r = n(859),
+            r = n(851),
             l = n(12),
-            s = (a = {}, a[r.b.Twitter] = "twitter", a[r.b.Reddit] = "reddit", a[r.b.VKontakte] = "vkontakte", a[r.b.Facebook] = "facebook", a[r.b.Copy] = "link", a),
+            s = (a = {}, a[r.b.Twitter] = "twitter", a[r.b.Reddit] = "reddit", a[r.b.VKontakte] = "vkontakte", a[r.b.Facebook] = "facebook", a[r.b.Copy] = "link", a[r.b.CopyInput] = "option_link", a),
             o = {
                 MyClips: "MyClips",
                 ClipsOfMyChannel: "ClipsOfMyChannel"
@@ -3944,6 +3935,15 @@ webpackJsonp([35], {
                     })
                 }
             }
+    },
+    993: function(e, t, n) {
+        "use strict";
+        var a = n(851);
+        n.d(t, "a", function() {
+            return a.a
+        }), n.d(t, "b", function() {
+            return a.b
+        })
     }
 });
-//# sourceMappingURL=pages.my-clips-manager-4c389cf999c199a7259cf6cfb1cb157a.js.map
+//# sourceMappingURL=pages.my-clips-manager-48f700c022688a11de451193f611aef9.js.map
