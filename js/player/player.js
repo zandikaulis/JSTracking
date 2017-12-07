@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".f506bcc95f8eb1228868.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2e105ef9cd5d4543f256.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -10731,7 +10731,7 @@
             v = n(10),
             y = n.n(v),
             g = Object.freeze([m.a, m.e, m.i, m.d, m.p, m.q]),
-            b = Object.freeze(["misterrogers", "contv", "failarmy"]),
+            b = Object.freeze(["misterrogers", "contv", "failarmy", "primevideo"]),
             _ = Object.freeze({
                 recordClip: function() {
                     console.error("Clip Generator not available yet")
@@ -21702,7 +21702,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.12.07-212634+4dce7f0472a81184e7571a3d9b1d0d31983eee75",
+                    app_version: "2017.12.07-221249+d37ffb90e4cbe7c8b34f4c283460fe8335f8a3bd",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
