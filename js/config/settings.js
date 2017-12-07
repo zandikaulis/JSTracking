@@ -49,7 +49,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-8ac5ec.sjc01.hls.ttvnw.net/v1/playlist/Cv5Tc2QQfuYbJiT3tmtc1MpM1JOCgs050GUs-L-LF8HDt4MoTx4Yh-kQVzeJEVtKy1JreA-SgzmhHVaa6LOH5Jhx96yBtopU_waFnH1ZXlo9VhyiMuJVntQ_ICm0cHV4DvW9Q4f8YfA6F09IssE0pYe-duDKG81jaPg9j-AXGbqdJ3CDp-_WwAbTF7-uHiRn0dKmzELjkWBKD7fZ-XwlGunvLW4dMUc53LxKlvCa1WNCxUYMSjGFN-0RdKDS2S1qaCl8K3TlIPZS_BoB1FL3yBup4gIzSWirtvQ9YOaAeqUw8VYtku7FgLZ23DGLkYzliKK3Uja-d0KltJKKbNxiWOwCQyp3_SCEwyUy71F0rFYYGdIp-K_KJvKZ50VukpNhsJSghnuim6LMythwBkRlra0S9ZWKQngCY2x13uHwVHsW7n0.m3u8",
+    "spade_url": "https://video-edge-840aab.sjc01.hls.ttvnw.net/v1/playlist/CnJGCkvHYzTuiL1gbQByjt633Pc7I8iJxIU_Sk9YV-uZ7OMFYRIGWIwRBrJgoeASx9QzVqzQmtv1eMv_ktvqzYym25QcZRXWkCGivkNl5fFheQgnzqA7mMvH10wRUuXYZmf-NqtrXjxqxXdBVm6l0wRf9D7NMkZu7UKCFbbe8a9h9H1Z3DdJ9HQhiQynFWv4c-cj6ksoLKXEvrm_SbSaiLtmUWNLE-gNBmsNZwz5yz6aTD6BOSO9NtMKQwJGIYudj-ql3D0qDwnGaAsi4xxWD_h1FgkD2ZPnsx2S5DOPqutLKpwa5SGC2gJagTQkSWkP5ffuj2qi36VZI1V4U207th6d5AYHjwJEKfzX1hNPXpDZNNxesMC_l0wASSQH-p_8z14idxXICUouMMwstTudPgykelX-qLo8RPq2A8K_JbeESH0GcwwhlbWmR0DHwG1bfvkV-3pOV.m3u8",
     "store_merch_promo": "off",
     "store_merch_seasonal": "on",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
@@ -71,16 +71,16 @@ window.__twilightSettings = {
         },
         "1318509a-bf97-475d-acdc-df6a24ef6e3e": {
             "name": "twilight_videos_in_sidenav",
-            "v": 2310,
+            "v": 2612,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 92,
                 "value": "none"
             }, {
-                "weight": 0,
+                "weight": 4,
                 "value": "all_content"
             }, {
-                "weight": 0,
+                "weight": 4,
                 "value": "no_archives"
             }]
         },
