@@ -39,7 +39,7 @@ window.__twilightSettings = {
     "player_routes_exact": ["store", "directory", "following", "popout", ""],
     "player_routes_startswith": ["event/", "store/", "collections/", "communities/", "directory/"],
     "premiere_video_manager_staff": true,
-    "prime_blocked_regions": ["JP", "JPA", "IN", "IND", "CU", "CUB", "SD", "SUD", "IR", "IRN", "CHN", "CN", "SY", "SYR", "PRK", "KP"],
+    "prime_blocked_regions": ["IN", "IND", "CU", "CUB", "SD", "SUD", "IR", "IRN", "CHN", "CN", "SY", "SYR", "PRK", "KP"],
     "prime_landing_page_base_url": "https://twitch.amazon.com/prime",
     "prime_promo_content_base_url": "https://twitch.amazon.com/prime",
     "quantcast_account": "p-16uNVwiyGoWyg",
