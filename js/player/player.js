@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".cf70147fdff58ec66c59.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e4a69c4943778343c048.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -21694,7 +21694,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.12.07-183333+ee326a51746457c63b00f1be34d5e2b9e7ee04aa",
+                    app_version: "2017.12.07-195540+a984fd63d9d194acbf63527413db447d53d9a40e",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -44663,28 +44663,28 @@
                         switch (e) {
                             case d.d:
                                 return n.e(3).then(function() {
-                                    var e = n(897);
+                                    var e = n(899);
                                     t.setState({
                                         playerTypeComponent: e.default
                                     })
                                 }.bind(null, n)).catch(n.oe);
                             case d.p:
-                                return n.e(2).then(function() {
-                                    var e = n(899);
+                                return n.e(1).then(function() {
+                                    var e = n(901);
                                     t.setState({
                                         playerTypeComponent: e.default
                                     })
                                 }.bind(null, n)).catch(n.oe);
                             case d.q:
                                 return n.e(0).then(function() {
-                                    var e = n(898);
+                                    var e = n(900);
                                     t.setState({
                                         playerTypeComponent: e.default
                                     })
                                 }.bind(null, n)).catch(n.oe);
                             default:
-                                return n.e(1).then(function() {
-                                    var e = n(900);
+                                return n.e(2).then(function() {
+                                    var e = n(902);
                                     t.setState({
                                         playerTypeComponent: e.default
                                     })
@@ -56710,5 +56710,188 @@
                 _Q: []
             }, a = n.createElement(r), a.async = !0, a.src = "//c.amazon-adsystem.com/aax2/apstag.js", o = n.getElementsByTagName(r)[0], o.parentNode.insertBefore(a, o))
         }("apstag", window, document, "script")
-    }, function(e, t) {}])
+    }, function(e, t) {}, , function(e, t) {
+        e.exports = function() {
+            var e = [];
+            return e.toString = function() {
+                for (var e = [], t = 0; t < this.length; t++) {
+                    var n = this[t];
+                    n[2] ? e.push("@media " + n[2] + "{" + n[1] + "}") : e.push(n[1])
+                }
+                return e.join("")
+            }, e.i = function(t, n) {
+                "string" == typeof t && (t = [
+                    [null, t, ""]
+                ]);
+                for (var r = {}, i = 0; i < this.length; i++) {
+                    var a = this[i][0];
+                    "number" == typeof a && (r[a] = !0)
+                }
+                for (i = 0; i < t.length; i++) {
+                    var o = t[i];
+                    "number" == typeof o[0] && r[o[0]] || (n && !o[2] ? o[2] = n : n && (o[2] = "(" + o[2] + ") and (" + n + ")"), e.push(o))
+                }
+            }, e
+        }
+    }, function(e, t) {
+        function n(e, t) {
+            for (var n = 0; n < e.length; n++) {
+                var r = e[n],
+                    i = f[r.id];
+                if (i) {
+                    i.refs++;
+                    for (var a = 0; a < i.parts.length; a++) i.parts[a](r.parts[a]);
+                    for (; a < r.parts.length; a++) i.parts.push(u(r.parts[a], t))
+                } else {
+                    for (var o = [], a = 0; a < r.parts.length; a++) o.push(u(r.parts[a], t));
+                    f[r.id] = {
+                        id: r.id,
+                        refs: 1,
+                        parts: o
+                    }
+                }
+            }
+        }
+
+        function r(e) {
+            for (var t = [], n = {}, r = 0; r < e.length; r++) {
+                var i = e[r],
+                    a = i[0],
+                    o = i[1],
+                    s = i[2],
+                    u = i[3],
+                    c = {
+                        css: o,
+                        media: s,
+                        sourceMap: u
+                    };
+                n[a] ? n[a].parts.push(c) : t.push(n[a] = {
+                    id: a,
+                    parts: [c]
+                })
+            }
+            return t
+        }
+
+        function i(e, t) {
+            var n = m(),
+                r = g[g.length - 1];
+            if ("top" === e.insertAt) r ? r.nextSibling ? n.insertBefore(t, r.nextSibling) : n.appendChild(t) : n.insertBefore(t, n.firstChild), g.push(t);
+            else {
+                if ("bottom" !== e.insertAt) throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+                n.appendChild(t)
+            }
+        }
+
+        function a(e) {
+            e.parentNode.removeChild(e);
+            var t = g.indexOf(e);
+            t >= 0 && g.splice(t, 1)
+        }
+
+        function o(e) {
+            var t = document.createElement("style");
+            return t.type = "text/css", i(e, t), t
+        }
+
+        function s(e) {
+            var t = document.createElement("link");
+            return t.rel = "stylesheet", i(e, t), t
+        }
+
+        function u(e, t) {
+            var n, r, i;
+            if (t.singleton) {
+                var u = y++;
+                n = v || (v = o(t)), r = c.bind(null, n, u, !1), i = c.bind(null, n, u, !0)
+            } else e.sourceMap && "function" == typeof URL && "function" == typeof URL.createObjectURL && "function" == typeof URL.revokeObjectURL && "function" == typeof Blob && "function" == typeof btoa ? (n = s(t), r = d.bind(null, n), i = function() {
+                a(n), n.href && URL.revokeObjectURL(n.href)
+            }) : (n = o(t), r = l.bind(null, n), i = function() {
+                a(n)
+            });
+            return r(e),
+                function(t) {
+                    if (t) {
+                        if (t.css === e.css && t.media === e.media && t.sourceMap === e.sourceMap) return;
+                        r(e = t)
+                    } else i()
+                }
+        }
+
+        function c(e, t, n, r) {
+            var i = n ? "" : r.css;
+            if (e.styleSheet) e.styleSheet.cssText = b(t, i);
+            else {
+                var a = document.createTextNode(i),
+                    o = e.childNodes;
+                o[t] && e.removeChild(o[t]), o.length ? e.insertBefore(a, o[t]) : e.appendChild(a)
+            }
+        }
+
+        function l(e, t) {
+            var n = t.css,
+                r = t.media;
+            if (r && e.setAttribute("media", r), e.styleSheet) e.styleSheet.cssText = n;
+            else {
+                for (; e.firstChild;) e.removeChild(e.firstChild);
+                e.appendChild(document.createTextNode(n))
+            }
+        }
+
+        function d(e, t) {
+            var n = t.css,
+                r = t.sourceMap;
+            r && (n += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(r)))) + " */");
+            var i = new Blob([n], {
+                    type: "text/css"
+                }),
+                a = e.href;
+            e.href = URL.createObjectURL(i), a && URL.revokeObjectURL(a)
+        }
+        var f = {},
+            p = function(e) {
+                var t;
+                return function() {
+                    return void 0 === t && (t = e.apply(this, arguments)), t
+                }
+            },
+            h = p(function() {
+                return /msie [6-9]\b/.test(self.navigator.userAgent.toLowerCase())
+            }),
+            m = p(function() {
+                return document.head || document.getElementsByTagName("head")[0]
+            }),
+            v = null,
+            y = 0,
+            g = [];
+        e.exports = function(e, t) {
+            if ("undefined" != typeof DEBUG && DEBUG && "object" != typeof document) throw new Error("The style-loader cannot be used in a non-browser environment");
+            t = t || {}, void 0 === t.singleton && (t.singleton = h()), void 0 === t.insertAt && (t.insertAt = "bottom");
+            var i = r(e);
+            return n(i, t),
+                function(e) {
+                    for (var a = [], o = 0; o < i.length; o++) {
+                        var s = i[o],
+                            u = f[s.id];
+                        u.refs--, a.push(u)
+                    }
+                    if (e) {
+                        n(r(e), t)
+                    }
+                    for (var o = 0; o < a.length; o++) {
+                        var u = a[o];
+                        if (0 === u.refs) {
+                            for (var c = 0; c < u.parts.length; c++) u.parts[c]();
+                            delete f[u.id]
+                        }
+                    }
+                }
+        };
+        var b = function() {
+            var e = [];
+            return function(t, n) {
+                return e[t] = n, e.filter(Boolean).join("\n")
+            }
+        }()
+    }])
 });
