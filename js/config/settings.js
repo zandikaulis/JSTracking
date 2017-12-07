@@ -369,6 +369,18 @@ window.__twilightSettings = {
                 "value": "first"
             }]
         },
+        "e9fe3136-84bc-4a61-9079-0c7df78abeb3": {
+            "name": "twilight_web_onboarding_categories",
+            "v": 2615,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "yes"
+            }]
+        },
         "ef25ca44-13bd-4e89-99d2-f9939c013fec": {
             "name": "twilight_streamer_trailers",
             "v": 2273,
