@@ -12,7 +12,7 @@ window.__twilightSettings = {
     "bits_truex_api_url": "https://get.truex.com/v2",
     "bits_truex_partner_hash": "af4f4f3a5b1e302e3e17383b8dd300cb6867ec84",
     "bits_truex_script_url": "https://static.truex.com/js/client.js",
-    "blitz_channels": ["lunacyhatter", "n5devtest", "blitz_blitz_blitz", "gypsytest"],
+    "blitz_channels": ["lunacyhatter", "n5devtest", "blitz_blitz_blitz"],
     "blitz_frame_url": "https://twitch.amazon.com/prime/video/",
     "blitz_player_front": true,
     "browser_notifications_launch": false,
@@ -84,18 +84,6 @@ window.__twilightSettings = {
                 "value": "no_archives"
             }]
         },
-        "1dc7b575-1187-42bf-8d01-c62bea1f89c9": {
-            "name": "twilight_growth_email_verify_bar",
-            "v": 2540,
-            "t": 1,
-            "groups": [{
-                "weight": 1,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "enabled"
-            }]
-        },
         "298a5f39-228a-487a-ad06-422c18458403": {
             "name": "twilight_merch_store_launch",
             "v": 2159,
@@ -106,6 +94,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "true"
+            }]
+        },
+        "29a37cfd-6a34-4624-970f-6b155b40636b": {
+            "name": "twilight_onboarding_randomized_games",
+            "v": 2621,
+            "t": 2,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
             }]
         },
         "32099615-3609-4658-9f6b-5c1c1daa3510": {
@@ -252,6 +252,18 @@ window.__twilightSettings = {
                 "value": "yes"
             }]
         },
+        "7aa589f3-34d8-425f-8227-29007d50757e": {
+            "name": "twilight_growth_email_verify_bar",
+            "v": 2618,
+            "t": 2,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "9452d9e2-6588-408c-b8aa-1e54ff1e2f4a": {
             "name": "twilight_expando_featuro",
             "v": 2526,
@@ -301,18 +313,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "skip"
-            }]
-        },
-        "aec6897c-9a43-4d5a-a09e-3a9ebf05e4d5": {
-            "name": "twilight_onboarding_randomized_games",
-            "v": 2570,
-            "t": 1,
-            "groups": [{
-                "weight": 1,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "enabled"
             }]
         },
         "afc307f3-4011-40ba-9406-56c474b5922b": {
