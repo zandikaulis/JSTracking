@@ -1,5 +1,7 @@
-webpackJsonp([50], {
-    1008: function(e, t, n) {
+webpackJsonp([49], {
+    1001: function(e, t) {},
+    1002: function(e, t) {},
+    1014: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -28,7 +30,7 @@ webpackJsonp([50], {
                 onShowModal: u.d
             }, e)
         }
-        var l = (n(897), n(0)),
+        var l = (n(903), n(0)),
             s = n(1),
             c = n(6),
             d = n(9),
@@ -36,7 +38,7 @@ webpackJsonp([50], {
             p = n(2),
             m = n(7),
             g = n(21),
-            h = n(812),
+            h = n(817),
             f = n(12),
             y = "directory-avatar-edit-menu",
             v = "directory-avatar-overlay",
@@ -97,7 +99,7 @@ webpackJsonp([50], {
             },
             T = "https://static-cdn.jtvnw.net/community-images/defaults/avatar-285x380.png",
             O = "https://static-cdn.jtvnw.net/community-images/defaults/banner-1200x180.png",
-            M = n(825),
+            M = n(830),
             U = function(e) {
                 return e === M.a.Communities ? "COMMUNITY" : "GAME"
             },
@@ -107,7 +109,7 @@ webpackJsonp([50], {
             A = function() {
                 return Object(p.d)("Remove", "DirectoryHeader")
             },
-            x = n(372),
+            x = n(377),
             L = "https://api.twitch.tv/kraken/communities/",
             I = function(e) {
                 return "" + L + e + "/images/avatar"
@@ -118,12 +120,12 @@ webpackJsonp([50], {
             V = function(e) {
                 return e === M.a.Communities ? Object(x.b)("communities") : Object(x.b)()
             },
-            R = n(877),
-            P = n(852),
+            R = n(883),
+            P = n(856),
             G = n(5),
             H = n(3),
-            q = n(1017),
-            z = (n(1018), function(e) {
+            q = n(1023),
+            z = (n(1024), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -274,7 +276,7 @@ webpackJsonp([50], {
             }(s.Component)),
             W = z,
             $ = Object(c.a)(i, a)(W),
-            K = n(856),
+            K = n(860),
             Q = n(4),
             Y = n(10),
             J = function(e) {
@@ -303,8 +305,8 @@ webpackJsonp([50], {
                 }, t
             }(s.Component),
             X = J,
-            Z = n(1019),
-            ee = (n(1020), function(e) {
+            Z = n(1025),
+            ee = (n(1026), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -508,7 +510,7 @@ webpackJsonp([50], {
             }(s.Component)),
             te = ee,
             ne = Object(c.a)(r, o)(te),
-            ie = n(905),
+            ie = n(911),
             ae = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -539,7 +541,7 @@ webpackJsonp([50], {
             return re
         })
     },
-    1011: function(e, t, n) {
+    1017: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
             return i
@@ -617,7 +619,7 @@ webpackJsonp([50], {
             }(r.Component),
             f = Object(s.c)("TopClipsTimeFilter")(h)
     },
-    1017: function(e, t) {
+    1023: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -844,8 +846,8 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    1018: function(e, t) {},
-    1019: function(e, t) {
+    1024: function(e, t) {},
+    1025: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1181,8 +1183,8 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    1020: function(e, t) {},
-    1021: function(e, t) {
+    1026: function(e, t) {},
+    1027: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1339,7 +1341,7 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    1022: function(e, t) {
+    1028: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1466,7 +1468,7 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    1023: function(e, t) {
+    1029: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1567,8 +1569,8 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    1024: function(e, t) {},
-    1025: function(e, t) {
+    1030: function(e, t) {},
+    1031: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1669,7 +1671,7 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    1026: function(e, t) {
+    1032: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1882,8 +1884,8 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    1027: function(e, t) {},
-    1060: function(e, t, n) {
+    1033: function(e, t) {},
+    1063: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1894,7 +1896,7 @@ webpackJsonp([50], {
             o = n(2),
             l = n(64),
             s = n(3),
-            c = (n(1082), {
+            c = (n(1084), {
                 TITLE: "clips-modal-title",
                 MAIN_BODY: "clips-modal-main-body",
                 SUCCESS_BODY: "clips-modal-success-body",
@@ -2008,7 +2010,7 @@ webpackJsonp([50], {
                     })))))
                 }, t
             }(r.Component),
-            u = n(875),
+            u = n(880),
             p = n(5),
             m = 86400,
             g = {
@@ -2093,8 +2095,8 @@ webpackJsonp([50], {
             },
             y = Object(p.c)("ClipsModalBanUser")(Object(u.a)(f)(h)),
             v = n(7),
-            b = n(1083),
-            k = (n(1084), this),
+            b = n(1085),
+            k = (n(1086), this),
             C = {
                 isLoading: !1,
                 hasErrored: !1,
@@ -2216,7 +2218,7 @@ webpackJsonp([50], {
                 props: S
             })(_),
             E = n(31),
-            N = n(1085),
+            N = n(1087),
             D = this,
             F = {
                 isLoading: !1,
@@ -2454,8 +2456,8 @@ webpackJsonp([50], {
             return B
         })
     },
-    1082: function(e, t) {},
-    1083: function(e, t) {
+    1084: function(e, t) {},
+    1085: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2566,8 +2568,8 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    1084: function(e, t) {},
-    1085: function(e, t) {
+    1086: function(e, t) {},
+    1087: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2712,8 +2714,8 @@ webpackJsonp([50], {
             return !r.b.get(l.a, !1) && r.a.buildType === o.a.Production
         }
         var r = n(2),
-            o = n(16),
-            l = n(262);
+            o = n(14),
+            l = n(265);
         t.a = i, t.b = a;
         var s = "https://www.twitch.tv"
     },
@@ -2746,20 +2748,20 @@ webpackJsonp([50], {
         }
         var l, s = n(1),
             c = n(2),
-            d = n(918),
+            d = n(924),
             u = n(5),
             p = n(6),
             m = n(9),
             g = n(38),
             h = n(0),
-            f = n(68),
+            f = n(69),
             y = n(10),
-            v = n(372),
+            v = n(377),
             b = n(4),
             k = n(104),
-            C = n(1060),
-            _ = n(374),
-            S = n(261),
+            C = n(1063),
+            _ = n(379),
+            S = n(264),
             w = n(40),
             E = n(64),
             N = n(3),
@@ -2787,9 +2789,9 @@ webpackJsonp([50], {
                 }, t = h.__decorate([Object(u.c)("SelectableInput")], t)
             }(s.Component)),
             F = D,
-            T = n(855),
-            O = n(88),
-            M = n(925),
+            T = n(859),
+            O = n(68),
+            M = n(931),
             U = [{
                 type: T.b.Twitter,
                 params: {
@@ -2829,7 +2831,7 @@ webpackJsonp([50], {
                 }))
             },
             A = j,
-            x = n(382),
+            x = n(387),
             L = n(7);
         ! function(e) {
             e[e.View = 0] = "View", e[e.Report = 1] = "Report", e[e.Delete = 2] = "Delete", e[e.DeleteAll = 3] = "DeleteAll", e[e.Ban = 4] = "Ban", e[e.Timeout = 5] = "Timeout"
@@ -3290,7 +3292,7 @@ webpackJsonp([50], {
             }(s.Component)),
             Y = Q,
             J = Object(p.a)(null, r)(Y),
-            X = n(1011),
+            X = n(1017),
             Z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3481,7 +3483,7 @@ webpackJsonp([50], {
     1310: function(e, t) {},
     1311: function(e, t) {},
     1312: function(e, t) {},
-    1886: function(e, t) {
+    1879: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -4003,7 +4005,7 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    2068: function(e, t, n) {
+    2060: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4017,25 +4019,25 @@ webpackJsonp([50], {
         var a = n(0),
             r = n(1),
             o = n(2),
-            l = n(811),
-            s = n(809),
+            l = n(816),
+            s = n(814),
             c = n(12),
             d = n(5),
-            u = n(1011),
-            p = n(923),
+            u = n(1017),
+            p = n(929),
             m = n(6),
-            g = n(876),
+            g = n(881),
             h = n(67),
             f = n(28),
             y = n(7),
             v = n(21),
-            b = n(68),
-            k = n(1008),
-            C = n(905),
+            b = n(69),
+            k = n(1014),
+            C = n(911),
             _ = n(1306),
-            S = n(925),
+            S = n(931),
             w = n(3),
-            E = n(1886),
+            E = n(1879),
             N = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4163,13 +4165,13 @@ webpackJsonp([50], {
             return O
         })
     },
-    262: function(e, t, n) {
+    265: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(20),
             r = n(1),
             o = n(2),
-            l = n(16),
+            l = n(14),
             s = "legacy_routes_enabled",
             c = function(e) {
                 function t(t) {
@@ -4248,7 +4250,7 @@ webpackJsonp([50], {
             return d
         })
     },
-    806: function(e, t, n) {
+    811: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -4258,7 +4260,7 @@ webpackJsonp([50], {
             e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention", e[e.Ban = 3] = "Ban", e[e.Timeout = 4] = "Timeout", e[e.AutoModRejectedPrompt = 5] = "AutoModRejectedPrompt", e[e.AutoModMessageRejected = 6] = "AutoModMessageRejected", e[e.AutoModMessageAllowed = 7] = "AutoModMessageAllowed", e[e.AutoModMessageDenied = 8] = "AutoModMessageDenied", e[e.Connected = 9] = "Connected", e[e.Disconnected = 10] = "Disconnected", e[e.Reconnect = 11] = "Reconnect", e[e.Hosting = 12] = "Hosting", e[e.Unhost = 13] = "Unhost", e[e.Subscription = 14] = "Subscription", e[e.Resubscription = 15] = "Resubscription", e[e.SubGift = 16] = "SubGift", e[e.Clear = 17] = "Clear", e[e.SubscriberOnlyMode = 18] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 19] = "FollowerOnlyMode", e[e.SlowMode = 20] = "SlowMode", e[e.EmoteOnlyMode = 21] = "EmoteOnlyMode", e[e.RoomMods = 22] = "RoomMods", e[e.RoomState = 23] = "RoomState", e[e.Raid = 24] = "Raid", e[e.Unraid = 25] = "Unraid", e[e.Notice = 26] = "Notice", e[e.Info = 27] = "Info", e[e.BadgesUpdated = 28] = "BadgesUpdated", e[e.Purchase = 29] = "Purchase"
         }(i || (i = {}))
     },
-    808: function(e, t, n) {
+    813: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4266,7 +4268,7 @@ webpackJsonp([50], {
         }
         t.a = i
     },
-    809: function(e, t, n) {
+    814: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -4326,7 +4328,7 @@ webpackJsonp([50], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    811: function(e, t, n) {
+    816: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4394,7 +4396,7 @@ webpackJsonp([50], {
             return i
         })
     },
-    812: function(e, t, n) {
+    817: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
@@ -4525,7 +4527,7 @@ webpackJsonp([50], {
                 }, e
             }()
     },
-    825: function(e, t, n) {
+    830: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -4535,7 +4537,7 @@ webpackJsonp([50], {
             e.Games = "GAMES", e.Communities = "COMMUNITIES", e.Creative = "CREATIVE"
         }(i || (i = {}))
     },
-    833: function(e, t, n) {
+    838: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
@@ -4591,7 +4593,7 @@ webpackJsonp([50], {
                 }, t
             }(a.Component)
     },
-    834: function(e, t, n) {
+    839: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4602,10 +4604,10 @@ webpackJsonp([50], {
             }
         }
         t.a = i;
-        var a = n(806),
-            r = n(808)
+        var a = n(811),
+            r = n(813)
     },
-    838: function(e, t, n) {
+    842: function(e, t, n) {
         "use strict";
         var i, a = n(0),
             r = n(1),
@@ -4631,7 +4633,7 @@ webpackJsonp([50], {
             return s
         })
     },
-    839: function(e, t, n) {
+    843: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4742,7 +4744,7 @@ webpackJsonp([50], {
                 return e.code
             }))
     },
-    848: function(e, t, n) {
+    852: function(e, t, n) {
         "use strict";
 
         function i(e, t, n, i) {
@@ -4755,9 +4757,9 @@ webpackJsonp([50], {
             }
         }
         t.a = i;
-        var a = n(808)
+        var a = n(813)
     },
-    852: function(e, t, n) {
+    856: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -4769,7 +4771,7 @@ webpackJsonp([50], {
             EventCoverImage: "event_cover_image"
         }
     },
-    853: function(e, t, n) {
+    857: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -4803,11 +4805,11 @@ webpackJsonp([50], {
         t.c = i, t.a = a, t.b = r;
         var o = n(0),
             l = n(2),
-            s = n(839),
-            c = n(854),
+            s = n(843),
+            c = n(858),
             d = "languageDirectoryFilters"
     },
-    854: function(e, t, n) {
+    858: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4821,7 +4823,7 @@ webpackJsonp([50], {
         }), t.b = i;
         var a = "core.user-preferences.LANGUAGE_PREFERENCES_UPDATED"
     },
-    855: function(e, t, n) {
+    859: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4852,14 +4854,14 @@ webpackJsonp([50], {
         var l = n(0),
             s = n(1),
             c = n(2),
-            d = n(867),
-            u = n(88),
+            d = n(871),
+            u = n(68),
             p = "https://www.facebook.com/sharer/sharer.php",
             m = "https://www.twitter.com/share",
             g = "https://www.reddit.com/submit",
             h = "https://vk.com/share.php",
             f = n(3);
-        n(895);
+        n(901);
         n.d(t, "b", function() {
             return y
         }), n.d(t, "a", function() {
@@ -4983,7 +4985,7 @@ webpackJsonp([50], {
             }, t
         }(s.Component)
     },
-    856: function(e, t, n) {
+    860: function(e, t, n) {
         "use strict";
 
         function i() {
@@ -5005,7 +5007,7 @@ webpackJsonp([50], {
         var r = "header.DIRECTORY_HEADER_EDIT_ENABLED",
             o = "header.DIRECTORY_HEADER_EDIT_DISABLED"
     },
-    867: function(e, t, n) {
+    871: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -5021,7 +5023,20 @@ webpackJsonp([50], {
         }
         t.a = i
     },
-    875: function(e, t, n) {
+    872: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return i
+        }), n.d(t, "b", function() {
+            return a
+        });
+        var i;
+        ! function(e) {
+            e.JPEG = "image/jpeg", e.PNG = "image/png", e.GIF = "image/gif"
+        }(i || (i = {}));
+        var a = [i.JPEG, i.PNG]
+    },
+    880: function(e, t, n) {
         "use strict";
 
         function i() {
@@ -5097,17 +5112,17 @@ webpackJsonp([50], {
             l = n(2),
             s = n(7),
             c = n(21),
-            d = n(834),
-            u = n(848),
-            p = n(806),
-            m = n(884),
+            d = n(839),
+            u = n(852),
+            p = n(811),
+            m = n(890),
             g = (n.n(m), 60),
             h = 60 * g,
             f = 24 * h,
             y = 7 * f,
             v = 4 * y
     },
-    876: function(e, t, n) {
+    881: function(e, t, n) {
         "use strict";
 
         function i() {
@@ -5133,75 +5148,75 @@ webpackJsonp([50], {
         t.a = r;
         var o = n(0),
             l = n(2),
-            s = n(854),
-            c = n(853);
+            s = n(858),
+            c = n(857);
         l.n.store.registerReducer("userPreferences", a)
     },
-    877: function(e, t, n) {
+    883: function(e, t, n) {
         "use strict";
 
         function i(e) {
-            return Object(E.bindActionCreators)({
-                onClose: N.c
+            return Object(F.bindActionCreators)({
+                onClose: T.c
             }, e)
         }
-        var a = n(0),
-            r = n(1),
-            o = n(2),
-            l = n(833),
-            s = n(3),
-            c = (n(995), function(e) {
+        var a, r = n(0),
+            o = n(1),
+            l = n(2),
+            s = n(838),
+            c = n(3),
+            d = (n(1001), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(l.a, {
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return o.createElement(s.a, {
                         allowedFileTypes: this.props.allowedFileTypes,
                         onFilesSubmitted: this.props.processFiles
-                    }, r.createElement(s.U, {
+                    }, o.createElement(c.U, {
                         className: "image-uploader",
-                        textAlign: s._22.Center,
-                        display: s.H.Flex,
-                        flexDirection: s.J.Column,
-                        alignItems: s.c.Center,
-                        justifyContent: s.T.Center,
-                        position: s._2.Relative,
+                        textAlign: c._22.Center,
+                        display: c.H.Flex,
+                        flexDirection: c.J.Column,
+                        alignItems: c.c.Center,
+                        justifyContent: c.T.Center,
+                        position: c._2.Relative,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, this.renderErrorMessage(), r.createElement(s.U, {
-                        position: s._2.Relative
-                    }, r.createElement(s.U, {
+                    }, this.renderErrorMessage(), o.createElement(c.U, {
+                        position: c._2.Relative
+                    }, o.createElement(c.U, {
                         className: "image-uploader__upload-svg--anim-backfill"
-                    }, r.createElement(s._8, {
-                        asset: s._9.Upload,
-                        type: s._10.Alt2,
+                    }, o.createElement(c._8, {
+                        asset: c._9.Upload,
+                        type: c._10.Alt2,
                         width: 99,
                         height: 76
-                    })), r.createElement(s.U, {
+                    })), o.createElement(c.U, {
                         className: "image-uploader__upload-svg--anim-fill",
-                        position: s._2.Absolute,
-                        display: this.props.isLoading ? s.H.Block : s.H.Hide,
+                        position: c._2.Absolute,
+                        display: this.props.isLoading ? c.H.Block : c.H.Hide,
                         attachTop: !0
-                    }, r.createElement(s._8, {
-                        asset: s._9.Upload,
-                        type: s._10.Brand,
+                    }, o.createElement(c._8, {
+                        asset: c._9.Upload,
+                        type: c._10.Brand,
                         width: 99,
                         height: 76
                     }))), this.props.isLoading ? this.renderLoadingState() : this.renderNormalState()))
                 }, t.prototype.renderLoadingState = function() {
-                    return r.createElement(s.U, {
+                    return o.createElement(c.U, {
                         margin: 1,
                         "data-test-selector": "image-uploader-loading"
-                    }, r.createElement(s._21, {
-                        type: s._26.H4
-                    }, Object(o.d)("Uploading", "ImageUploader")))
+                    }, o.createElement(c._21, {
+                        type: c._26.H4
+                    }, Object(l.d)("Uploading", "ImageUploader")))
                 }, t.prototype.renderNormalState = function() {
-                    var e = Object(o.d)("Browse", "ImageUploader");
-                    return r.createElement(s.U, null, r.createElement(s.U, {
+                    var e = Object(l.d)("Browse", "ImageUploader");
+                    return o.createElement(c.U, null, o.createElement(c.U, {
                         padding: 1
-                    }, r.createElement(s._21, {
-                        type: s._26.H4
-                    }, Object(o.d)("Drag and drop your image here", "ImageUploader"))), r.createElement(s.U, {
+                    }, o.createElement(c._21, {
+                        type: c._26.H4
+                    }, Object(l.d)("Drag and drop your image here", "ImageUploader"))), o.createElement(c.U, {
                         margin: {
                             bottom: 2
                         },
@@ -5211,56 +5226,56 @@ webpackJsonp([50], {
                         },
                         fullWidth: !0,
                         "data-test-selector": "image-uploader-hint"
-                    }, r.createElement(s._21, {
-                        type: s._26.P,
-                        fontSize: s.L.Size7,
-                        color: s.F.Alt2
-                    }, this.props.hintMessage)), r.createElement(s.U, null, r.createElement(s.u, {
+                    }, o.createElement(c._21, {
+                        type: c._26.P,
+                        fontSize: c.L.Size7,
+                        color: c.F.Alt2
+                    }, this.props.hintMessage)), o.createElement(c.U, null, o.createElement(c.u, {
                         ariaLabel: e,
-                        type: s.z.Hollow
+                        type: c.z.Hollow
                     }, e)))
                 }, t.prototype.renderErrorMessage = function() {
-                    if (this.props.errorMessage) return r.createElement(s.U, {
+                    if (this.props.errorMessage) return o.createElement(c.U, {
                         margin: {
                             bottom: 1
                         },
                         "data-test-selector": "image-uploader-error"
-                    }, r.createElement(s._21, {
-                        type: s._26.H5,
-                        color: s.F.Error,
+                    }, o.createElement(c._21, {
+                        type: c._26.H5,
+                        color: c.F.Error,
                         bold: !0
                     }, this.props.errorMessage))
                 }, t
-            }(r.Component)),
-            d = n(852),
-            u = function(e) {
+            }(o.Component)),
+            u = n(856),
+            p = function(e) {
                 return new Promise(function(t, n) {
                     var i = new FileReader;
                     i.onload = function() {
-                        var e = p(i.result);
+                        var e = m(i.result);
                         t(e)
                     }, i.onerror = function(e) {
                         n(e)
                     }, i.readAsDataURL(e)
                 })
             },
-            p = function(e) {
+            m = function(e) {
                 return e.replace(/data:image.*;base64,/, "")
             },
-            m = this,
-            g = function(e, t, n) {
-                return a.__awaiter(m, void 0, void 0, function() {
-                    var i, r, o, l, s, c;
-                    return a.__generator(this, function(a) {
-                        switch (a.label) {
+            g = this,
+            h = function(e, t, n) {
+                return r.__awaiter(g, void 0, void 0, function() {
+                    var i, a, o, l, s, c;
+                    return r.__generator(this, function(r) {
+                        switch (r.label) {
                             case 0:
-                                return t ? (i = void 0, n ? (s = {}, r = n, [4, u(e)]) : [3, 2]) : [3, 5];
+                                return t ? (i = void 0, n ? (s = {}, a = n, [4, p(e)]) : [3, 2]) : [3, 5];
                             case 1:
-                                return s[r] = a.sent(), i = s, [3, 4];
+                                return s[a] = r.sent(), i = s, [3, 4];
                             case 2:
-                                return c = {}, o = d.a.Default, [4, u(e)];
+                                return c = {}, o = u.a.Default, [4, p(e)];
                             case 3:
-                                c[o] = a.sent(), i = c, a.label = 4;
+                                c[o] = r.sent(), i = c, r.label = 4;
                             case 4:
                                 return [2, i];
                             case 5:
@@ -5271,38 +5286,45 @@ webpackJsonp([50], {
                     })
                 })
             },
-            h = function(e, t) {
-                return Object(o.d)("Recommended image size: {imageDimensions} and less than {imageFileMegabytes, number}MB", {
+            f = n(872),
+            y = function(e, t) {
+                return Object(l.d)("Recommended image size: {imageDimensions} and less than {imageFileMegabytes, number}MB", {
                     imageDimensions: e,
                     imageFileMegabytes: t
                 }, "ImageUploader")
             },
-            f = function(e, t) {
-                return Object(o.d)("Required image size: {imageDimensions} and less than {imageFileMegabytes, number}MB", {
+            v = function(e, t) {
+                return Object(l.d)("Required image size: {imageDimensions} and less than {imageFileMegabytes, number}MB", {
                     imageDimensions: e,
                     imageFileMegabytes: t
                 }, "ImageUploader")
             },
-            y = function(e) {
-                return Object(o.d)("Couldn't upload image. Request returned {statusCode, number}", {
+            b = function(e) {
+                return Object(l.d)("Couldn't upload image. Request returned {statusCode, number}", {
                     statusCode: e
                 }, "ImageUploader")
             },
-            v = function() {
-                return Object(o.d)("File too large.", "ImageUploader")
+            k = function() {
+                return Object(l.d)("File too large.", "ImageUploader")
             },
-            b = function() {
-                return Object(o.d)("Incompatible format. File must be an image in PNG or JPG format.", "ImageUploader")
+            C = (a = {}, a[f.a.JPEG] = "JPG", a[f.a.PNG] = "PNG", a[f.a.GIF] = "GIF", a),
+            _ = function(e) {
+                var t = e.map(function(e) {
+                    return C[e]
+                });
+                return t.length > 1 && (t[t.length - 1] = "or " + t[t.length - 1]), Object(l.d)("Incompatible format. File must be an image in {allowedTypes} format.", {
+                    allowedTypes: t.join(", ")
+                }, "ImageUploader")
             },
-            k = n(812),
-            C = this,
-            _ = function(e, t) {
-                return a.__awaiter(C, void 0, void 0, function() {
+            S = n(817),
+            w = this,
+            E = function(e, t) {
+                return r.__awaiter(w, void 0, void 0, function() {
                     var n;
-                    return a.__generator(this, function(i) {
+                    return r.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
-                                return [4, k.a.post(e, {
+                                return [4, S.a.post(e, {
                                     body: t,
                                     credentials: t instanceof FormData ? "include" : void 0
                                 })];
@@ -5310,50 +5332,50 @@ webpackJsonp([50], {
                                 if (n = i.sent(), n.status >= 200 && n.status < 300) return [2, n.body];
                                 if (n && n.error) throw new Error(JSON.stringify(n.error));
                                 if (n && n.requestError) throw new Error(JSON.stringify(n.requestError));
-                                throw new Error(y(n.status))
+                                throw new Error(b(n.status))
                         }
                     })
                 })
             },
-            S = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
+            N = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.state = {
                         isLoading: !1,
                         errorMessage: "",
                         hintMessage: "",
-                        allowedFileTypes: ["image/jpeg", "image/png"]
-                    }, t.processFiles = function(e) {
-                        return a.__awaiter(t, void 0, void 0, function() {
-                            var t, n, i, r;
-                            return a.__generator(this, function(a) {
-                                switch (a.label) {
+                        allowedFileTypes: f.b
+                    }, n.processFiles = function(e) {
+                        return r.__awaiter(n, void 0, void 0, function() {
+                            var t, n, i, a;
+                            return r.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
                                         return t = e[0], (this.setState({
                                             errorMessage: "",
                                             isLoading: !0
                                         }), this.isFileTypeAcceptable(t)) ? [3, 1] : (this.setState({
-                                            errorMessage: b(),
+                                            errorMessage: _(this.state.allowedFileTypes),
                                             isLoading: !1
                                         }), [3, 7]);
                                     case 1:
                                         return this.isFileSizeAcceptable(t) ? [3, 2] : (this.setState({
-                                            errorMessage: v(),
+                                            errorMessage: k(),
                                             isLoading: !1
                                         }), [3, 7]);
                                     case 2:
-                                        return [4, g(t, this.props.shouldBase64Encode, this.props.base64EncodedPropertyName)];
+                                        return [4, h(t, this.props.shouldBase64Encode, this.props.base64EncodedPropertyName)];
                                     case 3:
-                                        n = a.sent(), a.label = 4;
+                                        n = r.sent(), r.label = 4;
                                     case 4:
-                                        return a.trys.push([4, 6, , 7]), [4, _(this.props.uploadURL, n)];
+                                        return r.trys.push([4, 6, , 7]), [4, E(this.props.uploadURL, n)];
                                     case 5:
-                                        return i = a.sent(), this.setState({
+                                        return i = r.sent(), this.setState({
                                             isLoading: !1
                                         }), this.props.onFinishUploading && this.props.onFinishUploading(i, n), [3, 7];
                                     case 6:
-                                        return r = a.sent(), this.setState({
-                                            errorMessage: r.message,
+                                        return a = r.sent(), this.setState({
+                                            errorMessage: a.message,
                                             isLoading: !1
                                         }), [3, 7];
                                     case 7:
@@ -5361,15 +5383,15 @@ webpackJsonp([50], {
                                 }
                             })
                         })
-                    }, t
+                    }, t.allowedFileTypes && (n.state.allowedFileTypes = t.allowedFileTypes), n
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = "";
-                    e = this.props.isRequiredImageDimensions ? f(this.props.imageDimensions, this.props.maxFileSizeMegabytes) : h(this.props.imageDimensions, this.props.maxFileSizeMegabytes), this.setState({
+                    e = this.props.isRequiredImageDimensions ? v(this.props.imageDimensions, this.props.maxFileSizeMegabytes) : y(this.props.imageDimensions, this.props.maxFileSizeMegabytes), this.setState({
                         hintMessage: e
                     })
                 }, t.prototype.render = function() {
-                    return r.createElement(c, {
+                    return o.createElement(d, {
                         allowedFileTypes: this.state.allowedFileTypes,
                         errorMessage: this.state.errorMessage,
                         hintMessage: this.state.hintMessage,
@@ -5379,37 +5401,37 @@ webpackJsonp([50], {
                 }, t.prototype.isFileTypeAcceptable = function(e) {
                     return this.state.allowedFileTypes.includes(e.type)
                 }, t.prototype.isFileSizeAcceptable = function(e) {
-                    var t = 1e6 * this.props.maxFileSizeMegabytes;
+                    var t = 1048576 * this.props.maxFileSizeMegabytes;
                     return e.size <= t
                 }, t
-            }(r.Component),
-            w = n(6),
-            E = n(9),
-            N = n(38),
-            D = n(104),
-            F = (n(996), function(e) {
+            }(o.Component),
+            D = n(6),
+            F = n(9),
+            T = n(38),
+            O = n(104),
+            M = (n(1002), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(s._17, {
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return o.createElement(c._17, {
                         className: "image-uploader-modal",
-                        background: s.m.Base
-                    }, r.createElement(S, a.__assign({
+                        background: c.m.Base
+                    }, o.createElement(N, r.__assign({
                         onFinishUploading: this.props.onClose
-                    }, this.props)), r.createElement(D.a, {
+                    }, this.props)), o.createElement(O.a, {
                         closeOnBackdropClick: !0
                     }))
                 }, t
-            }(r.Component)),
-            T = Object(w.a)(null, i)(F);
+            }(o.Component)),
+            U = Object(D.a)(null, i)(M);
         n.d(t, "a", function() {
-            return S
+            return N
         }), n.d(t, "b", function() {
-            return T
+            return U
         })
     },
-    884: function(e, t) {
+    890: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -5510,8 +5532,8 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    895: function(e, t) {},
-    897: function(e, t, n) {
+    901: function(e, t) {},
+    903: function(e, t, n) {
         "use strict";
 
         function i() {
@@ -5541,10 +5563,10 @@ webpackJsonp([50], {
         t.a = r;
         var o = n(0),
             l = n(2),
-            s = n(856);
+            s = n(860);
         l.n.store.registerReducer("directoryHeader", a)
     },
-    905: function(e, t, n) {
+    911: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -5600,9 +5622,9 @@ webpackJsonp([50], {
             C = n(12),
             _ = n(5),
             S = n(3),
-            w = n(1021),
-            E = n(1022),
-            N = n(1023),
+            w = n(1027),
+            E = n(1028),
+            N = n(1029),
             D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -5758,18 +5780,18 @@ webpackJsonp([50], {
             }(u.Component),
             F = D,
             T = Object(g.a)(i, a)(F),
-            O = n(838),
+            O = n(842),
             M = n(128),
-            U = n(372),
+            U = n(377),
             j = n(38),
-            A = n(856),
-            x = n(382),
-            L = n(374),
+            A = n(860),
+            x = n(387),
+            L = n(379),
             I = n(134),
-            B = n(261),
+            B = n(264),
             V = n(31),
             R = n(104),
-            P = (n(1024), n(1025)),
+            P = (n(1030), n(1031)),
             G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -5848,7 +5870,7 @@ webpackJsonp([50], {
                 name: "tosBanCommunity"
             }))(G),
             q = Object(g.a)(null, r)(H),
-            z = n(1026),
+            z = n(1032),
             W = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -5944,11 +5966,11 @@ webpackJsonp([50], {
                 })], t)
             }(u.Component),
             $ = W,
-            K = n(897),
+            K = n(903),
             Q = Object(g.a)(o, l)(Object(p.f)($)),
-            Y = n(928),
-            J = n(825);
-        n(1027);
+            Y = n(934),
+            J = n(830);
+        n(1033);
         ! function(e) {
             e[e.DirectoryPage = 0] = "DirectoryPage", e[e.DirectoryVideosPage = 1] = "DirectoryVideosPage", e[e.DirectoryClipsPage = 2] = "DirectoryClipsPage", e[e.DirectoryDetailsPage = 3] = "DirectoryDetailsPage"
         }(s || (s = {}));
@@ -6085,7 +6107,7 @@ webpackJsonp([50], {
             return Z
         })
     },
-    918: function(e, t, n) {
+    924: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -6102,17 +6124,17 @@ webpackJsonp([50], {
         }
         var r = n(6),
             o = n(9),
-            l = n(853),
-            s = n(876),
+            l = n(857),
+            s = n(881),
             c = n(0),
             d = n(1),
             u = n(2),
             p = n(28),
             m = n(47),
-            g = n(839),
+            g = n(843),
             h = n(5),
             f = n(3),
-            y = (n(919), function(e) {
+            y = (n(925), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleLanguageChange = function(e) {
@@ -6180,8 +6202,8 @@ webpackJsonp([50], {
             return b
         })
     },
-    919: function(e, t) {},
-    923: function(e, t, n) {
+    925: function(e, t) {},
+    929: function(e, t, n) {
         "use strict";
         n.d(t, "c", function() {
             return a
@@ -6190,7 +6212,7 @@ webpackJsonp([50], {
         }), n.d(t, "a", function() {
             return o
         });
-        var i = n(825),
+        var i = n(830),
             a = function(e) {
                 return e.startsWith("/communities") || e.startsWith("/directory/communities") ? i.a.Communities : i.a.Games
             },
@@ -6219,7 +6241,7 @@ webpackJsonp([50], {
                 }
             }
     },
-    925: function(e, t, n) {
+    931: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return s
@@ -6229,7 +6251,7 @@ webpackJsonp([50], {
             return u
         });
         var i, a = n(2),
-            r = n(855),
+            r = n(859),
             o = n(12),
             l = (i = {}, i[r.b.Twitter] = "twitter", i[r.b.Reddit] = "reddit", i[r.b.VKontakte] = "vkontakte", i[r.b.Facebook] = "facebook", i[r.b.Copy] = "link", i),
             s = {
@@ -6261,7 +6283,7 @@ webpackJsonp([50], {
                 }
             }
     },
-    928: function(e, t, n) {
+    934: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -6290,9 +6312,9 @@ webpackJsonp([50], {
             h = n(21),
             f = n(12),
             y = n(3),
-            v = n(929),
-            b = n(930),
-            k = n(931),
+            v = n(935),
+            b = n(936),
+            k = n(937),
             C = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -6450,7 +6472,7 @@ webpackJsonp([50], {
             return S
         })
     },
-    929: function(e, t) {
+    935: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6577,7 +6599,7 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    930: function(e, t) {
+    936: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6734,7 +6756,7 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    931: function(e, t) {
+    937: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6834,8 +6856,6 @@ webpackJsonp([50], {
             }
         };
         e.exports = n
-    },
-    995: function(e, t) {},
-    996: function(e, t) {}
+    }
 });
-//# sourceMappingURL=pages.directory-game-clips-96f778384c56e7943419f204637ce401.js.map
+//# sourceMappingURL=pages.directory-game-clips-82434ca282227cb028aa823de1186e11.js.map

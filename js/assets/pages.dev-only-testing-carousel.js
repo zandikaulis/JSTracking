@@ -173,8 +173,8 @@ webpackJsonp([58], {
             p = h
     },
     1380: function(e, t) {},
-    1871: function(e, t) {},
-    2062: function(e, t, r) {
+    1864: function(e, t) {},
+    2054: function(e, t, r) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -184,7 +184,7 @@ webpackJsonp([58], {
             i = r(28),
             l = r(1379),
             o = r(3),
-            s = (r(1871), function(e) {
+            s = (r(1864), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t
@@ -352,4 +352,4 @@ webpackJsonp([58], {
         })
     }
 });
-//# sourceMappingURL=pages.dev-only-testing-carousel-0a11541617a0b9e2593dc2881c262b06.js.map
+//# sourceMappingURL=pages.dev-only-testing-carousel-9bb9926540e0a783fd260e429ac68a8a.js.map

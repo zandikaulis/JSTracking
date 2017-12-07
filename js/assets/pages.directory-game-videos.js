@@ -1,5 +1,7 @@
 webpackJsonp([52], {
-    1006: function(e, t, n) {
+    1001: function(e, t) {},
+    1002: function(e, t) {},
+    1012: function(e, t, n) {
         "use strict";
 
         function a(e, t, n, a) {
@@ -63,25 +65,25 @@ webpackJsonp([52], {
         t.d = a, t.c = i, t.b = r, t.a = s, t.e = d;
         var c, u = n(20),
             m = (n.n(u), n(2)),
-            p = n(263),
-            g = n(843);
+            p = n(266),
+            g = n(847);
         ! function(e) {
             e.Popular = "views", e.Newest = "time"
         }(c || (c = {}))
     },
-    1007: function(e, t, n) {
+    1013: function(e, t, n) {
         "use strict";
-        var a = n(1014);
+        var a = n(1020);
         n.d(t, "VideoPreviewCard", function() {
             return a.a
         });
-        var i = n(1016),
-            r = (n.n(i), n(922));
+        var i = n(1022),
+            r = (n.n(i), n(928));
         n.d(t, "VideoPreviewCardPlaceholder", function() {
             return r.a
         })
     },
-    1008: function(e, t, n) {
+    1014: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -110,7 +112,7 @@ webpackJsonp([52], {
                 onShowModal: u.d
             }, e)
         }
-        var l = (n(897), n(0)),
+        var l = (n(903), n(0)),
             s = n(1),
             d = n(6),
             c = n(9),
@@ -118,14 +120,14 @@ webpackJsonp([52], {
             m = n(2),
             p = n(7),
             g = n(21),
-            v = n(812),
+            v = n(817),
             f = n(12),
             h = "directory-avatar-edit-menu",
             y = "directory-avatar-overlay",
             k = "directory-avatar-remover",
             b = "directory-avatar-uploader",
-            _ = "directory-banner-edit-menu",
-            w = "directory-banner-overlay",
+            w = "directory-banner-edit-menu",
+            _ = "directory-banner-overlay",
             S = "directory-banner-remover",
             N = "directory-banner-uploader",
             E = this,
@@ -179,33 +181,33 @@ webpackJsonp([52], {
             },
             O = "https://static-cdn.jtvnw.net/community-images/defaults/avatar-285x380.png",
             T = "https://static-cdn.jtvnw.net/community-images/defaults/banner-1200x180.png",
-            U = n(825),
-            A = function(e) {
+            U = n(830),
+            P = function(e) {
                 return e === U.a.Communities ? "COMMUNITY" : "GAME"
             },
-            P = function() {
+            A = function() {
                 return Object(m.d)("Upload new image", "DirectoryHeader")
             },
             L = function() {
                 return Object(m.d)("Remove", "DirectoryHeader")
             },
-            j = n(372),
-            x = "https://api.twitch.tv/kraken/communities/",
-            I = function(e) {
-                return "" + x + e + "/images/avatar"
+            j = n(377),
+            I = "https://api.twitch.tv/kraken/communities/",
+            x = function(e) {
+                return "" + I + e + "/images/avatar"
             },
             V = function(e) {
-                return "" + x + e + "/images/cover"
+                return "" + I + e + "/images/cover"
             },
             R = function(e) {
                 return e === U.a.Communities ? Object(j.b)("communities") : Object(j.b)()
             },
-            M = n(877),
-            B = n(852),
+            M = n(883),
+            B = n(856),
             H = n(5),
             G = n(3),
-            q = n(1017),
-            z = (n(1018), function(e) {
+            q = n(1023),
+            z = (n(1024), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -247,7 +249,7 @@ webpackJsonp([52], {
                                 y: .5,
                                 x: 1
                             }
-                        }, P())), s.createElement(G.S, {
+                        }, A())), s.createElement(G.S, {
                             "data-test-selector": k,
                             onClick: t.onAvatarDeleteClick
                         }, s.createElement(G.U, {
@@ -275,7 +277,7 @@ webpackJsonp([52], {
                     }, t.onAvatarUploadClick = function() {
                         if (!t.props.data || !t.props.data.directory || !t.props.data.directory.id) return null;
                         var e = {
-                            uploadURL: I(t.props.data.directory.id),
+                            uploadURL: x(t.props.data.directory.id),
                             imageDimensions: "600x800",
                             maxFileSizeMegabytes: 1,
                             isRequiredImageDimensions: !0,
@@ -290,13 +292,13 @@ webpackJsonp([52], {
                             return l.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return [4, v.a.delete(I(this.props.data.directory.id))];
+                                        return [4, v.a.delete(x(this.props.data.directory.id))];
                                     case 1:
                                         return t.sent(), this.trackAvatarEdit(), e = function(e) {
                                             return e.directory.avatarURL = O, e
                                         }, Object(g.d)(q, {
                                             name: this.props.directoryName,
-                                            type: A(this.props.directoryType)
+                                            type: P(this.props.directoryType)
                                         }, e), [2]
                                 }
                             })
@@ -313,7 +315,7 @@ webpackJsonp([52], {
                                             return e && (n.trackAvatarEdit(e), t.directory.avatarURL = e), t
                                         }, Object(g.d)(q, {
                                             name: this.props.directoryName,
-                                            type: A(this.props.directoryType)
+                                            type: P(this.props.directoryType)
                                         }, t), this.props.onCloseModal(), [2]
                                 }
                             })
@@ -346,7 +348,7 @@ webpackJsonp([52], {
                             fetchPolicy: "network-only",
                             variables: {
                                 name: e.directoryName,
-                                type: A(e.directoryType)
+                                type: P(e.directoryType)
                             }
                         }
                     }
@@ -356,7 +358,7 @@ webpackJsonp([52], {
             }(s.Component)),
             $ = z,
             W = Object(d.a)(a, i)($),
-            Q = n(856),
+            Q = n(860),
             J = n(4),
             Y = n(10),
             X = function(e) {
@@ -385,8 +387,8 @@ webpackJsonp([52], {
                 }, t
             }(s.Component),
             K = X,
-            Z = n(1019),
-            ee = (n(1020), function(e) {
+            Z = n(1025),
+            ee = (n(1026), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -395,7 +397,7 @@ webpackJsonp([52], {
                         return t.props.headerEditMode ? s.createElement(G.U, null, s.createElement("div", {
                             onClick: t.onBannerClick
                         }, s.createElement(G.U, {
-                            "data-test-selector": w,
+                            "data-test-selector": _,
                             className: "directory-header__overlay",
                             flexDirection: G.J.Column,
                             display: G.H.Flex,
@@ -429,7 +431,7 @@ webpackJsonp([52], {
                         }, Object(m.d)("Done", "DirectoryHeader")))) : null
                     }, t.renderBannerEditMenu = function() {
                         return t.state.isEditingBanner ? s.createElement(G.p, {
-                            "data-test-selector": _,
+                            "data-test-selector": w,
                             direction: G.q.BottomCenter,
                             show: !0
                         }, s.createElement(G.S, {
@@ -440,7 +442,7 @@ webpackJsonp([52], {
                                 y: .5,
                                 x: 1
                             }
-                        }, P())), s.createElement(G.S, {
+                        }, A())), s.createElement(G.S, {
                             "data-test-selector": S,
                             onClick: t.onBannerDeleteClick
                         }, s.createElement(G.U, {
@@ -491,7 +493,7 @@ webpackJsonp([52], {
                                             return e.directory.coverURL = T, e
                                         }, Object(g.d)(Z, {
                                             name: this.props.directoryName,
-                                            type: A(this.props.directoryType)
+                                            type: P(this.props.directoryType)
                                         }, e), [2]
                                 }
                             })
@@ -508,7 +510,7 @@ webpackJsonp([52], {
                                             return e && (n.trackBannerEdit(e), t.directory.coverURL = e), t
                                         }, Object(g.d)(Z, {
                                             name: this.props.directoryName,
-                                            type: A(this.props.directoryType)
+                                            type: P(this.props.directoryType)
                                         }, t), this.props.onCloseModal(), [2]
                                 }
                             })
@@ -580,7 +582,7 @@ webpackJsonp([52], {
                             fetchPolicy: "network-only",
                             variables: {
                                 name: e.directoryName,
-                                type: A(e.directoryType)
+                                type: P(e.directoryType)
                             }
                         }
                     }
@@ -590,7 +592,7 @@ webpackJsonp([52], {
             }(s.Component)),
             te = ee,
             ne = Object(d.a)(r, o)(te),
-            ae = n(905),
+            ae = n(911),
             ie = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -621,7 +623,7 @@ webpackJsonp([52], {
             return re
         })
     },
-    1014: function(e, t, n) {
+    1020: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return v
@@ -633,10 +635,10 @@ webpackJsonp([52], {
             l = (n.n(o), n(10)),
             s = n(2),
             d = n(49),
-            c = n(375),
+            c = n(380),
             u = n(5),
             m = n(3),
-            p = n(1015),
+            p = n(1021),
             g = (n.n(p), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -857,9 +859,9 @@ webpackJsonp([52], {
             }(o.Component)),
             v = Object(u.c)("VideoPreviewCard")(g)
     },
-    1015: function(e, t) {},
-    1016: function(e, t) {},
-    1017: function(e, t) {
+    1021: function(e, t) {},
+    1022: function(e, t) {},
+    1023: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1086,8 +1088,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1018: function(e, t) {},
-    1019: function(e, t) {
+    1024: function(e, t) {},
+    1025: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1423,8 +1425,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1020: function(e, t) {},
-    1021: function(e, t) {
+    1026: function(e, t) {},
+    1027: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1581,7 +1583,7 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1022: function(e, t) {
+    1028: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1708,7 +1710,7 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1023: function(e, t) {
+    1029: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1809,8 +1811,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1024: function(e, t) {},
-    1025: function(e, t) {
+    1030: function(e, t) {},
+    1031: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1911,7 +1913,7 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1026: function(e, t) {
+    1032: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2124,13 +2126,13 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1027: function(e, t) {},
-    1047: function(e, t, n) {
+    1033: function(e, t) {},
+    1050: function(e, t, n) {
         "use strict";
         var a = n(1),
             i = n(5),
-            r = n(1007),
-            o = n(922),
+            r = n(1013),
+            o = n(928),
             l = n(3),
             s = function(e) {
                 var t = [];
@@ -2171,7 +2173,7 @@ webpackJsonp([52], {
             return d
         })
     },
-    1099: function(e, t, n) {
+    1101: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -2204,23 +2206,23 @@ webpackJsonp([52], {
             }
         }
         t.b = a, t.a = i;
-        var r = n(263),
+        var r = n(266),
             o = n(12),
-            l = n(843)
+            l = n(847)
     },
-    1100: function(e, t, n) {
+    1102: function(e, t, n) {
         "use strict";
         var a = n(0),
             i = n(4),
             r = n(1),
             o = n(2),
-            l = n(918),
+            l = n(924),
             s = n(47),
-            d = n(263),
-            c = n(1006),
-            u = n(843),
+            d = n(266),
+            c = n(1012),
+            u = n(847),
             m = n(3),
-            p = (n(1101), function(e) {
+            p = (n(1103), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.sortChangeHandler = function(e) {
@@ -2384,14 +2386,14 @@ webpackJsonp([52], {
                     }, Object(o.d)("Popular", "VideoFilter")))))
                 }, t
             }(r.Component)),
-            g = n(1047);
+            g = n(1050);
         n.d(t, "a", function() {
             return p
         }), n.d(t, "b", function() {
             return g.a
         }), n.d(t, !1, function() {})
     },
-    1101: function(e, t) {},
+    1103: function(e, t) {},
     128: function(e, t, n) {
         "use strict";
 
@@ -2403,12 +2405,12 @@ webpackJsonp([52], {
             return !r.b.get(l.a, !1) && r.a.buildType === o.a.Production
         }
         var r = n(2),
-            o = n(16),
-            l = n(262);
+            o = n(14),
+            l = n(265);
         t.a = a, t.b = i;
         var s = "https://www.twitch.tv"
     },
-    1896: function(e, t, n) {
+    1889: function(e, t, n) {
         var a = {
             kind: "Document",
             definitions: [{
@@ -2772,9 +2774,9 @@ webpackJsonp([52], {
                 var t = e.name.value;
                 return !i[t] && (i[t] = !0, !0)
             })
-        }(n(904).definitions)), e.exports = a
+        }(n(882).definitions)), e.exports = a
     },
-    2070: function(e, t, n) {
+    2062: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -2786,28 +2788,28 @@ webpackJsonp([52], {
             value: !0
         });
         var i = n(6),
-            r = n(876),
+            r = n(881),
             o = n(0),
             l = n(1),
             s = n(2),
             d = n(67),
             c = n(28),
             u = n(7),
-            m = n(811),
+            m = n(816),
             p = n(21),
-            g = n(1006),
-            v = n(809),
+            g = n(1012),
+            v = n(814),
             f = n(12),
-            h = n(1099),
-            y = n(1008),
-            k = n(905),
+            h = n(1101),
+            y = n(1014),
+            k = n(911),
             b = n(5),
-            _ = n(440),
-            w = n(1100),
-            S = n(843),
-            N = n(923),
+            w = n(445),
+            _ = n(1102),
+            S = n(847),
+            N = n(929),
             E = n(3),
-            C = n(1896),
+            C = n(1889),
             D = S.b,
             F = function(e) {
                 function t(t) {
@@ -2847,7 +2849,7 @@ webpackJsonp([52], {
                         return e.node
                     }));
                     var r = !!this.props.data.game && !!this.props.data.game.product;
-                    return l.createElement(E.U, null, l.createElement(_.b, {
+                    return l.createElement(E.U, null, l.createElement(w.b, {
                         suppressScrollX: !0
                     }), l.createElement(y.a, {
                         directoryType: this.state.directoryType,
@@ -2860,12 +2862,12 @@ webpackJsonp([52], {
                             bottom: 3,
                             x: 3
                         }
-                    }, l.createElement(w.a, {
+                    }, l.createElement(_.a, {
                         onVideoSortChange: this.onVideoSortChange,
                         onVideoFilterChange: this.onVideoFilterChange,
                         selectedSort: n,
                         broadcastType: a
-                    }), l.createElement(w.b, {
+                    }), l.createElement(_.b, {
                         hideGameArt: !0,
                         trackingContent: Object(h.a)(n),
                         trackingMedium: f.PageviewMedium.GameVideos,
@@ -2931,13 +2933,13 @@ webpackJsonp([52], {
             return T
         })
     },
-    262: function(e, t, n) {
+    265: function(e, t, n) {
         "use strict";
         var a = n(0),
             i = n(20),
             r = n(1),
             o = n(2),
-            l = n(16),
+            l = n(14),
             s = "legacy_routes_enabled",
             d = function(e) {
                 function t(t) {
@@ -3016,7 +3018,7 @@ webpackJsonp([52], {
             return c
         })
     },
-    375: function(e, t, n) {
+    380: function(e, t, n) {
         "use strict";
 
         function a(e, t) {
@@ -3031,7 +3033,7 @@ webpackJsonp([52], {
         }
         t.a = a
     },
-    809: function(e, t, n) {
+    814: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -3091,7 +3093,7 @@ webpackJsonp([52], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    811: function(e, t, n) {
+    816: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3159,7 +3161,7 @@ webpackJsonp([52], {
             return a
         })
     },
-    812: function(e, t, n) {
+    817: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
@@ -3290,7 +3292,7 @@ webpackJsonp([52], {
                 }, e
             }()
     },
-    825: function(e, t, n) {
+    830: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -3300,7 +3302,7 @@ webpackJsonp([52], {
             e.Games = "GAMES", e.Communities = "COMMUNITIES", e.Creative = "CREATIVE"
         }(a || (a = {}))
     },
-    833: function(e, t, n) {
+    838: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
@@ -3356,7 +3358,7 @@ webpackJsonp([52], {
                 }, t
             }(i.Component)
     },
-    838: function(e, t, n) {
+    842: function(e, t, n) {
         "use strict";
         var a, i = n(0),
             r = n(1),
@@ -3382,7 +3384,7 @@ webpackJsonp([52], {
             return s
         })
     },
-    839: function(e, t, n) {
+    843: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3493,7 +3495,7 @@ webpackJsonp([52], {
                 return e.code
             }))
     },
-    843: function(e, t, n) {
+    847: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
             return i
@@ -3506,7 +3508,7 @@ webpackJsonp([52], {
             e.Popular = "VIEWS", e.Newest = "TIME"
         }(a || (a = {}))
     },
-    852: function(e, t, n) {
+    856: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -3518,7 +3520,7 @@ webpackJsonp([52], {
             EventCoverImage: "event_cover_image"
         }
     },
-    853: function(e, t, n) {
+    857: function(e, t, n) {
         "use strict";
 
         function a(e, t) {
@@ -3552,11 +3554,11 @@ webpackJsonp([52], {
         t.c = a, t.a = i, t.b = r;
         var o = n(0),
             l = n(2),
-            s = n(839),
-            d = n(854),
+            s = n(843),
+            d = n(858),
             c = "languageDirectoryFilters"
     },
-    854: function(e, t, n) {
+    858: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -3570,7 +3572,7 @@ webpackJsonp([52], {
         }), t.b = a;
         var i = "core.user-preferences.LANGUAGE_PREFERENCES_UPDATED"
     },
-    856: function(e, t, n) {
+    860: function(e, t, n) {
         "use strict";
 
         function a() {
@@ -3592,7 +3594,20 @@ webpackJsonp([52], {
         var r = "header.DIRECTORY_HEADER_EDIT_ENABLED",
             o = "header.DIRECTORY_HEADER_EDIT_DISABLED"
     },
-    876: function(e, t, n) {
+    872: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return a
+        }), n.d(t, "b", function() {
+            return i
+        });
+        var a;
+        ! function(e) {
+            e.JPEG = "image/jpeg", e.PNG = "image/png", e.GIF = "image/gif"
+        }(a || (a = {}));
+        var i = [a.JPEG, a.PNG]
+    },
+    881: function(e, t, n) {
         "use strict";
 
         function a() {
@@ -3618,316 +3633,11 @@ webpackJsonp([52], {
         t.a = r;
         var o = n(0),
             l = n(2),
-            s = n(854),
-            d = n(853);
+            s = n(858),
+            d = n(857);
         l.n.store.registerReducer("userPreferences", i)
     },
-    877: function(e, t, n) {
-        "use strict";
-
-        function a(e) {
-            return Object(E.bindActionCreators)({
-                onClose: C.c
-            }, e)
-        }
-        var i = n(0),
-            r = n(1),
-            o = n(2),
-            l = n(833),
-            s = n(3),
-            d = (n(995), function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(l.a, {
-                        allowedFileTypes: this.props.allowedFileTypes,
-                        onFilesSubmitted: this.props.processFiles
-                    }, r.createElement(s.U, {
-                        className: "image-uploader",
-                        textAlign: s._22.Center,
-                        display: s.H.Flex,
-                        flexDirection: s.J.Column,
-                        alignItems: s.c.Center,
-                        justifyContent: s.T.Center,
-                        position: s._2.Relative,
-                        fullHeight: !0,
-                        fullWidth: !0
-                    }, this.renderErrorMessage(), r.createElement(s.U, {
-                        position: s._2.Relative
-                    }, r.createElement(s.U, {
-                        className: "image-uploader__upload-svg--anim-backfill"
-                    }, r.createElement(s._8, {
-                        asset: s._9.Upload,
-                        type: s._10.Alt2,
-                        width: 99,
-                        height: 76
-                    })), r.createElement(s.U, {
-                        className: "image-uploader__upload-svg--anim-fill",
-                        position: s._2.Absolute,
-                        display: this.props.isLoading ? s.H.Block : s.H.Hide,
-                        attachTop: !0
-                    }, r.createElement(s._8, {
-                        asset: s._9.Upload,
-                        type: s._10.Brand,
-                        width: 99,
-                        height: 76
-                    }))), this.props.isLoading ? this.renderLoadingState() : this.renderNormalState()))
-                }, t.prototype.renderLoadingState = function() {
-                    return r.createElement(s.U, {
-                        margin: 1,
-                        "data-test-selector": "image-uploader-loading"
-                    }, r.createElement(s._21, {
-                        type: s._26.H4
-                    }, Object(o.d)("Uploading", "ImageUploader")))
-                }, t.prototype.renderNormalState = function() {
-                    var e = Object(o.d)("Browse", "ImageUploader");
-                    return r.createElement(s.U, null, r.createElement(s.U, {
-                        padding: 1
-                    }, r.createElement(s._21, {
-                        type: s._26.H4
-                    }, Object(o.d)("Drag and drop your image here", "ImageUploader"))), r.createElement(s.U, {
-                        margin: {
-                            bottom: 2
-                        },
-                        padding: {
-                            x: 1,
-                            y: 0
-                        },
-                        fullWidth: !0,
-                        "data-test-selector": "image-uploader-hint"
-                    }, r.createElement(s._21, {
-                        type: s._26.P,
-                        fontSize: s.L.Size7,
-                        color: s.F.Alt2
-                    }, this.props.hintMessage)), r.createElement(s.U, null, r.createElement(s.u, {
-                        ariaLabel: e,
-                        type: s.z.Hollow
-                    }, e)))
-                }, t.prototype.renderErrorMessage = function() {
-                    if (this.props.errorMessage) return r.createElement(s.U, {
-                        margin: {
-                            bottom: 1
-                        },
-                        "data-test-selector": "image-uploader-error"
-                    }, r.createElement(s._21, {
-                        type: s._26.H5,
-                        color: s.F.Error,
-                        bold: !0
-                    }, this.props.errorMessage))
-                }, t
-            }(r.Component)),
-            c = n(852),
-            u = function(e) {
-                return new Promise(function(t, n) {
-                    var a = new FileReader;
-                    a.onload = function() {
-                        var e = m(a.result);
-                        t(e)
-                    }, a.onerror = function(e) {
-                        n(e)
-                    }, a.readAsDataURL(e)
-                })
-            },
-            m = function(e) {
-                return e.replace(/data:image.*;base64,/, "")
-            },
-            p = this,
-            g = function(e, t, n) {
-                return i.__awaiter(p, void 0, void 0, function() {
-                    var a, r, o, l, s, d;
-                    return i.__generator(this, function(i) {
-                        switch (i.label) {
-                            case 0:
-                                return t ? (a = void 0, n ? (s = {}, r = n, [4, u(e)]) : [3, 2]) : [3, 5];
-                            case 1:
-                                return s[r] = i.sent(), a = s, [3, 4];
-                            case 2:
-                                return d = {}, o = c.a.Default, [4, u(e)];
-                            case 3:
-                                d[o] = i.sent(), a = d, i.label = 4;
-                            case 4:
-                                return [2, a];
-                            case 5:
-                                return l = new FormData, l.append("files[]", e), [2, l];
-                            case 6:
-                                return [2]
-                        }
-                    })
-                })
-            },
-            v = function(e, t) {
-                return Object(o.d)("Recommended image size: {imageDimensions} and less than {imageFileMegabytes, number}MB", {
-                    imageDimensions: e,
-                    imageFileMegabytes: t
-                }, "ImageUploader")
-            },
-            f = function(e, t) {
-                return Object(o.d)("Required image size: {imageDimensions} and less than {imageFileMegabytes, number}MB", {
-                    imageDimensions: e,
-                    imageFileMegabytes: t
-                }, "ImageUploader")
-            },
-            h = function(e) {
-                return Object(o.d)("Couldn't upload image. Request returned {statusCode, number}", {
-                    statusCode: e
-                }, "ImageUploader")
-            },
-            y = function() {
-                return Object(o.d)("File too large.", "ImageUploader")
-            },
-            k = function() {
-                return Object(o.d)("Incompatible format. File must be an image in PNG or JPG format.", "ImageUploader")
-            },
-            b = n(812),
-            _ = this,
-            w = function(e, t) {
-                return i.__awaiter(_, void 0, void 0, function() {
-                    var n;
-                    return i.__generator(this, function(a) {
-                        switch (a.label) {
-                            case 0:
-                                return [4, b.a.post(e, {
-                                    body: t,
-                                    credentials: t instanceof FormData ? "include" : void 0
-                                })];
-                            case 1:
-                                if (n = a.sent(), n.status >= 200 && n.status < 300) return [2, n.body];
-                                if (n && n.error) throw new Error(JSON.stringify(n.error));
-                                if (n && n.requestError) throw new Error(JSON.stringify(n.requestError));
-                                throw new Error(h(n.status))
-                        }
-                    })
-                })
-            },
-            S = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        isLoading: !1,
-                        errorMessage: "",
-                        hintMessage: "",
-                        allowedFileTypes: ["image/jpeg", "image/png"]
-                    }, t.processFiles = function(e) {
-                        return i.__awaiter(t, void 0, void 0, function() {
-                            var t, n, a, r;
-                            return i.__generator(this, function(i) {
-                                switch (i.label) {
-                                    case 0:
-                                        return t = e[0], (this.setState({
-                                            errorMessage: "",
-                                            isLoading: !0
-                                        }), this.isFileTypeAcceptable(t)) ? [3, 1] : (this.setState({
-                                            errorMessage: k(),
-                                            isLoading: !1
-                                        }), [3, 7]);
-                                    case 1:
-                                        return this.isFileSizeAcceptable(t) ? [3, 2] : (this.setState({
-                                            errorMessage: y(),
-                                            isLoading: !1
-                                        }), [3, 7]);
-                                    case 2:
-                                        return [4, g(t, this.props.shouldBase64Encode, this.props.base64EncodedPropertyName)];
-                                    case 3:
-                                        n = i.sent(), i.label = 4;
-                                    case 4:
-                                        return i.trys.push([4, 6, , 7]), [4, w(this.props.uploadURL, n)];
-                                    case 5:
-                                        return a = i.sent(), this.setState({
-                                            isLoading: !1
-                                        }), this.props.onFinishUploading && this.props.onFinishUploading(a, n), [3, 7];
-                                    case 6:
-                                        return r = i.sent(), this.setState({
-                                            errorMessage: r.message,
-                                            isLoading: !1
-                                        }), [3, 7];
-                                    case 7:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    var e = "";
-                    e = this.props.isRequiredImageDimensions ? f(this.props.imageDimensions, this.props.maxFileSizeMegabytes) : v(this.props.imageDimensions, this.props.maxFileSizeMegabytes), this.setState({
-                        hintMessage: e
-                    })
-                }, t.prototype.render = function() {
-                    return r.createElement(d, {
-                        allowedFileTypes: this.state.allowedFileTypes,
-                        errorMessage: this.state.errorMessage,
-                        hintMessage: this.state.hintMessage,
-                        isLoading: this.state.isLoading,
-                        processFiles: this.processFiles
-                    })
-                }, t.prototype.isFileTypeAcceptable = function(e) {
-                    return this.state.allowedFileTypes.includes(e.type)
-                }, t.prototype.isFileSizeAcceptable = function(e) {
-                    var t = 1e6 * this.props.maxFileSizeMegabytes;
-                    return e.size <= t
-                }, t
-            }(r.Component),
-            N = n(6),
-            E = n(9),
-            C = n(38),
-            D = n(104),
-            F = (n(996), function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(s._17, {
-                        className: "image-uploader-modal",
-                        background: s.m.Base
-                    }, r.createElement(S, i.__assign({
-                        onFinishUploading: this.props.onClose
-                    }, this.props)), r.createElement(D.a, {
-                        closeOnBackdropClick: !0
-                    }))
-                }, t
-            }(r.Component)),
-            O = Object(N.a)(null, a)(F);
-        n.d(t, "a", function() {
-            return S
-        }), n.d(t, "b", function() {
-            return O
-        })
-    },
-    897: function(e, t, n) {
-        "use strict";
-
-        function a() {
-            return {
-                isEditingEnabled: !1
-            }
-        }
-
-        function i(e, t) {
-            switch (void 0 === e && (e = a()), t.type) {
-                case s.b:
-                    return o.__assign({}, e, {
-                        isEditingEnabled: !0
-                    });
-                case s.a:
-                    return o.__assign({}, e, {
-                        isEditingEnabled: !1
-                    });
-                default:
-                    return e
-            }
-        }
-
-        function r(e) {
-            return e.directoryHeader.isEditingEnabled
-        }
-        t.a = r;
-        var o = n(0),
-            l = n(2),
-            s = n(856);
-        l.n.store.registerReducer("directoryHeader", i)
-    },
-    904: function(e, t) {
+    882: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3992,7 +3702,7 @@ webpackJsonp([52], {
                                     },
                                     value: {
                                         kind: "IntValue",
-                                        value: "55"
+                                        value: "56"
                                     }
                                 }],
                                 directives: [],
@@ -4187,7 +3897,7 @@ webpackJsonp([52], {
             }
         };
         n.loc.source = {
-            body: "fragment PreviewCardVideo on Video {\n  animatedPreviewURL\n  game {\n    boxArtURL(width: 40 height: 55)\n    id\n    name\n  }\n  id\n  lengthSeconds\n  owner {\n    displayName\n    id\n    login\n  }\n  previewThumbnailURL(width: 320 height: 180)\n  publishedAt\n  self {\n    viewingHistory {\n      position\n    }\n  }\n  title\n  viewCount\n}\n",
+            body: "fragment PreviewCardVideo on Video {\n  animatedPreviewURL\n  game {\n    boxArtURL(width: 40 height: 56)\n    id\n    name\n  }\n  id\n  lengthSeconds\n  owner {\n    displayName\n    id\n    login\n  }\n  previewThumbnailURL(width: 320 height: 180)\n  publishedAt\n  self {\n    viewingHistory {\n      position\n    }\n  }\n  title\n  viewCount\n}\n",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -4196,7 +3906,319 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    905: function(e, t, n) {
+    883: function(e, t, n) {
+        "use strict";
+
+        function a(e) {
+            return Object(F.bindActionCreators)({
+                onClose: O.c
+            }, e)
+        }
+        var i, r = n(0),
+            o = n(1),
+            l = n(2),
+            s = n(838),
+            d = n(3),
+            c = (n(1001), function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return o.createElement(s.a, {
+                        allowedFileTypes: this.props.allowedFileTypes,
+                        onFilesSubmitted: this.props.processFiles
+                    }, o.createElement(d.U, {
+                        className: "image-uploader",
+                        textAlign: d._22.Center,
+                        display: d.H.Flex,
+                        flexDirection: d.J.Column,
+                        alignItems: d.c.Center,
+                        justifyContent: d.T.Center,
+                        position: d._2.Relative,
+                        fullHeight: !0,
+                        fullWidth: !0
+                    }, this.renderErrorMessage(), o.createElement(d.U, {
+                        position: d._2.Relative
+                    }, o.createElement(d.U, {
+                        className: "image-uploader__upload-svg--anim-backfill"
+                    }, o.createElement(d._8, {
+                        asset: d._9.Upload,
+                        type: d._10.Alt2,
+                        width: 99,
+                        height: 76
+                    })), o.createElement(d.U, {
+                        className: "image-uploader__upload-svg--anim-fill",
+                        position: d._2.Absolute,
+                        display: this.props.isLoading ? d.H.Block : d.H.Hide,
+                        attachTop: !0
+                    }, o.createElement(d._8, {
+                        asset: d._9.Upload,
+                        type: d._10.Brand,
+                        width: 99,
+                        height: 76
+                    }))), this.props.isLoading ? this.renderLoadingState() : this.renderNormalState()))
+                }, t.prototype.renderLoadingState = function() {
+                    return o.createElement(d.U, {
+                        margin: 1,
+                        "data-test-selector": "image-uploader-loading"
+                    }, o.createElement(d._21, {
+                        type: d._26.H4
+                    }, Object(l.d)("Uploading", "ImageUploader")))
+                }, t.prototype.renderNormalState = function() {
+                    var e = Object(l.d)("Browse", "ImageUploader");
+                    return o.createElement(d.U, null, o.createElement(d.U, {
+                        padding: 1
+                    }, o.createElement(d._21, {
+                        type: d._26.H4
+                    }, Object(l.d)("Drag and drop your image here", "ImageUploader"))), o.createElement(d.U, {
+                        margin: {
+                            bottom: 2
+                        },
+                        padding: {
+                            x: 1,
+                            y: 0
+                        },
+                        fullWidth: !0,
+                        "data-test-selector": "image-uploader-hint"
+                    }, o.createElement(d._21, {
+                        type: d._26.P,
+                        fontSize: d.L.Size7,
+                        color: d.F.Alt2
+                    }, this.props.hintMessage)), o.createElement(d.U, null, o.createElement(d.u, {
+                        ariaLabel: e,
+                        type: d.z.Hollow
+                    }, e)))
+                }, t.prototype.renderErrorMessage = function() {
+                    if (this.props.errorMessage) return o.createElement(d.U, {
+                        margin: {
+                            bottom: 1
+                        },
+                        "data-test-selector": "image-uploader-error"
+                    }, o.createElement(d._21, {
+                        type: d._26.H5,
+                        color: d.F.Error,
+                        bold: !0
+                    }, this.props.errorMessage))
+                }, t
+            }(o.Component)),
+            u = n(856),
+            m = function(e) {
+                return new Promise(function(t, n) {
+                    var a = new FileReader;
+                    a.onload = function() {
+                        var e = p(a.result);
+                        t(e)
+                    }, a.onerror = function(e) {
+                        n(e)
+                    }, a.readAsDataURL(e)
+                })
+            },
+            p = function(e) {
+                return e.replace(/data:image.*;base64,/, "")
+            },
+            g = this,
+            v = function(e, t, n) {
+                return r.__awaiter(g, void 0, void 0, function() {
+                    var a, i, o, l, s, d;
+                    return r.__generator(this, function(r) {
+                        switch (r.label) {
+                            case 0:
+                                return t ? (a = void 0, n ? (s = {}, i = n, [4, m(e)]) : [3, 2]) : [3, 5];
+                            case 1:
+                                return s[i] = r.sent(), a = s, [3, 4];
+                            case 2:
+                                return d = {}, o = u.a.Default, [4, m(e)];
+                            case 3:
+                                d[o] = r.sent(), a = d, r.label = 4;
+                            case 4:
+                                return [2, a];
+                            case 5:
+                                return l = new FormData, l.append("files[]", e), [2, l];
+                            case 6:
+                                return [2]
+                        }
+                    })
+                })
+            },
+            f = n(872),
+            h = function(e, t) {
+                return Object(l.d)("Recommended image size: {imageDimensions} and less than {imageFileMegabytes, number}MB", {
+                    imageDimensions: e,
+                    imageFileMegabytes: t
+                }, "ImageUploader")
+            },
+            y = function(e, t) {
+                return Object(l.d)("Required image size: {imageDimensions} and less than {imageFileMegabytes, number}MB", {
+                    imageDimensions: e,
+                    imageFileMegabytes: t
+                }, "ImageUploader")
+            },
+            k = function(e) {
+                return Object(l.d)("Couldn't upload image. Request returned {statusCode, number}", {
+                    statusCode: e
+                }, "ImageUploader")
+            },
+            b = function() {
+                return Object(l.d)("File too large.", "ImageUploader")
+            },
+            w = (i = {}, i[f.a.JPEG] = "JPG", i[f.a.PNG] = "PNG", i[f.a.GIF] = "GIF", i),
+            _ = function(e) {
+                var t = e.map(function(e) {
+                    return w[e]
+                });
+                return t.length > 1 && (t[t.length - 1] = "or " + t[t.length - 1]), Object(l.d)("Incompatible format. File must be an image in {allowedTypes} format.", {
+                    allowedTypes: t.join(", ")
+                }, "ImageUploader")
+            },
+            S = n(817),
+            N = this,
+            E = function(e, t) {
+                return r.__awaiter(N, void 0, void 0, function() {
+                    var n;
+                    return r.__generator(this, function(a) {
+                        switch (a.label) {
+                            case 0:
+                                return [4, S.a.post(e, {
+                                    body: t,
+                                    credentials: t instanceof FormData ? "include" : void 0
+                                })];
+                            case 1:
+                                if (n = a.sent(), n.status >= 200 && n.status < 300) return [2, n.body];
+                                if (n && n.error) throw new Error(JSON.stringify(n.error));
+                                if (n && n.requestError) throw new Error(JSON.stringify(n.requestError));
+                                throw new Error(k(n.status))
+                        }
+                    })
+                })
+            },
+            C = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.state = {
+                        isLoading: !1,
+                        errorMessage: "",
+                        hintMessage: "",
+                        allowedFileTypes: f.b
+                    }, n.processFiles = function(e) {
+                        return r.__awaiter(n, void 0, void 0, function() {
+                            var t, n, a, i;
+                            return r.__generator(this, function(r) {
+                                switch (r.label) {
+                                    case 0:
+                                        return t = e[0], (this.setState({
+                                            errorMessage: "",
+                                            isLoading: !0
+                                        }), this.isFileTypeAcceptable(t)) ? [3, 1] : (this.setState({
+                                            errorMessage: _(this.state.allowedFileTypes),
+                                            isLoading: !1
+                                        }), [3, 7]);
+                                    case 1:
+                                        return this.isFileSizeAcceptable(t) ? [3, 2] : (this.setState({
+                                            errorMessage: b(),
+                                            isLoading: !1
+                                        }), [3, 7]);
+                                    case 2:
+                                        return [4, v(t, this.props.shouldBase64Encode, this.props.base64EncodedPropertyName)];
+                                    case 3:
+                                        n = r.sent(), r.label = 4;
+                                    case 4:
+                                        return r.trys.push([4, 6, , 7]), [4, E(this.props.uploadURL, n)];
+                                    case 5:
+                                        return a = r.sent(), this.setState({
+                                            isLoading: !1
+                                        }), this.props.onFinishUploading && this.props.onFinishUploading(a, n), [3, 7];
+                                    case 6:
+                                        return i = r.sent(), this.setState({
+                                            errorMessage: i.message,
+                                            isLoading: !1
+                                        }), [3, 7];
+                                    case 7:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t.allowedFileTypes && (n.state.allowedFileTypes = t.allowedFileTypes), n
+                }
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    var e = "";
+                    e = this.props.isRequiredImageDimensions ? y(this.props.imageDimensions, this.props.maxFileSizeMegabytes) : h(this.props.imageDimensions, this.props.maxFileSizeMegabytes), this.setState({
+                        hintMessage: e
+                    })
+                }, t.prototype.render = function() {
+                    return o.createElement(c, {
+                        allowedFileTypes: this.state.allowedFileTypes,
+                        errorMessage: this.state.errorMessage,
+                        hintMessage: this.state.hintMessage,
+                        isLoading: this.state.isLoading,
+                        processFiles: this.processFiles
+                    })
+                }, t.prototype.isFileTypeAcceptable = function(e) {
+                    return this.state.allowedFileTypes.includes(e.type)
+                }, t.prototype.isFileSizeAcceptable = function(e) {
+                    var t = 1048576 * this.props.maxFileSizeMegabytes;
+                    return e.size <= t
+                }, t
+            }(o.Component),
+            D = n(6),
+            F = n(9),
+            O = n(38),
+            T = n(104),
+            U = (n(1002), function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return o.createElement(d._17, {
+                        className: "image-uploader-modal",
+                        background: d.m.Base
+                    }, o.createElement(C, r.__assign({
+                        onFinishUploading: this.props.onClose
+                    }, this.props)), o.createElement(T.a, {
+                        closeOnBackdropClick: !0
+                    }))
+                }, t
+            }(o.Component)),
+            P = Object(D.a)(null, a)(U);
+        n.d(t, "a", function() {
+            return C
+        }), n.d(t, "b", function() {
+            return P
+        })
+    },
+    903: function(e, t, n) {
+        "use strict";
+
+        function a() {
+            return {
+                isEditingEnabled: !1
+            }
+        }
+
+        function i(e, t) {
+            switch (void 0 === e && (e = a()), t.type) {
+                case s.b:
+                    return o.__assign({}, e, {
+                        isEditingEnabled: !0
+                    });
+                case s.a:
+                    return o.__assign({}, e, {
+                        isEditingEnabled: !1
+                    });
+                default:
+                    return e
+            }
+        }
+
+        function r(e) {
+            return e.directoryHeader.isEditingEnabled
+        }
+        t.a = r;
+        var o = n(0),
+            l = n(2),
+            s = n(860);
+        l.n.store.registerReducer("directoryHeader", i)
+    },
+    911: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -4215,7 +4237,7 @@ webpackJsonp([52], {
 
         function r(e) {
             return Object(v.bindActionCreators)({
-                onCloseModal: P.c
+                onCloseModal: A.c
             }, e)
         }
 
@@ -4231,8 +4253,8 @@ webpackJsonp([52], {
                 login: function() {
                     return Object(h.f)(f.a.ReportChannel)
                 },
-                onShowModal: P.d,
-                onCloseModal: P.c,
+                onShowModal: A.d,
+                onCloseModal: A.c,
                 onEnableDirectoryHeaderEdit: L.d,
                 onDisableDirectoryHeaderEdit: L.c
             }, e)
@@ -4249,12 +4271,12 @@ webpackJsonp([52], {
             y = n(17),
             k = n(7),
             b = n(21),
-            _ = n(12),
-            w = n(5),
+            w = n(12),
+            _ = n(5),
             S = n(3),
-            N = n(1021),
-            E = n(1022),
-            C = n(1023),
+            N = n(1027),
+            E = n(1028),
+            C = n(1029),
             D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4270,7 +4292,7 @@ webpackJsonp([52], {
                         })
                     }, t.trackResponse = function(e) {
                         if (t.props.data) {
-                            var n = "follow" === e ? _.SpadeEventType.CommunityFollow : _.SpadeEventType.CommunityUnfollow;
+                            var n = "follow" === e ? w.SpadeEventType.CommunityFollow : w.SpadeEventType.CommunityUnfollow;
                             p.n.tracking.track(n, {
                                 community_id: t.props.data.community.id,
                                 name: t.props.data.community.name,
@@ -4406,22 +4428,22 @@ webpackJsonp([52], {
                     name: "followCommunity"
                 }), Object(k.a)(C, {
                     name: "unfollowCommunity"
-                }), Object(w.c)("DirectoryFollowButton")], t)
+                }), Object(_.c)("DirectoryFollowButton")], t)
             }(u.Component),
             F = D,
             O = Object(g.a)(a, i)(F),
-            T = n(838),
+            T = n(842),
             U = n(128),
-            A = n(372),
-            P = n(38),
-            L = n(856),
-            j = n(382),
-            x = n(374),
-            I = n(134),
-            V = n(261),
+            P = n(377),
+            A = n(38),
+            L = n(860),
+            j = n(387),
+            I = n(379),
+            x = n(134),
+            V = n(264),
             R = n(31),
             M = n(104),
-            B = (n(1024), n(1025)),
+            B = (n(1030), n(1031)),
             H = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4500,14 +4522,14 @@ webpackJsonp([52], {
                 name: "tosBanCommunity"
             }))(H),
             q = Object(g.a)(null, r)(G),
-            z = n(1026),
+            z = n(1032),
             $ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isEditingCommunity: !1
                     }, t.openReportModal = function() {
-                        t.props.isLoggedIn ? t.props.onShowModal(x.a, {
+                        t.props.isLoggedIn ? t.props.onShowModal(I.a, {
                             onClose: t.handleReportModalClose,
                             reportContext: {
                                 contentID: t.props.data.community.id,
@@ -4525,9 +4547,9 @@ webpackJsonp([52], {
                             communityName: t.props.communityName
                         })
                     }, t.onEditModeToggle = function() {
-                        t.props.isHeaderEditEnabled ? t.props.onDisableDirectoryHeaderEdit() : (p.n.history.push(Object(A.a)(t.props.communityName) + "/details"), t.props.onEnableDirectoryHeaderEdit())
+                        t.props.isHeaderEditEnabled ? t.props.onDisableDirectoryHeaderEdit() : (p.n.history.push(Object(P.a)(t.props.communityName) + "/details"), t.props.onEnableDirectoryHeaderEdit())
                     }, t.handleReportModalClose = function(e) {
-                        (e === I.b.MutationError || e === I.b.Success) && t.props.history.push("/")
+                        (e === x.b.MutationError || e === x.b.Success) && t.props.history.push("/")
                     }, t
                 }
                 return d.__extends(t, e), t.prototype.render = function() {
@@ -4591,16 +4613,16 @@ webpackJsonp([52], {
                     skip: function(e) {
                         return !e.isLoggedIn || !e.communityName
                     }
-                }), Object(w.c)("SettingsCog", {
+                }), Object(_.c)("SettingsCog", {
                     autoReportInteractive: !0
                 })], t)
             }(u.Component),
             W = $,
-            Q = n(897),
+            Q = n(903),
             J = Object(g.a)(o, l)(Object(m.f)(W)),
-            Y = n(928),
-            X = n(825);
-        n(1027);
+            Y = n(934),
+            X = n(830);
+        n(1033);
         ! function(e) {
             e[e.DirectoryPage = 0] = "DirectoryPage", e[e.DirectoryVideosPage = 1] = "DirectoryVideosPage", e[e.DirectoryClipsPage = 2] = "DirectoryClipsPage", e[e.DirectoryDetailsPage = 3] = "DirectoryDetailsPage"
         }(s || (s = {}));
@@ -4634,7 +4656,7 @@ webpackJsonp([52], {
                     }, this.renderSettingsCog(), this.renderFollowButton())))
                 }, t.prototype.renderTabs = function() {
                     var e = this,
-                        t = this.props.directoryType === X.a.Games ? Object(A.d)(this.props.directoryName) : Object(A.a)(this.props.directoryName);
+                        t = this.props.directoryType === X.a.Games ? Object(P.d)(this.props.directoryName) : Object(P.a)(this.props.directoryName);
                     return this.getDirectoryTabs().map(function(n, a) {
                         var i = n.label.replace(/ /g, "-").toLowerCase(),
                             r = c("directory-tabs__item", (o = {}, o["directory-tabs__item--first"] = 0 === a, o["directory-tabs__item--selected"] = n.isSelected, o));
@@ -4665,7 +4687,7 @@ webpackJsonp([52], {
                     if (!this.props.showGameDetails) return null;
                     var e, t = c("directory-tabs__item", (i = {}, i["directory-tabs__item--selected"] = this.props.activeTab === s.DirectoryDetailsPage, i)),
                         n = Object(p.d)("Game Details", "DirectoryGameTabs"),
-                        a = Object(A.d)(this.props.directoryName) + "/details";
+                        a = Object(P.d)(this.props.directoryName) + "/details";
                     return e = p.b.get("commerce_gdp_launch", T.a.Off) !== T.a.On ? u.createElement("a", {
                         className: t,
                         href: Object(U.a)(a),
@@ -4722,7 +4744,7 @@ webpackJsonp([52], {
                     }].filter(function(t) {
                         return t.whitelistDirectories.includes(e.props.directoryType)
                     })
-                }, t = d.__decorate([Object(w.c)("DirectoryGameTabs")], t)
+                }, t = d.__decorate([Object(_.c)("DirectoryGameTabs")], t)
             }(u.Component),
             Z = K;
         n.d(t, !1, function() {
@@ -4737,7 +4759,7 @@ webpackJsonp([52], {
             return Z
         })
     },
-    918: function(e, t, n) {
+    924: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -4754,17 +4776,17 @@ webpackJsonp([52], {
         }
         var r = n(6),
             o = n(9),
-            l = n(853),
-            s = n(876),
+            l = n(857),
+            s = n(881),
             d = n(0),
             c = n(1),
             u = n(2),
             m = n(28),
             p = n(47),
-            g = n(839),
+            g = n(843),
             v = n(5),
             f = n(3),
-            h = (n(919), function(e) {
+            h = (n(925), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleLanguageChange = function(e) {
@@ -4832,8 +4854,8 @@ webpackJsonp([52], {
             return k
         })
     },
-    919: function(e, t) {},
-    922: function(e, t, n) {
+    925: function(e, t) {},
+    928: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -4871,7 +4893,7 @@ webpackJsonp([52], {
                 }))))))
             }
     },
-    923: function(e, t, n) {
+    929: function(e, t, n) {
         "use strict";
         n.d(t, "c", function() {
             return i
@@ -4880,7 +4902,7 @@ webpackJsonp([52], {
         }), n.d(t, "a", function() {
             return o
         });
-        var a = n(825),
+        var a = n(830),
             i = function(e) {
                 return e.startsWith("/communities") || e.startsWith("/directory/communities") ? a.a.Communities : a.a.Games
             },
@@ -4909,7 +4931,7 @@ webpackJsonp([52], {
                 }
             }
     },
-    928: function(e, t, n) {
+    934: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -4938,10 +4960,10 @@ webpackJsonp([52], {
             v = n(21),
             f = n(12),
             h = n(3),
-            y = n(929),
-            k = n(930),
-            b = n(931),
-            _ = function(e) {
+            y = n(935),
+            k = n(936),
+            b = n(937),
+            w = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.follow = function() {
@@ -5077,7 +5099,7 @@ webpackJsonp([52], {
                     })
                 }, t
             }(u.Component),
-            w = Object(m.compose)(Object(g.a)(k, {
+            _ = Object(m.compose)(Object(g.a)(k, {
                 options: function(e) {
                     return {
                         variables: {
@@ -5092,13 +5114,13 @@ webpackJsonp([52], {
                 name: "followGame"
             }), Object(g.a)(b, {
                 name: "unfollowGame"
-            }))(_),
-            S = Object(r.a)(a, i)(w);
+            }))(w),
+            S = Object(r.a)(a, i)(_);
         n.d(t, "a", function() {
             return S
         })
     },
-    929: function(e, t) {
+    935: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -5225,7 +5247,7 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    930: function(e, t) {
+    936: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -5382,7 +5404,7 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    931: function(e, t) {
+    937: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -5482,8 +5504,6 @@ webpackJsonp([52], {
             }
         };
         e.exports = n
-    },
-    995: function(e, t) {},
-    996: function(e, t) {}
+    }
 });
-//# sourceMappingURL=pages.directory-game-videos-4bb3357c86fa4618516eef07b0a5356a.js.map
+//# sourceMappingURL=pages.directory-game-videos-a246c243c900ed564227b4d1df920318.js.map
