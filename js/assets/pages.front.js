@@ -1,475 +1,5 @@
 webpackJsonp([46], {
-    1e3: function(e, t, n) {
-        "use strict";
-        n.d(t, "c", function() {
-            return r
-        }), n.d(t, "e", function() {
-            return a
-        }), n.d(t, "d", function() {
-            return o
-        }), n.d(t, "a", function() {
-            return s
-        }), n.d(t, "b", function() {
-            return l
-        }), n.d(t, "g", function() {
-            return m
-        }), n.d(t, "h", function() {
-            return p
-        }), n.d(t, "f", function() {
-            return f
-        }), n.d(t, "i", function() {
-            return g
-        });
-        var i, r = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING",
-            a = "TWILIGHT_WEB_ONBOARDING_FOR_YOU",
-            o = "TWILIGHT_WEB_ONBOARDING",
-            s = "control";
-        ! function(e) {
-            e.Skip = "skip", e.NoSkip = "no_skip"
-        }(i || (i = {}));
-        var l, c = new Set([i.Skip.toString(), i.NoSkip.toString()]);
-        ! function(e) {
-            e.First = "first", e.Last = "last"
-        }(l || (l = {}));
-        var u, d = new Set([l.First.toString(), l.Last.toString()]);
-        ! function(e) {
-            e.Yes = "yes"
-        }(u || (u = {}));
-        var m = function(e) {
-                return !!e && d.has(e)
-            },
-            p = function(e, t) {
-                return !!e && c.has(e) && m(t)
-            },
-            f = function(e, t, n) {
-                return !!e && c.has(e) && m(t) && n === u.Yes
-            },
-            g = function(e) {
-                return e.getTime() >= h().getTime()
-            },
-            h = function() {
-                return new Date((new Date).getTime() - 12096e5)
-            }
-    },
-    1001: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            var t = e.split(":");
-            return t.length < 2 ? {
-                type: "",
-                id: ""
-            } : {
-                type: t[0],
-                id: t[1]
-            }
-        }
-        n.d(t, "a", function() {
-            return r
-        }), n.d(t, "b", function() {
-            return a
-        }), n.d(t, "c", function() {
-            return o
-        }), n.d(t, "d", function() {
-            return s
-        }), n.d(t, "e", function() {
-            return l
-        }), t.f = i;
-        var r = "clip",
-            a = "url",
-            o = "post",
-            s = "stream",
-            l = "vod"
-    },
-    1002: function(e, t, n) {
-        function i(e) {
-            return e.filter(function(e) {
-                if ("FragmentDefinition" !== e.kind) return !0;
-                var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
-            })
-        }
-        var r = {
-            kind: "Document",
-            definitions: [{
-                kind: "FragmentDefinition",
-                name: {
-                    kind: "Name",
-                    value: "feedItemPost"
-                },
-                typeCondition: {
-                    kind: "NamedType",
-                    name: {
-                        kind: "Name",
-                        value: "Post"
-                    }
-                },
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "id"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "createdAt"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "body"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "content"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "emotes"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "FragmentSpread",
-                                        name: {
-                                            kind: "Name",
-                                            value: "embeddedEmote"
-                                        },
-                                        directives: []
-                                    }]
-                                }
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "reactions"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "emote"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "token"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "setID"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "count"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "self"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "hasReacted"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "embeds"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "FragmentSpread",
-                                name: {
-                                    kind: "Name",
-                                    value: "feedItemClip"
-                                },
-                                directives: []
-                            }, {
-                                kind: "FragmentSpread",
-                                name: {
-                                    kind: "Name",
-                                    value: "feedItemVideo"
-                                },
-                                directives: []
-                            }, {
-                                kind: "InlineFragment",
-                                typeCondition: {
-                                    kind: "NamedType",
-                                    name: {
-                                        kind: "Name",
-                                        value: "PhotoOEmbed"
-                                    }
-                                },
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "title"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "inputURL"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "providerName"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "thumbnail"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "url"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }, {
-                                kind: "InlineFragment",
-                                typeCondition: {
-                                    kind: "NamedType",
-                                    name: {
-                                        kind: "Name",
-                                        value: "VideoOEmbed"
-                                    }
-                                },
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "title"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "inputURL"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "providerName"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "thumbnail"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "url"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "html"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "author"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "FragmentSpread",
-                                name: {
-                                    kind: "Name",
-                                    value: "feedUser"
-                                },
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 803
-            }
-        };
-        r.loc.source = {
-            body: '#import "twilight/features/chat/models/embedded-emote-fragment.gql"\n#import "twilight/features/feed/models/clip-fragment.gql"\n#import "twilight/features/feed/models/user-fragment.gql"\n#import "twilight/features/feed/models/video-fragment.gql"\n\nfragment feedItemPost on Post {\n  id\n  createdAt\n  body {\n    content\n    emotes {\n      ...embeddedEmote\n    }\n  }\n  reactions {\n    emote {\n      id\n      token\n      setID\n    }\n    count\n    self {\n      hasReacted\n    }\n  }\n  embeds {\n    ...feedItemClip\n    ...feedItemVideo\n    ... on PhotoOEmbed {\n      title\n      inputURL\n      providerName\n      thumbnail {\n        url\n      }\n    }\n    ... on VideoOEmbed {\n      title\n      inputURL\n      providerName\n      thumbnail {\n        url\n      }\n      html\n    }\n  }\n  author {\n    ...feedUser\n  }\n}\n',
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        var a = {};
-        r.definitions = r.definitions.concat(i(n(908).definitions)), r.definitions = r.definitions.concat(i(n(1024).definitions)), r.definitions = r.definitions.concat(i(n(929).definitions)), r.definitions = r.definitions.concat(i(n(1025).definitions)), e.exports = r
-    },
-    1023: function(e, t, n) {
+    1020: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
@@ -535,7 +65,7 @@ webpackJsonp([46], {
             return c
         })
     },
-    1024: function(e, t, n) {
+    1021: function(e, t, n) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -838,9 +368,9 @@ webpackJsonp([46], {
                 var t = e.name.value;
                 return !r[t] && (r[t] = !0, !0)
             })
-        }(n(929).definitions)), e.exports = i
+        }(n(926).definitions)), e.exports = i
     },
-    1025: function(e, t, n) {
+    1022: function(e, t, n) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -1117,7 +647,141 @@ webpackJsonp([46], {
                 var t = e.name.value;
                 return !r[t] && (r[t] = !0, !0)
             })
-        }(n(929).definitions)), e.exports = i
+        }(n(926).definitions)), e.exports = i
+    },
+    1024: function(e, t, n) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        });
+        var i = n(0),
+            r = n(1),
+            a = n(910),
+            o = n(113),
+            s = n(1025),
+            l = function(e) {
+                var t = {
+                    name: "TWILIGHT_EXPANDO_FEATURO",
+                    assignments: {
+                        fallback: function() {
+                            return o.a.wrap(function() {
+                                return new Promise(function(e) {
+                                    e()
+                                }).then(n.bind(null, 1025))
+                            }, "FeaturedBroadcasters")(i.__assign({}, e, {
+                                streamCount: 6,
+                                showCounts: !1
+                            }))
+                        },
+                        expanded: function() {
+                            return o.a.wrap(function() {
+                                return new Promise(function(e) {
+                                    e()
+                                }).then(n.bind(null, 1025))
+                            }, "FeaturedBroadcasters")(i.__assign({}, e, {
+                                streamCount: 8,
+                                showCounts: !0
+                            }))
+                        }
+                    },
+                    loader: function() {
+                        return Object(s.placeholderFeaturedBroadcasters)(e.renderContext)
+                    }
+                };
+                return r.createElement(a.a, i.__assign({}, t))
+            };
+        n.d(t, "FeaturedBroadcastersRenderContext", function() {
+            return s.FeaturedBroadcastersRenderContext
+        }), n.d(t, "FeaturedBroadcasters", function() {
+            return l
+        })
+    },
+    1025: function(e, t, n) {
+        "use strict";
+
+        function i(e, t, n, i) {
+            switch (t) {
+                case a.AnonFront:
+                    return s.createElement(u.a, {
+                        items: e,
+                        isLoading: n,
+                        layout: d.c.Horizontal,
+                        showCounts: i,
+                        darkTheme: !0
+                    });
+                default:
+                    return s.createElement(f._17, {
+                        className: "featured-broadcasters",
+                        background: f.m.Base,
+                        elevation: 1
+                    }, s.createElement(f.U, {
+                        padding: 1
+                    }, s.createElement(f._21, {
+                        fontSize: f.L.Size5,
+                        color: f.F.Alt2
+                    }, Object(l.d)("Featured Broadcasters", "FeaturedBroadcastersComponent"))), s.createElement(u.a, {
+                        items: e,
+                        isLoading: n,
+                        layout: d.c.Vertical,
+                        showCounts: i
+                    }))
+            }
+        }
+
+        function r(e) {
+            return i([], e, !0)
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), n.d(t, "FeaturedBroadcastersRenderContext", function() {
+            return a
+        }), t.placeholderFeaturedBroadcasters = r, n.d(t, "FeaturedBroadcasters", function() {
+            return v
+        });
+        var a, o = n(0),
+            s = n(1),
+            l = (n.n(s), n(2)),
+            c = n(7),
+            u = n(1053),
+            d = n(869),
+            m = n(1054),
+            p = n(5),
+            f = n(3),
+            g = n(1285);
+        n.n(g);
+        ! function(e) {
+            e[e.AnonFront = 1] = "AnonFront", e[e.Front = 2] = "Front"
+        }(a || (a = {}));
+        var h = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.getRender = function(e) {
+                        var n = !(!t.props.data.loading && !t.props.data.error);
+                        return i(e, t.props.renderContext, n, t.props.showCounts)
+                    }, t
+                }
+                return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.postRender()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.postRender()
+                }, t.prototype.render = function() {
+                    var e = this.props.data.featuredStreams || [],
+                        t = Object(m.a)(e);
+                    return this.getRender(t)
+                }, t.prototype.postRender = function() {
+                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
+                }, t = o.__decorate([Object(c.a)(g, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                language: l.n.intl.getLanguageCode(),
+                                first: e.streamCount || 6
+                            }
+                        }
+                    }
+                }), Object(p.c)("FeaturedBroadcasters")], t)
+            }(s.Component),
+            v = h
     },
     1053: function(e, t, n) {
         "use strict";
@@ -1213,13 +877,13 @@ webpackJsonp([46], {
         }
         var p, f = n(0),
             g = n(2),
-            h = n(999);
+            h = n(996);
         g.n.store.registerReducer("carouselPlayer", r);
         var v = n(6),
             k = n(9),
             y = n(4),
             _ = n(1),
-            b = n(872),
+            b = n(869),
             S = n(5),
             N = n(3),
             E = (n(1281), "carousel-card-live"),
@@ -1485,7 +1149,7 @@ webpackJsonp([46], {
                     return this.props.item ? this.getContentRender() : this.getPlaceholderRender()
                 }, t
             }(_.Component),
-            T = n(140),
+            T = n(111),
             A = (n(1283), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1848,7 +1512,7 @@ webpackJsonp([46], {
             return e.replace(/\[\]\(.+\)/, "")
         }
         t.a = i, t.b = r;
-        var o = n(872)
+        var o = n(869)
     },
     1056: function(e, t, n) {
         "use strict";
@@ -2093,15 +1757,15 @@ webpackJsonp([46], {
         }
         var g = n(1),
             h = n(0),
-            v = n(901),
-            k = n(869),
+            v = n(898),
+            k = n(866),
             y = n(5),
             _ = n(3),
             b = n(6),
             S = n(9),
-            N = n(999),
+            N = n(996),
             E = n(15),
-            w = n(925),
+            w = n(922),
             C = n(10),
             O = function(e) {
                 var t = e.author,
@@ -2151,7 +1815,7 @@ webpackJsonp([46], {
             x = Object(y.c)("EmbedInfo", {
                 autoReportInteractive: !0
             })(O),
-            U = n(1023),
+            U = n(1020),
             F = function(e, t) {
                 var n = e.embed,
                     i = n.broadcaster,
@@ -2279,7 +1943,7 @@ webpackJsonp([46], {
                 autoReportInteractive: !0
             })(P),
             B = Object(b.a)(null, r)(V),
-            M = (n(1316), function(e, t) {
+            M = (n(1317), function(e, t) {
                 var n = e.embed,
                     i = n.html,
                     r = n.thumbnail,
@@ -2333,15 +1997,15 @@ webpackJsonp([46], {
                 }, t = h.__decorate([Object(y.c)("Embed"), Object(v.c)()], t)
             }(g.Component),
             G = W,
-            $ = n(49),
-            K = n(33),
+            $ = n(54),
+            K = n(39),
             Q = n(17),
             Y = n(64),
             J = n(7),
-            Z = n(21),
+            Z = n(20),
             X = n(88),
-            ee = n(130),
-            te = (n(1317), function(e) {
+            ee = n(131),
+            te = (n(1318), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2457,10 +2121,10 @@ webpackJsonp([46], {
             oe = Object(y.c)("TopReactions", {
                 autoReportInteractive: !0
             })(ae),
-            se = n(1318),
-            le = n(1319),
+            se = n(1319),
+            le = n(1320),
             ce = n(273),
-            ue = (n(1320), function(e) {
+            ue = (n(1321), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.closeEmoteSelector = function() {
@@ -2685,9 +2349,9 @@ webpackJsonp([46], {
                 autoReportInteractive: !0
             })(ve),
             ye = n(261),
-            _e = n(907),
+            _e = n(903),
             be = /^(https?:\/\/)?(www.)?twitch\.tv/,
-            Se = (n(1321), function(e) {
+            Se = (n(1322), function(e) {
                 var t = e.content,
                     n = t.author,
                     i = t.body,
@@ -2822,22 +2486,22 @@ webpackJsonp([46], {
         var o = n(0),
             s = n(6),
             l = n(9),
-            c = n(49),
-            u = n(38),
-            d = n(33),
+            c = n(54),
+            u = n(37),
+            d = n(39),
             m = n(17),
-            p = n(377),
+            p = n(379),
             f = n(15),
             g = n(1),
             h = n(2),
             v = n(64),
-            k = n(901),
-            y = n(869),
+            k = n(898),
+            y = n(866),
             _ = n(5),
             b = n(262),
             S = n(3),
-            N = n(1322),
-            E = (n(1323), "delete"),
+            N = n(1323),
+            E = (n(1324), "delete"),
             w = "delete-confirm",
             C = "report",
             O = "Post",
@@ -3288,18 +2952,18 @@ webpackJsonp([46], {
                 var t = e.name.value;
                 return !r[t] && (r[t] = !0, !0)
             })
-        }(n(929).definitions)), e.exports = i
+        }(n(926).definitions)), e.exports = i
     },
     1280: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
             a = n(2),
-            o = n(905),
-            s = n(112),
-            l = n(503),
-            c = n(504),
-            u = n(547),
+            o = n(910),
+            s = n(113),
+            l = n(1024),
+            c = n(1025),
+            u = n(1286),
             d = function(e) {
                 var t = {
                     name: "TWILIGHT_VIDEO_FEATURO_EN",
@@ -3308,14 +2972,14 @@ webpackJsonp([46], {
                             return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 503))
+                                }).then(n.bind(null, 1024))
                             }, "FeaturedBroadcasters")(i.__assign({}, e))
                         },
                         mixed: function() {
                             return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 547))
+                                }).then(n.bind(null, 1286))
                             }, "FeaturedContent")(i.__assign({}, e, {
                                 shouldMixContent: !0
                             }))
@@ -3324,7 +2988,7 @@ webpackJsonp([46], {
                             return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 547))
+                                }).then(n.bind(null, 1286))
                             }, "FeaturedContent")(i.__assign({}, e, {
                                 shouldMixContent: !1
                             }))
@@ -3652,7 +3316,104 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1286: function(e, t) {
+    1286: function(e, t, n) {
+        "use strict";
+
+        function i(e, t, n) {
+            switch (t) {
+                case m.FeaturedBroadcastersRenderContext.AnonFront:
+                    return s.createElement(u.a, {
+                        items: e,
+                        isLoading: n,
+                        layout: d.c.Horizontal,
+                        showCounts: !0,
+                        darkTheme: !0
+                    });
+                default:
+                    return s.createElement(h._17, {
+                        className: "featured-content",
+                        background: h.m.Base,
+                        elevation: 1
+                    }, s.createElement(h.U, {
+                        padding: 1
+                    }, r(n)), s.createElement(u.a, {
+                        items: e,
+                        isLoading: n,
+                        layout: d.c.Vertical,
+                        showCounts: !0
+                    }))
+            }
+        }
+
+        function r(e) {
+            return e ? s.createElement(h._21, {
+                fontSize: h.L.Size5,
+                color: h.F.Alt2
+            }, s.createElement(h._1, {
+                width: 100
+            })) : s.createElement(h._21, {
+                fontSize: h.L.Size5,
+                color: h.F.Alt2
+            }, Object(l.d)("Featured", "FeaturedContentComponent"))
+        }
+
+        function a(e) {
+            return i([], e, !0)
+        }
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.placeholderFeaturedBroadcasters = a, n.d(t, "FeaturedContent", function() {
+            return k
+        });
+        var o = n(0),
+            s = n(1),
+            l = (n.n(s), n(2)),
+            c = n(7),
+            u = n(1053),
+            d = n(869),
+            m = n(1024),
+            p = n(1287),
+            f = (n.n(p), n(1054)),
+            g = n(5),
+            h = n(3);
+        n.d(t, "FeaturedBroadcastersRenderContext", function() {
+            return m.FeaturedBroadcastersRenderContext
+        });
+        var v = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.postRender()
+                }, t.prototype.componentDidUpdate = function() {
+                    this.postRender()
+                }, t.prototype.render = function() {
+                    var e = this.props.data.featuredStreams || [],
+                        t = Object(f.a)(e),
+                        n = this.props.data.featuredVideos || [],
+                        r = Object(f.b)(n);
+                    if (t.length > 0 && t.splice(t.length - r.length), this.props.shouldMixContent && r.length > 0) {
+                        var a = 6 - r.length,
+                            o = t.splice(a);
+                        t = t.concat(r).concat(o)
+                    } else t = t.concat(r);
+                    var s = !(!this.props.data.loading && !this.props.data.error);
+                    return i(t, this.props.renderContext, s)
+                }, t.prototype.postRender = function() {
+                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
+                }, t = o.__decorate([Object(c.a)(p, {
+                    options: function() {
+                        return {
+                            variables: {
+                                language: l.n.intl.getLanguageCode()
+                            }
+                        }
+                    }
+                }), Object(g.c)("FeaturedContent")], t)
+            }(s.Component),
+            k = v
+    },
+    1287: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -4164,7 +3925,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    129: function(e, t, n) {
+    130: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4180,7 +3941,7 @@ webpackJsonp([46], {
         t.a = i, t.b = r;
         var l = "https://www.twitch.tv"
     },
-    1314: function(e, t, n) {
+    1315: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -4193,10 +3954,10 @@ webpackJsonp([46], {
             s = n(2),
             l = n(64),
             c = n(47),
-            u = n(129),
-            d = n(383),
-            m = n(901),
-            p = n(869),
+            u = n(130),
+            d = n(384),
+            m = n(898),
+            p = n(866),
             f = n(5),
             g = n(3),
             h = Object(u.a)("/settings/profile");
@@ -4396,13 +4157,13 @@ webpackJsonp([46], {
             return _
         })
     },
-    1315: function(e, t, n) {
+    1316: function(e, t, n) {
         "use strict";
         var i = n(1),
             r = n(2),
             a = n(0),
-            o = n(901),
-            s = n(869),
+            o = n(898),
+            s = n(866),
             l = n(5),
             c = n(3),
             u = n(1252),
@@ -4488,9 +4249,9 @@ webpackJsonp([46], {
             return h
         })
     },
-    1316: function(e, t) {},
     1317: function(e, t) {},
-    1318: function(e, t, n) {
+    1318: function(e, t) {},
+    1319: function(e, t, n) {
         function i(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
@@ -4608,9 +4369,9 @@ webpackJsonp([46], {
             }
         };
         var a = {};
-        r.definitions = r.definitions.concat(i(n(1024).definitions)), r.definitions = r.definitions.concat(i(n(1002).definitions)), r.definitions = r.definitions.concat(i(n(1025).definitions)), e.exports = r
+        r.definitions = r.definitions.concat(i(n(1021).definitions)), r.definitions = r.definitions.concat(i(n(999).definitions)), r.definitions = r.definitions.concat(i(n(1022).definitions)), e.exports = r
     },
-    1319: function(e, t, n) {
+    1320: function(e, t, n) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -4727,38 +4488,11 @@ webpackJsonp([46], {
                 var t = e.name.value;
                 return !r[t] && (r[t] = !0, !0)
             })
-        }(n(1002).definitions)), e.exports = i
+        }(n(999).definitions)), e.exports = i
     },
-    132: function(e, t, n) {
-        "use strict";
-
-        function i(e, t) {
-            var n = r.b.get(l, "https://twitch.amazon.com/prime"),
-                i = "";
-            try {
-                i = btoa(t)
-            } catch (e) {
-                c.error(e, "Could not decode location pathname substring for redirect")
-            }
-            return i ? n + "?ref_=" + e + "&redirectRoute=" + i : n + "?ref_=" + e
-        }
-        n.d(t, "b", function() {
-            return a
-        }), n.d(t, "a", function() {
-            return o
-        }), n.d(t, "c", function() {
-            return s
-        }), t.d = i;
-        var r = n(2),
-            a = "sm_tw_tup_ntp_t_all",
-            o = "sm_tw_thp_blue_t_all",
-            s = "sm_w_tup_ntp_t_c",
-            l = "prime_landing_page_base_url",
-            c = r.i.withCategory("PrimeUtilsLogger")
-    },
-    1320: function(e, t) {},
     1321: function(e, t) {},
-    1322: function(e, t) {
+    1322: function(e, t) {},
+    1323: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -4896,8 +4630,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1323: function(e, t) {},
-    1324: function(e, t, n) {
+    1324: function(e, t) {},
+    1325: function(e, t, n) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -5020,9 +4754,9 @@ webpackJsonp([46], {
                 var t = e.name.value;
                 return !r[t] && (r[t] = !0, !0)
             })
-        }(n(1002).definitions)), e.exports = i
+        }(n(999).definitions)), e.exports = i
     },
-    1325: function(e, t, n) {
+    1326: function(e, t, n) {
         function i(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
@@ -5215,16 +4949,39 @@ webpackJsonp([46], {
                                 selectionSet: null
                             }]
                         }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "pageInfo"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "hasNextPage"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
                     }]
                 }
             }],
             loc: {
                 start: 0,
-                end: 641
+                end: 674
             }
         };
         r.loc.source = {
-            body: '#import "twilight/features/feed/models/post-fragment.gql"\n#import "twilight/features/feed/models/clip-fragment.gql"\n#import "twilight/features/feed/models/video-fragment.gql"\n#import "twilight/features/feed/models/stream-fragment.gql"\n\nfragment feed on FeedItemConnection {\n  edges {\n    node {\n      content {\n        ...feedItemClip\n        ...feedItemPost\n        ...feedItemStream\n        ...feedItemVideo\n      }\n      reasons {\n        ... on FeedItemReason {\n          reason\n        }\n      }\n      tracking {\n        batchID\n        cardImpressionID\n        recGenerationID\n        recGenerationIndex\n      }\n    }\n    cursor\n  }\n}\n',
+            body: '#import "twilight/features/feed/models/post-fragment.gql"\n#import "twilight/features/feed/models/clip-fragment.gql"\n#import "twilight/features/feed/models/video-fragment.gql"\n#import "twilight/features/feed/models/stream-fragment.gql"\n\nfragment feed on FeedItemConnection {\n  edges {\n    node {\n      content {\n        ...feedItemClip\n        ...feedItemPost\n        ...feedItemStream\n        ...feedItemVideo\n      }\n      reasons {\n        ... on FeedItemReason {\n          reason\n        }\n      }\n      tracking {\n        batchID\n        cardImpressionID\n        recGenerationID\n        recGenerationIndex\n      }\n    }\n    cursor\n  }\n  pageInfo {\n    hasNextPage\n  }\n}\n',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -5232,9 +4989,36 @@ webpackJsonp([46], {
             }
         };
         var a = {};
-        r.definitions = r.definitions.concat(i(n(1002).definitions)), r.definitions = r.definitions.concat(i(n(1024).definitions)), r.definitions = r.definitions.concat(i(n(1025).definitions)), r.definitions = r.definitions.concat(i(n(1255).definitions)), e.exports = r
+        r.definitions = r.definitions.concat(i(n(999).definitions)), r.definitions = r.definitions.concat(i(n(1021).definitions)), r.definitions = r.definitions.concat(i(n(1022).definitions)), r.definitions = r.definitions.concat(i(n(1255).definitions)), e.exports = r
     },
-    135: function(e, t, n) {
+    133: function(e, t, n) {
+        "use strict";
+
+        function i(e, t) {
+            var n = r.b.get(l, "https://twitch.amazon.com/prime"),
+                i = "";
+            try {
+                i = btoa(t)
+            } catch (e) {
+                c.error(e, "Could not decode location pathname substring for redirect")
+            }
+            return i ? n + "?ref_=" + e + "&redirectRoute=" + i : n + "?ref_=" + e
+        }
+        n.d(t, "b", function() {
+            return a
+        }), n.d(t, "a", function() {
+            return o
+        }), n.d(t, "c", function() {
+            return s
+        }), t.d = i;
+        var r = n(2),
+            a = "sm_tw_tup_ntp_t_all",
+            o = "sm_tw_thp_blue_t_all",
+            s = "sm_w_tup_ntp_t_c",
+            l = "prime_landing_page_base_url",
+            c = r.i.withCategory("PrimeUtilsLogger")
+    },
+    136: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -5345,10 +5129,10 @@ webpackJsonp([46], {
         t.f = i, t.e = r, t.c = a, t.b = o, t.d = s, t.a = l, t.g = c;
         var f = n(0),
             g = n(2),
-            h = n(51),
+            h = n(50),
             v = n(17),
-            k = n(416),
-            y = (n.n(k), n(417)),
+            k = n(417),
+            y = (n.n(k), n(418)),
             _ = (n.n(y), "twilight.sessionID"),
             b = 0,
             S = g.i.withCategory("Session Status"),
@@ -5359,11 +5143,11 @@ webpackJsonp([46], {
             },
             E = N
     },
-    1371: function(e, t, n) {
+    1372: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
-            a = n(925),
+            a = n(922),
             o = n(5),
             s = n(272),
             l = function(e) {
@@ -5393,7 +5177,7 @@ webpackJsonp([46], {
             return c
         })
     },
-    1912: function(e, t) {
+    1913: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -5564,7 +5348,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1913: function(e, t) {
+    1914: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -5705,7 +5489,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1914: function(e, t) {
+    1915: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -5903,7 +5687,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1915: function(e, t) {
+    1916: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6222,7 +6006,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1916: function(e, t) {
+    1917: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6297,7 +6081,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1917: function(e, t, n) {
+    1918: function(e, t, n) {
         function i(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
@@ -6458,9 +6242,9 @@ webpackJsonp([46], {
             }
         };
         var a = {};
-        r.definitions = r.definitions.concat(i(n(1325).definitions)), r.definitions = r.definitions.concat(i(n(929).definitions)), e.exports = r
+        r.definitions = r.definitions.concat(i(n(1326).definitions)), r.definitions = r.definitions.concat(i(n(926).definitions)), e.exports = r
     },
-    1918: function(e, t) {
+    1919: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6621,8 +6405,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1919: function(e, t) {},
-    2067: function(e, t, n) {
+    1920: function(e, t) {},
+    2069: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -6659,23 +6443,23 @@ webpackJsonp([46], {
             s = n(1),
             l = n(2),
             c = n(28),
-            u = n(913),
-            d = n(822),
-            m = n(820),
-            p = n(111),
+            u = n(909),
+            d = n(819),
+            m = n(817),
+            p = n(112),
             f = n(12),
-            g = n(883),
-            h = n(381),
+            g = n(880),
+            h = n(382),
             v = n(1280),
             k = n(5),
             y = n(6),
-            _ = n(36),
+            _ = n(35),
             b = n(7),
-            S = n(1e3),
+            S = n(997),
             N = n(1061),
             E = n(67),
             w = n(10),
-            C = n(376),
+            C = n(378),
             O = n(3),
             x = function(e) {
                 function t() {
@@ -6759,7 +6543,7 @@ webpackJsonp([46], {
                 })], t)
             }(s.Component),
             U = x,
-            F = n(1912),
+            F = n(1913),
             D = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -6791,7 +6575,7 @@ webpackJsonp([46], {
                 }), Object(k.c)("FollowedGames")], t)
             }(s.Component),
             R = D,
-            I = n(1913),
+            I = n(1914),
             T = "twilight_onboarding",
             A = "twilight_onboarding-prompt_dismissed",
             j = {
@@ -6910,9 +6694,9 @@ webpackJsonp([46], {
             }(s.Component),
             B = V,
             M = Object(y.a)(i)(B),
-            H = n(925),
-            q = n(1371),
-            z = n(1914),
+            H = n(922),
+            q = n(1372),
+            z = n(1915),
             W = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -6949,7 +6733,7 @@ webpackJsonp([46], {
             })(G),
             K = $,
             Q = n(1056),
-            Y = n(1023),
+            Y = n(1020),
             J = new Map([
                 ["52233100", "179571457"],
                 ["66228451", "179571772"],
@@ -6994,7 +6778,7 @@ webpackJsonp([46], {
             Z = Array.from(J.keys()),
             X = ["28036688", "30672745", "31582795", "51533859", "63321379", "62983472", "29400754"],
             ee = n(272),
-            te = n(1915),
+            te = n(1916),
             ne = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -7222,7 +7006,7 @@ webpackJsonp([46], {
                 })], t)
             }(s.Component),
             ie = ne,
-            re = n(1916),
+            re = n(1917),
             ae = ["control", "on"],
             oe = function(e) {
                 function t() {
@@ -7270,13 +7054,13 @@ webpackJsonp([46], {
                 }, t = o.__decorate([Object(k.c)("StreamerTrailersExperiment"), Object(b.a)(re)], t)
             }(s.Component),
             se = oe,
-            le = n(447),
-            ce = n(386),
-            ue = n(21),
-            de = n(1314),
-            me = n(1315),
-            pe = n(1324),
-            fe = n(901),
+            le = n(448),
+            ce = n(387),
+            ue = n(20),
+            de = n(1315),
+            me = n(1316),
+            pe = n(1325),
+            fe = n(898),
             ge = n(1254),
             he = function(e) {
                 for (var t = e.cardCount, n = [], i = 0; i < t; i++) 1 === i ? n.push(s.createElement(ge.b, {
@@ -7286,7 +7070,7 @@ webpackJsonp([46], {
                 }));
                 return s.createElement(O.U, null, n)
             },
-            ve = n(1917),
+            ve = n(1918),
             ke = Object(fe.d)(function() {
                 return {
                     feed_type: "rec"
@@ -7420,7 +7204,7 @@ webpackJsonp([46], {
                 }), Object(k.c)("Pulse")], t)
             }(s.Component),
             be = _e,
-            Se = n(1918),
+            Se = n(1919),
             Ne = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -7454,7 +7238,7 @@ webpackJsonp([46], {
                 }), Object(k.c)("TopGames")], t)
             }(s.Component),
             Ee = Ne,
-            we = (n(1919), function(e) {
+            we = (n(1920), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7585,7 +7369,7 @@ webpackJsonp([46], {
     264: function(e, t, n) {
         "use strict";
         var i = n(0),
-            r = n(20),
+            r = n(21),
             a = n(1),
             o = n(2),
             s = n(14),
@@ -7667,7 +7451,7 @@ webpackJsonp([46], {
             return u
         })
     },
-    378: function(e, t, n) {
+    380: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -7682,7 +7466,7 @@ webpackJsonp([46], {
         }
         t.a = i
     },
-    381: function(e, t, n) {
+    382: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -7790,7 +7574,7 @@ webpackJsonp([46], {
             m = "ads.slot-ready",
             p = new a.EventEmitter
     },
-    385: function(e, t, n) {
+    386: function(e, t, n) {
         "use strict";
         var i = n(0),
             r = n(1),
@@ -7798,7 +7582,7 @@ webpackJsonp([46], {
             o = n(7),
             s = n(56),
             l = n(3),
-            c = n(406),
+            c = n(407),
             u = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -7845,7 +7629,7 @@ webpackJsonp([46], {
             return u
         })
     },
-    386: function(e, t, n) {
+    387: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -7855,7 +7639,7 @@ webpackJsonp([46], {
         }
         var r = n(6),
             a = n(0),
-            o = n(20),
+            o = n(21),
             s = n(1),
             l = n(2),
             c = n(47),
@@ -7863,7 +7647,7 @@ webpackJsonp([46], {
             d = n(106),
             m = n(5),
             p = n(3),
-            f = (n(421), function(e) {
+            f = (n(422), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -7951,7 +7735,7 @@ webpackJsonp([46], {
             }(s.Component),
             k = v,
             y = n(65),
-            _ = n(21),
+            _ = n(20),
             b = {
                 DIRECT_ENTITLEMENT: "DIRECT_ENTITLEMENT",
                 CLAIM_CODE: "CLAIM_CODE",
@@ -7983,7 +7767,7 @@ webpackJsonp([46], {
                     t = o.parse(e);
                 return t && t.dateOverride || void 0
             },
-            F = (n(422), n(423)),
+            F = (n(423), n(424)),
             D = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -8059,7 +7843,7 @@ webpackJsonp([46], {
                 }, t = a.__decorate([Object(m.c)("PrimeClaimDescription")], t)
             }(s.Component),
             T = I,
-            A = n(132),
+            A = n(133),
             j = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -8083,7 +7867,7 @@ webpackJsonp([46], {
                 }, t = a.__decorate([Object(m.c)("PrimeUpsellButton")], t)
             }(s.Component),
             L = j,
-            P = n(424),
+            P = n(425),
             V = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -8162,7 +7946,7 @@ webpackJsonp([46], {
                 }, t = a.__decorate([Object(m.c)("PrimeError")], t)
             }(s.Component),
             H = M,
-            q = (n(425), function(e) {
+            q = (n(426), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.setRef = function(e) {
@@ -8320,8 +8104,8 @@ webpackJsonp([46], {
                 }, t = a.__decorate([Object(m.c)("PrimeRedeem")], t)
             }(s.Component),
             Y = Q,
-            J = n(426),
-            Z = (n(427), n(428)),
+            J = n(427),
+            Z = (n(428), n(429)),
             X = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -8505,7 +8289,7 @@ webpackJsonp([46], {
                 }, t = a.__decorate([Object(m.c)("PrimeOfferPlaceholder")], t)
             }(s.Component),
             ne = te,
-            ie = (n(429), function(e) {
+            ie = (n(430), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -8541,8 +8325,8 @@ webpackJsonp([46], {
                 }, t = a.__decorate([Object(m.c)("PrimeUpsell")], t)
             }(s.Component)),
             re = ie,
-            ae = n(430),
-            oe = (n(431), n(432)),
+            ae = n(431),
+            oe = (n(432), n(433)),
             se = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -8619,8 +8403,8 @@ webpackJsonp([46], {
                 }), Object(m.c)("PrimeOfferList")], t)
             }(s.Component),
             le = se,
-            ce = n(433),
-            ue = (n(434), n(435)),
+            ce = n(434),
+            ue = (n(435), n(436)),
             de = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -8728,7 +8512,7 @@ webpackJsonp([46], {
             }(s.Component),
             me = de,
             pe = Object(r.a)(i)(me),
-            fe = (n(436), n(437)),
+            fe = (n(437), n(438)),
             ge = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -8856,7 +8640,7 @@ webpackJsonp([46], {
             return U
         })
     },
-    388: function(e, t, n) {
+    389: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -8881,7 +8665,7 @@ webpackJsonp([46], {
             u = n(1),
             d = n(2),
             m = n(3),
-            p = (n(396), function(e) {
+            p = (n(397), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderLink = function(e) {
@@ -8920,7 +8704,7 @@ webpackJsonp([46], {
             return f
         })
     },
-    389: function(e, t, n) {
+    390: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -9071,20 +8855,20 @@ webpackJsonp([46], {
             }
         }
         var v, k = n(0),
-            y = n(20),
+            y = n(21),
             _ = n(1),
             b = n(2),
             S = n(47),
             N = n(7),
             E = n(107),
             w = n(14),
-            C = n(39),
-            O = n(21),
+            C = n(38),
+            O = n(20),
             x = n(30),
             U = n(5),
             F = n(28),
             D = n(32),
-            R = n(398),
+            R = n(399),
             I = n.n(R),
             T = n(15),
             A = n(65),
@@ -9129,7 +8913,7 @@ webpackJsonp([46], {
                 b.m.track(j.SpadeEventType.NotificationInteraction, t)
             },
             z = n(3),
-            W = (n(399), "persistent-notification__delete"),
+            W = (n(400), "persistent-notification__delete"),
             G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -9262,8 +9046,8 @@ webpackJsonp([46], {
                 }, t = k.__decorate([Object(U.c)("PersistentNotification")], t)
             }(_.Component),
             $ = G,
-            K = n(400),
-            Q = n(401),
+            K = n(401),
+            Q = n(402),
             Y = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -9310,7 +9094,7 @@ webpackJsonp([46], {
             J = Object(D.compose)(Object(N.a)(K, {
                 name: "clearUnreadFriendRequests"
             }))(Y),
-            Z = (n(402), "center-window__empty"),
+            Z = (n(403), "center-window__empty"),
             X = "center-window__content-footer",
             ee = "center-window__footer__text",
             te = "center-window__read-all",
@@ -9465,7 +9249,7 @@ webpackJsonp([46], {
             re = n(6),
             ae = n(17),
             oe = n(87),
-            se = (n(403), function(e) {
+            se = (n(404), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.closeTimeout = 0, t.close = function() {
@@ -9616,7 +9400,7 @@ webpackJsonp([46], {
             }(_.Component)),
             le = Object(U.c)("OnsiteNotificationToast")(se),
             ce = le,
-            ue = (n(404), b.i.withCategory("toast-manager")),
+            ue = (n(405), b.i.withCategory("toast-manager")),
             de = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -9657,7 +9441,7 @@ webpackJsonp([46], {
                         return k.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return b.a.buildType !== w.a.Production && y.parse(window.location.search).onsite_test_data ? [4, n.e(35).then(n.bind(null, 2047))] : [3, 2];
+                                    return b.a.buildType !== w.a.Production && y.parse(window.location.search).onsite_test_data ? [4, n.e(35).then(n.bind(null, 2049))] : [3, 2];
                                 case 1:
                                     e = i.sent().MockOnsiteNotifications, t = e.getMockOnsiteNotificationModels(3), this.setState({
                                         notifications: t
@@ -9699,12 +9483,12 @@ webpackJsonp([46], {
             }(_.Component),
             me = Object(re.a)(l)(de),
             pe = b.i.withCategory("onsite-pubsub-mutators"),
-            fe = n(390),
-            ge = n(391),
-            he = n(392),
-            ve = n(393),
-            ke = n(394);
-        n(405);
+            fe = n(391),
+            ge = n(392),
+            he = n(393),
+            ve = n(394),
+            ke = n(395);
+        n(406);
         n.d(t, "a", function() {
             return Ne
         }), n.d(t, "b", function() {
@@ -9744,7 +9528,7 @@ webpackJsonp([46], {
                             return k.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return this.listDataLoaded() && !this.hasInsertedListNotificationsData && b.a.buildType !== w.a.Production && y.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(35).then(n.bind(null, 2047))]) : [3, 2];
+                                        return this.listDataLoaded() && !this.hasInsertedListNotificationsData && b.a.buildType !== w.a.Production && y.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(35).then(n.bind(null, 2049))]) : [3, 2];
                                     case 1:
                                         e = t.sent().MockOnsiteNotifications, Object(O.d)(ge, k.__assign({}, this.props.listData.variables), function(t) {
                                             return t.currentUser.notifications.edges = e.getMockOnsiteNotificationEdges(y.parse(window.location.search).onsite_test_data), t
@@ -10093,7 +9877,7 @@ webpackJsonp([46], {
             }(_.Component),
             xe = Oe
     },
-    390: function(e, t) {
+    391: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10194,7 +9978,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    391: function(e, t) {
+    392: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10524,7 +10308,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    392: function(e, t) {
+    393: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10635,7 +10419,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    393: function(e, t) {
+    394: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10792,7 +10576,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    394: function(e, t) {
+    395: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -10896,7 +10680,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    395: function(e, t, n) {
+    396: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -10948,17 +10732,17 @@ webpackJsonp([46], {
         var c, u = n(6),
             d = n(10),
             m = n(9),
-            p = n(49),
-            f = n(33),
+            p = n(54),
+            f = n(39),
             g = n(17),
             h = n(0),
             v = n(1),
             k = n(2),
-            y = n(388),
+            y = n(389),
             _ = n(47),
             b = n(12),
             S = n(5),
-            N = n(389),
+            N = n(390),
             E = Object(u.a)(i)(N.b),
             w = n(22),
             C = n(40),
@@ -10968,14 +10752,14 @@ webpackJsonp([46], {
             F = n(64),
             D = n(4),
             R = n(28),
-            I = n(129),
+            I = n(130),
             T = n(48),
-            A = n(378),
-            j = n(385),
+            A = n(380),
+            j = n(386),
             L = n(7),
             P = n(56),
             V = n(3),
-            B = (n(407), n(408)),
+            B = (n(408), n(409)),
             M = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -11055,7 +10839,7 @@ webpackJsonp([46], {
                     }
                 })], t)
             }(v.Component),
-            H = (n(409), function(e) {
+            H = (n(410), function(e) {
                 var t, n, i;
                 e.title && (e.hitsCount && e.hitsCount > 0 ? t = Object(k.d)("more", "SearchResultSection") : e.totalHitsCount && e.totalHitsCount > 0 && (t = Object(k.d)("Show", "SearchResultSection")), void 0 !== e.totalHitsCount && (i = v.createElement(V.Z, {
                     type: V._0.Brand,
@@ -11094,7 +10878,7 @@ webpackJsonp([46], {
                     className: "search-result-view__block"
                 }, n, r)
             }),
-            q = (n(410), function(e) {
+            q = (n(411), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -11190,7 +10974,7 @@ webpackJsonp([46], {
                 }, t
             }(v.Component),
             G = n(66),
-            $ = (n(411), function(e) {
+            $ = (n(412), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onBackClick = function() {
@@ -11531,7 +11315,7 @@ webpackJsonp([46], {
                     }, Object(k.d)("Please try again later", "SearchResultPanel")))
                 }, t
             }(v.Component)),
-            K = (n(412), function(e) {
+            K = (n(413), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -11583,7 +11367,7 @@ webpackJsonp([46], {
                     }
                 }, t
             }(v.Component)),
-            Q = (n(413), function(e) {
+            Q = (n(414), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleChange = function(e) {
@@ -11927,7 +11711,7 @@ webpackJsonp([46], {
                 }, t = h.__decorate([Object(S.c)("AnonUser")], t)
             }(v.Component),
             ee = X,
-            te = n(414),
+            te = n(415),
             ne = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -11961,8 +11745,8 @@ webpackJsonp([46], {
             ie = ne,
             re = Object(u.a)(r)(ie),
             ae = n(106),
-            oe = n(132),
-            se = n(415),
+            oe = n(133),
+            se = n(416),
             le = Object(I.a)("/products/turbo?ref=top_nav"),
             ce = function(e) {
                 function t() {
@@ -11995,14 +11779,14 @@ webpackJsonp([46], {
             ue = ce,
             de = n(87),
             me = n(107),
-            pe = n(51),
-            fe = n(39),
-            ge = n(21),
+            pe = n(50),
+            fe = n(38),
+            ge = n(20),
             he = n(30),
-            ve = n(135),
-            ke = n(53),
-            ye = n(131),
-            _e = n(52),
+            ve = n(136),
+            ke = n(52),
+            ye = n(132),
+            _e = n(51),
             be = function() {
                 return v.createElement(V.U, {
                     display: V.H.Flex,
@@ -12100,7 +11884,7 @@ webpackJsonp([46], {
             },
             Ne = n(31),
             Ee = n(71),
-            we = (n(418), function(e) {
+            we = (n(419), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onCardClick = function() {
@@ -12543,8 +12327,8 @@ webpackJsonp([46], {
                 }, t
             }(v.Component)),
             Ce = Object(w.e)(we),
-            Oe = n(419),
-            xe = n(420),
+            Oe = n(420),
+            xe = n(421),
             Ue = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -12643,8 +12427,8 @@ webpackJsonp([46], {
                 }]), Object(S.c)("User")], t)
             }(v.Component),
             Fe = Object(u.a)(a, o)(Object(d.f)(Ue)),
-            De = n(386),
-            Re = (n(438), function(e) {
+            De = n(387),
+            Re = (n(439), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderOnsiteNotifications = function() {
@@ -12945,12 +12729,12 @@ webpackJsonp([46], {
             return Te
         })
     },
-    396: function(e, t) {},
-    398: function(e, t, n) {
+    397: function(e, t) {},
+    399: function(e, t, n) {
         e.exports = n.p + "assets/friend_requests-aec9595d7e19764bc23d982c8c0f43d9.png"
     },
-    399: function(e, t) {},
-    400: function(e, t) {
+    400: function(e, t) {},
+    401: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -13018,7 +12802,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    401: function(e, t) {
+    402: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -13106,11 +12890,11 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    402: function(e, t) {},
     403: function(e, t) {},
     404: function(e, t) {},
     405: function(e, t) {},
-    406: function(e, t) {
+    406: function(e, t) {},
+    407: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -13228,8 +13012,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    407: function(e, t) {},
-    408: function(e, t) {
+    408: function(e, t) {},
+    409: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -13370,12 +13154,12 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    409: function(e, t) {},
     410: function(e, t) {},
     411: function(e, t) {},
     412: function(e, t) {},
     413: function(e, t) {},
-    414: function(e, t) {
+    414: function(e, t) {},
+    415: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -13440,7 +13224,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    415: function(e, t) {
+    416: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -13538,7 +13322,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    416: function(e, t) {
+    417: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -13626,7 +13410,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    417: function(e, t) {
+    418: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -13737,8 +13521,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    418: function(e, t) {},
-    419: function(e, t) {
+    419: function(e, t) {},
+    420: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -14118,7 +13902,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    420: function(e, t) {
+    421: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -14242,9 +14026,9 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    421: function(e, t) {},
     422: function(e, t) {},
-    423: function(e, t) {
+    423: function(e, t) {},
+    424: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -14299,7 +14083,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    424: function(e, t) {
+    425: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -14364,8 +14148,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    425: function(e, t) {},
-    426: function(e, t) {
+    426: function(e, t) {},
+    427: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -14476,8 +14260,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    427: function(e, t) {},
-    428: function(e, t) {
+    428: function(e, t) {},
+    429: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -14542,8 +14326,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    429: function(e, t) {},
-    430: function(e, t) {
+    430: function(e, t) {},
+    431: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -14767,8 +14551,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    431: function(e, t) {},
-    432: function(e, t) {
+    432: function(e, t) {},
+    433: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -14833,7 +14617,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    433: function(e, t) {
+    434: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -14921,8 +14705,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    434: function(e, t) {},
-    435: function(e, t) {
+    435: function(e, t) {},
+    436: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -15010,8 +14794,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    436: function(e, t) {},
-    437: function(e, t) {
+    437: function(e, t) {},
+    438: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -15218,8 +15002,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    438: function(e, t) {},
-    451: function(e, t) {
+    439: function(e, t) {},
+    452: function(e, t) {
         function n(e) {
             var t = !1;
             if (null != e && "function" != typeof e.toString) try {
@@ -15253,238 +15037,7 @@ webpackJsonp([46], {
             }(Object.getPrototypeOf, Object);
         e.exports = r
     },
-    503: function(e, t, n) {
-        "use strict";
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        });
-        var i = n(0),
-            r = n(1),
-            a = n(905),
-            o = n(112),
-            s = n(504),
-            l = function(e) {
-                var t = {
-                    name: "TWILIGHT_EXPANDO_FEATURO",
-                    assignments: {
-                        fallback: function() {
-                            return o.a.wrap(function() {
-                                return new Promise(function(e) {
-                                    e()
-                                }).then(n.bind(null, 504))
-                            }, "FeaturedBroadcasters")(i.__assign({}, e, {
-                                streamCount: 6,
-                                showCounts: !1
-                            }))
-                        },
-                        expanded: function() {
-                            return o.a.wrap(function() {
-                                return new Promise(function(e) {
-                                    e()
-                                }).then(n.bind(null, 504))
-                            }, "FeaturedBroadcasters")(i.__assign({}, e, {
-                                streamCount: 8,
-                                showCounts: !0
-                            }))
-                        }
-                    },
-                    loader: function() {
-                        return Object(s.placeholderFeaturedBroadcasters)(e.renderContext)
-                    }
-                };
-                return r.createElement(a.a, i.__assign({}, t))
-            };
-        n.d(t, "FeaturedBroadcastersRenderContext", function() {
-            return s.FeaturedBroadcastersRenderContext
-        }), n.d(t, "FeaturedBroadcasters", function() {
-            return l
-        })
-    },
-    504: function(e, t, n) {
-        "use strict";
-
-        function i(e, t, n, i) {
-            switch (t) {
-                case a.AnonFront:
-                    return s.createElement(u.a, {
-                        items: e,
-                        isLoading: n,
-                        layout: d.c.Horizontal,
-                        showCounts: i,
-                        darkTheme: !0
-                    });
-                default:
-                    return s.createElement(f._17, {
-                        className: "featured-broadcasters",
-                        background: f.m.Base,
-                        elevation: 1
-                    }, s.createElement(f.U, {
-                        padding: 1
-                    }, s.createElement(f._21, {
-                        fontSize: f.L.Size5,
-                        color: f.F.Alt2
-                    }, Object(l.d)("Featured Broadcasters", "FeaturedBroadcastersComponent"))), s.createElement(u.a, {
-                        items: e,
-                        isLoading: n,
-                        layout: d.c.Vertical,
-                        showCounts: i
-                    }))
-            }
-        }
-
-        function r(e) {
-            return i([], e, !0)
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), n.d(t, "FeaturedBroadcastersRenderContext", function() {
-            return a
-        }), t.placeholderFeaturedBroadcasters = r, n.d(t, "FeaturedBroadcasters", function() {
-            return v
-        });
-        var a, o = n(0),
-            s = n(1),
-            l = (n.n(s), n(2)),
-            c = n(7),
-            u = n(1053),
-            d = n(872),
-            m = n(1054),
-            p = n(5),
-            f = n(3),
-            g = n(1285);
-        n.n(g);
-        ! function(e) {
-            e[e.AnonFront = 1] = "AnonFront", e[e.Front = 2] = "Front"
-        }(a || (a = {}));
-        var h = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.getRender = function(e) {
-                        var n = !(!t.props.data.loading && !t.props.data.error);
-                        return i(e, t.props.renderContext, n, t.props.showCounts)
-                    }, t
-                }
-                return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.postRender()
-                }, t.prototype.componentDidUpdate = function() {
-                    this.postRender()
-                }, t.prototype.render = function() {
-                    var e = this.props.data.featuredStreams || [],
-                        t = Object(m.a)(e);
-                    return this.getRender(t)
-                }, t.prototype.postRender = function() {
-                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
-                }, t = o.__decorate([Object(c.a)(g, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                language: l.n.intl.getLanguageCode(),
-                                first: e.streamCount || 6
-                            }
-                        }
-                    }
-                }), Object(p.c)("FeaturedBroadcasters")], t)
-            }(s.Component),
-            v = h
-    },
-    547: function(e, t, n) {
-        "use strict";
-
-        function i(e, t, n) {
-            switch (t) {
-                case m.FeaturedBroadcastersRenderContext.AnonFront:
-                    return s.createElement(u.a, {
-                        items: e,
-                        isLoading: n,
-                        layout: d.c.Horizontal,
-                        showCounts: !0,
-                        darkTheme: !0
-                    });
-                default:
-                    return s.createElement(h._17, {
-                        className: "featured-content",
-                        background: h.m.Base,
-                        elevation: 1
-                    }, s.createElement(h.U, {
-                        padding: 1
-                    }, r(n)), s.createElement(u.a, {
-                        items: e,
-                        isLoading: n,
-                        layout: d.c.Vertical,
-                        showCounts: !0
-                    }))
-            }
-        }
-
-        function r(e) {
-            return e ? s.createElement(h._21, {
-                fontSize: h.L.Size5,
-                color: h.F.Alt2
-            }, s.createElement(h._1, {
-                width: 100
-            })) : s.createElement(h._21, {
-                fontSize: h.L.Size5,
-                color: h.F.Alt2
-            }, Object(l.d)("Featured", "FeaturedContentComponent"))
-        }
-
-        function a(e) {
-            return i([], e, !0)
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        }), t.placeholderFeaturedBroadcasters = a, n.d(t, "FeaturedContent", function() {
-            return k
-        });
-        var o = n(0),
-            s = n(1),
-            l = (n.n(s), n(2)),
-            c = n(7),
-            u = n(1053),
-            d = n(872),
-            m = n(503),
-            p = n(1286),
-            f = (n.n(p), n(1054)),
-            g = n(5),
-            h = n(3);
-        n.d(t, "FeaturedBroadcastersRenderContext", function() {
-            return m.FeaturedBroadcastersRenderContext
-        });
-        var v = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.postRender()
-                }, t.prototype.componentDidUpdate = function() {
-                    this.postRender()
-                }, t.prototype.render = function() {
-                    var e = this.props.data.featuredStreams || [],
-                        t = Object(f.a)(e),
-                        n = this.props.data.featuredVideos || [],
-                        r = Object(f.b)(n);
-                    if (t.length > 0 && t.splice(t.length - r.length), this.props.shouldMixContent && r.length > 0) {
-                        var a = 6 - r.length,
-                            o = t.splice(a);
-                        t = t.concat(r).concat(o)
-                    } else t = t.concat(r);
-                    var s = !(!this.props.data.loading && !this.props.data.error);
-                    return i(t, this.props.renderContext, s)
-                }, t.prototype.postRender = function() {
-                    this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
-                }, t = o.__decorate([Object(c.a)(p, {
-                    options: function() {
-                        return {
-                            variables: {
-                                language: l.n.intl.getLanguageCode()
-                            }
-                        }
-                    }
-                }), Object(g.c)("FeaturedContent")], t)
-            }(s.Component),
-            k = v
-    },
-    817: function(e, t, n) {
+    814: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -15494,7 +15047,7 @@ webpackJsonp([46], {
             e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention", e[e.Ban = 3] = "Ban", e[e.Timeout = 4] = "Timeout", e[e.AutoModRejectedPrompt = 5] = "AutoModRejectedPrompt", e[e.AutoModMessageRejected = 6] = "AutoModMessageRejected", e[e.AutoModMessageAllowed = 7] = "AutoModMessageAllowed", e[e.AutoModMessageDenied = 8] = "AutoModMessageDenied", e[e.Connected = 9] = "Connected", e[e.Disconnected = 10] = "Disconnected", e[e.Reconnect = 11] = "Reconnect", e[e.Hosting = 12] = "Hosting", e[e.Unhost = 13] = "Unhost", e[e.Subscription = 14] = "Subscription", e[e.Resubscription = 15] = "Resubscription", e[e.SubGift = 16] = "SubGift", e[e.Clear = 17] = "Clear", e[e.SubscriberOnlyMode = 18] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 19] = "FollowerOnlyMode", e[e.SlowMode = 20] = "SlowMode", e[e.EmoteOnlyMode = 21] = "EmoteOnlyMode", e[e.RoomMods = 22] = "RoomMods", e[e.RoomState = 23] = "RoomState", e[e.Raid = 24] = "Raid", e[e.Unraid = 25] = "Unraid", e[e.Notice = 26] = "Notice", e[e.Info = 27] = "Info", e[e.BadgesUpdated = 28] = "BadgesUpdated", e[e.Purchase = 29] = "Purchase"
         }(i || (i = {}))
     },
-    820: function(e, t, n) {
+    817: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -15554,7 +15107,7 @@ webpackJsonp([46], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    822: function(e, t, n) {
+    819: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -15614,7 +15167,7 @@ webpackJsonp([46], {
             }
         }
         var r = n(0),
-            a = n(20),
+            a = n(21),
             o = n(1),
             s = n(10),
             l = n(2);
@@ -15622,7 +15175,7 @@ webpackJsonp([46], {
             return i
         })
     },
-    829: function(e, t, n) {
+    826: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -15632,11 +15185,11 @@ webpackJsonp([46], {
             e.Admin = "admin", e.GlobalMod = "global_mod", e.Moderator = "mod", e.Owner = "owner", e.Staff = "staff", e.Subscriber = "subscriber", e.User = ""
         }(i || (i = {}))
     },
-    869: function(e, t, n) {
+    866: function(e, t, n) {
         "use strict";
         var i = n(12),
             r = n(1074),
-            a = n(924),
+            a = n(921),
             o = function(e, t) {
                 var n = s(e);
                 Object(a.c)(i.SpadeEventType.FeedCardImpression, n, t)
@@ -15676,7 +15229,7 @@ webpackJsonp([46], {
                         }
                 }
             },
-            l = n(1001),
+            l = n(998),
             c = function(e, t) {
                 var n = u(e.embed);
                 Object(a.c)(i.SpadeEventType.FeedCardEmbedImpression, n, t)
@@ -15831,7 +15384,7 @@ webpackJsonp([46], {
             return h
         })
     },
-    870: function(e, t, n) {
+    867: function(e, t, n) {
         (function(e, i) {
             var r;
             (function() {
@@ -20040,9 +19593,9 @@ webpackJsonp([46], {
                     return Qn
                 }.call(t, n, t, i)) !== re && (i.exports = r)
             }).call(this)
-        }).call(t, n(35), n(443)(e))
+        }).call(t, n(34), n(444)(e))
     },
-    872: function(e, t, n) {
+    869: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -20066,7 +19619,7 @@ webpackJsonp([46], {
             e[e.Stream = 1] = "Stream", e[e.Vod = 2] = "Vod"
         }(s || (s = {}))
     },
-    883: function(e, t, n) {
+    880: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -20078,8 +19631,8 @@ webpackJsonp([46], {
             a = n(0),
             o = n(1),
             s = n(2),
-            l = n(111),
-            c = n(381),
+            l = n(112),
+            c = n(382),
             u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
             d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
             m = function(e) {
@@ -20184,7 +19737,7 @@ webpackJsonp([46], {
             return f
         })
     },
-    901: function(e, t, n) {
+    898: function(e, t, n) {
         "use strict";
 
         function i() {
@@ -20267,7 +19820,7 @@ webpackJsonp([46], {
                 }(l.Component)
             }
         }
-        var a = n(924),
+        var a = n(921),
             o = n(0),
             s = n(15),
             l = n(1),
@@ -20282,59 +19835,7 @@ webpackJsonp([46], {
             return r
         })
     },
-    905: function(e, t, n) {
-        "use strict";
-        var i = n(0),
-            r = n(1),
-            a = n(2),
-            o = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        assignmentDetermined: !1,
-                        assignment: ""
-                    }, t.logger = a.n.logger.withCategory("component-experiment"), t.didUnmount = !1, t
-                }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return i.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, a.n.experiments.getAssignment(this.props.name, this.props.channel ? {
-                                        channel: this.props.channel
-                                    } : {})];
-                                case 1:
-                                    return e = t.sent(), this.didUnmount ? [2] : (e && this.props.assignments[e] ? this.logger.debug("Displaying component for experiment", {
-                                        name: this.props.name,
-                                        assignment: e
-                                    }) : this.logger.debug("Displaying fallback component for experiment", {
-                                        name: this.props.name,
-                                        assignment: e
-                                    }), this.setState({
-                                        assignment: e,
-                                        assignmentDetermined: !0
-                                    }), [2])
-                            }
-                        })
-                    })
-                }, t.prototype.componentWillUnmount = function() {
-                    this.didUnmount = !0
-                }, t.prototype.render = function() {
-                    if (!this.state.assignmentDetermined) return this.props.loader();
-                    if (this.props.assignments[this.state.assignment]) {
-                        var e = this.props.assignments[this.state.assignment]();
-                        return "string" == typeof e ? (window.location.replace(e), null) : e
-                    }
-                    return this.props.assignments.fallback()
-                }, t
-            }(r.Component),
-            s = o;
-        n.d(t, "a", function() {
-            return s
-        })
-    },
-    907: function(e, t, n) {
+    903: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -20421,12 +19922,12 @@ webpackJsonp([46], {
         }
         t.b = i, t.a = r, t.c = a;
         var o = n(0),
-            s = n(829),
-            l = n(817),
-            c = n(130),
-            u = n(382)
+            s = n(826),
+            l = n(814),
+            c = n(131),
+            u = n(383)
     },
-    908: function(e, t) {
+    904: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -20503,7 +20004,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    913: function(e, t, n) {
+    909: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -20515,11 +20016,11 @@ webpackJsonp([46], {
         var r = n(6),
             a = n(0),
             o = n(1),
-            s = n(380),
+            s = n(381),
             l = n(143),
             c = n(144),
-            u = n(395),
-            d = n(448),
+            u = n(396),
+            d = n(449),
             m = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -20567,7 +20068,59 @@ webpackJsonp([46], {
             return p
         })
     },
-    924: function(e, t, n) {
+    910: function(e, t, n) {
+        "use strict";
+        var i = n(0),
+            r = n(1),
+            a = n(2),
+            o = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        assignmentDetermined: !1,
+                        assignment: ""
+                    }, t.logger = a.n.logger.withCategory("component-experiment"), t.didUnmount = !1, t
+                }
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return i.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return [4, a.n.experiments.getAssignment(this.props.name, this.props.channel ? {
+                                        channel: this.props.channel
+                                    } : {})];
+                                case 1:
+                                    return e = t.sent(), this.didUnmount ? [2] : (e && this.props.assignments[e] ? this.logger.debug("Displaying component for experiment", {
+                                        name: this.props.name,
+                                        assignment: e
+                                    }) : this.logger.debug("Displaying fallback component for experiment", {
+                                        name: this.props.name,
+                                        assignment: e
+                                    }), this.setState({
+                                        assignment: e,
+                                        assignmentDetermined: !0
+                                    }), [2])
+                            }
+                        })
+                    })
+                }, t.prototype.componentWillUnmount = function() {
+                    this.didUnmount = !0
+                }, t.prototype.render = function() {
+                    if (!this.state.assignmentDetermined) return this.props.loader();
+                    if (this.props.assignments[this.state.assignment]) {
+                        var e = this.props.assignments[this.state.assignment]();
+                        return "string" == typeof e ? (window.location.replace(e), null) : e
+                    }
+                    return this.props.assignments.fallback()
+                }, t
+            }(r.Component),
+            s = o;
+        n.d(t, "a", function() {
+            return s
+        })
+    },
+    921: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -20608,9 +20161,9 @@ webpackJsonp([46], {
         }), t.b = i, n.d(t, "c", function() {
             return l
         });
-        var r, a = n(870),
+        var r, a = n(867),
             o = (n.n(a), n(2)),
-            s = n(1001);
+            s = n(998);
         ! function(e) {
             e.Create = "create", e.Remove = "remove"
         }(r || (r = {}));
@@ -20618,12 +20171,12 @@ webpackJsonp([46], {
             o.m.track(e, Object(a.merge)(t, n))
         }
     },
-    925: function(e, t, n) {
+    922: function(e, t, n) {
         "use strict";
         var i, r = n(0),
             a = n(1),
             o = n(2),
-            s = n(378),
+            s = n(380),
             l = n(5),
             c = n(3),
             u = (n(1075), "embed-overlay");
@@ -20744,7 +20297,7 @@ webpackJsonp([46], {
             return p
         })
     },
-    929: function(e, t) {
+    926: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -20831,7 +20384,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    999: function(e, t, n) {
+    996: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -20862,6 +20415,476 @@ webpackJsonp([46], {
         var o = "carouselPlayer.CAROUSEL_REGISTERED",
             s = "carouselPlayer.CAROUSEL_UNREGISTERED",
             l = "carouselPlayer.CAROUSEL_PAUSED"
+    },
+    997: function(e, t, n) {
+        "use strict";
+        n.d(t, "c", function() {
+            return r
+        }), n.d(t, "e", function() {
+            return a
+        }), n.d(t, "d", function() {
+            return o
+        }), n.d(t, "a", function() {
+            return s
+        }), n.d(t, "b", function() {
+            return l
+        }), n.d(t, "g", function() {
+            return m
+        }), n.d(t, "h", function() {
+            return p
+        }), n.d(t, "f", function() {
+            return f
+        }), n.d(t, "i", function() {
+            return g
+        });
+        var i, r = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING",
+            a = "TWILIGHT_WEB_ONBOARDING_FOR_YOU",
+            o = "TWILIGHT_WEB_ONBOARDING",
+            s = "control";
+        ! function(e) {
+            e.Skip = "skip", e.NoSkip = "no_skip"
+        }(i || (i = {}));
+        var l, c = new Set([i.Skip.toString(), i.NoSkip.toString()]);
+        ! function(e) {
+            e.First = "first", e.Last = "last"
+        }(l || (l = {}));
+        var u, d = new Set([l.First.toString(), l.Last.toString()]);
+        ! function(e) {
+            e.Yes = "yes"
+        }(u || (u = {}));
+        var m = function(e) {
+                return !!e && d.has(e)
+            },
+            p = function(e, t) {
+                return !!e && c.has(e) && m(t)
+            },
+            f = function(e, t, n) {
+                return !!e && c.has(e) && m(t) && n === u.Yes
+            },
+            g = function(e) {
+                return e.getTime() >= h().getTime()
+            },
+            h = function() {
+                return new Date((new Date).getTime() - 12096e5)
+            }
+    },
+    998: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            var t = e.split(":");
+            return t.length < 2 ? {
+                type: "",
+                id: ""
+            } : {
+                type: t[0],
+                id: t[1]
+            }
+        }
+        n.d(t, "a", function() {
+            return r
+        }), n.d(t, "b", function() {
+            return a
+        }), n.d(t, "c", function() {
+            return o
+        }), n.d(t, "d", function() {
+            return s
+        }), n.d(t, "e", function() {
+            return l
+        }), t.f = i;
+        var r = "clip",
+            a = "url",
+            o = "post",
+            s = "stream",
+            l = "vod"
+    },
+    999: function(e, t, n) {
+        function i(e) {
+            return e.filter(function(e) {
+                if ("FragmentDefinition" !== e.kind) return !0;
+                var t = e.name.value;
+                return !a[t] && (a[t] = !0, !0)
+            })
+        }
+        var r = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "feedItemPost"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "Post"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "id"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "createdAt"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "body"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "content"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "emotes"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "FragmentSpread",
+                                        name: {
+                                            kind: "Name",
+                                            value: "embeddedEmote"
+                                        },
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "reactions"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "emote"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "token"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "setID"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "count"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "self"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "hasReacted"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "embeds"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "FragmentSpread",
+                                name: {
+                                    kind: "Name",
+                                    value: "feedItemClip"
+                                },
+                                directives: []
+                            }, {
+                                kind: "FragmentSpread",
+                                name: {
+                                    kind: "Name",
+                                    value: "feedItemVideo"
+                                },
+                                directives: []
+                            }, {
+                                kind: "InlineFragment",
+                                typeCondition: {
+                                    kind: "NamedType",
+                                    name: {
+                                        kind: "Name",
+                                        value: "PhotoOEmbed"
+                                    }
+                                },
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "title"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "inputURL"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "providerName"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "thumbnail"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "url"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }, {
+                                kind: "InlineFragment",
+                                typeCondition: {
+                                    kind: "NamedType",
+                                    name: {
+                                        kind: "Name",
+                                        value: "VideoOEmbed"
+                                    }
+                                },
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "title"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "inputURL"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "providerName"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "thumbnail"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "url"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "html"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "author"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "FragmentSpread",
+                                name: {
+                                    kind: "Name",
+                                    value: "feedUser"
+                                },
+                                directives: []
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 803
+            }
+        };
+        r.loc.source = {
+            body: '#import "twilight/features/chat/models/embedded-emote-fragment.gql"\n#import "twilight/features/feed/models/clip-fragment.gql"\n#import "twilight/features/feed/models/user-fragment.gql"\n#import "twilight/features/feed/models/video-fragment.gql"\n\nfragment feedItemPost on Post {\n  id\n  createdAt\n  body {\n    content\n    emotes {\n      ...embeddedEmote\n    }\n  }\n  reactions {\n    emote {\n      id\n      token\n      setID\n    }\n    count\n    self {\n      hasReacted\n    }\n  }\n  embeds {\n    ...feedItemClip\n    ...feedItemVideo\n    ... on PhotoOEmbed {\n      title\n      inputURL\n      providerName\n      thumbnail {\n        url\n      }\n    }\n    ... on VideoOEmbed {\n      title\n      inputURL\n      providerName\n      thumbnail {\n        url\n      }\n      html\n    }\n  }\n  author {\n    ...feedUser\n  }\n}\n',
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        var a = {};
+        r.definitions = r.definitions.concat(i(n(904).definitions)), r.definitions = r.definitions.concat(i(n(1021).definitions)), r.definitions = r.definitions.concat(i(n(926).definitions)), r.definitions = r.definitions.concat(i(n(1022).definitions)), e.exports = r
     }
 });
-//# sourceMappingURL=pages.front-1a9cffb4a7fc4003b55ad469f422668a.js.map
+//# sourceMappingURL=pages.front-35b42c4a44efc03134e098966523068a.js.map

@@ -9,11 +9,11 @@ webpackJsonp([60], {
         }
         var i = n(6),
             o = n(9),
-            a = n(38),
+            a = n(37),
             s = n(0),
             l = n(1),
             c = n(2),
-            u = n(113),
+            u = n(114),
             d = n(3),
             h = (n(231), function(e) {
                 function t() {
@@ -50,7 +50,7 @@ webpackJsonp([60], {
             return p
         })
     },
-    111: function(e, t, n) {
+    112: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -107,7 +107,7 @@ webpackJsonp([60], {
                 }, e
             }()
     },
-    112: function(e, t, n) {
+    113: function(e, t, n) {
         "use strict";
         var r = n(0),
             i = n(1),
@@ -174,7 +174,7 @@ webpackJsonp([60], {
             return l
         })
     },
-    113: function(e, t, n) {
+    114: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -197,11 +197,11 @@ webpackJsonp([60], {
         }
         var o = n(6),
             a = n(91),
-            s = n(52),
+            s = n(51),
             l = n(0),
             c = n(1),
-            u = n(348),
-            d = n(34),
+            u = n(349),
+            d = n(33),
             h = (n(187), "js-modal-backdrop"),
             p = Object(o.a)(i)(r);
         n.d(t, "a", function() {
@@ -210,7 +210,7 @@ webpackJsonp([60], {
             return h
         })
     },
-    114: function(e, t, n) {
+    115: function(e, t, n) {
         "use strict";
         var r, i = n(0),
             o = n(4),
@@ -309,7 +309,7 @@ webpackJsonp([60], {
             return c
         })
     },
-    116: function(e, t) {
+    117: function(e, t) {
         function n(e, t, n) {
             switch (n.length) {
                 case 0:
@@ -458,7 +458,7 @@ webpackJsonp([60], {
             });
         e.exports = D
     },
-    117: function(e, t, n) {
+    118: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -560,7 +560,7 @@ webpackJsonp([60], {
             return i.TwitchDataType
         })
     },
-    125: function(e, t, n) {
+    126: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -590,13 +590,13 @@ webpackJsonp([60], {
         });
         var r = n(0),
             i = n(14),
-            o = n(300),
+            o = n(301),
             a = n(150),
             s = n(151);
         window.IntlMessageFormat = a, window.IntlRelativeFormat = s;
         var l = function() {
                 function e() {
-                    this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "bf7e4b36-3f35-4d0b-a926-7983ece50ef6", this.spadeBatchWindow = 1e3, this.locales = [{
+                    this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "95ca3ebc-e5bf-47e0-aa26-2b3683df8770", this.spadeBatchWindow = 1e3, this.locales = [{
                         name: "English",
                         languageCode: "en",
                         locale: "en-US",
@@ -614,70 +614,70 @@ webpackJsonp([60], {
                         languageCode: "da",
                         locale: "da-DK",
                         loader: function() {
-                            return n.e(27).then(n.bind(null, 2017))
+                            return n.e(27).then(n.bind(null, 2019))
                         }
                     }, {
                         name: "Deutsch",
                         languageCode: "de",
                         locale: "de-DE",
                         loader: function() {
-                            return n.e(26).then(n.bind(null, 2018))
+                            return n.e(26).then(n.bind(null, 2020))
                         }
                     }, {
                         name: "English - UK",
                         languageCode: "en-gb",
                         locale: "en-GB",
                         loader: function() {
-                            return n.e(31).then(n.bind(null, 2019))
+                            return n.e(31).then(n.bind(null, 2021))
                         }
                     }, {
                         name: "Español - España",
                         languageCode: "es",
                         locale: "es-ES",
                         loader: function() {
-                            return n.e(23).then(n.bind(null, 2020))
+                            return n.e(23).then(n.bind(null, 2022))
                         }
                     }, {
                         name: "Español - Latinoamérica",
                         languageCode: "es-mx",
                         locale: "es-MX",
                         loader: function() {
-                            return n.e(24).then(n.bind(null, 2021))
+                            return n.e(24).then(n.bind(null, 2023))
                         }
                     }, {
                         name: "Français",
                         languageCode: "fr",
                         locale: "fr-FR",
                         loader: function() {
-                            return n.e(21).then(n.bind(null, 2022))
+                            return n.e(21).then(n.bind(null, 2024))
                         }
                     }, {
                         name: "Italiano",
                         languageCode: "it",
                         locale: "it-IT",
                         loader: function() {
-                            return n.e(18).then(n.bind(null, 2023))
+                            return n.e(18).then(n.bind(null, 2025))
                         }
                     }, {
                         name: "Magyar",
                         languageCode: "hu",
                         locale: "hu-HU",
                         loader: function() {
-                            return n.e(19).then(n.bind(null, 2024))
+                            return n.e(19).then(n.bind(null, 2026))
                         }
                     }, {
                         name: "Nederlands",
                         languageCode: "nl",
                         locale: "nl-NL",
                         loader: function() {
-                            return n.e(15).then(n.bind(null, 2025))
+                            return n.e(15).then(n.bind(null, 2027))
                         }
                     }, {
                         name: "Norsk",
                         languageCode: "no",
                         locale: "no-NO",
                         loader: function() {
-                            return n.e(14).then(n.bind(null, 2026))
+                            return n.e(14).then(n.bind(null, 2028))
                         },
                         cldrLocale: "nn"
                     }, {
@@ -685,14 +685,14 @@ webpackJsonp([60], {
                         languageCode: "pl",
                         locale: "pl-PL",
                         loader: function() {
-                            return n.e(13).then(n.bind(null, 2027))
+                            return n.e(13).then(n.bind(null, 2029))
                         }
                     }, {
                         name: "Português",
                         languageCode: "pt",
                         locale: "pt-PT",
                         loader: function() {
-                            return n.e(11).then(n.bind(null, 2028))
+                            return n.e(11).then(n.bind(null, 2030))
                         },
                         cldrLocale: "pt-pt"
                     }, {
@@ -700,7 +700,7 @@ webpackJsonp([60], {
                         languageCode: "pt-br",
                         locale: "pt-BR",
                         loader: function() {
-                            return n.e(12).then(n.bind(null, 2029))
+                            return n.e(12).then(n.bind(null, 2031))
                         },
                         cldrLocale: "pt"
                     }, {
@@ -708,84 +708,84 @@ webpackJsonp([60], {
                         languageCode: "sk",
                         locale: "sk-SK",
                         loader: function() {
-                            return n.e(8).then(n.bind(null, 2030))
+                            return n.e(8).then(n.bind(null, 2032))
                         }
                     }, {
                         name: "Suomi",
                         languageCode: "fi",
                         locale: "fi-FI",
                         loader: function() {
-                            return n.e(22).then(n.bind(null, 2031))
+                            return n.e(22).then(n.bind(null, 2033))
                         }
                     }, {
                         name: "Svenska",
                         languageCode: "sv",
                         locale: "sv-SE",
                         loader: function() {
-                            return n.e(7).then(n.bind(null, 2032))
+                            return n.e(7).then(n.bind(null, 2034))
                         }
                     }, {
                         name: "Tiếng Việt",
                         languageCode: "vi",
                         locale: "vi-VN",
                         loader: function() {
-                            return n.e(4).then(n.bind(null, 2033))
+                            return n.e(4).then(n.bind(null, 2035))
                         }
                     }, {
                         name: "Türkçe",
                         languageCode: "tr",
                         locale: "tr-TR",
                         loader: function() {
-                            return n.e(5).then(n.bind(null, 2034))
+                            return n.e(5).then(n.bind(null, 2036))
                         }
                     }, {
                         name: "Čeština",
                         languageCode: "cs",
                         locale: "cs-CZ",
                         loader: function() {
-                            return n.e(28).then(n.bind(null, 2035))
+                            return n.e(28).then(n.bind(null, 2037))
                         }
                     }, {
                         name: "Ελληνικά",
                         languageCode: "el",
                         locale: "el-GR",
                         loader: function() {
-                            return n.e(25).then(n.bind(null, 2036))
+                            return n.e(25).then(n.bind(null, 2038))
                         }
                     }, {
                         name: "Български",
                         languageCode: "bg",
                         locale: "bg-BG",
                         loader: function() {
-                            return n.e(29).then(n.bind(null, 2037))
+                            return n.e(29).then(n.bind(null, 2039))
                         }
                     }, {
                         name: "Русский",
                         languageCode: "ru",
                         locale: "ru-RU",
                         loader: function() {
-                            return n.e(9).then(n.bind(null, 2038))
+                            return n.e(9).then(n.bind(null, 2040))
                         }
                     }, {
                         name: "العربية",
                         languageCode: "ar",
                         locale: "ar-SA",
                         loader: function() {
-                            return n.e(30).then(n.bind(null, 2039))
+                            return n.e(30).then(n.bind(null, 2041))
                         }
                     }, {
                         name: "ภาษาไทย",
                         languageCode: "th",
                         locale: "th-TH",
                         loader: function() {
-                            return n.e(6).then(n.bind(null, 2040))
+                            return n.e(6).then(n.bind(null, 2042))
                         }
                     }, {
                         name: "中文 简体",
                         languageCode: "zh-cn",
                         locale: "zh-CN",
                         loader: function() {
-                            return n.e(3).then(n.bind(null, 2041))
+                            return n.e(3).then(n.bind(null, 2043))
                         },
                         cldrLocale: "zh-hans"
                     }, {
@@ -793,7 +793,7 @@ webpackJsonp([60], {
                         languageCode: "zh-tw",
                         locale: "zh-TW",
                         loader: function() {
-                            return n.e(2).then(n.bind(null, 2042))
+                            return n.e(2).then(n.bind(null, 2044))
                         },
                         cldrLocale: "zh-hant"
                     }, {
@@ -801,28 +801,28 @@ webpackJsonp([60], {
                         languageCode: "ja",
                         locale: "ja-JP",
                         loader: function() {
-                            return n.e(17).then(n.bind(null, 2043))
+                            return n.e(17).then(n.bind(null, 2045))
                         }
                     }, {
                         name: "한국어",
                         languageCode: "ko",
                         locale: "ko-KR",
                         loader: function() {
-                            return n.e(16).then(n.bind(null, 2044))
+                            return n.e(16).then(n.bind(null, 2046))
                         }
                     }, {
                         name: "हिंदी",
                         languageCode: "hi",
                         locale: "hi-IN",
                         loader: function() {
-                            return n.e(20).then(n.bind(null, 2045))
+                            return n.e(20).then(n.bind(null, 2047))
                         }
                     }, {
                         name: "Română",
                         languageCode: "ro",
                         locale: "ro-RO",
                         loader: function() {
-                            return n.e(10).then(n.bind(null, 2046))
+                            return n.e(10).then(n.bind(null, 2048))
                         }
                     }], this.passportAuthURL = "https://api.twitch.tv/kraken/oauth2/authorize", this.passportScopes = ["chat_login", "user_read", "user_subscriptions", "user_presence_friends_read"], this.defaultAvatarURL = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png", this.defaultStreamPreviewURL = "https://static-cdn.jtvnw.net/ttv-static/404_preview-160x90.jpg", this.defaultBoxArtURL = "https://static-cdn.jtvnw.net/ttv-boxart/404_boxart.png", this.defaultCollectionPreviewURL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png", this.hostingCacheDelay = 2001, this.legacyClientID = "jzkbprff40iqj646a697cyrvl0zt2m6", this.algoliaApplicationID = "XLUO134HOR", this.algoliaAPIKey = "d157112f6fc2cab93ce4b01227c80a6d", this.forceNetworkLogging = !1, this.networkLoggingHostNames = ["twitch.tv", "localhost", "jtvnw.net", "twitchcdn.net", "twitchcdn.tech", "twitchcdn-shadow.net", "twitchsvc.net", "twitchsvc.tech", "twitchsvc-shadow.net"], this.defaultNetworkLoggingThreshold = .2, this.layoutCacheKey = "TwitchCache:Layout", this.forceComponentBenchmarking = !1, this.defaultComponentBenchmarkingThreshold = .1, this.forceBenchmarkingTools = !1, this.dfpNetworkCode = "3576121", this.krakenEndpoint = "https://api.twitch.tv/kraken", this.defaultAPIVersion = "5", this.adblockAccount = 58, this.adblockID = "qFEaZsFQnwEdUIs", this.forceMinConsoleLogLevelKey = "twilight.minConsoleLogLevel", this.tryPrimeURI = "https://twitch.amazon.com/prime", this.experimentsOverrideCookie = "experiment_overrides", this.tmiHost = "irc-ws.chat.twitch.tv", this.persistentPlayerEnabledKey = "persistenceEnabled"
                 }
@@ -845,7 +845,7 @@ webpackJsonp([60], {
         (function(e) {
             var n = "object" == typeof e && e && e.Object === Object && e;
             t.a = n
-        }).call(t, n(35))
+        }).call(t, n(34))
     },
     17: function(e, t, n) {
         "use strict";
@@ -898,7 +898,7 @@ webpackJsonp([60], {
         t.e = i, t.d = o, t.c = a, t.a = s, t.b = l;
         var c = n(0),
             u = n(2),
-            d = n(53),
+            d = n(52),
             h = function() {
                 return {
                     authInitialized: !1,
@@ -923,7 +923,7 @@ webpackJsonp([60], {
         }
         var i = n(0),
             o = n(24),
-            a = n(343),
+            a = n(344),
             s = n(59),
             l = n(96),
             c = n(73),
@@ -1455,9 +1455,9 @@ webpackJsonp([60], {
         });
         var o = n(0),
             a = n(2),
-            s = n(125);
+            s = n(126);
         a.n.store.registerReducer("ads", i);
-        n(91), n(17), n(52)
+        n(91), n(17), n(51)
     },
     187: function(e, t) {},
     188: function(e, t) {},
@@ -1697,10 +1697,10 @@ webpackJsonp([60], {
             }
         }
         t.a = r;
-        var a = n(20),
+        var a = n(21),
             s = (n.n(a), n(2)),
             l = n(14),
-            c = n(33),
+            c = n(39),
             u = n(45),
             d = n(44)
     },
@@ -1915,7 +1915,7 @@ webpackJsonp([60], {
     250: function(e, t, n) {
         "use strict";
         var r = n(0),
-            i = n(20),
+            i = n(21),
             o = n(1),
             a = n(2),
             s = n(7),
@@ -2101,7 +2101,7 @@ webpackJsonp([60], {
                 }, t = r.__decorate([Object(u.c)("IVW")], t)
             }(o.Component),
             y = Object(p.f)(b),
-            _ = n(36),
+            _ = n(35),
             E = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -2314,7 +2314,7 @@ webpackJsonp([60], {
             }
         }
         var i = n(70),
-            o = n(114),
+            o = n(115),
             a = n(6),
             s = n(0),
             l = n(15),
@@ -5119,9 +5119,9 @@ webpackJsonp([60], {
             return r
         })
     },
-    302: function(e, t) {},
-    304: function(e, t) {},
+    303: function(e, t) {},
     305: function(e, t) {},
+    306: function(e, t) {},
     31: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -5132,7 +5132,7 @@ webpackJsonp([60], {
             e[e.Light = 0] = "Light", e[e.Dark = 1] = "Dark"
         }(r || (r = {}))
     },
-    316: function(e, t, n) {
+    317: function(e, t, n) {
         (function(t) {
             function n(e, t, n) {
                 switch (n.length) {
@@ -5255,9 +5255,69 @@ webpackJsonp([60], {
                     return null == e ? {} : a(e, r(o(t, 1), c))
                 });
             e.exports = A
-        }).call(t, n(35))
+        }).call(t, n(34))
     },
     33: function(e, t, n) {
+        "use strict";
+
+        function r() {
+            return l.k.get(u, o())
+        }
+
+        function i(e) {
+            l.k.set(u, e)
+        }
+
+        function o() {
+            var e = l.k.get(d, {
+                activeTheme: ""
+            });
+            return e && "theme--dark" === e.activeTheme ? c.a.Dark : c.a.Light
+        }
+
+        function a(e) {
+            switch (e) {
+                case c.a.Dark:
+                    return "theme--dark";
+                default:
+                    return ""
+            }
+        }
+
+        function s(e) {
+            return e === c.a.Light ? "theme--light" : a(e)
+        }
+        t.b = r, t.d = i, t.c = a, t.a = s;
+        var l = n(2),
+            c = n(31),
+            u = "twilight.theme",
+            d = "storage:theme"
+    },
+    37: function(e, t, n) {
+        "use strict";
+
+        function r(e, t) {
+            return {
+                type: o,
+                modalComponent: e,
+                modalProps: t
+            }
+        }
+
+        function i() {
+            return {
+                type: a
+            }
+        }
+        n.d(t, "b", function() {
+            return o
+        }), t.d = r, n.d(t, "a", function() {
+            return a
+        }), t.c = i;
+        var o = "core.modal.MODAL_SHOWN",
+            a = "core.ui.MODAL_CLOSED"
+    },
+    39: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -5536,7 +5596,7 @@ webpackJsonp([60], {
         var _ = n(18),
             E = n(68),
             k = n(45),
-            C = n(49),
+            C = n(54),
             S = n(12),
             L = n(3),
             T = (n(233), 5e3),
@@ -5685,72 +5745,12 @@ webpackJsonp([60], {
                     }))
                 }, t
             }(v.Component),
-            R = n(38),
-            z = n(53),
+            R = n(37),
+            z = n(52),
             N = n(17),
             I = n(73),
             M = n(234);
         t.f = i, t.h = o, t.g = a, t.a = s, t.d = l, t.c = c, t.b = u, t.e = d
-    },
-    34: function(e, t, n) {
-        "use strict";
-
-        function r() {
-            return l.k.get(u, o())
-        }
-
-        function i(e) {
-            l.k.set(u, e)
-        }
-
-        function o() {
-            var e = l.k.get(d, {
-                activeTheme: ""
-            });
-            return e && "theme--dark" === e.activeTheme ? c.a.Dark : c.a.Light
-        }
-
-        function a(e) {
-            switch (e) {
-                case c.a.Dark:
-                    return "theme--dark";
-                default:
-                    return ""
-            }
-        }
-
-        function s(e) {
-            return e === c.a.Light ? "theme--light" : a(e)
-        }
-        t.b = r, t.d = i, t.c = a, t.a = s;
-        var l = n(2),
-            c = n(31),
-            u = "twilight.theme",
-            d = "storage:theme"
-    },
-    38: function(e, t, n) {
-        "use strict";
-
-        function r(e, t) {
-            return {
-                type: o,
-                modalComponent: e,
-                modalProps: t
-            }
-        }
-
-        function i() {
-            return {
-                type: a
-            }
-        }
-        n.d(t, "b", function() {
-            return o
-        }), t.d = r, n.d(t, "a", function() {
-            return a
-        }), t.c = i;
-        var o = "core.modal.MODAL_SHOWN",
-            a = "core.ui.MODAL_CLOSED"
     },
     40: function(e, t, n) {
         "use strict";
@@ -5843,7 +5843,7 @@ webpackJsonp([60], {
             return v
         }), t.e = r, t.h = i, t.d = o, t.b = a, t.c = s, t.g = l, t.f = c;
         var u = n(0),
-            d = n(36),
+            d = n(35),
             h = (n.n(d), n(44)),
             p = "twilight-login-state",
             m = "api_token",
@@ -5857,36 +5857,6 @@ webpackJsonp([60], {
             b = u.__assign({}, w, {
                 expires: 365
             })
-    },
-    49: function(e, t, n) {
-        "use strict";
-
-        function r(e, t) {
-            var n = {
-                action: t.action,
-                auth_ux: "modal",
-                type: t.type,
-                nonce: t.nonce
-            };
-            a.n.tracking.track(e, n)
-        }
-
-        function i() {
-            for (var e = "", t = 0; t < s; t++) {
-                var n = Math.floor(Math.random() * l.length);
-                e += l.charAt(n)
-            }
-            return e
-        }
-        n.d(t, "a", function() {
-            return o
-        }), t.c = r, t.b = i;
-        var o, a = n(2),
-            s = 30,
-            l = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        ! function(e) {
-            e.BitsLandingPage = "bits_landing_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.EventFollowButton = "event_follow_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.HCGSignupButton = "hgc_signup_button", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SubsLandingPage = "subs_landing_Page", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.VODComment = "vod_comment", e.VODOptions = "vod_options"
-        }(o || (o = {}))
     },
     5: function(e, t, n) {
         "use strict";
@@ -6575,7 +6545,7 @@ webpackJsonp([60], {
             return r
         })
     },
-    52: function(e, t, n) {
+    51: function(e, t, n) {
         "use strict";
 
         function r() {
@@ -6642,11 +6612,11 @@ webpackJsonp([60], {
         var a = n(0),
             s = n(2),
             l = n(31),
-            c = n(34),
+            c = n(33),
             u = n(58);
         s.n.store.registerReducer("ui", i)
     },
-    53: function(e, t, n) {
+    52: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -6688,6 +6658,36 @@ webpackJsonp([60], {
             l = "core.session.LANGUAGE_INITIALIZED",
             c = "core.session.FIRST_PAGE_LOADED",
             u = "core.session.INITIAL_AVAILABILITY_SET"
+    },
+    54: function(e, t, n) {
+        "use strict";
+
+        function r(e, t) {
+            var n = {
+                action: t.action,
+                auth_ux: "modal",
+                type: t.type,
+                nonce: t.nonce
+            };
+            a.n.tracking.track(e, n)
+        }
+
+        function i() {
+            for (var e = "", t = 0; t < s; t++) {
+                var n = Math.floor(Math.random() * l.length);
+                e += l.charAt(n)
+            }
+            return e
+        }
+        n.d(t, "a", function() {
+            return o
+        }), t.c = r, t.b = i;
+        var o, a = n(2),
+            s = 30,
+            l = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        ! function(e) {
+            e.BitsLandingPage = "bits_landing_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.EventFollowButton = "event_follow_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.HCGSignupButton = "hgc_signup_button", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SubsLandingPage = "subs_landing_Page", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.VODComment = "vod_comment", e.VODOptions = "vod_options"
+        }(o || (o = {}))
     },
     56: function(e, t, n) {
         "use strict";
@@ -6878,7 +6878,7 @@ webpackJsonp([60], {
         }
         t.a = r;
         var i = n(0),
-            o = n(20);
+            o = n(21);
         n.n(o)
     },
     69: function(e, t, n) {
@@ -6919,7 +6919,7 @@ webpackJsonp([60], {
         }
         var l = n(1),
             c = n(32),
-            u = n(115),
+            u = n(116),
             d = n(14),
             h = "https://ad.doubleclick.net/ddm/ad/",
             p = n(96),
@@ -6994,9 +6994,9 @@ webpackJsonp([60], {
                 }, e
             }(),
             v = n(0),
-            w = n(36),
-            b = n(341),
-            y = n(20),
+            w = n(35),
+            b = n(342),
+            y = n(21),
             _ = n(2),
             E = {
                 "298a5f39-228a-487a-ad06-422c18458403": "off",
@@ -7277,7 +7277,7 @@ webpackJsonp([60], {
                 }, e
             }(),
             N = n(12),
-            I = n(344),
+            I = n(345),
             M = function() {
                 function e(e, t) {
                     this.logger = e.withCategory("tmi");
@@ -7593,7 +7593,7 @@ webpackJsonp([60], {
                     }]), t
                 }, e
             }(),
-            F = n(345),
+            F = n(346),
             U = n.n(F),
             q = function() {
                 function e(e) {
@@ -7799,7 +7799,7 @@ webpackJsonp([60], {
                     }
                 }, e
             }(),
-            K = n(53),
+            K = n(52),
             Z = n(23),
             J = function() {
                 function e(t, n) {
@@ -8477,7 +8477,7 @@ webpackJsonp([60], {
                     }
                 }, e
             }(),
-            he = n(347);
+            he = n(348);
         n.d(t, "o", function() {
             return pe
         }), n.d(t, "a", function() {
@@ -8614,7 +8614,7 @@ webpackJsonp([60], {
             o = n(4),
             a = n(15),
             s = n(1),
-            l = n(350),
+            l = n(351),
             c = n(56),
             u = (n(237), 100);
         ! function(e) {
@@ -8767,14 +8767,14 @@ webpackJsonp([60], {
             })
         }
         t.a = r, t.b = i, t.c = o;
-        var a, s = n(36),
+        var a, s = n(35),
             l = (n.n(s), n(44)),
             c = "language"
     },
-    810: function(e, t, n) {
-        n(149), n(186), e.exports = n(811)
+    807: function(e, t, n) {
+        n(149), n(186), e.exports = n(808)
     },
-    811: function(e, t, n) {
+    808: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -8801,34 +8801,34 @@ webpackJsonp([60], {
         var a = n(1),
             s = n(22),
             l = n(2),
-            c = n(33),
+            c = n(39),
             u = n(17),
             d = n(235),
             h = n(6),
             p = n(10),
             m = n(0),
-            g = n(112),
+            g = n(113),
             f = n(14),
-            v = n(111),
+            v = n(112),
             w = n(236),
             b = n(5),
             y = n(243),
             _ = n(250),
             E = n(3),
-            k = (n(812), g.a.wrap(function() {
-                return n.e(38).then(n.bind(null, 2076))
+            k = (n(809), g.a.wrap(function() {
+                return n.e(38).then(n.bind(null, 2078))
             }, "PopoutChatPage")),
             C = g.a.wrap(function() {
-                return n.e(53).then(n.bind(null, 2077))
+                return n.e(53).then(n.bind(null, 2079))
             }, "BitsRoot"),
             S = g.a.wrap(function() {
-                return n.e(43).then(n.bind(null, 2079))
+                return n.e(43).then(n.bind(null, 2081))
             }, "SubsRoot"),
             L = g.a.wrap(function() {
-                return n.e(39).then(n.bind(null, 2082))
+                return n.e(39).then(n.bind(null, 2084))
             }, "EmbeddedChatPage"),
             T = g.a.wrap(function() {
-                return n.e(0).then(n.bind(null, 2083))
+                return n.e(0).then(n.bind(null, 2085))
             }, "CommunitySelectionPage"),
             x = function(e) {
                 function t() {
@@ -8885,13 +8885,13 @@ webpackJsonp([60], {
             z = x,
             N = Object(h.a)(r)(z),
             I = Object(p.f)(N);
-        l.a.optimizedBuild || n.e(1).then(n.bind(null, 2075)).then(function(e) {
+        l.a.optimizedBuild || n.e(1).then(n.bind(null, 2077)).then(function(e) {
             return window.Perf = e
         });
         var M, D = !1;
         M = l.n.store.getReduxStore().subscribe(o), Object(d.a)(), l.n.store.dispatch(Object(c.e)())
     },
-    812: function(e, t) {},
+    809: function(e, t) {},
     91: function(e, t, n) {
         "use strict";
 
@@ -8937,7 +8937,7 @@ webpackJsonp([60], {
         t.a = a, t.b = s;
         var l = n(2),
             c = n(18),
-            u = n(38),
+            u = n(37),
             d = {},
             h = new Map;
         l.n.store.registerReducer("modal", o)
@@ -8969,5 +8969,5 @@ webpackJsonp([60], {
             }, e
         }()
     }
-}, [810]);
-//# sourceMappingURL=minimal-ec34d8e984a7d78e805537d90ae7103a.js.map
+}, [807]);
+//# sourceMappingURL=minimal-e26d4ebfd94905611e53f545b58dea24.js.map
