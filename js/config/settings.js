@@ -58,6 +58,7 @@ window.__twilightSettings = {
     "twilight_routes": ["channel", "channelEvents", "clips", "collections", "community", "dashboardModeration", "directoryAllChannels", "directoryCommunities", "directoryCreative", "directoryFollowing", "directoryFollowingCommunities", "directoryFollowingChannels", "directoryFollowingGames", "directoryFollowingHosts", "directoryGame", "directoryGames", "directoryGameClips", "directoryGameVideos", "directoryVideos", "event", "index", "merchStore", "settingsNotifications", "video", "videos"],
     "twilight_routes_enabled": true,
     "twilight_routes_test_users": ["tanexion", "codecrshr", "adamar", "major_mosey", "kashinwins", "legypsy", "cathadan", "zenhaplo", "diresqrl", "kugleburg", "polygoose", "r_demerzel", "digisaint", "molu", "bennyguitar", "cresseye", "lunacyhatter", "lawls544", "delthios"],
+    "viewer_milestones_enabled": false,
     "experiments": {
         "011d1499-61b3-49b2-92b2-b2ffd353ef00": {
             "name": "twilight_sub_gifting",
