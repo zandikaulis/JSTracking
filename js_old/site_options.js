@@ -2135,13 +2135,13 @@ window.SiteOptions = {
         },
         "73e0d181-8d03-4456-ba76-c0f04c2b5da3": {
             "name": "android_animated_bits",
-            "v": 2209,
+            "v": 2632,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "active"
             }]
         },
