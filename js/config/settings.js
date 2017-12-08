@@ -163,13 +163,13 @@ window.__twilightSettings = {
         },
         "47597570-dd4e-4996-85eb-86db164cae9c": {
             "name": "TWILIGHT_AML_RANKING_FOLLOWS",
-            "v": 2627,
+            "v": 2629,
             "t": 2,
             "groups": [{
-                "weight": 75,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 25,
+                "weight": 50,
                 "value": "treatment"
             }]
         },
