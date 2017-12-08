@@ -743,6 +743,18 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "286aa215-8f95-4f9d-86f0-232fb96ec4f0": {
+            "name": "ios_latency_tracking",
+            "v": 2631,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "active"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "2884161f-6094-4189-b1aa-fd256468f96e": {
             "name": "PLAYER_NOTIFICATION_BUTTON",
             "v": 1421,
