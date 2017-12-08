@@ -1282,13 +1282,13 @@ window.SiteOptions = {
         },
         "47597570-dd4e-4996-85eb-86db164cae9c": {
             "name": "TWILIGHT_AML_RANKING_FOLLOWS",
-            "v": 2625,
+            "v": 2627,
             "t": 2,
             "groups": [{
-                "weight": 90,
+                "weight": 75,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 25,
                 "value": "treatment"
             }]
         },
