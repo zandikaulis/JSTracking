@@ -3335,13 +3335,13 @@ window.SiteOptions = {
         },
         "b60494e1-91c9-485c-82a4-b12026cafac3": {
             "name": "android_chat_refactor",
-            "v": 2476,
+            "v": 2634,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 50,
                 "value": "active"
             }]
         },
