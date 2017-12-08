@@ -38,6 +38,7 @@ window.__twilightSettings = {
     "passport_hosts": ["https://api.twitch.tv", "https://passport.twitch.tv", "https://passport-staging.internal.twitch.tv", "https://passport-dev1.internal.twitch.tv", "https://passport-dev2.internal.twitch.tv", "https://passport-dev3.internal.twitch.tv"],
     "player_routes_exact": ["store", "directory", "following", "popout", ""],
     "player_routes_startswith": ["event/", "store/", "collections/", "communities/", "directory/"],
+    "premiere_video_manager_public": false,
     "premiere_video_manager_staff": true,
     "prime_blocked_regions": ["IN", "IND", "CU", "CUB", "SD", "SUD", "IR", "IRN", "CHN", "CN", "SY", "SYR", "PRK", "KP"],
     "prime_landing_page_base_url": "https://twitch.amazon.com/prime",
@@ -161,13 +162,13 @@ window.__twilightSettings = {
         },
         "47597570-dd4e-4996-85eb-86db164cae9c": {
             "name": "TWILIGHT_AML_RANKING_FOLLOWS",
-            "v": 2625,
+            "v": 2627,
             "t": 2,
             "groups": [{
-                "weight": 90,
+                "weight": 75,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 25,
                 "value": "treatment"
             }]
         },
