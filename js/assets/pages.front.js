@@ -5647,7 +5647,7 @@ webpackJsonp([46], {
             return c
         })
     },
-    1917: function(e, t) {
+    1916: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -5818,7 +5818,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1918: function(e, t) {
+    1917: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -5959,7 +5959,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1919: function(e, t) {
+    1918: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6157,7 +6157,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1920: function(e, t) {
+    1919: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6476,7 +6476,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1921: function(e, t) {
+    1920: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6551,7 +6551,7 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1922: function(e, t, n) {
+    1921: function(e, t, n) {
         function i(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
@@ -6714,7 +6714,7 @@ webpackJsonp([46], {
         var a = {};
         r.definitions = r.definitions.concat(i(n(1329).definitions)), r.definitions = r.definitions.concat(i(n(926).definitions)), e.exports = r
     },
-    1923: function(e, t) {
+    1922: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -6875,8 +6875,8 @@ webpackJsonp([46], {
         };
         e.exports = n
     },
-    1924: function(e, t) {},
-    2073: function(e, t, n) {
+    1923: function(e, t) {},
+    2072: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -7013,7 +7013,7 @@ webpackJsonp([46], {
                 })], t)
             }(s.Component),
             U = x,
-            F = n(1917),
+            F = n(1916),
             D = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -7045,7 +7045,7 @@ webpackJsonp([46], {
                 }), Object(k.c)("FollowedGames")], t)
             }(s.Component),
             R = D,
-            I = n(1918),
+            I = n(1917),
             T = "twilight_onboarding",
             A = "twilight_onboarding-prompt_dismissed",
             j = {
@@ -7166,7 +7166,7 @@ webpackJsonp([46], {
             M = Object(y.a)(i)(B),
             H = n(923),
             q = n(1375),
-            z = n(1919),
+            z = n(1918),
             W = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -7248,7 +7248,7 @@ webpackJsonp([46], {
             Z = Array.from(J.keys()),
             X = ["28036688", "30672745", "31582795", "51533859", "63321379", "62983472", "29400754"],
             ee = n(272),
-            te = n(1920),
+            te = n(1919),
             ne = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -7476,7 +7476,7 @@ webpackJsonp([46], {
                 })], t)
             }(s.Component),
             ie = ne,
-            re = n(1921),
+            re = n(1920),
             ae = ["control", "on"],
             oe = function(e) {
                 function t() {
@@ -7540,7 +7540,7 @@ webpackJsonp([46], {
                 }));
                 return s.createElement(O.U, null, n)
             },
-            ve = n(1922),
+            ve = n(1921),
             ke = Object(fe.d)(function() {
                 return {
                     feed_type: "rec"
@@ -7674,7 +7674,7 @@ webpackJsonp([46], {
                 }), Object(k.c)("Pulse")], t)
             }(s.Component),
             be = _e,
-            Se = n(1923),
+            Se = n(1922),
             Ne = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -7708,7 +7708,7 @@ webpackJsonp([46], {
                 }), Object(k.c)("TopGames")], t)
             }(s.Component),
             Ee = Ne,
-            we = (n(1924), function(e) {
+            we = (n(1923), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -9911,7 +9911,7 @@ webpackJsonp([46], {
                         return k.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return b.a.buildType !== w.a.Production && y.parse(window.location.search).onsite_test_data ? [4, n.e(35).then(n.bind(null, 2053))] : [3, 2];
+                                    return b.a.buildType !== w.a.Production && y.parse(window.location.search).onsite_test_data ? [4, n.e(35).then(n.bind(null, 2052))] : [3, 2];
                                 case 1:
                                     e = i.sent().MockOnsiteNotifications, t = e.getMockOnsiteNotificationModels(3), this.setState({
                                         notifications: t
@@ -9998,7 +9998,7 @@ webpackJsonp([46], {
                             return k.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return this.listDataLoaded() && !this.hasInsertedListNotificationsData && b.a.buildType !== w.a.Production && y.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(35).then(n.bind(null, 2053))]) : [3, 2];
+                                        return this.listDataLoaded() && !this.hasInsertedListNotificationsData && b.a.buildType !== w.a.Production && y.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(35).then(n.bind(null, 2052))]) : [3, 2];
                                     case 1:
                                         e = t.sent().MockOnsiteNotifications, Object(O.d)(ge, k.__assign({}, this.props.listData.variables), function(t) {
                                             return t.currentUser.notifications.edges = e.getMockOnsiteNotificationEdges(y.parse(window.location.search).onsite_test_data), t
@@ -20888,4 +20888,4 @@ webpackJsonp([46], {
             l = "carouselPlayer.CAROUSEL_PAUSED"
     }
 });
-//# sourceMappingURL=pages.front-2bfd4deefb5e7edf21707a1ca6d54cb0.js.map
+//# sourceMappingURL=pages.front-3381a96036bacf675fe46958e76b4fb4.js.map
