@@ -2452,9 +2452,9 @@ webpackJsonp([51], {
             t.exports = Qt
         }).call(e, n(34))
     },
+    1925: function(t, e) {},
     1926: function(t, e) {},
-    1927: function(t, e) {},
-    1928: function(t, e) {
+    1927: function(t, e) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2671,8 +2671,8 @@ webpackJsonp([51], {
         };
         t.exports = n
     },
-    1929: function(t, e) {},
-    2075: function(t, e, n) {
+    1928: function(t, e) {},
+    2074: function(t, e, n) {
         "use strict";
 
         function i(t, e) {
@@ -2839,7 +2839,7 @@ webpackJsonp([51], {
                 }, e = h.__decorate([Object(x.c)("PhotoItem")], e)
             }(f.Component),
             N = M,
-            j = (n(1926), function(t) {
+            j = (n(1925), function(t) {
                 function e() {
                     return null !== t && t.apply(this, arguments) || this
                 }
@@ -2867,7 +2867,7 @@ webpackJsonp([51], {
             R = j,
             W = n(1313),
             A = n(31),
-            F = (n(1927), function(t) {
+            F = (n(1926), function(t) {
                 function e() {
                     var e = null !== t && t.apply(this, arguments) || this;
                     return e.handleClick = function(t) {
@@ -3005,8 +3005,8 @@ webpackJsonp([51], {
                 }, e = h.__decorate([Object(x.c)("ProductItem")], e)
             }(f.Component)),
             B = F,
-            H = n(1928),
-            U = (n(1929), function(t) {
+            H = n(1927),
+            U = (n(1928), function(t) {
                 function e() {
                     var e = null !== t && t.apply(this, arguments) || this;
                     return e.isSettingOn = function(t) {
@@ -3365,4 +3365,4 @@ webpackJsonp([51], {
         })
     }
 });
-//# sourceMappingURL=pages.store-5c49ec04683e39b113c5283ddc5b91b8.js.map
+//# sourceMappingURL=pages.store-b2e4d9def4109866d9a575c71b7bd3a5.js.map
