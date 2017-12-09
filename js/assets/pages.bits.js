@@ -1,5 +1,5 @@
 webpackJsonp([53], {
-    1246: function(e, t, n) {
+    1245: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -22,7 +22,7 @@ webpackJsonp([53], {
             o = n(9),
             l = n(54),
             s = n(39),
-            c = n(135),
+            c = n(132),
             d = n(17),
             p = n(0),
             u = n(4),
@@ -33,8 +33,8 @@ webpackJsonp([53], {
             v = n(31),
             k = n(5),
             _ = n(3),
-            E = n(1247),
-            y = (n(1248), function(e) {
+            E = n(1246),
+            y = (n(1247), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onCardClick = function() {
@@ -209,7 +209,7 @@ webpackJsonp([53], {
             return U
         })
     },
-    1247: function(e, t) {
+    1246: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -294,8 +294,8 @@ webpackJsonp([53], {
         };
         e.exports = n
     },
-    1248: function(e, t) {},
-    135: function(e, t, n) {
+    1247: function(e, t) {},
+    132: function(e, t, n) {
         "use strict";
 
         function a(e, t, n) {
@@ -309,12 +309,12 @@ webpackJsonp([53], {
         }), t.b = a;
         var r, i = n(33),
             o = n(58),
-            l = n(141);
+            l = n(138);
         ! function(e) {
             e[e.UserMenu = 1] = "UserMenu", e[e.TypedCommand = 2] = "TypedCommand"
         }(r || (r = {}))
     },
-    141: function(e, t, n) {
+    138: function(e, t, n) {
         "use strict";
 
         function a(e, t) {
@@ -367,8 +367,8 @@ webpackJsonp([53], {
         t.b = a, t.a = r;
         var i = n(2),
             o = n(31),
-            l = n(266),
-            s = n(135),
+            l = n(263),
+            s = n(132),
             c = n(12)
     },
     1550: function(e, t, n) {
@@ -378,7 +378,7 @@ webpackJsonp([53], {
             i = n(10),
             o = n(12),
             l = n(5),
-            s = n(1246),
+            s = n(1245),
             c = n(3),
             d = (n(1551), function(e) {
                 function t() {
@@ -429,7 +429,7 @@ webpackJsonp([53], {
         })
     },
     1551: function(e, t) {},
-    2080: function(e, t, n) {
+    2079: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -447,13 +447,13 @@ webpackJsonp([53], {
             o = n(17),
             l = n(0),
             s = n(1),
-            c = n(116),
-            d = n(117),
+            c = n(113),
+            d = n(114),
             p = n(33),
             u = n(1550),
             m = n(3),
             h = c.a.wrap(function() {
-                return n.e(62).then(n.bind(null, 2081))
+                return n.e(62).then(n.bind(null, 2080))
             }, "BitsLandingPage"),
             f = function(e) {
                 function t() {
@@ -499,7 +499,7 @@ webpackJsonp([53], {
             return k
         })
     },
-    266: function(e, t, n) {
+    263: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -546,4 +546,4 @@ webpackJsonp([53], {
         })
     }
 });
-//# sourceMappingURL=pages.bits-fd69395a75fb4ffc1ba9f147ee33dc3e.js.map
+//# sourceMappingURL=pages.bits-089e8c202a87ee3eac5c3c47a65fe41a.js.map
