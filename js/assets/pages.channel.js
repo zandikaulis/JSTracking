@@ -13804,7 +13804,7 @@ webpackJsonp([0], Array(20).concat([function(e, t, n) {
                     return b.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
-                                return S.a.buildType !== N.a.Production && k.parse(window.location.search).onsite_test_data ? [4, n.e(35).then(n.bind(null, 2052))] : [3, 2];
+                                return S.a.buildType !== N.a.Production && k.parse(window.location.search).onsite_test_data ? [4, n.e(35).then(n.bind(null, 2053))] : [3, 2];
                             case 1:
                                 e = i.sent().MockOnsiteNotifications, t = e.getMockOnsiteNotificationModels(3), this.setState({
                                     notifications: t
@@ -13891,7 +13891,7 @@ webpackJsonp([0], Array(20).concat([function(e, t, n) {
                         return b.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return this.listDataLoaded() && !this.hasInsertedListNotificationsData && S.a.buildType !== N.a.Production && k.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(35).then(n.bind(null, 2052))]) : [3, 2];
+                                    return this.listDataLoaded() && !this.hasInsertedListNotificationsData && S.a.buildType !== N.a.Production && k.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(35).then(n.bind(null, 2053))]) : [3, 2];
                                 case 1:
                                     e = t.sent().MockOnsiteNotifications, Object(O.d)(fe, b.__assign({}, this.props.listData.variables), function(t) {
                                         return t.currentUser.notifications.edges = e.getMockOnsiteNotificationEdges(k.parse(window.location.search).onsite_test_data), t
@@ -21112,79 +21112,79 @@ webpackJsonp([0], Array(20).concat([function(e, t, n) {
         be = n(15),
         ke = n(5),
         ye = ve.a.wrap(function() {
-            return n.e(48).then(n.bind(null, 2053))
+            return n.e(48).then(n.bind(null, 2054))
         }, "AnonFrontPage"),
         Se = ve.a.wrap(function() {
-            return n.e(32).then(n.bind(null, 2054))
+            return n.e(32).then(n.bind(null, 2055))
         }, "BrowseCommunitiesPage"),
         _e = ve.a.wrap(function() {
-            return n.e(32).then(n.bind(null, 2054))
+            return n.e(32).then(n.bind(null, 2055))
         }, "BrowseForYouPage"),
         Ce = ve.a.wrap(function() {
-            return n.e(32).then(n.bind(null, 2054))
+            return n.e(32).then(n.bind(null, 2055))
         }, "BrowseCreativePage"),
         Ee = ve.a.wrap(function() {
-            return n.e(41).then(n.bind(null, 2056))
+            return n.e(41).then(n.bind(null, 2057))
         }, "ChannelClipsPage"),
         Ne = ve.a.wrap(function() {
-            return n.e(47).then(n.bind(null, 2057))
+            return n.e(47).then(n.bind(null, 2058))
         }, "ChannelCollectionsPage"),
         we = ve.a.wrap(function() {
-            return n.e(44).then(n.bind(null, 2058))
+            return n.e(44).then(n.bind(null, 2059))
         }, "ChannelEventsPage"),
         Oe = ve.a.wrap(function() {
-            return n.e(0).then(n.bind(null, 2059))
+            return n.e(0).then(n.bind(null, 2060))
         }, "ChannelPage"),
         De = ve.a.wrap(function() {
-            return n.e(40).then(n.bind(null, 2060))
+            return n.e(40).then(n.bind(null, 2061))
         }, "ChannelVideosPage"),
         Ie = ve.a.wrap(function() {
-            return n.e(34).then(n.bind(null, 2061))
+            return n.e(34).then(n.bind(null, 2062))
         }, "ChannelClipsManagerPage"),
         Te = ve.a.wrap(function() {
-            return n.e(34).then(n.bind(null, 2061))
+            return n.e(34).then(n.bind(null, 2062))
         }, "MyClipsManagerPage"),
         xe = ve.a.wrap(function() {
-            return n.e(57).then(n.bind(null, 2062))
+            return n.e(57).then(n.bind(null, 2063))
         }, "DevOnlyRoot"),
         Fe = ve.a.wrap(function() {
-            return n.e(45).then(n.bind(null, 2063))
+            return n.e(45).then(n.bind(null, 2064))
         }, "DirectoryRootPage"),
         Ue = ve.a.wrap(function() {
-            return n.e(54).then(n.bind(null, 2067))
+            return n.e(54).then(n.bind(null, 2068))
         }, "DevOnlyTestingCarouselPage"),
         Re = ve.a.wrap(function() {
-            return n.e(33).then(n.bind(null, 2068))
+            return n.e(33).then(n.bind(null, 2069))
         }, "DirectoryPopularPage"),
         Pe = ve.a.wrap(function() {
-            return n.e(33).then(n.bind(null, 2068))
+            return n.e(33).then(n.bind(null, 2069))
         }, "DirectoryPopularByLanguagePage"),
         Le = ve.a.wrap(function() {
-            return n.e(32).then(n.bind(null, 2054))
+            return n.e(32).then(n.bind(null, 2055))
         }, "BrowseGamePage"),
         je = ve.a.wrap(function() {
-            return n.e(55).then(n.bind(null, 2069))
+            return n.e(55).then(n.bind(null, 2070))
         }, "EmailVerificationPage"),
         Ae = ve.a.wrap(function() {
-            return n.e(49).then(n.bind(null, 2070))
+            return n.e(49).then(n.bind(null, 2071))
         }, "EventLandingPage"),
         Me = ve.a.wrap(function() {
-            return n.e(50).then(n.bind(null, 2071))
+            return n.e(50).then(n.bind(null, 2072))
         }, "FollowingRootPage"),
         Be = ve.a.wrap(function() {
-            return n.e(46).then(n.bind(null, 2072))
+            return n.e(46).then(n.bind(null, 2073))
         }, "FrontPage"),
         He = ve.a.wrap(function() {
-            return n.e(56).then(n.bind(null, 2073))
+            return n.e(56).then(n.bind(null, 2074))
         }, "ReportUserPage"),
         Ve = ve.a.wrap(function() {
-            return n.e(51).then(n.bind(null, 2074))
+            return n.e(51).then(n.bind(null, 2075))
         }, "StoreMerchPage"),
         We = ve.a.wrap(function() {
-            return n.e(42).then(n.bind(null, 2075))
+            return n.e(42).then(n.bind(null, 2076))
         }, "VideoWatchPage"),
         ze = ve.a.wrap(function() {
-            return n.e(52).then(n.bind(null, 2077))
+            return n.e(52).then(n.bind(null, 2078))
         }, "GlobalNotificationSettingsPage"),
         qe = function() {
             return _.createElement(ge.c, {
@@ -71434,7 +71434,7 @@ webpackJsonp([0], Array(20).concat([function(e, t, n) {
         }
     };
     e.exports = n
-}, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , function(e, t) {
+}, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , function(e, t) {
     var n = {
         kind: "Document",
         definitions: [{
@@ -76638,14 +76638,14 @@ webpackJsonp([0], Array(20).concat([function(e, t, n) {
         f = n(108),
         g = n(267),
         v = n(1371),
-        b = n(2018),
+        b = n(2019),
         k = n(28),
         y = n(819),
         S = n(13),
         _ = n(1060),
         C = n(1248),
         E = n(3),
-        N = (n(2019), function(e) {
+        N = (n(2020), function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -76697,8 +76697,8 @@ webpackJsonp([0], Array(20).concat([function(e, t, n) {
         D = n(1e3),
         I = n(1064),
         T = n(449),
-        x = n(2020),
-        F = (n(2021), 100),
+        x = n(2021),
+        F = (n(2022), 100),
         U = 100,
         R = function(e) {
             function t() {
@@ -76993,4 +76993,4 @@ webpackJsonp([0], Array(20).concat([function(e, t, n) {
         return A
     })
 }]));
-//# sourceMappingURL=pages.channel-17c301e537fdc2899a816b64bfb15d36.js.map
+//# sourceMappingURL=pages.channel-977c8a140136f2ca63416a0dea2029ed.js.map
