@@ -1298,7 +1298,7 @@ webpackJsonp([44], {
         e.exports = n
     },
     1702: function(e, t) {},
-    2058: function(e, t, n) {
+    2059: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -26014,4 +26014,4 @@ webpackJsonp([44], {
         })
     }
 });
-//# sourceMappingURL=pages.channel-events-f0da3c77c3fa687ee58ea47553fe2723.js.map
+//# sourceMappingURL=pages.channel-events-72961de9d2c0aba1cea1b2eafc1b7343.js.map
