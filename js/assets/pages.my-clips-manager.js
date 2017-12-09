@@ -1,5 +1,5 @@
 webpackJsonp([34], {
-    1031: function(e, t, n) {
+    1034: function(e, t, n) {
         "use strict";
 
         function a(e, t) {
@@ -21,7 +21,7 @@ webpackJsonp([34], {
                 allowFullscreen: !0
             }
     },
-    1047: function(e, t, n) {
+    1050: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -32,7 +32,7 @@ webpackJsonp([34], {
             l = n(2),
             s = n(64),
             o = n(3),
-            c = (n(1068), {
+            c = (n(1071), {
                 TITLE: "clips-modal-title",
                 MAIN_BODY: "clips-modal-main-body",
                 SUCCESS_BODY: "clips-modal-success-body",
@@ -146,7 +146,7 @@ webpackJsonp([34], {
                     })))))
                 }, t
             }(r.Component),
-            u = n(878),
+            u = n(879),
             p = n(5),
             m = 86400,
             h = {
@@ -231,8 +231,8 @@ webpackJsonp([34], {
             },
             C = Object(p.c)("ClipsModalBanUser")(Object(u.a)(f)(g)),
             b = n(7),
-            v = n(1069),
-            y = (n(1070), this),
+            v = n(1072),
+            y = (n(1073), this),
             E = {
                 isLoading: !1,
                 hasErrored: !1,
@@ -354,7 +354,7 @@ webpackJsonp([34], {
                 props: k
             })(S),
             T = n(32),
-            w = n(1071),
+            w = n(1074),
             D = this,
             M = {
                 isLoading: !1,
@@ -592,8 +592,8 @@ webpackJsonp([34], {
             return F
         })
     },
-    1068: function(e, t) {},
-    1069: function(e, t) {
+    1071: function(e, t) {},
+    1072: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -704,8 +704,8 @@ webpackJsonp([34], {
         };
         e.exports = n
     },
-    1070: function(e, t) {},
-    1071: function(e, t) {
+    1073: function(e, t) {},
+    1074: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -839,7 +839,7 @@ webpackJsonp([34], {
         };
         e.exports = n
     },
-    1368: function(e, t, n) {
+    1371: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -849,7 +849,7 @@ webpackJsonp([34], {
         var a = "//static-cdn.jtvnw.net/ttv-boxart",
             i = "52x72"
     },
-    1570: function(e, t) {
+    1573: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1135,7 +1135,7 @@ webpackJsonp([34], {
         };
         e.exports = n
     },
-    1851: function(e, t, n) {
+    1854: function(e, t, n) {
         var a = {
             kind: "Document",
             definitions: [{
@@ -1238,9 +1238,9 @@ webpackJsonp([34], {
                 var t = e.name.value;
                 return !i[t] && (i[t] = !0, !0)
             })
-        }(n(1570).definitions)), e.exports = a
+        }(n(1573).definitions)), e.exports = a
     },
-    1852: function(e, t) {
+    1855: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1295,12 +1295,12 @@ webpackJsonp([34], {
         };
         e.exports = n
     },
-    1853: function(e, t) {},
-    1854: function(e, t) {},
-    1855: function(e, t) {},
     1856: function(e, t) {},
     1857: function(e, t) {},
-    1858: function(e, t, n) {
+    1858: function(e, t) {},
+    1859: function(e, t) {},
+    1860: function(e, t) {},
+    1861: function(e, t, n) {
         var a = {
             kind: "Document",
             definitions: [{
@@ -1572,9 +1572,9 @@ webpackJsonp([34], {
                 var t = e.name.value;
                 return !i[t] && (i[t] = !0, !0)
             })
-        }(n(1570).definitions)), e.exports = a
+        }(n(1573).definitions)), e.exports = a
     },
-    1859: function(e, t) {
+    1862: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1639,7 +1639,7 @@ webpackJsonp([34], {
         };
         e.exports = n
     },
-    2058: function(e, t, n) {
+    2061: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1699,7 +1699,7 @@ webpackJsonp([34], {
             f = n(22),
             C = n(819),
             b = n(817),
-            v = n(12);
+            v = n(13);
         ! function(e) {
             e[e.ViewsAscending = 0] = "ViewsAscending", e[e.ViewsDescending = 1] = "ViewsDescending", e[e.CreatedAtAscending = 2] = "CreatedAtAscending", e[e.CreatedAtDescending = 3] = "CreatedAtDescending"
         }(p || (p = {}));
@@ -1717,22 +1717,22 @@ webpackJsonp([34], {
             R = n(54),
             O = n(39),
             N = n(17),
-            x = n(15),
+            x = n(11),
             U = n(2),
             A = n(7),
             L = n(66),
             I = n(20),
             j = n(37),
             F = n(28),
-            B = n(1047),
-            H = n(907),
+            B = n(1050),
+            H = n(908),
             P = n(10),
             V = n(64),
             G = n(47),
-            W = n(378),
+            W = n(377),
             K = n(68),
-            q = n(990),
-            Q = n(1031),
+            q = n(993),
+            Q = n(1034),
             z = n(3),
             Y = [{
                 type: q.b.Twitter,
@@ -1805,7 +1805,7 @@ webpackJsonp([34], {
             },
             X = Object(w.c)("ClipsManagerSocialShare")($),
             J = n(40),
-            Z = n(1851),
+            Z = n(1854),
             ee = this,
             te = {
                 TITLE_TEXT: "cmgr-title-text",
@@ -1959,8 +1959,8 @@ webpackJsonp([34], {
             re = Object(A.a)(Z, {
                 props: ie
             })(ae),
-            le = n(1852),
-            se = (n(1853), {
+            le = n(1855),
+            se = (n(1856), {
                 MODERATION_DROPDOWN: "cmgr-moderation-dropdown",
                 MODERATION_BUTTON: "cmgr-moderation-button",
                 GAME_LINK: "cmgr-expanded-game-link",
@@ -2261,8 +2261,8 @@ webpackJsonp([34], {
             de = Object(D.a)(null, i)(ce),
             ue = n(108),
             pe = n(267),
-            me = n(1368),
-            he = (n(1854), function(e) {
+            me = n(1371),
+            he = (n(1857), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderCardContent = function() {
@@ -2575,7 +2575,7 @@ webpackJsonp([34], {
                 }, t
             }(h.Component),
             ve = Object(w.c)("ClipsManagerSearch")(be),
-            ye = (n(1855), {
+            ye = (n(1858), {
                 MY_CLIPS_RADIO: "cmgr-my-clips-radio",
                 CLIPS_OF_ME_RADIO: "cmgr-clips-of-me-radio"
             }),
@@ -2667,7 +2667,7 @@ webpackJsonp([34], {
                     })
                 }, t
             }(h.Component),
-            _e = (n(1856), "clips-manager-row-checkbox"),
+            _e = (n(1859), "clips-manager-row-checkbox"),
             Te = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -2784,7 +2784,7 @@ webpackJsonp([34], {
                     }, e.game.name)) : null
                 }, t
             }(h.Component),
-            we = (n(1857), {
+            we = (n(1860), {
                 SELECT_ALL: "clips-manager-select-all",
                 BATCH_DELETE: "clips-manager-batch-delete",
                 VIEWS_HEADER: "clips-manager-views-sort",
@@ -3128,7 +3128,7 @@ webpackJsonp([34], {
                     })
                 }, t
             }(h.Component),
-            Me = n(1858),
+            Me = n(1861),
             Re = function(e) {
                 var t = function() {
                         var t = e.data.user.clips.edges,
@@ -3219,7 +3219,7 @@ webpackJsonp([34], {
                 options: Oe,
                 props: Re
             }), Object(D.a)(null, o))(De),
-            xe = n(1859),
+            xe = n(1862),
             Ue = function(e) {
                 function t(t) {
                     var n = e.call(this) || this;
@@ -3551,7 +3551,7 @@ webpackJsonp([34], {
             h = "https://www.reddit.com/submit",
             g = "https://vk.com/share.php",
             f = n(3);
-        n(897);
+        n(898);
         n.d(t, "b", function() {
             return C
         }), n.d(t, "a", function() {
@@ -3706,7 +3706,7 @@ webpackJsonp([34], {
         }
         t.a = a
     },
-    878: function(e, t, n) {
+    879: function(e, t, n) {
         "use strict";
 
         function a() {
@@ -3785,14 +3785,14 @@ webpackJsonp([34], {
             d = n(840),
             u = n(852),
             p = n(814),
-            m = n(886),
+            m = n(887),
             h = (n.n(m), 60),
             g = 60 * h,
             f = 24 * g,
             C = 7 * f,
             b = 4 * C
     },
-    886: function(e, t) {
+    887: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3893,8 +3893,8 @@ webpackJsonp([34], {
         };
         e.exports = n
     },
-    897: function(e, t) {},
-    907: function(e, t, n) {
+    898: function(e, t) {},
+    908: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
@@ -3905,7 +3905,7 @@ webpackJsonp([34], {
         });
         var a, i = n(2),
             r = n(848),
-            l = n(12),
+            l = n(13),
             s = (a = {}, a[r.b.Twitter] = "twitter", a[r.b.Reddit] = "reddit", a[r.b.VKontakte] = "vkontakte", a[r.b.Facebook] = "facebook", a[r.b.Copy] = "link", a[r.b.CopyInput] = "option_link", a),
             o = {
                 MyClips: "MyClips",
@@ -3936,7 +3936,7 @@ webpackJsonp([34], {
                 }
             }
     },
-    990: function(e, t, n) {
+    993: function(e, t, n) {
         "use strict";
         var a = n(848);
         n.d(t, "a", function() {
@@ -3946,4 +3946,4 @@ webpackJsonp([34], {
         })
     }
 });
-//# sourceMappingURL=pages.my-clips-manager-436b2e3bd20da1d33b7169a07b38f04d.js.map
+//# sourceMappingURL=pages.my-clips-manager-eac179d521cf7662a040b8578297e194.js.map

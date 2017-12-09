@@ -10,13 +10,13 @@ webpackJsonp([52], {
             return !o.b.get(l.a, !1) && o.a.buildType === r.a.Production
         }
         var o = n(2),
-            r = n(14),
+            r = n(15),
             l = n(264);
         t.a = i, t.b = a;
         var s = "https://www.twitch.tv"
     },
-    1931: function(e, t) {},
-    1932: function(e, t) {
+    1934: function(e, t) {},
+    1935: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -117,8 +117,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1933: function(e, t) {},
-    1934: function(e, t) {
+    1936: function(e, t) {},
+    1937: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -411,8 +411,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1935: function(e, t) {},
-    1936: function(e, t) {
+    1938: function(e, t) {},
+    1939: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -500,8 +500,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1937: function(e, t) {},
-    1938: function(e, t) {
+    1940: function(e, t) {},
+    1941: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -632,8 +632,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1939: function(e, t) {},
-    2074: function(e, t, n) {
+    1942: function(e, t) {},
+    2077: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -643,7 +643,7 @@ webpackJsonp([52], {
             r = n(2),
             l = n(28),
             s = n(130),
-            c = n(378),
+            c = n(377),
             d = n(5),
             u = n(3);
         ! function(e) {
@@ -701,13 +701,13 @@ webpackJsonp([52], {
             p = g,
             f = n(819),
             h = n(817),
-            b = n(12),
+            b = n(13),
             v = n(9),
             S = n(67),
             y = n(7),
             k = n(20),
             N = n(10),
-            _ = (n(1931), function(e) {
+            _ = (n(1934), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -783,8 +783,8 @@ webpackJsonp([52], {
                     }, Object(r.d)("Saved", "AdvancedNotificationSettingsToggle"))))))
                 }, t
             }(o.Component)),
-            E = n(1932),
-            w = (n(1933), n(1934)),
+            E = n(1935),
+            w = (n(1936), n(1937)),
             x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1001,7 +1001,7 @@ webpackJsonp([52], {
             }), Object(y.a)(E, {
                 name: "setAdvancedNotificationSetting"
             }), Object(d.c)("AdvancedNotificationSettings"))(x),
-            O = (n(1935), function(e) {
+            O = (n(1938), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -1066,8 +1066,8 @@ webpackJsonp([52], {
                     }, Object(r.d)("Saved", "PlatformNotificationSettingsToggle")))))
                 }, t
             }(o.Component)),
-            P = n(1936),
-            j = (n(1937), n(1938));
+            P = n(1939),
+            j = (n(1940), n(1941));
         ! function(e) {
             e.onsite = "onsite", e.email = "email", e.push = "push"
         }(m || (m = {}));
@@ -1349,7 +1349,7 @@ webpackJsonp([52], {
             }), Object(y.a)(P, {
                 name: "setNotificationSetting"
             }))(U),
-            T = (n(1939), function(e) {
+            T = (n(1942), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1427,7 +1427,7 @@ webpackJsonp([52], {
             a = n(21),
             o = n(1),
             r = n(2),
-            l = n(14),
+            l = n(15),
             s = "legacy_routes_enabled",
             c = function(e) {
                 function t(t) {
@@ -1635,4 +1635,4 @@ webpackJsonp([52], {
         })
     }
 });
-//# sourceMappingURL=pages.settings-47ef2e67e8a06ee2d51a4379eee157f7.js.map
+//# sourceMappingURL=pages.settings-34975e96f07571d72d0d3968e9cf0a80.js.map

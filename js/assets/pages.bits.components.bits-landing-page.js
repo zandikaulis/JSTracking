@@ -1,75 +1,8 @@
 webpackJsonp([62], {
-    1993: function(e, t) {},
-    1994: function(e, t) {},
-    1995: function(e, t) {},
     1996: function(e, t) {},
     1997: function(e, t) {},
     1998: function(e, t) {},
-    1999: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "BitsLandingPage"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "bitsBalance"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 69
-            }
-        };
-        n.loc.source = {
-            body: "query BitsLandingPage {\n  currentUser {\n    id\n    bitsBalance\n  }\n}\n",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
+    1999: function(e, t) {},
     20: function(e, t, n) {
         "use strict";
 
@@ -141,7 +74,74 @@ webpackJsonp([62], {
             l = (n.n(s), n(2))
     },
     2e3: function(e, t) {},
-    2080: function(e, t, n) {
+    2001: function(e, t) {},
+    2002: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "BitsLandingPage"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "bitsBalance"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 69
+            }
+        };
+        n.loc.source = {
+            body: "query BitsLandingPage {\n  currentUser {\n    id\n    bitsBalance\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    2003: function(e, t) {},
+    2083: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -171,12 +171,12 @@ webpackJsonp([62], {
             p = n(28),
             h = n(7),
             f = n(819),
-            g = n(12),
+            g = n(13),
             b = n(376),
             y = n(5),
             v = n(824),
             k = n(3),
-            _ = (n(1993), function(e) {
+            _ = (n(1996), function(e) {
                 return u.createElement(k.P, {
                     className: "bits-landing-page-text-section",
                     margin: {
@@ -187,7 +187,7 @@ webpackJsonp([62], {
                     color: k.F.Base
                 }, e.text))
             }),
-            B = (n(1994), function(e) {
+            B = (n(1997), function(e) {
                 var t = e.additionInfo.map(function(e, t) {
                     return u.createElement(_, {
                         key: "additionInfo:" + t,
@@ -217,7 +217,7 @@ webpackJsonp([62], {
                     margin: "auto"
                 }, e.cheermoteImaages))
             }),
-            C = (n(1995), function(e) {
+            C = (n(1998), function(e) {
                 var t = null;
                 return e.additionalInfo && (t = u.createElement(_, {
                     text: e.additionalInfo
@@ -348,7 +348,7 @@ webpackJsonp([62], {
                 question: A.additionalHelpQuestion,
                 answer: A.additionalHelpAnswer
             }],
-            S = (n(1996), function(e) {
+            S = (n(1999), function(e) {
                 var t = [1, 100, 1e3, 5e3, 1e4].map(function(t) {
                         return u.createElement(k.U, {
                             display: k.H.Block,
@@ -406,7 +406,7 @@ webpackJsonp([62], {
                     className: "bits-landing-page-faq__content"
                 }, a))
             }),
-            O = (n(1997), function(e) {
+            O = (n(2e3), function(e) {
                 var t = u.createElement(k.U, {
                         margin: {
                             left: .5
@@ -489,7 +489,7 @@ webpackJsonp([62], {
                     amount: t
                 }, "BitsLandingPage"))))
             },
-            j = (n(1998), function(e) {
+            j = (n(2001), function(e) {
                 return u.createElement(k.U, {
                     className: "bits-landing-page-right-pane",
                     padding: {
@@ -562,8 +562,8 @@ webpackJsonp([62], {
                 }))
             }),
             P = function() {},
-            U = n(1999),
-            F = (n(2e3), function(e) {
+            U = n(2002),
+            F = (n(2003), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.bitsConfig = Object(b.a)(), t
@@ -990,7 +990,7 @@ webpackJsonp([62], {
             return l
         }), t.g = s;
         var l, c = n(2),
-            d = n(12),
+            d = n(13),
             u = {
                 ChatTooltip: "card",
                 GetBitsButton: "get_bits_button",
@@ -2652,4 +2652,4 @@ webpackJsonp([62], {
     },
     864: function(e, t) {}
 });
-//# sourceMappingURL=pages.bits.components.bits-landing-page-d4a6d2bf1c75ad42ae8f2e5c78dccf01.js.map
+//# sourceMappingURL=pages.bits.components.bits-landing-page-206a6eea9f1dd60d048fc730f992cf97.js.map

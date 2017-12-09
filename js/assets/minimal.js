@@ -214,7 +214,7 @@ webpackJsonp([60], {
         "use strict";
         var r, i = n(0),
             o = n(4),
-            a = n(15),
+            a = n(11),
             s = n(1),
             l = n(2);
         n(238);
@@ -527,7 +527,20 @@ webpackJsonp([60], {
             B = D.call(Object);
         t.a = l
     },
-    12: function(e, t, n) {
+    126: function(e, t, n) {
+        "use strict";
+
+        function r() {
+            return {
+                type: i
+            }
+        }
+        n.d(t, "a", function() {
+            return i
+        }), t.b = r;
+        var i = "features.ads.TRACKING_SET"
+    },
+    13: function(e, t, n) {
         "use strict";
         var r = n(175);
         n.d(t, "Spade", function() {
@@ -560,43 +573,20 @@ webpackJsonp([60], {
             return i.TwitchDataType
         })
     },
-    126: function(e, t, n) {
-        "use strict";
-
-        function r() {
-            return {
-                type: i
-            }
-        }
-        n.d(t, "a", function() {
-            return i
-        }), t.b = r;
-        var i = "features.ads.TRACKING_SET"
-    },
-    14: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return r
-        });
-        var r;
-        ! function(e) {
-            e[e.Dev = 1] = "Dev", e[e.Production = 2] = "Production"
-        }(r || (r = {}))
-    },
     149: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
         var r = n(0),
-            i = n(14),
+            i = n(15),
             o = n(301),
             a = n(150),
             s = n(151);
         window.IntlMessageFormat = a, window.IntlRelativeFormat = s;
         var l = function() {
                 function e() {
-                    this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "95ca3ebc-e5bf-47e0-aa26-2b3683df8770", this.spadeBatchWindow = 1e3, this.locales = [{
+                    this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "4d0c5798-1b1c-464d-bbe1-38e19b7255e4", this.spadeBatchWindow = 1e3, this.locales = [{
                         name: "English",
                         languageCode: "en",
                         locale: "en-US",
@@ -614,70 +604,70 @@ webpackJsonp([60], {
                         languageCode: "da",
                         locale: "da-DK",
                         loader: function() {
-                            return n.e(27).then(n.bind(null, 2019))
+                            return n.e(27).then(n.bind(null, 2022))
                         }
                     }, {
                         name: "Deutsch",
                         languageCode: "de",
                         locale: "de-DE",
                         loader: function() {
-                            return n.e(26).then(n.bind(null, 2020))
+                            return n.e(26).then(n.bind(null, 2023))
                         }
                     }, {
                         name: "English - UK",
                         languageCode: "en-gb",
                         locale: "en-GB",
                         loader: function() {
-                            return n.e(31).then(n.bind(null, 2021))
+                            return n.e(31).then(n.bind(null, 2024))
                         }
                     }, {
                         name: "Español - España",
                         languageCode: "es",
                         locale: "es-ES",
                         loader: function() {
-                            return n.e(23).then(n.bind(null, 2022))
+                            return n.e(23).then(n.bind(null, 2025))
                         }
                     }, {
                         name: "Español - Latinoamérica",
                         languageCode: "es-mx",
                         locale: "es-MX",
                         loader: function() {
-                            return n.e(24).then(n.bind(null, 2023))
+                            return n.e(24).then(n.bind(null, 2026))
                         }
                     }, {
                         name: "Français",
                         languageCode: "fr",
                         locale: "fr-FR",
                         loader: function() {
-                            return n.e(21).then(n.bind(null, 2024))
+                            return n.e(21).then(n.bind(null, 2027))
                         }
                     }, {
                         name: "Italiano",
                         languageCode: "it",
                         locale: "it-IT",
                         loader: function() {
-                            return n.e(18).then(n.bind(null, 2025))
+                            return n.e(18).then(n.bind(null, 2028))
                         }
                     }, {
                         name: "Magyar",
                         languageCode: "hu",
                         locale: "hu-HU",
                         loader: function() {
-                            return n.e(19).then(n.bind(null, 2026))
+                            return n.e(19).then(n.bind(null, 2029))
                         }
                     }, {
                         name: "Nederlands",
                         languageCode: "nl",
                         locale: "nl-NL",
                         loader: function() {
-                            return n.e(15).then(n.bind(null, 2027))
+                            return n.e(15).then(n.bind(null, 2030))
                         }
                     }, {
                         name: "Norsk",
                         languageCode: "no",
                         locale: "no-NO",
                         loader: function() {
-                            return n.e(14).then(n.bind(null, 2028))
+                            return n.e(14).then(n.bind(null, 2031))
                         },
                         cldrLocale: "nn"
                     }, {
@@ -685,14 +675,14 @@ webpackJsonp([60], {
                         languageCode: "pl",
                         locale: "pl-PL",
                         loader: function() {
-                            return n.e(13).then(n.bind(null, 2029))
+                            return n.e(13).then(n.bind(null, 2032))
                         }
                     }, {
                         name: "Português",
                         languageCode: "pt",
                         locale: "pt-PT",
                         loader: function() {
-                            return n.e(11).then(n.bind(null, 2030))
+                            return n.e(11).then(n.bind(null, 2033))
                         },
                         cldrLocale: "pt-pt"
                     }, {
@@ -700,7 +690,7 @@ webpackJsonp([60], {
                         languageCode: "pt-br",
                         locale: "pt-BR",
                         loader: function() {
-                            return n.e(12).then(n.bind(null, 2031))
+                            return n.e(12).then(n.bind(null, 2034))
                         },
                         cldrLocale: "pt"
                     }, {
@@ -708,84 +698,84 @@ webpackJsonp([60], {
                         languageCode: "sk",
                         locale: "sk-SK",
                         loader: function() {
-                            return n.e(8).then(n.bind(null, 2032))
+                            return n.e(8).then(n.bind(null, 2035))
                         }
                     }, {
                         name: "Suomi",
                         languageCode: "fi",
                         locale: "fi-FI",
                         loader: function() {
-                            return n.e(22).then(n.bind(null, 2033))
+                            return n.e(22).then(n.bind(null, 2036))
                         }
                     }, {
                         name: "Svenska",
                         languageCode: "sv",
                         locale: "sv-SE",
                         loader: function() {
-                            return n.e(7).then(n.bind(null, 2034))
+                            return n.e(7).then(n.bind(null, 2037))
                         }
                     }, {
                         name: "Tiếng Việt",
                         languageCode: "vi",
                         locale: "vi-VN",
                         loader: function() {
-                            return n.e(4).then(n.bind(null, 2035))
+                            return n.e(4).then(n.bind(null, 2038))
                         }
                     }, {
                         name: "Türkçe",
                         languageCode: "tr",
                         locale: "tr-TR",
                         loader: function() {
-                            return n.e(5).then(n.bind(null, 2036))
+                            return n.e(5).then(n.bind(null, 2039))
                         }
                     }, {
                         name: "Čeština",
                         languageCode: "cs",
                         locale: "cs-CZ",
                         loader: function() {
-                            return n.e(28).then(n.bind(null, 2037))
+                            return n.e(28).then(n.bind(null, 2040))
                         }
                     }, {
                         name: "Ελληνικά",
                         languageCode: "el",
                         locale: "el-GR",
                         loader: function() {
-                            return n.e(25).then(n.bind(null, 2038))
+                            return n.e(25).then(n.bind(null, 2041))
                         }
                     }, {
                         name: "Български",
                         languageCode: "bg",
                         locale: "bg-BG",
                         loader: function() {
-                            return n.e(29).then(n.bind(null, 2039))
+                            return n.e(29).then(n.bind(null, 2042))
                         }
                     }, {
                         name: "Русский",
                         languageCode: "ru",
                         locale: "ru-RU",
                         loader: function() {
-                            return n.e(9).then(n.bind(null, 2040))
+                            return n.e(9).then(n.bind(null, 2043))
                         }
                     }, {
                         name: "العربية",
                         languageCode: "ar",
                         locale: "ar-SA",
                         loader: function() {
-                            return n.e(30).then(n.bind(null, 2041))
+                            return n.e(30).then(n.bind(null, 2044))
                         }
                     }, {
                         name: "ภาษาไทย",
                         languageCode: "th",
                         locale: "th-TH",
                         loader: function() {
-                            return n.e(6).then(n.bind(null, 2042))
+                            return n.e(6).then(n.bind(null, 2045))
                         }
                     }, {
                         name: "中文 简体",
                         languageCode: "zh-cn",
                         locale: "zh-CN",
                         loader: function() {
-                            return n.e(3).then(n.bind(null, 2043))
+                            return n.e(3).then(n.bind(null, 2046))
                         },
                         cldrLocale: "zh-hans"
                     }, {
@@ -793,7 +783,7 @@ webpackJsonp([60], {
                         languageCode: "zh-tw",
                         locale: "zh-TW",
                         loader: function() {
-                            return n.e(2).then(n.bind(null, 2044))
+                            return n.e(2).then(n.bind(null, 2047))
                         },
                         cldrLocale: "zh-hant"
                     }, {
@@ -801,28 +791,28 @@ webpackJsonp([60], {
                         languageCode: "ja",
                         locale: "ja-JP",
                         loader: function() {
-                            return n.e(17).then(n.bind(null, 2045))
+                            return n.e(17).then(n.bind(null, 2048))
                         }
                     }, {
                         name: "한국어",
                         languageCode: "ko",
                         locale: "ko-KR",
                         loader: function() {
-                            return n.e(16).then(n.bind(null, 2046))
+                            return n.e(16).then(n.bind(null, 2049))
                         }
                     }, {
                         name: "हिंदी",
                         languageCode: "hi",
                         locale: "hi-IN",
                         loader: function() {
-                            return n.e(20).then(n.bind(null, 2047))
+                            return n.e(20).then(n.bind(null, 2050))
                         }
                     }, {
                         name: "Română",
                         languageCode: "ro",
                         locale: "ro-RO",
                         loader: function() {
-                            return n.e(10).then(n.bind(null, 2048))
+                            return n.e(10).then(n.bind(null, 2051))
                         }
                     }], this.passportAuthURL = "https://api.twitch.tv/kraken/oauth2/authorize", this.passportScopes = ["chat_login", "user_read", "user_subscriptions", "user_presence_friends_read"], this.defaultAvatarURL = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png", this.defaultStreamPreviewURL = "https://static-cdn.jtvnw.net/ttv-static/404_preview-160x90.jpg", this.defaultBoxArtURL = "https://static-cdn.jtvnw.net/ttv-boxart/404_boxart.png", this.defaultCollectionPreviewURL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png", this.hostingCacheDelay = 2001, this.legacyClientID = "jzkbprff40iqj646a697cyrvl0zt2m6", this.algoliaApplicationID = "XLUO134HOR", this.algoliaAPIKey = "d157112f6fc2cab93ce4b01227c80a6d", this.forceNetworkLogging = !1, this.networkLoggingHostNames = ["twitch.tv", "localhost", "jtvnw.net", "twitchcdn.net", "twitchcdn.tech", "twitchcdn-shadow.net", "twitchsvc.net", "twitchsvc.tech", "twitchsvc-shadow.net"], this.defaultNetworkLoggingThreshold = .2, this.layoutCacheKey = "TwitchCache:Layout", this.forceComponentBenchmarking = !1, this.defaultComponentBenchmarkingThreshold = .1, this.forceBenchmarkingTools = !1, this.dfpNetworkCode = "3576121", this.krakenEndpoint = "https://api.twitch.tv/kraken", this.defaultAPIVersion = "5", this.adblockAccount = 58, this.adblockID = "qFEaZsFQnwEdUIs", this.forceMinConsoleLogLevelKey = "twilight.minConsoleLogLevel", this.tryPrimeURI = "https://twitch.amazon.com/prime", this.experimentsOverrideCookie = "experiment_overrides", this.tmiHost = "irc-ws.chat.twitch.tv", this.persistentPlayerEnabledKey = "persistenceEnabled"
                 }
@@ -839,6 +829,16 @@ webpackJsonp([60], {
             }(l),
             h = n(69);
         Object(h.i)(new d)
+    },
+    15: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return r
+        });
+        var r;
+        ! function(e) {
+            e[e.Dev = 1] = "Dev", e[e.Production = 2] = "Production"
+        }(r || (r = {}))
     },
     154: function(e, t, n) {
         "use strict";
@@ -1699,7 +1699,7 @@ webpackJsonp([60], {
         t.a = r;
         var a = n(21),
             s = (n.n(a), n(2)),
-            l = n(14),
+            l = n(15),
             c = n(39),
             u = n(45),
             d = n(44)
@@ -1919,8 +1919,8 @@ webpackJsonp([60], {
             o = n(1),
             a = n(2),
             s = n(7),
-            l = n(14),
-            c = n(12),
+            l = n(15),
+            c = n(13),
             u = n(5),
             d = function(e) {
                 function t(t) {
@@ -2317,7 +2317,7 @@ webpackJsonp([60], {
             o = n(115),
             a = n(6),
             s = n(0),
-            l = n(15),
+            l = n(11),
             c = n(1),
             u = n(2),
             d = n(3),
@@ -5597,7 +5597,7 @@ webpackJsonp([60], {
             E = n(68),
             k = n(45),
             C = n(54),
-            S = n(12),
+            S = n(13),
             L = n(3),
             T = (n(233), 5e3),
             x = function(e) {
@@ -5893,7 +5893,7 @@ webpackJsonp([60], {
         var i = n(0),
             o = n(1),
             a = n(3),
-            s = n(15),
+            s = n(11),
             l = n(2),
             c = n(23),
             u = function() {
@@ -6920,7 +6920,7 @@ webpackJsonp([60], {
         var l = n(1),
             c = n(32),
             u = n(116),
-            d = n(14),
+            d = n(15),
             h = "https://ad.doubleclick.net/ddm/ad/",
             p = n(96),
             m = function() {
@@ -7276,7 +7276,7 @@ webpackJsonp([60], {
                     this.currentPageComponentName = e
                 }, e
             }(),
-            N = n(12),
+            N = n(13),
             I = n(345),
             M = function() {
                 function e(e, t) {
@@ -8612,7 +8612,7 @@ webpackJsonp([60], {
         "use strict";
         var r, i = n(0),
             o = n(4),
-            a = n(15),
+            a = n(11),
             s = n(1),
             l = n(351),
             c = n(56),
@@ -8808,7 +8808,7 @@ webpackJsonp([60], {
             p = n(10),
             m = n(0),
             g = n(113),
-            f = n(14),
+            f = n(15),
             v = n(112),
             w = n(236),
             b = n(5),
@@ -8816,19 +8816,19 @@ webpackJsonp([60], {
             _ = n(250),
             E = n(3),
             k = (n(809), g.a.wrap(function() {
-                return n.e(38).then(n.bind(null, 2078))
+                return n.e(38).then(n.bind(null, 2081))
             }, "PopoutChatPage")),
             C = g.a.wrap(function() {
-                return n.e(53).then(n.bind(null, 2079))
+                return n.e(53).then(n.bind(null, 2082))
             }, "BitsRoot"),
             S = g.a.wrap(function() {
-                return n.e(43).then(n.bind(null, 2081))
+                return n.e(43).then(n.bind(null, 2084))
             }, "SubsRoot"),
             L = g.a.wrap(function() {
-                return n.e(39).then(n.bind(null, 2084))
+                return n.e(39).then(n.bind(null, 2087))
             }, "EmbeddedChatPage"),
             T = g.a.wrap(function() {
-                return n.e(0).then(n.bind(null, 2085))
+                return n.e(0).then(n.bind(null, 2088))
             }, "CommunitySelectionPage"),
             x = function(e) {
                 function t() {
@@ -8885,7 +8885,7 @@ webpackJsonp([60], {
             z = x,
             N = Object(h.a)(r)(z),
             I = Object(p.f)(N);
-        l.a.optimizedBuild || n.e(1).then(n.bind(null, 2077)).then(function(e) {
+        l.a.optimizedBuild || n.e(1).then(n.bind(null, 2080)).then(function(e) {
             return window.Perf = e
         });
         var M, D = !1;
@@ -8970,4 +8970,4 @@ webpackJsonp([60], {
         }()
     }
 }, [807]);
-//# sourceMappingURL=minimal-e26d4ebfd94905611e53f545b58dea24.js.map
+//# sourceMappingURL=minimal-7a75d4889a2de72ea7769748e6b186ba.js.map
