@@ -2824,7 +2824,7 @@ webpackJsonp([39], {
         var o = n(139),
             l = (n.n(o), n(2))
     },
-    2088: function(e, t, n) {
+    2087: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -36384,4 +36384,4 @@ webpackJsonp([39], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-25fedea53ce588d620dd86475f64ba19.js.map
+//# sourceMappingURL=pages.embed-chat-10f0634fa3d821687a2fbcce7e2e2e41.js.map
