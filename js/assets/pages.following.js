@@ -1263,8 +1263,8 @@ webpackJsonp([50], {
         var s = "https://www.twitch.tv"
     },
     1372: function(e, t) {},
-    1908: function(e, t) {},
-    1909: function(e, t) {
+    1909: function(e, t) {},
+    1910: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1468,7 +1468,7 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    1910: function(e, t) {
+    1911: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1639,8 +1639,8 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    1911: function(e, t) {},
-    1912: function(e, t) {
+    1912: function(e, t) {},
+    1913: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1993,7 +1993,7 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    1913: function(e, t, n) {
+    1914: function(e, t, n) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -2144,7 +2144,7 @@ webpackJsonp([50], {
             })
         }(n(880).definitions)), e.exports = i
     },
-    1914: function(e, t) {
+    1915: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2943,7 +2943,7 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    1915: function(e, t) {
+    1916: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3253,7 +3253,7 @@ webpackJsonp([50], {
         };
         e.exports = n
     },
-    2071: function(e, t, n) {
+    2072: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -3658,7 +3658,7 @@ webpackJsonp([50], {
             F = n(3),
             L = n(1053),
             U = n(1039),
-            A = (n(1908), n(1909)),
+            A = (n(1909), n(1910)),
             x = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -3810,7 +3810,7 @@ webpackJsonp([50], {
                 }, t
             }(f.Component),
             I = Object(u.a)(null, l)(D),
-            V = n(1910),
+            V = n(1911),
             R = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -3868,7 +3868,7 @@ webpackJsonp([50], {
             H = R,
             G = n(912),
             M = n(48),
-            W = (n(1911), n(1912)),
+            W = (n(1912), n(1913)),
             z = 50,
             B = function(e) {
                 function t() {
@@ -3954,7 +3954,7 @@ webpackJsonp([50], {
             q = B,
             $ = n(381),
             Q = n(1089),
-            X = n(1913),
+            X = n(1914),
             Y = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -3995,7 +3995,7 @@ webpackJsonp([50], {
                 }), Object(S.c)("SuggestedVideos")], t)
             }(f.Component),
             J = Y,
-            K = n(1914),
+            K = n(1915),
             Z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4068,7 +4068,7 @@ webpackJsonp([50], {
                 })], t)
             }(f.Component),
             ee = Z,
-            te = n(1915),
+            te = n(1916),
             ne = 50,
             ie = function(e) {
                 function t() {
@@ -5221,4 +5221,4 @@ webpackJsonp([50], {
         })
     }
 });
-//# sourceMappingURL=pages.following-c690896ce62474a08927625125615724.js.map
+//# sourceMappingURL=pages.following-36628908316f2024332f5f898100e3f9.js.map
