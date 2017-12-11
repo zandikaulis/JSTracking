@@ -586,7 +586,7 @@ webpackJsonp([60], {
         window.IntlMessageFormat = a, window.IntlRelativeFormat = s;
         var l = function() {
                 function e() {
-                    this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "6dd520b1-3fda-4877-b01d-9ec0568aa3df", this.spadeBatchWindow = 1e3, this.locales = [{
+                    this.optimizedBuild = !0, this.embedded = void 0, this.buildID = "1506770f-0776-4f47-b3a7-a7501b24b188", this.spadeBatchWindow = 1e3, this.locales = [{
                         name: "English",
                         languageCode: "en",
                         locale: "en-US",
@@ -604,70 +604,70 @@ webpackJsonp([60], {
                         languageCode: "da",
                         locale: "da-DK",
                         loader: function() {
-                            return n.e(27).then(n.bind(null, 2024))
+                            return n.e(27).then(n.bind(null, 2025))
                         }
                     }, {
                         name: "Deutsch",
                         languageCode: "de",
                         locale: "de-DE",
                         loader: function() {
-                            return n.e(26).then(n.bind(null, 2025))
+                            return n.e(26).then(n.bind(null, 2026))
                         }
                     }, {
                         name: "English - UK",
                         languageCode: "en-gb",
                         locale: "en-GB",
                         loader: function() {
-                            return n.e(31).then(n.bind(null, 2026))
+                            return n.e(31).then(n.bind(null, 2027))
                         }
                     }, {
                         name: "Español - España",
                         languageCode: "es",
                         locale: "es-ES",
                         loader: function() {
-                            return n.e(23).then(n.bind(null, 2027))
+                            return n.e(23).then(n.bind(null, 2028))
                         }
                     }, {
                         name: "Español - Latinoamérica",
                         languageCode: "es-mx",
                         locale: "es-MX",
                         loader: function() {
-                            return n.e(24).then(n.bind(null, 2028))
+                            return n.e(24).then(n.bind(null, 2029))
                         }
                     }, {
                         name: "Français",
                         languageCode: "fr",
                         locale: "fr-FR",
                         loader: function() {
-                            return n.e(21).then(n.bind(null, 2029))
+                            return n.e(21).then(n.bind(null, 2030))
                         }
                     }, {
                         name: "Italiano",
                         languageCode: "it",
                         locale: "it-IT",
                         loader: function() {
-                            return n.e(18).then(n.bind(null, 2030))
+                            return n.e(18).then(n.bind(null, 2031))
                         }
                     }, {
                         name: "Magyar",
                         languageCode: "hu",
                         locale: "hu-HU",
                         loader: function() {
-                            return n.e(19).then(n.bind(null, 2031))
+                            return n.e(19).then(n.bind(null, 2032))
                         }
                     }, {
                         name: "Nederlands",
                         languageCode: "nl",
                         locale: "nl-NL",
                         loader: function() {
-                            return n.e(15).then(n.bind(null, 2032))
+                            return n.e(15).then(n.bind(null, 2033))
                         }
                     }, {
                         name: "Norsk",
                         languageCode: "no",
                         locale: "no-NO",
                         loader: function() {
-                            return n.e(14).then(n.bind(null, 2033))
+                            return n.e(14).then(n.bind(null, 2034))
                         },
                         cldrLocale: "nn"
                     }, {
@@ -675,14 +675,14 @@ webpackJsonp([60], {
                         languageCode: "pl",
                         locale: "pl-PL",
                         loader: function() {
-                            return n.e(13).then(n.bind(null, 2034))
+                            return n.e(13).then(n.bind(null, 2035))
                         }
                     }, {
                         name: "Português",
                         languageCode: "pt",
                         locale: "pt-PT",
                         loader: function() {
-                            return n.e(11).then(n.bind(null, 2035))
+                            return n.e(11).then(n.bind(null, 2036))
                         },
                         cldrLocale: "pt-pt"
                     }, {
@@ -690,7 +690,7 @@ webpackJsonp([60], {
                         languageCode: "pt-br",
                         locale: "pt-BR",
                         loader: function() {
-                            return n.e(12).then(n.bind(null, 2036))
+                            return n.e(12).then(n.bind(null, 2037))
                         },
                         cldrLocale: "pt"
                     }, {
@@ -698,84 +698,84 @@ webpackJsonp([60], {
                         languageCode: "sk",
                         locale: "sk-SK",
                         loader: function() {
-                            return n.e(8).then(n.bind(null, 2037))
+                            return n.e(8).then(n.bind(null, 2038))
                         }
                     }, {
                         name: "Suomi",
                         languageCode: "fi",
                         locale: "fi-FI",
                         loader: function() {
-                            return n.e(22).then(n.bind(null, 2038))
+                            return n.e(22).then(n.bind(null, 2039))
                         }
                     }, {
                         name: "Svenska",
                         languageCode: "sv",
                         locale: "sv-SE",
                         loader: function() {
-                            return n.e(7).then(n.bind(null, 2039))
+                            return n.e(7).then(n.bind(null, 2040))
                         }
                     }, {
                         name: "Tiếng Việt",
                         languageCode: "vi",
                         locale: "vi-VN",
                         loader: function() {
-                            return n.e(4).then(n.bind(null, 2040))
+                            return n.e(4).then(n.bind(null, 2041))
                         }
                     }, {
                         name: "Türkçe",
                         languageCode: "tr",
                         locale: "tr-TR",
                         loader: function() {
-                            return n.e(5).then(n.bind(null, 2041))
+                            return n.e(5).then(n.bind(null, 2042))
                         }
                     }, {
                         name: "Čeština",
                         languageCode: "cs",
                         locale: "cs-CZ",
                         loader: function() {
-                            return n.e(28).then(n.bind(null, 2042))
+                            return n.e(28).then(n.bind(null, 2043))
                         }
                     }, {
                         name: "Ελληνικά",
                         languageCode: "el",
                         locale: "el-GR",
                         loader: function() {
-                            return n.e(25).then(n.bind(null, 2043))
+                            return n.e(25).then(n.bind(null, 2044))
                         }
                     }, {
                         name: "Български",
                         languageCode: "bg",
                         locale: "bg-BG",
                         loader: function() {
-                            return n.e(29).then(n.bind(null, 2044))
+                            return n.e(29).then(n.bind(null, 2045))
                         }
                     }, {
                         name: "Русский",
                         languageCode: "ru",
                         locale: "ru-RU",
                         loader: function() {
-                            return n.e(9).then(n.bind(null, 2045))
+                            return n.e(9).then(n.bind(null, 2046))
                         }
                     }, {
                         name: "العربية",
                         languageCode: "ar",
                         locale: "ar-SA",
                         loader: function() {
-                            return n.e(30).then(n.bind(null, 2046))
+                            return n.e(30).then(n.bind(null, 2047))
                         }
                     }, {
                         name: "ภาษาไทย",
                         languageCode: "th",
                         locale: "th-TH",
                         loader: function() {
-                            return n.e(6).then(n.bind(null, 2047))
+                            return n.e(6).then(n.bind(null, 2048))
                         }
                     }, {
                         name: "中文 简体",
                         languageCode: "zh-cn",
                         locale: "zh-CN",
                         loader: function() {
-                            return n.e(3).then(n.bind(null, 2048))
+                            return n.e(3).then(n.bind(null, 2049))
                         },
                         cldrLocale: "zh-hans"
                     }, {
@@ -783,7 +783,7 @@ webpackJsonp([60], {
                         languageCode: "zh-tw",
                         locale: "zh-TW",
                         loader: function() {
-                            return n.e(2).then(n.bind(null, 2049))
+                            return n.e(2).then(n.bind(null, 2050))
                         },
                         cldrLocale: "zh-hant"
                     }, {
@@ -791,28 +791,28 @@ webpackJsonp([60], {
                         languageCode: "ja",
                         locale: "ja-JP",
                         loader: function() {
-                            return n.e(17).then(n.bind(null, 2050))
+                            return n.e(17).then(n.bind(null, 2051))
                         }
                     }, {
                         name: "한국어",
                         languageCode: "ko",
                         locale: "ko-KR",
                         loader: function() {
-                            return n.e(16).then(n.bind(null, 2051))
+                            return n.e(16).then(n.bind(null, 2052))
                         }
                     }, {
                         name: "हिंदी",
                         languageCode: "hi",
                         locale: "hi-IN",
                         loader: function() {
-                            return n.e(20).then(n.bind(null, 2052))
+                            return n.e(20).then(n.bind(null, 2053))
                         }
                     }, {
                         name: "Română",
                         languageCode: "ro",
                         locale: "ro-RO",
                         loader: function() {
-                            return n.e(10).then(n.bind(null, 2053))
+                            return n.e(10).then(n.bind(null, 2054))
                         }
                     }], this.passportAuthURL = "https://api.twitch.tv/kraken/oauth2/authorize", this.passportScopes = ["chat_login", "user_read", "user_subscriptions", "user_presence_friends_read"], this.defaultAvatarURL = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png", this.defaultStreamPreviewURL = "https://static-cdn.jtvnw.net/ttv-static/404_preview-160x90.jpg", this.defaultBoxArtURL = "https://static-cdn.jtvnw.net/ttv-boxart/404_boxart.png", this.defaultCollectionPreviewURL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png", this.hostingCacheDelay = 2001, this.legacyClientID = "jzkbprff40iqj646a697cyrvl0zt2m6", this.algoliaApplicationID = "XLUO134HOR", this.algoliaAPIKey = "d157112f6fc2cab93ce4b01227c80a6d", this.forceNetworkLogging = !1, this.networkLoggingHostNames = ["twitch.tv", "localhost", "jtvnw.net", "twitchcdn.net", "twitchcdn.tech", "twitchcdn-shadow.net", "twitchsvc.net", "twitchsvc.tech", "twitchsvc-shadow.net"], this.defaultNetworkLoggingThreshold = .2, this.layoutCacheKey = "TwitchCache:Layout", this.forceComponentBenchmarking = !1, this.defaultComponentBenchmarkingThreshold = .1, this.forceBenchmarkingTools = !1, this.dfpNetworkCode = "3576121", this.krakenEndpoint = "https://api.twitch.tv/kraken", this.defaultAPIVersion = "5", this.adblockAccount = 58, this.adblockID = "qFEaZsFQnwEdUIs", this.forceMinConsoleLogLevelKey = "twilight.minConsoleLogLevel", this.tryPrimeURI = "https://twitch.amazon.com/prime", this.experimentsOverrideCookie = "experiment_overrides", this.tmiHost = "irc-ws.chat.twitch.tv", this.persistentPlayerEnabledKey = "persistenceEnabled"
                 }
@@ -8771,10 +8771,10 @@ webpackJsonp([60], {
             l = (n.n(s), n(44)),
             c = "language"
     },
-    807: function(e, t, n) {
-        n(149), n(186), e.exports = n(808)
-    },
     808: function(e, t, n) {
+        n(149), n(186), e.exports = n(809)
+    },
+    809: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -8815,20 +8815,20 @@ webpackJsonp([60], {
             y = n(243),
             _ = n(250),
             E = n(3),
-            k = (n(809), g.a.wrap(function() {
-                return n.e(38).then(n.bind(null, 2083))
+            k = (n(810), g.a.wrap(function() {
+                return n.e(38).then(n.bind(null, 2084))
             }, "PopoutChatPage")),
             C = g.a.wrap(function() {
-                return n.e(53).then(n.bind(null, 2084))
+                return n.e(53).then(n.bind(null, 2085))
             }, "BitsRoot"),
             S = g.a.wrap(function() {
-                return n.e(43).then(n.bind(null, 2086))
+                return n.e(43).then(n.bind(null, 2087))
             }, "SubsRoot"),
             L = g.a.wrap(function() {
-                return n.e(39).then(n.bind(null, 2089))
+                return n.e(39).then(n.bind(null, 2090))
             }, "EmbeddedChatPage"),
             T = g.a.wrap(function() {
-                return n.e(0).then(n.bind(null, 2090))
+                return n.e(0).then(n.bind(null, 2091))
             }, "CommunitySelectionPage"),
             x = function(e) {
                 function t() {
@@ -8885,13 +8885,13 @@ webpackJsonp([60], {
             z = x,
             N = Object(h.a)(r)(z),
             I = Object(p.f)(N);
-        l.a.optimizedBuild || n.e(1).then(n.bind(null, 2082)).then(function(e) {
+        l.a.optimizedBuild || n.e(1).then(n.bind(null, 2083)).then(function(e) {
             return window.Perf = e
         });
         var M, D = !1;
         M = l.n.store.getReduxStore().subscribe(o), Object(d.a)(), l.n.store.dispatch(Object(c.e)())
     },
-    809: function(e, t) {},
+    810: function(e, t) {},
     91: function(e, t, n) {
         "use strict";
 
@@ -8969,5 +8969,5 @@ webpackJsonp([60], {
             }, e
         }()
     }
-}, [807]);
-//# sourceMappingURL=minimal-11680deb1d379e88a859073c295c8168.js.map
+}, [808]);
+//# sourceMappingURL=minimal-76fcf14910add0a42d2b09f07d049cb2.js.map

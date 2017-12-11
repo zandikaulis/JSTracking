@@ -1,5 +1,5 @@
 webpackJsonp([53], {
-    1251: function(e, t, n) {
+    1252: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -33,8 +33,8 @@ webpackJsonp([53], {
             v = n(31),
             k = n(5),
             _ = n(3),
-            E = n(1252),
-            y = (n(1253), function(e) {
+            E = n(1253),
+            y = (n(1254), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onCardClick = function() {
@@ -209,7 +209,7 @@ webpackJsonp([53], {
             return U
         })
     },
-    1252: function(e, t) {
+    1253: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -294,7 +294,7 @@ webpackJsonp([53], {
         };
         e.exports = n
     },
-    1253: function(e, t) {},
+    1254: function(e, t) {},
     132: function(e, t, n) {
         "use strict";
 
@@ -371,16 +371,16 @@ webpackJsonp([53], {
             s = n(132),
             c = n(13)
     },
-    1554: function(e, t, n) {
+    1555: function(e, t, n) {
         "use strict";
         var a = n(0),
             r = n(1),
             i = n(10),
             o = n(13),
             l = n(5),
-            s = n(1251),
+            s = n(1252),
             c = n(3),
-            d = (n(1555), function(e) {
+            d = (n(1556), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -428,8 +428,8 @@ webpackJsonp([53], {
             return u
         })
     },
-    1555: function(e, t) {},
-    2084: function(e, t, n) {
+    1556: function(e, t) {},
+    2085: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -450,10 +450,10 @@ webpackJsonp([53], {
             c = n(113),
             d = n(114),
             p = n(33),
-            u = n(1554),
+            u = n(1555),
             m = n(3),
             h = c.a.wrap(function() {
-                return n.e(62).then(n.bind(null, 2085))
+                return n.e(62).then(n.bind(null, 2086))
             }, "BitsLandingPage"),
             f = function(e) {
                 function t() {
@@ -546,4 +546,4 @@ webpackJsonp([53], {
         })
     }
 });
-//# sourceMappingURL=pages.bits-e6bec14c55af95a9d28ffb57a2cde990.js.map
+//# sourceMappingURL=pages.bits-d18fa171addb2a7bdfcbb25fa76fedb6.js.map
