@@ -943,9 +943,9 @@ webpackJsonp([49], {
             return u
         })
     },
+    1904: function(e, t) {},
     1905: function(e, t) {},
-    1906: function(e, t) {},
-    1907: function(e, t) {
+    1906: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1847,8 +1847,8 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    1908: function(e, t) {},
-    2073: function(e, t, n) {
+    1907: function(e, t) {},
+    2072: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1925,7 +1925,7 @@ webpackJsonp([49], {
             e.SINGLE_EVENT = "SingleEvent", e.PREMIERE_EVENT = "PremiereEvent"
         }(w || (w = {}));
         var N = n(3),
-            C = (n(1905), function(e) {
+            C = (n(1904), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2034,7 +2034,7 @@ webpackJsonp([49], {
             U = n(1314),
             O = n(1315),
             T = n(1032),
-            L = (n(1906), function(e) {
+            L = (n(1905), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2405,8 +2405,8 @@ webpackJsonp([49], {
                 }, t = u.__decorate([Object(E.c)("EventLandingSidePanel")], t)
             }(p.Component),
             Y = J,
-            Q = n(1907),
-            X = (n(1908), function(e) {
+            Q = n(1906),
+            X = (n(1907), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.goToVideo = function(e) {
@@ -7029,4 +7029,4 @@ webpackJsonp([49], {
         })
     }
 });
-//# sourceMappingURL=pages.event-landing-page-a38cebae000767086f66d3e6099cb616.js.map
+//# sourceMappingURL=pages.event-landing-page-17b77f8504a0a8d126e50c8fd1941835.js.map

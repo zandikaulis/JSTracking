@@ -1,4 +1,5 @@
 webpackJsonp([62], {
+    1998: function(e, t) {},
     1999: function(e, t) {},
     20: function(e, t, n) {
         "use strict";
@@ -74,8 +75,7 @@ webpackJsonp([62], {
     2001: function(e, t) {},
     2002: function(e, t) {},
     2003: function(e, t) {},
-    2004: function(e, t) {},
-    2005: function(e, t) {
+    2004: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -140,8 +140,8 @@ webpackJsonp([62], {
         };
         e.exports = n
     },
-    2006: function(e, t) {},
-    2086: function(e, t, n) {
+    2005: function(e, t) {},
+    2085: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -176,7 +176,7 @@ webpackJsonp([62], {
             y = n(5),
             v = n(824),
             k = n(3),
-            _ = (n(1999), function(e) {
+            _ = (n(1998), function(e) {
                 return u.createElement(k.P, {
                     className: "bits-landing-page-text-section",
                     margin: {
@@ -187,7 +187,7 @@ webpackJsonp([62], {
                     color: k.F.Base
                 }, e.text))
             }),
-            B = (n(2e3), function(e) {
+            B = (n(1999), function(e) {
                 var t = e.additionInfo.map(function(e, t) {
                     return u.createElement(_, {
                         key: "additionInfo:" + t,
@@ -217,7 +217,7 @@ webpackJsonp([62], {
                     margin: "auto"
                 }, e.cheermoteImaages))
             }),
-            C = (n(2001), function(e) {
+            C = (n(2e3), function(e) {
                 var t = null;
                 return e.additionalInfo && (t = u.createElement(_, {
                     text: e.additionalInfo
@@ -348,7 +348,7 @@ webpackJsonp([62], {
                 question: A.additionalHelpQuestion,
                 answer: A.additionalHelpAnswer
             }],
-            S = (n(2002), function(e) {
+            S = (n(2001), function(e) {
                 var t = [1, 100, 1e3, 5e3, 1e4].map(function(t) {
                         return u.createElement(k.U, {
                             display: k.H.Block,
@@ -406,7 +406,7 @@ webpackJsonp([62], {
                     className: "bits-landing-page-faq__content"
                 }, a))
             }),
-            O = (n(2003), function(e) {
+            O = (n(2002), function(e) {
                 var t = u.createElement(k.U, {
                         margin: {
                             left: .5
@@ -489,7 +489,7 @@ webpackJsonp([62], {
                     amount: t
                 }, "BitsLandingPage"))))
             },
-            j = (n(2004), function(e) {
+            j = (n(2003), function(e) {
                 return u.createElement(k.U, {
                     className: "bits-landing-page-right-pane",
                     padding: {
@@ -562,8 +562,8 @@ webpackJsonp([62], {
                 }))
             }),
             P = function() {},
-            U = n(2005),
-            F = (n(2006), function(e) {
+            U = n(2004),
+            F = (n(2005), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.bitsConfig = Object(b.a)(), t
@@ -2652,4 +2652,4 @@ webpackJsonp([62], {
     },
     866: function(e, t) {}
 });
-//# sourceMappingURL=pages.bits.components.bits-landing-page-e998e27bd67a63d4fa9b1a6e2680a7aa.js.map
+//# sourceMappingURL=pages.bits.components.bits-landing-page-9cf42a7f61cf996754bfee0cd327a14d.js.map

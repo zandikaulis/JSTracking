@@ -58,6 +58,8 @@ window.__twilightSettings = {
     "twilight_routes": ["channel", "channelEvents", "clips", "collections", "community", "dashboardModeration", "directoryAllChannels", "directoryCommunities", "directoryCreative", "directoryFollowing", "directoryFollowingCommunities", "directoryFollowingChannels", "directoryFollowingGames", "directoryFollowingHosts", "directoryGame", "directoryGames", "directoryGameClips", "directoryGameVideos", "directoryVideos", "event", "index", "merchStore", "settingsNotifications", "video", "videos"],
     "twilight_routes_enabled": true,
     "twilight_routes_test_users": ["tanexion", "codecrshr", "adamar", "major_mosey", "kashinwins", "legypsy", "cathadan", "zenhaplo", "diresqrl", "kugleburg", "polygoose", "r_demerzel", "digisaint", "molu", "bennyguitar", "cresseye", "lunacyhatter", "lawls544", "delthios"],
+    "twilight_video_manager_public": false,
+    "twilight_video_manager_staff": true,
     "viewer_milestones_enabled": false,
     "experiments": {
         "011d1499-61b3-49b2-92b2-b2ffd353ef00": {
@@ -200,7 +202,7 @@ window.__twilightSettings = {
         },
         "50ac9a2b-63c2-46ed-9e7d-123363195dfd": {
             "name": "twilight_new_browse",
-            "v": 2565,
+            "v": 2642,
             "t": 1,
             "groups": [{
                 "weight": 60,

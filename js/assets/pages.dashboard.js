@@ -34154,7 +34154,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
             }
         }
     }
-}, function(e, t) {}, , , , , , , , , , , , , , , , , , , , , , function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t, n) {
+}, function(e, t) {}, , , , , , , , , , , , , , , , , , , , , , function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t) {}, function(e, t, n) {
     function r(e) {
         return e.filter(function(e) {
             if ("FragmentDefinition" !== e.kind) return !0;
@@ -38831,7 +38831,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
         rr = n(262),
         ar = n(47),
         ir = n(3),
-        or = (n(1944), function(e) {
+        or = (n(1943), function(e) {
             return Hn.createElement("div", {
                 className: "mod-dashboard__ban-message"
             }, Hn.createElement("ul", {
@@ -38936,7 +38936,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
         }(Hn.Component),
         lr = Object(On.a)(null, r)(sr),
         ur = n(4),
-        dr = (n(1945), function(e) {
+        dr = (n(1944), function(e) {
             var t = "";
             switch (e.state) {
                 case Jn.b:
@@ -38960,7 +38960,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 fontSize: ir.L.Size5
             }, t, ": ", Object(Vn.d)("This message was held for review and is hidden from viewers.", "chomments.moderation.heldForReview")))
         }),
-        cr = (n(1946), function(e) {
+        cr = (n(1945), function(e) {
             var t = e.state !== Jn.c,
                 n = null;
             t && (n = Hn.createElement(dr, {
@@ -38998,7 +38998,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 when: t
             }, "chomments.moderation.userLeftMessageWhen"))
         },
-        hr = (n(1947), function(e) {
+        hr = (n(1946), function(e) {
             return Hn.createElement(ir.U, {
                 display: ir.H.Flex,
                 flexWrap: ir.K.NoWrap
@@ -39032,7 +39032,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 showRelativeTimeOnly: e.showRelativeTimeOnly || !1
             }))))
         }),
-        pr = (n(1948), function(e) {
+        pr = (n(1947), function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -39212,7 +39212,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 return Hn.createElement("ul", null, t)
             }, t
         }(Hn.Component),
-        vr = (n(1949), function(e) {
+        vr = (n(1948), function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.onLoadMoreRepliesClickHandler = function() {
@@ -39242,7 +39242,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
             }, t
         }(Hn.Component)),
         yr = n(130),
-        br = (n(1950), "comment"),
+        br = (n(1949), "comment"),
         Mr = "t",
         kr = function(e) {
             var t = e.context,
@@ -39270,7 +39270,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 "data-a-target": "moderator-message-video-button"
             }, Object(Jn.u)(r.contentOffset)))
         },
-        wr = (n(1951), function(e) {
+        wr = (n(1950), function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.onBanUserClickHandler = function() {
@@ -39373,7 +39373,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 }, Hn.createElement(lr, Nn.__assign({}, t))))), n))
             }, t
         }(Hn.Component)),
-        Dr = (n(1952), function(e) {
+        Dr = (n(1951), function(e) {
             var t = e.comments.map(function(t, n) {
                 return Hn.createElement("li", {
                     key: t.comment.id,
@@ -39396,7 +39396,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
         })(Dr),
         Lr = n(64),
         Tr = n(1275),
-        xr = (n(1953), function(e) {
+        xr = (n(1952), function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.changeHandler = function(e) {
@@ -39415,7 +39415,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 }))
             }, t
         }(Hn.Component)),
-        Cr = (n(1954), function(e) {
+        Cr = (n(1953), function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.searchInputChangeHandler = function(e) {
@@ -39492,7 +39492,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
             }, t
         }(Hn.Component)),
         Er = Object(er.c)("SearchFilter")(Cr),
-        Yr = (n(1955), function(e) {
+        Yr = (n(1954), function(e) {
             return Hn.createElement(Er, {
                 disabled: e.disabled,
                 onSearchTermChange: e.onSearchTermChange,
@@ -39544,7 +39544,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 disabled: !("onOlderClick" in e)
             }, Object(Vn.d)("Older Messages", "chomments.dashboard.olderMessages")))
         },
-        Rr = (n(1956), Object(Vn.d)("You currently have no messages. Add a message to one of your videos to encourage conversation in your community.", "ModerationDashboard")),
+        Rr = (n(1955), Object(Vn.d)("You currently have no messages. Add a message to one of your videos to encourage conversation in your community.", "ModerationDashboard")),
         Nr = Object(Vn.d)("You currently have no messages on this video. Add a message to this video to encourage conversation in your community.", "ModerationDashboard"),
         Hr = Object(Vn.d)("You do not have permission to access this dashboard.", "ModerationPageComponent"),
         Pr = function(e) {
@@ -39678,7 +39678,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
         }), Object(Qn.a)({
             location: Xn.PageviewLocation.Dashboard
         }))(Pr),
-        zr = n(1957),
+        zr = n(1956),
         Br = Object(Un.f)(Object(On.a)(u, d, c)(Object(Bn.graphql)(zr, {
             options: function(e) {
                 return {
@@ -39840,7 +39840,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 })
             }, t
         }(Hn.Component),
-        ia = n(1958),
+        ia = n(1957),
         oa = {
             1: ir._9.Roman1,
             2: ir._9.Roman2,
@@ -40044,7 +40044,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 label: Object(Vn.e)(e.achievement.progressRatio, "percent")
             }))
         },
-        ga = (n(1959), ["confetti-layer__confetti--slow", "confetti-layer__confetti--medium", "confetti-layer__confetti--fast"]),
+        ga = (n(1958), ["confetti-layer__confetti--slow", "confetti-layer__confetti--medium", "confetti-layer__confetti--fast"]),
         va = ["rgba(247, 42, 107, 1)", "rgba(255, 113, 105, 1)", "rgba(253, 226, 132, 1)", "rgba(181, 138, 242, 1)"],
         ya = ["0.011s", "0.176s", "0.321s", "0.446s", "0.849s", "1.056s", "1.229s", "1.333s", "1.379s", "1.828s"],
         ba = function(e) {
@@ -40229,7 +40229,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 key: "past-completed"
             }), e)]
         },
-        Ca = (n(1960), function() {
+        Ca = (n(1959), function() {
             return Hn.createElement(ir._17, {
                 className: "dash-feedback",
                 position: ir._2.Absolute,
@@ -40275,7 +40275,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 }
             }, Hn.createElement(ir._21, null, Object(Vn.d)("Send Feedback", "DashboardHelpLinks"))))))))
         }),
-        Ea = (n(1961), {
+        Ea = (n(1960), {
             "data-test-selector": "quests-col"
         }),
         Ya = {
@@ -40805,7 +40805,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 href: "https://help.twitch.tv/customer/portal/articles/2877819"
             }, t)))))
         },
-        ei = (n(1962), "achievement-spotlights"),
+        ei = (n(1961), "achievement-spotlights"),
         ti = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
@@ -40988,7 +40988,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
         })(ui)),
         ci = di,
         mi = n(7),
-        hi = n(1963),
+        hi = n(1962),
         pi = n(21),
         fi = function() {
             function e(e) {
@@ -41064,7 +41064,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
         }(Hn.Component),
         gi = _i,
         vi = n(827),
-        yi = (n(1964), function(e) {
+        yi = (n(1963), function(e) {
             return e.external ? Hn.createElement(ir.P, {
                 padding: {
                     x: 2,
@@ -41114,7 +41114,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 return j(t.match, e) && e.children
             })
         },
-        wi = (n(1965), {
+        wi = (n(1964), {
             "data-test-selector": "stats-link-selector"
         }),
         Di = {
@@ -41374,7 +41374,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 configurable: !0
             }), t
         }(Hn.Component),
-        Fi = n(1966),
+        Fi = n(1965),
         Ri = {
             isOwner: !1,
             isSiteAdmin: !1,
@@ -41383,7 +41383,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
             isAffiliate: !1,
             hasPartnerInvitation: !1
         },
-        Ni = (n(1967), function(e) {
+        Ni = (n(1966), function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -41448,7 +41448,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 }
             }
         })(Ni),
-        Pi = (n(1968), function(e) {
+        Pi = (n(1967), function(e) {
             if (e.query.isLoading || !e.streamSummaryCursor.current) return Hn.createElement(ir._1, {
                 height: 400
             });
@@ -41517,7 +41517,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 height: 400
             }))
         },
-        Vi = (n(1969), function() {
+        Vi = (n(1968), function() {
             return Hn.createElement(ir._17, {
                 className: "dash-feedback",
                 position: ir._2.Absolute,
@@ -41710,7 +41710,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 }, this.props.control(e), this.state.isDisclosed && this.props.children(e))
             }, t
         }(Hn.Component),
-        Ji = (n(1970), {
+        Ji = (n(1969), {
             "data-test-selector": "stream-summary-date-time"
         }),
         Ki = {
@@ -41897,7 +41897,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
             }
             return e
         }(),
-        io = (n(1971), {
+        io = (n(1970), {
             "data-test-selector": "live-dashboard-link"
         }),
         oo = {
@@ -41905,7 +41905,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
             imageAlt: "VoHiYo"
         },
         so = "https://help.twitch.tv/customer/portal/articles/2877822",
-        lo = (n(1972), 5),
+        lo = (n(1971), 5),
         uo = {
             "data-test-selector": "referral-percentage"
         },
@@ -42076,7 +42076,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
         To = {
             "data-test-selector": "dismiss"
         },
-        xo = (n(1973), function(e) {
+        xo = (n(1972), function(e) {
             return Hn.createElement(ir.U, {
                 className: "sm-sb-flourish-emotes",
                 position: ir._2.Relative
@@ -42144,7 +42144,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 ellipsis: !0
             }), e.subtitle))))
         },
-        Eo = (n(1974), function(e) {
+        Eo = (n(1973), function(e) {
             return Hn.createElement(ir.U, {
                 className: "sm-sb-flourish-confetti",
                 position: ir._2.Relative
@@ -42364,7 +42364,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 })
             }, t
         }(Hn.Component),
-        Qo = (n(1975), function(e) {
+        Qo = (n(1974), function(e) {
             return Hn.createElement("div", {
                 className: "sm-cp-card"
             }, Hn.createElement("a", {
@@ -42612,7 +42612,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
         as = function(e) {
             return (window.devicePixelRatio || 1) / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
         },
-        is = (n(1976), function(e, t) {
+        is = (n(1975), function(e, t) {
             var n = Math.max.apply(null, t);
             return {
                 at: e[t.indexOf(n)],
@@ -42747,7 +42747,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 })
             }, t
         }(Hn.Component),
-        fs = (n(1977), function(e) {
+        fs = (n(1976), function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -43485,8 +43485,8 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
             return r || (r = on(t, e)), e.gameID && e.gameName && (r.game.id = e.gameID, r.game.name = e.gameName, delete e.gameID, delete e.gameName), Nn.__assign({}, r, e)
         };
     Vn.n.store.registerReducer("eventModal", un);
-    var Ul, Vl = n(1978),
-        Wl = (n(1979), function(e) {
+    var Ul, Vl = n(1977),
+        Wl = (n(1978), function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.setInputRef = function(e) {
@@ -43529,7 +43529,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
         }(Hn.Component)),
         zl = n(1273),
         Bl = n(1054),
-        Gl = (n(1980), "380"),
+        Gl = (n(1979), "380"),
         ql = "676",
         Jl = "data:image/jpg;base64,",
         Kl = "default:town",
@@ -43944,7 +43944,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 }, Vn.a.locales.map(this.renderLanguageOption)))
             }, t
         }(Hn.Component),
-        pu = (n(1981), {
+        pu = (n(1980), {
             RFC3399: "YYYY-MM-DDTHH:mm:ssZ",
             timeString: "h:mma"
         }),
@@ -44045,7 +44045,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
             }
             return e
         }(),
-        bu = (n(1982), function() {
+        bu = (n(1981), function() {
             return Object(Wo.b)()[0] || "en"
         });
     ! function(e) {
@@ -44409,7 +44409,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
         Yu = function(e) {
             return e ? e.url.replace("{width}", "160").replace("{height}", "90") : ""
         },
-        Ou = (n(1983), {
+        Ou = (n(1982), {
             onConfirm: "ON_CONFIRM",
             onCancel: "ON_CANCEL"
         }),
@@ -45308,7 +45308,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
     ! function(e) {
         e[e.Left = 0] = "Left", e[e.Right = 1] = "Right"
     }(Ku || (Ku = {}));
-    var md, hd = (n(1984), function(e) {
+    var md, hd = (n(1983), function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.handleMenuChange = function(e, t) {
@@ -45579,7 +45579,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 }))
             }, t
         }(Hn.Component),
-        wd = (n(1985), {
+        wd = (n(1984), {
             forbidden: "forbidden",
             apiError: "api-error",
             cancelTestSelector: "CANCEL_TEST_SELECTOR",
@@ -45884,7 +45884,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 asset: ir._9.Check
             })) : ""))
         },
-        Cd = (n(1986), [{
+        Cd = (n(1985), [{
             key: null,
             label: Object(Vn.d)("All", "VideoManagerFilter")
         }, {
@@ -45971,7 +45971,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 }, e)) : null
             }, t
         }(Hn.Component),
-        Id = (n(1987), function(e) {
+        Id = (n(1986), function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -46008,7 +46008,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 }))))
             }, t
         }(Hn.Component)),
-        Fd = (n(1988), function(e) {
+        Fd = (n(1987), function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.handleClick = function(e) {
@@ -46199,7 +46199,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
         Ud = 1024,
         Vd = Ud * Ud,
         Wd = Vd * Ud,
-        zd = (n(1989), {
+        zd = (n(1988), {
             VIDEO_CARD_THUMBNAIL_UPLOADING_SELECTOR: "video_card_thumbnail_uploading_selector",
             VIDEO_CARD_THUMBNAIL_QUEUED_SELECTOR: "video_card_thumbnail_queued_selector",
             VIDEO_CARD_THUMBNAIL_SELECTOR: "video_card_thumbnail_selector",
@@ -46498,8 +46498,8 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
             })
         },
         Zd = n(912),
-        ec = n(1990),
-        tc = (n(1991), {
+        ec = n(1989),
+        tc = (n(1990), {
             onConfirm: "ON_CONFIRM"
         }),
         nc = function(e) {
@@ -46559,7 +46559,7 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
                 this.mode = Kd.Modal
             }, e
         }(),
-        ac = (n(1992), {
+        ac = (n(1991), {
             forbidden: "forbidden",
             apiError: "api-error",
             noVideos: "no-videos",
@@ -47048,4 +47048,4 @@ webpackJsonp([36], Array(812).concat([function(e, t, n) {
         return fc
     })
 }]));
-//# sourceMappingURL=pages.dashboard-0055dfc7200b707c63ae94b1662813a9.js.map
+//# sourceMappingURL=pages.dashboard-081e337adc08eb0d2c86d10ae90fb3ec.js.map
