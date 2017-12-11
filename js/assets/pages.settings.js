@@ -15,8 +15,8 @@ webpackJsonp([52], {
         t.a = i, t.b = a;
         var s = "https://www.twitch.tv"
     },
-    1934: function(e, t) {},
-    1935: function(e, t) {
+    1935: function(e, t) {},
+    1936: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -117,8 +117,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1936: function(e, t) {},
-    1937: function(e, t) {
+    1937: function(e, t) {},
+    1938: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -411,8 +411,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1938: function(e, t) {},
-    1939: function(e, t) {
+    1939: function(e, t) {},
+    1940: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -500,8 +500,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1940: function(e, t) {},
-    1941: function(e, t) {
+    1941: function(e, t) {},
+    1942: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -632,8 +632,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1942: function(e, t) {},
-    2079: function(e, t, n) {
+    1943: function(e, t) {},
+    2080: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -707,7 +707,7 @@ webpackJsonp([52], {
             y = n(7),
             k = n(20),
             N = n(10),
-            _ = (n(1934), function(e) {
+            _ = (n(1935), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -783,8 +783,8 @@ webpackJsonp([52], {
                     }, Object(r.d)("Saved", "AdvancedNotificationSettingsToggle"))))))
                 }, t
             }(o.Component)),
-            E = n(1935),
-            w = (n(1936), n(1937)),
+            E = n(1936),
+            w = (n(1937), n(1938)),
             x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1001,7 +1001,7 @@ webpackJsonp([52], {
             }), Object(y.a)(E, {
                 name: "setAdvancedNotificationSetting"
             }), Object(d.c)("AdvancedNotificationSettings"))(x),
-            O = (n(1938), function(e) {
+            O = (n(1939), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -1066,8 +1066,8 @@ webpackJsonp([52], {
                     }, Object(r.d)("Saved", "PlatformNotificationSettingsToggle")))))
                 }, t
             }(o.Component)),
-            P = n(1939),
-            j = (n(1940), n(1941));
+            P = n(1940),
+            j = (n(1941), n(1942));
         ! function(e) {
             e.onsite = "onsite", e.email = "email", e.push = "push"
         }(m || (m = {}));
@@ -1349,7 +1349,7 @@ webpackJsonp([52], {
             }), Object(y.a)(P, {
                 name: "setNotificationSetting"
             }))(U),
-            T = (n(1942), function(e) {
+            T = (n(1943), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1635,4 +1635,4 @@ webpackJsonp([52], {
         })
     }
 });
-//# sourceMappingURL=pages.settings-33595088a70f7794086981c73cee9357.js.map
+//# sourceMappingURL=pages.settings-87e4cc72f7637a4de4e74f67ad20a570.js.map

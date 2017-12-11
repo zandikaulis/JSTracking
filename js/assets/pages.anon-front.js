@@ -2459,7 +2459,7 @@ webpackJsonp([48], {
     },
     1689: function(e, t) {},
     1690: function(e, t) {},
-    2055: function(e, t, n) {
+    2056: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -5251,7 +5251,7 @@ webpackJsonp([48], {
                         return y.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return b.a.buildType !== C.a.Production && k.parse(window.location.search).onsite_test_data ? [4, n.e(35).then(n.bind(null, 2054))] : [3, 2];
+                                    return b.a.buildType !== C.a.Production && k.parse(window.location.search).onsite_test_data ? [4, n.e(35).then(n.bind(null, 2055))] : [3, 2];
                                 case 1:
                                     e = i.sent().MockOnsiteNotifications, t = e.getMockOnsiteNotificationModels(3), this.setState({
                                         notifications: t
@@ -5338,7 +5338,7 @@ webpackJsonp([48], {
                             return y.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return this.listDataLoaded() && !this.hasInsertedListNotificationsData && b.a.buildType !== C.a.Production && k.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(35).then(n.bind(null, 2054))]) : [3, 2];
+                                        return this.listDataLoaded() && !this.hasInsertedListNotificationsData && b.a.buildType !== C.a.Production && k.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(35).then(n.bind(null, 2055))]) : [3, 2];
                                     case 1:
                                         e = t.sent().MockOnsiteNotifications, Object(O.d)(he, y.__assign({}, this.props.listData.variables), function(t) {
                                             return t.currentUser.notifications.edges = e.getMockOnsiteNotificationEdges(k.parse(window.location.search).onsite_test_data), t
@@ -11459,4 +11459,4 @@ webpackJsonp([48], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front-1658fc99ce4c502ddef2c064267b98c8.js.map
+//# sourceMappingURL=pages.anon-front-fa78c88c31e3173e006ec0bfd3f3123c.js.map
