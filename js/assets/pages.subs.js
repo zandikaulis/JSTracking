@@ -713,7 +713,7 @@ webpackJsonp([43], {
             f = n(7),
             g = n(20),
             v = n(511),
-            b = n(138),
+            b = n(139),
             k = n(512),
             S = {
                 Channel: "channel"
@@ -967,7 +967,7 @@ webpackJsonp([43], {
             return I
         })
     },
-    1248: function(e, t, n) {
+    1251: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1001,8 +1001,8 @@ webpackJsonp([43], {
             v = n(31),
             b = n(5),
             k = n(3),
-            S = n(1249),
-            y = (n(1250), function(e) {
+            S = n(1252),
+            y = (n(1253), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onCardClick = function() {
@@ -1177,7 +1177,7 @@ webpackJsonp([43], {
             return N
         })
     },
-    1249: function(e, t) {
+    1252: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1262,7 +1262,7 @@ webpackJsonp([43], {
         };
         e.exports = n
     },
-    1250: function(e, t) {},
+    1253: function(e, t) {},
     131: function(e, t, n) {
         "use strict";
 
@@ -1488,7 +1488,7 @@ webpackJsonp([43], {
         }), t.b = i;
         var a, r = n(33),
             s = n(58),
-            o = n(138);
+            o = n(139);
         ! function(e) {
             e[e.UserMenu = 1] = "UserMenu", e[e.TypedCommand = 2] = "TypedCommand"
         }(a || (a = {}))
@@ -1546,7 +1546,7 @@ webpackJsonp([43], {
             return c
         })
     },
-    137: function(e, t, n) {
+    138: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1589,7 +1589,7 @@ webpackJsonp([43], {
             return c.b
         })
     },
-    138: function(e, t, n) {
+    139: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -2325,7 +2325,7 @@ webpackJsonp([43], {
             }(s.Component),
             L = M,
             A = n(276),
-            j = n(137),
+            j = n(138),
             B = n(282);
         ! function(e) {
             e[e.Top = 0] = "Top", e[e.SubOptions = 1] = "SubOptions", e[e.GiftOptions = 2] = "GiftOptions", e[e.RecipientSelect = 3] = "RecipientSelect"
@@ -5398,7 +5398,7 @@ webpackJsonp([43], {
         var h = n(9),
             f = n(2),
             g = n(0),
-            v = n(139),
+            v = n(136),
             b = n(57),
             k = 234,
             S = 310,
@@ -5870,16 +5870,16 @@ webpackJsonp([43], {
             return r
         })
     },
-    1553: function(e, t, n) {
+    1554: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
             r = n(10),
             s = n(13),
             o = n(5),
-            l = n(1248),
+            l = n(1251),
             c = n(3),
-            d = (n(1554), function(e) {
+            d = (n(1555), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -5927,7 +5927,7 @@ webpackJsonp([43], {
             return p
         })
     },
-    1554: function(e, t) {},
+    1555: function(e, t) {},
     20: function(e, t, n) {
         "use strict";
 
@@ -5995,11 +5995,11 @@ webpackJsonp([43], {
             }
         }
         t.b = i, t.a = a, t.d = r, t.c = s;
-        var o = n(139),
+        var o = n(136),
             l = (n.n(o), n(2))
     },
-    2004: function(e, t) {},
-    2084: function(e, t, n) {
+    2006: function(e, t) {},
+    2086: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -6020,14 +6020,14 @@ webpackJsonp([43], {
             c = n(113),
             d = n(114),
             u = n(5),
-            p = n(1553),
+            p = n(1554),
             m = n(449),
             h = n(3),
-            f = (n(2004), c.a.wrap(function() {
-                return n.e(63).then(n.bind(null, 2085))
+            f = (n(2006), c.a.wrap(function() {
+                return n.e(63).then(n.bind(null, 2087))
             }, "SubsLandingPage")),
             g = c.a.wrap(function() {
-                return n.e(64).then(n.bind(null, 2086))
+                return n.e(64).then(n.bind(null, 2088))
             }, "SubsBroadcasterPage"),
             v = function(e) {
                 function t() {
@@ -6617,7 +6617,7 @@ webpackJsonp([43], {
             g = n(13),
             v = n(140),
             b = n(262),
-            k = n(137),
+            k = n(138),
             S = n(3),
             y = (n(535), function(e) {
                 function t() {
@@ -13131,79 +13131,79 @@ webpackJsonp([43], {
             be = n(15),
             ke = n(5),
             Se = ve.a.wrap(function() {
-                return n.e(48).then(n.bind(null, 2053))
+                return n.e(48).then(n.bind(null, 2055))
             }, "AnonFrontPage"),
             ye = ve.a.wrap(function() {
-                return n.e(32).then(n.bind(null, 2054))
+                return n.e(32).then(n.bind(null, 2056))
             }, "BrowseCommunitiesPage"),
             _e = ve.a.wrap(function() {
-                return n.e(32).then(n.bind(null, 2054))
+                return n.e(32).then(n.bind(null, 2056))
             }, "BrowseForYouPage"),
             Ne = ve.a.wrap(function() {
-                return n.e(32).then(n.bind(null, 2054))
+                return n.e(32).then(n.bind(null, 2056))
             }, "BrowseCreativePage"),
             Ee = ve.a.wrap(function() {
-                return n.e(41).then(n.bind(null, 2056))
+                return n.e(41).then(n.bind(null, 2058))
             }, "ChannelClipsPage"),
             Te = ve.a.wrap(function() {
-                return n.e(47).then(n.bind(null, 2057))
+                return n.e(47).then(n.bind(null, 2059))
             }, "ChannelCollectionsPage"),
             Ce = ve.a.wrap(function() {
-                return n.e(44).then(n.bind(null, 2058))
+                return n.e(44).then(n.bind(null, 2060))
             }, "ChannelEventsPage"),
             De = ve.a.wrap(function() {
-                return n.e(0).then(n.bind(null, 2059))
+                return n.e(0).then(n.bind(null, 2061))
             }, "ChannelPage"),
             we = ve.a.wrap(function() {
-                return n.e(40).then(n.bind(null, 2060))
+                return n.e(40).then(n.bind(null, 2062))
             }, "ChannelVideosPage"),
             Ie = ve.a.wrap(function() {
-                return n.e(34).then(n.bind(null, 2061))
+                return n.e(34).then(n.bind(null, 2063))
             }, "ChannelClipsManagerPage"),
             Pe = ve.a.wrap(function() {
-                return n.e(34).then(n.bind(null, 2061))
+                return n.e(34).then(n.bind(null, 2063))
             }, "MyClipsManagerPage"),
             Oe = ve.a.wrap(function() {
-                return n.e(57).then(n.bind(null, 2062))
+                return n.e(57).then(n.bind(null, 2064))
             }, "DevOnlyRoot"),
             Fe = ve.a.wrap(function() {
-                return n.e(45).then(n.bind(null, 2063))
+                return n.e(45).then(n.bind(null, 2065))
             }, "DirectoryRootPage"),
             Ue = ve.a.wrap(function() {
-                return n.e(54).then(n.bind(null, 2067))
+                return n.e(54).then(n.bind(null, 2069))
             }, "DevOnlyTestingCarouselPage"),
             Re = ve.a.wrap(function() {
-                return n.e(33).then(n.bind(null, 2068))
+                return n.e(33).then(n.bind(null, 2070))
             }, "DirectoryPopularPage"),
             xe = ve.a.wrap(function() {
-                return n.e(33).then(n.bind(null, 2068))
+                return n.e(33).then(n.bind(null, 2070))
             }, "DirectoryPopularByLanguagePage"),
             Me = ve.a.wrap(function() {
-                return n.e(32).then(n.bind(null, 2054))
+                return n.e(32).then(n.bind(null, 2056))
             }, "BrowseGamePage"),
             Le = ve.a.wrap(function() {
-                return n.e(55).then(n.bind(null, 2069))
+                return n.e(55).then(n.bind(null, 2071))
             }, "EmailVerificationPage"),
             Ae = ve.a.wrap(function() {
-                return n.e(49).then(n.bind(null, 2070))
+                return n.e(49).then(n.bind(null, 2072))
             }, "EventLandingPage"),
             je = ve.a.wrap(function() {
-                return n.e(50).then(n.bind(null, 2071))
+                return n.e(50).then(n.bind(null, 2073))
             }, "FollowingRootPage"),
             Be = ve.a.wrap(function() {
-                return n.e(46).then(n.bind(null, 2072))
+                return n.e(46).then(n.bind(null, 2074))
             }, "FrontPage"),
             We = ve.a.wrap(function() {
-                return n.e(56).then(n.bind(null, 2073))
+                return n.e(56).then(n.bind(null, 2075))
             }, "ReportUserPage"),
             He = ve.a.wrap(function() {
-                return n.e(51).then(n.bind(null, 2074))
+                return n.e(51).then(n.bind(null, 2076))
             }, "StoreMerchPage"),
             Ve = ve.a.wrap(function() {
-                return n.e(42).then(n.bind(null, 2075))
+                return n.e(42).then(n.bind(null, 2077))
             }, "VideoWatchPage"),
             Ge = ve.a.wrap(function() {
-                return n.e(52).then(n.bind(null, 2077))
+                return n.e(52).then(n.bind(null, 2079))
             }, "GlobalNotificationSettingsPage"),
             qe = function() {
                 return _.createElement(ge.c, {
@@ -17841,7 +17841,7 @@ webpackJsonp([43], {
         var a = n(0),
             r = n(2),
             s = n(13),
-            o = n(138),
+            o = n(139),
             l = n(457),
             c = (n.n(l), {
                 BuyGiftSub: "buy_gift_sub",
@@ -23909,4 +23909,4 @@ webpackJsonp([43], {
         })
     }
 });
-//# sourceMappingURL=pages.subs-2156b305cb29573716c62f65ca155501.js.map
+//# sourceMappingURL=pages.subs-63c6901bddfe1bf1cbaac86ae9fd3e93.js.map

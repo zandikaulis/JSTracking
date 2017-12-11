@@ -1,5 +1,5 @@
 webpackJsonp([45], {
-    1003: function(e, t, n) {
+    1004: function(e, t, n) {
         "use strict";
 
         function i(e, t, n, i) {
@@ -69,14 +69,14 @@ webpackJsonp([45], {
             e.Popular = "views", e.Newest = "time"
         }(d || (d = {}))
     },
-    1004: function(e, t, n) {
+    1005: function(e, t, n) {
         "use strict";
         var i = n(1013);
         n.d(t, "VideoPreviewCard", function() {
             return i.a
         });
         var a = n(1015),
-            r = (n.n(a), n(924));
+            r = (n.n(a), n(925));
         n.d(t, "VideoPreviewCardPlaceholder", function() {
             return r.a
         })
@@ -92,7 +92,7 @@ webpackJsonp([45], {
         }), n.d(t, "a", function() {
             return o
         });
-        var i = n(877),
+        var i = n(878),
             a = function(e) {
                 return e.startsWith("/communities") || e.startsWith("/directory/communities") ? i.a.Communities : i.a.Games
             },
@@ -464,12 +464,12 @@ webpackJsonp([45], {
         var o = n(0),
             l = n(1),
             s = n(2),
-            c = n(912),
-            d = n(913),
+            c = n(913),
+            d = n(914),
             u = n(48),
             m = n(377),
             p = n(13),
-            g = n(877),
+            g = n(878),
             h = n(6),
             v = n(9),
             f = n(37),
@@ -496,8 +496,8 @@ webpackJsonp([45], {
                 }
             },
             E = n(3),
-            w = n(1065),
-            D = (n(1066), "error-message"),
+            w = n(1066),
+            D = (n(1067), "error-message"),
             F = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -617,7 +617,7 @@ webpackJsonp([45], {
                 name: "banUserFromCommunity"
             }))(F),
             T = Object(h.a)(null, i)(O),
-            U = (n(1067), n(1068)),
+            U = (n(1068), n(1069)),
             I = "error-message",
             L = function(e) {
                 function t() {
@@ -765,7 +765,7 @@ webpackJsonp([45], {
                 name: "timeoutUserFromCommunity"
             }))(L),
             R = Object(h.a)(null, a)(j),
-            x = n(1069),
+            x = n(1070),
             P = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -833,8 +833,8 @@ webpackJsonp([45], {
             }(l.Component),
             A = P,
             M = Object(h.a)(null, r)(A),
-            V = n(927),
-            B = (n(1070), function(e) {
+            V = n(928),
+            B = (n(1071), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.getLinkTo = function(e, n) {
@@ -970,8 +970,8 @@ webpackJsonp([45], {
         "use strict";
         var i = n(1),
             a = n(5),
-            r = n(1004),
-            o = n(924),
+            r = n(1005),
+            o = n(925),
             l = n(3),
             s = function(e) {
                 var t = [];
@@ -1031,7 +1031,7 @@ webpackJsonp([45], {
             o = n(2),
             l = n(64),
             s = n(3),
-            c = (n(1071), {
+            c = (n(1072), {
                 TITLE: "clips-modal-title",
                 MAIN_BODY: "clips-modal-main-body",
                 SUCCESS_BODY: "clips-modal-success-body",
@@ -1145,7 +1145,7 @@ webpackJsonp([45], {
                     })))))
                 }, t
             }(r.Component),
-            u = n(879),
+            u = n(880),
             m = n(5),
             p = 86400,
             g = {
@@ -1230,8 +1230,8 @@ webpackJsonp([45], {
             },
             f = Object(m.c)("ClipsModalBanUser")(Object(u.a)(v)(h)),
             y = n(7),
-            k = n(1072),
-            b = (n(1073), this),
+            k = n(1073),
+            b = (n(1074), this),
             S = {
                 isLoading: !1,
                 hasErrored: !1,
@@ -1353,7 +1353,7 @@ webpackJsonp([45], {
                 props: C
             })(_),
             E = n(32),
-            w = n(1074),
+            w = n(1075),
             D = this,
             F = {
                 isLoading: !1,
@@ -1600,7 +1600,7 @@ webpackJsonp([45], {
             l = n(106),
             s = "DIRECT_ENTITLEMENT",
             c = n(3),
-            d = (n(1314), function(e) {
+            d = (n(1317), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderUnavailableText = function() {
@@ -1753,7 +1753,7 @@ webpackJsonp([45], {
             r = (n.n(a), n(10)),
             o = n(2),
             l = n(3),
-            s = n(1372),
+            s = n(1375),
             c = (n.n(s), "view-all-button-selector")
     },
     1054: function(e, t, n) {
@@ -1769,7 +1769,7 @@ webpackJsonp([45], {
         }(i || (i = {}));
         var a = [i.JPEG, i.PNG]
     },
-    1065: function(e, t) {
+    1066: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1857,9 +1857,9 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1066: function(e, t) {},
     1067: function(e, t) {},
-    1068: function(e, t) {
+    1068: function(e, t) {},
+    1069: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1980,7 +1980,7 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1069: function(e, t) {
+    1070: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2137,9 +2137,9 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1070: function(e, t) {},
     1071: function(e, t) {},
-    1072: function(e, t) {
+    1072: function(e, t) {},
+    1073: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2250,8 +2250,8 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1073: function(e, t) {},
-    1074: function(e, t) {
+    1074: function(e, t) {},
+    1075: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2385,7 +2385,179 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1075: function(e, t, n) {
+    1076: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return h
+        });
+        var i, a = n(0),
+            r = n(4),
+            o = (n.n(r), n(1)),
+            l = (n.n(o), n(2)),
+            s = n(5),
+            c = n(3),
+            d = n(1077),
+            u = (n.n(d), "[data-js-selector=carousel-content]");
+        ! function(e) {
+            e.Previous = "previous", e.Next = "next"
+        }(i || (i = {}));
+        var m, p = (m = {}, m[i.Previous] = c._9.AngleLeft, m[i.Next] = c._9.AngleRight, m),
+            g = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        currentElementIndex: 0,
+                        childrenRendered: !1,
+                        windowWidth: window.innerWidth
+                    }, t.onResize = function() {
+                        t.setState({
+                            windowWidth: window.innerWidth
+                        })
+                    }, t.moveCarouselForward = function() {
+                        if (!t.isForwardButtonDisabled() && t.props.items) {
+                            for (var e = t.getCarouselChildren(), n = t.getCarouselWidth(), i = t.state.currentElementIndex + 1, a = i; a < e.length; a++) {
+                                if (e[a].getBoundingClientRect().right - t.getBaseOffset() > n) {
+                                    i = a;
+                                    break
+                                }
+                            }
+                            t.setState({
+                                currentElementIndex: i
+                            })
+                        }
+                    }, t.moveCarouselBackward = function() {
+                        if (!t.isBackButtonDisabled()) {
+                            for (var e = t.getCarouselChildren(), n = t.getCarouselWidth(), i = t.state.currentElementIndex - 1, a = i - 1; a >= 0; a--) {
+                                if (n < -1 * (e[a].getBoundingClientRect().left - t.getBaseOffset())) break;
+                                i = a
+                            }
+                            t.setState({
+                                currentElementIndex: i
+                            })
+                        }
+                    }, t.isForwardButtonDisabled = function() {
+                        if (!t.carouselContainerRef) return !0;
+                        if (t.props.items) {
+                            var e = t.getCarouselWidth(),
+                                n = t.getCarouselChildren();
+                            if (t.state.currentElementIndex >= n.length - 1) return !0;
+                            var i = n[t.state.currentElementIndex].getBoundingClientRect().left;
+                            if (n[n.length - 1].getBoundingClientRect().right - i > e) return !1
+                        }
+                        return !0
+                    }, t.isBackButtonDisabled = function() {
+                        return 0 === t.state.currentElementIndex
+                    }, t.getCarouselChildren = function() {
+                        if (!t.carouselContainerRef) return [];
+                        var e = t.getCarouselSlider();
+                        return e && e.children.length ? Array.prototype.slice.call(e.children) : []
+                    }, t.getCarouselSlider = function() {
+                        return t.carouselContainerRef.querySelector(u)
+                    }, t.getCarouselWidth = function() {
+                        return t.carouselContainerRef ? t.carouselContainerRef.getBoundingClientRect().width : 0
+                    }, t.getBaseOffset = function() {
+                        return t.carouselContainerRef ? t.carouselContainerRef.getBoundingClientRect().left : 0
+                    }, t.getSliderOffset = function() {
+                        if (!t.carouselContainerRef) return 0;
+                        var e = t.getCarouselSlider();
+                        return e ? e.getBoundingClientRect().left : 0
+                    }, t.getChildOffset = function(e) {
+                        var n = t.getCarouselChildren();
+                        return 0 === n.length || n.length <= e ? 0 : n[e].getBoundingClientRect().left
+                    }, t.transformString = function() {
+                        return -1 * (t.getChildOffset(t.state.currentElementIndex) - t.getSliderOffset()) + "px"
+                    }, t.refHandler = function(e) {
+                        return t.state.childrenRendered || null === t.props.items || t.setState({
+                            childrenRendered: !0
+                        }), t.carouselContainerRef = e
+                    }, t.renderNavButton = function(e, n, a) {
+                        var s = (u = {}, u[i.Previous] = Object(l.d)("previous", "MediaCarouselNavButton"), u[i.Next] = Object(l.d)("next", "MediaCarouselNavButton"), u),
+                            d = r("media-carousel__button", {
+                                "media-carousel__button--previous": e === i.Previous,
+                                "media-carousel__button--next": e === i.Next,
+                                "media-carousel__button--disabled": n
+                            }, {
+                                "media-carousel__button--inset": !0 === t.props.insetStyle
+                            });
+                        return o.createElement(c.U, {
+                            className: d,
+                            position: c._2.Relative,
+                            display: c.H.Flex,
+                            alignItems: c.c.Stretch
+                        }, o.createElement(c.v, {
+                            "data-test-selector": e + "-button",
+                            "data-a-target": e + "-button",
+                            onClick: a,
+                            disabled: n,
+                            ariaLabel: s[e],
+                            icon: p[e],
+                            size: c.x.Large
+                        }));
+                        var u
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                    this.state.childrenRendered || null === this.props.items || this.setState({
+                        childrenRendered: !0
+                    })
+                }, t.prototype.componentDidMount = function() {
+                    window.addEventListener("resize", this.onResize)
+                }, t.prototype.componentWillUnmount = function() {
+                    window.removeEventListener("resize", this.onResize)
+                }, t.prototype.render = function() {
+                    return o.createElement(c.P, a.__assign({}, this.props, {
+                        position: c._2.Relative
+                    }), o.createElement("div", {
+                        className: "media-carousel",
+                        ref: this.refHandler,
+                        "data-test-selector": "carousel-container"
+                    }, o.createElement(c.U, {
+                        className: "media-carousel__child-container",
+                        overflow: c.Y.Hidden,
+                        fullWidth: !0,
+                        "data-test-selector": "child-container"
+                    }, o.createElement("div", {
+                        className: "media-carousel__body",
+                        style: {
+                            marginLeft: this.transformString()
+                        },
+                        "data-test-selector": "carousel-body"
+                    }, o.createElement(c.P, {
+                        className: "media-carousel__content",
+                        display: c.H.Flex,
+                        flexWrap: c.K.NoWrap,
+                        flexDirection: c.J.Row,
+                        alignItems: c.c.Center,
+                        "data-js-selector": "carousel-content"
+                    }, o.createElement("div", {
+                        style: {
+                            width: "max-content"
+                        }
+                    }, this.props.items)))), o.createElement(c.U, {
+                        className: "media-carousel__nav",
+                        display: c.H.Flex,
+                        alignItems: c.c.Center,
+                        position: c._2.Absolute,
+                        attachTop: !0,
+                        attachLeft: !0,
+                        fullHeight: !0
+                    }, this.renderNavButton(i.Previous, !this.state.childrenRendered || this.isBackButtonDisabled(), this.moveCarouselBackward)), o.createElement(c.U, {
+                        className: "media-carousel__nav",
+                        display: c.H.Flex,
+                        alignItems: c.c.Center,
+                        position: c._2.Absolute,
+                        attachTop: !0,
+                        attachRight: !0,
+                        fullHeight: !0
+                    }, this.renderNavButton(i.Next, !this.state.childrenRendered || this.isForwardButtonDisabled(), this.moveCarouselForward))))
+                }, t = a.__decorate([Object(s.c)("MediaCarousel", {
+                    autoReportInteractive: !0
+                })], t)
+            }(o.Component),
+            h = g
+    },
+    1077: function(e, t) {},
+    1078: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -2436,7 +2608,7 @@ webpackJsonp([45], {
             c = n(13);
         t.a = a
     },
-    1076: function(e, t) {
+    1079: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2593,8 +2765,8 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1078: function(e, t) {},
-    1088: function(e, t, n) {
+    1081: function(e, t) {},
+    1091: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -2631,7 +2803,7 @@ webpackJsonp([45], {
             o = n(13),
             l = n(846)
     },
-    1089: function(e, t, n) {
+    1092: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(4),
@@ -2640,10 +2812,10 @@ webpackJsonp([45], {
             l = n(992),
             s = n(47),
             c = n(263),
-            d = n(1003),
+            d = n(1004),
             u = n(846),
             m = n(3),
-            p = (n(1090), function(e) {
+            p = (n(1093), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.sortChangeHandler = function(e) {
@@ -2814,8 +2986,8 @@ webpackJsonp([45], {
             return g.a
         }), n.d(t, !1, function() {})
     },
-    1090: function(e, t) {},
-    1091: function(e, t, n) {
+    1093: function(e, t) {},
+    1094: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -2827,7 +2999,7 @@ webpackJsonp([45], {
             EventCoverImage: "event_cover_image"
         }
     },
-    1252: function(e, t, n) {
+    1255: function(e, t, n) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -2909,9 +3081,9 @@ webpackJsonp([45], {
                 var t = e.name.value;
                 return !a[t] && (a[t] = !0, !0)
             })
-        }(n(1253).definitions)), e.exports = i
+        }(n(1256).definitions)), e.exports = i
     },
-    1253: function(e, t, n) {
+    1256: function(e, t, n) {
         function i(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
@@ -3206,9 +3378,9 @@ webpackJsonp([45], {
             }
         };
         var r = {};
-        a.definitions = a.definitions.concat(i(n(1076).definitions)), a.definitions = a.definitions.concat(i(n(1316).definitions)), e.exports = a
+        a.definitions = a.definitions.concat(i(n(1079).definitions)), a.definitions = a.definitions.concat(i(n(1319).definitions)), e.exports = a
     },
-    1254: function(e, t) {
+    1257: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3311,7 +3483,7 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1269: function(e, t, n) {
+    1272: function(e, t, n) {
         "use strict";
         var i = n(1),
             a = n(2),
@@ -3362,7 +3534,7 @@ webpackJsonp([45], {
             return o
         })
     },
-    1270: function(e, t, n) {
+    1273: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -3373,9 +3545,9 @@ webpackJsonp([45], {
         var a, r = n(0),
             o = n(1),
             l = n(2),
-            s = n(865),
+            s = n(867),
             c = n(3),
-            d = (n(1373), function(e) {
+            d = (n(1376), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3455,7 +3627,7 @@ webpackJsonp([45], {
                     }, this.props.errorMessage))
                 }, t
             }(o.Component)),
-            u = n(1091),
+            u = n(1094),
             m = function(e) {
                 return new Promise(function(t, n) {
                     var i = new FileReader;
@@ -3619,7 +3791,7 @@ webpackJsonp([45], {
             F = n(9),
             O = n(37),
             T = n(105),
-            U = (n(1374), function(e) {
+            U = (n(1377), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3641,7 +3813,7 @@ webpackJsonp([45], {
             return I
         })
     },
-    1295: function(e, t, n) {
+    1298: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -3670,9 +3842,9 @@ webpackJsonp([45], {
             h = n(20),
             v = n(13),
             f = n(3),
-            y = n(1296),
-            k = n(1297),
-            b = n(1298),
+            y = n(1299),
+            k = n(1300),
+            b = n(1301),
             S = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3830,7 +4002,7 @@ webpackJsonp([45], {
             return C
         })
     },
-    1296: function(e, t) {
+    1299: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -3957,7 +4129,23 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1297: function(e, t) {
+    130: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return r.b.get(l.a, !1) || r.a.buildType !== o.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? s + e : s + e.pathname
+        }
+
+        function a() {
+            return !r.b.get(l.a, !1) && r.a.buildType === o.a.Production
+        }
+        var r = n(2),
+            o = n(15),
+            l = n(264);
+        t.a = i, t.b = a;
+        var s = "https://www.twitch.tv"
+    },
+    1300: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -4114,7 +4302,7 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1298: function(e, t) {
+    1301: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -4215,7 +4403,7 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1299: function(e, t, n) {
+    1302: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -4261,7 +4449,7 @@ webpackJsonp([45], {
             N = n(40),
             E = n(64),
             w = n(3),
-            D = (n(1300), function(e) {
+            D = (n(1303), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.selectOnFocus = function(e) {
@@ -4286,9 +4474,9 @@ webpackJsonp([45], {
             }(s.Component)),
             F = D,
             O = n(848),
-            T = n(856),
+            T = n(858),
             U = n(68),
-            I = n(908),
+            I = n(910),
             L = [{
                 type: O.b.Twitter,
                 params: {
@@ -4333,7 +4521,7 @@ webpackJsonp([45], {
         ! function(e) {
             e[e.View = 0] = "View", e[e.Report = 1] = "Report", e[e.Delete = 2] = "Delete", e[e.DeleteAll = 3] = "DeleteAll", e[e.Ban = 4] = "Ban", e[e.Timeout = 5] = "Timeout"
         }(l || (l = {}));
-        var A = n(1301),
+        var A = n(1304),
             M = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -4416,7 +4604,7 @@ webpackJsonp([45], {
                 }, t = h.__decorate([Object(P.a)(A), Object(u.c)("ModerationMenu")], t)
             }(s.Component),
             V = M,
-            B = (n(1302), 2e3),
+            B = (n(1305), 2e3),
             G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4568,7 +4756,7 @@ webpackJsonp([45], {
                 }, t = h.__decorate([Object(u.c)("ClipsViewModalContent")], t)
             }(s.Component),
             H = G,
-            W = (n(1303), function(e) {
+            W = (n(1306), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onKeyDown = function(e) {
@@ -4632,7 +4820,7 @@ webpackJsonp([45], {
             }(s.Component)),
             q = Object(u.c)("ClipsViewModalNavigation")(W),
             z = Object(m.a)(null, i)(q),
-            $ = (n(1304), function(e) {
+            $ = (n(1307), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4689,7 +4877,7 @@ webpackJsonp([45], {
             }(s.Component)),
             Q = $,
             Y = Object(m.a)(null, a)(Q),
-            K = (n(1305), function(e) {
+            K = (n(1308), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getClips = function() {
@@ -4900,24 +5088,8 @@ webpackJsonp([45], {
             return ae
         })
     },
-    130: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return r.b.get(l.a, !1) || r.a.buildType !== o.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? s + e : s + e.pathname
-        }
-
-        function a() {
-            return !r.b.get(l.a, !1) && r.a.buildType === o.a.Production
-        }
-        var r = n(2),
-            o = n(15),
-            l = n(264);
-        t.a = i, t.b = a;
-        var s = "https://www.twitch.tv"
-    },
-    1300: function(e, t) {},
-    1301: function(e, t) {
+    1303: function(e, t) {},
+    1304: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -4992,12 +5164,12 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    1302: function(e, t) {},
-    1303: function(e, t) {},
-    1304: function(e, t) {},
     1305: function(e, t) {},
-    1314: function(e, t) {},
-    1315: function(e, t, n) {
+    1306: function(e, t) {},
+    1307: function(e, t) {},
+    1308: function(e, t) {},
+    1317: function(e, t) {},
+    1318: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -5014,7 +5186,7 @@ webpackJsonp([45], {
         t.a = i;
         var a = /^\$[\d]+.[\d]{2}$/
     },
-    1316: function(e, t, n) {
+    1319: function(e, t, n) {
         var i = {
             kind: "Document",
             definitions: [{
@@ -5106,9 +5278,9 @@ webpackJsonp([45], {
                 var t = e.name.value;
                 return !a[t] && (a[t] = !0, !0)
             })
-        }(n(1076).definitions)), e.exports = i
+        }(n(1079).definitions)), e.exports = i
     },
-    1317: function(e, t, n) {
+    1320: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
@@ -5152,7 +5324,7 @@ webpackJsonp([45], {
             return o
         })
     },
-    1360: function(e, t, n) {
+    1363: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -5205,14 +5377,14 @@ webpackJsonp([45], {
                 softBreak: "br"
             }
     },
-    1372: function(e, t) {},
-    1373: function(e, t) {},
-    1374: function(e, t) {},
-    1375: function(e, t, n) {
+    1375: function(e, t) {},
+    1376: function(e, t) {},
+    1377: function(e, t) {},
+    1378: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
-            r = n(923),
+            r = n(924),
             o = n(5),
             l = n(272),
             s = function(e) {
@@ -5242,180 +5414,6 @@ webpackJsonp([45], {
             return c
         })
     },
-    1376: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return h
-        });
-        var i, a = n(0),
-            r = n(4),
-            o = (n.n(r), n(1)),
-            l = (n.n(o), n(2)),
-            s = n(5),
-            c = n(3),
-            d = n(1377),
-            u = (n.n(d), "[data-js-selector=carousel-content]");
-        ! function(e) {
-            e.Previous = "previous", e.Next = "next"
-        }(i || (i = {}));
-        var m, p = (m = {}, m[i.Previous] = c._9.AngleLeft, m[i.Next] = c._9.AngleRight, m),
-            g = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        currentElementIndex: 0,
-                        childrenRendered: !1,
-                        windowWidth: window.innerWidth
-                    }, t.onResize = function() {
-                        t.setState({
-                            windowWidth: window.innerWidth
-                        })
-                    }, t.moveCarouselForward = function() {
-                        if (!t.isForwardButtonDisabled() && t.props.items) {
-                            for (var e = t.getCarouselChildren(), n = t.getCarouselWidth(), i = t.state.currentElementIndex + 1, a = i; a < e.length; a++) {
-                                if (e[a].getBoundingClientRect().right - t.getBaseOffset() > n) {
-                                    i = a;
-                                    break
-                                }
-                            }
-                            t.setState({
-                                currentElementIndex: i
-                            })
-                        }
-                    }, t.moveCarouselBackward = function() {
-                        if (!t.isBackButtonDisabled()) {
-                            for (var e = t.getCarouselChildren(), n = t.getCarouselWidth(), i = t.state.currentElementIndex - 1, a = i - 1; a >= 0; a--) {
-                                if (n < -1 * (e[a].getBoundingClientRect().left - t.getBaseOffset())) break;
-                                i = a
-                            }
-                            t.setState({
-                                currentElementIndex: i
-                            })
-                        }
-                    }, t.isForwardButtonDisabled = function() {
-                        if (!t.carouselContainerRef) return !0;
-                        if (t.props.items) {
-                            var e = t.getCarouselWidth(),
-                                n = t.getCarouselChildren();
-                            if (t.state.currentElementIndex >= n.length - 1) return !0;
-                            var i = n[t.state.currentElementIndex].getBoundingClientRect().left;
-                            if (n[n.length - 1].getBoundingClientRect().right - i > e) return !1
-                        }
-                        return !0
-                    }, t.isBackButtonDisabled = function() {
-                        return 0 === t.state.currentElementIndex
-                    }, t.getCarouselChildren = function() {
-                        if (!t.carouselContainerRef) return [];
-                        var e = t.getCarouselSlider();
-                        return e && e.children.length ? Array.prototype.slice.call(e.children) : []
-                    }, t.getCarouselSlider = function() {
-                        return t.carouselContainerRef.querySelector(u)
-                    }, t.getCarouselWidth = function() {
-                        return t.carouselContainerRef ? t.carouselContainerRef.getBoundingClientRect().width : 0
-                    }, t.getBaseOffset = function() {
-                        return t.carouselContainerRef ? t.carouselContainerRef.getBoundingClientRect().left : 0
-                    }, t.getSliderOffset = function() {
-                        if (!t.carouselContainerRef) return 0;
-                        var e = t.getCarouselSlider();
-                        return e ? e.getBoundingClientRect().left : 0
-                    }, t.getChildOffset = function(e) {
-                        var n = t.getCarouselChildren();
-                        return 0 === n.length || n.length <= e ? 0 : n[e].getBoundingClientRect().left
-                    }, t.transformString = function() {
-                        return "translate3d(" + -1 * (t.getChildOffset(t.state.currentElementIndex) - t.getSliderOffset()) + "px, 0px, 0px)"
-                    }, t.refHandler = function(e) {
-                        return t.state.childrenRendered || null === t.props.items || t.setState({
-                            childrenRendered: !0
-                        }), t.carouselContainerRef = e
-                    }, t.renderNavButton = function(e, t, n) {
-                        var a = (d = {}, d[i.Previous] = Object(l.d)("previous", "MediaCarouselNavButton"), d[i.Next] = Object(l.d)("next", "MediaCarouselNavButton"), d),
-                            s = r("media-carousel__button", {
-                                "media-carousel__button--previous": e === i.Previous,
-                                "media-carousel__button--next": e === i.Next,
-                                "media-carousel__button--disabled": t
-                            });
-                        return o.createElement(c.U, {
-                            className: s,
-                            position: c._2.Relative,
-                            display: c.H.Flex,
-                            alignItems: c.c.Stretch
-                        }, o.createElement(c.v, {
-                            "data-test-selector": e + "-button",
-                            "data-a-target": e + "-button",
-                            onClick: n,
-                            disabled: t,
-                            ariaLabel: a[e],
-                            icon: p[e],
-                            size: c.x.Large
-                        }));
-                        var d
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.componentDidUpdate = function() {
-                    this.state.childrenRendered || null === this.props.items || this.setState({
-                        childrenRendered: !0
-                    })
-                }, t.prototype.componentDidMount = function() {
-                    window.addEventListener("resize", this.onResize)
-                }, t.prototype.componentWillUnmount = function() {
-                    window.removeEventListener("resize", this.onResize)
-                }, t.prototype.render = function() {
-                    return o.createElement(c.P, a.__assign({}, this.props, {
-                        margin: {
-                            bottom: 3,
-                            top: 1
-                        },
-                        position: c._2.Relative
-                    }), o.createElement("div", {
-                        className: "media-carousel",
-                        ref: this.refHandler,
-                        "data-test-selector": "carousel-container"
-                    }, o.createElement(c.U, {
-                        className: "media-carousel__child-container",
-                        overflow: c.Y.Hidden,
-                        position: c._2.Relative,
-                        fullWidth: !0,
-                        "data-test-selector": "child-container"
-                    }, o.createElement("div", {
-                        className: "media-carousel__body",
-                        style: {
-                            transform: this.transformString()
-                        },
-                        "data-test-selector": "carousel-body"
-                    }, o.createElement(c.P, {
-                        className: "media-carousel__content",
-                        display: c.H.Flex,
-                        flexWrap: c.K.NoWrap,
-                        flexDirection: c.J.Row,
-                        "data-js-selector": "carousel-content"
-                    }, o.createElement("div", {
-                        style: {
-                            width: "max-content"
-                        }
-                    }, this.props.items)))), o.createElement(c.U, {
-                        className: "media-carousel__nav",
-                        display: c.H.Flex,
-                        alignItems: c.c.Center,
-                        position: c._2.Absolute,
-                        attachTop: !0,
-                        attachLeft: !0,
-                        fullHeight: !0
-                    }, this.renderNavButton(i.Previous, !this.state.childrenRendered || this.isBackButtonDisabled(), this.moveCarouselBackward)), o.createElement(c.U, {
-                        className: "media-carousel__nav",
-                        display: c.H.Flex,
-                        alignItems: c.c.Center,
-                        position: c._2.Absolute,
-                        attachTop: !0,
-                        attachRight: !0,
-                        fullHeight: !0
-                    }, this.renderNavButton(i.Next, !this.state.childrenRendered || this.isForwardButtonDisabled(), this.moveCarouselForward))))
-                }, t = a.__decorate([Object(s.c)("MediaCarousel", {
-                    autoReportInteractive: !0
-                })], t)
-            }(o.Component),
-            h = g
-    },
-    1377: function(e, t) {},
     1863: function(e, t) {},
     1864: function(e, t) {},
     1865: function(e, t) {},
@@ -10658,7 +10656,7 @@ webpackJsonp([45], {
             }
         };
         var r = {};
-        a.definitions = a.definitions.concat(i(n(1896).definitions)), a.definitions = a.definitions.concat(i(n(1252).definitions)), a.definitions = a.definitions.concat(i(n(1254).definitions)), e.exports = a
+        a.definitions = a.definitions.concat(i(n(1896).definitions)), a.definitions = a.definitions.concat(i(n(1255).definitions)), a.definitions = a.definitions.concat(i(n(1257).definitions)), e.exports = a
     },
     1896: function(e, t, n) {
         function i(e) {
@@ -10956,7 +10954,7 @@ webpackJsonp([45], {
             }
         };
         var r = {};
-        a.definitions = a.definitions.concat(i(n(1253).definitions)), a.definitions = a.definitions.concat(i(n(1897).definitions)), a.definitions = a.definitions.concat(i(n(1898).definitions)), e.exports = a
+        a.definitions = a.definitions.concat(i(n(1256).definitions)), a.definitions = a.definitions.concat(i(n(1897).definitions)), a.definitions = a.definitions.concat(i(n(1898).definitions)), e.exports = a
     },
     1897: function(e, t) {
         var n = {
@@ -11483,9 +11481,9 @@ webpackJsonp([45], {
                 var t = e.name.value;
                 return !a[t] && (a[t] = !0, !0)
             })
-        }(n(880).definitions)), e.exports = i
+        }(n(881).definitions)), e.exports = i
     },
-    2063: function(e, t, n) {
+    2065: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -11762,7 +11760,7 @@ webpackJsonp([45], {
             V = n(6),
             B = n(9),
             G = n(37),
-            H = n(925),
+            H = n(926),
             W = n(2),
             q = n(992),
             z = n(67),
@@ -11773,11 +11771,11 @@ webpackJsonp([45], {
             J = n(817),
             X = n(112),
             Z = n(13),
-            ee = n(881),
+            ee = n(882),
             te = n(382),
             ne = n(5),
-            ie = n(1317),
-            ae = n(877),
+            ie = n(1320),
+            ae = n(878),
             re = n(1008),
             oe = [{
                 Maps: [{
@@ -12062,7 +12060,7 @@ webpackJsonp([45], {
             }(M.Component),
             ge = pe,
             he = Object(V.a)(i)(ge),
-            ve = n(911),
+            ve = n(912),
             fe = n(4),
             ye = function() {
                 var e = function() {
@@ -12624,14 +12622,14 @@ webpackJsonp([45], {
             }(M.Component),
             Ge = Object(ne.c)("DirectoryGrid")(Be),
             He = Object(V.a)(s)(Ge),
-            We = n(912),
+            We = n(913),
             qe = n(48),
             ze = n(377),
             $e = n(1053),
             Qe = n(1039),
             Ye = n(1869),
-            Ke = n(1269),
-            Je = n(927),
+            Ke = n(1272),
+            Je = n(928),
             Xe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -12794,7 +12792,7 @@ webpackJsonp([45], {
                                             isLoading: !0
                                         }), i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, n.e(68).then(n.bind(null, 2064))];
+                                        return i.trys.push([1, 3, , 4]), [4, n.e(68).then(n.bind(null, 2066))];
                                     case 2:
                                         return e = i.sent(), this.setState({
                                             content: e,
@@ -12912,7 +12910,7 @@ webpackJsonp([45], {
                                             isLoading: !0
                                         }), i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, n.e(67).then(n.bind(null, 2065))];
+                                        return i.trys.push([1, 3, , 4]), [4, n.e(67).then(n.bind(null, 2067))];
                                     case 2:
                                         return e = i.sent(), this.setState({
                                             content: e,
@@ -13193,7 +13191,7 @@ webpackJsonp([45], {
                                             isLoading: !0
                                         }), i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, n.e(66).then(n.bind(null, 2066))];
+                                        return i.trys.push([1, 3, , 4]), [4, n.e(66).then(n.bind(null, 2068))];
                                     case 2:
                                         return e = i.sent(), this.setState({
                                             content: e,
@@ -13750,8 +13748,8 @@ webpackJsonp([45], {
             nn = function(e) {
                 return e === ae.a.Communities ? Object(ze.b)("communities") : Object(ze.b)()
             },
-            an = n(1270),
-            rn = n(1091),
+            an = n(1273),
+            rn = n(1094),
             on = n(1875),
             ln = (n(1876), function(e) {
                 function t() {
@@ -14284,7 +14282,7 @@ webpackJsonp([45], {
             }(M.Component),
             Cn = _n,
             Nn = Object(V.a)(E, w)(Cn),
-            En = n(875),
+            En = n(876),
             wn = n(130),
             Dn = n(398),
             Fn = n(379),
@@ -14468,7 +14466,7 @@ webpackJsonp([45], {
             }(M.Component),
             Mn = An,
             Vn = Object(V.a)(F, O)(Object(dn.f)(Mn)),
-            Bn = n(1295),
+            Bn = n(1298),
             Gn = n(1885);
         n(1886);
         ! function(e) {
@@ -14640,7 +14638,7 @@ webpackJsonp([45], {
             $n = zn,
             Qn = n(448),
             Yn = n(65),
-            Kn = n(1360),
+            Kn = n(1363),
             Jn = n(69),
             Xn = n(1887),
             Zn = n(1888),
@@ -14839,8 +14837,8 @@ webpackJsonp([45], {
             }(M.Component),
             ai = ii,
             ri = n(1009),
-            oi = n(1299),
-            li = n(908),
+            oi = n(1302),
+            li = n(910),
             si = n(1889),
             ci = function(e) {
                 function t() {
@@ -14959,8 +14957,8 @@ webpackJsonp([45], {
             }(M.Component),
             pi = mi,
             gi = n(1033),
-            hi = n(1315),
-            vi = n(1075),
+            hi = n(1318),
+            vi = n(1078),
             fi = n(1051),
             yi = function(e) {
                 function t() {
@@ -15460,8 +15458,8 @@ webpackJsonp([45], {
                 }, t
             }(M.Component),
             Mi = Object(B.compose)(Object(V.a)(null, L))(Ai),
-            Vi = n(1375),
-            Bi = n(1376),
+            Vi = n(1378),
+            Bi = n(1076),
             Gi = (n(1892), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -15519,9 +15517,14 @@ webpackJsonp([45], {
                 }, t.prototype.render = function() {
                     return M.createElement(Ci, null, M.createElement(wi, {
                         title: Object(W.d)("Videos and Screenshots", "DirectoryGameDetailsPage")
-                    }), M.createElement(Bi.a, {
+                    }), M.createElement(ce.P, {
+                        margin: {
+                            bottom: 3,
+                            top: 1
+                        }
+                    }, M.createElement(Bi.a, {
                         items: this.renderItems()
-                    }))
+                    })))
                 }, t = A.__decorate([Object(ne.c)("GameMedia")], t)
             }(M.Component)),
             Hi = Gi,
@@ -15761,9 +15764,9 @@ webpackJsonp([45], {
                 location: Z.PageviewLocation.GameDetail
             })(na),
             aa = ia,
-            ra = n(1003),
-            oa = n(1088),
-            la = n(1089),
+            ra = n(1004),
+            oa = n(1091),
+            la = n(1092),
             sa = n(846),
             ca = n(1899),
             da = sa.b,
@@ -16192,7 +16195,7 @@ webpackJsonp([45], {
         });
         var i;
         ! function(e) {
-            e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention", e[e.Ban = 3] = "Ban", e[e.Timeout = 4] = "Timeout", e[e.AutoModRejectedPrompt = 5] = "AutoModRejectedPrompt", e[e.AutoModMessageRejected = 6] = "AutoModMessageRejected", e[e.AutoModMessageAllowed = 7] = "AutoModMessageAllowed", e[e.AutoModMessageDenied = 8] = "AutoModMessageDenied", e[e.Connected = 9] = "Connected", e[e.Disconnected = 10] = "Disconnected", e[e.Reconnect = 11] = "Reconnect", e[e.Hosting = 12] = "Hosting", e[e.Unhost = 13] = "Unhost", e[e.Subscription = 14] = "Subscription", e[e.Resubscription = 15] = "Resubscription", e[e.SubGift = 16] = "SubGift", e[e.Clear = 17] = "Clear", e[e.SubscriberOnlyMode = 18] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 19] = "FollowerOnlyMode", e[e.SlowMode = 20] = "SlowMode", e[e.EmoteOnlyMode = 21] = "EmoteOnlyMode", e[e.RoomMods = 22] = "RoomMods", e[e.RoomState = 23] = "RoomState", e[e.Raid = 24] = "Raid", e[e.Unraid = 25] = "Unraid", e[e.Notice = 26] = "Notice", e[e.Info = 27] = "Info", e[e.BadgesUpdated = 28] = "BadgesUpdated", e[e.Purchase = 29] = "Purchase"
+            e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention", e[e.Ban = 3] = "Ban", e[e.Timeout = 4] = "Timeout", e[e.AutoModRejectedPrompt = 5] = "AutoModRejectedPrompt", e[e.AutoModMessageRejected = 6] = "AutoModMessageRejected", e[e.AutoModMessageAllowed = 7] = "AutoModMessageAllowed", e[e.AutoModMessageDenied = 8] = "AutoModMessageDenied", e[e.Connected = 9] = "Connected", e[e.Disconnected = 10] = "Disconnected", e[e.Reconnect = 11] = "Reconnect", e[e.Hosting = 12] = "Hosting", e[e.Unhost = 13] = "Unhost", e[e.Subscription = 14] = "Subscription", e[e.Resubscription = 15] = "Resubscription", e[e.SubGift = 16] = "SubGift", e[e.Clear = 17] = "Clear", e[e.SubscriberOnlyMode = 18] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 19] = "FollowerOnlyMode", e[e.SlowMode = 20] = "SlowMode", e[e.EmoteOnlyMode = 21] = "EmoteOnlyMode", e[e.RoomMods = 22] = "RoomMods", e[e.RoomState = 23] = "RoomState", e[e.Raid = 24] = "Raid", e[e.Unraid = 25] = "Unraid", e[e.Notice = 26] = "Notice", e[e.Info = 27] = "Info", e[e.BadgesUpdated = 28] = "BadgesUpdated", e[e.Purchase = 29] = "Purchase", e[e.CrateGift = 30] = "CrateGift"
         }(i || (i = {}))
     },
     816: function(e, t, n) {
@@ -16552,14 +16555,14 @@ webpackJsonp([45], {
         var l = n(0),
             s = n(1),
             c = n(2),
-            d = n(856),
+            d = n(858),
             u = n(68),
             m = "https://www.facebook.com/sharer/sharer.php",
             p = "https://www.twitter.com/share",
             g = "https://www.reddit.com/submit",
             h = "https://vk.com/share.php",
             v = n(3);
-        n(898);
+        n(899);
         n.d(t, "b", function() {
             return f
         }), n.d(t, "a", function() {
@@ -16683,7 +16686,7 @@ webpackJsonp([45], {
             }, t
         }(s.Component)
     },
-    852: function(e, t, n) {
+    853: function(e, t, n) {
         "use strict";
 
         function i(e, t, n, i) {
@@ -16698,7 +16701,7 @@ webpackJsonp([45], {
         t.a = i;
         var a = n(816)
     },
-    856: function(e, t, n) {
+    858: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -16714,7 +16717,7 @@ webpackJsonp([45], {
         }
         t.a = i
     },
-    865: function(e, t, n) {
+    867: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
@@ -16770,7 +16773,7 @@ webpackJsonp([45], {
                 }, t
             }(a.Component)
     },
-    869: function(e, t, n) {
+    870: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -16881,7 +16884,7 @@ webpackJsonp([45], {
                 return e.code
             }))
     },
-    875: function(e, t, n) {
+    876: function(e, t, n) {
         "use strict";
         var i, a = n(0),
             r = n(1),
@@ -16907,7 +16910,7 @@ webpackJsonp([45], {
             return s
         })
     },
-    877: function(e, t, n) {
+    878: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -16917,7 +16920,7 @@ webpackJsonp([45], {
             e.Games = "GAMES", e.Communities = "COMMUNITIES", e.Creative = "CREATIVE"
         }(i || (i = {}))
     },
-    879: function(e, t, n) {
+    880: function(e, t, n) {
         "use strict";
 
         function i() {
@@ -16994,16 +16997,16 @@ webpackJsonp([45], {
             s = n(7),
             c = n(20),
             d = n(840),
-            u = n(852),
+            u = n(853),
             m = n(814),
-            p = n(887),
+            p = n(888),
             g = (n.n(p), 60),
             h = 60 * g,
             v = 24 * h,
             f = 7 * v,
             y = 4 * f
     },
-    880: function(e, t) {
+    881: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -17272,7 +17275,7 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    881: function(e, t, n) {
+    882: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -17390,7 +17393,7 @@ webpackJsonp([45], {
             return g
         })
     },
-    887: function(e, t) {
+    888: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -17491,8 +17494,8 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    898: function(e, t) {},
-    906: function(e, t, n) {
+    899: function(e, t) {},
+    908: function(e, t, n) {
         "use strict";
 
         function i(e, t) {
@@ -17526,11 +17529,11 @@ webpackJsonp([45], {
         t.c = i, t.a = a, t.b = r;
         var o = n(0),
             l = n(2),
-            s = n(869),
-            c = n(907),
+            s = n(870),
+            c = n(909),
             d = "languageDirectoryFilters"
     },
-    907: function(e, t, n) {
+    909: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -17544,7 +17547,7 @@ webpackJsonp([45], {
         }), t.b = i;
         var a = "core.user-preferences.LANGUAGE_PREFERENCES_UPDATED"
     },
-    908: function(e, t, n) {
+    910: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return s
@@ -17586,7 +17589,7 @@ webpackJsonp([45], {
                 }
             }
     },
-    911: function(e, t, n) {
+    912: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
@@ -17638,13 +17641,13 @@ webpackJsonp([45], {
             return l
         })
     },
-    912: function(e, t, n) {
+    913: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
             r = n(10),
             o = n(2),
-            l = n(913),
+            l = n(914),
             s = n(3),
             c = (n(1007), function(e) {
                 function t() {
@@ -17763,7 +17766,7 @@ webpackJsonp([45], {
             return d
         })
     },
-    913: function(e, t, n) {
+    914: function(e, t, n) {
         "use strict";
         var i, a, r, o = n(0),
             l = n(4),
@@ -17837,7 +17840,7 @@ webpackJsonp([45], {
             return h
         })
     },
-    923: function(e, t, n) {
+    924: function(e, t, n) {
         "use strict";
         var i, a = n(0),
             r = n(1),
@@ -17845,7 +17848,7 @@ webpackJsonp([45], {
             l = n(380),
             s = n(5),
             c = n(3),
-            d = (n(1078), "embed-overlay");
+            d = (n(1081), "embed-overlay");
         ! function(e) {
             e[e.Clip = 0] = "Clip", e[e.Video = 1] = "Video", e[e.Stream = 2] = "Stream", e[e.VideoOEmbed = 3] = "VideoOEmbed"
         }(i || (i = {}));
@@ -17963,7 +17966,7 @@ webpackJsonp([45], {
             return p
         })
     },
-    924: function(e, t, n) {
+    925: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return r
@@ -18001,7 +18004,7 @@ webpackJsonp([45], {
                 }))))))
             }
     },
-    925: function(e, t, n) {
+    926: function(e, t, n) {
         "use strict";
 
         function i() {
@@ -18027,11 +18030,11 @@ webpackJsonp([45], {
         t.a = r;
         var o = n(0),
             l = n(2),
-            s = n(907),
-            c = n(906);
+            s = n(909),
+            c = n(908);
         l.n.store.registerReducer("userPreferences", a)
     },
-    927: function(e, t, n) {
+    928: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
@@ -18077,14 +18080,14 @@ webpackJsonp([45], {
         }
         var r = n(6),
             o = n(9),
-            l = n(906),
-            s = n(925),
+            l = n(908),
+            s = n(926),
             c = n(0),
             d = n(1),
             u = n(2),
             m = n(28),
             p = n(47),
-            g = n(869),
+            g = n(870),
             h = n(5),
             v = n(3),
             f = (n(1010), function(e) {
@@ -18156,4 +18159,4 @@ webpackJsonp([45], {
         })
     }
 });
-//# sourceMappingURL=pages.directory-game-2f74b7e90d9ec42fe6f905756f64318c.js.map
+//# sourceMappingURL=pages.directory-game-15d432ecdcce44d2c92acca1d4164375.js.map

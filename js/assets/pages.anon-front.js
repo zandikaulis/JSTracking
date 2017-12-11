@@ -1,4 +1,36 @@
 webpackJsonp([48], {
+    1e3: function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return {
+                type: o,
+                player: e
+            }
+        }
+
+        function a() {
+            return {
+                type: s
+            }
+        }
+
+        function r() {
+            return {
+                type: l
+            }
+        }
+        n.d(t, "b", function() {
+            return o
+        }), n.d(t, "c", function() {
+            return s
+        }), n.d(t, "a", function() {
+            return l
+        }), t.e = i, t.f = a, t.d = r;
+        var o = "carouselPlayer.CAROUSEL_REGISTERED",
+            s = "carouselPlayer.CAROUSEL_UNREGISTERED",
+            l = "carouselPlayer.CAROUSEL_PAUSED"
+    },
     1006: function(e, t) {},
     1007: function(e, t) {},
     1027: function(e, t, n) {
@@ -8,7 +40,7 @@ webpackJsonp([48], {
         });
         var i = n(0),
             a = n(1),
-            r = n(911),
+            r = n(912),
             o = n(113),
             s = n(1028),
             l = function(e) {
@@ -95,11 +127,11 @@ webpackJsonp([48], {
             l = (n.n(s), n(2)),
             c = n(7),
             d = n(1056),
-            u = n(870),
+            u = n(871),
             m = n(1057),
             p = n(5),
             g = n(3),
-            f = n(1288);
+            f = n(1291);
         n.n(f);
         ! function(e) {
             e[e.AnonFront = 1] = "AnonFront", e[e.Front = 2] = "Front"
@@ -229,16 +261,16 @@ webpackJsonp([48], {
         }
         var p, g = n(0),
             f = n(2),
-            h = n(999);
+            h = n(1e3);
         f.n.store.registerReducer("carouselPlayer", a);
         var v = n(6),
             y = n(9),
             k = n(4),
             _ = n(1),
-            b = n(870),
+            b = n(871),
             S = n(5),
             N = n(3),
-            E = (n(1284), "carousel-card-live"),
+            E = (n(1287), "carousel-card-live"),
             C = "carousel-card-vod",
             w = function(e) {
                 function t() {
@@ -323,7 +355,7 @@ webpackJsonp([48], {
             U = n(10),
             F = n(48),
             D = n(272),
-            R = (n(1285), {
+            R = (n(1288), {
                 content: "carousel",
                 medium: "twitch_home"
             }),
@@ -502,7 +534,7 @@ webpackJsonp([48], {
                 }, t
             }(_.Component),
             I = n(111),
-            P = (n(1286), function(e) {
+            P = (n(1289), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
@@ -643,7 +675,7 @@ webpackJsonp([48], {
             }(_.Component)),
             L = Object(v.a)(o)(P),
             j = n(13),
-            A = (n(1287), 6),
+            A = (n(1290), 6),
             H = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -864,18 +896,18 @@ webpackJsonp([48], {
             return e.replace(/\[\]\(.+\)/, "")
         }
         t.a = i, t.b = a;
-        var o = n(870)
+        var o = n(871)
     },
-    1283: function(e, t, n) {
+    1286: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
             r = n(2),
-            o = n(911),
+            o = n(912),
             s = n(113),
             l = n(1027),
             c = n(1028),
-            d = n(1289),
+            d = n(1292),
             u = function(e) {
                 var t = {
                     name: "TWILIGHT_VIDEO_FEATURO_EN",
@@ -891,7 +923,7 @@ webpackJsonp([48], {
                             return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 1289))
+                                }).then(n.bind(null, 1292))
                             }, "FeaturedContent")(i.__assign({}, e, {
                                 shouldMixContent: !0
                             }))
@@ -900,7 +932,7 @@ webpackJsonp([48], {
                             return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
-                                }).then(n.bind(null, 1289))
+                                }).then(n.bind(null, 1292))
                             }, "FeaturedContent")(i.__assign({}, e, {
                                 shouldMixContent: !1
                             }))
@@ -920,11 +952,11 @@ webpackJsonp([48], {
             return u
         })
     },
-    1284: function(e, t) {},
-    1285: function(e, t) {},
-    1286: function(e, t) {},
     1287: function(e, t) {},
-    1288: function(e, t) {
+    1288: function(e, t) {},
+    1289: function(e, t) {},
+    1290: function(e, t) {},
+    1291: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1228,7 +1260,7 @@ webpackJsonp([48], {
         };
         e.exports = n
     },
-    1289: function(e, t, n) {
+    1292: function(e, t, n) {
         "use strict";
 
         function i(e, t, n) {
@@ -1282,9 +1314,9 @@ webpackJsonp([48], {
             l = (n.n(s), n(2)),
             c = n(7),
             d = n(1056),
-            u = n(870),
+            u = n(871),
             m = n(1027),
-            p = n(1290),
+            p = n(1293),
             g = (n.n(p), n(1057)),
             f = n(5),
             h = n(3);
@@ -1325,7 +1357,7 @@ webpackJsonp([48], {
             }(s.Component),
             y = v
     },
-    1290: function(e, t) {
+    1293: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -1880,7 +1912,7 @@ webpackJsonp([48], {
             l = "prime_landing_page_base_url",
             c = a.i.withCategory("PrimeUtilsLogger")
     },
-    136: function(e, t, n) {
+    137: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -2427,7 +2459,7 @@ webpackJsonp([48], {
     },
     1689: function(e, t) {},
     1690: function(e, t) {},
-    2053: function(e, t, n) {
+    2055: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -2591,14 +2623,14 @@ webpackJsonp([48], {
             m = Object(c.c)("Footer", {
                 autoReportInteractive: !0
             })(u),
-            p = n(910),
+            p = n(911),
             g = n(819),
             f = n(817),
             h = n(112),
             v = n(13),
-            y = n(881),
+            y = n(882),
             k = n(382),
-            _ = n(1283),
+            _ = n(1286),
             b = n(387),
             S = n(10),
             N = n(7),
@@ -2733,7 +2765,7 @@ webpackJsonp([48], {
                 }, t = a.__decorate([Object(N.a)(C), Object(c.c)("FeaturedGames")], t)
             }(r.Component)),
             O = w,
-            x = n(912),
+            x = n(913),
             U = n(48);
         ! function(e) {
             e[e.All = 1] = "All", e[e.Xbox = 2] = "Xbox", e[e.PS4 = 3] = "PS4"
@@ -4536,7 +4568,7 @@ webpackJsonp([48], {
 
         function l(e) {
             return {
-                currentUser: Object(re.c)(e)
+                currentUser: Object(oe.c)(e)
             }
         }
 
@@ -4561,11 +4593,11 @@ webpackJsonp([48], {
         }
 
         function p(e, t) {
-            return pe.debug("Received pubsub summary update", e), t && t.currentUser && t.currentUser.notifications && t.currentUser.notifications.summary && e.data.summary ? (t.currentUser.notifications.summary.lastSeenAt = e.data.summary.last_seen_at, t.currentUser.notifications.summary.unseenCount = e.data.summary.unseen_view_count, t) : t
+            return ge.debug("Received pubsub summary update", e), t && t.currentUser && t.currentUser.notifications && t.currentUser.notifications.summary && e.data.summary ? (t.currentUser.notifications.summary.lastSeenAt = e.data.summary.last_seen_at, t.currentUser.notifications.summary.unseenCount = e.data.summary.unseen_view_count, t) : t
         }
 
         function g(e, t) {
-            if (pe.debug("Received pubsub notification update", e), !(t && t.currentUser && t.currentUser.notifications && t.currentUser.notifications.edges && t.currentUser.notifications.edges)) return t;
+            if (ge.debug("Received pubsub notification update", e), !(t && t.currentUser && t.currentUser.notifications && t.currentUser.notifications.edges && t.currentUser.notifications.edges)) return t;
             if (d(e)) {
                 var n = new Set(e.data.notification_ids),
                     i = t.currentUser.notifications.edges.map(function(e) {
@@ -4863,7 +4895,8 @@ webpackJsonp([48], {
             Z = "center-window__content-footer",
             ee = "center-window__footer__text",
             te = "center-window__read-all",
-            ne = function(e) {
+            ne = b.i.withCategory("onsite-notifications-center-window"),
+            ie = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4973,15 +5006,27 @@ webpackJsonp([48], {
                         }, e)
                     }, t.loadMore = function() {
                         return y.__awaiter(t, void 0, void 0, function() {
-                            var e = this;
+                            var e;
                             return y.__generator(this, function(t) {
-                                return this.state.isLoadingMore ? [2] : (this.setState({
-                                    isLoadingMore: !0
-                                }), [2, this.props.onLoadMore().then(function() {
-                                    return e.setState({
-                                        isLoadingMore: !1
-                                    })
-                                })])
+                                switch (t.label) {
+                                    case 0:
+                                        if (this.state.isLoadingMore) return [3, 5];
+                                        this.setState({
+                                            isLoadingMore: !0
+                                        }), t.label = 1;
+                                    case 1:
+                                        return t.trys.push([1, 3, , 4]), [4, this.props.onLoadMore()];
+                                    case 2:
+                                        return t.sent(), [3, 4];
+                                    case 3:
+                                        return e = t.sent(), ne.error(e, "unexpected loadMore failure"), [3, 4];
+                                    case 4:
+                                        this.setState({
+                                            isLoadingMore: !1
+                                        }), t.label = 5;
+                                    case 5:
+                                        return [2]
+                                }
                             })
                         })
                     }, t
@@ -5010,11 +5055,11 @@ webpackJsonp([48], {
                     }))), this.renderUnreadNotificationsFooterElement())
                 }, t = y.__decorate([Object(U.c)("OnsiteNotificationsCenterWindow")], t)
             }(_.Component),
-            ie = ne,
-            ae = n(6),
-            re = n(17),
-            oe = n(87),
-            se = (n(404), function(e) {
+            ae = ie,
+            re = n(6),
+            oe = n(17),
+            se = n(87),
+            le = (n(404), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.closeTimeout = 0, t.close = function() {
@@ -5163,10 +5208,10 @@ webpackJsonp([48], {
                     this.closeTimeout && (clearTimeout(this.closeTimeout), this.closeTimeout = 0)
                 }, t
             }(_.Component)),
-            le = Object(U.c)("OnsiteNotificationToast")(se),
-            ce = le,
-            de = (n(405), b.i.withCategory("toast-manager")),
-            ue = function(e) {
+            ce = Object(U.c)("OnsiteNotificationToast")(le),
+            de = ce,
+            ue = (n(405), b.i.withCategory("toast-manager")),
+            me = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5187,7 +5232,7 @@ webpackJsonp([48], {
                     var t = this.props.pubsub.messages.info,
                         n = e.pubsub.messages.info;
                     if (n && n.data.toast && (!t || n.data.notification.id !== t.data.notification.id || n.data.notification.updated_at !== t.data.notification.updated_at)) {
-                        de.debug("Received pubsub update", e.pubsub.messages.info);
+                        ue.debug("Received pubsub update", e.pubsub.messages.info);
                         var i = s(n.data.notification, n.data.persistent);
                         this.onNewNotification(i)
                     }
@@ -5206,7 +5251,7 @@ webpackJsonp([48], {
                         return y.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return b.a.buildType !== C.a.Production && k.parse(window.location.search).onsite_test_data ? [4, n.e(35).then(n.bind(null, 2052))] : [3, 2];
+                                    return b.a.buildType !== C.a.Production && k.parse(window.location.search).onsite_test_data ? [4, n.e(35).then(n.bind(null, 2054))] : [3, 2];
                                 case 1:
                                     e = i.sent().MockOnsiteNotifications, t = e.getMockOnsiteNotificationModels(3), this.setState({
                                         notifications: t
@@ -5219,7 +5264,7 @@ webpackJsonp([48], {
                 }, t.prototype.renderToasts = function() {
                     var e = this,
                         t = this.state.notifications.map(function(t, n) {
-                            return _.createElement(ce, {
+                            return _.createElement(de, {
                                 key: t.id,
                                 item: t,
                                 index: n,
@@ -5236,7 +5281,7 @@ webpackJsonp([48], {
                     n > -1 && t.splice(n, 1), t.unshift(e), t.length > 3 && t.pop(), this.setState({
                         notifications: t
                     })
-                }, t = y.__decorate([Object(U.c)("OnsiteNotificationToastManager"), Object(oe.a)([{
+                }, t = y.__decorate([Object(U.c)("OnsiteNotificationToastManager"), Object(se.a)([{
                     topic: function(e) {
                         return Object(x.e)("" + (e.currentUser && e.currentUser.id))
                     },
@@ -5246,35 +5291,35 @@ webpackJsonp([48], {
                     }
                 }])], t)
             }(_.Component),
-            me = Object(ae.a)(l)(ue),
-            pe = b.i.withCategory("onsite-pubsub-mutators"),
-            ge = n(391),
-            fe = n(392),
-            he = n(393),
-            ve = n(394),
-            ye = n(395);
+            pe = Object(re.a)(l)(me),
+            ge = b.i.withCategory("onsite-pubsub-mutators"),
+            fe = n(391),
+            he = n(392),
+            ve = n(393),
+            ye = n(394),
+            ke = n(395);
         n(406);
         n.d(t, "a", function() {
-            return Ne
+            return Ee
         }), n.d(t, "b", function() {
-            return xe
+            return Ue
         });
-        var ke = b.i.withCategory("onsite-notifications"),
-            _e = "onsite-notifications__badge",
-            be = "99+",
-            Se = 5e3,
-            Ne = 10,
-            Ee = 100,
-            Ce = {
+        var _e = b.i.withCategory("onsite-notifications"),
+            be = "onsite-notifications__badge",
+            Se = "99+",
+            Ne = 5e3,
+            Ee = 10,
+            Ce = 100,
+            we = {
                 align: z._31.Center,
                 direction: z._32.Bottom,
                 label: ""
             },
-            we = {
-                limit: Ne,
+            Oe = {
+                limit: Ee,
                 cursor: ""
             },
-            Oe = function(e) {
+            xe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5284,7 +5329,7 @@ webpackJsonp([48], {
                     }, t.newNotificationsCountTimer = 0, t.hasInsertedSummaryData = !1, t.hasInsertedListNotificationsData = !1, t.viewNotification = function(e, n) {
                         void 0 === n && (n = !0), t.centerWindowToggleBalloon.toggleBalloon(!1), n && t.readNotification(e)
                     }, t.conditionallyInsertSummaryTestData = function() {
-                        t.summaryDataLoaded(t.props) && !t.hasInsertedSummaryData && b.a.buildType !== C.a.Production && k.parse(window.location.search).onsite_test_data && (t.hasInsertedSummaryData = !0, Object(O.d)(ve, y.__assign({}, t.props.summaryData.variables), function(e) {
+                        t.summaryDataLoaded(t.props) && !t.hasInsertedSummaryData && b.a.buildType !== C.a.Production && k.parse(window.location.search).onsite_test_data && (t.hasInsertedSummaryData = !0, Object(O.d)(ye, y.__assign({}, t.props.summaryData.variables), function(e) {
                             return e.currentUser.notifications.summary.unseenCount = k.parse(window.location.search).onsite_test_data, e
                         }))
                     }, t.conditionallyInsertListNotificationsTestData = function() {
@@ -5293,9 +5338,9 @@ webpackJsonp([48], {
                             return y.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return this.listDataLoaded() && !this.hasInsertedListNotificationsData && b.a.buildType !== C.a.Production && k.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(35).then(n.bind(null, 2052))]) : [3, 2];
+                                        return this.listDataLoaded() && !this.hasInsertedListNotificationsData && b.a.buildType !== C.a.Production && k.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(35).then(n.bind(null, 2054))]) : [3, 2];
                                     case 1:
-                                        e = t.sent().MockOnsiteNotifications, Object(O.d)(fe, y.__assign({}, this.props.listData.variables), function(t) {
+                                        e = t.sent().MockOnsiteNotifications, Object(O.d)(he, y.__assign({}, this.props.listData.variables), function(t) {
                                             return t.currentUser.notifications.edges = e.getMockOnsiteNotificationEdges(k.parse(window.location.search).onsite_test_data), t
                                         }), t.label = 2;
                                     case 2:
@@ -5341,45 +5386,56 @@ webpackJsonp([48], {
                             t.setState({
                                 newNotificationsCount: 0
                             }), t.clearTimeout()
-                        }, Se))
+                        }, Ne))
                     }, t.viewNotifications = function() {
-                        if (t.summaryDataLoaded(t.props)) {
-                            t.setState({
-                                newFriendRequestsBadgeCount: 0
-                            });
-                            var e = y.__assign({}, Object(O.a)({}), {
-                                optimisticResponse: {
-                                    viewedNotifications: {
-                                        user: {
-                                            notifications: {
-                                                summary: {
-                                                    unseenCount: 0,
-                                                    lastSeenAt: new Date,
-                                                    __typename: "OnsiteNotificationsSummary"
-                                                },
-                                                __typename: "OnsiteNotificationConnection"
-                                            },
-                                            __typename: "User"
-                                        },
-                                        __typename: "ViewedNotificationsPayload"
-                                    }
+                        return y.__awaiter(t, void 0, void 0, function() {
+                            var e, t;
+                            return y.__generator(this, function(n) {
+                                switch (n.label) {
+                                    case 0:
+                                        if (!this.summaryDataLoaded(this.props)) return [2];
+                                        this.setState({
+                                            newFriendRequestsBadgeCount: 0
+                                        }), e = y.__assign({}, Object(O.a)({}), {
+                                            optimisticResponse: {
+                                                viewedNotifications: {
+                                                    user: {
+                                                        notifications: {
+                                                            summary: {
+                                                                unseenCount: 0,
+                                                                lastSeenAt: new Date,
+                                                                __typename: "OnsiteNotificationsSummary"
+                                                            },
+                                                            __typename: "OnsiteNotificationConnection"
+                                                        },
+                                                        __typename: "User"
+                                                    },
+                                                    __typename: "ViewedNotificationsPayload"
+                                                }
+                                            }
+                                        }), Object(O.d)(ye, y.__assign({}, this.props.summaryData.variables), function(e) {
+                                            return e.currentUser.notifications.summary.unseenCount = 0, e
+                                        }), n.label = 1;
+                                    case 1:
+                                        return n.trys.push([1, 3, , 4]), [4, this.props.viewNotifications(e)];
+                                    case 2:
+                                        return n.sent(), [3, 4];
+                                    case 3:
+                                        return t = n.sent(), _e.error(t, "failure to read message..."), [3, 4];
+                                    case 4:
+                                        return [2]
                                 }
-                            });
-                            Object(O.d)(ve, y.__assign({}, t.props.summaryData.variables), function(e) {
-                                return e.currentUser.notifications.summary.unseenCount = 0, e
-                            }), t.props.viewNotifications(e).then(function() {}).catch(function(e) {
-                                return ke.error(e, "failure to read message... ")
                             })
-                        }
+                        })
                     }, t.getUnseenNotificationsCount = function(e) {
                         return t.summaryDataLoaded(e) ? e.summaryData.currentUser.notifications.summary.unseenCount + t.state.newFriendRequestsBadgeCount : 0
                     }, t.renderUnseenNotificationsBadge = function() {
                         var e = t.getUnseenNotificationsCount(t.props);
                         if (e > 0) {
-                            var n = e >= 100 ? be : e.toString();
+                            var n = e >= 100 ? Se : e.toString();
                             return _.createElement(z.U, {
                                 className: "onsite-notifications__badge",
-                                "data-test-selector": _e,
+                                "data-test-selector": be,
                                 position: z._2.Absolute
                             }, _.createElement(z.Z, {
                                 label: n,
@@ -5387,25 +5443,38 @@ webpackJsonp([48], {
                             }))
                         }
                     }, t.deleteNotification = function(e) {
-                        var n = y.__assign({}, Object(O.a)({
-                            id: e
-                        }), {
-                            optimisticResponse: {
-                                deleteNotification: {
-                                    __typename: "DeleteNotificationPayload",
-                                    notification: {
-                                        __typename: "OnsiteNotification",
-                                        id: e
-                                    }
+                        return y.__awaiter(t, void 0, void 0, function() {
+                            var t, n;
+                            return y.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        t = y.__assign({}, Object(O.a)({
+                                            id: e
+                                        }), {
+                                            optimisticResponse: {
+                                                deleteNotification: {
+                                                    __typename: "DeleteNotificationPayload",
+                                                    notification: {
+                                                        __typename: "OnsiteNotification",
+                                                        id: e
+                                                    }
+                                                }
+                                            }
+                                        }), this.listDataLoaded() && Object(O.d)(he, y.__assign({}, this.props.listData.variables), function(t) {
+                                            return t.currentUser.notifications.edges = t.currentUser.notifications.edges.filter(function(t) {
+                                                return t.node.id !== e
+                                            }), t
+                                        }), i.label = 1;
+                                    case 1:
+                                        return i.trys.push([1, 3, , 4]), [4, this.props.deleteOnsiteNotification(t)];
+                                    case 2:
+                                        return i.sent(), [3, 4];
+                                    case 3:
+                                        return n = i.sent(), _e.error(n, "Unable to delete notification " + e), [3, 4];
+                                    case 4:
+                                        return [2]
                                 }
-                            }
-                        });
-                        return Object(O.d)(fe, y.__assign({}, t.props.listData.variables), function(t) {
-                            return t.currentUser.notifications.edges = t.currentUser.notifications.edges.filter(function(t) {
-                                return t.node.id !== e
-                            }), t
-                        }), t.props.deleteOnsiteNotification(n).then(function() {}).catch(function(t) {
-                            ke.error(t, "Unable to delete notification " + e)
+                            })
                         })
                     }, t.readAllNotifications = function() {
                         if (t.setState({
@@ -5421,11 +5490,8 @@ webpackJsonp([48], {
                                 return e.node.id
                             });
                             if (0 !== e.length) {
-                                for (var n = c(e, Ee), i = 0, a = n; i < a.length; i++) {
-                                    var r = a[i];
-                                    t.markIDsAsRead(r)
-                                }
-                                Object(O.d)(fe, y.__assign({}, t.props.listData.variables), function(e) {
+                                var n = c(e, Ce);
+                                Object(O.d)(he, y.__assign({}, t.props.listData.variables), function(e) {
                                     return e.currentUser.notifications.edges = e.currentUser.notifications.edges.map(function(e) {
                                         return y.__assign({}, e, {
                                             node: y.__assign({}, e.node, {
@@ -5433,7 +5499,11 @@ webpackJsonp([48], {
                                             })
                                         })
                                     }), e
-                                })
+                                });
+                                for (var i = 0, a = n; i < a.length; i++) {
+                                    var r = a[i];
+                                    t.markIDsAsRead(r)
+                                }
                             }
                         }
                     }, t.markIDsAsRead = function(e) {
@@ -5464,7 +5534,7 @@ webpackJsonp([48], {
                                     case 2:
                                         return a.sent(), [3, 4];
                                     case 3:
-                                        return i = a.sent(), ke.error(i, "Unable to read notifications", {
+                                        return i = a.sent(), _e.error(i, "Unable to read notifications", {
                                             ids: e
                                         }), [3, 4];
                                     case 4:
@@ -5492,17 +5562,7 @@ webpackJsonp([48], {
                                                     count: 1
                                                 }
                                             }
-                                        }), i.label = 1;
-                                    case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, this.props.readOnsiteNotification(t)];
-                                    case 2:
-                                        return i.sent(), [3, 4];
-                                    case 3:
-                                        return n = i.sent(), ke.error(n, "Unable to read notification", {
-                                            id: e
-                                        }), [3, 4];
-                                    case 4:
-                                        return this.listDataLoaded() && Object(O.d)(fe, y.__assign({}, this.props.listData.variables), function(t) {
+                                        }), this.listDataLoaded() && Object(O.d)(he, y.__assign({}, this.props.listData.variables), function(t) {
                                             return t.currentUser.notifications.edges = t.currentUser.notifications.edges.map(function(t) {
                                                 return t.node.id === e ? y.__assign({}, t, {
                                                     node: y.__assign({}, t.node, {
@@ -5510,7 +5570,17 @@ webpackJsonp([48], {
                                                     })
                                                 }) : t
                                             }), t
-                                        }), [2]
+                                        }), i.label = 1;
+                                    case 1:
+                                        return i.trys.push([1, 3, , 4]), [4, this.props.readOnsiteNotification(t)];
+                                    case 2:
+                                        return i.sent(), [3, 4];
+                                    case 3:
+                                        return n = i.sent(), _e.error(n, "Unable to read notification", {
+                                            id: e
+                                        }), [3, 4];
+                                    case 4:
+                                        return [2]
                                 }
                             })
                         })
@@ -5541,16 +5611,16 @@ webpackJsonp([48], {
                     }
                 }, t.prototype.render = function() {
                     var e = this.props.shouldDefer || !this.listDataLoaded() ? [] : this.props.listData.currentUser.notifications.edges;
-                    return Ce.label = Object(b.d)("Notifications", "OnsiteNotificationsToolTip"), _.createElement(z.U, {
+                    return we.label = Object(b.d)("Notifications", "OnsiteNotificationsToolTip"), _.createElement(z.U, {
                         className: "onsite-notifications"
-                    }, _.createElement(me, {
+                    }, _.createElement(pe, {
                         onViewNotification: this.viewNotification
                     }), _.createElement(z.U, {
                         position: z._2.Relative
                     }, _.createElement(S.a, {
                         onToggle: this.toggleCenter,
                         ref: this.saveCenterWindowToggleBalloonRef,
-                        tooltipProps: Ce
+                        tooltipProps: we
                     }, _.createElement(z.v, {
                         ariaLabel: Object(b.d)("Open Notifications", "OnsiteNotifications"),
                         size: z.x.Large,
@@ -5561,7 +5631,7 @@ webpackJsonp([48], {
                         direction: z.q.BottomRight,
                         size: z.r.Large,
                         offsetX: "10px"
-                    }, _.createElement(ie, {
+                    }, _.createElement(ae, {
                         newNotificationsCount: this.state.newNotificationsCount,
                         hasInitiallyLoaded: this.listDataLoaded(),
                         data: e,
@@ -5571,18 +5641,18 @@ webpackJsonp([48], {
                         onReadAllNotifications: this.readAllNotifications,
                         onDeleteNotification: this.deleteNotification
                     }))), this.renderUnseenNotificationsBadge()))
-                }, t = y.__decorate([h(), Object(N.a)(ve, {
+                }, t = y.__decorate([h(), Object(N.a)(ye, {
                     name: "summaryData",
                     skip: function(e) {
                         return !e.firstPageLoaded
                     }
-                }), Object(N.a)(ye, {
+                }), Object(N.a)(ke, {
                     name: "viewNotifications"
-                }), Object(N.a)(fe, {
+                }), Object(N.a)(he, {
                     name: "listData",
                     options: function(e) {
                         return {
-                            variables: y.__assign({}, we, {
+                            variables: y.__assign({}, Oe, {
                                 language: e.languageCode
                             })
                         }
@@ -5594,7 +5664,7 @@ webpackJsonp([48], {
                         return y.__assign({}, e, {
                             loadMore: function() {
                                 return e.listData.fetchMore({
-                                    query: fe,
+                                    query: he,
                                     variables: y.__assign({}, e.listData.variables, {
                                         cursor: e.listData.currentUser ? e.listData.currentUser.notifications.edges[e.listData.currentUser.notifications.edges.length - 1].cursor : ""
                                     }),
@@ -5613,13 +5683,13 @@ webpackJsonp([48], {
                             }
                         })
                     }
-                }), Object(N.a)(ge, {
+                }), Object(N.a)(fe, {
                     name: "deleteOnsiteNotification"
-                }), Object(N.a)(he, {
+                }), Object(N.a)(ve, {
                     name: "readOnsiteNotification"
                 }), Object(E.a)(function(e) {
                     return {
-                        query: ve,
+                        query: ye,
                         skip: !e.currentUser,
                         topic: Object(x.e)("" + (e.currentUser && e.currentUser.id)),
                         types: [w.c.OnsiteNotificationSummaryUpdate, w.c.OnsiteNotificationUpdate, w.c.OnsiteNotificationCreate, w.c.OnsiteNotificationDelete],
@@ -5627,8 +5697,8 @@ webpackJsonp([48], {
                     }
                 }), Object(E.a)(function(e) {
                     return {
-                        query: fe,
-                        variables: y.__assign({}, we, {
+                        query: he,
+                        variables: y.__assign({}, Oe, {
                             language: e.languageCode
                         }),
                         skip: !e.currentUser,
@@ -5640,7 +5710,7 @@ webpackJsonp([48], {
                     autoReportInteractive: !0
                 })], t)
             }(_.Component),
-            xe = Oe
+            Ue = xe
     },
     391: function(e, t) {
         var n = {
@@ -7548,7 +7618,7 @@ webpackJsonp([48], {
             ge = n(38),
             fe = n(20),
             he = n(30),
-            ve = n(136),
+            ve = n(137),
             ye = n(52),
             ke = n(132),
             _e = n(51),
@@ -10930,7 +11000,7 @@ webpackJsonp([48], {
             return i
         })
     },
-    870: function(e, t, n) {
+    871: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -10954,7 +11024,7 @@ webpackJsonp([48], {
             e[e.Stream = 1] = "Stream", e[e.Vod = 2] = "Vod"
         }(s || (s = {}))
     },
-    881: function(e, t, n) {
+    882: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -11072,7 +11142,7 @@ webpackJsonp([48], {
             return g
         })
     },
-    910: function(e, t, n) {
+    911: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -11137,7 +11207,7 @@ webpackJsonp([48], {
             return g
         })
     },
-    911: function(e, t, n) {
+    912: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
@@ -11189,13 +11259,13 @@ webpackJsonp([48], {
             return s
         })
     },
-    912: function(e, t, n) {
+    913: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(1),
             r = n(10),
             o = n(2),
-            s = n(913),
+            s = n(914),
             l = n(3),
             c = (n(1007), function(e) {
                 function t() {
@@ -11314,7 +11384,7 @@ webpackJsonp([48], {
             return d
         })
     },
-    913: function(e, t, n) {
+    914: function(e, t, n) {
         "use strict";
         var i, a, r, o = n(0),
             s = n(4),
@@ -11387,38 +11457,6 @@ webpackJsonp([48], {
         n.d(t, "a", function() {
             return f
         })
-    },
-    999: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return {
-                type: o,
-                player: e
-            }
-        }
-
-        function a() {
-            return {
-                type: s
-            }
-        }
-
-        function r() {
-            return {
-                type: l
-            }
-        }
-        n.d(t, "b", function() {
-            return o
-        }), n.d(t, "c", function() {
-            return s
-        }), n.d(t, "a", function() {
-            return l
-        }), t.e = i, t.f = a, t.d = r;
-        var o = "carouselPlayer.CAROUSEL_REGISTERED",
-            s = "carouselPlayer.CAROUSEL_UNREGISTERED",
-            l = "carouselPlayer.CAROUSEL_PAUSED"
     }
 });
-//# sourceMappingURL=pages.anon-front-01b92b22995a5df3bfa72cff956815de.js.map
+//# sourceMappingURL=pages.anon-front-1658fc99ce4c502ddef2c064267b98c8.js.map
