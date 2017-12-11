@@ -221,6 +221,21 @@ window.__twilightSettings = {
                 "value": "variant4"
             }]
         },
+        "54b18ea6-2b6a-4ed7-9128-2497572d31e2": {
+            "name": "twilight_web_onboarding_following_for_you",
+            "v": 2644,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "first"
+            }, {
+                "weight": 0,
+                "value": "last"
+            }]
+        },
         "59c5198b-ea6d-423d-b337-ea93d0dc8d66": {
             "name": "TWILIGHT_LEEROY_JENKINS",
             "v": 2282,
