@@ -149,6 +149,18 @@ window.__twilightSettings = {
                 "value": "fork"
             }]
         },
+        "44a503af-d77f-4f1d-9fa4-c99c5f783f9c": {
+            "name": "twilight_video_manager_release",
+            "v": 2650,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "no"
+            }, {
+                "weight": 0,
+                "value": "yes"
+            }]
+        },
         "4723fff0-7f41-43c7-88b3-246b014dfaf1": {
             "name": "TWILIGHT_CHANNEL_LOGIN_UPSELL_V1",
             "v": 2523,
