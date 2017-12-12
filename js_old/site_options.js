@@ -1591,22 +1591,22 @@ window.SiteOptions = {
         },
         "50ac9a2b-63c2-46ed-9e7d-123363195dfd": {
             "name": "twilight_new_browse",
-            "v": 2642,
+            "v": 2648,
             "t": 1,
             "groups": [{
-                "weight": 60,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "variant1"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "variant2"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "variant3"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "variant4"
             }]
         },
