@@ -1,5 +1,5 @@
-webpackJsonp([55], {
-    2072: function(e, t, r) {
+webpackJsonp([54], {
+    2079: function(e, t, r) {
         "use strict";
 
         function i(e) {
@@ -27,11 +27,11 @@ webpackJsonp([55], {
             a = r(1),
             o = r(9),
             s = r(2),
-            c = r(820),
-            d = r(818),
+            c = r(825),
+            d = r(823),
             u = r(13),
             l = r(5),
-            h = r(828),
+            h = r(833),
             g = r(3),
             m = function(e) {
                 function t() {
@@ -120,7 +120,7 @@ webpackJsonp([55], {
             return p
         })
     },
-    818: function(e, t, r) {
+    823: function(e, t, r) {
         "use strict";
         r.d(t, "a", function() {
             return i
@@ -128,6 +128,7 @@ webpackJsonp([55], {
         var i = {
             BrowseCommunities: "browse.communities",
             BrowseCreative: "browse.creative",
+            BrowseGamesAndCommunities: "browse.games-and-communities",
             BrowseForYou: "browse.for-you",
             ChannelIndex: "channel.index.index",
             ChannelDashboardAchievements: "channel.dashboard.achievements",
@@ -180,7 +181,7 @@ webpackJsonp([55], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    820: function(e, t, r) {
+    825: function(e, t, r) {
         "use strict";
 
         function i(e) {
@@ -248,7 +249,7 @@ webpackJsonp([55], {
             return i
         })
     },
-    828: function(e, t, r) {
+    833: function(e, t, r) {
         "use strict";
         r.d(t, "a", function() {
             return o
@@ -380,4 +381,4 @@ webpackJsonp([55], {
             }()
     }
 });
-//# sourceMappingURL=pages.email-verification-4ab99b48d3dbe4af0f119dfb725e4e84.js.map
+//# sourceMappingURL=pages.email-verification-0f8f7f64331847f7e8e7785bc7012e5c.js.map

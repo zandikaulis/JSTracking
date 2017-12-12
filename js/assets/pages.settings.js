@@ -1,5 +1,5 @@
-webpackJsonp([52], {
-    130: function(e, t, n) {
+webpackJsonp([51], {
+    133: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -11,12 +11,12 @@ webpackJsonp([52], {
         }
         var o = n(2),
             r = n(15),
-            l = n(264);
+            l = n(268);
         t.a = i, t.b = a;
         var s = "https://www.twitch.tv"
     },
-    1935: function(e, t) {},
-    1936: function(e, t) {
+    1943: function(e, t) {},
+    1944: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -117,8 +117,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1937: function(e, t) {},
-    1938: function(e, t) {
+    1945: function(e, t) {},
+    1946: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -411,8 +411,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1939: function(e, t) {},
-    1940: function(e, t) {
+    1947: function(e, t) {},
+    1948: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -500,8 +500,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1941: function(e, t) {},
-    1942: function(e, t) {
+    1949: function(e, t) {},
+    1950: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -632,8 +632,8 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1943: function(e, t) {},
-    2080: function(e, t, n) {
+    1951: function(e, t) {},
+    2087: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -642,8 +642,8 @@ webpackJsonp([52], {
             o = n(1),
             r = n(2),
             l = n(28),
-            s = n(130),
-            c = n(377),
+            s = n(133),
+            c = n(381),
             d = n(5),
             u = n(3);
         ! function(e) {
@@ -684,7 +684,7 @@ webpackJsonp([52], {
                         linkTo: Object(s.a)("/settings/security"),
                         active: !1
                     }, Object(r.d)("Security and Privacy", "SettingsTabs")), o.createElement(u._18, {
-                        linkTo: Object(c.e)(i.Notifications),
+                        linkTo: Object(c.d)(i.Notifications),
                         active: this.props.activeTab === i.Notifications,
                         "data-a-target": "following-channels-tab"
                     }, Object(r.d)("Notifications", "SettingsTab")), o.createElement(u._18, {
@@ -699,15 +699,15 @@ webpackJsonp([52], {
                 }, t = a.__decorate([Object(d.c)("SettingsTabs")], t)
             }(o.Component),
             p = g,
-            f = n(820),
-            h = n(818),
+            f = n(825),
+            h = n(823),
             b = n(13),
             v = n(9),
             S = n(67),
             y = n(7),
             k = n(20),
             N = n(10),
-            _ = (n(1935), function(e) {
+            _ = (n(1943), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -783,8 +783,8 @@ webpackJsonp([52], {
                     }, Object(r.d)("Saved", "AdvancedNotificationSettingsToggle"))))))
                 }, t
             }(o.Component)),
-            E = n(1936),
-            w = (n(1937), n(1938)),
+            E = n(1944),
+            w = (n(1945), n(1946)),
             x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1001,7 +1001,7 @@ webpackJsonp([52], {
             }), Object(y.a)(E, {
                 name: "setAdvancedNotificationSetting"
             }), Object(d.c)("AdvancedNotificationSettings"))(x),
-            O = (n(1939), function(e) {
+            O = (n(1947), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -1066,8 +1066,8 @@ webpackJsonp([52], {
                     }, Object(r.d)("Saved", "PlatformNotificationSettingsToggle")))))
                 }, t
             }(o.Component)),
-            P = n(1940),
-            j = (n(1941), n(1942));
+            P = n(1948),
+            j = (n(1949), n(1950));
         ! function(e) {
             e.onsite = "onsite", e.email = "email", e.push = "push"
         }(m || (m = {}));
@@ -1349,7 +1349,7 @@ webpackJsonp([52], {
             }), Object(y.a)(P, {
                 name: "setNotificationSetting"
             }))(U),
-            T = (n(1943), function(e) {
+            T = (n(1951), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1421,7 +1421,7 @@ webpackJsonp([52], {
             return D
         })
     },
-    264: function(e, t, n) {
+    268: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(21),
@@ -1506,7 +1506,7 @@ webpackJsonp([52], {
             return d
         })
     },
-    818: function(e, t, n) {
+    823: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -1514,6 +1514,7 @@ webpackJsonp([52], {
         var i = {
             BrowseCommunities: "browse.communities",
             BrowseCreative: "browse.creative",
+            BrowseGamesAndCommunities: "browse.games-and-communities",
             BrowseForYou: "browse.for-you",
             ChannelIndex: "channel.index.index",
             ChannelDashboardAchievements: "channel.dashboard.achievements",
@@ -1566,7 +1567,7 @@ webpackJsonp([52], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    820: function(e, t, n) {
+    825: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1635,4 +1636,4 @@ webpackJsonp([52], {
         })
     }
 });
-//# sourceMappingURL=pages.settings-731f543417d7782a4db87490dd4d231e.js.map
+//# sourceMappingURL=pages.settings-64678afe37997e4b4bdf9576060cc93e.js.map

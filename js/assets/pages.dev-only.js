@@ -1,29 +1,196 @@
-webpackJsonp([57], {
-    2065: function(e, t, n) {
+webpackJsonp([56], {
+    1874: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Dev_Only_GQL"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "shouldSkip"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Boolean"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: {
+                            kind: "Name",
+                            value: "includeUser"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [{
+                            kind: "Directive",
+                            name: {
+                                kind: "Name",
+                                value: "include"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "if"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "shouldSkip"
+                                    }
+                                }
+                            }]
+                        }],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: {
+                            kind: "Name",
+                            value: "skipUser"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [{
+                            kind: "Directive",
+                            name: {
+                                kind: "Name",
+                                value: "skip"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "if"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "shouldSkip"
+                                    }
+                                }
+                            }]
+                        }],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 201
+            }
+        };
+        n.loc.source = {
+            body: "query Dev_Only_GQL($shouldSkip: Boolean!) {\n  currentUser {\n    id\n  }\n\n  includeUser: currentUser @include(if: $shouldSkip) {\n    id\n  }\n\n  skipUser: currentUser @skip(if: $shouldSkip) {\n    id\n  }\n}\n",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    2073: function(e, t, n) {
         "use strict";
 
         function l() {
-            E.i.debug("debug message")
+            h.i.debug("debug message")
         }
 
         function a() {
-            E.i.info("info message")
-        }
-
-        function r() {
-            E.i.warn("warn message")
+            h.i.info("info message")
         }
 
         function i() {
+            h.i.warn("warn message")
+        }
+
+        function r() {
             var e = {};
-            e.self = e, E.i.info("Can't serialize this arg, oh no.", e)
+            e.self = e, h.i.info("Can't serialize this arg, oh no.", e)
         }
 
         function o() {
             try {
                 throw new Error("throwing an error.")
             } catch (e) {
-                E.i.error(e, "Artisanal error handling.")
+                h.i.error(e, "Artisanal error handling.")
             }
         }
 
@@ -31,25 +198,25 @@ webpackJsonp([57], {
             try {
                 throw new Error("throwing a super bad unrecoverable error.")
             } catch (e) {
-                E.i.fatal(e, "Superb fatal error handling.")
+                h.i.fatal(e, "Superb fatal error handling.")
             }
         }
 
-        function m() {
+        function s() {
             throw new Error("Throwing an uncaught error.")
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var s = n(1),
-            u = n(22),
-            h = n(10),
-            E = n(2),
-            d = n(28),
+        var u = n(1),
+            m = n(22),
+            d = n(10),
+            h = n(2),
+            p = n(28),
             g = n(5),
-            p = n(0),
-            f = n(3),
-            v = function(e) {
+            E = n(0),
+            v = n(3),
+            f = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.loadMoreA = function() {
@@ -81,36 +248,36 @@ webpackJsonp([57], {
                         loadingB: !1
                     }, n
                 }
-                return p.__extends(t, e), t.prototype.render = function() {
-                    for (var e = [], t = 0; t < this.state.colA; t++) e.push(s.createElement(f.U, {
+                return E.__extends(t, e), t.prototype.render = function() {
+                    for (var e = [], t = 0; t < this.state.colA; t++) e.push(u.createElement(v.U, {
                         key: t,
-                        display: f.H.Flex,
-                        flexWrap: f.K.NoWrap,
+                        display: v.H.Flex,
+                        flexWrap: v.K.NoWrap,
                         margin: 1
-                    }, s.createElement(f.U, {
+                    }, u.createElement(v.U, {
                         margin: {
                             right: 1
                         }
-                    }, s.createElement(f._1, {
+                    }, u.createElement(v._1, {
                         height: 90,
                         width: 90
-                    })), s.createElement(f.U, null, s.createElement(f._1, {
+                    })), u.createElement(v.U, null, u.createElement(v._1, {
                         width: 300,
                         lineCount: 3
                     }))));
-                    for (var n = [], t = 0; t < this.state.colB; t++) n.push(s.createElement(f.U, {
+                    for (var n = [], t = 0; t < this.state.colB; t++) n.push(u.createElement(v.U, {
                         key: t,
-                        display: f.H.Flex,
-                        flexWrap: f.K.NoWrap,
+                        display: v.H.Flex,
+                        flexWrap: v.K.NoWrap,
                         margin: 1
-                    }, s.createElement(f.U, {
+                    }, u.createElement(v.U, {
                         margin: {
                             right: 1
                         }
-                    }, s.createElement(f._1, {
+                    }, u.createElement(v._1, {
                         height: 90,
                         width: 90
-                    })), s.createElement(f.U, null, s.createElement(f._1, {
+                    })), u.createElement(v.U, null, u.createElement(v._1, {
                         width: 300,
                         lineCount: 3
                     }))));
@@ -119,107 +286,107 @@ webpackJsonp([57], {
                         borderColor: this.state.loadingA || this.state.loadingB ? "yellow" : "green",
                         height: "500px"
                     };
-                    return s.createElement("div", {
+                    return u.createElement("div", {
                         style: l
-                    }, s.createElement(d.b, null, s.createElement(f.U, {
-                        display: f.H.Flex,
-                        flexWrap: f.K.NoWrap
-                    }, s.createElement(f.U, {
+                    }, u.createElement(p.b, null, u.createElement(v.U, {
+                        display: v.H.Flex,
+                        flexWrap: v.K.NoWrap
+                    }, u.createElement(v.U, {
                         margin: {
                             right: 1
                         }
-                    }, e, this.state.loadingA && s.createElement(f.U, null, s.createElement(f.X, {
+                    }, e, this.state.loadingA && u.createElement(v.U, null, u.createElement(v.X, {
                         fillContent: !0
-                    })), s.createElement(d.a, {
+                    })), u.createElement(p.a, {
                         enabled: !0,
                         loadMore: this.loadMoreA,
                         pixelThreshold: 0
-                    })), s.createElement(f.U, null, n, this.state.loadingB && s.createElement(f.U, null, s.createElement(f.X, {
+                    })), u.createElement(v.U, null, n, this.state.loadingB && u.createElement(v.U, null, u.createElement(v.X, {
                         fillContent: !0
-                    })), s.createElement(d.a, {
+                    })), u.createElement(p.a, {
                         contentLength: n.length,
                         enabled: !0,
                         loadMore: this.loadMoreB,
                         pixelThreshold: 100
                     })))))
                 }, t
-            }(s.Component),
-            y = function() {
-                return s.createElement(d.b, null, s.createElement("div", {
+            }(u.Component),
+            k = function() {
+                return u.createElement(p.b, null, u.createElement("div", {
                     style: {
                         margin: "0 2rem"
                     }
-                }, s.createElement("h1", {
+                }, u.createElement("h1", {
                     style: {
                         margin: "2rem 0"
                     }
-                }, "The Dev only page!"), s.createElement("p", null, "This page is only included in development. Use it for testing all the things that need testing."), s.createElement("h2", {
+                }, "The Dev only page!"), u.createElement("p", null, "This page is only included in development. Use it for testing all the things that need testing."), u.createElement("h2", {
                     style: {
                         margin: "2rem 0"
                     }
-                }, " Logging and error reporting"), s.createElement("div", null, s.createElement(f.u, {
+                }, " Logging and error reporting"), u.createElement("div", null, u.createElement(v.u, {
                     onClick: l
-                }, "Log a debug-level message"), " ", s.createElement(f.u, {
+                }, "Log a debug-level message"), " ", u.createElement(v.u, {
                     onClick: a
-                }, "Log a info-level message"), " ", s.createElement(f.u, {
-                    onClick: r
-                }, "Log a warning-level message"), " ", s.createElement(f.u, {
-                    onClick: o
-                }, "Log an error-level message with error"), " ", s.createElement(f.u, {
-                    onClick: c
-                }, "Log a fatal-level message with error"), " ", s.createElement(f.u, {
+                }, "Log a info-level message"), " ", u.createElement(v.u, {
                     onClick: i
-                }, "Log message with unserializable argument"), " ", s.createElement(f.u, {
-                    onClick: m
-                }, "Throw an error")), s.createElement("h2", {
+                }, "Log a warning-level message"), " ", u.createElement(v.u, {
+                    onClick: o
+                }, "Log an error-level message with error"), " ", u.createElement(v.u, {
+                    onClick: c
+                }, "Log a fatal-level message with error"), " ", u.createElement(v.u, {
+                    onClick: r
+                }, "Log message with unserializable argument"), " ", u.createElement(v.u, {
+                    onClick: s
+                }, "Throw an error")), u.createElement("h2", {
                     style: {
                         margin: "2rem 0"
                     }
-                }, " Dynamic Settings"), s.createElement("ul", null, s.createElement("li", null, s.createElement("pre", null, "environment = ", JSON.stringify(E.b.get("environment", "<not set>")))), s.createElement("li", null, s.createElement("pre", null, "env_test = ", JSON.stringify(E.b.get("env_test", "<not set>")))), s.createElement("li", null, s.createElement("pre", null, "totally_invalid_key = ", JSON.stringify(E.b.get("totally_invalid_key", "<default value>")))), s.createElement("li", null, s.createElement("pre", null, "experiments (hidden) = ", JSON.stringify(E.b.get("experiments", "<default value>"))))), s.createElement("h2", {
+                }, " Dynamic Settings"), u.createElement("ul", null, u.createElement("li", null, u.createElement("pre", null, "environment = ", JSON.stringify(h.b.get("environment", "<not set>")))), u.createElement("li", null, u.createElement("pre", null, "env_test = ", JSON.stringify(h.b.get("env_test", "<not set>")))), u.createElement("li", null, u.createElement("pre", null, "totally_invalid_key = ", JSON.stringify(h.b.get("totally_invalid_key", "<default value>")))), u.createElement("li", null, u.createElement("pre", null, "experiments (hidden) = ", JSON.stringify(h.b.get("experiments", "<default value>"))))), u.createElement("h2", {
                     style: {
                         margin: "2rem 0"
                     }
-                }, " Link tests"), s.createElement("ul", null, s.createElement("li", null, s.createElement(h.a, {
+                }, " Link tests"), u.createElement("ul", null, u.createElement("li", null, u.createElement(d.a, {
                     to: "/_dev"
-                }, "Full path")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Full path")), u.createElement("li", null, u.createElement(d.a, {
                     to: "/_dev?qs"
-                }, "Full path, query string")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Full path, query string")), u.createElement("li", null, u.createElement(d.a, {
                     to: "/_dev#hash"
-                }, "Full path, hash")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Full path, hash")), u.createElement("li", null, u.createElement(d.a, {
                     to: "/_dev?qs#hash"
-                }, "Full path, query string, hash")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Full path, query string, hash")), u.createElement("li", null, u.createElement(d.a, {
                     to: "_dev"
-                }, "Relative (identical) path")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Relative (identical) path")), u.createElement("li", null, u.createElement(d.a, {
                     to: "_dev?qs"
-                }, "Relative path, query string")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Relative path, query string")), u.createElement("li", null, u.createElement(d.a, {
                     to: "_dev#hash"
-                }, "Relative path, hash")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Relative path, hash")), u.createElement("li", null, u.createElement(d.a, {
                     to: "_dev?qs#hash"
-                }, "Relative path, query string, hash")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Relative path, query string, hash")), u.createElement("li", null, u.createElement(d.a, {
                     to: "?qs"
-                }, "Query string")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Query string")), u.createElement("li", null, u.createElement(d.a, {
                     to: "#hash"
-                }, "Hash")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Hash")), u.createElement("li", null, u.createElement(d.a, {
                     to: "?qs#hash"
-                }, "Query string and hash")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Query string and hash")), u.createElement("li", null, u.createElement(d.a, {
                     to: {
                         pathname: "/_dev"
                     }
-                }, "Location with pathname")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Location with pathname")), u.createElement("li", null, u.createElement(d.a, {
                     to: {
                         pathname: "_dev"
                     }
-                }, "Location with relative (identical) pathname")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Location with relative (identical) pathname")), u.createElement("li", null, u.createElement(d.a, {
                     to: {
                         search: "?qs"
                     }
-                }, "Location with query string")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Location with query string")), u.createElement("li", null, u.createElement(d.a, {
                     to: {
                         hash: "hash"
                     }
-                }, "Location with hash")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Location with hash")), u.createElement("li", null, u.createElement(d.a, {
                     to: "/pondelinp?foo=bar&tt_content=content&tt_medium=medium&tt_foo=extrafoo"
-                }, "URL with query parameters, including tt_codes")), s.createElement("li", null, s.createElement(h.a, {
+                }, "URL with query parameters, including tt_codes")), u.createElement("li", null, u.createElement(d.a, {
                     to: {
                         pathname: "/pondelinp",
                         state: {
@@ -227,29 +394,82 @@ webpackJsonp([57], {
                             medium: "medium"
                         }
                     }
-                }, "Internal Link with location state, including tt_codes")), s.createElement("li", null, s.createElement(h.a, {
+                }, "Internal Link with location state, including tt_codes")), u.createElement("li", null, u.createElement(d.a, {
                     to: "/adamar/dashboard"
-                }, "Legacy Link (dashbaord)"))), s.createElement(f.U, {
+                }, "Legacy Link (dashbaord)"))), u.createElement(v.U, {
                     margin: {
                         top: 2
                     }
-                }, s.createElement(f._21, {
-                    type: f._26.H2
-                }, " Infinite Scroll Test"), s.createElement(v, null))))
+                }, u.createElement(v._21, {
+                    type: v._26.H2
+                }, " Infinite Scroll Test"), u.createElement(f, null))))
             },
-            _ = Object(g.c)("DevOnlyPage", {
+            y = Object(g.c)("DevOnlyPage", {
                 destination: "dev",
                 autoReportInteractive: !0
-            })(y),
-            w = function() {
-                return s.createElement(u.d, null, s.createElement(u.b, {
+            })(k),
+            S = n(32),
+            _ = n(7),
+            b = n(1874),
+            w = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return E.__extends(t, e), t.prototype.render = function() {
+                    return u.createElement("div", {
+                        style: {
+                            margin: "0 2rem"
+                        }
+                    }, u.createElement("p", null, "Testing GraphQL"))
+                }, t
+            }(u.Component),
+            N = Object(S.compose)(Object(_.a)(b, {
+                options: function(e) {
+                    return {
+                        variables: {
+                            shouldSkip: e.shouldSkip
+                        }
+                    }
+                }
+            }), d.f)(w),
+            U = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        shouldSkip: !0
+                    }, t
+                }
+                return E.__extends(t, e), t.prototype.componentDidMount = function() {
+                    var e = this;
+                    setTimeout(function() {
+                        return e.setState({
+                            shouldSkip: !1
+                        }, function() {
+                            return setTimeout(function() {
+                                return e.setState({
+                                    shouldSkip: !0
+                                })
+                            }, 1e3)
+                        })
+                    }, 1e3)
+                }, t.prototype.render = function() {
+                    return u.createElement(N, {
+                        shouldSkip: this.state.shouldSkip
+                    })
+                }, t
+            }(u.Component),
+            L = function() {
+                return u.createElement(m.d, null, u.createElement(m.b, {
+                    path: "/_dev/gql",
+                    component: U
+                }), u.createElement(m.b, {
                     path: "/_dev",
-                    component: _
+                    component: y
                 }))
             };
         n.d(t, "DevOnlyRoot", function() {
-            return w
+            return L
         })
     }
 });
-//# sourceMappingURL=pages.dev-only-3915849530d2f6a51842f6eb81245df8.js.map
+//# sourceMappingURL=pages.dev-only-0a48ac23deb17a18fbe193bba0beb157.js.map

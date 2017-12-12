@@ -1,5 +1,5 @@
-webpackJsonp([64], {
-    1255: function(e, t, n) {
+webpackJsonp([63], {
+    1257: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -61,9 +61,9 @@ webpackJsonp([64], {
             a = n(2),
             o = n(13)
     },
-    2016: function(e, t) {},
-    2017: function(e, t) {},
-    2018: function(e, t) {
+    2024: function(e, t) {},
+    2025: function(e, t) {},
+    2026: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -224,8 +224,8 @@ webpackJsonp([64], {
         };
         e.exports = n
     },
-    2019: function(e, t) {},
-    2020: function(e, t) {
+    2027: function(e, t) {},
+    2028: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -531,7 +531,7 @@ webpackJsonp([64], {
         };
         e.exports = n
     },
-    2089: function(e, t, n) {
+    2096: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -543,15 +543,15 @@ webpackJsonp([64], {
             c = n(67),
             l = n(28),
             u = n(7),
-            d = n(820),
-            p = n(818),
+            d = n(825),
+            p = n(823),
             m = n(13),
             b = n(88),
             h = n(5),
-            g = n(135),
-            v = n(274),
-            k = n(276),
-            y = n(275),
+            g = n(138),
+            v = n(278),
+            k = n(279),
+            y = n(143),
             f = n(89),
             S = n(3),
             T = function(e) {
@@ -581,8 +581,8 @@ webpackJsonp([64], {
                 }, t
             }(a.Component),
             _ = T,
-            P = n(1255);
-        n(2016);
+            P = n(1257);
+        n(2024);
         ! function(e) {
             e[e.Tier1 = 0] = "Tier1", e[e.Tier2 = 1] = "Tier2", e[e.Tier3 = 2] = "Tier3"
         }(i || (i = {}));
@@ -786,7 +786,7 @@ webpackJsonp([64], {
                 }, t = s.__decorate([Object(h.c)("SubPlanTabs")], t)
             }(a.Component),
             C = E,
-            N = (n(2017), n(2018)),
+            N = (n(2025), n(2026)),
             w = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -872,7 +872,7 @@ webpackJsonp([64], {
                 })], t)
             }(a.Component),
             x = w,
-            D = (n(2019), function(e) {
+            D = (n(2027), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onSubClick = function(e) {
@@ -1027,8 +1027,8 @@ webpackJsonp([64], {
                 }, t = s.__decorate([Object(h.c)("SubsPlanTiers")], t)
             }(a.Component)),
             F = D,
-            I = n(2020),
-            O = function(e) {
+            I = n(2028),
+            B = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1114,13 +1114,13 @@ webpackJsonp([64], {
                     location: m.PageviewLocation.SubsBroadcasterPage
                 })], t)
             }(a.Component),
-            B = O,
-            L = Object(r.a)()(B);
+            O = B,
+            L = Object(r.a)()(O);
         n.d(t, "SubsBroadcasterPage", function() {
             return L
         })
     },
-    818: function(e, t, n) {
+    823: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -1128,6 +1128,7 @@ webpackJsonp([64], {
         var i = {
             BrowseCommunities: "browse.communities",
             BrowseCreative: "browse.creative",
+            BrowseGamesAndCommunities: "browse.games-and-communities",
             BrowseForYou: "browse.for-you",
             ChannelIndex: "channel.index.index",
             ChannelDashboardAchievements: "channel.dashboard.achievements",
@@ -1180,7 +1181,7 @@ webpackJsonp([64], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    820: function(e, t, n) {
+    825: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1249,4 +1250,4 @@ webpackJsonp([64], {
         })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-8ab9c5fe2469dc09c40de73c8f4f12ea.js.map
+//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-051307c44c45ecd3403364ae9b00910f.js.map

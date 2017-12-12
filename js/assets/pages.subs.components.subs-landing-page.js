@@ -1,5 +1,5 @@
-webpackJsonp([63], {
-    1255: function(e, t, n) {
+webpackJsonp([62], {
+    1257: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -61,14 +61,14 @@ webpackJsonp([63], {
             i = n(2),
             o = n(13)
     },
-    2008: function(e, t, n) {
+    2016: function(e, t, n) {
         e.exports = n.p + "assets/chat-badges-4b67550d7a270b216efd364135a9d764.png"
     },
-    2009: function(e, t, n) {
+    2017: function(e, t, n) {
         e.exports = n.p + "assets/emotes-e2efaf11b6d1b3db4fe5fd980350e28b.png"
     },
-    2010: function(e, t) {},
-    2011: function(e, t) {
+    2018: function(e, t) {},
+    2019: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -325,11 +325,11 @@ webpackJsonp([63], {
         };
         e.exports = n
     },
-    2012: function(e, t) {},
-    2013: function(e, t) {},
-    2014: function(e, t) {},
-    2015: function(e, t) {},
-    2088: function(e, t, n) {
+    2020: function(e, t) {},
+    2021: function(e, t) {},
+    2022: function(e, t) {},
+    2023: function(e, t) {},
+    2095: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -358,13 +358,13 @@ webpackJsonp([63], {
             o = n(0),
             l = n(1),
             c = n(2),
-            u = n(2008),
+            u = n(2016),
             d = n.n(u),
-            m = n(2009),
+            m = n(2017),
             p = n.n(m),
             g = n(28),
-            h = n(820),
-            f = n(818),
+            h = n(825),
+            f = n(823),
             b = n(13),
             _ = n(5),
             y = n(9),
@@ -375,7 +375,7 @@ webpackJsonp([63], {
             C = n(20),
             E = n(10),
             x = n(3),
-            P = (n(2010), function(e) {
+            P = (n(2018), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.handleClick = function() {
@@ -417,9 +417,9 @@ webpackJsonp([63], {
                 }, t = o.__decorate([Object(_.c)("FollowedChannelLink")], t)
             }(l.Component)),
             N = P,
-            F = n(1255),
-            O = n(2011),
-            D = (n(2012), function(e) {
+            F = n(1257),
+            O = n(2019),
+            D = (n(2020), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -546,11 +546,11 @@ webpackJsonp([63], {
             U = n(40),
             I = n(18),
             j = n(66),
-            M = n(108),
-            R = n(267),
+            M = n(111),
+            R = n(271),
             H = n(64),
             A = n(48),
-            W = (n(2013), function(e) {
+            W = (n(2021), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onStreamerClick = function(e) {
@@ -634,10 +634,10 @@ webpackJsonp([63], {
                 }, t
             }(l.Component)),
             z = W,
-            V = (n(2014), {
+            B = (n(2022), {
                 searchPlaceholder: Object(c.d)("Search for a Streamer", "StreamerSearch")
             }),
-            B = function(e) {
+            V = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleChange = function(e) {
@@ -664,7 +664,7 @@ webpackJsonp([63], {
                         onChange: this.handleChange,
                         onFocus: this.props.onFocus,
                         onKeyDown: this.props.onKeyDown,
-                        placeholder: V.searchPlaceholder,
+                        placeholder: B.searchPlaceholder,
                         id: "streamer-search-input"
                     }), l.createElement(x.p, {
                         direction: x.q.BottomCenter,
@@ -761,7 +761,7 @@ webpackJsonp([63], {
                 return o.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return l.createElement(B, {
+                    return l.createElement(V, {
                         onChange: this.onChange,
                         onClickOut: this.onClickOut,
                         onFocus: this.onFocus,
@@ -843,7 +843,7 @@ webpackJsonp([63], {
                 }, t = o.__decorate([Object(_.c)("StreamerSearch")], t)
             }(l.Component),
             G = Object(i.a)(s)(K),
-            $ = (n(2015), function(e) {
+            $ = (n(2023), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.messages = {
@@ -1011,7 +1011,7 @@ webpackJsonp([63], {
             return Y
         })
     },
-    818: function(e, t, n) {
+    823: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -1019,6 +1019,7 @@ webpackJsonp([63], {
         var a = {
             BrowseCommunities: "browse.communities",
             BrowseCreative: "browse.creative",
+            BrowseGamesAndCommunities: "browse.games-and-communities",
             BrowseForYou: "browse.for-you",
             ChannelIndex: "channel.index.index",
             ChannelDashboardAchievements: "channel.dashboard.achievements",
@@ -1071,7 +1072,7 @@ webpackJsonp([63], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    820: function(e, t, n) {
+    825: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -1140,4 +1141,4 @@ webpackJsonp([63], {
         })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-landing-page-b062cbef6779c669cdb8a8c4155036e3.js.map
+//# sourceMappingURL=pages.subs.components.subs-landing-page-94cf8a6767bdb224bdc965bff10980eb.js.map
