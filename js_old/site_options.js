@@ -4448,13 +4448,13 @@ window.SiteOptions = {
         },
         "f866f89d-85de-4a5b-9b00-d97c791bc16d": {
             "name": "TWILIGHT_RAID_AUTO_JOIN",
-            "v": 2659,
+            "v": 2662,
             "t": 1,
             "groups": [{
-                "weight": 65,
+                "weight": 75,
                 "value": "yes"
             }, {
-                "weight": 35,
+                "weight": 25,
                 "value": "no"
             }]
         },

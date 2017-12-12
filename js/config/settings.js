@@ -442,13 +442,13 @@ window.__twilightSettings = {
         },
         "f866f89d-85de-4a5b-9b00-d97c791bc16d": {
             "name": "TWILIGHT_RAID_AUTO_JOIN",
-            "v": 2656,
+            "v": 2659,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 65,
                 "value": "yes"
             }, {
-                "weight": 50,
+                "weight": 35,
                 "value": "no"
             }]
         }
