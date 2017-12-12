@@ -1220,6 +1220,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "44a503af-d77f-4f1d-9fa4-c99c5f783f9c": {
+            "name": "twilight_video_manager_release",
+            "v": 2650,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "no"
+            }, {
+                "weight": 0,
+                "value": "yes"
+            }]
+        },
         "44c4bb4e-5580-4f0b-8fc9-a8cd426e4e99": {
             "name": "CHANNEL_FOLLOW_BUTTON",
             "v": 1252,
