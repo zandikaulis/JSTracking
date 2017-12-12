@@ -1982,6 +1982,21 @@ window.SiteOptions = {
                 "value": "show"
             }]
         },
+        "680113ed-4ef6-4006-b4cf-259ee8213079": {
+            "name": "clips_no_problem",
+            "v": 2661,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }, {
+                "weight": 0,
+                "value": "variant2"
+            }]
+        },
         "68ca29e7-fdd0-43f3-b3f4-9b97cf1341c0": {
             "name": "ios_ipad_optimized_screens",
             "v": 2611,
