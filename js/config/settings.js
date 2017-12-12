@@ -33,7 +33,7 @@ window.__twilightSettings = {
     "krux_url": "https://cdn.krxd.net/controltag?confid=JYk8LCsC",
     "legacy_routes": ["^/broadcast$", "^/broadcast/dashboards(/.+)?$", "^/broadcast/stats(/get)?$", "^/bug_reports/new$", "^/[a-zA-Z0-9_\\-%]+/dashboard$", "^/[a-zA-Z0-9_\\-%]+/dashboard/action_log$", "^/[a-zA-Z0-9_\\-%]+/dashboard/activity$", "^/[a-zA-Z0-9_\\-%]+/dashboard/commercial$", "^/[a-zA-Z0-9_\\-%]+/dashboard/delay$", "^/[a-zA-Z0-9_\\-%]+/dashboard/events$", "^/[a-zA-Z0-9_\\-%]+/dashboard/extensions(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/dashboard/permissions$", "^/[a-zA-Z0-9_\\-%]+/dashboard/revenue$", "^/[a-zA-Z0-9_\\-%]+/dashboard/settings(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/dashboard/stats$", "^/[a-zA-Z0-9_\\-%]+/dashboard/streamkey$", "^/[a-zA-Z0-9_\\-%]+/dashboard/subscription(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/dashboard/video-stats(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/esports/.+$", "^/[a-zA-Z0-9_\\-%]+/followers$", "^/(?!directory/)[a-zA-Z0-9_\\-%]+/following$", "^/[a-zA-Z0-9_\\-%]*/inbox$", "^/[a-zA-Z0-9_\\-%]+/manager$", "^/[a-zA-Z0-9_\\-%]+/manager/.+$", "^/[a-zA-Z0-9_\\-%]*/outbox$", "^/[a-zA-Z0-9_\\-%]+/popout$", "^/[a-zA-Z0-9_\\-%]+/profile(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/report_form$", "^/[a-zA-Z0-9_\\-%]+/settings(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/subscribe(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/v/.+$", "^/chat/embed$", "^/chromecast/", "^/communities/.+/moderation(/.*)?$", "^/communities/create$", "^/communities$", "^/dashboard/?$", "^/directory/game/[a-zA-Z0-9_,\\.\\:;'\\-\\!%&]+/details$", "^/directory/random$", "^/ext(/.+)?$", "^/friends(/requests)?$", "^/health_check$", "^/inbox$", "^/inventory$", "^/manager(/.+)?$", "^/messages?/.+$", "^/outbox$", "^/partner/.+$", "^/_?products/.+$", "^/profile$", "^/search$", "^/settings$", "^/settings/notifications$", "^/settings/[a-zA-Z0-9_\\-]+$", "^/settings/profile$", "^/p/.+$", "^/store/games(/.+)?$", "^/streams/[0-9]+/channel/[a-zA-Z0-9]+$", "^/subscriptions$", "^/team/.+$", "^/team_invitation/.+$", "^/team_permission/.+$", "^/year(/[0-9]{4})?$", "^/year/2016(/.+)?$", "^/upload$", "^/user/.+$", "^/yt/.+$"],
     "legacy_routes_enabled": true,
-    "net_neutrality_visible": false,
+    "net_neutrality_visible": true,
     "notification_app_server_public_key": "BGzteaQYOqrTAPN8EuuowBVG67pHwyZo879XZkC7cUV2QP4qQf-92Pmm9tyOuriJdiKnMDDRi28F5HQK6uSk0vM",
     "onsite_notifications_launch": true,
     "passport_hosts": ["https://api.twitch.tv", "https://passport.twitch.tv", "https://passport-staging.internal.twitch.tv", "https://passport-dev1.internal.twitch.tv", "https://passport-dev2.internal.twitch.tv", "https://passport-dev3.internal.twitch.tv"],
@@ -202,22 +202,22 @@ window.__twilightSettings = {
         },
         "50ac9a2b-63c2-46ed-9e7d-123363195dfd": {
             "name": "twilight_new_browse",
-            "v": 2642,
+            "v": 2648,
             "t": 1,
             "groups": [{
-                "weight": 60,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "variant1"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "variant2"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "variant3"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "variant4"
             }]
         },
