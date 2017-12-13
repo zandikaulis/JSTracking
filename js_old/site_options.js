@@ -4158,21 +4158,6 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
-        "e2969271-bad4-4088-a56d-9582b5e35a8f": {
-            "name": "twilight_web_onboarding_for_you_user",
-            "v": 2507,
-            "t": 2,
-            "groups": [{
-                "weight": 34,
-                "value": "control"
-            }, {
-                "weight": 33,
-                "value": "last"
-            }, {
-                "weight": 33,
-                "value": "first"
-            }]
-        },
         "e35023b2-1cfc-4e73-b5ab-30f36d2afc4d": {
             "name": "ios_host_transition",
             "v": 2351,
