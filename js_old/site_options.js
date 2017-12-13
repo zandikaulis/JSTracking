@@ -2038,7 +2038,7 @@ window.SiteOptions = {
         },
         "699265c3-830c-4215-859b-647b01f4425b": {
             "name": "clips_closer_2",
-            "v": 2668,
+            "v": 2669,
             "t": 1,
             "groups": [{
                 "weight": 100,
