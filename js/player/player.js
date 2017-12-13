@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".7bc7262a67d136c2ca5c.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".973cc3056117bfe9c657.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -21735,7 +21735,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.12.13-181052+efdbcbbe3c20c60466bd3f53d33103a57f6ac5f7",
+                    app_version: "2017.12.13-181836+6eeb1ae1ee1571864b423a6260ecada55c7db530",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -44244,10 +44244,10 @@
                 var t = e.t;
                 return i.a.createElement(s.a, {
                     className: "player-button"
-                }, i.a.createElement("span", {
-                    className: "player-tip player-tip--aright",
+                }, i.a.createElement("span", null, i.a.createElement("span", {
+                    className: "player-tip",
                     "data-tip": t("Share")
-                }), i.a.createElement(c.a, null))
+                }), i.a.createElement(c.a, null)))
             };
         d.propTypes = l;
         var f = n.i(u.a)()(d)
@@ -44261,13 +44261,10 @@
             a = function() {
                 return i.a.createElement("svg", {
                     viewBox: "0 0 30 30"
-                }, i.a.createElement("g", {
-                    clipRule: "evenodd"
                 }, i.a.createElement("path", {
-                    d: "M22 18h5v11H13V18h5v2h-3v7h10v-7h-3"
-                }), i.a.createElement("path", {
-                    d: "M18.994 14.297L17 16l-1-1.2 3.987-3.8L24 14.8 23 16l-2.022-1.703V23h-1.984z"
-                })))
+                    d: "M12 11v2h-2v8h10v-8h-2v-2h4v12H8V11h4zm2-1h-2l3-3 3 3h-2v6h-2v-6z",
+                    fillRule: "evenodd"
+                }))
             }
     }, function(e, t, n) {
         "use strict";

@@ -1,5 +1,5 @@
 webpackJsonp([51], {
-    131: function(e, t, n) {
+    133: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -11,12 +11,12 @@ webpackJsonp([51], {
         }
         var o = n(2),
             r = n(15),
-            l = n(266);
+            l = n(268);
         t.a = i, t.b = a;
         var s = "https://www.twitch.tv"
     },
-    1949: function(e, t) {},
-    1950: function(e, t) {
+    1943: function(e, t) {},
+    1944: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -117,8 +117,8 @@ webpackJsonp([51], {
         };
         e.exports = n
     },
-    1951: function(e, t) {},
-    1952: function(e, t) {
+    1945: function(e, t) {},
+    1946: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -411,8 +411,8 @@ webpackJsonp([51], {
         };
         e.exports = n
     },
-    1953: function(e, t) {},
-    1954: function(e, t) {
+    1947: function(e, t) {},
+    1948: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -500,8 +500,8 @@ webpackJsonp([51], {
         };
         e.exports = n
     },
-    1955: function(e, t) {},
-    1956: function(e, t) {
+    1949: function(e, t) {},
+    1950: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -632,8 +632,8 @@ webpackJsonp([51], {
         };
         e.exports = n
     },
-    1957: function(e, t) {},
-    2094: function(e, t, n) {
+    1951: function(e, t) {},
+    2087: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -642,8 +642,8 @@ webpackJsonp([51], {
             o = n(1),
             r = n(2),
             l = n(28),
-            s = n(131),
-            c = n(379),
+            s = n(133),
+            c = n(381),
             d = n(5),
             u = n(3);
         ! function(e) {
@@ -662,36 +662,36 @@ webpackJsonp([51], {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(u._22, {
-                        type: u._27.H2
+                    }, o.createElement(u._21, {
+                        type: u._26.H2
                     }, Object(r.d)("Settings", "SettingsTabs"))), o.createElement(u.U, {
                         margin: {
                             bottom: 2
                         }
-                    }, o.createElement(u._20, null, o.createElement(u._19, {
+                    }, o.createElement(u._19, null, o.createElement(u._18, {
                         targetBlank: Object(s.b)(),
                         linkTo: Object(s.a)("/settings/profile"),
                         active: !1
-                    }, Object(r.d)("Profile", "SettingsTabs")), o.createElement(u._19, {
+                    }, Object(r.d)("Profile", "SettingsTabs")), o.createElement(u._18, {
                         linkTo: "https://twitch.amazon.com/prime?ref_=sm_w_tsp_p_t",
                         active: !1
-                    }, Object(r.d)("Prime", "SettingsTabs")), o.createElement(u._19, {
+                    }, Object(r.d)("Prime", "SettingsTabs")), o.createElement(u._18, {
                         targetBlank: Object(s.b)(),
                         linkTo: Object(s.a)("/settings/channel"),
                         active: !1
-                    }, Object(r.d)("Channel and Videos", "SettingsTabs")), o.createElement(u._19, {
+                    }, Object(r.d)("Channel and Videos", "SettingsTabs")), o.createElement(u._18, {
                         targetBlank: Object(s.b)(),
                         linkTo: Object(s.a)("/settings/security"),
                         active: !1
-                    }, Object(r.d)("Security and Privacy", "SettingsTabs")), o.createElement(u._19, {
+                    }, Object(r.d)("Security and Privacy", "SettingsTabs")), o.createElement(u._18, {
                         linkTo: Object(c.d)(i.Notifications),
                         active: this.props.activeTab === i.Notifications,
                         "data-a-target": "following-channels-tab"
-                    }, Object(r.d)("Notifications", "SettingsTab")), o.createElement(u._19, {
+                    }, Object(r.d)("Notifications", "SettingsTab")), o.createElement(u._18, {
                         targetBlank: Object(s.b)(),
                         linkTo: Object(s.a)("/settings/connections"),
                         active: !1
-                    }, Object(r.d)("Connections", "SettingsTabs")), o.createElement(u._19, {
+                    }, Object(r.d)("Connections", "SettingsTabs")), o.createElement(u._18, {
                         targetBlank: Object(s.b)(),
                         linkTo: Object(s.a)("/subscriptions"),
                         active: !1
@@ -699,15 +699,15 @@ webpackJsonp([51], {
                 }, t = a.__decorate([Object(d.c)("SettingsTabs")], t)
             }(o.Component),
             p = g,
-            f = n(823),
-            h = n(821),
+            f = n(825),
+            h = n(823),
             b = n(13),
             v = n(9),
-            S = n(69),
+            S = n(67),
             y = n(7),
             k = n(20),
             N = n(10),
-            _ = (n(1949), function(e) {
+            _ = (n(1943), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -715,7 +715,7 @@ webpackJsonp([51], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(u._18, {
+                    return o.createElement(u._17, {
                         className: "advanced-notification-settings-toggle",
                         display: u.H.Flex,
                         justifyContent: u.T.Between,
@@ -752,12 +752,12 @@ webpackJsonp([51], {
                         flexGrow: 1,
                         display: u.H.Flex,
                         flexDirection: u.J.Column
-                    }, o.createElement(u._22, {
+                    }, o.createElement(u._21, {
                         fontSize: u.L.Size5
                     }, o.createElement(N.a, {
                         to: "/" + this.props.login
-                    }, this.props.text)), o.createElement(u._22, {
-                        type: u._27.Span,
+                    }, this.props.text)), o.createElement(u._21, {
+                        type: u._26.Span,
                         color: u.F.Alt2
                     }, this.props.description))), o.createElement(u.U, {
                         display: u.H.Flex,
@@ -767,7 +767,7 @@ webpackJsonp([51], {
                         margin: {
                             right: 1
                         }
-                    }, o.createElement(u._30, {
+                    }, o.createElement(u._29, {
                         checked: this.props.isEnabled,
                         onChange: this.changeHandler,
                         "data-test-selector": "toggle-selector",
@@ -777,14 +777,14 @@ webpackJsonp([51], {
                         padding: {
                             x: 1
                         }
-                    }, o.createElement(u._22, {
+                    }, o.createElement(u._21, {
                         fontSize: u.L.Size5,
                         color: u.F.Link
                     }, Object(r.d)("Saved", "AdvancedNotificationSettingsToggle"))))))
                 }, t
             }(o.Component)),
-            E = n(1950),
-            w = (n(1951), n(1952)),
+            E = n(1944),
+            w = (n(1945), n(1946)),
             x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -835,18 +835,18 @@ webpackJsonp([51], {
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (!this.props.data || this.props.data.loading && !this.props.data.currentUser) return o.createElement(u._18, {
+                    if (!this.props.data || this.props.data.loading && !this.props.data.currentUser) return o.createElement(u._17, {
                         padding: {
                             y: 1
                         },
                         borderBottom: !0
-                    }, o.createElement(u.Y, {
+                    }, o.createElement(u.X, {
                         fillContent: !0
                     }));
                     if (this.props.data.error) return o.createElement(S.a, {
                         message: Object(r.d)("Error loading data.", "AdvancedNotificationSettings")
                     });
-                    if (!this.props.data.currentUser) return o.createElement(u._18, {
+                    if (!this.props.data.currentUser) return o.createElement(u._17, {
                         padding: {
                             y: 1
                         },
@@ -857,7 +857,7 @@ webpackJsonp([51], {
                     var e = Object(r.d)("{followCount, plural, one {You follow # channel} other {You follow # channels}}", {
                             followCount: this.props.data.currentUser.follows.totalCount
                         }, "AdvancedNotificationSettings"),
-                        t = o.createElement(u._18, {
+                        t = o.createElement(u._17, {
                             background: u.m.Alt2,
                             borderBottom: !0
                         }, o.createElement(u.S, {
@@ -873,7 +873,7 @@ webpackJsonp([51], {
                         }, o.createElement(u.U, {
                             className: "advanced-notification-settings__header",
                             flexGrow: 0
-                        }, o.createElement(u._22, {
+                        }, o.createElement(u._21, {
                             fontSize: u.L.Size5,
                             color: u.F.Alt2,
                             bold: !0
@@ -882,7 +882,7 @@ webpackJsonp([51], {
                                 x: 1
                             },
                             flexGrow: 1
-                        }, o.createElement(u._22, {
+                        }, o.createElement(u._21, {
                             "data-test-selector": "description-selector",
                             fontSize: u.L.Size5,
                             color: u.F.Alt2
@@ -892,29 +892,29 @@ webpackJsonp([51], {
                             flexShrink: 1,
                             display: u.H.Flex,
                             justifyContent: u.T.Center
-                        }, o.createElement(u._9, {
-                            asset: u._10.AngleRight,
-                            type: u._11.Alt2
+                        }, o.createElement(u._8, {
+                            asset: u._9.AngleRight,
+                            type: u._10.Alt2
                         }))))),
                         n = !this.props.data.loading && !this.props.data.error && !!this.props.data.currentUser.follows.pageInfo.hasNextPage;
-                    return this.props.data.currentUser.follows.totalCount > 0 ? this.state.collapsed ? o.createElement(u._18, null, t) : o.createElement(u._18, null, t, o.createElement(u._18, {
+                    return this.props.data.currentUser.follows.totalCount > 0 ? this.state.collapsed ? o.createElement(u._17, null, t) : o.createElement(u._17, null, t, o.createElement(u._17, {
                         borderBottom: !0,
                         padding: 2
                     }, o.createElement(u.U, {
                         padding: {
                             bottom: 1
                         }
-                    }, o.createElement(u._22, {
+                    }, o.createElement(u._21, {
                         fontSize: u.L.Size5,
                         color: u.F.Alt2
                     }, Object(r.d)("Manage which channels you receive notifications for.", "AdvancedNotificationSettings"))), o.createElement(u.U, {
                         padding: {
                             bottom: 1
                         }
-                    }, o.createElement(u._22, {
+                    }, o.createElement(u._21, {
                         fontSize: u.L.Size4,
                         color: u.F.Alt
-                    }, e)), o.createElement(u._18, {
+                    }, e)), o.createElement(u._17, {
                         className: "advanced-notification-settings__toggle-container",
                         borderTop: !0,
                         borderLeft: !0,
@@ -1001,7 +1001,7 @@ webpackJsonp([51], {
             }), Object(y.a)(E, {
                 name: "setAdvancedNotificationSetting"
             }), Object(d.c)("AdvancedNotificationSettings"))(x),
-            O = (n(1953), function(e) {
+            O = (n(1947), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -1009,7 +1009,7 @@ webpackJsonp([51], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(u._18, {
+                    return o.createElement(u._17, {
                         className: "platform-notification-settings-toggle",
                         display: u.H.Flex,
                         flexWrap: u.K.NoWrap,
@@ -1034,9 +1034,9 @@ webpackJsonp([51], {
                         margin: {
                             bottom: .5
                         }
-                    }, o.createElement(u._22, {
+                    }, o.createElement(u._21, {
                         fontSize: u.L.Size4
-                    }, this.props.text)), o.createElement(u._22, {
+                    }, this.props.text)), o.createElement(u._21, {
                         fontSize: u.L.Size5,
                         color: u.F.Alt2
                     }, this.props.description)), o.createElement(u.U, {
@@ -1050,7 +1050,7 @@ webpackJsonp([51], {
                         margin: {
                             right: 1
                         }
-                    }, o.createElement(u._30, {
+                    }, o.createElement(u._29, {
                         checked: this.props.isEnabled,
                         disabled: this.props.disabled,
                         onChange: this.changeHandler,
@@ -1060,14 +1060,14 @@ webpackJsonp([51], {
                         padding: {
                             x: 1
                         }
-                    }, o.createElement(u._22, {
+                    }, o.createElement(u._21, {
                         fontSize: u.L.Size5,
                         color: u.F.Link
                     }, Object(r.d)("Saved", "PlatformNotificationSettingsToggle")))))
                 }, t
             }(o.Component)),
-            P = n(1954),
-            j = (n(1955), n(1956));
+            P = n(1948),
+            j = (n(1949), n(1950));
         ! function(e) {
             e.onsite = "onsite", e.email = "email", e.push = "push"
         }(m || (m = {}));
@@ -1161,20 +1161,20 @@ webpackJsonp([51], {
                 }, t.prototype.render = function() {
                     if (!this.props.data || this.props.data.loading && !this.props.data.currentUser) return o.createElement(u.U, {
                         padding: 1
-                    }, o.createElement(u.Y, {
+                    }, o.createElement(u.X, {
                         fillContent: !0
                     }));
                     if (this.props.data.error) return o.createElement(S.a, {
                         message: Object(r.d)("Error loading data.", "PlatformNotificationSettings")
                     });
-                    if (!this.props.data.currentUser) return o.createElement(u._18, {
+                    if (!this.props.data.currentUser) return o.createElement(u._17, {
                         margin: {
                             top: 1
                         }
                     }, o.createElement(S.a, {
                         message: Object(r.d)("You must be logged in to update your settings.", "PlatformNotificationSettings")
                     }));
-                    var e = o.createElement(u._18, {
+                    var e = o.createElement(u._17, {
                         background: u.m.Alt2,
                         borderBottom: !0
                     }, o.createElement(u.S, {
@@ -1190,7 +1190,7 @@ webpackJsonp([51], {
                         className: "platform-notification-settings__header",
                         flexGrow: 0,
                         "data-test-selector": "collapsible-header"
-                    }, o.createElement(u._22, {
+                    }, o.createElement(u._21, {
                         "data-test-selector": "display-name",
                         fontSize: u.L.Size5,
                         color: u.F.Alt2,
@@ -1200,7 +1200,7 @@ webpackJsonp([51], {
                             x: 1
                         },
                         flexGrow: 1
-                    }, o.createElement(u._22, {
+                    }, o.createElement(u._21, {
                         fontSize: u.L.Size5,
                         color: u.F.Alt2
                     }, this.getSettingTurnedOnMessage())), o.createElement(u.U, {
@@ -1209,22 +1209,22 @@ webpackJsonp([51], {
                         flexShrink: 1,
                         display: u.H.Flex,
                         justifyContent: u.T.Center
-                    }, o.createElement(u._9, {
-                        asset: u._10.AngleRight,
-                        type: u._11.Alt2
+                    }, o.createElement(u._8, {
+                        asset: u._9.AngleRight,
+                        type: u._10.Alt2
                     })))));
-                    return this.state.collapsed ? o.createElement(u._18, null, e) : o.createElement(u._18, null, e, o.createElement(u._18, {
+                    return this.state.collapsed ? o.createElement(u._17, null, e) : o.createElement(u._17, null, e, o.createElement(u._17, {
                         padding: 2,
                         borderBottom: !0
                     }, o.createElement(u.U, {
                         padding: {
                             bottom: 1
                         }
-                    }, o.createElement(u._22, {
+                    }, o.createElement(u._21, {
                         "data-test-selector": "description",
                         fontSize: u.L.Size5,
                         color: u.F.Alt2
-                    }, this.props.description)), o.createElement(u._18, {
+                    }, this.props.description)), o.createElement(u._17, {
                         display: u.H.Flex,
                         margin: {
                             y: .5
@@ -1246,7 +1246,7 @@ webpackJsonp([51], {
                         padding: {
                             right: 1
                         }
-                    }, o.createElement(u._22, {
+                    }, o.createElement(u._21, {
                         fontSize: u.L.Size4,
                         color: u.F.Alt,
                         "data-test-selector": "explanation"
@@ -1258,7 +1258,7 @@ webpackJsonp([51], {
                         margin: {
                             right: 1
                         }
-                    }, o.createElement(u._30, {
+                    }, o.createElement(u._29, {
                         "data-test-selector": "all-toggle",
                         checked: this.getGlobalStateForPlatform(),
                         onChange: this.toggleAll
@@ -1268,7 +1268,7 @@ webpackJsonp([51], {
                         },
                         "data-test-selector": "saved-selector",
                         className: this.getDisplaySaved("ALL") ? "platform-notification-settings__saved" : "platform-notification-settings__saved--hide"
-                    }, o.createElement(u._22, {
+                    }, o.createElement(u._21, {
                         fontSize: u.L.Size5,
                         color: u.F.Link
                     }, Object(r.d)("Saved", "PlatformNotificationSettings")))))), o.createElement(u.U, {
@@ -1349,7 +1349,7 @@ webpackJsonp([51], {
             }), Object(y.a)(P, {
                 name: "setNotificationSetting"
             }))(U),
-            T = (n(1957), function(e) {
+            T = (n(1951), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1364,12 +1364,12 @@ webpackJsonp([51], {
                         padding: 3
                     }, o.createElement(p, {
                         activeTab: i.Notifications
-                    }), o.createElement(u._18, {
+                    }), o.createElement(u._17, {
                         className: "notification-settings__body",
                         borderRight: !0,
                         borderLeft: !0,
                         borderTop: !0
-                    }, o.createElement(u._18, {
+                    }, o.createElement(u._17, {
                         background: u.m.Alt,
                         padding: {
                             x: 2,
@@ -1380,10 +1380,10 @@ webpackJsonp([51], {
                         margin: {
                             bottom: .5
                         }
-                    }, o.createElement(u._22, {
+                    }, o.createElement(u._21, {
                         fontSize: u.L.Size3,
                         color: u.F.Alt
-                    }, Object(r.d)("Notifications", "GlobalNotificationSettingsPage"))), o.createElement(u.U, null, o.createElement(u._22, {
+                    }, Object(r.d)("Notifications", "GlobalNotificationSettingsPage"))), o.createElement(u.U, null, o.createElement(u._21, {
                         fontSize: u.L.Size5,
                         color: u.F.Alt2
                     }, Object(r.d)("Get the notifications you care about, where you want to see them.", "GlobalNotificationSettingsPage")))), o.createElement(F, {
@@ -1421,7 +1421,7 @@ webpackJsonp([51], {
             return D
         })
     },
-    266: function(e, t, n) {
+    268: function(e, t, n) {
         "use strict";
         var i = n(0),
             a = n(21),
@@ -1506,7 +1506,7 @@ webpackJsonp([51], {
             return d
         })
     },
-    821: function(e, t, n) {
+    823: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -1567,7 +1567,7 @@ webpackJsonp([51], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    823: function(e, t, n) {
+    825: function(e, t, n) {
         "use strict";
 
         function i(e) {
@@ -1636,4 +1636,4 @@ webpackJsonp([51], {
         })
     }
 });
-//# sourceMappingURL=pages.settings-1b288fe8548782e7d9dad8a7e25c5320.js.map
+//# sourceMappingURL=pages.settings-64678afe37997e4b4bdf9576060cc93e.js.map

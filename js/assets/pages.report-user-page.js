@@ -1,5 +1,5 @@
-webpackJsonp([56], {
-    1939: function(e, t) {
+webpackJsonp([55], {
+    1933: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -87,7 +87,7 @@ webpackJsonp([56], {
         };
         e.exports = n
     },
-    2090: function(e, t, n) {
+    2083: function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -109,7 +109,7 @@ webpackJsonp([56], {
         });
         var a = n(6),
             i = n(9),
-            s = n(55),
+            s = n(54),
             l = n(39),
             p = n(17),
             c = n(0),
@@ -118,11 +118,11 @@ webpackJsonp([56], {
             m = n(2),
             g = n(7),
             h = n(5),
-            f = n(142),
-            b = n(278),
-            k = n(264),
+            f = n(144),
+            b = n(280),
+            k = n(266),
             v = n(3),
-            R = n(1939),
+            R = n(1933),
             y = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -153,7 +153,7 @@ webpackJsonp([56], {
                         margin: {
                             bottom: 1
                         }
-                    }, d.createElement(v._22, {
+                    }, d.createElement(v._21, {
                         fontSize: v.L.Size5
                     }, Object(m.d)("There was an unexpected error. Please refresh the page and try again", "ReportUserPage"))) : this.props.userToReportData && !this.props.userToReportData.loading && this.props.userToReportData.user ? d.createElement(b.a, {
                         onClose: this.handleReportUserClose,
@@ -161,7 +161,7 @@ webpackJsonp([56], {
                         title: Object(m.d)("Report {channelName}", {
                             channelName: this.props.match.params.channelName
                         }, "ReportUserPage")
-                    }) : d.createElement(v._2, {
+                    }) : d.createElement(v._1, {
                         lineCount: 3
                     }) : d.createElement(v.U, {
                         "data-test-selector": "report-user-page__logged-out",
@@ -172,7 +172,7 @@ webpackJsonp([56], {
                         margin: {
                             bottom: 1
                         }
-                    }, d.createElement(v._22, {
+                    }, d.createElement(v._21, {
                         fontSize: v.L.Size5
                     }, Object(m.d)("You must be logged in to report {channelName}. Please log in to complete.", {
                         channelName: this.props.match.params.channelName
@@ -200,4 +200,4 @@ webpackJsonp([56], {
         })
     }
 });
-//# sourceMappingURL=pages.report-user-page-58b9ae89fd463ed83ed90f8c3935f74e.js.map
+//# sourceMappingURL=pages.report-user-page-6471364012fe5e9b132a76529a4088b6.js.map
