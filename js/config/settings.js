@@ -22,7 +22,7 @@ window.__twilightSettings = {
     "comscore_config_c3": 1,
     "comscore_config_c5": "01",
     "comscore_url": "https://sb.scorecardresearch.com/beacon.js",
-    "crate_trickster_launch": "off",
+    "crate_trickster_launch": "staff",
     "env_test": "This is a test in Production!",
     "event_directory_enabled_games": ["overwatch", "twitchcon 2017", "twitch presents", "dota 2", "league of legends", "call of duty: wwii", "rocket league", "tekken 7", "talk shows", "always on"],
     "google_analytics_url": "https://ssl.google-analytics.com/ga.js",
@@ -384,21 +384,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 100,
                 "value": "off"
-            }]
-        },
-        "e2969271-bad4-4088-a56d-9582b5e35a8f": {
-            "name": "twilight_web_onboarding_for_you_user",
-            "v": 2507,
-            "t": 2,
-            "groups": [{
-                "weight": 34,
-                "value": "control"
-            }, {
-                "weight": 33,
-                "value": "last"
-            }, {
-                "weight": 33,
-                "value": "first"
             }]
         },
         "e9fe3136-84bc-4a61-9079-0c7df78abeb3": {
