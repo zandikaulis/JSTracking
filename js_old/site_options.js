@@ -1447,11 +1447,11 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
-            "v": 2646,
+            "v": 2667,
             "t": 1,
             "groups": [{
                 "weight": 1,
-                "value": "//video-edge-eaf274.sjc01.hls.ttvnw.net/v1/playlist/CrF1g9cTMcQt5gICFAAaiAcIO-3K51PErX_nV0Vv3hnFdJpneUI3Rv_1N6d3ESR8BrIiPGJf8Aqus4W5WFQ3YgwK1tPYl6liADIbnaSynldaTsdNi4BGYQ__euOQRUxadYgLGhaSo6NsivRhkk7ppvzi5_BtjUjmZbe0NPbcxfPyIXr95A5cEOYuZLAIkpiJ4gxSmDFYXhjxi5M8BU_9Od2eIh1dFUaZdnxvoECYSXcSY685T6Eo9OjWbHxqHIji3En6dMvSU68CJIKVvMcIY73TC6amvhGOZz36I6kJLRfLFxbAMy-c1dYdWIbTSm2i3aZDOaxB3Lm8hPXdLlN6yBlWQxoUySbat3qLIsz4HsE8nBjwdoR6Zl9lVPv5ht1lAjUoVBqtNlaw9RshCMQLeTBoDBMJ5YvRsPN-0GW62GksOo0VPafX.m3u8"
+                "value": "//video-edge-97c3eb.sjc01.hls.ttvnw.net/v1/playlist/CtCrX3OJUu4RXjW6yLDQ0ntxyZAlmfVoiTVyQvPyQM5s2ZqA5v498BusUytPnVu5Seb5s0mY0RhytqynvD2zNNwSO1iAqiGNgdFAsoVGiALgxW_sqbsZo3IqP6S7268IUaTa4RxojKK6RQuS9bPliJII3b6bvfM2EkFNwY-SQOzrSUUfG2JZZVQiaX70k0koy3Sq6N3rp6_NQwKzY-xAhmRZU-e5kxPw_QG3pYz-5g4W3z_gSMfbKiltzpUwGt1JZWVRgNf5waaM9Ggu2pUcTIQ5k885eaw48TlcK4oH9LVLrr41ozeY2YG3LCi-4VL5S72ms5uVw-V70ocF2gHf0-CYxh_6zr8mCxg7uw_W2L77aH_JQlrVBWFxI9Usdpu-Pjp_QXn9VH_25nvUosNwwaYuk54qxvQ4-EudQNBrjS0y-u0CaaFEtc.m3u8"
             }]
         },
         "4bc4a7c7-21b7-44f5-a0fb-79f430ee8ac4": {
@@ -1500,6 +1500,21 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "active"
+            }]
+        },
+        "4ce15ce7-a4fc-40df-812d-847467f0572d": {
+            "name": "ios_mobile_promotions",
+            "v": 2666,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active_first_tab"
+            }, {
+                "weight": 0,
+                "value": "active_last_tab"
             }]
         },
         "4d081a33-0d0f-4b44-bfde-cf07c358915f": {
