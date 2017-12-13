@@ -792,8 +792,8 @@ window.SiteOptions = {
             }]
         },
         "29a37cfd-6a34-4624-970f-6b155b40636b": {
-            "name": "twilight_onboarding_randomized_games",
-            "v": 2621,
+            "name": "twilight_web_onboarding_randomized_games",
+            "v": 2663,
             "t": 2,
             "groups": [{
                 "weight": 1,
