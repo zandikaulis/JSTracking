@@ -1,18 +1,4 @@
-webpackJsonp([60], {
-    100: function(t, n, e) {
-        "use strict";
-        e.d(n, "a", function() {
-            return i
-        });
-        var i = function() {
-            function t() {}
-            return t.prototype.get = function(t, n) {
-                if ("experiments" === t) return n;
-                var e = window.__twilightSettings && window.__twilightSettings[t];
-                return void 0 !== e ? e : n
-            }, t
-        }()
-    },
+webpackJsonp([61], {
     18: function(t, n, e) {
         "use strict";
 
@@ -31,7 +17,7 @@ webpackJsonp([60], {
         }
         n.a = i, n.b = r
     },
-    389: function(t, n, e) {
+    387: function(t, n, e) {
         "use strict";
         e.d(n, "a", function() {
             return i
@@ -41,10 +27,10 @@ webpackJsonp([60], {
             t[t.Ready = 0] = "Ready", t[t.Dimensions = 1] = "Dimensions", t[t.RequestAd = 2] = "RequestAd", t[t.OnStart = 3] = "OnStart", t[t.OnCredit = 4] = "OnCredit", t[t.OnFinish = 5] = "OnFinish", t[t.OnClose = 6] = "OnClose", t[t.OnError = 7] = "OnError", t[t.Adblock = 8] = "Adblock", t[t.LimitReached = 9] = "LimitReached"
         }(i || (i = {}))
     },
-    816: function(t, n, e) {
-        t.exports = e(817)
+    814: function(t, n, e) {
+        t.exports = e(815)
     },
-    817: function(t, n, e) {
+    815: function(t, n, e) {
         "use strict";
 
         function i(t) {
@@ -115,8 +101,8 @@ webpackJsonp([60], {
         });
         var u = e(0),
             c = e(18),
-            s = e(100),
-            x = e(389),
+            s = e(99),
+            x = e(387),
             d = Object(c.b)(),
             f = new s.a;
         window.addEventListener("message", function(t) {
@@ -151,6 +137,20 @@ webpackJsonp([60], {
                     })
                 })
             }()
+    },
+    99: function(t, n, e) {
+        "use strict";
+        e.d(n, "a", function() {
+            return i
+        });
+        var i = function() {
+            function t() {}
+            return t.prototype.get = function(t, n) {
+                if ("experiments" === t) return n;
+                var e = window.__twilightSettings && window.__twilightSettings[t];
+                return void 0 !== e ? e : n
+            }, t
+        }()
     }
-}, [816]);
-//# sourceMappingURL=bits-ad-96cb70fa0be82899ec51e4c574fa2de7.js.map
+}, [814]);
+//# sourceMappingURL=bits-ad-8a4c7454ce77bc8b2ca25966778f3e16.js.map
