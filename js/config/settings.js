@@ -51,7 +51,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-eaf274.sjc01.hls.ttvnw.net/v1/playlist/CrF1g9cTMcQt5gICFAAaiAcIO-3K51PErX_nV0Vv3hnFdJpneUI3Rv_1N6d3ESR8BrIiPGJf8Aqus4W5WFQ3YgwK1tPYl6liADIbnaSynldaTsdNi4BGYQ__euOQRUxadYgLGhaSo6NsivRhkk7ppvzi5_BtjUjmZbe0NPbcxfPyIXr95A5cEOYuZLAIkpiJ4gxSmDFYXhjxi5M8BU_9Od2eIh1dFUaZdnxvoECYSXcSY685T6Eo9OjWbHxqHIji3En6dMvSU68CJIKVvMcIY73TC6amvhGOZz36I6kJLRfLFxbAMy-c1dYdWIbTSm2i3aZDOaxB3Lm8hPXdLlN6yBlWQxoUySbat3qLIsz4HsE8nBjwdoR6Zl9lVPv5ht1lAjUoVBqtNlaw9RshCMQLeTBoDBMJ5YvRsPN-0GW62GksOo0VPafX.m3u8",
+    "spade_url": "https://video-edge-97c3eb.sjc01.hls.ttvnw.net/v1/playlist/CtCrX3OJUu4RXjW6yLDQ0ntxyZAlmfVoiTVyQvPyQM5s2ZqA5v498BusUytPnVu5Seb5s0mY0RhytqynvD2zNNwSO1iAqiGNgdFAsoVGiALgxW_sqbsZo3IqP6S7268IUaTa4RxojKK6RQuS9bPliJII3b6bvfM2EkFNwY-SQOzrSUUfG2JZZVQiaX70k0koy3Sq6N3rp6_NQwKzY-xAhmRZU-e5kxPw_QG3pYz-5g4W3z_gSMfbKiltzpUwGt1JZWVRgNf5waaM9Ggu2pUcTIQ5k885eaw48TlcK4oH9LVLrr41ozeY2YG3LCi-4VL5S72ms5uVw-V70ocF2gHf0-CYxh_6zr8mCxg7uw_W2L77aH_JQlrVBWFxI9Usdpu-Pjp_QXn9VH_25nvUosNwwaYuk54qxvQ4-EudQNBrjS0y-u0CaaFEtc.m3u8",
     "store_merch_promo": "off",
     "store_merch_seasonal": "on",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
@@ -102,8 +102,8 @@ window.__twilightSettings = {
             }]
         },
         "29a37cfd-6a34-4624-970f-6b155b40636b": {
-            "name": "twilight_onboarding_randomized_games",
-            "v": 2621,
+            "name": "twilight_web_onboarding_randomized_games",
+            "v": 2663,
             "t": 2,
             "groups": [{
                 "weight": 1,
@@ -442,13 +442,13 @@ window.__twilightSettings = {
         },
         "f866f89d-85de-4a5b-9b00-d97c791bc16d": {
             "name": "TWILIGHT_RAID_AUTO_JOIN",
-            "v": 2659,
+            "v": 2665,
             "t": 1,
             "groups": [{
-                "weight": 65,
+                "weight": 75,
                 "value": "yes"
             }, {
-                "weight": 35,
+                "weight": 25,
                 "value": "no"
             }]
         }
