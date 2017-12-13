@@ -1,5 +1,5 @@
-webpackJsonp([54], {
-    2079: function(e, t, r) {
+webpackJsonp([55], {
+    2086: function(e, t, r) {
         "use strict";
 
         function i(e) {
@@ -27,11 +27,11 @@ webpackJsonp([54], {
             a = r(1),
             o = r(9),
             s = r(2),
-            c = r(825),
-            d = r(823),
+            c = r(823),
+            d = r(821),
             u = r(13),
             l = r(5),
-            h = r(833),
+            h = r(829),
             g = r(3),
             m = function(e) {
                 function t() {
@@ -48,9 +48,9 @@ webpackJsonp([54], {
                 }, t.prototype.render = function() {
                     return a.createElement(g.U, {
                         padding: 3
-                    }, a.createElement(g._21, {
+                    }, a.createElement(g._22, {
                         className: "title",
-                        type: g._26.H2
+                        type: g._27.H2
                     }, Object(s.d)("Email Verification", "EmailVerification")), this.renderVerificationStatus())
                 }, t.prototype.renderVerificationStatus = function() {
                     if (this.state.isLoading) return a.createElement(g.U, {
@@ -58,8 +58,8 @@ webpackJsonp([54], {
                             top: 1
                         },
                         "data-test-selector": "verify-loading"
-                    }, a.createElement(g._21, {
-                        type: g._26.Strong
+                    }, a.createElement(g._22, {
+                        type: g._27.Strong
                     }, Object(s.d)("Verifying Email...", "EmailVerification")));
                     if (this.state.isEmailVerified) return a.createElement(g.U, {
                         margin: {
@@ -75,9 +75,9 @@ webpackJsonp([54], {
                             top: 1
                         },
                         "data-test-selector": "verify-error"
-                    }, a.createElement(g._21, {
+                    }, a.createElement(g._22, {
                         color: g.F.Error,
-                        type: g._26.Strong
+                        type: g._27.Strong
                     }, e))
                 }, t.prototype.maybeGetLocalizedErrorMessage = function(e) {
                     return e ? "Not Found" === e ? Object(s.d)("Not Found", "EmailVerification") : e : Object(s.d)("Unknown Error", "EmailVerification")
@@ -120,7 +120,7 @@ webpackJsonp([54], {
             return p
         })
     },
-    823: function(e, t, r) {
+    821: function(e, t, r) {
         "use strict";
         r.d(t, "a", function() {
             return i
@@ -181,7 +181,7 @@ webpackJsonp([54], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    825: function(e, t, r) {
+    823: function(e, t, r) {
         "use strict";
 
         function i(e) {
@@ -249,7 +249,7 @@ webpackJsonp([54], {
             return i
         })
     },
-    833: function(e, t, r) {
+    829: function(e, t, r) {
         "use strict";
         r.d(t, "a", function() {
             return o
@@ -381,4 +381,4 @@ webpackJsonp([54], {
             }()
     }
 });
-//# sourceMappingURL=pages.email-verification-0f8f7f64331847f7e8e7785bc7012e5c.js.map
+//# sourceMappingURL=pages.email-verification-9972bc2925c9ac6fb01c90ee1e62fdb6.js.map
