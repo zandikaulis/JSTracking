@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".6da6d3eb6cf63bad642e.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".6ab567640e666d72d2f5.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -6864,7 +6864,7 @@
                         }), r.addEventListener(e.PlayerEvent.TRACKING, function(e) {
                             var r = e.name,
                                 i = e.properties;
-                            "video_error" === r && (i.manifest_broadcast_id = t.store.getState().manifestInfo.broadcast_id, t.store.dispatch(n.i(k.b)(r, i)))
+                            "video_error" === r && (i.broadcast_id = t.store.getState().streamMetadata.broadcastID, i.manifest_broadcast_id = t.store.getState().manifestInfo.broadcast_id, t.store.dispatch(n.i(k.b)(r, i)))
                         }), r.addEventListener(e.PlayerState.BUFFERING, function() {
                             t._readyState = _.a, t._networkState = w.b
                         }), r.addEventListener(e.PlayerState.IDLE, function() {
@@ -21743,7 +21743,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.12.13-233442+7702fc9322ec2f70aebcc7c3d28252ab2a040801",
+                    app_version: "2017.12.14-000347+c13486b6e0d30fc1ab3bb5464c1a8714fdfbafad",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
