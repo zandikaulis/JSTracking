@@ -1,5 +1,5 @@
-webpackJsonp([52], {
-    1255: function(e, t, n) {
+webpackJsonp([51], {
+    1250: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -18,9 +18,9 @@ webpackJsonp([52], {
                 changeTheme: s.b
             }, e)
         }
-        var i = n(6),
+        var i = n(7),
             o = n(9),
-            l = n(55),
+            l = n(56),
             c = n(39),
             s = n(133),
             d = n(17),
@@ -29,13 +29,13 @@ webpackJsonp([52], {
             m = n(1),
             h = n(2),
             f = n(65),
-            g = n(7),
+            g = n(6),
             v = n(27),
             k = n(24),
             _ = n(5),
             E = n(3),
-            y = n(1256),
-            b = (n(1257), function(e) {
+            y = n(1251),
+            b = (n(1252), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onCardClick = function() {
@@ -210,7 +210,7 @@ webpackJsonp([52], {
             return C
         })
     },
-    1256: function(e, t) {
+    1251: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -295,21 +295,21 @@ webpackJsonp([52], {
         };
         e.exports = n
     },
-    1257: function(e, t) {},
+    1252: function(e, t) {},
     133: function(e, t, n) {
         "use strict";
 
         function a(e, t, n) {
             return void 0 === n && (n = !0),
                 function(a) {
-                    a(Object(o.p)(e)), n && Object(i.d)(e), t && Object(l.b)(e, t)
+                    a(Object(o.t)(e)), n && Object(i.d)(e), t && Object(l.b)(e, t)
                 }
         }
         n.d(t, "a", function() {
             return r
         }), t.b = a;
         var r, i = n(24),
-            o = n(59),
+            o = n(53),
             l = n(140);
         ! function(e) {
             e[e.UserMenu = 1] = "UserMenu", e[e.TypedCommand = 2] = "TypedCommand"
@@ -368,20 +368,20 @@ webpackJsonp([52], {
         t.b = a, t.a = r;
         var i = n(2),
             o = n(27),
-            l = n(265),
+            l = n(266),
             c = n(133),
             s = n(13)
     },
-    1562: function(e, t, n) {
+    1538: function(e, t, n) {
         "use strict";
         var a = n(0),
             r = n(1),
-            i = n(10),
+            i = n(12),
             o = n(13),
             l = n(5),
-            c = n(1255),
+            c = n(1250),
             s = n(3),
-            d = (n(1563), function(e) {
+            d = (n(1539), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -429,8 +429,8 @@ webpackJsonp([52], {
             return u
         })
     },
-    1563: function(e, t) {},
-    2099: function(e, t, n) {
+    1539: function(e, t) {},
+    2092: function(e, t, n) {
         "use strict";
 
         function a(e) {
@@ -443,18 +443,18 @@ webpackJsonp([52], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var r = n(6),
-            i = n(10),
+        var r = n(7),
+            i = n(12),
             o = n(17),
             l = n(0),
             c = n(1),
             s = n(93),
             d = n(115),
             p = n(24),
-            u = n(1562),
+            u = n(1538),
             m = n(3),
             h = s.a.wrap(function() {
-                return n.e(62).then(n.bind(null, 2100))
+                return n.e(61).then(n.bind(null, 2093))
             }, "BitsLandingPage"),
             f = function(e) {
                 function t() {
@@ -500,7 +500,7 @@ webpackJsonp([52], {
             return k
         })
     },
-    265: function(e, t, n) {
+    266: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return a
@@ -547,4 +547,4 @@ webpackJsonp([52], {
         })
     }
 });
-//# sourceMappingURL=pages.bits-fea0713b67a5dc368279e1877135708c.js.map
+//# sourceMappingURL=pages.bits-a03a22ed28992998b5202c683d2b3c33.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([61], {
+webpackJsonp([60], {
     18: function(t, n, e) {
         "use strict";
 
@@ -17,7 +17,7 @@ webpackJsonp([61], {
         }
         n.a = i, n.b = r
     },
-    387: function(t, n, e) {
+    390: function(t, n, e) {
         "use strict";
         e.d(n, "a", function() {
             return i
@@ -27,10 +27,10 @@ webpackJsonp([61], {
             t[t.Ready = 0] = "Ready", t[t.Dimensions = 1] = "Dimensions", t[t.RequestAd = 2] = "RequestAd", t[t.OnStart = 3] = "OnStart", t[t.OnCredit = 4] = "OnCredit", t[t.OnFinish = 5] = "OnFinish", t[t.OnClose = 6] = "OnClose", t[t.OnError = 7] = "OnError", t[t.Adblock = 8] = "Adblock", t[t.LimitReached = 9] = "LimitReached"
         }(i || (i = {}))
     },
-    814: function(t, n, e) {
-        t.exports = e(815)
+    821: function(t, n, e) {
+        t.exports = e(822)
     },
-    815: function(t, n, e) {
+    822: function(t, n, e) {
         "use strict";
 
         function i(t) {
@@ -102,7 +102,7 @@ webpackJsonp([61], {
         var u = e(0),
             c = e(18),
             s = e(99),
-            x = e(387),
+            x = e(390),
             d = Object(c.b)(),
             f = new s.a;
         window.addEventListener("message", function(t) {
@@ -152,5 +152,5 @@ webpackJsonp([61], {
             }, t
         }()
     }
-}, [814]);
-//# sourceMappingURL=bits-ad-8a4c7454ce77bc8b2ca25966778f3e16.js.map
+}, [821]);
+//# sourceMappingURL=bits-ad-dd428b1d75331fabdf7a2dd8c44c89af.js.map
