@@ -23,7 +23,7 @@ window.__twilightSettings = {
     "comscore_config_c5": "01",
     "comscore_url": "https://sb.scorecardresearch.com/beacon.js",
     "crate_snowman_launch": "on",
-    "crate_trickster_launch": "on",
+    "crate_trickster_launch": "off",
     "env_test": "This is a test in Production!",
     "event_directory_enabled_games": ["overwatch", "twitchcon 2017", "twitch presents", "dota 2", "league of legends", "call of duty: wwii", "rocket league", "tekken 7", "talk shows", "always on"],
     "google_analytics_url": "https://ssl.google-analytics.com/ga.js",
