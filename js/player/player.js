@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".a15b218a44b5bfcbfc13.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".27b5833689820bea8429.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -286,7 +286,7 @@
         var r = n(843),
             i = n.n(r),
             a = n(43),
-            o = n(60),
+            o = n(61),
             s = n(22),
             u = n(17),
             c = n(164),
@@ -793,7 +793,7 @@
             I = n.n(R),
             A = n(21),
             N = n.n(A),
-            L = n(72),
+            L = n(73),
             M = n.n(L),
             j = n(36),
             D = n.n(j),
@@ -2779,7 +2779,7 @@
             h = n(333),
             m = n.n(h),
             v = n(11),
-            y = n(64),
+            y = n(65),
             g = (n.n(y), "5fbb67a0-b4ff-4775-b836-e9a348a87481"),
             b = "84d81180-6faa-4c58-98d7-48bbff5035c7",
             _ = "a1ce3d24-076a-4664-be4c-f9046fdce18c",
@@ -3336,7 +3336,7 @@
         }), n.d(t, "c", function() {
             return k
         }), t.e = i, t.a = a;
-        var l, d = n(72),
+        var l, d = n(73),
             f = n.n(d),
             p = n(7),
             h = n(6),
@@ -4701,7 +4701,7 @@
             _ = n.n(b),
             w = n(212),
             k = n.n(w),
-            E = n(72),
+            E = n(73),
             S = n.n(E),
             P = n(10),
             C = n.n(P),
@@ -5200,6 +5200,76 @@
         M.canPlay = function() {
             return _.a.canLoad()
         }
+    }, function(e, t, n) {
+        "use strict";
+
+        function r() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b,
+                t = arguments[1];
+            switch (t.type) {
+                case f.d:
+                    return s()({}, e, {
+                        deviceId: t.deviceId
+                    });
+                case f.e:
+                    var n = v()(h.r, t.playerType) ? t.playerType : e.playerType;
+                    return s()({}, e, {
+                        playerType: n
+                    });
+                case f.f:
+                    return s()({}, e, {
+                        twitchEverywhere: t.params
+                    });
+                case p.b:
+                    return s()({}, e, {
+                        platform: i((t.window.navigator || {}).userAgent),
+                        isMobileLocation: a(t.window)
+                    });
+                default:
+                    return e
+            }
+        }
+
+        function i() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
+                t = c.a._detect(e);
+            return t.mobile || t.tablet ? g : y
+        }
+
+        function a(e) {
+            var t = n.i(l.a)(e.document.referrer),
+                r = void 0;
+            try {
+                r = e !== e.top
+            } catch (e) {
+                r = !0
+            }
+            return r && t.protocol === w && t.host === _
+        }
+        n.d(t, "a", function() {
+            return g
+        }), t.b = r;
+        var o = n(5),
+            s = n.n(o),
+            u = n(65),
+            c = n.n(u),
+            l = n(43),
+            d = n(6),
+            f = n(114),
+            p = n(115),
+            h = n(6),
+            m = n(10),
+            v = n.n(m),
+            y = "web",
+            g = "mobile_web",
+            b = Object.freeze({
+                deviceId: "",
+                playerType: d.n,
+                platform: y,
+                isMobileLocation: !1
+            }),
+            _ = "m.twitch.tv",
+            w = "https"
     }, function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -5807,7 +5877,7 @@
         }
         var i = n(194),
             a = n(109),
-            o = n(68),
+            o = n(69),
             s = n(741),
             u = n(19);
         e.exports = r
@@ -6213,7 +6283,7 @@
         }), n.d(t, "c", function() {
             return W
         }), t.b = r;
-        var i = n(70),
+        var i = n(71),
             a = n.n(i),
             o = n(841),
             s = n.n(o),
@@ -6359,7 +6429,7 @@
             l = n.n(c),
             d = n(36),
             f = n.n(d),
-            p = n(72),
+            p = n(73),
             h = n.n(p),
             m = n(212),
             v = n.n(m),
@@ -6937,76 +7007,6 @@
                 }
             }]), e
         }()
-    }, function(e, t, n) {
-        "use strict";
-
-        function r() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b,
-                t = arguments[1];
-            switch (t.type) {
-                case f.d:
-                    return s()({}, e, {
-                        deviceId: t.deviceId
-                    });
-                case f.e:
-                    var n = v()(h.r, t.playerType) ? t.playerType : e.playerType;
-                    return s()({}, e, {
-                        playerType: n
-                    });
-                case f.f:
-                    return s()({}, e, {
-                        twitchEverywhere: t.params
-                    });
-                case p.b:
-                    return s()({}, e, {
-                        platform: i((t.window.navigator || {}).userAgent),
-                        isMobileLocation: a(t.window)
-                    });
-                default:
-                    return e
-            }
-        }
-
-        function i() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-                t = c.a._detect(e);
-            return t.mobile || t.tablet ? g : y
-        }
-
-        function a(e) {
-            var t = n.i(l.a)(e.document.referrer),
-                r = void 0;
-            try {
-                r = e !== e.top
-            } catch (e) {
-                r = !0
-            }
-            return r && t.protocol === w && t.host === _
-        }
-        n.d(t, "a", function() {
-            return g
-        }), t.b = r;
-        var o = n(5),
-            s = n.n(o),
-            u = n(64),
-            c = n.n(u),
-            l = n(43),
-            d = n(6),
-            f = n(114),
-            p = n(115),
-            h = n(6),
-            m = n(10),
-            v = n.n(m),
-            y = "web",
-            g = "mobile_web",
-            b = Object.freeze({
-                deviceId: "",
-                playerType: d.n,
-                platform: y,
-                isMobileLocation: !1
-            }),
-            _ = "m.twitch.tv",
-            w = "https"
     }, function(e, t, n) {
         "use strict";
 
@@ -7826,7 +7826,7 @@
             return u < 0 && (u = s(r + u, 0)), i(e, a(t, 3), u)
         }
         var i = n(297),
-            a = n(68),
+            a = n(69),
             o = n(112),
             s = Math.max;
         e.exports = r
@@ -8483,7 +8483,7 @@
             u = n(28),
             c = (n.n(u), n(839)),
             l = n.n(c),
-            d = n(64),
+            d = n(65),
             f = n.n(d),
             p = function() {
                 function e(e, t) {
@@ -9710,7 +9710,7 @@
             s = n(685),
             u = n.n(s),
             c = n(7),
-            l = n(72),
+            l = n(73),
             d = n.n(l),
             f = n(5),
             p = n.n(f),
@@ -10098,7 +10098,7 @@
             d = n(534),
             f = n(2),
             p = n.n(f),
-            h = n(70),
+            h = n(71),
             m = n.n(h),
             v = function() {
                 function e(e, t) {
@@ -10437,7 +10437,7 @@
         var r = Object.prototype;
         e.exports = n
     }, function(e, t, n) {
-        var r = n(69),
+        var r = n(70),
             i = r(Object, "create");
         e.exports = i
     }, function(e, t) {
@@ -10508,8 +10508,8 @@
         function r(e, t) {
             return (s(e) ? i : o)(e, a(t, 3))
         }
-        var i = n(67),
-            a = n(68),
+        var i = n(68),
+            a = n(69),
             o = n(731),
             s = n(19);
         e.exports = r
@@ -12359,7 +12359,7 @@
             v = n.n(m),
             y = n(7),
             g = n(6),
-            b = n(63),
+            b = n(64),
             _ = n(16),
             w = function() {
                 function e(e, t) {
@@ -12454,7 +12454,7 @@
         "use strict";
         e.exports = n(276)() ? Object.setPrototypeOf : n(277)
     }, function(e, t, n) {
-        var r = n(69),
+        var r = n(70),
             i = n(32),
             a = r(i, "Map");
         e.exports = a
@@ -12611,7 +12611,7 @@
             s = o ? i(o) : r;
         e.exports = s
     }, function(e, t, n) {
-        var r = n(67),
+        var r = n(68),
             i = n(296),
             a = n(747),
             o = n(86),
@@ -13981,7 +13981,7 @@
             $ = n.n(Q),
             J = n(17),
             X = n(22),
-            Z = n(60),
+            Z = n(61),
             ee = n(98),
             te = n(57),
             ne = n(23),
@@ -15790,9 +15790,9 @@
         }), t.a = r;
         var a = n(408),
             o = n(59),
-            s = n(73),
+            s = n(74),
             u = n(116),
-            c = n(74),
+            c = n(75),
             l = n(250),
             d = n(181),
             f = n(407),
@@ -16048,12 +16048,12 @@
         }), t.b = o, t.c = u;
         var c = n(5),
             l = n.n(c),
-            d = n(72),
+            d = n(73),
             f = n.n(d),
             p = n(44),
             h = n(6),
             m = n(8),
-            v = n(75),
+            v = n(60),
             y = n(166),
             g = n(224),
             b = function() {
@@ -16385,8 +16385,8 @@
         n.d(t, "b", function() {
             return b
         }), t.a = i;
-        var o, s = n(73),
-            u = n(74),
+        var o, s = n(74),
+            u = n(75),
             c = n(59),
             l = n(116),
             d = n(251),
@@ -18218,7 +18218,7 @@
         "use strict";
         var r, i = n(629),
             a = n(189),
-            o = n(65),
+            o = n(66),
             s = n(47),
             u = n(102),
             c = n(626),
@@ -18361,7 +18361,7 @@
             f = l.call(Object);
         t.a = r
     }, function(e, t, n) {
-        var r = n(69),
+        var r = n(70),
             i = n(32),
             a = r(i, "Set");
         e.exports = a
@@ -18556,7 +18556,7 @@
             return "0" == t && 1 / e == -u ? "-0" : t
         }
         var i = n(85),
-            a = n(67),
+            a = n(68),
             o = n(19),
             s = n(154),
             u = 1 / 0,
@@ -18593,7 +18593,7 @@
         var i = n(202);
         e.exports = r
     }, function(e, t, n) {
-        var r = n(69),
+        var r = n(70),
             i = function() {
                 try {
                     var e = r(Object, "defineProperty");
@@ -18668,7 +18668,7 @@
         }
         var i = n(299),
             a = n(312),
-            o = n(71);
+            o = n(72);
         e.exports = r
     }, function(e, t, n) {
         var r = n(138),
@@ -21754,7 +21754,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.12.15-190942+359a82aaa9fab8bafb037bc3979e3858fadbeae3",
+                    app_version: "2017.12.15-203805+dcdf19d9bca315ab235816e898784a2fa4c2a65a",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -21874,7 +21874,7 @@
         var a = n(12),
             o = n(8),
             s = n(59),
-            u = n(74),
+            u = n(75),
             c = n(94),
             l = (n.n(c), n(6)),
             d = n(11),
@@ -22192,8 +22192,8 @@
             b = n(8),
             _ = n(12),
             w = n(424),
-            k = n(60),
-            E = n(73),
+            k = n(61),
+            E = n(74),
             S = n(182),
             P = n(129),
             C = n(10),
@@ -22617,7 +22617,7 @@
         });
         var a = n(13),
             o = n(55),
-            s = n(75),
+            s = n(60),
             u = n(23),
             c = n(38),
             l = n(10),
@@ -22716,7 +22716,7 @@
             return _
         });
         var a = n(13),
-            o = n(70),
+            o = n(71),
             s = n.n(o),
             u = n(89),
             c = n.n(u),
@@ -22725,7 +22725,7 @@
             f = n(34),
             p = n(30),
             h = n(15),
-            m = n(62),
+            m = n(63),
             v = n(186),
             y = function() {
                 function e(e, t) {
@@ -23623,8 +23623,8 @@
             m = n(163),
             v = n(439),
             y = n(440),
-            g = n(61),
-            b = n(75),
+            g = n(62),
+            b = n(60),
             _ = n(442),
             w = n(39),
             k = n(444),
@@ -23632,7 +23632,7 @@
             S = n(446),
             P = n(447),
             C = n(448),
-            T = n(62),
+            T = n(63),
             O = n(449),
             x = n(450),
             R = n(441),
@@ -23645,7 +23645,7 @@
             D = n(454),
             U = n(457),
             q = n(458),
-            B = n(63),
+            B = n(64),
             F = n(459),
             V = n(460),
             H = n(461),
@@ -24011,7 +24011,7 @@
             l = n(3),
             d = (n.n(l), n(526)),
             f = n(16),
-            p = n(61),
+            p = n(62),
             h = n(15),
             m = function() {
                 function e(e, t) {
@@ -24143,7 +24143,7 @@
             return d
         });
         var i = n(7),
-            a = n(62),
+            a = n(63),
             o = n(617),
             s = n(620),
             u = n(6),
@@ -24319,81 +24319,76 @@
             }
 
             function T() {
-                L()
+                N()
             }
 
             function O() {
-                L()
+                N()
             }
 
-            function x(e) {
-                var n = e.onlineStatus;
-                $(t).attr("data-online", n === b.a)
-            }
-
-            function R() {
+            function x() {
                 var n = r.getState(),
                     i = n.onlineStatus;
-                e.getChannel() && i === b.b && (A(), $(t).attr("data-loading", !1))
+                e.getChannel() && i === b.b && (I(), $(t).attr("data-loading", !1))
             }
 
-            function I(n) {
+            function R(n) {
                 var r = n.channelName;
-                j = n.channel.videoBanner, e.getEnded() && A(), $(t).attr({
+                M = n.channel.videoBanner, e.getEnded() && I(), $(t).attr({
                     "data-channel": r || null,
                     "data-video": e.getVideo() || null
                 })
             }
 
-            function A() {
+            function I() {
                 var i = e.getChannel();
-                j && i && $(".js-offline-banner", t).css("background-image", "url('" + j + "')"), r.dispatch(n.i(v.c)())
+                M && i && $(".js-offline-banner", t).css("background-image", "url('" + M + "')"), r.dispatch(n.i(v.c)())
             }
 
-            function N() {
+            function A() {
                 var i = r.getState(),
                     a = i.streamMetadata,
                     s = e.getPaused() || e.getReadyState() === o.b;
-                (l.b === r.getState().stream.contentType || !e.getAutoplay() && s) && ($(t).attr("data-background", !0), $(".js-video-background-banner", t).css("background-image", "url('" + D + "')")), e.getAutoplay() && a.streamType !== _.b || r.dispatch(n.i(v.c)())
+                (l.b === r.getState().stream.contentType || !e.getAutoplay() && s) && ($(t).attr("data-background", !0), $(".js-video-background-banner", t).css("background-image", "url('" + j + "')")), e.getAutoplay() && a.streamType !== _.b || r.dispatch(n.i(v.c)())
             }
 
-            function L() {
+            function N() {
                 $(t).attr("data-background", !1)
             }
-            var M = [],
-                j = void 0,
-                D = void 0;
+            var L = [],
+                M = void 0,
+                j = void 0;
             this.destroy = function() {
-                    $(t).off("click"), M.forEach(function(e) {
+                    $(t).off("click"), L.forEach(function(e) {
                         return e()
-                    }), M = null
+                    }), L = null
                 },
                 function() {
-                    M.push(n.i(p.a)(r, ["screenMode.isFullScreen", "screenMode.isTheatreMode"], C)), C();
+                    L.push(n.i(p.a)(r, ["screenMode.isFullScreen", "screenMode.isTheatreMode"], C)), C();
                     var a = k.player;
                     $(t).attr("data-playertype", a), a === i.h && $(t).on("click", ".js-control-fullscreen-overlay", function() {
                         r.dispatch(n.i(g.e)())
-                    }), r.getState().env.playerType === i.a ? (M.push(n.i(p.a)(r, ["playback.currentTime", "stream", "streamMetadata"], E)), E(), $(t).on("click", ".js-hyperlink-watch-twitch", function() {
+                    }), r.getState().env.playerType === i.a ? (L.push(n.i(p.a)(r, ["playback.currentTime", "stream", "streamMetadata"], E)), E(), $(t).on("click", ".js-hyperlink-watch-twitch", function() {
                         r.dispatch(n.i(y.c)())
                     })) : $(t).on("click", ".js-watch-twitch", function(e) {
                         e.preventDefault(), window.open(S(), "_blank"), r.dispatch(n.i(y.c)())
-                    }), e.addEventListener(h.m, R), e.addEventListener(h.i, T), e.addEventListener(m.AD_START, O), M.push(n.i(p.a)(r, ["viewercount"], function(e) {
+                    }), e.addEventListener(h.m, x), e.addEventListener(h.i, T), e.addEventListener(m.AD_START, O), L.push(n.i(p.a)(r, ["viewercount"], function(e) {
                         var n = e.viewercount;
                         $(t).attr("data-viewers", n)
-                    })), M.push(n.i(p.a)(r, ["streamMetadata"], function(e) {
+                    })), L.push(n.i(p.a)(r, ["streamMetadata"], function(e) {
                         var n = e.streamMetadata;
                         switch (r.getState().stream.contentType) {
                             case u.a:
-                                I(n);
+                                R(n);
                                 break;
                             case c.a:
-                                if (I(n), n.preview.template) {
+                                if (R(n), n.preview.template) {
                                     var i = n.preview.template;
-                                    D = i.replace("320x240", w), N()
+                                    j = i.replace("320x240", w), A()
                                 }
                                 break;
                             case l.b:
-                                n.streamType === _.b && (n.channel.videoBanner && (D = n.channel.videoBanner.replace("320x240", w)), N());
+                                n.streamType === _.b && (n.channel.videoBanner && (j = n.channel.videoBanner.replace("320x240", w)), A());
                                 break;
                             case f.b:
                             case d.b:
@@ -24401,12 +24396,12 @@
                                     "data-video": !0
                                 })
                         }
-                    })), M.push(n.i(p.a)(r, ["screen"], function(e) {
+                    })), L.push(n.i(p.a)(r, ["screen"], function(e) {
                         var n = e.screen;
                         $(t).attr("data-screen", n[0])
-                    })), M.push(n.i(p.a)(r, ["onlineStatus"], x)), M.push(n.i(p.a)(r, ["streamMetadata"], function(e) {
+                    })), L.push(n.i(p.a)(r, ["streamMetadata"], function(e) {
                         var t = e.streamMetadata;
-                        t.preview.template && (D = t.preview.template.replace(new RegExp("(320x240|{width}x{height})", "g"), w), N())
+                        t.preview.template && (j = t.preview.template.replace(new RegExp("(320x240|{width}x{height})", "g"), w), A())
                     }))
                 }()
         }
@@ -24422,12 +24417,12 @@
             f = n(99),
             p = n(13),
             h = n(17),
-            m = n(60),
+            m = n(61),
             v = n(20),
             y = n(15),
             g = n(50),
             b = n(23),
-            _ = n(63),
+            _ = n(64),
             w = "1280x720"
     }, function(e, t, n) {
         "use strict";
@@ -24544,8 +24539,7 @@
                     value: function() {
                         $(this._root).attr({
                             "data-paused": this._store.getState().playback.paused,
-                            "data-ended": this._store.getState().playback.ended,
-                            "data-online": this._store.getState().online
+                            "data-ended": this._store.getState().playback.ended
                         })
                     }
                 }]), t
@@ -27928,8 +27922,8 @@
         });
         var i = n(44),
             a = n(18),
-            o = n(73),
-            s = n(60),
+            o = n(74),
+            s = n(61),
             u = n(58),
             c = n(33),
             l = n.n(c),
@@ -28100,7 +28094,7 @@
             c = n(58),
             l = n(12),
             d = n(8),
-            f = n(60),
+            f = n(61),
             p = n(18),
             h = n(415),
             m = n(15),
@@ -28110,7 +28104,7 @@
             b = n(180),
             _ = n(406),
             w = n(50),
-            k = n(64),
+            k = n(65),
             E = n.n(k),
             S = function() {
                 function e(e, t) {
@@ -28548,10 +28542,10 @@
             f = n.n(d),
             p = n(832),
             h = n.n(p),
-            m = n(72),
+            m = n(73),
             v = n.n(m),
             y = n(17),
-            g = n(60),
+            g = n(61),
             b = n(44),
             _ = n(342),
             w = n.n(_),
@@ -29101,7 +29095,7 @@
             c = n(183),
             l = n(92),
             d = n(22),
-            f = n(61),
+            f = n(62),
             p = n(45),
             h = n(51),
             m = {},
@@ -29947,7 +29941,7 @@
         }), n.d(t, "V", function() {
             return Se
         });
-        var i = n(70),
+        var i = n(71),
             a = n.n(i),
             o = n(211),
             s = n.n(o),
@@ -30733,13 +30727,13 @@
             A = n(358),
             N = n(59),
             L = n(116),
-            M = n(73),
-            j = n(74),
+            M = n(74),
+            j = n(75),
             D = n(353),
             U = n(164),
             q = n(362),
             B = n(355),
-            F = n(75),
+            F = n(60),
             V = n(160),
             H = n(18),
             z = n(14),
@@ -30784,7 +30778,7 @@
             xe = n(361),
             Re = n(354),
             Ie = n(162),
-            Ae = n(64),
+            Ae = n(65),
             Ne = n.n(Ae);
         n(167).polyfill(), p.Dobbin.configure({
             Promise: Promise
@@ -31924,7 +31918,7 @@
             }, [e[0]])
         }
         t.a = r;
-        var s = n(70),
+        var s = n(71),
             u = n.n(s),
             c = n(11)
     }, function(e, t, n) {
@@ -32328,7 +32322,7 @@
             return d
         });
         var o = n(119),
-            s = n(62),
+            s = n(63),
             u = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -32483,7 +32477,7 @@
             c = n.n(u),
             l = n(9),
             d = n(40),
-            f = n(61),
+            f = n(62),
             p = n(10),
             h = n.n(p),
             m = {
@@ -37009,7 +37003,7 @@
             i = n.n(r),
             a = n(1),
             o = n.n(a),
-            s = n(70),
+            s = n(71),
             u = n.n(s),
             c = {
                 percentage: o.a.number.isRequired
@@ -37411,7 +37405,7 @@
         n.d(t, "a", function() {
             return d
         });
-        var r = n(70),
+        var r = n(71),
             i = n.n(r),
             a = n(0),
             o = n.n(a),
@@ -39178,7 +39172,7 @@
     }, function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return m
+            return h
         });
         var r = n(0),
             i = n.n(r),
@@ -39192,6 +39186,7 @@
                 gameUrl: o.a.string,
                 lang: o.a.object,
                 live: o.a.bool,
+                isMobile: o.a.bool,
                 name: o.a.string,
                 onClick: o.a.func,
                 streamUrl: o.a.string,
@@ -39199,57 +39194,62 @@
                 viewerCount: o.a.number,
                 className: o.a.string
             },
-            d = c()("player-streaminfo__title", "qa-stream-title"),
-            f = c()("player-text-link", "player-text-link--no-color", "qa-game-name"),
-            p = {
+            d = c()("player-text-link", "player-text-link--no-color", "qa-game-name"),
+            f = {
                 container: "player-streaminfo__name",
                 a: c()("player-text-link", "player-text-link--no-color", "qa-display-name")
             },
-            h = function(e) {
+            p = function(e) {
                 var t = e.gameName,
                     n = e.gameUrl,
                     r = e.lang,
                     a = e.live,
                     o = e.name,
                     u = e.streamUrl,
-                    c = e.onClick,
-                    l = e.title,
+                    l = e.onClick,
+                    p = e.title,
                     h = e.viewerCount,
                     m = e.className,
-                    v = Number(h).toLocaleString(r.shortCode),
-                    y = i.a.createElement("a", {
-                        className: f,
+                    v = e.isMobile,
+                    y = Number(h).toLocaleString(r.shortCode),
+                    g = i.a.createElement("a", {
+                        className: d,
                         href: n,
                         target: "_blank"
                     }, t),
-                    g = i.a.createElement("span", null, v),
-                    b = null;
-                return a && (b = i.a.createElement("div", {
+                    b = i.a.createElement("span", null, y),
+                    _ = null,
+                    w = c()({
+                        "player-streaminfo__title": !0,
+                        "qa-stream-title": !0,
+                        "player-streaminfo__title--hide": a && v
+                    });
+                return a && (_ = i.a.createElement("div", {
                     className: "player-streaminfo__viewers"
                 }, i.a.createElement(s.c, {
                     i18nKey: "playing {{game}} for {{viewerCount}} viewer",
-                    game: y,
-                    viewerCount: g,
+                    game: g,
+                    viewerCount: b,
                     options: {
                         count: h
                     }
                 }))), i.a.createElement("div", {
                     className: m
                 }, i.a.createElement("div", {
-                    className: p.container
+                    className: f.container
                 }, i.a.createElement("a", {
-                    className: p.a,
+                    className: f.a,
                     href: u,
                     target: "_blank",
-                    onClick: c
+                    onClick: l
                 }, o)), i.a.createElement("div", {
-                    className: d
-                }, l), i.a.createElement("div", {
+                    className: w
+                }, p), i.a.createElement("div", {
                     className: "player-streaminfo__game"
-                }, b))
+                }, _))
             };
-        h.propTypes = l;
-        var m = n.i(s.a)()(h)
+        p.propTypes = l;
+        var h = n.i(s.a)()(p)
     }, function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -39354,7 +39354,7 @@
             s = n.n(o),
             u = n(3),
             c = (n.n(u), n(122)),
-            l = n(61),
+            l = n(62),
             d = n(6),
             f = n(475),
             p = {
@@ -40115,7 +40115,7 @@
             h = n(89),
             m = n.n(h),
             v = n(3),
-            y = (n.n(v), n(62)),
+            y = (n.n(v), n(63)),
             g = n(500),
             b = n(34),
             _ = n(20),
@@ -40270,7 +40270,7 @@
             u = n(1),
             c = n.n(u),
             l = n(3),
-            d = (n.n(l), n(62)),
+            d = (n.n(l), n(63)),
             f = n(34),
             p = n(501),
             h = n(16),
@@ -40522,7 +40522,7 @@
             u = n(3),
             c = (n.n(u), n(4)),
             l = n(581),
-            d = n(63),
+            d = n(64),
             f = n(6),
             p = n(2),
             h = n.n(p),
@@ -40582,10 +40582,10 @@
             v = n(514),
             y = n(37),
             g = n(39),
-            b = n(75),
+            b = n(60),
             _ = n(12),
             w = n(23),
-            k = n(63),
+            k = n(64),
             E = n(38),
             S = n(46),
             P = n(97),
@@ -40830,7 +40830,7 @@
             d = (n.n(l), n(5)),
             f = n.n(d),
             p = n(511),
-            h = n(75),
+            h = n(60),
             m = n(12),
             v = n(38),
             y = n(39),
@@ -40839,7 +40839,7 @@
             _ = n(6),
             w = n(23),
             k = n(30),
-            E = n(63),
+            E = n(64),
             S = n(2),
             P = n.n(S),
             C = n(46),
@@ -41058,7 +41058,7 @@
             c = (n.n(u), n(580)),
             l = n(579),
             d = n(6),
-            f = n(63),
+            f = n(64),
             p = {
                 playerType: s.a.string.isRequired,
                 streamType: s.a.string.isRequired
@@ -41338,7 +41338,7 @@
             a = n.n(i),
             o = n(1),
             s = n.n(o),
-            u = n(61),
+            u = n(62),
             c = n(3),
             l = (n.n(c), n(524)),
             d = {
@@ -41419,10 +41419,10 @@
             c = (n.n(u), n(15)),
             l = n(528),
             d = n(8),
-            f = n(61),
+            f = n(62),
             p = n(16),
             h = n(23),
-            m = n(62),
+            m = n(63),
             v = {
                 showOverlay: s.a.bool.isRequired,
                 play: s.a.func.isRequired,
@@ -41910,7 +41910,7 @@
             s = n.n(o),
             u = n(1),
             c = n.n(u),
-            l = n(64),
+            l = n(65),
             d = n.n(l),
             f = n(158),
             p = n.n(f),
@@ -42371,12 +42371,12 @@
             l = n(3),
             d = (n.n(l), n(544)),
             f = n(59),
-            p = n(74),
+            p = n(75),
             h = n(6),
             m = n(98),
             v = n(124),
             y = n(15),
-            g = n(73),
+            g = n(74),
             b = n(187),
             _ = n(35),
             w = n(252),
@@ -42550,7 +42550,7 @@
             b = n(8),
             _ = n(99),
             w = n(59),
-            k = n(74),
+            k = n(75),
             E = n(251),
             S = n(37),
             P = n(31),
@@ -43324,7 +43324,7 @@
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
         n.d(t, "a", function() {
-            return C
+            return T
         });
         var o = n(0),
             s = n.n(o),
@@ -43340,7 +43340,8 @@
             y = n(559),
             g = n(2),
             b = n.n(g),
-            _ = function() {
+            _ = n(60),
+            w = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -43351,7 +43352,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            w = {
+            k = {
                 channelName: c.a.string,
                 displayName: c.a.string,
                 gameName: c.a.string,
@@ -43364,12 +43365,13 @@
                 viewerCount: c.a.number,
                 playerType: c.a.string,
                 isWatchParty: c.a.bool,
+                isMobile: c.a.bool,
                 vodId: c.a.string,
                 vodTitle: c.a.string,
                 vodIsViewable: c.a.bool,
                 vodBroadcastType: c.a.string
             },
-            k = function(e) {
+            E = function(e) {
                 var t = e.env,
                     n = e.lang,
                     r = e.streamMetadata,
@@ -43386,6 +43388,7 @@
                     streamUrl: r.url,
                     viewerCount: i,
                     playerType: t.playerType,
+                    isMobile: t.platform === _.a,
                     isWatchParty: "watch_party" === r.streamType,
                     vodId: a.vodId,
                     vodTitle: a.title,
@@ -43393,22 +43396,22 @@
                     vodBroadcastType: a.broadcastType
                 }
             },
-            E = function(e) {
+            S = function(e) {
                 return {
                     pause: function() {
                         e(n.i(h.c)())
                     }
                 }
             },
-            S = {
+            P = {
                 a: "player-streaminfo__picture",
                 img: "qa-broadcaster-logo"
             },
-            P = function(e) {
+            C = function(e) {
                 function t() {
                     return r(this, t), i(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments))
                 }
-                return a(t, e), _(t, [{
+                return a(t, e), w(t, [{
                     key: "render",
                     value: function() {
                         if (this.props.playerType === m.a) return null;
@@ -43427,7 +43430,7 @@
                             t = e.logo,
                             n = e.streamUrl;
                         return t ? s.a.createElement(d.a, {
-                            classNames: S,
+                            classNames: P,
                             imgSrc: t,
                             href: n,
                             onClick: this.props.pause,
@@ -43446,31 +43449,33 @@
                             o = e.streamUrl,
                             u = e.viewerCount,
                             c = e.playerType,
-                            l = e.lang,
-                            d = Boolean(n),
-                            h = d ? i : r,
-                            v = p.v + "/" + encodeURIComponent(a),
-                            y = c === m.g,
-                            g = b()({
-                                "player-streaminfo__meta-container": !y
+                            l = e.isMobile,
+                            d = e.lang,
+                            h = Boolean(n),
+                            v = h ? i : r,
+                            y = p.v + "/" + encodeURIComponent(a),
+                            g = c === m.g,
+                            _ = b()({
+                                "player-streaminfo__meta-container": !g
                             });
                         return t ? s.a.createElement(f.a, {
-                            className: g,
-                            live: d,
+                            className: _,
+                            live: h,
                             name: t,
-                            title: h,
+                            title: v,
                             gameName: a,
-                            gameUrl: v,
+                            gameUrl: y,
                             onClick: this.props.pause,
                             streamUrl: o,
                             viewerCount: u,
-                            lang: l
+                            lang: d,
+                            isMobile: l
                         }) : null
                     }
                 }]), t
             }(s.a.PureComponent);
-        P.propTypes = w;
-        var C = n.i(l.connect)(k, E)(P)
+        C.propTypes = k;
+        var T = n.i(l.connect)(E, S)(C)
     }, function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -44748,9 +44753,9 @@
         "use strict";
         var r, i = n(642),
             a = n(275),
-            o = n(65),
+            o = n(66),
             s = n(649),
-            u = n(65),
+            u = n(66),
             c = n(47),
             l = Function.prototype.bind,
             d = Object.defineProperty,
@@ -44850,7 +44855,7 @@
             i = n(132),
             a = n(633),
             o = n(638),
-            s = n(65),
+            s = n(66),
             u = n(47),
             c = n(103),
             l = n(133),
@@ -44927,7 +44932,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(65),
+        var r = n(66),
             i = n(47),
             a = Function.prototype.bind,
             o = Function.prototype.call,
@@ -45042,7 +45047,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(65),
+        var r = n(66),
             i = n(644),
             a = Function.prototype.call;
         e.exports = function(e, t) {
@@ -45104,7 +45109,7 @@
     }, function(e, t, n) {
         "use strict";
         var r = n(132),
-            i = n(65),
+            i = n(66),
             a = n(133),
             o = n(279),
             s = Array.isArray,
@@ -46198,7 +46203,7 @@
             for (var n = e.indexOf(t); - 1 !== n;) e.splice(n, 1), n = e.indexOf(t)
         }
         var u = n(135),
-            c = n(66),
+            c = n(67),
             l = n(107),
             d = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -46374,7 +46379,7 @@
                 }
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : r(e, t))
         }
-        var s = n(66),
+        var s = n(67),
             u = n(107),
             c = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -46418,7 +46423,7 @@
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
         var i = n(135),
-            a = n(66),
+            a = n(67),
             o = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
@@ -46505,7 +46510,7 @@
         function i(e) {
             return e.charAt(0).toUpperCase() + e.slice(1)
         }
-        var a = n(66),
+        var a = n(67),
             o = function() {
                 function e(t) {
                     r(this, e), this.options = t, this.whitelist = this.options.whitelist || !1, this.logger = a.a.create("languageUtils")
@@ -46566,7 +46571,7 @@
                 })
             }), e
         }
-        var a = n(66),
+        var a = n(67),
             o = [{
                 lngs: ["ach", "ak", "am", "arn", "br", "fil", "gun", "ln", "mfe", "mg", "mi", "oc", "pt", "pt-BR", "tg", "ti", "tr", "uz", "wa"],
                 nr: [1, 2],
@@ -46872,7 +46877,7 @@
                 }
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : r(e, t))
         }
-        var s = n(66),
+        var s = n(67),
             u = n(107),
             c = n(284),
             l = n(135),
@@ -47101,7 +47106,7 @@
         }
 
         function s() {}
-        var u = n(66),
+        var u = n(67),
             c = n(107),
             l = n(691),
             d = n(692),
@@ -47368,7 +47373,7 @@
         }
         t.a = r
     }, function(e, t, n) {
-        var r = n(69),
+        var r = n(70),
             i = n(32),
             a = r(i, "DataView");
         e.exports = a
@@ -47388,12 +47393,12 @@
             u = n(778);
         r.prototype.clear = i, r.prototype.delete = a, r.prototype.get = o, r.prototype.has = s, r.prototype.set = u, e.exports = r
     }, function(e, t, n) {
-        var r = n(69),
+        var r = n(70),
             i = n(32),
             a = r(i, "Promise");
         e.exports = a
     }, function(e, t, n) {
-        var r = n(69),
+        var r = n(70),
             i = n(32),
             a = r(i, "WeakMap");
         e.exports = a
@@ -47454,7 +47459,7 @@
             return e && i(t, a(t), e)
         }
         var i = n(48),
-            a = n(71);
+            a = n(72);
         e.exports = r
     }, function(e, t) {
         function n(e, t, n) {
@@ -47519,7 +47524,7 @@
         var i = n(193),
             a = n(291),
             o = n(292),
-            s = n(67),
+            s = n(68),
             u = n(200),
             c = n(201),
             l = Math.min;
@@ -47713,7 +47718,7 @@
             o = n(196),
             s = n(735),
             u = n(24),
-            c = n(71);
+            c = n(72);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n, r, g, b, _) {
@@ -47787,7 +47792,7 @@
                     (h = c(p, v, h, r)) > -1;) p !== e && l.call(p, h, 1), l.call(e, h, 1);
             return e
         }
-        var i = n(67),
+        var i = n(68),
             a = n(197),
             o = n(721),
             s = n(200),
@@ -47898,7 +47903,7 @@
                 return e[t]
             })
         }
-        var i = n(67);
+        var i = n(68);
         e.exports = r
     }, function(e, t, n) {
         function r(e) {
@@ -47983,7 +47988,7 @@
         }
         var i = n(710),
             a = n(714),
-            o = n(68),
+            o = n(69),
             s = n(19);
         e.exports = r
     }, function(e, t, n) {
@@ -48023,7 +48028,7 @@
                 return c > -1 ? s[u ? t[c] : c] : void 0
             }
         }
-        var i = n(68),
+        var i = n(69),
             a = n(49),
             o = n(54);
         e.exports = r
@@ -48607,7 +48612,7 @@
     }, function(e, t, n) {
         var r = n(48),
             i = n(143),
-            a = n(71),
+            a = n(72),
             o = i(function(e, t) {
                 r(t, a(t), e)
             });
@@ -48615,7 +48620,7 @@
     }, function(e, t, n) {
         var r = n(48),
             i = n(143),
-            a = n(71),
+            a = n(72),
             o = i(function(e, t, n, i) {
                 r(t, a(t), e, i)
             });
@@ -48736,7 +48741,7 @@
         }
         var i = n(196),
             a = n(303),
-            o = n(71);
+            o = n(72);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t) {
@@ -48746,7 +48751,7 @@
             a = n(314);
         e.exports = r
     }, function(e, t, n) {
-        var r = n(67),
+        var r = n(68),
             i = n(722),
             a = n(110),
             o = n(749),
@@ -48791,7 +48796,7 @@
         }
         var i = n(108),
             a = n(298),
-            o = n(68);
+            o = n(69);
         e.exports = r
     }, function(e, t) {
         function n() {}
@@ -48858,7 +48863,7 @@
             return n && u(e, t, n) && (t = void 0), r(e, a(t, 3))
         }
         var i = n(294),
-            a = n(68),
+            a = n(69),
             o = n(744),
             s = n(19),
             u = n(146);
@@ -48888,7 +48893,7 @@
             return i(e, a(e))
         }
         var i = n(48),
-            a = n(71);
+            a = n(72);
         e.exports = r
     }, function(e, t, n) {
         var r = n(195),
