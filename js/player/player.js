@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".cad3b2afa68e3e2d5805.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".a15b218a44b5bfcbfc13.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -63,9 +63,9 @@
         }, t(t.s = 431)
     }([function(e, t, n) {
         "use strict";
-        e.exports = n(874)
+        e.exports = n(875)
     }, function(e, t, n) {
-        e.exports = n(851)()
+        e.exports = n(852)()
     }, function(e, t, n) {
         var r, i;
         /*!
@@ -103,26 +103,26 @@
             }
         }
         t.__esModule = !0, t.connect = t.Provider = void 0;
-        var i = n(863),
+        var i = n(864),
             a = r(i),
-            o = n(864),
+            o = n(865),
             s = r(o);
         t.Provider = a.default, t.connect = s.default
     }, function(e, t, n) {
         "use strict";
-        var r = n(861);
+        var r = n(862);
         n.d(t, "a", function() {
             return r.a
         });
-        var i = (n(334), n(858));
+        var i = (n(334), n(859));
         n.d(t, "c", function() {
             return i.a
         });
-        var a = (n(859), n(857));
+        var a = (n(860), n(858));
         n.d(t, "b", function() {
             return a.a
         });
-        n(860), n(217)
+        n(861), n(217)
     }, function(e, t, n) {
         var r = n(139),
             i = n(48),
@@ -283,7 +283,7 @@
         }), n.d(t, "j", function() {
             return G
         });
-        var r = n(842),
+        var r = n(843),
             i = n.n(r),
             a = n(43),
             o = n(60),
@@ -383,9 +383,9 @@
         });
         var o = n(5),
             s = n.n(o),
-            u = n(28),
+            u = n(29),
             c = n.n(u),
-            l = n(27),
+            l = n(28),
             d = (n.n(l), n(7)),
             f = n(270),
             p = n(100),
@@ -797,7 +797,7 @@
             M = n.n(L),
             j = n(36),
             D = n.n(j),
-            U = n(27),
+            U = n(28),
             q = (n.n(U), n(7)),
             B = n(6),
             F = n(95),
@@ -897,9 +897,9 @@
         });
         var o = n(5),
             s = n.n(o),
-            u = n(28),
+            u = n(29),
             c = n.n(u),
-            l = n(27),
+            l = n(28),
             d = (n.n(l), n(7)),
             f = n(270),
             p = n(100),
@@ -1007,7 +1007,7 @@
             })
         }
         t.a = r;
-        var i = n(836),
+        var i = n(837),
             a = n.n(i),
             o = n(324),
             s = n.n(o)
@@ -1851,9 +1851,9 @@
             C = n(34),
             T = n(6),
             O = n(93),
-            x = n(28),
+            x = n(29),
             R = n.n(x),
-            I = n(27),
+            I = n(28),
             A = (n.n(I), n(14)),
             N = n(50),
             L = "clear error quality restricted",
@@ -1878,7 +1878,7 @@
             Z = "set start time",
             ee = "invalid playback action"
     }, function(e, t, n) {
-        var r = n(735),
+        var r = n(736),
             i = n(308),
             a = i(function(e, t) {
                 return null == e ? {} : r(e, t)
@@ -2166,6 +2166,49 @@
         "use strict";
 
         function r(e) {
+            var t = /^(?:(\d+)[h])?(?:(\d+)[m])?(?:(\d+)[s])?$/,
+                n = t.exec(e);
+            if (!n) return null;
+            for (var r = 0, i = 1; i < n.length; i++) {
+                r = 60 * r + (parseInt(n[i], 10) || 0)
+            }
+            return r
+        }
+
+        function i(e) {
+            for (var t = [e / 3600, e / 60 % 60, e % 60], n = 0; n < t.length; n++) {
+                var r = Math.floor(t[n]);
+                t[n] = r < 10 ? "0" + r : r
+            }
+            return t
+        }
+
+        function a(e) {
+            for (var t = 0; t < e.length; t++)
+                if ("0" !== e[t] && ":" !== e[t]) return e.substring(t, e.length);
+            return "0"
+        }
+
+        function o(e, t) {
+            if (!isFinite(e) || e < 0) return "00:00:00";
+            var n = i(e),
+                r = n.join(":");
+            return t ? a(r) : r
+        }
+
+        function s(e) {
+            var t = i(e),
+                n = ["h", "m", "s"],
+                r = "";
+            t = t.reverse(), n = n.reverse();
+            for (var a = 0; a < t.length; a++) r = t[a] + n[a] + r;
+            return r.replace(/00(h|m|s)/g, "")
+        }
+        t.a = r, t.c = i, t.d = o, t.b = s
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
             switch (e.arrayFormat) {
                 case "index":
                     return function(t, n, r) {
@@ -2213,9 +2256,9 @@
                 return e[t]
             }) : e
         }
-        var s = n(884),
+        var s = n(885),
             u = n(215),
-            c = n(626);
+            c = n(627);
         t.extract = function(e) {
             var t = e.indexOf("?");
             return -1 === t ? "" : e.slice(t + 1)
@@ -2257,7 +2300,7 @@
             }).join("&") : ""
         }
     }, function(e, t, n) {
-        e.exports = n(812)
+        e.exports = n(813)
     }, function(e, t, n) {
         "use strict";
 
@@ -2303,43 +2346,6 @@
             c = "toggle fullscreen",
             l = "set theatre mode",
             d = "toggle theatre mode"
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            var t = /^(?:(\d+)[h])?(?:(\d+)[m])?(?:(\d+)[s])?$/,
-                n = t.exec(e);
-            if (!n) return null;
-            for (var r = 0, i = 1; i < n.length; i++) {
-                r = 60 * r + (parseInt(n[i], 10) || 0)
-            }
-            return r
-        }
-
-        function i(e, t) {
-            var n = [e / 3600, e / 60 % 60, e % 60];
-            if (t)
-                for (; n.length && n[0] < 1;) n.shift();
-            for (var r = 0; r < n.length; r++) {
-                var i = Math.floor(n[r]);
-                n[r] = i < 10 ? "0" + i : i
-            }
-            return n
-        }
-
-        function a(e, t) {
-            return !isFinite(e) || e < 0 ? "00:00:00" : i(e, t).join(":")
-        }
-
-        function o(e) {
-            var t = i(e, !0),
-                n = ["h", "m", "s"],
-                r = "";
-            t = t.reverse(), n = n.reverse();
-            for (var a = 0; a < t.length; a++) r = t[a] + n[a] + r;
-            return r
-        }
-        t.a = r, t.c = i, t.d = a, t.b = o
     }, function(e, t, n) {
         "use strict";
 
@@ -2425,9 +2431,9 @@
         }), n.d(t, "j", function() {
             return S
         }), t.h = r, t.a = i, t.k = a, t.b = o, t.i = s;
-        var c = n(28),
+        var c = n(29),
             l = n.n(c),
-            d = n(814),
+            d = n(815),
             f = n.n(d),
             p = n(253),
             h = n(82),
@@ -2802,7 +2808,7 @@
             H = "3886e2be-85fd-43a4-84b9-02024290026a",
             z = "fd5223cb-3ae7-4a9f-9af8-ce0d44d4b9f1"
     }, function(e, t, n) {
-        var r = n(761),
+        var r = n(762),
             i = n(89),
             a = r(i);
         e.exports = a
@@ -3286,11 +3292,14 @@
                 padtime: e.padtime,
                 broadcaster_software: e.broadcasterSoftware
             };
-            "control" !== e.skippableExpGroup && (t.skip = e.skippableExpGroup), null !== e.communityIds && (t.community = e.communityIds), null !== e.kruxId && (t.kuid = e.kruxId), e.contentType === y.a && (t.vod_id = e.vod.id, t.vod_name = e.vod.name, t.vod_type = e.vod.type), t.embed && (t.embed_url = u(e.embedUrl), t.curse_embed = e.embedUrl);
-            var r = n.i(v.a)(e.broadcasterSoftware),
-                i = r.live,
-                a = r.contentMode;
-            return t.live = i, t.content_mode = a, t = c(e, t), f()(t, function(e, t, n) {
+            if ("control" !== e.skippableExpGroup && (t.skip = e.skippableExpGroup), null !== e.communityIds && (t.community = e.communityIds), null !== e.kruxId && (t.kuid = e.kruxId), e.contentType === y.a && (t.vod_id = e.vod.id, t.vod_name = e.vod.name, t.vod_type = e.vod.type), t.embed) {
+                var r = u(e.embedUrl);
+                t.embed_url = r, t.curse_embed = r
+            }
+            var i = n.i(v.a)(e.broadcasterSoftware),
+                a = i.live,
+                o = i.contentMode;
+            return t.live = a, t.content_mode = o, t = c(e, t), f()(t, function(e, t, n) {
                 var r = String(t);
                 return b()(S, n) ? e.push("" + r.replace(/^&/, "")) : (r = r.toLowerCase(), e.push(n + "=" + r)), e
             }, []).join("&").replace(/[=&, ]/g, function(e) {
@@ -3347,7 +3356,7 @@
         function r(e, t) {
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
-        var i = n(828),
+        var i = n(829),
             a = n.n(i),
             o = n(36),
             s = n.n(o),
@@ -3739,8 +3748,8 @@
             return null == e ? void 0 === e ? u : s : c && c in Object(e) ? a(e) : o(e)
         }
         var i = n(85),
-            a = n(771),
-            o = n(797),
+            a = n(772),
+            o = n(798),
             s = "[object Null]",
             u = "[object Undefined]",
             c = i ? i.toStringTag : void 0;
@@ -3750,7 +3759,7 @@
             return o(e) ? i(e) : a(e)
         }
         var i = n(293),
-            a = n(728),
+            a = n(729),
             o = n(49);
         e.exports = r
     }, function(e, t, n) {
@@ -4116,7 +4125,7 @@
         });
         var a = n(5),
             o = n.n(a),
-            s = n(28),
+            s = n(29),
             u = n.n(s),
             c = n(21),
             l = n.n(c),
@@ -4125,7 +4134,7 @@
             p = n(89),
             h = n.n(p),
             m = n(125),
-            v = n(620),
+            v = n(621),
             y = n(410),
             g = n(413),
             b = n(409),
@@ -4696,7 +4705,7 @@
             S = n.n(E),
             P = n(10),
             C = n.n(P),
-            T = n(825),
+            T = n(826),
             O = n.n(T),
             x = n(5),
             R = n.n(x),
@@ -5435,7 +5444,7 @@
          * MIT License | (c) Dustin Diaz 2015
          */
         ! function(t, r, i) {
-            void 0 !== e && e.exports ? e.exports = i() : n(892)("bowser", i)
+            void 0 !== e && e.exports ? e.exports = i() : n(893)("bowser", i)
         }(0, 0, function() {
             function e(e) {
                 function t(t) {
@@ -5761,19 +5770,19 @@
         function r(e) {
             return "function" == typeof e ? e : null == e ? o : "object" == typeof e ? s(e) ? a(e[0], e[1]) : i(e) : u(e)
         }
-        var i = n(731),
-            a = n(732),
+        var i = n(732),
+            a = n(733),
             o = n(150),
             s = n(19),
-            u = n(832);
+            u = n(833);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t) {
             var n = a(e, t);
             return i(n) ? n : void 0
         }
-        var i = n(726),
-            a = n(772);
+        var i = n(727),
+            a = n(773);
         e.exports = r
     }, function(e, t, n) {
         function r(e) {
@@ -5787,7 +5796,7 @@
             return o(e) ? i(e, !0) : a(e)
         }
         var i = n(293),
-            a = n(729),
+            a = n(730),
             o = n(49);
         e.exports = r
     }, function(e, t, n) {
@@ -5799,7 +5808,7 @@
         var i = n(194),
             a = n(109),
             o = n(68),
-            s = n(740),
+            s = n(741),
             u = n(19);
         e.exports = r
     }, function(e, t, n) {
@@ -6074,7 +6083,7 @@
             Le.getStats = function() {
                     return i(Le.getVideoInfo())
                 }, Le.attach = function(t) {
-                    Re(n(676), t), Ae("setLastAdDisplay", [e.lastAdDisplay]), Ae("setPlayerType", [e.player]), Ae("setFlashIMAAdsEnabled", [!0])
+                    Re(n(677), t), Ae("setLastAdDisplay", [e.lastAdDisplay]), Ae("setPlayerType", [e.player]), Ae("setFlashIMAAdsEnabled", [!0])
                 }, Le._emitEvent = function(t, n) {
                     setTimeout(function() {
                         e.debug && "timeupdate" !== t && "playbackStatistics" !== t && console.log("flash event:", t, n), je.emit(t, n)
@@ -6206,7 +6215,7 @@
         }), t.b = r;
         var i = n(70),
             a = n.n(i),
-            o = n(840),
+            o = n(841),
             s = n.n(o),
             u = n(212),
             c = n.n(u),
@@ -6214,8 +6223,8 @@
             d = n.n(l),
             f = n(33),
             p = n.n(f),
-            h = n(613),
-            m = n(617),
+            h = n(614),
+            m = n(618),
             v = n(11),
             y = n(268),
             g = n(17),
@@ -6346,7 +6355,7 @@
             o = n(57),
             s = n(58),
             u = n(17),
-            c = n(666),
+            c = n(667),
             l = n.n(c),
             d = n(36),
             f = n.n(d),
@@ -7421,7 +7430,7 @@
             d = n(35),
             f = n(5),
             p = n.n(f),
-            h = n(27),
+            h = n(28),
             m = (n.n(h), "set VOD recommendations"),
             v = "clear VOD recommendations",
             y = "set number of VOD recommendations visible",
@@ -7469,7 +7478,7 @@
         }), n.d(t, "a", function() {
             return b
         });
-        var i = n(28),
+        var i = n(29),
             a = n.n(i),
             o = {
                 fontSize: 20,
@@ -7792,7 +7801,7 @@
         }
         var i = n(19),
             a = n(206),
-            o = n(809),
+            o = n(810),
             s = n(213);
         e.exports = r
     }, function(e, t, n) {
@@ -7822,7 +7831,7 @@
             s = Math.max;
         e.exports = r
     }, function(e, t, n) {
-        var r = n(733),
+        var r = n(734),
             i = n(143),
             a = i(function(e, t, n) {
                 r(e, t, n)
@@ -7976,7 +7985,7 @@
         }), n.d(t, "q", function() {
             return R
         }), t.a = r, t.b = i, t.d = o, t.e = s, t.g = f, t.h = p, t.f = h, t.c = m;
-        var y = n(27),
+        var y = n(28),
             g = (n.n(y), n(26)),
             b = n(7),
             _ = n(8),
@@ -8051,7 +8060,7 @@
             return e
         }
         t.a = r, t.c = i, t.b = a;
-        var o = n(30),
+        var o = n(27),
             s = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
                 return typeof e
             } : function(e) {
@@ -8161,7 +8170,7 @@
             return u
         });
         var r = n(383),
-            i = (n.n(r), n(849)),
+            i = (n.n(r), n(850)),
             a = (n.n(i), n(227)),
             o = (n.n(a), n(232)),
             s = n(171);
@@ -8471,8 +8480,8 @@
             a = n.n(i),
             o = n(10),
             s = n.n(o),
-            u = n(27),
-            c = (n.n(u), n(838)),
+            u = n(28),
+            c = (n.n(u), n(839)),
             l = n.n(c),
             d = n(64),
             f = n.n(d),
@@ -8715,7 +8724,7 @@
         "use strict";
         var r, i = n(189),
             a = n(275),
-            o = n(644),
+            o = n(645),
             s = n(278);
         r = e.exports = function(e, t) {
             var n, r, o, u, c;
@@ -8742,7 +8751,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(658)() ? Symbol : n(660)
+        e.exports = n(659)() ? Symbol : n(661)
     }, function(e, t, n) {
         (function(r) {
             var i;
@@ -9111,7 +9120,7 @@
         e.exports = r
     }, function(e, t, n) {
         var r = n(298),
-            i = n(759),
+            i = n(760),
             a = i(r);
         e.exports = a
     }, function(e, t, n) {
@@ -9698,7 +9707,7 @@
             return _
         });
         var o = n(283),
-            s = n(684),
+            s = n(685),
             u = n.n(s),
             c = n(7),
             l = n(72),
@@ -9956,7 +9965,7 @@
         }), n.d(t, "a", function() {
             return f
         });
-        var o = n(27),
+        var o = n(28),
             s = (n.n(o), n(100)),
             u = n(7),
             c = n(117),
@@ -10319,11 +10328,11 @@
                 this.set(r[0], r[1])
             }
         }
-        var i = n(783),
-            a = n(784),
-            o = n(785),
-            s = n(786),
-            u = n(787);
+        var i = n(784),
+            a = n(785),
+            o = n(786),
+            s = n(787),
+            u = n(788);
         r.prototype.clear = i, r.prototype.delete = a, r.prototype.get = o, r.prototype.has = s, r.prototype.set = u, e.exports = r
     }, function(e, t, n) {
         function r(e) {
@@ -10331,11 +10340,11 @@
             this.size = t.size
         }
         var i = n(136),
-            a = n(802),
-            o = n(803),
-            s = n(804),
-            u = n(805),
-            c = n(806);
+            a = n(803),
+            o = n(804),
+            s = n(805),
+            u = n(806),
+            c = n(807);
         r.prototype.clear = a, r.prototype.delete = o, r.prototype.get = s, r.prototype.has = u, r.prototype.set = c, e.exports = r
     }, function(e, t) {
         function n(e, t) {
@@ -10400,7 +10409,7 @@
             var n = e.__data__;
             return i(t) ? n["string" == typeof t ? "string" : "hash"] : n.map
         }
-        var i = n(781);
+        var i = n(782);
         e.exports = r
     }, function(e, t) {
         function n(e, t) {
@@ -10446,7 +10455,7 @@
         }
         e.exports = n
     }, function(e, t, n) {
-        var r = n(722),
+        var r = n(723),
             i = n(41),
             a = Object.prototype,
             o = a.hasOwnProperty,
@@ -10460,7 +10469,7 @@
     }, function(e, t, n) {
         (function(e) {
             var r = n(32),
-                i = n(839),
+                i = n(840),
                 a = "object" == typeof t && t && !t.nodeType && t,
                 o = a && "object" == typeof e && e && !e.nodeType && e,
                 s = o && o.exports === a,
@@ -10501,7 +10510,7 @@
         }
         var i = n(67),
             a = n(68),
-            o = n(730),
+            o = n(731),
             s = n(19);
         e.exports = r
     }, function(e, t, n) {
@@ -10618,7 +10627,7 @@
                 console.error(e)
             }
         }
-        r(), e.exports = n(856)
+        r(), e.exports = n(857)
     }, function(e, t) {
         e.exports = function(e) {
             return e.webpackPolyfill || (e.deprecate = function() {}, e.paths = [], e.children || (e.children = []), Object.defineProperty(e, "loaded", {
@@ -10691,7 +10700,7 @@
         }), n.d(t, "d", function() {
             return u
         }), t.b = r, t.a = i;
-        var a = n(821),
+        var a = n(822),
             o = n.n(a),
             s = "set usher params",
             u = "set usher host override",
@@ -10778,7 +10787,7 @@
         });
         var i = n(272),
             a = n.n(i),
-            o = n(29),
+            o = n(30),
             s = n(13),
             u = n(50),
             c = function() {
@@ -10871,7 +10880,7 @@
         var i = n(13),
             a = n(18),
             o = n(44),
-            s = n(618),
+            s = n(619),
             u = n(11),
             c = function() {
                 function e(e, t) {
@@ -11245,7 +11254,7 @@
                         }
                 }() : void 0 === G ? function() {
                     try {
-                        var e = n(895);
+                        var e = n(896);
                         return z = e.runOnLoop || e.runOnContext, s()
                     } catch (e) {
                         return u()
@@ -11364,7 +11373,7 @@
             return v
         });
         var r, i = n(168),
-            a = n(850),
+            a = n(851),
             o = n.n(a),
             s = n(236);
         ! function(e) {
@@ -12440,7 +12449,7 @@
             }
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(639)() ? Object.assign : n(640)
+        e.exports = n(640)() ? Object.assign : n(641)
     }, function(e, t, n) {
         "use strict";
         e.exports = n(276)() ? Object.setPrototypeOf : n(277)
@@ -12458,11 +12467,11 @@
                 this.set(r[0], r[1])
             }
         }
-        var i = n(788),
-            a = n(789),
-            o = n(790),
-            s = n(791),
-            u = n(792);
+        var i = n(789),
+            a = n(790),
+            o = n(791),
+            s = n(792),
+            u = n(793);
         r.prototype.clear = i, r.prototype.delete = a, r.prototype.get = o, r.prototype.has = s, r.prototype.set = u, e.exports = r
     }, function(e, t, n) {
         function r(e) {
@@ -12471,8 +12480,8 @@
             for (this.__data__ = new i; ++t < n;) this.add(e[t])
         }
         var i = n(192),
-            a = n(799),
-            o = n(800);
+            a = n(800),
+            o = n(801);
         r.prototype.add = r.prototype.push = a, r.prototype.has = o, e.exports = r
     }, function(e, t) {
         function n(e, t, n, r) {
@@ -12493,10 +12502,10 @@
             return s
         }
         var i = n(138),
-            a = n(780);
+            a = n(781);
         e.exports = r
     }, function(e, t, n) {
-        var r = n(760),
+        var r = n(761),
             i = r();
         e.exports = i
     }, function(e, t, n) {
@@ -12504,14 +12513,14 @@
             return t === t ? o(e, t, n) : i(e, a, n)
         }
         var i = n(297),
-            a = n(725),
-            o = n(807);
+            a = n(726),
+            o = n(808);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n, o, s) {
             return e === t || (null == e || null == t || !a(e) && !a(t) ? e !== e && t !== t : i(e, t, n, o, r, s))
         }
-        var i = n(723),
+        var i = n(724),
             a = n(41);
         e.exports = r
     }, function(e, t) {
@@ -12547,7 +12556,7 @@
             i = r(Object.getPrototypeOf, Object);
         e.exports = i
     }, function(e, t, n) {
-        var r = n(710),
+        var r = n(711),
             i = n(328),
             a = Object.prototype,
             o = a.propertyIsEnumerable,
@@ -12595,19 +12604,19 @@
         var r = 9007199254740991;
         e.exports = n
     }, function(e, t, n) {
-        var r = n(727),
+        var r = n(728),
             i = n(200),
-            a = n(796),
+            a = n(797),
             o = a && a.isTypedArray,
             s = o ? i(o) : r;
         e.exports = s
     }, function(e, t, n) {
         var r = n(67),
             i = n(296),
-            a = n(746),
+            a = n(747),
             o = n(86),
             s = n(48),
-            u = n(767),
+            u = n(768),
             c = n(308),
             l = n(311),
             d = c(function(e, t) {
@@ -12622,7 +12631,7 @@
             });
         e.exports = d
     }, function(e, t, n) {
-        var r = n(764),
+        var r = n(765),
             i = r("round");
         e.exports = i
     }, function(e, t, n) {
@@ -13954,13 +13963,13 @@
             A = n(42),
             N = n(56),
             L = n(16),
-            M = n(29),
+            M = n(30),
             j = n(162),
             D = n(15),
             U = n(50),
             q = n(226),
             B = n.n(q),
-            F = n(28),
+            F = n(29),
             V = n.n(F),
             H = n(10),
             z = n.n(H),
@@ -13968,7 +13977,7 @@
             K = n.n(W),
             G = n(111),
             Y = n.n(G),
-            Q = n(819),
+            Q = n(820),
             $ = n.n(Q),
             J = n(17),
             X = n(22),
@@ -14517,9 +14526,9 @@
         })
     }, function(e, t, n) {
         var r = n(289),
-            i = n(813),
+            i = n(814),
             a = n(110),
-            o = n(766),
+            o = n(767),
             s = a(function(e) {
                 return e.push(void 0, o), r(i, void 0, e)
             });
@@ -15864,7 +15873,7 @@
         n.d(t, "b", function() {
             return s
         }), t.a = i;
-        var a = n(815),
+        var a = n(816),
             o = n.n(a),
             s = "set manifest info"
     }, function(e, t, n) {
@@ -16384,7 +16393,7 @@
             f = n(420),
             p = n(126),
             h = n(6),
-            m = n(823),
+            m = n(824),
             v = n.n(m),
             y = n(10),
             g = n.n(y),
@@ -16440,7 +16449,7 @@
         n.d(t, "a", function() {
             return l
         }), t.b = r;
-        var i = n(28),
+        var i = n(29),
             a = n.n(i),
             o = n(82),
             s = n(31),
@@ -16969,7 +16978,7 @@
             s = n.n(o),
             u = n(1),
             c = n.n(u),
-            l = n(893),
+            l = n(894),
             d = n.n(l),
             f = n(553),
             p = n(554),
@@ -17867,7 +17876,7 @@
             return l.a.removeSWF(e)
         }
         t.e = r, t.d = i, t.a = o, t.b = s, t.c = u;
-        var c = n(667),
+        var c = n(668),
             l = n.n(c)
     }, function(e, t, n) {
         "use strict";
@@ -17905,7 +17914,7 @@
         t.b = i, t.a = a;
         var o = n(5),
             s = n.n(o),
-            u = n(27),
+            u = n(28),
             c = (n.n(u), n(7))
     }, function(e, t, n) {
         "use strict";
@@ -18190,29 +18199,29 @@
             } : (t = {}, t.__proto__ = n, Object.getPrototypeOf(t) === n && {
                 level: 1
             })
-        }()), n(642)
+        }()), n(643)
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(650)() ? String.prototype.contains : n(651)
+        e.exports = n(651)() ? String.prototype.contains : n(652)
     }, function(e, t, n) {
         "use strict";
         var r = n(132),
             i = n(133),
-            a = n(653),
-            o = n(656),
-            s = n(657),
+            a = n(654),
+            o = n(657),
+            s = n(658),
             u = n(104).iterator;
         e.exports = function(e) {
             return "function" == typeof s(e)[u] ? e[u]() : r(e) ? new a(e) : i(e) ? new o(e) : new a(e)
         }
     }, function(e, t, n) {
         "use strict";
-        var r, i = n(628),
+        var r, i = n(629),
             a = n(189),
             o = n(65),
             s = n(47),
             u = n(102),
-            c = n(625),
+            c = n(626),
             l = n(104),
             d = Object.defineProperty,
             f = Object.defineProperties;
@@ -18309,7 +18318,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(693);
+        var r = n(694);
         t.a = r.a;
         r.a.changeLanguage.bind(r.a), r.a.cloneInstance.bind(r.a), r.a.createInstance.bind(r.a), r.a.dir.bind(r.a), r.a.exists.bind(r.a), r.a.getFixedT.bind(r.a), r.a.init.bind(r.a), r.a.loadLanguages.bind(r.a), r.a.loadNamespaces.bind(r.a), r.a.loadResources.bind(r.a), r.a.off.bind(r.a), r.a.on.bind(r.a), r.a.setDefaultNamespace.bind(r.a), r.a.t.bind(r.a), r.a.use.bind(r.a)
     }, function(e, t, n) {
@@ -18328,7 +18337,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(701),
+        var r = n(702),
             i = r.a.Symbol;
         t.a = i
     }, function(e, t, n) {
@@ -18341,9 +18350,9 @@
             var r = d.call(t, "constructor") && t.constructor;
             return "function" == typeof r && r instanceof r && l.call(r) == f
         }
-        var i = n(695),
-            a = n(697),
-            o = n(702),
+        var i = n(696),
+            a = n(698),
+            o = n(703),
             s = "[object Object]",
             u = Function.prototype,
             c = Object.prototype,
@@ -18406,7 +18415,7 @@
             for (var v in e) !t && !d.call(e, v) || p && ("length" == v || l && ("offset" == v || "parent" == v) || f && ("buffer" == v || "byteLength" == v || "byteOffset" == v) || u(v, m)) || h.push(v);
             return h
         }
-        var i = n(744),
+        var i = n(745),
             a = n(151),
             o = n(19),
             s = n(152),
@@ -18463,17 +18472,17 @@
         var i = n(137),
             a = n(290),
             o = n(139),
-            s = n(714),
-            u = n(715),
+            s = n(715),
+            u = n(716),
             c = n(304),
             l = n(142),
-            d = n(755),
-            f = n(756),
+            d = n(756),
+            f = n(757),
             p = n(310),
             h = n(311),
             m = n(313),
-            v = n(778),
-            y = n(779),
+            v = n(779),
+            y = n(780),
             g = n(315),
             b = n(19),
             _ = n(152),
@@ -18673,11 +18682,11 @@
             } : o;
         e.exports = u
     }, function(e, t, n) {
-        var r = n(703),
+        var r = n(704),
             i = n(191),
-            a = n(705),
+            a = n(706),
             o = n(287),
-            s = n(706),
+            s = n(707),
             u = n(53),
             c = n(323),
             l = c(r),
@@ -18725,7 +18734,7 @@
         function r(e) {
             return "function" != typeof e.constructor || o(e) ? {} : i(a(e))
         }
-        var i = n(717),
+        var i = n(718),
             a = n(203),
             o = n(147);
         e.exports = r
@@ -18772,17 +18781,17 @@
             a = Math.max;
         e.exports = r
     }, function(e, t, n) {
-        var r = n(742),
-            i = n(801),
+        var r = n(743),
+            i = n(802),
             a = i(r);
         e.exports = a
     }, function(e, t, n) {
         function r(e) {
             return a(e) ? o(e) : i(e)
         }
-        var i = n(711),
+        var i = n(712),
             a = n(205),
-            o = n(810);
+            o = n(811);
         e.exports = r
     }, function(e, t) {
         function n(e) {
@@ -18808,7 +18817,7 @@
         e.exports = r
     }, function(e, t, n) {
         var r = n(108),
-            i = n(758),
+            i = n(759),
             a = Object.prototype,
             o = a.hasOwnProperty,
             s = i(function(e, t, n) {
@@ -18819,7 +18828,7 @@
         function r(e, t) {
             return null != e && a(e, t, i)
         }
-        var i = n(719),
+        var i = n(720),
             a = n(314);
         e.exports = r
     }, function(e, t, n) {
@@ -18859,7 +18868,7 @@
         function r(e) {
             return null == e ? [] : i(e, a(e))
         }
-        var i = n(747),
+        var i = n(748),
             a = n(54);
         e.exports = r
     }, function(e, t) {
@@ -18957,8 +18966,8 @@
             for (n in t) t.hasOwnProperty(n) && !e.hasOwnProperty(n) && (r[n] = t[n]);
             return r
         }
-        var l = n(846),
-            d = n(847);
+        var l = n(847),
+            d = n(848);
         e.exports = r, r.prototype.get = function(e, t) {
             var n = c(t || {}, {
                     mustTrack: !1
@@ -19171,7 +19180,7 @@
         }
         t.__esModule = !0, t.default = r
     }, function(e, t, n) {
-        e.exports = n(867)()
+        e.exports = n(868)()
     }, function(e, t, n) {
         "use strict";
 
@@ -19273,7 +19282,7 @@
             return s
         }), t.a = r;
         var i = n(286),
-            a = n(885),
+            a = n(886),
             o = n.n(a),
             s = {
                 INIT: "@@redux/INIT"
@@ -19284,9 +19293,9 @@
             value: !0
         });
         var r = n(339),
-            i = n(878),
-            a = n(877),
-            o = n(876),
+            i = n(879),
+            a = n(878),
+            o = n(877),
             s = n(338);
         n(341);
         n.d(t, "createStore", function() {
@@ -21745,7 +21754,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.12.15-013547+3e44ad6872c8ace133a96ff41047b8ca28d880fc",
+                    app_version: "2017.12.15-190942+359a82aaa9fab8bafb037bc3979e3858fadbeae3",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -21828,7 +21837,7 @@
                 }()
         }
         t.a = r;
-        var i = n(28),
+        var i = n(29),
             a = n.n(i),
             o = n(10),
             s = n.n(o),
@@ -22172,7 +22181,7 @@
             u = n(14),
             c = n(80),
             l = n(15),
-            d = n(29),
+            d = n(30),
             f = n(37),
             p = n(23),
             h = n(22),
@@ -22714,7 +22723,7 @@
             l = n(6),
             d = n(7),
             f = n(34),
-            p = n(29),
+            p = n(30),
             h = n(15),
             m = n(62),
             v = n(186),
@@ -23166,9 +23175,9 @@
         n.d(t, "a", function() {
             return c
         });
-        var i = n(879),
+        var i = n(880),
             a = n(177),
-            o = n(824),
+            o = n(825),
             s = n.n(o),
             u = function() {
                 function e(e, t) {
@@ -23306,7 +23315,7 @@
         n.d(t, "a", function() {
             return v
         });
-        var a = n(833),
+        var a = n(834),
             o = n.n(a),
             s = n(399),
             u = n(13),
@@ -23442,7 +23451,7 @@
         n.d(t, "a", function() {
             return b
         });
-        var o = n(826),
+        var o = n(827),
             s = n.n(o),
             u = n(7),
             c = n(222),
@@ -23601,7 +23610,7 @@
         }
         t.a = r;
         var i = n(340),
-            a = n(875),
+            a = n(876),
             o = n.n(a),
             s = n(432),
             u = n(434),
@@ -23941,7 +23950,7 @@
         });
         var i = n(272),
             a = n.n(i),
-            o = n(29),
+            o = n(30),
             s = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -24135,8 +24144,8 @@
         });
         var i = n(7),
             a = n(62),
-            o = n(616),
-            s = n(619),
+            o = n(617),
+            s = n(620),
             u = n(6),
             c = n(13),
             l = function() {
@@ -24273,7 +24282,7 @@
             a = n(7),
             o = n(13),
             s = n(17),
-            u = n(29)
+            u = n(30)
     }, function(e, t, n) {
         "use strict";
 
@@ -24405,7 +24414,7 @@
         var i = n(6),
             a = n(11),
             o = n(92),
-            s = n(30),
+            s = n(27),
             u = n(12),
             c = n(8),
             l = n(83),
@@ -24644,7 +24653,7 @@
         var y = n.i(d.connect)(v)(r)
     }, function(e, t, n) {
         "use strict";
-        var r = n(855),
+        var r = n(856),
             i = r.CopyToClipboard;
         e.exports = i
     }, function(e, t) {
@@ -25498,7 +25507,7 @@
             return o.set(e, t), t
         }
         t.a = r;
-        var i = n(662),
+        var i = n(663),
             a = n.n(i),
             o = new a.a
     }, function(e, t, n) {
@@ -27582,7 +27591,7 @@
         var i = n(18),
             a = n(250),
             o = n(13),
-            s = n(894),
+            s = n(895),
             u = (n.n(s), n(10)),
             c = n.n(u),
             l = n(58),
@@ -28537,7 +28546,7 @@
         });
         var d = n(5),
             f = n.n(d),
-            p = n(831),
+            p = n(832),
             h = n.n(p),
             m = n(72),
             v = n.n(m),
@@ -28699,7 +28708,7 @@
             this._host = e.host
         }
         t.a = r;
-        var i = n(27);
+        var i = n(28);
         n.n(i);
         r.prototype._trackEvent = function(e) {
             (new Image).src = e
@@ -28848,7 +28857,7 @@
             return c
         });
         var a = n(12),
-            o = n(848),
+            o = n(849),
             s = (n.n(o), n(22)),
             u = function() {
                 function e(e, t) {
@@ -28896,13 +28905,13 @@
             this._host = e.host, this._token = e.token
         }
         t.a = r;
-        var i = n(28),
+        var i = n(29),
             a = n.n(i),
             o = n(10),
             s = n.n(o),
             u = n(7),
             c = n(125),
-            l = n(27);
+            l = n(28);
         n.n(l);
         r.prototype.trackEvent = function(e, t) {
             if (!s()(u.I, e)) {
@@ -28988,7 +28997,7 @@
             s = n(125),
             u = n(36),
             c = n.n(u),
-            l = n(27);
+            l = n(28);
         n.n(l);
         r.prototype.trackEvent = function(e, t) {
             a()(o.H, e) || (this._send({
@@ -29044,7 +29053,7 @@
         }
         t.a = r;
         var i = n(7),
-            a = n(27);
+            a = n(28);
         n.n(a);
         r.prototype.viewerInfo = function(e) {
             this._viewerSteamId = e.then(function(e) {
@@ -29471,7 +29480,7 @@
                 }()
         }
         t.a = r;
-        var i = n(822),
+        var i = n(823),
             a = n.n(i),
             o = n(10),
             s = n.n(o),
@@ -30372,7 +30381,7 @@
             s = n(423),
             u = n(164),
             c = n(124),
-            l = n(29),
+            l = n(30),
             d = n(55),
             f = new s.a
     }, function(e, t, n) {
@@ -30716,7 +30725,7 @@
             S = n(94),
             P = (n.n(S), n(117)),
             C = n(222),
-            T = n(30),
+            T = n(27),
             O = n(224),
             x = n(360),
             R = n(347),
@@ -30740,7 +30749,7 @@
             Y = n(42),
             Q = n(114),
             $ = n(115),
-            J = n(29),
+            J = n(30),
             X = n(91),
             Z = n(20),
             ee = n(25),
@@ -30950,7 +30959,7 @@
             }
         }
         t.a = r;
-        var i = n(28),
+        var i = n(29),
             a = n.n(i),
             o = n(96),
             s = {
@@ -31015,7 +31024,7 @@
             }
         }
         t.a = r;
-        var i = n(28),
+        var i = n(29),
             a = n.n(i),
             o = n(245),
             s = {
@@ -31226,9 +31235,9 @@
             }
         }
         t.a = r;
-        var i = n(816),
+        var i = n(817),
             a = n.n(i),
-            o = n(837),
+            o = n(838),
             s = n.n(o),
             u = n(176),
             c = []
@@ -31526,7 +31535,7 @@
         t.a = r;
         var i = n(5),
             a = n.n(i),
-            o = n(29),
+            o = n(30),
             s = n(160),
             u = Object.freeze({
                 isFullScreen: !1,
@@ -33054,7 +33063,7 @@
             l = n(1),
             d = n.n(l),
             f = n(82),
-            p = n(28),
+            p = n(29),
             h = n.n(p),
             m = n(211),
             v = n.n(m),
@@ -33705,7 +33714,7 @@
             s = n(9),
             u = n(2),
             c = n.n(u),
-            l = n(615),
+            l = n(616),
             d = n(4),
             f = {
                 title: i.a.string.isRequired,
@@ -34252,7 +34261,7 @@
             c = n.n(u),
             l = n(1),
             d = n.n(l),
-            f = n(614),
+            f = n(615),
             p = n(21),
             h = n.n(p),
             m = n(2),
@@ -36176,11 +36185,11 @@
             h = n.n(p),
             m = n(24),
             v = n.n(m),
-            y = n(835),
+            y = n(836),
             g = n.n(y),
             b = n(4),
             _ = n(9),
-            w = n(612),
+            w = n(613),
             k = n(26),
             E = function() {
                 function e(e, t) {
@@ -36941,7 +36950,7 @@
             i = n.n(r),
             a = n(1),
             o = n.n(a),
-            s = n(30),
+            s = n(27),
             u = function() {
                 function e(e, t) {
                     var n = [],
@@ -37538,7 +37547,7 @@
             d = n.n(l),
             f = n(1),
             p = n.n(f),
-            h = n(30),
+            h = n(27),
             m = n(259),
             v = n(84),
             y = n(223),
@@ -37687,7 +37696,7 @@
             i = n.n(r),
             a = n(1),
             o = n.n(a),
-            s = n(30),
+            s = n(27),
             u = {
                 currentTime: o.a.number,
                 duration: o.a.number
@@ -37758,7 +37767,7 @@
             o = n.n(a),
             s = n(1),
             u = n.n(s),
-            c = n(30),
+            c = n(27),
             l = n(259),
             d = 148,
             f = {
@@ -37788,12 +37797,13 @@
             a = n.n(i),
             o = n(1),
             s = n.n(o),
-            u = n(30),
+            u = n(27),
             c = {
                 duration: s.a.number,
                 mouseMoveClientX: s.a.number,
                 seekbarLeftOffset: s.a.number,
-                seekbarWidth: s.a.number
+                seekbarWidth: s.a.number,
+                shouldCleanString: s.a.bool.isRequired
             },
             l = {
                 duration: 0,
@@ -37805,20 +37815,21 @@
                     n = e.mouseMoveClientX,
                     i = e.seekbarLeftOffset,
                     o = e.seekbarWidth,
-                    s = n - i,
-                    c = t * (s / o);
+                    s = e.shouldCleanString,
+                    c = n - i,
+                    l = t * (c / o);
                 return a.a.createElement("div", null, a.a.createElement("div", {
                     className: "player-slider__popup-container",
                     style: {
                         width: 92,
-                        left: r(s, 92, o)
+                        left: r(c, 92, o)
                     }
                 }, a.a.createElement("span", {
                     className: "popup-timestamp"
-                }, u.d(c, !1))), a.a.createElement("div", {
+                }, u.d(l, s))), a.a.createElement("div", {
                     className: "popup-arrow",
                     style: {
-                        left: r(s, 20, o)
+                        left: r(c, 20, o)
                     }
                 }))
             };
@@ -38011,7 +38022,7 @@
             l = n.n(c),
             d = n(374),
             f = n.n(d),
-            p = n(30),
+            p = n(27),
             h = n(2),
             m = n.n(h),
             v = n(4),
@@ -39621,7 +39632,7 @@
             s = n.n(o),
             u = n(3),
             c = (n.n(u), n(479)),
-            l = n(29),
+            l = n(30),
             d = n(25),
             f = {
                 canFullScreen: s.a.bool.isRequired,
@@ -39775,7 +39786,7 @@
             s = n.n(o),
             u = n(3),
             c = (n.n(u), n(481)),
-            l = n(29),
+            l = n(30),
             d = n(25),
             f = {
                 canTheatreMode: s.a.bool.isRequired,
@@ -39839,7 +39850,7 @@
             f = n(15),
             p = n(11),
             h = n(7),
-            m = n(30),
+            m = n(27),
             v = n(12),
             y = n(8),
             g = n(83),
@@ -40099,7 +40110,7 @@
             c = n.n(u),
             l = n(157),
             d = n.n(l),
-            f = n(869),
+            f = n(870),
             p = n.n(f),
             h = n(89),
             m = n.n(h),
@@ -40827,7 +40838,7 @@
             b = n(97),
             _ = n(6),
             w = n(23),
-            k = n(29),
+            k = n(30),
             E = n(63),
             S = n(2),
             P = n.n(S),
@@ -41893,7 +41904,7 @@
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
         n.d(t, "a", function() {
-            return N
+            return M
         });
         var o = n(0),
             s = n.n(o),
@@ -41909,14 +41920,16 @@
             y = (n.n(v), n(538)),
             g = n(539),
             b = n(541),
-            _ = n(260),
-            w = n(20),
-            k = n(15),
-            E = n(542),
-            S = n(543),
-            P = n(540),
-            C = n(269),
-            T = function() {
+            _ = n(610),
+            w = n(260),
+            k = n(20),
+            E = n(15),
+            S = n(542),
+            P = n(543),
+            C = n(540),
+            T = n(269),
+            O = n(6),
+            x = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -41927,7 +41940,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            O = {
+            R = {
                 buffer: c.a.shape({
                     start: c.a.number,
                     end: c.a.number
@@ -41943,40 +41956,43 @@
                 seek: c.a.func.isRequired,
                 seekbarMarkers: c.a.array,
                 thumbnailPreviews: c.a.object,
+                isClipsPlayerType: c.a.bool.isRequired,
                 windowObj: c.a.object,
                 trackEvent: c.a.func.isRequired
             },
-            x = function(e) {
-                var t = e.playback,
-                    n = e.stream,
-                    r = e.timelineMetadata,
-                    i = e.window,
-                    a = e.analyticsTracker;
+            I = function(e) {
+                var t = e.env,
+                    n = e.playback,
+                    r = e.stream,
+                    i = e.timelineMetadata,
+                    a = e.window,
+                    o = e.analyticsTracker;
                 return {
-                    buffer: t.buffer,
-                    currentTime: t.currentTime,
-                    duration: t.duration,
-                    isSeekableStream: m()(C.a, n.contentType),
-                    mutedSegments: r.mutedSegments,
-                    seekbarMarkers: r.markers,
-                    thumbnailPreviews: r.previews,
-                    windowObj: i,
-                    trackEvent: a.trackEvent
+                    buffer: n.buffer,
+                    currentTime: n.currentTime,
+                    duration: n.duration,
+                    isSeekableStream: m()(T.a, r.contentType),
+                    mutedSegments: i.mutedSegments,
+                    seekbarMarkers: i.markers,
+                    thumbnailPreviews: i.previews,
+                    windowObj: a,
+                    trackEvent: o.trackEvent,
+                    isClipsPlayerType: O.f.includes(t.playerType)
                 }
             },
-            R = function(e) {
+            A = function(e) {
                 return {
                     seek: function(t) {
-                        e(n.i(k.h)(t)), e(n.i(w.g)(!0))
+                        e(n.i(E.h)(t)), e(n.i(k.g)(!0))
                     }
                 }
             },
-            I = {
+            N = {
                 slider: "player-slider player-slider--roundhandle js-player-slider",
                 sliderLeft: "ui-slider-range",
                 sliderThumb: "ui-slider-handle"
             },
-            A = function(e) {
+            L = function(e) {
                 function t() {
                     r(this, t);
                     var e = i(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -41987,21 +42003,23 @@
                         mouseMoveOnSeekbar: !1
                     }, e.$seekbar = null, e.handleDragStart = e.handleDragStart.bind(e), e.handleDragStop = e.handleDragStop.bind(e), e.handleClick = e.handleClick.bind(e), e.handleMouseMove = e.handleMouseMove.bind(e), e.handleMouseOut = e.handleMouseOut.bind(e), e.seekbarRefHandler = e.seekbarRefHandler.bind(e), e.seekToPosition = e.seekToPosition.bind(e), e.handleShowingMarkerPreview = e.handleShowingMarkerPreview.bind(e), e.handleHidingMarkerPreview = e.handleHidingMarkerPreview.bind(e), e
                 }
-                return a(t, e), T(t, [{
+                return a(t, e), x(t, [{
                     key: "render",
                     value: function() {
                         var e = this.props,
                             t = e.currentTime,
-                            n = e.duration;
-                        if (!e.isSeekableStream) return null;
-                        var r = this.createSliderComponent(),
-                            i = s.a.createElement(b.a, {
+                            n = e.duration,
+                            r = e.isSeekableStream,
+                            i = e.isClipsPlayerType;
+                        if (!r) return null;
+                        var a = this.createSliderComponent(),
+                            o = {
                                 currentTime: t,
                                 duration: n
-                            });
+                            };
                         return s.a.createElement("div", {
                             className: "player-seek"
-                        }, i, r)
+                        }, i ? s.a.createElement(_.a, o) : s.a.createElement(b.a, o), a)
                     }
                 }, {
                     key: "createSliderComponent",
@@ -42031,9 +42049,9 @@
                                 duration: u,
                                 mutedSegments: l
                             }),
-                            w = null;
-                        r && !n && u > 0 && (w = this.createSeekbarPreviews());
-                        var k = s.a.createElement(P.a, {
+                            _ = null;
+                        r && !n && u > 0 && (_ = this.createSeekbarPreviews());
+                        var k = s.a.createElement(C.a, {
                             currentTime: o,
                             duration: u,
                             markers: d,
@@ -42043,8 +42061,8 @@
                             seekbarWidth: m,
                             trackEvent: f
                         });
-                        return s.a.createElement(_.a, {
-                            classNames: I,
+                        return s.a.createElement(w.a, {
+                            classNames: N,
                             max: u,
                             min: 0,
                             onClick: this.handleClick,
@@ -42060,7 +42078,7 @@
                             getOptimizedValue: c,
                             valueOptimizationEnabled: !0,
                             behindSliderChildren: v,
-                            afterSliderChildren: [b, w, k]
+                            afterSliderChildren: [b, _, k]
                         })
                     }
                 }, {
@@ -42084,21 +42102,23 @@
                             t = this.props,
                             n = t.duration,
                             r = t.thumbnailPreviews,
-                            i = this.getSeekbarDimensions(),
-                            a = i.seekbarWidth,
-                            o = i.seekbarLeftOffset,
-                            u = d.a.msedge || d.a.msie;
-                        return r.count > 0 && !u ? s.a.createElement(E.a, {
+                            i = t.isClipsPlayerType,
+                            a = this.getSeekbarDimensions(),
+                            o = a.seekbarWidth,
+                            u = a.seekbarLeftOffset,
+                            c = d.a.msedge || d.a.msie;
+                        return r.count > 0 && !c ? s.a.createElement(S.a, {
                             duration: n,
                             previews: r,
                             mouseMoveClientX: e,
-                            seekbarLeftOffset: o,
-                            seekbarWidth: a
-                        }) : s.a.createElement(S.a, {
+                            seekbarLeftOffset: u,
+                            seekbarWidth: o
+                        }) : s.a.createElement(P.a, {
                             duration: n,
                             mouseMoveClientX: e,
-                            seekbarLeftOffset: o,
-                            seekbarWidth: a
+                            seekbarLeftOffset: u,
+                            seekbarWidth: o,
+                            shouldCleanString: i
                         })
                     }
                 }, {
@@ -42165,8 +42185,8 @@
                     }
                 }]), t
             }(s.a.Component);
-        A.propTypes = O;
-        var N = n.i(v.connect)(x, R)(A)
+        L.propTypes = R;
+        var M = n.i(v.connect)(I, A)(L)
     }, function(e, t, n) {
         "use strict";
 
@@ -42524,9 +42544,9 @@
             p = n.n(f),
             h = n(3),
             m = (n.n(h), n(545)),
-            v = n(621),
+            v = n(622),
             y = n(15),
-            g = n(30),
+            g = n(27),
             b = n(8),
             _ = n(99),
             w = n(59),
@@ -44123,7 +44143,7 @@
             W = n(266),
             K = n(589),
             G = n(588),
-            Y = n(611)
+            Y = n(612)
     }, function(e, t, n) {
         "use strict";
 
@@ -44211,28 +44231,28 @@
                         switch (e) {
                             case d.d:
                                 return n.e(3).then(function() {
-                                    var e = n(899);
+                                    var e = n(900);
                                     t.setState({
                                         playerTypeComponent: e.default
                                     })
                                 }.bind(null, n)).catch(n.oe);
                             case d.p:
                                 return n.e(1).then(function() {
-                                    var e = n(901);
+                                    var e = n(902);
                                     t.setState({
                                         playerTypeComponent: e.default
                                     })
                                 }.bind(null, n)).catch(n.oe);
                             case d.q:
                                 return n.e(0).then(function() {
-                                    var e = n(900);
+                                    var e = n(901);
                                     t.setState({
                                         playerTypeComponent: e.default
                                     })
                                 }.bind(null, n)).catch(n.oe);
                             default:
                                 return n.e(2).then(function() {
-                                    var e = n(902);
+                                    var e = n(903);
                                     t.setState({
                                         playerTypeComponent: e.default
                                     })
@@ -44254,7 +44274,7 @@
             o = n.n(a),
             s = n(9),
             u = n(4),
-            c = n(610),
+            c = n(611),
             l = {
                 t: o.a.func.isRequired
             },
@@ -44269,6 +44289,31 @@
             };
         d.propTypes = l;
         var f = n.i(u.a)()(d)
+    }, function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return c
+        });
+        var r = n(0),
+            i = n.n(r),
+            a = n(1),
+            o = n.n(a),
+            s = n(27),
+            u = {
+                currentTime: o.a.number,
+                duration: o.a.number
+            },
+            c = function(e) {
+                var t = e.currentTime,
+                    n = e.duration,
+                    r = s.d(n - t, !0);
+                return i.a.createElement("div", {
+                    className: "player-seek__time-container"
+                }, i.a.createElement("span", {
+                    className: "player-seek__time player-seek__time--total"
+                }, r))
+            };
+        c.propTypes = u
     }, function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -44365,7 +44410,7 @@
                 }()
         }
         t.a = r;
-        var i = n(622),
+        var i = n(623),
             a = n(7),
             o = n(16),
             s = n(17),
@@ -44632,7 +44677,7 @@
             a = n(8),
             o = n(7),
             s = n(93),
-            u = n(30),
+            u = n(27),
             c = n(6)
     }, function(e, t, n) {
         "use strict";
@@ -44696,15 +44741,15 @@
             }
             return d
         }
-        var a = n(889),
+        var a = n(890),
             o = "Copy to clipboard: #{key}, Enter";
         e.exports = i
     }, function(e, t, n) {
         "use strict";
-        var r, i = n(641),
+        var r, i = n(642),
             a = n(275),
             o = n(65),
-            s = n(648),
+            s = n(649),
             u = n(65),
             c = n(47),
             l = Function.prototype.bind,
@@ -44792,7 +44837,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(630)() ? Array.from : n(631)
+        e.exports = n(631)() ? Array.from : n(632)
     }, function(e, t, n) {
         "use strict";
         e.exports = function() {
@@ -44803,8 +44848,8 @@
         "use strict";
         var r = n(104).iterator,
             i = n(132),
-            a = n(632),
-            o = n(637),
+            a = n(633),
+            o = n(638),
             s = n(65),
             u = n(47),
             c = n(103),
@@ -44853,7 +44898,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(634)() ? Math.sign : n(635)
+        e.exports = n(635)() ? Math.sign : n(636)
     }, function(e, t, n) {
         "use strict";
         e.exports = function() {
@@ -44867,7 +44912,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(633),
+        var r = n(634),
             i = Math.abs,
             a = Math.floor;
         e.exports = function(e) {
@@ -44875,7 +44920,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(636),
+        var r = n(637),
             i = Math.max;
         e.exports = function(e) {
             return i(0, r(e))
@@ -44911,7 +44956,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(645),
+        var r = n(646),
             i = n(47),
             a = Math.max;
         e.exports = function(e, t) {
@@ -44928,7 +44973,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        var r = n(629),
+        var r = n(630),
             i = n(189),
             a = n(47);
         e.exports = function(e) {
@@ -44970,7 +45015,7 @@
         }()
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(638)("forEach")
+        e.exports = n(639)("forEach")
     }, function(e, t, n) {
         "use strict";
         e.exports = function(e) {
@@ -44978,7 +45023,7 @@
         }
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(646)() ? Object.keys : n(647)
+        e.exports = n(647)() ? Object.keys : n(648)
     }, function(e, t, n) {
         "use strict";
         e.exports = function() {
@@ -44998,7 +45043,7 @@
     }, function(e, t, n) {
         "use strict";
         var r = n(65),
-            i = n(643),
+            i = n(644),
             a = Function.prototype.call;
         e.exports = function(e, t) {
             var n = {},
@@ -45112,7 +45157,7 @@
         })
     }, function(e, t, n) {
         "use strict";
-        var r = n(655);
+        var r = n(656);
         e.exports = function(e) {
             if (!r(e)) throw new TypeError(e + " is not iterable");
             return e
@@ -45142,7 +45187,7 @@
     }, function(e, t, n) {
         "use strict";
         var r, i, a, o, s = n(102),
-            u = n(661),
+            u = n(662),
             c = Object.create,
             l = Object.defineProperties,
             d = Object.defineProperty,
@@ -45212,14 +45257,14 @@
         })), d(i.prototype, i.toStringTag, s("c", "Symbol")), d(a.prototype, i.toStringTag, s("c", i.prototype[i.toStringTag])), d(a.prototype, i.toPrimitive, s("c", i.prototype[i.toPrimitive]))
     }, function(e, t, n) {
         "use strict";
-        var r = n(659);
+        var r = n(660);
         e.exports = function(e) {
             if (!r(e)) throw new TypeError(e + " is not a symbol");
             return e
         }
     }, function(e, t, n) {
         "use strict";
-        e.exports = n(663)() ? WeakMap : n(665)
+        e.exports = n(664)() ? WeakMap : n(666)
     }, function(e, t, n) {
         "use strict";
         e.exports = function() {
@@ -45244,14 +45289,14 @@
     }, function(e, t, n) {
         "use strict";
         var r, i = n(190),
-            a = n(649),
+            a = n(650),
             o = n(47),
-            s = n(652),
+            s = n(653),
             u = n(102),
             c = n(279),
-            l = n(654),
+            l = n(655),
             d = n(104).toStringTag,
-            f = n(664),
+            f = n(665),
             p = Array.isArray,
             h = Object.defineProperty,
             m = Object.prototype.hasOwnProperty,
@@ -45806,7 +45851,7 @@
         function r(e, t) {
             return !(!e || !t) && (e === t || !i(e) && (i(t) ? r(e, t.parentNode) : "contains" in e ? e.contains(t) : !!e.compareDocumentPosition && !!(16 & e.compareDocumentPosition(t))))
         }
-        var i = n(674);
+        var i = n(675);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -45844,7 +45889,7 @@
         function r(e) {
             return i(e) && 3 == e.nodeType
         }
-        var i = n(673);
+        var i = n(674);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -45869,12 +45914,12 @@
         e.exports = n.p + "vendor/TwitchPlayer.7cfe0f2e9d071ac72c5a539139bcedd4.swf"
     }, function(e, t, n) {
         e.exports = {
-            parse: n(679),
-            stringify: n(680)
+            parse: n(680),
+            stringify: n(681)
         }
     }, function(e, t, n) {
         var r = /([\w-]+)|=|(['"])([.\s\S]*?)\2/g,
-            i = n(890);
+            i = n(891);
         e.exports = function(e) {
             var t, n = 0,
                 a = !0,
@@ -45900,7 +45945,7 @@
             })
         }
         var i = /(?:<!--[\S\s]*?-->|<(?:"[^"]*"['"]*|'[^']*'['"]*|[^'">])+>)/g,
-            a = n(678),
+            a = n(679),
             o = Object.create ? Object.create(null) : {};
         e.exports = function(e, t) {
             t || (t = {}), t.components || (t.components = o);
@@ -46010,7 +46055,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            o = n(683),
+            o = n(684),
             s = function(e) {
                 if (e && e.__esModule) return e;
                 var t = {};
@@ -46018,7 +46063,7 @@
                     for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                 return t.default = e, t
             }(o),
-            u = n(681),
+            u = n(682),
             c = function(e) {
                 return e && e.__esModule ? e : {
                     default: e
@@ -46115,7 +46160,7 @@
             o = a.forEach,
             s = a.slice
     }, function(e, t, n) {
-        e.exports = n(682).default
+        e.exports = n(683).default
     }, function(e, t, n) {
         "use strict";
 
@@ -47058,14 +47103,14 @@
         function s() {}
         var u = n(66),
             c = n(107),
-            l = n(690),
-            d = n(691),
-            f = n(688),
-            p = n(689),
-            h = n(687),
-            m = n(685),
-            v = n(686),
-            y = n(692),
+            l = n(691),
+            d = n(692),
+            f = n(689),
+            p = n(690),
+            h = n(688),
+            m = n(686),
+            v = n(687),
+            y = n(693),
             g = n(284),
             b = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -47255,8 +47300,8 @@
             return null == e ? void 0 === e ? u : s : c && c in Object(e) ? n.i(a.a)(e) : n.i(o.a)(e)
         }
         var i = n(285),
-            a = n(698),
-            o = n(699),
+            a = n(699),
+            o = n(700),
             s = "[object Null]",
             u = "[object Undefined]",
             c = i.a ? i.a.toStringTag : void 0;
@@ -47269,7 +47314,7 @@
         }).call(t, n(113))
     }, function(e, t, n) {
         "use strict";
-        var r = n(700),
+        var r = n(701),
             i = n.i(r.a)(Object.getPrototypeOf, Object);
         t.a = i
     }, function(e, t, n) {
@@ -47311,7 +47356,7 @@
         t.a = r
     }, function(e, t, n) {
         "use strict";
-        var r = n(696),
+        var r = n(697),
             i = "object" == typeof self && self && self.Object === Object && self,
             a = r.a || i || Function("return this")();
         t.a = a
@@ -47336,11 +47381,11 @@
                 this.set(r[0], r[1])
             }
         }
-        var i = n(773),
-            a = n(774),
-            o = n(775),
-            s = n(776),
-            u = n(777);
+        var i = n(774),
+            a = n(775),
+            o = n(776),
+            s = n(777),
+            u = n(778);
         r.prototype.clear = i, r.prototype.delete = a, r.prototype.get = o, r.prototype.has = s, r.prototype.set = u, e.exports = r
     }, function(e, t, n) {
         var r = n(69),
@@ -47515,8 +47560,8 @@
         }
         var i = n(137),
             a = n(307),
-            o = n(768),
-            s = n(769),
+            o = n(769),
+            s = n(770),
             u = n(313),
             c = n(19),
             l = n(152),
@@ -47568,7 +47613,7 @@
             return !(!o(e) || a(e)) && (i(e) ? h : c).test(s(e))
         }
         var i = n(111),
-            a = n(782),
+            a = n(783),
             o = n(24),
             s = n(323),
             u = /[\\^$.*+?()[\]{}|]/g,
@@ -47596,7 +47641,7 @@
             return t
         }
         var i = n(147),
-            a = n(794),
+            a = n(795),
             o = Object.prototype,
             s = o.hasOwnProperty;
         e.exports = r
@@ -47610,7 +47655,7 @@
         }
         var i = n(24),
             a = n(147),
-            o = n(795),
+            o = n(796),
             s = Object.prototype,
             u = s.hasOwnProperty;
         e.exports = r
@@ -47632,8 +47677,8 @@
                 return n === e || i(n, e, t)
             }
         }
-        var i = n(724),
-            a = n(770),
+        var i = n(725),
+            a = n(771),
             o = n(318);
         e.exports = r
     }, function(e, t, n) {
@@ -47666,7 +47711,7 @@
         var i = n(137),
             a = n(295),
             o = n(196),
-            s = n(734),
+            s = n(735),
             u = n(24),
             c = n(71);
         e.exports = r
@@ -47699,7 +47744,7 @@
             h = n(24),
             m = n(153),
             v = n(210),
-            y = n(841);
+            y = n(842);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t) {
@@ -47707,7 +47752,7 @@
                 return a(e, n)
             })
         }
-        var i = n(736),
+        var i = n(737),
             a = n(326);
         e.exports = r
     }, function(e, t, n) {
@@ -47744,7 +47789,7 @@
         }
         var i = n(67),
             a = n(197),
-            o = n(720),
+            o = n(721),
             s = n(200),
             u = n(142),
             c = Array.prototype,
@@ -47778,7 +47823,7 @@
             i = Math.floor;
         e.exports = n
     }, function(e, t, n) {
-        var r = n(817),
+        var r = n(818),
             i = n(306),
             a = n(150),
             o = i ? function(e, t) {
@@ -47834,7 +47879,7 @@
             a = n(291),
             o = n(292),
             s = n(201),
-            u = n(765),
+            u = n(766),
             c = n(149),
             l = 200;
         e.exports = r
@@ -47843,8 +47888,8 @@
             return t = i(t, e), null == (e = o(e, t)) || delete e[s(a(t))]
         }
         var i = n(86),
-            a = n(827),
-            o = n(798),
+            a = n(828),
+            o = n(799),
             s = n(87);
         e.exports = r
     }, function(e, t, n) {
@@ -47880,7 +47925,7 @@
             var r = t ? n(o(e), s) : o(e);
             return a(r, i, new e.constructor)
         }
-        var i = n(707),
+        var i = n(708),
             a = n(194),
             o = n(317),
             s = 1;
@@ -47897,7 +47942,7 @@
             var r = t ? n(o(e), s) : o(e);
             return a(r, i, new e.constructor)
         }
-        var i = n(708),
+        var i = n(709),
             a = n(194),
             o = n(149),
             s = 1;
@@ -47936,8 +47981,8 @@
                 return u(n, e, o(r, 2), c)
             }
         }
-        var i = n(709),
-            a = n(713),
+        var i = n(710),
+            a = n(714),
             o = n(68),
             s = n(19);
         e.exports = r
@@ -47990,12 +48035,12 @@
             var r = i(t, l(e / u(t)));
             return s(t) ? o(c(r), 0, e).join("") : r.slice(0, e)
         }
-        var i = n(741),
+        var i = n(742),
             a = n(302),
-            o = n(749),
+            o = n(750),
             s = n(205),
             u = n(322),
-            c = n(808),
+            c = n(809),
             l = Math.ceil;
         e.exports = r
     }, function(e, t, n) {
@@ -48004,7 +48049,7 @@
                 return r && "number" != typeof r && a(t, n, r) && (n = r = void 0), t = o(t), void 0 === n ? (n = t, t = 0) : n = o(n), r = void 0 === r ? t < n ? 1 : -1 : o(r), i(t, n, r, e)
             }
         }
-        var i = n(739),
+        var i = n(740),
             a = n(146),
             o = n(329);
         e.exports = r
@@ -48027,7 +48072,7 @@
         e.exports = r
     }, function(e, t, n) {
         var r = n(287),
-            i = n(829),
+            i = n(830),
             a = n(149),
             o = r && 1 / a(new r([, -0]))[1] == 1 / 0 ? function(e) {
                 return new r(e)
@@ -48259,11 +48304,11 @@
             }
         }
         var i = n(202),
-            a = n(750),
-            o = n(751),
-            s = n(752),
-            u = n(753),
-            c = n(754),
+            a = n(751),
+            o = n(752),
+            s = n(753),
+            u = n(754),
+            c = n(755),
             l = n(305),
             d = "[object Boolean]",
             f = "[object Date]",
@@ -48304,7 +48349,7 @@
         function r(e) {
             return !!a && a in e
         }
-        var i = n(757),
+        var i = n(758),
             a = function() {
                 var e = /[^.]+$/.exec(i && i.keys && i.keys.IE_PROTO || "");
                 return e ? "Symbol(src)_1." + e : ""
@@ -48355,7 +48400,7 @@
                 string: new i
             }
         }
-        var i = n(704),
+        var i = n(705),
             a = n(136),
             o = n(191);
         e.exports = r
@@ -48514,12 +48559,12 @@
         function r(e) {
             return a(e) ? o(e) : i(e)
         }
-        var i = n(712),
+        var i = n(713),
             a = n(205),
-            o = n(811);
+            o = n(812);
         e.exports = r
     }, function(e, t, n) {
-        var r = n(793),
+        var r = n(794),
             i = /^\./,
             a = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
             o = /\\(\\)?/g,
@@ -48579,7 +48624,7 @@
         function r(e, t, n) {
             return void 0 === n && (n = t, t = void 0), void 0 !== n && (n = a(n), n = n === n ? n : 0), void 0 !== t && (t = a(t), t = t === t ? t : 0), i(a(e), t, n)
         }
-        var i = n(716),
+        var i = n(717),
             a = n(156);
         e.exports = r
     }, function(e, t, n) {
@@ -48668,14 +48713,14 @@
             return t = o(t) || 0, i(n) && (P = !!n.leading, C = "maxWait" in n, _ = C ? u(o(n.maxWait) || 0, t) : _, T = "trailing" in n ? !!n.trailing : T), y.cancel = m, y.flush = v, y
         }
         var i = n(24),
-            a = n(830),
+            a = n(831),
             o = n(156),
             s = "Expected a function",
             u = Math.max,
             c = Math.min;
         e.exports = r
     }, function(e, t, n) {
-        e.exports = n(820)
+        e.exports = n(821)
     }, function(e, t, n) {
         function r(e, t) {
             return (s(e) ? i : a)(e, o(t))
@@ -48697,14 +48742,14 @@
         function r(e, t) {
             return null != e && a(e, t, i)
         }
-        var i = n(718),
+        var i = n(719),
             a = n(314);
         e.exports = r
     }, function(e, t, n) {
         var r = n(67),
-            i = n(721),
+            i = n(722),
             a = n(110),
-            o = n(748),
+            o = n(749),
             s = a(function(e) {
                 var t = r(e, o);
                 return t.length && t[0] === e[0] ? i(t) : []
@@ -48763,7 +48808,7 @@
             var r = t ? a(e) : 0;
             return t && r < t ? i(t - r, n) + e : e
         }
-        var i = n(762),
+        var i = n(763),
             a = n(322),
             o = n(112),
             s = n(213);
@@ -48773,23 +48818,23 @@
             return o(e) ? i(s(e)) : a(e)
         }
         var i = n(300),
-            a = n(737),
+            a = n(738),
             o = n(206),
             s = n(87);
         e.exports = r
     }, function(e, t, n) {
         var r = n(110),
-            i = n(834),
+            i = n(835),
             a = r(i);
         e.exports = a
     }, function(e, t, n) {
         function r(e, t) {
             return e && e.length && t && t.length ? i(e, t) : e
         }
-        var i = n(738);
+        var i = n(739);
         e.exports = r
     }, function(e, t, n) {
-        var r = n(763),
+        var r = n(764),
             i = r();
         e.exports = i
     }, function(e, t, n) {
@@ -48814,7 +48859,7 @@
         }
         var i = n(294),
             a = n(68),
-            o = n(743),
+            o = n(744),
             s = n(19),
             u = n(146);
         e.exports = r
@@ -48834,7 +48879,7 @@
                 trailing: s
             })
         }
-        var i = n(818),
+        var i = n(819),
             a = n(24),
             o = "Expected a function";
         e.exports = r
@@ -48848,7 +48893,7 @@
     }, function(e, t, n) {
         var r = n(195),
             i = n(110),
-            a = n(745),
+            a = n(746),
             o = n(208),
             s = i(function(e) {
                 return a(r(e, 1, o, !0))
@@ -48957,7 +49002,7 @@
                 if (t.groups[n].hasOwnProperty("value") ? t.groups[n].hasOwnProperty("weight") ? t.groups[n].weight !== Math.floor(t.groups[n].weight) ? i = "has a non-integer weight" : t.groups[n].weight < 0 && (i = "has a negative weight") : i = "is missing a `weight` property" : i = "is missing a `value` property", i) return new r(e, t, "Group " + t.groups[n].value + " " + i);
             return null
         }
-        var a = n(845);
+        var a = n(846);
         t.validate = function(e) {
             for (var t in e)
                 if (e.hasOwnProperty(t)) {
@@ -48981,8 +49026,8 @@
             }).value
         }
     }, function(e, t, n) {
-        var r = n(843),
-            i = n(844),
+        var r = n(844),
+            i = n(845),
             a = n(331);
         t.DEFAULT_SPADE_URL = "//trowel.twitch.tv/", t.SPADE_URL_PROJECT_UUID = "4badc757-13a7-468c-99b6-e42aef7fc286", t.sendEvent = function(e, n, o, s) {
             var u = {
@@ -49156,7 +49201,7 @@
                     a._unhandledRejectionFn = e
                 }, void 0 !== e && e.exports ? e.exports = a : n.Promise || (n.Promise = a)
             }(this)
-        }).call(t, n(888).setImmediate)
+        }).call(t, n(889).setImmediate)
     }, function(e, t, n) {
         "use strict";
 
@@ -49180,15 +49225,15 @@
                 })
             })
         }
-        var a = n(627),
-            o = n(880),
+        var a = n(628),
+            o = n(881),
             s = Object.prototype.hasOwnProperty;
         e.exports = i
     }, function(e, t, n) {
         "use strict";
-        var r = n(853),
-            i = n(854),
-            a = n(852);
+        var r = n(854),
+            i = n(855),
+            a = n(853);
         e.exports = function() {
             function e(e, t, n, r, o, s) {
                 s !== a && i(!1, "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types")
@@ -49312,7 +49357,7 @@
             }(),
             l = n(0),
             d = r(l),
-            f = n(624),
+            f = n(625),
             p = r(f);
         t.CopyToClipboard = function(e) {
             function t() {
@@ -51454,15 +51499,15 @@
         }
         var mt = n(0);
         n(134);
-        var vt = n(669),
+        var vt = n(670),
             yt = n(215),
-            gt = n(668),
+            gt = n(669),
             bt = n(106),
             _t = n(281),
-            wt = n(675),
-            kt = n(670),
-            Et = n(671),
-            St = n(672);
+            wt = n(676),
+            kt = n(671),
+            Et = n(672),
+            St = n(673);
         mt || r("227");
         var Pt, Ct, Tt = {
                 Namespaces: {
@@ -54403,7 +54448,7 @@
             f = n.n(d),
             p = n(1),
             h = n.n(p),
-            m = n(677),
+            m = n(678),
             v = n.n(m),
             y = function() {
                 function e(e, t) {
@@ -54578,7 +54623,7 @@
             c = n.n(u),
             l = n(1),
             d = n.n(l),
-            f = n(862),
+            f = n(863),
             p = n.n(f),
             h = n(217),
             m = n(334),
@@ -54873,15 +54918,15 @@
         var d = n(0),
             f = n(335),
             p = r(f),
-            h = n(865),
+            h = n(866),
             m = r(h),
-            v = n(866),
+            v = n(867),
             y = r(v),
             g = n(336),
             b = (r(g), n(153)),
             _ = (r(b), n(282)),
             w = r(_),
-            k = n(694),
+            k = n(695),
             E = r(k),
             S = function(e) {
                 return {}
@@ -54925,7 +54970,7 @@
         "use strict";
         var r = n(106),
             i = n(134),
-            a = n(868);
+            a = n(869);
         e.exports = function() {
             function e(e, t, n, r, o, s) {
                 s !== a && i(!1, "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types")
@@ -54996,14 +55041,14 @@
                 }
                 return e
             },
-            u = n(623),
+            u = n(624),
             c = r(u),
             l = n(0),
             d = r(l),
-            f = n(871),
+            f = n(872),
             p = r(f),
-            h = n(891),
-            m = (r(h), n(873)),
+            h = n(892),
+            m = (r(h), n(874)),
             v = (p.default.any, p.default.func, p.default.node, {
                 component: "span",
                 childFactory: function(e) {
@@ -55096,7 +55141,7 @@
         "use strict";
         var r = n(106),
             i = n(134),
-            a = n(872);
+            a = n(873);
         e.exports = function() {
             function e(e, t, n, r, o, s) {
                 s !== a && i(!1, "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types")
@@ -55128,7 +55173,7 @@
             return n.checkPropTypes = r, n.PropTypes = n, n
         }
     }, function(e, t, n) {
-        e.exports = n(870)()
+        e.exports = n(871)()
     }, function(e, t, n) {
         "use strict";
         e.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
@@ -55796,9 +55841,9 @@
         }();
         t.a = x
     }, function(e, t, n) {
-        e.exports = n(881)
+        e.exports = n(882)
     }, function(e, t, n) {
-        var r = n(882);
+        var r = n(883);
         t.operation = function(e) {
             var n = t.timeouts(e);
             return new r(n, {
@@ -56004,14 +56049,14 @@
             })
         }
     }, function(e, t, n) {
-        e.exports = n(886)
+        e.exports = n(887)
     }, function(e, t, n) {
         "use strict";
         (function(e, r) {
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            var i, a = n(887),
+            var i, a = n(888),
                 o = function(e) {
                     return e && e.__esModule ? e : {
                         default: e
@@ -56054,7 +56099,7 @@
             t >= 0 && (e._idleTimeoutId = setTimeout(function() {
                 e._onTimeout && e._onTimeout()
             }, t))
-        }, n(883), t.setImmediate = setImmediate, t.clearImmediate = clearImmediate
+        }, n(884), t.setImmediate = setImmediate, t.clearImmediate = clearImmediate
     }, function(e, t) {
         e.exports = function() {
             var e = document.getSelection();
