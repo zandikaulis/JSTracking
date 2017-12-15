@@ -1,69 +1,5 @@
-webpackJsonp([63], {
-    1253: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return s.__awaiter(this, void 0, void 0, function() {
-                var t;
-                return s.__generator(this, function(n) {
-                    return t = {
-                        login: e.login,
-                        user_id: Number(e.userId),
-                        channel: e.channel,
-                        channel_id: e.channelId,
-                        clickthrough_location: e.clickthroughLocation
-                    }, a.m.track(o.SpadeEventType.SubsLandingStreamerClick, t), [2]
-                })
-            })
-        }
-
-        function r(e) {
-            return s.__awaiter(this, void 0, void 0, function() {
-                var t, n;
-                return s.__generator(this, function(i) {
-                    if (t = null, e.isSubscribedCurrentTier) switch (e.isSubscribedCurrentTier) {
-                        case "1000":
-                            t = "$4.99";
-                            break;
-                        case "2000":
-                            t = "$9.99";
-                            break;
-                        case "3000":
-                            t = "$24.99"
-                    }
-                    return n = {
-                        action: e.action,
-                        can_subscribe: e.canSubscribe,
-                        channel: e.channelLogin,
-                        channel_id: e.channelID,
-                        checkout_button_tier: e.checkoutButtonTier,
-                        has_sub_credit: e.hasSubCredit,
-                        host_channel: e.hostChannelLogin,
-                        host_channel_id: e.hostChannelID,
-                        is_menu_open: e.isMenuOpen,
-                        is_subscribed: e.isSubscribed,
-                        is_subscribed_current_tier: t,
-                        sub_location: e.sub_location,
-                        modal: e.modal,
-                        modal_level: "",
-                        show_prime_content: e.showPrimeContent,
-                        show_resub: e.showResub,
-                        vod_id: "",
-                        vod_type: "",
-                        viewport_height: window.innerHeight,
-                        viewport_width: window.innerWidth
-                    }, a.m.track(o.SpadeEventType.Subscription, n), [2]
-                })
-            })
-        }
-        t.a = i, t.b = r;
-        var s = n(0),
-            a = n(2),
-            o = n(13)
-    },
-    2024: function(e, t) {},
-    2025: function(e, t) {},
-    2026: function(e, t) {
+webpackJsonp([64], {
+    "027l": function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -211,11 +147,11 @@ webpackJsonp([63], {
             }],
             loc: {
                 start: 0,
-                end: 221
+                end: 182
             }
         };
         n.loc.source = {
-            body: "query SubsBroadcaster($currentChannelLogin: String!) {\n  user(login: $currentChannelLogin) {\n    id\n    displayName\n    description\n    roles{\n      isPartner\n    }\n    bannerImageURL\n    profileImageURL(width:300)\n  }\n}\n",
+            body: "query SubsBroadcaster($currentChannelLogin: String!) {\nuser(login: $currentChannelLogin) {\nid\ndisplayName\ndescription\nroles{\nisPartner\n}\nbannerImageURL\nprofileImageURL(width:300)\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -224,8 +160,9 @@ webpackJsonp([63], {
         };
         e.exports = n
     },
-    2027: function(e, t) {},
-    2028: function(e, t) {
+    "5EZR": function(e, t) {},
+    CqGj: function(e, t) {},
+    "Ie7/": function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -518,11 +455,11 @@ webpackJsonp([63], {
             }],
             loc: {
                 start: 0,
-                end: 471
+                end: 290
             }
         };
         n.loc.source = {
-            body: "query SubsBroadcaster($currentChannelLogin: String!) {\n  user(login: $currentChannelLogin) {\n    id\n    displayName\n    login\n    subscriptionProducts{\n      id\n      url\n      price\n      emotes{\n        id\n        token\n      }\n      emoteSetID\n      self {\n        promotion {\n          newPrice\n          oldPrice\n          discountValue\n          discountType\n        }\n      }\n    }\n    self{\n      subscriptionBenefit {\n        id\n        tier\n      }\n    }\n  }\n}\n",
+            body: "query SubsBroadcaster($currentChannelLogin: String!) {\nuser(login: $currentChannelLogin) {\nid\ndisplayName\nlogin\nsubscriptionProducts{\nid\nurl\nprice\nemotes{\nid\ntoken\n}\nemoteSetID\nself {\npromotion {\nnewPrice\noldPrice\ndiscountValue\ndiscountType\n}\n}\n}\nself{\nsubscriptionBenefit {\nid\ntier\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -531,29 +468,156 @@ webpackJsonp([63], {
         };
         e.exports = n
     },
-    2096: function(e, t, n) {
+    XFEc: function(e, t, n) {
+        "use strict";
+        t.a = function(e) {
+            return i.__awaiter(this, void 0, void 0, function() {
+                var t;
+                return i.__generator(this, function(n) {
+                    return t = {
+                        login: e.login,
+                        user_id: Number(e.userId),
+                        channel: e.channel,
+                        channel_id: e.channelId,
+                        clickthrough_location: e.clickthroughLocation
+                    }, r.m.track(s.SpadeEventType.SubsLandingStreamerClick, t), [2]
+                })
+            })
+        }, t.b = function(e) {
+            return i.__awaiter(this, void 0, void 0, function() {
+                var t, n;
+                return i.__generator(this, function(i) {
+                    if (t = null, e.isSubscribedCurrentTier) switch (e.isSubscribedCurrentTier) {
+                        case "1000":
+                            t = "$4.99";
+                            break;
+                        case "2000":
+                            t = "$9.99";
+                            break;
+                        case "3000":
+                            t = "$24.99"
+                    }
+                    return n = {
+                        action: e.action,
+                        can_subscribe: e.canSubscribe,
+                        channel: e.channelLogin,
+                        channel_id: e.channelID,
+                        checkout_button_tier: e.checkoutButtonTier,
+                        has_sub_credit: e.hasSubCredit,
+                        host_channel: e.hostChannelLogin,
+                        host_channel_id: e.hostChannelID,
+                        is_menu_open: e.isMenuOpen,
+                        is_subscribed: e.isSubscribed,
+                        is_subscribed_current_tier: t,
+                        sub_location: e.sub_location,
+                        modal: e.modal,
+                        modal_level: "",
+                        show_prime_content: e.showPrimeContent,
+                        show_resub: e.showResub,
+                        vod_id: "",
+                        vod_type: "",
+                        viewport_height: window.innerHeight,
+                        viewport_width: window.innerWidth
+                    }, r.m.track(s.SpadeEventType.Subscription, n), [2]
+                })
+            })
+        };
+        var i = n("TToO"),
+            r = n("6sO2"),
+            s = n("vH/s")
+    },
+    bPto: function(e, t) {},
+    "j7/Y": function(e, t, n) {
+        "use strict";
+
+        function i(e) {
+            return function(t) {
+                var n = function(n) {
+                    function i(t) {
+                        var i = n.call(this, t) || this;
+                        return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
+                            if (!(i.tracked || e.skip && e.skip(i.props))) {
+                                i.tracked = !0, c.n.adBlockSentinel.pageTransition();
+                                var t = {};
+                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = r.__assign({}, e.properties));
+                                var n = r.__assign({}, i.props);
+                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
+                                var s = i.referenceTracking,
+                                    a = s.content,
+                                    o = s.medium,
+                                    l = s.content_index;
+                                c.n.tracking.trackPageview(r.__assign({
+                                    content: a,
+                                    medium: o,
+                                    content_index: l,
+                                    location: e.location
+                                }, t))
+                            }
+                        }, c.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                    }
+                    return r.__extends(i, n), i.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
+                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
+                        })
+                    }, i.prototype.componentDidUpdate = function() {
+                        this.trackPageview()
+                    }, i.prototype.render = function() {
+                        return a.createElement(t, r.__assign({}, this.props))
+                    }, i.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? s.parse(e.search) : {},
+                            n = {
+                                content: t.tt_content,
+                                content_index: t.tt_content_index,
+                                medium: t.tt_medium
+                            };
+                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
+                            var i = "",
+                                r = s.stringify(t);
+                            r.length > 0 && (i = "?" + r), this.props.history.replace({
+                                pathname: e.pathname,
+                                hash: e.hash,
+                                search: i
+                            })
+                        }
+                        return n
+                    }, i
+                }(a.Component);
+                return Object(o.f)(n)
+            }
+        }
+        var r = n("TToO"),
+            s = n("OAwv"),
+            a = n("U7vG"),
+            o = n("F8kA"),
+            c = n("6sO2");
+        n.d(t, "a", function() {
+            return i
+        })
+    },
+    uy5s: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var i, r = n(7),
-            s = n(0),
-            a = n(1),
-            o = n(2),
-            c = n(70),
-            l = n(28),
-            u = n(6),
-            d = n(830),
-            p = n(828),
-            m = n(13),
-            b = n(89),
-            h = n(5),
-            g = n(136),
-            v = n(279),
-            k = n(280),
-            y = n(142),
-            f = n(90),
-            S = n(3),
+        var i, r = n("RH2O"),
+            s = n("TToO"),
+            a = n("U7vG"),
+            o = n("6sO2"),
+            c = n("yWCw"),
+            l = n("zCIC"),
+            u = n("7vx8"),
+            d = n("j7/Y"),
+            p = n("w9tK"),
+            m = n("vH/s"),
+            b = n("Tzcg"),
+            h = n("CSlQ"),
+            g = n("pQNb"),
+            v = n("7LIQ"),
+            k = n("37Pp"),
+            y = n("YEG/"),
+            f = n("FDYX"),
+            S = n("Odds"),
             T = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -580,13 +644,12 @@ webpackJsonp([63], {
                     })
                 }, t
             }(a.Component),
-            _ = T,
-            P = n(1253);
-        n(2024);
+            _ = n("XFEc");
+        n("CqGj");
         ! function(e) {
             e[e.Tier1 = 0] = "Tier1", e[e.Tier2 = 1] = "Tier2", e[e.Tier3 = 2] = "Tier3"
         }(i || (i = {}));
-        var E = function(e) {
+        var P = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -614,7 +677,7 @@ webpackJsonp([63], {
                                 })
                         }
                     }, t.onSubClick = function(e) {
-                        Object(P.b)({
+                        Object(_.b)({
                             action: e.action,
                             canSubscribe: !t.props.subTier || "3000" !== t.props.subTier,
                             channelID: t.props.channelId,
@@ -755,14 +818,14 @@ webpackJsonp([63], {
                     var e = [];
                     if (this.state.activeTab === i.Tier2 || this.state.activeTab === i.Tier3) {
                         var t = this.props.subscriptionProducts[1];
-                        e.push(a.createElement(_, {
+                        e.push(a.createElement(T, {
                             key: "bonus-emote-" + i.Tier2,
                             subscriptionProduct: t
                         }))
                     }
                     if (this.state.activeTab === i.Tier3) {
-                        var t = this.props.subscriptionProducts[2];
-                        e.push(a.createElement(_, {
+                        t = this.props.subscriptionProducts[2];
+                        e.push(a.createElement(T, {
                             key: "bonus-emote-" + i.Tier3,
                             subscriptionProduct: t
                         }))
@@ -785,9 +848,8 @@ webpackJsonp([63], {
                     }))
                 }, t = s.__decorate([Object(h.c)("SubPlanTabs")], t)
             }(a.Component),
-            C = E,
-            N = (n(2025), n(2026)),
-            w = function(e) {
+            E = (n("bPto"), n("027l")),
+            C = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -861,7 +923,7 @@ webpackJsonp([63], {
                     }, a.createElement(S._22, {
                         color: S.F.Overlay
                     }, Object(o.d)("Verified Twitch Partner", "SubsBroadcasterBanner")))) : null
-                }, t = s.__decorate([Object(h.c)("SubsBroadcasterBanner"), Object(u.a)(N, {
+                }, t = s.__decorate([Object(h.c)("SubsBroadcasterBanner"), Object(u.a)(E, {
                     options: function(e) {
                         return {
                             variables: {
@@ -871,12 +933,11 @@ webpackJsonp([63], {
                     }
                 })], t)
             }(a.Component),
-            x = w,
-            D = (n(2027), function(e) {
+            N = (n("5EZR"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onSubClick = function(e) {
-                        Object(P.b)({
+                        Object(_.b)({
                             action: e.action,
                             canSubscribe: !t.props.subTier || "3000" !== t.props.subTier,
                             channelID: t.props.channelId,
@@ -1006,7 +1067,7 @@ webpackJsonp([63], {
                             n.push(this.props.subscriptionProducts[1])
                     }
                     return t = n.map(function(e, t) {
-                        return a.createElement(_, {
+                        return a.createElement(T, {
                             key: "subs-broadcaster__bonus-emote-" + t,
                             subscriptionProduct: e,
                             hidePrice: !0
@@ -1026,9 +1087,8 @@ webpackJsonp([63], {
                     }
                 }, t = s.__decorate([Object(h.c)("SubsPlanTiers")], t)
             }(a.Component)),
-            F = D,
-            I = n(2028),
-            B = function(e) {
+            w = n("Ie7/"),
+            F = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1068,7 +1128,7 @@ webpackJsonp([63], {
                         display: S.H.Flex,
                         justifyContent: S.T.Center,
                         alignItems: S.c.Center
-                    }, a.createElement(S.Y, null))) : a.createElement(l.b, null, a.createElement(S.U, null, a.createElement(x, {
+                    }, a.createElement(S.Y, null))) : a.createElement(l.b, null, a.createElement(S.U, null, a.createElement(C, {
                         channelName: this.props.match.params.channelName
                     }), a.createElement(g.a, {
                         subscriptionProducts: this.state.subscriptionProducts
@@ -1079,7 +1139,7 @@ webpackJsonp([63], {
                         breakpointMedium: {
                             display: S.H.Hide
                         }
-                    }, a.createElement(C, {
+                    }, a.createElement(P, {
                         channelDisplayName: this.props.data.user.displayName,
                         channelId: this.props.data.user.id,
                         channelLogin: this.props.data.user.login,
@@ -1094,13 +1154,13 @@ webpackJsonp([63], {
                         breakpointMedium: {
                             display: S.H.Flex
                         }
-                    }, a.createElement(F, {
+                    }, a.createElement(N, {
                         subscriptionProducts: this.state.subscriptionProducts,
                         subTier: this.state.subTier,
                         channelId: this.props.data.user.id,
                         channelLogin: this.props.data.user.login
                     }))))
-                }, t = s.__decorate([Object(u.a)(I, {
+                }, t = s.__decorate([Object(u.a)(w, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1114,13 +1174,12 @@ webpackJsonp([63], {
                     location: m.PageviewLocation.SubsBroadcasterPage
                 })], t)
             }(a.Component),
-            O = B,
-            L = Object(r.a)()(O);
+            x = Object(r.a)()(F);
         n.d(t, "SubsBroadcasterPage", function() {
-            return L
+            return x
         })
     },
-    828: function(e, t, n) {
+    w9tK: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
@@ -1129,7 +1188,6 @@ webpackJsonp([63], {
             BrowseCommunities: "browse.communities",
             BrowseCreative: "browse.creative",
             BrowseGamesAndCommunities: "browse.games-and-communities",
-            BrowseForYou: "browse.for-you",
             ChannelIndex: "channel.index.index",
             ChannelDashboardAchievements: "channel.dashboard.achievements",
             ChannelDashboardExtensions: "channel.dashboard.extensions",
@@ -1159,6 +1217,7 @@ webpackJsonp([63], {
             DirectoryFollowingCommunities: "directory.following.communities",
             EmailVerification: "emailVerification",
             EventDetails: "event.details",
+            ForYou: "for-you",
             Index: "index",
             MyClipsManager: "videoManager.clips",
             NotificationSettingsPage: "settings.notificationSettings",
@@ -1180,74 +1239,6 @@ webpackJsonp([63], {
             VideoManagerUploadPage: "videoManager.upload",
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
-    },
-    830: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return function(t) {
-                var n = function(n) {
-                    function i(t) {
-                        var i = n.call(this, t) || this;
-                        return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
-                            if (!(i.tracked || e.skip && e.skip(i.props))) {
-                                i.tracked = !0, c.n.adBlockSentinel.pageTransition();
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = r.__assign({}, e.properties));
-                                var n = r.__assign({}, i.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var s = i.referenceTracking,
-                                    a = s.content,
-                                    o = s.medium,
-                                    l = s.content_index;
-                                c.n.tracking.trackPageview(r.__assign({
-                                    content: a,
-                                    medium: o,
-                                    content_index: l,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, c.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
-                    }
-                    return r.__extends(i, n), i.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, i.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, i.prototype.render = function() {
-                        return a.createElement(t, r.__assign({}, this.props))
-                    }, i.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? s.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var i = "",
-                                r = s.stringify(t);
-                            r.length > 0 && (i = "?" + r), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: i
-                            })
-                        }
-                        return n
-                    }, i
-                }(a.Component);
-                return Object(o.f)(n)
-            }
-        }
-        var r = n(0),
-            s = n(21),
-            a = n(1),
-            o = n(12),
-            c = n(2);
-        n.d(t, "a", function() {
-            return i
-        })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-9872e0dfe77fd8f73cd0e02609879cc8.js.map
+//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-5bd81ed67f8122182c94f5c1074ccbbd.js.map

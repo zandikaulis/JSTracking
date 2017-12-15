@@ -1,5 +1,112 @@
-webpackJsonp([55], {
-    1937: function(e, t) {
+webpackJsonp([56], {
+    DkuH: function(e, t, n) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        });
+        var r = n("RH2O"),
+            o = n("2KeS"),
+            a = n("+xm8"),
+            i = n("f2i/"),
+            s = n("Aj/L"),
+            l = n("TToO"),
+            p = n("OAwv"),
+            c = n("U7vG"),
+            u = n("6sO2"),
+            d = n("7vx8"),
+            m = n("CSlQ"),
+            g = n("LjAQ"),
+            h = n("A5Hr"),
+            f = n("mw/a"),
+            b = n("Odds"),
+            k = n("ucSk"),
+            v = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.getReportingContext = function() {
+                        var e = p.parse(t.props.location.search);
+                        return {
+                            contentType: e.contentType ? e.contentType : f.a.User,
+                            contentID: e.contentId,
+                            targetUserID: t.props.userToReportData.user.id
+                        }
+                    }, t.handleReportUserClose = function(e) {
+                        e !== g.b.MutationError && e !== g.b.Success || t.props.history.push("/")
+                    }, t
+                }
+                return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive(), this.props.isLoggedIn || this.props.login()
+                }, t.prototype.render = function() {
+                    return c.createElement(b.U, {
+                        "data-test-selector": "report-user-page",
+                        alignItems: b.c.Center,
+                        display: b.H.Flex,
+                        flexDirection: b.J.Column,
+                        fullHeight: !0,
+                        padding: 3
+                    }, this.renderPage())
+                }, t.prototype.renderPage = function() {
+                    return this.props.isLoggedIn ? this.props.userToReportData.error ? c.createElement(b.U, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, c.createElement(b._22, {
+                        fontSize: b.L.Size5
+                    }, Object(u.d)("There was an unexpected error. Please refresh the page and try again", "ReportUserPage"))) : this.props.userToReportData && !this.props.userToReportData.loading && this.props.userToReportData.user ? c.createElement(h.a, {
+                        onClose: this.handleReportUserClose,
+                        reportContext: this.getReportingContext(),
+                        title: Object(u.d)("Report {channelName}", {
+                            channelName: this.props.match.params.channelName
+                        }, "ReportUserPage")
+                    }) : c.createElement(b._2, {
+                        lineCount: 3
+                    }) : c.createElement(b.U, {
+                        "data-test-selector": "report-user-page__logged-out",
+                        alignItems: b.c.Center,
+                        display: b.H.Flex,
+                        flexDirection: b.J.Column
+                    }, c.createElement(b.U, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, c.createElement(b._22, {
+                        fontSize: b.L.Size5
+                    }, Object(u.d)("You must be logged in to report {channelName}. Please log in to complete.", {
+                        channelName: this.props.match.params.channelName
+                    }, "ReportUserPage"))), c.createElement(b.u, {
+                        onClick: this.props.login
+                    }, Object(u.d)("Log in", "ReportUserPage")))
+                }, t = l.__decorate([Object(d.a)(k, {
+                    name: "userToReportData",
+                    options: function(e) {
+                        return {
+                            variables: {
+                                login: e.match.params.channelName
+                            }
+                        }
+                    }
+                }), Object(m.c)("ReportUserPage", {
+                    autoReportInteractive: !0,
+                    destination: "reportUser.page"
+                })], t)
+            }(c.Component),
+            R = Object(r.a)(function(e) {
+                return {
+                    isLoggedIn: Object(s.d)(e),
+                    currentUser: Object(s.c)(e)
+                }
+            }, function(e) {
+                return Object(o.bindActionCreators)({
+                    login: function() {
+                        return Object(i.f)(a.a.ReportChannel)
+                    }
+                }, e)
+            })(v);
+        n.d(t, "ReportUserPage", function() {
+            return R
+        })
+    },
+    ucSk: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -74,11 +181,11 @@ webpackJsonp([55], {
             }],
             loc: {
                 start: 0,
-                end: 82
+                end: 73
             }
         };
         n.loc.source = {
-            body: "query ReportUserPage_User($login: String!) {\n  user(login: $login) {\n    id\n  }\n}\n",
+            body: "query ReportUserPage_User($login: String!) {\nuser(login: $login) {\nid\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -86,118 +193,6 @@ webpackJsonp([55], {
             }
         };
         e.exports = n
-    },
-    2084: function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return {
-                isLoggedIn: Object(p.d)(e),
-                currentUser: Object(p.c)(e)
-            }
-        }
-
-        function o(e) {
-            return Object(i.bindActionCreators)({
-                login: function() {
-                    return Object(l.f)(s.a.ReportChannel)
-                }
-            }, e)
-        }
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        });
-        var a = n(7),
-            i = n(9),
-            s = n(56),
-            l = n(39),
-            p = n(17),
-            c = n(0),
-            u = n(21),
-            d = n(1),
-            m = n(2),
-            g = n(6),
-            h = n(5),
-            f = n(143),
-            b = n(281),
-            k = n(265),
-            v = n(3),
-            R = n(1937),
-            y = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.getReportingContext = function() {
-                        var e = u.parse(t.props.location.search);
-                        return {
-                            contentType: e.contentType ? e.contentType : k.a.User,
-                            contentID: e.contentId,
-                            targetUserID: t.props.userToReportData.user.id
-                        }
-                    }, t.handleReportUserClose = function(e) {
-                        e !== f.b.MutationError && e !== f.b.Success || t.props.history.push("/")
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive(), this.props.isLoggedIn || this.props.login()
-                }, t.prototype.render = function() {
-                    return d.createElement(v.U, {
-                        "data-test-selector": "report-user-page",
-                        alignItems: v.c.Center,
-                        display: v.H.Flex,
-                        flexDirection: v.J.Column,
-                        fullHeight: !0,
-                        padding: 3
-                    }, this.renderPage())
-                }, t.prototype.renderPage = function() {
-                    return this.props.isLoggedIn ? this.props.userToReportData.error ? d.createElement(v.U, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, d.createElement(v._22, {
-                        fontSize: v.L.Size5
-                    }, Object(m.d)("There was an unexpected error. Please refresh the page and try again", "ReportUserPage"))) : this.props.userToReportData && !this.props.userToReportData.loading && this.props.userToReportData.user ? d.createElement(b.a, {
-                        onClose: this.handleReportUserClose,
-                        reportContext: this.getReportingContext(),
-                        title: Object(m.d)("Report {channelName}", {
-                            channelName: this.props.match.params.channelName
-                        }, "ReportUserPage")
-                    }) : d.createElement(v._2, {
-                        lineCount: 3
-                    }) : d.createElement(v.U, {
-                        "data-test-selector": "report-user-page__logged-out",
-                        alignItems: v.c.Center,
-                        display: v.H.Flex,
-                        flexDirection: v.J.Column
-                    }, d.createElement(v.U, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, d.createElement(v._22, {
-                        fontSize: v.L.Size5
-                    }, Object(m.d)("You must be logged in to report {channelName}. Please log in to complete.", {
-                        channelName: this.props.match.params.channelName
-                    }, "ReportUserPage"))), d.createElement(v.u, {
-                        onClick: this.props.login
-                    }, Object(m.d)("Log in", "ReportUserPage")))
-                }, t = c.__decorate([Object(g.a)(R, {
-                    name: "userToReportData",
-                    options: function(e) {
-                        return {
-                            variables: {
-                                login: e.match.params.channelName
-                            }
-                        }
-                    }
-                }), Object(h.c)("ReportUserPage", {
-                    autoReportInteractive: !0,
-                    destination: "reportUser.page"
-                })], t)
-            }(d.Component),
-            U = y,
-            N = Object(a.a)(r, o)(U);
-        n.d(t, "ReportUserPage", function() {
-            return N
-        })
     }
 });
-//# sourceMappingURL=pages.report-user-page-fd3597802c6729256581c9ef74d94b6b.js.map
+//# sourceMappingURL=pages.report-user-page-6b9bf7f2ade846a2f8246dedd0ce3e41.js.map
