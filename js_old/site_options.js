@@ -2763,6 +2763,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "972e1ccb-1a06-4d0b-ad83-519df7b44891": {
+            "name": "ios_enable_rooms_v2",
+            "v": 2682,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "97f8559c-1077-4480-ad07-b64f1c9b8529": {
             "name": "android_auto_video_quality",
             "v": 2201,
