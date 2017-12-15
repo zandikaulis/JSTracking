@@ -4182,6 +4182,18 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "e3493262-e9b1-4ea8-b621-1f7ed544fad2": {
+            "name": "twitch_prime_poc",
+            "v": 2686,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "C"
+            }, {
+                "weight": 0,
+                "value": "T1"
+            }]
+        },
         "e35023b2-1cfc-4e73-b5ab-30f36d2afc4d": {
             "name": "ios_host_transition",
             "v": 2351,
