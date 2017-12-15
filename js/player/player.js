@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".5faca24de93aa579d7b0.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".d79ed8f585d065f26efd.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -476,6 +476,19 @@
                 }]), t
             }(p.a)
     }, function(e, t, n) {
+        function r(e, t, n, r) {
+            e = a(e) ? e : u(e), n = n && !r ? s(n) : 0;
+            var l = e.length;
+            return n < 0 && (n = c(l + n, 0)), o(e) ? n <= l && e.indexOf(t, n) > -1 : !!l && i(e, t, n) > -1
+        }
+        var i = n(197),
+            a = n(49),
+            o = n(118),
+            s = n(112),
+            u = n(330),
+            c = Math.max;
+        e.exports = r
+    }, function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -538,19 +551,6 @@
                 tabIndex: "0"
             };
         i.propTypes = c, i.defaultProps = l
-    }, function(e, t, n) {
-        function r(e, t, n, r) {
-            e = a(e) ? e : u(e), n = n && !r ? s(n) : 0;
-            var l = e.length;
-            return n < 0 && (n = c(l + n, 0)), o(e) ? n <= l && e.indexOf(t, n) > -1 : !!l && i(e, t, n) > -1
-        }
-        var i = n(197),
-            a = n(49),
-            o = n(118),
-            s = n(112),
-            u = n(330),
-            c = Math.max;
-        e.exports = r
     }, function(e, t, n) {
         "use strict";
 
@@ -1543,7 +1543,7 @@
             y = n(8),
             g = n(11),
             b = n(26),
-            _ = n(10),
+            _ = n(9),
             w = n.n(_),
             k = n(35),
             E = n(43),
@@ -2772,7 +2772,7 @@
         var s = n(94),
             u = (n.n(s), n(5)),
             c = n.n(u),
-            l = n(10),
+            l = n(9),
             d = n.n(l),
             f = n(332),
             p = n.n(f),
@@ -3189,7 +3189,7 @@
         }), n.d(t, "i", function() {
             return P
         }), t.j = r, t.a = i, t.d = a, t.e = o, t.l = s, t.k = c, t.b = l;
-        var d = n(10),
+        var d = n(9),
             f = n.n(d),
             p = n(20),
             h = n(26),
@@ -3343,7 +3343,7 @@
             m = n(43),
             v = n(125),
             y = n(8),
-            g = n(10),
+            g = n(9),
             b = n.n(g),
             _ = "preroll",
             w = "midroll",
@@ -3651,7 +3651,7 @@
             s = n.n(o),
             u = n(1),
             c = n.n(u),
-            l = n(10),
+            l = n(9),
             d = n.n(l),
             f = n(595),
             p = n(597),
@@ -4703,7 +4703,7 @@
             k = n.n(w),
             E = n(73),
             S = n.n(E),
-            P = n(10),
+            P = n(9),
             C = n.n(P),
             T = n(826),
             O = n.n(T),
@@ -5258,7 +5258,7 @@
             f = n(114),
             p = n(115),
             h = n(6),
-            m = n(10),
+            m = n(9),
             v = n.n(m),
             y = "web",
             g = "mobile_web",
@@ -5328,7 +5328,7 @@
         }), t.f = r;
         var i = n(5),
             a = n.n(i),
-            o = n(10),
+            o = n(9),
             s = n.n(o),
             u = n(122),
             c = "unavailable",
@@ -8478,7 +8478,7 @@
         });
         var i = n(5),
             a = n.n(i),
-            o = n(10),
+            o = n(9),
             s = n.n(o),
             u = n(28),
             c = (n.n(u), n(839)),
@@ -9714,7 +9714,7 @@
             d = n.n(l),
             f = n(5),
             p = n.n(f),
-            h = n(10),
+            h = n(9),
             m = n.n(h),
             v = function() {
                 function e(e, t) {
@@ -10759,7 +10759,7 @@
             p = n(38),
             h = n(23),
             m = n(6),
-            v = n(10),
+            v = n(9),
             y = n.n(v),
             g = Object.freeze([m.a, m.e, m.i, m.d, m.p, m.q]),
             b = Object.freeze(["misterrogers", "contv", "failarmy", "primevideo"]),
@@ -12010,7 +12010,7 @@
             a = n.n(i),
             o = n(1),
             s = n.n(o),
-            u = n(9),
+            u = n(10),
             c = n(4),
             l = n(2),
             d = n.n(l),
@@ -13140,7 +13140,7 @@
         }), n.d(t, "a", function() {
             return _
         });
-        var i = n(10),
+        var i = n(9),
             a = n.n(i),
             o = n(33),
             s = n.n(o),
@@ -13971,7 +13971,7 @@
             B = n.n(q),
             F = n(29),
             V = n.n(F),
-            H = n(10),
+            H = n(9),
             z = n.n(H),
             W = n(118),
             K = n.n(W),
@@ -16395,7 +16395,7 @@
             h = n(6),
             m = n(824),
             v = n.n(m),
-            y = n(10),
+            y = n(9),
             g = n.n(y),
             b = Object.freeze((o = {}, r(o, s.a, s.b), r(o, l.a, l.b), r(o, c.a, c.b), r(o, u.a, u.b), r(o, d.a, d.b), r(o, p.a, p.b), r(o, f.a, f.b), o)),
             _ = Object.freeze([u.a, c.a, l.a, s.a, d.a, f.a]),
@@ -16475,7 +16475,7 @@
             i = n.n(r),
             a = n(1),
             o = n.n(a),
-            s = n(9),
+            s = n(10),
             u = n(2),
             c = n.n(u),
             l = {
@@ -17595,7 +17595,7 @@
             u = n(1),
             c = n.n(u),
             l = n(3),
-            d = (n.n(l), n(10)),
+            d = (n.n(l), n(9)),
             f = n.n(d),
             p = n(523),
             h = n(26),
@@ -17747,7 +17747,7 @@
             l = n(3),
             d = (n.n(l), n(527)),
             f = n(26),
-            p = n(10),
+            p = n(9),
             h = n.n(p),
             m = n(15),
             v = n(20),
@@ -21754,7 +21754,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.12.15-205136+0bec6a5a90d4a6c6187dd3037d2f88e0be9ed26d",
+                    app_version: "2017.12.15-211606+2d8f58747d9e0ec0620362d0dffe90661f370384",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -21839,7 +21839,7 @@
         t.a = r;
         var i = n(29),
             a = n.n(i),
-            o = n(10),
+            o = n(9),
             s = n.n(o),
             u = n(414),
             c = n(416),
@@ -22196,7 +22196,7 @@
             E = n(74),
             S = n(182),
             P = n(129),
-            C = n(10),
+            C = n(9),
             T = n.n(C),
             O = n(161),
             x = n(20),
@@ -22620,7 +22620,7 @@
             s = n(60),
             u = n(23),
             c = n(38),
-            l = n(10),
+            l = n(9),
             d = n.n(l),
             f = function() {
                 function e(e, t) {
@@ -22710,10 +22710,10 @@
 
         function i(e) {
             var t = e.which || e.keyCode || e.charCode;
-            return e.key ? e.key : b[t]
+            return e.key ? e.key : w[t]
         }
         n.d(t, "a", function() {
-            return _
+            return k
         });
         var a = n(13),
             o = n(71),
@@ -22727,7 +22727,9 @@
             h = n(15),
             m = n(63),
             v = n(186),
-            y = function() {
+            y = n(9),
+            g = n.n(y),
+            b = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -22738,9 +22740,9 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            g = "Control",
-            b = Object.freeze({
-                17: g,
+            _ = "Control",
+            w = Object.freeze({
+                17: _,
                 32: " ",
                 33: "PageUp",
                 34: "PageDown",
@@ -22753,7 +22755,7 @@
                 188: ",",
                 190: "."
             }),
-            _ = function() {
+            k = function() {
                 function e(t, n, a, o) {
                     var s = this;
                     r(this, e), this.ctrl = !1, this.store = a, this.player = t, this.root = n, this.unsubs = [], this._initSubscribes(), this.rootKeydownListener = function(e) {
@@ -22764,10 +22766,10 @@
                             o = a.getState().ui.isMini;
                         n || r || i || o || s.keydownHandler(e)
                     }, this.rootKeyupListener = function(e) {
-                        i(e) === g && (s.ctrl = !1)
+                        i(e) === _ && (s.ctrl = !1)
                     }, n.setAttribute("tabindex", o.tabindex || -1), n.addEventListener("keydown", this.rootKeydownListener), n.addEventListener("keyup", this.rootKeyupListener), this.updateHandlers(a.getState())
                 }
-                return y(e, [{
+                return b(e, [{
                     key: "_initSubscribes",
                     value: function() {
                         this.unsubs.push(n.i(a.a)(this.store, ["env.playerType"], this.updateHandlers.bind(this)))
@@ -22775,7 +22777,9 @@
                 }, {
                     key: "updateHandlers",
                     value: function(e) {
-                        e.env.playerType === l.p ? this.keydownHandler = this.handleClipsViewingHotkeys : this.keydownHandler = this.handlePlayerHotkeys
+                        var t = e.env,
+                            n = t.playerType;
+                        g()(l.f, n) ? this.keydownHandler = this.handleClipsViewingHotkeys : this.keydownHandler = this.handlePlayerHotkeys
                     }
                 }, {
                     key: "seekSeconds",
@@ -22830,7 +22834,7 @@
                         var t = this.store,
                             r = this.player;
                         switch (i(e)) {
-                            case g:
+                            case _:
                                 this.ctrl = !0;
                                 break;
                             case " ":
@@ -22878,7 +22882,7 @@
                     value: function(e) {
                         var t = this.store;
                         switch (i(e)) {
-                            case g:
+                            case _:
                                 this.ctrl = !0;
                                 break;
                             case " ":
@@ -22944,7 +22948,7 @@
             s = n(12),
             u = n(128),
             c = n(13),
-            l = n(10),
+            l = n(9),
             d = n.n(l),
             f = n(81),
             p = n(34),
@@ -23245,7 +23249,7 @@
             s = n(8),
             u = n(128),
             c = n(13),
-            l = n(10),
+            l = n(9),
             d = n.n(l),
             f = function() {
                 function e(e, t) {
@@ -23852,7 +23856,7 @@
         t.a = r;
         var i = n(0),
             a = n.n(i),
-            o = n(10),
+            o = n(9),
             s = n.n(o),
             u = n(158),
             c = n.n(u),
@@ -27586,7 +27590,7 @@
             a = n(250),
             o = n(13),
             s = n(895),
-            u = (n.n(s), n(10)),
+            u = (n.n(s), n(9)),
             c = n.n(u),
             l = n(58),
             d = n(180),
@@ -28901,7 +28905,7 @@
         t.a = r;
         var i = n(29),
             a = n.n(i),
-            o = n(10),
+            o = n(9),
             s = n.n(o),
             u = n(7),
             c = n(125),
@@ -28985,7 +28989,7 @@
             this._trustedURI = e.trustedURI, this._untrustedHost = e.untrustedHost
         }
         t.a = r;
-        var i = n(10),
+        var i = n(9),
             a = n.n(i),
             o = n(7),
             s = n(125),
@@ -29476,7 +29480,7 @@
         t.a = r;
         var i = n(823),
             a = n.n(i),
-            o = n(10),
+            o = n(9),
             s = n.n(o),
             u = n(33),
             c = n.n(u),
@@ -30699,7 +30703,7 @@
         var i = n(227),
             a = (n.n(i), n(226)),
             o = n.n(a),
-            s = n(10),
+            s = n(9),
             u = n.n(s),
             c = n(118),
             l = n.n(c),
@@ -31570,7 +31574,7 @@
             }
         }
         t.a = r;
-        var i = n(10),
+        var i = n(9),
             a = n.n(i),
             o = n(16),
             s = n(14),
@@ -32475,10 +32479,10 @@
             s = n.n(o),
             u = n(2),
             c = n.n(u),
-            l = n(9),
+            l = n(10),
             d = n(40),
             f = n(62),
-            p = n(10),
+            p = n(9),
             h = n.n(p),
             m = {
                 castingState: a.a.string.isRequired,
@@ -32505,7 +32509,7 @@
             a = n.n(i),
             o = n(1),
             s = n.n(o),
-            u = n(9),
+            u = n(10),
             c = n(40),
             l = {
                 hasAltShortcut: s.a.bool.isRequired,
@@ -32571,7 +32575,7 @@
             a = n.n(i),
             o = n(1),
             s = n.n(o),
-            u = n(9),
+            u = n(10),
             c = n(40),
             l = n(2),
             d = n.n(l),
@@ -32623,7 +32627,7 @@
             a = n.n(i),
             o = n(1),
             s = n.n(o),
-            u = n(9),
+            u = n(10),
             c = n(40),
             l = n(2),
             d = n.n(l),
@@ -32669,7 +32673,7 @@
             a = n.n(i),
             o = n(1),
             s = n.n(o),
-            u = n(9),
+            u = n(10),
             c = n(40),
             l = n(2),
             d = n.n(l),
@@ -32707,7 +32711,7 @@
             a = n.n(i),
             o = n(1),
             s = n.n(o),
-            u = n(9),
+            u = n(10),
             c = n(40),
             l = n(2),
             d = n.n(l),
@@ -32730,7 +32734,7 @@
             i = n.n(r),
             a = n(1),
             o = n.n(a),
-            s = n(9),
+            s = n(10),
             u = n(40),
             c = n(2),
             l = n.n(c),
@@ -32892,7 +32896,7 @@
             u = n(1),
             c = n.n(u),
             l = n(4),
-            d = n(9),
+            d = n(10),
             f = n(484),
             p = n(263),
             h = n(264),
@@ -33411,7 +33415,7 @@
             o = n(1),
             s = n.n(o),
             u = n(4),
-            c = n(9),
+            c = n(10),
             l = {
                 increaseSize: s.a.func.isRequired,
                 decreaseSize: s.a.func.isRequired,
@@ -33705,7 +33709,7 @@
             i = n.n(r),
             a = n(0),
             o = n.n(a),
-            s = n(9),
+            s = n(10),
             u = n(2),
             c = n.n(u),
             l = n(616),
@@ -34034,7 +34038,7 @@
             l = n.n(c),
             d = n(2),
             f = n.n(d),
-            p = n(9),
+            p = n(10),
             h = {
                 collectionItems: s.a.array.isRequired,
                 showDivider: s.a.bool.isRequired,
@@ -34423,7 +34427,7 @@
             d = n.n(l),
             f = n(4),
             p = n(39),
-            h = n(9),
+            h = n(10),
             m = n(46),
             v = n(7),
             y = function() {
@@ -34553,7 +34557,7 @@
             d = n.n(l),
             f = n(4),
             p = n(39),
-            h = n(9),
+            h = n(10),
             m = n(46),
             v = function() {
                 function e(e, t) {
@@ -34748,7 +34752,7 @@
             m = n(2),
             v = n.n(m),
             y = n(4),
-            g = n(9),
+            g = n(10),
             b = n(257),
             _ = n(39),
             w = function() {
@@ -34946,7 +34950,7 @@
             s = n.n(o),
             u = n(1),
             c = n.n(u),
-            l = n(9),
+            l = n(10),
             d = n(39),
             f = function() {
                 function e(e, t) {
@@ -35315,7 +35319,7 @@
             m = n(21),
             v = n.n(m),
             y = n(4),
-            g = n(9),
+            g = n(10),
             b = n(46),
             _ = n(11),
             w = function() {
@@ -35503,7 +35507,7 @@
             i = n.n(r),
             a = n(1),
             o = n.n(a),
-            s = n(9),
+            s = n(10),
             u = n(40),
             c = {
                 onClick: o.a.func,
@@ -35556,7 +35560,7 @@
             s = n.n(o),
             u = n(1),
             c = n.n(u),
-            l = n(10),
+            l = n(9),
             d = n.n(l),
             f = n(52),
             p = n(39),
@@ -36182,7 +36186,7 @@
             y = n(836),
             g = n.n(y),
             b = n(4),
-            _ = n(9),
+            _ = n(10),
             w = n(613),
             k = n(26),
             E = function() {
@@ -36616,7 +36620,7 @@
             s = n.n(o),
             u = n(2),
             c = n.n(u),
-            l = n(9),
+            l = n(10),
             d = n(4),
             f = "The broadcaster indicated that the channel is intended for mature audiences.",
             p = "Start Watching",
@@ -36655,7 +36659,7 @@
             a = n.n(i),
             o = n(1),
             s = n.n(o),
-            u = n(9),
+            u = n(10),
             c = {
                 onClick: s.a.func.isRequired,
                 collectionsSidebarOpen: s.a.bool.isRequired
@@ -36788,7 +36792,7 @@
             f = n.n(d),
             p = n(84),
             h = n(4),
-            m = n(9),
+            m = n(10),
             v = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -37863,7 +37867,7 @@
             f = n(4),
             p = n(52),
             h = n(257),
-            m = n(9),
+            m = n(10),
             v = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -38021,7 +38025,7 @@
             m = n.n(h),
             v = n(4),
             y = n(52),
-            g = n(9),
+            g = n(10),
             b = n(186),
             _ = n(6),
             w = function() {
@@ -38347,7 +38351,7 @@
             s = n.n(o),
             u = n(1),
             c = n.n(u),
-            l = n(9),
+            l = n(10),
             d = n(2),
             f = n.n(d),
             p = function() {
@@ -38434,7 +38438,7 @@
             c = n.n(u),
             l = n(2),
             d = n.n(l),
-            f = n(9),
+            f = n(10),
             p = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -38835,7 +38839,7 @@
             i = n.n(r),
             a = n(1),
             o = n.n(a),
-            s = n(9),
+            s = n(10),
             u = n(40),
             c = n(2),
             l = n.n(c),
@@ -38902,7 +38906,7 @@
             d = n.n(l),
             f = n(4),
             p = n(52),
-            h = n(9),
+            h = n(10),
             m = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -39150,7 +39154,7 @@
             u = n(2),
             c = n.n(u),
             l = n(555),
-            d = n(9),
+            d = n(10),
             f = {
                 stats: s.a.shape({
                     bufferSize: s.a.number,
@@ -39584,7 +39588,7 @@
             o = n(1),
             s = n.n(o),
             u = n(3),
-            c = (n.n(u), n(9)),
+            c = (n.n(u), n(10)),
             l = n(2),
             d = n.n(l),
             f = n(4),
@@ -39739,7 +39743,7 @@
             o = n(1),
             s = n.n(o),
             u = n(3),
-            c = (n.n(u), n(9)),
+            c = (n.n(u), n(10)),
             l = n(2),
             d = n.n(l),
             f = n(4),
@@ -41914,7 +41918,7 @@
             d = n.n(l),
             f = n(158),
             p = n.n(f),
-            h = n(10),
+            h = n(9),
             m = n.n(h),
             v = n(3),
             y = (n.n(v), n(538)),
@@ -42540,7 +42544,7 @@
             c = n.n(u),
             l = n(36),
             d = n.n(l),
-            f = n(10),
+            f = n(9),
             p = n.n(f),
             h = n(3),
             m = (n.n(h), n(545)),
@@ -44277,7 +44281,7 @@
             i = n.n(r),
             a = n(1),
             o = n.n(a),
-            s = n(9),
+            s = n(10),
             u = n(4),
             c = n(611),
             l = {
