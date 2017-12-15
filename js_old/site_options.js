@@ -316,16 +316,16 @@ window.SiteOptions = {
         },
         "1318509a-bf97-475d-acdc-df6a24ef6e3e": {
             "name": "twilight_videos_in_sidenav",
-            "v": 2612,
+            "v": 2689,
             "t": 1,
             "groups": [{
-                "weight": 92,
+                "weight": 50,
                 "value": "none"
             }, {
-                "weight": 4,
+                "weight": 50,
                 "value": "all_content"
             }, {
-                "weight": 4,
+                "weight": 0,
                 "value": "no_archives"
             }]
         },
@@ -4184,14 +4184,14 @@ window.SiteOptions = {
         },
         "e3493262-e9b1-4ea8-b621-1f7ed544fad2": {
             "name": "twitch_prime_poc",
-            "v": 2686,
+            "v": 2688,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "C"
+                "value": "control"
             }, {
                 "weight": 0,
-                "value": "T1"
+                "value": "treatment"
             }]
         },
         "e35023b2-1cfc-4e73-b5ab-30f36d2afc4d": {
