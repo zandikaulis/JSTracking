@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".6ab567640e666d72d2f5.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".cad3b2afa68e3e2d5805.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -4432,10 +4432,12 @@
                     value: function() {
                         var e = this.store.getState(),
                             t = e.communities,
-                            n = e.manifestInfo;
+                            n = e.manifestInfo,
+                            r = e.streamMetadata;
                         this.player.getSeeking() || (this.bufferEmptyStartTime = (new Date).getTime(), this.bufferEmptyCount++, this.trackEvent(A.a.BUFFER_EMPTY, {
                             buffer_empty_count: this.bufferEmptyCount,
                             community_ids: t.ids,
+                            broadcast_id: r.broadcastID,
                             manifest_broadcast_id: n.broadcast_id
                         }))
                     }
@@ -4463,8 +4465,8 @@
                                 time_since_load_start: Date.now() - r.playSessionStartTime,
                                 community_ids: i.ids,
                                 manifest_broadcast_id: u.broadcast_id,
-                                autoplayed: this.options.autoplay,
-                                broadcastId: o.broadcastID
+                                broadcast_id: o.broadcastID,
+                                autoplayed: this.options.autoplay
                             };
                             a.contentType === N.a && (n.i(w.e)(a.videoId).then(function(t) {
                                 e.countessTracker.trackVODView(t)
@@ -21743,7 +21745,7 @@
                     u = v.a(!0),
                     c = b.j() === b.o ? null : _;
                 return {
-                    app_version: "2017.12.14-000347+c13486b6e0d30fc1ab3bb5464c1a8714fdfbafad",
+                    app_version: "2017.12.15-013547+3e44ad6872c8ace133a96ff41047b8ca28d880fc",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -30219,7 +30221,7 @@
         n.d(t, "a", function() {
             return r
         });
-        var r = "//video-edge-97c3eb.sjc01.hls.ttvnw.net/v1/playlist/CtCrX3OJUu4RXjW6yLDQ0ntxyZAlmfVoiTVyQvPyQM5s2ZqA5v498BusUytPnVu5Seb5s0mY0RhytqynvD2zNNwSO1iAqiGNgdFAsoVGiALgxW_sqbsZo3IqP6S7268IUaTa4RxojKK6RQuS9bPliJII3b6bvfM2EkFNwY-SQOzrSUUfG2JZZVQiaX70k0koy3Sq6N3rp6_NQwKzY-xAhmRZU-e5kxPw_QG3pYz-5g4W3z_gSMfbKiltzpUwGt1JZWVRgNf5waaM9Ggu2pUcTIQ5k885eaw48TlcK4oH9LVLrr41ozeY2YG3LCi-4VL5S72ms5uVw-V70ocF2gHf0-CYxh_6zr8mCxg7uw_W2L77aH_JQlrVBWFxI9Usdpu-Pjp_QXn9VH_25nvUosNwwaYuk54qxvQ4-EudQNBrjS0y-u0CaaFEtc.m3u8"
+        var r = "//video-edge-029019.sjc01.hls.ttvnw.net/v1/playlist/CsoNEQEmvWrc3KKEPogCQK20lFyVMY6Ap6FEcysSngxTKPUon68IRqV29DBKM58Dxz0fmVzg4e5QsPvBTC5kFsGcchcX5auVbOGj7qhkDvoAVQJ8zgqaRYUQdPVj9TutpMOf4g-HlebELrgo2CgNvmuijwXdLqk5kmPQwQihoPYTFwd9-dJ-Oz1e3_gGXbcYhzL3kXrWUg_3euJXrYI0EllFlZ8mJUXo2h2Fe6_S4qxy_scrFvnKsWj9PtGFQUV0J2AeXOTsd-NEI_FS5YdUHwPUMN5Ki_oSr4m3lihQqaH9zeKKJM5_kp7FQZ_a7pOHoyNCNmk4bi4m0IvJP7AcL5uv3J42mHfb5FvMCOl1eIAbv8LUPd-7KEWQcyzApXV-9m5CzfKCna-23G_Hms50YMNTSk5XrPaPmFfEZCHGGQVQooyPpZltKOM.m3u8"
     }, function(e, t, n) {
         "use strict";
 
