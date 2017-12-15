@@ -2775,6 +2775,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "97da7a09-3dc7-483c-9087-608e35ba2cbf": {
+            "name": "android_extensions",
+            "v": 2685,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "97f8559c-1077-4480-ad07-b64f1c9b8529": {
             "name": "android_auto_video_quality",
             "v": 2201,
