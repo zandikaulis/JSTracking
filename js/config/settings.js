@@ -51,7 +51,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-6b85d4.sjc01.hls.ttvnw.net/v1/playlist/CnQkQ3tNB1W06774aJ6s97aEa-M51eJxPK60U0kWJIiH179bBVR7heq6JdzUIf_PZPqqKiG0tUnhh5kWCL8Kjpxh1vG7n2IN9hXhURoUHB5A5ZFu12FJlczW-US1CwShdvR53iIHRwFAsZkl4YoG6NTCC4b5or70_cMdlrkHI72hGhTqLBwYp5tgs1JfGYt685rpJvh4gQYXDMA1UN2hT6O0TZhOgLVBtNeokAPlntd-1MQV6oom1BVw_aNlgCjCogIY91kIu01dC4u3ZXBA-nhXh7O0Y39qMi13tPDgqEMx27Ms4uR2GDVVBFeIVQuQ8CWzcJ3qIwPuiAQ7q36MGZxrdCd9Uw6cYB2uYlqWOc4uDa7lzcgge9uoBaf2qxofDm-0x-Wv0ty48VWGCLK5Dgd6HkRE0mFhQRloVQCLJ7nw-lM0v8pc.m3u8",
+    "spade_url": "https://video-edge-029019.sjc01.hls.ttvnw.net/v1/playlist/CsoNEQEmvWrc3KKEPogCQK20lFyVMY6Ap6FEcysSngxTKPUon68IRqV29DBKM58Dxz0fmVzg4e5QsPvBTC5kFsGcchcX5auVbOGj7qhkDvoAVQJ8zgqaRYUQdPVj9TutpMOf4g-HlebELrgo2CgNvmuijwXdLqk5kmPQwQihoPYTFwd9-dJ-Oz1e3_gGXbcYhzL3kXrWUg_3euJXrYI0EllFlZ8mJUXo2h2Fe6_S4qxy_scrFvnKsWj9PtGFQUV0J2AeXOTsd-NEI_FS5YdUHwPUMN5Ki_oSr4m3lihQqaH9zeKKJM5_kp7FQZ_a7pOHoyNCNmk4bi4m0IvJP7AcL5uv3J42mHfb5FvMCOl1eIAbv8LUPd-7KEWQcyzApXV-9m5CzfKCna-23G_Hms50YMNTSk5XrPaPmFfEZCHGGQVQooyPpZltKOM.m3u8",
     "store_merch_promo": "off",
     "store_merch_seasonal": "on",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
@@ -214,22 +214,22 @@ window.__twilightSettings = {
         },
         "50ac9a2b-63c2-46ed-9e7d-123363195dfd": {
             "name": "twilight_new_browse",
-            "v": 2648,
+            "v": 2683,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 60,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "variant1"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "variant2"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "variant3"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "variant4"
             }]
         },
